@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489895"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539728"
 ---
 # <a name="null-comparisons"></a>Null 比較
-資料來源中的 `null` 值表示該值未知。 在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中，您可以檢查 null 值，以便讓某些計算或比較只會在包含有效或非 null 資料的資料列上執行。 不過，CLR null 語意 (Semantics) 可能與資料來源的 null 語意不同。 大部分的資料庫都使用三值邏輯來處理 null 比較， 也就是針對 null 值的比較不會評估`true`或是`false`，其評估結果為`unknown`。 通常，這是 ANSI NULLS 的實作，可是實際情況不一定如此。  
+資料來源中的 `null` 值表示該值未知。 在 LINQ to Entities 查詢中，您可以檢查 null 值，讓某些計算或比較只擁有有效的或不是 null，資料的資料列上執行。 不過，CLR null 語意 (Semantics) 可能與資料來源的 null 語意不同。 大部分的資料庫都使用三值邏輯來處理 null 比較， 也就是針對 null 值的比較不會評估`true`或是`false`，其評估結果為`unknown`。 通常，這是 ANSI NULLS 的實作，可是實際情況不一定如此。  
   
  根據預設，SQL Server 中 null 等於 null 的比較會傳回 null 值。 在下列範例中，資料列位置`ShipDate`是 null 會排除的結果集，以及 TRANSACT-SQL 陳述式會傳回 0 個資料列。  
   
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>將 Null 集合傳遞至彙總函式  
- 在  [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]，當您傳遞一組支援`IQueryable`彙總函式，在資料庫上執行彙總的作業。 可能的記憶體中執行的查詢以及在資料庫中執行的查詢結果中的差異。 使用記憶體中查詢，如果沒有相符的項目，查詢會傳回零。 同樣的查詢在資料庫中則會傳回 `null`。 如果`null`值會傳遞至 LINQ 彙總函式，將會擲回例外狀況。 若要接受可能`null`值，轉換的類型和類型接收查詢結果為 null 類型的屬性。  
+ 在 LINQ to Entities，當您將傳遞一組支援`IQueryable`彙總函式，在資料庫上執行彙總的作業。 可能的記憶體中執行的查詢以及在資料庫中執行的查詢結果中的差異。 使用記憶體中查詢，如果沒有相符的項目，查詢會傳回零。 同樣的查詢在資料庫中則會傳回 `null`。 如果`null`值會傳遞至 LINQ 彙總函式，將會擲回例外狀況。 若要接受可能`null`值，轉換的類型和類型接收查詢結果為 null 類型的屬性。  
   
 ## <a name="see-also"></a>另請參閱
 

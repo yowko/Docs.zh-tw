@@ -2,12 +2,12 @@
 title: LINQ 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 16b06549573bc79378539cf7f5ccdcb60c812e81
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 9c517b3efca8cd2b41782858ef1e18e3cba76c1b
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504463"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539413"
 ---
 # <a name="linq-and-adonet"></a>LINQ 和 ADO.NET
 現今許多商務程式開發人員必須使用兩個 （含） 以上的程式設計語言： 商務邏輯和展示層的高階語言 (例如視覺效果C#或 Visual Basic)，以及互動 （例如 Transact SQL) 資料庫的查詢語言. 因此，開發人員必須精通許多語言才能具有效率，而且也會在開發環境中產生語言不符的情況。 例如，使用資料存取 API 針對資料庫執行查詢的應用程式會使用引號，將查詢指定成字串常值 (String Literal)。 編譯器 (Compiler) 無法讀取這個查詢字串而且不會檢查是否有錯誤，例如語法無效或它所參考的資料行或資料列是否實際存在。 此外，系統無法提供查詢參數的型別檢查和 `IntelliSense` 支援。  
@@ -16,7 +16,7 @@ ms.locfileid: "67504463"
   
  將資料從 SQL 資料表傳輸至記憶體中物件通常很費時而且容易產生錯誤。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]實作由 LINQ to DataSet 提供者並[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]來源將資料轉換成<xref:System.Collections.IEnumerable>為基礎的物件集合。 當您查詢和更新時，程式設計人員永遠會將資料視為 <xref:System.Collections.IEnumerable> 集合。 針對這些集合撰寫查詢可獲得完整的 `IntelliSense` 支援。  
   
- 有三個不同的 ADO.NET[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]技術：LINQ to DataSet， [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]，和[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 LINQ to DataSet 可讓您提供更豐富且最佳化的查詢<xref:System.Data.DataSet>並[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]可讓您直接查詢 SQL Server 資料庫結構描述，和[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]可讓您查詢實體資料模型。  
+ 有三個不同的 ADO.NET[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]技術：LINQ to DataSet， [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]，與 LINQ to Entities。 LINQ to DataSet 可讓您提供更豐富且最佳化的查詢<xref:System.Data.DataSet>和[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]可讓您直接查詢 SQL Server 資料庫結構描述，與 LINQ to Entities 可讓您查詢實體資料模型。  
   
  下圖將提供 ADO.NET LINQ 技術如何與高階程式語言和啟用 LINQ 之資料來源相關聯的概觀。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "67504463"
   
  如需有關 LINQ 的詳細資訊，請參閱 < [Language Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)。
   
- 下列各節提供資料集，LINQ 的詳細資訊[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]，和[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。  
+ 下列各節提供 LINQ 的詳細資訊，資料集， [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]，與 LINQ to Entities。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet>是中斷連接程式設計模型，ADO.NET 為基礎，並廣泛使用的重要項目。 LINQ to DataSet 可讓開發人員建置更豐富的查詢功能<xref:System.Data.DataSet>使用適用於許多其他資料來源的相同查詢編寫機制。 如需詳細資訊，請參閱 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "67504463"
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  目前大部分應用程式都是根據關聯式資料庫所撰寫而成。 同時，這些應用程式將必須與關聯式格式表示的資料互動。 但是，資料庫結構描述不一定適合建立應用程式，而且應用程式的概念模型與資料庫的邏輯模型有所不同。 實體資料模型是可用來針對特定定義域資料，讓應用程式可以與資料當做物件互動模型的概念資料模型。 請參閱[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)如需詳細資訊。  
   
- 實體資料模型中，透過關聯式資料公開為.NET 環境中的物件。 如此一來，物件層就成為理想的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 支援目標，讓程式開發人員可以根據用於建置商務邏輯的語言，針對資料庫編寫查詢。 這項功能稱為 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 如需詳細資訊，請參閱 [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
+ 透過實體資料模型，關聯式資料會公開為 .NET 環境內的物件。 如此一來，物件層就成為理想的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 支援目標，讓程式開發人員可以根據用於建置商務邏輯的語言，針對資料庫編寫查詢。 這項功能稱為 LINQ to Entities。 如需詳細資訊，請參閱 [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

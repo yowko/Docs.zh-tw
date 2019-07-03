@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 570d6a60e4f34e89e758b505353a083b959d9def
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a69d74966b99d78b4a7addaa4323d61d82ce8d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630724"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539765"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供了 Language-Integrated Query (LINQ) 支援，可讓開發人員使用 Visual Basic 或 Visual C# 針對 Entity Framework 概念模型撰寫查詢。 針對 Entity Framework 執行的查詢是以命令樹查詢來表示，每一個查詢都會針對物件內容來執行。 LINQ to Entities 會將 Language-Integrated Queries (LINQ) 查詢轉換成命令樹查詢、針對 Entity Framework 執行查詢，並傳回 Entity Framework 和 LINQ 都可以使用的物件。 下列是建立及執行 LINQ to Entities 查詢的程序：  
@@ -47,7 +47,7 @@ LINQ to Entities 提供了 Language-Integrated Query (LINQ) 支援，可讓開�
   
  如需 CLR 方法呼叫如何對應到資料來源中的標準函式的詳細資訊，請參閱[標準函式對應的 CLR 方法](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)。  
   
- 如需如何呼叫標準、 資料庫，以及自訂函式內[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]查詢，請參閱[LINQ to Entities 查詢中呼叫的函式](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)。  
+ 如需如何呼叫標準、 資料庫和自訂函式從 linq to Entities 查詢的資訊，請參閱[LINQ to Entities 查詢中呼叫的函式](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)。  
   
 ## <a name="query-execution"></a>查詢執行  
  當使用者建立 LINQ 查詢之後，會將它轉換成與 Entity Framework 相容的表示法 (命令樹的形式)，然後針對資料來源執行此查詢。 在執行查詢時，所有的查詢運算式 (或是查詢的元件) 都會在用戶端或伺服器上評估， 這包括用於結果具體化或實體投影的運算式。 如需詳細資訊，請參閱 <<c0> [ 查詢執行](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)。 如需如何改善效能的查詢編譯一次，然後加以執行數次使用不同的參數資訊，請參閱[編譯的查詢 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。  

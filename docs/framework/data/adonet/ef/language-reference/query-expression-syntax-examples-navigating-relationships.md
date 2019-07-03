@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
-ms.openlocfilehash: 2133ae7902cc4746e00be75e7a801296073041e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ad601330a1f271b3221ae744928bdbad6c4fd7f
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614280"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539753"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>查詢運算式語法範例：巡覽關聯性
-[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中的導覽屬性是用來尋找位於關聯兩端之實體的捷徑屬性。 導覽屬性可讓使用者在不同實體之間巡覽，或是透過關聯集從某個實體巡覽至相關的實體。 本主題提供的查詢運算式語法範例將說明如何透過 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中的導覽屬性來巡覽關聯性。  
+[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中的導覽屬性是用來尋找位於關聯兩端之實體的捷徑屬性。 導覽屬性可讓使用者在不同實體之間巡覽，或是透過關聯集從某個實體巡覽至相關的實體。 本主題提供如何巡覽關聯性，透過在 LINQ to Entities 查詢的導覽屬性的查詢運算式語法範例。  
   
  這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
   

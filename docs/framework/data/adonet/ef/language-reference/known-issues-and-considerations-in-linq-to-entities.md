@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 303e46e79786ce7f062db4a1a3ffb6c321169af8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631288"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539829"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知問題和考量
-本節提供有關 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢已知問題的資訊。  
+本節提供使用 LINQ to Entities 查詢的已知問題的相關資訊。  
   
 - [無法快取的 LINQ 查詢](#LINQQueriesThatAreNotCached)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64631288"
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>不支援不帶正負號的整數  
- 不支援在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中指定不帶正負號的整數型別，因為 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 不支援不帶正負號的整數。 如果您指定的不帶正負號的整數，<xref:System.ArgumentException>將會擲回例外狀況在查詢運算式轉譯期間，在下列範例所示。 此範例會查詢 ID 為 48000 的訂單。  
+ LINQ to Entities 查詢中指定不帶正負號的整數型別不支援，因為[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]不支援不帶正負號的整數。 如果您指定的不帶正負號的整數，<xref:System.ArgumentException>將會擲回例外狀況在查詢運算式轉譯期間，在下列範例所示。 此範例會查詢 ID 為 48000 的訂單。  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

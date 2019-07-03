@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: a37e7e3d0759cb3cf17d2b4cbd3dd2e4877ff6c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b0d7e668526fd71943513db2fc3c076c8bd3bad
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785394"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539921"
 ---
 # <a name="comparison-expressions"></a>比較運算式
-比較運算式會檢查常數值、屬性值或方法結果是否等於、不等於、大於或小於另一個值。 如果特定比較對於 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 無效，將會擲回例外狀況。 所有的比較 (隱含和明確) 都會要求所有元件在資料來源內都是可以比較的。 `Where` 子句中經常會使用比較運算式來限制查詢結果。  
+比較運算式會檢查常數值、屬性值或方法結果是否等於、不等於、大於或小於另一個值。 如果特定比較不是有效的 LINQ to Entities，就會擲回例外狀況。 所有的比較 (隱含和明確) 都會要求所有元件在資料來源內都是可以比較的。 `Where` 子句中經常會使用比較運算式來限制查詢結果。  
   
  下列查詢運算式語法範例顯示一個查詢，此查詢會傳回銷售訂單號碼等於 "SO43663" 的結果：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "61785394"
  [!code-csharp[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constantexpression)]
  [!code-vb[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#constantexpression)]  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 不支援使用使用者類別當做常數。 但是，使用者類別上的屬性參考會視為常數，而且將會轉換成命令樹常數運算式，並在資料來源上執行。  
+ LINQ to Entities，不支援使用使用者類別做為常數。 但是，使用者類別上的屬性參考會視為常數，而且將會轉換成命令樹常數運算式，並在資料來源上執行。  
   
  [!code-csharp[DP L2E Conceptual Examples#MyClass](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myclass)]
  [!code-vb[DP L2E Conceptual Examples#MyClass](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myclass)]  

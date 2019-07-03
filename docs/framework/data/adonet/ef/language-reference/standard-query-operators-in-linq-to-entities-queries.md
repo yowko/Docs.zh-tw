@@ -2,24 +2,24 @@
 title: LINQ to Entities 查詢中的標準查詢運算子
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2661f1b492ff8f2ed18c7b396326562050ca45b
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797718"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539449"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 查詢中的標準查詢運算子
 在查詢中，您可以指定要從資料來源擷取的資訊。 此外，查詢也可以指定該項資訊傳回之前應該如何排序、分組和成形。 LINQ 提供一組可在查詢中使用的標準查詢方法。 這些方法大多操作序列;在此情況下，序列是其類型會實作的物件<xref:System.Collections.Generic.IEnumerable%601>介面或<xref:System.Linq.IQueryable%601>介面。 標準查詢運算子的查詢功能包括篩選、投影、彙總、排序、群組、分頁等等。 某些更常用的標準查詢運算子具有專用的關鍵字語法，因此可以使用查詢運算式語法來呼叫它們。 相較於以方法為根據的同等項目，查詢運算式是一個不同且更具可讀性之表示查詢的方式。 查詢運算式子句會在編譯時期轉譯成查詢方法的呼叫。 如需標準查詢運算子具有相等的查詢運算式子句的清單，請參閱 <<c0> [ 標準查詢運算子概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))。  
   
- 並非所有的標準查詢運算子在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中都有支援。 如需詳細資訊，請參閱 <<c0> [ 支援和不受支援的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)。 本主題提供的資訊是有關 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 特定的標準查詢運算子。 如需有關已知問題[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]查詢，請參閱[已知問題在 LINQ to Entities 和考量](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)。  
+ 並非所有標準查詢運算子支援 LINQ to Entities 查詢。 如需詳細資訊，請參閱 <<c0> [ 支援和不受支援的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)。 本主題提供的特定 LINQ to Entities 之標準查詢運算子的相關資訊。 如需在 LINQ to Entities 查詢的已知問題的詳細資訊，請參閱[已知問題在 LINQ to Entities 和考量](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)。  
   
 ## <a name="projection-and-filtering-methods"></a>投影及篩選方法  
  *投影*是指轉換的結果集所需的格式項目。 例如，您可以從結果集中的每一個物件投影您需要的屬性子集，也可以投影屬性並針對它執行數學計算，或是從結果集投影整個物件。 投影方法為 `Select` 和 `SelectMany`。  
   
  *篩選*指的是作業的結果集限制為包含只有在符合指定的條件的元素。 篩選方法為 `Where`。  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 中支援大多數投影和篩選方法的多載，但是接受位置引數的多載除外。  
+ LINQ to Entities，支援大多數投影和篩選方法的多載接受位置引數除外。  
   
 ## <a name="join-methods"></a>聯結方法  
  在以彼此沒有可瀏覽關聯性之資料來源為目標的查詢中，聯結是一項重要的作業。 兩個資料來源的聯結是指某個資料來源中的物件與另一個資料來源中共用相同屬性 (Attribute) 或屬性 (Property) 之物件的關聯。 聯結方法為 `Join` 和 `GroupJoin`。  
@@ -29,7 +29,7 @@ ms.locfileid: "61797718"
 ## <a name="set-methods"></a>設定方法  
  LINQ 中的 Set 作業是指一種查詢作業，這種作業會讓其結果集根據相同或另一個集合中是否有同等項目存在而定。 Set 方法為 `All`、`Any`、`Concat`、`Contains`、`DefaultIfEmpty`、`Distinct`、`EqualAll`、`Except`、`Intersect` 和 `Union`。  
   
- 大多數 Set 方法的多載在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 中都有支援，但是與 LINQ to Objects 相較之下會有一些行為上的差異。 不過，設定使用的方法<xref:System.Collections.Generic.IEqualityComparer%601>不支援，因為比較子無法轉譯成資料來源。  
+ 大多數 set 方法的多載支援 LINQ to Entities，但有一些差異，相較於 LINQ to Objects 的行為。 不過，設定使用的方法<xref:System.Collections.Generic.IEqualityComparer%601>不支援，因為比較子無法轉譯成資料來源。  
   
 ## <a name="ordering-methods"></a>排序方法  
  排序指的是根據一或多個屬性來排序結果集的項目。 藉由指定一個以上的排序準則，就可以中斷群組內的繫結。  

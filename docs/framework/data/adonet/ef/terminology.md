@@ -2,12 +2,12 @@
 title: Entity Framework 詞彙
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: bc3712628d308629208af893e8fdee16cbba1e93
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306344"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539870"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 詞彙
 本主題定義中最常參考的詞彙[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文件。 而為相關主題提供的連結表示有其他可用的資訊。  
@@ -44,7 +44,7 @@ ms.locfileid: "67306344"
 |Independent Association - 獨立關聯|實體間的關聯，透過獨立物件加以表示及追蹤。|  
 |key|實體類型的屬性，其中指定要用來識別實體類型之唯一執行個體的屬性或屬性集。 它是由 <xref:System.Data.EntityKey> 類別顯示在物件層。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 機碼項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl)並[實體索引鍵](../../../../../docs/framework/data/adonet/entity-key.md)。|  
 |消極式載入|當查詢傳回物件時，相關物件不會同時載入。 反而是存取導覽屬性時會自動載入相關的物件。|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|定義一組允許周遊、 篩選和投射作業，來表示以直接、 宣告式的方式，在 Visual C# 和 Visual Basic 中的查詢運算子的查詢語法。<br /><br /> 如需詳細資訊，請參閱 < [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。|  
+|LINQ to Entities|定義一組允許周遊、 篩選和投射作業，來表示以直接、 宣告式的方式，在 Visual C# 和 Visual Basic 中的查詢運算子的查詢語法。<br /><br /> 如需詳細資訊，請參閱 < [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。|  
 |對應|概念模型中的項目與儲存體模型中項目之間的對應規格。<br /><br /> 如需詳細資訊，請參閱 < [MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)。|  
 |.msl file - .msl 檔案|XML 檔案，內含概念模型及儲存體模型之間的對應 (以 MSL 表示)。|  
 |對應規格語言 (MSL)|一種 XML 架構語言，用來將定義於概念性模型中的項目對應到儲存體模型中的項目。<br /><br /> 如需詳細資訊，請參閱 < [MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)。|  

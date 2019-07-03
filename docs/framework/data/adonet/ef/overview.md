@@ -2,12 +2,12 @@
 title: Entity Framework 概觀
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 498d0478dc94048a69c393151d3ff8a752706e1c
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307338"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539472"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 概觀
 
@@ -45,7 +45,7 @@ ms.locfileid: "67307338"
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不只是另一個物件關聯式對應方案而已，它基本上是有關如何讓應用程式存取和變更表示成概念模型中之實體和關聯性的資料。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會使用模型和對應檔中的資訊，將針對在概念模型中表示之實體類型的物件查詢轉譯成資料來源特有的查詢。 查詢結果會具體化為物件的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]管理。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供下列方式來查詢概念模型，並傳回物件：
 
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. 查詢概念模型中定義的實體類型提供 Language-Integrated Query (LINQ) 支援。 如需詳細資訊，請參閱 < [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
+- LINQ to Entities。 查詢概念模型中定義的實體類型提供 Language-Integrated Query (LINQ) 支援。 如需詳細資訊，請參閱 < [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 儲存體無關的 SQL dialect，可直接與概念模型中的實體一起運作並支援 Entity Data Model 概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 會使用以物件查詢以及使用 EntityClient 提供者所執行的查詢。 如需詳細資訊，請參閱 < [Entity SQL 概觀](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。
 
