@@ -6,19 +6,19 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 05/06/2019
-ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.date: 06/14/2019
+ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169791"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401963"
 ---
-# <a name="whats-new-in-net-core-30-preview-5"></a>.NET Core 3.0 (Preview 5) 的新功能
+# <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0 (Preview 6) 的新功能
 
-本文描述 .NET Core 3.0 (到 Preview 5) 的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
+本文描述 .NET Core 3.0 (到 Preview 6) 的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
 
-.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您搭配 OmniSharp 延伸模組使用最新版的 Visual Studio 2019 Update 1 Preview 或 VSCode。
+.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您搭配 OmniSharp 延伸模組使用[最新版的 Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) 或 Visual Studio Code。
 
 立即在 Windows、Mac 及 Linux 上[下載並開始使用 .NET Core 3.0 Preview 6](https://aka.ms/netcore3download) \(英文\)。
 
@@ -55,7 +55,7 @@ Windows 的 MSI 安裝程式從 .NET Core 3.0 開始即已變更。 SDK 安裝�
 </Project>
 ```
 
-如果您使用 Visual Studio，則需要 Visual Studio 2019，因為 Visual Studio 2017 不支援 **.NET Standard 2.1** 或 **.NET Core 3.0**。 強烈建議您使用 [Visual Studio 2019 Update 1 Preview](https://visualstudio.microsoft.com/vs/preview/)。
+如果目前使用 Visual Studio，您需要 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，因為 Visual Studio 2017 不支援 **.NET Standard 2.1** 或 **.NET Core 3.0**。
 
 ## <a name="improved-net-core-version-apis"></a>改善的 .NET Core 版本 API
 
@@ -187,7 +187,7 @@ dotnet publish -c Release -r win-x64 --self-contained true
 
 ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上進行編譯。 例如，如果您想要適用於 Windows x64 的 R2R 映像，便需要在該環境上執行發佈命令。
 
-跨目標的例外狀況：
+鎖定多重目標的例外狀況：
 
 - Windows x64 可以用來編譯 Windows ARM32、ARM64 及 x86 映像。
 - Windows x86 可以用來編譯 Windows ARM32 映像。
