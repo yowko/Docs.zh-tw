@@ -5,81 +5,81 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 69c647e57dead3b4f61bb45202c6b039099f0499
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 13ccdafc00f7a43d456126e3ec3afc1ae5897564
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052180"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422672"
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a><span data-ttu-id="97bce-103">在 Windows 10 和 Windows Server 2016 以及更新版本上安裝 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="97bce-103">Install the .NET Framework on Windows 10 and Windows Server 2016 and later</span></span>
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a><span data-ttu-id="04fde-103">在 Windows 10 和 Windows Server 2016 以及更新版本上安裝 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="04fde-103">Install the .NET Framework on Windows 10 and Windows Server 2016 and later</span></span>
 
-<span data-ttu-id="97bce-104">在 Windows 上執行許多應用程式時需要 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="97bce-104">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="97bce-105">本文中的指示可協助您安裝所需的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="97bce-105">The instructions in this article should help you install the .NET Framework versions that you need.</span></span> <span data-ttu-id="97bce-106">[.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) 是提供的最新版本。</span><span class="sxs-lookup"><span data-stu-id="97bce-106">The [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) is the latest available version.</span></span>
+<span data-ttu-id="04fde-104">在 Windows 上執行許多應用程式時需要 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="04fde-104">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="04fde-105">本文中的指示可協助您安裝所需的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="04fde-105">The instructions in this article should help you install the .NET Framework versions that you need.</span></span> <span data-ttu-id="04fde-106">[.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) 是提供的最新版本。</span><span class="sxs-lookup"><span data-stu-id="04fde-106">The [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) is the latest available version.</span></span>
 
-<span data-ttu-id="97bce-107">嘗試執行應用程式之後可能會進入此頁面，並會於您的電腦上看到類似如下的對話方塊：</span><span class="sxs-lookup"><span data-stu-id="97bce-107">You may have arrived on this page after trying to run an application and seeing a dialog on your machine similar to the following one:</span></span>
+<span data-ttu-id="04fde-107">嘗試執行應用程式之後可能會進入此頁面，並會於您的電腦上看到類似如下的對話方塊：</span><span class="sxs-lookup"><span data-stu-id="04fde-107">You may have arrived on this page after trying to run an application and seeing a dialog on your machine similar to the following one:</span></span>
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-48"></a><span data-ttu-id="97bce-109">.NET Framework 4.8</span><span class="sxs-lookup"><span data-stu-id="97bce-109">.NET Framework 4.8</span></span>
+## <a name="net-framework-48"></a><span data-ttu-id="04fde-109">.NET Framework 4.8</span><span class="sxs-lookup"><span data-stu-id="04fde-109">.NET Framework 4.8</span></span>
 
-<span data-ttu-id="97bce-110">.NET Framework 4.8 隨附於下列項目中：</span><span class="sxs-lookup"><span data-stu-id="97bce-110">The .NET Framework 4.8 is included with:</span></span>
+<span data-ttu-id="04fde-110">.NET Framework 4.8 隨附於下列項目中：</span><span class="sxs-lookup"><span data-stu-id="04fde-110">The .NET Framework 4.8 is included with:</span></span>
 
-* [<span data-ttu-id="97bce-111">Windows 10 2019 年 5 月更新</span><span class="sxs-lookup"><span data-stu-id="97bce-111">Windows 10 May 2019 Update</span></span>](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
+* [<span data-ttu-id="04fde-111">Windows 10 2019 年 5 月更新</span><span class="sxs-lookup"><span data-stu-id="04fde-111">Windows 10 May 2019 Update</span></span>](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [<span data-ttu-id="97bce-112">下載 .NET Framework 4.8</span><span class="sxs-lookup"><span data-stu-id="97bce-112">Download .NET Framework 4.8</span></span>](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [<span data-ttu-id="04fde-112">下載 .NET Framework 4.8</span><span class="sxs-lookup"><span data-stu-id="04fde-112">Download .NET Framework 4.8</span></span>](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-<span data-ttu-id="97bce-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) 可用於執行專為 .NET Framework 4.0 到 4.7.2 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="97bce-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) can be used to run applications built for the .NET Framework 4.0 through 4.7.2.</span></span>
+<span data-ttu-id="04fde-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) 可用於執行專為 .NET Framework 4.0 到 4.7.2 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="04fde-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) can be used to run applications built for the .NET Framework 4.0 through 4.7.2.</span></span>
 
-<span data-ttu-id="97bce-114">您可以將 [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) 安裝於：</span><span class="sxs-lookup"><span data-stu-id="97bce-114">You can install [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) on:</span></span>
+<span data-ttu-id="04fde-114">您可以將 [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) 安裝於：</span><span class="sxs-lookup"><span data-stu-id="04fde-114">You can install [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) on:</span></span>
 
-* <span data-ttu-id="97bce-115">Windows 10 2018 年 10 月更新 (版本 1809)</span><span class="sxs-lookup"><span data-stu-id="97bce-115">Windows 10 October 2018 Update (version 1809)</span></span>
-* <span data-ttu-id="97bce-116">Windows 10 2018 年 4 月更新 (版本 1803)</span><span class="sxs-lookup"><span data-stu-id="97bce-116">Windows 10 April 2018 Updae (version 1803)</span></span>
-* <span data-ttu-id="97bce-117">Windows 10 Fall Creators Update (版本 1709)</span><span class="sxs-lookup"><span data-stu-id="97bce-117">Windows 10 Fall Creators Update (version 1709)</span></span>
-* <span data-ttu-id="97bce-118">Windows 10 Creators Update (版本 1703)</span><span class="sxs-lookup"><span data-stu-id="97bce-118">Windows 10 Creators Update (version 1703)</span></span>
-* <span data-ttu-id="97bce-119">Windows 10 年度更新版 (版本 1607)</span><span class="sxs-lookup"><span data-stu-id="97bce-119">Windows 10 Anniversary Update (version 1607)</span></span>
-* <span data-ttu-id="97bce-120">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="97bce-120">Windows Server 2019</span></span>
-* <span data-ttu-id="97bce-121">Windows Server，版本 1809</span><span class="sxs-lookup"><span data-stu-id="97bce-121">Windows Server, version 1809</span></span>
-* <span data-ttu-id="97bce-122">Windows Server，版本 1803</span><span class="sxs-lookup"><span data-stu-id="97bce-122">Windows Server, version 1803</span></span>
-* <span data-ttu-id="97bce-123">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="97bce-123">Windows Server 2016</span></span>
+* <span data-ttu-id="04fde-115">Windows 10 2018 年 10 月更新 (版本 1809)</span><span class="sxs-lookup"><span data-stu-id="04fde-115">Windows 10 October 2018 Update (version 1809)</span></span>
+* <span data-ttu-id="04fde-116">Windows 10 2018 年 4 月更新 (版本 1803)</span><span class="sxs-lookup"><span data-stu-id="04fde-116">Windows 10 April 2018 Update (version 1803)</span></span>
+* <span data-ttu-id="04fde-117">Windows 10 Fall Creators Update (版本 1709)</span><span class="sxs-lookup"><span data-stu-id="04fde-117">Windows 10 Fall Creators Update (version 1709)</span></span>
+* <span data-ttu-id="04fde-118">Windows 10 Creators Update (版本 1703)</span><span class="sxs-lookup"><span data-stu-id="04fde-118">Windows 10 Creators Update (version 1703)</span></span>
+* <span data-ttu-id="04fde-119">Windows 10 年度更新版 (版本 1607)</span><span class="sxs-lookup"><span data-stu-id="04fde-119">Windows 10 Anniversary Update (version 1607)</span></span>
+* <span data-ttu-id="04fde-120">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="04fde-120">Windows Server 2019</span></span>
+* <span data-ttu-id="04fde-121">Windows Server，版本 1809</span><span class="sxs-lookup"><span data-stu-id="04fde-121">Windows Server, version 1809</span></span>
+* <span data-ttu-id="04fde-122">Windows Server，版本 1803</span><span class="sxs-lookup"><span data-stu-id="04fde-122">Windows Server, version 1803</span></span>
+* <span data-ttu-id="04fde-123">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="04fde-123">Windows Server 2016</span></span>
 
-<span data-ttu-id="97bce-124">以下項目不支援 .NET Framework 4.8：</span><span class="sxs-lookup"><span data-stu-id="97bce-124">The .NET Framework 4.8 is not supported on:</span></span>
+<span data-ttu-id="04fde-124">以下項目不支援 .NET Framework 4.8：</span><span class="sxs-lookup"><span data-stu-id="04fde-124">The .NET Framework 4.8 is not supported on:</span></span>
 
-* <span data-ttu-id="97bce-125">Windows 10 1507</span><span class="sxs-lookup"><span data-stu-id="97bce-125">Windows 10 1507</span></span>
-* <span data-ttu-id="97bce-126">Windows 10 1511</span><span class="sxs-lookup"><span data-stu-id="97bce-126">Windows 10 1511</span></span>
+* <span data-ttu-id="04fde-125">Windows 10 1507</span><span class="sxs-lookup"><span data-stu-id="04fde-125">Windows 10 1507</span></span>
+* <span data-ttu-id="04fde-126">Windows 10 1511</span><span class="sxs-lookup"><span data-stu-id="04fde-126">Windows 10 1511</span></span>
 
-<span data-ttu-id="97bce-127">若目前使用 Windows 10 1507 或 1511，且希望安裝.NET Framework 4.8，即必須先升級至更新版的 Windows 10。</span><span class="sxs-lookup"><span data-stu-id="97bce-127">If you're using Windows 10 1507 or 1511 and you want to install the .NET Framework 4.8, you first need to upgrade to a later Windows 10 version.</span></span>
+<span data-ttu-id="04fde-127">若目前使用 Windows 10 1507 或 1511，且希望安裝.NET Framework 4.8，即必須先升級至更新版的 Windows 10。</span><span class="sxs-lookup"><span data-stu-id="04fde-127">If you're using Windows 10 1507 or 1511 and you want to install the .NET Framework 4.8, you first need to upgrade to a later Windows 10 version.</span></span>
 
-## <a name="net-framework-462"></a><span data-ttu-id="97bce-128">.NET Framework 4.6.2</span><span class="sxs-lookup"><span data-stu-id="97bce-128">.NET Framework 4.6.2</span></span>
+## <a name="net-framework-462"></a><span data-ttu-id="04fde-128">.NET Framework 4.6.2</span><span class="sxs-lookup"><span data-stu-id="04fde-128">.NET Framework 4.6.2</span></span>
 
-<span data-ttu-id="97bce-129">[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) 是 Windows 10 1507 和 1511 支援之最新版 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="97bce-129">The [.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) is the latest supported .NET Framework version on Windows 10 1507 and 1511.</span></span>
+<span data-ttu-id="04fde-129">[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) 是 Windows 10 1507 和 1511 支援之最新版 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="04fde-129">The [.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) is the latest supported .NET Framework version on Windows 10 1507 and 1511.</span></span>
 
-<span data-ttu-id="97bce-130">.NET Framework 4.6.2 支援專為 .NET Framework 4.0 到 4.6.2 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="97bce-130">The .NET Framework 4.6.2 supports apps built for the .NET Framework 4.0 through 4.6.2.</span></span>
+<span data-ttu-id="04fde-130">.NET Framework 4.6.2 支援專為 .NET Framework 4.0 到 4.6.2 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="04fde-130">The .NET Framework 4.6.2 supports apps built for the .NET Framework 4.0 through 4.6.2.</span></span>
 
-## <a name="net-framework-35"></a><span data-ttu-id="97bce-131">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="97bce-131">.NET Framework 3.5</span></span>
+## <a name="net-framework-35"></a><span data-ttu-id="04fde-131">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="04fde-131">.NET Framework 3.5</span></span>
 
-<span data-ttu-id="97bce-132">請依照指示[在 Windows 10 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)。</span><span class="sxs-lookup"><span data-stu-id="97bce-132">Follow the instructions to install the [.NET Framework 3.5 on Windows 10](dotnet-35-windows-10.md).</span></span>
+<span data-ttu-id="04fde-132">請依照指示[在 Windows 10 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)。</span><span class="sxs-lookup"><span data-stu-id="04fde-132">Follow the instructions to install the [.NET Framework 3.5 on Windows 10](dotnet-35-windows-10.md).</span></span>
 
-<span data-ttu-id="97bce-133">.NET Framework 3.5 支援專為 .NET Framework 1.0 到 3.5 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="97bce-133">The .NET Framework 3.5 supports apps built for the .NET Framework 1.0 through 3.5.</span></span>
+<span data-ttu-id="04fde-133">.NET Framework 3.5 支援專為 .NET Framework 1.0 到 3.5 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="04fde-133">The .NET Framework 3.5 supports apps built for the .NET Framework 1.0 through 3.5.</span></span>
 
-## <a name="additional-information"></a><span data-ttu-id="97bce-134">其他資訊</span><span class="sxs-lookup"><span data-stu-id="97bce-134">Additional information</span></span>
+## <a name="additional-information"></a><span data-ttu-id="04fde-134">其他資訊</span><span class="sxs-lookup"><span data-stu-id="04fde-134">Additional information</span></span>
 
-<span data-ttu-id="97bce-135">.NET Framework 4.x 版本是舊版的就地更新。</span><span class="sxs-lookup"><span data-stu-id="97bce-135">.NET Framework 4.x versions are in-place updates to earlier versions.</span></span> <span data-ttu-id="97bce-136">這表示：</span><span class="sxs-lookup"><span data-stu-id="97bce-136">That means the following:</span></span>
+<span data-ttu-id="04fde-135">.NET Framework 4.x 版本是舊版的就地更新。</span><span class="sxs-lookup"><span data-stu-id="04fde-135">.NET Framework 4.x versions are in-place updates to earlier versions.</span></span> <span data-ttu-id="04fde-136">這表示：</span><span class="sxs-lookup"><span data-stu-id="04fde-136">That means the following:</span></span>
 
-- <span data-ttu-id="97bce-137">您的電腦上只可安裝一個版本的 .NET framework 4.x。</span><span class="sxs-lookup"><span data-stu-id="97bce-137">You can only have one version of the .NET Framework 4.x installed on your machine.</span></span>
+- <span data-ttu-id="04fde-137">您的電腦上只可安裝一個版本的 .NET framework 4.x。</span><span class="sxs-lookup"><span data-stu-id="04fde-137">You can only have one version of the .NET Framework 4.x installed on your machine.</span></span>
 
-- <span data-ttu-id="97bce-138">若電腦上已安裝了更新的 .NET Framework 版本，就無法安裝舊版。</span><span class="sxs-lookup"><span data-stu-id="97bce-138">You cannot install an earlier version of the .NET Framework on your machine if a later version is already installed.</span></span>
+- <span data-ttu-id="04fde-138">若電腦上已安裝了更新的 .NET Framework 版本，就無法安裝舊版。</span><span class="sxs-lookup"><span data-stu-id="04fde-138">You cannot install an earlier version of the .NET Framework on your machine if a later version is already installed.</span></span>
 
-- <span data-ttu-id="97bce-139">4.x 版的 .NET Framework 可用於執行專為 .NET Framework 4.0 及其小數點版本所建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="97bce-139">4.x versions of the .NET Framework can be used to run applications built for the .NET Framework 4.0 through that version.</span></span> <span data-ttu-id="97bce-140">例如，.NET Framework 4.7 可用於執行專為 .NET Framework 4.0 到 4.7 所建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="97bce-140">For example, .NET Framework 4.7 can be used to run applications built for the .NET Framework 4.0 through 4.7.</span></span> <span data-ttu-id="97bce-141">最新版本 (.NET Framework 4.8) 可用於執行使用所有 .NET Framework 4.0 以上版本來建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="97bce-141">The latest version (the .NET Framework 4.8) can be used to run applications built with all versions of the .NET Framework starting with 4.0.</span></span>
+- <span data-ttu-id="04fde-139">4.x 版的 .NET Framework 可用於執行專為 .NET Framework 4.0 及其小數點版本所建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="04fde-139">4.x versions of the .NET Framework can be used to run applications built for the .NET Framework 4.0 through that version.</span></span> <span data-ttu-id="04fde-140">例如，.NET Framework 4.7 可用於執行專為 .NET Framework 4.0 到 4.7 所建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="04fde-140">For example, .NET Framework 4.7 can be used to run applications built for the .NET Framework 4.0 through 4.7.</span></span> <span data-ttu-id="04fde-141">最新版本 (.NET Framework 4.8) 可用於執行使用所有 .NET Framework 4.0 以上版本來建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="04fde-141">The latest version (the .NET Framework 4.8) can be used to run applications built with all versions of the .NET Framework starting with 4.0.</span></span>
 
-<span data-ttu-id="97bce-142">如需所有所有可下載之 .NET Framework 版本的清單，請參閱 [.NET 下載](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)頁面。</span><span class="sxs-lookup"><span data-stu-id="97bce-142">For a list of all the versions of the .NET Framework available to download, see the [.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) page.</span></span>
+<span data-ttu-id="04fde-142">如需所有所有可下載之 .NET Framework 版本的清單，請參閱 [.NET 下載](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)頁面。</span><span class="sxs-lookup"><span data-stu-id="04fde-142">For a list of all the versions of the .NET Framework available to download, see the [.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) page.</span></span>
 
-## <a name="help"></a><span data-ttu-id="97bce-143">說明</span><span class="sxs-lookup"><span data-stu-id="97bce-143">Help</span></span>
+## <a name="help"></a><span data-ttu-id="04fde-143">說明</span><span class="sxs-lookup"><span data-stu-id="04fde-143">Help</span></span>
 
-<span data-ttu-id="97bce-144">若無法安裝正確的 .NET Framework 版本，可[連絡 Microsoft 取得協助](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。</span><span class="sxs-lookup"><span data-stu-id="97bce-144">If you cannot get the correct version of the .NET Framework installed, you can [contact Microsoft for help](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).</span></span>
+<span data-ttu-id="04fde-144">若無法安裝正確的 .NET Framework 版本，可[連絡 Microsoft 取得協助](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。</span><span class="sxs-lookup"><span data-stu-id="04fde-144">If you cannot get the correct version of the .NET Framework installed, you can [contact Microsoft for help](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="97bce-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="97bce-145">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04fde-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="04fde-145">See also</span></span>
 
-- <span data-ttu-id="97bce-146">[NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) (.NET 下載)</span><span class="sxs-lookup"><span data-stu-id="97bce-146">[.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)</span></span>
-- [<span data-ttu-id="97bce-147">疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題</span><span class="sxs-lookup"><span data-stu-id="97bce-147">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](troubleshoot-blocked-installations-and-uninstallations.md)
-- [<span data-ttu-id="97bce-148">安裝適用於開發人員的 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="97bce-148">Install the .NET Framework for developers</span></span>](guide-for-developers.md)
+- <span data-ttu-id="04fde-146">[NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) (.NET 下載)</span><span class="sxs-lookup"><span data-stu-id="04fde-146">[.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)</span></span>
+- [<span data-ttu-id="04fde-147">疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題</span><span class="sxs-lookup"><span data-stu-id="04fde-147">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](troubleshoot-blocked-installations-and-uninstallations.md)
+- [<span data-ttu-id="04fde-148">安裝適用於開發人員的 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="04fde-148">Install the .NET Framework for developers</span></span>](guide-for-developers.md)
