@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: cd989b47c87ef32371b45650d531bd8cbeb85032
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 2aee15443172e753846574806565f7804f1716d1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306957"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423682"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>轉型和類型轉換 (C# 程式設計指南)
 
@@ -38,7 +38,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 ## <a name="implicit-conversions"></a>隱含轉換
 
- 針對內建數字類型，如果要儲存的值可以放入變數中，而不需進行截斷或四捨五入，則可以進行隱含轉換。 例如，型別為 [long](../../../csharp/language-reference/keywords/long.md) 的變數 (64 位元整數) 可儲存任何 [int](../../../csharp/language-reference/keywords/int.md) (32 位元整數) 能儲存的值。 在下列範例中，編譯器會將位於右側的 `num` 值隱含轉換為 `long` 型別，再將它指派給 `bigNum`。  
+ 針對內建數字類型，如果要儲存的值可以放入變數中，而不需進行截斷或四捨五入，則可以進行隱含轉換。 針對整數型別，這表示來源型別的範圍是目標型別範圍的適當子集。 例如，型別為 [long](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 的變數 (64 位元整數) 可儲存任何 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (32 位元整數) 能儲存的值。 在下列範例中，編譯器會將位於右側的 `num` 值隱含轉換為 `long` 型別，再將它指派給 `bigNum`。  
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
@@ -53,7 +53,7 @@ Base b = d; // Always OK.
   
 ## <a name="explicit-conversions"></a>明確轉換
 
- 不過，如果進行轉換，而有遺失資訊的風險，則編譯器需要您執行稱為「轉換」  的明確轉換。 轉換是一種方式，可明確通知編譯器，您想要進行轉換並且了解可能發生資料遺失。 若要執行轉換，請在要轉換的值或變數前面的括弧中指定要轉換為的類型。 下列程式會將 [double](../../../csharp/language-reference/keywords/double.md) 轉型為 [int](../../../csharp/language-reference/keywords/int.md)。沒有轉型，就不會編譯程式。  
+ 不過，如果進行轉換，而有遺失資訊的風險，則編譯器需要您執行稱為「轉換」  的明確轉換。 轉換是一種方式，可明確通知編譯器，您想要進行轉換並且了解可能發生資料遺失。 若要執行轉換，請在要轉換的值或變數前面的括弧中指定要轉換為的類型。 下列程式會將 [double](../../../csharp/language-reference/keywords/double.md) 轉型為 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)。沒有轉型，就不會編譯程式。  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   

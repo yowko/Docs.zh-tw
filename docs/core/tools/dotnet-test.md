@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 05/29/2018
-ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535278"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410359"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -120,7 +120,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-執行測試時要使用的設定。
+用來執行測試的 `.runsettings` 檔案。 [使用 `.runsettings` 檔案設定單元測試](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)。
 
 `-t|--list-tests`
 
@@ -190,7 +190,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-執行測試時要使用的設定。
+用來執行測試的 `.runsettings` 檔案。 [使用 `.runsettings` 檔案設定單元測試](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)。
 
 `-t|--list-tests`
 
@@ -240,7 +240,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-執行測試時要使用的設定。
+用來執行測試的 `.runsettings` 檔案。 [使用 `.runsettings` 檔案設定單元測試](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)。
 
 `-t|--list-tests`
 
@@ -285,7 +285,7 @@ dotnet test [-h|--help]
 | :------: | --------------- |
 | `=`      | 完全相符     |
 | `!=`     | 不完全相符 |
-| `~`      | 包含        |
+| `~`      | Contains        |
 
 `<value>` 為字串。 所有的查閱皆不區分大小寫。
 

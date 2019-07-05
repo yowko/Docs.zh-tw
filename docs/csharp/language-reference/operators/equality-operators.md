@@ -1,7 +1,7 @@
 ---
 title: 等號比較運算子 - C# 參考
-description: 深入了解 C# 等號比較運算子。
-ms.date: 03/28/2019
+description: 深入了解 C# 等號比較運算子與 C# 型別等號。
+ms.date: 06/26/2019
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: f60d62d1823a8bd06b0417638719a81e95d7438b
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 72e790dc008857a48602c92c9236588c531b64f9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267695"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423933"
 ---
 # <a name="equality-operators-c-reference"></a>等號比較運算子 (C# 參考)
 
@@ -60,6 +60,18 @@ ms.locfileid: "67267695"
 [!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
 
 如範例所示，使用者定義參考型別預設支援 `==` 運算子。 不過，使用者定義參考型別可以多載 `==` 運算子。 若參考型別多載 `==` 運算子，請使用 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法檢查兩個該類型的參考是否參考相同的物件。
+
+## <a name="delegate-equality"></a>委派等號
+
+相同執行階段型別的兩個[委派](../../programming-guide/delegates/index.md)運算元都是 `null` 或其引動過程清單長度相同且每個位置都有相等的項目時，那兩個運算元相等：
+
+[!code-csharp-interactive[delegate equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#DelegateEquality)]
+
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[委派相等運算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)一節。
+
+從語意相同之 [lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)之評估產生的委派不相等，如下列範例所示：
+
+[!code-csharp-interactive[from identical lambdas](~/samples/csharp/language-reference/operators/EqualityOperators.cs#IdenticalLambdas)]
 
 ## <a name="inequality-operator-"></a>不等比較運算子 !=
 

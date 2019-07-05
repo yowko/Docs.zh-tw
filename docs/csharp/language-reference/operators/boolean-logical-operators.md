@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 37fe329026c16043abb20f8a9f030d877469951d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 60907eb1bbfeb1daa9d9a74733387c4771accb45
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025235"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423981"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布林值邏輯運算子 (C# 參考)
 
@@ -45,9 +45,9 @@ ms.locfileid: "67025235"
 
 - 一元 [`!` (邏輯否定)](#logical-negation-operator-) 運算子。
 - 二元 [`&` (邏輯 AND)](#logical-and-operator-)、[`|` (邏輯 OR)](#logical-or-operator-) 及 [`^` (邏輯互斥 OR)](#logical-exclusive-or-operator-) 運算子。 那些運算子一律會評估兩個運算元。
-- 二元 [`&&` (條件邏輯 AND)](#conditional-logical-and-operator-) 及 [`||` (條件邏輯 OR)](#conditional-logical-or-operator-) 運算子。 那些運算子只會在必要時才評估第二個運算元。
+- 二元 [`&&` (條件邏輯 AND)](#conditional-logical-and-operator-) 及 [`||` (條件邏輯 OR)](#conditional-logical-or-operator-) 運算子。 那些運算子只會在必要時才評估右邊的運算元。
 
-針對[整數](../keywords/integral-types-table.md)型別的運算元，`&`、`|` 和 `^` 運算子都會執行位元邏輯運算。 如需詳細資訊，請參閱[位元與移位運算子](bitwise-and-shift-operators.md)。
+針對[整數](../builtin-types/integral-numeric-types.md)型別的運算元，`&`、`|` 和 `^` 運算子都會執行位元邏輯運算。 如需詳細資訊，請參閱[位元與移位運算子](bitwise-and-shift-operators.md)。
 
 ## <a name="logical-negation-operator-"></a>邏輯否定運算子 !
 
@@ -55,17 +55,17 @@ ms.locfileid: "67025235"
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-## <a name="logical-and-operator-amp"></a>邏輯 AND 運算子 &amp;
+## <a name="logical-and-operator-"></a> 邏輯 AND 運算子 &amp;
 
 `&` 運算子會計算其運算元的邏輯 AND。 若 `x` 及 `y` 皆求出 `true`，那麼 `x & y` 的結果會是 `true`。 否則，結果為 `false`。
 
-即使第一個運算元的值為 `false`，`&` 運算子仍會求這兩個運算元的值，所以不論第二個運算元的值為何，其結果必定為 `false`。
+即使左邊運算元的值為 `false`，`&` 運算子仍會求這兩個運算元的值，所以不論右邊運算元的值為何，其結果必定為 `false`。
 
-在下列範例中，`&` 運算子的第二個運算元是方法呼叫；無論第一個運算元的值為何，系統都會執行該呼叫：
+在下列範例中，`&` 運算子的右邊運算元是方法呼叫；無論左邊運算元的值為何，系統都會執行該呼叫：
 
 [!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
 
-[條件邏輯 AND 運算子](#conditional-logical-and-operator-) `&&` 也會計算其運算元的邏輯 AND，但如果第一個運算元的值評估為 `false`，系統便不會評估第二個運算元。
+[條件邏輯 AND 運算子](#conditional-logical-and-operator-) `&&` 也會計算其運算元的邏輯 AND，但如果右邊運算元的值評估為 `false`，系統便不會評估左邊運算元。
 
 針對整數型別的運算元，`&` 運算子會計算其運算元的[位元邏輯 AND](bitwise-and-shift-operators.md#logical-and-operator-)。 一元的 `&` 運算子是 [address-of 運算子](pointer-related-operators.md#address-of-operator-)。
 
@@ -81,21 +81,21 @@ ms.locfileid: "67025235"
 
 `|` 運算子會計算其運算元的邏輯 OR。 若 `x` 或 `y` 其中一項的值為 `true`，`x | y` 的結果會是 `true`。 否則，結果為 `false`。
 
-即使第一個運算元的值為 `true`，`|` 運算子仍會求這兩個運算元的值，所以不論第二個運算元的值為何，其結果必定為 `true`。
+即使左邊運算元的值為 `true`，`|` 運算子仍會求這兩個運算元的值，所以不論右邊運算元的值為何，其結果必定為 `true`。
 
-在下列範例中，`|` 運算子的第二個運算元是方法呼叫；無論第一個運算元的值為何，系統都會執行該呼叫：
+在下列範例中，`|` 運算子的右邊運算元是方法呼叫；無論左邊運算元的值為何，系統都會執行該呼叫：
 
 [!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
 
-[條件邏輯 OR 運算子](#conditional-logical-or-operator-) `||` 也會計算其運算元的邏輯 OR，但如果第一個運算元的值評估為 `true`，系統便不會評估第二個運算元。
+[條件式邏輯 OR 運算子](#conditional-logical-or-operator-) `||` 也會計算其運算元的邏輯 OR，但如果右邊運算元的值評估為 `true`，系統便不會評估左邊運算元。
 
 針對整數型別的運算元，`|` 運算子會計算其運算元的[位元邏輯 OR](bitwise-and-shift-operators.md#logical-or-operator-)。
 
-## <a name="conditional-logical-and-operator-ampamp"></a>條件邏輯 AND 運算子 &amp;&amp;
+## <a name="conditional-logical-and-operator-"></a> 條件式邏輯 AND 運算子 &amp;&amp;
 
-條件邏輯 AND 運算子 `&&`，也稱為「捷徑運算」邏輯 AND 運算子，會計算其運算元的邏輯 AND。 若 `x` 及 `y` 皆求出 `true`，那麼 `x && y` 的結果會是 `true`。 否則，結果為 `false`。 如果第一個運算元評估值為 `false`，就不會評估第二個運算元。
+條件邏輯 AND 運算子 `&&`，也稱為「捷徑運算」邏輯 AND 運算子，會計算其運算元的邏輯 AND。 若 `x` 及 `y` 皆求出 `true`，那麼 `x && y` 的結果會是 `true`。 否則，結果為 `false`。 如果 `x` 評估為 `false`，則不會評估 `y`。
 
-在下列範例中，`&&` 運算子的第二個運算元是方法呼叫；如果第一個運算元的值評估為 `false`，系統便不會執行該呼叫：
+在下列範例中，`&&` 運算子的右邊運算元是方法呼叫；如果左邊運算元的值評估為 `false`，系統便不會執行該呼叫：
 
 [!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
 
@@ -103,9 +103,9 @@ ms.locfileid: "67025235"
 
 ## <a name="conditional-logical-or-operator-"></a>條件邏輯 OR 運算子 ||
 
-條件邏輯 OR 運算子 `||`，也稱為「捷徑運算」邏輯 OR 運算子，會計算其運算元的邏輯 OR。 若 `x` 或 `y` 其中一項的值為 `true`，`x || y` 的結果會是 `true`。 否則，結果為 `false`。 如果第一個運算元評估值為 `true`，就不會評估第二個運算元。
+條件邏輯 OR 運算子 `||`，也稱為「捷徑運算」邏輯 OR 運算子，會計算其運算元的邏輯 OR。 若 `x` 或 `y` 其中一項的值為 `true`，`x || y` 的結果會是 `true`。 否則，結果為 `false`。 如果 `x` 評估為 `true`，則不會評估 `y`。
 
-在下列範例中，`||` 運算子的第二個運算元是方法呼叫；如果第一個運算元的值評估為 `true`，系統便不會執行該呼叫：
+在下列範例中，`||` 運算子的右邊運算元是方法呼叫；如果左邊運算元的值評估為 `true`，系統便不會執行該呼叫：
 
 [!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
 

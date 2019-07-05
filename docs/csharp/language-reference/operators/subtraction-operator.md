@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7c9863134cb2a12072954bb283c7828abece3adb
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024921"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347905"
 ---
 # <a name="--and---operators-c-reference"></a>- 及 -= 運算子 (C# 參考)
 
@@ -30,17 +30,17 @@ ms.locfileid: "67024921"
 
 針對相同 [delegate](../keywords/delegate.md) 型別中的運算元，`-` 運算子會傳回委派執行個體，其計算方式如下：
 
-- 如果兩個運算元都為非 Null，且第二個運算元的引動過程清單是第一個運算元之引動過程清單的適當連續子清單，則作業結果會是新引動過程清單藉由從第一個運算元之引動過程清單來移除第二個運算元的項目所取得。 如果第二個運算元清單與第一個運算元清單中的多個連續子清單相符，則只會移除最右邊的相符子清單。 如果移除導致空白清單，則結果是 `null`。
+- 如果兩個運算元都為非 Null，且右邊運算元的引動過程清單是左邊運算元之引動過程清單的適當連續子清單，則作業結果會是新引動過程清單藉由從左邊運算元之引動過程清單來移除右邊運算元的項目所取得。 如果右邊運算元清單與左邊運算元清單中的多個連續子清單相符，則只會移除最右邊的相符子清單。 如果移除導致空白清單，則結果是 `null`。
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- 如果第二個運算元的引動過程清單不是第一個運算元之引動過程清單的適當連續子清單，則作業的結果會是第一個運算元。 例如，移除不屬於多點傳送委派的委派就不會執行任何動作，而且會導致多點傳送委派不變。
+- 如果右邊運算元的引動過程清單不是左邊運算元之引動過程清單的適當連續子清單，則作業的結果會是左邊運算元。 例如，移除不屬於多點傳送委派的委派就不會執行任何動作，而且會導致多點傳送委派不變。
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
   上述範例也會示範在委派移除期間，系統會比較委派執行個體。 例如，從評估相同 [lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)所產生的委派不相等。 如需有關委派等號比較的詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[委派等號比較運算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)一節。
 
-- 如果第一個運算元是 `null`，則作業的結果是 `null`。 如果第二個運算元是 `null`，則作業的結果是第一個運算元。
+- 如果左邊運算元是 `null`，則作業的結果是 `null`。 如果右邊運算元是 `null`，則作業的結果是左邊運算元。
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 

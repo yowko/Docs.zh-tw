@@ -2,12 +2,12 @@
 title: C# 8.0 的新功能 - C# 指南
 description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 5 的最新資訊。
 ms.date: 02/12/2019
-ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151972"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397764"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -30,7 +30,12 @@ ms.locfileid: "67151972"
 > [!NOTE]
 > 此文章內容為 C# 8.0 預覽 5 的最新更新。
 
-本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。
+本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
+
+1. 安裝 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全域工具。
+1. 複製 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存放庫。
+1. 將目前的目錄設為 *try-samples* 存放庫的 *csharp8* 子目錄。
+1. 執行 `dotnet try`。
 
 ## <a name="readonly-members"></a>唯讀成員
 
@@ -425,7 +430,7 @@ var lazyDog = words[^2..^0];
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
 var firstPhrase = words[..4]; // contains "The" through "fox"
-var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
+var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
 您也可將範圍宣告為變數：

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 14e62d53fca16212fae374b2627d1e96cbbca6ac
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 258adc45fc6874cca5829479eef1196ebea1e300
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025313"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347981"
 ---
 # <a name="-and--operators-c-reference"></a>+ 及 += 運算子 (C# 參考)
 
@@ -39,7 +39,7 @@ ms.locfileid: "67025313"
 
 ## <a name="delegate-combination"></a>委派組合
 
-針對相同 [delegate](../keywords/delegate.md) 型別中的運算元，`+` 運算子會傳回新的委派執行個體，(當叫用時) 該執行個體會叫用第一個運算元，然後叫用第二個運算元。 如果其中任一個運算元為 `null`，則 `+` 運算子會傳回另一個運算元的值 (也有可能是 `null`)。 下列範例顯示委派如何與 `+` 運算子結合：
+針對相同[委派](../keywords/delegate.md)型別中的運算元，`+` 運算子會傳回新的委派執行個體，並在叫用時叫用左側運算元，然後叫用右側運算元。 如果其中任一個運算元為 `null`，則 `+` 運算子會傳回另一個運算元的值 (也有可能是 `null`)。 下列範例顯示委派如何與 `+` 運算子結合：
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 

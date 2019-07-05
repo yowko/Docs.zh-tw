@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025247"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424003"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位元與移位運算子 (C# 參考)
 
-下列運算子會針對[整數型別](../keywords/integral-types-table.md)的運算元執行位元或移位作業：
+下列運算子會針對[整數型別](../builtin-types/integral-numeric-types.md)的運算元執行位元或移位作業：
 
 - 一元 [`~`(位元補充)](#bitwise-complement-operator-) 運算子
 - 二元 [`<<` (左移)](#left-shift-operator-) 及 [`>>` (右移)](#right-shift-operator-) 移位運算子
@@ -60,39 +60,39 @@ ms.locfileid: "67025247"
 
 ## <a name="left-shift-operator-"></a>左移運算子 \<\<
 
-`<<` 運算子會將其第一個運算元左移第二個運算元所定義的位元數。
+`<<` 運算子會將其左邊運算元左移右邊運算元所定義的位元數。
 
 左移作業會捨棄位於結果型別範圍外的高位位元，並將低位的空位元位置設為零，如下列範例所示：
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-由於移位運算子僅針對 `int`、`uint`、`long` 和 `ulong` 型別進行定義，所以作業的結果一律會包含至少 32 個位元。 第一個運算元是另一個整數型別 (`sbyte`、`byte`、`short`、`ushort` 或 `char`)，其值會轉換成 `int` 型別，如下列範例所示：
+由於移位運算子僅針對 `int`、`uint`、`long` 和 `ulong` 型別進行定義，所以作業的結果一律會包含至少 32 個位元。 左邊運算元是另一個整數型別 (`sbyte`、`byte`、`short`、`ushort` 或 `char`)，其值會轉換成 `int` 型別，如下列範例所示：
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-如需 `<<` 運算子第二個運算元如何定義移位計數的資訊，請參閱[移位運算子的移位計數](#shift-count-of-the-shift-operators)一節。
+如需 `<<` 運算子右邊運算元如何定義移位計數的資訊，請參閱[移位運算子的移位計數](#shift-count-of-the-shift-operators)一節。
 
 ## <a name="right-shift-operator-"></a>右移運算子 >>
 
-`>>` 運算子會將其第一個運算元右移第二個運算元所定義的位元數。
+`>>` 運算子會將其右邊運算元左移右邊運算元所定義的位元數。
 
 右移作業會捨棄低位位元，如下列範例所示：
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-會根據第一個運算元的類型來設定高位空位元位置，如下所示：
+會根據左邊運算元的類型來設定高位空位元位置，如下所示：
 
-- 若第一個運算元的型別為 [int](../keywords/int.md) 或 [long](../keywords/long.md)，則右移運算元會執行*算術*位移：第一個運算元之最高有效位元 (正負號位元) 的值會傳播到高為空位元位置。 也就是說，若第一個運算元不是負值且在為負值時被設定為一，則高位空位元位置會被設定為零。
+- 若左邊運算元的型別為 [int](../builtin-types/integral-numeric-types.md) 或 [long](../builtin-types/integral-numeric-types.md)，則右移運算元會執行*算術*位移：左邊運算元之最高有效位元 (正負號位元) 的值會傳播到高為空位元位置。 也就是說，若左邊運算元不是負值且在為負值時被設定為一，則高位空位元位置會被設定為零。
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- 若第一個運算元的型別為 [uint](../keywords/uint.md) 或 [ulong](../keywords/ulong.md)，則右移運算子會執行*邏輯*位移：高位空位元位置一律會被設定為零。
+- 若左邊運算元的型別為 [uint](../builtin-types/integral-numeric-types.md) 或 [ulong](../builtin-types/integral-numeric-types.md)，則右移運算子會執行*邏輯*位移：高位空位元位置一律會被設定為零。
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-如需 `>>` 運算子第二個運算元如何定義移位計數的資訊，請參閱[移位運算子的移位計數](#shift-count-of-the-shift-operators)一節。
+如需 `>>` 運算子右邊運算元如何定義移位計數的資訊，請參閱[移位運算子的移位計數](#shift-count-of-the-shift-operators)一節。
 
-## <a name="logical-and-operator-amp"></a>邏輯 AND 運算子 &amp;
+## <a name="logical-and-operator-"></a> 邏輯 AND 運算子 &amp;
 
 `&` 運算子會計算其運算元的位元邏輯 AND：
 
@@ -158,13 +158,13 @@ x = x op y
 
 ## <a name="shift-count-of-the-shift-operators"></a>移位運算子的移位計數
 
-針對移位運算子 `<<` 和 `>>`，第二個運算元的型別必須是 [int](../keywords/int.md) 或具有[預先定義隱含數值轉換](../keywords/implicit-numeric-conversions-table.md)至 `int` 的型別。
+針對移位運算子 `<<` 和 `>>`，右邊運算元的型別必須是 [int](../builtin-types/integral-numeric-types.md) 或具有[預先定義隱含數值轉換](../keywords/implicit-numeric-conversions-table.md)至 `int` 的型別。
 
 針對 `x << count` 和 `x >> count` 運算式，實際的移位計數取決於 `x` 的型別，如下所示：
 
-- 若 `x` 的型別是 [int](../keywords/int.md) 或 [uint](../keywords/uint.md)，則移位計數會由第二個運算元低位的「五個」  位元定義。 也就是說，位移計數是從 `count & 0x1F` (或 `count & 0b_1_1111`) 所計算。
+- 若 `x` 的型別是 [int](../builtin-types/integral-numeric-types.md) 或 [uint](../builtin-types/integral-numeric-types.md)，則移位計數會由右邊運算元低位的「五個」  位元定義。 也就是說，位移計數是從 `count & 0x1F` (或 `count & 0b_1_1111`) 所計算。
 
-- 若 `x` 的型別是 [long](../keywords/long.md) 或 [ulong](../keywords/ulong.md)，則移位計數會由第二個運算元低位的「六個」  位元定義。 也就是說，位移計數是從 `count & 0x3F` (或 `count & 0b_11_1111`) 所計算。
+- 若 `x` 的型別是 [long](../builtin-types/integral-numeric-types.md) 或 [ulong](../builtin-types/integral-numeric-types.md)，則移位計數會由右邊運算元低位的「六個」  位元定義。 也就是說，位移計數是從 `count & 0x3F` (或 `count & 0b_11_1111`) 所計算。
 
 下列範例示範了該行為：
 
@@ -180,7 +180,7 @@ x = x op y
 
 使用者定義型別可以[多載](../keywords/operator.md) `~`、`<<`、`>>`、`&`、`|` 和 `^` 運算子。 當二元運算子多載時，對應的複合指派運算子也會隱含地多載。 使用者定義型別無法明確地多載複合指派運算子。
 
-若使用者定義型別 `T` 多載了 `<<` 或 `>>` 運算子，則第一個運算元的型別必須是 `T`，第二個運算元的型別必須是 `int`。
+若使用者定義型別 `T` 多載了 `<<` 或 `>>` 運算子，則左邊運算元的型別必須是 `T`，右邊運算元的型別必須是 `int`。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

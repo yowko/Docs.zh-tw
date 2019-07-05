@@ -5,16 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 3a642996da8f0126e59e21d3553a7d8ba73dab23
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 675369936b9f90620b03365104255a622855fa9f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422676"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401792"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾詞 (C# 參考)
 
 `new` 關鍵字做為宣告修飾詞使用時，會明確隱藏繼承自基底類別的成員。 當您隱藏繼承的成員時，該成員的衍生版本就會取代基底類別版本。 雖然您可以在不使用 `new` 修飾詞的情況下隱藏成員，但是編譯器會發出警告。 如果您使用 `new` 明確隱藏成員，它會隱藏這個警告。
+
+您也可以使用 `new` 關鍵字來[建立型別執行個體](../operators/new-operator.md)或作為[泛型型別條件約束](../keywords/new-constraint.md)。
 
 若要隱藏繼承的成員，請在衍生類別中使用相同的成員名稱宣告該成員，並且使用 `new` 關鍵讚加以修飾。 例如：
 
@@ -24,7 +26,7 @@ ms.locfileid: "66422676"
 
 經由繼承隱藏的名稱會採用下列其中一種格式：
 
-- 一般而言，在類別或結構中引入的常數、欄位、屬性或類型會隱藏共用其名稱的所有基底類別成員。  不過有一些特殊案例。  例如，如果您宣告名為 `N` 的新欄位採用不可叫用的類型，而且基底類型將 `N` 宣告為方法，則新欄位不會隱藏引動過程語法中的基底宣告。  如需詳細資料，請參閱 [C# Language Specification 5.0](https://www.microsoft.com/download/details.aspx?id=7029) (C# 語言規格 5.0 ) (＜運算式＞一節中的＜成員查詢＞)。
+- 一般而言，在類別或結構中引入的常數、欄位、屬性或類型會隱藏共用其名稱的所有基底類別成員。 不過有一些特殊案例。 例如，如果您宣告名為 `N` 的新欄位採用不可叫用的類型，而且基底類型將 `N` 宣告為方法，則新欄位不會隱藏引動過程語法中的基底宣告。 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[成員查閱](~/_csharplang/spec/expressions.md#member-lookup)一節。
 
 - 類別或結構中引入的方法會隱藏在基底類別中共用該名稱的屬性、欄位和類型。 它也會隱藏所有具有相同簽章的基底類別方法。
 
@@ -48,13 +50,13 @@ ms.locfileid: "66422676"
 
 如果您移除 `new` 修飾詞，程式仍會進行編譯和執行，但是您會收到下列警告：
 
-```
+```text
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.
 ```
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [new 修飾詞](~/_csharplang/spec/classes.md#the-new-modifier)一節。
 
 ## <a name="see-also"></a>另請參閱
 

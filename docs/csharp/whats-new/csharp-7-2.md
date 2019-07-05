@@ -2,12 +2,12 @@
 title: C# 7.2 的新功能
 description: C# 7.2 新功能的概觀。
 ms.date: 08/16/2017
-ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185346"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347419"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 的新功能
 
@@ -30,6 +30,13 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
   - 您可利用 `private protected` 存取修飾詞，存取相同組件中的衍生類別。
 * [`ref` 條件運算式](#conditional-ref-expressions)
   - 條件運算式 (`?:`) 的結果現在可以是參考。
+
+此文章的其餘部分將概述各個功能。 您將了解每項功能背後的原因。 您將了解語法。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
+
+1. 安裝 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全域工具。
+1. 複製 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存放庫。
+1. 將目前的目錄設為 *try-samples* 存放庫的 *csharp7* 子目錄。
+1. 執行 `dotnet try`。
 
 ## <a name="safe-efficient-code-enhancements"></a>安全、有效率的程式碼增強功能
 

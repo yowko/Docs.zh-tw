@@ -3,12 +3,12 @@ title: ML.NET CLI 工具中的 auto-train 命令
 description: ML.NET CLI 工具中的 auto-train 命令概觀、範例和參考。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722609"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397667"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI 中的 'auto-train' 命令
 
@@ -44,7 +44,7 @@ ML.NET CLI 目前支援的 ML 工作如下：
 
 前兩項資產可以直接用於終端使用者應用程式 (ASP.NET Core Web 應用程式、服務、傳統型應用程式等)，使用產生的 ML 模型建立預測。
 
-第三項資產，即定型程式碼，會向您顯示 CLI 已使用哪些 ML.NET API 程式碼來定型產生的模型，讓您可以調查 CLI 和 ML.NET AutoML 引擎選取了哪些特定的定型器/演算法和超參數。
+第三項資產，即定型程式碼，會向您顯示 CLI 已使用哪些 ML.NET API 程式碼來定型產生的模型，讓您可以調查 CLI 和 ML.NET AutoML 引擎選取了哪些特定定型器/演算法和超參數。
 
 ## <a name="the-auto-train-command-uses-the-automl-engine"></a>'auto-train' 命令使用 AutoML 引擎
 

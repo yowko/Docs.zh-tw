@@ -2,12 +2,12 @@
 title: C# 7.3 的新功能
 description: C# 7.3 新功能的概觀
 ms.date: 05/16/2018
-ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832702"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397784"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 的新功能
 
@@ -34,7 +34,12 @@ C# 7.3 版有兩個主要的佈景主題。 其中一個佈景主題提供了使
 - `-publicsign`，用來啟用組件的開放原始碼軟體 (OSS) 簽署。
 - `-pathmap`，用來提供來源目錄的對應。
 
-這篇文章的其餘部分提供詳細資料和連結，讓您深入了解每個增強功能。
+這篇文章的其餘部分提供詳細資料和連結，讓您深入了解每個增強功能。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
+
+1. 安裝 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全域工具。
+1. 複製 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存放庫。
+1. 將目前目錄設為 *try-samples* 存放庫的 *csharp7* 子目錄。
+1. 執行 `dotnet try`。
 
 ## <a name="enabling-more-efficient-safe-code"></a>啟用更有效率的安全的程式碼
 

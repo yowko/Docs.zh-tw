@@ -1,13 +1,13 @@
 ---
 title: dotnet-add reference 命令
 description: dotnet add reference 命令提供方便的選項，以新增專案對專案參考。
-ms.date: 04/24/2019
-ms.openlocfilehash: e90f95527d4f14c7851ccd8d30201daaaaefa2ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631931"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422009"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -23,7 +23,7 @@ ms.locfileid: "65631931"
 
 ## <a name="synopsis"></a>概要
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
+`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
 ## <a name="description"></a>說明
 
@@ -56,6 +56,10 @@ ms.locfileid: "65631931"
 * **`-f|--framework <FRAMEWORK>`**
 
   只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增專案參考。
+
+* **`--interactive`**
+
+  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供使用。
 
 ## <a name="examples"></a>範例
 

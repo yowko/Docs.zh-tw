@@ -5,24 +5,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: 2aa68bec13322e332bfe3841bc99403f72301183
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7c788be52010cdfadbd3c03f9e570815d25bdbef
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421795"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401487"
 ---
 # <a name="new-constraint-c-reference"></a>new 條件約束 (C# 參考)
 
-`new` 條件約束指定泛型類別宣告中的任何型別引數都必須有公用的無參數建構函式。 若要使用新的條件約束，型別不能為抽象。
+`new` 條件約束指定泛型類別宣告中的型別引數都必須有公用無參數建構函式。 若要使用 `new` 條件約束，型別不能為抽象。
 
-## <a name="example"></a>範例
-
-當泛型類別建立新的型別執行個體時，將 `new` 條件約束套用至型別參數，如下例所示︰
+當泛型類別建立新的型別執行個體時，將 `new` 條件約束套用至型別參數，如下列範例所示：
 
 [!code-csharp[csrefKeywordsOperator#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#5)]
-
-## <a name="example"></a>範例
 
 當您使用 `new()` 條件約束與其他條件約束時，它必須是最後一個指定的︰
 
@@ -30,13 +26,14 @@ ms.locfileid: "66421795"
 
 如需詳細資訊，請參閱[型別參數的條件約束](../../programming-guide/generics/constraints-on-type-parameters.md)。
 
+您也可以使用 `new` 關鍵字來[建立型別的執行個體](../operators/new-operator.md)或作為[成員宣告修飾詞](new-modifier.md)。
+
 ## <a name="c-language-specification"></a>C# 語言規格
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)中的[型別參數條件約束](~/_csharplang/spec/classes.md#type-parameter-constraints)一節。
 
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Collections.Generic>
 - [C# 參考](../../language-reference/index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)

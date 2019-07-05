@@ -2,12 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 新功能的概觀。
 ms.date: 04/09/2019
-ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881532"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347608"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -30,9 +30,16 @@ C# 7.1 也新增了[語言版本選擇](../language-reference/configure-language
 
 若要使用小數點版本中的最新功能，您需要[設定編譯器語言版本](../language-reference/configure-language-version.md)並選取該版本。
 
+此文章的其餘部分將概述各個功能。 您將了解每項功能背後的原因。 您將了解語法。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
+
+1. 安裝 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全域工具。
+1. 複製 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存放庫。
+1. 將目前目錄設為 *try-samples* 存放庫的 *csharp7* 子目錄。
+1. 執行 `dotnet try`。
+
 ## <a name="async-main"></a>非同步主要
 
-「非同步主要」方法可讓您在 `Main` 方法中使用 `await`。
+「非同步主要」  方法可讓您在 `Main` 方法中使用 `await`。
 在過去您必須這樣寫：
 
 ```csharp
@@ -109,5 +116,5 @@ var pair = (count, label); // element names are "count" and "label"
 
 ## <a name="reference-assembly-generation"></a>參考組件產生
 
-有兩個新編譯器選項會產生「僅參考的組件」：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
+有兩個新編譯器選項會產生「僅參考的組件」  ：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
 連結的文章將更詳細地說明這些選項和參考組件。

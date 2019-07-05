@@ -1,18 +1,18 @@
 ---
-title: 準備資料
+title: 準備資料以建置模型
 description: 了解如何在 ML.NET 中使用轉換來操縱及準備資料，以進行額外的處理或模型建置。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 05/03/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.date: 06/25/2019
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268244"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397711"
 ---
-# <a name="prepare-data"></a>準備資料
+# <a name="prepare-data-for-building-a-model"></a>準備資料以建置模型
 
 了解如何使用 ML.NET 準備資料，以進行額外的處理或建置模型。
 

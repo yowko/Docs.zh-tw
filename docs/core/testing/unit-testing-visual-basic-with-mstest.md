@@ -7,14 +7,14 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: a717e8b3da4743da96c3f6e52488fa1e8395e35d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 035daf2ec7fa487c171317fd67e7c39fea7fc951
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689262"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397607"
 ---
-# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MStest 為 Visual Basic .NET Core 程式庫進行單元測試
+# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MSTest 為 Visual Basic .NET Core 程式庫進行單元測試
 
 本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-mstest/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
@@ -44,7 +44,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-將目錄變更回 *unit-testing-vb-using-stest* 目錄。 執行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。
+將目錄變更回 *unit-testing-vb-using-mstest* 目錄。 執行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。
 
 ## <a name="creating-the-test-project"></a>建立測試專案
 

@@ -3,12 +3,12 @@ title: C# 型別和變數 - C# 語言教學課程
 description: 了解如何在 C# 中定義類型和宣告變數
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a3f31eca296265c1e7f0c14a9540e267a2165ec1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881984"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423446"
 ---
 # <a name="types-and-variables"></a>型別與變數
 
@@ -39,7 +39,7 @@ C# 的實值型別可進一步細分為*簡單型別*、*列舉型別*、*結構
     * 使用者定義型別，格式為 `class C {...}`
   - [介面型別][InterfaceTypes]
     * 使用者定義型別，格式為 `interface I {...}`
-  - [陣列型別][ArrayTypes]
+  - [陣列類型][ArrayTypes]
     * 單一維度和多維度，例如 `int[]` 和 `int[,]`
   - [委派型別][DelegateTypes]
     * 使用者定義型別，格式為 `delegate int D(...)`
@@ -55,7 +55,7 @@ C# 的實值型別可進一步細分為*簡單型別*、*列舉型別*、*結構
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-如需數值型別的詳細資訊，請參閱[整數型別表](../language-reference/keywords/integral-types-table.md)和[浮點型別表](../language-reference/keywords/floating-point-types-table.md)。
+如需數值型別的詳細資訊，請參閱[整數型別](../language-reference/builtin-types/integral-numeric-types.md)和[浮點數型別表](../language-reference/keywords/floating-point-types-table.md)。
 
 C# 的 `bool` 型別用來代表布林值 — 不是 `true` 或 `false` 的值。
 

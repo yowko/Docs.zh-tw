@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832524"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348007"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)
 下列各表列出 .NET Framework 檔案 I/O 的常用類別、分類為檔案 I/O 類別的檔案、用於建立資料流的類別，以及用來讀取和寫入至資料流的類別。  
   
- 若要輸入 [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] 文件，並尋找更完整的清單，請參閱[類別庫概觀](../../../../standard/class-library-overview.md)。  
+如需更完整的清單，請參閱[類別庫概觀](../../../../standard/class-library-overview.md)。  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>檔案、磁碟機和目錄的基本 I/O 類別  
  下表列出並描述用於檔案 I/O 的主要類別。  

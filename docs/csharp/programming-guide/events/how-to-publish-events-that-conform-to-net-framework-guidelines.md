@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 010077cd95a9cf6bd7d4c22a54abc02b167755e8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8af6d7d91efef81569e6f783352ec89d260cdd13
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584319"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347593"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>作法：發行符合 .NET Framework 方針的事件 (C# 程式設計手冊)
 下列程序示範如何將遵循標準 .NET Framework 模式的事件，新增至您的類別和結構。 .NET Framework 類別庫中的所有事件都是以 <xref:System.EventHandler> 委派為基礎，其定義如下：  
@@ -20,7 +20,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 ```  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] 引進 <xref:System.EventHandler%601> 這個委派的泛型版本。 下列範例示範如何使用這兩種版本。  
+>  .NET Framework 2.0 引進此委派的泛型版本 <xref:System.EventHandler%601>。 下列範例示範如何使用這兩種版本。  
   
  雖然您所定義之類別中的事件能以任何有效的委派型別 (甚至是傳回值的委派) 為基礎，但通常建議您使用 <xref:System.EventHandler>，讓事件以 .NET Framework 模式為基礎，如下列範例所示。  
   

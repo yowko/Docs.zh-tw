@@ -1,18 +1,18 @@
 ---
-title: 載入資料
-description: 載入資料檔案並將資料串流至 ML.NET
-ms.date: 05/03/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 6edcc92b610e2e1f5e21c371b9f0aefd0b216d31
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+title: 從檔案和其他來源載入資料
+description: 此操作說明教學會示範如何將資料載入 ML.NET 以進行處理和定型。 資料原先是儲存在檔案或其他資料來源中，例如資料庫、JSON、XML 或記憶體內部集合。
+ms.date: 06/25/2019
+ms.custom: mvc,how-to, title-hack-0625
+ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063655"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397737"
 ---
-# <a name="load-data-from-file-and-in-memory-sources"></a>從檔案和記憶體內部來源載入資料
+# <a name="load-data-from-files-and-other-sources"></a>從檔案和其他來源載入資料
 
-此操作說明教學會示範如何將資料載入 ML.NET 以進行處理和定型。 資料原本儲存在檔案中或即時/串流資料來源內。
+此操作說明教學會示範如何將資料載入 ML.NET 以進行處理和定型。 資料原先是儲存在檔案或其他資料來源中，例如資料庫、JSON、XML 或記憶體內部集合。
 
 ## <a name="create-the-data-model"></a>建立資料模型
 
@@ -102,16 +102,15 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-streaming-source"></a>從串流來源載入資料
+## <a name="load-data-from-other-sources"></a>從其他來源載入資料
 
-除了載入儲存在磁碟上的資料，ML.NET 支援從各種串流來源載入資料，其中包括但不限於：
+除了載入儲存在檔案中的資料，ML.NET 支援從其他來源載入資料，其中包含但不限於：
 
 - 記憶體內集合
 - JSON/XML
 - 資料庫
 
-> [!IMPORTANT]
-> 請注意，當使用串流來源時，ML.NET 預期輸入的形式為記憶體內部集合。 因此，當使用像是 JSON/XML 等來源時，請務必將資料格式化成記憶體內部集合。
+請注意，當使用串流來源時，ML.NET 預期輸入的形式為記憶體內部集合。 因此，當使用像是 JSON/XML 等來源時，請務必將資料格式化成記憶體內部集合。
 
 假設有下列記憶體內部集合：
 

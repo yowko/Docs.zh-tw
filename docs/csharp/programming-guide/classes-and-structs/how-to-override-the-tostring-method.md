@@ -1,19 +1,20 @@
 ---
-title: HOW TO：覆寫 ToString 方法 - C# 程式設計手冊
+title: 作法：覆寫 ToString 方法 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b12aeaeb5414d911abea4dfda654183ffa02b3e6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294973"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398460"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>HOW TO：覆寫 ToString 方法 (C# 程式設計手冊)
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>作法：覆寫 ToString 方法 (C# 程式設計手冊)
+
 C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別。 因此，C# 中的每個物件都會取得 <xref:System.Object.ToString%2A> 方法，以傳回該物件的字串表示。 例如，所有 `int` 類型的變數都有 `ToString` 方法，並讓它們以字串傳回其內容︰  
   
  [!code-csharp[csProgGuideInheritance#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#37)]  
@@ -23,9 +24,9 @@ C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別�
  如需如何使用 `ToString` 方法以使用格式字串和其他類型之自訂格式的資訊，請參閱[格式化類型](../../../standard/base-types/formatting-types.md)。  
   
 > [!IMPORTANT]
->  當您決定要透過這種方法提供的資訊時，請考慮不受信任的程式碼是否要使用類別或結構。 請務必確定您未提供任何可能會遭惡意程式碼利用的資訊。  
+> 當您決定要透過這種方法提供的資訊時，請考慮不受信任的程式碼是否要使用類別或結構。 請務必確定您未提供任何可能會遭惡意程式碼利用的資訊。  
   
-### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a>在類別或結構中覆寫 ToString 方法  
+在類別或結構中覆寫 `ToString` 方法：
   
 1. 宣告具有下列修飾詞和傳回型別的 `ToString` 方法︰  
   
@@ -50,7 +51,6 @@ C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別�
 - [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
 - [字串](../../../csharp/programming-guide/strings/index.md)
 - [string](../../../csharp/language-reference/keywords/string.md)
-- [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
 - [virtual](../../../csharp/language-reference/keywords/virtual.md)
 - [格式化類型](../../../standard/base-types/formatting-types.md)

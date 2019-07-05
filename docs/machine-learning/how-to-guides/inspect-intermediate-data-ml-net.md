@@ -1,22 +1,22 @@
 ---
-title: 在 ML.NET 處理期間檢查中繼資料值
-description: 了解如何在 ML.NET 機器學習管線處理期間檢查實際中繼資料值
-ms.date: 04/29/2019
+title: 在 ML.NET 處理期間檢查中繼資料
+description: 了解如何在 ML.NET 中，於 ML.NET 機器學習服務管線載入、處理和模型定型步驟期間檢查中繼資料。
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063522"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402381"
 ---
-# <a name="inspect-intermediate-data-values-during-processing"></a>在處理期間檢查中繼資料值
+# <a name="inspect-intermediate-data-during-processing"></a>在處理期間檢查中繼資料
 
-了解如何在 ML.NET 中載入、處理及定型步驟的期間檢查值。
+了解如何在 ML.NET 中，於載入、處理和模型定型步驟期間檢查中繼資料。 中繼資料是機器學習服務管線中每個階段的輸出。
 
-您可以在 ML.NET 中透過各種方式檢查與以下內容相似且會載入 [`IDataView`](xref:Microsoft.ML.IDataView) 的資料。
+您可以在 ML.NET 中透過各種方式檢查與以下內容相似且會載入 [`IDataView`](xref:Microsoft.ML.IDataView) 的中繼資料。
  
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -62,9 +62,9 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>將 IDataView 轉換成 IEnumerable
 
-其中一個檢查 [`IDataView`](xref:Microsoft.ML.IDataView) 值最快速的方式便是將它轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。 若要將 [`IDataView`](xref:Microsoft.ML.IDataView) 轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，請使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 方法。 
+其中一個檢查 [`IDataView`](xref:Microsoft.ML.IDataView) 最快速的方式便是將它轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。 若要將 [`IDataView`](xref:Microsoft.ML.IDataView) 轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，請使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 方法。 
 
-若要最佳化效能，請將 `reuseRowObject` 的值設為 `true`。 如此會使用目前資料列的資料，在評估時才延遲填入相同的物件，而非為資料集中的每個資料列建立新物件。
+若要最佳化效能，請將 `reuseRowObject` 設為 `true`。 如此會使用目前資料列的資料，在評估時才延遲填入相同的物件，而非為資料集中的每個資料列建立新物件。
 
 ```csharp
 // Create an IEnumerable of HousingData objects from IDataView
@@ -78,6 +78,8 @@ foreach (HousingData row in housingDataEnumerable)
     Console.WriteLine(row.Size);
 }
 ```
+
+## <a name="accessing-specific-indices-with-ienumerable"></a>使用 IEnumerable 存取特定索引
 
 若您只需要存取一部分的資料或特定索引，請使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*)，並將 `reuseRowObject` 參數的值設為 `false`，為資料集中所要求的每個資料列建立新物件。 接著，將 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) 轉換成陣列或清單。
 

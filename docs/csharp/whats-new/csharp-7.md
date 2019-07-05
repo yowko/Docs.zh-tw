@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: c3fdee2bdb974640b56bfab3af4be57133ad2f7a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307158"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347450"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
@@ -34,7 +34,12 @@ C# 7.0 新增許多新功能至 C# 語言：
 * [數值常值語法增強功能](#numeric-literal-syntax-improvements)
   - 新的語彙基元改善了數值常數的可讀性。
 
-此文章的其餘部分將概述各個功能。 您將了解每項功能背後的原因。 您將了解語法。 您可以在這些功能的[互動式探索](../tutorials/exploration/csharp-7.yml)中探索這些功能。
+此文章的其餘部分將概述各個功能。 您將了解每項功能背後的原因。 您將了解語法。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
+
+1. 安裝 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全域工具。
+1. 複製 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存放庫。
+1. 將目前的目錄設為 *try-samples* 存放庫的 *csharp7* 子目錄。
+1. 執行 `dotnet try`。
 
 ## <a name="out-variables"></a>`out` 變數
 

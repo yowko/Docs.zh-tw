@@ -1,20 +1,20 @@
 ---
 title: 定型和評估模型
-description: 了解如何建置機器學習模型、擷取學習到的參數及使用 ML.NET 測量效能。 雖然此範例訓練的是迴歸模型，但概念可適用於大多數的其他演算法。
-ms.date: 06/11/2019
+description: 了解如何建置機器學習模型、收集計量，以及使用 ML.NET 測量效能。 機器學習模型會識別定型資料中的模式，以使用新資料進行預測。
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to, title-hack-0612
-ms.openlocfilehash: d93353a3503ba67bde5fb61dc88f45d26e2f4306
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307449"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397634"
 ---
 # <a name="train-and-evaluate-a-model"></a>定型和評估模型
 
-了解如何建置機器學習模型、擷取學習到的參數及使用 ML.NET 測量效能。 雖然此範例訓練的是迴歸模型，但概念可適用於大多數的其他演算法。
+了解如何建置機器學習模型、收集計量，以及使用 ML.NET 測量效能。 雖然此範例訓練的是迴歸模型，但概念可適用於大多數的其他演算法。
 
 ## <a name="split-data-for-training-and-testing"></a>分割資料以進行定型和測試
 

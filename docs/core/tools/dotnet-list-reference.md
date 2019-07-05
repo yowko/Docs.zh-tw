@@ -1,17 +1,21 @@
 ---
 title: dotnet list reference 命令
 description: dotnet list reference 命令提供方便的選項，以列出專案對專案參考。
-ms.date: 12/03/2018
-ms.openlocfilehash: c0b88c4a0af4469d7ddc9e0a9368bb1b2d9d20b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632402"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421835"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
+**本主題適用於：✓** .NET Core 1.x SDK 和更新版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>名稱
 
@@ -19,7 +23,7 @@ ms.locfileid: "65632402"
 
 ## <a name="synopsis"></a>概要
 
-`dotnet list [<PROJECT>] reference [-h|--help]`
+`dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
 
 ## <a name="description"></a>說明
 
@@ -27,9 +31,9 @@ ms.locfileid: "65632402"
 
 ## <a name="arguments"></a>引數
 
-* **`PROJECT`**
+* **`PROJECT | SOLUTION`**
 
-  指定要用於列出參考的專案檔。 如果未指定，命令會在目前的目錄中搜尋專案檔。
+  指定要用來列出參考的專案或解決方案檔。 如果未指定，命令會在目前的目錄中搜尋專案檔。
 
 ## <a name="options"></a>選項
 

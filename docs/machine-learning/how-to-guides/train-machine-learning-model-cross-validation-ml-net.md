@@ -1,20 +1,20 @@
 ---
-title: 使用交叉驗證定型及評估機器學習模型
-description: 了解如何使用交叉驗證定型及評估機器學習模型
-ms.date: 05/03/2019
+title: 使用交叉驗證定型機器學習模型
+description: 了解如何使用交叉驗證在 ML.NET 中建置更強大的機器學習模型。 交叉驗證是一種定型和模型評估技巧，會將資料分割成幾個分割，在這些分割上定型多個演算法。
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557840"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397651"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>使用交叉驗證定型及評估機器學習模型
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>使用交叉驗證定型機器學習模型
 
-了解如何使用交叉驗證在 ML.NET 中建置更強大的機器學習模型。 
+了解如何使用交叉驗證在 ML.NET 中定型更強固的機器學習模型。 
 
 交叉驗證是一種定型和模型評估技巧，會將資料分割成幾個分割，在這些分割上定型多個演算法。 這項技巧藉由定型程序提供的資料，改善模型的穩定性。 除了提升看不見的觀察值效能之外，在資料限制的環境中，它是使用較小資料集定型模型的有效工具。
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 儲存在 `cvResults` 中的結果是 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 物件的集合。 此物件包含定型的模型以及計量，可分別從 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) 和 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) 屬性中存取。 在此範例中，`Model` 屬性的類型是 [`ITransformer`](xref:Microsoft.ML.ITransformer)，而 `Metrics` 屬性的類型是 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)。 
 
-## <a name="extract-metrics"></a>擷取計量
+## <a name="evaluate-the-model"></a>評估模型
 
 您可以透過個別 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 物件的 `Metrics` 屬性存取不同定型模型的計量。 在本例中，[R 平方計量](https://en.wikipedia.org/wiki/Coefficient_of_determination)是在變數 `rSquared` 中存取儲存。 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-如果您檢查 `rSquared` 變數的內容，輸出應該是介於 0-1 之間的五個值，接近 1 表示最佳。
-
-## <a name="select-the-best-performing-model"></a>選取表現最佳的模型
-
-使用如 R 平方的計量，選取表現最佳到最差的模型。 然後，選取要進行預測或執行其他作業的最上層模型。
+如果您檢查 `rSquared` 變數的內容，輸出應該是介於 0-1 之間的五個值，接近 1 表示最佳。 使用如 R 平方的計量，選取表現最佳到最差的模型。 然後，選取要進行預測或執行其他作業的最上層模型。
 
 ```csharp
 // Select all models

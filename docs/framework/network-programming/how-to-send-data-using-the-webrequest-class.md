@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 2dcc9e70f51c3c96cbc3af238fed21021ff7ae2c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322871"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347361"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>作法：使用 WebRequest 類別傳送資料
 下列程序描述將資料傳送到伺服器的步驟。 本程序通常用於在網頁上張貼資料。 
@@ -31,7 +31,7 @@ ms.locfileid: "59322871"
     ```  
   
     > [!NOTE]
-    > .NET Framework 針對以 *http:*、*https:*、*ftp:* 和 *file:* 開頭的 URI，提供了衍生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別的通訊協定專用類別。
+    > .NET Framework 針對以 *http:* 、*https:* 、*ftp:* 和 *file:* 開頭的 URI，提供了衍生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別的通訊協定專用類別。
     如果您需要設定或讀取通訊協定專用屬性，必須將 <xref:System.Net.WebRequest> 或 <xref:System.Net.WebResponse> 物件轉換為通訊協定專用物件類型。 如需詳細資訊，請參閱[可插式通訊協定程式設計](programming-pluggable-protocols.md)。 
   
 2. 在 `WebRequest` 物件中設定任何需要的屬性值。 例如，若要啟用驗證，請將 <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Net.NetworkCredential> 類別的執行個體：
@@ -80,8 +80,8 @@ ms.locfileid: "59322871"
     Stream dataStream = request.GetRequestStream();  
     ```  
   
-    ```vb  
-    Stream dataStream = request.GetRequestStream()  
+    ```vb
+    Dim dataStream As Stream = request.GetRequestStream()  
     ```  
   
 7. 將資料寫入 `GetRequestStream` 方法所傳回的 <xref:System.IO.Stream> 物件。 例如：
@@ -148,7 +148,7 @@ ms.locfileid: "59322871"
   
 ## <a name="example"></a>範例  
   
-下列程式碼範例示範如何將資料傳送到網頁伺服器，並讀取其回應中的資料：  
+下列範例會示範如何將資料傳送到網頁伺服器，並讀取其回應中的資料：  
 
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]
@@ -159,4 +159,4 @@ ms.locfileid: "59322871"
 - [在網路上使用資料流](using-streams-on-the-network.md)
 - [透過 Proxy 存取網際網路](accessing-the-internet-through-a-proxy.md)
 - [要求資料](requesting-data.md)
-- [作法：使用 WebRequest 類別要求資料](how-to-request-data-using-the-webrequest-class.md)
+- [如何：使用 WebRequest 類別要求資料](how-to-request-data-using-the-webrequest-class.md)

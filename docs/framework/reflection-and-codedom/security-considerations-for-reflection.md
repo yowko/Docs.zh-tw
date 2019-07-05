@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 178255c03c2f5da41579f00c0c81ba3c85a0b0ee
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816127"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347357"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 反映可讓您取得類型和成員的相關資訊，以及存取成員 (也就是呼叫方法和建構函式、取得和設定屬性值、加入和移除事件處理常式等等)。 不限制使用反映來取得類型和成員的相關資訊。 所有程式碼都可以使用反映來執行下列工作：  
@@ -102,7 +102,7 @@ ms.locfileid: "66816127"
   
 - 在 .NET Framework 2.0 Service Pack 1 中推出 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標。 先前版本的 .NET Framework 針對使用反射來存取非公用成員程式碼需要 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標。 絕不要將此權限授與部分受信任的程式碼。  
   
-- 從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，使用反映來取得非公用類型和成員的相關資訊時，不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
+- 從 .NET Framework 2.0 開始，使用反映來取得非公開型別和成員的相關資訊時不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
 ## <a name="see-also"></a>另請參閱
 

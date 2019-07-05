@@ -6,24 +6,28 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: be4d7e5cf4d2f7c117766858dbba9c7c59c74b73
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267679"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398502"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>作法：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊)
-這個範例顯示如何建立不可變的輕量型類別，只用來封裝一組自動實作屬性。 當您必須使用參考類型語意時，請使用這種建構，而不是結構。  
-  
- 您可以使用兩種方式讓屬性不可變。  您可以將 [set](../../../csharp/language-reference/keywords/set.md) 存取子宣告為 [private](../../../csharp/language-reference/keywords/private.md)。  屬性只有在類型內才可設定，但是它對於使用者而言是不可變的。  您可以改為只宣告 [get](../../../csharp/language-reference/keywords/get.md) 存取子，在類型的建構函式以外的所有位置讓屬性不可變。  
-  
- 當您宣告私用 `set` 存取子時，則無法使用物件初始設定式來初始化屬性。 您必須使用建構函式或 Factory 方法。  
-  
-## <a name="example"></a>範例  
- 下列範例顯示兩個方式來實作不可變的類別，該類別具有自動實作屬性。 每一種方法會宣告具有私用 `set` 的其中一個屬性，以及僅具有 `get` 的其中一個屬性。  第一個類別僅使用建構函式來初始化屬性，第二個類別使用會呼叫建構函式的靜態 Factory 方法。  
-  
-```csharp  
+
+這個範例顯示如何建立不可變的輕量型類別，只用來封裝一組自動實作屬性。 當您必須使用參考類型語意時，請使用這種建構，而不是結構。
+
+您可以使用兩種方式建立固定屬性：
+- 您可以將 [set](../../../csharp/language-reference/keywords/set.md) 存取子宣告為 [private](../../../csharp/language-reference/keywords/private.md)。  屬性只有在類型內才可設定，但是它對於使用者而言是不可變的。
+
+  當您宣告私用 `set` 存取子時，則無法使用物件初始設定式來初始化屬性。 您必須使用建構函式或 Factory 方法。
+- 您可以只宣告 [get](../../../csharp/language-reference/keywords/get.md) 存取子，讓屬性在該型別建構函式外的任何位置皆為固定。
+
+## <a name="example"></a>範例
+
+下列範例顯示兩個方式來實作不可變的類別，該類別具有自動實作屬性。 每一種方法會宣告具有私用 `set` 的其中一個屬性，以及僅具有 `get` 的其中一個屬性。  第一個類別僅使用建構函式來初始化屬性，第二個類別使用會呼叫建構函式的靜態 Factory 方法。
+
+```csharp
 // This class is immutable. After an object is created,
 // it cannot be modified from outside the class. It uses a
 // constructor to initialize its properties.
@@ -102,18 +106,18 @@ public class Program
         Console.ReadKey();
     }
 }
-  
-/* Output:  
-    Terry Adams, 123 Main St.  
-    Fadi Fakhouri, 345 Cypress Ave.  
-    Hanying Feng, 678 1st Ave  
-    Cesar Garcia, 12 108th St.  
-    Debra Garcia, 89 E. 42nd St.  
-*/  
-```  
-  
- 編譯器會針對每個自動實作屬性建立支援欄位。 欄位不是可以直接從原始程式碼存取的。  
-  
+
+/* Output:
+    Terry Adams, 123 Main St.
+    Fadi Fakhouri, 345 Cypress Ave.
+    Hanying Feng, 678 1st Ave
+    Cesar Garcia, 12 108th St.
+    Debra Garcia, 89 E. 42nd St.
+*/
+```
+
+編譯器會針對每個自動實作屬性建立支援欄位。 欄位不是可以直接從原始程式碼存取的。
+
 ## <a name="see-also"></a>另請參閱
 
 - [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)

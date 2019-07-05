@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607702"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423402"
 ---
 # <a name="assembly-security-considerations"></a>組件安全性考量
 <a name="top"></a> 當您建置組件時，您可以指定一組該組件需要用來執行的使用權限。 是否將某些使用權限授予組件則以辨識項 (Evidence) 為基礎。  
@@ -31,7 +31,7 @@ ms.locfileid: "64607702"
   
 - 輸入辨識項會和載入器所集合的辨識項合併，以建立用於原則解析的最終辨識項組。 使用這個語意的方法包括 **Assembly.Load**、**Assembly.LoadFrom** 和 **Activator.CreateInstance**。  
   
-- 輸入辨識項使用時不會更改，就和用於原則解析的最終辨識項組一樣。 使用這個語意的方法包括 **Assembly.Load(byte[])** 和 **AppDomain.DefineDynamicAssembly()**。  
+- 輸入辨識項使用時不會更改，就和用於原則解析的最終辨識項組一樣。 使用這個語意的方法包括 **Assembly.Load(byte[])** 和 **AppDomain.DefineDynamicAssembly()** 。  
   
  選擇性的使用權限可以藉由該組件要在其上執行之電腦上所設定的[安全性原則](../../../docs/framework/misc/code-access-security-basics.md)來授與。 如果您希望程式碼處理所有可能的安全性例外狀況，您可以執行下列某一項動作：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "64607702"
   
  並沒有任何信任層級與強式名稱建立關聯，這也使得 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 更為重要。 這兩種簽署工具需要發行者向協力廠商授權單位證明其識別並取得憑證。 然後將這項憑證嵌入您的檔案，就可以讓系統管理員用來決定是否要信任程式碼的真實性。  
   
- 您可以同時對組件賦予強式名稱和使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 建立的數位簽章，或是只使用其中一種。 這兩種簽署工具只能同時簽署一個檔案。對於多檔案組件，您必須簽署含有組件資訊清單的檔案。 強式名稱儲存在包含組件資訊清單的檔案中，但是使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 建立的簽章，則是儲存在包含組件資訊清單的可攜式執行檔 (PE) 中的保留位置。 當您已經擁有依靠 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 所產生簽章的信任階層，或者您的原則只使用金鑰部分而不檢查信任鏈結，您就能使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 來簽署組件 (不論是否使用強式名稱)。  
+ 您可以同時對組件賦予強式名稱和使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 建立的數位簽章，或是只使用其中一種。 這兩種簽署工具只能同時簽署一個檔案。對於多檔案組件，您必須簽署含有組件資訊清單的檔案。 強式名稱儲存在包含組件資訊清單的檔案中，但是使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 建立的簽章，則是儲存在包含組件資訊清單的可攜式執行檔 (PE) 中的保留位置。 當您已經擁有依靠 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 所產生簽章的信任階層，或您的原則只使用金鑰部分而不檢查信任鏈結，即可使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 來簽署組件 (不論是否使用強式名稱)。  
   
 > [!NOTE]
 >  在組件上同時使用強式名稱和簽署工具簽章時，必須先指定強式名稱。  

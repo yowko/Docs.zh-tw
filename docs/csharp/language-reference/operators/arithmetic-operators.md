@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: af3f7a9379aa8ac12ef8c12abc99a0ded9188eb8
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 155ce5ce4673008a61b4231a3aaee5a40ad9ead6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025303"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423986"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術運算子 (C# 參考)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67025303"
 - 一元 [`++` (遞增)](#increment-operator-)、[`--` (遞減)](#decrement-operator---)、[`+` (加號)](#unary-plus-and-minus-operators) 和 [`-` (減號)](#unary-plus-and-minus-operators) 運算子
 - 二元 [`*` (乘法)](#multiplication-operator-)、[`/` (除法)](#division-operator-)、[`%` (餘數)](#remainder-operator-)、[`+` (加法)](#addition-operator-) 和 [`-` (減法)](#subtraction-operator--) 運算子
 
-這些運算子可支援所有[整數](../keywords/integral-types-table.md)和[浮點](../keywords/floating-point-types-table.md)數字型別。
+這些運算子可支援所有[整數](../builtin-types/integral-numeric-types.md)和[浮點](../keywords/floating-point-types-table.md)數字型別。
 
 ## <a name="increment-operator-"></a>遞增運算子 ++
 
@@ -85,7 +85,7 @@ ms.locfileid: "67025303"
 
 [!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-一元 `-` 運算子不支援 [ulong](../keywords/ulong.md) 型別。
+一元 `-` 運算子不支援 [ulong](../builtin-types/integral-numeric-types.md) 型別。
 
 ## <a name="multiplication-operator-"></a>乘法運算子 *
 
@@ -97,7 +97,7 @@ ms.locfileid: "67025303"
 
 ## <a name="division-operator-"></a>除法運算子 /
 
-除法運算子 `/` 會將它的第一個運算元除以第二個運算元。
+除法運算子 `/` 會將它的左邊運算元除以右邊運算元。
 
 ### <a name="integer-division"></a>整數除數
 
@@ -119,11 +119,11 @@ ms.locfileid: "67025303"
 
 ## <a name="remainder-operator-"></a>餘數運算子 %
 
-餘數運算子 `%` 會計算其第一個運算元除以第二個運算元之後的餘數。
+餘數運算子 `%` 會計算其左邊運算元除以右邊運算元之後的餘數。
 
 ### <a name="integer-remainder"></a>整數餘數
   
-對整數型別的運算元來說，`a % b` 的結果是 `a - (a / b) * b` 所產生的值。 非零餘數的正負號與第一個運算元的正負號相同，如下列範例所示：
+對整數型別的運算元來說，`a % b` 的結果是 `a - (a / b) * b` 所產生的值。 非零餘數的正負號與左邊運算元的正負號相同，如下列範例所示：
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
 
@@ -157,7 +157,7 @@ ms.locfileid: "67025303"
 
 ## <a name="subtraction-operator--"></a>減法運算子 -
 
-減法運算子 `-` 會從第一個運算元減去第二個運算元：
+減法運算子 `-` 會從左邊運算元減去右邊運算元：
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 

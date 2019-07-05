@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b0aaf6c0b2f614fa5ff8611407cea567da1faafb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b4f04a1ba6244373e36cc6a6188edabe33ec453
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616311"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424349"
 ---
 # <a name="char-c-reference"></a>char (C# 參考)
 
@@ -21,7 +21,7 @@ ms.locfileid: "54616311"
 
  Unicode 字元是用來代表世界各地的大部分書寫語言。
 
-|類型|範圍|大小|.NET 型別|
+|類型|Range|大小|.NET 型別|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 到 U+FFFF|Unicode 16 位元字元|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -33,7 +33,7 @@ ms.locfileid: "54616311"
 
 ## <a name="conversions"></a>轉換
 
-`char` 可以隱含地轉換為 [ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md)。 不過，沒有從其他類型到 `char` 類型的隱含轉換。
+`char` 可以隱含轉換為 [ushort](../builtin-types/integral-numeric-types.md)、[int](../builtin-types/integral-numeric-types.md)、[uint](../builtin-types/integral-numeric-types.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md)。 不過，沒有從其他類型到 `char` 類型的隱含轉換。
 
 <xref:System.Char?displayProperty=nameWithType> 型別提供數種使用 `char` 值的靜態方法。
 
@@ -47,7 +47,7 @@ ms.locfileid: "54616311"
 - [C# 參考](../../../csharp/language-reference/index.md)
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
-- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [整數型別](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

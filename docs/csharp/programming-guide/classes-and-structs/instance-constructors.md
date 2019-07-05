@@ -6,15 +6,16 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: c698ffc8d1bc68b2ebcbdf4578ab5926d4743516
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: a5ed331c6b2960a56d7ab0d7812cb3a687ccfdd5
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203466"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423752"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>執行個體建構函式 (C# 程式設計手冊)
-當您使用 [new](../../../csharp/language-reference/keywords/new.md) 運算式來建立 [class](../../../csharp/language-reference/keywords/class.md) 物件時，可使用執行個體建構函式來建立和初始化任何執行個體成員變數。 若要初始化 [static](../../../csharp/language-reference/keywords/static.md) 類別或非靜態類別中的靜態變數，您必須定義靜態建構函式。 如需詳細資訊，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
+
+當您使用 [new](../../../csharp/language-reference/operators/new-operator.md) 運算式來建立 [class](../../../csharp/language-reference/keywords/class.md) 物件時，可使用執行個體建構函式來建立和初始化任何執行個體成員變數。 若要初始化[靜態](../../../csharp/language-reference/keywords/static.md)類別或非靜態類別中的靜態變數，您可定義靜態建構函式。 如需詳細資訊，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
   
  下列範例顯示執行個體建構函式：  
   
@@ -23,7 +24,7 @@ ms.locfileid: "57203466"
 > [!NOTE]
 >  為了清楚起見，這個類別會包含公用欄位。 我們不建議您在程式設計中使用公用欄位，因為這麼做會允許程式中的任何方法，在不受限制及未經驗證的情況下，存取物件的內部運作。 資料成員一般應為私用，而且只應透過類別方法和屬性來存取。  
   
- 每當建立以 `Coords` 類別為基礎的物件時，即會呼叫這個執行個體建構函式。 像這類可接受任何引數的建構函式，稱為「預設建構函式」。 不過，提供額外的建構函式通常很實用。 比方說，我們可以將建構函式新增至 `Coords` 類別，以指定資料成員的起始值：  
+ 每當建立以 `Coords` 類別為基礎的物件時，即會呼叫這個執行個體建構函式。 像這種不接受任何引數的建構函式，稱為「無參數建構函式」  。 不過，提供額外的建構函式通常很實用。 比方說，我們可以將建構函式新增至 `Coords` 類別，以指定資料成員的起始值：  
   
  [!code-csharp[csProgGuideObjects#76](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#76)]  
   
@@ -31,7 +32,7 @@ ms.locfileid: "57203466"
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- 如果類別不含建構函式，則會自動產生預設建構函式，並使用預設值來初始化物件欄位。 例如，系統會將 [int](../../../csharp/language-reference/keywords/int.md) 初始化為 0。 如需預設值的詳細資訊，請參閱[預設值表](../../../csharp/language-reference/keywords/default-values-table.md)。 由於 `Coords` 類別的預設建構函式會將所有資料成員初始化為零，因此您可以將其完全移除，而不需變更類別的運作方式。 本主題稍後的範例 1 提供使用多個建構函式的完整範例；範例 2 則提供自動產生建構函式的範例。  
+ 如果類別不含建構函式，則會自動產生無參數建構函式，並使用預設值來初始化物件欄位。 例如，系統會將 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 初始化為 0。 如需預設值的詳細資訊，請參閱[預設值表](../../../csharp/language-reference/keywords/default-values-table.md)。 因此，由於 `Coords` 類別的無參數建構函式會將所有資料成員初始化為零，所以您可以將其完全移除，而不需變更類別的運作方式。 本主題稍後的範例 1 提供使用多個建構函式的完整範例；範例 2 則提供自動產生建構函式的範例。  
   
  執行個體建構函式也可用來呼叫基底類別的執行個體建構函式。 類別建構函式可以透過初始設定式，來叫用基底類別的建構函式，如下所示：  
   
@@ -45,7 +46,7 @@ ms.locfileid: "57203466"
  [!code-csharp[csProgGuideObjects#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#4)]  
   
 ## <a name="example-2"></a>範例 2  
- 在此範例中，`Person` 類別並沒有任何建構函式，在這種情況下，系統就會自動提供預設的建構函式，並將欄位初始化為其預設值。  
+ 在此範例中，`Person` 類別並沒有任何建構函式；在這種情況下，系統就會自動提供無參數建構函式，並將欄位初始化為其預設值。  
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
   

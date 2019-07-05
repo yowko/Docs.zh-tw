@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727634"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424234"
 ---
 # <a name="enum-c-reference"></a>enum (C# 參考)
 
@@ -35,13 +35,12 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 在這個列舉中，項目的順序會強制從 `1` 開始，而不是 `0`。 不過，建議加入值為 0 的常數。 如需詳細資訊，請參閱[列舉類型](../../programming-guide/enumeration-types.md)。
 
-每個列舉類型都具有基礎類型，可以是任何整數類型，但 [char](char.md) 除外。 預設基礎列舉項目類型是 [int](int.md)。若要宣告另一個整數類型的列舉，例如 [byte](byte.md)，請在識別項後使用冒號，後面接著類型，如下列範例所示。
+每個列舉型別都具有基礎型別，它可以是任何[整數數字型別](../builtin-types/integral-numeric-types.md)。 [Char](char.md) 型別不能是列舉的基礎型別。 預設基礎列舉項目類型是 [int](../builtin-types/integral-numeric-types.md)。若要宣告另一個整數類型的列舉，例如 [byte](../builtin-types/integral-numeric-types.md)，請在識別項後使用冒號，後面接著類型，如下列範例所示。
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-列舉的核准類型有 [byte](byte.md)、[sbyte](sbyte.md)、[short](short.md)、[ushort](ushort.md)、[int](int.md)、[uint](uint.md)、[long](long.md) 或 [ulong](ulong.md)。
 
 型別為列舉的變數可以指派為底層類型範圍中的任何值；該值不限於具名常數。
 
@@ -50,7 +49,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 > [!NOTE]
 > 列舉程式名稱中不能包含空白字元。
 
-基礎類型指定為每個列舉程式配置的儲存體數量。 不過，從 `enum` 類型轉換為整數類型需要明確轉換。 例如，下列陳述式會指派列舉程式 `Sun` 為 [int](int.md) 類型的變數，方法是使用轉換從 `enum` 轉換成 `int`。
+基礎類型指定為每個列舉程式配置的儲存體數量。 不過，從 `enum` 類型轉換為整數類型需要明確轉換。 例如，下列陳述式會指派列舉程式 `Sun` 為 [int](../builtin-types/integral-numeric-types.md) 類型的變數，方法是使用轉換從 `enum` 轉換成 `int`。
 
 ```csharp
 int x = (int)Day.Sun;
@@ -101,7 +100,7 @@ int x = (int)Day.Sun;
 - [C# 參考](../index.md)
 - [列舉型別](../../programming-guide/enumeration-types.md)
 - [C# 關鍵字](index.md)
-- [整數型別表](integral-types-table.md)
+- [整數型別](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [內建型別表](built-in-types-table.md)
 - [隱含數值轉換表](implicit-numeric-conversions-table.md)
 - [明確數值轉換表](explicit-numeric-conversions-table.md)
