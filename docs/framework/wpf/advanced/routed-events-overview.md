@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 326900087f755b6c92d9ebb77dad36e5880fd2c0
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063899"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610457"
 ---
 # <a name="routed-events-overview"></a>路由事件概觀
 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主題會定義路由事件的術語、說明如何透過元素的樹狀結構路由傳送路由事件、摘要說明如何處理路由事件，以及介紹如何建立您自己的自訂路由事件。
@@ -98,7 +98,7 @@ ms.locfileid: "65063899"
   
  路由事件變成功能強大之處在於，您是否使用任何建議的案例︰在一般的根元素上定義一般的處理常式、組合自己的控制項，或定義自己的控制項類別。  
   
- 路由事件接聽程式和路由事件來源不需要在其階層中共用一般事件。 任何<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>可以是任何路由事件的事件接聽程式。 因此，您可以使用可在設為概念性「介面」的整個運作中 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 內使用的整組路由事件，讓應用程式中的不同元素可以交換事件資訊。 路由事件的這個「介面」概念特別適用於輸入事件。  
+ 路由事件接聽程式和路由事件來源不需要在其階層中共用一般事件。 任何<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>可以是任何路由事件的事件接聽程式。 因此，您可以使用完整的路由事件可在整個工作 API 設為概念性 「 介面 」 讓應用程式中的不同元素可以交換事件資訊。 路由事件的這個「介面」概念特別適用於輸入事件。  
   
  路由事件也可用來透過元素樹狀結構進行通訊，因為事件的事件資料會永久存在於路由的每個元素中。 一個元素可以變更事件資料中的某些內容，而該變更可供路由中的下一個元素使用。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "65063899"
   
 <a name="attached_events"></a>   
 ## <a name="attached-events-in-wpf"></a>在 WPF 中附加事件  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 語言也會定義稱為「附加事件」的特定事件類型。 附加事件可讓您將特殊事件的處理常式加入至任意元素。 處理事件的元素不需要定義或繼承附加事件，而物件不可能引發事件，且目的地處理執行個體也不需定義或「擁有」該事件做為類別成員。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 語言也會定義稱為「附加事件」  的特定事件類型。 附加事件可讓您將特殊事件的處理常式加入至任意元素。 處理事件的元素不需要定義或繼承附加事件，而物件不可能引發事件，且目的地處理執行個體也不需定義或「擁有」該事件做為類別成員。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 輸入系統會廣泛使用附加事件。 不過，幾乎這所有的附加事件都會轉送到基底元素。 輸入事件接著會顯示為對等的非附加路由事件，其為基底元素類別的成員。 比方說，基礎附加事件<xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType>可以更輕鬆地處理任何給定<xref:System.Windows.UIElement>利用<xref:System.Windows.UIElement.MouseDown>上的<xref:System.Windows.UIElement>而不處理附加的事件語法中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]或程式碼。  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598661"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610377"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>將路由事件標記為已處理以及類別處理
 路由事件的處理常式可以將事件資料內的事件標記為已處理。 處理事件時，即可有效地縮短路由。 類別處理是一種程式設計概念，此概念與路由事件相輔相成。 類別處理常式有機會在類別層級上使用處理常式來處理特定的路由事件 (此處理常式會優先叫用，之後才輪到在該類別任何執行個體上的任何執行個體處理常式)。  
@@ -49,7 +49,7 @@ ms.locfileid: "64598661"
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>類別處理常式和執行個體處理常式  
- 路由事件可使用兩種不同的事件接聽程式：類別接聽程式和執行個體接聽程式。 類別接聽程式存在，因為類型呼叫特定<xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ，<xref:System.Windows.EventManager.RegisterClassHandler%2A>，其靜態建構函式中或已覆寫中的項目基底類別的類別處理常式虛擬方法。 執行個體接聽程式是特定類別執行個體/項目其中一個或多個處理常式已附加該路由事件的呼叫<xref:System.Windows.UIElement.AddHandler%2A>。 現有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]路由的事件進行呼叫<xref:System.Windows.UIElement.AddHandler%2A>一部分[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件包裝函式新增{}並移除{}事件，也就是如何實作簡單[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]附加的機制會啟用透過屬性語法的事件處理常式。 因此即使您使用簡單[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]使用量最終也等同於<xref:System.Windows.UIElement.AddHandler%2A>呼叫。  
+ 路由事件可使用兩種不同的事件接聽程式：類別接聽程式和執行個體接聽程式。 類別接聽程式存在，因為類型呼叫特定<xref:System.Windows.EventManager>API，<xref:System.Windows.EventManager.RegisterClassHandler%2A>，其靜態建構函式中或已覆寫中的項目基底類別的類別處理常式虛擬方法。 執行個體接聽程式是特定類別執行個體/項目其中一個或多個處理常式已附加該路由事件的呼叫<xref:System.Windows.UIElement.AddHandler%2A>。 現有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]路由的事件進行呼叫<xref:System.Windows.UIElement.AddHandler%2A>一部分[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件包裝函式新增{}並移除{}事件，也就是如何實作簡單[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]附加的機制會啟用透過屬性語法的事件處理常式。 因此即使您使用簡單[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]使用量最終也等同於<xref:System.Windows.UIElement.AddHandler%2A>呼叫。  
   
  系統會檢查視覺化樹狀結構中的項目是否有登錄處理常式實作。 在整個路由中，可能會依據相關路由事件之路由策略型別中既有的順序，來叫用處理常式。 比方說，如果處理常式是附加至引發路由事件的相同元素，則事件反昇路由事件會先叫用這些處理常式。 然後，路由事件即會「事件反昇」至下一個父項目，依此類推，直到抵達應用程式的根項目為止。  
   

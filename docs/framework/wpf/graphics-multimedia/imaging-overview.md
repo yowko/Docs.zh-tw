@@ -21,21 +21,21 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6cb389cd0458d1c9e7af94586c394764f01e4bab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b84a2e4c3cf4126a6efa7edaf868080dbc48b859
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665179"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610382"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、轉換及格式化影像。  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF 影像處理元件  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 提供 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 內重要的影像處理增強功能。 之前的影像處理功能 (例如顯示點陣圖或在通用控制項上使用影像) 要依賴 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 或 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 程式庫運作。 這些 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 提供基本影像處理功能，但是缺少一些功能，例如支援轉碼器擴充性和高畫質影像支援。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 的設計目的是克服 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 和 [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] 的缺點，並提供一組新的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 以在應用程式內顯示及使用影像。  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 提供 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 內重要的影像處理增強功能。 之前的影像處理功能 (例如顯示點陣圖或在通用控制項上使用影像) 要依賴 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 或 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 程式庫運作。 這些 API 提供基本影像處理功能，但缺少的功能，例如支援轉碼器擴充性和高畫質影像支援。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 若要克服的缺點設計[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]和[!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]，並提供一組新的 API 來顯示，並使用您的應用程式的映像。  
   
- 有兩種方式可以存取 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]，Managed 元件和 Unmanaged 元件。 Unmanaged 元件提供下列功能。  
+ 有兩種方式來存取[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]API、 受管理的元件和 unmanaged 的元件。 Unmanaged 元件提供下列功能。  
   
 - 新的或專屬影像格式的擴充性模型。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "64665179"
   
 - Managed 元件會利用 Unmanaged 基礎結構來提供影像與其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能 (例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、動畫和圖形) 的緊密整合。 受管理的元件也受益於 Windows Presentation Foundation (WPF) 影像轉碼器擴充性模型可讓新映像中的格式自動辨識[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式。  
   
- 大部分的 managed [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]位於<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>命名空間，不過幾個重要型別，例如<xref:System.Windows.Media.ImageBrush>並<xref:System.Windows.Media.ImageDrawing>位於<xref:System.Windows.Media?displayProperty=nameWithType>命名空間和<xref:System.Windows.Controls.Image>位於<xref:System.Windows.Controls?displayProperty=nameWithType>命名空間。  
+ 大部分的 managed [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API 位於<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>命名空間，不過幾個重要型別，例如<xref:System.Windows.Media.ImageBrush>並<xref:System.Windows.Media.ImageDrawing>位於<xref:System.Windows.Media?displayProperty=nameWithType>命名空間和<xref:System.Windows.Controls.Image>位於<xref:System.Windows.Controls?displayProperty=nameWithType>命名空間。  
   
- 本主題提供 Managed 元件的詳細資訊。 如需 Unmanaged [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 的詳細資訊，請參閱 [Unmanaged WPF 影像處理元件 (英文)](/windows/desktop/wic/-wic-lh) 文件。  
+ 本主題提供 Managed 元件的詳細資訊。 如需有關未受管理 API，請參閱[Unmanaged WPF 影像處理元件](/windows/desktop/wic/-wic-lh)文件。  
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 影像格式  
@@ -167,7 +167,7 @@ ms.locfileid: "64665179"
   
  中繼資料的存取透過提供<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>屬性<xref:System.Windows.Media.Imaging.BitmapSource>物件。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 傳回<xref:System.Windows.Media.Imaging.BitmapMetadata>物件，其中包含映像所包含的所有中繼資料。 此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 支援下列影像中繼資料結構描述：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt (PNG 文字型資料)、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
   
- 為了簡化讀取中繼資料的程序<xref:System.Windows.Media.Imaging.BitmapMetadata>提供數個具名的屬性可輕鬆地存取這類<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 許多具名屬性也可以用於寫入中繼資料。 讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法來擷取中繼資料查詢讀取器所提供的字串查詢，例如 *"/ app1/exif /"*。 在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用來取得文字儲存於 *"/text/description"* 位置。  
+ 為了簡化讀取中繼資料的程序<xref:System.Windows.Media.Imaging.BitmapMetadata>提供數個具名的屬性可輕鬆地存取這類<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 許多具名屬性也可以用於寫入中繼資料。 讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法來擷取中繼資料查詢讀取器所提供的字串查詢，例如 *"/ app1/exif /"* 。 在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用來取得文字儲存於 *"/text/description"* 位置。  
   
  [!code-cpp[BitmapMetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
  [!code-csharp[BitmapMetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
@@ -183,7 +183,7 @@ ms.locfileid: "64665179"
 ## <a name="codec-extensibility"></a>轉碼器擴充性  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 的核心功能是新影像轉碼器的擴充性模型。 這些 Unmanaged 介面可讓轉碼器開發人員整合轉碼器與 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，以便 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式可以自動使用新的影像格式。  
   
- 如需擴充性 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 的範例，請參閱 [Win32 範例轉碼器 (英文)](https://go.microsoft.com/fwlink/?LinkID=160052)。 此範例示範如何針對自訂影像格式建立解碼器和編碼器。  
+ 如需擴充性 API 的範例，請參閱 < [Win32 範例轉碼器](https://go.microsoft.com/fwlink/?LinkID=160052)。 此範例示範如何針對自訂影像格式建立解碼器和編碼器。  
   
 > [!NOTE]
 >  轉碼器必須經過數位簽署，系統才能辨識它。  

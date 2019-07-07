@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876875"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610558"
 ---
 # <a name="standard-query-operator-translation"></a>標準查詢運算子轉譯
 
@@ -198,7 +198,7 @@ Visual Basic 編譯器 (Compiler) 所用的下列 Helper 函式會轉譯為對�
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 支援
 
-下列 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 限制 (相較於 [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]) 會影響 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援。
+下列[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]（相較於 Microsoft SQL Server 2005） 的限制會影響[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 和 Outer Apply 運算子
 
@@ -208,7 +208,7 @@ Visual Basic 編譯器 (Compiler) 所用的下列 Helper 函式會轉譯為對�
 
 ### <a name="text--ntext"></a>text / ntext
 
-資料型別`text`  /  `ntext`不適用於某些查詢作業`varchar(max)`  /  `nvarchar(max)`，所支援的[!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]。
+資料型別`text`  /  `ntext`不適用於某些查詢作業`varchar(max)`  /  `nvarchar(max)`，所支援的 Microsoft SQL Server 2005。
 
 這項限制沒有解決方案。 具體來說，如果結果中含有對應至 `Distinct()` 或 `text` 資料行的成員，就不能對該結果使用 `ntext`。
 

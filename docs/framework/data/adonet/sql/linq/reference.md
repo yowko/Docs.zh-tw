@@ -2,12 +2,12 @@
 title: 參考資料
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: a874cb659bc8701d7f894617d4e1db25f949fbcd
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 659bd64fe06e2de7bd9dd8e929faa5d0353a5b58
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881318"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610571"
 ---
 # <a name="reference"></a>參考資料
 本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。  
@@ -31,7 +31,7 @@ ms.locfileid: "65881318"
  提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相關常見問題的答案。  
   
  [SQL Server Compact 和 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- 描述如何[!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]中的 SQL Server 與不同[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]應用程式。  
+ 說明中的 SQL Server 如何與不同 SQL Server Compact 3.5[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]應用程式。  
   
  [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  描述如何[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]將標準查詢運算子轉譯為 SQL 命令。  

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef0309ae0d03c8278134012e645960996c6f93c4
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768624"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610502"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>HOW TO：覆寫相依性屬性的中繼資料
 此範例示範如何覆寫預設相依性屬性中繼資料來自繼承的類別，藉由呼叫<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>方法，並提供特定類型的中繼資料。  
   
 ## <a name="example"></a>範例  
- 藉由定義其<xref:System.Windows.PropertyMetadata>，類別可以定義相依性屬性的行為，例如其預設值和屬性系統回呼。 許多相依性屬性類別都已經有建立為其註冊程序一部分的預設中繼資料。 這包括屬於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 一部分的相依性屬性。 透過其類別繼承而繼承相依性屬性的類別可以覆寫原始中繼資料；因此，可透過中繼資料變更之屬性的特性會符合所有子類別特定需求。  
+ 藉由定義其<xref:System.Windows.PropertyMetadata>，類別可以定義相依性屬性的行為，例如其預設值和屬性系統回呼。 許多相依性屬性類別都已經有建立為其註冊程序一部分的預設中繼資料。 這包括相依性屬性屬於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]API。 透過其類別繼承而繼承相依性屬性的類別可以覆寫原始中繼資料；因此，可透過中繼資料變更之屬性的特性會符合所有子類別特定需求。  
   
  屬性系統使用所放入的屬性之前，必須覆寫相依性屬性上的中繼資料 (這等同於具現化可註冊屬性之物件的特定執行個體的時間)。 若要呼叫<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>必須在本身提供為類型的靜態建構函式中執行`forType`參數<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>。 如果您嘗試在擁有者類型的執行個體存在之後變更中繼資料，則這不會引發例外狀況，但會在屬性系統中導致不一致的行為。 此外，一種類型只能覆寫中繼資料一次。 後續覆寫相同類型上中繼資料的嘗試將會引發例外狀況。  
   

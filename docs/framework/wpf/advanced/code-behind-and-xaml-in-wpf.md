@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 01122991e99e41259c3b83a38eba002734d749ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a47f5a93cb161c9a87df25403cc86247619cd81
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655531"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610525"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的程式碼後置和 XAML
 <a name="introduction"></a> 程式碼後置指的是用來描述與標記定義的物件，聯結的程式碼時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面是進行標記編譯。 本主題描述程式碼後置的需求，以及在程式碼的替代的內嵌程式碼機制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
@@ -56,7 +56,7 @@ ms.locfileid: "64655531"
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>內嵌程式碼的限制  
- 您應該考慮避免或限制的內嵌程式碼使用。 架構和程式碼的原理，維護在標記和程式碼後置之間有分隔會保留的設計工具] 和 [開發人員角色更多不同。 更技術性的層級中，您為內嵌程式碼撰寫的程式碼可能會很冗長，因此若要撰寫，因為您一律將寫入到[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]產生部分類別中，且只能使用預設 XML 命名空間對應。 因為您無法新增`using`陳述式，您必須完整限定的許多[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]您進行的呼叫。 預設值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]對應包含大部分但非全部[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]在於的命名空間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]組件，您必須完整限定類型和成員包含在其他的 CLR 命名空間內的呼叫。 您也無法定義部分類別以外的項目中的內嵌程式碼中，且您參考的所有使用者程式碼實體都必須是成員或產生的部分類別中的變數。 其他語言特定程式設計功能，例如巨集或`#ifdef`針對全域變數或組建變數，也會不提供。 如需詳細資訊，請參閱 < [X:code 內建 XAML 類型](../../xaml-services/x-code-intrinsic-xaml-type.md)。  
+ 您應該考慮避免或限制的內嵌程式碼使用。 架構和程式碼的原理，維護在標記和程式碼後置之間有分隔會保留的設計工具] 和 [開發人員角色更多不同。 更技術性的層級中，您為內嵌程式碼撰寫的程式碼可能會很冗長，因此若要撰寫，因為您一律將寫入到[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]產生部分類別中，且只能使用預設 XML 命名空間對應。 因為您無法新增`using`陳述式，您必須完整限定您的 API 呼叫的許多。 預設值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]對應包含大部分但非全部[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]在於的命名空間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]組件，您必須完整限定類型和成員包含在其他的 CLR 命名空間內的呼叫。 您也無法定義部分類別以外的項目中的內嵌程式碼中，且您參考的所有使用者程式碼實體都必須是成員或產生的部分類別中的變數。 其他語言特定程式設計功能，例如巨集或`#ifdef`針對全域變數或組建變數，也會不提供。 如需詳細資訊，請參閱 < [X:code 內建 XAML 類型](../../xaml-services/x-code-intrinsic-xaml-type.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -24,31 +24,31 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 6aae66de973c357b4b87578221a169bf750739fb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599021"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610483"
 ---
 # <a name="input-overview"></a>輸入概觀
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系統提供一個功能強大[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]各式各樣的裝置取得輸入，包括滑鼠、 鍵盤、 觸控及手寫筆。 本主題描述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的服務，以及說明輸入系統的架構。
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>輸入 API
- 主要的輸入[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]公開位於基底類別： <xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>。  如需基底項目的詳細資訊，請參閱[基底項目概觀](base-elements-overview.md)。  這些類別提供按鍵動作、滑鼠按鈕、滑鼠滾輪、滑鼠移動、焦點管理和滑鼠捕捉等相關輸入事件的功能。 將輸入 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 放在基底項目上，而不是將所有輸入事件作為服務，輸入架構可讓輸入事件成為 UI 中的特定物件來源，以及支援事件路由傳送，進而讓多個項目可以處理輸入事件。 許多輸入事件都有一組與其建立關聯的事件。  例如，按鍵事件相關聯<xref:System.Windows.Input.Keyboard.KeyDown>和<xref:System.Windows.Input.Keyboard.PreviewKeyDown>事件。  這些事件的差異在於如何將它們路由傳送至目標項目。  預覽事件會從根項目到目標項目往下瀏覽通道項目樹狀結構。  事件反昇事件會從目標項目往上反昇到根項目。  這個概觀和[路由事件概觀](routed-events-overview.md)稍後會更詳細討論 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的事件路由。
+ 主要輸入 API 公開位於基底類別： <xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>。  如需基底項目的詳細資訊，請參閱[基底項目概觀](base-elements-overview.md)。  這些類別提供按鍵動作、滑鼠按鈕、滑鼠滾輪、滑鼠移動、焦點管理和滑鼠捕捉等相關輸入事件的功能。 藉由基底的項目，在放置輸入 API，而不是所有的輸入的事件視為一項服務，輸入的架構可讓輸入的事件來源的特定物件，在 UI 中，並支援事件路由配置，藉此讓一個以上的項目具有 opp若要處理輸入的事件 ortunity。 許多輸入事件都有一組與其建立關聯的事件。  例如，按鍵事件相關聯<xref:System.Windows.Input.Keyboard.KeyDown>和<xref:System.Windows.Input.Keyboard.PreviewKeyDown>事件。  這些事件的差異在於如何將它們路由傳送至目標項目。  預覽事件會從根項目到目標項目往下瀏覽通道項目樹狀結構。  事件反昇事件會從目標項目往上反昇到根項目。  這個概觀和[路由事件概觀](routed-events-overview.md)稍後會更詳細討論 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的事件路由。
 
 ### <a name="keyboard-and-mouse-classes"></a>鍵盤和滑鼠類別
- 除了輸入[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]基底的項目類別，<xref:System.Windows.Input.Keyboard>類別和<xref:System.Windows.Input.Mouse>類別會提供其他[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]使用鍵盤和滑鼠輸入。
+ 輸入 API 基底的項目類別，除了<xref:System.Windows.Input.Keyboard>類別和<xref:System.Windows.Input.Mouse>類別提供用於處理鍵盤和滑鼠輸入的其他 API。
 
- 輸入的範例[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]上<xref:System.Windows.Input.Keyboard>類別<xref:System.Windows.Input.Keyboard.Modifiers%2A>屬性，會傳回<xref:System.Windows.Input.ModifierKeys>目前已按下和<xref:System.Windows.Input.Keyboard.IsKeyDown%2A>方法，可判斷指定的索引鍵是否按下。
+ 輸入 API 的範例<xref:System.Windows.Input.Keyboard>類別<xref:System.Windows.Input.Keyboard.Modifiers%2A>屬性，會傳回<xref:System.Windows.Input.ModifierKeys>目前已按下和<xref:System.Windows.Input.Keyboard.IsKeyDown%2A>方法，可判斷指定的索引鍵是否按下。
 
  下列範例會使用<xref:System.Windows.Input.Keyboard.GetKeyStates%2A>方法，可判斷<xref:System.Windows.Input.Key>處於關閉狀態。
 
  [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
  [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
 
- 輸入的範例[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]上<xref:System.Windows.Input.Mouse>類別<xref:System.Windows.Input.Mouse.MiddleButton%2A>，取得滑鼠中鍵，狀態和<xref:System.Windows.Input.Mouse.DirectlyOver%2A>，此 cmdlet 會取得之項目的滑鼠指標目前位於上方。
+ 輸入 API 的範例<xref:System.Windows.Input.Mouse>類別<xref:System.Windows.Input.Mouse.MiddleButton%2A>，取得滑鼠中間按鈕的狀態和<xref:System.Windows.Input.Mouse.DirectlyOver%2A>，此 cmdlet 會取得之項目的滑鼠指標目前位於上方。
 
  下列範例會判斷是否<xref:System.Windows.Input.Mouse.LeftButton%2A>滑鼠位於<xref:System.Windows.Input.MouseButtonState.Pressed>狀態。
 
@@ -58,7 +58,7 @@ ms.locfileid: "64599021"
  <xref:System.Windows.Input.Mouse>和<xref:System.Windows.Input.Keyboard>類別所述本概觀的所有詳細資料。
 
 ### <a name="stylus-input"></a>手寫筆輸入
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 已經整合的支援<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是所產生的熱門手寫筆輸入[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式可以使用滑鼠 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 來將手寫筆視為滑鼠，但是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也會公開手寫筆裝置抽象概念，其使用的模型類似鍵盤和滑鼠。  所有手寫筆相關的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都會包含 "Stylus" 這個單字。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 已經整合的支援<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是所產生的熱門手寫筆輸入[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式可以將手寫筆視為滑鼠使用滑鼠 API，但[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]也會公開使用的模型類似鍵盤和滑鼠手寫筆裝置抽象概念。  所有手寫筆相關的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都會包含 "Stylus" 這個單字。
 
  因為手寫筆可以當作滑鼠，所以只支援滑鼠輸入的應用程式仍然可以自動取得某種程度的手寫筆支援。 以這種方式使用手寫筆時，應用程式可以處理適當的手寫筆事件，然後處理對應的滑鼠事件。 此外，還可以透過手寫筆裝置抽象概念來取得筆跡輸入這類較高階服務。  如需將筆跡作為輸入的詳細資訊，請參閱[筆跡入門](getting-started-with-ink.md)。
 
@@ -350,7 +350,7 @@ ms.locfileid: "64599021"
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>滑鼠位置
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 輸入 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 提供有關座標空間的有用資訊。  例如，座標 `(0,0)` 是左上角的座標，但樹狀結構中的項目左上方為何？ 為輸入目標的項目？ 附加事件處理常式的項目？ 或其他事項？ 為了避免混淆，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 輸入 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 會需要您在處理透過滑鼠取得的座標時指定參考框架。 <xref:System.Windows.Input.Mouse.GetPosition%2A>方法會傳回滑鼠指標相對於指定項目的座標。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]輸入 API 提供有關座標空間的有用資訊。  例如，座標 `(0,0)` 是左上角的座標，但樹狀結構中的項目左上方為何？ 為輸入目標的項目？ 附加事件處理常式的項目？ 或其他事項？ 為了避免混淆，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]輸入 API 會要求您指定參考框架，當您使用透過滑鼠取得的座標。 <xref:System.Windows.Input.Mouse.GetPosition%2A>方法會傳回滑鼠指標相對於指定項目的座標。
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>滑鼠捕捉

@@ -2,12 +2,12 @@
 title: 常值
 description: 深入了解中的常值型別F#程式設計語言。
 ms.date: 06/28/2019
-ms.openlocfilehash: 53647d8cbc2a59527a50e122bc1abc6055c1fce5
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c9ced0b505817a161ca39c6c9f853f94cedf410
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487787"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610147"
 ---
 # <a name="literals"></a>常值
 
@@ -69,7 +69,7 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 
 ## <a name="remarks"></a>備註
 
-Unicode 字串可以包含您可以使用指定的明確編碼`\u`後面的 16 位元十六進位字碼 (0000-FFFF) 或您可以使用指定的 UTF-32 編碼`\U`後面接著 32 位元的十六進位代碼，表示任何 Unicode 字碼指標 (00000000-00010FFFF)。
+Unicode 字串可以包含您可以使用指定的明確編碼`\u`後面的 16 位元十六進位字碼 (0000-FFFF) 或您可以使用指定的 UTF-32 編碼`\U`後面接著 32 位元的十六進位代碼，表示任何 Unicode 字碼指標 (00000000-0010FFFF)。
 
 其他位元運算子，而不使用`|||`不允許。
 

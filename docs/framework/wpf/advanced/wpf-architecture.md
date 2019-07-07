@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053141"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610349"
 ---
 # <a name="wpf-architecture"></a>WPF 架構
 本主題提供 Windows Presentation Foundation (WPF) 的類別階層架構的導覽。 它涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述其互動方式。 它也會詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所進行的一些選擇。  
@@ -62,7 +62,7 @@ ms.locfileid: "62053141"
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- 定義系統之後，下一個步驟是將像素繪製到螢幕。 <xref:System.Windows.Media.Visual>類別提供建置樹狀目錄中的視覺物件，都會選擇性地包含繪圖指示以及如何轉譯這些指示 （裁剪、 轉換等等） 的相關中繼資料。 <xref:System.Windows.Media.Visual> 設計為非常輕量且具有彈性，因此大部分的功能不有任何公用[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]曝光並大量依賴受保護的回呼函式。  
+ 定義系統之後，下一個步驟是將像素繪製到螢幕。 <xref:System.Windows.Media.Visual>類別提供建置樹狀目錄中的視覺物件，都會選擇性地包含繪圖指示以及如何轉譯這些指示 （裁剪、 轉換等等） 的相關中繼資料。 <xref:System.Windows.Media.Visual> 被設計為非常輕量且具有彈性，因此大部分的功能不有任何公開的 API，並大量依賴受保護的回呼函式。  
   
  <xref:System.Windows.Media.Visual> 其實是進入點[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]撰寫系統。 <xref:System.Windows.Media.Visual> 是的這些兩個子系統，managed 之間的連接點[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]和 unmanaged 的 milcore。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62053141"
   
  所導入的主要原則近似<xref:System.Windows.FrameworkElement>應用程式版面配置。 <xref:System.Windows.FrameworkElement> 根據所引進的基本版面配置合約<xref:System.Windows.UIElement>並新增版面配置，輕鬆地讓版面配置作者，有一組一致的屬性驅動版面配置語意的 「 位置 」 的概念。 屬性，例如<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>， <xref:System.Windows.FrameworkElement.MinWidth%2A>，以及<xref:System.Windows.FrameworkElement.Margin%2A>（以等等） 提供衍生自的所有元件<xref:System.Windows.FrameworkElement>版面配置容器內有一致的行為。  
   
- <xref:System.Windows.FrameworkElement> 也提供更容易[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]暴露於許多功能位於核心層級[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 例如，<xref:System.Windows.FrameworkElement>提供直接存取動畫透過<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>方法。 A<xref:System.Windows.Media.Animation.Storyboard>可用來針對一組屬性的多個動畫的指令碼。  
+ <xref:System.Windows.FrameworkElement> 也會提供核心層級中找到的許多功能更容易的 API 公開[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 例如，<xref:System.Windows.FrameworkElement>提供直接存取動畫透過<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>方法。 A<xref:System.Windows.Media.Animation.Storyboard>可用來針對一組屬性的多個動畫的指令碼。  
   
  兩個最重要的事項，<xref:System.Windows.FrameworkElement>導入了資料繫結和樣式。  
   

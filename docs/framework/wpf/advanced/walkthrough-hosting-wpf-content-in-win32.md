@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 01ac0e2cafc704b64634f1fb36145387b49c34a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9042548c52a7a82f75b4287323097655ffec48bf
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650779"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610427"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>逐步解說：將 WPF 內容裝載在 Win32 中
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能加入應用程式，可能會比重寫原始程式碼更有效率。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供簡單的機制，來裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的內容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。  
@@ -22,7 +22,7 @@ ms.locfileid: "64650779"
 ## <a name="requirements"></a>需求  
  本教學課程假設您對 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式設計已有基本的熟悉度。 如需基本簡介[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程式設計，請參閱[快速入門](../getting-started/index.md)。 如需簡介[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程式設計，您應該參考書籍嶄新的任何特別*程式設計 Windows* Charles petzold 的。  
   
- 因為隨附本教學課程的範例中實作[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]，本教學課程假設您使用熟悉[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]程式[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] managed 程式碼的程式設計，並且了解。 熟悉 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 會有幫助，但並非必要。  
+ 因為隨附本教學課程的範例中實作[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]，本教學課程假設您使用熟悉[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]程式[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]API 及了解 managed 程式碼的程式設計。 熟悉 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 會有幫助，但並非必要。  
   
 > [!NOTE]
 >  本教學課程包含一些來自相關範例的程式碼範例。 不過，為了方便閱讀，並未包含完整的範例程式碼。 完整範例程式碼，請參閱[Win32 視窗範例中裝載 WPF 內容](https://go.microsoft.com/fwlink/?LinkID=160004)。  
@@ -114,7 +114,7 @@ ms.locfileid: "64650779"
 
 <a name="hosting_the_wpf_page"></a>
 ### <a name="hosting-the-wpf-content"></a>裝載 WPF 內容
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容是簡單的位址輸入應用程式。 它包含數個 <xref:System.Windows.Controls.TextBox> 控制項，以取得使用者名稱、位址等等。 另外還有兩個<xref:System.Windows.Controls.Button>控制項 **[確定]** 並**取消**。 當使用者按一下 **[確定]**，按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式會收集的資料<xref:System.Windows.Controls.TextBox>控制、 將它指派給對應的屬性，並引發自訂事件， `OnButtonClicked`。 當使用者按一下**取消**，這個處理常式只會引發`OnButtonClicked`。 `OnButtonClicked` 的事件引數物件包含布林值的欄位，指出所點選的按鈕。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容是簡單的位址輸入應用程式。 它包含數個 <xref:System.Windows.Controls.TextBox> 控制項，以取得使用者名稱、位址等等。 另外還有兩個<xref:System.Windows.Controls.Button>控制項 **[確定]** 並**取消**。 當使用者按一下 **[確定]** ，按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式會收集的資料<xref:System.Windows.Controls.TextBox>控制、 將它指派給對應的屬性，並引發自訂事件， `OnButtonClicked`。 當使用者按一下**取消**，這個處理常式只會引發`OnButtonClicked`。 `OnButtonClicked` 的事件引數物件包含布林值的欄位，指出所點選的按鈕。
 
  主應用程式的程式碼[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容的處理常式中實作[WM_CREATE](/windows/desktop/winmsg/wm-create)主視窗上的通知。
 

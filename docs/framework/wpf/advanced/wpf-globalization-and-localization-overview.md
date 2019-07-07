@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: ce54c3299d599e990fa02abd3cea1460d588e280
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28aeaae7292224dc8f56787efbde82712340af11
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662261"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610406"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 
@@ -90,7 +90,7 @@ ms.locfileid: "64662261"
 
 當地語系化程序開始後未當地語系化`MyDialog.resources.dll`檔案建立。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素和屬性，在您的原始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]從中使用 BAML 形式的 XAML 為索引鍵 / 值組[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]下<xref:System.Windows.Markup.Localizer>。 當地語系化人員會使用鍵值組來當地語系化應用程式。 當地語系化完成之後，即可從新值產生新的 .resource.dll。
   
- 索引鍵 / 值組的索引鍵`x:Uid`值放在原始開發人員的[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 這些`x:Uid`值可讓[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]追蹤和合併當地語系化期間開發人員與當地語系化人員之間發生的變更。 例如，如果開發人員變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]當地語系化人員開始當地語系化之後，您就可以合併開發變更與已完成的當地語系化工作，使翻譯工作最少會遺失。  
+ 索引鍵 / 值組的索引鍵`x:Uid`值放在原始開發人員的[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 這些`x:Uid`值可讓 API 來追蹤和合併當地語系化期間開發人員與當地語系化人員之間發生的變更。 例如，如果開發人員變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]當地語系化人員開始當地語系化之後，您就可以合併開發變更與已完成的當地語系化工作，使翻譯工作最少會遺失。  
   
  下圖顯示根據 BAML 形式之 XAML 的一般當地語系化工作流程。 本圖假設開發人員以英文撰寫的應用程式。 開發人員會建立和全球化 WPF 應用程式。 在專案檔中，開發人員設定`<UICulture>en-US</UICulture>`以便建置時，產生語言中性主要組件的附屬。 包含所有可當地語系化資源的.resources.dll。 或者，有人保持主要組件中的來源語言，因為 WPF 當地語系化 API 支援從主要組件進行擷取。 建置程序之後，XAML 會編譯到 BAML。 與文化特性無關的 MyDialog.exe.resources.dll 會傳送給英語系的客戶。  
   
@@ -283,7 +283,7 @@ ms.locfileid: "64662261"
   
  [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
   
- 預設當地語系化屬性 (attribute)[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供也可覆寫透過程式碼，因此您可以正確地設定為自訂控制項的正確預設值。 例如:   
+ 預設當地語系化屬性 (attribute)[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供也可覆寫透過程式碼，因此您可以正確地設定為自訂控制項的正確預設值。 例如:  
 
 ```csharp 
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)] 
