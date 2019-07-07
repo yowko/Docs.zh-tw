@@ -2,17 +2,21 @@
 title: dotnet nuget locals 命令
 description: dotnet nuget locals 命令會清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: 0a9fd7876aa4d1907eb37e6bac54295d938d36d3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 6436bbaee7ae50f4b225c32b2245c737b0d359c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632415"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539262"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
+**本主題適用於：✓** .NET Core 1.x SDK 和更新版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>名稱
 

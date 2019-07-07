@@ -2,17 +2,21 @@
 title: dotnet nuget delete 命令
 description: dotnet-nuget-delete 命令會從伺服器刪除或取消列出套件。
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: e1362413aa6458674518d68340634741994b34a3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 0b2ba64b70bae5e06f213457e30fedeca26a9819
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632050"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539246"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
+**本主題適用於：✓** .NET Core 1.x SDK 和更新版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>名稱
 
@@ -20,23 +24,11 @@ ms.locfileid: "65632050"
 
 ## <a name="synopsis"></a>概要
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
-    [-s|--source]
-dotnet nuget delete [-h|--help]
-```
-
----
 
 ## <a name="description"></a>說明
 
@@ -53,8 +45,6 @@ dotnet nuget delete [-h|--help]
   要刪除的套件版本。
 
 ## <a name="options"></a>選項
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`--force-english-output`**
 
@@ -83,30 +73,6 @@ dotnet nuget delete [-h|--help]
 * **`-s|--source <SOURCE>`**
 
   指定伺服器 URL。 支援的 nuget.org URL 包括 `https://www.nuget.org`、`https://www.nuget.org/api/v3` 和 `https://www.nuget.org/api/v2/package`。 對於私用摘要，請取代主機名稱 (例如，`%hostname%/api/v3`)。
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`--force-english-output`**
-
-  強制使用非變異英文文化特性來執行應用程式。
-
-* **`-h|--help`**
-
-  印出命令的簡短說明。
-
-* **`-k|--api-key <API_KEY>`**
-
-  伺服器的 API 金鑰。
-
-* **`--non-interactive`**
-
-  不提示使用者輸入或確認。
-
-* **`-s|--source <SOURCE>`**
-
-  指定伺服器 URL。 支援的 nuget.org URL 包括 `https://www.nuget.org`、`https://www.nuget.org/api/v3` 和 `https://www.nuget.org/api/v2/package`。 對於私用摘要，請取代主機名稱 (例如，`%hostname%/api/v3`)。
-
----
 
 ## <a name="examples"></a>範例
 

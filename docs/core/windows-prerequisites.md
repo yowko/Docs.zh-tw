@@ -3,12 +3,12 @@ title: Windows 上 .NET Core 的必要條件
 description: 了解在 Windows 電腦上開發及執行 .NET Core 應用程式時，您需要哪些相依性。
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 423a333edf5b2946a28855352adf2915642b1eae
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 9c4c15a08e0988955ecdf442307059868cb377d1
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051963"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539360"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
@@ -57,7 +57,7 @@ ms.locfileid: "66051963"
 > [!NOTE]
 > **適用於 Windows 8.1 和更早版本，或 Windows Server 2012 R2 和更早版本：**
 >
-> 請確定您的 Windows 安裝處於最新狀態，且包含 [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows) \(機器翻譯\) (可透過 Windows Update 安裝)。 如果沒有安裝此更新，當您啟動 .NET Core 應用程式時，將會看到如下的錯誤：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> 請確定您的 Windows 安裝處於最新狀態，且包含 [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows) \(機器翻譯\) (可透過 Windows Update 安裝)。 如果沒有安裝此更新，當您啟動 .NET Core 應用程式時，將會看到如下的錯誤：`The program can't start because api-ms-win-crt-runtime-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **適用於 Windows 7 或 Windows Server 2008 R2：**
 >
@@ -77,7 +77,7 @@ ms.locfileid: "66051963"
 
 若要在 Visual Studio 2017 中開發使用 .NET Core 2.2 SDK 的 .NET Core 應用程式：
 
- 1. [下載並安裝 Visual Studio 2017 15.9.0 版本或更新版本](/visualstudio/install/install-visual-studio)，選取 [.NET Core 跨平台開發] 工作負載 (在 [其他工具組] 區段)。
+ 1. [下載並安裝 Visual Studio 2017 15.9.0 版本或更新版本](/visualstudio/install/install-visual-studio)，選取 [.NET Core 跨平台開發]  工作負載 (在 [其他工具組]  區段)。
 
 ![已選取 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 安裝螢幕擷取畫面](./media/windows-prerequisites/vs-2017-workloads.jpg)
 
@@ -91,7 +91,7 @@ ms.locfileid: "66051963"
  1. 如果您希望專案使用最新的 .NET Core 執行階段，請使用下列指示將現有或新的 .NET Core 專案目標重新設定為 .NET Core 2.2：
 
     * 在 [ **專案** ] 功能表上，選擇 [ **屬性**]。
-    * 在 [目標 Framework] 選取功能表中，將值設為 **.NET Core 2.2**。
+    * 在 [目標 Framework]  選取功能表中，將值設為 **.NET Core 2.2**。
 
 ![螢幕擷取畫面：選取 ".NET Core 2.2" 目標 Framework 功能表項目的 Visual Studio 2017 應用程式專案屬性](./media/windows-prerequisites/targeting-dotnet-core.jpg)
 
@@ -103,7 +103,7 @@ ms.locfileid: "66051963"
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-若要使用 Visual Studio 開發 .NET Core 1.x 應用程式，請[下載並安裝 Visual Studio 2017](/visualstudio/install/install-visual-studio)，選取 [.NET Core 跨平台開發] 工作負載 (在 [其他工具組] 區段)。
+若要使用 Visual Studio 開發 .NET Core 1.x 應用程式，請[下載並安裝 Visual Studio 2017](/visualstudio/install/install-visual-studio)，選取 [.NET Core 跨平台開發]  工作負載 (在 [其他工具組]  區段)。
 
 ![已選取 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 安裝螢幕擷取畫面](./media/windows-prerequisites/vs-workloads.jpg)
 
@@ -122,7 +122,7 @@ ms.locfileid: "66051963"
 > 確認 Visual Studio 版本：
 >
 > * 在 **[說明]** 功能表上，選擇 **[關於 Microsoft Visual Studio]** 。
-> * 在 [關於 Microsoft Visual Studio] 對話方塊中，確認版本號碼。
+> * 在 [關於 Microsoft Visual Studio]  對話方塊中，確認版本號碼。
 >   * 針對 .NET Core 3.0 Preview 3 應用程式，需要 Visual Studio 2019 16.0 版或更新版本。
 >   * 若為 .NET Core 2.2 應用程式，需要 Visual Studio 2017 15.9 版或更新版本。
 >   * 若為 .NET Core 2.1 應用程式，需要 Visual Studio 2017 15.7 版或更新版本。
