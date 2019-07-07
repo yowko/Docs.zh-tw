@@ -21,8 +21,6 @@
           href: how-to-use-lambda-expressions-outside-linq.md
         - name: 匿名方法
           href: anonymous-methods.md
-    - name: 可多載的運算子
-      href: overloadable-operators.md
     - name: 轉換運算子
       items:
         - name: 轉換概觀

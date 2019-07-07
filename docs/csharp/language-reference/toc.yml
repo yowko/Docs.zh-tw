@@ -225,8 +225,6 @@
               href: keywords/explicit.md
             - name: implicit
               href: keywords/implicit.md
-            - name: 運算子
-              href: keywords/operator.md
         - name: 存取關鍵字
           items:
             - name: base
@@ -354,6 +352,8 @@
           href: operators/stackalloc.md
         - name: true 和 false 運算子
           href: operators/true-false-operators.md
+        - name: 運算子多載
+          href: operators/operator-overloading.md
     - name: 'C# 特殊字元'
       items:
         - name: 總覽

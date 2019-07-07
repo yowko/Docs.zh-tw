@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 2d896708c702f5261239eb74f925c10eacd89619
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f7505051cce3aee99e6b6ea88a6a94498926214
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709883"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609639"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>陳述式、運算式和運算子 (C# 程式設計手冊)
 
@@ -32,8 +32,6 @@ ms.locfileid: "61709883"
 - [運算子](operators.md)
 
 - [匿名函式](anonymous-functions.md)
-
-- [多載運算子](overloadable-operators.md)
 
 - [轉換運算子](conversion-operators.md)
 
