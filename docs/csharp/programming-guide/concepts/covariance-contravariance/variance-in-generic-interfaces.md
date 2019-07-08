@@ -2,12 +2,12 @@
 title: 泛型介面中的差異 (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 9cbbea35003e86e05d618f5e6000ba2788359cb0
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815957"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539500"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型介面中的差異 (C#)
 
@@ -87,7 +87,7 @@ IEnumerable<int> integers = new List<int>();
 // IEnumerable<Object> objects = integers;
 ```
 
-請務必牢記，實作 Variant 介面的類別仍然是非變異的。 例如，雖然 <xref:System.Collections.Generic.List%601> 實作了 Covariant 介面 <xref:System.Collections.Generic.IEnumerable%601>，但您不能以隱含方式將 `List<Object>` 轉換成 `List<String>`。 下列程式碼範例說明此情形。
+請務必牢記，實作 Variant 介面的類別仍然是非變異的。 例如，雖然 <xref:System.Collections.Generic.List%601> 實作了 Covariant 介面 <xref:System.Collections.Generic.IEnumerable%601>，但您不能以隱含方式將 `List<String>` 轉換成 `List<Object>`。 下列程式碼範例說明此情形。
 
 ```csharp
 // The following line generates a compiler error
