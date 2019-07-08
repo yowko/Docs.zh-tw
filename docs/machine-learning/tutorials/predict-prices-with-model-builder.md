@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: db9788e3065a0f2f21d712b2d4826efea2d8a829
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: d9a6f193d877fc1a679b7a3cafd7491e021cb2ad
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410576"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539626"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>搭配模型產生器使用迴歸來預測價格
 
@@ -51,7 +51,7 @@ ms.locfileid: "67410576"
 
 1. 在 [方案總管]  中，以滑鼠右鍵按一下 *taxi-fare-train.csv* 檔案，然後選取 [屬性]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
 
-`taxi-fare-train.csv` 資料集中的每個資料列都包含計程車車程的詳細資料。 
+`taxi-fare-train.csv` 資料集中的每個資料列都包含計程車車程的詳細資料。
 
 1. 開啟 **taxi-fare-train.csv** 資料集
 
@@ -102,7 +102,7 @@ ms.locfileid: "67410576"
 在整個定型程序期間，進度資料會顯示在定型步驟的 `Progress` 區段中。
 
 - [狀態] 會顯示定型程序的完成狀態。
-- [最佳正確性] 會顯示模型產生器到目前為止所找到執行效能最佳模型的正確性。 正確性越高，表示模型針對測試資料的預測越正確。 
+- [最佳正確性] 會顯示模型產生器到目前為止所找到執行效能最佳模型的正確性。 正確性越高，表示模型針對測試資料的預測越正確。
 - [最佳演算法] 會顯示模型產生器到目前為止所執行演算法中效能最佳的演算法名稱。
 - [上一個演算法] 會顯示模型產生器最近一次用來定型模型的演算法名稱。
 
@@ -122,8 +122,8 @@ ms.locfileid: "67410576"
 - TaxiFarePredictionML.Model：.NET Standard 類別庫，包含定義輸入及輸出模型資料結構描述的資料模型，以及定型期間執行效能最佳模型的保存版本。
 
 1. 在模型產生器工具的程式碼區段中，選取 [新增專案]  來將專案新增到解決方案。
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 *TaxiFarePrediction* 專案。 然後，選取 [新增] > [現有項目]  。 針對檔案型別下拉式清單，請選取 `All Files` 來巡覽至 *TaxiFarePredictionML.Model* 專案目錄，然後選取 `MLModel.zip` 檔案。 接著以滑鼠右鍵按一下最近新增的 `MLModel.zip` 檔案，然後選取 [屬性]  。 針對 [複製到輸出目錄] 選項，從下拉式清單選取 [有更新時才複製]  。
-1. 以滑鼠右鍵按一下 *TaxiFarePrediction* 專案。 然後，選取 [新增] > [參考]  。 選擇 [專案] > [方案]  節點，並從清單選取 *TaxiFarePredictionML.Model* 專案，然後選取 [確定]。
+2. 在 [方案總管] 中，以滑鼠右鍵按一下 *TaxiFarePrediction* 專案。 然後，選取 [新增] > [現有項目]  。 針對檔案型別下拉式清單，請選取 `All Files` 來巡覽至 *TaxiFarePredictionML.Model* 專案目錄，然後選取 `MLModel.zip` 檔案。 接著以滑鼠右鍵按一下最近新增的 `MLModel.zip` 檔案，然後選取 [屬性]  。 針對 [複製到輸出目錄] 選項，從下拉式清單選取 [有更新時才複製]  。
+3. 以滑鼠右鍵按一下 *TaxiFarePrediction* 專案。 然後，選取 [新增] > [參考]  。 選擇 [專案] > [方案]  節點，並從清單選取 *TaxiFarePredictionML.Model* 專案，然後選取 [確定]。
 
 4. 開啟 *TaxiFarePrediction* 專案中的 *Program.cs* 檔案。
 5. 加入下列 using 陳述式：

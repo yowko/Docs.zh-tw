@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 258adc45fc6874cca5829479eef1196ebea1e300
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347981"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610030"
 ---
 # <a name="-and--operators-c-reference"></a>+ 及 += 運算子 (C# 參考)
 
@@ -71,7 +71,7 @@ x = x + y
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義型別可以[多載](../keywords/operator.md) `+` 運算子。 多載二元 `+` 運算子時，`+=` 運算子也會隱含地多載。 使用者定義型別無法明確地多載 `+=` 運算子。
+使用者定義型別可以[多載](operator-overloading.md) `+` 運算子。 多載二元 `+` 運算子時，`+=` 運算子也會隱含地多載。 使用者定義型別無法明確地多載 `+=` 運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

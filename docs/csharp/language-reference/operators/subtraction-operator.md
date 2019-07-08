@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 7c9863134cb2a12072954bb283c7828abece3adb
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347905"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609848"
 ---
 # <a name="--and---operators-c-reference"></a>- 及 -= 運算子 (C# 參考)
 
@@ -72,7 +72,7 @@ x = x - y
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義型別可以[多載](../keywords/operator.md) `-` 運算子。 多載二元 `-` 運算子時，`-=` 運算子也會隱含地多載。 使用者定義型別無法明確地多載 `-=` 運算子。
+使用者定義型別可以[多載](operator-overloading.md) `-` 運算子。 多載二元 `-` 運算子時，`-=` 運算子也會隱含地多載。 使用者定義型別無法明確地多載 `-=` 運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
