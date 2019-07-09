@@ -18,18 +18,18 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 0cd0a06dc919ecf11f1a3d343fe8ff023a5f8524
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401458"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609919"
 ---
 # <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
 C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運算子](arithmetic-operators.md)會執行含內建數值型別運算元的算術運算，而[布林邏輯運算子](boolean-logical-operators.md)會執行含 [bool](../keywords/bool.md) 運算元的邏輯運算。
 
-使用者定義型別可以多載特定運算子，以定義該型別運算元的對應行為。 如需詳細資訊，請參閱[運算子](../keywords/operator.md)關鍵字文章。
+使用者定義型別可以多載特定運算子，以定義該型別運算元的對應行為。 如需詳細資訊，請參閱[運算子多載](operator-overloading.md)。
 
 下面各節列出 C# 運算子，從最高優先順序開始列到最低。 每個區段中的運算子會共用相同的優先順序層級。
 
@@ -223,4 +223,3 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 - [C# 參考](../index.md)
 - [運算子](../../programming-guide/statements-expressions-operators/operators.md)
-- [多載運算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

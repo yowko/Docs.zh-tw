@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: d3e1cb9d6fb37617c6e2aa7070b006c594d39762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00fe1a02b52ef2ddc393bc7424efa73fc4059a9c
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661707"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610116"
 ---
 # <a name="implicit-c-reference"></a>implicit (C# 參考)
 
@@ -35,5 +35,5 @@ ms.locfileid: "54661707"
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [explicit](explicit.md)
-- [operator (C# 參考)](operator.md)
+- [運算子多載](../operators/operator-overloading.md)
 - [如何：在結構之間實作使用者定義的轉換](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

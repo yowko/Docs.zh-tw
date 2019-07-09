@@ -1,15 +1,15 @@
 ---
 title: 使用 Docker 教學課程將應用程式容器化
 description: 在此教學課程中，您將了解如何使用 Docker 來將 .NET Core 應用程式容器化。
-ms.date: 04/10/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051807"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609290"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教學課程：將 .NET Core 應用程式容器化
 
@@ -23,22 +23,22 @@ ms.locfileid: "66051807"
 > * 建置 Docker 映像
 > * 建立及執行 Docker 容器
 
-您將了解 .NET Core 應用程式的 Docker 容器建置及部署工作。 「Docker 平台」會使用「Docker 引擎」快速建置應用程式，並將其封裝為「Docker 映像」。 這些映像是以 *Dockerfile* 格式所撰寫，可在分層式容器中部署及執行。
+您將了解 .NET Core 應用程式的 Docker 容器建置及部署工作。 「Docker 平台」  會使用「Docker 引擎」  快速建置應用程式，並將其封裝為「Docker 映像」  。 這些映像是以 *Dockerfile* 格式所撰寫，可在分層式容器中部署及執行。
 
 ## <a name="prerequisites"></a>必要條件
 
 安裝下列先決條件：
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
+* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
 如果您已安裝 .NET Core，請使用 `dotnet --info` 命令來判斷您使用的 SDK。
 
-- [Docker Community Edition](https://www.docker.com/products/docker-desktop)
+* [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 
-- 適用於 *Dockerfile* 和 .NET Core 範例應用程式的暫存工作目錄。
+* *Dockerfile* 和 .NET Core 範例應用程式的暫存工作資料夾。 在本教學課程中，`docker-working` 名稱會作為工作資料夾使用。
 
 ### <a name="use-sdk-version-22"></a>使用 SDK 版本 2.2
 
-如果您使用較新的 SDK (例如 3.0)，請務必強制您的應用程式使用 2.2 SDK。 在您的工作目錄中建立名為 `global.json` 的檔案，並貼上下列 json 程式碼：
+如果您使用較新的 SDK (例如 3.0)，請務必強制您的應用程式使用 2.2 SDK。 在您的工作資料夾中建立名為 `global.json` 的檔案，並貼到下列 json 程式碼：
 
 ```json
 {
@@ -48,17 +48,34 @@ ms.locfileid: "66051807"
 }
 ```
 
-儲存此檔案。 檔案的存在將強制 .NET Core 針對從此目錄及以下目錄呼叫的任何 `dotnet` 命令使用版本 2.2。
+儲存此檔案。 檔案的存在將強制 .NET Core 針對從此資料夾及以下資料夾呼叫的所有 `dotnet` 命令使用版本 2.2。
 
 ## <a name="create-net-core-app"></a>建立 .NET Core 應用程式
 
-您需要 Docker 容器將執行的 .NET Core 應用程式。 開啟終端機、建立工作目錄，然後進入該目錄。 在工作目錄中執行下列命令，在名為 app 的子目錄中建立新專案：
+您需要 Docker 容器將執行的 .NET Core 應用程式。 開啟您的終端機，建立工作資料夾 (如果沒有)，並進入該資料夾。 在工作資料夾中執行下列命令，在名為 app 的子目錄中建立新專案：
 
 ```console
 dotnet new console -o app -n myapp
 ```
 
-該命令會建立一個名為 *app* 的新目錄，並產生 "Hello World" 應用程式。 您可以測試此應用程式以查看其用途。 進入 *app* 目錄，然後執行 `dotnet run` 命令。 您將會看到下列輸出：
+您的資料夾樹狀目錄會如下所示：
+
+```console
+docker-working
+│   global.json
+│
+└───app
+    │   myapp.csproj
+    │   Program.cs
+    │
+    └───obj
+            myapp.csproj.nuget.cache
+            myapp.csproj.nuget.g.props
+            myapp.csproj.nuget.g.targets
+            project.assets.json
+```
+
+`dotnet new` 命令會建立名為 *app* 的新資料夾，並產生 "Hello World" 應用程式。 請進入 *app* 資料夾，然後執行命令 `dotnet run`。 您將會看到下列輸出：
 
 ```console
 > dotnet run
@@ -120,25 +137,25 @@ Counter: 4
 如果您在命令列上傳遞一個數字給應用程式，它將只會計算到該數量，然後結束。 搭配 `dotnet run -- 5` 試用它以計算到五。
 
 > [!NOTE]
-> 任何在 `--` 之後的參數都會傳遞至您的應用程式。
+> `--` 之後的任何參數都不會傳遞至 `dotnet run` 命令，而會改為傳遞至您的應用程式。
 
 ## <a name="publish-net-core-app"></a>發佈 .NET Core 應用程式
 
-將 .NET Core 應用程式新增至 Docker 映像之前，請先發佈它。 容器將在啟動時執行已發佈的應用程式版本。
+將 .NET Core 應用程式新增至 Docker 映像之前，請先發佈它。 建議您確定容器啟動時，會執行已發佈的應用程式版本。
 
-從工作目錄中，進入含有範例原始程式碼的 **app** 目錄，然後執行下列命令：
+從工作資料夾中，進入含有範例原始程式碼的 **app** 資料夾，然後執行下列命令：
 
 ```console
 dotnet publish -c Release
 ```
 
-此命令會將應用程式編譯至應用程式輸出資料夾中的 **publish** 資料夾。 從工作目錄通往 **publish** 資料夾的路徑應該是 `.\app\bin\Release\netcoreapp2.2\publish\`
+此命令會將您的應用程式編譯至 **publish** 資料夾。 從工作資料夾通往 **publish** 資料夾的路徑應該是 `.\app\bin\Release\netcoreapp2.2\publish\`
 
-取得 publish 資料夾的目錄清單，以確認 **myapp.dll** 已建立。 從 **app** 目錄中，執行下列其中一個命令：
+取得 publish 資料夾的目錄清單，以確認 **myapp.dll** 已建立。 從 **app** 資料夾中，執行下列其中一個命令：
 
 ```console
 > dir bin\Release\netcoreapp2.2\publish
- Directory of C:\path-to-working-dir\app\bin\Release\netcoreapp2.2\publish
+ Directory of C:\docker-working\app\bin\Release\netcoreapp2.2\publish
 
 04/05/2019  11:00 AM    <DIR>          .
 04/05/2019  11:00 AM    <DIR>          ..
@@ -149,23 +166,46 @@ dotnet publish -c Release
 ```
 
 ```bash
-me@DESKTOP:/path-to-working-dir/app$ ls bin/Release/netcoreapp2.2/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp2.2/publish
 myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 ```
 
-在終端機中，將目錄往上切換到工作目錄。
-
 ## <a name="create-the-dockerfile"></a>建立 Dockerfile
 
-`docker build` 命令會使用 *Dockerfile* 檔案來建立容器映像。 此檔案是名為 *Dockerfile* 且沒有副檔名的純文字檔案。 在工作目錄中建立名為 *Dockerfile* 的檔案，然後在文字編輯器中開啟它。 將下列命令新增為檔案的第一行：
+`docker build` 命令會使用 *Dockerfile* 檔案來建立容器映像。 此檔案是名為 *Dockerfile* 且沒有副檔名的純文字檔案。
+
+在您的終端機中，瀏覽至您一開始時建立的工作資料夾目錄。 在工作資料夾中建立名為 *Dockerfile* 的檔案，然後在文字編輯器中開啟它。 將下列命令新增為檔案的第一行：
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ```
 
 `FROM` 命令會指示 Docker 從 **mcr.microsoft.com/dotnet/core/runtime** 存放庫提取標記為 **2.2** 的映像。 確定您所提取的 .NET Core 執行階段符合您 SDK 以其為目標的執行階段。 例如，上一節中所建立的應用程式會使用 .NET Core 2.2 SDK，並建立目標為 .NET Core 2.2 的應用程式。 因此，*Dockerfile* 中所參考的基底映像會以 **2.2** 來標記。
 
-儲存檔案。 從終端機中執行 `docker build -t myimage .`，而 Docker 將會處理 *Dockerfile* 中的每一行。 `docker build` 命令中的 `.` 會指示 Docker 使用目前的目錄來尋找 *Dockerfile*。 此命令會建置映像，並建立名為 **myimage** 的本機存放庫以指向該映像。 當此命令完成之後，執行 `docker images` 以查看已安裝的映像清單：
+儲存 *Dockerfile* 檔案。 工作資料夾的目錄結構應如下所示。 部分更下層的檔案和資料夾已省略，以節省文章空間：
+
+```console
+docker-working
+│   Dockerfile
+│   global.json
+│
+└───app
+    │   myapp.csproj
+    │   Program.cs
+    │
+    ├───bin
+    │   └───Release
+    │       └───netcoreapp2.2
+    │           └───publish
+    │                   myapp.deps.json
+    │                   myapp.dll
+    │                   myapp.pdb
+    │                   myapp.runtimeconfig.json
+    │
+    └───obj
+```
+
+從終端機中執行 `docker build -t myimage -f Dockerfile .`，而 Docker 將會處理 *Dockerfile* 中的每一行。 `docker build` 命令中的 `.` 會指示 Docker 使用目前的資料夾尋找 *Dockerfile*。 此命令會建置映像，並建立名為 **myimage** 的本機存放庫以指向該映像。 當此命令完成之後，執行 `docker images` 以查看已安裝的映像清單：
 
 ```console
 > docker images
@@ -186,10 +226,10 @@ ENTRYPOINT ["dotnet", "app/myapp.dll"]
 
 下一個命令 `ENTRYPOINT` 會指示 Docker，將容器設定為以可執行檔執行。 當容器啟動時，`ENTRYPOINT` 命令就會執行。 當此命令結束時，容器將會自動停止。
 
-儲存檔案。 從終端機中執行 `docker build -t myimage .`，並在該命令完成時，執行 `docker images`。
+從終端機中執行 `docker build -t myimage -f Dockerfile .`，並在該命令完成時，執行 `docker images`。
 
 ```console
-> docker build -t myimage .
+> docker build -t myimage -f Dockerfile .
 Sending build context to Docker daemon  819.7kB
 Step 1/3 : FROM mcr.microsoft.com/dotnet/core/runtime:2.2
  ---> d51bb4452469
@@ -220,7 +260,7 @@ mcr.microsoft.com/dotnet/core/runtime   2.2                 d51bb4452469        
 0e8f3c2ca32ce773712a5cca38750f41259a4e54e04bdf0946087e230ad7066c
 ```
 
-上述的 `docker create` 命令將根據 **myimage** 映像建立容器。 該命令的輸出會顯示已建立容器的**容器識別碼** (您的映像識別碼將會不同)。 若要查看「所有」容器的清單，請使用 `docker ps -a` 命令：
+上述的 `docker create` 命令將根據 **myimage** 映像建立容器。 該命令的輸出會顯示已建立容器的**容器識別碼** (您的映像識別碼將會不同)。 若要查看「所有」  容器的清單，請使用 `docker ps -a` 命令：
 
 ```console
 > docker ps -a
@@ -255,7 +295,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### <a name="connect-to-a-container"></a>連線到容器
 
-當容器正在執行之後，您可以連線到它以查看輸出。 使用 `docker start` 和 `docker attach` 命令來啟動容器，並查看輸出資料流。 在此範例中，會使用 <kbd>CTRL + C</kbd> 命令來將執行中的容器中斷連結。 這實際上可能會結束容器中的程序，其將會停止容器。 `--sig-proxy=false` 參數可確保 <kbd>CTRL + C</kbd> 將不會停止容器中的流程。
+當容器正在執行之後，您可以連線到它以查看輸出。 使用 `docker start` 和 `docker attach` 命令來啟動容器，並查看輸出資料流。 在此範例中，會使用 <kbd>CTRL + C</kbd> 命令來將執行中的容器中斷連結。 這實際上可能會結束容器中的程序，其將會停止容器。 `--sig-proxy=false` 參數可確保 <kbd>CTRL + C</kbd> 不會停止容器中的流程。
 
 當您從容器中斷連結之後，請重新連結以確認它仍在執行且正在進行計算。
 
@@ -324,7 +364,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 `docker run` 命令也可讓您從 *Dockerfile* 修改 `ENTRYPOINT` 命令並執行其他動作，但只適用於該容器。 例如，使用下列命令來執行 `bash` 或 `cmd.exe`。 視需要編輯命令。
 
 #### <a name="windows"></a>Windows
-在此範例中，會將 `ENTRYPOINT` 變更為 `cmd.exe`。 按下 <kbd>CTRL + C</kbd> 以結束程序並停止容器。
+在此範例中，`ENTRYPOINT` 會變更為 `cmd.exe`。 按下 <kbd>CTRL + C</kbd> 以結束程序並停止容器。
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -351,7 +391,7 @@ C:\>^C
 
 #### <a name="linux"></a>Linux
 
-在此範例中，會將 `ENTRYPOINT` 變更為 `bash`。 執行 `quit` 命令以結束程序並停止容器。
+在此範例中，`ENTRYPOINT` 會變更為 `bash`。 執行 `quit` 命令以結束程序並停止容器。
 
 ```bash
 root@user:~# docker run -it --rm --entrypoint "bash" myimage

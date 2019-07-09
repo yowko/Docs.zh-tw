@@ -1,20 +1,18 @@
 ---
 title: 選取要使用的 .NET Core 版本
 description: 了解 .NET Core 如何自動為您的程式尋找及選擇執行階段版本。 此外，本文還會教導您如何強制使用特定版本。
-author: billwagner
-ms.author: wiwagn
-ms.date: 06/27/2018
+author: thraka
+ms.author: adegeo
+ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127234"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539309"
 ---
 # <a name="select-the-net-core-version-to-use"></a>選取要使用的 .NET Core 版本
-
-[!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
 本文說明 .NET Core 工具、SDK 和執行階段用於選取版本的原則。 這些原則在執行使用指定版本的應用程式，以及輕鬆升級開發人員和終端使用者電腦之間提供平衡。 這些原則執行下列動作：
 
@@ -87,19 +85,20 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 如果找不到可接受的 `2.0.*` 版本，則會使用新的 `2.*` 版本。 例如，如果您指定 `netcoreapp2.0` 並只安裝 `2.1.0`，應用程式會使用 `2.1.0` 執行階段來執行。 此行為稱為「次要版本向前復原」。 也不會考慮舊版。 若未安裝可接受的執行階段，應用程式將不會執行。
 
-以下是示範此行為的幾個使用方式範例：
+若您以 2.0 作為目標，下列使用方式範例會表現出此行為：
 
-- 需要 2.0.4。 2.0.5 是安裝的最高修補程式版本。 使用 2.0.5。
-- 需要 2.0.4。 未安裝 2.0.* 版本。 1.1.1 是安裝的最高執行階段版本。 顯示錯誤訊息。
-- 需要 2.0.4。 2.0.0 是安裝的最高版本。 顯示錯誤訊息。
-- 需要 2.0.4。 未安裝 2.0.* 版本。 2.2.2 是安裝的最高 2.x 執行階段版本。 使用 2.2.2。
-- 需要 2.0.4。 未安裝 2.x 版本。 已安裝 3.0.0 (不是目前可用的版本)。 顯示錯誤訊息。
+- 已指定 2.0。 2.0.5 是安裝的最高修補程式版本。 使用 2.0.5。
+- 已指定 2.0。 未安裝 2.0.* 版本。 1.1.1 是安裝的最高執行階段版本。 顯示錯誤訊息。
+- 已指定 2.0。 未安裝 2.0.* 版本。 2.2.2 是安裝的最高 2.x 執行階段版本。 使用 2.2.2。
+- 已指定 2.0。 未安裝 2.x 版本。 而是安裝了 3.0.0。 顯示錯誤訊息。
 
 次要版本向前復原有一個可能會影響終端使用者的副作用。 請考慮下列案例：
 
-- 需要 2.0.4。 未安裝 2.0.* 版本。 已安裝 2.2.2。 使用 2.2.2。
-- 稍後將安裝 2.0.5。 2.0.5 將用於後續應用程式啟動，而不是 2.2.2。 建議使用所需次要版本而不是更高次要版本的最新修補程式。
-- 2.0.5 和 2.2.2 的行為可能不同，特別是針對序列化二進位資料等案例。
+1. 應用程式指定 2.0 為必要項目。
+2. 執行時，未安裝 2.0.* 版，但已安裝 2.2.2。 則會使用 2.2.2 版。
+3. 稍後，使用者會安裝 2.0.5 並再次執行應用程式，則現在會使用 2.0.5。
+
+2\.0.5 和 2.2.2 的行為可能不同，特別是針對序列化二進位資料等案例。
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>獨立部署包含選取的執行階段
 
@@ -115,4 +114,4 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 <RuntimeFrameworkVersion>2.0.4</RuntimeFrameworkVersion>
 ```
 
-`RuntimeFrameworkVersion` 項目會覆寫預設版本原則。 針對獨立部署，`RuntimeFrameworkVersion` 會指定「確切」的執行階段架構版本。 針對架構相依應用程式，`RuntimeFrameworkVersion` 會指定所需的「最低」執行階段架構版本。
+`RuntimeFrameworkVersion` 項目會覆寫預設版本原則。 針對獨立部署，`RuntimeFrameworkVersion` 會指定「確切」  的執行階段架構版本。 針對架構相依應用程式，`RuntimeFrameworkVersion` 會指定所需的「最低」  執行階段架構版本。

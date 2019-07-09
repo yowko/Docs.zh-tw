@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: b6f7450b4f682ea5ac69fd1bab434b27451e58df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586060"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610543"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
 SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 元件產生程式碼及對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
@@ -49,7 +49,7 @@ sqlmetal [options] [<input file>]
 |**/database:** *\<名稱>*|指定伺服器上的資料庫目錄。|  
 |**/user:** *\<名稱>*|指定登入使用者識別碼。預設值：使用 Windows 驗證。|  
 |**/password:** *\<密碼>*|指定登入密碼。 預設值：使用 Windows 驗證。|  
-|**/conn:** *\<連接字串>*|指定資料庫連接字串。 不可配合 **/server**、 **/database**、 **/user**或 **/password** 選項使用。<br /><br /> 不要在連接字串中包含檔案名稱。 而是在命令列中加入檔名來做為輸入檔案。 例如，下行指定 "c:\northwnd.mdf" 作為輸入檔案： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**。|  
+|**/conn:** *\<連接字串>*|指定資料庫連接字串。 不可配合 **/server**、 **/database**、 **/user**或 **/password** 選項使用。<br /><br /> 不要在連接字串中包含檔案名稱。 而是在命令列中加入檔名來做為輸入檔案。 例如，下行指定 "c:\northwnd.mdf" 作為輸入檔案： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** 。|  
 |**/timeout:** *\<秒>*|指定 SqlMetal 存取資料庫時的逾時值。 預設值：0 (也就是沒有時間限制)。|  
   
  **擷取選項**  
@@ -72,18 +72,18 @@ sqlmetal [options] [<input file>]
   
 |選項|說明|  
 |------------|-----------------|  
-|**/language:** *\<語言>*|指定原始程式碼語言。<br /><br /> 有效的 *\<語言>*：vb、csharp。<br /><br /> 預設值：衍生自程式碼檔案名稱的副檔名。|  
+|**/language:** *\<語言>*|指定原始程式碼語言。<br /><br /> 有效的 *\<語言>* ：vb、csharp。<br /><br /> 預設值：衍生自程式碼檔案名稱的副檔名。|  
 |**/namespace:** *\<名稱>*|指定所產生程式碼的命名空間。 預設值：沒有命名空間。|  
 |**/context:** *\<類型>*|指定資料庫內容類別的名稱。 預設值：衍生自資料庫名稱。|  
 |**/entitybase:** *\<類型>*|指定所產生程式碼中實體類別的基底類別。 預設值：實體沒有基底類別。|  
 |**/pluralize**|自動複數化或單數化類別和成員名稱。<br /><br /> 這個選項功能僅適用於美國英文版本。|  
-|**/serialization:** *\<選項>*|產生可序列化的類別。<br /><br /> 有效的 *\<選項 >*：無、單向。 預設值：無。<br /><br /> 如需詳細資訊，請參閱[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
+|**/serialization:** *\<選項>*|產生可序列化的類別。<br /><br /> 有效的 *\<選項 >* ：無、單向。 預設值：無。<br /><br /> 如需詳細資訊，請參閱[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
   
  **輸入檔案**  
   
 |選項|說明|  
 |------------|-----------------|  
-|**\<輸入檔>**|指定 SQL Server Express .mdf 檔、 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf 檔或是 .dbml 中繼檔。|  
+|**\<輸入檔>**|指定 SQL Server Express .mdf 檔、SQL Server Compact 3.5 .sdf 檔或 .dbml 中繼檔。|  
   
 ## <a name="remarks"></a>備註  
  SqlMetal 功能實際上包含兩個步驟：  
@@ -98,7 +98,7 @@ sqlmetal [options] [<input file>]
   
  如果沒有指定 **/server** ，則會假設為 **localhost/sqlexpress** 。  
   
- 如果下列其中一個或多個條件為真，則[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] 會擲回例外狀況：  
+ 如果下列其中一或多個條件為真，Microsoft SQL Server 2005 會擲回例外狀況：  
   
 - SqlMetal 嘗試擷取呼叫本身的預存程序。  
   

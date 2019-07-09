@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116252"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610058"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -82,7 +82,7 @@ class CS0663_Example
 public ref decimal GetCurrentPrice()
 ```
 
-- `return` 權杖與方法之 `return` 陳述式中所傳回變數之間。 例如: 
+- `return` 權杖與方法之 `return` 陳述式中所傳回變數之間。 例如:
 
 ```csharp
 return ref DecimalArray[0];
@@ -137,8 +137,8 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
 希望將類型 `ref struct` 保留為配置有堆疊的變數之目標，會讓編譯器強制對所有 `ref struct` 類型進行數項規則。
 
 - 您無法分隔 `ref struct`。 您不可為類型是 `object`、`dynamic` 或任何介面類型的變數，指派 `ref struct` 類型。
-- `ref struct` 類型無法實作介面。
-- 您不可將 `ref struct` 宣告為類別或一般結構的成員。
+- `ref struct` 型別無法實作介面。
+- 您不可將 `ref struct` 宣告為類別或一般結構的欄位成員。 這包括宣告自動實作屬性，其會建立編譯器產生的支援欄位。 
 - 您不可在非同步方法中宣告類型為 `ref struct` 的區域變數。 但可以在傳回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `Task` 之類型別的同步方法中，宣告這些區域變數。
 - 您不可在迭代器中宣告 `ref struct` 區域變數。
 - 您不可在 Lambda 運算式或區域函式中擷取 `ref struct` 變數。
@@ -160,5 +160,5 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
 - [傳遞參數](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [方法參數](method-parameters.md)
 - [C# 參考](../index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)

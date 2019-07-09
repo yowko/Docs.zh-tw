@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d328f8e73824a4773c6e10f506f3021d3c88d085
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378048"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609644"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>存取修飾詞 (C# 程式設計手冊)
 所有類型和類型成員都具有存取範圍層級，以控制是否可以從組件中的其他程式碼或其他組件中使用它們。 您可以使用下列存取修飾詞，以在宣告類型或成員時指定其存取範圍：  
@@ -53,7 +53,7 @@ ms.locfileid: "57378048"
   
  為欄位、屬性或事件之任何成員的類型必須至少與成員本身一樣可進行存取。 同樣地，傳回型別以及本身為方法、索引子或委派之任何成員的參數類型都必須至少像該成員本身一樣可供存取。 例如，除非 `C` 也是公用的，否則您無法有傳回 `C` 類別的公用方法 `M`。 同樣地，如果將 `A` 宣告為 private，則您不能有 `A` 類型的 protected 屬性。  
   
- 使用者定義的運算子一律必須宣告為 public。 如需詳細資訊，請參閱 [operator (C# 參考)](../../../csharp/language-reference/keywords/operator.md)。  
+ 使用者定義的運算子必須一律宣告為 public 和 static。 如需詳細資訊，請參閱[運算子多載](../../../csharp/language-reference/operators/operator-overloading.md)。  
   
  完成項不能有存取範圍修飾詞。  
   

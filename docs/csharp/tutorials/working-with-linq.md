@@ -3,12 +3,12 @@ title: 處理 LINQ
 description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486993"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609314"
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -268,6 +268,14 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
+您會在 `File` 下看到紅色波浪線，表示它不存在。 它不會編譯，原因是編譯器不知道 `File` 是什麼。 若要解決這個問題，請務必將下列這一行程式碼新增至 `Extensions.cs` 的第一行下：
+
+```csharp
+using System.IO;
+```
+
+這應可解決此問題，讓紅色的錯誤消失。
+
 接下來，使用記錄訊息檢測每個查詢的定義：
 
 ```csharp
@@ -345,4 +353,3 @@ public static void Main(string[] args)
   - [使用 LINQ 轉換資料 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
   - [LINQ 中的查詢語法及方法語法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
   - [支援 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
-    

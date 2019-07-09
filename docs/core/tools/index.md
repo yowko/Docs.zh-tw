@@ -3,12 +3,12 @@ title: .NET Core 命令列介面 (Command-Line Interface, CLI) 工具
 description: .NET Core 命令列介面 (CLI) 工具與功能概觀。
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647420"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569522"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 
@@ -99,7 +99,7 @@ CLI 採用擴充性模型，可讓您為專案指定額外工具。 如需詳細
 
 ## <a name="command-structure"></a>命令結構
 
-CLI 命令結構包含[驅動程式 ("dotnet")](#driver)、[命令 (或「指令」)](#command-verb)，以及可能的命令[引數](#arguments)及[選項](#options)。 您可以在大部分的 CLI 作業中看到此模式，例如從名稱為 *my_app* 的目錄執行以下命令，以建立新的主控台應用程式並從命令列執行它：
+CLI 命令結構包含[驅動程式 ("dotnet")](#driver)、[命令](#command)，以及可能的命令[引數](#arguments)及[選項](#options)。 您可以在大部分的 CLI 作業中看到此模式，例如從名稱為 *my_app* 的目錄執行以下命令，以建立新的主控台應用程式並從命令列執行它：
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -134,9 +134,9 @@ dotnet /build_output/my_app.dll
 
 首先，驅動器會決定要使用的 SDK 版本。 若沒有 ['global.json'](global-json.md)，將會使用最新可用版本的 SDK。 這可能是預覽版或穩定的版本，視兩者中何者版本最新。  確定 SDK 版本之後，就會開始執行命令。
 
-### <a name="command-verb"></a>命令 (「動詞」)
+### <a name="command"></a>命令
 
-命令 (或「動詞」) 只是執行動作的命令。 例如，`dotnet build` 會建置程式碼。 `dotnet publish` 會發行程式碼。 命令是使用 `dotnet {verb}` 慣例實作為主控台應用程式。
+此命令會執行動作。 例如，`dotnet build` 會建置程式碼。 `dotnet publish` 會發佈程式碼。 命令是使用 `dotnet {command}` 慣例實作為主控台應用程式。
 
 ### <a name="arguments"></a>引數
 
@@ -148,7 +148,7 @@ dotnet /build_output/my_app.dll
 
 ## <a name="migration-from-projectjson"></a>從 project.json 移轉
 
-如果您使用 Preview 2 工具來產生 *project.json* 型專案，請參閱 [dotnet migrate](dotnet-migrate.md) 主題，來取得移轉專案至 MSBuild/*.csproj* 以搭配發行工具使用的詳細資訊。 對於在 Preview 2 工具發行之前建立的 .NET Core 專案，請依照[從 DNX 移轉到 .NET Core CLI (project.json)](../migration/from-dnx.md) 中的指導，手動更新專案，然後再使用 `dotnet migrate` 或直接升級您的專案。
+如果您使用 Preview 2 工具來產生 *project.json* 型專案，請參閱 [dotnet migrate](dotnet-migrate.md) 主題，來取得移轉專案至 MSBuild/ *.csproj* 以搭配發行工具使用的詳細資訊。 對於在 Preview 2 工具發行之前建立的 .NET Core 專案，請依照[從 DNX 移轉到 .NET Core CLI (project.json)](../migration/from-dnx.md) 中的指導，手動更新專案，然後再使用 `dotnet migrate` 或直接升級您的專案。
 
 ## <a name="see-also"></a>另請參閱
 

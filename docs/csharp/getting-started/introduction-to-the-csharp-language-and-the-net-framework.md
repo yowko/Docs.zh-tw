@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585935"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504028"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 
@@ -28,7 +28,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  除了這些基本物件導向準則，C# 可讓您透過許多創新的語言建構，輕鬆地開發軟體元件，包括下列各項︰  
   
-- 稱為「委派」的封裝方法簽章，可啟用型別安全事件通知。  
+- 稱為「委派」  的封裝方法簽章，可啟用型別安全事件通知。  
   
 - 屬性，可做為私用成員變數的存取子。  
   
@@ -54,7 +54,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
 
  C# 程式在 .NET Framework 上執行，其為 Windows 不可或缺的元件，包括稱為通用語言執行平台 (CLR) 的虛擬執行系統和一組已整合類別庫。 CLR 是由 Microsoft 通用語言基礎結構 (CLI) 的商業實作，此國際標準是建立各種語言和程式庫都能一起順暢執行和開發環境的基礎。  
   
- 以 C# 撰寫的原始程式碼會編譯成符合 CLI 規格的中繼語言 (IL) 。 IL 程式碼和像是點陣圖和字串的資源，會以稱為組件的可執行檔儲存在磁碟上，副檔名通常為 .exe 或 .dll。 組件包含的資訊清單提供有關組件的型別、版本、文化特性及安全性需求資訊。  
+ 以 C# 撰寫的原始程式碼會編譯成符合 CLI 規格的[中繼語言 (IL)](../../standard/managed-code.md)。 IL 程式碼和像是點陣圖和字串的資源，會以稱為組件的可執行檔儲存在磁碟上，副檔名通常為 .exe 或 .dll。 組件包含的資訊清單提供有關組件的型別、版本、文化特性及安全性需求資訊。  
   
  C# 程式執行時，組件會載入至 CLR，根據資訊清單中的資訊執行各種不同動作。 然後，如果符合安全性需求，CLR 就會執行 Just-In-Time (JIT) 編譯以將 IL 程式碼轉換成原生機器指令。 CLR 也提供有關自動記憶體回收、例外狀況處理和資源管理的其他服務。 由 CLR 執行的程式碼有時稱為「Managed 程式碼 」，相對於會以特定系統為目標編譯成原生機器語言的「Unmanaged 程式碼 」。 下圖說明 C# 原始程式碼檔、.NET Framework 類別庫、組件及 CLR 的編譯時期和執行階段關聯性。  
   
