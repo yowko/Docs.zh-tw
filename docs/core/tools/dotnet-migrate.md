@@ -1,105 +1,112 @@
 ---
 title: dotnet migrate 命令
 description: dotnet migrate 命令會移轉專案及其所有相依性。
-ms.date: 05/25/2018
-ms.openlocfilehash: 861cd2cb982c6f41baf00a2cbd7e04b26816af76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 3304f666d15d9188cdae76a401747d91791f817f
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631955"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539391"
 ---
-# <a name="dotnet-migrate"></a><span data-ttu-id="42088-103">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="42088-103">dotnet migrate</span></span>
+# <a name="dotnet-migrate"></a><span data-ttu-id="bf3f5-103">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="bf3f5-103">dotnet migrate</span></span>
 
+<span data-ttu-id="bf3f5-104">**本主題適用於：✓** .NET Core 1.x SDK 和更新版本</span><span class="sxs-lookup"><span data-stu-id="bf3f5-104">**This topic applies to: ✓** .NET Core 1.x SDK and later versions</span></span>
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
-## <a name="name"></a><span data-ttu-id="42088-104">名稱</span><span class="sxs-lookup"><span data-stu-id="42088-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="bf3f5-105">名稱</span><span class="sxs-lookup"><span data-stu-id="bf3f5-105">Name</span></span>
 
-<span data-ttu-id="42088-105">`dotnet migrate` - 將 Preview 2 .NET Core 專案移轉至 .NET Core SDK 1.0 專案。</span><span class="sxs-lookup"><span data-stu-id="42088-105">`dotnet migrate` - Migrates a Preview 2 .NET Core project to a .NET Core SDK 1.0 project.</span></span>
+<span data-ttu-id="bf3f5-106">`dotnet migrate` - 將 Preview 2 .NET Core 專案移轉至 .NET Core SDK 型專案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-106">`dotnet migrate` - Migrates a Preview 2 .NET Core project to a .NET Core SDK-style project.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="42088-106">概要</span><span class="sxs-lookup"><span data-stu-id="42088-106">Synopsis</span></span>
+> [!NOTE]
+> <span data-ttu-id="bf3f5-107">在下一個預覽版本中，`dotnet migrate` 會從 .NET Core 3.0 SDK 中移除。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-107">`dotnet migrate` will be removed from the .NET Core 3.0 SDK in the next preview release.</span></span>
+
+## <a name="synopsis"></a><span data-ttu-id="bf3f5-108">概要</span><span class="sxs-lookup"><span data-stu-id="bf3f5-108">Synopsis</span></span>
 
 ```
 dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
 dotnet migrate [-h|--help]
 ```
 
-## <a name="description"></a><span data-ttu-id="42088-107">說明</span><span class="sxs-lookup"><span data-stu-id="42088-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="bf3f5-109">說明</span><span class="sxs-lookup"><span data-stu-id="bf3f5-109">Description</span></span>
 
-<span data-ttu-id="42088-108">`dotnet migrate` 命令會將有效的 Preview 2 *project.json* 型專案移轉至有效的 .NET Core SDK 1.0 *csproj* 專案。</span><span class="sxs-lookup"><span data-stu-id="42088-108">The `dotnet migrate` command migrates a valid Preview 2 *project.json*-based project to a valid .NET Core SDK 1.0 *csproj* project.</span></span>
+<span data-ttu-id="bf3f5-110">`dotnet migrate` 命令會將有效的 Preview 2 *project.json* 型專案移轉至有效的 .NET Core SDK 型 *csproj* 專案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-110">The `dotnet migrate` command migrates a valid Preview 2 *project.json*-based project to a valid .NET Core SDK-style *csproj* project.</span></span>
 
-<span data-ttu-id="42088-109">根據預設，命令會移轉根專案和根專案包含的任何專案參考。</span><span class="sxs-lookup"><span data-stu-id="42088-109">By default, the command migrates the root project and any project references that the root project contains.</span></span> <span data-ttu-id="42088-110">可以在執行階段使用 `--skip-project-references` 選項停用此行為。</span><span class="sxs-lookup"><span data-stu-id="42088-110">This behavior is disabled using the `--skip-project-references` option at runtime.</span></span>
+<span data-ttu-id="bf3f5-111">根據預設，命令會移轉根專案和根專案包含的任何專案參考。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-111">By default, the command migrates the root project and any project references that the root project contains.</span></span> <span data-ttu-id="bf3f5-112">可以在執行階段使用 `--skip-project-references` 選項停用此行為。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-112">This behavior is disabled using the `--skip-project-references` option at runtime.</span></span>
 
-<span data-ttu-id="42088-111">可針對下列資產進行移轉：</span><span class="sxs-lookup"><span data-stu-id="42088-111">Migration can be performed on the following assets:</span></span>
+<span data-ttu-id="bf3f5-113">可針對下列資產進行移轉：</span><span class="sxs-lookup"><span data-stu-id="bf3f5-113">Migration can be performed on the following assets:</span></span>
 
-* <span data-ttu-id="42088-112">指定要移轉之 *project.json* 檔案的單一專案。</span><span class="sxs-lookup"><span data-stu-id="42088-112">A single project by specifying the *project.json* file to migrate.</span></span>
-* <span data-ttu-id="42088-113">於 *global.json* 檔案中指定的所有目錄，方法是傳遞 *global.json* 檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="42088-113">All of the directories specified in the *global.json* file by passing in a path to the *global.json* file.</span></span>
-* <span data-ttu-id="42088-114">*solution.sln* 檔案，移轉方案參考的專案。</span><span class="sxs-lookup"><span data-stu-id="42088-114">A *solution.sln* file, where it migrates the projects referenced in the solution.</span></span>
-* <span data-ttu-id="42088-115">指定之目錄的所有子目錄，以遞迴方式進行。</span><span class="sxs-lookup"><span data-stu-id="42088-115">On all subdirectories of the given directory recursively.</span></span>
+* <span data-ttu-id="bf3f5-114">指定要移轉之 *project.json* 檔案的單一專案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-114">A single project by specifying the *project.json* file to migrate.</span></span>
+* <span data-ttu-id="bf3f5-115">於 *global.json* 檔案中指定的所有目錄，方法是傳遞 *global.json* 檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-115">All of the directories specified in the *global.json* file by passing in a path to the *global.json* file.</span></span>
+* <span data-ttu-id="bf3f5-116">*solution.sln* 檔案，移轉方案參考的專案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-116">A *solution.sln* file, where it migrates the projects referenced in the solution.</span></span>
+* <span data-ttu-id="bf3f5-117">指定之目錄的所有子目錄，以遞迴方式進行。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-117">On all subdirectories of the given directory recursively.</span></span>
 
-<span data-ttu-id="42088-116">`dotnet migrate` 命令會在 `backup` 目錄 (若目錄不存在則會建立) 中保留移轉的 *project.json* 檔案。</span><span class="sxs-lookup"><span data-stu-id="42088-116">The `dotnet migrate` command keeps the migrated *project.json* file inside a `backup` directory, which it creates if the directory doesn't exist.</span></span> <span data-ttu-id="42088-117">使用 `--skip-backup` 選項會覆寫此行為。</span><span class="sxs-lookup"><span data-stu-id="42088-117">This behavior is overridden using the `--skip-backup` option.</span></span>
+<span data-ttu-id="bf3f5-118">`dotnet migrate` 命令會在 `backup` 目錄 (若目錄不存在則會建立) 中保留移轉的 *project.json* 檔案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-118">The `dotnet migrate` command keeps the migrated *project.json* file inside a `backup` directory, which it creates if the directory doesn't exist.</span></span> <span data-ttu-id="bf3f5-119">使用 `--skip-backup` 選項會覆寫此行為。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-119">This behavior is overridden using the `--skip-backup` option.</span></span>
 
-<span data-ttu-id="42088-118">根據預設，移轉作業會將移轉程序的狀態輸出到標準輸出 (STDOUT)。</span><span class="sxs-lookup"><span data-stu-id="42088-118">By default, the migration operation outputs the state of the migration process to standard output (STDOUT).</span></span> <span data-ttu-id="42088-119">如果使用 `--report-file <REPORT_FILE>` 選項，則輸出會儲存到指定的檔案。</span><span class="sxs-lookup"><span data-stu-id="42088-119">If you use the `--report-file <REPORT_FILE>` option, the output is saved to the file specify.</span></span>
+<span data-ttu-id="bf3f5-120">根據預設，移轉作業會將移轉程序的狀態輸出到標準輸出 (STDOUT)。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-120">By default, the migration operation outputs the state of the migration process to standard output (STDOUT).</span></span> <span data-ttu-id="bf3f5-121">如果使用 `--report-file <REPORT_FILE>` 選項，則輸出會儲存到指定的檔案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-121">If you use the `--report-file <REPORT_FILE>` option, the output is saved to the file specify.</span></span>
 
-<span data-ttu-id="42088-120">`dotnet migrate` 命令只支援有效的 Preview 2 *project.json* 型專案。</span><span class="sxs-lookup"><span data-stu-id="42088-120">The `dotnet migrate` command only supports valid Preview 2 *project.json*-based projects.</span></span> <span data-ttu-id="42088-121">這表示您無法使用它將 DNX 或 Preview 1 *project.json* 型專案直接移轉到 MSBuild/csproj 專案。</span><span class="sxs-lookup"><span data-stu-id="42088-121">This means that you cannot use it to migrate DNX or Preview 1 *project.json*-based projects directly to MSBuild/csproj projects.</span></span> <span data-ttu-id="42088-122">您必須先手動將專案移轉到 Preview 2 *project.json* 型專案，然後再使用 `dotnet migrate` 命令移轉該專案。</span><span class="sxs-lookup"><span data-stu-id="42088-122">You first need to manually migrate the project to a Preview 2 *project.json*-based project and then use the `dotnet migrate` command to migrate the project.</span></span>
+<span data-ttu-id="bf3f5-122">`dotnet migrate` 命令只支援有效的 Preview 2 *project.json* 型專案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-122">The `dotnet migrate` command only supports valid Preview 2 *project.json*-based projects.</span></span> <span data-ttu-id="bf3f5-123">這表示您無法使用它將 DNX 或 Preview 1 *project.json* 型專案直接移轉到 MSBuild/csproj 專案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-123">This means that you cannot use it to migrate DNX or Preview 1 *project.json*-based projects directly to MSBuild/csproj projects.</span></span> <span data-ttu-id="bf3f5-124">您必須先手動將專案移轉到 Preview 2 *project.json* 型專案，然後再使用 `dotnet migrate` 命令移轉該專案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-124">You first need to manually migrate the project to a Preview 2 *project.json*-based project and then use the `dotnet migrate` command to migrate the project.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="42088-123">引數</span><span class="sxs-lookup"><span data-stu-id="42088-123">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="bf3f5-125">引數</span><span class="sxs-lookup"><span data-stu-id="bf3f5-125">Arguments</span></span>
 
 `PROJECT_JSON/GLOBAL_JSON/SOLUTION_FILE/PROJECT_DIR`
 
-<span data-ttu-id="42088-124">下列其中一項的路徑：</span><span class="sxs-lookup"><span data-stu-id="42088-124">The path to one of the following:</span></span>
+<span data-ttu-id="bf3f5-126">下列其中一項的路徑：</span><span class="sxs-lookup"><span data-stu-id="bf3f5-126">The path to one of the following:</span></span>
 
-* <span data-ttu-id="42088-125">要移轉的 *project.json* 檔案。</span><span class="sxs-lookup"><span data-stu-id="42088-125">a *project.json* file to migrate.</span></span>
-* <span data-ttu-id="42088-126">*global.json* 檔案：會移轉 *global.json* 中指定的資料夾。</span><span class="sxs-lookup"><span data-stu-id="42088-126">a *global.json* file: the folders specified in *global.json* are migrated.</span></span>
-* <span data-ttu-id="42088-127">*solution.sln* 檔案：會移轉方案參考的專案。</span><span class="sxs-lookup"><span data-stu-id="42088-127">a *solution.sln* file: the projects referenced in the solution are migrated.</span></span>
-* <span data-ttu-id="42088-128">要移轉的目錄：會在指定目錄內遞迴地搜尋要移轉的 *project.json* 檔案。</span><span class="sxs-lookup"><span data-stu-id="42088-128">a directory to migrate: recursively searches for *project.json* files to migrate inside the specified directory.</span></span>
+* <span data-ttu-id="bf3f5-127">要移轉的 *project.json* 檔案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-127">a *project.json* file to migrate.</span></span>
+* <span data-ttu-id="bf3f5-128">*global.json* 檔案：會移轉 *global.json* 中指定的資料夾。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-128">a *global.json* file: the folders specified in *global.json* are migrated.</span></span>
+* <span data-ttu-id="bf3f5-129">*solution.sln* 檔案：會移轉方案參考的專案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-129">a *solution.sln* file: the projects referenced in the solution are migrated.</span></span>
+* <span data-ttu-id="bf3f5-130">要移轉的目錄：會在指定目錄內遞迴地搜尋要移轉的 *project.json* 檔案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-130">a directory to migrate: recursively searches for *project.json* files to migrate inside the specified directory.</span></span>
 
-<span data-ttu-id="42088-129">如果未指定，則預設值是目前的目錄。</span><span class="sxs-lookup"><span data-stu-id="42088-129">Defaults to current directory if nothing is specified.</span></span>
+<span data-ttu-id="bf3f5-131">如果未指定，則預設值是目前的目錄。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-131">Defaults to current directory if nothing is specified.</span></span>
 
-## <a name="options"></a><span data-ttu-id="42088-130">選項</span><span class="sxs-lookup"><span data-stu-id="42088-130">Options</span></span>
+## <a name="options"></a><span data-ttu-id="bf3f5-132">選項</span><span class="sxs-lookup"><span data-stu-id="bf3f5-132">Options</span></span>
 
 `--format-report-file-json <REPORT_FILE>`
 
-<span data-ttu-id="42088-131">將移轉報告檔案輸出為 JSON，而非使用者訊息。</span><span class="sxs-lookup"><span data-stu-id="42088-131">Output migration report file as JSON rather than user messages.</span></span>
+<span data-ttu-id="bf3f5-133">將移轉報告檔案輸出為 JSON，而非使用者訊息。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-133">Output migration report file as JSON rather than user messages.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="42088-132">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="42088-132">Prints out a short help for the command.</span></span>
+<span data-ttu-id="bf3f5-134">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-134">Prints out a short help for the command.</span></span>
 
 `-r|--report-file <REPORT_FILE>`
 
-<span data-ttu-id="42088-133">除了主控台外，也將移轉報告輸出到檔案。</span><span class="sxs-lookup"><span data-stu-id="42088-133">Output migration report to a file in addition to the console.</span></span>
+<span data-ttu-id="bf3f5-135">除了主控台外，也將移轉報告輸出到檔案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-135">Output migration report to a file in addition to the console.</span></span>
 
 `-s|--skip-project-references [Debug|Release]`
 
-<span data-ttu-id="42088-134">略過移轉專案參考。</span><span class="sxs-lookup"><span data-stu-id="42088-134">Skip migrating project references.</span></span> <span data-ttu-id="42088-135">根據預設，專案參考是以遞迴方式移轉。</span><span class="sxs-lookup"><span data-stu-id="42088-135">By default, project references are migrated recursively.</span></span>
+<span data-ttu-id="bf3f5-136">略過移轉專案參考。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-136">Skip migrating project references.</span></span> <span data-ttu-id="bf3f5-137">根據預設，專案參考是以遞迴方式移轉。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-137">By default, project references are migrated recursively.</span></span>
 
 `--skip-backup`
 
-<span data-ttu-id="42088-136">成功移轉後，略過將 *project.json*、*global.json* 和 *\*.xproj* 移動至 `backup` 目錄。</span><span class="sxs-lookup"><span data-stu-id="42088-136">Skip moving *project.json*, *global.json*, and *\*.xproj* to a `backup` directory after successful migration.</span></span>
+<span data-ttu-id="bf3f5-138">成功移轉後，略過將 *project.json*、*global.json* 和 *\*.xproj* 移動至 `backup` 目錄。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-138">Skip moving *project.json*, *global.json*, and *\*.xproj* to a `backup` directory after successful migration.</span></span>
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-<span data-ttu-id="42088-137">要用於移轉的範本 csproj 檔案。</span><span class="sxs-lookup"><span data-stu-id="42088-137">Template csproj file to use for migration.</span></span> <span data-ttu-id="42088-138">根據預設，會使用 `dotnet new console` 所置放的相同範本。</span><span class="sxs-lookup"><span data-stu-id="42088-138">By default, the same template as the one dropped by `dotnet new console` is used.</span></span>
+<span data-ttu-id="bf3f5-139">要用於移轉的範本 csproj 檔案。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-139">Template csproj file to use for migration.</span></span> <span data-ttu-id="bf3f5-140">根據預設，會使用 `dotnet new console` 所置放的相同範本。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-140">By default, the same template as the one dropped by `dotnet new console` is used.</span></span>
 
 `-v|--sdk-package-version <VERSION>`
 
-<span data-ttu-id="42088-139">在已移轉之應用程式中參考的 SDK 套件版本。</span><span class="sxs-lookup"><span data-stu-id="42088-139">The version of the sdk package that's referenced in the migrated app.</span></span> <span data-ttu-id="42088-140">預設為 `dotnet new` 中的 SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="42088-140">The default is the version of the SDK in `dotnet new`.</span></span>
+<span data-ttu-id="bf3f5-141">在已移轉之應用程式中參考的 SDK 套件版本。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-141">The version of the sdk package that's referenced in the migrated app.</span></span> <span data-ttu-id="bf3f5-142">預設為 `dotnet new` 中的 SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-142">The default is the version of the SDK in `dotnet new`.</span></span>
 
 `-x|--xproj-file <FILE>`
 
-<span data-ttu-id="42088-141">要使用之 xproj 檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="42088-141">The path to the xproj file to use.</span></span> <span data-ttu-id="42088-142">當專案目錄中有多個 xproj 時為必要。</span><span class="sxs-lookup"><span data-stu-id="42088-142">Required when there is more than one xproj in a project directory.</span></span>
+<span data-ttu-id="bf3f5-143">要使用之 xproj 檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-143">The path to the xproj file to use.</span></span> <span data-ttu-id="bf3f5-144">當專案目錄中有多個 xproj 時為必要。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-144">Required when there is more than one xproj in a project directory.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="42088-143">範例</span><span class="sxs-lookup"><span data-stu-id="42088-143">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="bf3f5-145">範例</span><span class="sxs-lookup"><span data-stu-id="bf3f5-145">Examples</span></span>
 
-<span data-ttu-id="42088-144">移轉目前目錄中的專案和所有其專案對專案相依性：</span><span class="sxs-lookup"><span data-stu-id="42088-144">Migrate a project in the current directory and all of its project-to-project dependencies:</span></span>
+<span data-ttu-id="bf3f5-146">移轉目前目錄中的專案和所有其專案對專案相依性：</span><span class="sxs-lookup"><span data-stu-id="bf3f5-146">Migrate a project in the current directory and all of its project-to-project dependencies:</span></span>
 
 `dotnet migrate`
 
-<span data-ttu-id="42088-145">移轉 *global.json* 檔案包含的所有專案：</span><span class="sxs-lookup"><span data-stu-id="42088-145">Migrate all projects that *global.json* file includes:</span></span>
+<span data-ttu-id="bf3f5-147">移轉 *global.json* 檔案包含的所有專案：</span><span class="sxs-lookup"><span data-stu-id="bf3f5-147">Migrate all projects that *global.json* file includes:</span></span>
 
 `dotnet migrate path/to/global.json`
 
-<span data-ttu-id="42088-146">只移轉目前的專案而不移轉專案對專案 (P2P) 相依性。</span><span class="sxs-lookup"><span data-stu-id="42088-146">Migrate only the current project and no project-to-project (P2P) dependencies.</span></span> <span data-ttu-id="42088-147">此外，使用特定的 SDK 版本：</span><span class="sxs-lookup"><span data-stu-id="42088-147">Also, use a specific SDK version:</span></span>
+<span data-ttu-id="bf3f5-148">只移轉目前的專案而不移轉專案對專案 (P2P) 相依性。</span><span class="sxs-lookup"><span data-stu-id="bf3f5-148">Migrate only the current project and no project-to-project (P2P) dependencies.</span></span> <span data-ttu-id="bf3f5-149">此外，使用特定的 SDK 版本：</span><span class="sxs-lookup"><span data-stu-id="bf3f5-149">Also, use a specific SDK version:</span></span>
 
 `dotnet migrate -s -v 1.0.0-preview4`
