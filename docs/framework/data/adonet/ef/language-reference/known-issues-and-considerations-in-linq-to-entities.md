@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539829"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662142"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知問題和考量
 本節提供使用 LINQ to Entities 查詢的已知問題的相關資訊。  
@@ -35,7 +35,7 @@ ms.locfileid: "67539829"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>排序資訊遺失  
- 在針對相容性層級設定為 "80" 的 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 資料庫執行的某些查詢中，將資料行投影到匿名型別將會造成排序資訊遺失。  如果 order-by 清單中的資料行名稱與 selector 中的資料行名稱相符，就會發生這種情況，如以下範例所示：  
+ 將資料行投影至匿名型別，將會造成排序資訊遺失的都針對 SQL Server 2005 資料庫設定為"80"的相容性層級執行某些查詢中。  如果 order-by 清單中的資料行名稱與 selector 中的資料行名稱相符，就會發生這種情況，如以下範例所示：  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  

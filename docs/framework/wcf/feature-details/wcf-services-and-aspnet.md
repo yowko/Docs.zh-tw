@@ -2,12 +2,12 @@
 title: WCF 服務與 ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: ef772a360ea53c2b5f177ed88ad14c4a1e1277ef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d42787492b00b8e0a5a732d641947fec61b5ff96
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637537"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663687"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 服務與 ASP.NET
 
@@ -29,15 +29,15 @@ ASP.NET HTTP 執行階段會處理 ASP.NET 要求，但不會參與處理要求�
 
 - 在 AppDomain 中，HTTP 執行階段所實作的功能會套用到 ASP.NET 內容，而非 WCF。 ASP.NET 應用程式平台的許多 HTTP 特定功能並不適用於在 AppDomain，其中包含 ASP.NET 內容內裝載的 WCF 服務。 下列為這些功能的範例：
 
-    - HttpContext:<xref:System.Web.HttpContext.Current%2A>總是`null`時從 WCF 服務內存取。 請改用 <xref:System.ServiceModel.Channels.RequestContext>。
+  - HttpContext:<xref:System.Web.HttpContext.Current%2A>總是`null`時從 WCF 服務內存取。 請改用 <xref:System.ServiceModel.Channels.RequestContext>。
 
-    - 檔案為基礎的授權：WCF 安全性模型不允許套用至服務的.svc 檔案，決定是否被授權服務要求時存取控制清單 (ACL)。
+  - 檔案為基礎的授權：WCF 安全性模型不允許套用至服務的.svc 檔案，決定是否被授權服務要求時存取控制清單 (ACL)。
 
-    - 以組態為基礎的 URL 授權：同樣地，WCF 安全性模型不會遵守任何在 System.Web 之指定的 URL 架構授權規則\<授權 > 組態項目。 如果服務駐留在受到 ASP 的 URL 空間 WCF 要求會忽略這些設定。NET 的 URL 授權規則。
+  - 以組態為基礎的 URL 授權：同樣地，WCF 安全性模型不會遵守任何在 System.Web 之指定的 URL 架構授權規則\<授權 > 組態項目。 如果服務駐留在受到 ASP 的 URL 空間 WCF 要求會忽略這些設定。NET 的 URL 授權規則。
 
-    - HttpModule 擴充性：WCF 的裝載基礎結構會攔截 WCF 要求時<xref:System.Web.HttpApplication.PostAuthenticateRequest>，就會引發事件，並不會傳回處理 ASP.NET HTTP 管線。 已編碼成要在管線的後續階段攔截要求的模組不會攔截 WCF 要求。
+  - HttpModule 擴充性：WCF 的裝載基礎結構會攔截 WCF 要求時<xref:System.Web.HttpApplication.PostAuthenticateRequest>，就會引發事件，並不會傳回處理 ASP.NET HTTP 管線。 已編碼成要在管線的後續階段攔截要求的模組不會攔截 WCF 要求。
 
-    - ASP.NET 模擬：根據預設，WCF 要求一律執行以 IIS 處理序身分識別，即使 ASP.NET 設定為啟用模擬使用 System.Web 的\<identity impersonate ="true"/ > 組態選項。
+  - ASP.NET 模擬：根據預設，WCF 要求一律執行以 IIS 處理序身分識別，即使 ASP.NET 設定為啟用模擬使用 System.Web 的\<identity impersonate ="true"/ > 組態選項。
 
 這些限制僅適用於 IIS 應用程式中裝載的 WCF 服務。 ASP.NET 內容行為不會受到 WCF 存在。
 

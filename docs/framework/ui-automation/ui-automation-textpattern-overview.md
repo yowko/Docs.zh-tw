@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: d35e5b5127f335eac04caa8ee95749f45cb870bf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c7b30a854667a122ff30ec4a8e4855902489087f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673999"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660787"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 自動化 TextPattern 概觀
 
@@ -41,7 +41,7 @@ ms.locfileid: "57673999"
 
 ## <a name="control-types"></a>控制項類型
 
-#### <a name="text"></a>Text
+### <a name="text"></a>文字
 
 文字控制項是用來表示螢幕上一段文字的基本項目。
 
@@ -50,14 +50,14 @@ ms.locfileid: "57673999"
 > [!NOTE]
 > 文字控制項可能不會出現在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中 (請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md))。 這是因為文字控制項通常是透過另一個控制項的名稱屬性來顯示。 比方說，用來標示編輯控制項的文字，會透過編輯控制項的名稱屬性來顯示。 因為編輯控制項是在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀目錄的內容檢視中，所以文字項目本身不需要在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的那個檢視中。 內容檢視中唯一出現的文字是非多餘資訊的文字。 這可以讓任何輔助技術只在其使用者需要的資訊項目上快速篩選。
 
-#### <a name="edit"></a>Edit
+### <a name="edit"></a>編輯
 
 編輯控制項可讓使用者檢視和編輯單行文字。
 
 > [!NOTE]
 > 在某些配置案例中，單行文字可能會換行。
 
-#### <a name="document"></a>文件
+### <a name="document"></a>文件
 
 文件控制項可讓使用者巡覽及取得多頁文字中的資訊。
 
@@ -93,8 +93,10 @@ ms.locfileid: "57673999"
 |`System.Windows.Automation.TextPatternIdentifiers Class`|包含用來做為文字提供者識別項的值，請參閱 <xref:System.Windows.Automation.TextPatternIdentifiers>。|
 
 <a name="Security"></a>
+
 ## <a name="security"></a>安全性
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]架構的設計將安全性納入考量 (請參閱 < [UI 自動化安全性概觀](../../../docs/framework/ui-automation/ui-automation-security-overview.md))。 不過，本概觀中所描述的 TextPattern 類別，需要一些特定的安全性考量。
+
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]架構的設計將安全性納入考量 (請參閱 < [UI 自動化安全性概觀](../../../docs/framework/ui-automation/ui-automation-security-overview.md))。 不過，本概觀中所描述的 TextPattern 類別，需要一些特定的安全性考量。
 
 - [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 文字提供者提供唯讀介面，而且不提供變更控制項中現有文字的能力。
 
@@ -104,9 +106,9 @@ ms.locfileid: "57673999"
 
 - [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 安全性最重要的變更之一，統稱為「安全輸入」，其中包含最低權限 (或有限) 使用者帳戶 (LUA) 和 UI 權限層級隔離 (UIPI) 等技術。
 
-    - UIPI 會防止一個程式控制及/或監視另一個「權限」更高的程式，以防止詐騙使用者輸入的跨處理序視窗訊息攻擊。
+  - UIPI 會防止一個程式控制及/或監視另一個「權限」更高的程式，以防止詐騙使用者輸入的跨處理序視窗訊息攻擊。
 
-    - LUA 會針對系統管理員群組中之使用者所執行的應用程式，設定權限的限制。 應用程式不一定要有系統管理員權限，但是會以所需的最低權限來執行。 因此，可能會在 LUA 案例中強制執行一些限制。 最值得注意的字串截斷 (包括 TextPattern 字串)，其中可能需要限制從系統管理員層級應用程式擷取的字串大小，因此不會強制其將記憶體配置到停用應用程式的點。
+  - LUA 會針對系統管理員群組中之使用者所執行的應用程式，設定權限的限制。 應用程式不一定要有系統管理員權限，但是會以所需的最低權限來執行。 因此，可能會在 LUA 案例中強制執行一些限制。 最值得注意的字串截斷 (包括 TextPattern 字串)，其中可能需要限制從系統管理員層級應用程式擷取的字串大小，因此不會強制其將記憶體配置到停用應用程式的點。
 
 <a name="Performance"></a>
 
@@ -120,19 +122,25 @@ ms.locfileid: "57673999"
 
 ## <a name="textpattern-terminology"></a>TextPattern 術語
 
-**屬性**文字範圍的格式化特性 (例如<xref:System.Windows.Automation.TextPattern.IsItalicAttribute>或<xref:System.Windows.Automation.TextPattern.FontNameAttribute>)。
+**屬性**\
+文字範圍的格式化特性 (例如， <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> 或 <xref:System.Windows.Automation.TextPattern.FontNameAttribute>)。
 
-**變質範圍**變質範圍是空白或零個字元的文字範圍。 就 TextPattern 控制項模式的目的而言，文字插入點 (或系統游標) 會被視為變質範圍。 如果沒有選取文字， <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 會在文字插入點傳回變質範圍，而 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 會傳回變質範圍，做為其起始端點。 當文字提供者找不到符合指定條件的任何文字範圍時，<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 和 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 可能會傳回變質範圍。 這個變質範圍可以用來當做文字提供者內的開始端點。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 並<xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A>會傳回 null 參考 (`Nothing`在 Microsoft Visual Basic.NET) 以避免與探索到的範圍與變質範圍混淆。
+**變質範圍**\
+變質範圍是空白或零個字元的文字範圍。 就 TextPattern 控制項模式的目的而言，文字插入點 (或系統游標) 會被視為變質範圍。 如果沒有選取文字， <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 會在文字插入點傳回變質範圍，而 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 會傳回變質範圍，做為其起始端點。 當文字提供者找不到符合指定條件的任何文字範圍時，<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 和 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 可能會傳回變質範圍。 這個變質範圍可以用來當做文字提供者內的開始端點。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 並<xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A>會傳回 null 參考 (`Nothing`在 Microsoft Visual Basic.NET) 以避免與探索到的範圍與變質範圍混淆。
 
-**內嵌物件**有兩種類型的內嵌物件[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]文字模型。 其中包含以文字為基礎的內容項目 (例如超連結或資料表)，以及控制項目 (例如影像和按鈕)。 如需詳細資訊，請參閱 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)。
+**內嵌的物件**\
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文字模型中有兩種類型的內嵌物件 。 其中包含以文字為基礎的內容項目 (例如超連結或資料表)，以及控制項目 (例如影像和按鈕)。 如需詳細資訊，請參閱 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)。
 
-**端點**absolute<xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start>或<xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>文字容器內的文字範圍的點。
+**端點**\
+文字容器內之文字範圍的絕對 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 或 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 點。
 
 ![TextPatternRangeEndpoints&#40;的開頭與結尾&#41;。](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")下圖說明一組的開始和結束點。
 
-**TextRange**一段文字，以開始和結束點，包括所有相關聯的屬性和功能的文字容器中的表示法。
+**TextRange**\
+表示包含所有相關聯屬性和功能的文字容器中的一段文字，有開始和結束點。
 
-<xref:System.Windows.Automation.Text.TextUnit> 文字 （字元、 單字、 線條或段落） 用於巡覽文字範圍的邏輯區段預先定義的單位。
+<xref:System.Windows.Automation.Text.TextUnit>\
+預先定義的文字單位 (字元、單字、字行或段落)，用於巡覽文字範圍的邏輯區段。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690526"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663994"
 ---
 # <a name="cryptographic-services"></a>密碼編譯服務
 
@@ -207,19 +207,19 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 - Alice 傳送純文字訊息和雜湊訊息 (數位簽章) 給 Bob。 Bob 收到後雜湊該訊息，並將他從 Alice 接收到的雜湊值與自己的雜湊值相比較。 如果雜湊值完全相同，訊息未遭竄改。 如果值不相同，則 Alice 撰寫訊息後已遭修改。
 
-    可惜這個方法無法確認寄件者的真實性。 任何人都可以模擬 Alice 並傳送訊息給 Bob。 他們可以使用相同的雜湊演算法來簽署訊息，而且 Bob 只能用符合其簽章的訊息來判斷。 這是一種攔截攻擊的形式。 如需詳細資訊，請參閱 < [Cryptography Next Generation (CNG) 安全通訊範例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))。
+  可惜這個方法無法確認寄件者的真實性。 任何人都可以模擬 Alice 並傳送訊息給 Bob。 他們可以使用相同的雜湊演算法來簽署訊息，而且 Bob 只能用符合其簽章的訊息來判斷。 這是一種攔截攻擊的形式。 如需詳細資訊，請參閱 < [Cryptography Next Generation (CNG) 安全通訊範例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))。
 
 - Alice 透過非安全的公用通道傳送純文字訊息給 Bob。 Alice 透過安全的私用通道傳雜湊送息給 Bob。 Bob 收到純文字訊息，然後進行雜湊，並將該雜湊與私下交換的雜湊相比。 如果雜湊相符，Bob 就知道兩件事：
 
-    - 訊息未經更改。
+  - 訊息未經更改。
 
-    - 寄件者的訊息 (Alice) 已經過驗證。
+  - 寄件者的訊息 (Alice) 已經過驗證。
 
-    若要讓此系統成功運作，Alice 必須對 Bob 除外的所有對象隱藏原始雜湊值。
+  若要讓此系統成功運作，Alice 必須對 Bob 除外的所有對象隱藏原始雜湊值。
 
 - Alice 透過非安全的公用通道傳送純文字訊息給 Bob，並將已雜湊的訊息放在可讓人公開檢視的網站上。
 
-    此方法藉由防止任何人修改雜湊值來預防訊息遭到竄改。 雖然任何人都可以讀取訊息和其雜湊，但是只有 Alice 可以變更雜湊值。 若攻擊者想要模擬 Alice，就需要存取她的網站。
+  此方法藉由防止任何人修改雜湊值來預防訊息遭到竄改。 雖然任何人都可以讀取訊息和其雜湊，但是只有 Alice 可以變更雜湊值。 若攻擊者想要模擬 Alice，就需要存取她的網站。
 
 先前的方法中，沒有一項能防止他人讀取 Alice 的訊息，因為它們會以純文字傳送。 完整的安全性通常需有數位簽章和加密 (訊息簽章)。
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 9123d59709b483c72ab49652bda1e547430fa33d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663243"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663338"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全性策略 – 安全性工程
 高可信度電腦運算是一項 Microsoft 開發案，用於確保生產安全的程式碼。 高可信度電腦運算開發案的一個重要項目是 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 是可用來搭配標準工程程序協助安全的程式碼傳遞之工程實務。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 包含 10 個階段，結合正規化、可衡量性與其他結構到最佳做法，包括：  
@@ -51,7 +51,7 @@ ms.locfileid: "64663243"
   
 2. **列舉進入點**。 雜貨店的進入點可能包含前門和後門、窗戶、卸貨平台和空調設備。  
   
-3. **使用進入點調查針對資產的攻擊**。 一次可能的攻擊或許會經由「空調」進入點，以雜貨店的「保險箱」資產為攻擊目標；空調設備可能被拆下，讓保險箱能從中被拖出來，搬到商店外。  
+3. **使用進入點調查針對資產的攻擊**。 一次可能的攻擊或許會經由「空調」  進入點，以雜貨店的「保險箱」  資產為攻擊目標；空調設備可能被拆下，讓保險箱能從中被拖出來，搬到商店外。  
   
  威脅模型套用到整個 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 並包含下列各項：  
   
@@ -71,13 +71,13 @@ ms.locfileid: "64663243"
   
 - **Prefix/Prefast**:例如緩衝區滿溢、 格式字串問題和錯誤檢查的 unmanaged 程式碼中尋找安全性漏洞及常見安全性問題。  
   
-- **禁用的 Api**:搜尋原始程式碼，來識別造成安全性問題，例如已知的函式的意外使用`strcpy`。 一旦識別到之後，會以較安全的替代項目取代這些函式。  
+- **禁用的 Api**:搜尋原始程式碼，來識別造成安全性問題，例如已知的函式的意外使用`strcpy`。 一旦識別出，以更安全的替代項目取代這些函式。  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>測試技術  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 使用不同的安全性測試技術，包含：  
   
-- **白箱測試**:測試人員檢視原始程式碼，並再建置入侵測試  
+- **白箱測試**:測試人員檢視原始程式碼，並再建置入侵測試。
   
 - **黑測試**:測試人員找出安全性漏洞，藉由檢查 API 和功能，再嘗試攻擊產品。  
   
@@ -95,4 +95,4 @@ ms.locfileid: "64663243"
 - [WPF 部分信任安全性](wpf-partial-trust-security.md)
 - [WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md)
 - [高可信度電腦運算](https://www.microsoft.com/mscorp/twc/default.mspx)
-- [在.NET 中的安全性](../../standard/security/index.md)
+- [.NET 中的安全性](../../standard/security/index.md)

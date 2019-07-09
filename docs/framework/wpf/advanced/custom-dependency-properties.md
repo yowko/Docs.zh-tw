@@ -14,28 +14,31 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 4ef97af17893fa7a4e85d09e989539f7f5b32a36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627370"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664052"
 ---
 # <a name="custom-dependency-properties"></a>自訂相依性屬性
 
 本主題會說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式開發人員和元件作者可能想要建立自訂相依性屬性的原因，並說明實作步驟以及某些可以改善屬性的效能、可用性或多功能的實作選項。
 
 <a name="prerequisites"></a>
+
 ## <a name="prerequisites"></a>必要條件
 
 本主題假設您已從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](dependency-properties-overview.md)主題。 為遵循本主題中的範例，您也應該了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 並知道如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。
 
 <a name="whatis"></a>
+
 ## <a name="what-is-a-dependency-property"></a>什麼是相依性屬性？
 
 您可將原可能成為 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性的項目實作為相依性屬性，以支援樣式、資料繫結、繼承、動畫和預設值。 相依性屬性是屬性，已向[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]藉由呼叫屬性系統<xref:System.Windows.DependencyProperty.Register%2A>方法 (或<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>)，並由<xref:System.Windows.DependencyProperty>識別碼欄位。 相依性屬性可以僅供<xref:System.Windows.DependencyObject>類型，但<xref:System.Windows.DependencyObject>在相當高[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]類別階層架構，因此大部分的類別中可用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可支援相依性屬性。 如需相依性屬性的詳細資訊，以及此 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 中描述它們所使用的一些術語和慣例，請參閱[相依性屬性概觀](dependency-properties-overview.md)。
 
 <a name="example_dp"></a>
+
 ## <a name="examples-of-dependency-properties"></a>相依性屬性範例
 
 相依性屬性上實作的範例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]類別包括<xref:System.Windows.Controls.Control.Background%2A>屬性，<xref:System.Windows.FrameworkElement.Width%2A>屬性，而<xref:System.Windows.Controls.TextBox.Text%2A>; 屬性，還有許多其他項目。 類別公開的每個相依性屬性都已型別的對應的公用靜態欄位<xref:System.Windows.DependencyProperty>該相同的類別上公開。 這是相依性屬性的識別碼。 識別碼依慣例命名︰相依性屬性的名稱後綴字串 `Property`。 例如，對應<xref:System.Windows.DependencyProperty>識別碼欄位<xref:System.Windows.Controls.Control.Background%2A>屬性是<xref:System.Windows.Controls.Control.BackgroundProperty>。 識別碼會儲存相依性屬性的相關資訊，其註冊，以及識別項稍後再用於牽涉到的相依性屬性，例如呼叫其他作業<xref:System.Windows.DependencyObject.SetValue%2A>。
@@ -43,6 +46,7 @@ ms.locfileid: "64627370"
 如[相依性屬性概觀](dependency-properties-overview.md)所述，因為實作 "wrapper"，所以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的所有相依性屬性也都是 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 屬性 (最緊密的屬性除外)。 因此，在程式碼中，您可以像使用其他 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 屬性一樣呼叫定義包裝函式的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 存取子，來取得或設定相依性屬性。 為已建立的相依性屬性消費者，通常不用<xref:System.Windows.DependencyObject>方法<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>，這是基礎屬性系統的連接點。 相反地，現有的實作[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]屬性將會已呼叫<xref:System.Windows.DependencyObject.GetValue%2A>並<xref:System.Windows.DependencyObject.SetValue%2A>內`get`和`set`包裝函式實作的屬性，適當地使用的識別項欄位. 如果您要自行實作自訂的相依性屬性，則會以類似的方式定義包裝函式。
 
 <a name="backing_with_dp"></a>
+
 ## <a name="when-should-you-implement-a-dependency-property"></a>您應於何時實作相依性屬性？
 
 當您實作的屬性在類別上，只要您的類別衍生自<xref:System.Windows.DependencyObject>，您可以選擇將您的屬性與<xref:System.Windows.DependencyProperty>識別碼，因此若要讓相依性屬性。 讓您的屬性成為相依性屬性並非絕對必要或合適，視案例需求而定。 有時候，支援有私用欄位的屬性，一般的技巧即已足夠。 但只要您希望屬性支援下列一或多項 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，就應該將屬性實作為相依性屬性：
@@ -66,6 +70,7 @@ ms.locfileid: "64627370"
 當您檢查這些案例時，您也應該考慮是否能夠以覆寫現有相依性屬性中繼資料的方式完成您的案例，而不是實作全新的屬性。 中繼資料覆寫是否實際可行，取決於您的案例，以及該案例與現有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 相依性屬性和類別實作的類似程度。 如需覆寫現有屬性中繼資料的詳細資訊，請參閱[相依性屬性中繼資料](dependency-property-metadata.md)。
 
 <a name="checklist"></a>
+
 ## <a name="checklist-for-defining-a-dependency-property"></a>定義相依性屬性所使用的檢查清單
 
 定義相依性屬性包含四個不同的概念。 這些概念不一定得是嚴苛的程序步驟，因為其中有些最後會結合為實作中的單一段程式碼︰
@@ -79,6 +84,7 @@ ms.locfileid: "64627370"
 - 定義名稱與相依性屬性名稱符合的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]"wrapper" 屬性。 實作 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "wrapper" 屬性的 `get` 和 `set` 存取子，以連接支援它的相依性屬性。
 
 <a name="registering"></a>
+
 ### <a name="registering-the-property-with-the-property-system"></a>向屬性系統登錄屬性
 
 為使屬性成為相依性屬性，您必須將該屬性登錄到屬性系統維護的資料表中，並給它唯一識別碼用為後續屬性系統作業的限定詞。 這些作業可能是內部作業，或您自己程式碼呼叫的屬性系統 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 若要註冊的屬性，請呼叫<xref:System.Windows.DependencyProperty.Register%2A>類別 （類別，但任何成員定義之外） 的主體內的方法。 [識別碼] 欄位也會提供由<xref:System.Windows.DependencyProperty.Register%2A>方法呼叫，傳回的值。 原因，<xref:System.Windows.DependencyProperty.Register%2A>呼叫完成之外其他成員定義是因為您可以使用此傳回值指派，並建立`public` `static` `readonly`型別的欄位<xref:System.Windows.DependencyProperty>為您類別的一部分。 此欄位會變成您相依性屬性的識別碼。
@@ -87,6 +93,7 @@ ms.locfileid: "64627370"
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
 
 <a name="nameconventions"></a>
+
 ### <a name="dependency-property-name-conventions"></a>相依性屬性命名慣例
 
 相依性屬性有已建立的命名慣例，除非例外情況，否則必須遵循。
@@ -99,6 +106,7 @@ ms.locfileid: "64627370"
 > 在類別主體中定義相依性屬性是一般的實作，但也可能在類別靜態建構函式中定義相依性屬性。 如果您需要多行程式碼來初始化相依性屬性，這個方式可能有意義。
 
 <a name="wrapper1"></a>
+
 ### <a name="implementing-the-wrapper"></a>實作 "wrapper"
 
 您的包裝函式實作應該呼叫<xref:System.Windows.DependencyObject.GetValue%2A>中`get`實作，並<xref:System.Windows.DependencyObject.SetValue%2A>中`set`（原始的登錄呼叫和欄位會顯示以下太為了清楚起見） 的實作。
@@ -119,6 +127,7 @@ ms.locfileid: "64627370"
 - 目前的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 載入器實作會略過整個包裝函式，且在處理屬性值時依賴命名慣例。 如需詳細資訊，請參閱 [XAML 相依性屬性](xaml-loading-and-dependency-properties.md)。
 
 <a name="metadata"></a>
+
 ### <a name="property-metadata-for-a-new-dependency-property"></a>新相依性屬性的屬性中繼資料
 
 當您登錄相依性屬性時，登錄會透過屬性系統建立儲存屬性特性的中繼資料物件。 許多這些特性都有預設值，如果使用簡單的簽章的已註冊的屬性會設定<xref:System.Windows.DependencyProperty.Register%2A>。 其他的簽章的<xref:System.Windows.DependencyProperty.Register%2A>可讓您指定您想要為您在登錄屬性的中繼資料。 相依性屬性最常指定的中繼資料，是套用在新執行個體的預設值，而新執行個體使用該屬性。
@@ -131,13 +140,13 @@ ms.locfileid: "64627370"
 
 - 屬性 （或其值的變更） 會影響[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，並特別會影響版面配置系統應該調整大小，或呈現您的項目在頁面中，如何設定一或多個下列旗標： <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>， <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>， <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>。
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> 指出此屬性的變更需要變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]轉譯，其中包含的物件可能需要增加或減少父代的空間。 例如，"Width" 屬性應該設定此旗標。
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> 指出此屬性的變更需要變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]轉譯，其中包含的物件可能需要增加或減少父代的空間。 例如，"Width" 屬性應該設定此旗標。
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> 指出此屬性的變更需要變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]呈現，通常不需要變更專用的空間，不過，不表示空間中的定位已變更。 例如，"Alignment" 屬性應該設定此旗標。
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> 指出此屬性的變更需要變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]呈現，通常不需要變更專用的空間，不過，不表示空間中的定位已變更。 例如，"Alignment" 屬性應該設定此旗標。
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 指出一些其他的變更發生，不會影響版面配置和測量，但確實需要另一種轉譯。 例如可變更現有項目色彩的 "Background" 等屬性。
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 指出一些其他的變更發生，不會影響版面配置和測量，但確實需要另一種轉譯。 例如可變更現有項目色彩的 "Background" 等屬性。
 
-    - 這些旗標在您自己的屬性系統或配置回呼覆寫實作中，通常用為中繼資料的通訊協定。 比方說，您可能會有<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>會呼叫的回呼<xref:System.Windows.UIElement.InvalidateArrange%2A>如果執行個體的任何屬性回報值變更，而且擁有<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>做為`true`其中繼資料中。
+  - 這些旗標在您自己的屬性系統或配置回呼覆寫實作中，通常用為中繼資料的通訊協定。 比方說，您可能會有<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>會呼叫的回呼<xref:System.Windows.UIElement.InvalidateArrange%2A>如果執行個體的任何屬性回報值變更，而且擁有<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>做為`true`其中繼資料中。
 
 - 某些屬性會影響包含父項目的轉譯特性，超過前文所述之所需大小的變更。 例如，<xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A>模型中使用非固定格式文件，該屬性的變更可以在其中變更包含段落之非固定格式文件的整體轉譯的屬性。 使用<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange>或<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure>來識別類似的情況下，在您自己的屬性。
 
@@ -150,21 +159,25 @@ ms.locfileid: "64627370"
 - 設定<xref:System.Windows.FrameworkPropertyMetadataOptions.Journal>旗標，指出是否應該偵測到或瀏覽日誌服務所使用的相依性屬性。 例如，<xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A>屬性; 在選取項目中選取任何項目巡覽日誌記錄時，就應該保存控制項。
 
 <a name="RODP"></a>
+
 ## <a name="read-only-dependency-properties"></a>唯讀相依性屬性
 
 您可以定義唯讀的相依性屬性。 但您為何可能將屬性定義為唯讀的案例有點不同，和向屬性系統登錄它們並公開識別碼的程序一樣。 如需詳細資訊，請參閱[唯讀相依性屬性](read-only-dependency-properties.md)。
 
 <a name="CTDP"></a>
+
 ## <a name="collection-type-dependency-properties"></a>集合類型相依性屬性
 
 集合類型相依性屬性要考慮一些其他的實作問題。 如需詳細資訊，請參閱[集合類型相依性屬性](collection-type-dependency-properties.md)。
 
 <a name="SecurityC"></a>
+
 ## <a name="dependency-property-security-considerations"></a>相依性屬性安全性考量
 
 相依性屬性應該宣告為公用屬性。 相依性屬性識別碼欄位應該宣告為公用靜態欄位。 即使您嘗試宣告其他存取層級 (例如受保護的)，仍一律可以透過與屬性系統 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 結合的識別項存取相依性屬性。 即使受保護的識別項欄位是可能為可存取，因為中繼資料的報表或值判斷[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]屬於屬性系統，例如<xref:System.Windows.LocalValueEnumerator>。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。
 
 <a name="DPCtor"></a>
+
 ## <a name="dependency-properties-and-class-constructors"></a>相依性屬性和類別建構函式
 
 Managed 程式碼程式設計中有項一般原則 (通常由 FxCop 等程式碼分析工具強制執行)，類別建構函式不應該呼叫虛擬方法。 這是因為建構函式可以呼叫為衍生類別建構函式的基底初始化，而透過建構函式進入虛擬方法，可能會發生在建構中的物件執行個體尚未完全初始化的狀態。 當您衍生自任何衍生自的類別<xref:System.Windows.DependencyObject>，您應該要知道屬性系統本身呼叫，並在內部公開虛擬方法。 這些虛擬方法都屬於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統服務。 覆寫方法可讓衍生的類別參與值判斷。 若要避免執行階段初始化可能發生的問題，您不應該在類別的建構函式中設定相依性屬性值，除非您遵循非常明確的建構函式模式。 如需詳細資訊，請參閱 [DependencyObject 的安全建構函式模式](safe-constructor-patterns-for-dependencyobjects.md)。

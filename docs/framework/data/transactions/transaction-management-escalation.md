@@ -2,12 +2,12 @@
 title: 交易管理擴大規模
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2597d6fcce7fbd51f6f17bd42469cb7fcf3fdf
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630576"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662453"
 ---
 # <a name="transaction-management-escalation"></a>交易管理擴大規模
 Windows 會裝載一組服務與模組，用以構成交易管理員。 交易管理員擴大規模說明了將交易從某個交易管理員的元件移轉到另一個元件上的處理序。  
@@ -25,7 +25,7 @@ Windows 會裝載一組服務與模組，用以構成交易管理員。 交易�
   
 - 交易中至少會登記一個不支援單一階段告知的永久性資源。  
   
-- 交易中至少會登記兩個支援單一階段告知的永久性資源。 例如，登記一個包含 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 的單一連線不會導致交易升級情況。 然而，每當您開啟第二個 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 資料庫連線並導致資料庫登記，則 <xref:System.Transactions> 基礎結構會偵測到它是交易中的第二個永久性資源，並將其規模擴大到 MSDTC 交易。  
+- 交易中至少會登記兩個支援單一階段告知的永久性資源。 例如，登錄與 SQL Server 2005 的單一連線不會造成交易升級。 不過，每當您開啟第二個連接至 SQL Server 2005 資料庫，導致資料庫登記，<xref:System.Transactions>基礎結構會偵測它是在交易中，第二個永久性資源，並擴大到 MSDTC 交易。  
   
 - 這時會叫用將交易「封送處理」到不同的應用程式定義域或不同的處理序的要求。 例如，跨應用程式定義域界限的交易物件序列化。 交易物件是由數值所封送處理，代表任何嘗試跨應用程式定義域界限將其傳送出去的動作 (即使處於相同的處理序中) 將導致交易物件的序列化。 您可以在使用 <xref:System.Transactions.Transaction> 做為參數的遠端方法上進行呼叫，或是嘗試存取遠端交易服務型元件，來傳送交易物件。 這項作業會序列化交易物件並導致規模擴大，如同當交易已經跨應用程式定義域序列化一樣。 接著此物件會被分配出去，這時本機交易管理員就不會有足夠的物件。  
   

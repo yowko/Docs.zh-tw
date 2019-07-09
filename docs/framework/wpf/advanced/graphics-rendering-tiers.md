@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: a0ed7bb48c0b8c81b44d4e321dec902ba68fc523
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77694b2a86c91f3e6946ecd50f4765404750f37b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640848"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664161"
 ---
 # <a name="graphics-rendering-tiers"></a>圖形轉譯層
 轉譯層定義執行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式之裝置的圖形硬體及效能層級。  
@@ -101,7 +101,7 @@ ms.locfileid: "64640848"
 |設定|描述|  
 |-------------|-----------------|  
 |**停用硬體加速選項**|指定是否應該啟用硬體加速。|  
-|**最大多重取樣值**|指定消除鋸齒 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 內容的多重取樣程度。|  
+|**最大多重取樣值**|指定的多重取樣消除鋸齒 3d 內容的程度。|  
 |**需要的視訊驅動程式日期設定**|指定系統是否停用 2004 年 11 月之前所發行驅動程式的硬體加速。|  
 |**使用軟體模擬轉譯器選項**|指定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否應該使用軟體模擬轉譯器。|  
   
@@ -117,12 +117,12 @@ ms.locfileid: "64640848"
   
  WPF 效能套件提供效能資料的豐富圖形檢視。 如需 WPF 效能工具的詳細資訊，請參閱 [WPF 效能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))。  
   
-### <a name="directx-diagnostic-tool"></a>DirectX       
+### <a name="directx-diagnostic-tool"></a>DirectX  
  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 診斷工具 Dxdiag.exe 旨在協助您對 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 相關問題進行疑難排解。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 診斷工具的預設安裝資料夾是︰  
   
  `~\Windows\System32`  
   
- 當您執行 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 診斷工具時，主要視窗包含一組索引標籤可讓您顯示和診斷 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 相關資訊。 例如，[系統] 索引標籤提供您電腦的系統資訊，並指定電腦上所安裝的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本。  
+ 當您執行 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 診斷工具時，主要視窗包含一組索引標籤可讓您顯示和診斷 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 相關資訊。 例如，[系統]  索引標籤提供您電腦的系統資訊，並指定電腦上所安裝的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本。  
   
  ![螢幕擷取畫面：DirectX 診斷工具](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 DirectX 診斷工具主要視窗  

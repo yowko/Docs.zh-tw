@@ -2,12 +2,12 @@
 title: 適用於 Entity Framework 的 SqlClient 已知問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489543"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662262"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>適用於 Entity Framework 的 SqlClient 已知問題
 本節說明與 .NET Framework Data Provider for SQL Server (SqlClient) 相關的已知問題。  
@@ -21,7 +21,7 @@ ms.locfileid: "66489543"
  如果將非 `null` 值傳遞做為第一個引數並將 0 傳遞做為第二個引數，成為 `RIGHT(nvarchar(max)`, 0`)` 或 `RIGHT(varchar(max)`, 0`)`，則會傳回 `NULL` 值，而非 `empty` 字串。  
   
 ## <a name="cross-and-outer-apply-operators"></a>CROSS 和 OUTER APPLY 運算子  
- CROSS 和 OUTER APPLY 運算子是在 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 中引入的。 在某些案例中，查詢管線可能產生含有 CROSS APPLY 和 (或) OUTER APPLY 運算子的 Transact-SQL 陳述式。 因為有些後端提供者，包括 SQL Server 版本早於[!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]，不支援這些運算子，這些後端提供者無法執行這類查詢。  
+ CROSS 和 OUTER APPLY 運算子所導入 SQL Server 2005 中。 在某些案例中，查詢管線可能產生含有 CROSS APPLY 和 (或) OUTER APPLY 運算子的 Transact-SQL 陳述式。 因為有些後端提供者，包括 SQL Server 2005 之前的 SQL Server 版本不支援這些運算子，無法在這些後端提供者上執行這類查詢。  
   
  下列是可能會導致輸出查詢中出現 CROSS APPLY 和 (或) OUTER APPLY 運算子的部分典型案例：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66489543"
 - 具有 DEREF 建構對 REF 建構的查詢。  
   
 ## <a name="skip-operator"></a>SKIP 運算子  
- 如果您使用[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]，SKIP 搭配 ORDER BY 使用非索引鍵資料行上可能會傳回不正確的結果。 如果非索引鍵資料行中有重複的資料，可能會略過超過所指定數目的資料行。 這是因為 SKIP 針對 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]轉譯的方式所造成的。 例如，在下列查詢中，五個以上的資料列可能會略過如果`E.NonKeyColumn`有重複的值：  
+ 如果您使用 SQL Server 2000，則使用 SKIP 搭配 ORDER BY，非索引鍵資料行上可能會傳回不正確的結果。 如果非索引鍵資料行中有重複的資料，可能會略過超過所指定數目的資料行。 這是因為略過 SQL Server 2000 的轉譯方式。 例如，在下列查詢中，五個以上的資料列可能會略過如果`E.NonKeyColumn`有重複的值：  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  

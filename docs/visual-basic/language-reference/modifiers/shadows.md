@@ -11,63 +11,65 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: bbad42a2bffc397696a8da51bcdf86ebc5ff4ca6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c9dfff99e2634b79ad6b44721f40583d21c9b98e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647683"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664138"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
-指定宣告的程式設計項目會重新宣告並隱藏同名的項目或一組多載的項目，基底類別中。  
-  
-## <a name="remarks"></a>備註  
- 遮蔽的主要目的 (也稱為*依名稱隱藏*) 是保留您的類別成員的定義。 基底類別可能進行的變更，會建立具有相同名稱做為其中一個已定義的項目。 如果發生這種情況，`Shadows`修飾詞強制參考透過您的類別成員解析您定義的而不是新的基底類別項目。  
-  
- 遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。 如需詳細資訊，請參閱 < [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
-  
-## <a name="rules"></a>規則  
-  
-- **宣告內容。** 您可以使用`Shadows`只能在類別層級。 這表示的宣告內容`Shadows`項目必須是類別，，而且不能是原始程式檔、 命名空間、 介面、 模組、 結構或程序。  
-  
-     您可以宣告一個宣告陳述式中只能有一個遮蔽的項目。  
-  
-- **結合的修飾詞。** 您無法指定`Shadows`連同`Overloads`， `Overrides`，或`Static`相同宣告中。  
-  
-- **項目型別。** 您可以使用任何其他類型遮蔽任何一種已宣告的項目。 如果您遮蔽的屬性或程序與另一個屬性或程序，參數和傳回型別沒有以符合那些在基底類別屬性或程序。  
-  
-- **存取。** 無法從遮蔽的衍生類別內通常使用遮蔽基底類別中的項目。 不過，適用下列考量。  
-  
-    - 如果遮蔽的項目不能從參考它的程式碼存取，則參考會解析為遮蔽的項目中。 例如，如果`Private`項目會遮蔽基底類別的項目，並沒有存取權限的程式碼`Private`項目改為存取基底類別項目。  
-  
-    - 如果遮蔽的項目時，您仍然可以透過使用基底類別的型別宣告的物件存取遮蔽的項目。 您也可以存取透過`MyBase`。  
-  
- `Shadows` 修飾詞可用於以下內容：  
-  
- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
-  
- [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)  
-  
- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
-  
- [Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)  
-  
- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
-  
- [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)  
-  
- [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)  
-  
- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)  
-  
- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)  
-  
- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+
+指定宣告的程式設計項目會重新宣告並隱藏同名的項目或一組多載的項目，基底類別中。
+
+## <a name="remarks"></a>備註
+
+遮蔽的主要目的 (也稱為*依名稱隱藏*) 是保留您的類別成員的定義。 基底類別可能進行的變更，會建立具有相同名稱做為其中一個已定義的項目。 如果發生這種情況，`Shadows`修飾詞強制參考透過您的類別成員解析您定義的而不是新的基底類別項目。
+
+遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。 如需詳細資訊，請參閱 < [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。
+
+## <a name="rules"></a>規則
+
+- **宣告內容。** 您可以使用`Shadows`只能在類別層級。 這表示的宣告內容`Shadows`項目必須是類別，，而且不能是原始程式檔、 命名空間、 介面、 模組、 結構或程序。
+
+  您可以宣告一個宣告陳述式中只能有一個遮蔽的項目。
+
+- **結合的修飾詞。** 您無法指定`Shadows`連同`Overloads`， `Overrides`，或`Static`相同宣告中。
+
+- **項目型別。** 您可以使用任何其他類型遮蔽任何一種已宣告的項目。 如果您遮蔽的屬性或程序與另一個屬性或程序，參數和傳回型別沒有以符合那些在基底類別屬性或程序。
+
+- **存取。** 無法從遮蔽的衍生類別內通常使用遮蔽基底類別中的項目。 不過，適用下列考量。
+
+  - 如果遮蔽的項目不能從參考它的程式碼存取，則參考會解析為遮蔽的項目中。 例如，如果`Private`項目會遮蔽基底類別的項目，並沒有存取權限的程式碼`Private`項目改為存取基底類別項目。
+
+  - 如果遮蔽的項目時，您仍然可以透過使用基底類別的型別宣告的物件存取遮蔽的項目。 您也可以存取透過`MyBase`。
+
+`Shadows` 修飾詞可用於以下內容：
+
+- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)
+
+- [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)
+
+- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
+
+- [Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)
+
+- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)
+
+- [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)
+
+- [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)
+
+- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)
+
+- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)
+
+- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 ## <a name="see-also"></a>另請參閱
 
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 786466cb0b94a96e629a1f173388ed7d40be7256
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052582"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661911"
 ---
 # <a name="local-type-inference-visual-basic"></a>區域類型推斷 (Visual Basic)
 Visual Basic 編譯器會使用*型別推斷*來判斷資料類型的未宣告的區域變數`As`子句。 編譯器會推斷變數的初始化運算式的類型的類型。 這可讓您宣告變數而不用明確陳述的型別，如下列範例所示。 宣告，因為兩者`num1`和`num2`強型別為整數。  
@@ -65,7 +65,7 @@ Visual Basic 編譯器會使用*型別推斷*來判斷資料類型的未宣告�
   
  `Option Infer Off`  
   
- 如果您未指定的值`Option Infer`在您的程式碼中，編譯器預設值是`Option Infer On`。 針對從升級的專案[!INCLUDE[vb_orcas_long](~/includes/vb-orcas-long-md.md)]或更早版本，編譯器預設值是`Option Infer Off`。  
+ 如果您未指定的值`Option Infer`在您的程式碼中，編譯器預設值是`Option Infer On`。 
   
  如果在檔案中設定給 `Option Infer` 的值與 IDE 或命令列中設定的值衝突，檔案中的值具有優先權。  
   

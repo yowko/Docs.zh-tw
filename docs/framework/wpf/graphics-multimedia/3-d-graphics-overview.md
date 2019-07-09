@@ -8,43 +8,43 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 2021a1bf706233e6361848a95f512262c1c16b6f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 48f14ff145ad35dae3ba960191d34360cbec6173
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647108"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664093"
 ---
 # <a name="3-d-graphics-overview"></a>立體圖形概觀
-<a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 功能可讓開發人員以標記和程序性程式碼繪製、轉換 3D 圖形，以及以動畫顯示 3D 圖形。 開發人員可以結合 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 和 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形來建立豐富的控制項、提供複雜的資料說明，或者加強應用程式介面的使用者體驗。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 支援不適用於提供完整功能的遊戲開發平台。 本主題將提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形系統中 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 功能的概觀。  
+<a name="introduction"></a> 中的 3d 功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]可讓開發人員繪製、 轉換和以動畫顯示 3d 圖形標記和程序性程式碼。 開發人員可以結合 2d 和 3d 圖形，以建立豐富的控制項，請提供複雜的資料，說明或加強使用者體驗的應用程式的介面。 中的 3d 支援[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]並不適用於提供功能完整的遊戲開發平台。 本主題提供中的 3d 功能的概觀[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]圖形系統。  
 
 <a name="threed_in_2d"></a>   
 ## <a name="3-d-in-a-2-d-container"></a>2D 容器中的 3D  
- [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形中的內容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封裝在一個項目， <xref:System.Windows.Controls.Viewport3D>，可參與二維元素結構。 圖形系統會將<xref:System.Windows.Controls.Viewport3D>為二維的視覺元素，例如中許多其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 <xref:System.Windows.Controls.Viewport3D> 為視窗函式，在檢視區 — 三維的場景。 更精確來說，是一種 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 場景投射到的表面。  
+ 3d 圖形中的內容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封裝在一個項目， <xref:System.Windows.Controls.Viewport3D>，可參與二維元素結構。 圖形系統會將<xref:System.Windows.Controls.Viewport3D>為二維的視覺元素，例如中許多其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 <xref:System.Windows.Controls.Viewport3D> 為視窗函式，在檢視區 — 三維的場景。 更精確來說，是一種 3D 場景投射到的表面。  
   
- 在傳統[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]應用程式中，使用<xref:System.Windows.Controls.Viewport3D>如同其他的容器項目，例如格線或畫布。  雖然您可以使用<xref:System.Windows.Controls.Viewport3D>與其他[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]繪圖物件，在相同的場景圖形中，您無法貫穿[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]並[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]內的物件<xref:System.Windows.Controls.Viewport3D>。  本主題將著重在如何繪製[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]圖形內<xref:System.Windows.Controls.Viewport3D>。  
+ 在傳統的 2d 應用程式中，使用<xref:System.Windows.Controls.Viewport3D>如同其他的容器項目，例如格線或畫布。  雖然您可以使用<xref:System.Windows.Controls.Viewport3D>您無法在相同的場景圖形中其他 2d 繪圖的物件，使用貫穿 2d 和 3d 物件內<xref:System.Windows.Controls.Viewport3D>。  本主題將著重在如何繪製 3d 圖形內<xref:System.Windows.Controls.Viewport3D>。  
   
 <a name="coord_space"></a>   
 ## <a name="3-d-coordinate-space"></a>3D 座標空間  
- [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 圖形的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 座標系統將原點置於轉譯區域 (通常是螢幕) 的左上角。 在 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 系統中，x 軸的正值是往右，y 軸的正值則是往下。  不過在 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 座標系統中，原點是位於轉譯區域的中心，x 軸的正值是往右，但 y 軸的正值是往上，而 z 軸的正值是從原點朝向檢視器往外。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 2d 圖形的座標系統將原點置於轉譯區域 （通常是螢幕） 的左上方。 在 2D 系統中，x 軸的正值是往右，y 軸的正值則是往下。  在 3d 座標系統中，不過，原點位於轉譯區域中，中央的正 x 軸的正值向右，但 y 軸的正值向上相反的而正 z 軸往外從原始伺服器朝向檢視器。  
   
  ![座標系統](./media/coordsystem-1.png "CoordSystem 1")  
 傳統的 2D 和 3D 座標系統表示法  
   
- 這些軸所定義的空間是針對 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 物件的靜態參考座標系。 當您在此空間中建置模型，並建立光線和觀景窗來檢視這些模型時，有助於區分此靜態參考座標系 (或稱為「世界空間」) 與您為每個模型套用轉換時建立的當地參考座標系。 也請記住，在世界空間中的物件取決於光線和觀景窗設定，可能看起來完全不同，或者完全無法看見，但觀景窗的位置不會改變世界空間中物件的位置。  
+ 這些軸所定義的空間是針對 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 3D 物件的靜態參考座標系。 當您在此空間中建置模型，並建立光線和觀景窗來檢視這些模型時，有助於區分此靜態參考座標系 (或稱為「世界空間」) 與您為每個模型套用轉換時建立的當地參考座標系。 也請記住，在世界空間中的物件取決於光線和觀景窗設定，可能看起來完全不同，或者完全無法看見，但觀景窗的位置不會改變世界空間中物件的位置。  
   
 <a name="cameras"></a>   
 ## <a name="cameras-and-projections"></a>觀景窗和投影  
- 在 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 環境中工作的開發人員習慣在二維的螢幕上放置繪圖基元。 當您建立 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 場景時，請務必記住，您是真的要建立 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 物件的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 表示法。 因為 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 場景會因為旁觀者的視角而有所不同，所以您必須指定該視角。 <xref:System.Windows.Media.Media3D.Camera>類別可讓您指定此視角[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]場景。  
+ 工作 2d 中開發人員習慣在二維的螢幕上放置繪圖基元。 當您建立 3d 場景時，務必記得，您真的要建立 3d 物件的 2d 表示法。 由於 3d 場景的外觀有所不同旁觀者的觀點來看，您必須指定該視角。 <xref:System.Windows.Media.Media3D.Camera>類別可讓您指定此視角 3d 場景。  
   
- 另一種了解如何在 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 表面上表示 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 場景的方式是將場景描述為在檢視表面上的投影。 <xref:System.Windows.Media.Media3D.ProjectionCamera>可讓您指定不同的投影和其屬性，以變更旁觀者如何看到[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]模型。 A<xref:System.Windows.Media.Media3D.PerspectiveCamera>指定依透視法縮短場景的投影。  換句話說，<xref:System.Windows.Media.Media3D.PerspectiveCamera>提供消失點的透視圖。  您可以指定觀景窗在場景座標空間中的位置、觀景窗的方向和視野，以及定義場景中「向上」方向的向量。 下圖說明<xref:System.Windows.Media.Media3D.PerspectiveCamera>的投影。  
+ 若要了解 2d 介面上呈現 3d 場景的方式的另一個方法是將場景描述為在檢視表面上的投影。 <xref:System.Windows.Media.Media3D.ProjectionCamera>可讓您指定不同的投影和其屬性，以變更旁觀者如何看到 3d 模型。 A<xref:System.Windows.Media.Media3D.PerspectiveCamera>指定依透視法縮短場景的投影。  換句話說，<xref:System.Windows.Media.Media3D.PerspectiveCamera>提供消失點的透視圖。  您可以指定觀景窗在場景座標空間中的位置、觀景窗的方向和視野，以及定義場景中「向上」方向的向量。 下圖說明<xref:System.Windows.Media.Media3D.PerspectiveCamera>的投影。  
   
  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>並<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A>屬性的<xref:System.Windows.Media.Media3D.ProjectionCamera>限制觀景窗的投影範圍。 由於觀景窗可能會位在場景中的任何地方，觀景窗有可能實際上就位在模型內部或非常靠近模型，因此更難正確區分物件。  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> 可讓您指定超過此物件就不會繪製的相機中的最小距離。  相反地，<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A>可讓您指定從相機超出就不會繪製物件，以確保太遠而無法辨識的物件將不會包含在場景中的距離。  
   
  ![觀景窗設定](./media/coordsystem-6.png "CoordSystem 6")  
 觀景窗位置  
   
- <xref:System.Windows.Media.Media3D.OrthographicCamera> 指定正交投影[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]模型到[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]視覺化介面。 與其他觀景窗相同，它會指定位置、檢視方向和「向上」方向。 不同於<xref:System.Windows.Media.Media3D.PerspectiveCamera>，不過<xref:System.Windows.Media.Media3D.OrthographicCamera>描述不包含透視縮短的投影。 換句話說，<xref:System.Windows.Media.Media3D.OrthographicCamera>描述邊都平行，而不是一個邊某個點相遇的在觀景窗的檢視方塊。 下圖顯示相同的模型，因為檢視使用<xref:System.Windows.Media.Media3D.PerspectiveCamera>和<xref:System.Windows.Media.Media3D.OrthographicCamera>。  
+ <xref:System.Windows.Media.Media3D.OrthographicCamera> 指定正交投影到 2d 視覺介面的 3d 模型。 與其他觀景窗相同，它會指定位置、檢視方向和「向上」方向。 不同於<xref:System.Windows.Media.Media3D.PerspectiveCamera>，不過<xref:System.Windows.Media.Media3D.OrthographicCamera>描述不包含透視縮短的投影。 換句話說，<xref:System.Windows.Media.Media3D.OrthographicCamera>描述邊都平行，而不是一個邊某個點相遇的在觀景窗的檢視方塊。 下圖顯示相同的模型，因為檢視使用<xref:System.Windows.Media.Media3D.PerspectiveCamera>和<xref:System.Windows.Media.Media3D.OrthographicCamera>。  
   
  ![正視圖和遠近景深投射](./media/camera-projections4.png "Camera_projections4")  
 透視投影和正視投影  
@@ -57,11 +57,11 @@ ms.locfileid: "64647108"
 <a name="models_meshes"></a>   
 ## <a name="model-and-mesh-primitives"></a>模型和網格基元  
   
- <xref:System.Windows.Media.Media3D.Model3D> 是抽象的基底類別，代表泛型[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]物件。 若要建置[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]場景，您需要一些物件，若要檢視，並構成場景圖形物件衍生自<xref:System.Windows.Media.Media3D.Model3D>。 目前，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支援模型化幾何與<xref:System.Windows.Media.Media3D.GeometryModel3D>。 <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>此模型的屬性採用網格基元。  
+ <xref:System.Windows.Media.Media3D.Model3D> 是代表泛用的 3d 物件的抽象基底類別。 若要建置 3d 場景，您需要一些物件，若要檢視，並構成場景圖形物件衍生自<xref:System.Windows.Media.Media3D.Model3D>。 目前，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支援模型化幾何與<xref:System.Windows.Media.Media3D.GeometryModel3D>。 <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>此模型的屬性採用網格基元。  
   
- 若要建立模型，請先建立基元 (也就是網格)。 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 基元是形成單一 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 實體的頂點集合。 大部分 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 系統都提供以最簡單的封閉圖形 (由三個頂點定義的三角形) 塑造而成的基元。  因為三角形的三個點共面，所以您可以持續加入三角形，以塑造出更複雜的圖形 (稱為網格)。  
+ 若要建立模型，請先建立基元 (也就是網格)。 在 3d 物件是形成單一的 3d 實體的頂點集合。 大部分的 3d 系統提供的最簡單的封閉圖形來建立模型的基本類型： 定義由三個頂點的三角形。  因為三角形的三個點共面，所以您可以持續加入三角形，以塑造出更複雜的圖形 (稱為網格)。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]系統目前提供<xref:System.Windows.Media.Media3D.MeshGeometry3D>類別，可讓您指定任何幾何; 目前不支援預先定義[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]基本項目如球體和三次方的表單。 開始建立<xref:System.Windows.Media.Media3D.MeshGeometry3D>藉由指定一份三角形頂點，做為其<xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>屬性。 每個頂點指定為<xref:System.Windows.Media.Media3D.Point3D>。  (在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中，將此屬性指定為以三個為一組的數字清單代表每個頂點的座標)。根據網格的幾何，網格可以由許多三角形組成，其中有些三角形會共用相同的角 (頂點)。 若要正確繪製網格，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 需要哪些三角形共用哪些頂點的相關資訊。 您可以提供這項資訊藉由指定一份三角形索引與<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>屬性。 這份清單指定點中指定的順序<xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>清單將決定三角形。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 3d 系統目前提供<xref:System.Windows.Media.Media3D.MeshGeometry3D>類別，可讓您指定任何幾何; 目前不會支援預先定義的 3d 原始物件，像是球體和三次方的表單。 開始建立<xref:System.Windows.Media.Media3D.MeshGeometry3D>藉由指定一份三角形頂點，做為其<xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>屬性。 每個頂點指定為<xref:System.Windows.Media.Media3D.Point3D>。  (在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中，將此屬性指定為以三個為一組的數字清單代表每個頂點的座標)。根據網格的幾何，網格可以由許多三角形組成，其中有些三角形會共用相同的角 (頂點)。 若要正確繪製網格，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 需要哪些三角形共用哪些頂點的相關資訊。 您可以提供這項資訊藉由指定一份三角形索引與<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>屬性。 這份清單指定點中指定的順序<xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>清單將決定三角形。  
   
  [!code-xaml[basic3d#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
   
@@ -82,11 +82,11 @@ ms.locfileid: "64647108"
 <a name="materials"></a>   
 ## <a name="applying-materials-to-the-model"></a>對模型套用材質  
   
- 若要讓網格看起來像三維物件，就必須套用紋理以涵蓋由其頂點和三角形所定義的表面，讓觀景窗可以點亮並投影表面。 在  [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]，您使用<xref:System.Windows.Media.Brush>類別來套用色彩、 圖樣、 漸層或其他視覺內容區域的畫面。  不過，[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 物件的外觀是光源模型的函式，而不只是對物件套用的色彩或圖樣。 真實的物體會根據物體表面的質地以不同方式反射光線︰光滑而閃亮的表面看起來會與粗糙或黯淡的表面不同，而一些物體看起來會吸收光線，一些物體則會發亮。 可對 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 物件套用的所有筆刷都可對 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 物件套用，但是您無法直接套用。  
+ 若要讓網格看起來像三維物件，就必須套用紋理以涵蓋由其頂點和三角形所定義的表面，讓觀景窗可以點亮並投影表面。 在 2d，您可以使用<xref:System.Windows.Media.Brush>類別來套用色彩、 圖樣、 漸層或其他視覺內容區域的畫面。  外觀的 3d 物件，不過，是光源模型的而不只是色彩或圖樣套用至它們的函式。 真實的物體會根據物體表面的質地以不同方式反射光線︰光滑而閃亮的表面看起來會與粗糙或黯淡的表面不同，而一些物體看起來會吸收光線，一些物體則會發亮。 您可以套用相同的所有筆刷到 3d 物件，您可以套用至 2d 物件，但是您無法直接套用。  
   
  若要定義模型表面的特性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.Media.Media3D.Material>抽象類別。 Material 的具體子類別會決定模型表面的一些外觀特性，每個特性也提供您可以傳遞 SolidColorBrush、TileBrush 或 VisualBrush 的 Brush 屬性。  
   
-- <xref:System.Windows.Media.Media3D.DiffuseMaterial> 指定模型將套用的筆刷，如同該模型已擴散光源。 使用 DiffuseMaterial 非常類似直接對 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 模型使用筆刷；模型表面不會反射光線但看起來閃亮。  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> 指定模型將套用的筆刷，如同該模型已擴散光源。 使用 DiffuseMaterial 非常類似直接在 2d 模型; 上使用筆刷模型介面不會反映為不過閃亮的光線。  
   
 - <xref:System.Windows.Media.Media3D.SpecularMaterial> 指定模型將套用的筆刷，如同模型表面堅硬或閃亮，能夠反射強光。 您可以藉由指定的值來設定此反射質地或 「 閃亮 」，材質會提供建議的程度<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>屬性。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "64647108"
   
  若要達到某些表面質地，例如發光或反射效果，您可以對模型連續套用數種不同的筆刷。 您可以套用，並使用重複使用多個 Material<xref:System.Windows.Media.Media3D.MaterialGroup>類別。 在多個轉譯階段中，會從頭到尾套用 MaterialGroup 的子系。  
   
- 下列程式碼範例示範如何對 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 模型以筆刷的方式套用純色和繪圖。  
+ 下列程式碼範例示範如何將純色和繪圖當做筆刷套用至 3d 模型。  
   
  [!code-xaml[basic3d#Basic3DXAML3DN5](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn5)]  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64647108"
   
 <a name="lights"></a>   
 ## <a name="illuminating-the-scene"></a>場景照明  
- [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形中的光線運作方式和真實世界的光線相同︰讓表面看得見。 而且，光線還會決定投影時要包含場景的哪個部分。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的光線物件會建立各種光線和陰影效果，而且會仿照真實世界各種光線的行為。 您在場景中必須至少包含一種光線，否則會看不到模型。  
+ 在 3d 圖形中的號誌執行真實世界中執行的燈號︰ 讓表面看。 而且，光線還會決定投影時要包含場景的哪個部分。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的光線物件會建立各種光線和陰影效果，而且會仿照真實世界各種光線的行為。 您在場景中必須至少包含一種光線，否則會看不到模型。  
   
  下列光線衍生自基底類別<xref:System.Windows.Media.Media3D.Light>:  
   
@@ -134,7 +134,7 @@ ms.locfileid: "64647108"
   
 <a name="transforms"></a>   
 ## <a name="transforming-models"></a>轉換模型  
- 當您建立模型時，模型在場景中有特定的位置。 若要在場景中四處移動模型、旋轉模型，或變更模型的大小，變更定義模型的頂點本身並不實用。  而是要像在 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 一樣，對模型套用轉換。  
+ 當您建立模型時，模型在場景中有特定的位置。 若要在場景中四處移動模型、旋轉模型，或變更模型的大小，變更定義模型的頂點本身並不實用。  而是要像在 2D 一樣，對模型套用轉換。  
   
  每個模型物件都<xref:System.Windows.Media.Media3D.Model3D.Transform%2A>與移動、 重新導向，或調整模型大小的屬性。  當您套用轉換時，可以透過轉換所指定的任何向量或值，有效率地位移模型的所有點。 換句話說，您已經轉換定義模型所在的座標空間 (「模型空間」)，但尚未變更在整個場景的座標系統 (「世界空間」) 中組成模型幾何的值。  
   
@@ -142,9 +142,9 @@ ms.locfileid: "64647108"
   
 <a name="animations"></a>   
 ## <a name="animating-models"></a>以動畫顯示模型  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 實作參與和 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 圖形相同的計時和動畫系統。 換句話說，若要以動畫顯示 3D 場景，就要以動畫顯示其模型的屬性。 您可以直接以動畫顯示基元的屬性，但是以動畫顯示變更模型位置或外觀的轉換通常更容易。 因為轉換可以套用至<xref:System.Windows.Media.Media3D.Model3DGroup>物件以及個別模型，它就 Model3DGroup 的子系和另一組群組的子物件的動畫套用一組動畫。 您也可以以動畫顯示場景光線的屬性，達到各種視覺效果。 最後，您還可以選擇以動畫顯示觀景窗的位置或視野，以動畫顯示投影本身。 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 計時和動畫系統的背景資訊，請參閱[動畫概觀](animation-overview.md)、[分鏡腳本概觀](storyboards-overview.md)，以及 [Freezable 物件概觀](../advanced/freezable-objects-overview.md)等主題。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 3D 實作參與和 2D 圖形相同的計時和動畫系統。 換句話說，若要以動畫顯示 3D 場景，就要以動畫顯示其模型的屬性。 您可以直接以動畫顯示基元的屬性，但是以動畫顯示變更模型位置或外觀的轉換通常更容易。 因為轉換可以套用至<xref:System.Windows.Media.Media3D.Model3DGroup>物件以及個別模型，它就 Model3DGroup 的子系和另一組群組的子物件的動畫套用一組動畫。 您也可以以動畫顯示場景光線的屬性，達到各種視覺效果。 最後，您還可以選擇以動畫顯示觀景窗的位置或視野，以動畫顯示投影本身。 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 計時和動畫系統的背景資訊，請參閱[動畫概觀](animation-overview.md)、[分鏡腳本概觀](storyboards-overview.md)，以及 [Freezable 物件概觀](../advanced/freezable-objects-overview.md)等主題。  
   
- 若要以動畫顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的物件，您要建立時間軸、定義動畫 (這實際上是某些屬性值隨時間的變化)，並指定要套用動畫的屬性。 因為中的所有物件[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]場景是子系<xref:System.Windows.Controls.Viewport3D>，您想要套用至場景之任何動畫的目標屬性都是 viewport3d 的內容。  
+ 若要以動畫顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的物件，您要建立時間軸、定義動畫 (這實際上是某些屬性值隨時間的變化)，並指定要套用動畫的屬性。 因為在 3d 場景中的所有物件的子系<xref:System.Windows.Controls.Viewport3D>，您想要套用至場景之任何動畫的目標屬性都是 viewport3d 的內容。  
   
  假設您想要讓模型就地搖晃。 您可以選擇要套用<xref:System.Windows.Media.Media3D.RotateTransform3D>模型，並以動畫顯示其旋轉軸從一個向量到另一個。 下列程式碼範例示範如何對轉換之 Rotation3D 的 Axis 屬性套用 Vector3DAnimation，假設 RotateTransform3D 是要使用 TransformGroup 對模型套用的其中一個轉換。  
   

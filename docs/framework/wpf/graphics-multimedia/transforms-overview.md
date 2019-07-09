@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 7f5fad56d00e9a7e33843222a81593a90bf7e733
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28d990bc2ea043fa1770054877148f1f09acefd0
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651909"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662622"
 ---
 # <a name="transforms-overview"></a>轉換概觀
-本主題描述如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>類別來旋轉、 縮放、 移動 （平移） 及扭曲<xref:System.Windows.FrameworkElement>物件。  
+本主題描述如何使用 2d<xref:System.Windows.Media.Transform>類別來旋轉、 縮放、 移動 （平移） 及扭曲<xref:System.Windows.FrameworkElement>物件。  
 
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>什麼是轉換？  
@@ -45,7 +45,7 @@ ms.locfileid: "64651909"
   
 <a name="transformClassesSection"></a>   
 ## <a name="transform-classes"></a>轉換類別  
- Windows Presentation Foundation (WPF) 提供下列[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>常見轉換作業的類別：  
+ Windows Presentation Foundation (WPF) 提供下列的 2d<xref:System.Windows.Media.Transform>常見轉換作業的類別：  
   
 |類別|描述|範例|圖例|  
 |-----------|-----------------|-------------|------------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "64651909"
 |<xref:System.Windows.Media.TransformGroup>|群組多個<xref:System.Windows.Media.TransformGroup>成單一物件<xref:System.Windows.Media.Transform>您可以接著套用以轉換屬性。|[將多個轉換套用至物件](how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|建立自訂的轉換不會提供其他<xref:System.Windows.Media.Transform>類別。 當您使用<xref:System.Windows.Media.MatrixTransform>，您會直接操作矩陣。|[使用 MatrixTransform 建立自訂轉換](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- Windows Presentation Foundation (WPF) 也會提供[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]轉換。 如需詳細資訊，請參閱 <xref:System.Windows.Media.Media3D.Transform3D> 類別。  
+ Windows Presentation Foundation (WPF) 也會提供 3d 轉換。 如需詳細資訊，請參閱 <xref:System.Windows.Media.Media3D.Transform3D> 類別。  
   
 <a name="transformationproperties"></a>   
 ## <a name="common-transformation-properties"></a>常見轉換屬性  

@@ -1,20 +1,20 @@
 ---
-title: HOW TO：在立體場景中建立材質屬性的動畫
+title: 作法：在立體場景中建立材質屬性的動畫
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Material properties [WPF], animating in 3-D scenes
 - animation [WPF], Material properties in 3-D scenes
 - 3-D scenes [WPF], animating Material properties
 ms.assetid: 229fd6eb-7401-4992-b0c9-8b28de230c0f
-ms.openlocfilehash: 58e880a2828d21ee76f7fac6bdcf313e8454e65b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8dfd7f01b87e2becfbcf57544ec4f8340cf8d5cc
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789320"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662544"
 ---
-# <a name="how-to-animate-material-properties-in-a-3-d-scene"></a>HOW TO：在立體場景中建立材質屬性的動畫
-此範例示範如何建立動畫<xref:System.Windows.Media.Brush.Opacity%2A>的屬性<xref:System.Windows.Media.Media3D.Material>套用至[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]模型。  
+# <a name="how-to-animate-material-properties-in-a-3-d-scene"></a>作法：在立體場景中建立材質屬性的動畫
+此範例示範如何建立動畫<xref:System.Windows.Media.Brush.Opacity%2A>屬性<xref:System.Windows.Media.Media3D.Material>套用至 3d 模型。  
   
  下列程式碼範例會定義<xref:System.Windows.Media.LinearGradientBrush>做為<xref:System.Windows.Media.Media3D.Material>套用至 3D 物件。  
   

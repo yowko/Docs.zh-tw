@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610558"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661880"
 ---
 # <a name="standard-query-operator-translation"></a>標準查詢運算子轉譯
 
@@ -198,13 +198,13 @@ Visual Basic 編譯器 (Compiler) 所用的下列 Helper 函式會轉譯為對�
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 支援
 
-下列[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]（相較於 Microsoft SQL Server 2005） 的限制會影響[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援。
+下列的 SQL Server 2000 限制 （相較於 Microsoft SQL Server 2005） 會影響[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 和 Outer Apply 運算子
 
-這些運算子不適用於 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試進行一連串重寫作業，以便將它們取代成適當的聯結 (Join)。
+這些運算子不適用於 SQL Server 2000。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試進行一連串重寫作業，以便將它們取代成適當的聯結 (Join)。
 
-`Cross Apply` 和 `Outer Apply` 是為了關聯性 (Relationship) 巡覽而產生的。 會進行這類重寫的查詢集還沒整理出來。 因此，對於 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 而言，最基本可支援的查詢集就是與關聯性巡覽無關的查詢集。
+`Cross Apply` 和 `Outer Apply` 是為了關聯性 (Relationship) 巡覽而產生的。 會進行這類重寫的查詢集還沒整理出來。 基於這個理由，最小的查詢集支援 SQL Server 2000 會是未牽涉到關聯性導覽的集合。
 
 ### <a name="text--ntext"></a>text / ntext
 
@@ -214,11 +214,11 @@ Visual Basic 編譯器 (Compiler) 所用的下列 Helper 函式會轉譯為對�
 
 ### <a name="behavior-triggered-by-nested-queries"></a>巢狀查詢觸發的行為
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] （透過 SP4) 繫結器會有巢狀查詢觸發的某些特性。 無法妥善定義的 SQL 查詢集，就會觸發這些特性。 基於這個理由，您不能定義一組[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查詢可能會導致 SQL Server 例外狀況。
+SQL Server 2000 （透過 SP4) 繫結器具有一些由巢狀查詢觸發的特性。 無法妥善定義的 SQL 查詢集，就會觸發這些特性。 基於這個理由，您不能定義一組[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查詢可能會導致 SQL Server 例外狀況。
 
 ### <a name="skip-and-take-operators"></a>Skip 和 Take 運算子
 
-<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱中的"Skip 和 Take 例外狀況在 SQL Server 2000"項目[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。
+<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱中的"Skip 和 Take 例外狀況在 SQL Server 2000"項目[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。
 
 ## <a name="object-materialization"></a>物件具體化
 
