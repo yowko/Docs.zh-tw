@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e110f1f5ea326c232c7c96bb05913080e950083d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 173eda2882ca9172c840d0d4fa65ef972fd779da
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796613"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749332"
 ---
 # <a name="ihosttaskmanagersetuilocale-method"></a>IHostTaskManager::SetUILocale 方法
 Common language runtime (CLR) 已變更的使用者介面 (UI) 的地區設定或在目前執行之工作的文化特性，會告知主應用程式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetUILocale (  
     [in] LCID lcid  
 );  
@@ -61,7 +61,7 @@ HRESULT SetUILocale (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

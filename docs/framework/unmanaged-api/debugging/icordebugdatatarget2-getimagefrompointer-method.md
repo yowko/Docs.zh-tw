@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 939cabe1-b647-4090-b662-eeec23c6c58d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dab9183075f563f52a4fc982eda5cb172556554
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5656bf28d92030ed8d8271d795e41f881932a73
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782976"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750217"
 ---
 # <a name="icordebugdatatarget2getimagefrompointer-method"></a>ICorDebugDataTarget2::GetImageFromPointer 方法
 從模組中的位址傳回模組基底位址和大小。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetImageFromPointer(  
    [in] CORDB_ADDRESS addr,   
    [out] CORDB_ADDRESS *pImageBase,   
@@ -46,7 +46,7 @@ HRESULT GetImageFromPointer(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

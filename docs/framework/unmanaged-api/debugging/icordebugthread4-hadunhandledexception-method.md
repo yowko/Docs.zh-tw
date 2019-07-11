@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12433786f353212c1ffbd57e9bf526c3ecc60e9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bbc3379ff9523564f4eae7da96fca2247601fcd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993833"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765166"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException 方法
 指出是否在執行緒曾經有未處理的例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetBlockingObjects (  
     [out] ICorDebugBlockingObjectEnum **ppBlockingObjectEnum  
     );  
@@ -57,7 +57,7 @@ HRESULT GetBlockingObjects (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

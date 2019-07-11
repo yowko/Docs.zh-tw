@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457548"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762332"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概觀 (WPF)
 本主題說明 XAML 語言的功能，並示範如何使用 XAML 撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式。 本主題特別針對以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的 XAML 進行描述。 就語言概念而言，XAML 本身涵蓋的範圍比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 還要廣。  
@@ -64,7 +64,7 @@ ms.locfileid: "66457548"
 ### <a name="property-element-syntax"></a>屬性元素語法  
  對於物件元素的某些屬性 (Property) 而言，屬性 (Attribute) 語法並不適用，這是因為在屬性 (Attribute) 語法的引號與字串限制下，無法適當表達提供屬性 (Property) 值所需的物件和資訊。 對於這種情況，可以使用另一種稱為屬性 (Property) 元素語法的語法。  
   
- 屬性 (Property) 元素開始標記的語法是 `<`*typeName*`.`*propertyName*`>`。 該標記的內容通常會是型別的物件元素 (屬性 (Property) 會以該型別作為它的值)。 指定內容後，您必須以結束標記結束屬性 (Property) 元素。 結束標記的語法則是 `</`*typeName*`.`*propertyName*`>`。  
+ 屬性 (Property) 元素開始標記的語法是 `<`*typeName*`.`*propertyName*`>`。 一般而言，該標記的內容是物件元素的屬性會做為其值的型別。 指定內容後，您必須關閉以結束標記的屬性項目。 結束標記的語法則是 `</`*typeName*`.`*propertyName*`>`。  
   
  若可以使用屬性 (Attribute) 語法，則使用屬性 (Attribute) 語法通常比較方便，並且可以讓標記 (Markup) 更為精簡，不過這通常只是樣式上的問題，而非技術上的限制。 下列範例顯示的屬性 (Property) 會設定成跟上述屬性 (Attribute) 語法範例相同，但這次會對 `Button` 的所有屬性 (Property) 使用屬性 (Property) 元素語法。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66457548"
  其 XAML 處理器的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作包含能夠辨認 WPF 核心組件的基礎結構。 廣為人知的一點是，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 核心組件包含支援將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 對應至預設 XAML 命名空間的型別。 這項功能可以透過屬於專案組建檔以及 WPF 組建與專案系統的組態進行啟用。 因此，必須將預設的 XAML 命名空間宣告為預設的 `xmlns`，才能夠參考來自 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 組件的 XAML 元素。  
   
 ### <a name="the-x-prefix"></a>X： 前置詞  
- 在先前的根元素範例中，前置詞 `x:` 會用於對應 XAML 命名空間 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]，它是支援 XAML 語言建構的專屬 XAML 命名空間。 這個 `x:` 前置詞會用於對應範例中專案範本的這個 XAML 命名空間，同時整份 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 說明文件中也會使用這個前置詞。 XAML 語言的 XAML 命名空間包含數種您在 XAML 中會經常使用的程式設計建構。 下列清單是您最常使用的 `x:` 前置詞程式設計建構：  
+ 在先前的根元素範例中，前置詞 `x:` 會用於對應 XAML 命名空間 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]，它是支援 XAML 語言建構的專屬 XAML 命名空間。 這個 `x:` 前置詞會用於對應範例中專案範本的這個 XAML 命名空間，同時整份 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 說明文件中也會使用這個前置詞。 XAML 語言 XAML 命名空間包含數個您會在您的 XAML 中經常使用的程式設計建構。 下列清單是您最常使用的 `x:` 前置詞程式設計建構：  
   
 - [X:key](../../xaml-services/x-key-directive.md):設定中每個資源的唯一索引鍵<xref:System.Windows.ResourceDictionary>（或其他架構中類似字典的概念）。 您通常在 WPF 應用程式標記中看到的 `x:`，大概有 90% 都是 `x:Key`。  
   

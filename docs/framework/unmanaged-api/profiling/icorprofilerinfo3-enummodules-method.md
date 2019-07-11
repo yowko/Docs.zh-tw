@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be5d05c34272b9fa5755b4d0e22fa9094707c5ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ea379befab7711d1c6bc2d6005cb62d853acce9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703552"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756973"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>ICorProfilerInfo3::EnumModules 方法
 傳回提供循序逐一查看 Managed 模組集合方法的列舉，其中該模組被載入至應用程式中。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);  
 ```  
   
@@ -46,7 +46,7 @@ HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1d91306c9cc9788046d19cc5de9e4712cdaa7e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933688"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772542"
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化簡介
 
@@ -133,7 +133,7 @@ XML 序列化的另一項優點是對於您開發的應用程式沒有限制，�
 
 - 只可以序列化公用 (Public) 屬性和欄位。 屬性必須有公用存取子 (get 與 set 方法)。 若您必須對非公用資料序列化，請使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別，而非 XML 序列化。
 
-- 類別必須有由 **XmlSerializer** 序列化的預設建構函式。
+- 類別必須具有要序列化的無參數建構函式**XmlSerializer**。
 
 - 無法將方法序列化。
 

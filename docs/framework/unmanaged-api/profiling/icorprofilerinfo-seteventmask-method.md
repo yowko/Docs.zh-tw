@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 122a621552b49f476f219216ac0a52011c1542ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f3f61caf0f4993c49d2956a37068aa826c4ac29
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860928"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772121"
 ---
 # <a name="icorprofilerinfoseteventmask-method"></a>ICorProfilerInfo::SetEventMask 方法
 設定一個值，以指定分析工具想要從通用語言執行平台 (CLR) 接收其通知的事件類型。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetEventMask(  
     [in] DWORD dwEvents);  
 ```  
@@ -50,7 +50,7 @@ HRESULT SetEventMask(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

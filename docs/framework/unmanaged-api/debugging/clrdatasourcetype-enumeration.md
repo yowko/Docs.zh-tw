@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: c8b3f338659e2784db8deca3e1776e7926c30c32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d26cf45a0243d61757af5d9d0c00cf135ae15bdf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609680"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740864"
 ---
 # <a name="clrdatasourcetype-enumeration"></a>CLRDataSourceType 列舉
 
@@ -30,7 +30,7 @@ ms.locfileid: "61609680"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 typedef enum
 {
     CLRDATA_SOURCE_TYPE_INVALID        = 0x00, // To indicate that nothing else applies
@@ -39,7 +39,7 @@ typedef enum
 
 ## <a name="members"></a>成員
 
-| 成員                        | 描述                           |
+| 成員                        | 說明                           |
 | ----------------------------- | ------------------------------------- |
 | `CLRDATA_SOURCE_TYPE_INVALID` | 表示沒有其他項目適用於 |
 
@@ -50,9 +50,9 @@ typedef enum
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** None  
+**標頭：** 無  
 **LIBRARY:** None  
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
 

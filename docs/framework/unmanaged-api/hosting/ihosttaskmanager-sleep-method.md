@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4618f7ea08aa304ff5e77800cf3c0a90dd88fdbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e25f2e49ab25d2df827fdd59526b13976d21219
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796657"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756561"
 ---
 # <a name="ihosttaskmanagersleep-method"></a>IHostTaskManager::Sleep 方法
 將目前的工作會進入睡眠會告知主應用程式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Sleep (  
     [in] DWORD dwMilliseconds,  
     [in] DWORD option  
@@ -64,7 +64,7 @@ HRESULT Sleep (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

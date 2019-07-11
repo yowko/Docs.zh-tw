@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae31506d4ba34bf262f49bc2321c6cfcd30f1b60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e2e6a4624403dcab30bdb7b6d3af0226204cac0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782690"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744653"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget 介面
 提供可讓開發人員對通用語言執行平台 (CLR) 環境中的 Silverlight 應用程式進行偵錯的方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 interface ICorDebugRemoteTarget  : IUnknown  
 {  
     HRESULT GetHostName (  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92137e1a5b0923bc34745513715934c483616700
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e74cb663f968cc9b1b04a912307e3b4a12e86d4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000489"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748670"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert 方法
 將指定函式的所有執行個體還原成其原始版本。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT RequestRevert (  
    [in] ULONG    cFunctions,  
    [in, size_is(cFunctions)]  ModuleID    moduleIds[],  
@@ -53,7 +53,7 @@ HRESULT RequestRevert (
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|嘗試還原所有要求；不過，必須檢查傳回的狀態陣列，以判斷哪些函式成功還原。|  
 |CORPROF_E_CALLBACK4_REQUIRED|分析工具必須實作[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)都必須支援這個呼叫的介面。|  
@@ -82,7 +82,7 @@ HRESULT RequestRevert (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

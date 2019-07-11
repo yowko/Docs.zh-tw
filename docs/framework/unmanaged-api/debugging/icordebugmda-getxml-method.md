@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e78b8a2069671d0fe790956ca914225325a78bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 003a6546b3316f2a2a65bce4537c60dcf62b3197
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916613"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752857"
 ---
 # <a name="icordebugmdagetxml-method"></a>ICorDebugMDA::GetXML 方法
 取得由 managed 偵錯助理 (MDA) 相關聯的完整 XML 資料流[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetXML (  
     [in] ULONG32   cchName,  
     [out] ULONG32  *pcchName,  
@@ -58,7 +58,7 @@ HRESULT GetXML (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb970d31fb5158adc7dbcbb7cc0175cc91c83c8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de1646cdbc11369b43a821d8b762879d1df7ed2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698040"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751542"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE 結構
 包含屬性的中繼資料資訊的相關[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)執行個體。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE {  
     LPCWSTR  pszNamespace;  
     LPCWSTR  pszName;  
@@ -38,7 +38,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`pszNamespace`|以 null 結束的字元字串，包含命名空間的指標，此屬性會是中。|  
 |`pszName`|以 null 結束的字元字串，包含屬性名稱的指標。|  
@@ -54,7 +54,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
  **標頭：** Isolation.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

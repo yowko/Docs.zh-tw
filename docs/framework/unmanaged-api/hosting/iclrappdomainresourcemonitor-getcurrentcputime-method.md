@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8022428c7f803f96e2fa150588edf95542bf19b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d5149c7e3430c5e7c59a47c4ab5dc98d878de39
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985214"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766674"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime 方法
 取得已建立應用程式網域以來，在目前的應用程式網域中，執行時使用的所有執行緒的處理器總時間。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,  
                           [out] ULONGLONG* pMilliseconds);  
 ```  
@@ -43,7 +43,7 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |COR_E_APPDOMAINUNLOADED|應用程式定義域已卸載或不存在。|  
@@ -59,7 +59,7 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 280dc3f0271d7326fe4c22b813abebfd4d45c89e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9348652129a3357784654006dc16d822298f28f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749146"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749956"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState 方法
 設定程序中的所有 managed 執行緒的偵錯狀態。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetAllThreadsDebugState (  
     [in] CorDebugThreadState  state,  
     [in] ICorDebugThread      *pExceptThisThread  
@@ -53,6 +53,6 @@ HRESULT SetAllThreadsDebugState (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

@@ -11,12 +11,12 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 422fdfef6bea40e0f4bcc7447df8dba1eab2896e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c70b97e7af9fdc76c579c5940e2436232f6bc2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919083"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748646"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7::GetInMemorySymbolsLength 方法
 [在 .NET Framework 4.6.1 及更新版本中支援]  
@@ -25,7 +25,7 @@ ms.locfileid: "61919083"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetInMemorySymbolsLength(  
         [in] ModuleID moduleId,  
         [out] DWORD* pCountSymbolBytes  
@@ -57,7 +57,7 @@ HRESULT GetInMemorySymbolsLength(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

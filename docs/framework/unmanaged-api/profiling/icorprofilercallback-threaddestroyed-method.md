@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4c45290b1ef4360e51b5ed8e1b0fac3dcdde727
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f114d32432cccd88e36ff76ed49c610bd03f873e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041622"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747007"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed 方法
 通知分析工具已終結執行緒。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ThreadDestroyed(  
     [in] ThreadID threadId);  
 ```  
@@ -48,7 +48,7 @@ HRESULT ThreadDestroyed(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

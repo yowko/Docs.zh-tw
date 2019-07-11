@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59ef7bf8f17e79c9ae7b80dd314a5afce7fa9584
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804aa4a6508713b2d6f2d154fc47e09638994468
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782924"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747359"
 ---
 # <a name="icordebugreferencevaluesetvalue-method"></a>ICorDebugReferenceValue::SetValue 方法
 設定指定的記憶體位址。 也就是說，這個方法會設定這個 ICorDebugReferenceValue 指向物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetValue (  
     [in] CORDB_ADDRESS    value  
 );  
@@ -46,4 +46,4 @@ HRESULT SetValue (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

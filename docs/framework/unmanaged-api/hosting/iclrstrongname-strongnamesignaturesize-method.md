@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0c81b51deb6affb3dd39677184ea0a4b2e6ff61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8bf6d69f8490f05532df3e164107760c2b574e2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782573"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755014"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a>ICLRStrongName::StrongNameSignatureSize 方法
 傳回強式名稱簽章的大小。 編譯器通常會使用這個方法來判斷要建立的延遲簽署組件時，檔案中保留多少空間。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT StrongNameSignatureSize (   
     [in]  BYTE   *pbPublicKeyBlob,  
     [in]  ULONG  cbPublicKeyBlob,   
@@ -57,7 +57,7 @@ HRESULT StrongNameSignatureSize (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

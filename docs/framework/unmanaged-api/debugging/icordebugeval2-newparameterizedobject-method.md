@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c35baaee13782566c64dd8447c6a034f699b5cd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666998"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753597"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject 方法
 具現化新的參數化的型別物件，並呼叫物件的建構函式方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT NewParameterizedObject (  
     [in] ICorDebugFunction     *pConstructor,  
     [in] ULONG32               nTypeArgs,  
@@ -65,4 +65,4 @@ HRESULT NewParameterizedObject (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

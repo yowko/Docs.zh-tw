@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: ea7dbc4f760a446440cb7291413d69b1202f80e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed440f3315fc25e82b648f21410acb7a2c2a08f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033835"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743675"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>使用部分方法加入商務邏輯
 您可以自訂 Visual Basic 和C#產生的程式碼，在您[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]使用的專案*部分方法*。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 產生的程式碼會將簽章定義成部分方法的一部分。 如果您想實作此方法，可以加入自己的部分方法。 如果您未加入自己的實作 (Implementation)，則編譯器 (Compiler) 會捨棄部分方法簽章並呼叫 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的預設方法。  
   
 > [!NOTE]
->  如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]將驗證和其他自訂項目加入至實體類別。  
+>  如果您使用 Visual Studio，您可以使用物件關聯式設計工具，將驗證和其他自訂項目加入至實體類別。  
   
  例如，Northwind 範例資料庫中 `Customer` 類別的預設對應包含下列部分方法：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62033835"
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>說明  
  下列範例會先顯示 `ExampleClass`，因為它可能是由程式碼產生工具 (例如 SQLMetal) 所定義，然後顯示您如何僅實作其中一種方法。  
   
 ### <a name="code"></a>程式碼  

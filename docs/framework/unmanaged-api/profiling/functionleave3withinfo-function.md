@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce1f5a707cd739ec3b3e8384be2c70843748c8a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 495ed887126f0b569acc1309609a0c132d0766eb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586706"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763319"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo 函式
 通知分析工具，從函式，傳回控制項，並提供可以傳遞至控制代碼[ICorProfilerInfo3::GetFunctionLeave3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md)擷取堆疊框架和傳回值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void __stdcall FunctionLeave3WithInfo(  
                [in] FunctionIDOrClientID functionIDOrClientID,  
                [in] COR_PRF_ELT_INFO eltInfo);  
@@ -63,7 +63,7 @@ void __stdcall FunctionLeave3WithInfo(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e480c408c10eb9e135f260426750f7747e5d8ce5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c150f4bda901627fc21ed54926c3cf959bb829a3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044768"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776299"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef 方法
 為這個組件所參考的組件，建立包含其中繼資料的 `AssemblyRef` 結構，並且傳回關聯的中繼資料語彙基元。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT DefineAssemblyRef (  
     [in]  void                *pbPublicKeyOrToken,  
     [in]  ULONG               cbPublicKeyOrToken,  
@@ -79,7 +79,7 @@ HRESULT DefineAssemblyRef (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

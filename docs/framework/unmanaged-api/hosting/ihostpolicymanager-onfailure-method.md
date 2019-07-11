@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78d2b84598a034bf6c534745bcb99a080d039617
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3187a72d4b05be8d7b5b49df149366c4beb11d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993170"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779605"
 ---
 # <a name="ihostpolicymanageronfailure-method"></a>IHostPolicyManager::OnFailure 方法
 會告知 common language runtime (CLR) 即將採取的動作呼叫所指定的主機[iclrpolicymanager:: Setactiononfailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)資源配置或回收失敗的回應中的方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT OnFailure(  
     [in] EClrFailure   failure,  
     [in] EPolicyAction action  
@@ -61,7 +61,7 @@ HRESULT OnFailure(
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

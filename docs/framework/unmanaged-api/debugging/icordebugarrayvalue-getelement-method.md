@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be7eaeccb53e8b180aeb9492cd887f952bbaea5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 356f7ec9c50ce511883cbf0f5fbcb729493c92af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645639"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737578"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement 方法
 取得指定之陣列元素的值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetElement (  
     [in]  ULONG32          cdim,  
     [in, size_is(cdim), length_is(cdim)]   
@@ -59,4 +59,4 @@ HRESULT GetElement (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

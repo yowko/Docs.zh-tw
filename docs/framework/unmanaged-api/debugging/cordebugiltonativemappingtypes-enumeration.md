@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f62707fb1e52a96cf3f131e9c11fee82ab03f4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7d9f5373f2b4ea216ca517813b1334b9f5c38a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651762"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739964"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes 列舉
 指出特定範圍的 COR_DEBUG_IL_TO_NATIVE_MAP 結構的執行個體所表示的原生指令是否對應至特殊的程式碼區域。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorDebugIlToNativeMappingTypes {  
     NO_MAPPING = -1,  
     PROLOG     = -2,  
@@ -51,7 +51,7 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

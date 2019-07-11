@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88f86385ba4f4186d14994a2028ee11c42127546
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87e318c4f2367e8c66910978f4a9c89f36c95632
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927244"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766516"
 ---
 # <a name="igchostgetthreadstats-method"></a>IGCHost::GetThreadStats 方法
 取得每個執行緒統計資料進行記憶體回收。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetThreadStats (  
     [in] DWORD *pFiberCookie,  
     [in, out] COR_GC_THREAD_STATS *pStats  
@@ -50,7 +50,7 @@ HRESULT GetThreadStats (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

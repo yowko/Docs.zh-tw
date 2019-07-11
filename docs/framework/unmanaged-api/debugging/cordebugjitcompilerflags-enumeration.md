@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66a8ba59d221bb3fa2e815a1cbcfa79c474666cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792726"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739855"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags 列舉
 包含會影響 Managed Just-In-Time (JIT) 編譯器行為的值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorDebugJITCompilerFlags {  
   
     CORDEBUG_JIT_DEFAULT = 0x1,  
@@ -40,7 +40,7 @@ typedef enum CorDebugJITCompilerFlags {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`CORDEBUG_JIT_DEFAULT`|指定編譯器應追蹤編譯資料，並可讓最佳化。|  
 |`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|指定編譯器應追蹤編譯資料，但是會停用最佳化。|  
@@ -53,7 +53,7 @@ typedef enum CorDebugJITCompilerFlags {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

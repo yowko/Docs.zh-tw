@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28e6ad309af808638400fc27255acdee381b4c6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7d9874d4a609c353ae772b75a48af632bf4e85d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992312"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756539"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets 方法
 列舉指定中繼資料範圍內的物件權限。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EnumPermissionSets  
    [in, out] HCORENUM      *phEnum,   
    [in]      mdToken       tk,   
@@ -61,7 +61,7 @@ HRESULT EnumPermissionSets
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumPermissionSets` 已成功傳回。|  
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTokens`為零。|  
@@ -73,7 +73,7 @@ HRESULT EnumPermissionSets
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

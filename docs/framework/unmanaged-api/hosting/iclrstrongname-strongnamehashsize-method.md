@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91b84a980e8a670b8e8b2970cfc96ddd6f4c33b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 058ff84ad9d56ce1ce2defd50c20ce50e1d791a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704072"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747942"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize 方法
 使用指定的雜湊演算法取得雜湊所需的緩衝區大小。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT StrongNameHashSize (  
     [in]  ULONG   ulHashAlg,  
     [out] DWORD   *pcbSize  
@@ -53,7 +53,7 @@ HRESULT StrongNameHashSize (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

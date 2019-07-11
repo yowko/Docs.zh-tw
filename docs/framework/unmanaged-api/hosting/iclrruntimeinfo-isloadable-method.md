@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52257b30b8172b80f968df25115956b6995c1552
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4937c86be434ef5e97ec72763b7c53d5435bcaf4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771718"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774032"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable 方法
 指出此介面相關聯的執行階段是否可以載入到目前的程序，並考慮其他可能會載入到處理序的執行階段。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT IsLoadable(  
         [out, retval] BOOL *pbLoadable);  
 ```  
@@ -41,7 +41,7 @@ HRESULT IsLoadable(
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_POINTER|`pbLoadable` 為 null。|  
@@ -58,7 +58,7 @@ HRESULT IsLoadable(
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

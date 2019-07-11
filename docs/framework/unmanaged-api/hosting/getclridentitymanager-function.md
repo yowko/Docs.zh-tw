@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e18172ecf2d4300ae42cc42ecdb1783744cac105
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8ea4947582e4e8bfdb6873a90c5284e9ae9d8a62
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490426"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736248"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager 函式
 取得可讓 common language runtime (CLR) 管理身分識別的介面指標。  
@@ -30,7 +30,7 @@ ms.locfileid: "66490426"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 STDAPI GetCLRIdentityManager(  
     [in]  REFIID      riid,  
     [out] IUnknown  **ppManager  

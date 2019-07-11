@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51d29fed3d53611daa0042251ce09638399f7ed5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5d676e0fad33ca994b2e5bcd7adf269e306cb55
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723143"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761917"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>ICorDebugMDA::GetOSThreadId 方法
 取得所表示的 managed 偵錯助理 (MDA) 的作業系統 (OS) 執行緒識別碼[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)正在執行。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetOSThreadId (  
     [out] DWORD    *pOsTid  
 );  
@@ -49,7 +49,7 @@ HRESULT GetOSThreadId (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

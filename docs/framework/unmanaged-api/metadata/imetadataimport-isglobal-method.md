@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b956ac1717ffcb73e819e985450249754f80af2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13f8a50f3fcbe9d6e7602ca3bbeb36587ecff32c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777438"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778796"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal 方法
 取得一個值，用來表示指定中繼資料語彙基元所代表的欄位、方法或類型值是否具有全域範圍。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT IsGlobal (  
    [in]  mdToken     pd,  
    [out] int         *pbGlobal  
@@ -50,7 +50,7 @@ HRESULT IsGlobal (
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

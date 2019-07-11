@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54ccb52468a530280527252e0e0c43cc9edbb2c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05c4e2a5c16f11f80cc8356a65b746eab81a3899
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645470"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744406"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>ICorDebugAssembly3::EnumerateContainedAssemblies 方法
 取得這個組件所包含之組件的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EnumerateContainedAssemblies(  
     ICorDebugAssemblyEnum **ppAssemblies  
 );  
@@ -42,7 +42,7 @@ HRESULT EnumerateContainedAssemblies(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

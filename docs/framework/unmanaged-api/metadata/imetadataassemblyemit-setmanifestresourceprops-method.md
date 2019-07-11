@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6fbc3f41e95730e93bd907762dd8cd4205037c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d080a3077df2cb4ad57ef463b5e02a3a28d8429d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905366"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779408"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps 方法
 修改指定的 `ManifestResource` 中繼資料結構。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetManifestResourceProps (  
     [in] mdManifestResource  mr,  
     [in] mdToken             tkImplementation,   
@@ -61,7 +61,7 @@ HRESULT SetManifestResourceProps (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edd83e62b08aa7892c01577cd8c46f9d965c0894
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41e79a4c9587e3e738039cbf6a84087a2e7fc9b1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789892"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741950"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 函式
 尋找並載入 DLL 的訊息。 如果訊息 DLL 無法找到或載入，則會傳回 0。 訊息 DLL 應該的子目錄，其名稱是語言識別碼、 中或在目前的目錄。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HINSTANCE WINAPI GetALinkMessageDll();  
 ```  
   

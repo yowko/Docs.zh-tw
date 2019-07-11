@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b7cfba90edab44a0053fdfc759417ee7f074401
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8448de17ad974bc77021a7880b7d8576c69ae75
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132021"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750908"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps 方法
 設定或變更已由先前呼叫的方法參數的功能[imetadataemit:: Defineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetParamProps (   
     [in]  mdParamDef  pd,   
     [in]  LPCWSTR     szName,   
@@ -57,7 +57,7 @@ HRESULT SetParamProps (
  [in]參數的常值。  
   
  `cchValue`  
- [in](Unicode) 字元的大小`pValue`。  
+ [in]\(Unicode\) 字元的大小`pValue`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -66,7 +66,7 @@ HRESULT SetParamProps (
   
  **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

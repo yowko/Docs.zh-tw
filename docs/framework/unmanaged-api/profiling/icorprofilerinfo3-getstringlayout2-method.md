@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0957228489df30833790e59da1ca597fc1f92f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ac724db000f84e37995a34e808d3df4b1e7a960
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041180"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765402"
 ---
 # <a name="icorprofilerinfo3getstringlayout2-method"></a>ICorProfilerInfo3::GetStringLayout2 方法
 取得字串物件配置的相關資訊。 這個方法會取代[ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetStringLayout2(  
     [out] ULONG *pStringLengthOffset,  
     [out] ULONG *pBufferOffset);  
@@ -52,7 +52,7 @@ HRESULT GetStringLayout2(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

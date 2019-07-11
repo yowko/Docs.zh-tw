@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4d15d9ae63e63f98ab73e250df558dfa16002a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959961"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754508"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>ICorDebugFunction2::EnumerateNativeCode 方法
 ICorDebugCodeEnum 物件，包含這個 ICorDebugFunction2 物件所參考的函式中的原生程式碼陳述式中取得的介面指標。  
@@ -32,7 +32,7 @@ ICorDebugCodeEnum 物件，包含這個 ICorDebugFunction2 物件所參考的函
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EnumerateNativeCode (  
     [out] ICorDebugCodeEnum   **ppCodeEnum  
 );  

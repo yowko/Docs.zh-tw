@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9487cf89d87b5f373302dc49a08c4fabb719e746
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ed0097e072b34dd43876ddf23abbc1f513670ff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940006"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776827"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback 方法
 可讓使用者實作，或可能是提供透過回呼`IID_IDiaReadExeAtRVACallback`或`IID_IDiaReadExeAtOffsetCallback`從記憶體中取得的偵錯資訊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetReaderFromCallback(  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *fileName,  

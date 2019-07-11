@@ -2,12 +2,12 @@
 title: JSON 和 XML 之間的對應
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: ef5eaac8fc75149ac518ce322808a84bbab5506b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9049e622803396126890d4c88b9fee2a100f17c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636441"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747735"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON 和 XML 之間的對應
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 所產生的讀取器與寫入器會透過 JavaScript 物件標記法 (JSON) 內容來提供 XML API。 JSON 使用 JavaScript 物件常值的子集對資料進行編碼。 讀取器和寫入器所產生的這個處理站時也會使用 JSON 內容所使用的 Windows Communication Foundation (WCF) 應用程式傳送或接收<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>或<xref:System.ServiceModel.WebHttpBinding>。
@@ -16,7 +16,7 @@ ms.locfileid: "65636441"
 
 就內部而言，JSON 會表示為 XML infoset 時由 WCF 所處理。 通常您不具有因為對應是只有一個邏輯概念關心這個內部表示法：JSON 是通常不會實際在記憶體中轉換成 XML，或從 XML 轉換為 JSON。 對應代表 XML API 可用來存取 JSON 內容。
 
-WCF 會使用 JSON，常見的情況時，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>自動插入所<xref:System.ServiceModel.Description.WebScriptEnablingBehavior>行為，或由<xref:System.ServiceModel.Description.WebHttpBehavior>時適當的行為。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 了解 JSON 和 XML InfoSet 之間的對應關係，其運作方式就好像是直接處理 JSON 一樣  (您可以使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 來搭配任何的 XML 讀取器或寫入器，前提是您必須了解 XML 需符合下列對應關係)。
+WCF 會使用 JSON，常見的情況時，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>自動插入所<xref:System.ServiceModel.Description.WebScriptEnablingBehavior>行為，或由<xref:System.ServiceModel.Description.WebHttpBehavior>時適當的行為。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 了解 JSON 和 XML InfoSet 之間的對應關係，其運作方式就好像是直接處理 JSON 一樣 (您可以使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 來搭配任何的 XML 讀取器或寫入器，前提是您必須了解 XML 需符合下列對應關係)。
 
 在進階案例中，您可能需要直接存取下列對應。 這些情況通常會在您想要以自訂方式來序列化或還原序列化 JSON，而且不想仰賴 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>，或是當您針對包含 JSON 的訊息直接處理 <xref:System.ServiceModel.Channels.Message> 型別時才會發生。 JSON-XML 對應同時可適用於訊息記錄。 當在 WCF 中使用的訊息記錄功能，JSON 訊息會記錄為 XML，根據下一節中所述的對應。
 
@@ -48,7 +48,7 @@ WCF 會使用 JSON，常見的情況時，<xref:System.Runtime.Serialization.Jso
 
 ```xml
 <?xml version="1.0"?>
-<root type="number">42</root>`
+<root type="number">42</root>
 ```
 
 以及下列項目：
@@ -138,11 +138,11 @@ JSON 型別屬性的 AII 具有下列特性：
 |[normalized 值] 的 JSON 型別屬性的 AII|對應 EII 的已允許 [children]|JSON 對應|
 |---------------------------------------------------------|---------------------------------------------------|---------------------|
 |`string` (或缺乏 JSON 型別 AII)<br /><br /> `string` 與 JSON 型別 AII 的缺席，雙雙都會導致 `string` 成為預設值。<br /><br /> 因此，`<root> string1</root>` 會對應至 JSON `string` "string1"。|0 或更多 Cii|JSON `string` (JSON RFC，2.5 節)。 每個 `char` 字元都會對應至 CII 的 [character code]。 如果沒有任何 CII，就會對應至空的 JSON `string`。<br /><br /> 範例：下列的項目對應至 JSON 片段：<br /><br /> `<root type="string">42</root>`<br /><br /> JSON 片段為 "42"。<br /><br /> 在 XML 對 JSON 的對應中，必須逸出的字元會對應至逸出字元，其他所有字元則是對應至尚未逸出的字元。 "/"為特殊字元 – 即使它不一定要逸出 (寫出做為 「\\/")。<br /><br /> 範例：下列的項目對應至 JSON 片段。<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> JSON 片段為" \\「 da\\/ta\\""。<br /><br /> 在 JSON 對 XML 的對應中，任何逸出的字元和尚未逸出的字元會正確地對應至相對應的 [character code]。<br /><br /> 範例：JSON 片段"\u0041BC 」，將對應至下列的 XML 項目。<br /><br /> `<root type="string">ABC</root>`<br /><br /> 可以由未對應到 XML 的泛空白字元 (JSON RFC 的第 2 節中的 ' ws') 括住字串。<br /><br /> 範例：JSON 片段"ABC"，（在第一個雙引號之前的空格），對應至下列的 XML 項目。<br /><br /> `<root type="string">ABC</root>`<br /><br /> 在 XML 中的任何泛空白字元會對應至 JSON 中的泛空白字元。<br /><br /> 範例：下列的 XML 項目對應至 JSON 片段。<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> JSON 片段為 " A BC "。|
-|`number`|1 或更多 CII|JSON `number` (JSON RFC，第 2.4 小節)，可能是括住空白字元。 數字/空格組合中的每個字元是字元的對應 cii 的 [character code]。<br /><br /> 範例：下列的項目對應至 JSON 片段。<br /><br /> `<root type="number">    42</root>`<br /><br /> JSON 片段為 42 <br /><br /> （會保留空白字元。）|
+|`number`|1 或更多 CII|JSON `number` (JSON RFC，第 2.4 小節)，可能是括住空白字元。 數字/空格組合中的每個字元是字元的對應 cii 的 [character code]。<br /><br /> 範例：下列的項目對應至 JSON 片段。<br /><br /> `<root type="number">    42</root>`<br /><br /> JSON 片段為 42<br /><br /> （會保留空白字元。）|
 |`boolean`|4 或 5 個 Cii (對應至`true`或`false`) 可能會被其他空白 Cii 所。|對應至字串 "true" 的 CII 序列會對應至常值 `true`，而對應至字串 "false" 的 CII 序列則是對應至常值 `false`。 周圍的空白字元會保留。<br /><br /> 範例：下列的項目對應至 JSON 片段。<br /><br /> `<root type="boolean"> false</root>`<br /><br /> JSON 片段為 `false`。|
 |`null`|全都不允許。|常值 `null`。 在 JSON 對 XML 的對應，`null`可能由未對應到 XML 的泛空白字元 (第 2 節中的 ' ws') 括住。<br /><br /> 範例：下列的項目對應至 JSON 片段。<br /><br /> `<root type="null"/>`<br /><br /> 或<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> 兩個案例中的 JSON 片段都是 `Null`。|
-|`object`|0 或更多 EII|如 JSON RFC，2.2 小節中所述之 `begin-object` (左側大括號)，後面接著每個 EII 的成員記錄 (如進一步介紹中所述)。 如果有一個以上的 EII，成員記錄之間就會存在數值分隔符號 (逗號)。 這些全部都會接著一個結尾物件 (右側大括號)。<br /><br /> 範例：下列的項目對應至 JSON 片段。<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> JSON 片段為 `{"type1":"aaa","type2":"bbb"}`。<br /><br /> 如果資料合約型別屬性存在 XML 對 JSON 的對應中，則會在開頭插入額外的成員記錄。 其名稱是資料合約型別屬性 [local name] ("\_\_類型 」)，且其值為 [normalized value] 的屬性。 相反地，在 JSON 對 XML 的對應，如果第一個成員記錄名稱是資料合約型別屬性 [local name] (也就是 「\_\_類型 」)，對應的資料合約型別屬性會出現在對應的 XML 中，但相對應的 EII 不存在。 請注意，若要套用這個特殊對應，這項成員記錄必須先出現在 JSON 物件中。 這代表了從一般 JSON 處理中離開，其中成員記錄的順序並不重要。<br /><br /> 範例：<br /><br /> 下列 JSON 片段會對應至 XML。<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> 下列為 XML 程式碼。<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> 請注意， \_\_型別 AII 已存在，但沒有任何\_\_輸入 EII。<br /><br /> 但是，如果 JSON 中的順序如下列範例所示反轉過來的話，<br /><br /> {"name":"John","\_\_type":"Person"}<br /><br /> 就會顯示相對應的 XML。<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> 也就是\_類型 （_t） 會停止具有特殊意義，並對應至 EII 像往常一樣，不是 AII。<br /><br /> 當 AII 對應至 JSON 值時，其 [normalized value] 的逸出/未逸出規則與 JSON 值的逸出/未逸出規則相同，下表中的 "string" 列將指定此規則。<br /><br /> 範例：<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> 先前範例可對應至下列 JSON。<br /><br /> `{"__type":"\\abc"}`<br /><br /> 在 XML 對 JSON 的對應，第一個 EII 的 [區域名稱] 必須不是 」\_\_類型 」。<br /><br /> 泛空白字元 (`ws`) 會一律不會產生 XML 對 JSON 的對應物件，並會忽略在 JSON 對 XML 的對應。<br /><br /> 範例：下列 JSON 片段會對應的 XML 項目。<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> 下列程式碼說明 XML 項目。<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
-|array|0 或更多 EII|如 JSON RFC，2.3 小節中所述之開始-陣列 (左側大括號)，後面接著每個 EII 的陣列記錄 (如進一步介紹中所述)。 如果有一個以上的 EII，陣列記錄之間就會存在數值分隔符號 (逗號)。 這些全部都會緊跟著結束-陣列。<br /><br /> 範例：下列的 XML 項目對應至 JSON 片段。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> JSON 片段為 ["aaa","bbb"]<br /><br /> 泛空白字元 (`ws`) 會一律不會產生 XML 對 JSON 陣列的對應，並會忽略在 JSON 對 XML 的對應。<br /><br /> 範例：JSON 片段。<br /><br />`["aaa", "bbb"]`<br /><br /> 它所對應的 XML 項目。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
+|`object`|0 或更多 EII|如 JSON RFC，2.2 小節中所述之 `begin-object` (左側大括號)，後面接著每個 EII 的成員記錄 (如進一步介紹中所述)。 如果有一個以上的 EII，成員記錄之間就會存在數值分隔符號 (逗號)。 這些全部都會接著一個結尾物件 (右側大括號)。<br /><br /> 範例：下列的項目對應至 JSON 片段。<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> JSON 片段為 `{"type1":"aaa","type2":"bbb"}`。<br /><br /> 如果資料合約型別屬性存在 XML 對 JSON 的對應中，則會在開頭插入額外的成員記錄。 其名稱是資料合約型別屬性 [local name] ("\_\_類型 」)，且其值為 [normalized value] 的屬性。 相反地，在 JSON 對 XML 的對應，如果第一個成員記錄名稱是資料合約型別屬性 [local name] (也就是 「\_\_類型 」)，對應的資料合約型別屬性會出現在對應的 XML 中，但相對應的 EII 不存在。 請注意，若要套用這個特殊對應，這項成員記錄必須先出現在 JSON 物件中。 這代表了從一般 JSON 處理中離開，其中成員記錄的順序並不重要。<br /><br /> 範例：<br /><br /> 下列 JSON 片段會對應至 XML。<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> 下列為 XML 程式碼。<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> 請注意， \_\_型別 AII 已存在，但沒有任何\_\_輸入 EII。<br /><br /> 但是，如果 JSON 中的順序如下列範例所示反轉過來的話，<br /><br /> `{"name":"John","\_\_type":"Person"}`<br /><br /> 就會顯示相對應的 XML。<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> 也就是\_類型 （_t） 會停止具有特殊意義，並對應至 EII 像往常一樣，不是 AII。<br /><br /> 當 AII 對應至 JSON 值時，其 [normalized value] 的逸出/未逸出規則與 JSON 值的逸出/未逸出規則相同，下表中的 "string" 列將指定此規則。<br /><br /> 範例：<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> 先前範例可對應至下列 JSON。<br /><br /> `{"__type":"\\abc"}`<br /><br /> 在 XML 對 JSON 的對應，第一個 EII 的 [區域名稱] 必須不是 」\_\_類型 」。<br /><br /> 泛空白字元 (`ws`) 會一律不會產生 XML 對 JSON 的對應物件，並會忽略在 JSON 對 XML 的對應。<br /><br /> 範例：下列 JSON 片段會對應的 XML 項目。<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> 下列程式碼說明 XML 項目。<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
+|array|0 或更多 EII|如 JSON RFC，2.3 小節中所述之開始-陣列 (左側大括號)，後面接著每個 EII 的陣列記錄 (如進一步介紹中所述)。 如果有一個以上的 EII，陣列記錄之間就會存在數值分隔符號 (逗號)。 這些全部都會緊跟著結束-陣列。<br /><br /> 範例：下列的 XML 項目對應至 JSON 片段。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> JSON 片段為 `["aaa","bbb"]`<br /><br /> 泛空白字元 (`ws`) 會一律不會產生 XML 對 JSON 陣列的對應，並會忽略在 JSON 對 XML 的對應。<br /><br /> 範例：JSON 片段。<br /><br />`["aaa", "bbb"]`<br /><br /> 它所對應的 XML 項目。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
 
 成員記錄使用方式如下：
 
@@ -150,15 +150,17 @@ JSON 型別屬性的 AII 具有下列特性：
 
 範例：下列的項目對應至 JSON 片段。
 
-`<root type="object"/>`
-
-`<myLocalName type="string">aaa</myLocalName>`
-
-`</root >`
+```xml
+<root type="object"/>
+<myLocalName type="string">aaa</myLocalName>
+</root >
+```
 
 下列將顯示 JSON 片段。
 
-`{"myLocalName":"aaa"}`
+```json
+{"myLocalName":"aaa"}
+```
 
 - 在 XML 對 JSON 的對應中，JSON 中必須逸出的字元會逸出，其他字元則不會逸出。 雖然 "/" 不是必須逸出的字元，還是會逸出 (在 JSON 對 XML 的對應中，它不需要逸出)。 若您需要針對 JSON 中的 `DateTime` 資料支援使用 ASP.NET AJAX 格式，這是必要的條件。
 
@@ -181,7 +183,9 @@ JSON 型別屬性的 AII 具有下列特性：
 
 下列為它所對應的 JSON 片段。
 
-`{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`
+```json
+{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}
+```
 
 > [!NOTE]
 > 在先前的對應中，沒有 XML 編碼步驟。 因此，WCF 只支援 JSON 文件，其中索引鍵的名稱中的所有字元都是 XML 項目名稱中有效的字元。 例如，JSON 文件 {"<":"a"} 不支援，因為 < 不是有效的 XML 項目名稱。
@@ -208,7 +212,9 @@ JSON 型別屬性的 AII 具有下列特性：
 
 下列為 JSON 片段。
 
-`["myValue1",2,[true,null]]`
+```json
+["myValue1",2,[true,null]]
+```
 
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d00c04f3719d6fb340541d3301d4dc4a3f95ca40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e45f49d17a5b71abfb58ff8c0126abad49322c5b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645717"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737593"
 ---
 # <a name="icordebugarrayvaluegetcount-method"></a>ICorDebugArrayValue::GetCount 方法
 取得陣列中的項目總數。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetCount (  
     [out] ULONG32 *pnCount  
 );  
@@ -46,4 +46,4 @@ HRESULT GetCount (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
