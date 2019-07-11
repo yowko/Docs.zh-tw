@@ -1,5 +1,5 @@
 ---
-title: HOW TO：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
+title: 作法：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 829ff08fe3805f37bc6189a66a6675b3518da138
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601003"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757405"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>HOW TO：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
-您可以定義一個類別，以從中建立可在不同資料類型上提供相同功能的物件。 若要這樣做，請在定義中指定一個或多個 *「類型參數」* (type parameter)。 類別之後可以作為使用各種資料類型之物件的範本。 使用這種方法所定義的類別稱為 *「泛型類別」*(generic class)。  
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>作法：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
+您可以定義一個類別，以從中建立可在不同資料類型上提供相同功能的物件。 若要這樣做，請在定義中指定一個或多個 *「類型參數」* (type parameter)。 類別之後可以作為使用各種資料類型之物件的範本。 使用這種方法所定義的類別稱為 *「泛型類別」* (generic class)。  
   
  定義泛型類別的優點是只需要定義一次，而且您的程式碼可以使用它來建立許多使用各種資料類型的物件。 這所導致的效能優於定義具有 `Object` 類型的類別。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "64601003"
   
 3. 如果您有多個類型參數，請在括號內建立以逗號分隔的清單。 請不要重複 `Of` 關鍵字。  
   
-4. 如果您的程式碼對類型參數執行簡單指派以外的作業，請在該類型參數後面加上 `As` 子句來加入一個或多個 *「條件約束」*(constraint)。 條件約束保證針對該類型參數所提供的類型符合下列這類需求：  
+4. 如果您的程式碼對類型參數執行簡單指派以外的作業，請在該類型參數後面加上 `As` 子句來加入一個或多個 *「條件約束」* (constraint)。 條件約束保證針對該類型參數所提供的類型符合下列這類需求：  
   
     - 支援您程式碼所執行的作業 (例如 `>`)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64601003"
   
 6. 請確定您的程式碼只會使用它可提供給 `itemType`之任何資料類型所支援的作業和方法。  
   
-     下列範例定義可管理極簡單清單的類別。 它會將清單保留在內部陣列 `items`中，而 using 程式碼可以宣告清單項目的資料類型。 參數化建構函式可讓 using 程式碼設定 `items`上限，而預設建構函式會將此項目設為 9 (共 10 個項目)。  
+     下列範例定義可管理極簡單清單的類別。 它會將清單保留在內部陣列 `items`中，而 using 程式碼可以宣告清單項目的資料類型。 參數化建構函式可讓您使用程式碼以設定上限`items`，並無參數建構函式設定這個項目為 9 (總共 10 個項目）。  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   

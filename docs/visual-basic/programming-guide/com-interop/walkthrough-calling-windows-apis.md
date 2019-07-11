@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d2dc80ec689f3e9fd2f36c36c3847ec4e5d1a576
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592705"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783149"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>逐步解說：呼叫 Windows Api (Visual Basic)
 Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您可以使用它們來執行工作時很難撰寫您自己的對等的程序。 比方說，Windows 會提供名為函式`FlashWindowEx`，可讓您的應用程式的標題列淺色與深色陰影之間。  
@@ -32,7 +32,7 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
 ## <a name="api-calls-using-declare"></a>API 呼叫使用宣告  
  呼叫 Windows Api 的最常見方式是使用`Declare`陳述式。  
   
-#### <a name="to-declare-a-dll-procedure"></a>若要宣告的 DLL 程序  
+### <a name="to-declare-a-dll-procedure"></a>若要宣告的 DLL 程序  
   
 1. 決定您想要呼叫的函式加上引數，引數類型的名稱，並傳回值，以及名稱與 DLL 包含它的位置。  
   
@@ -69,7 +69,7 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
 #### <a name="windows-api-constants"></a>Windows API 的常數  
  某些引數為常數的組合。 例如，`MessageBox`本逐步解說中的 API 會接受整數引數呼叫`Typ`，控制訊息方塊的顯示方式。 您可以藉由檢查來判斷這些常數的數值`#define`WinUser.h 檔案中的陳述式。 因此您可能想要使用的計算機來予以新增，然後將轉換成十進位數字的值通常會顯示以十六進位、。 例如，如果您想要結合驚嘆號樣式常數`MB_ICONEXCLAMATION`0x00000030 和 是/無樣式`MB_YESNO`0x00000004，您可以將數字相加，並取得 0x00000034 或 52 結果的十進位。 雖然您可以直接使用十進位的結果，最好是將這些值宣告為應用程式中的常數，並將它們結合使用`Or`運算子。  
   
-###### <a name="to-declare-constants-for-windows-api-calls"></a>若要宣告常數的 Windows API 呼叫  
+##### <a name="to-declare-constants-for-windows-api-calls"></a>若要宣告常數的 Windows API 呼叫  
   
 1. 您要呼叫 Windows 函式，請參閱文件。 決定使用的常數名稱以及包含這些常數的數值的.h 檔案的名稱。  
   
@@ -77,7 +77,7 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3. 新增對等項目`Const`至您的類別或模組，讓您的應用程式可使用這些常數的陳述式。 例如:   
+3. 新增對等項目`Const`至您的類別或模組，讓您的應用程式可使用這些常數的陳述式。 例如：  
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
@@ -94,7 +94,7 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
 #### <a name="data-marshaling"></a>封送處理的資料  
  Visual Basic 會自動轉換參數和 Windows API 呼叫的傳回值的資料類型，但您可以使用`MarshalAs`屬性來明確地指定 API 的預期的 unmanaged 的資料類型。 如需有關 interop 封送處理的詳細資訊，請參閱[Interop 封送處理](../../../framework/interop/interop-marshaling.md)。  
   
-###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>若要使用 Declare 與 MarshalAs API 呼叫  
+##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>若要使用 Declare 與 MarshalAs API 呼叫  
   
 1. 決定您想要呼叫，再加上其引數，資料類型的函式的名稱，並傳回值。  
   
@@ -111,7 +111,7 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
  您可以使用`DllImport`大部分的 Windows api 呼叫，只要呼叫是指共用 (有時也稱為*靜態*) 方法。 您無法使用需要類別的執行個體方法。 不同於`Declare`陳述式，`DllImport`呼叫不能使用`MarshalAs`屬性。  
   
-#### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>若要呼叫 Windows API 使用 DllImport 屬性  
+### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>若要呼叫 Windows API 使用 DllImport 屬性  
   
 1. 開啟新的 Windows 應用程式專案，依序按一下**的新**上**檔案**功能表，然後按一下**專案**。 [ **新增專案** ] 對話方塊隨即出現。  
   

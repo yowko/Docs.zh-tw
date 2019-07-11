@@ -5,16 +5,16 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591561"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755161"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的物件和類別
 
-「物件」是可視為一個單位的程式碼和資料組合。 物件可以是應用程式的一部分，例如控制項或表單。 整個應用程式也可以是一個物件。
+「物件」  是可視為一個單位的程式碼和資料組合。 物件可以是應用程式的一部分，例如控制項或表單。 整個應用程式也可以是一個物件。
 
 當您在 Visual Basic 中建立應用程式時，您經常會使用物件。 您可以使用 Visual Basic 中，所提供，例如控制項、 表單和資料存取物件的物件。 您也可以在 Visual Basic 應用程式內使用從其他應用程式的物件。 您甚至可以建立自己的物件，並為其定義其他屬性和方法。 物件的作用類似針對程式預製的建置組塊 - 它們可讓您撰寫一段程式碼一次，然後不斷地重複使用。
 
@@ -28,7 +28,7 @@ ms.locfileid: "65591561"
 
 您必須先建立物件，然後才能存取它的成員。
 
-#### <a name="to-create-an-object-from-a-class"></a>從類別建立物件
+### <a name="to-create-an-object-from-a-class"></a>從類別建立物件
 
 1. 決定您要從哪一個類別建立物件。
 
@@ -51,7 +51,7 @@ ms.locfileid: "65591561"
    ```
 
 > [!NOTE]
-> 可能的話，您應該將變數宣告為您想要指派給它的類別型別。 這稱為「早期繫結」。 如果您在編譯時期不知道類別類型，可藉由將變數宣告為 [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)來叫用「晚期繫結」。 不過，晚期繫結會讓效能降低，並限制存取執行階段物件的成員。 如需詳細資訊，請參閱[物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)。
+> 可能的話，您應該將變數宣告為您想要指派給它的類別型別。 這稱為「早期繫結」  。 如果您在編譯時期不知道類別類型，可藉由將變數宣告為 [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)來叫用「晚期繫結」  。 不過，晚期繫結會讓效能降低，並限制存取執行階段物件的成員。 如需詳細資訊，請參閱[物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)。
 
 ### <a name="multiple-instances"></a>多重執行個體
 
@@ -59,7 +59,7 @@ ms.locfileid: "65591561"
 
 ## <a name="object-members"></a>物件成員
 
-物件是應用程式的元素，代表類別的「執行個體」。 欄位、屬性、方法及事件都是物件的建置組塊，並構成它們的「成員」。
+物件是應用程式的元素，代表類別的「執行個體」  。 欄位、屬性、方法及事件都是物件的建置組塊，並構成它們的「成員」  。
 
 ### <a name="member-access"></a>成員存取
 
@@ -75,14 +75,14 @@ warningLabel.Text = "Data not saved"
 
 ### <a name="fields-and-properties"></a>欄位和屬性
 
-「欄位」和「屬性」表示物件中所儲存的資訊。 您可以利用在程序中擷取和設定區域變數的相同方式，使用指派陳述式來擷取和設定它們的值。 下列範例會擷取 <xref:System.Windows.Forms.Label> 物件的 <xref:System.Windows.Forms.Control.Width%2A> 屬性，並設定 <xref:System.Windows.Forms.Control.ForeColor%2A> 屬性。
+「欄位」  和「屬性」  表示物件中所儲存的資訊。 您可以利用在程序中擷取和設定區域變數的相同方式，使用指派陳述式來擷取和設定它們的值。 下列範例會擷取 <xref:System.Windows.Forms.Label> 物件的 <xref:System.Windows.Forms.Control.Width%2A> 屬性，並設定 <xref:System.Windows.Forms.Control.ForeColor%2A> 屬性。
 
 ```vb
 Dim warningWidth As Integer = warningLabel.Width
 warningLabel.ForeColor = System.Drawing.Color.Red
 ```
 
-請注意，也會呼叫欄位做為「成員變數」。
+請注意，也會呼叫欄位做為「成員變數」  。
 
 使用屬性程序的時機：
 
@@ -108,7 +108,7 @@ warningLabel.ForeColor = System.Drawing.Color.Red
 
 ### <a name="methods"></a>方法
 
-「方法」是物件可執行的動作。 例如，<xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> 是 <xref:System.Windows.Forms.ComboBox> 物件的方法，可新增項目至下拉式方塊。
+「方法」  是物件可執行的動作。 例如，<xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> 是 <xref:System.Windows.Forms.ComboBox> 物件的方法，可新增項目至下拉式方塊。
 
 下列範例示範 <xref:System.Windows.Forms.Timer> 物件的 <xref:System.Windows.Forms.Timer.Start%2A> 方法。
 
@@ -117,25 +117,25 @@ Dim safetyTimer As New System.Windows.Forms.Timer
 safetyTimer.Start()
 ```
 
-請注意，方法只是物件所公開的「程序」。
+請注意，方法只是物件所公開的「程序」  。
 
 如需詳細資訊，請參閱[程序](../../../../visual-basic/programming-guide/language-features/procedures/index.md)。
 
 ### <a name="events"></a>事件
 
-事件是物件所識別的動作 (例如按一下滑鼠按鈕或按下按鍵)，而您可以撰寫程式碼來回應。 事件可能因使用者動作或程式碼而發生，或由系統所導致。 您可以將對事件發出訊號的程式碼視為「引發」事件，而將回應事件的程式碼視為「處理」它。
+事件是物件所識別的動作 (例如按一下滑鼠按鈕或按下按鍵)，而您可以撰寫程式碼來回應。 事件可能因使用者動作或程式碼而發生，或由系統所導致。 您可以將對事件發出訊號的程式碼視為「引發」  事件，而將回應事件的程式碼視為「處理」  它。
 
 您也可以開發自己的自訂事件，透過您的物件來引發並由其他物件來處理。 如需詳細資訊，請參閱[事件](../../../../visual-basic/programming-guide/language-features/events/index.md)。
 
 ### <a name="instance-members-and-shared-members"></a>執行個體成員和共用的成員
 
-當您從類別建立物件時，會產生該類別的執行個體。 未使用 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) 關鍵字宣告的成員是「執行個體成員」，它們完全屬於該特定執行個體。 一個執行個體中的執行個體成員，與同一個類別的另一個執行個體中相同的成員無關。 例如，執行個體成員變數可以在不同執行個體中具有不同的值。
+當您從類別建立物件時，會產生該類別的執行個體。 未使用 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) 關鍵字宣告的成員是「執行個體成員」  ，它們完全屬於該特定執行個體。 一個執行個體中的執行個體成員，與同一個類別的另一個執行個體中相同的成員無關。 例如，執行個體成員變數可以在不同執行個體中具有不同的值。
 
-使用 `Shared` 關鍵字宣告的成員是「共用的成員」，它們屬於整個類別，而不屬於任何特定執行個體。 共用的成員只會存在一次，而不論您為它的類別建立了多少個執行個體，或者，即使您未建立任何執行個體也一樣。 例如，共用的成員變數只有一個值，可供可存取該類別的所有程式碼使用。
+使用 `Shared` 關鍵字宣告的成員是「共用的成員」  ，它們屬於整個類別，而不屬於任何特定執行個體。 共用的成員只會存在一次，而不論您為它的類別建立了多少個執行個體，或者，即使您未建立任何執行個體也一樣。 例如，共用的成員變數只有一個值，可供可存取該類別的所有程式碼使用。
 
 #### <a name="accessing-nonshared-members"></a>存取非共用的成員
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>存取物件的非共用成員
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>存取物件的非共用成員
 
 1. 確定物件是從它的類別所建立，並將它指派給物件變數。
 
@@ -143,7 +143,7 @@ safetyTimer.Start()
    Dim secondForm As New System.Windows.Forms.Form
    ```
 
-2. 在存取成員的陳述式中，在物件變數名稱後面加上「成員存取運算子」(`.`)，然後是成員名稱。
+2. 在存取成員的陳述式中，在物件變數名稱後面加上「成員存取運算子」  (`.`)，然後是成員名稱。
 
    ```vb
    secondForm.Show()
@@ -151,9 +151,9 @@ safetyTimer.Start()
 
 #### <a name="accessing-shared-members"></a>存取共用的成員
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>存取物件的共用成員
+##### <a name="to-access-a-shared-member-of-an-object"></a>存取物件的共用成員
 
-- 在類別名稱後面加上「成員存取運算子」 (`.`)，然後是成員名稱。 您應一律透過類別名稱直接存取物件的 `Shared` 成員。
+- 在類別名稱後面加上「成員存取運算子」  (`.`)，然後是成員名稱。 您應一律透過類別名稱直接存取物件的 `Shared` 成員。
 
    ```vb
    MsgBox("This computer is called " & Environment.MachineName)
@@ -196,15 +196,15 @@ End Sub
 
 ## <a name="relationships-among-objects"></a>物件之間的關聯性
 
-物件可以透過數種方式彼此相關。 主要的關聯性種類是「階層式」和「內含項目」。
+物件可以透過數種方式彼此相關。 主要的關聯性種類是「階層式」  和「內含項目」  。
 
 ### <a name="hierarchical-relationship"></a>階層式關聯性
 
-當類別衍生自更基本的類別時，即表示它們具有「階層式關聯性」。 在描述屬於更一般類別的子型別的項目時，類別階層架構就很實用。
+當類別衍生自更基本的類別時，即表示它們具有「階層式關聯性」  。 在描述屬於更一般類別的子型別的項目時，類別階層架構就很實用。
 
 在下列範例中，假設您想要定義一種特殊的 <xref:System.Windows.Forms.Button>，其作用就像一般的 <xref:System.Windows.Forms.Button>，但也會公開可反轉前景和背景色彩的方法。
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>定義衍生自已經存在之類別的類別
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>定義衍生自已經存在之類別的類別
 
 1. 使用 [Class 陳述式](../../../../visual-basic/language-reference/statements/class-statement.md)來定義您需要從中建立物件的類別。
 
@@ -239,17 +239,17 @@ End Sub
 
 衍生的類別會繼承來自其基礎類別的成員，可讓您在類別階層中進行時增加複雜度。 如需詳細資訊，請參閱[繼承的基本概念](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。
 
-#### <a name="compiling-the-code"></a>編譯程式碼
+### <a name="compiling-the-code"></a>編譯程式碼
 
 確定編譯器可以存取您想要從中衍生新類別的類別。 這可能表示要提供它的完整名稱，如同在上述範例中，或在 [Imports 陳述式 (.NET 命名空間和型別)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)中識別它的命名空間。 如果類別位於不同專案，則您可能需要加入對該專案的參考。 如需詳細資訊，請參閱[管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)。
 
 ### <a name="containment-relationship"></a>內含項目關聯性
 
-另一個可讓物件相關聯的方法是「內含項目關係」。 容器物件邏輯上會封裝其他物件。 例如，<xref:System.OperatingSystem> 物件在邏輯上會包含 <xref:System.Version> 物件，這會透過其 <xref:System.OperatingSystem.Version%2A> 屬性傳回。 請注意，容器物件實際上不會包含任何其他物件。
+另一個可讓物件相關聯的方法是「內含項目關係」  。 容器物件邏輯上會封裝其他物件。 例如，<xref:System.OperatingSystem> 物件在邏輯上會包含 <xref:System.Version> 物件，這會透過其 <xref:System.OperatingSystem.Version%2A> 屬性傳回。 請注意，容器物件實際上不會包含任何其他物件。
 
 #### <a name="collections"></a>集合
 
-物件內含項目的一個特定型別是由「集合」來代表。 集合是一組可列舉的相似物件。 Visual Basic 支援中的特定語法[每個...下一個陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)，可讓您逐一查看集合的項目。 此外，集合通常可讓您使用 <xref:Microsoft.VisualBasic.Collection.Item%2A>，依其索引來擷取項目，或者將它們關聯至唯一字串來擷取項目。 比起陣列，集合更容易使用，因為它們讓您不需使用索引，就能新增或移除項目。 由於集合易於使用，因此，通常會用來儲存表單和控制項。
+物件內含項目的一個特定型別是由「集合」  來代表。 集合是一組可列舉的相似物件。 Visual Basic 支援中的特定語法[每個...下一個陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)，可讓您逐一查看集合的項目。 此外，集合通常可讓您使用 <xref:Microsoft.VisualBasic.Collection.Item%2A>，依其索引來擷取項目，或者將它們關聯至唯一字串來擷取項目。 比起陣列，集合更容易使用，因為它們讓您不需使用索引，就能新增或移除項目。 由於集合易於使用，因此，通常會用來儲存表單和控制項。
 
 ## <a name="related-topics"></a>相關主題
 

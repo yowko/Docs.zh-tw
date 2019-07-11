@@ -1,5 +1,5 @@
 ---
-title: HOW TO：宣告物件使用物件初始設定式 (Visual Basic)
+title: 作法：宣告物件使用物件初始設定式 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring objects using object initializer
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780831"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755206"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>HOW TO：宣告物件使用物件初始設定式 (Visual Basic)
 物件初始設定式可讓您宣告並具現化類別，以單一陳述式的執行個體。 此外，您可以在此同時，初始化執行個體的一或多個成員，而不叫用的參數化建構函式。  
   
- 當您使用物件初始設定式來建立具名型別的執行個體時，會呼叫類別預設建構函式，後面接著初始化指定的成員，您所指定的順序。  
+ 當您使用物件初始設定式來建立具名型別的執行個體時，會呼叫類別的無參數建構函式，後面接著初始化指定的成員，您所指定的順序。  
   
  下列程序示範如何建立的執行個體`Student`方式有三種類別。 此類別具有名字、 姓氏和年級屬性等等。 三個宣告的每個建立的新執行個體`Student`，具有屬性`First`設定為"Michael，"屬性`Last`設定為"Tucker"，而所有其他成員設定為其預設值。 在程序中的每個宣告的結果就相當於下列範例中，不會使用物件初始設定式項目。  
   

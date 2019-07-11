@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649765"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783244"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>物件初始設定式：具名和匿名類型 (Visual Basic)
 物件初始設定式可讓您使用單一運算式中指定的複雜物件的屬性。 它們可用來建立執行個體的具名型別和匿名型別。  
@@ -32,7 +32,7 @@ ms.locfileid: "64649765"
  需求和兩個宣告的結果不相同。 針對`namedCust`，則`Customer`類別，具有`Name`屬性必須已經存在，並宣告會建立該類別的執行個體。 針對`anonymousCust`，編譯器會定義新的類別具有一個屬性，一個字串稱為`Name`，並建立該類別的新執行個體。  
   
 ## <a name="named-types"></a>具名的類型  
- 物件初始設定式會提供簡單的方式來呼叫類型的建構函式，並在單一陳述式將部分或所有屬性的值。 編譯器會叫用適當的建構函式陳述式： 預設建構函式如果不使用引數呈現或如果會傳送一或多個引數的參數化建構函式。 在那之後，初始設定式清單中出現的順序會初始化指定的屬性。  
+ 物件初始設定式會提供簡單的方式來呼叫類型的建構函式，並在單一陳述式將部分或所有屬性的值。 編譯器會叫用適當的建構函式陳述式： 如果任何引數會不呈現，無參數建構函式或如果會傳送一或多個引數的參數化建構函式。 在那之後，初始設定式清單中出現的順序會初始化指定的屬性。  
   
  初始設定式清單中的每個初始設定包含初始值之類別成員的指派。 當已定義類別時，決定的名稱和資料類型的成員。 在下列範例中，`Customer`的類別必須存在，並必須有成員具名`Name`和`City`，可以接受的字串值。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64649765"
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- 每個這些宣告就相當於下列的範例中，建立`Customer`物件使用預設建構函式，然後再指定初始值`Name`並`City`屬性使用`With`陳述式。  
+ 每個這些宣告就相當於下列的範例中，建立`Customer`物件使用的無參數建構函式，然後再指定初始值`Name`並`City`屬性使用`With`陳述式。  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   

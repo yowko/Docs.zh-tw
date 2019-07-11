@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: c8696ef58e0177d2d2bc6e2d4731206be77a33af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f6486965d9e44524420975523e10ded32a135b7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753873"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755210"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名類型定義 (Visual Basic)
 
@@ -52,7 +52,7 @@ Public Class $Anonymous1
 End Class
 ```
 
-此外，匿名型別定義會包含預設建構函式。 不允許使用需要參數的建構函式。
+此外，匿名型別定義包含的無參數建構函式。 不允許使用需要參數的建構函式。
 
 匿名類型宣告包含至少一個索引鍵屬性，如果型別定義會覆寫三個成員繼承自<xref:System.Object>: <xref:System.Object.Equals%2A>， <xref:System.Object.GetHashCode%2A>，和<xref:System.Object.ToString%2A>。 如果沒有索引鍵的屬性宣告，只<xref:System.Object.ToString%2A>會覆寫。 覆寫提供下列功能：
 
