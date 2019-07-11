@@ -10,42 +10,36 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 2f7505051cce3aee99e6b6ea88a6a94498926214
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 7073ddc50b47ff239e8b310c0a5a1fbd84504133
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609639"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743884"
 ---
-# <a name="statements-expressions-and-operators-c-programming-guide"></a><span data-ttu-id="65e88-102">陳述式、運算式和運算子 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="65e88-102">Statements, Expressions, and Operators (C# Programming Guide)</span></span>
+# <a name="statements-expressions-and-operators-c-programming-guide"></a><span data-ttu-id="76766-102">陳述式、運算式和運算子 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="76766-102">Statements, Expressions, and Operators (C# Programming Guide)</span></span>
 
-<span data-ttu-id="65e88-103">組成應用程式的 C# 程式碼是由包含關鍵字、運算式和運算子的陳述式所構成。</span><span class="sxs-lookup"><span data-stu-id="65e88-103">The C# code that comprises an application consists of statements made up of keywords, expressions and operators.</span></span> <span data-ttu-id="65e88-104">本節包含有關 C# 程式中這些基本項目的資訊。</span><span class="sxs-lookup"><span data-stu-id="65e88-104">This section contains information regarding these fundamental elements of a C# program.</span></span>
+<span data-ttu-id="76766-103">組成應用程式的 C# 程式碼是由包含關鍵字、運算式和運算子的陳述式所構成。</span><span class="sxs-lookup"><span data-stu-id="76766-103">The C# code that comprises an application consists of statements made up of keywords, expressions and operators.</span></span> <span data-ttu-id="76766-104">本節包含有關 C# 程式中這些基本項目的資訊。</span><span class="sxs-lookup"><span data-stu-id="76766-104">This section contains information regarding these fundamental elements of a C# program.</span></span>
 
- <span data-ttu-id="65e88-105">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="65e88-105">For more information, see:</span></span>
+ <span data-ttu-id="76766-105">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="76766-105">For more information, see:</span></span>
 
-- [<span data-ttu-id="65e88-106">陳述式</span><span class="sxs-lookup"><span data-stu-id="65e88-106">Statements</span></span>](statements.md)
+- [<span data-ttu-id="76766-106">陳述式</span><span class="sxs-lookup"><span data-stu-id="76766-106">Statements</span></span>](statements.md)
 
-- [<span data-ttu-id="65e88-107">運算式</span><span class="sxs-lookup"><span data-stu-id="65e88-107">Expressions</span></span>](expressions.md)
+- [<span data-ttu-id="76766-107">運算式</span><span class="sxs-lookup"><span data-stu-id="76766-107">Expressions</span></span>](expressions.md)
 
-  - [<span data-ttu-id="65e88-108">運算式主體成員</span><span class="sxs-lookup"><span data-stu-id="65e88-108">Expression-bodied members</span></span>](expression-bodied-members.md)
+  - [<span data-ttu-id="76766-108">運算式主體成員</span><span class="sxs-lookup"><span data-stu-id="76766-108">Expression-bodied members</span></span>](expression-bodied-members.md)
 
-- [<span data-ttu-id="65e88-109">運算子</span><span class="sxs-lookup"><span data-stu-id="65e88-109">Operators</span></span>](operators.md)
+- [<span data-ttu-id="76766-109">運算子</span><span class="sxs-lookup"><span data-stu-id="76766-109">Operators</span></span>](operators.md)
 
-- [<span data-ttu-id="65e88-110">匿名函式</span><span class="sxs-lookup"><span data-stu-id="65e88-110">Anonymous Functions</span></span>](anonymous-functions.md)
+- [<span data-ttu-id="76766-110">匿名函式</span><span class="sxs-lookup"><span data-stu-id="76766-110">Anonymous Functions</span></span>](anonymous-functions.md)
 
-- [<span data-ttu-id="65e88-111">轉換運算子</span><span class="sxs-lookup"><span data-stu-id="65e88-111">Conversion Operators</span></span>](conversion-operators.md)
+- [<span data-ttu-id="76766-111">相等比較</span><span class="sxs-lookup"><span data-stu-id="76766-111">Equality Comparisons</span></span>](equality-comparisons.md)
 
-  - [<span data-ttu-id="65e88-112">使用轉換運算子</span><span class="sxs-lookup"><span data-stu-id="65e88-112">Using Conversion Operators</span></span>](using-conversion-operators.md)
-
-  - [<span data-ttu-id="65e88-113">如何：在結構之間實作使用者定義的轉換</span><span class="sxs-lookup"><span data-stu-id="65e88-113">How to: Implement User-Defined Conversions Between Structs</span></span>](how-to-implement-user-defined-conversions-between-structs.md)
-
-- [<span data-ttu-id="65e88-114">相等比較</span><span class="sxs-lookup"><span data-stu-id="65e88-114">Equality Comparisons</span></span>](equality-comparisons.md)
-
-## <a name="c-language-specification"></a><span data-ttu-id="65e88-115">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="65e88-115">C# Language Specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="76766-112">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="76766-112">C# Language Specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="65e88-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="65e88-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="76766-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="76766-113">See also</span></span>
 
-- [<span data-ttu-id="65e88-117">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="65e88-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="65e88-118">轉換和型別轉換</span><span class="sxs-lookup"><span data-stu-id="65e88-118">Casting and Type Conversions</span></span>](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- [<span data-ttu-id="76766-114">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="76766-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="76766-115">轉換和型別轉換</span><span class="sxs-lookup"><span data-stu-id="76766-115">Casting and Type Conversions</span></span>](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

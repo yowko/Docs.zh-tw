@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9487cf89d87b5f373302dc49a08c4fabb719e746
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ed0097e072b34dd43876ddf23abbc1f513670ff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940006"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776827"
 ---
-# <a name="isymunmanagedbinder3getreaderfromcallback-method"></a><span data-ttu-id="d142e-102">ISymUnmanagedBinder3::GetReaderFromCallback 方法</span><span class="sxs-lookup"><span data-stu-id="d142e-102">ISymUnmanagedBinder3::GetReaderFromCallback Method</span></span>
-<span data-ttu-id="d142e-103">可讓使用者實作，或可能是提供透過回呼`IID_IDiaReadExeAtRVACallback`或`IID_IDiaReadExeAtOffsetCallback`從記憶體中取得的偵錯資訊。</span><span class="sxs-lookup"><span data-stu-id="d142e-103">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.</span></span>  
+# <a name="isymunmanagedbinder3getreaderfromcallback-method"></a><span data-ttu-id="09225-102">ISymUnmanagedBinder3::GetReaderFromCallback 方法</span><span class="sxs-lookup"><span data-stu-id="09225-102">ISymUnmanagedBinder3::GetReaderFromCallback Method</span></span>
+<span data-ttu-id="09225-103">可讓使用者實作，或可能是提供透過回呼`IID_IDiaReadExeAtRVACallback`或`IID_IDiaReadExeAtOffsetCallback`從記憶體中取得的偵錯資訊。</span><span class="sxs-lookup"><span data-stu-id="09225-103">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d142e-104">語法</span><span class="sxs-lookup"><span data-stu-id="d142e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="09225-104">語法</span><span class="sxs-lookup"><span data-stu-id="09225-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetReaderFromCallback(  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *fileName,  
@@ -39,31 +39,31 @@ HRESULT GetReaderFromCallback(
     [out,retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d142e-105">參數</span><span class="sxs-lookup"><span data-stu-id="d142e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="09225-105">參數</span><span class="sxs-lookup"><span data-stu-id="09225-105">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="d142e-106">[in]中繼資料匯入介面指標。</span><span class="sxs-lookup"><span data-stu-id="d142e-106">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="09225-106">[in]中繼資料匯入介面指標。</span><span class="sxs-lookup"><span data-stu-id="09225-106">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="d142e-107">[in]檔案名稱指標。</span><span class="sxs-lookup"><span data-stu-id="d142e-107">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="09225-107">[in]檔案名稱指標。</span><span class="sxs-lookup"><span data-stu-id="09225-107">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="d142e-108">[in]加入搜尋路徑的指標。</span><span class="sxs-lookup"><span data-stu-id="d142e-108">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="09225-108">[in]加入搜尋路徑的指標。</span><span class="sxs-lookup"><span data-stu-id="09225-108">[in] A pointer to the search path.</span></span>  
   
  `searchPolicy`  
- <span data-ttu-id="d142e-109">[in]值為[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)列舉，指定要在進行搜尋的符號讀取器時使用的原則。</span><span class="sxs-lookup"><span data-stu-id="d142e-109">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
+ <span data-ttu-id="09225-109">[in]值為[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)列舉，指定要在進行搜尋的符號讀取器時使用的原則。</span><span class="sxs-lookup"><span data-stu-id="09225-109">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
   
  `callback`  
- <span data-ttu-id="d142e-110">[in]回呼函式的指標。</span><span class="sxs-lookup"><span data-stu-id="d142e-110">[in] A pointer to the callback function.</span></span>  
+ <span data-ttu-id="09225-110">[in]回呼函式的指標。</span><span class="sxs-lookup"><span data-stu-id="09225-110">[in] A pointer to the callback function.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="d142e-111">[out]設定指標所傳回[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="d142e-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="09225-111">[out]設定指標所傳回[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="09225-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d142e-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="d142e-112">Return Value</span></span>  
- <span data-ttu-id="d142e-113">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="d142e-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="09225-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="09225-112">Return Value</span></span>  
+ <span data-ttu-id="09225-113">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="09225-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d142e-114">需求</span><span class="sxs-lookup"><span data-stu-id="d142e-114">Requirements</span></span>  
- <span data-ttu-id="d142e-115">**標頭：** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="d142e-115">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="09225-114">需求</span><span class="sxs-lookup"><span data-stu-id="09225-114">Requirements</span></span>  
+ <span data-ttu-id="09225-115">**標頭：** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="09225-115">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d142e-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d142e-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09225-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="09225-116">See also</span></span>
 
-- [<span data-ttu-id="d142e-117">ISymUnmanagedBinder3 介面</span><span class="sxs-lookup"><span data-stu-id="d142e-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [<span data-ttu-id="09225-117">ISymUnmanagedBinder3 介面</span><span class="sxs-lookup"><span data-stu-id="09225-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
