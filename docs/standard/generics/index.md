@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423949"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766819"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -83,7 +83,7 @@ ms.locfileid: "66423949"
   
 - 泛型型別參數的「共變數」  和「反變數」  可讓您使用建構的泛型型別，其型別引數比目標建構的型別有更多衍生 (共變數) 或更少衍生 (反變數)。 共變數和反變數合稱為「變異數」  。 如需詳細資訊，請參閱 [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (共變數和反變數)。  
   
-- 「條件約束」  是對泛型型別參數的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將類型參數限制為具有特定基底類別的類型，或是具有預設建構函式的類型，或為參考類型或實值類型。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
+- 「條件約束」  是對泛型型別參數的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將型別參數限制為具有特定基底類別的型別，或是具有無參數建構函式的型別，或為參考型別或實值型別。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
   
 - *「泛型方法定義」* (generic method definition)，是一種有兩個參數清單的方法：泛型類型參數清單和型式參數清單。 類型參數會顯示為傳回類型或型式參數的類型，如下程式碼所示。  
   

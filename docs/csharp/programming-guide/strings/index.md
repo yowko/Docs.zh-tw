@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503995"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802308"
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
 字串是 <xref:System.String> 類型的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
@@ -62,10 +62,10 @@ ms.locfileid: "67503995"
 |\n|換行|0x000A|  
 |\r|歸位字元|0x000D|  
 |\t|水平 Tab|0x0009|  
-|\U|Unicode 逸出序列 (UTF-32)|`\U00nnnnnn` (例如 `\U0001F47D` = "&#x1F47D;")|  
-|\u|Unicode 逸出序列 (UTF-16)|`\unnnn` (例如 `\u0041` = "A")|  
 |\v|垂直 Tab|0x000B|  
-|\x|類似 "\u" (除了變數長度之外) 的 Unicode 逸出序列。|`\x0041` 或 `\x41` = "A"|  
+|\u|Unicode 逸出序列 (UTF-16)|`\uHHHH` (範圍：0000 - FFFF；範例：`\u00E7` = "ç")|  
+|\U|Unicode 逸出序列 (UTF-32)|`\U00HHHHHH` (範圍：000000 - 10FFFF；範例：`\U0001F47D` = "&#x1F47D;")|  
+|\x|類似 "\u" (除了變數長度之外) 的 Unicode 逸出序列|`\xH[H][H][H]` (範圍：0 - FFFF；範例：`\x00E7` 或 `\x0E7` 或 `\xE7` = "ç")|  
   
 > [!WARNING]
 >  當使用 `\x` 逸出序列且指定的十六進位數字少於 4 個時，若尾隨在逸出序列之後的字元是有效的十六進位數字 (亦即 0-9、A-F 及 a-f)，這些數字將會被解譯為逸出序列的一部分。 例如 `\xA1` 會產生 "&#161;"，亦即字碼元素 U+00A1。 倘若下一個字元為 "A" 或 "a"，則逸出序列將會被解譯為 `\xA1A`，進而產生 "&#x0A1A;"，亦即字碼元素 U+0A1A。 由此可知，將 4 個數字全數指定為十六進位數字 (例如 `\x00A1`)，將可避免可能的錯譯。  

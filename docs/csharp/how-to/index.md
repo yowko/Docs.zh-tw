@@ -2,12 +2,12 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: 062ce64f4f369ae70074fd81f39b60de29e4d7d2
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609252"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744268"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -66,7 +66,7 @@ ms.locfileid: "67609252"
 - [將位元組陣列轉換為 int](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)。
 - [將字串轉換為數字](../programming-guide/types/how-to-convert-a-string-to-a-number.md)。
 - [使用模式比對，以 `as` 和 `is` 運算子安全地轉換至其他類型](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
-- [定義 `struct` 類型的轉換運算子](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)。
+- [定義自訂型別轉換](../language-reference/operators/user-defined-conversion-operators.md).
 - [決定類型是不是可為 Null 的實值型別](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
 - [在可為 Null 與不可為 Null 的實值型別間轉換](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type)。
 

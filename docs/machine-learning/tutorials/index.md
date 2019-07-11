@@ -2,13 +2,13 @@
 title: ML.NET 教學課程
 description: 探索 ML.NET 教學課程，了解如何建置自訂 AI 解決方案，以及將其整合到 .NET 應用程式。
 ms.custom: seodec18
-ms.date: 04/05/2019
-ms.openlocfilehash: 4530e62a0ac8991f6ece37a0ad9909a4c4d08fe7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.date: 07/08/2019
+ms.openlocfilehash: 16311a892f9b1da5d6de10f52bec2ad9410966b7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401653"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777963"
 ---
 # <a name="mlnet-tutorials"></a>ML.NET 教學課程 
 
@@ -20,6 +20,7 @@ ms.locfileid: "67401653"
 - [Iris 叢集](iris-clustering.md)：示範如何使用 ML.NET 套用**叢集**工作。
 - [建議](movie-recommendation.md)：根據先前使用者的評分產生電影**建議**
 - [影像分類](image-classification.md)：示範如何將現有的 TensorFlow 模型定型以使用 ML.NET 建立自訂影像分類工具。
+- [異常偵測](sales-anomaly-detection.md)：示範如何為產品銷售資料分析建置異常偵測應用程式。
 
 ## <a name="next-steps"></a>後續步驟
 

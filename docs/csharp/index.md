@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: fee2aad90485d3d06f1730d5937fd4e1240b4801
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064038"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744261"
 ---
 # <a name="c-guide"></a>C# 指南
 
@@ -35,7 +35,7 @@ C# 指南含有數個章節。 您可以按順序閱讀，或直接跳至您最�
 * [開始使用](getting-started/index.md)
   * 本節涵蓋您需要在慣用的平台上針對 C# 開發環境進行安裝的項目。 本節中的不同主題會說明如何在不同的支援環境中建立您的第一個 C# 程式。
 
-* [C# 簡介教學課程](tutorials/intro-to-csharp/index.md)：
+* [C# 簡介教學課程](tutorials/intro-to-csharp/index.md)
   * C# 簡介教學課程提供適用於新進開發人員的互動式教學課程，讓他們在瀏覽器中使用「讀取、求值、輸出」迴圈 (REPL) 介面來探索及學習 C# 語言。 完成互動式課程之後，您可以在您的電腦上練習相同的課程，以改善程式碼撰寫技巧。
 
 * [教學課程](tutorials/index.md)
