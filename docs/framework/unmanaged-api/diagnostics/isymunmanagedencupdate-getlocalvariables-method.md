@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16e91a0c748e5b148e79dc73cf213b03c68c5021
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48e359f8ed4d52de1cff7ca46a523f4eb80ec4c6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939720"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776898"
 ---
-# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="22350-102">ISymUnmanagedENCUpdate::GetLocalVariables 方法</span><span class="sxs-lookup"><span data-stu-id="22350-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
-<span data-ttu-id="22350-103">取得本機變數。</span><span class="sxs-lookup"><span data-stu-id="22350-103">Gets the local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="d41c6-102">ISymUnmanagedENCUpdate::GetLocalVariables 方法</span><span class="sxs-lookup"><span data-stu-id="d41c6-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
+<span data-ttu-id="d41c6-103">取得本機變數。</span><span class="sxs-lookup"><span data-stu-id="d41c6-103">Gets the local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22350-104">語法</span><span class="sxs-lookup"><span data-stu-id="22350-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d41c6-104">語法</span><span class="sxs-lookup"><span data-stu-id="d41c6-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetLocalVariables(  
     [in]  mdMethodDef  mdMethodToken,  
     [in]  ULONG        cLocals,  
@@ -38,25 +38,25 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="22350-105">參數</span><span class="sxs-lookup"><span data-stu-id="22350-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d41c6-105">參數</span><span class="sxs-lookup"><span data-stu-id="d41c6-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="22350-106">[in]方法的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="22350-106">[in] The metadata token of the method.</span></span>  
+ <span data-ttu-id="d41c6-106">[in]方法的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="d41c6-106">[in] The metadata token of the method.</span></span>  
   
  `cLocals`  
- <span data-ttu-id="22350-107">[in]A`ULONG`表示的大小`rgLocals`參數。</span><span class="sxs-lookup"><span data-stu-id="22350-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
+ <span data-ttu-id="d41c6-107">[in]A`ULONG`表示的大小`rgLocals`參數。</span><span class="sxs-lookup"><span data-stu-id="d41c6-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
   
  `rgLocals`  
- <span data-ttu-id="22350-108">[out]傳回的陣列[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)執行個體。</span><span class="sxs-lookup"><span data-stu-id="22350-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
+ <span data-ttu-id="d41c6-108">[out]傳回的陣列[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)執行個體。</span><span class="sxs-lookup"><span data-stu-id="d41c6-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="22350-109">[out]指標`ULONG`接收大小的`rgLocals`包含區域變數所需要的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="22350-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
+ <span data-ttu-id="d41c6-109">[out]指標`ULONG`接收大小的`rgLocals`包含區域變數所需要的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="d41c6-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="22350-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="22350-110">Return Value</span></span>  
- <span data-ttu-id="22350-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="22350-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d41c6-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="d41c6-110">Return Value</span></span>  
+ <span data-ttu-id="d41c6-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="d41c6-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="22350-112">需求</span><span class="sxs-lookup"><span data-stu-id="22350-112">Requirements</span></span>  
- <span data-ttu-id="22350-113">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="22350-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d41c6-112">需求</span><span class="sxs-lookup"><span data-stu-id="d41c6-112">Requirements</span></span>  
+ <span data-ttu-id="d41c6-113">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d41c6-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22350-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="22350-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d41c6-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d41c6-114">See also</span></span>
 
-- [<span data-ttu-id="22350-115">ISymUnmanagedENCUpdate 介面</span><span class="sxs-lookup"><span data-stu-id="22350-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="d41c6-115">ISymUnmanagedENCUpdate 介面</span><span class="sxs-lookup"><span data-stu-id="d41c6-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

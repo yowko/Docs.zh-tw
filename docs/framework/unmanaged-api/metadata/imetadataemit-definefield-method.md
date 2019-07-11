@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8ba8a762c56a666c67b25b9ce0420099fce419a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 057bae1d702fa091ebc3d3178c9fba35d5dd3d90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044157"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777651"
 ---
-# <a name="imetadataemitdefinefield-method"></a><span data-ttu-id="a6bbe-102">IMetaDataEmit::DefineField 方法</span><span class="sxs-lookup"><span data-stu-id="a6bbe-102">IMetaDataEmit::DefineField Method</span></span>
-<span data-ttu-id="a6bbe-103">建立欄位的定義，具有指定之中繼資料簽章，並取得該欄位定義的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-103">Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.</span></span>  
+# <a name="imetadataemitdefinefield-method"></a><span data-ttu-id="e049d-102">IMetaDataEmit::DefineField 方法</span><span class="sxs-lookup"><span data-stu-id="e049d-102">IMetaDataEmit::DefineField Method</span></span>
+<span data-ttu-id="e049d-103">建立欄位的定義，具有指定之中繼資料簽章，並取得該欄位定義的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="e049d-103">Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a6bbe-104">語法</span><span class="sxs-lookup"><span data-stu-id="a6bbe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e049d-104">語法</span><span class="sxs-lookup"><span data-stu-id="e049d-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineField (   
     [in]  mdTypeDef   td,   
     [in]  LPCWSTR     szName,   
@@ -43,44 +43,44 @@ HRESULT DefineField (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a6bbe-105">參數</span><span class="sxs-lookup"><span data-stu-id="a6bbe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e049d-105">參數</span><span class="sxs-lookup"><span data-stu-id="e049d-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="a6bbe-106">[in]`mdTypeDef`封入類別或介面的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-106">[in] The `mdTypeDef` token for the enclosing class or interface.</span></span>  
+ <span data-ttu-id="e049d-106">[in]`mdTypeDef`封入類別或介面的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="e049d-106">[in] The `mdTypeDef` token for the enclosing class or interface.</span></span>  
   
  `szName`  
- <span data-ttu-id="a6bbe-107">[in]以 Unicode 欄位名稱。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-107">[in] The field name in Unicode.</span></span>  
+ <span data-ttu-id="e049d-107">[in]以 Unicode 欄位名稱。</span><span class="sxs-lookup"><span data-stu-id="e049d-107">[in] The field name in Unicode.</span></span>  
   
  `dwFieldFlags`  
- <span data-ttu-id="a6bbe-108">[in]欄位的欄位屬性。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-108">[in] The field attributes.</span></span> <span data-ttu-id="a6bbe-109">這是位元遮罩`CorFieldAttr`值。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-109">This is a bitmask of `CorFieldAttr` values.</span></span>  
+ <span data-ttu-id="e049d-108">[in]欄位的欄位屬性。</span><span class="sxs-lookup"><span data-stu-id="e049d-108">[in] The field attributes.</span></span> <span data-ttu-id="e049d-109">這是位元遮罩`CorFieldAttr`值。</span><span class="sxs-lookup"><span data-stu-id="e049d-109">This is a bitmask of `CorFieldAttr` values.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="a6bbe-110">[in]為 BLOB 欄位簽章。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-110">[in] The field signature as a BLOB.</span></span>  
+ <span data-ttu-id="e049d-110">[in]為 BLOB 欄位簽章。</span><span class="sxs-lookup"><span data-stu-id="e049d-110">[in] The field signature as a BLOB.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="a6bbe-111">[in]中的位元組計數`pvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-111">[in] The count of bytes in `pvSigBlob`.</span></span>  
+ <span data-ttu-id="e049d-111">[in]中的位元組計數`pvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="e049d-111">[in] The count of bytes in `pvSigBlob`.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="a6bbe-112">[in]`ELEMENT_TYPE_` *\** 常數的值。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-112">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="a6bbe-113">這是`CorElementType`值。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-113">This is a `CorElementType` value.</span></span> <span data-ttu-id="a6bbe-114">如果未定義欄位的常數值，使用`ELEMENT_TYPE_END`。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-114">If not defining a constant value for the field, use `ELEMENT_TYPE_END`.</span></span>  
+ <span data-ttu-id="e049d-112">[in]`ELEMENT_TYPE_` *\** 常數的值。</span><span class="sxs-lookup"><span data-stu-id="e049d-112">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="e049d-113">這是`CorElementType`值。</span><span class="sxs-lookup"><span data-stu-id="e049d-113">This is a `CorElementType` value.</span></span> <span data-ttu-id="e049d-114">如果未定義欄位的常數值，使用`ELEMENT_TYPE_END`。</span><span class="sxs-lookup"><span data-stu-id="e049d-114">If not defining a constant value for the field, use `ELEMENT_TYPE_END`.</span></span>  
   
  `pValue`  
- <span data-ttu-id="a6bbe-115">[in]欄位的常值。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-115">[in] The constant value for the field.</span></span>  
+ <span data-ttu-id="e049d-115">[in]欄位的常值。</span><span class="sxs-lookup"><span data-stu-id="e049d-115">[in] The constant value for the field.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="a6bbe-116">[in](Unicode) 字元的大小`pValue`。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-116">[in] The size in (Unicode) characters of `pValue`.</span></span>  
+ <span data-ttu-id="e049d-116">[in]\(Unicode\) 字元的大小`pValue`。</span><span class="sxs-lookup"><span data-stu-id="e049d-116">[in] The size in (Unicode) characters of `pValue`.</span></span>  
   
  `pmd`  
- <span data-ttu-id="a6bbe-117">[out]`mdFieldDef`指派權杖。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-117">[out] The `mdFieldDef` token assigned.</span></span>  
+ <span data-ttu-id="e049d-117">[out]`mdFieldDef`指派權杖。</span><span class="sxs-lookup"><span data-stu-id="e049d-117">[out] The `mdFieldDef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a6bbe-118">需求</span><span class="sxs-lookup"><span data-stu-id="a6bbe-118">Requirements</span></span>  
- <span data-ttu-id="a6bbe-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a6bbe-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e049d-118">需求</span><span class="sxs-lookup"><span data-stu-id="e049d-118">Requirements</span></span>  
+ <span data-ttu-id="e049d-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e049d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a6bbe-120">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a6bbe-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e049d-120">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e049d-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a6bbe-121">**LIBRARY:** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a6bbe-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e049d-121">**LIBRARY:** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="e049d-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a6bbe-122">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6bbe-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e049d-122">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e049d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a6bbe-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a6bbe-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e049d-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e049d-123">See also</span></span>
 
-- [<span data-ttu-id="a6bbe-124">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="a6bbe-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="a6bbe-125">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="a6bbe-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="e049d-124">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="e049d-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="e049d-125">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="e049d-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
