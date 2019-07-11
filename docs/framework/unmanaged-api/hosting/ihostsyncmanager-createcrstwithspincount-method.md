@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a288edc89029804de277484741c1895af7859b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16fcc631e7e734e1bce4566f31d209a8433fbfdf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697312"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753450"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount 方法
 建立具有同步處理的微調計數的重要區段物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CreateCrstWithSpinCount (  
     [in]  DWORD dwSpinCount,  
     [out] IHostCrst** ppCrst  
@@ -65,7 +65,7 @@ HRESULT CreateCrstWithSpinCount (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

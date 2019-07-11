@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87ca5470fe5994d34d12a339c2d92a5f3917063d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 03bc5584d24efa790989f93426251f9f38e65904
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490232"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768530"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函式
 載入的 DLL 隨附於.NET Framework 可轉散發套件中指定的版本。  
@@ -31,7 +31,7 @@ ms.locfileid: "66490232"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT LoadLibraryShim (  
     [in]  LPCWSTR  szDllName,  
     [in]  LPCWSTR  szVersion,  
@@ -56,7 +56,7 @@ HRESULT LoadLibraryShim (
 ## <a name="return-value"></a>傳回值  
  中所定義 WinError.h，除了下列的值，這個方法會傳回標準的元件物件模型 (COM) 錯誤代碼。  
   
-|傳回碼|描述|  
+|傳回碼|說明|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |CLR_E_SHIM_RUNTIMELOAD|正在載入`szDllName`需要的載入 common language runtime (CLR)，以及必要的 CLR 版本無法載入。|  

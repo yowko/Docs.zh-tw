@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 900fece1dd29f73f77b85ff08e4deff1396f8aaf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54981be7104eb04ac6347ad13b61a69f40d4377c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994015"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770618"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle 方法
 取得此 ICorDebugThread 作用中的部份目前的控制代碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetHandle (  
     [out] HTHREAD *phThreadHandle  
 );  
@@ -51,4 +51,4 @@ HRESULT GetHandle (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

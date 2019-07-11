@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: de3fc8b23bd132179fc7fb67d29010552138e3ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063103"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742822"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 物件模型
 在  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，以開發人員的程式語言表示的物件模型對應到關聯式資料庫的資料模型。 然後就會根據物件模型對資料執行作業。  
@@ -24,7 +24,7 @@ ms.locfileid: "65063103"
 |LINQ to SQL 物件模型|關聯式資料模型|  
 |------------------------------|---------------------------|  
 |實體類別|資料表|  
-|類別成員|資料行|  
+|類別成員|「資料行」|  
 |關聯|外部索引鍵關聯性|  
 |方法|預存程序或函式|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65063103"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 和 <xref:System.Data.Linq.Mapping.ParameterAttribute> 屬性，將預存程序和函式對應至方法。 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 屬性可以區分表示預存程序的方法和表示使用者定義函式的方法。 如果此屬性設為 `false` (預設值)，則此方法表示預存程序。 如果設為 `true`，則此方法表示資料庫函式。  
   
 > [!NOTE]
->  如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來建立對應至預存程序和使用者定義函式的方法。  
+>  如果您使用 Visual Studio，您可以使用物件關聯式設計工具來建立對應至預存程序和使用者定義函式的方法。  
   
 ### <a name="example"></a>範例  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

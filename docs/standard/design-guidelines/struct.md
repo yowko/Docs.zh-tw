@@ -12,19 +12,19 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e787c5b34848a561b43c3457341673f11cc2bd00
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650137"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775553"
 ---
 # <a name="struct-design"></a>結構設計
 一般用途的實值型別最常稱為結構時，它的 C# 關鍵字。 本節提供一般的結構設計指導方針。  
   
- **X DO NOT** 結構提供的預設建構函式。  
+ **X DO NOT**結構提供的無參數建構函式。  
   
- 遵循此指導方針，可讓建立而不需陣列的每個項目上執行建構函式的結構陣列。 請注意，C# 不允許有預設建構函式的結構。  
+ 遵循此指導方針，可讓建立而不需陣列的每個項目上執行建構函式的結構陣列。 請注意，C#不允許有無參數建構函式的結構。  
   
  **X DO NOT** 定義可變動的值型別。  
   

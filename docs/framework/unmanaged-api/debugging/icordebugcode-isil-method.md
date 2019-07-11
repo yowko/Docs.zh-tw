@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a82606d90444c2d543065287780e42da4f8b4943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1257c870371895cec89996be0e94906597b09ed8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750263"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747461"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL 方法
 取得值，指出是否此 「 ICorDebugCode"代表已編譯的 Microsoft intermediate language (MSIL) 程式碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT IsIL (  
     [out] BOOL       *pbIL  
 );  
@@ -46,6 +46,6 @@ HRESULT IsIL (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

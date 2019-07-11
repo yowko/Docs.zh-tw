@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d1226f64df379b5c40304221e9e66eebcdb17b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 965ce04b02a0eb1ca30aba065b3e372332e08b55
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989127"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752286"
 ---
 # <a name="icordebugenumclone-method"></a>ICorDebugEnum::Clone 方法
 建立這個 ICorDebugEnum 物件的複本。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Clone (  
     [out] ICorDebugEnum **ppEnum  
 );  
@@ -46,4 +46,4 @@ HRESULT Clone (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 7c036772-d58a-47f1-a5fa-31779898ef0d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e84d6deca0cd09cc547636007208c70ab91c1ab1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adb01b8aa57bf3ed928578d15e0859b9ac73bc7d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946277"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759932"
 ---
 # <a name="icordebugloadedmodulegetbaseaddress-method"></a>ICorDebugLoadedModule::GetBaseAddress 方法
 取得載入模組的基底位址。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetBaseAddress(  
    [out] CORDB_ADDRESS *pAddress  
 );  
@@ -38,7 +38,7 @@ HRESULT GetBaseAddress(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

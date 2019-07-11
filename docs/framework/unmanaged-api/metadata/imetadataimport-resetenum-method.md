@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 143b11f0a99081b7d49bfbb68b635d92cf1e9ba3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa5a446ba7bfd70330601c7cbc129800761cdb7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777425"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782625"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum 方法
 重設指定列舉程式至指定位置。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ResetEnum (  
    [in] HCORENUM    hEnum,   
    [in] ULONG       ulPos  
@@ -50,7 +50,7 @@ HRESULT ResetEnum (
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

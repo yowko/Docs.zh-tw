@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66d650adb39a9c7dade0936ec671ae5a8b4aeecd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 944c641c39ddef7add0e9f382dc7d35068668455
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045464"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781724"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 列舉
 提供值，這些值表示機器碼中已連結的類型。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum   
 {  
     nltNone       = 1,  
@@ -42,7 +42,7 @@ typedef enum
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`nltNone`|表示未指定任何關鍵字。|  
 |`nltAnsi`|表示指定 ANSI 關鍵字。|  
@@ -58,7 +58,7 @@ typedef enum
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

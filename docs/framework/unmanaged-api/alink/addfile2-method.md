@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7a651be40773607e0db215eadf884ed642e6e3b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de85d264d709da747fab636f40c99bc0d0752251
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775664"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742362"
 ---
 # <a name="addfile2-method"></a>AddFile2 方法
 將檔案加入至組件。 也可以用來建立未繫結的模組。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT AddFile2(  
     mdAssembly AssemblyID,  
     LPCWSTR pszFilename,  

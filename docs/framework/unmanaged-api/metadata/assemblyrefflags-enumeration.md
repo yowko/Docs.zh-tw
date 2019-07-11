@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc98b2421d23ffd6dfb716a8cc782b46a9d59ce0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c402dcda79f013b19b091c6309b3d71951018a18
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043312"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776363"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags 列舉
 包含值，描述組件參考的功能。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     arfFullOriginator = 0x0001  
 } AssemblyRefFlags;  
@@ -36,7 +36,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`arfFullOriginator`|指定組件參考，包含完整的雜湊發行者的相關資訊的組件。|  
   
@@ -45,7 +45,7 @@ typedef enum {
   
  **標頭：** Cor.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: 0d4e3360920347c38f24b962c097af32eb92bc48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bf97263bf8ae0ac3ece187e81a51edfaef48a54
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657404"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742574"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>逐步解說：簡單的物件模型和查詢 (Visual Basic)
 這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。 接著，您會建立簡單查詢，以便列出位於倫敦的客戶。  
   
- 這個逐步解說的設計是以程式碼為導向，以協助說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。 一般來說，您會使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 來建立物件模型。  
+ 這個逐步解說的設計是以程式碼為導向，以協助說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。 一般來說，您會使用物件關聯式設計工具來建立物件模型。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -46,15 +46,15 @@ ms.locfileid: "64657404"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1. 按一下 [檔案] 功能表上的 [新增專案]。  
+1. 按一下 [檔案] 功能表上的 [新增專案]。    
   
 2. 在 [**專案類型**窗格**新增專案**] 對話方塊中，按一下**Visual Basic**。  
   
-3. 按一下 [範本] 窗格中的 [主控台應用程式]。  
+3. 按一下 [範本]  窗格中的 [主控台應用程式]  。  
   
 4. 在 **名稱**方塊中，輸入**LinqConsoleApp**。  
   
-5. 按一下 [確定] 。  
+5. 按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果`System.Data.Linq`未列為專案中參考 (按一下**顯示所有檔案**中**方案總管 中**展開**參考**節點)，請將它加入中所述下列步驟。  
@@ -139,11 +139,11 @@ ms.locfileid: "64657404"
   
      訊息方塊會顯示內含六位客戶的清單。 [主控台] 視窗會顯示產生的 SQL 程式碼。  
   
-3. 按一下 [確定] 來解除訊息方塊。  
+3. 按一下 [確定]  來解除訊息方塊。  
   
      應用程式隨即關閉。  
   
-4. 在 [檔案] 功能表上按一下 [全部儲存]。  
+4. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
      如果繼續進行下一個逐步解說，則需要這個應用程式。  
   

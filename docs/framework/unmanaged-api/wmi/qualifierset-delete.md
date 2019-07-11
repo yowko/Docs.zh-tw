@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 543cc63b3e2188c11a6a8bf1eaa846461375be99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 956abe8ddf8075b7b8f8c057db0aa7187982e1d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597267"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782603"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete 函式
 依名稱刪除指定的限定詞。  
@@ -30,7 +30,7 @@ ms.locfileid: "61597267"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT QualifierSet_Delete (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 
@@ -53,9 +53,9 @@ HRESULT QualifierSet_Delete (
 
 此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
 
-|常數  |值  |描述  |
+|常數  |值  |說明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` 參數無效。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 |           `wszName` 參數無效。 |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | 刪除這個限定詞是不合法的。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的限定詞。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
@@ -72,7 +72,7 @@ HRESULT QualifierSet_Delete (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

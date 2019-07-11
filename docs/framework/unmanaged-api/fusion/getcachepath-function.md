@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf23a8f1893aa0f992d554d3c7533c3dc42f4e95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92366190c769344b41923cbb25ed4b04afceaae9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985890"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778666"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 函式
 取得快取的組件，並使用指定的旗標的路徑。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetCachePath (  
     [in]      ASM_CACHE_FLAGS  dwCacheFlags,  
     [in]      LPWSTR           pwzCachePath,  
@@ -53,7 +53,7 @@ HRESULT GetCachePath (
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

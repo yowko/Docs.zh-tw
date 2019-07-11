@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423845"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767872"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 列舉
 描述的作業主機可以套用原則的動作集合。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     OPR_ThreadAbort,  
     OPR_ThreadRudeAbortInNonCriticalRegion,  
@@ -42,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`OPR_AppDomainRudeUnload`|主機可以指定應執行時的原則動作<xref:System.AppDomain>卸載非依正常程序 （粗略） 的方式。|  
 |`OPR_AppDomainUnload`|主機可以指定應執行時的原則動作<xref:System.AppDomain>卸載。|  

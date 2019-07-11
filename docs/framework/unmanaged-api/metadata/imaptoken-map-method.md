@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a85dc586b0c08fabdd34c018e82314c9003eeded
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ac12d5b6bc2911e3bd879285a9a12f65c426f0d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044898"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745851"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map 方法
 對應使用中繼資料簽章的組件之間的關聯性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Map (  
     [in]  mdToken tkImp,   
     [in]  mdToken tkEmit  
@@ -53,7 +53,7 @@ HRESULT Map (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

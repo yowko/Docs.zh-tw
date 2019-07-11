@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c42297e848844617ffdc6c85c81846b5805eb4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cfd7c835cdc4b53c753d714216d1745eb0b80c2d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984759"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772940"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain 方法
 設定將用來初始化預設應用程式定義域的屬性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetPropertiesForDefaultAppDomain(  
     [in] DWORD nProperties,  
     [in] LPCWSTR *pwszPropertyNames,  
@@ -48,7 +48,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` 包含無法辨識這個方法的屬性名稱。|  
@@ -63,7 +63,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

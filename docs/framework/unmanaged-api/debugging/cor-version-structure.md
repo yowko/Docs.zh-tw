@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00e58d83c19c3cb6a2e1eb38942500d7f5dc5cf9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1f0a36d186c6d9788d43b075bf9d67c36ed1acb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609291"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740563"
 ---
 # <a name="corversion-structure"></a>COR_VERSION 結構
 儲存通用語言執行平台的標準四部分版本號碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct _COR_VERSION {  
     DWORD dwMajor;  
     DWORD dwMinor;  
@@ -56,7 +56,7 @@ typedef struct _COR_VERSION {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5672d1b89b4260d1ebfbf444deb2702f215a0e95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 208552dd94f587b9326280ad455ca2478ae4ac4d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049644"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780255"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC 方法
 強制記憶體回收發生 common language runtime (CLR) 中。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ForceGC();  
 ```  
   
@@ -43,7 +43,7 @@ HRESULT ForceGC();
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

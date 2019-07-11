@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 732523935eec62bffbc15705bc93c97f14c90064
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf9f7f3d3419efc9e1dc7d75fc7272432c0cf5d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792713"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739688"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags 列舉
 指定會引發 Managed 偵錯助理 (MDA) 的執行緒狀態。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorDebugMDAFlags {  
     MDA_FLAG_SLIP = 0x2  
 } CorDebugMDAFlags;  
@@ -36,7 +36,7 @@ typedef enum CorDebugMDAFlags {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`MDA_FLAG_SLIP`|因為 MDA 引發的進度落後的執行緒引發之 MDA。|  
   
@@ -50,7 +50,7 @@ typedef enum CorDebugMDAFlags {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

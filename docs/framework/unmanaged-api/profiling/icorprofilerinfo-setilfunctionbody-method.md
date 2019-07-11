@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d10bb7033688efce9488078d2ef605e2a29382f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe0a0fc177c9ec89f4621e7defb5330c911034b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792648"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778615"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody 方法
 取代指定的模組中指定的函式的主體。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetILFunctionBody(  
     [in] ModuleID    moduleId,  
     [in] mdMethodDef methodid,  
@@ -60,7 +60,7 @@ HRESULT SetILFunctionBody(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7efb2c3e8033b8bd8fa736a29b2ab9b3bedebeaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1793547cfc0d9637352b62ff47beee41e9f5ac5c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609499"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740494"
 ---
 # <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT 結構
 提供記憶體中物件配置的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct COR_TYPE_LAYOUT {  
     COR_TYPEID parentID;  
     ULONG32 objectSize;  
@@ -40,7 +40,7 @@ typedef struct COR_TYPE_LAYOUT {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`parentID`|此類型的父類型的識別碼。 這會是 NULL 類型識別碼 (token1 = 0，token2 = 0) 的型別 id 對應於<xref:System.Object?displayProperty=nameWithType>。|  
 |`objectSize`|此類型物件的基底的大小。 這是針對非變數大小物件的總大小。|  
@@ -58,7 +58,7 @@ typedef struct COR_TYPE_LAYOUT {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a290ca162e5ab71b4184d166bcd00f1d0217cb94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d30b6cb083cc2f92bcbe089bf8e990fedd8e8f7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785173"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738089"
 ---
 # <a name="icordebugappdomainattach-method"></a>ICorDebugAppDomain::Attach 方法
 將偵錯工具附加至應用程式定義域中。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Attach ();  
 ```  
   
@@ -43,4 +43,4 @@ HRESULT Attach ();
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

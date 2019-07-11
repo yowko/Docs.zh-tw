@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7df65c28fad6fa79ec7a18d8511955330b2817
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1abb7efe0f30ff14d51f9486d6d5b04d2faa053
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049345"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773759"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>StrongNameSignatureGeneration 函式
 產生指定組件的強式名稱簽章。  
@@ -29,7 +29,7 @@ ms.locfileid: "62049345"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureGeneration (   
     [in]  LPCWSTR   wszFilePath,  
     [in]  LPCWSTR   wszKeyContainer,  
@@ -84,7 +84,7 @@ BOOLEAN StrongNameSignatureGeneration (
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

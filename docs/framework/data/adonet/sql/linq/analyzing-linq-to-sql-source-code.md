@@ -2,18 +2,18 @@
 title: 分析 LINQ to SQL 原始程式碼
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: 35bc4988b8b9845ce6f45bab6849cd4b53a858ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e34364496a791031cc87cf07efd3d2adca39d93c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592478"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743600"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>分析 LINQ to SQL 原始程式碼
 使用下列步驟，您就可以從 Northwind 範例資料庫產生 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 原始程式碼。 您可以比較物件模型的項目與資料庫的項目，進一步了解不同項目的對應方式。  
   
 > [!NOTE]
->  使用 Visual Studio 的開發人員可以使用[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]來產生此程式碼。  
+>  使用 Visual Studio 的開發人員可以使用 O/R 設計工具來產生此程式碼。  
   
 1. 如果您的開發電腦上還沒有 Northwind 範例資料庫，則可以免費進行下載。 如需詳細資訊，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36070d5374a11daf4b7800481c86d61057989631
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5cbdd19fa14a41d8bd2eadec80dbafcea7b720d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994444"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766439"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread 方法
 取得這個處理程序的執行緒，其具有指定的作業系統 (OS) 執行緒識別碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetThread(  
     [in] DWORD dwThreadId,  
     [out] ICorDebugThread **ppThread);  
@@ -49,4 +49,4 @@ HRESULT GetThread(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

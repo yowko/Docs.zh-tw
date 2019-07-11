@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a2ce58576ebf03d756c4e8157ab65d57cd7683b
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 1d35bd5f8aaa2dc0df0044671414a5a936fed24d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380259"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781062"
 ---
 # <a name="metahostpolicyflags-enumeration"></a>METAHOST_POLICY_FLAGS 列舉
 提供通用於大多數的執行階段主機的繫結原則。 這個列舉型別由[iclrmetahostpolicy:: Getrequestedruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     METAHOST_POLICY_HIGHCOMPAT              = 0x00,  
     METAHOST_POLICY_APPLY_UPGRADE_POLICY    = 0x08,  

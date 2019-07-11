@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f014f9213a4b9a2d5119af9a6dceebb9a9d54b52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ad7dd3ae0e547933fdf7d579116dccc62ae579c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775595"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766154"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>ICorDebugProcess::ClearCurrentException 方法
 清除指定的執行緒上目前的 unmanaged 例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ClearCurrentException([in] DWORD threadID);  
 ```  
   
@@ -49,4 +49,4 @@ HRESULT ClearCurrentException([in] DWORD threadID);
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

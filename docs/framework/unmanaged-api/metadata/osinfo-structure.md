@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0aba49fb4a60b2e471c541a8d8531a1cbc8627f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a36cd3c5fb638799a735e4b4a1a98959500300b5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775196"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761593"
 ---
 # <a name="osinfo-structure"></a>OSINFO 結構
 包含組件或模組的作業系統的相關詳細資料。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct {  
     DWORD   dwOSPlatformId;  
     DWORD   dwOSMajorVersion;   
@@ -38,7 +38,7 @@ typedef struct {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`dwOSPlatformId`|Microsoft Windows 平台函式所定義的識別碼值的其中一個`GetVersionEx`。 支援下列值：<br /><br /> -VER_PLATFORM_WIN32s 或 0x0000，指定 Microsoft Windows 3.1。<br />-VER_PLATFORM_WIN32_WINDOWS 或 0x0001，指定 Windows 95、 Windows 98 或從它們繼承而來的作業系統。<br />-VER_PLATFORM_WIN32_NT 或 0x0010，指定 Windows NT 或從它繼承而來的作業系統。|  
 |`dwOSMajorVersion`|作業系統主要版本或 NULL 值，指出任何版本。|  
@@ -54,7 +54,7 @@ typedef struct {
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

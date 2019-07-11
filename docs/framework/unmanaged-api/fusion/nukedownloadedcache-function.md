@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e549e13c0d51e4aa708a674a2224168ab66f8ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76ada8400573dd61c25e0dce3f49ce66b5fb30c1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774526"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773810"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache 函式
 刪除 common language runtime (CLR) 下載快取。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT NukeDownloadedCache();  
 ```  
   
@@ -47,7 +47,7 @@ HRESULT NukeDownloadedCache();
   
  **LIBRARY:** Fusion.dll 和 Mscorwks.dll。 使用而不是 Mscorwks.dll 的 Fusion.dll，以確保您設為目標的.NET framework 的正確版本。  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

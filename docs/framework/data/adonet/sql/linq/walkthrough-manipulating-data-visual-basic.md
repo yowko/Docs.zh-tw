@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0dd70eb5d3b3ad56a8597ce0658a296a03d5f4a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27ac9de488a92d838df06d4a501a9148e87b9c9f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618053"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742729"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>逐步解說：操作資料 (Visual Basic)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -29,7 +29,7 @@ ms.locfileid: "64618053"
   
 - 從 Northwind 資料庫產生的 Visual Basic 程式碼檔。  
   
-     您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 工具來產生這個檔案。 本逐步解說是使用 SQLMetal 工具，以下列命令列所撰寫：  
+     您可以使用物件關聯式設計工具或 SQLMetal 工具來產生這個檔案。 本逐步解說是使用 SQLMetal 工具，以下列命令列所撰寫：  
   
      **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
   
@@ -55,15 +55,15 @@ ms.locfileid: "64618053"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1. 在 Visual Studio 的 [檔案]  功能表上，按一下 [新增專案] 。  
+1. 在 Visual Studio 的 [檔案]  功能表上，按一下 [新增專案]  。  
   
 2. 在 [**專案類型**] 窗格中的**新增專案**] 對話方塊中，按一下 [ **Visual Basic**。  
   
-3. 按一下 [範本] 窗格中的 [主控台應用程式]。  
+3. 按一下 [範本]  窗格中的 [主控台應用程式]  。  
   
 4. 在 **名稱**方塊中，輸入**LinqDataManipulationApp**。  
   
-5. 按一下 [確定] 。  
+5. 按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果`System.Data.Linq`未列為專案中參考 (按一下**顯示所有檔案**中**方案總管 中**展開**參考**節點)，請將它加入中所述下列步驟。  

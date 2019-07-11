@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cd8b08c630d56ca3b59cad768e285b630d64e59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d5ea547066663564d76008434884b6e34150efb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049761"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779333"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated 方法
 通知程式碼分析工具已建立的記憶體回收控制代碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT HandleCreated(  
     [in] GCHandleID handleId,  
     [in] ObjectID initialObjectId);  
@@ -49,7 +49,7 @@ HRESULT HandleCreated(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

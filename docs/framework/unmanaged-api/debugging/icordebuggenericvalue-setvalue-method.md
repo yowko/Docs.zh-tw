@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae64fcccb49123f34cca2622a972a89bf700904f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b6907cdf78fc70c75ddd711cd8593427857b172
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995536"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756887"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>ICorDebugGenericValue::SetValue 方法
 複製指定的緩衝區中的新值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetValue (  
     [in] void      *pFrom  
 );  
@@ -49,4 +49,4 @@ HRESULT SetValue (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

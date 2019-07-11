@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49cef22e88613fe4c4dfb3fb35a92977977b1827
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75b28dafae2861a2d33363f95a46bf1abf4cda35
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988633"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756585"
 ---
 # <a name="icordebugilframecansetip-method"></a>ICorDebugILFrame::CanSetIP 方法
 取得 HRESULT，指出是否將指令指標設定為在 Microsoft Intermediate Language (MSIL) 程式碼中指定的位移位置的安全。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CanSetIP (  
     [in] ULONG32   nOffset  
 );  
@@ -49,4 +49,4 @@ HRESULT CanSetIP (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

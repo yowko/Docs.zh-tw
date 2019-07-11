@@ -2,18 +2,18 @@
 title: LINQ to SQL 多層式架構與 Web 服務
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fafaa60dd75def98b486e18faa5bd3ecd1d6315
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033530"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743046"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL 多層式架構與 Web 服務
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 被專為中介層，例如 Web 服務鬆散結合的資料存取層 (DAL) 上使用。 如果展示層是 ASP.NET 網頁，那麼您可以使用 <xref:System.Web.UI.WebControls.LinqDataSource> Web 伺服器控制項，管理使用者介面與中介層上的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之間的資料傳輸。 如果展示層不是 ASP.NET 網頁，則中介層和展示層都必須額外執行一些工作，以管理資料的序列化 (Serialization) 和還原序列化 (Deserialization)。  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>設定中介層上的 LINQ to SQL  
- 在 Web 服務或 N-Tier 應用程式中，中介層包含資料內容和實體類別。 您可以手動建立這些類別，或者使用 SQLMetal.exe 或[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]建立類別 (如文件他處所述)。 在設計階段，您可以選擇是否要將實體類別設為可序列化。 如需詳細資訊，請參閱[如何：讓實體可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。 另一個選擇是另外建立一組類別來封裝要序列化的資料，然後當您在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢中傳回資料時，投影到這些可序列化的型別中。  
+ 在 Web 服務或 N-Tier 應用程式中，中介層包含資料內容和實體類別。 您可以手動方式或文件中所述，使用 SQLMetal.exe 或物件關聯式設計工具來建立這些類別。 在設計階段，您可以選擇是否要將實體類別設為可序列化。 如需詳細資訊，請參閱[如何：讓實體可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。 另一個選擇是另外建立一組類別來封裝要序列化的資料，然後當您在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢中傳回資料時，投影到這些可序列化的型別中。  
   
  您接著可以定義介面以及用戶端將呼叫來擷取、插入和更新資料的方法。 這些介面方法會包裝您的 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢。 您可以使用任何一種序列化機制來處理遠端方法呼叫和序列化資料。 唯一的要求是，如果物件模型中存在循環或雙向關係，例如標準 Northwind 物件模型中的 Customers 與 Orders 之間的關係，那麼就必須使用支援此關係的序列化程式。 Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> 支援雙向關聯性，但用於非 WCF Web 服務的 XmlSerializer 則否。 如果您選擇使用 XmlSerializer，就必須確定物件模型沒有循環關聯性。  
   

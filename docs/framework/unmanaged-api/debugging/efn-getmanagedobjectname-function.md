@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a95008d98436161ac919ef307273bc797519f15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3490477f30cd1c0badaa9cfd71433a5bf9d7a99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698327"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738990"
 ---
-# <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName 函式
+# <a name="efngetmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName 函式
 取得使用提供的 managed 的物件的指標類型的名稱。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT _EFN_GetManagedObjectName(  
     [in]  PDEBUG_CLIENT  Client,  
     [in]  ULONG64        objAddr,  
@@ -58,7 +58,7 @@ HRESULT _EFN_GetManagedObjectName(
   
  **標頭：** SOS_Stacktrace.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

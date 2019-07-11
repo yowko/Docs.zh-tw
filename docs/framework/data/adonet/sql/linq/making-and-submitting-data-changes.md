@@ -2,12 +2,12 @@
 title: 變更資料和提交
 ms.date: 03/30/2017
 ms.assetid: d68c2dc3-99b3-49ab-b547-2ca5b386429a
-ms.openlocfilehash: c9d319727a750fbd3e2a186c28e79b20200c6bd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23dc45c990763e69b41608f6c3ec15a8db17bf23
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903340"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743004"
 ---
 # <a name="making-and-submitting-data-changes"></a>變更資料和提交
 本節中的主題描述如何變更資料庫以及將變更傳輸至資料庫，以及如何處理開放式並行存取 (Optimistic Concurrency) 衝突。  
@@ -15,7 +15,7 @@ ms.locfileid: "61903340"
 > [!NOTE]
 >  您可以覆寫 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 預設方法，以執行 `Insert`、`Update` 和 `Delete` 資料庫作業。 如需詳細資訊，請參閱 <<c0> [ 自訂插入、 更新和刪除作業](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)。  
 >   
->  使用 Visual Studio 的開發人員可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來開發預存程序，針對相同目的。  
+>  使用 Visual Studio 的開發人員可以使用物件關聯式設計工具來開發預存程序，針對相同目的。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：將資料列插入資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-insert-rows-into-the-database.md)  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 321298ce942b35d11a861c87cdf6b8714179ea97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3037fc704ffc3aac4d050cef7857261f138f7d35
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786296"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738066"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate 方法
 終止`ICorDebug`物件。  
@@ -32,7 +32,7 @@ ms.locfileid: "61786296"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Terminate ();  
 ```  
   
@@ -46,7 +46,7 @@ HRESULT Terminate ();
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

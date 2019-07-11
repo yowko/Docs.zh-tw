@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 293787d7798768ff2b4e2fb8fec9ed201fdb85ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 324e30f6cbcaa1d1d81c7c03967dbb629d2cd6e9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790100"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742274"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列舉
 列舉組件的選項。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum _AssemblyOptions {  
     optAssemTitle = 0,  
     optAssemDescription,  
@@ -56,7 +56,7 @@ typedef enum _AssemblyOptions {
   
 ## <a name="fields"></a>欄位  
   
-|欄位|描述|  
+|欄位|說明|  
 |-----------|-----------------|  
 |optAssemTitle|字串-表示組件標題。|  
 |optAssemDescription|字串-包含組件描述。|  

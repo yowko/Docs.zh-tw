@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cff5b7fadf4345b7a1d09911dc7061adc925e7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8bddb782e13b4e7400c7e4a8128dc333efc8141d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992611"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746187"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection 方法
 取得指定的控制代碼所參考的基底中繼語言程式碼區段。  
@@ -31,7 +31,7 @@ ms.locfileid: "61992611"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetIlSection (  
     [in] HCEESECTION  *section  
 );  
@@ -48,7 +48,7 @@ HRESULT GetIlSection (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

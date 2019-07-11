@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa1e85751f90c34d40e88207af5c7eed2dd1bb82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c19b49e9e9d4e388706a96ff54d588d5aeff99b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599336"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775955"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>IBindingDisplay::InitializeForProcess 方法
 初始化[IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT InitializeForProcess (  
     [in] ULONG32   pid  
 );  
@@ -49,7 +49,7 @@ HRESULT InitializeForProcess (
   
  **LIBRARY:** BindingDisplay.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
