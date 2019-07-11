@@ -17,69 +17,69 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d16a05bbe139c3fe02677526bc28809a93be0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700198"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779722"
 ---
-# <a name="iclrgcmanagergetstats-method"></a><span data-ttu-id="0b25d-102">ICLRGCManager::GetStats 方法</span><span class="sxs-lookup"><span data-stu-id="0b25d-102">ICLRGCManager::GetStats Method</span></span>
-<span data-ttu-id="0b25d-103">取得一組有關 common language runtime 的記憶體回收系統目前的統計資料。</span><span class="sxs-lookup"><span data-stu-id="0b25d-103">Gets a set of current statistics about the common language runtime's garbage collection system.</span></span>  
+# <a name="iclrgcmanagergetstats-method"></a><span data-ttu-id="58cac-102">ICLRGCManager::GetStats 方法</span><span class="sxs-lookup"><span data-stu-id="58cac-102">ICLRGCManager::GetStats Method</span></span>
+<span data-ttu-id="58cac-103">取得一組有關 common language runtime 的記憶體回收系統目前的統計資料。</span><span class="sxs-lookup"><span data-stu-id="58cac-103">Gets a set of current statistics about the common language runtime's garbage collection system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b25d-104">語法</span><span class="sxs-lookup"><span data-stu-id="0b25d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58cac-104">語法</span><span class="sxs-lookup"><span data-stu-id="58cac-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetStats (  
     [in, out] COR_GC_STATS *pStats  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0b25d-105">參數</span><span class="sxs-lookup"><span data-stu-id="0b25d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="58cac-105">參數</span><span class="sxs-lookup"><span data-stu-id="58cac-105">Parameters</span></span>  
  `pStats`  
- <span data-ttu-id="0b25d-106">[in、 out]A [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)包含要求的統計資料的執行個體。</span><span class="sxs-lookup"><span data-stu-id="0b25d-106">[in, out] A [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) instance that contains the requested statistics.</span></span>  
+ <span data-ttu-id="58cac-106">[in、 out]A [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)包含要求的統計資料的執行個體。</span><span class="sxs-lookup"><span data-stu-id="58cac-106">[in, out] A [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) instance that contains the requested statistics.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0b25d-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="0b25d-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="58cac-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="58cac-107">Return Value</span></span>  
   
-|<span data-ttu-id="0b25d-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0b25d-108">HRESULT</span></span>|<span data-ttu-id="0b25d-109">描述</span><span class="sxs-lookup"><span data-stu-id="0b25d-109">Description</span></span>|  
+|<span data-ttu-id="58cac-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="58cac-108">HRESULT</span></span>|<span data-ttu-id="58cac-109">描述</span><span class="sxs-lookup"><span data-stu-id="58cac-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0b25d-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="0b25d-110">S_OK</span></span>|<span data-ttu-id="0b25d-111">`GetStats` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="0b25d-111">`GetStats` returned successfully.</span></span>|  
-|<span data-ttu-id="0b25d-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0b25d-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0b25d-113">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="0b25d-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="0b25d-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="0b25d-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="0b25d-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="0b25d-115">The call timed out.</span></span>|  
-|<span data-ttu-id="0b25d-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="0b25d-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="0b25d-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="0b25d-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="0b25d-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="0b25d-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="0b25d-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="0b25d-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="0b25d-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0b25d-120">E_FAIL</span></span>|<span data-ttu-id="0b25d-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="0b25d-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="0b25d-122">方法會傳回 E_FAIL 之後，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="0b25d-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="0b25d-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="0b25d-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="58cac-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="58cac-110">S_OK</span></span>|<span data-ttu-id="58cac-111">`GetStats` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="58cac-111">`GetStats` returned successfully.</span></span>|  
+|<span data-ttu-id="58cac-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="58cac-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="58cac-113">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="58cac-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="58cac-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="58cac-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="58cac-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="58cac-115">The call timed out.</span></span>|  
+|<span data-ttu-id="58cac-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="58cac-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="58cac-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="58cac-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="58cac-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="58cac-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="58cac-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="58cac-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="58cac-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="58cac-120">E_FAIL</span></span>|<span data-ttu-id="58cac-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="58cac-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="58cac-122">方法會傳回 E_FAIL 之後，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="58cac-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="58cac-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="58cac-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0b25d-124">備註</span><span class="sxs-lookup"><span data-stu-id="0b25d-124">Remarks</span></span>  
- <span data-ttu-id="0b25d-125">CLR 會計算並傳回所指定這些統計資料`Flags`欄位`pStats`。</span><span class="sxs-lookup"><span data-stu-id="0b25d-125">The CLR calculates and returns only those statistics that are specified by the `Flags` field of `pStats`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="58cac-124">備註</span><span class="sxs-lookup"><span data-stu-id="58cac-124">Remarks</span></span>  
+ <span data-ttu-id="58cac-125">CLR 會計算並傳回所指定這些統計資料`Flags`欄位`pStats`。</span><span class="sxs-lookup"><span data-stu-id="58cac-125">The CLR calculates and returns only those statistics that are specified by the `Flags` field of `pStats`.</span></span>  
   
- <span data-ttu-id="0b25d-126">設定`Flags`欄位設為一或多個值[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列舉，來指定哪些統計資料，在[COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)結構所設定。</span><span class="sxs-lookup"><span data-stu-id="0b25d-126">Set the `Flags` field to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics in the [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) structure are to be set.</span></span>  
+ <span data-ttu-id="58cac-126">設定`Flags`欄位設為一或多個值[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列舉，來指定哪些統計資料，在[COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)結構所設定。</span><span class="sxs-lookup"><span data-stu-id="58cac-126">Set the `Flags` field to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics in the [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) structure are to be set.</span></span>  
   
- <span data-ttu-id="0b25d-127">使用方式的範例如下所示：</span><span class="sxs-lookup"><span data-stu-id="0b25d-127">An example of the usage is as follows:</span></span>  
+ <span data-ttu-id="58cac-127">使用方式的範例如下所示：</span><span class="sxs-lookup"><span data-stu-id="58cac-127">An example of the usage is as follows:</span></span>  
   
-```  
+```cpp  
 COR_GC_STATS GCStats;  
 GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;  
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="0b25d-128">需求</span><span class="sxs-lookup"><span data-stu-id="0b25d-128">Requirements</span></span>  
- <span data-ttu-id="0b25d-129">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0b25d-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="58cac-128">需求</span><span class="sxs-lookup"><span data-stu-id="58cac-128">Requirements</span></span>  
+ <span data-ttu-id="58cac-129">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="58cac-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b25d-130">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0b25d-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="58cac-130">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="58cac-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0b25d-131">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="0b25d-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="58cac-131">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="58cac-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0b25d-132">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b25d-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="58cac-132">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58cac-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b25d-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b25d-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58cac-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="58cac-133">See also</span></span>
 
-- [<span data-ttu-id="0b25d-134">自動管理記憶體</span><span class="sxs-lookup"><span data-stu-id="0b25d-134">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="0b25d-135">COR_GC_STATS 結構</span><span class="sxs-lookup"><span data-stu-id="0b25d-135">COR_GC_STATS Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [<span data-ttu-id="0b25d-136">COR_GC_STAT_TYPES 列舉</span><span class="sxs-lookup"><span data-stu-id="0b25d-136">COR_GC_STAT_TYPES Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
-- [<span data-ttu-id="0b25d-137">記憶體回收</span><span class="sxs-lookup"><span data-stu-id="0b25d-137">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
-- [<span data-ttu-id="0b25d-138">ICLRControl 介面</span><span class="sxs-lookup"><span data-stu-id="0b25d-138">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="0b25d-139">ICLRGCManager 介面</span><span class="sxs-lookup"><span data-stu-id="0b25d-139">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
-- [<span data-ttu-id="0b25d-140">CLR 裝載介面</span><span class="sxs-lookup"><span data-stu-id="0b25d-140">CLR Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [<span data-ttu-id="0b25d-141">裝載介面</span><span class="sxs-lookup"><span data-stu-id="0b25d-141">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="0b25d-142">裝載</span><span class="sxs-lookup"><span data-stu-id="0b25d-142">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="58cac-134">自動管理記憶體</span><span class="sxs-lookup"><span data-stu-id="58cac-134">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="58cac-135">COR_GC_STATS 結構</span><span class="sxs-lookup"><span data-stu-id="58cac-135">COR_GC_STATS Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
+- [<span data-ttu-id="58cac-136">COR_GC_STAT_TYPES 列舉</span><span class="sxs-lookup"><span data-stu-id="58cac-136">COR_GC_STAT_TYPES Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
+- [<span data-ttu-id="58cac-137">記憶體回收</span><span class="sxs-lookup"><span data-stu-id="58cac-137">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="58cac-138">ICLRControl 介面</span><span class="sxs-lookup"><span data-stu-id="58cac-138">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="58cac-139">ICLRGCManager 介面</span><span class="sxs-lookup"><span data-stu-id="58cac-139">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
+- [<span data-ttu-id="58cac-140">CLR 裝載介面</span><span class="sxs-lookup"><span data-stu-id="58cac-140">CLR Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
+- [<span data-ttu-id="58cac-141">裝載介面</span><span class="sxs-lookup"><span data-stu-id="58cac-141">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="58cac-142">裝載</span><span class="sxs-lookup"><span data-stu-id="58cac-142">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

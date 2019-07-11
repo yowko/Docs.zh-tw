@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f12243571262ad7511795c48721617932fc6b30b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd75fa12a95478a65d93eb07a32acf4cfd8b9632
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645096"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782088"
 ---
-# <a name="imetadatatables2getmetadatastorage-method"></a><span data-ttu-id="3c98f-102">IMetaDataTables2::GetMetaDataStorage 方法</span><span class="sxs-lookup"><span data-stu-id="3c98f-102">IMetaDataTables2::GetMetaDataStorage Method</span></span>
-<span data-ttu-id="3c98f-103">取得大小和指定的區段中所儲存的中繼資料的內容。</span><span class="sxs-lookup"><span data-stu-id="3c98f-103">Gets the size and contents of the metadata stored in the specified section.</span></span>  
+# <a name="imetadatatables2getmetadatastorage-method"></a><span data-ttu-id="dfe18-102">IMetaDataTables2::GetMetaDataStorage 方法</span><span class="sxs-lookup"><span data-stu-id="dfe18-102">IMetaDataTables2::GetMetaDataStorage Method</span></span>
+<span data-ttu-id="dfe18-103">取得大小和指定的區段中所儲存的中繼資料的內容。</span><span class="sxs-lookup"><span data-stu-id="dfe18-103">Gets the size and contents of the metadata stored in the specified section.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c98f-104">語法</span><span class="sxs-lookup"><span data-stu-id="3c98f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfe18-104">語法</span><span class="sxs-lookup"><span data-stu-id="dfe18-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetMetaDataStorage (  
    [in, out] const void   **ppvMd,  
    [out] ULONG   *pcbMd  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3c98f-105">參數</span><span class="sxs-lookup"><span data-stu-id="3c98f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dfe18-105">參數</span><span class="sxs-lookup"><span data-stu-id="dfe18-105">Parameters</span></span>  
  `ppvMd`  
- <span data-ttu-id="3c98f-106">[in、 out]中繼資料區段指標。</span><span class="sxs-lookup"><span data-stu-id="3c98f-106">[in, out] A pointer to a metadata section.</span></span>  
+ <span data-ttu-id="dfe18-106">[in、 out]中繼資料區段指標。</span><span class="sxs-lookup"><span data-stu-id="dfe18-106">[in, out] A pointer to a metadata section.</span></span>  
   
  `pcbMd`  
- <span data-ttu-id="3c98f-107">[out]中繼資料資料流的大小。</span><span class="sxs-lookup"><span data-stu-id="3c98f-107">[out] The size of the metadata stream.</span></span>  
+ <span data-ttu-id="dfe18-107">[out]中繼資料資料流的大小。</span><span class="sxs-lookup"><span data-stu-id="dfe18-107">[out] The size of the metadata stream.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3c98f-108">需求</span><span class="sxs-lookup"><span data-stu-id="3c98f-108">Requirements</span></span>  
- <span data-ttu-id="3c98f-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3c98f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dfe18-108">需求</span><span class="sxs-lookup"><span data-stu-id="dfe18-108">Requirements</span></span>  
+ <span data-ttu-id="dfe18-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dfe18-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3c98f-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3c98f-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="dfe18-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dfe18-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3c98f-111">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="3c98f-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="dfe18-111">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="dfe18-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3c98f-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c98f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dfe18-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfe18-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c98f-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3c98f-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfe18-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dfe18-113">See also</span></span>
 
-- [<span data-ttu-id="3c98f-114">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="3c98f-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [<span data-ttu-id="3c98f-115">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="3c98f-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="dfe18-114">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="dfe18-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="dfe18-115">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="dfe18-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

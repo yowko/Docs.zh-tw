@@ -16,50 +16,50 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cecd8538b8f2b5d04cb9f1822751661ce9f8728
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a2cb71263201c86a93ca0bfbd783f2b8512055e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636223"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783110"
 ---
-# <a name="setsecurity-function"></a><span data-ttu-id="949ce-103">SetSecurity 函式</span><span class="sxs-lookup"><span data-stu-id="949ce-103">SetSecurity function</span></span>
+# <a name="setsecurity-function"></a><span data-ttu-id="809da-103">SetSecurity 函式</span><span class="sxs-lookup"><span data-stu-id="809da-103">SetSecurity function</span></span>
 
-<span data-ttu-id="949ce-104">擷取與目前執行緒關聯的模擬權杖。</span><span class="sxs-lookup"><span data-stu-id="949ce-104">Retrieves the impersonation token associated with the current thread.</span></span> 
+<span data-ttu-id="809da-104">擷取與目前執行緒關聯的模擬權杖。</span><span class="sxs-lookup"><span data-stu-id="809da-104">Retrieves the impersonation token associated with the current thread.</span></span> 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a><span data-ttu-id="949ce-105">語法</span><span class="sxs-lookup"><span data-stu-id="949ce-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="809da-105">語法</span><span class="sxs-lookup"><span data-stu-id="809da-105">Syntax</span></span>
 
-```
+```cpp
 HRESULT SetSecurity (
    [out] boolean* pNeedToReset, 
    [out] HANDLE* pCurrentThreadToken
 ); 
 ```
 
-## <a name="parameters"></a><span data-ttu-id="949ce-106">參數</span><span class="sxs-lookup"><span data-stu-id="949ce-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="809da-106">參數</span><span class="sxs-lookup"><span data-stu-id="809da-106">Parameters</span></span>
 
 `pNeedToReset`\
-<span data-ttu-id="949ce-107">[out]此函式傳回時，包含指標`boolean`，指出是否應藉由呼叫重設語彙基元[ResetSecurity](resetsecurity.md)函式。</span><span class="sxs-lookup"><span data-stu-id="949ce-107">[out] When the function returns, contains a pointer to a `boolean` that indicates whether the token should be reset by calling the [ResetSecurity](resetsecurity.md) function.</span></span>
+<span data-ttu-id="809da-107">[out]此函式傳回時，包含指標`boolean`，指出是否應藉由呼叫重設語彙基元[ResetSecurity](resetsecurity.md)函式。</span><span class="sxs-lookup"><span data-stu-id="809da-107">[out] When the function returns, contains a pointer to a `boolean` that indicates whether the token should be reset by calling the [ResetSecurity](resetsecurity.md) function.</span></span>
 
 `token`\
-<span data-ttu-id="949ce-108">[out]此函式傳回時，包含目前執行緒相關聯的模擬語彙基元的控制代碼的指標。</span><span class="sxs-lookup"><span data-stu-id="949ce-108">[out] When the function returns, contains a pointer to the handle of the impersonation token associated with the current thread.</span></span> <span data-ttu-id="949ce-109">其值可以是`null`是否與目前執行緒相關聯的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="949ce-109">Its value can be `null` if there is no token associated with the current thread.</span></span> 
+<span data-ttu-id="809da-108">[out]此函式傳回時，包含目前執行緒相關聯的模擬語彙基元的控制代碼的指標。</span><span class="sxs-lookup"><span data-stu-id="809da-108">[out] When the function returns, contains a pointer to the handle of the impersonation token associated with the current thread.</span></span> <span data-ttu-id="809da-109">其值可以是`null`是否與目前執行緒相關聯的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="809da-109">Its value can be `null` if there is no token associated with the current thread.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="949ce-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="949ce-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="809da-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="809da-110">Return value</span></span>
 
-<span data-ttu-id="949ce-111">如果此函數成功，傳回的值是`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="949ce-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="809da-111">如果此函數成功，傳回的值是`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="809da-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="949ce-112">如果函式失敗，傳回的值就會為非零的錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="949ce-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="949ce-113">若要取得延伸錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。</span><span class="sxs-lookup"><span data-stu-id="949ce-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="809da-112">如果函式失敗，傳回的值就會為非零的錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="809da-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="809da-113">若要取得延伸錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。</span><span class="sxs-lookup"><span data-stu-id="809da-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="949ce-114">需求</span><span class="sxs-lookup"><span data-stu-id="949ce-114">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="809da-114">需求</span><span class="sxs-lookup"><span data-stu-id="809da-114">Requirements</span></span>
 
- <span data-ttu-id="949ce-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="949ce-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+ <span data-ttu-id="809da-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="809da-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
- <span data-ttu-id="949ce-116">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="949ce-116">**Header:** WMINet_Utils.idl</span></span>
+ <span data-ttu-id="809da-116">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="809da-116">**Header:** WMINet_Utils.idl</span></span>
 
- <span data-ttu-id="949ce-117">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="949ce-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+ <span data-ttu-id="809da-117">**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="809da-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="949ce-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="949ce-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="809da-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="809da-118">See also</span></span>
 
-- [<span data-ttu-id="949ce-119">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="949ce-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="809da-119">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="809da-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

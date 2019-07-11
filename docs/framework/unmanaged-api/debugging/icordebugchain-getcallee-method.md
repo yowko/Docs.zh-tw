@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed5a7657affde335acf79952d77bbdb7ac42c7a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79743b78ea3d19bab4756b580d2feddd07e0a23b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645290"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745017"
 ---
-# <a name="icordebugchaingetcallee-method"></a><span data-ttu-id="4a5a2-102">ICorDebugChain::GetCallee 方法</span><span class="sxs-lookup"><span data-stu-id="4a5a2-102">ICorDebugChain::GetCallee Method</span></span>
-<span data-ttu-id="4a5a2-103">取得這個鏈結所呼叫函式鏈結。</span><span class="sxs-lookup"><span data-stu-id="4a5a2-103">Gets the chain that was called by this chain.</span></span>  
+# <a name="icordebugchaingetcallee-method"></a><span data-ttu-id="a01cc-102">ICorDebugChain::GetCallee 方法</span><span class="sxs-lookup"><span data-stu-id="a01cc-102">ICorDebugChain::GetCallee Method</span></span>
+<span data-ttu-id="a01cc-103">取得這個鏈結所呼叫函式鏈結。</span><span class="sxs-lookup"><span data-stu-id="a01cc-103">Gets the chain that was called by this chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4a5a2-104">語法</span><span class="sxs-lookup"><span data-stu-id="4a5a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a01cc-104">語法</span><span class="sxs-lookup"><span data-stu-id="a01cc-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCallee (  
     [out] ICorDebugChain     **ppChain  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4a5a2-105">參數</span><span class="sxs-lookup"><span data-stu-id="4a5a2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a01cc-105">參數</span><span class="sxs-lookup"><span data-stu-id="a01cc-105">Parameters</span></span>  
  `ppChain`  
- <span data-ttu-id="4a5a2-106">[out]ICorDebugChain 物件，表示呼叫的鏈結的位址指標。</span><span class="sxs-lookup"><span data-stu-id="4a5a2-106">[out] A pointer to the address of an ICorDebugChain object that represents the called chain.</span></span> <span data-ttu-id="4a5a2-107">如果這個鏈結目前執行中 （亦即，如果這個鏈結不會等候到傳回的呼叫鏈結） 以及`ppChain`將會是 null。</span><span class="sxs-lookup"><span data-stu-id="4a5a2-107">If this chain is currently executing (that is, if this chain is not waiting for a called chain to return), `ppChain` will be null.</span></span>  
+ <span data-ttu-id="a01cc-106">[out]ICorDebugChain 物件，表示呼叫的鏈結的位址指標。</span><span class="sxs-lookup"><span data-stu-id="a01cc-106">[out] A pointer to the address of an ICorDebugChain object that represents the called chain.</span></span> <span data-ttu-id="a01cc-107">如果這個鏈結目前執行中 （亦即，如果這個鏈結不會等候到傳回的呼叫鏈結） 以及`ppChain`將會是 null。</span><span class="sxs-lookup"><span data-stu-id="a01cc-107">If this chain is currently executing (that is, if this chain is not waiting for a called chain to return), `ppChain` will be null.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4a5a2-108">備註</span><span class="sxs-lookup"><span data-stu-id="4a5a2-108">Remarks</span></span>  
- <span data-ttu-id="4a5a2-109">這個鏈結會等待呼叫的鏈結，以便繼續執行之前傳回。</span><span class="sxs-lookup"><span data-stu-id="4a5a2-109">This chain will wait for the called chain to return before it resumes execution.</span></span> <span data-ttu-id="4a5a2-110">呼叫的鏈結可能會在跨執行緒封送處理呼叫的情況下的另一個執行緒上。</span><span class="sxs-lookup"><span data-stu-id="4a5a2-110">The called chain may be on another thread in the case of cross-thread marshaled calls.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a01cc-108">備註</span><span class="sxs-lookup"><span data-stu-id="a01cc-108">Remarks</span></span>  
+ <span data-ttu-id="a01cc-109">這個鏈結會等待呼叫的鏈結，以便繼續執行之前傳回。</span><span class="sxs-lookup"><span data-stu-id="a01cc-109">This chain will wait for the called chain to return before it resumes execution.</span></span> <span data-ttu-id="a01cc-110">呼叫的鏈結可能會在跨執行緒封送處理呼叫的情況下的另一個執行緒上。</span><span class="sxs-lookup"><span data-stu-id="a01cc-110">The called chain may be on another thread in the case of cross-thread marshaled calls.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4a5a2-111">需求</span><span class="sxs-lookup"><span data-stu-id="4a5a2-111">Requirements</span></span>  
- <span data-ttu-id="4a5a2-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4a5a2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a01cc-111">需求</span><span class="sxs-lookup"><span data-stu-id="a01cc-111">Requirements</span></span>  
+ <span data-ttu-id="a01cc-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a01cc-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4a5a2-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4a5a2-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a01cc-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a01cc-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4a5a2-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a5a2-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a01cc-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a01cc-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4a5a2-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a5a2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="a01cc-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a01cc-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,34 +17,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48d84d5c45ea8e1af1da44480410692d46162810
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 233a2a6ca00e289911b45006d10e541e8c13971e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699639"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737292"
 ---
-# <a name="icorthreadpoolcorsetmaxthreads-method"></a><span data-ttu-id="5eb31-102">ICorThreadpool::CorSetMaxThreads 方法</span><span class="sxs-lookup"><span data-stu-id="5eb31-102">ICorThreadpool::CorSetMaxThreads Method</span></span>
-<span data-ttu-id="5eb31-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="5eb31-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorthreadpoolcorsetmaxthreads-method"></a><span data-ttu-id="6e8eb-102">ICorThreadpool::CorSetMaxThreads 方法</span><span class="sxs-lookup"><span data-stu-id="6e8eb-102">ICorThreadpool::CorSetMaxThreads Method</span></span>
+<span data-ttu-id="6e8eb-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="6e8eb-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5eb31-104">語法</span><span class="sxs-lookup"><span data-stu-id="5eb31-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e8eb-104">語法</span><span class="sxs-lookup"><span data-stu-id="6e8eb-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CorSetMaxThreads (  
     [in] DWORD MaxWorkerThreads,  
     [in] DWORD MaxIOCompletionThreads  
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="5eb31-105">需求</span><span class="sxs-lookup"><span data-stu-id="5eb31-105">Requirements</span></span>  
- <span data-ttu-id="5eb31-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5eb31-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6e8eb-105">需求</span><span class="sxs-lookup"><span data-stu-id="6e8eb-105">Requirements</span></span>  
+ <span data-ttu-id="6e8eb-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6e8eb-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5eb31-107">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5eb31-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="6e8eb-107">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6e8eb-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5eb31-108">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="5eb31-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6e8eb-108">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="6e8eb-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5eb31-109">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5eb31-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6e8eb-109">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e8eb-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5eb31-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5eb31-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e8eb-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6e8eb-110">See also</span></span>
 
-- [<span data-ttu-id="5eb31-111">ICorThreadpool 介面</span><span class="sxs-lookup"><span data-stu-id="5eb31-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [<span data-ttu-id="6e8eb-111">ICorThreadpool 介面</span><span class="sxs-lookup"><span data-stu-id="6e8eb-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ac28f28d4d284ba26fadd46e53ebeb8e5b5f3cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eda866c1a1f1f69f0d042ccfde3dfad293df9b37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984148"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776503"
 ---
-# <a name="waitoption-enumeration"></a><span data-ttu-id="f81bb-102">WAIT_OPTION 列舉</span><span class="sxs-lookup"><span data-stu-id="f81bb-102">WAIT_OPTION Enumeration</span></span>
-<span data-ttu-id="f81bb-103">包含值，指出是否通用語言執行平台 (CLR) 區塊所要求的作業，應該採取動作的主機。</span><span class="sxs-lookup"><span data-stu-id="f81bb-103">Contains values that indicate the action a host should take if an operation requested by the common language runtime (CLR) blocks.</span></span>  
+# <a name="waitoption-enumeration"></a><span data-ttu-id="ba56a-102">WAIT_OPTION 列舉</span><span class="sxs-lookup"><span data-stu-id="ba56a-102">WAIT_OPTION Enumeration</span></span>
+<span data-ttu-id="ba56a-103">包含值，指出是否通用語言執行平台 (CLR) 區塊所要求的作業，應該採取動作的主機。</span><span class="sxs-lookup"><span data-stu-id="ba56a-103">Contains values that indicate the action a host should take if an operation requested by the common language runtime (CLR) blocks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f81bb-104">語法</span><span class="sxs-lookup"><span data-stu-id="f81bb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba56a-104">語法</span><span class="sxs-lookup"><span data-stu-id="ba56a-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
     WAIT_MSGPUMP       = 0x1,  
     WAIT_ALERTABLE     = 0x2,  
@@ -36,26 +36,26 @@ typedef enum {
 } WAIT_OPTION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f81bb-105">成員</span><span class="sxs-lookup"><span data-stu-id="f81bb-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ba56a-105">成員</span><span class="sxs-lookup"><span data-stu-id="ba56a-105">Members</span></span>  
   
-|<span data-ttu-id="f81bb-106">成員</span><span class="sxs-lookup"><span data-stu-id="f81bb-106">Member</span></span>|<span data-ttu-id="f81bb-107">描述</span><span class="sxs-lookup"><span data-stu-id="f81bb-107">Description</span></span>|  
+|<span data-ttu-id="ba56a-106">成員</span><span class="sxs-lookup"><span data-stu-id="ba56a-106">Member</span></span>|<span data-ttu-id="ba56a-107">描述</span><span class="sxs-lookup"><span data-stu-id="ba56a-107">Description</span></span>|  
 |------------|-----------------|  
-|`WAIT_ALERTABLE`|<span data-ttu-id="f81bb-108">主應用程式應該喚醒工作，如果 CLR 會呼叫[ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="f81bb-108">Notifies the host that the task should be awakened if the CLR calls the [IHostTask::Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) method.</span></span>|  
-|`WAIT_MSGPUMP`|<span data-ttu-id="f81bb-109">主應用程式，它就必須提取目前的 OS 執行緒上的訊息，如果執行緒被封鎖。</span><span class="sxs-lookup"><span data-stu-id="f81bb-109">Notifies the host that it must pump messages on the current OS thread if the thread becomes blocked.</span></span> <span data-ttu-id="f81bb-110">執行階段會指定此值只在<xref:System.Threading.ApartmentState.STA>執行緒。</span><span class="sxs-lookup"><span data-stu-id="f81bb-110">The runtime specifies this value only on an <xref:System.Threading.ApartmentState.STA> thread.</span></span>|  
-|`WAIT_NOTINDEADLOCK`|<span data-ttu-id="f81bb-111">通知主機指定的同步處理的要求不會中斷由主應用程式。</span><span class="sxs-lookup"><span data-stu-id="f81bb-111">Notifies the host that the specified synchronization request cannot be broken by a host.</span></span> <span data-ttu-id="f81bb-112">也就是說，無法傳回主機`HOST_E_DEADLOCK`。</span><span class="sxs-lookup"><span data-stu-id="f81bb-112">That is, the host cannot return `HOST_E_DEADLOCK`.</span></span>|  
+|`WAIT_ALERTABLE`|<span data-ttu-id="ba56a-108">主應用程式應該喚醒工作，如果 CLR 會呼叫[ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="ba56a-108">Notifies the host that the task should be awakened if the CLR calls the [IHostTask::Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) method.</span></span>|  
+|`WAIT_MSGPUMP`|<span data-ttu-id="ba56a-109">主應用程式，它就必須提取目前的 OS 執行緒上的訊息，如果執行緒被封鎖。</span><span class="sxs-lookup"><span data-stu-id="ba56a-109">Notifies the host that it must pump messages on the current OS thread if the thread becomes blocked.</span></span> <span data-ttu-id="ba56a-110">執行階段會指定此值只在<xref:System.Threading.ApartmentState.STA>執行緒。</span><span class="sxs-lookup"><span data-stu-id="ba56a-110">The runtime specifies this value only on an <xref:System.Threading.ApartmentState.STA> thread.</span></span>|  
+|`WAIT_NOTINDEADLOCK`|<span data-ttu-id="ba56a-111">通知主機指定的同步處理的要求不會中斷由主應用程式。</span><span class="sxs-lookup"><span data-stu-id="ba56a-111">Notifies the host that the specified synchronization request cannot be broken by a host.</span></span> <span data-ttu-id="ba56a-112">也就是說，無法傳回主機`HOST_E_DEADLOCK`。</span><span class="sxs-lookup"><span data-stu-id="ba56a-112">That is, the host cannot return `HOST_E_DEADLOCK`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f81bb-113">備註</span><span class="sxs-lookup"><span data-stu-id="f81bb-113">Remarks</span></span>  
- <span data-ttu-id="f81bb-114">[Ihosttaskmanager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)並[ihosttaskmanager:: Switchtotask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)方法都採用這種類型的參數。</span><span class="sxs-lookup"><span data-stu-id="f81bb-114">The [IHostTaskManager::Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) and [IHostTaskManager::SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) methods both take a parameter of this type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ba56a-113">備註</span><span class="sxs-lookup"><span data-stu-id="ba56a-113">Remarks</span></span>  
+ <span data-ttu-id="ba56a-114">[Ihosttaskmanager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)並[ihosttaskmanager:: Switchtotask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)方法都採用這種類型的參數。</span><span class="sxs-lookup"><span data-stu-id="ba56a-114">The [IHostTaskManager::Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) and [IHostTaskManager::SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) methods both take a parameter of this type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f81bb-115">需求</span><span class="sxs-lookup"><span data-stu-id="f81bb-115">Requirements</span></span>  
- <span data-ttu-id="f81bb-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f81bb-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba56a-115">需求</span><span class="sxs-lookup"><span data-stu-id="ba56a-115">Requirements</span></span>  
+ <span data-ttu-id="ba56a-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ba56a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f81bb-117">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f81bb-117">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ba56a-117">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ba56a-117">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f81bb-118">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f81bb-118">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="ba56a-118">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ba56a-118">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f81bb-119">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f81bb-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ba56a-119">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba56a-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f81bb-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f81bb-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba56a-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ba56a-120">See also</span></span>
 
-- [<span data-ttu-id="f81bb-121">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="f81bb-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="ba56a-121">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="ba56a-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

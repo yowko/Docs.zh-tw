@@ -17,29 +17,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f994dfb2b72eacce0b53ae6f49a8173749dd96f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02ed315ccf227413e59f635b0244fb82be67c18e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782992"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744936"
 ---
-# <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="24930-102">ICorDebugReferenceValue::DereferenceStrong 方法</span><span class="sxs-lookup"><span data-stu-id="24930-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
-<span data-ttu-id="24930-103">`DereferenceStrong` 未實作。</span><span class="sxs-lookup"><span data-stu-id="24930-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="24930-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="24930-104">Do not call this method.</span></span>  
+# <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="aaa32-102">ICorDebugReferenceValue::DereferenceStrong 方法</span><span class="sxs-lookup"><span data-stu-id="aaa32-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
+<span data-ttu-id="aaa32-103">`DereferenceStrong` 未實作。</span><span class="sxs-lookup"><span data-stu-id="aaa32-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="aaa32-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="aaa32-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24930-105">語法</span><span class="sxs-lookup"><span data-stu-id="24930-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aaa32-105">語法</span><span class="sxs-lookup"><span data-stu-id="aaa32-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DereferenceStrong (  
     [out] ICorDebugValue  **ppValue  
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="24930-106">需求</span><span class="sxs-lookup"><span data-stu-id="24930-106">Requirements</span></span>  
- <span data-ttu-id="24930-107">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="24930-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aaa32-106">需求</span><span class="sxs-lookup"><span data-stu-id="aaa32-106">Requirements</span></span>  
+ <span data-ttu-id="aaa32-107">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aaa32-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="24930-108">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="24930-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="aaa32-108">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aaa32-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="24930-109">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="24930-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="aaa32-109">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aaa32-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="24930-110">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24930-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="aaa32-110">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aaa32-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8591cb7f8eec3d92100b49db553ed1b5b6533c17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f49fac3951c130c3cf06b6861beb06b89c27dfb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995393"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759901"
 ---
-# <a name="icordebugmanagedcallbackbreakpoint-method"></a><span data-ttu-id="99b86-102">ICorDebugManagedCallback::Breakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="99b86-102">ICorDebugManagedCallback::Breakpoint Method</span></span>
-<span data-ttu-id="99b86-103">遇到中斷點時，請告知偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="99b86-103">Notifies the debugger when a breakpoint is encountered.</span></span>  
+# <a name="icordebugmanagedcallbackbreakpoint-method"></a><span data-ttu-id="54cda-102">ICorDebugManagedCallback::Breakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="54cda-102">ICorDebugManagedCallback::Breakpoint Method</span></span>
+<span data-ttu-id="54cda-103">遇到中斷點時，請告知偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="54cda-103">Notifies the debugger when a breakpoint is encountered.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99b86-104">語法</span><span class="sxs-lookup"><span data-stu-id="99b86-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54cda-104">語法</span><span class="sxs-lookup"><span data-stu-id="54cda-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Breakpoint (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugThread     *pThread,  
@@ -37,25 +37,25 @@ HRESULT Breakpoint (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="99b86-105">參數</span><span class="sxs-lookup"><span data-stu-id="99b86-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="54cda-105">參數</span><span class="sxs-lookup"><span data-stu-id="54cda-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="99b86-106">[in]表示應用程式定義域，其中包含中斷點的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="99b86-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the breakpoint.</span></span>  
+ <span data-ttu-id="54cda-106">[in]表示應用程式定義域，其中包含中斷點的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="54cda-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the breakpoint.</span></span>  
   
  `pThread`  
- <span data-ttu-id="99b86-107">[in]ICorDebugThread 物件，表示包含中斷點的執行緒指標。</span><span class="sxs-lookup"><span data-stu-id="99b86-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the breakpoint.</span></span>  
+ <span data-ttu-id="54cda-107">[in]ICorDebugThread 物件，表示包含中斷點的執行緒指標。</span><span class="sxs-lookup"><span data-stu-id="54cda-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the breakpoint.</span></span>  
   
  `pBreakpoint`  
- <span data-ttu-id="99b86-108">[in]ICorDebugBreakpoint 物件，表示中斷點指標。</span><span class="sxs-lookup"><span data-stu-id="99b86-108">[in] A pointer to an ICorDebugBreakpoint object that represents the breakpoint.</span></span>  
+ <span data-ttu-id="54cda-108">[in]ICorDebugBreakpoint 物件，表示中斷點指標。</span><span class="sxs-lookup"><span data-stu-id="54cda-108">[in] A pointer to an ICorDebugBreakpoint object that represents the breakpoint.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="99b86-109">需求</span><span class="sxs-lookup"><span data-stu-id="99b86-109">Requirements</span></span>  
- <span data-ttu-id="99b86-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="99b86-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54cda-109">需求</span><span class="sxs-lookup"><span data-stu-id="54cda-109">Requirements</span></span>  
+ <span data-ttu-id="54cda-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="54cda-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="99b86-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="99b86-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="54cda-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="54cda-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="99b86-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99b86-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="54cda-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54cda-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="99b86-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99b86-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="54cda-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54cda-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99b86-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="99b86-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54cda-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="54cda-114">See also</span></span>
 
-- [<span data-ttu-id="99b86-115">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="99b86-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="54cda-115">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="54cda-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -20,40 +20,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bfc6491a1d18c81a44a7d9c5084f744c9b76281
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cdeb446b18adceb4a8ed306a7934d6c905a90f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040907"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778036"
 ---
-# <a name="strongnamefreebuffer-function"></a><span data-ttu-id="e7531-102">StrongNameFreeBuffer 函式</span><span class="sxs-lookup"><span data-stu-id="e7531-102">StrongNameFreeBuffer Function</span></span>
-<span data-ttu-id="e7531-103">釋放使用對強式名稱函式 (例如 [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)、[StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md) 或 [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)) 的上一個呼叫所配置的記憶體。</span><span class="sxs-lookup"><span data-stu-id="e7531-103">Frees memory that was allocated with a previous call to a strong name function such as [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md), or [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).</span></span>  
+# <a name="strongnamefreebuffer-function"></a><span data-ttu-id="ba4ef-102">StrongNameFreeBuffer 函式</span><span class="sxs-lookup"><span data-stu-id="ba4ef-102">StrongNameFreeBuffer Function</span></span>
+<span data-ttu-id="ba4ef-103">釋放使用對強式名稱函式 (例如 [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)、[StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md) 或 [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)) 的上一個呼叫所配置的記憶體。</span><span class="sxs-lookup"><span data-stu-id="ba4ef-103">Frees memory that was allocated with a previous call to a strong name function such as [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md), or [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).</span></span>  
   
- <span data-ttu-id="e7531-104">此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="e7531-104">This function has been deprecated.</span></span> <span data-ttu-id="e7531-105">使用[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="e7531-105">Use the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method instead.</span></span>  
+ <span data-ttu-id="ba4ef-104">此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="ba4ef-104">This function has been deprecated.</span></span> <span data-ttu-id="ba4ef-105">使用[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="ba4ef-105">Use the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7531-106">語法</span><span class="sxs-lookup"><span data-stu-id="e7531-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba4ef-106">語法</span><span class="sxs-lookup"><span data-stu-id="ba4ef-106">Syntax</span></span>  
   
-```  
+```cpp  
 VOID StrongNameFreeBuffer (   
    [in] BYTE   *pbMemory  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e7531-107">參數</span><span class="sxs-lookup"><span data-stu-id="e7531-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ba4ef-107">參數</span><span class="sxs-lookup"><span data-stu-id="ba4ef-107">Parameters</span></span>  
  `pbMemory`  
- <span data-ttu-id="e7531-108">[in]要釋放的記憶體指標。</span><span class="sxs-lookup"><span data-stu-id="e7531-108">[in] A pointer to the memory to free.</span></span>  
+ <span data-ttu-id="ba4ef-108">[in]要釋放的記憶體指標。</span><span class="sxs-lookup"><span data-stu-id="ba4ef-108">[in] A pointer to the memory to free.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7531-109">需求</span><span class="sxs-lookup"><span data-stu-id="e7531-109">Requirements</span></span>  
- <span data-ttu-id="e7531-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e7531-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba4ef-109">需求</span><span class="sxs-lookup"><span data-stu-id="ba4ef-109">Requirements</span></span>  
+ <span data-ttu-id="ba4ef-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ba4ef-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7531-111">**標頭：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="e7531-111">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="ba4ef-111">**標頭：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="ba4ef-111">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="e7531-112">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="e7531-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ba4ef-112">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="ba4ef-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e7531-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7531-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ba4ef-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba4ef-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7531-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7531-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba4ef-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ba4ef-114">See also</span></span>
 
-- [<span data-ttu-id="e7531-115">StrongNameFreeBuffer 方法</span><span class="sxs-lookup"><span data-stu-id="e7531-115">StrongNameFreeBuffer Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)
-- [<span data-ttu-id="e7531-116">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="e7531-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="ba4ef-115">StrongNameFreeBuffer 方法</span><span class="sxs-lookup"><span data-stu-id="ba4ef-115">StrongNameFreeBuffer Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)
+- [<span data-ttu-id="ba4ef-116">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="ba4ef-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

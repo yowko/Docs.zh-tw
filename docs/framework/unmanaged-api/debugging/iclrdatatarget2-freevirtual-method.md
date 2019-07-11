@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b30bd3e97af8d222f629c5b4f9f318a9b6379e78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d51c445d6f375f805253b9f640ab61ab3dccc58
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697949"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738482"
 ---
-# <a name="iclrdatatarget2freevirtual-method"></a><span data-ttu-id="6ae38-102">ICLRDataTarget2::FreeVirtual 方法</span><span class="sxs-lookup"><span data-stu-id="6ae38-102">ICLRDataTarget2::FreeVirtual Method</span></span>
-<span data-ttu-id="6ae38-103">由通用語言執行平台 (CLR) 資料存取服務先前配置的目標處理序的位址空間中的可用記憶體來呼叫。</span><span class="sxs-lookup"><span data-stu-id="6ae38-103">Called by the common language runtime (CLR) data access services to free memory that was previously allocated in the address space of the target process.</span></span>  
+# <a name="iclrdatatarget2freevirtual-method"></a><span data-ttu-id="03483-102">ICLRDataTarget2::FreeVirtual 方法</span><span class="sxs-lookup"><span data-stu-id="03483-102">ICLRDataTarget2::FreeVirtual Method</span></span>
+<span data-ttu-id="03483-103">由通用語言執行平台 (CLR) 資料存取服務先前配置的目標處理序的位址空間中的可用記憶體來呼叫。</span><span class="sxs-lookup"><span data-stu-id="03483-103">Called by the common language runtime (CLR) data access services to free memory that was previously allocated in the address space of the target process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ae38-104">語法</span><span class="sxs-lookup"><span data-stu-id="6ae38-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03483-104">語法</span><span class="sxs-lookup"><span data-stu-id="03483-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT FreeVirtual(  
     [in] CLRDATA_ADDRESS addr,  
     [in] ULONG32 size,  
@@ -37,31 +37,31 @@ HRESULT FreeVirtual(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6ae38-105">參數</span><span class="sxs-lookup"><span data-stu-id="6ae38-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="03483-105">參數</span><span class="sxs-lookup"><span data-stu-id="03483-105">Parameters</span></span>  
  `addr`  
- <span data-ttu-id="6ae38-106">[in]A`CLRDATA_ADDRESS`值，指定要釋放記憶體的起始位址。</span><span class="sxs-lookup"><span data-stu-id="6ae38-106">[in] A `CLRDATA_ADDRESS` value that specifies the starting address of the memory to be freed.</span></span>  
+ <span data-ttu-id="03483-106">[in]A`CLRDATA_ADDRESS`值，指定要釋放記憶體的起始位址。</span><span class="sxs-lookup"><span data-stu-id="03483-106">[in] A `CLRDATA_ADDRESS` value that specifies the starting address of the memory to be freed.</span></span>  
   
  `size`  
- <span data-ttu-id="6ae38-107">[in]以位元組為單位，以釋放記憶體的大小。</span><span class="sxs-lookup"><span data-stu-id="6ae38-107">[in] The size, in bytes, of the memory to be freed.</span></span>  
+ <span data-ttu-id="03483-107">[in]以位元組為單位，以釋放記憶體的大小。</span><span class="sxs-lookup"><span data-stu-id="03483-107">[in] The size, in bytes, of the memory to be freed.</span></span>  
   
  `typeFlags`  
- <span data-ttu-id="6ae38-108">[in]控制釋放記憶體的旗標。</span><span class="sxs-lookup"><span data-stu-id="6ae38-108">[in] Flags that control the freeing of memory.</span></span> <span data-ttu-id="6ae38-109">請參閱 Win32`VirtualFree`函式。</span><span class="sxs-lookup"><span data-stu-id="6ae38-109">See the Win32 `VirtualFree` function.</span></span>  
+ <span data-ttu-id="03483-108">[in]控制釋放記憶體的旗標。</span><span class="sxs-lookup"><span data-stu-id="03483-108">[in] Flags that control the freeing of memory.</span></span> <span data-ttu-id="03483-109">請參閱 Win32`VirtualFree`函式。</span><span class="sxs-lookup"><span data-stu-id="03483-109">See the Win32 `VirtualFree` function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6ae38-110">備註</span><span class="sxs-lookup"><span data-stu-id="6ae38-110">Remarks</span></span>  
- <span data-ttu-id="6ae38-111">`FreeVirtual`方法做為 Win32 的邏輯包裝函數`VirtualFree`函式。</span><span class="sxs-lookup"><span data-stu-id="6ae38-111">The `FreeVirtual` method serves as a logical wrapper for the Win32 `VirtualFree` function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="03483-110">備註</span><span class="sxs-lookup"><span data-stu-id="03483-110">Remarks</span></span>  
+ <span data-ttu-id="03483-111">`FreeVirtual`方法做為 Win32 的邏輯包裝函數`VirtualFree`函式。</span><span class="sxs-lookup"><span data-stu-id="03483-111">The `FreeVirtual` method serves as a logical wrapper for the Win32 `VirtualFree` function.</span></span>  
   
- <span data-ttu-id="6ae38-112">此方法是由偵錯應用程式的作者來實作。</span><span class="sxs-lookup"><span data-stu-id="6ae38-112">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="03483-112">此方法是由偵錯應用程式的作者來實作。</span><span class="sxs-lookup"><span data-stu-id="03483-112">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6ae38-113">需求</span><span class="sxs-lookup"><span data-stu-id="6ae38-113">Requirements</span></span>  
- <span data-ttu-id="6ae38-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6ae38-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03483-113">需求</span><span class="sxs-lookup"><span data-stu-id="03483-113">Requirements</span></span>  
+ <span data-ttu-id="03483-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="03483-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ae38-115">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="6ae38-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="03483-115">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="03483-115">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="6ae38-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6ae38-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="03483-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03483-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6ae38-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ae38-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="03483-117">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03483-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ae38-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6ae38-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03483-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="03483-118">See also</span></span>
 
-- [<span data-ttu-id="6ae38-119">ICLRDataTarget2 介面</span><span class="sxs-lookup"><span data-stu-id="6ae38-119">ICLRDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
-- [<span data-ttu-id="6ae38-120">AllocVirtual 方法</span><span class="sxs-lookup"><span data-stu-id="6ae38-120">AllocVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
+- [<span data-ttu-id="03483-119">ICLRDataTarget2 介面</span><span class="sxs-lookup"><span data-stu-id="03483-119">ICLRDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [<span data-ttu-id="03483-120">AllocVirtual 方法</span><span class="sxs-lookup"><span data-stu-id="03483-120">AllocVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)

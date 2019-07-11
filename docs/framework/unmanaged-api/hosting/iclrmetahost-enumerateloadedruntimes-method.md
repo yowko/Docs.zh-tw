@@ -17,53 +17,53 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0e1213128f5728f17225fbf6906d877dc64e86d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b77a01a6adf40c21e0d56853b860982e39b9b27e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919291"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779803"
 ---
-# <a name="iclrmetahostenumerateloadedruntimes-method"></a><span data-ttu-id="b418f-102">ICLRMetaHost::EnumerateLoadedRuntimes 方法</span><span class="sxs-lookup"><span data-stu-id="b418f-102">ICLRMetaHost::EnumerateLoadedRuntimes Method</span></span>
-<span data-ttu-id="b418f-103">傳回包含有效的列舉[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)每個版本的 common language runtime (CLR) 所指定的處理序中載入的介面指標。</span><span class="sxs-lookup"><span data-stu-id="b418f-103">Returns an enumeration that includes a valid [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface pointer for each version of the common language runtime (CLR) that is loaded in a given process.</span></span> <span data-ttu-id="b418f-104">這個方法會取代[GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="b418f-104">This method supersedes the [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) function.</span></span>  
+# <a name="iclrmetahostenumerateloadedruntimes-method"></a><span data-ttu-id="5bd32-102">ICLRMetaHost::EnumerateLoadedRuntimes 方法</span><span class="sxs-lookup"><span data-stu-id="5bd32-102">ICLRMetaHost::EnumerateLoadedRuntimes Method</span></span>
+<span data-ttu-id="5bd32-103">傳回包含有效的列舉[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)每個版本的 common language runtime (CLR) 所指定的處理序中載入的介面指標。</span><span class="sxs-lookup"><span data-stu-id="5bd32-103">Returns an enumeration that includes a valid [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface pointer for each version of the common language runtime (CLR) that is loaded in a given process.</span></span> <span data-ttu-id="5bd32-104">這個方法會取代[GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="5bd32-104">This method supersedes the [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b418f-105">語法</span><span class="sxs-lookup"><span data-stu-id="b418f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5bd32-105">語法</span><span class="sxs-lookup"><span data-stu-id="5bd32-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumerateLoadedRuntimes (  
     [in] HANDLE hndProcess,  
     [out, retval] IEnumUnknown **ppEnumerator  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b418f-106">參數</span><span class="sxs-lookup"><span data-stu-id="b418f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5bd32-106">參數</span><span class="sxs-lookup"><span data-stu-id="5bd32-106">Parameters</span></span>  
  `hndProcess`  
- <span data-ttu-id="b418f-107">[in]若要檢查載入的執行階段的程序的控制代碼。</span><span class="sxs-lookup"><span data-stu-id="b418f-107">[in] The handle of the process to inspect for loaded runtimes.</span></span>  
+ <span data-ttu-id="5bd32-107">[in]若要檢查載入的執行階段的程序的控制代碼。</span><span class="sxs-lookup"><span data-stu-id="5bd32-107">[in] The handle of the process to inspect for loaded runtimes.</span></span>  
   
  `ppEnumerator`  
- <span data-ttu-id="b418f-108">[out]<xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown>的列舉型別[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)對應至每個 CLR 程序所載入的介面。</span><span class="sxs-lookup"><span data-stu-id="b418f-108">[out] An <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> enumeration of [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces corresponding to each CLR that is loaded by the process.</span></span>  
+ <span data-ttu-id="5bd32-108">[out]<xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown>的列舉型別[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)對應至每個 CLR 程序所載入的介面。</span><span class="sxs-lookup"><span data-stu-id="5bd32-108">[out] An <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> enumeration of [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces corresponding to each CLR that is loaded by the process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b418f-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="b418f-109">Return Value</span></span>  
- <span data-ttu-id="b418f-110">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="b418f-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5bd32-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="5bd32-109">Return Value</span></span>  
+ <span data-ttu-id="5bd32-110">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="5bd32-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="b418f-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b418f-111">HRESULT</span></span>|<span data-ttu-id="b418f-112">描述</span><span class="sxs-lookup"><span data-stu-id="b418f-112">Description</span></span>|  
+|<span data-ttu-id="5bd32-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5bd32-111">HRESULT</span></span>|<span data-ttu-id="5bd32-112">說明</span><span class="sxs-lookup"><span data-stu-id="5bd32-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="b418f-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="b418f-113">S_OK</span></span>|<span data-ttu-id="b418f-114">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="b418f-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="b418f-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="b418f-115">E_POINTER</span></span>|<span data-ttu-id="b418f-116">`ppEnumerator` 為 null。</span><span class="sxs-lookup"><span data-stu-id="b418f-116">`ppEnumerator` is null.</span></span>|  
+|<span data-ttu-id="5bd32-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="5bd32-113">S_OK</span></span>|<span data-ttu-id="5bd32-114">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="5bd32-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="5bd32-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="5bd32-115">E_POINTER</span></span>|<span data-ttu-id="5bd32-116">`ppEnumerator` 為 null。</span><span class="sxs-lookup"><span data-stu-id="5bd32-116">`ppEnumerator` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b418f-117">備註</span><span class="sxs-lookup"><span data-stu-id="b418f-117">Remarks</span></span>  
- <span data-ttu-id="b418f-118">這個方法是列出所有載入執行階段，即使已載入它們已被取代的函式與這類[CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)。</span><span class="sxs-lookup"><span data-stu-id="b418f-118">This method is lists all loaded runtimes, even if they were loaded with deprecated functions such as [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5bd32-117">備註</span><span class="sxs-lookup"><span data-stu-id="5bd32-117">Remarks</span></span>  
+ <span data-ttu-id="5bd32-118">這個方法是列出所有載入執行階段，即使已載入它們已被取代的函式與這類[CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)。</span><span class="sxs-lookup"><span data-stu-id="5bd32-118">This method is lists all loaded runtimes, even if they were loaded with deprecated functions such as [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b418f-119">需求</span><span class="sxs-lookup"><span data-stu-id="b418f-119">Requirements</span></span>  
- <span data-ttu-id="b418f-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b418f-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5bd32-119">需求</span><span class="sxs-lookup"><span data-stu-id="5bd32-119">Requirements</span></span>  
+ <span data-ttu-id="5bd32-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5bd32-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b418f-121">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="b418f-121">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="5bd32-121">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="5bd32-121">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="b418f-122">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="b418f-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5bd32-122">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="5bd32-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b418f-123">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b418f-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="5bd32-123">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5bd32-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b418f-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b418f-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5bd32-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5bd32-124">See also</span></span>
 
-- [<span data-ttu-id="b418f-125">ICLRMetaHost 介面</span><span class="sxs-lookup"><span data-stu-id="b418f-125">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="b418f-126">裝載</span><span class="sxs-lookup"><span data-stu-id="b418f-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="5bd32-125">ICLRMetaHost 介面</span><span class="sxs-lookup"><span data-stu-id="5bd32-125">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="5bd32-126">裝載</span><span class="sxs-lookup"><span data-stu-id="5bd32-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
