@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5658ac87c7a938381639442216df03853f02998
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 120c31b61734cfb4cb0048489632bc0848a9430b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763161"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782171"
 ---
-# <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a><span data-ttu-id="bf8b0-102">ICorProfilerInfo3::GetAppDomainsContainingModule 方法</span><span class="sxs-lookup"><span data-stu-id="bf8b0-102">ICorProfilerInfo3::GetAppDomainsContainingModule Method</span></span>
-<span data-ttu-id="bf8b0-103">取得已載入指定模組之應用程式定義域的識別項。</span><span class="sxs-lookup"><span data-stu-id="bf8b0-103">Gets the identifiers of the application domains in which the given module has been loaded.</span></span>  
+# <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a><span data-ttu-id="6c898-102">ICorProfilerInfo3::GetAppDomainsContainingModule 方法</span><span class="sxs-lookup"><span data-stu-id="6c898-102">ICorProfilerInfo3::GetAppDomainsContainingModule Method</span></span>
+<span data-ttu-id="6c898-103">取得已載入指定模組之應用程式定義域的識別項。</span><span class="sxs-lookup"><span data-stu-id="6c898-103">Gets the identifiers of the application domains in which the given module has been loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf8b0-104">語法</span><span class="sxs-lookup"><span data-stu-id="bf8b0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6c898-104">語法</span><span class="sxs-lookup"><span data-stu-id="6c898-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetAppDomainsContainingModule(  
             [in] ModuleID moduleId,  
             [in] ULONG32 cAppDomainIds,  
@@ -38,34 +38,34 @@ HRESULT GetAppDomainsContainingModule(
                     AppDomainID appDomainIds[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bf8b0-105">參數</span><span class="sxs-lookup"><span data-stu-id="bf8b0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6c898-105">參數</span><span class="sxs-lookup"><span data-stu-id="6c898-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="bf8b0-106">[in] 載入模組的 ID。</span><span class="sxs-lookup"><span data-stu-id="bf8b0-106">[in] The ID of the loaded module.</span></span>  
+ <span data-ttu-id="6c898-106">[in] 載入模組的 ID。</span><span class="sxs-lookup"><span data-stu-id="6c898-106">[in] The ID of the loaded module.</span></span>  
   
  `cAppDomainIds`  
- <span data-ttu-id="bf8b0-107">[in] `appDomainIds` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="bf8b0-107">[in] The size of the `appDomainIds` array.</span></span>  
+ <span data-ttu-id="6c898-107">[in] `appDomainIds` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="6c898-107">[in] The size of the `appDomainIds` array.</span></span>  
   
  `pcAppDomainIds`  
- <span data-ttu-id="bf8b0-108">[out] 傳回項目之總數的指標。</span><span class="sxs-lookup"><span data-stu-id="bf8b0-108">[out] A pointer to the total number of returned elements.</span></span>  
+ <span data-ttu-id="6c898-108">[out] 傳回項目之總數的指標。</span><span class="sxs-lookup"><span data-stu-id="6c898-108">[out] A pointer to the total number of returned elements.</span></span>  
   
  `appDomainIds`  
- <span data-ttu-id="bf8b0-109">[out] 應用程式定義域 ID 值的陣列。</span><span class="sxs-lookup"><span data-stu-id="bf8b0-109">[out] An array of application domain ID values.</span></span>  
+ <span data-ttu-id="6c898-109">[out] 應用程式定義域 ID 值的陣列。</span><span class="sxs-lookup"><span data-stu-id="6c898-109">[out] An array of application domain ID values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bf8b0-110">備註</span><span class="sxs-lookup"><span data-stu-id="bf8b0-110">Remarks</span></span>  
- <span data-ttu-id="bf8b0-111">這個方法會使用呼叫端配置的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="bf8b0-111">The method uses caller allocated buffers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6c898-110">備註</span><span class="sxs-lookup"><span data-stu-id="6c898-110">Remarks</span></span>  
+ <span data-ttu-id="6c898-111">這個方法會使用呼叫端配置的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="6c898-111">The method uses caller allocated buffers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf8b0-112">需求</span><span class="sxs-lookup"><span data-stu-id="bf8b0-112">Requirements</span></span>  
- <span data-ttu-id="bf8b0-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bf8b0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c898-112">需求</span><span class="sxs-lookup"><span data-stu-id="6c898-112">Requirements</span></span>  
+ <span data-ttu-id="6c898-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6c898-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf8b0-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bf8b0-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6c898-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6c898-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="bf8b0-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bf8b0-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6c898-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c898-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bf8b0-116">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf8b0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="6c898-116">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c898-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf8b0-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bf8b0-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c898-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6c898-117">See also</span></span>
 
-- [<span data-ttu-id="bf8b0-118">ICorProfilerFunctionEnum 介面</span><span class="sxs-lookup"><span data-stu-id="bf8b0-118">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="bf8b0-119">ICorProfilerInfo3 介面</span><span class="sxs-lookup"><span data-stu-id="bf8b0-119">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="bf8b0-120">分析介面</span><span class="sxs-lookup"><span data-stu-id="bf8b0-120">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="bf8b0-121">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="bf8b0-121">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="6c898-118">ICorProfilerFunctionEnum 介面</span><span class="sxs-lookup"><span data-stu-id="6c898-118">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="6c898-119">ICorProfilerInfo3 介面</span><span class="sxs-lookup"><span data-stu-id="6c898-119">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="6c898-120">分析介面</span><span class="sxs-lookup"><span data-stu-id="6c898-120">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="6c898-121">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="6c898-121">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

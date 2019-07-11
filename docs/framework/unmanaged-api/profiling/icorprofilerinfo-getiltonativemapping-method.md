@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7bbf0e03fc69332f77f3ac34a399a96f638da3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 319ca8696291bb1800fee78159dd08030b1802d9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991831"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780590"
 ---
-# <a name="icorprofilerinfogetiltonativemapping-method"></a><span data-ttu-id="e25cf-102">ICorProfilerInfo::GetILToNativeMapping 方法</span><span class="sxs-lookup"><span data-stu-id="e25cf-102">ICorProfilerInfo::GetILToNativeMapping Method</span></span>
-<span data-ttu-id="e25cf-103">針對指定的函式中所包含的程式碼，取得從 Microsoft Intermediate Language (MSIL) 位移到原生位移的對應。</span><span class="sxs-lookup"><span data-stu-id="e25cf-103">Gets a map from Microsoft intermediate language (MSIL) offsets to native offsets for the code contained in the specified function.</span></span>  
+# <a name="icorprofilerinfogetiltonativemapping-method"></a><span data-ttu-id="e8c37-102">ICorProfilerInfo::GetILToNativeMapping 方法</span><span class="sxs-lookup"><span data-stu-id="e8c37-102">ICorProfilerInfo::GetILToNativeMapping Method</span></span>
+<span data-ttu-id="e8c37-103">針對指定的函式中所包含的程式碼，取得從 Microsoft Intermediate Language (MSIL) 位移到原生位移的對應。</span><span class="sxs-lookup"><span data-stu-id="e8c37-103">Gets a map from Microsoft intermediate language (MSIL) offsets to native offsets for the code contained in the specified function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e25cf-104">語法</span><span class="sxs-lookup"><span data-stu-id="e25cf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8c37-104">語法</span><span class="sxs-lookup"><span data-stu-id="e8c37-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetILToNativeMapping(  
     [in] FunctionID functionId,  
     [in] ULONG32 cMap,  
@@ -38,38 +38,38 @@ HRESULT GetILToNativeMapping(
         COR_DEBUG_IL_TO_NATIVE_MAP map[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e25cf-105">參數</span><span class="sxs-lookup"><span data-stu-id="e25cf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e8c37-105">參數</span><span class="sxs-lookup"><span data-stu-id="e8c37-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="e25cf-106">[in] 包含程式碼的函式 ID。</span><span class="sxs-lookup"><span data-stu-id="e25cf-106">[in] The ID of the function that contains the code.</span></span>  
+ <span data-ttu-id="e8c37-106">[in] 包含程式碼的函式 ID。</span><span class="sxs-lookup"><span data-stu-id="e8c37-106">[in] The ID of the function that contains the code.</span></span>  
   
  `cMap`  
- <span data-ttu-id="e25cf-107">[in] `map` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="e25cf-107">[in] The maximum size of the `map` array.</span></span>  
+ <span data-ttu-id="e8c37-107">[in] `map` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="e8c37-107">[in] The maximum size of the `map` array.</span></span>  
   
  `pcMap`  
- <span data-ttu-id="e25cf-108">[out]可用的 COR_DEBUG_IL_TO_NATIVE_MAP 結構總數。</span><span class="sxs-lookup"><span data-stu-id="e25cf-108">[out] The total number of available COR_DEBUG_IL_TO_NATIVE_MAP structures.</span></span>  
+ <span data-ttu-id="e8c37-108">[out]可用的 COR_DEBUG_IL_TO_NATIVE_MAP 結構總數。</span><span class="sxs-lookup"><span data-stu-id="e8c37-108">[out] The total number of available COR_DEBUG_IL_TO_NATIVE_MAP structures.</span></span>  
   
  `map`  
- <span data-ttu-id="e25cf-109">[out] `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列，每個結構都有指定位移。</span><span class="sxs-lookup"><span data-stu-id="e25cf-109">[out] An array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures, each of which specifies the offsets.</span></span> <span data-ttu-id="e25cf-110">`GetILToNativeMapping` 方法傳回之後，`map` 將會包含部分或所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。</span><span class="sxs-lookup"><span data-stu-id="e25cf-110">After the `GetILToNativeMapping` method returns, `map` will contain some or all of the `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span>  
+ <span data-ttu-id="e8c37-109">[out] `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列，每個結構都有指定位移。</span><span class="sxs-lookup"><span data-stu-id="e8c37-109">[out] An array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures, each of which specifies the offsets.</span></span> <span data-ttu-id="e8c37-110">          `GetILToNativeMapping` 方法傳回之後，`map` 將會包含部分或所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。</span><span class="sxs-lookup"><span data-stu-id="e8c37-110">After the `GetILToNativeMapping` method returns, `map` will contain some or all of the `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e25cf-111">備註</span><span class="sxs-lookup"><span data-stu-id="e25cf-111">Remarks</span></span>  
- <span data-ttu-id="e25cf-112">`GetILToNativeMapping` 方法會傳回 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列。</span><span class="sxs-lookup"><span data-stu-id="e25cf-112">The `GetILToNativeMapping` method returns an array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span> <span data-ttu-id="e25cf-113">陣列中的項目可以有傳達原生指令的特定範圍對應至特殊的區域，程式碼 （例如，初構），其`ilOffset`欄位設定為值[CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)列舉型別。</span><span class="sxs-lookup"><span data-stu-id="e25cf-113">To convey that certain ranges of native instructions correspond to special regions of code (for example, the prolog), an entry in the array can have its `ilOffset` field set to a value of the [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) enumeration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e8c37-111">備註</span><span class="sxs-lookup"><span data-stu-id="e8c37-111">Remarks</span></span>  
+ <span data-ttu-id="e8c37-112">          `GetILToNativeMapping` 方法會傳回 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列。</span><span class="sxs-lookup"><span data-stu-id="e8c37-112">The `GetILToNativeMapping` method returns an array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span> <span data-ttu-id="e8c37-113">陣列中的項目可以有傳達原生指令的特定範圍對應至特殊的區域，程式碼 （例如，初構），其`ilOffset`欄位設定為值[CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)列舉型別。</span><span class="sxs-lookup"><span data-stu-id="e8c37-113">To convey that certain ranges of native instructions correspond to special regions of code (for example, the prolog), an entry in the array can have its `ilOffset` field set to a value of the [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) enumeration.</span></span>  
   
- <span data-ttu-id="e25cf-114">`GetILToNativeMapping` 傳回之後，您必須確認 `map` 緩衝區夠大，可以包含所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。</span><span class="sxs-lookup"><span data-stu-id="e25cf-114">After `GetILToNativeMapping` returns, you must verify that the `map` buffer was large enough to contain all the `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span> <span data-ttu-id="e25cf-115">若要這樣做，請比較 `cMap` 的值與 `pcMap` 參數的值。</span><span class="sxs-lookup"><span data-stu-id="e25cf-115">To do this, compare the value of `cMap` with the value of the `pcMap` parameter.</span></span> <span data-ttu-id="e25cf-116">如果 `pcMap` 值乘以 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的大小之後大於 `cMap`，請配置較大的 `map` 緩衝區，以新的較大大小更新 `cMap`，然後重新呼叫 `GetILToNativeMapping`。</span><span class="sxs-lookup"><span data-stu-id="e25cf-116">If the `pcMap` value, when it is multiplied by the size of a `COR_DEBUG_IL_TO_NATIVE_MAP` structure, is larger than `cMap`, allocate a larger `map` buffer, update `cMap` with the new, larger size, and call `GetILToNativeMapping` again.</span></span>  
+ <span data-ttu-id="e8c37-114">          `GetILToNativeMapping` 傳回之後，您必須確認 `map` 緩衝區夠大，可以包含所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。</span><span class="sxs-lookup"><span data-stu-id="e8c37-114">After `GetILToNativeMapping` returns, you must verify that the `map` buffer was large enough to contain all the `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span> <span data-ttu-id="e8c37-115">若要這樣做，請比較 `cMap` 的值與 `pcMap` 參數的值。</span><span class="sxs-lookup"><span data-stu-id="e8c37-115">To do this, compare the value of `cMap` with the value of the `pcMap` parameter.</span></span> <span data-ttu-id="e8c37-116">如果 `pcMap` 值乘以 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的大小之後大於 `cMap`，請配置較大的 `map` 緩衝區，以新的較大大小更新 `cMap`，然後重新呼叫 `GetILToNativeMapping`。</span><span class="sxs-lookup"><span data-stu-id="e8c37-116">If the `pcMap` value, when it is multiplied by the size of a `COR_DEBUG_IL_TO_NATIVE_MAP` structure, is larger than `cMap`, allocate a larger `map` buffer, update `cMap` with the new, larger size, and call `GetILToNativeMapping` again.</span></span>  
   
- <span data-ttu-id="e25cf-117">或者，您也可以先使用長度為零的 `map` 緩衝區來呼叫 `GetILToNativeMapping`，以取得正確的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="e25cf-117">Alternatively, you can first call `GetILToNativeMapping` with a zero-length `map` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="e25cf-118">接著您就可以將緩衝區大小設定為 `pcMap` 中傳回的值，並再次呼叫 `GetILToNativeMapping`。</span><span class="sxs-lookup"><span data-stu-id="e25cf-118">You can then set the buffer size to the value returned in `pcMap` and call `GetILToNativeMapping` again.</span></span>  
+ <span data-ttu-id="e8c37-117">或者，您也可以先使用長度為零的 `map` 緩衝區來呼叫 `GetILToNativeMapping`，以取得正確的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="e8c37-117">Alternatively, you can first call `GetILToNativeMapping` with a zero-length `map` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="e8c37-118">接著您就可以將緩衝區大小設定為 `pcMap` 中傳回的值，並再次呼叫 `GetILToNativeMapping`。</span><span class="sxs-lookup"><span data-stu-id="e8c37-118">You can then set the buffer size to the value returned in `pcMap` and call `GetILToNativeMapping` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e25cf-119">需求</span><span class="sxs-lookup"><span data-stu-id="e25cf-119">Requirements</span></span>  
- <span data-ttu-id="e25cf-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e25cf-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8c37-119">需求</span><span class="sxs-lookup"><span data-stu-id="e8c37-119">Requirements</span></span>  
+ <span data-ttu-id="e8c37-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e8c37-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e25cf-121">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e25cf-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e8c37-121">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e8c37-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e25cf-122">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e25cf-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e8c37-122">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e8c37-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e25cf-123">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e25cf-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e8c37-123">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8c37-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e25cf-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e25cf-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8c37-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e8c37-124">See also</span></span>
 
-- [<span data-ttu-id="e25cf-125">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="e25cf-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="e25cf-126">GetILToNativeMapping2 方法</span><span class="sxs-lookup"><span data-stu-id="e25cf-126">GetILToNativeMapping2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getiltonativemapping2-method.md)
-- [<span data-ttu-id="e25cf-127">分析介面</span><span class="sxs-lookup"><span data-stu-id="e25cf-127">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="e25cf-128">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="e25cf-128">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="e8c37-125">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="e8c37-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="e8c37-126">GetILToNativeMapping2 方法</span><span class="sxs-lookup"><span data-stu-id="e8c37-126">GetILToNativeMapping2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getiltonativemapping2-method.md)
+- [<span data-ttu-id="e8c37-127">分析介面</span><span class="sxs-lookup"><span data-stu-id="e8c37-127">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="e8c37-128">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="e8c37-128">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

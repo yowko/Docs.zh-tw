@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b59d85227f21bb230333456eda9130416563111
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1a72f76f1cd6f6571eaebff3a8046de8dcd3d74
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986283"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751465"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="dbc42-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount 方法</span><span class="sxs-lookup"><span data-stu-id="dbc42-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
-<span data-ttu-id="dbc42-103">取得符號搜尋資訊的計數。</span><span class="sxs-lookup"><span data-stu-id="dbc42-103">Gets a count of symbol search information.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="d7b54-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount 方法</span><span class="sxs-lookup"><span data-stu-id="d7b54-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
+<span data-ttu-id="d7b54-103">取得符號搜尋資訊的計數。</span><span class="sxs-lookup"><span data-stu-id="d7b54-103">Gets a count of symbol search information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbc42-104">語法</span><span class="sxs-lookup"><span data-stu-id="dbc42-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d7b54-104">語法</span><span class="sxs-lookup"><span data-stu-id="d7b54-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSymbolSearchInfoCount(  
     [out] ULONG32 *pcSearchInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dbc42-105">參數</span><span class="sxs-lookup"><span data-stu-id="dbc42-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d7b54-105">參數</span><span class="sxs-lookup"><span data-stu-id="d7b54-105">Parameters</span></span>  
  `pcSearchInfo`  
- <span data-ttu-id="dbc42-106">] out] 的指標`ULONG32`接收包含搜尋資訊所需的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="dbc42-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
+ <span data-ttu-id="d7b54-106">] out] 的指標`ULONG32`接收包含搜尋資訊所需的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="d7b54-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dbc42-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="dbc42-107">Return Value</span></span>  
- <span data-ttu-id="dbc42-108">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="dbc42-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d7b54-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="d7b54-107">Return Value</span></span>  
+ <span data-ttu-id="d7b54-108">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="d7b54-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dbc42-109">需求</span><span class="sxs-lookup"><span data-stu-id="dbc42-109">Requirements</span></span>  
- <span data-ttu-id="dbc42-110">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="dbc42-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d7b54-109">需求</span><span class="sxs-lookup"><span data-stu-id="d7b54-109">Requirements</span></span>  
+ <span data-ttu-id="d7b54-110">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d7b54-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dbc42-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dbc42-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7b54-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d7b54-111">See also</span></span>
 
-- [<span data-ttu-id="dbc42-112">ISymUnmanagedReaderSymbolSearchInfo 介面</span><span class="sxs-lookup"><span data-stu-id="dbc42-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+- [<span data-ttu-id="d7b54-112">ISymUnmanagedReaderSymbolSearchInfo 介面</span><span class="sxs-lookup"><span data-stu-id="d7b54-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

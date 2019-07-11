@@ -16,47 +16,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 426d77114d3deeff94c39e2f5fc1f2e56e753641
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 56a34a8f185ce600f4792cf05c3e95623b70ad6c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490284"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776533"
 ---
-# <a name="iclrmetahostpolicy-interface"></a><span data-ttu-id="0f0fd-102">ICLRMetaHostPolicy 介面</span><span class="sxs-lookup"><span data-stu-id="0f0fd-102">ICLRMetaHostPolicy Interface</span></span>
-<span data-ttu-id="0f0fd-103">提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法，這個方法會傳回根據原則準則的通用語言執行平台 (CLR) 介面的指標，管理組件、 版本和組態檔。</span><span class="sxs-lookup"><span data-stu-id="0f0fd-103">Provides the [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method, which returns a pointer to a common language runtime (CLR) interface based on a policy criteria, managed assembly, version and configuration file.</span></span>  
+# <a name="iclrmetahostpolicy-interface"></a><span data-ttu-id="404b9-102">ICLRMetaHostPolicy 介面</span><span class="sxs-lookup"><span data-stu-id="404b9-102">ICLRMetaHostPolicy Interface</span></span>
+<span data-ttu-id="404b9-103">提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法，這個方法會傳回根據原則準則的通用語言執行平台 (CLR) 介面的指標，管理組件、 版本和組態檔。</span><span class="sxs-lookup"><span data-stu-id="404b9-103">Provides the [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method, which returns a pointer to a common language runtime (CLR) interface based on a policy criteria, managed assembly, version and configuration file.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0f0fd-104">方法</span><span class="sxs-lookup"><span data-stu-id="0f0fd-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="404b9-104">方法</span><span class="sxs-lookup"><span data-stu-id="404b9-104">Methods</span></span>  
   
-|<span data-ttu-id="0f0fd-105">方法</span><span class="sxs-lookup"><span data-stu-id="0f0fd-105">Method</span></span>|<span data-ttu-id="0f0fd-106">描述</span><span class="sxs-lookup"><span data-stu-id="0f0fd-106">Description</span></span>|  
+|<span data-ttu-id="404b9-105">方法</span><span class="sxs-lookup"><span data-stu-id="404b9-105">Method</span></span>|<span data-ttu-id="404b9-106">說明</span><span class="sxs-lookup"><span data-stu-id="404b9-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0f0fd-107">GetRequestedRuntime 方法</span><span class="sxs-lookup"><span data-stu-id="0f0fd-107">GetRequestedRuntime Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|<span data-ttu-id="0f0fd-108">提供的慣用的 CLR 介面根據原則準則、 管理組件、 版本和組態檔。</span><span class="sxs-lookup"><span data-stu-id="0f0fd-108">Provides a preferred CLR interface based on a policy criteria, managed assembly, version, and configuration file.</span></span>|  
+|[<span data-ttu-id="404b9-107">GetRequestedRuntime 方法</span><span class="sxs-lookup"><span data-stu-id="404b9-107">GetRequestedRuntime Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|<span data-ttu-id="404b9-108">提供的慣用的 CLR 介面根據原則準則、 管理組件、 版本和組態檔。</span><span class="sxs-lookup"><span data-stu-id="404b9-108">Provides a preferred CLR interface based on a policy criteria, managed assembly, version, and configuration file.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0f0fd-109">備註</span><span class="sxs-lookup"><span data-stu-id="0f0fd-109">Remarks</span></span>  
- <span data-ttu-id="0f0fd-110">您可以取得此介面的參考，藉由呼叫[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函式，如下列程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="0f0fd-110">You can get a reference to this interface by calling the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function as shown in the following code:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="404b9-109">備註</span><span class="sxs-lookup"><span data-stu-id="404b9-109">Remarks</span></span>  
+ <span data-ttu-id="404b9-110">您可以取得此介面的參考，藉由呼叫[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函式，如下列程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="404b9-110">You can get a reference to this interface by calling the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function as shown in the following code:</span></span>  
   
-```  
+```cpp  
 ICLRMetaHostPolicy *pMetaHostPolicy = NULL;  
 HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,  
                    IID_ICLRMetaHostPolicy, (LPVOID*)&pMetaHostPolicy);  
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="0f0fd-111">此介面實際上不會不會載入或啟用 CLR，但只會傳回可用的版本安裝或載入為基礎的慣用的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="0f0fd-111">This interface does not actually load or activate the CLR, but simply returns the preferred CLR version based on the available versions that are installed or loaded.</span></span>  
+>  <span data-ttu-id="404b9-111">此介面實際上不會不會載入或啟用 CLR，但只會傳回可用的版本安裝或載入為基礎的慣用的 CLR 版本。</span><span class="sxs-lookup"><span data-stu-id="404b9-111">This interface does not actually load or activate the CLR, but simply returns the preferred CLR version based on the available versions that are installed or loaded.</span></span>  
   
- <span data-ttu-id="0f0fd-112">裝載 API 的.NET Framework 4 合併原則，好讓主機的特定需求可能會使用基本功能而不會產生非預期的負面影響。</span><span class="sxs-lookup"><span data-stu-id="0f0fd-112">The .NET Framework 4 hosting API consolidates policies so that hosts with specific needs may use basic functionality without incurring unintended penalties.</span></span> <span data-ttu-id="0f0fd-113">比方說，許多 MSCorEE.dll 匯出會繫結至特定的 CLR，雖然方法可能會以邏輯方式需要它。</span><span class="sxs-lookup"><span data-stu-id="0f0fd-113">For example, many of the MSCorEE.dll exports will bind to a specific CLR, although a method might not logically require it.</span></span> <span data-ttu-id="0f0fd-114">[METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)列舉型別提供通用於大部分的主控件的繫結原則。</span><span class="sxs-lookup"><span data-stu-id="0f0fd-114">The [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) enumeration provides binding policies that are common to the majority of hosts.</span></span>  
+ <span data-ttu-id="404b9-112">裝載 API 的.NET Framework 4 合併原則，好讓主機的特定需求可能會使用基本功能而不會產生非預期的負面影響。</span><span class="sxs-lookup"><span data-stu-id="404b9-112">The .NET Framework 4 hosting API consolidates policies so that hosts with specific needs may use basic functionality without incurring unintended penalties.</span></span> <span data-ttu-id="404b9-113">比方說，許多 MSCorEE.dll 匯出會繫結至特定的 CLR，雖然方法可能會以邏輯方式需要它。</span><span class="sxs-lookup"><span data-stu-id="404b9-113">For example, many of the MSCorEE.dll exports will bind to a specific CLR, although a method might not logically require it.</span></span> <span data-ttu-id="404b9-114">[METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)列舉型別提供通用於大部分的主控件的繫結原則。</span><span class="sxs-lookup"><span data-stu-id="404b9-114">The [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) enumeration provides binding policies that are common to the majority of hosts.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0f0fd-115">需求</span><span class="sxs-lookup"><span data-stu-id="0f0fd-115">Requirements</span></span>  
- <span data-ttu-id="0f0fd-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0f0fd-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="404b9-115">需求</span><span class="sxs-lookup"><span data-stu-id="404b9-115">Requirements</span></span>  
+ <span data-ttu-id="404b9-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="404b9-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0f0fd-117">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="0f0fd-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="404b9-117">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="404b9-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="0f0fd-118">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="0f0fd-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="404b9-118">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="404b9-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0f0fd-119">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f0fd-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="404b9-119">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="404b9-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f0fd-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0f0fd-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="404b9-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="404b9-120">See also</span></span>
 
-- [<span data-ttu-id="0f0fd-121">.NET Framework 4 和 4.5 中新增的 CLR 裝載介面</span><span class="sxs-lookup"><span data-stu-id="0f0fd-121">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [<span data-ttu-id="0f0fd-122">裝載介面</span><span class="sxs-lookup"><span data-stu-id="0f0fd-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="0f0fd-123">裝載</span><span class="sxs-lookup"><span data-stu-id="0f0fd-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="404b9-121">.NET Framework 4 和 4.5 中新增的 CLR 裝載介面</span><span class="sxs-lookup"><span data-stu-id="404b9-121">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [<span data-ttu-id="404b9-122">裝載介面</span><span class="sxs-lookup"><span data-stu-id="404b9-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="404b9-123">裝載</span><span class="sxs-lookup"><span data-stu-id="404b9-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

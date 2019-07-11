@@ -10,19 +10,19 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ac7cf92fb9c57491ff45e664513c0e82f22db9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: beb9a848a55c71259e4f7421658d56ae95a2f3e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941608"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741210"
 ---
-# <a name="certtimestampauthenticodelicense-function"></a><span data-ttu-id="2d7bb-102">CertTimestampAuthenticodeLicense 函式</span><span class="sxs-lookup"><span data-stu-id="2d7bb-102">CertTimestampAuthenticodeLicense Function</span></span>
-<span data-ttu-id="2d7bb-103">為 Authenticode XrML 授權加上時間戳記。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-103">Time-stamps an Authenticode XrML license.</span></span>  
+# <a name="certtimestampauthenticodelicense-function"></a><span data-ttu-id="f0339-102">CertTimestampAuthenticodeLicense 函式</span><span class="sxs-lookup"><span data-stu-id="f0339-102">CertTimestampAuthenticodeLicense Function</span></span>
+<span data-ttu-id="f0339-103">為 Authenticode XrML 授權加上時間戳記。</span><span class="sxs-lookup"><span data-stu-id="f0339-103">Time-stamps an Authenticode XrML license.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2d7bb-104">語法</span><span class="sxs-lookup"><span data-stu-id="2d7bb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0339-104">語法</span><span class="sxs-lookup"><span data-stu-id="f0339-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CertTimestampAuthenticodeLicense (  
     [in]  PCRYPT_DATA_BLOB   pSignedLicenseBlob,  
     [in]  LPCWSTR            pwszTimestampURI,  
@@ -30,22 +30,22 @@ HRESULT CertTimestampAuthenticodeLicense (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2d7bb-105">參數</span><span class="sxs-lookup"><span data-stu-id="2d7bb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f0339-105">參數</span><span class="sxs-lookup"><span data-stu-id="f0339-105">Parameters</span></span>  
  `pSignedLicenseBlob`  
- <span data-ttu-id="2d7bb-106">[in] 要加上時間戳記的已簽署 Authenticode XrML 授權。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-106">[in] The signed Authenticode XrML license to be time-stamped.</span></span> <span data-ttu-id="2d7bb-107">請參閱[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)結構。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="f0339-106">[in] 要加上時間戳記的已簽署 Authenticode XrML 授權。</span><span class="sxs-lookup"><span data-stu-id="f0339-106">[in] The signed Authenticode XrML license to be time-stamped.</span></span> <span data-ttu-id="f0339-107">請參閱[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)結構。</span><span class="sxs-lookup"><span data-stu-id="f0339-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `pwszTimestampURI`  
- <span data-ttu-id="2d7bb-108">[in] 時間戳記伺服器的 URI。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-108">[in] The time-stamp server's URI.</span></span>  
+ <span data-ttu-id="f0339-108">[in] 時間戳記伺服器的 URI。</span><span class="sxs-lookup"><span data-stu-id="f0339-108">[in] The time-stamp server's URI.</span></span>  
   
  `pTimestampSignatureBlob`  
- <span data-ttu-id="2d7bb-109">[out] CRYPT_DATA_BLOB (要接收 Base 64 編碼的時間戳記簽章) 的指標。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-109">[out] A pointer to CRYPT_DATA_BLOB to receive the base64-encoded time-stamp signature.</span></span> <span data-ttu-id="2d7bb-110">是免費的呼叫者的責任`pTimestampSignatureBlob` -> `pbData`使用`HepFree()`之後使用。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-110">It is the caller's responsibility to free `pTimestampSignatureBlob`->`pbData` with `HepFree()` after use.</span></span> <span data-ttu-id="2d7bb-111">請參閱[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)結構。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-111">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="f0339-109">[out] CRYPT_DATA_BLOB (要接收 Base 64 編碼的時間戳記簽章) 的指標。</span><span class="sxs-lookup"><span data-stu-id="f0339-109">[out] A pointer to CRYPT_DATA_BLOB to receive the base64-encoded time-stamp signature.</span></span> <span data-ttu-id="f0339-110">是免費的呼叫者的責任`pTimestampSignatureBlob` -> `pbData`使用`HepFree()`之後使用。</span><span class="sxs-lookup"><span data-stu-id="f0339-110">It is the caller's responsibility to free `pTimestampSignatureBlob`->`pbData` with `HepFree()` after use.</span></span> <span data-ttu-id="f0339-111">請參閱[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)結構。</span><span class="sxs-lookup"><span data-stu-id="f0339-111">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2d7bb-112">備註</span><span class="sxs-lookup"><span data-stu-id="2d7bb-112">Remarks</span></span>  
- <span data-ttu-id="2d7bb-113">時間戳記簽章實際上是 PKCS #7 SignedData 訊息，其內容是來自授權簽章的 SignatureValue 二進位格式。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-113">The time-stamp signature is actually a PKCS #7 SignedData message whose content is the binary form of the SignatureValue from the license's signature.</span></span> <span data-ttu-id="2d7bb-114">基本上是將此當作授權的副署。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-114">Basically, this acts as a counter-signature of the license.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f0339-112">備註</span><span class="sxs-lookup"><span data-stu-id="f0339-112">Remarks</span></span>  
+ <span data-ttu-id="f0339-113">時間戳記簽章實際上是 PKCS #7 SignedData 訊息，其內容是來自授權簽章的 SignatureValue 二進位格式。</span><span class="sxs-lookup"><span data-stu-id="f0339-113">The time-stamp signature is actually a PKCS #7 SignedData message whose content is the binary form of the SignatureValue from the license's signature.</span></span> <span data-ttu-id="f0339-114">基本上是將此當作授權的副署。</span><span class="sxs-lookup"><span data-stu-id="f0339-114">Basically, this acts as a counter-signature of the license.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2d7bb-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="2d7bb-115">Return Value</span></span>  
- <span data-ttu-id="2d7bb-116">如果函式成功，會傳回 `S_OK`。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-116">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="2d7bb-117">否則會傳回錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="2d7bb-117">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f0339-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="f0339-115">Return Value</span></span>  
+ <span data-ttu-id="f0339-116">如果函式成功，會傳回 `S_OK`。</span><span class="sxs-lookup"><span data-stu-id="f0339-116">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="f0339-117">否則會傳回錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="f0339-117">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2d7bb-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2d7bb-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0339-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f0339-118">See also</span></span>
 
-- [<span data-ttu-id="2d7bb-119">Authenticode</span><span class="sxs-lookup"><span data-stu-id="2d7bb-119">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [<span data-ttu-id="f0339-119">Authenticode</span><span class="sxs-lookup"><span data-stu-id="f0339-119">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c77ade46d2401e2499a94504808efd94f79f93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789788"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741793"
 ---
-# <a name="getwin32resblob-method"></a><span data-ttu-id="2eea3-102">GetWin32ResBlob 方法</span><span class="sxs-lookup"><span data-stu-id="2eea3-102">GetWin32ResBlob Method</span></span>
-<span data-ttu-id="2eea3-103">擷取 Win32 資源的 blob。</span><span class="sxs-lookup"><span data-stu-id="2eea3-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="2eea3-104">設定組件選項之後呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="2eea3-104">Call this method after setting assembly options.</span></span>  
+# <a name="getwin32resblob-method"></a><span data-ttu-id="0deff-102">GetWin32ResBlob 方法</span><span class="sxs-lookup"><span data-stu-id="0deff-102">GetWin32ResBlob Method</span></span>
+<span data-ttu-id="0deff-103">擷取 Win32 資源的 blob。</span><span class="sxs-lookup"><span data-stu-id="0deff-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="0deff-104">設定組件選項之後呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="0deff-104">Call this method after setting assembly options.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2eea3-105">語法</span><span class="sxs-lookup"><span data-stu-id="2eea3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0deff-105">語法</span><span class="sxs-lookup"><span data-stu-id="0deff-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetWin32ResBlob(  
     mdAssembly    AssemblyID,  
     mdToken       FileToken,  
@@ -39,33 +39,33 @@ HRESULT GetWin32ResBlob(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2eea3-106">參數</span><span class="sxs-lookup"><span data-stu-id="2eea3-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0deff-106">參數</span><span class="sxs-lookup"><span data-stu-id="0deff-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="2eea3-107">組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="2eea3-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="0deff-107">組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="0deff-107">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="2eea3-108">用來擷取建構的 Win32 版本資源時所要使用的檔名語彙基元檔案</span><span class="sxs-lookup"><span data-stu-id="2eea3-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span></span>  
+ <span data-ttu-id="0deff-108">用來擷取建構的 Win32 版本資源時所要使用的檔名語彙基元檔案</span><span class="sxs-lookup"><span data-stu-id="0deff-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span></span>  
   
  `fDll`  
- <span data-ttu-id="2eea3-109">如果檔案是 DLL，false EXE，則為 TRUE。</span><span class="sxs-lookup"><span data-stu-id="2eea3-109">TRUE if file is a DLL, false for an EXE.</span></span>  
+ <span data-ttu-id="0deff-109">如果檔案是 DLL，false EXE，則為 TRUE。</span><span class="sxs-lookup"><span data-stu-id="0deff-109">TRUE if file is a DLL, false for an EXE.</span></span>  
   
  `pszIconFile`  
- <span data-ttu-id="2eea3-110">若要將資源的 blob 插入的選擇性圖示。</span><span class="sxs-lookup"><span data-stu-id="2eea3-110">Optional icon to insert into the resource blob.</span></span>  
+ <span data-ttu-id="0deff-110">若要將資源的 blob 插入的選擇性圖示。</span><span class="sxs-lookup"><span data-stu-id="0deff-110">Optional icon to insert into the resource blob.</span></span>  
   
  `ppResBlob`  
- <span data-ttu-id="2eea3-111">收到資源的 blob。</span><span class="sxs-lookup"><span data-stu-id="2eea3-111">Receives the resource blob.</span></span>  
+ <span data-ttu-id="0deff-111">收到資源的 blob。</span><span class="sxs-lookup"><span data-stu-id="0deff-111">Receives the resource blob.</span></span>  
   
  `pcbResBlob`  
- <span data-ttu-id="2eea3-112">接收 blob 的大小。</span><span class="sxs-lookup"><span data-stu-id="2eea3-112">Receives the size of the blob.</span></span>  
+ <span data-ttu-id="0deff-112">接收 blob 的大小。</span><span class="sxs-lookup"><span data-stu-id="0deff-112">Receives the size of the blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2eea3-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="2eea3-113">Return Value</span></span>  
- <span data-ttu-id="2eea3-114">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="2eea3-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0deff-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="0deff-113">Return Value</span></span>  
+ <span data-ttu-id="0deff-114">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="0deff-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2eea3-115">需求</span><span class="sxs-lookup"><span data-stu-id="2eea3-115">Requirements</span></span>  
- <span data-ttu-id="2eea3-116">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="2eea3-116">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0deff-115">需求</span><span class="sxs-lookup"><span data-stu-id="0deff-115">Requirements</span></span>  
+ <span data-ttu-id="0deff-116">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="0deff-116">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2eea3-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2eea3-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0deff-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0deff-117">See also</span></span>
 
-- [<span data-ttu-id="2eea3-118">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="2eea3-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="2eea3-119">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="2eea3-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="2eea3-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="2eea3-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="0deff-118">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="0deff-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="0deff-119">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="0deff-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="0deff-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="0deff-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

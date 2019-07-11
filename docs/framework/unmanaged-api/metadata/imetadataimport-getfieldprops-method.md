@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7f8cccf8d583645982eb37f6afcb553914679ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 574ac706a07e7fcd701ab04f923d5171bea6f64a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777750"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782383"
 ---
-# <a name="imetadataimportgetfieldprops-method"></a><span data-ttu-id="2fab1-102">IMetaDataImport::GetFieldProps 方法</span><span class="sxs-lookup"><span data-stu-id="2fab1-102">IMetaDataImport::GetFieldProps Method</span></span>
-<span data-ttu-id="2fab1-103">取得與指定 FieldDef 語彙基元所參考欄位相關聯的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="2fab1-103">Gets metadata associated with the field referenced by the specified FieldDef token.</span></span>  
+# <a name="imetadataimportgetfieldprops-method"></a><span data-ttu-id="7405c-102">IMetaDataImport::GetFieldProps 方法</span><span class="sxs-lookup"><span data-stu-id="7405c-102">IMetaDataImport::GetFieldProps Method</span></span>
+<span data-ttu-id="7405c-103">取得與指定 FieldDef 語彙基元所參考欄位相關聯的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="7405c-103">Gets metadata associated with the field referenced by the specified FieldDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2fab1-104">語法</span><span class="sxs-lookup"><span data-stu-id="2fab1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7405c-104">語法</span><span class="sxs-lookup"><span data-stu-id="7405c-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFieldProps (  
    [in]  mdFieldDef        mb,   
    [out] mdTypeDef         *pClass,  
@@ -45,50 +45,50 @@ HRESULT GetFieldProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2fab1-105">參數</span><span class="sxs-lookup"><span data-stu-id="2fab1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7405c-105">參數</span><span class="sxs-lookup"><span data-stu-id="7405c-105">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="2fab1-106">[in]FieldDef 語彙基元，表示要取得相關聯的中繼資料的欄位。</span><span class="sxs-lookup"><span data-stu-id="2fab1-106">[in] A FieldDef token that represents the field to get associated metadata for.</span></span>  
+ <span data-ttu-id="7405c-106">[in]FieldDef 語彙基元，表示要取得相關聯的中繼資料的欄位。</span><span class="sxs-lookup"><span data-stu-id="7405c-106">[in] A FieldDef token that represents the field to get associated metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="2fab1-107">[out]表示欄位所屬的類別類型的 TypeDef 語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="2fab1-107">[out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.</span></span>  
+ <span data-ttu-id="7405c-107">[out]表示欄位所屬的類別類型的 TypeDef 語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="7405c-107">[out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.</span></span>  
   
  `szField`  
- <span data-ttu-id="2fab1-108">[out]欄位名稱。</span><span class="sxs-lookup"><span data-stu-id="2fab1-108">[out] The name of the field.</span></span>  
+ <span data-ttu-id="7405c-108">[out]欄位名稱。</span><span class="sxs-lookup"><span data-stu-id="7405c-108">[out] The name of the field.</span></span>  
   
  `cchField`  
- <span data-ttu-id="2fab1-109">[in]寬字元緩衝區的大小*szField*。</span><span class="sxs-lookup"><span data-stu-id="2fab1-109">[in] The size in wide characters of the buffer for *szField*.</span></span>  
+ <span data-ttu-id="7405c-109">[in]寬字元緩衝區的大小*szField*。</span><span class="sxs-lookup"><span data-stu-id="7405c-109">[in] The size in wide characters of the buffer for *szField*.</span></span>  
   
  `pchField`  
- <span data-ttu-id="2fab1-110">[out]傳回的緩衝區實際大小。</span><span class="sxs-lookup"><span data-stu-id="2fab1-110">[out] The actual size of the returned buffer.</span></span>  
+ <span data-ttu-id="7405c-110">[out]傳回的緩衝區實際大小。</span><span class="sxs-lookup"><span data-stu-id="7405c-110">[out] The actual size of the returned buffer.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="2fab1-111">[out]欄位的中繼資料相關聯的旗標。</span><span class="sxs-lookup"><span data-stu-id="2fab1-111">[out] Flags associated with the field's metadata.</span></span>  
+ <span data-ttu-id="7405c-111">[out]欄位的中繼資料相關聯的旗標。</span><span class="sxs-lookup"><span data-stu-id="7405c-111">[out] Flags associated with the field's metadata.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="2fab1-112">[in]描述欄位的二進位中繼資料值的指標。</span><span class="sxs-lookup"><span data-stu-id="2fab1-112">[in] A pointer to the binary metadata value that describes the field.</span></span>  
+ <span data-ttu-id="7405c-112">[in]描述欄位的二進位中繼資料值的指標。</span><span class="sxs-lookup"><span data-stu-id="7405c-112">[in] A pointer to the binary metadata value that describes the field.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="2fab1-113">[out]以位元組為單位的大小`ppvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="2fab1-113">[out] The size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="7405c-113">[out]以位元組為單位的大小`ppvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="7405c-113">[out] The size in bytes of `ppvSigBlob`.</span></span>  
   
  `pdwCPlusTypeFlag`  
- <span data-ttu-id="2fab1-114">[out]指定欄位的值類型的旗標。</span><span class="sxs-lookup"><span data-stu-id="2fab1-114">[out] A flag that specifies the value type of the field.</span></span>  
+ <span data-ttu-id="7405c-114">[out]指定欄位的值類型的旗標。</span><span class="sxs-lookup"><span data-stu-id="7405c-114">[out] A flag that specifies the value type of the field.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="2fab1-115">[out]欄位的常值。</span><span class="sxs-lookup"><span data-stu-id="2fab1-115">[out] A constant value for the field.</span></span>  
+ <span data-ttu-id="7405c-115">[out]欄位的常值。</span><span class="sxs-lookup"><span data-stu-id="7405c-115">[out] A constant value for the field.</span></span>  
   
  `pcchValue`  
- <span data-ttu-id="2fab1-116">[out]以字元為單位的大小`ppValue`，零，如果不有任何字串。</span><span class="sxs-lookup"><span data-stu-id="2fab1-116">[out] The size in chars of `ppValue`, or zero if no string exists.</span></span>  
+ <span data-ttu-id="7405c-116">[out]以字元為單位的大小`ppValue`，零，如果不有任何字串。</span><span class="sxs-lookup"><span data-stu-id="7405c-116">[out] The size in chars of `ppValue`, or zero if no string exists.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2fab1-117">需求</span><span class="sxs-lookup"><span data-stu-id="2fab1-117">Requirements</span></span>  
- <span data-ttu-id="2fab1-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2fab1-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7405c-117">需求</span><span class="sxs-lookup"><span data-stu-id="7405c-117">Requirements</span></span>  
+ <span data-ttu-id="7405c-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7405c-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2fab1-119">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2fab1-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7405c-119">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7405c-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2fab1-120">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="2fab1-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7405c-120">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="7405c-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="2fab1-121">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2fab1-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7405c-121">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7405c-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2fab1-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2fab1-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7405c-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7405c-122">See also</span></span>
 
-- [<span data-ttu-id="2fab1-123">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="2fab1-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="2fab1-124">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="2fab1-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="7405c-123">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="7405c-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="7405c-124">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="7405c-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

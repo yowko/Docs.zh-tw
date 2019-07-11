@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 690d556eb3991747d1627bae63b9c59ca68daaaa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cbecd5be9b1ac7c08e6970933a48eeb95f01a22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616221"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739387"
 ---
-# <a name="corgcreferencetype-enumeration"></a><span data-ttu-id="52f23-102">CorGCReferenceType 列舉</span><span class="sxs-lookup"><span data-stu-id="52f23-102">CorGCReferenceType Enumeration</span></span>
-<span data-ttu-id="52f23-103">識別要進行記憶體回收的物件來源。</span><span class="sxs-lookup"><span data-stu-id="52f23-103">Identifies the source of an object to be garbage-collected.</span></span>  
+# <a name="corgcreferencetype-enumeration"></a><span data-ttu-id="b1452-102">CorGCReferenceType 列舉</span><span class="sxs-lookup"><span data-stu-id="b1452-102">CorGCReferenceType Enumeration</span></span>
+<span data-ttu-id="b1452-103">識別要進行記憶體回收的物件來源。</span><span class="sxs-lookup"><span data-stu-id="b1452-103">Identifies the source of an object to be garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="52f23-104">語法</span><span class="sxs-lookup"><span data-stu-id="52f23-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b1452-104">語法</span><span class="sxs-lookup"><span data-stu-id="b1452-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
     CorHandleStrong = 1,  
     CorHandleStrongPinning = 2,  
@@ -48,40 +48,40 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a><span data-ttu-id="52f23-105">成員</span><span class="sxs-lookup"><span data-stu-id="52f23-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b1452-105">成員</span><span class="sxs-lookup"><span data-stu-id="b1452-105">Members</span></span>  
   
-|<span data-ttu-id="52f23-106">成員名稱</span><span class="sxs-lookup"><span data-stu-id="52f23-106">Member name</span></span>|<span data-ttu-id="52f23-107">描述</span><span class="sxs-lookup"><span data-stu-id="52f23-107">Description</span></span>|  
+|<span data-ttu-id="b1452-106">成員名稱</span><span class="sxs-lookup"><span data-stu-id="b1452-106">Member name</span></span>|<span data-ttu-id="b1452-107">描述</span><span class="sxs-lookup"><span data-stu-id="b1452-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorHandleStrong`|<span data-ttu-id="52f23-108">物件控制代碼資料表中的強式參考控制代碼。</span><span class="sxs-lookup"><span data-stu-id="52f23-108">A handle to a strong reference from the object handle table.</span></span>|  
-|`CorHandleStrongPinning`|<span data-ttu-id="52f23-109">控制代碼已釘選的強式參考的物件控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="52f23-109">A handle to a pinned strong reference from the object handle table.</span></span>|  
-|`CorHandleWeakShort`|<span data-ttu-id="52f23-110">控制代碼的弱式參考的物件控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="52f23-110">A handle to a weak reference from the object handle table.</span></span>|  
-|`CorHandleWeakRefCount`|<span data-ttu-id="52f23-111">物件的控制代碼弱式參考計數物件控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="52f23-111">A handle to a weak reference-counted object from the object handle table.</span></span>|  
-|`CorHandleStrongRefCount`|<span data-ttu-id="52f23-112">物件的控制代碼參考計數物件控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="52f23-112">A handle to a reference-counted object from the object handle table.</span></span>|  
-|`CorHandleStrongDependent`|<span data-ttu-id="52f23-113">物件的控制代碼相依物件控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="52f23-113">A handle to a dependent object from the object handle table.</span></span>|  
-|`CorHandleStrongAsyncPinned`|<span data-ttu-id="52f23-114">物件控制代碼資料表中的非同步固定物件。</span><span class="sxs-lookup"><span data-stu-id="52f23-114">An asynchronous pinned object from the object handle table.</span></span>|  
-|`CorHandleStrongSizedByref`|<span data-ttu-id="52f23-115">強式控制代碼，保留記憶體回收時集體關閉之所有物件和根物件的估計大小。</span><span class="sxs-lookup"><span data-stu-id="52f23-115">A strong handle that keeps an approximate size of the collective closure of all objects and object roots at garbage collection time.</span></span>|  
-|`CorReferenceStack`|<span data-ttu-id="52f23-116">從 managed 堆疊的參考。</span><span class="sxs-lookup"><span data-stu-id="52f23-116">A reference from the managed stack.</span></span>|  
-|`CorReferenceFinalizer`|<span data-ttu-id="52f23-117">從完成項佇列的參考。</span><span class="sxs-lookup"><span data-stu-id="52f23-117">A reference from the finalizer queue.</span></span>|  
-|<span data-ttu-id="52f23-118">CorHandleStrongOnly</span><span class="sxs-lookup"><span data-stu-id="52f23-118">CorHandleStrongOnly</span></span>|<span data-ttu-id="52f23-119">傳回只有強式參考控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="52f23-119">Return only strong references from the handle table.</span></span> <span data-ttu-id="52f23-120">這個值由[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)僅方法。</span><span class="sxs-lookup"><span data-stu-id="52f23-120">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
-|`CorHandleWeakOnly`|<span data-ttu-id="52f23-121">傳回只弱式參考控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="52f23-121">Return only weak references from the handle table.</span></span> <span data-ttu-id="52f23-122">這個值由[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)僅方法。</span><span class="sxs-lookup"><span data-stu-id="52f23-122">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
-|`CorHandleAll`|<span data-ttu-id="52f23-123">傳回控制代碼資料表中的所有參考。</span><span class="sxs-lookup"><span data-stu-id="52f23-123">Return all references from the handle table.</span></span> <span data-ttu-id="52f23-124">這個值由[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)僅方法。</span><span class="sxs-lookup"><span data-stu-id="52f23-124">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleStrong`|<span data-ttu-id="b1452-108">物件控制代碼資料表中的強式參考控制代碼。</span><span class="sxs-lookup"><span data-stu-id="b1452-108">A handle to a strong reference from the object handle table.</span></span>|  
+|`CorHandleStrongPinning`|<span data-ttu-id="b1452-109">控制代碼已釘選的強式參考的物件控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="b1452-109">A handle to a pinned strong reference from the object handle table.</span></span>|  
+|`CorHandleWeakShort`|<span data-ttu-id="b1452-110">控制代碼的弱式參考的物件控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="b1452-110">A handle to a weak reference from the object handle table.</span></span>|  
+|`CorHandleWeakRefCount`|<span data-ttu-id="b1452-111">物件的控制代碼弱式參考計數物件控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="b1452-111">A handle to a weak reference-counted object from the object handle table.</span></span>|  
+|`CorHandleStrongRefCount`|<span data-ttu-id="b1452-112">物件的控制代碼參考計數物件控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="b1452-112">A handle to a reference-counted object from the object handle table.</span></span>|  
+|`CorHandleStrongDependent`|<span data-ttu-id="b1452-113">物件的控制代碼相依物件控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="b1452-113">A handle to a dependent object from the object handle table.</span></span>|  
+|`CorHandleStrongAsyncPinned`|<span data-ttu-id="b1452-114">物件控制代碼資料表中的非同步固定物件。</span><span class="sxs-lookup"><span data-stu-id="b1452-114">An asynchronous pinned object from the object handle table.</span></span>|  
+|`CorHandleStrongSizedByref`|<span data-ttu-id="b1452-115">強式控制代碼，保留記憶體回收時集體關閉之所有物件和根物件的估計大小。</span><span class="sxs-lookup"><span data-stu-id="b1452-115">A strong handle that keeps an approximate size of the collective closure of all objects and object roots at garbage collection time.</span></span>|  
+|`CorReferenceStack`|<span data-ttu-id="b1452-116">從 managed 堆疊的參考。</span><span class="sxs-lookup"><span data-stu-id="b1452-116">A reference from the managed stack.</span></span>|  
+|`CorReferenceFinalizer`|<span data-ttu-id="b1452-117">從完成項佇列的參考。</span><span class="sxs-lookup"><span data-stu-id="b1452-117">A reference from the finalizer queue.</span></span>|  
+|<span data-ttu-id="b1452-118">CorHandleStrongOnly</span><span class="sxs-lookup"><span data-stu-id="b1452-118">CorHandleStrongOnly</span></span>|<span data-ttu-id="b1452-119">傳回只有強式參考控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="b1452-119">Return only strong references from the handle table.</span></span> <span data-ttu-id="b1452-120">這個值由[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)僅方法。</span><span class="sxs-lookup"><span data-stu-id="b1452-120">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleWeakOnly`|<span data-ttu-id="b1452-121">傳回只弱式參考控制代碼資料表中。</span><span class="sxs-lookup"><span data-stu-id="b1452-121">Return only weak references from the handle table.</span></span> <span data-ttu-id="b1452-122">這個值由[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)僅方法。</span><span class="sxs-lookup"><span data-stu-id="b1452-122">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleAll`|<span data-ttu-id="b1452-123">傳回控制代碼資料表中的所有參考。</span><span class="sxs-lookup"><span data-stu-id="b1452-123">Return all references from the handle table.</span></span> <span data-ttu-id="b1452-124">這個值由[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)僅方法。</span><span class="sxs-lookup"><span data-stu-id="b1452-124">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="52f23-125">備註</span><span class="sxs-lookup"><span data-stu-id="52f23-125">Remarks</span></span>  
- <span data-ttu-id="52f23-126">`CorGCReferenceType`列舉可用，如下所示：</span><span class="sxs-lookup"><span data-stu-id="52f23-126">The `CorGCReferenceType` enumeration is used as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b1452-125">備註</span><span class="sxs-lookup"><span data-stu-id="b1452-125">Remarks</span></span>  
+ <span data-ttu-id="b1452-126">`CorGCReferenceType`列舉可用，如下所示：</span><span class="sxs-lookup"><span data-stu-id="b1452-126">The `CorGCReferenceType` enumeration is used as follows:</span></span>  
   
-- <span data-ttu-id="52f23-127">值`type`欄位[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)結構，它會指出參考或控制代碼的來源。</span><span class="sxs-lookup"><span data-stu-id="52f23-127">As the value of the `type` field of the [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) structure, it indicates the source of a reference or handle.</span></span>  
+- <span data-ttu-id="b1452-127">值`type`欄位[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)結構，它會指出參考或控制代碼的來源。</span><span class="sxs-lookup"><span data-stu-id="b1452-127">As the value of the `type` field of the [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) structure, it indicates the source of a reference or handle.</span></span>  
   
-- <span data-ttu-id="52f23-128">作為`types`引數[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)方法，它會指定要包含在列舉中的控制代碼的類型。</span><span class="sxs-lookup"><span data-stu-id="52f23-128">As the `types` argument to the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method, it specifies the types of handles to include in the enumeration.</span></span>  
+- <span data-ttu-id="b1452-128">作為`types`引數[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)方法，它會指定要包含在列舉中的控制代碼的類型。</span><span class="sxs-lookup"><span data-stu-id="b1452-128">As the `types` argument to the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method, it specifies the types of handles to include in the enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="52f23-129">需求</span><span class="sxs-lookup"><span data-stu-id="52f23-129">Requirements</span></span>  
- <span data-ttu-id="52f23-130">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="52f23-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b1452-129">需求</span><span class="sxs-lookup"><span data-stu-id="b1452-129">Requirements</span></span>  
+ <span data-ttu-id="b1452-130">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b1452-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="52f23-131">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="52f23-131">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b1452-131">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b1452-131">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="52f23-132">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52f23-132">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b1452-132">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b1452-132">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="52f23-133">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52f23-133">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="b1452-133">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1452-133">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52f23-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="52f23-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1452-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b1452-134">See also</span></span>
 
-- [<span data-ttu-id="52f23-135">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="52f23-135">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="b1452-135">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="b1452-135">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

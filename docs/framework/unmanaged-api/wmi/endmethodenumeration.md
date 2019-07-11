@@ -16,57 +16,57 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7f29c365e9f6ba85f85ceb232f7af89446af2a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f62ea692c055b0537394ad5e16501d4162faef12
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040595"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746826"
 ---
-# <a name="endmethodenumeration-function"></a><span data-ttu-id="a9ca3-103">EndMethodEnumeration 函式</span><span class="sxs-lookup"><span data-stu-id="a9ca3-103">EndMethodEnumeration function</span></span>
-<span data-ttu-id="a9ca3-104">結束藉由呼叫啟動列舉順序[BeginMethodEnumeration 函式](beginmethodenumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="a9ca3-104">Terminates an enumeration sequence started with a call to the [BeginMethodEnumeration function](beginmethodenumeration.md).</span></span>  
+# <a name="endmethodenumeration-function"></a><span data-ttu-id="7c00e-103">EndMethodEnumeration 函式</span><span class="sxs-lookup"><span data-stu-id="7c00e-103">EndMethodEnumeration function</span></span>
+<span data-ttu-id="7c00e-104">結束藉由呼叫啟動列舉順序[BeginMethodEnumeration 函式](beginmethodenumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="7c00e-104">Terminates an enumeration sequence started with a call to the [BeginMethodEnumeration function](beginmethodenumeration.md).</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="a9ca3-105">語法</span><span class="sxs-lookup"><span data-stu-id="a9ca3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c00e-105">語法</span><span class="sxs-lookup"><span data-stu-id="7c00e-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EndMethodEnumeration (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr 
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="a9ca3-106">參數</span><span class="sxs-lookup"><span data-stu-id="a9ca3-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="7c00e-106">參數</span><span class="sxs-lookup"><span data-stu-id="7c00e-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="a9ca3-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="a9ca3-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="7c00e-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="7c00e-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="a9ca3-108">[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。</span><span class="sxs-lookup"><span data-stu-id="a9ca3-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="7c00e-108">[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。</span><span class="sxs-lookup"><span data-stu-id="7c00e-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="a9ca3-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="a9ca3-109">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="7c00e-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="7c00e-109">Return value</span></span>
 
-<span data-ttu-id="a9ca3-110">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="a9ca3-110">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="7c00e-110">此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：</span><span class="sxs-lookup"><span data-stu-id="7c00e-110">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="a9ca3-111">常數</span><span class="sxs-lookup"><span data-stu-id="a9ca3-111">Constant</span></span>  |<span data-ttu-id="a9ca3-112">值</span><span class="sxs-lookup"><span data-stu-id="a9ca3-112">Value</span></span>  |<span data-ttu-id="a9ca3-113">描述</span><span class="sxs-lookup"><span data-stu-id="a9ca3-113">Description</span></span>  |
+|<span data-ttu-id="7c00e-111">常數</span><span class="sxs-lookup"><span data-stu-id="7c00e-111">Constant</span></span>  |<span data-ttu-id="7c00e-112">值</span><span class="sxs-lookup"><span data-stu-id="7c00e-112">Value</span></span>  |<span data-ttu-id="7c00e-113">說明</span><span class="sxs-lookup"><span data-stu-id="7c00e-113">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_UNEXPECTED` | <span data-ttu-id="a9ca3-114">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="a9ca3-114">0x8004101d</span></span> | <span data-ttu-id="a9ca3-115">發生內部錯誤。</span><span class="sxs-lookup"><span data-stu-id="a9ca3-115">An internal error occurred.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="a9ca3-116">0</span><span class="sxs-lookup"><span data-stu-id="a9ca3-116">0</span></span> | <span data-ttu-id="a9ca3-117">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="a9ca3-117">The function call was successful.</span></span>  |
+|`WBEM_E_UNEXPECTED` | <span data-ttu-id="7c00e-114">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="7c00e-114">0x8004101d</span></span> | <span data-ttu-id="7c00e-115">發生內部錯誤。</span><span class="sxs-lookup"><span data-stu-id="7c00e-115">An internal error occurred.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="7c00e-116">0</span><span class="sxs-lookup"><span data-stu-id="7c00e-116">0</span></span> | <span data-ttu-id="7c00e-117">函式呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="7c00e-117">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="a9ca3-118">備註</span><span class="sxs-lookup"><span data-stu-id="a9ca3-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="7c00e-118">備註</span><span class="sxs-lookup"><span data-stu-id="7c00e-118">Remarks</span></span>
 
-<span data-ttu-id="a9ca3-119">此函式會包裝在呼叫[IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration)方法。</span><span class="sxs-lookup"><span data-stu-id="a9ca3-119">This function wraps a call to the [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) method.</span></span>
+<span data-ttu-id="7c00e-119">此函式會包裝在呼叫[IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration)方法。</span><span class="sxs-lookup"><span data-stu-id="7c00e-119">This function wraps a call to the [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) method.</span></span>
 
-<span data-ttu-id="a9ca3-120">呼叫端會列舉序列使用開始[BeginMethodEnumeration 函式](beginmethodenumeration.md)，然後再呼叫[NextMethod 函式](nextmethod.md )直到該方法傳回`WBEM_S_NO_MORE_DATA`。</span><span class="sxs-lookup"><span data-stu-id="a9ca3-120">The caller begins the enumeration sequence using [BeginMethodEnumeration function](beginmethodenumeration.md), and then calls the [NextMethod function](nextmethod.md )until the method  returns `WBEM_S_NO_MORE_DATA`.</span></span> <span data-ttu-id="a9ca3-121">（選擇性） 藉由呼叫完成序列的呼叫端`EndMethodEnumeration`。</span><span class="sxs-lookup"><span data-stu-id="a9ca3-121">The caller optionally finishes the sequence by calling `EndMethodEnumeration`.</span></span> <span data-ttu-id="a9ca3-122">呼叫端可能會提早終止列舉型別，藉由呼叫`EndMethodEnumeration`在任何時間。</span><span class="sxs-lookup"><span data-stu-id="a9ca3-122">The caller may terminate the enumeration early by calling `EndMethodEnumeration` at any time.</span></span>
+<span data-ttu-id="7c00e-120">呼叫端會列舉序列使用開始[BeginMethodEnumeration 函式](beginmethodenumeration.md)，然後再呼叫[NextMethod 函式](nextmethod.md )直到該方法傳回`WBEM_S_NO_MORE_DATA`。</span><span class="sxs-lookup"><span data-stu-id="7c00e-120">The caller begins the enumeration sequence using [BeginMethodEnumeration function](beginmethodenumeration.md), and then calls the [NextMethod function](nextmethod.md )until the method  returns `WBEM_S_NO_MORE_DATA`.</span></span> <span data-ttu-id="7c00e-121">（選擇性） 藉由呼叫完成序列的呼叫端`EndMethodEnumeration`。</span><span class="sxs-lookup"><span data-stu-id="7c00e-121">The caller optionally finishes the sequence by calling `EndMethodEnumeration`.</span></span> <span data-ttu-id="7c00e-122">呼叫端可能會提早終止列舉型別，藉由呼叫`EndMethodEnumeration`在任何時間。</span><span class="sxs-lookup"><span data-stu-id="7c00e-122">The caller may terminate the enumeration early by calling `EndMethodEnumeration` at any time.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a9ca3-123">需求</span><span class="sxs-lookup"><span data-stu-id="a9ca3-123">Requirements</span></span>  
- <span data-ttu-id="a9ca3-124">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a9ca3-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c00e-123">需求</span><span class="sxs-lookup"><span data-stu-id="7c00e-123">Requirements</span></span>  
+ <span data-ttu-id="7c00e-124">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7c00e-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a9ca3-125">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="a9ca3-125">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="7c00e-125">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="7c00e-125">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="a9ca3-126">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a9ca3-126">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="7c00e-126">**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="7c00e-126">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a9ca3-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a9ca3-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c00e-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7c00e-127">See also</span></span>
 
-- [<span data-ttu-id="a9ca3-128">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="a9ca3-128">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="7c00e-128">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="7c00e-128">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

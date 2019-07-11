@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: deecd9ed4161bbd72e97a6320188961ae76d1e7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60390fecad15dbb2c453453fa8c35556b5db6b54
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044261"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777724"
 ---
-# <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a><span data-ttu-id="ac519-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo 方法</span><span class="sxs-lookup"><span data-stu-id="ac519-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo Method</span></span>
-<span data-ttu-id="ac519-103">這個方法尚未實作。</span><span class="sxs-lookup"><span data-stu-id="ac519-103">This method is not implemented.</span></span> <span data-ttu-id="ac519-104">如果呼叫，它會傳回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="ac519-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a><span data-ttu-id="dfed9-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo 方法</span><span class="sxs-lookup"><span data-stu-id="dfed9-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo Method</span></span>
+<span data-ttu-id="dfed9-103">這個方法尚未實作。</span><span class="sxs-lookup"><span data-stu-id="dfed9-103">This method is not implemented.</span></span> <span data-ttu-id="dfed9-104">如果呼叫，它會傳回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="dfed9-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac519-105">語法</span><span class="sxs-lookup"><span data-stu-id="ac519-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfed9-105">語法</span><span class="sxs-lookup"><span data-stu-id="dfed9-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT OpenScopeOnITypeInfo (  
     [in]  ITypeInfo   *pITI,  
     [in]  DWORD       dwOpenFlags,  
@@ -38,29 +38,29 @@ HRESULT OpenScopeOnITypeInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ac519-106">參數</span><span class="sxs-lookup"><span data-stu-id="ac519-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dfed9-106">參數</span><span class="sxs-lookup"><span data-stu-id="dfed9-106">Parameters</span></span>  
  `pITI`  
- <span data-ttu-id="ac519-107">[in]指標[ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)提供要開啟範圍的類型資訊的介面。</span><span class="sxs-lookup"><span data-stu-id="ac519-107">[in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.</span></span>  
+ <span data-ttu-id="dfed9-107">[in]指標[ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)提供要開啟範圍的類型資訊的介面。</span><span class="sxs-lookup"><span data-stu-id="dfed9-107">[in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="ac519-108">[in]開啟模式的旗標。</span><span class="sxs-lookup"><span data-stu-id="ac519-108">[in] The open mode flags.</span></span>  
+ <span data-ttu-id="dfed9-108">[in]開啟模式的旗標。</span><span class="sxs-lookup"><span data-stu-id="dfed9-108">[in] The open mode flags.</span></span>  
   
  `riid`  
- <span data-ttu-id="ac519-109">[in]所需的介面。</span><span class="sxs-lookup"><span data-stu-id="ac519-109">[in] The desired interface.</span></span>  
+ <span data-ttu-id="dfed9-109">[in]所需的介面。</span><span class="sxs-lookup"><span data-stu-id="dfed9-109">[in] The desired interface.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="ac519-110">[out]傳回的介面指標的指標。</span><span class="sxs-lookup"><span data-stu-id="ac519-110">[out] Pointer to a pointer to the returned interface.</span></span>  
+ <span data-ttu-id="dfed9-110">[out]傳回的介面指標的指標。</span><span class="sxs-lookup"><span data-stu-id="dfed9-110">[out] Pointer to a pointer to the returned interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac519-111">需求</span><span class="sxs-lookup"><span data-stu-id="ac519-111">Requirements</span></span>  
- <span data-ttu-id="ac519-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ac519-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dfed9-111">需求</span><span class="sxs-lookup"><span data-stu-id="dfed9-111">Requirements</span></span>  
+ <span data-ttu-id="dfed9-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dfed9-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac519-113">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ac519-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="dfed9-113">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dfed9-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ac519-114">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="ac519-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="dfed9-114">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="dfed9-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ac519-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac519-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="dfed9-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfed9-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac519-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ac519-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfed9-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dfed9-116">See also</span></span>
 
-- [<span data-ttu-id="ac519-117">IMetaDataDispenserEx 介面</span><span class="sxs-lookup"><span data-stu-id="ac519-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="ac519-118">IMetaDataDispenser 介面</span><span class="sxs-lookup"><span data-stu-id="ac519-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="dfed9-117">IMetaDataDispenserEx 介面</span><span class="sxs-lookup"><span data-stu-id="dfed9-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="dfed9-118">IMetaDataDispenser 介面</span><span class="sxs-lookup"><span data-stu-id="dfed9-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 252a65c66764d60f5e307ba1eaad4ded34d9744d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcbe9a701b91a063e19fec5aae9cc2687b1f279f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965694"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766141"
 ---
-# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="bbcb5-102">ICorDebugObjectValue2::GetVirtualMethodAndType 方法</span><span class="sxs-lookup"><span data-stu-id="bbcb5-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
-<span data-ttu-id="bbcb5-103">尚未實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="bbcb5-103">This method is not yet implemented.</span></span>  
+# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="eb8d4-102">ICorDebugObjectValue2::GetVirtualMethodAndType 方法</span><span class="sxs-lookup"><span data-stu-id="eb8d4-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
+<span data-ttu-id="eb8d4-103">尚未實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="eb8d4-103">This method is not yet implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bbcb5-104">語法</span><span class="sxs-lookup"><span data-stu-id="bbcb5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb8d4-104">語法</span><span class="sxs-lookup"><span data-stu-id="eb8d4-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetVirtualMethodAndType (  
     [in] mdMemberRef          memberRef,  
     [out] ICorDebugFunction   **ppFunction,  
@@ -37,7 +37,7 @@ HRESULT GetVirtualMethodAndType (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="bbcb5-105">備註</span><span class="sxs-lookup"><span data-stu-id="bbcb5-105">Remarks</span></span>  
- <span data-ttu-id="bbcb5-106">取得的介面指標 」 ICorDebugFunction"和"ICorDebugType 」 執行個體表示的最具衍生性的方法和指定的成員參考的型別。</span><span class="sxs-lookup"><span data-stu-id="bbcb5-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eb8d4-105">備註</span><span class="sxs-lookup"><span data-stu-id="eb8d4-105">Remarks</span></span>  
+ <span data-ttu-id="eb8d4-106">取得的介面指標 」 ICorDebugFunction"和"ICorDebugType 」 執行個體表示的最具衍生性的方法和指定的成員參考的型別。</span><span class="sxs-lookup"><span data-stu-id="eb8d4-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bbcb5-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bbcb5-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb8d4-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eb8d4-107">See also</span></span>

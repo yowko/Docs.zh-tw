@@ -17,45 +17,45 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e32af790c755f65b5435455c326d011656da19ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 174e71fca8c59dbd4842d0fc0b84bb9a3d7b10df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597371"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763039"
 ---
-# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="10216-102">ICorProfilerCallback::AssemblyLoadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="10216-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
-<span data-ttu-id="10216-103">通知分析工具組件已完成載入。</span><span class="sxs-lookup"><span data-stu-id="10216-103">Notifies the profiler that an assembly has finished loading.</span></span>  
+# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="0503b-102">ICorProfilerCallback::AssemblyLoadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="0503b-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
+<span data-ttu-id="0503b-103">通知分析工具組件已完成載入。</span><span class="sxs-lookup"><span data-stu-id="0503b-103">Notifies the profiler that an assembly has finished loading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10216-104">語法</span><span class="sxs-lookup"><span data-stu-id="10216-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0503b-104">語法</span><span class="sxs-lookup"><span data-stu-id="0503b-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT AssemblyLoadFinished(  
     [in] AssemblyID assemblyId,  
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="10216-105">參數</span><span class="sxs-lookup"><span data-stu-id="10216-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0503b-105">參數</span><span class="sxs-lookup"><span data-stu-id="0503b-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="10216-106">[in]識別已載入的組件。</span><span class="sxs-lookup"><span data-stu-id="10216-106">[in] Identifies the assembly that was loaded.</span></span>  
+ <span data-ttu-id="0503b-106">[in]識別已載入的組件。</span><span class="sxs-lookup"><span data-stu-id="0503b-106">[in] Identifies the assembly that was loaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="10216-107">[in]指出是否已完成組件載入成功的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="10216-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
+ <span data-ttu-id="0503b-107">[in]指出是否已完成組件載入成功的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="0503b-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="10216-108">備註</span><span class="sxs-lookup"><span data-stu-id="10216-108">Remarks</span></span>  
- <span data-ttu-id="10216-109">值`assemblyId`不是有效資訊要求直到`AssemblyLoadFinished`呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="10216-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0503b-108">備註</span><span class="sxs-lookup"><span data-stu-id="0503b-108">Remarks</span></span>  
+ <span data-ttu-id="0503b-109">值`assemblyId`不是有效資訊要求直到`AssemblyLoadFinished`呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="0503b-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
   
- <span data-ttu-id="10216-110">載入組件的某些部分可能會繼續之後`AssemblyLoadFinished`回呼。</span><span class="sxs-lookup"><span data-stu-id="10216-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="10216-111">失敗 HRESULT 中`hrStatus`表示失敗。</span><span class="sxs-lookup"><span data-stu-id="10216-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="10216-112">不過，成功的 HRESULT 中`hrStatus`僅會指示已成功載入組件的第一個部分。</span><span class="sxs-lookup"><span data-stu-id="10216-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
+ <span data-ttu-id="0503b-110">載入組件的某些部分可能會繼續之後`AssemblyLoadFinished`回呼。</span><span class="sxs-lookup"><span data-stu-id="0503b-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="0503b-111">失敗 HRESULT 中`hrStatus`表示失敗。</span><span class="sxs-lookup"><span data-stu-id="0503b-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="0503b-112">不過，成功的 HRESULT 中`hrStatus`僅會指示已成功載入組件的第一個部分。</span><span class="sxs-lookup"><span data-stu-id="0503b-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="10216-113">需求</span><span class="sxs-lookup"><span data-stu-id="10216-113">Requirements</span></span>  
- <span data-ttu-id="10216-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="10216-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0503b-113">需求</span><span class="sxs-lookup"><span data-stu-id="0503b-113">Requirements</span></span>  
+ <span data-ttu-id="0503b-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0503b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="10216-115">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="10216-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0503b-115">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0503b-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="10216-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="10216-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0503b-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0503b-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="10216-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10216-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0503b-117">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0503b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10216-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="10216-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0503b-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0503b-118">See also</span></span>
 
-- [<span data-ttu-id="10216-119">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="10216-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="0503b-119">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="0503b-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

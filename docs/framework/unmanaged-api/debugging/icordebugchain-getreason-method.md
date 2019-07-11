@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48650a370f7d15724e20850e9d3b47dc8215f960
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e5120b5fddf621d6f4c684c4c432fda4f5c0117
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989491"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745252"
 ---
-# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="ab2e7-102">ICorDebugChain::GetReason 方法</span><span class="sxs-lookup"><span data-stu-id="ab2e7-102">ICorDebugChain::GetReason Method</span></span>
-<span data-ttu-id="ab2e7-103">取得這個呼叫鏈結發生的原因。</span><span class="sxs-lookup"><span data-stu-id="ab2e7-103">Gets the reason for the genesis of this calling chain.</span></span>  
+# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="f3e94-102">ICorDebugChain::GetReason 方法</span><span class="sxs-lookup"><span data-stu-id="f3e94-102">ICorDebugChain::GetReason Method</span></span>
+<span data-ttu-id="f3e94-103">取得這個呼叫鏈結發生的原因。</span><span class="sxs-lookup"><span data-stu-id="f3e94-103">Gets the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab2e7-104">語法</span><span class="sxs-lookup"><span data-stu-id="ab2e7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f3e94-104">語法</span><span class="sxs-lookup"><span data-stu-id="f3e94-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetReason (  
     [out] CorDebugChainReason *pReason  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ab2e7-105">參數</span><span class="sxs-lookup"><span data-stu-id="ab2e7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f3e94-105">參數</span><span class="sxs-lookup"><span data-stu-id="f3e94-105">Parameters</span></span>  
  `pReason`  
- <span data-ttu-id="ab2e7-106">[out]CorDebugChainReason 列舉，指出此呼叫鏈結的發生原因的值 （位元的組合） 的指標。</span><span class="sxs-lookup"><span data-stu-id="ab2e7-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
+ <span data-ttu-id="f3e94-106">[out]CorDebugChainReason 列舉，指出此呼叫鏈結的發生原因的值 （位元的組合） 的指標。</span><span class="sxs-lookup"><span data-stu-id="f3e94-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab2e7-107">需求</span><span class="sxs-lookup"><span data-stu-id="ab2e7-107">Requirements</span></span>  
- <span data-ttu-id="ab2e7-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ab2e7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f3e94-107">需求</span><span class="sxs-lookup"><span data-stu-id="f3e94-107">Requirements</span></span>  
+ <span data-ttu-id="f3e94-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f3e94-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab2e7-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ab2e7-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f3e94-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f3e94-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ab2e7-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab2e7-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f3e94-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3e94-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ab2e7-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab2e7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f3e94-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3e94-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

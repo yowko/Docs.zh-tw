@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 410fd7a702d3aa3812b4ea053c43fdaa507a474a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c63797b60354b461891f44d32cf1840f7fdcf3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042506"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756488"
 ---
-# <a name="imetadataimportenumproperties-method"></a><span data-ttu-id="b8fb5-102">IMetaDataImport::EnumProperties 方法</span><span class="sxs-lookup"><span data-stu-id="b8fb5-102">IMetaDataImport::EnumProperties Method</span></span>
-<span data-ttu-id="b8fb5-103">列舉 PropertyDef 語彙基元，其代表指定的 TypeDef 語彙基元所參考的類型屬性。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-103">Enumerates PropertyDef tokens representing the properties of the type referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenumproperties-method"></a><span data-ttu-id="396bf-102">IMetaDataImport::EnumProperties 方法</span><span class="sxs-lookup"><span data-stu-id="396bf-102">IMetaDataImport::EnumProperties Method</span></span>
+<span data-ttu-id="396bf-103">列舉 PropertyDef 語彙基元，其代表指定的 TypeDef 語彙基元所參考的類型屬性。</span><span class="sxs-lookup"><span data-stu-id="396bf-103">Enumerates PropertyDef tokens representing the properties of the type referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8fb5-104">語法</span><span class="sxs-lookup"><span data-stu-id="b8fb5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="396bf-104">語法</span><span class="sxs-lookup"><span data-stu-id="396bf-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumProperties (  
    [in, out] HCORENUM    *phEnum,  
    [in]      mdTypeDef   td,  
@@ -39,39 +39,39 @@ HRESULT EnumProperties (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b8fb5-105">參數</span><span class="sxs-lookup"><span data-stu-id="b8fb5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="396bf-105">參數</span><span class="sxs-lookup"><span data-stu-id="396bf-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="b8fb5-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="b8fb5-107">首次呼叫這個方法，這必須是 NULL。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="396bf-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="396bf-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="396bf-107">首次呼叫這個方法，這必須是 NULL。</span><span class="sxs-lookup"><span data-stu-id="396bf-107">This must be NULL for the first call of this method.</span></span>  
   
  `td`  
- <span data-ttu-id="b8fb5-108">[in]TypeDef 語彙基元表示要列舉的類型屬性。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-108">[in] A TypeDef token representing the type with properties to enumerate.</span></span>  
+ <span data-ttu-id="396bf-108">[in]TypeDef 語彙基元表示要列舉的類型屬性。</span><span class="sxs-lookup"><span data-stu-id="396bf-108">[in] A TypeDef token representing the type with properties to enumerate.</span></span>  
   
  `rProperties`  
- <span data-ttu-id="b8fb5-109">[out]陣列，用來儲存 PropertyDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-109">[out] The array used to store the PropertyDef tokens.</span></span>  
+ <span data-ttu-id="396bf-109">[out]陣列，用來儲存 PropertyDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="396bf-109">[out] The array used to store the PropertyDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="b8fb5-110">[in] `rProperties` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-110">[in] The maximum size of the `rProperties` array.</span></span>  
+ <span data-ttu-id="396bf-110">[in] `rProperties` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="396bf-110">[in] The maximum size of the `rProperties` array.</span></span>  
   
  `pcProperties`  
- <span data-ttu-id="b8fb5-111">[out]PropertyDef 語彙基元中傳回的數字`rProperties`。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-111">[out] The number of PropertyDef tokens returned in `rProperties`.</span></span>  
+ <span data-ttu-id="396bf-111">[out]PropertyDef 語彙基元中傳回的數字`rProperties`。</span><span class="sxs-lookup"><span data-stu-id="396bf-111">[out] The number of PropertyDef tokens returned in `rProperties`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b8fb5-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="b8fb5-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="396bf-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="396bf-112">Return Value</span></span>  
   
-|<span data-ttu-id="b8fb5-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b8fb5-113">HRESULT</span></span>|<span data-ttu-id="b8fb5-114">描述</span><span class="sxs-lookup"><span data-stu-id="b8fb5-114">Description</span></span>|  
+|<span data-ttu-id="396bf-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="396bf-113">HRESULT</span></span>|<span data-ttu-id="396bf-114">描述</span><span class="sxs-lookup"><span data-stu-id="396bf-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="b8fb5-115">`EnumProperties` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-115">`EnumProperties` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="b8fb5-116">沒有列舉語彙基元。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-116">There are no tokens to enumerate.</span></span> <span data-ttu-id="b8fb5-117">在此情況下，`pcProperties`為零。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-117">In that case, `pcProperties` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="396bf-115">`EnumProperties` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="396bf-115">`EnumProperties` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="396bf-116">沒有列舉語彙基元。</span><span class="sxs-lookup"><span data-stu-id="396bf-116">There are no tokens to enumerate.</span></span> <span data-ttu-id="396bf-117">在此情況下，`pcProperties`為零。</span><span class="sxs-lookup"><span data-stu-id="396bf-117">In that case, `pcProperties` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b8fb5-118">需求</span><span class="sxs-lookup"><span data-stu-id="b8fb5-118">Requirements</span></span>  
- <span data-ttu-id="b8fb5-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b8fb5-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="396bf-118">需求</span><span class="sxs-lookup"><span data-stu-id="396bf-118">Requirements</span></span>  
+ <span data-ttu-id="396bf-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="396bf-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b8fb5-120">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b8fb5-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="396bf-120">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="396bf-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b8fb5-121">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="b8fb5-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="396bf-121">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="396bf-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b8fb5-122">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8fb5-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="396bf-122">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="396bf-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8fb5-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b8fb5-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="396bf-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="396bf-123">See also</span></span>
 
-- [<span data-ttu-id="b8fb5-124">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="b8fb5-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="b8fb5-125">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="b8fb5-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="396bf-124">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="396bf-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="396bf-125">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="396bf-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

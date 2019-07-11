@@ -17,28 +17,28 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f531b96211a1dd6072d62937b9f93fc17f105d4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcfa0c01dc36a68711c42a7e8318cea023b1772f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777978"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752439"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="68008-102">ISymUnmanagedWriter3::Commit 方法</span><span class="sxs-lookup"><span data-stu-id="68008-102">ISymUnmanagedWriter3::Commit Method</span></span>
-<span data-ttu-id="68008-103">認可的變更寫入目前資料流。</span><span class="sxs-lookup"><span data-stu-id="68008-103">Commits the changes written so far to the stream.</span></span>  
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="8e914-102">ISymUnmanagedWriter3::Commit 方法</span><span class="sxs-lookup"><span data-stu-id="8e914-102">ISymUnmanagedWriter3::Commit Method</span></span>
+<span data-ttu-id="8e914-103">認可的變更寫入目前資料流。</span><span class="sxs-lookup"><span data-stu-id="8e914-103">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68008-104">語法</span><span class="sxs-lookup"><span data-stu-id="68008-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e914-104">語法</span><span class="sxs-lookup"><span data-stu-id="8e914-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="68008-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="68008-105">Return Value</span></span>  
- <span data-ttu-id="68008-106">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="68008-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8e914-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="8e914-105">Return Value</span></span>  
+ <span data-ttu-id="8e914-106">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="8e914-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68008-107">需求</span><span class="sxs-lookup"><span data-stu-id="68008-107">Requirements</span></span>  
- <span data-ttu-id="68008-108">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="68008-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e914-107">需求</span><span class="sxs-lookup"><span data-stu-id="8e914-107">Requirements</span></span>  
+ <span data-ttu-id="8e914-108">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8e914-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68008-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="68008-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e914-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8e914-109">See also</span></span>
 
-- [<span data-ttu-id="68008-110">ISymUnmanagedWriter3 介面</span><span class="sxs-lookup"><span data-stu-id="68008-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="8e914-110">ISymUnmanagedWriter3 介面</span><span class="sxs-lookup"><span data-stu-id="8e914-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

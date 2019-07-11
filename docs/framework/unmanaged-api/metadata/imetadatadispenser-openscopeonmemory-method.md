@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 732ec6cbb2158037252bc2ea4bf406f47f11da9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 204e5660e95434f8d0c44d54f4fdbb1c2acc1e5d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050190"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777781"
 ---
-# <a name="imetadatadispenseropenscopeonmemory-method"></a><span data-ttu-id="18b79-102">IMetaDataDispenser::OpenScopeOnMemory 方法</span><span class="sxs-lookup"><span data-stu-id="18b79-102">IMetaDataDispenser::OpenScopeOnMemory Method</span></span>
-<span data-ttu-id="18b79-103">開啟包含現有的中繼資料的記憶體中的區域。</span><span class="sxs-lookup"><span data-stu-id="18b79-103">Opens an area of memory that contains existing metadata.</span></span> <span data-ttu-id="18b79-104">也就是說，這個方法會開啟指定的現有資料會被視為中繼資料的記憶體區域。</span><span class="sxs-lookup"><span data-stu-id="18b79-104">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span></span>  
+# <a name="imetadatadispenseropenscopeonmemory-method"></a><span data-ttu-id="bd095-102">IMetaDataDispenser::OpenScopeOnMemory 方法</span><span class="sxs-lookup"><span data-stu-id="bd095-102">IMetaDataDispenser::OpenScopeOnMemory Method</span></span>
+<span data-ttu-id="bd095-103">開啟包含現有的中繼資料的記憶體中的區域。</span><span class="sxs-lookup"><span data-stu-id="bd095-103">Opens an area of memory that contains existing metadata.</span></span> <span data-ttu-id="bd095-104">也就是說，這個方法會開啟指定的現有資料會被視為中繼資料的記憶體區域。</span><span class="sxs-lookup"><span data-stu-id="bd095-104">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="18b79-105">語法</span><span class="sxs-lookup"><span data-stu-id="18b79-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd095-105">語法</span><span class="sxs-lookup"><span data-stu-id="bd095-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT OpenScopeOnMemory (  
     [in]  LPCVOID     pData,   
     [in]  ULONG       cbData,   
@@ -39,47 +39,47 @@ HRESULT OpenScopeOnMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="18b79-106">參數</span><span class="sxs-lookup"><span data-stu-id="18b79-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bd095-106">參數</span><span class="sxs-lookup"><span data-stu-id="bd095-106">Parameters</span></span>  
  `pData`  
- <span data-ttu-id="18b79-107">[in]指定的記憶體區域的起始位址指標。</span><span class="sxs-lookup"><span data-stu-id="18b79-107">[in] A pointer that specifies the starting address of the memory area.</span></span>  
+ <span data-ttu-id="bd095-107">[in]指定的記憶體區域的起始位址指標。</span><span class="sxs-lookup"><span data-stu-id="bd095-107">[in] A pointer that specifies the starting address of the memory area.</span></span>  
   
  `cbData`  
- <span data-ttu-id="18b79-108">[in]記憶體區域，以位元組為單位的大小。</span><span class="sxs-lookup"><span data-stu-id="18b79-108">[in] The size of the memory area, in bytes.</span></span>  
+ <span data-ttu-id="bd095-108">[in]記憶體區域，以位元組為單位的大小。</span><span class="sxs-lookup"><span data-stu-id="bd095-108">[in] The size of the memory area, in bytes.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="18b79-109">[in]值為[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列舉，來開啟指定的模式 （讀取、 寫入和等等）。</span><span class="sxs-lookup"><span data-stu-id="18b79-109">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.</span></span>  
+ <span data-ttu-id="bd095-109">[in]值為[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列舉，來開啟指定的模式 （讀取、 寫入和等等）。</span><span class="sxs-lookup"><span data-stu-id="bd095-109">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.</span></span>  
   
  `riid`  
- <span data-ttu-id="18b79-110">[in]要傳回; 所需的中繼資料介面的 IID呼叫端會使用介面來匯入 （讀取），或發出 （寫入） 的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="18b79-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.</span></span>  
+ <span data-ttu-id="bd095-110">[in]要傳回; 所需的中繼資料介面的 IID呼叫端會使用介面來匯入 （讀取），或發出 （寫入） 的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="bd095-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.</span></span>  
   
- <span data-ttu-id="18b79-111">值`riid`必須指定其中一個 「 匯入 」 或 「 發出 」 介面。</span><span class="sxs-lookup"><span data-stu-id="18b79-111">The value of `riid` must specify one of the "import" or "emit" interfaces.</span></span> <span data-ttu-id="18b79-112">有效值為 IID_IMetaDataEmit、 IID_IMetaDataImport、 IID_IMetaDataAssemblyEmit、 IID_IMetaDataAssemblyImport、 IID_IMetaDataEmit2 或 IID_IMetaDataImport2。</span><span class="sxs-lookup"><span data-stu-id="18b79-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.</span></span>  
+ <span data-ttu-id="bd095-111">值`riid`必須指定其中一個 「 匯入 」 或 「 發出 」 介面。</span><span class="sxs-lookup"><span data-stu-id="bd095-111">The value of `riid` must specify one of the "import" or "emit" interfaces.</span></span> <span data-ttu-id="bd095-112">有效值為 IID_IMetaDataEmit、 IID_IMetaDataImport、 IID_IMetaDataAssemblyEmit、 IID_IMetaDataAssemblyImport、 IID_IMetaDataEmit2 或 IID_IMetaDataImport2。</span><span class="sxs-lookup"><span data-stu-id="bd095-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="18b79-113">[out]要傳回的介面的指標。</span><span class="sxs-lookup"><span data-stu-id="18b79-113">[out] The pointer to the returned interface.</span></span>  
+ <span data-ttu-id="bd095-113">[out]要傳回的介面的指標。</span><span class="sxs-lookup"><span data-stu-id="bd095-113">[out] The pointer to the returned interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="18b79-114">備註</span><span class="sxs-lookup"><span data-stu-id="18b79-114">Remarks</span></span>  
- <span data-ttu-id="18b79-115">使用方法的其中一個 「 匯入 」 介面，或新增要使用的 「 發出 」 介面的其中一個方法，您可以查詢中繼資料的記憶體內的複本。</span><span class="sxs-lookup"><span data-stu-id="18b79-115">The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bd095-114">備註</span><span class="sxs-lookup"><span data-stu-id="bd095-114">Remarks</span></span>  
+ <span data-ttu-id="bd095-115">使用方法的其中一個 「 匯入 」 介面，或新增要使用的 「 發出 」 介面的其中一個方法，您可以查詢中繼資料的記憶體內的複本。</span><span class="sxs-lookup"><span data-stu-id="bd095-115">The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.</span></span>  
   
- <span data-ttu-id="18b79-116">`OpenScopeOnMemory`方法是類似[imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法，不同之處在於感興趣的中繼資料已存在的記憶體，而不是以磁碟上的檔案。</span><span class="sxs-lookup"><span data-stu-id="18b79-116">The `OpenScopeOnMemory` method is similar to the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, except that the metadata of interest already exists in memory, rather than in a file on disk.</span></span>  
+ <span data-ttu-id="bd095-116">`OpenScopeOnMemory`方法是類似[imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法，不同之處在於感興趣的中繼資料已存在的記憶體，而不是以磁碟上的檔案。</span><span class="sxs-lookup"><span data-stu-id="bd095-116">The `OpenScopeOnMemory` method is similar to the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, except that the metadata of interest already exists in memory, rather than in a file on disk.</span></span>  
   
- <span data-ttu-id="18b79-117">如果目標區域的記憶體不包含 common language runtime (CLR) 中繼資料，`OpenScopeOnMemory`方法將會失敗。</span><span class="sxs-lookup"><span data-stu-id="18b79-117">If the target area of memory does not contain common language runtime (CLR) metadata, the `OpenScopeOnMemory` method will fail.</span></span>  
+ <span data-ttu-id="bd095-117">如果目標區域的記憶體不包含 common language runtime (CLR) 中繼資料，`OpenScopeOnMemory`方法將會失敗。</span><span class="sxs-lookup"><span data-stu-id="bd095-117">If the target area of memory does not contain common language runtime (CLR) metadata, the `OpenScopeOnMemory` method will fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="18b79-118">需求</span><span class="sxs-lookup"><span data-stu-id="18b79-118">Requirements</span></span>  
- <span data-ttu-id="18b79-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="18b79-119">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bd095-118">需求</span><span class="sxs-lookup"><span data-stu-id="bd095-118">Requirements</span></span>  
+ <span data-ttu-id="bd095-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bd095-119">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="18b79-120">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="18b79-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bd095-120">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bd095-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="18b79-121">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="18b79-121">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bd095-121">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="bd095-121">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="18b79-122">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18b79-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bd095-122">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bd095-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18b79-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="18b79-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bd095-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bd095-123">See also</span></span>
 
-- [<span data-ttu-id="18b79-124">IMetaDataDispenser 介面</span><span class="sxs-lookup"><span data-stu-id="18b79-124">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [<span data-ttu-id="18b79-125">IMetaDataDispenserEx 介面</span><span class="sxs-lookup"><span data-stu-id="18b79-125">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="18b79-126">IMetaDataAssemblyEmit 介面</span><span class="sxs-lookup"><span data-stu-id="18b79-126">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="18b79-127">IMetaDataAssemblyImport 介面</span><span class="sxs-lookup"><span data-stu-id="18b79-127">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [<span data-ttu-id="18b79-128">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="18b79-128">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="18b79-129">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="18b79-129">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="18b79-130">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="18b79-130">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="18b79-131">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="18b79-131">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="bd095-124">IMetaDataDispenser 介面</span><span class="sxs-lookup"><span data-stu-id="bd095-124">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="bd095-125">IMetaDataDispenserEx 介面</span><span class="sxs-lookup"><span data-stu-id="bd095-125">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="bd095-126">IMetaDataAssemblyEmit 介面</span><span class="sxs-lookup"><span data-stu-id="bd095-126">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="bd095-127">IMetaDataAssemblyImport 介面</span><span class="sxs-lookup"><span data-stu-id="bd095-127">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="bd095-128">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="bd095-128">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="bd095-129">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="bd095-129">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="bd095-130">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="bd095-130">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="bd095-131">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="bd095-131">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31ce787cea567645c303e0355e8ae7a3a52659a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98809ff5424e1da468e70d34cbb9214c1d3248f5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041455"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780300"
 ---
-# <a name="icorprofilerfunctionenumreset-method"></a><span data-ttu-id="a6b49-102">ICorProfilerFunctionEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="a6b49-102">ICorProfilerFunctionEnum::Reset Method</span></span>
-<span data-ttu-id="a6b49-103">將列舉值的資料指標移至序列的開始位置。</span><span class="sxs-lookup"><span data-stu-id="a6b49-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilerfunctionenumreset-method"></a><span data-ttu-id="cc106-102">ICorProfilerFunctionEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="cc106-102">ICorProfilerFunctionEnum::Reset Method</span></span>
+<span data-ttu-id="cc106-103">將列舉值的資料指標移至序列的開始位置。</span><span class="sxs-lookup"><span data-stu-id="cc106-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a6b49-104">語法</span><span class="sxs-lookup"><span data-stu-id="a6b49-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cc106-104">語法</span><span class="sxs-lookup"><span data-stu-id="cc106-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Reset();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a6b49-105">需求</span><span class="sxs-lookup"><span data-stu-id="a6b49-105">Requirements</span></span>  
- <span data-ttu-id="a6b49-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a6b49-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cc106-105">需求</span><span class="sxs-lookup"><span data-stu-id="cc106-105">Requirements</span></span>  
+ <span data-ttu-id="cc106-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cc106-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a6b49-107">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a6b49-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="cc106-107">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cc106-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a6b49-108">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a6b49-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cc106-108">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cc106-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a6b49-109">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6b49-109">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="cc106-109">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cc106-109">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a6b49-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a6b49-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc106-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc106-110">See also</span></span>
 
-- [<span data-ttu-id="a6b49-111">ICorProfilerFunctionEnum 介面</span><span class="sxs-lookup"><span data-stu-id="a6b49-111">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="a6b49-112">分析介面</span><span class="sxs-lookup"><span data-stu-id="a6b49-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="cc106-111">ICorProfilerFunctionEnum 介面</span><span class="sxs-lookup"><span data-stu-id="cc106-111">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="cc106-112">分析介面</span><span class="sxs-lookup"><span data-stu-id="cc106-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
