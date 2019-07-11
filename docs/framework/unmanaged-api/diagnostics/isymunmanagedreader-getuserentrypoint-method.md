@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0267ae8b57c837b097d496c8e119085d03417e36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 995c7edf99c917b8bcdc1d51dcc0bf50868e4f35
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670023"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777049"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>ISymUnmanagedReader::GetUserEntryPoint 方法
 如果有的話，會傳回已指定為模組的使用者進入點方法。 比方說，這個方法可能是使用者的主要方法，而不是編譯器所產生的虛設常式之前的主要方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetUserEntryPoint (  
     [out, retval]  mdMethodDef  *pToken);  
 ```  

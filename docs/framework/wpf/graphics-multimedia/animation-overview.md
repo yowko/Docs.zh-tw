@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663859"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780150"
 ---
 # <a name="animation-overview"></a>動畫概觀
 
@@ -101,7 +101,7 @@ ms.locfileid: "67663859"
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]
 
-3. 先前的程式碼示範從轉換的動畫`1.0`至`0.0`，因而導致目標元素從完全不透明淡化為完全看不見。 若要讓消失之後又淡化回畫面的項目，設定<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>屬性的動畫`true`。 若要讓動畫無限期地重複，設定其<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>屬性設<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>。下圖顯示如何設定<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>和<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>XAML 中的屬性。
+3. 先前的程式碼示範從轉換的動畫`1.0`至`0.0`，因而導致目標元素從完全不透明淡化為完全看不見。 若要讓消失之後又淡化回畫面的項目，設定<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>屬性的動畫`true`。 若要讓動畫無限期地重複，設定其<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>屬性設<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>。 下圖顯示如何設定<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>和<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>XAML 中的屬性。
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]
 
@@ -234,7 +234,7 @@ ms.locfileid: "67663859"
 |<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|建立動畫<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>或<xref:System.Windows.Media.GradientStop>。|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|建立動畫<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Controls.DockPanel>或<xref:System.Windows.FrameworkElement.Height%2A>的<xref:System.Windows.Controls.Button>。|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|建立動畫<xref:System.Windows.Media.EllipseGeometry.Center%2A>位置<xref:System.Windows.Media.EllipseGeometry>。|
-|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|建立動畫<xref:System.Windows.Controls.TextBlock.Text%2A>的<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.Button>。|
+|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|無|建立動畫<xref:System.Windows.Controls.TextBlock.Text%2A>的<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.Button>。|
 
 <a name="animationsaretimelines"></a>
 
@@ -242,7 +242,7 @@ ms.locfileid: "67663859"
 
 所有動畫類型都繼承自<xref:System.Windows.Media.Animation.Timeline>類別; 因此，所有動畫都是特殊的類型的時間軸。 A<xref:System.Windows.Media.Animation.Timeline>定義一段時間。 您可以指定*計時行為*時間軸： 其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>，它會重複，而平均速度的時間進行的次數。
 
-因為動畫是<xref:System.Windows.Media.Animation.Timeline>，它也代表一段時間。 動畫也會計算輸出值進行其指定的一段時間 (或<xref:System.Windows.Media.Animation.Timeline.Duration%2A>)。 隨著動畫進行 (或「播放」)，動畫會更新相關聯的屬性。
+因為動畫是<xref:System.Windows.Media.Animation.Timeline>，它也代表一段時間。 動畫也會計算輸出值，因為會歷經其指定的一段時間 (或<xref:System.Windows.Media.Animation.Timeline.Duration%2A>)。 隨著動畫進行 (或「播放」)，動畫會更新相關聯的屬性。
 
 三個常用的計時屬性是<xref:System.Windows.Media.Animation.Timeline.Duration%2A>， <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>，和<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>。
 
@@ -372,7 +372,7 @@ ms.locfileid: "67663859"
 |[動畫和計時系統概觀](animation-and-timing-system-overview.md)|描述計時系統如何使用<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>類別，可讓您建立動畫。|
 |[動畫祕訣和訣竅](animation-tips-and-tricks.md)|列出解決動畫問題 (例如效能) 的有用祕訣。|
 |[自訂動畫概觀](custom-animations-overview.md)|描述如何使用主要畫面格、動畫類別或每個畫面格回呼來擴充動畫系統。|
-|From/To/By 動畫概觀|描述如何建立在兩個值之間轉換的動畫。|
+|[From/To/By 動畫概觀](from-to-by-animations-overview.md)|描述如何建立在兩個值之間轉換的動畫。|
 |[主要畫面格動畫概觀](key-frame-animations-overview.md)|描述如何建立有多個目標值的動畫，包括控制插補方法的能力。|
 |[Easing 函式](easing-functions.md)|說明如何對動畫套用數學公式以獲得實際的行為，例如彈跳。|
 |[路徑動畫概觀](path-animations-overview.md)|描述如何沿著複雜路徑移動或旋轉物件。|

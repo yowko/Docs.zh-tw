@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba2ee070b7d03efc830058014aa445bb1a3d4329
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ce252f5a4b5fbcdbbc7b70c8b1c829490f8f63e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422269"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739523"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState 列舉
 指定要偵錯的執行緒狀態。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorDebugThreadState {  
     THREAD_RUN,  
     THREAD_SUSPEND  
@@ -37,7 +37,7 @@ typedef enum CorDebugThreadState {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`THREAD_RUN`|除非偵錯事件，就會發生，則執行緒會執行免費。|  
 |`THREAD_SUSPEND`|無法執行執行緒。|  

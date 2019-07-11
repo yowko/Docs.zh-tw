@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faa6af54714f7f0b7ac91c7836673c163195d5f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 198141545119976cb9107bc9c09b913572e266ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656463"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781129"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 結構
 提供有關的詳細資料`Event_MDAFired`事件，這會觸發建立的 managed 偵錯助理 (MDA)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct _MDAInfo {  
     LPCWSTR  lpMDACaption;  
     LPCWSTR  lpMDAMessage  
@@ -37,7 +37,7 @@ typedef struct _MDAInfo {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`lpMDACaption`|目前的 MDA 的標題。 標題描述的觸發的失敗類型`Event_MDAFired`事件。|  
 |`lpMDAMessage`|目前的 MDA 所提供的輸出訊息。|  
@@ -60,7 +60,7 @@ typedef struct _MDAInfo {
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

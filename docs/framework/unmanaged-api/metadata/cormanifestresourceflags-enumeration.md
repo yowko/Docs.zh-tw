@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 204f04b1ed1ea293639e0b9826f7e0ce6f384763
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08f997e133fa6cc8769efe18e7ca06c0153f15a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992689"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781802"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 列舉
 指出編碼的組件資訊清單中的資源的可見性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorManifestResourceFlags {  
   
     mrVisibilityMask        =   0x0007,  
@@ -40,7 +40,7 @@ typedef enum CorManifestResourceFlags {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`mrVisibilityMask`|保留的。|  
 |`mrPublic`|資源是公用的。|  
@@ -51,7 +51,7 @@ typedef enum CorManifestResourceFlags {
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

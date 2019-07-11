@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dffefedf14d5f219736e429be191021b2de7ddd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0c0679dac84089577a2698ed8b0b5497a1a81e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599298"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753898"
 ---
 # <a name="corprffunctionargumentrange-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE 結構
 代表記憶體中由左至右連續儲存的函式引數區塊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {  
     UINT_PTR startAddress;  
     ULONG length;  
@@ -37,7 +37,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |-------------|-----------------|  
 |`startAddress`|區塊的開始位址。|  
 |`length`|此連續區塊的長度。|  
@@ -49,7 +49,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

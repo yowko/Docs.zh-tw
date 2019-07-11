@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 247383e267ab3e8932d43621e122986a59d9a30d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fe34ffded73e8305e4ade3bb9b402b1d8e1bcc49
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490517"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764684"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion 函式
 會建立[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)物件會根據指定的版本資訊。  
@@ -31,7 +31,7 @@ ms.locfileid: "66490517"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CreateDebuggingInterfaceFromVersion (  
     [in]  int      iDebuggerVersion,   
     [in]  LPCWSTR  szDebuggeeVersion,   
@@ -52,7 +52,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ## <a name="return-value"></a>傳回值  
  定義在 WinError.h 檔案中，除了下列的值，這個方法會傳回標準 COM 錯誤碼。  
   
-|傳回碼|描述|  
+|傳回碼|說明|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_INVALIDARG|`szDebuggeeVersion` 或`ppCordb`是 null 或版本字串不正確。|  

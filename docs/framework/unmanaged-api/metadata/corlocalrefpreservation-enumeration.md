@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 845994b96445d8ec2a0e37affc5164b432894a91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6338034d6714e8770e06ff61994fdf4433eb1684
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045707"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781781"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation 列舉
 包含代表本機參考處理方式的旗標值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorLocalRefPreservation  
 {  
     MDPreserveLocalRefsNone     =   0x00000000,  
@@ -50,7 +50,7 @@ typedef enum CorLocalRefPreservation
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

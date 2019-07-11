@@ -2,17 +2,17 @@
 title: 預存程序
 ms.date: 03/30/2017
 ms.assetid: 4d23dd7a-a85f-44ff-a717-af7d0950c0fc
-ms.openlocfilehash: 9201965192f300de62679c1e5be75cf98a24e700
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b06dc19aa8b767da6a1c6b00bd5b465465db6060
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917939"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742843"
 ---
 # <a name="stored-procedures"></a>預存程序
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用物件模型中的方法，來代表在資料庫中的預存程序。 您可套用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 屬性 (Attribute) 和 (視需要) 套用 <xref:System.Data.Linq.Mapping.ParameterAttribute> 屬性，將方法指定為預存程序。 如需詳細資訊，請參閱 < [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)。  
   
- 使用 Visual Studio 的開發人員通常會使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]對應預存程序。 本節中的主題顯示自行撰寫程式碼時，如何在應用程式中形成和呼叫這些方法。  
+ 使用 Visual Studio 的開發人員通常會使用物件關聯式設計工具來對應預存程序。 本節中的主題顯示自行撰寫程式碼時，如何在應用程式中形成和呼叫這些方法。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：傳回資料列集](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)  

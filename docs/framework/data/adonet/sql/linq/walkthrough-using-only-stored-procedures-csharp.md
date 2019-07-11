@@ -2,12 +2,12 @@
 title: 逐步解說：僅使用預存程序 (C#)
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655117"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742570"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>逐步解說：僅使用預存程序 (C#)
 本逐步解說會針對只執行預存程序來存取資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 資料庫管理員會使用這個方法來限制對資料存放區的存取。  
@@ -17,7 +17,7 @@ ms.locfileid: "64655117"
   
  基於本逐步解說的詳細資訊，您將使用已對應至 Northwind 範例資料庫中的預存程序的兩個方法：CustOrdersDetail 和 CustOrderHist。 當您執行 SqlMetal 命令列工具以產生 C# 檔案時，會發生對應。 如需詳細資訊，請參閱本逐步解說後面的「必要條件」一節。  
   
- 這個逐步解說並不依賴[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 使用 Visual Studio 的開發人員也可以使用[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]來實作預存程序功能。 請參閱[LINQ to SQL 工具，在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ 本逐步解說中不需要物件關聯式設計工具。 使用 Visual Studio 的開發人員也可以使用 O/R 設計工具來實作預存程序功能。 請參閱[LINQ to SQL 工具，在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -64,13 +64,13 @@ ms.locfileid: "64655117"
   
 2. 在 [**專案類型**] 窗格中的**新增專案**] 對話方塊中，按一下 [ **Visual C#** 。  
   
-3. 在 [範本]  窗格中，按一下 [Windows Form 應用程式] 。  
+3. 在 [範本]  窗格中，按一下 [Windows Form 應用程式]  。  
   
 4. 在 **名稱**方塊中，輸入**SprocOnlyApp**。  
   
 5. 在 **位置**方塊中，確認您要儲存專案檔。  
   
-6. 按一下 [確定] 。  
+6. 按一下 [確定]  。  
   
      Windows Forms 設計工具隨即開啟。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "64655117"
   
 #### <a name="to-set-up-the-user-interface"></a>若要設定使用者介面  
   
-1. 返回 Windows Form 設計工具 (**Form1.cs[Design]**)。  
+1. 返回 Windows Form 設計工具 (**Form1.cs[Design]** )。  
   
 2. 在 [ **檢視** ] 功能表上，按一下 [ **工具箱**]。  
   
@@ -127,9 +127,9 @@ ms.locfileid: "64655117"
   
 4. 以滑鼠右鍵按一下**label1**，然後按一下**屬性**。  
   
-5. 變更**文字**屬性從**label1**來**輸入 OrderID:**。  
+5. 變更**文字**屬性從**label1**來**輸入 OrderID:** 。  
   
-6. 相同的方式，對**label2**，變更**文字** 屬性從**label2**至**輸入 CustomerID:**。  
+6. 相同的方式，對**label2**，變更**文字** 屬性從**label2**至**輸入 CustomerID:** 。  
   
 7. 同樣地，在變更**文字**屬性**button1**來**Order Details**。  
   

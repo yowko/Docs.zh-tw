@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7b384bb24cbf7ab7379949fd85a22121a1310e3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ab660769a49cf12b129cb7f44b8378053a231f8c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636861"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761622"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 函式
 建立列舉程式的邏輯複本，並保留其在列舉中的目前位置。
@@ -30,7 +30,7 @@ ms.locfileid: "65636861"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 HRESULT CloneEnumWbemClassObject (
    [out] IEnumWbemClassObject**  ppEnum, 
    [in] DWORD                    authLevel,
@@ -93,7 +93,7 @@ HRESULT CloneEnumWbemClassObject (
 
  **標頭：** WMINet_Utils.idl
 
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 

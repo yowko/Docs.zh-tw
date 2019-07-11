@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd7d63596690e2a5d0bc26448884ec09ecd63231
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b6c839cc664105149f26b0d21d7ba7fb91b3e29
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790074"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742208"
 ---
 # <a name="closeenum-method"></a>CloseEnum 方法
 關閉指定的列舉型別，並釋放相關聯的資源。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CloseEnum(  
     HALINKENUM hEnum  
 ) PURE;  

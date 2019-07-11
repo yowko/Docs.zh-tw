@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2f71a277484adbbfe3628222c635528cdab03e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38c0937804eb82d1c96a605b55a00784ba58fe13
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045743"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781832"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 列舉
 包含旗標值，這些值可控制在匯入目前範圍之外的組件期間所發生的行為。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorImportOptions {  
   
     MDImportOptionDefault                = 0x00000000,  
@@ -46,7 +46,7 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|表示預設行為，也就是略過已刪除的記錄。|  
 |`MDImportOptionAll`|指出應該要列舉所有的中繼資料。|  
@@ -63,7 +63,7 @@ typedef enum CorImportOptions {
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

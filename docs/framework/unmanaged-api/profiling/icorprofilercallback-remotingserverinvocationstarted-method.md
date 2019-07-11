@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83c9a4aa165057f1345de2c6f5bda80e4317d06c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 710a33583e45b27cec66278f4e20152acfae97dc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992143"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782885"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>ICorProfilerCallback::RemotingServerInvocationStarted 方法
 通知分析工具處理程序會叫用遠端方法引動過程要求的回應中的方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT RemotingServerInvocationStarted();  
 ```  
   
@@ -40,7 +40,7 @@ HRESULT RemotingServerInvocationStarted();
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

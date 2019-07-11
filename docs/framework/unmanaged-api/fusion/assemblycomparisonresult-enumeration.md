@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03b8ecc996e14263510e2d0a658cec020696c263
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6c417eec9583ff069c9d61fa31e9c14f3931130
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914495"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778516"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult 列舉
 表示之兩個組件身分識別，對等，由[CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum _tagAssemblyComparisonResult {  
     ACR_Unknown,   
     ACR_EquivalentFullMatch,  
@@ -69,7 +69,7 @@ typedef enum _tagAssemblyComparisonResult {
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

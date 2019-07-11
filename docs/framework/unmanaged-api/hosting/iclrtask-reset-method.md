@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3039855a58e6db6a403ab33c226b4b8b390668f7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763486"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758599"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 方法
 通知 common language runtime (CLR) 主機已完成一項工作，並可讓重複使用目前的 CLR [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)來代表另一項工作的執行個體。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Reset (  
     [in] BOOL fFull  
 );  
@@ -76,7 +76,7 @@ HRESULT Reset (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8f2b08662e719a3308a62ab5b60f5dc490f2a6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e61acbb15844c5ddfc8b7aa98c41bb18c6e9ade5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985669"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769768"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels 列舉
 提供旗標指定要套用或修改的組件原則的層級。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     ePolicyLevelNone         = 0x0,  
     ePolicyLevelRetargetable = 0x1,  
@@ -64,7 +64,7 @@ typedef enum {
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

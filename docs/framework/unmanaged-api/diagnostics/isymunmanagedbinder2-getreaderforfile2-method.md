@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fed289b2776e8ac4a12969060cd16c6163ebed2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db917820de92b2e347385afc5217c0ca190825cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940045"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776829"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 方法
 提供中繼資料介面和檔案名稱，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)會讀取偵錯符號的模組相關聯的介面。  
@@ -31,7 +31,7 @@ ms.locfileid: "61940045"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetReaderForFile2(  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *fileName,  

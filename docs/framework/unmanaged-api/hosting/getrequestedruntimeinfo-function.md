@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21b96d435bdb0265d31972edbd4038d0b8cd8d2b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 62a6f6d6e73ce42c8c86d4e458322e5bd361f412
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490349"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778134"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 函式
 取得 common language runtime (CLR) 應用程式所要求的版本和目錄資訊。  
@@ -31,7 +31,7 @@ ms.locfileid: "66490349"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeInfo (  
     [in]  LPCWSTR  pExe,   
     [in]  LPCWSTR  pwszVersion,   
@@ -87,7 +87,7 @@ HRESULT GetRequestedRuntimeInfo (
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|ERROR_INSUFFICIENT_BUFFER|無法夠大，無法儲存的目錄路徑的目錄緩衝區。<br /><br /> -或-<br /><br /> 版本緩衝區不夠大，無法儲存版本字串。|  
+|ERROR_INSUFFICIENT_BUFFER|無法夠大，無法儲存的目錄路徑的目錄緩衝區。<br /><br /> - 或 -<br /><br /> 版本緩衝區不夠大，無法儲存版本字串。|  
   
 ## <a name="remarks"></a>備註  
  `GetRequestedRuntimeInfo`方法會傳回執行階段載入處理序，而不一定是最新版本的電腦上安裝的版本資訊。  

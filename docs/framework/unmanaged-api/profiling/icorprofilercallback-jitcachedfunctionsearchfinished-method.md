@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b0e78e10f092bce1c8f7762362f02b7a403c86a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 882d3b3c359724688c0fb8fe5e2b567f1d575e76
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597231"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782863"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>ICorProfilerCallback::JITCachedFunctionSearchFinished 方法
 通知分析工具對於先前使用 原生映像產生器 (NGen.exe) 所編譯的函式已完成搜尋。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT JITCachedFunctionSearchFinished(  
     [in] FunctionID        functionId,  
     [in] COR_PRF_JIT_CACHE result);  
@@ -52,7 +52,7 @@ HRESULT JITCachedFunctionSearchFinished(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

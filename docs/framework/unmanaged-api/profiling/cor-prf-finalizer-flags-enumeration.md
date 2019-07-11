@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5037f335e8d66c341d70d91d955a1ac7571b823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a66b2b94765c3d59327e500f1e208dc93cd8e231
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775137"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781926"
 ---
 # <a name="corprffinalizerflags-enumeration"></a>COR_PRF_FINALIZER_FLAGS 列舉
 描述物件的完成項。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_FINALIZER_CRITICAL = 0x1  
 } COR_PRF_FINALIZER_FLAGS;  
@@ -50,7 +50,7 @@ typedef enum {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: efcf5b6673fbdc37fad99d082f91ab3077abbea9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fad7fae41fed70d996fcaaa7a7cdf69403b6094
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939460"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763359"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments 方法
 傳回定義在符號存放區中的所有文件的陣列。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetDocuments (  
     [in]  ULONG32  cDocs,  
     [out] ULONG32  *pcDocs,  

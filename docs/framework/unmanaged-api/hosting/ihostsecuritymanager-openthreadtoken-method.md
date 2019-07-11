@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68ebfdcd0ef34edec724a044791d05dd48580b12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1beeb0ff6b2e3493f0814fc3371f189bd4d485d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697481"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778015"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken 方法
 開啟與目前執行中執行緒相關聯的 discretionary 存取權杖。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT OpenThreadToken (  
     [in]  DWORD    dwDesiredAccess,   
     [in]  BOOL     bOpenAsSelf,   
@@ -70,7 +70,7 @@ HRESULT OpenThreadToken (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

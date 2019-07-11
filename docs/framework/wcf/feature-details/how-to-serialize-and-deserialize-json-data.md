@@ -1,15 +1,15 @@
 ---
-title: HOW TO：序列化及還原序列化 JSON 資料
+title: 作法：序列化及還原序列化 JSON 資料
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c56b298737dc9b9902f13c586edffb3d05257f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972987"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783005"
 ---
-# <a name="how-to-serialize-and-deserialize-json-data"></a>HOW TO：序列化和還原序列化 JSON 資料
+# <a name="how-to-serialize-and-deserialize-json-data"></a>作法：序列化和還原序列化 JSON 資料
 JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可以在用戶端瀏覽器與啟用 AJAX 的 Web 服務之間啟用快速的小量資料交換作業。  
   
  這篇文章會示範如何將.NET 型別物件序列化為 JSON 編碼資料，然後以 JSON 格式的資料還原序列化的.NET 型別執行個體。 此範例會使用資料合約以示範序列化與還原序列化的使用者定義`Person`型別，並使用<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。  
@@ -42,7 +42,7 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
 1. 建立 `Person` 型別的執行個體。  
   
     ```csharp  
-    Person p = new Person();  
+    var p = new Person();  
     p.name = "John";  
     p.age = 42;  
     ```  
@@ -50,8 +50,8 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
 2. 序列化`Person`要使用的記憶體資料流物件<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。  
   
     ```csharp  
-    MemoryStream stream1 = new MemoryStream();  
-    DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
+    var stream1 = new MemoryStream();  
+    var ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
 3. 使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 方法，將 JSON 資料寫入資料流。  
@@ -64,7 +64,7 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
   
     ```csharp  
     stream1.Position = 0;  
-    StreamReader sr = new StreamReader(stream1);  
+    var sr = new StreamReader(stream1);  
     Console.Write("JSON form of Person object: ");  
     Console.WriteLine(sr.ReadToEnd());  
     ```  
@@ -75,7 +75,7 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
   
     ```csharp  
     stream1.Position = 0;  
-    Person p2 = (Person)ser.ReadObject(stream1);  
+    var p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
 2. 顯示結果。  
@@ -90,14 +90,14 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
 // Create a User object and serialize it to a JSON stream.  
 public static string WriteFromObject()  
 {  
-    //Create User object.  
-    User user = new User("Bob", 42);  
+    // Create User object.  
+    var user = new User("Bob", 42);  
   
-    //Create a stream to serialize the object to.  
-    MemoryStream ms = new MemoryStream();  
+    // Create a stream to serialize the object to.  
+    var ms = new MemoryStream();  
   
     // Serializer the User object to the stream.  
-    DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(User));  
+    var ser = new DataContractJsonSerializer(typeof(User));  
     ser.WriteObject(ms, user);  
     byte[] json = ms.ToArray();  
     ms.Close();  
@@ -107,9 +107,9 @@ public static string WriteFromObject()
 // Deserialize a JSON stream to a User object.  
 public static User ReadToObject(string json)  
 {  
-    User deserializedUser = new User();  
-    MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(json));  
-    DataContractJsonSerializer ser = new DataContractJsonSerializer(deserializedUser.GetType());  
+    var deserializedUser = new User();  
+    var ms = new MemoryStream(Encoding.UTF8.GetBytes(json));  
+    var ser = new DataContractJsonSerializer(deserializedUser.GetType());  
     deserializedUser = ser.ReadObject(ms) as User;  
     ms.Close();  
     return deserializedUser;  

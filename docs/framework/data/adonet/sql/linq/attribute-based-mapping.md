@@ -2,19 +2,19 @@
 title: 屬性架構對應
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032964"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743626"
 ---
 # <a name="attribute-based-mapping"></a>屬性架構對應
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 對應至 SQL Server 資料庫[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]任一個套用的屬性或使用外部對應檔案的物件模型。 本主題概述以屬性 (Attribute) 為基礎的方法。  
   
  以最基本形式存在的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將資料庫對應至 <xref:System.Data.Linq.DataContext>、將資料表對應至類別，並且將資料行和關聯性 (Relationship) 對應至這些類別中的屬性 (Property)。 您也可以使用屬性 (Attribute) 來對應物件模型中的繼承階層架構 (Inheritance Hierarchy)。 如需詳細資訊，請參閱[如何：在 Visual Basic 中產生物件模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
   
- 通常使用 Visual Studio 的開發人員執行以屬性為基礎的對應使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 您也可以使用 SQLMetal 命令列工具，或者自行撰寫屬性的程式碼。 如需詳細資訊，請參閱[如何：在 Visual Basic 中產生物件模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
+ 開發人員使用 Visual Studio 通常會使用物件關聯式設計工具，以執行屬性為基礎的對應。 您也可以使用 SQLMetal 命令列工具，或者自行撰寫屬性的程式碼。 如需詳細資訊，請參閱[如何：在 Visual Basic 中產生物件模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
   
 > [!NOTE]
 >  您也可以使用外部 XML 檔進行對應。 如需詳細資訊，請參閱 <<c0> [ 外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "62032964"
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|請參閱<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|搭配其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 使用，可以指定資料庫的名稱。|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DatabaseAttribute>。  
+ 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DatabaseAttribute>。  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute 屬性  
  使用這個屬性可以指定某個類別，做為與資料庫資料表或檢視相關聯的實體類別。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將具有這個屬性的類別視為持續性類別。 下表說明 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性 (Property)。  
@@ -37,7 +37,7 @@ ms.locfileid: "62032964"
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|String|與類別名稱相同的字串|指定某個類別，做為與資料庫資料表相關聯的實體類別。|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.TableAttribute>。  
+ 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.TableAttribute>。  
   
 ## <a name="columnattribute-attribute"></a>ColumnAttribute 屬性  
  使用這個屬性 (Attribute) 可以指定實體類別的成員，以代表資料庫資料表中的資料行。 您可以將這個屬性 (Attribute) 套用至任何欄位或屬性 (Property)。  
@@ -46,7 +46,7 @@ ms.locfileid: "62032964"
   
  下表說明這個屬性 (Attribute) 的屬性 (Property)。  
   
-|屬性|類型|預設|描述|  
+|屬性|類型|預設|說明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|永不|指示 Common Language Runtime (CLR) 在插入或更新作業之後擷取值。<br /><br /> 選項:永遠、 永不、 OnUpdate、 OnInsert。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|表示資料行可以包含 Null 值。|  
@@ -58,7 +58,7 @@ ms.locfileid: "62032964"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|以資料庫時間戳記或版本號碼識別成員的資料行型別。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`，除非成員的 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> 為 `true`|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何進行開放式並行存取衝突的偵測。|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ColumnAttribute>。  
+ 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   
 > [!NOTE]
 >  AssociationAttribute 和 ColumnAttribute Storage 屬性值會區分大小寫。 例如，請確定用於 AssociationAttribute.Storage 屬性 (Property) 之屬性 (Attribute) 中的值與用於程式碼中其他位置之對應屬性 (Property) 名稱的大小寫相符。 這適用於所有.NET 程式設計語言，甚至是不通常區分大小寫，包括 Visual Basic。 如需 Storage 屬性的詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
@@ -71,13 +71,13 @@ ms.locfileid: "62032964"
 |屬性|類型|預設|描述|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|如果位於外部索引鍵成員都不可為 null 的關聯上，則會在關聯設為 null 時刪除物件。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|None|將刪除行為加入至關聯。|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|無|將刪除行為加入至關聯。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|若為 true，則指定這個成員做為代表資料庫關聯性之關聯中的外部索引鍵。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|若為 true，則表示外部索引鍵有唯一性條件約束。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|String|相關類別的 ID|指定目標實體類別的一個或多個成員，做為關聯另一端的索引值。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|String|包含類別的 ID|指定這個實體類別的成員代表關聯這一端的索引值。|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.AssociationAttribute>。  
+ 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.AssociationAttribute>。  
   
 > [!NOTE]
 >  AssociationAttribute 和 ColumnAttribute Storage 屬性值會區分大小寫。 例如，請確定用於 AssociationAttribute.Storage 屬性 (Property) 之屬性 (Attribute) 中的值與用於程式碼中其他位置之對應屬性 (Property) 名稱的大小寫相符。 這適用於所有.NET 程式設計語言，甚至是不通常區分大小寫，包括 Visual Basic。 如需 Storage 屬性的詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
@@ -87,13 +87,13 @@ ms.locfileid: "62032964"
   
  下表說明這個屬性 (Attribute) 的屬性 (Property)。  
   
-|屬性|類型|預設|描述|  
+|屬性|類型|預設|說明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|String|無。 必須提供值。|指定鑑別子的程式碼值。|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolean|`false`|若為 true，則在存放區中沒有鑑別子值符合所指定的任何一個值時，具現化這個型別的物件。|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|類型|無。 必須提供值。|指定階層架構中這個類別的型別。|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>。  
+ 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>。  
   
 ## <a name="functionattribute-attribute"></a>FunctionAttribute 屬性  
  使用這個屬性可以指定方法，以代表資料庫中的預存程序或使用者定義的函式。  
@@ -105,7 +105,7 @@ ms.locfileid: "62032964"
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|若為 false，則表示對應至預存程序。 若為 true，則表示對應至使用者定義函式。|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|String|與資料庫中的名稱相同的字串|指定預存程序或使用者定義函式的名稱。|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.FunctionAttribute>。  
+ 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.FunctionAttribute>。  
   
 ## <a name="parameterattribute-attribute"></a>ParameterAttribute 屬性  
  使用這個屬性可以對應預存程序方法的輸入參數。  
@@ -114,33 +114,33 @@ ms.locfileid: "62032964"
   
 |屬性|類型|預設|描述|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|None|指定資料庫型別。|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|無|指定資料庫型別。|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|String|與資料庫中的參數名稱相同的字串|指定參數的名稱。‏|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ParameterAttribute>。  
+ 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.ParameterAttribute>。  
   
 ## <a name="resulttypeattribute-attribute"></a>ResultTypeAttribute 屬性  
  使用這個屬性可以指定結果型別。  
   
  下表說明這個屬性 (Attribute) 的屬性 (Property)。  
   
-|屬性|類型|預設|描述|  
+|屬性|類型|預設|說明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|類型|(無)|用在對應至會傳回 <xref:System.Data.Linq.IMultipleResults> 之預存程序的方法中。 宣告預存程序的有效或應有的型別對應。|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ResultTypeAttribute>。  
+ 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.ResultTypeAttribute>。  
   
 ## <a name="dataattribute-attribute"></a>DataAttribute 屬性  
  使用這個屬性可以指定名稱和私用儲存欄位。  
   
  下表說明這個屬性 (Attribute) 的屬性 (Property)。  
   
-|屬性|類型|預設|描述|  
+|屬性|類型|預設|說明|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|String|與資料庫中的名稱相同|指定資料表、資料行等的名稱。|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|String|公用存取子|指定基礎儲存欄位的名稱。|  
   
- 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DataAttribute>。  
+ 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.DataAttribute>。  
   
 ## <a name="see-also"></a>另請參閱
 

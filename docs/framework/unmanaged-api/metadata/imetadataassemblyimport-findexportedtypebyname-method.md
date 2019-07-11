@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32a7b7b498cc4e52b8be3f43ae52293de380d9f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a70c041bc17f58a5e17877dd2e1f2aa2944e689
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044599"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777929"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName 方法
 取得指標至匯出的型別，指定其名稱與封入型別。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT FindExportedTypeByName (  
     [in]  LPCWSTR           szName,   
     [in]  mdToken           mdtExportedType,   
@@ -57,7 +57,7 @@ HRESULT FindExportedTypeByName (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

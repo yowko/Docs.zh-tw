@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90af015de4428f75330de89978a7fc0a4b26750b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eed83cbc983d59e99b3a42e667e9e126316c263
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700744"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780102"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>ICorRuntimeHost::LocksHeldByLogicalThread 方法
 擷取目前的執行緒持有的鎖定數目。  
@@ -31,7 +31,7 @@ ms.locfileid: "61700744"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT LocksHeldByLogicalThread(  
     [out] DWORD *pCount  
 );  

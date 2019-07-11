@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 456dd8aedf11b1b27ee4926988fc615ebb7a76d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67a680727e824cbe29b9e022e00d661e8694f153
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991818"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780560"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface 方法
 取得"ICorDebugProcess 」 介面可查詢的物件。 這個方法是在.NET Framework 2.0 版中已過時。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetInprocInspectionInterface(  
     [out] IUnknown **ppicd);  
 ```  

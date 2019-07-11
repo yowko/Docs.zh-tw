@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: babe098b16729cfcd41b48075a49b9ae9be7dfdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83f8ae068552ba83a016b5484e3ac6641417fa99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049800"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781572"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob 方法
 取得二進位大型物件 (BLOB) 的指標，在指定的資料行索引。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetBlob (  
     [in]  ULONG          ixBlob,  
     [out] ULONG          *pcbData,  
@@ -54,7 +54,7 @@ HRESULT GetBlob (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

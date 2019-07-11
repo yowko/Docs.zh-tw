@@ -2,17 +2,17 @@
 title: 逐步解說：簡單的物件模型和查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: dd4ba42247a8305b14d859a5b49da4c11cfc18bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62d28d61b3df0cfd792cedc87daf91526b162818
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617974"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742619"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>逐步解說：簡單的物件模型和查詢 (C#)
 這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。 接著，您會建立簡單查詢，以便列出位於倫敦的客戶。  
   
- 這個逐步解說的設計是以程式碼為導向，以協助說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。 一般來說，您會使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 來建立物件模型。  
+ 這個逐步解說的設計是以程式碼為導向，以協助說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。 一般來說，您會使用物件關聯式設計工具來建立物件模型。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -48,13 +48,13 @@ ms.locfileid: "64617974"
   
 2. 在 [**專案類型**窗格**新增專案**] 對話方塊中，按一下**Visual C#** 。  
   
-3. 按一下 [範本] 窗格中的 [主控台應用程式]。  
+3. 按一下 [範本]  窗格中的 [主控台應用程式]  。  
   
 4. 在 **名稱**方塊中，輸入**LinqConsoleApp**。  
   
 5. 在 **位置**方塊中，確認您要儲存專案檔。  
   
-6. 按一下 [確定] 。  
+6. 按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果 System.Data.Linq 未列為專案中參考 (展開**參考**中的節點**方案總管 中**)，請將它加入下列的步驟中所述。  

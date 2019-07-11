@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 484ca79483fc4a5d8f0d1cf2cd5a961c297249e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afcb4e642c9b54107423f7474771fdc28cde709e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961301"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741023"
 ---
 # <a name="clrdataaddressrange-structure"></a>CLRDATA_ADDRESS_RANGE 結構
 
@@ -30,7 +30,7 @@ ms.locfileid: "61961301"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 typedef struct
 {
     CLRDATA_ADDRESS startAddress;
@@ -52,9 +52,9 @@ typedef struct
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** None  
+**標頭：** 無  
 **LIBRARY:** None  
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
 

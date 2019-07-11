@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ea6ce91e0651e09fb908d8b8b35811349ac8845
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa6d563873045b4b5b427f06f0caa5420d31590b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986033"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777216"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope 方法
 開啟目前方法中的新語彙範圍。 範圍會成為新的目前範圍，並推送至堆疊的範圍。 範圍必須形成階層。 同層級項目不允許重疊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT OpenScope(  
     [in] ULONG32 startOffset,  
     [out, retval] ULONG32* pRetVal);  

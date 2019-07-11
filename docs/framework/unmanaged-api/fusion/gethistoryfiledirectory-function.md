@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b60dde31707175a27d2dc6c50484d6089adaeaa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10eead2772a2bbd8abaf7b9c090a091687725972
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697614"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778649"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 函式
 擷取應用程式記錄目錄的路徑。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetHistoryFileDirectory (  
     [in]      LPWSTR      wzDir,  
     [in,out]  LPCWSTR  *pdwsize,  
@@ -60,7 +60,7 @@ HRESULT GetHistoryFileDirectory (
   
  **LIBRARY:** Fusion.dll 和 Mscorwks.dll。 使用而不是 Mscorwks.dll 的 Fusion.dll，以確保您設為目標的.NET framework 的正確版本。  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

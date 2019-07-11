@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: 93aa679e02482e5c237c233655ee19f3bae17fd3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9f8d15b46f6e5575bd206bf572ffda0365e58f6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032843"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743561"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>使用預存程序來自訂作業
 預存程序表示用以覆寫預設行為的常見方法。 本主題中的範例顯示如何使用針對預存程序產生的方法包裝函式，以及如何才能直接呼叫預存程序。  
   
- 如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]指派來執行插入、 更新和刪除的預存程序。  
+ 如果您使用 Visual Studio，您可以使用物件關聯式設計工具，來指定執行插入、 更新和刪除的預存程序。  
   
 > [!NOTE]
->  若要讀回資料庫產生的值，請在預存程序中使用輸出參數。 如果您無法使用輸出參數，請撰寫部分方法實作，而不要依賴[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]產生的覆寫作業。 在順利完成 `INSERT` 或 `UPDATE` 作業之後，對應至資料庫產生值的成員必須設為適當的值。 如需詳細資訊，請參閱 <<c0> [ 開發人員在覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)。  
+>  若要讀回資料庫產生的值，請在預存程序中使用輸出參數。 如果您無法使用輸出參數，撰寫部分方法實作，而不是依賴會覆寫物件關聯式設計工具所產生。 在順利完成 `INSERT` 或 `UPDATE` 作業之後，對應至資料庫產生值的成員必須設為適當的值。 如需詳細資訊，請參閱 <<c0> [ 開發人員在覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62032843"
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>說明  
  下列類別使用這些方法進行覆寫。  
   
 ### <a name="code"></a>程式碼  

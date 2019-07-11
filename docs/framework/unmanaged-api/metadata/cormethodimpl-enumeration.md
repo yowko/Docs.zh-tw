@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2138dd32cf39db7b7c8989ba5827178d1a1e46c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c88c12646a13e5a24f2475bd2db04c8c831141c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045561"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781759"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 列舉
 包含值，這些值描述方法實作功能。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorMethodImpl {  
   
     miCodeTypeMask      =   0x0003,  
@@ -56,7 +56,7 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`miCodeTypeMask`|描述程式碼類型的旗標。|  
 |`miIL`|指定方法實作是 Microsoft intermediate language (MSIL)。|  
@@ -80,7 +80,7 @@ typedef enum CorMethodImpl {
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

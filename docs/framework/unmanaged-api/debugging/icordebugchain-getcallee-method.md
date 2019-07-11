@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed5a7657affde335acf79952d77bbdb7ac42c7a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79743b78ea3d19bab4756b580d2feddd07e0a23b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645290"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745017"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee 方法
 取得這個鏈結所呼叫函式鏈結。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetCallee (  
     [out] ICorDebugChain     **ppChain  
 );  
@@ -49,4 +49,4 @@ HRESULT GetCallee (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

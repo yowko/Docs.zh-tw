@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 270b0f2123a20787a8e75d40f56a675c55824243
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648685"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742557"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>逐步解說：僅使用預存程序 (Visual Basic)
 本逐步解說會針對只用預存程序來存取資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 資料庫管理員會使用這個方法來限制對資料存放區的存取。  
@@ -19,7 +19,7 @@ ms.locfileid: "64648685"
   
  基於本逐步解說的詳細資訊，您將使用已對應至 Northwind 範例資料庫中的預存程序的兩個方法：CustOrdersDetail 和 CustOrderHist。 當您執行 SqlMetal 命令列工具來產生 Visual Basic 檔案時，就會發生對應。 如需詳細資訊，請參閱本逐步解說後面的「必要條件」一節。  
   
- 這個逐步解說並不依賴[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 使用 Visual Studio 的開發人員也可以使用[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]來實作預存程序功能。 請參閱[LINQ to SQL 工具，在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ 本逐步解說中不需要物件關聯式設計工具。 使用 Visual Studio 的開發人員也可以使用 O/R 設計工具來實作預存程序功能。 請參閱[LINQ to SQL 工具，在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -60,24 +60,24 @@ ms.locfileid: "64648685"
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
  在第一個工作中，您會建立包含必要的參考，以建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
+### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1. 在 Visual Studio 的 [檔案]  功能表上，按一下 [新增專案] 。  
+1. 在 Visual Studio 的 [檔案]  功能表上，按一下 [新增專案]  。  
   
 2. 在 [ **新增專案** ] 對話方塊的 [ **專案類型** ] 窗格中，展開 [ **Visual Basic**]，然後按一下 [ **Windows**]。  
   
-3. 在 [範本]  窗格中，按一下 [Windows Form 應用程式] 。  
+3. 在 [範本]  窗格中，按一下 [Windows Form 應用程式]  。  
   
 4. 在 **名稱**方塊中，輸入**SprocOnlyApp**。  
   
-5. 按一下 [確定] 。  
+5. 按一下 [確定 **Deploying Office Solutions**]。  
   
      Windows Forms 設計工具隨即開啟。  
   
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>加入 LINQ to SQL 組件參考  
  標準 [Windows Form 應用程式] 範本不包含 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 組件。 您必須按照下列步驟所述自行加入組件：  
   
-#### <a name="to-add-systemdatalinqdll"></a>若要加入 System.Data.Linq.dll  
+### <a name="to-add-systemdatalinqdll"></a>若要加入 System.Data.Linq.dll  
   
 1. 在 **方案總管**，按一下**顯示所有檔案**。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "64648685"
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>將 Northwind 程式碼檔案加入至專案  
  這個步驟假設您已使用 SqlMetal 工具，從 Northwind 範例資料庫產生程式碼檔。 如需詳細資訊，請參閱本逐步解說稍早的「必要條件」一節。  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a>若要將 Northwind 程式碼檔案加入至專案  
+### <a name="to-add-the-northwind-code-file-to-the-project"></a>若要將 Northwind 程式碼檔案加入至專案  
   
 1. 在 **專案**功能表上，按一下**加入現有項目**。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "64648685"
 ## <a name="creating-a-database-connection"></a>建立資料庫連接  
  在這個步驟中，您會定義與 Northwind 範例資料庫的連接。 本逐步解說會使用 "c:\linqtest3\northwnd.mdf" 做為路徑。  
   
-#### <a name="to-create-the-database-connection"></a>若要建立資料庫連接  
+### <a name="to-create-the-database-connection"></a>若要建立資料庫連接  
   
 1. 在 [**方案總管] 中**，以滑鼠右鍵按一下**Form1.vb**，然後按一下**檢視程式碼**。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "64648685"
 ## <a name="setting-up-the-user-interface"></a>設定使用者介面  
  在這項工作中您會建立介面，供使用者執行預存程序來存取資料庫中的資料。 在您按照本逐步解說開發的應用程式中，使用者只能透過應用程式內嵌的預存程序來存取資料庫中的資料。  
   
-#### <a name="to-set-up-the-user-interface"></a>若要設定使用者介面  
+### <a name="to-set-up-the-user-interface"></a>若要設定使用者介面  
   
-1. 返回 Windows Form 設計工具 (**Form1.vb[Design]**)。  
+1. 返回 Windows Form 設計工具 (**Form1.vb[Design]** )。  
   
 2. 在 [ **檢視** ] 功能表上，按一下 [ **工具箱**]。  
   
@@ -131,9 +131,9 @@ ms.locfileid: "64648685"
   
 4. 以滑鼠右鍵按一下**Label1**，然後按一下**屬性**。  
   
-5. 變更**文字**屬性從**Label1**來**輸入 OrderID:**。  
+5. 變更**文字**屬性從**Label1**來**輸入 OrderID:** 。  
   
-6. 相同的方式，對**Label2**，變更**文字** 屬性從**Label2**至**輸入 CustomerID:**。  
+6. 相同的方式，對**Label2**，變更**文字** 屬性從**Label2**至**輸入 CustomerID:** 。  
   
 7. 同樣地，在變更**文字**屬性**Button1**來**Order Details**。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "64648685"
   
      使按鈕控制項變寬，才能看見所有文字。  
   
-#### <a name="to-handle-button-clicks"></a>若要處理按鈕按一下動作  
+### <a name="to-handle-button-clicks"></a>若要處理按鈕按一下動作  
   
 1. 按兩下**訂單明細**上**Form1**建立`Button1`事件處理常式並開啟程式碼編輯器。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "64648685"
 ## <a name="testing-the-application"></a>測試應用程式  
  現在開始測試您的應用程式。 請注意，您與資料存放區的接觸受限於這兩個預存程序可以採取的所有動作。 這些動作是為了傳回任何您輸入之 orderID 所含的產品，或傳回任何您輸入之 CustomerID 所訂購的產品記錄。  
   
-#### <a name="to-test-the-application"></a>若要測試應用程式  
+### <a name="to-test-the-application"></a>若要測試應用程式  
   
 1. 按 F5 開始偵錯作業。  
   

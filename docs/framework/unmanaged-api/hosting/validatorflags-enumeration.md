@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa10ae1cf67339a6719210f3162f19ac648e8ee5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5f38231eb6a5911527c21ee3304fc77cfcf8e90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942346"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776528"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags 列舉
 包含值，表示應該執行的呼叫中的驗證類型[iclrvalidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 enum ValidatorFlags {  
     VALIDATOR_EXTRA_VERBOSE =       0x00000001,  
     VALIDATOR_SHOW_SOURCE_LINES =   0x00000002,  
@@ -40,7 +40,7 @@ enum ValidatorFlags {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`VALIDATOR_CHECK_ILONLY`|指定只有的 Microsoft intermediate language (MSIL) 中的可執行檔應該進行驗證。|  
 |`VALIDATOR_CHECK_PEFORMAT_ONLY`|指定的可執行檔的格式進行驗證。|  
@@ -55,7 +55,7 @@ enum ValidatorFlags {
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

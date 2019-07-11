@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0791a59e0325668960dcfc98816920db55bcfb87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 148bc423a9497962ebfbc73faefcc799c6db6499
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651697"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739908"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept 列舉
 表示可以攔截這類型的程式碼 (也就是逐步執行)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorDebugIntercept {  
     INTERCEPT_NONE                = 0x0,  
     INTERCEPT_CLASS_INIT          = 0x01,  
@@ -62,7 +62,7 @@ typedef enum CorDebugIntercept {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
