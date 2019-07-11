@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cba4eb2b76d7057a5ed66a35342a79615cb8539f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2779cfaecfdd241b5317ac8b467222e045d48049
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934819"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753316"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction 方法
 設定指定 ICorDebugFunction，可以巢狀的類別的建構函式會採用內呼叫<xref:System.Type>參數或本身可以採取<xref:System.Type>參數。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CallParameterizedFunction (  
     [in] ICorDebugFunction     *pFunction,  
     [in] ULONG32               nTypeArgs,  
@@ -69,4 +69,4 @@ HRESULT CallParameterizedFunction (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

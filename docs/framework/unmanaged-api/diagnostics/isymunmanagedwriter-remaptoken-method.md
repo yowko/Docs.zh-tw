@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 979d14b4c404c3bf12c427bd5b8b1d4997805e7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c04ca1d56f3e93c77f335218bb534f890e9053d2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986007"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776619"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken 方法
 通知的符號寫入器中繼資料語彙基元已重新對應，因為在發出中繼資料。 如果符號寫入器已存放在符號存放區中舊的語彙基元，則它必須的更新為新的值，或者使用儲存的權杖必須儲存對應的符號讀取器在讀取階段期間重新對應的對應。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT RemapToken(  
     [in] mdToken  oldToken,  
     [in] mdToken  newToken);  

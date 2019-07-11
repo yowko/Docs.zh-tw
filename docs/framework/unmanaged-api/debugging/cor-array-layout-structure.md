@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a5a5bb26912c87cdf37ba0d8f0cee1cf1ffa97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609564"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740817"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT 結構
 提供記憶體中陣列物件配置的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct COR_ARRAY_LAYOUT {  
     COR_TYPEID componentID;  
     CorElementType componentType;  
@@ -43,7 +43,7 @@ typedef struct COR_ARRAY_LAYOUT {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`componentID`|陣列包含的物件類型的識別項。|  
 |`componentType`|CorElementType 列舉值，指出元件是否記憶體回收參考、 實值類別或基本型別。|  
@@ -66,7 +66,7 @@ typedef struct COR_ARRAY_LAYOUT {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9b4ee64022374cb4e1950acceb3f32925b736bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 610225708bf990850fce73d6d7ff66c556e24e5d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994280"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760600"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>ICorDebugStepper::SetRangeIL 方法
 設定值，這個值，指定是否呼叫[icordebugstepper:: Steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)值相對於原生程式碼，或相對於 Microsoft intermediate language (MSIL) 程式碼正在逐步執行方法的引數傳遞透過。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetRangeIL (  
     [in] BOOL    bIL  
 );  
@@ -46,4 +46,4 @@ HRESULT SetRangeIL (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

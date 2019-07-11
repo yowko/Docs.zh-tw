@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73321a28b1c61775d08e2c60ee2b9a863b8250dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25245ce86c7a84a0ff8431b8efd70e87f4ba36cb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000554"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765343"
 ---
 # <a name="icorprofilerinfo3setenterleavefunctionhooks3-method"></a>ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 方法
 指定程式碼剖析工具實作函式會呼叫[FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)， [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)，並[FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetEnterLeaveFunctionHooks3(  
             [in] FunctionEnter3    *pFuncEnter3,  
             [in] FunctionLeave3    *pFuncLeave3,  
@@ -60,7 +60,7 @@ HRESULT SetEnterLeaveFunctionHooks3(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

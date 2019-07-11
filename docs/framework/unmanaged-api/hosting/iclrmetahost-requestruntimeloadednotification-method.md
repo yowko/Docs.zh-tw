@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87afb19736a484d24bde56cc34854dcd26c6b53b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7e7c1de620979b387e969f4b8c9f17f493e7bcb8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755705"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776553"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 方法
 提供保證的 common language runtime (CLR) 版本是第一次載入，但尚未開始時要呼叫的回呼函式。 這個方法會取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT RequestRuntimeLoadedNotification (  
     [in] RuntimeLoadedCallbackFnPtr pCallbackFunction);  
 ```  
@@ -57,7 +57,7 @@ HRESULT RequestRuntimeLoadedNotification (
   
  回呼函式具有下列原型：  
   
-```  
+```cpp  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
                      ICLRRuntimeInfo *pRuntimeInfo,  
                      CallbackThreadSetFnPtr pfnCallbackThreadSet,  
@@ -68,13 +68,13 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
 - `pfnCallbackThreadSet`：  
   
-    ```  
+    ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
 - `pfnCallbackThreadUnset`：  
   
-    ```  
+    ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
@@ -96,7 +96,7 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

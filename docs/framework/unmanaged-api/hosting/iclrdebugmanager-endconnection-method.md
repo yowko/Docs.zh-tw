@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf21e1844ea99b231054f8350ddacb8bb707a94e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc9d32f83b4b6384e28f012b9329ea18913a1218
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969867"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773158"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>ICLRDebugManager::EndConnection 方法
 移除工作清單和識別項和易記名稱之間的關聯。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EndConnection (  
     [in] CONNID dwConnectionId  
 );  
@@ -41,7 +41,7 @@ HRESULT EndConnection (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`EndConnection` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
@@ -64,7 +64,7 @@ HRESULT EndConnection (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3debd3f13d78841188dd8c900f51c0110e1d4c67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41513d9b6f98743bfad95e4d9606cfb4927369e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906369"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769786"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 列舉
 描述分類的主機可以封鎖無法在部分信任程式碼中執行的功能。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     eNoCategory               = 0,  
     eSynchronization          = 0x1,  
@@ -72,7 +72,7 @@ typedef enum {
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 94279675b5a50bf2a19bb080876b91b85599c077
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 07ad83da2bc608e3c5925664a68eec4a548860e1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65630102"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739225"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request Method
 
@@ -30,7 +30,7 @@ ms.locfileid: "65630102"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 HRESULT Request(
     [in] IXCLRDataModule* pDataModule
 );
@@ -50,9 +50,9 @@ HRESULT Request(
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** None     
-**LIBRARY:** None  
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**標頭：** 無     
+**LIBRARY:** 無  
+**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
 

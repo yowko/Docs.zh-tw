@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea1c1f998febccbc80fb10cef5a8dfd229e1987e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 739670fb84eb0145fd8bf8073f453518487c38b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789398"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749580"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a>IHostTaskManager::GetStackGuarantee 方法
 取得量的保證堆疊操作完成之後, 才能使用的堆疊空間，但處理程序關閉之前。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetStackGuarantee(  
     [out] ULONG *pGuarantee  
 );  
@@ -46,7 +46,7 @@ HRESULT GetStackGuarantee(
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

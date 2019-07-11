@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f968d84ae695eb1da127538ebdc5e4f55d6ebf39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46dab35c44e59a149822005575c83c13e9350455
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985846"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758542"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2 函式
 指定記憶體對應的程式碼中執行的進入點。 作業系統載入器會呼叫此函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 __int32 STDMETHODCALLTYPE _CorExeMain2 (  
    [in] PBYTE           pUnmappedPE,  
    [in] DWORD           cUnmappedPE,  
@@ -61,7 +61,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

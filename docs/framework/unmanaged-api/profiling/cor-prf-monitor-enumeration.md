@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fc3329d8b6d49c2924c991e4d606a437eff9d2d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: b6916c223aee615fad0bb9e5a47691122db41c98
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268015"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752063"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR 列舉
 包含值，這些值用於指定分析工具想要訂閱的行為、功能或事件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_MONITOR_NONE                = 0x00000000,  
     COR_PRF_MONITOR_FUNCTION_UNLOADS    = 0x00000001,  
@@ -148,7 +148,7 @@ typedef enum {
 <a name="Feature"></a>   
 ### <a name="feature-enabling-flags"></a>功能啟用旗標  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`COR_PRF_ENABLE_FRAME_INFO`|允許擷取的確切`ClassID`藉由呼叫泛型函式[GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法`COR_PRF_FRAME_INFO`所傳回的值[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)回呼。|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|使用追蹤可讓引數[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)回呼或[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)回呼並[GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)方法。|  
@@ -173,7 +173,7 @@ typedef enum {
 <a name="Composite"></a>   
 ### <a name="composite-flags"></a>組合旗標  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`COR_PRF_ALL`|代表所有 `COR_PRF_MONITOR` 旗標值。|  
 |`COR_PRF_ALLOWABLE_AFTER_ATTACH`|代表所有 `COR_PRF_MONITOR` 旗標，這些旗標可在分析工具連結至執行中的應用程式之後加以設定。 語法區段指出此位元遮罩中存在的個別旗標。|  

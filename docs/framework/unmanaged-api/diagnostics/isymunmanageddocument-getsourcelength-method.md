@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2717a279abf7fb1b704a769d54654d97949cc0a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf79c05b3b16bb61ac59534dd83cb8eb2bb1f823
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939856"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776710"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength 方法
 取得內嵌來源的長度 (以位元組為單位)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetSourceLength(  
     [out, retval]  ULONG32*  pRetVal);  
 ```  

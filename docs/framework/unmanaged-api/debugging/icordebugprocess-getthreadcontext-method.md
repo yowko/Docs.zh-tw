@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28d54becc2d7cd4359c78415f25f579b968cb3f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c137a10d5da94d04509385fc97d71535d33fae93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775594"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758733"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>ICorDebugProcess::GetThreadContext 方法
 取得指定的執行緒，此程序中的內容。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetThreadContext(  
     [in] DWORD threadID,  
     [in] ULONG32 contextSize,  
@@ -61,4 +61,4 @@ HRESULT GetThreadContext(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

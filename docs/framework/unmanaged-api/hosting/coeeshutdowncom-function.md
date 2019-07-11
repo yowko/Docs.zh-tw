@@ -20,19 +20,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d2b82bc056acd2e620461081b5f8c9d45fc152c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 74548df512f68761b006e064a6db968e82b03813
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490640"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779126"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 函式
 強制 common language runtime (CLR) 版本所有的介面指標，它就會保存於執行階段可呼叫包裝函式 (RCW)。 這有釋放 RCW 的所有快取的效果。 在.NET Framework 4 中，此全域函式已被取代。 相反地，針對特定執行階段使用的進入點。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void CoEEShutDownCOM ();  
 ```  
   

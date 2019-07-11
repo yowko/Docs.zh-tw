@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 173a7d6793bec9262efb661d56e3a371d0bf9b47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c614afee18824e1672b378dd468cb11c9c173d9f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986618"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764955"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>ICorPublishProcess::EnumAppDomains 方法
 取得列舉值所參考的處理序中的應用程式定義域[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EnumAppDomains (  
     [out] ICorPublishAppDomainEnum   **ppEnum  
 );  
@@ -51,7 +51,7 @@ HRESULT EnumAppDomains (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

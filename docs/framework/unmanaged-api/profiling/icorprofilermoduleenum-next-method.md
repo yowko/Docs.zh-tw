@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57d8279ba9733e6a381d445d50df56b415353a16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9ff680b337334bdb9a3994daaebf92a966e2fe4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000450"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775185"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next 方法
 從循序模組集合中取得指定的連續模組數目，從序列中列舉值的目前位置開始。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Next([in]  ULONG      celt,  
              [out, size_is(celt), length_is(*pceltFetched)]  
                     ModuleID ids[],  
@@ -61,7 +61,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

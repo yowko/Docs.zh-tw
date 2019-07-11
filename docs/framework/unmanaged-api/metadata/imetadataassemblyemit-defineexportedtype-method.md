@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5702fac139ba602828bb8722a1e3e25d6f1c58f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3b4d143d8dd5391283736d0140e8f1ced1dec53e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625430"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775320"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType 方法
 為指定的已匯出類型，建立包含其中繼資料的 `ExportedType` 結構，並且傳回關聯的中繼資料語彙基元。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT DefineExportedType (  
     [in]  LPCWSTR             szName,  
     [in]  mdToken             tkImplementation,   
@@ -41,7 +41,7 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- [in]若要匯出的型別名稱。 1.1 版的 common language runtime，匯出的型別名稱必須完全相符的名稱，`TypeDef`類型。  
+ [in]若要匯出的型別名稱。 1\.1 版的 common language runtime，匯出的型別名稱必須完全相符的名稱，`TypeDef`類型。  
   
  `tkImplementation`  
  [in]語彙基元，指定匯出的型別實作的位置。 有效的值和其相關聯的意義如下：  
@@ -73,7 +73,7 @@ HRESULT DefineExportedType (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

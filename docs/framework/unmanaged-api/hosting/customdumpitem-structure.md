@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05f5d3fbe05ad1e97a1ae61ed0496f314c4ec5cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985682"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765964"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem 結構
 描述要新增至自訂的傾印，錯誤報告中的項目。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 struct {  
     ECustomDumpItemKind itemKind;   
     union {  
@@ -39,7 +39,7 @@ struct {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`itemKind`|[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)值，指出要加入的項目種類。|  
 |`pReserved`|目前無法使用。 加入等位的任何項目必須是不能大於指標大小。 如果`struct`是有需要，您必須分別將其配置，並指向它。|  
@@ -54,7 +54,7 @@ struct {
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 408ef5419fbc2081d25ad442986ec8155bcb4c62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10df17f2f21928ab89c65be7fd07afe81c468a07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985188"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766553"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived 方法
 取得最後一個完整的封鎖記憶體回收回收的和目前的應用程式定義域所參考之位元組數目。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT STDMETHODCALLTYPE GetCurrentSurvived(  
              [in]  DWORD dwAppDomainId,  
              [out] ULONGLONG *pAppDomainBytesSurvived,  
@@ -49,7 +49,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |COR_E_APPDOMAINUNLOADED|應用程式定義域已卸載或不存在。|  
@@ -66,7 +66,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

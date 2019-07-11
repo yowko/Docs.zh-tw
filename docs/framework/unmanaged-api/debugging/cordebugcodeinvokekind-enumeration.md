@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3b4906f988d09f7b01aee40e8f63b589da5f33d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 059e823110686a2b939c9664fa5b67e4041c3486
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609200"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740321"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>CorDebugCodeInvokeKind 列舉
 描述匯出函式如何叫用 Managed 程式碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorDebugCodeInvokeKind  
 {  
     CODE_INVOKE_KIND_NONE,       
@@ -35,7 +35,7 @@ typedef enum CorDebugCodeInvokeKind
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`CODE_INVOKE_KIND_NONE`|如果這個方法叫用任何 Managed 程式碼，明確事件或中斷點稍後必須找到這些程式碼。<br /><br /> -或-<br /><br /> 我們可能只是遺漏這個方法呼叫的一些 Managed 程式碼，因為沒有簡單的方法可以在其上停止。<br /><br /> -或-<br /><br /> 這個方法可能永遠不會叫用 Managed 程式碼。|  
 |`CODE_INVOKE_KIND_RETURN`|這個方法會透過傳回指令叫用 Managed 程式碼。 跳離應該會抵達下一個 Managed 程式碼。|  
@@ -54,7 +54,7 @@ typedef enum CorDebugCodeInvokeKind
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

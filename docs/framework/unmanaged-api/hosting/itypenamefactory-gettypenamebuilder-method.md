@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad8d9a5bca88e92abdbecaa08e6cd594b8e6576
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb83ed90c59a5a576618879d128705803064271f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672688"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781041"
 ---
 # <a name="itypenamefactorygettypenamebuilder-method"></a>ITypeNameFactory::GetTypeNameBuilder 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetTypeNameBuilder (  
     [out, retval] ITypeNameBuilder** ppTypeBuilder  
 );  
@@ -42,7 +42,7 @@ HRESULT GetTypeNameBuilder (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

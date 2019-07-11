@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cc2a2c7991eb4d11873ebb6a2df92ccc45cde9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40953d03904e3268770c8a1b6e212873ec66d2dd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697221"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761843"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty 方法
 設定指定的屬性識別碼所參考之屬性的值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetProperty (  
     [in] DWORD  PropertyId,  
     [in] LPVOID pvProperty,  
@@ -52,7 +52,7 @@ HRESULT SetProperty (
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

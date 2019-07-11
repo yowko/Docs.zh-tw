@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cba7b4a34835eb2f394aa71be8b907973cb1cd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 356678afb537ab5e5e1653c4f71140ce704e55ef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700185"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779677"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx 方法
 設定記憶體回收集合區段的大小和記憶體回收系統的層代 0 的最大大小。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetGCStartupLimitsEx (  
     [in] SIZE_T SegmentSize,   
     [in] SIZE_T MaxGen0Size  
@@ -49,7 +49,7 @@ HRESULT SetGCStartupLimitsEx (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`SetGCStartupLimitsEx` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
@@ -70,7 +70,7 @@ HRESULT SetGCStartupLimitsEx (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

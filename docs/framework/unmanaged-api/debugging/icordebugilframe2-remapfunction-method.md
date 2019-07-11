@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbec4a4ba05a7e6d50f9740582415219eafb1e57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bdcc2eccbb24a92643415db8e5d267033ac1ca0a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621475"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758745"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction 方法
 將編輯過的函式藉由指定新的 Microsoft intermediate language (MSIL) 位移重新對應  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT RemapFunction (  
     [in] ULONG32      newILOffset  
 );  
@@ -60,4 +60,4 @@ HRESULT RemapFunction (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

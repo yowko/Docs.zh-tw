@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abe9a7b617e5fec0f25765dc5eb94d57ead1ffcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8c5d35af072b773786a8be5ad7d1e71a21c38b2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984826"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773072"
 ---
 # <a name="iclrdebugmanagersetdacl-method"></a>ICLRDebugManager::SetDacl 方法
 這個方法尚未實作。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetDacl (  
     [in] PACL pacl  
 );  
@@ -52,7 +52,7 @@ HRESULT SetDacl (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

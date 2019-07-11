@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8f830ca7e273b65dc9ec77566a02df6c32cd464
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bfe30567bcd8e22a82d401e00b0a6ee50407def
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045535"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781676"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 列舉
 包含值，描述可移植執行檔 (PE) 檔案，從呼叫傳回[IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorPEKind {  
   
     peNot           = 0x00000000,  
@@ -60,7 +60,7 @@ typedef enum CorPEKind {
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

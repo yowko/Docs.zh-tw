@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07d2f08792b6fdea28bd56045de8da30ab552a4f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a8f5e9a909a752dd8dc70bfc1c683b4611715f31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490581"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767972"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 函式
 載入處理序的 common language runtime (CLR) 使用的讀取 XML 檔案的版本資訊。  
@@ -30,7 +30,7 @@ ms.locfileid: "66490581"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CorBindToRuntimeByCfg (  
     [in]  IStream     *pCfgStream,  
     [in]  DWORD        reserved,  

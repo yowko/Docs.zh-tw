@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bd9f4029f5e4609ab1ef6f49a4364e83f1edfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8be30e8c3b6bc7c03ede5f897f176e04153003b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049904"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781970"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls 方法
 列舉代表指定類型方法的 MethodBody 和 MethodDeclaration 語彙基元。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EnumMethodImpls (  
    [in, out] HCORENUM    *phEnum,   
    [in]      mdTypeDef   td,   
@@ -73,7 +73,7 @@ HRESULT EnumMethodImpls (
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

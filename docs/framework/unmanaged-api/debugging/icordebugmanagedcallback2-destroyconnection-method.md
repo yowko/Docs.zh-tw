@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35ae3a9761798ed9ea42b984f2c6c2cad4e42777
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 350a3505345aa88d93f551309eb896ff52cc683d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704098"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761156"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>ICorDebugManagedCallback2::DestroyConnection 方法
 指定的連接已終止會告知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT DestroyConnection (  
     [in] ICorDebugProcess     *pProcess,  
     [in] CONNID               dwConnectionId  
@@ -53,7 +53,7 @@ HRESULT DestroyConnection (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

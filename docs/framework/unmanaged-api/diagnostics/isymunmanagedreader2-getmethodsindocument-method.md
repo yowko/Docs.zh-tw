@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28b240159c36b03b2c476f56f7e6ad7b33f20649
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7fa192a8e8b8a876f672e36bb906a714b1266e2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986345"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736659"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument 方法
 取得每個提供的文件中具有行資訊的方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetMethodsInDocument(  
     [in]  ISymUnmanagedDocument *document,  
     [in]  ULONG32 cMethod,  

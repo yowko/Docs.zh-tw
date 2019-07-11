@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 810875d1b91265fe886ce3cd11970cad7fee122d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b4464c72e8d189cea4831cb641b9ff05063ce25
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041765"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747225"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed 方法
 指定的執行緒已恢復在暫停之後會通知分析工具。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT RuntimeThreadResumed(  
     [in] ThreadID threadId);  
 ```  
@@ -45,7 +45,7 @@ HRESULT RuntimeThreadResumed(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

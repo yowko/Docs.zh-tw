@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 630c365c8710388ae3e913bedece0fb710da7cd9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774539"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768131"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS 結構
 提供 common language runtime (CLR) 記憶體回收機制的相關統計資料。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct _COR_GC_STATS {  
     ULONG   Flags;   
     SIZE_T  ExplicitGCCount;  
@@ -46,7 +46,7 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`Flags`|表示欄位值，應該會計算並傳回。|  
 |`ExplicitGCCount`|指出所強制的外部要求記憶體回收數目。|  
@@ -71,7 +71,7 @@ typedef struct _COR_GC_STATS {
   
  使用方式的範例如下所示：  
   
-```  
+```cpp  
 COR_GC_STATS GCStats;  
 GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;  
 pCLRGCManager->GetStats(&GCStats);  
@@ -84,7 +84,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

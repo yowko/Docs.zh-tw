@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 383d7cd0e315089362b478eed6bdde6d0e4621a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e68178a71d7ba73b4956a7d23854c23300301d8e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586723"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747858"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress 方法
 取得在指定的應用程式定義域的範圍中指定的應用程式定義域靜態欄位的位址。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 RESULT GetAppDomainStaticAddress(  
     [in] ClassID classId,  
     [in] mdFieldDef fieldToken,  
@@ -66,7 +66,7 @@ RESULT GetAppDomainStaticAddress(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

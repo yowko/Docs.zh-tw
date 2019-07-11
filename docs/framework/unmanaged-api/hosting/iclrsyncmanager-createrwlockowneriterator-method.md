@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 450530baed850a66327c4b1326c399529b3de67d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1951efecca6c81322c3a0753eaaf06e9651e3d39
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630605"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759160"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator 方法
 Common language runtime (CLR) 建立迭代器，用來判斷一組工作正在等候讀取器-寫入器鎖定主機的要求。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CreateRWLockOwnerIterator (  
     [in]  SIZE_T    cookie,  
     [out] SIZE_T   *pIterator  
@@ -45,7 +45,7 @@ HRESULT CreateRWLockOwnerIterator (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`CreateRWLockOwnerIterator` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
@@ -72,7 +72,7 @@ HRESULT CreateRWLockOwnerIterator (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

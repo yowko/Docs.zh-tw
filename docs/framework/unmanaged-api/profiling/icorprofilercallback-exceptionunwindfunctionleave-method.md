@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 305c8c7abf778ea68efe06f3bdb57af001ea1b9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 556048be66a7c60dd82a8d51391a86655db6802a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597345"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755935"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionleave-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionLeave 方法
 通知分析工具的例外狀況處理回溯階段已完成回溯函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ExceptionUnwindFunctionLeave();  
 ```  
   
@@ -47,7 +47,7 @@ HRESULT ExceptionUnwindFunctionLeave();
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

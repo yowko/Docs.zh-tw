@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d36a063e1fe1c3baa45de4e4f46bcaf63cfc17e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 21aeceff72ea6222992cb6f3d055ed6f71cda9bf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630617"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759250"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage 方法
 驗證已對應到記憶體的組件對關聯的公開金鑰而言有效。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT StrongNameSignatureVerificationFromImage (  
     [in]  BYTE    *pbBase,  
     [in]  DWORD   dwLength,  
@@ -75,7 +75,7 @@ HRESULT StrongNameSignatureVerificationFromImage (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

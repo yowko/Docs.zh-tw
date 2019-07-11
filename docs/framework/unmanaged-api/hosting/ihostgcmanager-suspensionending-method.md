@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 527607d5c39e7f698ab44baf4af0e7600ae2f473
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a815d1a5e8b40aee84ca2b9971ae4be7fb2c725
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599379"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763724"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>IHostGCManager::SuspensionEnding 方法
 通知主機 common language runtime (CLR) 會繼續已暫止記憶體回收的執行緒上的工作執行。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SuspensionEnding (  
     [in] DWORD generation  
 );  
@@ -63,7 +63,7 @@ HRESULT SuspensionEnding (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

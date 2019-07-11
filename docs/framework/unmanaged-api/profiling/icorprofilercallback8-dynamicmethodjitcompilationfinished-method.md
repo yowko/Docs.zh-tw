@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dbe8d4f7050b93ffb34280be6d63367ef294ae8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba9f9d4ee5f95def3dcd2d757517e225c826cb9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049709"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757998"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationFinished 方法
 [.NET Framework 4.7 及更新版本中支援]  
@@ -24,7 +24,7 @@ ms.locfileid: "62049709"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT DynamicMethodJITCompilationFinished(  
      [in]  FunctionID  functionId,   
      [in]  BOOL        hrStatus,   
@@ -56,7 +56,7 @@ JIT 編譯的動態方法已完成時會觸發此回呼。 這包括各種 IL �
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 56734a9971759b78a835917c4914cf55edaa47a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f236a74da04dfddef852514eccb02215ad2d15a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775163"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752382"
 ---
 # <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO 結構
 代表儲存在記憶體中的一個機器碼連續區塊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct _COR_PRF_CODE_INFO {  
     UINT_PTR startAddress;  
     SIZE_T size;  
@@ -37,7 +37,7 @@ typedef struct _COR_PRF_CODE_INFO {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`startAddress`|程式碼的連續區塊的開始位址。|  
 |`size`|區塊大小。|  
@@ -49,7 +49,7 @@ typedef struct _COR_PRF_CODE_INFO {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

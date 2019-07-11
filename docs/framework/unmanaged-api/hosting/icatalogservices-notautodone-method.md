@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 499ba1887846cc670dc763ec998ef335c17a9ae5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a66fb16462cf7b12d1b0dfadb7df63be96b3f70f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969997"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766689"
 ---
 # <a name="icatalogservicesnotautodone-method"></a>ICatalogServices::NotAutodone 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT NotAutodone ( );  
 ```  
   

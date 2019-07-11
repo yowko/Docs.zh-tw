@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2972b87b2d0136f182f8e8223988953e1896f2bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a3d06f72ed7163a414ef12e9bec650d8b20783
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986683"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774281"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget 介面
 提供控制參考計數、 列舉處理序，並釋放記憶體偵錯工具附加至遠端的 Macintosh 的 Silverlight 目標相關聯的方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 class ICoreClrDebugTarget {  
       HRESULT EnumProcesses (  
           [out] DWORD*                    pcProcs,  
@@ -51,7 +51,7 @@ class ICoreClrDebugTarget {
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |[ICoreClrDebugTarget::EnumProcesses 方法](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|列舉在遠端電腦上執行的處理序。|  
 |[ICoreClrDebugTarget::EnumRuntimes 方法](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|列舉的 common language runtime (Clr) 中指定的處理序在遠端電腦上。|  

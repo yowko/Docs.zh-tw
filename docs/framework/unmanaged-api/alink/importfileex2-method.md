@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 784e58e0c5c2329705671580d53763f2ac30f0b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6584d31674670bcd005161a846b74df71a27a5f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753475"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741642"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 方法
 匯入組件和未繫結的模組。 這個方法就像是[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)，但即使正在匯入的檔案不存在磁碟上的運作方式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ImportFileEx2(  
     LPCWSTR pszFilename,  
     LPCWSTR pszTargetName,  

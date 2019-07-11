@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55a765fe3942cbf71a8460187e829dc7f3ca877e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049852"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755348"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps 方法
 取得與指定的語彙基元所代表的泛型參數相關聯的中繼資料。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetGenericParamProps (  
    [in]  mdGenericParam  gp,  
    [out] ULONG           *pulParamSeq,  
@@ -74,7 +74,7 @@ HRESULT GetGenericParamProps (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

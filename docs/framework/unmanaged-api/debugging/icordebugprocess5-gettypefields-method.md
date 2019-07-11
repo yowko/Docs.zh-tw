@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c2725c62105e92996bb2d8e79e8ff504904e9c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948716"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767625"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields 方法
 提供屬於型別欄位的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetTypeFields(  
     [in] COR_TYPEID id,  
     [in] ULONG32 celt,  
@@ -61,7 +61,7 @@ HRESULT GetTypeFields(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

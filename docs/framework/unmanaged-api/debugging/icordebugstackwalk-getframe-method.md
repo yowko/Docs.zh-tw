@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 253a25fdfc1f00adbc20388660caf6c227030a1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81c3eec9b33f51bd30cf8724eaf010d7cd0b6cd4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782729"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760918"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame 方法
 取得目前的框架[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetFrame([out] ICorDebugFrame ** pFrame);  
 ```  
   
@@ -60,7 +60,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

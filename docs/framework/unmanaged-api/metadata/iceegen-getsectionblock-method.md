@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e600f29a9036bb28031bd7854bc8cbb34c4566a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905485"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746123"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 方法
 取得區段的區塊程式碼基底。  
@@ -31,7 +31,7 @@ ms.locfileid: "61905485"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetSectionBlock (  
     [in]  HCEESECTION    section,     
     [in]  ULONG          len,  
@@ -63,7 +63,7 @@ HRESULT GetSectionBlock (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

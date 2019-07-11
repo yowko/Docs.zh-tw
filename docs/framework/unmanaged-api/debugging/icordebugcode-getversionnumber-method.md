@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 003b29501e8f22ed9010a9f16a4f7ee67bce03a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 155a8d5465e0fb19c55c9d11b67c6031c2b2c4a3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750133"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747515"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a>ICorDebugCode::GetVersionNumber 方法
 取得識別此 「 ICorDebugCode"表示的程式碼的版本以一為基的號碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetVersionNumber (  
     [out] ULONG32    *nVersion  
 );  
@@ -49,6 +49,6 @@ HRESULT GetVersionNumber (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

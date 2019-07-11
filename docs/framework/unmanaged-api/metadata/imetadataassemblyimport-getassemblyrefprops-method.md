@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6c550ff7af2dda8bc06afd771024fe290339904
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: aa633d554652050af51065e11221f898b34d5c63
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089779"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772679"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps 方法
 取得具有指定之中繼資料簽章的組件參考的屬性集。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetAssemblyRefProps (  
     [in]  mdAssemblyRef        mdar,   
     [out] const void          **ppbPublicKeyOrToken,   
@@ -85,7 +85,7 @@ HRESULT GetAssemblyRefProps (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8851b3090685b19c4a7ef711d5adab232e46872e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 341972629e18213536919fe53bfae94613b4d6e9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665043"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777639"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 方法
 建立指定的成員類型或模組，可定義在目前的範圍之外，並定義該參考語彙基元的參考。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT DefineImportMember (   
     [in]  IMetaDataAssemblyImport  *pAssemImport,   
     [in]  const void               *pbHashValue,   
@@ -85,7 +85,7 @@ HRESULT DefineImportMember (
   
  **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

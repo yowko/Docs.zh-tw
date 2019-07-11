@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c15b8e416a5070f59a4df44b3e670e2eb9316b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d269414346d8dcf4212fb5ee546cf22228cdd2b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630539"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765906"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>ICLRStrongName::StrongNameSignatureVerification 方法
 取得值，指出是否提供之路徑上的組件資訊清單包含強式名稱簽章，根據指定的旗標加以確認。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT StrongNameSignatureVerification (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  DWORD     dwInFlags,  
@@ -71,7 +71,7 @@ HRESULT StrongNameSignatureVerification (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 682d6684b6c86485530b9e5283d843f3b2eb7e46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 052c467f5570119cd08b4719c768d178dd52aba2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995991"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752216"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort 方法
 中止目前正在這個 ICorDebugEval 物件的計算。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Abort ();  
 ```  
   
@@ -43,4 +43,4 @@ HRESULT Abort ();
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

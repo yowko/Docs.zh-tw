@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b6785afae75888398f1c0d3d69be2ce21d67bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbc0262062eddb363b0a00535a2d099100124b67
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993092"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748073"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>ICLRStrongName::StrongNameGetBlob 方法
 使用位於所指定位址之可執行檔的二進位表示法填滿指定的緩衝區。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT StrongNameGetBlob (  
     [in]  LPCWSTR    wszFilePath,  
     [in]  BYTE       *pbBlob,  
@@ -58,7 +58,7 @@ HRESULT StrongNameGetBlob (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68df19120f2e0b45e73f9d5e137afc8a5e7ac513
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0baabbb736365b138d1754e68070207b4310bf57
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987151"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762455"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState 方法
 取得這個 ICorDebugThread 物件的目前偵錯狀態。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetDebugState (  
     [out] CorDebugThreadState   *pState  
 );  
@@ -49,4 +49,4 @@ HRESULT GetDebugState (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

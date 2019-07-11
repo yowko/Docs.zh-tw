@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7024140ed9b870b5db38dba7e9b13321dd37386a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae518e5a736a78a261dc3821d53d93afee95a271
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046159"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779987"
 ---
 # <a name="cornativelink-structure"></a>COR_NATIVE_LINK 結構
 包含用來連結原生程式碼的資訊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct   
 {  
     BYTE        m_linkType;  
@@ -39,7 +39,7 @@ typedef struct
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`m_linkType`|要連結原生程式碼的類型。 此值是其中一個[CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)值。|  
 |`m_flags`|在連結原生程式碼時使用連結器旗標。 此值是其中一個[CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)值。|  
@@ -52,7 +52,7 @@ typedef struct
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

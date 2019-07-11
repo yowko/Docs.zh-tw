@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f988084310b920907bb7f212e7d40ca0d1c91db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab00ccd85481f1c6d37e1132e0ecab5e0e86be90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638537"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768884"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy 方法
 發生未處理的例外狀況時，請指定 common language runtime (CLR) 的行為。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetUnhandledExceptionPolicy (  
     [in] EClrUnhandledExceptionPolicy policy  
 );  
@@ -60,7 +60,7 @@ HRESULT SetUnhandledExceptionPolicy (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

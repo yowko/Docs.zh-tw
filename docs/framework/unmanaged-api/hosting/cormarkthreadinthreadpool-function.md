@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0200ad36490efc546daebfa93904676b0af7684
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3da22faa5e8863275cdfa8d03b980a5cbb55e87d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490523"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758361"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool 函式
 標記目前正在執行的執行緒集區執行緒，以便執行 managed 程式碼。 從.NET Framework 2.0 版開始，此函式沒有任何作用。 它不是必要項，並可從您的程式碼中移除。 在.NET Framework 4 中，此函式已被取代。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void CorMarkThreadInThreadPool ();  
 ```  
   

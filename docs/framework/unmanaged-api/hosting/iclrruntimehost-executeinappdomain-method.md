@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86348c35a023e22d10c4ad2e08f5cb1104b895a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 314ffb143e99f9490bcd4a6489f2afed314b7c2c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641407"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768769"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain 方法
 指定<xref:System.AppDomain>要執行指定的 managed 程式碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ExecuteInAppDomain(  
     [in] DWORD AppDomainId,   
     [in] FExecuteInDomainCallback pCallback,   
@@ -68,7 +68,7 @@ HRESULT ExecuteInAppDomain(
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe99a00ca96270d1f35812d48e78cc6bd0a051ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666038"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778731"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 函式
 判斷兩個組件是否只有強制名稱簽章不同。  
@@ -30,7 +30,7 @@ ms.locfileid: "64666038"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 BOOLEAN StrongNameCompareAssemblies (  
     [in]  LPCWSTR   wszAssembly1,  
     [in]  LPCWSTR   wszAssembly2,  
@@ -64,7 +64,7 @@ BOOLEAN StrongNameCompareAssemblies (
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>備註  
  組件的強式名稱簽章是由組件的文字名稱、 版本、 文化特性和公開金鑰 token 所組成。  

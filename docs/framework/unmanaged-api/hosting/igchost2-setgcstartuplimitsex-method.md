@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da5e90055a08227ea7cb7fa1b459fe6f5f3a81fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e834042c5e00709fcb2198c1496a8a630841d069
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763213"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779533"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx 方法
 層代 0 設定區段的大小和大小上限。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetGCStartupLimitsEx (  
     [in] SIZE_T SegmentSize,  
     [in] SIZE_T MaxGen0Size  
@@ -53,7 +53,7 @@ HRESULT SetGCStartupLimitsEx (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

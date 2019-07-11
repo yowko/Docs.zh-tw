@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff159cf794d566be6478ef890c769a0ac72c9b25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dfaedad48291ac09f6959bc7b314ae0d9da76e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789945"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742052"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 方法
 指定巢狀型別為可匯出。 [ExportType 方法](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)也可以匯出巢狀類型，但這個方法會比較快。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ExportNestedType(  
     mdAssembly      AssemblyID,  
     mdToken         FileToken,  

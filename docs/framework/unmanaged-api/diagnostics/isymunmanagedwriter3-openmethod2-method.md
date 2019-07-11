@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3dcb1327ad50761a8268e8adc7b1e976cae0b3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e686e332cf1d35537e5d4306a3a9cbf9d46c47e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650683"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752363"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 方法
 開啟的方法，並提供映像中的實際的區段位移。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT OpenMethod2(   
     [in] mdMethodDef method,  
     [in] ULONG32 isect,  

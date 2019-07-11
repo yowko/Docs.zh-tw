@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15fd75ae807ee5cd7f94f6e650639c3be0628429
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6421ca47c3439d94c1ae86caaf2198298872d53
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043897"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777529"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap 方法
 設定指定的語彙基元所參考方法的 PInvoke 簽章的功能。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT DefinePinvokeMap (   
     [in]  mdToken            tk,   
     [in]  DWORD              dwMappingFlags,   
@@ -58,7 +58,7 @@ HRESULT DefinePinvokeMap (
   
  **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

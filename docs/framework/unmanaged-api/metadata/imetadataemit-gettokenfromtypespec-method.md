@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09256deafdb42847f369664ec8c4bc96d72424d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b0edc81a9a861a3eed6a7bc3ffc1ed1db37403
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043118"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770742"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec 方法
 取得具有指定之中繼資料簽章的類型中繼資料語彙基元。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetTokenFromTypeSpec (   
     [in]  PCCOR_SIGNATURE       pvSig,   
     [in]  ULONG                 cbSig,   
@@ -54,7 +54,7 @@ HRESULT GetTokenFromTypeSpec (
   
  **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5f9867dbdc244ed22948dbe9a07a7ea06292d6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 435a814d20e039c794f4f9eeb024d5afbfcd6dbd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994093"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771192"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>Icordebugsymbolprovider:: Gettypeprops 方法
 根據 vtable 中指定的相對虛擬位址 (RVA)，傳回類型之屬性的相關資訊，例如其泛型參數的簽章數目。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetTypeProps(  
    [in]  ULONG32 vtableRva,  
    [in]  ULONG32 cbSignature,  
@@ -51,7 +51,7 @@ HRESULT GetTypeProps(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

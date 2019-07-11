@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4166b63e0bb0ae276c48abb961e381809cc9792
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dde27f74ac59d033b6e25fba1dbb8e52c4b91af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763746"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760684"
 ---
 # <a name="icordebugstepperisactive-method"></a>ICorDebugStepper::IsActive 方法
 取得值，指出此 ICorDebugStepper 目前是否正在執行的步驟。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT IsActive (  
     [out] BOOL   *pbActive  
 );  
@@ -49,4 +49,4 @@ HRESULT IsActive (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97cecd66462cf6a88012b13dec82dbf617891dd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff7c77a27e9be58e9702c3a5e3f990863dc83901
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987996"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763632"
 ---
 # <a name="icordebugmodulegetprocess-method"></a>ICorDebugModule::GetProcess 方法
 取得包含此模組的處理序。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetProcess (  
     [out] ICorDebugProcess **ppProcess  
 );  
@@ -46,4 +46,4 @@ HRESULT GetProcess (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

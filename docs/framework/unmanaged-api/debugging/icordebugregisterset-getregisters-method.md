@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b417685361126951470571e2440cc842ab1c94fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: daee6c46c247bcd21073f779cada8c843947a949
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782898"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747245"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters 方法
 取得每個暫存器值 （在電腦上目前正在執行的程式碼） 所指定的位元遮罩。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetRegisters (  
     [in] ULONG64       mask,   
     [in] ULONG32       regCount,  
@@ -60,7 +60,7 @@ HRESULT GetRegisters (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

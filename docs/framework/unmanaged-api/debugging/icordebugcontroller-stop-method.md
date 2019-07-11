@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 724db8c5c8dbb5bf3ff8bc7202a60397180b7b38
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83bb52f7f2035605914e2fe72ce2daf78de5bc1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749057"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749912"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop 方法
 在此程序中執行 managed 程式碼的所有執行緒上執行合作式的停駐點。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Stop (  
     [in] DWORD dwTimeoutIgnored  
 );  
@@ -54,6 +54,6 @@ HRESULT Stop (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 118e75cb28a4e474427f35f4516ec41850ebe99f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 94deb4eaeeec2400aebf397d391ce4b67c16989e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967709"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763892"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager 方法
 主應用程式已建立的應用程式定義域。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetAppDomainManager (  
     [in] DWORD     dwAppDomainID,  
     [in] IUnknown* pUnkAppDomainManager  
@@ -45,7 +45,7 @@ HRESULT SetAppDomainManager (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`SetAppDomainManager` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
@@ -66,7 +66,7 @@ HRESULT SetAppDomainManager (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

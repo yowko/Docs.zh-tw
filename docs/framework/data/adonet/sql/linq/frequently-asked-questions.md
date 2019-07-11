@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 07801ee7bfbb32540880cdc8599e5b69797b09f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610577"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743548"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 下列各節將解答實作 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 時可能會遇到的一些常見問題。  
@@ -53,7 +53,7 @@ ms.locfileid: "67610577"
  答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供多項工具來檢查它所產生的 SQL 程式碼。 最重要的其中一項工具就是 <xref:System.Data.Linq.DataContext.Log%2A>。 如需詳細資訊，請參閱 <<c0> [ 偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。  
   
 ## <a name="unexpected-stored-procedure-results"></a>未預期的預存程序結果  
- 問： 我有一個預存程序，它的傳回值是由 `MAX()` 計算的。 當我將預存程序拖曳到 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]介面時，傳回值不正確。  
+ 問： 我有一個預存程序，它的傳回值是由 `MAX()` 計算的。 當我將預存程序拖曳至 O/R 設計工具介面時，傳回的值不是正確的。  
   
  答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供兩種方式來藉由預存程序傳回資料庫產生的值。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "67610577"
 ## <a name="multiple-dbml-files"></a>多個 DBML 檔案  
  問： 當有多個 DBML 檔案共用一些資料表時，會發生編譯器錯誤。  
   
- 答： 設定**內容命名空間**並**實體命名空間**屬性[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]以區分每個 DBML 檔案的值。 這就可避免名稱/命名空間發生衝突。  
+ 答： 設定**內容命名空間**並**實體命名空間**物件關聯式設計工具從每個 DBML 檔案的相異值的屬性。 這就可避免名稱/命名空間發生衝突。  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>避免在插入或更新時明確設定資料庫產生的值  
  問： 我的資料庫資料表有個 `DateCreated` 資料行，它預設為 SQL `Getdate()`。 當我嘗試使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 插入新的資料錄時，值會設成 `NULL`。 但我本來預期它會設成資料庫預設值。  
@@ -117,7 +117,7 @@ ms.locfileid: "67610577"
 ## <a name="multiple-dataloadoptions"></a>多個 DataLoadOptions  
  問： 我可以指定其他載入選項，而不覆寫第一個載入選項嗎？  
   
- 答： 可以。 如下列範例所示，第一個選項不會被覆寫：  
+ 答： 是的。 如下列範例所示，第一個選項不會被覆寫：  
   
 ```vb  
 Dim dlo As New DataLoadOptions()  
@@ -134,10 +134,10 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="errors-using-sql-compact-35"></a>使用 SQL Compact 3.5 時發生錯誤  
  問： 當我將從 SQL Server Compact 3.5 資料庫資料表時，我會收到錯誤。  
   
- 答： [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]不支援 SQL Server Compact 3.5，不過[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]執行階段則。 在此情況下，您必須建立自己的實體類別，然後加入適當的屬性。  
+ 答： 物件關聯式設計工具不支援 SQL Server Compact 3.5，不過[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]執行階段則。 在此情況下，您必須建立自己的實體類別，然後加入適當的屬性。  
   
 ## <a name="errors-in-inheritance-relationships"></a>繼承關係發生錯誤  
- 問： 我在[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]中使用了工具箱繼承圖案來連接兩個實體，但發生錯誤。  
+ 問： 我在物件關聯式設計工具中使用工具箱繼承圖案來連接兩個實體，但是我收到錯誤。  
   
  答： 光是建立關係還不夠。 您還必須提供資訊，例如鑑別子資料行、基底類別鑑別子值以及衍生類別鑑別子值。  
   
@@ -163,7 +163,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3. 檢視預設 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)，判斷它是否為應用程式的正確值。  
   
     > [!CAUTION]
-    >  如果您使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，可能會覆寫您的變更。  
+    >  如果您在 Visual Studio 中使用物件關聯式設計工具，您的變更可能會覆寫。  
   
 ## <a name="aptca"></a>APTCA  
  問： System.Data.Linq 是否標示為供部分信任的程式碼使用？  

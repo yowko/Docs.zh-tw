@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dec04fa267c61798a3340e9d1e18150b812e9eaf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fc581904351443f4368a68a653fd39b3548999a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949002"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741424"
 ---
 # <a name="setpekind-method"></a>SetPEKind 方法
 決定可攜式執行檔的類型，特定電腦或機器無關。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetPEKind(  
     mdAssembly AssemblyID,  
     mdToken FileToken,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a19ea52007edcc1930a2be46059a35b9cbebdc52
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4432b17e5d9aa875d8346b3329cd618e15222040
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650401"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771028"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>IAssemblyCache::CreateAssemblyCacheItem 方法
 取得新的參考[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CreateAssemblyCacheItem (  
     [in]  DWORD dwFlags,  
     [in]  PVOID pvReserved,  
@@ -60,7 +60,7 @@ HRESULT CreateAssemblyCacheItem (
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

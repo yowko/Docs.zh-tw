@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c30115a23f7f73662c9b3f4f4a09d45478ad687
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995471"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759994"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress 方法
 傳回內部框架的堆疊位址。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);  
 ```  
   
@@ -40,7 +40,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功地傳回內部框架的位址。|  
 |E_FAIL|不會傳回內部框架的位址。|  
@@ -56,7 +56,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

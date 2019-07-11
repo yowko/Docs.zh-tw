@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 62c2774701b0bb4bc322d689fec43e312bc776a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4729a8d3ac2c6f7ec51a032a07ebfd1c2838cb9a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662908"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782899"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage 方法
 通知分析工具用戶端會將要求傳送到伺服器。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT RemotingClientSendingMessage(  
     [in] GUID *pCookie,  
     [in] BOOL fIsAsync);  
@@ -57,7 +57,7 @@ HRESULT RemotingClientSendingMessage(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

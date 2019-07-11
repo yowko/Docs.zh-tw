@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03b6f1b29157889d0e84e5dddc94d5e3ae27efce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8c0644dc247225c510e1c84254417551b490416
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989634"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739674"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform 列舉
 提供所使用的目標平台值[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorDebugPlatform  
 {  
     CORDB_PLATFORM_WINDOWS_X86,    // Windows on Intel x86  
@@ -43,7 +43,7 @@ typedef enum CorDebugPlatform
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |CORDB_PLATFORM_WINDOWS_X86|目標平台是在 Intel x86 硬體上執行的 Windows。|  
 |CORDB_PLATFORM_WINDOWS_AMD64|目標平台是在 AMD64 或 Intel EM64T 硬體上執行的 64 位元 Windows。|  
@@ -60,7 +60,7 @@ typedef enum CorDebugPlatform
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
  .NET Framework 4.5.2 及更新版本中有提供 `CORDB_PLATFORM_WINDOWS_ARM` 及 `CORDB_PLATFORM_MAC_AMD64` 成員。  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2caa9b48fc92a1b2e82f574d37d99758e19382c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fa385805d3e2dca8fef3e1490b2c67dd0583373
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777965"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755061"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 方法
 在目前的語彙範圍中定義單一變數。 可以多次呼叫這個方法在範圍中有多個定義域的相同名稱的變數。 在此情況下，不過，值`startOffset`和`endOffset`參數不得重疊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT DefineLocalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -65,10 +65,10 @@ HRESULT DefineLocalVariable2(
  [in]參數規格的第三個位址。  
   
  `startOffset`  
- [in]變數的起始位移。 這是選擇性參數。 如果是 0，會忽略這個參數，並在整個範圍定義的變數。 如果它是非零值時，變數會落在目前的範圍的位移。  
+ [in]變數的起始位移。 這個參數是選擇性的。 如果是 0，會忽略這個參數，並在整個範圍定義的變數。 如果它是非零值時，變數會落在目前的範圍的位移。  
   
  `endOffset`  
- [in]變數的結束位移。 這是選擇性參數。 如果是 0，會忽略這個參數，並在整個範圍定義的變數。 如果它是非零值時，變數會落在目前的範圍的位移。  
+ [in]變數的結束位移。 這個參數是選擇性的。 如果是 0，會忽略這個參數，並在整個範圍定義的變數。 如果它是非零值時，變數會落在目前的範圍的位移。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  

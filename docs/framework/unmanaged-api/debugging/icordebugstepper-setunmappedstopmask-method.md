@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da799b0d4f4e5e4b281445baa35d95f992ba0b63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0a273c54559e8e297e09740ba9c770ce12d72d1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987450"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760579"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>ICorDebugStepper::SetUnmappedStopMask 方法
 設定值，這個值會指定未對應的程式碼執行將會暫止的類型。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetUnmappedStopMask (  
     [in] CorDebugUnmappedStop   mask  
 );  
@@ -53,4 +53,4 @@ HRESULT SetUnmappedStopMask (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

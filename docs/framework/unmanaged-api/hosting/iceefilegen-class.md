@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6fb0b11c26ff65f74681d1e3bf7324bfb0e559d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985357"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766619"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 類別
 提供建立原生可攜式執行檔 (PE) 的功能。 介面將通常用於由編譯器產生可執行其編譯的輸出。  
@@ -33,7 +33,7 @@ ms.locfileid: "61985357"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 class ICeeFileGen {  
 public:  
     virtual HRESULT CreateCeeFile(HCEEFILE *ceeFile);  

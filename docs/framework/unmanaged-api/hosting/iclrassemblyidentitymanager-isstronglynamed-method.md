@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 166583f690fc7ed80f80cf2cf5cd5b0348708cc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9d201c3753a8e71ea3da0b0f4f8a3a47e5bcee2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970153"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773381"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>ICLRAssemblyIdentityManager::IsStronglyNamed 方法
 取得值，指出是否指定的組件強式名稱。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 RESULT IsStronglyNamed (  
     [in]  LPCWSTR  pwzAssemblyIdentity,  
     [out] BOOL    *pbIsStronglyNamed  
@@ -61,7 +61,7 @@ RESULT IsStronglyNamed (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

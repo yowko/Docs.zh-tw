@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60997717baf70e10366e7f0ba6a06daa1f35f8cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36947eb33460fe3f15cf4ade1cad55cb5e77f1cc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763382"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770225"
 ---
 # <a name="iclrtask2endpreventasyncabort-method"></a>ICLRTask2::EndPreventAsyncAbort 方法
 可讓新的或暫止的執行緒中止要求，導致執行緒中止目前的執行緒上。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EndPreventAsyncAbort();  
 ```  
   
@@ -55,7 +55,7 @@ HRESULT EndPreventAsyncAbort();
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

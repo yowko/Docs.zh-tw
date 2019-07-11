@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c32dcfe5d00e1d35f7c63aa98a33d26f6b179c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 62c44d0c3bd2e931b1708abb48bc9c854431419f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152681"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751145"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes 方法
 列舉在目前的中繼資料範圍內的組件資訊清單中參考的匯出的類型。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EnumExportedTypes (  
     [in, out] HCORENUM     *phEnum,   
     [out] mdExportedType   rExportedTypes[],   
@@ -53,7 +53,7 @@ HRESULT EnumExportedTypes (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumExportedTypes` 已成功傳回。|  
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTokens`設為零。|  
@@ -65,7 +65,7 @@ HRESULT EnumExportedTypes (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

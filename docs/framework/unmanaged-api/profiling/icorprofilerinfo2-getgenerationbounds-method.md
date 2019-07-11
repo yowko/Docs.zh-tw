@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 310bde2889f8a383fde88cb1bbffce9bad157399
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: eee04315e18a6e0442271858b75783a081468f90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268001"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776711"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds 方法
 取得記憶體區域，也就是堆積的區段，會組成各種記憶體回收層代。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetGenerationBounds(  
     [in]  ULONG cObjectRanges,  
     [out] ULONG *pcObjectRanges,  
@@ -47,7 +47,7 @@ HRESULT GetGenerationBounds(
  [out]陣列[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)結構，其中每個正在進行記憶體回收的層代中描述的記憶體範圍 （亦即區塊）。  
   
 ## <a name="remarks"></a>備註  
- `GetGenerationBounds` 方法可以從任何分析工具回呼中呼叫，前提是尚未進行記憶體回收。
+           `GetGenerationBounds` 方法可以從任何分析工具回呼中呼叫，前提是尚未進行記憶體回收。
 
  多數層代移位發生在記憶體回收期間。 層代可能會在回收之間成長，但通常不會移動。 因此，呼叫 `GetGenerationBounds` 最有趣的地方位於 `ICorProfilerCallback2::GarbageCollectionStarted` 和 `ICorProfilerCallback2::GarbageCollectionFinished`。  
   

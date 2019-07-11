@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eda214200ca4c3837ad89ed14887ef6b09af7d30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0eacb4b0a06fbe086935b59eba7d33135b6bef19
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995276"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759719"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>ICorDebugManagedCallback::CreateProcess 方法
 已附加或第一次啟動處理程序時，請告知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CreateProcess (  
     [in] ICorDebugProcess *pProcess  
 );  
@@ -49,7 +49,7 @@ HRESULT CreateProcess (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ffd1fcc36f0c6cc3c5f063c5a916e8918839566
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6c1efe2a7d831f26556dbf501176f02588f2e0d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041362"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780330"
 ---
 # <a name="icorprofilerfunctionenumclone-method"></a>ICorProfilerFunctionEnum::Clone 方法
 取得介面指標，這一份[ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)介面。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);  
 ```  
   
@@ -44,7 +44,7 @@ HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

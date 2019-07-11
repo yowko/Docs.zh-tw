@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0ce1d8c0074f62d35e16465b368269e233a713b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d672cf2375a5354c48608b3e4156867ba406992a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993521"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765023"
 ---
 # <a name="icorpublishenumclone-method"></a>ICorPublishEnum::Clone 方法
 建立一份這[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Clone (  
     [out] ICorPublishEnum   **ppEnum  
 );  
@@ -46,7 +46,7 @@ HRESULT Clone (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

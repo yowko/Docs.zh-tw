@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd3b977a894f8cb1fc9a866f5a43265d917db513
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d231595ab2c7b41d1a24f654e9785b90b34ac780
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645561"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744498"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>ICorDebugAssembly2::IsFullyTrusted 方法
 取得值，指出是否將組件是否已授與完全信任執行階段安全性系統。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT IsFullyTrusted(  
     [out] BOOL *pbFullyTrusted  
 );  
@@ -49,4 +49,4 @@ HRESULT IsFullyTrusted(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c0be35772b10d89f90da5b33f47aa781034b13a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34c0ab32d18d5aeeb81befa736cc42b678b11fb1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698079"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738544"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue 方法
 設定執行緒區域儲存區 (TLS) 的目標處理序中指定的執行緒中的值。 這個方法是由通用語言執行平台 (CLR) 資料存取服務呼叫。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetTLSValue (  
     [in] ULONG32            threadID,  
     [in] ULONG32            index,  
@@ -57,7 +57,7 @@ HRESULT SetTLSValue (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d38c32c4ed938de4a517009c5a76310df6d39fb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9279e50630ea074b70955ca8ed218cd39a613b58
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586744"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781296"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 函式
 通知分析工具的控制項傳遞至函式。  
@@ -31,7 +31,7 @@ ms.locfileid: "64586744"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void __stdcall FunctionEnter (  
     [in]  FunctionID funcID  
 );  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05c35c810630897e4a7bd28e1cbe8cedefefb1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eebb0c39cb8ae69dfce1e865f2784bbe9a408786
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996199"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737840"
 ---
 # <a name="icordebugappdomaingetprocess-method"></a>ICorDebugAppDomain::GetProcess 方法
 取得包含應用程式定義域的處理序。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetProcess (  
     [out] ICorDebugProcess   **ppProcess  
 );  
@@ -46,4 +46,4 @@ HRESULT GetProcess (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

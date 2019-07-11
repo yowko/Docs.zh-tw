@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f005ee9d3d9d4b8977cd6a1838fe46015e604df5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584493"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777477"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 方法
 取得定義在指定的範圍內，也就是目前範圍以外的類型中繼資料語彙基元。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT DefineTypeRefByName (   
     [in]  mdToken     tkResolutionScope,   
     [in]  LPCWSTR     szName,   
@@ -64,7 +64,7 @@ HRESULT DefineTypeRefByName (
   
  **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

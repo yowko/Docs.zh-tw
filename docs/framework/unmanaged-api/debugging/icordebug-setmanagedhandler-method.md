@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88f30089879f2d023c8fb04b52e75b2942da2a83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 90eb63b277f5c40053ecc3939890c87adc145251
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786343"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738127"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler 方法
 指定 managed 事件的事件處理常式物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetManagedHandler (  
     [in] ICorDebugManagedCallback     *pCallback  
 );  
@@ -51,7 +51,7 @@ HRESULT SetManagedHandler (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

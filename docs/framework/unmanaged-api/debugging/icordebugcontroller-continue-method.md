@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eacffe5769bc77ab626f6adbc99db1137da565f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3a4e98a7265bda288b20b1cee1a10ab11990e8e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749666"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748880"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 方法
 之後繼續執行的受管理的執行緒呼叫[Stop 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Continue (  
     [in] BOOL fIsOutOfBand  
 );  
@@ -55,6 +55,6 @@ HRESULT Continue (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

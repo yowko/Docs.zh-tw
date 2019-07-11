@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d99f4f0615e7d25991b37030b7cb609985192f
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: a0f7989765dcec4c405d168d5fa3d082bc30512f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910675"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779839"
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>ICLRPolicyManager::SetActionOnTimeout 方法
 指定當指定的作業逾時，應該採取 common language runtime (CLR) 的原則動作。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetActionOnTimeout (  
     [in] EClrOperation operation,  
     [in] EPolicyAction action  
@@ -53,7 +53,7 @@ HRESULT SetActionOnTimeout (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`SetActionOnTimeout` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
@@ -81,7 +81,7 @@ HRESULT SetActionOnTimeout (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

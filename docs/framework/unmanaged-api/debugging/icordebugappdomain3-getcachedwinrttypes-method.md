@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e2685d17f3dd32db295f926fc19121d29e1752
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4ba981d86f90af449820ce13aa847169ca877429
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025922"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737768"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypes-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypes 方法
 取得所有快取的 Windows 執行階段類型的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetCachedWinRTTypes (   
     [out] ICorDebugGuidToTypeEnum **ppGuidToTypeEnum)  
 ;  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c631a0a3abb3cb2a342dfd44fdffb147b742ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a984e8645bec0f58d8a31965b762e0a3a190ba59
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698118"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768026"
 ---
 # <a name="corgcthreadstatstypes-enumeration"></a>COR_GC_THREAD_STATS_TYPES 列舉
 表示執行緒的記憶體回收集合統計資料。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     COR_GC_THREAD_HAS_PROMOTED_BYTES  = 0x00000001  
 } COR_GC_THREAD_STATS_TYPES;  
@@ -36,7 +36,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`COR_GC_THREAD_HAS_PROMOTED_BYTES`|執行緒已升級最新的記憶體回收集合中的位元組。|  
   
@@ -45,7 +45,7 @@ typedef enum {
   
  **標頭：** GCHost.idl GCHost.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

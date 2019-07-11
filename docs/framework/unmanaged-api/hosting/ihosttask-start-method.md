@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d45c5b09358430535438734b38e5dce5d1bcdd3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bc996973a98f3b8596b449e1524d5c93b4456e3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789489"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749803"
 ---
 # <a name="ihosttaskstart-method"></a>IHostTask::Start 方法
 要求主機移到表示由目前的工作[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體處於可以執行程式碼的即時狀態從已暫停。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Start ();  
 ```  
   
@@ -50,7 +50,7 @@ HRESULT Start ();
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

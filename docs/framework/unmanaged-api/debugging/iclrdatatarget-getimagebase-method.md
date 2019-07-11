@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e823911280f52e16c745c9c77fe17b49bd35dc0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dbb655d6ed0b9bd88c5eedf61a191401a805fb3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698274"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738764"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase 方法
 取得指定的映像的基底的記憶體位址。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetImageBase (  
     [in, string] LPCWSTR    imagePath,  
     [out] CLRDATA_ADDRESS   *baseAddress  
@@ -53,7 +53,7 @@ HRESULT GetImageBase (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

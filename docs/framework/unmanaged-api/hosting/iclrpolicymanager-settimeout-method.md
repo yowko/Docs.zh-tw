@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6226999097c7875f66bf489af283825fbcd0f9be
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d9c2ebb2bc9c1137a4e3716d98387278959f77d2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627153"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757327"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout 方法
 設定指定之作業的逾時值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetTimeout (  
     [in] EClrOperation operation,  
     [in] DWORD dsMilliseconds  
@@ -70,7 +70,7 @@ HRESULT SetTimeout (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

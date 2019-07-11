@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c04a08c9712359453b9c5a9d136e22e1de8648a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040582"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746501"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 函式
 判斷目前類別或執行個體衍生自指定的父類別。
@@ -30,7 +30,7 @@ ms.locfileid: "62040582"
     
 ## <a name="syntax"></a>語法  
   
-```
+```cpp
 HRESULT InheritsFrom (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -68,7 +68,7 @@ HRESULT InheritsFrom (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

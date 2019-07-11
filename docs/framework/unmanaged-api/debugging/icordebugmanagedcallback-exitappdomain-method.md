@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aed6ccd938761385aafd21802829bd741847b4ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1e045c475b57f863071eb81194868b7db3c5a3c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988197"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755804"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain 方法
 已結束應用程式定義域會告知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ExitAppDomain (  
     [in] ICorDebugProcess   *pProcess,  
     [in] ICorDebugAppDomain *pAppDomain  
@@ -50,7 +50,7 @@ HRESULT ExitAppDomain (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

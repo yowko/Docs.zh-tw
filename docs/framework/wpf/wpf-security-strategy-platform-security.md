@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663570"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756766"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全性策略 – 平台安全性
 雖然 Windows Presentation Foundation (WPF) 提供各種安全性服務，它也會運用基礎的平台，包括作業系統、 安全性功能[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]，和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]。 這三層安全性功能一起為 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供了強大、深入防禦的安全性模型，即使其中一層失敗，還有兩層可以幫忙把關，如下圖所示：  
@@ -33,7 +33,7 @@ ms.locfileid: "67663570"
 
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>作業系統安全性  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 需要的最低作業系統層級是 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]。 核心[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]提供數個所有的 Windows 應用程式，包括與內建的安全性基礎的安全性功能[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 加入 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 的安全性功能，並做進一步擴充。 本主題會詳細討論這些對 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 至為重要的安全性功能，以及 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 如何整合這些功能來提供進一步的深入防禦。  
+           [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 需要的最低作業系統層級是 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]。 核心[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]提供數個所有的 Windows 應用程式，包括與內建的安全性基礎的安全性功能[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 加入 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 的安全性功能，並做進一步擴充。 本主題會詳細討論這些對 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 至為重要的安全性功能，以及 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 如何整合這些功能來提供進一步的深入防禦。  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
@@ -90,7 +90,7 @@ ms.locfileid: "67663570"
   
 <a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>Common Language Runtime 安全性  
- [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] 提供一些重要的安全性優點，包括驗證 (Validation 和 Verification)、[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 和安全性關鍵方法。  
+           [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] 提供一些重要的安全性優點，包括驗證 (Validation 和 Verification)、[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 和安全性關鍵方法。  
   
 <a name="Validation_and_Verification"></a>   
 ### <a name="validation-and-verification"></a>驗證 (Validation 和 Verification)  
@@ -112,7 +112,7 @@ ms.locfileid: "67663570"
   
 <a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>程式碼存取安全性  
- 用戶端電腦公開了可供 Managed 應用程式存取的各種資源，包括檔案系統、登錄、列印服務、使用者介面、反映和環境變數。 受管理的應用程式可以存取任何用戶端電腦上的資源之前，它必須具備.NET Framework 權限，若要這樣做。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 中的權限是 <xref:System.Security.CodeAccessPermission> 的子類別；[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 會針對 Managed 應用程式可存取的每個資源各實作一個子類別。  
+ 用戶端電腦公開了可供 Managed 應用程式存取的各種資源，包括檔案系統、登錄、列印服務、使用者介面、反映和環境變數。 受管理的應用程式可以存取任何用戶端電腦上的資源之前，它必須具備.NET Framework 權限，若要這樣做。           [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 中的權限是 <xref:System.Security.CodeAccessPermission> 的子類別；[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 會針對 Managed 應用程式可存取的每個資源各實作一個子類別。  
   
  當 Managed 應用程式開始執行時，[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 會授與應用程式一組權限，稱為權限集合，其中的權限會由應用程式提供的辨識項來決定。 如果是 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 應用程式，所提供的辨識項就是應用程式啟動的位置 (或區域)。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 可識別下列區域：  
   
@@ -126,7 +126,7 @@ ms.locfileid: "67663570"
   
 - **限制的網站**。 使用者指定不要信任的應用程式 (未受信任)。  
   
- [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 會針對上述每個區域各提供一個預先定義的權限集合，而每個權限集合都包含符合其區域信任層級的權限。 它們包括：  
+           [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 會針對上述每個區域各提供一個預先定義的權限集合，而每個權限集合都包含符合其區域信任層級的權限。 它們包括：  
   
 - **FullTrust**。 從啟動的應用程式**我的電腦**區域。 會授與所有可能的權限。  
   
@@ -140,14 +140,14 @@ ms.locfileid: "67663570"
   
  ![此圖顯示 CAS 權限集合。](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- 網際網路區域安全性沙箱的限制會平等套用至 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 從系統程式庫 (包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]) 匯入的所有程式碼。 如此可確保程式碼的每個位元都被鎖定，即使是 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 也一樣。 不幸的是，[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 若要能夠執行，其須執行之功能所需要的權限比網際網路區域安全性沙箱所啟用的還要多。  
+ 網際網路區域安全性沙箱的限制會平等套用至 XBAP 會從系統程式庫匯入的任何程式碼包括[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 如此可確保程式碼的每個位元都被鎖定，即使是 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 也一樣。 不幸的是，若要能夠執行，XBAP 需要執行需要超出所啟用的網際網路區域安全性沙箱的權限的功能。  
   
- 假設有個 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 應用程式包含下列頁面：  
+ 請考慮 XBAP 應用程式包含下列頁面：  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- 若要執行這個 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]，基礎 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 程式碼必須執行比發出呼叫的 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 可以取得的功能還多的功能，其中包括：  
+ 若要執行這項基礎的 XBAP[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]程式碼必須執行更多的功能，比能夠呼叫的 XBAP，包括：  
   
 - 建立用於呈現的視窗控制代碼 (HWND)  
   
@@ -157,7 +157,7 @@ ms.locfileid: "67663570"
   
  從安全性觀點來看，允許沙箱化應用程式直接存取上述任何作業將會引發十分嚴重的後果。  
   
- 好在 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 已經考慮到這種情況，它會允許這些作業以代表沙箱化應用程式的更高權限來執行。 一切[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]作業會針對應用程式定義域的有限網際網路區域安全性權限檢查[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]， [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] （就像其他系統程式庫） 會授與權限集合，其中包含所有可能權限。
+ 好在 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 已經考慮到這種情況，它會允許這些作業以代表沙箱化應用程式的更高權限來執行。 一切[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]作業會針對 XBAP，應用程式定義域的有限網際網路區域安全性權限檢查[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]（就像其他系統程式庫） 會授與權限集合，其中包含所有可能的權限。
   
  這表示 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 必須得到更高的權限，同時又要避免這些權限受到主應用程式定義域之 [網際網路] 區域權限集合的控制。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "67663570"
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- **Assert**基本上可防止不受限制所需的權限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]限制透過網際網路區域權限的[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]。  
+ **Assert**基本上可防止不受限制所需的權限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]限制透過網際網路區域權限的 XBAP。  
   
  平台的觀點而言，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]負責使用**Assert**正確; 的用法不正確**Assert**可讓惡意程式碼提高權限。 因此，很重要，然後才呼叫**Assert**需要時，並確保沙箱限制保持不變。 例如，沙箱化程式碼不可以開啟隨機檔案，但可以使用字型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 可讓沙箱化應用程式使用字型功能，藉由呼叫**Assert**，以及[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]來讀取已知含有這些字型代表沙箱化應用程式檔案。  
   
@@ -178,11 +178,11 @@ ms.locfileid: "67663570"
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>安全性關鍵方法  
- 使用權限來對 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 應用程式啟用網際網路區域沙箱的 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 程式碼，必須盡可能以最高度的安全性稽核和控制來保存。 為了滿足此需求，.NET Framework 會提供新的支援，來管理需要提高權限的程式碼。 具體而言，[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]可讓您識別需要提高權限的程式碼，並將其與標示<xref:System.Security.SecurityCriticalAttribute>; 的任何程式碼未標示有<xref:System.Security.SecurityCriticalAttribute>會變成*透明*透過這種方法。 相反地，未標記為 <xref:System.Security.SecurityCriticalAttribute> 的 Managed 程式碼將無法提高權限。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]使用權限來啟用網際網路區域沙箱的 XBAP 應用程式必須保存盡可能以最高度的安全性稽核和控制的程式碼。 為了滿足此需求，.NET Framework 會提供新的支援，來管理需要提高權限的程式碼。 具體而言，[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]可讓您識別需要提高權限的程式碼，並將其與標示<xref:System.Security.SecurityCriticalAttribute>; 的任何程式碼未標示有<xref:System.Security.SecurityCriticalAttribute>會變成*透明*透過這種方法。 相反地，未標記為 <xref:System.Security.SecurityCriticalAttribute> 的 Managed 程式碼將無法提高權限。  
   
  安全性關鍵方法可讓組織[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]需要提高權限到的程式碼*安全性關鍵核心*，其餘步驟當作透明。 隔離安全性關鍵的程式碼可讓[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]工程團隊專心超越標準的安全性做法安全性關鍵核心進行額外的安全性分析和原始檔控制 (請參閱[WPF 安全性策略-安全性工程](wpf-security-strategy-security-engineering.md))。  
   
- 請注意 .NET Framework 允許受信任的程式碼來擴充[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]網際網路區域沙箱，可讓開發人員撰寫 managed 組件標記為<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 並部署至使用者的全域組件快取 (GAC)。 在組件上標記 APTCA 是一項極為敏感的安全性作業，因為這可讓任何程式碼 (包括來自網際網路的惡意程式碼) 呼叫該組件。 執行這項操作時請謹慎為之，一定要採取最佳做法，而且使用者必須選擇信任該軟體才能安裝軟體。  
+ 請注意 .NET Framework 允許受信任的程式碼，以擴充 XBAP 網際網路區域沙箱，開發人員撰寫 managed 組件標記為<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 並部署至使用者的全域組件快取 (GAC)。 在組件上標記 APTCA 是一項極為敏感的安全性作業，因為這可讓任何程式碼 (包括來自網際網路的惡意程式碼) 呼叫該組件。 執行這項操作時請謹慎為之，一定要採取最佳做法，而且使用者必須選擇信任該軟體才能安裝軟體。  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 安全性  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 791827b9c4b60cb2ee963881bc8e1a6131cd00fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3345e2e87ba41f750031deed2d15e13dbe4f06c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992195"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769300"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly 方法
 通知分析工具模組，附加到其父組件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ModuleAttachedToAssembly(  
     [in] ModuleID   moduleId,  
     [in] AssemblyID AssemblyId);  
@@ -52,7 +52,7 @@ HRESULT ModuleAttachedToAssembly(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

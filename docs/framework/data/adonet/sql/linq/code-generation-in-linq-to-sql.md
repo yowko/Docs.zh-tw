@@ -2,15 +2,15 @@
 title: LINQ to SQL 中的程式碼產生
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbc70669b9c03b59468f4f6a67c1f73432883193
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903275"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743609"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的程式碼產生
-您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令列工具，來產生表示資料庫的程式碼。 無論使用哪種工具，端對端程式碼產生都可分為三個階段：  
+您可以產生程式碼，以表示資料庫的使用物件關聯式設計工具或 SQLMetal 命令列工具。 無論使用哪種工具，端對端程式碼產生都可分為三個階段：  
   
 1. *DBML 擷取器*從資料庫擷取結構描述資訊，並重新組合成 XML 格式的 DBML 檔案的資訊。  
   
@@ -18,7 +18,7 @@ ms.locfileid: "61903275"
   
 3. 如果沒有發現驗證錯誤，檔案會傳遞給程式碼產生器。  
   
- 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 使用 Visual Studio 的開發人員也可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]產生程式碼。 請參閱[LINQ to SQL 工具，在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 使用 Visual Studio 的開發人員也可以使用物件關聯式設計工具來產生程式碼。 請參閱[LINQ to SQL 工具，在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
 ## <a name="dbml-extractor"></a>DBML 擷取器  
  DBML 擷取器是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]會做為輸入的資料庫中繼資料，並產生輸出成 DBML 檔案的元件。  

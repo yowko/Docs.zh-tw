@@ -2,18 +2,18 @@
 title: 依逐步解說學習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582912"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743027"
 ---
 # <a name="learning-by-walkthroughs"></a>依逐步解說學習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件提供了幾個逐步解說。 本主題會處理某些一般逐步解說問題 (包含疑難排解)，並提供數個入門級逐步解說的連結，供您學習 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。  
   
 > [!NOTE]
->  這節「使用者入門」中的逐步解說提供了支援 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術的基本程式碼。 在實務中，您通常會使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 Windows Form 專案來實作 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式。 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 文件提供了針對此目的的範例和逐步解說。  
+>  這節「使用者入門」中的逐步解說提供了支援 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術的基本程式碼。 在實務中，您通常會使用物件關聯式設計工具] 和 [Windows Form 專案來實作您[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]應用程式。 O/R 設計工具文件會提供範例和逐步解說針對此目的。  
   
 ## <a name="getting-started-walkthroughs"></a>使用者入門逐步解說  
  本節有數個逐步解說可供使用。 這些逐步解說是以 Northwind 範例資料庫為基礎，而且會以緩和的步調簡單呈現 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 功能。  
@@ -57,7 +57,7 @@ ms.locfileid: "64582912"
   
 2. 在左窗格中**SQL Server 組態管理員**，按一下**SQL Server 2005 服務**。  
   
-3. 在右窗格中，以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)**，然後按一下**屬性**。  
+3. 在右窗格中，以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)** ，然後按一下**屬性**。  
   
 4. 按一下 **登入**索引標籤，並確認您試圖登入伺服器的方式。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "64582912"
   
 1. 在左窗格中**SQL Server 組態管理員**，按一下**SQL Server 2005 服務**。  
   
-2. 在右窗格中，以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)**，然後按一下**停止**。  
+2. 在右窗格中，以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)** ，然後按一下**停止**。  
   
-3. 以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)**，然後按一下**重新啟動**。  
+3. 以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)** ，然後按一下**重新啟動**。  
   
 ## <a name="see-also"></a>另請參閱
 

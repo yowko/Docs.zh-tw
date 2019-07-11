@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2fecc7160cb41e31bf88f1a461265ad8fdce166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2042d0936359a85d203375c42be0d8a096f004e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792700"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739757"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 列舉
 提供如何取得指令指標 (IP) 值的詳細資料。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorDebugMappingResult {  
     MAPPING_PROLOG              = 0x1,  
     MAPPING_EPILOG              = 0x2,  
@@ -60,7 +60,7 @@ typedef enum CorDebugMappingResult {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

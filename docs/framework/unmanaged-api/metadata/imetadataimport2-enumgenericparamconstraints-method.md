@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f66b0145dbaece7292d2ccad169a97fbb10b6d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ba9d7f8873d15a7cab2b9893feb8563dfc971b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959570"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778756"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints 方法
 取得與指定的語彙基元所代表的泛型參數相關聯的泛型參數條件約束的陣列的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EnumGenericParamConstraints (  
     [in, out] HCORENUM                *phEnum,  
     [in]  mdGenericParam              tk,  
@@ -57,7 +57,7 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumGenericParameterConstraints` 已成功傳回。|  
 |`S_FALSE`|`phEnum` 有沒有成員項目。 在此情況下，`pcGenericParameterConstraints`設為 0 （零）。|  
@@ -69,7 +69,7 @@ HRESULT EnumGenericParamConstraints (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

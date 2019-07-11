@@ -19,19 +19,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08f34822099468b8c52f1d7ea2c665205f1b6c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986709"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774427"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 方法
 列舉遠端電腦上所執行之指定處理序中的 Common Language Runtime (CLR)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EnumRuntimes (  
       [in] DWORD       dwInternalProcessID,  
       [out] DWORD*     pcRuntimes,  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e228cfbdade420c4d5248ffd417c6131083ee74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fdfe33c5b488d8f464001a86233124d4e7df0ed
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697273"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779076"
 ---
 # <a name="corgcstattypes-enumeration"></a>COR_GC_STAT_TYPES 列舉
 指定要記錄的記憶體回收的統計資料。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     COR_GC_COUNTS                 = 0x00000001  
     COR_GC_MEMORYUSAGE            = 0x00000002  
@@ -40,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`COR_GC_COUNTS`|記錄執行每個層代記憶體回收的數目。|  
 |`COR_GC_MEMORYUSAGE`|記錄的記憶體使用量和記憶體回收集合大小統計資料。|  
@@ -50,7 +50,7 @@ typedef enum {
   
  **標頭：** GCHost.idl GCHost.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

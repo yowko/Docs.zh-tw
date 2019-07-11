@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d4797c952bfec4e0863e7a12b97e038c7ff8d95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d40b997cd2b07cfc86e7671f7d7d2fcf9bd9c60a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191519"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772758"
 ---
 # <a name="imetadataassemblyimportgetassemblyfromscope-method"></a>IMetaDataAssemblyImport::GetAssemblyFromScope 方法
 取得目前範圍中的組件的指標。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetAssemblyFromScope (  
     [out] mdAssembly  *ptkAssembly  
 );  
@@ -46,7 +46,7 @@ HRESULT GetAssemblyFromScope (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

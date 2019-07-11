@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8466de39f2f2769fec332290c187ecba396d7d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f08b3d9634362d47615fe14287ab9ec35e78ee65
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597409"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775052"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount 方法
 取得集合中的凍結物件總數。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetCount (  
     [out] ULONG   *pcelt  
 );  
@@ -48,7 +48,7 @@ HRESULT GetCount (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

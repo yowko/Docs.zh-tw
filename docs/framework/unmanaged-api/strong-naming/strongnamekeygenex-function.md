@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 736e537a3f773acbd61dbad013b8dfb7cc429076
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d2ed9ba4b580b8f64fc05dbb429742442a36acf5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666022"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757459"
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx 函式
 會產生新公用/私密金鑰組以指定的金鑰大小，用於強式名稱。  
@@ -30,7 +30,7 @@ ms.locfileid: "64666022"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 BOOLEAN StrongNameKeyGenEx (  
     [in]  LPCWSTR   wszKeyContainer,  
     [in]  DWORD     dwFlags,  
@@ -77,7 +77,7 @@ BOOLEAN StrongNameKeyGenEx (
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

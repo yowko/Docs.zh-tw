@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c39ad4638c7db45c481bd3dfccb0a82759397aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aeb4c9935d5e9e4063497dd56276edfe6e62752a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771744"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765595"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>ICLRRuntimeInfo::GetDefaultStartupFlags 方法
 取得啟動旗標和將用來啟動執行階段的主機組態檔。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetDefaultStartupFlags(  
      [out]  DWORD *pdwStartupFlags,  
      [out, size_is(*pcchHostConfigFile)] LPWSTR pwzHostConfigFile,  
@@ -49,7 +49,7 @@ HRESULT GetDefaultStartupFlags(
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
   
@@ -63,7 +63,7 @@ HRESULT GetDefaultStartupFlags(
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

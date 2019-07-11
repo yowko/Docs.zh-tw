@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54652727b4684d71068a19eb5eeb2e862f413f25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ea71439c9a6c494c218a7cfc18508f4f8173b03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609252"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740381"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason 列舉
 指定給定物件上封鎖執行緒的原因。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 Typedef enum CorDebugBlockingReason  
 {  
    BLOCKING_NONE = 0  
@@ -39,7 +39,7 @@ Typedef enum CorDebugBlockingReason
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`BLOCKING_NONE`|僅供內部使用。|  
 |`BLOCKING_MONITOR_CRITICAL_SECTION`|執行緒嘗試取得監視器鎖定物件相關聯之重要區段。 通常，這發生於當您呼叫其中一個<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>或<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>方法。|  
@@ -55,7 +55,7 @@ Typedef enum CorDebugBlockingReason
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

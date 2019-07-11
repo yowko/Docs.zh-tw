@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db119a94cb7df29697836ffda240c29a86922d60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b329d096a23df673de038036fa5ea196cbe0eac
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940305"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736067"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod 方法
 取得這個方法有幾行中的文件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetDocumentsForMethod(  
     [in]  ULONG32  cDocs,  
     [out] ULONG32  *pcDocs,   

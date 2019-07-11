@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0f4a1de47670c59f2794feecd0be301a68b8724
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15269646e967d3b260b305db5999a7b5e63be33b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613802"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736431"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting 方法
 啟用或停用虛擬模組分割。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EnableVirtualModuleSplitting(  
    BOOL enableSplitting  
 );  
@@ -110,7 +110,7 @@ HRESULT EnableVirtualModuleSplitting(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

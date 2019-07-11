@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f396881ef16f63eaf198aec168e5e94ed887698b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e18097dd380ee354e5652886544d40da074f1230
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750317"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747619"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 方法
 取得指定的函式，針對 反組譯碼格式化的所有程式碼。 這個方法已被取代，在.NET Framework 2.0 版。 使用[ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)改。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetCode (  
     [in] ULONG32     startOffset,   
     [in] ULONG32     endOffset,  

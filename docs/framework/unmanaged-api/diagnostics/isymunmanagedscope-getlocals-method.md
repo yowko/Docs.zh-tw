@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 625609d8632f1f73ee2ec01e3b2e0e1af7e4a134
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e45f5411d48032b86403e35358d7ce83d5f97c6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986241"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777918"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals 方法
 取得此範圍內定義的本機變數。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetLocals(  
     [in]  ULONG32  cLocals,  
     [out] ULONG32  *pcLocals,  

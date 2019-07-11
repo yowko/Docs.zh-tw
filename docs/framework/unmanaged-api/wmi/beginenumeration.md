@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07396428dafbaa76e7771a4022bb493768f9f6c1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5ccf39c019094d896ca20534fccbbccf38ab1dd3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636796"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761810"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函式
 將列舉值重設回列舉的開頭。  
@@ -30,7 +30,7 @@ ms.locfileid: "65636796"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT BeginEnumeration (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -68,7 +68,7 @@ HRESULT BeginEnumeration (
 
 **群組 1**
 
-|常數  |值  |描述  |
+|常數  |值  |說明  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | 包含構成只在索引鍵的屬性。 |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | 包含僅限物件參考的屬性。 |
@@ -92,7 +92,7 @@ HRESULT BeginEnumeration (
 
 執行個體：
 
-常數  |值  |描述  |
+常數  |值  |說明  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制屬性所定義或修改在類別本身的列舉型別。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制列舉型別繼承自基底類別的屬性。 |
@@ -102,7 +102,7 @@ HRESULT BeginEnumeration (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

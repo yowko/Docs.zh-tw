@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aab42e939651d75b1933962d72ba8bec1090f52d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a820d5d742c722b495a5a4b3952450a0434110fd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753455"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741557"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly 方法
 關閉組件檔案。 關閉所有其他檔案之後, 但在關閉的組件檔案之前，請呼叫這個方法。 請勿呼叫這個方法的未繫結的模組。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT PreCloseAssembly(  
     mdAssembly AssemblyID  
 ) PURE;  

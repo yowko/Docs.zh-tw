@@ -19,19 +19,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7407db297a827004c851b904b2da8652778cb08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f97e90e3953a01f07d77e604628fbdb79eb9efa0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756412"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779172"
 ---
 # <a name="corexemain-function"></a>_CorExeMain 函式
 初始化 common language runtime (CLR)，在可執行組件的 CLR 標頭，尋找 managed 的進入點，並開始執行。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 __int32 STDMETHODCALLTYPE _CorExeMain ();  
 ```  
   
@@ -51,7 +51,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

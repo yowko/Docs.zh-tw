@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 028ca0b9cb917d3e6cc0242cbc8c3f4a5a19ab39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 684d5e41e1d7cee2775aa0988d33a974315eac4e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760099"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772734"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery 方法
 可做為對應的 Win32 函式的邏輯包裝函式。 Win32 實作`VirtualQuery`擷取呼叫處理序虛擬位址空間中的頁面範圍的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT VirtualQuery (  
     [in]  void*    lpAddress,  
     [out] void*    lpBuffer,  
@@ -75,7 +75,7 @@ HRESULT VirtualQuery (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

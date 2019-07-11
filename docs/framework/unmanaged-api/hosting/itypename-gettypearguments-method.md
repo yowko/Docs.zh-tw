@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4cd4fa8f4ba2bea5a2a853544eae6239bfaaeba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4c56f6a2eecb614d2d8fbc7c402e90a7cb3ff7d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917576"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753207"
 ---
 # <a name="itypenamegettypearguments-method"></a>ITypeName::GetTypeArguments 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetTypeArguments (  
     [in] DWORD           count,  
     [out] ITypeName**    rgpArguments,  
@@ -44,7 +44,7 @@ HRESULT GetTypeArguments (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

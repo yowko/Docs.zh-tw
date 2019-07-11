@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01c0f9ca0299e817618d93133c0eaca9fc63788e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 705771bb04088edf8276bf36432ef88ff288ba34
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767503"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751738"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize 函式
 傳回強式名稱簽章的大小。 `StrongNameSignatureSize` 通常是由編譯器決定要建立的延遲簽署組件時，檔案中保留多少空間。  
@@ -30,7 +30,7 @@ ms.locfileid: "61767503"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureSize (   
     [in]  BYTE   *pbPublicKeyBlob,  
     [in]  ULONG  cbPublicKeyBlob,   
@@ -61,7 +61,7 @@ BOOLEAN StrongNameSignatureSize (
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

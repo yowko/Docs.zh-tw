@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697351"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751587"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 結構
 包含組件中的單一屬性的相關資訊和葀佹`DWORD`s。 每個`DWORD`是所產生的字元緩衝區位移`CurrentIntoBuffer`方法[IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)介面  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
     DWORD  ofsNamespace;  
     DWORD  ofsName;  
@@ -57,7 +57,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 4. 呼叫`CurrentIntoBuffer`方法的`IEnumIDENTITY_ATTRIBUTE`介面。 這個方法會複製屬性`Namespace`， `Name`，和`Value`字元緩衝區中。 這些字串的三個位移的可用在`IDENTITY_ATTRIBUTE_BLOB`結構。  
   
-```  
+```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
   
 #include "stdafx.h"  
@@ -240,7 +240,7 @@ Exit:
   
  **標頭：** Isolation.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d530f37c979a1ecddf2cb3895234aab2f7556b88
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4c460bc644017f32fdb96d35e5f42981ac09f825
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489626"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738379"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 方法
 取得對應至程序中載入 common language runtime (CLR) 模組 ICorDebugProcess 介面。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT OpenVirtualProcess(  
     [in] ULONG64 moduleBaseAddress,  
     [in] IUnknown * pDataTarget,  
@@ -71,7 +71,7 @@ HRESULT OpenVirtualProcess(
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_POINTER|`pDataTarget` 為 `null`。|  

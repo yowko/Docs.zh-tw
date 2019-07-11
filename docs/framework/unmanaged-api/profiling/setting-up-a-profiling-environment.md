@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490725"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775737"
 ---
 # <a name="setting-up-a-profiling-environment"></a>設定程式碼剖析環境
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "66490725"
   
 - COR_PROFILER:若 COR_ENABLE_PROFILING 檢查傳遞，則 CLR 會連接至具有此 CLSID 或 ProgID 必須先前已儲存在登錄中的分析工具。 將 COR_PROFILER 環境變數定義為字串，如下列兩個範例所示。  
   
-    ```  
+    ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
     set COR_PROFILER="MyProfiler"  
     ```  
@@ -66,7 +66,7 @@ ms.locfileid: "66490725"
 ## <a name="initializing-the-profiler"></a>初始化程式碼剖析工具  
  當這兩個環境變數都檢查通過時，CLR 會以與 COM `CoCreateInstance` 函式類似的方式建立程式碼剖析工具的執行個體。 程式碼剖析工具不會透過直接呼叫載入至 `CoCreateInstance`。 因此會避免呼叫必須設定執行緒模型的 `CoInitialize`。 然後 CLR 會呼叫[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)分析工具中的方法。 這個方法的簽章如下所示。  
   
-```  
+```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
@@ -75,7 +75,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
 ## <a name="setting-event-notifications"></a>設定事件通知  
  程式碼剖析工具接著會呼叫[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法，以指定它所需要的通知分類中。 例如，如果程式碼剖析工具只對函式進入及離開通知和記憶體回收通知感興趣，會指定下列項目。  
   
-```  
+```cpp  
 ICorProfilerInfo* pInfo;  
 pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);  
 pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  

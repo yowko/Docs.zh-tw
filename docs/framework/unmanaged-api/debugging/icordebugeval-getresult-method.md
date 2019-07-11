@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e7fcb4f44d6bdf6f18c93b1046b549331621a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b12ba5ad5c85643d1f4c91585cf7abca210d22bd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667115"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752935"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult 方法
 取得這項評估的結果。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetResult (  
     [out] ICorDebugValue    **ppResult  
 );  
@@ -51,4 +51,4 @@ HRESULT GetResult (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

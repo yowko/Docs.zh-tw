@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763772"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754926"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus 方法
 表示此 ICorDebugFunction2 Just My Code 的函式會將標示逐步執行。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetJMCStatus (  
     [in] BOOL   bIsJustMyCode  
 );  
@@ -56,4 +56,4 @@ HRESULT SetJMCStatus (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

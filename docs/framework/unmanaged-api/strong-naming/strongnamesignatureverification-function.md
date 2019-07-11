@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3209b42263c62c8296d43ab06b0d89db2dd89be8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3cd2a123e495b4bf19168e86932c866c91e980f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665985"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751626"
 ---
 # <a name="strongnamesignatureverification-function"></a>StrongNameSignatureVerification 函式
 取得指出位於所指定路徑之組件資訊清單是否包含強式名稱簽章的值 (會根據指定的旗標驗證此值)。  
@@ -30,7 +30,7 @@ ms.locfileid: "64665985"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureVerification (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  DWORD     dwInFlags,  
@@ -72,7 +72,7 @@ BOOLEAN StrongNameSignatureVerification (
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

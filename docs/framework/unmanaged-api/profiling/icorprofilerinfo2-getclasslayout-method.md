@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6dcb9d5b3f1f47d6613be90f181a98ce991f697a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5cec1022c9d4a2c96e4216aa09d4c0f7795b4f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041089"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751822"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout 方法
 取得在記憶體中指定類別所定義欄位的配置相關資訊。 也就是說，這個方法會取得此類別的欄位之位移。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetClassLayout(  
     [in]  ClassID classID,  
     [in, out] COR_FIELD_OFFSET rFieldOffset[],  
@@ -55,7 +55,7 @@ HRESULT GetClassLayout(
  [out] 位置指標，其中包含此類別的大小，以位元組為單位。  
   
 ## <a name="remarks"></a>備註  
- `GetClassLayout` 方法僅傳回類別本身所定義的欄位。 如果類別的父類別也已經定義欄位，則分析工具必須呼叫父類別上的 `GetClassLayout` 來取得那些欄位。  
+           `GetClassLayout` 方法僅傳回類別本身所定義的欄位。 如果類別的父類別也已經定義欄位，則分析工具必須呼叫父類別上的 `GetClassLayout` 來取得那些欄位。  
   
  如果您搭配字串類別使用 `GetClassLayout`，則該方法會失敗，伴隨錯誤碼 E_INVALIDARG。 使用[ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)取得版面配置資訊的字串。 以陣列類別呼叫 `GetClassLayout` 時也會失敗。  
   
@@ -70,7 +70,7 @@ HRESULT GetClassLayout(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

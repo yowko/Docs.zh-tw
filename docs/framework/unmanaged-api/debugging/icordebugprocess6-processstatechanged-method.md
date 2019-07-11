@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: fb6d30d9-54f3-462b-8ebf-ce0440791ad5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4dcee3b396d9533f3169db1ea54a6cdc6086c8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68dae3839cfb4d04797d81bca41ee212a64cca51
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948586"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751564"
 ---
 # <a name="icordebugprocess6processstatechanged-method"></a>ICorDebugProcess6::ProcessStateChanged 方法
 會告知[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)處理序執行。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);  
 ```  
   
@@ -37,7 +37,7 @@ HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

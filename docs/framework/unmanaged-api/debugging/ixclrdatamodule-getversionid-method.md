@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6ec18bcf079c7687df4ac9b7c5db23b84383c517
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5bd84f784ea92e7b2ce2465e64972dc84e16a16c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632302"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744698"
 ---
 # <a name="ixclrdatamodulegetversionid-method"></a>IXCLRDataModule::GetVersionId 方法
 
@@ -30,7 +30,7 @@ ms.locfileid: "65632302"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 HRESULT GetVersionId(
     [out] GUID* vid
 );
@@ -48,9 +48,9 @@ HRESULT GetVersionId(
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** None  
+**標頭：** 無  
 **LIBRARY:** None  
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
 

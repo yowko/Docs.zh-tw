@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6dc4e3adf5adec1aa4626a31b6a9391e2a04f1ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16cb3495bbc2fa9ead25afd5e7120774b021a37f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970088"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773556"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromStream 方法
 取得指定的資料流中的組件的標準組件身分識別資料。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetBindingIdentityFromStream (  
     [in] IStream    *pStream,  
     [in] DWORD       dwFlags,  
@@ -71,7 +71,7 @@ HRESULT GetBindingIdentityFromStream (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

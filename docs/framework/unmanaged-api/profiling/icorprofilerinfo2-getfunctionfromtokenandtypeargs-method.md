@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e1498ec3ce1e5258546cec8d8f8172739af6d9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31fad9e82d0b93360f92676f6357c136ae60634a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756139"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771125"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 方法
 取得`FunctionID`函式使用指定的中繼資料語彙基元，包含類別，和`ClassID`值的任何型別引數。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetFunctionFromTokenAndTypeArgs(  
     [in] ModuleID moduleID,  
     [in] mdMethodDef funcDef,  
@@ -72,7 +72,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

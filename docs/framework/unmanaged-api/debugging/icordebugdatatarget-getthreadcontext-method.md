@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2db073f6bde3ded27f8e1aa41bfcb87e764745f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2047929c52dbb7b0d780a4ea0f180bae48a3ce79
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748938"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750391"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext 方法
 傳回針對指定的執行緒目前的執行緒內容。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetThreadContext(  
        [in] DWORD dwThreadID,  
        [in] ULONG32 contextFlags,  
@@ -60,7 +60,7 @@ HRESULT GetThreadContext(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

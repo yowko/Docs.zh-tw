@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37815d8aead1ec89826c13db6f012f2cd17bc792
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85247f2f3672e7827f4dd0c93e50cd5da914ee8f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988178"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755772"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>ICorDebugManagedCallback::ExitThread 方法
 已結束執行緒所執行的 managed 程式碼會告知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ExitThread (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread    *thread  
@@ -53,7 +53,7 @@ HRESULT ExitThread (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

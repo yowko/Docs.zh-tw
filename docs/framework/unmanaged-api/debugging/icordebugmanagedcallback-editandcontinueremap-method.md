@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bdb14e8c3a61a2b94cef778660eeb5c85c34df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 100688ece4ebb984d3d03823ab01bbaae7d395db
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988236"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760278"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap 方法
 這個方法已被取代。 它會通知偵錯工具，已重新對應事件傳送至整合式的開發環境 (IDE)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT EditAndContinueRemap (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread *pThread,  
@@ -48,7 +48,7 @@ HRESULT EditAndContinueRemap (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

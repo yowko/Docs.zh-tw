@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09616243aef272be041573864effd25017cc65c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 563a2e19c9c254870b3e767253a276a201e631a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992026"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779299"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 方法
 進行記憶體回收發生後，請通知分析工具之根參考。 這個方法是擴充功能[icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT RootReferences2(  
     [in] ULONG  cRootRefs,  
     [in, size_is(cRootRefs)] ObjectID rootRefIds[],  
@@ -72,7 +72,7 @@ HRESULT RootReferences2(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

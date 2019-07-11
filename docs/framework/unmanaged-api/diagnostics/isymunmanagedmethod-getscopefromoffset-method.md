@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0e859ba8b6ec247073b0b69b035ea4cf074ab05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d540318dabd55e9a520aedde371e0a83d612721e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939616"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759498"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset 方法
 取得包含指定的位移這個方法內的最封入語彙範圍。 這可用來啟動本機變數的搜尋。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetScopeFromOffset(  
     [in]  ULONG32 offset,  
     [out, retval] ISymUnmanagedScope**  pRetVal);  

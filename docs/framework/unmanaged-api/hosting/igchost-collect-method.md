@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdacb454783cfb8f90ea5a73807f0a199e16475d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c4fa79f4918412720592bce449a001a349ae657
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927834"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766558"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect 方法
 強制發生指定的層代，不論目前的記憶體回收集合的狀態。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Collect (  
     [in] LONG Generation  
 );  
@@ -46,7 +46,7 @@ HRESULT Collect (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

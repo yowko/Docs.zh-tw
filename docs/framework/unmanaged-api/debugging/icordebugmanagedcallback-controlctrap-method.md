@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f4794fb0383435f828626497036ad3458df2173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e0217019aa9b8ff85716c62c27c0f4d5547074a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995328"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759789"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap 方法
 CTRL + C 會陷入正在偵錯的處理程序會告知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ControlCTrap (  
     [in] ICorDebugProcess *pProcess  
 );  
@@ -41,7 +41,7 @@ HRESULT ControlCTrap (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|偵錯工具會處理 CTRL + C 設陷。|  
 |S_FALSE|偵錯工具不會處理 CTRL + C 設陷。|  
@@ -56,7 +56,7 @@ HRESULT ControlCTrap (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

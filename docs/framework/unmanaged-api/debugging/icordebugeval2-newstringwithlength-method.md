@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b84a2fad53feda2996515781035c0eaad5828d54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a90f0a0319d88654d0310530749ef35b7095e0fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666975"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754422"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength 方法
 使用指定的內容中建立的指定長度的字串。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT NewStringWithLength (  
     [in] LPCWSTR               string,  
     [in] UINT                  uiLength  
@@ -55,4 +55,4 @@ HRESULT NewStringWithLength (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

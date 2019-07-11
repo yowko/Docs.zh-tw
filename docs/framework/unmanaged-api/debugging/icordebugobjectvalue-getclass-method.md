@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06e9c7af1c4a769bfb45a8e9f805d97b3bad94aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a20ab7a7ecb5d01351d0c912e08955f44b26d5f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994535"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756993"
 ---
 # <a name="icordebugobjectvaluegetclass-method"></a>ICorDebugObjectValue::GetClass 方法
 取得這個物件值的類別。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetClass (  
     [out] ICorDebugClass     **ppClass  
 );  
@@ -49,6 +49,6 @@ HRESULT GetClass (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

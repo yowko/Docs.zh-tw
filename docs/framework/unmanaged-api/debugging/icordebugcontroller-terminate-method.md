@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c8dd8795fc3699176490ea0bb9b2e999038afb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06c91a813a80af5cf09914ca134ac9935ed787c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749058"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750067"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate 方法
 終止與指定的結束代碼的程序。  
@@ -32,7 +32,7 @@ ms.locfileid: "61749058"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Terminate (  
     [in] UINT exitCode  
 );  
@@ -55,6 +55,6 @@ HRESULT Terminate (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

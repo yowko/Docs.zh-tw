@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3af11b3d2170e13bf216aec64f2bff88cc015f41
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d8ed3a85d12d35bb4779297a7bbc94ce911accef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490598"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767981"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 函式
 可讓 unmanaged 主應用程式將 common language runtime (CLR) 載入程序。  
@@ -31,7 +31,7 @@ ms.locfileid: "66490598"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CorBindToRuntime (  
     [in]  LPCWSTR     pwszVersion,   
     [in]  LPCWSTR     pwszBuildFlavor,   

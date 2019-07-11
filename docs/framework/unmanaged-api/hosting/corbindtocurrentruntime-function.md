@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ad977d4d423622ca364f764f91066dff51c5227
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 505bba3bb5d08c13e29543c20df2daaebc863d12
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490615"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768013"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 函式
 載入處理序的 common language runtime (CLR) 使用的 XML 檔案中儲存的版本資訊。 XML 檔案的格式被仿造自標準的應用程式組態檔。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../../../docs/framework/configure-apps/file-schema/index.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "66490615"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CorBindToCurrentRuntime (  
     [in]  LPCWSTR   pwszFileName,  
     [in]  REFCLSID  rclsid,  

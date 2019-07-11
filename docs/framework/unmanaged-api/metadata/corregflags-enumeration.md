@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb6b303fa7569712c854e8dc4e7513d8608e2519
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf2a1bca6115902d96f72c19dc469d0a1c8588cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045353"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756211"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags 列舉
 提供用於註冊安裝模組或複合映像時的旗標值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum   
 {  
     regNoCopy  = 0x00000001,  
@@ -39,7 +39,7 @@ typedef enum
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`regNoCopy`|指定的檔案不會複製到目的地。|  
 |`regConfig`|指定模組或組合的組態。|  
@@ -52,7 +52,7 @@ typedef enum
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ec24952b91f5d959c1ac0bb50e2bbe4b94002b3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf16563e6d5fef3a743e802166173004a857dd0e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586803"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745828"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 函式
 通知分析工具的控制項傳遞至函式，並提供可以傳遞至控制代碼[ICorProfilerInfo3::GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)來擷取堆疊框架和函式引數。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void __stdcall FunctionEnter3WithInfo(  
                [in] FunctionIDOrClientID functionIDOrClientID,  
                [in] COR_PRF_ELT_INFO eltInfo);  
@@ -63,7 +63,7 @@ void __stdcall FunctionEnter3WithInfo(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2a173c23ea33532f05e30d072677715e15d04018
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939473"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759343"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument 方法
 尋找文件。 文件語言、 廠商和類型是選擇性的。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetDocument (  
     [in]  WCHAR  *url,  
     [in]  GUID   language,  
@@ -43,13 +43,13 @@ HRESULT GetDocument (
  [in]識別文件的 URL。  
   
  `language`  
- [in]文件語言。 這是選擇性參數。  
+ [in]文件語言。 這個參數是選擇性的。  
   
  `languageVendor`  
- [in]文件語言廠商的身分識別。 這是選擇性參數。  
+ [in]文件語言廠商的身分識別。 這個參數是選擇性的。  
   
  `documentType`  
- [in]文件類型。 這是選擇性參數。  
+ [in]文件類型。 這個參數是選擇性的。  
   
  `pRetVal`  
  [out]傳回的介面指標。  

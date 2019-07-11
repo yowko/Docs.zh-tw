@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cb5ff5300a7fd2577e602b3077dd816cf7dfbe2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3aa6bc844d2c6629085b0596127c0b51b99357d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936912"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766362"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain 方法
 取得類型的介面指標<xref:System.AppDomain?displayProperty=nameWithType>，代表目前執行緒上所載入的網域。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CurrentDomain (  
     [out] IUnknown** pAppDomain  
 );  

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 752d87c5f4a6b8d854a06be8962ee754cdd4622d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e27082ba4c35bc10eb65139b2af6c81c10d79a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965954"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739117"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpMethodData 結構
 
@@ -30,7 +30,7 @@ ms.locfileid: "61965954"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 struct DacpModuleData
 {
     CLRDATA_ADDRESS Address;
@@ -57,7 +57,7 @@ struct DacpModuleData
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
 **標頭：** None  
 **LIBRARY:** None  
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
 

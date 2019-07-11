@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f88c0feea48ee96745effc36798bb26b4ccbf3cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 484dacd4d9803139edf3fd5bad22c164d50de3dc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000359"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757248"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly 函式
 從指定的組件檔案建立強式名稱權杖。  
@@ -30,7 +30,7 @@ ms.locfileid: "62000359"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 BOOLEAN StrongNameTokenFromAssembly (  
     [in]  LPCWSTR   wszFilePath,  
     [out] BYTE      **ppbStrongNameToken,  
@@ -65,7 +65,7 @@ BOOLEAN StrongNameTokenFromAssembly (
   
  **LIBRARY:** 包含做為 mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

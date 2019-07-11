@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be1ba87ae979911dd21647569725eafa2c80ffa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41aff94b8241f07c8646ecc52c06567fc262f703
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768806"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774917"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum::Next 方法
 取得指定的數目[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)包含區域變數和函式中的引數的相關資訊的執行個體。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Next(  
     [in] ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)] ICorDebugVariableHome *homes[],  
@@ -50,7 +50,7 @@ HRESULT Next(
 ## <a name="return-value"></a>傳回值  
  方法會傳回下列值。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |`S_OK`|已成功完成命令。|  
 |`S_FALSE`|擷取執行個體的實際數目，如中所反映`pceltFetched`，小於要求的執行個體數目。|  
@@ -65,7 +65,7 @@ HRESULT Next(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

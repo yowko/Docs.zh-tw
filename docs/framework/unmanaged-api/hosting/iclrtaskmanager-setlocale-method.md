@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae097320ad7cd6e7c840122bf3f315812e9b2acd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe45322808a0a756b31f27f9f5c1549ece348e11
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763343"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770111"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale 方法
 主應用程式已修改地區設定識別碼 （這會對應到地理的文化特性和語言） 上目前執行之工作的值會告知 common language runtime (CLR)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetLocale (  
     [in] LCID lcid  
 );  
@@ -60,7 +60,7 @@ HRESULT SetLocale (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc0a4f52747cbc88a26f4b9aaff6642b6c1d62f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b46d1f5fb797b74726070ae3cd9814dc46c8f03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044705"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778331"
 ---
 # <a name="imetadataassemblyimportcloseenum-method"></a>IMetaDataAssemblyImport::CloseEnum 方法
 釋放指定的列舉型別執行個體的參考。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void CloseEnum (  
     [in] HCORENUM     hEnum  
 );  
@@ -46,7 +46,7 @@ void CloseEnum (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

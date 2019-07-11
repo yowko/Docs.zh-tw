@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a78a4b82d0b2064c90c938a8614b0c7594f7856
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2e73caa3c69090bca30c8d4a907ddb619bd0ed4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043286"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776330"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra 等位
 代表可由為位址位移[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)重新配置區段的介面。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef union  {  
     USHORT highAdj;  
 } CeeSectionRelocExtra;  
@@ -47,7 +47,7 @@ typedef union  {
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

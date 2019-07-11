@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c2d1aee741ac54e861f7068d883731745ca7788
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc7b6d1a27faf7bde46305f9c98d98351e6261b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584314"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782265"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress 方法
 取得指定的相對虛擬位址 (RVA) 的靜態欄位的位址。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetRVAStaticAddress(  
     [in] ClassID classId,  
     [in] mdFieldDef fieldToken,  
@@ -62,7 +62,7 @@ HRESULT GetRVAStaticAddress(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

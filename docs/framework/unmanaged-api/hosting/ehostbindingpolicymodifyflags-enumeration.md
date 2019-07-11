@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e8357d20edba993f5a7682f31c04afea4362afd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d70f7dd872cefbadce56c577ce2ecc9cbcb663b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796054"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765844"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>EHostBindingPolicyModifyFlags 列舉
 可讓主應用程式指定的重新導向套用原則的修改從來源組件的目標組件時，應該執行 common language runtime (CLR) 型別。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum _hostBindingPolicyModifyFlags {  
     HOST_BINDING_POLICY_MODIFY_DEFAULT  = 0,  
     HOST_BINDING_POLICY_MODIFY_CHAIN    = 1,  
@@ -56,7 +56,7 @@ typedef enum _hostBindingPolicyModifyFlags {
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f150fe80302cd03e872ca8bdf5d172caae1ce599
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bfddd1d8f6fed105224cb2294d68f3f0bc016403
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967678"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762160"
 ---
 # <a name="icorruntimehostcloseenum-method"></a>ICorRuntimeHost::CloseEnum 方法
 將網域列舉值重設回網域清單的開頭。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CloseEnum (  
     [in] HCORENUM hEnum  
 );  
@@ -41,7 +41,7 @@ HRESULT CloseEnum (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|此作業成功。|  
 |S_FALSE|作業無法完成。|  

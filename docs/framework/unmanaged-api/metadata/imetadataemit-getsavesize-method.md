@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21f6c07976198416bff6e8e2a1789e4ccbf5ca55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7337222f7f419c68ae21d604d1673158acca85ba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664997"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777398"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 方法
 目前範圍中取得的二進位的估計的大小，組件和它的中繼資料。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetSaveSize (  
     [in]  CorSaveSize fSave,  
     [out] DWORD       *pdwSaveSize  
@@ -63,7 +63,7 @@ HRESULT GetSaveSize (
   
  **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

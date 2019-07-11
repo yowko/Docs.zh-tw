@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44a4b5903cec2249eb1e176381fe3d8e600dd5e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 576fb8632818a6b8ffc3e2c0acc50eaafd074de3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046107"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766961"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 列舉
 包含值，這些值描述在 Managed 程式碼中進行的呼叫慣例類型。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum CorCallingConvention  
 {  
     IMAGE_CEE_CS_CALLCONV_DEFAULT       = 0x0,  
@@ -73,7 +73,7 @@ typedef enum CorCallingConvention
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

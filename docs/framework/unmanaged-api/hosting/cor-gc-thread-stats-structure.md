@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f60a4b56270318a05d0e5a480fdb56eb45593d5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696703"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768057"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS 結構
 包含有關記憶體回收的每個執行緒統計資料。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef struct _COR_GC_THREAD_STATS {  
     ULONGLONG  PerThreadAllocation;   
     ULONG      Flags;   
@@ -52,7 +52,7 @@ typedef struct _COR_GC_THREAD_STATS {
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

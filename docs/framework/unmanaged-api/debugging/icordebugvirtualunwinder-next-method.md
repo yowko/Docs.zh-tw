@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74be827dc97213507b96da9e025923f859011acd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd12861b34d577a002fbf0cc8a7962b7bfc35fe1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946142"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775339"
 ---
 # <a name="icordebugvirtualunwindernext-method"></a>Icordebugvirtualunwinder:: Next 方法
 進入呼叫端的內容。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Next();  
 ```  
   
@@ -41,7 +41,7 @@ HRESULT Next();
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

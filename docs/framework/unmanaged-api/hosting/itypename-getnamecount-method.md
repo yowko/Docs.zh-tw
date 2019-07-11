@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d91eaf3287f7b38ac8240b04490bd9e9dc594d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 776af3db0a1d50e56e679fe50a99f620c281f06e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043576"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748957"
 ---
 # <a name="itypenamegetnamecount-method"></a>ITypeName::GetNameCount 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetNameCount (  
     [out, retval] DWORD* pCount  
 );  
@@ -42,7 +42,7 @@ HRESULT GetNameCount (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

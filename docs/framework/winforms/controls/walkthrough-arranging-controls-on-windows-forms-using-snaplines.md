@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606418"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771653"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線排列 Windows Forms 的控制項
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 Windows Form 設計工具會提供您許多版面配置工具，來完成這項作業。 其中一個最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
@@ -53,7 +53,7 @@ ms.locfileid: "64606418"
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立專案並設定表單。  
   
-#### <a name="to-create-the-project"></a>若要建立專案  
+### <a name="to-create-the-project"></a>若要建立專案  
   
 1. 建立以 Windows 為基礎的應用程式專案，稱為 「 SnaplineExample"(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64606418"
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>間距，以及對齊這些控制項使用對齊線  
  對齊線可讓您精確且直覺的方法，來調整您的表單上的控制項。 當您要移動選取的控制項附近的位置時，會配合其他控制項或一組控制項便會出現。 您的選擇會 「 貼齊 」 建議的位置，您將它移過去的其他控制項。  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>使用對齊線排列控制項  
+### <a name="to-arrange-controls-using-snaplines"></a>使用對齊線排列控制項  
   
 1. 從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "64606418"
 ## <a name="aligning-to-form-and-container-margins"></a>對齊表單及容器的邊界  
  對齊線可協助您對齊表單和容器的邊界控制項以一致的方式。  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>若要對齊控制項加入表單和容器的邊界  
+### <a name="to-align-controls-to-form-and-container-margins"></a>若要對齊控制項加入表單和容器的邊界  
   
 1. 選取其中一個<xref:System.Windows.Forms.Button>控制，並將它移靠近右框線的表單中，直到對齊線出現。 右框線的對齊線的距離是控制項的總和<xref:System.Windows.Forms.Control.Margin%2A>屬性和表單的<xref:System.Windows.Forms.Control.Padding%2A>屬性值。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64606418"
 ## <a name="aligning-to-grouped-controls"></a>群組的控制項對齊  
  您可以使用對齊線來對齊控制項群組也可做為控制內<xref:System.Windows.Forms.GroupBox>控制項。  
   
-#### <a name="to-align-to-grouped-controls"></a>將群組的控制項對齊  
+### <a name="to-align-to-grouped-controls"></a>將群組的控制項對齊  
   
 1. 選取您的表單上控制項的兩個。 移動選取項目，並注意會出現在您的選取項目和其他控制項之間的對齊線。  
   
@@ -120,9 +120,9 @@ ms.locfileid: "64606418"
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>使用對齊線來放置控制項框大小  
  對齊線可協助您讓控制當您第一次將它們放在表單上。  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>使用對齊線來放置控制項框大小  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>使用對齊線來放置控制項框大小  
   
-1. 按一下 [工具箱] 的 <xref:System.Windows.Forms.Button> 控制項圖示。 請勿拖曳到表單。  
+1. 按一下 [工具箱]  的 <xref:System.Windows.Forms.Button> 控制項圖示。 請勿拖曳到表單。  
   
 2. 將滑鼠指標移至表單的設計介面上。 請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.Button> 控制項圖示。 也請注意對齊線來建議對齊的位置可<xref:System.Windows.Forms.Button>控制項。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "64606418"
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>從 [工具箱] 拖曳控制項時，使用對齊線  
  對齊線可協助您讓控制項時將它們從拖曳**工具箱**拖曳至表單。  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>若要從 [工具箱] 拖曳控制項時可以使用對齊線  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>若要從 [工具箱] 拖曳控制項時可以使用對齊線  
   
 1. 拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單，而不是釋放滑鼠按鈕。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "64606418"
 ## <a name="resizing-controls-using-snaplines"></a>使用對齊線的控制項調整大小  
  對齊線可協助您對齊控制項，調整其大小。  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>若要調整大小的控制項使用對齊線  
+### <a name="to-resize-a-control-using-snaplines"></a>若要調整大小的控制項使用對齊線  
   
 1. 從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "64606418"
 ## <a name="aligning-a-label-to-a-controls-text"></a>對齊控制項的文字標籤  
  某些控制項提供對齊其他控制項來顯示文字的對齊線。  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>若要對齊控制項的文字標籤  
+### <a name="to-align-a-label-to-a-controls-text"></a>若要對齊控制項的文字標籤  
   
 1. 從 [工具箱] <xref:System.Windows.Forms.TextBox>**將** 控制項拖曳至表單。 當您卸除<xref:System.Windows.Forms.TextBox>控制項拖曳至表單中，按一下智慧標籤圖像 （glyph），然後選取**將文字設定為 textBox1**選項。 如需詳細資訊，請參閱[逐步解說：在 Windows 上使用智慧標籤執行一般工作 Form 控制項](performing-common-tasks-using-smart-tags-on-wf-controls.md)。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "64606418"
 ## <a name="using-snaplines-with-keyboard-navigation"></a>使用對齊線，使用鍵盤巡覽  
  對齊線可協助您讓控制項時，您會排列使用鍵盤方向鍵。  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>若要使用鍵盤瀏覽可以使用對齊線  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>若要使用鍵盤瀏覽可以使用對齊線  
   
 1. 從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。 請將它放在表單的左上角。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "64606418"
 ## <a name="snaplines-and-layout-panels"></a>對齊線和版面配置面板  
  對齊線版面配置面板內停用。  
   
-#### <a name="to-selectively-disable-snaplines"></a>若要選擇性地停用對齊線  
+### <a name="to-selectively-disable-snaplines"></a>若要選擇性地停用對齊線  
   
 1. 從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。  
   
@@ -214,13 +214,13 @@ ms.locfileid: "64606418"
 ## <a name="disabling-snaplines"></a>停用的對齊線  
  依預設會開啟對齊線。 您可以選擇性地停用對齊線，或您可以在設計環境中停用它們。  
   
-#### <a name="to-selectively-disable-snaplines"></a>若要選擇性地停用對齊線  
+### <a name="to-selectively-disable-snaplines"></a>若要選擇性地停用對齊線  
   
 - 按 ALT 鍵並同時移動周圍的表單控制項。  
   
      請注意，沒有對齊線出現的控制項不會貼齊至任何潛在的對齊位置。  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>若要停用在設計環境中的對齊線  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>若要停用在設計環境中的對齊線  
   
 1. 從**工具**功能表中，開啟**選項** 對話方塊。 開啟 [Windows Form 設計工具] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 一般]、 [Windows Form 設計工具、 [選項] 對話方塊中](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))。  
   

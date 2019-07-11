@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8875fb24512ddfea57d5f9249e58de3c12b8c507
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5fcd66914448fa63c892f7285b8cd364d4cacc5f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796841"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779216"
 ---
 # <a name="ihostiocompletionmanagergetmaxthreads-method"></a>IHostIoCompletionManager::GetMaxThreads 方法
 取得服務 I/O 要求的主機可以配置的執行緒數目上限。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetMaxThreads (  
     [out] DWORD *pdwMaxIoCompletionThreads  
 );  
@@ -61,7 +61,7 @@ HRESULT GetMaxThreads (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

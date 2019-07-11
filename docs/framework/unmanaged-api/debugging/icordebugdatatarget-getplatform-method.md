@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0769f30b6ac166e065fb6299c61c1e71e402c49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1065c8d710ddbd6088ee0db694a43e098564e707
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607059"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750386"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform 方法
 提供的平台，包括處理器架構與目標處理序執行所在的作業系統的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);  
 ```  
   
@@ -55,7 +55,7 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

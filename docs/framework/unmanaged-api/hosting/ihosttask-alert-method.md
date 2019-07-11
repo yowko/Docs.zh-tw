@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c153e6ae8558eeab2efa99765405fb7c84632b01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a5e3b82645456ffa574f63931abbf60a2194540
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992845"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764531"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert 方法
 要求主機喚醒表示由目前的工作[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體，因此可以中止的工作。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Alert ();  
 ```  
   
@@ -57,7 +57,7 @@ HRESULT Alert ();
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

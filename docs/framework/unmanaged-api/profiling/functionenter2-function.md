@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6e5b74e508f55ec8e94b09960e496ff21936228
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 413cde3d0977c1fd6897fc5bd6fa7a3fef00ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586977"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763346"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 函式
 控制項已傳遞至函式，並提供資訊堆疊框架和函式的引數，請通知分析工具。 這個函數會取代[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void __stdcall FunctionEnter2 (  
     [in]  FunctionID                       funcId,   
     [in]  UINT_PTR                         clientData,   
@@ -76,7 +76,7 @@ void __stdcall FunctionEnter2 (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

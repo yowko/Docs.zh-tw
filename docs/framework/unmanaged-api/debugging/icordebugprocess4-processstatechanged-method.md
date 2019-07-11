@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5e3a6714489e2051a09b5855ab9f911ef2f57450
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632291"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767194"
 ---
 # <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::ProcessStateChanged 方法
 
@@ -28,7 +28,7 @@ ms.locfileid: "65632291"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 HRESULT ProcessStateChanged(
     [in] CorDebugStateChange change
 );
@@ -47,11 +47,11 @@ HRESULT ProcessStateChanged(
 
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
- **標頭：** None
+ **標頭：** 無
 
- **LIBRARY:** None
+ **LIBRARY:** 無
  
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 

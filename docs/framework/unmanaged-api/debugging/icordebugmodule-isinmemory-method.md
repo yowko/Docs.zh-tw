@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d79a8b0c3c56ffe2b8f57ec26f5942ee0d681194
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 223989d883c421be228fb3d6a608643a5246c060
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994834"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763707"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory 方法
 取得值，指出是否此模組只存在於記憶體。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT IsInMemory(  
     [out] BOOL *pInMemory  
 );  
@@ -49,6 +49,6 @@ HRESULT IsInMemory(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54abd54662d4e99881dddf15876b596a4a705f70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00ad48dfe57d388653a9151393dd7b91a28a9615
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638875"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770020"
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>ICLROnEventManager::UnregisterActionOnEvent 方法
 取消註冊先前註冊的回呼指標為指定的事件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT UnregisterActionOnEvent (  
     [in] EClrEvent event,  
     [in] IActionOnCLREvent *pAction  
@@ -61,7 +61,7 @@ HRESULT UnregisterActionOnEvent (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 973442a969746671e4d85c5d7881f51c5dfba535
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ab4905c55a1395e9ae5cba8343e6b832622005d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922599"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737637"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW 方法
 從 COM 可呼叫包裝函式 (CCW) 指標取得 Managed 物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetObjectForCCW(  
    [in]CORDB_ADDRESS ccwPointer,   
    [out]ICorDebugValue **ppManagedObject  
@@ -39,7 +39,7 @@ HRESULT GetObjectForCCW(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

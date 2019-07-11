@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0e334c75afee60591db2b4e1f45cf0ec753ee2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 755b022dde01a1d424fea58bcefe5df2bce401b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992052"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780276"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>ICorProfilerFunctionEnum::Skip 方法
 將列舉值的資料指標從其目前位置前移，以略過指定數目的項目。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Skip([in] ULONG celt);  
 ```  
   
@@ -55,7 +55,7 @@ HRESULT Skip([in] ULONG celt);
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

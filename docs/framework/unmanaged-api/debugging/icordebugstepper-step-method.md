@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 444390622ca68244661b91dc85814b05556b12a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d0f601c4b454b55edc5fa25eb2ee33d491009b9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994314"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760576"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step 方法
 導致此 ICorDebugStepper 單一步驟及其包含的執行緒，以及 （選擇性） 若要繼續單一位逐步執行會在執行緒內呼叫的函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Step (  
     [in] BOOL   bStepIn  
 );  
@@ -49,4 +49,4 @@ HRESULT Step (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

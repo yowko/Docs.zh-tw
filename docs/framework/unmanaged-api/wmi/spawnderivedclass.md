@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81f4d5219865bf7f7c9e6d284d74d0c249729dfc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f05f349699b28262c1628cadc6e9a0fb0a3459c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040530"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783094"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 函式
 從指定的物件建立新的衍生類別物件。    
@@ -30,7 +30,7 @@ ms.locfileid: "62040530"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SpawnDerivedClass (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -78,7 +78,7 @@ HRESULT SpawnDerivedClass (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

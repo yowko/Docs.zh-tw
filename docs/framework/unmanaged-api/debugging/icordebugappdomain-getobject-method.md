@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca9792df69f859e20f1d9e40754d1cec138945d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1201ac0dca9cbd48c24b2621eba079ae672fd310
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785108"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737851"
 ---
 # <a name="icordebugappdomaingetobject-method"></a>ICorDebugAppDomain::GetObject 方法
 Common language runtime (CLR) 應用程式定義域中取得的介面指標。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetObject (  
     [out] ICorDebugValue   **ppObject  
 );  
@@ -52,4 +52,4 @@ HRESULT GetObject (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]

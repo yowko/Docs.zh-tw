@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04b0d9989d66888c33de0359e4c93529fcfbf8d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d69b12404459de5dbc1c7748deee6ca09c1e5182
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628622"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772420"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags 列舉
 可讓主應用程式執行階段提供的應用程式定義域初始化資訊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     eInitializeNewDomainFlags_None              = 0x0000,  
     eInitializeNewDomainFlags_NoSecurityChanges = 0x0002  
@@ -50,7 +50,7 @@ typedef enum {
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

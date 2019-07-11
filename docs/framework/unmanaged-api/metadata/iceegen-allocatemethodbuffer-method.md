@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7be1bd2934fbb2e09a39c3042fa9ae314e89d629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 080c16d3a7baceaa277b3418ac2e17391090f00c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905602"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750603"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer 方法
 建立方法中，指定大小的緩衝區，並取得方法的相對虛擬位址。  
@@ -31,7 +31,7 @@ ms.locfileid: "61905602"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT AllocateMethodBuffer (   
     [in]  ULONG    cchBuffer,   
     [out] UCHAR    **lpBuffer,  
@@ -56,7 +56,7 @@ HRESULT AllocateMethodBuffer (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66f152279a21f28b54acebbf0be7c65bb73efa70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767471"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758156"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 方法
 通知分析工具在 just-in-time (JIT) 編譯器發生重新編譯程序中的錯誤。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ReJITError(  
     [in] ModuleID    moduleId,  
     [in] mdMethodDef methodId,  
@@ -71,7 +71,7 @@ HRESULT ReJITError(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

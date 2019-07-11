@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26cd30be591c4167fa6a6e4d19ba9d1c909c6428
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc179236f5453724639d47558770179a1e80f706
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927305"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746188"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue 方法
 取得值的引數或區域變數，其中的低位文字和高的字組會儲存在記憶體位置，分別將暫存器，指定這個原生框架。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetLocalRegisterMemoryValue (  
     [in] CorDebugRegister   highWordReg,  
     [in] CORDB_ADDRESS      lowWordAddress,  
@@ -62,6 +62,6 @@ HRESULT GetLocalRegisterMemoryValue (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

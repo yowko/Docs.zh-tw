@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d98a0c1c3187b81c44fae6eee91d975169a40045
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76fc5f578e6da731ffd6406344d00cda8b57f493
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627940"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772403"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable 列舉
 包含值，表示電腦上的可用實體記憶體數量。 這些值會以邏輯方式對應之事件記憶體從傳回的最高和最低`CreateMemoryResourceNotification`Windows API 中的函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     eMemoryAvailableLow     = 1,  
     eMemoryAvailableNeutral = 2,  
@@ -54,7 +54,7 @@ typedef enum {
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

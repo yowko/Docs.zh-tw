@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: a2850add9acb2f7c5297ac6956e349c9277be291
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ef2c65157df4a033700bb8d0295875ede46554
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965918"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739103"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData Structure
 
@@ -30,7 +30,7 @@ ms.locfileid: "61965918"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 struct MSLAYOUT DacpReJitData
 {
     enum Flags
@@ -49,7 +49,7 @@ struct MSLAYOUT DacpReJitData
 
 ## <a name="members"></a>成員
 
-| 成員           | 描述                                                                                      |
+| 成員           | 說明                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
 | `rejitID`        | ReJit 修訂編號的方法。                                                          |
 | `flags`          | 旗標，指出指定之版本的方法的 ReJit 檢測的目前狀態。 |
@@ -62,8 +62,8 @@ struct MSLAYOUT DacpReJitData
 ## <a name="requirements"></a>需求
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
 **標頭：** None  
-**LIBRARY:** None  
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**LIBRARY:** 無  
+**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
 

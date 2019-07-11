@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ecb4f8a5519fb819161ed917ad03d2537bd9551
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 990786fbb3cc853f7f399d60fa686bb5d60018af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645236"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745706"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext 方法
 取得執行緒中的下一個框架鏈結。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetNext (  
     [out] ICorDebugChain     **ppChain  
 );  
@@ -46,4 +46,4 @@ HRESULT GetNext (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91318ea596cc7d6c8a747901fea2749a64aa2623
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e944a6debf790907b75760c8856ae3a365a84650
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995406"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759617"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception 方法
 例外狀況已擲回從 managed 程式碼會告知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Exception (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread    *pThread,  
@@ -57,7 +57,7 @@ HRESULT Exception (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

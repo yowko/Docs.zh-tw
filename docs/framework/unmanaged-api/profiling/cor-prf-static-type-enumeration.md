@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 310915ce84819a2a5a2d5e1f22356b61c16e7ec7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 753c3b38187dd69593dcb0520acef9ce4b137039
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599009"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751905"
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE 列舉
 指出欄位是否為靜態，若是靜態，則欄位套用的是靜態品質。 這些值可以表示的欄位具有多個使用位元 OR 運算結合不同的靜態品質。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_FIELD_NOT_A_STATIC = 0x0,  
     COR_PRF_FIELD_APP_DOMAIN_STATIC = 0x1,  
@@ -40,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|欄位不是靜態的。|  
 |`COR_PRF_FIELD_APP_DOMAIN_STATIC`|應用程式定義域靜態欄位。|  
@@ -55,7 +55,7 @@ typedef enum {
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

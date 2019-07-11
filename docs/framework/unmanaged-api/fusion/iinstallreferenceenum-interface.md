@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35faeb69e864a428dc40394ad89a7d50b95bbcab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5781254b508887f2e76f6ca0eca6a2830ada172b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757660"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774011"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum 介面
 表示參考的組件安裝在全域組件快取的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 interface IInstallReferenceEnum : IUnknown {  
     HRESULT GetNextInstallReferenceItem (  
         [out] IInstallReferenceItem **ppRefItem,  
@@ -40,7 +40,7 @@ interface IInstallReferenceEnum : IUnknown {
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |[GetNextInstallReferenceItem 方法](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|取得下一個指標`IInstallReferenceItem`包含在此`IInstallReferenceEnum`。|  
   
@@ -49,7 +49,7 @@ interface IInstallReferenceEnum : IUnknown {
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3174cf3b4f4f4ac4b2c8e69030357eb1e46cf3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2996acd9678557b08fcfa543ecc7648ed639b143
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771627"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748337"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>ICLRRuntimeInfo::SetDefaultStartupFlags 方法
 設定啟動旗標和將用來啟動執行階段主應用程式組態檔。 這個方法會取代使用`startupFlags`中的參數[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)並[CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetDefaultStartupFlags(  
            [in]  DWORD dwStartupFlags,  
            [in]  LPCWSTR pwzHostConfigFile);  
@@ -45,7 +45,7 @@ HRESULT SetDefaultStartupFlags(
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
   
@@ -59,7 +59,7 @@ HRESULT SetDefaultStartupFlags(
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c548ae7f8d605ff84da2046d057e436c8e95721
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12c571f478f15a0b72168977f12623be1c4a08a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796559"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749156"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem 方法
 函式，以執行排入佇列，並指定包含該函式所使用的資料的物件。 當執行緒變成可用時，就會執行函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT QueueUserWorkItem (  
     [in] LPTHREAD_START_ROUTINE Function,  
     [in] PVOID Context,  
@@ -68,7 +68,7 @@ HRESULT QueueUserWorkItem (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
