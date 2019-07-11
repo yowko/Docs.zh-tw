@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d23a0a489cfe13201b7798920feb3528db3b0709
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed2364c7c47aed1430a86aeee3daabf6b94cbf3b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988659"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754474"
 ---
-# <a name="icordebugfunction2getjmcstatus-method"></a><span data-ttu-id="33281-102">ICorDebugFunction2::GetJMCStatus 方法</span><span class="sxs-lookup"><span data-stu-id="33281-102">ICorDebugFunction2::GetJMCStatus Method</span></span>
-<span data-ttu-id="33281-103">取得值，指出是否要將此 ICorDebugFunction2 物件所代表的函式標記為使用者程式碼。</span><span class="sxs-lookup"><span data-stu-id="33281-103">Gets a value that indicates whether the function that is represented by this ICorDebugFunction2 object is marked as user code.</span></span>  
+# <a name="icordebugfunction2getjmcstatus-method"></a><span data-ttu-id="529fc-102">ICorDebugFunction2::GetJMCStatus 方法</span><span class="sxs-lookup"><span data-stu-id="529fc-102">ICorDebugFunction2::GetJMCStatus Method</span></span>
+<span data-ttu-id="529fc-103">取得值，指出是否要將此 ICorDebugFunction2 物件所代表的函式標記為使用者程式碼。</span><span class="sxs-lookup"><span data-stu-id="529fc-103">Gets a value that indicates whether the function that is represented by this ICorDebugFunction2 object is marked as user code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="33281-104">語法</span><span class="sxs-lookup"><span data-stu-id="33281-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="529fc-104">語法</span><span class="sxs-lookup"><span data-stu-id="529fc-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetJMCStatus (  
     [out] BOOL   *pbIsJustMyCode  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="33281-105">參數</span><span class="sxs-lookup"><span data-stu-id="33281-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="529fc-105">參數</span><span class="sxs-lookup"><span data-stu-id="529fc-105">Parameters</span></span>  
  `pbIsJustMyCode`  
- <span data-ttu-id="33281-106">[out]布林值的指標`true`，則此函式標示為使用者程式碼; 否則值就是`false`。</span><span class="sxs-lookup"><span data-stu-id="33281-106">[out] A pointer to a Boolean value that is `true`, if this function is marked as user code; otherwise, the value is `false`.</span></span>  
+ <span data-ttu-id="529fc-106">[out]布林值的指標`true`，則此函式標示為使用者程式碼; 否則值就是`false`。</span><span class="sxs-lookup"><span data-stu-id="529fc-106">[out] A pointer to a Boolean value that is `true`, if this function is marked as user code; otherwise, the value is `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="33281-107">備註</span><span class="sxs-lookup"><span data-stu-id="33281-107">Remarks</span></span>  
- <span data-ttu-id="33281-108">如果函式以表示這`ICorDebugFunction2`無法偵錯，`pbIsJustMyCode`一定會`false`。</span><span class="sxs-lookup"><span data-stu-id="33281-108">If the function represented by this `ICorDebugFunction2` cannot be debugged, `pbIsJustMyCode` will always be `false`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="529fc-107">備註</span><span class="sxs-lookup"><span data-stu-id="529fc-107">Remarks</span></span>  
+ <span data-ttu-id="529fc-108">如果函式以表示這`ICorDebugFunction2`無法偵錯，`pbIsJustMyCode`一定會`false`。</span><span class="sxs-lookup"><span data-stu-id="529fc-108">If the function represented by this `ICorDebugFunction2` cannot be debugged, `pbIsJustMyCode` will always be `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="33281-109">需求</span><span class="sxs-lookup"><span data-stu-id="33281-109">Requirements</span></span>  
- <span data-ttu-id="33281-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="33281-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="529fc-109">需求</span><span class="sxs-lookup"><span data-stu-id="529fc-109">Requirements</span></span>  
+ <span data-ttu-id="529fc-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="529fc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="33281-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="33281-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="529fc-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="529fc-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="33281-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="33281-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="529fc-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="529fc-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="33281-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33281-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="529fc-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="529fc-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

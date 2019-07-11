@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 323c883b4010f3ddd4c575e5d5fc40a3419e57c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c434595414fd5bdabeae96d959aaa6be6d84af2b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697403"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753971"
 ---
-# <a name="iassemblynamegetdisplayname-method"></a><span data-ttu-id="83537-102">IAssemblyName::GetDisplayName 方法</span><span class="sxs-lookup"><span data-stu-id="83537-102">IAssemblyName::GetDisplayName Method</span></span>
-<span data-ttu-id="83537-103">取得人類可讀名稱所參考的組件[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件。</span><span class="sxs-lookup"><span data-stu-id="83537-103">Gets the human-readable name of the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetdisplayname-method"></a><span data-ttu-id="b4a08-102">IAssemblyName::GetDisplayName 方法</span><span class="sxs-lookup"><span data-stu-id="b4a08-102">IAssemblyName::GetDisplayName Method</span></span>
+<span data-ttu-id="b4a08-103">取得人類可讀名稱所參考的組件[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件。</span><span class="sxs-lookup"><span data-stu-id="b4a08-103">Gets the human-readable name of the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83537-104">語法</span><span class="sxs-lookup"><span data-stu-id="83537-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4a08-104">語法</span><span class="sxs-lookup"><span data-stu-id="b4a08-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetDisplayName (  
         [out]      LPOLESTR  szDisplayName,  
         [in, out]  LPDWORD   pccDisplayName,  
@@ -37,24 +37,24 @@ HRESULT GetDisplayName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="83537-105">參數</span><span class="sxs-lookup"><span data-stu-id="83537-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b4a08-105">參數</span><span class="sxs-lookup"><span data-stu-id="b4a08-105">Parameters</span></span>  
  `szDisplayName`  
- <span data-ttu-id="83537-106">[out]包含參考的組件名稱的字串緩衝區。</span><span class="sxs-lookup"><span data-stu-id="83537-106">[out] The string buffer that contains the name of the referenced assembly.</span></span>  
+ <span data-ttu-id="b4a08-106">[out]包含參考的組件名稱的字串緩衝區。</span><span class="sxs-lookup"><span data-stu-id="b4a08-106">[out] The string buffer that contains the name of the referenced assembly.</span></span>  
   
  `pccDisplayName`  
- <span data-ttu-id="83537-107">[in、 out]大小`szDisplayName`寬字元，包括 null 結束字元。</span><span class="sxs-lookup"><span data-stu-id="83537-107">[in, out] The size of `szDisplayName` in wide characters, including a null terminator character.</span></span>  
+ <span data-ttu-id="b4a08-107">[in、 out]大小`szDisplayName`寬字元，包括 null 結束字元。</span><span class="sxs-lookup"><span data-stu-id="b4a08-107">[in, out] The size of `szDisplayName` in wide characters, including a null terminator character.</span></span>  
   
  `dwDisplayFlags`  
- <span data-ttu-id="83537-108">[in]位元組合[ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md)影響的功能值`szDisplayName`。</span><span class="sxs-lookup"><span data-stu-id="83537-108">[in] A bitwise combination of [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) values that influence the features of `szDisplayName`.</span></span>  
+ <span data-ttu-id="b4a08-108">[in]位元組合[ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md)影響的功能值`szDisplayName`。</span><span class="sxs-lookup"><span data-stu-id="b4a08-108">[in] A bitwise combination of [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) values that influence the features of `szDisplayName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83537-109">需求</span><span class="sxs-lookup"><span data-stu-id="83537-109">Requirements</span></span>  
- <span data-ttu-id="83537-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="83537-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b4a08-109">需求</span><span class="sxs-lookup"><span data-stu-id="b4a08-109">Requirements</span></span>  
+ <span data-ttu-id="b4a08-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b4a08-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83537-111">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="83537-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="b4a08-111">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b4a08-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="83537-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83537-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b4a08-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4a08-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83537-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="83537-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4a08-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b4a08-113">See also</span></span>
 
-- [<span data-ttu-id="83537-114">IAssemblyName 介面</span><span class="sxs-lookup"><span data-stu-id="83537-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="83537-115">融合列舉</span><span class="sxs-lookup"><span data-stu-id="83537-115">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="b4a08-114">IAssemblyName 介面</span><span class="sxs-lookup"><span data-stu-id="b4a08-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="b4a08-115">融合列舉</span><span class="sxs-lookup"><span data-stu-id="b4a08-115">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

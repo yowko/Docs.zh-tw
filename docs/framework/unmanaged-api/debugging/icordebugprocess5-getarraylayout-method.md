@@ -17,41 +17,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 332de11790e78b712a429365bd89cc9e41539edc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1afb87e063a18bd05bedf856f8b7ebdf0e47e91
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948755"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767428"
 ---
-# <a name="icordebugprocess5getarraylayout-method"></a><span data-ttu-id="98fbb-102">ICorDebugProcess5::GetArrayLayout 方法</span><span class="sxs-lookup"><span data-stu-id="98fbb-102">ICorDebugProcess5::GetArrayLayout Method</span></span>
-<span data-ttu-id="98fbb-103">提供關於版面配置的陣列類型的資訊。</span><span class="sxs-lookup"><span data-stu-id="98fbb-103">Provides information about the layout of array types.</span></span>  
+# <a name="icordebugprocess5getarraylayout-method"></a><span data-ttu-id="52b59-102">ICorDebugProcess5::GetArrayLayout 方法</span><span class="sxs-lookup"><span data-stu-id="52b59-102">ICorDebugProcess5::GetArrayLayout Method</span></span>
+<span data-ttu-id="52b59-103">提供關於版面配置的陣列類型的資訊。</span><span class="sxs-lookup"><span data-stu-id="52b59-103">Provides information about the layout of array types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98fbb-104">語法</span><span class="sxs-lookup"><span data-stu-id="98fbb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52b59-104">語法</span><span class="sxs-lookup"><span data-stu-id="52b59-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayout);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="98fbb-105">參數</span><span class="sxs-lookup"><span data-stu-id="98fbb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="52b59-105">參數</span><span class="sxs-lookup"><span data-stu-id="52b59-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="98fbb-106">[in]A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)語彙基元，指定想要使用的配置的陣列。</span><span class="sxs-lookup"><span data-stu-id="98fbb-106">[in] A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token that specifies the array whose layout is desired.</span></span>  
+ <span data-ttu-id="52b59-106">[in]A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)語彙基元，指定想要使用的配置的陣列。</span><span class="sxs-lookup"><span data-stu-id="52b59-106">[in] A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token that specifies the array whose layout is desired.</span></span>  
   
  `pLayout`  
- <span data-ttu-id="98fbb-107">[out]指標[COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md)結構，包含在記憶體中陣列的版面配置的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="98fbb-107">[out] A pointer to a [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) structure that contains information about the layout of the array in memory.</span></span>  
+ <span data-ttu-id="52b59-107">[out]指標[COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md)結構，包含在記憶體中陣列的版面配置的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="52b59-107">[out] A pointer to a [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) structure that contains information about the layout of the array in memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="98fbb-108">備註</span><span class="sxs-lookup"><span data-stu-id="98fbb-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52b59-108">備註</span><span class="sxs-lookup"><span data-stu-id="52b59-108">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98fbb-109">需求</span><span class="sxs-lookup"><span data-stu-id="98fbb-109">Requirements</span></span>  
- <span data-ttu-id="98fbb-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="98fbb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52b59-109">需求</span><span class="sxs-lookup"><span data-stu-id="52b59-109">Requirements</span></span>  
+ <span data-ttu-id="52b59-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="52b59-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="98fbb-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="98fbb-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="52b59-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="52b59-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="98fbb-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="98fbb-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="52b59-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52b59-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="98fbb-113">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98fbb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="52b59-113">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52b59-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98fbb-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="98fbb-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52b59-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="52b59-114">See also</span></span>
 
-- [<span data-ttu-id="98fbb-115">ICorDebugProcess5 介面</span><span class="sxs-lookup"><span data-stu-id="98fbb-115">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="98fbb-116">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="98fbb-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="52b59-115">ICorDebugProcess5 介面</span><span class="sxs-lookup"><span data-stu-id="52b59-115">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="52b59-116">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="52b59-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

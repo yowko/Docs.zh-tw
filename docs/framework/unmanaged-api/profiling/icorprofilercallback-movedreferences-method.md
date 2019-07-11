@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4611b8c186e0293dae73cee4f9d845bb44c167c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c037f2509aaa0a5e4c3f7a844614742b6f21bec3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904705"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769133"
 ---
-# <a name="icorprofilercallbackmovedreferences-method"></a><span data-ttu-id="324e5-102">ICorProfilerCallback::MovedReferences 方法</span><span class="sxs-lookup"><span data-stu-id="324e5-102">ICorProfilerCallback::MovedReferences Method</span></span>
-<span data-ttu-id="324e5-103">呼叫以報告壓縮記憶體回收造成的堆積中物件的新配置。</span><span class="sxs-lookup"><span data-stu-id="324e5-103">Called to report the new layout of objects in the heap as a result of a compacting garbage collection.</span></span>  
+# <a name="icorprofilercallbackmovedreferences-method"></a><span data-ttu-id="56bda-102">ICorProfilerCallback::MovedReferences 方法</span><span class="sxs-lookup"><span data-stu-id="56bda-102">ICorProfilerCallback::MovedReferences Method</span></span>
+<span data-ttu-id="56bda-103">呼叫以報告壓縮記憶體回收造成的堆積中物件的新配置。</span><span class="sxs-lookup"><span data-stu-id="56bda-103">Called to report the new layout of objects in the heap as a result of a compacting garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="324e5-104">語法</span><span class="sxs-lookup"><span data-stu-id="324e5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56bda-104">語法</span><span class="sxs-lookup"><span data-stu-id="56bda-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT MovedReferences(  
     [in]  ULONG  cMovedObjectIDRanges,  
     [in, size_is(cMovedObjectIDRanges)] ObjectID oldObjectIDRangeStart[] ,  
@@ -37,60 +37,60 @@ HRESULT MovedReferences(
     [in, size_is(cMovedObjectIDRanges)] ULONG    cObjectIDRangeLength[] );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="324e5-105">參數</span><span class="sxs-lookup"><span data-stu-id="324e5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="56bda-105">參數</span><span class="sxs-lookup"><span data-stu-id="56bda-105">Parameters</span></span>  
  `cMovedObjectIDRanges`  
- <span data-ttu-id="324e5-106">[in] 壓縮記憶體回收造成移動的連續物件區塊數目。</span><span class="sxs-lookup"><span data-stu-id="324e5-106">[in] The number of blocks of contiguous objects that moved as the result of the compacting garbage collection.</span></span> <span data-ttu-id="324e5-107">也就是 `cMovedObjectIDRanges` 的值是 `oldObjectIDRangeStart`、`newObjectIDRangeStart` 和 `cObjectIDRangeLength` 陣列的總大小。</span><span class="sxs-lookup"><span data-stu-id="324e5-107">That is, the value of `cMovedObjectIDRanges` is the total size of the `oldObjectIDRangeStart`, `newObjectIDRangeStart`, and `cObjectIDRangeLength` arrays.</span></span>  
+ <span data-ttu-id="56bda-106">[in] 壓縮記憶體回收造成移動的連續物件區塊數目。</span><span class="sxs-lookup"><span data-stu-id="56bda-106">[in] The number of blocks of contiguous objects that moved as the result of the compacting garbage collection.</span></span> <span data-ttu-id="56bda-107">也就是 `cMovedObjectIDRanges` 的值是 `oldObjectIDRangeStart`、`newObjectIDRangeStart` 和 `cObjectIDRangeLength` 陣列的總大小。</span><span class="sxs-lookup"><span data-stu-id="56bda-107">That is, the value of `cMovedObjectIDRanges` is the total size of the `oldObjectIDRangeStart`, `newObjectIDRangeStart`, and `cObjectIDRangeLength` arrays.</span></span>  
   
- <span data-ttu-id="324e5-108">下面 `MovedReferences` 的三個引數是平行陣列。</span><span class="sxs-lookup"><span data-stu-id="324e5-108">The next three arguments of `MovedReferences` are parallel arrays.</span></span> <span data-ttu-id="324e5-109">換句話說，`oldObjectIDRangeStart[i]`、`newObjectIDRangeStart[i]` 和 `cObjectIDRangeLength[i]` 全都會考量連續物件的單一區塊。</span><span class="sxs-lookup"><span data-stu-id="324e5-109">In other words, `oldObjectIDRangeStart[i]`, `newObjectIDRangeStart[i]`, and `cObjectIDRangeLength[i]` all concern a single block of contiguous objects.</span></span>  
+ <span data-ttu-id="56bda-108">下面 `MovedReferences` 的三個引數是平行陣列。</span><span class="sxs-lookup"><span data-stu-id="56bda-108">The next three arguments of `MovedReferences` are parallel arrays.</span></span> <span data-ttu-id="56bda-109">換句話說，`oldObjectIDRangeStart[i]`、`newObjectIDRangeStart[i]` 和 `cObjectIDRangeLength[i]` 全都會考量連續物件的單一區塊。</span><span class="sxs-lookup"><span data-stu-id="56bda-109">In other words, `oldObjectIDRangeStart[i]`, `newObjectIDRangeStart[i]`, and `cObjectIDRangeLength[i]` all concern a single block of contiguous objects.</span></span>  
   
  `oldObjectIDRangeStart`  
- <span data-ttu-id="324e5-110">[in] 一個 `ObjectID` 值的陣列，其中每一個都是記憶體中連續即時物件之區塊舊的 (記憶體回收前) 開始位址。</span><span class="sxs-lookup"><span data-stu-id="324e5-110">[in] An array of `ObjectID` values, each of which is the old (pre-garbage collection) starting address of a block of contiguous, live objects in memory.</span></span>  
+ <span data-ttu-id="56bda-110">[in] 一個 `ObjectID` 值的陣列，其中每一個都是記憶體中連續即時物件之區塊舊的 (記憶體回收前) 開始位址。</span><span class="sxs-lookup"><span data-stu-id="56bda-110">[in] An array of `ObjectID` values, each of which is the old (pre-garbage collection) starting address of a block of contiguous, live objects in memory.</span></span>  
   
  `newObjectIDRangeStart`  
- <span data-ttu-id="324e5-111">[in] 一個 `ObjectID` 值的陣列，其中每一個都是記憶體中連續即時物件之區塊新的 (記憶體回收後) 開始位址。</span><span class="sxs-lookup"><span data-stu-id="324e5-111">[in] An array of `ObjectID` values, each of which is the new (post-garbage collection) starting address of a block of contiguous, live objects in memory.</span></span>  
+ <span data-ttu-id="56bda-111">[in] 一個 `ObjectID` 值的陣列，其中每一個都是記憶體中連續即時物件之區塊新的 (記憶體回收後) 開始位址。</span><span class="sxs-lookup"><span data-stu-id="56bda-111">[in] An array of `ObjectID` values, each of which is the new (post-garbage collection) starting address of a block of contiguous, live objects in memory.</span></span>  
   
  `cObjectIDRangeLength`  
- <span data-ttu-id="324e5-112">[in] 一個整數的陣列，其中每一個都是記憶體中連續物件區塊的大小。</span><span class="sxs-lookup"><span data-stu-id="324e5-112">[in] An array of integers, each of which is the size of a block of contiguous objects in memory.</span></span>  
+ <span data-ttu-id="56bda-112">[in] 一個整數的陣列，其中每一個都是記憶體中連續物件區塊的大小。</span><span class="sxs-lookup"><span data-stu-id="56bda-112">[in] An array of integers, each of which is the size of a block of contiguous objects in memory.</span></span>  
   
- <span data-ttu-id="324e5-113">已指定大小給 `oldObjectIDRangeStart` 和 `newObjectIDRangeStart` 陣列中被參考的每個區塊。</span><span class="sxs-lookup"><span data-stu-id="324e5-113">A size is specified for each block that is referenced in the `oldObjectIDRangeStart` and `newObjectIDRangeStart` arrays.</span></span>  
+ <span data-ttu-id="56bda-113">已指定大小給 `oldObjectIDRangeStart` 和 `newObjectIDRangeStart` 陣列中被參考的每個區塊。</span><span class="sxs-lookup"><span data-stu-id="56bda-113">A size is specified for each block that is referenced in the `oldObjectIDRangeStart` and `newObjectIDRangeStart` arrays.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="324e5-114">備註</span><span class="sxs-lookup"><span data-stu-id="324e5-114">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="56bda-114">備註</span><span class="sxs-lookup"><span data-stu-id="56bda-114">Remarks</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="324e5-115">對於在 64 位元平台上大於 4 GB 的物件，這個方法會報告大小為 `MAX_ULONG`。</span><span class="sxs-lookup"><span data-stu-id="324e5-115">This method reports sizes as `MAX_ULONG` for objects that are greater than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="324e5-116">若要取得大於 4 GB 的物件的大小，請使用[ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="324e5-116">To get the size of objects that are larger than 4 GB, use the [ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) method instead.</span></span>  
+>  <span data-ttu-id="56bda-115">對於在 64 位元平台上大於 4 GB 的物件，這個方法會報告大小為 `MAX_ULONG`。</span><span class="sxs-lookup"><span data-stu-id="56bda-115">This method reports sizes as `MAX_ULONG` for objects that are greater than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="56bda-116">若要取得大於 4 GB 的物件的大小，請使用[ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="56bda-116">To get the size of objects that are larger than 4 GB, use the [ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) method instead.</span></span>  
   
- <span data-ttu-id="324e5-117">壓縮記憶體回收行程會回收無作用物件所佔用的記憶體，且會壓縮釋放的空間。</span><span class="sxs-lookup"><span data-stu-id="324e5-117">A compacting garbage collector reclaims the memory occupied by dead objects and compacts that freed space.</span></span> <span data-ttu-id="324e5-118">如此一來，即時物件可能在堆積中移動，且先前通知所散發 `ObjectID` 的值可能會變更。</span><span class="sxs-lookup"><span data-stu-id="324e5-118">As a result, live objects might be moved within the heap, and `ObjectID` values distributed by previous notifications might change.</span></span>  
+ <span data-ttu-id="56bda-117">壓縮記憶體回收行程會回收無作用物件所佔用的記憶體，且會壓縮釋放的空間。</span><span class="sxs-lookup"><span data-stu-id="56bda-117">A compacting garbage collector reclaims the memory occupied by dead objects and compacts that freed space.</span></span> <span data-ttu-id="56bda-118">如此一來，即時物件可能在堆積中移動，且先前通知所散發 `ObjectID` 的值可能會變更。</span><span class="sxs-lookup"><span data-stu-id="56bda-118">As a result, live objects might be moved within the heap, and `ObjectID` values distributed by previous notifications might change.</span></span>  
   
- <span data-ttu-id="324e5-119">假定現有 `ObjectID` 的值 (`oldObjectID`) 位於下列範圍內：</span><span class="sxs-lookup"><span data-stu-id="324e5-119">Assume that an existing `ObjectID` value (`oldObjectID`) lies within the following range:</span></span>  
+ <span data-ttu-id="56bda-119">假定現有 `ObjectID` 的值 (`oldObjectID`) 位於下列範圍內：</span><span class="sxs-lookup"><span data-stu-id="56bda-119">Assume that an existing `ObjectID` value (`oldObjectID`) lies within the following range:</span></span>  
   
  `oldObjectIDRangeStart[i]` <= `oldObjectID` < `oldObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- <span data-ttu-id="324e5-120">在此情況下，從範圍開頭到物件開頭的位移如下所示：</span><span class="sxs-lookup"><span data-stu-id="324e5-120">In this case, the offset from the start of the range to the start of the object is as follows:</span></span>  
+ <span data-ttu-id="56bda-120">在此情況下，從範圍開頭到物件開頭的位移如下所示：</span><span class="sxs-lookup"><span data-stu-id="56bda-120">In this case, the offset from the start of the range to the start of the object is as follows:</span></span>  
   
  `oldObjectID` - `oldObjectRangeStart[i]`  
   
- <span data-ttu-id="324e5-121">對於位於下列範圍內的任何 `i` 值：</span><span class="sxs-lookup"><span data-stu-id="324e5-121">For any value of `i` that is in the following range:</span></span>  
+ <span data-ttu-id="56bda-121">對於位於下列範圍內的任何 `i` 值：</span><span class="sxs-lookup"><span data-stu-id="56bda-121">For any value of `i` that is in the following range:</span></span>  
   
- <span data-ttu-id="324e5-122">0 <= `i` < `cMovedObjectIDRanges`</span><span class="sxs-lookup"><span data-stu-id="324e5-122">0 <= `i` < `cMovedObjectIDRanges`</span></span>  
+ <span data-ttu-id="56bda-122">0 <= `i` < `cMovedObjectIDRanges`</span><span class="sxs-lookup"><span data-stu-id="56bda-122">0 <= `i` < `cMovedObjectIDRanges`</span></span>  
   
- <span data-ttu-id="324e5-123">您可以計算新的 `ObjectID`，如下所示：</span><span class="sxs-lookup"><span data-stu-id="324e5-123">you can calculate the new `ObjectID` as follows:</span></span>  
+ <span data-ttu-id="56bda-123">您可以計算新的 `ObjectID`，如下所示：</span><span class="sxs-lookup"><span data-stu-id="56bda-123">you can calculate the new `ObjectID` as follows:</span></span>  
   
- <span data-ttu-id="324e5-124">`newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)</span><span class="sxs-lookup"><span data-stu-id="324e5-124">`newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)</span></span>  
+ <span data-ttu-id="56bda-124">`newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)</span><span class="sxs-lookup"><span data-stu-id="56bda-124">`newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)</span></span>  
   
- <span data-ttu-id="324e5-125">`MovedReferences` 方法在自行回呼期間所傳遞的 `ObjectID` 值都無效，因為記憶體回收可能正在將物件從舊位置移至新位置。</span><span class="sxs-lookup"><span data-stu-id="324e5-125">None of the `ObjectID` values passed by `MovedReferences` are valid during the callback itself, because the garbage collection might be in the middle of moving objects from old locations to new locations.</span></span> <span data-ttu-id="324e5-126">因此，分析工具不應嘗試在 `MovedReferences` 呼叫期間檢查物件。</span><span class="sxs-lookup"><span data-stu-id="324e5-126">Therefore, profilers should not attempt to inspect objects during a `MovedReferences` call.</span></span> <span data-ttu-id="324e5-127">A [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)回呼表示所有物件都已都移至其新位置，而且可以執行檢查。</span><span class="sxs-lookup"><span data-stu-id="324e5-127">A [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback indicates that all objects have been moved to their new locations and inspection can be performed.</span></span>  
+ <span data-ttu-id="56bda-125">          `MovedReferences` 方法在自行回呼期間所傳遞的 `ObjectID` 值都無效，因為記憶體回收可能正在將物件從舊位置移至新位置。</span><span class="sxs-lookup"><span data-stu-id="56bda-125">None of the `ObjectID` values passed by `MovedReferences` are valid during the callback itself, because the garbage collection might be in the middle of moving objects from old locations to new locations.</span></span> <span data-ttu-id="56bda-126">因此，分析工具不應嘗試在 `MovedReferences` 呼叫期間檢查物件。</span><span class="sxs-lookup"><span data-stu-id="56bda-126">Therefore, profilers should not attempt to inspect objects during a `MovedReferences` call.</span></span> <span data-ttu-id="56bda-127">A [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)回呼表示所有物件都已都移至其新位置，而且可以執行檢查。</span><span class="sxs-lookup"><span data-stu-id="56bda-127">A [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback indicates that all objects have been moved to their new locations and inspection can be performed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="324e5-128">需求</span><span class="sxs-lookup"><span data-stu-id="324e5-128">Requirements</span></span>  
- <span data-ttu-id="324e5-129">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="324e5-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="56bda-128">需求</span><span class="sxs-lookup"><span data-stu-id="56bda-128">Requirements</span></span>  
+ <span data-ttu-id="56bda-129">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="56bda-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="324e5-130">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="324e5-130">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="56bda-130">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="56bda-130">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="324e5-131">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="324e5-131">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="56bda-131">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="56bda-131">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="324e5-132">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="324e5-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="56bda-132">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56bda-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="324e5-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="324e5-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56bda-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="56bda-133">See also</span></span>
 
-- [<span data-ttu-id="324e5-134">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="324e5-134">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="324e5-135">MovedReferences2 方法</span><span class="sxs-lookup"><span data-stu-id="324e5-135">MovedReferences2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)
-- [<span data-ttu-id="324e5-136">分析介面</span><span class="sxs-lookup"><span data-stu-id="324e5-136">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="324e5-137">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="324e5-137">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="56bda-134">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="56bda-134">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="56bda-135">MovedReferences2 方法</span><span class="sxs-lookup"><span data-stu-id="56bda-135">MovedReferences2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)
+- [<span data-ttu-id="56bda-136">分析介面</span><span class="sxs-lookup"><span data-stu-id="56bda-136">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="56bda-137">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="56bda-137">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

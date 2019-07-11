@@ -17,37 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e2d7a344cabb1ab816e4fe696ebb47276397ec3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53b892cddbf716afbd137ead36a69aa42f22d331
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774552"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752224"
 ---
-# <a name="icordebugenumskip-method"></a><span data-ttu-id="c290a-102">ICorDebugEnum::Skip 方法</span><span class="sxs-lookup"><span data-stu-id="c290a-102">ICorDebugEnum::Skip Method</span></span>
-<span data-ttu-id="c290a-103">將游標移往前列舉中所指定的項目數。</span><span class="sxs-lookup"><span data-stu-id="c290a-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  
+# <a name="icordebugenumskip-method"></a><span data-ttu-id="d70d8-102">ICorDebugEnum::Skip 方法</span><span class="sxs-lookup"><span data-stu-id="d70d8-102">ICorDebugEnum::Skip Method</span></span>
+<span data-ttu-id="d70d8-103">將游標移往前列舉中所指定的項目數。</span><span class="sxs-lookup"><span data-stu-id="d70d8-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c290a-104">語法</span><span class="sxs-lookup"><span data-stu-id="c290a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d70d8-104">語法</span><span class="sxs-lookup"><span data-stu-id="d70d8-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Skip (  
     [in] ULONG celt  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c290a-105">參數</span><span class="sxs-lookup"><span data-stu-id="c290a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d70d8-105">參數</span><span class="sxs-lookup"><span data-stu-id="d70d8-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="c290a-106">[in]用來將游標向前移動的項目數目。</span><span class="sxs-lookup"><span data-stu-id="c290a-106">[in] The number of items by which to move the cursor forward.</span></span>  
+ <span data-ttu-id="d70d8-106">[in]用來將游標向前移動的項目數目。</span><span class="sxs-lookup"><span data-stu-id="d70d8-106">[in] The number of items by which to move the cursor forward.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c290a-107">需求</span><span class="sxs-lookup"><span data-stu-id="c290a-107">Requirements</span></span>  
- <span data-ttu-id="c290a-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c290a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d70d8-107">需求</span><span class="sxs-lookup"><span data-stu-id="d70d8-107">Requirements</span></span>  
+ <span data-ttu-id="d70d8-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d70d8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c290a-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c290a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d70d8-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d70d8-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c290a-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c290a-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d70d8-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d70d8-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c290a-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c290a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d70d8-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d70d8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c290a-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c290a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d70d8-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d70d8-112">See also</span></span>
 
-- [<span data-ttu-id="c290a-113">ICorDebugEnum 介面</span><span class="sxs-lookup"><span data-stu-id="c290a-113">ICorDebugEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+- [<span data-ttu-id="d70d8-113">ICorDebugEnum 介面</span><span class="sxs-lookup"><span data-stu-id="d70d8-113">ICorDebugEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

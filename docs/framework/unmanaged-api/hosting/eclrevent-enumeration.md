@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13d564be68d6b49a1616be97710312f33f828d48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1e003ba23f680c4a5525a956d758aac6b823eb9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628655"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769716"
 ---
-# <a name="eclrevent-enumeration"></a><span data-ttu-id="9944d-102">EClrEvent 列舉</span><span class="sxs-lookup"><span data-stu-id="9944d-102">EClrEvent Enumeration</span></span>
-<span data-ttu-id="9944d-103">描述通用語言執行平台 (CLR) 事件，主機可以註冊的回呼。</span><span class="sxs-lookup"><span data-stu-id="9944d-103">Describes the common language runtime (CLR) events for which the host can register callbacks.</span></span>  
+# <a name="eclrevent-enumeration"></a><span data-ttu-id="85f8d-102">EClrEvent 列舉</span><span class="sxs-lookup"><span data-stu-id="85f8d-102">EClrEvent Enumeration</span></span>
+<span data-ttu-id="85f8d-103">描述通用語言執行平台 (CLR) 事件，主機可以註冊的回呼。</span><span class="sxs-lookup"><span data-stu-id="85f8d-103">Describes the common language runtime (CLR) events for which the host can register callbacks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9944d-104">語法</span><span class="sxs-lookup"><span data-stu-id="9944d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="85f8d-104">語法</span><span class="sxs-lookup"><span data-stu-id="85f8d-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
     Event_ClrDisabled,  
     Event_DomainUnload,  
@@ -37,33 +37,33 @@ typedef enum {
 } EClrEvent;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9944d-105">成員</span><span class="sxs-lookup"><span data-stu-id="9944d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="85f8d-105">成員</span><span class="sxs-lookup"><span data-stu-id="85f8d-105">Members</span></span>  
   
-|<span data-ttu-id="9944d-106">成員</span><span class="sxs-lookup"><span data-stu-id="9944d-106">Member</span></span>|<span data-ttu-id="9944d-107">描述</span><span class="sxs-lookup"><span data-stu-id="9944d-107">Description</span></span>|  
+|<span data-ttu-id="85f8d-106">成員</span><span class="sxs-lookup"><span data-stu-id="85f8d-106">Member</span></span>|<span data-ttu-id="85f8d-107">描述</span><span class="sxs-lookup"><span data-stu-id="85f8d-107">Description</span></span>|  
 |------------|-----------------|  
-|`Event_ClrDisabled`|<span data-ttu-id="9944d-108">指定嚴重的 CLR 錯誤。</span><span class="sxs-lookup"><span data-stu-id="9944d-108">Specifies a fatal CLR error.</span></span>|  
-|`Event_DomainUnload`|<span data-ttu-id="9944d-109">指定特定的卸載<xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="9944d-109">Specifies the unloading of a particular <xref:System.AppDomain>.</span></span>|  
-|`Event_MDAFired`|<span data-ttu-id="9944d-110">指定已產生 Managed 偵錯助理 (MDA) 訊息。</span><span class="sxs-lookup"><span data-stu-id="9944d-110">Specifies that a Managed Debugging Assistant (MDA) message has been generated.</span></span>|  
-|`Event_StackOverflow`|<span data-ttu-id="9944d-111">指定發生堆疊溢位錯誤。</span><span class="sxs-lookup"><span data-stu-id="9944d-111">Specifies that a stack overflow error has occurred.</span></span>|  
+|`Event_ClrDisabled`|<span data-ttu-id="85f8d-108">指定嚴重的 CLR 錯誤。</span><span class="sxs-lookup"><span data-stu-id="85f8d-108">Specifies a fatal CLR error.</span></span>|  
+|`Event_DomainUnload`|<span data-ttu-id="85f8d-109">指定特定的卸載<xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="85f8d-109">Specifies the unloading of a particular <xref:System.AppDomain>.</span></span>|  
+|`Event_MDAFired`|<span data-ttu-id="85f8d-110">指定已產生 Managed 偵錯助理 (MDA) 訊息。</span><span class="sxs-lookup"><span data-stu-id="85f8d-110">Specifies that a Managed Debugging Assistant (MDA) message has been generated.</span></span>|  
+|`Event_StackOverflow`|<span data-ttu-id="85f8d-111">指定發生堆疊溢位錯誤。</span><span class="sxs-lookup"><span data-stu-id="85f8d-111">Specifies that a stack overflow error has occurred.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9944d-112">備註</span><span class="sxs-lookup"><span data-stu-id="9944d-112">Remarks</span></span>  
- <span data-ttu-id="9944d-113">主機可以註冊的任何事件類型所描述的回呼`EClrEvent`藉由呼叫的方法[ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="9944d-113">The host can register callbacks for any of the event types described by `EClrEvent` by calling methods of the [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interface.</span></span> <span data-ttu-id="9944d-114">主機取得這個介面的指標，藉由呼叫[iclrcontrol:: Getclrmanager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="9944d-114">The host gets a pointer to this interface by calling the [ICLRControl::GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="85f8d-112">備註</span><span class="sxs-lookup"><span data-stu-id="85f8d-112">Remarks</span></span>  
+ <span data-ttu-id="85f8d-113">主機可以註冊的任何事件類型所描述的回呼`EClrEvent`藉由呼叫的方法[ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="85f8d-113">The host can register callbacks for any of the event types described by `EClrEvent` by calling methods of the [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interface.</span></span> <span data-ttu-id="85f8d-114">主機取得這個介面的指標，藉由呼叫[iclrcontrol:: Getclrmanager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="85f8d-114">The host gets a pointer to this interface by calling the [ICLRControl::GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method.</span></span>  
   
- <span data-ttu-id="9944d-115">`Event_CLRDisabled`和`Event_DomainUnload`可以引發事件，一次以上，並從不同的執行緒，以表示卸載或 CLR 的停用。</span><span class="sxs-lookup"><span data-stu-id="9944d-115">The `Event_CLRDisabled` and `Event_DomainUnload` events can be raised more than once and from different threads to signal an unload or the disabling of the CLR.</span></span>  
+ <span data-ttu-id="85f8d-115">`Event_CLRDisabled`和`Event_DomainUnload`可以引發事件，一次以上，並從不同的執行緒，以表示卸載或 CLR 的停用。</span><span class="sxs-lookup"><span data-stu-id="85f8d-115">The `Event_CLRDisabled` and `Event_DomainUnload` events can be raised more than once and from different threads to signal an unload or the disabling of the CLR.</span></span>  
   
- <span data-ttu-id="9944d-116">`Event_MDAFired`事件引發建立[MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)包含 MDA 訊息的詳細資料的執行個體。</span><span class="sxs-lookup"><span data-stu-id="9944d-116">The `Event_MDAFired` event raises the creation of an [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) instance that contains the details of the MDA message.</span></span> <span data-ttu-id="9944d-117">如需有關 Mda 的詳細資訊，請參閱 < [Managed 偵錯助理診斷錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。</span><span class="sxs-lookup"><span data-stu-id="9944d-117">For more information about MDAs, see [Diagnosing Errors with Managed Debugging Assistants](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span></span>  
+ <span data-ttu-id="85f8d-116">`Event_MDAFired`事件引發建立[MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)包含 MDA 訊息的詳細資料的執行個體。</span><span class="sxs-lookup"><span data-stu-id="85f8d-116">The `Event_MDAFired` event raises the creation of an [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) instance that contains the details of the MDA message.</span></span> <span data-ttu-id="85f8d-117">如需有關 Mda 的詳細資訊，請參閱 < [Managed 偵錯助理診斷錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。</span><span class="sxs-lookup"><span data-stu-id="85f8d-117">For more information about MDAs, see [Diagnosing Errors with Managed Debugging Assistants](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9944d-118">需求</span><span class="sxs-lookup"><span data-stu-id="9944d-118">Requirements</span></span>  
- <span data-ttu-id="9944d-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9944d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="85f8d-118">需求</span><span class="sxs-lookup"><span data-stu-id="85f8d-118">Requirements</span></span>  
+ <span data-ttu-id="85f8d-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="85f8d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9944d-120">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9944d-120">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="85f8d-120">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="85f8d-120">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9944d-121">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9944d-121">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="85f8d-121">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="85f8d-121">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9944d-122">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9944d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="85f8d-122">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85f8d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9944d-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9944d-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85f8d-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="85f8d-123">See also</span></span>
 
-- [<span data-ttu-id="9944d-124">IActionOnCLREvent 介面</span><span class="sxs-lookup"><span data-stu-id="9944d-124">IActionOnCLREvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
-- [<span data-ttu-id="9944d-125">ICLRControl 介面</span><span class="sxs-lookup"><span data-stu-id="9944d-125">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="9944d-126">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="9944d-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="85f8d-124">IActionOnCLREvent 介面</span><span class="sxs-lookup"><span data-stu-id="85f8d-124">IActionOnCLREvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
+- [<span data-ttu-id="85f8d-125">ICLRControl 介面</span><span class="sxs-lookup"><span data-stu-id="85f8d-125">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="85f8d-126">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="85f8d-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6c550ff7af2dda8bc06afd771024fe290339904
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: aa633d554652050af51065e11221f898b34d5c63
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089779"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772679"
 ---
-# <a name="imetadataassemblyimportgetassemblyrefprops-method"></a><span data-ttu-id="d0294-102">IMetaDataAssemblyImport::GetAssemblyRefProps 方法</span><span class="sxs-lookup"><span data-stu-id="d0294-102">IMetaDataAssemblyImport::GetAssemblyRefProps Method</span></span>
-<span data-ttu-id="d0294-103">取得具有指定之中繼資料簽章的組件參考的屬性集。</span><span class="sxs-lookup"><span data-stu-id="d0294-103">Gets the set of properties for the assembly reference with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetassemblyrefprops-method"></a><span data-ttu-id="40057-102">IMetaDataAssemblyImport::GetAssemblyRefProps 方法</span><span class="sxs-lookup"><span data-stu-id="40057-102">IMetaDataAssemblyImport::GetAssemblyRefProps Method</span></span>
+<span data-ttu-id="40057-103">取得具有指定之中繼資料簽章的組件參考的屬性集。</span><span class="sxs-lookup"><span data-stu-id="40057-103">Gets the set of properties for the assembly reference with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0294-104">語法</span><span class="sxs-lookup"><span data-stu-id="d0294-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40057-104">語法</span><span class="sxs-lookup"><span data-stu-id="40057-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetAssemblyRefProps (  
     [in]  mdAssemblyRef        mdar,   
     [out] const void          **ppbPublicKeyOrToken,   
@@ -44,49 +44,49 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d0294-105">參數</span><span class="sxs-lookup"><span data-stu-id="d0294-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="40057-105">參數</span><span class="sxs-lookup"><span data-stu-id="40057-105">Parameters</span></span>  
  `mdar`  
- <span data-ttu-id="d0294-106">[in]`mdAssemblyRef`表示要為其取得屬性的組件參考的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="d0294-106">[in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.</span></span>  
+ <span data-ttu-id="40057-106">[in]`mdAssemblyRef`表示要為其取得屬性的組件參考的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="40057-106">[in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.</span></span>  
   
  `ppbPublicKeyOrToken`  
- <span data-ttu-id="d0294-107">[out]公開金鑰或中繼資料語彙基元的指標。</span><span class="sxs-lookup"><span data-stu-id="d0294-107">[out] A pointer to the public key or the metadata token.</span></span>  
+ <span data-ttu-id="40057-107">[out]公開金鑰或中繼資料語彙基元的指標。</span><span class="sxs-lookup"><span data-stu-id="40057-107">[out] A pointer to the public key or the metadata token.</span></span>  
   
  `pcbPublicKeyOrToken`  
- <span data-ttu-id="d0294-108">[out]在傳回的公開金鑰或語彙基元的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="d0294-108">[out] The number of bytes in the returned public key or token.</span></span>  
+ <span data-ttu-id="40057-108">[out]在傳回的公開金鑰或語彙基元的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="40057-108">[out] The number of bytes in the returned public key or token.</span></span>  
   
  `szName`  
- <span data-ttu-id="d0294-109">[out]組件的簡單名稱。</span><span class="sxs-lookup"><span data-stu-id="d0294-109">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="40057-109">[out]組件的簡單名稱。</span><span class="sxs-lookup"><span data-stu-id="40057-109">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="d0294-110">[in]大小，以寬字元為單位的`szName`。</span><span class="sxs-lookup"><span data-stu-id="d0294-110">[in] The size, in wide chars, of `szName`.</span></span>  
+ <span data-ttu-id="40057-110">[in]大小，以寬字元為單位的`szName`。</span><span class="sxs-lookup"><span data-stu-id="40057-110">[in] The size, in wide chars, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="d0294-111">[out]中實際傳回的寬字元數目的指標`szName`。</span><span class="sxs-lookup"><span data-stu-id="d0294-111">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
+ <span data-ttu-id="40057-111">[out]中實際傳回的寬字元數目的指標`szName`。</span><span class="sxs-lookup"><span data-stu-id="40057-111">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="d0294-112">[out]ASSEMBLYMETADATA 結構，其中包含組件中繼資料指標。</span><span class="sxs-lookup"><span data-stu-id="d0294-112">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span></span>  
+ <span data-ttu-id="40057-112">[out]ASSEMBLYMETADATA 結構，其中包含組件中繼資料指標。</span><span class="sxs-lookup"><span data-stu-id="40057-112">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span></span>  
   
  `ppbHashValue`  
- <span data-ttu-id="d0294-113">[out]雜湊值的指標。</span><span class="sxs-lookup"><span data-stu-id="d0294-113">[out] A pointer to the hash value.</span></span> <span data-ttu-id="d0294-114">這是雜湊，並使用 sha-1 演算法`PublicKey`參考，除非 arfFullOriginator 旗標之組件的屬性[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)列舉型別設定。</span><span class="sxs-lookup"><span data-stu-id="d0294-114">This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.</span></span>  
+ <span data-ttu-id="40057-113">[out]雜湊值的指標。</span><span class="sxs-lookup"><span data-stu-id="40057-113">[out] A pointer to the hash value.</span></span> <span data-ttu-id="40057-114">這是雜湊，並使用 sha-1 演算法`PublicKey`參考，除非 arfFullOriginator 旗標之組件的屬性[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)列舉型別設定。</span><span class="sxs-lookup"><span data-stu-id="40057-114">This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.</span></span>  
   
  `pcbHashValue`  
- <span data-ttu-id="d0294-115">[out]在傳回的雜湊值的寬字元數目。</span><span class="sxs-lookup"><span data-stu-id="d0294-115">[out] The number of wide chars in the returned hash value.</span></span>  
+ <span data-ttu-id="40057-115">[out]在傳回的雜湊值的寬字元數目。</span><span class="sxs-lookup"><span data-stu-id="40057-115">[out] The number of wide chars in the returned hash value.</span></span>  
   
  `pdwAssemblyRefFlags`  
- <span data-ttu-id="d0294-116">[out]指標，描述套用至組件的中繼資料的旗標。</span><span class="sxs-lookup"><span data-stu-id="d0294-116">[out] A pointer to flags that describe the metadata applied to an assembly.</span></span> <span data-ttu-id="d0294-117">旗標值是由一或多個組成[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值。</span><span class="sxs-lookup"><span data-stu-id="d0294-117">The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span></span>  
+ <span data-ttu-id="40057-116">[out]指標，描述套用至組件的中繼資料的旗標。</span><span class="sxs-lookup"><span data-stu-id="40057-116">[out] A pointer to flags that describe the metadata applied to an assembly.</span></span> <span data-ttu-id="40057-117">旗標值是由一或多個組成[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值。</span><span class="sxs-lookup"><span data-stu-id="40057-117">The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d0294-118">傳回值</span><span class="sxs-lookup"><span data-stu-id="d0294-118">Return Value</span></span>  
- <span data-ttu-id="d0294-119">這個方法會傳回 S_OK，如果成功;否則，它會傳回一個在 Winerror.h 標頭檔中定義的錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="d0294-119">This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="40057-118">傳回值</span><span class="sxs-lookup"><span data-stu-id="40057-118">Return Value</span></span>  
+ <span data-ttu-id="40057-119">這個方法會傳回 S_OK，如果成功;否則，它會傳回一個在 Winerror.h 標頭檔中定義的錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="40057-119">This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0294-120">需求</span><span class="sxs-lookup"><span data-stu-id="d0294-120">Requirements</span></span>  
- <span data-ttu-id="d0294-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d0294-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="40057-120">需求</span><span class="sxs-lookup"><span data-stu-id="40057-120">Requirements</span></span>  
+ <span data-ttu-id="40057-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="40057-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0294-122">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d0294-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="40057-122">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="40057-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d0294-123">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d0294-123">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="40057-123">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="40057-123">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d0294-124">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0294-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="40057-124">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40057-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0294-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d0294-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40057-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="40057-125">See also</span></span>
 
-- [<span data-ttu-id="d0294-126">IMetaDataAssemblyImport 介面</span><span class="sxs-lookup"><span data-stu-id="d0294-126">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="40057-126">IMetaDataAssemblyImport 介面</span><span class="sxs-lookup"><span data-stu-id="40057-126">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

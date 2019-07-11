@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab1282109d7241c2599f8ca029fc79e4a3135209
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d479e9f55cf7d7a13fef99f302bfd8d9d89d47f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939980"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776952"
 ---
-# <a name="isymunmanagedconstantgetsignature-method"></a><span data-ttu-id="279ea-102">ISymUnmanagedConstant::GetSignature 方法</span><span class="sxs-lookup"><span data-stu-id="279ea-102">ISymUnmanagedConstant::GetSignature Method</span></span>
-<span data-ttu-id="279ea-103">取得常數的簽章。</span><span class="sxs-lookup"><span data-stu-id="279ea-103">Gets the signature of the constant.</span></span>  
+# <a name="isymunmanagedconstantgetsignature-method"></a><span data-ttu-id="8c0ce-102">ISymUnmanagedConstant::GetSignature 方法</span><span class="sxs-lookup"><span data-stu-id="8c0ce-102">ISymUnmanagedConstant::GetSignature Method</span></span>
+<span data-ttu-id="8c0ce-103">取得常數的簽章。</span><span class="sxs-lookup"><span data-stu-id="8c0ce-103">Gets the signature of the constant.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="279ea-104">語法</span><span class="sxs-lookup"><span data-stu-id="279ea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c0ce-104">語法</span><span class="sxs-lookup"><span data-stu-id="8c0ce-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSignature(  
     [in]  ULONG32  cSig,  
     [out] ULONG32  *pcSig,  
@@ -37,24 +37,24 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="279ea-105">參數</span><span class="sxs-lookup"><span data-stu-id="279ea-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8c0ce-105">參數</span><span class="sxs-lookup"><span data-stu-id="8c0ce-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="279ea-106">[in]緩衝區的長度，`pcSig`參數所指向。</span><span class="sxs-lookup"><span data-stu-id="279ea-106">[in] The length of the buffer that the `pcSig` parameter points to.</span></span>  
+ <span data-ttu-id="8c0ce-106">[in]緩衝區的長度，`pcSig`參數所指向。</span><span class="sxs-lookup"><span data-stu-id="8c0ce-106">[in] The length of the buffer that the `pcSig` parameter points to.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="279ea-107">[out]指標`ULONG32`接收大小，以字元為單位，以包含簽章所需的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="279ea-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="8c0ce-107">[out]指標`ULONG32`接收大小，以字元為單位，以包含簽章所需的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="8c0ce-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="279ea-108">[out]儲存簽章的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="279ea-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="8c0ce-108">[out]儲存簽章的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="8c0ce-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="279ea-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="279ea-109">Return Value</span></span>  
- <span data-ttu-id="279ea-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="279ea-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8c0ce-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="8c0ce-109">Return Value</span></span>  
+ <span data-ttu-id="8c0ce-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="8c0ce-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="279ea-111">需求</span><span class="sxs-lookup"><span data-stu-id="279ea-111">Requirements</span></span>  
- <span data-ttu-id="279ea-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="279ea-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8c0ce-111">需求</span><span class="sxs-lookup"><span data-stu-id="8c0ce-111">Requirements</span></span>  
+ <span data-ttu-id="8c0ce-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8c0ce-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="279ea-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="279ea-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8c0ce-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8c0ce-113">See also</span></span>
 
-- [<span data-ttu-id="279ea-114">ISymUnmanagedConstant 介面</span><span class="sxs-lookup"><span data-stu-id="279ea-114">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [<span data-ttu-id="279ea-115">GetName 方法</span><span class="sxs-lookup"><span data-stu-id="279ea-115">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [<span data-ttu-id="279ea-116">GetValue 方法</span><span class="sxs-lookup"><span data-stu-id="279ea-116">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [<span data-ttu-id="8c0ce-114">ISymUnmanagedConstant 介面</span><span class="sxs-lookup"><span data-stu-id="8c0ce-114">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
+- [<span data-ttu-id="8c0ce-115">GetName 方法</span><span class="sxs-lookup"><span data-stu-id="8c0ce-115">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
+- [<span data-ttu-id="8c0ce-116">GetValue 方法</span><span class="sxs-lookup"><span data-stu-id="8c0ce-116">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)

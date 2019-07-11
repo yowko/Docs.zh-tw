@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6253191340c2f2d4f42f47d580b9d923ab3ff041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67e71002a78023ad6e8ef89c7a57d484a65aaeb3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651684"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756391"
 ---
-# <a name="icordebugfunctionbreakpointgetoffset-method"></a><span data-ttu-id="7e847-102">ICorDebugFunctionBreakpoint::GetOffset 方法</span><span class="sxs-lookup"><span data-stu-id="7e847-102">ICorDebugFunctionBreakpoint::GetOffset Method</span></span>
-<span data-ttu-id="7e847-103">取得中斷點的函式中的位移。</span><span class="sxs-lookup"><span data-stu-id="7e847-103">Gets the offset of the breakpoint within the function.</span></span>  
+# <a name="icordebugfunctionbreakpointgetoffset-method"></a><span data-ttu-id="dab89-102">ICorDebugFunctionBreakpoint::GetOffset 方法</span><span class="sxs-lookup"><span data-stu-id="dab89-102">ICorDebugFunctionBreakpoint::GetOffset Method</span></span>
+<span data-ttu-id="dab89-103">取得中斷點的函式中的位移。</span><span class="sxs-lookup"><span data-stu-id="dab89-103">Gets the offset of the breakpoint within the function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e847-104">語法</span><span class="sxs-lookup"><span data-stu-id="7e847-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dab89-104">語法</span><span class="sxs-lookup"><span data-stu-id="dab89-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetOffset (  
     [out] ULONG32  *pnOffset  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7e847-105">參數</span><span class="sxs-lookup"><span data-stu-id="7e847-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dab89-105">參數</span><span class="sxs-lookup"><span data-stu-id="dab89-105">Parameters</span></span>  
  `pnOffset`  
- <span data-ttu-id="7e847-106">[out]中斷點的位移的指標。</span><span class="sxs-lookup"><span data-stu-id="7e847-106">[out] A pointer to the offset of the breakpoint.</span></span>  
+ <span data-ttu-id="dab89-106">[out]中斷點的位移的指標。</span><span class="sxs-lookup"><span data-stu-id="dab89-106">[out] A pointer to the offset of the breakpoint.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e847-107">需求</span><span class="sxs-lookup"><span data-stu-id="7e847-107">Requirements</span></span>  
- <span data-ttu-id="7e847-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7e847-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dab89-107">需求</span><span class="sxs-lookup"><span data-stu-id="dab89-107">Requirements</span></span>  
+ <span data-ttu-id="dab89-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dab89-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e847-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7e847-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="dab89-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dab89-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7e847-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e847-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dab89-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dab89-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7e847-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e847-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="dab89-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dab89-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

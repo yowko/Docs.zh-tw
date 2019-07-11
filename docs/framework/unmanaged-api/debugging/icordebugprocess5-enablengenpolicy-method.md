@@ -17,44 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 154243e45a41ec2ba8b02937794b372a0705d458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38ff08fa7e7db986006c4e0e09b1ac9cf1be801e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930360"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767143"
 ---
-# <a name="icordebugprocess5enablengenpolicy-method"></a><span data-ttu-id="37376-102">ICorDebugProcess5::EnableNGENPolicy 方法</span><span class="sxs-lookup"><span data-stu-id="37376-102">ICorDebugProcess5::EnableNGENPolicy Method</span></span>
-<span data-ttu-id="37376-103">設定值，這個值會決定應用程式載入 managed 偵錯工具下執行時的原生映像的方式。</span><span class="sxs-lookup"><span data-stu-id="37376-103">Sets a value that determines how an application loads native images while running under a managed debugger.</span></span>  
+# <a name="icordebugprocess5enablengenpolicy-method"></a><span data-ttu-id="630f2-102">ICorDebugProcess5::EnableNGENPolicy 方法</span><span class="sxs-lookup"><span data-stu-id="630f2-102">ICorDebugProcess5::EnableNGENPolicy Method</span></span>
+<span data-ttu-id="630f2-103">設定值，這個值會決定應用程式載入 managed 偵錯工具下執行時的原生映像的方式。</span><span class="sxs-lookup"><span data-stu-id="630f2-103">Sets a value that determines how an application loads native images while running under a managed debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37376-104">語法</span><span class="sxs-lookup"><span data-stu-id="37376-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="630f2-104">語法</span><span class="sxs-lookup"><span data-stu-id="630f2-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnableNGENPolicy(  
     [in] CorDebugNGENPolicy ePolicy  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="37376-105">參數</span><span class="sxs-lookup"><span data-stu-id="37376-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="630f2-105">參數</span><span class="sxs-lookup"><span data-stu-id="630f2-105">Parameters</span></span>  
  `ePolicy`  
- <span data-ttu-id="37376-106">[in]A [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)常數，決定應用程式載入 managed 偵錯工具下執行時的原生映像的方式。</span><span class="sxs-lookup"><span data-stu-id="37376-106">[in] A [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) constant that determines how an application loads native images while running under a managed debugger.</span></span>  
+ <span data-ttu-id="630f2-106">[in]A [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)常數，決定應用程式載入 managed 偵錯工具下執行時的原生映像的方式。</span><span class="sxs-lookup"><span data-stu-id="630f2-106">[in] A [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) constant that determines how an application loads native images while running under a managed debugger.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="37376-107">備註</span><span class="sxs-lookup"><span data-stu-id="37376-107">Remarks</span></span>  
- <span data-ttu-id="37376-108">如果已設定成功，則方法會傳回`S_OK`。</span><span class="sxs-lookup"><span data-stu-id="37376-108">If the policy is set successfully, the method returns `S_OK`.</span></span> <span data-ttu-id="37376-109">如果`ePolicy`所定義之列舉值的範圍之外[CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)，則方法會傳回`E_INVALIDARG`方法呼叫中沒有任何作用。</span><span class="sxs-lookup"><span data-stu-id="37376-109">If `ePolicy` is outside the range of the enumerated values defined by [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md), the method returns `E_INVALIDARG` and the method call has no effect.</span></span> <span data-ttu-id="37376-110">如果無法更新原生映像產生器 (Ngen.exe) 的原則，則方法會傳回`E_FAIL`。</span><span class="sxs-lookup"><span data-stu-id="37376-110">If the policy of the Native Image Generator (Ngen.exe) cannot be updated, the method returns `E_FAIL`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="630f2-107">備註</span><span class="sxs-lookup"><span data-stu-id="630f2-107">Remarks</span></span>  
+ <span data-ttu-id="630f2-108">如果已設定成功，則方法會傳回`S_OK`。</span><span class="sxs-lookup"><span data-stu-id="630f2-108">If the policy is set successfully, the method returns `S_OK`.</span></span> <span data-ttu-id="630f2-109">如果`ePolicy`所定義之列舉值的範圍之外[CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)，則方法會傳回`E_INVALIDARG`方法呼叫中沒有任何作用。</span><span class="sxs-lookup"><span data-stu-id="630f2-109">If `ePolicy` is outside the range of the enumerated values defined by [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md), the method returns `E_INVALIDARG` and the method call has no effect.</span></span> <span data-ttu-id="630f2-110">如果無法更新原生映像產生器 (Ngen.exe) 的原則，則方法會傳回`E_FAIL`。</span><span class="sxs-lookup"><span data-stu-id="630f2-110">If the policy of the Native Image Generator (Ngen.exe) cannot be updated, the method returns `E_FAIL`.</span></span>  
   
- <span data-ttu-id="37376-111">`ICorDebugProcess5::EnableNGenPolicy`程序的存留期間隨時都可以呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="37376-111">The `ICorDebugProcess5::EnableNGenPolicy` method can be called at any time during the lifetime of the process.</span></span> <span data-ttu-id="37376-112">原則是作用中的原則設定之後會載入任何模組。</span><span class="sxs-lookup"><span data-stu-id="37376-112">The policy is in effect for any modules that are loaded after the policy is set.</span></span>  
+ <span data-ttu-id="630f2-111">`ICorDebugProcess5::EnableNGenPolicy`程序的存留期間隨時都可以呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="630f2-111">The `ICorDebugProcess5::EnableNGenPolicy` method can be called at any time during the lifetime of the process.</span></span> <span data-ttu-id="630f2-112">原則是作用中的原則設定之後會載入任何模組。</span><span class="sxs-lookup"><span data-stu-id="630f2-112">The policy is in effect for any modules that are loaded after the policy is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="37376-113">需求</span><span class="sxs-lookup"><span data-stu-id="37376-113">Requirements</span></span>  
- <span data-ttu-id="37376-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="37376-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="630f2-113">需求</span><span class="sxs-lookup"><span data-stu-id="630f2-113">Requirements</span></span>  
+ <span data-ttu-id="630f2-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="630f2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37376-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="37376-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="630f2-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="630f2-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="37376-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37376-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="630f2-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="630f2-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="37376-117">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37376-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="630f2-117">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="630f2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37376-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37376-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="630f2-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="630f2-118">See also</span></span>
 
-- [<span data-ttu-id="37376-119">ICorDebugProcess5 介面</span><span class="sxs-lookup"><span data-stu-id="37376-119">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="37376-120">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="37376-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="37376-121">偵錯</span><span class="sxs-lookup"><span data-stu-id="37376-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="630f2-119">ICorDebugProcess5 介面</span><span class="sxs-lookup"><span data-stu-id="630f2-119">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="630f2-120">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="630f2-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="630f2-121">偵錯</span><span class="sxs-lookup"><span data-stu-id="630f2-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -16,39 +16,39 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2df4b87016394d1998ef90abe2e3eeb911886ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e33a18487da420eb3b317bb70e0ac9e68b4b8ad6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608966"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746548"
 ---
-# <a name="geterrorinfo-function"></a><span data-ttu-id="ce154-103">GetErrorInfo 函式</span><span class="sxs-lookup"><span data-stu-id="ce154-103">GetErrorInfo function</span></span>
-<span data-ttu-id="ce154-104">從上一個函式呼叫擷取錯誤資訊。</span><span class="sxs-lookup"><span data-stu-id="ce154-104">Retrieves error information from the previous function call.</span></span>  
+# <a name="geterrorinfo-function"></a><span data-ttu-id="29234-103">GetErrorInfo 函式</span><span class="sxs-lookup"><span data-stu-id="29234-103">GetErrorInfo function</span></span>
+<span data-ttu-id="29234-104">從上一個函式呼叫擷取錯誤資訊。</span><span class="sxs-lookup"><span data-stu-id="29234-104">Retrieves error information from the previous function call.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="ce154-105">語法</span><span class="sxs-lookup"><span data-stu-id="ce154-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29234-105">語法</span><span class="sxs-lookup"><span data-stu-id="29234-105">Syntax</span></span>  
   
-```  
+```cpp  
 IErrorInfo* GetErrorInfo(); 
 ```  
 
-## <a name="return-value"></a><span data-ttu-id="ce154-106">傳回值</span><span class="sxs-lookup"><span data-stu-id="ce154-106">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="29234-106">傳回值</span><span class="sxs-lookup"><span data-stu-id="29234-106">Return value</span></span>
 
-<span data-ttu-id="ce154-107">指標[IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)物件，如果函式呼叫成功，或`null`失敗。</span><span class="sxs-lookup"><span data-stu-id="ce154-107">An pointer to an [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) object if the function call succeeds, or `null` if it fails.</span></span>
+<span data-ttu-id="29234-107">指標[IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)物件，如果函式呼叫成功，或`null`失敗。</span><span class="sxs-lookup"><span data-stu-id="29234-107">An pointer to an [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) object if the function call succeeds, or `null` if it fails.</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="ce154-108">備註</span><span class="sxs-lookup"><span data-stu-id="ce154-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="29234-108">備註</span><span class="sxs-lookup"><span data-stu-id="29234-108">Remarks</span></span>
 
-<span data-ttu-id="ce154-109">此函式會包裝在呼叫[IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法。</span><span class="sxs-lookup"><span data-stu-id="ce154-109">This function wraps a call to the [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
+<span data-ttu-id="29234-109">此函式會包裝在呼叫[IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法。</span><span class="sxs-lookup"><span data-stu-id="29234-109">This function wraps a call to the [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="ce154-110">需求</span><span class="sxs-lookup"><span data-stu-id="ce154-110">Requirements</span></span>  
- <span data-ttu-id="ce154-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ce154-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29234-110">需求</span><span class="sxs-lookup"><span data-stu-id="29234-110">Requirements</span></span>  
+ <span data-ttu-id="29234-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="29234-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ce154-112">**標頭：** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="ce154-112">**Header:** WMINet_Utils.def</span></span>  
+ <span data-ttu-id="29234-112">**標頭：** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="29234-112">**Header:** WMINet_Utils.def</span></span>  
   
- <span data-ttu-id="ce154-113">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ce154-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="29234-113">**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="29234-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ce154-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ce154-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="29234-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="29234-114">See also</span></span>
 
-- [<span data-ttu-id="ce154-115">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="ce154-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="29234-115">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="29234-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

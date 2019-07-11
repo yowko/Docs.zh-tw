@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ecb4f8a5519fb819161ed917ad03d2537bd9551
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 990786fbb3cc853f7f399d60fa686bb5d60018af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645236"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745706"
 ---
-# <a name="icordebugchaingetnext-method"></a><span data-ttu-id="be36c-102">ICorDebugChain::GetNext 方法</span><span class="sxs-lookup"><span data-stu-id="be36c-102">ICorDebugChain::GetNext Method</span></span>
-<span data-ttu-id="be36c-103">取得執行緒中的下一個框架鏈結。</span><span class="sxs-lookup"><span data-stu-id="be36c-103">Gets the next chain of frames for the thread.</span></span>  
+# <a name="icordebugchaingetnext-method"></a><span data-ttu-id="f7c60-102">ICorDebugChain::GetNext 方法</span><span class="sxs-lookup"><span data-stu-id="f7c60-102">ICorDebugChain::GetNext Method</span></span>
+<span data-ttu-id="f7c60-103">取得執行緒中的下一個框架鏈結。</span><span class="sxs-lookup"><span data-stu-id="f7c60-103">Gets the next chain of frames for the thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be36c-104">語法</span><span class="sxs-lookup"><span data-stu-id="be36c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f7c60-104">語法</span><span class="sxs-lookup"><span data-stu-id="f7c60-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetNext (  
     [out] ICorDebugChain     **ppChain  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="be36c-105">參數</span><span class="sxs-lookup"><span data-stu-id="be36c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f7c60-105">參數</span><span class="sxs-lookup"><span data-stu-id="f7c60-105">Parameters</span></span>  
  `ppChain`  
- <span data-ttu-id="be36c-106">[out]ICorDebugChain 物件，表示下一個執行緒的框架鏈結的位址指標。</span><span class="sxs-lookup"><span data-stu-id="be36c-106">[out] A pointer to the address of an ICorDebugChain object that represents the next chain of frames for the thread.</span></span> <span data-ttu-id="be36c-107">如果這個鏈結的最後一個的鏈結，`ppChain`為 null。</span><span class="sxs-lookup"><span data-stu-id="be36c-107">If this chain is the last chain, `ppChain` is null.</span></span>  
+ <span data-ttu-id="f7c60-106">[out]ICorDebugChain 物件，表示下一個執行緒的框架鏈結的位址指標。</span><span class="sxs-lookup"><span data-stu-id="f7c60-106">[out] A pointer to the address of an ICorDebugChain object that represents the next chain of frames for the thread.</span></span> <span data-ttu-id="f7c60-107">如果這個鏈結的最後一個的鏈結，`ppChain`為 null。</span><span class="sxs-lookup"><span data-stu-id="f7c60-107">If this chain is the last chain, `ppChain` is null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be36c-108">需求</span><span class="sxs-lookup"><span data-stu-id="be36c-108">Requirements</span></span>  
- <span data-ttu-id="be36c-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="be36c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f7c60-108">需求</span><span class="sxs-lookup"><span data-stu-id="f7c60-108">Requirements</span></span>  
+ <span data-ttu-id="f7c60-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f7c60-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be36c-110">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="be36c-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f7c60-110">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f7c60-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="be36c-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="be36c-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f7c60-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f7c60-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="be36c-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be36c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f7c60-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7c60-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

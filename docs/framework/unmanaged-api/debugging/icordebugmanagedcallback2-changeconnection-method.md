@@ -17,51 +17,51 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a06246434097ede2896d7f1b496348fe5d575744
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8a8f84d3dfd8f1e64197078d7e20d2aebef2323
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624530"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761219"
 ---
-# <a name="icordebugmanagedcallback2changeconnection-method"></a><span data-ttu-id="c09ec-102">ICorDebugManagedCallback2::ChangeConnection 方法</span><span class="sxs-lookup"><span data-stu-id="c09ec-102">ICorDebugManagedCallback2::ChangeConnection Method</span></span>
-<span data-ttu-id="c09ec-103">告知偵錯工具與指定的連接相關聯的工作集合已變更。</span><span class="sxs-lookup"><span data-stu-id="c09ec-103">Notifies the debugger that the set of tasks associated with the specified connection has changed.</span></span>  
+# <a name="icordebugmanagedcallback2changeconnection-method"></a><span data-ttu-id="baefc-102">ICorDebugManagedCallback2::ChangeConnection 方法</span><span class="sxs-lookup"><span data-stu-id="baefc-102">ICorDebugManagedCallback2::ChangeConnection Method</span></span>
+<span data-ttu-id="baefc-103">告知偵錯工具與指定的連接相關聯的工作集合已變更。</span><span class="sxs-lookup"><span data-stu-id="baefc-103">Notifies the debugger that the set of tasks associated with the specified connection has changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c09ec-104">語法</span><span class="sxs-lookup"><span data-stu-id="c09ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="baefc-104">語法</span><span class="sxs-lookup"><span data-stu-id="baefc-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ChangeConnection (  
     [in] ICorDebugProcess     *pProcess,  
     [in] CONNID               dwConnectionId  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c09ec-105">參數</span><span class="sxs-lookup"><span data-stu-id="c09ec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="baefc-105">參數</span><span class="sxs-lookup"><span data-stu-id="baefc-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="c09ec-106">[in]代表包含已變更的連接程序 」 ICorDebugProcess 」 物件的指標。</span><span class="sxs-lookup"><span data-stu-id="c09ec-106">[in] A pointer to an "ICorDebugProcess" object that represents the process containing the connection that changed.</span></span>  
+ <span data-ttu-id="baefc-106">[in]代表包含已變更的連接程序 」 ICorDebugProcess 」 物件的指標。</span><span class="sxs-lookup"><span data-stu-id="baefc-106">[in] A pointer to an "ICorDebugProcess" object that represents the process containing the connection that changed.</span></span>  
   
  `dwConnectionId`  
- <span data-ttu-id="c09ec-107">[in]變更連線的識別碼。</span><span class="sxs-lookup"><span data-stu-id="c09ec-107">[in] The ID of the connection that changed.</span></span>  
+ <span data-ttu-id="baefc-107">[in]變更連線的識別碼。</span><span class="sxs-lookup"><span data-stu-id="baefc-107">[in] The ID of the connection that changed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c09ec-108">備註</span><span class="sxs-lookup"><span data-stu-id="c09ec-108">Remarks</span></span>  
- <span data-ttu-id="c09ec-109">A`ChangeConnection`回呼會在下列情況下引發：</span><span class="sxs-lookup"><span data-stu-id="c09ec-109">A `ChangeConnection` callback will be fired in either of the following cases:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="baefc-108">備註</span><span class="sxs-lookup"><span data-stu-id="baefc-108">Remarks</span></span>  
+ <span data-ttu-id="baefc-109">A`ChangeConnection`回呼會在下列情況下引發：</span><span class="sxs-lookup"><span data-stu-id="baefc-109">A `ChangeConnection` callback will be fired in either of the following cases:</span></span>  
   
-- <span data-ttu-id="c09ec-110">當偵錯工具附加至包含連線的處理序。</span><span class="sxs-lookup"><span data-stu-id="c09ec-110">When a debugger attaches to a process that contains connections.</span></span> <span data-ttu-id="c09ec-111">在此情況下，執行階段會產生，並分派[ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md)事件和`ChangeConnection`程序中每個連接的事件。</span><span class="sxs-lookup"><span data-stu-id="c09ec-111">In this case, the runtime will generate and dispatch a [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) event and a `ChangeConnection` event for each connection in the process.</span></span> <span data-ttu-id="c09ec-112">A`ChangeConnection`的每個現有的連接，不論是否已變更該連接的一組工作自建立後會產生事件。</span><span class="sxs-lookup"><span data-stu-id="c09ec-112">A `ChangeConnection` event is generated for every existing connection, regardless of whether that connection’s set of tasks has been changed since its creation.</span></span>  
+- <span data-ttu-id="baefc-110">當偵錯工具附加至包含連線的處理序。</span><span class="sxs-lookup"><span data-stu-id="baefc-110">When a debugger attaches to a process that contains connections.</span></span> <span data-ttu-id="baefc-111">在此情況下，執行階段會產生，並分派[ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md)事件和`ChangeConnection`程序中每個連接的事件。</span><span class="sxs-lookup"><span data-stu-id="baefc-111">In this case, the runtime will generate and dispatch a [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) event and a `ChangeConnection` event for each connection in the process.</span></span> <span data-ttu-id="baefc-112">A`ChangeConnection`的每個現有的連接，不論是否已變更該連接的一組工作自建立後會產生事件。</span><span class="sxs-lookup"><span data-stu-id="baefc-112">A `ChangeConnection` event is generated for every existing connection, regardless of whether that connection’s set of tasks has been changed since its creation.</span></span>  
   
-- <span data-ttu-id="c09ec-113">當主機呼叫[iclrdebugmanager:: Setconnectiontasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)中[裝載 API](../../../../docs/framework/unmanaged-api/hosting/index.md)。</span><span class="sxs-lookup"><span data-stu-id="c09ec-113">When a host calls [ICLRDebugManager::SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
+- <span data-ttu-id="baefc-113">當主機呼叫[iclrdebugmanager:: Setconnectiontasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)中[裝載 API](../../../../docs/framework/unmanaged-api/hosting/index.md)。</span><span class="sxs-lookup"><span data-stu-id="baefc-113">When a host calls [ICLRDebugManager::SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
   
- <span data-ttu-id="c09ec-114">偵錯工具應掃描中取得最新變更的程序中的所有執行緒。</span><span class="sxs-lookup"><span data-stu-id="c09ec-114">The debugger should scan all threads in the process to pick up the new changes.</span></span>  
+ <span data-ttu-id="baefc-114">偵錯工具應掃描中取得最新變更的程序中的所有執行緒。</span><span class="sxs-lookup"><span data-stu-id="baefc-114">The debugger should scan all threads in the process to pick up the new changes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c09ec-115">需求</span><span class="sxs-lookup"><span data-stu-id="c09ec-115">Requirements</span></span>  
- <span data-ttu-id="c09ec-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c09ec-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="baefc-115">需求</span><span class="sxs-lookup"><span data-stu-id="baefc-115">Requirements</span></span>  
+ <span data-ttu-id="baefc-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="baefc-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c09ec-117">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c09ec-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="baefc-117">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="baefc-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c09ec-118">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c09ec-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="baefc-118">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="baefc-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c09ec-119">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c09ec-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="baefc-119">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="baefc-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c09ec-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c09ec-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="baefc-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="baefc-120">See also</span></span>
 
-- [<span data-ttu-id="c09ec-121">ICorDebugManagedCallback2 介面</span><span class="sxs-lookup"><span data-stu-id="c09ec-121">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="c09ec-122">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="c09ec-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="baefc-121">ICorDebugManagedCallback2 介面</span><span class="sxs-lookup"><span data-stu-id="baefc-121">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="baefc-122">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="baefc-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

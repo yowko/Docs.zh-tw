@@ -17,53 +17,53 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83b029c24321946f777966daa7a486f9e8e7b7a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b697e2cf7688767ac58c6bd2a3f18d781ab439b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641360"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768751"
 ---
-# <a name="iclrruntimehostgetclrcontrol-method"></a><span data-ttu-id="a3469-102">ICLRRuntimeHost::GetCLRControl 方法</span><span class="sxs-lookup"><span data-stu-id="a3469-102">ICLRRuntimeHost::GetCLRControl Method</span></span>
-<span data-ttu-id="a3469-103">取得類型的介面指標[ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)主機可用於自訂的 common language runtime (CLR) 的層面。</span><span class="sxs-lookup"><span data-stu-id="a3469-103">Gets an interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that hosts can use to customize aspects of the common language runtime (CLR).</span></span>  
+# <a name="iclrruntimehostgetclrcontrol-method"></a><span data-ttu-id="0e3db-102">ICLRRuntimeHost::GetCLRControl 方法</span><span class="sxs-lookup"><span data-stu-id="0e3db-102">ICLRRuntimeHost::GetCLRControl Method</span></span>
+<span data-ttu-id="0e3db-103">取得類型的介面指標[ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)主機可用於自訂的 common language runtime (CLR) 的層面。</span><span class="sxs-lookup"><span data-stu-id="0e3db-103">Gets an interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that hosts can use to customize aspects of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3469-104">語法</span><span class="sxs-lookup"><span data-stu-id="a3469-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0e3db-104">語法</span><span class="sxs-lookup"><span data-stu-id="0e3db-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCLRControl(  
     [out] ICLRControl** pCLRControl  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a3469-105">參數</span><span class="sxs-lookup"><span data-stu-id="a3469-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0e3db-105">參數</span><span class="sxs-lookup"><span data-stu-id="0e3db-105">Parameters</span></span>  
  `pCLRControl`  
- <span data-ttu-id="a3469-106">[out]類型的介面指標[ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)，可讓主機設定的 CLR 的其他層面。</span><span class="sxs-lookup"><span data-stu-id="a3469-106">[out] An interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that enables hosts to configure additional aspects of the CLR.</span></span>  
+ <span data-ttu-id="0e3db-106">[out]類型的介面指標[ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)，可讓主機設定的 CLR 的其他層面。</span><span class="sxs-lookup"><span data-stu-id="0e3db-106">[out] An interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that enables hosts to configure additional aspects of the CLR.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a3469-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="a3469-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0e3db-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="0e3db-107">Return Value</span></span>  
   
-|<span data-ttu-id="a3469-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a3469-108">HRESULT</span></span>|<span data-ttu-id="a3469-109">描述</span><span class="sxs-lookup"><span data-stu-id="a3469-109">Description</span></span>|  
+|<span data-ttu-id="0e3db-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0e3db-108">HRESULT</span></span>|<span data-ttu-id="0e3db-109">描述</span><span class="sxs-lookup"><span data-stu-id="0e3db-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a3469-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="a3469-110">S_OK</span></span>|<span data-ttu-id="a3469-111">`GetCLRControl` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="a3469-111">`GetCLRControl` returned successfully.</span></span>|  
-|<span data-ttu-id="a3469-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a3469-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a3469-113">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="a3469-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="a3469-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a3469-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a3469-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="a3469-115">The call timed out.</span></span>|  
-|<span data-ttu-id="a3469-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a3469-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a3469-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="a3469-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="a3469-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a3469-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a3469-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="a3469-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="a3469-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a3469-120">E_FAIL</span></span>|<span data-ttu-id="a3469-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="a3469-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a3469-122">如果方法會傳回 E_FAIL，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="a3469-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a3469-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="a3469-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="a3469-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="a3469-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="a3469-125">已經啟動 CLR。</span><span class="sxs-lookup"><span data-stu-id="a3469-125">The CLR has already started.</span></span>|  
+|<span data-ttu-id="0e3db-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="0e3db-110">S_OK</span></span>|<span data-ttu-id="0e3db-111">`GetCLRControl` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="0e3db-111">`GetCLRControl` returned successfully.</span></span>|  
+|<span data-ttu-id="0e3db-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0e3db-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0e3db-113">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="0e3db-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="0e3db-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="0e3db-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="0e3db-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="0e3db-115">The call timed out.</span></span>|  
+|<span data-ttu-id="0e3db-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="0e3db-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="0e3db-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="0e3db-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="0e3db-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="0e3db-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="0e3db-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="0e3db-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="0e3db-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0e3db-120">E_FAIL</span></span>|<span data-ttu-id="0e3db-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="0e3db-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="0e3db-122">如果方法會傳回 E_FAIL，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="0e3db-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="0e3db-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="0e3db-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="0e3db-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="0e3db-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="0e3db-125">已經啟動 CLR。</span><span class="sxs-lookup"><span data-stu-id="0e3db-125">The CLR has already started.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a3469-126">備註</span><span class="sxs-lookup"><span data-stu-id="a3469-126">Remarks</span></span>  
- <span data-ttu-id="a3469-127">`ICLRControl` 提供[GetCLRManager 方法](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)方法，可讓主應用程式取得的介面指標，其中一種管理員類型。</span><span class="sxs-lookup"><span data-stu-id="a3469-127">`ICLRControl` provides the [GetCLRManager Method](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method, which enables the host to get an interface pointer to one of the manager types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0e3db-126">備註</span><span class="sxs-lookup"><span data-stu-id="0e3db-126">Remarks</span></span>  
+ <span data-ttu-id="0e3db-127">`ICLRControl` 提供[GetCLRManager 方法](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)方法，可讓主應用程式取得的介面指標，其中一種管理員類型。</span><span class="sxs-lookup"><span data-stu-id="0e3db-127">`ICLRControl` provides the [GetCLRManager Method](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method, which enables the host to get an interface pointer to one of the manager types.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a3469-128">需求</span><span class="sxs-lookup"><span data-stu-id="a3469-128">Requirements</span></span>  
- <span data-ttu-id="a3469-129">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a3469-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0e3db-128">需求</span><span class="sxs-lookup"><span data-stu-id="0e3db-128">Requirements</span></span>  
+ <span data-ttu-id="0e3db-129">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0e3db-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a3469-130">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a3469-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0e3db-130">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0e3db-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a3469-131">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a3469-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0e3db-131">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="0e3db-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a3469-132">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3469-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0e3db-132">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e3db-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3469-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a3469-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e3db-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0e3db-133">See also</span></span>
 
-- [<span data-ttu-id="a3469-134">ICLRControl 介面</span><span class="sxs-lookup"><span data-stu-id="a3469-134">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="a3469-135">ICLRRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="a3469-135">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="0e3db-134">ICLRControl 介面</span><span class="sxs-lookup"><span data-stu-id="0e3db-134">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="0e3db-135">ICLRRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="0e3db-135">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

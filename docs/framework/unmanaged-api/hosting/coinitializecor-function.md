@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8642c165c29f9ca63535a0efbb9dbb58d4660a49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b2b7b89c73b59f4f735369659daabb6a8f88300
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789476"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779091"
 ---
-# <a name="coinitializecor-function"></a><span data-ttu-id="cc49b-102">CoInitializeCor 函式</span><span class="sxs-lookup"><span data-stu-id="cc49b-102">CoInitializeCor Function</span></span>
-<span data-ttu-id="cc49b-103">`CoInitializeCor` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="cc49b-103">`CoInitializeCor` is obsolete.</span></span>  
+# <a name="coinitializecor-function"></a><span data-ttu-id="af6f3-102">CoInitializeCor 函式</span><span class="sxs-lookup"><span data-stu-id="af6f3-102">CoInitializeCor Function</span></span>
+<span data-ttu-id="af6f3-103">`CoInitializeCor` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="af6f3-103">`CoInitializeCor` is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc49b-104">語法</span><span class="sxs-lookup"><span data-stu-id="cc49b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af6f3-104">語法</span><span class="sxs-lookup"><span data-stu-id="af6f3-104">Syntax</span></span>  
   
-```  
+```cpp  
 STDAPI CoInitializeCor (  
     DWORD fFlags  
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="cc49b-105">備註</span><span class="sxs-lookup"><span data-stu-id="cc49b-105">Remarks</span></span>  
- <span data-ttu-id="cc49b-106">若要初始化 common language runtime，使用任何一種[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或是[CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)。</span><span class="sxs-lookup"><span data-stu-id="cc49b-106">To initialize the common language runtime, use either [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) or [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="af6f3-105">備註</span><span class="sxs-lookup"><span data-stu-id="af6f3-105">Remarks</span></span>  
+ <span data-ttu-id="af6f3-106">若要初始化 common language runtime，使用任何一種[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或是[CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)。</span><span class="sxs-lookup"><span data-stu-id="af6f3-106">To initialize the common language runtime, use either [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) or [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cc49b-107">需求</span><span class="sxs-lookup"><span data-stu-id="cc49b-107">Requirements</span></span>  
- <span data-ttu-id="cc49b-108">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cc49b-108">**Header:** Cor.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="af6f3-107">需求</span><span class="sxs-lookup"><span data-stu-id="af6f3-107">Requirements</span></span>  
+ <span data-ttu-id="af6f3-108">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="af6f3-108">**Header:** Cor.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc49b-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc49b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af6f3-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="af6f3-109">See also</span></span>
 
-- [<span data-ttu-id="cc49b-110">中繼資料全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="cc49b-110">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="af6f3-110">中繼資料全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="af6f3-110">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

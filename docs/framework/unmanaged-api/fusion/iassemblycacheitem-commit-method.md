@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3757eee4c013ccf4f0f6d21ef64a92a5ffd70f19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d1f5988266fcbfc18ee937b6e7fdb1829646fa9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697494"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778682"
 ---
-# <a name="iassemblycacheitemcommit-method"></a><span data-ttu-id="53dc0-102">IAssemblyCacheItem::Commit 方法</span><span class="sxs-lookup"><span data-stu-id="53dc0-102">IAssemblyCacheItem::Commit Method</span></span>
-<span data-ttu-id="53dc0-103">認可記憶體的快取的組件參考。</span><span class="sxs-lookup"><span data-stu-id="53dc0-103">Commits the cached assembly reference to memory.</span></span>  
+# <a name="iassemblycacheitemcommit-method"></a><span data-ttu-id="4eb51-102">IAssemblyCacheItem::Commit 方法</span><span class="sxs-lookup"><span data-stu-id="4eb51-102">IAssemblyCacheItem::Commit Method</span></span>
+<span data-ttu-id="4eb51-103">認可記憶體的快取的組件參考。</span><span class="sxs-lookup"><span data-stu-id="4eb51-103">Commits the cached assembly reference to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="53dc0-104">語法</span><span class="sxs-lookup"><span data-stu-id="53dc0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4eb51-104">語法</span><span class="sxs-lookup"><span data-stu-id="4eb51-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Commit (  
     [in] DWORD dwFlags,   
     [out, optional] ULONG *pulDisposition  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="53dc0-105">參數</span><span class="sxs-lookup"><span data-stu-id="53dc0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4eb51-105">參數</span><span class="sxs-lookup"><span data-stu-id="4eb51-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="53dc0-106">[in]支援下列值： 旗標。</span><span class="sxs-lookup"><span data-stu-id="53dc0-106">[in] Flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="4eb51-106">[in]支援下列值： 旗標。</span><span class="sxs-lookup"><span data-stu-id="4eb51-106">[in] Flags defined in Fusion.idl.</span></span>  
   
  `pulDisposition`  
- <span data-ttu-id="53dc0-107">[out，optional]值，指出作業的結果。</span><span class="sxs-lookup"><span data-stu-id="53dc0-107">[out, optional] A value that indicates the result of the operation.</span></span>  
+ <span data-ttu-id="4eb51-107">[out，optional]值，指出作業的結果。</span><span class="sxs-lookup"><span data-stu-id="4eb51-107">[out, optional] A value that indicates the result of the operation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="53dc0-108">需求</span><span class="sxs-lookup"><span data-stu-id="53dc0-108">Requirements</span></span>  
- <span data-ttu-id="53dc0-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="53dc0-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4eb51-108">需求</span><span class="sxs-lookup"><span data-stu-id="4eb51-108">Requirements</span></span>  
+ <span data-ttu-id="4eb51-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4eb51-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="53dc0-110">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="53dc0-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="4eb51-110">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="4eb51-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="53dc0-111">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53dc0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4eb51-111">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4eb51-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53dc0-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="53dc0-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4eb51-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4eb51-112">See also</span></span>
 
-- [<span data-ttu-id="53dc0-113">IAssemblyCacheItem 介面</span><span class="sxs-lookup"><span data-stu-id="53dc0-113">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [<span data-ttu-id="4eb51-113">IAssemblyCacheItem 介面</span><span class="sxs-lookup"><span data-stu-id="4eb51-113">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

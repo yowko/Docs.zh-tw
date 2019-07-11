@@ -17,27 +17,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac87410d4e9b23fd532582b9ce1500e2c08a301
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d769aab51c743fa3337fd5784ad35748ae5f8962
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700407"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756689"
 ---
-# <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a><span data-ttu-id="ca3b0-102">ICorDebugHeapValue::CreateRelocBreakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="ca3b0-102">ICorDebugHeapValue::CreateRelocBreakpoint Method</span></span>
-<span data-ttu-id="ca3b0-103">在目前版本的.NET framework 不實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="ca3b0-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a><span data-ttu-id="7b2ca-102">ICorDebugHeapValue::CreateRelocBreakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="7b2ca-102">ICorDebugHeapValue::CreateRelocBreakpoint Method</span></span>
+<span data-ttu-id="7b2ca-103">在目前版本的.NET framework 不實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="7b2ca-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca3b0-104">語法</span><span class="sxs-lookup"><span data-stu-id="ca3b0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b2ca-104">語法</span><span class="sxs-lookup"><span data-stu-id="7b2ca-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateRelocBreakpoint (  
     [out] ICorDebugValueBreakpoint **ppBreakpoint  
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="ca3b0-105">需求</span><span class="sxs-lookup"><span data-stu-id="ca3b0-105">Requirements</span></span>  
- <span data-ttu-id="ca3b0-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ca3b0-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7b2ca-105">需求</span><span class="sxs-lookup"><span data-stu-id="7b2ca-105">Requirements</span></span>  
+ <span data-ttu-id="7b2ca-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7b2ca-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca3b0-107">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ca3b0-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7b2ca-107">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7b2ca-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ca3b0-108">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca3b0-108">**Library:** CorGuids.lib</span></span>
+ <span data-ttu-id="7b2ca-108">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7b2ca-108">**Library:** CorGuids.lib</span></span>

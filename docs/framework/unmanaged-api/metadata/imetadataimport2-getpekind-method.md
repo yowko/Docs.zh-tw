@@ -17,52 +17,52 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9dda1fb38546138d52b5fe61754d5497e676c37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c80566ed284403ad559583a1e4f1025eb09985
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777412"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755325"
 ---
-# <a name="imetadataimport2getpekind-method"></a><span data-ttu-id="8d7f1-102">IMetaDataImport2::GetPEKind 方法</span><span class="sxs-lookup"><span data-stu-id="8d7f1-102">IMetaDataImport2::GetPEKind Method</span></span>
-<span data-ttu-id="8d7f1-103">取得值，識別性質之可攜式執行檔 (PE) 中的程式碼檔，通常是 DLL 或 EXE 檔案，定義目前的中繼資料範圍內。</span><span class="sxs-lookup"><span data-stu-id="8d7f1-103">Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.</span></span>  
+# <a name="imetadataimport2getpekind-method"></a><span data-ttu-id="cd4b8-102">IMetaDataImport2::GetPEKind 方法</span><span class="sxs-lookup"><span data-stu-id="cd4b8-102">IMetaDataImport2::GetPEKind Method</span></span>
+<span data-ttu-id="cd4b8-103">取得值，識別性質之可攜式執行檔 (PE) 中的程式碼檔，通常是 DLL 或 EXE 檔案，定義目前的中繼資料範圍內。</span><span class="sxs-lookup"><span data-stu-id="cd4b8-103">Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8d7f1-104">語法</span><span class="sxs-lookup"><span data-stu-id="8d7f1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd4b8-104">語法</span><span class="sxs-lookup"><span data-stu-id="cd4b8-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetPEKind (  
    [out] DWORD *pdwPEKind,  
    [out] DWORD *pdwMachine  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8d7f1-105">參數</span><span class="sxs-lookup"><span data-stu-id="8d7f1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cd4b8-105">參數</span><span class="sxs-lookup"><span data-stu-id="cd4b8-105">Parameters</span></span>  
  `pdwPEKind`  
- <span data-ttu-id="8d7f1-106">[out]值的指標[CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)描述的 PE 檔的列舉型別。</span><span class="sxs-lookup"><span data-stu-id="8d7f1-106">[out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.</span></span>  
+ <span data-ttu-id="cd4b8-106">[out]值的指標[CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)描述的 PE 檔的列舉型別。</span><span class="sxs-lookup"><span data-stu-id="cd4b8-106">[out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.</span></span>  
   
  `pdwMachine`  
- <span data-ttu-id="8d7f1-107">[out]識別電腦架構值的指標。</span><span class="sxs-lookup"><span data-stu-id="8d7f1-107">[out] A pointer to a value that identifies the architecture of the machine.</span></span> <span data-ttu-id="8d7f1-108">請參閱下一節，如需可能值。</span><span class="sxs-lookup"><span data-stu-id="8d7f1-108">See the next section for possible values.</span></span>  
+ <span data-ttu-id="cd4b8-107">[out]識別電腦架構值的指標。</span><span class="sxs-lookup"><span data-stu-id="cd4b8-107">[out] A pointer to a value that identifies the architecture of the machine.</span></span> <span data-ttu-id="cd4b8-108">請參閱下一節，如需可能值。</span><span class="sxs-lookup"><span data-stu-id="cd4b8-108">See the next section for possible values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8d7f1-109">備註</span><span class="sxs-lookup"><span data-stu-id="8d7f1-109">Remarks</span></span>  
- <span data-ttu-id="8d7f1-110">所參考的值`pdwMachine`參數可以是下列其中之一。</span><span class="sxs-lookup"><span data-stu-id="8d7f1-110">The value referenced by the `pdwMachine` parameter can be one of the following.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cd4b8-109">備註</span><span class="sxs-lookup"><span data-stu-id="cd4b8-109">Remarks</span></span>  
+ <span data-ttu-id="cd4b8-110">所參考的值`pdwMachine`參數可以是下列其中之一。</span><span class="sxs-lookup"><span data-stu-id="cd4b8-110">The value referenced by the `pdwMachine` parameter can be one of the following.</span></span>  
   
-|<span data-ttu-id="8d7f1-111">值</span><span class="sxs-lookup"><span data-stu-id="8d7f1-111">Value</span></span>|<span data-ttu-id="8d7f1-112">電腦架構</span><span class="sxs-lookup"><span data-stu-id="8d7f1-112">Machine architecture</span></span>|  
+|<span data-ttu-id="cd4b8-111">值</span><span class="sxs-lookup"><span data-stu-id="cd4b8-111">Value</span></span>|<span data-ttu-id="cd4b8-112">電腦架構</span><span class="sxs-lookup"><span data-stu-id="cd4b8-112">Machine architecture</span></span>|  
 |-----------|--------------------------|  
-|<span data-ttu-id="8d7f1-113">IMAGE_FILE_MACHINE_I386</span><span class="sxs-lookup"><span data-stu-id="8d7f1-113">IMAGE_FILE_MACHINE_I386</span></span><br /><br /> <span data-ttu-id="8d7f1-114">0x014C</span><span class="sxs-lookup"><span data-stu-id="8d7f1-114">0x014C</span></span>|<span data-ttu-id="8d7f1-115">x86</span><span class="sxs-lookup"><span data-stu-id="8d7f1-115">x86</span></span>|  
-|<span data-ttu-id="8d7f1-116">IMAGE_FILE_MACHINE_IA64</span><span class="sxs-lookup"><span data-stu-id="8d7f1-116">IMAGE_FILE_MACHINE_IA64</span></span><br /><br /> <span data-ttu-id="8d7f1-117">0x0200</span><span class="sxs-lookup"><span data-stu-id="8d7f1-117">0x0200</span></span>|<span data-ttu-id="8d7f1-118">Intel IPF</span><span class="sxs-lookup"><span data-stu-id="8d7f1-118">Intel IPF</span></span>|  
-|<span data-ttu-id="8d7f1-119">IMAGE_FILE_MACHINE_AMD64</span><span class="sxs-lookup"><span data-stu-id="8d7f1-119">IMAGE_FILE_MACHINE_AMD64</span></span><br /><br /> <span data-ttu-id="8d7f1-120">0x8664</span><span class="sxs-lookup"><span data-stu-id="8d7f1-120">0x8664</span></span>|<span data-ttu-id="8d7f1-121">X64</span><span class="sxs-lookup"><span data-stu-id="8d7f1-121">x64</span></span>|  
+|<span data-ttu-id="cd4b8-113">IMAGE_FILE_MACHINE_I386</span><span class="sxs-lookup"><span data-stu-id="cd4b8-113">IMAGE_FILE_MACHINE_I386</span></span><br /><br /> <span data-ttu-id="cd4b8-114">0x014C</span><span class="sxs-lookup"><span data-stu-id="cd4b8-114">0x014C</span></span>|<span data-ttu-id="cd4b8-115">x86</span><span class="sxs-lookup"><span data-stu-id="cd4b8-115">x86</span></span>|  
+|<span data-ttu-id="cd4b8-116">IMAGE_FILE_MACHINE_IA64</span><span class="sxs-lookup"><span data-stu-id="cd4b8-116">IMAGE_FILE_MACHINE_IA64</span></span><br /><br /> <span data-ttu-id="cd4b8-117">0x0200</span><span class="sxs-lookup"><span data-stu-id="cd4b8-117">0x0200</span></span>|<span data-ttu-id="cd4b8-118">Intel IPF</span><span class="sxs-lookup"><span data-stu-id="cd4b8-118">Intel IPF</span></span>|  
+|<span data-ttu-id="cd4b8-119">IMAGE_FILE_MACHINE_AMD64</span><span class="sxs-lookup"><span data-stu-id="cd4b8-119">IMAGE_FILE_MACHINE_AMD64</span></span><br /><br /> <span data-ttu-id="cd4b8-120">0x8664</span><span class="sxs-lookup"><span data-stu-id="cd4b8-120">0x8664</span></span>|<span data-ttu-id="cd4b8-121">X64</span><span class="sxs-lookup"><span data-stu-id="cd4b8-121">x64</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8d7f1-122">需求</span><span class="sxs-lookup"><span data-stu-id="8d7f1-122">Requirements</span></span>  
- <span data-ttu-id="8d7f1-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8d7f1-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cd4b8-122">需求</span><span class="sxs-lookup"><span data-stu-id="cd4b8-122">Requirements</span></span>  
+ <span data-ttu-id="cd4b8-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cd4b8-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8d7f1-124">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8d7f1-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="cd4b8-124">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cd4b8-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8d7f1-125">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="8d7f1-125">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="cd4b8-125">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="cd4b8-125">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8d7f1-126">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d7f1-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cd4b8-126">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd4b8-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d7f1-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8d7f1-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd4b8-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd4b8-127">See also</span></span>
 
-- [<span data-ttu-id="8d7f1-128">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="8d7f1-128">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="8d7f1-129">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="8d7f1-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="8d7f1-130">CorPEKind 列舉</span><span class="sxs-lookup"><span data-stu-id="8d7f1-130">CorPEKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)
+- [<span data-ttu-id="cd4b8-128">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="cd4b8-128">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="cd4b8-129">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="cd4b8-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="cd4b8-130">CorPEKind 列舉</span><span class="sxs-lookup"><span data-stu-id="cd4b8-130">CorPEKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)

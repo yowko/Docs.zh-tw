@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5276c69da05cedcd3195a09da12ddc5b2d0fed67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ebf8c736cdd1362cae1b1e0b734ce14bea49b18
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991779"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751894"
 ---
-# <a name="icorprofilerinfo2getarrayobjectinfo-method"></a><span data-ttu-id="3b774-102">ICorProfilerInfo2::GetArrayObjectInfo 方法</span><span class="sxs-lookup"><span data-stu-id="3b774-102">ICorProfilerInfo2::GetArrayObjectInfo Method</span></span>
-<span data-ttu-id="3b774-103">取得與陣列物件有關的詳細的資訊。</span><span class="sxs-lookup"><span data-stu-id="3b774-103">Gets detailed information about an array object.</span></span>  
+# <a name="icorprofilerinfo2getarrayobjectinfo-method"></a><span data-ttu-id="b9379-102">ICorProfilerInfo2::GetArrayObjectInfo 方法</span><span class="sxs-lookup"><span data-stu-id="b9379-102">ICorProfilerInfo2::GetArrayObjectInfo Method</span></span>
+<span data-ttu-id="b9379-103">取得與陣列物件有關的詳細的資訊。</span><span class="sxs-lookup"><span data-stu-id="b9379-103">Gets detailed information about an array object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b774-104">語法</span><span class="sxs-lookup"><span data-stu-id="3b774-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b9379-104">語法</span><span class="sxs-lookup"><span data-stu-id="b9379-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetArrayObjectInfo(  
     [in] ObjectID objectId,  
     [in] ULONG32 cDimensions,  
@@ -38,35 +38,35 @@ HRESULT GetArrayObjectInfo(
     [out] BYTE **ppData);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3b774-105">參數</span><span class="sxs-lookup"><span data-stu-id="3b774-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b9379-105">參數</span><span class="sxs-lookup"><span data-stu-id="b9379-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="3b774-106">[in]有效的陣列物件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="3b774-106">[in] The ID of a valid array object.</span></span>  
+ <span data-ttu-id="b9379-106">[in]有效的陣列物件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="b9379-106">[in] The ID of a valid array object.</span></span>  
   
  `cDimensions`  
- <span data-ttu-id="3b774-107">[in]陣列陣序 （維度數目）。</span><span class="sxs-lookup"><span data-stu-id="3b774-107">[in] The rank (number of dimensions) of the array.</span></span>  
+ <span data-ttu-id="b9379-107">[in]陣列陣序 （維度數目）。</span><span class="sxs-lookup"><span data-stu-id="b9379-107">[in] The rank (number of dimensions) of the array.</span></span>  
   
  `pDimensionSizes`  
- <span data-ttu-id="3b774-108">[out]陣列，其中包含整數，每個均代表陣列的維度的大小。</span><span class="sxs-lookup"><span data-stu-id="3b774-108">[out] An array that contains integers, each representing the size of a dimension of the array.</span></span>  
+ <span data-ttu-id="b9379-108">[out]陣列，其中包含整數，每個均代表陣列的維度的大小。</span><span class="sxs-lookup"><span data-stu-id="b9379-108">[out] An array that contains integers, each representing the size of a dimension of the array.</span></span>  
   
  `pDimensionLowerBounds`  
- <span data-ttu-id="3b774-109">[out]包含整數的陣列，表示較低的每個繫結的陣列的維度。</span><span class="sxs-lookup"><span data-stu-id="3b774-109">[out] An array that contains integers, each representing the lower bound of a dimension of the array.</span></span>  
+ <span data-ttu-id="b9379-109">[out]包含整數的陣列，表示較低的每個繫結的陣列的維度。</span><span class="sxs-lookup"><span data-stu-id="b9379-109">[out] An array that contains integers, each representing the lower bound of a dimension of the array.</span></span>  
   
  `ppData`  
- <span data-ttu-id="3b774-110">[out]未經處理的陣列，根據配置緩衝區的位址指標C++慣例。</span><span class="sxs-lookup"><span data-stu-id="3b774-110">[out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.</span></span>  
+ <span data-ttu-id="b9379-110">[out]未經處理的陣列，根據配置緩衝區的位址指標C++慣例。</span><span class="sxs-lookup"><span data-stu-id="b9379-110">[out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3b774-111">備註</span><span class="sxs-lookup"><span data-stu-id="3b774-111">Remarks</span></span>  
- <span data-ttu-id="3b774-112">`pDimensionSizes`和`pDimensionLowerBounds`是平行陣列，因此位於相同的索引，每個陣列中的項目相同的實體特性。</span><span class="sxs-lookup"><span data-stu-id="3b774-112">The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b9379-111">備註</span><span class="sxs-lookup"><span data-stu-id="b9379-111">Remarks</span></span>  
+ <span data-ttu-id="b9379-112">`pDimensionSizes`和`pDimensionLowerBounds`是平行陣列，因此位於相同的索引，每個陣列中的項目相同的實體特性。</span><span class="sxs-lookup"><span data-stu-id="b9379-112">The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3b774-113">需求</span><span class="sxs-lookup"><span data-stu-id="3b774-113">Requirements</span></span>  
- <span data-ttu-id="3b774-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3b774-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b9379-113">需求</span><span class="sxs-lookup"><span data-stu-id="b9379-113">Requirements</span></span>  
+ <span data-ttu-id="b9379-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b9379-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b774-115">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3b774-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b9379-115">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b9379-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3b774-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b774-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b9379-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b9379-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3b774-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b774-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b9379-117">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9379-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b774-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3b774-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9379-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b9379-118">See also</span></span>
 
-- [<span data-ttu-id="3b774-119">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="3b774-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="3b774-120">ICorProfilerInfo2 介面</span><span class="sxs-lookup"><span data-stu-id="3b774-120">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="b9379-119">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="b9379-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="b9379-120">ICorProfilerInfo2 介面</span><span class="sxs-lookup"><span data-stu-id="b9379-120">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
