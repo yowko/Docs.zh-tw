@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8ba8a762c56a666c67b25b9ce0420099fce419a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 057bae1d702fa091ebc3d3178c9fba35d5dd3d90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044157"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777651"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
 建立欄位的定義，具有指定之中繼資料簽章，並取得該欄位定義的語彙基元。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT DefineField (   
     [in]  mdTypeDef   td,   
     [in]  LPCWSTR     szName,   
@@ -66,7 +66,7 @@ HRESULT DefineField (
  [in]欄位的常值。  
   
  `cchValue`  
- [in](Unicode) 字元的大小`pValue`。  
+ [in]\(Unicode\) 字元的大小`pValue`。  
   
  `pmd`  
  [out]`mdFieldDef`指派權杖。  
@@ -78,7 +78,7 @@ HRESULT DefineField (
   
  **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

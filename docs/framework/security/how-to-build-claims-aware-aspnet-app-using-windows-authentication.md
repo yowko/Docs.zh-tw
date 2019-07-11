@@ -3,12 +3,12 @@ title: 如何：使用 Windows 驗證建置宣告感知 ASP.NET 應用程式
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b58a4066538441a48bc6646f364e846a25cc8c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650413"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742506"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>如何：使用 Windows 驗證建置宣告感知 ASP.NET 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -56,15 +56,15 @@ ms.locfileid: "64650413"
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
  在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式。  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式  
+### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式  
   
-1. 啟動 Visual Studio，然後依序按一下 [檔案]、[新增] 和 [專案]。  
+1. 啟動 Visual Studio，然後依序按一下 [檔案]  、[新增]  和 [專案]  。  
   
-2. 在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。  
+2. 在 [新增專案]  視窗中，按一下 [ASP.NET Web Forms 應用程式]  。  
   
-3. 在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。  
+3. 在 [名稱]  中，輸入 `TestApp`，然後按 [確定]  。  
   
-4. 建立 **TestApp** 專案之後，在方案總管中按一下該專案。 專案的屬性會出現在方案總管下方的 [屬性] 窗格中。 將 **Windows 驗證**屬性設定為 [已啟用]。  
+4. 建立 **TestApp** 專案之後，在方案總管  中按一下該專案。 專案的屬性會出現在方案總管  下方的 [屬性]  窗格中。 將 **Windows 驗證**屬性設定為 [已啟用]  。  
   
     > [!WARNING]
     >  在新的 ASP.NET 應用程式中，預設會停用 Windows 驗證，因此您必須以手動方式啟用它。  
@@ -72,7 +72,7 @@ ms.locfileid: "64650413"
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>步驟 2 – 設定使用 Windows 驗證之宣告的 ASP.NET Web Forms 應用程式  
  在此步驟中，您將組態項目新增至 *Web.config* 組態檔，並修改 *Default.aspx* 檔案來顯示帳戶的宣告資訊。  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>設定使用 Windows 驗證之宣告的 ASP.NET 應用程式  
+### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>設定使用 Windows 驗證之宣告的 ASP.NET 應用程式  
   
 1. 在 **TestApp** 專案的 *Default.aspx* 檔案中，將現有標記取代為下列標記：  
   
@@ -136,6 +136,6 @@ ms.locfileid: "64650413"
 ## <a name="step-3--test-your-solution"></a>步驟 3 – 測試方案  
  在此步驟中，您將測試 ASP.NET Web Forms 應用程式，並確認在使用者使用 Windows 驗證登入時會呈現宣告。  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>測試使用 Windows 驗證之宣告的 ASP.NET Web Forms 應用程式  
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>測試使用 Windows 驗證之宣告的 ASP.NET Web Forms 應用程式  
   
 1. 按 **F5** 鍵以建置並執行應用程式。 您應該會看到 *Default.aspx*，而且您的 Windows 帳戶名稱 (包括網域名稱) 應該已經在網頁的右上方顯示為已驗證的使用者。 頁面的內容應該包含一個資料表，其中填入了擷取自 Windows 帳戶的宣告。

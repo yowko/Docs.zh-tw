@@ -2,12 +2,12 @@
 title: 逐步解說：操作資料 (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 7bac370ae8dc260ca4b665fd51680a80fd9846fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d45861569bc4a8b57427b01e107f87809203e11
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618043"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742741"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>逐步解說：操作資料 (C#)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -27,7 +27,7 @@ ms.locfileid: "64618043"
   
 - 會從 Northwind 資料庫產生 C# 程式碼檔案。  
   
-     您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 工具來產生這個檔案。 本逐步解說是使用 SQLMetal 工具，以下列命令列所撰寫：  
+     您可以使用物件關聯式設計工具或 SQLMetal 工具來產生這個檔案。 本逐步解說是使用 SQLMetal 工具，以下列命令列所撰寫：  
   
      **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
   
@@ -57,13 +57,13 @@ ms.locfileid: "64618043"
   
 2. 在 [**專案類型**] 窗格中的**新增專案**] 對話方塊中，按一下 [ **Visual C#** 。  
   
-3. 按一下 [範本] 窗格中的 [主控台應用程式]。  
+3. 按一下 [範本]  窗格中的 [主控台應用程式]  。  
   
 4. 在 **名稱**方塊中，輸入**LinqDataManipulationApp**。  
   
 5. 在 **位置**方塊中，確認您要儲存專案檔。  
   
-6. 按一下 [確定] 。  
+6. 按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果 System.Data.Linq 未列為專案中的參考，請按照下列步驟所述將它加入：  

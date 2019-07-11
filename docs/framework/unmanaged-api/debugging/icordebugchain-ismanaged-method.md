@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a27ea95ca78f7db8f67ec2a13f02767e67619e97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e14ff1cd85810a0b2f9e14c3ab4c8d12d883d17
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989335"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745628"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged 方法
 取得值，指出這個鏈結是否正在執行的 managed 程式碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT IsManaged (  
     [out] BOOL               *pManaged  
 );  
@@ -46,4 +46,4 @@ HRESULT IsManaged (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

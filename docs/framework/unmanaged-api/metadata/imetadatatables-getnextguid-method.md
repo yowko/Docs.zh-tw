@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b23e1d26d62012efe338eeb179db0e7ee17cd658
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 345c43b5a6e3c185b5e8070e9d6e1c1443673149
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042363"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781459"
 ---
 # <a name="imetadatatablesgetnextguid-method"></a>IMetaDataTables::GetNextGuid 方法
 取得目前的資料表資料行中的下一個 GUID 值的索引。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetNextGuid (  
     [in]  ULONG   ixGuid,  
     [out] ULONG   *pNext  
@@ -53,7 +53,7 @@ HRESULT GetNextGuid (
   
  **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

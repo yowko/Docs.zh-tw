@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a7b8985e7580282d0e38205f9b1d6078f86cee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d7eca3c2825707c9190436377bba7e4bb0d5447
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988607"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757969"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP 方法
 取得指令指標的值和描述如何取得指令指標的值的位元組合值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetIP (  
     [out] ULONG32               *pnOffset,   
     [out] CorDebugMappingResult *pMappingResult  
@@ -55,4 +55,4 @@ HRESULT GetIP (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -10,19 +10,19 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 448712561f1531a055ac141db9825581525c779c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de55594db68e084009a095a083e065fbd0b8f0df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948933"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741337"
 ---
-# <a name="axlgetissuerpublickeyhash-function"></a>_AxlGetIssuerPublicKeyHash 函式
+# <a name="axlgetissuerpublickeyhash-function"></a>\_AxlGetIssuerPublicKeyHash 函式
 擷取公開金鑰的 SHA-1 雜湊，該公開金鑰與用來簽署指定憑證的私密金鑰相關聯。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT _AxlGetIssuerPublicKeyHash (  
     [in]  IN PCRYPT_DATA_BLOB   pChainContext,  
     [out] LPWSTR                *ppwszPublicKeyHash  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 397e8afcc176bcd9733e83dc6425fe49f385931e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eecb2a5da9dddaccbab7fcc6d74af6e4c6bfb72c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598184"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775135"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>ICorProfilerModuleEnum::Skip 方法
 將列舉值的資料指標從其目前位置前移，以略過指定數目的項目。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Skip([in] ULONG celt);  
 ```  
   
@@ -40,7 +40,7 @@ HRESULT Skip([in] ULONG celt);
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`celt` 已略過項目。|  
 |S_FALSE|少於`celt`項目已略過，這表示為沒有多個項目。|  
@@ -55,7 +55,7 @@ HRESULT Skip([in] ULONG celt);
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

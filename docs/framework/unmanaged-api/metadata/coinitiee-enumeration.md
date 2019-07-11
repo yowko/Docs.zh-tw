@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a84fdfdba96c58671302c723b8a56848b70eb60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23f5a2b6b0970f3cb64ee339e6a1a409354a60e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984122"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780958"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE 列舉
 指定所使用的常數[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)初始化 common language runtime 時。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef enum tagCOINITEE {  
    COINITEE_DEFAULT = 0x0,  
    COINITEE_DLL     = 0x1,  
@@ -38,7 +38,7 @@ typedef enum tagCOINITEE {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`COINITEE_DEFAULT`|預設的初始化模式。 這會初始化執行階段，並建立預設<xref:System.AppDomain>。|  
 |`COINITEE_DLL`|若要執行的 managed 的 DLL 的初始化。|  
@@ -51,7 +51,7 @@ typedef enum tagCOINITEE {
   
  **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

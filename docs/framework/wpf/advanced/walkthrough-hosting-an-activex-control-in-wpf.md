@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 976679e4b6e6bba7288756616db639ed61472591
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605447"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778375"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>逐步解說：將 ActiveX 控制項裝載在 WPF 中
 若要啟用改善的瀏覽器互動，您可以使用[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]控制在您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-應用程式。 本逐步解說示範您可以託管[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]上的控制項為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。
@@ -37,7 +37,7 @@ ms.locfileid: "64605447"
 
 ## <a name="creating-the-project"></a>建立專案
 
-#### <a name="to-create-and-set-up-the-project"></a>建立並設定專案
+### <a name="to-create-and-set-up-the-project"></a>建立並設定專案
 
 1. 建立 WPF 應用程式專案，名為`HostingAxInWpf`。
 
@@ -62,7 +62,7 @@ ms.locfileid: "64605447"
 ## <a name="creating-the-activex-control"></a>建立 ActiveX 控制項
  [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 會自動產生<xref:System.Windows.Forms.AxHost>包裝函式類別[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]控制當控制項加入至設計介面。 下列程序會建立名為 AxInterop.WMPLib.dll managed 組件。
 
-#### <a name="to-create-the-activex-control"></a>若要建立 ActiveX 控制項
+### <a name="to-create-the-activex-control"></a>若要建立 ActiveX 控制項
 
 1. 在 Windows Form 設計工具中開啟 WmpAxControl.vb 或 WmpAxControl.cs。
 
@@ -74,7 +74,7 @@ ms.locfileid: "64605447"
 
 ## <a name="hosting-the-activex-control-on-a-wpf-page"></a>裝載 WPF 頁面上的 ActiveX 控制項
 
-#### <a name="to-host-the-activex-control"></a>若要裝載 ActiveX 控制項
+### <a name="to-host-the-activex-control"></a>若要裝載 ActiveX 控制項
 
 1. 在 HostingAxInWpf 專案中加入所產生的參考[!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)]互通性組件。
 

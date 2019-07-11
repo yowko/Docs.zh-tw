@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44595229eaefa0d8fc8ca7bf15a88d0fbf1ee0d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c307c09c4593a3e5eefcda2c834132ac57a12d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787903"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779960"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>ICorProfilerThreadEnum::Next 方法
 從循序執行緒集合中取得指定的連續執行緒數目，從序列中列舉值的目前位置開始。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Next (    [in]  ULONG      celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
                     ThreadID ids[],  
@@ -50,7 +50,7 @@ HRESULT Next (    [in]  ULONG      celt,
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已傳回 `celt` 項目。|  
 |S_FALSE|傳回少於 `celt` 的項目數，表示列舉已完成。|  
@@ -62,7 +62,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

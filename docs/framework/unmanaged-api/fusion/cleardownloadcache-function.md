@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84ec75fb2a994543ba9ead84c41abc304c420053
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7424c80d05c3ff538cb530b24276868680af1c3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914538"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778492"
 ---
 # <a name="cleardownloadcache-function"></a>ClearDownloadCache 函式
 清除已下載的組件的全域組件快取。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ClearDownloadCache ();  
 ```  
   
@@ -41,7 +41,7 @@ HRESULT ClearDownloadCache ();
   
  **LIBRARY:** Fusion.dll 和 Mscorwks.dll。 使用而不是 Mscorwks.dll 的 Fusion.dll，以確保您設為目標的.NET framework 的正確版本。  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

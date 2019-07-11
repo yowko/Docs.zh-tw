@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e17a6846ba0276ec7ba423ab25e3f11baf278d03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 02331bb3b0c70b946eaa28c9cd316f109ac927b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098750"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777232"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA 方法
 設定指定之方法的相對虛擬位址。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetRVA (  
     [in]  mdMethodDef  md,   
     [in]  ULONG        ulRVA   
@@ -50,7 +50,7 @@ HRESULT SetRVA (
   
  **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,17 +2,17 @@
 title: LINQ to SQL 的典型使用步驟
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cbcd8099fd085d0198e5ba77ee0a3e86c1ca70d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063010"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742785"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL 的典型使用步驟
 若要實作 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式，請遵循本主題稍後所說明的步驟。 請注意，許多步驟都是選擇性的步驟。 您可以放心使用預設狀態下的物件模型。  
   
- 若要快速學會，請使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 來建立物件模型並且開始撰寫查詢的程式碼。  
+ 快速入門中，使用物件關聯式設計工具來建立物件模型並且開始撰寫程式碼查詢。  
   
 ## <a name="creating-the-object-model"></a>建立物件模型  
  第一步是從現有關聯式資料庫的中繼資料 (Metadata) 建立物件模型。 物件模型會根據開發人員的程式設計語言來表示資料庫。 如需詳細資訊，請參閱 < [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)。  
@@ -20,17 +20,17 @@ ms.locfileid: "65063010"
 ### <a name="1-select-a-tool-to-create-the-model"></a>1.選取用以建立模型的工具。  
  用於建立模型的工具有三種。  
   
-- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+- 物件關聯式設計工具  
   
      這個設計工具提供了豐富的使用者介面，可用於從現有資料庫建立物件模型。 此工具是 Visual Studio IDE 的一部分，並最適合用於小型或中型資料庫。  
   
 - SQLMetal 程式碼產生工具  
   
-     這個命令列公用程式提供了與 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]稍有不同的一組選項。 若要建立大型資料庫的模型，使用這項工具最適合。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+     此命令列公用程式會提供從 O/R 設計工具稍有不同組的選項。 若要建立大型資料庫的模型，使用這項工具最適合。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
 - 程式碼編輯器  
   
-     您可以使用 Visual Studio 程式碼編輯器或其他編輯器撰寫自己的程式碼。 當您具有現有的資料庫而且可使用 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]或 SQLMetal 工具時，則不建議這種方法，因為很容易發生錯誤。 但是，程式碼編輯器很適合用於調整您已經使用其他工具所產生的程式碼。 如需詳細資訊，請參閱[如何：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)。  
+     您可以使用 Visual Studio 程式碼編輯器或其他編輯器撰寫自己的程式碼。 不建議使用這種方法，您有現有的資料庫，並且可以使用 O/R 設計工具或 SQLMetal 工具時很容易發生錯誤。 但是，程式碼編輯器很適合用於調整您已經使用其他工具所產生的程式碼。 如需詳細資訊，請參閱[如何：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)。  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2.選取您要產生的程式碼種類。  
   
@@ -43,14 +43,14 @@ ms.locfileid: "65063010"
      使用這種方法，您可以將對應中繼資料留在應用程式程式碼外。 如需詳細資訊，請參閱 <<c0> [ 外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
   
     > [!NOTE]
-    >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]不支援產生外部對應檔案。 您必須使用 SQLMetal 工具來實作這項功能。  
+    >  O/R 設計工具不支援產生外部對應檔。 您必須使用 SQLMetal 工具來實作這項功能。  
   
 - DBML 檔：您可以在產生最終程式碼檔之前修改這個檔案。  
   
      這是一項進階功能。  
   
 ### <a name="3-refine-the-code-file-to-reflect-the-needs-of-your-application"></a>3.修改程式碼檔，以反映您的應用程式需求。  
- 針對此目的，您可以使用 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]或程式碼編輯器。  
+ 基於此目的，您可以使用 O/R 設計工具或程式碼編輯器。  
   
 ## <a name="using-the-object-model"></a>使用物件模型  
  下圖顯示在兩層式案例中，開發人員和資料之間的關係。 如需其他案例中，請參閱[多層式架構和遠端的應用程式使用 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)。  

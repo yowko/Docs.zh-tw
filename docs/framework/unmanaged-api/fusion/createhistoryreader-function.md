@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e438006d6424866514e73119c05e8fd69d7ba62e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee30d4f32e05fab27ae70052b28d3d152594cf90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669702"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778423"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 函式
 建立記錄讀取器指定的檔案。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CreateHistoryReader (  
     [in]  LPCWSTR        wzFilePath,  
     [out] IHistoryReader **ppHistoryReader  
@@ -45,7 +45,7 @@ HRESULT CreateHistoryReader (
 ## <a name="return-value"></a>傳回值  
  中所定義 WinError.h，除了下表中所述的值，這個方法會傳回標準 COM 錯誤碼。  
   
-|傳回碼|描述|  
+|傳回碼|說明|  
 |-----------------|-----------------|  
 |S_OK|表示已成功完成的方法。|  
 |E_INVALIDARG|指出`wzFilePath`或`ppHistoryReader`設為 null 參考。|  
@@ -55,7 +55,7 @@ HRESULT CreateHistoryReader (
   
  **LIBRARY:** Fusion.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

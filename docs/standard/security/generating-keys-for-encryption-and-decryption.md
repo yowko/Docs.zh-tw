@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd6a5d710f4b42ae8d1bedb535abface7a053cbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52ec268df38a12dfe7dac469eed9901d7c0646a1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654395"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769600"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>產生加密和解密金鑰
 建立和管理金鑰是密碼編譯程序中很重要的一部分。 對稱演算法需要建立金鑰和初始化向量 (IV)。 務必不要對不該解密您資料的任何人透露金鑰。 IV 不需要加密，但是應該針對每個工作階段變更。 非對稱演算法需要建立公開金鑰和私密金鑰。 公開金鑰可以公開給任何人，但私密金鑰必須只有將解密以公開金鑰加密之資料的一方知道。 本節描述如何產生及管理對稱和非對稱演算法的金鑰。  
   
 ## <a name="symmetric-keys"></a>對稱金鑰  
- .NET Framework 所提供的對稱加密類別需要一個金鑰和新的初始化向量 (IV) 才能加密和解密資料。 每當您使用預設建構函式建立其中一個 Managed 對稱密碼編譯類別的新執行個體時，便會自動建立新的金鑰和 IV。 您允許解密資料的任何人都必須擁有相同的金鑰和 IV，並使用相同的演算法。 一般而言，應該為每個工作階段建立新的金鑰和 IV，且金鑰和 IV 都不應該儲存以用於稍後的工作階段。  
+ .NET Framework 所提供的對稱加密類別需要一個金鑰和新的初始化向量 (IV) 才能加密和解密資料。 每當您建立一個使用無參數建構函式的 managed 對稱密碼編譯類別的新執行個體時，新的金鑰和 IV 會自動建立。 您允許解密資料的任何人都必須擁有相同的金鑰和 IV，並使用相同的演算法。 一般而言，應該為每個工作階段建立新的金鑰和 IV，且金鑰和 IV 都不應該儲存以用於稍後的工作階段。  
   
  若要與遠端的一方溝通對稱金鑰和 IV，通常會使用非對稱加密來加密對稱金鑰。 在不安全的網路中傳送未加密的金鑰並不安全，因為任何人只要攔截金鑰和 IV，就可以解密您的資料。 如需使用加密交換資料的詳細資訊，請參閱 [建立密碼編譯配置](../../../docs/standard/security/creating-a-cryptographic-scheme.md)。  
   
@@ -60,7 +60,7 @@ tdes.GenerateKey();
  先前的程式碼執行時，當建立 **TripleDESCryptoServiceProvider** 的新執行個體時，會產生金鑰和 IV。 呼叫 **GenerateKey** 和 **GenerateIV** 方法時，會建立另一個金鑰和 IV。  
   
 ## <a name="asymmetric-keys"></a>非對稱金鑰  
- .NET Framework 提供 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 和 <xref:System.Security.Cryptography.DSACryptoServiceProvider> 類別以進行非對稱式加密。 當您使用預設建構函式來建立新的執行個體時，這些類別會建立公開/私密金鑰組。 非對稱金鑰可以儲存以用於多個工作階段，或只針對一個工作階段而產生。 雖然公開金鑰可以公開提供使用，但應該小心地看護私密金鑰。  
+ .NET Framework 提供 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 和 <xref:System.Security.Cryptography.DSACryptoServiceProvider> 類別以進行非對稱式加密。 當您使用無參數建構函式來建立新的執行個體，這些類別會建立公開/私密金鑰組。 非對稱金鑰可以儲存以用於多個工作階段，或只針對一個工作階段而產生。 雖然公開金鑰可以公開提供使用，但應該小心地看護私密金鑰。  
   
  每當建立非對稱式演算法類別的新執行個體時，就會產生公開/私密金鑰組。 建立類別的新執行個體之後，可以使用兩種方法之一擷取金鑰資訊：  
   

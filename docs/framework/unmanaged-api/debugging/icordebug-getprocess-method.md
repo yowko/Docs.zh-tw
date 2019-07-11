@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcb869bed71be05e0450580b50dfa9f2a0fca525
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e77046745381d3ecc35c24d5af3f9181b9132e9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996290"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738158"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess 方法
 取得指定的處理序 」 ICorDebugProcess 」 執行個體的指標。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetProcess (  
     [in] DWORD               dwProcessId,  
     [out] ICorDebugProcess   **ppProcess  
@@ -50,7 +50,7 @@ HRESULT GetProcess (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

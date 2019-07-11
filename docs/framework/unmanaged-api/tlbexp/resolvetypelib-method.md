@@ -15,19 +15,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d734f35b5878ec39e4f2159c326283d168e3be2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b6db8925fb966f4a8b2a213b0d6e340d0edf107
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040842"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756423"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 方法
 藉由傳回它的完整的路徑來解析型別程式庫的簡單名稱。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT ResolveTypeLib(  
     [in]  BSTR      bstrSimpleName,  
     [in]  GUID      tlbid,  
@@ -72,7 +72,7 @@ HRESULT ResolveTypeLib(
   
  **LIBRARY:** TlbRef.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
