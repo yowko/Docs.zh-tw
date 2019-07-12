@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: cdd0331ee8ffc664e9fbe04bd1494f1f7d714464
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b83d9c972dbdadb721bae8b7d616c94a0c1c831f
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663389"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804749"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的各種文件功能可以建立高精確度的內容，此種內容的設計會比在舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中更加容易存取與閱讀。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
@@ -39,7 +39,9 @@ ms.locfileid: "64663389"
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>非固定格式文件控制項  
- **注意：** 如需詳細的非固定格式文件功能及如何建立這些資訊，請參閱 <<c0> [ 非固定格式文件概觀](flow-document-overview.md)。  
+
+> [!NOTE]
+>  如需詳細的非固定格式文件功能及如何建立這些資訊，請參閱 <<c0> [ 非固定格式文件概觀](flow-document-overview.md)。  
   
  顯示非固定格式文件內容由三個控制項支援： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
@@ -67,7 +69,7 @@ ms.locfileid: "64663389"
   
 - 適用於您自己應用程式設計的自訂儲存格式。  
   
- 封裝 Api，為基礎<xref:System.Windows.Xps.Packaging.XpsDocument>專為儲存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]修正內容的文件。 <xref:System.Windows.Xps.Packaging.XpsDocument>是獨立的文件，可以在檢視器 中顯示開啟<xref:System.Windows.Controls.DocumentViewer>控制項來列印多工緩衝處理，路由或輸出直接[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-相容的印表機。  
+ 封裝 Api，為基礎<xref:System.Windows.Xps.Packaging.XpsDocument>專為儲存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]修正內容的文件。           <xref:System.Windows.Xps.Packaging.XpsDocument>是獨立的文件，可以在檢視器 中顯示開啟<xref:System.Windows.Controls.DocumentViewer>控制項來列印多工緩衝處理，路由或輸出直接[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-相容的印表機。  
   
  下列各節提供的其他資訊<xref:System.IO.Packaging.Package>並<xref:System.Windows.Xps.Packaging.XpsDocument>[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]隨附[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   

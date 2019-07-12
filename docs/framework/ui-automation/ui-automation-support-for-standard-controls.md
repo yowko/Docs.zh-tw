@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 3fde9779205ea7d0902ddd99ed192f097a159d2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 641fc3f8dfca3ff6506354c076b98cc88073a1b7
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221475"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802123"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>標準控制項的 UI 自動化支援
 > [!NOTE]
@@ -136,7 +136,7 @@ ms.locfileid: "59221475"
 |VscrollBar|  
 |Web 瀏覽器|  
   
- 下列控制項只透過其 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支援公開至 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]。 部分功能可能無法使用。  
+ 下列控制項都會公開至[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]只能透過其對 Microsoft Active Accessibility 支援。 部分功能可能無法使用。  
   
 |控制項名稱|  
 |------------------|  

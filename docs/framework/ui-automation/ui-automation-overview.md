@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 06cbc82f3636c4063b445a0ccbe871e0be1dd847
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032392"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802236"
 ---
 # <a name="ui-automation-overview"></a>UI 自動化概觀
 > [!NOTE]
@@ -28,13 +28,13 @@ ms.locfileid: "62032392"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]、 [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]和 [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)]中的完整功能。  
   
- 使用者介面自動化提供者會透過內建的橋接服務，為 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 用戶端應用程式提供某些支援。  
+ 使用者介面自動化提供者會提供一些支援 Microsoft Active Accessibility 用戶端應用程式，透過內建的橋接服務。  
   
 <a name="Providers_and_Clients"></a>   
 ## <a name="providers-and-clients"></a>提供者和用戶端  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 具有四個主要元件，如下表所示。  
   
-|元件|描述|  
+|元件|說明|  
 |---------------|-----------------|  
 |提供者 [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] (UIAutomationProvider.dll 和 UIAutomationTypes.dll)|一組由使用者介面自動化提供者實作的介面定義，提供 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目之相關資訊，以及對程式設計輸入做出回應的物件。|  
 |用戶端 API (UIAutomationClient.dll 和 UIAutomationTypes.dll)|一組 Managed 程式碼，可讓使用者介面自動化用戶端應用程式取得 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的相關資訊，並將輸入傳送至控制項。|  

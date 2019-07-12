@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9e3f0941d2fd92b8657d2d9df5b050e7793eb1d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647205"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802216"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>用戶端 UI 自動化提供者實作
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "64647205"
   
  不過，較舊的控制項，例如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 中的控制項，並不會直接支援 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 這些控制項會改由存在於用戶端處理序並使用跨處理序通訊 (例如，藉由監視控制項的往來視窗訊息) 來取得控制項相關資訊的提供者服務。 這種用戶端提供者有時稱為 Proxy。  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 提供標準的提供者[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows Form 控制項。 此外，針對未由另一個伺服器端提供者或 Proxy 所服務但有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 實作的任何控制項，後援提供者也提供部分 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 支援。 所有這些提供者都會自動載入，供用戶端應用程式使用。  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 提供標準的提供者[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows Form 控制項。 此外，後援提供者會提供部分[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支援新增至未由另一個伺服器端提供者的任何控制項或 proxy，但有 Microsoft Active Accessibility 實作。 所有這些提供者都會自動載入，供用戶端應用程式使用。  
   
  如需有關支援[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows Forms 控制項，請參閱[UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)。  
   

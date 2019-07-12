@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 0e5e2252225c824dfbc9d799b29a16ab6206eb3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1137052c13571cf31fdf98512f2fe62533387e80
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630635"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802243"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自動化進行自動化測試
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "64630635"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供了一致的物件模型，可讓所有 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 架構透過可存取、輕鬆自動化的方式來公開複雜、豐富的功能。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的開發目的是要接替 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 是現有的架構，專為提供存取控制項及應用程式的方案所設計。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 設計時未考慮測試自動化，但由於協助工具和自動化有極為相似的需求，進而發展為該角色。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]除了提供更精細的協助工具方案之外，還特別設計來提供穩固的自動化測試功能。 例如， [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 依賴單一介面來同時公開使用者介面的相關資訊及收集 AT 產品所需資訊； [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 則分隔兩個模型。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 已開發為 Microsoft Active Accessibility 的後繼版本。 Active Accessibility 是現有的架構是設計來提供解決方案，讓控制項和應用程式的存取。 Active Accessibility 設計時未考慮測試自動化即使它逐漸發展成該角色有非常類似的需求的協助工具和自動化。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]除了提供更精細的協助工具方案之外，還特別設計來提供穩固的自動化測試功能。 例如，Active Accessibility 依賴單一介面來同時公開 UI 的相關資訊及收集 AT 產品; 所需的資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]分隔兩個模型。  
   
  若要實作 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 讓它成為跟自動化測試工具一樣有用，就需要有提供者和用戶端。 使用者介面自動化提供者是應用程式，例如 Microsoft Word、Excel 和其他以 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 作業系統為基礎的協力廠商應用程式或控制項。 使用者介面自動化用戶端則包括自動化測試指令碼和輔助技術應用程式。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "64630635"
   
 - 是 Inspect.exe[!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]應用程式，可用來收集[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供者和用戶端開發和偵錯資訊。 Inspect.exe 納入[!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]。  
   
-- MSAABridge 會將 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 資訊公開給 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 用戶端。 橋接 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 至 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 的主要目標是，提供現有 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 用戶端與任何架構 (已經實作 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]) 互動的能力。  
+- MSAABridge 會公開[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]作用中的協助工具用戶端的資訊。 橋接的主要目標[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]作用中的協助工具可讓現有的作用中的協助工具用戶端能夠與任何已實作的架構互動[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。  
   
 <a name="Security"></a>   
 ## <a name="security"></a>安全性  
