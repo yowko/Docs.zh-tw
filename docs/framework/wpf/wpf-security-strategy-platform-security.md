@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d7b76365178c78d2b20b9541d5e52a605158a77
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756766"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859820"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全性策略 – 平台安全性
 雖然 Windows Presentation Foundation (WPF) 提供各種安全性服務，它也會運用基礎的平台，包括作業系統、 安全性功能[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]，和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]。 這三層安全性功能一起為 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供了強大、深入防禦的安全性模型，即使其中一層失敗，還有兩層可以幫忙把關，如下圖所示：  
@@ -196,11 +196,11 @@ ms.locfileid: "67756766"
   
 - 某些網站上的大量安全性對話方塊。  
   
- 有時候，不可信賴的網站會冒充安裝 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 或一再顯示 [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] 安裝對話方塊 (即使使用者加以取消也一樣) 來誘騙使用者。 透過這些手法，許多使用者可能信以為真，做出錯誤決定，因而安裝了間諜軟體應用程式。  
+ 在某些情況下，不受信任的網站會嘗試誘騙使用者安裝[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]或重複顯示的 Microsoft ActiveX 安裝對話方塊，即使使用者加以取消它。 透過這些手法，許多使用者可能信以為真，做出錯誤決定，因而安裝了間諜軟體應用程式。  
   
  [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 以使用者啟始的概念為核心，提供數項可減少這類問題的功能。 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 使用者已按下動作，也就是連結或頁面項目時偵測到*使用者啟始*，並將類似的動作時改為在網頁上指令碼所觸發。 例如，[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]併入**快顯封鎖程式**，偵測到當使用者按一下按鈕，以避免頁面建立快顯視窗。 這可讓 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 允許顯示無害的快顯視窗，同時又能封鎖使用者未要求或不想要的快顯視窗。 已封鎖快顯視窗會擋住新**資訊列**，這可讓使用者手動取消封鎖來檢視快顯視窗中。  
   
- 相同的使用者啟始邏輯也適用於**開放**/**儲存**安全性提示。 除非 [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)] 是先前安裝之控制項的升級，否則其安裝對話方塊一律會由 [資訊列] 擋住。 這些措施一起為使用者提供了更安全、更受控制的使用者經驗，因為使用者將可擺脫陌生網站為了讓使用者安裝不必要或惡意的軟體，而一再進行的騷擾。  
+ 相同的使用者啟始邏輯也適用於**開放**/**儲存**安全性提示。 ActiveX 安裝對話方塊一律會擋住資訊列除非它們代表升級從先前安裝的控制。 這些措施一起為使用者提供了更安全、更受控制的使用者經驗，因為使用者將可擺脫陌生網站為了讓使用者安裝不必要或惡意的軟體，而一再進行的騷擾。  
   
  這些功能也會保護使用 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 來瀏覽可下載和安裝 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 應用程式之網站的客戶。 具體而言，這是因為不論惡意或詐欺的應用程式是以何種技術建置 (包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)])，[!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 都能減少使用者安裝這類應用程式的機會，進而改善使用者經驗。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 還可透過網際網路上的 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 來下載應用程式，以將這些保護進行擴充。 由於 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] 是在網際網路區域安全性沙箱中執行，因此可順暢地執行。 另一方面，獨立 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 應用程式則需要完全信任才能執行。 對於這些應用程式，[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 會在啟動程序期間顯示安全性對話方塊，以通知有關應用程式之其他安全性需求的使用。 不過，這必須由使用者啟始、同時受到使用者啟始的邏輯控制，並且可以取消。  
   

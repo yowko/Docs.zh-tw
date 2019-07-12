@@ -9,15 +9,15 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: ef07e1acd250ceeb7c0e30f8a78dd8d7b196fdcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ed6dd33efd5fdc5e2c61df4173bec5cc2f0d807
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655532"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859690"
 ---
 # <a name="advanced-text-formatting"></a>進階文字格式化
-Windows Presentation Foundation (WPF) 提供一組強固的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]針對在您的應用程式中包含文字。 版面配置並[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，例如<xref:System.Windows.Controls.TextBlock>、 提供最常見和一般用途的文字表示的項目。 繪製[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，這類<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，提供在繪圖中包括格式化的文字的方法。 在最進階層級，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供可延伸的文字格式設定引擎，以控制文字表示，例如文字存放區管理、 文字執行格式設定管理，以及內嵌的物件管理的各個層面。  
+Windows Presentation Foundation (WPF) 提供一組強大的 Api 在您的應用程式中包含文字。 版面配置並[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]Api，例如<xref:System.Windows.Controls.TextBlock>、 提供最常見和一般用途的文字表示的項目。 繪製的 Api，例如<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，提供在繪圖中包括格式化的文字的方法。 在最進階層級，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供可延伸的文字格式設定引擎，以控制文字表示，例如文字存放區管理、 文字執行格式設定管理，以及內嵌的物件管理的各個層面。  
   
  本主題提供簡介[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]文字格式設定。 它著重於用戶端實作與使用[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]文字格式設定引擎。  
   
@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) 提供一組強固的[!INCLUDE[TLA#tla_api
 
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 本主題假設您已熟悉的較高的層級[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]用於文字呈現。 大部分使用者情節不需要進階的文字格式化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]本主題中討論。 如需不同的文字[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，請參閱 < [WPF 中的文件](documents-in-wpf.md)。  
+ 本主題假設您已熟悉使用較高的層級 Api，用來呈現文字。 大部分使用者案例不需要進階的文字格式化本主題中討論的 Api。 如需不同文字 Api 的簡介，請參閱[WPF 中的文件](documents-in-wpf.md)。  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>進階文字格式化  

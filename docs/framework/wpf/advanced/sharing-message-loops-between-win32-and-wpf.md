@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611719"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860015"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>在 Win32 和 WPF 之間共用訊息迴圈
 本主題描述如何實作與互通訊息迴圈[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，藉由使用現有的訊息迴圈中的曝光度<xref:System.Windows.Threading.Dispatcher>或建立個別的訊息迴圈上[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]這邊的交互操作的程式碼。  
@@ -20,7 +20,7 @@ ms.locfileid: "64611719"
 ## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher 和訊息迴圈  
  互通性和鍵盤事件支援的一般案例是實作<xref:System.Windows.Interop.IKeyboardInputSink>，或從已經實作的類別的子類別<xref:System.Windows.Interop.IKeyboardInputSink>，例如<xref:System.Windows.Interop.HwndSource>或<xref:System.Windows.Interop.HwndHost>。 不過，鍵盤接收支援不會處理傳送和接收跨互通界限的訊息時所發生的所有可能的訊息迴圈需求。 為了定形應用程式訊息迴圈架構[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供<xref:System.Windows.Interop.ComponentDispatcher>類別，定義訊息迴圈，以遵循簡單通訊協定。  
   
- <xref:System.Windows.Interop.ComponentDispatcher> 會公開數個成員的靜態類別。 每個方法的範圍會以隱含方式繫結進行呼叫的執行緒。 訊息迴圈必須呼叫其中部分[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]（如在下一節中所定義） 的關鍵時刻。  
+ <xref:System.Windows.Interop.ComponentDispatcher> 會公開數個成員的靜態類別。 每個方法的範圍會以隱含方式繫結進行呼叫的執行緒。 訊息迴圈必須讓某些這些 Api 呼叫在關鍵時刻，（如在下一節中所定義）。  
   
  <xref:System.Windows.Interop.ComponentDispatcher> 提供的其他元件 （例如鍵盤接收中） 可以接聽的事件。 <xref:System.Windows.Threading.Dispatcher>類別會呼叫所有適當<xref:System.Windows.Interop.ComponentDispatcher>適當的序列中的方法。 如果您要實作您自己的訊息迴圈，您的程式碼會負責呼叫<xref:System.Windows.Interop.ComponentDispatcher>方法，以類似的方式。  
   

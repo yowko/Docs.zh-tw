@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 659497543d40c8eda18b55b4d98feac976c5abf5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664052"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860250"
 ---
 # <a name="custom-dependency-properties"></a>自訂相依性屬性
 
@@ -87,7 +87,7 @@ ms.locfileid: "67664052"
 
 ### <a name="registering-the-property-with-the-property-system"></a>向屬性系統登錄屬性
 
-為使屬性成為相依性屬性，您必須將該屬性登錄到屬性系統維護的資料表中，並給它唯一識別碼用為後續屬性系統作業的限定詞。 這些作業可能是內部作業，或您自己程式碼呼叫的屬性系統 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 若要註冊的屬性，請呼叫<xref:System.Windows.DependencyProperty.Register%2A>類別 （類別，但任何成員定義之外） 的主體內的方法。 [識別碼] 欄位也會提供由<xref:System.Windows.DependencyProperty.Register%2A>方法呼叫，傳回的值。 原因，<xref:System.Windows.DependencyProperty.Register%2A>呼叫完成之外其他成員定義是因為您可以使用此傳回值指派，並建立`public` `static` `readonly`型別的欄位<xref:System.Windows.DependencyProperty>為您類別的一部分。 此欄位會變成您相依性屬性的識別碼。
+為使屬性成為相依性屬性，您必須將該屬性登錄到屬性系統維護的資料表中，並給它唯一識別碼用為後續屬性系統作業的限定詞。 這些作業可能是內部作業，或您自己的程式碼呼叫屬性系統的 Api。 若要註冊的屬性，請呼叫<xref:System.Windows.DependencyProperty.Register%2A>類別 （類別，但任何成員定義之外） 的主體內的方法。 [識別碼] 欄位也會提供由<xref:System.Windows.DependencyProperty.Register%2A>方法呼叫，傳回的值。 原因，<xref:System.Windows.DependencyProperty.Register%2A>呼叫完成之外其他成員定義是因為您可以使用此傳回值指派，並建立`public` `static` `readonly`型別的欄位<xref:System.Windows.DependencyProperty>為您類別的一部分。 此欄位會變成您相依性屬性的識別碼。
 
 [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
@@ -174,7 +174,7 @@ ms.locfileid: "67664052"
 
 ## <a name="dependency-property-security-considerations"></a>相依性屬性安全性考量
 
-相依性屬性應該宣告為公用屬性。 相依性屬性識別碼欄位應該宣告為公用靜態欄位。 即使您嘗試宣告其他存取層級 (例如受保護的)，仍一律可以透過與屬性系統 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 結合的識別項存取相依性屬性。 即使受保護的識別項欄位是可能為可存取，因為中繼資料的報表或值判斷[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]屬於屬性系統，例如<xref:System.Windows.LocalValueEnumerator>。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。
+相依性屬性應該宣告為公用屬性。 相依性屬性識別碼欄位應該宣告為公用靜態欄位。 即使您嘗試宣告其他存取層級 （例如受保護） 時，相依性屬性可以一律透過向屬性系統 Api 的組合中的識別項存取。 即使受保護的識別項欄位是可能為可存取，因為中繼資料報表或值判斷 Api 屬於屬性系統，例如<xref:System.Windows.LocalValueEnumerator>。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。
 
 <a name="DPCtor"></a>
 

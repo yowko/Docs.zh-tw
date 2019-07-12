@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 90768a0c816e790138ba60bd24afee242e41e652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010393"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860278"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 標記延伸
 提供值的任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]延後該值是定義資源的參考的屬性。 該資源查閱行為相當於執行階段查閱。  
@@ -52,7 +52,7 @@ ms.locfileid: "62010393"
   
  資源索引鍵可能是任何字串中定義[XamlName 文法](../../xaml-services/xamlname-grammar.md)。 資源索引鍵可能也是其他物件類型，例如<xref:System.Type>。 A<xref:System.Type>金鑰是由佈景主題樣式的控制項可以為何的基礎。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
   
- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 查閱的資源值，例如<xref:System.Windows.FrameworkElement.FindResource%2A>，請依照下列所用的相同的資源查閱邏輯`DynamicResource`。  
+ Api 資源的查閱值，例如<xref:System.Windows.FrameworkElement.FindResource%2A>，請依照下列所用的相同的資源查閱邏輯`DynamicResource`。  
   
  豐富的宣告式方法的參考資源是以[StaticResource 標記延伸](staticresource-markup-extension.md)。  
   

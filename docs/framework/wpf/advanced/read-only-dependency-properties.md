@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 327897d50bd23a739d015a4151459d9d4a6fc1a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e74f7c2790a73211bcc8e6f13dcf2dfdc02e678b
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611800"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859975"
 ---
 # <a name="read-only-dependency-properties"></a>唯讀相依性屬性
 本主題說明唯讀相依性屬性，包括現有的唯讀相依性屬性，以及用於建立自訂唯讀相依性屬性的案例和技術。  
@@ -37,7 +37,7 @@ ms.locfileid: "64611800"
   
 - 唯讀註冊所傳回的物件是<xref:System.Windows.DependencyPropertyKey>而非<xref:System.Windows.DependencyProperty>。 您仍應將此欄位儲存為成員，但通常不需讓它成為類型的公用成員。  
   
- 不論您必須支援的私用欄位或值為何，當然都能使用您決定的任何邏輯完整寫入您的唯讀相依性屬性。 不過，設定屬性 (不論是一開始就設定或設為執行階段邏輯一部分) 的最簡單方式是使用屬性系統的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是規避屬性系統來直接設定私用支援欄位。 特別是，沒有簽章<xref:System.Windows.DependencyObject.SetValue%2A>它會接受類型參數的<xref:System.Windows.DependencyPropertyKey>。 方式和位置您設定此值以程式設計方式在應用程式邏輯，會影響您可能想要如何設定存取<xref:System.Windows.DependencyPropertyKey>您第一次註冊相依性屬性時所建立。 如果您全都在類別內處理此邏輯，您可能會讓它成為私用，或者如果您需要從組件的其他部分設定它，則可能會將它設為內部。 其中一個方法是呼叫<xref:System.Windows.DependencyObject.SetValue%2A>相關的事件，以通知類別執行個體的預存的屬性值變更時所需的類別事件處理常式內。 另一種方法是將相依性屬性在一起的繫結使用配對<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>回呼，註冊期間的那些屬性中繼資料的一部分。  
+ 不論您必須支援的私用欄位或值為何，當然都能使用您決定的任何邏輯完整寫入您的唯讀相依性屬性。 不過，最直接的方法，來設定屬性，一開始或執行階段邏輯一部分就是使用屬性系統的 Api，而不是規避屬性系統和直接設定私用支援欄位。 特別是，沒有簽章<xref:System.Windows.DependencyObject.SetValue%2A>它會接受類型參數的<xref:System.Windows.DependencyPropertyKey>。 方式和位置您設定此值以程式設計方式在應用程式邏輯，會影響您可能想要如何設定存取<xref:System.Windows.DependencyPropertyKey>您第一次註冊相依性屬性時所建立。 如果您全都在類別內處理此邏輯，您可能會讓它成為私用，或者如果您需要從組件的其他部分設定它，則可能會將它設為內部。 其中一個方法是呼叫<xref:System.Windows.DependencyObject.SetValue%2A>相關的事件，以通知類別執行個體的預存的屬性值變更時所需的類別事件處理常式內。 另一種方法是將相依性屬性在一起的繫結使用配對<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>回呼，註冊期間的那些屬性中繼資料的一部分。  
   
  因為<xref:System.Windows.DependencyPropertyKey>屬私人性質，並且不會傳播屬性系統，您的程式碼之外，唯讀相依性屬性有更好設定安全性會比讀寫相依性屬性。 針對讀寫相依性屬性，識別欄位是明確或隱含公開的，因此該屬性是可廣泛設定的。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。  
   

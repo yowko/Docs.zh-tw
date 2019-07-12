@@ -5,15 +5,15 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f0385280cf01502a5b2786541c3d959fca24d239
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 81c1941ffd95afb01dcb6ebda2634832a91cd876
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912450"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859851"
 ---
 # <a name="framework-property-metadata"></a>架構屬性中繼資料
-針對在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構中視為 WPF 架構層級的物件項目屬性，報告架構屬性中繼資料選項。 WPF 架構層級指定一般會需要由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 簡報 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可執行檔處理的轉譯、資料繫結和屬性系統調整等功能。 這些系統會查詢架構屬性中繼資料，以判斷特定項目屬性的特定功能特性。  
+針對在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構中視為 WPF 架構層級的物件項目屬性，報告架構屬性中繼資料選項。 WPF 架構層級指定一般情況下需要該功能，例如轉譯、 資料繫結，而且屬性系統調整會由[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]簡報 Api 和可執行檔。 這些系統會查詢架構屬性中繼資料，以判斷特定項目屬性的特定功能特性。  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
@@ -32,7 +32,7 @@ ms.locfileid: "64912450"
     > [!NOTE]
     >  屬性值內容中的「繼承」一詞表示相依性屬性的特定項目，它表示因為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統的 WPF 架構層級功能，子項目可以繼承父項目的實際相依性屬性值。 它和 Managed 程式碼類型及透過衍生類型的成員繼承沒有直接關係。 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。  
   
-- 報告資料繫結特性 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>， <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>)。 根據預設，架構中的相依性屬性以單向繫結行為支援資料繫結。 如果沒有任何案例，您可能會停用資料繫結 (因為它們具有彈性且可延伸，所以預設的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 中沒有太多這類屬性的範例)。 您可能會設定繫結到雙向繫結在一起的元件組件間的控制項行為的屬性預設值 (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>範例)，或雙向繫結的一般且預期使用者實例 (<xref:System.Windows.Controls.TextBox.Text%2A>範例)。 對預設值一律可以變更的每個繫結而言，變更與資料繫結相關的中繼資料只會影響預設值。 如需繫結模式和一般繫結的詳細資訊，請參閱[資料繫結概觀](../data/data-binding-overview.md)。  
+- 報告資料繫結特性 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>， <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>)。 根據預設，架構中的相依性屬性以單向繫結行為支援資料繫結。 如果不沒有為它的任何案例下，您可能會停用資料繫結 (因為它們是保障靈活性與可延伸，沒有預設值中的這類屬性的許多範例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Api)。 您可能會設定繫結到雙向繫結在一起的元件組件間的控制項行為的屬性預設值 (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>範例)，或雙向繫結的一般且預期使用者實例 (<xref:System.Windows.Controls.TextBox.Text%2A>範例)。 對預設值一律可以變更的每個繫結而言，變更與資料繫結相關的中繼資料只會影響預設值。 如需繫結模式和一般繫結的詳細資訊，請參閱[資料繫結概觀](../data/data-binding-overview.md)。  
   
 - 報告屬性是否應該由應用程式或支援日誌功能的服務 (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>)。 一般項目預設不啟用日誌功能，但某些使用者輸入控制項會選擇性地啟用。 此屬性原由日誌服務讀取，包括 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作日誌功能，通常設定在使用者控制項，例如在所有瀏覽步驟都應保存之清單的使用者選取範圍。 如需日誌的相關資訊，請參閱[巡覽概觀](../app-development/navigation-overview.md)。  
   

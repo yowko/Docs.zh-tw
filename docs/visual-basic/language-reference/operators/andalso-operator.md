@@ -11,19 +11,19 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: 3876fd9c32d486b8ebecc9ee2428486a687a1624
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cb4d372d3ac228f29c6fa45f124796e5dfb6709
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608310"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859891"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 運算子 (Visual Basic)
 執行最少運算邏輯結合兩個運算式上。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb
 result = expression1 AndAlso expression2  
 ```  
   
@@ -47,7 +47,8 @@ result = expression1 AndAlso expression2
 |`False`|（不會評估）|`False`|  
   
 ## <a name="data-types"></a>資料類型  
- `AndAlso`僅適用於定義運算子[布林資料型別](../../../visual-basic/language-reference/data-types/boolean-data-type.md)。 Visual Basic 會將轉換為所需的每個運算元`Boolean`，並執行作業完全`Boolean`。 如果您將結果指派給數值類型時，Visual Basic 會將它從`Boolean`為該型別。 這可能會產生非預期的行為。 例如，`5 AndAlso 12`會導致`–1`當轉換成`Integer`。  
+ `AndAlso`僅適用於定義運算子[布林資料型別](../../../visual-basic/language-reference/data-types/boolean-data-type.md)。 Visual Basic 會將轉換為所需的每一個運算元`Boolean`之前評估運算式。 如果您將結果指派給數值類型時，Visual Basic 會將它從`Boolean`為該類型，`False`會變成`0`並`True`會變成`-1`。
+如需詳細資訊，請參閱[布林類型轉換](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>多載化  
  [與運算子](../../../visual-basic/language-reference/operators/and-operator.md)並[IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)可以是*多載*，這表示，類別或結構可以重新定義其行為時運算元的類型，類別或結構。 多載`And`並`IsFalse`運算子會影響的行為`AndAlso`運算子。 如果您的程式碼會使用`AndAlso`上類別或結構，多載`And`和`IsFalse`，務必了解其重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  

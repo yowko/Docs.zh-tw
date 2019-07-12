@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 5835cfb633451025ed32c2a26228e33a1b24473e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610483"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857058"
 ---
 # <a name="input-overview"></a>輸入概觀
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系統提供一個功能強大[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]各式各樣的裝置取得輸入，包括滑鼠、 鍵盤、 觸控及手寫筆。 本主題描述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的服務，以及說明輸入系統的架構。
@@ -58,7 +58,7 @@ ms.locfileid: "67610483"
  <xref:System.Windows.Input.Mouse>和<xref:System.Windows.Input.Keyboard>類別所述本概觀的所有詳細資料。
 
 ### <a name="stylus-input"></a>手寫筆輸入
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 已經整合的支援<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是所產生的熱門手寫筆輸入[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式可以將手寫筆視為滑鼠使用滑鼠 API，但[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]也會公開使用的模型類似鍵盤和滑鼠手寫筆裝置抽象概念。  所有手寫筆相關的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都會包含 "Stylus" 這個單字。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 已經整合的支援<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是所產生的熱門手寫筆輸入[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式可以將手寫筆視為滑鼠使用滑鼠 API，但[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]也會公開使用的模型類似鍵盤和滑鼠手寫筆裝置抽象概念。  所有手寫筆相關的 Api 包含"Stylus"這個字。
 
  因為手寫筆可以當作滑鼠，所以只支援滑鼠輸入的應用程式仍然可以自動取得某種程度的手寫筆支援。 以這種方式使用手寫筆時，應用程式可以處理適當的手寫筆事件，然後處理對應的滑鼠事件。 此外，還可以透過手寫筆裝置抽象概念來取得筆跡輸入這類較高階服務。  如需將筆跡作為輸入的詳細資訊，請參閱[筆跡入門](getting-started-with-ink.md)。
 
@@ -354,7 +354,7 @@ ms.locfileid: "67610483"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>滑鼠捕捉
- 滑鼠裝置專門保留稱為滑鼠捕捉的強制回應特性。 滑鼠捕捉是用來維護啟動拖放作業後的轉換輸入狀態；因此，不一定會發生涉及滑鼠指標之額定螢幕位置的其他作業。 拖曳期間，使用者按一下就會中止拖放，這樣會在拖曳原點持有滑鼠捕捉時，讓大部分的 mouseover 提示為不適當。 輸入系統會公開可判斷滑鼠捕捉狀態的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，以及可強制滑鼠捕捉到特定項目或清除滑鼠捕捉狀態的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 如需拖放作業的詳細資訊，請參閱[拖放概觀](drag-and-drop-overview.md)。
+ 滑鼠裝置專門保留稱為滑鼠捕捉的強制回應特性。 滑鼠捕捉是用來維護啟動拖放作業後的轉換輸入狀態；因此，不一定會發生涉及滑鼠指標之額定螢幕位置的其他作業。 拖曳期間，使用者按一下就會中止拖放，這樣會在拖曳原點持有滑鼠捕捉時，讓大部分的 mouseover 提示為不適當。 輸入的系統會公開可判斷滑鼠捕捉狀態的 Api，以及可強制滑鼠捕捉到特定的項目，或清除滑鼠捕捉狀態的 Api。 如需拖放作業的詳細資訊，請參閱[拖放概觀](drag-and-drop-overview.md)。
 
 <a name="commands"></a>
 ## <a name="commands"></a>命令

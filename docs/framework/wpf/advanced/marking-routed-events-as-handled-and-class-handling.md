@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: c569834ab837b4b4645535add3e880567ae06ca6
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610377"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859987"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>將路由事件標記為已處理以及類別處理
 路由事件的處理常式可以將事件資料內的事件標記為已處理。 處理事件時，即可有效地縮短路由。 類別處理是一種程式設計概念，此概念與路由事件相輔相成。 類別處理常式有機會在類別層級上使用處理常式來處理特定的路由事件 (此處理常式會優先叫用，之後才輪到在該類別任何執行個體上的任何執行個體處理常式)。  
@@ -33,7 +33,7 @@ ms.locfileid: "67610377"
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>標示已處理事件的時機  
- 當您設定的值<xref:System.Windows.RoutedEventArgs.Handled%2A>屬性設`true`在事件路由事件的資料，這稱為 「 標記處理的事件 」。 不論您是應用程式作者，或控制項作者 (回應現有路由事件或實作新路由事件者)，對於何時應該將路由的事件標記為已處理，都沒有絕對的規則。 大部分的情況下，「已處理」的概念表示：路由事件的事件資料應作為有限的通訊協定，以用於任何自訂路由事件，及用於您的應用程式對 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 中公開之各種路由事件的回應。 另一個要考慮使用「已處理」的情況為：如果您的程式碼是以重要且相對完整的方式回應路由事件，通常就應該將此路由事件標示為「已處理」。 一般而言，任何單一路由事件發生時，應該只有一個重要回應需要實作個別的處理常式。 如需更多回應，必要程式碼就必須透過在單一處理常式內鏈結的應用程式邏輯來實作，而不是使用路由的事件系統來轉送。 至於哪些項目算「重要」，這個概念也很主觀，並取決於您的應用程式或程式碼而定。 一般來說，「重要回應」範例包括：設定焦點、修改公用狀態、設定足以影響視覺化表示法的屬性，以及引發其他新的事件。 「不重要回應」的範例則包括︰修改私用狀態 (不含任何視覺效果或程式設計表示法)、記錄事件，或查看事件的引數並選擇不回應。  
+ 當您設定的值<xref:System.Windows.RoutedEventArgs.Handled%2A>屬性設`true`在事件路由事件的資料，這稱為 「 標記處理的事件 」。 不論您是應用程式作者，或控制項作者 (回應現有路由事件或實作新路由事件者)，對於何時應該將路由的事件標記為已處理，都沒有絕對的規則。 大部分的情況下，「 處理 」 的路由的事件的事件資料的概念應該用於有限的通訊協定為自己的應用程式中公開之各種路由事件回應[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Api 以及與任何自訂路由事件。 另一個要考慮使用「已處理」的情況為：如果您的程式碼是以重要且相對完整的方式回應路由事件，通常就應該將此路由事件標示為「已處理」。 一般而言，任何單一路由事件發生時，應該只有一個重要回應需要實作個別的處理常式。 如需更多回應，必要程式碼就必須透過在單一處理常式內鏈結的應用程式邏輯來實作，而不是使用路由的事件系統來轉送。 至於哪些項目算「重要」，這個概念也很主觀，並取決於您的應用程式或程式碼而定。 一般來說，「重要回應」範例包括：設定焦點、修改公用狀態、設定足以影響視覺化表示法的屬性，以及引發其他新的事件。 「不重要回應」的範例則包括︰修改私用狀態 (不含任何視覺效果或程式設計表示法)、記錄事件，或查看事件的引數並選擇不回應。  
   
  路由的事件系統行為加強這個 「 重要回應 」 模型以供使用的路由事件的處理的狀態，因為處理常式中加入[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的常見簽章或<xref:System.Windows.UIElement.AddHandler%2A>回應路由事件不會叫用其中的事件資料標示為已處理。 您必須瀏覽 新增處理常式的多花費一些心力`handledEventsToo`參數的版本 (<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>) 以便處理路由的事件，會標示為已處理先前參與者在事件路由。  
   

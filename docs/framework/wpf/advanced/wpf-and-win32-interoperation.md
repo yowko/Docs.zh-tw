@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: cbae3011634fb6c6b68e477a10931a1ef13c3f55
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: c9e94eef6caf5b4c9a64623d5c578af89acc616a
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610356"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859933"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 和 Win32 互通
 本主題概述如何交互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式碼。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，則重複使用該程式碼的一部分可能會更有效率。  
@@ -29,7 +29,7 @@ ms.locfileid: "67610356"
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF 交互操作專案  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 是 Managed 程式碼，但大部分現有 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式都是使用 Unmanaged [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 所撰寫。  您無法從真正的 Unmanaged 程式呼叫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 不過，藉由使用`/clr`選項與[!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)]編譯器，您可以建立混合 managed / unmanaged 的程式可以順暢地混合 managed 和 unmanaged 的 API 呼叫。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api 管理程式碼，但大部分現有[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]撰寫的程式非受控[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]。  您不能呼叫[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Api 從真正的 unmanaged 程式。 不過，藉由使用`/clr`選項與[!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)]編譯器，您可以建立混合 managed / unmanaged 的程式可以順暢地混合 managed 和 unmanaged 的 API 呼叫。  
   
  其中一個專案層級複雜在於您無法將 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 檔案編譯至 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 專案。  有數個專案部門技術可彌補這一點。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "67610356"
   
 <a name="hosting_an_hwnd"></a>   
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>在 WPF 中裝載 Microsoft Win32 視窗  
- 要裝載的索引鍵[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗內其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容<xref:System.Windows.Interop.HwndHost>類別。 此類別會將視窗包裝在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目中，而此項目可以新增至 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目樹狀結構。 <xref:System.Windows.Interop.HwndHost> 也支援[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，可讓您執行工作，例如處理程序所裝載之視窗的訊息。 基本程序如下：  
+ 要裝載的索引鍵[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗內其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容<xref:System.Windows.Interop.HwndHost>類別。 此類別會將視窗包裝在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目中，而此項目可以新增至 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目樹狀結構。 <xref:System.Windows.Interop.HwndHost> 也支援 Api，可讓您執行工作，例如處理程序所裝載之視窗的訊息。 基本程序如下：  
   
 1. 建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的項目樹狀結構 (可以透過程式碼或標記)。 在元素樹狀結構中尋找適當且允許點其中<xref:System.Windows.Interop.HwndHost>實作可以加入做為子項目。 在後續步驟中，這個項目稱為保留項目。  
   

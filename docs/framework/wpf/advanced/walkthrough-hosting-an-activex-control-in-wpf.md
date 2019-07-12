@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778375"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859942"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>逐步解說：將 ActiveX 控制項裝載在 WPF 中
-若要啟用改善的瀏覽器互動，您可以使用[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]控制在您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-應用程式。 本逐步解說示範您可以託管[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]上的控制項為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。
+若要啟用改善的瀏覽器互動，您可以使用 Microsoft ActiveX 控制項，在您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式。 本逐步解說示範您可以託管[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]上的控制項為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。
 
  這個逐步解說中所述的工作包括：
 
@@ -26,7 +26,7 @@ ms.locfileid: "67778375"
 
 - 裝載 WPF 頁面上的 ActiveX 控制項。
 
- 當您完成這個逐步解說中時，您將了解如何使用[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]控制項中您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式。
+ 當您完成這個逐步解說中時，您將了解如何使用 Microsoft ActiveX 控制項，在您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式。
 
 ## <a name="prerequisites"></a>必要條件
  您需要下列元件才能完成此逐步解說：
@@ -60,7 +60,7 @@ ms.locfileid: "67778375"
 9. 如果提示您重新命名所有參考時，請按一下**是**。
 
 ## <a name="creating-the-activex-control"></a>建立 ActiveX 控制項
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 會自動產生<xref:System.Windows.Forms.AxHost>包裝函式類別[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]控制當控制項加入至設計介面。 下列程序會建立名為 AxInterop.WMPLib.dll managed 組件。
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 會自動產生<xref:System.Windows.Forms.AxHost>Microsoft ActiveX 控制項時，控制項會加入至設計介面的包裝函式類別。 下列程序會建立名為 AxInterop.WMPLib.dll managed 組件。
 
 ### <a name="to-create-the-activex-control"></a>若要建立 ActiveX 控制項
 
@@ -76,7 +76,7 @@ ms.locfileid: "67778375"
 
 ### <a name="to-host-the-activex-control"></a>若要裝載 ActiveX 控制項
 
-1. 在 HostingAxInWpf 專案中加入所產生的參考[!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)]互通性組件。
+1. 在 HostingAxInWpf 專案中加入所產生的 ActiveX 互通性組件的參考。
 
      這個組件名為 AxInterop.WMPLib.dll，並已新增至 WmpAxLib 專案的偵錯資料夾中，當您匯入 Windows Media Player 控制項。
 

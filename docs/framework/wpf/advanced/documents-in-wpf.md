@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: b83d9c972dbdadb721bae8b7d616c94a0c1c831f
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 020ea101ae38b9be854398a55ddd31e67b9fda35
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804749"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859663"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的各種文件功能可以建立高精確度的內容，此種內容的設計會比在舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中更加容易存取與閱讀。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
@@ -59,7 +59,7 @@ ms.locfileid: "67804749"
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文件封裝  
- <xref:System.IO.Packaging> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]提供有效率的方法來組織應用程式資料、 文件內容和相關的資源，以供存取、 可攜性，以及輕鬆地散發至單一容器中。 ZIP 檔案是範例<xref:System.IO.Packaging.Package>可以當做單一單位保留多個物件的型別。 封裝[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]提供的預設<xref:System.IO.Packaging.ZipPackage>而設計的開放封裝慣例標準使用 XML 和 ZIP 檔案架構的實作。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 封裝 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 可讓您輕鬆地建立封裝，以及儲存和存取其中的物件。 中儲存的物件<xref:System.IO.Packaging.Package>指<xref:System.IO.Packaging.PackagePart>（「 組件 」）。 封裝也可以包含簽署的數位憑證，該憑證可用來識別組件的建立者，以及驗證封裝內容是否未遭修改。  封裝也包含<xref:System.IO.Packaging.PackageRelationship>功能，可讓其他資訊加入至封裝或與特定的組件相關聯，而不需要實際修改現有的組件的內容。  封裝服務也支援 [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)]。  
+ <xref:System.IO.Packaging> Api 提供有效率的方法來組織應用程式資料、 文件內容和相關的資源，以供存取、 可攜性，以及輕鬆地散發至單一容器中。 ZIP 檔案是範例<xref:System.IO.Packaging.Package>可以當做單一單位保留多個物件的型別。 封裝 Api，提供預設<xref:System.IO.Packaging.ZipPackage>而設計的開放封裝慣例標準使用 XML 和 ZIP 檔案架構的實作。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封裝 Api 會讓您輕鬆地建立封裝，以及儲存和存取其中的物件。 中儲存的物件<xref:System.IO.Packaging.Package>指<xref:System.IO.Packaging.PackagePart>（「 組件 」）。 封裝也可以包含簽署的數位憑證，該憑證可用來識別組件的建立者，以及驗證封裝內容是否未遭修改。  封裝也包含<xref:System.IO.Packaging.PackageRelationship>功能，可讓其他資訊加入至封裝或與特定的組件相關聯，而不需要實際修改現有的組件的內容。  封裝服務也支援 [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)]。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 封裝架構是下列幾個重要技術的基礎：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "67804749"
   
  封裝 Api，為基礎<xref:System.Windows.Xps.Packaging.XpsDocument>專為儲存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]修正內容的文件。           <xref:System.Windows.Xps.Packaging.XpsDocument>是獨立的文件，可以在檢視器 中顯示開啟<xref:System.Windows.Controls.DocumentViewer>控制項來列印多工緩衝處理，路由或輸出直接[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-相容的印表機。  
   
- 下列各節提供的其他資訊<xref:System.IO.Packaging.Package>並<xref:System.Windows.Xps.Packaging.XpsDocument>[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]隨附[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
+ 下列各節提供的其他資訊<xref:System.IO.Packaging.Package>並<xref:System.Windows.Xps.Packaging.XpsDocument>使用所提供的 Api [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>封裝元件  

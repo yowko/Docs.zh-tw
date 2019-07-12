@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: a1a3d422ea4d9766e6a9f8dda079c3739be4a626
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: b60b3964ff8e1b1f05b6c0820c63ec06d9ea0f4c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663669"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859660"
 ---
 # <a name="document-serialization-and-storage"></a>文件序列化與儲存
 
@@ -23,7 +23,7 @@ Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品�
 
 在理想情況下，與記憶體之間進行的文件序列化和還原序列化程序，對於應用程式而言是透明的。  應用程式會呼叫序列化程式的 "write" 方法來儲存文件，而還原序列化程式的 "read" 方法則會存取資料存放區並在記憶體中重新建立原始執行個體。  只要序列化和還原序列化程序會將文件重新建立成原始格式，資料是以哪種格式儲存對應用程式而言通常並不重要。
 
-應用程式通常會提供多種序列化選項，以供使用者將文件儲存到不同媒體或不同格式。  例如，應用程式可能會提供 [另存新檔] 選項，以將文件儲存至磁碟檔案、資料庫或 Web 服務。  同樣地，不同序列化程式可能會將文件儲存成不同格式，例如 HTML、RTF、XML、XPS 或其他協力廠商格式。  對應用程式而言，序列化定義了一個介面，可將每個特定序列化程式實作時的儲存媒體詳細資料加以隔離。  除了封裝儲存體詳細資料，.NET Framework 的優點<xref:System.Windows.Documents.Serialization>[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]提供數種重要的功能。
+應用程式通常會提供多種序列化選項，以供使用者將文件儲存到不同媒體或不同格式。  例如，應用程式可能會提供 [另存新檔] 選項，以將文件儲存至磁碟檔案、資料庫或 Web 服務。  同樣地，不同序列化程式可能會將文件儲存成不同格式，例如 HTML、RTF、XML、XPS 或其他協力廠商格式。  對應用程式而言，序列化定義了一個介面，可將每個特定序列化程式實作時的儲存媒體詳細資料加以隔離。  除了封裝儲存體詳細資料，.NET Framework 的優點<xref:System.Windows.Documents.Serialization>Api 提供數種重要的功能。
 
 ### <a name="features-of-net-framework-30-document-serializers"></a>.NET Framework 3.0 文件序列化程式的功能
 

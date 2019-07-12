@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: c68e6a69553f2cb14eb442c31e5138009f3c8411
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619437"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859725"
 ---
-# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>HOW TO：得知每天此時可否列印列印工作
+# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>作法：得知每天此時可否列印列印工作
 列印佇列並不一定可為一天 24 小時。 還可以設定讓它們無法使用在一天的特定時間的開始和結束時間屬性。 這項功能可用，例如，保留獨佔使用的特定部門下午 5 點後的印表機。 該部門會有不同的佇列服務的印表機，比其他部門使用。 其他部門的佇列會被設定為無法使用下午 5 點後，而佇列為偏好的部門可能被設定為隨時可供使用。  
   
  此外，列印工作本身也可以設定為只在指定的時間範圍內的可列印。  
   
- <xref:System.Printing.PrintQueue>並<xref:System.Printing.PrintSystemJobInfo>類別中公開[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供的方法從遠端檢查目前是否可以有指定的列印工作列印指定的佇列上。  
+ <xref:System.Printing.PrintQueue>和<xref:System.Printing.PrintSystemJobInfo>公開 Api 的 Microsoft.NET Framework 中的類別會提供方法來從遠端檢查目前是否可以有指定的列印工作列印指定的佇列上。  
   
 ## <a name="example"></a>範例  
  下列範例是可以診斷問題列印工作的範例。  
@@ -54,7 +54,7 @@ ms.locfileid: "64619437"
  兩個多載**ReportAvailabilityAtThisTime**方法除了之外完全相同的型別傳遞給它們，因此只有<xref:System.Printing.PrintQueue>版本顯示如下。  
   
 > [!NOTE]
->  方法是相同型別除外，這會引發的問題，此範例不會建立泛型方法的原因**ReportAvailabilityAtThisTime\<T >**。 原因是這種方法必須具有的類別只能**StartTimeOfDay**並**UntilTimeOfDay**只能限制為屬性的方法呼叫，但泛型方法單一類別和唯一類別同時<xref:System.Printing.PrintQueue>並<xref:System.Printing.PrintSystemJobInfo>在繼承樹狀結構是<xref:System.Printing.PrintSystemObject>具有任何這類屬性。  
+>  方法是相同型別除外，這會引發的問題，此範例不會建立泛型方法的原因**ReportAvailabilityAtThisTime\<T >** 。 原因是這種方法必須具有的類別只能**StartTimeOfDay**並**UntilTimeOfDay**只能限制為屬性的方法呼叫，但泛型方法單一類別和唯一類別同時<xref:System.Printing.PrintQueue>並<xref:System.Printing.PrintSystemJobInfo>在繼承樹狀結構是<xref:System.Printing.PrintSystemObject>具有任何這類屬性。  
   
  **ReportAvailabilityAtThisTime** （如下列程式碼範例所示） 的方法一開始會初始化<xref:System.Boolean>sentinel 變數`true`。 它會重設為`false`，如果不是可用的佇列。  
   

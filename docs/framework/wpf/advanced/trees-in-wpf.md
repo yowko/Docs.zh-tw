@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14ab9b5b36eee607679ee95423c2af912ed02310
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774994"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860008"
 ---
 # <a name="trees-in-wpf"></a>WPF 中的樹狀結構
 在許多技術中，元素和元件都會組織成樹狀結構，開發人員可直接管理樹狀結構中的物件節點來影響應用程式的轉譯或行為。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也會使用數個樹狀結構比喻來定義程式元素之間的關聯性。 在大部分情形下，WPF 開發人員在概念上思考物件樹狀結構比喻時，可以使用程式碼建立應用程式或使用 XAML 定義應用程式的部分，但將會呼叫特定的 API 或使用特定標記來進行這些作業，而不是使用某些一般的物件樹狀結構管理 API，就像您可能在 XML DOM 中使用的方式。 WPF 會公開兩個協助程式類別提供樹狀結構比喻檢視<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>。 WPF 文件中也會使用視覺化樹狀結構和邏輯樹狀結構等詞彙，因為這些相同的樹狀結構在了解某些主要的 WPF 功能時非常好用。 本主題定義代表什麼意義的視覺化樹狀結構和邏輯樹狀結構、 討論這類樹狀結構與整體的物件樹狀結構概念，並介紹<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>s。  
@@ -51,7 +51,7 @@ ms.locfileid: "61774994"
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>覆寫邏輯樹狀結構  
- 資深的控制項作者可藉由覆寫數個用來定義一般物件或內容模型如何在邏輯樹狀結構內加入或移除物件的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，來覆寫邏輯樹狀結構。 如需如何覆寫邏輯樹狀結構的範例，請參閱[覆寫邏輯樹狀結構](how-to-override-the-logical-tree.md)。  
+ 資深的控制項作者可以覆寫多個 Api，以定義一般物件或內容模型的新增或移除邏輯樹狀結構內的物件如何覆寫邏輯樹狀結構。 如需如何覆寫邏輯樹狀結構的範例，請參閱[覆寫邏輯樹狀結構](how-to-override-the-logical-tree.md)。  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>屬性值繼承  

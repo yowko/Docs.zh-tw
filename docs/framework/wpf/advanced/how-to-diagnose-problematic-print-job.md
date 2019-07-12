@@ -10,15 +10,15 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d64e77b7fc6862eead3cb7e791b3a8f68ac52713
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878213"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859738"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>HOW TO：診斷問題列印工作
-網路系統管理經常處理使用者對於列印工作的相關抱怨 (不會列印或列印緩慢)。 一組豐富的列印工作中公開的屬性[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一種方法來執行列印工作的快速遠端診斷。  
+網路系統管理經常處理使用者對於列印工作的相關抱怨 (不會列印或列印緩慢)。 一組豐富的公開 Api 的 Microsoft.NET Framework 中的列印工作屬性會提供方法來執行列印工作的快速遠端診斷。  
   
 ## <a name="example"></a>範例  
  建立這類公用程式的主要步驟如下所示。  

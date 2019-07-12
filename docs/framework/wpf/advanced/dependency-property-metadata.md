@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: a4b2edce76bc5ab97e644ec8dbdf045931e87786
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66628e8cc1e56bff2227721d6f6b3e511be7453e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663421"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860052"
 ---
 # <a name="dependency-property-metadata"></a>相依性屬性中繼資料
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統包含中繼資料報告系統，其針對屬性所報告的內容比透過反映或一般[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特性報告的內容還多。 相依性屬性的中繼資料也可由定義相依性屬性的類別唯一指派、在相依性屬性新增至不同類別時變更，以及由從定義的基底類別繼承相依性屬性的所有衍生類別明確覆寫。  
@@ -44,7 +44,7 @@ ms.locfileid: "64663421"
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>何時覆寫中繼資料及衍生類別  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統能夠變更相依性屬性的部分特性，而不需要重新實作整個屬性。 這是由於相依性屬性位於特定類型上，因此可藉由為相依性屬性建構不同的屬性中繼資料執行個體來達成。 請注意，大多數現有相依性屬性不是虛擬屬性，因此嚴格來說，要在繼承的類別上「重新實作」這些屬性，只能藉由鏡像處理現有成員來達成。  
   
- 如果您要嘗試為某個類型上的相依性屬性啟用的情節，無法藉由修改現有相依性屬性的特性來達成，則可能需要建立衍生類別，然後在該衍生類別上宣告自訂相依性屬性。 自訂相依性屬性的行為與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] 定義的相依性屬性完全相同。 如需自訂相依性屬性的詳細資訊，請參閱[自訂相依性屬性](custom-dependency-properties.md)。  
+ 如果您要嘗試為某個類型上的相依性屬性啟用的情節，無法藉由修改現有相依性屬性的特性來達成，則可能需要建立衍生類別，然後在該衍生類別上宣告自訂相依性屬性。 自訂相依性屬性的相同行為所定義的相依性屬性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Api。 如需自訂相依性屬性的詳細資訊，請參閱[自訂相依性屬性](custom-dependency-properties.md)。  
   
  您無法覆寫的相依性屬性有一個值得注意的特性，那就是它的實值型別。 如果您繼承的相依性屬性所具有的行為大致符合需求，但此相依性屬性需要不同的類型，就必須實作自訂相依性屬性，而且可能需要透過類型轉換或自訂類別上的其他實作連結屬性。 此外，您無法取代現有<xref:System.Windows.ValidateValueCallback>，因為此回呼位於註冊欄位本身並不在其中繼資料內。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "64663421"
 ### <a name="overriding-metadata"></a>覆寫中繼資料  
  覆寫中繼資料的目的，主要是讓您有機會變更各種中繼資料衍生的行為，這些行為會套用到類型上的相依性屬性。 [中繼資料](#dp_metadata_contents)一節會詳細說明原因。 如需詳細資訊，包括一些程式碼範例，請參閱[覆寫相依性屬性的中繼資料](how-to-override-metadata-for-a-dependency-property.md)。  
   
- 在註冊呼叫期間的相依性屬性可以提供屬性中繼資料 (<xref:System.Windows.DependencyProperty.Register%2A>)。 不過，在許多情況下，當您的類別繼承該相依性屬性時，您可能會想要為類別提供特定類型的中繼資料。 您可以藉由呼叫<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>方法。  例如，從[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，則<xref:System.Windows.FrameworkElement>類別是第一個註冊的型別<xref:System.Windows.UIElement.Focusable%2A>相依性屬性。 但是<xref:System.Windows.Controls.Control>類別會提供它自己的初始預設值，將它從變更之相依性屬性中繼資料覆寫`false`要`true`，並重複使用原始<xref:System.Windows.UIElement.Focusable%2A>實作。  
+ 在註冊呼叫期間的相依性屬性可以提供屬性中繼資料 (<xref:System.Windows.DependencyProperty.Register%2A>)。 不過，在許多情況下，當您的類別繼承該相依性屬性時，您可能會想要為類別提供特定類型的中繼資料。 您可以藉由呼叫<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>方法。  例如，從[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Api<xref:System.Windows.FrameworkElement>類別是第一個註冊的型別<xref:System.Windows.UIElement.Focusable%2A>相依性屬性。 但是<xref:System.Windows.Controls.Control>類別會提供它自己的初始預設值，將它從變更之相依性屬性中繼資料覆寫`false`要`true`，並重複使用原始<xref:System.Windows.UIElement.Focusable%2A>實作。  
   
  當您覆寫中繼資料時，不同的中繼資料特性會被合併或取代。  
   

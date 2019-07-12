@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c5547955a1d5d20938e3896406631da0fae0c5d
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981912"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860038"
 ---
 # <a name="property-value-inheritance"></a>屬性值繼承
 屬性值繼承是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的功能。 屬性值繼承可讓元素樹狀結構中的子元素，在將它設定於最接近之父元素中的任一處時，可從父元素中取得特殊屬性的值，並繼承該值。 父元素可能也會透過屬性值繼承來取得它的值，因此，系統有可能會不停地遞迴到頁面根元素。 屬性值繼承不是預設的屬性系統行為；屬性必須使用特殊的中繼資料值來建立，才能讓該屬性起始子元素上的屬性值繼承。  
@@ -22,7 +22,7 @@ ms.locfileid: "61981912"
   
 <a name="Practical_Applications_of_Property_Value_Inheritance"></a>   
 ## <a name="practical-applications-of-property-value-inheritance"></a>屬性值繼承的實際應用程式  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] 包含數個已啟用屬性繼承的屬性。 一般而言，適用於這些屬性的案例是它們所包含的屬性適合在每個頁面上只設定該屬性一次，但該屬性也是其中一個基底元素類別的成員，因此，也會存在於大多數的子元素中。 比方說，<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性會控制哪一個方向流動內容應該呈現，並在頁面上排列。 一般而言，您會想要以一致性方式在所有子元素中處理文字流動的概念。 如果使用者或環境動作基於某些因素而在元素樹狀結構的某些層級中重設流動方向，則通常應該全部重設。 當<xref:System.Windows.FrameworkElement.FlowDirection%2A>; 屬性進行繼承時，值需要只設定或重設一次在包含簡報所需的應用程式中的每一頁的項目樹狀結構的層級。 甚至連初始的預設值也將以這種方式繼承。 屬性值繼承模型仍可讓個別的元素在故意混合流動方向的罕見情況下重設值。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Api 包括數個已啟用屬性繼承的屬性。 一般而言，適用於這些屬性的案例是它們所包含的屬性適合在每個頁面上只設定該屬性一次，但該屬性也是其中一個基底元素類別的成員，因此，也會存在於大多數的子元素中。 比方說，<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性會控制哪一個方向流動內容應該呈現，並在頁面上排列。 一般而言，您會想要以一致性方式在所有子元素中處理文字流動的概念。 如果使用者或環境動作基於某些因素而在元素樹狀結構的某些層級中重設流動方向，則通常應該全部重設。 當<xref:System.Windows.FrameworkElement.FlowDirection%2A>; 屬性進行繼承時，值需要只設定或重設一次在包含簡報所需的應用程式中的每一頁的項目樹狀結構的層級。 甚至連初始的預設值也將以這種方式繼承。 屬性值繼承模型仍可讓個別的元素在故意混合流動方向的罕見情況下重設值。  
   
 <a name="Making_a_Custom_Property_Inheritable"></a>   
 ## <a name="making-a-custom-property-inheritable"></a>讓自訂屬性成為可繼承  

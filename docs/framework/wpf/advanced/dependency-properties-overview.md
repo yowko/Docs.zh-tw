@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052933"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860166"
 ---
 # <a name="dependency-properties-overview"></a>相依性屬性概觀
 
@@ -78,7 +78,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-您也可以直接呼叫屬性系統 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A>。 如果您使用現有的屬性，這通常非必要 (包裝函式更方便，也更好公開開發人員工具屬性)，但某些情況下直接呼叫 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 更適當。
+您也可以呼叫屬性系統 Api<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>直接。 如果您使用現有的屬性 （包裝函式會更方便，，和開發人員工具提供更好公開），但直接呼叫 Api 是屬性的適用於某些情況下，這是屬性的不通常需要。
 
 屬性也可以在 XAML 中設定，稍後再於程式碼中透過程式碼後置存取。 如需詳細資訊，請參閱 [WPF 中的程式碼後置和 XAML](code-behind-and-xaml-in-wpf.md)。
 
@@ -168,7 +168,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。
 
 ### <a name="wpf-designer-integration"></a>WPF 設計工具整合
-有實作為相依性屬性之屬性的自訂控制項會獲得適當的 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 支援。 其中一例就是能夠使用 [屬性] 視窗編輯直接和附加的相依性屬性。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。
+有實作為相依性屬性之屬性的自訂控制項會獲得適當的 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 支援。 其中一例就是能夠使用 [屬性]  視窗編輯直接和附加的相依性屬性。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。
 
 ## <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 當您取得相依性屬性的值時，您就可能取得一個值，此值原透過參與 WPF 屬性系統的任何其他屬性型輸入來設定在該屬性上。 相依性屬性值有優先順序，所以屬性如何取得其值的各種案例才能以可預測的方式互動。

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a067be444624ecffd8ab150f20740814dd9ee341
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762332"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859972"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概觀 (WPF)
 本主題說明 XAML 語言的功能，並示範如何使用 XAML 撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式。 本主題特別針對以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的 XAML 進行描述。 就語言概念而言，XAML 本身涵蓋的範圍比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 還要廣。  
@@ -301,7 +301,7 @@ ms.locfileid: "67762332"
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>基底型別和 XAML  
- 基礎 WPF XAML 與它的 XAML 命名空間是型別的集合，這些型別除了 XAML 的標記元素之外，還會對應於 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 然而，並不是所有的類別都可以對應到元素。 抽象類別，例如<xref:System.Windows.Controls.Primitives.ButtonBase>，以及某些非抽象的基底類別中的繼承[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]物件模型。 基底類別 (包含抽象類別) 對於 XAML 開發而言仍然很重要，因為每個具象的 XAML 元素會繼承階層架構中某些基底類別的成員。 通常這些成員會包含可以設定為元素屬性 (Attribute) 的屬性 (Property)，或是包含可以處理的事件。 <xref:System.Windows.FrameworkElement> 是具象基底[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]類別的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]WPF 架構層級。 設計時[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中，您會使用各種圖案、 面板、 裝飾項目，或控制項類別，這些都是衍生自<xref:System.Windows.FrameworkElement>。 相關的基底類別<xref:System.Windows.FrameworkContentElement>，也支援流程配置展示方面運作的文件導向項目使用[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]刻意鏡射[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]在<xref:System.Windows.FrameworkElement>。 結合元素層級的屬性 (Attribute) 和 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件模型，提供您可以在大部分具象 XAML 元素上設定的通用屬性 (Property)，而不用在意特定的 XAML 元素和其基礎型別。  
+ 基礎 WPF XAML 與它的 XAML 命名空間是型別的集合，這些型別除了 XAML 的標記元素之外，還會對應於 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 然而，並不是所有的類別都可以對應到元素。 抽象類別，例如<xref:System.Windows.Controls.Primitives.ButtonBase>，以及某些非抽象的基底類別中的繼承[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]物件模型。 基底類別 (包含抽象類別) 對於 XAML 開發而言仍然很重要，因為每個具象的 XAML 元素會繼承階層架構中某些基底類別的成員。 通常這些成員會包含可以設定為元素屬性 (Attribute) 的屬性 (Property)，或是包含可以處理的事件。 <xref:System.Windows.FrameworkElement> 是具象基底[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]類別的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]WPF 架構層級。 設計時[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中，您會使用各種圖案、 面板、 裝飾項目，或控制項類別，這些都是衍生自<xref:System.Windows.FrameworkElement>。 相關的基底類別<xref:System.Windows.FrameworkContentElement>，也支援流程配置展示方面使用刻意鏡像中的 Api 的 Api 文件導向的項目可<xref:System.Windows.FrameworkElement>。 結合元素層級的屬性 (Attribute) 和 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件模型，提供您可以在大部分具象 XAML 元素上設定的通用屬性 (Property)，而不用在意特定的 XAML 元素和其基礎型別。  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>XAML 安全性  

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: a0cb1e0b569fb69adf1e474ca3666d5e387274ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a5b67edeea46a29e5c2fc3aea86d34fa4f5e7a
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770678"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860066"
 ---
 # <a name="panel-how-to-topics"></a>Panel HOW TO 主題
-在本節中的主題描述如何使用<xref:System.Windows.Controls.Panel>項目和相關[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
+在本節中的主題描述如何使用<xref:System.Windows.Controls.Panel>項目和相關的 Api。  
   
 ## <a name="in-this-section"></a>本節內容  
  [建立自訂面板元素](how-to-create-a-custom-panel-element.md)  

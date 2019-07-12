@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: b0032492a9403660e91980f5e968b519a4306589
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 4f8ee4b31c135595770338831c23d8a0f419e8cd
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610487"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857002"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>初始化物件樹狀結構以外的物件項目
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 初始化的某些層面會延後處理，因為這些處理通常需要將該項目連接到邏輯樹狀結構或視覺化樹狀結構。 本主題說明為了初始化未連接到任一樹狀結構的項目所需的步驟。  
@@ -33,7 +33,7 @@ ms.locfileid: "67610487"
  如果項目會設定屬性，在<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>衍生類別，則您可以呼叫的類別版本<xref:System.Windows.FrameworkElement.BeginInit%2A>並<xref:System.Windows.FrameworkElement.EndInit%2A>而不是轉換至<xref:System.ComponentModel.ISupportInitialize>。  
   
 ### <a name="sample-code"></a>程式碼範例  
- 下列範例會使用轉譯的主控台應用程式的範例程式碼[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]並<xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType>鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案，以說明的位置正確<xref:System.Windows.FrameworkElement.BeginInit%2A>和<xref:System.Windows.FrameworkElement.EndInit%2A>調整其他 API 呼叫會影響呈現的屬性。  
+ 下列範例會使用轉譯 Api 的主控台應用程式的範例程式碼並<xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType>鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案，以說明的位置正確<xref:System.Windows.FrameworkElement.BeginInit%2A>和<xref:System.Windows.FrameworkElement.EndInit%2A>調整屬性的其他 API 呼叫周圍，會影響轉譯。  
   
  此範例只會說明 main 函式。 `Rasterize` 和 `Save` 函式 (未顯示) 是負責影像處理和 IO 的公用程式函式。  
   

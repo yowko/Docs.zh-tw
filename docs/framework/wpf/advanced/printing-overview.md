@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 2090c58369ed3c7bda5df1342291001d9550d48d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: acfc252708bf8be7abacb1adc2968122501315a0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610462"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860204"
 ---
 # <a name="printing-overview"></a>列印概觀
 使用 Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應用程式開發人員有新豐富的列印和列印系統管理 Api。 藉由 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，某些列印系統增強功能也可供建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的開發人員和使用 Unmanaged 程式碼的開發人員使用。 這項新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 檔案格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 列印路徑。  
@@ -75,7 +75,7 @@ ms.locfileid: "67610462"
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>控制項提供的單一進入點[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，設定及 XPS 作業提交。 如需如何具現化及使用控制項的相關資訊，請參閱[叫用列印對話方塊](how-to-invoke-a-print-dialog.md)。  
   
 ### <a name="advanced-xps-printing"></a>進階的 XPS 列印  
- 若要存取一組完整的 XPS 功能，必須使用進階的列印 API。 以下更加詳細地描述幾個相關的 API。 如需完整清單的 XPS 列印路徑[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，請參閱 <<c2> <xref:System.Windows.Xps> 和<xref:System.Printing>命名空間的參考。  
+ 若要存取一組完整的 XPS 功能，必須使用進階的列印 API。 以下更加詳細地描述幾個相關的 API。 XPS 列印路徑 Api 的完整清單，請參閱 <<c0> <xref:System.Windows.Xps> 和<xref:System.Printing>命名空間的參考。  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket 和 PrintCapabilities  
  <xref:System.Printing.PrintTicket>和<xref:System.Printing.PrintCapabilities>類別是進階的 XPS 功能的基礎。 這兩種類型的物件都是列印導向功能的 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 格式化結構，例如定序、雙面列印、裝訂等等。列印的結構描述會定義這些結構。 <xref:System.Printing.PrintTicket> 會指示印表機該如何處理列印工作。 <xref:System.Printing.PrintCapabilities> 類別會定義印表機的功能。 藉由查詢印表機的功能，可以建立 <xref:System.Printing.PrintTicket> 來完整利用印表機支援的功能。 同樣地，您也可避免不支援的功能。  
@@ -87,7 +87,7 @@ ms.locfileid: "67610462"
  [!code-vb[xpscreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
   
 #### <a name="printserver-and-printqueue"></a>PrintServer 和 PrintQueue  
- <xref:System.Printing.PrintServer> 類別代表網路列印伺服器，且 <xref:System.Printing.PrintQueue> 類別代表印表機以及相關聯的輸出工作佇列。 同時，[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 允許伺服器列印工作的進階管理。 <xref:System.Printing.PrintServer> 或其中一個衍生的類別，會用來管理 <xref:System.Printing.PrintQueue>。 <xref:System.Printing.PrintQueue.AddJob%2A> 方法會用來將新的列印工作插入佇列。  
+ <xref:System.Printing.PrintServer> 類別代表網路列印伺服器，且 <xref:System.Printing.PrintQueue> 類別代表印表機以及相關聯的輸出工作佇列。 在一起，這些 Api 可讓進階的管理伺服器的列印工作。 <xref:System.Printing.PrintServer> 或其中一個衍生的類別，會用來管理 <xref:System.Printing.PrintQueue>。 <xref:System.Printing.PrintQueue.AddJob%2A> 方法會用來將新的列印工作插入佇列。  
   
  下列範例示範如何建立 <xref:System.Printing.LocalPrintServer> 及使用程式碼存取其預設的 <xref:System.Printing.PrintQueue>。  
   
