@@ -2,12 +2,12 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744268"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859539"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -98,7 +98,6 @@ ms.locfileid: "67744268"
 - [實作介面中宣告的事件](../programming-guide/events/how-to-implement-interface-events.md)。
 - [在程式碼發佈事件時符合 .NET Framework 方針](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。
 - [從衍生類別引發在基底類別中定義的事件](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)。
-- [在字典中儲存事件執行個體](../programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)。
 - [實作自訂事件存取子](../programming-guide/events/how-to-implement-custom-event-accessors.md)。
 
 ## <a name="linq-practices"></a>LINQ 做法
