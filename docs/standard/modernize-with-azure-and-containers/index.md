@@ -2,12 +2,12 @@
 title: 現代化現有.NET 應用程式與 Azure 的雲端和 Windows 容器 （第 2 版）
 description: 了解如何隨即轉移和現代化現有應用程式到 Azure 雲端及與本電子書的容器。
 ms.date: 04/28/2018
-ms.openlocfilehash: 79e06c64867a7e1bb6c5d7da718886a713cb3c4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870603"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 （第 2 版）
 
@@ -98,7 +98,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 | **優點**|
 | <li>任何重新架構，任何新的程式碼 <li> 以最少心力快速移轉 <li> Azure 中支援的最普及選項 <li> 保證基本可用性 <li> 移至雲端後更容易現代化 | <li> 任何重新架構 <li> 最少的程式碼/組態變更 <li> 因容器而獲得改善的部署及 DevOps 發行靈活度 <li> 增加密度並降低部署成本 <li> 應用程式及相依性的可攜性 <li> 裝載目標的彈性：PaaS 方法或 IaaS | <li> 架構設計人員的雲端，您會獲得最佳的優點從雲端，但需要新的程式碼 <li> 微服務雲端原生方法 <li> 現代任務關鍵性應用程式，雲端彈性高度可擴充 <li> 完整受控的服務 <li> 經最佳化以調整規模 <li> 為子系統的自主靈活度最佳化 <li> 建基於部署及 DevOps |
 | **挑戰** |
-| <li> 除了轉入營業費用或關閉資料中心之外，雲端價值較低 <li> 什麼被管理：沒有 OS 或中介軟體修補;可能會使用基礎結構解決方案，例如 Terraform、 Spinnaker 或 Puppet | <li> 容器化是額外的步驟中學習曲線，開發人員和 IT 作業 <li> DevOps 與 CI/CD 管線通常是 '必須' 這種方法。 如果沒有目前存在於組織的文化特性中，它可能是其他的挑戰| <li> 針對雲端原生應用程式和微服務架構需要彌補重新架構，而且通常需要重大的程式碼重構或重寫現代化時 （增加的時間及開支） <li> DevOps 與 CI/CD 管線通常是 '必須' 這種方法。 如果沒有目前存在於組織的文化特性中，它可能是其他的挑戰|
+| <li> 除了轉入營業費用或關閉資料中心之外，雲端價值較低 <li> 什麼被管理：沒有 OS 或中介軟體修補;可能會使用基礎結構解決方案，例如 Terraform、 Spinnaker 或 Puppet | <li> 容器化是額外的步驟中學習曲線，開發人員和 IT 作業 <li> DevOps 與 CI/CD 管線通常是 '必須' 這種方法。 如果沒有目前存在於組織的文化特性中，它可能是其他的挑戰| <li> 針對雲端原生應用程式和微服務架構需要彌補重新架構，而且通常需要重大的程式碼重構或重寫現代化時 （增加的時間及開支）|
 > **表 1-1。** 現有 .NET 應用程式及服務現代化路徑的優點與挑戰
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>依成熟度等級分階的主要技術及架構
@@ -201,4 +201,4 @@ GitHub 上的 [eShopModernizing](https://github.com/dotnet-architecture/eShopMod
 本指南是撰寫可協助您了解改善及現代化現有.NET web 應用程式的選項。 本指南與相關範例應用程式將會不斷更新。 您的意見反應為 褖畫惎 ！ 如果您對如何改進本指南有任何意見，請傳送到 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)。
 
 >[!div class="step-by-step"]
->[下一步](lift-and-shift-existing-apps-azure-iaas.md)
+>[下一個](lift-and-shift-existing-apps-azure-iaas.md)
