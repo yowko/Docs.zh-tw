@@ -2,12 +2,12 @@
 title: 當其中一項工作完成時，取消剩餘的非同步工作 (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: baf757f7f7a71528dd5dc36b0f807eb452577a38
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 9b968ec902d9653caa410e917af40c8a521e55b4
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298665"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859612"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>當其中一項工作完成時，取消剩餘的非同步工作 (C#)
 搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法與 <xref:System.Threading.CancellationToken>，即可在其中一個工作完成時取消所有剩餘的工作。 `WhenAny` 方法會接受本身為一組工作的引數。 這個方法會啟動所有工作，並傳回單一工作。 集合中的任何工作完成時，單一工作即完成。  
@@ -22,11 +22,11 @@ ms.locfileid: "59298665"
   
 1. 解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
-2. 在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
+2. 在功能表列上，依序選擇 [檔案]  、[開啟舊檔]  及 [專案/方案]  。  
   
-3. 在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。  
+3. 在 [開啟專案]  對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。  
   
-4. 在方案總管中，開啟 **CancelAfterOneTask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
+4. 在方案總管  中，開啟 **CancelAfterOneTask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]  。  
   
 5. 選擇 F5 鍵以執行專案。  
   
@@ -37,14 +37,14 @@ ms.locfileid: "59298665"
  如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。  
   
 ## <a name="building-the-example"></a>建置範例  
- 本主題中的範例會新增至[取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 中所開發的專案來取消工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。  
+ 本主題中的範例會新增至[取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 中所開發的專案來取消工作清單。 雖然未明確地使用 [取消]  按鈕，但是此範例會使用相同的 UI。  
   
- 若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks] 作為 [啟始專案]。 將本主題中的變更新增至該專案。  
+ 若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks]  作為 [啟始專案]  。 將本主題中的變更新增至該專案。  
   
  在 **CancelAListOfTasks** 專案的 MainWindow.xaml.cs 檔案中，將每個網站的處理步驟從 `AccessTheWebAsync` 中的迴圈移至下列非同步方法即可開始轉換。  
   
 ```csharp  
-/ ***Bundle the processing steps for a website into one async method.  
+// ***Bundle the processing steps for a website into one async method.  
 async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)  
 {  
     // GetAsync returns a Task<HttpResponseMessage>.   

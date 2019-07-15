@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424037"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661582"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67424037"
 「簡單型別」  是 C# 所提供的一組預先定義結構型別，其中包含下列型別：
 
 - [整數型別](../builtin-types/integral-numeric-types.md)：整數數字型別和 [char](char.md) 型別
-- [浮點類型](floating-point-types-table.md)
+- [浮點類型](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
 透過關鍵字即可識別簡單型別，但這些關鍵字只是 <xref:System> 命名空間中預先定義之結構型別的別名。 例如，[int](../builtin-types/integral-numeric-types.md) 是 <xref:System.Int32?displayProperty=nameWithType> 的別名。 如需完整的別名清單，請參閱[內建型別表](built-in-types-table.md)。
@@ -93,7 +93,7 @@ int myInt = 0;
 如果要使用使用者定義型別，請使用 [new](../operators/new-operator.md) 來叫用無參數建構函式。 例如，下列陳述式會叫用 `Point` 結構的無參數建構函式：
 
 ```csharp
-Point p = new Point(); // Invoke parameterless constructor for the struct.
+var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 在此呼叫之後，會視為已明確指派結構，也就是說，其所有成員都已初始化為其預設值。

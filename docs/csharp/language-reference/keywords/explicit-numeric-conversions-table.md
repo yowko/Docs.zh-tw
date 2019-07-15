@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d1533872850a953a38800aaeac85b9e6e565d374
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424202"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661373"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>明確數值轉換表 (C# 參考)
 
@@ -32,9 +32,9 @@ ms.locfileid: "67424202"
 |[long](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong` 或 `char`|  
 |[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long` 或 `char`|  
 |[char](char.md)|`sbyte`、 `byte`或 `short`|  
-|[float](float.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char` 或 `decimal`。|  
-|[double](double.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `decimal`。|  
-|[decimal](decimal.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `double`。|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char` 或 `decimal`。|  
+|[double](../builtin-types/floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `decimal`。|  
+|[decimal](../builtin-types/floating-point-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `double`。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -70,6 +70,6 @@ ms.locfileid: "67424202"
 - [轉換和類型轉換](../../programming-guide/types/casting-and-type-conversions.md)
 - [() 運算子](../operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [整數型別](../builtin-types/integral-numeric-types.md)
-- [浮點數類型表](floating-point-types-table.md)
+- [浮點數類型表](../builtin-types/floating-point-numeric-types.md)
 - [內建型別表](built-in-types-table.md)
 - [隱含數值轉換表](implicit-numeric-conversions-table.md)

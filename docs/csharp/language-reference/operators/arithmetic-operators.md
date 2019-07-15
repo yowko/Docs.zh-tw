@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 4108583a5f97d1349fb54c335d55252352ea4883
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610000"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661539"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術運算子 (C# 參考)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67610000"
 - 一元 [`++` (遞增)](#increment-operator-)、[`--` (遞減)](#decrement-operator---)、[`+` (加號)](#unary-plus-and-minus-operators) 和 [`-` (減號)](#unary-plus-and-minus-operators) 運算子
 - 二元 [`*` (乘法)](#multiplication-operator-)、[`/` (除法)](#division-operator-)、[`%` (餘數)](#remainder-operator-)、[`+` (加法)](#addition-operator-) 和 [`-` (減法)](#subtraction-operator--) 運算子
 
-這些運算子可支援所有[整數](../builtin-types/integral-numeric-types.md)和[浮點](../keywords/floating-point-types-table.md)數字型別。
+這些運算子可支援所有[整數](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數字型別。
 
 ## <a name="increment-operator-"></a>遞增運算子 ++
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 98829f30c2c25c0710cf3fe044359d3c7538fe76
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424046"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859565"
 ---
 # <a name="value-types-table-c-reference"></a>實值型別表 (C# 參考)
 
@@ -21,21 +21,20 @@ ms.locfileid: "67424046"
 |值類型|分類|類型後置詞|
 |----------------|--------------|-----------------|
 |[bool](bool.md)|Boolean||
-|[byte](../builtin-types/integral-numeric-types.md)|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)||
+|`byte`|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)||
 |[char](char.md)|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)
-)||
-|[decimal](decimal.md)|數值、[浮點數](floating-point-types-table.md)|M 或 m|
-|[double](double.md)|數值、[浮點數](floating-point-types-table.md)|D 或 d|
+|`decimal`|數值、[浮點數](../builtin-types/floating-point-numeric-types.md)|M 或 m|
+|`double`|數值、[浮點數](../builtin-types/floating-point-numeric-types.md)|D 或 d|
 |[enum](enum.md)|列舉||
-|[float](float.md)|數值、[浮點數](floating-point-types-table.md)|F 或 f|
-|[int](../builtin-types/integral-numeric-types.md)|帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)||
-|[long](../builtin-types/integral-numeric-types.md)|帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|L 或 l|
-|[sbyte](../builtin-types/integral-numeric-types.md)|帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)||
-|[short](../builtin-types/integral-numeric-types.md)|帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)||
+|`float`|數值、[浮點數](../builtin-types/floating-point-numeric-types.md)|F 或 f|
+|`int`|帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)||
+|`long`|帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|L 或 l|
+|`sbyte`|帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)||
+|`short`|帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)||
 |[struct](struct.md)|使用者定義結構||
-|[uint](../builtin-types/integral-numeric-types.md)|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|U 或 u|
-|[ulong](../builtin-types/integral-numeric-types.md)|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|UL、Ul、uL、ul、LU、Lu、lU 或 lu|
-|[ushort](../builtin-types/integral-numeric-types.md)|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)||
+|`uint`|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|U 或 u|
+|`ulong`|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|UL、Ul、uL、ul、LU、Lu、lU 或 lu|
+|`ushort`|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)||
 
 ## <a name="remarks"></a>備註
 

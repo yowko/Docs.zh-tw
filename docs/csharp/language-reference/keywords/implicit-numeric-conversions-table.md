@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 516505ccacfd2a8a5c275b0de033e1316fa06d3a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424171"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661323"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>隱含數值轉換表 (C# 參考)
 
@@ -30,11 +30,11 @@ ms.locfileid: "67424171"
 |[uint](../builtin-types/integral-numeric-types.md)|`long`、`ulong`、`float`、`double` 或 `decimal`|  
 |[long](../builtin-types/integral-numeric-types.md)|`float`、 `double`或 `decimal`|  
 |[ulong](../builtin-types/integral-numeric-types.md)|`float`、 `double`或 `decimal`|  
-|[float](float.md)|`double`|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`double`|  
   
 ## <a name="remarks"></a>備註  
 
-- 任何[整數型別](../builtin-types/integral-numeric-types.md)都會隱含轉換為任何[浮點類型](floating-point-types-table.md)。
+- 任何[整數型別](../builtin-types/integral-numeric-types.md)都會隱含轉換為任何[浮點類型](../builtin-types/floating-point-numeric-types.md)。
 
 - 從 `int`、`uint`、`long` 或 `ulong` 轉換為 `float`，以及從 `long` 或 `ulong` 轉換為 `double` 時，可能會遺失精確度，但不會遺失大小。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67424171"
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [整數型別](../builtin-types/integral-numeric-types.md)
-- [浮點數類型表](floating-point-types-table.md)
+- [浮點數類型表](../builtin-types/floating-point-numeric-types.md)
 - [內建型別表](built-in-types-table.md)
 - [明確數值轉換表](explicit-numeric-conversions-table.md)
 - [轉換和類型轉換](../../programming-guide/types/casting-and-type-conversions.md)

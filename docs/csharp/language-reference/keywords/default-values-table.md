@@ -12,12 +12,12 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], parameterless constructor
 - types [C#], parameterless constructor return values
-ms.openlocfilehash: dfab5107d4a0ad14c3ffbfc6a5f3c4317b44d17c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424226"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661406"
 ---
 # <a name="default-values-table-c-reference"></a>預設值表 (C# 參考)
 
@@ -28,10 +28,10 @@ ms.locfileid: "67424226"
 |[bool](bool.md)|`false`|
 |[byte](../builtin-types/integral-numeric-types.md)|0|
 |[char](char.md)|'\0'|
-|[decimal](decimal.md)|0M|
-|[double](double.md)|0.0D|
+|[decimal](../builtin-types/floating-point-numeric-types.md)|0M|
+|[double](../builtin-types/floating-point-numeric-types.md)|0.0D|
 |[enum](enum.md)|這個值是由運算式 `(E)0` 所產生，其中 `E` 是列舉識別碼。|
-|[float](float.md)|0.0F|
+|[float](../builtin-types/floating-point-numeric-types.md)|0.0F|
 |[int](../builtin-types/integral-numeric-types.md)|0|
 |[long](../builtin-types/integral-numeric-types.md)|0L|
 |[sbyte](../builtin-types/integral-numeric-types.md)|0|
