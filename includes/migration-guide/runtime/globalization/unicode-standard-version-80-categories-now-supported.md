@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: efa0efaf40e2e432d477f1659d7bde3abc98241d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 480cbdecd681408a7e1d6fa366e3f1a4b131ab42
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236018"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857601"
 ---
 ### <a name="unicode-standard-version-80-categories-now-supported"></a>現在支援 Unicode 標準 8.0 版分類
 
@@ -16,3 +16,4 @@ ms.locfileid: "59236018"
 |版本|4.6.2|
 |類型|執行階段|
 |受影響的 API|<ul><li><xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType></li></ul>|
+

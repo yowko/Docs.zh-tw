@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1148d040aa3b292d5c37eb50224413b6ddd202e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c4b293cf7db3762831be7f3a7a355748ff5758c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803528"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858985"
 ---
 ### <a name="servicebase-doesnt-propagate-onstart-exceptions"></a>ServiceBase 不會傳播 OnStart 例外狀況
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803528"
 |版本|4.7.1|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase)?displayProperty=nameWithType></li><li><xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase[])?displayProperty=nameWithType></li></ul>|
+

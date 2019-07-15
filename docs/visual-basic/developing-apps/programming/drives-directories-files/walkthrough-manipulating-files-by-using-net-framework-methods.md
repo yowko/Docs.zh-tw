@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345270"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783206"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>逐步解說：使用 .NET Framework 方法管理檔案 (Visual Basic)
 本逐步解說示範如何使用 <xref:System.IO.StreamReader> 類別開啟和讀取檔案、檢查是否正在存取檔案、在 <xref:System.IO.StreamReader> 類別執行個體讀取的檔案內搜尋字串，並使用 <xref:System.IO.StreamWriter> 類別寫入檔案。  
@@ -30,30 +30,30 @@ ms.locfileid: "59345270"
 ## <a name="creating-the-application"></a>建立應用程式  
  若要啟動 Visual Studio 並開始專案，您可以建立表單，以供使用者寫入至指定的檔案。  
   
-#### <a name="to-create-the-project"></a>若要建立專案  
+### <a name="to-create-the-project"></a>若要建立專案  
   
-1. 在 [檔案] 功能表上，選取 [新增專案]。  
+1. 在 [檔案] 功能表上，選取 [新增專案]。    
   
-2. 按一下 [新增專案] 窗格的 [Windows 應用程式]。  
+2. 按一下 [新增專案] 窗格的 [Windows 應用程式]。    
   
-3. 在 [名稱] 方塊中，輸入 `MyDiary` 並按一下 [確定]。  
+3. 在 [名稱] 方塊中，輸入 `MyDiary` 並按一下 [確定]。    
   
-     Visual Studio 即會將專案新增至 [方案總管]，並開啟 [Windows Form 設計工具]。  
+     Visual Studio 即會將專案新增至 [方案總管]  ，並開啟 [Windows Form 設計工具]  。  
   
 4. 將下表的控制項新增至表單，並設定其屬性的對應值。  
   
-|**Object**|**屬性**|**值**|  
+|**物件**|**屬性**|**值**|  
 |---|---|---|   
 |<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`Submit`<br /><br /> **提交項目**|  
 |<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`Clear`<br /><br /> **清除項目**|  
 |<xref:System.Windows.Forms.TextBox>|**名稱**<br /><br /> **Text**<br /><br /> **多行**|`Entry`<br /><br /> **請輸入某些內容。**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>寫入檔案  
- 若要新增透過應用程式寫入檔案的功能，請使用 <xref:System.IO.StreamWriter> 類別。 <xref:System.IO.StreamWriter> 是專為以特定的編碼方式輸出字元而量身打造，而 <xref:System.IO.Stream> 類別則是針對位元組輸入和輸出而設計。 使用 <xref:System.IO.StreamWriter> 將資訊行寫入標準文字檔案。 如需 <xref:System.IO.StreamWriter> 類別的詳細資訊，請參閱 <xref:System.IO.StreamWriter>。  
+ 若要新增透過應用程式寫入檔案的功能，請使用 <xref:System.IO.StreamWriter> 類別。 <xref:System.IO.StreamWriter> 是專為以特定的編碼方式輸出字元而量身打造，而<xref:System.IO.Stream> 類別則是針對位元組輸入和輸出而設計。 使用 <xref:System.IO.StreamWriter> 將資訊行寫入標準文字檔案。 如需 <xref:System.IO.StreamWriter> 類別的詳細資訊，請參閱 <xref:System.IO.StreamWriter>。  
   
-#### <a name="to-add-writing-functionality"></a>若要新增寫入功能  
+### <a name="to-add-writing-functionality"></a>若要新增寫入功能  
   
-1. 從 [檢視] 功能表上，選擇 [程式碼] 以開啟程式碼編輯器。  
+1. 從 [檢視] 功能表上，選擇 [程式碼] 以開啟程式碼編輯器。    
   
 2. 由於應用程式會參考 <xref:System.IO> 命名空間，因此請在表單類別宣告開始之前 (其會開始 `Public Class Form1`)，於程式碼開頭加入下列陳述式。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59345270"
   
      在寫入檔案之前，您必須建立 <xref:System.IO.StreamWriter> 類別的執行個體。  
   
-3. 從 [檢視] 功能表上，選擇 [設計工具] 以返回 Windows Forms 設計工具。 按兩下 `Submit` 按鈕，建立該按鈕的 <xref:System.Windows.Forms.Control.Click> 事件處理常式，然後加入下列程式碼。  
+3. 從 [檢視] 功能表上，選擇 [設計工具] 以返回 Windows Forms 設計工具。    按兩下 `Submit` 按鈕，建立該按鈕的 <xref:System.Windows.Forms.Control.Click> 事件處理常式，然後加入下列程式碼。  
   
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]  
   
@@ -85,32 +85,32 @@ ms.locfileid: "59345270"
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]  
   
 ## <a name="adding-display-features-to-the-diary"></a>新增日記的顯示功能  
- 在本節中，您會新增功能以顯示 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中的最新項目。 您也可以新增 <xref:System.Windows.Forms.ComboBox> 以顯示各種項目，使用者可以從中選取要在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中顯示的項目。 <xref:System.IO.StreamReader> 類別的執行個體會讀取 `MyDiary.txt`。 像 <xref:System.IO.StreamWriter> 類別一樣，<xref:System.IO.StreamReader> 適用於文字檔案。  
+ 在本節中，您會新增功能以顯示 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中的最新項目。 您也可以加入 <xref:System.Windows.Forms.ComboBox> 以顯示各種項目，使用者可以從中選取要在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中顯示的項目。 <xref:System.IO.StreamReader> 類別的執行個體會讀取 `MyDiary.txt`。 像 <xref:System.IO.StreamWriter> 類別一樣，<xref:System.IO.StreamReader> 適用於文字檔案。  
   
  在本節逐步解說中，請將下表的控制項新增至表單，並設定其屬性的對應值。  
   
 |控制項|屬性|值|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.TextBox>|**名稱**<br /><br /> **Visible**<br /><br /> **大小**<br /><br /> **多行**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
+|<xref:System.Windows.Forms.TextBox>|**名稱**<br /><br /> **可見**<br /><br /> **Size**<br /><br /> **多行**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
 |<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`Display`<br /><br /> **顯示**|  
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`GetEntries`<br /><br /> **取得項目**|  
+|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **文字**|`GetEntries`<br /><br /> **取得項目**|  
 |<xref:System.Windows.Forms.ComboBox>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`PickEntries`<br /><br /> **選取項目**<br /><br /> `False`|  
   
-#### <a name="to-populate-the-combo-box"></a>若要填入下拉式方塊  
+### <a name="to-populate-the-combo-box"></a>若要填入下拉式方塊  
   
 1. 系統會使用 `PickEntries`<xref:System.Windows.Forms.ComboBox> 來顯示使用者提交每個項目的日期，因此使用者可以選取特定日期的項目。 對 `GetEntries` 按鈕建立 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼。  
   
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]  
   
-2. 若要測試您的程式碼，請按 F5 以編譯應用程式，然後按一下 [取得項目]。 在 <xref:System.Windows.Forms.ComboBox> 中按一下下拉式箭號以顯示項目日期。  
+2. 若要測試您的程式碼，請按 F5 以編譯應用程式，然後按一下 [取得項目]。  在 <xref:System.Windows.Forms.ComboBox> 中按一下下拉式箭號以顯示項目日期。  
   
-#### <a name="to-choose-and-display-individual-entries"></a>若要選擇並顯示個別項目  
+### <a name="to-choose-and-display-individual-entries"></a>若要選擇並顯示個別項目  
   
 1. 為 `Display` 按鈕建立 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼。  
   
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]  
   
-2. 若要測試您的程式碼，請按 F5 以編譯應用程式，然後提交項目。 按一下 [取得項目]，從 <xref:System.Windows.Forms.ComboBox> 選取項目，然後按一下 [顯示]。 選取項目的內容會出現在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。  
+2. 若要測試您的程式碼，請按 F5 以編譯應用程式，然後提交項目。 按一下 [取得項目]  ，從 <xref:System.Windows.Forms.ComboBox> 選取項目，然後按一下 [顯示]  。 選取項目的內容會出現在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。  
   
 ## <a name="enabling-users-to-delete-or-modify-entries"></a>讓使用者可以刪除或修改項目  
  最後，您可以包含其他功能，讓使用者可以利用 `DeleteEntry` 和 `EditEntry` 按鈕，刪除或修改項目。 未顯示項目時，這兩個按鈕皆為停用狀態。  
@@ -123,7 +123,7 @@ ms.locfileid: "59345270"
 |<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`EditEntry`<br /><br /> **編輯項目**<br /><br /> `False`|  
 |<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`SubmitEdit`<br /><br /> **提交編輯**<br /><br /> `False`|  
   
-#### <a name="to-enable-deletion-and-modification-of-entries"></a>若要啟用項目的刪除和修改功能  
+### <a name="to-enable-deletion-and-modification-of-entries"></a>若要啟用項目的刪除和修改功能  
   
 1. 將下列程式碼加入 `Display` 按鈕的 <xref:System.Windows.Forms.Control.Click> 事件，放在 `DisplayEntry.Text = ReadString` 之後。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "59345270"
   
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]  
   
- 若要測試您的程式碼，請按 F5 以編譯應用程式。 按一下 [取得項目]，並選取項目，然後按一下 [顯示]。 此項目會出現在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。 按一下 [編輯項目]。 此項目會出現在 `Entry`<xref:System.Windows.Forms.TextBox> 中。 編輯 `Entry`<xref:System.Windows.Forms.TextBox> 中的項目，然後按一下 [提交編輯]。 開啟 `MyDiary.txt` 檔案，確認您的修正。 現在，選取項目，然後按一下 [刪除項目]。 當 <xref:System.Windows.Forms.MessageBox> 要求確認時，請按一下 [確定]。 關閉應用程式，並開啟 `MyDiary.txt` 以確認刪除。  
+ 若要測試您的程式碼，請按 F5 以編譯應用程式。 按一下 [取得項目]，並選取項目，然後按一下 [顯示]。   此項目會出現在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。 按一下 [編輯項目]  。 此項目會出現在 `Entry`<xref:System.Windows.Forms.TextBox> 中。 編輯 `Entry`<xref:System.Windows.Forms.TextBox> 中的項目，然後按一下 [提交編輯]  。 開啟 `MyDiary.txt` 檔案，確認您的修正。 現在，選取項目，然後按一下 [刪除項目]  。 當 <xref:System.Windows.Forms.MessageBox> 要求確認時，請按一下 [確定]  。 關閉應用程式，並開啟 `MyDiary.txt` 以確認刪除。  
   
 ## <a name="see-also"></a>另請參閱
 

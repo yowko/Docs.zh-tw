@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9c3eedb7f7d4cd030a12c141b8630876c1ffdb4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: db8eb017bdf166b0f1a241f5a8f7db9b9430898a
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803547"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859194"
 ---
 ### <a name="throttle-concurrent-requests-per-session"></a>每一個工作階段的節流閥並行要求數目
 
@@ -15,3 +15,4 @@ ms.locfileid: "59803547"
 |範圍|Edge|
 |版本|4.7|
 |類型|正在重定目標|
+

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 923105114c9e8da02c61c842cc02bed1ead3eddc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e80748c183a10cac4ef66c96ab48458cd9baa806
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803515"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859040"
 ---
 ### <a name="tabcontrol-selectionchanged-event-and-selectedcontent-property"></a>TabControl SelectionChanged 事件和 SelectedContent 屬性
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803515"
 |版本|4.7.1|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Windows.Controls.TabControl.SelectedContent?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.Selector.SelectionChanged?displayProperty=nameWithType></li></ul>|
+

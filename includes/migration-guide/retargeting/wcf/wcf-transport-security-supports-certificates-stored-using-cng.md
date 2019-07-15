@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b57e0acb03a99f33460a7b6c880280b37e01a17b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8c1ca89af289dbcc6c68d5ace3e8a9f32672ec0d
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803526"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859360"
 ---
 ### <a name="wcf-transport-security-supports-certificates-stored-using-cng"></a>WCF 傳輸安全性支援使用 CNG 儲存的憑證
 
@@ -15,3 +15,4 @@ ms.locfileid: "59803526"
 |範圍|次要|
 |版本|4.6.2|
 |類型|正在重定目標|
+

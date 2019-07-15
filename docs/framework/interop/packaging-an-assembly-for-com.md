@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6933aa5ee253f78806aba401749256934f490126
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833575"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662373"
 ---
 # <a name="packaging-an-assembly-for-com"></a>封裝 COM 的組件
 
@@ -61,7 +61,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 
   不論您選擇的機制為何，只有所提供組件中定義的公用類型才會包含在所產生的型別程式庫中。
 
-  您可以將型別程式庫包裝為個別檔案，或將它當成 Win32 資源檔內嵌在 .NET 架構應用程式內。 Microsoft Visual Basic 6.0 已自動為您執行這項工作；不過，使用 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 時，您必須手動內嵌型別程式庫。 如需相關指示，請參閱[如何：將型別程式庫當作 Win32 資源內嵌在 .NET 架構應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))。
+如需相關指示，請參閱[如何：將型別程式庫當作 Win32 資源內嵌在 .NET 架構應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))。
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 

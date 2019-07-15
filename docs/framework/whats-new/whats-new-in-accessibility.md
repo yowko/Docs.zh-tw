@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19d9752e1c7cfbc0a7c85e7cf8053c09c5baca7a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425584"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661378"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
 
@@ -257,39 +257,39 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 - 藉由使用相依性屬性。
 
-   WPF 新增 <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType> 這兩個新的相依性屬性。 開發人員可以使用 XAML 來設定其值：
+  WPF 新增 <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType> 這兩個新的相依性屬性。 開發人員可以使用 XAML 來設定其值：
 
-   ```xaml
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="1">Button 1</Button>
+  ```xaml
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="1">Button 1</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="2">Button 2</Button>
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="2">Button 2</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="3">Button 3</Button>
-   ```
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="3">Button 3</Button>
+  ```
 
 - 藉由覆寫 AutomationPeer 虛擬方法。
 
-   AutomationPeer 類別已新增 <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> 和 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> 虛擬方法。 開發人員可以覆寫這些方法來提供 `SizeOfSet` 和 `PositionInSet` 的值，如下列範例所示：
+  AutomationPeer 類別已新增 <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> 和 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> 虛擬方法。 開發人員可以覆寫這些方法來提供 `SizeOfSet` 和 `PositionInSet` 的值，如下列範例所示：
 
-   ```csharp
-   public class MyButtonAutomationPeer : ButtonAutomationPeer
-   {
-      protected override int GetSizeOfSetCore()
-      {
-         // Call into your own logic to provide a value for SizeOfSet
-         return CalculateSizeOfSet();
-      }
+  ```csharp
+  public class MyButtonAutomationPeer : ButtonAutomationPeer
+  {
+    protected override int GetSizeOfSetCore()
+    {
+        // Call into your own logic to provide a value for SizeOfSet
+        return CalculateSizeOfSet();
+    }
 
-      protected override int GetPositionInSetCore()
-      {
-         // Call into your own logic to provide a value for PositionInSet
-         return CalculatePositionInSet();
-      }
-   }
-   ```
+    protected override int GetPositionInSetCore()
+    {
+        // Call into your own logic to provide a value for PositionInSet
+        return CalculatePositionInSet();
+    }
+  }
+  ```
 
 此外，<xref:System.Windows.Controls.ItemsControl> 執行個體中的項目可自動提供這些屬性值，而不需要開發人員的額外動作。 如果 <xref:System.Windows.Controls.ItemsControl> 是分組形式，即會以各組來表示群組的集合，並將每個群組計算為個別的一組，而該群組內每個項目均提供其在該群組內的位置及群組大小。 虛擬化不會影響自動值。 即使某個項目未具現化，系統仍會將其計入集合的總大小，並會影響其同層級項目集合的位置。
 
@@ -447,10 +447,10 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 - <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 列舉，可以定義下列可能的 **LiveSetting** 值：
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. 如果即時區域的內容變更，項目不會傳送通知。
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. 如果即時區域的內容變更，項目會傳送不中斷通知。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. 如果即時區域的內容變更，項目不會傳送通知。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. 如果即時區域的內容變更，項目會傳送不中斷通知。
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. 如果即時區域的內容變更，項目會傳送中斷通知。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. 如果即時區域的內容變更，項目會傳送中斷通知。
 
 您可以在感興趣的項目上設定 **AutomationProperties.LiveSetting** 屬性，以建立 LiveRegion，如下列範例所示：
 
@@ -478,81 +478,81 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.Expander> 控制項
 
-    現在會顯示 <xref:System.Windows.Controls.Expander> 控制項的焦點視覺效果。 現在也會顯示 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項的鍵盤視覺效果。 例如：
+  現在會顯示 <xref:System.Windows.Controls.Expander> 控制項的焦點視覺效果。 現在也會顯示 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項的鍵盤視覺效果。 例如：
 
-    之前： 
+  之前： 
 
-    ![協助工具改善之前的聚焦 Expander 控制項](media/expander-before.png)
+  ![協助工具改善之前的聚焦 Expander 控制項](media/expander-before.png)
 
-    之後： 
+  之後： 
 
-    ![協助工具改善之後的聚焦 Expander 控制項](media/expander-after.png)
+  ![協助工具改善之後的聚焦 Expander 控制項](media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項
 
-    在高對比佈景主題中選取時，<xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項中的文字現在更容易出現。 例如：
+  在高對比佈景主題中選取時，<xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項中的文字現在更容易出現。 例如：
 
-    之前： 
+  之前： 
 
-    ![協助工具改善之前的聚焦高對比選項按鈕](media/radio-button-before.png)
+  ![協助工具改善之前的聚焦高對比選項按鈕](media/radio-button-before.png)
 
-    之後： 
+  之後： 
 
-    ![協助工具改善之後的聚焦高對比選項按鈕](media/radio-button-after.png)
+  ![協助工具改善之後的聚焦高對比選項按鈕](media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 控制項
 
-    從 .NET Framework 4.7.1 開始，已停用的 <xref:System.Windows.Controls.ComboBox> 控制項框線色彩與已停用的文字色彩相同。 例如：
+  從 .NET Framework 4.7.1 開始，已停用的 <xref:System.Windows.Controls.ComboBox> 控制項框線色彩與已停用的文字色彩相同。 例如：
 
-    之前： 
+  之前： 
 
-     ![協助工具改善之前的 ComboBox 已停用框線和文字](media/combo-disabled-before.png)
+  ![協助工具改善之前的 ComboBox 已停用框線和文字](media/combo-disabled-before.png)
 
-    之後：   
+  之後：   
 
-     ![協助工具改善之後的 ComboBox 已停用框線和文字](media/combo-disabled-after.png)
+  ![協助工具改善之後的 ComboBox 已停用框線和文字](media/combo-disabled-after.png)
 
-    此外，已停用和聚焦按鈕會使用正確的佈景主題色彩。
+  此外，已停用和聚焦按鈕會使用正確的佈景主題色彩。
 
-    之前：
+  之前：
 
-    ![協助工具改善之前的按鈕佈景主題色彩](media/button-themes-before.png) 
+  ![協助工具改善之前的按鈕佈景主題色彩](media/button-themes-before.png) 
 
-    之後： 
+  之後： 
 
-    ![協助工具改善之後的按鈕佈景主題色彩](media/button-themes-after.png) 
+  ![協助工具改善之後的按鈕佈景主題色彩](media/button-themes-after.png) 
 
-    最後，在 .NET Framework 4.7 和舊版本中將 <xref:System.Windows.Controls.ComboBox> 控制項的樣式設定為 `Toolbar.ComboBoxStyleKey` 會導致無法看到下拉式箭號。 從 .NET Framework 4.7.1 開始已修正此問題。 例如：
+  最後，在 .NET Framework 4.7 和舊版本中將 <xref:System.Windows.Controls.ComboBox> 控制項的樣式設定為 `Toolbar.ComboBoxStyleKey` 會導致無法看到下拉式箭號。 從 .NET Framework 4.7.1 開始已修正此問題。 例如：
 
-    之前： 
+  之前： 
 
-    ![協助工具改善之前的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
+  ![協助工具改善之前的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
 
-    之後： 
+  之後： 
 
-    ![協助工具改善之後的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
+  ![協助工具改善之後的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> 控制項
 
-    從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 控制項中的排序指標箭號現在會使用正確佈景主題色彩。 例如：
+  從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 控制項中的排序指標箭號現在會使用正確佈景主題色彩。 例如：
 
-    之前： 
+  之前： 
 
-    ![協助工具改善之前的排序指標箭號](media/sort-indicator-before.png) 
+  ![協助工具改善之前的排序指標箭號](media/sort-indicator-before.png) 
 
-    之後：   
+  之後：   
 
-    ![協助工具改善之後的排序指標箭號](media/sort-indicator-after.png) 
+  ![協助工具改善之後的排序指標箭號](media/sort-indicator-after.png) 
 
-    此外，在 .NET Framework 4.7 和舊版本的高對比模式中，預設連結樣式會在滑鼠移至上方時變更為不正確的色彩。 從 .NET Framework 4.7.1 開始已解決此問題。 同樣地，從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 核取方塊資料行會使用鍵盤焦點回饋的預期色彩。
+  此外，在 .NET Framework 4.7 和舊版本的高對比模式中，預設連結樣式會在滑鼠移至上方時變更為不正確的色彩。 從 .NET Framework 4.7.1 開始已解決此問題。 同樣地，從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 核取方塊資料行會使用鍵盤焦點回饋的預期色彩。
 
-    之前： 
+  之前： 
 
-    ![協助工具改善之前的 DataGrid 預設連結樣式](media/default-link-style-before.png) 
+  ![協助工具改善之前的 DataGrid 預設連結樣式](media/default-link-style-before.png) 
 
-    之後：    
+  之後：    
 
-    ![協助工具改善之後的 DataGrid 預設連結樣式](media/default-link-style-after.png) 
+  ![協助工具改善之後的 DataGrid 預設連結樣式](media/default-link-style-after.png) 
 
 如需 .NET Framework 4.7.1 中的 WPF 協助工具改善詳細資訊；請參閱 [WPF 的協助工具改善](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
@@ -581,13 +581,13 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 已停用的文字較容易閱讀。 例如：
 
-    之前：
+  之前：
 
-    ![協助工具改善之前的已停用文字](media/wf-disabled-before.png) 
+  ![協助工具改善之前的已停用文字](media/wf-disabled-before.png) 
 
-    之後：
+  之後：
 
-    ![協助工具改善之後的已停用文字](media/wf-disabled-after.png) 
+  ![協助工具改善之後的已停用文字](media/wf-disabled-after.png) 
 
 - 執行緒例外狀況對話方塊中的高對比改善。
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3b7309347c643d89a28331c6ef3cac36085a969a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2e974d277d6659aaada321b2a7e7a604df78a7bd
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234132"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858379"
 ---
 ### <a name="wpf-windows-are-rendered-without-clipping-when-extending-outside-a-single-monitor"></a>WPF 視窗在擴充到單一顯示器之外時呈現而不裁剪
 
@@ -15,3 +15,4 @@ ms.locfileid: "59234132"
 |範圍|次要|
 |版本|4.6|
 |類型|執行階段|
+

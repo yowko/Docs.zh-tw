@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fbc39b6e1cc19f6c2846caaabb9a8a721494b4e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d3c6818861f8b0261a9a71a4654029143d928d08
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803533"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67856976"
 ---
 ### <a name="allow-unicode-in-uris-that-resemble-unc-shares"></a>允許在與 UNC 共用相似的 URI 中使用 Unicode
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803533"
 |版本|4.7.2|
 |類型|執行階段|
 |受影響的 API|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
+

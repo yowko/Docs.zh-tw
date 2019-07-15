@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ad624a665dbe8e989ea05acc20213809e515e6ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b23909c53b451b4b18bf0ccdf59f51e7c8e3114f
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803513"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802523"
 ---
 ### <a name="incorrect-code-generation-when-passing-and-comparing-uint16-values"></a>傳遞和比較 UInt16 值時，產生不正確的程式碼
 
@@ -15,3 +15,4 @@ ms.locfileid: "59803513"
 |範圍|Edge|
 |版本|4.7|
 |類型|執行階段|
+

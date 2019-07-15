@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a51738fa75ba2dd4574549fce2570df8231c4cae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7f551fbc194d2da2fdae6bcc7025c20b03aadda2
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234894"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859325"
 ---
 ### <a name="path-colon-checks-are-stricter"></a>路徑冒號檢查更嚴格
 
@@ -16,3 +16,4 @@ ms.locfileid: "59234894"
 |版本|4.6.2|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.IO.Path.GetDirectoryName(System.String)?displayProperty=nameWithType></li><li><xref:System.IO.Path.GetPathRoot(System.String)?displayProperty=nameWithType></li></ul>|
+

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0b087fca59d60a086a9ea8b2bb19c09f646c3dfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 79005f19ac31ba32e7e468ef61eb867a052eff40
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803510"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859060"
 ---
 ### <a name="improved-accessibility-for-some-net-sdk-tools"></a>某些 .NET SDK 工具之改善的協助工具
 
@@ -14,3 +14,4 @@ ms.locfileid: "59803510"
 |範圍|Edge|
 |版本|4.7.1|
 |類型|正在重定目標|
+

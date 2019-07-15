@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1687b1b9a1a6861f9569a0e29426de7f32ffc32b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 060da3ebc60057554fd572bd2569652afee6bd0f
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803465"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804436"
 ---
 ### <a name="il-ret-not-allowed-in-a-try-region"></a>try 區域中不允許 IL ret
 
@@ -15,3 +15,4 @@ ms.locfileid: "59803465"
 |範圍|Edge|
 |版本|4.6|
 |類型|正在重定目標|
+

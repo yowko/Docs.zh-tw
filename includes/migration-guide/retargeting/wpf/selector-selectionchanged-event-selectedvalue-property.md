@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e6c93a1bc31c041f36fca3704bca32012a2b42ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a4054ee893ba8b8c290a447689d3aa58dcc84cbe
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803521"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858949"
 ---
 ### <a name="selector-selectionchanged-event-and-selectedvalue-property"></a>Selector 的 SelectionChanged 事件和 SelectedValue 屬性
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803521"
 |版本|4.7.1|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Windows.Controls.TabControl.SelectedContent?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.Selector.SelectionChanged?displayProperty=nameWithType></li></ul>|
+

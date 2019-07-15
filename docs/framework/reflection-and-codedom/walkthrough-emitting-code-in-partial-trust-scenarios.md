@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690306"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742458"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任情節中發出程式碼
 反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。 此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。  
@@ -57,7 +57,7 @@ ms.locfileid: "66690306"
   
  下列程序會建立沙箱應用程式定義域，用部分信任的執行程式碼，測試發出的程式碼只能存取公用類型公用成員的案例。 後續程序示範如何新增 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>，測試發出的程式碼可以存取非公用類型和成員的案例，而這些類型和成員所在組件具有相同或較低的權限。  
   
-##### <a name="to-create-an-application-domain-with-partial-trust"></a>建立部份信任的應用程式定義域  
+#### <a name="to-create-an-application-domain-with-partial-trust"></a>建立部份信任的應用程式定義域  
   
 1. 建立權限集，以授與沙箱應用程式定義域中的組件。 在此情況下，會使用網際網路區域的權限集。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66690306"
 > [!NOTE]
 >  為防止提高權限，建構匿名裝載的動態方法時，會包含發出組件的堆疊資訊。 叫用方法時會檢查堆疊資訊。 因此，從完全信任程式碼叫用的匿名裝載動態方法，其信任層級仍限於發出組件的信任層級。  
   
-##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>建立加上 RMA 的部份信任應用程式定義域  
+#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>建立加上 RMA 的部份信任應用程式定義域  
   
 1. 建立具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>(RMA) 旗標的新 <xref:System.Security.Permissions.ReflectionPermission> 物件，並使用 <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> 方法將權限新增至授權集。  
   

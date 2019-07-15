@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0642b184d85306a453d429f247dad95a259cb012
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2f5511b7694f91893b731805119b85d1a5669a33
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803543"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859213"
 ---
 ### <a name="serialization-of-control-characters-with-datacontractjsonserializer-is-now-compatible-with-ecmascript-v6-and-v8"></a>DataContractJsonSerializer 的控制字元序列化現在與 ECMAScript V6 和 V8 相容
 
@@ -16,3 +16,4 @@ ms.locfileid: "59803543"
 |版本|4.7|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject(System.IO.Stream,System.Object)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject(System.Xml.XmlDictionaryWriter,System.Object)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject(System.Xml.XmlWriter,System.Object)?displayProperty=nameWithType></li></ul>|
+

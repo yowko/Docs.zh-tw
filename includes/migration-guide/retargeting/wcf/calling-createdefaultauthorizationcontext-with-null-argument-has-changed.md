@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9ec5fa379556dedeaa7a35e34f004340ab47a39c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a29f0ca6d235250ac1f41e686178b2d6affcd8a0
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59234345"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804446"
 ---
 ### <a name="calling-createdefaultauthorizationcontext-with-a-null-argument-has-changed"></a>使用 Null 引數呼叫 CreateDefaultAuthorizationContext 已變更
 
@@ -16,3 +16,4 @@ ms.locfileid: "59234345"
 |版本|4.6|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=nameWithType></li></ul>|
+

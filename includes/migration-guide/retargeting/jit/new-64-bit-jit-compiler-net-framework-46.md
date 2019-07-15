@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a9363750f8090434d0c304039330eff88e4748d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5aa37169ae0e5c5e6b88aae5ceb5d758286c3d3a
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59234405"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804394"
 ---
 ### <a name="new-64-bit-jit-compiler-in-the-net-framework-46"></a>.NET Framework 4.6 中的新 64 位元 JIT 編譯器
 
@@ -15,3 +15,4 @@ ms.locfileid: "59234405"
 |範圍|Edge|
 |版本|4.6|
 |類型|正在重定目標|
+
