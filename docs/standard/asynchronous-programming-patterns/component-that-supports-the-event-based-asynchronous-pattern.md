@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423872"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773659"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>作法：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
@@ -53,14 +53,14 @@ ms.locfileid: "66423872"
 ## <a name="creating-the-component"></a>建立元件  
  第一步是建立將會實作「事件架構非同步模式」的元件。  
   
-#### <a name="to-create-the-component"></a>建立元件  
+### <a name="to-create-the-component"></a>建立元件  
   
 - 建立一個名為 `PrimeNumberCalculator` 且會從 <xref:System.ComponentModel.Component> 繼承的類別。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>定義公用非同步事件和委派  
  您的元件會使用事件與用戶端進行通訊。 _MethodName_**Completed** 事件會對用戶端發出已完成非同步工作的警示，而 _MethodName_**ProgressChanged** 事件則是會通知用戶端非同步工作的進度。  
   
-#### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>為元件的用戶端定義非同步事件：  
+### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>為元件的用戶端定義非同步事件：  
   
 1. 在您檔案的頂端匯入 <xref:System.Threading?displayProperty=nameWithType> 和 <xref:System.Collections.Specialized?displayProperty=nameWithType> 命名空間。  
   
@@ -82,10 +82,10 @@ ms.locfileid: "66423872"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#6)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#6)]  
   
-## <a name="checkpoint"></a>檢查點  
+## <a name="checkpoint"></a>Checkpoint  
  現在，您可以建置元件。  
   
-#### <a name="to-test-your-component"></a>測試元件  
+### <a name="to-test-your-component"></a>測試元件  
   
 - 編譯元件。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "66423872"
      在下一節中將會清除這些警告。  
   
 ## <a name="defining-private-delegates"></a>定義私用委派  
- 實作 `PrimeNumberCalculator` 元件的非同步層面時，會在內部使用稱為 <xref:System.Threading.SendOrPostCallback> 的特殊委派來實作。 <xref:System.Threading.SendOrPostCallback> 代表在 <xref:System.Threading.ThreadPool> 執行緒上執行的回呼方法。 此回呼方法必須具有會採用 <xref:System.Object> 類型之單一參數的簽章，這意謂著您將必須在包裝函式類別中傳遞委派之間的狀態。 如需詳細資訊，請參閱<xref:System.Threading.SendOrPostCallback>。  
+ 實作 `PrimeNumberCalculator` 元件的非同步層面時，會在內部使用稱為 <xref:System.Threading.SendOrPostCallback> 的特殊委派來實作。 <xref:System.Threading.SendOrPostCallback> 代表在 <xref:System.Threading.ThreadPool> 執行緒上執行的回呼方法。 此回呼方法必須具有會採用 <xref:System.Object> 類型之單一參數的簽章，這意謂著您將必須在包裝函式類別中傳遞委派之間的狀態。 如需詳細資訊，請參閱 <xref:System.Threading.SendOrPostCallback>。  
   
-#### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>實作元件的內部非同步行為：  
+### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>實作元件的內部非同步行為：  
   
 1. 在 `PrimeNumberCalculator` 類別中宣告及建立 <xref:System.Threading.SendOrPostCallback> 委派。 在名為 `InitializeDelegates` 的公用程式方法中建立 <xref:System.Threading.SendOrPostCallback> 物件。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "66423872"
 ## <a name="implementing-public-events"></a>實作公用事件  
  實作「事件架構非同步模式」的元件會使用事件與用戶端進行通訊。 叫用這些事件時，會在 <xref:System.ComponentModel.AsyncOperation> 類別的協助下，在適當的執行緒上叫用。  
   
-#### <a name="to-raise-events-to-your-components-clients"></a>向元件的用戶端引發事件：  
+### <a name="to-raise-events-to-your-components-clients"></a>向元件的用戶端引發事件：  
   
 1. 實作可向用戶端進行回報的公用事件。 您將需要一個事件來回報進度，另一個事件來回報完成。  
   
@@ -146,17 +146,17 @@ ms.locfileid: "66423872"
   
  `CompletionMethod` 簽章必須保存描述非同步作業結果所需的所有狀態。 它會保存此特定非同步作業所測試的數字、該數字是否為質數，以及該數字第一個除數的值 (如果該數字不是質數的話)。 它也會保存描述所發生之任何例外狀況的狀態，以及與此特定工作對應的 <xref:System.ComponentModel.AsyncOperation>。  
   
-#### <a name="to-complete-an-asynchronous-operation"></a>完成非同步作業：  
+### <a name="to-complete-an-asynchronous-operation"></a>完成非同步作業：  
   
 - 實作完成方法。 此方法採用六個參數，用來填入會透過用戶端的 `CalculatePrimeCompletedEventHandler`.傳回到用戶端的 `CalculatePrimeCompletedEventArgs`。 它會從內部集合移除用戶端的工作識別碼權杖，然後藉由對 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 的呼叫來結束非同步作業的存留期。 <xref:System.ComponentModel.AsyncOperation> 會將呼叫封送處理至適用於應用程式模型的執行緒或內容。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
   
-## <a name="checkpoint"></a>檢查點  
+## <a name="checkpoint"></a>Checkpoint  
  現在，您可以建置元件。  
   
-#### <a name="to-test-your-component"></a>測試元件  
+### <a name="to-test-your-component"></a>測試元件  
   
 - 編譯元件。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66423872"
 > [!NOTE]
 >  實作進度回報時，是在 `BuildPrimeNumberList` 方法中實作。 在執行速度快的電腦上，可以快速地連續引發 `ProgressChanged` 事件。 作為這些事件之引發位置的用戶端執行緒必須能夠處理此情況。 使用者介面程式碼可能會湧入大量訊息而來不及處理，導致停止回應。 如需可處理此情形的使用者介面範例，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
-#### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>以非同步方式執行質數計算：  
+### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>以非同步方式執行質數計算：  
   
 1. 實作 `TaskCanceled` 公用程式方法。 這會檢查指定之工作識別碼的工作存留期集合，如果找不到該工作識別碼，就會傳回 `true`。  
   
@@ -207,10 +207,10 @@ ms.locfileid: "66423872"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#29)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#29)]  
   
-## <a name="checkpoint"></a>檢查點  
+## <a name="checkpoint"></a>Checkpoint  
  現在，您可以建置元件。  
   
-#### <a name="to-test-your-component"></a>測試元件  
+### <a name="to-test-your-component"></a>測試元件  
   
 - 編譯元件。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "66423872"
   
  取消特定擱置中作業的方式，是呼叫其對應之 <xref:System.ComponentModel.AsyncOperation> 上的 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>。 這會結束該作業，後續對其 <xref:System.ComponentModel.AsyncOperation> 發出的呼叫都會擲回例外狀況。  
   
-#### <a name="to-implement-start-and-cancel-functionality"></a>實作「開始」和「取消」功能：  
+### <a name="to-implement-start-and-cancel-functionality"></a>實作「開始」和「取消」功能：  
   
 1. 實作 `CalculatePrimeAsync` 方法。 請確定就代表目前擱置中工作的所有權杖而言，用戶端所提供的權杖 (工作識別碼) 是唯一的。 如果用戶端傳入的權杖不是唯一的，`CalculatePrimeAsync` 就會引發例外狀況。 否則，該權杖會新增至工作識別碼集合中。  
   
@@ -233,10 +233,10 @@ ms.locfileid: "66423872"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#4)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#4)]  
   
-## <a name="checkpoint"></a>檢查點  
+## <a name="checkpoint"></a>Checkpoint  
  現在，您可以建置元件。  
   
-#### <a name="to-test-your-component"></a>測試元件  
+### <a name="to-test-your-component"></a>測試元件  
   
 - 編譯元件。  
   
@@ -253,6 +253,6 @@ ms.locfileid: "66423872"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [操作說明：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

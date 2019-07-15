@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 2d263ac09cb4c9196b0d584dd5cf71182be01adc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0373d9150349dc24653270600a317b0d41b945b1
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584376"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859646"
 ---
 # <a name="events-c-programming-guide"></a>事件 (C# 程式設計手冊)
-事件可讓 [類別](../../../csharp/language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或 *「引發」*(raise)) 事件的類別稱為 *「發行者」* (publisher)，而接收 (或 *「處理」*(handle)) 事件的類別則稱為 *「訂閱者」*(subscriber)。  
+事件可讓 [類別](../../../csharp/language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或 *「引發」* (raise)) 事件的類別稱為 *「發行者」* (publisher)，而接收 (或 *「處理」* (handle)) 事件的類別則稱為 *「訂閱者」* (subscriber)。  
   
  在典型的 C# Windows Forms 或 Web 應用程式中，您可訂閱由控制項 (如按鈕和清單方塊) 引發的事件。 您可以使用 Visual C# 整合式開發環境 (IDE) 來瀏覽控制項發行的事件，並選擇您想要處理的事件。 IDE 提供一種簡單的方式來自動新增空的事件處理常式方法，及用來訂閱該事件的程式碼。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。  
   
@@ -44,8 +44,6 @@ ms.locfileid: "65584376"
 - [如何：在衍生類別中引發基底類別事件](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
   
 - [如何：實作介面事件](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
-  
-- [如何：使用字典儲存事件執行個體](../../../csharp/programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)  
   
 - [如何：實作自訂事件存取子](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   
