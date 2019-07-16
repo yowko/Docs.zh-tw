@@ -34,16 +34,11 @@
                   href: keywords/reference-types.md
                 - name: Class - 類別
                   href: keywords/class.md
-                - name: Delegate - 委派
-                  href: keywords/delegate.md
-                - name: 動態
-                  href: keywords/dynamic.md
+                - name: 內建參考類型
+                  displayName: 'object, delegate, dynamic, string'
+                  href: builtin-types/reference-types.md
                 - name: interface
                   href: keywords/interface.md
-                - name: object
-                  href: keywords/object.md
-                - name: 字串
-                  href: keywords/string.md
             - name: void
               href: keywords/void.md
             - name: var
