@@ -1,18 +1,18 @@
 ---
-title: HOW TO：執行工作流程
+title: 作法：執行工作流程
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a7784f37c9e8009adc3735974a6fb0423f24ea37
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637512"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238519"
 ---
-# <a name="how-to-run-a-workflow"></a>作法：執行工作流程
+# <a name="how-to-run-a-workflow"></a>HOW TO：執行工作流程
 本主題將延續 Windows Workflow Foundation 快速入門教學課程，並討論如何建立工作流程主機和執行在先前定義的工作流程[How to:建立工作流程](how-to-create-a-workflow.md)主題。
 
 > [!NOTE]
@@ -30,12 +30,12 @@ ms.locfileid: "65637512"
     > [!TIP]
     >  如果沒有顯示 [ **方案總管** ] 視窗，請選取 [ **檢視** ] 功能表上的 [ **方案總管** ]。
 
-3. 在 [ **已安裝** ] 節點中，選取 [ **Visual C#**]、[ **工作流程** ] (或 [ **Visual Basic**]、[ **工作流程**])。
+3. 在 [ **已安裝** ] 節點中，選取 [ **Visual C#** ]、[ **工作流程** ] (或 [ **Visual Basic**]、[ **工作流程**])。
 
     > [!NOTE]
     >  依據設定哪個程式語言為 Visual Studio 主要語言而異，[ **Visual C#** ] 或 [ **Visual Basic** ] 節點可能會顯示在 [ **已安裝** ] 節點中的 [ **其他語言** ] 節點下。
 
-     確認已選取 [.NET Framework 版本] 下拉式清單中的 [ **.NET Framework 4.5** ]。 選取 [ **工作流程** ] 清單中的 [ **工作流程主控台應用程式** ]。 在 [名稱] `NumberGuessWorkflowHost`**方塊中輸入** ，然後按一下 [確定] 。 這樣會建立一個具有基本工作流程裝載支援的入門工作流程應用程式。 此基本裝載程式碼會修改，並用來執行工作流程應用程式。
+     確認已選取 [.NET Framework 版本] 下拉式清單中的 [ **.NET Framework 4.5** ]。 選取 [ **工作流程** ] 清單中的 [ **工作流程主控台應用程式** ]。 在 [名稱] `NumberGuessWorkflowHost`**方塊中輸入** ，然後按一下 [確定]  。 這樣會建立一個具有基本工作流程裝載支援的入門工作流程應用程式。 此基本裝載程式碼會修改，並用來執行工作流程應用程式。
 
 4. 在 [ **方案總管** ] 中，以滑鼠右鍵按一下新加入的 [ **NumberGuessWorkflowHost** ] 專案，然後選取 [ **加入參考**]。 選取 [ **加入參考** ] 清單中的 [ **解決方案** ]、勾選 [ **NumberGuessWorkflowActivities**] 旁的核取方塊，然後按一下 [ **確定**]。
 
@@ -51,13 +51,13 @@ ms.locfileid: "65637512"
      因為這個專案是使用 [ **工作流程主控台應用程式** ] 範本所建立，所以 [ **Program.cs** ] 或 [ **Module1.vb** ] 會包含下列基本工作流程裝載程式碼。
 
     ```vb
-    ' Create and cache the workflow definition
-    Activity workflow1 = new Workflow1()
+    ' Create and cache the workflow definition.
+    Dim workflow1 As Activity = New Workflow1()
     WorkflowInvoker.Invoke(workflow1)
     ```
 
     ```csharp
-    // Create and cache the workflow definition
+    // Create and cache the workflow definition.
     Activity workflow1 = new Workflow1();
     WorkflowInvoker.Invoke(workflow1);
     ```

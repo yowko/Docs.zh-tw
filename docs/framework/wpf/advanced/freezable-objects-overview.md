@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610511"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238523"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 物件概觀
 本主題說明如何有效地使用，並建立<xref:System.Windows.Freezable>提供特殊功能，可協助您改善應用程式效能的物件。 Freezable 物件的範例包括筆刷、 畫筆、 轉換、 幾何和動畫。  
@@ -148,7 +148,7 @@ mc:Ignorable="PresentationOptions"
   
  您也必須遵守下列規則來存取和寫入資料成員不是相依性屬性：  
   
-- 在任何開頭[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]它會讀取非相依性屬性資料成員，請呼叫<xref:System.Windows.Freezable.ReadPreamble%2A>方法。  
+- 讀取非相依性屬性資料成員的任何 API 開頭呼叫<xref:System.Windows.Freezable.ReadPreamble%2A>方法。  
   
 - 將寫入非相依性屬性資料成員的任何 API 開頭呼叫<xref:System.Windows.Freezable.WritePreamble%2A>方法。 (一旦您呼叫了<xref:System.Windows.Freezable.WritePreamble%2A>在 API 中，您不需要進行額外的呼叫<xref:System.Windows.Freezable.ReadPreamble%2A>如果您也可以讀取非相依性屬性資料成員。)  
   

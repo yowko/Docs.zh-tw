@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d5ff09bb9cc8da45f44cf6fe952411e7cd3f4c4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663405"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238536"
 ---
 # <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 <a name="introduction"></a> 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響相依性屬性的值，並描述屬性系統套用到屬性有效值的優先順序。  
@@ -43,7 +43,7 @@ ms.locfileid: "64663405"
   
 2. **作用中動畫或具有 Hold 行為的動畫**： 屬性的動畫必須優先於基底 (非動畫) 值，才能有任何實際效果，即使該值是在本機設定也一樣。 如需詳細資訊，請參閱本主題稍後的[強制型轉、動畫和基底值](#animations)。  
   
-3. **區域數值**： 可能透過方便的 「 包裝函式 」 屬性，這也等同於設定中的屬性或屬性項目設定區域數值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，或藉由呼叫<xref:System.Windows.DependencyObject.SetValue%2A>[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]使用特定的執行個體的屬性。 如果使用繫結或資源來設定區域數值，其在優先順序中的作用就如同設定直接值。  
+3. **區域數值**： 可能透過方便的 「 包裝函式 」 屬性，這也等同於設定中的屬性或屬性項目設定區域數值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，或藉由呼叫<xref:System.Windows.DependencyObject.SetValue%2A>API 使用的特定執行個體的屬性。 如果使用繫結或資源來設定區域數值，其在優先順序中的作用就如同設定直接值。  
   
 4. **TemplatedParent 範本屬性**： 項目具有<xref:System.Windows.FrameworkElement.TemplatedParent%2A>是建立為範本的一部分 (<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>)。 如需何時套用此屬性的詳細資訊，請參閱本主題稍後的 [TemplatedParent](#templatedparent)。 在範本內，優先順序如下：  
   

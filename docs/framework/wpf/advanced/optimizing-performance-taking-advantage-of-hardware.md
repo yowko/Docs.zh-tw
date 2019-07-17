@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: d40d1636b510fcfe667ab3e728d1688ce38641d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611936"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238444"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>最佳化效能：運用硬體
 內部架構[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有兩個呈現管線、 硬體和軟體。 本主題提供有關這些轉譯管線，以幫助您決定您的應用程式的效能最佳化的相關資訊。  
@@ -30,7 +30,7 @@ ms.locfileid: "64611936"
 ### <a name="graphics-rendering-tiers"></a>圖形轉譯層  
  它可能很難預測的硬體組態，將會在執行您的應用程式。 不過，您可能要考慮的設計，可讓您順暢地切換功能在不同的硬體上執行時，讓它可以充分利用每個不同的硬體組態的應用程式。  
   
- 若要達到這個目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供功能，以判斷系統在執行階段的圖形功能。 圖形功能取決於分類做為其中的三個轉譯功能層級的視訊卡。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 會公開[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，可讓應用程式查詢轉譯功能層。 您的應用程式可以在執行階段取決於硬體支援的轉譯層採取不同的程式碼路徑。  
+ 若要達到這個目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供功能，以判斷系統在執行階段的圖形功能。 圖形功能取決於分類做為其中的三個轉譯功能層級的視訊卡。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 公開 API，可讓應用程式查詢轉譯功能層。 您的應用程式可以在執行階段取決於硬體支援的轉譯層採取不同的程式碼路徑。  
   
  對轉譯層級的影響最大的圖形硬體功能如下︰  
   

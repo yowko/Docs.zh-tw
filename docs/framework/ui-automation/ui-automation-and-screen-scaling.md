@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 5b9af742558cd1a672c739040aef9e80dcaaabe5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e101fffbd7e53cadce0b621d73ade2d1459ba00
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652203"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237449"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自動化和畫面縮放比例
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "64652203"
   
  針對重視畫面座標的應用程式，畫面縮放比例會產生新挑戰。 畫面現在包含兩個座標系統：實體和邏輯。 點的實體座標是來自原點左上方的實際位移 (以像素為單位)。 邏輯座標則是像素本身縮放時，跟著縮放的位移。  
   
- 假設您設計的對話方塊在座標 (100, 48) 上有一個按鈕。 當這個對話方塊以預設 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]顯示時，按鈕位在實體座標 (100, 48)。 在 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]時，它位在實體座標 (125, 60)。 但邏輯座標在任何相同[!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]設定：(100, 48).  
+ 假設您設計的對話方塊在座標 (100, 48) 上有一個按鈕。 當這個對話方塊以預設 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]顯示時，按鈕位在實體座標 (100, 48)。 在 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]時，它位在實體座標 (125, 60)。 但邏輯座標在任何相同[!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]設定：（100，48）。  
   
  邏輯座標很重要，因為不論 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定為何，它們都會維持作業系統和應用程式的一致行為。 例如， <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> 一般會傳回邏輯座標。 如果您將游標移至對話方塊內的項目上，不論 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定為何，都會傳回相同座標。 如果您在 (100, 100) 繪製控制項，它會繪製到這些邏輯座標上，並在任何 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 設定上佔用相同的相對位置。  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
 ## <a name="scaling-in-ui-automation-clients"></a>使用者介面自動化用戶端中的縮放比例  
-  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] 不會使用邏輯座標。 下列方法和屬性會傳回實體座標或採用它們做為參數。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API 不會使用邏輯座標。 下列方法和屬性會傳回實體座標或採用它們做為參數。  
   
 - <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   

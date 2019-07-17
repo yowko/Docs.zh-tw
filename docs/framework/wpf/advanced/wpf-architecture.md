@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 2fa2e039d73d079b6dacc9326c64fc2015eecc49
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610349"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238490"
 ---
 # <a name="wpf-architecture"></a>WPF 架構
 本主題提供 Windows Presentation Foundation (WPF) 的類別階層架構的導覽。 它涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述其互動方式。 它也會詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所進行的一些選擇。  
@@ -64,7 +64,7 @@ ms.locfileid: "67610349"
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
  定義系統之後，下一個步驟是將像素繪製到螢幕。 <xref:System.Windows.Media.Visual>類別提供建置樹狀目錄中的視覺物件，都會選擇性地包含繪圖指示以及如何轉譯這些指示 （裁剪、 轉換等等） 的相關中繼資料。 <xref:System.Windows.Media.Visual> 被設計為非常輕量且具有彈性，因此大部分的功能不有任何公開的 API，並大量依賴受保護的回呼函式。  
   
- <xref:System.Windows.Media.Visual> 其實是進入點[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]撰寫系統。 <xref:System.Windows.Media.Visual> 是的這些兩個子系統，managed 之間的連接點[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]和 unmanaged 的 milcore。  
+ <xref:System.Windows.Media.Visual> 其實是進入點[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]撰寫系統。 <xref:System.Windows.Media.Visual> 是的這些兩個子系統、 受管理的 API 和 unmanaged 的 milcore 之間點。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 透過周遊 milcore 所管理的 Unmanaged 資料結構來顯示資料。 這些結構稱為組合節點，代表具有每個節點之轉譯指示的階層式顯示樹狀結構。 下圖右側所說明的這個樹狀結構只能透過訊息通訊協定進行存取。  
   

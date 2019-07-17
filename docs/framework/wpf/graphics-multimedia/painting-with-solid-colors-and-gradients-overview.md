@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 4e004b624c331375501c5f48d2566a664b734d3b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ba8127d5be24a9fdcccf0bebcc08e5699d98033
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649973"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238393"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用純色和漸層繪製的概觀
 本主題描述如何使用<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.LinearGradientBrush>，和<xref:System.Windows.Media.RadialGradientBrush>物件以純色、 線形漸層及放射狀漸層。  
@@ -31,7 +31,7 @@ ms.locfileid: "64649973"
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
-- 選擇 32 位元色板的其中一個色彩，方法是指定紅色、綠色及藍色的量來混合成單一純色。  指定 32 位元色板中其中一個色彩的格式為 "*#rrggbb*"，其中 *rr* 是指定紅色相對量的兩位數十六進位數字、*gg* 指定綠色的量，而 *bb* 則指定藍色的量。  此外，色彩可以指定為 "#*aarrggbb*"，其中 *aa* 指定色彩的 *alpha* 值 (也就是透明度)。 這個方法可以讓您建立部分透明的色彩。  在下列範例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>設為完全不透明的紅色，使用十六進位標記法。  
+- 選擇 32 位元色板的其中一個色彩，方法是指定紅色、綠色及藍色的量來混合成單一純色。  指定 32 位元色板中其中一個色彩的格式為 " *#rrggbb*"，其中 *rr* 是指定紅色相對量的兩位數十六進位數字、*gg* 指定綠色的量，而 *bb* 則指定藍色的量。  此外，色彩可以指定為 "#*aarrggbb*"，其中 *aa* 指定色彩的 *alpha* 值 (也就是透明度)。 這個方法可以讓您建立部分透明的色彩。  在下列範例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>設為完全不透明的紅色，使用十六進位標記法。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
@@ -142,15 +142,15 @@ ms.locfileid: "64649973"
   
 <a name="specifyinggradientcolors"></a>   
 ## <a name="specifying-transparent-or-partially-transparent-gradient-stops"></a>指定透明或部分透明的漸層停駐點  
- 因為漸層停駐點不會提供不透明屬性，您必須指定使用的色彩的 alpha 色板[!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)]標記中使用十六進位標記法<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>方法用來建立透明或部分透明的漸層停駐點。 下列各節會說明如何使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和程式碼建立部分透明的漸層停駐點。  
+ 因為漸層停駐點不會提供不透明屬性，您必須指定使用 ARGB 十六進位標記法，在 標記 或 使用色彩的 alpha 色板<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>方法用來建立透明或部分透明的漸層停駐點。 下列各節會說明如何使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和程式碼建立部分透明的漸層停駐點。  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>在 "XAML" 中指定色彩不透明度  
- 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，您會使用 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六進位標記法來指定個別色彩的不透明度。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六進位標記法使用下列語法：  
+ 在  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您使用 ARGB 十六進位標記法來指定個別色彩的不透明度。 ARGB 十六進位標記法使用下列語法：  
   
  `#` **aa** *rrggbb*  
   
- 上一行中的 *aa* 代表用來指定色彩不透明度的兩位數十六進位值。 *rr*、*gg* 和 *bb* 分別代表用來指定色彩中紅色、綠色及藍色量的兩位數十六進位值。 每個十六進位位數的值可以是 0-9 或 A-F。 0 是最小的值，F 是最大的值。 Alpha 值為 00 時會指定完全透明的色彩，而 Alpha 值為 FF 時則會建立完全不透明的色彩。  在下列範例中，會使用十六進位 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 標記法指定兩個色彩。 第一個為部分透明 (具有 x20 的 Alpha 值)，而第二個則是完全不透明。  
+ 上一行中的 *aa* 代表用來指定色彩不透明度的兩位數十六進位值。 *rr*、*gg* 和 *bb* 分別代表用來指定色彩中紅色、綠色及藍色量的兩位數十六進位值。 每個十六進位位數的值可以是 0-9 或 A-F。 0 是最小的值，F 是最大的值。 Alpha 值為 00 時會指定完全透明的色彩，而 Alpha 值為 FF 時則會建立完全不透明的色彩。  在下列範例中，用來指定兩個色彩的十六進位 ARGB 標記法。 第一個為部分透明 (具有 x20 的 Alpha 值)，而第二個則是完全不透明。  
   
  [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
   

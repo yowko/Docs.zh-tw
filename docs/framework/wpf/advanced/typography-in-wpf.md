@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 94937b2c3e6935474d337c62bfd6698441dfcc2e
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 98dc2899fd2c6a294f9f878ccbf87f60520bbe78
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860124"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238677"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
 本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括提升文字轉譯的品質與效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、已增強的國際文字、已增強的字型支援，以及新的文字應用程式開發介面 (API)。  
@@ -142,7 +142,7 @@ ms.locfileid: "67860124"
 ### <a name="advanced-text-formatting"></a>進階文字格式化  
  在最進階的文字 Api[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可讓您藉由建立自訂文字版面配置<xref:System.Windows.Media.TextFormatting.TextFormatter>物件中和其他類型<xref:System.Windows.Media.TextFormatting>命名空間。 <xref:System.Windows.Media.TextFormatting.TextFormatter>和相關聯的類別可讓您實作自訂文字版面配置，支援您自己定義的字元格式、 段落樣式行分行規則及其他版面配置功能，針對國際文字。 在非常少數的情況下，您會想要覆寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文字配置支援的預設實作。 不過，如果您要建立文字編輯控制項或應用程式，您可能需要不同於預設 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的實作。  
   
- 不同於傳統的文字[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，則<xref:System.Windows.Media.TextFormatting.TextFormatter>互動文字配置用戶端透過一組回呼方法。 它需要用戶端提供這些方法的實作中<xref:System.Windows.Media.TextFormatting.TextSource>類別。 下圖說明用戶端應用程式之間的文字版面配置互動和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
+ 不同於傳統的文字 API，<xref:System.Windows.Media.TextFormatting.TextFormatter>互動文字配置用戶端透過一組回呼方法。 它需要用戶端提供這些方法的實作中<xref:System.Windows.Media.TextFormatting.TextSource>類別。 下圖說明用戶端應用程式之間的文字版面配置互動和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
   
  ![文字配置用戶端和 TextFormatter 的圖表](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   

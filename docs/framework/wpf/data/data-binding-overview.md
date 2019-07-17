@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 3e4438b309d4e443d07a6c2db2310733927fd38b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 86178f3e49dc25bee57b0896f2ebc2cf729b69bd
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625339"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238472"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -28,7 +28,7 @@ ms.locfileid: "64625339"
 ## <a name="what-is-data-binding"></a>資料繫結是什麼？  
  資料繫結是指在應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 與商務邏輯之間建立連接的程序。 如果繫結具有正確的設定而且資料提供了適當的通知，則當資料變更其值時，繫結至資料的元素就會自動反映變更。 資料繫結也代表在元素資料的外部表示變更時，基礎資料也會自動更新以反映變更。 例如，如果使用者編輯中的值<xref:System.Windows.Controls.TextBox>項目，基礎資料值會自動更新以反映該變更。  
   
- 一個資料繫結的常見用法是將伺服器或本機組態資料，放入表單或其他 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 控制項中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中會擴充這個概念，以包含相當多屬性對各種資料來源的繫結。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，元素的相依性屬性可以繫結到 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件 (包括 [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 物件或與 Web 服務和 Web 屬性關聯的物件) 和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料。  
+ 一個資料繫結的常見用法是將伺服器或本機組態資料，放入表單或其他 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 控制項中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中會擴充這個概念，以包含相當多屬性對各種資料來源的繫結。 在  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，可以繫結至相依性屬性的項目[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]物件 （包括 ADO.NET 或 Web 服務和 Web 內容相關聯的物件） 和[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。  
   
  如需資料繫結的範例，請參考下列來自[資料繫結示範](https://go.microsoft.com/fwlink/?LinkID=163703) 的應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]：  
   
@@ -46,11 +46,11 @@ ms.locfileid: "64625339"
   
 - 型別*StartDate*屬性是<xref:System.DateTime>，它會傳回包含時間的毫秒數的日期。 這個應用程式中有使用自訂轉換器，因此顯示較短的日期字串。 [資料轉換](#data_conversion)一節會提供轉換器的相關資訊。  
   
- 當使用者按一下 [Add Product (加入產品)] 按鈕時，會出現下列表單：  
+ 當使用者按一下 [Add Product (加入產品)]  按鈕時，會出現下列表單：  
   
  ![加入產品清單頁面](./media/databinding-demo-addproductlisting.png "DataBinding_Demo_AddProductListing")  
   
- 使用者可以編輯表單中的欄位、使用簡短預覽和更為詳盡的預覽窗格來預覽產品清單，然後再按一下 [Submit (提交)] 以加入新產品清單。 任何現有的群組、篩選和排序功能會套用到新項目上。 在這種特定情形下，輸入上圖的項目會在 [Computer (電腦)] 分類內顯示為第二個項目。  
+ 使用者可以編輯表單中的欄位、使用簡短預覽和更為詳盡的預覽窗格來預覽產品清單，然後再按一下 [Submit (提交)]  以加入新產品清單。 任何現有的群組、篩選和排序功能會套用到新項目上。 在這種特定情形下，輸入上圖的項目會在 [Computer (電腦)]  分類內顯示為第二個項目。  
   
  不會顯示此映像會在提供的驗證邏輯*Start Date* <xref:System.Windows.Controls.TextBox>。 如果使用者輸入無效的日期 （無效的格式或過去的日期），就會通知使用者，與<xref:System.Windows.Controls.ToolTip>和旁的紅色驚嘆號<xref:System.Windows.Controls.TextBox>。 [資料驗證](#data_validation)一節會討論如何建立驗證邏輯。  
   
@@ -68,9 +68,9 @@ ms.locfileid: "64625339"
   
 - 目標屬性必須是相依性屬性。 大部分<xref:System.Windows.UIElement>屬性是相依性屬性，而大部分的相依性屬性，唯讀的除了預設支援資料繫結。 (僅<xref:System.Windows.DependencyObject>類型可以定義相依性屬性以及所有<xref:System.Windows.UIElement>均衍生自<xref:System.Windows.DependencyObject>。)  
   
-- 雖然圖中未指出，但應該注意的是，繫結來源物件不限於自訂的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結支援 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 格式的資料。 若要提供一些範例，可能會繫結來源<xref:System.Windows.UIElement>，任何清單物件、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]相關聯的物件[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]資料或 Web 服務或 XmlNode，其中包含您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)。  
+- 雖然圖中未指出，但應該注意的是，繫結來源物件不限於自訂的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結支援 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 格式的資料。 若要提供一些範例，可能會繫結來源<xref:System.Windows.UIElement>，任何清單物件、 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ADO.NET 資料或 Web 服務相關聯的物件或 XmlNode，其中包含您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)。  
   
- 當您閱讀其他[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 主題時有一點很重要，請記住在建立繫結時，是將繫結目標「繫結到」繫結來源。 例如，如果您要顯示一些基本[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]中的資料<xref:System.Windows.Controls.ListBox>使用資料繫結，您要繫結您<xref:System.Windows.Controls.ListBox>到[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。  
+ 當您閱讀其他[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 主題時有一點很重要，請記住在建立繫結時，是將繫結目標「繫結到」  繫結來源。 例如，如果您要顯示一些基本[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]中的資料<xref:System.Windows.Controls.ListBox>使用資料繫結，您要繫結您<xref:System.Windows.Controls.ListBox>到[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。  
   
  若要建立繫結，您使用<xref:System.Windows.Data.Binding>物件。 本主題的其餘部分討論的許多概念與相關聯，以及一些屬性和使用方式<xref:System.Windows.Data.Binding>物件。  
   
@@ -254,7 +254,7 @@ ms.locfileid: "64625339"
   
  下表顯示哪些檢視資料類型會建立為預設集合檢視，或藉由<xref:System.Windows.Data.CollectionViewSource>根據來源集合型別。  
   
-|來源集合型別|集合檢視型別|注意|  
+|來源集合型別|集合檢視型別|附註|  
 |----------------------------|--------------------------|-----------|  
 |<xref:System.Collections.IEnumerable>|根據內部型別 <xref:System.Windows.Data.CollectionView>|無法群組項目。|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|最快。|  
@@ -402,7 +402,7 @@ ms.locfileid: "64625339"
 ### <a name="validation-process"></a>驗證程序  
  通常驗證發生的時機，是將目標的值傳輸到繫結來源屬性的時候。 這會發生<xref:System.Windows.Data.BindingMode.TwoWay>和<xref:System.Windows.Data.BindingMode.OneWayToSource>繫結。 再次提醒您，造成來源更新的原因而定的值<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性中所述[觸發來源更新](#what_triggers_source_updates)一節。  
   
- 以下描述「驗證」程序。 請注意，如果在此程序執行期間發生驗證錯誤或其他型別錯誤，程序就會中止。  
+ 以下描述「驗證」  程序。 請注意，如果在此程序執行期間發生驗證錯誤或其他型別錯誤，程序就會中止。  
   
 1. 繫結引擎會檢查是否有任何自訂<xref:System.Windows.Controls.ValidationRule>物件定義其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.RawProposedValue>該<xref:System.Windows.Data.Binding>，它會在此情況下呼叫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，在每個<xref:System.Windows.Controls.ValidationRule>直到其中一個執行時發生錯誤或直到它們全部都通過之後。  
   

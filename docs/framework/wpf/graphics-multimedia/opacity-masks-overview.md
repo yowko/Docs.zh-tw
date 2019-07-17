@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 3ee02eca9719f4ffa3ee0c165ad2541c9ffd085e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7554471d8b812b60e0b1aeb6dd3096b542ca44d6
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625263"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238410"
 ---
 # <a name="opacity-masks-overview"></a>不透明度遮罩概觀
 不透明度遮罩可讓您將元素或視覺物件的一部分設定成透明或半透明。 若要建立不透明度遮罩，套用<xref:System.Windows.Media.Brush>要<xref:System.Windows.UIElement.OpacityMask%2A>元素的屬性或<xref:System.Windows.Media.Visual>。  筆刷會對應到元素或視覺物件，且每個筆刷像素的不透明度值會用來決定元素或視覺物件每個對應像素最終的不透明度。  
@@ -69,15 +69,15 @@ DrawingBrush 不透明度遮罩範例
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>指定不透明度遮罩的漸層停駐點  
  在上一個範例中，系統定義的色彩<xref:System.Windows.Media.Colors.Black%2A>做為漸層開始色彩。 因為所有色彩<xref:System.Windows.Media.Colors>類別，除了<xref:System.Windows.Media.Colors.Transparent%2A>，是完全不透明，它們可以用來直接定義漸層停駐的不透明度遮罩的起始色彩。  
   
- 其他控制時定義為不透明遮罩的 alpha 值的詳細資訊，您可以指定使用的色彩的 alpha 色板[!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)]標記，或使用十六進位標記法<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>方法。  
+ 其他控制時定義為不透明遮罩的 alpha 值的詳細資訊，您可以指定在標記中使用 ARGB 十六進位標記法或使用的色彩的 alpha 色板<xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType>方法。  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>在 "XAML" 中指定色彩不透明度  
- 在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中，您會使用 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六進位標記法來指定個別色彩的不透明度。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六進位標記法使用下列語法：  
+ 在  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，您使用 ARGB 十六進位標記法來指定個別色彩的不透明度。 ARGB 十六進位標記法使用下列語法：  
   
  `#` **aa** *rrggbb*  
   
- 上一行中的 *aa* 代表用來指定色彩不透明度的兩位數十六進位值。 *rr*、*gg* 和 *bb* 分別代表用來指定色彩中紅色、綠色及藍色量的兩位數十六進位值。 每個十六進位位數的值可以是 0-9 或 A-F。 0 是最小的值，F 是最大的值。 Alpha 值為 00 時會指定完全透明的色彩，而 Alpha 值為 FF 時則會建立完全不透明的色彩。  在下列範例中，會使用十六進位 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 標記法指定兩個色彩。 第一個是完全不透明，而第二個是完全透明。  
+ 上一行中的 *aa* 代表用來指定色彩不透明度的兩位數十六進位值。 *rr*、*gg* 和 *bb* 分別代表用來指定色彩中紅色、綠色及藍色量的兩位數十六進位值。 每個十六進位位數的值可以是 0-9 或 A-F。 0 是最小的值，F 是最大的值。 Alpha 值為 00 時會指定完全透明的色彩，而 Alpha 值為 FF 時則會建立完全不透明的色彩。  在下列範例中，用來指定兩個色彩的十六進位 ARGB 標記法。 第一個是完全不透明，而第二個是完全透明。  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   

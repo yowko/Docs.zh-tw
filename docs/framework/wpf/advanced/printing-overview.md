@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: acfc252708bf8be7abacb1adc2968122501315a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bb3737ca879f3687b25b021348da0c50f663c58e
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860204"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238676"
 ---
 # <a name="printing-overview"></a>列印概觀
 使用 Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應用程式開發人員有新豐富的列印和列印系統管理 Api。 藉由 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，某些列印系統增強功能也可供建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的開發人員和使用 Unmanaged 程式碼的開發人員使用。 這項新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 檔案格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 列印路徑。  
@@ -69,7 +69,7 @@ ms.locfileid: "67860204"
  ![螢幕擷取畫面顯示 XPS 列印系統。](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>基本 XPS 列印  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 定義基本和進階的 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 這些應用程式，不需要大量的列印自訂或存取完整的 XPS 功能集，基本的列印支援會出現。 基本列印支援由需要最少組態的列印對話方塊控制項公開，並具有類似 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。 可以使用這個簡化的列印模型時，有許多的 XPS 功能。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 定義同時基本和進階的 API。 這些應用程式，不需要大量的列印自訂或存取完整的 XPS 功能集，基本的列印支援會出現。 基本列印支援由需要最少組態的列印對話方塊控制項公開，並具有類似 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。 可以使用這個簡化的列印模型時，有許多的 XPS 功能。  
   
 #### <a name="printdialog"></a>PrintDialog  
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>控制項提供的單一進入點[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，設定及 XPS 作業提交。 如需如何具現化及使用控制項的相關資訊，請參閱[叫用列印對話方塊](how-to-invoke-a-print-dialog.md)。  

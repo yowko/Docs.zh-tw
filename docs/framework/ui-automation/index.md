@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 8903b6a47aa2800ef4fa4fba2cd2537d2b3896e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b6d594a3d92a7b666e52c92221d60956e718b42
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033237"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237545"
 ---
 # <a name="accessibility"></a>協助工具選項
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "62033237"
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 的新協助工具架構。 它利用程式設計方式存取[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 的相關資訊，來解決輔助技術產品和自動化測試架構的需求。 此外，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 可讓控制項和應用程式開發人員提供其產品以供存取。  
   
- 此文件描述 Managed 程式碼的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]。 如需 C++ 中 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 程式設計的資訊，請參閱 [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal) (Win32 應用程式的使用者介面自動化)。  
+ 本文件說明[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用於 managed 程式碼的 API。 如需 C++ 中 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 程式設計的資訊，請參閱 [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal) (Win32 應用程式的使用者介面自動化)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [協助工具最佳做法](../../../docs/framework/ui-automation/accessibility-best-practices.md)  

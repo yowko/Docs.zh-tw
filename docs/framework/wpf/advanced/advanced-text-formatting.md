@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 4ed6dd33efd5fdc5e2c61df4173bec5cc2f0d807
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 0d3b44007524f502d8393d1dc1834142090a7a15
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859690"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238651"
 ---
 # <a name="advanced-text-formatting"></a>進階文字格式化
 Windows Presentation Foundation (WPF) 提供一組強大的 Api 在您的應用程式中包含文字。 版面配置並[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]Api，例如<xref:System.Windows.Controls.TextBlock>、 提供最常見和一般用途的文字表示的項目。 繪製的 Api，例如<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，提供在繪圖中包括格式化的文字的方法。 在最進階層級，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供可延伸的文字格式設定引擎，以控制文字表示，例如文字存放區管理、 文字執行格式設定管理，以及內嵌的物件管理的各個層面。  
@@ -38,7 +38,7 @@ Windows Presentation Foundation (WPF) 提供一組強大的 Api 在您的應用�
 ## <a name="using-the-text-formatter"></a>使用文字格式子  
  <xref:System.Windows.Media.TextFormatting.TextFormatter> 是[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]文字格式設定引擎，並提供格式設定和分隔文字行的服務。 文字格式子可處理不同的文字字元格式和段落樣式，且包含國際文字版面配置的支援。  
   
- 不同於傳統的文字[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，則<xref:System.Windows.Media.TextFormatting.TextFormatter>互動文字配置用戶端透過一組回呼方法。 它需要用戶端提供這些方法的實作中<xref:System.Windows.Media.TextFormatting.TextSource>類別。 下圖說明用戶端應用程式之間的文字版面配置互動和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
+ 不同於傳統的文字 API，<xref:System.Windows.Media.TextFormatting.TextFormatter>互動文字配置用戶端透過一組回呼方法。 它需要用戶端提供這些方法的實作中<xref:System.Windows.Media.TextFormatting.TextSource>類別。 下圖說明用戶端應用程式之間的文字版面配置互動和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
   
  ![文字配置用戶端和 TextFormatter 的圖表](./media/advanced-text-formatting/text-layout-textformatter-interaction.png)  
   
