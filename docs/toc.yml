@@ -203,6 +203,14 @@
     - name: 教學課程
       href: core/tutorials/index.md
       items:
+        - name: CLI 的範本
+          items:
+            - name: 1 - 建立項目範本
+              href: core/tutorials/cli-templates-create-item-template.md
+            - name: 2 - 建立專案範本
+              href: core/tutorials/cli-templates-create-project-template.md
+            - name: 3 - 建立範本套件
+              href: core/tutorials/cli-templates-create-template-pack.md
         - name: 開始在 macOS 上使用 .NET Core
           href: core/tutorials/using-on-macos.md
         - name: 使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
@@ -219,8 +227,6 @@
           href: core/tutorials/aspnet-core.md
         - name: 從機器碼裝載 .NET Core
           href: core/tutorials/netcore-hosting.md
-        - name: 建立 dotnet new 的自訂範本
-          href: core/tutorials/create-custom-template.md
     - name: 套件、中繼套件和架構
       href: core/packages.md
     - name: CLI 的變更概觀
