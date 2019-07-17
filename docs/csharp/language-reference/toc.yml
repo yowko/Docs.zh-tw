@@ -207,8 +207,6 @@
               href: keywords/await.md
             - name: sizeof
               href: keywords/sizeof.md
-            - name: nameof
-              href: keywords/nameof.md
         - name: 存取關鍵字
           items:
             - name: base
@@ -333,6 +331,8 @@
         - name: ':: 運算子'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: nameof 運算子
+          href: operators/nameof.md
         - name: new 運算子
           href: operators/new-operator.md
         - name: stackalloc 運算子
