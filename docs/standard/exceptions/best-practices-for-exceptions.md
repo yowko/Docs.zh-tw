@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690654"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860157"
 ---
 # <a name="best-practices-for-exceptions"></a>例外狀況的最佳做法
 
@@ -80,7 +80,7 @@ ms.locfileid: "66690654"
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>在自訂例外狀況類別中包含三個建構函式
 
-當您建立自己的例外狀況類別時，請使用至少三個種常見的建構函式：預設建構函式、採用字串訊息的建構函式，以及採用字串訊息和內部例外狀況的建構函式。
+當您建立自己的例外狀況類別時，請使用至少三個種常見的建構函式：無參數建構函式、採用字串訊息的建構函式，以及採用字串訊息和內部例外狀況的建構函式。
 
 * <xref:System.Exception.%23ctor>，會使用預設值。
 
@@ -143,6 +143,14 @@ public void TransferFunds(Account from, Account to, decimal amount)
 }
 ```
 
+```vb
+Public Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
+    from.Withdrawal(amount)
+    ' If the deposit fails, the withdrawal shouldn't remain in effect.
+    [to].Deposit(amount)
+End Sub
+```
+
 上述的方法不直接擲回任何例外狀況，但必須以自我防禦的方式寫入，以便存款作業失敗時可以撤銷付款。
 
 處理這種情況的一個方式是攔截存款交易所擲回的任何例外狀況，並復原提款。
@@ -163,19 +171,43 @@ private static void TransferFunds(Account from, Account to, decimal amount)
 }
 ```
 
+```vb
+Private Shared Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
+    Dim withdrawalTrxID As String = from.Withdrawal(amount)
+    Try
+        [to].Deposit(amount)
+    Catch
+        from.RollbackTransaction(withdrawalTrxID)
+        Throw
+    End Try
+End Sub
+```
+
 此範例說明如何使用 `throw` 重新擲回原始的例外狀況，以方便呼叫端無須檢視 <xref:System.Exception.InnerException>屬性，就能輕鬆查看問題的實際原因。 另一種做法是擲回新的例外狀況，並包含原始例外狀況作為內部例外狀況：
 
 ```csharp
 catch (Exception ex)
 {
     from.RollbackTransaction(withdrawalTrxID);
-    throw new TransferFundsException("Withdrawal failed", innerException: ex)
+    throw new TransferFundsException("Withdrawal failed.", innerException: ex)
     {
         From = from,
         To = to,
         Amount = amount
     };
 }
+```
+
+```vb
+Catch ex As Exception
+    from.RollbackTransaction(withdrawalTrxID)
+    Throw New TransferFundsException("Withdrawal failed.", innerException:=ex) With
+    {
+        .From = from,
+        .[To] = [to],
+        .Amount = amount
+    }
+End Try
 ```
 
 ## <a name="see-also"></a>另請參閱

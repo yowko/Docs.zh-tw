@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610175"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660641"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
@@ -163,7 +163,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一物件包含**目錄**。 目錄是資料載入儲存、轉換、定型器和模型作業元件的處理站。 每個目錄物件都有建立不同類型元件的方法：
 
-||||
+|||||
 |-|-|-|-|
 |資料載入及儲存||<xref:Microsoft.ML.DataOperationsCatalog>||
 |資料準備||<xref:Microsoft.ML.TransformsCatalog>||
@@ -171,11 +171,11 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 ||多元分類|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||異常偵測|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||群集|<xref:Microsoft.ML.ClusteringCatalog>||
-||預測|<xref:Microsoft.ML.Forecasting>||
+||預測|<xref:Microsoft.ML.ForecastingCatalog>||
 ||排名|<xref:Microsoft.ML.RankingCatalog>||
 ||回復|<xref:Microsoft.ML.RegressionCatalog>||
-||建議|<xref:Microsoft.ML.RecommendationCatalog>|新增 Microsoft.ML.Recommender|
-||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|新增 Microsoft.ML.TimeSeries|
+||建議|<xref:Microsoft.ML.RecommendationCatalog>|新增 `Microsoft.ML.Recommender` NuGet 套件|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|新增 `Microsoft.ML.TimeSeries` NuGet 套件|
 |模型使用方式 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 您可以巡覽至上述每個類別的建立方法。 使用 Visual Studio，會透過 IntelliSense 顯示目錄。

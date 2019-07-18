@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c44971dfd65ee31657279daec2d34b8cfa8d4860
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 19e0524f4d40517f3e305b2397e628e0478da8f9
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410384"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803518"
 ---
 ### <a name="workflow-xoml-file-checksums-changed-from-md5-to-sha256"></a>工作流程 XOML 檔案總和檢查碼已從 MD5 變更為 SHA256
 
@@ -15,3 +15,4 @@ ms.locfileid: "67410384"
 |範圍|次要|
 |版本|4.8|
 |類型|正在重定目標|
+

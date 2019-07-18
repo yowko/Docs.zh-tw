@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2e2fd6f46a430424e6010adbe0662b5bd3db7ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 246e6572deefaf4546afe6fb5326ecc2286215a5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622668"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766817"
 ---
 # <a name="weak-references"></a>弱式參考
 在應用程式碼可以存取使用中物件時，記憶體回收行程無法透過應用程式回收該物件。 應用程式即具有物件的強式參考。  
@@ -35,9 +35,9 @@ ms.locfileid: "64622668"
   
 - Short  
   
-     透過記憶體回收回收物件時，簡短弱式參考的目標會變成 `null`。 弱式參考本身是 Managed 物件，而且很容易進行記憶體回收，就像任何其他 Managed 物件一樣。  簡短弱式參考是 <xref:System.WeakReference> 的預設建構函式。  
+     透過記憶體回收回收物件時，簡短弱式參考的目標會變成 `null`。 弱式參考本身是 Managed 物件，而且很容易進行記憶體回收，就像任何其他 Managed 物件一樣。  簡短弱式參考是 <xref:System.WeakReference> 的無參數建構函式。  
   
-- Long  
+- long  
   
      在呼叫物件的 <xref:System.Object.Finalize%2A> 方法之後，會保留完整弱式參考。 這樣會重建物件，但是物件的狀態仍然無法預測。 若要使用完整參考，請在 <xref:System.WeakReference> 建構函式中指定 `true`。  
   

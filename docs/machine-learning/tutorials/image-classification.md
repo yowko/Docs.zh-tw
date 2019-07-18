@@ -1,15 +1,15 @@
 ---
 title: 教學課程：重新定型 TensorFlow 影像分類器 - 傳輸學習
 description: 了解如何使用傳輸學習和 ML.NET 重新定型影像分類 TensorFlow 模型。 原始模型已經定型，以將個別影像分類。 重新定型之後，新模型會將影像組織為各種不同類別。
-ms.date: 06/12/2019
+ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539855"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804762"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>教學課程：運用傳輸學習與 ML.NET 重新定型 TensorFlow 影像分類器
 
@@ -43,7 +43,7 @@ ms.locfileid: "67539855"
 
 * [教學課程資產目錄 .ZIP 檔案](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
-* [InceptionV3 機器學習模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
+* [InceptionV1 機器學習模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>選取適當的機器學習工作
 
@@ -77,7 +77,7 @@ ms.locfileid: "67539855"
 
 您的影像分類模型會重複使用 [Inception model](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)，這是一個以 `ImageNet` 資料集進行定型的熱門影像辨識模型，其中 TensorFlow 模型會嘗試將影像分類為一千個類別中的其中一個類別，例如「雨傘」、「球衣」和「洗碗機」。
 
-`Inception v3 model` 可以被分類為[深度卷積神經網路](https://en.wikipedia.org/wiki/Convolutional_neural_network) \(英文\)，且可以在困難的辨識工作上取得相當合理的效能，並在某些領域上達到與人類相符甚至超越人類的效能。 該模型/演算法是由數個研究者根據下列原始論文所開發：["Rethinking the Inception Architecture for Computer Vision” by Szegedy, et. al.](https://arxiv.org/abs/1512.00567) \(英文\)
+`Inception v1 model` 可以被分類為[深度卷積神經網路](https://en.wikipedia.org/wiki/Convolutional_neural_network) \(英文\)，且可以在困難的辨識工作上取得相當合理的效能，並在某些領域上達到與人類相符甚至超越人類的效能。 該模型/演算法是由數個研究者根據下列原始論文所開發：["Rethinking the Inception Architecture for Computer Vision” by Szegedy, et. al.](https://arxiv.org/abs/1512.00567) \(英文\)
 
 由於 `Inception model` 已經搭配數以千計的不同影像預先進行定型，其包含影像識別所需的[影像特徵](https://en.wikipedia.org/wiki/Feature_(computer_vision)) \(英文\)。 較低的影像特徵層能辨識簡單的特徵 (例如邊緣)，而較高的層則能辨識更加複雜的特徵 (例如形狀)。 最終層會針對較小許多的資料集進行定型，因為您是以已經了解如何分類影像的預先定型模型作為開始。 隨著您的模型允許您將影像分類至兩個以上的類別，這將會成為[多類別分類器](../resources/tasks.md#multiclass-classification)的範例。 
 

@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634633"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782637"
 ---
 # <a name="common-type-system"></a>一般類型系統
 一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。 一般型別系統可執行下列功能：  
@@ -86,7 +86,7 @@ ms.locfileid: "64634633"
   
  沒有實作的類別成員是抽象成員。 有一個或多個抽象成員的類別本身就是抽象的；所以無法建立它的新執行個體。 有些以執行階段為目標的語言即使沒有任何抽象的成員，也允許您將類別標記為抽象。 當您需要封裝一組衍生類別在適當時可繼承或覆寫的基本功能時，可以使用抽象類別 (Abstract Class)。 非抽象的類別即稱為實體類別 (Concrete Class)。  
   
- 一個類別可以實作任意數量的介面，但是除了所有類別都會隱含繼承的來源 <xref:System.Object?displayProperty=nameWithType> 以外，只能繼承一個基底類別。 所有類別都至少必須有一個建構函式，用來初始化類別的新執行個體。 如果您沒有明確定義建構函式，大多數的編譯器會自動提供預設 (無參數) 建構函式。  
+ 一個類別可以實作任意數量的介面，但是除了所有類別都會隱含繼承的來源 <xref:System.Object?displayProperty=nameWithType> 以外，只能繼承一個基底類別。 所有類別都至少必須有一個建構函式，用來初始化類別的新執行個體。 如果您沒有明確定義建構函式，大多數的編譯器會自動提供無參數建構函式。  
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>結構  
@@ -273,9 +273,9 @@ ms.locfileid: "64634633"
 ### <a name="constructors"></a>建構函式  
  建構函式是一種特殊方法，它會建立類別或結構的新執行個體。 與其他任何方法一樣，建構函式可以包含參數，不過建構函式沒有傳回值，換言之，它們傳回 `void`。  
   
- 如果類別的原始程式碼沒有明確定義建構函式，則編譯器會包含預設 (無參數) 建構函式。 不過，如果類別的原始程式碼只定義參數化建構函式，Visual Basic 和 C# 編譯器並不會產生無參數建構函式。  
+ 如果類別的原始程式碼沒有明確定義建構函式，則編譯器會包含無參數建構函式。 不過，如果類別的原始程式碼只定義參數化建構函式，Visual Basic 和 C# 編譯器並不會產生無參數建構函式。  
   
- 如果結構的原始程式碼定義建構函式，它們必須是參數化建構函式；結構無法定義預設 (無參數) 建構函式，而且編譯器不會產生結構或其他實值型別的無參數建構函式。 所有實值型別都有隱含的預設建構函式。 這個建構函式是由 Common Language Runtime 實作，會將結構的所有欄位初始化為其預設值。  
+ 如果結構的原始程式碼已定義建構函式，它們必須是參數化建構函式；結構並無法定義無參數建構函式，而且編譯器不會產生結構或其他實值型別的無參數建構函式。 所有實值型別都有隱含的無參數建構函式。 這個建構函式是由 Common Language Runtime 實作，會將結構的所有欄位初始化為其預設值。  
   
 <a name="Events"></a>   
 ### <a name="events"></a>事件  

@@ -4,12 +4,12 @@ description: 尋找資源以了解如何在 Windows、Linux 和 macOS 上建置 
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977160"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802305"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -34,7 +34,7 @@ dotnet run --project sample1
 Hello World!
 ```
 
-恭喜您！ 您已建立簡單的 .NET Core 應用程式。 您也可以使用 [Visual Studio Code](tutorials/with-visual-studio-code.md)、[Visual Studio 2017](tutorials/with-visual-studio.md) (僅限 Windows) 或 [Visual Studio for Mac](tutorials/using-on-mac-vs.md) (僅限 macOS) 來建立 .NET Core 應用程式。
+恭喜您！ 您已建立簡單的 .NET Core 應用程式。 您也可以使用 [Visual Studio Code](tutorials/with-visual-studio-code.md)、[Visual Studio](tutorials/with-visual-studio.md) (僅限 Windows) 或 [Visual Studio for Mac](tutorials/using-on-mac-vs.md) (僅限 macOS) 建立 .NET Core 應用程式。
 
 ## <a name="tutorials"></a>教學課程
 

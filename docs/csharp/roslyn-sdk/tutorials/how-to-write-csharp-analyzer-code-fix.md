@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 1a4280741650b41174f93c4403008ee3522adbe6
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870554"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -18,9 +18,10 @@ ms.locfileid: "65452701"
 
 ## <a name="prerequisites"></a>必要條件
 
-* [Visual Studio 2017](https://www.visualstudio.com/downloads)
+* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+* [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-您必須安裝 **.NET Compiler Platform SDK**：
+您必須透過 Visual Studio 安裝程式來安裝 **.NET Compiler Platform SDK**：
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -50,8 +51,8 @@ Console.WriteLine(x);
 
 其中涉及用以判斷變數是否可設為常數的分析，這需要進行語法分析、初始設定式運算式的常數分析，和資料流程分析，以確保一律不會寫入變數。 .NET Compiler Platform 所提供的 API 可讓您更輕鬆地執行這項分析。 第一個步驟是建立新的 C# **具有程式碼修正的分析器**專案。
 
-* 在 Visual Studio 中選擇 [檔案] > [新增] > [專案...]，以顯示 [新增專案] 對話方塊。
-* 在 [Visual C# > 擴充性] 下方，選擇 [具有程式碼修正的分析器 (.NET Standard)]。
+* 在 Visual Studio 中選擇 [檔案] > [新增] > [專案...]  ，以顯示 [新增專案] 對話方塊。
+* 在 [Visual C# > 擴充性]  下方，選擇 [具有程式碼修正的分析器 (.NET Standard)]  。
 * 將您的專案命名為 "**MakeConst**"，然後按一下 [確定]。
 
 具有程式碼修正範本的分析器會建立三個專案：一個包含分析器和程式碼修正，第二個是單元測試專案，第三個則是 VSIX 專案。 預設啟始專案為 VSIX 專案。 按 **F5** 以啟動 VSIX 專案。 這會啟動已載入新分析器的第二個 Visual Studio 執行個體。
@@ -92,7 +93,7 @@ Console.WriteLine(x);
 * 將 `AnalyzerMessageFormat` 變更為「可設為常數」。
 * 將 `AnalyzerDescription` 變更為「設為常數」。
 
-此外，請將 [存取修飾詞] 下拉式清單變更為 `public`。 這可以讓這些常數在單元測試中更易於使用。 完成作業後，資源編輯器應會如下圖所示：
+此外，請將 [存取修飾詞]  下拉式清單變更為 `public`。 這可以讓這些常數在單元測試中更易於使用。 完成作業後，資源編輯器應會如下圖所示：
 
 ![更新字串資源](media/how-to-write-csharp-analyzer-code-fix/update-string-resources.png)
 
@@ -309,7 +310,7 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 [!code-csharp[string constants for fix test](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-執行這兩項測試，並確定可通過測試。 在 Visual Studio 中選取 [測試] > [視窗] > [測試總管]，以開啟 [測試總管]。  按 [全部執行] 連結。
+執行這兩項測試，並確定可通過測試。 在 Visual Studio 中選取 [測試]   > [視窗]   > [測試總管]  ，以開啟 [測試總管]  。  按 [全部執行]  連結。
 
 ## <a name="create-tests-for-valid-declarations"></a>建立有效宣告的測試
 

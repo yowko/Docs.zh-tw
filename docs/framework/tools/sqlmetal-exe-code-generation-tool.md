@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 56fed00ec049fd2746d5b07b9926b8abda998260
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610543"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742435"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
 SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 元件產生程式碼及對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
@@ -28,7 +28,7 @@ SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../..
  此工具會自動與 Visual Studio 一起安裝。 根據預設，這個檔案位於 `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin。 如果您沒有安裝 Visual Studio，您也可以下載 [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)以取得 SQLMetal 檔案。  
   
 > [!NOTE]
->  使用 Visual Studio 的開發人員也可以使用 [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] 來產生實體類別。 命令列方法會針對大型資料庫做適當調整。 由於 SqlMetal 是命令列工具，因此您可以在建置處理序中使用它。  
+>  使用 Visual Studio 的開發人員也可以使用物件關聯式設計工具來產生實體類別。 命令列方法會針對大型資料庫做適當調整。 由於 SqlMetal 是命令列工具，因此您可以在建置處理序中使用它。  
   
  若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。在命令提示字元中，鍵入下列命令：  
   

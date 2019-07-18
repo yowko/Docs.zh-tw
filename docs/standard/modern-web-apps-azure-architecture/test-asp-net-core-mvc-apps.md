@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463705"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804712"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -20,7 +20,7 @@ ms.locfileid: "58463705"
 
 ## <a name="kinds-of-automated-tests"></a>自動化測試的種類
 
-軟體應用程式自動化測試有許多種類的。 最簡單且最低層級的測試為單元測試。 在稍高層級有整合測試與功能測試。 其他種類的測試如 UI 測試、負載測試、壓力測試和煙霧測試，則不在此文件討論範圍內。
+軟體應用程式自動化測試有許多種類的。 最簡單且最低層級的測試為單元測試。 在稍高層級有整合測試與功能測試。 其他種類的測試如 UI 測試、負載測試、壓力測試和煙霧測試，則不在本文件討論範圍內。
 
 ### <a name="unit-tests"></a>單元測試
 
@@ -34,7 +34,7 @@ ms.locfileid: "58463705"
 
 整合測試通常會有比單元測試更複雜的設定與清除程序。 例如，針對實際資料庫的整合測試，需要一種能在每次測試之前將資料庫傳回已知狀態的方法。 隨著新測試的新增和資料庫結構描述發展出的生產，這些測試指令碼的大小和複雜程度都會增加。 在許多大型系統中，簽入共用原始檔控制的變更之前，在開發人員工作站上執行完整的整合測試套件並不切實際。 在這些情況下，整合測試可能會在組建伺服器上執行。
 
-LocalFileImageService 實作類別，會實作從指定識別碼之特定文件夾中擷取和傳回影像檔位元數的邏輯：
+`LocalFileImageService` 實作類別會實作從指定識別碼之特定資料中擷取和傳回映像檔位元數的邏輯：
 
 ```csharp
 public class LocalFileImageService : IImageService
@@ -147,7 +147,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-對此方法進行單元測試很困難，因為它直接相依於 System.IO.File，用來從檔案系統中進行讀取。 您可以測試此行為以確保其按預期運作，但對實際檔案執行此操作的是整合測試。 值得注意的是，您無法對此方法的路由進行單元測試，您很快就會了解如何透過功能測試來執行此作業。
+對此方法進行單元測試很困難，因為其直接相依於 `System.IO.File`，用來從檔案系統中進行讀取。 您可以測試此行為以確保其按預期運作，但對實際檔案執行此操作的是整合測試。 值得注意的是，您無法對此方法的路由進行單元測試，您很快就會了解如何透過功能測試來執行此作業。
 
 如果您不能直接對檔案系統行為進行單元測試，且無法測試路由，那麼需要測試哪些內容？ 在重構使單元測試成為可能之後，您可能會發現一些測試案例和遺失的行為，例如錯誤處理。 找不到檔案時，該方法會執行什麼操作？ 它應該做什麼？ 在此範例中，重構的方法如下所示：
 
@@ -175,7 +175,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行整合測試
 
-您 ASP.NET Core 應用程式中大部分的整合測試都應該用來測試在您基礎結構專案中定義的服務及其他實作類型。 建議使用功能測試來測試 ASP.NET Core MVC 專案正確運作，該測試會對在測試主機中執行的應用程式執行。 在本章前述的〈整合測試〉一節中，有資料存取類別的整合測試範例。
+您 ASP.NET Core 應用程式中大部分的整合測試都應該用來測試在您基礎結構專案中定義的服務及其他實作類型。 例如，您可以[測試 EF Core 是否成功更新，並從位於基礎結構專案中的資料存取類別中，擷取您想要的資料](https://docs.microsoft.com/ef/core/miscellaneous/testing/)。 建議使用功能測試來測試 ASP.NET Core MVC 專案正確運作，該測試會對在測試主機中執行的應用程式執行。
 
 ## <a name="functional-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行功能測試
 
@@ -308,6 +308,15 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 ```
 
 此功能測試將執行完整的 ASP.NET Core MVC / Razor Pages 應用程式堆疊，包括可能存在的所有中介軟體、篩選器、繫結器等等。 它會確認指定的路由 ("/") 會傳回預期的成功狀態碼和 HTML 輸出。 因並未設定真實的網頁伺服器，所以避免了使用真實的網頁伺服器進行測試之脆弱度 (例如防火牆設定的問題)。 針對 TestServer 執行的功能測試通常比整合與單元測試要慢，但比在網路上執行測試之網頁伺服器的測試要快得多。 您應該使用功能測試確保應用程式的前端堆疊可如預期般運作。 當您在控制器或頁面中找到重複項目並透過新增篩選器來處理這些項目時，這些測試會特別有用。 在理想情況下，這種重構不會變更應用程式的行為，而一整套功能測試會確認合乎該情況。
+
+> ### <a name="references--test-aspnet-core-mvc-apps"></a>參考 - 測試 ASP.NET Core MVC 應用程式
+>
+> - **ASP.NET Core 中的測試**  
+>   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **單元測試命名慣例**  
+>   <https://ardalis.com/unit-test-naming-convention>
+> - **測試 EF Core**  
+>   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 
 >[!div class="step-by-step"]
 >[上一頁](work-with-data-in-asp-net-core-apps.md)

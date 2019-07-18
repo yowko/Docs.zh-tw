@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: ef9c9bab5c1cebb06edf934254507180e2197349
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 1277b35723777760deebb6606ddc90bd21e654ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306559"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744112"
 ---
 # <a name="-operator-c-reference"></a>= 運算子 (C# 參考)
 
@@ -64,7 +64,7 @@ x = x op y
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義型別無法多載指派運算子。 不過，使用者定義型別可以定義會轉換成另一型別的隱含轉換。 如此一來，便可將使用者定義型別的值指派給另一型別的變數、屬性或索引子元素。 如需詳細資訊，請參閱 [implicit](../keywords/implicit.md) 關鍵字一文。
+使用者定義型別無法多載指派運算子。 不過，使用者定義型別可以定義會轉換成另一型別的隱含轉換。 如此一來，便可將使用者定義型別的值指派給另一型別的變數、屬性或索引子元素。 如需詳細資訊，請參閱[使用者定義轉換運算子](user-defined-conversion-operators.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: f902d6a92f9d982dc00c3446f7b516c372f1a30e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 346cfccd076866e9c321974aaa8c8ddd367a17ea
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709516"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859582"
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
-使用 `async` 修飾詞可將方法、[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」。 下例定義名為 `ExampleMethodAsync` 的非同步方法： 
+使用 `async` 修飾詞可將方法、[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」  。 下例定義名為 `ExampleMethodAsync` 的非同步方法： 
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -70,7 +70,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](../../../csharp/language-reference/keywords/void.md)，應該只用於事件處理常式。
+- [void](../../../csharp/language-reference/keywords/void.md)。 除了用於事件處理常式以外的程式碼，通常不鼓勵使用 `async void` 方法，因為呼叫者無法 `await` 這些方法，且必須實作不同的機制來報告成功完成或錯誤狀況。
 - 自 C# 7.0 開始，任何具有可存取 `GetAwaiter` 方法的型別。 `System.Threading.Tasks.ValueTask<TResult>` 類型就是一個這種實作。 新增 NuGet 套件 `System.Threading.Tasks.Extensions` 即可使用。 
 
 非同步方法不可宣告任何 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數，也不可以有 [參考傳回值](../../programming-guide/classes-and-structs/ref-returns.md)，但可以呼叫有這類參數的方法。  

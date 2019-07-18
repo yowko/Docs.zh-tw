@@ -1,65 +1,70 @@
 ---
-title: 選取 C# 語言版本 - C# 指南
-description: 設定編譯器以特定的編譯器版本執行語法驗證
-ms.date: 02/28/2019
-ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+title: C# 語言版本控制 - C# 指南
+description: 了解如何根據您的專案決定 C# 語言版本，以及您可以手動調整的不同值。
+ms.date: 07/10/2019
+ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770876"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859608"
 ---
-# <a name="select-the-c-language-version"></a>選取 C# 語言版本
+# <a name="c-language-versioning"></a>C# 語言版本控制
 
-C# 編譯器會根據您專案的目標架構判斷預設語言版本。 當您的專案是以具有對應預覽語言版本為目標的預覽架構時，所使用的語言版本將會是預覽語言版本。 當您的專案不以預覽架構作為目標時，所使用的語言版本將會是最新的次要版本。
+C# 編譯器會根據您專案的目標架構判斷預設語言版本。 這是因為 C# 語言可能具有依賴於型別或執行階段元件的功能，而並非每個 .NET 實作都提供。 這也可確保建置專案的任何目標，您可以根據預設獲得最相容的語言版本。
 
-例如，在 .NET Core 3.0 的預覽期間，以 `netcoreapp3.0` 或 `netstandard2.1` (兩者皆處於預覽狀態) 為目標的任何物件都將會使用 C# 8.0 語言 (同樣也處於預覽狀態)。 以任何已發行版本為目標的專案將會使用 C# 7.3 (最新的已發行版本)。 此行為代表以 .NET Framework 為目標的任何專案都會使用最新版本 (C# 7.3)。 
+## <a name="defaults"></a>預設值
 
-此功能可讓在您開發環境中決定安裝新版本的 SDK 和工具，與在專案中決定納入新語言功能這兩件事分開。 您可以在組建電腦上安裝最新的 SDK 和工具。 每個專案可以設定為針對其組建使用特定版本的語言。 預設行為代表仰賴新類型或新 CLR 行為的任何語言功能，都只會在專案以那些架構作為目標時才會啟用。
+編譯器會根據下列規則決定預設值：
 
-您可以透過指定語言版本來覆寫預設行為。 有數種方法可以設定語言版本：
+|目標架構|版本|C# 語言版本預設值|
+|----------------|-------|---------------------------|
+|.NET Core|3.x|C# 8.0|
+|.NET Core|2.x|C# 7.3|
+|.NET Standard|all|C# 7.3|
+|.NET Framework|all|C# 7.3|
 
-- 依賴 [Visual Studio 快速動作](#visual-studio-quick-action)。
-- 在 [Visual Studio UI](#set-the-language-version-in-visual-studio) 中設定語言版本。
-- 手動編輯您的 [**.csproj** 檔案](#edit-the-csproj-file)。
+## <a name="default-for-previews"></a>預設為預覽
+
+當您的專案是以具有對應預覽語言版本為目標的預覽架構時，所使用的語言版本將會是預覽語言版本。 這能確保可讓您利用最新功能，保證可在任何環境中使用該預覽，而不會影響對已發行之 .NET Core 版本為目標的專案。
+
+## <a name="overriding-a-default"></a>覆寫預設值
+
+如果您必須明確指定您的 C# 版本，您可以透過數種方式進行：
+
+- 手動編輯您的[專案檔](#edit-the-project-file)。
 - 針對[子目錄中的多個專案](#configure-multiple-projects)設定語言版本。
 - 設定 [`-langversion`編譯器選項](#set-the-langversion-compiler-option)。
 
-## <a name="visual-studio-quick-action"></a>Visual Studio 快速動作
+### <a name="edit-the-project-file"></a>編輯專案檔
 
-Visual Studio 可協助您判斷您需要的語言版本。 如果您使用不適用於目前設定版本的語言功能，Visual Studio 會顯示可能的修正，以更新專案的語言版本。
-
-## <a name="set-the-language-version-in-visual-studio"></a>在 Visual Studio 中設定語言版本
-
-您可以在 Visual Studio 中設定版本。 以滑鼠右鍵按一下 [方案總管] 的專案節點，然後選取 [屬性]。 選取 [建置] 索引標籤並選取 [進階] 按鈕。 在下拉式清單中選取版本。 下圖顯示「最新」設定︰
-
-![進階組建設定的螢幕擷取畫面，您可以在其中指定語言版本](./media/configure-language-version/advanced-build-settings.png)
-
-> [!NOTE]
-> 如果您使用 Visual Studio IDE 來更新 csproj 檔，IDE 會為每個組建組態建立個別的節點。 您一般會在所有組建組態中設定相同的值，但您需要針對每個組建組態明確設定，或在修改此設定時選取 [所有組態]。 您會在 csproj 檔案中看到下列內容：
->
->```xml
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-></PropertyGroup>
->
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-> </PropertyGroup>
-> ```
->
-
-## <a name="edit-the-csproj-file"></a>編輯 csproj 檔案
-
-您可以在 **.csproj** 檔案中設定語言版本。 如下所示新增元素：
+您可以在專案檔中設定語言版本。 舉例而言，如果您明確希望存取預覽功能，您可以新增像這樣的項目：
 
 ```xml
 <PropertyGroup>
-   <LangVersion>latest</LangVersion>
+   <LangVersion>preview</LangVersion>
 </PropertyGroup>
 ```
 
-`latest` 值使用 C# 語言的最新次要版本。 有效值為：
+`preview` 值會使用編譯器支援的最新預覽 C# 語言。
+
+### <a name="configure-multiple-projects"></a>設定多個專案
+
+您可以建立 **Directory.Build.props** 檔案，其中包含 `<LangVersion>` 元素來設定多個目錄。 您通常會在解決方案目錄中進行。 將下列內容新增到解決方案目錄中的 **Directory.Build.props** 檔案：
+
+```xml
+<Project>
+ <PropertyGroup>
+   <LangVersion>preview</LangVersion>
+ </PropertyGroup>
+</Project>
+```
+
+現在，包含該檔案之目錄中每個子目錄的組建，將會使用預覽 C# 版本。 如需詳細資訊，請參閱[自訂組建](/visualstudio/msbuild/customize-your-build)。
+
+## <a name="c-language-version-reference"></a>C# 語言版本參考
+
+下表顯示所有目前的 C# 語言版本。 如果您的編譯器版本較舊，可能不一定了解每個值。 如果您安裝 .NET Core 3.0，您將能存取所列的所有項目。
 
 |值|意義|
 |------------|-------------|
@@ -77,21 +82,3 @@ Visual Studio 可協助您判斷您需要的語言版本。 如果您使用不�
 |3|編譯器只會接受 C# 3.0 或更低版本中所含的語法。|
 |ISO-2|編譯器只會接受 ISO/IEC 23270:2006 C# (2.0) 中所含的語法 |
 |ISO-1|編譯器只會接受 ISO/IEC 23270:2003 C# (1.0/1.2) 中所含的語法 |
-
-## <a name="configure-multiple-projects"></a>設定多個專案
-
-您可以建立 **Directory.Build.props** 檔案，其中包含 `<LangVersion>` 元素來設定多個目錄。 您通常會在解決方案目錄中進行。 將下列內容新增到解決方案目錄中的 **Directory.Build.props** 檔案：
-
-```xml
-<Project>
- <PropertyGroup>
-   <LangVersion>7.3</LangVersion>
- </PropertyGroup>
-</Project>
-```
-
-現在，包含該檔案之目錄的每個子目錄中的組建將會使用 C# 版本 7.3 語法。 如需詳細資訊，請參閱[自訂組建](/visualstudio/msbuild/customize-your-build)。
-
-## <a name="set-the-langversion-compiler-option"></a>設定 langversion 編譯器選項
-
-您可以使用 `-langversion` 命令列選項。 如需詳細資訊，請參閱 [-langversion](../language-reference/compiler-options/langversion-compiler-option.md) 編譯器選項的文章。 您可以藉由輸入 `csc -langversion:?`，看到有效值的清單。
