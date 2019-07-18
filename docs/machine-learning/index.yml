@@ -15,7 +15,7 @@ sections:
   - title: 開始使用
     items:
       - type: paragraph
-        text: 若要了解如何使用 ML.NET 建置機器學習服務應用程式，請閱讀<a href="/dotnet/machine-learning/how-does-mldotnet-work">什麼是 ML.NET 以及其運作方式為何</a>？ 或是透過將 <b>Microsoft.ML</b> Nuget 套件新增到您的應用程式來開始進行。
+        text: 若要了解如何使用 ML.NET 建置機器學習服務應用程式，請閱讀<a href="/dotnet/machine-learning/how-does-mldotnet-work">什麼是 ML.NET 以及其運作方式為何</a>？ 或是透過將 <b>Microsoft.ML</b> NuGet 套件新增到您的應用程式來開始進行。
   - title: 逐步教學課程
     items:
       - type: paragraph
