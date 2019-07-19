@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將應用程式當地語系化
+title: 作法：將應用程式當地語系化
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614614"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331563"
 ---
-# <a name="how-to-localize-an-application"></a>HOW TO：將應用程式當地語系化
+# <a name="how-to-localize-an-application"></a>作法：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
   
 > [!NOTE]
@@ -30,13 +30,13 @@ ms.locfileid: "64614614"
 ## <a name="requirements"></a>需求  
  在這個討論的過程中，您將會使用 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]，這是從命令列執行的編譯器。  
   
- 此外，也會指引您使用專案檔。 如需有關如何使用指示[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]和專案檔，請參閱[建置及部署](../app-development/building-and-deploying-wpf-applications.md)。  
+ 此外，也會指引您使用專案檔。 如需如何使用[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]和專案檔的指示, 請參閱[組建和部署](../app-development/building-and-deploying-wpf-applications.md)。  
   
  此討論中的所有範例都是使用 en-US (美式英文) 做為文化特性。 這可讓您逐步執行範例中的所有步驟，而不需要安裝不同的語言。  
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>建立範例應用程式  
- 在此步驟中，您將準備要當地語系化的應用程式。 在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 範例中有提供一個 HelloApp 範例，將用於此討論中的程式碼範例。 如果您想要使用此範例中，下載[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]從檔案[LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)。  
+ 在此步驟中，您將準備要當地語系化的應用程式。 在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 範例中有提供一個 HelloApp 範例，將用於此討論中的程式碼範例。 如果您想要使用此範例, 請從[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)下載檔案。  
   
 1. 將您的應用程式開發至您要當地語系化的開始點。  
   
@@ -44,15 +44,15 @@ ms.locfileid: "64614614"
   
      `<UICulture>en-US</UICulture>`  
   
-3. 將 UID 加入您的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。 UID 可用來追蹤對檔案的變更，以及識別必須轉譯的項目。 若要將 Uid 新增至您的檔案中，執行**updateuid**專案檔：  
+3. 將 UID 加入您的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。 UID 可用來追蹤對檔案的變更，以及識別必須轉譯的項目。 若要將 Uid 新增至您的檔案, 請在您的專案檔上執行**updateuid** :  
   
      **msbuild -t:updateuid helloapp.csproj**  
   
-     若要確認您有沒有遺漏或重複的 Uid，請執行**checkuid**:  
+     若要確認您沒有遺漏或重複的 Uid, 請執行**checkuid**:  
   
-     **msbuild -t:checkuid helloapp.csproj**  
+     **msbuild-t:checkuid helloapp .csproj**  
   
-     執行後**updateuid**，您的檔案應該會包含 Uid。 例如，在 HelloApp 的 Pane1.xaml 檔案中，您應該會發現下列項目：  
+     執行**updateuid**之後, 您的檔案應該會包含 uid。 例如，在 HelloApp 的 Pane1.xaml 檔案中，您應該會發現下列項目：  
   
      `<StackPanel x:Uid="StackPanel_1">`  
   
@@ -81,7 +81,7 @@ ms.locfileid: "64614614"
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>建置 LocBaml 工具  
   
-1. 建置 LocBaml 時所需的所有檔案都位在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 範例中。 從 C# 檔案下載[LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)。  
+1. 建置 LocBaml 時所需的所有檔案都位在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 範例中。 從C# [LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)下載檔案。  
   
 2. 從命令列執行專案檔 (locbaml.csproj)，以建置工具：  
   
@@ -91,24 +91,24 @@ ms.locfileid: "64614614"
   
 4. 當您執行 LocBaml 時，可指定的選項如下：  
   
-    - **剖析**或 **-p:** 剖析 Baml、 資源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]檔案，以產生.csv 或.txt 檔案。  
+    - **parse**或 **-p:** 剖析 Baml、資源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]檔案, 以產生 .csv 或 .txt 檔案。  
   
-    - **產生**或 **-g:** 使用轉譯的檔案，以產生當地語系化的二進位檔案。  
+    - **產生**或 **-g:** 使用翻譯的檔案產生當地語系化的二進位檔案。  
   
-    - **out**或是 **-o** {*filedirectory*] **:** 輸出檔名稱。  
+    - **out**或 **-o** {*filedirectory*] **:** 輸出檔名稱。  
   
-    - **文化特性**或是 **-cul** {*文化特性*] **:** 輸出組件的地區設定。  
+    - **culture**或 **-cul** {*culture*] **:** 輸出元件的地區設定。  
   
-    - **translation** or **-trans** {*translation.csv*] **:** 轉譯或當地語系化的檔案。  
+    - **轉譯**或 **-交易**{*翻譯 .csv*] **:** 已翻譯或當地語系化的檔案。  
   
-    - **asmpath**或是 **-asmpath:** {*filedirectory*] **:** 如果您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]程式碼包含自訂控制項，您必須提供**asmpath**自訂控制項組件。  
+    - **asmpath**或 **-asmpath:** {*filedirectory*] **:** 如果您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的程式碼包含自訂控制項, 您必須將**asmpath**提供給自訂控制群組件。  
   
-    - **nologo:** 會顯示無標誌或著作權資訊。  
+    - **nologo**不顯示標誌或著作權資訊。  
   
-    - **詳細資訊：** 顯示詳細模式資訊。  
+    - **冗余**顯示詳細資訊模式資訊。  
   
     > [!NOTE]
-    >  如果您執行此工具時，您需要的選項清單，輸入**LocBaml.exe**按 ENTER 鍵。  
+    >  如果您在執行此工具時需要選項清單, 請輸入**LocBaml** , 然後按 enter 鍵。  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>使用 LocBaml 來剖析檔案  
@@ -137,13 +137,13 @@ ms.locfileid: "64614614"
   
    2. **資源索引鍵**。 當地語系化的資源識別碼。  
   
-   3. **分類**。 值型別。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
+   3. **分類**。 值型別。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
   
-   4. **可讀性**. 當地語系化工具是否能夠讀取該值。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
+   4. **可讀性**. 當地語系化工具是否能夠讀取該值。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
   
-   5. **可修改性**. 當地語系化工具是否能夠修改該值。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
+   5. **可修改性**. 當地語系化工具是否能夠修改該值。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
   
-   6. **註解**。 該值的其他說明，有助於判斷某值當地語系化的方式。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
+   6. **註解**。 該值的其他說明，有助於判斷某值當地語系化的方式。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
   
    7. **值**。 要轉譯成所需文化特性的文字值。  
   
@@ -152,12 +152,12 @@ ms.locfileid: "64614614"
    |BAML 名稱|資源索引鍵|分類|可讀性|可修改性|註解|值|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|true|true||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|無|true|true||Hello World|
    |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|None|true|true||Goodbye World|
   
-   請注意，所有的值**註解**欄位不含任何值; 如果欄位沒有值，它是空的。 另請注意，第一個資料列中的項目無法讀取或修改，且"ignore"做為其**分類**一切都表示的值不是可當地語系化的值。  
+   請注意, [**批註**] 欄位的所有值都不包含任何值。如果欄位沒有值, 則會是空的。 另請注意, 第一個資料列中的專案既不是可讀取也不能修改, 而且具有「忽略」做為它的**分類**值, 全都表示此值無法當地語系化。  
   
-4. 為了幫助探索可當地語系化中的項目已剖析的檔案，特別是在大型檔案，您可以排序或篩選的項目**分類**，**可讀性**，和**可修改性**. 例如，您可以篩選出無法讀取及無法修改的值。  
+4. 為了方便探索已剖析檔案中的可當地語系化專案, 特別是在大型檔案中, 您可以依**類別**、**可讀性**和可**修改**性來排序或篩選項目。 例如，您可以篩選出無法讀取及無法修改的值。  
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>轉譯可當地語系化的內容  
@@ -165,7 +165,7 @@ ms.locfileid: "64614614"
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>使用 LocBaml 來產生新的 .resources.dll 檔案  
- 藉由使用 LocBaml 來剖析 HelloApp.resources.dll 而識別的內容已轉譯，且必須合併回原始應用程式。 使用**產生**或是 **-g**來產生新的選項.resources.dll 檔案。  
+ 藉由使用 LocBaml 來剖析 HelloApp.resources.dll 而識別的內容已轉譯，且必須合併回原始應用程式。 使用 [**產生**] 或 **-g**選項來產生新的 .resources .dll 檔案。  
   
 1. 使用下列語法來產生新的 HelloApp.resources.dll 檔案。 將文化特性標示為 en-US (/cul:en-US)。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "64614614"
   
 7. 若要測試新的附屬組件，您需要變更您的應用程式用來執行的文化特性。 您可以使用下列其中一種做法：  
   
-    - 變更您的作業系統地區設定 (**開始** &#124; **控制台中** &#124; **地區及語言選項**)。  
+    - 變更作業系統的地區設定 ([**開始** &#124; ] [**控制台** &#124; ] [**地區及語言選項**])。  
   
     - 在您的應用程式中，將下列程式碼加入 App.xaml.cs：  
   
@@ -199,7 +199,7 @@ ms.locfileid: "64614614"
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>使用 LocBaml 的一些秘訣  
   
-- 用來定義自訂控制項的所有相依組件，都必須複製到 LocBaml 的本機目錄中，或安裝至 GAC 中。 這是必要的，因為當地語系化 API 在讀取 [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)] 時，必須能夠存取這些相依組件。  
+- 用來定義自訂控制項的所有相依組件，都必須複製到 LocBaml 的本機目錄中，或安裝至 GAC 中。 這是必要的, 因為當地語系化 API 在讀取二進位 XAML (BAML) 時, 必須擁有相依元件的存取權。  
   
 - 如果主要組件已簽署，所產生的資源 DLL 也必須簽署，才能將其載入。  
   

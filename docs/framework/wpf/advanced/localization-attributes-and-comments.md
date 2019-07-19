@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: a242dc1f69c79b2c1a67c1a9235d3e942553caf1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598734"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330990"
 ---
 # <a name="localization-attributes-and-comments"></a>當地語系化屬性和註解
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼內的屬性，並由開發人員提供以提供當地語系化的規則和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊︰可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
@@ -23,7 +23,7 @@ ms.locfileid: "64598734"
   
 2. 在建置過程，您可以於 .proj 檔案中指定是否要保留組件中的自由格式當地語系化註解、去除註解的一部分，或去除所有註解。 去除的註解會放在不同的檔案中。 您可以使用 `LocalizationDirectivesToLocFile` 標記來指定選項，例如︰  
   
-     `<LocalizationDirectivesToLocFile>` <值> `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` <值>  `</LocalizationDirectivesToLocFile>`  
   
 3. 可以指派的值如下︰  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64598734"
   
     - **All** - 去除組件中的註解和屬性，並將它們放在個別 LocFile 中。  
   
-4. 從 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 擷取可當地語系化的資源時，[!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 當地語系化 API 會接受可當地語系化屬性。  
+4. 從 BAML 解壓縮可當地語系化的資源時, BAML 當地語系化 API 會遵守可當地語系化的屬性。  
   
 5. 稍後，只包含自由格式註解的當地語系化註解檔案會併入當地語系化程序。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "64598734"
   
  這些屬性可以依任何順序指定，並以空格分隔。 如果指定重複屬性，則最後一個屬性會覆寫先前的屬性。 例如，Localization.Attributes = "Unmodifiable Modifiable" 會將「可修改性」設定為「可修改」，因為它是最後一個值。  
   
- 可修改性和可讀性一看就懂。 分類屬性提供預先定義的分類，以在翻譯文字時協助當地語系化人員。 文字、標籤和標題這類分類會將如何翻譯文字的資訊提供給當地語系化人員。 也有特殊的類別：無、 繼承、 略過和 NeverLocalize。  
+ 可修改性和可讀性一看就懂。 分類屬性提供預先定義的分類，以在翻譯文字時協助當地語系化人員。 文字、標籤和標題這類分類會將如何翻譯文字的資訊提供給當地語系化人員。 另外還有特殊類別:[無]、[繼承]、[忽略] 和 [NeverLocalize]。  
   
  下表顯示特殊分類的意義。  
   

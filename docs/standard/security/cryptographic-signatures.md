@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15fd79a1289bd54b81db551abbdfcd63deef3e24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 862d520073dde1b935510bc7c68782c1204c6111
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795248"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331647"
 ---
 # <a name="cryptographic-signatures"></a>密碼編譯簽章
 
@@ -44,6 +44,8 @@ ms.locfileid: "61795248"
 ## <a name="generating-signatures"></a>產生簽章
 
 數位簽章通常適用於代表較大資料的雜湊值。 下列範例會將數位簽章套用到雜湊值。 首先，會建立 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別的新執行個體，來產生公開/私密金鑰組。 接著， <xref:System.Security.Cryptography.RSACryptoServiceProvider> 會傳遞至 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別的新執行個體。 如此會將私密金鑰轉移給 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>，它會實際執行數位簽署。 在您可以簽署雜湊碼之前，必須先指定要使用的雜湊演算法。 此範例使用 SHA1 演算法。 最後，會呼叫 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> 方法來執行簽章。
+
+由於 SHA1 的衝突問題, Microsoft 建議使用 SHA256 或更好的方式。
 
 ```vb
 Imports System
@@ -109,7 +111,7 @@ class Class1
 
 .NET Framework 會提供 <xref:System.Security.Cryptography.Xml> 命名空間，可讓您簽署 XML。 當您想要確認 XML 是來自特定來源時，簽署 XML 是很重要的。 例如，如果您使用會利用 XML 的股票報價服務，如果 XML 的來源已簽署，您便可以驗證它。
 
-這個命名空間中的類別遵照[XML 簽章語法和處理建議](https://www.w3.org/TR/xmldsig-core/)全球資訊網協會。
+這個命名空間中的類別會遵循來自全球資訊網協會的[XML 簽章語法和處理建議](https://www.w3.org/TR/xmldsig-core/)。
 
 [回到頁首](#top)
 
@@ -145,7 +147,7 @@ rsaKeyInfo.Exponent = exponentData;
 
 建立 <xref:System.Security.Cryptography.RSAParameters> 物件之後，您可以針對 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別的新執行個體，初始化至 <xref:System.Security.Cryptography.RSAParameters>中指定的值。 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 會接著傳遞給 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 的建構函式以傳送金鑰。
 
-下列範例將說明此程序。 在此範例中， `hashValue` 和 `signedHashValue` 是遠端合作對象所提供的位元組陣列。 遠端合作對象已使用 SHA1 演算法簽署 `hashValue` ，產生數位簽章 `signedHashValue`。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType>方法會驗證數位簽章是否有效，以及用來簽署`hashValue`。
+下列範例將說明此程序。 在此範例中， `hashValue` 和 `signedHashValue` 是遠端合作對象所提供的位元組陣列。 遠端合作對象已使用 SHA1 演算法簽署 `hashValue` ，產生數位簽章 `signedHashValue`。 方法會驗證數位簽章是否有效, 並已用來`hashValue`簽署。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType>
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()

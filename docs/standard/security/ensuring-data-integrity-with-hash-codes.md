@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16770ea938973372d1d94c628c42d5d5bf10c695
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0383dc3024352b9fac879532ab2789a60488c96
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795171"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331630"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>使用雜湊程式碼確定資料完整性
 雜湊值是可唯一識別資料的固定長度數值。 雜湊值以較小的數值代表大量的資料，所以可和數位簽章一起使用。 比起簽署更大的值，簽署雜湊值更有效率。 如需驗證透過不安全的通道傳送的資料完整性，雜湊值會相當有用。 可比較已接收資料的雜湊值和該資料傳送時的雜湊值，來判斷資料是否已變更。  
@@ -30,6 +30,8 @@ ms.locfileid: "61795171"
   
 ## <a name="generating-a-hash"></a>產生雜湊  
  Managed 雜湊類別可以雜湊位元組陣列或 Managed 資料流物件。 以下範例使用 SHA1 雜湊演算法來建立字串的雜湊值。 此範例會使用 <xref:System.Text.UnicodeEncoding> 類別，將字串轉換成使用 <xref:System.Security.Cryptography.SHA1Managed> 類別雜湊的位元組陣列。 接著會在主控台顯示雜湊值。  
+
+ 由於 SHA1 的衝突問題, Microsoft 建議使用 SHA256 或更好的方式。
   
  [!code-csharp[GeneratingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/generatingahash/cs/program.cs#1)]
  [!code-vb[GeneratingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/generatingahash/vb/program.vb#1)]  

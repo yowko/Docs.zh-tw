@@ -2,24 +2,24 @@
 title: 使用傳輸安全性來確保訊息的安全
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 6f93fa37c6f1d6a0d7396c7f9ea5e97b44d1dc92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603513"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331515"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用傳輸安全性來確保訊息的安全
 本節討論訊息佇列 (MSMQ) 的傳輸安全性，您可以使用這項傳輸安全性確保傳送至佇列之訊息的安全。  
   
 > [!NOTE]
->  之前閱讀本主題，建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
+>  閱讀本主題之前, 建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
- 下圖提供使用 Windows Communication Foundation (WCF) 的佇列通訊概念模型。 這張圖與用語可用來解釋傳輸安全性的概念。  
+ 下圖提供使用 Windows Communication Foundation (WCF) 之佇列通訊的概念模型。 這張圖與用語可用來解釋傳輸安全性的概念。  
   
- ![已排入佇列應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
+ ![排入佇列的應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式-佇列-圖表")  
   
- 當傳送佇列訊息時使用 WCF 與<xref:System.ServiceModel.NetMsmqBinding>，WCF 訊息會附加為 MSMQ 訊息本文。 傳輸安全性保障整個 MSMQ 訊息 (MSMQ 訊息標頭或屬性和訊息本文) 的安全。 因為是 MSMQ 訊息本文，使用傳輸安全性也會保護 WCF 訊息。  
+ 使用 wcf 與<xref:System.ServiceModel.NetMsmqBinding>傳送佇列訊息時, wcf 訊息會附加為 MSMQ 訊息的主體。 傳輸安全性保障整個 MSMQ 訊息 (MSMQ 訊息標頭或屬性和訊息本文) 的安全。 因為它是 MSMQ 訊息的主體, 所以使用傳輸安全性也會保護 WCF 訊息。  
   
  傳輸安全性的重要概念是用戶端必須滿足安全性要求，才能讓訊息傳至目標佇列。 這種概念與訊息安全性不同，訊息安全性保障訊息的目的是為了接收該訊息之應用程式的安全。  
   
@@ -38,19 +38,19 @@ ms.locfileid: "64603513"
   
  MSMQ 也能對未以 Active Directory 註冊的訊息附加憑證。 在這種狀況下，它能確保訊息使用附加的憑證進行簽章。  
   
- WCF 會提供這兩個選項為 MSMQ 傳輸安全性的一部分，而且是傳輸安全性的重要樞紐。  
+ WCF 同時提供這兩個選項做為 MSMQ 傳輸安全性的一部分, 而且是傳輸安全性的重要樞紐分析表。  
   
  根據預設，傳輸安全性為啟用狀態。  
   
  有了這些基礎之後，下列章節將詳述隨附於 <xref:System.ServiceModel.NetMsmqBinding> 與 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>的傳輸安全性屬性。  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 驗證模式  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 會要求使用 Windows 網域安全性或外部以憑證為基礎的安全性，藉此保障訊息的安全。 在這兩種驗證模式中，WCF 已排入佇列的傳輸通道會使用`CertificateValidationMode`服務組態中指定。 憑證驗證模式可指定用來檢查憑證效力的機制。  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 會要求使用 Windows 網域安全性或外部以憑證為基礎的安全性，藉此保障訊息的安全。 在這兩種驗證模式中, WCF 佇列傳輸通道`CertificateValidationMode`會使用服務設定中指定的。 憑證驗證模式可指定用來檢查憑證效力的機制。  
   
  啟用傳輸安全性後，預設的設定值為 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
   
 #### <a name="windows-domain-authentication-mode"></a>Windows 網域驗證模式  
- 若選擇使用 Windows 安全性，就需要整合 Active Directory。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是預設的傳輸安全性模式。 當此設定時，WCF 通道會將 Windows SID 附加至 MSMQ 訊息，並使用取自 Active Directory 的內部憑證。 MSMQ 使用此內部憑證確保訊息安全。 接收方的佇列管理員會使用 Active Directory 來搜尋並尋找符合的憑證以驗證用戶端，並檢查 SID 與用戶端是否相符。 若以 `WindowsDomain` 驗證模式內部產生的憑證或 `Certificate` 驗證模式外部產生的憑證附加於訊息時，那麼即使目標佇列未標示需要驗證，仍然會執行驗證步驟。  
+ 若選擇使用 Windows 安全性，就需要整合 Active Directory。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是預設的傳輸安全性模式。 當此設定時, WCF 通道會將 Windows SID 附加至 MSMQ 訊息, 並使用從 Active Directory 取得的內部憑證。 MSMQ 使用此內部憑證確保訊息安全。 接收方的佇列管理員會使用 Active Directory 來搜尋並尋找符合的憑證以驗證用戶端，並檢查 SID 與用戶端是否相符。 若以 `WindowsDomain` 驗證模式內部產生的憑證或 `Certificate` 驗證模式外部產生的憑證附加於訊息時，那麼即使目標佇列未標示需要驗證，仍然會執行驗證步驟。  
   
 > [!NOTE]
 >  建立佇列時，您可標示佇列為驗證佇列，表示佇列需要對傳送訊息至佇列的用戶端進行驗證。 如此可確保佇列只會接受已驗證的訊息。  
@@ -60,9 +60,9 @@ ms.locfileid: "64603513"
 #### <a name="certificate-authentication-mode"></a>憑證驗證模式  
  若選擇使用憑證驗證模式，則不需要整合 Active Directory。 事實上，在某些狀況下，例如以工作群組模式 (未整合 Active Directory) 安裝 MSMQ，或是使用 SOAP Reliable Messaging Protocol (SRMP) 傳輸通訊協定傳送訊息至佇列時，只有 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 起作用。  
   
- 傳送 WCF 訊息時<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>，WCF 通道不會將 Windows SID 附加至 MSMQ 訊息。 如此一來，目標佇列 ACL 必須允許 `Anonymous` 使用者存取，才可傳送至佇列。 接收方的佇列管理員會檢查 MSMQ 訊息是否使用憑證簽章，但不會進行任何驗證。  
+ 使用<xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>傳送 wcf 訊息時, wcf 通道不會將 Windows SID 附加至 MSMQ 訊息。 如此一來，目標佇列 ACL 必須允許 `Anonymous` 使用者存取，才可傳送至佇列。 接收方的佇列管理員會檢查 MSMQ 訊息是否使用憑證簽章，但不會進行任何驗證。  
   
- 其宣告和身分識別資訊的憑證中已填入<xref:System.ServiceModel.ServiceSecurityContext>WCF 已排入佇列的傳輸通道。 服務可使用此資訊執行它自己對寄件人的驗證。  
+ 具有宣告和身分識別資訊的憑證會<xref:System.ServiceModel.ServiceSecurityContext>由 WCF 佇列傳輸通道在中填入。 服務可使用此資訊執行它自己對寄件人的驗證。  
   
 ### <a name="msmq-protection-level"></a>MSMQ 保護層級  
  保護層級會說明如何保護 MSMQ 訊息以確保不會被竄改。 它是在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 屬性中指定。 預設值為 <xref:System.Net.Security.ProtectionLevel.Sign>。  
@@ -94,7 +94,9 @@ ms.locfileid: "64603513"
 ### <a name="msmq-hash-algorithm"></a>MSMQ 雜湊演算法  
  雜湊演算法會指定建立 MSMQ 訊息數位簽章所使用的演算法。 接收佇列管理員會使用與此相同的演算法，驗證 MSMQ 訊息。 只有在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 設為 <xref:System.Net.Security.ProtectionLevel.Sign> 或 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 時，才會使用這個屬性。  
   
- 支援的演算法為 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 預設為 `SHA1`。  
+ 支援的演算法為 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 預設為 `SHA1`。
+
+ 由於 MD5/SHA1 的衝突問題, Microsoft 建議使用 SHA256 或更好的方式。
   
 ## <a name="see-also"></a>另請參閱
 
