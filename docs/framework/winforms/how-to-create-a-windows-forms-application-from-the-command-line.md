@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72195dd49c163b26a5bcfa739768718f2a32f346
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6c87419a4d730f72a7ee15fcc3127781a8eaff75
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588973"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364223"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>HOW TO：從命令列建立 Windows Forms 應用程式
-下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>作法：從命令列建立 Windows Forms 應用程式
+下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請[參閱逐步解說:在 WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)中裝載 Windows Forms 控制項。  
   
 ## <a name="procedure"></a>程序  
   
@@ -35,7 +35,7 @@ ms.locfileid: "65588973"
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. 建立 `Form1` 的預設建構函式。  
+3. 為建立無參數的`Form1`函式。  
   
      您在後續的程序中，會將更多程式碼加入建構函式中。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "65588973"
   
 4. 將 `Main` 方法加入類別中。  
   
-    1. 適用於<xref:System.STAThreadAttribute>C#`Main`方法，以指定 Windows Forms 應用程式是單一執行緒的 apartment。 （屬性不需要在 Visual Basic 中，因為 Windows forms 應用程式開發與 Visual Basic 使用單一執行緒 apartment 模型的預設值。）  
+    1. C# 將套用`Main`至方法, 以指定您的 Windows Forms 應用程式是單一執行緒的單元。 <xref:System.STAThreadAttribute> (屬性在 Visual Basic 中不是必要的, 因為使用 Visual Basic 開發的 Windows form 應用程式預設會使用單一執行緒的單元模型)。  
   
-    2. 呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>若要將作業系統樣式套用至您的應用程式。  
+    2. 呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>以將作業系統樣式套用至您的應用程式。  
   
     3. 建立表單的執行個體，並加以執行。  
   
@@ -59,18 +59,18 @@ ms.locfileid: "65588973"
   
 2. 編譯表單。  
   
-    - 如果您使用的 C# 中，類型： `csc form1.cs`  
+    - 如果您使用C#的是, 請輸入:`csc form1.cs`  
   
          `-or-`  
   
-    - 如果您使用 Visual Basic 中，類型： `vbc form1.vb`  
+    - 如果您使用 Visual Basic, 請輸入:`vbc form1.vb`  
   
-3. 在命令提示字元中，輸入： `Form1.exe`  
+3. 在命令提示字元中, 輸入:`Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>加入控制項和處理事件  
- 先前的程序步驟示範只是如何建立可編譯和執行的基本 Windows Form。 下一個程序將會說明如何建立控制項並將其加入表單，以及處理控制項的事件。 如需您可以將它新增至 Windows Forms 控制項的相關資訊，請參閱 < [Windows Forms 控制項](./controls/index.md)。  
+ 先前的程序步驟示範只是如何建立可編譯和執行的基本 Windows Form。 下一個程序將會說明如何建立控制項並將其加入表單，以及處理控制項的事件。 如需可加入至 Windows Forms 之控制項的詳細資訊, 請參閱[Windows Forms 控制項](./controls/index.md)。  
   
- 除了了解如何建立 Windows Forms 應用程式，您還應該了解以事件為基礎的程式設計，以及如何處理使用者輸入。 如需詳細資訊，請參閱 <<c0> [ 在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)，和[處理使用者輸入](./controls/handling-user-input.md)  
+ 除了了解如何建立 Windows Forms 應用程式，您還應該了解以事件為基礎的程式設計，以及如何處理使用者輸入。 如需詳細資訊, 請參閱[在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)和[處理使用者輸入](./controls/handling-user-input.md)  
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>宣告按鈕控制項及處理其 Click 事件  
   

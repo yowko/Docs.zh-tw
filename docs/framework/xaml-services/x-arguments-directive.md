@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: a87542513ffeeec7efc526d4218f921d1b7579a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bcd629e306169c1f7a61a316d76203827a2d0fe
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953955"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364276"
 ---
 # <a name="xarguments-directive"></a>x:Arguments 指示詞
-針對 XAML，非預設建構函式物件的項目宣告或 factory 方法的物件宣告，封裝建構引數。  
+封裝 XAML 或 factory 方法物件宣告中非無參數之函式物件專案宣告的結構引數。  
   
-## <a name="xaml-element-usage-nondefault-constructor"></a>XAML 項目使用方式 （非預設建構函式）  
+## <a name="xaml-element-usage-nonparameterless-constructor"></a>XAML 元素使用方式 (Nonparameterless 的函式)  
   
 ```  
 <object ...>  
@@ -26,7 +26,7 @@ ms.locfileid: "61953955"
 </object>  
 ```  
   
-## <a name="xaml-element-usage-factory-method"></a>XAML 項目使用方式 （處理站方法）  
+## <a name="xaml-element-usage-factory-method"></a>XAML 元素使用方式 (factory 方法)  
   
 ```  
 <object x:FactoryMethod="methodName"...>  
@@ -40,29 +40,29 @@ ms.locfileid: "61953955"
   
 |||  
 |-|-|  
-|`oneOrMoreObjectElements`|指定要傳遞至支援非預設建構函式或 factory 方法的引數的一個或多個物件元素。<br /><br /> 通常是用來使用物件元素內的初始設定文字，以指定的實質引數的值。 請參閱 < 範例 > 一節。<br /><br /> 項目的順序很重要。 在順序中的 XAML 型別必須符合類型，然後輸入備份建構函式或 factory 方法多載的順序。|  
-|`methodName`|應該處理任何的 factory 方法的名稱`x:Arguments`引數。|  
+|`oneOrMoreObjectElements`|一或多個物件專案, 指定要傳遞給支援非參數的函式或 factory 方法的引數。<br /><br /> 一般用法是在物件元素內使用初始化文字, 以指定實際的引數值。 請參閱範例一節。<br /><br /> 元素的順序很重要。 順序中的 XAML 類型必須符合支援的函式或 factory 方法多載的類型和類型順序。|  
+|`methodName`|應該處理任何`x:Arguments`引數的 factory 方法名稱。|  
   
 ## <a name="dependencies"></a>相依性  
- `x:FactoryMethod` 範圍和行為可以修改其中`x:Arguments`套用。  
+ `x:FactoryMethod`可以修改`x:Arguments`套用的範圍和行為。  
   
- 如果沒有`x:FactoryMethod`未指定，`x:Arguments`適用於支援建構函式的替代 （非預設值） 簽章。  
+ 如果未`x:FactoryMethod`指定, `x:Arguments`則會套用至支援之函式的替代 (非預設) 簽章。  
   
- 如果`x:FactoryMethod`未指定，`x:Arguments`適用於具名方法的多載。  
+ 如果`x:FactoryMethod`指定, `x:Arguments`則會套用至已命名方法的多載。  
   
 ## <a name="remarks"></a>備註  
- XAML 2006 可支援透過初始設定文字的非預設值初始化。 不過，實際的應用程式的初始設定文字建構是技巧的有限。 初始設定文字會被視為單一文字字串;因此，它只會新增功能的單一參數初始化除非定義型別轉換子可以剖析自訂的資訊項目和自訂的分隔符號，從字串建構行為。 此外，物件邏輯的文字字串可能是處理基本項目，則為 true 的字串以外的給定的 XAML 剖析器的原生的預設型別轉換子。  
+ XAML 2006 可以透過初始化文字支援非預設初始化。 不過, 初始化文字結構化技術的實際應用會受到限制。 初始化文字會被視為單一文字字串;因此, 它只會加入單一參數初始化的功能, 除非已針對可從字串剖析自訂資訊專案和自訂分隔符號的結構行為定義類型轉換器。 此外, 文字字串至物件邏輯可能是指定的 XAML 剖析器的原生預設類型轉換器, 用於處理 true 字串以外的基本專案。  
   
- `x:Arguments` XAML 用法不是屬性項目使用方式的一般意義，因為指示詞的標記不會參考包含物件項目類型。 它就是這類比較類似於其他指示詞`x:Code`元素 demarks 中應該標記解譯以外子內容的預設值為一個範圍的位置。 在此情況下，每個物件項目的 XAML 型別會由 XAML 剖析器用來決定哪一個特定的建構函式 factory 方法簽章引數類型的相關資訊的通訊`x:Arguments`使用量嘗試參考。  
+ `x:Arguments` XAML 用法不是一般意義的屬性專案使用方式, 因為指示詞標記不會參考包含物件專案的類型。 它更類似于其他指示詞, 例如`x:Code` , 專案 demarks 的範圍, 其中的標記應解讀為子系內容的預設值。 在此情況下, 每個物件專案的 XAML 類型都會傳達引數類型的相關資訊, 而 xaml 剖析器會使用這些參數來判斷`x:Arguments`使用方式嘗試參考的特定「處理站」 factory 方法簽章。  
   
- `x:Arguments` 物件項目建構應優先於任何其他屬性的項目、 內容、 內部文字或初始化字串的物件項目。 中的物件項目`x:Arguments`可以包括屬性和初始化字串，所允許的 XAML 型別和其支援的建構函式或 factory 方法。 物件或引數中，您可以指定自訂的 XAML 型別或 XAML 型別，否則以外的預設 XAML 命名空間的參考已建立的前置詞對應。  
+ `x:Arguments`針對所要建立的物件專案, 必須在物件元素的任何其他屬性專案、內容、內部文字或初始化字串之前。 內`x:Arguments`的物件元素可以包含屬性和初始化字串, 如該 XAML 類型和其支援的函數或 factory 方法所允許。 針對物件或引數, 您可以藉由參考已建立的前置詞對應, 指定預設 XAML 命名空間以外的自訂 XAML 類型或 XAML 類型。  
   
- XAML 處理器會使用下列指導方針來判斷如何在中指定的引數`x:Arguments`應該用來建構物件。 如果`x:FactoryMethod`指定，則資訊進行比較來指定`x:FactoryMethod`(請注意，值`x:FactoryMethod`是方法名稱，而具名的方法的多載。 如果`x:FactoryMethod`未指定，資訊進行比較之物件的所有公用建構函式多載的集合。 XAML 處理邏輯然後比較的參數數目，並選取使用相符的引數數目的多載。 如果有多個相符項目，則 XAML 處理器應該比較根據提供的物件項目的 XAML 型別參數的類型。 如果仍然超過一個符合項目，XAML 處理器行為是未定義。 如果`x:FactoryMethod`指定但方法不能解析，XAML 處理器應該擲回例外狀況。  
+ XAML 處理器會使用下列指導方針來決定應該如何使用中`x:Arguments`指定的引數來建立物件。 如果`x:FactoryMethod`指定了, 就會將資訊與指定`x:FactoryMethod`的 ( `x:FactoryMethod`請注意, 的值是方法名稱, 而命名的方法可以有多載。 如果`x:FactoryMethod`未指定, 則會將資訊與物件之所有公用函式多載的集合進行比較。 然後, XAML 處理邏輯會比較參數數目, 並選取具有相符 arity 的多載。 如果有多個相符專案, XAML 處理器應該根據所提供之物件元素的 XAML 類型來比較參數的類型。 如果仍然有一個以上的相符項, XAML 處理器行為會是未定義的。 `x:FactoryMethod`如果指定了, 但無法解析方法, XAML 處理器應該會擲回例外狀況。  
   
- XAML 屬性使用方式`<x:Arguments>string</x:Arguments>`是可行的。 不過，這提供什麼無法透過否則初始化文字和類型轉換器，沒有功能，並使用此語法不是 XAML 2009 的 factory 方法功能的設計目的。  
+ 在技術上, `<x:Arguments>string</x:Arguments>` XAML 屬性使用方式是可行的。 不過, 這不會提供除了透過初始化文字和類型轉換器以外的其他功能, 而且使用此語法並不是 XAML 2009 factory 方法功能的設計意圖。  
   
 ## <a name="examples"></a>範例  
- 下列範例會顯示非預設建構函式簽章，則 XAML 使用`x:Arguments`，用來存取該簽章。  
+ 下列範例`x:Arguments`會顯示非參數的函式簽章, 然後是存取該簽章的 XAML 使用方式。  
   
 ```csharp  
 public class Food {  
@@ -84,7 +84,7 @@ public class Food {
 </my:Food>  
 ```  
   
- 下列範例顯示目標處理站方法簽章，則 XAML 使用`x:Arguments`，用來存取該簽章。  
+ 下列範例示範目標 factory 方法簽章, 然後是`x:Arguments`會存取該簽章的 XAML 使用方式。  
   
 ```csharp  
 public Food TryLookupFood(string name)  

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939099"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364446"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 元件概觀
 <xref:System.Windows.Forms.BindingSource> 元件的設計目的，是為了簡化將控制項繫結至基礎資料來源的程序。 <xref:System.Windows.Forms.BindingSource> 元件可同時做為管線和其他控制項繫結程序的目標資料來源。 它可以在透過命令傳遞至基礎資料清單時，提供表單資料連接的抽象層。 此外，您也可以直接加入資料，將元件本身當做資料來源使用。  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>做為媒介的 BindingSource 元件  
- <xref:System.Windows.Forms.BindingSource> 元件可做為表單上部分或全部控制項的資料來源。 在 Visual Studio 中，<xref:System.Windows.Forms.BindingSource>可以藉由控制繫結`DataBindings`屬性，因此可從**屬性**視窗。 另請參閱[How to:繫結 Windows Form 控制項和 BindingSource 元件加以使用設計工具](bind-wf-controls-with-the-bindingsource.md)。  
+ <xref:System.Windows.Forms.BindingSource> 元件可做為表單上部分或全部控制項的資料來源。 在 Visual Studio 中, <xref:System.Windows.Forms.BindingSource>可以透過`DataBindings`屬性來系結至控制項, 這可從 [**屬性**] 視窗存取。 另請[參閱如何:使用設計](bind-wf-controls-with-the-bindingsource.md)工具, 將 Windows Forms 控制項與 BindingSource 元件系結。  
   
  您可以將 <xref:System.Windows.Forms.BindingSource> 元件繫結至簡單的資料來源 (例如物件或 <xref:System.Collections.ArrayList> 等基本集合的單一屬性)，也可以繫結至複雜的資料來源 (例如資料庫資料表)。 <xref:System.Windows.Forms.BindingSource> 元件可做為提供繫結和貨幣管理服務的媒介。 您可以在設計階段或執行階段，透過將資料來源的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 和 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性分別設定為資料庫和資料表，將 <xref:System.Windows.Forms.BindingSource> 元件繫結至複雜的資料來源。 下圖示範 <xref:System.Windows.Forms.BindingSource> 元件在現有資料繫結架構中的位置。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61939099"
 |<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> 方法|從清單中移除目前項目。|  
 |<xref:System.Windows.Forms.BindingSource.EndEdit%2A> 方法|將暫止的變更套用至基礎資料來源。|  
 |<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> 方法|取消目前的編輯作業。|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法|將新的項目加入基礎清單中。 如果資料來源實作 <xref:System.ComponentModel.IBindingList> 並從 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件傳回項目，則加入這個項目。 否則，這個要求會傳遞給清單的 <xref:System.ComponentModel.IBindingList.AddNew%2A> 方法。 如果基礎清單不是 <xref:System.ComponentModel.IBindingList>，則會透過其公用預設建構函式自動建立項目。|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法|將新的項目加入基礎清單中。 如果資料來源實作 <xref:System.ComponentModel.IBindingList> 並從 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件傳回項目，則加入這個項目。 否則，這個要求會傳遞給清單的 <xref:System.ComponentModel.IBindingList.AddNew%2A> 方法。 如果基礎清單不是, 則<xref:System.ComponentModel.IBindingList>會透過其公用無參數的函式自動建立專案。|  
   
 ## <a name="sorting-and-filtering"></a>排序和篩選  
  您通常會使用資料來源的已排序或已篩選檢視。 下表顯示 <xref:System.Windows.Forms.BindingSource> 元件資料來源提供的成員。  

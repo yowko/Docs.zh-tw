@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 99f01983a575e9c6f96fdb66590e9d762eb882f7
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238441"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364200"
 ---
 # <a name="binding-sources-overview"></a>繫結來源概觀
 在資料繫結中，繫結來源物件是指您取得資料的來源物件。 本主題討論可以當做繫結來源的物件類型。  
@@ -22,27 +22,27 @@ ms.locfileid: "68238441"
   
 |繫結來源|描述|  
 |--------------------|-----------------|  
-|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件|您可以繫結至任何[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件的公用屬性、子屬性和索引子。 繫結引擎會使用 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 反映取得這些屬性的值。 或者，物件實作<xref:System.ComponentModel.ICustomTypeDescriptor>或具有已註冊<xref:System.ComponentModel.TypeDescriptionProvider>也適用於繫結引擎。<br /><br /> 如需如何實作可做為繫結來源之類別的詳細資訊，請參閱本主題稍後的[為繫結來源實作類別](#classes)。|  
-|動態物件|您可以繫結至可用的屬性與索引子的物件，實作<xref:System.Dynamic.IDynamicMetaObjectProvider>介面。 如果您可以在程式碼中存取某個成員，就可以繫結至該成員。 例如，若動態物件可讓您在程式碼中透過 `someObjet.AProperty` 存取某個成員，您就可以將繫結路徑設定為 `AProperty`，以繫結至該成員。|  
-|ADO.NET 物件|您可以繫結至 ADO.NET 物件，例如<xref:System.Data.DataTable>。 ADO.NET<xref:System.Data.DataView>實作<xref:System.ComponentModel.IBindingList>介面，可提供繫結引擎所接聽的變更通知。|  
-|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 物件|您可以將繫結至並執行`XPath`上查詢<xref:System.Xml.XmlNode>， <xref:System.Xml.XmlDocument>，或<xref:System.Xml.XmlElement>。 便利的方式來存取[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]是在標記中的繫結來源的資料是使用<xref:System.Windows.Data.XmlDataProvider>物件。 如需詳細資訊，請參閱[使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。<br /><br /> 您也可以以繫結<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>，或繫結至這些類型的物件上執行使用 LINQ to XML 查詢的結果。 使用 LINQ to XML 來存取 XML 資料做為標記中的繫結來源的便利方式是使用<xref:System.Windows.Data.ObjectDataProvider>物件。 如需詳細資訊，請參閱[繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。|  
-|<xref:System.Windows.DependencyObject> 物件|您可以繫結至任何相依性屬性<xref:System.Windows.DependencyObject>。 如需範例，請參閱[繫結兩個控制項的屬性](how-to-bind-the-properties-of-two-controls.md)。|  
+|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件|您可以繫結至任何[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件的公用屬性、子屬性和索引子。 繫結引擎會使用 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 反映取得這些屬性的值。 或者, 也可以使用<xref:System.ComponentModel.ICustomTypeDescriptor>系結引擎來<xref:System.ComponentModel.TypeDescriptionProvider>執行或擁有已註冊的物件。<br /><br /> 如需如何實作可做為繫結來源之類別的詳細資訊，請參閱本主題稍後的[為繫結來源實作類別](#classes)。|  
+|動態物件|您可以系結至可用於執行<xref:System.Dynamic.IDynamicMetaObjectProvider>介面之物件的可用屬性和索引子。 如果您可以在程式碼中存取某個成員，就可以繫結至該成員。 例如，若動態物件可讓您在程式碼中透過 `someObjet.AProperty` 存取某個成員，您就可以將繫結路徑設定為 `AProperty`，以繫結至該成員。|  
+|ADO.NET 物件|您可以系結至 ADO.NET 物件, 例如<xref:System.Data.DataTable>。 <xref:System.Data.DataView> ADO.NET<xref:System.ComponentModel.IBindingList>會執行介面, 以提供系結引擎接聽的變更通知。|  
+|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 物件|您`XPath`可以系結至<xref:System.Xml.XmlNode>、或<xref:System.Xml.XmlElement>, <xref:System.Xml.XmlDocument>並執行查詢。 在標記中存取[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]系結來源之資料的便利方式是<xref:System.Windows.Data.XmlDataProvider>使用物件。 如需詳細資訊，請參閱[使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。<br /><br /> 您也可以系結至<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>, 或使用 LINQ to XML 系結至這些類型物件上執行的查詢結果。 使用 LINQ to XML 來存取在標記中系結來源之 XML 資料的便利方式, 就是使用<xref:System.Windows.Data.ObjectDataProvider>物件。 如需詳細資訊，請參閱[繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。|  
+|<xref:System.Windows.DependencyObject> 物件|您可以系結至任何<xref:System.Windows.DependencyObject>的相依性屬性。 如需範例，請參閱[繫結兩個控制項的屬性](how-to-bind-the-properties-of-two-controls.md)。|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>為繫結來源實作類別  
  您可以建立自己的繫結來源。 本節討論在實作類別以做為繫結來源時必須知道的事。  
   
 ### <a name="providing-change-notifications"></a>提供變更通知  
- 如果您使用其中一個<xref:System.Windows.Data.BindingMode.OneWay>或是<xref:System.Windows.Data.BindingMode.TwoWay>繫結 (因為您想要您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]繫結來源屬性動態變更時更新)，您必須實作適當的屬性變更通知機制。 建議的機制是[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]或 動態類別實作<xref:System.ComponentModel.INotifyPropertyChanged>介面。 如需詳細資訊，請參閱[實作屬性變更通知](how-to-implement-property-change-notification.md)。  
+ 如果您使用<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay>系結[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (因為您想要在系結來源屬性動態變更時進行更新), 您必須執行適當的屬性變更通知機制。 建議的機制適用[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]于或動態類別, 以<xref:System.ComponentModel.INotifyPropertyChanged>執行介面。 如需詳細資訊，請參閱[實作屬性變更通知](how-to-implement-property-change-notification.md)。  
   
- 如果您建立[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]未實作的物件<xref:System.ComponentModel.INotifyPropertyChanged>，則您必須安排自己的通知系統，以確定維持目前的繫結中的資料。 您可以針對想要通知變更的每個屬性支援 `PropertyChanged` 模式，以提供變更通知。 若要支援這個模式，請定義每個屬性的 *PropertyName*Changed 事件，其中 *PropertyName* 是屬性的名稱。 您可在每次屬性變更時，引發這個事件。  
+ 如果您建立[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]的物件不會執行<xref:System.ComponentModel.INotifyPropertyChanged>, 則您必須安排自己的通知系統, 以確保系結中所使用的資料保持在最新狀態。 您可以針對想要通知變更的每個屬性支援 `PropertyChanged` 模式，以提供變更通知。 若要支援這個模式，請定義每個屬性的 *PropertyName*Changed 事件，其中 *PropertyName* 是屬性的名稱。 您可在每次屬性變更時，引發這個事件。  
   
- 如果繫結來源實作其中一種通知機制，系統就會自動更新目標。 如果因故繫結來源不會提供適當的屬性變更通知，您可以選擇使用<xref:System.Windows.Data.BindingExpression.UpdateTarget%2A>方法來明確更新目標屬性。  
+ 如果繫結來源實作其中一種通知機制，系統就會自動更新目標。 如果您的系結來源因任何原因而未提供適當的屬性變更通知, 您可以選擇使用<xref:System.Windows.Data.BindingExpression.UpdateTarget%2A>方法明確地更新目標屬性。  
   
 ### <a name="other-characteristics"></a>其他特性  
  下列清單提供必須注意的其他重點：  
   
-- 如果要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中建立物件，此類別必須擁有預設建構函式。 在某些[!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)]語言，例如C#，可能會為您建立的預設建構函式。  
+- 如果您想要在中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]建立物件, 類別必須具有無參數的函式。 在某些[!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)]語言中 (例如C#), 可能會為您建立無參數的函式。  
   
 - 要當做繫結之繫結來源屬性的屬性必須是類別的公用屬性。 明確定義的介面屬性不能做為繫結之用，而沒有基底實作的受保護、私用、內部或虛擬屬性同樣也不能做為繫結之用。  
   
@@ -52,21 +52,21 @@ ms.locfileid: "68238441"
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>使用整個物件做為繫結來源  
- 您可以使用整個物件做為繫結來源。 您可以使用，以指定繫結來源<xref:System.Windows.Data.Binding.Source%2A>或<xref:System.Windows.FrameworkElement.DataContext%2A>屬性，然後提供空白繫結宣告： `{Binding}`。 可以使用這種方法的案例包括繫結到屬於字串型別的物件、繫結到內含您感興趣之多個屬性的物件，或是繫結到集合物件。 如需繫結到整個集合物件的範例，請參閱[使用含階層式資料的主從式模式](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。  
+ 您可以使用整個物件做為繫結來源。 您可以使用<xref:System.Windows.Data.Binding.Source%2A> <xref:System.Windows.FrameworkElement.DataContext%2A>或屬性來指定系結來源, 然後提供空白的系結宣告: `{Binding}`。 可以使用這種方法的案例包括繫結到屬於字串型別的物件、繫結到內含您感興趣之多個屬性的物件，或是繫結到集合物件。 如需繫結到整個集合物件的範例，請參閱[使用含階層式資料的主從式模式](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。  
   
- 請注意，您可能必須套用自訂邏輯，如此資料對於繫結目標屬性來說才有意義。 自訂的邏輯可能採用自訂轉換器的形式 （如果預設型別轉換不存在） 或<xref:System.Windows.DataTemplate>。 如需轉換器的詳細資訊，請參閱[資料繫結概觀](data-binding-overview.md)的＜資料轉換＞一節。 如需資料範本的詳細資訊，請參閱[資料範本化概觀](data-templating-overview.md)。  
+ 請注意，您可能必須套用自訂邏輯，如此資料對於繫結目標屬性來說才有意義。 自訂邏輯的格式可能是自訂轉換器 (如果預設類型轉換不存在) 或<xref:System.Windows.DataTemplate>。 如需轉換器的詳細資訊，請參閱[資料繫結概觀](data-binding-overview.md)的＜資料轉換＞一節。 如需資料範本的詳細資訊，請參閱[資料範本化概觀](data-templating-overview.md)。  
   
 <a name="collections"></a>   
 ## <a name="using-collection-objects-as-a-binding-source"></a>使用集合物件做為繫結來源  
  您想當做繫結來源的物件通常會是自訂物件的集合。 每個物件都會當做重複繫結的其中一個執行個體的來源。 例如，您可能有一個由 `CustomerOrder` 物件組成的 `CustomerOrders` 集合，而您的應用程式會逐一查看這個集合來判斷訂單數量，以及各筆訂單所包含的資料。  
   
- 您可以列舉實作任何集合<xref:System.Collections.IEnumerable>介面。 不過，若要設定動態繫結，以便插入或刪除集合中的更新[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]自動執行，則集合必須實作<xref:System.Collections.Specialized.INotifyCollectionChanged>介面。 這個介面會公開每次基礎集合變更時必須引發的事件。  
+ 您可以列舉任何會執行<xref:System.Collections.IEnumerable>介面的集合。 不過, 若要設定動態系結, 讓集合中的插入或刪除[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]自動更新, 則集合必須<xref:System.Collections.Specialized.INotifyCollectionChanged>執行介面。 這個介面會公開每次基礎集合變更時必須引發的事件。  
   
- <xref:System.Collections.ObjectModel.ObservableCollection%601>類別會公開 （expose） 的資料集合的內建實作<xref:System.Collections.Specialized.INotifyCollectionChanged>介面。 集合中的個別資料物件都必須滿足前幾個章節中描述的需求。 如需範例，請參閱[建立和繫結至 ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md)。 在之前實作您自己的集合，請考慮使用<xref:System.Collections.ObjectModel.ObservableCollection%601>或其中一個現有的集合類別，例如<xref:System.Collections.Generic.List%601>， <xref:System.Collections.ObjectModel.Collection%601>，和<xref:System.ComponentModel.BindingList%601>，還有其他更多。  
+ <xref:System.Collections.ObjectModel.ObservableCollection%601>類別是<xref:System.Collections.Specialized.INotifyCollectionChanged>公開介面之資料集合的內建實作為。 集合中的個別資料物件都必須滿足前幾個章節中描述的需求。 如需範例，請參閱[建立和繫結至 ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md)。 在執行您自己的集合之前, <xref:System.Collections.ObjectModel.ObservableCollection%601>請考慮使用或其中一個現有的集合類別<xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>例如、 <xref:System.ComponentModel.BindingList%601>和。  
   
  WPF 絕不會直接繫結至集合。 如果您指定集合做為繫結來源，WPF 實際上會繫結至集合的預設檢視。 如需預設檢視的詳細資訊，請參閱[資料繫結概觀](data-binding-overview.md)。  
   
- 如果您擁有進階的案例，而且您想要實作您自己的集合，請考慮使用<xref:System.Collections.IList>介面。 <xref:System.Collections.IList> 提供非泛型集合之物件的可個別存取的索引，以改善效能。  
+ 如果您有先進的案例, 而且想要執行自己的<xref:System.Collections.IList>集合, 請考慮使用介面。 <xref:System.Collections.IList>提供可依索引個別存取的非泛型物件集合, 可改善效能。  
   
 <a name="permissions"></a>   
 ## <a name="permission-requirements-in-data-binding"></a>資料繫結的使用權限需求  
@@ -86,7 +86,7 @@ ms.locfileid: "68238441"
   
 - 您永遠都可以繫結至相依性屬性。  
   
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 繫結也有類似的使用權限需求。 在部分信任沙箱，<xref:System.Windows.Data.XmlDataProvider>它並沒有指定的資料存取權限時失敗。  
+ [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 繫結也有類似的使用權限需求。 在部分信任的沙箱中, <xref:System.Windows.Data.XmlDataProvider>當它沒有存取指定資料的許可權時, 會失敗。  
   
  具有匿名型別的物件為內部物件。 只有在完全信任狀況下執行時，您才能繫結至匿名型別的屬性。 如需匿名型別的詳細資訊，請參閱[匿名型別 (C# 程式設計手冊)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md) 或[匿名型別 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic)。  
   

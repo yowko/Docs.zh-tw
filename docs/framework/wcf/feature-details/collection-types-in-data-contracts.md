@@ -9,28 +9,28 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: 20ed5a0dab9dfc67a242ef09f459b3d00d766593
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 810238ee631808dac472456f910eb52f8bbf550c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663444"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363819"
 ---
 # <a name="collection-types-in-data-contracts"></a>資料合約中的集合型別
 
-「 *集合* 」(Collection) 是特定型別之項目的清單。 在.NET Framework 中，這類清單可表示使用陣列或其他多種型別 (泛型清單、 泛型<xref:System.ComponentModel.BindingList%601>， <xref:System.Collections.Specialized.StringCollection>，或<xref:System.Collections.ArrayList>)。 例如，集合可能含有特定「客戶」的地址清單。 不論實際型別為何，這些集合統稱為「 *清單集合*」(List Collection)。
+「 *集合* 」(Collection) 是特定型別之項目的清單。 在 .NET Framework 中, 這類清單可以使用陣列或各種其他類型 (泛型清單、泛型<xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或<xref:System.Collections.ArrayList>) 來表示。 例如，集合可能含有特定「客戶」的地址清單。 不論實際型別為何，這些集合統稱為「 *清單集合*」(List Collection)。
 
-特殊形式的集合可以用來表示一個項目 (「索引鍵」) 與另一個項目 (「值」) 之間的關聯。 在.NET Framework 中，這些由類型這類<xref:System.Collections.Hashtable>及泛型字典。 例如，關聯集合可能會將城市 (「索引鍵」) 對應到其人口數目 (「值」)。 不論實際型別為何，這些集合統稱為「 *字典集合*」(Dictionary Collection)。
+特殊形式的集合可以用來表示一個項目 (「索引鍵」) 與另一個項目 (「值」) 之間的關聯。 在 .NET Framework 中, 這些會以類型 (例如<xref:System.Collections.Hashtable>和泛型字典) 來表示。 例如，關聯集合可能會將城市 (「索引鍵」) 對應到其人口數目 (「值」)。 不論實際型別為何，這些集合統稱為「 *字典集合*」(Dictionary Collection)。
 
 集合在資料合約模型中會受到特殊處理。
 
 包括陣列與泛型集合等實作 <xref:System.Collections.IEnumerable> 介面的型別，都會識別為集合。 在這些型別中，實作 <xref:System.Collections.IDictionary> 或泛型 <xref:System.Collections.Generic.IDictionary%602> 介面的型別屬於字典集合，而其他所有型別則屬於清單集合。
 
-關於集合型別的其他需求，例如包含稱為 `Add` 的方法和預設建構函式 (Constructor)，都會在下列各節中詳細討論。 這樣便可確保集合型別能夠序列化與還原序列化。 這表示不直接支援某些集合，例如泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (因為沒有預設建構函式)。 不過，如需規避這些限制的詳細資訊，請參閱本主題稍後的「使用集合介面型別和唯讀集合」一節。
+下列各節將詳細討論集合類型的其他需求, `Add`例如具有稱為的方法和無參數的函式。 這樣便可確保集合型別能夠序列化與還原序列化。 這表示某些集合不會直接支援, 例如泛型<xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (因為它沒有無參數的函式)。 不過，如需規避這些限制的詳細資訊，請參閱本主題稍後的「使用集合介面型別和唯讀集合」一節。
 
-包含在集合中的型別必須是資料合約類型，否則必須是可序列化的型別。 如需詳細資訊，請參閱 < [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。
+包含在集合中的型別必須是資料合約類型，否則必須是可序列化的型別。 如需詳細資訊, 請參閱[資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。
 
-更多關於功能和什麼不是有效的集合，以及如何序列化集合的詳細資訊，請參閱本主題的 「 進階集合規則 」 一節中的序列化集合的相關資訊。
+如需有關什麼是以及如何序列化集合的詳細資訊, 請參閱本主題「先進的集合規則」一節中有關序列化集合的資訊。
 
 ## <a name="interchangeable-collections"></a>可互換的集合
 
@@ -74,15 +74,15 @@ ms.locfileid: "67663444"
 [!code-csharp[c_collection_types_in_data_contracts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#1)]
 [!code-vb[c_collection_types_in_data_contracts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#1)]
 
-在進行序列化期間，當宣告的型別為介面時，使用的實際執行個體型別就可以是實作該介面的任何型別。 先前所討論的限制 (包含預設建構函式和 `Add` 方法) 並不適用。 例如，您可以將 Customer2 中的地址設定為地址之泛用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 的執行個體，即使無法直接宣告泛用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>型別的資料成員也是如此。
+在進行序列化期間，當宣告的型別為介面時，使用的實際執行個體型別就可以是實作該介面的任何型別。 不適用先前所討論的限制 (具有無`Add`參數的函式和方法)。 例如，您可以將 Customer2 中的地址設定為地址之泛用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 的執行個體，即使無法直接宣告泛用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>型別的資料成員也是如此。
 
-在進行還原序列化期間，如果宣告的型別為介面，序列化引擎便會選擇實作宣告之介面的型別，而且該型別會具現化。 在此，已知型別機制 (中所述[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) 沒有任何作用; 別的選項已建置於 WCF。
+在進行還原序列化期間，如果宣告的型別為介面，序列化引擎便會選擇實作宣告之介面的型別，而且該型別會具現化。 已知型別機制 (在[資料合約已知](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)型別中所述) 在這裡沒有任何作用;類型的選擇會內建在 WCF 中。
 
 ## <a name="customizing-collection-types"></a>自訂集合型別
 
 您可以使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 屬性來自訂集合型別，此屬性有數種用法。
 
-請注意，自訂集合類型會影響集合的可互換性，所以我們一般會建議您盡可能避免套用這個屬性。 如需有關此問題的詳細資訊，請參閱本主題稍後的 「 進階集合規則 」 一節。
+請注意，自訂集合類型會影響集合的可互換性，所以我們一般會建議您盡可能避免套用這個屬性。 如需有關此問題的詳細資訊, 請參閱本主題稍後的「先進的集合規則」一節。
 
 ### <a name="collection-data-contract-naming"></a>集合資料合約命名
 
@@ -144,13 +144,13 @@ ms.locfileid: "67663444"
 </cust_list>
 ```
 
-如需詳細資訊，請參閱本主題稍後的 「 進階集合規則 」 一節。
+如需詳細資訊, 請參閱本主題稍後的「先進的集合規則」一節。
 
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>自訂清單集合中的重複項目名稱
 
 清單集合包含一些重複的項目。 通常，每個重複項目都會以項目表示，該項目會根據集合內所包含型別的資料合約名稱來命名。
 
-在 `CustomerList` 範例中，集合包含的是字串。 因此了重複的項目，字串基本類型的資料合約名稱是"string"，"\<字串 >"。
+在 `CustomerList` 範例中，集合包含的是字串。 字串基本型別的資料合約名稱為 "string", 因此重複專案為 "\<string >"。
 
 不過，只要在 <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> 屬性 (Attribute) 上使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 屬性 (Property)，即可自訂這個重複項目。 如需範例，請參閱下列型別。
 
@@ -197,7 +197,7 @@ ms.locfileid: "67663444"
 </CountriesOrRegionsWithCapitals>
 ```
 
-如需字典集合的詳細資訊，請參閱本主題稍後的 「 進階集合規則 」 一節。
+如需字典集合的詳細資訊, 請參閱本主題稍後的「先進的集合規則」一節。
 
 ## <a name="collections-and-known-types"></a>集合與已知型別
 
@@ -232,7 +232,7 @@ ms.locfileid: "67663444"
 
 所有相等的集合都具有相同的 XML 結構描述定義語言 (XSD) 結構描述表示方式。 基於這點，通常您由所產生用戶端程式碼所取得的集合型別，並不相同於伺服器上的集合型別。 例如，伺服器可能會搭配使用資料合約與整數資料成員的泛型 <xref:System.Collections.Generic.List%601> ，但是在產生的用戶端程式碼中，該相同資料成員可能會成為整數陣列。
 
-字典集合會以表示它們是字典; WCF 特定結構描述註解標記否則，它們是簡單的清單包含具有索引鍵和值的項目無法區別。 如需集合透過資料合約結構描述之表示方式的詳細描述，請參閱 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。
+字典集合會以 WCF 特定的架構注釋標記, 表示它們是字典;否則, 它們與包含具有索引鍵和值之專案的簡單列表不區分。 如需集合透過資料合約結構描述之表示方式的詳細描述，請參閱 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。
 
 根據預設，不會針對已匯入程式碼中的非自訂集合產生型別。 清單集合型別的資料成員都會當做陣列匯入，而字典集合型別的資料成員會當做泛型字典匯入。
 
@@ -255,7 +255,7 @@ ms.locfileid: "67663444"
 如果是要參考泛型型別，這些型別必須是完全開放式的泛型，或是完全封閉式的泛型。
 
 > [!NOTE]
-> 當使用 Svcutil.exe 工具時，即可使用 **/collectionType** 命令列參數完成這項參考作業 (簡短形式： **/ct**)。 請記住，您必須同時使用 **/reference** 參數 (簡短形式： **/r**) 來指定參照集合型別的組件 (Assembly)。 如果該型別為泛型，後面就會接上反引號 (`) 與泛型參數的數目。 反引號 (\`) 並不會混淆與單引號 （'） 字元。 您可以多次使用 **/collectionType** 參數來指定多個參照集合型別。
+> 當使用 Svcutil.exe 工具時，即可使用 **/collectionType** 命令列參數完成這項參考作業 (簡短形式： **/ct**)。 請記住，您必須同時使用 **/reference** 參數 (簡短形式： **/r**) 來指定參照集合型別的組件 (Assembly)。 如果該型別為泛型，後面就會接上反引號 (`) 與泛型參數的數目。 反引號 (\`) 不會與單引號 (') 字元混淆。 您可以多次使用 **/collectionType** 參數來指定多個參照集合型別。
 
 例如，使所有清單都當做泛型 <xref:System.Collections.Generic.List%601>匯入。
 
@@ -342,25 +342,25 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 
 上面表格是依遞減的優先順序來列出集合介面。 這表示，如果型別同時實作 <xref:System.Collections.IList> 與泛型 <xref:System.Collections.Generic.IEnumerable%601>，該集合便會根據 <xref:System.Collections.IList> 規則完成序列化與還原序列化：
 
-- 在進行還原序列化時，所有集合在進行還原序列化時，都會先透過呼叫預設建構函式來建立該型別的執行個體，而序列化程式一定要配合此預設建構函式，才能在進行序列化與還原序列化時將集合型別視為集合來處理。
+- 在還原序列化時, 會先藉由呼叫無參數的函式來建立型別的實例, 以還原序列化所有的集合, 而該函式必須存在, 序列化程式才會將集合型別視為集合, 同時也是化.
 
 - 如果超過一次地實作相同的泛型集合介面 (例如，如果型別同時實作 <xref:System.Collections.Generic.ICollection%601> 的泛型 `Integer` 與 <xref:System.Collections.Generic.ICollection%601> 的泛型 <xref:System.String>)，而且找不到較高優先順序的介面，這時集合就無法被視為有效的集合。
 
 - 這些集合型別都可以將 <xref:System.SerializableAttribute> 屬性套用到本身，而且可以實作 <xref:System.Runtime.Serialization.ISerializable> 介面。 這兩者都會遭到忽略。 不過，如果型別沒有完全符合集合型別需求 (例如，遺失了 `Add` 方法)，該型別就不會被視為集合型別，而且這樣一來， <xref:System.SerializableAttribute> 屬性與 <xref:System.Runtime.Serialization.ISerializable> 介面就會用來判斷型別是否可序列化。
 
-- 將 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 屬性套用至集合以自訂集合時，會移除上述的 <xref:System.SerializableAttribute> 後援機制。 相反地，如果自訂的集合未能符合集合型別需求，便會擲回 <xref:System.Runtime.Serialization.InvalidDataContractException> 例外狀況 (Exception)。 例外狀況字串通常會包含資訊，說明指定型別為何未被視為有效的集合 (沒有 `Add` 方法、沒有預設建構函式，以及其他原因)，因此通常為偵錯目的而套用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 屬性的做法會很有用。
+- 將 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 屬性套用至集合以自訂集合時，會移除上述的 <xref:System.SerializableAttribute> 後援機制。 相反地，如果自訂的集合未能符合集合型別需求，便會擲回 <xref:System.Runtime.Serialization.InvalidDataContractException> 例外狀況 (Exception)。 例外狀況字串通常會包含資訊, 說明為什麼指定類型未被視為有效的集合 (沒有`Add`方法、無參數的函式等等), 因此套用<xref:System.Runtime.Serialization.CollectionDataContractAttribute>屬性進行調試通常會很有用。用途.
 
 ### <a name="collection-naming"></a>集合命名
 
 下面是集合命名規則的清單：
 
-- 所有字典集合資料合約，以及包含基本型別清單集合資料合約的預設命名空間是`http://schemas.microsoft.com/2003/10/Serialization/Arrays`除非使用 Namespace 覆寫。 對應至內建 XSD 型別，以及 `char`、 `Timespan`與 `Guid` 型別的型別，都會因此目的而被視為基本型別。
+- 除非使用命名空間覆寫, 否則所有字典集合資料合約的預設命名空間, 以及包含基本類型的清單`http://schemas.microsoft.com/2003/10/Serialization/Arrays`集合資料合約, 都是。 對應至內建 XSD 型別，以及 `char`、 `Timespan`與 `Guid` 型別的型別，都會因此目的而被視為基本型別。
 
 - 除非已使用 Namespace 覆寫，否則包含非基本型別之集合型別的預設命名空間，就是集合中所包含之型別的資料合約命名空間。
 
 - 除非已使用 Name 覆寫，否則清單集合資料合約的預設名稱，就會是 "ArrayOf" 字串與集合中所包含型別之資料合約名稱的組合。 例如，整數泛型清單的資料合約名稱是 "ArrayOfint"。 請記住， `Object` 的資料合約名稱是 "anyType"，因此非泛型清單 (例如， <xref:System.Collections.ArrayList> ) 的資料合約名稱會是 "ArrayOfanyType"。
 
-除非已使用 `Name`覆寫，否則字典集合資料合約的預設名稱，就會是 "ArrayOfKeyValueOf" 字串與索引鍵型別之資料合約名稱加上值型別之資料合約名稱的組合。 例如，字串與整數之泛型字典的資料合約名稱為 "ArrayOfKeyValueOfstringint"。 此外，如果索引鍵或值型別其中一個不是基本型別，便會在名稱後附加索引鍵與值型別之資料合約命名空間的命名空間雜湊。 如需有關命名空間雜湊的詳細資訊，請參閱 < [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。
+除非已使用 `Name`覆寫，否則字典集合資料合約的預設名稱，就會是 "ArrayOfKeyValueOf" 字串與索引鍵型別之資料合約名稱加上值型別之資料合約名稱的組合。 例如，字串與整數之泛型字典的資料合約名稱為 "ArrayOfKeyValueOfstringint"。 此外，如果索引鍵或值型別其中一個不是基本型別，便會在名稱後附加索引鍵與值型別之資料合約命名空間的命名空間雜湊。 如需命名空間雜湊的詳細資訊, 請參閱[資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。
 
 每個字典集合資料合約都具有表示字典中一個項目的附屬資料合約。 除了 "ArrayOf" 的前置詞以外，該合約的名稱與字典資料合約的名稱相同，而且其命名空間也與字典資料合約相同。 例如，對於 "ArrayOfKeyValueOfstringint" 字典資料合約，"KeyValueofstringint" 資料合約表示字典中的一個項目。 您可以使用 `ItemName` 屬性來自訂這個資料合約的名稱，如下節所示。
 
@@ -387,20 +387,20 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 [!code-csharp[c_collection_types_in_data_contracts#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#11)]
 [!code-vb[c_collection_types_in_data_contracts#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#11)]
 
-在此範例中， `Marks1` 的執行個體可以指派到 `testMarks`。 但是，不應使用 `Marks2` ，因為其資料合約不被視為相等於 `IList<int>` 資料合約。 資料合約名稱是"Marks2"而非"ArrayOfint，"和重複的項目名稱是"\<標記 >"而非"\<int > 」。
+在此範例中， `Marks1` 的執行個體可以指派到 `testMarks`。 但是，不應使用 `Marks2` ，因為其資料合約不被視為相等於 `IList<int>` 資料合約。 資料合約名稱為 "Marks2" 而非 "ArrayOfint", 而重複專案名稱為 "\<mark >", 而不是 "\<int >"。
 
 下表中的規則適用於集合的多型指派。
 
 |宣告的型別|指派非自訂的集合|指派自訂的集合|
 |-------------------|--------------------------------------------|---------------------------------------|
 |Object|合約名稱已經序列化。|合約名稱已經序列化。<br /><br /> 已使用自訂。|
-|集合介面|合約名稱未序列化。|合約名稱未序列化。<br /><br /> 不會使用自訂。\*|
+|集合介面|合約名稱未序列化。|合約名稱未序列化。<br /><br /> 不使用自訂。\*|
 |非自訂的集合|合約名稱未序列化。|合約名稱已經序列化。<br /><br /> 已使用自訂。**|
-|自訂的集合|合約名稱已經序列化。 不會使用自訂。\*\*|合約名稱已經序列化。<br /><br /> 已使用所指派型別的自訂。\*\*|
+|自訂的集合|合約名稱已經序列化。 不使用自訂。\*\*|合約名稱已經序列化。<br /><br /> 會使用已指派類型的自訂。\*\*|
 
-\*使用<xref:System.Runtime.Serialization.NetDataContractSerializer>類別，自訂會在此情況下使用。 在此情況下， <xref:System.Runtime.Serialization.NetDataContractSerializer> 類別也會序列化實際的型別名稱，以便讓還原序列化如預期地運作。
+\*<xref:System.Runtime.Serialization.NetDataContractSerializer>使用類別時, 在此情況下會使用自訂。 在此情況下， <xref:System.Runtime.Serialization.NetDataContractSerializer> 類別也會序列化實際的型別名稱，以便讓還原序列化如預期地運作。
 
-\*\*這些情況下導致結構描述無效的執行個體，因此應該予以避免。
+\*\*這些情況會導致架構不正確實例, 因此應該予以避免。
 
 在合約名稱已經序列化的情況下，所指派的集合型別應該會在已知型別的清單中。 反之亦然：因為在名稱未經序列化的情況下，並不需要將型別加入至已知型別清單中。
 

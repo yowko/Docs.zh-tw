@@ -8,35 +8,35 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: a593839447742ed91d22a397d29b2455ce7a3b2d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93735d12426042fd6517c10a55d1a9bd32f906bb
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627414"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363068"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 標記延伸
-定義和參考會從外部組件載入的資源索引鍵。 這可讓組件，而不是明確的資源字典的組件中，或在類別上指定目標類型的資源查閱。  
+定義和參考從外部元件載入之資源的索引鍵。 這可讓資源查閱指定元件中的目標型別, 而不是元件或類別上的明確資源字典。  
   
-## <a name="xaml-attribute-usage-setting-key-compact"></a>XAML 屬性使用方式 （設定索引鍵、 compact）  
+## <a name="xaml-attribute-usage-setting-key-compact"></a>XAML 屬性使用方式 (設定金鑰、壓縮)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey {x:Type targetTypeName}, targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-setting-key-verbose"></a>XAML 屬性使用方式 （設定索引鍵、 詳細）  
+## <a name="xaml-attribute-usage-setting-key-verbose"></a>XAML 屬性使用方式 (設定索引鍵, 詳細資訊)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-requesting-resource-compact"></a>XAML 屬性使用方式 （提出要求的資源，compact）  
+## <a name="xaml-attribute-usage-requesting-resource-compact"></a>XAML 屬性使用方式 (要求資源, compact)  
   
 ```xml  
 <object property="{DynamicResource {ComponentResourceKey {x:Type targetTypeName}, targetID}}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-requesting-resource-verbose"></a>XAML 屬性使用方式 （提出要求的資源，詳細資訊）  
+## <a name="xaml-attribute-usage-requesting-resource-verbose"></a>XAML 屬性使用方式 (要求資源, 詳細資訊)  
   
 ```xml  
 <object property="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}}" .../>  
@@ -46,31 +46,31 @@ ms.locfileid: "64627414"
   
 |||  
 |-|-|  
-|`targetTypeName`|公用名稱[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]資源組件中定義的類型。|  
-|`targetID`|資源的金鑰。 時，會尋找資源`targetID`將會類似於[X:key 指示詞](../../xaml-services/x-key-directive.md)的資源。|  
+|`targetTypeName`|在資源元件中定義[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]的公用類型名稱。|  
+|`targetID`|資源的索引鍵。 查閱資源時, `targetID`會類似于資源的[x:Key](../../xaml-services/x-key-directive.md)指示詞。|  
   
 ## <a name="remarks"></a>備註  
- 上述的使用方式中所示 {`ComponentResourceKey`} 標記延伸使用方式在兩個地方找到：  
+ 如上所述, {`ComponentResourceKey`} 標記延伸使用方式可在兩個地方找到:  
   
-- 內的佈景主題資源字典，控制項作者所提供的索引鍵定義。  
+- 主題資源字典中的索引鍵定義, 如同控制項作者所提供。  
   
-- 從組件存取佈景主題資源，當您是重新範本化控制項，但想要使用來自控制項的佈景主題所提供的資源的屬性值。  
+- 當您重新範本化控制項, 但想要使用來自控制項主題所提供之資源的屬性值時, 從元件存取主題資源。  
   
- 參考來自佈景主題的元件資源，通常建議您改用`{DynamicResource}`而非`{StaticResource}`。 這會顯示使用方式。 `{DynamicResource}` 建議，因為使用者可以變更佈景主題本身。 如果您想 懽搰 支援佈景主題的控制項作者的意圖元件資源時，您應該啟用您的元件資源參考也是動態。  
+ 若要參考來自主題的元件資源, 通常建議您使用`{DynamicResource}` `{StaticResource}`而不是。 這會顯示在使用方式中。 `{DynamicResource}`建議使用, 因為使用者可以變更主題本身。 如果您想 懽搰 支援佈景主題的控制項作者的意圖元件資源時，您應該啟用您的元件資源參考也是動態。  
   
- <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>識別實際定義資源的目標組件中存在的類型。 A`ComponentResourceKey`可以定義和使用獨立於完全知道其中<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>已定義，但最後必須解決透過參考組件的型別。  
+ 會<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>識別存在於實際定義資源之目標群組件中的類型。 可以單獨定義和使用, 而不需要確切瞭解定義<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>的位置, 但最終必須透過參考的元件來解析類型。 `ComponentResourceKey`  
   
- 常見的用法如<xref:System.Windows.ComponentResourceKey>是定義索引鍵，然後公開做為類別的成員。 若是如此，您用於<xref:System.Windows.ComponentResourceKey>類別建構函式，不是標記延伸。 如需詳細資訊，請參閱 < <xref:System.Windows.ComponentResourceKey>，或主題的 「 定義和參考索引鍵的佈景主題資源 」 一節[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
+ 的常見用法<xref:System.Windows.ComponentResourceKey>是定義接著公開為類別成員的索引鍵。 在這種情況下, 您<xref:System.Windows.ComponentResourceKey>可以使用類別的「函式」, 而不是標記延伸。 如需詳細資訊, <xref:System.Windows.ComponentResourceKey>請參閱或主題[控制項撰寫總覽](../controls/control-authoring-overview.md)的「定義和參考主題資源的索引鍵」一節。  
   
- 建立索引鍵和參考做為索引鍵的資源，如屬性語法通常用於`ComponentResourceKey`標記延伸。  
+ 對於建立金鑰和參考索引鍵, 屬性語法通常用於`ComponentResourceKey`標記延伸。  
   
- 簡潔的語法所示依賴<xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>建構函式簽章和標記延伸的位置參數用法。 順序`targetTypeName`和`targetID`有很重要。 詳細的語法會依賴<xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>預設建構函式，然後按一下 設定<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>和<xref:System.Windows.ComponentResourceKey.ResourceId%2A>類似於物件項目上，則為 true 的屬性語法的方式。 在詳細的語法中，設定屬性的順序並不重要。 關聯性和這些兩個替代方法 （compact 和詳細資訊） 的機制主題中的更多詳細資料中所述[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
+ 所顯示的精簡語法會依賴<xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>標記延伸的「函式簽章」和「位置參數使用方式」。 指定`targetTypeName` 和`targetID`的順序很重要。 Verbose 語法依賴無參數的<xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType>函式, 然後以類似物件<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>專案<xref:System.Windows.ComponentResourceKey.ResourceId%2A>上 true 屬性語法的方式來設定和。 在 verbose 語法中, 屬性的設定順序並不重要。 這兩種替代方案的關聯性和機制 (compact 和 verbose) 在主題[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)中有更詳細的說明。  
   
- 技術上來說，值`targetID`可以是任何物件，它不是字串。 不過，在 WPF 中最常見的用法是對齊`targetID`form 字串，而且這類字串中有效的值[XamlName 文法](../../xaml-services/xamlname-grammar.md)。  
+ 就技術上而言, `targetID`的值可以是任何物件, 而不一定是字串。 不過, WPF 中最常見的用法是將`targetID`值與字串的形式對齊, 這類字串在[XamlName 文法](../../xaml-services/xamlname-grammar.md)中是有效的。  
   
- `ComponentResourceKey` 可用於物件元素語法。 在此案例中，指定的值都<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>和<xref:System.Windows.ComponentResourceKey.ResourceId%2A>屬性，才能正確地初始化 擴充功能。  
+ `ComponentResourceKey`可以在物件專案語法中使用。 在此情況下, 必須同時<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>指定和<xref:System.Windows.ComponentResourceKey.ResourceId%2A>屬性的值, 才能正確地初始化延伸模組。  
   
- 在  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]讀取器實作，這個標記延伸的處理由定義<xref:System.Windows.ComponentResourceKey>類別。  
+ 在讀取[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]器的[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]執行中, 此標記<xref:System.Windows.ComponentResourceKey>延伸的處理是由類別所定義。  
   
  `ComponentResourceKey` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   

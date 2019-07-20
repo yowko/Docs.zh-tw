@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: a04cc8c9dd3e36e4866e773861fddce3c10d0e20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755152"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364303"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>認識 XAML 節點資料流結構和概念
 
@@ -208,21 +208,21 @@ public class GameBoard {
 
 ## <a name="xaml-and-xml-language-defined-members-in-the-xaml-node-stream"></a>XAML 節點資料流中的 XAML 和 XML 語言定義成員
 
-因為 XAML 讀取器的解譯和慣例，會將特定成員導入 XAML 節點資料流中，而不是透過明確的 <xref:System.Xaml.XamlMember> 查閱或建構。 這些成員通常是 XAML 指示詞。 在某些情況下，它是讀取將指示詞導入 XAML 節點資料流中之 XAML 的動作。 換句話說，原始輸入 XAML 文字未明確指定成員指示詞，但 XAML 讀取器會插入指示詞，以滿足結構化 XAML 慣例和報告資訊在 XAML 節點資料流之前會遺失該資訊。
+因為 XAML 讀取器的解譯和慣例，會將特定成員導入 XAML 節點資料流中，而不是透過明確的 <xref:System.Xaml.XamlMember> 查閱或建構。 這些成員通常是 XAML 指示詞。 在某些情況下，它是讀取將指示詞導入 XAML 節點資料流中之 XAML 的動作。 換句話說, 原始的輸入 XAML 文字並未明確指定 member 指示詞, 但 XAML 讀取器會插入指示詞, 以便滿足結構化 XAML 慣例, 並在該資訊遺失之前, 在 XAML 節點資料流程中報告資訊。
 
 下列清單指出 XAML 讀取器應該要導入指示詞 XAML 成員節點的所有案例，以及如何在 .NET Framework XAML 服務實作中識別該成員節點。
 
-- **物件節點的初始文字：** 此成員節點的名稱是`_Initialization`，它代表 XAML 指示詞，且其定義在 XAML 語言 XAML 命名空間。 您可以從 <xref:System.Xaml.XamlLanguage.Initialization%2A>取得其靜態實體。
+- **物件節點的初始文字:** 這個成員節點的名稱是`_Initialization`, 它代表 xaml 指示詞, 而且它是在 xaml 語言 xaml 命名空間中定義的。 您可以從 <xref:System.Xaml.XamlLanguage.Initialization%2A>取得其靜態實體。
 
-- **標記延伸的位置參數：** 此成員節點的名稱是`_PositionalParameters`，且其定義在 XAML 語言 XAML 命名空間。 它一律包含物件的泛型清單，每個物件都是位置參數，以 `,` 分隔符號字元預先分隔，和輸入 XAML 中所提供的一樣。 您可以從 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>取得位置參數指示詞的靜態實體。
+- **標記延伸的位置參數:** 這個成員節點的名稱是`_PositionalParameters`, 它是在 xaml 語言 xaml 命名空間中定義的。 它一律包含物件的泛型清單，每個物件都是位置參數，以 `,` 分隔符號字元預先分隔，和輸入 XAML 中所提供的一樣。 您可以從 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>取得位置參數指示詞的靜態實體。
 
-- **未知的內容：** 此成員節點的名稱是`_UnknownContent`。 嚴格來說，它是 <xref:System.Xaml.XamlDirective>，且其定義在 XAML 語言 XAML 命名空間中。 如果 XAML 物件項目包含來源 XAML 中的內容，但是在目前可用的 XAML 結構描述內容之下，無法判斷任何內容屬性，則會將這個指示詞當作 Sentinel 使用。 若要在 XAML 節點資料流中偵測此情況，您可以檢查是否有名為 `_UnknownContent`的成員。 如果在載入路徑 XAML 節點資料流中，沒有採取任何其他動作，當它遇到任何物件上的 <xref:System.Xaml.XamlObjectWriter> 成員，預設 `WriteEndObject` 就會在所嘗試的 `_UnknownContent` 上擲回。 預設 <xref:System.Xaml.XamlXmlWriter> 不會擲回，並且會將成員視為隱含。 您可以從 `_UnknownContent` 取得 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的靜態實體。
+- **未知的內容:** 這個成員節點的名稱是`_UnknownContent`。 嚴格來說，它是 <xref:System.Xaml.XamlDirective>，且其定義在 XAML 語言 XAML 命名空間中。 如果 XAML 物件項目包含來源 XAML 中的內容，但是在目前可用的 XAML 結構描述內容之下，無法判斷任何內容屬性，則會將這個指示詞當作 Sentinel 使用。 若要在 XAML 節點資料流中偵測此情況，您可以檢查是否有名為 `_UnknownContent`的成員。 如果在載入路徑 XAML 節點資料流中，沒有採取任何其他動作，當它遇到任何物件上的 <xref:System.Xaml.XamlObjectWriter> 成員，預設 `WriteEndObject` 就會在所嘗試的 `_UnknownContent` 上擲回。 預設 <xref:System.Xaml.XamlXmlWriter> 不會擲回，並且會將成員視為隱含。 您可以從 `_UnknownContent` 取得 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的靜態實體。
 
-- **集合的集合屬性：** 雖然通常用於 XAML 之集合類別的支援 CLR 類型會有專用具名屬性可保存集合項目，支援類型解析之前，XAML 類型系統並不會知道該屬性。 相反地，XAML 節點資料流會導入 `Items` 預留位置，做為集合 XAML 類型的成員。 在 .NET Framework XAML 服務實作中，這個指示詞/成員在節點資料流中的名稱為 `_Items`。 這個指示詞的常數可以從 <xref:System.Xaml.XamlLanguage.Items%2A>取得。
+- **集合的集合屬性:** 雖然用於 XAML 之集合類別的支援 CLR 類型, 通常會有專用的命名屬性來保存集合專案, 但是在支援類型解析之前, XAML 類型系統並不知道該屬性。 相反地，XAML 節點資料流會導入 `Items` 預留位置，做為集合 XAML 類型的成員。 在 .NET Framework XAML 服務實作中，這個指示詞/成員在節點資料流中的名稱為 `_Items`。 這個指示詞的常數可以從 <xref:System.Xaml.XamlLanguage.Items%2A>取得。
 
-    請注意，XAML 節點資料流可能包含 Items 屬性，而不是 剖析項目以支援類型解析和 XAML 結構描述內容。 例如，套用至物件的
+    請注意, XAML 節點資料流程可能會包含 Items 屬性, 而這些專案不會根據支援型別解析和 XAML 架構內容來加以解析。 例如，套用至物件的
 
-- **XML 定義的成員：** XML 定義`xml:base`，`xml:lang`並`xml:space`成員皆會回報為名為 XAML 指示詞`base`， `lang`，和`space`在.NET Framework XAML 服務實作。 這些成員的命名空間是 XML 命名空間 `http://www.w3.org/XML/1998/namespace`。 您可以從 <xref:System.Xaml.XamlLanguage>取得每個成員的常數。
+- **XML 定義的成員:** XML 定義`xml:base`的、 `lang` `base` `space`和成員會在 .NET Framework xaml 服務實作為中, 報告為 xaml 指示詞, 且名稱為、和。 `xml:space` `xml:lang` 這些成員的命名空間是 XML 命名空間 `http://www.w3.org/XML/1998/namespace`。 您可以從 <xref:System.Xaml.XamlLanguage>取得每個成員的常數。
 
 ## <a name="node-order"></a>節點順序
 
@@ -232,7 +232,7 @@ public class GameBoard {
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>XamlObjectWriter 行為和節點順序
 
-`StartObject` 的 <xref:System.Xaml.XamlObjectWriter> 不一定是要 XAML 物件寫入器立即建構物件執行個體的信號。 XAML 包含數種語言功能，可讓您使用其他輸入來初始化物件，並且不要完全依賴叫用預設建構函式來產生初始物件，然後只設定屬性。 這些功能包括： <xref:System.Windows.Markup.XamlDeferLoadAttribute>、初始文字、 [x:TypeArguments](x-typearguments-directive.md)、標記延伸的位置參數、Factory 方法，以及相關聯的 [x:Arguments](x-arguments-directive.md) 節點 (XAML 2009)。 這些案例每個都會延遲實際的物件建構，而且因為節點資料流已重新排列，所以 XAML 物件寫入器可以依賴每當所遇到的開始成員不是特別用於該物件類型的建構指示詞時，就會實際建構執行個體的行為。
+`StartObject` 的 <xref:System.Xaml.XamlObjectWriter> 不一定是要 XAML 物件寫入器立即建構物件執行個體的信號。 XAML 包含數種語言功能, 可讓您以額外的輸入來初始化物件, 並不完全依賴叫用無參數的函式來產生初始物件, 而且只會設定屬性。 這些功能包括： <xref:System.Windows.Markup.XamlDeferLoadAttribute>、初始文字、 [x:TypeArguments](x-typearguments-directive.md)、標記延伸的位置參數、Factory 方法，以及相關聯的 [x:Arguments](x-arguments-directive.md) 節點 (XAML 2009)。 這些案例每個都會延遲實際的物件建構，而且因為節點資料流已重新排列，所以 XAML 物件寫入器可以依賴每當所遇到的開始成員不是特別用於該物件類型的建構指示詞時，就會實際建構執行個體的行為。
 
 ### <a name="getobject"></a>GetObject
 

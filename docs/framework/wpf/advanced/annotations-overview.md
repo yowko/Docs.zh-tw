@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 861a757effee8d68d1e41682dd91ffadba20c536
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777295"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364368"
 ---
 # <a name="annotations-overview"></a>附註概觀
 在書面文件上撰寫附註或註解是相當稀鬆平常的事，我們幾乎將它視為理所當然。 這些附註或註解是我們新增至文件的「註釋」，用以標記資訊，或反白顯示感興趣的項目以供日後參考。 雖然在書面文件上撰寫附註很容易且平常，不過在電子文件中新增個人註解的功能通常非常有限，如果有的話。  
   
- 本主題會檢閱幾種常見的註釋，特別是自黏便箋和醒目提示，並說明如何[!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)]有助於這些類型的應用程式可以透過 Windows Presentation Foundation (WPF) 文件中的註解檢視控制項。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支援註釋的文件檢視控制項包含<xref:System.Windows.Controls.FlowDocumentReader>並<xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及控制項衍生自<xref:System.Windows.Controls.Primitives.DocumentViewerBase>這類<xref:System.Windows.Controls.DocumentViewer>和<xref:System.Windows.Controls.FlowDocumentPageViewer>。  
+ 本主題會回顧數個常見的批註類型, 特別是附注和醒目提示, 並說明 Microsoft 注釋架構如何透過 Windows Presentation Foundation 在應用程式中協助這些類型的注釋 (WPF) 檔視圖控制項。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支援注釋的檔觀看控制項包括<xref:System.Windows.Controls.FlowDocumentReader>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>, 以及衍生自<xref:System.Windows.Controls.Primitives.DocumentViewerBase>的<xref:System.Windows.Controls.DocumentViewer>控制項, 例如和<xref:System.Windows.Controls.FlowDocumentPageViewer>。  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>自黏便箋  
@@ -36,19 +36,19 @@ ms.locfileid: "61777295"
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>反白顯示  
- 人們使用有創意的方法，在標記書面文件時將注意力吸引到感興趣的項目，例如使用底線、反白顯示、圈起句子中的文字，或是在邊界繪製記號或標記法。  [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] 中的反白顯示註釋提供類似於標記 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文件檢視控制項中所顯示資訊的功能。  
+ 人們使用有創意的方法，在標記書面文件時將注意力吸引到感興趣的項目，例如使用底線、反白顯示、圈起句子中的文字，或是在邊界繪製記號或標記法。  Microsoft 注釋架構中的反白顯示批註提供了類似的功能, 用[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]來標記檔視圖控制項中所顯示的資訊。  
   
  下圖顯示反白顯示註釋的範例。  
   
  ![反白顯示註釋](./media/caf-callouts.png "CAF_Callouts")  
   
- 使用者通常會先選取 一些文字或感興趣的項目，然後按一下滑鼠右鍵以顯示建立註解<xref:System.Windows.Controls.ContextMenu>註釋選項。  下列範例所示[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]可用來宣告<xref:System.Windows.Controls.ContextMenu>路由的使用者可以存取來建立和管理註釋的命令。  
+ 使用者通常會先選取一些文字或感關注的專案, 然後按一下滑鼠右鍵來顯示<xref:System.Windows.Controls.ContextMenu>批註選項, 以建立批註。  下列範例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]會示範, 您可以使用來<xref:System.Windows.Controls.ContextMenu>宣告具有路由命令的, 讓使用者可以存取來建立和管理注釋。  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>資料錨定  
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] 將註釋繫結到使用者選取的資料，而不是繫結到顯示檢視上的位置。 因此，如果文件檢視變更，例如當使用者捲動或調整顯示視窗大小時，註釋會與它繫結的資料選取範圍在一起。 例如，下圖說明使用者對文字選取範圍所做的註釋。 當文件檢視變更時 (捲動、調整大小、縮放比例或其他移動)，反白顯示註釋會隨著原始資料選取範圍移動。  
+ 注釋架構會將注釋系結至使用者所選取的資料, 而不只是顯示在顯示視圖上的位置。 因此，如果文件檢視變更，例如當使用者捲動或調整顯示視窗大小時，註釋會與它繫結的資料選取範圍在一起。 例如，下圖說明使用者對文字選取範圍所做的註釋。 當文件檢視變更時 (捲動、調整大小、縮放比例或其他移動)，反白顯示註釋會隨著原始資料選取範圍移動。  
   
  ![註釋資料錨定](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
@@ -61,7 +61,7 @@ ms.locfileid: "61777295"
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- 另一個範例情節牽涉到應用程式，讓交換註釋和文件讀者能透過電子郵件的自黏便箋。 這項功能讓這些應用程式可讓讀者巡覽至包含要交換之註釋的頁面。  
+ 另一個範例案例牽涉到可透過電子郵件在檔讀取器之間交換注釋和便箋的應用程式。 這項功能讓這些應用程式可讓讀者巡覽至包含要交換之註釋的頁面。  
   
 ## <a name="see-also"></a>另請參閱
 

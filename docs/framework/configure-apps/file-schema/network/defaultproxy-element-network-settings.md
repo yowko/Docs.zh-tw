@@ -8,14 +8,14 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5947808cd137fc4cd280ac683a3e9a14b0d4644d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674567"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363872"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 項目 （網路設定）
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 元素 (網路設定)
 設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。  
   
  \<configuration>  
@@ -61,13 +61,13 @@ ms.locfileid: "61674567"
 ## <a name="remarks"></a>備註  
  如果 defaultProxy 項目是空的，則會使用來自 Internet Explorer 的 Proxy 設定。 這個行為與 .NET Framework 1.1 版的不同。  
   
- 如果將會擲回例外狀況[模組](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)項目會指定非公用型別、 型別並非衍生自<xref:System.Net.IWebProxy>類別，這個物件的預設建構函式的例外狀況發生，或發生例外狀況時正在擷取系統指定的預設 proxy。 例外狀況的 <xref:System.Exception.InnerException%2A> 屬性應該會有此錯誤的根本原因之詳細資訊。  
+ 如果[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)元素指定非公用類型、類型不是衍生自<xref:System.Net.IWebProxy>類別、這個物件的無參數的函式發生例外狀況, 或在抓取時發生例外狀況, 就會擲回例外狀況 (exception)系統指定的預設 proxy。 例外狀況的 <xref:System.Exception.InnerException%2A> 屬性應該會有此錯誤的根本原因之詳細資訊。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用來自 Internet Explorer proxy 的預設值，指定 proxy 位址，並會略過本機存取及 contoso.com 的 proxy。  
+ 下列範例會使用 Internet Explorer proxy 的預設值、指定 proxy 位址, 並略過 proxy 以進行本機存取和 contoso.com。  
   
 ```xml  
 <configuration>  

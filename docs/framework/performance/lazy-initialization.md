@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616376"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364043"
 ---
 # <a name="lazy-initialization"></a>延遲初始設定
-物件的「延遲初始設定」表示物件一直延遲到第一次使用才建立。 (在本主題中，「延遲初始設定」和「延遲具現化」二詞為同義字。)延遲初始設定主要是用來改善效能，避免不必要的計算，並減少程式記憶體需求。 以下為最常見的案例：  
+物件的「延遲初始設定」  表示物件一直延遲到第一次使用才建立。 (在本主題中，「延遲初始設定」  和「延遲具現化」  二詞為同義字。)延遲初始設定主要是用來改善效能，避免不必要的計算，並減少程式記憶體需求。 以下為最常見的案例：  
   
 - 當建立某個物件會耗費大量資源，而程式可能不使用它時。 例如，假設您在記憶體中有 `Customer` 物件，它的 `Orders` 屬性包含大型的 `Order` 物件陣列，其初始化需要連接資料庫。 如果使用者從未要求顯示訂單，或使用資料進行計算，就沒必要使用系統記憶體或計算週期來建立它。 使用 `Lazy<Orders>` 宣告延遲初始設定 `Orders` 物件，可在不使用物件時，避免浪費系統資源。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64616376"
 |<xref:System.Threading.LazyInitializer>|為物件的延遲初始設定提供進階 `static` (Visual Basic 為 `Shared`) 方法，沒有類別的額外負荷。|  
   
 ## <a name="basic-lazy-initialization"></a>基本延遲初始設定  
- 若要定義延遲初始化類型，例如 `MyType`，請使用 `Lazy<MyType>` (Visual Basic 為 `Lazy(Of MyType)`)，如下列範例所示。 如果沒有委派傳入 <xref:System.Lazy%601> 建構函式，第一次存取 Value 屬性時，會使用 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 建立包裝類型。 如果類型沒有預設的建構函式，就會擲回執行階段例外狀況。  
+ 若要定義延遲初始化類型，例如 `MyType`，請使用 `Lazy<MyType>` (Visual Basic 為 `Lazy(Of MyType)`)，如下列範例所示。 如果沒有委派傳入 <xref:System.Lazy%601> 建構函式，第一次存取 Value 屬性時，會使用 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 建立包裝類型。 如果類型沒有無參數的函式, 則會擲回執行時間例外狀況。  
   
  在下例中，假設 `Orders` 是類別，包含從資料庫擷取的 `Order` 物件陣列。 `Customer` 物件包含 `Orders` 的執行個體，但視使用者的動作而 定，可能不需要來自 `Orders` 物件的資料。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "64616376"
   
 <a name="ExceptionsInLazyObjects"></a>   
 ## <a name="exceptions-in-lazy-objects"></a>延遲物件的例外狀況  
- 如前所述，<xref:System.Lazy%601> 物件一律會傳回隨之初始化的相同物件或值，因此 <xref:System.Lazy%601.Value%2A> 屬性是唯讀的。 如果啟用例外狀況快取，此不變性也會延伸至例外狀況行為。 如果延遲初始化的物件有啟用快取的例外狀況，並擲回其初始設定方法的例外狀況時<xref:System.Lazy%601.Value%2A>第一次存取屬性、 存取每個後續的嘗試都會擲回該相同的例外狀況<xref:System.Lazy%601.Value%2A>屬性. 換句話說，即使在多執行緒案例中，也絕對不會重新叫用包裝類型的建構函式。 因此，<xref:System.Lazy%601> 物件無法在某次存取中擲回例外狀況，並在後續存取中傳回值。  
+ 如前所述，<xref:System.Lazy%601> 物件一律會傳回隨之初始化的相同物件或值，因此 <xref:System.Lazy%601.Value%2A> 屬性是唯讀的。 如果啟用例外狀況快取，此不變性也會延伸至例外狀況行為。 如果延遲初始化的物件已啟用例外狀況快取, 並在第一次存取<xref:System.Lazy%601.Value%2A>屬性時, 從其初始化方法擲回例外狀況, 則後續每次嘗試<xref:System.Lazy%601.Value%2A>存取屬性時, 就會擲回相同的例外狀況. 換句話說，即使在多執行緒案例中，也絕對不會重新叫用包裝類型的建構函式。 因此，<xref:System.Lazy%601> 物件無法在某次存取中擲回例外狀況，並在後續存取中傳回值。  
   
- 當您使用任何採用初始設定方法 (`valueFactory` 參數) 的 <xref:System.Lazy%601?displayProperty=nameWithType> 建構函式時，就啟用了例外狀況快取；例如，它會在您使用 `Lazy(T)(Func(T))` 建構函式時啟用。 如果建構函式也採用 <xref:System.Threading.LazyThreadSafetyMode> 值 (`mode` 參數)，請指定 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 或 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>。 指定初始設定方法，可啟用這兩種模式的例外狀況快取。 初始設定方法可以非常簡單。 例如，它可能會呼叫 `T` 的預設建構函式：C# 為 `new Lazy<Contents>(() => new Contents(), mode)`，或 Visual Basic 為 `New Lazy(Of Contents)(Function() New Contents())`。 如果您使用未指定初始設定方法的 <xref:System.Lazy%601?displayProperty=nameWithType> 建構函式，則不會快取 `T` 的預設建構函式擲回的例外狀況。 如需詳細資訊，請參閱 <xref:System.Threading.LazyThreadSafetyMode> 列舉。  
+ 當您使用任何採用初始設定方法 (`valueFactory` 參數) 的 <xref:System.Lazy%601?displayProperty=nameWithType> 建構函式時，就啟用了例外狀況快取；例如，它會在您使用 `Lazy(T)(Func(T))` 建構函式時啟用。 如果建構函式也採用 <xref:System.Threading.LazyThreadSafetyMode> 值 (`mode` 參數)，請指定 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 或 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>。 指定初始設定方法，可啟用這兩種模式的例外狀況快取。 初始設定方法可以非常簡單。 例如, 它可能會呼叫中的無參數`T`函`new Lazy<Contents>(() => new Contents(), mode)`式C#: in `New Lazy(Of Contents)(Function() New Contents())` , 或在 Visual Basic 中。 如果您使用<xref:System.Lazy%601?displayProperty=nameWithType>未指定初始化方法的函式, 則不會快取無參數`T`的函式所擲回的例外狀況。 如需詳細資訊，請參閱 <xref:System.Threading.LazyThreadSafetyMode> 列舉。  
   
 > [!NOTE]
 >  如果您建立的 <xref:System.Lazy%601> 物件是將 `isThreadSafe` 建構函式參數設定為 `false`，或將 `mode` 建構函式參數設定為 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>，您即必須從單一執行緒存取 <xref:System.Lazy%601> 物件，或提供您自己的同步處理。 這適用該物件的所有層面，包括例外狀況快取。  
@@ -116,7 +116,7 @@ ms.locfileid: "64616376"
  <xref:System.Lazy%601.Value%2A> 屬性是唯讀的；因此，公開它的屬性沒有任何 `set` 存取子。 如果您需要 <xref:System.Lazy%601> 物件支援的讀取/寫入屬性，`set` 存取子必須建立新的 <xref:System.Lazy%601> 物件，並指派到備份存放區。 `set` 存取子必須建立 Lambda 運算式，傳回已傳遞給 `set` 存取子的新屬性值，並將該 Lambda 運算式傳遞至新 <xref:System.Lazy%601> 物件的建構函式。 下一次存取 <xref:System.Lazy%601.Value%2A> 屬性會初始化新的 <xref:System.Lazy%601>，且其 <xref:System.Lazy%601.Value%2A> 屬性之後也會傳回已指派給屬性的新值。 之所以如此迂迴排列，是為了保留內建在 <xref:System.Lazy%601> 的多執行緒保護。 否則，屬性存取子就必須快取 <xref:System.Lazy%601.Value%2A> 屬性傳回的第一個值，且只能修改快取的值，而您則必須撰寫自己的執行緒安全程式碼以完成此作業。 因為 <xref:System.Lazy%601> 物件支援的讀取/寫入屬性需要額外的初始設定，效能可能不太令人滿意。 此外，根據特定的案例，可能需要其他協調以避免 setter 與 getter 之間的競爭條件。  
   
 ## <a name="thread-local-lazy-initialization"></a>執行緒區域延遲初始設定  
- 在某些多執行緒的情況下，您可能想要向各執行緒提供它專用的私用資料。 這類資料稱為「執行緒區域資料」。 在 .NET Framework 3.5 版或更舊的版本中，您可以將 `ThreadStatic` 屬性套用到靜態變數，使其成為執行緒區域變數。 不過，使用 `ThreadStatic` 屬性可能會導致極其細小的錯誤。 例如，即使基本的初始化陳述式，也只會在第一個存取它的執行緒上初始化變數，如下列範例所示。  
+ 在某些多執行緒的情況下，您可能想要向各執行緒提供它專用的私用資料。 這類資料稱為「執行緒區域資料」  。 在 .NET Framework 3.5 版或更舊的版本中，您可以將 `ThreadStatic` 屬性套用到靜態變數，使其成為執行緒區域變數。 不過，使用 `ThreadStatic` 屬性可能會導致極其細小的錯誤。 例如，即使基本的初始化陳述式，也只會在第一個存取它的執行緒上初始化變數，如下列範例所示。  
   
  [!code-csharp[Lazy#6](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#6)]
  [!code-vb[Lazy#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#6)]  
@@ -157,4 +157,4 @@ ms.locfileid: "64616376"
 - [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)
 - [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)
 - [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [如何：執行延遲初始化的物件](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [如何：執行物件的延遲初始化](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
