@@ -296,6 +296,8 @@
           href: core/testing/unit-testing-published-output.md
         - name: Visual Studio 的即時單元測試 .NET Core 專案
           href: /visualstudio/test/live-unit-testing-start
+    - name: 連續整合
+      href: core/tools/using-ci-with-cli.md
     - name: 版本控制
       href: core/versions/index.md
       items:
@@ -303,86 +305,88 @@
           href: core/versions/selection.md
         - name: 移除過時的執行階段及 SDK
           href: core/versions/remove-runtime-sdk-versions.md
-    - name: 執行階段識別碼目錄
+    - name: 執行階段識別碼 (RID) 目錄
       href: core/rid-catalog.md
     - name: .NET Core SDK 概觀
       href: core/sdk.md
-    - name: .NET Core CLI 工具
+    - name: .NET Core CLI
       items:
-        - name: .NET Core CLI 概觀
+        - name: 總覽
           href: core/tools/index.md
-        - name: 遙測
-          href: core/tools/telemetry.md
         - name: 通用工具
-          href: core/tools/global-tools.md
+          expanded: true
           items:
+            - name: 總覽
+              href: core/tools/global-tools.md
             - name: 建立全域工具
               href: core/tools/global-tools-how-to-create.md
         - name: 較高的存取權
           href: core/tools/elevated-access.md
         - name: 擴充性模型
           href: core/tools/extensibility.md
-        - name: 連續整合
-          href: core/tools/using-ci-with-cli.md
         - name: 自訂範本
           href: core/tools/custom-templates.md
         - name: 啟用 TAB 鍵自動完成
           href: core/tools/enable-tab-autocomplete.md
-        - name: dotnet
-          href: core/tools/dotnet.md
-        - name: dotnet build
-          href: core/tools/dotnet-build.md
-        - name: dotnet build-server
-          href: core/tools/dotnet-build-server.md
-        - name: dotnet clean
-          href: core/tools/dotnet-clean.md
-        - name: dotnet help
-          href: core/tools/dotnet-help.md
-        - name: dotnet migrate
-          href: core/tools/dotnet-migrate.md
-        - name: dotnet msbuild
-          href: core/tools/dotnet-msbuild.md
-        - name: dotnet new
-          href: core/tools/dotnet-new.md
-        - name: dotnet nuget
+        - name: 遙測
+          href: core/tools/telemetry.md
+        - name: global.json 概觀
+          href: core/tools/global-json.md
+        - name: 參考資料
           items:
-            - name: dotnet nuget delete
-              href: core/tools/dotnet-nuget-delete.md
-            - name: dotnet nuget locals
-              href: core/tools/dotnet-nuget-locals.md
-            - name: dotnet nuget push
-              href: core/tools/dotnet-nuget-push.md
-        - name: dotnet pack
-          href: core/tools/dotnet-pack.md
-        - name: dotnet publish
-          href: core/tools/dotnet-publish.md
-        - name: dotnet restore
-          href: core/tools/dotnet-restore.md
-        - name: dotnet run
-          href: core/tools/dotnet-run.md
-        - name: dotnet sln
-          href: core/tools/dotnet-sln.md
-        - name: dotnet store
-          href: core/tools/dotnet-store.md
-        - name: dotnet test
-          href: core/tools/dotnet-test.md
-        - name: dotnet tool
-          items:
-            - name: dotnet tool install
-              href: core/tools/dotnet-tool-install.md
-            - name: dotnet tool list
-              href: core/tools/dotnet-tool-list.md
-            - name: dotnet tool uninstall
-              href: core/tools/dotnet-tool-uninstall.md
-            - name: dotnet tool update
-              href: core/tools/dotnet-tool-update.md
-        - name: dotnet vstest
-          href: core/tools/dotnet-vstest.md
-        - name: dotnet-install 指令碼
-          href: core/tools/dotnet-install-script.md
-        - name: 專案修改命令
-          items:
-            - name: reference
+            - name: dotnet
+              href: core/tools/dotnet.md
+            - name: dotnet build
+              href: core/tools/dotnet-build.md
+            - name: dotnet build-server
+              href: core/tools/dotnet-build-server.md
+            - name: dotnet clean
+              href: core/tools/dotnet-clean.md
+            - name: dotnet help
+              href: core/tools/dotnet-help.md
+            - name: dotnet migrate
+              href: core/tools/dotnet-migrate.md
+            - name: dotnet msbuild
+              href: core/tools/dotnet-msbuild.md
+            - name: dotnet new
+              href: core/tools/dotnet-new.md
+            - name: dotnet nuget
+              items:
+                - name: dotnet nuget delete
+                  href: core/tools/dotnet-nuget-delete.md
+                - name: dotnet nuget locals
+                  href: core/tools/dotnet-nuget-locals.md
+                - name: dotnet nuget push
+                  href: core/tools/dotnet-nuget-push.md
+            - name: dotnet pack
+              href: core/tools/dotnet-pack.md
+            - name: dotnet publish
+              href: core/tools/dotnet-publish.md
+            - name: dotnet restore
+              href: core/tools/dotnet-restore.md
+            - name: dotnet run
+              href: core/tools/dotnet-run.md
+            - name: dotnet sln
+              href: core/tools/dotnet-sln.md
+            - name: dotnet store
+              href: core/tools/dotnet-store.md
+            - name: dotnet test
+              href: core/tools/dotnet-test.md
+            - name: dotnet tool
+              items:
+                - name: dotnet tool install
+                  href: core/tools/dotnet-tool-install.md
+                - name: dotnet tool list
+                  href: core/tools/dotnet-tool-list.md
+                - name: dotnet tool uninstall
+                  href: core/tools/dotnet-tool-uninstall.md
+                - name: dotnet tool update
+                  href: core/tools/dotnet-tool-update.md
+            - name: dotnet vstest
+              href: core/tools/dotnet-vstest.md
+            - name: dotnet-install 指令碼
+              href: core/tools/dotnet-install-script.md
+            - name: 專案參考命令
               items:
                 - name: dotnet add reference
                   href: core/tools/dotnet-add-reference.md
@@ -390,7 +394,7 @@
                   href: core/tools/dotnet-list-reference.md
                 - name: dotnet remove reference
                   href: core/tools/dotnet-remove-reference.md
-            - name: package
+            - name: 專案套件命令
               items:
                 - name: dotnet add package
                   href: core/tools/dotnet-add-package.md
@@ -398,8 +402,6 @@
                   href: core/tools/dotnet-list-package.md
                 - name: dotnet remove package
                   href: core/tools/dotnet-remove-package.md
-        - name: global.json
-          href: core/tools/global-json.md
     - name: .NET Core 其他工具
       href: core/additional-tools/index.md
       items:
