@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 8d3cecbaecc8cf5af1e06f29c9bb8a151523d3e8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 68428c097b4fc43617834c684ec6dc9705512597
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970944"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363926"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>具名方法委派與匿名方法 (C# 程式設計手冊)
 [delegate](../../../csharp/language-reference/keywords/delegate.md) 可以與具名方法產生關聯。 當您使用具名方法具現化委派時，方法會當做參數傳遞，例如：  
@@ -41,6 +41,5 @@ ms.locfileid: "56970944"
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [委派](../../../csharp/programming-guide/delegates/index.md)
-- [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [如何：組合委派 (多點傳送委派)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
 - [事件](../../../csharp/programming-guide/events/index.md)

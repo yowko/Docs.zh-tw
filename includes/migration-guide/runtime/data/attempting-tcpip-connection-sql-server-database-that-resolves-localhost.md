@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8ac6d50b192001f6d924b2ffe4a367a33fc2c689
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: e36dac19beb6251debef100656670a6623344eea
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67857538"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237823"
 ---
 ### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>嘗試建立 TCP/IP 連線至解析為 `localhost` 的 SQL Server 資料庫會失敗
 
@@ -15,4 +15,3 @@ ms.locfileid: "67857538"
 |範圍|次要|
 |版本|4.6|
 |類型|執行階段|
-

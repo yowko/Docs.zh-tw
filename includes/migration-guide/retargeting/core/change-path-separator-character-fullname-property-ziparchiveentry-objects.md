@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a786ce0908552547f996d0c299db2a9e9e14a757
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: e4860113f45d3b3466e01e5db61d355a8ea745df
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804344"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235576"
 ---
 ### <a name="change-in-path-separator-character-in-fullname-property-of-ziparchiveentry-objects"></a>ZipArchiveEntry 物件的 FullName 屬性中路徑分隔符號字元變更
 
@@ -16,4 +16,3 @@ ms.locfileid: "67804344"
 |版本|4.6.1|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String,System.IO.Compression.CompressionLevel,System.Boolean)?displayProperty=nameWithType></li><li><xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String,System.IO.Compression.CompressionLevel,System.Boolean,System.Text.Encoding)?displayProperty=nameWithType></li></ul>|
-

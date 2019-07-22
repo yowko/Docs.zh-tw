@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634779"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331749"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>規則運算式中的替代建構
 <a name="top"></a> 交替建構會修改規則運算式來啟用二選一或條件式比對。 .NET 支援下列三種替代建構：  
@@ -125,7 +125,7 @@ ms.locfileid: "64634779"
 |`\b`|從字緣開始。|  
 |`(?<n2>\d{2}-)?`|比對出現零次或一次且後接連字號的兩個數字。 將此擷取群組命名為 `n2`。|  
 |`(?(n2)`|測試 `n2` 在輸入字串中是否相符。|  
-|`)\d{7}`|如果 `n2` 相符，則會比對七個十進位數字。|  
+|`\d{7}`|如果 `n2` 相符，則會比對七個十進位數字。|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|如果 `n2` 不相符，則會比對三個十進位數字、一個連字號、兩個十進位數字、另一個連字號，以及四個十進位數字。|  
 |`\b`|比對字邊界。|  
   

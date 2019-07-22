@@ -9,15 +9,16 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 346cfccd076866e9c321974aaa8c8ddd367a17ea
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 3bf71bbe0e3f4e14f140f5a1b98a662ceaaea419
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859582"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363002"
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
-使用 `async` 修飾詞可將方法、[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」  。 下例定義名為 `ExampleMethodAsync` 的非同步方法： 
+
+使用 `async` 修飾詞可將方法、[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/language-reference/operators/delegate-operator.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」  。 下例定義名為 `ExampleMethodAsync` 的非同步方法：
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -25,7 +26,7 @@ public async Task<int> ExampleMethodAsync()
     // . . . .  
 }  
 ```  
- 
+
 如果您不熟悉非同步程式設計或不了解非同步方法如何使用 `await` 關鍵字進行可能需要長期執行的工作，而不封鎖呼叫端執行緒，請閱讀[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)中的簡介。 下列程式碼位於非同步方法中，會呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 方法： 
   
 ```csharp  

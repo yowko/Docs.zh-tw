@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 22c67c687f5581c181acc4aeab8910c4467fd424
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a14395895c6be586c862d1b49aa6bf6669e4203a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67858624"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238019"
 ---
 ### <a name="calling-itemsrefresh-on-a-wpf-listbox-listview-or-datagrid-with-items-selected-can-cause-duplicate-items-to-appear-in-the-element"></a>在已選取項目的 WPF ListBox、ListView 或 DataGrid 上呼叫 Items.Refresh 會導致在項目中出現重複的項目
 
@@ -16,4 +16,3 @@ ms.locfileid: "67858624"
 |版本|4.5|
 |類型|執行階段|
 |受影響的 API|<ul><li><xref:System.Windows.Data.CollectionView.Refresh?displayProperty=nameWithType></li></ul>|
-

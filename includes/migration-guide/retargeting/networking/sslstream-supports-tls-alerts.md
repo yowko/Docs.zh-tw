@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 640af1f9814b31ad0b431a8317244a94250a65cc
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 136ffc9305de79679ac9d254c026ecb0debc7c52
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67859113"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235591"
 ---
 ### <a name="sslstream-supports-tls-alerts"></a>SslStream 支援 TLS 警示
 
@@ -16,4 +16,3 @@ ms.locfileid: "67859113"
 |版本|4.7|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Net.Security.SslStream?displayProperty=nameWithType></li><li><xref:System.Net.WebRequest?displayProperty=nameWithType></li><li><xref:System.Net.HttpWebRequest?displayProperty=nameWithType></li><li><xref:System.Net.FtpWebRequest?displayProperty=nameWithType></li><li><xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType></li><li><xref:System.Net.Http?displayProperty=nameWithType></li></ul>|
-

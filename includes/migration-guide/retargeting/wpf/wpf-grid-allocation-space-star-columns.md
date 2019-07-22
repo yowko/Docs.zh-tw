@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5d8c5dcadcea446a88e2ccaa73b1be91eea0956b
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 79a251f3d08a253db2e1a805113f46f83c6a9410
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67859099"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235596"
 ---
 ### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>star-column 空間的 WPF 方格配置
 
@@ -15,4 +15,3 @@ ms.locfileid: "67859099"
 |範圍|次要|
 |版本|4.7|
 |類型|正在重定目標|
-
