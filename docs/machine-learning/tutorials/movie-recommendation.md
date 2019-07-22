@@ -92,7 +92,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 * `rating`
 * `timestamp`
 
-在機器學習服務中，用來進行預測的資料行稱為[功能](../resources/glossary.md#feature)，而傳回預測的資料行稱為[標籤](../resources/glossary.md#label)。
+在機器學習服務中，用來進行預測的資料行稱為[特徵](../resources/glossary.md#feature)，而傳回預測的資料行稱為[標籤](../resources/glossary.md#label)。
 
 您希望預測電影評等，因此評等資料行是 `Label`。 其他三個資料行 `userId`、`movieId` 和 `timestamp` 都是 `Features`，用來預測 `Label`。
 
@@ -102,7 +102,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 | `movieId`      |               |
 | `timestamp`     |               |
 
-由您決定使用哪些 `Features` 來預測 `Label`。 您也可以使用類似[功能排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)的功能，來協助您選取最合適的 `Features`。
+由您決定使用哪些 `Features` 來預測 `Label`。 您也可以使用類似[特徵排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)的功能，來協助您選取最合適的 `Features`。
 
 在此情況下，您應該排除 `timestamp` 資料行為 `Feature`，因為時間戳記並不會實際影響使用者對特定影片的評分方式，因此無法提供更精確的預測：
 
