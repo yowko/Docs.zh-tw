@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0aaa0ad0e0e3cbd23de287b3b79a8c209143544e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 2f960942bda54505690cbac3151ef74ec0ab5ebb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67859265"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235554"
 ---
 ### <a name="deadlock-may-result-when-using-reentrant-services"></a>使用可重新進入服務時，可能會造成死結
 
@@ -16,4 +16,3 @@ ms.locfileid: "67859265"
 |版本|4.6.2|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ConcurrencyMode.Reentrant?displayProperty=nameWithType></li></ul>|
-

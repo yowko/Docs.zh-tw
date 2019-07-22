@@ -2,12 +2,12 @@
 title: 使用非同步方式存取檔案 (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 34ce05bd1270877aa3c626292e8b2464a23fad0c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ca47157575ef4569a43f334dae4f99a1986a7ce
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583441"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330945"
 ---
 # <a name="using-async-for-file-access-c"></a>使用非同步方式存取檔案 (C#)
 您可以使用非同步功能來存取檔案。 使用非同步功能，您就可以呼叫非同步方法，而不需要使用回呼或將您的程式碼分散到多種方法或 Lambda 運算式上。 若要讓同步程式碼變成非同步，只要呼叫非同步方法 (而不是同步方法)，然後將幾個關鍵字新增至程式碼即可。  
@@ -47,7 +47,7 @@ using System.Threading.Tasks;
  下列範例會將文字寫入檔案。 在每個 await 陳述式中，此方法會立即結束。 當檔案 I/O 完成時，此方法會在 await 陳述式後面的陳述式繼續進行。 請注意，使用 await 陳述式的方法定義中會有 async 修飾詞。  
   
 ```csharp  
-public async void ProcessWrite()  
+public async Task ProcessWriteAsync()  
 {  
     string filePath = @"temp2.txt";  
     string text = "Hello World\r\n";  
@@ -81,7 +81,7 @@ await theTask;
  下列範例會從檔案讀取文字。 此文字已經過緩衝處理，在本例中已置於 <xref:System.Text.StringBuilder>。 不同於上一個範例，await 的評估會產生一個值。 <xref:System.IO.Stream.ReadAsync%2A> 方法會傳回 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>，因此在作業完成之後，await 的評估會產生 `Int32` 值 (`numRead`)。 如需詳細資訊，請參閱[非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
 ```csharp  
-public async void ProcessRead()  
+public async Task ProcessReadAsync()  
 {  
     string filePath = @"temp2.txt";  
   
@@ -132,7 +132,7 @@ private async Task<string> ReadTextAsync(string filePath)
  請注意，任何效能提升幾乎完全來自平行處理，而不是非同步處理。 非同步的優點在於不會佔用多個執行緒，而且不會佔用使用者介面執行緒。  
   
 ```csharp  
-public async void ProcessWriteMult()  
+public async Task ProcessWriteMultAsync()  
 {  
     string folder = @"tempfolder\";  
     List<Task> tasks = new List<Task>();  

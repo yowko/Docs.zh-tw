@@ -1,15 +1,15 @@
 ---
 title: 教學課程：偵測產品銷售中的異常
 description: 了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 2019 中使用 C# 建立 .NET Core 主控台應用程式。
-ms.date: 06/11/2019
+ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 3e3e368ed3bcb35e7e2c8bdf08abe71afd4ae87c
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e87034733b048153202bc11ab94ed7605749f60c
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306232"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331682"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售中的異常
 
@@ -169,7 +169,7 @@ static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales
 }
 ```
 
-使用 [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimator) 定型偵測尖峰的模型。 使用下列程式碼將它新增至 `DetectChangepoint()` 方法：
+使用 [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimator) 定型偵測尖峰的模型。 使用下列程式碼將它新增至 `DetectSpike()` 方法：
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 

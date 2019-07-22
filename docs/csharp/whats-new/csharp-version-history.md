@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423246"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363886"
 ---
 # <a name="the-history-of-c"></a>C\# 的歷史
 
@@ -56,7 +56,7 @@ Visual Studio 2003 隨附的 C# 1.2 版。 本版內含對語言的小幅功能�
 
 - [泛型](../programming-guide/generics/index.md)
 - [部分型別](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [匿名方法](../programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [匿名方法](../language-reference/operators/delegate-operator.md)
 - [可為 Null 的型別](../programming-guide/nullable-types/index.md)
 - [迭代器](../programming-guide/concepts/iterators.md)
 - [共變數和反變數](../programming-guide/concepts/covariance-contravariance/index.md)
@@ -100,7 +100,7 @@ C# 3.0 版在 2007 年晚期和 Visual Studio 2008 一起出現，不過語言�
 
 ## <a name="c-version-40"></a>C# 4.0 版
 
-C# 4.0 版要堅守 3.0 版的奠基狀態會很困難。 3.0 版開始，C# 讓語言穩固地擺脫 Java 的影子，並建立聲望。 語言很快地變優雅。
+C# 4.0 版要堅守 3.0 版的奠基狀態會很困難。 3\.0 版開始，C# 讓語言穩固地擺脫 Java 的影子，並建立聲望。 語言很快地變優雅。
 
 下一版確實導入了一些有趣的新功能：
 
@@ -122,7 +122,7 @@ C# 5.0 版是該語言的一個聚焦版本。 幾乎該版本的所有心血都
 - [非同步成員](../async.md)
 - [呼叫端資訊屬性](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>請參閱
+### <a name="see-also"></a>另請參閱
 
 * [Code Project：C# 5.0 的呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 

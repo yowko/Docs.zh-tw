@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/09/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: bf04f5a098bd2c378a2b73d7684eb74e16feb728
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b58afca0671468d3e981c7615e0af1c0f8ae632f
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779046"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331665"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教學課程：搭配 ML.NET 使用矩陣因式分解建置電影推薦工具
 
@@ -92,7 +92,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 * `rating`
 * `timestamp`
 
-在機器學習服務中，用來進行預測的資料行稱為[特徵](../resources/glossary.md#feature)，而傳回預測的資料行稱為[標籤](../resources/glossary.md#label)。
+在機器學習服務中，用來進行預測的資料行稱為[功能](../resources/glossary.md#feature)，而傳回預測的資料行稱為[標籤](../resources/glossary.md#label)。
 
 您希望預測電影評等，因此評等資料行是 `Label`。 其他三個資料行 `userId`、`movieId` 和 `timestamp` 都是 `Features`，用來預測 `Label`。
 
@@ -102,7 +102,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 | `movieId`      |               |
 | `timestamp`     |               |
 
-由您決定使用哪些 `Features` 來預測 `Label`。 您也可以使用類似[特徵排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)的功能，來協助您選取最合適的 `Features`。
+由您決定使用哪些 `Features` 來預測 `Label`。 您也可以使用類似[功能排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)的功能，來協助您選取最合適的 `Features`。
 
 在此情況下，您應該排除 `timestamp` 資料行為 `Feature`，因為時間戳記並不會實際影響使用者對特定影片的評分方式，因此無法提供更精確的預測：
 
@@ -245,7 +245,9 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-將下列程式碼新增至 `EvaluateModel()` 以轉換 `Test` 資料：[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+將下列程式碼新增至 `EvaluateModel()` 以轉換 `Test` 資料：
+
+[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
 
 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法會對測試資料集之多個提供的輸入資料列進行預測。
 

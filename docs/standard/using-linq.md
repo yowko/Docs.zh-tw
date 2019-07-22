@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2ee2ef57385d7fb0a396a1c08110fd810e6b0abd
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67857108"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238637"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -143,7 +143,7 @@ Dim filteredItems = From item In myItems
 
 API 語法只是一個使用查詢語法的更簡潔方法嗎？
 
-沒有。 查詢語法可讓您使用 **let** 子句，允許您在運算式的範圍內導入及繫結變數，並在運算式的後續片段中使用它。 可以僅使用 API 語法來重新產生相同的程式碼，但很可能會產生難以閱讀的程式碼。
+否。 查詢語法可讓您使用 **let** 子句，允許您在運算式的範圍內導入及繫結變數，並在運算式的後續片段中使用它。 可以僅使用 API 語法來重新產生相同的程式碼，但很可能會產生難以閱讀的程式碼。
 
 而這就帶出了一個問題，**您應該只使用查詢語法嗎？**
 
@@ -282,7 +282,6 @@ End Class
 Dim allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, New DogHairLengthComparer())
 ```
 
-
 * 兩組集合之間的交集︰
 
 ```csharp
@@ -355,7 +354,7 @@ End Function
 
 PLINQ 或 Parallel LINQ，都是 LINQ 運算式的平行執行引擎。 換句話說，標準 LINQ 運算式可以在任意數目的執行緒上進行完整的平行處理。 這是透過在執行運算式之前呼叫 `AsParallel()` 所完成的。
 
-請考慮下列：
+請考慮下列事項：
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
