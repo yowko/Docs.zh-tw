@@ -2,16 +2,16 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859539"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400745"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
-在 C# 指南的＜操作說明＞一節中，您可以找到常見問題的快速解答。 在某些形況下，文章可能會列在多個章節內。 這是因為我們希望使用者能從多個搜尋管道輕鬆找到這些文章。 
+在 C# 指南的＜操作說明＞一節中，您可以找到常見問題的快速解答。 在某些形況下，文章可能會列在多個章節內。 這是因為我們希望使用者能從多個搜尋管道輕鬆找到這些文章。
 
 ## <a name="general-c-concepts"></a>一般 C# 概念
 
@@ -19,7 +19,6 @@ ms.locfileid: "67859539"
 
 - [使用物件初始設定式將物件初始化](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)。
 - [了解向方法傳遞結構及類別的不同](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
-- [如何使用 Lambda 運算式](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。
 - [使用全域命名空間別名解決類型名稱衝突](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。
 - [使用運算子多載](../language-reference/operators/operator-overloading.md)。
 - [實作和呼叫自訂擴充方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。

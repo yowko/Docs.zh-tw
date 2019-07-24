@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 93735d12426042fd6517c10a55d1a9bd32f906bb
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: b373b33fcc962e49aa220f31e24b1484a0a8cd98
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363068"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401598"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 標記延伸
 定義和參考從外部元件載入之資源的索引鍵。 這可讓資源查閱指定元件中的目標型別, 而不是元件或類別上的明確資源字典。  
@@ -46,7 +46,7 @@ ms.locfileid: "68363068"
   
 |||  
 |-|-|  
-|`targetTypeName`|在資源元件中定義[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]的公用類型名稱。|  
+|`targetTypeName`|在資源元件中定義的公用 common language runtime (CLR) 類型名稱。|  
 |`targetID`|資源的索引鍵。 查閱資源時, `targetID`會類似于資源的[x:Key](../../xaml-services/x-key-directive.md)指示詞。|  
   
 ## <a name="remarks"></a>備註  
