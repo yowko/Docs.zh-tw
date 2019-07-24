@@ -4,16 +4,16 @@ description: 了解如何建立支援外掛程式的 .NET Core 應用程式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: a9431ee28c7df21a8688f845be20e062eca21887
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 308fd2f853261e87da71892c42e17e36984d1978
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773424"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330974"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>建立具有外掛程式的 .NET Core 應用程式
 
-本教學課程會示範如何：
+此教學課程會示範如何：
 
 - 建構專案以支援外掛程式。
 - 建立自訂 <xref:System.Runtime.Loader.AssemblyLoadContext> 以載入每個外掛程式。
@@ -175,7 +175,7 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 [!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
 
-`PluginLoadContext` 類型衍生自 <xref:System.Runtime.Loader.AssemblyLoadContext>。 `AssemblyLoadContext` 類型是執行階段中的一種特殊類型，可讓開發人員將載入的組件隔離到不同的群組，以確保組件版本不會衝突。 此外，自訂 `AssemblyLoadContext` 可以選擇要從中載入組件的不同路徑，並覆寫預設行為。 `PluginLoadContext` 使用 .NET Core 3.0 中引進的 `AssemblyDependencyResolver` 類型執行個體，將組件名稱解析為路徑。 `AssemblyDependencyResolver` 物件是以 .NET 類別庫路徑所建構。 它會根據其路徑已傳遞至 `AssemblyDependencyResolver` 建構函式的類別庫檔案 *deps.json*，將組件和原生程式庫解析為其相對路徑。 自訂 `AssemblyLoadContext` 可讓外掛程式具有自己的相依性，而 `AssemblyDependencyResolver` 可讓您輕鬆正確地載入相依性。
+`PluginLoadContext` 類型衍生自 <xref:System.Runtime.Loader.AssemblyLoadContext>。 `AssemblyLoadContext` 類型是執行階段中的一種特殊類型，可讓開發人員將載入的組件隔離到不同的群組，以確保組件版本不會衝突。 此外，自訂 `AssemblyLoadContext` 可以選擇要從中載入組件的不同路徑，並覆寫預設行為。 `PluginLoadContext` 使用 .NET Core 3.0 中引進的 `AssemblyDependencyResolver` 類型執行個體，將組件名稱解析為路徑。 `AssemblyDependencyResolver` 物件是以 .NET 類別庫路徑所建構。 它會根據其路徑已傳遞至 `AssemblyDependencyResolver` 建構函式之類別庫的 *deps.json* 檔案，將組件和原生程式庫解析至其相對路徑。 自訂 `AssemblyLoadContext` 可讓外掛程式具有自己的相依性，而 `AssemblyDependencyResolver` 可讓您輕鬆正確地載入相依性。
 
 現在 `AppWithPlugin` 專案具有 `PluginLoadContext` 類型，請以下列主體更新 `Program.LoadPlugin` 方法：
 
@@ -260,4 +260,4 @@ static Assembly LoadPlugin(string relativePath)
 
 ## <a name="plugin-target-framework-recommendations"></a>外掛程式目標 Framework 建議
 
-因為外掛程式相依性載入使用 *deps.json* 檔案，所以所有外掛程式的目標 Framework 會有相關的 gotcha。 具體來說，您的外掛程式應以執行階段為目標 (例如 .NET Core 3.0)，而不是 .NET Standard 版本。 `deps.json` 檔案是根據專案的目標 Framework 所產生，由於許多 .NET Standard 相容套件提供可對 .NET Standard 建置之參考組件和適用於特定執行階段的實作組件，因此 `deps.json` 可能無法正確地看到實作組件，或可能捕捉 .NET Standard 版的組件，而不是您預期的 .NET Core 版本。
+因為外掛程式相依性載入會使用 *deps.json* 檔案，所以會有與外掛程式的目標 Framework 相關的 Gotcha。 具體來說，您的外掛程式應以執行階段為目標 (例如 .NET Core 3.0)，而不是 .NET Standard 版本。 *.deps.json* 檔案是根據專案的目標 Framework 所產生；由於許多 .NET Standard 相容套件提供針對 .NET Standard 進行建置的參考組件，以及適用於特定執行階段的實作組件，因此 *.deps.json* 可能無法正確看到實作組件，或可能抓取 .NET Standard 版本的組件，而不是您預期的 .NET Core 版本。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: e770c305afe098e633700b039efb51770c77ada7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5db982c0a94814bfece087eb4db119a4df246094
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661440"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330972"
 ---
 # <a name="built-in-types-table-c-reference"></a>內建類型資料表 (C# 參考)
 
@@ -40,7 +40,7 @@ ms.locfileid: "67661440"
 
 表中除了 `object` 和 `string` 以外的所有型別，都視為簡單型別。  
   
-C# 型別關鍵字和它們的別名都可互換。 例如，您可以使用下列任一個宣告來宣告整數變數：  
+.NET 型別與其 C# 型別關鍵字別名是可互換的。 例如，您可以使用下列任一個宣告來宣告整數變數：  
 
 ```csharp
 int x = 123;

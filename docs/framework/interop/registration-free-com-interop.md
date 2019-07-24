@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ed8525cad7dd56fe026070786b0f0cf51c0fec2d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648517"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363969"
 ---
 # <a name="registration-free-com-interop"></a>免註冊的 COM Interop
 免註冊的 COM Interop 不需要使用 Windows 登錄來儲存組件資訊，即可啟動元件。 您不是在部署期間在電腦上登錄元件，而是在設計階段建立 Win32 樣式資訊清單檔案，其中包含繫結和啟動的相關資訊。 這些資訊清單檔案 (而不是登錄機碼) 會引導物件的啟動。  
@@ -41,11 +41,11 @@ ms.locfileid: "64648517"
   
      Windows Server 2003 系列也支援適用於 .NET 架構組件的免註冊 COM Interop。  
   
-     若要使 .NET 架構的類別相容於來自 COM 的免註冊啟動，該類別必須要有預設建構函式，而且必須是公用的。  
+     若要使 .NET 型類別相容於來自 COM 的免登錄啟用，該類別必須要有無參數建構函式，而且必須是公用的。  
   
-### <a name="configuring-com-components-for-registration-free-activation"></a>設定適用於免註冊啟動的 COM 元件  
+### <a name="configuring-com-components-for-registration-free-activation"></a>設定適用於免註冊啟用的 COM 元件  
   
-1. 若要讓 COM 元件參與免註冊啟動，必須將其部署為並存組件。 並存組件是 Unmanaged 組件。  如需詳細資訊，請參閱[使用並存組件](/windows/desktop/SbsCs/using-side-by-side-assemblies) \(英文\)。  
+1. 若要讓 COM 元件參與免註冊啟用，必須將其部署為並存組件。 並存組件是 非受控組件。  如需詳細資訊，請參閱[使用並存組件](/windows/desktop/SbsCs/using-side-by-side-assemblies) \(英文\)。  
   
      若要使用 COM 並存組件，.NET 架構應用程式開發人員必須提供應用程式資訊清單，其中包含繫結和啟動資訊。 對 Unmanaged 並存組件的支援內建在 Windows XP 作業系統中。 當所要啟動的元件不在登錄中時，COM 執行階段 (作業系統可支援) 會掃描應用程式資訊清單，以取得啟動資訊。  
   

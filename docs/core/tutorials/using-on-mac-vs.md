@@ -2,14 +2,14 @@
 title: 使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
 description: 本主題會逐步引導您使用 Visual Studio for Mac 和 .NET Core 建置簡單主控台應用程式。
 author: mairaw
-ms.date: 06/12/2017
+ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: 4467842c0b65ea536cc26601981d9fcc2bc68f2d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a6d58d2a54ce9742542a3f7e5c9378be89b8f89a
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870527"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
 
@@ -24,21 +24,25 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 請參閱 [Mac 上 .NET Core 的先決條件](../../core/macos-prerequisites.md)主題。
 
+請查看 [.NET Core 支援](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019)指南以確定您使用的是支援的 .NET Core 版本。
+
 ## <a name="get-started"></a>開始使用
 
 如果您已經安裝必要條件和 Visual Studio for Mac，請略過本節並移至[建立專案](#creating-a-project)。 請遵循下列步驟來安裝必要條件和 Visual Studio for Mac：
 
-下載 [Visual Studio for Mac 安裝程式](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 執行安裝程式。 閱讀並接受授權合約。 安裝過程中，系統會詢問您是否要安裝 Xamarin，這是一個跨平台的行動應用程式開發技術。 針對 .NET Core 開發，安裝 Xamarin 和其相關元件為選擇性。 如需 Visual Studio for Mac 安裝程序的逐步解說，請參閱 [Visual Studio for Mac 文件](/visualstudio/mac/)。 安裝完成後，請啟動 Visual Studio for Mac IDE。
+下載 [Visual Studio for Mac 安裝程式](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 執行安裝程式。 閱讀並接受授權合約。 在安裝期間，請選取安裝 .NET Core 的選項。 系統會詢問您是否要安裝 Xamarin，這是一個跨平台的行動應用程式開發技術。 針對 .NET Core 開發，安裝 Xamarin 和其相關元件為選擇性。 如需 Visual Studio for Mac 安裝程序的逐步解說，請參閱 [Visual Studio for Mac 文件](/visualstudio/mac/)。 安裝完成後，請啟動 Visual Studio for Mac IDE。
 
 ## <a name="creating-a-project"></a>建立專案
 
-1. 選取歡迎畫面上的 [新增專案]  。
+1. 在 [開始] 視窗上，選取 [新增]  。
 
-   ![Visual Studio for Mac 歡迎畫面上的 [新增專案] 按鈕](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
+   ![Visual Studio for Mac [開始] 畫面上的 [新增] 按鈕](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
 1. 在 [新增專案]  對話方塊中，選取 [.NET Core]  節點下的 [應用程式]  。 選取 [主控台應用程式]  範本，接著選取 [下一步]  。
 
    ![[新增專案] 範本清單](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
+
+1. 如果您已安裝多個版本的 .NET Core，請針對您的專案選取目標 Framework。
 
 1. 針對 [專案名稱]  輸入 "HelloWorld"。 選取 [建立]  。
 
@@ -50,7 +54,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 ## <a name="run-the-application"></a>執行應用程式
 
-使用 <kbd>F5</kbd> 以偵錯模式執行應用程式，或使用 <kbd>CTRL</kbd>+<kbd>F5</kbd> 以發行模式執行應用程式。
+使用 ⌘ ↵ (command + enter) 以在偵錯模式中執行應用程式，或是使用 ⌥ ⌘ ↵ (option + command + enter) 以在發行模式中執行應用程式。
 
 ![[應用程式輸出] 窗格顯示 Hello World!](./media/using-on-mac-vs/visual-studio-mac-output.png)
 

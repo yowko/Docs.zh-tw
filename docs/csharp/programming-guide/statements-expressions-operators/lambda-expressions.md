@@ -9,16 +9,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: dd9b77a90030a96d17104c8c0e48964b6a85d165
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125729"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363906"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計指南)
 
-「Lambda 運算式」是當做物件處理的程式碼區塊 (運算式或陳述式區塊)。 它可當做方法的引數傳遞，也可由方法呼叫傳回。 Lambda 運算式可大量用於：
+「Lambda 運算式」  是當做物件處理的程式碼區塊 (運算式或陳述式區塊)。 它可當做方法的引數傳遞，也可由方法呼叫傳回。 Lambda 運算式可大量用於：
 
 - 將要執行的程式碼傳遞至非同步方法，例如 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>。
 
@@ -41,12 +41,10 @@ Lambda 運算式使用 [Lambda 宣告運算子](../../language-reference/operato
 [!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
 當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 類別中的 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 方法時 (就像是在 LINQ to Objects 和 LINQ to XML中所執行)，此參數會是委派型別 <xref:System.Func%602?displayProperty=nameWithType>。 Lambda 運算式是建立委派最方便的方式。 當您在 <xref:System.Linq.Queryable?displayProperty=nameWithType> 類別中呼叫 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 方法時 (就像是在 LINQ to SQL 中所執行)，參數型別是運算式樹狀架構型別 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)。 再次強調，Lambda 運算式就是建構該運算式樹狀架構非常簡潔的方式。 Lambda 會讓 `Select` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件類型並不相同。
-
-所有適用於[匿名方法](anonymous-methods.md)的限制，也都適用於 Lambda 運算式。
   
 ## <a name="expression-lambdas"></a>運算式 Lambda
 
-在 `=>` 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」。 運算式 Lambda 會在[運算式樹狀架構](../concepts/expression-trees/index.md)的建構過程中大量使用。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
+在 `=>` 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」  。 運算式 Lambda 會在[運算式樹狀架構](../concepts/expression-trees/index.md)的建構過程中大量使用。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
 
 ```csharp
 (input-parameters) => expression
@@ -82,7 +80,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](../../language-reference/operato
 
 [!code-csharp-interactive[statement lambda](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
 
-陳述式 Lambda 就像匿名方法，它不能用來建立運算式樹狀架構。
+陳述式 Lambda 無法用來建立運算式樹狀架構。
   
 ## <a name="async-lambdas"></a>非同步 Lambda
 
@@ -180,7 +178,7 @@ public delegate TResult Func<in T, out TResult>(T arg)
 
 ## <a name="type-inference-in-lambda-expressions"></a>Lambda 運算式中的型別推斷
 
-撰寫 Lambda 時，您通常不需要指定輸入參數的類型，這是因為編譯器可以根據 Lambda 主體、參數類型，以及 C# 語言規格中所述的其他因素來推斷類型。 對於大多數的標準查詢運算子而言，第一個輸入是來源序列中項目的類型。 如果您要查詢 `IEnumerable<Customer>`，則輸入變數就會推斷為 `Customer` 物件，這表示您可以存取其方法和屬性：  
+撰寫 Lambda 時，您通常不需要指定輸入參數的類型，這是因為編譯器可以根據 Lambda 主體、參數類型，以及 C# 語言規格中所述的其他因素來推斷類型。 對於大多數的標準查詢運算子而言，第一項輸入是來源序列中項目的類型。 如果您要查詢 `IEnumerable<Customer>`，則輸入變數就會推斷為 `Customer` 物件，這表示您可以存取其方法和屬性：  
 
 ```csharp
 customers.Where(c => c.City == "London");
@@ -196,9 +194,9 @@ Lambda 型別推斷的一般規則如下所示：
   
 請注意，Lambda 運算式本身並沒有類型，因為一般類型系統沒有內建的「Lambda 運算式」概念。 不過，有時候一般所稱的 Lambda 運算式「類型」會很實用。 在這類情況下，類型是指委派類型或是 Lambda 運算式轉換成的 <xref:System.Linq.Expressions.Expression> 類型。
 
-## <a name="variable-scope-in-lambda-expressions"></a>Lambda 運算式中的變數範圍
+## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>Lambda 運算式中的擷取外部變數和變數範圍
 
-Lambda 可以參考「外部變數」(請參閱[匿名方法](anonymous-methods.md))，這些變數必須包含在定義 Lambda 運算式的方法範圍內，或是在包含 Lambda 運算式的類型範圍內。 以這種方式擷取的變數會加以儲存，以便在 Lambda 運算式中使用，即使這些變數可能會超出範圍而遭到記憶體回收。 外部變數必須確實指派，才能用於 Lambda 運算式。 下列範例將示範這些規則：
+Lambda 可以參考「外部變數」  。 這些是在定義 Lambda 運算式的方法範圍內，或是在包含 Lambda 運算式的型別範圍內的變數。 以這種方式擷取的變數會加以儲存，以便在 Lambda 運算式中使用，即使這些變數可能會超出範圍而遭到記憶體回收。 外部變數必須確實指派，才能用於 Lambda 運算式。 下列範例將示範這些規則：
 
 [!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 
@@ -226,7 +224,6 @@ Lambda 可以參考「外部變數」(請參閱[匿名方法](anonymous-methods.
 
 - [C# 程式設計指南](../index.md)
 - [LINQ (Language-Integrated Query)](../concepts/linq/index.md)
-- [匿名方法](anonymous-methods.md)
 - [運算式樹狀結構](../concepts/expression-trees/index.md)
 - [區域函式與 Lambda 運算式的比較](../../local-functions-vs-lambdas.md)
 - [隱含型別 Lambda 運算式](../../implicitly-typed-lambda-expressions.md)

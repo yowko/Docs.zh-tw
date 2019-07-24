@@ -4,12 +4,12 @@ description: 了解建置 Web 應用程式時，如何在傳統 Web 應用程式
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825741"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331603"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在傳統 Web 應用程式和單頁應用程式 (SPA) 之間作選擇
 
@@ -38,9 +38,9 @@ ms.locfileid: "55825741"
 
 基於這些考量，必須權衡 SPA 模型使用者體驗的改善。
 
-## <a name="razor-components"></a>Razor 元件
+## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 推出了新的模型，用以建置豐富的互動式可組合 UI，該模型稱為 Razor 元件。 Razor 元件可讓開發人員在伺服器上使用 Razor 建置 UI，並使用 JavaScript 程式庫 WebAssembly 讓該程式碼傳遞至瀏覽器和執行的用戶端。 ASP.NET Core 3.0 仍在開發，但您將會在此電子書的 3.0 更新中看到這項技術的更多功能。 如需 Razor 元件 (名為 Blazor 的程式碼) 的詳細資訊，請參閱 [Get started with Blazor](https://blazor.net/docs/get-started.html) (開始使用 Blazor)。
+ASP.NET Core 3.0 推出了新的模型，用以建置豐富的互動式可組合 UI，該模型稱為 Blazor。 Blazor 伺服器端可讓開發人員在伺服器上使用 Razor 建置 UI，並使用 JavaScript 程式庫 WebAssembly 讓該程式碼傳遞至瀏覽器和執行的用戶端。 ASP.NET Core 3.0 仍在開發，但您將會在此電子書的 3.0 更新中看到這項技術的更多功能。 如需 Blazor 的詳細資訊，請參閱[開始使用 Blazor](https://blazor.net/docs/get-started.html)。
 
 ## <a name="when-to-choose-traditional-web-apps"></a>選擇傳統 Web 應用程式的時機
 

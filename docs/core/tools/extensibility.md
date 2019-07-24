@@ -3,16 +3,16 @@ title: .NET Core CLI 擴充性模型
 description: 了解如何擴充命令列介面 (CLI) 工具。
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: ca6bf30fb6aaf815a859a00bc391ef790566acaf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675091"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331012"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具擴充性模型
 
-本文件涵蓋不同的方式可擴充 .NET Core 命令列介面 (CLI) 工具，並說明可驅動其中所有項目的案例。
+此文件涵蓋不同的方式可擴充 .NET Core 命令列介面 (CLI) 工具，並說明可驅動其中所有項目的案例。
 您會看到如何使用這些工具，以及如何建置不同類型的工具。
 
 ## <a name="how-to-extend-cli-tools"></a>如何擴充 CLI 工具
@@ -69,7 +69,7 @@ CLI 工具可以透過三種主要方式進行擴充：
 在您建置它之後，請使用 [`dotnet pack`](dotnet-pack.md) 命令來建立包含您程式碼、其相依性相關資訊等的 NuGet 套件 (.nupkg 檔案)。 您可以提供任何套件名稱，但在應用程式內，實際工具二進位檔必須符合 `dotnet-<command>` 的慣例，`dotnet` 才能叫用它。
 
 > [!NOTE]
-> 在 RC3 之前版本的 .NET Core 命令列工具中，`dotnet pack` 命令中的 Bug 導致無法使用該工具來將 `runtime.config.json` 封裝。 缺少該檔案會導致在執行階段發生錯誤。 如果您遇到這個問題，請務必更新至最新的工具，並再次嘗試 `dotnet pack`。
+> 在 RC3 之前版本的 .NET Core 命令列工具中，`dotnet pack` 命令中的 Bug 會導致該工具不會封裝 *.runtimeconfig.json*。 缺少該檔案會導致在執行階段發生錯誤。 如果您遇到這個問題，請務必更新至最新的工具，並再次嘗試 `dotnet pack`。
 
 因為工具是可攜式應用程式，所以使用工具的使用者必須具有用來建置工具的 .NET Core 程式庫版本，才能執行工具。 工具所使用以及 .NET Core 程式庫內未包含的任何其他相依性都會進行還原並放到 NuGet 快取中。 因此，會使用 .NET Core 程式庫中的組件以及 NuGet 快取中的組件來執行整個工具。
 

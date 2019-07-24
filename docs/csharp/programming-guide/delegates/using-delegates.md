@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: eb5721d1c04ad761821bcdae03159f290a802ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979836"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363783"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委派 (C# 程式設計手冊)
 [委派](../../../csharp/language-reference/keywords/delegate.md)是可以安全封裝方法的類型，類似於 C 和 C++ 中的函式指標。 與 C 函式指標不同之處在於，委派為物件導向且類型安全，同時安全性較佳。 委派的類型由委派的名稱所定義。 下列範例宣告名為 `Del` 的委派，其可封裝採用[字串](../../../csharp/language-reference/keywords/string.md)作為引數並傳回 [void](../../../csharp/language-reference/keywords/void.md) 的方法：  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- 通常透過提供委派將包裝的方法名稱，或使用[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)，來建構委派物件。 一旦對委派執行個體化之後，該委派即會將該委派的方法呼叫，傳遞至該方法。 由呼叫端傳遞至委派的參數，會傳遞至該方法，而從該方法傳回的值（如果有的話）會由該委派傳回至呼叫端。 這稱為叫用委派。 執行個體化的委派的叫用方法，就像其自身為包裝的方法一樣。 例如：  
+ 通常會透過提供委派將包裝的方法名稱，或使用[匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)，來建構委派物件。 一旦對委派執行個體化之後，該委派即會將該委派的方法呼叫，傳遞至該方法。 由呼叫端傳遞至委派的參數，會傳遞至該方法，而從該方法傳回的值（如果有的話）會由該委派傳回至呼叫端。 這稱為叫用委派。 執行個體化的委派的叫用方法，就像其自身為包裝的方法一樣。 例如：  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
@@ -37,8 +37,7 @@ ms.locfileid: "56979836"
   
  `The number is: 3`  
   
- 使用委派做為抽象概念，`MethodWithCallback` 不需要直接呼叫主控台 — 設計時不需要一直考慮主控台。 
-  `MethodWithCallback` 所做的只是準備一個字串，然後將該字串傳遞給另一個方法。 這項功能十分強大，因為委派的方法可以使用任何數目的參數。  
+ 使用委派做為抽象概念，`MethodWithCallback` 不需要直接呼叫主控台 — 設計時不需要一直考慮主控台。 `MethodWithCallback` 所做的只是準備一個字串，然後將該字串傳遞給另一個方法。 這項功能十分強大，因為委派的方法可以使用任何數目的參數。  
   
  當委派建構為要包裝執行個體方法時，該委派會參考執行個體與方法。 除了委派所包裝的方法之外，委派也不會知道執行個體的類型，因此委派可參考任何類型的物件，只要該物件上存在符合委派簽章的方法即可。 當委派建構為會包裝靜態方法時，它只會參考該方法。 請考慮下列宣告：  
   

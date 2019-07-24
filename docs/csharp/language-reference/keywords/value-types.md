@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661582"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363080"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -88,7 +88,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-使用 [new](../operators/new-operator.md) 運算子會呼叫特定型別的無參數建構函式，並將預設值指派給變數。 在上述範例中，無參數建構函式已將 `0` 值指派給 `myInt`。 如需有關透過呼叫預設建構函式來指派的值之詳細資訊，請參閱[預設值表](default-values-table.md)。
+使用 [new](../operators/new-operator.md) 運算子會呼叫特定型別的無參數建構函式，並將預設值指派給變數。 在上述範例中，無參數建構函式已將 `0` 值指派給 `myInt`。 如需有關透過呼叫無參數建構函式來指派的值之詳細資訊，請參閱[預設值表](default-values-table.md)。
 
 如果要使用使用者定義型別，請使用 [new](../operators/new-operator.md) 來叫用無參數建構函式。 例如，下列陳述式會叫用 `Point` 結構的無參數建構函式：
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834049"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68362900"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 與 Span\<T> 使用指導方針
 
-.NET Core 包含數個可代表記憶體任意連續區域的類型。 .NET Core 2.0 已導入 <xref:System.Span%601> 和 <xref:System.ReadOnlySpan%601>，其為可由受控或非受控記憶體所支援的輕量型記憶體緩衝區。 由於這些類型可以儲存在堆疊上，使得它們很適合用於包含非同步方法呼叫在內的數種案例。 .NET Core 2.1 新增數個額外類型，包括 <xref:System.Memory%601>、<xref:System.ReadOnlyMemory%601>、<xref:System.Buffers.IMemoryOwner%601>，以及 <xref:System.Buffers.MemoryPool%601>。 <xref:System.Memory%601> 和其相關類型與 <xref:System.Span%601> 類似，可以由受控和非受控記憶體支援。 <xref:System.Memory%601> 與 <xref:System.Span%601> 不同，只能儲存在受控堆積上。
+.NET Core 包含數個可代表記憶體任意連續區域的類型。 .NET Core 2.0 已導入 <xref:System.Span%601> 和 <xref:System.ReadOnlySpan%601>，其為可由受控或非受控記憶體所支援的輕量型記憶體緩衝區。 因為這些型別只能儲存在堆疊上，所以有幾個案例 (包括非同步方法呼叫) 不適合使用它們。 .NET Core 2.1 新增數個額外類型，包括 <xref:System.Memory%601>、<xref:System.ReadOnlyMemory%601>、<xref:System.Buffers.IMemoryOwner%601>，以及 <xref:System.Buffers.MemoryPool%601>。 <xref:System.Memory%601> 和其相關類型與 <xref:System.Span%601> 類似，可以由受控和非受控記憶體支援。 <xref:System.Memory%601> 與 <xref:System.Span%601> 不同，可儲存在受控堆積上。
 
 <xref:System.Span%601> 和 <xref:System.Memory%601> 都是可用於管線中的結構化資料緩衝區。 也就是說，它們是被設計成能使部分或所有資料都能有效率地被傳遞至管線中的元件，其可處理它們或選擇性地修改緩衝區。 由於 <xref:System.Memory%601> 和其相關類型皆可由多個元件或多個執行緒存取，開發人員必須遵循一些標準的使用指導方針，以產生強固的程式碼。
 

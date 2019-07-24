@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: e28ff83d673951a978e24d9c89621fbbe950f50e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 00edb1c8704aab19d7ff44fe26c514b5ccea64b6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975208"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331080"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -91,7 +91,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>向前復原
 
-從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原為系統上安裝的最新次要版本。
+從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原為系統上安裝的最新次要版本  。
 
 從 .NET Core 2.0 開始，如果用來建置應用程式的 .NET Core 版本不存在於執行階段中，則應用程式會自動針對已安裝的最新 .NET Core *次要版本*執行。 換句話說，如果應用程式是使用 .NET Core 2.0 建置，而主機系統上不存在 .NET Core 2.0，但是有 .NET Core 2.1，則該應用程式會搭配 NET Core 2.1 執行。
 
@@ -107,7 +107,7 @@ dotnet tool install -g dotnetsay
 
 - 將 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 環境變數設定為所需的值。
 
-- 將下列這一行新增至 `runtimeconfig.json` 檔案，並使用所需的值：
+- 將下面一行新增至 *.runtimeconfig.json* 檔案，並使用所需的值：
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
@@ -138,9 +138,9 @@ dotnet tool install -g dotnetsay
 
 ## <a name="jit-compiler-improvements"></a>JIT 編譯器的改進項目
 
-.NET Core 併入新的 JIT 編譯器技術，稱為「階層式編譯」(也稱為「調適型最佳化」)，可大幅地提升效能。 階層式編譯是可選擇加入的設定。
+.NET Core 併入新的 JIT 編譯器技術，稱為「階層式編譯」  (也稱為「調適型最佳化」  )，可大幅地提升效能。 階層式編譯是可選擇加入的設定。
 
-由 JIT 編譯器所執行的其中一個重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
+由 JIT 編譯器所執行的其中一項重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
 
 - **第一層**：盡快產生程式碼。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b2e14a7508d4a5e8069a3b98dee38a0ac62750c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648568"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363979"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>限定互通的 .NET 類型
 如果您想要向 COM 應用程式公開組件中的類型，請考慮設計階段的 COM Interop 需求。 當您遵守下列方針時，Managed 類型 (類別、介面、結構和列舉) 會與 COM 類型緊密整合：  
@@ -37,15 +37,15 @@ ms.locfileid: "64648568"
   
      如果要讓 COM 看到公用類型的成員，則它們也必須是公用的。 您可以套用 <xref:System.Runtime.InteropServices.ComVisibleAttribute>，以限制組件、公用類型或公用類型的公用成員的可見性。 根據預設，會顯示所有公用類型和成員。  
   
-- 類型必須具有要從 COM 啟用的公用預設建構函式。  
+- 型別必須具有要從 COM 啟用的公用無參數建構函式。  
   
-     COM 可以看到 Managed 公用類型。 不過，沒有公用預設建構函式 (沒有引數的建構函式)，COM 用戶端就無法建立該類型。 如果該類型是透過一些其他方式啟用，則 COM 用戶端仍然可以使用它。  
+     COM 可以看到 Managed 公用類型。 不過，若沒有公用無參數建構函式 (沒有引數的建構函式)，COM 用戶端就無法建立該型別。 如果該類型是透過一些其他方式啟用，則 COM 用戶端仍然可以使用它。  
   
 - 類型不能是抽象的。  
   
      COM 用戶端和 .NET 用戶端都無法建立抽象類型。  
   
- 匯出至 COM 時，會壓平合併 Managed 類型的繼承階層。 Managed 與 Unmanaged 環境之間的版本設定不同。 向 COM 公開之類型與其他 Managed 類型的版本設定特性不同。  
+ 匯出至 COM 時，會壓平合併 Managed 類型的繼承階層。 受控與非受控環境之間的版本設定不同。 向 COM 公開之類型與其他受控類型的版本設定特性不同。  
   
 ## <a name="see-also"></a>另請參閱
 

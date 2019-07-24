@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586014"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364060"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>作法：使用反映連結委派
 當您使用反映來載入和執行組件時，無法使用 C# `+=` 運算子或 Visual Basic [AddHandler 陳述式](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)這類語言功能來連結事件。 下列程序示範如何透過反映取得所有必要類型以將現有方法連結至事件，以及如何使用反映發出建立動態方法並將它連結至事件。  
@@ -33,7 +33,7 @@ ms.locfileid: "65586014"
      [!code-csharp[HookUpDelegate#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#3)]
      [!code-vb[HookUpDelegate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#3)]  
   
-2. 取得代表類型的 <xref:System.Type> 物件，並建立類型的執行個體。 因為表單具有預設建構函式，所以在下列程式碼中使用 <xref:System.Activator.CreateInstance%28System.Type%29> 方法。 如果您所建立的類型沒有預設建構函式，則 <xref:System.Activator.CreateInstance%2A> 方法有數個其他多載可以使用。 新的執行個體會儲存為 <xref:System.Object> 類型，以維護不知道組件的故事 (反映可讓您取得組件中的類型，而不需要事先知道其名稱)。  
+2. 取得代表類型的 <xref:System.Type> 物件，並建立類型的執行個體。 因為表單具有無參數建構函式，所以在下列程式碼中使用 <xref:System.Activator.CreateInstance%28System.Type%29> 方法。 如果您所建立的型別沒有無參數建構函式，則 <xref:System.Activator.CreateInstance%2A> 方法有數個其他多載可以使用。 新的執行個體會儲存為 <xref:System.Object> 類型，以維護不知道組件的故事 (反映可讓您取得組件中的類型，而不需要事先知道其名稱)。  
   
      [!code-cpp[HookUpDelegate#4](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#4)]
      [!code-csharp[HookUpDelegate#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#4)]

@@ -2,12 +2,12 @@
 title: C# 8.0 的新功能 - C# 指南
 description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 5 的最新資訊。
 ms.date: 02/12/2019
-ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397764"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363891"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -30,7 +30,7 @@ ms.locfileid: "67397764"
 > [!NOTE]
 > 此文章內容為 C# 8.0 預覽 5 的最新更新。
 
-本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
+此文章的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
 
 1. 安裝 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全域工具。
 1. 複製 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存放庫。
@@ -265,7 +265,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
     foreach (string line in lines)
     {
-        // If the line doesn't contain the word 'Second', write the line to the file.
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
@@ -275,7 +274,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-在上述範例中，到達方法的右大括號時，就會處置檔案。 這是宣告 `file` 之範圍的結尾。 上述程式碼與下列使用傳統 [using 陳述式](../language-reference/keywords/using-statement.md)的程式碼相等：
+在上述範例中，到達方法的右大括號時，就會處置檔案。 這是宣告 `file` 之範圍的結尾。 上述程式碼相當於使用傳統 [using 陳述式](../language-reference/keywords/using-statement.md)的下列程式碼：
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)
@@ -284,7 +283,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     {
         foreach (string line in lines)
         {
-            // If the line doesn't contain the word 'Second', write the line to the file.
             if (!line.Contains("Second"))
             {
                 file.WriteLine(line);
@@ -296,7 +294,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 
 在上述範例中，到達與 `using` 陳述式相關的結尾右大括號時，就會處置檔案。
 
-在這兩個案例中，編譯器皆會產生對 `Dispose()` 的呼叫。 若無法處置 using 陳述式中的運算式，則編譯器會產生錯誤。
+在這兩個案例中，編譯器皆會產生對 `Dispose()` 的呼叫。 若無法處置 `using` 陳述式中的運算式，編譯器會產生錯誤。
 
 ## <a name="static-local-functions"></a>靜態區域函式
 

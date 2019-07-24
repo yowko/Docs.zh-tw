@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0536acbcc71ae7792ec668ac352e95e604bd979
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591359"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364040"
 ---
 # <a name="reflection-and-generic-types"></a>反映和泛用類型
 <a name="top"></a> 從反映的的觀點來看，泛型類型與一般類型間的差異在於泛型類型具有與其相關聯的一組類型參數 (若其定義為泛型類型) 或類型引數 (若其為建構類型)。 泛型方法與一般方法的差異也如同上述。  
@@ -134,7 +134,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  若要判斷類型參數是共變數或是反變數，請套用 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> 遮罩至由 <xref:System.Reflection.GenericParameterAttributes> 屬性所傳回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果結果為 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，則類型參數為非變異值。 請參閱 [共變數和反變數](../../../docs/standard/generics/covariance-and-contravariance.md)。  
   
 #### <a name="special-constraints"></a>特殊條件約束  
- 若要判斷類型參數的特殊條件約束，請套用 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 遮罩至 <xref:System.Reflection.GenericParameterAttributes> 屬性所傳回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果結果是 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，則沒有特殊條件約束。 類型參數可以限制為參考類型、非 null 值類型，以及具有預設建構。  
+ 若要判斷類型參數的特殊條件約束，請套用 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 遮罩至 <xref:System.Reflection.GenericParameterAttributes> 屬性所傳回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果結果是 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，則沒有特殊條件約束。 型別參數可以限制為參考型別、非 Null 實值型別，以及具有無參數建構函式。  
   
  [回到頁首](#top)  
   

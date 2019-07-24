@@ -4,16 +4,16 @@ description: 在此教學課程中，您將了解如何使用 Docker 來將 .NET
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609290"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331051"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教學課程：將 .NET Core 應用程式容器化
 
-本教學課程將教您如何建置包含 .NET Core 應用程式的 Docker 映像。 映像可用來為您的本機開發環境、私人雲端，或公用雲端建立容器。
+此教學課程將教您如何建置包含 .NET Core 應用程式的 Docker 映像。 映像可用來為您的本機開發環境、私人雲端，或公用雲端建立容器。
 
 您將了解：
 
@@ -34,7 +34,7 @@ ms.locfileid: "67609290"
 
 * [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 
-* *Dockerfile* 和 .NET Core 範例應用程式的暫存工作資料夾。 在本教學課程中，`docker-working` 名稱會作為工作資料夾使用。
+* *Dockerfile* 和 .NET Core 範例應用程式的暫存工作資料夾。 在此教學課程中，`docker-working` 名稱會作為工作資料夾使用。
 
 ### <a name="use-sdk-version-22"></a>使用 SDK 版本 2.2
 
@@ -174,10 +174,10 @@ myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 
 `docker build` 命令會使用 *Dockerfile* 檔案來建立容器映像。 此檔案是名為 *Dockerfile* 且沒有副檔名的純文字檔案。
 
-在您的終端機中，瀏覽至您一開始時建立的工作資料夾目錄。 在工作資料夾中建立名為 *Dockerfile* 的檔案，然後在文字編輯器中開啟它。 將下列命令新增為檔案的第一行：
+在您的終端機中，瀏覽至上一層目錄來移至您一開始建立的工作資料夾。 在工作資料夾中建立名為 *Dockerfile* 的檔案，然後在文字編輯器中開啟它。 將下列命令新增為檔案的第一行：
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
 
 `FROM` 命令會指示 Docker 從 **mcr.microsoft.com/dotnet/core/runtime** 存放庫提取標記為 **2.2** 的映像。 確定您所提取的 .NET Core 執行階段符合您 SDK 以其為目標的執行階段。 例如，上一節中所建立的應用程式會使用 .NET Core 2.2 SDK，並建立目標為 .NET Core 2.2 的應用程式。 因此，*Dockerfile* 中所參考的基底映像會以 **2.2** 來標記。
@@ -205,7 +205,13 @@ docker-working
     └───obj
 ```
 
-從終端機中執行 `docker build -t myimage -f Dockerfile .`，而 Docker 將會處理 *Dockerfile* 中的每一行。 `docker build` 命令中的 `.` 會指示 Docker 使用目前的資料夾尋找 *Dockerfile*。 此命令會建置映像，並建立名為 **myimage** 的本機存放庫以指向該映像。 當此命令完成之後，執行 `docker images` 以查看已安裝的映像清單：
+從終端機執行下列命令：
+
+```console
+docker build -t myimage -f Dockerfile .
+```
+
+Docker 將會處理 *Dockerfile* 中的每一行。 `docker build` 命令中的 `.` 會指示 Docker 使用目前的資料夾來尋找 *Dockerfile*。 此命令會建置映像，並建立名為 **myimage** 的本機存放庫以指向該映像。 當此命令完成之後，執行 `docker images` 以查看已安裝的映像清單：
 
 ```console
 > docker images
@@ -224,7 +230,7 @@ ENTRYPOINT ["dotnet", "app/myapp.dll"]
 
 `COPY` 命令會指示 Docker，將您電腦上指定的資料夾複製到容器中的資料夾。 在此範例中，會將 **publish** 資料夾複製到容器中名為 **app** 的資料夾。
 
-下一個命令 `ENTRYPOINT` 會指示 Docker，將容器設定為以可執行檔執行。 當容器啟動時，`ENTRYPOINT` 命令就會執行。 當此命令結束時，容器將會自動停止。
+下一個命令 `ENTRYPOINT` 會指示 Docker 將容器設定為以可執行檔的形式執行。 當容器啟動時，`ENTRYPOINT` 命令就會執行。 當此命令結束時，容器將會自動停止。
 
 從終端機中執行 `docker build -t myimage -f Dockerfile .`，並在該命令完成時，執行 `docker images`。
 
@@ -241,7 +247,6 @@ Removing intermediate container f34da5c18e7c
  ---> ddcc6646461b
 Successfully built ddcc6646461b
 Successfully tagged myimage:latest
-
 
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE

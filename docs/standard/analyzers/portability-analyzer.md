@@ -1,15 +1,15 @@
 ---
 title: .NET Portability Analyzer - .NET
 description: 了解如何使用.NET Portability Analyzer 工具來評估程式碼移植到不同 .NET 實作之間的可行性，包括 .NET Core、.NET Standard、UWP 和 Xamarin。
-ms.date: 07/10/2019
+ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f05d4f4a2fce8fa9a4d2e334f44190ea37335038
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859754"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331738"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -52,7 +52,7 @@ ms.locfileid: "67859754"
 
 ![可攜性摘要](./media/portability-analyzer/portabilitysummary.png)
 
-此報表顯示的可攜性摘要區段，會顯示執行中之每個組件的可攜性百分比。 在上述範例中，89.74% 用於 `ConsoleAppFramework` 應用程式的 .NET Framework API 可用於 .NET Core + 平台延伸模組 v2.2。 如果您對多個組件執行 .NET 可攜性分析工具，每個組件都應該在可攜性摘要報告中具有一個資料列。
+此報表顯示的可攜性摘要區段，會顯示該次執行中每個組件的可攜性百分比。 在上述範例中，71.24% 用於 `svcutil` 應用程式中的 .NET Framework API 可在 .NET Core + 平台延伸模組中取得。 如果您對多個組件執行 .NET 可攜性分析工具，每個組件都應該在可攜性摘要報告中具有一個資料列。
 
 #### <a name="details"></a>詳細資料
 
@@ -60,11 +60,11 @@ ms.locfileid: "67859754"
 
 報表的詳細資料區段，會列出其中一個目標平台缺少的 API。 
 
- - 目標類型：類型缺少目標平台的 API 
- - 目標成員：目標平台缺少方法 
- - 組件名稱：缺少之 API 所在的 .NET Framework 組件。 
- - 每個選取的目標平台都是一個資料行，例如 ".NET Core"：「不支援」值表示此目標平台不支援該 API。 
- - 建議的變更：建議變更 API 或技術。 目前，許多 API 的此欄位為空白或過期。 因為 API 太多，導致我們難以繼續。 我們將尋找替代解決方案，來為客戶提供有用的資訊。
+- 目標類型：類型缺少目標平台的 API 
+- 目標成員：目標平台缺少方法 
+- 組件名稱：缺少之 API 所在的 .NET Framework 組件。 
+- 每個選取的目標平台都是一個資料行，例如 ".NET Core"：「不支援」值表示此目標平台不支援該 API。 
+- 建議的變更：建議變更 API 或技術。 目前，許多 API 的此欄位為空白或過期。 因為 API 太多，導致我們難以繼續。 我們將尋找替代解決方案，來為客戶提供有用的資訊。
 
 #### <a name="missing-assemblies"></a>缺少的組件
 
@@ -73,5 +73,3 @@ ms.locfileid: "67859754"
 您可在報表中找到缺少的組件區段。 該區段會告訴您這份組件清單由已分析的組件所參考，但未進行分析。 如果是您自己擁有的組件，請將其納入 API 可攜性分析器中執行，以便您可為其取得 API 層級的詳細可攜性報告。 如果是第三方程式庫，請查看是否有支援您目標平台的較新版本。 如果有，請考慮改用較新版本。 最後，您會預期這份清單包含您應用程式所依賴的所有第三方組件，並確認它們有支援您目標平台的版本。  
 
 如需 .NET Portability Analyzer 的詳細資訊，請瀏覽 [GitHub 文件](https://github.com/Microsoft/dotnet-apiport#documentation)和 Channel 9 影片 [Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) (.NET Portability Analyzer 簡介)。
-
-

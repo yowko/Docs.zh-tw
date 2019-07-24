@@ -10,26 +10,26 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09eb37fd2c1bf77e981a2eb7952b1fff5110e977
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357296"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363955"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>屬性化程式設計模型概觀 (MEF)
 
 在 Managed Extensibility Framework (MEF) 中， *「程式設計模型」* (Programming Model) 是定義 MEF 藉以運作之一組概念性物件的特定方法。 這些概念性物件包含組件、匯入和匯出。 MEF 使用這些物件，但不會指定這些物件的表示方式。 因此，各種程式設計模型都有可能，包括自訂的程式設計模型在內。
 
-MEF 中所用的預設程式設計模型為 *「屬性化程式設計模型」*(Attributed Programming Model)。 在屬性化程式設計模型中，組件、匯入、匯出和其他物件是以裝飾一般 .NET Framework 類別的屬性來定義。 本主題說明如何使用屬性化程式設計模型所提供的屬性來建立 MEF 應用程式。
+MEF 中所用的預設程式設計模型為 *「屬性化程式設計模型」* (Attributed Programming Model)。 在屬性化程式設計模型中，組件、匯入、匯出和其他物件是以裝飾一般 .NET Framework 類別的屬性來定義。 本主題說明如何使用屬性化程式設計模型所提供的屬性來建立 MEF 應用程式。
 
 <a name="import_and_export_basics"></a>
 
 ## <a name="import-and-export-basics"></a>匯入和匯出基本概念
 
-*「匯出」* (Export) 是一個值，組件會將這個值提供給容器中的其他組件； *「匯入」* (Import) 是組件向容器表達的一個需求，會透過可用的匯出來填入。 在屬性化程式設計模型中，匯入和匯出的宣告方式是以 `Import` 和 `Export` 屬性裝飾類別或成員。 `Export` 屬性 (Attribute) 可裝飾類別、欄位、屬性 (Property) 或方法，而 `Import` 屬性 (Attribute) 可裝飾欄位、屬性 (Property) 或建構函式參數。
+*「匯出」* (Export) 是一個值，組件會將這個值提供給容器中的其他組件； *「匯入」* (Import) 是組件向容器表達的一項需求，會透過可用的匯出來填入。 在屬性化程式設計模型中，匯入和匯出的宣告方式是以 `Import` 和 `Export` 屬性裝飾類別或成員。 `Export` 屬性 (Attribute) 可裝飾類別、欄位、屬性 (Property) 或方法，而 `Import` 屬性 (Attribute) 可裝飾欄位、屬性 (Property) 或建構函式參數。
 
-為了讓匯入與匯出相符，匯入和匯出必須具有相同的 *「合約」*(Contract)。 合約是由一個字串 (稱為 *「合約名稱」*(Contract Name))，以及所匯出或匯入之物件的類型 (稱為 *「合約類型」*(Contract Type)) 所組成。 只有在合約名稱與合約類型都相符時，才會將匯出視為滿足特定匯入。
+為了讓匯入與匯出相符，匯入和匯出必須具有相同的 *「合約」* (Contract)。 合約是由一個字串 (稱為 *「合約名稱」* (Contract Name))，以及所匯出或匯入之物件的類型 (稱為 *「合約類型」* (Contract Type)) 所組成。 只有在合約名稱與合約類型都相符時，才會將匯出視為滿足特定匯入。
 
 您可以隱含或明確指定上述其中一個或兩個合約參數。 下列程式碼顯示宣告基本匯入的類別。
 
@@ -178,11 +178,11 @@ public class MyClass
 
 ## <a name="types-of-imports"></a>匯入類型
 
-MEF 支援數種匯入類型，包括動態匯入、延遲匯入、先決條件匯入和選擇性匯入。
+MEF 支援數種匯入類型，包括動態匯入、延遲匯入、必要條件匯入和選擇性匯入。
 
 ### <a name="dynamic-imports"></a>動態匯入
 
-在某些情況下，匯入端類別可能需要符合具有特定合約名稱之任何類型的匯出。 在此情況下，類別可宣告 *「動態匯入」*(Dynamic Import)。 下列匯入符合具有合約名稱 "TheString" 的所有匯出。
+在某些情況下，匯入端類別可能需要符合具有特定合約名稱之任何類型的匯出。 在此情況下，類別可宣告 *「動態匯入」* (Dynamic Import)。 下列匯入符合具有合約名稱 "TheString" 的所有匯出。
 
 ```vb
 Public Class MyClass1
@@ -264,11 +264,11 @@ public class MyLogger : IMyAddin { }
 
 您可以在延遲匯入的 `Import` 屬性中指定合約名稱與合約類型，方法如稍早的＜匯入和匯出基本概念＞一節所述。
 
-### <a name="prerequisite-imports"></a>先決條件匯入
+### <a name="prerequisite-imports"></a>必要條件匯入
 
 所匯出的 MEF 組件通常是由組合引擎所建立，不論是為了回應直接要求，或是為了應需要填入相符的匯入。 根據預設，建立組件時，組合引擎會使用沒有參數的建構函式。 若要讓引擎使用不同的建構函式，您可以使用 `ImportingConstructor` 屬性來標記引擎。
 
-每個組件都只能有一個建構函式供組合引擎使用。 不提供預設建構函式和 `ImportingConstructor` 屬性，或是提供多個 `ImportingConstructor` 屬性，都會產生錯誤。
+每個組件都只能有一個建構函式供組合引擎使用。 不提供無參數建構函式與 `ImportingConstructor` 屬性，或是提供多個 `ImportingConstructor` 屬性，都會產生錯誤。
 
 為了填入以 `ImportingConstructor` 屬性標記之建構函式的參數，所有參數都會自動以匯入的形式宣告。 這種方法很方便用於宣告在組件初始設定期間使用的匯入。 下列類別使用 `ImportingConstructor` 來宣告匯入。
 
@@ -277,7 +277,7 @@ Public Class MyClass1
 
     Private _theAddin As IMyAddin
 
-    'Default constructor will NOT be used
+    'Parameterless constructor will NOT be used
     'because the ImportingConstructor
     'attribute is present.
     Public Sub New()
@@ -300,7 +300,7 @@ public class MyClass
 {
     private IMyAddin _theAddin;
 
-    //Default constructor will NOT be
+    //Parameterless constructor will NOT be
     //used because the ImportingConstructor
     //attribute is present.
     public MyClass() { }
@@ -335,9 +335,9 @@ public MyClass([Import(typeof(IMySubAddin))]IMyAddin MyAddin)
 
 特別要提的是，處理集合參數時應小心。 例如，如果您在具有 `ImportingConstructor` 類型之參數的建構函式上指定 `IEnumerable<int>`，則匯入會符合 `IEnumerable<int>`類型的單一匯出，而不是 `int`類型的一組匯出。 若要符合 `int`類型的一組匯出，您必須以 `ImportMany` 屬性裝飾參數。
 
-由 `ImportingConstructor` 屬性以匯入形式宣告的參數也會標記為「先決條件匯入」(Prerequisite Import)。 MEF 通常會允許匯出和匯入形成 *「循環」*(Cycle)。 例如，物件 A 會匯入物件 B，而物件 B 會匯入物件 A，這就是循環。在一般情況下，循環並不是問題，組合容器可以正常建構這兩個物件。
+由 `ImportingConstructor` 屬性以匯入形式宣告的參數也會標記為 *「必要條件匯入」* (Prerequisite Import)。 MEF 通常會允許匯出和匯入形成 *「循環」* (Cycle)。 例如，物件 A 會匯入物件 B，而物件 B 會匯入物件 A，這就是循環。在一般情況下，循環並不是問題，組合容器可以正常建構這兩個物件。
 
-當某個組件的建構函式需要匯入的值時，該物件就不能參與循環。 如果物件 A 要求要等物件 B 建構後才能建構自己，而物件 B 會匯入物件 A，這個循環就無法解決而引發組合錯誤。 因此，在建構函式參數上宣告的匯入是先決條件性匯入，也就是說，必須先填入這些匯入，才能從需要這些匯入的物件使用任何匯出。
+當某個組件的建構函式需要匯入的值時，該物件就不能參與循環。 如果物件 A 要求要等物件 B 建構後才能建構自己，而物件 B 會匯入物件 A，這個循環就無法解決而引發組合錯誤。 因此，在建構函式參數上宣告的匯入是必要條件性匯入，也就是說，必須先填入這些匯入，才能從需要這些匯入的物件使用任何匯出。
 
 ### <a name="optional-imports"></a>選擇性匯入
 
@@ -466,9 +466,9 @@ public class DataThree
 
 ## <a name="metadata-and-metadata-views"></a>中繼資料和中繼資料檢視
 
-匯出可以提供有關本身的其他資訊，也稱為 *「中繼資料」*(Metadata)。 中繼資料可用來將所匯出物件的屬性傳送至匯入端組件。 匯入端組件可使用此資料來決定要使用的匯出，或是蒐集匯出相關資訊，而不必建構匯出。 因此，匯入必須是延遲匯入才能使用中繼資料。
+匯出可以提供有關本身的其他資訊，也稱為 *「中繼資料」* (Metadata)。 中繼資料可用來將所匯出物件的屬性傳送至匯入端組件。 匯入端組件可使用此資料來決定要使用的匯出，或是蒐集匯出相關資訊，而不必建構匯出。 因此，匯入必須是延遲匯入才能使用中繼資料。
 
-為了使用中繼資料，您通常會宣告一個稱為 *「中繼資料檢視」*(Metadata View) 的介面，該介面會宣告可以使用哪些中繼資料。 中繼資料檢視介面必須只有屬性，而這些屬性必須具有 `get` 存取子。 下列介面是中繼資料檢視範例。
+為了使用中繼資料，您通常會宣告一個稱為 *「中繼資料檢視」* (Metadata View) 的介面，該介面會宣告可以使用哪些中繼資料。 中繼資料檢視介面必須只有屬性，而這些屬性必須具有 `get` 存取子。 下列介面是中繼資料檢視範例。
 
 ```vb
 Public Interface IPluginMetadata
@@ -823,9 +823,9 @@ public MyAddin myAddin { get; set; }
 
 ## <a name="creation-policies"></a>建立原則
 
-當組件指定匯入並執行組合時，組合容器會嘗試尋找相符的匯出。 如果匯入成功符合匯出，便會將匯入端成員設定為所匯出物件的執行個體。 這個執行個體的來源是由匯出端組件的 *「建立原則」*(Creation Policy) 所控制。
+當組件指定匯入並執行組合時，組合容器會嘗試尋找相符的匯出。 如果匯入成功符合匯出，便會將匯入端成員設定為所匯出物件的執行個體。 這個執行個體的來源是由匯出端組件的 *「建立原則」* (Creation Policy) 所控制。
 
-兩個可能的建立原則為 *「共用」* (Shared) 和 *「非共用」*(Non-Shared)。 具有共用建立原則的組件會在具有該合約之組件的容器中供每個匯入共用。 當組合引擎在找到相符項而必須設定匯入端屬性時，會具現化新的組件複本 (如果尚未存在任何複本)，或是提供現有的複本。 這表示可能有許多物件參考同一個組件。 這類組件不應該依賴可能會由多個位置變更的內部狀態。 此原則適用於靜態組件、提供服務的組件，以及耗用大量記憶體或其他資源的組件。
+兩個可能的建立原則為 *「共用」* (Shared) 和 *「非共用」* (Non-Shared)。 具有共用建立原則的組件會在具有該合約之組件的容器中供每個匯入共用。 當組合引擎在找到相符項而必須設定匯入端屬性時，會具現化新的組件複本 (如果尚未存在任何複本)，或是提供現有的複本。 這表示可能有許多物件參考同一個組件。 這類組件不應該依賴可能會由多個位置變更的內部狀態。 此原則適用於靜態組件、提供服務的組件，以及耗用大量記憶體或其他資源的組件。
 
 每次找到其中一個匯出的相符匯入，都會建立具有非共用建立原則的組件。 因此，系統會為容器中每個符合該組件之其中一個匯出合約的匯入，各具現化一個新的複本。 這些複本的內部狀態不會受到共用。 此原則適用於其中每個匯入都需要專屬內部狀態的組件。
 
@@ -980,7 +980,7 @@ public class PartSeven
 
 對於存留期很長的組合容器而言，長期讓具有非共用建立原則的組件耗用記憶體可能會帶來問題。 這些非共用的組件可能會建立多次，並且在處置容器本身之前，都不會處置這些組件。 為了解決這個問題，容器提供了 `ReleaseExport` 方法。 在非共用的匯出上呼叫這個方法，可從組合容器中移除該匯出並進行處置。 移除的匯出唯一使用的組件，以及樹狀目錄中的下層組件，也會一併遭到移除和處置。 如此一來，不需處置組合容器本身，即可回收資源。
 
-`IPartImportsSatisfiedNotification` 包含一個名為 `OnImportsSatisfied`的方法。 當組合完成且組件的匯入可開始使用時，組合容器會對任何實作介面的組件呼叫這個方法。 組合引擎會建立組件，以填入其他組件的匯入。 設定組件的匯入之前，您無法在組件建構函式中執行任何依賴或操作匯入值的初始設定，除非已使用 `ImportingConstructor` 屬性指定這些值做為先決條件。 這通常是比較好的方法，但在某些情況下，可能無法插入建構函式。 在這些情況下，您可以在 `OnImportsSatisfied`中執行初始設定，並且組件應該實作 `IPartImportsSatisfiedNotification`。
+`IPartImportsSatisfiedNotification` 包含一個名為 `OnImportsSatisfied`的方法。 當組合完成且組件的匯入可開始使用時，組合容器會對任何實作介面的組件呼叫這個方法。 組合引擎會建立組件，以填入其他組件的匯入。 設定組件的匯入之前，您無法在組件建構函式中執行任何依賴或操作匯入值的初始設定，除非已使用 `ImportingConstructor` 屬性指定這些值做為必要條件。 這通常是比較好的方法，但在某些情況下，可能無法插入建構函式。 在這些情況下，您可以在 `OnImportsSatisfied`中執行初始設定，並且組件應該實作 `IPartImportsSatisfiedNotification`。
 
 ## <a name="see-also"></a>另請參閱
 

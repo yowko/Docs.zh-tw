@@ -1,21 +1,21 @@
 ---
 title: 什麼是 ML.NET，它如何運作？
-description: ML.NET 能讓您將機器學習新增至 .NET 應用程式。 使用這項功能，您可以使用應用程式可用的資料來建立自動預測。 本文說明 ML.NET 的機器學習基本概念。
-ms.date: 04/10/2019
+description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路來使用 ML.NET。 此文章說明 ML.NET 的機器學習基本概念。
+ms.date: 07/17/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660641"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331590"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
-ML.NET 能讓您將機器學習新增至 .NET 應用程式。 使用這項功能，您可以使用應用程式可用的資料來建立自動預測。 本文說明 ML.NET 的機器學習基本概念。 
+不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路。 此文章說明 ML.NET 的機器學習基本概念。 
 
 您可使用 ML.NET 建立的預測類型範例包括：
 
