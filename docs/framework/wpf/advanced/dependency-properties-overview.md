@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860166"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401411"
 ---
 # <a name="dependency-properties-overview"></a>相依性屬性概觀
 
 Windows Presentation Foundation (WPF) 提供一組可用來擴充類型的[屬性](../../../standard/base-types/common-type-system.md#Properties)功能之服務。 整體而言，這些服務通常稱為 WPF 屬性系統。 受到 WPF 屬性系統支援的屬性則稱為相依性屬性。 本概觀描述 WPF 屬性系統和相依性屬性的功能。 這包括如何在 XAML 和程式碼中使用現有的相依性屬性。 本概觀也介紹相依性屬性的特製化層面，例如相依性屬性中繼資料，以及如何在自訂類別中建立您自己的相依性屬性。
 
 ## <a name="prerequisites"></a>必要條件
-本主題假設您對 NET 類型系統和物件導向程式設計有基本的認識。 為了遵循本主題中的範例，您也應該了解 XAML 並知道如何撰寫 WPF 應用程式。 如需詳細資訊，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+本主題假設您對 NET 類型系統和物件導向程式設計有基本的認識。 為了遵循本主題中的範例，您也應該了解 XAML 並知道如何撰寫 WPF 應用程式。 如需詳細資訊，請參閱[逐步解說：我的第一個 WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)桌面應用程式。  
   
 ## <a name="dependency-properties-and-clr-properties"></a>相依性屬性與 CLR 屬性
  在 WPF 中，屬性通常會公開為標準 .NET [屬性](../../../standard/base-types/common-type-system.md#Properties)。 在基本層級，您可以和這些屬性直接互動，永遠不知道它們會實作為相依性屬性。 但您應該要熟悉 WPF 屬性系統的部分或全部功能，以便可以利用這些功能。
@@ -40,11 +40,11 @@ Windows Presentation Foundation (WPF) 提供一組可用來擴充類型的[屬�
 
 以下列出與相依性屬性搭配使用的術語：
 
-- **相依性屬性：** 此屬性，做為後盾<xref:System.Windows.DependencyProperty>。
+- **相依性屬性:** 由支援的屬性<xref:System.Windows.DependencyProperty>。
 
-- **相依性屬性識別項：** A<xref:System.Windows.DependencyProperty>執行個體，這是註冊的相依性屬性時，取得做為傳回值，然後儲存為類別的靜態成員。 此識別碼用為與 WPF 屬性系統互動的多個 API 參數。
+- **相依性屬性識別碼:** <xref:System.Windows.DependencyProperty>實例, 在註冊相依性屬性時, 會取得做為傳回值, 然後儲存為類別的靜態成員。 此識別碼用為與 WPF 屬性系統互動的多個 API 參數。
 
-- **CLR 「 包裝函式 」:** 實際取得及設定屬性的實作。 這些實作透過在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 呼叫中使用相依性屬性識別碼，為使用 WPF 屬性系統的屬性提供支援。
+- **CLR 「包裝函式」:** 屬性的實際取得和設定實值。 這些實作透過在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 呼叫中使用相依性屬性識別碼，為使用 WPF 屬性系統的屬性提供支援。
 
 下例定義 `IsSpinning` 相依性屬性，並向其支援的屬性顯示 <xref:System.Windows.DependencyProperty> 識別碼關聯性。
 
@@ -68,7 +68,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>在程式碼中設定屬性
- 在程式碼中設定相依性屬性值，通常只要呼叫 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]「包裝函式」公開的 set 實作即可。
+ 在程式碼中設定相依性屬性值, 通常只是呼叫 CLR "包裝函式所公開的集合實。
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-您也可以呼叫屬性系統 Api<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>直接。 如果您使用現有的屬性 （包裝函式會更方便，，和開發人員工具提供更好公開），但直接呼叫 Api 是屬性的適用於某些情況下，這是屬性的不通常需要。
+您也可以直接呼叫屬性系統 api <xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A> 。 如果您使用現有的屬性 (包裝函式更方便, 並為開發人員工具提供更好的屬性公開), 則通常不需要這麼做, 但在某些情況下, 直接呼叫 Api 是適當的。
 
 屬性也可以在 XAML 中設定，稍後再於程式碼中透過程式碼後置存取。 如需詳細資訊，請參閱 [WPF 中的程式碼後置和 XAML](code-behind-and-xaml-in-wpf.md)。
 
@@ -168,7 +168,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。
 
 ### <a name="wpf-designer-integration"></a>WPF 設計工具整合
-有實作為相依性屬性之屬性的自訂控制項會獲得適當的 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 支援。 其中一例就是能夠使用 [屬性]  視窗編輯直接和附加的相依性屬性。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。
+有實作為相依性屬性之屬性的自訂控制項會獲得適當的 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 支援。 其中一例就是能夠使用 [屬性] 視窗編輯直接和附加的相依性屬性。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。
 
 ## <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 當您取得相依性屬性的值時，您就可能取得一個值，此值原透過參與 WPF 屬性系統的任何其他屬性型輸入來設定在該屬性上。 相依性屬性值有優先順序，所以屬性如何取得其值的各種案例才能以可預測的方式互動。
@@ -190,7 +190,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 
 ## <a name="learning-more-about-dependency-properties"></a>深入了解相依性屬性  
 
-- 附加屬性是支援 XAML 特殊語法的屬性類型。 附加屬性通常和 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性沒有 1:1 對應，而且不一定是相依性屬性。 附加屬性的一般用途是允許子項目向父項目回報屬性值，即使父項目和子項目未同時擁有列為類別成員的該屬性。 一個主要案例是使子項目能夠告知父系應如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中將其呈現；如需範例，請參閱 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 如需詳細資訊，請參閱[附加屬性概觀](attached-properties-overview.md)。
+- 附加屬性是支援 XAML 特殊語法的屬性類型。 附加屬性通常沒有與 common language runtime (CLR) 屬性的1:1 對應, 而且不一定是相依性屬性。 附加屬性的一般用途是允許子項目向父項目回報屬性值，即使父項目和子項目未同時擁有列為類別成員的該屬性。 一個主要案例是使子項目能夠告知父系應如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中將其呈現；如需範例，請參閱 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 如需詳細資訊，請參閱[附加屬性概觀](attached-properties-overview.md)。
 
 - 元件開發人員或應用程式開發人員可能希望建立自己的相依性屬性，以便啟用資料繫結或樣式支援等功能，或用於失效和值的強制型轉支援。 如需詳細資訊，請參閱[自訂相依性屬性](custom-dependency-properties.md)。
 

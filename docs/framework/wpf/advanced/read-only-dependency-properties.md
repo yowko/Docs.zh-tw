@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: e74f7c2790a73211bcc8e6f13dcf2dfdc02e678b
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: aa6893b100311ead74f610dd20f327d130dff74a
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859975"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401648"
 ---
 # <a name="read-only-dependency-properties"></a>唯讀相依性屬性
 本主題說明唯讀相依性屬性，包括現有的唯讀相依性屬性，以及用於建立自訂唯讀相依性屬性的案例和技術。  
@@ -21,9 +21,9 @@ ms.locfileid: "67859975"
   
 <a name="existing"></a>   
 ## <a name="existing-read-only-dependency-properties"></a>現有的唯讀相依性屬性  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構中定義的一些相依性屬性為唯讀狀態。 指定唯讀相依性屬性的一般原因是，這些屬性應該用來判斷狀態，然而該狀態會受到許多因素影響，但從使用者介面設計觀點來看，只將屬性設為該狀態並不恰當。 例如，屬性<xref:System.Windows.UIElement.IsMouseOver%2A>其實只會呈現從滑鼠輸入所決定的狀態。 藉由規避實際的滑鼠輸入，以程式設計方式設定此值的任何嘗試，都是無法預測且會導致不一致的情況。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構中定義的一些相依性屬性為唯讀狀態。 指定唯讀相依性屬性的一般原因是，這些屬性應該用來判斷狀態，然而該狀態會受到許多因素影響，但從使用者介面設計觀點來看，只將屬性設為該狀態並不恰當。 例如, 屬性<xref:System.Windows.UIElement.IsMouseOver%2A>實際上只會呈現從滑鼠輸入決定的狀態。 藉由規避實際的滑鼠輸入，以程式設計方式設定此值的任何嘗試，都是無法預測且會導致不一致的情況。  
   
- 由於是不可設定的，因此，唯讀相依性屬性不適合許多相依性屬性通常可提供解決方案 (也就是：資料繫結、可直接設定的樣式值、驗證、動畫、繼承) 的案例。 儘管不可設定，唯讀相依性屬性仍然具有一些屬性系統中相依性屬性所支援的其他功能。 其餘最重要的功能是，唯讀相依性屬性仍可用來做為樣式中的屬性觸發程序。 您無法透過一般 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性啟用觸發程序；它必須是相依性屬性。 上述<xref:System.Windows.UIElement.IsMouseOver%2A>屬性是完美的範例案例，其中可能會非常有用，其中有一些定義的樣式控制項，例如背景、 foreground 或類似的屬性中複合元素的 visible 屬性當使用者將滑鼠置於某些控制項的已定義區域的上方時，將會變更控制項。 屬性系統固有的失效處理序也可以偵測到並回報唯讀相依性屬性中的變更，這實際上可在內部支援屬性觸發程序功能。  
+ 由於是不可設定的，因此，唯讀相依性屬性不適合許多相依性屬性通常可提供解決方案 (也就是：資料繫結、可直接設定的樣式值、驗證、動畫、繼承) 的案例。 儘管不可設定，唯讀相依性屬性仍然具有一些屬性系統中相依性屬性所支援的其他功能。 其餘最重要的功能是，唯讀相依性屬性仍可用來做為樣式中的屬性觸發程序。 您無法使用一般 common language runtime (CLR) 屬性來啟用觸發程式。它必須是相依性屬性。 前述<xref:System.Windows.UIElement.IsMouseOver%2A>的屬性是案例的最佳範例, 其中可能非常適合用來定義控制項的樣式, 其中有些可見屬性 (例如背景、前景或類似的屬性, 在當使用者將滑鼠放在控制項的某個定義區域上方時, 控制項就會變更。 屬性系統固有的失效處理序也可以偵測到並回報唯讀相依性屬性中的變更，這實際上可在內部支援屬性觸發程序功能。  
   
 <a name="new"></a>   
 ## <a name="creating-custom-read-only-dependency-properties"></a>建立自訂唯讀相依性屬性  
@@ -31,15 +31,15 @@ ms.locfileid: "67859975"
   
  在建立唯讀相依性屬性的處理序中，許多部分與[自訂相依性屬性](custom-dependency-properties.md)和[實作相依性屬性](how-to-implement-a-dependency-property.md)主題中所述的相同。 有三個重大差異：  
   
-- 當註冊您的屬性，呼叫<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>方法，而非標準<xref:System.Windows.DependencyProperty.Register%2A>屬性註冊的方法。  
+- 在註冊您的<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>屬性時, 請呼叫方法, 而不是屬性註冊的一般<xref:System.Windows.DependencyProperty.Register%2A>方法。  
   
-- 實作 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]「包裝函式」屬性，請確定包裝函式還沒有 set 實作，如此一來，就不會在您所公開之公用包裝函式的唯讀狀態中產生不一致的情況。  
+- 在執行 CLR 「包裝函式」屬性時, 請確定包裝函式也沒有設定的執行, 如此您公開的公用包裝函式就不會有不一致的唯讀狀態。  
   
-- 唯讀註冊所傳回的物件是<xref:System.Windows.DependencyPropertyKey>而非<xref:System.Windows.DependencyProperty>。 您仍應將此欄位儲存為成員，但通常不需讓它成為類型的公用成員。  
+- 唯讀註冊所傳回的物件是, <xref:System.Windows.DependencyPropertyKey> <xref:System.Windows.DependencyProperty>而不是。 您仍應將此欄位儲存為成員，但通常不需讓它成為類型的公用成員。  
   
- 不論您必須支援的私用欄位或值為何，當然都能使用您決定的任何邏輯完整寫入您的唯讀相依性屬性。 不過，最直接的方法，來設定屬性，一開始或執行階段邏輯一部分就是使用屬性系統的 Api，而不是規避屬性系統和直接設定私用支援欄位。 特別是，沒有簽章<xref:System.Windows.DependencyObject.SetValue%2A>它會接受類型參數的<xref:System.Windows.DependencyPropertyKey>。 方式和位置您設定此值以程式設計方式在應用程式邏輯，會影響您可能想要如何設定存取<xref:System.Windows.DependencyPropertyKey>您第一次註冊相依性屬性時所建立。 如果您全都在類別內處理此邏輯，您可能會讓它成為私用，或者如果您需要從組件的其他部分設定它，則可能會將它設為內部。 其中一個方法是呼叫<xref:System.Windows.DependencyObject.SetValue%2A>相關的事件，以通知類別執行個體的預存的屬性值變更時所需的類別事件處理常式內。 另一種方法是將相依性屬性在一起的繫結使用配對<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>回呼，註冊期間的那些屬性中繼資料的一部分。  
+ 不論您必須支援的私用欄位或值為何，當然都能使用您決定的任何邏輯完整寫入您的唯讀相依性屬性。 不過, 一開始或做為執行時間邏輯的一部分設定屬性最直接的方式, 就是使用屬性系統的 Api, 而不是避開屬性系統並直接設定私用支援欄位。 特別是, 有一個<xref:System.Windows.DependencyObject.SetValue%2A>可接受型<xref:System.Windows.DependencyPropertyKey>別之參數的簽章。 您在應用程式邏輯中設定此值的方式和位置, 將會影響您在第一次註冊<xref:System.Windows.DependencyPropertyKey>相依性屬性時所建立之上的存取權。 如果您全都在類別內處理此邏輯，您可能會讓它成為私用，或者如果您需要從組件的其他部分設定它，則可能會將它設為內部。 其中一個方法是在<xref:System.Windows.DependencyObject.SetValue%2A>相關事件的類別事件處理常式中呼叫, 通知類別實例必須變更儲存的屬性值。 另一種方法是在註冊期間使用配對<xref:System.Windows.PropertyChangedCallback>的和<xref:System.Windows.CoerceValueCallback>回呼, 將相依性屬性結合在這些屬性的中繼資料中。  
   
- 因為<xref:System.Windows.DependencyPropertyKey>屬私人性質，並且不會傳播屬性系統，您的程式碼之外，唯讀相依性屬性有更好設定安全性會比讀寫相依性屬性。 針對讀寫相依性屬性，識別欄位是明確或隱含公開的，因此該屬性是可廣泛設定的。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。  
+ <xref:System.Windows.DependencyPropertyKey>因為是私用的, 而且不是由您的程式碼外部的屬性系統所傳播, 所以唯讀相依性屬性的設定安全性比讀寫相依性屬性更好。 針對讀寫相依性屬性，識別欄位是明確或隱含公開的，因此該屬性是可廣泛設定的。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

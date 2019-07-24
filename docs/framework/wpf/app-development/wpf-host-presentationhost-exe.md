@@ -5,25 +5,25 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 543076c3b00bf7946111df4c18d8c71928ce7ee2
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 16618042324387bfc15f4685f4759378c50a80b7
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487316"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401713"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主應用程式 (PresentationHost.exe)
-Windows Presentation Foundation (WPF) 主應用程式 (PresentationHost.exe) 是可讓應用程式[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]相容的瀏覽器中裝載應用程式 (包括[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]和更新版本)。 根據預設，Windows Presentation Foundation (WPF) 的主機已登錄的殼層並[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]處理常式，如瀏覽器裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]內容，包括：  
+Windows Presentation Foundation (WPF) 主機 (presentationhost.exe) 是讓[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式裝載在相容的瀏覽器 (包括[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]和更新版本) 中的應用程式。 根據預設, Windows Presentation Foundation (WPF) 主機會註冊為瀏覽器主控[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]內容的 shell 和處理常式, 其中包括:  
   
 - 鬆散 (未編譯) 的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案 (.xaml)。  
   
 - [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
   
- 針對這些類型的檔案，Windows Presentation Foundation (WPF) 主機：  
+ 對於這些類型的檔案, 請 Windows Presentation Foundation (WPF) 主機:  
   
-- 啟動已登錄[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]來裝載 Windows Presentation Foundation (WPF) 內容的處理常式。  
+- 啟動已註冊[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]的處理常式, 以裝載 Windows Presentation Foundation (WPF) 內容。  
   
-- 載入所需的正確版本[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]和 Windows Presentation Foundation (WPF) 組件。  
+- 載入所需 common language runtime (CLR) 和 Windows Presentation Foundation (WPF) 元件的正確版本。  
   
 - 確保部署區域的適當權限等級都已就緒。  
   
@@ -41,7 +41,7 @@ Windows Presentation Foundation (WPF) 主應用程式 (PresentationHost.exe) 是
 |-debugSecurityZoneURL \<url>|可搭配 [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] 值使用，表示 PresentationHost.exe 應將應用程式視為已從指定 [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] 進行部署，並加以偵錯。 這會決定部署區域與原始站台。|  
 |-embedding|為 OLE 的必要項。 如果已指定 `-event` 或 `-debug` 參數，就不需要指定 `-embedding` 參數，因為該參數已在內部設定。|  
 |-event \<eventname>|當 PresentationHost.exe 已初始化並準備好裝載 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 內容時，請開啟含此名稱的事件並對其發出通知。 如果開啟事件時發生錯誤 (例如事件尚未建立)，則會終止 PresentationHost.exe。|  
-|-launchApplication \<url>|啟動獨立的 ClickOnce 應用程式，從指定的 URL。 系統會套用與 .NET 應用程式相關的 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 和 WinINet 安全性原則。|  
+|-launchApplication \<url>|從指定的 URL 啟動獨立 ClickOnce 應用程式。 系統會套用與 .NET 應用程式相關的 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 和 WinINet 安全性原則。|  
   
 ## <a name="scenarios"></a>案例  
   
@@ -59,4 +59,4 @@ Windows Presentation Foundation (WPF) 主應用程式 (PresentationHost.exe) 是
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全性](../security-wpf.md)
+- [Security](../security-wpf.md)

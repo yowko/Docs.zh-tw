@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: ca00b4a0450539741719f5f5a56d241e4bebfcc2
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4679a114f4b6d0bc2b3773d46a4dffa774d38918
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331712"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401670"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 應用程式 (WPF)
 建立 Windows Presentation Foundation (WPF) 應用程式之後, 就必須部署它們。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]而 .NET Framework 則包括數種部署技術。 用來部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的部署技術會視應用程式類型而定。 本主題提供每項部署技術的簡短概觀，並說明這些技術如何配合每種 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式類型的部署需求來使用。  
@@ -23,7 +23,7 @@ ms.locfileid: "68331712"
   
 - [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 部署。  
   
-- [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 部署。  
+- ClickOnce 佈署。  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>XCopy 部署  
@@ -47,7 +47,7 @@ ms.locfileid: "68331712"
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 部署  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 可為非 Web 應用程式啟用 Web 式應用程式部署。 應用程式會先發行至網頁伺服器或檔案伺服器，再從中部署。 雖然 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 不支援 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 所安裝應用程式之完整範圍的用戶端功能，但支援其中一部分功能，包括：  
+ ClickOnce 為非 Web 應用程式啟用 Web 樣式應用程式部署。 應用程式會先發行至網頁伺服器或檔案伺服器，再從中部署。 雖然 ClickOnce 不支援已安裝應用程式的完整用戶端[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]功能範圍, 但它支援包含下列的子集:  
   
 - 與 [開始] 功能表和 [程式集] 控制台整合。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68331712"
   
 - 註冊副檔名。  
   
- 如需 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 的詳細資訊，請參閱 [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。  
+ 如需 ClickOnce 的詳細資訊, 請參閱[Clickonce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。  
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>部署 WPF 應用程式  
@@ -73,7 +73,7 @@ ms.locfileid: "68331712"
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>部署獨立應用程式  
- 獨立應用程式是使用 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 或 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 部署。 無論使用哪種方式，獨立應用程式都需要完全信任才能執行。 對於使用 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 部署的獨立應用程式，會自動授與完全信任。 對於使用 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 部署的獨立應用程式，則不會自動授與完全信任。 相反地，[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 會顯示安全性警告對話方塊，使用者必須接受才能安裝獨立應用程式。 如果接受，則會安裝獨立應用程式並授與完全信任。 如果不接受，則不會安裝獨立應用程式。  
+ 使用 ClickOnce 或[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]部署獨立應用程式。 無論使用哪種方式，獨立應用程式都需要完全信任才能執行。 對於使用 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 部署的獨立應用程式，會自動授與完全信任。 使用 ClickOnce 部署的獨立應用程式不會自動授與完全信任。 相反地, ClickOnce 會在安裝獨立應用程式之前, 顯示使用者必須接受的安全性警告對話方塊。 如果接受，則會安裝獨立應用程式並授與完全信任。 如果不接受，則不會安裝獨立應用程式。  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>部署全標記 XAML 應用程式  
@@ -100,7 +100,7 @@ ms.locfileid: "68331712"
   
  這些檔案會在建置 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 時產生。 如需詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))程式專案。 如同全標記 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 通常也會發行至網頁伺服器，並使用 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 進行檢視。  
   
- 您可以使用任何部署技術將 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 部署到用戶端。 不過，建議使用 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]，因為它提供下列功能：  
+ 您可以使用任何部署技術將 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 部署到用戶端。 不過, 建議使用 ClickOnce, 因為它提供下列功能:  
   
 1. 在發行新版本時自動更新。  
   

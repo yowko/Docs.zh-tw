@@ -10,28 +10,28 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 556ce7b42f13d7c5ba7fba36b09277cda9bcae5d
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021461"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400667"
 ---
 # <a name="data-templating-overview"></a>資料範本化概觀
-WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的彈性。 WPF 控制項的內建功能支援自訂資料呈現方式。 本主題會先示範如何定義<xref:System.Windows.DataTemplate>，之後再介紹其他資料範本化功能，例如根據自訂邏輯和的支援階層式資料的顯示範本的選取項目。  
+WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的彈性。 WPF 控制項的內建功能支援自訂資料呈現方式。 本主題首先會示範如何定義<xref:System.Windows.DataTemplate> , 然後導入其他的資料範本化功能, 例如根據自訂邏輯選取範本, 以及顯示階層式資料的支援。  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
  本主題著重資料範本化功能，而不是資料繫結概念簡介。 如需基本資料繫結概念的資訊，請參閱[資料繫結概觀](data-binding-overview.md)。  
   
- <xref:System.Windows.DataTemplate> 是有關資料的呈現方式也是 WPF 樣式和範本化模型所提供的眾多功能之一。 如需 WPF 樣式和範本化模型，例如，若要使用的如何<xref:System.Windows.Style>若要在控制項上設定屬性，請參閱[樣式和範本化](../controls/styling-and-templating.md)主題。  
+ <xref:System.Windows.DataTemplate>是關於資料的呈現方式, 而且是 WPF 樣式和範本化模型提供的眾多功能之一。 如需 WPF 樣式和範本化模型的簡介, 例如如何使用<xref:System.Windows.Style>設定控制項的屬性, 請參閱樣式設定[和範本化](../controls/styling-and-templating.md)主題。  
   
- 此外，請務必了解`Resources`，這基本上是什麼啟用物件，例如<xref:System.Windows.Style>和<xref:System.Windows.DataTemplate>為可重複使用。 如需詳細資訊，請參閱 [XAML 資源](../advanced/xaml-resources.md)。  
+ 此外, 請務必瞭解`Resources`, 這基本上是讓<xref:System.Windows.Style>和<xref:System.Windows.DataTemplate>等物件可重複使用的方式。 如需詳細資訊，請參閱 [XAML 資源](../advanced/xaml-resources.md)。  
   
 <a name="DataTemplating_Basic"></a>   
 ## <a name="data-templating-basics"></a>資料範本化基本概念  
   
- 為了示範為什麼<xref:System.Windows.DataTemplate>很重要，讓我們逐步解說資料繫結範例。 在此範例中，我們有<xref:System.Windows.Controls.ListBox>繫結到一份`Task`物件。 每個 `Task` 物件各有一個 `TaskName` (字串)、`Description` (字串)、`Priority` (整數)，和一個 `TaskType`型別的屬性，該型別是含有值 `Home` 和 `Work` 的 `Enum`。  
+ 為了示範為什麼<xref:System.Windows.DataTemplate>很重要, 讓我們逐步解說資料系結範例。 在此範例中, 我們有<xref:System.Windows.Controls.ListBox>一個系結至物件清單的`Task` 。 每個 `Task` 物件各有一個 `TaskName` (字串)、`Description` (字串)、`Priority` (整數)，和一個 `TaskType`型別的屬性，該型別是含有值 `Home` 和 `Work` 的 `Enum`。  
   
  [!code-xaml[DataTemplatingIntro_snip#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#resources)]  
 [!code-xaml[DataTemplatingIntro_snip#UI1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#ui1)]  
@@ -39,18 +39,18 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
 <a name="without_a_datatemplate"></a>   
 ### <a name="without-a-datatemplate"></a>沒有 DataTemplate  
- 不含<xref:System.Windows.DataTemplate>、 我們<xref:System.Windows.Controls.ListBox>目前看起來會像這樣：  
+ 如果沒有<xref:System.Windows.Controls.ListBox> , 我們目前看起來像這樣: <xref:System.Windows.DataTemplate>  
   
  ![資料範本化範例螢幕擷取畫面](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
   
- 發生的事情是，而不需要任何特定的指示，請<xref:System.Windows.Controls.ListBox>預設會呼叫`ToString`嘗試顯示集合中的物件時。 因此，如果`Task`物件會覆寫`ToString`方法，則<xref:System.Windows.Controls.ListBox>顯示基礎集合中的每個來源物件的字串表示。  
+ 發生的情況是, 沒有任何特定的指示, <xref:System.Windows.Controls.ListBox>預設會在`ToString`嘗試顯示集合中的物件時呼叫。 因此, 如果`Task`物件`ToString`覆寫方法, <xref:System.Windows.Controls.ListBox>則會顯示基礎集合中每個來源物件的字串表示。  
   
  例如，如果 `Task` 類別以此方式覆寫 `ToString` 方法，而其中 `name` 是 `TaskName`屬性的欄位︰  
   
  [!code-csharp[DataTemplatingIntro_snip#ToString](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Data.cs#tostring)]
  [!code-vb[DataTemplatingIntro_snip#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataTemplatingIntro_snip/visualbasic/data.vb#tostring)]  
   
- 則<xref:System.Windows.Controls.ListBox>看起來如下所示：  
+ 然後, <xref:System.Windows.Controls.ListBox>看起來如下所示:  
   
  ![資料範本化範例螢幕擷取畫面](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
@@ -58,19 +58,19 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
 <a name="defining_simple_datatemplate"></a>   
 ### <a name="defining-a-simple-datatemplate"></a>定義簡單的 DataTemplate  
- 解決方法是定義<xref:System.Windows.DataTemplate>。 若要這麼做的一個方式為設定<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>的屬性<xref:System.Windows.Controls.ListBox>至<xref:System.Windows.DataTemplate>。 您在中指定您<xref:System.Windows.DataTemplate>會變成您的資料物件的視覺化結構。 下列<xref:System.Windows.DataTemplate>相當簡單。 我們提供的指示每個項目顯示為三<xref:System.Windows.Controls.TextBlock>內的項目<xref:System.Windows.Controls.StackPanel>。 每個<xref:System.Windows.Controls.TextBlock>元素所繫結的屬性，`Task`類別。  
+ 解決方案是定義<xref:System.Windows.DataTemplate>。 其中一種方法是將的<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>屬性<xref:System.Windows.Controls.ListBox>設定為<xref:System.Windows.DataTemplate>。 您在中<xref:System.Windows.DataTemplate>指定的內容會成為資料物件的視覺化結構。 以下<xref:System.Windows.DataTemplate>是相當簡單的。 我們會提供指示, 說明每個專案<xref:System.Windows.Controls.TextBlock> <xref:System.Windows.Controls.StackPanel>在中會顯示為三個元素。 每<xref:System.Windows.Controls.TextBlock>個元素都會系結至`Task`類別的屬性。  
   
  [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
   
- 本主題中範例的基礎資料是 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件的集合。 如果是繫結至 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料，基本概念都相同，但有些微的語法差異。 比方說，而不需`Path=TaskName`，您會設定<xref:System.Windows.Data.Binding.XPath%2A>要`@TaskName`(如果`TaskName`屬性您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]節點)。  
+ 本主題中範例的基礎資料是 CLR 物件的集合。 如果是繫結至 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料，基本概念都相同，但有些微的語法差異。 例如, 您可以將設`Path=TaskName` <xref:System.Windows.Data.Binding.XPath%2A>為`@TaskName` (如果`TaskName`是[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]節點的屬性), 而不是 having。  
   
- 現在我們<xref:System.Windows.Controls.ListBox>看起來如下所示：  
+ 現在我們<xref:System.Windows.Controls.ListBox>看起來如下所示:  
   
  ![資料範本化範例螢幕擷取畫面](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
   
 <a name="defining_datatemplate_as_a_resource"></a>   
 ### <a name="creating-the-datatemplate-as-a-resource"></a>將 DataTemplate 建立為資源  
- 在上述範例中，我們定義<xref:System.Windows.DataTemplate>內嵌。 更常見的是將它定義於資源區段中以成為可重複使用的物件，如下列範例所述：  
+ 在上述範例中, 我們定義了<xref:System.Windows.DataTemplate>內嵌。 更常見的是將它定義於資源區段中以成為可重複使用的物件，如下列範例所述：  
   
  [!code-xaml[DataTemplatingIntro_snip#R1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r1)]  
 [!code-xaml[DataTemplatingIntro_snip#AsResource](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#asresource)]  
@@ -80,36 +80,36 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
  [!code-xaml[DataTemplatingIntro_snip#MyTaskTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#mytasktemplate)]  
   
- 因為`myTaskTemplate`是一項資源，您現在可以使用它所採用的屬性其他控制項<xref:System.Windows.DataTemplate>型別。 為如上所示，針對<xref:System.Windows.Controls.ItemsControl>物件，例如<xref:System.Windows.Controls.ListBox>，它是<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>屬性。 針對<xref:System.Windows.Controls.ContentControl>物件，它是<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>屬性。  
+ 因為`myTaskTemplate`是一種資源, 所以您現在可以在具有屬性且<xref:System.Windows.DataTemplate>採用類型的其他控制項上使用它。 如上所示, 針對<xref:System.Windows.Controls.ItemsControl>物件 (例如<xref:System.Windows.Controls.ListBox>), 它是<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>屬性。 對於<xref:System.Windows.Controls.ContentControl>物件, 它<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>是屬性。  
   
 <a name="Styling_DataType"></a>   
 ### <a name="the-datatype-property"></a>DataType 屬性  
- <xref:System.Windows.DataTemplate>類別具有<xref:System.Windows.DataTemplate.DataType%2A>屬性，非常類似於<xref:System.Windows.Style.TargetType%2A>屬性<xref:System.Windows.Style>類別。 因此，而不是指定`x:Key`針對<xref:System.Windows.DataTemplate>在上述範例中，您可以執行下列動作：  
+ 類別的屬性與<xref:System.Windows.Style>類別的<xref:System.Windows.Style.TargetType%2A>屬性非常類似。 <xref:System.Windows.DataTemplate.DataType%2A> <xref:System.Windows.DataTemplate> 因此, 您可以執行下列`x:Key`動作, <xref:System.Windows.DataTemplate>而不是在上述範例中指定的:  
   
  [!code-xaml[DataTemplatingIntro_snip#DataType](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#datatype)]  
   
- 這<xref:System.Windows.DataTemplate>會自動套用到所有`Task`物件。 請注意，在此情況下，`x:Key` 是隱含設定的。 因此，如果您指派此<xref:System.Windows.DataTemplate>`x:Key`值，您會覆寫的隱含`x:Key`而<xref:System.Windows.DataTemplate>不會自動套用。  
+ 這<xref:System.Windows.DataTemplate>會自動套用至所有`Task`物件。 請注意，在此情況下，`x:Key` 是隱含設定的。 因此, 如果您指派此<xref:System.Windows.DataTemplate> `x:Key`值給它, 就會覆<xref:System.Windows.DataTemplate>寫`x:Key`隱含的, 而且不會自動套用。  
   
- 如果您要繫結<xref:System.Windows.Controls.ContentControl>集合`Task`物件，<xref:System.Windows.Controls.ContentControl>不會使用上述<xref:System.Windows.DataTemplate>自動。 這是因為在繫結<xref:System.Windows.Controls.ContentControl>需要區別是否想要繫結至整個集合或個別物件的詳細資訊。 如果您<xref:System.Windows.Controls.ContentControl>正在追蹤的選取項目<xref:System.Windows.Controls.ItemsControl>類型，您可以設定<xref:System.Windows.Data.Binding.Path%2A>屬性<xref:System.Windows.Controls.ContentControl>繫結至"`/`」 表示您感興趣的目前項目。 如需範例，請參閱[繫結至集合並根據選取項目顯示資訊](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)。 否則，您必須指定<xref:System.Windows.DataTemplate>明確地設定<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>屬性。  
+ <xref:System.Windows.Controls.ContentControl>如果您要將系結至`Task`物件的集合, 則<xref:System.Windows.Controls.ContentControl>不會自動使用上述<xref:System.Windows.DataTemplate>的。 這是因為上<xref:System.Windows.Controls.ContentControl>的系結需要詳細資訊, 以區別您要系結至整個集合或個別物件。 如果您<xref:System.Windows.Controls.ContentControl>正在追蹤某個<xref:System.Windows.Controls.ItemsControl>類型的選取專案<xref:System.Windows.Data.Binding.Path%2A> , 您可以<xref:System.Windows.Controls.ContentControl>將系結的屬性設定為 "`/`", 以表示您對目前的專案有興趣。 如需範例，請參閱[繫結至集合並根據選取項目顯示資訊](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)。 否則, 您需要藉由<xref:System.Windows.DataTemplate> <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>設定屬性來明確指定。  
   
- <xref:System.Windows.DataTemplate.DataType%2A>屬性會特別有用，當您有<xref:System.Windows.Data.CompositeCollection>不同型別的資料物件。 如需範例，請參閱[實作 CompositeCollection](how-to-implement-a-compositecollection.md)。  
+ 當<xref:System.Windows.DataTemplate.DataType%2A> 您<xref:System.Windows.Data.CompositeCollection>有不同類型的資料物件時, 屬性特別有用。 如需範例，請參閱[實作 CompositeCollection](how-to-implement-a-compositecollection.md)。  
   
 <a name="adding_more_to_datatemplate"></a>   
 ## <a name="adding-more-to-the-datatemplate"></a>加入更多內容至 DataTemplate  
- 目前資料是以所需的資訊出現，不過還有很大的改進空間。 讓我們來改善在簡報上加上<xref:System.Windows.Controls.Border>，則<xref:System.Windows.Controls.Grid>，和一些<xref:System.Windows.Controls.TextBlock>描述所顯示的資料的項目。  
+ 目前資料是以所需的資訊出現，不過還有很大的改進空間。 讓我們藉由新增<xref:System.Windows.Controls.Border> <xref:System.Windows.Controls.Grid>、和一些<xref:System.Windows.Controls.TextBlock>描述所顯示資料的專案, 來改善簡報。  
   
  [!code-xaml[DataTemplatingIntro#AddingMore](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#addingmore)]  
 [!code-xaml[DataTemplatingIntro#AddingMore2](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#addingmore2)]  
   
- 下列螢幕擷取畫面示<xref:System.Windows.Controls.ListBox>以此方式修改<xref:System.Windows.DataTemplate>:  
+ 下列螢幕擷取畫面顯示具有<xref:System.Windows.Controls.ListBox>此修改<xref:System.Windows.DataTemplate>的:  
   
  ![資料範本化範例螢幕擷取畫面](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
   
- 我們可以把<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>要<xref:System.Windows.HorizontalAlignment.Stretch>上<xref:System.Windows.Controls.ListBox>藉此確定項目的寬度會佔用整個空間：  
+ 我們可以在<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>上將設<xref:System.Windows.HorizontalAlignment.Stretch>為,以確保專案的寬度佔用整個空間:<xref:System.Windows.Controls.ListBox>  
   
  [!code-xaml[DataTemplatingIntro_snip#Stretch](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#stretch)]  
   
- 具有<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>屬性設定為<xref:System.Windows.HorizontalAlignment.Stretch>，則<xref:System.Windows.Controls.ListBox>現在看起來會像這樣：  
+ 當屬性設定為<xref:System.Windows.HorizontalAlignment.Stretch>時, <xref:System.Windows.Controls.ListBox>現在看起來像這樣: <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>  
   
  ![資料範本化範例螢幕擷取畫面](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
   
@@ -117,7 +117,7 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
 ### <a name="use-datatriggers-to-apply-property-values"></a>使用 DataTriggers 套用屬性值  
  目前的展示方式並無法分辨出 `Task` 是家務還是公司的工作。 前面提過，`Task` 物件有一個型別為 `TaskType` 的 `TaskType` 屬性，這是具有 `Home` 和 `Work` 這兩個值的列舉。  
   
- 在下列範例中，<xref:System.Windows.DataTrigger>設定<xref:System.Windows.Controls.Border.BorderBrush%2A>名為的項目`border`要`Yellow`如果`TaskType`屬性是`TaskType.Home`。  
+ 在下列範例中, 如果<xref:System.Windows.DataTrigger> `Yellow` `TaskType.Home` <xref:System.Windows.Controls.Border.BorderBrush%2A> `border` 屬性`TaskType`為, 則會將名為的專案的設定為。  
   
  [!code-xaml[DataTemplatingIntro#DT](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#dt)]  
 [!code-xaml[DataTemplatingIntro#DataTrigger](~/samples/snippets/xaml/VS_Snippets_Wpf/DataTemplatingIntro/xaml/window1.xaml#datatrigger)]  
@@ -127,28 +127,28 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
  ![資料範本化範例螢幕擷取畫面](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
   
- 在此範例中<xref:System.Windows.DataTrigger>使用<xref:System.Windows.Setter>來設定屬性值。 觸發程序類別也具有<xref:System.Windows.TriggerBase.EnterActions%2A>和<xref:System.Windows.TriggerBase.ExitActions%2A>可讓您啟動一組動作，例如動畫的屬性。 此外，還有<xref:System.Windows.MultiDataTrigger>可讓您套用變更的類別，根據多個資料繫結屬性值。  
+ 在此範例中<xref:System.Windows.DataTrigger> , 會<xref:System.Windows.Setter>使用來設定屬性值。 觸發程式類別也具有<xref:System.Windows.TriggerBase.EnterActions%2A>和<xref:System.Windows.TriggerBase.ExitActions%2A>屬性, 可讓您啟動一組動作, 例如動畫。 此外, 還有一個<xref:System.Windows.MultiDataTrigger>類別, 可讓您根據多個資料系結屬性值來套用變更。  
   
- 達到相同的效果的替代方式是繫結<xref:System.Windows.Controls.Border.BorderBrush%2A>屬性，以`TaskType`屬性，然後使用傳回色彩值轉換器根據`TaskType`值。 使用轉換器建立上述效果，就效能上來說會快些。 此外，建立自己的轉換器能提供更多的彈性，因為您可以提供自己的邏輯。 最後，要選擇使用哪種方式，取決於個別情況和您的偏好而定。 如需有關如何撰寫轉換器的資訊，請參閱<xref:System.Windows.Data.IValueConverter>。  
+ 另一種達成相同效果的方法, 就是將<xref:System.Windows.Controls.Border.BorderBrush%2A>屬性系結`TaskType`至屬性, 並使用值轉換器來根據`TaskType`值傳回色彩。 使用轉換器建立上述效果，就效能上來說會快些。 此外，建立自己的轉換器能提供更多的彈性，因為您可以提供自己的邏輯。 最後，要選擇使用哪種方式，取決於個別情況和您的偏好而定。 如需如何撰寫轉換器的詳細資訊, 請<xref:System.Windows.Data.IValueConverter>參閱。  
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>哪些內容屬於 DataTemplate 的範圍  
 
-在上述範例中，我們放在觸發程序<xref:System.Windows.DataTemplate>使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.DataTemplate.Triggers%2A> 屬性。 <xref:System.Windows.Setter>觸發程序的設定項目的屬性值 (<xref:System.Windows.Controls.Border>項目) 內<xref:System.Windows.DataTemplate>。 不過，如果屬性，您`Setters`關心的都不是位於目前的項目屬性<xref:System.Windows.DataTemplate>，可能更適合用來設定內容<xref:System.Windows.Style>，為<xref:System.Windows.Controls.ListBoxItem>類別 (如果您要繫結的控制項是<xref:System.Windows.Controls.ListBox>)。 比方說，如果您想要您<xref:System.Windows.Trigger>來建立動畫<xref:System.Windows.UIElement.Opacity%2A>值的項目時滑鼠指向某個項目，您會定義觸發程序內<xref:System.Windows.Controls.ListBoxItem>樣式。 如需範例，請參閱[樣式設定和範本化範例的簡介](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。
+在上述範例中, 我們<xref:System.Windows.DataTemplate> <xref:System.Windows.DataTemplate>使用將觸發程式放在中。<xref:System.Windows.DataTemplate.Triggers%2A> 屬性。 觸發<xref:System.Windows.Setter>程式的會設定中的專案<xref:System.Windows.Controls.Border> (專案<xref:System.Windows.DataTemplate>) 之屬性 (element) 的值。 不過, 如果`Setters`您所關心的屬性不是目前<xref:System.Windows.DataTemplate>內專案的屬性, 則可能比較適合使用<xref:System.Windows.Style> <xref:System.Windows.Controls.ListBoxItem>類別的來設定屬性 (如果您要系結的<xref:System.Windows.Controls.ListBox>控制項是)。 例如, 如果您想要在<xref:System.Windows.Trigger>滑鼠指向專案<xref:System.Windows.UIElement.Opacity%2A>時以動畫顯示專案的值, <xref:System.Windows.Controls.ListBoxItem>您可以在樣式內定義觸發程式。 如需範例，請參閱[樣式設定和範本化範例的簡介](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。
   
- 一般情況下，請記住<xref:System.Windows.DataTemplate>套用至每個產生<xref:System.Windows.Controls.ListBoxItem>(更多方式和位置實際套用的詳細資訊，請參閱<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>頁面。)。 您<xref:System.Windows.DataTemplate>關心只在展示層和資料物件的外觀。 在大部分情況下，所有其他展示方面，例如哪些項目看起來像選取時或如何<xref:System.Windows.Controls.ListBox>奠定出的項目不屬於定義<xref:System.Windows.DataTemplate>。 如需範例，請參閱 [ItemsControl 的樣式設定和範本化](#DataTemplating_ItemsControl)一節。  
+ 一般來說, 請記住<xref:System.Windows.DataTemplate> , 會套用至每個產生<xref:System.Windows.Controls.ListBoxItem>的 (如需<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>實際套用方式和位置的詳細資訊, 請參閱頁面)。 您<xref:System.Windows.DataTemplate>只關心資料物件的呈現和外觀。 在大部分情況下, 簡報的所有其他層面 (例如, 當選取專案時, 或如何<xref:System.Windows.Controls.ListBox>設定項目時) 都不屬於的定義。 <xref:System.Windows.DataTemplate> 如需範例，請參閱 [ItemsControl 的樣式設定和範本化](#DataTemplating_ItemsControl)一節。  
   
 <a name="Styling_StyleSelection"></a>   
 ## <a name="choosing-a-datatemplate-based-on-properties-of-the-data-object"></a>根據資料物件的屬性選擇 DataTemplate  
- 在 [DataType 屬性](#Styling_DataType)一節中提到過，您可以為不同的資料物件定義不同的資料範本。 這是特別有用，當您有<xref:System.Windows.Data.CompositeCollection>不同類型的不同類型的項目集合。 在 [使用 Datatrigger 套用屬性值](#DataTrigger_to_Apply_Property_Values)區段中，我們已示範，是否您擁有的相同類型的資料物件集合，您可以建立<xref:System.Windows.DataTemplate>，然後使用以套用變更的屬性值為基礎的觸發程序每個資料物件。 不過，觸發程序雖然可以讓您套用屬性值或啟動動畫，但無法提供重新建構資料物件結構的彈性。 某些情況下可能需要您建立不同<xref:System.Windows.DataTemplate>資料屬於相同的物件類型但有不同的屬性。  
+ 在 [DataType 屬性](#Styling_DataType)一節中提到過，您可以為不同的資料物件定義不同的資料範本。 當您<xref:System.Windows.Data.CompositeCollection>的類型或集合具有不同類型的專案時, 這會特別有用。 在 [[使用 datatrigger 來套用屬性值](#DataTrigger_to_Apply_Property_Values)] 區段中, 我們顯示如果您有相同類型之資料物件的集合, 您可以建立<xref:System.Windows.DataTemplate> , 然後使用觸發程式, 根據每個資料物件的屬性值來套用變更。 不過，觸發程序雖然可以讓您套用屬性值或啟動動畫，但無法提供重新建構資料物件結構的彈性。 在某些情況下, 您可能需要為<xref:System.Windows.DataTemplate>相同類型但具有不同屬性的資料物件建立不同的。  
   
- 例如，當 `Task` 物件有一個 `Priority` 值為 `1` 時，您可能會想讓它看起來完全不同，以便提醒自己。 在此情況下，您建立<xref:System.Windows.DataTemplate>高優先顯示`Task`物件。 讓我們加入下列<xref:System.Windows.DataTemplate>的資源區段：  
+ 例如，當 `Task` 物件有一個 `Priority` 值為 `1` 時，您可能會想讓它看起來完全不同，以便提醒自己。 在此情況下, 您會<xref:System.Windows.DataTemplate>建立以顯示高優先順序`Task`物件。 讓我們在 resources 區段<xref:System.Windows.DataTemplate>中新增下列內容:  
   
  [!code-xaml[DataTemplatingIntro_snip#ImportantTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#importanttemplate)]  
   
- 請注意此範例會使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.FrameworkTemplate.Resources%2A> 屬性。 中所定義一節中的項目所共用的資源<xref:System.Windows.DataTemplate>。  
+ 請注意, <xref:System.Windows.DataTemplate>此範例會使用。<xref:System.Windows.FrameworkTemplate.Resources%2A> 屬性。 在該區段中定義的資源會由中<xref:System.Windows.DataTemplate>的元素共用。  
   
- 若要提供邏輯以選擇哪些<xref:System.Windows.DataTemplate>使用根據`Priority`值的資料物件，建立的子類別<xref:System.Windows.Controls.DataTemplateSelector>，並覆寫<xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A>方法。 在下列範例中，<xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A>方法會提供邏輯，以傳回適當的值為基礎的範本`Priority`屬性。 要傳回範本的資源封套中找到<xref:System.Windows.Window>項目。  
+ 若要提供邏輯以根據<xref:System.Windows.DataTemplate>資料物件的`Priority`值來選擇要使用哪一個<xref:System.Windows.Controls.DataTemplateSelector> , 請建立的子<xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A>類別, 並覆寫方法。 在下列範例中, <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A>方法會根據`Priority`屬性的值, 提供傳回適當範本的邏輯。 要傳回的範本可在包裹<xref:System.Windows.Window>元素的資源中找到。  
   
  [!code-csharp[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/TaskListDataTemplateSelector.cs#dtsclass)]
  [!code-vb[DataTemplatingIntro_snip#DTSClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataTemplatingIntro_snip/visualbasic/tasklistdatatemplateselector.vb#dtsclass)]  
@@ -159,11 +159,11 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
 [!code-xaml[DataTemplatingIntro_snip#DTS](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#dts)]  
 [!code-xaml[DataTemplatingIntro_snip#R2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#r2)]  
   
- 若要使用的範本選取器資源，將它指派給<xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>屬性<xref:System.Windows.Controls.ListBox>。 <xref:System.Windows.Controls.ListBox>呼叫<xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A>方法`TaskListDataTemplateSelector`針對每個基礎集合中的項目。 該呼叫會將資料物件當做項目參數傳遞。 <xref:System.Windows.DataTemplate>時所傳回的方法適用於該資料物件。  
+ 若要使用範本選取器資源, 請將它<xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>指派給的<xref:System.Windows.Controls.ListBox>屬性。 會針對基礎<xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A>集合中的每個專案,呼叫的方法。<xref:System.Windows.Controls.ListBox> `TaskListDataTemplateSelector` 該呼叫會將資料物件當做項目參數傳遞。 然後<xref:System.Windows.DataTemplate> , 方法所傳回的會套用至該資料物件。  
   
  [!code-xaml[DataTemplatingIntro_snip#ItemTemplateSelector](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#itemtemplateselector)]  
   
- 使用範本中的選取器的位置，<xref:System.Windows.Controls.ListBox>現在會出現，如下所示：  
+ 範本選取器備妥之後, <xref:System.Windows.Controls.ListBox>現在會顯示如下:  
   
  ![資料範本化範例螢幕擷取畫面](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
 
@@ -171,7 +171,7 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
 
 <a name="DataTemplating_ItemsControl"></a>   
 ## <a name="styling-and-templating-an-itemscontrol"></a>ItemsControl 的樣式設定和範本化  
- 即使<xref:System.Windows.Controls.ItemsControl>不是唯一的控制項類型可供<xref:System.Windows.DataTemplate>使用，就很常見的案例來繫結<xref:System.Windows.Controls.ItemsControl>至集合。 在 [哪些內容屬於 datatemplate 的範圍](#what_belongs_in_datatemplate)一節中提到，定義您<xref:System.Windows.DataTemplate>應該只考量資料的呈現方式。 若要知道何時不適合使用<xref:System.Windows.DataTemplate>務必要了解所提供的不同樣式和範本屬性<xref:System.Windows.Controls.ItemsControl>。 下列範例是設計來說明每個屬性的功能。 <xref:System.Windows.Controls.ItemsControl>在此範例會繫結至相同`Tasks`集合，如先前範例所示。 為方便示範，這個範例中的樣式和範本都是內嵌宣告的。  
+ 雖然不<xref:System.Windows.DataTemplate> <xref:System.Windows.Controls.ItemsControl>是您可以搭配使用的唯一控制項類型, 但它是將系結至集合的一個很常見的案例。 <xref:System.Windows.Controls.ItemsControl> 在[DataTemplate](#what_belongs_in_datatemplate)一節中, 我們討論了的定義<xref:System.Windows.DataTemplate>應該只關心資料的呈現。 為了知道不適合使用的<xref:System.Windows.DataTemplate>時機, 請務必瞭解所提供<xref:System.Windows.Controls.ItemsControl>的不同樣式和範本屬性。 下列範例是設計來說明每個屬性的功能。 在此範例中, 會系結至`Tasks`與上一個範例相同的集合。 <xref:System.Windows.Controls.ItemsControl> 為方便示範，這個範例中的樣式和範本都是內嵌宣告的。  
   
  [!code-xaml[DataTemplatingIntro_snip#ItemsControlProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#itemscontrolproperties)]  
   
@@ -179,17 +179,17 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
  ![ItemsControl 範例螢幕擷取畫面](./media/databinding-itemscontrolproperties.png "DataBinding_ItemsControlProperties")  
   
- 請注意，而不是使用<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>，您可以使用<xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>。 請參閱上一節中的範例。 同樣地，而不是使用<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>，您可以選擇使用<xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A>。  
+ 請注意, 您可以<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>使用, 而不是使用。 請參閱上一節中的範例。 同樣地, 您可以選擇<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> <xref:System.Windows.Controls.ItemsControl.ItemContainerStyleSelector%2A>使用, 而不是使用。  
   
- 兩個其他樣式相關屬性的<xref:System.Windows.Controls.ItemsControl>，不會顯示如下<xref:System.Windows.Controls.ItemsControl.GroupStyle%2A>和<xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A>。  
+ 這裡未顯示的其他兩個與<xref:System.Windows.Controls.ItemsControl>樣式相關的屬性為<xref:System.Windows.Controls.ItemsControl.GroupStyle%2A>和<xref:System.Windows.Controls.ItemsControl.GroupStyleSelector%2A>。  
   
 <a name="DataTemplating_HeirarchicalDataTemplate"></a>   
 ## <a name="support-for-hierarchical-data"></a>支援階層式資料  
- 到目前為止，我們只討論了如何繫結和顯示單一集合。 有時候集合之中可能還有其他集合。 <xref:System.Windows.HierarchicalDataTemplate>類別設計來搭配<xref:System.Windows.Controls.HeaderedItemsControl>来顯示這類資料類型。 在下列範例中，`ListLeagueList` 是 `League` 物件的清單。 每個 `League` 物件都有一個 `Name` 和一組 `Division` 物件集合。 每一個 `Division` 都有一個 `Name` 和 `Team` 物件的集合，並且每一個 `Team` 物件都有一個 `Name`。  
+ 到目前為止，我們只討論了如何繫結和顯示單一集合。 有時候集合之中可能還有其他集合。 類別是設計用來<xref:System.Windows.Controls.HeaderedItemsControl>搭配類型來顯示這類資料。 <xref:System.Windows.HierarchicalDataTemplate> 在下列範例中，`ListLeagueList` 是 `League` 物件的清單。 每個 `League` 物件都有一個 `Name` 和一組 `Division` 物件集合。 每一個 `Division` 都有一個 `Name` 和 `Team` 物件的集合，並且每一個 `Team` 物件都有一個 `Name`。  
   
  [!code-xaml[HierarchicalDataTemplateSnippet#HDT](~/samples/snippets/csharp/VS_Snippets_Wpf/HierarchicalDataTemplateSnippet/CS/window1.xaml#hdt)]  
   
- 此範例所示範的是，使用<xref:System.Windows.HierarchicalDataTemplate>，您可以輕鬆地顯示包含其他清單的清單資料。 以下是範例的螢幕擷取畫面。  
+ 此範例顯示使用<xref:System.Windows.HierarchicalDataTemplate>, 您可以輕鬆地顯示包含其他清單的清單資料。 以下是範例的螢幕擷取畫面。  
   
  ![HierarchicalDataTemplate 範例螢幕擷取畫面](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   

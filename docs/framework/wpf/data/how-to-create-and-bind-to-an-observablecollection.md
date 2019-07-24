@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立和繫結至 ObservableCollection
+title: 作法：建立和繫結至 ObservableCollection
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020916"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401435"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>HOW TO：建立和繫結至 ObservableCollection
-此範例示範如何建立和繫結至衍生自集合<xref:System.Collections.ObjectModel.ObservableCollection%601>類別，這是加入或移除項目時提供通知的集合類別。  
+這個範例示範如何建立和系結至衍生自<xref:System.Collections.ObjectModel.ObservableCollection%601>類別的集合, 這是可在新增或移除專案時提供通知的集合類別。  
   
 ## <a name="example"></a>範例  
  下列範例顯示 `NameList` 集合的實作：  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- 您可以使用讓其他[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件變為可用的相同方式，將集合變為可用來進行繫結 (如[讓資料可於 XAML 中繫結](how-to-make-data-available-for-binding-in-xaml.md)中所述)。 例如，您可以使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 具現化集合，並將集合指定為資源 (如這裡所示)：  
+ 您可以使用與其他 common language runtime (CLR) 物件相同的方式來系結集合, 如在[XAML 中讓資料可](how-to-make-data-available-for-binding-in-xaml.md)供系結中所述。 例如，您可以使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 具現化集合，並將集合指定為資源 (如這裡所示)：  
   
 ```xaml  
 <Window  
@@ -136,7 +136,7 @@ End Class
  這裡並未顯示 `NameItemTemplate` 的定義。  
   
 > [!NOTE]
->  集合中的物件必須滿足[繫結來源概觀](binding-sources-overview.md)中所述的需求。 特別是，如果您使用<xref:System.Windows.Data.BindingMode.OneWay>或是<xref:System.Windows.Data.BindingMode.TwoWay>(比方說，您想要您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的來源屬性動態變更時更新)，您必須實作適當的屬性變更通知機制，例如<xref:System.ComponentModel.INotifyPropertyChanged>介面。  
+>  集合中的物件必須滿足[繫結來源概觀](binding-sources-overview.md)中所述的需求。 特別是, 如果您使用<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay> (例如, 想[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要在來源屬性動態變更時進行更新), 您必須執行適當的屬性變更通知機制, 例如<xref:System.ComponentModel.INotifyPropertyChanged>介面。  
   
  如需詳細資訊，請參閱[資料繫結概觀](data-binding-overview.md)中的＜繫結至集合＞一節。  
   

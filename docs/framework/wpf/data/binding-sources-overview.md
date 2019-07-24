@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364200"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401445"
 ---
 # <a name="binding-sources-overview"></a>繫結來源概觀
 在資料繫結中，繫結來源物件是指您取得資料的來源物件。 本主題討論可以當做繫結來源的物件類型。  
@@ -22,7 +22,7 @@ ms.locfileid: "68364200"
   
 |繫結來源|描述|  
 |--------------------|-----------------|  
-|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件|您可以繫結至任何[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件的公用屬性、子屬性和索引子。 繫結引擎會使用 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 反映取得這些屬性的值。 或者, 也可以使用<xref:System.ComponentModel.ICustomTypeDescriptor>系結引擎來<xref:System.ComponentModel.TypeDescriptionProvider>執行或擁有已註冊的物件。<br /><br /> 如需如何實作可做為繫結來源之類別的詳細資訊，請參閱本主題稍後的[為繫結來源實作類別](#classes)。|  
+|common language runtime (CLR) 物件|您可以系結至任何 common language runtime (CLR) 物件的公用屬性、子屬性和索引子。 系結引擎會使用 CLR 反映來取得屬性的值。 或者, 也可以使用<xref:System.ComponentModel.ICustomTypeDescriptor>系結引擎來<xref:System.ComponentModel.TypeDescriptionProvider>執行或擁有已註冊的物件。<br /><br /> 如需如何實作可做為繫結來源之類別的詳細資訊，請參閱本主題稍後的[為繫結來源實作類別](#classes)。|  
 |動態物件|您可以系結至可用於執行<xref:System.Dynamic.IDynamicMetaObjectProvider>介面之物件的可用屬性和索引子。 如果您可以在程式碼中存取某個成員，就可以繫結至該成員。 例如，若動態物件可讓您在程式碼中透過 `someObjet.AProperty` 存取某個成員，您就可以將繫結路徑設定為 `AProperty`，以繫結至該成員。|  
 |ADO.NET 物件|您可以系結至 ADO.NET 物件, 例如<xref:System.Data.DataTable>。 <xref:System.Data.DataView> ADO.NET<xref:System.ComponentModel.IBindingList>會執行介面, 以提供系結引擎接聽的變更通知。|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 物件|您`XPath`可以系結至<xref:System.Xml.XmlNode>、或<xref:System.Xml.XmlElement>, <xref:System.Xml.XmlDocument>並執行查詢。 在標記中存取[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]系結來源之資料的便利方式是<xref:System.Windows.Data.XmlDataProvider>使用物件。 如需詳細資訊，請參閱[使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。<br /><br /> 您也可以系結至<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>, 或使用 LINQ to XML 系結至這些類型物件上執行的查詢結果。 使用 LINQ to XML 來存取在標記中系結來源之 XML 資料的便利方式, 就是使用<xref:System.Windows.Data.ObjectDataProvider>物件。 如需詳細資訊，請參閱[繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。|  
@@ -33,9 +33,9 @@ ms.locfileid: "68364200"
  您可以建立自己的繫結來源。 本節討論在實作類別以做為繫結來源時必須知道的事。  
   
 ### <a name="providing-change-notifications"></a>提供變更通知  
- 如果您使用<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay>系結[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (因為您想要在系結來源屬性動態變更時進行更新), 您必須執行適當的屬性變更通知機制。 建議的機制適用[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]于或動態類別, 以<xref:System.ComponentModel.INotifyPropertyChanged>執行介面。 如需詳細資訊，請參閱[實作屬性變更通知](how-to-implement-property-change-notification.md)。  
+ 如果您使用<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay>系結[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (因為您想要在系結來源屬性動態變更時進行更新), 您必須執行適當的屬性變更通知機制。 建議的機制是讓 CLR 或動態類別執行<xref:System.ComponentModel.INotifyPropertyChanged>介面。 如需詳細資訊，請參閱[實作屬性變更通知](how-to-implement-property-change-notification.md)。  
   
- 如果您建立[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]的物件不會執行<xref:System.ComponentModel.INotifyPropertyChanged>, 則您必須安排自己的通知系統, 以確保系結中所使用的資料保持在最新狀態。 您可以針對想要通知變更的每個屬性支援 `PropertyChanged` 模式，以提供變更通知。 若要支援這個模式，請定義每個屬性的 *PropertyName*Changed 事件，其中 *PropertyName* 是屬性的名稱。 您可在每次屬性變更時，引發這個事件。  
+ 如果您建立不會執行<xref:System.ComponentModel.INotifyPropertyChanged>的 CLR 物件, 則必須安排自己的通知系統, 以確保系結中所使用的資料保持在最新狀態。 您可以針對想要通知變更的每個屬性支援 `PropertyChanged` 模式，以提供變更通知。 若要支援這個模式，請定義每個屬性的 *PropertyName*Changed 事件，其中 *PropertyName* 是屬性的名稱。 您可在每次屬性變更時，引發這個事件。  
   
  如果繫結來源實作其中一種通知機制，系統就會自動更新目標。 如果您的系結來源因任何原因而未提供適當的屬性變更通知, 您可以選擇使用<xref:System.Windows.Data.BindingExpression.UpdateTarget%2A>方法明確地更新目標屬性。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68364200"
   
  這個表格說明資料繫結中使用權限需求的下列相關重點：  
   
-- 對於 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 屬性，只要繫結引擎能夠使用反映來存取繫結來源屬性，資料繫結就有作用。 否則，繫結引擎將會發出找不到屬性的警告，並使用後援值或預設值 (如果有的話)。  
+- 對於 CLR 屬性而言, 只要系結引擎能夠使用反映來存取系結來源屬性, 資料系結就會運作。 否則，繫結引擎將會發出找不到屬性的警告，並使用後援值或預設值 (如果有的話)。  
   
 - 您可以繫結至在編譯階段或執行階段定義之動態物件上的屬性。  
   

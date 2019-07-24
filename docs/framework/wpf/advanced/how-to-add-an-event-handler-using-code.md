@@ -8,26 +8,26 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 32e3926bb4c519b7be14a26484603d6d4ea88b6a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665801"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401173"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>HOW TO：使用程式碼新增事件處理常式
-此範例示範如何使用程式碼，將事件處理常式新增至項目。  
+這個範例示範如何使用程式碼, 將事件處理常式新增至專案。  
   
- 如果您想要新增事件處理常式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]項目和包含的項目 [標記] 頁面已載入，您必須新增處理常式，使用程式碼。 或者，如果您正在建置應用程式完全使用程式碼和未宣告任何項目使用的項目樹狀結構中向上[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您可以呼叫特定方法，將事件處理常式新增至建構的項目樹狀結構。  
+ 如果您想要將事件處理常式加入至[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]專案, 而且已經載入包含該專案的標記頁面, 則必須使用程式碼加入處理常式。 或者, 如果您要完全使用程式碼來建立應用程式的專案樹狀結構, 而不使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]宣告任何專案, 您可以呼叫特定方法, 將事件處理常式加入至結構化專案樹狀結構。  
   
 ## <a name="example"></a>範例  
- 下列範例會將新<xref:System.Windows.Controls.Button>至現有的頁面，一開始會定義在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 程式碼後置檔案會實作事件處理常式方法和上，然後將該方法新增為新的事件處理常式<xref:System.Windows.Controls.Button>。  
+ 下列範例會將新<xref:System.Windows.Controls.Button>的加入至一開始在中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]定義的現有頁面。 程式碼後置檔案會執行事件處理常式方法, 然後在上<xref:System.Windows.Controls.Button>加入該方法做為新的事件處理常式。  
   
- C#範例會使用`+=`運算子來指派到的事件處理常式。 這是用來指派中的處理常式的相同運算子[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件處理模型。 Microsoft Visual Basic 不支援這個運算子，來加入事件處理常式。 它需要使用兩種技術之一：  
+ 此C#範例會使用`+=`運算子來指派事件的處理常式。 這是用來在 common language runtime (CLR) 事件處理模型中指派處理常式的相同運算子。 Microsoft Visual Basic 不支援此運算子做為新增事件處理常式的方法。 而是需要下列其中一種技術:  
   
-- 使用<xref:System.Windows.UIElement.AddHandler%2A>方法，連同`AddressOf`運算子，以便參考事件處理常式實作。  
+- 搭配使用`AddressOf`方法與運算子, 以參考事件處理常式的執行。 <xref:System.Windows.UIElement.AddHandler%2A>  
   
-- 使用`Handles`關鍵字做為事件處理常式定義的一部分。 這項技術不討論;請參閱[Visual Basic 和 WPF 事件處理](visual-basic-and-wpf-event-handling.md)。  
+- `Handles`使用關鍵字做為事件處理常式定義的一部分。 這裡不會顯示這項技術;請參閱[Visual Basic 和 WPF 事件處理](visual-basic-and-wpf-event-handling.md)。  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "64665801"
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  加入事件處理常式中一開始剖析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面是更簡單。 在您要加入事件處理常式的物件項目，新增符合您想要處理的事件名稱的屬性。 然後指定該屬性的值，做為您的程式碼後置檔案中定義的事件處理常式方法名稱[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面。 如需詳細資訊，請參閱 < [XAML 概觀 (WPF)](xaml-overview-wpf.md)或是[路由事件概觀](routed-events-overview.md)。  
+>  在初始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]剖析的頁面中新增事件處理常式會簡單許多。 在您要加入事件處理常式的物件專案中, 加入與您要處理的事件名稱相符的屬性。 然後指定該屬性的值, 做為您在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面的程式碼後置檔案中定義的事件處理常式方法的名稱。 如需詳細資訊, 請參閱[XAML 總覽 (WPF)](xaml-overview-wpf.md)或[路由事件總覽](routed-events-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

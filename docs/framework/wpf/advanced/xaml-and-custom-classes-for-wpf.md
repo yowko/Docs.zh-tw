@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: c429df440f87110a9059b8f9c40cdf273952f581
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364119"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400829"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF 的 XAML 和自訂類別
-[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 架構中所實作的 XAML 支援使用任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 語言定義自訂類別或結構，然後使用 XAML 標記來存取該類別。 您可以在相同的標記檔案內混用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定義的類型與您的自訂類型，方法一般是透過將自訂類型對應至 XAML 命名空間前置詞。 本主題討論自訂類別必須滿足才能用作 XAML 項目的需求。  
+通用語言執行平臺 (CLR) 架構中所實做的 XAML 支援以任何 common language runtime (CLR) 語言定義自訂類別或結構, 然後使用 XAML 標記存取該類別的功能。 您可以在相同的標記檔案內混用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定義的類型與您的自訂類型，方法一般是透過將自訂類型對應至 XAML 命名空間前置詞。 本主題討論自訂類別必須滿足才能用作 XAML 項目的需求。  
 
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## <a name="custom-classes-in-applications-or-assemblies"></a>應用程式或組件中的自訂類別  
@@ -37,7 +37,7 @@ ms.locfileid: "68364119"
  除了啟用物件項目語法之外，您的物件定義也會啟用採用該物件作為值類型之任何其他公用屬性的屬性項目語法。 這是因為物件現在可以具現化為物件項目，並且可以填入這類屬性的屬性項目值。  
   
 ### <a name="structures"></a>結構  
- 您定義為自訂類型的結構, 一律可以在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的 XAML 內進行構造。這是因為[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]編譯器會隱含地為結構建立無參數的函式, 以將所有屬性值初始化為其預設值。 在某些情況下，您可能不想要結構的預設建構行為和 (或) 物件項目用法。 這可能是因為結構是要填入值並在概念上當成聯集運作；其中，所包含的值可能會有互斥解譯，因此無法設定其屬性。 這類結構的<xref:System.Windows.GridLength>範例是。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 一般而言，這類結構應該實作類型轉換子；如此，使用可建立結構值的不同解譯或模式的字串慣例，即可透過屬性形式表示這些值。 結構也應該透過非無參數的函式來公開程式碼結構的類似行為。  
+ 您定義為自訂類型的結構, 一律可以在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的 XAML 內進行構造。這是因為 CLR 編譯器會隱含地為結構建立無參數的函式, 以將所有屬性值初始化為其預設值。 在某些情況下，您可能不想要結構的預設建構行為和 (或) 物件項目用法。 這可能是因為結構是要填入值並在概念上當成聯集運作；其中，所包含的值可能會有互斥解譯，因此無法設定其屬性。 這類結構的<xref:System.Windows.GridLength>範例是。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 一般而言，這類結構應該實作類型轉換子；如此，使用可建立結構值的不同解譯或模式的字串慣例，即可透過屬性形式表示這些值。 結構也應該透過非無參數的函式來公開程式碼結構的類似行為。  
   
 <a name="Requirements_for_Properties_of_a_Custom_Class_as_XAML"></a>   
 ## <a name="requirements-for-properties-of-a-custom-class-as-xaml-attributes"></a>作為 XAML 屬性之自訂類別的屬性需求  
@@ -57,7 +57,7 @@ ms.locfileid: "68364119"
  允許屬性語法的屬性範例, 但不允許透過 XAML 使用包含物件元素的屬性專案語法, 這是採用<xref:System.Windows.Input.Cursor>類型的各種屬性。 類別具有專用類型轉換器<xref:System.Windows.Input.CursorConverter>, 但不會公開<xref:System.Windows.FrameworkElement.Cursor%2A>無參數的函式, 因此屬性只能透過屬性語法來設定, 即使實際<xref:System.Windows.Input.Cursor>類型是參考型別也是如此。 <xref:System.Windows.Input.Cursor>  
   
 ### <a name="per-property-type-converters"></a>每個屬性的類型轉換子  
- 或者，屬性本身可以宣告屬性層級的類型轉換子。 這會啟用「迷你語言」, 藉由處理屬性的傳入字串值作為以適當類型為基礎之作業的輸入<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> , 來具現化屬性 (inline) 之類型的物件。 這項作業一般是要提供方便使用的存取子，而不是在 XAML 中設定屬性的唯一方法。 不過, 如果您想要使用不提供無參數的函式或屬性化型[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]別轉換器的現有型別, 則也可以針對屬性使用類型轉換器。 API 的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]範例是<xref:System.Globalization.CultureInfo>採用類型的某些屬性。 在此情況下[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 使用現有的 Microsoft <xref:System.Globalization.CultureInfo> .NET Framework 類型來更有效地解決舊版架構中使用的相容性和遷移案例, 但<xref:System.Globalization.CultureInfo>類型不支援必要的可直接當做 XAML 屬性值使用的構造函式或類型層級類型轉換。  
+ 或者，屬性本身可以宣告屬性層級的類型轉換子。 這會啟用「迷你語言」, 藉由處理屬性的傳入字串值作為以適當類型為基礎之作業的輸入<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> , 來具現化屬性 (inline) 之類型的物件。 這項作業一般是要提供方便使用的存取子，而不是在 XAML 中設定屬性的唯一方法。 不過, 如果您想要使用未提供無參數的函式或屬性化型別轉換器的現有 CLR 型別, 則也可以針對屬性使用類型轉換器。 API 的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]範例是<xref:System.Globalization.CultureInfo>採用類型的某些屬性。 在此情況下[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 使用現有的 Microsoft <xref:System.Globalization.CultureInfo> .NET Framework 類型來更有效地解決舊版架構中使用的相容性和遷移案例, 但<xref:System.Globalization.CultureInfo>類型不支援必要的可直接當做 XAML 屬性值使用的構造函式或類型層級類型轉換。  
   
  只要公開具有 XAML 用法的屬性，特別的是，如果您是控制項作者，則應該強烈考慮支援該屬性與相依性屬性。 如果您使用現有[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 XAML 處理器執行, 這特別適用, 因為您可以使用<xref:System.Windows.DependencyProperty>支援來改善效能。 相依性屬性會公開使用者預期 XAML 可存取屬性之屬性的屬性系統功能。 這包括動畫、資料繫結和樣式支援這類功能。 如需詳細資訊，請參閱[自訂相依性屬性](custom-dependency-properties.md)和 [XAML 載入和相依性屬性](xaml-loading-and-dependency-properties.md)。  
   
@@ -66,10 +66,10 @@ ms.locfileid: "68364119"
   
 <a name="Requirements_for_Events_of_a_Custom_Class_as_XAML"></a>   
 ## <a name="requirements-for-xaml-event-handler-attribute-syntax-on-events-of-a-custom-class"></a>自訂類別事件上 XAML 事件處理常式屬性語法的需求  
- 若要以[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件的形式使用, 事件必須在支援無參數的函式的類別上, 或是在可于衍生類別上存取事件的抽象類別上公開為公用事件。 為了方便地當做路由[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件使用, 您的事件應該會執行明確`add`的和`remove`方法[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] , 這會新增和移除事件簽章的處理常式, 並將這些處理常式轉送至<xref:System.Windows.UIElement.AddHandler%2A>和<xref:System.Windows.UIElement.RemoveHandler%2A>方法。 這些方法會在附加事件的執行個體上新增或移除路由事件處理常式存放區的處理常式。  
+ 若要以 CLR 事件的形式使用, 必須在支援無參數的函式的類別上, 或在可于衍生類別上存取事件的抽象類別上, 將事件公開為公用事件。 為了方便地當做路由事件使用, 您的 clr 事件應該`add`會執行明確的和`remove`方法, 這會新增和移除 CLR 事件簽章的處理常式, 並將這些處理常式<xref:System.Windows.UIElement.AddHandler%2A>轉送至和<xref:System.Windows.UIElement.RemoveHandler%2A>方法. 這些方法會在附加事件的執行個體上新增或移除路由事件處理常式存放區的處理常式。  
   
 > [!NOTE]
->  您可以使用<xref:System.Windows.UIElement.AddHandler%2A>來直接為路由事件註冊處理常式, 並故意不要[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]定義會公開路由事件的事件。 通常不會建議您使用此方式，因為事件不會啟用用於附加處理常式的 XAML 屬性語法，而且產生的類別將針對該類型的功能提供較不容易明瞭的 XAML 檢視。  
+>  您可以使用<xref:System.Windows.UIElement.AddHandler%2A>來直接為路由事件註冊處理常式, 並故意不要定義會公開路由事件的 CLR 事件。 通常不會建議您使用此方式，因為事件不會啟用用於附加處理常式的 XAML 屬性語法，而且產生的類別將針對該類型的功能提供較不容易明瞭的 XAML 檢視。  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>撰寫集合屬性  

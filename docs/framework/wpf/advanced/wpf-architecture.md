@@ -16,21 +16,21 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: c214cb39bf51dad2aafe4ec0c9050f355db5b2c5
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331677"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400855"
 ---
 # <a name="wpf-architecture"></a>WPF 架構
 本主題提供 Windows Presentation Foundation (WPF) 類別階層的導覽。 它涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述其互動方式。 它也會詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所進行的一些選擇。  
 
 <a name="System_Object"></a>   
 ## <a name="systemobject"></a>System.Object  
- 主要 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程式設計模型是透過 Managed 程式碼所公開。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 設計階段早期，有關應該在系統的 Managed 元件與 Unmanaged 元件之間繪製線條的位置有許多爭論。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 提供許多功能，讓開發更具生產力且更穩固 (包括記憶體管理、錯誤處理、一般類型系統等)，但都需要付出代價。  
+ 主要 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程式設計模型是透過 Managed 程式碼所公開。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 設計階段早期，有關應該在系統的 Managed 元件與 Unmanaged 元件之間繪製線條的位置有許多爭論。 CLR 提供許多功能, 讓開發更具生產力且更穩固 (包括記憶體管理、錯誤處理、一般型別系統等), 但會產生成本。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要元件如下圖所示。 圖表的紅色區段 (PresentationFramework、PresentationCore 和 milcore) 是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要程式碼部分。 其中只有一種是 Unmanaged 元件：milcore。 milcore 是使用 Unmanaged 程式碼所撰寫，以啟用與 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 的緊密整合。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有顯示都是透過 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 引擎所完成，以允許有效率的硬體和軟體轉譯。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也需要記憶體和執行的良好控制。 milcore 中的組合引擎對於效能異常敏感，而且需要犧牲許多 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 優點才能獲得效能。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要元件如下圖所示。 圖表的紅色區段 (PresentationFramework、PresentationCore 和 milcore) 是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要程式碼部分。 其中只有一種是 Unmanaged 元件：milcore。 milcore 是使用 Unmanaged 程式碼所撰寫，以啟用與 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 的緊密整合。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有顯示都是透過 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 引擎所完成，以允許有效率的硬體和軟體轉譯。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也需要記憶體和執行的良好控制。 Milcore 中的組合引擎會對效能產生極大的影響, 而且需要有多個 CLR 優點來取得效能。  
   
  ![WPF 在 .NET Framework 中的位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   
@@ -44,13 +44,13 @@ ms.locfileid: "68331677"
   
  在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的設計階段期間，目的是要移至單一執行的執行緒，而非執行緒「親和性」模型。 元件使用執行中執行緒的身分識別來儲存某些類型的狀態時，會發生執行緒親和性。 這最常見的形式是使用執行緒本機存放區 (TLS) 來儲存狀態。 執行緒親和性需要作業系統中只有一個實體執行緒擁有每個邏輯執行的執行緒，而這樣可能會耗用大量記憶體。 最後，透過執行緒親和性，WPF 的執行緒模型會與單一執行緒執行作業的現有 User32 執行緒模型同步。 這個的主要原因是交互操作性；[!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)] 這類系統、剪貼簿和 Internet Explorer 都需要單一執行緒親和性 (STA) 執行。  
   
- 假設您的物件具有 STA 執行緒，則您需要執行緒之間的通訊方法，並驗證您位於正確的執行緒。 其中具有發送器的角色。 發送器是基本訊息發送系統，具有多個已設定優先權的佇列。 訊息範例包括未經處理的輸入通知 (滑鼠移動)、架構功能 (版面配置) 或使用者命令 (執行此方法)。 藉由衍生<xref:System.Windows.Threading.DispatcherObject>自, 您可以[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]建立具有 STA 行為的物件, 並在建立時給予發送器的指標。  
+ 假設您的物件具有 STA 執行緒，則您需要執行緒之間的通訊方法，並驗證您位於正確的執行緒。 其中具有發送器的角色。 發送器是基本訊息發送系統，具有多個已設定優先權的佇列。 訊息範例包括未經處理的輸入通知 (滑鼠移動)、架構功能 (版面配置) 或使用者命令 (執行此方法)。 藉由衍生<xref:System.Windows.Threading.DispatcherObject>自, 您可以建立具有 STA 行為的 CLR 物件, 並在建立時給予發送器的指標。  
   
 <a name="System_Windows_DependencyObject"></a>   
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 時所使用的其中一個主要架構原理是方法或事件的屬性喜好設定。 屬性是宣告式，可讓您更輕鬆地指定意圖，而不是動作。 這也支援用於顯示使用者介面內容的模型驅動或資料驅動系統。 此原理的預期效果是建立多個可繫結的屬性，以進一步控制應用程式的行為。  
   
- 若要讓屬性驅動多個系統，則需要比 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 所提供的屬性系統更豐富的屬性系統。 這項豐富性的簡單範例是變更通知。 若要啟用雙向繫結，您需要繫結兩端都支援變更通知。 若要讓行為繫結至屬性值，您需要在屬性值變更時收到通知。 Microsoft .NET Framework 具有介面**INotifyPropertyChange**, 可讓物件發佈變更通知, 不過它是選擇性的。  
+ 為了擁有更多由屬性驅動的系統, 所需的屬性系統會比 CLR 所提供的更為豐富。 這項豐富性的簡單範例是變更通知。 若要啟用雙向繫結，您需要繫結兩端都支援變更通知。 若要讓行為繫結至屬性值，您需要在屬性值變更時收到通知。 Microsoft .NET Framework 具有介面**INotifyPropertyChange**, 可讓物件發佈變更通知, 不過它是選擇性的。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供更豐富的屬性系統, 衍生自<xref:System.Windows.DependencyObject>類型。 屬性系統實際上是「相依性」屬性系統，因此它會追蹤屬性運算式之間的相依性，並在相依性變更時自動重新驗證屬性值。 例如, 如果您有繼承的屬性 (例如<xref:System.Windows.Controls.Control.FontSize%2A>), 則如果屬性在繼承值的專案父系上發生變更, 系統就會自動更新。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68331677"
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中資料繫結的其中一個最有趣功能是引進資料範本。 資料範本可讓您以宣告方式指定應該如何視覺化資料。 您可以解決問題，並讓資料判斷將建立的顯示，而不是建立可繫結至資料的自訂使用者介面。  
   
- 樣式實際上是簡單形式的資料繫結。 使用樣式，您可以將共用定義中的一組屬性繫結至項目的一或多個執行個體。 樣式會套用至專案, 方法是明確參考 (藉由設定<xref:System.Windows.FrameworkElement.Style%2A>屬性), 或藉由將樣式與專案[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]的類型產生關聯, 以隱含方式套用。  
+ 樣式實際上是簡單形式的資料繫結。 使用樣式，您可以將共用定義中的一組屬性繫結至項目的一或多個執行個體。 樣式會套用至專案, 方法是明確參考 (藉由設定<xref:System.Windows.FrameworkElement.Style%2A>屬性), 或藉由將樣式與專案的 CLR 類型產生關聯, 以隱含方式套用。  
   
 <a name="System_Windows_Controls_Control"></a>   
 ## <a name="systemwindowscontrolscontrol"></a>System.Windows.Controls.Control  

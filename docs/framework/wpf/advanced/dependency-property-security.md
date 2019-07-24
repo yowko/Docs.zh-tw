@@ -10,33 +10,33 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053544"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400763"
 ---
 # <a name="dependency-property-security"></a>相依性屬性的安全性
 相依性屬性通常應該視為公用屬性。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統在本質上會防止進行相依性屬性值的安全性保證。  
 
 <a name="AccessSecurity"></a>   
 ## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>包裝函式和相依性屬性的存取和安全性  
- 通常，相依性屬性會與「包裝函式」[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性一起實作，該屬性會簡化對執行個體屬性的取得或設定。 但包裝函式其實是便利的方法實作的基礎<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>與相依性屬性互動時所使用的靜態呼叫。 從另一個方面來思考，這些屬性會公開為剛好受到相依性屬性 (而不是私用欄位) 支援的[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性。 套用到包裝函式的安全性機制，與屬性系統行為和基礎相依性屬性的存取並不相同。 在 包裝函式設置安全性要求只會防止使用這種方便的方法，但不是會防止呼叫<xref:System.Windows.DependencyObject.GetValue%2A>或<xref:System.Windows.DependencyObject.SetValue%2A>。 同樣地，對包裝函式設置保護或私用存取層級並不會提供任何有效的安全性防護。  
+ 通常, 相依性屬性會與「包裝函式」 common language runtime (CLR) 屬性一起執行, 以簡化從實例取得或設定屬性的方式。 但是, 包裝函式其實只是一種便利的<xref:System.Windows.DependencyObject.GetValue%2A>方法<xref:System.Windows.DependencyObject.SetValue%2A> , 可執行與相依性屬性互動時所使用的基礎和靜態呼叫。 以另一種方式思考, 這些屬性會公開為通用語言執行平臺 (CLR) 屬性, 而這些屬性會被相依性屬性 (而非私用欄位) 所支援。 套用到包裝函式的安全性機制，與屬性系統行為和基礎相依性屬性的存取並不相同。 在包裝函式上放置安全性需求, 只會防止使用便利方法, 但不會防止呼叫<xref:System.Windows.DependencyObject.GetValue%2A>或。 <xref:System.Windows.DependencyObject.SetValue%2A> 同樣地，對包裝函式設置保護或私用存取層級並不會提供任何有效的安全性防護。  
   
- 如果您正在撰寫自己的相依性屬性，您應該宣告包裝函式和<xref:System.Windows.DependencyProperty>識別碼欄位，為公用成員，讓呼叫端執行不誤會該屬性，則為 true 的存取層級 （因為其存放區正在實作為相依性屬性。）  
+ 如果您要撰寫自己的相依性屬性, 您應該將包裝函式<xref:System.Windows.DependencyProperty>和識別碼欄位宣告為公用成員, 讓呼叫端不會收到關於該屬性之真正存取層級的誤導資訊 (因為其存放區是實作為相依性屬性)。  
   
- 自訂相依性屬性，您可以將屬性註冊為唯讀相依性屬性，因此這提供有效的方法，防止未持有的參考的任何人所設定的屬性<xref:System.Windows.DependencyPropertyKey>該屬性。 如需詳細資訊，請參閱[唯讀相依性屬性](read-only-dependency-properties.md)。  
+ 若為自訂相依性屬性, 您可以將屬性註冊為唯讀相依性屬性, 這樣做會提供有效的方法, 防止未持有該屬性之參考<xref:System.Windows.DependencyPropertyKey>的任何人設定屬性。 如需詳細資訊，請參閱[唯讀相依性屬性](read-only-dependency-properties.md)。  
   
 > [!NOTE]
->  宣告<xref:System.Windows.DependencyProperty>識別項欄位為私用不會受到禁止，理論上可以用來協助降低直接公開的命名空間的自訂類別，而這類屬性不應視為 「 私用 」 同樣[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]語言定義會定義該存取層級下, 一節中所述的原因。  
+>  不允許將識別碼欄位設為私用, 而且它可以用來協助減少立即公開的自訂類別命名空間, 但是這類屬性不應視為「私用」, 與通用語言相同<xref:System.Windows.DependencyProperty>執行時間 (CLR) 語言定義會定義該存取層級, 原因如下一節中所述。  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>相依性屬性的屬性系統公開  
- 它不實用，而且可能會造成誤導，來宣告<xref:System.Windows.DependencyProperty>任何存取層級而非公用。 該存取層級設定只能防止使用者取得宣告類別執行個體的參考。 但有幾個層面的屬性系統會傳回<xref:System.Windows.DependencyProperty>做為識別特定的屬性，因為它存在於類別的執行個體或衍生的類別的執行個體，而且這個識別碼是在仍可使用的方法<xref:System.Windows.DependencyObject.SetValue%2A>即使呼叫如果原始靜態識別項宣告為非公用。 此外，<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>虛擬方法接收的任何現有的相依性屬性的值變更的資訊。 颾魤 ㄛ<xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A>方法會傳回具有本機設定的執行個體上的任何屬性的識別碼值。  
+ 它通常並不實用, 而且可能會誤導, 以宣告為公用<xref:System.Windows.DependencyProperty>以外的任何存取層級。 該存取層級設定只能防止使用者取得宣告類別執行個體的參考。 但在屬性系統中, 有幾個層面會<xref:System.Windows.DependencyProperty>傳回, 做為在類別或衍生類別實例的實例上識別特定屬性的方法, 而且這個識別碼仍然可以<xref:System.Windows.DependencyObject.SetValue%2A>在呼叫中使用。如果原始靜態識別碼宣告為非公用。 此外, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>虛擬方法也會接收任何已變更值之現有相依性屬性的資訊。 此外, 此<xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A>方法會針對具有本機設定值的實例上的任何屬性傳回識別碼。  
   
 ### <a name="validation-and-security"></a>驗證和安全性  
- 藉由套用至<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>和預期要求失敗，以防止屬性所設定的驗證失敗不是足夠的安全性機制。 透過強制執行設定值失效<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>也可以隱藏被惡意呼叫端，如果這些呼叫端應用程式定義域內操作。  
+ 將需求套用至<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> , 並預期在要求失敗時驗證失敗, 以防止設定屬性不是適當的安全性機制。 透過<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>強制執行的設定值失效, 如果這些呼叫端是在應用程式域內運作, 惡意的呼叫端也可能會隱藏。  
   
 ## <a name="see-also"></a>另請參閱
 

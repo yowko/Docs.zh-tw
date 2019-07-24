@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ebfbb2df3e931690f2ba12f0a2ad868da0212f5d
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331621"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400655"
 ---
 # <a name="threading-model"></a>執行緒模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是設計來避免開發人員遇到執行緒的難題。 因此, 大部分的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開發人員都不需要撰寫使用多個執行緒的介面。 由於多執行緒的程式非常複雜且很難偵錯，因此，若有單一執行緒解決方案，就應避免使用多執行緒程式。  
@@ -177,7 +177,7 @@ ms.locfileid: "68331621"
   
  `GetWeatherAsync` 會使用上述其中一種技術 (例如建立背景執行緒)，以非同步方式執行工作，而不需封鎖呼叫執行緒。  
   
- 此模式最重要的部分之一, 就是在呼叫  `Completed`方法  `Async`方法的相同執行緒上呼叫方法方法, 以開始使用。 您可以輕鬆地透過[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]儲存<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>來執行這項操作, 但 nongraphical 元件只能[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]在應用程式中使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 而不能用於或 ASP.NET 程式中。  
+ 此模式最重要的部分之一, 就是在呼叫 `Completed`方法 `Async`方法的相同執行緒上呼叫方法方法, 以開始使用。 您可以輕鬆地透過[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]儲存<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>來執行這項操作, 但 nongraphical 元件只能[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]在應用程式中使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 而不能用於或 ASP.NET 程式中。  
   
  此類別可滿足這項需求, 也就是將它視為適用于其他[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]架構的簡化版本。 <xref:System.Windows.Threading.Dispatcher> <xref:System.Windows.Threading.DispatcherSynchronizationContext>  
   
@@ -203,15 +203,15 @@ ms.locfileid: "68331621"
  這可能`handler2`會花很多時間來處理此事件。 `handler2`可能會<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>使用來開始不會傳回小時的嵌套訊息迴圈。 如果`handler2`未在此訊息迴圈完成時將事件標示為已處理, 則會將事件傳遞到樹狀結構中, 即使它非常舊也一樣。  
   
 ### <a name="reentrancy-and-locking"></a>重新進入和鎖定  
- 的鎖定機制[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]的行為, 並不完全像想像, 而是在要求鎖定時, 可能會預期執行緒完全停止作業。 實際上，執行緒會繼續接收和處理高優先順序的訊息。 這有助於防止發生鎖死，並讓介面進行最低限度的回應，但它也會造成發生輕微 Bug 的可能性。  在大部分的情況下, 您不需要知道這方面的任何內容, 但在罕見的情況下[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (通常涉及視窗訊息或 COM STA 元件), 這很值得了解。  
+ 通用語言執行時間 (CLR) 的鎖定機制, 其行為不會與想像的完全相同;要求鎖定時, 可能會預期執行緒完全停止作業。 實際上，執行緒會繼續接收和處理高優先順序的訊息。 這有助於防止發生鎖死，並讓介面進行最低限度的回應，但它也會造成發生輕微 Bug 的可能性。  在大部分的情況下, 您不需要知道這方面的任何內容, 但在罕見的情況下[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (通常涉及視窗訊息或 COM STA 元件), 這很值得了解。  
   
  大部分的介面不是以執行緒安全的方式建立的, 因為開發人員的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]工作是不是由一個以上的執行緒所存取。 在此情況下, 該單一執行緒可能會在非預期的時間進行環境變更, 而導致<xref:System.Windows.Threading.DispatcherObject>相互排除機制應解決的錯誤效果。 請考慮下列虛擬程式碼：  
   
  ![顯示執行緒重新進入的圖表。](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
- 大部分時間都是正確的, 但[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有時候這類非預期的重新進入可能會造成問題。 因此, 在某些金鑰時間, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會<xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>呼叫, 這會變更該執行緒的鎖定指令, 以使用無重新進入的鎖定, 而不[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]是一般的鎖定。  
+ 大部分時間都是正確的, 但[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有時候這類非預期的重新進入可能會造成問題。 因此, 在某些索引鍵時間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會呼叫, 這會變更該執行緒的鎖定指令, 以使用無重新進入的鎖定, 而不是一般的 CLR 鎖定。  
   
- 那麼, [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]為什麼小組選擇此行為？ 它必須使用 STA COM 物件和完成項執行緒來執行。 當物件進行垃圾收集時, 其`Finalize`方法會在專用完成項執行緒上執行, 而[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]不是線上程上執行。 其中的問題在於, 因為在[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒上建立的 COM STA 物件只能[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]線上程上處置。 會執行對等<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>的 (在此案例中使用 win32 `SendMessage`)。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 但是, 如果[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒忙碌中, 完成項執行緒就會停止, 而且無法處置 COM STA 物件, 這會造成嚴重的記憶體流失。 因此, [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]小組進行了很難的呼叫, 讓鎖定的工作方式。  
+ 那麼, 為什麼 CLR 小組選擇此行為呢？ 它必須使用 STA COM 物件和完成項執行緒來執行。 當物件進行垃圾收集時, 其`Finalize`方法會在專用完成項執行緒上執行, 而[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]不是線上程上執行。 其中的問題在於, 因為在[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒上建立的 COM STA 物件只能[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]線上程上處置。 CLR 會執行對等<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>的 (在此案例中使用 win32 `SendMessage`)。 但是, 如果[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒忙碌中, 完成項執行緒就會停止, 而且無法處置 COM STA 物件, 這會造成嚴重的記憶體流失。 因此, CLR 小組進行了很難的呼叫, 讓鎖定的執行方式。  
   
  的工作是避免非預期的重新進入, 而不重新介紹基於記憶體流失, 這就是為什麼我們不會封鎖任何地方的重新進入。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   

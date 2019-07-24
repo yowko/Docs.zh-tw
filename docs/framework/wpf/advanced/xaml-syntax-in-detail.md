@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 66158d14b7686f520260cd24fbf6c1b0e7dda1d4
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364103"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400781"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題定義用來描述 XAML 語法元素的詞彙。 本檔的其餘部分會經常使用這些詞彙, 這兩者都是針對 WPF 檔, 特別是針對使用 XAML 的其他架構, 或是在 .xaml 層級由 XAML 語言支援啟用的基本 XAML 概念。 本主題將針對[XAML 總覽 (WPF)](xaml-overview-wpf.md)主題中引進的基本術語進行擴充。  
@@ -47,7 +47,7 @@ ms.locfileid: "68364103"
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML 和 CLR  
- XAML 是一種標記語言。 , [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]其名稱所隱含的會啟用執行時間執行。 XAML 本身不是 CLR 執行時間直接取用的其中一個通用語言。 取而代之的是, 您可以將 XAML 視為支援它自己的型別系統。 WPF 使用的特定 XAML 剖析系統建基於 CLR 和 CLR 型別系統。 XAML 類型會對應至 CLR 類型, 以在剖析 WPF 的 XAML 時具現化運行時程表示。 基於這個理由, 本檔中語法討論的其餘部分將包含 CLR 型別系統的參考, 即使 XAML 語言規格中的對等語法討論不是如此。 (根據 XAML 語言規格層級, XAML 類型可以對應到任何其他類型系統, 這不一定是 CLR, 但這需要建立和使用不同的 XAML 剖析器)。  
+ XAML 是一種標記語言。 Common language runtime (CLR) (如其名稱所隱含) 可啟用執行時間執行。 XAML 本身不是 CLR 執行時間直接取用的其中一個通用語言。 取而代之的是, 您可以將 XAML 視為支援它自己的型別系統。 WPF 使用的特定 XAML 剖析系統建基於 CLR 和 CLR 型別系統。 XAML 類型會對應至 CLR 類型, 以在剖析 WPF 的 XAML 時具現化運行時程表示。 基於這個理由, 本檔中語法討論的其餘部分將包含 CLR 型別系統的參考, 即使 XAML 語言規格中的對等語法討論不是如此。 (根據 XAML 語言規格層級, XAML 類型可以對應到任何其他類型系統, 這不一定是 CLR, 但這需要建立和使用不同的 XAML 剖析器)。  
   
 #### <a name="members-of-types-and-class-inheritance"></a>類型和類別繼承的成員  
  當做[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]類型的 XAML 成員出現的屬性和事件, 通常會繼承自基底類型。 例如, 請考慮下列範例: `<Button Background="Blue" .../>`。 如果您要查看類別定義、反映結果或<xref:System.Windows.Controls.Button>檔,屬性在類別上不是立即宣告的屬性。<xref:System.Windows.Controls.Control.Background%2A> 相反地<xref:System.Windows.Controls.Control.Background%2A> , 是繼承自基類<xref:System.Windows.Controls.Control> 。  
@@ -130,7 +130,7 @@ ms.locfileid: "68364103"
   
  您也可以使用*typeName*, 從任何可透過預設命名空間存取的物件來命名任何事件。*事件*的部分限定名稱;此語法支援附加路由事件的處理常式, 其中處理常式是用來處理從子專案路由的事件, 但父項目在其 members 資料表中也不會有該事件。 此語法類似附加事件語法, 但此處的事件不是真正的附加事件。 相反地, 您會參考具有限定名稱的事件。 如需詳細資訊, 請參閱[路由事件總覽](routed-events-overview.md)。  
   
- 在某些情況下, 有時會提供屬性名稱做為屬性的值, 而不是屬性名稱。 該屬性名稱也可以包含限定詞, 例如以 [類型名稱] 格式指定  的屬性。*dependencyPropertyName*。 這種情況在 XAML 中撰寫樣式或範本時很常見。 當做屬性值提供之屬性名稱的處理規則會不同, 而且是由所設定的屬性類型或特定 WPF 子系統的行為所控制。 如需詳細資訊, 請參閱設定[樣式和範本](../controls/styling-and-templating.md)。  
+ 在某些情況下, 有時會提供屬性名稱做為屬性的值, 而不是屬性名稱。 該屬性名稱也可以包含限定詞, 例如以 [類型名稱] 格式指定的屬性。*dependencyPropertyName*。 這種情況在 XAML 中撰寫樣式或範本時很常見。 當做屬性值提供之屬性名稱的處理規則會不同, 而且是由所設定的屬性類型或特定 WPF 子系統的行為所控制。 如需詳細資訊, 請參閱設定[樣式和範本](../controls/styling-and-templating.md)。  
   
  屬性名稱的另一個用法是當屬性值描述屬性屬性關聯性時。 這項功能是用於資料系結和分鏡腳本目標, 而且是由<xref:System.Windows.PropertyPath>類別和其類型轉換器所啟用。 如需查閱語義的更完整描述, 請參閱[PROPERTYPATH XAML 語法](propertypath-xaml-syntax.md)。  
   
@@ -270,7 +270,7 @@ ms.locfileid: "68364103"
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>附加事件  
- 附加事件是 XAML 中引進的另一種程式設計概念, 其中事件可以由特定類型定義, 但處理常式可以附加至任何物件元素。 在 WOF 的執行中, 定義附加事件的類型通常是定義服務的靜態類型, 有時這些附加事件是由公開服務之類型中的路由事件別名所公開。 附加事件的處理常式是透過屬性語法來指定。 如同附加事件, 已針對附加事件展開屬性語法以允許*typeName*。  事件名稱的用法, 其中*typeName*是提供`Add`和  `Remove`附加事件基礎結構之事件處理常式存取子的類別, 而引發者則是事件名稱。  
+ 附加事件是 XAML 中引進的另一種程式設計概念, 其中事件可以由特定類型定義, 但處理常式可以附加至任何物件元素。 在 WOF 的執行中, 定義附加事件的類型通常是定義服務的靜態類型, 有時這些附加事件是由公開服務之類型中的路由事件別名所公開。 附加事件的處理常式是透過屬性語法來指定。 如同附加事件, 已針對附加事件展開屬性語法以允許*typeName*。事件名稱的用法, 其中*typeName*是提供`Add`和 `Remove`附加事件基礎結構之事件處理常式存取子的類別, 而引發者則是事件名稱。  
   
 <a name="anatomy_of_a_xaml_page_root_element"></a>   
 ## <a name="anatomy-of-a-xaml-root-element"></a>XAML 根項目的剖析  
