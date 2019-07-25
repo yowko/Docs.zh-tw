@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400681"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434080"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自動化控制項模式概觀
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "68400681"
   
 - 屬性和事件提供控制項模式功能以及控制項狀態的相關資訊。  
   
- 控制項模式與 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 相關聯，如同介面與 [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] 物件相關聯。 在 [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]，您可以查詢物件以詢問支援哪個介面，然後使用這些介面來存取功能。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，使用者介面自動化用戶端可以詢問控制項支援何種控制項模式，然後透過支援的控制項模式所公開的屬性、方法、事件和結構與其互動。 例如，對於多行編輯方塊，使用者介面自動化提供者可實作 <xref:System.Windows.Automation.Provider.IScrollProvider>。 當用戶端知道 <xref:System.Windows.Automation.AutomationElement> 支援 <xref:System.Windows.Automation.ScrollPattern> 控制項模式時，它便可以使用該控制項模式所公開的屬性、方法和事件來操作控制項，或存取此控制項的相關資訊。  
+ 控制項模式[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]與與元件物件模型 (COM) 物件相關聯的 as 介面。 在 COM 中, 您可以查詢物件來詢問它支援哪些介面, 然後使用這些介面來存取功能。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，使用者介面自動化用戶端可以詢問控制項支援何種控制項模式，然後透過支援的控制項模式所公開的屬性、方法、事件和結構與其互動。 例如，對於多行編輯方塊，使用者介面自動化提供者可實作 <xref:System.Windows.Automation.Provider.IScrollProvider>。 當用戶端知道 <xref:System.Windows.Automation.AutomationElement> 支援 <xref:System.Windows.Automation.ScrollPattern> 控制項模式時，它便可以使用該控制項模式所公開的屬性、方法和事件來操作控制項，或存取此控制項的相關資訊。  
   
 <a name="uiautomation_control_pattern_client_provider"></a>   
 ## <a name="ui-automation-providers-and-clients"></a>使用者介面自動化提供者和用戶端  
@@ -51,7 +51,7 @@ ms.locfileid: "68400681"
 ## <a name="control-pattern-classes-and-interfaces"></a>控制項模式類別和介面  
  下表描述 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制模式。 這個表格也列出使用者介面自動化用戶端用來存取控制模式的類別，以及使用者介面自動化提供者用來實作這些類別的介面。  
   
-|控制項模式類別|提供者介面|說明|  
+|控制項模式類別|提供者介面|描述|  
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|用於可停駐在停駐容器中的控制項。 例如工具列或工具板。|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|用於可展開或摺疊的控制項。 例如，應用程式中的功能表項目，像是 [檔案]  功能表。|  

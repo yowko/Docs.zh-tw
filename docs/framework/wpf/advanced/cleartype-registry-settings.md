@@ -5,61 +5,61 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db7d6ec5663d657969e1508bd0b9f62c25e491b0
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051376"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484682"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 登錄設定
-本主題概述[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]所使用的登錄設定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
+本主題提供[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式所[!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]使用之登錄設定的總覽。  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技術概觀  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 呈現文字至顯示裝置使用的應用程式[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]特性可提供增強的閱讀體驗。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 軟體技術是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 所開發，此技術改善了現有 LCD (液晶顯示器) 上的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的運作方式是存取 LCD 螢幕中每個像素的個別垂直色帶項目。 如需詳細資訊[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，請參閱 < [ClearType 概觀](cleartype-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]將文字呈現到顯示裝置的應用程式會使用 ClearType 功能來提供增強的閱讀體驗。 ClearType 是由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]所開發的軟體技術, 可改善現有 lcd (液晶顯示器) 的文字可讀性, 例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 ClearType 的運作方式是存取 LCD 螢幕每個圖元內的個別垂直色彩 stripe 元素。 如需 ClearType 的詳細資訊, 請參閱[Cleartype 總覽](cleartype-overview.md)。  
   
- 使用呈現的文字[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]可以出現在不同的顯示裝置上檢視時的明顯不同。 例如，少數監視器實作色帶項目以藍色、 綠色、 紅色的順序，而不是較常見的紅色、 綠色、 藍色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 順序。  
+ 在各種顯示裝置上觀看時, 以 ClearType 轉譯的文字會明顯不同。 例如, 少數監視器會以藍色、綠色、紅色順序來執行彩色 stripe 元素, 而不是較常見的紅色、綠色、藍色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 順序。  
   
- 使用呈現的文字[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]也會出現大不相同，每個人使用不同的層級的色彩敏感度檢視時。 有些人比其他人更能感知色彩的細微差異。  
+ 以 ClearType 轉譯的文字在以色彩敏感度層級不同的個人觀看時, 也會明顯不同。 有些人比其他人更能感知色彩的細微差異。  
   
- 在這些情況下，[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]需要修改以提供最佳的閱讀經驗，為每個個別的功能。  
+ 在上述每一種情況下, 都需要修改 ClearType 功能, 才能為每個人提供最佳的閱讀體驗。  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>登錄設定  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 指定四個登錄設定來控制[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]指定用來控制 ClearType 功能的四個登錄設定:  
   
 |設定|描述|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 層級|描述的層級[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]色彩清晰度。|  
+|ClearType 層級|描述 ClearType 色彩清晰度的層級。|  
 |色差補正層級|說明顯示裝置的像素色彩元件層級。|  
 |像素結構|說明顯示裝置的像素排列。|  
 |文字對比層級|說明顯示文字的對比層級。|  
   
- 這些設定可由知道如何參考識別之外部組態公用程式存取[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]登錄設定。 您也可以使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 登錄編輯程式直接存取這些值來建立或修改這些設定。  
+ 這些設定可由外部設定公用程式存取, 知道如何參考已識別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的 ClearType 登錄設定。 您也可以使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 登錄編輯程式直接存取這些值來建立或修改這些設定。  
   
- 如果[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]登錄設定不設定 （也就是預設狀態），[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式查詢[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]系統字型平滑化設定的參數資訊。  
+ 如果未設定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ClearType 登錄設定 (這是預設狀態), 應用程式會查詢系統參數資訊中的字型平滑設定。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
 > [!NOTE]
->  如需列舉顯示裝置名稱的詳細資訊，請參閱`SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式。  
+>  如需列舉顯示裝置名稱的詳細資訊, `SystemParametersInfo`請參閱[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式。  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType 層級  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]層級可讓您調整文字的色彩敏感度和接受度個人為基礎的轉譯。 對某些人而言轉譯的文字，會使用[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]以最高層級不會產生最佳的閱讀體驗。  
+ ClearType 層級可讓您根據個人的色彩敏感度和認知, 調整文字的呈現。 對於某些人來說, 在其最高層級使用 ClearType 的文字轉譯, 並不會產生最佳的閱讀體驗。  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]層級是範圍從 0 到 100 的整數值。 預設層級為 100，這表示[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]使用色帶項目顯示裝置的最大功能。 不過，[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]層級為 0 會轉譯成灰階文字。 藉由設定[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]層級 0 與 100 之間的某處，您可以建立適合個人的色彩敏感度的中間層級。  
+ ClearType 層級是一個整數值, 範圍介於0到100之間。 預設層級為 100, 表示 ClearType 會使用顯示裝置的色彩 stripe 元素的最大功能。 不過, ClearType 層級0會將文字呈現為灰色尺規。 藉由將 ClearType 層級設定為0到100之間的某個位置, 您可以建立適合個人色彩敏感度的中繼層級。  
   
 ### <a name="registry-setting"></a>登錄設定  
- 登錄設定位置[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]等級會對應到特定顯示裝置名稱的個別使用者設定：  
+ ClearType 層級的登錄設定位置是對應到特定顯示裝置名稱的個別使用者設定:  
   
  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- 每個顯示裝置名稱的使用者，`ClearTypeLevel`定義 DWORD 值。 下列螢幕擷取畫面顯示的 登錄編輯程式設定[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]層級。  
+ 針對使用者的每個顯示裝置名稱, `ClearTypeLevel`會定義 DWORD 值。 下列螢幕擷取畫面顯示 ClearType 層級的登錄編輯程式設定。  
   
- ![在登錄編輯器中的 ClearType 設定。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
+ ![登錄編輯程式中的 ClearType 設定。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式呈現的文字中包含或不含下列任一種模式的其中一個[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]。 文字時將不會呈現[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，它指以灰階轉譯。  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式會以兩種模式的其中一種來轉譯文字, 而不論是否使用 ClearType。 轉譯不含 ClearType 的文字時, 就稱為「灰階呈現」。  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Gamma 層級  
@@ -72,9 +72,9 @@ ms.locfileid: "62051376"
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- 每個顯示裝置名稱的使用者，`GammaLevel`定義 DWORD 值。 以下的螢幕擷取畫面顯示 Gamma 層級的登錄編輯程式設定。  
+ 針對使用者的每個顯示裝置名稱, `GammaLevel`會定義 DWORD 值。 以下的螢幕擷取畫面顯示 Gamma 層級的登錄編輯程式設定。  
   
- ![ClearType gamma 層級設定在 登錄編輯器](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
+ ![登錄編輯程式中的 ClearType gamma 層級設定](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>像素結構  
@@ -82,23 +82,23 @@ ms.locfileid: "62051376"
   
 |類型|值|描述|  
 |----------|-----------|-----------------|  
-|一般|0|顯示裝置沒有像素結構。 這表示每種色彩光源都平均分布在像素區域，此即為灰階轉譯。 這是標準顯示裝置運作的方式。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 永遠不會套用至轉譯的文字。|  
-|RGB|1|顯示裝置的像素色帶組成順序如下︰紅色、綠色和藍色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 套用至轉譯的文字。|  
-|BGR|2|顯示裝置的像素色帶組成順序如下︰藍色、綠色和紅色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 套用至轉譯的文字。 請注意順序由 RGB 類型反轉的方式。|  
+|一般|0|顯示裝置沒有像素結構。 這表示每種色彩光源都平均分布在像素區域，此即為灰階轉譯。 這是標準顯示裝置運作的方式。 ClearType 永遠不會套用至呈現的文字。|  
+|RGB|1|顯示裝置的像素色帶組成順序如下︰紅色、綠色和藍色。 ClearType 會套用至呈現的文字。|  
+|BGR|2|顯示裝置的像素色帶組成順序如下︰藍色、綠色和紅色。 ClearType 會套用至呈現的文字。 請注意順序由 RGB 類型反轉的方式。|  
   
  像素結構對應至範圍從 0 到 2 的整數值。 預設層級為 0 表示一般的像素結構。  
   
 > [!NOTE]
->  如需列舉顯示裝置名稱的詳細資訊，請參閱`EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式。  
+>  如需列舉顯示裝置名稱的詳細資訊, `EnumDisplayDevices`請參閱[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式。  
   
 ### <a name="registry-setting"></a>登錄設定  
  像素結構的登錄設定位置是對應到特定顯示裝置名稱的本機電腦設定：  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- 每個顯示裝置名稱的使用者，`PixelStructure`定義 DWORD 值。 以下的螢幕擷取畫面顯示像素結構的登錄編輯程式設定。  
+ 針對使用者的每個顯示裝置名稱, `PixelStructure`會定義 DWORD 值。 以下的螢幕擷取畫面顯示像素結構的登錄編輯程式設定。  
   
- ![ClearType gamma 層級設定在 登錄編輯器](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
+ ![登錄編輯程式中的 ClearType gamma 層級設定](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>文字對比層級  
@@ -109,9 +109,9 @@ ms.locfileid: "62051376"
   
  `HKEY_CURRENT_USER\Software\Microsoft\Avalon.Graphics\<displayName>`  
   
- 每個顯示裝置名稱的使用者，`TextContrastLevel`定義 DWORD 值。 下列螢幕擷取畫面顯示文字對比層級的登錄編輯程式設定。  
+ 針對使用者的每個顯示裝置名稱, `TextContrastLevel`會定義 DWORD 值。 下列螢幕擷取畫面顯示文字對比層級的登錄編輯程式設定。  
   
- ![在登錄編輯器中的 ClearType 設定。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
+ ![登錄編輯程式中的 ClearType 設定。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>另請參閱
 
