@@ -43,6 +43,8 @@
               href: keywords/void.md
             - name: var
               href: keywords/var.md
+            - name: 非受控類型
+              href: builtin-types/unmanaged-types.md
             - name: 類型的參考表
               items:
                 - name: 內建類型表
