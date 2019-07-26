@@ -68,12 +68,7 @@
     - name: 處理和擲回例外狀況
       href: standard/exceptions/
     - name: .NET 中的組件
-      href: standard/assembly/index.md
-      items:
-        - name: .NET 組件檔格式
-          href: standard/assembly/file-format.md
-        - name: 作法：使用 .NET Core 中的組件卸載功能及為其偵錯
-          href: standard/assembly/unloadability-howto.md
+      href: standard/assembly/
     - name: 記憶體回收
       href: standard/garbage-collection/
     - name: 泛型類型
