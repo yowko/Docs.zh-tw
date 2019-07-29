@@ -2,12 +2,12 @@
 title: C# 7.3 的新功能
 description: C# 7.3 新功能的概觀
 ms.date: 05/16/2018
-ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: ca53073db1b61300186a483001f79bf0caa79169
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397784"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433516"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 的新功能
 
@@ -129,7 +129,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 您現在可以指定型別 <xref:System.Enum?displayProperty=nameWithType> 或 <xref:System.Delegate?displayProperty=nameWithType> 作為型別參數的基底類別限制式。
 
-您也可以使用新的 `unmanaged` 限制式指定型別參數必須是**非受控型別**。 **非受控型別**是非參考型別的型別，而且未包含任何巢狀層級的參考型別。
+您也可以使用新的 `unmanaged` 限制式指定型別參數必須是[非受控型別](../language-reference/builtin-types/unmanaged-types.md)。
 
 如需詳細資訊，請參閱有關 [`where` 泛型限制式](../language-reference/keywords/where-generic-type-constraint.md)和[型別參數的限制式](../programming-guide/generics/constraints-on-type-parameters.md)的文章。
 

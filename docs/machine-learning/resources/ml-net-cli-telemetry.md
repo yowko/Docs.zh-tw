@@ -4,16 +4,16 @@ description: 了解 ML.NET CLI 遙測特性，它會收集用於分析、要收�
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053581"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433786"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>依 ML.NET CLI 排列的遙測集合
 
-[ML.NET CLI](http://aka.ms/mlnet-cli) 包含遙測特性，會收集彙總供 Microsoft 使用的匿名使用資料。
+[ML.NET CLI](https://aka.ms/mlnet-cli) 包含遙測特性，會收集彙總供 Microsoft 使用的匿名使用資料。
 
 ## <a name="how-microsoft-uses-the-data"></a>Microsoft 如何使用資料
 
@@ -25,12 +25,12 @@ ms.locfileid: "66053581"
 
 `mlnet` 命令會啟動 ML.NET CLI，但命令本身不會收集遙測。
 
-當您執行 `mlnet` 命令不附加任何其他命令時，「不啟用」遙測。 例如：
+當您執行 `mlnet` 命令不附加任何其他命令時，「不啟用」  遙測。 例如：
 
 - `mlnet`
 - `mlnet --help`
 
-當您執行 [ML.NET CLI 命令](../reference/ml-net-cli-reference.md)時，例如 `mlnet auto-train`，會「啟用」遙測。
+當您執行 [ML.NET CLI 命令](../reference/ml-net-cli-reference.md)時，例如 `mlnet auto-train`，會「啟用」  遙測。
 
 ## <a name="opt-out-of-data-collection"></a>選擇不使用資料收集
 
@@ -57,7 +57,7 @@ ms.locfileid: "66053581"
 資料會使用 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 技術安全傳送至 Microsoft 伺服器、保留在限制存取權下，並在安全 [Azure 儲存體](https://azure.microsoft.com/services/storage/)系統的嚴格安全性控制項下使用。
 
 ### <a name="data-points-not-collected"></a>未收集資料點
-遙測特性「不」收集：
+遙測特性「不」  收集：
 - 個人資料，例如使用者姓名
 - 資料集檔案名稱
 - 來自資料集檔案的資料
