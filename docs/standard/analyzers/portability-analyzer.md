@@ -4,12 +4,12 @@ description: 了解如何使用.NET Portability Analyzer 工具來評估程式�
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331738"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433943"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -29,7 +29,7 @@ ms.locfileid: "68331738"
 
 ![可攜性螢幕擷取畫面](./media/portability-analyzer/portability-screenshot.png)
 
-您也可以使用 ApiPort 主控台應用程式，可從 [ApiPort 存放庫](http://aka.ms/apiportdownload)下載。 您可以使用 `listTargets` 命令選項來顯示可用的目標清單，然後指定 `-t` 或 `--target` 命令選項來挑選目標平台。 
+您也可以使用 ApiPort 主控台應用程式，可從 [ApiPort 存放庫](https://aka.ms/apiportdownload)下載。 您可以使用 `listTargets` 命令選項來顯示可用的目標清單，然後指定 `-t` 或 `--target` 命令選項來挑選目標平台。 
 
 ### <a name="analyze-portability"></a>分析可攜性
 若要在 Visual Studio 中分析整個專案，在 [方案總管]  中以滑鼠右鍵按一下您的專案，然後選取 [分析組件可攜性]  。 否則，請移至 [分析]  功能表，然後選取 [Analyze Assembly Portability] (分析組件可攜性)  。 從這裡選取專案的可執行檔或 DLL。
