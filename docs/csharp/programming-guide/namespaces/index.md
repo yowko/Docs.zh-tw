@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 893ac7bbfcfe159787789238c3142f34ac7ecf35
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423296"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629528"
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空間 (C# 程式設計手冊)
 
@@ -54,4 +54,4 @@ C# 程式設計大量使用命名空間的原因有兩個。 首先，.NET Frame
 - [如何：使用 My 命名空間](how-to-use-the-my-namespace.md)
 - [識別碼名稱](../inside-a-program/identifier-names.md)
 - [using 指示詞](../../language-reference/keywords/using-directive.md)
-- [::運算子](../../language-reference/operators/namespace-alias-qualifer.md)
+- [::運算子](../../language-reference/operators/namespace-alias-qualifier.md)

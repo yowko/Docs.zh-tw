@@ -5,16 +5,16 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 5c7e3aca0a473abb831693244d1b194985f2ef7f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 9885f666e68b795b9b6aba9cf31f9750e30fd170
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342202"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512275"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>作法：將 WPF 傳統型應用程式移植到 .NET Core
 
-此文章說明如何將 Windows Presentation Foundation (WPF) 傳統型應用程式從 .NET Framework 移植到 .NET Core 3.0。 .NET Core 3.0 SDK 支援 WPF 應用程式。 WPF 仍然是僅限 Windows 的架構，只能在 Windows 上執行。 此範例使用 .NET Core SDK CLI 來建立和管理您的專案。
+本文說明如何將 Windows Presentation Foundation (WPF) 傳統型應用程式從 .NET Framework 移植到 .NET Core 3.0。 .NET Core 3.0 SDK 支援 WPF 應用程式。 WPF 仍然是僅限 Windows 的架構，只能在 Windows 上執行。 本範例使用 .NET Core SDK CLI 來建立和管理您的專案。
 
 在此文章中，各種不同的名稱會用來識別用於移轉的檔案類型。 在移轉您的專案時，您的檔案會有不同的名稱，因此請在心裡將它們與下面所列的項目進行比對：
 
@@ -25,7 +25,10 @@ ms.locfileid: "59342202"
 | **MyWPFCore.csproj** | 您所建立的新 .NET Core 專案的名稱。 |
 | **MyAppCore.exe** | .NET Core WPF 應用程式可執行檔。 |
 
-## <a name="prerequisites"></a>先決條件
+>[!IMPORTANT]
+>雖然本文使用 C# 作為目標語言，相同的步驟仍然適用於 VB.NET，唯一的不同在於 VB.NET 使用 *.vbproj* 和 *.vb* 檔案，而非 *.csproj* 和 *.cs* 檔案。
+
+## <a name="prerequisites"></a>必要條件
 
 - 適用於您想要執行之任何設計工具工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 
@@ -34,11 +37,10 @@ ms.locfileid: "59342202"
   - .NET 跨平台開發
 
 - 在解決方案中運作的 WPF 專案，可以毫無問題地建置並執行。
-- 您的專案必須以 C# 進行編碼。 
 - 安裝最新的 [.NET Core 3.0](https://aka.ms/netcore3download) 預覽。
 
 >[!NOTE]
->**Visual Studio 2017** 不支援 .NET Core 3.0 專案。 **Visual Studio 2019** 支援 .NET Core 3.0 專案，但尚不支援 .NET Core 3.0 WPF 專案的視覺化設計工具。 若要使用視覺化設計工具，您的解決方案中必須具有 .NET WPF project 專案，該專案與 .NET Core 專案共用其檔案。
+>**Visual Studio 2017** 不支援 .NET Core 3.0 專案。 **Visual Studio 2019** 支援 .NET Core 3.0 專案，但針對 .NET Core WPF 視覺化設計工具僅具有有限的支援。 若要使用完整受到支援的視覺化設計工具，您在您的解決方案中必須擁有 .NET Framework WPF 專案，且該專案必須和 .NET Core 專案共用其檔案。
 
 ### <a name="consider"></a>Consider
 
@@ -52,9 +54,9 @@ ms.locfileid: "59342202"
 
     當 .NET Core 3.0 Preview 1 發佈時，WPF 在 GitHub 上會開放原始碼。 .NET Core WPF 的程式碼是 .NET Framework WPF 程式碼基底的分支。 很可能存在一些差異，而您的應用程式將無法移植。
 
-01. [Windows 相容性套件][compat-pack]可能有助於您移轉。
+01. [Windows 相容性套件][compat-pack]可能可以協助您進行遷移。
 
-    .NET Core 3.0 中不提供 .NET Framework 中提供的某些 API。 [Windows 相容性套件][compat-pack]新增了許多這些 API，可能有助於您的 WPF 應用程式與 .NET Core 相容。
+    .NET Core 3.0 中不提供 .NET Framework 中提供的某些 API。 [Windows 相容性套件][compat-pack]新增了許多 API，並且可能可以協助您的 WPF 應用程式，使其與 .NET Core 相容。
 
 01. 更新專案所使用的 NuGet 套件。
 
@@ -183,7 +185,7 @@ dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 
 將 .NET Framework 專案參考的每個 NuGet 套件新增至 .NET Core 專案。 
 
-很可能您的 .NET Framework WPF 應用程式有一個 **packages.config** 檔案，其中包含您的專案所參考的 NuGet 套件的清單。 您可以查看這份清單以判斷要新增至 .NET Core 專案的 NuGet 套件。 例如，如果 .NET Framework 專案參考 `MahApps.Metro` NuGet 套件，則使用 Visual Studio 將其新增至專案。 您也可以使用 .NET Core CLI，從 **SolutionFolder** 目錄新增套件參考：
+很可能您的 .NET Framework WPF 應用程式有一個 **packages.config** 檔案，其中包含您的專案所參考的 NuGet 套件的清單。 您可以查看這份清單以判斷要新增至 .NET Core 專案的 NuGet 套件。 例如，如果 .NET Framework 專案參考 `MahApps.Metro` NuGet 封裝，則使用 Visual Studio 將其新增至專案。 您也可以使用 .NET Core CLI，從 **SolutionFolder** 目錄新增封裝參考：
 
 ```cli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0262
@@ -199,7 +201,7 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0
 
 ## <a name="problems-compiling"></a>編譯的問題
 
-如果您在編譯專案時遇到問題，則您可能正在使用 .NET Framework 中提供但不適用於 .NET Core 的一些僅限 Windows 的 API。 您可以嘗試將 [Windows 相容性套件][compat-pack] NuGet 套件加入您的專案。 此套件只能在 Windows 上執行，並為 .NET Core 和 .NET Standard 專案新增了大約 20,000 個 Windows API。
+如果您在編譯專案時遇到問題，則您可能正在使用 .NET Framework 中提供但不適用於 .NET Core 的一些僅限 Windows 的 API。 您可以嘗試將 [Windows 相容性套件][compat-pack] NuGet 套件新增到您的專案。 此套件只能在 Windows 上執行，並為 .NET Core 和 .NET Standard 專案新增了大約 20,000 個 Windows API。
 
 ```cli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibility
@@ -218,10 +220,10 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibili
 如此文章所述，Visual Studio 2019 僅支援 .NET Framework 專案中的 WPF 設計工具。 藉由建立並排.NET Core 專案，您可以在使用 .NET Framework 專案設計表單時，同時使用 .NET Core 測試您的專案。 您的方案檔包含 .NET Framework 和 .NET Core 專案。 在 .NET Framework 專案中新增和設計您的表單和控制項，且根據我們新增至 .NET Core 專案的檔案 Glob 模式，任何新的或已變更的檔案將自動包含在 .NET Core 專案中。
 
 一旦 Visual Studio 2019 支援 WPF Form 設計工具，您就可以將 .NET Core 專案檔案的內容複製/貼上到 .NET Framework 專案檔案中。 然後刪除新增了 `<Source>` 和 `<EmbeddedResource>` 項目的檔案 Glob 模式。 修正應用程式所使用之任何專案參考的路徑。 這會有效地將 .NET Framework 專案升級至 .NET Core 專案。
- 
+
 ## <a name="next-steps"></a>後續步驟
 
-* 深入了解 [Windows 相容性套件][compat-pack]。
-* 觀看[有關移植](https://www.youtube.com/watch?v=5MomsgkWkVw&list=PLS__JrkRveTMiWxG-Lv4cBwYfMQ6m2gmt) .NET Framework WPF 專案到 .NET Core 的影片。
+- 深入了解 [Windows 相容性套件][compat-pack]。
+- 觀看[有關移植](https://www.youtube.com/watch?v=5MomsgkWkVw&list=PLS__JrkRveTMiWxG-Lv4cBwYfMQ6m2gmt) .NET Framework WPF 專案到 .NET Core 的影片。
 
 [compat-pack]: windows-compat-pack.md

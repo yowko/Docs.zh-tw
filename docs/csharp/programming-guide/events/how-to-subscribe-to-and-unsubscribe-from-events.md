@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 365ea55a112a4a04964a8271f2f7e5591a3b0d5d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 777eb3be5cbefe0a136bf49f826ad67685a8456d
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301035"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401073"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>作法：訂閱及取消訂閱事件 (C# 程式設計手冊)
 如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。 例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>使用 Visual Studio IDE 訂閱事件  
   
-1. 如果看不到 [屬性] 視窗，請在 [設計] 檢視中，以滑鼠右鍵按一下您要建立事件處理常式的表單或控制項，然後選取 [屬性]。  
+1. 如果看不到 [屬性]  視窗，請在 [設計]  檢視中，以滑鼠右鍵按一下您要建立事件處理常式的表單或控制項，然後選取 [屬性]  。  
   
-2. 在 [屬性] 視窗頂端，按一下**事件**圖示。  
+2. 在 [屬性]  視窗頂端，按一下**事件**圖示。  
   
 3. 按兩下您要建立的事件，例如 `Load` 事件。  
   
-     Visual C# 會建立空的事件處理常式方法，並將其新增至您的程式碼。 您也可以在 [程式碼] 檢視中手動新增程式碼。 例如，下列程式碼行會宣告一個事件處理常式方法，該方法將會在 `Form` 類別引發 `Load` 事件時呼叫。  
+     Visual C# 會建立空的事件處理常式方法，並將其新增至您的程式碼。 您也可以在 [程式碼]  檢視中手動新增程式碼。 例如，下列程式碼行會宣告一個事件處理常式方法，該方法將會在 `Form` 類別引發 `Load` 事件時呼叫。  
   
      [!code-csharp[csProgGuideEvents#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#11)]  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66301035"
     }  
     ```  
   
-2. 使用加法指派運算子 (`+=`) 將事件處理常式附加至事件。 在下列範例中，假設名為 `publisher` 的物件具有名為 `RaiseCustomEvent` 的事件。 請注意，subscriber 類別需要參考 publisher 類別，才能訂閱其事件。  
+2. 請使用加法指派運算子 (`+=`) 來將事件處理常式附加到事件。 在下列範例中，假設名為 `publisher` 的物件具有名為 `RaiseCustomEvent` 的事件。 請注意，subscriber 類別需要參考 publisher 類別，才能訂閱其事件。  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
@@ -58,19 +58,18 @@ ms.locfileid: "66301035"
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     您也可以使用 Lambda 運算式新增事件處理常式：  
+     您也可以使用 [lambda 運算式](../statements-expressions-operators/lambda-expressions.md)來指定事件處理常式：
   
     ```csharp
     public Form1()  
     {  
         InitializeComponent();  
-        // Use a lambda expression to define an event handler.  
-        this.Click += (s,e) => { MessageBox.Show(  
-           ((MouseEventArgs)e).Location.ToString());};  
+        this.Click += (s,e) =>
+            {
+                MessageBox.Show(((MouseEventArgs)e).Location.ToString());
+            };
     }  
     ```  
-  
-     如需詳細資訊，請參閱[如何：在 LINQ 之外使用 Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>使用匿名方法訂閱事件  
   

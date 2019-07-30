@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 88e2b93fda786db15b3a3a693bdb9293ed31df4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d3c87f0e71095bbcc7c5a1d64b026e92838a6306
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833213"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433759"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 陳述式 (C# 參考)
 
@@ -26,7 +26,7 @@ ms.locfileid: "66833213"
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-從 C# 7.3 開始，`fixed` 陳述式對陣列、字串、固定大小緩衝區或非受控變數以外的其他型別進行操作。 針對名稱為 `GetPinnableReference` 的方法，可以將任何實作方法的型別加以固定。 `GetPinnableReference` 必須將 `ref` 變數傳回到非受控型別。 請參閱[指標型別](../../programming-guide/unsafe-code-pointers/pointer-types.md)主題，以取得詳細資訊。 .NET Core 2.0 中引入的 .NET 型別 <xref:System.Span%601?displayProperty=nameWithType> 和 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 使用此模式，而且可以加以固定。 下列範例會顯示這一點：
+從 C# 7.3 開始，`fixed` 陳述式對陣列、字串、固定大小緩衝區或 unmanaged 變數以外的其它型別都可運作。 針對名稱為 `GetPinnableReference` 的方法，可以將任何實作方法的型別加以固定。 `GetPinnableReference` 必須傳回 [unmanaged 型別](../builtin-types/unmanaged-types.md)的 `ref` 變數。 .NET Core 2.0 中引入的 .NET 型別 <xref:System.Span%601?displayProperty=nameWithType> 和 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 使用此模式，而且可以加以固定。 下列範例會顯示這一點：
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
@@ -75,4 +75,5 @@ fixed (byte* ps = srcarray, pd = dstarray)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [Unsafe.DangerousAPI](unsafe.md)
+- [指標型別](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [固定大小的緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

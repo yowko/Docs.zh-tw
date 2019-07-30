@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: f09f93f27aa4f50cfb7e09b9d6d4f98f22e1ac9a
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423534"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433561"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
@@ -22,7 +22,7 @@ ms.locfileid: "66423534"
 |----------------|-----------------|
 |`where T : struct`|型別引數必須是實值型別。 您可以指定 <xref:System.Nullable%601> 以外的任何實值型別。 如需可為 Null 型別的詳細資訊，請參閱[可為 Null 的型別](../nullable-types/index.md)。|
 |`where T : class`|型別引數必須是參考型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。|
-|`where T : unmanaged`|型別引數不得是參考型別，也不得包含任何巢狀層級的任何參考型別成員。|
+|`where T : unmanaged`|型別引數必須是 [unmanaged 型別](../../language-reference/builtin-types/unmanaged-types.md)。|
 |`where T : new()`|型別引數必須有公用無參數建構函式。 與其他條件約束搭配使用時，`new()` 條件約束必須是最後一個指定的。|
 |`where T :` *\<基底類別名稱>*|型別引數必須是或衍生自指定的基底類別。|
 |`where T :` *\<介面名稱>*|型別引數必須是或實作指定的介面。 您可以指定多個介面條件約束。 條件約束介面也是泛型。|
@@ -78,7 +78,7 @@ ms.locfileid: "66423534"
 
 ## <a name="unmanaged-constraint"></a>非受控條件約束
 
-從 C# 7.3 開始，您可以使用 `unmanaged` 條件約束指定型別參數必須是「非受控型別」  。 「非受控型別」  是非參考型別的型別，而且未包含任何巢狀層級的參考型別欄位。 `unmanaged` 條件約束可讓您撰寫可重複使用的常式來使用型別，而型別可以操作為記憶體區塊，如下列範例所示：
+從 C# 7.3 開始，您可以使用 `unmanaged` 條件約束指定型別參數必須是[非受控型別](../../language-reference/builtin-types/unmanaged-types.md)。 `unmanaged` 條件約束可讓您撰寫可重複使用的常式來使用型別，而型別可以操作為記憶體區塊，如下列範例所示：
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 

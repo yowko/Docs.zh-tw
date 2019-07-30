@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: bb491ef93f0f2da89f0101d10e2cf3d158962850
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: abd4c34661d96d8c3188e92dd2d76f847e17aae7
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423303"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433527"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空間 (C# 程式設計手冊)
 C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framework 類別會使用命名空間來組織其多種類別。 其次，宣告您自己的命名空間，有助於在較大型的程式設計專案中控制類別和方法名稱的範圍。  
@@ -84,7 +84,7 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
  [!code-csharp[csProgGuideNamespaces#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#15)]  
   
- 這會適用，但是如果後續引進名為 `Alias` 的類型，`Alias.` 會改為繫結至該類型。 使用 `Alias::Exception` 確保 `Alias` 視為命名空間別名，而不要被誤認為類型。  
+ 這會適用，但是如果後續引進名為 `Alias` 的類型，`Alias.` 會改為繫結至該類型。 使用 `Alias::Exception` 來確保將 `Alias` 視為命名空間別名，而非型別。  
   
  請參閱主題[如何：使用全域命名空間別名](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)，以取得 `global` 別名的詳細資訊。  
   

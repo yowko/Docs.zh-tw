@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: d7c5946f5df8a94bf8b54c10f33234b40338a622
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 5d37f9567570666c280be437aa0472a620a16c63
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348154"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400399"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>解構元組和其他類型
 
@@ -64,9 +64,9 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-### <a name="deconstructing-user-defined-types"></a>解構使用者定義型別
+## <a name="deconstructing-user-defined-types"></a>解構使用者定義型別
 
-非元組類型不會提供 discard 的內建支援。 不過，身為類別、結構或介面的作者，您可以藉由實作一或多個 `Deconstruct` 方法來解構類型的執行個體。 此方法會傳回 void，而且所要解構的每個值會以方法簽章中的 [out](language-reference/keywords/out-parameter-modifier.md) 參數表示。 例如，`Person` 類別的下列 `Deconstruct` 方法會傳回名字、中間名和姓氏：
+C# 不提供解構非 Tuple 型別的內建支援。 不過，身為類別、結構或介面的作者，您可以藉由實作一或多個 `Deconstruct` 方法來解構類型的執行個體。 此方法會傳回 void，而且所要解構的每個值會以方法簽章中的 [out](language-reference/keywords/out-parameter-modifier.md) 參數表示。 例如，`Person` 類別的下列 `Deconstruct` 方法會傳回名字、中間名和姓氏：
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 

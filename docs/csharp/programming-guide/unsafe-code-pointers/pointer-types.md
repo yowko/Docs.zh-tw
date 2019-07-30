@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 704af9aae23571abdb82ae851066e3c03dbe7161
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661075"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433551"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 
@@ -21,16 +21,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-在指標型別中的 `*` 之前指定的型別稱為**參考型別**。 下列任一種型別都可能是參考型別：
-
-- 任何整數類型：[sbyte](../../language-reference/builtin-types/integral-numeric-types.md)、[byte](../../language-reference/builtin-types/integral-numeric-types.md)、[short](../../language-reference/builtin-types/integral-numeric-types.md)、[ushort](../../language-reference/builtin-types/integral-numeric-types.md)、[int](../../language-reference/builtin-types/integral-numeric-types.md)、[uint](../../language-reference/builtin-types/integral-numeric-types.md)、[long](../../language-reference/builtin-types/integral-numeric-types.md)、[ulong](../../language-reference/builtin-types/integral-numeric-types.md)。
-- 任何浮點類型：[float](../../language-reference/builtin-types/floating-point-numeric-types.md)、[double](../../language-reference/builtin-types/floating-point-numeric-types.md)。
-- [char](../../language-reference/keywords/char.md)。
-- [bool](../../language-reference/keywords/bool.md)。
-- [decimal](../../language-reference/builtin-types/floating-point-numeric-types.md)。
-- 任何 [enum](../../language-reference/keywords/enum.md) 型別。
-- 任何指標類型。 這允許使用運算式，例如 `void**`。
-- 任何只包含 Unmanaged 類型欄位的使用者定義結構類型。
+在指標型別中的 `*` 之前指定的型別稱為**參考型別**。 只有 [unmanaged 型別](../../language-reference/builtin-types/unmanaged-types.md)才可以是參考型別。
 
 指標型別不會從 [object](../../language-reference/keywords/object.md) 繼承，而且指標型別與 `object` 之間無法進行轉換。 此外，boxing 和 unboxing 不支援指標。 不過，不同的指標類型之間以及指標類型與整數類資料類型之間可以進行轉換。
 
