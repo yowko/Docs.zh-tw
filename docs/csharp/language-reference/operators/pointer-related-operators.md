@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401436"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512359"
 ---
 # <a name="pointer-related-operators-c-reference"></a>指標相關運算子 (C# 參考)
 
@@ -124,7 +124,7 @@ x->y
 - `p + n` 和 `n + p` 運算式都會產生因為將 `n * sizeof(T)` 新增到 `p` 指定位址而得到的 `T*` 型別指標。
 - `p - n` 運算式會產生因為從 `p` 指定的位址減去 `n * sizeof(T)` 而得到的 `T*` 型別指標。
 
-[`sizeof` 運算子](../keywords/sizeof.md)取得以位元組為單位的型別大小。
+[`sizeof` 運算子](sizeof.md)取得以位元組為單位的型別大小。
 
 下例示範 `+` 運算子加指標的用法：
 
@@ -193,4 +193,4 @@ x->y
 - [unsafe 關鍵字](../keywords/unsafe.md)
 - [fixed 關鍵字](../keywords/fixed-statement.md)
 - [stackalloc 運算子](stackalloc.md)
-- [sizeof 運算子](../keywords/sizeof.md)
+- [sizeof 運算子](sizeof.md)

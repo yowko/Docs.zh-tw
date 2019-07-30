@@ -1,0 +1,11 @@
+- name: .NET 中的組件
+  href: index.md
+  items:
+    - name: Friend 組件
+      items:
+        - name: 概觀
+          href: friend-assemblies.md
+    - name: .NET 組件檔格式
+      href: file-format.md
+    - name: 如何使用 .NET Core 中的組件卸載功能及對其進行偵錯
+      href: unloadability-howto.md

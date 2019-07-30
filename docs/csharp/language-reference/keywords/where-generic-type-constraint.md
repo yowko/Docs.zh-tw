@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 3982c97bc56b42237700343b2572d1bba930bbbd
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: bccc22f5362b22540dadf08e6b21a07cbc578327
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422770"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433853"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (泛型類型條件約束) (C# 參考)
 
@@ -33,7 +33,7 @@ ms.locfileid: "66422770"
 
 [!code-csharp[using the class and struct constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 子句也可能包含 `unmanaged` 條件約束。 `unmanaged` 條件約束會將型別參數限制為稱為「非受控型別」  的型別。 「非受控型別」  是非參考型別的型別，而且未包含任何巢狀層級的參考型別欄位。 `unmanaged` 條件約束可讓您更輕鬆地使用 C# 撰寫低階 Interop 程式碼。 此條件約束會啟用所有非受控型別的可重複使用常式。 `unmanaged` 條件約束不能與 `class` 或 `struct` 條件約束合併使用。 `unmanaged` 條件約束會強制型別必須是 `struct`：
+`where` 子句也可能包含 `unmanaged` 條件約束。 `unmanaged` 條件約束會將型別參數限制為稱為[「非受控型別」](../builtin-types/unmanaged-types.md)的型別。 `unmanaged` 條件約束可讓您更輕鬆地使用 C# 撰寫低階 Interop 程式碼。 此條件約束會啟用所有非受控型別的可重複使用常式。 `unmanaged` 條件約束不能與 `class` 或 `struct` 條件約束合併使用。 `unmanaged` 條件約束會強制型別必須是 `struct`：
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f053a74fcb87971506b83ca8ca2076517ddddf56
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307097"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433577"
 ---
 # <a name="static-constructors-c-programming-guide"></a>靜態建構函式 (C# 程式設計手冊)
 靜態建構函式用來初始化任何 [static](../../../csharp/language-reference/keywords/static.md) 資料，或執行只需要執行一次的特定動作。 在建立第一個執行個體或參考任何靜態成員之前，會自動進行呼叫。  
@@ -67,4 +67,4 @@ ms.locfileid: "67307097"
 - [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 - [建構函式設計指導方針](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
-- [安全性警告 - CA2121：靜態建構函式應該為私用的](https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
+- [安全性警告 - CA2121：靜態建構函式應該為私用的](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
