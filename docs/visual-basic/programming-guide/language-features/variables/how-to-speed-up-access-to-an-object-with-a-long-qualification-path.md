@@ -1,5 +1,5 @@
 ---
-title: HOW TO：加快存取具有限定性條件長路徑 (Visual Basic) 的物件
+title: 作法：加速存取具有完整限定性路徑的物件 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,52 +8,53 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8e50a2ed04037b48091321dc0c9ac2ea1db35f4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769040"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68631093"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a><span data-ttu-id="95b59-102">HOW TO：加快存取具有限定性條件長路徑 (Visual Basic) 的物件</span><span class="sxs-lookup"><span data-stu-id="95b59-102">How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)</span></span>
-<span data-ttu-id="95b59-103">如果您經常存取的物件需要的一些方法和屬性的限定性條件路徑，您可以加快您的程式碼不重複的限定性條件路徑。</span><span class="sxs-lookup"><span data-stu-id="95b59-103">If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.</span></span>  
-  
- <span data-ttu-id="95b59-104">有兩種方式，您可以避免重複的限定性條件路徑。</span><span class="sxs-lookup"><span data-stu-id="95b59-104">There are two ways you can avoid repeating the qualification path.</span></span> <span data-ttu-id="95b59-105">您可以將物件指派給變數，或將它使用於`With`...`End With`區塊。</span><span class="sxs-lookup"><span data-stu-id="95b59-105">You can assign the object to a variable, or you can use it in a `With`...`End With` block.</span></span>  
-  
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a><span data-ttu-id="95b59-106">若要加快存取大量限定的物件將它指派給變數</span><span class="sxs-lookup"><span data-stu-id="95b59-106">To speed up access to a heavily qualified object by assigning it to a variable</span></span>  
-  
-1. <span data-ttu-id="95b59-107">宣告您經常存取的物件類型的變數。</span><span class="sxs-lookup"><span data-stu-id="95b59-107">Declare a variable of the type of the object that you are accessing frequently.</span></span> <span data-ttu-id="95b59-108">指定限定性條件路徑，在宣告中初始化的一部分。</span><span class="sxs-lookup"><span data-stu-id="95b59-108">Specify the qualification path in the initialization part of the declaration.</span></span>  
-  
-    ```  
-    Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
-    ```  
-  
-2. <span data-ttu-id="95b59-109">您可以使用變數來存取物件的成員。</span><span class="sxs-lookup"><span data-stu-id="95b59-109">Use the variable to access the object's members.</span></span>  
-  
-    ```  
-    ctrlActv.Text = "Test"  
-    ctrlActv.Location = New Point(100, 100)  
-    ctrlActv.Show()  
-    ```  
-  
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a><span data-ttu-id="95b59-110">若要加快存取大量限定的物件使用 With...With...end With 區塊</span><span class="sxs-lookup"><span data-stu-id="95b59-110">To speed up access to a heavily qualified object by using a With...End With block</span></span>  
-  
-1. <span data-ttu-id="95b59-111">限定性條件路徑放入`With`陳述式。</span><span class="sxs-lookup"><span data-stu-id="95b59-111">Put the qualification path in a `With` statement.</span></span>  
-  
-    ```  
-    With someForm.ActiveForm.ActiveControl  
-    ```  
-  
-2. <span data-ttu-id="95b59-112">存取內部物件的成員`With`之前封鎖`End With`陳述式。</span><span class="sxs-lookup"><span data-stu-id="95b59-112">Access the object's members inside the `With` block, before the `End With` statement.</span></span>  
-  
-    ```  
-        .Text = "Test"  
-        .Location = New Point(100, 100)  
-        .Show()  
-    End With  
-    ```  
-  
-## <a name="see-also"></a><span data-ttu-id="95b59-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="95b59-113">See also</span></span>
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a><span data-ttu-id="f58ce-102">HOW TO：加速存取具有完整限定性路徑的物件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f58ce-102">How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)</span></span>
 
-- [<span data-ttu-id="95b59-114">物件變數</span><span class="sxs-lookup"><span data-stu-id="95b59-114">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="95b59-115">With...End With 陳述式</span><span class="sxs-lookup"><span data-stu-id="95b59-115">With...End With Statement</span></span>](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+<span data-ttu-id="f58ce-103">如果您經常存取需要數個方法和屬性之限定性路徑的物件, 您可以藉由不重複限定性路徑來加速程式碼。</span><span class="sxs-lookup"><span data-stu-id="f58ce-103">If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.</span></span>
+
+<span data-ttu-id="f58ce-104">有兩種方式可以避免重複限定性路徑。</span><span class="sxs-lookup"><span data-stu-id="f58ce-104">There are two ways you can avoid repeating the qualification path.</span></span> <span data-ttu-id="f58ce-105">您可以將物件指派給變數, 也可以將它`With`用於 .。。`End With`封鎖。</span><span class="sxs-lookup"><span data-stu-id="f58ce-105">You can assign the object to a variable, or you can use it in a `With`...`End With` block.</span></span>
+
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a><span data-ttu-id="f58ce-106">藉由將非常限定的物件指派給變數來加速其存取</span><span class="sxs-lookup"><span data-stu-id="f58ce-106">To speed up access to a heavily qualified object by assigning it to a variable</span></span>
+
+1. <span data-ttu-id="f58ce-107">宣告您經常存取之物件類型的變數。</span><span class="sxs-lookup"><span data-stu-id="f58ce-107">Declare a variable of the type of the object that you are accessing frequently.</span></span> <span data-ttu-id="f58ce-108">在宣告的初始化部分中指定限定性路徑。</span><span class="sxs-lookup"><span data-stu-id="f58ce-108">Specify the qualification path in the initialization part of the declaration.</span></span>
+
+    ```vb
+    Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl
+    ```
+
+2. <span data-ttu-id="f58ce-109">使用變數來存取物件的成員。</span><span class="sxs-lookup"><span data-stu-id="f58ce-109">Use the variable to access the object's members.</span></span>
+
+    ```vb
+    ctrlActv.Text = "Test"
+    ctrlActv.Location = New Point(100, 100)
+    ctrlActv.Show()
+    ```
+
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a><span data-ttu-id="f58ce-110">若要使用 [...] 來加速存取高度限定的物件結尾為 block</span><span class="sxs-lookup"><span data-stu-id="f58ce-110">To speed up access to a heavily qualified object by using a With...End With block</span></span>
+
+1. <span data-ttu-id="f58ce-111">將限定性路徑放在`With`語句中。</span><span class="sxs-lookup"><span data-stu-id="f58ce-111">Put the qualification path in a `With` statement.</span></span>
+
+    ```vb
+    With someForm.ActiveForm.ActiveControl
+    ```
+
+2. <span data-ttu-id="f58ce-112">在`With`區塊內, 于`End With`語句之前存取物件的成員。</span><span class="sxs-lookup"><span data-stu-id="f58ce-112">Access the object's members inside the `With` block, before the `End With` statement.</span></span>
+
+    ```vb
+        .Text = "Test"
+        .Location = New Point(100, 100)
+        .Show()
+    End With
+    ```
+
+## <a name="see-also"></a><span data-ttu-id="f58ce-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f58ce-113">See also</span></span>
+
+- [<span data-ttu-id="f58ce-114">物件變數</span><span class="sxs-lookup"><span data-stu-id="f58ce-114">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="f58ce-115">With...End With 陳述式</span><span class="sxs-lookup"><span data-stu-id="f58ce-115">With...End With Statement</span></span>](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

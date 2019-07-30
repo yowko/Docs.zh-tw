@@ -1,25 +1,25 @@
 ---
-title: 配量 (F#)
-description: 深入了解如何使用現有的配量F#資料類型以及如何定義您自己的配量的其他資料型別。
+title: 配量F#()
+description: 瞭解如何將配量用於現有F#的資料類型, 以及如何為其他資料類型定義您自己的配量。
 ms.date: 01/22/2019
-ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925982"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627142"
 ---
-# <a name="slices"></a><span data-ttu-id="e7c49-103">配量</span><span class="sxs-lookup"><span data-stu-id="e7c49-103">Slices</span></span>
+# <a name="slices"></a><span data-ttu-id="bf70d-103">配量</span><span class="sxs-lookup"><span data-stu-id="bf70d-103">Slices</span></span>
 
-<span data-ttu-id="e7c49-104">在F#，配量為資料類型的子集。</span><span class="sxs-lookup"><span data-stu-id="e7c49-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="e7c49-105">若要能夠從資料類型進行配量，資料類型必須是定義`GetSlice`方法或在[輸入副檔名](type-extensions.md)也就是在範圍內。</span><span class="sxs-lookup"><span data-stu-id="e7c49-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="e7c49-106">這篇文章說明如何從現有的配量F#類型，以及如何定義您自己。</span><span class="sxs-lookup"><span data-stu-id="e7c49-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
+<span data-ttu-id="bf70d-104">在F#中, 配量是資料類型的子集。</span><span class="sxs-lookup"><span data-stu-id="bf70d-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="bf70d-105">若要能夠從資料類型接受配量, 資料類型必須定義`GetSlice`方法, 或在範圍內的[類型延伸](type-extensions.md)中。</span><span class="sxs-lookup"><span data-stu-id="bf70d-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="bf70d-106">本文說明如何從現有F#的型別, 以及如何定義您自己的配量。</span><span class="sxs-lookup"><span data-stu-id="bf70d-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
 
-<span data-ttu-id="e7c49-107">配量都類似於[索引子](members/indexed-properties.md)，但是而不是產生單一值從基礎資料結構，會產生多個項目。</span><span class="sxs-lookup"><span data-stu-id="e7c49-107">Slices are similar to [indexers](members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
+<span data-ttu-id="bf70d-107">配量類似于[索引子](./members/indexed-properties.md), 但不會從基礎資料結構產生單一值, 而是會產生多個分割區。</span><span class="sxs-lookup"><span data-stu-id="bf70d-107">Slices are similar to [indexers](./members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
 
-<span data-ttu-id="e7c49-108">F#目前沒有內建支援字串、 清單、 陣列和 2D 陣列配量。</span><span class="sxs-lookup"><span data-stu-id="e7c49-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
+<span data-ttu-id="bf70d-108">F#目前具有配量字串、清單、陣列和2D 陣列的內建支援。</span><span class="sxs-lookup"><span data-stu-id="bf70d-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="e7c49-109">使用基本配量F#清單和陣列</span><span class="sxs-lookup"><span data-stu-id="e7c49-109">Basic slicing with F# lists and arrays</span></span>
+## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="bf70d-109">使用清單和F#陣列的基本配量</span><span class="sxs-lookup"><span data-stu-id="bf70d-109">Basic slicing with F# lists and arrays</span></span>
 
-<span data-ttu-id="e7c49-110">最常見配量的資料類型為F#清單和陣列。</span><span class="sxs-lookup"><span data-stu-id="e7c49-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="e7c49-111">下列範例示範如何執行此動作的清單：</span><span class="sxs-lookup"><span data-stu-id="e7c49-111">The following example demonstrates how to do this with lists:</span></span>
+<span data-ttu-id="bf70d-110">最常見的已切割資料類型是F#清單和陣列。</span><span class="sxs-lookup"><span data-stu-id="bf70d-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="bf70d-111">下列範例示範如何使用清單來執行這項操作:</span><span class="sxs-lookup"><span data-stu-id="bf70d-111">The following example demonstrates how to do this with lists:</span></span>
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-<span data-ttu-id="e7c49-112">配量陣列，就如同配量清單：</span><span class="sxs-lookup"><span data-stu-id="e7c49-112">Slicing arrays is just like slicing lists:</span></span>
+<span data-ttu-id="bf70d-112">切割陣列就像切割清單一樣:</span><span class="sxs-lookup"><span data-stu-id="bf70d-112">Slicing arrays is just like slicing lists:</span></span>
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="e7c49-113">配量的多維陣列</span><span class="sxs-lookup"><span data-stu-id="e7c49-113">Slicing multidimensional arrays</span></span>
+## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="bf70d-113">切割多維陣列</span><span class="sxs-lookup"><span data-stu-id="bf70d-113">Slicing multidimensional arrays</span></span>
 
-<span data-ttu-id="e7c49-114">F#支援中的多維陣列F#核心程式庫。</span><span class="sxs-lookup"><span data-stu-id="e7c49-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="e7c49-115">如同一維陣列、 多維陣列的配量也相當有用。</span><span class="sxs-lookup"><span data-stu-id="e7c49-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="e7c49-116">不過，其他維度的簡介會強制稍有不同的語法，讓您可以採取特定的資料列和資料行的配量。</span><span class="sxs-lookup"><span data-stu-id="e7c49-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
+<span data-ttu-id="bf70d-114">F#支援核心程式庫中F#的多維度陣列。</span><span class="sxs-lookup"><span data-stu-id="bf70d-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="bf70d-115">就像一維陣列一樣, 多維陣列的配量也會很有用。</span><span class="sxs-lookup"><span data-stu-id="bf70d-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="bf70d-116">不過, 引入額外的維度會要求稍微不同的語法, 讓您可以接受特定資料列和資料行的配量。</span><span class="sxs-lookup"><span data-stu-id="bf70d-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
 
-<span data-ttu-id="e7c49-117">下列範例示範如何配量的 2D 陣列：</span><span class="sxs-lookup"><span data-stu-id="e7c49-117">The following examples demonstrate how to slice a 2D array:</span></span>
+<span data-ttu-id="bf70d-117">下列範例示範如何配量2D 陣列:</span><span class="sxs-lookup"><span data-stu-id="bf70d-117">The following examples demonstrate how to slice a 2D array:</span></span>
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-<span data-ttu-id="e7c49-118">F#核心程式庫不會定義`GetSlice`的 3D 的陣列。</span><span class="sxs-lookup"><span data-stu-id="e7c49-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="e7c49-119">如果您想要配量或其他陣列或多個維度，您必須定義`GetSlice`成員自己。</span><span class="sxs-lookup"><span data-stu-id="e7c49-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
+<span data-ttu-id="bf70d-118">F#核心程式庫不會針對`GetSlice`3d 陣列定義。</span><span class="sxs-lookup"><span data-stu-id="bf70d-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="bf70d-119">如果您想要配量其他維度或其他陣列, 您必須自行定義`GetSlice`成員。</span><span class="sxs-lookup"><span data-stu-id="bf70d-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
 
-## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="e7c49-120">定義其他資料結構的配量</span><span class="sxs-lookup"><span data-stu-id="e7c49-120">Defining slices for other data structures</span></span>
+## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="bf70d-120">定義其他資料結構的配量</span><span class="sxs-lookup"><span data-stu-id="bf70d-120">Defining slices for other data structures</span></span>
 
-<span data-ttu-id="e7c49-121">F#核心程式庫定義配量的一組有限的類型。</span><span class="sxs-lookup"><span data-stu-id="e7c49-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="e7c49-122">如果您想要定義配量更多的資料類型，則可以本身型別定義中或在類型擴充功能。</span><span class="sxs-lookup"><span data-stu-id="e7c49-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
+<span data-ttu-id="bf70d-121">F#核心程式庫會定義一組有限類型的配量。</span><span class="sxs-lookup"><span data-stu-id="bf70d-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="bf70d-122">如果您想要定義更多資料類型的配量, 可以在類型定義本身或類型延伸中執行此動作。</span><span class="sxs-lookup"><span data-stu-id="bf70d-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
 
-<span data-ttu-id="e7c49-123">例如，以下是如何定義配量<xref:System.ArraySegment%601>以供方便存取的資料操作的類別：</span><span class="sxs-lookup"><span data-stu-id="e7c49-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
+<span data-ttu-id="bf70d-123">例如, 以下說明如何定義<xref:System.ArraySegment%601>類別的配量, 以允許方便的資料操作:</span><span class="sxs-lookup"><span data-stu-id="bf70d-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
 
 ```fsharp
 open System
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="e7c49-124">使用內嵌，以避免 boxing，如有必要</span><span class="sxs-lookup"><span data-stu-id="e7c49-124">Use inlining to avoid boxing if it is necessary</span></span>
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="bf70d-124">如果需要, 請使用內嵌來避免進行裝箱</span><span class="sxs-lookup"><span data-stu-id="bf70d-124">Use inlining to avoid boxing if it is necessary</span></span>
 
-<span data-ttu-id="e7c49-125">如果您正在定義的類型，實際上是結構的配量，我們建議您`inline``GetSlice`成員。</span><span class="sxs-lookup"><span data-stu-id="e7c49-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="e7c49-126">F#編譯器會最佳化選擇性引數，避免任何堆積配置，因為配量。</span><span class="sxs-lookup"><span data-stu-id="e7c49-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="e7c49-127">這點非常重要的配量建構這類<xref:System.Span%601>，無法配置在堆積上。</span><span class="sxs-lookup"><span data-stu-id="e7c49-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
+<span data-ttu-id="bf70d-125">如果您要定義實際上是結構之類型的配量, 我們建議您`inline`使用該`GetSlice`成員。</span><span class="sxs-lookup"><span data-stu-id="bf70d-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="bf70d-126">F#編譯器會將選擇性引數優化, 避免因切割而產生任何堆積配置。</span><span class="sxs-lookup"><span data-stu-id="bf70d-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="bf70d-127">這對於無法在堆積上配置的切割<xref:System.Span%601>結構 (例如) 而言極為重要。</span><span class="sxs-lookup"><span data-stu-id="bf70d-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
 
 ```fsharp
 open System
@@ -135,6 +135,6 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e7c49-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7c49-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf70d-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bf70d-128">See also</span></span>
 
-- [<span data-ttu-id="e7c49-129">索引的屬性</span><span class="sxs-lookup"><span data-stu-id="e7c49-129">Indexed properties</span></span>](members/indexed-properties.md)
+- [<span data-ttu-id="bf70d-129">已編制索引的屬性</span><span class="sxs-lookup"><span data-stu-id="bf70d-129">Indexed properties</span></span>](./members/indexed-properties.md)
