@@ -77,11 +77,11 @@ public class Student
 > [!NOTE]
 > 您必須在靜態 using 陳述式中使用完整的類別名稱 `System.String`。  不能改用 `string` 關鍵字。
 
-如果從 `static using` 陳述式匯入，延伸方法只有在使用延伸方法引動語法來呼叫時才會在範圍中。 它們在作為靜態方法呼叫時，則不在範圍中。 您會經常在 LINQ 查詢中看到此情況。 您可以藉由匯入 <xref:System.Linq.Enumerable> 或 <xref:System.Linq.Queryable> 來匯入 LINQ 模式。
+如果從 `static using` 陳述式匯入，擴充方法只有在使用擴充方法引動過程語法來呼叫時才會在範圍中。 它們在作為靜態方法呼叫時，則不在範圍中。 您會經常在 LINQ 查詢中看到此情況。 您可以藉由匯入 <xref:System.Linq.Enumerable> 或 <xref:System.Linq.Queryable> 來匯入 LINQ 模式。
 
 [!code-csharp[UsingStaticLinq](../../../samples/snippets/csharp/new-in-6/newcode.cs#usingStaticLinq)]
 
-您通常會使用延伸方法引動運算式來呼叫延伸方法。 在您使用靜態方法呼叫語法來呼叫它們的少數情況下，新增類別名稱可解決語意模糊問題。
+您通常會使用擴充方法引動過程運算式來呼叫擴充方法。 在您使用靜態方法呼叫語法來呼叫它們的少數情況下，新增類別名稱可解決語意模糊問題。
 
 `static using` 指示詞也會匯入任何巢狀型別。 您可以參照任何巢狀型別而無限定性條件。
 
