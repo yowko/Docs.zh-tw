@@ -6,9 +6,9 @@
       items:
         - name: 匯入類型程式庫做為組件
           href: importing-a-type-library-as-an-assembly.md
-        - name: HOW TO：將參考新增至型別程式庫
+        - name: 作法：將參考新增至型別程式庫
           href: how-to-add-references-to-type-libraries.md
-        - name: HOW TO：從型別程式庫產生 Interop 組件
+        - name: 作法：從型別程式庫產生 Interop 組件
           href: how-to-generate-interop-assemblies-from-type-libraries.md
         - name: 編譯 Interop 專案
           href: compiling-an-interop-project.md
@@ -19,15 +19,11 @@
     - name: 將 .NET Framework 元件公開給 COM
       href: exposing-dotnet-components-to-com.md
       items:
-        - name: 限定互通的 .NET 類型
-          href: qualifying-net-types-for-interoperation.md
-        - name: 套用 Interop 屬性
-          href: applying-interop-attributes.md
         - name: 封裝 COM 的組件
           href: packaging-an-assembly-for-com.md
         - name: 向 COM 註冊組件
           href: registering-assemblies-with-com.md
-        - name: HOW TO：參考 COM 的 .NET 類型
+        - name: 作法：參考 COM 的 .NET 類型
           href: how-to-reference-net-types-from-com.md
         - name: COM Interop 範例：COM 用戶端與 .NET 伺服器
           href: com-interop-sample-com-client-and-net-server.md
@@ -54,7 +50,7 @@
               href: passing-structures.md
             - name: 回呼函式
               href: callback-functions.md
-            - name: HOW TO：實作回呼函式
+            - name: 作法：實作回呼函式
               href: how-to-implement-callback-functions.md
     - name: Interop 封送處理
       href: interop-marshaling.md
@@ -88,28 +84,21 @@
         - name: 使用 COM Interop 封送處理資料
           href: marshaling-data-with-com-interop.md
           items:
-            - name: HOW TO：手動建立包裝函式
+            - name: 作法：手動建立包裝函式
               href: how-to-create-wrappers-manually.md
-            - name: HOW TO：將受控碼 DCOM 移轉至 WCF
+            - name: 作法：將受控碼 DCOM 移轉至 WCF
               href: how-to-migrate-managed-code-dcom-to-wcf.md
-    - name: HOW TO：對應 HRESULT 和例外狀況
+    - name: 作法：對應 HRESULT 和例外狀況
       href: how-to-map-hresults-and-exceptions.md
-    - name: COM 包裝函式
-      href: com-wrappers.md
-      items:
-        - name: 執行階段可呼叫包裝函式
-          href: runtime-callable-wrapper.md
-        - name: COM 可呼叫包裝函式
-          href: com-callable-wrapper.md
-        - name: HOW TO：建立 COM 包裝函式
-          href: how-to-create-com-wrappers.md
+    - name: 作法：建立 COM 包裝函式
+      href: how-to-create-com-wrappers.md
     - name: 類型等價和內嵌 Interop 類型
       href: type-equivalence-and-embedded-interop-types.md
-    - name: HOW TO：使用 Tlbimp.exe 產生主要 Interop 組件
+    - name: 作法：使用 Tlbimp.exe 產生主要 Interop 組件
       href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
-    - name: HOW TO：登錄主要 Interop 組件
+    - name: 作法：登錄主要 Interop 組件
       href: how-to-register-primary-interop-assemblies.md
     - name: 免註冊的 COM Interop
       href: registration-free-com-interop.md
-    - name: HOW TO：設定 .NET Framework 架構 COM 元件進行免註冊啟用
+    - name: 作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
       href: configure-net-framework-based-com-components-for-reg.md

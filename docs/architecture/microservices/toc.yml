@@ -1,0 +1,159 @@
+- name: .NET 微服務：容器化 .NET 應用程式的架構
+  href: index.md
+  items:
+    - name: 容器和 Docker 簡介
+      href: container-docker-introduction/index.md
+      items:
+        - name: 什麼是 Docker？
+          href: container-docker-introduction/docker-defined.md
+        - name: Docker 術語
+          href: container-docker-introduction/docker-terminology.md
+        - name: Docker 容器、映像和登錄
+          href: container-docker-introduction/docker-containers-images-registries.md
+    - name: 針對 Docker 容器在 .NET Core 和 .NET Framework 之間進行選擇
+      href: net-core-net-framework-containers/index.md
+      items:
+        - name: 一般指引
+          href: net-core-net-framework-containers/general-guidance.md
+        - name: 選擇在 Docker 容器使用 .NET Core 的時機
+          href: net-core-net-framework-containers/net-core-container-scenarios.md
+        - name: 針對 Docker 容器選擇 .NET Framework 的時機
+          href: net-core-net-framework-containers/net-framework-container-scenarios.md
+        - name: 決策資料表：用於 Docker 的 .NET Frameworks
+          href: net-core-net-framework-containers/container-framework-choice-factors.md
+        - name: 針對 .NET 容器要設為目標的作業系統
+          href: net-core-net-framework-containers/net-container-os-targets.md
+        - name: 官方 .NET Docker 映像
+          href: net-core-net-framework-containers/official-net-docker-images.md
+    - name: 架構容器和微服務應用程式
+      href: architect-microservice-container-applications/index.md
+      items:
+        - name: 容器化整合型應用程式
+          href: architect-microservice-container-applications/containerize-monolithic-applications.md
+        - name: Docker 應用程式中的狀態和資料
+          href: architect-microservice-container-applications/docker-application-state-data.md
+        - name: 服務導向架構
+          href: architect-microservice-container-applications/service-oriented-architecture.md
+        - name: 微服務架構
+          href: architect-microservice-container-applications/microservices-architecture.md
+        - name: 每個微服務的資料自主性
+          href: architect-microservice-container-applications/data-sovereignty-per-microservice.md
+        - name: 邏輯架構與實體架構
+          href: architect-microservice-container-applications/logical-versus-physical-architecture.md
+        - name: 分散式資料管理的挑戰和解決方案
+          href: architect-microservice-container-applications/distributed-data-management.md
+        - name: 識別每個微服務的領域模型界限
+          href: architect-microservice-container-applications/identify-microservice-domain-model-boundaries.md
+        - name: 直接用戶端與微服務通訊與 API 閘道模式
+          href: architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md
+        - name: 微服務架構中的通訊
+          href: architect-microservice-container-applications/communication-in-microservice-architecture.md
+        - name: 非同步訊息通訊
+          href: architect-microservice-container-applications/asynchronous-message-based-communication.md
+        - name: 建立、發展以及版本控制微服務 API 與協定
+          href: architect-microservice-container-applications/maintain-microservice-apis.md
+        - name: 微服務可定址性和服務登錄
+          href: architect-microservice-container-applications/microservices-addressability-service-registry.md
+        - name: 根據微服務建立複合 UI，包括多個微服務所產生的視覺 UI 形狀和配置
+          href: architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md
+        - name: 微服務中的復原和高可用性
+          href: architect-microservice-container-applications/resilient-high-availability-microservices.md
+        - name: 協調微服務和多容器應用程式的高延展性和可用性
+          href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
+    - name: Docker 應用程式的開發程序
+      href: docker-application-development-process/index.md
+      items:
+        - name: Docker 應用程式的開發工作流程
+          href: docker-application-development-process/docker-app-development-workflow.md
+    - name: 設計和開發多容器和微服務 .NET 應用程式
+      href: multi-container-microservice-net-applications/index.md
+      items:
+        - name: 設計微服務導向應用程式
+          href: multi-container-microservice-net-applications/microservice-application-design.md
+        - name: 建立簡單資料驅動 CRUD 微服務
+          href: multi-container-microservice-net-applications/data-driven-crud-microservice.md
+        - name: 使用 docker-compose.yml 定義多容器應用程式
+          href: multi-container-microservice-net-applications/multi-container-applications-docker-compose.md
+        - name: 使用作為容器執行的資料庫伺服器
+          href: multi-container-microservice-net-applications/database-server-container.md
+        - name: 實作微服務之間的事件通訊 (整合事件)
+          href: multi-container-microservice-net-applications/integration-event-based-microservice-communications.md
+        - name: 針對開發或測試環境使用 RabbitMQ 實作事件匯流排
+          href: multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md
+        - name: 訂閱事件
+          href: multi-container-microservice-net-applications/subscribe-events.md
+        - name: 測試 ASP.NET Core 服務和 Web 應用程式
+          href: multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md
+        - name: 在微服務中使用 IHostedService 實作背景工作
+          href: multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md
+        - name: 使用 Ocelot 實作 API 閘道
+          href: multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md
+    - name: 利用 DDD 和 CQRS 模式解決微服務中的商務複雜度
+      href: microservice-ddd-cqrs-patterns/index.md
+      items:
+        - name: 在微服務中套用簡化的 CQRS 和 DDD 模式
+          href: microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md
+        - name: 在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法
+          href: microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md
+        - name: 在 CQRS 微服務中實作讀取/查詢
+          href: microservice-ddd-cqrs-patterns/cqrs-microservice-reads.md
+        - name: 設計 DDD 導向微服務
+          href: microservice-ddd-cqrs-patterns/ddd-oriented-microservice.md
+        - name: 設計微服務領域模型
+          href: microservice-ddd-cqrs-patterns/microservice-domain-model.md
+        - name: 使用 .NET Core 實作微服務領域模型
+          href: microservice-ddd-cqrs-patterns/net-core-microservice-domain-model.md
+        - name: Seedwork (網域模型的可重複使用基底類別和介面)
+          href: microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces.md
+        - name: 實作值物件
+          href: microservice-ddd-cqrs-patterns/implement-value-objects.md
+        - name: 使用列舉類別，而非列舉類型
+          href: microservice-ddd-cqrs-patterns/enumeration-classes-over-enum-types.md
+        - name: 設計領域模型層中的驗證
+          href: microservice-ddd-cqrs-patterns/domain-model-layer-validations.md
+        - name: 用戶端驗證 (展示層中的驗證)
+          href: microservice-ddd-cqrs-patterns/client-side-validation.md
+        - name: 領域事件：設計和實作
+          href: microservice-ddd-cqrs-patterns/domain-events-design-implementation.md
+        - name: 設計基礎結構持續性層
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design.md
+        - name: 使用 Entity Framework Core 實作基礎結構持續層
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implemenation-entity-framework-core.md
+        - name: 使用 NoSQL 資料庫作為持續性基礎結構
+          href: microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure.md
+        - name: 設計微服務應用程式層及 Web API
+          href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
+        - name: 使用 Web API 實作微服務應用程式層
+          href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
+    - name: 實作復原應用程式
+      href: implement-resilient-applications/index.md
+      items:
+        - name: 處理部分失敗
+          href: implement-resilient-applications/handle-partial-failure.md
+        - name: 處理部分失敗的策略
+          href: implement-resilient-applications/partial-failure-strategies.md
+        - name: 使用指數輪詢來實作重試
+          href: implement-resilient-applications/implement-retries-exponential-backoff.md
+        - name: 實作具有恢復功能的 Entity Framework Core SQL 連接
+          href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
+        - name: 使用指數輪詢探索自訂 HTTP 呼叫重試
+          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
+        - name: 使用 HttpClientFactory 實作復原 HTTP 要求
+          href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
+        - name: 使用 Polly 以指數輪詢實作 HTTP 呼叫重試
+          href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
+        - name: 實作斷路器模式
+          href: implement-resilient-applications/implement-circuit-breaker-pattern.md
+        - name: 健康狀態監視
+          href: implement-resilient-applications/monitor-app-health.md
+    - name: 保護 .NET 微服務和 Web 應用程式
+      href: secure-net-microservices-web-applications/index.md
+      items:
+        - name: 關於 .NET 微服務和 Web 應用程式中的授權
+          href: secure-net-microservices-web-applications/authorization-net-microservices-web-applications.md
+        - name: 在開發期間安全地儲存應用程式祕密
+          href: secure-net-microservices-web-applications/developer-app-secrets-storage.md
+        - name: 使用 Azure Key Vault 以在生產階段保護密碼
+          href: secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md
+    - name: 金鑰附帶
+      href: key-takeaways.md
