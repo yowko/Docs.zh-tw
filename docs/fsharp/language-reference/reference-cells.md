@@ -1,17 +1,17 @@
 ---
 title: 參考儲存格
-description: 了解如何F#參考儲存格是可讓您以參考語意建立可變值的儲存位置。
+description: 瞭解參考F#儲存格如何為儲存位置, 讓您使用參考語義建立可變值。
 ms.date: 05/16/2016
-ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795393"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627245"
 ---
 # <a name="reference-cells"></a>參考儲存格
 
-*參考儲存格*是可讓您以參考語意建立可變值的儲存體位置。
+*參考儲存格*是儲存位置, 可讓您使用參考語義建立可變值。
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ ref expression
 
 下列程式碼範例將示範參考儲存格的宣告和用法。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
 
 輸出為 `50`。
 
@@ -54,15 +54,15 @@ let ref x = { contents = x }
 |--------------------------|-----------|----|----------|
 |`!` (取值運算子)|傳回基礎值。|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=` (指派運算子)|變更基礎值。|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref` （運算子）|將值封裝至新的參考儲存格。|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value` （屬性）|取得或設定基礎值。|`unit -> 'a`|`member x.Value = x.contents`|
+|`ref`操作|將值封裝至新的參考儲存格。|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`Value`property|取得或設定基礎值。|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (記錄欄位)|取得或設定基礎值。|`'a`|`let ref x = { contents = x }`|
 
 有數個方式可以存取基礎值。 取值運算子 (`!`) 傳回的值不是可指派的值。 因此如果您要修改基礎值，則必須改用指派運算子 (`:=`)。
 
 `Value` 屬性和 `contents` 欄位都是可指派的值。 因此，您可以使用它們來存取或變更基礎值，如下列程式碼所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
 
 輸出如下。
 
@@ -75,13 +75,13 @@ let ref x = { contents = x }
 
 `contents` 欄位是針對與其他 ML 版本相容而提供，而且會在編譯期間產生警告。 若要停用這個警告，請使用 `--mlcompatibility` 編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。
 
-C#程式設計人員應該要知道`ref`在C#不是與相同的工作`ref`在F#。 中的對等項目建構F#會[byref](byrefs.md)，這是不同的概念，從參考儲存格。
+C#程式設計人員應該`ref`知道C#在中的不是相同`ref`的F#東西。 中F#的對等結構是[byref](byrefs.md), 這是與參考儲存格不同的概念。
 
-值將會標示`mutable`可能會自動升級為`'a ref`如果擷取的 closure; 請參閱[值](values/index.md)。
+如果已關閉`mutable`, 則標示為的`'a ref`值可能會自動升級為, 請參閱[values](./values/index.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [F# 語言參考](index.md)
 - [參數和引數](parameters-and-arguments.md)
-- [符號和運算子參考](symbol-and-operator-reference/index.md)
-- [值](values/index.md)
+- [符號和運算子參考](./symbol-and-operator-reference/index.md)
+- [值](./values/index.md)

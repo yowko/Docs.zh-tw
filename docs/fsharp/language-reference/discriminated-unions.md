@@ -1,17 +1,17 @@
 ---
 title: 已區分的聯集
-description: 了解如何使用F#差別聯集。
+description: 瞭解如何使用F#區分等位。
 ms.date: 05/16/2016
-ms.openlocfilehash: a3958a9ffb021c0c46c24216f17a1e7ee5605dd3
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 940bc51f49e283c31846dd2047b749769b919838
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816239"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630356"
 ---
 # <a name="discriminated-unions"></a>已區分的聯集
 
-差別等位可以是其中一個具名案例數，而每個不同的值和類型的值提供支援。 差別等位是適用於異質資料，可以有特殊的情況下，包括有效和錯誤案例的資料為另一個，從一個執行個體的型別中改變資料並為小型物件階層架構的替代方式。 此外，遞迴的已區分聯集用來代表樹狀資料結構。
+相異聯集提供的值, 可能是其中一個已命名的案例, 可能會有不同的值和類型。 區分等位適用于異質資料;可以有特殊案例的資料, 包括有效和錯誤的案例;從一個實例到另一個實例的類型不同的資料;和作為小型物件階層的替代方案。 此外, 遞迴的區分等位是用來表示樹狀結構的資料結構。
 
 ## <a name="syntax"></a>語法
 
@@ -26,11 +26,11 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>備註
 
-差別聯的集是以其他語言的聯集類型類似，但有一些差異。 使用中的等位型別C++或 variant 型別在 Visual Basic 中，不固定值中儲存的資料;它可以是多個相異選項的其中一個。 不同於其他語言的聯集，不過，每個可能的選項基於*寫的識別項*。 案例識別項是各種可能的可能是此類型的物件; 的值類型的名稱值是選擇性的。 如果值不存在，它就相當於列舉案例。 如果值存在，每個值可以是單一值的指定的類型或彙總相同或不同類型的多個欄位的 tuple。 您可以為個別欄位的名稱，但名稱是選擇性的即使在相同的情況下的其他欄位的名稱。
+區分聯集與其他語言的等位類型類似, 但有差異。 如同中C++的聯集類型或 Visual Basic 中的 variant 類型, 儲存在值中的資料不會固定;它可以是幾個不同選項的其中一個。 不同于這些其他語言的等位, 每個可能的選項都會被賦予一個*案例識別碼*。 案例識別碼是此類型之物件的各種可能數值型別的名稱。這些值是選擇性的。 如果值不存在, 則案例相當於列舉案例。 如果有值, 每個值都可以是指定類型的單一值, 或是匯總相同或不同類型之多個欄位的元組。 您可以為個別的欄位指定名稱, 但名稱是選擇性的, 即使相同案例中的其他欄位命名也一樣。
 
-差別聯集的存取範圍預設為`public`。
+區分等位的協助工具`public`預設為。
 
-例如，請考慮下列 Shape 類型的宣告。
+例如, 請考慮下列圖形類型的宣告。
 
 ```fsharp
 type Shape =
@@ -39,9 +39,9 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-上述程式碼宣告差別等位圖形，它可以有三種情況下的任何值：矩形、 圓形和角柱。 每個案例中有一組不同的欄位。 矩形案例有兩個具名欄位，都屬於型別`float`，具有名稱寬度和長度。 圓形案例有只有一個具名的欄位，radius。 角柱案例有三個欄位，其中的 （寬度和高度） 兩個名為欄位。 未命名的欄位稱為匿名欄位。
+上述程式碼會宣告一個區分聯集圖形, 其值可以是下列三種情況的其中一種:矩形、圓形和 Prism。 每個案例都有一組不同的欄位。 矩形案例有兩個名為的欄位, 兩`float`個都是類型, 其名稱為 width 和 length。 圓形案例只有一個命名欄位 [半徑]。 Prism 案例有三個欄位, 其中兩個 (寬度和高度) 為欄位。 未命名的欄位稱為「匿名欄位」。
 
-您所提供的具名和匿名的欄位，根據下列範例值建構物件。
+您可以根據下列範例, 提供已命名和匿名欄位的值來建立物件。
 
 ```fsharp
 let rect = Rectangle(length = 1.3, width = 10.0)
@@ -49,9 +49,9 @@ let circ = Circle (1.0)
 let prism = Prism(5., 2.0, height = 3.0)
 ```
 
-此程式碼示範您可以使用具名的欄位初始化，或您可以依賴宣告中的欄位順序，並只接著每個欄位提供值。 建構函式呼叫`rect`在先前的程式碼會使用具名的欄位，但建構函式呼叫的`circ`使用順序。 您可以混合排序的欄位，並命名為欄位，如建構`prism`。
+這段程式碼顯示您可以在初始化中使用已命名的欄位, 或者您可以依賴宣告中的欄位順序, 然後只提供每個欄位的值。 先前程式`rect`代碼中的函式呼叫會使用已命名的欄位, 但的函數`circ`調用會使用排序。 您可以混合使用已排序的欄位和命名欄位, 如同的結構`prism`。
 
-`option`類型是簡單的已區分聯集，在F#核心程式庫。 `option`類型宣告，如下所示。
+類型是F#核心程式庫中的簡單區分聯集。 `option` 類型`option`的宣告方式如下。
 
 ```fsharp
 // The option type is a discriminated union.
@@ -60,17 +60,17 @@ type Option<'a> =
     | None
 ```
 
-先前的程式碼指定型別`Option`是具有兩個案例的已區分聯集`Some`和`None`。 `Some`案例有相關聯的值，其中包含型別由型別參數的一個匿名欄位`'a`。 `None`案例沒有任何相關聯的值。 因此`option`型別指定值為 some 類型或沒有值的泛型類型。 型別`Option`也有小寫類型別名`option`，也就是較常使用。
+先前的程式碼指定類型`Option`為具有兩個案例的區分聯集, `Some`和。 `None` 案例有一個相關聯的值, 其中包含一個匿名欄位, 其型別是由型`'a`別參數表示。 `Some` 案例`None`沒有相關聯的值。 因此, `option`此型別會指定具有某個型別值或沒有值的泛型型別。 此類型`Option`也有一個較常用的小寫`option`類型別名。
 
-案例識別項可以作為已區分的聯集類型的建構函式。 比方說，下列程式碼用來建立值`option`型別。
+案例識別碼可用來做為區分聯集類型的構造函式。 例如, 下列程式碼是用來建立`option`型別的值。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
 
-案例識別項也用於模式比對運算式。 在模式比對運算式中，會提供識別項的個別案例相關聯的值。 例如，在下列程式碼中，`x`識別項的值會指定相關聯`Some`案例`option`型別。
+案例識別碼也會用於模式比對運算式。 在模式比對運算式中, 會提供與個別案例相關聯之值的識別碼。 例如, 在下列程式碼中, `x`是指定`Some`與`option`類型案例相關聯之值的識別碼。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
 
-在模式比對運算式中，您可以使用具名的欄位來指定差別聯集的相符項目。 對於先前宣告的圖形類型，您可以使用具名的欄位，如下列程式碼所示擷取欄位的值。
+在模式比對運算式中, 您可以使用命名欄位來指定區分聯集的相符專案。 針對先前宣告的圖形類型, 您可以使用已命名的欄位, 如下列程式碼所示, 以解壓縮欄位的值。
 
 ```fsharp
 let getShapeHeight shape =
@@ -80,11 +80,11 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-通常，案例識別項可不搭配聯集的名稱來限定它們。 如果您想要一律以聯集的名稱限定的名稱，您可以套用[RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp])等位型別定義的屬性。
+一般來說, 您可以使用案例識別碼, 而不需要使用聯集的名稱來加以限定。 如果您想要讓名稱一律以聯集的名稱限定, 可以將[RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp])屬性套用至 union 類型定義。
 
-### <a name="unwrapping-discriminated-unions"></a>解除包裝的差別聯的集
+### <a name="unwrapping-discriminated-unions"></a>解除包裝區分等位
 
-在F#差別聯集通常用於在領域模型中包裝單一類型。 它可輕易擷取透過模式比對以及基礎值。 您不需要使用比對運算式，針對單一案例：
+在F#區分等位中, 通常會在用來包裝單一類型的網域模型中使用。 您也可以透過模式比對, 輕鬆地將基礎值解壓縮。 您不需要在單一案例中使用 match 運算式:
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -101,7 +101,7 @@ let someFunctionUsingShaderProgram shaderProgram =
     ...
 ```
 
-模式比對也允許直接在函式參數，所以您可以解除包裝單一案例那里：
+函式參數中也可直接使用模式比對, 因此您可以將單一案例解除包裝在該處:
 
 ```fsharp
 let someFunctionUsingShaderProgram (ShaderProgram id) =
@@ -109,9 +109,9 @@ let someFunctionUsingShaderProgram (ShaderProgram id) =
     ...
 ```
 
-## <a name="struct-discriminated-unions"></a>結構差別聯集
+## <a name="struct-discriminated-unions"></a>結構區分等位
 
-您也可以表示結構差別聯集。  做法是使用`[<Struct>]`屬性。
+您也可以將區分等位當做結構來表示。  這是使用`[<Struct>]`屬性來完成的。
 
 ```fsharp
 [<Struct>]
@@ -124,21 +124,21 @@ type Multicase =
     | Case3 of Case3 : double
 ```
 
-因為這些是實值型別，而且未參考的型別，所以會有額外考量相較於參考差別聯集：
+因為這些是實值型別, 而不是參考型別, 所以相較于參考區分等位, 會有額外的考慮:
 
-1. 它們會複製為實值型別，並且具有實值型別語意。
-2. 您無法使用 multicase 結構 Discriminated Union 的遞迴類型定義。
-3. 您必須提供 Discriminated Union multicase 結構案例的唯一名稱。
+1. 它們會複製為實值型別, 並具有實數值型別的語義。
+2. 您不能將遞迴型別定義與 multicase 結構區分聯集搭配使用。
+3. 您必須為 multicase 結構區分聯集提供唯一的案例名稱。
 
-## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>使用已區分的聯集而非物件階層
+## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>使用區分聯集, 而不是物件階層
 
-您通常可以使用已區分的聯集為小型物件階層的簡單替代方式。 例如，可以使用下列已區分的聯集而不是`Shape`基底類別具有衍生型別的 circle、，方形，依此類推。
+您通常可以使用區分聯集作為小型物件階層的較簡單替代方式。 例如, 您可以使用下列的區分聯集, 而不`Shape`是具有 circle、方形等衍生類型的基類。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
 
-若要計算區域或周邊的虛擬方法，為您是使用物件導向實作中，您可以使用模式比對分支至適當的公式來計算這些數量。 在下列範例中，不同的公式來計算區域中的，根據形狀。
+除了用來計算區域或周邊的虛擬方法之外, 您也可以在物件導向的執行中使用模式比對, 以適當的公式分支來計算這些數量。 在下列範例中, 會使用不同的公式來計算區域, 視圖形而定。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
 
 其輸出如下：
 
@@ -148,25 +148,25 @@ Area of square that has side 10.000000: 100.000000
 Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 ```
 
-## <a name="using-discriminated-unions-for-tree-data-structures"></a>差別聯的集用於樹狀資料結構
+## <a name="using-discriminated-unions-for-tree-data-structures"></a>使用樹狀資料結構的區分等位
 
-差別等位可以是遞迴的這表示聯集本身可以納入一或多個案例的型別。 遞迴差別聯的集可以用來建立樹狀結構，用來在程式設計語言中的模型運算式。 下列程式碼中，遞迴的已區分聯集用來建立二進位樹狀資料結構。 聯集是由兩個案例所組成`Node`，這是整數值與和左右子節點和`Tip`，可結束樹狀結構。
+區分聯集可以是遞迴的, 這表示等位本身可以包含在一或多個案例的類型中。 遞迴的區分等位可以用來建立樹狀結構, 用來以程式設計語言將運算式模型。 在下列程式碼中, 會使用遞迴的區分聯集來建立二進位樹狀結構資料結構。 聯集包含兩個案例, `Node`也就是具有整數值和左和右子樹的節點, 以及`Tip`終止樹狀結構的。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
 
-在先前的程式碼`resultSumTree`具有值為 10。 下圖顯示的樹狀結構`myTree`。
+在先前的程式碼`resultSumTree`中, 的值為10。 下圖顯示的樹狀結構`myTree`。
 
-![此圖顯示 mytree 的樹狀結構。](../media/discriminated-unions/tree-structure-mytree.png)
+![顯示 myTree 樹狀結構的圖表。](../media/discriminated-unions/tree-structure-mytree.png)
 
-在樹狀目錄中的節點是異質也運作差別聯的集。 下列程式碼類型`Expression`代表抽象語法樹狀目錄中的運算式中簡單的程式設計語言支援新增和相乘的數字和變數。 部分聯集案例不是遞迴和代表數字 (`Number`) 或變數 (`Variable`)。 其他情況下是遞迴的而且代表運算 (`Add`和`Multiply`)，其中運算元也是運算式。 `Evaluate`函式會使用比對運算式來遞迴處理語法樹狀結構。
+如果樹狀結構中的節點是異類的, 則區分聯集的運作良好。 在下列程式碼中, 類型`Expression`會以簡單的程式設計語言, 表示運算式的抽象語法樹狀結構, 以支援數位和變數的加法和乘法。 某些聯集案例不是遞迴的, 而是代表數位`Number`() 或變數`Variable`()。 其他情況則是遞迴的, 表示作業`Add` ( `Multiply`和), 其中的運算元也是運算式。 `Evaluate`函式會使用 match 運算式來以遞迴方式處理語法樹狀結構。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
 
-此程式碼執行時，值`result`為 5。
+執行此程式碼時, 的值`result`會是5。
 
 ## <a name="members"></a>成員
 
-可以定義在差別聯集的成員。 下列範例示範如何定義屬性，並實作介面：
+您可以在區分等位上定義成員。 下列範例顯示如何定義屬性和實作為介面:
 
 ```fsharp
 open System
@@ -198,7 +198,7 @@ type Shape =
 
 ## <a name="common-attributes"></a>通用屬性
 
-差別聯集中，常見的下列屬性：
+下列屬性通常會出現在區分等位中:
 
 * `[<RequireQualifiedAccess>]`
 * `[<NoEquality>]`

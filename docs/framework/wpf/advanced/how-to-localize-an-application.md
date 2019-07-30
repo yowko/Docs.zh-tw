@@ -9,14 +9,14 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331563"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629867"
 ---
-# <a name="how-to-localize-an-application"></a>作法：將應用程式當地語系化
+# <a name="how-to-localize-an-application"></a>HOW TO：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
   
 > [!NOTE]
@@ -66,7 +66,7 @@ ms.locfileid: "68331563"
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>建立中性語言資源附屬組件  
  設定應用程式來產生中性語言資源附屬組件之後，您要建置應用程式。 這會產生主應用程式組件，以及 LocBaml 進行當地語系化所需的中性語言資源附屬組件。 若要建置應用程式：  
   
-1. 編譯 HelloApp 以建立 [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]：  
+1. 編譯 HelloApp 以建立動態連結程式庫 (DLL):  
   
      **msbuild helloapp.csproj**  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68331563"
   
 4. 當您執行 LocBaml 時，可指定的選項如下：  
   
-    - **parse**或 **-p:** 剖析 Baml、資源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]檔案, 以產生 .csv 或 .txt 檔案。  
+    - **parse**或 **-p:** 剖析 Baml、資源或 DLL 檔案, 以產生 .csv 或 .txt 檔案。  
   
     - **產生**或 **-g:** 使用翻譯的檔案產生當地語系化的二進位檔案。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "68331563"
    |BAML 名稱|資源索引鍵|分類|可讀性|可修改性|註解|值|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|無|true|true||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|true|true||Hello World|
    |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|None|true|true||Goodbye World|
   
    請注意, [**批註**] 欄位的所有值都不包含任何值。如果欄位沒有值, 則會是空的。 另請注意, 第一個資料列中的專案既不是可讀取也不能修改, 而且具有「忽略」做為它的**分類**值, 全都表示此值無法當地語系化。  

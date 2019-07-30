@@ -1,48 +1,49 @@
 ---
-title: HOW TO：建立不會變更變數值 (Visual Basic)
+title: 作法：建立不會在值中變更的變數 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 3a9fa93b69c9abb42b2dd7eae623048f3628999e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d201e95463dd0431825fee03ebfd340ac80cc552
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663578"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630893"
 ---
-# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>HOW TO：建立不會變更變數值 (Visual Basic)
-可能會互相矛盾，所以不會變更其值的變數概念。 但是常數不可行時，有很多情況下，而且最好有固定值的變數。 在這種情況中，您可以定義的成員變數[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)關鍵字。  
-  
- 您無法使用[Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)來宣告和指派常數值在下列情況：  
-  
-- `Const`陳述式不接受您想要使用的資料類型  
-  
-- 您在編譯時期不知道值  
-  
-- 無法在編譯時期計算的常數值  
-  
-### <a name="to-create-a-variable-that-does-not-change-in-value"></a>若要建立的變數，不會變更值  
-  
-1. 在模組層級宣告的成員變數[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)，並包含[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)關鍵字。  
-  
-    ```  
-    Dim ReadOnly timeStarted  
-    ```  
-  
-     您可以指定`ReadOnly`只能在成員變數上。 這表示您必須定義在模組層級，任何程序之外的變數。  
-  
-2. 您可以計算在編譯時期的單一陳述式中的值，如果使用中的初始化子句`Dim`陳述式。 請遵循[作為](../../../../visual-basic/language-reference/statements/as-clause.md)子句以等號 (`=`)，後面接著一個運算式。 請確定編譯器可以評估此運算式為常數的值。  
-  
-    ```  
-    Dim ReadOnly timeStarted As Date = Now  
-    ```  
-  
-     您可以指派值給`ReadOnly`變數一次。 一旦您這樣做時，任何程式碼，可以不變更其值。  
-  
-     如果您在編譯時期不知道值，或無法計算它在編譯時期，在單一陳述式中，您仍然可以指派其建構函式在執行階段。 若要這樣做，您必須宣告`ReadOnly`類別或結構的層級變數。 在該類別或結構的建構函式，計算變數的固定的值，並從建構函式傳回之前將它指派給變數。  
-  
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>HOW TO：建立不會在值中變更的變數 (Visual Basic)
+
+未變更其值的變數概念可能會顯示為衝突。 但在某些情況下, 常數並不可行, 而且具有固定值的變數會很有用。 在這種情況下, 您可以使用[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)關鍵字來定義成員變數。
+
+在下列情況下, 您無法使用[Const 語句](../../../../visual-basic/language-reference/statements/const-statement.md)來宣告和指派常數值:
+
+- `Const`語句不接受您想要使用的資料類型
+
+- 您在編譯時期不知道此值
+
+- 您無法在編譯時期計算常數值
+
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a>若要建立不會在值中變更的變數
+
+1. 在模組層級, 使用[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)宣告成員變數, 並包含[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)關鍵字。
+
+    ```vb
+    Dim ReadOnly timeStarted
+    ```
+
+    您只能在`ReadOnly`成員變數上指定。 這表示您必須在任何程式之外的模組層級定義變數。
+
+2. 如果您可以在編譯時期計算單一語句中的值, 請在`Dim`語句中使用初始化子句。 請在[As](../../../../visual-basic/language-reference/statements/as-clause.md)子句後面加上等號`=`(), 後面接著運算式。 請確定編譯器可以將此運算式評估為常數值。
+
+    ```vb
+    Dim ReadOnly timeStarted As Date = Now
+    ```
+
+    您只能將值指派給`ReadOnly`變數一次。 一旦您這麼做, 任何程式碼都不會變更其值。
+
+    如果您在編譯時期不知道此值, 或是在編譯時期無法使用單一語句來計算該值, 您仍然可以在執行時間于函式中指派它。 若要這樣做, 您必須`ReadOnly`在類別或結構層級宣告變數。 在該類別或結構的函式中, 計算變數的固定值, 並將它指派給變數, 然後再從函式傳回。
+
 ## <a name="see-also"></a>另請參閱
 
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)

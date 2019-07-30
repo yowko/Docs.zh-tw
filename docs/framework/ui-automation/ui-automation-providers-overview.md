@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ffb8101ba0182c8ff11667f59d9bc10c5ffe670
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033029"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629566"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自動化提供者概觀
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  使用者介面自動化提供者可以讓控制項與使用者介面自動化用戶端應用程式進行通訊。 一般而言， [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中的每個控制項或其他不同項目都是由提供者表示。 提供者會公開項目的相關資訊並選擇性地實作控制項模式，讓用戶端應用程式與控制項互動。  
   
@@ -27,12 +27,12 @@ ms.locfileid: "62033029"
  使用者介面自動化提供者分為兩類：用戶端提供者和伺服器端提供者。  
   
 ### <a name="client-side-providers"></a>用戶端提供者  
- 用戶端提供者由使用者介面自動化用戶端實作，以便與不支援或不完全支援 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的應用程式通訊。 用戶端提供者通常與伺服器跨處理序界限來通訊傳送和接收 Windows 訊息。  
+ 用戶端提供者由使用者介面自動化用戶端實作，以便與不支援或不完全支援 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的應用程式通訊。 用戶端提供者通常會藉由傳送和接收 Windows 訊息, 跨進程界限與伺服器通訊。  
   
- 因為中控制項的 UI 自動化提供者[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]，Windows Form 或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]應用程式會提供做為作業系統的一部分，用戶端應用程式很少會實作自己的提供者，本概觀未涵蓋它們其他。  
+ 由於、Windows Forms 或[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]應用程式中的控制項的使用者介面自動化提供者是做為作業系統的一部分提供, 因此用戶端應用程式很少需要執行自己的提供者, 而且此總覽不會涵蓋它們進一步.  
   
 ### <a name="server-side-providers"></a>伺服器端提供者  
- 伺服器端提供者會實作自訂控制項或應用程式為基礎的 UI 架構以外[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]，Windows Form 或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]。  
+ 伺服器端提供者是由自訂控制項或是以[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、Windows Forms 或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]以外的 UI 架構為基礎的應用程式所執行。  
   
  伺服器端提供者會將介面公開至 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心系統，與跨處理序邊界的用戶端應用程式通訊，此核心系統之後會接續處理用戶端的要求。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62033029"
   
  [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 容器控制項 (例如清單方塊和樹狀結構檢視) 都會被視為架構，因為他們都包含自己的程式碼，以呈現子項目並在其上執行點擊測試。 相對地， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 清單方塊就不是架構，因為呈現和點擊測試是由其中包含的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 視窗所處理。  
   
- 應用程式中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同架構組成。 例如，HWND 應用程式視窗可能包含 [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] ，會依序在 HWND 中包含下拉式方塊此類的元件。  
+ 應用程式中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同架構組成。 例如, HWND 應用程式視窗可能包含動態 HTML (DHTML), 而後者又包含一個元件, 例如 HWND 中的下拉式方塊。  
   
 ### <a name="fragments"></a>片段  
  片段是來自特定架構之項目的完整子樹狀結構。 子樹狀結構之根目錄節點的項目稱為片段根目錄。 片段根目錄沒有父代，但會裝載於某些其他架構內，通常是 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 視窗 (HWND)。  

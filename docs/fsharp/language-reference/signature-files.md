@@ -1,13 +1,13 @@
 ---
 title: 簽章檔案
-description: 了解如何使用F#來保存一組的公開金鑰的簽章的相關資訊的簽章檔案F#的程式項目，例如類型、 命名空間和模組。
+description: 瞭解如何使用F#簽章檔案來保存一組F#程式元素的公用簽章相關資訊, 例如類型、命名空間和模組。
 ms.date: 06/15/2018
-ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c04ac8bf4ee360a2caa15be8f2bbea41105bd160
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770444"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627162"
 ---
 # <a name="signatures"></a>簽章
 
@@ -19,13 +19,13 @@ ms.locfileid: "61770444"
 
 簽章檔案描述對應實作檔案中的命名空間、模組、類型和成員。 您使用簽章檔案中的資訊，指定在對應的實作檔案中，哪些程式碼部分可以從實作檔案外部的程式碼存取，哪些部分從實作檔案內部的程式碼存取。 簽章檔案包含的命名空間、模組和類型，必須是實作檔案所包含之命名空間、模組和類型的子集。 加上本主題稍後列出的某些例外狀況，簽章檔案中沒有列出的那些語言項目會被實作檔案視為私用的。 如果專案或命令列中找不到簽章檔，會使用預設的協助工具。
 
-如需有關預設存取範圍的詳細資訊，請參閱 <<c0> [ 存取控制](access-control.md)。
+如需預設協助工具的詳細資訊, 請參閱[存取控制](access-control.md)。
 
 在簽章檔案中，不用重複類型定義以及每個方法或函式的實作。 而要使用每個方法和函式的簽章，做為模組或命名空間片段實作功能的完整規格。 類型簽章的語法與介面和抽象類別的抽象方法宣告中使用的語法一樣，當它正確顯示編譯的輸入時，也是由 IntelliSense 和 F# 解譯器 fsi.exe 顯示。
 
 如果類型簽章的資訊不足以指出類型是否已密封，或是否為介面類型，您就必須在編譯器中加入表示類型本質的屬性。 下表說明這種用途的屬性。
 
-|屬性|描述|
+|屬性|說明|
 |---------|-----------|
 |`[<Sealed>]`|用於沒有任何抽象成員的類型，或不應該擴充的類型。|
 |`[<Interface>]`|用於介面類型。|
@@ -56,15 +56,15 @@ ms.locfileid: "61770444"
 
 - 簽章及實作的參數模式 (也稱為 *Arity*) 必須一致。
 
-- 如果簽章檔案中的參數名稱與對應的實作檔案不同，簽章檔案中的名稱將用於相反地，這可能會造成偵錯或分析時的問題。 如果您想要的這類的不符警告 3218 專案檔中的啟用通知，或叫用編譯器時 (請參閱`--warnon`底下[編譯器選項](compiler-options.md))。
+- 如果簽章檔案中的參數名稱與對應的執行檔案不同, 則會改為使用簽章檔案中的名稱, 這可能會在進行偵錯工具或分析時造成問題。 如果您想要收到這類不符的通知, 請在您的專案檔中或叫用編譯器時啟用`--warnon`警告 3218 (請參閱[編譯器選項](compiler-options.md)底下)。
 
 下列程式碼範例顯示的簽章檔案範例，具有命名空間、模組、函式值和有適當屬性的類型簽章。 它也顯示對應的實作檔案。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9002.fs)]
 
 下列程式碼顯示實作檔案。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9001.fs)]
 
 ## <a name="see-also"></a>另請參閱
 

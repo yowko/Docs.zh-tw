@@ -1,17 +1,17 @@
 ---
-title: 遞迴函式：Rec 關鍵字
-description: 了解如何F#'rec' 關鍵字用以與 'let' 關鍵字定義遞迴函式。
+title: 遞迴函式:Rec 關鍵字
+description: 瞭解 ' rec F# ' 關鍵字如何與 ' let ' 關鍵字搭配使用, 以定義遞迴函數。
 ms.date: 05/16/2016
-ms.openlocfilehash: 86eaf1c8a5566d8b9cbc4dcb72f945e2497e5439
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7edaa7206b2109c7b1a405624b9b2330968f9c52
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645310"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630647"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>遞迴函式：Rec 關鍵字
+# <a name="recursive-functions-the-rec-keyword"></a>遞迴函式:Rec 關鍵字
 
-`rec`關鍵字可搭配使用`let`關鍵字來定義遞迴函式。
+`rec`關鍵字會`let`與關鍵字搭配使用, 以定義遞迴函數。
 
 ## <a name="syntax"></a>語法
 
@@ -30,24 +30,24 @@ function2-body
 
 ## <a name="remarks"></a>備註
 
-遞迴函式，呼叫本身的函式中明確地識別F#語言。 如此所定義的識別項可以在函式的範圍內。
+遞迴函式, 呼叫本身的函數會在F#語言中明確識別。 這會讓在函式的範圍中定義的識別碼可供使用。
 
-下列程式碼說明遞迴函式來計算*n*<sup>th</sup> Fibonacci 數字。
+下列程式碼說明一個遞迴函式, 它會計算<sup>第</sup> *n*個斐的量值。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 > [!NOTE]
-> 在實務上，類似上述程式碼是浪費資源的記憶體和處理器時間，因為它牽涉到先前的計算值的重新計算。
+> 實際上, 上述程式碼不會浪費記憶體和處理器時間, 因為它牽涉到先前計算值的重新計算。
 
-方法為隱含型別; 中的遞迴不需要將`rec`關鍵字。 在類別中的 let 繫結不會隱含地遞迴。
+方法在型別內隱含遞迴;不需要新增`rec`關鍵字。 類別內的 Let 系結不會隱含遞迴。
 
 ## <a name="mutually-recursive-functions"></a>相互遞迴函式
 
-函式的是有時*相互遞迴*，這表示呼叫表單的其中一個函式呼叫另一個會接著呼叫第一，使用任意多個呼叫之間的圓形。 您必須同時定義這類函式，在一個`let`繫結，使用`and`而連結在一起的關鍵字。
+有時候函式是*互斥*的, 這表示呼叫會形成圓形, 其中一個函式會呼叫另一個函式, 然後呼叫第一個函式, 而其間的呼叫數目則為。 您必須在一個`let`系結中定義這類函式, 並`and`使用關鍵字將它們連結在一起。
 
-下列範例示範兩個相互遞迴函式。
+下列範例顯示兩個相互遞迴的函式。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
 ## <a name="see-also"></a>另請參閱
 

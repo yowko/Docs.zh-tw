@@ -2,152 +2,152 @@
 title: F# 的教學課程
 description: 檢查一些 F# 程式設計語言，在此教學課程利用程式碼範例的主要功能。
 ms.date: 11/06/2018
-ms.openlocfilehash: 64394342777003b33dd77028739fb7209b9f3c86
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 35b811b580cd7c3b4a620f45b602150a92479052
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301260"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630066"
 ---
 # <a name="tour-of-f"></a>F 的教學課程\#
 
-若要了解 F# 的最佳方式是讀取和寫入 F# 程式碼。 這篇文章會做為某些 F# 語言的重要功能的逐步教學課程，並提供您一些您可以在您的電腦執行的程式碼片段。 若要了解如何設定開發環境，請參閱[開始使用](tutorials/getting-started/index.md)。
+若要了解 F# 的最佳方式是讀取和寫入 F# 程式碼。 這篇文章會做為某些 F# 語言的重要功能的逐步教學課程，並提供您一些您可以在您的電腦執行的程式碼片段。 若要瞭解如何設定開發環境, 請參閱[消費者入門](./tutorials/getting-started/index.md)。
 
-F# 中有兩個主要概念： 函式和類型。  本教學課程會強調它們屬於這兩個概念的語言功能。
+F# 中有兩個主要概念： 函式和類型。  本教學課程將強調屬於這兩個概念的語言功能。
 
-## <a name="executing-the-code-online"></a>執行線上程式碼
+## <a name="executing-the-code-online"></a>線上執行程式碼
 
-如果您沒有F#安裝在您的電腦上，您可以執行的所有範例使用瀏覽器中[嘗試F#上 WebAssembly](https://tryfsharp.fsbolero.io/)。 神鬼寓言是方言F#直接在您的瀏覽器中執行。 若要檢視的範例，請遵循在 REPL 中，請參閱**範例 > 深入了解 > 教學課程F#** 神鬼寓言 REPL 的左側功能表列中
+如果您的電腦F#上未安裝, 您可以使用[WebAssembly 上的 Try F# ](https://tryfsharp.fsbolero.io/)來執行瀏覽器中的所有範例。 Fable 是直接在您F#的瀏覽器中執行的方言。 若要查看複寫中接下來的範例, 請參閱**範例 > 瞭解F#**  Fable 複寫左側功能表列中的 > 導覽。
 
-## <a name="functions-and-modules"></a>函式和模組
+## <a name="functions-and-modules"></a>函數和模組
 
-任何的 F# 程式的最基本的部分是***函式***分成***模組***。  [函式](language-reference/functions/index.md)來產生輸出的輸入上執行的工作和其下組織[模組](language-reference/modules.md)，這是主要的方式分組在 F# 中的項目。  它們使用來定義[`let`繫結](language-reference/functions/let-bindings.md)，其中指定函式的名稱，並定義其引數。
+任何的 F# 程式的最基本的部分是***函式***分成***模組***。  [函式](./language-reference/functions/index.md)來產生輸出的輸入上執行的工作和其下組織[模組](./language-reference/modules.md)，這是主要的方式分組在 F# 中的項目。  它們是使用[ `let` ](./language-reference/functions/let-bindings.md)系結來定義, 這會提供函式名稱並定義其引數。
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let` 繫結也是您如何結合其值為名稱，類似於其他語言中的變數。  `let` 繫結***不可變***根據預設，這表示，值或函式繫結的名稱之後, 便無法變更就地。  相較之下，在其他語言中，也就是變數***可變***，這表示其值可以變更在任何時間點的時間。  如果您需要的可變動的繫結時，您可以使用`let mutable ...`語法。
+`let`系結也是您將值系結至名稱的方式, 類似于其他語言中的變數。  `let`系結預設為***不可變***, 這表示一旦值或函式系結至名稱, 就無法就地變更。  這與其他語言中的變數相反, 這是可變動的, 這表示它們的值可以在任何時間點變更。  如果您需要可變的系結, 您可以`let mutable ...`使用語法。
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
-## <a name="numbers-booleans-and-strings"></a>數字、 布林值和字串
+## <a name="numbers-booleans-and-strings"></a>數位、布林值和字串
 
-為.NET 語言，F# 支援相同的基礎[基本型別](language-reference/primitive-types.md)存在於.NET。
+為.NET 語言，F# 支援相同的基礎[基本型別](./language-reference/primitive-types.md)存在於.NET。
 
 以下是如何各種數值類型表示 F# 中：
 
 [!code-fsharp[Numbers](../../samples/snippets/fsharp/tour.fs#L49-L68)]
 
-以下是布林值，並執行基本的條件式邏輯如下所示：
+以下是布林值和執行基本條件式邏輯的樣子:
 
 [!code-fsharp[Bools](../../samples/snippets/fsharp/tour.fs#L142-L152)]
 
-以下是哪些 basic[字串](language-reference/strings.md)操作如下所示：
+以下是基本[字串](./language-reference/strings.md)操作的樣子:
 
 [!code-fsharp[Strings](../../samples/snippets/fsharp/tour.fs#L158-L180)]
 
 ## <a name="tuples"></a>Tuple
 
-[Tuple](language-reference/tuples.md)是 F# 中是什麼大問題。  也就是未命名，但已排序，可以視為值本身的值的群組。  將它們視為與其他值彙總的值。  它們有許多用途，例如方便地從函式傳回多個值，或群組的一些特定便利的值。
+[Tuple](./language-reference/tuples.md)是 F# 中是什麼大問題。  它們是未命名但已排序值的群組, 可視為值本身。  請將它們想成是從其他值匯總而來的值。  它們有許多用途, 例如方便地從函式傳回多個值, 或將值分組以進行特定的便利性。
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L186-L203)]
 
-自 F# 4.1，您也可以建立`struct`tuple。  這些也與交互操作完整 C# 7/Visual Basic 15 元組，這也是`struct`tuple:
+自 F# 4.1，您也可以建立`struct`tuple。  這些也會與 c # 7/Visual Basic 15 元組 (也`struct`就是元組) 完全交互操作:
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L205-L218)]
 
-請務必請注意，因為`struct`tuple 是實值型別，它們無法以隱含方式轉換成參考 tuple，反之亦然。  您必須明確轉換之間的參考和結構元組。
+請務必注意, 因為`struct`元組是實值型別, 所以不能隱含地轉換成參考元組, 反之亦然。  您必須在參考和結構元組之間明確轉換。
 
 ## <a name="pipelines-and-composition"></a>管線和組合
 
-透過管道傳送這類運算子`|>`廣泛處理 F# 中的資料時。 這些運算子都可讓您以有彈性的方式建立的函式為 「 管線 」 函式。 下列範例逐步解說如何使用這些運算子，來建置簡單的功能性管線的利用：
+透過管道傳送這類運算子`|>`廣泛處理 F# 中的資料時。 這些運算子是函數, 可讓您以彈性的方式建立函式的「管線」。 下列範例會逐步解說如何利用這些運算子來建立簡單的功能管線:
 
 [!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-先前所做的範例使用的許多功能的 F#，包括清單處理函式，第一級函式，並[部分的應用程式](language-reference/functions/index.md#partial-application-of-arguments)。 雖然每個這些概念的深入了解可以變得有點進階，應該很清楚如何輕鬆函式可用來建立管線時，處理資料。
+先前所做的範例使用的許多功能的 F#，包括清單處理函式，第一級函式，並[部分的應用程式](./language-reference/functions/index.md#partial-application-of-arguments)。 雖然深入瞭解每個概念可能會變得很重要, 但請清楚瞭解在建立管線時, 函數可以如何用來處理資料。
 
-## <a name="lists-arrays-and-sequences"></a>清單、 陣列和順序
+## <a name="lists-arrays-and-sequences"></a>清單、陣列和順序
 
 清單、 陣列和順序是 F# 核心程式庫中的三種主要集合類型。
 
-[列出](language-reference/lists.md)是相同型別的項目排序、 不可變的集合。  它們是單一連結清單中，這表示它們用於列舉型別，但不佳的選擇為隨機存取與串連很大時。  這相較於其他熱門的語言，通常不會使用單向連結清單來代表清單中的清單。
+[清單](./language-reference/lists.md)是相同類型之元素的已排序、不可變集合。  它們是單一連結的清單, 這表示它們是用來進行列舉, 但如果很大, 則不適合用于隨機存取和串連。  相較于其他熱門語言的清單, 通常不會使用單一連結的清單來表示清單。
 
 [!code-fsharp[Lists](../../samples/snippets/fsharp/tour.fs#L309-L359)]
 
-[陣列](language-reference/arrays.md)是固定大小*可變動*相同型別的元素的集合。  它們支援的項目，快速隨機存取，且速度比 F# 清單因為它們只是連續記憶體區塊。
+[陣列](./language-reference/arrays.md)是一種固定大小  、可變動的元素集合, 屬於相同類型的專案。  它們支援的項目，快速隨機存取，且速度比 F# 清單因為它們只是連續記憶體區塊。
 
 [!code-fsharp[Arrays](../../samples/snippets/fsharp/tour.fs#L368-L407)]
 
-[序列](language-reference/sequences.md)是一連串的項目，相同類型的所有邏輯。  這些是較普通的類型，比清單和陣列，在任何邏輯的一系列項目您 「 檢視 」。  它們也凸顯因為他們可***延遲***，這表示只有在需要時，您可以計算項目。
+[序列](./language-reference/sequences.md)是專案的邏輯系列, 全都是相同的類型。  這些是比清單和陣列更一般的類型, 可以將您的「視圖」放入任何邏輯專案序列中。  它們也會脫穎而出, 因為它們可能是***延遲***的, 也就是說, 只有在需要時才會計算元素。
 
 [!code-fsharp[Sequences](../../samples/snippets/fsharp/tour.fs#L418-L452)]
 
 ## <a name="recursive-functions"></a>遞迴函式
 
-處理集合或序列的項目通常是使用[遞迴](language-reference/functions/index.md#recursive-functions)F# 中。  雖然 F# 提供 for 迴圈和命令式程式設計的支援，但遞迴建議，因為很容易就能保證正確性。
+處理集合或序列的項目通常是使用[遞迴](./language-reference/functions/index.md#recursive-functions)F# 中。  雖然 F# 提供 for 迴圈和命令式程式設計的支援，但遞迴建議，因為很容易就能保證正確性。
 
 > [!NOTE]
-> 下列範例會使用透過模式比對`match`運算式。  本文章稍候會說明這個基本建構。
+> 下列範例會使用透過`match`運算式的模式比對。  本文稍後將討論此基本結構。
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 
 F# 也有完整支援 Tail 呼叫最佳化，這是一種最佳化，使其只是最快的速度迴圈建構的遞迴呼叫。
 
-## <a name="record-and-discriminated-union-types"></a>記錄和差別聯集類型
+## <a name="record-and-discriminated-union-types"></a>記錄和區分聯集類型
 
-記錄和等位型別中 F# 程式碼，使用兩種基本資料類型，通常的最佳方式來表示 F# 程式中的資料。  雖然這可讓它們與類別類似其他語言中，其主要差異是它們具有結構相等語意。  也就是說，它們是 「 原生 」 比較，相等相當簡單： 只檢查其中一個是否等於其他。
+記錄和等位型別中 F# 程式碼，使用兩種基本資料類型，通常的最佳方式來表示 F# 程式中的資料。  雖然這會使它們類似于其他語言中的類別, 但其中一個主要差異在於它們有結構相等的語義。  這表示它們是「原生」的可比較和相等, 只需檢查其中一個是否等於另一個。
 
-[記錄](language-reference/records.md)會與選擇性成員 （例如方法） 的具名值的彙總。  如果您熟悉使用 C# 或 Java，然後這些應該感覺很像 Poco 或 Pojo-只與結構相等，並降低繁瑣細節。
+[記錄](./language-reference/records.md)是已命名值的匯總, 具有選擇性成員 (例如方法)。  如果您熟悉C#或 JAVA, 則這些內容應該類似于 Poco 或 pojo, 只是結構化的相等和較少的儀式。
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
-自 F# 4.1，您也可以代表記錄當做`struct`s。  做法是使用`[<Struct>]`屬性：
+自 F# 4.1，您也可以代表記錄當做`struct`s。  這會透過`[<Struct>]`屬性來完成:
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L561-L568)]
 
-[差別聯集 (DUs)](language-reference/discriminated-unions.md)是可能在多個具名的表單或案例的值。  類型中儲存的資料可以是數個相異值的其中一個。
+[區分等位 (DUs)](./language-reference/discriminated-unions.md)是可能是一些命名表單或案例的值。  儲存在類型中的資料可以是數個相異值的其中一個。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L575-L631)]
 
-您也可以使用為 DUs*單一案例差別聯集*，以協助進行基本類型的模型化的網域。  經常、 字串和其他基本型別用來代表項目，並因此會提供特定的意義。  不過，使用資料的基本表示法可能會導致錯誤地指派值不正確 ！  代表每一個不同的單一案例聯集的資訊類型，可以強制執行在此案例中的正確性。
+您也可以使用 DUs 作為*單一案例的區分等位*, 以協助透過基本型別進行領域模型化。  通常會使用字串和其他基本型別來代表某個專案, 因此會提供特定意義。  不過, 只使用資料的基本標記法可能會造成錯誤地指派不正確的值!  將每一種類型的資訊表示為不同的單一案例聯集, 可以在此案例中強制執行正確性。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L633-L654)]
 
-如上述範例所示，若要取得基礎值的單一案例差別聯集，您必須明確 unwrap。
+如上述範例所示, 若要取得單一案例的區分等位中的基礎值, 您必須明確地將它解除包裝。
 
-此外，DUs 也支援遞迴定義，可讓您輕鬆地代表樹狀結構和原本就是遞迴的資料。  例如，以下是可以代表使用二進位搜尋樹狀結構的方式`exists`和`insert`函式。
+此外, DUs 也支援遞迴定義, 可讓您輕鬆地表示樹狀結構和原本就遞迴的資料。  例如, 以下說明如何使用`exists`和`insert`函式來表示二進位搜尋樹狀目錄。
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L656-L683)]
 
-DUs 可讓您代表遞迴結構的樹狀目錄中的資料類型，因為此遞迴結構上操作很簡單，可確保正確性。  它也支援在模式比對，如下所示。
+由於 DUs 可讓您以資料類型表示樹狀結構的遞迴結構, 因此在此遞迴結構上操作十分簡單, 並保證正確性。  模式比對也支援, 如下所示。
 
-此外，您可以在這裡表示為 DUs`struct`與`[<Struct>]`屬性：
+此外, 您可以`struct` `[<Struct>]`使用屬性來將 DUs 表示為:
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L685-L696)]
 
-不過，有兩個要這麼做時，牢記在心的重要事項：
+不過, 在這麼做時, 有兩個重要的事項要牢記在心:
 
-1. 結構 DU 不得以遞迴方式定義。
-2. 結構 DU 必須有它的情況下的每個唯一的名稱。
+1. 結構 DU 無法以遞迴方式定義。
+2. 結構 DU 的每一個案例都必須有唯一的名稱。
 
-遵循上述的失敗會導致編譯錯誤。
+如果無法遵循上述動作, 將會導致編譯錯誤。
 
 ## <a name="pattern-matching"></a>模式比對
 
-[模式比對](language-reference/pattern-matching.md)是 F# 語言功能，可讓 F# 類型上操作的正確性。  在上述範例中，您可能已經注意到一堆`match x with ...`語法。  此建構可讓編譯器，這可以了解資料類型，若要強制您處理所有可能的情況下，使用透過已知的資料類型為詳盡的模式比對時的 「 形狀 」。  這是非常強大的正確性，並可以巧妙地用來 「 上移 」 項目通常會為編譯時間是執行階段問題。
+[模式比對](./language-reference/pattern-matching.md)是 F# 語言功能，可讓 F# 類型上操作的正確性。  在上述範例中, 您可能已注意到相當多`match x with ...`的語法。  此結構可讓編譯器 (可以瞭解資料類型的「圖形」) 在使用資料類型時, 透過所謂的完整模式比對來強制您考慮所有可能的情況。  這在正確性方面非常強大, 而且可以應變用來「增益」通常會在編譯時期發生的執行時間問題。
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
 
-您可能已經發現的項目，就是使用`_`模式。  這就所謂[萬用字元模式](language-reference/pattern-matching.md#wildcard-pattern)，這是一種說: 「 我不用管事物 」。  雖然很方便，您可以不小心略過詳盡的模式比對，如果您不小心使用，不會再受益編譯時期強制`_`。  它最適合在您不在意特定資訊的分解的型別已列舉所有有意義的情況下的模式比對運算式時，當模式比對或最後一個子句。
+您可能已經注意到, 使用`_`模式。  這就是所謂的[萬用字元模式](./language-reference/pattern-matching.md#wildcard-pattern), 這是一個指出「我不在意什麼東西」的方法。  雖然方便, 但如果您不小心使用`_`, 可以不小心略過完整的模式比對, 而不再受益于編譯時期實行原則。  在模式比對時, 如果您不在意分解類型的特定片段, 或當您在模式比對運算式中列舉了所有有意義的案例時, 最好使用此方式。
 
-[作用中的模式](language-reference/active-patterns.md)是另一個功能強大的建構函式來使用模式比對。  可讓您輸入的資料分割成自訂的表單，將它們分解在模式比對呼叫站台。  它們可以也進行參數化，因此資料分割定義為函式。  展開上一個範例是為了支援作用中的模式看起來像這樣：
+[現用模式](./language-reference/active-patterns.md)是另一個搭配模式比對使用的強大結構。  它們可讓您將輸入資料分割成自訂表單, 並在模式比對呼叫位置分解它們。  它們也可以參數化, 因此可讓將資料分割定義為函數。  展開先前的範例以支援現用模式看起來像這樣:
 
 [!code-fsharp[ActivePatterns](../../samples/snippets/fsharp/tour.fs#L764-L786)]
 
-## <a name="optional-types"></a>選擇性的類型
+## <a name="optional-types"></a>選擇性類型
 
 差別聯集類型的其中一個特殊案例是選項類型，這很有用，它是 F# 核心程式庫的一部分。
 
-[選項類型](language-reference/options.md)是型別代表兩個案例之一： 某個值，或在所有執行任何動作。  它可在任何案例中，值可能會或可能不會造成從特定作業。  這會強制您處理這兩種情況，因此編譯時間需要考量，而不是執行階段問題。  這些通常在 Api 中使用其中`null`用來表示"nothing"相反的而無需擔心`NullReferenceException`在許多情況下。
+[選項類型](./language-reference/options.md)是代表兩個案例之一的類型: 值, 或完全沒有。  在任何情況下, 如果值不一定是由特定作業所產生, 就會使用它。  這會強制您將這兩種情況都列入考慮, 使其成為編譯時期的考慮, 而不是執行時間的顧慮。  這些通常用於用來代表「 `null`無」的 api, 因此`NullReferenceException`在許多情況下都不需要擔心。
 
 [!code-fsharp[Options](../../samples/snippets/fsharp/tour.fs#L789-L814)]
 
@@ -155,44 +155,44 @@ DUs 可讓您代表遞迴結構的樹狀目錄中的資料類型，因為此遞�
 
 F# 型別系統的一項獨特功能是能夠透過單位的量值的數值常值的提供內容。
 
-[測量單位](language-reference/units-of-measure.md)可讓您建立一個單位，計量，例如數值類型的關聯，並有函式上執行的工作單位，而不是數值常值。  這可讓編譯器無法驗證傳入的數值常值的類型在某些環境下合理，因此減少執行階段錯誤相關聯的工作，該類型。
+[測量單位](./language-reference/units-of-measure.md)可讓您建立數數值型別與單位 (例如計量) 的關聯, 並讓函式在單位上執行工作, 而不是數值常值。  這可讓編譯器確認傳入的數值常數值型別在特定內容之下有意義, 因而排除與該類型工作相關聯的執行階段錯誤。
 
 [!code-fsharp[UnitsOfMeasure](../../samples/snippets/fsharp/tour.fs#L817-L842)]
 
-F# 核心程式庫會定義許多的 SI 單位類型和單位轉換。  若要進一步了解，請參閱[Microsoft.FSharp.Data.UnitSystems.SI 命名空間](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d)。
+F# 核心程式庫會定義許多的 SI 單位類型和單位轉換。  若要深入瞭解, 請參閱[Microsoft.FSharp.Data.UnitSystems.SI 命名空間](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d)。
 
 ## <a name="classes-and-interfaces"></a>類別和介面
 
-F# 也有完整的支援，.NET 類別[介面](language-reference/interfaces.md)，[抽象類別](language-reference/abstract-classes.md)，[繼承](language-reference/inheritance.md)，依此類推。
+F# 也有完整的支援，.NET 類別[介面](./language-reference/interfaces.md)，[抽象類別](./language-reference/abstract-classes.md)，[繼承](./language-reference/inheritance.md)，依此類推。
 
-[類別](language-reference/classes.md)是.NET 物件，表示型別且可以包含屬性、 方法和事件中的當做其[成員](language-reference/members/index.md)。
+[類別](./language-reference/classes.md)是代表 .net 物件的類型, 可以有屬性、方法和事件做為其[成員](./language-reference/members/index.md)。
 
 [!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L845-L880)]
 
-定義泛型類別也是非常簡單。
+定義泛型類別也非常簡單。
 
 [!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L883-L908)]
 
-若要實作的介面，您可以使用`interface ... with`語法或[物件運算式](language-reference/object-expressions.md)。
+若要執行介面, 您可以使用`interface ... with`語法或[物件運算式](./language-reference/object-expressions.md)。
 
 [!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L911-L934)]
 
-## <a name="which-types-to-use"></a>若要使用哪些類型
+## <a name="which-types-to-use"></a>要使用的類型
 
-類別、 記錄、 差別聯集和 Tuple 的存在會產生重要的問題： 您應該使用？  大部分所有項目在生活中，例如答案需視您的情況。
+類別、記錄、區分等位和元組的存在會導致一個重要的問題: 您應該使用哪一項？  就像生活中的大部分專案一樣, 答案取決於您的情況。
 
-Tuple 是適用於從函式傳回多個值，以及使用特定彙總的值做為值本身。
+元組非常適合用來從函式傳回多個值, 並使用值的臨機操作匯總作為值本身。
 
-記錄會 「 步驟向上 」 的標籤和支援選擇性的成員具有名為的 Tuple。  它們是適合用來傳輸資料到您的程式的低儀式表示法。  他們有結構相等，因為它們是容易使用的比較。
+記錄是來自元組的「逐步執行」, 具有選擇性成員的命名標籤和支援。  它們非常適合用來透過您的程式進行傳輸中的資料的低人。  因為它們的結構相等, 所以比較容易使用。
 
-差別聯的集有許多用途，但核心優勢能夠使用它們搭配模式比對來處理所有可能 「 圖形 」 可以有資料。  
+區分聯集有許多用途, 但核心優點是能夠將它們與模式比對搭配使用, 以考慮資料可擁有的所有可能「圖形」。  
 
-類別是適合大量的原因，例如當您需要代表資訊也將繫結該功能的資訊。  根據經驗法則，當您有功能可在概念上會繫結至一些資料，使用類別和物件導向程式設計的原則是一大優點。  類別也會慣用的資料型別時使用 C# 和 Visual Basic 中，因為這些語言的幾乎所有的作業使用類別。
+類別非常適用于許多因素, 例如當您需要表示資訊, 以及將該資訊系結至功能時。  根據經驗法則, 當您具有概念上與某些資料系結的功能時, 使用類別和麵向物件程式設計的原則是一個很大的好處。  當與C#和 Visual Basic 交互操作時, 類別也是慣用的資料類型, 因為這些語言幾乎都是使用類別。
 
 ## <a name="next-steps"></a>後續步驟
 
-既然您已了解的一些主要功能的語言，您應該準備好開始撰寫第一個 F# 程式 ！  請參閱[開始使用](tutorials/getting-started/index.md)以了解如何設定開發環境，並撰寫一些程式碼。
+既然您已了解的一些主要功能的語言，您應該準備好開始撰寫第一個 F# 程式 ！  查看[消費者入門](./tutorials/getting-started/index.md)以瞭解如何設定您的開發環境, 並撰寫一些程式碼。
 
-深入了下的一步可以是任何您喜歡，但我們建議您[中的功能性程式設計簡介F#](introduction-to-functional-programming/index.md)熟悉核心功能性程式設計概念。  這些會在建置強固的程式，在 F# 不可或缺。
+進一步瞭解的後續步驟可以是您喜歡的任何方式, 但我們建議您[在中F#進行功能程式設計的簡介](./introduction-to-functional-programming/index.md), 以熟悉核心功能程式設計概念。  這些會在建置強固的程式，在 F# 不可或缺。
 
-此外，請參閱[F# 語言參考](language-reference/index.md)在 F# 中看到完整的概念性內容。
+此外，請參閱[F# 語言參考](./language-reference/index.md)在 F# 中看到完整的概念性內容。

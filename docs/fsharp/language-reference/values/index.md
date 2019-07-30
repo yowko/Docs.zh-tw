@@ -1,13 +1,13 @@
 ---
 title: 值
-description: 了解如何在值F#是具有特定類型的數量。
+description: 瞭解中F#的值如何具有特定類型的數量。
 ms.date: 05/16/2016
-ms.openlocfilehash: fe87bb568591b862737456ff92ba202ba7795e3d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed7a5b069a5a47aacf0cce4cfa754ded46f6e84a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641622"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630794"
 ---
 # <a name="values"></a>值
 
@@ -15,13 +15,13 @@ F# 中的值是具有特定類型的數量；值可以是整數或浮點數、�
 
 ## <a name="binding-a-value"></a>繫結值
 
-「繫結」一詞表示建立名稱與定義的關聯。 `let` 關鍵字會繫結值，如下列範例所示：
+「繫結」  一詞表示建立名稱與定義的關聯。 `let` 關鍵字會繫結值，如下列範例所示：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
 值的類型是從定義推斷的。 若為基本類型 (例如整數或浮點數)，則是從常值的類型來決定類型。 因此，在上述範例中，編譯器推斷 `b` 的類型是 `unsigned int`，而推斷 `a` 的類型是 `int`。 函式值的類型是從函式主體中的傳回值決定。 如需函式值類型的詳細資訊，請參閱[函式](../functions/index.md)。 如需常值型別的詳細資訊，請參閱[常值](../literals.md)。
 
-根據預設，編譯器不會發出有關未使用的繫結的診斷。 若要接收這些訊息，啟用警告 1182年，專案檔中，或叫用編譯器時 (請參閱`--warnon`底下[編譯器選項](../compiler-options.md))。
+根據預設, 編譯器不會針對未使用的系結髮出診斷。 若要接收這些訊息, 請在您的專案檔中或叫用編譯器時啟用`--warnon`警告 1182 (請參閱[編譯器選項](../compiler-options.md)底下)。
 
 ## <a name="why-immutable"></a>使用不可變的原因
 
@@ -37,15 +37,15 @@ F# 不是純函式語言，但完全支援函式程式設計。 使用不可變�
 
 您可以透過與定義值相同的方式使用 `let` 關鍵字，將初始值指派給可變變數。 不過，差異在於後續可以透過 `<-` 運算子將新值指派給可變變數，如下列範例所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
 
-值標示`mutable`可能會自動升級為`'a ref`如果由 closure 擷取，包括建立 closure，例如的形式`seq`產生器。 如果您想要在發生這種情況時收到通知，啟用警告 3180 叫用編譯器時，或在您的專案檔。
+標示`mutable`的值可能會自動升`'a ref`階為 (如果被關閉所捕捉), 包括建立像`seq`是產生器等的表單。 如果您想要在發生這種情況時收到通知, 請在您的專案檔中或叫用編譯器時啟用警告3180。
 
 ## <a name="related-topics"></a>相關主題
 
 |標題|描述|
 |-----|-----------|
-|[let 繫結](../functions/let-bindings.md)|提供有關使用資訊`let`關鍵字將名稱繫結至值和函式。|
+|[let 繫結](../functions/let-bindings.md)|提供使用關鍵字將名稱`let`系結至值和函數的相關資訊。|
 |[函式](../functions/index.md)|提供 F# 函式的概觀。|
 
 ## <a name="see-also"></a>另請參閱

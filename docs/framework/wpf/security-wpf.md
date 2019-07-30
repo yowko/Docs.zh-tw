@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400786"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629806"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>開發 Windows Presentation Foundation (WPF) 獨立和瀏覽器裝載的應用程式時, 您必須考慮安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式會以不受限制的許可權 (CAS**FullTrust**許可權集合) 執行, 不論是使用 Windows Installer (.msi)、XCopy 或 ClickOnce 部署。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過, 完全信任的主應用程式可以使用 .NET Framework 增益集模型<xref:System.AppDomain>來建立部分信任。 如需詳細資訊, 請參閱[WPF 增益集總覽](./app-development/wpf-add-ins-overview.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "68400786"
 ## <a name="safe-navigation"></a>安全巡覽  
  針對[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] ,[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]區分兩種類型的流覽: 應用程式和瀏覽器。  
   
- 「應用程式巡覽」是瀏覽器所裝載之應用程式的內容項目間的巡覽。 「瀏覽器巡覽」是變更瀏覽器本身的內容和位置 URL 的巡覽。 下圖顯示應用程式導覽 (通常是 XAML) 和瀏覽器導覽 (通常是 HTML) 之間的關聯性:
+ 「應用程式巡覽」  是瀏覽器所裝載之應用程式的內容項目間的巡覽。 「瀏覽器巡覽」  是變更瀏覽器本身的內容和位置 URL 的巡覽。 下圖顯示應用程式導覽 (通常是 XAML) 和瀏覽器導覽 (通常是 HTML) 之間的關聯性:
   
  ![應用程式導覽與瀏覽器導覽之間的關聯性。](./media/security-wpf/application-browser-navigation-relationship.png)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68400786"
 ### <a name="application-navigation-security"></a>應用程式巡覽安全性  
  如果可以使用支援四種內容類型的套件[!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)]識別應用程式, 則會將它視為安全:  
   
-|內容類型|說明|URI 範例|  
+|內容類型|描述|URI 範例|  
 |------------------|-----------------|-----------------|  
 |資源|新增至組建類型為**資源**之專案的檔案。|`pack://application:,,,/MyResourceFile.xaml`|  
 |內容|新增至專案的檔案, 其組建類型為**Content**。|`pack://application:,,,/MyContentFile.xaml`|  
@@ -216,9 +216,9 @@ ms.locfileid: "68400786"
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>停用部分信任用戶端應用程式的 APTCA 組件  
- 當 managed 元件安裝到[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]時, 它們會變成完全信任, 因為使用者必須提供明確的許可權才能進行安裝。 因為它們完全受信任，所以只有完全受信任的受管理用戶端應用程式才能使用它們。 若要允許部分信任的應用程式使用它們, 則必須以<xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) 標記。 只有經過測試可在部分信任中安全執行的組件才應該標記這個屬性。  
+ 當 managed 元件安裝到全域組件快取 (GAC) 時, 它們會變成完全信任, 因為使用者必須提供明確的許可權才能進行安裝。 因為它們完全受信任，所以只有完全受信任的受管理用戶端應用程式才能使用它們。 若要允許部分信任的應用程式使用它們, 則必須以<xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) 標記。 只有經過測試可在部分信任中安全執行的組件才應該標記這個屬性。  
   
- 不過, APTCA 元件可能會在安裝到[!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]之後出現安全性缺陷。 發現安全性缺陷之後，組件發行者可以產生安全性更新來修正現有安裝上的問題，以及防止在發現問題之後可能進行的安裝。 雖然解除安裝組件可能會中斷其他使用組件的完全信任用戶端應用程式，但是更新的其中一個選項是解除安裝組件。  
+ 不過, APTCA 元件可能會在安裝到 GAC 後出現安全性缺陷。 發現安全性缺陷之後，組件發行者可以產生安全性更新來修正現有安裝上的問題，以及防止在發現問題之後可能進行的安裝。 雖然解除安裝組件可能會中斷其他使用組件的完全信任用戶端應用程式，但是更新的其中一個選項是解除安裝組件。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供一種機制, 可讓 aptca 元件停用部分信任[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] , 而不需要卸載 aptca 元件。  
   

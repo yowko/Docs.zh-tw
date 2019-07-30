@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: ee260d58cdb4dc971fc32ca5c889b459b6a48489
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484731"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629892"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>在 WPF 中裝載 Win32 內容
 
@@ -48,11 +48,11 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 
 但假設程式[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]代碼並不是完全獨立的嗎？ 若是如此, 您可以建立[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]對話方塊, 並將其內容內嵌至較大[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的應用程式。 此範例會在[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]和C++中顯示這個, 不過也可以使用不同的語言或在命令列執行此動作。
 
-從編譯成C++ [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]專案的簡單對話方塊開始。
+從簡單的對話方塊開始, 它會編譯成C++ DLL 專案。
 
 接下來, 將對話方塊引入較大[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的應用程式:
 
-- 將[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]編譯為 managed (`/clr`)
+- 將 DLL 編譯為 managed (`/clr`)
 
 - 將對話變成控制項
 
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-在這裡, 您`CreateDialog`會使用來建立實際上是控制項的對話方塊。 因為這是在內[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]呼叫的第一個方法, 所以您也應該呼叫稍後定義的函式來進行一些標準[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]初始化, 稱為`InitializeGlobals()`:
+在這裡, 您`CreateDialog`會使用來建立實際上是控制項的對話方塊。 因為這是在 DLL 內呼叫的第一個方法, 所以您也應該呼叫稍後定義[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]的函式來進行一些標準初始化, 稱為: `InitializeGlobals()`
 
 ```cpp
 bool initialized = false;

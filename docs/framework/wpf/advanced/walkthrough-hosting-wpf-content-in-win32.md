@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 3a0a6d09fe34fed9f5b0d353252461fdffbeb5e1
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 9ab046c6f7c070ade9d3e474309b33afbf78370e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484626"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629644"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>逐步解說：將 WPF 內容裝載在 Win32 中
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能加入應用程式，可能會比重寫原始程式碼更有效率。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供直接[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]在視窗中裝載內容的機制。  
@@ -58,7 +58,7 @@ ms.locfileid: "68484626"
 8. 使用儲存在靜態欄位中的參考來設定屬性等等，以與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容通訊。  
   
 > [!NOTE]
->  您也可以使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]來[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]執行內容。 不過，您必須另外將它編譯成 [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]，並從 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 應用程式參考該 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]。 此程序的其餘部分與上述類似。
+>  您也可以使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]來[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]執行內容。 不過, 您必須個別將它編譯為動態連結程式庫 (DLL), 並從您[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]的應用程式參考該 DLL。 此程序的其餘部分與上述類似。
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>實作主應用程式
@@ -77,9 +77,9 @@ ms.locfileid: "68484626"
 ### <a name="the-basic-application"></a>基本應用程式
  主應用程式的起點是建立 Visual Studio 2005 範本。
 
-1. 開啟 Visual Studio 2005, 然後從 [檔案] 功能表選取 [**新增專案**]。
+1. 開啟 Visual Studio 2005, 然後從 [檔案] 功能表  選取 [**新增專案**]。
 
-2. 從 [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]專案類型清單中選取 [Win32]。 如果您的預設語言不C++是, 您會在 [**其他語言**] 底下找到這些專案類型。
+2. 從  [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]專案類型清單中選取 [Win32]。 如果您的預設語言不C++是, 您會在 [**其他語言**] 底下找到這些專案類型。
 
 3. 選取 [ **Win32 專案**] 範本, 將名稱指派給專案, 然後按一下 **[確定]** 以啟動 [ **Win32 應用程式精靈]** 。
 
@@ -91,7 +91,7 @@ ms.locfileid: "68484626"
 
 - 視窗，具有相關聯的視窗程序 (WndProc)。
 
-- 具有 [檔案 ] 和 [說明] 標題的功能表。 [ 檔案] 功能表有一個結束專案, 可關閉應用程式。 [ 說明] 功能表有一個 [**關於**] 專案, 可啟動簡單的對話方塊。
+- 具有 [檔案  ] 和  [說明] 標題的功能表。 [檔案] 功能表有  一個結束專案, 可關閉應用程式。 [說明] 功能表有一個 [**關於**] 專案, 可啟動簡單的對話方塊。
 
  在您開始撰寫程式碼來裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容之前, 您必須先對基本範本進行兩個修改。
 
@@ -129,7 +129,7 @@ ms.locfileid: "68484626"
 
  您無法直接在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式視窗中裝載內容。 相反地，您要先建立 <xref:System.Windows.Interop.HwndSource> 物件來包裝 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容。 此物件基本上是設計用來裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容的視窗。 您可以將<xref:System.Windows.Interop.HwndSource>物件裝載在父視窗中, 方法是將它建立為[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式一部分之視窗的子系。 <xref:System.Windows.Interop.HwndSource> 建構函式參數所包含的資訊，與您建立 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 子視窗時，傳遞至 CreateWindow 的資訊類似。
 
- 接下來, 您要建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content 物件的實例。 在此情況下, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會使用C++/cli 將內容實作為個別`WPFPage`的類別。 您也可以使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 來實作 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 內容。 不過, 若要這樣做, 您需要設定個別的專案, 並將[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容建立[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]為。 您可以將該 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 的參考加入您的專案，並使用該參考來建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的執行個體。
+ 接下來, 您要建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content 物件的實例。 在此情況下, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會使用C++/cli 將內容實作為個別`WPFPage`的類別。 您也可以使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 來實作 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 內容。 不過, 若要這樣做, 您需要設定個別的專案, 並將[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容建立為 DLL。 您可以將該 DLL 的參考新增至您的專案, 並使用該參考來建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容的實例。
 
  您可以將[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容的參考[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Interop.HwndSource.RootVisual%2A>指派給的屬性<xref:System.Windows.Interop.HwndSource>, 以在子視窗中顯示內容。
 
@@ -155,7 +155,7 @@ ms.locfileid: "68484626"
 
  [!code-cpp[Win32HostingWPFPage#WPFButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wpfbuttonclicked)]
 
- 處理常式會從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容 `MyPageEventArgs` 接收自訂事件引數物件。 如果按一下 [ `IsOK` **確定]** 按鈕, `true`則物件的屬性會設定為,  如果按一下[取消]按鈕,則`false`為。
+ 處理常式會從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容 `MyPageEventArgs` 接收自訂事件引數物件。 如果按一下 [ `IsOK` **確定]** 按鈕, `true`則物件的屬性會設定為, 如果按一下[取消]按鈕,則`false`為。
 
  如果按一下 [**確定]** 按鈕, 處理常式就[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會從容器類別取得內容的參考。 然後它會收集由相關聯的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容屬性所保存的使用者資訊，並使用靜態控制項，將資訊顯示在父視窗上。 因為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容資料是使用 Managed 字串的形式，它必須經過封送處理，以供 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 控制項使用。 如果按一下 [**取消**] 按鈕, 處理常式會清除靜態控制項中的資料。
 
@@ -167,7 +167,7 @@ ms.locfileid: "68484626"
 
 <a name="implementing_the_wpf_page"></a>
 ## <a name="implementing-the-wpf-page"></a>實作 WPF 頁面
- 您可以裝載和使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容, 而不需要瞭解實際的執行。 如果內容已封裝在不同[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]的中, 它可能是以任何 common language runtime (CLR) 語言建立。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 以下是範例中所C++使用之/cli 執行的簡短逐步解說。 本節包含下列小節。
+ 您可以裝載和使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容, 而不需要瞭解實際的執行。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]如果內容已封裝在個別的 DLL 中, 則可能已建立任何 common language runtime (CLR) 語言。 以下是範例中所C++使用之/cli 執行的簡短逐步解說。 本節包含下列小節。
 
 <a name="autoNestedSectionsOUTLINE2"></a>
 - [版面配置](#page_layout)

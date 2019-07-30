@@ -8,64 +8,68 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 40605d4843bfccf9d2819b3ec6f2ef65f9e9cf9a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3758f17634395236abf2cd7059418bf6f8b6c062
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661318"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630929"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
-指定呼叫程序時，可以省略程序引數。  
-  
-## <a name="remarks"></a>備註  
- 每一個選擇性的參數，您必須指定該參數的預設值的常數運算式。 如果運算式評估為[Nothing](../../../visual-basic/language-reference/nothing.md)，值的資料類型的預設值做為參數的預設值。  
-  
- 如果參數清單包含選擇性參數，便會跟隨它的每個參數也必須是選擇性。  
-  
- `Optional` 修飾詞可用於以下內容：  
-  
-- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
-  
-- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
-- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
-- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+
+指定在呼叫程式時, 可以省略程式引數。
+
+## <a name="remarks"></a>備註
+
+針對每個選擇性參數, 您必須指定常數運算式做為該參數的預設值。 如果運算式評估為 [[無](../../../visual-basic/language-reference/nothing.md)], 則會使用 value 資料類型的預設值做為參數的預設值。
+
+如果參數清單包含選擇性參數, 則後面的每個參數也必須是選擇性的。
+
+          `Optional` 修飾詞可用於以下內容：
+
+- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
+
+- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 > [!NOTE]
->  呼叫程序時使用或不含選擇性參數，您可以依位置或依名稱傳遞引數。 如需詳細資訊，請參閱 <<c0> [ 傳遞引數依位置和名稱](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)。  
-  
+> 呼叫含有或不含選擇性參數的程式時, 您可以依位置或名稱傳遞引數。 如需詳細資訊, 請參閱[依位置和名稱傳遞引數](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)。
+
 > [!NOTE]
->  您也可以使用多載，以定義與選擇性參數的程序。 如果您有一個選擇性參數，您可以定義兩個程序，一個可接受的參數，其中並不多載的版本。 如需詳細資訊，請參閱 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例會定義具有一個選擇性參數的程序。  
-  
-```  
-Public Function FindMatches(ByRef values As List(Of String),  
-                            ByVal searchString As String,  
-                            Optional ByVal matchCase As Boolean = False) As List(Of String)  
-  
-    Dim results As IEnumerable(Of String)  
-  
-    If matchCase Then  
-        results = From v In values  
-                  Where v.Contains(searchString)  
-    Else  
-        results = From v In values  
-                  Where UCase(v).Contains(UCase(searchString))  
-    End If  
-  
-    Return results.ToList()  
-End Function  
-```  
-  
-## <a name="example"></a>範例  
- 下列範例示範如何呼叫程序，使用依位置傳遞的引數，並以依名稱傳遞的引數。 程序中的兩個選擇性參數。  
-  
- [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]  
-  
+> 您也可以使用多載來定義具有選擇性參數的程式。 如果您有一個選擇性參數, 您可以定義程式的兩個多載版本, 一個會接受參數, 另一個則不會。 如需詳細資訊，請參閱 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)。
+
+## <a name="example"></a>範例
+
+下列範例會定義具有選擇性參數的程式。
+
+```vb
+Public Function FindMatches(ByRef values As List(Of String),
+                            ByVal searchString As String,
+                            Optional ByVal matchCase As Boolean = False) As List(Of String)
+
+    Dim results As IEnumerable(Of String)
+
+    If matchCase Then
+        results = From v In values
+                  Where v.Contains(searchString)
+    Else
+        results = From v In values
+                  Where UCase(v).Contains(UCase(searchString))
+    End If
+
+    Return results.ToList()
+End Function
+```
+
+## <a name="example"></a>範例
+
+下列範例示範如何呼叫具有由位置傳遞的引數, 以及以名稱傳遞之引數的程式。 此程式有兩個選擇性參數。
+
+[!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
+
 ## <a name="see-also"></a>另請參閱
 
 - [參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)

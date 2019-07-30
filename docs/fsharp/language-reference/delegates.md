@@ -1,17 +1,17 @@
 ---
 title: 委派
-description: 了解如何在使用中的委派F#。
+description: 瞭解如何在中F#使用委派。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0596b67530b0399df41dffdf855a07bce2bf4761
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 65875897d5fc4b2ac66f1dfbe913f29fb74137cd
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641977"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630364"
 ---
 # <a name="delegates"></a>委派
 
-委派為物件，表示函式呼叫。 在F#，您通常應該使用函式值來表示函式做為第一級值;不過，委派會在.NET Framework 和您預期的 Api 與交互操作時，因此需要。 此外，它們也可能使用專為撰寫的程式庫會使用從其他.NET Framework 語言時。
+委派代表當做物件的函式呼叫。 在F#中, 您通常應該使用函式值來將函式表示為第一類的值;不過, 委派會在 .NET Framework 中使用, 因此當您與預期它們的 Api 互通時, 需要用到。 撰寫專供其他 .NET Framework 語言使用的程式庫時, 也可能會使用它們。
 
 ## <a name="syntax"></a>語法
 
@@ -21,21 +21,21 @@ type delegate-typename = delegate of type1 -> type2
 
 ## <a name="remarks"></a>備註
 
-在先前的語法`type1`表示的引數型別或型別和`type2`表示傳回型別。 引數類型表示的`type1`自動局部調用。 這可能表示，您會使用 tuple 形式，如果目標函式的引數局部調用，此類型與已在 tuple 形式的引數的括號括住 tuple。 自動調用移除一組括號，保留的元組引數，符合目標方法。 請參閱每個案例中，您應該使用的語法的程式碼範例。
+在先前的語法中`type1` , 代表引數類型或類型`type2` , 而表示傳回類型。 所表示`type1`的引數類型會自動進行擴充。 這表示針對此類型, 如果目標函式的引數是已擴充的, 而且已經在元組表單中的引數有括弧的元組, 您就可以使用元組表單。 自動 currying 會移除一組括弧, 並保留符合目標方法的元組引數。 請參閱程式碼範例, 以瞭解您在每個案例中應該使用的語法。
 
-委派可以附加至F#函式值，以及靜態或執行個體方法。 F#函式值可以直接當做委派建構函式的引數傳遞。 是靜態的方法中，您可以建構委派使用類別和方法的名稱。 執行個體方法，為您提供的物件執行個體和一個引數中的方法。 在這兩種情況下，成員存取運算子 (`.`) 使用。
+委派可以附加至F#函數值, 以及靜態或實例方法。 F#函數值可以直接當做引數傳遞至委派的函式。 若為靜態方法, 您可以使用類別的名稱和方法來建立委派。 若為實例方法, 您可以在一個引數中提供物件實例和方法。 在這兩種情況下, 都會使用`.`成員存取運算子 ()。
 
-`Invoke`的委派類型的方法呼叫的封裝函式。 此外，委派可以藉由參考沒有括號的 Invoke 方法名稱傳遞為函式值。
+委派`Invoke`類型上的方法會呼叫封裝的函式。 此外, 委派可以藉由參考不含括弧的叫用方法名稱, 以函式值的方式傳遞。
 
-下列程式碼顯示建立代表類別中的各種方法的委派的語法。 根據是否方法為靜態方法或執行個體方法，以及是否有 tuple 或局部調用的表單中的引數，宣告和指派委派的語法是有點不同。
+下列程式碼顯示用來建立委派的語法, 代表類別中的各種方法。 根據該方法是靜態方法或實例方法, 以及它在元組形式或擴充形式中是否有引數, 宣告和指派委派的語法稍有不同。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4201.fs)]
 
-下列程式碼顯示一些不同的方式，您可以使用委派。
+下列程式碼顯示一些您可以使用委派的不同方式。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4202.fs)]
 
-上述程式碼範例的輸出如下所示。
+先前程式碼範例的輸出如下所示。
 
 ```console
 aaaaa
@@ -48,4 +48,4 @@ ccccc
 
 - [F# 語言參考](index.md)
 - [參數和引數](parameters-and-arguments.md)
-- [事件](members/events.md)
+- [事件](./members/events.md)

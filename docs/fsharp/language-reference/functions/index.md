@@ -1,13 +1,13 @@
 ---
 title: 函式
-description: 深入了解中的函式F#以及F#支援常見的函式程式設計建構。
+description: 瞭解中的F#函式, F#以及如何支援一般功能程式設計結構。
 ms.date: 05/16/2016
-ms.openlocfilehash: f68a36de7af2bdb803b0b633929aa472806f61aa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645405"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630711"
 ---
 # <a name="functions"></a>函式
 
@@ -42,11 +42,11 @@ let f x = x + 1
 
 在模組範圍以外的任何範圍層級，重複使用值或函式名稱並非錯誤。 若重複使用名稱，後面宣告的名稱會遮蔽前面宣告的名稱。 不過，在模組中的最上層範圍，名稱必須是唯一名稱。 例如，下列程式碼出現在模組範圍時會產生錯誤，但在函式內時則不會：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
 
 但是，下列程式碼在任何範圍層級都可以使用：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
 
 ### <a name="parameters"></a>參數
 
@@ -74,7 +74,7 @@ let f x = (x, x)
 
 函式主體可以包含區域變數和函式的定義。 這類變數和函式是在目前函式主體的範圍內，而不是在主體以外。 啟用輕量型語法選項時，必須使用縮排來表示定義是在函式主體中，如下列範例所示：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 如需詳細資訊，請參閱[程式碼格式化方針](../code-formatting-guidelines.md)和[詳細語法](../verbose-syntax.md)。
 
@@ -84,7 +84,7 @@ let f x = (x, x)
 
 若要明確指定傳回值，請撰寫如下的程式碼：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
 
 撰寫如上所示的程式碼時，編譯器會將 **float** 套用至整個函式。若您也要將它套用至參數類型，請使用下列程式碼：
 
@@ -102,53 +102,53 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="partial-application-of-arguments"></a>部分套用引數
 
-若您提供的引數數目比指定的數目更少，則必須建立需要其餘引數的新函式。 這個處理引數的方法稱為「局部調用」，是 F# 這類函式程式設計語言的特色。 例如，假設您要使用兩種大小的管子，其中一個半徑為 **2.0**，另一個半徑為 **3.0**。 您可以建立會判斷管子容量的函式，如下所示：
+若您提供的引數數目比指定的數目更少，則必須建立需要其餘引數的新函式。 這個處理引數的方法稱為「局部調用」  ，是 F# 這類函式程式設計語言的特色。 例如，假設您要使用兩種大小的管子，其中一個半徑為 **2.0**，另一個半徑為 **3.0**。 您可以建立會判斷管子容量的函式，如下所示：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
 接著，視需要為兩個不同大小的各種管子長度提供其他引數：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
 
 ## <a name="recursive-functions"></a>遞迴函式
 
-「遞迴函式」是會自我呼叫的函式。 您必須在 **let** 關鍵字後面指定 **rec** 關鍵字來使用遞迴函式。 請從函式主體中叫用遞迴函式，就像叫用任何函式呼叫一樣。 下列遞迴函式會計算*n*<sup>th</sup> Fibonacci 數字。 Fibonacci 數字序列自古聞名，此序列中的每個連續數字都是前兩個數字的總和。
+「遞迴函式」  是會自我呼叫的函式。 您必須在 **let** 關鍵字後面指定 **rec** 關鍵字來使用遞迴函式。 請從函式主體中叫用遞迴函式，就像叫用任何函式呼叫一樣。 下列遞迴函式會計算  <sup>第</sup>n 個的斐波上數位。 Fibonacci 數字序列自古聞名，此序列中的每個連續數字都是前兩個數字的總和。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 若不謹慎撰寫遞迴函式，而且也不了解特殊技巧 (例如累計值和接續符號的用法)，某些遞迴函式便可能會使程式堆疊溢位，或導致執行時沒有效率。
 
 ## <a name="function-values"></a>函式值
 
-在 F# 中，所有函式都視為值，而實際上它們稱為「函式值」。 由於函式都是值，因此可以作為其他函式的引數，或在其他會用到這些值的內容中使用。 以下是接受函式值作為引數的函式範例：
+在 F# 中，所有函式都視為值，而實際上它們稱為「函式值」  。 由於函式都是值，因此可以作為其他函式的引數，或在其他會用到這些值的內容中使用。 以下是接受函式值作為引數的函式範例：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
 您可以使用 `->` 語彙基元來指定函式值的類型。 在此語彙基元左邊是引數的類型，右邊則是傳回值。 在上述範例中，`apply1` 函式會接受 `transform` 函式作為引數，其中 `transform` 是接受整數並傳回另一個整數的函式。 在下列範例程式碼中，會示範 `apply1` 的用法：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
 在上述程式碼執行之後，`result` 的值會是 101。
 
 多個引數是以連續 `->` 語彙基元分隔，如下列範例所示：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
 結果為 200。
 
 ## <a name="lambda-expressions"></a>Lambda 運算式
 
-「Lambda 運算式」是不具名函式。 在上述範例中，您可以使用 Lambda 運算式，而不定義具名函式 **increment** 和 **mul**，如下所示：
+「Lambda 運算式」  是不具名函式。 在上述範例中，您可以使用 Lambda 運算式，而不定義具名函式 **increment** 和 **mul**，如下所示：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-您可以透過 `fun` 關鍵字定義 Lambda 運算式。 Lambda 運算式類似函式定義，但是它使用 `->` 語彙基元來分隔引數清單與函式主體，而不是 `=` 語彙基元。 如同一般函式定義，您可以推斷或明確指定引數類型，而 Lambda 運算式的傳回型別是從主體中最後一個運算式的類型來推斷。 如需詳細資訊，請參閱[Lambda 運算式：`fun`關鍵字](../functions/lambda-expressions-the-fun-keyword.md)。
+您可以透過 `fun` 關鍵字定義 Lambda 運算式。 Lambda 運算式類似函式定義，但是它使用 `->` 語彙基元來分隔引數清單與函式主體，而不是 `=` 語彙基元。 如同一般函式定義，您可以推斷或明確指定引數類型，而 Lambda 運算式的傳回型別是從主體中最後一個運算式的類型來推斷。 如需詳細資訊, [請參閱 Lambda 運算式:`fun`關鍵字。](../functions/lambda-expressions-the-fun-keyword.md)
 
 ## <a name="function-composition-and-pipelining"></a>函式組合和管線
 
 F# 中的函式可以從其他函式組合。 兩個函式 **function1** 和 **function2** 會組合成另一個函式，表示先套用 **function1**，接著套用 **function2**：
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
 結果為 202。
 

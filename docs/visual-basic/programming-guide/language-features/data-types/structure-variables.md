@@ -7,51 +7,54 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a86a60def9ac1b8140194ecb6f5e784c62a0e101
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663384"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630963"
 ---
 # <a name="structure-variables-visual-basic"></a>結構變數 (Visual Basic)
-當您建立結構之後時，您可以為該型別來宣告程序層級和模組層級變數。 例如，您可以建立結構的電腦系統的相關記錄資訊。 下列範例為其示範。  
-  
-```  
-Public Structure systemInfo  
-    Public cPU As String  
-    Public memory As Long  
-    Public purchaseDate As Date  
-End Structure  
-```  
-  
- 您現在可以宣告該類型的變數。 下列宣告將說明這點。  
-  
-```  
-Dim mySystem, yourSystem As systemInfo  
-```  
-  
+
+建立結構之後, 您可以將程式層級和模組層級變數宣告為該類型。 例如, 您可以建立一個結構來記錄電腦系統的相關資訊。 下列範例為其示範。
+
+```vb
+Public Structure systemInfo
+    Public cPU As String
+    Public memory As Long
+    Public purchaseDate As Date
+End Structure
+```
+
+您現在可以宣告該類型的變數。 下列宣告說明這種情況。
+
+```vb
+Dim mySystem, yourSystem As systemInfo
+```
+
 > [!NOTE]
->  在類別和模組中，使用宣告的結構[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)預設為公用存取。 如果您想要為私用的結構，請確定您使用宣告[私人](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字。  
-  
-## <a name="access-to-structure-values"></a>結構值的存取權  
- 若要指派及擷取結構變數的項目中的值，您會使用相同的語法，如同您使用來設定和取得屬性的物件上。 您將成員存取運算子 (`.`) 結構的變數名稱之間的項目名稱。 下列範例會存取變數先前宣告為類型的項目`systemInfo`。  
-  
-```  
-mySystem.cPU = "486"  
-Dim tooOld As Boolean  
-If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True  
-```  
-  
-## <a name="assigning-structure-variables"></a>指派結構變數  
- 您也可以指派到另一個變數，如果兩個都是相同的結構類型。 這會將一個結構的所有項目複製到其他的對應項目。 下列宣告將說明這點。  
-  
-```  
-yourSystem = mySystem  
-```  
-  
- 如果結構項目是參考類型，如`String`， `Object`，或複製的資料指標的陣列。 在上述範例中，如果`systemInfo`已包含物件變數，則會將上述範例中會複製從指標`mySystem`到`yourSystem`，並透過一個結構物件的資料變更會是作用中時存取透過其他的結構。  
-  
+> 在類別和模組中, 使用[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)宣告的結構會預設為公用存取。 如果您想要將結構設為私用, 請務必使用[private](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字來宣告。
+
+## <a name="access-to-structure-values"></a>結構值的存取權
+
+若要從結構變數的元素指派和抓取值, 您可以使用與用來設定和取得物件屬性的相同語法。 您可以將成員存取運算子 (`.`) 放在結構變數名稱和元素名稱之間。 下列範例會存取先前宣告為類型`systemInfo`之變數的元素。
+
+```vb
+mySystem.cPU = "486"
+Dim tooOld As Boolean
+If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
+```
+
+## <a name="assigning-structure-variables"></a>指派結構變數
+
+如果兩者都是相同的結構類型, 您也可以將一個變數指派給另一個。 這會將一個結構的所有專案複製到另一個結構中的對應元素。 下列宣告說明這種情況。
+
+```vb
+yourSystem = mySystem
+```
+
+如果結構專案是參考型別 (例如`String`、 `Object`或陣列), 則會複製資料的指標。 在上述範例中, 如果`systemInfo`已包含物件變數, 則先前的範例會將的指標從`mySystem`複製到`yourSystem`, 而在存取物件的資料時, 透過某個結構進行的變更將會生效透過另一個結構。
+
 ## <a name="see-also"></a>另請參閱
 
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

@@ -14,44 +14,37 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6d10982cf199e9285334e0d72e6622275d51b4d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766632"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626204"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw 陳述式 (Visual Basic)
-擲回例外狀況程序內。  
+在程式中擲回例外狀況。
+
+## <a name="syntax"></a>語法
+
+```vb
+Throw [ expression ]
+```
+
+## <a name="part"></a>組件
+ `expression`提供要擲回之例外狀況的相關資訊。 如果位於`Catch`語句中, 則為選擇性, 否則為必要項。
   
-## <a name="syntax"></a>語法  
-  
-```  
-Throw [ expression ]  
-```  
-  
-## <a name="part"></a>組件  
- `expression`  
- 提供將會擲回的例外狀況的相關資訊。 選擇性時位於`Catch`陳述式，否則為必要項。  
-  
-## <a name="remarks"></a>備註  
- `Throw`陳述式會擲回的例外狀況，您可以使用結構化例外狀況處理程式碼處理 (`Try`...`Catch`...`Finally`) 或非結構化例外狀況處理程式碼 (`On Error GoTo`)。 您可以使用`Throw`陳述式來截取您的程式碼中的錯誤，因為 Visual Basic 會在呼叫堆疊中向上移動，直到找到適當的例外狀況處理程式碼。  
-  
- A`Throw`但沒有運算式的陳述式僅適用於在`Catch`陳述式，在其中 case 陳述式會重新擲回目前正在處理的例外狀況`Catch`陳述式。  
-  
- `Throw`陳述式會重設的呼叫堆疊`expression`例外狀況。 如果`expression`未提供，呼叫堆疊會保持不變。 您可以透過例外狀況的呼叫堆疊<xref:System.Exception.StackTrace%2A>屬性。  
-  
-## <a name="example"></a>範例  
- 下列程式碼會使用`Throw`擲回例外狀況的陳述式：  
-  
- [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
-  
-## <a name="requirements"></a>需求  
- **命名空間：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
-  
- **模組：** `Interaction`  
-  
- **組件：** Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)  
+## <a name="remarks"></a>備註
+ 語句會擲回例外狀況, 您可以處理結構化例外狀況處理常式`Try`代碼 (... `Throw``Catch`...) 或非結構化例外狀況處理`On Error GoTo`程式碼 ()。 `Finally` 您可以使用`Throw`語句來攔截程式碼內的錯誤, 因為 Visual Basic 會向上移動呼叫堆疊, 直到找到適當的例外狀況處理常式代碼為止。
+ 
+ 沒有運算式的`Catch` `Catch`語句只能在語句中使用, 在此情況下, 語句會重新擲回目前正由語句處理的例外狀況。 `Throw`
+
+ 語句會重設`expression`例外狀況的呼叫堆疊。 `Throw` 如果`expression`未提供, 則會將呼叫堆疊保持不變。 您可以透過<xref:System.Exception.StackTrace%2A>屬性存取例外狀況的呼叫堆疊。
+
+## <a name="example"></a>範例
+ 下列程式碼會使用`Throw`語句來擲回例外狀況:
+ 
+ [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
+
   
 ## <a name="see-also"></a>另請參閱
 

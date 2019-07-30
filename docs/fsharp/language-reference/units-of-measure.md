@@ -1,17 +1,17 @@
 ---
 title: 測量單位
-description: 了解如何浮點數，並登入的整數值F#可以有相關聯的量值，通常用來表示長度、 磁碟區，以及大量的單位。
+description: 瞭解中的浮點數和帶正負號F#的整數值如何具有相關聯的測量單位, 通常用來表示長度、數量和品質。
 ms.date: 05/16/2016
-ms.openlocfilehash: 217ef67912625c0a4b187a7ee13a739de811cfcb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641639"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630153"
 ---
 # <a name="units-of-measure"></a>測量單位
 
-浮點數，並登入的整數值F#可以有相關聯的度量單位，通常用來表示長度、 磁碟區或質量等等。 藉由使用單位數量，您可以讓編譯器無法驗證算術的關聯性具有正確的單位，這有助於防止程式設計錯誤。
+中的浮點數和帶正負F#號的整數值可以具有相關聯的測量單位, 通常用來表示長度、數量、品質等等。 藉由使用具有單位的數量, 您可以讓編譯器驗證算術關聯性是否有正確的單位, 這有助於防止程式設計錯誤。
 
 ## <a name="syntax"></a>語法
 
@@ -21,65 +21,65 @@ ms.locfileid: "65641639"
 
 ## <a name="remarks"></a>備註
 
-先前的語法會定義*單位名稱*做為度量單位。 選擇性的部分用來定義新的量值，依據先前定義的單位。 例如下, 面這一行會定義量值`cm`（公分）。
+先前的語法會將*單位名稱*定義為量值單位。 選擇性部分是用來根據先前定義的單位來定義新的量值。 例如, 下列程式程式碼會定義量值`cm` (釐米)。
 
 ```fsharp
 [<Measure>] type cm
 ```
 
-下面這一行會定義量值`ml`(milliliter) 為三次方公分 (`cm^3`)。
+下一行會將量值`ml` (milliliter) 定義為三釐米 (`cm^3`)。
 
 ```fsharp
 [<Measure>] type ml = cm^3
 ```
 
-在先前的語法*量值*是涉及單位的公式。 在涉及單位的公式，整數類資料的力量並支援 （正面和負面），單位之間的空格會指出兩個單位，產品`*`也表示的單位，產品和`/`表示單位的商數。 交互單位，您可以使用負值的整數冪或`/`表示的分子和分母單元公式的區隔。 應該以括號括住在分母中的多個單位。 單位以之後的空格分隔`/`解譯為屬於分母，但遵循任何單位`*`都會解譯為屬於分子。
+在先前的語法中, *measure*是包含單位的公式。 在牽涉到單位的公式中, 整數類支援 (正和負數)、單位之間的空格表示兩個單位的產品`*` , 也表示單位的乘積, 並`/`指出單位的商。 針對交互單位, 您可以使用負整數乘冪或`/` , 表示單位公式的分子和分母之間的分隔。 分母中的多個單位應該以括弧括住。 以空格`/`分隔的單位會解讀為分母的一部分, 但`*`後面的任何單位都會被視為分子的一部分。
 
-在單位運算式中，請單獨來指示此數量，或與其他單位，例如分子，您可以使用 1。 比方說，單位的費率會寫成`1/s`，其中`s`表示秒數。 括號不會在單位公式中使用。 您沒有指定單位公式; 中數字轉換常數不過，您可以分開定義單位轉換常數和單位檢查計算中使用它們。
+您可以在單位運算式中使用1來表示量維度數量, 或與其他單位 (例如分子) 一起使用。 例如, 速率的單位會寫成`1/s`, 其中`s`表示秒數。 單元公式中不使用括弧。 您不會在單元公式中指定數值轉換常數;不過, 您可以分別使用單位來定義轉換常數, 並在單元檢查計算中使用它們。
 
-代表相同意義的單位公式可以以各種不同的對等方式。 因此，編譯器會將單位公式轉換成一致的格式，這會將負乘方倒數，群組單位轉換成單一的分子和分母中，並依字母順序排列的分子和分母的單位。
+表示相同事物的單位公式可以用各種同等的方式撰寫。 因此, 編譯器會將單元公式轉換成一致的形式, 將負冪轉換成 reciprocals、將單位群組成單一分子和分母, 然後 Alphabetizes 分子和分母中的單位。
 
-比方說，單位公式`kg m s^-2`並`m /s s * kg`都會轉換成`kg m/s^2`。
+例如, 單位公式`kg m s^-2`和`m /s s * kg`都會轉換成`kg m/s^2`。
 
-您可以使用測量的單位中浮動點運算式。 使用浮點數與相關聯的單位量值新增另一個層級的型別安全，並有助於避免使用弱型別浮點數時，可以發生在公式中的單元不符錯誤。 如果您撰寫的浮動點使用單位的運算式，必須符合在運算式中的單位。
+您在浮點運算式中使用量值單位。 使用浮點數搭配相關聯的測量單位, 會增加另一層的型別安全, 並協助避免當您使用弱式類型的浮點數時, 公式中可能發生的單位不相符錯誤。 如果您撰寫使用單位的浮點運算式, 則運算式中的單位必須相符。
 
-下列範例所示，您可以標註具有單元公式在角括弧中的常值。
+您可以使用單元公式以角括弧標注常值, 如下列範例所示。
 
 ```fsharp
 1.0<cm>
 55.0<miles/hour>
 ```
 
-請勿在數字的角括號; 之間的空間不過，您可以包含常值後置詞例如`f`，如下列範例所示。
+您不會在數位和角括弧之間加上空格。不過, 您可以包含常值尾碼`f`, 例如, 如下列範例所示。
 
 ```fsharp
 // The f indicates single-precision floating point.
 55.0f<miles/hour>
 ```
 
-這類的註解變更的常值型別從其基本類型 (例如`float`) 為維度的類型，例如`float<cm>`或在此情況下， `float<miles/hour>`。 單位註釋`<1>`指出此數量，以及它的型別等於單元參數的基本類型。
+這類注釋會將常值的類型從其基本類型 (例如`float`) 變更為維度類型, `float<cm>`例如或`float<miles/hour>`, 在此案例中為。 的`<1>`單位注釋表示量維度數量, 而其類型等同于不含 unit 參數的基本型別。
 
-測量單位的類型是浮點數或帶正負號整數類資料類型，以及額外的單位註釋，方括號中指出。 因此，當您撰寫的類型轉換`g`（字母組） 到`kg`（公斤），描述類型，如下所示。
+量值單位的類型是一個浮點數或帶正負號的整數類資料類型, 以及一個額外的單位注釋, 以方括弧表示。 因此, 當您將轉換類型從`g` (克`kg` ) 寫入 (千克) 時, 您會依照下列方式描述類型。
 
 ```fsharp
 let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 ```
 
-測量單位用於檢查的編譯時間單位，但不是會保存在執行階段環境。 因此，它們不會影響效能。
+測量單位用於編譯時間單元檢查, 但不會保存在執行時間環境中。 因此, 它們不會影響效能。
 
-測量單位可以套用至任何類型，不只浮點類型;不過，只有浮點類型，所簽署的整數類資料類型，以及十進位型別建立維度的支援數量。 因此，它才有意義的基本型別和包含這些基本類型的彙總上使用的測量單位。
+量值單位可以套用至任何類型, 而不只是浮點數類型。不過, 只有浮點類型、帶正負號的整數類資料類型和十進位類型支援維度數量。 因此, 在基本型別和包含這些基本型別的匯總上使用測量單位是合理的。
 
-下列範例說明如何使用的測量單位。
+下列範例說明測量單位的使用。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
 
-下列程式碼範例說明如何將此的浮點數轉換為維度的浮動點值。 您只是乘以 1.0 時，將套用至 1.0 的維度。 您可以執行像是函式簡化`degreesFahrenheit`。
+下列程式碼範例說明如何從量值浮點數轉換為已維度的浮點數。 您只要乘以 1.0, 就會將維度套用至1.0。 您可以將此抽象成類似`degreesFahrenheit`的函式。
 
-此外，當您將維度的值傳遞至預期此浮點數的函式時，您必須先取消外延展單位或轉換成`float`使用`float`運算子。 在此範例中，除以`1.0<degC>`的引數`printf`因為`printf`預期此數量。
+此外, 當您將已維度的值傳遞給預期會有量維度浮點數的函式時, 您必須`float` `float`使用運算子取消單位或轉換成。 在此範例中, 您會`1.0<degC>`將的`printf`引數除以`printf` , 因為需要量維度數量。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6902.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6902.fs)]
 
-下列範例工作階段會顯示此程式碼的輸入與輸出。
+下列範例會話會顯示此程式碼的輸出和輸入。
 
 ```
 Enter a temperature in degrees Fahrenheit.
@@ -87,35 +87,35 @@ Enter a temperature in degrees Fahrenheit.
 That temperature in degrees Celsius is    32.22.
 ```
 
-## <a name="using-generic-units"></a>使用泛型的單位
+## <a name="using-generic-units"></a>使用泛型單位
 
-您可以撰寫操作的泛型函式有相關聯的量值單位的資料。 您可以指定類型，以及泛型的單元型別參數，如下列程式碼範例所示。
+您可以撰寫可在具有相關聯測量單位的資料上運作的泛型函數。 若要這麼做, 您可以將類型與一般單位一起指定為類型參數, 如下列程式碼範例所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
 
-## <a name="creating-aggregate-types-with-generic-units"></a>使用泛型的單位建立彙總類型
+## <a name="creating-aggregate-types-with-generic-units"></a>建立具有泛型單位的匯總類型
 
-下列程式碼示範如何建立彙總類型，其中包含的個別浮動點值都是泛型的單位。 這可讓單一類型來建立可搭配各種不同的單位。 此外，泛型的單位，來確保泛型型別具有一組的單位類型不同於相同的泛型型別具有一組不同的單位保留型別安全。 這項技術的基礎在於`Measure`屬性可以套用至型別參數。
+下列程式碼示範如何建立匯總類型, 其中包含具有泛型單位的個別浮點值。 這可讓您建立單一類型, 以搭配各種單位使用。 此外, 一般單位會藉由確保具有一組單位的泛型型別與具有不同單位集合的相同泛型型別不同, 來保留型別安全。 這項技術的基礎是`Measure`可以將屬性套用至型別參數。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
 
-## <a name="units-at-runtime"></a>在執行階段的單位
+## <a name="units-at-runtime"></a>執行時間的單位
 
-測量單位用於靜態類型檢查。 浮點值編譯時，會刪除的測量單位，因此在執行階段的單位都會遺失。 因此，任何嘗試實作取決於在執行階段檢查單位的功能不可能。 比方說，實作`ToString`函式來列印外延展單位不可能。
+測量單位用於靜態類型檢查。 當您編譯浮點值時, 測量單位會被排除, 因此在執行時間會遺失單位。 因此, 任何嘗試執行的功能, 都不可能發生于檢查執行時間的單位。 例如, 不可能執行`ToString`函數來列印單位。
 
 ## <a name="conversions"></a>轉換
 
-若要將具有單位的類型 (例如`float<'u>`) 沒有單位的類型，您可以使用標準轉換函式。 例如，您可以使用`float`要轉換成`float`沒有單位，如下列程式碼所示的值。
+若要將具有單位 (例如`float<'u>`) 的類型轉換成不具有單位的類型, 您可以使用標準轉換函數。 例如, 您可以使用`float`將轉換`float`成沒有單位的值, 如下列程式碼所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
 
-若要 unitless 值轉換為具有單位的值，可以將由值為 1 或 1.0 標註，利用適當的單位。 不過，撰寫互通性層級，也有一些明確函數可用來將 unitless 值轉換為值，單位。 這些是在[Microsoft.FSharp.Core.LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3)模組。 例如，若要從 unitless 轉換`float`要`float<cm>`，使用[FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9)，如下列程式碼所示。
+若要將未使用的值轉換為具有單位的值, 您可以乘以以適當單位標注的1或1.0 值。 不過, 若要撰寫互通性層, 還有一些明確的函式, 可讓您用來將沒有單位的值轉換成值。 這些是在[languageprimitives.physicalequality](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3)模組中。 例如, 若要從`float`無單位的轉換`float<cm>`為, 請使用[FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9), 如下列程式碼所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>中的測量單位F#核心程式庫
+## <a name="units-of-measure-in-the-f-core-library"></a>F#核心程式庫中的測量單位
 
-單位程式庫都有`FSharp.Data.UnitSystems.SI`命名空間。 它包含這兩個符號格式的 SI 單位 (類似`m`個計量器) 中`UnitSymbols`子命名空間和其完整名稱 (例如`meter`個計量器) 中`UnitNames`子命名空間。
+在`FSharp.Data.UnitSystems.SI`命名空間中可以使用單位程式庫。 `m`它在`UnitSymbols`子命名空間中的符號形式 (例如 for 計量) 中包含 SI 單位, 而在`UnitNames`子命名空間中, `meter`其完整名稱 (例如 for 計量)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,26 +1,26 @@
 ---
-title: 處理非同步應用程式 (Visual Basic) 中的重新進入
+title: 處理非同步應用程式中的重新進入 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 35d2b75e14d6223463b45d585c6742e62cdad2a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bc8156b1d2baa53255870364e680d62d7b93a50f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751011"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630933"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>處理非同步應用程式 (Visual Basic) 中的重新進入
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>處理非同步應用程式中的重新進入 (Visual Basic)
 
 當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。 如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。
 
 > [!NOTE]
->  若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
+> 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
 
 ## <a name="BKMK_RecognizingReentrancy"></a> 辨識重新進入
 
-在本主題的範例中，使用者選擇 [開始] 按鈕來起始非同步應用程式，該應用程式會下載一系列網站，並計算下載的位元組總數。 此範例的同步版本會回應相同的方式，不論使用者選擇按鈕的次數為何，因為在第一次之後，UI 執行緒會忽略這些事件，直到應用程式完成執行為止。 但在非同步應用程式中，UI 執行緒會繼續回應，而且您可能在它完成之前重新進入非同步作業。
+在本主題的範例中，使用者選擇 [開始]  按鈕來起始非同步應用程式，該應用程式會下載一系列網站，並計算下載的位元組總數。 此範例的同步版本會回應相同的方式，不論使用者選擇按鈕的次數為何，因為在第一次之後，UI 執行緒會忽略這些事件，直到應用程式完成執行為止。 但在非同步應用程式中，UI 執行緒會繼續回應，而且您可能在它完成之前重新進入非同步作業。
 
-如果使用者只選擇一次 [開始] 按鈕，則下列範例會顯示預期的輸出。 下載的網站清單會顯示每個網站的大小 (以位元組為單位)。 結尾會出現位元組總數。
+如果使用者只選擇一次 [開始]  按鈕，則下列範例會顯示預期的輸出。 下載的網站清單會顯示每個網站的大小 (以位元組為單位)。 結尾會出現位元組總數。
 
 ```
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -80,11 +80,11 @@ TOTAL bytes returned:  890591
 
 - [停用開始按鈕](#BKMK_DisableTheStartButton)
 
-  在執行作業時停用 [開始] 按鈕，讓使用者無法中斷它。
+  在執行作業時停用 [開始]  按鈕，讓使用者無法中斷它。
 
 - [取消後再重新啟動作業](#BKMK_CancelAndRestart)
 
-  當使用者再次選擇 [開始] 按鈕，然後讓最近要求的作業繼續進行時，取消仍在執行的任何作業。
+  當使用者再次選擇 [開始]  按鈕，然後讓最近要求的作業繼續進行時，取消仍在執行的任何作業。
 
 - [執行多個作業並將輸出加入佇列](#BKMK_RunMultipleOperations)
 
@@ -92,9 +92,9 @@ TOTAL bytes returned:  890591
 
 ### <a name="BKMK_DisableTheStartButton"></a> 停用 [開始] 按鈕
 
-您可以停用 `StartButton_Click` 事件處理常式頂端的按鈕，以便在執行作業時封鎖 [開始] 按鈕。 作業完成時，您可以在 `Finally` 區塊中重新啟用按鈕，讓使用者可再次執行應用程式。
+您可以停用 `StartButton_Click` 事件處理常式頂端的按鈕，以便在執行作業時封鎖 [開始]  按鈕。 作業完成時，您可以在 `Finally` 區塊中重新啟用按鈕，讓使用者可再次執行應用程式。
 
-下列程式碼會顯示這些變更 (以星號標記)。 您可以加入本主題結尾的程式碼所做的變更，或者您可以下載完成的應用程式，從[非同步範例：Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (非同步範例︰重新進入 .NET 傳統型應用程式) 下載壓縮檔案。 專案名稱是 DisableStartButton。
+下列程式碼會顯示這些變更 (以星號標記)。 您可以將變更新增至本主題結尾的程式碼, 也可以從[非同步範例下載已完成的應用程式:Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (非同步範例︰重新進入 .NET 傳統型應用程式) 下載壓縮檔案。 專案名稱是 DisableStartButton。
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -121,9 +121,9 @@ End Sub
 
 ### <a name="BKMK_CancelAndRestart"></a> 取消後再重新啟動作業
 
-您不必停用 [開始] 按鈕，您可以讓按鈕保持作用中，但如果使用者再次選擇該按鈕，請取消已在執行的作業，並讓最近啟動的作業繼續執行。
+您不必停用 [開始]  按鈕，您可以讓按鈕保持作用中，但如果使用者再次選擇該按鈕，請取消已在執行的作業，並讓最近啟動的作業繼續執行。
 
-如需有關取消的詳細資訊，請參閱 <<c0> [ 微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。
+如需取消的詳細資訊, 請參閱[微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。
 
 若要設定此案例，請對[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)中提供的基本程式碼進行下列變更。 您也可以從 [Async Samples:Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (非同步範例︰重新進入 .NET 傳統型應用程式) 下載壓縮檔案。 此專案的名稱是 CancelAndRestart。
 
@@ -136,7 +136,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. 在 `StartButton_Click` 中，判定作業是否已在進行中。 如果值`cts`是`Nothing`，沒有任何作業已在使用中。 如果值不是`Nothing`，已在執行的作業已取消。
+2. 在 `StartButton_Click` 中，判定作業是否已在進行中。 如果的值`cts`是`Nothing`, 則沒有任何作業已在使用中。 如果值不`Nothing`是, 則已取消已在執行中的作業。
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -153,7 +153,7 @@ End Sub
     cts = newCTS
     ```
 
-4. 在結尾`StartButton_Click`目前的程序已完成，因此設定的值`cts`回到`Nothing`。
+4. 在結束`StartButton_Click`時, 目前的進程已完成, 因此將的`cts`值設回`Nothing`。
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -245,7 +245,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-如果在這個應用程式正在執行時選擇 [開始] 按鈕多次，則應該會產生類似下列的輸出結果。
+如果在這個應用程式正在執行時選擇 [開始]  按鈕多次，則應該會產生類似下列的輸出結果。
 
 ```
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -277,13 +277,13 @@ TOTAL bytes returned:  890591
 
 ### <a name="BKMK_RunMultipleOperations"></a> 執行多個作業並將輸出加入佇列
 
-此第三個範例是最複雜的，因為每當使用者選擇 [開始] 按鈕時，應用程式就會啟動另一個非同步作業，而且所有作業都會執行到完成為止。 所有要求的作業會以非同步方式從清單下載網站，但作業的輸出會以循序方式呈現。 也就是隨[辨識重新進入](#BKMK_RecognizingReentrancy)顯示輸出，實際的下載活動會交錯進行，但每個群組的結果清單會循序呈現。
+此第三個範例是最複雜的，因為每當使用者選擇 [開始]  按鈕時，應用程式就會啟動另一個非同步作業，而且所有作業都會執行到完成為止。 所有要求的作業會以非同步方式從清單下載網站，但作業的輸出會以循序方式呈現。 也就是隨[辨識重新進入](#BKMK_RecognizingReentrancy)顯示輸出，實際的下載活動會交錯進行，但每個群組的結果清單會循序呈現。
 
 作業會共用全域 <xref:System.Threading.Tasks.Task>，`pendingWork`，做為顯示程序的閘道管理員。
 
 您可以執行這個範例，方法是將變更貼至[建置應用程式](#BKMK_BuildingTheApp)中的程式碼，或者遵循[下載應用程式](#BKMK_DownloadingTheApp)的指示來下載範例，然後執行 QueueResults 專案。
 
-下列輸出顯示當使用者只選擇 [開始] 按鈕一次時的結果。 字母標籤 A，表示第一次選擇 [開始] 按鈕時的結果。 數字顯示下載目標清單中的 URL 順序。
+下列輸出顯示當使用者只選擇 [開始]  按鈕一次時的結果。 字母標籤 A，表示第一次選擇 [開始]  按鈕時的結果。 數字顯示下載目標清單中的 URL 順序。
 
 ```
 #Starting group A.
@@ -303,7 +303,7 @@ TOTAL bytes returned:  918876
 #Group A is complete.
 ```
 
-如果使用者選擇 [開始] 按鈕三次，應用程式會產生類似下列幾行的輸出。 以井字號 (#) 開頭的資訊行會追蹤應用程式的進度。
+如果使用者選擇 [開始]  按鈕三次，應用程式會產生類似下列幾行的輸出。 以井字號 (#) 開頭的資訊行會追蹤應用程式的進度。
 
 ```
 #Starting group A.
@@ -379,7 +379,7 @@ Class MainWindow    ' Class MainPage in Windows Store app.
 
 #### <a name="the-click-event-handler"></a>Click 事件處理常式
 
-每當使用者選擇 [開始] 按鈕，事件處理常式 `StartButton_Click` 就會增加群組字母。 處理常式接著會呼叫 `AccessTheWebAsync` 來執行下載作業。
+每當使用者選擇 [開始]  按鈕，事件處理常式 `StartButton_Click` 就會增加群組字母。 處理常式接著會呼叫 `AccessTheWebAsync` 來執行下載作業。
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -513,7 +513,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- `pendingWork`任務`Nothing`開頭的`FinishOneGroupAsync`只有針對群組 A 啟動第一個。 當群組 A 到達 `FinishOneGroupAsync` 時，它尚未完成 await 運算式。 因此，尚未將控制項返回 `AccessTheWebAsync`，且尚未針對 `pendingWork` 進行第一次指派。
+- 此`pendingWork`工作`FinishOneGroupAsync`只`Nothing`會在群組 A 的開頭開始。 當群組 A 到達 `FinishOneGroupAsync` 時，它尚未完成 await 運算式。 因此，尚未將控制項返回 `AccessTheWebAsync`，且尚未針對 `pendingWork` 進行第一次指派。
 
 - 下列兩行一律會在輸出中一起出現。 在 `StartButton_Click` 中啟動群組的作業，與將群組的工作指派給 `pendingWork` 之間，程式碼永遠不會中斷
 
@@ -537,11 +537,11 @@ End Function
 
 2. 解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-3. 在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。
+3. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。
 
 4. 導覽至保存解壓縮之範例程式碼的資料夾，然後開啟方案 (.sln) 檔案。
 
-5. 在方案總管中，開啟要執行之專案的捷徑功能表，然後選擇 [設定為啟始專案]。
+5. 在方案總管  中，開啟要執行之專案的捷徑功能表，然後選擇 [設定為啟始專案]  。
 
 6. 選擇 CTRL + F5 鍵以建置並執行專案。
 
@@ -553,23 +553,23 @@ End Function
 
 1. 啟動 Visual Studio。
 
-2. 在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。
+2. 在功能表列上，選擇 [檔案]、[新增]、[專案]。
 
      [ **新增專案** ] 對話方塊隨即開啟。
 
-3. 在 **已安裝的範本**窗格中，展開**Visual Basic**，然後展開**Windows**。
+3. 在 [**已安裝的範本**] 窗格中, 展開 [ **Visual Basic**], 然後展開 [ **Windows**]。
 
-4. 在專案類型清單中，選擇 [WPF 應用程式]。
+4. 在專案類型清單中，選擇 [WPF 應用程式]  。
 
-5. 將專案命名為 `WebsiteDownloadWPF`，然後選擇 [確定] 按鈕。
+5. 將專案命名為 `WebsiteDownloadWPF`，然後選擇 [確定]  按鈕。
 
-     新的專案隨即會出現在方案總管中。
+     新的專案隨即會出現在方案總管  中。
 
 6. 在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。
 
-     如未顯示索引標籤，請在方案總管中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [檢視程式碼]。
+     如未顯示索引標籤，請在方案總管  中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [檢視程式碼]  。
 
-7. 在 MainWindow.xaml 的 [XAML] 檢視中，以下列程式碼取代程式碼。
+7. 在 MainWindow.xaml 的 [XAML]  檢視中，以下列程式碼取代程式碼。
 
     ```xaml
     <Window x:Class="MainWindow"
@@ -587,13 +587,13 @@ End Function
     </Window>
     ```
 
-     包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計] 檢視中。
+     包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計]  檢視中。
 
 8. 加入 <xref:System.Net.Http> 的參考。
 
-9. 在 **方案總管**，開啟 MainWindow.xaml.vb，捷徑功能表，然後選擇**檢視程式碼**。
+9. 在**方案總管**中, 開啟 mainwindow.xaml 的快捷方式功能表, 然後選擇 [ **View Code**]。
 
-10. 在 MainWindow.xaml.vb，取代下列程式碼中的程式碼。
+10. 在 Mainwindow.xaml 中, 將程式碼取代為下列程式碼。
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -671,11 +671,11 @@ End Function
     End Class
     ```
 
-11. 選擇 CTRL+F5 鍵以執行程式，然後選擇 [開始] 按鈕數次。
+11. 選擇 CTRL+F5 鍵以執行程式，然後選擇 [開始]  按鈕數次。
 
 12. 從[停用開始按鈕](#BKMK_DisableTheStartButton)、[取消後再重新啟動作業](#BKMK_CancelAndRestart)或[執行多個作業並將輸出加入佇列](#BKMK_RunMultipleOperations)進行變更以處理重新進入。
 
 ## <a name="see-also"></a>另請參閱
 
-- [逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

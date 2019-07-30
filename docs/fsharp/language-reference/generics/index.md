@@ -1,17 +1,17 @@
 ---
 title: 泛型
-description: 了解如何使用F#泛型函式和類型，可讓您撰寫程式碼，而不需要重複程式碼適用於各種不同的類型。
+description: 瞭解如何使用F#泛型函式和型別, 這可讓您撰寫與各種型別搭配使用的程式碼, 而不需要重複程式碼。
 ms.date: 05/16/2016
-ms.openlocfilehash: e30b00343e48d3a8abd51f62c003ba0d1984db18
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641860"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630619"
 ---
 # <a name="generics"></a>泛型
 
-F# 函式值、方法、屬性和彙總類型 (例如類別、記錄和差別聯集) 都可以是「泛型」。 泛型建構至少包含一個類型參數，此參數通常是由泛型建構的使用者所提供。 泛型函式和類型可讓您撰寫適用於各種類型的程式碼，而不需對每一種類型重複輸入程式碼。 由於編譯器的型別推斷和自動一般化機制通常會將程式碼隱含推斷為泛型，所以要讓程式碼在 F# 中成為泛型很簡單。
+F# 函式值、方法、屬性和彙總類型 (例如類別、記錄和差別聯集) 都可以是「泛型」  。 泛型建構至少包含一個類型參數，此參數通常是由泛型建構的使用者所提供。 泛型函式和類型可讓您撰寫適用於各種類型的程式碼，而不需對每一種類型重複輸入程式碼。 由於編譯器的型別推斷和自動一般化機制通常會將程式碼隱含推斷為泛型，所以要讓程式碼在 F# 中成為泛型很簡單。
 
 ## <a name="syntax"></a>語法
 
@@ -33,7 +33,7 @@ type type-name<type-parameters> type-definition
 
 在函式或類型名稱之後的角括弧中，明確泛型函式或類型的宣告非常類似於非泛型函式或類型的宣告，但類型參數的規格 (和使用方式) 除外。
 
-宣告通常為隱含泛型。 若您並未完全指定每一個用於組成函式或類型之參數的類型，則編譯器會嘗試根據您撰寫的程式碼來推斷每一個參數、值和變數的類型。 如需詳細資訊，請參閱[型別推斷](../type-inference.md)。 若類型或函式的程式碼並未限制參數的類型，則函式或類型即為隱含泛型。 此程序稱為「自動一般化」。 自動一般化有一些限制。 例如，若 F# 編譯器無法推斷泛型建構的類型，則該編譯器所回報的錯誤會參考一種稱為「值限制」的限制。 在此情況下，您可能必須新增一些類型註解。 如需自動一般化和值限制的詳細資訊，以及如何變更程式碼來解決問題的詳細資訊，請參閱[自動產生](automatic-generalization.md)。
+宣告通常為隱含泛型。 若您並未完全指定每一個用於組成函式或類型之參數的類型，則編譯器會嘗試根據您撰寫的程式碼來推斷每一個參數、值和變數的類型。 如需詳細資訊，請參閱[型別推斷](../type-inference.md)。 若類型或函式的程式碼並未限制參數的類型，則函式或類型即為隱含泛型。 此程序稱為「自動一般化」  。 自動一般化有一些限制。 例如，若 F# 編譯器無法推斷泛型建構的類型，則該編譯器所回報的錯誤會參考一種稱為「值限制」  的限制。 在此情況下，您可能必須新增一些類型註解。 如需自動一般化和值限制的詳細資訊，以及如何變更程式碼來解決問題的詳細資訊，請參閱[自動產生](automatic-generalization.md)。
 
 在先前的語法中，*type-parameters* 是一份代表未知類型的參數清單 (以逗號分隔)，而每一個參數都是以單引號開頭，並選擇性加入條件約束子句，以進一步限制哪些類型可用於該類型參數。 如需各種條件約束子句的語法以及條件約束的其他資訊，請參閱[條件約束](constraints.md)。
 
@@ -49,19 +49,19 @@ type type-name<type-parameters> type-definition
 
 在下列程式碼範例中，`makeList` 是泛型的，即使它或它的參數皆未明確地宣告為泛型。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
 
 此函式的簽章被推斷為 `'a -> 'a -> 'a list`。 請注意，這個範例中的 `a` 和 `b` 被推斷為具有相同的類型。 這是因為它們一起包含在清單中，而且清單的所有項目都必須是相同的類型。
 
 您也可以在類型註解中使用單引號語法，表示參數類型是泛型型別參數，而讓函式成為泛型。 在下列程式碼中，`function1` 為泛型，因為它的參數已用這種方式宣告為類型參數。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
 
 ## <a name="explicitly-generic-constructs"></a>明確泛型建構
 
 以角括弧 (`<type-parameter>`) 明確宣告函式的類型參數，也可以讓函式變成泛型函式。 以下的程式碼可說明這點。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
 
 ## <a name="using-generic-constructs"></a>使用泛型建構
 
@@ -69,7 +69,7 @@ type type-name<type-parameters> type-definition
 
 下列程式碼顯示如何使用先前章節中定義的函式。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
 > [!NOTE]
 > 依照名稱參考泛型型別的方法有兩種。 例如，`list<int>` 和 `int list` 就是兩種用於參考具有單一類型引數 `int` 之泛型型別 `list` 的方法。 後面的形式照慣例僅適用於內建的 F# 類型，例如 `list` 和 `option`。 若有多個類型引數，您通常會使用語法 `Dictionary<int, string>`，但是也可以使用語法 `(int, string) Dictionary`。
@@ -78,7 +78,7 @@ type type-name<type-parameters> type-definition
 
 若要指定應該由編譯器推斷的類型引數，您可以使用底線或萬用字元符號 (`_`)，而非使用具名的類型引數。 如下列程式碼所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
 
 ## <a name="constraints-in-generic-types-and-functions"></a>泛型型別和函式的條件約束
 
@@ -86,11 +86,11 @@ type type-name<type-parameters> type-definition
 
 ## <a name="statically-resolved-type-parameters"></a>以統計方式解析的型別參數
 
-F# 程式中可以使用的類型參數有兩種。 第一種是前幾節中所描述的該類泛型型別參數。 這一種類型參數等同於在 Visual Basic 和 C# 等語言中使用的泛型型別參數。 另一種類型參數則專屬於 F#，稱為「以統計方式解析的類型參數」。 如需這類建構的資訊，請參閱[以統計方式解析的類型參數](statically-resolved-type-parameters.md)。
+F# 程式中可以使用的類型參數有兩種。 第一種是前幾節中所描述的該類泛型型別參數。 這一種類型參數等同於在 Visual Basic 和 C# 等語言中使用的泛型型別參數。 另一種類型參數則專屬於 F#，稱為「以統計方式解析的類型參數」  。 如需這類建構的資訊，請參閱[以統計方式解析的類型參數](statically-resolved-type-parameters.md)。
 
 ## <a name="examples"></a>範例
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
 
 ## <a name="see-also"></a>另請參閱
 

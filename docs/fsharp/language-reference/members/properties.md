@@ -1,17 +1,17 @@
 ---
 title: 屬性
-description: 深入了解F#屬性，也就是成員代表與物件相關聯的值。
+description: 瞭解F#屬性, 這是代表與物件相關聯之值的成員。
 ms.date: 05/16/2016
-ms.openlocfilehash: bf605ee1135bd3b3561bde9a8ae66353497931b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c202927fd0022e042703640cd55fb632c7e36068
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666361"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627420"
 ---
 # <a name="properties"></a>屬性
 
-*屬性*成員代表與物件相關聯的值。
+*屬性*(property) 是代表與物件相關聯之值的成員。
 
 ## <a name="syntax"></a>語法
 
@@ -57,17 +57,17 @@ with set parameter =
 
 ## <a name="remarks"></a>備註
 
-屬性代表 「 擁有 」 關聯性，在物件導向程式設計中，表示物件執行個體或靜態屬性，與類型相關聯的資料。
+屬性代表物件導向程式設計中的「具有」關聯性, 代表與物件實例相關聯的資料, 或針對具有類型的靜態屬性。
 
-您可以宣告兩種方式，取決於您是否要明確指定為 屬性 的 基礎值 （也稱為 「 備份存放區 」），或如果您想要讓編譯器自動產生您的備份存放區中的屬性。 一般而言，您應該使用更明確的方式，如果屬性有非一般的實作和自動的方式在屬性時只是簡單包裝函式的值或變數。 若要明確宣告屬性時，使用`member`關鍵字。 這個宣告式語法後面指定的語法`get`並`set`方法，也稱為*存取子*。 各種形式的明確語法 」 一節所示的語法用於讀取/寫入、 唯讀和唯寫屬性。 唯讀屬性，您只會定義`get`方法; 唯寫屬性，定義只`set`方法。 請注意，當屬性具有`get`和`set`存取子，替代語法可以可讓您指定屬性和不同的每個存取子，如下列程式碼所示的存取範圍修飾詞。
+您可以透過兩種方式宣告屬性, 取決於您是否要明確指定屬性的基礎值 (也稱為備份存放區), 還是要讓編譯器自動為您產生備份存放區。 一般而言, 如果屬性具有非一般的實作為, 而當屬性只是值或變數的簡單包裝函式時, 您應該使用更明確的方式。 若要明確宣告屬性, 請使用`member`關鍵字。 這個宣告式語法後面會接著指定`get`和`set`方法 (也稱為*存取*子) 的語法。 語法一節中顯示的各種明確語法形式, 會用於讀取/寫入、唯讀和僅限寫入的屬性。 若為唯讀屬性, 您只`get`需定義方法; 對於僅限寫入屬性, `set`只定義方法。 請注意, 當屬性同時`get`具有和`set`存取子時, 替代語法可讓您指定每個存取子的不同屬性和存取範圍修飾詞, 如下列程式碼所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3201.fs)]
 
-讀取/寫入屬性，同時擁有`get`並`set`方法時，順序`get`和`set`可反轉。 或者，您可以在其中提供所顯示的語法`get`只顯示的語法和`set`只而不是使用合併的語法。 如此一來更輕鬆地標記為註解個別`get`或`set`方法，如果是您可能需要執行的項目。 此替代方案，使用合併的語法是由下列程式碼所示。
+對於同時`get`具有`set`和`set`方法的讀取/寫入屬性,和的順序可以反轉。`get` 或者, 您可以只提供針對`get`所顯示的語法, 以及僅針對`set`所顯示的語法, 而不是使用結合的語法。 這麼做可讓您更輕鬆地將個別`get`或`set`方法標記為批註, 如果這是您可能需要做的事情。 下列程式碼顯示使用結合語法的替代方法。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-私用值屬性的資料呼叫該按住不放*備份存放區*。 若要讓編譯器自動建立的備份存放區，使用關鍵字`member val`，省略自我識別項，然後提供運算式以初始化屬性。 如果屬性是可變動的包括`with get, set`。 比方說，下列的類別類型包含兩個自動實作的屬性。 `Property1` 是唯讀的而且初始化為提供的主要建構函式的引數和`Property2`是可設定的屬性初始化為空字串：
+保存屬性資料的私用值稱為「*備份存放區*」。 若要讓編譯器自動建立備份存放區, 請使用關鍵字`member val`, 省略自我識別碼, 然後提供運算式來初始化屬性。 如果屬性是可變動的, 請包含`with get, set`。 例如, 下列類別類型包含兩個自動實作為屬性。 `Property1`是唯讀的, 而且會初始化為提供給主要函式的引數, `Property2`而且是可設定的屬性, 初始化為空字串:
 
 ```fsharp
 type MyClass(property1 : int) =
@@ -75,7 +75,7 @@ member val Property1 = property1
 member val Property2 = "" with get, set
 ```
 
-自動實作的屬性是一個型別，初始化的一部分，讓它們必須包含其他成員定義之前一樣`let`繫結和`do`型別定義中的繫結。 請注意在初始化時，以及每次存取該屬性時不只會評估運算式，以初始化自動實作的屬性。 此行為是明確地實作之屬性的行為相反。 這實際上就表示，初始化這些屬性的程式碼會新增至類別的建構函式。 請考慮下列程式碼顯示這項差異：
+自動執行的屬性是型別初始化的一部分, 因此必須包含在其他任何成員定義之前, 就像型別`let`定義中`do`的系結和系結一樣。 請注意, 初始化自動執行之屬性的運算式, 只會在初始化時評估, 而且不會在每次存取屬性時進行評估。 這種行為與明確實作為屬性的行為相較之下。 這實際上的意思是, 將這些屬性初始化的程式碼會新增至類別的函式。 請考慮下列顯示這項差異的程式碼:
 
 ```fsharp
 type MyClass() =
@@ -100,48 +100,48 @@ class1.ExplicitProperty = 978922705
 class1.ExplicitProperty = 1131210765
 ```
 
-上述程式碼的輸出會顯示值的 AutoProperty 是不變時重複呼叫而 ExplicitProperty 變更每次呼叫時。 這示範自動實作屬性的運算式不會評估每次都是明確的屬性的 getter 方法。
+上述程式碼的輸出顯示重複呼叫時, AutoProperty 的值不變, 而 ExplicitProperty 會在每次呼叫時變更。 這會示範每次不會評估自動執行之屬性的運算式, 這是明確屬性的 getter 方法。
 
 >[!WARNING]
->有一些程式庫，例如 Entity Framework (`System.Data.Entity`)，也不使用初始化自動實作屬性的基底類別建構函式中執行的自訂作業。 在這些情況下，請嘗試使用明確的屬性。
+>有一些程式庫 (例如 Entity Framework (`System.Data.Entity`), 它會在基類處理常式中執行自訂作業, 而這些函式無法與自動執行之屬性的初始化搭配運作。 在這些情況下, 請嘗試使用明確的屬性。
 
-屬性可以是類別、 結構、 差別聯的集、 記錄、 介面和型別延伸模組的成員，也可以在物件運算式中定義。
+屬性可以是類別、結構、區分等位、記錄、介面和類型延伸的成員, 而且也可以在物件運算式中定義。
 
-屬性可以套用至屬性。 若要將屬性套用至屬性，撰寫屬性的屬性之前的個別行上。 如需詳細資訊，請參閱[屬性](../attributes.md)。
+屬性可以套用至屬性。 若要將屬性套用至屬性, 請在屬性前面的個別行上寫入屬性。 如需詳細資訊，請參閱[屬性](../attributes.md)。
 
-根據預設，屬性是公用的。 存取範圍修飾詞也可以套用至屬性。 若要套用的存取範圍修飾詞，將其新增的屬性名稱之前，立即若它用來同時適用於`get`並`set`方法，將它之前新增`get`和`set`關鍵字，如果不同的存取範圍是每個存取子的必要項。 *存取範圍修飾詞*可以是下列其中之一： `public`， `private`， `internal`。 如需詳細資訊，請參閱[存取控制](../access-control.md)。
+根據預設, 屬性是公用的。 協助工具修飾詞也可以套用至屬性。 若要套用協助工具修飾詞, 請在屬性名稱前面加上它 (如果它要套用`get`至和`set`方法), 如果有不同的存取範圍`set` , 請在`get`和關鍵字之前加入每個存取子的必要項。 *協助工具修飾*詞可以是下列其中一項: `public`、 `private`、 `internal`。 如需詳細資訊，請參閱[存取控制](../access-control.md)。
 
-屬性的實作會執行每次存取時的屬性。
+每次存取屬性時, 都會執行屬性部署。
 
-## <a name="static-and-instance-properties"></a>靜態和執行個體屬性
+## <a name="static-and-instance-properties"></a>靜態和實例屬性
 
-屬性可以是靜態或執行個體屬性。 沒有執行個體就可以叫用靜態屬性，以及用於不具有個別物件的類型相關聯的值。 靜態屬性，請省略自我識別項。 執行個體屬性需要自我識別項。
+屬性可以是靜態或實例屬性。 靜態屬性可以在不使用實例的情況下叫用, 並用於與類型相關聯的值, 而不是個別物件。 若為靜態屬性, 請省略自我識別碼。 實例屬性需要自我識別碼。
 
-下列的靜態屬性定義為基礎的案例中，您有靜態欄位`myStaticValue`也就是屬性的備份存放區。
+下列靜態屬性定義是以您具有靜態欄位`myStaticValue`的實例為基礎, 該屬性是屬性的備份存放區。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3204.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3204.fs)]
 
-屬性也可以與陣列在此情況下呼叫它們*編製索引屬性*。 如需詳細資訊，請參閱 <<c0> [ 編製索引的屬性](indexed-properties.md)。
+屬性也可以是類似陣列, 在這種情況下, 它們稱為*索引的屬性*。 如需詳細資訊, 請參閱已[編制索引的屬性](indexed-properties.md)。
 
-## <a name="type-annotation-for-properties"></a>屬性的型別註釋
+## <a name="type-annotation-for-properties"></a>屬性的類型注釋
 
-在許多情況下，編譯器有足夠的資訊來推斷的類型屬性，以從備份存放區的類型，但您可以明確設定類型，加上型別註釋。
+在許多情況下, 編譯器會有足夠的資訊可從備份存放區的類型推斷屬性的類型, 但您可以藉由加入類型注釋來明確設定類型。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3205.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3205.fs)]
 
-## <a name="using-property-set-accessors"></a>使用屬性 set 存取子
+## <a name="using-property-set-accessors"></a>使用屬性集存取子
 
-您可以設定屬性，可提供`set`存取子使用`<-`運算子。
+您可以`set` `<-`使用運算子來設定提供存取子的屬性。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3206.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3206.fs)]
 
-輸出是**20**。
+輸出為**20**。
 
 ## <a name="abstract-properties"></a>抽象屬性
 
-屬性可以是抽象的。 如同方法`abstract`只是表示是虛擬的分派與屬性相關聯。 抽象屬性可以是真正抽象的也就是沒有相同的類別中定義。 包含這類屬性的類別，因此是抽象類別。 或者，屬性是虛擬的，和在此情況下，必須存在於相同的類別定義，可以只是抽象。 請注意，抽象屬性不是私人的而且如果其中一個存取子是 abstract，另也必須為抽象。 如需抽象類別的詳細資訊，請參閱[抽象類別](../abstract-classes.md)。
+屬性可以是抽象的。 如同方法, `abstract`只是表示有與屬性相關聯的虛擬分派。 抽象屬性可以是真正抽象的, 也就是沒有相同類別中的定義。 因此, 包含這類屬性的類別是抽象類別。 或者, abstract 也可以表示屬性是虛擬的, 在此情況下, 定義必須存在於相同的類別中。 請注意, 抽象屬性不得為私用, 如果一個存取子是抽象的, 另一個則必須是 abstract。 如需抽象類別的詳細資訊, 請參閱[抽象類別](../abstract-classes.md)。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3207.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3207.fs)]
 
 ## <a name="see-also"></a>另請參閱
 

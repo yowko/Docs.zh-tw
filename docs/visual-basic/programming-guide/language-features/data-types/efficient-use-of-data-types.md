@@ -13,41 +13,41 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: f85acfe7592d7b90423107e0d45bb007fce5f4a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68371a9f8d4dcc5d0a2b67955d5e88943a83b085
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601148"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68631114"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>有效率地使用資料類型 (Visual Basic)
-未宣告的變數和資料型別未宣告的變數會指派`Object`資料型別。 這可輕鬆快速地撰寫程式，但它可能會使程式執行速度變慢。  
-  
-## <a name="strong-typing"></a>強型別  
- 指定所有變數的資料類型就所謂*強型別*。 使用強型別有下列優點：  
-  
-- 它可讓您的變數的 IntelliSense 支援。 這可讓您查看其屬性與其他成員，當您輸入程式碼中。  
-  
-- 它會利用編譯器型別檢查。 這會攔截可能會在執行階段因例如溢位錯誤而失敗的陳述式。 它也會對方法的呼叫攔截不支援它們的物件。  
-  
-- 它會導致您的程式碼的執行速度加快。  
-  
-## <a name="most-efficient-data-types"></a>最有效率的資料類型  
- 對於絕對不能包含分數的變數，整數資料類型會比非整數類型更有效率。 在 Visual Basic`Integer`和`UInteger`是最有效率的數字類型。  
-  
- 對於小數的數字，`Double`是最有效率的資料類型，因為在目前的平台上的處理器執行雙精確度浮點數運算。 不過，使用作業`Double`不是最快的速度與整數類資料類型，例如`Integer`。  
-  
-## <a name="specifying-data-type"></a>指定資料類型  
- 使用[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)宣告特定類型的變數。 您可以使用，以同時指定其存取層級[公開金鑰](../../../../visual-basic/language-reference/modifiers/public.md)，[受保護](../../../../visual-basic/language-reference/modifiers/protected.md)， [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)，或[私人](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字，如下所示下列範例。  
-  
-```  
-Private x As Double  
-Protected s As String  
-```  
-  
-## <a name="character-conversion"></a>字元轉換  
- `AscW`和`ChrW`函式運作以 Unicode。 您應該使用這些優先`Asc`和`Chr`，Unicode 的進出，必須將其轉譯。  
-  
+未宣告的變數和未宣告資料類型的`Object`變數會被指派資料類型。 這可讓您快速撰寫程式, 但它可能會導致執行速度變慢。
+
+## <a name="strong-typing"></a>強式類型
+ 指定所有變數的資料類型稱為*強式類型*。 使用強型別有幾個優點:
+
+- 它會針對您的變數啟用 IntelliSense 支援。 這可讓您在程式碼中輸入時, 看到其屬性和其他成員。
+
+- 它會利用編譯器類型檢查。 這會捕捉可能因為溢位錯誤而在執行時間失敗的語句。 它也會攔截不支援之物件上方法的呼叫。
+
+- 這會導致程式碼的執行速度更快。
+
+## <a name="most-efficient-data-types"></a>最有效率的資料類型
+ 對於永不包含小數的變數而言, 整數資料類型比非整數類型更有效率。 在 Visual Basic 中`Integer` , `UInteger`和是最有效率的數數值型別。
+
+ 針對小數, `Double`是最有效率的資料類型, 因為目前平臺上的處理器會以雙精確度執行浮點運算。 不過, 使用`Double`的作業與整數類資料類型`Integer`(例如) 的速度並不一樣快。
+
+## <a name="specifying-data-type"></a>指定資料類型
+ 使用[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)來宣告特定類型的變數。 您可以使用[Public](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)或[Private](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字, 同時指定其存取層級, 如下列範例所示。
+
+```vb
+Private x As Double
+Protected s As String
+```
+
+## <a name="character-conversion"></a>字元轉換
+ `AscW` 和`ChrW`函數會以 Unicode 運作。 您應該將它們偏好`Asc`用於和`Chr`, 其必須在 Unicode 中轉譯。
+
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>

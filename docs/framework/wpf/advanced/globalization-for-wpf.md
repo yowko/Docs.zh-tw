@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: fd99d97d677ef588c3f7e2a178190377d72c74ce
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400634"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629919"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹在為全球市場撰寫[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式時, 您應該注意的問題。 全球化程式設計項目定義于[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]中`System.Globalization`的。
@@ -127,7 +127,7 @@ ms.locfileid: "68400634"
 
  [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字型可讓您使用[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]編碼來處理大型圖像集。 這類編碼促進廣泛的國際支援以及各種印刷樣式字符。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]文字轉譯是由[!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]支援解析度獨立性的子圖元技術提供技術支援。 這會大幅改善可讀性，並可讓您支援所有指令碼的高品質雜誌樣式文件。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]文字轉譯是由支援解析度獨立性的 Microsoft ClearType 子圖元技術提供技術支援。 這會大幅改善可讀性，並可讓您支援所有指令碼的高品質雜誌樣式文件。
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>國際版面配置

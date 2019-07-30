@@ -1,17 +1,17 @@
 ---
 title: 屬性
-description: 了解如何F#屬性可讓要套用至程式設計建構的中繼資料。
+description: 瞭解屬性F#如何讓中繼資料套用至程式設計結構。
 ms.date: 05/16/2016
-ms.openlocfilehash: fed4c549b95d6d3701ab81cf5d62add411c16038
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3f3c3469192c09aa51f31ef3f00aca0196e3c382
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642031"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630084"
 ---
 # <a name="attributes"></a>屬性
 
-屬性會啟用要套用至程式設計建構的中繼資料。
+屬性可讓中繼資料套用至程式設計結構。
 
 ## <a name="syntax"></a>語法
 
@@ -21,47 +21,47 @@ ms.locfileid: "65642031"
 
 ## <a name="remarks"></a>備註
 
-在先前的語法*目標*是選擇性，而且如果有的話，指定的屬性會套用至程式實體類型。 有效值*目標*資料表出現在本文件稍後所示。
+在先前的語法中,*目標*是選擇性的, 如果有的話, 則會指定要套用屬性的程式實體類型。 *Target*的有效值會顯示在本檔稍後所顯示的表格中。
 
-*屬性名稱*是指的是有效的屬性型別，不論後置詞的 （可能是完整命名空間） 的名稱`Attribute`，通常會用於屬性型別名稱。 例如，型別`ObsoleteAttribute`可以縮短到`Obsolete`在此內容中。
+*屬性名稱*是指有效屬性類型的名稱 (可能是以命名空間限定), 包含或不含在屬性類型`Attribute`名稱中通常使用的尾碼。 例如, 類型`ObsoleteAttribute`可以`Obsolete`在此內容中縮短為。
 
-*引數*是屬性型別的建構函式的引數。 如果屬性有預設建構函式，就可以省略引數清單和括號。 屬性支援位置引數和具名引數。 *位置引數*是以其出現的順序中使用的引數。 如果屬性有公用屬性，則可以使用具名引數。 您可以設定這些引數清單中使用下列語法。
+*引數*是屬性類型之函式的引數。 如果屬性具有預設的函式, 則可以省略引數清單和括弧。 屬性同時支援位置引數和具名引數。 *位置引數*是以它們出現的順序來使用的引數。 如果屬性具有公用屬性, 則可以使用具名引數。 您可以使用引數清單中的下列語法來設定這些參數。
 
 ```
 *property-name* = *property-value*
 ```
 
-這類屬性的初始化可以依任何順序，但它們必須遵守任何位置的引數。 以下是使用位置引數和屬性的初始化屬性的範例。
+這類屬性初始化可以依任何順序排列, 但必須遵循任何位置引數。 以下是使用位置引數和屬性初始化之屬性的範例。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
-在此範例中，屬性是`DllImportAttribute`，這裡用於縮短格式。 第一個引數是位置參數和第二個是屬性。
+在此範例中, 屬性是`DllImportAttribute`, 此處使用的是縮寫格式。 第一個引數是位置參數, 而第二個是屬性。
 
-屬性是.NET 的程式設計建構，可讓物件稱為*屬性*與類型或其他程式項目相關聯。 要套用屬性的程式項目就所謂*屬性目標*。 屬性通常會包含其目標的相關中繼資料。 在此情況下，中繼資料可能是其欄位和成員以外的類型有關的任何資料。
+屬性是一種 .NET 程式設計結構, 可讓稱為*屬性*的物件與型別或其他程式元素產生關聯。 套用屬性的程式元素稱為*屬性目標*。 屬性通常包含其目標的相關中繼資料。 在此內容中, 中繼資料可能是除了其欄位和成員以外類型的任何資料。
 
-中的屬性F#可以套用到下列的程式設計建構： 函式、 方法、 組件、 模組、 類型 （類別、 記錄、 結構、 介面、 委派、 列舉、 等位和等等）、 建構函式、 屬性、 欄位，參數型別參數，並傳回值。 屬性不允許在`let`類別、 運算式或工作流程運算式內的繫結。
+中F#的屬性可以套用至下列程式設計結構: 函式、方法、元件、模組、類型 (類別、記錄、結構、介面、委派、列舉、等位等等)、函式、屬性、欄位、參數、型別參數和傳回值。 類別、運算式或工作`let`流程運算式內的系結上不允許屬性。
 
-通常，屬性宣告會出現之前將屬性目標的宣告。 可以使用多個屬性宣告，共同作業，如下所示。
+一般而言, 屬性宣告會直接出現在屬性目標的宣告前面。 可以同時使用多個屬性宣告, 如下所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
-您可以使用.NET 反映，在執行階段查詢屬性。
+您可以在執行時間使用 .NET 反映來查詢屬性。
 
-您可以個別宣告多個屬性，如同先前的程式碼範例中，或者您可以宣告它們在一組方括號中如果您使用分號來分隔個別的屬性和建構函式，如下所示。
+如先前的程式碼範例所示, 您可以個別宣告多個屬性, 或者, 如果您使用分號來分隔個別屬性和構造函式, 則可以在一組方括弧中宣告它們, 如下所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
-通常發生這些屬性包括`Obsolete`COM 支援、 擁有權的程式碼中，與相關的屬性和屬性，指出是否可以序列化的型別屬性的屬性，如需安全性考量的屬性。 下列範例示範如何使用`Obsolete`屬性。
+通常遇到的`Obsolete`屬性包括屬性、安全性考慮的屬性、COM 支援的屬性、與程式碼擁有權相關的屬性, 以及指出類型是否可以序列化的屬性。 下列範例示範`Obsolete`屬性的用法。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-屬性目標`assembly`並`module`，您將屬性套用至最上層`do`繫結組件中。 您可以包含單字`assembly`或`module`在屬性宣告中，如下所示。
+針對屬性目標`assembly`和`module`, 您可以將屬性套用`do`至元件中的最上層系結。 您可以在屬性宣告`assembly`中`module`包含單字或, 如下所示。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-如果您省略套用至屬性的屬性目標`do`繫結，F#編譯器會嘗試判斷適合該屬性的屬性目標。 許多屬性的類別有類型的屬性`System.AttributeUsageAttribute`包含支援該屬性的可能目標的相關資訊。 如果`System.AttributeUsageAttribute`表示屬性支援做為目標的函式，屬性會套用至程式的主要進入點。 如果`System.AttributeUsageAttribute`表示屬性支援做為目標的組件，編譯器會採用要套用至組件的屬性。 大部分屬性不會套用至函式和組件，但在其中的情況下，屬性會套用至程式的 main 函式。 如果明確指定屬性目標，則會將屬性套用至指定的目標。
+如果您省略套用至`do`系結之屬性的屬性目標, F#編譯器會嘗試判斷對該屬性有意義的屬性目標。 許多屬性類別都具有類型`System.AttributeUsageAttribute`的屬性, 其中包含該屬性所支援之可能目標的相關資訊。 `System.AttributeUsageAttribute`如果指出屬性支援以函式作為目標, 則會採用屬性以套用至程式的主要進入點。 `System.AttributeUsageAttribute`如果指出屬性支援將元件當做目標, 則編譯器會採用屬性來套用至元件。 大部分的屬性都不會同時套用至函式和元件, 但在這些情況下, 會採用屬性以套用至程式的 main 函式。 如果明確指定屬性目標, 則會將屬性套用至指定的目標。
 
-雖然您通常不需要指定屬性目標明確的有效值*目標*屬性中會顯示在下列資料表中，以及使用方式的範例。
+雖然您通常不需要明確指定屬性目標, 但在屬性中,*目標*的有效值也會顯示在下表中, 以及使用方式的範例。
 
 <table>
   <tr>

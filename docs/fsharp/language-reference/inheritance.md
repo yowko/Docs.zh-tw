@@ -1,40 +1,40 @@
 ---
 title: 繼承
-description: 了解如何指定F#使用 'inherit' 關鍵字的繼承關聯性。
+description: 瞭解如何使用 ' F# inherit ' 關鍵字來指定繼承關聯性。
 ms.date: 05/16/2016
-ms.openlocfilehash: 2fad2ddafbc0174903d3d24be3ce5412f7e1f9ed
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5ab891a93528427a66e4eb8f7bfeccbf6e4d2c7e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641813"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627660"
 ---
 # <a name="inheritance"></a>繼承
 
-使用繼承來建立模型的 「 是 」 關聯性，或子型別，在物件導向程式設計中。
+繼承是用來建立物件導向程式設計中的「is-a」關聯性或 subtyping 模型。
 
-## <a name="specifying-inheritance-relationships"></a>指定的繼承關聯性
+## <a name="specifying-inheritance-relationships"></a>指定繼承關聯性
 
-使用指定繼承關聯性`inherit`類別宣告中的關鍵字。 基本的語法形式是由下列範例所示。
+您可以使用類別宣告中的`inherit`關鍵字來指定繼承關聯性。 基本的語法形式如下列範例所示。
 
 ```fsharp
 type MyDerived(...) =
     inherit MyBase(...)
 ```
 
-一個類別可以有最多一個基底類別。 如果您未指定基底類別使用`inherit`關鍵字，類別會隱含地繼承自`System.Object`。
+一個類別最多隻能有一個直接基類。 如果您未使用`inherit`關鍵字指定基類, 類別會隱含繼承自。 `System.Object`
 
 ## <a name="inherited-members"></a>繼承的成員
 
-如果類別繼承自另一個類別，方法和基底類別成員可用於衍生類別的使用者，就像是在衍生類別的直接成員一樣。
+如果類別繼承自另一個類別, 則衍生類別的使用者可以使用基類的方法和成員, 就如同它們是衍生類別的直接成員一樣。
 
-任何的 let 繫結和建構函式參數都是私用的類別，因此，無法從衍生類別存取。
+任何 let 系結和函式參數都是類別的私用, 因此無法從衍生類別存取。
 
-關鍵字`base`隨附在衍生類別中，參考的基底類別的執行個體。 它當成自我識別項。
+關鍵字`base`可在衍生類別中使用, 並參考基類實例。 其使用方式與自我識別碼類似。
 
 ## <a name="virtual-methods-and-overrides"></a>虛擬方法和覆寫
 
-虛擬方法 （和屬性） 運作方式稍有不同的F#相較於其他.NET 語言。 若要宣告新的虛擬成員，您使用`abstract`關鍵字。 要這麼做，不論您是否提供該方法的預設實作。 因此基底類別中的虛擬方法的完整定義會遵循下列模式：
+相較于其他 .NET 語言, 虛擬方法 ( F#和屬性) 在中的工作方式稍有不同。 若要宣告新的虛擬成員, 請使用`abstract`關鍵字。 無論您是否為該方法提供預設的實作為, 都可以執行此動作。 因此, 基底類別中虛擬方法的完整定義會遵循此模式:
 
 ```fsharp
 abstract member [method-name] : [type]
@@ -42,27 +42,27 @@ abstract member [method-name] : [type]
 default [self-identifier].[method-name] [argument-list] = [method-body]
 ```
 
-然後，在衍生類別中，此虛擬方法的覆寫會遵循此模式：
+而在衍生類別中, 此虛擬方法的覆寫會遵循此模式:
 
 ```fsharp
 override [self-identifier].[method-name] [argument-list] = [method-body]
 ```
 
-如果您省略基底類別中的預設實作，基底類別變成抽象類別。
+如果您省略基類中的預設實作為, 基底類別會變成抽象類別。
 
-下列程式碼範例說明新的虛擬方法的宣告`function1`基底類別，以及如何在衍生類別中覆寫它。
+下列程式碼範例說明如何在基類中宣告新的`function1`虛擬方法, 以及如何在衍生類別中覆寫它。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2601.fs)]
 
 ## <a name="constructors-and-inheritance"></a>建構函式和繼承
 
-在衍生類別中，就必須呼叫基底類別的建構函式。 基底類別建構函式的引數出現在引數清單中`inherit`子句。 從衍生的類別建構函式所提供的引數，必須決定所使用的值。
+基類的函式必須在衍生類別中呼叫。 基類的引數會出現在`inherit`子句的引數清單中。 所使用的值必須從提供給衍生類別的引數來判斷。
 
-下列程式碼顯示基底類別和衍生的類別，衍生的類別繼承子句中呼叫基底類別建構函式的位置：
+下列程式碼顯示基類和衍生類別, 其中衍生的類別會在繼承子句中呼叫基類的函式:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-在多個建構函式的情況下可以使用下列程式碼。 在衍生的類別建構函式的第一行會`inherit`子句和欄位會顯示為使用宣告的明確欄位`val`關鍵字。 如需詳細資訊，請參閱[明確欄位：`val`關鍵字](members/explicit-fields-the-val-keyword.md)。
+在多個函式的情況下, 可以使用下列程式碼。 衍生類別的第一行程式碼是`inherit`子句, 而欄位則是以`val`關鍵字宣告的明確欄位來顯示。 如需詳細資訊, [請參閱明確欄位:`val`關鍵字。](./members/explicit-fields-the-val-keyword.md)
 
 ```fsharp
 type BaseClass =
@@ -81,15 +81,15 @@ let obj1 = DerivedClass("A", "B")
 let obj2 = DerivedClass("A")
 ```
 
-## <a name="alternatives-to-inheritance"></a>繼承的替代方案
+## <a name="alternatives-to-inheritance"></a>繼承的替代專案
 
-在需要稍微修改的型別所在的情況下，請考慮使用替代繼承的物件運算式。 下列範例說明如何使用的物件運算式，以建立新的衍生的類型的替代方案：
+在需要稍微修改類型的情況下, 請考慮使用物件運算式做為繼承的替代方法。 下列範例說明如何使用物件運算式, 做為建立新衍生型別的替代方法:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2603.fs)]
 
-如需有關物件運算式的詳細資訊，請參閱[物件運算式](object-expressions.md)。
+如需物件運算式的詳細資訊, 請參閱[物件運算式](object-expressions.md)。
 
-當您建立的物件階層架構時，請考慮使用已區分的聯集而非繼承。 差別等位也各不相同的模型行為的不同共用常見的整體類型的物件。 單一的已區分聯集可以通常不需要是彼此的微小差異的衍生類別的數字。 差別聯集的相關資訊，請參閱[差別聯集](discriminated-unions.md)。
+當您建立物件階層時, 請考慮使用區分聯集, 而不是繼承。 相異聯集也可以針對共用一般類型的不同物件, 建立各種不同的行為模型。 單一差異聯集通常不需要多個不同的衍生類別, 而是彼此的次要變化。 如需區分等位的詳細資訊, 請參閱[區分](discriminated-unions.md)等位。
 
 ## <a name="see-also"></a>另請參閱
 

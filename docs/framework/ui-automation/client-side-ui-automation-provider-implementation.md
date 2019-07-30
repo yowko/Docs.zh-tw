@@ -6,16 +6,16 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 361d6d684485e07a958e8272997bb989b8e4fc1b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802216"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629632"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>用戶端 UI 自動化提供者實作
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 作業系統中，包括 [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] 、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，使用數個不同的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]架構。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 會公開使用者介面項目相關資訊給用戶端。 不過， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 本身不會知道這些架構中存在的不同控制項類型，也不具備從這些架構中擷取資訊的必要技術。 它會將這項工作交給稱為提供者的物件。 提供者會從特定控制項擷取資訊，並將該資訊傳遞給 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，再由它以一致的方式呈現給用戶端。  
   
@@ -23,9 +23,9 @@ ms.locfileid: "67802216"
   
  不過，較舊的控制項，例如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 中的控制項，並不會直接支援 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 這些控制項會改由存在於用戶端處理序並使用跨處理序通訊 (例如，藉由監視控制項的往來視窗訊息) 來取得控制項相關資訊的提供者服務。 這種用戶端提供者有時稱為 Proxy。  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 提供標準的提供者[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows Form 控制項。 此外，後援提供者會提供部分[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支援新增至未由另一個伺服器端提供者的任何控制項或 proxy，但有 Microsoft Active Accessibility 實作。 所有這些提供者都會自動載入，供用戶端應用程式使用。  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]提供標準[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows Forms 控制項的提供者。 此外, 回溯提供者會針對其他[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]伺服器端提供者或 proxy 未提供的任何控制項提供部分支援, 但具有 Microsoft Active Accessibility 的執行。 所有這些提供者都會自動載入，供用戶端應用程式使用。  
   
- 如需有關支援[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows Forms 控制項，請參閱[UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)。  
+ 如需[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows Forms 控制項之支援的詳細資訊, 請參閱[適用于標準控制項的 UI 自動化支援](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)。  
   
  應用程式也可以註冊其他用戶端提供者。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67802216"
   
 <a name="Registering_and_Configuring_Client-Side_Providers"></a>   
 ## <a name="registering-and-configuring-client-side-providers"></a>註冊及設定用戶端提供者  
- 藉由呼叫 [!INCLUDE[TLA#tla_dll](../../../includes/tlasharptla-dll-md.md)] ，載入 <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>中的用戶端提供者。 用戶端應用程式不需進一步的動作，即可使用提供者。  
+ 動態連結程式庫 (DLL) 中的用戶端提供者是藉由呼叫<xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>來載入。 用戶端應用程式不需進一步的動作，即可使用提供者。  
   
  藉由使用 <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>，註冊用戶端本身程式碼中實作的提供者。 這個方法會採用 <xref:System.Windows.Automation.ClientSideProviderDescription> 結構陣列做為引數，每個結構會指定下列屬性：  
   

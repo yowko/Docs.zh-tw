@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e32e4b490f0824cf97a1ae5910d7c74801c7b439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2c7a558af17493c955b4f148d0abf7f42c9dd6f8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592697"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629429"
 ---
-# <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 項目
-指定是否執行階段會使用 COM interop 而不是遠端處理的所有呼叫跨越應用程式定義域界限。  
+# <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 元素
+指定執行時間是否會針對跨應用程式域界限的所有呼叫, 使用 COM Interop 而不是遠端處理。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<PreferComInsteadOfManagedRemoting>  
   
 ## <a name="syntax"></a>語法  
@@ -34,14 +34,14 @@ ms.locfileid: "64592697"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指出是否執行階段會使用 COM interop 而不是遠端處理跨應用程式定義域界限。|  
+|`enabled`|必要屬性。<br /><br /> 指出執行時間是否會使用 COM Interop, 而不是跨應用程式域界限進行遠端處理。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|`false`|執行階段會使用遠端處理跨應用程式定義域界限。 這是預設值。|  
-|`true`|執行階段會跨應用程式定義域界限使用 COM interop。|  
+|`false`|執行時間會跨應用程式域界限使用遠端功能。 這是預設值。|  
+|`true`|執行時間會跨應用程式域界限使用 COM Interop。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -54,16 +54,16 @@ ms.locfileid: "64592697"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 當您設定`enabled`屬性設定為`true`，執行階段行為，如下所示：  
+ 當您將`enabled`屬性設定為`true`時, 執行時間的行為會如下所示:  
   
-- 執行階段不會呼叫[iunknown:: Queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867) for [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)介面[IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003)介面進入網域透過 COM 介面。 相反地，它會建構[執行階段可呼叫包裝函式](../../../../../docs/framework/interop/runtime-callable-wrapper.md)(RCW) 物件周圍。  
+- 當[iunknown](https://go.microsoft.com/fwlink/?LinkId=148003)介面透過 COM 介面進入網域時, 執行時間不會針對[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)介面呼叫[IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) 。 相反地, 它會在物件周圍建立執行時間可呼叫[包裝](../../../../../docs/standard/native-interop/runtime-callable-wrapper.md)函式 (RCW)。  
   
-- 執行階段會接收時，會傳回 E_NOINTERFACE`QueryInterface`呼叫[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)介面的任何[COM 可呼叫包裝函式](../../../../../docs/framework/interop/com-callable-wrapper.md)(CCW)，已建立在這個網域中。  
+- 執行時間會在收到`QueryInterface`此網域中已建立之任何 COM 可呼叫[包裝](../../../../../docs/standard/native-interop/com-callable-wrapper.md)函式 (CCW) 的[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)介面呼叫時傳回 E_NOINTERFACE。  
   
- 這些兩種行為可確保所有呼叫 com 都介面之間受管理的物件，在應用程式定義域界限使用 COM 和 COM interop，而不是遠端執行功能。  
+ 這兩種行為可確保跨應用程式域界限的 managed 物件之間的所有呼叫都是使用 COM 和 COM Interop, 而不是遠端處理。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何指定執行階段應該使用 COM interop 跨越隔離界限：  
+ 下列範例顯示如何指定執行時間應該跨隔離界限使用 COM Interop:  
   
 ```xml  
 <configuration>  

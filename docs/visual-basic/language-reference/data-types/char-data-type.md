@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: ca40e6c8dcba3da29bdb68b29c91c852e477f8f7
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 8313c2282a3b4b7b035f9f3b685a786c4471f53a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512783"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630150"
 ---
 # <a name="char-data-type-visual-basic"></a>Char 資料類型 (Visual Basic)
 
@@ -37,16 +37,22 @@ Unicode 的第一個128程式碼點 (0 – 127) 對應到標準美式鍵盤上�
 
 Visual Basic 不會直接在和`Char`數數值型別之間進行轉換。 您可以使用<xref:Microsoft.VisualBasic.Strings.Asc%2A>或<xref:Microsoft.VisualBasic.Strings.AscW%2A>函`Char` 式`Integer` , 將值轉換為代表其程式碼點的。 您可以使用<xref:Microsoft.VisualBasic.Strings.Chr%2A>或<xref:Microsoft.VisualBasic.Strings.ChrW%2A>函數`Integer` ,`Char`將值轉換成具有該程式碼點的。
 
-如果類型檢查參數 ([Option Strict 語句](../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是 on, 您就必須將常數值型別字元附加至單一字元字串常值, 以將它識別`Char`為資料類型。 下列範例將說明這點。
+如果類型檢查參數 ( [Option Strict 語句](../../../visual-basic/language-reference/statements/option-strict-statement.md)) 為 on, 您就必須將常數值型別字元附加至單一字元字串常值, 以將它識別為`Char`資料類型。 下列範例將說明這點。 第一次指派`charVar`變數時, 會產生編譯器錯誤`Option Strict` [BC30512](../../misc/bc30512.md) , 因為是 on。 第二個編譯成功, `c`因為常`Char`數值型別字元會將常值識別為值。
 
 ```vb
 Option Strict On
-Dim charVar As Char
-' The following statement attempts to convert a String literal to Char.
-' Because Option Strict is On, it generates a compiler error.
-charVar = "Z"
-' The following statement succeeds because it specifies a Char literal.
-charVar = "Z"C
+
+Module CharType
+    Public Sub Main()
+        Dim charVar As Char
+
+        ' This statement generates compiler error BC30512 because Option Strict is On.  
+        charVar = "Z"  
+
+        ' The following statement succeeds because it specifies a Char literal.  
+        charVar = "Z"c
+    End Sub
+End Module
 ```
 
 ## <a name="programming-tips"></a>程式設計提示
@@ -55,7 +61,7 @@ charVar = "Z"C
 
 - **Interop 考慮。** 如果您使用不是針對 .NET Framework 所撰寫的元件 (例如 Automation 或 COM 物件) 來進行介面, 請記住, 在其他環境中, 字元類型具有不同的資料寬度 (8 位)。 如果您將8位引數傳遞至這類元件, 請在新`Byte`的`Char` Visual Basic 程式碼中將它宣告為而不是。
 
-- **加寬.** 資料類型會擴大為`String`。 `Char` 這表示您可以將`Char`轉換`String`成<xref:System.OverflowException?displayProperty=nameWithType> , 而且不會遇到錯誤。
+- **加寬.** 資料類型會擴大為`String`。 `Char` 這表示您可以將`Char`轉換`String`成<xref:System.OverflowException?displayProperty=nameWithType>, 而且不會遇到。
 
 - **輸入字元。** 將常數值型別字元`C`附加至單一字元字串常值, 會強制其`Char`成為資料類型。 `Char`沒有識別項型別字元。
 

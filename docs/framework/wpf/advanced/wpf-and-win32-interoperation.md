@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: a942d72f27d394d31a52fd02ecaa158add4d2e0f
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 860e8f11859bfbd85d6a5f0e4420fda3047bb236
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484639"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629840"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 和 Win32 互通
 本主題概述如何交互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式碼。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，則重複使用該程式碼的一部分可能會更有效率。  
@@ -33,9 +33,9 @@ ms.locfileid: "68484639"
   
  一個專案層級的複雜之處在于, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]您無法將C++檔案編譯成專案。  有數個專案部門技術可彌補這一點。  
   
-- 建立包含C#所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面做為已編譯元件的 DLL, 然後讓C++可執行檔包含[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]做為參考。  
+- 建立包含C#所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面做為已編譯元件的 DLL, 然後讓C++可執行檔包含該 dll 做為參考。  
   
-- C#建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容的可執行檔, 並C++ [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]讓它參考包含[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]內容的。  
+- 建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容C#的可執行檔, 並讓它參考包含C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]內容的 DLL。  
   
 - 使用<xref:System.Windows.Markup.XamlReader.Load%2A>在執行時間[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]載入任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 而不是編譯。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68484639"
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>WPF 如何使用 Hwnd  
- 若要將大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 設為 "HWND interop"，您需要了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 如何使用 HWND。 針對任何 HWND，您都無法混合使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 轉譯與 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 轉譯或 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] / [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] 轉譯。 這有幾個隱含意義。 主要，若要完全混合使用這些轉譯模型，您必須建立交互操作方案，並使用您選擇使用之每個轉譯模型的指定區段交互操作。 此外，轉譯行為還會建立交互操作方案可完成之作業的「空間」限制。 [技術領域概觀](technology-regions-overview.md)主題會更詳細地說明「空間」概念。  
+ 若要將大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 設為 "HWND interop"，您需要了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 如何使用 HWND。 針對任何 HWND, 您無法混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 DirectX 轉譯或[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]  /  [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]轉譯來進行轉譯。 這有幾個隱含意義。 主要，若要完全混合使用這些轉譯模型，您必須建立交互操作方案，並使用您選擇使用之每個轉譯模型的指定區段交互操作。 此外，轉譯行為還會建立交互操作方案可完成之作業的「空間」限制。 [技術領域概觀](technology-regions-overview.md)主題會更詳細地說明「空間」概念。  
   
  HWND 最後會支援畫面上的所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]當您建立<xref:System.Windows.Window>時, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會建立<xref:System.Windows.Interop.HwndSource>最上層的<xref:System.Windows.Window> HWND, 並使用將和其[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容放在 HWND 內。  應用程式中 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的其餘部分會共用該單一 HWND。 例外狀況是功能表、下拉式方塊下拉式清單和其他快顯視窗。 這些項目會建立自己的最上層視窗，這就是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能表為什麼可以通過包含它的視窗 HWND 邊緣。 當您使用<xref:System.Windows.Interop.HwndHost>將 HWND 放在內部[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]會通知如何將新的子 hwnd 相對[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window>于 HWND。  
   

@@ -2,12 +2,12 @@
 title: 建構函式
 description: 瞭解如何在中F#定義和使用函數, 以建立和初始化類別和結構物件。
 ms.date: 05/16/2016
-ms.openlocfilehash: ef5dc134ad98179b6a365c4c34a9eca22fe5f7f6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364367"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627603"
 ---
 # <a name="constructors"></a>建構函式
 
@@ -23,7 +23,7 @@ ms.locfileid: "68364367"
 
 下列程式碼說明具有函式的類別, 以及建立物件的各種方式。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
 輸出如下。
 
@@ -40,7 +40,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 此外, 結構通常會有使用`val`關鍵字建立的欄位; 類別也可以有這些欄位。 具有使用`val`關鍵字定義之欄位的結構和類別, 也可以使用記錄運算式在其他的函式中進行初始化, 如下列程式碼所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
 如需詳細資訊, [請參閱明確欄位:`val`關鍵字。](explicit-fields-the-val-keyword.md)
 
@@ -48,7 +48,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 類別中的主要函式可以在系結中`do`執行程式碼。 不過, 如果您必須在不使用`do`系結的其他函式中執行程式碼, 該怎麼辦？ 若要這麼做, 請使用`then`關鍵字。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
 主要的函式的副作用仍會執行。 因此, 輸出如下所示。
 
@@ -62,11 +62,11 @@ Created an invalid person object.
 
 在其他成員中, 您會在每個成員的定義中提供目前物件的名稱。 您也可以使用緊接在函式參數後面的`as`關鍵字, 將自我識別碼放在類別定義的第一行。 下列範例說明此語法。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
 在其他的函式中, 您也可以將`as`子句放在函式參數後面, 以定義自我識別碼。 下列範例說明此語法。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
 當您嘗試在完全定義物件之前使用它, 可能會發生問題。 因此, 使用自我識別碼可能會導致編譯器發出警告, 並插入額外的檢查, 以確保物件的成員在初始化之前不會被存取。 您應該只在`do`主要函式的系結中, 或在其他函式中的`then`關鍵字之後, 使用自我識別碼。
 
@@ -76,11 +76,11 @@ Created an invalid person object.
 
 您可以將表單`property = value`指派清單附加至函式的引數清單, 以將值指派給初始化程式碼中的類別物件屬性。 這會顯示在以下程式碼範例中。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
 下列版本的舊版程式碼說明了一般引數、選擇性引數和屬性設定在一個函式呼叫中的組合。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 
 ## <a name="constructors-in-inherited-class"></a>繼承類別中的函式
 

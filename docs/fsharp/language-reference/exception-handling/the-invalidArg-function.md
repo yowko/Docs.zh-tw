@@ -1,15 +1,15 @@
 ---
-title: '例外狀況: invalidArg 函式'
-description: 了解如何F#'invalidArg' 函式會產生引數例外狀況。
+title: 例外狀況：InvalidArg 函式
+description: 瞭解F# ' invalidArg ' 函數如何產生引數例外狀況。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1f0cbc9b7e805822544d6d54bc1fc69adf82967a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 010dbfe313f539093b4ee7a19984ef54500b072d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645479"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630301"
 ---
-# <a name="exceptions-the-invalidarg-function"></a>例外狀況: invalidArg 函式
+# <a name="exceptions-the-invalidarg-function"></a>例外狀況：InvalidArg 函式
 
 `invalidArg`函式會產生引數例外狀況。
 
@@ -21,13 +21,13 @@ invalidArg parameter-name error-message-string
 
 ## <a name="remarks"></a>備註
 
-先前語法中的參數名稱是參數的其引數無效名稱的字串。 *錯誤訊息字串*是字串常值或型別的值`string`。 它會變成`Message`例外狀況物件的屬性。
+先前語法中的參數名稱是字串, 其引數名稱無效。 *錯誤訊息字串*是文字字串或類型`string`的值。 它會成為`Message` exception 物件的屬性。
 
-產生的例外狀況`invalidArg`是`System.ArgumentException`例外狀況。 下列程式碼說明如何使用`invalidArg`擲回例外狀況。
+所產生`invalidArg`的例外狀況`System.ArgumentException`是例外狀況。 下列程式碼說明`invalidArg`如何使用來擲回例外狀況。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
 
-輸出是下列項目，後面接著 （未顯示） 的堆疊追蹤。
+輸出如下所示, 後面接著堆疊追蹤 (未顯示)。
 
 ```
 December

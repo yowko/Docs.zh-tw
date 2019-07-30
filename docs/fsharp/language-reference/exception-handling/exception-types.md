@@ -1,17 +1,17 @@
 ---
 title: 例外狀況類型
-description: 了解如何定義和使用F#例外狀況類型。
+description: 瞭解如何定義和使用F#例外狀況類型。
 ms.date: 05/16/2016
-ms.openlocfilehash: b7203dc042c7207bca95cfd0372790bfe52e0226
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8545fab50ff6338d1f1621710a838a200f9ac705
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645560"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630321"
 ---
 # <a name="exception-types"></a>例外狀況類型
 
-有兩種類別中的例外狀況的F#:.NET 例外狀況類型和F#例外狀況類型。 本主題描述如何定義和使用F#例外狀況類型。
+有兩種類別的例外狀況F#: .net 例外狀況類型F#和例外狀況類型。 本主題描述如何定義和使用F#例外狀況類型。
 
 ## <a name="syntax"></a>語法
 
@@ -21,21 +21,21 @@ exception exception-type of argument-type
 
 ## <a name="remarks"></a>備註
 
-在先前語法中，*例外狀況型別*的新名稱F#例外狀況類型，和*引數型別*表示當您提高此類型的例外狀況時可以提供引數的類型。 您可以指定多個引數使用的是 tuple 型別*引數型別*。
+在先前的語法中,*例外狀況類型*是新F#例外狀況類型的名稱, 而*引數類型*代表當您引發這個類型的例外狀況時, 可以提供的引數類型。 您可以使用*引數類型*的元組類型來指定多個引數。
 
-一般定義F#例外狀況如下所示。
+F#例外狀況的一般定義如下所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5501.fs)]
 
-您可以使用來產生此類型的例外狀況`raise`函式，，如下所示。
+您可以使用`raise`函數來產生此類型的例外狀況, 如下所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5502.fs)]
 
-您可以使用F#直接在中的篩選器中的例外狀況型別`try...with`運算式，如下列範例所示。
+您可以直接在F# `try...with`運算式的篩選中使用例外狀況類型, 如下列範例所示。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5503.fs)]
 
-您定義的例外狀況類型`exception`關鍵字，在F#是新的型別繼承自`System.Exception`。
+您在中`exception` F#使用關鍵字定義的例外狀況類型, 是繼承自`System.Exception`的新類型。
 
 ## <a name="see-also"></a>另請參閱
 

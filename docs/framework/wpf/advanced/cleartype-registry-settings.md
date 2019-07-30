@@ -5,15 +5,15 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: db7d6ec5663d657969e1508bd0b9f62c25e491b0
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484682"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629935"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 登錄設定
-本主題提供[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式所[!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]使用之登錄設定的總覽。  
+本主題概要說明 WPF 應用程式所使用的 Microsoft ClearType 登錄設定。  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技術概觀  
@@ -80,7 +80,7 @@ ms.locfileid: "68484682"
 ## <a name="pixel-structure"></a>像素結構  
  像素結構說明構成顯示裝置的像素類型。 像素結構定義有三種類型︰  
   
-|類型|值|描述|  
+|類型|值|說明|  
 |----------|-----------|-----------------|  
 |一般|0|顯示裝置沒有像素結構。 這表示每種色彩光源都平均分布在像素區域，此即為灰階轉譯。 這是標準顯示裝置運作的方式。 ClearType 永遠不會套用至呈現的文字。|  
 |RGB|1|顯示裝置的像素色帶組成順序如下︰紅色、綠色和藍色。 ClearType 會套用至呈現的文字。|  

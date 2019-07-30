@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 0fe09c0c261f36f1e9f241a6a6a8aacf3bf07d29
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: a29c31e93523e0843728d2fd7fa555946b139c55
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331491"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629594"
 ---
 # <a name="accessibility-best-practices"></a>協助工具最佳作法
 > [!NOTE]
@@ -66,7 +66,7 @@ ms.locfileid: "68331491"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>確定所有 UI 正確地依 DPI 設定值縮放比例  
- 請確定所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可以正確地依 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 設定值縮放比例。 此外，請確定 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目能容納在具有 120 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)]的 1024 x 768 螢幕中。  
+ 確定所有[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]可以正確地依任何的每英寸 (DPI) 設定來調整。 此外, 請確定[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]元素符合 1024 x 768 的畫面, 並具有120個點 (DPI)。  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>巡覽  

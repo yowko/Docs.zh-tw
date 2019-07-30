@@ -1,5 +1,5 @@
 ---
-title: 最佳化效能：運用硬體
+title: 優化效能:運用硬體
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], performance
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238444"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629658"
 ---
-# <a name="optimizing-performance-taking-advantage-of-hardware"></a>最佳化效能：運用硬體
-內部架構[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有兩個呈現管線、 硬體和軟體。 本主題提供有關這些轉譯管線，以幫助您決定您的應用程式的效能最佳化的相關資訊。  
+# <a name="optimizing-performance-taking-advantage-of-hardware"></a>優化效能:運用硬體
+的內部架構[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有兩個轉譯管線: 硬體和軟體。 本主題提供這些轉譯管線的相關資訊, 可協助您決定應用程式的效能優化。  
   
-## <a name="hardware-rendering-pipeline"></a>硬體轉譯管線  
- 其中一個最重要的因素，判斷[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]效能是可轉譯繫結，您可以呈現，較高成本的效能有更多的像素。 不過，轉譯會更可以卸載到[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]，您可以取得更多的效能優勢。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的硬體轉譯管線可充分[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]支援的最少的硬體上的功能[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]7.0 版。 進一步最佳化後，可以支援硬體的[!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]7.0 版和 PixelShader 2.0 + 功能。  
+## <a name="hardware-rendering-pipeline"></a>硬體呈現管線  
+ 判斷[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]效能最重要的因素之一就是它會呈現系結, 您必須轉譯的圖元越多, 效能成本就愈高。 不過, 可以卸載到的[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]更多轉譯, 您可以獲得更多的效能優勢。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式硬體轉譯管線在支援最低 microsoft directx 7.0 版的硬體上, 可享有 microsoft directx 功能的完整優勢。 支援 Microsoft DirectX 7.0 版和無效 2.0 + 功能的硬體可以取得進一步的優化。  
   
 ## <a name="software-rendering-pipeline"></a>軟體呈現管線  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]軟體呈現管線完全是 CPU 繫結。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SSE 及 SSE2 指令的利用設定 CPU 來實作最佳化的完整功能軟體模擬轉譯器。 軟體後援是的每當應用程式的功能無法使用硬體呈現管線呈現順暢。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]軟體轉譯管線完全受限於 CPU。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]利用 CPU 中的 SSE 和 SSE2 指令集來執行優化、功能完整的軟體轉譯器。 只要應用程式功能無法使用硬體轉譯管線轉譯, 就可以順暢地回溯到軟體。  
   
- 最大的效能問題就會發生時軟體模式中的呈現與填滿率，定義為您要轉譯的像素數目。 如果您擔心在軟體轉譯模式中的效能，請嘗試重新繪製的像素的次數降到最低。 例如，如果您的應用程式，以藍色背景，然後呈現稍微透明的影像上方時，會呈現所有兩次的應用程式中的像素。 如此一來，它會花上兩次來呈現應用程式比您藍色的背景影像。  
+ 以軟體模式轉譯時, 您會遇到的最大效能問題, 與填滿速率相關, 其定義為您要轉譯的圖元數目。 如果您擔心軟件轉譯模式中的效能, 請嘗試將圖元重繪的次數減至最少。 例如, 如果您的應用程式具有藍色背景, 然後在其上呈現稍微透明的影像, 您會將應用程式中的所有圖元呈現兩次。 因此, 使用影像轉譯應用程式所需的時間會比只有藍色背景來得多兩倍。  
   
 ### <a name="graphics-rendering-tiers"></a>圖形轉譯層  
- 它可能很難預測的硬體組態，將會在執行您的應用程式。 不過，您可能要考慮的設計，可讓您順暢地切換功能在不同的硬體上執行時，讓它可以充分利用每個不同的硬體組態的應用程式。  
+ 預測您的應用程式將在其上執行的硬體設定可能非常棘手。 不過, 您可能會想要考慮允許應用程式在不同硬體上執行時順暢地切換功能的設計, 讓它可以充分利用每個不同的硬體設定。  
   
- 若要達到這個目的，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供功能，以判斷系統在執行階段的圖形功能。 圖形功能取決於分類做為其中的三個轉譯功能層級的視訊卡。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 公開 API，可讓應用程式查詢轉譯功能層。 您的應用程式可以在執行階段取決於硬體支援的轉譯層採取不同的程式碼路徑。  
+ 為了達到這個目的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 提供了在執行時間決定系統圖形功能的功能。 圖形功能的決定方式是將視訊卡分類為三種轉譯功能層的其中一個。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]公開可讓應用程式查詢轉譯功能層的 API。 然後, 您的應用程式可以在執行時間根據硬體所支援的轉譯層來採取不同的程式碼路徑。  
   
  對轉譯層級的影響最大的圖形硬體功能如下︰  
   
@@ -42,17 +42,17 @@ ms.locfileid: "68238444"
   
 - **多紋理支援**：多紋理支援指的是可以在混色作業期間於 3D 圖形物件上套用兩個以上的不同紋理。 多紋理支援的程度取決於圖形硬體上的多紋理單位數目。  
   
- 像素著色器、 頂點著色器，以及多紋理功能用來定義特定[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本層級，它反而用來定義中的不同的轉譯層[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
+ [圖元著色器]、[頂點著色器] 和 [多紋理] 功能是用來定義特定的 DirectX 版本層級, 而後者則是用來[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]在中定義不同的呈現層。  
   
  圖形硬體的功能決定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的轉譯功能。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 系統定義三個轉譯層︰  
   
-- **轉譯層 0**：沒有圖形硬體加速。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本層級低於 7.0 版。  
+- **轉譯層 0**：沒有圖形硬體加速。 DirectX 版本層級小於7.0 版。  
   
-- **轉譯層 1**部分的圖形硬體加速。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]版本層級是大於或等於 7.0 版中，並**較小者**比 9.0 版。  
+- 轉譯**層 1**部分圖形硬體加速。 DirectX 版本層級大於或等於7.0 版, 且小於9.0 版  。  
   
-- **轉譯層 2**：大部分圖形功能都使用圖形硬體加速。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本層級大於或等於 9.0 版。  
+- **轉譯層 2**：大部分圖形功能都使用圖形硬體加速。 DirectX 版本層級大於或等於9.0 版。  
   
- 如需詳細資訊[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]轉譯層，請參閱[圖形轉譯層](graphics-rendering-tiers.md)。  
+ 如需[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呈現層的詳細資訊, 請參閱[圖形轉譯層](graphics-rendering-tiers.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

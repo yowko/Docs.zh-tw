@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: dc7129e11a82741f5a095d7f1824de3f90421056
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331771"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629852"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、轉換及格式化影像。  
@@ -165,7 +165,7 @@ ms.locfileid: "68331771"
 ## <a name="image-metadata"></a>影像中繼資料  
  某些影像檔包含描述檔案內容或特性的中繼資料。 例如，大部分數位相機建立的影像，會包含用來擷取影像之相機廠牌與型號的中繼資料。 每種影像格式處理中繼資料的方式也有所不同，但 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可針對每種支援的影像格式提供統一的中繼資料儲存及擷取方式。  
   
- 中繼資料的存取是透過<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> <xref:System.Windows.Media.Imaging.BitmapSource>物件的屬性來提供。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata>傳回物件, 其中包含影像所包含的所有中繼資料。 此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 支援下列影像中繼資料結構描述：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt (PNG 文字型資料)、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
+ 中繼資料的存取是透過<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> <xref:System.Windows.Media.Imaging.BitmapSource>物件的屬性來提供。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata>傳回物件, 其中包含影像所包含的所有中繼資料。 此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]支援下列影像中繼資料架構:交換影像檔案 (Exif)、文字 (PNG 文字資料) [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、 [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]、和[!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
   
  為了簡化讀取中繼資料的程式<xref:System.Windows.Media.Imaging.BitmapMetadata> , 提供了數個名為的屬性, 可以輕鬆地存取<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, 例如、 <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>和。 許多具名屬性也可以用於寫入中繼資料。 讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。 方法是藉由提供字串查詢 (例如 *"/app1/exif/"* ), 用來抓取中繼資料查詢讀取器。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 在下列範例中, <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>是用來取得儲存在 *"/Text/Description"* 位置的文字。  
   

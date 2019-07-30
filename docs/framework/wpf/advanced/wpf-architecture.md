@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400855"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629826"
 ---
 # <a name="wpf-architecture"></a>WPF 架構
 本主題提供 Windows Presentation Foundation (WPF) 類別階層的導覽。 它涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述其互動方式。 它也會詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所進行的一些選擇。  
@@ -30,7 +30,7 @@ ms.locfileid: "68400855"
 ## <a name="systemobject"></a>System.Object  
  主要 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程式設計模型是透過 Managed 程式碼所公開。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 設計階段早期，有關應該在系統的 Managed 元件與 Unmanaged 元件之間繪製線條的位置有許多爭論。 CLR 提供許多功能, 讓開發更具生產力且更穩固 (包括記憶體管理、錯誤處理、一般型別系統等), 但會產生成本。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要元件如下圖所示。 圖表的紅色區段 (PresentationFramework、PresentationCore 和 milcore) 是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要程式碼部分。 其中只有一種是 Unmanaged 元件：milcore。 milcore 是使用 Unmanaged 程式碼所撰寫，以啟用與 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 的緊密整合。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有顯示都是透過 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 引擎所完成，以允許有效率的硬體和軟體轉譯。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也需要記憶體和執行的良好控制。 Milcore 中的組合引擎會對效能產生極大的影響, 而且需要有多個 CLR 優點來取得效能。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要元件如下圖所示。 圖表的紅色區段 (PresentationFramework、PresentationCore 和 milcore) 是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要程式碼部分。 其中只有一種是 Unmanaged 元件：milcore。 Milcore 是以未受管理的程式碼撰寫, 以便與 DirectX 緊密整合。 中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的所有顯示都是透過 DirectX 引擎完成, 讓硬體和軟體呈現有效率。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也需要記憶體和執行的良好控制。 Milcore 中的組合引擎會對效能產生極大的影響, 而且需要有多個 CLR 優點來取得效能。  
   
  ![WPF 在 .NET Framework 中的位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   

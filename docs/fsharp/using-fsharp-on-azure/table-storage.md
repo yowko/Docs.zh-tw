@@ -1,199 +1,199 @@
 ---
-title: 開始使用 Azure 資料表儲存體使用F#
-description: 使用 Azure 資料表儲存體或 Azure Cosmos DB 在雲端中儲存結構化的資料。
+title: 使用 F# 開始使用 Azure 資料表儲存體
+description: 使用 Azure 資料表儲存體或 Azure Cosmos DB, 將結構化資料儲存在雲端。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8ab2d61048523ac52f305c7bd035c73ca0d3f60
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756347"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630476"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和 Azure Cosmos DB 資料表 API 使用 F\#
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和使用 F 的 Azure Cosmos DB 資料表 API\#
 
-Azure 資料表儲存體是一項服務，將結構化的 NoSQL 資料儲存在雲端中。 資料表儲存體是具有無結構描述設計的索引鍵/屬性存放區。 資料表儲存體沒有結構描述，因為很容易就能隨著應用程式發展需求改寫資料。 快速且符合成本效益的所有類型的應用程式資料的存取。 資料表儲存體通常是大幅降低成本比傳統 SQL 類似的磁碟區的資料。
+Azure 表格儲存體是在雲端儲存結構化 NoSQL 資料的服務。 資料表儲存體是具有無架構設計的索引鍵/屬性存放區。 因為資料表儲存體是無架構的, 所以很容易就能隨著應用程式發展的需求來調整您的資料。 對所有類型的應用程式而言, 資料的存取速度既快速又符合成本效益。 相較于類似資料量的傳統 SQL, 資料表儲存體的成本通常會大幅降低。
 
-您可以使用資料表儲存體來儲存具彈性的資料集，例如 web 應用程式、 通訊錄、 裝置的詳細資訊和任何其他類型的服務所需的中繼資料的使用者資料。 您可以在資料表中，儲存任意數目的實體和儲存體帳戶可能包含任意數目的資料表，最大容量限制的儲存體帳戶。
+您可以使用表格儲存體來儲存具彈性的資料集, 例如 web 應用程式的使用者資料、通訊錄、裝置資訊, 以及服務所需的任何其他元資料類型。 您可以在資料表中儲存任意數目的實體, 且儲存體帳戶可包含任意數目的資料表, 最高可達儲存體帳戶的容量限制。
 
-Azure Cosmos DB 會提供資料表 API 應用程式，會寫入 Azure 表格儲存體及所需要進階功能，例如：
+Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫, 而且需要高階功能的應用程式資料表 API, 例如:
 
-- 周全的全域散發。
-- 全球有專用的輸送量。
-- 99 百分位數的個位數毫秒延遲。
+- 全包式全域散發。
+- 全球專用的輸送量。
+- 第99個百分位數的一位數毫秒延遲。
 - 保證高可用性。
-- 自動的次要索引。
+- 自動次要索引。
 
-針對 Azure 資料表儲存體所撰寫的應用程式可以使用資料表 API 不必變更程式碼移轉至 Azure Cosmos DB，並利用進階功能。 「 資料表 API 具有.NET、 Java、 Python 和 Node.js 用戶端 Sdk 提供。
+針對 Azure 資料表儲存體所撰寫的應用程式可以使用資料表 API 來遷移至 Azure Cosmos DB, 而不需要進行任何程式碼變更, 並利用 premium 功能。 資料表 API 具有適用于 .NET、JAVA、Python 和 node.js 的用戶端 Sdk。
 
-如需詳細資訊，請參閱 < [Azure Cosmos DB 資料表 API 簡介](https://docs.microsoft.com/azure/cosmos-db/table-introduction)。
+如需詳細資訊, 請參閱[Azure Cosmos DB 資料表 API 簡介](https://docs.microsoft.com/azure/cosmos-db/table-introduction)。
 
 ## <a name="about-this-tutorial"></a>關於本教學課程
 
-本教學課程示範如何撰寫F#如何使用 Azure 資料表儲存體或 Azure Cosmos DB 資料表 API，包括建立和刪除資料表並插入、 更新、 刪除和查詢資料表資料的一些常見工作的程式碼。
+本教學課程說明如何使用F# Azure 資料表儲存體或 Azure Cosmos DB 資料表 API 來撰寫程式碼來執行一些常見的工作, 包括建立和刪除資料表, 以及插入、更新、刪除和查詢資料表資料。
 
 ## <a name="prerequisites"></a>必要條件
 
-若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)或是[Azure Cosmos DB 帳戶](https://azure.microsoft.com/try/cosmosdb/)。
+若要使用本指南, 您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)或[Azure Cosmos DB 帳戶](https://azure.microsoft.com/try/cosmosdb/)。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>建立F#指令碼，然後啟動F#互動
+## <a name="create-an-f-script-and-start-f-interactive"></a>建立F#腳本並啟動F#互動式
 
-這篇文章中的範例可以用於在F#應用程式或F#指令碼。 若要建立F#指令碼，建立的檔案`.fsx`擴充功能，例如`tables.fsx`，請在您F#開發環境。
+本文中的範例可用於F#應用程式或F#腳本中。 若要建立F#腳本, 請在`.fsx` F#開發環境中建立`tables.fsx`副檔名為的檔案, 例如。
 
-接下來，使用[套件管理員](package-management.md)這類[Paket](https://fsprojects.github.io/Paket/)或是[NuGet](https://www.nuget.org/)安裝`WindowsAzure.Storage`封裝和參考`WindowsAzure.Storage.dll`使用指令碼中`#r`指示詞。 請勿重新`Microsoft.WindowsAzure.ConfigurationManager`才能取得 Microsoft.Azure 命名空間。
+接下來, 使用[Paket](https://fsprojects.github.io/Paket/)或`WindowsAzure.Storage` [NuGet](https://www.nuget.org/)之類的[套件管理員](package-management.md), 在您的腳本中`WindowsAzure.Storage.dll`使用`#r`指示詞安裝封裝和參考。 再次`Microsoft.WindowsAzure.ConfigurationManager`執行, 以取得 Microsoft Azure 命名空間。
 
-### <a name="add-namespace-declarations"></a>加入命名空間宣告
+### <a name="add-namespace-declarations"></a>新增命名空間宣告
 
-新增下列`open`陳述式的`tables.fsx`檔案：
+將下列`open`語句新增至檔案頂端`tables.fsx` :
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
-### <a name="get-your-azure-storage-connection-string"></a>取得 Azure 儲存體連接字串
+### <a name="get-your-azure-storage-connection-string"></a>取得您的 Azure 儲存體連接字串
 
-如果您要連線到 Azure 儲存體表格服務，您必須將連接字串在本教學課程。 您可以從 Azure 入口網站複製您的連接字串。 如需有關連接字串的詳細資訊，請參閱 <<c0> [ 設定儲存體連接字串](/azure/storage/storage-configure-connection-string)。
+如果您要連接到 Azure 儲存體表格服務, 您將需要此教學課程的連接字串。 您可以從 Azure 入口網站複製連接字串。 如需連接字串的詳細資訊, 請參閱[設定儲存體連接字串](/azure/storage/storage-configure-connection-string)。
 
-### <a name="get-your-azure-cosmos-db-connection-string"></a>取得 Azure Cosmos DB 連接字串
+### <a name="get-your-azure-cosmos-db-connection-string"></a>取得您的 Azure Cosmos DB 連接字串
 
-如果您要連線到 Azure Cosmos DB，您必須將連接字串在本教學課程。 您可以從 Azure 入口網站複製您的連接字串。 在 Azure 入口網站中，在 Cosmos DB 帳戶中，移至**設定** > **連接字串**，然後按一下**複製**按鈕以複製主要的連線字串。 
+如果您要連接到 Azure Cosmos DB, 在本教學課程中需要連接字串。 您可以從 Azure 入口網站複製連接字串。 在 Azure 入口網站的 Cosmos DB 帳戶中, 移至 [**設定** > ] [**連接字串**], 然後按一下 [**複製**] 按鈕以複製您的主要連接字串。 
 
-教學課程中，輸入您的連接字串中您的指令碼，如下列範例所示：
+在本教學課程中, 請在腳本中輸入您的連接字串, 如下列範例所示:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
-不過，這是**不建議使用**實際的專案。 儲存體帳戶金鑰很類似儲存體帳戶的根密碼。 請務必小心保護您的儲存體帳戶金鑰。 請避免轉發給其他使用者，硬式編碼，或將它儲存在其他人可以存取純文字檔案。 您可以重新產生您使用 Azure 入口網站，如果您認為可能已遭盜用的金鑰。
+不過, 這**不建議**用於實際的專案。 您的儲存體帳戶金鑰類似于儲存體帳戶的根密碼。 請務必小心保護您的儲存體帳戶金鑰。 請避免將它散發給其他使用者、進行硬式編碼, 或將它儲存在其他人可以存取的純文字檔案中。 如果您認為金鑰可能遭到入侵, 您可以使用 Azure 入口網站重新產生金鑰。
 
-實際的應用程式，來維護您的儲存體連接字串的最佳方式是在組態檔中。 若要從組態檔擷取連接字串，您可以這樣做：
+對於實際的應用程式而言, 維護儲存體連接字串的最佳方式是在設定檔中。 若要從設定檔提取連接字串, 您可以執行下列動作:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
 
-使用 Azure Configuration Manager 是選擇性的。 您也可以使用 API，例如.NET Framework 的`ConfigurationManager`型別。
+使用 Azure Configuration Manager 是選擇性的。 您也可以使用 API (例如 .NET Framework 的`ConfigurationManager`類型)。
 
 ### <a name="parse-the-connection-string"></a>剖析連接字串
 
-若要剖析的連接字串，請使用：
+若要剖析連接字串, 請使用:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
 
 這會傳回`CloudStorageAccount`。
 
 ### <a name="create-the-table-service-client"></a>建立表格服務用戶端
 
-`CloudTableClient`類別可讓您擷取資料表和資料表儲存體中的實體。 若要建立服務用戶端的其中一個方法如下：
+`CloudTableClient`類別可讓您取得資料表儲存體中的資料表和實體。 以下是建立服務用戶端的其中一種方式:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
-現在您已準備好撰寫程式碼來讀取資料，並將資料寫入資料表儲存體。
+現在您已準備好撰寫程式碼, 以讀取資料並將資料寫入資料表儲存體。
 
 ### <a name="create-a-table"></a>建立資料表
 
-此範例示範如何建立資料表，如果不存在：
+這個範例示範如何建立資料表 (如果尚未存在):
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
 
 ### <a name="add-an-entity-to-a-table"></a>將實體新增至資料表
 
-實體必須具有型別繼承自`TableEntity`。 您可以延伸`TableEntity`各種方式，但您的型別*必須*具有無參數建構函式。 同時具有的屬性`get`和`set`會儲存在您的 Azure 資料表。
+實體必須具有繼承自`TableEntity`的類型。 您可以使用`TableEntity`任何想要的方式來擴充, 但您的型別*必須*有不限參數的函式。 只有具有`get`和`set`的屬性會儲存在您的 Azure 資料表中。
 
-實體的資料分割和資料列索引鍵可唯一識別資料表中的實體。 可在速度快於不同的資料分割索引鍵，查詢具有相同的資料分割索引鍵的實體，但使用不同的資料分割索引鍵可提供更佳的延展性的平行作業。
+實體的資料分割和資料列索引鍵可唯一識別資料表中的實體。 具有相同資料分割索引鍵的實體查詢速度可以比具有不同分割區索引鍵的實體更快, 但使用不同的分割區索引鍵可提供平行作業的更高擴充性。
 
-以下是範例`Customer`使用`lastName`做為資料分割索引鍵和`firstName`做為資料列索引鍵。
+以下是`Customer` `lastName`使用做為資料分割索引鍵和`firstName`作為資料列索引鍵的範例。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-現在加入`Customer`至資料表。 若要這樣做，請建立`TableOperation`資料表上執行。 在此案例中，您建立`Insert`作業。
+現在, `Customer`將加入至資料表。 若要這麼做, 請`TableOperation`建立在資料表上執行的。 在此情況下, 您會`Insert`建立作業。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
 ### <a name="insert-a-batch-of-entities"></a>插入實體批次
 
-您可以將一批實體插入資料表中使用單一寫入作業。 批次作業可讓您將作業結合成單一的執行，但是它們有一些限制：
+您可以使用單一寫入作業, 將一批實體插入資料表。 批次作業可讓您將作業結合成單一執行, 但有一些限制:
 
-- 您可以執行更新、 刪除和插入相同的批次作業中。
-- 批次作業可以包含最多 100 個實體。
-- 批次作業中的所有實體必須都具有相同的資料分割索引鍵。
-- 雖然您可以在批次作業中執行查詢，它必須是批次中唯一的作業。
+- 您可以在相同的批次作業中執行更新、刪除和插入。
+- 批次作業最多可包含100個實體。
+- 批次作業中的所有實體都必須具有相同的分割區索引鍵。
+- 雖然您可以在批次作業中執行查詢, 但它必須是批次中唯一的作業。
 
-以下是一些結合成一個批次作業的兩個插入的程式碼：
+以下的一些程式碼會將兩個插入組合成一個批次作業:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L62-L71)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L62-L71)]
 
-### <a name="retrieve-all-entities-in-a-partition"></a>擷取資料分割中的所有實體
+### <a name="retrieve-all-entities-in-a-partition"></a>取出資料分割中的所有實體
 
-若要查詢資料表的資料分割中的所有實體，請使用`TableQuery`物件。 在這裡，您篩選實體"Smith"所在的資料分割索引鍵。
+若要查詢資料表以取得資料分割中的所有實體, `TableQuery`請使用物件。 在這裡, 您會篩選 "Smith" 為分割區索引鍵的實體。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
 
-您現在會列印結果：
+您現在會列印結果:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
-### <a name="retrieve-a-range-of-entities-in-a-partition"></a>擷取範圍的資料分割中的實體
+### <a name="retrieve-a-range-of-entities-in-a-partition"></a>取出分割區中的實體範圍
 
-如果您不想要查詢資料分割中的所有實體，您可以藉由結合資料分割索引鍵篩選器與資料列索引鍵篩選器來指定範圍。 在這裡，您使用兩個篩選器來取得"Smith"資料分割中的所有實體資料列索引鍵 （名字） 開始的位置以字母"M"字母之前。
+如果您不想要查詢資料分割中的所有實體, 您可以結合資料分割索引鍵篩選與資料列索引鍵篩選來指定範圍。 在這裡, 您會使用兩個篩選器來取得 "Smith" 資料分割中的所有實體, 其中的資料列索引鍵 (名字) 是以字母前面的 "M" 開頭。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L91-L100)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L91-L100)]
 
-您現在會列印結果：
+您現在會列印結果:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L102-L103)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L102-L103)]
 
-### <a name="retrieve-a-single-entity"></a>擷取單一實體
+### <a name="retrieve-a-single-entity"></a>取得單一實體
 
-您可以撰寫查詢來擷取單一特定實體。 在這裡，您使用`TableOperation`來指定客戶"Ben Smith"。 而不是集合中，您會回到`Customer`。 在查詢中指定資料分割索引鍵和資料列索引鍵是最快的方法，從資料表服務中擷取單一實體。
+您可以撰寫查詢來取出單一的特定實體。 在這裡, 您會`TableOperation`使用來指定客戶 "Ben Smith"。 而不是集合, 您會取回`Customer`。 在查詢中同時指定資料分割索引鍵和資料列索引鍵, 是從表格服務取得單一實體的最快方式。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
-您現在會列印結果：
+您現在會列印結果:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
 
 ### <a name="replace-an-entity"></a>取代實體
 
-若要更新實體，從資料表服務中擷取、 修改實體物件，和接著將變更儲存回資料表服務會使用`Replace`作業。 除非伺服器上的實體自擷取後，在此情況下作業將會失敗，已變更，這樣會完全取代伺服器上的實體。 此失敗是為了防止您的應用程式不小心覆寫從其他來源的變更。
+若要更新實體, 請從表格服務取出它、修改實體物件, 然後使用`Replace`作業將變更儲存回表格服務。 這會導致在伺服器上完全取代實體, 除非伺服器上的實體自抓取以來已變更, 在這種情況下, 作業會失敗。 此失敗是為了防止您的應用程式不小心覆寫其他來源的變更。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
 
 ### <a name="insert-or-replace-an-entity"></a>插入或取代實體
 
-有時候，您不知道實體是否存在於資料表中。 如果有的話，不再需要儲存在它的目前值。 您可以使用`InsertOrReplace`建立實體，或取代它，若有的話，不論其狀態。
+有時候, 您不知道實體是否存在於資料表中。 如果有的話, 就不再需要儲存在其中的目前值。 您可以使用`InsertOrReplace`來建立實體, 或將它取代 (如果存在的話), 不論其狀態為何。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
 ### <a name="query-a-subset-of-entity-properties"></a>查詢實體屬性的子集
 
-資料表查詢可以擷取而不是所有的這些實體的少數屬性。 這項技巧，稱為 「 投射 」 可改善查詢效能，尤其是對大型實體。 在這裡，您可以傳回只有電子郵件地址使用`DynamicTableEntity`和`EntityResolver`。 請注意，投射不支援在本機儲存體模擬器中，讓您在資料表服務上使用的帳戶時，才執行此程式碼。
+資料表查詢可以只從實體中抓取幾個屬性, 而不是所有的屬性。 這項稱為「投射」的技術可以改善查詢效能, 特別是針對大型實體。 在這裡, 您只會使用`DynamicTableEntity`和`EntityResolver`傳回電子郵件地址。 請注意, 在本機儲存體模擬器上不支援投影, 因此只有當您在表格服務上使用帳戶時, 此程式碼才會執行。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
-### <a name="retrieve-entities-in-pages-asynchronously"></a>以非同步方式擷取頁面中的實體
+### <a name="retrieve-entities-in-pages-asynchronously"></a>以非同步方式取出頁面中的實體
 
-如果您正在閱讀大量實體，而且您想要擷取這些，而非等待它們全部傳回，您可以使用分割的查詢時進行處理。 在這裡，您傳回的結果頁面中所使用的非同步工作流程，如此一來，您於等待的一大組要傳回的結果時，不會封鎖執行。
+如果您要讀取大量實體, 而您想要在抓取時處理它們, 而不是等待它們全部傳回, 您可以使用分段的查詢。 在這裡, 您會使用非同步工作流程, 在頁面中傳回結果, 如此當您等候一組大型結果傳回時, 執行就不會遭到封鎖。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L163-L178)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L163-L178)]
 
-您現在執行這項計算以同步方式：
+您現在會同步執行此計算:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L180-L180)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L180-L180)]
 
 ### <a name="delete-an-entity"></a>刪除實體
 
-在擷取之後，您可以刪除實體。 使用更新實體，這將會無法如果實體變更您在擷取之後。
+您可以在抓取實體之後將其刪除。 就像更新實體一樣, 如果實體在您抓取之後已經變更, 這就會失敗。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L186-L187)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L186-L187)]
 
 ### <a name="delete-a-table"></a>刪除資料表
 
-您可以從儲存體帳戶刪除資料表。 已刪除的資料表將無法針對一段時間在刪除後加以重新建立。
+您可以從儲存體帳戶刪除資料表。 刪除之後的一段時間, 將無法重新建立已刪除的資料表。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
 ## <a name="next-steps"></a>後續步驟
 
-既然您已了解資料表儲存體的基本概念，請遵循下列連結以深入了解更複雜的儲存體工作以及 Azure Cosmos DB 資料表 API。
+既然您已瞭解資料表儲存體的基本概念, 請遵循下列連結以瞭解更複雜的儲存工作和 Azure Cosmos DB 的資料表 API。
 
 - [Azure Cosmos DB 資料表 API 簡介](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [For.NET 參考資料的儲存體用戶端程式庫](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
-- [Azure 儲存體類型提供者](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Azure 儲存體團隊部落格](https://blogs.msdn.com/b/windowsazurestorage/)
+- [適用于 .NET 的儲存體用戶端程式庫參考](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Azure 儲存體型別提供者](https://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Azure 儲存體小組的 Blog](https://blogs.msdn.com/b/windowsazurestorage/)
 - [設定連接字串](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
-- [Getting Started with.NET 中的 Azure 資料表儲存體](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)
+- [在 .NET 中使用 Azure 表格儲存體的消費者入門](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

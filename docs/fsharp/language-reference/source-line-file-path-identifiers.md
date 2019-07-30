@@ -1,17 +1,17 @@
 ---
 title: 原始碼程式行、檔案與路徑識別項
-description: 了解如何使用內建的F#可讓您存取來源的識別碼值行編號、 目錄和檔案名稱，在您的程式碼。
+description: 瞭解如何使用內F#建的識別碼值, 讓您存取程式碼中的原始程式列號、目錄和檔案名。
 ms.date: 05/16/2016
-ms.openlocfilehash: 3f2048aed9ef75037b43cd091a749e3d6bbaf9a3
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 5ff36210edc75370f8baf9ee7be057f3ac0c3979
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152057"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627111"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>原始碼程式行、檔案與路徑識別項
 
-識別項`__LINE__`，`__SOURCE_DIRECTORY__`和`__SOURCE_FILE__`內建值可讓您存取您的程式碼的來源行號、 目錄和檔案名稱。
+識別碼`__LINE__` `__SOURCE_DIRECTORY__`和是內建值,可讓您存取程式碼中的原始程式列號、目錄和檔案名。`__SOURCE_FILE__`
 
 ## <a name="syntax"></a>語法
 
@@ -23,23 +23,23 @@ __SOURCE_FILE__
 
 ## <a name="remarks"></a>備註
 
-每個這些值都有型別`string`。
+這些值的每一個都`string`具有類型。
 
-下表摘要說明中所提供的來源行、 檔案和路徑識別碼F#。 這些識別項不是前置處理器巨集;它們是編譯器可辨識的內建值。
+下表摘要說明中F#可用的原始程式列、檔案和路徑識別碼。 這些識別碼不是預處理器宏;這些是編譯器可辨識的內建值。
 
-|預先定義的識別項|描述|
+|預先定義的識別碼|描述|
 |---------------------|-----------|
-|`__LINE__`|評估為目前的行號，考慮`#line`指示詞。|
-|`__SOURCE_DIRECTORY__`|評估為目前的完整路徑的來源目錄中，考慮`#line`指示詞。|
-|`__SOURCE_FILE__`|評估為目前的來源檔案名稱，而其路徑中，不考慮`#line`指示詞。|
+|`__LINE__`|評估為目前的行號, 並`#line`考慮指示詞。|
+|`__SOURCE_DIRECTORY__`|評估為來原始目錄的目前完整路徑, 並考慮`#line`指示詞。|
+|`__SOURCE_FILE__`|評估為目前的來原始檔案名, 不含其路徑, 考慮`#line`指示詞。|
 
-如需詳細資訊`#line`指示詞，請參閱[編譯器指示詞](compiler-directives.md)。
+如需指示詞的`#line`詳細資訊, 請參閱[編譯器](compiler-directives.md)指示詞。
 
 ## <a name="example"></a>範例
 
 下列程式碼範例示範如何使用這些值。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7401.fs)]
 
 輸出：
 

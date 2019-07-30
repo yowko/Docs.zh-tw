@@ -1,17 +1,17 @@
 ---
-title: '例外狀況: failwith 函式'
-description: 了解如何 'failwith' 函式會產生F#例外狀況。
+title: 例外狀況：Failwith 函式
+description: 瞭解 ' failwith ' 函數如何產生F#例外狀況。
 ms.date: 05/16/2016
-ms.openlocfilehash: 08107966ddc2f55625347deb92d224b286df7761
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f2c86362d5bdde7bab55751f019965a5f4ca6236
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641955"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630333"
 ---
-# <a name="exceptions-the-failwith-function"></a>例外狀況: failwith 函式
+# <a name="exceptions-the-failwith-function"></a>例外狀況：Failwith 函式
 
-`failwith`函式會產生F#例外狀況。
+函式F#會產生例外狀況。 `failwith`
 
 ## <a name="syntax"></a>語法
 
@@ -21,11 +21,11 @@ failwith error-message-string
 
 ## <a name="remarks"></a>備註
 
-*錯誤訊息字串*在先前的語法是字串常值或型別的值`string`。 它會變成`Message`例外狀況的屬性。
+前述語法中的*錯誤訊息字串*為常值字串或類型`string`的值。 它會成為`Message`例外狀況的屬性。
 
-所產生的例外狀況`failwith`已`System.Exception`例外狀況，也就是具有名稱的參考`Failure`在F#程式碼。 下列程式碼說明如何使用`failwith`擲回例外狀況。
+所產生`failwith`的例外狀況`System.Exception`是例外狀況, 這是在程式碼中`Failure` F#具有名稱的參考。 下列程式碼說明`failwith`如何使用來擲回例外狀況。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6001.fs)]
 
 ## <a name="see-also"></a>另請參閱
 
