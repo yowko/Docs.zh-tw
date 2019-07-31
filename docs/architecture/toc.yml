@@ -1,0 +1,15 @@
+- name: .NET 應用程式架構指南
+  href: index.yml
+- name: 電子書
+  expanded: true
+  items:
+    - name: 使用 ASP.NET Core 及 Microsoft Azure 架構現代化的 Web 應用程式
+      href: modern-web-apps-azure/
+    - name: 使用 Azure 雲端及 Windows 容器將現有的 .NET 應用程式轉換成現代化的應用程式
+      href: modernize-with-azure-containers/
+    - name: Microsoft 平台與工具上已容器化的 Docker 應用程式生命週期
+      href: containerized-lifecycle/
+    - name: .NET 微服務：容器化 .NET 應用程式的架構
+      href: microservices/
+    - name: 無伺服器應用程式：架構、模式和 Azure 實作
+      href: serverless/
