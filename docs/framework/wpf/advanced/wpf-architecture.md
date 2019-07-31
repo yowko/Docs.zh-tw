@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 39cf4b60262afb1e3745a82c734391385669f5d3
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629826"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671914"
 ---
 # <a name="wpf-architecture"></a>WPF 架構
 本主題提供 Windows Presentation Foundation (WPF) 類別階層的導覽。 它涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述其互動方式。 它也會詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所進行的一些選擇。  
@@ -76,9 +76,9 @@ ms.locfileid: "68629826"
   
  圖表中實際上不大明顯的另一個重要詳細資料是系統如何實際執行組合。  
   
- 在 User32 和 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中，系統會在即時模式裁剪系統上運作。 需要轉譯元件時，系統會建立不允許元件接觸像素的外部裁剪界限，接著要求元件在該方塊中繪製像素。 此系統非常適合在記憶體受限系統中運作，因為內容變更時，您只需要接觸受影響元件；沒有兩個元件會形成單一像素的色彩。  
+ 在 User32 和 GDI 中, 系統會在立即模式裁剪系統上運作。 需要轉譯元件時，系統會建立不允許元件接觸像素的外部裁剪界限，接著要求元件在該方塊中繪製像素。 此系統非常適合在記憶體受限系統中運作，因為內容變更時，您只需要接觸受影響元件；沒有兩個元件會形成單一像素的色彩。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用「繪製器的演算法」繪製模型。 這表示，會要求每個元件從後到前轉譯顯示，而不是裁剪每個元件。 這可在前一個元件的顯示上方繪製每個元件。 此模型的優點在於您可以有複雜且部分透明的圖形。 此模型運用現今的現代圖形硬體，因此相當快速 (建立 User32/[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 時則否)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用「繪製器的演算法」繪製模型。 這表示，會要求每個元件從後到前轉譯顯示，而不是裁剪每個元件。 這可在前一個元件的顯示上方繪製每個元件。 此模型的優點在於您可以有複雜且部分透明的圖形。 使用現今的現代化圖形硬體, 此模型的速度相當快速 (建立了 User32/GDI 時不會發生這種情況)。  
   
  如前所述，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的核心原理是移至更具宣告性且「以屬性為主」的程式設計模型。 在視覺物件系統中，這出現在幾個有趣的地方。  
   

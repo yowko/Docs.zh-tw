@@ -21,25 +21,25 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b6fb530bbc4132b09cc17ad692e6e9e23cd75598
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629852"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671848"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、轉換及格式化影像。  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF 影像處理元件  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 提供 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 內重要的影像處理增強功能。 之前的影像處理功能 (例如顯示點陣圖或在通用控制項上使用影像) 要依賴 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 或 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 程式庫運作。 這些 API 提供基準影像處理功能, 但缺少支援編解碼器擴充性和高精確度影像支援等功能。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]的設計目的是要克服[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]和[!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]的缺點, 並提供一組新的 API, 在您的應用程式內顯示及使用影像。  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 提供 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 內重要的影像處理增強功能。 影像處理功能 (例如顯示點陣圖或在通用控制項上使用影像) 先前依賴 Microsoft Windows 圖形裝置介面 (GDI) 或 Microsoft Windows GDI + 程式庫。 這些 API 提供基準影像處理功能, 但缺少支援編解碼器擴充性和高精確度影像支援等功能。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]的設計目的是要克服 GDI 和 GDI + 的缺點, 並提供一組新的 API, 在您的應用程式內顯示及使用影像。  
   
  有兩種方式可存取[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API, 也就是受管理元件和非受控元件。 Unmanaged 元件提供下列功能。  
   
 - 新的或專屬影像格式的擴充性模型。  
   
-- 改善原生映射格式的效能和安全性, 包括點陣圖 (BMP [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]) [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]、、、、和圖示 (.ico)。  
+- 改善原生影像格式的效能和安全性, 包括點陣圖 (BMP [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]) [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、 [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、、圖形交換格式 (GIF) 和圖示 (.ico)。  
   
 - 高位元深度影像資料最多可保留每色頻 8 位元 (每像素 32 位元)。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "68629852"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 影像格式  
- 轉碼器可以用來將特定媒體格式解碼或編碼。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]包含[!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]BMP、、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、、 、[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]和[!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]圖示影像格式的編解碼器。 每個轉碼器都可以讓應用程式解碼和編碼各自的影像格式 (但 ICON 在編碼部分是例外)。  
+ 轉碼器可以用來將特定媒體格式解碼或編碼。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]包含[!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]BMP、 [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、GIF 和圖示影像格式的編解碼器。 每個轉碼器都可以讓應用程式解碼和編碼各自的影像格式 (但 ICON 在編碼部分是例外)。  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>是用於解碼和編碼影像的重要類別。 它是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 管線的基本建置組塊，代表在特定大小和解析度下的單一固定像素集。 可以是多個框架影像的個別框架, 也可以是<xref:System.Windows.Media.Imaging.BitmapSource>在上執行之轉換的結果。 <xref:System.Windows.Media.Imaging.BitmapSource> 這是影像中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]所使用之許多主要類別的父系, <xref:System.Windows.Media.Imaging.BitmapFrame>例如。  
   
- <xref:System.Windows.Media.Imaging.BitmapFrame>是用來儲存影像格式的實際點陣圖資料。 許多影像格式僅支援單一<xref:System.Windows.Media.Imaging.BitmapFrame>, 雖然[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]和[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]之類的格式支援每個影像的多個畫面格。 畫面格會由解碼器作為輸入資料並傳遞至編碼器以建立影像檔。  
+ <xref:System.Windows.Media.Imaging.BitmapFrame>是用來儲存影像格式的實際點陣圖資料。 許多影像格式僅支援單一<xref:System.Windows.Media.Imaging.BitmapFrame>, 雖然格式如 GIF, 而且[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]每個影像都支援多個畫面格。 畫面格會由解碼器作為輸入資料並傳遞至編碼器以建立影像檔。  
   
  下列範例示範如何<xref:System.Windows.Media.Imaging.BitmapFrame> <xref:System.Windows.Media.Imaging.BitmapSource>從建立[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] , 然後新增至影像。  
   

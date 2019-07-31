@@ -1,5 +1,5 @@
 ---
-title: HOW TO：編碼和解碼 GIF 影像
+title: 作法：編碼和解碼 GIF 影像
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,25 +13,25 @@ helpviewer_keywords:
 - GIF decoding [WPF]
 - GIF encoding [WPF]
 ms.assetid: 9cdd9ec7-71eb-444b-b9e3-991958461163
-ms.openlocfilehash: 35bd08f0d5e4d2ee9b8731706c9f1d770d67f633
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec509a03d95e5f72af0b1f362e253799b07edc1f
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947610"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671684"
 ---
 # <a name="how-to-encode-and-decode-a-gif-image"></a>HOW TO：編碼和解碼 GIF 影像
-下列範例示範如何編碼和解碼[!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]映像使用特定<xref:System.Windows.Media.Imaging.GifBitmapDecoder>和<xref:System.Windows.Media.Imaging.GifBitmapEncoder>物件。  
+下列範例示範如何使用特定<xref:System.Windows.Media.Imaging.GifBitmapDecoder>的和<xref:System.Windows.Media.Imaging.GifBitmapEncoder>物件, 對圖形交換格式 (GIF) 影像進行解碼和編碼。  
   
 ## <a name="example"></a>範例  
- 此範例示範如何解碼[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]映像使用<xref:System.Windows.Media.Imaging.GifBitmapDecoder>從<xref:System.IO.FileStream>。  
+ 這個範例示範如何使用<xref:System.Windows.Media.Imaging.GifBitmapDecoder> <xref:System.IO.FileStream>從來解碼 GIF 影像。  
   
  [!code-cpp[GifBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/GifBitmapDecoderEncoder/CPP/GifEncoderDecoder.cpp#1)]
  [!code-csharp[GifBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GifBitmapDecoderEncoder/CSharp/GifEncoderDecoder.cs#1)]
  [!code-vb[GifBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GifBitmapDecoderEncoder/VB/GifEncoderDecoder.vb#1)]  
   
 ## <a name="example"></a>範例  
- 此範例示範如何編碼<xref:System.Windows.Media.Imaging.BitmapSource>成[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]映像使用<xref:System.Windows.Media.Imaging.GifBitmapEncoder>。  
+ 這個範例示範如何<xref:System.Windows.Media.Imaging.BitmapSource> <xref:System.Windows.Media.Imaging.GifBitmapEncoder>使用將編碼成 GIF 影像。  
   
  [!code-cpp[GifBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/GifBitmapDecoderEncoder/CPP/GifEncoderDecoder.cpp#4)]
  [!code-csharp[GifBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/GifBitmapDecoderEncoder/CSharp/GifEncoderDecoder.cs#4)]

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: c9d86cadd5f2115d0214d9a1b1dce7e6682341e0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629736"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672051"
 ---
 # <a name="cleartype-overview"></a>ClearType 概觀
 本主題提供在中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]找到的 Microsoft ClearType 技術總覽。  
@@ -19,11 +19,11 @@ ms.locfileid: "68629736"
 ## <a name="technology-overview"></a>技術概觀  
  ClearType 是由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]所開發的軟體技術, 可改善現有 lcd (液晶顯示器) 的文字可讀性, 例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。  ClearType 的運作方式是存取 LCD 螢幕每個圖元內的個別垂直色彩 stripe 元素。 在 ClearType 之前, 電腦可以顯示的最小詳細資料層級是單一圖元, 但在 LCD 監視器上執行 ClearType 時, 我們現在可以將文字的功能顯示為寬度圖元的小部分。 額外的解析度可提高文字顯示細節的解析度，即使經過長時間也很容易閱讀。  
   
- 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供的 cleartype 是最新一代的 cleartype, 其在中[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]找到的版本有數項改善。  
+ 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供的 cleartype 是最新一代的 cleartype, 對 Microsoft Windows 圖形裝置介面 (GDI) 中找到的版本有數項改善。  
   
 <a name="sub-pixel_positioning"></a>   
 ## <a name="sub-pixel-positioning"></a>子像素定位  
- 先前版本的 ClearType 有一項顯著的改進, 就是使用子圖元定位。 不同于中[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]找到的 cleartype 實作為, 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]找到的 cleartype 允許在圖元內啟動圖像, 而不只是圖元的開始界限。 因為定位字符有此額外的解析度，所以字符的間距和比例更精確且一致。  
+ 先前版本的 ClearType 有一項顯著的改進, 就是使用子圖元定位。 不同于 GDI 中找到的 cleartype 實作為, 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]找到的 cleartype 允許在圖元內啟動圖像, 而不只是圖元的開始界限。 因為定位字符有此額外的解析度，所以字符的間距和比例更精確且一致。  
   
  下列兩例示範使用子像素定位時，字符如何能在任何子像素界限上開始。 左側的範例是使用較早版本的 ClearType 轉譯器來轉譯, 而此轉譯器不會採用子圖元定位。 右側的範例是使用新版本的 ClearType 轉譯器 (使用子圖元定位) 來呈現。 請注意右側映像中每個 **e** 和 **l** 的轉譯方式都略有不同，因為它們每一個都在不同的子像素上開始。 在螢幕上檢視正常大小的文字時，因為字符映像的高對比，所以這項差異不是很明顯。 這只有在 ClearType 中納入複雜的色彩篩選時才可行。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68629736"
   
 <a name="y-direction_antialiasing"></a>   
 ## <a name="y-direction-antialiasing"></a>Y 方向消除鋸齒  
- 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType 的另一項改進是 y 方向消除鋸齒。 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]不具有 y 方向消除鋸齒的 ClearType 會在 X 軸上提供更好的解析度, 而不是 y 軸。 微曲部分頂端和底端的鋸齒狀邊緣會降低其可讀性。  
+ 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType 的另一項改進是 y 方向消除鋸齒。 GDI 中沒有 y 方向消除鋸齒的 ClearType 會在 X 軸上提供更好的解析度, 而不是 y 軸。 微曲部分頂端和底端的鋸齒狀邊緣會降低其可讀性。  
   
  下例顯示不使用 Y 方向消除鋸齒的效果。 在此情況下，字母上方與下方的鋸齒狀邊緣很明顯。  
   

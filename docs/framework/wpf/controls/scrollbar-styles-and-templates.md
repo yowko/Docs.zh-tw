@@ -9,37 +9,37 @@ helpviewer_keywords:
 - templates [WPF], ScrollBar
 - parts [WPF], ScrollBar
 ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
-ms.openlocfilehash: 22b2206067302f621a94a1e9abca1607792b3393
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 016556fb825ddf60af7dc572d6fda7323b9bb09d
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052881"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671975"
 ---
 # <a name="scrollbar-styles-and-templates"></a>ScrollBar 樣式和範本
-本主題描述的樣式和範本<xref:System.Windows.Controls.Primitives.ScrollBar>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述<xref:System.Windows.Controls.Primitives.ScrollBar>控制項的樣式和範本。 您可以修改預設值<xref:System.Windows.Controls.ControlTemplate> , 為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="scrollbar-parts"></a>捲軸的組件  
- 下表列出的具名組件<xref:System.Windows.Controls.Primitives.ScrollBar>控制項。  
+## <a name="scrollbar-parts"></a>捲軸部分  
+ 下表列出<xref:System.Windows.Controls.Primitives.ScrollBar>控制項的已命名元件。  
   
 |組件|類型|描述|  
 |-|-|-|  
-|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|指出的位置之項目的容器<xref:System.Windows.Controls.Primitives.ScrollBar>。|  
+|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|元素的容器, 這個專案表示的位置<xref:System.Windows.Controls.Primitives.ScrollBar>。|  
   
 ## <a name="scrollbar-states"></a>捲軸狀態  
- 下表列出的視覺狀態<xref:System.Windows.Controls.Primitives.ScrollBar>控制項。  
+ 下表列出<xref:System.Windows.Controls.Primitives.ScrollBar>控制項的視覺狀態。  
   
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |----------------------|---------------------------|-----------------|  
 |一般|CommonStates|預設狀態。|  
 |MouseOver|CommonStates|滑鼠指標移到控制項上。|  
 |已停用|CommonStates|已停用控制項。|  
-|驗證|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`已在控制項具有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`有控制項沒有焦點。|  
+|驗證|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> , 而附加屬性是`false`。|  
+|InvalidFocused|ValidationStates|附加屬性為`true` , 且控制項具有焦點。 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>|  
+|InvalidUnfocused|ValidationStates|附加屬性為`true` , 且控制項沒有焦點。 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>|  
   
-## <a name="scrollbar-controltemplate-example"></a>ScrollBar 的 ControlTemplate 範例  
- 下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>針對<xref:System.Windows.Controls.Primitives.ScrollBar>控制項。  
+## <a name="scrollbar-controltemplate-example"></a>捲軸 ControlTemplate 範例  
+ 下列範例顯示如何定義<xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Primitives.ScrollBar>控制項的。  
   
  [!code-xaml[ControlTemplateExamples#ScrollBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollbar.xaml#scrollbar)]  
   
