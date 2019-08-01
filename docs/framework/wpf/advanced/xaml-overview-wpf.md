@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 4f3d8a9f275a41b96b6518d63552ce9873cca0fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ee5318b8ba1284f2805b80b3e41fab3ae739158c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400813"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672001"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 總覽 (WPF)
+
 本主題說明 XAML 語言的功能，並示範如何使用 XAML 撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式。 本主題特別針對以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的 XAML 進行描述。 就語言概念而言，XAML 本身涵蓋的範圍比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 還要廣。  
 
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>何謂 XAML？  
- XAML 是一種宣告式的標記語言。 XAML 適用于 .NET Framework 的程式設計模型, 可簡化 .NET Framework [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]應用程式的建立。 您可以在宣告式 XAML 標記中建立可見的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，然後藉由使用程式碼後置的檔案 (已透過部分類別定義而聯結至該標記)，區隔 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 定義和執行階段邏輯。 XAML 會以組件中定義的一組支援型別，直接表示物件的執行個體化。 這一點有別於其他大部分的標記語言，通常大部分的標記語言是與支援型別系統沒有此種直接關連的直譯式語言。 XAML 會啟用工作流程，其中個別獨立的人員因而能夠使用不同的工具，操作應用程式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 與邏輯。  
+ XAML 是一種宣告式的標記語言。 XAML 適用于 .NET Framework 的程式設計模型, 可簡化 .NET Framework [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]應用程式的建立。 您可以在宣告[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]式 XAML 標記中建立可見的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素, 然後使用透過部分類別定義聯結至標記的程式碼後置檔案, 將定義與執行時間邏輯隔開。 XAML 會以組件中定義的一組支援型別，直接表示物件的執行個體化。 這一點有別於其他大部分的標記語言，通常大部分的標記語言是與支援型別系統沒有此種直接關連的直譯式語言。 XAML 會啟用工作流程，其中個別獨立的人員因而能夠使用不同的工具，操作應用程式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 與邏輯。  
   
  XAML 檔案以文字表示時，則為通常有 `.xaml` 副檔名的 XML 檔案。 這些檔案可以採用任何 XML 編碼，但通常會採用 UTF-8 編碼。  
   
@@ -104,7 +105,7 @@ ms.locfileid: "68400813"
   
  根據 XAML 語言的規則，XAML 內容屬性值必須完全放在該物件元素上任何其他屬性元素之前或之後。 例如，下列標記無法編譯：  
   
-```  
+```xaml
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -188,7 +189,7 @@ ms.locfileid: "68400813"
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  也有少數的物件, 類型轉換是將屬性設定為該類型而不涉及子類別的唯一公用方式, 因為類型本身沒有無參數的函式。 例如<xref:System.Windows.Input.Cursor>。  
+> 也有少數的物件, 類型轉換是將屬性設定為該類型而不涉及子類別的唯一公用方式, 因為類型本身沒有無參數的函式。 例如<xref:System.Windows.Input.Cursor>。  
   
  如需如何支援型別轉換及其屬性 (Attribute) 語法用法的詳細資訊，請參閱 [TypeConverters 和 XAML](typeconverters-and-xaml.md)。  
   
@@ -214,7 +215,7 @@ ms.locfileid: "68400813"
   
 - [x:Class](../../xaml-services/x-class-directive.md):指定類別的 CLR 命名空間和類別名稱, 以提供 XAML 頁面的程式碼後置。 依據 WPF 程式撰寫模型，您必須有這類支援程式碼後置的類別，因此您幾乎都會看到 `x:` 對應，即使沒有資源也一樣。  
   
-- [x:Name](../../xaml-services/x-name-directive.md):指定在處理物件專案之後, 存在於執行時間程式碼中之實例的執行時間物件名稱。 一般而言，您經常會使用 WPF 針對 [x:Name](../../xaml-services/x-name-directive.md) 所定義的對等屬性。 這類屬性專門對應至 CLR 支援屬性，因此對於您經常會使用執行階段程式碼來尋找已初始化 XAML 中的具名元素的應用程式設計情境而言，會更方便。 最常見的這類屬性<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>是。 當特定類型中[](../../xaml-services/x-name-directive.md)不支援對等的 WPF 架構層<xref:System.Windows.FrameworkElement.Name%2A>級屬性時, 您仍然可以使用 x:Name。 這會發生在某些動畫案例中。  
+- [x:Name](../../xaml-services/x-name-directive.md):指定在處理物件專案之後, 存在於執行時間程式碼中之實例的執行時間物件名稱。 一般而言，您經常會使用 WPF 針對 [x:Name](../../xaml-services/x-name-directive.md) 所定義的對等屬性。 這類屬性專門對應至 CLR 支援屬性，因此對於您經常會使用執行階段程式碼來尋找已初始化 XAML 中的具名元素的應用程式設計情境而言，會更方便。 最常見的這類屬性<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>是。 當特定類型中不支援對等的 WPF 架構層<xref:System.Windows.FrameworkElement.Name%2A>級屬性時, 您仍然可以使用 [x:Name](../../xaml-services/x-name-directive.md)。 這會發生在某些動畫案例中。  
   
 - [x:Static](../../xaml-services/x-static-markup-extension.md):啟用會傳回靜態值的參考, 但不是以 XAML 相容的屬性。  
   
@@ -228,7 +229,7 @@ ms.locfileid: "68400813"
   
  下列範例為自訂前置詞在 XAML 標記中運作方式的基本範例。 前置詞 `custom` 會定義於根元素標記中，且對應到已封裝並隨應用程式提供的特定組件。 這個組件包含 `NumericUpDown` 型別，會實作該型別以支援一般的 XAML 用法，以及使用類別繼承，這個類別繼承允許在 WPF XAML 內容模型的特定點置中插入這個型別。 這個 `NumericUpDown` 控制項的執行個體會使用前置詞宣告為物件元素，如此一來，XAML 剖析器便能得知哪一個 XAML 命名空間包含型別，因此支援組件的所在便是包含型別定義的位置。  
   
-```  
+```xaml
 <Page  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   
