@@ -1,6 +1,6 @@
 - name: ML.NET 指南
   href: index.yml
-- name: 概觀
+- name: 總覽
   expanded: true
   items:
     - name: 什麼是 ML.NET 且其如何運作？
@@ -15,7 +15,7 @@
       href: tutorials/github-issue-classification.md
     - name: 預測價格 (迴歸)
       href: tutorials/predict-prices.md
-    - name: 分類鳶尾花 (k-means 叢集)
+    - name: 分類鳶尾花 (K-Means 叢集)
       href: tutorials/iris-clustering.md
     - name: 推薦的電影 (矩陣因式分解)
       href: tutorials/movie-recommendation.md
@@ -23,23 +23,25 @@
       href: tutorials/image-classification.md
     - name: 產品銷售分析 (異常偵測)
       href: tutorials/sales-anomaly-detection.md
-- name: 使用說明指南
+    - name: 偵測影像中的物件 (物件偵測)
+      href: tutorials/object-detection-onnx.md
+- name: 作法指南
   items:
     - name: 載入資料
       href: how-to-guides/load-data-ml-net.md
     - name: 準備資料
       href: how-to-guides/prepare-data-ml-net.md
-    - name: 訓練、評估和說明模型
+    - name: 定型、評估和說明模型
       items:
         - name: 定型及評估模型
           href: how-to-guides/train-machine-learning-model-ml-net.md
-        - name: 使用交叉驗證來定型模型
+        - name: 使用交叉驗證將模型定型
           href: how-to-guides/train-machine-learning-model-cross-validation-ml-net.md
         - name: 檢查中繼管線資料值
           href: how-to-guides/inspect-intermediate-data-ml-net.md
         - name: 使用 PFI 判斷模型功能重要性
           href: how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md
-    - name: 使用已定型模型
+    - name: 使用已定型的模型
       items:
         - name: 儲存及載入模型
           href: how-to-guides/save-load-machine-learning-models-ml-net.md
@@ -104,5 +106,5 @@
       items:
         - name: 使用自動化的 ML API
           href: how-to-guides/how-to-use-the-automl-api.md
-        - name: API 參考資料
+        - name: API 參考
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
