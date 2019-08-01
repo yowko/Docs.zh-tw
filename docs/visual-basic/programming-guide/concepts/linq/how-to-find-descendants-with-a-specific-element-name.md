@@ -1,19 +1,19 @@
 ---
-title: HOW TO：尋找具有特定的項目名稱 (Visual Basic) 的子系
+title: HOW TO：尋找具有特定專案名稱的子系 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0084f04db5af7b012748b66187e029c77d0cfce5
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780493"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710265"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a><span data-ttu-id="c8b2b-102">HOW TO：尋找具有特定的項目名稱 (Visual Basic) 的子系</span><span class="sxs-lookup"><span data-stu-id="c8b2b-102">How to: Find Descendants with a Specific Element Name (Visual Basic)</span></span>
-<span data-ttu-id="c8b2b-103">有時候您會想要尋找具有特定名稱的所有子代。</span><span class="sxs-lookup"><span data-stu-id="c8b2b-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="c8b2b-104">您可以撰寫程式碼來逐一查看所有子代，但是使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸比較容易。</span><span class="sxs-lookup"><span data-stu-id="c8b2b-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a><span data-ttu-id="69bd5-102">HOW TO：尋找具有特定專案名稱的子系 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69bd5-102">How to: Find Descendants with a Specific Element Name (Visual Basic)</span></span>
+<span data-ttu-id="69bd5-103">有時候您會想要尋找具有特定名稱的所有子代。</span><span class="sxs-lookup"><span data-stu-id="69bd5-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="69bd5-104">您可以撰寫程式碼來逐一查看所有子代，但是使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸比較容易。</span><span class="sxs-lookup"><span data-stu-id="69bd5-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c8b2b-105">範例</span><span class="sxs-lookup"><span data-stu-id="c8b2b-105">Example</span></span>  
- <span data-ttu-id="c8b2b-106">下列範例顯示如何根據項目名稱尋找子代。</span><span class="sxs-lookup"><span data-stu-id="c8b2b-106">The following example shows how to find descendants based on the element name.</span></span>  
+## <a name="example"></a><span data-ttu-id="69bd5-105">範例</span><span class="sxs-lookup"><span data-stu-id="69bd5-105">Example</span></span>  
+ <span data-ttu-id="69bd5-106">下列範例顯示如何根據項目名稱尋找子代。</span><span class="sxs-lookup"><span data-stu-id="69bd5-106">The following example shows how to find descendants based on the element name.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -47,14 +47,14 @@ Dim str As String = textSegs.Aggregate( _
 Console.WriteLine(str)  
 ```  
   
- <span data-ttu-id="c8b2b-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="c8b2b-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="69bd5-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="69bd5-107">This code produces the following output:</span></span>  
   
 ```  
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="example"></a><span data-ttu-id="c8b2b-108">範例</span><span class="sxs-lookup"><span data-stu-id="c8b2b-108">Example</span></span>  
- <span data-ttu-id="c8b2b-109">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="c8b2b-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="c8b2b-110">如需詳細資訊，請參閱 <<c0> [ 處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="c8b2b-110">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="69bd5-108">範例</span><span class="sxs-lookup"><span data-stu-id="69bd5-108">Example</span></span>  
+ <span data-ttu-id="69bd5-109">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="69bd5-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="69bd5-110">如需詳細資訊, 請參閱[命名空間總覽 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="69bd5-110">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -94,13 +94,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="c8b2b-111">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="c8b2b-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="69bd5-111">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="69bd5-111">This code produces the following output:</span></span>  
   
 ```  
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c8b2b-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c8b2b-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="69bd5-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="69bd5-112">See also</span></span>
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [<span data-ttu-id="c8b2b-113">基本查詢 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8b2b-113">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="69bd5-113">基本查詢 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69bd5-113">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

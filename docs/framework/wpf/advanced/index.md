@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942801"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710217"
 ---
-# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="93b35-102">進階 (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="93b35-102">Advanced (Windows Presentation Foundation)</span></span>
-<span data-ttu-id="93b35-103">本節說明 WPF 中的一些進階區域。</span><span class="sxs-lookup"><span data-stu-id="93b35-103">This section describes some of the advanced areas in WPF.</span></span>  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="8afd0-102">進階 (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="8afd0-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="8afd0-103">本節說明 WPF 中的一些進階區域。</span><span class="sxs-lookup"><span data-stu-id="8afd0-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="93b35-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="93b35-104">In This Section</span></span>  
- [<span data-ttu-id="93b35-105">WPF 架構</span><span class="sxs-lookup"><span data-stu-id="93b35-105">WPF Architecture</span></span>](wpf-architecture.md)  
- [<span data-ttu-id="93b35-106">基底項目</span><span class="sxs-lookup"><span data-stu-id="93b35-106">Base Elements</span></span>](base-elements.md)  
- [<span data-ttu-id="93b35-107">項目樹狀結構和序列化</span><span class="sxs-lookup"><span data-stu-id="93b35-107">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
- [<span data-ttu-id="93b35-108">拖放</span><span class="sxs-lookup"><span data-stu-id="93b35-108">Drag and Drop</span></span>](drag-and-drop.md)  
- [<span data-ttu-id="93b35-109">文件</span><span class="sxs-lookup"><span data-stu-id="93b35-109">Documents</span></span>](documents.md)  
- [<span data-ttu-id="93b35-110">全球化和當地語系化</span><span class="sxs-lookup"><span data-stu-id="93b35-110">Globalization and Localization</span></span>](globalization-and-localization.md)  
- [<span data-ttu-id="93b35-111">移轉和互通性</span><span class="sxs-lookup"><span data-stu-id="93b35-111">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
- [<span data-ttu-id="93b35-112">效能</span><span class="sxs-lookup"><span data-stu-id="93b35-112">Performance</span></span>](performance.md)  
- [<span data-ttu-id="93b35-113">執行緒模型</span><span class="sxs-lookup"><span data-stu-id="93b35-113">Threading Model</span></span>](threading-model.md)  
- [<span data-ttu-id="93b35-114">WPF 增益集概觀</span><span class="sxs-lookup"><span data-stu-id="93b35-114">WPF Add-Ins Overview</span></span>](../app-development/wpf-add-ins-overview.md)  
- [<span data-ttu-id="93b35-115">Unmanaged WPF API 參考</span><span class="sxs-lookup"><span data-stu-id="93b35-115">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a><span data-ttu-id="93b35-116">相關章節</span><span class="sxs-lookup"><span data-stu-id="93b35-116">Related Sections</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="8afd0-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="8afd0-104">In This Section</span></span>
+
+[<span data-ttu-id="8afd0-105">WPF 架構</span><span class="sxs-lookup"><span data-stu-id="8afd0-105">WPF Architecture</span></span>](wpf-architecture.md)  
+[<span data-ttu-id="8afd0-106">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="8afd0-106">XAML in WPF</span></span>](xaml-in-wpf.md)  
+[<span data-ttu-id="8afd0-107">基底元素類別</span><span class="sxs-lookup"><span data-stu-id="8afd0-107">Base Element Classes</span></span>](base-elements.md)  
+[<span data-ttu-id="8afd0-108">項目樹狀結構和序列化</span><span class="sxs-lookup"><span data-stu-id="8afd0-108">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+[<span data-ttu-id="8afd0-109">WPF 屬性系統</span><span class="sxs-lookup"><span data-stu-id="8afd0-109">WPF Property System</span></span>](properties-wpf.md)  
+[<span data-ttu-id="8afd0-110">WPF 中的事件</span><span class="sxs-lookup"><span data-stu-id="8afd0-110">Events in WPF</span></span>](events-wpf.md)  
+[<span data-ttu-id="8afd0-111">輸入</span><span class="sxs-lookup"><span data-stu-id="8afd0-111">Input</span></span>](input-wpf.md)  
+[<span data-ttu-id="8afd0-112">拖放</span><span class="sxs-lookup"><span data-stu-id="8afd0-112">Drag and Drop</span></span>](drag-and-drop.md)  
+[<span data-ttu-id="8afd0-113">資源</span><span class="sxs-lookup"><span data-stu-id="8afd0-113">Resources</span></span>](resources-wpf.md)  
+[<span data-ttu-id="8afd0-114">文件</span><span class="sxs-lookup"><span data-stu-id="8afd0-114">Documents</span></span>](documents.md)  
+[<span data-ttu-id="8afd0-115">全球化和當地語系化</span><span class="sxs-lookup"><span data-stu-id="8afd0-115">Globalization and Localization</span></span>](globalization-and-localization.md)  
+[<span data-ttu-id="8afd0-116">版面配置</span><span class="sxs-lookup"><span data-stu-id="8afd0-116">Layout</span></span>](layout.md)  
+[<span data-ttu-id="8afd0-117">移轉和互通性</span><span class="sxs-lookup"><span data-stu-id="8afd0-117">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
+[<span data-ttu-id="8afd0-118">效能</span><span class="sxs-lookup"><span data-stu-id="8afd0-118">Performance</span></span>](performance.md)  
+[<span data-ttu-id="8afd0-119">執行緒模型</span><span class="sxs-lookup"><span data-stu-id="8afd0-119">Threading Model</span></span>](threading-model.md)  
+[<span data-ttu-id="8afd0-120">Unmanaged WPF API 參考</span><span class="sxs-lookup"><span data-stu-id="8afd0-120">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
