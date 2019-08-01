@@ -1,15 +1,15 @@
 ---
-title: HOW TO：計算中繼值 (Visual Basic)
+title: 作法：計算中繼值 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: cb619784d487ae12b1fb8bb3adc97acb0f767455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3af616fc3de4baa4bb42d9f9c04d654b7438ab0
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855437"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710469"
 ---
-# <a name="how-to-calculate-intermediate-values-visual-basic"></a>HOW TO：計算中繼值 (Visual Basic)
+# <a name="how-to-calculate-intermediate-values-visual-basic"></a>作法：計算中繼值 (Visual Basic)
 這個範例顯示如何計算可用於排序、篩選與選取的中繼值。  
   
 ## <a name="example"></a>範例  
@@ -41,7 +41,7 @@ Next
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱 <<c0> [ 處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊, 請參閱[命名空間總覽 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
   
  此範例使用下列 XML 文件：[XML 範例檔：命名空間中的數值資料](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)。  
   

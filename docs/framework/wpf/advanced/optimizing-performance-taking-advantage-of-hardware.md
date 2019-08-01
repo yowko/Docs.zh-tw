@@ -9,18 +9,18 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a47a4aae785d817904c30fe7c865a1c033eb3cca
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629658"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709229"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>優化效能:運用硬體
 的內部架構[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有兩個轉譯管線: 硬體和軟體。 本主題提供這些轉譯管線的相關資訊, 可協助您決定應用程式的效能優化。  
   
 ## <a name="hardware-rendering-pipeline"></a>硬體呈現管線  
- 判斷[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]效能最重要的因素之一就是它會呈現系結, 您必須轉譯的圖元越多, 效能成本就愈高。 不過, 可以卸載到的[!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]更多轉譯, 您可以獲得更多的效能優勢。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式硬體轉譯管線在支援最低 microsoft directx 7.0 版的硬體上, 可享有 microsoft directx 功能的完整優勢。 支援 Microsoft DirectX 7.0 版和無效 2.0 + 功能的硬體可以取得進一步的優化。  
+ 判斷[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]效能最重要的因素之一就是它會呈現系結, 您必須轉譯的圖元越多, 效能成本就愈高。 不過, 可以卸載至圖形處理器 (GPU) 的更多轉譯, 您可以獲得更多的效能優勢。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式硬體轉譯管線在支援最低 microsoft directx 7.0 版的硬體上, 可享有 microsoft directx 功能的完整優勢。 支援 Microsoft DirectX 7.0 版和無效 2.0 + 功能的硬體可以取得進一步的優化。  
   
 ## <a name="software-rendering-pipeline"></a>軟體呈現管線  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]軟體轉譯管線完全受限於 CPU。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]利用 CPU 中的 SSE 和 SSE2 指令集來執行優化、功能完整的軟體轉譯器。 只要應用程式功能無法使用硬體轉譯管線轉譯, 就可以順暢地回溯到軟體。  
@@ -48,7 +48,7 @@ ms.locfileid: "68629658"
   
 - **轉譯層 0**：沒有圖形硬體加速。 DirectX 版本層級小於7.0 版。  
   
-- 轉譯**層 1**部分圖形硬體加速。 DirectX 版本層級大於或等於7.0 版, 且小於9.0 版  。  
+- 轉譯**層 1**部分圖形硬體加速。 DirectX 版本層級大於或等於7.0 版, 且小於9.0 版 。  
   
 - **轉譯層 2**：大部分圖形功能都使用圖形硬體加速。 DirectX 版本層級大於或等於9.0 版。  
   

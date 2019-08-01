@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找具有特定的項目名稱 (Visual Basic) 的子系
+title: HOW TO：尋找具有特定專案名稱的子系 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0084f04db5af7b012748b66187e029c77d0cfce5
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780493"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710265"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>HOW TO：尋找具有特定的項目名稱 (Visual Basic) 的子系
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>HOW TO：尋找具有特定專案名稱的子系 (Visual Basic)
 有時候您會想要尋找具有特定名稱的所有子代。 您可以撰寫程式碼來逐一查看所有子代，但是使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸比較容易。  
   
 ## <a name="example"></a>範例  
@@ -54,7 +54,7 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱 <<c0> [ 處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊, 請參閱[命名空間總覽 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  

@@ -2,15 +2,15 @@
 title: 處理全域命名空間 (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9aab6f7175c905fcb3e82829f131f52b3d9368ac
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908007"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710376"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>處理全域命名空間 (Visual Basic) (LINQ to XML)
-在 Visual Basic 中的 XML 常值的主要功能之一是能夠使用宣告 XML 命名空間`Imports`陳述式。 利用這個功能，您可以宣告使用前置詞的 XML 命名空間，或者，您可以宣告預設的 XML 命名空間。  
+Visual Basic 中 xml 常值的其中一個重要功能, 就是使用`Imports`語句宣告 xml 命名空間的功能。 利用這個功能，您可以宣告使用前置詞的 XML 命名空間，或者，您可以宣告預設的 XML 命名空間。  
   
  這項功能在兩種情況下很有用。 第一，在 XML 常值中宣告的命名空間不會延續到內嵌的運算式中。 宣告全域命名空間會減少您必須做的工作量，以便搭配命名空間使用內嵌的運算式。 第二，您必須宣告全域命名空間，才能搭配 XML 使用命名空間。  
   
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>另請參閱
 
-- [處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [命名空間總覽 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

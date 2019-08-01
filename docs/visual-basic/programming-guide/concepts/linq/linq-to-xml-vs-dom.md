@@ -2,12 +2,12 @@
 title: LINQ to XML 比較DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: 8a7d15a8eca8e7d9bcbba068305357ff766a9d9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ca04991fb012aa522e7c0e35eea08d790007f7a
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623071"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710364"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML 比較DOM (Visual Basic)
 本節描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和目前主流的 XML 程式設計 API (也就是 W3C 文件物件模型 (DOM)) 之間的一些主要差異。  
@@ -51,7 +51,7 @@ doc.AppendChild(contacts)
 Console.WriteLine(doc.OuterXml)  
 ```  
   
- 這個編碼樣式在視覺上不會提供太多 XML 樹狀的相關資訊。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 支援使用這個方法來建構 XML 樹狀結構，但是也支援採用「功能建構」的替代方法。 在 Visual Basic 中，功能結構會使用 XML 常值，來建置 XML 樹狀結構。  
+ 這個編碼樣式在視覺上不會提供太多 XML 樹狀的相關資訊。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 支援使用這個方法來建構 XML 樹狀結構，但是也支援採用「功能建構」的替代方法。 在 Visual Basic 中, 功能結構會使用 XML 常值來建立 XML 樹狀結構。  
   
  此處說明您如何使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 功能建構，來建構相同的 XML 樹狀結構：  
   
@@ -74,7 +74,7 @@ Dim contacts = _
   
  請注意，將要建構 XML 樹狀結構的程式碼縮排可顯示基礎 XML 的結構。  
   
- 如需詳細資訊，請參閱 <<c0> [ 建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)。  
+ 如需詳細資訊, 請參閱[建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)。  
   
 ## <a name="working-directly-with-xml-elements"></a>直接使用 XML 項目  
  當您使用 XML 進行程式設計時，您的主要焦點通常是 XML 項目，也可能是屬性。 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，您可以直接使用 XML 項目和屬性。 例如，您可以：  
@@ -99,12 +99,12 @@ doc.AppendChild(name)
  使用 LINQ to XML 時，您僅能在想要於文件根層級上加入註解或處理指示時，才能使用 <xref:System.Xml.Linq.XDocument> 類別。  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>簡化的名稱和命名空間處理方式  
- 名稱、命名空間和命名空間前置詞的處理通常是 XML 程式設計的複雜部分。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 不必處理命名空間前置詞，可簡化名稱和命名空間。 您也可以控制命名空間前置詞。 但是，如果您決定不明確控制命名空間前置詞，則在序列化期間，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會指派命名空間前置詞 (如有必要)，或使用預設的命名空間進行序列化 (如果非必要的話)。 如果使用預設的命名空間，在產生的文件中將不會有任何命名空間前置詞。 如需詳細資訊，請參閱 <<c0> [ 處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 名稱、命名空間和命名空間前置詞的處理通常是 XML 程式設計的複雜部分。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 不必處理命名空間前置詞，可簡化名稱和命名空間。 您也可以控制命名空間前置詞。 但是，如果您決定不明確控制命名空間前置詞，則在序列化期間，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會指派命名空間前置詞 (如有必要)，或使用預設的命名空間進行序列化 (如果非必要的話)。 如果使用預設的命名空間，在產生的文件中將不會有任何命名空間前置詞。 如需詳細資訊, 請參閱[命名空間總覽 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
   
  另一個 DOM 問題是，DOM 不會讓您變更節點的名稱， 而是必須建立新的節點，並將所有子節點複製到該節點中，因此會失去原始的節點識別。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會讓您在節點上設定 <xref:System.Xml.Linq.XName> 屬性，藉以避免這個問題。  
   
 ## <a name="static-method-support-for-loading-xml"></a>載入 XML 的靜態方法支援  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可讓您使用靜態方法 (而非執行個體方法) 來載入 XML。 這會簡化載入和剖析的程序。 如需詳細資訊，請參閱[如何：載入 XML 檔案 (Visual Basic) 中](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可讓您使用靜態方法 (而非執行個體方法) 來載入 XML。 這會簡化載入和剖析的程序。 如需詳細資訊，請參閱[如何：從檔案載入 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)。  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>移除 DTD 建構函式的支援  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會移除實體和實體參考的支援，進一步簡化 XML 程式設計。 實體的管理很複雜，而且不常使用。 移除這些支援會增進效能並簡化程式設計介面。 填入 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 樹狀結構時，系統會展開所有 DTD 實體。  

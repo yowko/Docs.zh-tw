@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400655"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710400"
 ---
 # <a name="threading-model"></a>執行緒模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是設計來避免開發人員遇到執行緒的難題。 因此, 大部分的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開發人員都不需要撰寫使用多個執行緒的介面。 由於多執行緒的程式非常複雜且很難偵錯，因此，若有單一執行緒解決方案，就應避免使用多執行緒程式。  
@@ -56,7 +56,7 @@ ms.locfileid: "68400655"
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>單一執行緒應用程式與長時間執行的計算  
- 大部分[!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)]的時間都花在等候事件, 以回應使用者互動所產生的事件。 有了謹慎的程式設計, 就可以建設性使用此閒置時間, 而不[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]會影響的回應能力。 執行緒模型不允許輸入中斷[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒中發生的作業。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 這表示您必須務必定期返回, 以處理<xref:System.Windows.Threading.Dispatcher>擱置中的輸入事件, 然後才會過時。  
+ 大部分的圖形化使用者介面 (Gui) 都會在等候使用者互動時所產生的事件時, 花費大量時間閒置的部分。 有了謹慎的程式設計, 就可以建設性使用此閒置時間, 而不[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]會影響的回應能力。 執行緒模型不允許輸入中斷[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒中發生的作業。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 這表示您必須務必定期返回, 以處理<xref:System.Windows.Threading.Dispatcher>擱置中的輸入事件, 然後才會過時。  
   
  參考下列範例：  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68400655"
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>利用背景執行緒處理封鎖作業  
- 處理圖形應用程式中的封鎖作業可能很困難。 我們不想從事件處理常式中呼叫封鎖方法，因為應用程式將呈現凍結狀態。 我們可以使用個別的執行緒來處理這些作業, 但當我們完成時, 必須與[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒同步處理, 因為我們無法直接[!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)]從我們的背景工作執行緒修改。 我們可以使用<xref:System.Windows.Threading.Dispatcher.Invoke%2A>或<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> ,將[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]委派插入執行緒的中。 <xref:System.Windows.Threading.Dispatcher> 最後, 這些委派將會以修改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素的許可權執行。  
+ 處理圖形應用程式中的封鎖作業可能很困難。 我們不想從事件處理常式中呼叫封鎖方法，因為應用程式將呈現凍結狀態。 我們可以使用個別的執行緒來處理這些作業, 但當我們完成時, 必須與[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒同步處理, 因為我們無法直接從背景工作執行緒修改 GUI。 我們可以使用<xref:System.Windows.Threading.Dispatcher.Invoke%2A>或<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> ,將[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]委派插入執行緒的中。 <xref:System.Windows.Threading.Dispatcher> 最後, 這些委派將會以修改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素的許可權執行。  
   
  在此範例中，我們模仿遠端程序呼叫來擷取氣象預報。 我們會使用個別的背景工作執行緒來執行此呼叫, 並在完成時, 將<xref:System.Windows.Threading.Dispatcher> update 方法[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]排程線上程的中。  
   

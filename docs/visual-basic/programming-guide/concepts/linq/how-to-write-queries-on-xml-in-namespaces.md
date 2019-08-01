@@ -1,15 +1,15 @@
 ---
-title: HOW TO：命名空間 (Visual Basic) 中的 XML 撰寫查詢
+title: HOW TO：在命名空間中撰寫 XML 的查詢 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b910e8b46632fbff2228baef44a45e8c22d731e
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614826"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709867"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>HOW TO：命名空間 (Visual Basic) 中的 XML 撰寫查詢
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>作法：在命名空間中撰寫 XML 的查詢 (Visual Basic)
 若要撰寫命名空間 (Namespace) 中的 XML 查詢，您必須使用具有正確命名空間的 <xref:System.Xml.Linq.XName> 物件。  
   
  在 Visual Basic 中，最常見的方法是定義全域命名空間，然後使用利用全域命名空間的 XML 常值和 XML 屬性。 您可以定義預設的全域命名空間，在此情況下，XML 常值中的項目預設會在命名空間中。 或者，您可以利用前置詞定義全域命名空間，然後在 XML 常值和 XML 屬性中使用前置詞 (如有需要)。 如同 XML 的其他格式，這些屬性預設永遠在沒有命名空間中。  
@@ -90,4 +90,4 @@ End Module
   
 ## <a name="see-also"></a>另請參閱
 
-- [處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [命名空間總覽 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

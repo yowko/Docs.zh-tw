@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 743b9ec45c138053fcfcb5cbb1ea9c8490ba919e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 818d013356c3ca8151e9b5bb675bce4726759f6c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629914"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710339"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
 本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括提升文字轉譯的品質與效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、已增強的國際文字、已增強的字型支援，以及新的文字應用程式開發介面 (API)。  
@@ -73,7 +73,7 @@ ms.locfileid: "68629914"
 ## <a name="new-text-application-programming-interfaces-apis"></a>新的文字應用程式開發介面 (API)  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供數個文字 Api, 供開發人員在其應用程式中包含文字時使用。 這些 Api 分為三個類別:  
   
-- **版面配置和使用者介面**。 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 的一般文字控制項。  
+- **版面配置和使用者介面**。 圖形化使用者介面 (GUI) 的一般文字控制項。  
   
 - **輕量型文字繪製**。 可讓您直接對物件繪製文字。  
   

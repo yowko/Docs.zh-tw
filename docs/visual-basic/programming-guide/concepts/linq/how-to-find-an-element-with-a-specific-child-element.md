@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找具有特定子項目 (Visual Basic)
+title: HOW TO：尋找具有特定子項目的元素 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: 1b226f009776f397f73ab9ee7826484eb8869f28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af8667b6aa6870accb62fa22bd5243ce029b32c9
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780597"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709061"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>HOW TO：尋找具有特定子項目 (Visual Basic)
+# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>作法：尋找具有特定子項目的元素 (Visual Basic)
 本主題顯示如何利用特定的值尋找具有子項目的特定項目。  
   
 ## <a name="example"></a>範例  
@@ -35,10 +35,10 @@ Next
 0006  
 ```  
   
- 請注意，此範例會使用[XML 子代軸屬性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)，則[XML 屬性軸屬性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)，而[XML Value 屬性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
+ 請注意, 此範例使用[Xml 子軸屬性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)、 [xml 屬性軸屬性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)和[xml 值屬性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱 <<c0> [ 處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊, 請參閱[命名空間總覽 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)。  
   
  此範例使用下列 XML 文件：[XML 範例檔：測試命名空間中的組態](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)。  
   
@@ -72,4 +72,4 @@ End Module
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
 - [基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [投影作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [投射作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

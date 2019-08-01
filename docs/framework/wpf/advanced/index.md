@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942801"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710217"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>進階 (Windows Presentation Foundation)
 本節說明 WPF 中的一些進階區域。  
   
-## <a name="in-this-section"></a>本節內容  
- [WPF 架構](wpf-architecture.md)  
- [基底項目](base-elements.md)  
- [項目樹狀結構和序列化](element-tree-and-serialization.md)  
- [拖放](drag-and-drop.md)  
- [文件](documents.md)  
- [全球化和當地語系化](globalization-and-localization.md)  
- [移轉和互通性](migration-and-interoperability.md)  
- [效能](performance.md)  
- [執行緒模型](threading-model.md)  
- [WPF 增益集概觀](../app-development/wpf-add-ins-overview.md)  
- [Unmanaged WPF API 參考](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a>相關章節
+## <a name="in-this-section"></a>本節內容
+
+[WPF 架構](wpf-architecture.md)  
+[WPF 中的 XAML](xaml-in-wpf.md)  
+[基底元素類別](base-elements.md)  
+[項目樹狀結構和序列化](element-tree-and-serialization.md)  
+[WPF 屬性系統](properties-wpf.md)  
+[WPF 中的事件](events-wpf.md)  
+[輸入](input-wpf.md)  
+[拖放](drag-and-drop.md)  
+[資源](resources-wpf.md)  
+[文件](documents.md)  
+[全球化和當地語系化](globalization-and-localization.md)  
+[版面配置](layout.md)  
+[移轉和互通性](migration-and-interoperability.md)  
+[效能](performance.md)  
+[執行緒模型](threading-model.md)  
+[Unmanaged WPF API 參考](wpf-unmanaged-api-reference.md)  
