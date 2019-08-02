@@ -73,7 +73,7 @@ F# 中有兩個主要概念： 函式和類型。  本教學課程將強調屬�
 
 [!code-fsharp[Lists](../../samples/snippets/fsharp/tour.fs#L309-L359)]
 
-[陣列](./language-reference/arrays.md)是一種固定大小  、可變動的元素集合, 屬於相同類型的專案。  它們支援的項目，快速隨機存取，且速度比 F# 清單因為它們只是連續記憶體區塊。
+[陣列](./language-reference/arrays.md)是一種固定大小 、可變動的元素集合, 屬於相同類型的專案。  它們支援的項目，快速隨機存取，且速度比 F# 清單因為它們只是連續記憶體區塊。
 
 [!code-fsharp[Arrays](../../samples/snippets/fsharp/tour.fs#L368-L407)]
 
