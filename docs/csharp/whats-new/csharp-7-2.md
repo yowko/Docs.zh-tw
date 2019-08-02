@@ -21,7 +21,7 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 此版本的新款語言功能包括：
 
 * [撰寫安全、有效率之程式碼的技巧](#safe-efficient-code-enhancements)
-  - 此為語法改進功能組合，其可讓使用參考語意進行實質型別作業變得可能。
+  - 此為語法改進功能組合，其可讓使用參考語意進行實值型別作業變得可能。
 * [無後置具名引數](#non-trailing-named-arguments)
   - 具名引數之後可以接著位置引數。
 * [數值常值中的前置底線](#leading-underscores-in-numeric-literals)
