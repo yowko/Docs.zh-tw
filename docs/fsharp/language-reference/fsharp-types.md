@@ -2,19 +2,19 @@
 title: F# 類型
 description: 瞭解在中F#使用的類型, 以及如何F#命名和描述類型。
 ms.date: 05/16/2016
-ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 826bcb56aad3b50fbfcf8f807bb34e9cdcdecaf7
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630226"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733493"
 ---
 # <a name="f-types"></a>F# 類型
 
 本主題描述在中F#使用的類型, 以及如何F#命名和描述類型。
 
 ## <a name="summary-of-f-types"></a>F#類型摘要
-某些類型會視為  基本型別, 例如各種大小的布林`bool`數值型別和整數和浮點類型, 其中包括位元組和字元的類型。 這些類型會在[基本類型](primitive-types.md)中說明。
+某些類型會視為基本型別, 例如各種大小的布林`bool`數值型別和整數和浮點類型, 其中包括位元組和字元的類型。 這些類型會在[基本類型](primitive-types.md)中說明。
 
 語言內建的其他類型包括元組、清單、陣列、序列、記錄和區分等位。 如果您有其他 .NET 語言的經驗, 而且正在F#學習, 您應該閱讀每一種類型的主題。 本主題的[相關主題](https://msdn.microsoft.com/library/#rel)一節包含這些類型的詳細資訊連結。 這些F#特定型別支援功能性程式設計語言通用的程式設計樣式。 其中許多類型在連結F#庫中都有相關聯的模組, 可支援這些類型的一般作業。
 
@@ -44,7 +44,7 @@ F#提供有用的集合型別, 並以功能程式設計為考慮。 使用這些
 |Generic Type - 泛型類型|*型別參數* *泛型型別名稱*<br /><br />或<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |結構化型別 (提供特定型別引數的泛型型別)|*型別引數* *泛型型別名稱*<br /><br />或<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
 |具有單一參數的函數類型|*parameter-type1* -&gt; *return-type*|採用並`int` `string`傳回具有類型的函式`int -> string`|
-|具有多個參數的函數類型|*參數-type1*  - *參數-type2*  - ...-&gt;傳回  類型&gt; &gt;|接受`int` 和並`string`傳回具有類型的函式`float``int -> float -> string`|
+|具有多個參數的函數類型|*參數-type1*  - *參數-type2*  - ...-&gt;傳回類型&gt; &gt;|接受`int` 和並`string`傳回具有類型的函式`float``int -> float -> string`|
 |高階函式做為參數|(*函數類型*)|`List.map`具有類型`('a -> 'b) -> 'a list -> 'b list`|
 |Delegate - 委派|函*式類型*的委派|`delegate of unit -> int`|
 |彈性類型|#*type-name*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
@@ -69,4 +69,4 @@ F#提供有用的集合型別, 並以功能程式設計為考慮。 使用這些
 |[委派](delegates.md)|描述委派類型, 其代表當做物件的函式。|
 |[列舉](enumerations.md)|描述列舉類型, 其值屬於一組已命名的值。|
 |[屬性](attributes.md)|描述用來指定另一個類型之中繼資料的屬性。|
-|[例外狀況類型](/.exception-handling/exception-types.md)|描述指定錯誤資訊的例外狀況。|
+|[例外狀況類型](./exception-handling/exception-types.md)|描述指定錯誤資訊的例外狀況。|

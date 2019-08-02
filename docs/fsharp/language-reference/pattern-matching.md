@@ -2,12 +2,12 @@
 title: 模式比對
 description: 瞭解如何在中F#使用模式來比較資料與邏輯結構、將資料分解成組成元件, 或從資料中提取資訊。
 ms.date: 05/16/2016
-ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627293"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733471"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -15,7 +15,7 @@ ms.locfileid: "68627293"
 
 ## <a name="remarks"></a>備註
 
-模式用於許多語言結構, 例如`match`運算式。 當您要在`let`系結、lambda 運算式和`try...with`與運算式相關聯的例外狀況處理常式中處理函式的引數時, 會使用這些函數。 如需詳細資訊, 請參閱[Match 運算式](match-expressions.md)、 [let](./functions/let-bindings.md)系結、 [Lambda 運算式:`fun` 關鍵字](./functions/lambda-expressions-the-fun-keyword.md)和例外[狀況:`try...with`運算式。](/.exception-handling/the-try-with-expression.md)
+模式用於許多語言結構, 例如`match`運算式。 當您要在`let`系結、lambda 運算式和`try...with`與運算式相關聯的例外狀況處理常式中處理函式的引數時, 會使用這些函數。 如需詳細資訊, 請參閱[Match 運算式](match-expressions.md)、 [let](./functions/let-bindings.md)系結、 [Lambda 運算式:`fun` 關鍵字](./functions/lambda-expressions-the-fun-keyword.md)和例外[狀況:`try...with`運算式。](./exception-handling/the-try-with-expression.md)
 
 例如, 在`match`運算式中,*模式*就是管道符號後面的內容。
 
@@ -103,7 +103,7 @@ match shape with
 
 現用模式可讓您定義更複雜的自訂模式比對。 如需現用模式的詳細資訊, 請參閱[現用模式](active-patterns.md)。
 
-在例外狀況處理常式內容中的模式比對中, 會使用識別碼為例外狀況的情況。 如需例外狀況處理中的模式比對[的詳細資訊, 請參閱例外狀況:`try...with`運算式。](/.exception-handling/the-try-with-expression.md)
+在例外狀況處理常式內容中的模式比對中, 會使用識別碼為例外狀況的情況。 如需例外狀況處理中的模式比對[的詳細資訊, 請參閱例外狀況:`try...with`運算式。](./exception-handling/the-try-with-expression.md)
 
 ## <a name="variable-patterns"></a>變數模式
 

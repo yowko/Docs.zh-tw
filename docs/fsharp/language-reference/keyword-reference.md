@@ -2,12 +2,12 @@
 title: 關鍵字參考
 description: 尋找所有F#語言關鍵字的相關資訊連結。
 ms.date: 05/16/2016
-ms.openlocfilehash: f845db74fd7ffd4164cc74acd192e39df7d2d6b1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627627"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733488"
 ---
 # <a name="keyword-reference"></a>關鍵字參考
 
@@ -17,7 +17,7 @@ ms.locfileid: "68627627"
 
 下表以字母順序F#顯示所有關鍵詞, 以及簡短描述和包含詳細資訊的相關主題連結。
 
-|關鍵字|連結|描述|
+|關鍵字|連結|說明|
 |-------|----|-----------|
 |`abstract`|[成員](./members/index.md)<br /><br />[抽象類別](abstract-classes.md)|表示在宣告或為虛擬且具有預設實作為的類型中, 沒有任何實作的方法。|
 |`and`|[`let`關係](./functions/let-bindings.md)<br /><br />[記錄](records.md)<br /><br />[成員](./members/index.md)<br /><br />[條件約束](./generics/constraints.md)|用於相互遞迴系結和記錄、屬性宣告, 以及泛型參數上的多個條件約束。|
@@ -35,10 +35,10 @@ ms.locfileid: "68627627"
 |`elif`|[條件運算式：`if...then...else`](conditional-expressions-if-then-else.md)|用於條件式分支。 的簡短形式`else if`。|
 |`else`|[條件運算式：`if...then...else`](conditional-expressions-if-then-else.md)|用於條件式分支。|
 |`end`|[結構](structures.md)<br /><br />[差別聯集](discriminated-unions.md)<br /><br />[記錄](records.md)<br /><br />[類型延伸模組](type-extensions.md)<br /><br />[詳細語法](verbose-syntax.md)|在 [類型定義] 和 [類型延伸] 中, 表示成員定義區段的結尾。<br /><br />在 verbose 語法中, 用來指定以`begin`關鍵字開頭之程式碼區塊的結尾。|
-|`exception`|[例外狀況處理](/.exception-handling/index.md)<br /><br />[例外狀況類型](/.exception-handling/exception-types.md)|用來宣告例外狀況類型。|
+|`exception`|[例外狀況處理](./exception-handling/index.md)<br /><br />[例外狀況類型](./exception-handling/exception-types.md)|用來宣告例外狀況類型。|
 |`extern`|[外部函式](./functions/external-functions.md)|表示已宣告的程式專案是在另一個二進位或元件中定義。|
 |`false`|[基本類型](primitive-types.md)|當做布林常值使用。|
-|`finally`|[例外狀況：`try...finally`運算式](/.exception-handling/the-try-finally-expression.md)|與`try`搭配使用, 以引進不論是否發生例外狀況而執行的程式碼區塊。|
+|`finally`|[例外狀況：`try...finally`運算式](./exception-handling/the-try-finally-expression.md)|與`try`搭配使用, 以引進不論是否發生例外狀況而執行的程式碼區塊。|
 |`fixed`|[固定匯率](fixed.md)|用來「釘選」堆疊上的指標, 以防止它被垃圾收集。|
 |`for`|[環回`for...to`運算式](loops-for-to-expression.md)<br /><br />[迴圈：for...in 運算式](loops-for-in-expression.md)|用於迴圈結構中。|
 |`fun`|[Lambda 運算式:`fun` 關鍵字](./functions/lambda-expressions-the-fun-keyword.md)|用於 lambda 運算式, 也稱為匿名函式。|
@@ -62,7 +62,7 @@ ms.locfileid: "68627627"
 |`new`|[建構函式](./members/constructors.md)<br /><br />[條件約束](./generics/constraints.md)|用來宣告、定義或叫用建立可建立物件之或的函式。<br /><br />也用於泛型參數條件約束, 以指出類型必須具有特定的函式。|
 |`not`|[符號和運算子參考](./symbol-and-operator-reference/index.md)<br /><br />[條件約束](./generics/constraints.md)|實際上並不是關鍵字。 不過, `not struct`組合會當做泛型參數條件約束使用。|
 |`null`|[Null 值](./values/null-values.md)<br /><br />[條件約束](./generics/constraints.md)|表示沒有物件。<br /><br />也用於泛型參數條件約束中。|
-|`of`|[差別聯集](discriminated-unions.md)<br /><br />[委派](delegates.md)<br /><br />[例外狀況類型](/.exception-handling/exception-types.md)|用於區分等位, 表示值的類別目錄類型, 以及委派和例外狀況宣告中。|
+|`of`|[差別聯集](discriminated-unions.md)<br /><br />[委派](delegates.md)<br /><br />[例外狀況類型](./exception-handling/exception-types.md)|用於區分等位, 表示值的類別目錄類型, 以及委派和例外狀況宣告中。|
 |`open`|[匯入宣告：`open` 關鍵字](import-declarations-the-open-keyword.md)|用來讓命名空間或模組的內容可供使用, 而不需要限定。|
 |`or`|[符號和運算子參考](./symbol-and-operator-reference/index.md)<br /><br />[條件約束](./generics/constraints.md)|以布林值條件`or`運算子來使用。 相當於 `||`。<br /><br />也用於成員條件約束。|
 |`override`|[成員](./members/index.md)|用來執行與基底版本不同的抽象或虛擬方法版本。|
@@ -77,7 +77,7 @@ ms.locfileid: "68627627"
 |`then`|[條件運算式：`if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[建構函式](./members/constructors.md)|在條件運算式中使用。<br /><br />也可用來執行物件結構後的副作用。|
 |`to`|[環回`for...to`運算式](loops-for-to-expression.md)|用於迴圈`for`中, 表示範圍。|
 |`true`|[基本類型](primitive-types.md)|當做布林常值使用。|
-|`try`|[例外狀況：嘗試 .。。with 運算式](/.exception-handling/the-try-with-expression.md)<br /><br />[例外狀況：嘗試 .。。finally 運算式](/.exception-handling/the-try-finally-expression.md)|用來引進可能會產生例外狀況的程式碼區塊。 與`with` 或`finally`搭配使用。|
+|`try`|[例外狀況：嘗試 .。。with 運算式](./exception-handling/the-try-with-expression.md)<br /><br />[例外狀況：嘗試 .。。finally 運算式](./exception-handling/the-try-finally-expression.md)|用來引進可能會產生例外狀況的程式碼區塊。 與`with` 或`finally`搭配使用。|
 |`type`|[F# 類型](fsharp-types.md)<br /><br />[類別](classes.md)<br /><br />[記錄](records.md)<br /><br />[結構](structures.md)<br /><br />[列舉](enumerations.md)<br /><br />[差別聯集](discriminated-unions.md)<br /><br />[類型縮寫](type-abbreviations.md)<br /><br />[測量單位](units-of-measure.md)|用來宣告類別、記錄、結構、區分聯集、列舉類型、量值單位或類型縮寫。|
 |`upcast`|[轉型和轉換](casting-and-conversions.md)|用來轉換成繼承鏈中較高的類型。|
 |`use`|[資源管理:`use` 關鍵字](resource-management-the-use-keyword.md)|用於, 而`let`不是需要`Dispose`呼叫以釋放資源的值。|
@@ -86,7 +86,7 @@ ms.locfileid: "68627627"
 |`void`|[基本類型](primitive-types.md)|表示 .net `void`類型。 與其他 .NET 語言交互操作時使用。|
 |`when`|[條件約束](./generics/constraints.md)|用於模式比對上的布林值條件 (若有*防護*), 並引進泛型型別參數的條件約束子句。|
 |`while`|[環回`while...do`運算式](loops-while-do-expression.md)|引進迴圈結構。|
-|`with`|[比對運算式](match-expressions.md)<br /><br />[物件運算式](object-expressions.md)<br /><br />[複製和更新記錄運算式](copy-and-update-record-expressions.md)<br /><br />[類型延伸模組](type-extensions.md)<br /><br />[例外狀況：`try...with`運算式](/.exception-handling/the-try-with-expression.md)|與模式比對`match`運算式中的關鍵字一起使用。 也用於物件運算式、記錄複製運算式, 以及引入成員定義的類型延伸, 以及引進例外狀況處理常式。|
+|`with`|[比對運算式](match-expressions.md)<br /><br />[物件運算式](object-expressions.md)<br /><br />[複製和更新記錄運算式](copy-and-update-record-expressions.md)<br /><br />[類型延伸模組](type-extensions.md)<br /><br />[例外狀況：`try...with`運算式](./exception-handling/the-try-with-expression.md)|與模式比對`match`運算式中的關鍵字一起使用。 也用於物件運算式、記錄複製運算式, 以及引入成員定義的類型延伸, 以及引進例外狀況處理常式。|
 |`yield`|[序列](sequences.md)|用於序列運算式中, 以產生序列的值。|
 |`yield!`|[計算運算式](computation-expressions.md)<br /><br />[非同步工作流程](asynchronous-workflows.md)|用於計算運算式中, 將指定計算運算式的結果附加至包含計算運算式的結果集合。|
 
