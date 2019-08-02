@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4c86ab618f6434a6a9ce4f056eeb001cacc84bc
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026558"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709193"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>在 DateTime、DateTimeOffset、 TimeSpan 和  TimeZoneInfo 之間選擇
 
@@ -32,7 +32,7 @@ ms.locfileid: "62026558"
 
 * 反映抽象的日期和時間，這些並不會和特定時間或位置密切相關 (例如大多數國際連鎖的商店在工作日上午 9 點開始營業)。
 
-* 若要從.NET 外部來源中擷取日期和時間資訊，通常其中的日期和時間資訊會儲存在簡單資料型別。
+* 若要從 .NET 外部的來源抓取日期和時間資訊, 通常會將日期和時間資訊儲存成簡單的資料類型。
 
 * 若要唯一且明確地識別單一時間點。 有些應用程式只在主機系統上需要明確的日期和時間；有些則需要在不同系統上都明確 (也就是一個系統上已序列化的日期可以有意義地還原序列化，並且在世界各地的另一個系統上使用)。
 
@@ -40,14 +40,14 @@ ms.locfileid: "62026558"
 
 * 若要執行日期和時間運算，且該運算可能有會唯一明確地識別單一時間點的結果。
 
-.NET 包含<xref:System.DateTime>， <xref:System.DateTimeOffset>， <xref:System.TimeSpan>，和<xref:System.TimeZoneInfo>全部都可以用來建置使用日期和時間的應用程式的類型。
+.Net 包含<xref:System.DateTime>、 <xref:System.DateTimeOffset>、 <xref:System.TimeSpan>和類型,這些都可以用來建立使用日期和時間的應用程式。<xref:System.TimeZoneInfo>
 
 > [!NOTE]
 > 本主題並不討論第四個類型， <xref:System.TimeZone>，因為它的功能幾乎已完全合併入 <xref:System.TimeZoneInfo> 類別。 可能的話，開發人員應該使用 <xref:System.TimeZoneInfo> 類別而非 <xref:System.TimeZone> 類別。
 
 ## <a name="the-datetime-structure"></a>DateTime 結構
 
-<xref:System.DateTime> 值會定義特定的日期和時間。 它包含<xref:System.DateTime.Kind%2A>屬性，可提供有限的時區資訊該日期和時間所屬之。 由 <xref:System.DateTimeKind> 屬性傳回的 <xref:System.DateTime.Kind%2A> 值，表示 <xref:System.DateTime> 值是否代表當地時間 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、國際標準時間 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) 或未指定的時間 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)。
+<xref:System.DateTime> 值會定義特定的日期和時間。 它包含<xref:System.DateTime.Kind%2A>屬性, 提供有關該日期和時間所屬時區的有限資訊。 由 <xref:System.DateTimeKind> 屬性傳回的 <xref:System.DateTime.Kind%2A> 值，表示 <xref:System.DateTime> 值是否代表當地時間 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、國際標準時間 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) 或未指定的時間 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)。
 
 <xref:System.DateTime> 結構適用於執行下列項目的應用程式：
 
@@ -61,7 +61,7 @@ ms.locfileid: "62026558"
 
 * 只使用 UTC 日期和時間。
 
-* 從外部來源.NET 中，例如 SQL 資料庫中擷取日期和時間資訊。 一般而言，這些來源會將日期和時間資訊以和 <xref:System.DateTime> 結構相容的簡單格式儲存。
+* 從 .NET 外部的來源 (例如 SQL 資料庫) 取出日期和時間資訊。 一般而言，這些來源會將日期和時間資訊以和 <xref:System.DateTime> 結構相容的簡單格式儲存。
 
 * 執行日期和時間運算，但關心其一般結果。 例如，在對特定日期和時間加入六個月的加法運算中，該結果是否對日光節約時間進行調整通常並不重要。
 
@@ -74,7 +74,7 @@ ms.locfileid: "62026558"
 
 <xref:System.DateTimeOffset> 結構代表日期和時間值，以及表示該值與 UTC 差異大小的位移。 因此，該值一律明確地識別單一時間點。
 
-<xref:System.DateTimeOffset> 類型包含 <xref:System.DateTime> 類型的所有功能並感知時區。 這可讓您適用於應用程式，執行下列作業：
+<xref:System.DateTimeOffset> 類型包含 <xref:System.DateTime> 類型的所有功能並感知時區。 這讓它適合執行下列動作的應用程式:
 
 * 唯一且明確地識別單一時間點。 <xref:System.DateTimeOffset> 類型可用來明確定義「現在」的意義，以記錄交易的時間、記錄系統或應用程式事件的時間以及記錄檔案建立及修改的時間。
 
@@ -98,9 +98,9 @@ ms.locfileid: "62026558"
 
 * 反映出兩個日期和時間值之間的時間間隔。 例如，從另一個值中減去 <xref:System.DateTime> 值會傳回 <xref:System.TimeSpan> 值。
 
-* 測量已耗用時間。 例如，<xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType>屬性會傳回<xref:System.TimeSpan>會反映自呼叫其中一個經過的時間間隔的值<xref:System.Diagnostics.Stopwatch>開始測量已耗用時間的方法。
+* 測量已耗用時間。 例如, <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType>屬性會傳回一個<xref:System.TimeSpan>值, 反映從<xref:System.Diagnostics.Stopwatch>呼叫開始測量已耗用時間的其中一個方法以來所經過的時間間隔。
 
-若在未參考一天中之特定時間的情況下反映時間，則 <xref:System.TimeSpan> 值也可用來取代 <xref:System.DateTime> 值。 這種使用方式很類似<xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType>並<xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>屬性，傳回<xref:System.TimeSpan>值，表示不參考日期時間。 例如， <xref:System.TimeSpan> 結構可用來反映商店每日開始營業或打烊的時間，或可用來代表任何有規律事件發生的時間。
+值也可以做為<xref:System.DateTime>值的取代, 而該值會反映沒有特定日期參考的時間。 <xref:System.TimeSpan> 這種用法類似<xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType>于和<xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> <xref:System.TimeSpan>屬性, 其會傳回代表不參考日期之時間的值。 例如， <xref:System.TimeSpan> 結構可用來反映商店每日開始營業或打烊的時間，或可用來代表任何有規律事件發生的時間。
 
 下列範例會定義 `StoreInfo` 結構，其中包含用來儲存開始營業和打烊時間的 <xref:System.TimeSpan> 物件，以及代表商店所在時區的 <xref:System.TimeZoneInfo> 物件。 該結構也包含兩種方法， `IsOpenNow` 和 `IsOpenAt`，假定使用者處於當地時區，該結構會表示商店是否於使用者指定的時間開始營業。
 
@@ -114,9 +114,9 @@ ms.locfileid: "62026558"
 
 ## <a name="the-timezoneinfo-class"></a>TimeZoneInfo 類別
 
- <xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. <xref:System.TimeZoneInfo> 類別讓您能夠處理日期和時間，讓任何日期和時間值能明確地識別單一時間點。 <xref:System.TimeZoneInfo> 類別也可延伸。 雖然這取決於提供給 Windows 系統和定義於登錄中的時區資訊，但它支援建立自訂的時區。 它也支援時區資訊的序列化和還原序列化。
+<xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. <xref:System.TimeZoneInfo> 類別讓您能夠處理日期和時間，讓任何日期和時間值能明確地識別單一時間點。 <xref:System.TimeZoneInfo> 類別也可延伸。 雖然這取決於提供給 Windows 系統和定義於登錄中的時區資訊，但它支援建立自訂的時區。 它也支援時區資訊的序列化和還原序列化。
 
-在某些情況下，欲充分利用 <xref:System.TimeZoneInfo> 類別可能需要進一步的開發工作。 如果日期和時間值未緊密結合的所屬的人員，、 進一步的作業的時區是必要項目。 除非您的應用程式提供一些機制來將連結的日期和時間與其相關聯的時區，很容易針對特定日期和時間值與其時區。 連結此資訊的一種方法是定義類別或結構，其中包含日期和時間值，以及與其相關聯的時區物件。
+在某些情況下，欲充分利用 <xref:System.TimeZoneInfo> 類別可能需要進一步的開發工作。 如果日期和時間值未與它們所屬的時區緊密結合, 則需要進一步的工作。 除非您的應用程式提供將日期和時間與相關聯時區連結的一些機制, 否則特定日期和時間值很容易就會從其時區解除關聯。 連結此資訊的一種方法是定義類別或結構，其中包含日期和時間值，以及與其相關聯的時區物件。
 
 當日期和時間物件已具現化後，僅當日期和時間值的所屬時區已知時，才有可能利用 .NET 支援的時區。 情況往往並非如此，特別是在 Web 或網路應用程式的情況下。
 
