@@ -1,14 +1,14 @@
 ---
 title: .NET Core SDK 概觀
 description: 了解 .NET Core SDK 相關資訊，這是用來建立 .NET Core 專案的一組程式庫和工具。
-ms.date: 05/13/2019
+ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: f56d7238eaaaa677db38430358ce94890632469e
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 0231c08f780455c4956c044815a2e80cef4d827e
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959238"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733383"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK 概觀
 
@@ -16,7 +16,7 @@ ms.locfileid: "65959238"
 
 - .NET Core CLI 工具。
 - .NET core 程式庫和執行階段。
-- `dotnet` [驅動程式](/tools/index.md#driver)。
+- `dotnet` [驅動程式](tools/index.md#driver)。
 
 ## <a name="acquiring-the-net-core-sdk"></a>取得 .NET Core SDK
 
@@ -29,11 +29,11 @@ ms.locfileid: "65959238"
 
 另一方面，安裝指令碼不需要系統管理權限。 不過，它們也不會在電腦上安裝任何必要條件；您需要手動安裝所有必要條件。 指令碼大部分用於設定組建伺服器，或您想要安裝工具但沒有系統管理權限時 (請確實注意上述先決條件警告)。 您可在[安裝指令碼參考](tools/dotnet-install-script.md)一文中取得需詳細資訊。 如對如何在 CI 組建伺服器上設定 SDK 有興趣，請參閱[在持續整合 (CI) 中使用 .NET Core SDK 和工具](tools/using-ci-with-cli.md)一文。
 
-根據預設，SDK 會以「並存」(SxS) 的形式安裝，這表示一部電腦上可以同時存在多個版本的 CLI 工具。 如需了解執行 CLI 命令時如何挑選版本的詳細說明，請參閱[選取要使用的 .NET Core 版本](/versions/selection.md)一文。
+根據預設，SDK 會以「並存」(SxS) 的形式安裝，這表示一部電腦上可以同時存在多個版本的 CLI 工具。 如需了解執行 CLI 命令時如何挑選版本的詳細說明，請參閱[選取要使用的 .NET Core 版本](versions/selection.md)一文。
 
 ## <a name="see-also"></a>另請參閱
 
 - [.NET Core CLI](tools/index.md)
-- [.NET Core 版本控制概觀](/versions/index.md)
+- [.NET Core 版本控制概觀](versions/index.md)
 - [如何移除 .NET Core 執行階段和 SDK](versions/remove-runtime-sdk-versions.md)
-- [選取要使用的 .NET Core 版本](/versions/selection.md)
+- [選取要使用的 .NET Core 版本](versions/selection.md)

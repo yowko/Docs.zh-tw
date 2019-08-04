@@ -3,12 +3,12 @@ title: Docker 簡介
 description: 本文在 .NET Core 應用程式內容中提供了 Docker 的簡介及概觀。
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d0bce09d7acdcf474fbb8849c8fc82dae4a69598
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753303"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626485"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -32,7 +32,7 @@ ms.locfileid: "64753303"
 
 ### <a name="registries"></a>登錄
 
-容器登錄是映像存放庫的集合。 您可以使用登錄映像作為映像的基礎。 您可以在登錄中直接從映像建立容器。 在[進行容器化應用程式或微服務的架構設計及建置](../../standard/microservices-architecture/architect-microservice-container-applications/index.md)時，[Docker 容器、映像和登錄之間的關係](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md)是相當重要的概念。 此作法能大幅縮短開發和部署之間的時間。
+容器登錄是映像存放庫的集合。 您可以使用登錄映像作為映像的基礎。 您可以在登錄中直接從映像建立容器。 在[進行容器化應用程式或微服務的架構設計及建置](../../architecture/microservices/architect-microservice-container-applications/index.md)時，[Docker 容器、映像和登錄之間的關係](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md)是相當重要的概念。 此作法能大幅縮短開發和部署之間的時間。
 
 Docker 擁有公用登錄，已裝載於 [Docker Hub](https://hub.docker.com/) \(英文\) 供您使用。 Docker Hub 會列出 [.NET core 相關映像](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。 
 
@@ -52,22 +52,22 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 
 各種 Azure 服務支援容器。 您可以為應用程式建立 Docker 映像，並將它部署到下列其中一個服務：
 
-* [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)
+* [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
 調整規模及協調使用 Kubernetes 的 Linux 容器。
 
-* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)
+* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 在 PaaS 環境中使用 Linux 容器部署 Web 應用程式或 API。
 
-* [Azure 容器執行個體](https://azure.microsoft.com/services/container-instances/)
+* [Azure 容器執行個體](https://azure.microsoft.com/services/container-instances/)\
 在沒有任何較高層級管理服務的情況下，將容器裝載於雲端。
 
-* [Azure Batch](https://azure.microsoft.com/services/batch/)
+* [Azure Batch](https://azure.microsoft.com/services/batch/)\
 使用容器執行重複的計算工作。
 
-* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)
+* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
 使用 Windows Server 容器將 .NET 應用程式提升、轉移及現代化至微服務
 
-* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)
+* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
 儲存及管理所有 Azure 部署類型的容器映像。
 
 ## <a name="next-steps"></a>後續步驟

@@ -4,15 +4,13 @@ description: 透過逐步使用 dotnet test 和 MSTest 建置範例方案的互�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 1765c16cb55857b83a8206ae97327d0fd2809019
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 3b93f4ed21d9d5eccf1dd02f253e7456aec02807
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747488"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626472"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MSTest 為 .NET Core 中的 F# 程式庫進行單元測試
 
@@ -87,7 +85,7 @@ dotnet add reference ../MathService/MathService.fsproj
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 
-撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 開啟 *Tests.fs* 並加入下列程式碼：
+您會撰寫一個失敗測試，讓它通過，然後重複此程序。 開啟 *Tests.fs* 並加入下列程式碼：
 
 ```fsharp
 namespace MathService.Tests
@@ -123,9 +121,9 @@ member this.TestEvenSequence() =
 
 請注意，`expected` 序列已被轉換為清單。 MSTest 程式庫仰賴許多標準 .NET 型別。 該相依性表示您的公用介面與預期結果支援 <xref:System.Collections.ICollection>，而非 <xref:System.Collections.IEnumerable>。
 
-當您執行該測試時，您會看到您的測試失敗。 您尚未建立實作。 在可運作的 `Mathservice` 類別中撰寫最簡單的程式碼以進行此測試：
+當您執行該測試時，您會看到您的測試失敗。 您尚未建立實作。 在可運作的 `Mathservice` 類別中撰寫最簡單的程式碼以讓此測試成功：
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int> |> Seq.toList
 ```

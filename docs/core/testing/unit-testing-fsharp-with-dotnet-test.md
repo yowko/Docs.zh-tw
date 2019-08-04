@@ -4,15 +4,13 @@ description: 透過逐步使用 dotnet test 和 xUnit 建置範例方案的互�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 9765c463bb427f79dcd0308e7e4fc643fdc06968
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 3a9744bfebd93c5004011819b8c6e739e84b97d0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745942"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626499"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 F# 程式庫進行單元測試
 
@@ -30,7 +28,7 @@ ms.locfileid: "56745942"
     /MathService
 ```
 
-將 *MathService* 設定為目前的目錄，然後執行 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) 以建立來源專案。  您會建立數學服務的失敗實作：
+將 *MathService* 設定為目前的目錄，然後執行 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) 以建立來源專案。  您建立會失敗的數學服務實作：
 
 ```fsharp
 module MyMath =
@@ -112,9 +110,9 @@ let ``Sequence of Evens returns empty collection`` () =
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-您的測試失敗。 您尚未建立實作。 在可運作的 `MathService` 類別中撰寫最簡單的程式碼以進行此測試：
+您的測試失敗。 您尚未建立實作。 在可運作的 `MathService` 類別中撰寫最簡單的程式碼以讓此測試成功：
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
