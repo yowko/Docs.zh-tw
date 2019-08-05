@@ -595,14 +595,16 @@
       items:
         - name: 'C# 型別系統'
           href: csharp/programming-guide/types/index.md
+        - name: 可為 Null 的參考型別
+          href: csharp/nullable-references.md
+        - name: 使用屬性與限制式說明可為 Null 的 API
+          href: csharp/nullable-attributes.md
         - name: 命名空間
           href: csharp/programming-guide/namespaces/index.md
         - name: 基本類型
           href: csharp/basic-types.md
         - name: 類別
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: 可為 Null 的參考型別
-          href: csharp/nullable-references.md
         - name: 結構
           href: csharp/structs.md
         - name: Tuple
