@@ -4,12 +4,12 @@ description: 本指南說明您在 .NET 中建置伺服器應用程式時應考�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6bdcb002c2e37f45c298259c2867a631b38152ca
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641162"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630858"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -46,7 +46,7 @@ ms.locfileid: "65641162"
 
 您可以使用的基礎結構平台有很多。 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) 是針對大型且複雜的微服務系統所設計。 [Azure App Service](https://azure.microsoft.com/services/app-service/) 是無狀態微服務的理想選擇。 以 Docker 為依據的微服務替代方案符合任何一種微服務方法，如[容器](#containers)一節中所述。 所有的這些平台均支援 .NET Core，並使其更適合用來裝載您的微服務。
 
-如需微服務架構的詳細資訊，請參閱 [.NET 微服務：容器化 .NET 應用程式的架構](microservices-architecture/index.md)。
+如需微服務架構的詳細資訊，請參閱 [.NET 微服務：容器化 .NET 應用程式的架構](../architecture/microservices/index.md)。
 
 ### <a name="containers"></a>容器
 
@@ -110,4 +110,4 @@ ms.locfileid: "65641162"
 - [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)
 - [.NET 和 Docker 簡介](../core/docker/intro-net-docker.md)
 - [.NET 偵錯概觀](components.md)
-- [.NET 微服務：容器化 .NET 應用程式的架構](microservices-architecture/index.md)
+- [.NET 微服務：容器化 .NET 應用程式的架構](../architecture/microservices/index.md)
