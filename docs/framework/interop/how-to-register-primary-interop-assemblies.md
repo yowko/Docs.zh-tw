@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b859f109cc224ebf1a8fd62a1d3d3440cf906c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636094"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629387"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>作法：登錄主要 Interop 組件
 
-類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需以您選擇的介面來覆寫類別介面的資訊，請參閱 [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md)。
+類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需以您選擇的介面來覆寫類別介面的資訊，請參閱 [COM 可呼叫包裝函式](../../../docs/standard/native-interop/com-callable-wrapper.md)。
 
  雖然想要從 .NET Framework 應用程式使用 COM 類型的任何開發人員都可以產生 Interop 組件，但這樣做會有問題。 每當開發人員匯入及簽署 COM 類型程式庫時，該開發人員會建立一組唯一類型，而這些類型會與另一個開發人員匯入及簽署的類型不相容。 這個類型不相容問題的解決方法可讓每個開發人員取得廠商提供及簽署的主要 Interop 組件。
 

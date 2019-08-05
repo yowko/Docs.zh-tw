@@ -1,4 +1,4 @@
-- name: 進階
+- name: Advanced WPF 區域
   href: index.md
   items:
     - name: WPF 架構
@@ -56,7 +56,7 @@
               href: mc-ignorable-attribute.md
             - name: 'mc:ProcessContent 屬性'
               href: mc-processcontent-attribute.md
-    - name: 基底項目
+    - name: 基底元素類別
       href: base-elements.md
       items:
         - name: 基底項目概觀
@@ -104,7 +104,7 @@
               href: how-to-find-an-element-by-its-name.md
             - name: 覆寫邏輯樹狀結構
               href: how-to-override-the-logical-tree.md
-    - name: 屬性
+    - name: WPF 屬性系統
       href: properties-wpf.md
       items:
         - name: 相依性屬性概觀
@@ -401,7 +401,7 @@
               items:
                 - name: GlyphRun 物件和 Glyphs 項目簡介
                   href: introduction-to-the-glyphrun-object-and-glyphs-element.md
-                - name: HOW TO：使用圖像繪製文字
+                - name: 作法：使用圖像繪製文字
                   href: draw-text-using-glyphs.md
             - name: HOW TO 主題
               href: typography-how-to-topics.md
@@ -502,7 +502,7 @@
               href: walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md
             - name: 逐步解說：將 ActiveX 控制項裝載在 WPF 中
               href: walkthrough-hosting-an-activex-control-in-wpf.md
-            - name: HOW TO：在混合應用程式中啟用視覺化樣式
+            - name: 作法：在混合應用程式中啟用視覺化樣式
               href: how-to-enable-visual-styles-in-a-hybrid-application.md
             - name: 逐步解說：在 WPF 中排列 Windows Forms 控制項
               href: walkthrough-arranging-windows-forms-controls-in-wpf.md

@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e10b6fd7df003de739b57bbb3e17deb46215763f
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363999"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629354"
 ---
 # <a name="how-to-create-com-wrappers"></a>作法：建立 COM 包裝函式
 
 您可以使用 Visual Studio 2005 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 來建立元件物件模型 (COM) 包裝函式。 這兩種方法會產生兩種類型的 COM 包裝函式：
 
-- 型別程式庫中的[執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md)，會以 Managed 程式碼執行 COM 物件。
+- 型別程式庫中的[執行階段可呼叫包裝函式](../../../docs/standard/native-interop/runtime-callable-wrapper.md)，會以 Managed 程式碼執行 COM 物件。
 
-- 具有所需登錄設定的 [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md)，會在原生應用程式中執行 Managed 物件。
+- 具有所需登錄設定的 [COM 可呼叫包裝函式](../../../docs/standard/native-interop/com-callable-wrapper.md)，會在原生應用程式中執行 Managed 物件。
 
 在 Visual Studio 2005 中，您可以將 COM 包裝函式新增成為專案的參考。
 
@@ -75,5 +75,5 @@ ms.locfileid: "68363999"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md)
+- [執行階段可呼叫包裝函式](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
+- [COM 可呼叫包裝函式](../../../docs/standard/native-interop/com-callable-wrapper.md)
