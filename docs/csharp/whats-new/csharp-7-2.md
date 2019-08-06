@@ -21,7 +21,7 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 此版本的新款語言功能包括：
 
 * [撰寫安全、有效率之程式碼的技巧](#safe-efficient-code-enhancements)
-  - 此為語法改進功能組合，其可讓使用參考語意進行實質型別作業變得可能。
+  - 這是語法改進功能組合，這些改進功能可讓您使用參考語意來處理實值型別。
 * [無後置具名引數](#non-trailing-named-arguments)
   - 具名引數之後可以接著位置引數。
 * [數值常值中的前置底線](#leading-underscores-in-numeric-literals)
@@ -63,7 +63,7 @@ C# 7.0 中的數字分隔符號之實作支援，並不允許將 `_` 作為常�
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>_private protected_ 存取修飾詞
+## <a name="_private-protected_-access-modifier"></a>_private protected_ 存取修飾詞
 
 新的複合存取修飾詞：`private protected` 指出可藉由包含類別或在相同組件中宣告的衍生類別來存取成員。 `protected internal` 允許衍生類別或相同組件中的類別進行存取，而 `private protected` 則限制在相同組件中宣告的衍生類型進行存取。
 
