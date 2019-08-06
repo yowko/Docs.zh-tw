@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ffb397c673333b26649a815fce7a5d4e63e5b987
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401734"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796780"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者透過 Windows 與 Windows Presentation Foundation (WPF) 獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式會<xref:System.Windows.Window>使用類別來提供自己的視窗。 本主題將<xref:System.Windows.Window>介紹在獨立應用程式中建立和管理 windows 的基本概念。  
@@ -167,7 +167,7 @@ ms.locfileid: "68401734"
   
 - 最小化、最大化和還原而不會影響對方。  
   
- 某些視窗需要與開啟它們的視窗有關聯性。 例如, [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)]應用程式可能會開啟屬性視窗和工具視窗, 其一般行為是涵蓋建立它們的視窗。 此外，這類視窗應該一律與建立它們的視窗一致地關閉、最小化、最大化和還原。 這種關聯性可以藉由將一個視窗設為另一個來建立, 並藉<xref:System.Windows.Window.Owner%2A>由使用擁有者*視窗*的參考來設定*擁有視窗*的屬性來達成。 這在下列範例中顯示。  
+ 某些視窗需要與開啟它們的視窗有關聯性。 例如, 整合式開發環境 (IDE) 應用程式可能會開啟屬性視窗和工具視窗, 其一般行為是涵蓋建立它們的視窗。 此外，這類視窗應該一律與建立它們的視窗一致地關閉、最小化、最大化和還原。 這種關聯性可以藉由將一個視窗設為另一個來建立, 並藉<xref:System.Windows.Window.Owner%2A>由使用擁有者*視窗*的參考來設定*擁有視窗*的屬性來達成。 這在下列範例中顯示。  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -235,7 +235,7 @@ ms.locfileid: "68401734"
   
  您可以提供其他機制讓工作區關閉視窗，較常見的包括下列各項︰  
   
-- [ 檔案] 功能表中的 [結束] 專案, 通常是針對主應用程式視窗。  
+- [檔案] 功能表中的 [結束] 專案, 通常是針對主應用程式視窗。  
   
 - [檔案] 功能表中的 [**關閉**] 專案, 通常是在次要應用程式視窗上。  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68401734"
   
 - [**關閉**] 按鈕, 通常是在非強制回應對話方塊上。  
   
- 若要關閉視窗以回應其中一個自訂機制, 您必須呼叫<xref:System.Windows.Window.Close%2A>方法。 下列範例會藉由選擇 [檔案] 功能表上的 [ 結束], 來執行關閉視窗的功能。  
+ 若要關閉視窗以回應其中一個自訂機制, 您必須呼叫<xref:System.Windows.Window.Close%2A>方法。 下列範例會藉由選擇 [檔案] 功能表上的 [結束],來執行關閉視窗的功能。  
   
  [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
   

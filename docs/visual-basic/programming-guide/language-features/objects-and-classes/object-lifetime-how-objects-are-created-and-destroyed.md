@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 5b092f50ddff5c432fbd6396b5fedafe7a6acba0
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 932f56a9a277360b11c551aaa1faf819f8e07fe6
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512834"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796680"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：如何建立和終結物件 (Visual Basic)
 
-您可以使用 `New` 關鍵字來建立類別的執行個體，即物件。 在使用新物件之前，經常必須在新物件上執行初始設定工作。 常見的初始設定工作包括開啟檔案、連線到資料庫，以及讀取登錄機碼的值。 Visual Basic 使用稱為「函式」的程式 ( 允許對初始化進行控制的特殊方法), 來控制新物件的初始化。
+您可以使用 `New` 關鍵字來建立類別的執行個體，即物件。 在使用新物件之前，經常必須在新物件上執行初始設定工作。 常見的初始設定工作包括開啟檔案、連線到資料庫，以及讀取登錄機碼的值。 Visual Basic 使用稱為「函式」的程式 (允許對初始化進行控制的特殊方法), 來控制新物件的初始化。
 
 物件離開範圍之後，它會被通用語言執行平台 (CLR) 所釋放。 Visual Basic 使用稱為「*析構函數*」的程式來控制系統資源的發行。 建構函式與解構函式一起支援建立穩固和可預測的類別庫。
 
@@ -41,7 +41,7 @@ ms.locfileid: "68512834"
 
 ### <a name="sub-new"></a>Sub New
 
-`Sub New` 建構函式只能在建立類別時執行一次。 不能從相同類別或衍生類別中的其他建構函式的程式碼的第一行以外的任何地方明確呼叫它。 此外，`Sub New` 方法中的程式碼永遠會在類別中的任何其他程式碼執行之前執行。 如果您未明確`Sub New` `Sub New`定義類別的程式, Visual Basic 和更新版本會在執行時間隱含地建立函數。
+`Sub New` 建構函式只能在建立類別時執行一次。 不能從相同類別或衍生類別中的其他建構函式的程式碼的第一行以外的任何地方明確呼叫它。 此外，`Sub New` 方法中的程式碼永遠會在類別中的任何其他程式碼執行之前執行。 如果您未明確`Sub New` `Sub New`定義類別的程式, Visual Basic 會在執行時間隱含地建立函數。
 
 若要建立類別的建構函式，請在類別定義中的任何地方建立名為 `Sub New` 的程序。 若要建立參數化建構函式，請指定 `Sub New` 之引數的名稱和資料類型，就像您會為任何其他程序指定引數一樣，如下列程式碼所示：
 
@@ -64,7 +64,7 @@ ms.locfileid: "68512834"
 
 `Finalize` 解構函式是受保護的方法，只能從其所屬的類別或衍生類別呼叫。 系統會在物件被終結時自動呼叫 `Finalize`，所以您不應該從衍生類別的 `Finalize` 實作外明確地呼叫 `Finalize`。
 
-有別於 `Class_Terminate` 會在物件未設定為任何設定時立即執行，物件失去範圍的時間與 Visual Basic 呼叫 `Finalize` 解構函式的時間之間通常會有延遲。 Visual Basic 和更新版本允許第二種類型的析構函<xref:System.IDisposable.Dispose%2A>式, 可隨時明確呼叫以立即釋放資源。
+有別於 `Class_Terminate` 會在物件未設定為任何設定時立即執行，物件失去範圍的時間與 Visual Basic 呼叫 `Finalize` 解構函式的時間之間通常會有延遲。 Visual Basic .net 允許第二種類型的析構函<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>式, 可隨時明確呼叫以立即釋放資源。
 
 > [!NOTE]
 > `Finalize` 解構函式不應該擲回例外狀況，因為應用程式無法處理它們，而且可能會導致應用程式終止。

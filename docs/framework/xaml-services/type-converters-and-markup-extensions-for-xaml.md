@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 6d859f5f341eaf7c86573077ec56eab7b4cd7bb8
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: d31d970e8e95726aa789f853ac12c4830498a743
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722553"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796824"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的類型轉換子和標記延伸
 類型轉換器和標記延伸是 XAML 類型系統和 XAML 寫入器用以產生物件圖形元件的兩項技術。 雖然兩者共用某些特性，但類型轉換器和標記延伸在 XAML 節點資料流中會以不同的方式表示。 在本文件集中，有時會將類型轉換器、標記延伸和類似的建構統稱為值轉換器。  
@@ -32,7 +32,7 @@ ms.locfileid: "66722553"
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>類型轉換器  
- 在 .NET Framework XAML 服務定義中，類型轉換器是衍生自 CLR <xref:System.ComponentModel.TypeConverter> 類別的類別。 <xref:System.ComponentModel.TypeConverter> 是之前的 Microsoft.NET Framework XAML 就存在的類別。 其原始用途是為了支援 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 屬性的屬性視窗和類似的文字編輯表示。 .NET Framework 中引進的 XAML 使用 <xref:System.ComponentModel.TypeConverter> ，將文字語法 (如屬性值或 XAML 值節點中的文字語法) 轉換成物件。 <xref:System.ComponentModel.TypeConverter> 也可用來將物件值序列化為文字語法。 <xref:System.ComponentModel.TypeConverter> 也在 Windows Presentation Foundation (WPF) 和 Windows Communication Foundation (WCF) 的舊版架構特定 XAML 實作中使用。 如需在 XAML 中 <xref:System.ComponentModel.TypeConverter> 的詳細資訊，請參閱 [Type Converters for XAML Overview](type-converters-for-xaml-overview.md)。  
+ 在 .NET Framework XAML 服務定義中，類型轉換器是衍生自 CLR <xref:System.ComponentModel.TypeConverter> 類別的類別。 <xref:System.ComponentModel.TypeConverter>是在 XAML 存在之前, 在 Microsoft .NET Framework 中的類別。 其原始用途是為了支援 IDE 屬性的屬性視窗和類似的文字編輯比喻。 .NET Framework 中引進的 XAML 使用 <xref:System.ComponentModel.TypeConverter> ，將文字語法 (如屬性值或 XAML 值節點中的文字語法) 轉換成物件。 <xref:System.ComponentModel.TypeConverter> 也可用來將物件值序列化為文字語法。 <xref:System.ComponentModel.TypeConverter>在 Windows Presentation Foundation (WPF) 和 Windows Communication Foundation (WCF) 的舊版架構特定 XAML 中, 也使用了。 如需在 XAML 中 <xref:System.ComponentModel.TypeConverter> 的詳細資訊，請參閱 [Type Converters for XAML Overview](type-converters-for-xaml-overview.md)。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>標記延伸  
@@ -45,7 +45,7 @@ ms.locfileid: "66722553"
  如需 XAML 之標記延伸實作模式的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 類型都在 <xref:System.Windows.Markup> 命名空間中，而不在 <xref:System.Xaml> 命名空間中。 這不表示這些類型專屬於情況下填入包含字串的 CLR 命名空間的 WPF 或 Windows Form 技術`Windows`。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 位於 System.Xaml 組件中，並且沒有特定架構相依性。 這些類型的.NET Framework 3.0 存在於 CLR 命名空間，而且保留在 CLR 命名空間，在.NET Framework 4，以避免破壞現有 WPF 專案中的參考。 如需詳細資訊，請參閱 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)。  
+>  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 類型都在 <xref:System.Windows.Markup> 命名空間中，而不在 <xref:System.Xaml> 命名空間中。 這並不表示這些類型是 WPF 或 Windows Forms 技術特有的, 否則會填入包含該字串`Windows`的 CLR 命名空間。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 位於 System.Xaml 組件中，並且沒有特定架構相依性。 這些類型存在於 .NET Framework 3.0 的 CLR 命名空間中, 並保留在 .NET Framework 4 的 CLR 命名空間中, 以避免中斷現有 WPF 專案中的參考。 如需詳細資訊，請參閱 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)。  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>值序列化程式  

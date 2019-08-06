@@ -24,18 +24,18 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 24b872fcf58db3ef0ef7d04165129804dc46d641
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: ee2f6050eeea6eec840156ed5dce9fb9b6172149
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364281"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796875"
 ---
 # <a name="navigation-overview"></a>巡覽概觀
 
 Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於兩種類型的應用程式: 獨立應用[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]程式和。 若要封裝內容以供[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]導覽, <xref:System.Windows.Controls.Page>請提供類別。 您可以藉由使用<xref:System.Windows.Controls.Page>或<xref:System.Windows.Navigation.NavigationService>以程式設計方式, 使用<xref:System.Windows.Documents.Hyperlink>從一個流覽至另一個。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日誌記憶曾經巡覽過的頁面，以利返回巡覽。
 
-<xref:System.Windows.Controls.Page>、 <xref:System.Windows.Documents.Hyperlink> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 <xref:System.Windows.Navigation.NavigationService>和日誌形成所提供的導覽支援的核心。 本總覽會在涵蓋先進的流覽支援 (包括鬆散[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案、檔案和物件的流覽) [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]之前, 先深入探索這些功能。
+<xref:System.Windows.Controls.Page>、 <xref:System.Windows.Documents.Hyperlink> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 <xref:System.Windows.Navigation.NavigationService>和日誌形成所提供的導覽支援的核心。 本總覽會在涵蓋包含鬆散[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案、HTML 檔案和物件導覽的先進導覽支援之前, 先深入探索這些功能。
 
 > [!NOTE]
 > 在本主題中, 「瀏覽器」一詞只是指可以裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式的瀏覽器[!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] , 目前包含和 Firefox。 只有特定[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的瀏覽器才支援特定功能, 瀏覽器版本則稱為。
@@ -79,7 +79,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 ### <a name="implementing-a-page"></a>實作頁面
 
-在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中, 您可以導覽至數種內容類型, 其中包括 .NET Framework 物件、自訂物件、列舉值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 、使用者控制項[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] 、檔案和檔案。 不過, 您會發現封裝內容最常見且方便的方式是使用<xref:System.Windows.Controls.Page>。 此外, <xref:System.Windows.Controls.Page>也會執行導覽特有的功能, 以增強其外觀並簡化開發。
+在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中, 您可以流覽至數種內容類型, 其中包括 .NET Framework 物件、自訂物件、列舉值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 、使用者控制項、檔案和 HTML 檔案。 不過, 您會發現封裝內容最常見且方便的方式是使用<xref:System.Windows.Controls.Page>。 此外, <xref:System.Windows.Controls.Page>也會執行導覽特有的功能, 以增強其外觀並簡化開發。
 
 使用<xref:System.Windows.Controls.Page>, 您可以使用如下所示的標記[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , 以宣告方式執行可導覽的內容頁面。
 
@@ -206,7 +206,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 片段[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]具有下列格式。
 
-*PageURI* `#` <項目名稱> 
+*PageURI* `#` <項目名稱>
 
 以下顯示的範例`Hyperlink`是設定為流覽至內容片段。
 
@@ -218,7 +218,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 > 本節描述中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的預設片段導覽執行。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]也可讓您執行自己的片段導覽配置, 而這部分需要處理<xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType>事件。
 
 > [!IMPORTANT]
-> 只有在可以透過流覽頁面時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , 您才可以流覽[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]至鬆散`Page`分頁中的片段 (僅限標記的檔案, 以做為根項目)。 [!INCLUDE[TLA2#tla_http](../../../../includes/tla2sharptla-http-md.md)]
+> 只有在可以透過 HTTP 流覽頁面[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]時, 您才可以[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]流覽到`Page`鬆散分頁中的片段 (僅限標記的檔案, 以作為根項目)。
 >
 > 不過, 鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]分頁可以流覽至它自己的片段。
 
@@ -519,13 +519,13 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式可以儲存資料的另一種方式是使用<xref:System.Windows.Application.SetCookie%2A>和<xref:System.Windows.Application.GetCookie%2A>方法來建立、更新和刪除 cookie。 您可以在中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]建立的 cookie 與其他類型的 Web 應用程式所使用的 cookie 相同; cookie 是應用程式在應用程式會話期間或之間儲存的任意資料片段。 Cookie 資料通常會採用下列格式的名稱/值組形式。
 
-「名稱」  `=`「值」 
+「名稱」`=`「值」
 
 將資料傳遞至時, <xref:System.Windows.Application.SetCookie%2A>如果要<xref:System.Uri>設定 cookie 的位置, 就會在記憶體中建立 cookie, 而且僅適用于目前應用程式會話的持續時間。 這種類型的 cookie 稱為*會話 cookie*。
 
 若要在應用程式工作階段之間儲存 Cookie，到期日必須使用下列格式新增至 Cookie。
 
-「名稱」  `=`「值」  `; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
+「名稱」`=`「值」`; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
 具有到期日的 cookie 會儲存在目前[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]安裝的 [Internet Files] 資料夾中, 直到 cookie 到期為止。 這類 cookie 稱為*持續性 cookie* , 因為它會在應用程式會話之間持續保存。
 
@@ -539,7 +539,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 - 來自相同網域的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以建立及共用 Cookie。
 
-- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]相同[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]網域中的和頁面可以建立和共用 cookie。
+- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]相同網域中的和 HTML 網頁可以建立和共用 cookie。
 
 - 當和鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]提出 Web 要求時, 會分派 cookie。
 
@@ -610,7 +610,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 ![NavigationWindow 中的 [上一頁] 和 [下一頁] 按鈕](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "導覽視窗中的 [上一頁] 和 [下一頁] 按鈕")
 
-如果您的頁面提供自己的日誌流覽支援和 UI, 您可以將<xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A>屬性的  值設定為, <xref:System.Windows.Navigation.NavigationWindow>以`false`隱藏顯示的 [**上一頁**] 和 [下一頁] 按鈕。
+如果您的頁面提供自己的日誌流覽支援和 UI, 您可以將<xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A>屬性的值設定為, <xref:System.Windows.Navigation.NavigationWindow>以`false`隱藏顯示的 [**上一頁**] 和 [下一頁] 按鈕。
 
 或者, 您可以使用中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的自訂支援來[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]取代<xref:System.Windows.Navigation.NavigationWindow>本身的。
 
@@ -683,7 +683,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 在本主題中<xref:System.Windows.Controls.Page> , 和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] pack 已用來示範的各種導覽功能[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 不過, <xref:System.Windows.Controls.Page>編譯成應用程式的不是唯一可以流覽的內容類型, 套件[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]則不是識別內容的唯一方法。
 
-如本節所示, 您也可以流覽至鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的檔案[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 、檔案和物件。
+如本節所示, 您也可以流覽至鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的檔案、HTML 檔案和物件。
 
 <a name="Navigating_to_Loose_XAML_Files"></a>
 
@@ -724,19 +724,19 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 ### <a name="navigating-to-html-files-by-using-frame"></a>使用框架巡覽至 HTML 檔案
 
-如您所預期, 您也可以流覽至[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]。 您只需要提供[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]使用 HTTP 配置的。 例如, 以下[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Controls.Frame>顯示流覽至[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]頁面的。
+如您所預期, 您也可以流覽至 HTML。 您只需要提供[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]使用 HTTP 配置的。 例如, 以下[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Controls.Frame>顯示流覽至 HTML 網頁的。
 
 [!code-xaml[NavigationOverviewSnippets#FrameHtmlNavMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHTMLNavPage.xaml#framehtmlnavmarkup)]
 
-流覽至[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]需要特殊許可權。 例如, 您無法從在網際網路區域[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]部分信任安全性沙箱中執行的進行流覽。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
+流覽至 HTML 需要特殊許可權。 例如, 您無法從在網際網路區域[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]部分信任安全性沙箱中執行的進行流覽。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
 
 <a name="Navigating_to_HTML_Files_Using_WebBrowser"></a>
 
 ### <a name="navigating-to-html-files-by-using-the-webbrowser-control"></a>使用 WebBrowser 控制項巡覽至 HTML 檔案
 
-<xref:System.Windows.Controls.WebBrowser>控制項支援[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]檔裝載、導覽和腳本/managed 程式碼互通性。 如需有關控制項的<xref:System.Windows.Controls.WebBrowser>詳細資訊, <xref:System.Windows.Controls.WebBrowser>請參閱。
+<xref:System.Windows.Controls.WebBrowser>控制項支援 HTML 檔案裝載、導覽和腳本/managed 程式碼互通性。 如需有關控制項的<xref:System.Windows.Controls.WebBrowser>詳細資訊, <xref:System.Windows.Controls.WebBrowser>請參閱。
 
-如同<xref:System.Windows.Controls.Frame>, 流覽至[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]使用<xref:System.Windows.Controls.WebBrowser>需要特殊許可權。 例如, 從部分信任的應用程式, 您只能流覽至[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]位於來源網站上的。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
+如同<xref:System.Windows.Controls.Frame>, 使用<xref:System.Windows.Controls.WebBrowser>流覽至 HTML 需要特殊許可權。 例如, 您可以從部分信任的應用程式, 只流覽至位於來源網站的 HTML。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
 
 <a name="Navigating_to_Objects"></a>
 

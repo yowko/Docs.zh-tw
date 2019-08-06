@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 16618042324387bfc15f4685f4759378c50a80b7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3f51f274a4cba77f6bc7b62d6e31d476625072a5
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401713"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796901"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主應用程式 (PresentationHost.exe)
 Windows Presentation Foundation (WPF) 主機 (presentationhost.exe) 是讓[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式裝載在相容的瀏覽器 (包括[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]和更新版本) 中的應用程式。 根據預設, Windows Presentation Foundation (WPF) 主機會註冊為瀏覽器主控[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]內容的 shell 和處理常式, 其中包括:  
@@ -21,7 +21,7 @@ Windows Presentation Foundation (WPF) 主機 (presentationhost.exe) 是讓[!INCL
   
  對於這些類型的檔案, 請 Windows Presentation Foundation (WPF) 主機:  
   
-- 啟動已註冊[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]的處理常式, 以裝載 Windows Presentation Foundation (WPF) 內容。  
+- 啟動已註冊的 HTML 處理常式, 以裝載 Windows Presentation Foundation (WPF) 內容。  
   
 - 載入所需 common language runtime (CLR) 和 Windows Presentation Foundation (WPF) 元件的正確版本。  
   
