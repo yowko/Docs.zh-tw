@@ -13,17 +13,17 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6bd597cd2719fb96b8633f724da46a76e416b454
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629806"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817903"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>開發 Windows Presentation Foundation (WPF) 獨立和瀏覽器裝載的應用程式時, 您必須考慮安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式會以不受限制的許可權 (CAS**FullTrust**許可權集合) 執行, 不論是使用 Windows Installer (.msi)、XCopy 或 ClickOnce 部署。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過, 完全信任的主應用程式可以使用 .NET Framework 增益集模型<xref:System.AppDomain>來建立部分信任。 如需詳細資訊, 請參閱[WPF 增益集總覽](./app-development/wpf-add-ins-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]瀏覽器裝載的應用程式是[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]由或 Firefox 主控, 而且可以[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]是或[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]鬆散檔以取得詳細資訊, 請參閱[WPF XAML 瀏覽器應用程式總覽](./app-development/wpf-xaml-browser-applications-overview.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]瀏覽器裝載的應用程式是由 Windows Internet Explorer 或 Firefox 主控, 而且可以[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]是或[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]鬆散檔以取得詳細資訊, 請參閱[WPF XAML 瀏覽器應用程式總覽](./app-development/wpf-xaml-browser-applications-overview.md)。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]瀏覽器裝載的應用程式預設會在部分信任安全性沙箱中執行, 其限制為預設的 CAS**網際網路**區域許可權集合。 這可有效[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]地將瀏覽器裝載的應用程式與用戶端電腦隔離, 使其與一般 Web 應用程式隔離的方式相同。 XBAP 可以根據部署 URL 的安全性區域以及用戶端的安全性組態來提高權限，而最高為「完全信任」。 如需詳細資訊，請參閱 [WPF 部分信任安全性](wpf-partial-trust-security.md)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68629806"
 ## <a name="safe-navigation"></a>安全巡覽  
  針對[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] ,[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]區分兩種類型的流覽: 應用程式和瀏覽器。  
   
- 「應用程式巡覽」  是瀏覽器所裝載之應用程式的內容項目間的巡覽。 「瀏覽器巡覽」  是變更瀏覽器本身的內容和位置 URL 的巡覽。 下圖顯示應用程式導覽 (通常是 XAML) 和瀏覽器導覽 (通常是 HTML) 之間的關聯性:
+ 「應用程式巡覽」是瀏覽器所裝載之應用程式的內容項目間的巡覽。 「瀏覽器巡覽」是變更瀏覽器本身的內容和位置 URL 的巡覽。 下圖顯示應用程式導覽 (通常是 XAML) 和瀏覽器導覽 (通常是 HTML) 之間的關聯性:
   
  ![應用程式導覽與瀏覽器導覽之間的關聯性。](./media/security-wpf/application-browser-navigation-relationship.png)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68629806"
 ## <a name="web-browsing-software-security-settings"></a>Web 瀏覽軟體安全性設定  
  電腦上的安全性設定決定授與任何 Web 瀏覽軟體的存取權。 Web 流覽套裝軟體含任何使用[WinINet](https://go.microsoft.com/fwlink/?LinkId=179379)或[urlmon.dll](https://go.microsoft.com/fwlink/?LinkId=179383) Api (包括 Internet Explorer 和 presentationhost.exe) 的應用程式或元件。  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]提供一種機制, 讓您可以設定允許或從[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]執行的功能, 包括下列各項:  
+ Internet Explorer 提供一種機制, 可讓您設定允許或從 Internet Explorer 執行的功能, 包括下列各項:  
   
 - .NET Framework 相依元件  
   
@@ -120,11 +120,11 @@ ms.locfileid: "68629806"
 > [!NOTE]
 >  您也可以從 Internet Explorer 到達 [網際網路選項] 對話方塊。 按一下 [**工具**], 然後按一下 [**網際網路選項**]。  
   
- 從開始[!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], 會包含專門用於 .NET Framework 的下列安全性設定:  
+ 從 Windows Internet Explorer 7 開始, 會包含下列專為 .NET Framework 所提供的安全性設定:  
   
-- **鬆散 XAML**。 控制是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以導覽至檔案或[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]鬆散檔案。 ([啟用]、[停用] 和 [提示] 選項)。  
+- **鬆散 XAML**。 控制 Internet Explorer 是否可以導覽至檔案或[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]鬆散檔案。 ([啟用]、[停用] 和 [提示] 選項)。  
   
-- **XAML 瀏覽器應用程式**。 控制是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以導覽和執行[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 ([啟用]、[停用] 和 [提示] 選項)。  
+- **XAML 瀏覽器應用程式**。 控制 Internet Explorer 是否可以導覽並執行[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 ([啟用]、[停用] 和 [提示] 選項)。  
   
  根據預設, 這些設定都會針對 [**網際網路**]、[近端**內部**網路] 和 [**信任**的網站] 區域啟用, 並針對 [**限制的網站**] 區域停用。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "68629806"
 |---------------------|  
 |FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT|  
   
- 如果您在中[!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]執行包含 WPF <xref:System.Windows.Controls.WebBrowser>控制項的部分信任, WPF 會在 Internet Explorer 進程的位址空間中裝載 WebBrowser ActiveX 控制項。 由於 webbrowser activex 控制項裝載于[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]進程中, 因此 Internet Explorer 的所有功能控制項也會針對 WebBrowser ActiveX 控制項啟用。  
+ 如果您在 Windows internet explorer 中[!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]執行包含 WPF <xref:System.Windows.Controls.WebBrowser>控制項的部分信任, WPF 會在 Internet explorer 進程的位址空間中裝載 WebBrowser ActiveX 控制項。 由於 WebBrowser ActiveX 控制項裝載于 Internet Explorer 進程中, 因此 Internet Explorer 的所有功能控制也會針對 WebBrowser ActiveX 控制項啟用。  
   
  與一般獨立應用程式相較之下，在 Internet Explorer 中執行的 XBAP 也會取得額外層級的安全性。 這項額外的安全性是因為 Internet Explorer (因此 WebBrowser ActiveX 控制項) 預設會在和[!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] [!INCLUDE[win7](../../../includes/win7-md.md)]上以受保護模式執行。 如需受保護模式的詳細資訊, 請參閱[瞭解及使用受保護模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
   

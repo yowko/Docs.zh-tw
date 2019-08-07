@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: bc5e2c88314c2f590aeddcfd37bd04c3a7400804
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512244"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796487"
 ---
 # <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
@@ -59,7 +59,7 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 [unchecked](../keywords/unchecked.md) – 停用整數作業的溢位檢查。 這是預設編譯器行為。
 
-[default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) - 產生類型 T 的預設值。
+[default(T)](default.md) - 產生類型 T 的預設值。
 
 [nameof](nameof.md) - 取得變數、型別或成員的簡單 (未限定) 名稱，作為常數字串。
 
