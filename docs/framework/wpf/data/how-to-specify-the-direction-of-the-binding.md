@@ -1,46 +1,47 @@
 ---
-title: HOW TO：指定繫結的方向
+title: 作法：指定繫結的方向
 ms.date: 03/30/2017
 helpviewer_keywords:
 - direction of binding [WPF]
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-ms.openlocfilehash: 164fae937fc3935c7640a898c0c1908fd0a6b6b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 023cd42ad5fb321e7ffa65f08673cb4145f49af4
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625333"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817904"
 ---
-# <a name="how-to-specify-the-direction-of-the-binding"></a><span data-ttu-id="43241-102">HOW TO：指定繫結的方向</span><span class="sxs-lookup"><span data-stu-id="43241-102">How to: Specify the Direction of the Binding</span></span>
-<span data-ttu-id="43241-103">本範例顯示如何指定繫結只更新繫結目標 (目標) 屬性、繫結來源 (來源) 屬性，或同時更新目標屬性與來源屬性。</span><span class="sxs-lookup"><span data-stu-id="43241-103">This example shows how to specify whether the binding updates only the binding target (target) property, the binding source (source) property, or both the target property and the source property.</span></span>  
+# <a name="how-to-specify-the-direction-of-the-binding"></a><span data-ttu-id="c84eb-102">作法：指定系結的方向</span><span class="sxs-lookup"><span data-stu-id="c84eb-102">How to: Specify the direction of the binding</span></span>
+
+<span data-ttu-id="c84eb-103">本範例顯示如何指定繫結只更新繫結目標 (目標) 屬性、繫結來源 (來源) 屬性，或同時更新目標屬性與來源屬性。</span><span class="sxs-lookup"><span data-stu-id="c84eb-103">This example shows how to specify whether the binding updates only the binding target (target) property, the binding source (source) property, or both the target property and the source property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="43241-104">範例</span><span class="sxs-lookup"><span data-stu-id="43241-104">Example</span></span>  
- <span data-ttu-id="43241-105">您使用<xref:System.Windows.Data.Binding.Mode%2A>屬性來指定繫結的方向。</span><span class="sxs-lookup"><span data-stu-id="43241-105">You use the <xref:System.Windows.Data.Binding.Mode%2A> property to specify the direction of the binding.</span></span> <span data-ttu-id="43241-106">下列列舉清單顯示繫結更新的可用選項：</span><span class="sxs-lookup"><span data-stu-id="43241-106">The following enumeration list shows the available options for binding updates:</span></span>  
+## <a name="example"></a><span data-ttu-id="c84eb-104">範例</span><span class="sxs-lookup"><span data-stu-id="c84eb-104">Example</span></span>  
+ <span data-ttu-id="c84eb-105">您可以使用<xref:System.Windows.Data.Binding.Mode%2A?displayProperty=nameWithType>屬性來指定系結的方向。</span><span class="sxs-lookup"><span data-stu-id="c84eb-105">You use the <xref:System.Windows.Data.Binding.Mode%2A?displayProperty=nameWithType> property to specify the direction of the binding.</span></span> <span data-ttu-id="c84eb-106">以下是可用來系結更新的選項:</span><span class="sxs-lookup"><span data-stu-id="c84eb-106">The following are the available options for binding updates:</span></span>  
   
-- <span data-ttu-id="43241-107"><xref:System.Windows.Data.BindingMode.TwoWay> 目標屬性或 [來源] 屬性變更時，請更新目標屬性。</span><span class="sxs-lookup"><span data-stu-id="43241-107"><xref:System.Windows.Data.BindingMode.TwoWay> updates the target property or the property whenever either the target property or the source property changes.</span></span>  
+- <span data-ttu-id="c84eb-107"><xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType>每當目標屬性或來源屬性變更時, 就會更新目標屬性或屬性。</span><span class="sxs-lookup"><span data-stu-id="c84eb-107"><xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType> updates the target property or the property whenever either the target property or the source property changes.</span></span>  
   
-- <span data-ttu-id="43241-108"><xref:System.Windows.Data.BindingMode.OneWay> [來源] 屬性變更時才會更新目標屬性。</span><span class="sxs-lookup"><span data-stu-id="43241-108"><xref:System.Windows.Data.BindingMode.OneWay> updates the target property only when the source property changes.</span></span>  
+- <span data-ttu-id="c84eb-108"><xref:System.Windows.Data.BindingMode.OneWay?displayProperty=nameWithType>只有當 source 屬性變更時, 才會更新目標屬性。</span><span class="sxs-lookup"><span data-stu-id="c84eb-108"><xref:System.Windows.Data.BindingMode.OneWay?displayProperty=nameWithType> updates the target property only when the source property changes.</span></span>  
   
-- <span data-ttu-id="43241-109"><xref:System.Windows.Data.BindingMode.OneTime> 更新目標屬性，只有在應用程式啟動時或<xref:System.Windows.FrameworkElement.DataContext%2A>; 歷經變更。</span><span class="sxs-lookup"><span data-stu-id="43241-109"><xref:System.Windows.Data.BindingMode.OneTime> updates the target property only when the application starts or when the <xref:System.Windows.FrameworkElement.DataContext%2A> undergoes a change.</span></span>  
+- <span data-ttu-id="c84eb-109"><xref:System.Windows.Data.BindingMode.OneTime?displayProperty=nameWithType>只有在應用程式啟動或進行變更時<xref:System.Windows.FrameworkElement.DataContext%2A> , 才會更新目標屬性。</span><span class="sxs-lookup"><span data-stu-id="c84eb-109"><xref:System.Windows.Data.BindingMode.OneTime?displayProperty=nameWithType> updates the target property only when the application starts or when the <xref:System.Windows.FrameworkElement.DataContext%2A> undergoes a change.</span></span>  
   
-- <span data-ttu-id="43241-110"><xref:System.Windows.Data.BindingMode.OneWayToSource> 當目標屬性變更時，請更新來源屬性。</span><span class="sxs-lookup"><span data-stu-id="43241-110"><xref:System.Windows.Data.BindingMode.OneWayToSource> updates the source property when the target property changes.</span></span>  
+- <span data-ttu-id="c84eb-110"><xref:System.Windows.Data.BindingMode.OneWayToSource?displayProperty=nameWithType>當目標屬性變更時, 更新 source 屬性。</span><span class="sxs-lookup"><span data-stu-id="c84eb-110"><xref:System.Windows.Data.BindingMode.OneWayToSource?displayProperty=nameWithType> updates the source property when the target property changes.</span></span>  
   
-- <span data-ttu-id="43241-111"><xref:System.Windows.Data.BindingMode.Default> 讓預設<xref:System.Windows.Data.Binding.Mode%2A>要使用的目標屬性的值。</span><span class="sxs-lookup"><span data-stu-id="43241-111"><xref:System.Windows.Data.BindingMode.Default> causes the default <xref:System.Windows.Data.Binding.Mode%2A> value of target property to be used.</span></span>  
+- <span data-ttu-id="c84eb-111"><xref:System.Windows.Data.BindingMode.Default?displayProperty=nameWithType>會使用目標<xref:System.Windows.Data.Binding.Mode%2A>屬性的預設值。</span><span class="sxs-lookup"><span data-stu-id="c84eb-111"><xref:System.Windows.Data.BindingMode.Default?displayProperty=nameWithType> causes the default <xref:System.Windows.Data.Binding.Mode%2A> value of target property to be used.</span></span>  
   
- <span data-ttu-id="43241-112">如需詳細資訊，請參閱 <xref:System.Windows.Data.BindingMode> 列舉。</span><span class="sxs-lookup"><span data-stu-id="43241-112">For more information, see the <xref:System.Windows.Data.BindingMode> enumeration.</span></span>  
+ <span data-ttu-id="c84eb-112">如需詳細資訊，請參閱 <xref:System.Windows.Data.BindingMode> 列舉。</span><span class="sxs-lookup"><span data-stu-id="c84eb-112">For more information, see the <xref:System.Windows.Data.BindingMode> enumeration.</span></span>  
   
- <span data-ttu-id="43241-113">下列範例會示範如何設定 <xref:System.Windows.Data.Binding.Mode%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="43241-113">The following example shows how to set the <xref:System.Windows.Data.Binding.Mode%2A> property.</span></span>  
+ <span data-ttu-id="c84eb-113">下列範例會示範如何設定 <xref:System.Windows.Data.Binding.Mode%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="c84eb-113">The following example shows how to set the <xref:System.Windows.Data.Binding.Mode%2A> property.</span></span>  
   
  [!code-xaml[DirectionalBinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#4)]  
   
- <span data-ttu-id="43241-114">若要偵測來源變更 (適用於<xref:System.Windows.Data.BindingMode.OneWay>並<xref:System.Windows.Data.BindingMode.TwoWay>繫結)，來源必須實作適合的屬性變更通知機制，例如<xref:System.ComponentModel.INotifyPropertyChanged>。</span><span class="sxs-lookup"><span data-stu-id="43241-114">To detect source changes (applicable to <xref:System.Windows.Data.BindingMode.OneWay> and <xref:System.Windows.Data.BindingMode.TwoWay> bindings), the source must implement a suitable property change notification mechanism such as <xref:System.ComponentModel.INotifyPropertyChanged>.</span></span> <span data-ttu-id="43241-115">請參閱[實作屬性變更通知](how-to-implement-property-change-notification.md)如需範例的<xref:System.ComponentModel.INotifyPropertyChanged>實作。</span><span class="sxs-lookup"><span data-stu-id="43241-115">See [Implement Property Change Notification](how-to-implement-property-change-notification.md) for an example of an <xref:System.ComponentModel.INotifyPropertyChanged> implementation.</span></span>  
+ <span data-ttu-id="c84eb-114">若要偵測來源變更 (適用<xref:System.Windows.Data.BindingMode.OneWay>于<xref:System.Windows.Data.BindingMode.TwoWay>和系結), 來源必須執行適當的屬性<xref:System.ComponentModel.INotifyPropertyChanged>變更通知機制, 例如。</span><span class="sxs-lookup"><span data-stu-id="c84eb-114">To detect source changes (applicable to <xref:System.Windows.Data.BindingMode.OneWay> and <xref:System.Windows.Data.BindingMode.TwoWay> bindings), the source must implement a suitable property change notification mechanism such as <xref:System.ComponentModel.INotifyPropertyChanged>.</span></span> <span data-ttu-id="c84eb-115">如需<xref:System.ComponentModel.INotifyPropertyChanged>執行的範例, 請參閱[執行屬性變更通知](how-to-implement-property-change-notification.md)。</span><span class="sxs-lookup"><span data-stu-id="c84eb-115">See [Implement Property Change Notification](how-to-implement-property-change-notification.md) for an example of an <xref:System.ComponentModel.INotifyPropertyChanged> implementation.</span></span>  
   
- <span data-ttu-id="43241-116">針對<xref:System.Windows.Data.BindingMode.TwoWay>或是<xref:System.Windows.Data.BindingMode.OneWayToSource>繫結，您可以設定來控制來源更新的時機<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="43241-116">For <xref:System.Windows.Data.BindingMode.TwoWay> or <xref:System.Windows.Data.BindingMode.OneWayToSource> bindings, you can control the timing of the source updates by setting the <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> property.</span></span> <span data-ttu-id="43241-117">如需詳細資訊，請參閱 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。</span><span class="sxs-lookup"><span data-stu-id="43241-117">See <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> for more information.</span></span>  
+ <span data-ttu-id="c84eb-116">針對<xref:System.Windows.Data.BindingMode.TwoWay> <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>或<xref:System.Windows.Data.BindingMode.OneWayToSource>系結, 您可以藉由設定屬性來控制來源更新的時間。</span><span class="sxs-lookup"><span data-stu-id="c84eb-116">For <xref:System.Windows.Data.BindingMode.TwoWay> or <xref:System.Windows.Data.BindingMode.OneWayToSource> bindings, you can control the timing of the source updates by setting the <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> property.</span></span> <span data-ttu-id="c84eb-117">如需詳細資訊，請參閱 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。</span><span class="sxs-lookup"><span data-stu-id="c84eb-117">See <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> for more information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43241-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="43241-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c84eb-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c84eb-118">See also</span></span>
 
 - <xref:System.Windows.Data.Binding>
-- [<span data-ttu-id="43241-119">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="43241-119">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="43241-120">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="43241-120">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="c84eb-119">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="c84eb-119">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="c84eb-120">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="c84eb-120">How-to Topics</span></span>](data-binding-how-to-topics.md)
