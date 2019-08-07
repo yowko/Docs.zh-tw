@@ -22,7 +22,7 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 
 * [撰寫安全、有效率之程式碼的技巧](#safe-efficient-code-enhancements)
   - 這是語法改進功能組合，這些改進功能可讓您使用參考語意來處理實值型別。
-* [無後置具名引數](#non-trailing-named-arguments)
+* [非後置具名引數](#non-trailing-named-arguments)
   - 具名引數之後可以接著位置引數。
 * [數值常值中的前置底線](#leading-underscores-in-numeric-literals)
   - 數值常值的任何列印數字之前，現都可加上前置底線。
@@ -49,7 +49,7 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 
 您可以在[撰寫安全、有效率的程式碼](../write-safe-efficient-code.md)深入了解這些變更。
 
-## <a name="non-trailing-named-arguments"></a>無後置具名引數
+## <a name="non-trailing-named-arguments"></a>非後置具名引數
 
 當具名引數位於正確位置時，方法呼叫現在可以在位置引數前面使用具名引數。 如需詳細資訊，請參閱[具名和選擇性引數](../programming-guide/classes-and-structs/named-and-optional-arguments.md)。
 
