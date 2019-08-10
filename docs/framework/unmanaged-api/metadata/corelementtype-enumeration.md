@@ -1,5 +1,5 @@
 ---
-title: CorElementType 列舉 1
+title: CorElementType 列舉
 ms.date: 03/30/2017
 api_name:
 - CorElementType
@@ -16,16 +16,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d47e250a35640d15bd494d99442271a070a1dd0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6057bd48ff4fe3f852f82de2bab972d95fef138c
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781907"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868560"
 ---
-# <a name="corelementtype-enumeration1"></a>CorElementType 列舉 1
+# <a name="corelementtype-enumeration"></a>CorElementType 列舉
 
-指定 common language runtime <xref:System.Type>、 型別修飾詞或在 中繼資料型別簽章類型的相關資訊。
+指定通用語言運行<xref:System.Type>時間、類型修飾詞, 或元資料類型簽章中類型的相關資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -79,66 +79,66 @@ typedef enum CorElementType {
 
 ## <a name="members"></a>成員
 
-|成員|描述|
+|成員|說明|
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|在內部使用。|
-|`ELEMENT_TYPE_VOID`|無效的型別。|
-|`ELEMENT_TYPE_BOOLEAN`|布林型別|
+|`ELEMENT_TYPE_VOID`|Void 類型。|
+|`ELEMENT_TYPE_BOOLEAN`|布林值類型|
 |`ELEMENT_TYPE_CHAR`|字元類型。|
-|`ELEMENT_TYPE_I1`|帶正負號的 1 位元整數。|
+|`ELEMENT_TYPE_I1`|帶正負號的1位元組整數。|
 |`ELEMENT_TYPE_U1`|不帶正負號的 1 位元整數。|
-|`ELEMENT_TYPE_I2`|2 位元組帶正負號的整數。|
-|`ELEMENT_TYPE_U2`|2 位元組不帶正負號的整數。|
-|`ELEMENT_TYPE_I4`|4 位元組帶正負號的整數。|
-|`ELEMENT_TYPE_U4`|4 位元組不帶正負號的整數。|
-|`ELEMENT_TYPE_I8`|8 位元組帶正負號的整數。|
-|`ELEMENT_TYPE_U8`|8 位元組不帶正負號的整數。|
-|`ELEMENT_TYPE_R4`|4 位元組浮點數。|
-|`ELEMENT_TYPE_R8`|8 位元組浮點數。|
-|`ELEMENT_TYPE_STRING`|System.String 類型。|
-|`ELEMENT_TYPE_PTR`|指標型別修飾詞。|
+|`ELEMENT_TYPE_I2`|帶正負號的2位元組整數。|
+|`ELEMENT_TYPE_U2`|不帶正負號的2位元組整數。|
+|`ELEMENT_TYPE_I4`|帶正負號的4位元組整數。|
+|`ELEMENT_TYPE_U4`|不帶正負號的4位元組整數。|
+|`ELEMENT_TYPE_I8`|帶正負號的8位元組整數。|
+|`ELEMENT_TYPE_U8`|不帶正負號的8位元組整數。|
+|`ELEMENT_TYPE_R4`|4位元組浮點數。|
+|`ELEMENT_TYPE_R8`|8位元組浮點數。|
+|`ELEMENT_TYPE_STRING`|System.string 類型。|
+|`ELEMENT_TYPE_PTR`|指標類型修飾詞。|
 |`ELEMENT_TYPE_BYREF`|參考型別修飾詞。|
-|`ELEMENT_TYPE_VALUETYPE`|值型別修飾詞。|
-|`ELEMENT_TYPE_CLASS`|類別型別修飾詞。|
-|`ELEMENT_TYPE_VAR`|類別變數的類型修飾詞。|
+|`ELEMENT_TYPE_VALUETYPE`|實值型別修飾詞。|
+|`ELEMENT_TYPE_CLASS`|類別類型修飾詞。|
+|`ELEMENT_TYPE_VAR`|類別變數類型修飾詞。|
 |`ELEMENT_TYPE_ARRAY`|多維度陣列型別修飾詞。|
-|`ELEMENT_TYPE_GENERICINST`|泛型類型的類型修飾詞。|
+|`ELEMENT_TYPE_GENERICINST`|泛型型別的類型修飾詞。|
 |`ELEMENT_TYPE_TYPEDBYREF`|具型別參考。|
-|`ELEMENT_TYPE_I`|原生的整數的大小。|
-|`ELEMENT_TYPE_U`|帶正負號的原生整數的大小。|
+|`ELEMENT_TYPE_I`|原生整數的大小。|
+|`ELEMENT_TYPE_U`|不帶正負號的原生整數大小。|
 |`ELEMENT_TYPE_FNPTR`|函式的指標。|
-|`ELEMENT_TYPE_OBJECT`|System.Object 類型。|
-|`ELEMENT_TYPE_SZARRAY`|一維、 零下限陣列型別修飾詞。|
-|`ELEMENT_TYPE_MVAR`|方法的變數型別修飾詞。|
+|`ELEMENT_TYPE_OBJECT`|System.object 類型。|
+|`ELEMENT_TYPE_SZARRAY`|一維、零下限陣列類型修飾詞。|
+|`ELEMENT_TYPE_MVAR`|方法變數類型修飾詞。|
 |`ELEMENT_TYPE_CMOD_REQD`|C 語言所需的修飾詞。|
-|`ELEMENT_TYPE_CMOD_OPT`|C 語言選擇性修飾詞。|
+|`ELEMENT_TYPE_CMOD_OPT`|C 語言選用修飾詞。|
 |`ELEMENT_TYPE_INTERNAL`|在內部使用。|
 |`ELEMENT_TYPE_MAX`|類型無效。|
 |`ELEMENT_TYPE_MODIFIER`|在內部使用。|
-|`ELEMENT_TYPE_SENTINEL`|是一份參數數目可變的 sentinel 為類型修飾詞。|
+|`ELEMENT_TYPE_SENTINEL`|類型修飾詞, 這是可變數數目之參數清單的 sentinel。|
 |`ELEMENT_TYPE_PINNED`|在內部使用。|
 
 ## <a name="remarks"></a>備註
 
-類型修飾詞會促使表示更複雜的類型。 A`CorElementType`類型修飾詞值套用至緊接在型別簽章中的值。 值，會遵循`CorElementType`型別修飾詞值可以是`CorElementType`簡單型別值、 中繼資料語彙基元或其他值，指定下表中。
+類型修飾詞會形成代表更複雜類型的基礎。 `CorElementType`型別修飾詞值會套用至緊接在型別簽章中的值後面。 在`CorElementType`類型修飾詞值之後的值可以`CorElementType`是簡單類型值、元資料標記或其他值, 如下表中所指定。
 
 > [!NOTE]
-> 所有數字 (*數字*，*引數計數*，*中繼資料語彙基元*，*陣序規範*，*計數*，與*繫結*) 會儲存為壓縮的整數。 請參閱[標準 ECMA-335-通用語言基礎結構 (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487)上 ECMA 造訪網站以取得詳細資料。
+> 所有數位 (*數位*、*引數計數*、*元資料標記*、順*位*、*計數*和系結) 都會儲存為壓縮整數。 如需詳細資訊, 請參閱 ECMA 網站上的[標準 ECMA-335-通用語言基礎結構 (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) 。
 
 |類型修飾詞|格式|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<`CorElementType`值 >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<`CorElementType`值 >|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<`mdTypeDef`中繼資料語彙基元 >|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<`mdTypeDef`中繼資料語彙基元 >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR\<數字 >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<`mdTypeDef`中繼資料語彙基元 >\<引數計數 > \<arg1 >...\<argN >|
-|`ELEMENT_TYPE_FNPTR`|Typ ELEMENT_TYPE_FNPTR\<函式，包括呼叫慣例的完整簽章 >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<`CorElementType`值 >|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR\<數字 >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<`mdTypeRef`或`mdTypeDef`中繼資料語彙基元 >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<`mdTypeRef`或`mdTypeDef`中繼資料語彙基元 >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<值> `CorElementType`|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<值> `CorElementType`|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<元資料標記 `mdTypeDef` >|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<元資料標記 `mdTypeDef` >|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<號碼 >|
+|`ELEMENT_TYPE_ARRAY`|\<ELEMENT_TYPE_ARRAY 值>\<次序>\<count1 >\<bound1>... `CorElementType`\<countN >\<boundN >|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<元資料標記 > \<引數計數\<> arg1 > ... `mdTypeDef`\<...argn >|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<函式的完整簽章, 包括呼叫慣例 >|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<值> `CorElementType`|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<號碼 >|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<或元`mdTypeDef`資料標記`mdTypeRef` >|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<或元`mdTypeDef`資料標記`mdTypeRef` >|
 
 ## <a name="requirements"></a>需求
 

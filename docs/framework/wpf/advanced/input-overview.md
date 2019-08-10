@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 5eaf83f259abe4ee574dfd4d2269dfa1e9373c94
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818034"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869066"
 ---
 # <a name="input-overview"></a>輸入概觀
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系統提供強大的 API, 可讓您從各種裝置 (包括滑鼠、鍵盤、觸控和手寫筆) 取得輸入。 本主題描述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的服務，以及說明輸入系統的架構。
@@ -115,7 +115,7 @@ ms.locfileid: "68818034"
 
  針對鍵盤輸入, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會先傳送適當<xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp>的事件。 如果未處理這些事件, 而且索引鍵是文字 (而不是方向箭號或功能鍵之類的控制鍵), <xref:System.Windows.ContentElement.TextInput>則會引發事件。  <xref:System.Windows.ContentElement.KeyDown> /和事件之間<xref:System.Windows.ContentElement.KeyUp>不一定有簡單的一對一對應, 因為多個擊鍵可以產生單一字元的文字輸入, 而單鍵按鍵可以產生多個字元<xref:System.Windows.ContentElement.TextInput>strings.  這特別適用于中文、日文和韓文等語言, 其使用輸入法 (Ime) 在其對應的字母中產生數以千計的可能字元。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ContentElement.TextInput> <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> <xref:System.Windows.Input.KeyEventArgs.Key%2A>當傳送事件時,如果按鍵可能成為事件的一部分(例如,按下ALT+S),會設定為。<xref:System.Windows.ContentElement.KeyDown> <xref:System.Windows.ContentElement.KeyUp> / 這可讓<xref:System.Windows.ContentElement.KeyDown>事件處理常式中的程式碼<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>檢查和 (如果找到的話), 為後續引發<xref:System.Windows.ContentElement.TextInput>事件的處理常式保留處理。 在這些情況下, 可以使用<xref:System.Windows.Input.TextCompositionEventArgs>引數的各種屬性來判斷原始按鍵。 同樣地, 如果[!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)]為使用中<xref:System.Windows.Input.Key> , 則具有的<xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>值, <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A>並提供原始按鍵或按鍵。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ContentElement.TextInput> <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> <xref:System.Windows.Input.KeyEventArgs.Key%2A>當傳送事件時,如果按鍵可能成為事件的一部分(例如,按下ALT+S),會設定為。<xref:System.Windows.ContentElement.KeyDown> <xref:System.Windows.ContentElement.KeyUp> / 這可讓<xref:System.Windows.ContentElement.KeyDown>事件處理常式中的程式碼<xref:System.Windows.Input.Key.System?displayProperty=nameWithType>檢查和 (如果找到的話), 為後續引發<xref:System.Windows.ContentElement.TextInput>事件的處理常式保留處理。 在這些情況下, 可以使用<xref:System.Windows.Input.TextCompositionEventArgs>引數的各種屬性來判斷原始按鍵。 同樣地, 如果輸入法為使用<xref:System.Windows.Input.Key>中, 則具有<xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>的值<xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> , 並提供原始按鍵或按鍵。
 
  下列範例會定義<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件的處理常式和<xref:System.Windows.UIElement.KeyDown>事件的處理常式。
 

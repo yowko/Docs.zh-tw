@@ -1,13 +1,13 @@
 ---
-title: Contract1
+title: 合約
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 10789f9a2940c239ae20c8fd1e9d48bca0e820ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a21e95a6f1f1860ed36c968d17bb8ac8465dce
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963692"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868437"
 ---
 # <a name="contract"></a>合約
 合約  
@@ -38,63 +38,63 @@ class Contract
 ### <a name="appdomainid"></a>AppDomainId  
  資料型別：sint32  
   
- 存取類型：唯讀  
+ 存取類型:唯讀  
   
  裝載合約之的 appdomain 的識別碼。  
   
 ### <a name="behaviors"></a>「行為」  
- 資料類型：行為陣列  
+ 資料類型:行為陣列  
   
- 存取類型：唯讀  
+ 存取類型:唯讀  
   
  與此合約有關聯的行為。  
   
 ### <a name="name"></a>名稱  
  資料型別：字串  
   
- 存取類型：唯讀  
+ 存取類型:唯讀  
   
  WSDL 中合約的名稱。  
   
 ### <a name="namespace"></a>命名空間  
  資料型別：字串  
   
- 存取類型：唯讀  
+ 存取類型:唯讀  
   
  WSDL 中 `portType` 項目的命名空間。  
   
 ### <a name="operations"></a>作業  
- 資料類型：作業陣列  
+ 資料類型:Operation 陣列  
   
- 存取類型：唯讀  
+ 存取類型:唯讀  
   
  此合約的作業。  
   
 ### <a name="processid"></a>ProcessId  
  資料型別：sint32  
   
- 存取類型：唯讀  
+ 存取類型:唯讀  
   
  裝載合約之處理序的處理序識別碼。  
   
 ### <a name="ref"></a>ref  
- 資料類型：合約  
+ 資料類型:合約  
   
- 存取類型：唯讀  
+ 存取類型:唯讀  
   
  當合約是雙工合約時的回呼類型。  
   
 ### <a name="sessionmode"></a>SessionMode  
  資料型別：字串  
   
- 存取類型：唯讀  
+ 存取類型:唯讀  
   
  代表合約是否需要與此合約關聯的繫結才能使用通道工作階段。  
   
 ### <a name="type"></a>類型  
  資料型別：字串  
   
- 存取類型：唯讀  
+ 存取類型:唯讀  
   
  合約的類型。  
   
