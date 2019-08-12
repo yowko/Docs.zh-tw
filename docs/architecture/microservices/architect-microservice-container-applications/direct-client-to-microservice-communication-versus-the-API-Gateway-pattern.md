@@ -2,12 +2,12 @@
 title: API 閘道模式與直接用戶端對微服務通訊
 description: 了解 API 閘道模式和直接用戶端對微服務通訊的差異與使用方式。
 ms.date: 01/07/2019
-ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673165"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892244"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -128,7 +128,7 @@ API 閘道可以提供多個功能。 視產品而定，它可以提供更豐富
 
 [Azure API 管理](https://azure.microsoft.com/services/api-management/) (如圖 4-14 所示) 不但可以解決您的 API 閘道需求，還能提供如從 API 收集見解等功能。 如果您使用 API 管理解決方案，則 API 閘道只是該完整 API 管理解決方案內的元件。
 
-![Azure API 管理能夠解決您的 API 閘道和管理需求，例如記錄、安全性和計量等。](./media/image14.png)
+![Azure API 管理能夠解決您的 API 閘道和管理需求，例如記錄、安全性和計量等。](./media/api-gateway-azure-api-management.png)
 
 **圖 4-14**. 將 Azure API 管理用於 API 閘道
 

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9f911f3a2783ec538ef628e10d5c1a4f9b06d0f
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 4c0dea7950f86da3d812783abd00d69e5bc38198
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469473"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796876"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>作法：使用事件屬性處理多個事件
 為了要使用事件屬性，您會在引發事件的類別中定義事件屬性，然後在處理事件的類別中設定事件屬性的委派。 若要在類別中實作多個事件屬性，該類別內部必須儲存及維護為每個事件所定義的委派。 型的方法是實作以事件索引鍵編製索引的委派集合。  
   
  若要儲存每個事件的委派，您可以使用 <xref:System.ComponentModel.EventHandlerList> 類別，或實作您自己的集合。 集合類別必須提供方法，根據事件索引鍵來設定、存取和擷取事件處理常式委派。 例如，您可以使用 <xref:System.Collections.Hashtable> 類別，或是從 <xref:System.Collections.DictionaryBase> 類別衍生自訂類別。 委派集合的實作詳細資料不需要公開至類別之外。  
   
- 類別內的每個事件屬性，都會定義一個 add 存取子方法和一個 remove 存取子方法。 事件屬性的 add 存取子會在委派集合中加入輸入委派執行個體。 事件屬性的 remove 存取子會從委派集合中移除輸入委派執行個體。  事件屬性存取子會使用事件屬性的預先定義索引鍵，從委派集合新增和移除執行個體。  
+ 類別內的每個事件屬性，都會定義一個 add 存取子方法和一個 remove 存取子方法。 事件屬性的 add 存取子會在委派集合中加入輸入委派執行個體。 事件屬性的 remove 存取子會從委派集合中移除輸入委派執行個體。 事件屬性存取子會使用事件屬性的預先定義索引鍵，從委派集合新增和移除執行個體。  
   
 ### <a name="to-handle-multiple-events-using-event-properties"></a>使用事件屬性處理多個事件  
   
@@ -43,9 +43,6 @@ ms.locfileid: "65469473"
 ## <a name="example"></a>範例  
  下列 C# 範例會使用 <xref:System.ComponentModel.EventHandlerList> 實作事件屬性 `MouseDown` 及 `MouseUp`，以儲存每個事件的委派。 事件屬性建構的關鍵字會以粗體顯示。  
   
-> [!NOTE]
->  Visual Basic 不支援事件屬性。  
-  
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
@@ -54,5 +51,5 @@ ms.locfileid: "65469473"
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [事件](../../../docs/standard/events/index.md)
-- <xref:System.Web.UI.Control.Events%2A>
+- <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
 - [如何：宣告自訂事件以節省記憶體](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

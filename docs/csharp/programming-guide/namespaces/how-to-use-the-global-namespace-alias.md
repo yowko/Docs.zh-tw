@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: f44bb1f010f154973fc6982882c9b5a09528da76
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b163981d3cf6d56ab953757931b0b386a47263ff
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629440"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796286"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>作法：使用全域命名空間別名 (C# 程式設計指南)
 成員可能會被具有相同名稱的另一個實體隱藏時，能夠存取全域[命名空間](../../../csharp/language-reference/keywords/namespace.md)中的成員就很有用。  
@@ -37,15 +37,6 @@ ms.locfileid: "68629440"
   
  很明顯地，不建議您建立自己的命名空間 `System`，而您也不太可能會遇到任何發生這種狀況的程式碼。 不過，在較大型專案中，命名空間重複項很可能會以某種形式或其他形式出現。 在這些情況下，全域命名空間限定詞可確保您能夠指定根命名空間。  
   
-## <a name="example"></a>範例  
- 在此範例中，`System` 命名空間用來包含 `TestClass` 類別；因此，`global::System.Console` 必須用來參考 `System` 命名空間所隱藏的 `System.Console` 類別。 此外，`colAlias` 別名用來參考 `System.Collections` 命名空間；因此，<xref:System.Collections.Hashtable?displayProperty=nameWithType> 的執行個體會使用此別名而不是命名空間來建立。  
-  
- [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]  
-  
-**A 1**
-**B 2**
-**C 3**
-
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)

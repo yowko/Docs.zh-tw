@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dc7653b1d792c66b40c0ab1d55a1614c7a69b7d1
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052791"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869054"
 ---
 # <a name="additional-resources"></a>其他資源
 
@@ -23,40 +23,39 @@ ms.locfileid: "66052791"
 
 ### <a name="on-the-web"></a>網路上
 
-|詞彙|定義|
+|URL|說明|
 |----------|----------------|
 |[Visual Basic .NET 語言設計](https://github.com/dotnet/vblang)|適用於 Visual Basic .NET 語言設計的官方 GitHub 存放庫。|
 |[Microsoft Visual Basic Team Blog](https://devblogs.microsoft.com/vbteam/) (Microsoft Visual Basic 小組部落格)|提供存取 Visual Basic 小組部落格的存取。|
 
 ### <a name="code-samples"></a>程式碼範例
 
-|詞彙|定義|
+|URL|說明|
 |----------|----------------|
-|[Code Gallery](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET) (程式碼庫)|下載及與開發人員社群分享範例應用程式和其他資源。|
 |[Visual Basic 文件範例](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|包含 Visual Basic 和 .NET 文件的所有使用範例。|
 
 ### <a name="forums"></a>論壇
 
-|詞彙|定義|
+|URL|說明|
 |----------|----------------|
 |[Visual Basic 論壇](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|討論一般 Visual Basic 問題。|
 
 ### <a name="videos-and-webcasts"></a>影片及網路廣播
 
-|詞彙|定義|
+|URL|說明|
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|透過視訊、Wiki 和論壇，提供連續的社群。|
 
 ### <a name="support"></a>支援
 
-|詞彙|定義|
+|URL|說明|
 |----------|----------------|
 |[Microsoft 支援服務](https://support.microsoft.com)|提供知識庫文件、資源下載和更新、支援網路廣播及其他服務的存取。|
-|[Visual Studio 問題](https://developercommunity.visualstudio.com)|可讓您提報 .NET 和 Visual Studio 相關的錯誤給 Microsoft，或提供建議。 您也可以在 Visual Studio 中選取 [說明] > [傳送意見] > [回報問題]，來回報錯誤。|
+|[Visual Studio 問題](https://developercommunity.visualstudio.com)|可讓您提報 .NET 和 Visual Studio 相關的錯誤給 Microsoft，或提供建議。 您也可以在 Visual Studio 中選取 [說明]   > [傳送意見]   > [回報問題]  ，來回報錯誤。|
 
 ## <a name="third-party-resources"></a>協力廠商資源
 
-|詞彙|定義|
+|URL|說明|
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|提供可討論 Visual Basic、.NET 等的論壇。|
 |[vbCity](http://vbcity.com/)|可讓使用者了解 Visual Basic 和 .NET 及詢問 相關問題的社群網站。|

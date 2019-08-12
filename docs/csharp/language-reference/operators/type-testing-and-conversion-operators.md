@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: a9e5139e6d650aa6935bff934ca25502fdc14775
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 81e7678bc21529c159b8137b06b93774af0ff434
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744080"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796492"
 ---
 # <a name="type-testing-and-conversion-operators-c-reference"></a>型別測試和轉換運算子 (C# 參考)
 
