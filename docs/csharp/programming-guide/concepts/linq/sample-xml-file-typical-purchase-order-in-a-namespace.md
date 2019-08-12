@@ -1,18 +1,18 @@
 ---
-title: 範例 XML 檔：命名空間 1 中的典型訂購單
+title: 範例 XML 檔：命名空間中的典型採購訂單
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: f47761409a0a174317259eea9b2d3a16c9fb2396
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 59ef22c73345fa13278795a6363871b3657e5b8f
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487192"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868680"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="898a8-102">範例 XML 檔：命名空間中的典型採購訂單</span><span class="sxs-lookup"><span data-stu-id="898a8-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
-<span data-ttu-id="898a8-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="898a8-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="898a8-104">這個檔案是典型的採購訂單。</span><span class="sxs-lookup"><span data-stu-id="898a8-104">This file is a typical purchase order.</span></span> <span data-ttu-id="898a8-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="898a8-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="2a7ff-102">範例 XML 檔：命名空間中的典型採購訂單</span><span class="sxs-lookup"><span data-stu-id="2a7ff-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="2a7ff-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="2a7ff-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2a7ff-104">這個檔案是典型的採購訂單。</span><span class="sxs-lookup"><span data-stu-id="2a7ff-104">This file is a typical purchase order.</span></span> <span data-ttu-id="2a7ff-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="2a7ff-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="898a8-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="898a8-106">PurchaseOrderInNamespace.xml</span></span>  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="2a7ff-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="2a7ff-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
