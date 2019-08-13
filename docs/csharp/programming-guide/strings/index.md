@@ -7,10 +7,10 @@ helpviewer_keywords:
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "67802308"
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
@@ -131,12 +131,12 @@ string s = String.Empty;
   
 |主題|說明|  
 |-----------|-----------------|  
-|[如何：修改字串內容](../../how-to/modify-string-contents.md)|說明轉換字串及修改字串內容的技術。|  
-|[如何：比較字串](../../how-to/compare-strings.md)|示範如何執行字串的序數與文化特定比較。|  
-|[如何：串連多個字串](../../how-to/concatenate-multiple-strings.md)|示範如何將多個字串聯結成一個的各種方式。|
-|[如何：使用 String.Split 剖析字串](../../how-to/parse-strings-using-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
-|[如何：搜尋字串](../../how-to/search-strings.md)|說明如何對字串中的特定文字或模式使用搜尋。|  
-|[如何：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
+|[操作說明：修改字串內容](../../how-to/modify-string-contents.md)|說明轉換字串及修改字串內容的技術。|  
+|[操作說明：比較字串](../../how-to/compare-strings.md)|示範如何執行字串的序數與文化特定比較。|  
+|[操作說明：串連多個字串](../../how-to/concatenate-multiple-strings.md)|示範如何將多個字串聯結成一個的各種方式。|
+|[操作說明：使用 String.Split 剖析字串](../../how-to/parse-strings-using-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
+|[操作說明：搜尋字串](../../how-to/search-strings.md)|說明如何對字串中的特定文字或模式使用搜尋。|  
+|[操作說明：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
 |[字串內插補點](../../language-reference/tokens/interpolated.md)|描述可提供方便語法以設定格式字串的字串內插補點功能。|
 |[基本字串作業](../../../../docs/standard/base-types/basic-string-operations.md)|提供使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法執行基本字串作業之主題的連結。|  
 |[剖析字串](../../../standard/base-types/parsing-strings.md)|描述如何將.NET 基底類型的字串表示轉換成對應類型的執行個體。|  
