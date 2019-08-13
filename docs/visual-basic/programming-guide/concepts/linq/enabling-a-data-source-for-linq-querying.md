@@ -1,13 +1,13 @@
 ---
-title: 啟用資料來源以進行 LINQ Querying2
+title: 啟用 LINQ Querying2 的資料來源
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: bfb7aca68aefd7f4c41469e4c8efe3bce7c696ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 312a880158e4d9254d6ead81538dc9a17e5c31b0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626464"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "68959777"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>啟用資料來源以進行 LINQ 查詢
 
