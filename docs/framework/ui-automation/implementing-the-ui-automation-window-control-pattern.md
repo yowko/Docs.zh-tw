@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 9cab4dbbcd3302a6e74783eaefdbbd8463332224
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1d40b133beb68c14e7392139bf0753cedb67a4ef
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710247"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971826"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>實作 UI 自動化 Window 控制項模式
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "68710247"
   
  本主題簡介實作 <xref:System.Windows.Automation.Provider.IWindowProvider>的方針和慣例，包括 <xref:System.Windows.Automation.WindowPattern> 屬性、方法和事件的相關資訊。 其他參考的連結列於主題的結尾。  
   
- <xref:System.Windows.Automation.WindowPattern>控制項模式是用來支援在傳統圖形化使用者介面 (GUI) 內提供基本以視窗為基礎之功能的控制項。 必須實作此控制項模式的控制項範例包括最上層應用程式視窗、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子視窗、可調整大小的分割窗格控制項、強制回應對話方塊和氣球說明視窗。  
+ <xref:System.Windows.Automation.WindowPattern>控制項模式是用來支援在傳統圖形化使用者介面 (GUI) 內提供基本以視窗為基礎之功能的控制項。 必須實作為此控制項模式的控制項範例包括最上層應用程式視窗、多重文件介面 (MDI) 子視窗、可調整大小的分割窗格控制項、強制回應對話方塊和氣球說明視窗。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
@@ -44,9 +44,9 @@ ms.locfileid: "68710247"
 |<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|屬性|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|無|  

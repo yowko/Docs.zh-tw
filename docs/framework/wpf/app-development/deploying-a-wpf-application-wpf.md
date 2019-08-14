@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818022"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972262"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 應用程式 (WPF)
 建立 Windows Presentation Foundation (WPF) 應用程式之後, 就必須部署它們。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]而 .NET Framework 則包括數種部署技術。 用來部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的部署技術會視應用程式類型而定。 本主題提供每項部署技術的簡短概觀，並說明這些技術如何配合每種 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式類型的部署需求來使用。  
@@ -114,7 +114,7 @@ ms.locfileid: "68818022"
 ## <a name="installing-the-net-framework"></a>安裝.NET Framework  
  若要執行[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式, 必須在用戶端上安裝 Microsoft .NET Framework。 當瀏覽器裝載的應用程式被查看時[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , Internet Explorer 會自動偵測用戶端是否以 .NET Framework 安裝。 如果未安裝 .NET Framework, Internet Explorer 會提示使用者安裝它。  
   
- 為了偵測是否已安裝 .NET Framework, Internet Explorer 包含一個啟動載入器應用程式, 它會註冊[!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]為具有下列副檔名之內容檔案的回溯處理常式: .xaml、.xps、xbap 和應用程式。 如果您流覽至這些檔案類型, 而且用戶端上未安裝 .NET Framework, 啟動載入器應用程式會要求安裝它的許可權。 如果未提供許可權, 就不會安裝 .NET Framework 或應用程式。  
+ 為了偵測是否已安裝 .NET Framework, Internet Explorer 包含一個啟動載入器應用程式, 它會註冊為具有下列副檔名之內容檔案的回溯多用途網際網路郵件延伸 (MIME) 處理常式: .xaml、.xps、xbap、和. 應用程式。 如果您流覽至這些檔案類型, 而且用戶端上未安裝 .NET Framework, 啟動載入器應用程式會要求安裝它的許可權。 如果未提供許可權, 就不會安裝 .NET Framework 或應用程式。  
   
  如果授與許可權, Internet Explorer 會使用 Microsoft 背景智慧型傳送服務 (BITS) 下載並安裝 .NET Framework。 成功安裝 .NET Framework 之後, 原先要求的檔案會在新的瀏覽器視窗中開啟。  
   

@@ -3,12 +3,12 @@ title: 如何：使用表單型驗證建置宣告感知 ASP.NET 應用程式
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75db96a621d7863ef445efb24814111b34da6960
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792740"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971840"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>如何：使用表單型驗證建置宣告感知 ASP.NET 應用程式
 
@@ -60,7 +60,7 @@ ms.locfileid: "61792740"
 
 在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式。
 
-#### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式
+### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式
 
 1. 啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。
 
@@ -72,7 +72,7 @@ ms.locfileid: "61792740"
 
 在此步驟中，您將組態項目新增至 *Web.config* 組態檔，並編輯 *Default.aspx* 檔案來顯示帳戶的宣告資訊。
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>設定使用表單驗證之宣告的 ASP.NET 應用程式
+### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>設定使用表單驗證之宣告的 ASP.NET 應用程式
 
 1. 在 *Default.aspx* 檔案中，將現有標記取代為下列標記：
 
@@ -126,7 +126,7 @@ ms.locfileid: "61792740"
 
 在此步驟中，您將測試 ASP.NET Web Forms 應用程式，並確認使用者使用表單驗證登入時呈現宣告。
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>測試使用表單驗證之宣告的 ASP.NET Web Forms 應用程式
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>測試使用表單驗證之宣告的 ASP.NET Web Forms 應用程式
 
 1. 按 **F5** 鍵建置並執行應用程式。 應該會向您呈現 *Default.aspx*，而頁面右上方會有 [註冊] 和 [登入] 連結。 按一下 [註冊]。
 
