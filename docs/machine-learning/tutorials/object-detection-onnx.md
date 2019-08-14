@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/01/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3e5b6b482dfbd1ff06347883a93a561944200a9f
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733404"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868718"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教學課程：使用 ML.NET 中的 ONNX 來偵測物件
 
@@ -344,7 +344,6 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
     - `CELL_HEIGHT` 是影像格線中單一儲存格的高度。
     - `channelStride` 是格線中目前儲存格的開始位置。
 
-
     當模型對影像進行評分時，它會將 `416px x 416px` 輸入分成大小為 `13 x 13` 的儲存格格線。 每個儲存格都包含 `32px x 32px`。 在每個儲存格中都有 5 個週框方塊，每個週框方塊都包含了 5 個特徵 (X、Y、高度、寬度、信賴度)。 此外，每個週框方塊都包含每個類別的機率 (在此案例中為 20)。 因此，每個儲存格都包含 125 個資訊 (5 個特徵 + 20 個類別機率)。 
 
 在 `channelStride` 的下方為 5 個週框方塊建立錨點清單：
@@ -654,7 +653,6 @@ for (var i = 0; i < images.Count(); i++)
 最後，使用 `LogDetectedObjects` 方法來新增一些記錄邏輯。
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
-
 
 在 try-catch 陳述式後，新增其他邏輯來指出程序已執行完成。
 
