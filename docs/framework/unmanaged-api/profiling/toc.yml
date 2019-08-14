@@ -1,4 +1,4 @@
-- name: 程式碼剖析
+- name: 分析
   href: index.md
   items:
     - name: 分析概觀
@@ -444,6 +444,37 @@
               href: icorprofilerinfo7-getinmemorysymbolslength-method.md
             - name: ReadInMemorySymbols
               href: icorprofilerinfo7-readinmemorysymbols.md
+        - name: ICorProfilerInfo8 介面
+          href: icorprofilerinfo8-interface.md
+          items:
+            - name: GetDynamicFunctionInfo 方法
+              href: icorprofilerinfo8-getdynamicfunctioninfo-method.md
+            - name: GetFunctionFromIP3 方法
+              href: icorprofilerinfo8-getfunctionfromip3-method.md
+            - name: IsFunctionDynamic 方法
+              href: icorprofilerinfo8-isfunctiondynamic-method.md
+        - name: ICorProfilerInfo9 介面
+          href: icorprofilerinfo9-interface.md
+          items:
+            - name: GetCodeInfo4 方法
+              href: icorprofilerinfo9-getcodeinfo4-method.md
+            - name: GetILToNativeMapping3 方法
+              href: icorprofilerinfo9-getiltonativemapping3-method.md
+            - name: GetNativeCodeStartAddresses 方法
+              href: icorprofilerinfo9-getnativecodestartaddresses-method.md
+        - name: ICorProfilerInfo10 介面
+          href: icorprofilerinfo10-interface.md
+          items:
+            - name: EnumerateObjectReferences 方法
+              href: icorprofilerinfo10-enumerateobjectreferences-method.md
+            - name: IsFrozenObject 方法
+            - name: GetLOHObjectSizeThreshold 方法
+              href: icorprofilerinfo10-isfrozenobject-method.md
+            - name: RequestReJITWithInliners 方法
+              href: icorprofilerinfo10-suspendruntime-method.md
+            - name: ResumeRuntime 方法
+            - name: SuspendRuntime 方法
+              href: icorprofilerinfo10-resumeruntime-method.md
         - name: ICorProfilerModuleEnum 介面
           href: icorprofilermoduleenum-interface.md
           items:
@@ -548,6 +579,8 @@
           href: cor-prf-module-flags-enumeration.md
         - name: COR_PRF_MONITOR 列舉
           href: cor-prf-monitor-enumeration.md
+        - name: COR_PRF_REJIT_FLAGS 列舉
+          href: cor-prf-rejit-flags-enumeration.md
         - name: COR_PRF_RUNTIME_TYPE 列舉
           href: cor-prf-runtime-type-enumeration.md
         - name: COR_PRF_SNAPSHOT_INFO 列舉

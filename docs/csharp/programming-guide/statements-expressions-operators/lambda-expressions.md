@@ -1,7 +1,7 @@
 ---
 title: Lambda 運算式 - C# 程式設計指南
 ms.custom: seodec18
-ms.date: 03/14/2019
+ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,38 +9,44 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 36dab520d67d08d1b3304f1453bfb2c07a2f1c32
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363906"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671699"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計指南)
 
-「Lambda 運算式」  是當做物件處理的程式碼區塊 (運算式或陳述式區塊)。 它可當做方法的引數傳遞，也可由方法呼叫傳回。 Lambda 運算式可大量用於：
+「Lambda 運算式」  是下列兩種形式之一的運算式：
 
-- 將要執行的程式碼傳遞至非同步方法，例如 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>。
+- 以運算式作為主體的[運算式 Lambda](#expression-lambdas)：
 
-- 撰寫 [LINQ 查詢運算式](../../linq/index.md)。
+  ```csharp
+  (input-parameters) => expression
+  ```
 
-- 建立[運算式樹狀架構](../concepts/expression-trees/index.md)。
+- 以陳述式區塊作為主體的[陳述式 Lambda](#statement-lambdas)：
 
-Lambda 運算式是可表示為委派或編譯成委派之運算式樹狀架構的程式碼。 Lambda 運算式的特定委派類型取決於其參數和傳回值。 未傳回值的 Lambda 運算式會根據其參數數目對應至特定 `Action` 委派。 傳回值的 Lambda 運算式會根據其參數數目對應至特定 `Func` 委派。 例如，具有兩個參數但未傳回值的 Lambda 運算式，會對應至 <xref:System.Action%602> 委派。 具有一個參數且傳回值的 Lambda 運算式，會對應至 <xref:System.Func%602> 委派。
+  ```csharp  
+  (input-parameters) => { <sequence-of-statements> }
+  ```
 
-Lambda 運算式使用 [Lambda 宣告運算子](../../language-reference/operators/lambda-operator.md) `=>`，來分隔 Lambda 的參數清單及其可執行程式碼。 若要建立 Lambda 運算式，請在 Lambda 運算子的左邊指定輸入參數 (如果有的話)，並將運算式或陳述式區塊放在另一邊。 例如，單行 Lambda 運算式 `x => x * x` 會指定名為 `x` 的參數，並傳回 `x` 的平方值。 您可以將這個運算式指派給委派類型，如下列範例所示：
+請使用 [Lambda 宣告運算子 `=>` ](../../language-reference/operators/lambda-operator.md) 來分隔 Lambda 的參數清單及其主體。 若要建立 Lambda 運算式，請在 Lambda 運算子 的左邊指定輸入參數 (如果有的話)，並在另一邊指定運算式或陳述式區塊。
+
+任何 Lambda 運算式可轉換成[委派](../../language-reference/builtin-types/reference-types.md#the-delegate-type)型別。 Lambda 運算式可以轉換成的委派型別，是由其參數和傳回值的型別所定義。 如果 Lambda 運算式不會傳回值，則其可轉換成其中一個 `Action` 委派型別；否則可轉換成其中一個 `Func` 委派型別。 例如，具有兩個參數且不會傳回值的 Lambda 運算式，可以轉換成 <xref:System.Action%602> 委派。 具有一個參數且會傳回值的 Lambda 運算式，可以轉換成 <xref:System.Func%602> 委派。 在下列範例中，Lambda 運算式 `x => x * x` 會指定名為 `x` 的參數，並傳回 `x` 平方的值，此運算式已指派給委派型別的變數：
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-您還可以將 Lambda 運算式指派給運算式樹狀架構型別：
+Lambda 運算式也可以轉換成[運算式樹狀架構](../concepts/expression-trees/index.md)型別，如下列範例所示：
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-您也可以將它當做方法引數直接傳遞：
+您可以在任何需要委派型別或運算式樹狀架構執行個體的程式碼中使用 Lambda 運算式，例如作為 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 方法的引數，以傳遞應該在背景中執行的程式碼。 當您撰寫 [LINQ 查詢運算式](../../linq/index.md)時，也可以使用 Lambda 運算式，如下列範例所示：
 
-[!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
+[!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 類別中的 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 方法時 (就像是在 LINQ to Objects 和 LINQ to XML中所執行)，此參數會是委派型別 <xref:System.Func%602?displayProperty=nameWithType>。 Lambda 運算式是建立委派最方便的方式。 當您在 <xref:System.Linq.Queryable?displayProperty=nameWithType> 類別中呼叫 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 方法時 (就像是在 LINQ to SQL 中所執行)，參數型別是運算式樹狀架構型別 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)。 再次強調，Lambda 運算式就是建構該運算式樹狀架構非常簡潔的方式。 Lambda 會讓 `Select` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件類型並不相同。
+當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 類別中的 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 方法時 (例如在 LINQ to Objects 和 LINQ to XML中所執行)，此參數會是委派型別 <xref:System.Func%602?displayProperty=nameWithType>。 當您在 <xref:System.Linq.Queryable?displayProperty=nameWithType> 類別中呼叫 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 方法時 (例如在 LINQ to SQL 中所執行)，參數型別是運算式樹狀架構型別 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)。 在這兩種情況下，您都可以使用相同的 Lambda 運算式來指定參數值。 那會讓兩個 `Select` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件型別並不相同。
   
 ## <a name="expression-lambdas"></a>運算式 Lambda
 
@@ -73,7 +79,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](../../language-reference/operato
 陳述式 Lambda 看起來就像是運算式 Lambda，不同之處在於，陳述式會包含於大括號內：
 
 ```csharp  
-(input-parameters) => { statement; }
+(input-parameters) => { <sequence-of-statements> }
 ```
 
 陳述式 Lambda 的主體可以包含任意數目的陳述式，但是實際上通常不會超過兩個或三個陳述式。

@@ -6,30 +6,35 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 06/14/2019
-ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.date: 07/25/2019
+ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484664"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733357"
 ---
-# <a name="whats-new-in-net-core-30-preview-6"></a>.NET Core 3.0 (Preview 6) 的新功能
+# <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3.0 (Preview 7) 的新功能
 
-本文描述 .NET Core 3.0 (到 Preview 6) 的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
+本文描述 .NET Core 3.0 (到 Preview 7) 的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
 
 .NET Core 3.0 新增 C# 8.0 支援。 強烈建議您搭配 OmniSharp 延伸模組使用[最新版的 Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) 或 Visual Studio Code。
 
-立即在 Windows、Mac 及 Linux 上[下載並開始使用 .NET Core 3.0 Preview 6](https://aka.ms/netcore3download) \(英文\)。
+立即在 Windows、Mac 及 Linux 上[下載並開始使用 .NET Core 3.0 Preview 7](https://aka.ms/netcore3download)。
 
 如需每個預覽版的詳細資訊，請參閱下列公告：
 
+- [.NET Core 3.0 Preview 7 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3.0 Preview 6 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/) \(英文\)
 - [.NET Core 3.0 Preview 5 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [.NET Core 3.0 Preview 4 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [.NET Core 3.0 Preview 3 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
 - [.NET Core 3.0 Preview 2 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 - [.NET Core 3.0 Preview 1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+
+## <a name="production-supported-preview"></a>支援生產環境的預覽
+
+Microsoft 已將 .NET Core Preview 7 視為生產環境就緒，且已提供完整支援。 從 Preview 7 開始，版本會著重於改善 .NET Core 3.0，而非新增新功能。 如需 Preview 7 中變更項目的詳細資訊，請參閱 [Preview 7 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)。
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -174,23 +179,23 @@ TC 的主要優點是能夠啟用較慢速但較快產生程式碼，或品質�
 
 您可以透過將應用程式組件編譯為 ReadyToRun (R2R) 格式，來改善 .NET Core 應用程式的啟動時間。 R2R 是一種預先(AOT) 編譯。
 
-R2R 二進位檔會透過減少 Just-In-Time (JIT) 編譯器在應用程式載入時所需執行的工作量，來改善啟動效能。 二進位檔包含的機器碼，與 JIT 所會產生的內容類似。
+R2R 二進位檔會透過減少 Just-In-Time (JIT) 編譯器在應用程式載入時所需執行的工作量，來改善啟動效能。 二進位檔包含的機器碼，與 JIT 所會產生的內容類似。 但是，R2R 二進位檔大小較大，因為它們會同時包含中繼語言 (IL) 程式碼 (在某些案例下仍需要使用)，以及相同程式碼的原生版本。 R2R 只有在您發佈以特定執行階段環境 (RID) (例如 Linux x64 或 Windows x64) 為目標的獨立式應用程式時才可供使用。
 
-R2R 二進位檔大小較大，因為它們會同時包含中繼語言 (IL) 程式碼 (在某些案例下仍需要使用)，以及相同程式碼的原生版本。 R2R 只有在您發佈以特定執行階段環境 (RID) (例如 Linux x64 或 Windows x64) 為目標的自封式應用程式時才可供使用。
+若要將您的專案編譯為 ReadyToRun，請執行下列操作：
 
-若要將應用程式編譯為 R2R，請加入 `<PublishReadyToRun>` 設定：
+01. 將 `<PublishReadyToRun>` 設定新增至專案
 
-```xml
-<PropertyGroup>
-  <PublishReadyToRun>true</PublishReadyToRun>
-</PropertyGroup>
-```
+    ```xml
+    <PropertyGroup>
+      <PublishReadyToRun>true</PublishReadyToRun>
+    </PropertyGroup>
+    ```
 
-發佈自封式應用程式。 例如，此命令會針對 64 位元版本的 Windows 建立自封式應用程式：
+01. 發佈自封式應用程式。 例如，此命令會針對 64 位元版本的 Windows 建立自封式應用程式：
 
-```console
-dotnet publish -c Release -r win-x64 --self-contained true
-```
+    ```console
+    dotnet publish -c Release -r win-x64 --self-contained true
+    ```
 
 ### <a name="cross-platformarchitecture-restrictions"></a>跨平台/架構限制
 
@@ -406,7 +411,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType> 建置在 <xref:System.Text.Json.Utf8JsonReader> 和 <xref:System.Text.Json.Utf8JsonWriter> 之上，以在使用 JSON 文件和片段時，提供快速的低記憶體序列化選項。
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 建置在 <xref:System.Text.Json.Utf8JsonReader> 和 <xref:System.Text.Json.Utf8JsonWriter> 之上，以在使用 JSON 文件和片段時，提供快速的低記憶體序列化選項。
 
 查看： https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md 以取得要移植到本文的範例
 

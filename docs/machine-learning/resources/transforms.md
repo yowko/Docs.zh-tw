@@ -4,16 +4,21 @@ description: 探索 ML.NET 中支援的特徵工程元件。
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65558019"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671878"
 ---
 # <a name="data-transformations"></a>資料轉換
 
-資料轉換是用來針對模型定型準備資料。 本指南中的轉換會傳回能實作 [IEstimator](xref:Microsoft.ML.IEstimator%601) 介面的類別。 資料轉換可以鏈結在一起。 每個轉換都會預期和產生特定類型及格式的資料，其已詳述於連結的參考文件中。
+資料轉換用來：
+- 準備資料以進行模型定型
+- 以 TensorFlow 或 ONNX 格式套用匯入的模型
+- 在資料傳遞過模型之後進行後續處理
+
+本指南中的轉換會傳回能實作 [IEstimator](xref:Microsoft.ML.IEstimator%601) 介面的類別。 資料轉換可以鏈結在一起。 每個轉換都會預期和產生特定類型及格式的資料，其已詳述於連結的參考文件中。
 
 某些資料轉換需要定型資料以計算其參數。 例如：<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 轉換器會在 `Fit()` 作業期間計算定型資料的平均數和變異數，並將那些參數用於 `Transform()` 作業。 
 
@@ -78,6 +83,7 @@ ms.locfileid: "65558019"
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | 將來自輸入影像的像素轉換為數字向量 |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | 從資料夾將影像載入記憶體 |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | 調整影像大小 |
+| <xref:Microsoft.ML.OnnxCatalog.DnnFeaturizeImage*> | 套用預先定型的深度神經網路 (DNN) 模型，將輸入影像轉換成特徵向量 |
 
 ## <a name="categorical-data-transformations"></a>類別資料轉換
 
@@ -85,6 +91,17 @@ ms.locfileid: "65558019"
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | 將一或多個文字資料行轉換為 [one-hot](https://en.wikipedia.org/wiki/One-hot) \(英文\) 編碼向量 |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | 將一或多個文字資料行轉換為以雜湊為基礎的 one-hot 編碼向量 |
+
+## <a name="time-series-data-transformations"></a>時間序列資料轉換
+
+| 資料轉換 | 定義 |
+| --- | --- |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn*> | 使用光譜殘留 (SR) 演算法偵測輸入時間序列資料中的異常 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa*> | 使用單一頻譜分析 (SSA) 偵測時間序列資料中的變更點 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidChangePoint*> | 使用彈性核心密度估計和鞅分數，偵測獨立和相同分散式 (IID) 時間序列資料中的變更點 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*> | 使用單一頻譜分析 (SSA) 預測時間序列資料 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa*> | 使用單一頻譜分析 (SSA) 偵測時間序列資料中的尖峰 |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike*> | 使用彈性核心密度估計和鞅分數，偵測獨立和相同分散式 (IID) 時間序列資料中的尖峰 |
 
 ## <a name="missing-values"></a>遺失值
 
@@ -99,6 +116,35 @@ ms.locfileid: "65558019"
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | 選取其非預設值大於某個閾值的特徵 |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | 選取其標籤資料行中的資料最具相依性的特徵 |
+
+## <a name="feature-transformations"></a>功能轉換
+
+| 資料轉換 | 定義 |
+| --- | --- |
+| <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap*> | 將每個輸入向量對應至較低維度的功能空間，其中內部產品會近似核心函式，以便可以將功能當作線性演算法的輸入使用 |
+| <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents*> | 套用主體元件分析演算法，以減少輸入特徵向量的維度 |
+
+## <a name="explainability-transformations"></a>可解釋性轉換
+
+| 資料轉換 | 定義 |
+| --- | --- |
+| <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution*> | 為特徵向量的每個元素計算貢獻分數 |
+
+## <a name="calibration-transformations"></a>校正轉換
+
+| 資料轉換 | 定義 |
+| --- | --- |
+|<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | 使用羅吉斯回歸搭配使用定型資料估計的參數，將二元分類器原始分數轉換成類別機率 |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | 使用羅吉斯回歸搭配固定參數，將二元分類器原始分數轉換成類別機率 |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Naive*> | 藉由將分數指派給 Bin，並根據各 Bin 間的分佈計算機率，將二元分類器原始分數轉換成類別機率 |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Isotonic*> | 藉由將分數指派給 Bin 來將二元分類器原始分數轉換成類別機率，其中會使用定型資料來估計界限的位置和 Bin 的大小  |
+
+## <a name="deep-learning-transformations"></a>深度學習轉換
+
+| 資料轉換 | 定義 |
+| --- | --- |
+| <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*> | 使用匯入的 ONNX 模型轉換輸入資料 |
+| <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel*> | 使用匯入的 TensorFlow 模型轉換輸入資料 |
 
 ## <a name="custom-transformations"></a>自訂轉換
 

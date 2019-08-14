@@ -1,49 +1,32 @@
 ---
 title: 預設值表 - C# 參考
 ms.custom: seodec18
-description: 了解 C# 實值型別的預設值是什麼。
-ms.date: 08/23/2018
+description: 了解 C# 型別的預設值是什麼。
+ms.date: 07/29/2019
 helpviewer_keywords:
-- constructors [C#], return values
-- keywords [C#], new
+- default [C#]
 - parameterless constructor [C#]
-- defaults [C#]
-- value types [C#], initializing
-- variables [C#], value types
-- constructors [C#], parameterless constructor
-- types [C#], parameterless constructor return values
-ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661406"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627737"
 ---
 # <a name="default-values-table-c-reference"></a>預設值表 (C# 參考)
 
-下列表格顯示[實值型別](value-types.md)的預設值。
+下列表格顯示 C# 型別的預設值：
 
-|值類型|預設值|
-|----------------|-------------------|
+|類型|預設值|
+|---------|------------------|
+|任何參考類型|`null`|
+|任何[內建整數數值型別](../builtin-types/integral-numeric-types.md)|0 (零)|
+|任何[內建浮點數值型別](../builtin-types/floating-point-numeric-types.md)|0 (零)|
 |[bool](bool.md)|`false`|
-|[byte](../builtin-types/integral-numeric-types.md)|0|
-|[char](char.md)|'\0'|
-|[decimal](../builtin-types/floating-point-numeric-types.md)|0M|
-|[double](../builtin-types/floating-point-numeric-types.md)|0.0D|
+|[char](char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|這個值是由運算式 `(E)0` 所產生，其中 `E` 是列舉識別碼。|
-|[float](../builtin-types/floating-point-numeric-types.md)|0.0F|
-|[int](../builtin-types/integral-numeric-types.md)|0|
-|[long](../builtin-types/integral-numeric-types.md)|0L|
-|[sbyte](../builtin-types/integral-numeric-types.md)|0|
-|[short](../builtin-types/integral-numeric-types.md)|0|
 |[struct](struct.md)|這個值是藉由將所有實值型別欄位設定為其預設值，並將所有參考型別欄位設定為 `null` 所產生。|
-|[uint](../builtin-types/integral-numeric-types.md)|0|
-|[ulong](../builtin-types/integral-numeric-types.md)|0|
-|[ushort](../builtin-types/integral-numeric-types.md)|0|
-
-## <a name="remarks"></a>備註
-
-您無法在 C# 中使用未初始化的變數。 您可以使用該型別的預設值初始化變數。 您也可以使用型別的預設值來指定方法中[選擇性引數](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments)的預設值。
+|任何[可為 Null 的值型別](../../programming-guide/nullable-types/index.md)|<xref:System.Nullable%601.HasValue%2A> 屬性是 `false` 且未定義 <xref:System.Nullable%601.Value%2A> 屬性的執行個體。 該預設值也稱為可為 Null 值型別的 *null* 值。|
 
 使用[預設值運算式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)以產生型別的預設值，如下列範例所示：
 
@@ -57,19 +40,23 @@ int a = default(int);
 int a = default;
 ```
 
-您也可以使用無參數建構函式或隱含無參數建構函式來產生實值型別的預設值，如下列範例所示。 如需建構函式的詳細資訊，請參閱[建構函式](../../programming-guide/classes-and-structs/constructors.md)一文。
+針對值型別，隱含無參數建構函式也會產生型別的預設值，如下列範例所示：
 
-```csharp
-int a = new int();
+```csharp-interactive
+var n = new System.Numerics.Complex();
+Console.WriteLine(n);  // output: (0, 0)
 ```
 
-任何[參考型別](reference-types.md)的預設值皆為 `null`。 [可為 Null 的型別](../../programming-guide/nullable-types/index.md)的預設值為 <xref:System.Nullable%601.HasValue%2A> 屬性為 `false`，且其 <xref:System.Nullable%601.Value%2A> 屬性為未定義的執行個體。
+## <a name="c-language-specification"></a>C# 語言規格
+
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的下列幾節：
+
+- [預設值](~/_csharplang/spec/variables.md#default-values)
+- [預設建構函式](~/_csharplang/spec/types.md#default-constructors)
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [實值型別](value-types.md)
-- [實值型別表](value-types-table.md)
 - [內建型別表](built-in-types-table.md)
+- [建構函式](../../programming-guide/classes-and-structs/constructors.md)

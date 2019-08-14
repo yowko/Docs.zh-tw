@@ -1,5 +1,5 @@
 ---
-title: 封裝 COM 的組件
+title: 封裝 COM 的 .NET Framework 組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662373"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629332"
 ---
-# <a name="packaging-an-assembly-for-com"></a>封裝 COM 的組件
+# <a name="packaging-a-net-framework-assembly-for-com"></a>封裝 COM 的 .NET Framework 組件
 
 COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型的下列資訊：
 
@@ -33,13 +33,13 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 
   COM 看不到一些 Managed 類型、有些看得到但無法建立，但有些是可見並可建立。 組件可以包含任意的不可見、可見、不可建立和可建立類型組合。 為求完整性，識別組件中想要公開至 COM 的類型，特別是這些類型是公開至 .NET Framework 之類型的子集。
 
-  如需詳細資訊，請參閱[限定交互操作的 .NET 類型](qualifying-net-types-for-interoperation.md)。
+  如需詳細資訊，請參閱[限定交互操作的 .NET 類型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)。
 
 - 版本設定指示
 
   可實作類別介面 (COM Interop 產生的介面) 的 Managed 類別受到版本設定限制。
 
-  如需使用類別介面的方針，請參閱[類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)。
+  如需使用類別介面的方針，請參閱[類別介面簡介](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。
 
 - 部署指示
 
@@ -94,8 +94,8 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)
-- [限定互通的 .NET 類型](qualifying-net-types-for-interoperation.md)
-- [類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)
+- [限定互通的 .NET 類型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
+- [類別介面簡介](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [組件安全性考量](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (類型程式庫匯出工具)](../tools/tlbexp-exe-type-library-exporter.md)
 - [向 COM 註冊組件](registering-assemblies-with-com.md)

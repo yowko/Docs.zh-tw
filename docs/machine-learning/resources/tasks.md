@@ -4,12 +4,12 @@ description: 探索 ML.NET 中支援的各種不同機器學習工作與相關�
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063540"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630061"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的機器學習工作
 
@@ -47,7 +47,7 @@ ms.locfileid: "65063540"
 
 ### <a name="binary-classification-inputs-and-outputs"></a>二元分類的輸入和輸出
 
-為了取得二元分類的最佳結果，定型資料應進行平衡 (例如具有相同數量的正向和負向定型資料)。 遺漏及其值必須在定型前進行處理。
+為了取得二元分類的最佳結果，定型資料應進行平衡 (亦即，具有相同數量的正向和負向定型資料)。 遺漏值必須在定型前進行處理。
 
 輸入標籤資料行資料必須是 <xref:System.Boolean>。
 輸入特徵資料行資料必須是 <xref:System.Single> 的固定大小向量。
@@ -70,7 +70,7 @@ ms.locfileid: "65063540"
 如需詳細資訊，請參閱維基百科上的[多元分類](https://en.wikipedia.org/wiki/Multiclass_classification) \(英文\) 一文。
 
 >[!NOTE]
->One-Vs-All 將任何[二元分類學習工具](#binary-classification)升級，以在多元分類資料集上運作。 如需詳細資訊，請參閱 [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)。
+>One-Vs-All 將任何[二元分類學習工具](#binary-classification)升級，以在多元分類資料集上運作。 如需詳細資訊，請參閱 [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) 。
 
 ### <a name="multiclass-classification-trainers"></a>多類別分類學習工具
 
