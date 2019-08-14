@@ -18,208 +18,40 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: bc5e2c88314c2f590aeddcfd37bd04c3a7400804
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 0e49c28f05d52c704a46806559407381c7eb3530
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796487"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971256"
 ---
-# <a name="c-operators-c-reference"></a><span data-ttu-id="7ee0a-102">C# 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="7ee0a-102">C# operators (C# reference)</span></span>
-
-<span data-ttu-id="7ee0a-103">C# 提供內建型別支援的數個預先定義運算子。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-103">C# provides a number of predefined operators supported by the built-in types.</span></span> <span data-ttu-id="7ee0a-104">例如，[算術運算子](arithmetic-operators.md)會執行含內建數值型別運算元的算術運算，而[布林邏輯運算子](boolean-logical-operators.md)會執行含 [bool](../keywords/bool.md) 運算元的邏輯運算。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-104">For example, [arithmetic operators](arithmetic-operators.md) perform arithmetic operations with operands of built-in numeric types and [Boolean logical operators](boolean-logical-operators.md) perform logical operations with the [bool](../keywords/bool.md) operands.</span></span>
-
-<span data-ttu-id="7ee0a-105">使用者定義型別可以多載特定運算子，以定義該型別運算元的對應行為。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-105">A user-defined type can overload certain operators to define the corresponding behavior for the operands of that type.</span></span> <span data-ttu-id="7ee0a-106">如需詳細資訊，請參閱[運算子多載](operator-overloading.md)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-106">For more information, see [Operator overloading](operator-overloading.md).</span></span>
-
-<span data-ttu-id="7ee0a-107">下面各節列出 C# 運算子，從最高優先順序開始列到最低。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-107">The following sections list the C# operators starting with the highest precedence to the lowest.</span></span> <span data-ttu-id="7ee0a-108">每個區段中的運算子會共用相同的優先順序層級。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-108">The operators within each section share the same precedence level.</span></span>
-
-## <a name="primary-operators"></a><span data-ttu-id="7ee0a-109">主要運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-109">Primary operators</span></span>
-
-<span data-ttu-id="7ee0a-110">這些是最高優先順序的運算子。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-110">These are the highest precedence operators.</span></span>
-
-<span data-ttu-id="7ee0a-111">[x.y](member-access-operators.md#member-access-operator-) – 成員存取。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-111">[x.y](member-access-operators.md#member-access-operator-) – member access.</span></span>
-
-<span data-ttu-id="7ee0a-112">[x?.y](member-access-operators.md#null-conditional-operators--and-) – null 條件成員存取。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-112">[x?.y](member-access-operators.md#null-conditional-operators--and-) – null conditional member access.</span></span> <span data-ttu-id="7ee0a-113">如果左運算元評估為 `null`，則傳回 `null`。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-113">Returns `null` if the left-hand operand evaluates to `null`.</span></span>
-
-<span data-ttu-id="7ee0a-114">[x?[y]](member-access-operators.md#null-conditional-operators--and-) - Null 條件式陣列項目，或型別索引子存取。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-114">[x?[y]](member-access-operators.md#null-conditional-operators--and-) - null conditional array element or type indexer access.</span></span> <span data-ttu-id="7ee0a-115">如果左運算元評估為 `null`，則傳回 `null`。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-115">Returns `null` if the left-hand operand evaluates to `null`.</span></span>
-
-<span data-ttu-id="7ee0a-116">[f(x)](member-access-operators.md#invocation-operator-) – 方法呼叫，或委派叫用。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-116">[f(x)](member-access-operators.md#invocation-operator-) – method call or delegate invocation.</span></span>
-
-<span data-ttu-id="7ee0a-117">[&#91;x&#93;](member-access-operators.md#indexer-operator-) – 陣列項目，或型別索引子存取。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-117">[a&#91;x&#93;](member-access-operators.md#indexer-operator-) – array element or type indexer access.</span></span>
-
-<span data-ttu-id="7ee0a-118">[x++](arithmetic-operators.md#increment-operator-) – 後置遞增。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-118">[x++](arithmetic-operators.md#increment-operator-) – postfix increment.</span></span> <span data-ttu-id="7ee0a-119">傳回 x 的值，然後利用大於 x 值的值 (通常會加上整數 1) 更新儲存位置。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-119">Returns the value of x and then updates the storage location with the value of x that is one greater (typically adds the integer 1).</span></span>
-
-<span data-ttu-id="7ee0a-120">[x--](arithmetic-operators.md#decrement-operator---) – 後置遞減。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-120">[x--](arithmetic-operators.md#decrement-operator---) –  postfix decrement.</span></span> <span data-ttu-id="7ee0a-121">傳回 x 的值，然後利用小於 x 值的值 (通常會減去整數 1) 更新儲存位置。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-121">Returns the value of x and then updates the storage location with the value of x that is one less (typically subtracts the integer 1).</span></span>
-
-<span data-ttu-id="7ee0a-122">[new](new-operator.md) – 型別執行個體化。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-122">[new](new-operator.md) – type instantiation.</span></span>
-
-<span data-ttu-id="7ee0a-123">[typeof](type-testing-and-conversion-operators.md#typeof-operator) - 傳回代表運算元的 <xref:System.Type> 物件。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-123">[typeof](type-testing-and-conversion-operators.md#typeof-operator) – returns the <xref:System.Type> object representing the operand.</span></span>
-
-<span data-ttu-id="7ee0a-124">[checked](../keywords/checked.md) – 啟動整數作業的溢位檢查。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-124">[checked](../keywords/checked.md) – enables overflow checking for integer operations.</span></span>
-
-<span data-ttu-id="7ee0a-125">[unchecked](../keywords/unchecked.md) – 停用整數作業的溢位檢查。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-125">[unchecked](../keywords/unchecked.md) – disables overflow checking for integer operations.</span></span> <span data-ttu-id="7ee0a-126">這是預設編譯器行為。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-126">This is the default compiler behavior.</span></span>
-
-<span data-ttu-id="7ee0a-127">[default(T)](default.md) - 產生類型 T 的預設值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-127">[default(T)](default.md) – produces the default value of type T.</span></span>
-
-<span data-ttu-id="7ee0a-128">[nameof](nameof.md) - 取得變數、型別或成員的簡單 (未限定) 名稱，作為常數字串。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-128">[nameof](nameof.md) - obtains the simple (unqualified) name of a variable, type, or member as a constant string.</span></span>
-
-<span data-ttu-id="7ee0a-129">[delegate](delegate-operator.md) – 宣告並傳回委派執行個體。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-129">[delegate](delegate-operator.md) – declares and returns a delegate instance.</span></span>
-
-<span data-ttu-id="7ee0a-130">[sizeof](sizeof.md) – 傳回型別運算元的大小 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-130">[sizeof](sizeof.md) – returns the size in bytes of the type operand.</span></span>
-
-<span data-ttu-id="7ee0a-131">[stackalloc](stackalloc.md) -　配置堆疊上的記憶體區塊。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-131">[stackalloc](stackalloc.md) - allocates a block of memory on the stack.</span></span>
-
-<span data-ttu-id="7ee0a-132">[->](pointer-related-operators.md#pointer-member-access-operator--) - 指標間接取值結合成員存取。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-132">[->](pointer-related-operators.md#pointer-member-access-operator--) – pointer indirection combined with member access.</span></span>
-
-## <a name="unary-operators"></a><span data-ttu-id="7ee0a-133">一元運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-133">Unary operators</span></span>
-
-<span data-ttu-id="7ee0a-134">這些運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-134">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-135">[+x](addition-operator.md) – 傳回 x 的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-135">[+x](addition-operator.md) – returns the value of x.</span></span>
-
-<span data-ttu-id="7ee0a-136">[-x](subtraction-operator.md) – 數值否定。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-136">[-x](subtraction-operator.md) – numeric negation.</span></span>
-
-<span data-ttu-id="7ee0a-137">[\!x](boolean-logical-operators.md#logical-negation-operator-) – 邏輯否定。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-137">[\!x](boolean-logical-operators.md#logical-negation-operator-) – logical negation.</span></span>
-
-<span data-ttu-id="7ee0a-138">[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-) – 位元補數。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-138">[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-) – bitwise complement.</span></span>
-
-<span data-ttu-id="7ee0a-139">[++x](arithmetic-operators.md#increment-operator-) – 前置遞增。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-139">[++x](arithmetic-operators.md#increment-operator-) – prefix increment.</span></span> <span data-ttu-id="7ee0a-140">傳回 x 的值之前，利用大於 x 值的值 (通常會加上整數 1) 更新儲存位置。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-140">Returns the value of x after updating the storage location with the value of x that is one greater (typically adds the integer 1).</span></span>
-
-<span data-ttu-id="7ee0a-141">[--x](arithmetic-operators.md#decrement-operator---) – 前置遞減。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-141">[--x](arithmetic-operators.md#decrement-operator---) – prefix decrement.</span></span> <span data-ttu-id="7ee0a-142">更新儲存體位置之後，傳回 x 減一的 x 值 (通常減去整數 1)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-142">Returns the value of x after updating the storage location with the value of x that is one less (typically subtracts the integer 1).</span></span>
-
-<span data-ttu-id="7ee0a-143">[(T)x](type-testing-and-conversion-operators.md#cast-operator-) – 型別轉換。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-143">[(T)x](type-testing-and-conversion-operators.md#cast-operator-) – type casting.</span></span>
-
-<span data-ttu-id="7ee0a-144">[await](../keywords/await.md) – 等候 `Task`。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-144">[await](../keywords/await.md) – awaits a `Task`.</span></span>
-
-<span data-ttu-id="7ee0a-145">[&x](pointer-related-operators.md#address-of-operator-) - 變數的位址。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-145">[&x](pointer-related-operators.md#address-of-operator-) – address of a variable.</span></span>
-
-<span data-ttu-id="7ee0a-146">[\*x](pointer-related-operators.md#pointer-indirection-operator-) - 指標間接取值或取值 (Dereference)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-146">[\*x](pointer-related-operators.md#pointer-indirection-operator-) – pointer indirection, or dereference.</span></span>
-
-<span data-ttu-id="7ee0a-147">[true 運算子](true-false-operators.md) - 傳回 [bool](../keywords/bool.md) 值 `true` 以指出運算元必然為 true。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-147">[true operator](true-false-operators.md) - returns the [bool](../keywords/bool.md) value `true` to indicate that an operand is definitely true.</span></span>
-
-<span data-ttu-id="7ee0a-148">[false 運算子](true-false-operators.md) - 傳回 [bool](../keywords/bool.md) 值 `true`，以指出運算元必然為 false。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-148">[false operator](true-false-operators.md) - returns the [bool](../keywords/bool.md) value `true` to indicate that an operand is definitely false.</span></span>
-
-## <a name="multiplicative-operators"></a><span data-ttu-id="7ee0a-149">乘法類運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-149">Multiplicative operators</span></span>
-
-<span data-ttu-id="7ee0a-150">這些運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-150">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-151">[x \* y](arithmetic-operators.md#multiplication-operator-) – 乘法。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-151">[x \* y](arithmetic-operators.md#multiplication-operator-) – multiplication.</span></span>
-
-<span data-ttu-id="7ee0a-152">[x / y](arithmetic-operators.md#division-operator-) – 除法。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-152">[x / y](arithmetic-operators.md#division-operator-) – division.</span></span> <span data-ttu-id="7ee0a-153">如果運算元都是整數，則結果會截斷趨近於零的整數 (例如，`-7 / 2 is -3`)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-153">If the operands are integers, the result is an integer truncated toward zero (for example, `-7 / 2 is -3`).</span></span>
-
-<span data-ttu-id="7ee0a-154">[x % y](arithmetic-operators.md#remainder-operator-) – 餘數。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-154">[x % y](arithmetic-operators.md#remainder-operator-) – remainder.</span></span> <span data-ttu-id="7ee0a-155">如果運算元都是整數，這會傳回 x 除以 y 的餘數。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-155">If the operands are integers, this returns the remainder of dividing x by y.</span></span>  <span data-ttu-id="7ee0a-156">若為 `q = x / y` 和 `r = x % y`，則為 `x = q * y + r`。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-156">If `q = x / y` and `r = x % y`, then `x = q * y + r`.</span></span>
-
-## <a name="additive-operators"></a><span data-ttu-id="7ee0a-157">加法類運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-157">Additive operators</span></span>
-
-<span data-ttu-id="7ee0a-158">這些運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-158">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-159">[x + y](arithmetic-operators.md#addition-operator-) – 加法。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-159">[x + y](arithmetic-operators.md#addition-operator-) – addition.</span></span>
-
-<span data-ttu-id="7ee0a-160">[x – y](arithmetic-operators.md#subtraction-operator--) – 減法。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-160">[x – y](arithmetic-operators.md#subtraction-operator--) – subtraction.</span></span>
-
-## <a name="shift-operators"></a><span data-ttu-id="7ee0a-161">移位運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-161">Shift operators</span></span>
-
-<span data-ttu-id="7ee0a-162">這些運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-162">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-163">[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-) – 位元向左移位並使用右邊的零填滿。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-163">[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-) – shift bits left and fill with zero on the right.</span></span>
-
-<span data-ttu-id="7ee0a-164">[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) – 位元向右移位。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-164">[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) – shift bits right.</span></span> <span data-ttu-id="7ee0a-165">如果左運算元是 `int` 或 `long`，則以正負號位元填入左位元。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-165">If the left operand is `int` or `long`, then left bits are filled with the sign bit.</span></span> <span data-ttu-id="7ee0a-166">如果左運算元是 `uint` 或 `ulong`，則以零填入左位元。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-166">If the left operand is `uint` or `ulong`, then left bits are filled with zero.</span></span>
-
-## <a name="relational-and-type-testing-operators"></a><span data-ttu-id="7ee0a-167">關係和類型測試運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-167">Relational and type-testing operators</span></span>
-
-<span data-ttu-id="7ee0a-168">這些運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-168">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-169">[x \< y](comparison-operators.md#less-than-operator-) – 小於 (如果 x 小於 y，則為 true)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-169">[x \< y](comparison-operators.md#less-than-operator-) – less than (true if x is less than y).</span></span>
-
-<span data-ttu-id="7ee0a-170">[x > y](comparison-operators.md#greater-than-operator-) – 大於 (如果 x 大於 y，則為 true)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-170">[x > y](comparison-operators.md#greater-than-operator-) – greater than (true if x is greater than y).</span></span>
-
-<span data-ttu-id="7ee0a-171">[x \<= y](comparison-operators.md#less-than-or-equal-operator-) – 小於或等於。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-171">[x \<= y](comparison-operators.md#less-than-or-equal-operator-) – less than or equal to.</span></span>
-
-<span data-ttu-id="7ee0a-172">[x >= y](comparison-operators.md#greater-than-or-equal-operator-) – 大於或等於。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-172">[x >= y](comparison-operators.md#greater-than-or-equal-operator-) – greater than or equal to.</span></span>
-
-<span data-ttu-id="7ee0a-173">[is](type-testing-and-conversion-operators.md#is-operator) – 型別相容性。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-173">[is](type-testing-and-conversion-operators.md#is-operator) – type compatibility.</span></span> <span data-ttu-id="7ee0a-174">如果評估的左運算元可以轉換成右運算元所指定的類型，則傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-174">Returns `true` if the evaluated left operand can be cast to the type specified by the right operand.</span></span>
-
-<span data-ttu-id="7ee0a-175">[as](type-testing-and-conversion-operators.md#as-operator) – 型別轉換。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-175">[as](type-testing-and-conversion-operators.md#as-operator) – type conversion.</span></span> <span data-ttu-id="7ee0a-176">傳回左運算元轉換成右運算元所指定的類型，但 `as` 會在 `(T)x` 會擲回例外狀況時傳回 `null`。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-176">Returns the left operand cast to the type specified by the right operand, but `as` returns `null` where `(T)x` would throw an exception.</span></span>
-
-## <a name="equality-operators"></a><span data-ttu-id="7ee0a-177">等號比較運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-177">Equality operators</span></span>
-
-<span data-ttu-id="7ee0a-178">這些運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-178">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-179">[x == y](equality-operators.md#equality-operator-) – 相等。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-179">[x == y](equality-operators.md#equality-operator-) – equality.</span></span> <span data-ttu-id="7ee0a-180">根據預設，對於 `string` 以外的參考類型，這會傳回參考相等 (識別測試)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-180">By default, for reference types other than `string`, this returns reference equality (identity test).</span></span> <span data-ttu-id="7ee0a-181">不過，類型可以多載 `==`，因此如果您的目的是要測試識別，最好使用 `object` 上的 `ReferenceEquals` 方法。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-181">However, types can overload `==`, so if your intent is to test identity, it is best to use the `ReferenceEquals` method on `object`.</span></span>
-
-<span data-ttu-id="7ee0a-182">[x != y](equality-operators.md#inequality-operator-) – 不等於。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-182">[x != y](equality-operators.md#inequality-operator-) – not equal.</span></span> <span data-ttu-id="7ee0a-183">請參閱 `==` 的註解。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-183">See comment for `==`.</span></span> <span data-ttu-id="7ee0a-184">如果類型多載 `==`，則它必須多載 `!=`。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-184">If a type overloads `==`, then it must overload `!=`.</span></span>
-
-## <a name="logical-and-operator"></a><span data-ttu-id="7ee0a-185">邏輯 AND 運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-185">Logical AND operator</span></span>
-
-<span data-ttu-id="7ee0a-186">此運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-186">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-187">`x & y` – `bool` 運算元的 [邏輯 AND](boolean-logical-operators.md#logical-and-operator-)，或整數型別之運算元的 [位元邏輯 AND](bitwise-and-shift-operators.md#logical-and-operator-)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-187">`x & y` – [logical AND](boolean-logical-operators.md#logical-and-operator-) for the `bool` operands or [bitwise logical AND](bitwise-and-shift-operators.md#logical-and-operator-) for the operands of the integral types.</span></span>
-
-## <a name="logical-xor-operator"></a><span data-ttu-id="7ee0a-188">邏輯 XOR 運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-188">Logical XOR operator</span></span>
-
-<span data-ttu-id="7ee0a-189">此運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-189">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-190">`x ^ y` – `bool` 運算元的 [邏輯 XOR](boolean-logical-operators.md#logical-exclusive-or-operator-)，或整數型別之運算元的 [位元邏輯 XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-190">`x ^ y` – [logical XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) for the `bool` operands or [bitwise logical XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) for the operands of the integral types.</span></span>
-
-## <a name="logical-or-operator"></a><span data-ttu-id="7ee0a-191">邏輯 OR 運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-191">Logical OR operator</span></span>
-
-<span data-ttu-id="7ee0a-192">此運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-192">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-193">`x | y` – `bool` 運算元的 [邏輯 OR](boolean-logical-operators.md#logical-or-operator-)，或整數型別之運算元的 [位元邏輯 OR](bitwise-and-shift-operators.md#logical-or-operator-)。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-193">`x | y` – [logical OR](boolean-logical-operators.md#logical-or-operator-) for the `bool` operands or [bitwise logical OR](bitwise-and-shift-operators.md#logical-or-operator-) for the operands of the integral types.</span></span>
-
-## <a name="conditional-and-operator"></a><span data-ttu-id="7ee0a-194">條件 AND 運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-194">Conditional AND operator</span></span>
-
-<span data-ttu-id="7ee0a-195">此運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-195">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-196">[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 邏輯 AND。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-196">[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – logical AND.</span></span> <span data-ttu-id="7ee0a-197">如果 `x` 評估為 `false`，則 `y` 不會被評估。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-197">If `x` evaluates to `false`, then `y` is not evaluated.</span></span>
-
-## <a name="conditional-or-operator"></a><span data-ttu-id="7ee0a-198">條件 OR 運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-198">Conditional OR operator</span></span>
-
-<span data-ttu-id="7ee0a-199">此運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-199">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-200">[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 邏輯 OR。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-200">[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – logical OR.</span></span> <span data-ttu-id="7ee0a-201">如果 `x` 評估為 `true`，則 `y` 不會被評估。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-201">If `x` evaluates to `true`, then `y` is not evaluated.</span></span>
-
-## <a name="null-coalescing-operator"></a><span data-ttu-id="7ee0a-202">Null 聯合運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-202">Null-coalescing operator</span></span>
-
-<span data-ttu-id="7ee0a-203">此運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-203">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-204">[x ?? y](null-coalescing-operator.md) – 如果非 `null` 則傳回 `x`，否則會傳回 `y`。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-204">[x ?? y](null-coalescing-operator.md) – returns `x` if it is non-`null`; otherwise, returns `y`.</span></span>
-
-## <a name="conditional-operator"></a><span data-ttu-id="7ee0a-205">條件運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-205">Conditional operator</span></span>
-
-<span data-ttu-id="7ee0a-206">此運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-206">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-207">[t ? x : y](conditional-operator.md) - 如果測試 `t` 評估為 true，則會評估並傳回 `x`，否則會評估並傳回 `y`。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-207">[t ? x : y](conditional-operator.md) – if test `t` evaluates to true, then evaluate and return `x`; otherwise, evaluate and return `y`.</span></span>
-
-## <a name="assignment-and-lambda-operators"></a><span data-ttu-id="7ee0a-208">指派和 Lambda 運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-208">Assignment and lambda operators</span></span>
-
-<span data-ttu-id="7ee0a-209">這些運算子具有的優先順序高於下一個區段且低於前一個區段。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-209">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="7ee0a-210">[x = y](assignment-operator.md) – 指派。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-210">[x = y](assignment-operator.md) – assignment.</span></span>
-
-<span data-ttu-id="7ee0a-211">[x += y](arithmetic-operators.md#compound-assignment) – 遞增。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-211">[x += y](arithmetic-operators.md#compound-assignment) – increment.</span></span> <span data-ttu-id="7ee0a-212">將 `y` 的值加上 `x` 的值，將結果儲存在 `x`，並傳回新的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-212">Add the value of `y` to the value of `x`, store the result in `x`, and return the new value.</span></span> <span data-ttu-id="7ee0a-213">如果 `x` 指定 [event](../keywords/event.md)，則 `y` 必須是 C# 視為事件處理常式新增的適當方法。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-213">If `x` designates an [event](../keywords/event.md), then `y` must be an appropriate method that C# adds as an event handler.</span></span>
-
-<span data-ttu-id="7ee0a-214">[x -= y](arithmetic-operators.md#compound-assignment) – 遞減。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-214">[x -= y](arithmetic-operators.md#compound-assignment) – decrement.</span></span> <span data-ttu-id="7ee0a-215">將 `x` 的值減去 `y` 的值，將結果儲存在 `x`，並傳回新的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-215">Subtract the value of `y` from the value of `x`, store the result in `x`, and return the new value.</span></span> <span data-ttu-id="7ee0a-216">如果 `x` 指定 [event](../keywords/event.md)，則 `y` 必須是 C# 視為事件處理常式移除的適當方法。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-216">If `x` designates an [event](../keywords/event.md), then `y` must be an appropriate method that C# removes as an event handler.</span></span>
-
-<span data-ttu-id="7ee0a-217">[x \*= y](arithmetic-operators.md#compound-assignment) – 乘法指派。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-217">[x \*= y](arithmetic-operators.md#compound-assignment) – multiplication assignment.</span></span> <span data-ttu-id="7ee0a-218">將 `y` 的值乘以 `x` 的值，將結果儲存在 `x`，並傳回新的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-218">Multiply the value of `y` to the value of `x`, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="7ee0a-219">[x /= y](arithmetic-operators.md#compound-assignment) – 除法指派。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-219">[x /= y](arithmetic-operators.md#compound-assignment) – division assignment.</span></span> <span data-ttu-id="7ee0a-220">將 `x` 的值除以 `y` 的值，將結果儲存在 `x`，並傳回新的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-220">Divide the value of `x` by the value of `y`, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="7ee0a-221">[x %= y](arithmetic-operators.md#compound-assignment) – 餘數指派。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-221">[x %= y](arithmetic-operators.md#compound-assignment) – remainder assignment.</span></span> <span data-ttu-id="7ee0a-222">將 `x` 的值除以 `y` 的值，將餘數儲存在 `x`，並傳回新的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-222">Divide the value of `x` by the value of `y`, store the remainder in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="7ee0a-223">[x &= y](boolean-logical-operators.md#compound-assignment) – AND 指派。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-223">[x &= y](boolean-logical-operators.md#compound-assignment) – AND assignment.</span></span> <span data-ttu-id="7ee0a-224">將 `y` 的值和 `x` 的值進行 AND 處理，將結果儲存在 `x`，並傳回新的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-224">AND the value of `y` with the value of `x`, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="7ee0a-225">[x &#124;= y](boolean-logical-operators.md#compound-assignment) – OR 指派。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-225">[x &#124;= y](boolean-logical-operators.md#compound-assignment) – OR assignment.</span></span> <span data-ttu-id="7ee0a-226">將 `y` 的值和 `x` 的值進行 OR 處理，將結果儲存在 `x`，並傳回新的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-226">OR the value of `y` with the value of `x`, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="7ee0a-227">[x ^= y](boolean-logical-operators.md#compound-assignment) – XOR 指派。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-227">[x ^= y](boolean-logical-operators.md#compound-assignment) – XOR assignment.</span></span> <span data-ttu-id="7ee0a-228">將 `y` 的值和 `x` 的值進行 XOR 處理，將結果儲存在 `x`，並傳回新的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-228">XOR the value of `y` with the value of `x`, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="7ee0a-229">[x <<= y](bitwise-and-shift-operators.md#compound-assignment) – 左移指派。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-229">[x <<= y](bitwise-and-shift-operators.md#compound-assignment) – left-shift assignment.</span></span> <span data-ttu-id="7ee0a-230">將 `x` 的值向左移 `y` 個空格，將結果儲存在 `x`，並傳回新的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-230">Shift the value of `x` left by `y` places, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="7ee0a-231">[x >>= y](bitwise-and-shift-operators.md#compound-assignment) – 右移指派。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-231">[x >>= y](bitwise-and-shift-operators.md#compound-assignment) – right-shift assignment.</span></span> <span data-ttu-id="7ee0a-232">將 `x` 的值向右移 `y` 個空格，將結果儲存在 `x`，並傳回新的值。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-232">Shift the value of `x` right by `y` places, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="7ee0a-233">[=>](lambda-operator.md) – lambda 宣告。</span><span class="sxs-lookup"><span data-stu-id="7ee0a-233">[=>](lambda-operator.md) – lambda declaration.</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="7ee0a-234">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7ee0a-234">See also</span></span>
-
-- [<span data-ttu-id="7ee0a-235">C# 參考</span><span class="sxs-lookup"><span data-stu-id="7ee0a-235">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="7ee0a-236">運算子</span><span class="sxs-lookup"><span data-stu-id="7ee0a-236">Operators</span></span>](../../programming-guide/statements-expressions-operators/operators.md)
+# <a name="c-operators-c-reference"></a><span data-ttu-id="de637-102">C# 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="de637-102">C# operators (C# reference)</span></span>
+
+<span data-ttu-id="de637-103">C# 提供內建型別支援的數個預先定義運算子。</span><span class="sxs-lookup"><span data-stu-id="de637-103">C# provides a number of predefined operators supported by the built-in types.</span></span> <span data-ttu-id="de637-104">例如，[算術運算子](arithmetic-operators.md)會執行含內建數值型別運算元的算術運算，而[布林邏輯運算子](boolean-logical-operators.md)會執行含 [bool](../keywords/bool.md) 運算元的邏輯運算。</span><span class="sxs-lookup"><span data-stu-id="de637-104">For example, [arithmetic operators](arithmetic-operators.md) perform arithmetic operations with operands of built-in numeric types and [Boolean logical operators](boolean-logical-operators.md) perform logical operations with the [bool](../keywords/bool.md) operands.</span></span>
+
+<span data-ttu-id="de637-105">使用者定義型別可以多載特定運算子，以定義該型別運算元的對應行為。</span><span class="sxs-lookup"><span data-stu-id="de637-105">A user-defined type can overload certain operators to define the corresponding behavior for the operands of that type.</span></span> <span data-ttu-id="de637-106">如需詳細資訊，請參閱[運算子多載](operator-overloading.md)。</span><span class="sxs-lookup"><span data-stu-id="de637-106">For more information, see [Operator overloading](operator-overloading.md).</span></span>
+
+<span data-ttu-id="de637-107">下表列出 C# 運算子，從最高優先順序開始到最低優先順序。</span><span class="sxs-lookup"><span data-stu-id="de637-107">The following table lists the C# operators starting with the highest precedence to the lowest.</span></span> <span data-ttu-id="de637-108">相同列內的所有運算子都會共用相同的優先順序層級。</span><span class="sxs-lookup"><span data-stu-id="de637-108">The operators within each row share the same precedence level.</span></span>
+
+| <span data-ttu-id="de637-109">運算子</span><span class="sxs-lookup"><span data-stu-id="de637-109">Operators</span></span> | <span data-ttu-id="de637-110">類別或名稱</span><span class="sxs-lookup"><span data-stu-id="de637-110">Category or name</span></span> |
+| --------- | ---------------- |
+| <span data-ttu-id="de637-111">[x.y](member-access-operators.md#member-access-operator-)、[x?.y](member-access-operators.md#null-conditional-operators--and-)、[x?[y]](member-access-operators.md#null-conditional-operators--and-)、[f(x)](member-access-operators.md#invocation-operator-)、[a&#91;x&#93;](member-access-operators.md#indexer-operator-)、[x++](arithmetic-operators.md#increment-operator-)、[x--](arithmetic-operators.md#decrement-operator---)、[new](new-operator.md)、[typeof](type-testing-and-conversion-operators.md#typeof-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[nameof](nameof.md)、[delegate](delegate-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[->](pointer-related-operators.md#pointer-member-access-operator--)</span><span class="sxs-lookup"><span data-stu-id="de637-111">[x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;x&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-conversion-operators.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [->](pointer-related-operators.md#pointer-member-access-operator--)</span></span> | <span data-ttu-id="de637-112">主要</span><span class="sxs-lookup"><span data-stu-id="de637-112">Primary</span></span> |
+| <span data-ttu-id="de637-113">[+x](addition-operator.md)、[-x](subtraction-operator.md)、[\!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++x](arithmetic-operators.md#increment-operator-)、[--x](arithmetic-operators.md#decrement-operator---)、[(T)x](type-testing-and-conversion-operators.md#cast-operator-)、[await](../keywords/await.md)、[&x](pointer-related-operators.md#address-of-operator-)、[\*x](pointer-related-operators.md#pointer-indirection-operator-)、[true and false](true-false-operators.md)</span><span class="sxs-lookup"><span data-stu-id="de637-113">[+x](addition-operator.md), [-x](subtraction-operator.md), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [++x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [(T)x](type-testing-and-conversion-operators.md#cast-operator-), [await](../keywords/await.md), [&x](pointer-related-operators.md#address-of-operator-), [\*x](pointer-related-operators.md#pointer-indirection-operator-), [true and false](true-false-operators.md)</span></span> | <span data-ttu-id="de637-114">一元</span><span class="sxs-lookup"><span data-stu-id="de637-114">Unary</span></span> |
+| <span data-ttu-id="de637-115">[x \* y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-)</span><span class="sxs-lookup"><span data-stu-id="de637-115">[x \* y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), [x % y](arithmetic-operators.md#remainder-operator-)</span></span> | <span data-ttu-id="de637-116">乘法類 (Multiplicative)</span><span class="sxs-lookup"><span data-stu-id="de637-116">Multiplicative</span></span>|
+| <span data-ttu-id="de637-117">[x + y](arithmetic-operators.md#addition-operator-)、[x – y](arithmetic-operators.md#subtraction-operator--)</span><span class="sxs-lookup"><span data-stu-id="de637-117">[x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--)</span></span> | <span data-ttu-id="de637-118">加法類 (Additive)</span><span class="sxs-lookup"><span data-stu-id="de637-118">Additive</span></span> |
+| <span data-ttu-id="de637-119">[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-)、[x >> y](bitwise-and-shift-operators.md#right-shift-operator-)</span><span class="sxs-lookup"><span data-stu-id="de637-119">[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-)</span></span> | <span data-ttu-id="de637-120">移位</span><span class="sxs-lookup"><span data-stu-id="de637-120">Shift</span></span> |
+| <span data-ttu-id="de637-121">[x \< y](comparison-operators.md#less-than-operator-)、[x > y](comparison-operators.md#greater-than-operator-)、[x \<= y](comparison-operators.md#less-than-or-equal-operator-)、[x >= y](comparison-operators.md#greater-than-or-equal-operator-)、[is](type-testing-and-conversion-operators.md#is-operator)、[as](type-testing-and-conversion-operators.md#as-operator)</span><span class="sxs-lookup"><span data-stu-id="de637-121">[x \< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-), [x \<= y](comparison-operators.md#less-than-or-equal-operator-), [x >= y](comparison-operators.md#greater-than-or-equal-operator-), [is](type-testing-and-conversion-operators.md#is-operator), [as](type-testing-and-conversion-operators.md#as-operator)</span></span> | <span data-ttu-id="de637-122">關聯性和型別測試</span><span class="sxs-lookup"><span data-stu-id="de637-122">Relational and type-testing</span></span> |
+| <span data-ttu-id="de637-123">[x == y](equality-operators.md#equality-operator-)、[x != y](equality-operators.md#inequality-operator-)</span><span class="sxs-lookup"><span data-stu-id="de637-123">[x == y](equality-operators.md#equality-operator-), [x != y](equality-operators.md#inequality-operator-)</span></span> | <span data-ttu-id="de637-124">相等</span><span class="sxs-lookup"><span data-stu-id="de637-124">Equality</span></span> |
+| `x & y` | <span data-ttu-id="de637-125">[布林值邏輯 AND](boolean-logical-operators.md#logical-and-operator-) 或[位元邏輯 AND](bitwise-and-shift-operators.md#logical-and-operator-)</span><span class="sxs-lookup"><span data-stu-id="de637-125">[Boolean logical AND](boolean-logical-operators.md#logical-and-operator-) or [bitwise logical AND](bitwise-and-shift-operators.md#logical-and-operator-)</span></span> |
+| `x ^ y` | <span data-ttu-id="de637-126">[布林值邏輯 XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) 或[位元邏輯 XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)</span><span class="sxs-lookup"><span data-stu-id="de637-126">[Boolean logical XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) or [bitwise logical XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)</span></span> |
+| <code>x &#124; y</code> | <span data-ttu-id="de637-127">[布林值邏輯 OR](boolean-logical-operators.md#logical-or-operator-) 或[位元邏輯 OR](bitwise-and-shift-operators.md#logical-or-operator-)</span><span class="sxs-lookup"><span data-stu-id="de637-127">[Boolean logical OR](boolean-logical-operators.md#logical-or-operator-) or [bitwise logical OR](bitwise-and-shift-operators.md#logical-or-operator-)</span></span> |
+| [<span data-ttu-id="de637-128">x && y</span><span class="sxs-lookup"><span data-stu-id="de637-128">x && y</span></span>](boolean-logical-operators.md#conditional-logical-and-operator-) | <span data-ttu-id="de637-129">條件式 AND</span><span class="sxs-lookup"><span data-stu-id="de637-129">Conditional AND</span></span> |
+| [<span data-ttu-id="de637-130">x &#124;&#124; y</span><span class="sxs-lookup"><span data-stu-id="de637-130">x &#124;&#124; y</span></span>](boolean-logical-operators.md#conditional-logical-or-operator-) | <span data-ttu-id="de637-131">條件式 OR</span><span class="sxs-lookup"><span data-stu-id="de637-131">Conditional OR</span></span> |
+| [<span data-ttu-id="de637-132">x ?? y</span><span class="sxs-lookup"><span data-stu-id="de637-132">x ?? y</span></span>](null-coalescing-operator.md) | <span data-ttu-id="de637-133">Null 聯合運算子</span><span class="sxs-lookup"><span data-stu-id="de637-133">Null-coalescing operator</span></span> |
+| [<span data-ttu-id="de637-134">t ? x : y</span><span class="sxs-lookup"><span data-stu-id="de637-134">t ? x : y</span></span>](conditional-operator.md) | <span data-ttu-id="de637-135">條件運算子</span><span class="sxs-lookup"><span data-stu-id="de637-135">Conditional operator</span></span> |
+| <span data-ttu-id="de637-136">[x = y](assignment-operator.md)、[x += y](arithmetic-operators.md#compound-assignment)、[x -= y](arithmetic-operators.md#compound-assignment)、[x \*= y](arithmetic-operators.md#compound-assignment)、[x /= y](arithmetic-operators.md#compound-assignment)、[x %= y](arithmetic-operators.md#compound-assignment)、[x &= y](boolean-logical-operators.md#compound-assignment)、[x &#124;= y](boolean-logical-operators.md#compound-assignment)、[x ^= y](boolean-logical-operators.md#compound-assignment)、[x <<= y](bitwise-and-shift-operators.md#compound-assignment)、[x >>= y](bitwise-and-shift-operators.md#compound-assignment)、[=>](lambda-operator.md)</span><span class="sxs-lookup"><span data-stu-id="de637-136">[x = y](assignment-operator.md), [x += y](arithmetic-operators.md#compound-assignment), [x -= y](arithmetic-operators.md#compound-assignment), [x \*= y](arithmetic-operators.md#compound-assignment), [x /= y](arithmetic-operators.md#compound-assignment), [x %= y](arithmetic-operators.md#compound-assignment), [x &= y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^= y](boolean-logical-operators.md#compound-assignment), [x <<= y](bitwise-and-shift-operators.md#compound-assignment), [x >>= y](bitwise-and-shift-operators.md#compound-assignment), [=>](lambda-operator.md)</span></span> | <span data-ttu-id="de637-137">指派和 Lambda 宣告</span><span class="sxs-lookup"><span data-stu-id="de637-137">Assignment and lambda declaration</span></span> |
+
+## <a name="see-also"></a><span data-ttu-id="de637-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="de637-138">See also</span></span>
+
+- [<span data-ttu-id="de637-139">C# 參考</span><span class="sxs-lookup"><span data-stu-id="de637-139">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="de637-140">運算子</span><span class="sxs-lookup"><span data-stu-id="de637-140">Operators</span></span>](../../programming-guide/statements-expressions-operators/operators.md)

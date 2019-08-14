@@ -6,12 +6,12 @@ title: .NET 文件
 description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589983"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972378"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -93,7 +93,7 @@ ms.locfileid: "65589983"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/standard/">.NET 指南</a></h3>
-                                                <p><a href="/dotnet/standard/get-started">開始使用</a></p>
+                                                <p><a href="/dotnet/standard/get-started">快速入門</a></p>
                                                 <p><a href="/dotnet/standard/tour">.NET 教學課程</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET 架構概念</a></p>
                                             </div>
@@ -112,7 +112,7 @@ ms.locfileid: "65589983"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/core">.NET Core 指南</a></h3>
-                                                <p><a href="/dotnet/core/get-started">開始使用</a></p>
+                                                <p><a href="/dotnet/core/get-started">快速入門</a></p>
                                                 <p><a href="/dotnet/core/tutorials">教學課程</a></p>
                                                 <p><a href="/dotnet/core/porting">從 .NET Framework 移植</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
@@ -133,7 +133,7 @@ ms.locfileid: "65589983"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/framework/">.NET Framework 指南</a></h3>
-                                                <p><a href="/dotnet/framework/get-started/">開始使用</a></p>
+                                                <p><a href="/dotnet/framework/get-started/">快速入門</a></p>
                                                 <p><a href="/dotnet/framework/development-guide">開發指南</a></p>
                                                 <p><a href="/dotnet/framework/develop-client-apps">用戶端開發</a></p>
                                                 <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
@@ -193,7 +193,7 @@ ms.locfileid: "65589983"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/fsharp">F# 指南</a></h3>
-                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">開始使用</a></p>
+                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">快速入門</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">F# 的教學課程</a></p>
                                                 <p><a href="/dotnet/fsharp/language-reference">F# 語言參考</a></p>
                                             </div>
@@ -212,7 +212,7 @@ ms.locfileid: "65589983"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/visual-basic">Visual Basic 指南</a></h3>
-                                                <p><a href="/dotnet/visual-basic/getting-started">開始使用</a></p>
+                                                <p><a href="/dotnet/visual-basic/getting-started">快速入門</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Visual Basic 教學課程</a></p>
                                                 <p><a href="/dotnet/visual-basic/language-reference">Visual Basic 語言參考</a></p>
                                             </div>
@@ -233,7 +233,7 @@ ms.locfileid: "65589983"
                                                 <h3><a href="/dotnet/machine-learning">ML.NET 指南</a></h3>
                                                 <p><a href="/dotnet/machine-learning/tutorials">教學課程</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources">資源</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources/glossary">字彙</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/glossary">詞彙</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 參考</a></p>
                                             </div>
                                         </div>
@@ -309,7 +309,7 @@ ms.locfileid: "65589983"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +319,8 @@ ms.locfileid: "65589983"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>什麼是 ASP.NET？</h3>
-                                                    <p>了解如何建置 ASP.NET Web 應用程式。</p>
+                                                    <h3>什麼是 ASP.NET Core？</h3>
+                                                    <p>了解如何建置 ASP.NET Core Web 應用程式。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,7 +453,7 @@ ms.locfileid: "65589983"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">行動裝置</a>
+                        <a href="#mobile">行動</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
