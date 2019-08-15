@@ -52,22 +52,22 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 
 各種 Azure 服務支援容器。 您可以為應用程式建立 Docker 映像，並將它部署到下列其中一個服務：
 
-* [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
+* [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)
 調整規模及協調使用 Kubernetes 的 Linux 容器。
 
-* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
+* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)
 在 PaaS 環境中使用 Linux 容器部署 Web 應用程式或 API。
 
-* [Azure 容器執行個體](https://azure.microsoft.com/services/container-instances/)\
+* [Azure 容器執行個體](https://azure.microsoft.com/services/container-instances/)
 在沒有任何較高層級管理服務的情況下，將容器裝載於雲端。
 
-* [Azure Batch](https://azure.microsoft.com/services/batch/)\
+* [Azure Batch](https://azure.microsoft.com/services/batch/)
 使用容器執行重複的計算工作。
 
-* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
+* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)
 使用 Windows Server 容器將 .NET 應用程式提升、轉移及現代化至微服務
 
-* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
+* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)
 儲存及管理所有 Azure 部署類型的容器映像。
 
 ## <a name="next-steps"></a>後續步驟

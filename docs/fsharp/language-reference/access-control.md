@@ -2,12 +2,12 @@
 title: 存取控制
 description: 瞭解如何以程式F#設計語言控制程式設計專案 (例如類型、方法和函式) 的存取。
 ms.date: 05/16/2016
-ms.openlocfilehash: ed77a09cf87aabf9a4134276e89e84aa42abd3c3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 38f8f3fd4114c0428fbe8baca71594cd07740b2c
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629967"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817864"
 ---
 # <a name="access-control"></a>存取控制
 
@@ -40,7 +40,7 @@ ms.locfileid: "68629967"
 
 - 區分等位中個別案例的協助工具是由區分聯集本身的存取範圍所決定。 也就是說, 特定聯集的大小寫不會比等位本身更容易存取。
 
-- 記錄類型之個別欄位的協助工具不能由記錄本身的存取範圍決定。 也就是說, 特定記錄標籤的存取權不如記錄本身。
+- 記錄類型的個別欄位可存取性是由記錄本身的存取範圍所決定。 也就是說, 特定記錄標籤的存取權不如記錄本身。
 
 ## <a name="example"></a>範例
 

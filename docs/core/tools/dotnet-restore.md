@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 3ddb9f679cfcab972483a4cb53ffe2b075867614
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613966"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626348"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -43,13 +43,29 @@ dotnet restore [-h|--help]
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *NuGet.config* 組態檔提供。 安裝 CLI 工具時，會提供預設組態檔。 您可以在專案目錄中建立自己的 *NuGet.config* 檔案，以指定其他摘要。 您也可以在命令提示字元中針對每個引動過程指定其他摘要。
+若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *nuget.config* 組態檔提供。 安裝 CLI 工具時，會提供預設組態檔。 您可以在專案目錄中建立自己的 *nuget.config* 檔案，以指定其他摘要。 您也可以在命令提示字元中針對每個引動過程指定其他摘要。
 
 針對相依性，您可以使用 `--packages` 引數指定已還原套件在還原作業期間的放置位置。 如果未指定，則會使用預設的 NuGet 套件快取，它位於所有作業系統上使用者主目錄的 `.nuget/packages` 目錄中。 例如，Linux 上的 */home/user1* 或 Windows 上的 *C:\Users\user1*。
 
 針對專案特定工具，`dotnet restore` 會先還原在其中封裝工具的套件，然後繼續還原其專案檔中所指定的工具相依性。
 
-*Nuget.Config* 檔案中的一些設定 (如果有的話) 會影響 `dotnet restore` 命令的行為。 例如，在 *NuGet.Config* 中設定 `globalPackagesFolder` 會將還原的 NuGet 套件置於指定的資料夾。 這是在 `dotnet restore` 命令上指定 `--packages` 選項的替代方式。 如需詳細資訊，請參閱 [NuGet.Config 參考](/nuget/schema/nuget-config-file)。
+### <a name="nugetconfig-differences"></a>nuget.config 差異
+
+*nuget.config* 檔案中設定 (如果有的話) 會影響 `dotnet restore` 命令的行為。 例如，在 *nuget.config* 中設定 `globalPackagesFolder` 會將還原的 NuGet 套件置於所指定資料夾。 這是在 `dotnet restore` 命令上指定 `--packages` 選項的替代方式。 如需詳細資訊，請參閱 [nuget.config 參考](/nuget/schema/nuget-config-file)。
+
+`dotnet restore` 會忽略三個特定設定：
+
+* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+
+  繫結重新導向不適用於 `<PackageReference>` 元素，且 .NET Core 針對 NuGet 套件僅支援 `<PackageReference>` 元素。
+
+* [solution](/nuget/schema/nuget-config-file#solution-section)
+
+  這是 Visual Studio 特定設定，不適用於 .NET Core。 .Net Core 不會使用 `packages.config` 檔案，而是針對 NuGet 套件使用 `<PackageReference>` 元素。
+
+* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+
+  此設定不適用，因為 [NuGet 尚未支援信任套件的跨平臺驗證](https://github.com/NuGet/Home/issues/7939)。
 
 ## <a name="implicit-dotnet-restore"></a>隱含 `dotnet restore`
 
@@ -79,7 +95,7 @@ dotnet restore [-h|--help]
 
 `--configfile <FILE>`
 
-要用於還原作業的 NuGet 組態檔 (*NuGet.config*)。
+要用於還原作業的 NuGet 組態檔 (*nuget.config*)。
 
 `--disable-parallel`
 
@@ -115,7 +131,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在還原作業期間使用的 NuGet 套件來源。 此設定會覆寫 *NuGet.config* 檔案中所指定的所有來源。 多次指定這個選項，即可提供多個來源。
+指定要在還原作業期間使用的 NuGet 套件來源。 此設定會覆寫 *nuget.config* 檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
 
 `--verbosity <LEVEL>`
 
@@ -129,7 +145,7 @@ dotnet restore [-h|--help]
 
 `--configfile <FILE>`
 
-要用於還原作業的 NuGet 組態檔 (*NuGet.config*)。
+要用於還原作業的 NuGet 組態檔 (*nuget.config*)。
 
 `--disable-parallel`
 
@@ -161,7 +177,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在還原作業期間使用的 NuGet 套件來源。 如此會覆寫 *NuGet.config* 檔案中所指定的所有來源。 多次指定這個選項，即可提供多個來源。
+指定要在還原作業期間使用的 NuGet 套件來源。 如此會覆寫 *nuget.config* 檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
 
 `--verbosity <LEVEL>`
 

@@ -2,12 +2,12 @@
 title: 作法：排序多個索引鍵的項目 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 5ea01055eae0c91fac274f8c38a1d8112c4aaa0a
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 2325417fa2ed8a6c3ca13504cada4d4e1a49be42
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690086"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709918"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>作法：排序多個索引鍵的項目 (C#)
 
@@ -65,7 +65,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 ## <a name="example"></a>範例
 
-下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。
+下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。
 
 此範例使用下列 XML 文件：[XML 範例檔：命名空間中的客戶和訂單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)。
 

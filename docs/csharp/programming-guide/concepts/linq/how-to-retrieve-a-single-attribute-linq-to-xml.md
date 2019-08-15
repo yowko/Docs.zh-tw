@@ -2,12 +2,12 @@
 title: 作法：擷取單一屬性 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: cfab2cbb80eb330a5fd745871eb272cca0b37798
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 53a715954144ab1795aee18744d69a51f90699e4
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486438"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710088"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>作法：擷取單一屬性 (LINQ to XML) (C#)
 這個主題會說明如何擷取項目的單一屬性 (如果有屬性名稱)。 這在撰寫您要尋找具有特定屬性之項目的查詢運算式時，相當實用。  
@@ -71,7 +71,7 @@ work
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供了 <xref:System.Xml.Linq.XAttribute> 類別至 `string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID` 及 `GUID?` 的明確轉換運算子。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之屬性的相同程式碼。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
+ 下列範例顯示命名空間中之屬性的相同程式碼。 如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  

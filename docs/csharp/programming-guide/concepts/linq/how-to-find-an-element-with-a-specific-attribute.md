@@ -2,12 +2,12 @@
 title: 作法：尋找具有特定屬性的項目 (C#)
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 7ec6240bf399058ca94cc52c66e6029f924fcd29
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 0362ded5984ff797a1ced93076679b7b975b998c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485553"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709946"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>作法：尋找具有特定屬性的項目 (C#)
 這個主題顯示如何尋找其屬性具有特定值的項目。  
@@ -41,7 +41,7 @@ foreach (XElement el in address)
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
+ 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
  此範例使用下列 XML 文件：[XML 範例檔：命名空間中的典型訂購單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   

@@ -2,12 +2,12 @@
 title: 作法：針對命名空間中的 XML 撰寫查詢 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: d33ecc22d8eb6ea4a08b56fbed6b6b437a5e3216
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ef7d970b5e34106bd6f17d4a2caf4ca378dd2258
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484640"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709880"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>作法：針對命名空間中的 XML 撰寫查詢 (C#)
 若要撰寫命名空間 (Namespace) 中的 XML 查詢，您必須使用具有正確命名空間的 <xref:System.Xml.Linq.XName> 物件。  
@@ -78,4 +78,4 @@ foreach (XElement el in c1)
   
 ## <a name="see-also"></a>另請參閱
 
-- [處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
+- [命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

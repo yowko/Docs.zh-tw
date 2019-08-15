@@ -2,12 +2,12 @@
 title: 建立以微服務為基礎的複合 UI
 description: 微服務架構不只可用於後端。 預覽以了解如何用於前端。
 ms.date: 09/20/2018
-ms.openlocfilehash: 55cb2a8096cc8122c94cae50af4384e9392868cf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672995"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817838"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>建立以微服務為基礎的複合 UI
 
@@ -43,7 +43,7 @@ ms.locfileid: "68672995"
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
 - **Ruben Oostinga：The Monolithic Frontend in the Microservices Architecture (微服務架構中的整合型前端)**  \
-  <https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/>
+  <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
 - **Mauro Servienti：The secret of better UI composition (更佳 UI 組合的祕密)**  \
   <https://particular.net/blog/secret-of-better-ui-composition>

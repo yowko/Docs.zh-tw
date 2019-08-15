@@ -29,10 +29,11 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">使用叢集根據特性來分類花朵</a>
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">使用矩陣分解來建立電影推薦工具</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">使用 TensorFlow 建置自訂影像分類器</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">使用 ONNX 偵測影像中的物件</a>
   - title: 參考和資源
     items:
       - type: paragraph
-        text: ML.NET API 擁有兩組套件：發行元件和預覽元件。 發行 API 包含資料處理元件、二元分類、多類別分類、迴歸、異常偵測及排名演算法、模型儲存及載入，以及更多功能！ 預覽 API 則包含 ONNX 和 TensorFlow 模型處理、建議工作的演算法，以及處理時間序列資料的元件。
+        text: ML.NET API 擁有兩組套件：發行元件和預覽元件。 發行 API 包含資料處理元件、二元分類、多類別分類、迴歸、異常偵測、時間序列和預測演算法、排名、模型儲存及載入、ONNX 與 TensorFlow 模型處理，以及更多功能！ 預覽 API 包含建議工作的演算法，以及標準深度學習模型的支援。
       - type: list
         style: unordered
         items:

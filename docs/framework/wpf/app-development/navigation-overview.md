@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: ee2f6050eeea6eec840156ed5dce9fb9b6172149
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796875"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817996"
 ---
 # <a name="navigation-overview"></a>巡覽概觀
 
@@ -38,7 +38,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 <xref:System.Windows.Controls.Page>、 <xref:System.Windows.Documents.Hyperlink> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 <xref:System.Windows.Navigation.NavigationService>和日誌形成所提供的導覽支援的核心。 本總覽會在涵蓋包含鬆散[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案、HTML 檔案和物件導覽的先進導覽支援之前, 先深入探索這些功能。
 
 > [!NOTE]
-> 在本主題中, 「瀏覽器」一詞只是指可以裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式的瀏覽器[!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] , 目前包含和 Firefox。 只有特定[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的瀏覽器才支援特定功能, 瀏覽器版本則稱為。
+> 在本主題中, 「瀏覽器」一詞只是指可以裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式的瀏覽器, 其中目前包含 Microsoft Internet Explorer 和 Firefox。 只有特定[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的瀏覽器才支援特定功能, 瀏覽器版本則稱為。
 
 ## <a name="navigation-in-wpf-applications"></a>WPF 應用程式中的巡覽
 
@@ -180,7 +180,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 ![具有超連結的頁面](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "這會顯示具有超連結之頁面的 XBAP。")
 
-如您<xref:System.Windows.Documents.Hyperlink>所預期, 按一下[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]會導致流覽至`NavigateUri`屬性所識別<xref:System.Windows.Controls.Page>的。 此外, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]會在的 [最近使用的<xref:System.Windows.Controls.Page>頁面] 清單中[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]新增先前的專案。 如下圖所示。
+如您<xref:System.Windows.Documents.Hyperlink>所預期, 按一下[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]會導致流覽至`NavigateUri`屬性所識別<xref:System.Windows.Controls.Page>的。 此外, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]會在 Internet Explorer 的 [最近<xref:System.Windows.Controls.Page>使用的頁面] 清單中新增先前的專案。 如下圖所示。
 
 [![上一頁] 和 [下一頁] 按鈕](./media/navigation-overview/back-and-forward-navigation.png "以 [上一頁] 和 [下一頁] 按鈕導覽。")
 
@@ -367,16 +367,16 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 #### <a name="navigating-the-journal-from-internet-explorer"></a>從 Internet Explorer 巡覽日誌
 
-就概念而言, 日誌的運作方式與中[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]的 [**上一頁**] 和 [**下一頁**] 按鈕相同。 如下圖所示。
+就概念而言, 日誌的運作方式與 Internet Explorer 中的 [**上一頁**] 和 [**下一頁**] 按鈕相同。 如下圖所示。
 
 [![上一頁] 和 [下一頁] 按鈕](./media/navigation-overview/back-and-forward-navigation.png "以 [上一頁] 和 [下一頁] 按鈕導覽。")
 
-針對[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]由[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]裝載的, 會將日誌整合到的導覽[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]中。 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]這可讓使用者使用中[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]的 [**上一頁**]、[**下一頁**] 和 [**最近的頁面**] 按鈕, 在中流覽頁面。 日誌並未與[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]或 Internet Explorer [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] 8 的相同方式整合到中。 相反地[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , 會呈現替代[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]導覽。
+若[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]為 internet explorer 所裝載的, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]則會將日誌整合到[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] internet explorer 的導覽中。 這可讓使用者使用 Internet Explorer 中[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]的 [**上一頁**]、[**下一頁**] 和 [**最近的頁面**] 按鈕, 在中流覽頁面。
 
 > [!IMPORTANT]
-> 在[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]中, 當使用者離開並回到[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]時, 只有未保持運作的頁面記錄項目會保留在日誌中。 如需讓頁面保持運作的討論, 請參閱本主題稍後的[頁面存留期和日誌](#PageLifetime)。
+> 在 Internet Explorer 中, 當使用者流覽離開並返回[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]時, 只有未保持運作的頁面記錄項目會保留在日誌中。 如需讓頁面保持運作的討論, 請參閱本主題稍後的[頁面存留期和日誌](#PageLifetime)。
 
-根據預設, 出現在 [ <xref:System.Windows.Controls.Page> **最近使用**的[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]頁面] [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]清單中的每個文字, 都<xref:System.Windows.Controls.Page>是的。 在許多情況下，這對使用者都不是特別有意義。 幸運的是，您可以變更使用下列選項之一的文字︰
+<xref:System.Windows.Controls.Page>根據預設, <xref:System.Windows.Controls.Page>Internet Explorer [**最近使用的頁面**] 清單中出現的每個文字, 都是的。[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 在許多情況下，這對使用者都不是特別有意義。 幸運的是，您可以變更使用下列選項之一的文字︰
 
 1. 附加`JournalEntry.Name`的屬性值。
 
@@ -400,7 +400,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 #### <a name="navigating-the-journal-using-wpf"></a>巡覽使用 WPF 的日誌
 
-雖然使用者可以使用[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]中的 [**上一頁**]、[**下一頁**] 和 [**最近] 頁面**來流覽日誌, 但是您也可以使用所提供的宣告式和[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程式設計機制來流覽日誌。 這麼做的其中一個原因是在您的[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]頁面中提供自訂導覽。
+雖然使用者可以使用 Internet Explorer 中的 [**上一頁**]、[**下一頁**] 和 [**最近] 頁面**來流覽日誌, 但您也可以使用所提供的宣告式和[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程式設計機制來流覽日誌。 這麼做的其中一個原因是在您的[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]頁面中提供自訂導覽。
 
 您可以使用所公開<xref:System.Windows.Input.NavigationCommands>的導覽命令, 以宣告方式加入日誌流覽支援。 下列範例示範如何使用`BrowseBack`導覽命令。
 
@@ -547,7 +547,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 - 中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的 Cookie 支援對所有支援的瀏覽器都是相同的。
 
-- 在[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]中, 會[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]接受與 cookie 相關的 P3P 原則, 特別是關於第一方和協力廠商[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。
+- 在 Internet Explorer 中, 會接受[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]與 cookie 相關的 P3P 原則, 特別是關於第一方和協力廠商。 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]
 
 <a name="Structured_Navigation"></a>
 
@@ -606,7 +606,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 ![對話方塊](./media/navigation-overview/navigation-window-as-dialog-box.png "作為對話方塊的導覽視窗")
 
-如您所見, <xref:System.Windows.Navigation.NavigationWindow>會[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]顯示樣式的 [**上一頁**] 和 [**下一頁**] 按鈕, 讓使用者可以流覽日誌。 這些按鈕提供相同的使用者體驗，如下圖所示。
+如您所見, <xref:System.Windows.Navigation.NavigationWindow>會顯示 Internet Explorer 樣式的 [**上一頁**] 和 [**下一頁**] 按鈕, 讓使用者可以流覽日誌。 這些按鈕提供相同的使用者體驗，如下圖所示。
 
 ![NavigationWindow 中的 [上一頁] 和 [下一頁] 按鈕](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "導覽視窗中的 [上一頁] 和 [下一頁] 按鈕")
 
@@ -646,7 +646,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 ![使用自己的日誌的框架](./media/navigation-overview/frame-uses-its-own-journal.png "這會顯示在使用自己的日誌的框架內流覽的效果。")
 
-請注意[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.Frame>, 中的導覽會顯示日誌項目, 而不[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]是。
+請注意[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] <xref:System.Windows.Controls.Frame>, 中的導覽會顯示日誌項目, 而不是 Internet Explorer。
 
 > [!NOTE]
 > 如果是裝載<xref:System.Windows.Window>于中之內容的一部分, <xref:System.Windows.Controls.Frame>則會使用自己的日誌, 因此會顯示它自己的導覽[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 <xref:System.Windows.Controls.Frame>

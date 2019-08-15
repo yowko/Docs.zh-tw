@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796780"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817950"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者透過 Windows 與 Windows Presentation Foundation (WPF) 獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式會<xref:System.Windows.Window>使用類別來提供自己的視窗。 本主題將<xref:System.Windows.Window>介紹在獨立應用程式中建立和管理 windows 的基本概念。  
   
 > [!NOTE]
->  瀏覽器裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的應用程式[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (包括[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和鬆散頁面) 不會提供自己的視窗。 相反地, 它們是裝載于所提供[!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]的 windows 中。 請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。  
+>  瀏覽器裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的應用程式[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (包括[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和鬆散頁面) 不會提供自己的視窗。 相反地, 它們是裝載于 Windows Internet Explorer 所提供的 windows 中。 請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 類別  

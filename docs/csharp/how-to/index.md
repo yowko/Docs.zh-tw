@@ -2,12 +2,12 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 92f7e94d8003823c0b166cc617563e63aba78027
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400745"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038012"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -19,7 +19,6 @@ ms.locfileid: "68400745"
 
 - [使用物件初始設定式將物件初始化](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)。
 - [了解向方法傳遞結構及類別的不同](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
-- [使用全域命名空間別名解決類型名稱衝突](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。
 - [使用運算子多載](../language-reference/operators/operator-overloading.md)。
 - [實作和呼叫自訂擴充方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
 - 連 C# 程式設計人員都可能想要[從 VB 使用`My` 命名空間](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。

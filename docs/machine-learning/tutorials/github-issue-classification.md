@@ -1,15 +1,15 @@
 ---
 title: 教學課程：分類支援問題 - 多類別分類
 description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitHub 問題，以將它們指派至特定區域。
-ms.date: 05/16/2019
+ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195579"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710297"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教學課程：搭配 ML .NET 使用多類別分類來分類支援問題
 
@@ -37,25 +37,25 @@ ms.locfileid: "66195579"
 
 ### <a name="create-a-project"></a>建立專案
 
-1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "GitHubIssueClassification"，然後選取 [確定] 按鈕。
+1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]   >  [新增]   >  [專案]  。 在 [新增專案]  對話方塊中，選取 [Visual C#]  節點，然後選取 [.NET Core]  節點。 然後選取 [主控台應用程式 (.NET Core)]  專案範本。 在 [名稱]  文字方塊中，鍵入 "GitHubIssueClassification"，然後選取 [確定]  按鈕。
 
 2. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集檔案：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [新增] > [新增資料夾]。 輸入 "Data"，然後按 Enter。
+    在 [方案總管]  中，於您的專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增資料夾]  。 輸入 "Data"，然後按 Enter。
 
 3. 在您的專案中建立名為 *Models* 的目錄，以儲存您的模型：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [新增] > [新增資料夾]。 鍵入 "Models"，然後按 ENTER。
+    在 [方案總管]  中，於您的專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增資料夾]  。 鍵入 "Models"，然後按 ENTER。
 
-4. 安裝「Microsoft.ML NuGet 套件」：
+4. 安裝「Microsoft.ML NuGet 套件」  ：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為套件來源、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、在清單中選取 **v 1.0.0** 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為套件來源、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、在清單中選取 **v 1.0.0** 套件，然後選取 [安裝]  按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受]  對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。
 
 ### <a name="prepare-your-data"></a>準備您的資料
 
 1. 下載 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 資料集，並將它們儲存至先前建立的 *Data* 資料夾。 第一個資料集會將機器學習模型定型，第二個資料集則可用來評估您模型的準確率。
 
-2. 在 [方案總管] 中，於每個 \*.tsv 檔案上按一下滑鼠右鍵，然後選取 [屬性]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
+2. 在 [方案總管] 中，於每個 \*.tsv 檔案上按一下滑鼠右鍵，然後選取 [屬性]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
@@ -78,9 +78,9 @@ ms.locfileid: "66195579"
 
 為輸入資料和預測建立一些類別。 將新類別新增至專案：
 
-1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
+1. 在 [方案總管]  中，於專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增項目]  。
 
-1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *GitHubIssueData.cs*。 接著，選取 [新增] 按鈕。
+1. 在 [新增項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *GitHubIssueData.cs*。 接著，選取 [新增]  按鈕。
 
     *GitHubIssueData.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 `using` 陳述式新增至 *GitHubIssueData.cs* 最上方：
 
@@ -285,6 +285,25 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
+### <a name="save-the-model-to-a-file"></a>將模型儲存至檔案
+
+滿意您的模型之後，請將它儲存至檔案，以便稍後或在另一個應用程式中進行預測。 將下列程式碼加入至 `Evaluate` 方法。 
+
+[!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
+
+在您的 `Evaluate`方法下方建立 `SaveModelAsFile` 方法。
+
+```csharp
+private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
+{
+
+}
+```
+
+將下列程式碼新增至 `SaveModelAsFile` 方法。 此程式碼使用 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 方法，將定型的模型序列化並儲存為 ZIP 檔案。
+
+[!code-csharp[SnippetSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetSaveModel)]
+
 ## <a name="deploy-and-predict-with-a-model"></a>部署及使用模型進行預測
 
 請使用下列程式碼，在緊接著 `Evaluate` 方法呼叫底下，從 `Main` 方法新增對新方法的呼叫：
@@ -302,10 +321,15 @@ private static void PredictIssue()
 
 `PredictIssue` 方法會執行下列工作：
 
+* 載入已儲存的模型
 * 建立測試資料的單一問題。
 * 根據測試資料預測區域。
 * 合併測試資料和預測來進行報告。
 * 顯示預測的結果。
+
+將下列程式碼新增至 `PredictIssue` 方法，以將已儲存模型載入至您的應用程式：
+
+[!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
 透過建立 `GitHubIssue` 的執行個體，在 `Predict` 方法中新增 GitHub 問題，以測試所定型模型的預測：
 

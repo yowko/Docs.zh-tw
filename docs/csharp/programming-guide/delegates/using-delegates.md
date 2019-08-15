@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363783"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868842"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委派 (C# 程式設計手冊)
 [委派](../../../csharp/language-reference/keywords/delegate.md)是可以安全封裝方法的類型，類似於 C 和 C++ 中的函式指標。 與 C 函式指標不同之處在於，委派為物件導向且類型安全，同時安全性較佳。 委派的類型由委派的名稱所定義。 下列範例宣告名為 `Del` 的委派，其可封裝採用[字串](../../../csharp/language-reference/keywords/string.md)作為引數並傳回 [void](../../../csharp/language-reference/keywords/void.md) 的方法：  
@@ -49,7 +49,7 @@ ms.locfileid: "68363783"
   
  [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]  
   
- 此時，`allMethodsDelegate` 在其引動過程清單中包含三種方法：`Method1`、`Method2` 和 `DelegateMethod`。 原始的三個委派 `d1`、`d2` 和 `d3` 維持不變。 當叫用 `allMethodsDelegate` 時，會依序呼叫所有三個方法。 如果委派使用參考參數，則參考會依序傳入這三個方法中的每一個，而且任一方法所做的任何變更，下一個方法都看得到。 當任一方法擲回未在該方法內攔截到例外狀況時，該例外狀況會傳遞至委派的呼叫端，且不會呼叫引動過程清單中的任何後續方法。 如果委派具有傳回值和 (或) 輸出參數，則它會傳回所叫用之最後一個方法的傳回值與參數。 若要移除引動過程清單中的方法，請使用遞減或遞減指派運算子 ('-' 或 '-= ')。 例如：  
+ 此時，`allMethodsDelegate` 在其引動過程清單中包含三種方法：`Method1`、`Method2` 和 `DelegateMethod`。 原始的三個委派 `d1`、`d2` 和 `d3` 維持不變。 當叫用 `allMethodsDelegate` 時，會依序呼叫所有三個方法。 如果委派使用參考參數，則參考會依序傳入這三個方法中的每一個，而且任一方法所做的任何變更，下一個方法都看得到。 當任一方法擲回未在該方法內攔截到例外狀況時，該例外狀況會傳遞至委派的呼叫端，且不會呼叫引動過程清單中的任何後續方法。 如果委派具有傳回值和 (或) 輸出參數，則它會傳回所叫用之最後一個方法的傳回值與參數。 若要將方法從引動過程清單中移除，請使用[減去或減去指派運算子](../../language-reference/operators/subtraction-operator.md) (`-` 或 `-=`)。 例如：  
   
  [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]  
   

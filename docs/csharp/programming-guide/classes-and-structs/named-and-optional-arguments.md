@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 16426a6149714fce4ddb188471a72d8f63f45b96
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 74cfc6a425e82014bbcf5093f52f476ff09db130
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170445"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796553"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
 C# 4 引進具名和選擇性引數。 「具名引數」  可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」  可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
@@ -47,7 +47,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」  可讓您使用參數
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _開頭為 C# 7.2_，它們會用於正確的位置。 在下列範例中，`orderNum` 參數位於正確位置，但未明確命名。
+- _從 C# 7.2 開始_，它們會用於正確的位置。 在下列範例中，`orderNum` 參數位於正確位置，但未明確命名。
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
@@ -72,7 +72,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」  可讓您使用參數
   
 - `new ValType()` 形式的運算式，其中 `ValType` 是實值型別，例如 [enum](../../../csharp/language-reference/keywords/enum.md) 或 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)；  
   
-- [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) 形式的運算式，其中 `ValType` 是實值型別。  
+- [default(ValType)](../../../csharp/language-reference/operators/default.md) 形式的運算式，其中 `ValType` 是實值型別。  
   
  選擇性參數是定義在參數清單的結尾，在任何必要參數之後。 如果呼叫端為任何一個連續的選擇性參數提供引數，它就必須提供所有前面選擇性參數的引數。 不支援引數清單使用逗點分隔間距。 例如，在下列程式碼中，執行個體方法 `ExampleMethod` 使用一個必要參數及兩個選擇性參數來定義。  
   

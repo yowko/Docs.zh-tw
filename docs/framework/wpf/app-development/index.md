@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 56dbdfd70dd335d32224d11c31a5e64abd3124af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655455"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817994"
 ---
 # <a name="application-development"></a>應用程式開發
-<a name="introduction"></a> Windows Presentation Foundation (WPF) 是一種展示架構，可用來開發下列類型的應用程式：  
+<a name="introduction"></a>Windows Presentation Foundation (WPF) 是一種呈現架構, 可用來開發下列類型的應用程式:  
   
 - 獨立應用程式 (建置為可執行組件的傳統式 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 應用程式，這些應用程式會安裝到用戶端電腦並從中執行)。  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (以瀏覽頁面組成的應用程式，這些應用程式會建置為可執行組件，並由 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Mozilla Firefox 等網頁瀏覽器裝載)。  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](應用程式是由建立為可執行元件並由網頁瀏覽器 (例如 Microsoft Internet Explorer 或 Mozilla Firefox) 所裝載的流覽頁面所組成。  
   
 - 自訂控制項程式庫 (非可執行組件，其中包含可重複使用的控制項)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64655455"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 擴充核心支援在 Microsoft.NET Framework 中的內嵌資源具有支援的非可執行資料檔案的三種： 資源、 內容和資料。 如需詳細資訊，請參閱 [WPF 應用程式資源、內容和資料檔案](wpf-application-resource-content-and-data-files.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]為內嵌資源擴充 Microsoft .NET Framework 中的核心支援, 並支援三種無法執行的資料檔案: 資源、內容和資料。 如需詳細資訊，請參閱 [WPF 應用程式資源、內容和資料檔案](wpf-application-resource-content-and-data-files.md)。  
   
  支援 WPF 非可執行資料檔案的關鍵之一，就是能夠使用唯一 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 來識別及載入這些檔案。 如需詳細資訊，請參閱 [WPF 中的 Pack URI](pack-uris-in-wpf.md)。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "64655455"
   
  <xref:System.Windows.Window> 可建立一種特殊的視窗類型，稱為對話方塊。 您可以建立強制回應和非強制回應類型的對話方塊。  
   
- 為了方便起見，和可重複使用性和跨應用程式，提供一致的使用者體驗的優點[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]會公開三個常見的 [Windows] 對話方塊： <xref:Microsoft.Win32.OpenFileDialog>， <xref:Microsoft.Win32.SaveFileDialog>，和<xref:System.Windows.Controls.PrintDialog>。  
+ 為了方便起見, 以及跨應用[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程式的重複使用性和一致使用者體驗的優點, 公開了三個通用 Windows 對話方塊: <xref:Microsoft.Win32.OpenFileDialog>、 <xref:System.Windows.Controls.PrintDialog> <xref:Microsoft.Win32.SaveFileDialog>和。  
   
  訊息方塊是一種特殊的對話方塊類型，可將重要的文字資訊顯示給使用者，以及詢問簡單的「是/否/確定/取消」問題。 您可以使用 <xref:System.Windows.MessageBox> 類別來建立及顯示訊息方塊。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "64655455"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>裝載  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以裝載於 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Firefox。 每個裝載模型有各自的一組考量和條件約束，[裝載](hosting-wpf-applications.md)中將進行說明。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]可以裝載于 Microsoft Internet Explorer 或 Firefox 中。 每個裝載模型有各自的一組考量和條件約束，[裝載](hosting-wpf-applications.md)中將進行說明。  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>建置和部署  
@@ -119,7 +119,7 @@ ms.locfileid: "64655455"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[應用程式管理概觀](application-management-overview.md)|提供 <xref:System.Windows.Application> 類別的概觀，包括管理應用程式存留期、視窗、應用程式資源和瀏覽。|  
 |[WPF 中的視窗](windows-in-wpf-applications.md)|提供在應用程式中管理視窗的詳細資料，包括如何使用 <xref:System.Windows.Window> 類別和對話方塊。|  

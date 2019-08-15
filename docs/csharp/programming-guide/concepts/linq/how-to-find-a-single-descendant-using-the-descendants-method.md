@@ -2,12 +2,12 @@
 title: 作法：使用 Descendants 方法尋找單一子系 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: 1979814a2a1485938b584d7774b76a020c885f0c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 726c89b8fdd3df774de2d7ac9a824f2b3769d404
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486836"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709958"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>作法：使用 Descendants 方法尋找單一子系 (C#)
 您可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸方法快速撰寫程式碼以尋找唯一具名的單一項目。 當您想要利用特定名稱尋找特定子代時，這個技術特別實用。 您可以撰寫程式碼來導覽所需的項目，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸撰寫程式碼通常比較快也比較容易。  
@@ -43,7 +43,7 @@ GC3 Value
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
+ 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
 ```csharp  
 XElement root = XElement.Parse(@"<aw:Root xmlns:aw='http://www.adventure-works.com'>  

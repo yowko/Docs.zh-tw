@@ -2,12 +2,12 @@
 title: C# 語言版本控制 - C# 指南
 description: 了解如何根據您的專案決定 C# 語言版本，以及您可以手動調整的不同值。
 ms.date: 07/10/2019
-ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236102"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796539"
 ---
 # <a name="c-language-versioning"></a>C# 語言版本控制
 
@@ -28,7 +28,7 @@ C# 編譯器會根據您專案的目標架構判斷預設語言版本。 這是�
 
 當您的專案是以具有對應預覽語言版本為目標的預覽架構時，所使用的語言版本將會是預覽語言版本。 這能確保可讓您利用最新功能，保證可在任何環境中使用該預覽，而不會影響對已發行之 .NET Core 版本為目標的專案。
 
-## <a name="overriding-a-default"></a>覆寫預設值
+## <a name="override-a-default"></a>覆寫預設
 
 如果您必須明確指定您的 C# 版本，您可以透過數種方式進行：
 
@@ -38,7 +38,7 @@ C# 編譯器會根據您專案的目標架構判斷預設語言版本。 這是�
 
 ### <a name="edit-the-project-file"></a>編輯專案檔
 
-您可以在專案檔中設定語言版本。 舉例而言，如果您明確希望存取預覽功能，您可以新增像這樣的項目：
+您可以在專案檔中設定語言版本。 例如，如果您明確希望存取預覽功能，您可以新增如下元素：
 
 ```xml
 <PropertyGroup>
@@ -46,7 +46,7 @@ C# 編譯器會根據您專案的目標架構判斷預設語言版本。 這是�
 </PropertyGroup>
 ```
 
-`preview` 值會使用編譯器支援的最新預覽 C# 語言。
+`preview` 值會使用編譯器支援的最新預覽 C# 語言語言。
 
 ### <a name="configure-multiple-projects"></a>設定多個專案
 

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 4852e1166a975b1a45c5bd905123a35fc846aa28
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: c455804923f4d0e7cc8f556bb9b9df34b6332d82
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513122"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796523"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 運算子 (C# 參考)
 
-`sizeof` 運算子會返回指定型別變數所佔用的位元組總數。 `sizeof` 運算子的引數必須是 [unmanaged 型別](../builtin-types/unmanaged-types.md)的名稱，或是[限制](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)為 unmanaged 型別的型別參數。
+`sizeof` 運算子會返回指定型別變數所佔用的位元組總數。 `sizeof` 運算子的引數必須是[非受控型別](../builtin-types/unmanaged-types.md)的名稱，或是[限制](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)為非受控型別的型別參數。
 
 `sizeof` 運算子需要 [unsafe](../keywords/unsafe.md) 內容。 但是，下表顯示的運算式會在編譯時評估至對應的常數值，因此不需要 unsafe 內容：
 

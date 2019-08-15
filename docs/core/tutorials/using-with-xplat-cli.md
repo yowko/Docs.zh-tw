@@ -1,16 +1,17 @@
 ---
 title: 使用 CLI 開始使用 .NET Core
 description: 本逐步教學課程說明如何使用 .NET Core 命令列介面 (CLI) 在 Windows、Linux 或 macOS 上開始使用 .NET Core。
-author: cartermp
-ms.date: 09/10/2018
+author: thraka
+ms.author: adegeo
+ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 88e9501a776a026a311c5002674c15acf2324f2b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545360"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868596"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列開始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -59,7 +60,7 @@ dotnet run
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   `dotnet new` 會隱含地呼叫 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 呼叫 [NuGet](https://www.nuget.org/) (.NET 套件管理員)，以還原相依性的樹狀結構。 NuGet 會分析 Hello.csproj 檔案、下載檔案中所述的相依性 (或從您電腦上的快取抓取)，並寫入 obj/project.assets.json 檔案，該檔案是編譯及執行範例的必要項目。
+   `dotnet new` 會隱含地呼叫 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 呼叫 [NuGet](https://www.nuget.org/) (.NET 套件管理員)，以還原相依性的樹狀結構。 NuGet 會分析 Hello.csproj  檔案、下載檔案中所述的相依性 (或從您電腦上的快取抓取)，並寫入 obj/project.assets.json  檔案，該檔案是編譯及執行範例的必要項目。
 
    > [!IMPORTANT]
    > 如果您使用 .NET Core 1.x 版本的 SDK，則必須在呼叫 `dotnet new` 之後自行呼叫 `dotnet restore`。
@@ -153,10 +154,23 @@ dotnet run
    377
    ```
 
-就是這麼容易！ 現在，您可以開始使用這裡學到的基本概念，建立您自己的程式。
+## <a name="publish-your-app"></a>發佈您的應用程式
 
-請注意，本教學課程中所示用於執行應用程式的命令和步驟，僅供開發階段期間使用。 準備好部署應用程式之後，您將需要檢視不同的 .NET Core 應用程式[部署策略](../deploying/index.md)及 [`dotnet publish`](../tools/dotnet-publish.md) 命令。
+一旦您準備好散發您的應用程式，請使用 [`dotnet publish`](../tools/dotnet-publish.md) 命令在 _bin\\debug\\netcoreapp2.1\\publish\\_ 中產生 _publish_ 資料夾 (針對非 Windows 系統，請使用 `/`)。 您可以將 _publish_  資料夾的內容散發到其他平台，只要那些平台已安裝 dotnet 執行階段。
+
+您可以使用 [dotnet](../tools/dotnet.md) 命令來執行已發佈的應用程式：
+
+```console
+$ dotnet bin\Debug\netcoreapp2.1\publish\Hello.dll
+Hello World!
+```
+
+## <a name="conclusion"></a>結論
+
+就是這麼容易！ 現在，您可以開始使用這裡學到的基本概念，建立您自己的程式。
 
 ## <a name="see-also"></a>另請參閱
 
 - [使用 .NET Core CLI 工具組織和測試專案](testing-with-cli.md)
+- [使用 CLI 發佈 .NET Core 應用程式](../deploying/deploy-with-cli.md)
+- [深入了解應用程式部署](../deploying/index.md)

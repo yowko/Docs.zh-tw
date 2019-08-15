@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 9adceb78f53d9c855ec05859a0b3449a1623e62b
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796837"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971953"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、轉換及格式化影像。  
 
-<a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF 影像處理元件  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 提供 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 內重要的影像處理增強功能。 影像處理功能 (例如顯示點陣圖或在通用控制項上使用影像) 先前依賴 Microsoft Windows 圖形裝置介面 (GDI) 或 Microsoft Windows GDI + 程式庫。 這些 API 提供基準影像處理功能, 但缺少支援編解碼器擴充性和高精確度影像支援等功能。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]的設計目的是要克服 GDI 和 GDI + 的缺點, 並提供一組新的 API, 在您的應用程式內顯示及使用影像。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "68796837"
   
 - 新的或專屬影像格式的擴充性模型。  
   
-- 改善原生影像格式的效能和安全性, 包括點陣圖 (BMP [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]) [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、 [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、、圖形交換格式 (GIF) 和圖示 (.ico)。  
+- 改善原生映射格式的效能和安全性, 包括點陣圖 (BMP)、聯合 Photographics 專家群組 (JPEG [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]) [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、 [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、、、圖形交換格式 (GIF) 和圖示 (.ico)。  
   
 - 高位元深度影像資料最多可保留每色頻 8 位元 (每像素 32 位元)。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "68796837"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 影像格式  
- 轉碼器可以用來將特定媒體格式解碼或編碼。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]包含[!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]BMP、 [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、GIF 和圖示影像格式的編解碼器。 每個轉碼器都可以讓應用程式解碼和編碼各自的影像格式 (但 ICON 在編碼部分是例外)。  
+ 轉碼器可以用來將特定媒體格式解碼或編碼。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]包含 BMP、JPEG、 [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、GIF 和圖示影像格式的編解碼器。 每個轉碼器都可以讓應用程式解碼和編碼各自的影像格式 (但 ICON 在編碼部分是例外)。  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>是用於解碼和編碼影像的重要類別。 它是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 管線的基本建置組塊，代表在特定大小和解析度下的單一固定像素集。 可以是多個框架影像的個別框架, 也可以是<xref:System.Windows.Media.Imaging.BitmapSource>在上執行之轉換的結果。 <xref:System.Windows.Media.Imaging.BitmapSource> 這是影像中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]所使用之許多主要類別的父系, <xref:System.Windows.Media.Imaging.BitmapFrame>例如。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "68796837"
 ## <a name="image-metadata"></a>影像中繼資料  
  某些影像檔包含描述檔案內容或特性的中繼資料。 例如，大部分數位相機建立的影像，會包含用來擷取影像之相機廠牌與型號的中繼資料。 每種影像格式處理中繼資料的方式也有所不同，但 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可針對每種支援的影像格式提供統一的中繼資料儲存及擷取方式。  
   
- 中繼資料的存取是透過<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> <xref:System.Windows.Media.Imaging.BitmapSource>物件的屬性來提供。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata>傳回物件, 其中包含影像所包含的所有中繼資料。 此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]支援下列影像中繼資料架構:交換影像檔案 (Exif)、文字 (PNG 文字資料)、影像檔案目錄 (IFD [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)])、 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]和。  
+ 中繼資料的存取是透過<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> <xref:System.Windows.Media.Imaging.BitmapSource>物件的屬性來提供。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata>傳回物件, 其中包含影像所包含的所有中繼資料。 此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]支援下列影像中繼資料架構:交換影像檔 (Exif)、文字 (PNG 文字資料)、影像檔案目錄 (IFD)、國際按電信委員會 (IPTC) 及[!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
   
  為了簡化讀取中繼資料的程式<xref:System.Windows.Media.Imaging.BitmapMetadata> , 提供了數個名為的屬性, 可以輕鬆地存取<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, 例如、 <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>和。 許多具名屬性也可以用於寫入中繼資料。 讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。 方法是藉由提供字串查詢 (例如 *"/app1/exif/"* ), 用來抓取中繼資料查詢讀取器。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 在下列範例中, <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>是用來取得儲存在 *"/Text/Description"* 位置的文字。  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: d8e26ff197e22ffa18b4acdd020b80879023c0f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364086"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818016"
 ---
 # <a name="application-management-overview"></a>應用程式管理概觀
 所有應用程式通常會共用一組適用於應用程式實作和管理的通用功能。 本主題提供建立和管理應用程式之<xref:System.Windows.Application>類別中的功能總覽。  
@@ -293,7 +293,7 @@ ms.locfileid: "68364086"
   
 - XBAP 會離開。  
   
-- 在[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]中, 當裝載 XBAP 的索引標籤已關閉時。  
+- 在 Internet Explorer 中, 當裝載 XBAP 的索引標籤已關閉時。  
   
 - 關閉瀏覽器時。  
   

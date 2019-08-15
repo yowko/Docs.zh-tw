@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306660"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796450"
 ---
 # <a name="lock-statement-c-reference"></a>lock 陳述式 (C# 參考)
 
@@ -65,7 +65,7 @@ finally
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [lock 陳述式](~/_csharplang/spec/statements.md#the-lock-statement)一節。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -74,5 +74,4 @@ finally
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
-- [陳述式關鍵字](statement-keywords.md)
 - [同步處理原始物件概觀](../../../standard/threading/overview-of-synchronization-primitives.md)
