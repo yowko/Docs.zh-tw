@@ -90,7 +90,7 @@ Func<string, bool> whereClause = default;
 
 這項增強功能也會變更 [default 關鍵字](../language-reference/keywords/default.md)的部分剖析規則。
 
-## <a name="inferred-tuple-element-names"></a>推斷的元組項目名稱
+## <a name="inferred-tuple-element-names"></a>推斷的 Tuple 元素名稱
 
 本方法為 C# 7.0 版本 Tuple 方法的改進， 許多時候，當您初始化 Tuple 時，用於指派右側的變數會與您想要的元組項目名稱相同：
 
