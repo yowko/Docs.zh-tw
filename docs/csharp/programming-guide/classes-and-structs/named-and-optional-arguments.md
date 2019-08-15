@@ -47,7 +47,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」  可讓您使用參數
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _開頭為 C# 7.2_ ，它們會用於正確的位置。 在下列範例中，`orderNum` 參數位於正確位置，但未明確命名。
+- _從 C# 7.2 開始_，它們會用於正確的位置。 在下列範例中，`orderNum` 參數位於正確位置，但未明確命名。
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
