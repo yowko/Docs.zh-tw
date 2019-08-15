@@ -88,6 +88,7 @@ Func<string, bool> whereClause = default;
 
 如需詳細資訊，請參閱[預設運算子](../language-reference/operators/default.md)一文中的[預設常值](../language-reference/operators/default.md#default-literal)一節。
 
+
 ## <a name="inferred-tuple-element-names"></a>推斷的 Tuple 元素名稱
 
 本方法為 C# 7.0 版本 Tuple 方法的改進， 許多時候，當您初始化 Tuple 時，用於指派右側的變數會與您想要的元組項目名稱相同：
