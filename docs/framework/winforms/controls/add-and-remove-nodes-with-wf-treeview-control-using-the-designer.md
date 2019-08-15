@@ -7,39 +7,36 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
-ms.openlocfilehash: 71ada3235343aa7e014e12ebf5b367ec744b00d3
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: ef3a963b5621f0b972b02a007681f600fbdb1050
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959667"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040069"
 ---
-# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a><span data-ttu-id="02993-102">作法：使用設計工具以 Windows Forms TreeView 控制項新增和移除節點</span><span class="sxs-lookup"><span data-stu-id="02993-102">How to: Add and Remove Nodes with the Windows Forms TreeView Control Using the Designer</span></span>
+# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a><span data-ttu-id="f8134-102">作法：使用設計工具以 Windows Forms TreeView 控制項新增和移除節點</span><span class="sxs-lookup"><span data-stu-id="f8134-102">How to: Add and Remove Nodes with the Windows Forms TreeView Control Using the Designer</span></span>
 
-<span data-ttu-id="02993-103">因為 Windows Form<xref:System.Windows.Forms.TreeView>控制項會顯示節點階層的方式，新增節點，您必須注意其父節點的功能時。</span><span class="sxs-lookup"><span data-stu-id="02993-103">Because the Windows Forms <xref:System.Windows.Forms.TreeView> control displays nodes in a hierarchical manner, when adding a node you must pay attention to what its parent node is.</span></span>
+<span data-ttu-id="f8134-103">由於 Windows Forms <xref:System.Windows.Forms.TreeView>控制項會以階層方式顯示節點, 因此當加入節點時, 您必須注意其父節點為何。</span><span class="sxs-lookup"><span data-stu-id="f8134-103">Because the Windows Forms <xref:System.Windows.Forms.TreeView> control displays nodes in a hierarchical manner, when adding a node you must pay attention to what its parent node is.</span></span>
 
-<span data-ttu-id="02993-104">下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.TreeView>控制項。</span><span class="sxs-lookup"><span data-stu-id="02993-104">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.TreeView> control.</span></span> <span data-ttu-id="02993-105">如需這類專案的設定資訊，請參閱[How to:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[How to:將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="02993-105">For information about setting up such a project, see [How to: Create a Windows Forms application project](/visualstudio/ide/step-1-create-a-windows-forms-application-project) and [How to: Add Controls to Windows Forms](how-to-add-controls-to-windows-forms.md).</span></span>
+<span data-ttu-id="f8134-104">下列程式需要具有包含<xref:System.Windows.Forms.TreeView>控制項之表單的**Windows 應用程式**專案。</span><span class="sxs-lookup"><span data-stu-id="f8134-104">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.TreeView> control.</span></span> <span data-ttu-id="f8134-105">如需設定這類專案的相關資訊, [請參閱如何:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project) , [以及如何:將控制項新增至](how-to-add-controls-to-windows-forms.md)Windows Forms。</span><span class="sxs-lookup"><span data-stu-id="f8134-105">For information about setting up such a project, see [How to: Create a Windows Forms application project](/visualstudio/ide/step-1-create-a-windows-forms-application-project) and [How to: Add Controls to Windows Forms](how-to-add-controls-to-windows-forms.md).</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="02993-106">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="02993-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="02993-107">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="02993-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="02993-108">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="02993-108">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>
+### <a name="to-add-or-remove-nodes-in-the-designer"></a><span data-ttu-id="f8134-106">若要在設計工具中加入或移除節點</span><span class="sxs-lookup"><span data-stu-id="f8134-106">To add or remove nodes in the designer</span></span>
 
-### <a name="to-add-or-remove-nodes-in-the-designer"></a><span data-ttu-id="02993-109">若要新增或移除節點，在設計工具</span><span class="sxs-lookup"><span data-stu-id="02993-109">To add or remove nodes in the designer</span></span>
+1. <span data-ttu-id="f8134-107">選取 <xref:System.Windows.Forms.TreeView> 控制項。</span><span class="sxs-lookup"><span data-stu-id="f8134-107">Select the <xref:System.Windows.Forms.TreeView> control.</span></span>
 
-1. <span data-ttu-id="02993-110">選取 <xref:System.Windows.Forms.TreeView> 控制項。</span><span class="sxs-lookup"><span data-stu-id="02993-110">Select the <xref:System.Windows.Forms.TreeView> control.</span></span>
+2. <span data-ttu-id="f8134-108">在 [**屬性**] 視窗中<xref:System.Windows.Forms.TreeView.Nodes%2A> , 按一下屬性![旁邊的**省略號**([Visual Studio](./media/visual-studio-ellipsis-button.png)的屬性視窗中的省略號按鈕 (...)] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="f8134-108">In the **Properties** window, click the **Ellipsis** (![The Ellipsis button (...) in the Properties window of Visual Studio.](./media/visual-studio-ellipsis-button.png)) button next to the <xref:System.Windows.Forms.TreeView.Nodes%2A> property.</span></span>
 
-2. <span data-ttu-id="02993-111">在 [**屬性**] 視窗中，按一下**省略符號**(![。 Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）](./media/visual-studio-ellipsis-button.png)) 按鈕旁<xref:System.Windows.Forms.TreeView.Nodes%2A>屬性.</span><span class="sxs-lookup"><span data-stu-id="02993-111">In the **Properties** window, click the **Ellipsis** (![The Ellipsis button (...) in the Properties window of Visual Studio.](./media/visual-studio-ellipsis-button.png)) button next to the <xref:System.Windows.Forms.TreeView.Nodes%2A> property.</span></span>
+     <span data-ttu-id="f8134-109">[ **TreeNode 編輯器**] 隨即出現。</span><span class="sxs-lookup"><span data-stu-id="f8134-109">The **TreeNode Editor** appears.</span></span>
 
-     <span data-ttu-id="02993-112">**TreeNode 編輯器**隨即出現。</span><span class="sxs-lookup"><span data-stu-id="02993-112">The **TreeNode Editor** appears.</span></span>
+3. <span data-ttu-id="f8134-110">若要加入節點, 根節點必須存在;如果其中一個不存在, 您必須先按一下 [**新增根**] 按鈕來新增根。</span><span class="sxs-lookup"><span data-stu-id="f8134-110">To add nodes, a root node must exist; if one does not exist, you must first add a root by clicking the **Add Root** button.</span></span> <span data-ttu-id="f8134-111">然後, 您可以選取根節點或任何其他節點, 然後按一下 [**新增子**系] 按鈕, 以新增子節點。</span><span class="sxs-lookup"><span data-stu-id="f8134-111">You can then add child nodes by selecting the root or any other node and clicking the **Add Child** button.</span></span>
 
-3. <span data-ttu-id="02993-113">若要新增節點，必須要有一個根節點;如果不存在的話，您必須先按一下 [新增根**新增根**] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="02993-113">To add nodes, a root node must exist; if one does not exist, you must first add a root by clicking the **Add Root** button.</span></span> <span data-ttu-id="02993-114">然後您可以加入子節點選取根節點或任何其他節點，然後按一下**新增子系** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="02993-114">You can then add child nodes by selecting the root or any other node and clicking the **Add Child** button.</span></span>
+4. <span data-ttu-id="f8134-112">若要刪除節點, 請選取要刪除的節點, 然後按一下 [**刪除**] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="f8134-112">To delete nodes, select the node to delete and then click the **Delete** button.</span></span>
 
-4. <span data-ttu-id="02993-115">若要刪除節點，選取要刪除，然後按一下 [節點**刪除**] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="02993-115">To delete nodes, select the node to delete and then click the **Delete** button.</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8134-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f8134-113">See also</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="02993-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="02993-116">See also</span></span>
-
-- [<span data-ttu-id="02993-117">TreeView 控制項</span><span class="sxs-lookup"><span data-stu-id="02993-117">TreeView Control</span></span>](treeview-control-windows-forms.md)
-- [<span data-ttu-id="02993-118">TreeView 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="02993-118">TreeView Control Overview</span></span>](treeview-control-overview-windows-forms.md)
-- [<span data-ttu-id="02993-119">如何：設定 Windows Form TreeView 控制項的圖示</span><span class="sxs-lookup"><span data-stu-id="02993-119">How to: Set Icons for the Windows Forms TreeView Control</span></span>](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [<span data-ttu-id="02993-120">如何：逐一查看 Windows Forms TreeView 控制項的所有節點</span><span class="sxs-lookup"><span data-stu-id="02993-120">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [<span data-ttu-id="02993-121">如何：判斷按下哪個 TreeView 節點</span><span class="sxs-lookup"><span data-stu-id="02993-121">How to: Determine Which TreeView Node Was Clicked</span></span>](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [<span data-ttu-id="02993-122">如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="02993-122">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [<span data-ttu-id="f8134-114">TreeView 控制項</span><span class="sxs-lookup"><span data-stu-id="f8134-114">TreeView Control</span></span>](treeview-control-windows-forms.md)
+- [<span data-ttu-id="f8134-115">TreeView 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="f8134-115">TreeView Control Overview</span></span>](treeview-control-overview-windows-forms.md)
+- [<span data-ttu-id="f8134-116">如何：設定 Windows Forms TreeView 控制項的圖示</span><span class="sxs-lookup"><span data-stu-id="f8134-116">How to: Set Icons for the Windows Forms TreeView Control</span></span>](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [<span data-ttu-id="f8134-117">如何：逐一查看 Windows Forms TreeView 控制項的所有節點</span><span class="sxs-lookup"><span data-stu-id="f8134-117">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [<span data-ttu-id="f8134-118">如何：判斷按一下哪個 TreeView 節點</span><span class="sxs-lookup"><span data-stu-id="f8134-118">How to: Determine Which TreeView Node Was Clicked</span></span>](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [<span data-ttu-id="f8134-119">如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f8134-119">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](add-custom-information-to-a-treeview-or-listview-control-wf.md)
