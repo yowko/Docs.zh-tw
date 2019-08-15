@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916d62a2b79a44d92611e735c6f9bbb3e01970e2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7da0986269189ba5c2dfa0f10d509bf51deb446d
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782734"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040197"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 函式
-傳回指定的類型程式庫的相關資訊，藉由檢查其[TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr)結構。  
+藉由檢查[TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr)結構, 傳回指定之類型程式庫的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,32 +41,32 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="parameters"></a>參數  
  `szFile`  
- [in]型別程式庫檔案名稱。  
+ 在類型程式庫的檔案名。  
   
  `pTypeLibID`  
- [out]型別程式庫的 GUID。  
+ 脫銷類型程式庫的 GUID。  
   
  `pTypeLibLCID`  
- [out]當地語系化類型程式庫的識別碼。  
+ 脫銷類型程式庫的當地語系化識別碼。  
   
  `pTypeLibPlatform`  
- [out]A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind)識別目標作業系統類型程式庫的旗標。 常見的值為 SYS_WIN32 和 SYS_WIN64。  
+ 脫銷[SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind)旗標, 可識別類型程式庫的目標作業系統。 常見的值為 SYS_WIN32 和 SYS_WIN64。  
   
  `pTypeLibMajorVer`  
- [out]型別程式庫主要版本號碼。 例如，針對版本*x.y*，主要版本號碼是*x*。  
+ 脫銷類型程式庫的主要版本號碼。 例如, 針對版本*x. y*, 主要版本號碼為*x*。  
   
  `pTypeLibMinorVer`  
- [out]型別程式庫的次要版本號碼。 例如，針對版本*x.y*，次要版本號碼是*y*。  
+ 脫銷類型程式庫的次要版本號碼。 例如, 針對版本*x. y*, 次要版本號碼為*y*。  
   
 ## <a name="remarks"></a>備註  
- `GetTypeLibInfo`函式會呼叫[Tlbexp.exe （類型程式庫匯出工具）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)。 此工具會產生類型程式庫，描述 common language runtime (CLR) 組件中的類型。  
+ 此`GetTypeLibInfo`函式是由[tlbexp.exe (類型程式庫匯出工具)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)所呼叫。 此工具會產生類型程式庫, 以描述 common language runtime (CLR) 元件中的類型。  
   
- 如果任何參數為 null，則函數會傳回`HRESULT`的`E_POINTER`。 否則，它會傳回 `S_OK`。  
+ 如果有任何參數為 null, 函數`HRESULT`會傳回的。 `E_POINTER` 否則，它會傳回 `S_OK`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** TlbRef.h  
+ **標頭：** TlbRef。h  
   
  **LIBRARY:** TlbRef.lib  
   

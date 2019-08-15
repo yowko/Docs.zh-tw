@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629528"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039498"
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空間 (C# 程式設計手冊)
 
@@ -44,13 +44,12 @@ C# 程式設計大量使用命名空間的原因有兩個。 首先，.NET Frame
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[命名空間](~/_csharplang/spec/namespaces.md)一節。
   
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [使用命名空間](using-namespaces.md)
-- [如何：使用全域命名空間別名](how-to-use-the-global-namespace-alias.md)
 - [如何：使用 My 命名空間](how-to-use-the-my-namespace.md)
 - [識別碼名稱](../inside-a-program/identifier-names.md)
 - [using 指示詞](../../language-reference/keywords/using-directive.md)

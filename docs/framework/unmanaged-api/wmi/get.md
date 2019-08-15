@@ -1,6 +1,6 @@
 ---
-title: Get 函式 （Unmanaged API 參考）
-description: Get 函式會擷取指定之的屬性的值。
+title: Get 函式 (非受控 API 參考)
+description: Get 函式會抓取指定的屬性值。
 ms.date: 11/06/2017
 api_name:
 - Get
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 265d3edbd3175eebcf6fd35be24f5b66144c960f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746667"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037958"
 ---
 # <a name="get-function"></a>Get 函式
 
-若有的話，則擷取指定的屬性值。
+抓取指定的屬性值 (如果有的話)。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -46,51 +46,51 @@ HRESULT Get (
 ## <a name="parameters"></a>參數
 
 `vFunc`\
-[in]未使用此參數。
+在未使用此參數。
 
 `ptr`\
-[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
+在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `wszName`\
-[in]屬性的名稱。
+在屬性的名稱。
 
 `lFlags`\
-[in] 保留。 這個參數必須是 0。
+[in] 保留。 這個參數必須是0。
 
 `pVal`\
-[out]如果函式會傳回成功，則包含值的`wszName`屬性。 `pval`引數指派正確的型別和辨識符號值。
+脫銷如果函數傳回成功, 則包含`wszName`屬性的值。 已針對限定詞指派正確的類型和值給引數。`pval`
 
 `pvtType`\
-[out]如果函式會傳回成功，就會包含[CIM 類型常數](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)表示的屬性型別。 其值也可以是`null`。 
+脫銷如果函式傳回成功, 則包含表示屬性類型的[CIM 類型常數](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)。 其值也可以是`null`。 
 
 `plFlavor`\
-[out]如果函式會傳回成功，會收到之屬性的原點資訊。 其值可以是`null`，或其中一個定義中的下列 WBEM_FLAVOR_TYPE 常數*WbemCli.h*標頭檔： 
+脫銷如果函式傳回成功, 會接收屬性來源的相關資訊。 其值可以是`null`, 或是*WbemCli*標頭檔中所定義的下列其中一個 WBEM_FLAVOR_TYPE 常數: 
 
 |常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 屬性是標準的系統屬性。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 類別：屬性被繼承自父類別。 <br> 執行個體：屬性，而繼承自父類別中，有尚未修改的執行個體。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 類別：屬性屬於衍生的類別。 <br> 執行個體：執行個體; 所修改的屬性也就是所提供的值，或加入或修改限定詞。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 若為類別:屬性繼承自父類別。 <br> 針對實例:繼承自父類別的屬性尚未由實例修改。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 若為類別:屬性屬於衍生類別。 <br> 針對實例:屬性會由實例修改;也就是, 已提供值, 或已新增或修改限定詞。 |
 
 ## <a name="return-value"></a>傳回值
 
-此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
+這個函式所傳回的下列值會定義在*WbemCli*標頭檔中, 您也可以在程式碼中將它們定義為常數:
 
-|常數  |值  |描述  |
+|常數  |值  |說明  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | 已有一般失敗。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 找不到有效的一或多個參數。 |
+|`WBEM_E_FAILED` | 0x80041001 | 發生一般失敗。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一或多個參數無效。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的屬性。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成作業。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)方法。
+此函式會包裝對[IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)方法的呼叫。
 
-`Get`函式也可以傳回系統屬性。
+`Get`函數也可以傳回系統屬性。
 
-`pVal`引數指派正確的型別和值限定詞和 COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)函式
+已針對限定詞和 COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)函數指派正確的類型和值給引數`pVal`
 
 ## <a name="requirements"></a>需求
 
@@ -102,4 +102,4 @@ HRESULT Get (
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器 (非受控 API 參考)](index.md)

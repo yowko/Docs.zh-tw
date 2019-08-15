@@ -3,7 +3,5 @@
   items:
     - name: 使用命名空間
       href: using-namespaces.md
-    - name: HOW TO：使用全域命名空間別名
-      href: how-to-use-the-global-namespace-alias.md
-    - name: HOW TO：使用 My 命名空間
+    - name: 如何：使用 My 命名空間
       href: how-to-use-the-my-namespace.md

@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dce0e67479418cd8227c75fadd8872a41ae1a799
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9eef89c9e560da65d670ffe59649b44a64f8da6a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741343"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039599"
 ---
-# <a name="axlauthenticodetimestamperinfo-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO 結構
+# <a name="axl_authenticode_timestamper_info-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO 結構
 定義 Authenticode 時間戳記程式資訊。  
   
 ## <a name="syntax"></a>語法  
@@ -28,13 +28,13 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`cbSize`|此結構的大小。|  
 |`dwError`|錯誤碼。|  
 |`algHash`|雜湊演算法。|  
 |`ftTimestamp`|時間戳記的時間。|  
-|`pChainContext`|時間戳記程式的鏈結內容。  請參閱[CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context)結構。|  
+|`pChainContext`|時間戳記程式的鏈結內容。  請參閱[CERT_CONTEXT](/windows/win32/api/wincrypt/ns-wincrypt-cert_context)結構。|  
   
 ## <a name="see-also"></a>另請參閱
 

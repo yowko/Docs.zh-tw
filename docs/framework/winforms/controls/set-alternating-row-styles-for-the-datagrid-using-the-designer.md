@@ -8,36 +8,34 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: fea160e62939a27521592201cd47615975b7733f
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 1be746d4cce36344e034692a0e2e8e6a9e9320d5
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959408"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040431"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的替代資料列樣式
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>作法：使用設計工具設定 Windows Forms DataGridView 控制項的替代資料列樣式
 
-表格式資料通常是 ledger 的格式，其中的替代資料列有不同的背景色彩呈現。 這種格式可讓使用者輕鬆地指出每個資料列中有哪些儲存格，特別是具有許多資料行的寬資料表。
+表格式資料通常會以類似總帳的格式呈現, 其中的替代資料列會有不同的背景色彩。 這種格式可讓使用者輕鬆地指出每個資料列中有哪些儲存格，特別是具有許多資料行的寬資料表。
 
-利用 <xref:System.Windows.Forms.DataGridView> 控制項，您可以指定替代資料列的完整樣式資訊。 您可以使用例如前景色彩和字型、 背景色彩以外的樣式特性，來區分替代資料列。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。
+利用 <xref:System.Windows.Forms.DataGridView> 控制項，您可以指定替代資料列的完整樣式資訊。 除了背景色彩以外, 您還可以使用前景色彩和字型等樣式特性來區分替代資料列。 如需詳細資訊, 請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。
 
-下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.DataGridView>控制項。 如需這類專案的設定資訊，請參閱[How to:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[How to:將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。
+下列程式需要具有包含<xref:System.Windows.Forms.DataGridView>控制項之表單的**Windows 應用程式**專案。 如需設定這類專案的相關資訊, [請參閱如何:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project) , [以及如何:將控制項新增至](how-to-add-controls-to-windows-forms.md)Windows Forms。
 
-> [!NOTE]
-> 根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
 ### <a name="define-styles-for-alternating-rows"></a>定義替代資料列的樣式
 
-1. 選取<xref:System.Windows.Forms.DataGridView>設計工具中的控制項。
+1. 在設計工具中選取控制項。<xref:System.Windows.Forms.DataGridView>
 
-2. 在 [**屬性**] 視窗中，按一下省略符號按鈕 (![的省略符號按鈕 （...） 在 [屬性] 視窗的 Visual Studio。](./media/visual-studio-ellipsis-button.png)) 旁<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>屬性。
+2. 在 [**屬性**] 視窗中, 按一下![ <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>屬性旁邊的省略號按鈕 (Visual Studio](./media/visual-studio-ellipsis-button.png)的屬性視窗中的省略號按鈕 (...)。
 
-3. 在 [ **CellStyle 產生器**] 對話方塊中，藉由設定屬性，定義樣式，並使用**預覽**窗格，即可確認您的選擇。 您指定的樣式會用於顯示在控制項中，從第二個的其他每個資料列。
+3. 在 [ **CellStyle**產生器] 對話方塊中, 藉由設定屬性來定義樣式, 並使用 [**預覽**] 窗格來確認您的選擇。 您指定的樣式會用於控制項中顯示的每個其他資料列, 從第二個數據列開始。
 
-4. 若要定義其餘的資料列的樣式，重複步驟 2 和 3 使用<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>屬性。
+4. 若要定義其餘資料列的樣式, 請使用<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>屬性重複步驟2和3。
 
     > [!NOTE]
-    > 資料格會顯示使用繼承自多個屬性的樣式。 如需有關樣式繼承的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。
+    > 儲存格會使用繼承自多個屬性的樣式來顯示。 如需樣式繼承的詳細資訊, 請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。
 
 ## <a name="see-also"></a>另請參閱
 

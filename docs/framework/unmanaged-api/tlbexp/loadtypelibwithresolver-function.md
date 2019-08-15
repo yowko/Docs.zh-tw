@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d2f5ad2afb2e73acead82369782f142aa10aac3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b9bec757071a98e085ccdeee3fc66bfc07f52bc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782715"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040170"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函式
-載入類型程式庫，並使用所提供[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)來解析任何的內部參考的型別程式庫。  
+載入類型程式庫, 並使用提供的[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)來解析任何內部參考的類型程式庫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,60 +38,60 @@ HRESULT LoadTypeLibWithResolver(
   
 ## <a name="parameters"></a>參數  
  `szFile`  
- [in]型別程式庫檔案路徑。  
+ 在類型程式庫的檔案路徑。  
   
  `regkind`  
- [in]A [REGKIND 列舉](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind)控制型別程式庫的註冊方式的旗標。 其可能的值為：  
+ 在[REGKIND 列舉](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind)旗標, 可控制類型程式庫的註冊方式。 其可能的值為:  
   
-- `REGKIND_DEFAULT`：使用預設註冊行為。  
+- `REGKIND_DEFAULT`：使用預設的註冊行為。  
   
-- `REGKIND_REGISTER`：註冊此型別程式庫。  
+- `REGKIND_REGISTER`：註冊此類型程式庫。  
   
-- `REGKIND_NONE`：請勿註冊此型別程式庫。  
+- `REGKIND_NONE`：不要註冊此類型程式庫。  
   
  `pTlbResolver`  
- [in]實作的指標[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)。  
+ 在[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)之執行的指標。  
   
  `pptlib`  
- [out]正在載入類型程式庫的參考。  
+ 脫銷正在載入之類型程式庫的參考。  
   
 ## <a name="return-value"></a>傳回值  
- 下表所列的 HRESULT 值之一。  
+ 下表所列的其中一個 HRESULT 值。  
   
 |傳回值|意義|  
 |------------------|-------------|  
 |`S_OK`|成功。|  
 |`E_OUTOFMEMORY`|記憶體不足。|  
-|`E_POINTER`|一或多個指標均為無效。|  
-|`E_INVALIDARG`|一或多個引數均為無效。|  
-|`TYPE_E_IOERROR`|此函式無法寫入檔案。|  
+|`E_POINTER`|一或多個指標無效。|  
+|`E_INVALIDARG`|一或多個引數無效。|  
+|`TYPE_E_IOERROR`|函數無法寫入檔案。|  
 |`TYPE_E_REGISTRYACCESS`|無法開啟系統註冊資料庫。|  
-|`TYPE_E_INVALIDSTATE`|無法開啟型別程式庫。|  
+|`TYPE_E_INVALIDSTATE`|無法開啟類型程式庫。|  
 |`TYPE_E_CANTLOADLIBRARY`|無法載入類型程式庫或 DLL。|  
   
 ## <a name="remarks"></a>備註  
- [Tlbexp.exe （類型程式庫匯出工具）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)呼叫`LoadTypeLibWithResolver`在組件至型別程式庫轉換過程中的函式。  
+ [Tlbexp.exe (類型程式庫匯出工具)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)會在元件`LoadTypeLibWithResolver`對類型程式庫轉換過程中呼叫函式。  
   
- 此函式會載入至登錄的最小存取指定的型別程式庫。 函式接著會檢查內部參考的型別程式庫，其中每個必須載入並加入至父型別程式庫的類型程式庫。  
+ 此函式會以最少的登錄存取權來載入指定的類型程式庫。 接著, 函式會檢查類型程式庫中是否有內部參考的類型程式庫, 其中每一個都必須載入並加入至父類型程式庫。  
   
- 可以載入參考的型別程式庫之前，必須解析其參考檔案路徑的完整檔案路徑。 這透過達成[ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)所提供[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)，這會傳入`pTlbResolver`參數。  
+ 在可以載入參考的類型程式庫之前, 必須先將其參考檔案路徑解析成完整的檔案路徑。 這項作業是透過[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)所提供的`pTlbResolver` [ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)來完成, 它會傳入參數。  
   
- 當已知的參考的類型程式庫的完整檔案路徑時，`LoadTypeLibWithResolver`函式載入，並將參考的類型程式庫加入至父型別程式庫，建立合併的主要類型程式庫。  
+ 已知參考類型程式庫的完整檔案路徑時, `LoadTypeLibWithResolver`函式會載入參考的類型程式庫, 並將其加入至父類型程式庫, 並建立組合的主要類型程式庫。  
   
- 函式會解析並載入所有的內部參考的型別程式庫之後，它會傳回的主要解析的型別程式庫中的參考`pptlib`參數。  
+ 在函式解析並載入所有內部參考的類型程式庫之後, 它會傳回`pptlib`參數中主要已解析之類型程式庫的參考。  
   
- `LoadTypeLibWithResolver`通常會呼叫函式[Tlbexp.exe （類型程式庫匯出工具）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)，提供其本身內部[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)中的實作`pTlbResolver`參數。  
+ 函式通常是由[tlbexp.exe (類型程式庫匯出工具)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)所呼叫, 它會在`pTlbResolver`參數中提供自己的內部[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)實作為。 `LoadTypeLibWithResolver`  
   
- 如果您呼叫`LoadTypeLibWithResolver`直接管理，您必須提供您自己[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)實作。  
+ 如果您直接`LoadTypeLibWithResolver`呼叫, 就必須提供自己的[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)執行。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** TlbRef.h  
+ **標頭：** TlbRef。h  
   
  **LIBRARY:** TlbRef.lib  
   
- **.NET framework 版本：** 3.5, 3.0, 2.0  
+ **.NET Framework 版本:** 3.5、3.0、2。0  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,6 +1,6 @@
 ---
-title: GetPropertyHandle 函式 （Unmanaged API 參考）
-description: GetPropertyHandle 函式會傳回唯一的控制代碼識別屬性。
+title: GetPropertyHandle 函式 (非受控 API 參考)
+description: GetPropertyHandle 函數會傳回可識別屬性的唯一控制碼。
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1397188b38066bac6375da0c76e7d66724a75d7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636249"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038253"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函式
 
@@ -44,38 +44,38 @@ HRESULT GetPropertyHandle (
 ## <a name="parameters"></a>參數
 
 `vFunc`\
-[in]未使用此參數。
+在未使用此參數。
 
 `ptr`\
-[in]指標[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)執行個體。
+在[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)實例的指標。
 
 `wszPropertyName`\
-[in]以 null 結尾字串的 UTF16 編碼的字元，其中包含屬性名稱。
+在以 null 終止的 UTF16 編碼字元字串, 其中包含屬性名稱。
 
 `pType`\
-[out]指標[ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)列舉的成員，表示屬性的 CIM 型別。
+脫銷[`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)列舉成員的指標, 表示屬性的 CIM 類型。
 
 `pHandle`\
-[out]包含屬性控制代碼的整數指標。
+脫銷包含屬性控制碼之整數的指標。
 
 ## <a name="return-value"></a>傳回值
 
-此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
+這個函式所傳回的下列值會定義在*WbemCli*標頭檔中, 您也可以在程式碼中將它們定義為常數:
 
 |常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的屬性名稱。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
-|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | 要求的屬性屬於型別是`CIM_OBJECT`或`CIM_ARRAY`。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數無效。 |
+|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | 要求的屬性的類型`CIM_OBJECT`為或。 `CIM_ARRAY` |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法。
+此函式會包裝對[IWbemClassObject:: GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法的呼叫。
 
-您可以使用此控制代碼識別屬性使用時[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法來讀取或寫入屬性值。
+使用[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法來讀取或寫入屬性值時, 您可以使用此控制碼來識別屬性。
 
-控制代碼可以擷取所有資料類型的屬性以外`CIM_OBJECT`和`CIM_ARRAY`。 傳回類別所有執行個體之間的控制代碼的工作。
+可以針對`CIM_OBJECT`和`CIM_ARRAY`以外的所有資料類型的屬性來抓取控制碼。 傳回的控制碼可在類別的所有實例之間工作。
 
 ## <a name="requirements"></a>需求
 
@@ -83,8 +83,8 @@ HRESULT GetPropertyHandle (
 
 **標頭：** WMINet_Utils.idl
 
-**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器 (非受控 API 參考)](index.md)

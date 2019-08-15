@@ -8,23 +8,21 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5239017eb63ca6360ae8811a76497256fafbd1b1
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756815"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040138"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>修改基底表單外觀的效果
-在應用程式開發期間，您通常可能需要變更專案中 (或其他專案中) 的其他表單所繼承之基底表單的外觀。  
-  
- 在設計階段，建置包含基底表單的專案時，基底表單外觀的變更 (也就是設定屬性或增減控制項) 會反映在繼承的表單上。 只是儲存基底表單的變更並不足夠。 若要建置專案，請從 [建置] 功能表中選擇 [建置]。  
-  
-> [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
- 在執行階段對基底表單所做的修改對於已具現化的繼承表單沒有任何影響。  
-  
+
+在應用程式開發期間，您通常可能需要變更專案中 (或其他專案中) 的其他表單所繼承之基底表單的外觀。
+
+在設計階段，建置包含基底表單的專案時，基底表單外觀的變更 (也就是設定屬性或增減控制項) 會反映在繼承的表單上。 只是儲存基底表單的變更並不足夠。 若要建置專案，請從 [建置] 功能表中選擇 [建置]。
+
+在執行階段對基底表單所做的修改對於已具現化的繼承表單沒有任何影響。
+
 ## <a name="see-also"></a>另請參閱
 
 - [base](~/docs/csharp/language-reference/keywords/base.md)
