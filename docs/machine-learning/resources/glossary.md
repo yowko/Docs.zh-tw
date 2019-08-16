@@ -2,13 +2,14 @@
 title: 機器學習字彙
 description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的重要機器學習詞彙。
 ms.custom: seodec18
-ms.date: 05/09/2019
-ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.topic: reference
+ms.date: 07/31/2019
+ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557974"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710530"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
@@ -77,7 +78,7 @@ ML.NET 中實作 <xref:Microsoft.ML.IEstimator%601> 介面的類別。
 
 ## <a name="hyperparameter"></a>超參數
 
-機器學習演算法的參數。 範例包括決策樹系中要學習的樹數目，或梯度下降演算法中的步階大小。 「超參數」的值是在將模型定型之前設定的，並且會控管尋找預測函式之參數 (例如決策樹中的比較點或線性迴歸模型中的加權) 的程序。 如需詳細資訊，請參閱維基百科上的[超參數](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) \(英文\) 一文。
+機器學習演算法的參數。 範例包括決策樹系中要學習的樹數目，或梯度下降演算法中的步階大小。 「超參數」  的值是在將模型定型之前設定的，並且會控管尋找預測函式之參數 (例如決策樹中的比較點或線性迴歸模型中的加權) 的程序。 如需詳細資訊，請參閱維基百科上的[超參數](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) \(英文\) 一文。
 
 ## <a name="label"></a>標籤
 
@@ -108,6 +109,10 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 ## <a name="n-gram"></a>N 連語法 (N-gram)
 
 文字資料的特徵擷取配置：任何一連串的 N 個單字會轉換成[特徵](#feature)值。
+
+## <a name="normalization"></a>正規化
+
+正規化是將浮點資料調整為 0 與 1 之間值的流程。 ML.NET 中使用的許多定型演算法都需要將輸入功能資料標準化。 ML.NET 提供一系列[用於正規化的轉換](transforms.md#normalization-and-scaling)
 
 ## <a name="numerical-feature-vector"></a>數值特徵向量
 
@@ -147,6 +152,10 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 ## <a name="root-of-mean-squared-error-rmse"></a>均方根誤差 (RMSE)
 
 在[迴歸](#regression)中，此評估計量是誤差平方值之平均值的平方根。
+
+## <a name="scoring"></a>評分
+
+評分是將新資料套用至定型機器學習模型並產生預測的流程。 評分也稱為推斷。 根據模型的類型而定，分數可能是原始值、機率或類別。
 
 ## <a name="supervised-machine-learning"></a>監督式機器學習
 
