@@ -1,5 +1,5 @@
 ---
-title: HOW TO：編碼和解碼 PNG 影像
+title: 作法：編碼和解碼 PNG 影像
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,25 +13,25 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - encoding PNG images [WPF]
 ms.assetid: 3d31d186-af73-47f0-b5a7-c26ae46409a6
-ms.openlocfilehash: 46d4a7ffbfe7a6a620c26447cce30f3a0bd35adc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a0a2f2625901f7ee32ba9fe70e71681a1b9ccd3
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947533"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545282"
 ---
-# <a name="how-to-encode-and-decode-a-png-image"></a>HOW TO：編碼和解碼 PNG 影像
-下列範例示範如何編碼和解碼[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]映像使用特定<xref:System.Windows.Media.Imaging.PngBitmapDecoder>和<xref:System.Windows.Media.Imaging.PngBitmapEncoder>物件。  
+# <a name="how-to-encode-and-decode-a-png-image"></a>作法：編碼和解碼 PNG 影像
+下列範例示範如何使用特定<xref:System.Windows.Media.Imaging.PngBitmapDecoder>的和<xref:System.Windows.Media.Imaging.PngBitmapEncoder>物件, 將可移植網狀圖形 (PNG) 影像解碼和編碼。  
   
 ## <a name="example"></a>範例  
- 此範例示範如何解碼[!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]映像使用<xref:System.Windows.Media.Imaging.PngBitmapDecoder>從<xref:System.IO.FileStream>。  
+ 這個範例示範如何使用<xref:System.Windows.Media.Imaging.PngBitmapDecoder> <xref:System.IO.FileStream>從來解碼 PNG 影像。  
   
  [!code-cpp[PngBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CPP/PngEncoderDecoder.cpp#1)]
  [!code-csharp[PngBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CSharp/PngEncoderDecoder.cs#1)]
  [!code-vb[PngBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PngBitmapDecoderEncoder/VB/PngEncoderDecoder.vb#1)]  
   
 ## <a name="example"></a>範例  
- 此範例示範如何編碼<xref:System.Windows.Media.Imaging.BitmapSource>成[!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]映像使用<xref:System.Windows.Media.Imaging.PngBitmapEncoder>。  
+ 這個範例示範如何<xref:System.Windows.Media.Imaging.BitmapSource> <xref:System.Windows.Media.Imaging.PngBitmapEncoder>使用將編碼成 PNG 影像。  
   
  [!code-cpp[PngBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CPP/PngEncoderDecoder.cpp#4)]
  [!code-csharp[PngBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CSharp/PngEncoderDecoder.cs#4)]

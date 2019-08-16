@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 5f3560c899373b9835e2ead79590cf73777b2375
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972412"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545243"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
-本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括提升文字轉譯的品質與效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、已增強的國際文字、已增強的字型支援，以及新的文字應用程式開發介面 (API)。  
+本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括改善文字轉譯的品質和效能、OpenType 印刷樣式支援、增強的國際文字、增強的字型支援, 以及新的文字應用程式開發介面 (Api)。  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>提升文字的品質與效能  
@@ -29,9 +29,9 @@ ms.locfileid: "68972412"
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>豐富的印刷樣式  
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型格式是 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 字型格式的延伸。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型格式是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 和 Adobe 共同開發，並提供各式各樣豐富的進階印刷樣式功能。 物件會公開許多字型的高階[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]功能, 例如, 樣式替代和花飾字。 <xref:System.Windows.Documents.Typography> Windows SDK 提供一組範例[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字型, 這些字型是以豐富的功能 (例如 Pericles 和 Pescadero 字型) 所設計。 如需詳細資訊，請參閱[範例 OpenType 字型套件](sample-opentype-font-pack.md)。  
+ OpenType 字型格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字型格式的延伸。 OpenType 字型格式是由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]和 Adobe 共同開發, 並提供豐富的先進印刷樣式功能。 <xref:System.Windows.Documents.Typography>物件會公開 OpenType 字型的許多先進功能, 例如, 樣式替代和花飾字。 Windows SDK 提供一組範例 OpenType 字型, 這些字型是以豐富的功能 (例如 Pericles 和 Pescadero 字型) 所設計。 如需詳細資訊，請參閱[範例 OpenType 字型套件](sample-opentype-font-pack.md)。  
   
- Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型包含其他字符，可為標準的字符組提供文體替代字。 下列文字顯示文體替代字符。  
+ Pericles OpenType 字型包含額外的圖像, 可為標準的圖像集提供樣式替代。 下列文字顯示文體替代字符。  
   
  ![使用 OpenType 樣式替代字元的文字](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 樣式替代字元的文字")  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68972412"
   
  ![使用 OpenType 標準和花飾字字元的文字](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "使用 OpenType 標準和花飾字字元的文字")  
   
- 如需 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 功能的詳細資訊，請參閱 [OpenType 字型功能](opentype-font-features.md)。  
+ 如需 OpenType 功能的詳細資訊, 請參閱[Opentype 字型功能](opentype-font-features.md)。  
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>已增強的國際文字支援  

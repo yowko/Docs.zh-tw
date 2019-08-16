@@ -6,19 +6,19 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 96a0a5feaf14a7f040402681e90fba8f9766324b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2b3dc3b95cf81a60494f7a02488067717938e97
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053466"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545234"
 ---
 # <a name="sample-opentype-font-pack"></a>範例 OpenType 字型套件
-本主題提供範例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型的概觀，此字型是隨著 [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 所散發。 範例字型支援延伸的 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 功能，此功能可供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式使用。  
+本主題提供與一起[!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]散發之範例 OpenType 字型的總覽。 範例字型支援[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式可使用的擴充 OpenType 功能。  
 
 <a name="overview"></a>   
 ## <a name="fonts-in-the-opentype-font-pack"></a>OpenType 字型套件中的字型  
- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 提供一組範例 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 字型，您可以在建立 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 應用程式時使用此字型。 範例字型是根據 Ascender Corporation 的授權來提供。 這些字型只會實作透過 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 格式所定義之全體功能的子集。 下表列出範例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型的名稱。  
+ 會提供一組範例 OpenType 字型, 供您用來建立[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。 [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 範例字型是根據 Ascender Corporation 的授權來提供。 這些字型只會執行 OpenType 格式所定義的總功能子集。 下表列出範例 OpenType 字型的名稱。  
   
 |**名稱**|**檔案**|  
 |--------------|--------------|  
@@ -31,7 +31,7 @@ ms.locfileid: "62053466"
 |Pescadero|Pesca.ttf|  
 |Pescadero Bold|Pescab.ttf|  
   
- 下圖顯示範例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型的外觀。  
+ 下圖顯示範例 OpenType 字型的外觀。  
   
  ![列出範例字型套件中的字型名稱](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
@@ -42,9 +42,9 @@ ms.locfileid: "62053466"
   
 <a name="installing_the_fonts"></a>   
 ## <a name="installing-the-fonts"></a>安裝字型  
- 您可以選擇將範例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型安裝到預設的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 字型目錄 **\WINDOWS\Fonts**。 使用 [字型] 控制台來安裝字型。 一旦這些字型位於您的電腦上之後，所有參考預設 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 字型的應用程式就能存取它們。 您可以按兩下字型檔案，以數個字型大小來顯示一組代表字元。 下列螢幕擷取畫面顯示 Lindsey 字型檔案 Linds.ttf。  
+ 您可以選擇將範例 OpenType 字型安裝到預設[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]字型目錄 **\WINDOWS\Fonts**。 使用 [字型] 控制台來安裝字型。 一旦這些字型位於您的電腦上之後，所有參考預設 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 字型的應用程式就能存取它們。 您可以按兩下字型檔案，以數個字型大小來顯示一組代表字元。 下列螢幕擷取畫面顯示 Lindsey 字型檔案 Linds.ttf。  
   
- ![Lindsey 字型&#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Lindsey 字型&#40;OpenType&#41; ](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 顯示 Lindsey 字型  
   
 <a name="using_the_fonts"></a>   

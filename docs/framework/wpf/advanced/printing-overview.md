@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 4f8fd92105bd5ae09e0c1daa2e0db48b74cde77c
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672035"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545311"
 ---
 # <a name="printing-overview"></a>列印概觀
 透過 Microsoft .NET Framework, 使用 Windows Presentation Foundation (WPF) 的應用程式開發人員有一組豐富的列印和列印系統管理 Api。 藉由 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，某些列印系統增強功能也可供建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的開發人員和使用 Unmanaged 程式碼的開發人員使用。 這項新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 檔案格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 列印路徑。  
@@ -29,7 +29,7 @@ ms.locfileid: "68672035"
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>關於 XPS  
- XPS 是一種電子檔案格式, 也就是多工緩衝處理檔案格式和分頁描述語言。 它是一種 Open Document 格式，使用 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]、[!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] 和其他業界標準，以建立跨平台的文件。 XPS 簡化了建立、共用、列印、查看和封存數位檔的程式。 如需有關 XPS 的其他資訊, 請參閱[Xps 檔](/windows/desktop/printdocs/documents)。  
+ XPS 是一種電子檔案格式, 也就是多工緩衝處理檔案格式和分頁描述語言。 這是一種開放檔案格式, [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]其使用、開放封裝慣例 (OPC) 以及其他業界標準來建立跨平臺檔。 XPS 簡化了建立、共用、列印、查看和封存數位檔的程式。 如需有關 XPS 的其他資訊, 請參閱[Xps 檔](/windows/desktop/printdocs/documents)。  
   
  以程式設計[方式列印 xps](how-to-programmatically-print-xps-files.md)檔案時, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]有數種用來列印 xps 內容的技巧。 在檢閱本主題所包含內容期間，您會發現參考這些範例相當有用。 (非受控程式碼開發人員應該會看到[MXDC_ESCAPE 函數](/windows/desktop/printdocs/mxdc-escape)的檔。 Windows Forms 開發人員必須在<xref:System.Drawing.Printing>命名空間中使用不支援完整[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]列印路徑的 API, 但支援混合式 GDI 到 XPS 列印路徑。 請參閱下方的**列印路徑架構**)。  
   

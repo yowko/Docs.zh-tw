@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401276"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545265"
 ---
 # <a name="panels-overview"></a>面板概觀
 <xref:System.Windows.Controls.Panel>元素是控制專案轉譯的元件, 其大小和維度、位置, 以及其子內容的相片順序。 提供數個預先定義<xref:System.Windows.Controls.Panel>的專案, 以及可建立自訂<xref:System.Windows.Controls.Panel>元素的能力。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -62,7 +62,7 @@ ms.locfileid: "68401276"
   
  每個面板元素都會封裝自己的特殊功能，如下表所示。  
   
-|元素名稱|UI 面板？|說明|  
+|元素名稱|UI 面板？|描述|  
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|是|定義一個區域, 您可以在其中以相對於<xref:System.Windows.Controls.Canvas>區域的座標, 明確地定位子項目。|  
 |<xref:System.Windows.Controls.DockPanel>|是|定義一個區域，可供您在其中以子項目彼此間相對的水平或垂直方式排列子項目。|  
@@ -94,7 +94,7 @@ ms.locfileid: "68401276"
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Canvas  
- 元素會根據絕對 x 和*y*座標來啟用內容的定位。  <xref:System.Windows.Controls.Canvas> 元素的繪製位置可以是一個唯一的位置；或者，如果元素佔據相同的座標，則它們在標記中的出現順序會決定元素的繪製順序。  
+ 元素會根據絕對 x 和*y*座標來啟用內容的定位。 <xref:System.Windows.Controls.Canvas> 元素的繪製位置可以是一個唯一的位置；或者，如果元素佔據相同的座標，則它們在標記中的出現順序會決定元素的繪製順序。  
   
  <xref:System.Windows.Controls.Canvas>為任何<xref:System.Windows.Controls.Panel>提供最具彈性的版面配置支援。 Height 和 Width 屬性是用來定義畫布的區域, 而內的專案則是指派相對於父系<xref:System.Windows.Controls.Canvas>區域的絕對座標。 四個附加屬性<xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>: <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> 、和<xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, 可讓您精確控制中<xref:System.Windows.Controls.Canvas>的物件位置, 讓開發人員能夠在螢幕上精確定位和排列元素。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68401276"
 ### <a name="dockpanel"></a>DockPanel  
  元素會使用子<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> content 元素中設定的附加屬性, 沿著容器的邊緣放置內容。 <xref:System.Windows.Controls.DockPanel> 當<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>設定為<xref:System.Windows.Controls.Dock.Top> 或<xref:System.Windows.Controls.Dock.Bottom>時, 它會將子項目放在彼此的上方或下方。 當<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>設定為<xref:System.Windows.Controls.Dock.Left> 或<xref:System.Windows.Controls.Dock.Right>時, 它會將子項目放在彼此的左邊或右方。 屬性會決定加入做為子系<xref:System.Windows.Controls.DockPanel>之最後一個元素的位置。 <xref:System.Windows.Controls.DockPanel.LastChildFill%2A>  
   
- 您可以使用<xref:System.Windows.Controls.DockPanel>來放置相關控制項的群組, 例如一組按鈕。 或者，您也可以使用它來建立「有窗格的」[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，類似於 [!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)] 中的 UI。  
+ 您可以使用<xref:System.Windows.Controls.DockPanel>來放置相關控制項的群組, 例如一組按鈕。 或者, 您可以使用它來建立「窗格[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]」, 類似于 Microsoft Outlook 中所找到的。  
   
 #### <a name="sizing-to-content"></a>依內容調整大小  
  如果未<xref:System.Windows.FrameworkElement.Height%2A>指定<xref:System.Windows.FrameworkElement.Width%2A>其和屬性, <xref:System.Windows.Controls.DockPanel>則為其內容的大小。 大小可以因應其子元素的大小來增加或縮減。 不過, 當指定這些屬性, 但沒有下一個指定子專案的空間時, <xref:System.Windows.Controls.DockPanel>就不會顯示該子項目或後續的子專案, 也不會測量後續的子項目。  

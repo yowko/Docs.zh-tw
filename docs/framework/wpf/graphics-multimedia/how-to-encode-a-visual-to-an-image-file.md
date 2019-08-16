@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將視覺物件編碼為影像檔
+title: 作法：將視覺物件編碼為影像檔
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193b6a14e404d32bb49d6e0ef3cbd513166bcce2
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947572"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545287"
 ---
-# <a name="how-to-encode-a-visual-to-an-image-file"></a>HOW TO：將視覺物件編碼為影像檔
-此範例示範如何編碼<xref:System.Windows.Media.Visual>映像檔使用的物件<xref:System.Windows.Media.Imaging.RenderTargetBitmap>和<xref:System.Windows.Media.Imaging.PngBitmapEncoder>。  
+# <a name="how-to-encode-a-visual-to-an-image-file"></a>作法：將視覺物件編碼為影像檔
+這個範例示範如何<xref:System.Windows.Media.Visual> <xref:System.Windows.Media.Imaging.RenderTargetBitmap>使用和, <xref:System.Windows.Media.Imaging.PngBitmapEncoder>將物件編碼成影像檔案。  
   
 ## <a name="example"></a>範例  
- <xref:System.Windows.Media.DrawingVisual>會使用建立<xref:System.Windows.Media.Imaging.BitmapImage>並<xref:System.Windows.Media.FormattedText>轉譯成<xref:System.Windows.Media.Imaging.RenderTargetBitmap>。 繪製的點陣圖接著用來建立<xref:System.Windows.Media.Imaging.BitmapFrame>已新增到<xref:System.Windows.Media.Imaging.PngBitmapEncoder>來建立新的[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]檔案。  
+ 是使用所<xref:System.Windows.Media.Imaging.RenderTargetBitmap>建立<xref:System.Windows.Media.FormattedText> , 且會轉譯為。 <xref:System.Windows.Media.Imaging.BitmapImage> <xref:System.Windows.Media.DrawingVisual> 然後, 呈現的點陣圖會用來建立<xref:System.Windows.Media.Imaging.BitmapFrame> , 並將其新增<xref:System.Windows.Media.Imaging.PngBitmapEncoder>至, 以建立新的可移植網狀圖形 (PNG) 檔案。  
   
  [!code-csharp[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/RenderTargetBitmapExample_Encode.cs#rtbencodeinline1)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample_Encode.vb#rtbencodeinline1)]  
   
- A<xref:System.Windows.Media.Imaging.PngBitmapEncoder>已用於此範例中，但任何衍生<xref:System.Windows.Media.Imaging.BitmapEncoder>物件可能已用來建立映像檔。  
+ 在<xref:System.Windows.Media.Imaging.PngBitmapEncoder>此範例中使用了, 但任何衍生<xref:System.Windows.Media.Imaging.BitmapEncoder>的物件都可能已用來建立影像檔案。  
   
 ## <a name="see-also"></a>另請參閱
 

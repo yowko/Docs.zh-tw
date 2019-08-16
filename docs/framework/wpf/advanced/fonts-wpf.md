@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: cab39cdb13b92c0bfcb697de4bb8c05feae4c146
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 5bcd2ccd99940a3ce22f0894a1706eccf8627158
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972399"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545219"
 ---
 # <a name="fonts-wpf"></a>字型 (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]包含使用[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字型支援豐富的文字呈現。 Windows SDK 包含字型的[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]範例套件。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]包含使用 OpenType 字型支援豐富的文字呈現。 Windows SDK 包含 OpenType 字型的範例套件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [OpenType 字型功能](opentype-font-features.md)  

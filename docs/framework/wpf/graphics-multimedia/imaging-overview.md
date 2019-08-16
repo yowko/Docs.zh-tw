@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971953"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545374"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、轉換及格式化影像。  
@@ -38,7 +38,7 @@ ms.locfileid: "68971953"
   
 - 新的或專屬影像格式的擴充性模型。  
   
-- 改善原生映射格式的效能和安全性, 包括點陣圖 (BMP)、聯合 Photographics 專家群組 (JPEG [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]) [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、 [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、、、圖形交換格式 (GIF) 和圖示 (.ico)。  
+- 改善原生映射格式的效能和安全性, 包括點陣圖 (BMP)、聯合 Photographics 專家群組 (JPEG)、可移植網狀圖形 ( [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]PNG [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)])、、、圖形交換格式 (GIF) 和圖示 (.ico)。  
   
 - 高位元深度影像資料最多可保留每色頻 8 位元 (每像素 32 位元)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68971953"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF 影像格式  
- 轉碼器可以用來將特定媒體格式解碼或編碼。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]包含 BMP、JPEG、 [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、GIF 和圖示影像格式的編解碼器。 每個轉碼器都可以讓應用程式解碼和編碼各自的影像格式 (但 ICON 在編碼部分是例外)。  
+ 轉碼器可以用來將特定媒體格式解碼或編碼。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]包含 BMP、JPEG、PNG、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、GIF 和圖示影像格式的編解碼器。 每個轉碼器都可以讓應用程式解碼和編碼各自的影像格式 (但 ICON 在編碼部分是例外)。  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>是用於解碼和編碼影像的重要類別。 它是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 管線的基本建置組塊，代表在特定大小和解析度下的單一固定像素集。 可以是多個框架影像的個別框架, 也可以是<xref:System.Windows.Media.Imaging.BitmapSource>在上執行之轉換的結果。 <xref:System.Windows.Media.Imaging.BitmapSource> 這是影像中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]所使用之許多主要類別的父系, <xref:System.Windows.Media.Imaging.BitmapFrame>例如。  
   
