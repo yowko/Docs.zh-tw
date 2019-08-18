@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 076fee2fa269c97bcdf5f47d3b38dd0d69c421a1
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 05a78def4a84fff24ff00d7c2c64320a76e4e707
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971286"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566345"
 ---
 # <a name="c-keywords"></a>C# 關鍵字
 
@@ -24,7 +24,7 @@ ms.locfileid: "68971286"
   
 |||||  
 |---|---|---|---|  
-|[abstract](abstract.md)|[as](../operators/type-testing-and-conversion-operators.md#as-operator)|[base](base.md)|[bool](bool.md)|  
+|[abstract](abstract.md)|[as](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](bool.md)|  
 |[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[catch](try-catch.md)|  
 |[char](char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
 |[continue](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[delegate](delegate.md)|  
@@ -40,7 +40,7 @@ ms.locfileid: "68971286"
 |[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
 [sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](string.md)|
 |[struct](struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
-|[true](true-literal.md)|[try](try-catch.md)|[typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
+|[true](true-literal.md)|[try](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
 |[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[Unsafe.DangerousAPI](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
 |[using](using.md)|[using static](using-static.md)|[virtual](virtual.md)|[void](void.md)|
 |[volatile](volatile.md)|[while](while.md)|
@@ -51,14 +51,14 @@ ms.locfileid: "68971286"
   
 ||||  
 |---|---|---|  
-|[新增](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
+|[add](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
 |[async](async.md)|[await](await.md)|[by](by.md)|
 |[descending](descending.md)|[dynamic](dynamic.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[global](../operators/namespace-alias-qualifier.md)|
 |[group](group-clause.md)|[into](into.md)|[join](join-clause.md)|
 |[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[partial (型別)](partial-type.md)|[partial (方法)](partial-method.md)|
-|[remove](remove.md) \(英文\)|[select](select-clause.md)|[set](set.md)|
+|[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
 |[value](value.md)|[var](var.md)|[when (篩選條件)](when.md)|
 |[where (泛型型別條件約束)](where-generic-type-constraint.md)|[where (查詢子句)](where-clause.md)|[yield](yield.md)|
   
