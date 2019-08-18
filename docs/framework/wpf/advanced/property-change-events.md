@@ -13,18 +13,18 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: f8d0d5e65101ffda0edaaeabdea2870287ba0f1f
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 06056b492439531aa60becbb7bca250a439bfb68
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400849"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567433"
 ---
 # <a name="property-change-events"></a>屬性變更事件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 會定義數個要引發來回應屬性值變更的事件。 屬性通常是相依性屬性。 事件本身有時是路由事件, 有時是標準的 common language runtime (CLR) 事件。 事件的定義會因案例而異，因為某些屬性變更較適合透過元素樹狀結構進行路由傳送，而其他屬性變更通常只會與變更屬性的物件有關。  
   
 ## <a name="identifying-a-property-change-event"></a>識別屬性變更事件  
- 並非所有報告屬性變更的事件都會明確識別為屬性已變更的事件，不論是透過簽章模式或命名模式。 一般而言，[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 文件中的事件描述會指出事件是否直接繫結至屬性值變更，並提供屬性與事件之間的交互參考。  
+ 並非所有報告屬性變更的事件都會明確識別為屬性已變更的事件，不論是透過簽章模式或命名模式。 一般來說, SDK 檔中的事件描述會指出事件是否直接系結至屬性值變更, 並提供屬性和事件之間的交互參考。  
   
 ### <a name="routedpropertychanged-events"></a>RoutedPropertyChanged 事件  
  某些事件會使用明確用於屬性變更事件的事件資料類型和委派。 事件資料類型為<xref:System.Windows.RoutedPropertyChangedEventArgs%601>, 而委派為。 <xref:System.Windows.RoutedPropertyChangedEventHandler%601> 事件資料和委派兩者都有一個泛型類型參數，可在您定義處理常式時，指定變更屬性的實際類型。 事件資料包含兩個屬性<xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> : <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>和, 它們接著會當做事件資料中的型別引數傳遞。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400707"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567524"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 元素可以系結至各種資料來源中的資料, 其格式為 common language runtime (CLR) 物件和[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>之類的<xref:System.Windows.Controls.ItemsControl> <xref:System.Windows.Controls.ListBox>和(例如和<xref:System.Windows.Controls.ListView> ) 具有內建功能, 可啟用單一資料項目或資料項目集合的彈性樣式。 <xref:System.Windows.Controls.Button> 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -70,7 +70,7 @@ ms.locfileid: "68400707"
   
 - 雖然未在圖中指定, 但請注意, 系結來源物件不限於自訂 CLR 物件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]資料系結支援 CLR 物件和[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]格式的資料。 為了提供一些範例, 您的<xref:System.Windows.UIElement>系結來源可以是、任何清單物件、與 ADO.NET 資料或 Web 服務相關聯的 CLR 物件, 或是包含您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料的 XmlNode。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)。  
   
- 當您閱讀其他[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 主題時有一點很重要，請記住在建立繫結時，是將繫結目標「繫結到」繫結來源。 例如, 如果您要使用資料系結[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] <xref:System.Windows.Controls.ListBox>來顯示中<xref:System.Windows.Controls.ListBox>的一些基礎資料, 您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]會將系結至資料。  
+ 當您閱讀其他 SDK 主題時, 請務必記住, 當您建立系結時, 您會將系結目標系結*至*系結來源。 例如, 如果您要使用資料系結[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] <xref:System.Windows.Controls.ListBox>來顯示中<xref:System.Windows.Controls.ListBox>的一些基礎資料, 您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]會將系結至資料。  
   
  若要建立系結, 您可以<xref:System.Windows.Data.Binding>使用物件。 本主題的其餘部分將討論與相關的許多概念以及<xref:System.Windows.Data.Binding>物件的一些屬性和使用方式。  
   
@@ -254,7 +254,7 @@ ms.locfileid: "68400707"
   
  下表顯示哪些視圖資料類型會建立為預設的集合視圖, 或<xref:System.Windows.Data.CollectionViewSource>根據來源集合類型。  
   
-|來源集合型別|集合檢視型別|附註|  
+|來源集合型別|集合檢視型別|注意|  
 |----------------------------|--------------------------|-----------|  
 |<xref:System.Collections.IEnumerable>|以為基礎的內部類型<xref:System.Windows.Data.CollectionView>|無法群組項目。|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|最快。|  
@@ -342,7 +342,7 @@ ms.locfileid: "68400707"
   
  如前一節中的範例所示, <xref:System.Windows.Controls.ListBox>控制項<xref:System.Windows.Controls.ContentControl>和都系結至*AuctionItem*s 的整個集合物件 (或更明確地說, 也就是集合物件上的視圖)。 若沒有如何顯示資料收集的特定指示, <xref:System.Windows.Controls.ListBox>會顯示基礎集合中每個物件的字串表示, <xref:System.Windows.Controls.ContentControl>而且會顯示其所系結之物件的字串表示。  
   
- 為了解決這個問題, 應用程式會<xref:System.Windows.DataTemplate>定義。 如前一節中的範例所示, <xref:System.Windows.Controls.ContentControl>會明確地使用*detailsProductListingTemplate* <xref:System.Windows.DataTemplate>。 控制項<xref:System.Windows.Controls.ListBox>在集合中顯示 AuctionItem <xref:System.Windows.DataTemplate>物件時, 會隱含地使用下列內容:  
+ 為了解決這個問題, 應用程式會<xref:System.Windows.DataTemplate>定義。 如前一節中的範例所示, <xref:System.Windows.Controls.ContentControl>會明確地使用*detailsProductListingTemplate* <xref:System.Windows.DataTemplate>。 控制項<xref:System.Windows.Controls.ListBox>在集合中顯示 AuctionItem <xref:System.Windows.DataTemplate>物件時,會隱含地使用下列內容:  
   
  [!code-xaml[DataBindingLab#AuctionItemDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
   
@@ -371,7 +371,7 @@ ms.locfileid: "68400707"
  [!code-csharp[DataBindingLab#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/FutureDateRule.cs#2)]
  [!code-vb[DataBindingLab#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/FutureDateRule.vb#2)]  
   
- *StartDateEntryForm* <xref:System.Windows.Controls.TextBox>會使用此*FutureDateRule*, 如下列範例所示:  
+ StartDateEntryForm<xref:System.Windows.Controls.TextBox>會使用此*FutureDateRule*, 如下列範例所示:  
   
  [!code-xaml[DataBindingLab#CustomValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
   

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: 865b1a3ccc30ff5efab4b08956bf7ba2bba4769c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc406659bec3fd8d5da87b597356a3411c7a2605
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017881"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567406"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 屬性
-指定哪些[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]項目仍有其內容相關的父項目處理，即使的直屬父項目可能會忽略[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]因為指定的處理器[mc: Ignorable 屬性](mc-ignorable-attribute.md). `mc:ProcessContent`屬性支援標記相容性，以及自訂的命名空間對應性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]版本控制。  
+指定即使[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]因為指定[mc:](mc-ignorable-attribute.md)可忽略的屬性, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器可能會忽略直屬父項目, 哪些專案仍應具有相關的父元素所處理的內容。 屬性支援自訂命名空間對應[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和版本設定的標記相容性。 `mc:ProcessContent`  
   
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage  
   
@@ -34,17 +34,17 @@ ms.locfileid: "62017881"
   
 |||  
 |-|-|  
-|*ignorablePrefix*|任何有效的前置詞字串，根據 XML 1.0 規格。|  
-|*ignorableUri*|對指定的命名空間，根據 XML 1.0 規格任何有效的 URI。|  
-|*ThisElementCanBeIgnored*|項目，可以忽略[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]處理器實作中，如果無法解析的基礎類型。|  
-|*[content]*|*ThisElementCanBeIgnored*標示為可忽略。 如果處理器就會忽略該元素， *[內容]* 處理*物件*。|  
+|*ignorablePrefix*|任何有效的前置字串, 依據 XML 1.0 規格。|  
+|*ignorableUri*|根據 XML 1.0 規格, 指定命名空間的任何有效 URI。|  
+|*ThisElementCanBeIgnored*|如果無法解析基礎類型, 則[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]處理器執行可以忽略的元素。|  
+|*[content]*|*ThisElementCanBeIgnored*會標示為可忽略。 如果處理器忽略該元素, *[content]* 就會由*物件*處理。|  
   
 ## <a name="remarks"></a>備註  
- 根據預設，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器將會忽略已忽略的項目內的內容。 您可以指定特定的項目依`mc:ProcessContent`，和[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器會繼續處理忽略的元素內的內容。 此外，這通常會用如果內容巢狀內至少其中之一就是可忽略和至少一個不是可忽略的數個標記。  
+ 根據預設, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器會忽略忽略之元素內的內容。 您可以藉由`mc:ProcessContent`指定特定元素, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]而處理器會繼續處理忽略專案中的內容。 如果內容是在數個標記中嵌套, 通常會使用此方法, 其中至少有一個是可忽略的, 而且至少有一個無法忽略。  
   
- 多個前置詞可指定在屬性中，以空格分隔符號，例如： `mc:ProcessContent="ignore:Element1 ignore:Element2"`。  
+ 在屬性中, 您可以使用空格分隔符號來指定多個前置詞, 例如`mc:ProcessContent="ignore:Element1 ignore:Element2"`:。  
   
- [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空間會定義其他項目和屬性的這個區域中未記載之[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]。 如需詳細資訊，請參閱 < [XML 標記相容性規格](https://go.microsoft.com/fwlink/?LinkId=73824)。  
+ [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空間會定義在 SDK 的這個區域中未記載的其他元素和屬性。 如需詳細資訊, 請參閱[XML 標記相容性規格](https://go.microsoft.com/fwlink/?LinkId=73824)。  
   
 ## <a name="see-also"></a>另請參閱
 

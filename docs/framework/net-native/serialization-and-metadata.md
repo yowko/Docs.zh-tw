@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f046341b1b02c3552ecf8db7d38d2a0c7bc74fba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306374"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567056"
 ---
 # <a name="serialization-and-metadata"></a>序列化和中繼資料
 
@@ -39,7 +39,7 @@ ms.locfileid: "67306374"
   
 ### <a name="typeof-used-in-the-constructor"></a>用於建構函式的 typeof
 
- 如果您呼叫這些序列化類別的建構函式，並包含C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator)在方法呼叫中，運算子**沒有執行任何額外的工作**。 例如，在對序列化類別建構函式進行的下列每個呼叫中，`typeof` 關鍵字會用來做為傳遞至建構函式之運算式的一部分。  
+ 如果您呼叫這些序列化類別的函式, 並在C#方法呼叫中包含[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子,**則不需要執行任何額外的工作**。 例如，在對序列化類別建構函式進行的下列每個呼叫中，`typeof` 關鍵字會用來做為傳遞至建構函式之運算式的一部分。  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67306374"
   
 ### <a name="typeof-used-outside-the-constructor"></a>在建構函式外部使用的 typeof
 
- 如果您呼叫這些序列化類別的建構函式，並使用C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator)運算子的運算式，提供給建構函式的外部<xref:System.Type>參數，如下列程式碼，.NET 原生編譯器無法解析類型：  
+ 如果您呼叫這些序列化類別的處理常式, 並在C#提供給<xref:System.Type>此函式參數的運算式外部使用[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子 (如下列程式碼所示), 則 .NET Native 編譯器無法解析類型:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67306374"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同樣地，如果您呼叫建構函式，例如<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>，並提供其他陣列<xref:System.Type>序列化，如下列程式碼，.NET Native 編譯器無法解析這些類型的物件。  
+ 同樣地, 如果您呼叫<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>和之類的函式, 並提供要序列化的其他<xref:System.Type>物件陣列 (如下列程式碼所示), 則 .NET Native 編譯器無法解析這些類型。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -73,5 +73,5 @@ ms.locfileid: "67306374"
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<型別 > 項目](../../../docs/framework/net-native/type-element-net-native.md)
+- [\<輸入 > 元素](../../../docs/framework/net-native/type-element-net-native.md)
 - [\<Namespace> 項目](../../../docs/framework/net-native/namespace-element-net-native.md)

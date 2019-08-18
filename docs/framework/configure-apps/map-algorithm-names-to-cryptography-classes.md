@@ -7,34 +7,34 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832688"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566730"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>將演算法名稱對應至密碼編譯類別
-有四種方式，開發人員可以建立密碼編譯物件，使用 Windows 軟體開發套件 (SDK):  
+有四種方式可供開發人員使用 Windows SDK 建立密碼編譯物件:  
   
-- 使用建立的物件**新**運算子。  
+- 使用**new**運算子建立物件。  
   
-- 建立藉由呼叫實作特定的密碼編譯演算法的物件**建立**該演算法的抽象類別上的方法。  
+- 在該演算法的抽象類別上呼叫**create**方法, 以建立可執行特定密碼編譯演算法的物件。  
   
-- 建立藉由呼叫實作特定的密碼編譯演算法的物件<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法。  
+- 藉由呼叫<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法, 建立可執行特定密碼編譯演算法的物件。  
   
-- 建立物件，實作密碼編譯演算法 （例如對稱區塊編碼器） 藉由呼叫**Create**方法的抽象類別上該類型的演算法 (例如<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
+- 藉由在該演算法類型的抽象類別 (例如<xref:System.Security.Cryptography.SymmetricAlgorithm>) 上呼叫**create**方法, 來建立可實作為密碼編譯演算法類別 (例如對稱式封鎖密碼) 的物件。  
   
- 例如，假設開發人員想要計算一組位元組的 SHA1 雜湊。 <xref:System.Security.Cryptography>命名空間包含兩個 SHA1 演算法，其中一個純粹是 managed 的實作，另一個包裝 CryptoAPI 實作。 開發人員可以選擇要具現化特定的 SHA1 實作 (例如<xref:System.Security.Cryptography.SHA1Managed>) 藉由呼叫**新**運算子。 不過，如果它並不重要，只要此類別會實作的 SHA1 雜湊演算法，common language runtime 載入哪一個類別，開發人員可以建立物件藉由呼叫<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>方法。 這個方法會呼叫**System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")** ，它必須傳回 SHA1 雜湊演算法的實作。  
+ 例如, 假設開發人員想要計算一組位元組的 SHA1 雜湊。 <xref:System.Security.Cryptography>命名空間包含兩種 SHA1 演算法的實作為, 一個純粹受控的執行, 另一個則包裝 CryptoAPI。 開發人員可以藉由呼叫**new**運算子, 選擇具現化特定<xref:System.Security.Cryptography.SHA1Managed>的 SHA1 實作為 (例如)。 不過, 如果通用語言執行平臺在類別實作為 SHA1 雜湊演算法時所載入的類別並不重要, 則開發人員可以藉由呼叫<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>方法來建立物件。 這個方法會呼叫**cryptoconfig.createfromname. CreateFromName ("system.string")** , 它必須傳回 SHA1 雜湊演算法的實值。  
   
- 開發人員也可以呼叫**System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** 因為根據預設，加密組態包含隨附於.NET Framework 中的演算法簡短名稱。  
+ 開發人員也可以呼叫**cryptoconfig.createfromname. CreateFromName ("SHA1")** , 因為根據預設, 密碼編譯設定會包含 .NET Framework 隨附之演算法的簡短名稱。  
   
- 如果不論使用哪一個雜湊演算法，開發人員可以呼叫<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>方法，以傳回該物件會實作雜湊的轉換。  
+ 如果使用的雜湊演算法並不重要, 開發人員可以呼叫<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>方法, 它會傳回可執行雜湊轉換的物件。  
   
-## <a name="mapping-algorithm-names-in-configuration-files"></a>將組態檔中的演算法名稱對應  
- 根據預設，執行階段會傳回<xref:System.Security.Cryptography.SHA1CryptoServiceProvider>這四個案例的物件。 不過，電腦的系統管理員可以變更最後兩個案例中的方法所傳回的物件的類型。 若要這樣做，您必須將易記的演算法名稱對應至您想要在電腦組態檔 (Machine.config) 中使用的類別。  
+## <a name="mapping-algorithm-names-in-configuration-files"></a>對應設定檔中的演算法名稱  
+ 根據預設, 運行<xref:System.Security.Cryptography.SHA1CryptoServiceProvider>時間會針對所有四個案例傳回物件。 不過, 電腦系統管理員可以變更最後兩個案例中的方法所傳回的物件類型。 若要這樣做, 您必須將易記的演算法名稱對應至您想要在電腦設定檔案 (Machine.config) 中使用的類別。  
   
- 下列範例示範如何設定執行階段，讓**System.Security.Cryptography.SHA1.Create**， **System.Security.CryptoConfig.CreateFromName("SHA1")** ，和**System.Security.Cryptography.HashAlgorithm.Create**傳回`MySHA1HashClass`物件。  
+ 下列範例會示範如何設定執行時間, 使**Cryptoconfig.createfromname CreateFromName ("SHA1")** , 以及 **HashAlgorithm. 建立程式中的執行密碼編譯。 create。傳回物件。** `MySHA1HashClass`  
   
 ```xml  
 <configuration>  
@@ -58,14 +58,14 @@ ms.locfileid: "66832688"
 </configuration>  
 ```  
   
- 您可以指定中的屬性名稱[< cryptoClass\>項目](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)(上述範例將此屬性命名`MySHA1Hash`)。 中的屬性值 **\<cryptoClass >** 項目是 common language runtime 用來尋找類別的字串。 您可以使用任何符合需求中所指定的字串[指定完整的型別名稱](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。  
+ 您可以在[< cryptoClass\> ](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)專案中指定屬性的名稱 (先前的範例會將屬性`MySHA1Hash`命名為)。 CryptoClass > 元素中 **\<** 的屬性值是通用語言執行時間用來尋找類別的字串。 您可以使用符合指定[完整類型名稱](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)所指定之需求的任何字串。  
   
- 許多的演算法名稱可以對應至相同的類別。 [ \<NameEntry > 項目](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)類別對應至一個易記的演算法名稱。 **名稱**屬性可以是字串時，呼叫使用**System.Security.Cryptography.CryptoConfig.CreateFromName**方法或在抽象的密碼編譯類別的名稱<xref:System.Security.Cryptography>命名空間。 值**類別**屬性是中的屬性名稱 **\<cryptoClass >** 項目。  
+ 許多演算法名稱可以對應至相同的類別。 Y > 元素會將類別對應至一個易記的演算法名稱。 [ \< ](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) **Name**屬性可以是在<xref:System.Security.Cryptography>命名空間中呼叫**cryptoconfig.createfromname. CreateFromName**方法或抽象密碼編譯類別名稱時所使用的字串。 **類別**屬性的值是 **\<cryptoClass >** 元素中的屬性名稱。  
   
 > [!NOTE]
->  您可以呼叫來取得 SHA1 演算法<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>或**Security.CryptoConfig.CreateFromName("SHA1")** 方法。 每一種方法僅保證，它會傳回實作 SHA1 演算法的物件。 您沒有對應至相同的類別，在組態檔中的每個演算法的好記的名稱。  
+>  您可以藉由呼叫<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>或**cryptoconfig.createfromname. CreateFromName ("SHA1")** 方法來取得 SHA1 演算法。 每個方法都只保證它會傳回可實作為 SHA1 演算法的物件。 您不需要將演算法的每一個易記名稱對應至設定檔中的相同類別。  
   
- 如需預設名稱和它們對應到類別的清單，請參閱<xref:System.Security.Cryptography.CryptoConfig>。  
+ 如需預設名稱及其對應類別的清單, 請參閱<xref:System.Security.Cryptography.CryptoConfig>。  
   
 ## <a name="see-also"></a>另請參閱
 
