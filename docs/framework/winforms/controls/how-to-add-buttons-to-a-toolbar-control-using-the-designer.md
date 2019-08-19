@@ -8,50 +8,48 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: ed479c04db094b5fc0c42bfecbfe5a7753c16358
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: e5069dd46a31a65f65a17d750b685d82762e3d11
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960177"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038212"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>作法：使用設計工具將按鈕新增至 ToolBar 控制項
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>HOW TO：使用設計工具將按鈕新增至 ToolBar 控制項
 
 > [!NOTE]
-> <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。
+>           <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。
 
-不可或缺的一部分<xref:System.Windows.Forms.ToolBar>控制項是您加入的按鈕。 這些可以用來讓您輕鬆存取功能表命令，或者，或者，他們可以放在您的應用程式的命令公開給您的使用者功能表結構中所沒有的使用者介面的另一個區域。
+<xref:System.Windows.Forms.ToolBar>控制項的整數部分是您加入其中的按鈕。 這些可以用來提供功能表命令的輕鬆存取, 或者將它們放在應用程式使用者介面的另一個區域, 以向您的使用者公開功能表結構中無法使用的命令。
 
-下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.ToolBar>控制項。 如需這類專案的設定資訊，請參閱[How to:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[How to:將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。
+下列程式需要具有包含<xref:System.Windows.Forms.ToolBar>控制項之表單的**Windows 應用程式**專案。 如需設定這類專案的相關資訊, [請參閱如何:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project) , [以及如何:將控制項新增至](how-to-add-controls-to-windows-forms.md)Windows Forms。
 
-> [!NOTE]
-> 根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
 ### <a name="to-add-buttons-at-design-time"></a>若要在設計階段加入按鈕
 
 1. 選取 <xref:System.Windows.Forms.ToolBar> 控制項。
 
-2. 在 [**屬性**] 視窗中，按一下<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性，以選取它，然後按一下 **省略符號**(![Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）。](./media/visual-studio-ellipsis-button.png))若要開啟的按鈕**ToolBarButton 集合編輯器**。
+2. 在 [**屬性**] 視窗中, <xref:System.Windows.Forms.ToolBar.Buttons%2A>按一下屬性來選取它, 然後按一下省略號![([屬性視窗中 Visual Studio](./media/visual-studio-ellipsis-button.png)] 按鈕的省略號按鈕 (...), 以開啟**ToolBarButton集合編輯器**。
 
-3. 使用**新增**並**移除**按鈕來新增和移除按鈕等，從<xref:System.Windows.Forms.ToolBar>控制項。
+3. 使用 [**新增**] 和 [**移除**] 按鈕, 即可在<xref:System.Windows.Forms.ToolBar>控制項中加入和移除按鈕。
 
-4. 設定個別的按鈕中的屬性**屬性**出現在編輯器的右邊窗格中的視窗。 下表顯示一些要考慮的重要屬性。
+4. 在編輯器右側窗格中的 [**屬性**] 視窗中, 設定個別按鈕的屬性。 下表顯示一些要考慮的重要屬性。
 
-    |屬性|描述|
+    |屬性|說明|
     |--------------|-----------------|
-    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|設定要顯示在下拉式工具列按鈕的功能表。 工具列按鈕的<xref:System.Windows.Forms.ToolBarButton.Style%2A>屬性必須設為<xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>。 這個屬性可接受的執行個體<xref:System.Windows.Forms.ContextMenu>做為參考的類別。|
-    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|設定是否部分壓下切換式工具列按鈕。 工具列按鈕的<xref:System.Windows.Forms.ToolBarButton.Style%2A>屬性必須設為<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>。|
-    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|設定是否切換式工具列按鈕目前為按下狀態。 工具列按鈕的<xref:System.Windows.Forms.ToolBarButton.Style%2A>屬性必須設為<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>或<xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>。|
-    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|將工具列按鈕的樣式設定。 必須是其中一個值在<xref:System.Windows.Forms.ToolBarButtonStyle>列舉型別。|
+    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|設定要顯示在下拉式工具列按鈕中的功能表。 工具列按鈕的<xref:System.Windows.Forms.ToolBarButton.Style%2A>屬性必須設定為<xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>。 這個屬性會將<xref:System.Windows.Forms.ContextMenu>類別的實例當做參考。|
+    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|設定是否要部分推送轉場樣式的工具列按鈕。 工具列按鈕的<xref:System.Windows.Forms.ToolBarButton.Style%2A>屬性必須設定為<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>。|
+    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|設定轉場樣式的工具列按鈕目前是否處於已推送狀態。 工具列按鈕的<xref:System.Windows.Forms.ToolBarButton.Style%2A>屬性必須設定為<xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>或<xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>。|
+    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|設定工具列按鈕的樣式。 必須是<xref:System.Windows.Forms.ToolBarButtonStyle>列舉中的其中一個值。|
     |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|按鈕所顯示的文字字串。|
-    |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|會顯示為按鈕的工具提示文字。|
+    |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|顯示為按鈕工具提示的文字。|
 
-5. 按一下 **確定**關閉對話方塊並建立指定的面板。
+5. 按一下 **[確定**] 關閉對話方塊, 並建立您指定的面板。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolBar>
 - [如何：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)
-- [如何：觸發程序的工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [如何：觸發工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [工具列控制項概觀](toolbar-control-overview-windows-forms.md)
 - [ToolBar 控制項](toolbar-control-windows-forms.md)

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733357"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039441"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3.0 (Preview 7) 的新功能
 
@@ -159,7 +159,7 @@ dotnet publish -r <rid> -c Release
 
 .NET Core 3.0 預設會開啟[階層式編譯](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC)。 這項功能可讓執行階段更彈性地使用 Just-In-Time (JIT) 編譯器來獲得更佳的效能。
 
-TC 的主要優點是能夠啟用較慢速但較快產生程式碼，或品質較高但較慢產生程式碼的 JIT 重新編譯方法。 由於行經各種執行階段 (從啟動到穩定狀態)，因此有助於提升應用程式的效能。 這與非 TC 方法相反，在非 TC 方法中，所有方法都是以單一方式 (與高品質層相同) 進行編譯，這會偏重穩定狀態而非啟動效能。
+TC 的主要優點是能夠啟用較慢品質但較快層級，或較高品質但較慢層級的 JIT (重新) 編譯方法。 由於行經各種執行階段 (從啟動到穩定狀態)，因此有助於提升應用程式的效能。 這與非 TC 方法相反，在非 TC 方法中，所有方法都是以單一方式 (與高品質層相同) 進行編譯，這會偏重穩定狀態而非啟動效能。
 
 若要啟用 Quick JIT (層級 0 JIT 編譯的程式碼)，請在您的專案檔中使用此設定：
 
@@ -291,7 +291,7 @@ Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
 ```
 
-## <a name="winforms-highdpi"></a>WinForms HighDPI
+## <a name="winforms-high-dpi"></a>WinForms 高 DPI
 
 .NET Core Windows Forms 應用程式可以使用 <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType> 設定高 DPI 模式。 除非已透過其他方法 (例如在 `Application.Run` 前面加上 `App.Manifest` 或 P/Invoke) 進行設定，否則 `SetHighDpiMode` 方法可以設定對應的高 DPI 模式。
 
@@ -305,7 +305,7 @@ Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.
 
 如需高 DPI 模式的詳細資訊，請參閱 [Windows 上的高 DPI 傳統型應用程式開發](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)。
 
-### <a name="ranges-and-indices"></a>範圍和索引
+## <a name="ranges-and-indices"></a>範圍和索引
 
 新的 <xref:System.Index?displayProperty=nameWithType> 類型可用於編製索引。 您可以從會從開頭算起的 `int` 或使用會從結尾算起的前置詞 `^` 運算子 (C#)，來建立一個索引：
 
@@ -324,7 +324,7 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 如需詳細資訊，請參閱[範圍和索引教學課程](../../csharp/tutorials/ranges-indexes.md)。
 
-### <a name="async-streams"></a>非同步資料流
+## <a name="async-streams"></a>非同步資料流
 
 <xref:System.Collections.Generic.IAsyncEnumerable%601> 類型是 <xref:System.Collections.Generic.IEnumerable%601> 的新非同步版本。 此語言可讓您透過 `IAsyncEnumerable<T>` 執行 `await foreach` 以取用其元素，然後對它們使用 `yield return` 以產生元素。
 
@@ -403,17 +403,15 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 以下是 `JsonDocument` 和 `JsonElement` 的使用方式樣本，其可作為起點：
 
-以下是完整閱讀 Visual Studio Code 所建立 [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) 檔案的 C# 8.0 範例：
-
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
+
+以下是完整閱讀 Visual Studio Code 所建立 [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) 檔案的 C# 8.0 範例：
 
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
 <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 建置在 <xref:System.Text.Json.Utf8JsonReader> 和 <xref:System.Text.Json.Utf8JsonWriter> 之上，以在使用 JSON 文件和片段時，提供快速的低記憶體序列化選項。
-
-查看： https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md 以取得要移植到本文的範例
 
 以下是將物件序列化成 JSON 的範例：
 

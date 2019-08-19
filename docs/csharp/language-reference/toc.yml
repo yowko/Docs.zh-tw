@@ -4,7 +4,7 @@
   href: configure-language-version.md
 - name: 'C# 關鍵字'
   items:
-    - name: 總覽
+    - name: 概觀
       href: keywords/index.md
     - name: 內建類型
       items:
@@ -12,7 +12,7 @@
           items:
             - name: 實質型別的功能
               href: keywords/value-types.md
-            - name: 布林
+            - name: bool
               href: keywords/bool.md
             - name: 整數數值類型
               displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
@@ -22,7 +22,7 @@
               href: builtin-types/floating-point-numeric-types.md
             - name: char
               href: keywords/char.md
-            - name: 列舉
+            - name: enum
               href: keywords/enum.md
             - name: struct
               href: keywords/struct.md
@@ -30,7 +30,7 @@
           items:
             - name: 參考類型的功能
               href: keywords/reference-types.md
-            - name: class
+            - name: Class - 類別
               href: keywords/class.md
             - name: 內建參考類型
               displayName: 'object, delegate, dynamic, string'
@@ -69,13 +69,13 @@
               href: keywords/accessibility-domain.md
             - name: 使用協助工具層級的限制
               href: keywords/restrictions-on-using-accessibility-levels.md
-            - name: 內部
+            - name: internal
               href: keywords/internal.md
-            - name: 私用
+            - name: private
               href: keywords/private.md
             - name: protected
               href: keywords/protected.md
-            - name: 公開
+            - name: public
               href: keywords/public.md
             - name: protected internal
               href: keywords/protected-internal.md
@@ -87,7 +87,7 @@
           href: keywords/async.md
         - name: const
           href: keywords/const.md
-        - name: 事件
+        - name: event
           href: keywords/event.md
         - name: extern
           href: keywords/extern.md
@@ -119,7 +119,7 @@
           items:
             - name: if-else
               href: keywords/if-else.md
-            - name: 參數
+            - name: switch
               href: keywords/switch.md
         - name: 反覆運算陳述式
           items:
@@ -153,7 +153,7 @@
               href: keywords/try-catch-finally.md
         - name: Checked 與 Unchecked
           items:
-            - name: 總覽
+            - name: 概觀
               href: keywords/checked-and-unchecked.md
             - name: checked
               href: keywords/checked.md
@@ -193,7 +193,7 @@
           href: keywords/extern-alias.md
     - name: 類型測試關鍵字
       items:
-        - name: is
+        - name: 是
           href: keywords/is.md
     - name: 泛型型別條件約束關鍵字
       items:
@@ -209,7 +209,7 @@
       items:
         - name: base
           href: keywords/base.md
-        - name: 此
+        - name: this
           href: keywords/this.md
     - name: 常值關鍵字
       items:
@@ -217,15 +217,15 @@
           href: keywords/null.md
         - name: 'true'
           href: keywords/true-literal.md
-        - name: 'false'
+        - name: 'False'
           href: keywords/false-literal.md
-        - name: 預設值
+        - name: 預設
           href: keywords/default.md
     - name: 內容關鍵字
       items:
         - name: 快速參考
           href: keywords/contextual-keywords.md
-        - name: 新增
+        - name: add
           href: keywords/add.md
         - name: get
           href: keywords/get.md
@@ -235,7 +235,7 @@
           href: keywords/partial-method.md
         - name: remove
           href: keywords/remove.md
-        - name: set
+        - name: 設定
           href: keywords/set.md
         - name: when (篩選條件)
           href: keywords/when.md
@@ -267,17 +267,17 @@
           href: keywords/ascending.md
         - name: descending
           href: keywords/descending.md
-        - name: 'on'
+        - name: 於
           href: keywords/on.md
         - name: equals
           href: keywords/equals.md
         - name: by
           href: keywords/by.md
-        - name: 了嗎
+        - name: 中的
           href: keywords/in.md
 - name: 'C# 運算子'
   items:
-    - name: 總覽
+    - name: 概觀
       href: operators/index.md
     - name: 算術運算子
       href: operators/arithmetic-operators.md
@@ -297,9 +297,9 @@
     - name: 成員存取運算子
       href: operators/member-access-operators.md
       displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
-    - name: 類型測試和轉換運算子
-      href: operators/type-testing-and-conversion-operators.md
-      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
+    - name: 型別測試和轉換運算子
+      href: operators/type-testing-and-cast.md
+      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
     - name: 使用者定義轉換運算子
       href: operators/user-defined-conversion-operators.md
       displayName: 'implicit, explicit'
@@ -318,7 +318,7 @@
     - name: '?: 運算子'
       href: operators/conditional-operator.md
       displayName: 'conditional, ternary, ref'
-    - name: '?? operator'
+    - name: '?? 運算子'
       href: operators/null-coalescing-operator.md
       displayName: null-coalescing
     - name: => 運算子
@@ -347,7 +347,7 @@
       href: operators/operator-overloading.md
 - name: 'C# 特殊字元'
   items:
-    - name: 總覽
+    - name: 概觀
       href: tokens/index.md
     - name: $ -- 字串插補
       href: tokens/interpolated.md
@@ -355,7 +355,7 @@
       href: tokens/verbatim.md
 - name: 'C# 前置處理器指示詞'
   items:
-    - name: 總覽
+    - name: 概觀
       href: preprocessor-directives/index.md
     - name: '#if'
       href: preprocessor-directives/preprocessor-if.md
@@ -369,7 +369,7 @@
       href: preprocessor-directives/preprocessor-define.md
     - name: '#undef'
       href: preprocessor-directives/preprocessor-undef.md
-    - name: '#警告'
+    - name: '#warning'
       href: preprocessor-directives/preprocessor-warning.md
     - name: '#error'
       href: preprocessor-directives/preprocessor-error.md
@@ -387,7 +387,7 @@
       href: preprocessor-directives/preprocessor-pragma-checksum.md
 - name: 'C# 編譯器選項'
   items:
-    - name: 總覽
+    - name: 概觀
       href: compiler-options/index.md
     - name: 使用 csc.exe 建置命令列
       href: compiler-options/command-line-building-with-csc-exe.md
@@ -523,7 +523,7 @@
       href: ../../../_csharplang/spec/lexical-structure.md
     - name: 基本概念
       href: ../../../_csharplang/spec/basic-concepts.md
-    - name: 類型
+    - name: 型別
       href: ../../../_csharplang/spec/types.md
     - name: 變數
       href: ../../../_csharplang/spec/variables.md
@@ -585,7 +585,7 @@
       href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
     - name: 參考樣式類型的編譯時間安全性
       href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
-    - name: 無後置具名引數
+    - name: 非後置具名引數
       href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
     - name: Private protected
       href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
