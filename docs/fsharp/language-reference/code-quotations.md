@@ -1,59 +1,59 @@
 ---
 title: 程式碼引號
-description: 深入了解F#程式碼引號，可讓您產生及使用的語言功能F#程式碼運算式以程式設計的方式。
+description: 瞭解程式F#代碼報價, 這是一種語言功能, 可讓您以F#程式設計方式產生及使用程式碼運算式。
 ms.date: 05/16/2016
-ms.openlocfilehash: 30fd5b575fa59d78c3e70c1a94cd921a6a655ace
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: c6ec0078c685a6452f49edd289b01491dd62e3db
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402134"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630424"
 ---
 # <a name="code-quotations"></a>程式碼引號
 
 > [!NOTE]
 > API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
-本主題描述*程式碼引號*，可讓您產生及使用的語言功能F#程式碼運算式以程式設計的方式。 這項功能可讓您產生抽象語法樹狀結構，表示F#程式碼。 可以周遊的抽象語法樹狀目錄，然後根據您的應用程式的需求進行處理。 例如，您可以使用樹狀結構，來產生F#程式碼，或是某些其他語言產生程式碼。
+本主題描述程式*代碼引號*, 這是一種語言功能, 可讓您F#以程式設計方式產生及使用程式碼運算式。 這項功能可讓您產生代表F#程式碼的抽象語法樹狀結構。 然後, 可以根據您的應用程式需求來進行遍歷和處理的抽象語法樹狀結構。 例如, 您可以使用樹狀結構來產生F#程式碼, 或以其他語言產生程式碼。
 
-## <a name="quoted-expressions"></a>加上引號的運算式
+## <a name="quoted-expressions"></a>引號運算式
 
-A*加上引號運算式*是F#運算式在程式碼中分隔的方式不編譯一部分您的程式，但改為編譯物件，表示為F#運算式。 您可以將標記的引號括住的運算式中有兩種： 使用型別資訊，或不具類型資訊。 如果您想要包含的型別資訊，您會使用符號`<@`和`@>`來分隔引號括住的運算式。 如果您不需要型別資訊，您會使用符號`<@@`和`@@>`。 下列程式碼顯示具型別和不具類型的引號。
+*加上引號*的運算式F#是程式碼中的運算式, 以這種方式分隔, 而不會編譯成您的程式的一部分, 而是編譯成代表F#運算式的物件。 您可以使用下列兩種方式的其中一種來標記引號運算式: 具有類型資訊或不含類型資訊。 如果您想要包含型別資訊, 請使用符號`<@`和`@>`來分隔加上引號的運算式。 如果您不需要類型資訊, 請使用符號`<@@`和。 `@@>` 下列程式碼顯示具類型和不具類型的引號。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet501.fs)]
 
-周遊大型的運算式樹狀結構會更快，如果您不會包含類型資訊。 使用具類型的符號加上引號運算式的結果類型是`Expr<'T>`，而且型別參數都有由運算式的型別F#編譯器的型別推斷演算法。 當您使用不具類型資訊的程式碼引號時，加上引號運算式的類型為非泛型型別[Expr](https://msdn.microsoft.com/library/ed6a2caf-69d4-45c2-ab97-e9b3be9bce65)。 您可以呼叫[Raw](https://msdn.microsoft.com/library/47fb94f1-e77f-4c68-aabc-2b0ba40d59c2)具型別的的屬性`Expr`類別來取得不具型別的`Expr`物件。
+如果您不包含型別資訊, 則可以更快速地遍歷大型運算式樹狀架構。 以具型別符號括住之運算式的結果型`Expr<'T>`別為, 其中的型別參數具有由F#編譯器類型推斷演算法所決定的運算式型別。 當您使用沒有類型資訊的程式碼引號時, 引號運算式的類型為非泛型型別[Expr](https://msdn.microsoft.com/library/ed6a2caf-69d4-45c2-ab97-e9b3be9bce65)。 您可以在具類型的`Expr`類別上呼叫 [Raw](https://msdn.microsoft.com/library/47fb94f1-e77f-4c68-aabc-2b0ba40d59c2) 屬性, 以取得不具類型的`Expr`物件。
 
-有各種不同的靜態方法，讓您產生F#運算式會以程式設計方式在物件`Expr`類別，而不使用加上引號的運算式。
+有各種靜態方法, 可讓您在F# `Expr`類別中以程式設計方式產生運算式物件, 而不需要使用加上引號的運算式。
 
-請注意，程式碼引號必須包含完整的運算式。 針對`let`繫結，例如，您需要定義的繫結的名稱和其他運算式，使用此繫結。 在詳細的語法中，這是遵循`in`關鍵字。 在最上層模組中，這是只在模組中下, 一個運算式，但在引號中，是明確需要。
+請注意, 程式碼引號必須包含完整的運算式。 `let`例如, 針對系結, 您需要系結名稱的定義, 以及使用此系結的其他運算式。 在 verbose 語法中, 這是緊接在`in`關鍵字後面的運算式。 在模組的頂層, 這只是模組中的下一個運算式, 但在引號中, 它是明確需要的。
 
-因此，下列運算式不是有效的。
+因此, 下列運算式無效。
 
 ```fsharp
 // Not valid:
 // <@ let f x = x + 1 @>
 ```
 
-但是，下列運算式都是有效。
+但下列運算式是有效的。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-若要評估F#您必須使用引號， [ F#引號評估工具](https://github.com/fsprojects/FSharp.Quotations.Evaluator)。 它提供支援，來評估和執行F#運算式的物件。
+若要F#評估報價, 您必須使用[ F#報價評估](https://github.com/fsprojects/FSharp.Quotations.Evaluator)工具。 它提供了評估和執行F# expression 物件的支援。
 
-## <a name="expr-type"></a>Expr 型別
+## <a name="expr-type"></a>Expr 類型
 
-執行個體`Expr`代表類型F#運算式。 泛型和非泛型`Expr`類型會記錄在F#程式庫文件。 如需詳細資訊，請參閱 < [Microsoft.FSharp.Quotations 命名空間](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d)並[Quotations.Expr 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d)。
+`Expr`類型的實例代表F#運算式。 連結F#庫檔中記載一般和非`Expr`泛型型別。 如需詳細資訊, 請參閱[fsharp.core. 引號 Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d)和[引號. Expr Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d)。
 
 ## <a name="splicing-operators"></a>接合運算子
 
-接合，可讓您將使用您建立以程式設計方式或從另一個程式碼引號運算式的常值程式碼引號。 `%`並`%%`運算子可讓您新增F#運算式物件插入的程式碼引號。 您使用`%`的具類型的運算式物件插入具類型的引號的運算子; 您可以使用`%%`運算子，將不具類型的運算式物件插入不具類型的引號。 這兩個運算子是一元前置運算子。 因此如果`expr`是不具類型的型別運算式`Expr`，下列程式碼就有效。
+接合可讓您使用以程式設計方式或另一個程式碼引號建立的運算式, 結合常值的程式碼引號。 和運算子可讓您將F#運算式物件新增至程式碼引號。 `%%` `%` 您可以使用`%`運算子將具類型的運算式物件插入至具類型的引號中; `%%`您可以使用運算子將不具類型的運算式物件插入不具類型的引號中。 這兩個運算子都是一元前置運算子。 因此, `expr`如果是類型`Expr`的不具類型運算式, 則下列程式碼是有效的。
 
 ```fsharp
 <@@ 1 + %%expr @@>
 ```
 
-而如果`expr`是型別的具型別的引號`Expr<int>`，下列程式碼就有效。
+而且, `expr`如果是類型`Expr<int>`的具類型引號, 則下列程式碼是有效的。
 
 ```fsharp
 <@ 1 + %expr @>
@@ -61,13 +61,13 @@ A*加上引號運算式*是F#運算式在程式碼中分隔的方式不編譯一
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>描述
+### <a name="description"></a>說明
 
-下列範例示範如何將程式碼引號，將F#程式碼分成 expression 物件，並再列印F#表示運算式的程式碼。 函式`println`定義，其中包含遞迴函式`print`顯示F#運算式物件 (型別的`Expr`) 的好記的格式。 有數個使用中的模式[Microsoft.FSharp.Quotations.Patterns](https://msdn.microsoft.com/library/093944a9-c752-403a-8983-5fcd5dbf92a4)並[Microsoft.FSharp.Quotations.DerivedPatterns](https://msdn.microsoft.com/library/d2434a6e-ae7b-4f3d-b567-c162938bc9cd)模組，可用來分析運算式物件。 此範例不包含所有可能模式，可能會出現在F#運算式。 任何無法辨識的模式就會觸發萬用字元模式比對 (`_`)，且會使用轉換`ToString`方法，它會上`Expr`類型，可讓您知道將比對運算式中的模式。
+下列範例說明如何使用程式碼引號將程式碼F#放入運算式物件中, 然後列印表示F#運算式的程式碼。 定義了一個函F#式, 其中包含以易記格式顯示運算式物件 (型`Expr`別為) 的遞迴函數。 `print` `println` [Fsharp.core](https://msdn.microsoft.com/library/093944a9-c752-403a-8983-5fcd5dbf92a4)中有數個使用中的模式, 可以用來分析運算式物件, 也就是[DerivedPatterns](https://msdn.microsoft.com/library/d2434a6e-ae7b-4f3d-b567-c162938bc9cd)模組。 這個範例不包含可能出現在F#運算式中的所有可能模式。 任何無法辨識的模式都會觸發與萬用字元模式的`_`比對 (), 而且會`ToString`使用方法轉譯, 而此`Expr`方法會在型別上, 讓您知道要加入至比對運算式的現用模式。
 
 ### <a name="code"></a>程式碼
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
 
 ### <a name="output"></a>Output
 
@@ -81,15 +81,15 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 
 ### <a name="description"></a>描述
 
-您也可以使用中的三個作用中模式[ExprShape 模組](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de)周遊運算式樹狀架構，具有較少的使用中模式。 當您想要周遊樹狀結構，但您不需要大部分的節點中的所有資訊，這些作用中的模式可以很有用。 當您使用這些模式中，任何F#運算式會比對下列三個模式之一：`ShapeVar`運算式是一個變數，如果`ShapeLambda`如果運算式是 lambda 運算式，或`ShapeCombination`如果運算式可以是任何其他項目。 如果您周遊運算式樹狀架構所使用的作用中的模式，如同先前的程式碼範例時，您必須使用許多更多的模式來處理所有可能發生F#運算式的型別和您的程式碼會更複雜。 如需詳細資訊，請參閱 < [ExprShape.ShapeVar&#124;ShapeLambda&#124;ShapeCombination 現用模式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)。
+您也可以使用[exprshape.rebuildshapecombination 模組](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de)中的三個作用中模式, 以較少的現用模式來進行運算式樹狀架構的處理。 當您想要穿越樹狀結構, 但在大部分的節點中都不需要所有資訊時, 這些現用模式可能很有用。 當您使用這些模式時, F#任何運算式都會符合下列三種模式的`ShapeVar`其中之一: 如果運算式為變數`ShapeLambda` , 則為; 如果運算式為 lambda 運算式`ShapeCombination` , 則為, 如果運算式為任何其他專案, 則為。 如果您使用上述程式碼範例中的現用模式來流覽運算式樹狀架構, 您必須使用更多的模式來處理所有可能F#的運算式類型, 而您的程式碼會更複雜。 如需詳細資訊, 請參閱[Exprshape.rebuildshapecombination&#124;ShapeVar&#124;ShapeLambda shapecombination 現用 Active Pattern](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)。
 
-下列程式碼範例可用做為基礎的更複雜的周遊。 在此程式碼中，牽涉到函式呼叫的運算式建立運算式樹狀架構`add`。 [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d)作用中的模式用來偵測到的任何呼叫`add`運算式樹狀結構中。 此作用中的模式會指派至呼叫的引數`exprList`值。 在此情況下，有一些只有兩種，因此這些取出和呼叫的函式會以遞迴方式引數。 結果會插入到代表呼叫的程式碼引號`mul`使用拼接運算子 (`%%`)。 `println`上一個範例中的函數用來顯示結果。
+下列程式碼範例可用來做為更複雜周遊的基礎。 在此程式碼中, 會針對牽涉到函式呼叫`add`的運算式建立運算式樹狀架構。 [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d)現用模式是用來偵測運算式樹狀結構`add`中的任何呼叫。 此現用模式會將呼叫`exprList`的引數指派給值。 在此情況下, 只會有兩個, 因此會提取這些函式, 並在引數上以遞迴方式呼叫函數。 結果會插入`mul`程式碼引號, 表示使用拼接運算子 (`%%`) 的呼叫。 上`println`一個範例中的函式是用來顯示結果。
 
-其他使用中模式分支中的程式碼只會重新產生相同的運算式樹狀架構，因此在產生的運算式中的唯一變更是從變更`add`至`mul`。
+另一個現用模式分支中的程式碼只會重新產生相同的運算式樹狀架構, 因此, 所產生之運算式中的`add`唯一`mul`變更是從變更為。
 
 ### <a name="code"></a>程式碼
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
 
 ### <a name="output"></a>Output
 

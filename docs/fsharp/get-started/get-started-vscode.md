@@ -1,162 +1,162 @@
 ---
-title: 開始使用F#Visual Studio Code 中
-description: 了解如何使用F#利用 Visual Studio Code 和 ionide 使用者外掛程式套件。
+title: 開始使用F# Visual Studio Code
+description: 瞭解如何搭配 Visual Studio Code F#和 Ionide 外掛程式套件使用。
 ms.date: 12/23/2018
-ms.openlocfilehash: d9d5ed4008f657f956ee7a5611a2f5fdd8e5b44a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: baaa87207122cfe314972aee5dfaf8a41de2c394
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051881"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629975"
 ---
-# <a name="get-started-with-f-in-visual-studio-code"></a>開始使用F#Visual Studio Code 中
+# <a name="get-started-with-f-in-visual-studio-code"></a>開始使用F# Visual Studio Code
 
-您可以撰寫F#中[Visual Studio Code](https://code.visualstudio.com)具有[Ionide 外掛程式](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)若要取得 IntelliSense 與基本的程式碼好跨平台、 輕量級整合式開發環境 (IDE) 體驗重構作業。 請瀏覽[Ionide.io](http://ionide.io)若要深入了解此外掛程式。
+您可以使用F# [Ionide 外掛程式](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)來撰寫[Visual Studio Code](https://code.visualstudio.com) , 利用 IntelliSense 和基本程式碼重構取得絕佳的跨平臺、輕量的整合式開發環境 (IDE) 體驗。 若要深入瞭解外掛程式, 請造訪[Ionide.io](http://ionide.io) 。
 
-若要開始，請確定您已[F#和正確安裝 Ionide 外掛程式](install-fsharp.md#install-f-with-visual-studio-code)。
+若要開始, 請確定您已[ F#正確安裝和 Ionide 外掛程式](install-fsharp.md#install-f-with-visual-studio-code)。
 
 > [!NOTE]
-> Ionide 使用者將會產生.NET FrameworkF#專案，不 dotnet core，這可能會有跨平台相容性問題。 如果您在上執行**Linux**或是**OSX**，若要開始更簡單的方式是使用[命令列工具](get-started-command-line.md)。
+> Ionide 會產生 .NET Framework F#專案, 而不是 dotnet core, 這可能會有跨平臺的相容性問題。 如果您是在**Linux**或**OSX**上執行, 較簡單的入門方式就是使用[命令列工具](get-started-command-line.md)。
 
-## <a name="creating-your-first-project-with-ionide"></a>透過 Ionide 建立第一個專案
+## <a name="creating-your-first-project-with-ionide"></a>使用 Ionide 建立您的第一個專案
 
-若要建立新的F#專案中，開啟 Visual Studio Code （您可以為它命名您喜歡） 的新資料夾中。
+若要建立新F#的專案, 請在新的資料夾中開啟 Visual Studio Code (您可以將它命名為任何您喜歡的名稱)。
 
-接下來，開啟 命令選擇區 (**檢視 > 命令選擇區**) 並輸入下列命令：
+接下來, 開啟命令選擇區 (**View > 命令**選擇區), 然後輸入下列內容:
 
 ```
 > F# new project
 ```
 
-這由[偽造](https://github.com/fsharp-editing/Forge)專案。
+這是由[偽造](https://github.com/fsharp-editing/Forge)專案提供技術支援。
 
 > [!NOTE]
-> 如果看不到範本選項，請嘗試重新整理的範本，藉由在命令選擇區中執行下列命令： `>F#: Refresh Project Templates`。
+> 如果您沒有看到範本選項, 請在命令選擇區中執行下列命令, 以嘗試重新`>F#: Refresh Project Templates`整理範本:。
 
-選取 「F#:新專案 」 點擊**Enter**。 這會帶您前往下一個步驟，也就是選取專案範本。
+選取 F#:新增專案, 按**Enter 鍵**。 這會帶您前往下一個步驟, 也就是選取專案範本。
 
-挑選`classlib`範本，然後按**Enter**。
+挑選範本, 然後按**Enter 鍵。** `classlib`
 
-接下來，選擇要建立的專案中的目錄。 如果保留空白，它會使用目前的目錄。
+接下來, 選擇要在其中建立專案的目錄。 如果您將它保留空白, 則會使用目前的目錄。
 
-最後，命名您的專案中的最後一個步驟。 F#會使用[Pascal 大小寫慣例](http://c2.com/cgi/wiki?PascalCase)專案名稱。 本文章使用`ClassLibraryDemo`做為名稱。 一旦您輸入您想為您的專案的名稱，點擊**Enter**。
+最後, 在最後一個步驟中命名您的專案。 F#針對專案名稱使用[Pascal 大小寫](http://c2.com/cgi/wiki?PascalCase)。 本文會使用`ClassLibraryDemo`做為名稱。 輸入您想要用於專案的名稱之後, 按**Enter 鍵**。
 
-如果您遵循上一個步驟，您應該會看到 Visual Studio 程式碼工作區左手邊顯示與下列：
+如果您已遵循上一個步驟, 您應該會在左邊看到 [Visual Studio Code] 工作區, 以顯示下列內容:
 
-1. F#專案下, 面`ClassLibraryDemo`資料夾。
-2. 新增套件透過正確的目錄結構[ `Paket` ](https://fsprojects.github.io/Paket/)。
-3. 跨平台建置指令碼[ `FAKE` ](https://fsharp.github.io/FAKE/)。
-4. `paket.exe`可以擷取封裝，並為您解決相依性的可執行檔。
-5. A`.gitignore`檔案，如果您想要將此專案新增至 Git 架構原始檔控制。
+1. F#專案本身, 位於`ClassLibraryDemo`資料夾底下。
+2. 透過新增封裝[`Paket`](https://fsprojects.github.io/Paket/)的正確目錄結構。
+3. 使用[`FAKE`](https://fsharp.github.io/FAKE/)的跨平臺組建腳本。
+4. 可以為您提取封裝及解析相依性的可執行檔。`paket.exe`
+5. 如果`.gitignore`您想要將此專案加入至 Git 型原始檔控制, 則為檔案。
 
 ## <a name="writing-some-code"></a>撰寫一些程式碼
 
-開啟*ClassLibraryDemo*資料夾。  您應該會看到下列檔案：
+開啟 [ *ClassLibraryDemo* ] 資料夾。  您應該會看到下列檔案:
 
-1. `ClassLibraryDemo.fs`F#實作所定義的類別檔案。
-2. `ClassLibraryDemo.fsproj`F#用來建置此專案的專案檔案。
-3. `Script.fsx`F#載入原始程式檔的指令碼檔案。
-4. `paket.references`指定專案相依性的 Paket 檔案。
+1. `ClassLibraryDemo.fs`, 這F#是已定義類別的實作為檔案。
+2. `ClassLibraryDemo.fsproj`, 這F#是用來建立此專案的專案檔。
+3. `Script.fsx`, 這F#是載入原始程式檔的腳本檔案。
+4. `paket.references`, 這是指定專案相依性的 Paket 檔案。
 
-開啟`Script.fsx`，並在結尾處新增下列程式碼：
+開啟`Script.fsx`, 並在其結尾處新增下列程式碼:
 
-[!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
 
-此函式會將單字轉換成一種[Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin)。 下一步是評估使用F#互動式 (FSI)。
+此函式會將單字轉換成[Pig 拉丁](https://en.wikipedia.org/wiki/Pig_Latin)格式。 下一個步驟是使用F#互動式 (fsi.exe) 進行評估。
 
-反白顯示整個函式 （它應該是很長的 11 行）。 之後它會反白顯示，保存**Alt**鍵並按下**Enter**。 您會發現下面顯示的視窗，並應該會顯示類似如下：
+反白顯示整個函式 (應為11行長)。 反白顯示後, 按住**Alt**鍵並按**Enter**。 您會注意到下面的視窗快顯, 它應該會顯示如下的內容:
 
-![範例中的F#透過 Ionide 輸出的互動](media/getting-started-vscode/vscode-fsi.png)
+![具有 Ionide F#的互動式輸出範例](./media/getting-started-vscode/vscode-fsi.png)
 
-這會執行三項工作：
+這有三件事:
 
-1. 它會啟動 FSI 程序。
-2. 它透過 FSI 程序傳送您反白顯示的程式碼。
-3. FSI 程序會評估您透過傳送的程式碼。
+1. 它已開始 FSI.EXE 程式。
+2. 它會傳送您在 FSI.EXE 流程上反白顯示的程式碼。
+3. FSI.EXE 流程會評估您傳送的程式碼。
 
-因為您透過傳送[函式](../language-reference/functions/index.md)，您現在可以呼叫該函式與 FSI ！ 在互動式視窗中，輸入下列命令：
+由於您傳送的內容是[函式](../language-reference/functions/index.md), 因此您現在可以使用 fsi.exe 來呼叫該函式! 在 [互動式] 視窗中, 輸入下列內容:
 
 ```fsharp
 toPigLatin "banana";;
 ```
 
-您應該會看到下列結果：
+您應該會看到下列結果:
 
 ```fsharp
 val it : string = "ananabay"
 ```
 
-現在，讓我們試一次的第一個字母母音的群組。 輸入下列程式碼：
+現在, 讓我們以母音做為第一個字母來嘗試。 輸入下列程式碼：
 
 ```fsharp
 toPigLatin "apple";;
 ```
 
-您應該會看到下列結果：
+您應該會看到下列結果:
 
 ```fsharp
 val it : string = "appleyay"
 ```
 
-函式看起來如預期般運作。 恭喜，您剛撰寫您的第一個F#在 Visual Studio Code 函式，並評估使用 FSI ！
+函式看起來如預期般運作。 恭喜您, 您只是在F# Visual Studio Code 中撰寫了第一個函式, 並使用 fsi.exe 進行評估!
 
 > [!NOTE]
-> 您可能已經注意到，結尾 FSI 中的行`;;`。 這是因為 FSI 可讓您輸入多行。 `;;`結尾可讓 FSI 知道程式碼完成時。
+> 您可能已經注意到, FSI.EXE 中的行會以`;;`終止。 這是因為 FSI.EXE 可讓您輸入多行。 結尾`;;`的可讓 fsi.exe 知道程式碼完成的時間。
 
 ## <a name="explaining-the-code"></a>說明程式碼
 
-如果您不確定程式碼實際上在做什麼，以下是逐步執行精靈。
+如果您不確定程式碼實際執行的作業, 以下是逐步解說。
 
-如您所見，`toPigLatin`是函式會採用做為輸入的字組，並將它轉換成該單字的 Pig Latin 表示法。 此規則如下所示：
+如您所見, `toPigLatin`是採用單字做為其輸入的函式, 並將它轉換成該單字的 Pig-拉丁標記法。 此動作的規則如下所示:
 
-如果在 word 中的第一個字元是由某個母音開頭，新增"yay 」 到字尾。 如果它未啟動與母音的群組，移動該第一個字元到字尾，"ay 」 加入它。
+如果單字中的第一個字元是以母音開頭, 請將 "好耶" 新增至單字的結尾。 如果不是以母音開頭, 請將該第一個字元移至單字的結尾, 並在其中加上 "ay"。
 
-您可能已經注意到下列 FSI 中：
+在 FSI.EXE 中, 您可能已注意到下列事項:
 
 ```fsharp
 val toPigLatin : word:string -> string
 ```
 
-這指出`toPigLatin`是函式，接受`string`做為輸入 (稱為`word`)，並傳回另一個`string`。 這就所謂[函式的型別簽章](https://fsharpforfunandprofit.com/posts/function-signatures/)，基本的一項F#這是要了解索引鍵F#程式碼。 您也會發現這如果您將滑鼠停留在 Visual Studio Code 中的函式。
+這表示`toPigLatin`會`string`將當做輸入 (稱為`word`) 的函式, 並傳回另`string`一個。 這稱為函式的[型](https://fsharpforfunandprofit.com/posts/function-signatures/)別簽章, 這是瞭解F# F#程式碼的關鍵。 如果您將滑鼠停留在 Visual Studio Code 的函式上, 也會注意到這一點。
 
-在此函式主體中，您會注意到兩個不同的部分：
+在函式的主體中, 您會注意到兩個不同的部分:
 
-1. 內部函式，呼叫`isVowel`，，決定如果指定的字元 (`c`) 檢查是否符合其中一個透過提供的模式是母音的群組[模式比對](../language-reference/pattern-matching.md):
+1. 稱為`isVowel`的內部函式, 藉由透過[模式比對](../language-reference/pattern-matching.md)檢查指定的字元 (`c`) 是否符合其中一種提供的模式, 來判斷其是否為母音:
 
-   [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
+   [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
 
-2. [ `if..then..else` ](../language-reference/conditional-expressions-if-then-else.md)檢查是否第一個字元是母音的群組，並傳回值超出輸入字元的建構基礎 if 的第一個字元的運算式是否母音的群組：
+2. 一個[`if..then..else`](../language-reference/conditional-expressions-if-then-else.md)運算式, 可檢查第一個字元是否為母音, 並根據第一個字元是否為母音, 依據輸入字元來構造傳回值:
 
-   [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L8-L11)]
+   [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L8-L11)]
 
-流程`toPigLatin`因此：
+因此, 的`toPigLatin`流程如下:
 
-檢查是否輸入單字的第一個字元是母音的群組。 如果是，將 「 yay"附加到字尾。 否則，移動該第一個字元到字尾，而且"ay 」 加入它。
+檢查輸入字的第一個字元是否為母音。 如果是, 請將 "好耶" 附加至單字的結尾。 否則, 請將該第一個字元移到單字的結尾, 並在其中加上 "ay"。
 
-沒有一個最後的一件事来注意一點： 沒有任何明確指令來從與許多其他語言有不同的函式傳回。 這是因為F#是以運算式為基礎，並在函式主體中的最後一個運算式是傳回的值。 因為`if..then..else`本身是運算式的主體`then`區塊或主體`else`區塊將會傳回輸入的值而定。
+有一件最後要注意的事項: 從函式傳回的明確指示, 與其他許多語言不同。 這是因為F#是以運算式為基礎, 而函數主體中的最後一個運算式是傳回值。 因為`if..then..else`本身就是運算式, 所以會根據輸入`then`值傳回區塊的主體`else`或區塊主體。
 
-## <a name="moving-your-script-code-into-the-implementation-file"></a>將您的指令碼移到實作檔案
+## <a name="moving-your-script-code-into-the-implementation-file"></a>將您的腳本程式碼移至執行檔
 
-在本文中先前各節示範常見的第一個步驟，在撰寫F#程式碼： 撰寫的初始函式和以 FSI 以互動方式執行。 這也稱為 REPL 為導向的開發，其中[REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)代表 「 讀取-評估-列印迴圈 」。 它是適合用來試驗功能，直到您完全運作。
+本文中的先前章節示範了撰寫F#程式碼的常見第一個步驟: 撰寫初始函式, 並使用 fsi.exe 以互動方式執行它。 這就是所謂的複寫驅動開發, 其中[REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)複寫代表「讀取-評估-列印迴圈」。 這是實驗功能的絕佳方式, 直到您有一些工作可以運作為止。
 
-REPL 為導向的開發下一個步驟是將工作程式碼插入F#實作檔案。 它接著要編譯的F#編譯器可以執行的組件。
+以複寫為導向的開發的下一個步驟是將工作程式碼F#移至執行檔案。 然後編譯器會將它編譯F#成可執行檔元件。
 
-若要開始，請開啟`ClassLibraryDemo.fs`。  您會發現，一些程式碼已經在存在。 請繼續並刪除類別定義，但請務必保留[ `namespace` ](../language-reference/namespaces.md)頂端的宣告。
+若要開始, `ClassLibraryDemo.fs`請開啟。  您會發現有一些程式碼已經在那裡。 請繼續並刪除類別定義, 但請務必將宣告保留[`namespace`](../language-reference/namespaces.md)在頂端。
 
-接下來，建立新[ `module` ](../language-reference/modules.md)稱為`PigLatin`並複製`toPigLatin`函式匯入它，例如：
+接下來, 建立名[`module`](../language-reference/modules.md) `PigLatin`為的新, `toPigLatin`並將函式複製到其中, 如下所示:
 
-[!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
 
-接下來，開啟`Script.fsx`同樣地，檔案，並刪除整個`toPigLatin`函式，但請務必保持檔案中的下列兩行：
+接下來, 再次`Script.fsx`開啟檔案, 並刪除整個`toPigLatin`函式, 但請務必在檔案中保留下列兩行:
 
 ```fsharp
 #load "ClassLibraryDemo.fs"
 open ClassLibraryDemo
 ```
 
-選取這兩個文字行，然後按 Alt + Enter 來執行這幾行 FSI 中。 這些會載入 FSI 程序中的 Pig Latin 程式庫的內容及`open``ClassLibraryDemo`命名空間，所以您需要存取的功能。
+選取這兩行文字, 然後按 Alt + Enter 鍵, 在 FSI.EXE 中執行這些行。 這些會將 Pig 拉丁程式庫的內容載入 fsi.exe 程式和`open` `ClassLibraryDemo`命名空間, 讓您可以存取該功能。
 
-接下來，在 FSI 視窗中，呼叫函式搭配`PigLatin`您稍早定義的模組：
+接下來, 在 [fsi.exe] 視窗中, 使用您`PigLatin`稍早定義的模組來呼叫函式:
 
 ```
 > PigLatin.toPigLatin "banana";;
@@ -165,36 +165,36 @@ val it : string = "ananabay"
 val it : string = "appleyay"
 ```
 
-成功！ 您取得相同的結果之前，但現在從載入F#實作檔案。 此處的主要差異在於F#原始程式檔編譯成組件可不只是在 FSI 隨處執行。
+成功！ 您會得到與之前相同的結果, 但現在已F#從執行檔載入。 此處的主要差異在於, F#原始程式檔會編譯成可以在任何地方執行的元件, 而不只是在 fsi.exe 中。
 
 ## <a name="summary"></a>總結
 
-在本文中，您已了解：
+在本文中, 您已瞭解:
 
-1. 如何設定 Visual Studio Code，透過 Ionide。
-2. 如何建立您的第一個F#透過 Ionide 的專案。
-3. 如何使用F#撰寫您的第一個指令碼處理F#中 Ionide 函式，然後 FSI 中執行它。
-4. 如何移轉指令碼，以F#來源，並接著從 FSI 呼叫該程式碼。
+1. 如何使用 Ionide 設定 Visual Studio Code。
+2. 如何使用 Ionide 建立您F#的第一個專案。
+3. 如何使用F#腳本, 在 Ionide 中撰寫F#您的第一個函式, 然後在 fsi.exe 中加以執行。
+4. 如何將您的腳本程式碼F#遷移至來源, 然後從 fsi.exe 呼叫該程式碼。
 
-現在您答對了要寫入更多F#使用 Visual Studio Code 和 ionide 使用者程式碼。
+您現在已可使用 Visual Studio Code 和 Ionide F#來撰寫更多程式碼。
 
 ## <a name="troubleshooting"></a>疑難排解
 
-以下是幾種方式，您可以針對某些您可能會遇到的問題進行疑難排解：
+以下幾種方式可讓您針對可能遇到的某些問題進行疑難排解:
 
-1. 若要取得程式碼編輯功能的 ionide 使用者，您F#檔案必須儲存到磁碟，然後在 Visual Studio Code 工作區中開啟的資料夾內。
-2. 如果您已對您的系統中的變更，或使用開啟的 Visual Studio Code 安裝 Ionide 必要條件，請重新啟動 Visual Studio Code。
-3. 您可以使用的核取F#編譯器和F#互動式命令列，而不需要完整的路徑。 則可以輸入`fsc`的命令列中F#編譯器，並`fsi`或`fsharpi`視覺效果的F#分別工具在 Windows 和 Mac/Linux 上的 Mono。
-4. 如果您在專案目錄中有無效的字元，ionide 使用者可能無法運作。  如果發生這種情況，請重新命名您的專案目錄。
-5. 如果使用 none Ionide 命令時，請檢查您[Visual Studio Code 按鍵繫結關係](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts)以查看 如果您要覆寫它們意外。
-6. 如果 Ionide 已損毀您的電腦上，並以上皆非已修正您的問題，請嘗試移除`ionide-fsharp`目錄在您的電腦上重新安裝的外掛程式套件。
+1. 若要取得 Ionide 的程式碼編輯功能, F#您的檔案必須儲存至磁片, 以及在 Visual Studio Code 工作區中開啟的資料夾內。
+2. 如果您已對系統進行變更, 或已安裝 Ionide 的必要條件 Visual Studio Code 開啟, 請重新開機 Visual Studio Code。
+3. 檢查您是否可以從命令F#行使用F#編譯器和互動式, 而不需要完整路徑。 若要這麼做, 您`fsc`可以在F#編譯器的命令列中輸入, `fsi`或`fsharpi`分別針對 Windows F#上的視覺效果工具和 Mac/Linux 上的 Mono。
+4. 如果您的專案目錄中有不正確字元, Ionide 可能無法使用。  如果是這種情況, 請重新命名您的專案目錄。
+5. 如果沒有可用的 Ionide 命令, 請檢查您的[Visual Studio Code keybindings](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) , 以查看是否不小心覆寫它們。
+6. 如果您的電腦上的 Ionide 已中斷, 而上述未修正您的問題, 請嘗試`ionide-fsharp`移除您電腦上的目錄, 然後重新安裝外掛程式套件。
 
-Ionide 是開放原始碼專案所建立與維護成員的F#社群。 請回報問題，並歡迎您參與在[Ionide VSCode:FSharp GitHub 存放庫](https://github.com/ionide/ionide-vscode-fsharp)。
+Ionide 是由F#社區成員所建立和維護的開放原始碼專案。 請在[Ionide-VSCode 回報問題, 並隨意參與:Fsharp.core GitHub 存放](https://github.com/ionide/ionide-vscode-fsharp)庫。
 
-如果您有要報告的問題，請遵循[取得的記錄檔使用時回報問題的指示](https://github.com/ionide/ionide-vscode-fsharp#how-to-get-logs-for-debugging--issue-reporting)。
+如果您有回報的問題, 請遵循[指示來取得報告問題時使用的記錄](https://github.com/ionide/ionide-vscode-fsharp#how-to-get-logs-for-debugging--issue-reporting)。
 
-您也可尋求進一步的協助，Ionide 開發人員和F#中的社群[Ionide Gitter 通道](https://gitter.im/ionide/ionide-project)。
+您也可以在[Ionide Gitter 頻道](https://gitter.im/ionide/ionide-project)中, 向 Ionide 開發F#人員和社區尋求進一步的協助。
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解F#功能的語言，請查閱[概觀F# ](../tour.md)。
+若要深入瞭解F#語言的詳細資訊, 請參閱[的F#導覽](../tour.md)。

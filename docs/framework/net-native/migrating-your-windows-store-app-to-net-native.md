@@ -5,10 +5,10 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "68364072"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
@@ -159,7 +159,7 @@ ms.locfileid: "68364072"
 
 **其他 API**
 
-- <xref:System.PlatformNotSupportedException> [](xref:System.Type.GUID) 如果<xref:System.Runtime.InteropServices.GuidAttribute>屬性未套用至型別, 則 TypeInfo 屬性會擲回例外狀況。 GUID 主要用於 COM 支援。
+- <xref:System.PlatformNotSupportedException> 如果<xref:System.Runtime.InteropServices.GuidAttribute>屬性未套用至型別, 則 [TypeInfo GUID](xref:System.Type.GUID)屬性會擲回例外狀況。 GUID 主要用於 COM 支援。
 
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>方法會正確剖析在 .NET Native 中包含簡短日期的字串。 不過，它不會維護 Microsoft 知識庫文章 [KB2803771](https://support.microsoft.com/kb/2803771) 和 [KB2803755](https://support.microsoft.com/kb/2803755)中描述之日期和時間剖析變更的相容性。
 

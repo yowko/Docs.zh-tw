@@ -1,17 +1,17 @@
 ---
 title: 索引屬性
-description: 深入了解索引的屬性，在F#，可讓已排序的資料類似陣列存取。
+description: 深入瞭解中F#的索引屬性, 可讓您以類似陣列的方式存取已排序的資料。
 ms.date: 10/17/2018
-ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489486"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627565"
 ---
 # <a name="indexed-properties"></a>索引屬性
 
-在定義類別，用來對已排序的資料擷取時，有時候很有幫助，而不會公開基礎實作中提供索引的存取該資料。 做法是使用`Item`成員。
+在定義可抽象化已排序資料的類別時, 有時會很有説明, 提供該資料的索引存取權, 而不會公開基礎的執行。 這是使用`Item`成員完成的。
 
 ## <a name="syntax"></a>語法
 
@@ -36,19 +36,19 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>備註
 
-先前的語法中的表單會顯示如何定義索引的屬性都有`get`和`set`方法中，有`get`方法，或有`set`僅方法。 您也可以結合這兩僅 get 和集合，顯示的語法所示的語法，並產生具有 get 和 set 的屬性。 此第二個表單可讓您將不同的存取範圍修飾詞和屬性放在 get 和 set 方法。
+上述語法的形式`get`顯示如何定義具有`set`和方法的索引屬性、僅具有`get`方法, 或僅具有`set`方法。 您也可以結合僅供 get 使用的語法和針對 set 所顯示的語法, 並產生同時具有 get 和 set 的屬性。 第二個表單可讓您將不同的存取範圍修飾詞和屬性放在 get 和 set 方法上。
 
-使用名稱`Item`，編譯器會將屬性視為預設索引屬性。 A*預設索引屬性*是屬性，您可以存取的物件執行個體上使用類似陣列的語法。 例如，如果`o`會定義此屬性，語法類型的物件`o.[index]`用來存取屬性。
+藉由使用名稱`Item`, 編譯器會將屬性視為預設的索引屬性。 *預設的索引屬性*是您可以在物件實例上使用類似陣列的語法來存取的屬性。 例如, 如果`o`是定義此屬性之類型的物件, 則會使用語法`o.[index]`來存取屬性。
 
-存取非預設的索引的屬性的語法是要提供屬性的索引，就像一般成員一樣括號括住的名稱。 例如，如果上的屬性`o`稱為`Ordinal`，您撰寫`o.Ordinal(index)`存取它。
+存取非預設索引屬性的語法是在括弧中提供屬性名稱和索引, 就像一般成員一樣。 例如, 如果呼叫`o` `Ordinal`上的屬性, 您可以寫入`o.Ordinal(index)`來存取它。
 
-不論您使用哪一個表單，您應該一律使用局部調用的形式的索引屬性上的 set 方法。 如需局部調用的函式的詳細資訊，請參閱[函式](../functions/index.md)。
+無論您使用哪一種形式, 都應該一律在索引屬性上使用 set 方法的擴充形式。 如需擴充函數的詳細資訊, 請參閱[函式](../functions/index.md)。
 
 ## <a name="example"></a>範例
 
-下列程式碼範例說明如何定義和使用預設值和非預設索引的屬性，有 get 和 set 方法。
+下列程式碼範例說明如何定義和使用具有 get 和 set 方法的預設和非預設索引屬性。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
 ## <a name="output"></a>Output
 
@@ -58,9 +58,9 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-values"></a>具有多個索引值的索引的屬性
+## <a name="indexed-properties-with-multiple-index-values"></a>具有多個索引值的索引屬性
 
-索引的屬性可以有一個以上的索引值。 在此情況下，值會以逗號分隔的屬性使用時。 在這類屬性的 set 方法必須有兩個局部調用的引數，其中第一個是包含索引鍵，元組和第二個是要設定的值。
+已編制索引的屬性可以有一個以上的索引值。 在此情況下, 使用屬性時, 值會以逗號分隔。 這類屬性中的 set 方法必須有兩個擴充引數, 第一個是包含索引鍵的元組, 而第二個是要設定的值。
 
 下列程式碼示範如何使用具有多個索引值的索引屬性。
 
