@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672875"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69038115"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -33,32 +33,6 @@ ms.locfileid: "68672875"
 雖然封裝與資料庫和檔案系統等基礎結構互動的程式碼是不錯的想法，但您仍將會持有其中某些程式碼且可能需要對其進行測試。 此外，您應該驗證當應用程式相依性在完全解析時，程式碼層的互動是否與預期一致。 這是整合測試的職責。 整合測試通常比單元測試慢且更難設定，因為通常依賴於外部相依性與基礎結構。 因此，您應該避免在整合測試中進行可使用單元測試進行的測試。 如果您可以用單元測試來測試一個指定的案例，您應該用單元測試來進行測試。 如果不能，則考慮使用整合測試。
 
 整合測試通常會有比單元測試更複雜的設定與清除程序。 例如，針對實際資料庫的整合測試，需要一種能在每次測試之前將資料庫傳回已知狀態的方法。 隨著新測試的新增和資料庫結構描述發展出的生產，這些測試指令碼的大小和複雜程度都會增加。 在許多大型系統中，簽入共用原始檔控制的變更之前，在開發人員工作站上執行完整的整合測試套件並不切實際。 在這些情況下，整合測試可能會在組建伺服器上執行。
-
-`LocalFileImageService` 實作類別會實作從指定識別碼之特定資料中擷取和傳回映像檔位元數的邏輯：
-
-```csharp
-public class LocalFileImageService : IImageService
-{
-    private readonly IHostingEnvironment _env;
-    public LocalFileImageService(IHostingEnvironment env)
-    {
-        _env = env;
-    }
-    public byte[] GetImageBytesById(int id)
-    {
-        try
-        {
-            var contentRoot = _env.ContentRootPath + "//Pics";
-            var path = Path.Combine(contentRoot, id + ".png");
-            return File.ReadAllBytes(path);
-        }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
 
 ### <a name="functional-tests"></a>功能測試
 
@@ -152,7 +126,7 @@ public IActionResult GetImage(int id)
 如果您不能直接對檔案系統行為進行單元測試，且無法測試路由，那麼需要測試哪些內容？ 在重構使單元測試成為可能之後，您可能會發現一些測試案例和遺失的行為，例如錯誤處理。 找不到檔案時，該方法會執行什麼操作？ 它應該做什麼？ 在此範例中，重構的方法如下所示：
 
 ```csharp
-[HttpGet("[controller]/pic/{id}")\]
+[HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
     byte[] imageBytes;

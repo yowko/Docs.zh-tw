@@ -4,12 +4,12 @@ description: 了解 ML.NET CLI 遙測特性，它會收集用於分析、要收�
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433786"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567486"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>依 ML.NET CLI 排列的遙測集合
 
@@ -36,7 +36,7 @@ ms.locfileid: "68433786"
 
 預設啟用 ML.NET CLI 遙測特性。
 
-將 `DOTNET_CLI_TELEMETRY_OPTOUT` 環境變數設成 `1` 或 `true`，選擇退出遙測功能。 此環境變數為 .NET CLI 工具通用。
+將 `MLDOTNET_CLI_TELEMETRY_OPTOUT` 環境變數設成 `1` 或 `true`，選擇退出遙測功能。 此環境變數為 .NET CLI 工具通用。
 
 ## <a name="data-points-collected"></a>已收集資料點
 

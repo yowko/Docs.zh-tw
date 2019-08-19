@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: da36f2a703fe817c171e192b9c94e473c93447a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065981"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040146"
 ---
 # <a name="customizing-structure-marshaling"></a>自訂結構封送處理
 
@@ -319,7 +319,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>自訂十進位欄位封送處理
 
-如果您在 Windows 上工作，您可能會遇到一些使用原生 [`CY` 或 `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy) 結構的 API。 根據預設，.NET `decimal` 類型會封送處理為原生 [`DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec) 結構。 不過，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 搭配 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值來指示封送處理器將 `decimal` 值轉換為原生 `CY` 值。
+如果您在 Windows 上工作，您可能會遇到一些使用原生 [`CY` 或 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 結構的 API。 根據預設，.NET `decimal` 類型會封送處理為原生 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 結構。 不過，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 搭配 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值來指示封送處理器將 `decimal` 值轉換為原生 `CY` 值。
 
 ```csharp
 public struct Currency
@@ -339,7 +339,7 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>封送處理 `System.Object`
 
 在 Windows 上，您可以將 `object` 型別欄位封送處理為機器碼。 您可以將這些欄位封送處理為下列三種類型的其中一種：
-- [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
+- [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 

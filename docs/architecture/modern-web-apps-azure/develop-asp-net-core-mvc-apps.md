@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fd804176a7579fe7c5e226bf5b4feb457cb2df14
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675275"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971207"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -67,7 +67,7 @@ public class HomeController : Controller
 您可以在 [HttpGet] 和類似屬性上指定路由，避免需要新增個別 [Route] 屬性。 屬性路由也可以使用權杖，來減少重複控制器或動作名稱的需求，如下所示：
 
 ```csharp
-[Route("[controller\]")]
+[Route("[controller]")]
 public class ProductsController : Controller
 {
     [Route("")] // Matches 'Products'
@@ -131,7 +131,7 @@ public class Startup
         var builder = new ConfigurationBuilder()
         .SetBasePath(env.ContentRootPath)
         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile(\$"appsettings.{env.EnvironmentName}.json", optional: true);
+        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -476,7 +476,7 @@ public class Program
         StartConnectionAsync();
         _connection.On("receiveMessage", (arguments) =>;
         {
-            Console.WriteLine(\$"{arguments\[0\]} said: {arguments\[1\]}");
+            Console.WriteLine($"{arguments[0]} said: {arguments[1]}");
         });
         Console.ReadLine();
         StopConnectionAsync();

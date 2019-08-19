@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: f11137b3c13bb9e8670c4df25fedf3251724a088
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610058"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566894"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -22,7 +22,7 @@ ms.locfileid: "67610058"
 - 在方法簽章和方法呼叫中，以傳參考方式將引數傳遞給方法。 如需詳細資訊，請參閱[以傳址方式傳遞引數](#passing-an-argument-by-reference)。
 - 在方法簽章中，以傳參考方式將值傳回給呼叫者。 如需詳細資訊，請參閱[參考傳回值](#reference-return-values)。
 - 在成員主體中，指出參考傳回值儲存在本機作為呼叫者想要修改的參考，或是一般而言，以參考存取另一個值的區域變數。 如需詳細資訊，請參閱 [ref 區域變數](#ref-locals)。
-- 在 `struct` 宣告中來宣告 `ref struct` 或 `ref readonly struct`。 如需詳細資訊，請參閱 [ref struct 型別](#ref-struct-types)。
+- 在 `struct` 宣告中來宣告 `ref struct` 或 `readonly ref struct`。 如需詳細資訊，請參閱 [ref struct 型別](#ref-struct-types)。
 
 ## <a name="passing-an-argument-by-reference"></a>以傳參考方式傳遞引數
 

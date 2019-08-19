@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724709"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038466"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -242,7 +242,7 @@ Windows Registry Editor Version 5.00
 啟用 `SCH_USE_STRONG_CRYPTO` 旗標時 (預設會由 `AppContext` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱:
 
 - [安全通道](/windows/desktop/SecAuthN/secure-channel) \(英文\)
-- [SCHANNEL_CRED 結構](/windows/desktop/api/schannel/ns-schannel-_schannel_cred) \(英文\)
+- [SCHANNEL_CRED 結構](/windows/win32/api/schannel/ns-schannel-schannel_cred) \(英文\)
 
 當您明確使用 <xref:System.Net.SecurityProtocolType> 或 <xref:System.Security.Authentication.SslProtocols> 的 `Tls` (TLS 1.0)、`Tls11` 或 `Tls12` 列舉值時，`SCH_USE_STRONG_CRYPTO` 旗標也會傳遞至 `Schannel`。
 

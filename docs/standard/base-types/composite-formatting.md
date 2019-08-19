@@ -16,10 +16,10 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "64634561"
 ---
 # <a name="composite-formatting"></a>複合格式
@@ -27,7 +27,7 @@ ms.locfileid: "64634561"
 .NET 複合格式功能會採用物件清單和複合格式字串作為輸入。 複合格式字串是由混合索引替代符號 (Placeholder) 的固定文字所組成 (這些符號稱為對應至清單內物件的格式項目)。 格式作業產生的結果字串是由原始固定文字所組成，這些固定文字混合了清單中代表物件的字串。  
   
 > [!IMPORTANT]
-> 如果您使用的語言和語言版本支援，您可以使用「內插字串」，而不使用複合格式字串。 內插字串是包含「插入運算式」的字串。 每個插值的運算式會以運算式的值解析，且在字串指派時，包含在結果字串中。 如需詳細資訊，請參閱[字串內插補點 (C# 參考)](../../csharp/language-reference/tokens/interpolated.md) 和[字串內插補點 (Visual Basic 參考)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)。
+> 如果您使用的語言和語言版本支援，您可以使用「內插字串」  ，而不使用複合格式字串。 內插字串是包含「插入運算式」  的字串。 每個插值的運算式會以運算式的值解析，且在字串指派時，包含在結果字串中。 如需詳細資訊，請參閱[字串內插補點 (C# 參考)](../../csharp/language-reference/tokens/interpolated.md) 和[字串內插補點 (Visual Basic 參考)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)。
 
 下列方法支援複合格式功能：  
   
