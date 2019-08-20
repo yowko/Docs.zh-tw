@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 7073ddc50b47ff239e8b310c0a5a1fbd84504133
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 29d8b11cb82fe795c332afadeda8215cc660abd5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743884"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588681"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>陳述式、運算式和運算子 (C# 程式設計手冊)
 
@@ -41,5 +41,5 @@ ms.locfileid: "67743884"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- [C# 程式設計指南](../index.md)
+- [轉換和型別轉換](../types/casting-and-type-conversions.md)

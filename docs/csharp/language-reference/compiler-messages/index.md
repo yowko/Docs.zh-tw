@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: c4ece5ccf8c31beb2847a50f9cf894959acf23b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3714223209a3298706960625ea383e42dc2b2154
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61975256"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69607178"
 ---
 # <a name="c-compiler-errors"></a>C# 編譯器錯誤
 
@@ -21,7 +21,7 @@ ms.locfileid: "61975256"
   
 - 在[輸出視窗](/visualstudio/ide/reference/output-window)中選擇錯誤代碼 (例如 CS0029)，然後選擇 F1 鍵。  
   
-- 在 [索引] 中的 [尋找] 方塊內輸入錯誤代碼。  
+- 在 [索引] 中的 [尋找]  方塊內輸入錯誤代碼。  
   
  如果這些步驟都沒有產生關於錯誤的資訊，請移至本頁面的結尾，並傳送包含錯誤代碼或文字的意見反應。  
   
@@ -31,8 +31,8 @@ ms.locfileid: "61975256"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
-- [抱歉，我們沒有這個 C# 錯誤的具體內容](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [C# 編譯器選項](../compiler-options/index.md)
+- [抱歉，我們沒有這個 C# 錯誤的具體內容](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [專案設計工具、建置頁面 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-- [/warn (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)
-- [/nowarn (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
+- [/warn (C# 編譯器選項)](../compiler-options/warn-compiler-option.md)
+- [/nowarn (C# 編譯器選項)](../compiler-options/nowarn-compiler-option.md)

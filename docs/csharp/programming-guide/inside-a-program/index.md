@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: 7a18285e6eec8f4e71c1b0e8cb3a0ebdc4203939
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a180dc30c7fab11e5b939682244dbb90eb7615eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635250"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589262"
 ---
 # <a name="inside-a-c-program"></a>C# 程式深入解析
 
@@ -30,7 +30,7 @@ ms.locfileid: "65635250"
 
 - [C++ 使用者入門](../../getting-started/index.md)
 
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計指南](../index.md)
 
 - [C# 參考](../../language-reference/index.md)
 
@@ -42,4 +42,4 @@ ms.locfileid: "65635250"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計指南](../index.md)

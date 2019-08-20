@@ -8,23 +8,23 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 130cc68906be433afc906cfb22759f4ae3dba447
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596115"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589453"
 ---
 # <a name="indexers-c-programming-guide"></a>索引子 (C# 程式設計手冊)
 
-索引子允許類別或結構的執行個體像陣列一樣地編製索引。 您不需明確指定型別或執行個體成員，就能設定或擷取已索引的值。 索引子和[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)類似，差異在於它們的存取子會採用參數。  
+索引子允許類別或結構的執行個體像陣列一樣地編製索引。 您不需明確指定型別或執行個體成員，就能設定或擷取已索引的值。 索引子和[屬性](../classes-and-structs/properties.md)類似，差異在於它們的存取子會採用參數。  
  
- 下列範例定義具有簡單 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 存取子方法的泛型類別來指派和擷取值。 `Program` 類別會建立此類別的執行個體以儲存字串。  
+ 下列範例定義具有簡單 [get](../../language-reference/keywords/get.md) 和 [set](../../language-reference/keywords/set.md) 存取子方法的泛型類別來指派和擷取值。 `Program` 類別會建立此類別的執行個體以儲存字串。  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  如需更多範例，請參閱[相關章節](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections)。  
+>  如需更多範例，請參閱[相關章節](./index.md#BKMK_RelatedSections)。  
   
 ## <a name="expression-body-definitions"></a>運算式主體定義  
  
@@ -44,9 +44,9 @@ ms.locfileid: "64596115"
   
 - `get` 存取子會傳回值。 `set` 存取子會指派值。  
   
-- [this](../../../csharp/language-reference/keywords/this.md) 關鍵字是用來定義索引子。  
+- [this](../../language-reference/keywords/this.md) 關鍵字是用來定義索引子。  
   
-- [value`set` 關鍵字是用來定義 ](../../../csharp/language-reference/keywords/value.md) 索引子要指派的值。  
+- [value`set` 關鍵字是用來定義 ](../../language-reference/keywords/value.md) 索引子要指派的值。  
   
 - 索引子不一定要由整數值編製索引。您可自行決定如何定義特定的查詢機制。  
   
@@ -56,13 +56,13 @@ ms.locfileid: "64596115"
   
 ## <a name="BKMK_RelatedSections"></a> 相關章節  
   
-- [使用索引子](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [使用索引子](./using-indexers.md)  
   
-- [介面中的索引子](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [介面中的索引子](./indexers-in-interfaces.md)  
   
-- [屬性與索引子之間的比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [屬性與索引子之間的比較](./comparison-between-properties-and-indexers.md)  
   
-- [限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [限制存取子的存取範圍](../classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
@@ -70,5 +70,5 @@ ms.locfileid: "64596115"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C# 程式設計指南](../index.md)
+- [屬性](../classes-and-structs/properties.md)

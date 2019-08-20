@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e820a4d08e938aaf21e4f57db63e6b4f1b5225a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744261"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608288"
 ---
 # <a name="c-guide"></a>C# 指南
 
@@ -52,16 +52,16 @@ C# 指南含有數個章節。 您可以按順序閱讀，或直接跳至您最�
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [C# 程式設計指南](../csharp/programming-guide/index.md)
+* [C# 程式設計指南](./programming-guide/index.md)
   * 提供如何使用 C# 語言建構的詳細資訊和實際範例。
 
-* [逐步解說](../csharp/walkthroughs.md)
+* [逐步解說](./walkthroughs.md)
   * 提供使用 C# 之程式設計逐步解說及個別逐步解說之簡短描述的連結。
 
 * [語言參考](language-reference/index.md)
   * 本節包含有關 C# 語言的參考資料。 此教材協助您了解 C# 的語法和語意。 它同時提供型別、運算子、屬性、前置處理器指示詞、編譯器參數、編譯器錯誤和編譯器警告的參考資訊。
 
-* [C# 語言規格](../csharp/language-reference/language-specification/index.md)
+* [C# 語言規格](./language-reference/language-specification/index.md)
   * 最新 C# 語言規格版本的連結。
 
 ## <a name="see-also"></a>另請參閱

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 65a7fbb2ef8fd24e80b4ccf979a7f3fc7cf19934
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 422613a9016efb55c299f24c50cd2eec6c2c1069
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423635"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588408"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
@@ -39,44 +39,44 @@ C# 是強型別語言。 每個變數和常數都有型別，如同每個會評�
 
 - 允許的作業類型。
 
-編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」  的作業。 例如，如果您宣告型別 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 的變數，編譯器會允許您使用額外的變數和減法運算。 如果您嘗試針對型別 [bool](../../../csharp/language-reference/keywords/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰
+編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」  的作業。 例如，如果您宣告型別 [int](../../language-reference/builtin-types/integral-numeric-types.md) 的變數，編譯器會允許您使用額外的變數和減法運算。 如果您嘗試針對型別 [bool](../../language-reference/keywords/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
 > [!NOTE]
-> C 和 C++ 開發人員要注意在 C# 中，[bool](../../../csharp/language-reference/keywords/bool.md) 不能轉換為 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)。
+> C 和 C++ 開發人員要注意在 C# 中，[bool](../../language-reference/keywords/bool.md) 不能轉換為 [int](../../language-reference/builtin-types/integral-numeric-types.md)。
 
 編譯器會將型別資訊視為中繼資料內嵌至可執行檔。 通用語言執行平台 (CLR) 會在執行階段使用該中繼資料，以在它配置和回收記憶體時，進一步保證型別安全。
 
 ### <a name="specifying-types-in-variable-declarations"></a>在變數宣告中指定型別
 
-當您在程式中宣告變數或常數時，您必須指定其型別，或使用 [var](../../../csharp/language-reference/keywords/var.md) 關鍵字以讓編譯器推斷其型別。 下列範例示範一些變數宣告，使用內建的數字型別和複雜的使用者定義型別︰
+當您在程式中宣告變數或常數時，您必須指定其型別，或使用 [var](../../language-reference/keywords/var.md) 關鍵字以讓編譯器推斷其型別。 下列範例示範一些變數宣告，使用內建的數字型別和複雜的使用者定義型別︰
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-在方法簽章中指定方法參數和傳回值的型別。 下列簽章顯示的方法要求 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 做為輸入引數且會傳回字串︰
+在方法簽章中指定方法參數和傳回值的型別。 下列簽章顯示的方法要求 [int](../../language-reference/builtin-types/integral-numeric-types.md) 做為輸入引數且會傳回字串︰
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 並將為 [true](../../../csharp/language-reference/keywords/true-literal.md) 的布林值指派給它。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」  作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。
+宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告 [int](../../language-reference/builtin-types/integral-numeric-types.md) 並將為 [true](../../language-reference/keywords/true-literal.md) 的布林值指派給它。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」  作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。
 
-如需詳細資訊，請參閱[轉型和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。
+如需詳細資訊，請參閱[轉型和型別轉換](./casting-and-type-conversions.md)。
 
 ## <a name="built-in-types"></a>內建類型
 
-C# 提供一組標準的內建數字型別，代表整數、浮點數值、布林運算式、文字字元、十進位值及其他資料型別。 另外還有內建的 `string` 和 `object` 型別。 這些都可供您在任何 C# 程式中使用。 如需內建類型的詳細資訊，請參閱[內建類型的參考資料表](../../../csharp/language-reference/keywords/built-in-types-table.md)。
+C# 提供一組標準的內建數字型別，代表整數、浮點數值、布林運算式、文字字元、十進位值及其他資料型別。 另外還有內建的 `string` 和 `object` 型別。 這些都可供您在任何 C# 程式中使用。 如需內建類型的詳細資訊，請參閱[內建類型的參考資料表](../../language-reference/keywords/built-in-types-table.md)。
 
 ## <a name="custom-types"></a>自訂型別
 
-您可使用 [struct](../../../csharp/language-reference/keywords/struct.md)、[class](../../../csharp/language-reference/keywords/class.md)、[interface](../../../csharp/language-reference/keywords/interface.md) 及 [enum](../../../csharp/language-reference/keywords/enum.md) 建構來建立您自己的自訂型別。 .NET 類別庫本身是 Microsoft 所提供的自訂型別集合，可供您用於自己的應用程式中。 根據預設，類別庫中最常使用的型別可用於任何 C# 程式中。 只有當您明確地將專案參考新增至定義所在的組件時，才能使用其他類型。 編譯器在有該組件的參考之後，您可以針對在原始程式碼的那個組件中宣告的型別宣告變數 (和常數) 。 如需詳細資訊，請參閱 [.NET 類別庫](../../../standard/class-library-overview.md)。
+您可使用 [struct](../../language-reference/keywords/struct.md)、[class](../../language-reference/keywords/class.md)、[interface](../../language-reference/keywords/interface.md) 及 [enum](../../language-reference/keywords/enum.md) 建構來建立您自己的自訂型別。 .NET 類別庫本身是 Microsoft 所提供的自訂型別集合，可供您用於自己的應用程式中。 根據預設，類別庫中最常使用的型別可用於任何 C# 程式中。 只有當您明確地將專案參考新增至定義所在的組件時，才能使用其他類型。 編譯器在有該組件的參考之後，您可以針對在原始程式碼的那個組件中宣告的型別宣告變數 (和常數) 。 如需詳細資訊，請參閱 [.NET 類別庫](../../../standard/class-library-overview.md)。
 
 ## <a name="the-common-type-system"></a>一般型別系統
 
 請務必了解 .NET 中有關型別系統的兩個基本概念：
 
-- 它支援繼承原則。 型別可以衍生自稱為「基底型別」  的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底類型同樣可以衍生自一些其他類型，衍生類型則會繼承其繼承階層架構中兩個基底類型的成員。 包括 <xref:System.Int32?displayProperty=nameWithType> (C# 關鍵字：[int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)) 等內建數字型別在內的所有型別，最終都衍生自單一基底型別，即 <xref:System.Object?displayProperty=nameWithType> (C# 關鍵字：[object](../../../csharp/language-reference/keywords/object.md))。 這種統一型別階層架構稱為[一般型別系統](../../../standard/base-types/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。
+- 它支援繼承原則。 型別可以衍生自稱為「基底型別」  的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底類型同樣可以衍生自一些其他類型，衍生類型則會繼承其繼承階層架構中兩個基底類型的成員。 包括 <xref:System.Int32?displayProperty=nameWithType> (C# 關鍵字：[int](../../language-reference/builtin-types/integral-numeric-types.md)) 等內建數字型別在內的所有型別，最終都衍生自單一基底型別，即 <xref:System.Object?displayProperty=nameWithType> (C# 關鍵字：[object](../../language-reference/keywords/object.md))。 這種統一型別階層架構稱為[一般型別系統](../../../standard/base-types/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](../classes-and-structs/inheritance.md)。
 
-- CTS 中的每個型別都會定義為「實值型別」  或「參考型別」  。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 您使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字定義的型別為實值型別；所有內建的數字型別都是 `structs`。 您使用 [class](../../../csharp/language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
+- CTS 中的每個型別都會定義為「實值型別」  或「參考型別」  。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 您使用 [struct](../../language-reference/keywords/struct.md) 關鍵字定義的型別為實值型別；所有內建的數字型別都是 `structs`。 您使用 [class](../../language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
 
 下圖顯示 CTS 中的實值型別和參考型別之間的關聯性。
 
@@ -91,7 +91,7 @@ C# 提供一組標準的內建數字型別，代表整數、浮點數值、布�
 
 實值型別衍生自 <xref:System.ValueType?displayProperty=nameWithType>，該型別又衍生自 <xref:System.Object?displayProperty=nameWithType>。 衍生自 <xref:System.ValueType?displayProperty=nameWithType> 的型別在 CLR 中具有特殊行為。 實值型別變數會直接包含其值，這表示配置的記憶體內嵌在宣告該變數的內容中。 實值型別變數不會有任何個別的堆積配置或記憶體回收額外負荷。
 
-實值型別有兩種類別︰[struct](../../../csharp/language-reference/keywords/struct.md) 和 [enum](../../../csharp/language-reference/keywords/enum.md)。
+實值型別有兩種類別︰[struct](../../language-reference/keywords/struct.md) 和 [enum](../../language-reference/keywords/enum.md)。
 
 內建的數字型別為結構，而您可以存取其屬性和方法︰
 
@@ -108,25 +108,25 @@ int i = 5;
 char c = 'Z';
 ```
 
-實值型別為 *sealed*，其表示您無法從 <xref:System.Int32?displayProperty=nameWithType> 衍生類型，也無法定義從任何使用者定義的類別或結構繼承的結構，因為結構只能從 <xref:System.ValueType?displayProperty=nameWithType> 繼承。 不過，結構可以實作一或多個介面。 您可以將結構類型轉型為它實作的介面類型；這會導致 *boxing* 作業將結構包裝在受控堆積上的參考型別物件內。 當您將實值型別傳遞至接受 <xref:System.Object?displayProperty=nameWithType> 或任何介面型別做為輸入參數的方法時，就會發生 Boxing 作業。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。
+實值型別為 *sealed*，其表示您無法從 <xref:System.Int32?displayProperty=nameWithType> 衍生類型，也無法定義從任何使用者定義的類別或結構繼承的結構，因為結構只能從 <xref:System.ValueType?displayProperty=nameWithType> 繼承。 不過，結構可以實作一或多個介面。 您可以將結構類型轉型為它實作的介面類型；這會導致 *boxing* 作業將結構包裝在受控堆積上的參考型別物件內。 當您將實值型別傳遞至接受 <xref:System.Object?displayProperty=nameWithType> 或任何介面型別做為輸入參數的方法時，就會發生 Boxing 作業。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](./boxing-and-unboxing.md)。
 
-您使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字來建立您自己自訂的實值型別。 一般來說，會使用結構做為一小組相關變數的容器，如下列範例所示︰
+您使用 [struct](../../language-reference/keywords/struct.md) 關鍵字來建立您自己自訂的實值型別。 一般來說，會使用結構做為一小組相關變數的容器，如下列範例所示︰
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-如需結構的詳細資訊，請參閱[結構](../../../csharp/programming-guide/classes-and-structs/structs.md)。 如需 .NET 中實值型別的詳細資訊，請參閱[實值型別](../../../csharp/language-reference/keywords/value-types.md)。
+如需結構的詳細資訊，請參閱[結構](../classes-and-structs/structs.md)。 如需 .NET 中實值型別的詳細資訊，請參閱[實值型別](../../language-reference/keywords/value-types.md)。
 
-實值型別的另一種類別是 [enum](../../../csharp/language-reference/keywords/enum.md)。 列舉會定義一組具名的整數常數。 例如，.NET 類別庫中的 <xref:System.IO.FileMode?displayProperty=nameWithType> 列舉包含一組指定該如何開啟檔案的具名常數整數。 其定義方式如下列範例所示：
+實值型別的另一種類別是 [enum](../../language-reference/keywords/enum.md)。 列舉會定義一組具名的整數常數。 例如，.NET 類別庫中的 <xref:System.IO.FileMode?displayProperty=nameWithType> 列舉包含一組指定該如何開啟檔案的具名常數整數。 其定義方式如下列範例所示：
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
 `System.IO.FileMode.Create` 常數的值為 2。 不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。 如需詳細資訊，請參閱 <xref:System.IO.FileMode?displayProperty=nameWithType>。
 
-所有的委派都繼承自 <xref:System.Enum?displayProperty=nameWithType>，該列舉又繼承自 <xref:System.ValueType?displayProperty=nameWithType>。 所有適用於結構的規則，也適用於列舉。 如需有關列舉的詳細資訊，請參閱[列舉型別](../../../csharp/programming-guide/enumeration-types.md)。
+所有的委派都繼承自 <xref:System.Enum?displayProperty=nameWithType>，該列舉又繼承自 <xref:System.ValueType?displayProperty=nameWithType>。 所有適用於結構的規則，也適用於列舉。 如需有關列舉的詳細資訊，請參閱[列舉型別](../enumeration-types.md)。
 
 ### <a name="reference-types"></a>參考類型
 
-定義為 [class](../../../csharp/language-reference/keywords/class.md)、[delegate](../../../csharp/language-reference/keywords/delegate.md)、array 或 [interface](../../../csharp/language-reference/keywords/interface.md) 的型別即為「參考型別」  。 在執行階段，當您宣告參考型別的變數時，該變數會包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到您使用 [new](../../../csharp/language-reference/operators/new-operator.md) 運算子明確地建立物件，或為它指派在他處使用 `new` 建立的物件為止，如下列範例所示︰
+定義為 [class](../../language-reference/keywords/class.md)、[delegate](../../language-reference/keywords/delegate.md)、array 或 [interface](../../language-reference/keywords/interface.md) 的型別即為「參考型別」  。 在執行階段，當您宣告參考型別的變數時，該變數會包含值 [null](../../language-reference/keywords/null.md)，直到您使用 [new](../../language-reference/operators/new-operator.md) 運算子明確地建立物件，或為它指派在他處使用 `new` 建立的物件為止，如下列範例所示︰
 
 ```csharp
 MyClass mc = new MyClass();
@@ -145,11 +145,11 @@ IMyInterface iface = new MyClass();
 
 [!code-csharp[csProgGuideTypes#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#45)]
 
-參考型別完全支援繼承。 當您建立類別時，您可以繼承自任何未定義為 [sealed](../../../csharp/language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫您的虛擬方法。 如需如何為您自己建立類別的詳細資訊，請參閱[類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)。 如有關繼承和虛擬方法的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。
+參考型別完全支援繼承。 當您建立類別時，您可以繼承自任何未定義為 [sealed](../../language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫您的虛擬方法。 如需如何為您自己建立類別的詳細資訊，請參閱[類別和結構](../classes-and-structs/index.md)。 如有關繼承和虛擬方法的詳細資訊，請參閱[繼承](../classes-and-structs/inheritance.md)。
 
 ## <a name="types-of-literal-values"></a>常值型別
 
-在 C# 中，常值會接收來自編譯器的型別。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母時，編譯器會推斷其型別為常值。 如需您可以使用字母後置字元指定哪些類型的詳細資訊，請參閱參考頁面中個別類型的[實值型別](../../../csharp/language-reference/keywords/value-types.md)。
+在 C# 中，常值會接收來自編譯器的型別。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母時，編譯器會推斷其型別為常值。 如需您可以使用字母後置字元指定哪些類型的詳細資訊，請參閱參考頁面中個別類型的[實值型別](../../language-reference/keywords/value-types.md)。
 
 因為輸入的是常值且所有類型最終都衍生自 <xref:System.Object?displayProperty=nameWithType>，所以您可以如下所示來撰寫和編譯程式碼：
 
@@ -166,35 +166,35 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-使用型別參數讓您能夠重複使用相同的類別來保存任何元素型別，而不需要將每個元素都轉換成 [object](../../../csharp/language-reference/keywords/object.md)。 泛型集合類別則稱為「強型別集合」  ，因為編譯器知道集合元素的特定型別，如果您嘗試將整數加入至上一個範例中的 `stringList` 物件，便會在編譯時期引發錯誤。 如需詳細資訊，請參閱[泛型](../../../csharp/programming-guide/generics/index.md)。
+使用型別參數讓您能夠重複使用相同的類別來保存任何元素型別，而不需要將每個元素都轉換成 [object](../../language-reference/keywords/object.md)。 泛型集合類別則稱為「強型別集合」  ，因為編譯器知道集合元素的特定型別，如果您嘗試將整數加入至上一個範例中的 `stringList` 物件，便會在編譯時期引發錯誤。 如需詳細資訊，請參閱[泛型](../generics/index.md)。
 
 ## <a name="implicit-types-anonymous-types-and-nullable-types"></a>隱含型別、匿名型別以及可為 Null 的型別
 
-如先前所述，您可以使用 [var](../../../csharp/language-reference/keywords/var.md) 關鍵字，隱含地輸入本機變數 (但不是類別成員)。 變數還是會在編譯時期收到型別，但其是由編譯器所提供的型別。 如需詳細資訊，請參閱[隱含類型區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。
+如先前所述，您可以使用 [var](../../language-reference/keywords/var.md) 關鍵字，隱含地輸入本機變數 (但不是類別成員)。 變數還是會在編譯時期收到型別，但其是由編譯器所提供的型別。 如需詳細資訊，請參閱[隱含類型區域變數](../classes-and-structs/implicitly-typed-local-variables.md)。
 
-在某些情況下，不方便為一組您不想要儲存或在方法界限外傳遞的簡單相關值，建立簡單的具名型別。 為此，您可以建立「匿名型別」  。 如需詳細資訊，請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。
+在某些情況下，不方便為一組您不想要儲存或在方法界限外傳遞的簡單相關值，建立簡單的具名型別。 為此，您可以建立「匿名型別」  。 如需詳細資訊，請參閱[匿名型別](../classes-and-structs/anonymous-types.md)。
 
-一般的實值型別值不能為 [null](../../../csharp/language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](../../../csharp/language-reference/keywords/null.md) 值的 `int` 型別。 在 CTS 中，可為 Null 的型別是泛型結構類型 <xref:System.Nullable%601?displayProperty=nameWithType> 的執行個體。 當您要在資料庫之間來回傳遞的資料數值可能為 Null 時，可為 Null 的型別會特別有用。 如需詳細資訊，請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。
+一般的實值型別值不能為 [null](../../language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](../../language-reference/keywords/null.md) 值的 `int` 型別。 在 CTS 中，可為 Null 的型別是泛型結構類型 <xref:System.Nullable%601?displayProperty=nameWithType> 的執行個體。 當您要在資料庫之間來回傳遞的資料數值可能為 Null 時，可為 Null 的型別會特別有用。 如需詳細資訊，請參閱[可為 Null 的型別](../nullable-types/index.md)。
 
 ## <a name="related-sections"></a>相關章節
 
 如需詳細資訊，請參閱下列主題：
 
-- [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- [轉換和型別轉換](./casting-and-type-conversions.md)
 
-- [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [Boxing 和 Unboxing](./boxing-and-unboxing.md)
 
-- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [使用動態型別](./using-type-dynamic.md)
 
-- [實值型別](../../../csharp/language-reference/keywords/value-types.md)
+- [實值型別](../../language-reference/keywords/value-types.md)
 
-- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)
+- [參考型別](../../language-reference/keywords/reference-types.md)
 
-- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [類別和結構](../classes-and-structs/index.md)
 
-- [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [匿名類型](../classes-and-structs/anonymous-types.md)
 
-- [泛型](../../../csharp/programming-guide/generics/index.md)
+- [泛型](../generics/index.md)
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -202,7 +202,7 @@ stringList.Add(4);
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 參考](../../language-reference/index.md)
+- [C# 程式設計指南](../index.md)
 - [XML 資料類型轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [整數型別](../../language-reference/builtin-types/integral-numeric-types.md)

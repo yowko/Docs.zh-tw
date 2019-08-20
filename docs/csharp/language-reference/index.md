@@ -8,33 +8,33 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 45352d97372e556627ead75d969f088de9c85bd0
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 96fd360342a3bc0f82df37761abb372bdcaa8d7a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833238"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606119"
 ---
 # <a name="c-reference"></a>C# 參考
 本節提供有關 C# 關鍵字、運算子、特殊字元、前置處理器指示詞、編譯器選項以及編譯器錯誤和警告的參考資料。  
   
 ## <a name="in-this-section"></a>本節內容  
- [C# 關鍵字](../../csharp/language-reference/keywords/index.md)  
+ [C# 關鍵字](./keywords/index.md)  
  提供有關 C# 關鍵字和語法的資訊連結。  
   
- [C# 運算子](../../csharp/language-reference/operators/index.md)  
+ [C# 運算子](./operators/index.md)  
  提供有關 C# 運算子和語法的資訊連結。  
 
- [C# 特殊字元](../../csharp/language-reference/tokens/index.md)  
+ [C# 特殊字元](./tokens/index.md)  
  提供有關 C# 中特殊內容字元及其使用方式之相關資訊的連結。  
 
- [C# 前置處理器指示詞](../../csharp/language-reference/preprocessor-directives/index.md)  
+ [C# 前置處理器指示詞](./preprocessor-directives/index.md)  
  提供有關 C# 原始程式碼內嵌之編譯器命令的資訊連結。  
   
- [C# 編譯器選項](../../csharp/language-reference/compiler-options/index.md)  
+ [C# 編譯器選項](./compiler-options/index.md)  
  包含編譯器選項及其使用方式的相關資訊。  
   
- [C# 編譯器錯誤](../../csharp/language-reference/compiler-messages/index.md)  
+ [C# 編譯器錯誤](./compiler-messages/index.md)  
  包含示範 C# 編譯器錯誤和警告之原因和修正的程式碼片段。  
   
  [C# 語言規格](../../../_csharplang/spec/introduction.md)  
@@ -58,11 +58,11 @@ ms.locfileid: "66833238"
   
 ## <a name="related-sections"></a>相關章節  
 
- [C# 指南](../../csharp/index.md)  
+ [C# 指南](../index.md)  
  提供 Visual C# 文件入口網站。  
   
  [使用 C# 的 Visual Studio 開發環境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  提供描述 IDE 和編輯器的概念和工作主題連結。  
   
- [C# 程式設計指南](../../csharp/programming-guide/index.md)  
+ [C# 程式設計指南](../programming-guide/index.md)  
  包含如何使用 C# 程式設計語言的相關資訊。
