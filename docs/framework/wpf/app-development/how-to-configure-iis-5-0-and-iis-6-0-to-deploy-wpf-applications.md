@@ -13,18 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 3179679abcf32e40374c7f02e64466a326a73195
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 3a9bf79a9d505fef53b62cb589920adcf95ae92a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69013014"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611499"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>作法：設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式
 
-您可以從大部分[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 Web 服務器部署應用程式, 前提是它們已設定適當的多用途網際網路郵件延伸 (MIME) 類型。 根據預設, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)]會使用這些 MIME 類型來設定, [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]但[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]和則不會。
+您可以從大部分[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 Web 服務器部署應用程式, 前提是它們已設定適當的多用途網際網路郵件延伸 (MIME) 類型。 根據預設, Microsoft Internet Information Services (IIS) 7.0 是使用這些 MIME 類型來設定, 但 Microsoft Internet Information Services (IIS) 5.0 和 Microsoft Internet Information Services (IIS) 6.0 則不是。
 
-本主題說明何設定 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 和 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]，以部署 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。
+本主題說明如何設定 microsoft Internet Information Services (iis) 5.0 和 microsoft Internet Information Services (iis) 6.0 以部署[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。
 
 > [!NOTE]
 > 您可以檢查登錄中的*UserAgent*字串, 以判斷系統是否已安裝 .NET Framework。 如需詳細資訊和檢查*UserAgent*字串以判斷系統上是否已安裝 .NET Framework 的腳本, 請參閱偵測[是否已安裝 .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)。
@@ -33,11 +33,11 @@ ms.locfileid: "69013014"
 
 ## <a name="adjust-the-content-expiration-setting"></a>調整內容到期設定
 
-您應該將內容到期設定調整為 1 分鐘。 下列程序概述如何使用 [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] 執行此作業。
+您應該將內容到期設定調整為 1 分鐘。 下列程式概述如何使用 IIS 來執行這項操作。
 
 1. 按一下 [開始] 功能表，指向 [系統管理工具]，然後按一下 [Internet Information Services (IIS) 管理員]。 您也可以從命令列使用 "%SystemRoot%\system32\inetsrv\iis.msc" 來啟動此應用程式。
 
-2. 展開 [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)] 樹狀目錄，直到找到 [預設的網站] 節點。
+2. 展開 IIS 樹狀結構, 直到您找到 [**預設的網站**] 節點。
 
 3. 以滑鼠右鍵按一下 [預設的網站]，然後從操作功能表選取 [屬性]。
 
@@ -63,7 +63,7 @@ ms.locfileid: "69013014"
 > [!NOTE]
 > 您不需要在用戶端系統上註冊 MIME 類型或副檔名。 當您安裝 Microsoft .NET Framework 時, 它們會自動註冊。
 
-下列 Microsoft Visual Basic Scripting Edition (VBScript) 範例會自動將必要的 MIME 類型新增[!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]至。 若要使用指令碼，請將程式碼複製到伺服器上的 .vbs 檔案。 然後，從命令列執行該檔案，或在 [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)] 中按兩下該檔案，以執行指令碼。
+下列 Microsoft Visual Basic Scripting Edition (VBScript) 範例會自動將必要的 MIME 類型新增至 IIS。 若要使用指令碼，請將程式碼複製到伺服器上的 .vbs 檔案。 然後，從命令列執行該檔案，或在 [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)] 中按兩下該檔案，以執行指令碼。
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types
@@ -126,9 +126,9 @@ End Sub
 ```
 
 > [!NOTE]
-> 多次執行此腳本會在[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]或[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]元資料庫中建立多個 MIME 對應專案。
+> 多次執行此腳本會在 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 元資料庫中建立多個 MIME 對應專案。
 
-執行此腳本之後, 您可能不會在[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]或[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] Microsoft Management Console (MMC) 中看到其他 MIME 類型。 不過, 這些 MIME 類型已新增至[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]或[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]元資料庫。 下列腳本會顯示[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]或[!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]元資料庫中的所有 MIME 類型。
+執行此腳本之後, 您可能不會看到來自 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 Microsoft Management Console (MMC) 的其他 MIME 類型。 不過, 這些 MIME 類型已新增至 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 元資料庫。 下列腳本會顯示 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 元資料庫中的所有 MIME 類型。
 
 ```vb
 ' This script lists the MIME types for an IIS Server.

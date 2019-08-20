@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ebaa5c2f3a2e1770a50a401fb6771d8c5ad3ba63
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972232"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611480"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
@@ -52,7 +52,7 @@ ms.locfileid: "68972232"
 |應用程式資訊清單 (.manifest)|它包含與應用程式相關聯的中繼資料，副檔名為 .manifest。|  
 |部署資訊清單 (.xbap)|此檔案包含 ClickOnce 用來部署應用程式並具有 xbap 副檔名的資訊。|  
   
- 您將 XBAP 部署至 Web 伺服器，例如，[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更新版本。 您不需要在 Web 服務器上安裝 .NET Framework, 但必須註冊[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]多用途網際網路郵件延伸 (MIME) 類型和副檔名。 如需詳細資訊，請參閱[設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
+ 您會將 Xbap 部署到 Web 服務器, 例如 Microsoft Internet Information Services (IIS) 5.0 或更新版本。 您不需要在 Web 服務器上安裝 .NET Framework, 但必須註冊[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]多用途網際網路郵件延伸 (MIME) 類型和副檔名。 如需詳細資訊，請參閱[設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
   
  若要準備您的 XBAP 以進行部署，將 .exe 和相關聯的資訊清單複製到 Web 伺服器。 建立 HTML 網頁，其中包含可開啟部署資訊清單 (它是副檔名為 .xbap 的檔案) 的超連結。 當使用者按一下 xbap 檔案的連結時, ClickOnce 會自動處理下載和啟動應用程式的機制。 下列範例程式碼顯示包含指向 XBAP 之超連結的 HTML 網頁。  
   

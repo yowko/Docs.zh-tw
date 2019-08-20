@@ -882,33 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 6f5a76e5d90a8d3b1cf6284af2e753f56494af74
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052764"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597378"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>抱歉，我們沒有這個 C# 錯誤的具體內容。
-很抱歉，我們沒有任何有關此錯誤的特定資訊。 您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。 或者，您可以要求其他開發人員使用這些論壇：  
+很抱歉，我們沒有任何有關此錯誤的特定資訊。 您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。 或者, 您可以使用下列其中一個論壇詢問其他開發人員:  
   
  [Visual C# 語言](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
- 提供問題的視覺效果的相關和一般討論的論壇C#語言語法和編譯器。  
+ 提供有關視覺效果C#語言語法和編譯器之問題和一般討論的論壇。  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
- 提供有關如何在 Visual Studio 環境中運作的問題的論壇。  
+ 提供有關如何在 Visual Studio 環境中工作之問題的論壇。  
   
  [Visual C# 一般討論區](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
- 提供有關問題的論壇和視覺效果會發出C#，將不會討論其他論壇中。  
+ 提供有關視覺效果C#的論壇, 而這些問題不會在其他論壇中討論。  
   
  [堆疊溢位](https://stackoverflow.com/questions/tagged/c%23)  
- 提供有關問題的論壇和視覺效果會發出C#。  
+ 提供視覺效果C#相關問題的論壇。  
   
  也請參閱：  
- [Visual C# 程式設計人員的其他資源](../../csharp/getting-started/additional-resources.md)  
+ [Visual C# 程式設計人員的其他資源](../getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../csharp/programming-guide/index.md)
-- [C# 參考](../../csharp/language-reference/index.md)
+- [C# 程式設計指南](../programming-guide/index.md)
+- [C# 參考](../language-reference/index.md)
 - [告訴我們](/visualstudio/ide/talk-to-us)
