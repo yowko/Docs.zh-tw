@@ -14,103 +14,103 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 95505fd593881ff27418c69550952d072b4e3949
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c420a34a18f9e8fb55411a062e6a47ab38e98978
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628864"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611486"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的運算子優先順序
-每個部分時數個作業發生時在運算式中，評估，以及在預先決定的順序呼叫中解決*運算子優先順序*。  
-  
-## <a name="precedence-rules"></a>優先順序規則  
- 當運算式包含來自多個類別目錄的運算子時，會評估根據下列規則：  
-  
-- 算術和串連運算子有下列的一節所述的優先順序，都有更高的優先順序高於比較、 邏輯和位元運算子。  
-  
-- 所有的比較運算子具有相等的優先順序，及其所有具有較高的優先順序高於邏輯和位元運算子，但較低的優先順序高於算術和串連運算子。  
-  
-- 邏輯和位元運算子有下列的一節所述的優先順序，所有具有較低的優先順序高於算術運算子、 串連和比較運算子。  
-  
-- 具有相同優先順序的運算子會由左至右評估以其出現在運算式中的順序。  
-  
-## <a name="precedence-order"></a>優先順序  
- 運算子會評估順序的優先順序如下：  
-  
-### <a name="await-operator"></a>Await 運算子  
- Await  
-  
-### <a name="arithmetic-and-concatenation-operators"></a>算術運算子和串連運算子  
- 乘冪 (`^`)  
-  
- 一元 （unary) 身分識別和否定 (`+`， `–`)  
-  
- 乘法和浮點除法 (`*`， `/`)  
-  
- 整數除法 (`\`)  
-  
- 模數算術 (`Mod`)  
-  
- 加法和減法 (`+`， `–`)  
-  
- 字串串連 (`&`)  
-  
- 算術的位元移位 (`<<`， `>>`)  
-  
-### <a name="comparison-operators"></a>比較運算子  
- 所有的比較運算子 (`=`， `<>`， `<`， `<=`， `>`， `>=`， `Is`， `IsNot`， `Like`， `TypeOf`...`Is`)  
-  
-### <a name="logical-and-bitwise-operators"></a>邏輯運算子和位元運算子  
- 否定 (`Not`)  
-  
- 搭配使用 (`And`， `AndAlso`)  
-  
- 內含分離 (`Or`， `OrElse`)  
-  
- 獨佔分離 (`Xor`)  
-  
-### <a name="comments"></a>註解  
- `=`運算子只是等號比較運算子，不是指派運算子。  
-  
- 字串串連運算子 (`&`) 不是算術運算子，但它分組搭配算術運算子的優先順序。  
-  
- `Is`和`IsNot`運算子是物件參考的比較運算子。 它們不會比較兩個物件; 的值他們檢查才能判斷兩個物件變數是否指向相同物件執行個體。  
-  
-## <a name="associativity"></a>順序關聯性  
- 當相同優先順序的運算子一起出現在運算式中，例如乘法與除法，編譯器會評估每個作業發生它從左到右。 下列範例將說明這點。  
-  
-```  
-Dim n1 As Integer = 96 / 8 / 4  
-Dim n2 As Integer = (96 / 8) / 4  
-Dim n3 As Integer = 96 / (8 / 4)  
-```  
-  
- 第一個運算式會評估部門 96 / 8 （這會產生 12），然後除法 12 / 4，這會產生三個。 因為編譯器會評估的作業`n1`從左到右，評估時，相同的明確指定該順序`n2`。 兩者`n1`和`n2`有三個結果。 相較之下，`n3`的結果是 48，因為括號會強制編譯器將評估 8 / 4 第一次。  
-  
- 由於這個行為，運算子可以說是*左向*Visual Basic 中。  
-  
-## <a name="overriding-precedence-and-associativity"></a>覆寫優先順序和關聯性  
- 若要強制其他項目之前評估運算式的某些部分，您可以使用括號。 優先順序和左順序關聯性，也可以覆寫。 Visual Basic 一律會執行之前以外的括號括住的作業。 不過，在括號，它會維護一般優先順序和關聯性，除非您使用以括弧括住的括號。 下列範例將說明這點。  
-  
-```  
-Dim a, b, c, d, e, f, g As Double  
-a = 8.0  
-b = 3.0  
-c = 4.0  
-d = 2.0  
-e = 1.0  
-f = a - b + c / d * e  
-' The preceding line sets f to 7.0. Because of natural operator   
-' precedence and associativity, it is exactly equivalent to the   
-' following line.  
-f = (a - b) + ((c / d) * e)  
-' The following line overrides the natural operator precedence   
-' and left associativity.  
-g = (a - (b + c)) / (d * e)  
-' The preceding line sets g to 0.5.  
-```  
-  
+當運算式中發生數個作業時, 每個元件都會以預先決定的順序 (稱為*運算子優先順序*) 進行評估和解析。
+
+## <a name="precedence-rules"></a>優先順序規則
+ 當運算式包含來自多個類別的運算子時, 會根據下列規則進行評估:
+
+- 算術和串連運算子具有下一節所描述的優先順序順序, 而且所有的優先順序高於比較、邏輯和位運算子。
+
+- 所有比較運算子都具有相同的優先順序, 而且所有的優先順序高於邏輯和位運算子, 但較低的優先順序高於算術和串連運算子。
+
+- 邏輯和位運算子具有下一節所描述的優先順序順序, 而且所有的優先順序都低於算術、串連和比較運算子。
+
+- 具有相等優先順序的運算子會依其在運算式中出現的順序向右評估。
+
+## <a name="precedence-order"></a>優先順序
+ 運算子會依照下列優先順序來進行評估:
+
+### <a name="await-operator"></a>Await 運算子
+ 遇到
+
+### <a name="arithmetic-and-concatenation-operators"></a>算術和串連運算子
+ 乘冪`^`()
+
+ 一元識別和否定 (`+`, `–`)
+
+ 乘法和浮點除法 (`*`,) `/`
+
+ 整數除法 (`\`)
+
+ 模數算術 (`Mod`)
+
+ 加法和減法 (`+`, `–`)
+
+ 字串串連 (`&`)
+
+ 算術位移位 (`<<`, `>>`)
+
+### <a name="comparison-operators"></a>比較運算子
+ 所有比較運算子 (`=`、 `<>` `<` `<=` 、、`>`、、 、`>=`、、 、...`TypeOf` `Like` `Is` `IsNot``Is`)
+
+### <a name="logical-and-bitwise-operators"></a>邏輯運算子和位元運算子
+ 否定 (`Not`)
+
+ 結合 (`And`、 `AndAlso`)
+
+ 內含析取`Or`( `OrElse`,)
+
+ 獨佔分離 (`Xor`)
+
+### <a name="comments"></a>註解
+ `=`運算子只是相等比較運算子, 而不是指派運算子。
+
+ 字串串連運算子 (`&`) 不是算術運算子, 但優先順序會與算術運算子群組在一起。
+
+ `Is` 和`IsNot`運算子是物件參考比較運算子。 它們不會比較兩個物件的值。它們只會檢查以判斷兩個物件變數是否參考相同的物件實例。
+
+## <a name="associativity"></a>順序關聯性
+ 當相等優先順序的運算子同時出現在運算式中時 (例如乘法和除法), 編譯器會在每個作業從左至右遇到時進行評估。 下列範例將說明這點。
+
+```vb
+Dim n1 As Integer = 96 / 8 / 4
+Dim n2 As Integer = (96 / 8) / 4
+Dim n3 As Integer = 96 / (8 / 4)
+```
+
+ 第一個運算式會評估除法 96/8 (這會產生 12), 然後是除法 12/4, 這會產生三個。 因為編譯器會`n1`從左至右評估的作業, 所以當明確`n2`指出該順序時, 評估會是相同的。 `n1` 和`n2`都有三個結果。 相反地, `n3`的結果為 48, 因為括弧會強制編譯器先評估 8/4。
+
+ 基於此行為, 運算子稱為 Visual Basic 中的*左關聯*。
+
+## <a name="overriding-precedence-and-associativity"></a>覆寫優先順序和關聯性
+ 您可以使用括弧來強制評估運算式的某些部分。 這可能會覆寫優先順序和左側關聯性的順序。 Visual Basic 一律會執行以括弧括住的作業, 而不是在外部。 不過, 在括弧內, 除非您在括弧內使用括弧, 否則會維持一般優先順序和關聯性。 下列範例將說明這點。
+
+```vb
+Dim a, b, c, d, e, f, g As Double
+a = 8.0
+b = 3.0
+c = 4.0
+d = 2.0
+e = 1.0
+f = a - b + c / d * e
+' The preceding line sets f to 7.0. Because of natural operator
+' precedence and associativity, it is exactly equivalent to the
+' following line.
+f = (a - b) + ((c / d) * e)
+' The following line overrides the natural operator precedence
+' and left associativity.
+g = (a - (b + c)) / (d * e)
+' The preceding line sets g to 0.5.
+```
+
 ## <a name="see-also"></a>另請參閱
 
 - [= 運算子](../../../visual-basic/language-reference/operators/assignment-operator.md)
