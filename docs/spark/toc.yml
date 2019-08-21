@@ -15,6 +15,10 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: 部署至 Databricks
       href: tutorials/databricks-deployment.md
+- name: 作法指南
+  items:
+    - name: 為您的應用程式偵錯
+      href: how-to-guides/debug.md
 - name: 參考資料
   items:
     - name: 應用程式開發介面參考

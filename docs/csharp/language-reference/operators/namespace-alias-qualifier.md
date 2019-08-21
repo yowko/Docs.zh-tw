@@ -1,51 +1,70 @@
 ---
 title: ':: 運算子 - C# 參考'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
+- global_CSharpKeyword
 helpviewer_keywords:
 - ':: operator [C#]'
-- 'namespaces [C#], :: operator'
-- namespace alias qualifier operator (::) [C#]
+- namespace alias qualifier [C#]
+- namespace [C#]
+- global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2aceb51747708b12fb3059b097b72206c78a9d5d
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631362"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971236"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="8a0ab-102">:: 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="8a0ab-102">:: operator (C# reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="101c7-102">:: 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="101c7-102">:: operator (C# reference)</span></span>
 
-<span data-ttu-id="8a0ab-103">命名空間別名限定詞 (`::`) 用來查閱識別碼。</span><span class="sxs-lookup"><span data-stu-id="8a0ab-103">The namespace alias qualifier (`::`) is used to look up identifiers.</span></span> <span data-ttu-id="8a0ab-104">它一律位在兩個識別碼之間，如下例所示︰</span><span class="sxs-lookup"><span data-stu-id="8a0ab-104">It is always positioned between two identifiers, as in this example:</span></span>
+<span data-ttu-id="101c7-103">使用命名空間別名限定詞 `::` 來存取別名命名空間的成員。</span><span class="sxs-lookup"><span data-stu-id="101c7-103">Use the namespace alias qualifier `::` to access members of an aliased namespace.</span></span> <span data-ttu-id="101c7-104">您可以在兩個識別碼之間使用 `::` 限定詞。</span><span class="sxs-lookup"><span data-stu-id="101c7-104">You use the `::` qualifier between two identifiers.</span></span> <span data-ttu-id="101c7-105">左邊的識別碼可以是下列任何別名：</span><span class="sxs-lookup"><span data-stu-id="101c7-105">The left-hand identifier can be any of the following aliases:</span></span>
 
-[!code-csharp[csRefOperators#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#27)]
+- <span data-ttu-id="101c7-106">使用 [using 別名指示詞](../keywords/using-directive.md)建立的命名空間別名：</span><span class="sxs-lookup"><span data-stu-id="101c7-106">A namespace alias created with the [using alias directive](../keywords/using-directive.md):</span></span>
+  
+  ```csharp
+  using forwinforms = System.Drawing;
+  using forwpf = System.Windows;
+  
+  public class Converters
+  {
+      public static forwpf::Point Convert(forwinforms::Point point) => new forwpf::Point(point.X, point.Y);
+  }
+  ```
 
-<span data-ttu-id="8a0ab-105">`::` 運算子也可以搭配「using alias 指示詞」  使用：</span><span class="sxs-lookup"><span data-stu-id="8a0ab-105">The `::` operator can also be used with a *using alias directive*:</span></span>
+- <span data-ttu-id="101c7-107">[外部別名](../keywords/extern-alias.md)。</span><span class="sxs-lookup"><span data-stu-id="101c7-107">An [extern alias](../keywords/extern-alias.md).</span></span>
+- <span data-ttu-id="101c7-108">`global` 別名，這是全域命名空間別名。</span><span class="sxs-lookup"><span data-stu-id="101c7-108">The `global` alias, which is the global namespace alias.</span></span> <span data-ttu-id="101c7-109">全域命名空間是包含未在具名命名空間中宣告之命名空間和型別的命名空間。</span><span class="sxs-lookup"><span data-stu-id="101c7-109">The global namespace is the namespace that contains namespaces and types that are not declared inside a named namespace.</span></span> <span data-ttu-id="101c7-110">與 `::` 限定詞搭配使用時，`global` 別名一律會參考全域命名空間，即使有使用者定義的 `global` 命名空間別名也一樣。</span><span class="sxs-lookup"><span data-stu-id="101c7-110">When used with the `::` qualifier, the `global` alias always references the global namespace, even if there is the user-defined `global` namespace alias.</span></span>
+  
+  <span data-ttu-id="101c7-111">下列範例使用 `global` 別名來存取 .NET <xref:System> 命名空間，這是全域命名空間的成員。</span><span class="sxs-lookup"><span data-stu-id="101c7-111">The following example uses the `global` alias to access the .NET <xref:System> namespace, which is a member of the global namespace.</span></span> <span data-ttu-id="101c7-112">如果沒有 `global` 別名，則會存取使用者定義的 `System` 命名空間，這是 `MyCompany.MyProduct` 命名空間的成員：</span><span class="sxs-lookup"><span data-stu-id="101c7-112">Without the `global` alias, the user-defined `System` namespace, which is a member of the `MyCompany.MyProduct` namespace, would be accessed:</span></span>
 
-```csharp
-// using Col=System.Collections.Generic;
-var numbers = new Col::List<int> { 1, 2, 3 };
-```
+  ```csharp
+  namespace MyCompany.MyProduct.System
+  {
+      class Program
+      {
+          static void Main() => global::System.Console.WriteLine("Using global alias");
+      }
+  
+      class Console
+      {
+          string Suggestion => "Consider renaming this class";
+      }
+  }
+  ```
+  
+  > [!NOTE]
+  > <span data-ttu-id="101c7-113">`global` 關鍵字只有在它是 `::` 限定詞的左邊識別碼時，才是全域命名空間別名。</span><span class="sxs-lookup"><span data-stu-id="101c7-113">The `global` keyword is the global namespace alias only when it's the left-hand identifier of the `::` qualifier.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="8a0ab-106">備註</span><span class="sxs-lookup"><span data-stu-id="8a0ab-106">Remarks</span></span>
+<span data-ttu-id="101c7-114">您也可以使用[成員存取 `.` 運算子](member-access-operators.md#member-access-operator-)來存取別名命名空間的成員。</span><span class="sxs-lookup"><span data-stu-id="101c7-114">You can also use the [member access `.` operator](member-access-operators.md#member-access-operator-) to access members of an aliased namespace.</span></span> <span data-ttu-id="101c7-115">不過，`.` 運算子也會用來存取型別的成員。</span><span class="sxs-lookup"><span data-stu-id="101c7-115">However, the `.` operator is also used to access members of a type.</span></span> <span data-ttu-id="101c7-116">`::` 限定詞可確保其左邊的識別碼一律會參考命名空間別名，即使存在具有相同名稱的型別或命名空間也一樣。</span><span class="sxs-lookup"><span data-stu-id="101c7-116">The `::` qualifier ensures that its left-hand identifier always references a namespace alias, even if there exists a type or namespace with the same name.</span></span>
 
-<span data-ttu-id="8a0ab-107">命名空間別名限定詞可以是 `global`。</span><span class="sxs-lookup"><span data-stu-id="8a0ab-107">The namespace alias qualifier can be `global`.</span></span> <span data-ttu-id="8a0ab-108">這會在全域命名空間中叫用查詢，不是在別名命名空間中。</span><span class="sxs-lookup"><span data-stu-id="8a0ab-108">This invokes a lookup in the global namespace, rather than an aliased namespace.</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="101c7-117">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="101c7-117">C# language specification</span></span>
 
-## <a name="for-more-information"></a><span data-ttu-id="8a0ab-109">如需詳細資訊</span><span class="sxs-lookup"><span data-stu-id="8a0ab-109">For more information</span></span>
+<span data-ttu-id="101c7-118">如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[命名空間別名限定詞](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers)一節。</span><span class="sxs-lookup"><span data-stu-id="101c7-118">For more information, see the [Namespace alias qualifiers](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-<span data-ttu-id="8a0ab-110">如需如何使用 `::` 運算子的範例，請參閱下一節︰</span><span class="sxs-lookup"><span data-stu-id="8a0ab-110">For an example of how to use the `::` operator, see the following section:</span></span>
+## <a name="see-also"></a><span data-ttu-id="101c7-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="101c7-119">See also</span></span>
 
-- [<span data-ttu-id="8a0ab-111">如何：使用全域命名空間別名</span><span class="sxs-lookup"><span data-stu-id="8a0ab-111">How to: Use the Global Namespace Alias</span></span>](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
-## <a name="c-language-specification"></a><span data-ttu-id="8a0ab-112">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="8a0ab-112">C# language specification</span></span>
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
-## <a name="see-also"></a><span data-ttu-id="8a0ab-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8a0ab-113">See also</span></span>
-
-- [<span data-ttu-id="8a0ab-114">C# 參考</span><span class="sxs-lookup"><span data-stu-id="8a0ab-114">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="8a0ab-115">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="8a0ab-115">C# operators</span></span>](index.md)
-- [<span data-ttu-id="8a0ab-116">. 運算子</span><span class="sxs-lookup"><span data-stu-id="8a0ab-116">. operator</span></span>](member-access-operators.md#member-access-operator-)
-- [<span data-ttu-id="8a0ab-117">外部別名</span><span class="sxs-lookup"><span data-stu-id="8a0ab-117">extern alias</span></span>](../keywords/extern-alias.md)
+- [<span data-ttu-id="101c7-120">C# 參考</span><span class="sxs-lookup"><span data-stu-id="101c7-120">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="101c7-121">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="101c7-121">C# operators</span></span>](index.md)
+- [<span data-ttu-id="101c7-122">使用命名空間</span><span class="sxs-lookup"><span data-stu-id="101c7-122">Using namespaces</span></span>](../../programming-guide/namespaces/using-namespaces.md)
