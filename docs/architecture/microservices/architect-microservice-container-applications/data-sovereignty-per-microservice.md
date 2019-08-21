@@ -2,12 +2,12 @@
 title: 每個微服務的資料自主性
 description: 每個微服務之資料自主性是微服務的其中一個重點。 每個微服務必須是其資料庫的唯一擁有者，不與任何其他人共用。 當然，微服務所有執行個體會連接到相同的高可用性資料庫。
 ms.date: 09/20/2018
-ms.openlocfilehash: ccb12451cd7cd44938e09d171eb29e614786f469
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd7be23800394b231e15bdc503d15a960a25a20a
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673175"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566209"
 ---
 # <a name="data-sovereignty-per-microservice"></a>每個微服務的資料自主性
 

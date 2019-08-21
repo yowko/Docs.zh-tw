@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4472adf2c309803d4d5ac57f3522cc260782d85
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 230853abf73a368bfcd8b88375c216fdadfc7d46
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833665"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567269"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>將 COM 元件公開給 .NET Framework
 本節摘要說明向 Managed 程式碼公開現有 COM 元件所需要的程序。 如需撰寫與 .NET Framework 緊密整合的 COM 伺服器的詳細資訊，請參閱[交互操作的設計考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))。
@@ -32,7 +32,7 @@ ms.locfileid: "66833665"
   
 3. [編譯 Interop 專案](compiling-an-interop-project.md)。  
   
-     Windows 軟體開發套件 (SDK) 提供與 Common Language Specification (CLS) 相容的數種語言編譯器，包括 Visual Basic、C# 和 C++。  
+     Windows SDK 提供與 Common Language Specification (CLS) 相容的數種語言編譯器，包括 Visual Basic、C# 與 C++。  
   
 4. [部署 Interop 應用程式](deploying-an-interop-application.md)。  
   

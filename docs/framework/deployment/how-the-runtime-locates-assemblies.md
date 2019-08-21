@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833724"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566849"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
 若要成功部署 .NET Framework 應用程式，您必須了解 Common Language Runtime 如何找出並繫結至構成應用程式的組件。 根據預設，執行階段會嘗試與用來建置應用程式的組件正確版本繫結。 組態檔設定可覆寫這個預設行為。  
@@ -24,7 +24,7 @@ ms.locfileid: "66833724"
  在嘗試找出組件，並解析組件參考時，Common Language Runtime 會執行數個步驟。 以下各節將會說明每個步驟。 在說明執行階段如何找出組件時，常會使用詞彙探查；它會依據其名稱和文化特性，參考用來尋找組件的啟發學習法集合。  
   
 > [!NOTE]
->  您可以使用[組件繫結記錄檢視器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) (隨附於 Windows 軟體開發套件 (SDK))，來檢視記錄檔中的繫結資訊。  
+>  您可以使用 Windows SDK 中隨附的[組件繫結記錄檢視器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 來檢視記錄檔中的繫結資訊。  
   
 ## <a name="initiating-the-bind"></a>初始化繫結  
  當執行階段嘗試將參考解析成另一個組件時，尋找並繫結至組件的程序即開始。 此參考可以是靜態或動態。 編譯器會在建置時，將靜態參考記錄在組件資訊清單的中繼資料中。 動態參考則是呼叫各種方法 (例如 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>) 時，即時建構的結果。  

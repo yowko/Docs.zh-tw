@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e657b8e2a0a9dbe8db703ce97d41a3767191a26f
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 1de17ec2537282fe87b5613a63e2a954383aeab6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833859"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567328"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify 工具)
 PEVerify 工具可以協助像是編譯器撰寫者、指令碼引擎開發人員等產生 Microsoft Intermediate Language (MSIL) 的開發人員，判斷其 MSIL 程式碼和相關聯的中繼資料是否符合類型安全需求。 只有在避免使用某些語言建構時，某些編譯器才會產生可驗證的類型安全程式碼。 如果您是使用這類編譯器的開發人員，可能會想要驗證您並未損及程式碼的類型安全。 在這種情況下，您可以在檔案上執行 PEVerify 工具來檢查 MSIL 和中繼資料。  
@@ -61,7 +61,7 @@ peverify filename [options]
   
  如果 **/md** 和 **/il** 兩個選項都未指定，則 Peverify.exe 會執行這兩種檢查。 Peverify.exe 會先執行 **/md** 檢查。 如果沒有任何錯誤，則會執行 **/il** 檢查。 如果您同時指定 **/md** 和 **/il**，則即使中繼資料有錯誤，還是會執行 **/il** 檢查。 因此，如果中繼資料沒有錯誤，**peverify** *filename* 就相當於 **peverify** *filename* **/md** **/il**。  
   
- Peverify.exe 會依據資料流分析加上有效的中繼資料上數百項規則的清單，執行全面性的 MSIL 驗證檢查。 如需 Peverify.exe 所執行檢查的詳細資訊，請參閱 Windows 軟體開發套件 (SDK) 的 [Tools Developers Guide] 資料夾中的＜中繼資料驗證規格＞和＜MSIL 指令集規格＞。  
+ Peverify.exe 會依據資料流分析加上有效的中繼資料上數百項規則的清單，執行全面性的 MSIL 驗證檢查。 如需 Peverify.exe 所執行檢查的詳細資訊，請參閱 Windows SDK 的 [Tools Developers Guide] 資料夾中的「中繼資料驗證規格」與「MSIL 指令集規格」。  
   
  請注意，.NET Framework 2.0 版 (含) 以後版本支援傳回使用下列 MSIL 指令指定的可驗證 `byref`：`dup`、`ldsflda`、`ldflda`、`ldelema`、`call` 和 `unbox`。  
   

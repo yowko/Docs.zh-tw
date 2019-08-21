@@ -20,16 +20,19 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fb7758a3e59806b246a98c343d78500263433efc
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832830"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971470"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 
 原生映像產生器 (Ngen.exe) 是一種可以增進 Managed 應用程式效能的工具。 Ngen.exe 會建立原生映像，也就是包含已編譯之處理器特定機器碼的檔案，然後將原生映像安裝到本機電腦上的原生映像快取中。 執行階段就可以從快取中使用原生映像，而不是使用 Just-In-Time (JIT) 編譯器來編譯原始組件。
+
+> [!NOTE]
+> Ngen.exe 會針對僅以 .NET Framework 為目標的組件編譯原生映像。 適用於 .NET Core 的對等原生映像產生器是 [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md) \(英文\)。 
 
 Ngen.exe 在 .NET Framework 4 版中的變更：
 
@@ -62,11 +65,11 @@ Ngen.exe 在 .NET Framework 2.0 版中的變更：
 
 ## <a name="syntax"></a>語法
 
-```
+```console
 ngen action [options]
 ```
 
-```
+```console
 ngen /? | /help
 ```
 
@@ -429,7 +432,7 @@ Ngen.exe 會在產生原生映像時記錄這項資訊。 當您執行組件時�
 
 下列命令會在目前的目錄中產生 `ClientApp.exe` 的原生映像，並在原生映像快取中安裝映像。 如果組件有組態檔，Ngen.exe 就會使用它。 此外，會針對 `ClientApp.exe` 參考的任何 .dll 檔案產生原生映像。
 
-```
+```console
 ngen install ClientApp.exe
 ```
 
@@ -437,7 +440,7 @@ ngen install ClientApp.exe
 
 下列命令會對指定路徑的 `MyAssembly.exe` 產生原生映像。
 
-```
+```console
 ngen install c:\myfiles\MyAssembly.exe
 ```
 
@@ -448,7 +451,7 @@ ngen install c:\myfiles\MyAssembly.exe
 
 組件可以擁有相依性，而不含參考，例如，當組件在使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法載入 .dll 檔時。 您可以利用 `/ExeConfig` 選項，針對使用應用程式組件之組態資訊的這種 .dll 檔建立原生映像。 下列命令會針對使用 `MyLib.dll,` 組態資訊的 `MyApp.exe` 產生原生映像。
 
-```
+```console
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
@@ -456,20 +459,20 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 
 若要解除安裝相依性，請使用安裝時所用的相同命令列選項。 下列命令會解除安裝上一個範例的 `MyLib.dll`。
 
-```
+```console
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
 若要在全域組件快取中建立組件的原生映像，請使用組件的顯示名稱。 例如：
 
-```
+```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ```
 
 NGen.exe 會對所安裝的每個情節產生不同的映像集。 例如，下列命令會安裝一般作業的完整原生映像集，再安裝另一個完整集供偵錯使用，然後針對程式碼剖析安裝第三個完整集：
 
-```
+```console
 ngen install MyApp.exe
 ngen install MyApp.exe /debug
 ngen install MyApp.exe /profile
@@ -479,7 +482,7 @@ ngen install MyApp.exe /profile
 
 一旦原生映像安裝在快取中，即可使用 Ngen.exe 顯示它們。 下列命令會顯示原生映像快取中的所有原生映像。
 
-```
+```console
 ngen display
 ```
 
@@ -487,7 +490,7 @@ ngen display
 
 使用組件的簡單名稱，僅顯示該組件的資訊。 下列命令會顯示原生映像快取中所有符合部分名稱 `MyAssembly` 的原生映像、它們的相依性和所有在 `MyAssembly` 上具有相依性的根：
 
-```
+```console
 ngen display MyAssembly
 ```
 
@@ -495,13 +498,13 @@ ngen display MyAssembly
 
 如果指定組件的副檔名，您必須指定路徑或從包含組件的目錄執行 Ngen.exe：
 
-```
+```console
 ngen display c:\myApps\MyAssembly.exe
 ```
 
 下列命令會顯示原生映像快取中名稱為 `MyAssembly` 且版本為 1.0.0.0 的所有原生映像。
 
-```
+```console
 ngen display "myAssembly, version=1.0.0.0"
 ```
 
@@ -509,13 +512,13 @@ ngen display "myAssembly, version=1.0.0.0"
 
 通常會在升級共用元件之後更新映像。 若要更新已變更或已變更其相依性的所有原生映像，請使用 `update` 動作且不搭配任何引數。
 
-```
+```console
 ngen update
 ```
 
 更新所有映像可能是耗時的處理。 您可以使用 `/queue` 選項，依原生映像服務將要執行的更新加入佇列。 如需 `/queue` 選項和安裝優先權的詳細資訊，請參閱[原生映像服務](#native-image-service)。
 
-```
+```console
 ngen update /queue
 ```
 
@@ -525,13 +528,13 @@ Ngen.exe 會維護相依性清單，因此只有當相依於共用元件的所�
 
 下列命令會解除安裝根 `ClientApp.exe` 的所有情節：
 
-```
+```console
 ngen uninstall ClientApp
 ```
 
 `uninstall` 動作可以用來移除特定的情節。 下列命令會解除安裝 `ClientApp.exe` 的所有偵錯情節：
 
-```
+```console
 ngen uninstall ClientApp /debug
 ```
 
@@ -540,13 +543,13 @@ ngen uninstall ClientApp /debug
 
 下列命令會解除安裝 `ClientApp.exe` 特定版本的所有情節：
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0"
 ```
 
 下列命令會解除安裝 `"ClientApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL",` 的所有情節，或僅解除安裝該組件的偵錯情節：
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -591,19 +594,19 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 
 在開始安裝或升級之前，建議先暫停服務。 這樣可以確保當安裝程式正在複製檔案或是在全域組件快取中放置組件時，該服務不會執行。 下列 Ngen.exe 命令列會暫停服務：
 
-```
+```console
 ngen queue pause
 ```
 
 當所有延後的作業都排入佇列時，下列命令可讓服務繼續：
 
-```
+```console
 ngen queue continue
 ```
 
 若要在安裝新應用程式或是更新共用元件時，延後產生原生映像，請使用 `/queue` 選項搭配 `install` 或 `update` 動作。 下列 Ngen.exe 命令列會為共用元件安裝原生映像，並針對可能受影響的所有根目錄執行更新：
 
-```
+```console
 ngen install MyComponent /queue
 ngen update /queue
 ```
@@ -612,7 +615,7 @@ ngen update /queue
 
 如果您的應用程式包含許多根目錄，您可以控制延後動作的優先順序。 下列命令會將三個根目錄的安裝排入佇列。 會先安裝 `Assembly1`，而不會等到閒置時間。 `Assembly2` 也是不會等到閒置時間，但要等到所有優先權 1 動作都完成之後才安裝。 `Assembly3` 則會在服務偵測到電腦閒置時安裝。
 
-```
+```console
 ngen install Assembly1 /queue:1
 ngen install Assembly2 /queue:2
 ngen install Assembly3 /queue:3
@@ -620,7 +623,7 @@ ngen install Assembly3 /queue:3
 
 您可以使用 `executeQueuedItems` 動作，強制佇列的動作同步執行。 如果您提供選擇性的優先權，這個動作只會影響具有相等或較低優先權的佇列動作。 預設優先權為 3，因此下列 Ngen.exe 命令會立即處理所有佇列的動作，並且在完成之前都不會傳回：
 
-```
+```console
 ngen executeQueuedItems
 ```
 

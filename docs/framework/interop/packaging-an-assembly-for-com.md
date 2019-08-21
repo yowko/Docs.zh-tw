@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629332"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567227"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>封裝 COM 的 .NET Framework 組件
 
@@ -49,7 +49,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 
 - 型別程式庫包含
 
-  COM 應用程式使用時，大部分類型都需要型別程式庫。 您可以產生型別程式庫，或讓 COM 開發人員執行這項工作。 Windows 軟體開發套件 (SDK) 提供下列選項來產生型別程式庫：
+  COM 應用程式使用時，大部分類型都需要型別程式庫。 您可以產生型別程式庫，或讓 COM 開發人員執行這項工作。 Windows SDK 提供下列選項來產生型別程式庫：
 
   - [型別程式庫匯出工具](#cpconpackagingassemblyforcomanchor1)
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5dcdf6a88b12d12e67056657fd532dfa28c40299
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832874"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566822"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>建立和使用強式名稱的組件
 
@@ -38,7 +38,7 @@ ms.locfileid: "66832874"
 
     - 使用支援建立強式名稱的開發環境，例如 Visual Studio。
 
-    - 使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 建立密碼編譯金鑰組，並使用命令列編譯器或[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 將該金鑰組指派給組件。 Windows 軟體開發套件 (SDK) 提供 Sn.exe 和 Al.exe。
+    - 使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 建立密碼編譯金鑰組，並使用命令列編譯器或[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 將該金鑰組指派給組件。 Windows SDK 提供 Sn.exe 與 Al.exe。
 
 2. 開發環境或工具會使用開發人員的私密金鑰簽署檔案雜湊，而該檔案中包含組件的資訊清單。 此數位簽章儲存在可攜式執行檔 (PE) 中，而該檔案包含組件 A 的 資訊清單。
 
