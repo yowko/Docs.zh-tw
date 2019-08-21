@@ -2,18 +2,18 @@
 title: C# 6 的新功能 - C# 指南
 description: 了解 C# 第 6 版的新功能
 ms.date: 12/12/2018
-ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68235715"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971389"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
 
 C# 6.0 版包含許多功能，能提升開發人員的產能。 這些功能的整體影響是您可撰寫更簡潔且更具可讀性的程式碼，。 語法包含許多常見做法的較少繁瑣細節。 繁瑣細節較少時比較容易看出設計目的。 徹底了解這些功能，可讓您提升生產力，並撰寫更容易閱讀的程式碼。 您可以更專注於您的功能，而不是語言的建構。
 
-此文章的其餘部分將概述每項功能，並提供連結以探索每項功能。 您也可以在＜教學課程＞一節的 [C# 6 互動式探索](../tutorials/exploration/csharp-6.yml)中探索這些功能。
+本文的其餘部分將概述每項功能，並提供連結以探索每項功能。 您也可以在＜教學課程＞一節的 [C# 6 互動式探索](../tutorials/exploration/csharp-6.yml)中探索這些功能。
 
 ## <a name="read-only-auto-properties"></a>唯讀 Auto 屬性
 
@@ -21,7 +21,7 @@ C# 6.0 版包含許多功能，能提升開發人員的產能。 這些功能的
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
-`FirstName` 和 `LastName` 屬性只能在建構函式主體中設定︰
+`FirstName` 與 `LastName` 屬性只能在相同類別的建構函式主體中設定︰
 
 [!code-csharp[ReadOnlyAutoPropertyConstructor](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoPropertyConstructor)]
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422740"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039456"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# 參考)
 
@@ -52,24 +52,15 @@ ms.locfileid: "66422740"
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="related-resources"></a>相關資源
-
-如需使用命名空間的詳細資訊，請參閱下列主題：
-
-- [命名空間](../../programming-guide/namespaces/index.md)
-
-- [使用命名空間](../../programming-guide/namespaces/using-namespaces.md)
-
-- [如何：使用全域命名空間別名](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
 ## <a name="c-language-specification"></a>C# 語言規格
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[命名空間](~/_csharplang/spec/namespaces.md)一節。
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../language-reference/index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
 - [using](using-directive.md)
 - [使用靜態](using-static.md)
+- [命名空間別名限定詞 `::`](../operators/namespace-alias-qualifier.md)
+- [命名空間](../../programming-guide/namespaces/index.md)

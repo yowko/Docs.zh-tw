@@ -2,12 +2,12 @@
 title: 將現有的 .NET 應用程式隨即轉移至 Azure IaaS (雲端基礎結構就緒)
 description: 使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578391"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660744"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>將現有的 .NET 應用程式隨即轉移至 Azure IaaS (雲端基礎結構就緒)
 
@@ -107,4 +107,4 @@ Site Recovery 也是專屬於內部部署且部分在 Azure 上的混合式環�
 
 >[!div class="step-by-step"]
 >[上一頁](index.md)
->[下一頁](migrate-your-relational-databases-to-azure.md)
+>[下一頁](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->

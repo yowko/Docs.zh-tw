@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833894"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567061"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL 組譯工具)
 
@@ -104,7 +104,7 @@ IL 組譯工具可以表示所有現有的中繼資料和以執行階段為目�
 > [!NOTE]
 > *Ildasm.exe* 只能在磁碟的檔案上作業。 它無法在安裝於全域組件快取中的檔案上作業。
 
-如需 IL 文法的詳細資訊，請參閱 Windows 軟體開發套件 (SDK) 中的 asmparse.grammar 檔案。
+如需 IL 文法的詳細資訊，請參閱 Windows SDK 中的 asmparse.grammar 檔案。
 
 ## <a name="version-information"></a>版本資訊
 
@@ -137,7 +137,7 @@ IL 組譯工具可以表示所有現有的中繼資料和以執行階段為目�
         Test(object A_1) cil managed
 ```
 
-如需 IL 文法的詳細資訊，請參閱 Windows 軟體開發套件 (SDK) 中的 asmparse.grammar 檔案。
+如需 IL 文法的詳細資訊，請參閱 Windows SDK 中的 asmparse.grammar 檔案。
 
 ## <a name="examples"></a>範例
 

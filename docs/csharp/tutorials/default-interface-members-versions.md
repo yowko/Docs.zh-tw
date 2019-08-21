@@ -3,12 +3,12 @@ title: 在 C# 中使用預設介面成員安全地更新介面
 description: 本進階教學課程探討如何安全地將新功能新增至現有的介面定義，而不會中斷實作該介面的所有類別和結構。
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877909"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971430"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>教學課程：在 C# 8.0 中使用預設介面成員更新介面
 
@@ -39,7 +39,7 @@ ms.locfileid: "65877909"
 
 現在，您可以將程式庫升級到下一版。 其中一項所要求功能是讓擁有許多訂單的客戶享有忠誠度折扣。 此新的忠誠度折扣會在每次客戶下單時套用。 此特定折扣屬於每個個別客戶。 ICustomer 的每個實作都可為忠誠度折扣設定不同規則。 
 
-新增此功能的最自然方式，就是使用方法來增強 `ICustomer` 介面以套用任何忠誠度折扣。 此設計建議在有經驗的開發人員之間引起顧慮：「介面一旦發行，就不可改變！ 這是中斷性變更！」 C# 8.0 新增「預設介面實作」來升級介面。 程式庫作者可以將新成員新增至介面，並為這些成員提供預設實作。
+新增此功能的最自然方式，就是使用方法來增強 `ICustomer` 介面以套用任何忠誠度折扣。 此設計建議在有經驗的開發人員之間引起顧慮：「介面一旦發行，就不可改變！ 這是中斷性變更！」 C# 8.0 新增「預設介面實作」  來升級介面。 程式庫作者可以將新成員新增至介面，並為這些成員提供預設實作。
 
 預設介面實作可讓開發人員升級介面，同時仍可讓任何實作者覆寫該實作。 程式庫使用者可以接受預設實作作為非中斷性變更。 如果他們的商務規則不同，則可以進行覆寫。
 
@@ -87,6 +87,6 @@ ms.locfileid: "65877909"
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
-您可以在 [GitHub 的範例存放庫] 中查看整個完成的程式碼 (您可以在 [GitHub 的範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship)中取得入門應用程式)。
+您可以在 [GitHub 上的範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship) \(英文\) 中查看已完成的完整程式碼。 您可以在 [GitHub 的範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship)中取得入門應用程式。
 
 這些新功能表示介面可在這些新成員有合理的預設實作時安全地更新。 請謹慎設計介面來表達可由多個類別實作的單一功能概念。 這讓您可以在發現該相同功能概念有新需求時，更輕鬆地升級這些介面定義。

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306584"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566303"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
-`is` 運算子會檢查運算式的結果是否與指定的類型相容，或 (從 C# 7.0 開始) 根據模式來測試運算式。 如需類型測試 `is` 運算子的相關資訊，請參閱[類型測試和轉換運算子](../operators/type-testing-and-conversion-operators.md)一文的 [is 運算子](../operators/type-testing-and-conversion-operators.md#is-operator)小節。
+`is` 運算子會檢查運算式的結果是否與指定的類型相容，或 (從 C# 7.0 開始) 根據模式來測試運算式。 如需型別測試 `is` 運算子的相關資訊，請參閱[型別測試和轉換運算子](../operators/type-testing-and-cast.md)一文的 [is 運算子](../operators/type-testing-and-cast.md#is-operator)小節。
 
 ## <a name="pattern-matching-with-is"></a>以 `is` 進行的模式比對
 
@@ -128,4 +128,4 @@ ms.locfileid: "67306584"
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
-- [類型測試和轉換運算子](../operators/type-testing-and-conversion-operators.md)
+- [型別測試和轉換運算子](../operators/type-testing-and-cast.md)

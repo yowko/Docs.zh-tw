@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 3b3a5c2e96e92271da66cbd8f1039a9ec97544fa
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025022"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971224"
 ---
 # <a name="-operator-c-reference"></a>=> 運算子 (C# 參考)
 
@@ -45,7 +45,7 @@ Lambda 運算式的輸入變數在編譯時間為強型別。 當編譯器可以
 member => expression;
 ```
 
-其中 *expression* 是有效的運算式。 請注意，只有在成員的傳回型別為 `void` 時，或成員為建構函式、完成項或屬性 `set` 存取子時，*expression* 才可以是「陳述式運算式」  。
+其中 `expression` 是有效的運算式。 `expression` 的傳回型別必須可以隱含地轉換為成員的傳回型別。 如果成員的傳回型別為 `void`，或成員為建構函式、完成項或屬性 `set` 存取子，`expression` 必須是[陳述式運算式](~/_csharplang/spec/statements.md#expression-statements)  ；它可以是任何型別。
 
 下列範例顯示 `Person.ToString` 方法的運算式主體定義：
 

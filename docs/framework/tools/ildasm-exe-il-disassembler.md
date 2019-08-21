@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025963"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567315"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 反組譯工具)
 
@@ -100,7 +100,7 @@ ildasm [options] [PEfilename] [options]
 > [!NOTE]
 > 目前您無法將這項技術用於包含內嵌機器碼的 PE 檔 (例如，由 Visual C++ 所產生的 PE 檔)。  
 
-您可以使用 IL 反組譯工具中的預設 GUI，檢視階層樹狀檢視中任何現有 PE 檔的中繼資料和反組譯碼。 若要使用 GUI，請在命令列鍵入 **ildasm**，但不提供 *PEfilename* 引數或任何選項。 您可以從 [檔案]  功能表巡覽至要載入 *Ildasm.exe* 中的 PE 檔。 若要儲存針對所選取 PE 顯示的中繼資料和反組譯程式碼，請選取 [檔案]  功能表中的 [傾印]  命令。 若只要儲存階層樹狀檢閱，請從 [檔案]  功能表中選取 [傾印樹狀檢視]  命令。 如需將檔案載入 *Ildasm.exe* 和解譯輸出的詳細指引，請參閱 Windows 軟體開發套件 (SKD) 隨附 [Samples] 資料夾中的 *Ildasm.exe* 教學課程。
+您可以使用 IL 反組譯工具中的預設 GUI，檢視階層樹狀檢視中任何現有 PE 檔的中繼資料和反組譯碼。 若要使用 GUI，請在命令列鍵入 **ildasm**，但不提供 *PEfilename* 引數或任何選項。 您可以從 [檔案]  功能表巡覽至要載入 *Ildasm.exe* 中的 PE 檔。 若要儲存針對所選取 PE 顯示的中繼資料和反組譯程式碼，請選取 [檔案]  功能表中的 [傾印]  命令。 若只要儲存階層樹狀檢閱，請從 [檔案]  功能表中選取 [傾印樹狀檢視]  命令。 如需將檔案載入 *Ildasm.exe* 及解譯輸出的詳細指南，請參閱位於 Windows SDK 隨附 [Samples] 資料夾中的 *Ildasm.exe* 教學課程。
 
 如果您將包含內嵌資源的 *PEfilename* 引數提供給 *Ildasm.exe*，這個工具就會產生多個輸出檔案：包含 IL 程式碼的文字檔；每個內嵌的 Managed 資源還會各有一個使用來自中繼資料的資源名稱所產生的 .resources 檔案。 如果 Unmanaged 資源內嵌於 *PEfilename*， **/output** 選項就會使用為 IL 指定的檔案名稱來產生 .res 檔案。
 

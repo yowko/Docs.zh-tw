@@ -2,12 +2,12 @@
 title: 將您的關係資料庫移轉至 azure
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |將您的關係資料庫移轉至 azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578371"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660736"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>將您的關係資料庫移轉至 azure
 
@@ -126,4 +126,4 @@ Azure SQL Database 提供下列優點:
 
 > [!div class="step-by-step"]
 > [上一頁](lift-and-shift-existing-apps-azure-iaas.md)
-> [下一頁](modernize-existing-apps-to-cloud-optimized/index.md)
+> [下一頁](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->

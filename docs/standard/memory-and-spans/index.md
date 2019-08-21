@@ -9,18 +9,18 @@ helpviewer_keywords:
 - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ada6003cd6d1cd19036c42a3d0d976e18568f3a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fbfd091c821f59febfc8c7a203334454e7b59c12
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833965"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666427"
 ---
 # <a name="memory--and-span-related-types"></a>記憶體與延伸相關類型
 
 從 .NET Core 2.1 開始，.NET 就包括一些相關類型，這些類型代表連續的強型別任意記憶體區域。 它們包括：
 
-- <xref:System.Span%601?displayProperty=nameWithType>，此類型是用來存取連續記憶體區域。 <xref:System.Span%601> 執行個體可由類型 `T` 的陣列、<xref:System.String>、使用[stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) 配置的緩衝區或非受控記憶體的指標來支持。 因為它必須在堆疊上配置，它有一些限制。 例如，類別中欄位的類型不能是 <xref:System.Span%601>，而且延伸也不能用於非同步作業中。
+- <xref:System.Span%601?displayProperty=nameWithType>，此類型是用來存取連續記憶體區域。 <xref:System.Span%601> 執行個體可由類型 `T` 的陣列、<xref:System.String>、使用[stackalloc](../../csharp/language-reference/operators/stackalloc.md) 配置的緩衝區或非受控記憶體的指標來支持。 因為它必須在堆疊上配置，它有一些限制。 例如，類別中欄位的類型不能是 <xref:System.Span%601>，而且延伸也不能用於非同步作業中。
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>，這是 <xref:System.Span%601> 結構的不可變版本。
 

@@ -5,14 +5,15 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f8dc21b407e7286010b7425b835a481cc90287a
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708437"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971323"
 ---
 # <a name="contextual-keywords-c-reference"></a>內容關鍵字 (C# 參考)
+
 內容關鍵字可用來在程式碼中提供特定的意義，但它不是 C# 中的保留字。 本節介紹下列內容關鍵字︰  
   
 |關鍵字|說明|  
@@ -22,7 +23,7 @@ ms.locfileid: "54708437"
 |[await](../../../csharp/language-reference/keywords/await.md)|除非等候的工作完成，否則會暫止非同步方法。|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|定義參考型別，以讓發生它的作業略過編譯時期類型檢查。|  
 |[get](../../../csharp/language-reference/keywords/get.md)|定義屬性或索引子的存取子方法。|  
-|[global](../../../csharp/language-reference/keywords/global.md)|指定預設全域命名空間，否則為未命名。|  
+|[global](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)|全域命名空間的別名，否則為未命名。|  
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|定義相同編譯單位內的部分類別、結構和介面。|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|定義用戶端程式碼解除與事件的訂閱時所叫用的自訂事件存取子。|  
 |[set](../../../csharp/language-reference/keywords/set.md)|定義屬性或索引子的存取子方法。|  

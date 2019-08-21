@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766819"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666440"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -148,7 +148,7 @@ ms.locfileid: "67766819"
   
  Common Language Runtime 提供新的 opcode 及前置詞，以支援 Microsoft 中繼語言 (MSIL) 中的泛型類型，包括 <xref:System.Reflection.Emit.OpCodes.Stelem>、 <xref:System.Reflection.Emit.OpCodes.Ldelem>、 <xref:System.Reflection.Emit.OpCodes.Unbox_Any>、 <xref:System.Reflection.Emit.OpCodes.Constrained>和 <xref:System.Reflection.Emit.OpCodes.Readonly>。  
   
- Visual C++、C# 和 Visual Basic 均提供定義及使用泛型的完整支援。 如需語言支援的詳細資訊，請參閱 [Visual Basic 中的泛型型別](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型簡介](~/docs/csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概觀](/cpp/windows/overview-of-generics-in-visual-cpp)。  
+ Visual C++、C# 和 Visual Basic 均提供定義及使用泛型的完整支援。 如需語言支援的詳細資訊，請參閱 [Visual Basic 中的泛型型別](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型簡介](../../csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概觀](/cpp/windows/overview-of-generics-in-visual-cpp)。  
   
  [回到頁首](#top)  
   
@@ -170,8 +170,8 @@ ms.locfileid: "67766819"
 |[常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)|提供 .NET 中集合類型的特性和使用方式案例的摘要資訊，包括泛型類型。|  
 |[何時使用泛型集合](../../../docs/standard/collections/when-to-use-generic-collections.md)|描述一般的規則，以判斷何時使用泛型集合類型。|  
 |[如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|說明如何產生包括泛型類型和方法的動態組件。|  
-|[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|為 Visual Basic 使用者描述泛型功能，包括使用及定義泛型類型的「操作說明」主題。|  
-|[泛型簡介](~/docs/csharp/programming-guide/generics/index.md)|為 C# 使用者提供定義和使用泛型類型的概觀。|  
+|[Visual Basic 中的泛型型別](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|為 Visual Basic 使用者描述泛型功能，包括使用及定義泛型類型的「操作說明」主題。|  
+|[泛型簡介](../../csharp/programming-guide/generics/index.md)|為 C# 使用者提供定義和使用泛型類型的概觀。|  
 |[Visual C++ 中的泛型概觀](/cpp/windows/overview-of-generics-in-visual-cpp)|描述 C++ 使用者的泛型功能，包括泛型和範本之間的差異。|  
   
 <a name="reference"></a>   
