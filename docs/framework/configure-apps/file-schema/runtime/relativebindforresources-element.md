@@ -7,72 +7,72 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15156eaf883fc9ec162e0a85525564d49522b01d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 859e8a12421ea92aa48c54317e052683eb8e83f8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592662"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663489"
 ---
-# <a name="relativebindforresources-element"></a><span data-ttu-id="9dff0-102">\<Relativebindforresources> > 項目</span><span class="sxs-lookup"><span data-stu-id="9dff0-102">\<relativeBindForResources> Element</span></span>
-<span data-ttu-id="9dff0-103">最佳化附屬組件的探查。</span><span class="sxs-lookup"><span data-stu-id="9dff0-103">Optimizes the probe for satellite assemblies.</span></span>  
+# <a name="relativebindforresources-element"></a><span data-ttu-id="5d154-102">\<Relativebindforresources> > 元素</span><span class="sxs-lookup"><span data-stu-id="5d154-102">\<relativeBindForResources> Element</span></span>
+<span data-ttu-id="5d154-103">最佳化附屬組件的探查。</span><span class="sxs-lookup"><span data-stu-id="5d154-103">Optimizes the probe for satellite assemblies.</span></span>  
   
- <span data-ttu-id="9dff0-104">\<組態 > 項目</span><span class="sxs-lookup"><span data-stu-id="9dff0-104">\<configuration> Element</span></span>  
-<span data-ttu-id="9dff0-105">\<執行階段 > 項目</span><span class="sxs-lookup"><span data-stu-id="9dff0-105">\<runtime> Element</span></span>  
-<span data-ttu-id="9dff0-106">\<Relativebindforresources> > 項目</span><span class="sxs-lookup"><span data-stu-id="9dff0-106">\<relativeBindForResources> Element</span></span>  
+ <span data-ttu-id="5d154-104">\<configuration > 元素</span><span class="sxs-lookup"><span data-stu-id="5d154-104">\<configuration> Element</span></span>  
+<span data-ttu-id="5d154-105">\<執行時間 > 元素</span><span class="sxs-lookup"><span data-stu-id="5d154-105">\<runtime> Element</span></span>  
+<span data-ttu-id="5d154-106">\<Relativebindforresources> > 元素</span><span class="sxs-lookup"><span data-stu-id="5d154-106">\<relativeBindForResources> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9dff0-107">語法</span><span class="sxs-lookup"><span data-stu-id="9dff0-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d154-107">語法</span><span class="sxs-lookup"><span data-stu-id="5d154-107">Syntax</span></span>  
   
 ```xml
 <relativeBindForResources    
    enabled="true|false" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9dff0-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="9dff0-108">Attributes and Elements</span></span>  
- <span data-ttu-id="9dff0-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="9dff0-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5d154-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="5d154-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="5d154-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="5d154-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9dff0-110">屬性</span><span class="sxs-lookup"><span data-stu-id="9dff0-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5d154-110">屬性</span><span class="sxs-lookup"><span data-stu-id="5d154-110">Attributes</span></span>  
   
-|<span data-ttu-id="9dff0-111">屬性</span><span class="sxs-lookup"><span data-stu-id="9dff0-111">Attribute</span></span>|<span data-ttu-id="9dff0-112">描述</span><span class="sxs-lookup"><span data-stu-id="9dff0-112">Description</span></span>|  
+|<span data-ttu-id="5d154-111">屬性</span><span class="sxs-lookup"><span data-stu-id="5d154-111">Attribute</span></span>|<span data-ttu-id="5d154-112">描述</span><span class="sxs-lookup"><span data-stu-id="5d154-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="9dff0-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="9dff0-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="9dff0-114">指定 common language runtime 是否最佳化附屬組件的探查。</span><span class="sxs-lookup"><span data-stu-id="9dff0-114">Specifies whether the common language runtime optimizes the probe for satellite assemblies.</span></span>|  
+|`enabled`|<span data-ttu-id="5d154-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="5d154-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="5d154-114">指定通用語言執行時間是否要優化附屬元件的探查。</span><span class="sxs-lookup"><span data-stu-id="5d154-114">Specifies whether the common language runtime optimizes the probe for satellite assemblies.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="9dff0-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="9dff0-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="5d154-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="5d154-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="9dff0-116">值</span><span class="sxs-lookup"><span data-stu-id="9dff0-116">Value</span></span>|<span data-ttu-id="9dff0-117">描述</span><span class="sxs-lookup"><span data-stu-id="9dff0-117">Description</span></span>|  
+|<span data-ttu-id="5d154-116">值</span><span class="sxs-lookup"><span data-stu-id="5d154-116">Value</span></span>|<span data-ttu-id="5d154-117">說明</span><span class="sxs-lookup"><span data-stu-id="5d154-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="9dff0-118">執行階段不會最佳化附屬組件的探查。</span><span class="sxs-lookup"><span data-stu-id="9dff0-118">The runtime does not optimize the probe for satellite assemblies.</span></span> <span data-ttu-id="9dff0-119">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="9dff0-119">This is the default value.</span></span>|  
-|`true`|<span data-ttu-id="9dff0-120">執行階段最佳化附屬組件的探查。</span><span class="sxs-lookup"><span data-stu-id="9dff0-120">The runtime optimizes the probe for satellite assemblies.</span></span>|  
+|`false`|<span data-ttu-id="5d154-118">執行時間不會優化附屬元件的探查。</span><span class="sxs-lookup"><span data-stu-id="5d154-118">The runtime does not optimize the probe for satellite assemblies.</span></span> <span data-ttu-id="5d154-119">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="5d154-119">This is the default value.</span></span>|  
+|`true`|<span data-ttu-id="5d154-120">執行時間會優化附屬元件的探查。</span><span class="sxs-lookup"><span data-stu-id="5d154-120">The runtime optimizes the probe for satellite assemblies.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9dff0-121">子元素</span><span class="sxs-lookup"><span data-stu-id="9dff0-121">Child Elements</span></span>  
- <span data-ttu-id="9dff0-122">無。</span><span class="sxs-lookup"><span data-stu-id="9dff0-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5d154-121">子元素</span><span class="sxs-lookup"><span data-stu-id="5d154-121">Child Elements</span></span>  
+ <span data-ttu-id="5d154-122">無。</span><span class="sxs-lookup"><span data-stu-id="5d154-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="9dff0-123">父項目</span><span class="sxs-lookup"><span data-stu-id="9dff0-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5d154-123">父項目</span><span class="sxs-lookup"><span data-stu-id="5d154-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="9dff0-124">項目</span><span class="sxs-lookup"><span data-stu-id="9dff0-124">Element</span></span>|<span data-ttu-id="9dff0-125">描述</span><span class="sxs-lookup"><span data-stu-id="9dff0-125">Description</span></span>|  
+|<span data-ttu-id="5d154-124">項目</span><span class="sxs-lookup"><span data-stu-id="5d154-124">Element</span></span>|<span data-ttu-id="5d154-125">描述</span><span class="sxs-lookup"><span data-stu-id="5d154-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="9dff0-126">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="9dff0-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="9dff0-127">包含有關執行階段初始化選項的資訊。</span><span class="sxs-lookup"><span data-stu-id="9dff0-127">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="5d154-126">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="5d154-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="5d154-127">包含有關執行階段初始化選項的資訊。</span><span class="sxs-lookup"><span data-stu-id="5d154-127">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9dff0-128">備註</span><span class="sxs-lookup"><span data-stu-id="9dff0-128">Remarks</span></span>  
- <span data-ttu-id="9dff0-129">一般情況下，Resource Manager 來探查資源，如中所述[封裝和部署資源](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)主題。</span><span class="sxs-lookup"><span data-stu-id="9dff0-129">In general, Resource Manager probes for resources, as documented in the [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) topic.</span></span> <span data-ttu-id="9dff0-130">這表示當資源管理員會探查特定資源的當地語系化版本，它可能在全域組件快取中尋找、 附屬組件，尋找應用程式的程式碼基底，查詢 Windows 安裝程式中的特定文化特性資料夾中，會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="9dff0-130">This means that when Resource Manager probes for a particular localized version of a resource, it may look in the global assembly cache, look in a culture-specific folder in the application's code base, query Windows Installer for satellite assemblies, and raise the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span> <span data-ttu-id="9dff0-131">`<relativeBindForResources>`項目最佳化資源管理員探查附屬組件的方式。</span><span class="sxs-lookup"><span data-stu-id="9dff0-131">The `<relativeBindForResources>` element optimizes the way in which Resource Manager probes for satellite assemblies.</span></span> <span data-ttu-id="9dff0-132">當探查資源在下列情況下，它可以改善效能：</span><span class="sxs-lookup"><span data-stu-id="9dff0-132">It can improve performance when probing for resources under the following conditions:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d154-128">備註</span><span class="sxs-lookup"><span data-stu-id="5d154-128">Remarks</span></span>  
+ <span data-ttu-id="5d154-129">一般來說, Resource Manager 會探查資源, 如[封裝和部署資源](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)主題中所述。</span><span class="sxs-lookup"><span data-stu-id="5d154-129">In general, Resource Manager probes for resources, as documented in the [Packaging and Deploying Resources](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) topic.</span></span> <span data-ttu-id="5d154-130">這表示當 Resource Manager 探查特定當地語系化版本的資源時, 它可能會查看全域組件快取、在應用程式的程式碼基底中尋找特定文化特性的資料夾、針對附屬元件查詢 Windows Installer, 然後引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="5d154-130">This means that when Resource Manager probes for a particular localized version of a resource, it may look in the global assembly cache, look in a culture-specific folder in the application's code base, query Windows Installer for satellite assemblies, and raise the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span> <span data-ttu-id="5d154-131">`<relativeBindForResources>`元素會將 Resource Manager 探查附屬元件的方式優化。</span><span class="sxs-lookup"><span data-stu-id="5d154-131">The `<relativeBindForResources>` element optimizes the way in which Resource Manager probes for satellite assemblies.</span></span> <span data-ttu-id="5d154-132">在下列情況下探查資源時, 它可以改善效能:</span><span class="sxs-lookup"><span data-stu-id="5d154-132">It can improve performance when probing for resources under the following conditions:</span></span>  
   
-- <span data-ttu-id="9dff0-133">當附屬組件會部署在與程式碼組件相同的位置。</span><span class="sxs-lookup"><span data-stu-id="9dff0-133">When the satellite assembly is deployed in the same location as the code assembly.</span></span> <span data-ttu-id="9dff0-134">換句話說，如果程式碼組件會安裝在全域組件快取，附屬組件也必須安裝那里。</span><span class="sxs-lookup"><span data-stu-id="9dff0-134">In other words, if the code assembly is installed in the global assembly cache, the satellite assemblies must also be installed there.</span></span> <span data-ttu-id="9dff0-135">如果程式碼組件會安裝在應用程式的程式碼基底，也必須安裝附屬組件中的程式碼基底中的特定文化特性資料夾。</span><span class="sxs-lookup"><span data-stu-id="9dff0-135">If the code assembly is installed in the application's code base, the satellite assemblies must also be installed in a culture-specific folder in the code base.</span></span>  
+- <span data-ttu-id="5d154-133">當附屬元件部署在與程式碼元件相同的位置時。</span><span class="sxs-lookup"><span data-stu-id="5d154-133">When the satellite assembly is deployed in the same location as the code assembly.</span></span> <span data-ttu-id="5d154-134">換句話說, 如果程式碼元件安裝在全域組件快取中, 則也必須在該處安裝附屬元件。</span><span class="sxs-lookup"><span data-stu-id="5d154-134">In other words, if the code assembly is installed in the global assembly cache, the satellite assemblies must also be installed there.</span></span> <span data-ttu-id="5d154-135">如果程式碼元件安裝在應用程式的程式碼基底中, 則附屬元件也必須安裝在程式碼基底中的文化特性特定資料夾內。</span><span class="sxs-lookup"><span data-stu-id="5d154-135">If the code assembly is installed in the application's code base, the satellite assemblies must also be installed in a culture-specific folder in the code base.</span></span>  
   
-- <span data-ttu-id="9dff0-136">當 Windows 安裝程式未使用或很少使用依需求安裝附屬組件。</span><span class="sxs-lookup"><span data-stu-id="9dff0-136">When Windows Installer is not used or is used only rarely for on-demand installation of satellite assemblies.</span></span>  
+- <span data-ttu-id="5d154-136">未使用 Windows Installer, 或只是很少用來視需要安裝附屬元件。</span><span class="sxs-lookup"><span data-stu-id="5d154-136">When Windows Installer is not used or is used only rarely for on-demand installation of satellite assemblies.</span></span>  
   
-- <span data-ttu-id="9dff0-137">應用程式程式碼未處理的當<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="9dff0-137">When application code does not handle the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
+- <span data-ttu-id="5d154-137">當應用程式代碼未處理<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件時。</span><span class="sxs-lookup"><span data-stu-id="5d154-137">When application code does not handle the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
   
- <span data-ttu-id="9dff0-138">設定`enabled`的屬性`<relativeBindForResources>`項目`true`Resource Manager 的探查最佳化附屬組件，如下所示：</span><span class="sxs-lookup"><span data-stu-id="9dff0-138">Setting the `enabled` attribute of the `<relativeBindForResources>` element to `true` optimizes Resource Manager's probe for satellite assemblies as follows:</span></span>  
+ <span data-ttu-id="5d154-138">設定專案的`<relativeBindForResources>` `true`屬性, 以將 Resource Manager 的附屬元件探查優化, 如下所示: `enabled`</span><span class="sxs-lookup"><span data-stu-id="5d154-138">Setting the `enabled` attribute of the `<relativeBindForResources>` element to `true` optimizes Resource Manager's probe for satellite assemblies as follows:</span></span>  
   
-- <span data-ttu-id="9dff0-139">它會使用父程式碼組件的位置來探查附屬組件。</span><span class="sxs-lookup"><span data-stu-id="9dff0-139">It uses the location of the parent code assembly to probe for the satellite assembly.</span></span>  
+- <span data-ttu-id="5d154-139">它會使用父程式碼元件的位置來探查附屬元件。</span><span class="sxs-lookup"><span data-stu-id="5d154-139">It uses the location of the parent code assembly to probe for the satellite assembly.</span></span>  
   
-- <span data-ttu-id="9dff0-140">它不會查詢 Windows Installer 附屬組件。</span><span class="sxs-lookup"><span data-stu-id="9dff0-140">It does not query Windows Installer for satellite assemblies.</span></span>  
+- <span data-ttu-id="5d154-140">它不會查詢附屬元件 Windows Installer。</span><span class="sxs-lookup"><span data-stu-id="5d154-140">It does not query Windows Installer for satellite assemblies.</span></span>  
   
-- <span data-ttu-id="9dff0-141">它不會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="9dff0-141">It does not raise the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
+- <span data-ttu-id="5d154-141">它不會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。</span><span class="sxs-lookup"><span data-stu-id="5d154-141">It does not raise the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9dff0-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9dff0-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d154-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5d154-142">See also</span></span>
 
-- [<span data-ttu-id="9dff0-143">封裝和部署資源</span><span class="sxs-lookup"><span data-stu-id="9dff0-143">Packaging and Deploying Resources</span></span>](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [<span data-ttu-id="9dff0-144">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="9dff0-144">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="9dff0-145">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="9dff0-145">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="5d154-143">封裝和部署資源</span><span class="sxs-lookup"><span data-stu-id="5d154-143">Packaging and Deploying Resources</span></span>](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [<span data-ttu-id="5d154-144">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="5d154-144">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="5d154-145">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="5d154-145">Configuration File Schema</span></span>](../index.md)

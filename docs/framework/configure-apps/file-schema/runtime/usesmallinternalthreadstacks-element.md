@@ -7,62 +7,62 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 74678089bb1b19295983064eb7ad54fbf0a1e361
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489323"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663380"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a><span data-ttu-id="4956e-102">\<UseSmallInternalThreadStacks > 項目</span><span class="sxs-lookup"><span data-stu-id="4956e-102">\<UseSmallInternalThreadStacks> Element</span></span>
-<span data-ttu-id="4956e-103">藉由指定明確的堆疊大小，它會建立它會在內部使用，而不是使用預設堆疊大小為這些執行緒進行特定執行緒時，使用 common language runtime (CLR)，減少記憶體的要求。</span><span class="sxs-lookup"><span data-stu-id="4956e-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  
+# <a name="usesmallinternalthreadstacks-element"></a><span data-ttu-id="1a376-102">\<UseSmallInternalThreadStacks > 元素</span><span class="sxs-lookup"><span data-stu-id="1a376-102">\<UseSmallInternalThreadStacks> Element</span></span>
+<span data-ttu-id="1a376-103">要求 common language runtime (CLR) 在建立內部使用的特定執行緒時, 指定明確的堆疊大小來減少記憶體使用, 而不是使用這些執行緒的預設堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="1a376-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  
   
- <span data-ttu-id="4956e-104">\<組態 > 項目</span><span class="sxs-lookup"><span data-stu-id="4956e-104">\<configuration> Element</span></span>  
-<span data-ttu-id="4956e-105">\<執行階段 > 項目</span><span class="sxs-lookup"><span data-stu-id="4956e-105">\<runtime> Element</span></span>  
-<span data-ttu-id="4956e-106">\<UseSmallInternalThreadStacks > 項目</span><span class="sxs-lookup"><span data-stu-id="4956e-106">\<UseSmallInternalThreadStacks> Element</span></span>  
+ <span data-ttu-id="1a376-104">\<configuration > 元素</span><span class="sxs-lookup"><span data-stu-id="1a376-104">\<configuration> Element</span></span>  
+<span data-ttu-id="1a376-105">\<執行時間 > 元素</span><span class="sxs-lookup"><span data-stu-id="1a376-105">\<runtime> Element</span></span>  
+<span data-ttu-id="1a376-106">\<UseSmallInternalThreadStacks > 元素</span><span class="sxs-lookup"><span data-stu-id="1a376-106">\<UseSmallInternalThreadStacks> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4956e-107">語法</span><span class="sxs-lookup"><span data-stu-id="4956e-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a376-107">語法</span><span class="sxs-lookup"><span data-stu-id="1a376-107">Syntax</span></span>  
   
 ```xml  
 <UseSmallInternalThreadStacks enabled="true|false" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4956e-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="4956e-108">Attributes and Elements</span></span>  
- <span data-ttu-id="4956e-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="4956e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1a376-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="1a376-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="1a376-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="1a376-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4956e-110">屬性</span><span class="sxs-lookup"><span data-stu-id="4956e-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1a376-110">屬性</span><span class="sxs-lookup"><span data-stu-id="1a376-110">Attributes</span></span>  
   
-|<span data-ttu-id="4956e-111">屬性</span><span class="sxs-lookup"><span data-stu-id="4956e-111">Attribute</span></span>|<span data-ttu-id="4956e-112">描述</span><span class="sxs-lookup"><span data-stu-id="4956e-112">Description</span></span>|  
+|<span data-ttu-id="1a376-111">屬性</span><span class="sxs-lookup"><span data-stu-id="1a376-111">Attribute</span></span>|<span data-ttu-id="1a376-112">描述</span><span class="sxs-lookup"><span data-stu-id="1a376-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="4956e-113">enabled</span><span class="sxs-lookup"><span data-stu-id="4956e-113">enabled</span></span>|<span data-ttu-id="4956e-114">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="4956e-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="4956e-115">指定是否要要求 CLR 使用明確的堆疊大小，而不是預設的堆疊大小時它會建立內部使用的特定執行緒。</span><span class="sxs-lookup"><span data-stu-id="4956e-115">Specifies whether to request that the CLR use explicit stack sizes instead of the default stack size when it creates certain threads that it uses internally.</span></span> <span data-ttu-id="4956e-116">明確的堆疊大小是小於 1 MB 的預設堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="4956e-116">The explicit stack sizes are smaller than the default stack size of 1 MB.</span></span>|  
+|<span data-ttu-id="1a376-113">enabled</span><span class="sxs-lookup"><span data-stu-id="1a376-113">enabled</span></span>|<span data-ttu-id="1a376-114">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="1a376-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="1a376-115">指定在建立內部使用的特定執行緒時, 是否要要求 CLR 使用明確堆疊大小, 而不是預設堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="1a376-115">Specifies whether to request that the CLR use explicit stack sizes instead of the default stack size when it creates certain threads that it uses internally.</span></span> <span data-ttu-id="1a376-116">明確堆疊大小小於 1 MB 的預設堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="1a376-116">The explicit stack sizes are smaller than the default stack size of 1 MB.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="4956e-117">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="4956e-117">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="1a376-117">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="1a376-117">enabled Attribute</span></span>  
   
-|<span data-ttu-id="4956e-118">值</span><span class="sxs-lookup"><span data-stu-id="4956e-118">Value</span></span>|<span data-ttu-id="4956e-119">描述</span><span class="sxs-lookup"><span data-stu-id="4956e-119">Description</span></span>|  
+|<span data-ttu-id="1a376-118">值</span><span class="sxs-lookup"><span data-stu-id="1a376-118">Value</span></span>|<span data-ttu-id="1a376-119">描述</span><span class="sxs-lookup"><span data-stu-id="1a376-119">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="4956e-120">true</span><span class="sxs-lookup"><span data-stu-id="4956e-120">true</span></span>|<span data-ttu-id="4956e-121">要求明確的堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="4956e-121">Request explicit stack sizes.</span></span>|  
-|<span data-ttu-id="4956e-122">False</span><span class="sxs-lookup"><span data-stu-id="4956e-122">false</span></span>|<span data-ttu-id="4956e-123">使用預設堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="4956e-123">Use the default stack size.</span></span> <span data-ttu-id="4956e-124">這是.NET Framework 4 的預設值。</span><span class="sxs-lookup"><span data-stu-id="4956e-124">This is the default for the .NET Framework 4.</span></span>|  
+|<span data-ttu-id="1a376-120">true</span><span class="sxs-lookup"><span data-stu-id="1a376-120">true</span></span>|<span data-ttu-id="1a376-121">要求明確堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="1a376-121">Request explicit stack sizes.</span></span>|  
+|<span data-ttu-id="1a376-122">false</span><span class="sxs-lookup"><span data-stu-id="1a376-122">false</span></span>|<span data-ttu-id="1a376-123">使用預設堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="1a376-123">Use the default stack size.</span></span> <span data-ttu-id="1a376-124">這是 .NET Framework 4 的預設值。</span><span class="sxs-lookup"><span data-stu-id="1a376-124">This is the default for the .NET Framework 4.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4956e-125">子元素</span><span class="sxs-lookup"><span data-stu-id="4956e-125">Child Elements</span></span>  
- <span data-ttu-id="4956e-126">無。</span><span class="sxs-lookup"><span data-stu-id="4956e-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1a376-125">子元素</span><span class="sxs-lookup"><span data-stu-id="1a376-125">Child Elements</span></span>  
+ <span data-ttu-id="1a376-126">無。</span><span class="sxs-lookup"><span data-stu-id="1a376-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="4956e-127">父項目</span><span class="sxs-lookup"><span data-stu-id="4956e-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1a376-127">父項目</span><span class="sxs-lookup"><span data-stu-id="1a376-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="4956e-128">項目</span><span class="sxs-lookup"><span data-stu-id="4956e-128">Element</span></span>|<span data-ttu-id="4956e-129">描述</span><span class="sxs-lookup"><span data-stu-id="4956e-129">Description</span></span>|  
+|<span data-ttu-id="1a376-128">項目</span><span class="sxs-lookup"><span data-stu-id="1a376-128">Element</span></span>|<span data-ttu-id="1a376-129">描述</span><span class="sxs-lookup"><span data-stu-id="1a376-129">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="4956e-130">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="4956e-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="4956e-131">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="4956e-131">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="1a376-130">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="1a376-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="1a376-131">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="1a376-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4956e-132">備註</span><span class="sxs-lookup"><span data-stu-id="4956e-132">Remarks</span></span>  
- <span data-ttu-id="4956e-133">這個組態項目用來要求縮減的虛擬記憶體的使用，在處理序中，因為如果遵循，則要求，CLR 會使用其內部的執行緒，則明確的執行緒大小是小於預設大小。</span><span class="sxs-lookup"><span data-stu-id="4956e-133">This configuration element is used to request reduced virtual memory use in a process, because the explicit thread sizes that the CLR uses for its internal threads, if the request is honored, are smaller than the default size.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1a376-132">備註</span><span class="sxs-lookup"><span data-stu-id="1a376-132">Remarks</span></span>  
+ <span data-ttu-id="1a376-133">這個設定元素是用來要求在進程中減少使用的虛擬記憶體, 因為 CLR 針對其內部執行緒使用的明確執行緒大小, 如果接受要求, 則小於預設大小。</span><span class="sxs-lookup"><span data-stu-id="1a376-133">This configuration element is used to request reduced virtual memory use in a process, because the explicit thread sizes that the CLR uses for its internal threads, if the request is honored, are smaller than the default size.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="4956e-134">這個組態項目是 CLR，而不是絕對必要的需求的要求。</span><span class="sxs-lookup"><span data-stu-id="4956e-134">This configuration element is a request to the CLR rather than an absolute requirement.</span></span> <span data-ttu-id="4956e-135">在.NET Framework 4 中，要求會接受僅適用於 x86 架構。</span><span class="sxs-lookup"><span data-stu-id="4956e-135">In the .NET Framework 4, the request is honored only for the x86 architecture.</span></span> <span data-ttu-id="4956e-136">這個項目可能會完全忽略未來的 CLR 版本中，或以一律用於進行選取的內部執行緒的明確的堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="4956e-136">This element might be ignored completely in future versions of the CLR, or replaced by explicit stack sizes that are always used for selected internal threads.</span></span>  
+>  <span data-ttu-id="1a376-134">此設定元素是對 CLR 的要求, 而不是絕對需求。</span><span class="sxs-lookup"><span data-stu-id="1a376-134">This configuration element is a request to the CLR rather than an absolute requirement.</span></span> <span data-ttu-id="1a376-135">在 .NET Framework 4 中, 要求僅適用于 x86 架構。</span><span class="sxs-lookup"><span data-stu-id="1a376-135">In the .NET Framework 4, the request is honored only for the x86 architecture.</span></span> <span data-ttu-id="1a376-136">這個元素可能會在未來的 CLR 版本中完全忽略, 或由一律用於所選內部執行緒的明確堆疊大小來取代。</span><span class="sxs-lookup"><span data-stu-id="1a376-136">This element might be ignored completely in future versions of the CLR, or replaced by explicit stack sizes that are always used for selected internal threads.</span></span>  
   
- <span data-ttu-id="4956e-137">指定這個組態項目往來可靠性較小的虛擬記憶體使用，是否 CLR 會接受要求，因為較小的堆疊大小可能會無法使堆疊更可能溢位。</span><span class="sxs-lookup"><span data-stu-id="4956e-137">Specifying this configuration element trades reliability for smaller virtual memory use if the CLR honors the request, because smaller stack sizes could potentially make stack overflows more likely.</span></span>  
+ <span data-ttu-id="1a376-137">指定此設定元素會在 CLR 接受要求時, 將可靠性用於較小的虛擬記憶體使用, 因為較小的堆疊大小可能會使堆疊溢位更有可能。</span><span class="sxs-lookup"><span data-stu-id="1a376-137">Specifying this configuration element trades reliability for smaller virtual memory use if the CLR honors the request, because smaller stack sizes could potentially make stack overflows more likely.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4956e-138">範例</span><span class="sxs-lookup"><span data-stu-id="4956e-138">Example</span></span>  
- <span data-ttu-id="4956e-139">下列範例示範如何要求 CLR 使用明確堆疊調整某些大小它會在內部使用的執行緒。</span><span class="sxs-lookup"><span data-stu-id="4956e-139">The following example shows how to request that the CLR use explicit stack sizes for certain threads that it uses internally.</span></span>  
+## <a name="example"></a><span data-ttu-id="1a376-138">範例</span><span class="sxs-lookup"><span data-stu-id="1a376-138">Example</span></span>  
+ <span data-ttu-id="1a376-139">下列範例示範如何要求 CLR 針對它在內部使用的特定執行緒使用明確堆疊大小。</span><span class="sxs-lookup"><span data-stu-id="1a376-139">The following example shows how to request that the CLR use explicit stack sizes for certain threads that it uses internally.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "66489323"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4956e-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4956e-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a376-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1a376-140">See also</span></span>
 
-- [<span data-ttu-id="4956e-141">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="4956e-141">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="4956e-142">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="4956e-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="1a376-141">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="1a376-141">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="1a376-142">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="1a376-142">Configuration File Schema</span></span>](../index.md)
