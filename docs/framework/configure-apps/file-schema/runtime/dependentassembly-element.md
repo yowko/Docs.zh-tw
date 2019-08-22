@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bf1a15ff27f4390f1985a2d2730b1acfcaab2c1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704774"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663819"
 ---
-# <a name="dependentassembly-element"></a>\<dependentAssembly > 項目
-封裝每一個組件的繫結原則和組件位置。 使用其中一個`dependentAssembly`每個組件的項目。  
+# <a name="dependentassembly-element"></a>\<dependentAssembly > 元素
+封裝每一個組件的繫結原則和組件位置。 針對每`dependentAssembly`個元件使用一個元素。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<assemblyBinding>  
 \<dependentAssembly>  
   
@@ -43,10 +43,10 @@ ms.locfileid: "61704774"
   
 |項目|描述|  
 |-------------|-----------------|  
-|`assemblyIdentity`|包含組件的識別資訊。 這個項目必須包含在每個`dependentAssembly`項目。|  
-|`codeBase`|指定執行階段可以找到共用的組件如果它不會安裝在電腦上。|  
+|`assemblyIdentity`|包含元件的識別資訊。 此元素必須包含在每個`dependentAssembly`元素中。|  
+|`codeBase`|指定如果電腦上未安裝共用元件, 執行時間可以在何處找到。|  
 |`bindingRedirect`|將一個組件版本重新導向至另一個版本。|  
-|`publisherPolicy`|指定執行階段是否套用發行者原則，這個組件。|  
+|`publisherPolicy`|指定執行時間是否套用此元件的發行者原則。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61704774"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何將封裝的兩個組件的組件資訊。  
+ 下列範例顯示如何封裝兩個元件的元件資訊。  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ ms.locfileid: "61704774"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [重新導向組件版本](../../redirect-assembly-versions.md)

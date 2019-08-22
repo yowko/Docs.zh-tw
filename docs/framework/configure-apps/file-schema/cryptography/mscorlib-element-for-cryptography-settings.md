@@ -8,15 +8,15 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: ec328bc4c63bd4754c6f975ac03e610718304245
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 312db8ea5ae4b66fd00faad1b788eac0356aeaa7
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674736"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659605"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > 密碼編譯設定的項目
-包含[ \<cryptographySettings > 項目](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)。  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<用於密碼編譯設定的 mscorlib > 元素
+包含 cryptographySettings [ >元素。\< ](cryptographysettings-element.md)  
   
  \<configuration>  
 \<mscorlib>  
@@ -47,7 +47,7 @@ ms.locfileid: "61674736"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<mscorlib >** 項目參考加密編譯類別及設定執行階段。 然後，您可以將字串"RSA"傳遞至<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法和用法<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法來傳回`MyCryptoRSAClass`物件。  
+ 下列範例顯示如何使用 **\<mscorlib >** 專案來參考密碼編譯類別, 以及設定執行時間。 接著, 您可以將字串 "RSA" 傳遞給<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法, 並<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>使用方法來`MyCryptoRSAClass`傳回物件。  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "61674736"
 
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [組態檔結構描述](../index.md)
+- [密碼編譯設定結構描述](index.md)
 - [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
-- [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [設定密碼編譯類別](../../configure-cryptography-classes.md)

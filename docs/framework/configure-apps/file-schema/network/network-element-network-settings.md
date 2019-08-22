@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: c411e00026f03fdb355664049f8db00f3c800352
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40d89f7bd7a1f4a38a1c4030a86405e09c497899
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674450"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659319"
 ---
-# <a name="network-element-network-settings"></a>\<網路 > 項目 （網路設定）
-設定外部的 Simple Mail Transport Protocol (SMTP) 伺服器的網路選項。  
+# <a name="network-element-network-settings"></a>\<網路 > 元素 (網路設定)
+設定外部簡易郵件傳輸通訊協定 (SMTP) 伺服器的網路選項。  
   
  \<configuration>  
 \<system.net>  
@@ -44,52 +44,52 @@ ms.locfileid: "61674450"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|`clientDomain`|指定要用於連接到 SMTP 郵件伺服器的初始 SMTP 通訊協定要求的用戶端網域名稱。 預設值是傳送要求到本機電腦的本機主機名稱。|  
-|`defaultCredentials`|指定是否應該使用預設使用者認證存取 SMTP 交易的 SMTP 郵件伺服器。 預設值為 `false`。|  
-|`enableSsl`|指定是否使用 SSL 存取 SMTP 郵件伺服器。 預設值為 `false`。|  
-|`host`|指定要用於 SMTP 交易的 SMTP 郵件伺服器的主機名稱。 此屬性有沒有預設值。|  
-|`password`|指定要用於驗證的 SMTP 郵件伺服器的密碼。 此屬性有沒有預設值。|  
-|`port`|指定要用來連線到 SMTP 郵件伺服器的連接埠號碼。 預設值為 25。|  
-|`targetName`|指定要用於 SMTP 交易的擴充的保護時，用於驗證服務提供者名稱 (SPN)。 此屬性有沒有預設值。|  
-|`userName`|指定要用來驗證的 SMTP 郵件伺服器的使用者名稱。 此屬性有沒有預設值。|  
+|`clientDomain`|指定要在初始 SMTP 通訊協定要求中用來連接 SMTP 郵件伺服器的用戶端功能變數名稱。 預設值是傳送要求的本機電腦的 localhost 名稱。|  
+|`defaultCredentials`|指定是否應該使用預設的使用者認證來存取 smtp 交易的 SMTP 郵件伺服器。 預設值為 `false`。|  
+|`enableSsl`|指定是否使用 SSL 來存取 SMTP 郵件伺服器。 預設值為 `false`。|  
+|`host`|指定要用於 SMTP 交易的 SMTP 郵件伺服器的主機名稱。 這個屬性沒有預設值。|  
+|`password`|指定要用於 SMTP 郵件伺服器驗證的密碼。 這個屬性沒有預設值。|  
+|`port`|指定要用來連接 SMTP 郵件伺服器的通訊埠編號。 預設值為 25。|  
+|`targetName`|指定使用 SMTP 交易的擴充保護時, 用於驗證的服務提供者名稱 (SPN)。 這個屬性沒有預設值。|  
+|`userName`|指定要用於 SMTP 郵件伺服器驗證的使用者名稱。 這個屬性沒有預設值。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<smtp > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|設定 Simple Mail Transport Protocol (SMTP) 郵件傳送選項。|  
+|[\<smtp > 元素 (網路設定)](smtp-element-network-settings.md)|設定簡單郵件傳輸通訊協定 (SMTP) 郵件傳送選項。|  
   
 ## <a name="remarks"></a>備註  
- 部分 SMTP 伺服器需要您自行向伺服器使用之前進行驗證。 如果您想要驗證您在主機上使用預設網路認證、 設定`defaultCredentials`屬性設定為`true`。 <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType>屬性可用來取得目前的值`defaultCredentials`適用的組態檔中的屬性。  
+ 某些 SMTP 伺服器需要您先向伺服器驗證, 才能使用。 如果您想要使用主機上的預設網路認證來驗證自己, 請將`defaultCredentials`屬性設定`true`為。 屬性可以用來從適用的`defaultCredentials`設定檔案取得屬性的目前值。 <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType>  
   
- 您也可以使用基本驗證 （使用者名稱和密碼） 來驗證您自己的 SMTP 伺服器。 若要使用此選項，您必須指定有效的使用者名稱和指定的 SMTP 伺服器的密碼。  
+ 您也可以使用基本驗證 (使用者名稱和密碼) 向 SMTP 伺服器驗證您自己的身分。 若要使用此選項, 您必須為指定的 SMTP 伺服器指定有效的使用者名稱和密碼。  
   
 > [!NOTE]
->  基本驗證會傳送`userName`和`password`值，以未加密的伺服器。 監視網路流量的任何人都可以檢視您的認證，並使用它們來連線到伺服器。 您應該考慮使用更安全的驗證機制，例如 Kerberos 或 NT LAN Manager (NTLM)。如果`defaultCredentials`是`true`，將會使用 Kerberos 或 NTLM，如果伺服器支援這些通訊協定。  
+>  基本驗證會`userName`將`password`和值傳送到未加密的伺服器。 監視網路流量的任何人都可以看到您的認證, 並使用它們來連接到伺服器。 您應該考慮使用更安全的驗證機制, 例如 Kerberos 或 NT LAN Manager (NTLM)。如果`defaultCredentials` 為`true`, 則如果伺服器支援這些通訊協定, 則會使用 Kerberos 或 NTLM。  
   
- 基本驗證和預設網路認證選項是互斥;如果您設定`defaultCredentials`至`true`使用者名稱和密碼，會使用預設網路認證，並指定基本驗證的資料會被忽略。  
+ [基本驗證] 和 [預設網路認證] 選項互斥。如果您將`defaultCredentials`設定`true`為, 並指定使用者名稱和密碼, 則會使用預設網路認證, 而且會忽略基本驗證資料。  
   
- 基本驗證，如果您指定`userName`，您也應指定`password`驗證自己的郵件伺服器。  
+ 若為 [基本驗證] `userName`, 如果您指定, 您`password`也應該指定, 以對郵件伺服器進行自我驗證。  
   
- <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType>屬性可用來取得目前的值`userName`適用的組態檔中的屬性。 <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType>屬性可用來取得目前的值`password`適用的組態檔中的屬性。 A`password`屬性會無法正常輸入基於安全性的組態檔中。  
+ 屬性可以用來從適用的`userName`設定檔案取得屬性的目前值。 <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType> 屬性可以用來從適用的`password`設定檔案取得屬性的目前值。 <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType> 基於安全考慮, 通常不會在設定檔中輸入屬性。`password`  
   
- `clientDomain`屬性變更到 SMTP 伺服器的初始 SMTP 通訊協定要求中使用的用戶端網域名稱。 `clientDomain`屬性可以設為本機電腦的完整網域名稱，而不是預設會使用本機主機名稱。 這可提供更高的 SMTP 通訊協定標準的合規性。 預設值是傳送要求到本機電腦的本機主機名稱。 <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType>屬性可用來取得目前的值`clientDomain`適用的組態檔中的屬性。  
+ `clientDomain`屬性會將初始 smtp 通訊協定要求中所使用的用戶端功能變數名稱變更為 SMTP 伺服器。 `clientDomain`屬性可以設定為本機電腦的完整功能變數名稱, 而不是預設使用的 localhost 名稱。 這可提供更高的 SMTP 通訊協定標準合規性。 預設值是傳送要求的本機電腦的 localhost 名稱。 屬性可以用來從適用的`clientDomain`設定檔案取得屬性的目前值。 <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType>  
   
- `targetName`屬性用來驗證擴充的保護時。 預設值是"SMTPSVC /\<主機 > 」 其中\<主機 > 是 SMTP 郵件伺服器主機名稱。 <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType>屬性可用來取得目前的值`targetName`適用的組態檔中的屬性。  
+ 當`targetName`使用擴充保護時, 會使用屬性來進行驗證。 預設值的格式為 "SMTPSVC/\<host >", 其中\<host > 是 SMTP 郵件伺服器的主機名稱。 屬性可以用來從適用的`targetName`設定檔案取得屬性的目前值。 <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType>  
   
- `enableSsl`屬性可讓您指定是否使用 SSL 存取 SMTP 郵件伺服器。 <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>類別只支援 SMTP 服務延伸模組保護 smtp 傳輸層安全性透過 RFC 3207 中所定義。 在此模式中，SMTP 工作階段開始在未加密的通道，然後 STARTTLS 命令發出用戶端到伺服器，以切換為使用 SSL 的安全通訊。 RFC 3207 發佈由 Internet Engineering Task Force (IETF) 如需詳細資訊，請參閱。  
+ `enableSsl`屬性會指定是否使用 SSL 來存取 SMTP 郵件伺服器。 <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>類別僅支援透過傳輸層安全性 (如 RFC 3207 中所定義) 的 Secure smtp 的 smtp 服務延伸。 在此模式中, SMTP 會話會在未加密的通道上開始, 然後用戶端會將 STARTTLS 命令發行至伺服器, 以切換至使用 SSL 的安全通訊。 如需詳細資訊, 請參閱網際網路工程任務推動小組 (IETF) 所發佈的 RFC 3207。  
   
- 其他連線方法是 SSL 工作階段事先建立之前命令會傳送任何通訊協定。 此連線方法有時稱為 SMTPS，而且根據預設會使用連接埠 465。 目前不支援這種替代的連線方法，使用 SSL。  
+ 替代連接方法是在傳送任何通訊協定命令之前, 先建立 SSL 會話的前方。 此連接方法有時稱為 SMTPS, 而且預設會使用埠465。 目前不支援使用 SSL 的替代連接方法。  
   
- <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType>屬性可用來取得目前的值`enableSsl`適用的組態檔中的屬性。  
+ 屬性可以用來從適用的`enableSsl`設定檔案取得屬性的目前值。 <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType>  
   
 ## <a name="example"></a>範例  
- 下列範例會指定適當的 SMTP 參數，使用預設網路認證傳送電子郵件。  
+ 下列範例會指定適當的 SMTP 參數, 以使用預設網路認證來傳送電子郵件。  
   
 ```xml  
 <configuration>  
@@ -114,4 +114,4 @@ ms.locfileid: "61674450"
 - <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

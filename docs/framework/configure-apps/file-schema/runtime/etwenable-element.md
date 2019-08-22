@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704800"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663731"
 ---
-# <a name="etwenable-element"></a>\<etwEnable > 項目
+# <a name="etwenable-element"></a>\<etwEnable > 元素
 指定是否為通用語言執行平台事件啟用 Windows 事件追蹤 (ETW)。  
   
- \<組態 > 項目  
-\<執行階段 > 項目  
+ \<configuration > 元素  
+\<執行時間 > 元素  
 \<etwEnabled>  
   
 ## <a name="syntax"></a>語法  
@@ -32,7 +32,7 @@ ms.locfileid: "61704800"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |enabled|必要屬性。<br /><br /> 指定是否應該啟用 ETW。|  
   
@@ -40,8 +40,8 @@ ms.locfileid: "61704800"
   
 |值|描述|  
 |-----------|-----------------|  
-|true|啟用 ETW。 這是 Windows Vista 和 Windows Server 2008 作業系統的 Windows 開頭的版本的預設值。|  
-|False|停用 ETW。 這是舊版 Windows 的預設值。|  
+|true|啟用 ETW。 從 Windows Vista 和 Windows Server 2008 作業系統開始, 這是 Windows 版本的預設值。|  
+|false|停用 ETW。 這是舊版 Windows 的預設值。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -54,13 +54,13 @@ ms.locfileid: "61704800"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 從 Windows Vista 開始，預設會啟用 ETW。 使用這個項目來停用 ETW 應用程式。 在舊版的 Windows 中，使用這個項目來啟用 ETW 應用程式。  
+ 從 Windows Vista 開始, 預設會啟用 ETW。 使用此元素可停用應用程式的 ETW。 在舊版的 Windows 中, 請使用此元素來啟用應用程式的 ETW。  
   
 > [!NOTE]
->  ETW 可以啟用或停用全域的伺服器上使用登錄設定。 請參閱[控制.NET Framework 記錄](../../../../../docs/framework/performance/controlling-logging.md)。  
+>  您可以使用登錄設定, 在伺服器上全域啟用或停用 ETW。 請參閱[控制 .NET Framework 記錄](../../../performance/controlling-logging.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何啟用應用程式的 ETW 追蹤。  
+ 下列範例顯示如何啟用應用程式的 ETW 追蹤。  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ ms.locfileid: "61704800"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [控制 .NET Framework 記錄](../../../../../docs/framework/performance/controlling-logging.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [控制 .NET Framework 記錄](../../../performance/controlling-logging.md)

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 572a5856c9f92f105e727df1ecd8eb2e0a92fc09
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705216"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664275"
 ---
-# <a name="cryptographysettings-element"></a>\<cryptographySettings > 項目
+# <a name="cryptographysettings-element"></a>\<cryptographySettings > 元素
 包含密碼編譯設定。  
   
  \<configuration>  
@@ -39,18 +39,18 @@ ms.locfileid: "61705216"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
-|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|包含類別的 ASN.1 物件識別碼 (OID) 對應。|  
+|[\<cryptoNameMapping>](cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
+|[\<oidMap>](oidmap-element.md)|包含對類別的 asn.1 物件識別元 (OID) 對應。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`mscorlib`|包含`cryptographySettings`項目。|  
+|`mscorlib`|`cryptographySettings`包含元素。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<cryptographySettings >** 包含密碼編譯名稱對應和 OID 對應的項目。 這個範例會設定執行階段，讓<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>會傳回`MyHashClass`物件和`MyCryptoClass`類別會對應至物件識別元 1.3.36.2.1。  
+ 下列範例示範如何使用 **\<cryptographySettings >** 元素來包含密碼編譯名稱對應和 OID 對應。 這個範例會設定執行時間, <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>以便傳回`MyHashClass`物件, 而`MyCryptoClass`類別會對應至物件識別碼1.3.36.2.1。  
   
 ```xml  
 <configuration>  
@@ -78,6 +78,6 @@ ms.locfileid: "61705216"
   
 ## <a name="see-also"></a>另請參閱
 
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [組態檔結構描述](../index.md)
+- [密碼編譯設定結構描述](index.md)
 - [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)

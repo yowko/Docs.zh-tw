@@ -1,5 +1,5 @@
 ---
-title: 作法：將應用程式當地語系化
+title: HOW TO：將應用程式當地語系化
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629867"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666794"
 ---
 # <a name="how-to-localize-an-application"></a>HOW TO：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
@@ -36,7 +36,7 @@ ms.locfileid: "68629867"
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>建立範例應用程式  
- 在此步驟中，您將準備要當地語系化的應用程式。 在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 範例中有提供一個 HelloApp 範例，將用於此討論中的程式碼範例。 如果您想要使用此範例, 請從[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)下載檔案。  
+ 在此步驟中，您將準備要當地語系化的應用程式。 在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 範例中有提供一個 HelloApp 範例，將用於此討論中的程式碼範例。 如果您想要使用此範例, 請從[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml 工具範例](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)下載檔案。  
   
 1. 將您的應用程式開發至您要當地語系化的開始點。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "68629867"
   
    下表顯示這些欄位如何對應至 .csv 檔案的分隔值：  
   
-   |BAML 名稱|資源索引鍵|分類|可讀性|可修改性|註解|值|  
+   |BAML 名稱|資源索引鍵|Category|可讀性|可修改性|註解|值|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|true|true||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|None|true|true||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|無|true|true||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|無|true|true||Goodbye World|
   
    請注意, [**批註**] 欄位的所有值都不包含任何值。如果欄位沒有值, 則會是空的。 另請注意, 第一個資料列中的專案既不是可讀取也不能修改, 而且具有「忽略」做為它的**分類**值, 全都表示此值無法當地語系化。  
   

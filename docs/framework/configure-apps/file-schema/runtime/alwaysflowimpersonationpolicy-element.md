@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec411039363cfb118fee06dff88daf50bbc97a86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b42c141362d99090db922d3a6b429f05592130cd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704930"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659020"
 ---
-# <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 項目
+# <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 元素
 指定 Windows 識別一律流經非同步點，而不論模擬的執行方式為何。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<alwaysFlowImpersonationPolicy>  
   
 ## <a name="syntax"></a>語法  
@@ -38,44 +38,44 @@ ms.locfileid: "61704930"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 表示 Windows 身分識別是否流經非同步點。|  
+|`enabled`|必要屬性。<br /><br /> 指出 Windows 身分識別是否流經非同步點。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|身分識別不會流經非同步點，除非透過執行模擬 Windows 之類的管理方法<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>。 這是預設值。|  
-|`true`|Windows 識別一律流經非同步點，不論模擬的執行方式。|  
+|`false`|Windows 識別不會流經非同步點, 除非模擬是透過 managed 方法 (例如) <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>來執行。 這是預設值。|  
+|`true`|無論模擬的執行方式為何, Windows 身分識別一律會流經非同步點。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在.NET framework 1.0 和 1.1 版中，Windows 身分識別不會流經非同步點。 在.NET Framework 2.0 版中，沒有<xref:System.Threading.ExecutionContext>物件，包含目前執行中執行緒，資訊流過應用程式定義域中的非同步點。 <xref:System.Security.Principal.WindowsIdentity>也做為一部分流經非同步點中，，模擬已達到使用提供的資訊流程之類的管理方法<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>並不是透過其他方式如平台叫用原生方法。 這個項目用來指定 Windows 身分識別會流經非同步點，無論達成的模擬。  
+ 在 .NET Framework 版本1.0 和1.1 中, Windows 識別不會流經非同步點。 在 .NET Framework 版本2.0 中, 有一個<xref:System.Threading.ExecutionContext>物件包含目前執行中線程的相關資訊, 並會在應用程式域內的非同步點之間流動。 也會在流經非同步點的資訊中流動, 但前提是使用 managed 方法 (例如) <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>來達成模擬, 而不是透過其他方式 (例如平台叫用) 來達成。 <xref:System.Security.Principal.WindowsIdentity> 此元素可用來指定 Windows 識別會在非同步點之間流動, 不論模擬的達成方式為何。  
   
- 您可以變更此預設行為，另外兩種方式：  
+ 您可以透過兩種其他方式來改變此預設行為:  
   
-1. 在每個執行緒為基礎的 managed 程式碼。  
+1. 在 managed 程式碼中, 以每個執行緒為基礎。  
   
-     您可以隱藏個別的執行緒上的流程，藉由修改<xref:System.Threading.ExecutionContext>並<xref:System.Security.SecurityContext>藉由設定<xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>， <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>，或<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>方法。  
+     <xref:System.Threading.ExecutionContext>您可以使用、或<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>方法來修改和<xref:System.Security.SecurityContext>設定, 以隱藏每個執行緒的流程。 <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>  
   
-2. 在呼叫 unmanaged 裝載介面載入 common language runtime (CLR)。  
+2. 在非受控裝載介面的呼叫中, 載入 common language runtime (CLR)。  
   
-     如果 unmanaged 裝載介面 （而不是簡單的 managed 可執行檔） 用來載入 CLR，您可以呼叫中指定特殊旗標[CorBindToRuntimeEx 函式](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函式。 若要啟用相容性模式，整個程序，將`flags`參數[CorBindToRuntimeEx 函式](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)至`STARTUP_ALWAYSFLOW_IMPERSONATION`。  
+     如果使用非受控裝載介面 (而不是簡單的 managed 可執行檔) 來載入 CLR, 您可以在呼叫[CorBindToRuntimeEx 函數](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)函式中指定特殊旗標。 若要啟用整個進程的相容性模式, 請將`flags` [CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)函式的參數`STARTUP_ALWAYSFLOW_IMPERSONATION`設定為。  
   
 ## <a name="configuration-file"></a>組態檔  
- 在.NET Framework 應用程式中，這個項目只可以用於與應用程式組態檔。  
+ 在 .NET Framework 應用程式中, 這個元素只能用在應用程式佈建檔中。  
   
- 針對 ASP.NET 應用程式，可以設定模擬流程 aspnet.config 檔案中找到\<Windows 資料夾 > \Microsoft.NET\Framework\vx.x.xxxx 目錄。  
+ 針對 ASP.NET 應用程式, 可以在\<Windows 資料夾 > \Microsoft.NET\Framework\vx.x.xxxx 目錄中找到的 aspnet .config 檔案中設定模擬流程。  
   
- ASP.NET 預設會使用下列組態設定，停用模擬流程 aspnet.config 檔案：  
+ ASP.NET 預設會使用下列設定來停用 aspnet .config 檔案中的模擬流程:  
   
 ```xml
 <configuration>  
@@ -86,7 +86,7 @@ ms.locfileid: "61704930"
 </configuration>  
 ```  
   
- 在 ASP.NET 中，如果您想要允許的模擬流程相反地，您必須明確地使用下列組態設定：  
+ 在 ASP.NET 中, 如果您想要改為允許模擬的流程, 則必須明確地使用下列設定:  
   
 ```xml  
 <configuration>  
@@ -98,7 +98,7 @@ ms.locfileid: "61704930"
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何指定模擬可透過受管理的方法以外的方式，即使 Windows 身分識別存流經非同步點。  
+ 下列範例示範如何指定 Windows 身分識別流經非同步點, 即使透過 managed 方法以外的方式來達成模擬也是一樣。  
   
 ```xml  
 <configuration>  
@@ -110,6 +110,6 @@ ms.locfileid: "61704930"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<legacyImpersonationPolicy > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [\<legacyImpersonationPolicy > 元素](legacyimpersonationpolicy-element.md)

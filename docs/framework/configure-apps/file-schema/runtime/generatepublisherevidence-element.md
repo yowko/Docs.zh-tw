@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a0861436ca727d63cdae58e3222826bf6414610
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: caec297f8d0f6febad5cf46adb0a2658960c6bb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489451"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663664"
 ---
-# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > 項目
-指定執行階段是否會建立<xref:System.Security.Policy.Publisher>程式碼存取安全性 (CAS) 的辨識項。  
+# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > 元素
+指定執行時間是否為<xref:System.Security.Policy.Publisher>代碼啟用安全性 (CAS) 建立辨識項。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<generatePublisherEvidence>  
   
 ## <a name="syntax"></a>語法  
@@ -35,11 +35,11 @@ ms.locfileid: "66489451"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定執行階段是否會建立<xref:System.Security.Policy.Publisher>辨識項。|  
+|`enabled`|必要屬性。<br /><br /> 指定執行時間是否會<xref:System.Security.Policy.Publisher>建立辨識項。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |`false`|不會建立<xref:System.Security.Policy.Publisher>辨識項。|  
 |`true`|建立<xref:System.Security.Policy.Publisher>辨識項。 這是預設值。|  
@@ -49,7 +49,7 @@ ms.locfileid: "66489451"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
@@ -57,18 +57,18 @@ ms.locfileid: "66489451"
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  在.NET Framework 4 和更新版本，這個項目會有不會影響組件載入時間。 如需詳細資訊，請參閱中的 「 安全性原則簡化 」 一節[安全性變更](../../../../../docs/framework/security/security-changes.md)。  
+>  在 .NET Framework 4 和更新版本中, 這個元素不會影響元件載入時間。 如需詳細資訊, 請參閱[安全性變更](../../../security/security-changes.md)中的「安全性原則簡化」一節。  
   
- Common language runtime (CLR) 會嘗試在載入時間，以建立驗證 Authenticode 簽章<xref:System.Security.Policy.Publisher>組件的辨識項。 不過，根據預設，大部分的應用程式不需要<xref:System.Security.Policy.Publisher>辨識項。 標準的 CAS 原則不會依賴<xref:System.Security.Policy.PublisherMembershipCondition>。 您應該避免與驗證的簽章，除非您的應用程式自訂的 CAS 原則的電腦上執行，或想要滿足需求的相關聯的不必要的啟始成本<xref:System.Security.Permissions.PublisherIdentityPermission>在部分信任環境中。 （對於識別權限需求永遠成功在完全信任環境中）。  
+ Common language runtime (CLR) 會在載入時嘗試驗證 Authenticode 簽章, 以建立<xref:System.Security.Policy.Publisher>元件的辨識項。 不過, 根據預設, 大部分的應用程式都<xref:System.Security.Policy.Publisher>不需要辨識項。 標準 CAS 原則不依賴<xref:System.Security.Policy.PublisherMembershipCondition>。 除非您的應用程式是在具有自訂 CAS 原則的電腦上執行, 或想要滿足部分信任環境中的<xref:System.Security.Permissions.PublisherIdentityPermission>要求, 否則您應該避免與驗證發行者簽章相關聯的不必要啟動成本。 (在完全信任環境中, 身分識別許可權的需求一律會成功)。  
   
 > [!NOTE]
->  我們建議，服務會使用`<generatePublisherEvidence>`以改善啟動效能的項目。  使用這個項目也可協助避免可能會導致逾時和服務啟動後取消的延遲。  
+>  我們建議服務使用`<generatePublisherEvidence>`元素來改善啟動效能。  使用這個元素也有助於避免延遲, 這可能會造成超時和取消服務啟動。  
   
 ## <a name="configuration-file"></a>組態檔  
- 此元素只用於應用程式組態檔中。  
+ 這個元素只能用在應用程式佈建檔中。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<generatePublisherEvidence>`停用 CAS 應用程式的發行者原則檢查的項目。  
+ 下列範例顯示如何使用專案來停`<generatePublisherEvidence>`用應用程式的 CAS 發行者原則檢查。  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ ms.locfileid: "66489451"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)

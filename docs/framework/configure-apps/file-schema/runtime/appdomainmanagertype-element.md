@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19cd74f0e2550ec91cb56e70cf34a03bd84fc60e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5b535ba67ab05dabd7e0a23e79692bbf69e25b55
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487747"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663914"
 ---
-# <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 項目
+# <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 元素
 針對預設應用程式網域，指定做為應用程式網域管理員的類型。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<appDomainManagerType>  
   
 ## <a name="syntax"></a>語法  
@@ -33,35 +33,35 @@ ms.locfileid: "66487747"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|`value`|必要屬性。 指定的型別，包括命名空間，做為預設應用程式定義域中的程序的應用程式定義域管理員的名稱。|  
+|`value`|必要屬性。 指定類型的名稱, 包括命名空間, 做為進程中預設應用程式域的應用程式域管理員。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 若要指定的應用程式定義域管理員類型，您必須指定這個項目和[ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)項目。 如果未指定這些項目，則會忽略其他。  
+ 若要指定應用程式域管理員的類型, 您必須同時指定此元素和[ \<appDomainManagerAssembly >](appdomainmanagerassembly-element.md)元素。 如果未指定任何一個專案, 則會忽略另一個元素。  
   
- 載入預設應用程式定義域時，<xref:System.TypeLoadException>指定的型別不存在於所指定的組件便會擲回[ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)項目及至處理序失敗啟動。  
+ 載入預設應用程式域時, 如果<xref:System.TypeLoadException>指定的型別不存在於[ \<appDomainManagerAssembly >](appdomainmanagerassembly-element.md)專案所指定的元件中, 就會擲回, 而且進程無法啟動。  
   
- 當您指定預設應用程式定義域的應用程式定義域管理員類型時，從預設應用程式定義域建立其他應用程式定義域繼承應用程式定義域管理員類型。 使用<xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>和<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>屬性來指定新的應用程式定義域的不同的應用程式定義域管理員類型。  
+ 當您針對預設應用程式域指定應用程式域管理員類型時, 從預設應用程式域建立的其他應用程式域會繼承應用程式域管理員類型。 <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>使用和<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>屬性, 為新的應用程式域指定不同的應用程式域管理員類型。  
   
- 指定應用程式定義域管理員類型需要有完全信任應用程式。 （例如，在桌面上執行的應用程式有完全信任）。如果應用程式並沒有完全信任，<xref:System.TypeLoadException>就會擲回。  
+ 指定應用程式域管理員類型時, 應用程式必須具有完全信任。 (例如, 在桌面上執行的應用程式會有完全信任)。如果應用程式沒有完全信任, <xref:System.TypeLoadException>則會擲回。  
   
- 型別和命名空間的格式是相同的格式用於<xref:System.Type.FullName%2A?displayProperty=nameWithType>屬性。  
+ 類型和命名空間的格式與用於<xref:System.Type.FullName%2A?displayProperty=nameWithType>屬性的格式相同。  
   
- 這個組態項目是僅適用於.NET Framework 4 及更新版本。  
+ 此 configuration 元素僅適用于 .NET Framework 4 和更新版本。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何指定應用程式定義域管理員，預設應用程式定義域的處理程序會`MyMgr`輸入`AdMgrExample`組件。  
+ 下列範例示範如何指定進程的預設應用程式域的應用程式域管理員是`MyMgr` `AdMgrExample`元件中的類型。  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "66487747"
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerAssembly > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [SetAppDomainManagerType 方法](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
+- [\<appDomainManagerAssembly > 元素](appdomainmanagerassembly-element.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [SetAppDomainManagerType 方法](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

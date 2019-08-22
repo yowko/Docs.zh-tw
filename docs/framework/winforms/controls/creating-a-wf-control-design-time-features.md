@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 733f22c122dd6acdad41371419375e55e977c016
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c8d04725a576c9e24a4b7d4aec1251516a8c544c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039935"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666235"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項
 
@@ -62,7 +62,6 @@ ms.locfileid: "69039935"
 ![應用程式會顯示文字和 [開始] 和 [停止] 按鈕的提示。](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 如需完整的程式代碼清單[, 請參閱如何:建立會利用設計階段功能](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))的 Windows Forms 控制項。
-
 
 ## <a name="prerequisites"></a>必要條件
 

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9270552245b3867f0f09741ded3f9da6a8b6c135
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705177"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664273"
 ---
-# <a name="nameentry-element"></a>\<nameEntry > 項目
+# <a name="nameentry-element"></a>\<y > 元素
 將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。  
   
  \<configuration>  
@@ -37,24 +37,24 @@ ms.locfileid: "61705177"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**name**|必要屬性。<br /><br /> 指定密碼編譯類別會實作演算法的易記名稱。|  
-|**class**|必要屬性。<br /><br /> 指定的值**名稱**屬性中[ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)項目。|  
+|**name**|必要屬性。<br /><br /> 指定密碼編譯類別所實行之演算法的易記名稱。|  
+|**class**|必要屬性。<br /><br /> [指定\<cryptoClass >](cryptoclass-element.md)元素中**name**屬性的值。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`system.web`|指定 ASP.NET 組態區段的根項目。|  
   
 ## <a name="remarks"></a>備註  
- **名稱**屬性可以是抽象類別中找到的其中一個名稱<xref:System.Security.Cryptography>命名空間。 當您呼叫**Create**抽象的密碼編譯類別上的方法，抽象類別名稱傳遞至<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>方法。 **CreateFromName**會傳回所指定之型別的執行個體**類別**屬性。 如果**名稱**屬性是一個簡短的名稱，例如 RSA，您可以使用該名稱呼叫時**CreateFromName**方法。  
+ **Name**屬性可以是在<xref:System.Security.Cryptography>命名空間中找到的其中一個抽象類別的名稱。 當您在抽象密碼編譯類別上呼叫**Create**方法時, 會將抽象類別名稱傳遞給<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>方法。 **CreateFromName**會傳回**類別**屬性所指示之類型的實例。 如果**name**屬性是簡短名稱 (例如 RSA), 您可以在呼叫**CreateFromName**方法時使用該名稱。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<nameEntry >** 項目參考加密編譯類別及設定執行階段。 然後，您可以將字串"RSA"傳遞至<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法和用法<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法來傳回`MyCryptoRSAClass`物件。  
+ 下列範例示範如何使用 **\<y >** 元素來參考密碼編譯類別, 以及設定執行時間。 接著, 您可以將字串 "RSA" 傳遞給<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法, 並<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>使用方法來`MyCryptoRSAClass`傳回物件。  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "61705177"
   
 ## <a name="see-also"></a>另請參閱
 
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [組態檔結構描述](../index.md)
+- [密碼編譯設定結構描述](index.md)
 - [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
-- [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [設定密碼編譯類別](../../configure-cryptography-classes.md)

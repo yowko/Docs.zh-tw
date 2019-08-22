@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5852579758e85bb033af9b6d036fe76444bb8e4
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4b1f55f056ef1aed4a5eff655650cefe778c97ae
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583850"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663788"
 ---
-# <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 項目
+# <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 元素
 指定是否在執行緒啟動時認可完整執行緒堆疊。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<disableCommitThreadStack>  
   
 ## <a name="syntax"></a>語法  
@@ -35,7 +35,7 @@ ms.locfileid: "65583850"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |enabled|必要屬性。<br /><br /> 指定是否停用在執行緒啟動時認可完整執行緒堆疊 (預設行為)。|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65583850"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
@@ -60,7 +60,7 @@ ms.locfileid: "65583850"
  Common Language Runtime 的預設行為是在執行緒啟動時認可完整執行緒堆疊。 如果必須在具有有限記憶體的伺服器上建立大量執行緒，而且大部分的執行緒都會使用極小的堆疊空間，則 Common Language Runtime 不要在執行緒啟動時立即認可完整執行緒堆疊，伺服器的效能可能會較好。  
   
 > [!NOTE]
->  未受管理的主機可以在 `STARTUP_DISABLE_COMMITTHREADSTACK` STARTUP_FLAGS [列舉中使用](../../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) 啟動旗標，來達到相同的結果。  
+>  未受管理的主機可以在 `STARTUP_DISABLE_COMMITTHREADSTACK` STARTUP_FLAGS [列舉中使用](../../../unmanaged-api/hosting/startup-flags-enumeration.md) 啟動旗標，來達到相同的結果。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何停用 Common Language Runtime 的預設行為，也就是在執行緒啟動時認可完整執行緒堆疊。  
@@ -75,5 +75,5 @@ ms.locfileid: "65583850"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)

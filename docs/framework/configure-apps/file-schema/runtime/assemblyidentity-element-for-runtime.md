@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: d5766b76f18dce441cb260887a753dcf64642a6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 815e1c26a328d986f91992a1e67e438a563ffea6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674229"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663892"
 ---
-# <a name="assemblyidentity-element-for-runtime"></a>\<組件識別 > 的項目\<執行階段 >
-包含組件的識別資訊。  
+# <a name="assemblyidentity-element-for-runtime"></a>\<執行時間 > 的\<assemblyIdentity > 元素
+包含元件的識別資訊。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<assemblyBinding>  
 \<dependentAssembly>  
 \<assemblyIdentity>  
@@ -41,19 +41,19 @@ culture="assembly culture"/>
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`name`|必要屬性。<br /><br /> 組件名稱|  
-|`culture`|選擇性屬性。<br /><br /> 字串，指定的語言和國家/地區的組件。|  
-|`publicKeyToken`|選擇性屬性。<br /><br /> 十六進位值，指定組件的強式名稱。|  
-|`processorArchitecture`|選擇性屬性。<br /><br /> 其中一個值"x86"、"amd64"、"msil"或"ia64"，指定包含處理器特定程式碼組件的處理器架構。 值不區分大小寫。 如果屬性被指派任何其他值，整個`<assemblyIdentity>`項目會被忽略。 請參閱 <xref:System.Reflection.ProcessorArchitecture>。|  
+|`name`|必要屬性。<br /><br /> 元件的名稱|  
+|`culture`|選擇性屬性。<br /><br /> 字串, 指定元件的語言和國家/地區。|  
+|`publicKeyToken`|選擇性屬性。<br /><br /> 指定元件強式名稱的十六進位值。|  
+|`processorArchitecture`|選擇性屬性。<br /><br /> 其中一個值「x86」、「amd64」、「msil」或「ia64」, 指定包含處理器特定程式碼之元件的處理器架構。 這些值不區分大小寫。 如果屬性被指派任何其他值, 則會忽略`<assemblyIdentity>`整個元素。 請參閱 <xref:System.Reflection.ProcessorArchitecture>。|  
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`amd64`|AMD x86 64 架構。|  
-|`ia64`|Intel Itanium 架構。|  
-|`msil`|相對於處理器和每個字組的位元的中性。|  
-|`x86`|32 位元 x86 處理器、 原生或 Windows 上的 64 位元平台上的 Windows (WOW) 環境中。|  
+|`amd64`|僅適用于 AMD x86-64 架構。|  
+|`ia64`|僅限 Intel Itanium 架構。|  
+|`msil`|中性, 相對於處理器和每個字的位。|  
+|`x86`|32位 x86 處理器 (原生或在64位平臺上 Windows on Windows (WOW) 環境中)。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -64,15 +64,15 @@ culture="assembly culture"/>
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`dependentAssembly`|封裝每一個組件的繫結原則和組件位置。 使用其中一個`<dependentAssembly>`每個組件的項目。|  
+|`dependentAssembly`|封裝每一個組件的繫結原則和組件位置。 針對每`<dependentAssembly>`個元件使用一個元素。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
  每隔 **\<dependentAssembly >** 項目必須有一個 **\<組件識別>** 子項目。  
   
- 如果`processorArchitecture`屬性，就`<assemblyIdentity>`項目僅適用於具有對應的處理器架構的組件。 如果`processorArchitecture`屬性不存在，`<assemblyIdentity>`項目可以套用至組件的任何處理器架構。  
+ 如果屬性存在`<assemblyIdentity>` , 元素只會套用至具有對應處理器架構的元件。 `processorArchitecture` 如果屬性不存在, 元素可以套用至具有任何處理器架構的元件。 `<assemblyIdentity>` `processorArchitecture`  
   
- 下列範例顯示兩個組件具有相同名稱的目標兩個不同的兩個處理器架構，和其版本已不受到維護的同步處理組態檔。時，應用程式執行 x86 平台的第一個`<assemblyIdentity>`適用於項目，且另會被忽略。 如果應用程式執行 x86 或 ia64 以外的平台上，兩者都會被忽略。  
+ 下列範例顯示兩個元件的設定檔, 其名稱相同, 其目標為兩個不同的兩個處理器架構, 且其版本尚未保持同步。當應用程式在 x86 平臺上執行時, `<assemblyIdentity>`會套用第一個專案, 而另一個元素會被忽略。 如果應用程式是在 x86 或 ia64 以外的平臺上執行, 則會忽略兩者。  
   
 ```xml  
 <configuration>  
@@ -99,10 +99,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- 如果組態檔包含`<assemblyIdentity>`含的項目`processorArchitecture`屬性，而且不包含符合的平台，而不需要的項目之項目`processorArchitecture`屬性使用。  
+ 如果設定檔包含`<assemblyIdentity>`沒有`processorArchitecture`屬性的專案, 而且未包含符合平臺的元素`processorArchitecture` , 則會使用沒有屬性的專案。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何提供組件的相關資訊。  
+ 下列範例顯示如何提供元件的相關資訊。  
   
 ```xml  
 <configuration>  
@@ -121,6 +121,6 @@ culture="assembly culture"/>
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [重新導向組件版本](../../redirect-assembly-versions.md)

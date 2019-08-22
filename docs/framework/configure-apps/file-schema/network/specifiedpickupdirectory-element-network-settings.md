@@ -8,15 +8,15 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: a459fee557285935c383dcfaf512c8a8a9aea570
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2e31dee4f5aff2bf6cedf5c4e9ca235695b0a53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674362"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659088"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > 項目 （網路設定）
-設定 Simple Mail Transport Protocol (SMTP) 伺服器的本機目錄。  
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > 元素 (網路設定)
+設定簡單郵件傳輸通訊協定 (SMTP) 伺服器的本機目錄。  
   
  \<configuration>  
 \<system.net>  
@@ -39,7 +39,7 @@ ms.locfileid: "61674362"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|目錄，讓應用程式會儲存供稍後處理 SMTP 伺服器的電子郵件。|  
+|`pickupDirectoryLocation`|應用程式儲存電子郵件以供 SMTP 伺服器稍後處理的目錄。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -48,13 +48,13 @@ ms.locfileid: "61674362"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<smtp > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|設定 Simple Mail Transport Protocol (SMTP) 郵件傳送選項。|  
+|[\<smtp > 元素 (網路設定)](smtp-element-network-settings.md)|設定簡單郵件傳輸通訊協定 (SMTP) 郵件傳送選項。|  
   
 ## <a name="remarks"></a>備註  
  `specifiedPickupDirectory` 屬性會設定目錄，讓應用程式儲存郵件以供 SMTP 伺服器處理。  
   
 ## <a name="example"></a>範例  
- 下列範例會指定 c:\maildrop 為郵件收取目錄。  
+ 下列範例會將 c:\maildrop 指定為郵件收取目錄。  
   
 ```xml  
 <configuration>  
@@ -75,4 +75,4 @@ ms.locfileid: "61674362"
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

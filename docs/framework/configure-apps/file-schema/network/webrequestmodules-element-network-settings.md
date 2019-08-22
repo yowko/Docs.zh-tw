@@ -8,15 +8,15 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: e5d1780a204b2e99593d51179a479845fd49e608
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c30a7a0bcce62c99d7c1ec0ff17389b8c2cd2f17
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704943"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663937"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > 項目 （網路設定）
-指定要求資訊從網路主機使用的模組。  
+# <a name="webrequestmodules-element-network-settings"></a>\<Webrequestmodules 專案 > 元素 (網路設定)
+指定要用來要求網路主機資訊的模組。  
   
  \<configuration>  
 \<system.net>  
@@ -39,26 +39,26 @@ ms.locfileid: "61704943"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|將自訂的 Web 要求模組新增至應用程式。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|移除應用程式中的所有已註冊的 Web 要求模組。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|移除應用程式自訂的 Web 要求模組。|  
+|[add](add-element-for-webrequestmodules-network-settings.md)|將自訂 Web 要求模組加入至應用程式。|  
+|[clear](clear-element-for-webrequestmodules-network-settings.md)|從應用程式中移除所有已註冊的 Web 要求模組。|  
+|[remove](remove-element-for-webrequestmodules-network-settings.md)|從應用程式中移除自訂 Web 要求模組。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
+|[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
 ## <a name="remarks"></a>備註  
- `webRequestModules` 項目會註冊 <xref:System.Net.WebRequest> 類別的子系，以處理對網路主機的資訊要求。 Web 要求模組必須實作<xref:System.Net.IWebRequestCreate>介面。  
+ `webRequestModules` 項目會註冊 <xref:System.Net.WebRequest> 類別的子系，以處理對網路主機的資訊要求。 Web 要求模組必須執行<xref:System.Net.IWebRequestCreate>介面。  
   
- .NET Framework 包含 Web 要求模組的 Uri，開頭`http://`， `https://`，和`file://`。 您可以覆寫預設模組只能在組態檔中註冊自訂模組。  
+ .NET Framework 包含以`http://`、 `https://`和`file://`開頭之 uri 的 Web 要求模組。 您只能藉由在設定檔中註冊自訂模組來覆寫預設模組。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會註冊預設的 HTTP 模組。 您應該取得版本和 PublicKeyToken 的值取代為正確的值，指定模組。  
+ 下列範例會註冊預設的 HTTP 模組。 您應該將 Version 和 PublicKeyToken 的值取代為指定模組的正確值。  
   
 ```xml  
 <configuration>  
@@ -77,4 +77,4 @@ ms.locfileid: "61704943"
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

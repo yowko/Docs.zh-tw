@@ -8,30 +8,23 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 889e81053d4e2264755468446a4e1681216ae22e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040368"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666239"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段于 Windows Forms 上建立新的 WPF 內容
 
 本文說明如何建立 Windows Presentation Foundation (WPF) 控制項, 以便在您的 Windows Forms 架構應用程式中使用。
 
-在這個逐步解說中，您將執行下列工作：
-
-- 建立專案。
-
-- 建立新的 WPF 控制項。
-
-- 將新的 WPF 控制項加入 Windows Form。 WPF 控制項裝載於 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。
-
 ## <a name="prerequisites"></a>必要條件
 
-您需要下列元件才能完成此逐步解說：
-
-- Visual Studio
+若要完成這個逐步解說，您必須具有 Visual Studio。
 
 ## <a name="create-the-project"></a>建立專案
 
@@ -51,17 +44,17 @@ ms.locfileid: "69040368"
 
 1. 在**方案總管**中, 將新的**WPF 使用者控制項程式庫 (.NET Framework)** 專案加入至方案。 使用控制項程式庫的預設名稱 `WpfControlLibrary1`。 預設控制項名稱為 `UserControl1.xaml`。
 
-     加入新控制項的效果如下:
+   加入新控制項的效果如下:
 
-    - 會加入 UserControl1.xaml 檔案。
+   - 會加入 UserControl1.xaml 檔案。
 
-    - 會加入 UserControl1.xaml.cs 或 UserControl1.xaml.vb 檔案。 這個檔案包含事件處理常式和其他實作的程式碼後置。
+   - 已新增檔案 UserControl1.xaml.cs (或 UserControl1)。 這個檔案包含事件處理常式和其他實作的程式碼後置。
 
-    - 會加入 WPF 組件的參考。
+   - 會加入 WPF 組件的參考。
 
-    - UserControl1.xaml 檔案會在 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 中開啟。
+   - [檔案 UserControl1] 會在 WPF 設計工具中開啟 Visual Studio。
 
-2. 在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱[如何：選取並移動 Design Surface](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))上的元素。
+2. 在 [設計] 檢視中，確定已選取 `UserControl1`。
 
 3. 在 [**屬性**] 視窗中, 將<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>屬性的值設定為**200**。
 
@@ -69,8 +62,8 @@ ms.locfileid: "69040368"
 
 5. 在 [**屬性**] 視窗中, 將<xref:System.Windows.Controls.TextBox.Text%2A>屬性的值設定為 [**主控內容**]。
 
-    > [!NOTE]
-    > 一般而言，您應該裝載更複雜的 WPF 內容。 <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控制項在此僅供說明用途使用。
+   > [!NOTE]
+   > 一般而言，您應該裝載更複雜的 WPF 內容。 <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控制項在此僅供說明用途使用。
 
 6. 建置專案。
 
@@ -86,13 +79,13 @@ ms.locfileid: "69040368"
 
 3. 將 `UserControl1` 的執行個體拖曳到表單上。
 
-    -           <xref:System.Windows.Forms.Integration.ElementHost> 控制項會在表單上自動建立，以裝載 WPF 控制項。
+    - <xref:System.Windows.Forms.Integration.ElementHost> 控制項會在表單上自動建立，以裝載 WPF 控制項。
 
     - `elementHost1` <xref:System.Windows.Forms.Integration.ElementHost.Child%2A>控制項的名稱為, 而在 [屬性] 視窗中, 您可以看到其屬性設定為 UserControl1。 <xref:System.Windows.Forms.Integration.ElementHost>
 
     - WPF 組件的參考會加入專案中。
 
-    -           `elementHost1` 控制項具有智慧標籤面板，這個面板會顯示可用的裝載選項。
+    - `elementHost1` 控制項具有智慧標籤面板，這個面板會顯示可用的裝載選項。
 
 4. 在 [ **ElementHost Tasks** ] 智慧標籤面板中, 選取 [停**駐于父容器中**]。
 

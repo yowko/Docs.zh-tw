@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378041"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663688"
 ---
-# <a name="gcserver-element"></a>\<gcServer > 項目
+# <a name="gcserver-element"></a>\<gcServer > 元素
 指定 Common Language Runtime 是否執行伺服器記憶體回收。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<gcServer>  
   
 ## <a name="syntax"></a>語法  
@@ -52,7 +52,7 @@ ms.locfileid: "66378041"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
@@ -65,7 +65,7 @@ ms.locfileid: "66378041"
  此項目只能用在應用程式組態檔中；如果是在或電腦組態檔中，就會忽略此項目。  
   
 > [!NOTE]
->  在 .NET Framework 4 (含) 以前版本中，當伺服器記憶體回收啟用時，無法使用並行記憶體回收。 從 .NET Framework 4.5 開始，伺服器記憶體回收為並行。 若要使用非並行伺服器記憶體回收，將`<gcServer>`項目`true`並[ \<gcConcurrent > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)來`false`。  
+>  在 .NET Framework 4 (含) 以前版本中，當伺服器記憶體回收啟用時，無法使用並行記憶體回收。 從 .NET Framework 4.5 開始，伺服器記憶體回收為並行。 若要使用非並行伺服器垃圾收集, 請將`<gcServer>`元素設`true`為, 並[ \<將 gcConcurrent >](gcconcurrent-element.md)專案設定為。 `false`  
   
 ## <a name="example"></a>範例  
  下列範例會啟用伺服器記憶體回收。  
@@ -81,6 +81,6 @@ ms.locfileid: "66378041"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [若要停用並行記憶體回收](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [停用並行垃圾收集](gcconcurrent-element.md#to-disable-background-garbage-collection)

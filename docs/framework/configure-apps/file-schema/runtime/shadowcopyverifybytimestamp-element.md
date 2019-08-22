@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4187d266d82783ebb72073c1da92faff95352884
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6f3ea57364832553d16c7e34fc887b1c9f821602
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489387"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663442"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> 項目
-指定陰影複製是否使用.NET Framework 4 中導入的預設啟動行為，或會還原為舊版.NET Framework 的啟動行為。  
+指定陰影複製是否使用 .NET Framework 4 中引進的預設啟動行為, 或還原為舊版 .NET Framework 的啟動行為。  
   
- \<組態 > 項目  
-\<執行階段 > 項目  
+ \<configuration > 元素  
+\<執行時間 > 元素  
 \<shadowCopyVerifyByTimestamp> 項目  
   
 ## <a name="syntax"></a>語法  
@@ -34,30 +34,30 @@ ms.locfileid: "66489387"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|enabled|必要屬性。<br /><br /> 指定是否使用陰影複製的應用程式定義域時啟動，以判斷是否已更新組件陰影複製組件之前比較的組件時間戳記。|  
+|enabled|必要屬性。<br /><br /> 指定在啟動時, 使用陰影複製的應用程式域是否比較元件時間戳記, 以判斷元件在陰影複製元件之前是否已更新。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|true|在啟動時，複製 只有已更新，因此在上一次複製到陰影複製目錄的組件。 這是.NET Framework 4 的預設值。|  
-|False|還原為舊版.NET Framework 的啟動行為是將在啟動的所有檔案都複製。|  
+|true|在啟動時, 只會複製自上次複製到陰影複製目錄後已更新的元件。 這是 .NET Framework 4 的預設值。|  
+|false|還原為舊版 .NET Framework 的啟動行為, 也就是在啟動時複製所有檔案。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 從.NET Framework 4 開始，組件會陰影複製，只有當其時間戳記表示自上次在複製到陰影複製目錄後有所變更。 這可改善許多使用陰影複製，應用程式的啟動時間，如中所述[陰影複製組件](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)。 組件更新比例與頻率相當高的應用程式可能不會受益於這種行為變更。 在這種情況下，您可以使用此項目還原舊版 .NET Framework 的行為。  
+ 從 .NET Framework 4 開始, 只有在其時間戳記指出自最後一次複製到陰影複製目錄之後, 才會將元件陰影複製。 如此可改善許多使用陰影複製之應用程式的啟動時間, 如[陰影複製元件](../../../app-domains/shadow-copy-assemblies.md)中所述。 組件更新比例與頻率相當高的應用程式可能不會受益於這種行為變更。 在這種情況下，您可以使用此項目還原舊版 .NET Framework 的行為。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何停用預設啟動行為的陰影複製在.NET Framework 4 中，並還原為舊版.NET Framework 的啟動行為。  
+ 下列範例顯示如何在 .NET Framework 4 中停用陰影複製的預設啟動行為, 並還原為舊版 .NET Framework 的啟動行為。  
   
 ```xml  
 <configuration>  
@@ -69,6 +69,6 @@ ms.locfileid: "66489387"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [陰影複製組件](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [陰影複製組件](../../../app-domains/shadow-copy-assemblies.md)

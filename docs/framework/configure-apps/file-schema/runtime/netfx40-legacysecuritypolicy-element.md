@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5bfa5449ece1b24d4f47fe3e77e36b26bbe430c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689840"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663563"
 ---
-# <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > 項目
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > 元素
 
 指定執行階段是否使用舊版程式碼存取安全性 (CAS) 原則。
 
-\<configuration>\
-\<runtime>\
+\<configuration > \
+\<執行時間 > \
 \<NetFx40_LegacySecurityPolicy>
 
 ## <a name="syntax"></a>語法
@@ -37,14 +37,14 @@ ms.locfileid: "66689840"
 
 |屬性|描述|
 |---------------|-----------------|
-|`enabled`|必要屬性。<br /><br /> 指定執行階段是否使用舊版 CAS 原則。|
+|`enabled`|必要屬性。<br /><br /> 指定執行時間是否使用舊版 CAS 原則。|
 
 ## <a name="enabled-attribute"></a>啟用屬性
 
 |值|描述|
 |-----------|-----------------|
-|`false`|執行階段不使用舊版 CAS 原則。 這是預設值。|
-|`true`|執行階段會使用舊版 CAS 原則。|
+|`false`|執行時間不會使用舊版的 CAS 原則。 這是預設值。|
+|`true`|執行時間會使用舊版的 CAS 原則。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -59,28 +59,28 @@ ms.locfileid: "66689840"
 
 ## <a name="remarks"></a>備註
 
-在.NET Framework 3.5 版和更早版本中，CAS 原則一律是作用中。 在.NET Framework 4 中，您必須啟用 CAS 原則。
+在 .NET Framework 版本3.5 和更早版本中, CAS 原則一律會生效。 在 .NET Framework 4 中, 必須啟用 CAS 原則。
 
-特定版本的 CAS 原則。 在.NET Framework 4 中，必須重新指定存在於較早版本的.NET Framework 中的自訂 CA 原則。
+CAS 原則是特定版本。 存在於舊版 .NET Framework 中的自訂 CAS 原則必須在 .NET Framework 4 中 respecified。
 
-套用`<NetFx40_LegacySecurityPolicy>`.NET Framework 4 組件的項目不會影響[安全性透明程式碼](../../../../../docs/framework/misc/security-transparent-code.md); 透明度規則仍適用。
+將元素套用至 .NET Framework 4 元件並不會影響[安全性透明](../../../misc/security-transparent-code.md)的程式碼; 透明度規則仍然適用。 `<NetFx40_LegacySecurityPolicy>`
 
 > [!IMPORTANT]
-> 套用`<NetFx40_LegacySecurityPolicy>`項目可以原生映像所建立的組件會導致重大的效能損失[原生映像產生器 (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) ，不會安裝在[全域組件快取](../../../../../docs/framework/app-domains/gac.md). 效能降低因執行階段無法載入組件為原生映像，套用屬性時，導致其被載入，在 just-in-time 組件。
+> 套用元素可能會對原[生映射產生器 (ngen.exe)](../../../tools/ngen-exe-native-image-generator.md)所建立的原生映射元件 (未安裝在[全域組件快取](../../../app-domains/gac.md)中) 造成明顯的效能損失。 `<NetFx40_LegacySecurityPolicy>` 效能降低的原因是, 當套用屬性時, 執行時間無法將元件載入為原生映射, 導致其載入為即時元件。
 
 > [!NOTE]
-> 如果您指定的目標.NET Framework 版本早於.NET Framework 4 中的專案設定 Visual Studio 專案時，就會啟用 CAS 原則，包括您為該版本所指定的任何自訂 CA 原則。 不過，您將無法使用新的.NET Framework 4 類型和成員。 您也可以藉由指定舊版的.NET framework [ \<Supportedruntime> > 項目](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)啟動設定結構描述中您[應用程式組態檔](../../../../../docs/framework/configure-apps/index.md)。
+> 如果您在 Visual Studio 專案的專案設定中指定早于 .NET Framework 4 的目標 .NET Framework 版本, 將會啟用 CAS 原則, 包括您為該版本指定的任何自訂 CAS 原則。 不過, 您將無法使用新的 .NET Framework 4 種類型和成員。 您也可以在[應用程式佈建檔](../../index.md)的 [啟動設定] 架構中, [ \<使用 supportedruntime> > 元素](../startup/supportedruntime-element.md), 指定舊版的 .NET Framework。
 
 > [!NOTE]
-> 組態檔語法會區分大小寫。 提供語法和範例區段中，您應該使用的語法。
+> 設定檔語法會區分大小寫。 您應該使用語法和範例小節中所提供的語法。
 
 ## <a name="configuration-file"></a>組態檔
 
-此元素只用於應用程式組態檔中。
+這個元素只能用在應用程式佈建檔中。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何啟用舊版 CAS 原則，對應用程式。
+下列範例顯示如何為應用程式啟用舊版 CAS 原則。
 
 ```xml
 <configuration>
@@ -92,5 +92,5 @@ ms.locfileid: "66689840"
 
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 7566f19282ffd5a3cac86693a64899f25ce37b9f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 289a8427540c713758c3f155e72efffe9f3c85bc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040283"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666797"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項
 
@@ -46,7 +46,6 @@ ms.locfileid: "69040283"
 - 將現有控制項重新指派至不同的父代
 
 完成後，您就會了解這些重要配置功能所扮演的角色。
-
 
 ## <a name="creating-the-project"></a>建立專案
 

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 30c5cd07c92a8fc3c340cab0ff9ae74e940c0c12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05aac6c1ed3c04bce263a45cafdb9bec906bd75b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705230"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664053"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 項目 （網路設定）
-啟用或停用網路的效能計數器。  
+# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 元素 (網路設定)
+啟用或停用網路效能計數器。  
   
  \<configuration>  
 \<system.net>  
-\<settings>  
+\<設定 >  
 \<performanceCounters>  
   
 ## <a name="syntax"></a>語法  
@@ -47,19 +47,19 @@ ms.locfileid: "61705230"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[設置](settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
- 需要在組態檔中啟用，才能使用網路效能計數器。 藉由組態檔中的單一設定可啟用或停用所有網路效能計數器。 不能啟用或停用個別的網路效能計數器。 如需有關特定的網路效能計數器的詳細資訊，請參閱[網路效能計數器](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)。  
+ 需要在組態檔中啟用，才能使用網路效能計數器。 藉由組態檔中的單一設定可啟用或停用所有網路效能計數器。 不能啟用或停用個別的網路效能計數器。 如需特定網路效能計數器的詳細資訊, 請參閱[網路效能計數器](../../../debug-trace-profile/performance-counters.md#networking)。  
   
- 預設值是該網路的效能計數器已停用。  
+ 預設值是網路效能計數器已停用。  
   
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>屬性可用來取得目前的值**啟用**適用的組態檔中的屬性。  
+ 屬性可以用來從適用的設定檔取得**已啟用**屬性的目前值。 <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何設定<xref:System.Net>和相關命名空間，以啟用網路效能計數器。  
+ 下列範例顯示如何設定和相關的<xref:System.Net>命名空間, 以啟用網路效能計數器。  
   
 ```xml  
 <configuration>  
@@ -77,5 +77,5 @@ ms.locfileid: "61705230"
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [網路效能計數器](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- [網路設定結構描述](index.md)
+- [網路效能計數器](../../../debug-trace-profile/performance-counters.md#networking)

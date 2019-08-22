@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: b8969cecf8ffb2ef23522f193bb322b1170e6111
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d89c2e2c6943aca38f8a71092ba3121447a77574
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705060"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664103"
 ---
 # <a name="ipv6-element-network-settings"></a>\<ipv6> 項目 (網路設定)
-可讓網際網路通訊協定第 6 版 (IPv6) 的過時成員的回應<xref:System.Net.Dns>類別。  
+啟用來自<xref:System.Net.Dns>類別過時成員的網際網路通訊協定第6版 (IPv6) 回應。  
   
  \<configuration>  
 \<system.net>  
-\<settings>  
+\<設定 >  
 \<ipv6>  
   
 ## <a name="syntax"></a>語法  
@@ -38,7 +38,7 @@ ms.locfileid: "61705060"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|`enabled`|指定是否屬於<xref:System.Net.Dns>類別傳回 Internet Protocol version 6 (IPv6) 位址。 預設值為 `false`。|  
+|`enabled`|指定<xref:System.Net.Dns>類別的成員是否傳回網際網路通訊協定第6版 (IPv6) 位址。 預設值為 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -47,16 +47,16 @@ ms.locfileid: "61705060"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[設置](settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
- 此設定會啟用 IPv6 支援的過時的成員<xref:System.Net.Dns>類別： <xref:System.Net.Dns.BeginGetHostByName%2A>， <xref:System.Net.Dns.BeginResolve%2A>， <xref:System.Net.Dns.EndGetHostByName%2A>， <xref:System.Net.Dns.EndResolve%2A>， <xref:System.Net.Dns.GetHostByAddress%2A>， <xref:System.Net.Dns.GetHostByName%2A>，以及<xref:System.Net.Dns.Resolve%2A>。 其他成員<xref:System.Net?displayProperty=nameWithType>如果作業系統中啟用 IPv6，IPv6 位址可能傳回的命名空間。  
+ 此設定會針對<xref:System.Net.Dns>類別的過時成員啟用 IPv6 支援: <xref:System.Net.Dns.Resolve%2A> <xref:System.Net.Dns.GetHostByAddress%2A> <xref:System.Net.Dns.BeginResolve%2A> <xref:System.Net.Dns.EndGetHostByName%2A> <xref:System.Net.Dns.BeginGetHostByName%2A> <xref:System.Net.Dns.EndResolve%2A>、、、、 、和。<xref:System.Net.Dns.GetHostByName%2A> 針對<xref:System.Net?displayProperty=nameWithType>命名空間的其他成員, 如果作業系統中已啟用 ipv6, 可能會傳回 ipv6 位址。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何啟用 IPv6 支援<xref:System.Net.Dns>類別。  
+ 下列範例顯示如何啟用類別的<xref:System.Net.Dns> IPv6 支援。  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ ms.locfileid: "61705060"
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Dns?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

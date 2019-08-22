@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704605"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663529"
 ---
-# <a name="probing-element"></a>\<探查 > 項目
-指定應用程式基底的 common language runtime 載入組件時所要搜尋的子目錄。  
+# <a name="probing-element"></a>\<探查 > 元素
+指定載入元件時, common language runtime 要搜尋的應用程式基底子目錄。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<assemblyBinding>  
 \<探查 >  
   
@@ -37,9 +37,9 @@ ms.locfileid: "61704605"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|`privatePath`|必要屬性。<br /><br /> 指定的應用程式可能會包含組件的基底目錄的子目錄。 每個子目錄，以分號字元進行分隔。|  
+|`privatePath`|必要屬性。<br /><br /> 指定可能包含元件之應用程式基底目錄的子目錄。 以分號分隔每個子目錄。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -53,7 +53,7 @@ ms.locfileid: "61704605"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何指定應用程式基底的子目錄，執行階段應該搜尋組件。  
+ 下列範例顯示如何指定執行時間應該搜尋元件的應用程式基底子目錄。  
   
 ```xml  
 <configuration>  
@@ -67,7 +67,7 @@ ms.locfileid: "61704605"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [指定組件的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [指定組件的位置](../../specify-assembly-location.md)
+- [執行階段如何找出組件](../../../deployment/how-the-runtime-locates-assemblies.md)

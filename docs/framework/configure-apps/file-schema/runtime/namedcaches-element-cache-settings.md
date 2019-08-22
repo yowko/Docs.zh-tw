@@ -6,18 +6,18 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 36920a5e585c0c7581fbc4f84043d68550fbdac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cedd462aa539745ddab844dff158912914cb024
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704865"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663573"
 ---
-# <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 項目 （快取設定）
-指定的具名組態設定集合<xref:System.Runtime.Caching.MemoryCache>執行個體。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>屬性從一或多個參考的組態設定集合`namedCaches`組態檔的項目。  
+# <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 元素 (快取設定)
+指定已命名<xref:System.Runtime.Caching.MemoryCache>實例的設定集合。 屬性會從設定檔的一個或多個`namedCaches`元素, 參考設定的集合。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>  
   
  \<configuration>  
-\< system.runtime.caching>  
+\<> 的緩存  
 \<memoryCache>  
 \<namedCaches>  
   
@@ -39,36 +39,36 @@ ms.locfileid: "61704865"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`cacheMemoryLimitMegabytes`|整數值，指定允許的大小上限，以 mb 為單位，可執行個體<xref:System.Runtime.Caching.MemoryCache>可以成長到。 預設值為 0，這表示的自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>預設會使用類別。|  
+|`cacheMemoryLimitMegabytes`|整數值, 指定實例<xref:System.Runtime.Caching.MemoryCache>可以成長到的最大允許大小 (以 mb 為單位)。 預設值為 0, 表示預設會使用<xref:System.Runtime.Caching.MemoryCache>類別的自動調整大小啟發學習法。|  
 |`name`|快取的名稱。|  
-|`physicalMemoryLimitPercentage`|整數值介於 0 到 100 之間，指定可供快取的實際安裝的電腦記憶體的最大百分比。 預設值為 0，這表示的自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>預設會使用類別。|  
-|`pollingInterval`|表示時間間隔的值，在此時間之後，快取實作會比較目前的記憶體負載與針對快取執行個體所設定的絕對和百分比型記憶體限制。 這個值是以"Hh: mm:"格式輸入。|  
+|`physicalMemoryLimitPercentage`|介於0和100之間的整數值, 指定可供快取使用之實際安裝電腦記憶體的最大百分比。 預設值為 0, 表示預設會使用<xref:System.Runtime.Caching.MemoryCache>類別的自動調整大小啟發學習法。|  
+|`pollingInterval`|表示時間間隔的值，在此時間之後，快取實作會比較目前的記憶體負載與針對快取執行個體所設定的絕對和百分比型記憶體限制。 此值會以 "HH: MM: SS" 格式輸入。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/runtime/add-element-for-namedcaches.md)|將具名快取新增到記憶體快取的 `namedCaches` 集合。|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)|清除記憶體快取的 `namedCaches` 集合。|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/runtime/remove-element-for-namedcaches.md)|從記憶體快取的 `namedCaches` 集合移除具名快取項目。|  
+|[\<add>](add-element-for-namedcaches.md)|將具名快取新增到記憶體快取的 `namedCaches` 集合。|  
+|[\<clear>](clear-element-for-namedcaches.md)|清除記憶體快取的 `namedCaches` 集合。|  
+|[\<remove>](remove-element-for-namedcaches.md)|從記憶體快取的 `namedCaches` 集合移除具名快取項目。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|定義項目，這個項目會用來設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取。|  
+|[\<memoryCache>](memorycache-element-cache-settings.md)|定義項目，這個項目會用來設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取。|  
   
 ## <a name="remarks"></a>備註  
- 可以包含 Web.config 檔的記憶體快取組態區段`add`， `remove`，並`clear`屬性`namedCaches`集合。 每個`namedCaches`項目會識別`name`屬性。  
+ Web.config 檔案的記憶體快取設定區段`add`可以包含`namedCaches`集合的、 `remove`和`clear`屬性。 每`namedCaches`個專案都是`name`由屬性唯一識別。  
   
- 您可以藉由參考應用程式組態檔中的資訊擷取執行個體的記憶體快取項目。 根據預設，只有預設快取執行個體具有組態檔中的項目。 預設快取執行個體是從傳回的執行個體<xref:System.Runtime.Caching.MemoryCache.Default%2A>屬性。  
+ 您可以藉由參考應用程式佈建檔中的資訊, 來取出記憶體快取專案的實例。 根據預設, 只有預設快取實例在設定檔中有一個專案。 預設的快取實例是從<xref:System.Runtime.Caching.MemoryCache.Default%2A>屬性傳回的實例。  
   
- 如果您設定為"default"的 name 屬性時，項目會使用預設的記憶體快取執行個體。  
+ 如果您將 name 屬性設定為 "default", 元素會使用預設的記憶體快取實例。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何將預設快取項目名稱中的快取的名稱，藉由設定`name`為"default"的屬性。  
+ 下列範例示範如何透過將`name`屬性設定為 "default", 將快取的名稱設定為預設快取專案名稱。  
   
- `cacheMemoryLimitMegabytes` 屬性和 `physicalMemoryPercentage` 屬性都設定為零。 將這些屬性設定為零表示自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>類別使用。 快取實作會比較目前的記憶體負載與絕對和百分比型記憶體限制每隔兩分鐘。  
+ `cacheMemoryLimitMegabytes` 屬性和 `physicalMemoryPercentage` 屬性都設定為零。 將這些屬性設定為零表示會使用<xref:System.Runtime.Caching.MemoryCache>類別的自動調整大小啟發學習法。 快取執行會比較目前的記憶體負載與以百分比為基礎的記憶體限制, 每兩分鐘一次。  
   
 ```xml  
 <configuration>  
@@ -89,4 +89,4 @@ ms.locfileid: "61704865"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<memoryCache > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+- [\<memoryCache > 元素 (快取設定)](memorycache-element-cache-settings.md)

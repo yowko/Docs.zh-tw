@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84ec54eeb8adee90031057dadc4549cb73527be1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704878"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663906"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<Assemblybinding> > 項目\<執行階段 >
+# <a name="assemblybinding-element-for-runtime"></a>\<執行時間 > 的\<assemblyBinding > 元素
 包含有關組件版本重新導向和組件位置的資訊。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<assemblyBinding>  
   
 ## <a name="syntax"></a>語法  
@@ -40,16 +40,16 @@ ms.locfileid: "61704878"
 |屬性|描述|  
 |---------------|-----------------|  
 |**xmlns**|必要屬性。<br /><br /> 指定組件繫結所需的 XML 命名空間。 使用字串 "urn:schemas-microsoft-com:asm.v1" 做為值。|  
-|**appliesTo**|指定 .NET Framework 組件重新導向適用的執行階段版本。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它適用於哪一個版本。 如果未指定 **appliesTo** 屬性，則 **\<assemblyBinding>** 項目會套用至所有的 .NET Framework 版本。 **AppliesTo** .NET Framework 1.1 版中引進了屬性，則會忽略由.NET Framework 1.0 版。 這表示在使用 .NET Framework 1.0 版時，會套用所有 **\<assemblyBinding>** 項目，即使已指定 **appliesTo** 屬性時也是如此。|  
+|**appliesTo**|指定 .NET Framework 組件重新導向適用的執行階段版本。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它適用於哪一個版本。 如果未指定 **appliesTo** 屬性，則 **\<assemblyBinding>** 項目會套用至所有的 .NET Framework 版本。 **AppliesTo**屬性是在 .NET Framework 版本1.1 中引進.NET Framework 版本1.0 會忽略它。 這表示在使用 .NET Framework 1.0 版時，會套用所有 **\<assemblyBinding>** 項目，即使已指定 **appliesTo** 屬性時也是如此。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|封裝組件的繫結原則和組件位置。 使用其中一個 **\<dependentAssembly >** 每個組件的標記。|  
-|[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|指定載入組件時，Common Language Runtime 會搜尋的子目錄。|  
-|[\<publisherPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|指定執行階段是否套用發行者原則。|  
-|[\<qualifyAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。|  
+|[\<dependentAssembly>](dependentassembly-element.md)|封裝組件的繫結原則和組件位置。 針對每個元件使用一個 **\<dependentAssembly >** 標記。|  
+|[\<probing>](probing-element.md)|指定載入組件時，Common Language Runtime 會搜尋的子目錄。|  
+|[\<publisherPolicy>](publisherpolicy-element.md)|指定執行階段是否套用發行者原則。|  
+|[\<qualifyAssembly>](qualifyassembly-element.md)|指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61704878"
 </configuration>  
 ```  
   
- 下列範例示範如何使用**appliesTo**重新導向的.NET Framework 組件的繫結的屬性。  
+ 下列範例顯示如何使用**appliesTo**屬性重新導向 .NET Framework 元件的系結。  
   
 ```xml  
 <runtime>  
@@ -94,6 +94,6 @@ ms.locfileid: "61704878"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [重新導向組件版本](../../redirect-assembly-versions.md)

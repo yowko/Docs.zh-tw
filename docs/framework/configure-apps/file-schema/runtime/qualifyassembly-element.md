@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4aa90a378630c9aff74923d8e8600aed15a77a5e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704852"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663494"
 ---
-# <a name="qualifyassembly-element"></a>\<qualifyAssembly > 項目
+# <a name="qualifyassembly-element"></a>\<qualifyAssembly > 元素
 指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<assemblyBinding>  
 \<qualifyAssembly>  
   
@@ -41,27 +41,27 @@ ms.locfileid: "61704852"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`partialName`|必要屬性。<br /><br /> 在程式碼中所顯示的樣子，請指定組件的部分名稱。|  
-|`fullName`|必要屬性。<br /><br /> 在全域組件快取中所顯示的樣子，請指定組件的完整名稱。|  
+|`partialName`|必要屬性。<br /><br /> 指定元件出現在程式碼中的部分名稱。|  
+|`fullName`|必要屬性。<br /><br /> 指定元件出現在全域組件快取中的完整名稱。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 呼叫<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>使用部分組件名稱的方法會導致 common language runtime 尋找組件只能在應用程式基底目錄中。 使用 **\<Qualifyassembly> >** 提供完整的組件有更多的資訊 （名稱、 版本、 公開金鑰語彙基元和文化特性），並導致通用語言執行平台，來搜尋您的應用程式組態檔中的項目在全域組件快取中組件。  
+ 使用部分元件名稱呼叫方法,會導致commonlanguageruntime只在應用程式基底目錄中尋找元件。<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 使用應用程式佈建檔中的 **\<qualifyAssembly >** 專案, 提供完整的元件資訊 (名稱、版本、公開金鑰標記和文化特性), 並導致 common language runtime 在中搜尋元件。全域組件快取。  
   
- **FullName**屬性必須包含組件識別的四個欄位： 名稱、 版本、 公開金鑰語彙基元和文化特性。 **PartialName**屬性必須部分參考的組件。 您至少必須指定組件的文字名稱 （最常見的情況），但您也可以包含版本、 公開金鑰語彙基元或文化特性 （或任何組合的四個，但是並非所有的四個欄位）。 **PartialName**必須符合您的呼叫中指定的名稱。 例如，您無法指定`"math"`做為**partialName**屬性，在您的組態檔，並呼叫`Assembly.Load("math, Version=3.3.3.3")`程式碼中。  
+ **FullName**屬性必須包含元件識別的四個欄位: 名稱、版本、公開金鑰標記和文化特性。 **PartialName**屬性必須部分參考元件。 您至少必須指定元件的文字名稱 (最常見的情況), 但您也可以包含版本、公開金鑰標記或文化特性 (或四個 (但不是全部四個) 的任何組合。 **PartialName**必須符合您的呼叫中所指定的名稱。 例如, 您無法在配置`"math"`檔中指定做為**partialName**屬性, 並在`Assembly.Load("math, Version=3.3.3.3")`您的程式碼中呼叫。  
   
 ## <a name="example"></a>範例  
- 下列範例會以邏輯方式會呼叫`Assembly.Load("math")`成`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`。  
+ 下列範例會以邏輯方式將`Assembly.Load("math")`呼叫`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`變成。  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ ms.locfileid: "61704852"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [部分組件參考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [執行階段設定結構描述](index.md)
+- [執行階段如何找出組件](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [部分元件參考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

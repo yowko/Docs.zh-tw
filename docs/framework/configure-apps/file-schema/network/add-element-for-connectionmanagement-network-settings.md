@@ -10,14 +10,14 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705268"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664234"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<新增 > connectionManagement （網路設定） 的項目
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<新增 Connectionmanagement 專案的 > 元素 (網路設定)
 將 IP 位址或 DNS 名稱加入連線管理清單中。  
   
  \<configuration>  
@@ -51,7 +51,7 @@ ms.locfileid: "61705268"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定連接至網路主機的連線數目上限。|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|指定連接至網路主機的連線數目上限。|  
   
 ## <a name="remarks"></a>備註  
  `address` 屬性的值應該是表示所有連線的星號，或是 `<schema>://<idn_hostname>[:<port>]` 格式的字串。  
@@ -62,7 +62,7 @@ ms.locfileid: "61705268"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會設定應用程式使用伺服器的四個通往`www.contoso.com`和所有其他伺服器的兩個連線。  
+ 下列範例會將應用程式設定為使用伺服器`www.contoso.com`的四個連接, 以及兩個連接到其他所有伺服器。  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ ms.locfileid: "61705268"
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

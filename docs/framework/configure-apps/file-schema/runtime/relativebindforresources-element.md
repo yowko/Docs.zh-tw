@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15156eaf883fc9ec162e0a85525564d49522b01d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 859e8a12421ea92aa48c54317e052683eb8e83f8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592662"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663489"
 ---
-# <a name="relativebindforresources-element"></a>\<Relativebindforresources> > 項目
+# <a name="relativebindforresources-element"></a>\<Relativebindforresources> > 元素
 最佳化附屬組件的探查。  
   
- \<組態 > 項目  
-\<執行階段 > 項目  
-\<Relativebindforresources> > 項目  
+ \<configuration > 元素  
+\<執行時間 > 元素  
+\<Relativebindforresources> > 元素  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,14 +35,14 @@ ms.locfileid: "64592662"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定 common language runtime 是否最佳化附屬組件的探查。|  
+|`enabled`|必要屬性。<br /><br /> 指定通用語言執行時間是否要優化附屬元件的探查。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|`false`|執行階段不會最佳化附屬組件的探查。 這是預設值。|  
-|`true`|執行階段最佳化附屬組件的探查。|  
+|`false`|執行時間不會優化附屬元件的探查。 這是預設值。|  
+|`true`|執行時間會優化附屬元件的探查。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -55,24 +55,24 @@ ms.locfileid: "64592662"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 一般情況下，Resource Manager 來探查資源，如中所述[封裝和部署資源](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)主題。 這表示當資源管理員會探查特定資源的當地語系化版本，它可能在全域組件快取中尋找、 附屬組件，尋找應用程式的程式碼基底，查詢 Windows 安裝程式中的特定文化特性資料夾中，會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。 `<relativeBindForResources>`項目最佳化資源管理員探查附屬組件的方式。 當探查資源在下列情況下，它可以改善效能：  
+ 一般來說, Resource Manager 會探查資源, 如[封裝和部署資源](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)主題中所述。 這表示當 Resource Manager 探查特定當地語系化版本的資源時, 它可能會查看全域組件快取、在應用程式的程式碼基底中尋找特定文化特性的資料夾、針對附屬元件查詢 Windows Installer, 然後引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。 `<relativeBindForResources>`元素會將 Resource Manager 探查附屬元件的方式優化。 在下列情況下探查資源時, 它可以改善效能:  
   
-- 當附屬組件會部署在與程式碼組件相同的位置。 換句話說，如果程式碼組件會安裝在全域組件快取，附屬組件也必須安裝那里。 如果程式碼組件會安裝在應用程式的程式碼基底，也必須安裝附屬組件中的程式碼基底中的特定文化特性資料夾。  
+- 當附屬元件部署在與程式碼元件相同的位置時。 換句話說, 如果程式碼元件安裝在全域組件快取中, 則也必須在該處安裝附屬元件。 如果程式碼元件安裝在應用程式的程式碼基底中, 則附屬元件也必須安裝在程式碼基底中的文化特性特定資料夾內。  
   
-- 當 Windows 安裝程式未使用或很少使用依需求安裝附屬組件。  
+- 未使用 Windows Installer, 或只是很少用來視需要安裝附屬元件。  
   
-- 應用程式程式碼未處理的當<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
+- 當應用程式代碼未處理<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件時。  
   
- 設定`enabled`的屬性`<relativeBindForResources>`項目`true`Resource Manager 的探查最佳化附屬組件，如下所示：  
+ 設定專案的`<relativeBindForResources>` `true`屬性, 以將 Resource Manager 的附屬元件探查優化, 如下所示: `enabled`  
   
-- 它會使用父程式碼組件的位置來探查附屬組件。  
+- 它會使用父程式碼元件的位置來探查附屬元件。  
   
-- 它不會查詢 Windows Installer 附屬組件。  
+- 它不會查詢附屬元件 Windows Installer。  
   
 - 它不會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [封裝和部署資源](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [封裝和部署資源](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)

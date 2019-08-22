@@ -9,15 +9,15 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 1aa182ced462e5fc90b22019aaf424d400bb4fd5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629671"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666757"
 ---
 # <a name="layout"></a>配置
-本主題描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 配置系統。 了解如何和何時進行版面配置計算對於在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中建立使用者介面十分重要。  
+本主題描述 Windows Presentation Foundation (WPF) 版面配置系統。 瞭解版面配置計算的發生方式和時機, 是在 WPF 中建立使用者介面的必要條件。  
   
  本主題包含下列幾節：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68629671"
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>項目週框方塊  
- 考慮到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的版面配置時，請務必了解包圍所有項目的週框方塊。 配置<xref:System.Windows.FrameworkElement>系統所取用的每一個都可以被視為一個矩形, 做為版面配置的一周框。 <xref:System.Windows.Controls.Primitives.LayoutInformation>類別會傳回元素的版面配置分配或位置的界限。 矩形的大小取決於計算可用的螢幕空間、任何條件約束的大小、版面配置特有的屬性 (例如邊界和填補), 以及父<xref:System.Windows.Controls.Panel>元素的個別行為。 處理此資料時, 配置系統能夠計算特定<xref:System.Windows.Controls.Panel>的所有子系的位置。 請務必記住, 父元素上定義的調整大小特性 (例如<xref:System.Windows.Controls.Border>) 會影響其子系。  
+ 考慮 WPF 中的版面配置時, 請務必瞭解環繞所有元素的周框方塊。 配置<xref:System.Windows.FrameworkElement>系統所取用的每一個都可以被視為一個矩形, 做為版面配置的一周框。 <xref:System.Windows.Controls.Primitives.LayoutInformation>類別會傳回元素的版面配置分配或位置的界限。 矩形的大小取決於計算可用的螢幕空間、任何條件約束的大小、版面配置特有的屬性 (例如邊界和填補), 以及父<xref:System.Windows.Controls.Panel>元素的個別行為。 處理此資料時, 配置系統能夠計算特定<xref:System.Windows.Controls.Panel>的所有子系的位置。 請務必記住, 父元素上定義的調整大小特性 (例如<xref:System.Windows.Controls.Border>) 會影響其子系。  
   
  下圖顯示簡單的版面配置。  
   
@@ -101,11 +101,11 @@ ms.locfileid: "68629671"
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>面板項目和自訂版面配置行為  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]包含一個衍生自<xref:System.Windows.Controls.Panel>的元素群組。 這些<xref:System.Windows.Controls.Panel>元素可啟用許多複雜的版面配置。 例如, 您可以使用<xref:System.Windows.Controls.StackPanel>專案輕鬆地完成堆疊專案, 而更複雜且可用的<xref:System.Windows.Controls.Canvas>流動版面配置則是使用。  
+WPF 包含一個衍生自<xref:System.Windows.Controls.Panel>的元素群組。 這些<xref:System.Windows.Controls.Panel>元素可啟用許多複雜的版面配置。 例如, 您可以使用<xref:System.Windows.Controls.StackPanel>專案輕鬆地完成堆疊專案, 而更複雜且可用的<xref:System.Windows.Controls.Canvas>流動版面配置則是使用。  
   
  下表摘要說明可用的版面<xref:System.Windows.Controls.Panel>配置元素。  
   
-|面板名稱|描述|  
+|面板名稱|說明|  
 |----------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|定義一個區域, 您可以在其中以相對於<xref:System.Windows.Controls.Canvas>區域的座標, 明確地定位子項目。|  
 |<xref:System.Windows.Controls.DockPanel>|定義一個區域，可供您在其中以子項目彼此間相對的水平或垂直方式排列子項目。|  
@@ -114,7 +114,7 @@ ms.locfileid: "68629671"
 |<xref:System.Windows.Controls.VirtualizingPanel>|提供專案的架構<xref:System.Windows.Controls.Panel> , 這些專案會虛擬化其子資料集合。 這是 abstract 類別。|  
 |<xref:System.Windows.Controls.WrapPanel>|將子項目置放於由左至右的連續位置，其中會在包含方塊的邊緣將內容換至下一行。 後續順序會依照<xref:System.Windows.Controls.WrapPanel.Orientation%2A>屬性的值, 從上到下或由右至左順序進行。|  
   
- 對於需要<xref:System.Windows.Controls.Panel>使用任何預先定義之元素無法進行配置的應用程式, 可以藉由<xref:System.Windows.Controls.Panel>繼承自並覆寫<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法, 來達成自訂配置行為。 如需範例，請參閱 [Custom Radial Panel Sample](https://go.microsoft.com/fwlink/?LinkID=159982) (自訂放射狀面板範例)。  
+ 對於需要<xref:System.Windows.Controls.Panel>使用任何預先定義之元素無法進行配置的應用程式, 可以藉由<xref:System.Windows.Controls.Panel>繼承自並覆寫<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法, 來達成自訂配置行為。  
   
 <a name="LayoutSystem_Performance"></a>   
 ## <a name="layout-performance-considerations"></a>版面配置效能考量  
@@ -138,7 +138,7 @@ ms.locfileid: "68629671"
   
 <a name="LayoutSystem_LayoutRounding"></a>   
 ## <a name="sub-pixel-rendering-and-layout-rounding"></a>子像素轉譯和版面配置進位  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形系統會使用裝置獨立單位來啟用解析度和裝置獨立性。 每個與裝置無關的圖元都會自動以系統的每英寸 (DPI) 設定來調整。 這可[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為應用程式提供適當的調整, 以進行不同的 DPI 設定, 並讓應用程式自動感知 DPI。  
+ WPF 圖形系統使用裝置獨立單位來啟用解析度和裝置獨立性。 每個與裝置無關的圖元都會自動以系統的每英寸 (DPI) 設定來調整。 這會為 WPF 應用程式提供適當的調整, 以進行不同的 DPI 設定, 並讓應用程式自動感知 DPI。  
   
  不過, 此 DPI 獨立性可能會因為消除鋸齒而建立不規則的邊緣轉譯。 如果邊緣位置落在裝置像素中間，而不是裝置像素之間，則這些成品一般會看起來模糊或具有半透明邊緣。 配置系統提供一種方式，利用版面配置來進行這項的調整。 版面配置進位是配置系統會在版面配置階段期間將任何非整數像素值四捨五入。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "68629671"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>後續步驟  
- 了解如何測量和排列項目是了解版面配置的第一個步驟。 如需可用<xref:System.Windows.Controls.Panel>元素的詳細資訊, 請參閱[面板總覽](../controls/panels-overview.md)。 若要進一步了解會影響版面配置的各種定位屬性，請參閱[對齊、邊界和填補概觀](alignment-margins-and-padding-overview.md)。 如需自訂<xref:System.Windows.Controls.Panel>元素的範例, 請參閱[自訂星形面板範例](https://go.microsoft.com/fwlink/?LinkID=159982)。 當您準備好將它全部放在輕量應用程式中時[, 請參閱逐步解說:我的第一個 WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)桌面應用程式。  
+ 了解如何測量和排列項目是了解版面配置的第一個步驟。 如需可用<xref:System.Windows.Controls.Panel>元素的詳細資訊, 請參閱[面板總覽](../controls/panels-overview.md)。 若要進一步了解會影響版面配置的各種定位屬性，請參閱[對齊、邊界和填補概觀](alignment-margins-and-padding-overview.md)。 當您準備好將它全部放在輕量應用程式中時[, 請參閱逐步解說:我的第一個 WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)桌面應用程式。  
   
 ## <a name="see-also"></a>另請參閱
 

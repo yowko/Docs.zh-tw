@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c7f866cdbcd39194d61a3db821bf973b4e057e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704761"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663810"
 ---
-# <a name="developmentmode-element"></a>\<developmentMode > 項目
+# <a name="developmentmode-element"></a>\<developmentMode > 元素
 指定執行階段是否要在 DEVPATH 環境變數所指定的目錄中搜尋組件。  
   
  \<configuration>  
-\<執行階段 >  
+\<執行時間 >  
 \<developmentMode>  
   
 ## <a name="syntax"></a>語法  
@@ -42,26 +42,26 @@ ms.locfileid: "61704761"
   
 ## <a name="developerinstallation-attribute"></a>developerInstallation 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|**true**|DEVPATH 環境變數所指定的目錄中的組件的搜尋。|  
-|**false**|不會搜尋 DEVPATH 環境變數所指定的目錄中的組件。 這是預設值|  
+|**true**|在 DEVPATH 環境變數所指定的目錄中搜尋元件。|  
+|**false**|不會在 DEVPATH 環境變數所指定的目錄中搜尋元件。 這是預設值|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 使用此設定只在開發階段。 執行階段不會檢查在 DEVPATH 中找到的強式名稱組件的版本。 它會直接使用第一個找到的組件。  
+ 請只在開發階段使用此設定。 執行時間不會檢查在 DEVPATH 中找到的強式名稱元件上的版本。 它只會使用所找到的第一個元件。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何讓執行階段搜尋 DEVPATH 環境變數所指定的目錄中的組件。  
+ 下列範例顯示如何讓執行時間在 DEVPATH 環境變數所指定的目錄中搜尋元件。  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ ms.locfileid: "61704761"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [如何：使用 DEVPATH 找出組件](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [如何：使用 DEVPATH 找出元件](../../how-to-locate-assemblies-by-using-devpath.md)

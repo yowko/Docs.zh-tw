@@ -8,19 +8,19 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6a40d97bf16a3125452311e7762617e657ca384
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704982"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659150"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 項目 （網路設定）
-設定網路資源的連線。  
+# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 元素 (網路設定)
+設定網路資源的連接。  
   
  \<configuration>  
 \<system.net>  
-\<settings>  
+\<設定 >  
 \<servicePointManager>  
   
 ## <a name="syntax"></a>語法  
@@ -44,13 +44,13 @@ ms.locfileid: "61704982"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|指定系統是否應該驗證憑證的名稱符合伺服器主機名稱，再使用憑證。 預設值為 `true`。|  
-|`checkCertificateRevocationList`|指定系統是否應該檢查是否已使用憑證之前撤銷憑證。 預設值為 `false`。|  
-|`dnsRefreshTimeout`|搭配使用 DNS 循環配置資源選項，以毫秒為單位指定時間長度網域名稱服務 (DNS) 解決方案會快取。 預設值為 120,000 毫秒 (兩分鐘)。|  
-|`enableDnsRoundRobin`|指定是否 DNS 解析的主機名稱全都換成多個網際網路通訊協定 (IP) 位址傳回所有位址或只有第一個。 預設值為 `false`。|  
-|`encryptionPolicy`|指定套用至 SSL/TLS 工作階段的加密原則<xref:System.Net.ServicePointManager>執行個體。 可能的值為相等的值<xref:System.Net.Security.EncryptionPolicy>列舉型別。 善用<xref:System.Security.Authentication.CipherAlgorithmType.Null>時，必須加密原則設為`NoEncryption`。 預設值為 `RequireEncryption`。|  
-|`expect100Continue`|指定 POST 方法是否應會收到`100-continue`來自伺服器的回應。 預設值為 `true`。|  
-|`useNagleAlgorithm`|指定服務端點管理員所控制的連接是否使用 Nagle 演算法。 預設值為 `true`。|  
+|`checkCertificateName`|指定系統是否應該先確認憑證上的名稱符合伺服器主機名稱, 然後再使用憑證。 預設值為 `true`。|  
+|`checkCertificateRevocationList`|指定系統是否應該先檢查憑證是否已被撤銷, 再使用憑證。 預設值為 `false`。|  
+|`dnsRefreshTimeout`|指定功能變數名稱服務 (DNS) 解析與 DNS 迴圈配置資源選項的快取時間長度 (以毫秒為單位)。 預設值為 120,000 毫秒 (兩分鐘)。|  
+|`enableDnsRoundRobin`|指定具有多個網際網路通訊協定 (IP) 位址之主機名稱的 DNS 解析是否會傳回所有位址, 或只傳回第一個位址。 預設值為 `false`。|  
+|`encryptionPolicy`|指定套用至<xref:System.Net.ServicePointManager>實例上 SSL/TLS 會話的加密原則。 可能的值相當於<xref:System.Net.Security.EncryptionPolicy>列舉的值。 當加密原則<xref:System.Security.Authentication.CipherAlgorithmType.Null>設定為`NoEncryption`時, 需要使用。 預設值為 `RequireEncryption`。|  
+|`expect100Continue`|指定 POST 方法是否預期會收到`100-continue`伺服器的回應。 預設值為 `true`。|  
+|`useNagleAlgorithm`|指定服務點管理員所控制的連接是否使用 Nagle 演算法。 預設值為 `true`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -59,7 +59,7 @@ ms.locfileid: "61704982"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[設定](settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -70,4 +70,4 @@ ms.locfileid: "61704982"
 
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

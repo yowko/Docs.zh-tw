@@ -8,21 +8,21 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 9c69ea7bf95b311a796ec29d90410a77b748c3c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37f4d8c5eeacd82f8fc37179c478d026ca25f459
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705320"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664308"
 ---
-# <a name="provideroption-element"></a>\<providerOption > 項目
-指定的語言提供者的編譯器版本屬性。  
+# <a name="provideroption-element"></a>\<providerOption > 元素
+指定語言提供者的編譯器版本屬性。  
   
- \<組態項目 >  
-\<system.codedom 項目 >  
-\<compilers 項目 >  
-\<編譯器 > 項目  
-\<providerOption > 項目  
+ \<configuration 元素 >  
+\<system.web 元素 >  
+\<編譯器元素 >  
+\<編譯器 > 元素  
+\<providerOption > 元素  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,8 +40,8 @@ ms.locfileid: "61705320"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`name`|必要屬性。<br /><br /> 指定名稱的選項;例如，"CompilerVersion。 」|  
-|`value`|必要屬性。<br /><br /> 指定的選項; 的值例如，"v3.5。"|  
+|`name`|必要屬性。<br /><br /> 指定選項的名稱;例如, "CompilerVersion"。|  
+|`value`|必要屬性。<br /><br /> 指定選項的值。例如, "v 3.5"。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -50,22 +50,22 @@ ms.locfileid: "61705320"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Common Language Runtime 與 .NET Framework 應用程式使用的所有組態檔中的根項目。|  
-|[\<system.codedom > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
-|[\<編譯器 > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|編譯器組態項目; 容器包含零或多個`<compiler>`項目。|  
-|[\<編譯器> 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定語言提供者的編譯器組態屬性。|  
+|[\<configuration> 項目](../configuration-element.md)|Common Language Runtime 與 .NET Framework 應用程式使用的所有組態檔中的根項目。|  
+|[\<system.object > 元素](system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
+|[\<編譯器 > 元素](compilers-element.md)|編譯器設定元素的容器;包含零個或`<compiler>`多個元素。|  
+|[\<編譯器> 項目](compiler-element.md)|指定語言提供者的編譯器組態屬性。|  
   
 ## <a name="remarks"></a>備註  
- 在.NET Framework 3.5 版中，程式碼文件物件模型 (CodeDOM) 的程式碼提供者可以使用支援提供者特定選項`<providerOption>`項目。  
+ 在 .NET Framework 版本3.5 中, 程式碼檔物件模型 (CodeDOM) 程式碼提供者可以使用`<providerOption>`專案來支援提供者特定選項。  
   
- .NET Framework 3.5 包含更新的.NET Framework 2.0 組件，並提供新的 3.5 版組件包含新的類型。 Microsoft C# 和 Visual Basic 程式碼提供者會包含在.NET Framework 2.0 組件，但已更新為支援版本 3.5 編譯器。 根據預設，更新的程式碼提供者會產生適用於版本 2.0 編譯器的程式碼。 您可以使用`<providerOption>`項目，若要變更目標的編譯器版本為 3.5。 若要這樣做，請指定"CompilerVersion 」`name`屬性和"v3.5"，如`value`屬性。 您必須在之前的版本號碼，以小寫的"v"。  
+ .NET Framework 3.5 包含更新的 .NET Framework 2.0 元件, 並提供新的版本3.5 元件, 其中包含新的類型。 Microsoft C#和 Visual Basic 的程式碼提供者包含在 .NET Framework 2.0 元件中, 但已更新為支援3.5 版編譯器。 根據預設, 更新後的程式碼提供者會產生2.0 版編譯器的程式碼。 您可以使用`<providerOption>`元素, 將目標編譯器版本變更為3.5。 若要這麼做, 請為屬性指定 " `name` CompilerVersion", 並`value`為屬性指定 "v 3.5"。 您必須在版本號碼之前加上小寫的 "v"。  
   
- 您可以藉此版本規格全域新增`<providerOption>`.NET Framework 2.0 Machine.config 或根 Web.config 檔案中的項目。 如果您更新預設的編譯器版本 3.5 Machine.config 檔案中，您可以將它變更回 2.0 針對每個應用程式使用`<providerOption>`應用程式組態檔中的項目。  
+ 您可以藉由將專案新增`<providerOption>`至 .NET Framework 2.0 machine.config 或根 web.config 檔案, 將版本規格設為全域。 如果您在 machine.config 檔案中將預設的編譯器版本更新為 3.5, 則可以使用應用程式佈建檔中的`<providerOption>`專案, 以每個應用程式為基礎, 將它變更回2.0。  
   
- CodeDOM 程式碼提供者實作器可以處理自訂的選項，藉由提供的建構函式`providerOptions`型別的參數<xref:System.Collections.Generic.IDictionary%602>。  
+ CodeDOM 程式碼提供者實作者可以藉由提供採用`providerOptions`類型<xref:System.Collections.Generic.IDictionary%602>參數的函式, 來處理自訂選項。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何指定應該用於 3.5 版的 C# 程式碼提供者。  
+ 下列範例示範如何指定應該使用的程式C#代碼提供者版本3.5。  
   
 ```xml  
 <configuration>  
@@ -93,7 +93,7 @@ ms.locfileid: "61705320"
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<編譯器 > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
-- [指定完整的類型名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [編譯 （ASP.NET 設定結構描述） 之編譯器的 compiler 項目](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [組態檔結構描述](../index.md)
+- [\<編譯器 > 元素](compilers-element.md)
+- [指定完整的類型名稱](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [編譯編譯器的編譯器元素 (ASP.NET 設定架構)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

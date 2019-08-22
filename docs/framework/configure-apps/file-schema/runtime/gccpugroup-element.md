@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1251f286a4e6168ef1d18b05288e0c5f353ad828
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 197ab9dbc1ec85bf8961f60bb26496eab788e63f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689877"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663693"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup > 項目
+# <a name="gccpugroup-element"></a>\<GCCpuGroup > 元素
 
 指定記憶體回收是否支援多個 CPU 群組。
 
-\<configuration>\
-\<runtime>\
+\<configuration > \
+\<執行時間 > \
 \<GCCpuGroup>
 
 ## <a name="syntax"></a>語法
@@ -35,16 +35,16 @@ ms.locfileid: "66689877"
 
 ### <a name="attributes"></a>屬性
 
-|屬性|描述|
+|屬性|說明|
 |---------------|-----------------|
 |`enabled`|必要屬性。<br /><br /> 指定記憶體回收是否支援多個 CPU 群組。|
 
 ## <a name="enabled-attribute"></a>啟用屬性
 
-|值|描述|
+|值|說明|
 |-----------|-----------------|
-|`false`|記憶體回收不支援多個 CPU 群組。 這是預設值。|
-|`true`|記憶體回收會支援多個 CPU 群組，如果已啟用伺服器記憶體回收。|
+|`false`|垃圾收集不支援多個 CPU 群組。 這是預設值。|
+|`true`|如果已啟用伺服器垃圾收集, 垃圾收集支援多個 CPU 群組。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -59,14 +59,14 @@ ms.locfileid: "66689877"
 
 ## <a name="remarks"></a>備註
 
-當電腦具有多個 CPU 群組，而且啟用伺服器記憶體回收之後 (請參閱[ \<Gcserver> >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)項目)，啟用這個項目延伸到所有 CPU 群組的記憶體回收和採用到的所有核心帳戶建立和平衡堆積時。
+當電腦具有多個 cpu 群組並啟用伺服器垃圾收集時 (請參閱[ \<gcServer >](gcserver-element.md)元素), 啟用此元素會延伸所有 CPU 群組的垃圾收集, 並在建立和時將所有核心納入考慮平衡堆積。
 
 > [!NOTE]
-> 這個項目僅適用於記憶體回收執行緒。 若要啟用使用者執行緒分散到所有 CPU 群組的執行階段，您也必須啟用[ \<Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)項目。
+> 這個元素只適用于垃圾收集執行緒。 若要讓執行時間將使用者執行緒分散到所有的 CPU 群組, 您也必須啟用[ \<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)元素。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何啟用多個 CPU 群組記憶體回收。
+下列範例顯示如何啟用多個 CPU 群組的垃圾收集。
 
 ```xml
 <configuration>
@@ -79,7 +79,7 @@ ms.locfileid: "66689877"
 
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [若要停用並行記憶體回收](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [停用並行垃圾收集](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [工作站和伺服器記憶體回收](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

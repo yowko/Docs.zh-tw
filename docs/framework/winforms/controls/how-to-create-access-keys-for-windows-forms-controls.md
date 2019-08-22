@@ -1,6 +1,6 @@
 ---
-title: HOW TO：建立 Windows Forms 控制項的便捷鍵
-ms.date: 03/30/2017
+title: 作法：建立 Windows Forms 控制項的便捷鍵
+ms.date: 08/20/2019
 dev_langs:
 - csharp
 - vb
@@ -20,41 +20,48 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ccec8bba9e01cbaa7bfef841af68a0fcaa720b90
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746806"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658384"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>HOW TO：建立 Windows Forms 控制項的便捷鍵
-*便捷鍵*是功能表、 功能表項目，或按鈕等控制項的標籤文字中加上底線的字元。 使用存取金鑰，使用者可以 「 按一下 」 按鈕在組合中按 ALT 鍵，以預先定義的存取金鑰。 例如，如果按鈕會執行將表單，列印程序，因此其`Text`屬性設定為"Print"，將新增連字號，再以字母"P"會導致字母"P"中加上底線按鈕的文字在執行階段。 使用者可以執行命令與按鈕關聯，藉由按下 ALT + P。 您不能有無法接收焦點的控制項的便捷鍵。  
-  
-### <a name="to-create-an-access-key-for-a-control"></a>若要建立控制項的便捷鍵  
-  
-1. 設定`Text`屬性設為字串，包含連字號 (&) 會快顯的字母前面。  
-  
-    ```vb  
-    ' Set the letter "P" as an access key.  
-    Button1.Text = "&Print"  
-    ```  
-  
-    ```csharp  
-    // Set the letter "P" as an access key.  
-    button1.Text = "&Print";  
-    ```  
-  
-    ```cpp  
-    // Set the letter "P" as an access key.  
-    button1->Text = "&Print";  
-    ```  
-  
-    > [!NOTE]
-    >  若要包含在標題中的連字號，而不需建立存取金鑰，包含兩個連字號 (& &)。 單一連字號會顯示在標題中並沒有字元加上底線。  
-  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>作法：建立 Windows Forms 控制項的存取金鑰
+
+*存取金鑰*是功能表、功能表項目或控制項標籤的文字中加底線的字元, 例如按鈕。 使用存取金鑰時, 使用者可以按下 ALT 鍵並結合預先定義的存取金鑰, 以「按一下」按鈕。 例如, 如果按鈕執行程式來列印表單, 因此其`Text`屬性設定為 "print", 則在字母 "p" 之前加入 & 會使字母 "p" 在執行時間于按鈕文字中加上底線。 使用者可以按 Alt + P, 執行與按鈕相關聯的命令。
+
+無法接收焦點的控制項不能有存取金鑰。
+
+## <a name="programmatic"></a>化
+
+`Text`將屬性設定為字串, 其中包含做為快捷方式的字母前面的連字號 (&)。
+
+```vb
+' Set the letter "P" as an access key.
+Button1.Text = "&Print"
+```
+
+```csharp
+// Set the letter "P" as an access key.
+button1.Text = "&Print";
+```
+
+```cpp
+// Set the letter "P" as an access key.
+button1->Text = "&Print";
+```
+
+> [!NOTE]
+> 若要在標題中使用連字號而不建立存取金鑰, 請包含兩個 & (& &)。 標題中會顯示單一符號, 而且不會有任何字元加上底線。
+
+## <a name="designer"></a>Designer
+
+在 Visual Studio 的 [**屬性**] 視窗中, 將 [ **Text** ] 屬性設定為包含連字號 (' & ') 的字串, 並在將成為存取金鑰的字母前面。 例如, 若要將字母 "P" 設定為存取金鑰, 請輸入 **& Print**。
+
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Button>
-- [如何：回應 Windows Form Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
-- [如何：設定所顯示之文字的 Windows Form 控制項](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [如何：回應 Windows Forms 按鈕點擊](how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：設定 Windows Forms 控制項所顯示的文字](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

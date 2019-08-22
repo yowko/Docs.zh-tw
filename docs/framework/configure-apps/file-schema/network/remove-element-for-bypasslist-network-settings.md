@@ -10,18 +10,18 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674463"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659230"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<移除 > bypasslist （網路設定） 的項目
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<移除 bypasslist 的 > 元素 (網路設定)
 
-Proxy 略過清單移除 IP 位址或 DNS 名稱。
+從 proxy 略過清單中移除 IP 位址或 DNS 名稱。
 
-\<configuration>\
+\<configuration > \
 \<system.net>\
 \<defaultProxy>\
 \<bypasslist>\
@@ -43,7 +43,7 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
 
 |**屬性**|**描述**|
 |-------------------|---------------------|
-|`address`|描述 IP 位址或 DNS 名稱的規則運算式。|
+|`address`|描述 IP 位址或 DNS 名稱的正則運算式。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -53,15 +53,15 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
 
 |**目**|**描述**|
 |-----------------|---------------------|
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一組規則運算式，其中說明不使用 proxy 的位址。|
+|[bypasslist](bypasslist-element-network-settings.md)|提供一組正則運算式, 描述不使用 proxy 的位址。|
 
 ## <a name="remarks"></a>備註
 
-`remove`項目移除規則運算式描述 IP 位址或 DNS 伺服器名稱，從清單中的 略過 proxy 伺服器的位址。 位址先前已定義在組態檔中或在組態階層架構中較高層級。
+`remove`元素會從略過 proxy 伺服器的地址清單中, 移除描述 IP 位址或 DNS 伺服器名稱的正則運算式。 先前已在設定檔或設定階層的較高層級定義位址。
 
-值`address`屬性應該是規則運算式描述一組 IP 位址或主機名稱。
+`address`屬性的值應該是描述一組 IP 位址或主機名稱的正則運算式。
 
-如需有關規則運算式的詳細資訊，請參閱。[.NET framework 規則運算式](../../../../../docs/standard/base-types/regular-expressions.md)。
+如需正則運算式的詳細資訊, 請參閱。[.NET Framework 正則運算式](../../../../../docs/standard/base-types/regular-expressions.md)。
 
 ## <a name="configuration-files"></a>組態檔
 
@@ -69,7 +69,7 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
 
 ## <a name="example"></a>範例
 
-下列範例會移除任何先前的定義，adventure-works.com 網域，然後略過清單中加入 contoso.com 網域。
+下列範例會移除 adventure-works.com 網域的任何先前定義, 然後將 contoso.com 網域新增至略過清單。
 
 ```xml
 <configuration>
@@ -87,4 +87,4 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

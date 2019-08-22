@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: b5825efcc613689e73fb56b6695fe7c75ff09136
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674190"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663858"
 ---
-# <a name="codebase-element"></a>\<程式碼基底 > 項目
+# <a name="codebase-element"></a>\<程式碼基底 > 元素
 
-指定 common language runtime 可以找到組件的位置。
+指定通用語言執行時間可以找到元件的位置。
 
-\<configuration> \<runtime> \<assemblyBinding> \<dependentAssembly> \<codeBase>
+\<configuration > \<執行時間\<> assemblyBinding \<> dependentAssembly \<> 程式碼基底 >
 
 ## <a name="syntax"></a>語法
 
@@ -38,14 +38,14 @@ ms.locfileid: "61674190"
 
 |屬性|描述|
 |---------------|-----------------|
-|`href`|必要屬性。<br /><br /> 指定執行階段可以在哪裡找到指定的版本的組件的 URL。|
-|`version`|必要屬性。<br /><br /> 指定程式碼基底適用於組件的版本。 組件版本號碼的格式*major.minor.build.revision*。|
+|`href`|必要屬性。<br /><br /> 指定執行時間可以找到元件之指定版本的 URL。|
+|`version`|必要屬性。<br /><br /> 指定程式碼基底適用的元件版本。 元件版本號碼的格式為 [*主要. 次要. 組建. 修訂*]。|
 
-## <a name="version-attribute"></a>版本屬性
+## <a name="version-attribute"></a>version 屬性
 
 |值|描述|
 |-----------|-----------------|
-|每個部分的版本號碼的有效值為 0 到 65535 之間。|不適用。|
+|版本號碼的每個部分的有效值為0到65535。|不適用。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -62,15 +62,15 @@ ms.locfileid: "61674190"
 
 ## <a name="remarks"></a>備註
 
-若要使用執行階段 **\<程式碼基底>** 設定在電腦組態檔或發行者原則檔中，檔案也必須重新導向組件版本。 應用程式組態檔可以有程式碼基底設定，不需要重新導向組件版本。 決定要使用的組件版本之後，執行階段適用於決定版本的檔案中的程式碼基底設定。 如果沒有程式碼基底指示，執行階段會以一般方式探查組件。
+若要使用執行階段 **\<程式碼基底>**  設定在電腦組態檔或發行者原則檔中，檔案也必須重新導向組件版本。 應用程式佈建檔可以有 codebase 設定, 而不需要重新導向元件版本。 決定要使用哪個元件版本之後, 執行時間會從判斷版本的檔案套用程式碼基底設定。 如果未指出程式碼基底, 則執行時間會以一般方式探查元件。
 
-如果組件具有強式名稱，可以任何地方的程式碼基底設定是近端內部網路或網際網路上。 如果組件私用組件，程式碼基底設定必須是相對於應用程式的目錄路徑。
+如果元件具有強式名稱, 則程式碼基底設定可以是近端內部網路或網際網路上的任何位置。 如果元件是私用元件, 則程式碼基底設定必須是相對於應用程式目錄的路徑。
 
-針對沒有強式名稱的組件，則會忽略版本和載入器會使用的第一個出現\<程式碼基底 > 內\<dependentAssembly >。 如果應用程式組態檔，將繫結重新導向至另一個組件中沒有項目，重新導向將會優先，即使組件版本不符合繫結要求。
+針對沒有強式名稱的元件, 會忽略 version, 而載入器會在 dependentAssembly > \<內\<使用程式碼基底的第一個外觀 >。 如果應用程式佈建檔中有一個專案會將系結重新導向至另一個元件, 則即使元件版本不符合系結要求, 重新導向也會優先。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何指定執行階段可以在哪裡找到組件。
+下列範例顯示如何指定執行時間可以找到元件的位置。
 
 ```xml
 <configuration>
@@ -90,7 +90,7 @@ ms.locfileid: "61674190"
 
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [指定組件的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [指定組件的位置](../../specify-assembly-location.md)
+- [執行階段如何找出組件](../../../deployment/how-the-runtime-locates-assemblies.md)

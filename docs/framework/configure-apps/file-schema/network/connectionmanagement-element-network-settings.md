@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 4412fe30bfb8dcb3d7576df18cb2a472463d935c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faaba1b9de302ed916ad1a81c7e80b3fb5a67170
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674580"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664161"
 ---
-# <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > 項目 （網路設定）
+# <a name="connectionmanagement-element-network-settings"></a>\<Connectionmanagement 專案 > 元素 (網路設定)
 指定連接至網路主機的連線數目上限。  
   
  \<configuration>  
@@ -39,24 +39,24 @@ ms.locfileid: "61674580"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|將 IP 位址或 DNS 名稱加入連線管理清單中。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|清除連接管理清單中。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|從連線管理清單中，移除 IP 位址或 DNS 名稱。|  
+|[add](add-element-for-connectionmanagement-network-settings.md)|將 IP 位址或 DNS 名稱加入連線管理清單中。|  
+|[clear](clear-element-for-connectionmanagement-network-settings.md)|清除連接管理清單。|  
+|[remove](remove-element-for-connectionmanagement-network-settings.md)|從連接管理清單中移除 IP 位址或 DNS 名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
+|[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
 ## <a name="remarks"></a>備註  
- `connectionManagement`項目至伺服器或伺服器群組中定義的連線數目上限。  
+ `connectionManagement`元素會定義伺服器或伺服器群組的最大連接數目。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會設定應用程式使用伺服器的四個通往`www.contoso.com`和所有其他伺服器的兩個連線。  
+ 下列範例會將應用程式設定為使用伺服器`www.contoso.com`的四個連接, 以及兩個連接到其他所有伺服器。  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ ms.locfileid: "61674580"
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

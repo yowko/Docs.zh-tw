@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70c60461f3ddd6bdabd151f60c7bc81eef18e650
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6db26d250de191559fdae0479aca9f41c147502
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629465"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663702"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<Gcallowverylargeobjects> > 元素
 在 64 位元平台上，啟用總大小大於 2 GB 的陣列。  
@@ -39,7 +39,7 @@ ms.locfileid: "68629465"
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |`false`|未啟用大小總計大於 2 GB 的陣列。 這是預設值。|  
 |`true`|64位平臺上已啟用大小總計大於 2 GB 的陣列。|  
@@ -49,7 +49,7 @@ ms.locfileid: "68629465"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
@@ -83,5 +83,5 @@ ms.locfileid: "68629465"
 
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)

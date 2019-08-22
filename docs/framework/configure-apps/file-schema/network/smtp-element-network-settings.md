@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 1b5f7406f995a86f0a192dbf3249c067dff570ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9405fdc6123a5a1352de06f94fefb6d7d4014b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674398"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659113"
 ---
-# <a name="smtp-element-network-settings"></a>\<smtp > 項目 （網路設定）
-設定的傳遞格式、 傳遞方法，以及從來傳送電子郵件地址。  
+# <a name="smtp-element-network-settings"></a>\<smtp > 元素 (網路設定)
+設定傳送電子郵件的傳遞格式、傳遞方法和寄件者位址。  
   
  \<configuration>  
 \<system.net>  
@@ -43,24 +43,24 @@ ms.locfileid: "61674398"
 |屬性|描述|  
 |---------------|-----------------|  
 |`deliveryFormat`|指定外寄電子郵件的傳遞格式。 可接受的值為 SevenBit 和 International。|  
-|`deliveryMethod`|指定電子郵件的傳遞方法。 可接受的值為網路、 PickupDirectoryFromIis 和 SpecifiedPickupDirectory。|  
-|`from`|指定從外寄電子郵件地址。|  
+|`deliveryMethod`|指定電子郵件的傳遞方法。 可接受的值為 Network、PickupDirectoryFromIis 和 SpecifiedPickupDirectory。|  
+|`from`|指定外寄電子郵件的寄件者位址。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|設定 Simple Mail Transport Protocol (SMTP) 伺服器的本機目錄。|  
+|`specifiedPickupDirectory`|設定簡單郵件傳輸通訊協定 (SMTP) 伺服器的本機目錄。|  
 |`network`|設定外部 SMTP 伺服器的網路選項。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[\<mailSettings> 項目 (網路設定)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|設定郵件傳送選項。|  
+|[\<mailSettings> 項目 (網路設定)](mailsettings-element-network-settings.md)|設定郵件傳送選項。|  
   
 ## <a name="example"></a>範例  
- 下列範例會指定適當的 SMTP 參數，使用預設網路認證傳送電子郵件。  
+ 下列範例會指定適當的 SMTP 參數, 以使用預設網路認證來傳送電子郵件。  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ ms.locfileid: "61674398"
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

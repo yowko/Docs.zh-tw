@@ -10,20 +10,20 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e175c70bd4932d6a8f9428e8cd9159a47df52558
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674593"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659430"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<清除 > webRequestModules （網路設定） 的項目
-移除應用程式中的所有已註冊的 Web 要求模組。  
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<清除 Webrequestmodules 專案的 > 元素 (網路設定)
+從應用程式中移除所有已註冊的 Web 要求模組。  
   
  \<configuration>  
 \<system.net>  
 \<webRequestModules>  
-\<clear>  
+\<清除 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,16 +44,16 @@ ms.locfileid: "61674593"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定要求資訊從網路主機使用的模組。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|指定要用來要求網路主機資訊的模組。|  
   
 ## <a name="remarks"></a>備註  
- `clear`項目會移除所有已註冊的 Web 要求模組組態檔中或在組態階層架構中較高層級稍早定義。  
+ `clear`元素會移除先前在設定檔或設定階層中較高層級定義的所有已註冊 Web 要求模組。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會清除所有的 Web 要求模組，並再註冊 HTTP Web 要求模組。  
+ 下列範例會清除所有的 Web 要求模組, 然後註冊 HTTP 的 Web 要求模組。  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ ms.locfileid: "61674593"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.WebRequest>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

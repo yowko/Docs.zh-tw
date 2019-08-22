@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a46e6af97f37974805812fb0d19801d618eee4d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705151"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664242"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<新增 > authenticationModules （網路設定） 的項目
-將應用程式中的驗證模組。  
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<新增 Authenticationmodules 專案的 > 元素 (網路設定)
+將驗證模組新增至應用程式。  
   
  \<configuration>  
 \<system.net>  
@@ -40,7 +40,7 @@ ms.locfileid: "61705151"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|`type`|完整的類型名稱 (由<xref:System.Type.FullName%2A>屬性) 和組件名稱 (由<xref:System.Reflection.Assembly.FullName%2A>屬性)，以逗號分隔。|  
+|`type`|完整型別名稱 (以<xref:System.Type.FullName%2A>屬性工作表示) 和元件名稱 (以<xref:System.Reflection.Assembly.FullName%2A>屬性工作表示), 並以逗號分隔。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -49,18 +49,18 @@ ms.locfileid: "61705151"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用來驗證網路要求的模組。|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|指定用來驗證網路要求的模組。|  
   
 ## <a name="remarks"></a>備註  
- `add` 項目會將驗證模組加入至已註冊驗證模組清單的尾端。 已加入至清單的順序，會呼叫驗證模組。  
+ `add` 項目會將驗證模組加入至已註冊驗證模組清單的尾端。 驗證模組會依其加入清單的順序來進行呼叫。  
   
- 值`type`屬性應為有效的型別名稱和對應的組件名稱，以逗號分隔。  
+ `type`屬性的值應該是有效的型別名稱和對應的元件名稱, 並以逗號分隔。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會啟用預設的驗證模組。 您應該取得版本和 PublicKeyToken 的值取代為正確的值，指定模組。  
+ 下列範例會啟用預設的驗證模組。 您應該將 Version 和 PublicKeyToken 的值取代為指定模組的正確值。  
   
 ```xml  
 <configuration>  
@@ -85,4 +85,4 @@ ms.locfileid: "61705151"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 1be746d4cce36344e034692a0e2e8e6a9e9320d5
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: a24b4e6af98d2637ecae2352aaa881adcd1c1a45
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040431"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666838"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>作法：使用設計工具設定 Windows Forms DataGridView 控制項的替代資料列樣式
 
@@ -22,7 +22,6 @@ ms.locfileid: "69040431"
 利用 <xref:System.Windows.Forms.DataGridView> 控制項，您可以指定替代資料列的完整樣式資訊。 除了背景色彩以外, 您還可以使用前景色彩和字型等樣式特性來區分替代資料列。 如需詳細資訊, 請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。
 
 下列程式需要具有包含<xref:System.Windows.Forms.DataGridView>控制項之表單的**Windows 應用程式**專案。 如需設定這類專案的相關資訊, [請參閱如何:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project) , [以及如何:將控制項新增至](how-to-add-controls-to-windows-forms.md)Windows Forms。
-
 
 ### <a name="define-styles-for-alternating-rows"></a>定義替代資料列的樣式
 

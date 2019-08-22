@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 744ef0d9bc58e6a0152dce53c40c24eb5283dc0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53dc67d0046ef2f184535f373c5bf19c484c505a
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705333"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664325"
 ---
-# <a name="compilers-element"></a>\<編譯器 > 項目
-編譯器組態項目的容器；內含零或多個 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 項目。  
+# <a name="compilers-element"></a>\<編譯器 > 元素
+編譯器組態項目的容器；內含零或多個 [\<compiler>](compiler-element.md) 項目。  
   
  \<configuration>  
 \<system.codedom>  
-\<編譯器 > 項目  
+\<編譯器 > 元素  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,24 +39,24 @@ ms.locfileid: "61705333"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<編譯器> 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定語言提供者的編譯器組態屬性。|  
+|[\<編譯器> 項目](compiler-element.md)|指定語言提供者的編譯器組態屬性。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|[\<system.codedom > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
+|[\<configuration> 項目](../configuration-element.md)|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|[\<system.object > 元素](system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
   
 ## <a name="remarks"></a>備註  
- [\<編譯器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)項目包含的電腦上的語言提供者的編譯器組態設定。 每個[\<編譯器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)項目會指定特定的語言提供者的編譯器組態屬性。  
+ 編譯器 > 元素包含電腦上語言提供者的編譯器設定。 [ \< ](compilers-element.md) 每個[ \<編譯器 >](compiler-element.md)元素都會指定特定語言提供者的編譯器設定屬性。  
   
- .NET Framework 會定義初始編譯器和語言提供者設定電腦組態檔 (Machine.config) 中。 開發人員和編譯器廠商可以為新的 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 實作新增組態設定。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以程式設計方式列舉電腦上的語言提供者和編譯器組態設定。  
+ .NET Framework 會定義電腦設定檔 (Machine.config) 中的初始編譯器和語言提供者設定。 開發人員和編譯器廠商可以為新的 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 實作新增組態設定。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以程式設計方式列舉電腦上的語言提供者和編譯器組態設定。  
   
 ## <a name="configuration-file"></a>組態檔  
- 這個項目可以用於電腦組態檔和應用程式組態檔。  
+ 此元素可以在電腦設定檔和應用程式佈建檔中使用。  
   
 ## <a name="example"></a>範例  
  下列範例說明典型的編譯器組態項目。  
@@ -81,6 +81,6 @@ ms.locfileid: "61705333"
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [編譯器和語言提供者設定結構描述](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [\<編譯器> 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [組態檔結構描述](../index.md)
+- [編譯器和語言提供者設定結構描述](index.md)
+- [\<編譯器> 項目](compiler-element.md)

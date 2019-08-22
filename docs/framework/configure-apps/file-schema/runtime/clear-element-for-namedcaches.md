@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: e563f8f27538e70ba90465fc28d300754509f7a4
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: a90970e468359714bbbb858f3f300c26b5757a4d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423313"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658853"
 ---
-# <a name="clear-element-for-namedcaches"></a>\<清除 > 項目\<namedCaches >
-清除所有`namedCache`中的項目`namedCaches`記憶體快取的集合。  
+# <a name="clear-element-for-namedcaches"></a>\<清除 namedCaches 的\<> 元素 >
+清除`namedCache` 集合`namedCaches`中記憶體快取的所有專案。  
   
  \<system.runtime.caching>  
 \<memoryCache>  
@@ -29,7 +29,7 @@ ms.locfileid: "67423313"
  </namedCaches>  
 ```  
   
-## <a name="type"></a>type  
+## <a name="type"></a>類型  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -43,13 +43,13 @@ ms.locfileid: "67423313"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|包含集合的組態設定具名<xref:System.Runtime.Caching.MemoryCache>執行個體。|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|包含已命名<xref:System.Runtime.Caching.MemoryCache>實例的設定集合。|  
   
 ## <a name="remarks"></a>備註  
- `clear`項目清除所有`namedCache`記憶體內部快取的具名快取集合中的項目。 您可以使用`clear`項目才能使用`add`項目將加入新的具名快取項目，才能確定有沒有其他具名集合中的快取。  
+ 元素會清除已`namedCache`命名快取集合中記憶體快取的所有專案。 `clear` 您可以使用`clear`專案, 然後`add`使用專案來加入新的命名快取專案, 以確保集合中沒有其他命名的快取。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<namedCaches > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > 元素 (快取設定)](namedcaches-element-cache-settings.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e01cdd942237141b8ef35495d3b74d6b2282a865
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705164"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664248"
 ---
-# <a name="oidmap-element"></a>\<oidMap > 項目
-包含類別的 ASN.1 物件識別碼 (OID) 對應。  
+# <a name="oidmap-element"></a>\<oidMap > 元素
+包含對類別的 asn.1 物件識別元 (OID) 對應。  
   
  \<configuration>  
 \<mscorlib>  
@@ -38,9 +38,9 @@ ms.locfileid: "61705164"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|將 ASN.1 OID 對應易記的名稱。|  
+|[\<oidEntry>](oidentry-element.md)|將 asn.1 OID 對應至易記名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -48,10 +48,10 @@ ms.locfileid: "61705164"
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`cryptographySettings`|包含密碼編譯設定。|  
-|`mscorlib`|包含`cryptographySettings`項目。|  
+|`mscorlib`|`cryptographySettings`包含元素。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<oidMap >** 項目來包含該雜湊演算法的實作的 RIPEMD-160 雜湊演算法的 OID 的對應。  
+ 下列範例示範如何使用 **\<oidMap >** 專案, 以包含 RIPEMD-160 雜湊演算法的 OID 對應到該雜湊演算法的執行。  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ ms.locfileid: "61705164"
   
 ## <a name="see-also"></a>另請參閱
 
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [組態檔結構描述](../index.md)
+- [密碼編譯設定結構描述](index.md)
 - [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
-- [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [對應物件識別項至密碼編譯演算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [設定密碼編譯類別](../../configure-cryptography-classes.md)
+- [對應物件識別項至密碼編譯演算法](../../map-object-identifiers-to-cryptography-algorithms.md)

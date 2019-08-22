@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: c420a34a18f9e8fb55411a062e6a47ab38e98978
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: df40aced45442c9c7895c8d10ece64b21e292508
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611486"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659931"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的運算子優先順序
 當運算式中發生數個作業時, 每個元件都會以預先決定的順序 (稱為*運算子優先順序*) 進行評估和解析。
@@ -50,7 +50,7 @@ ms.locfileid: "69611486"
 
  整數除法 (`\`)
 
- 模數算術 (`Mod`)
+ 模組化算術`Mod`()
 
  加法和減法 (`+`, `–`)
 

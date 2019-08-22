@@ -10,15 +10,15 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 4c1116c088c12ad3859714c8d75704d0156c12f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f99c5b0dc7eab57d4e3e86f49dbbb3228c7b7d8b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705138"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664211"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<新增 > webRequestModules （網路設定） 的項目
-將自訂的 Web 要求模組新增至應用程式。  
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<新增 Webrequestmodules 專案的 > 元素 (網路設定)
+將自訂 Web 要求模組加入至應用程式。  
   
  \<configuration>  
 \<system.net>  
@@ -41,8 +41,8 @@ ms.locfileid: "61705138"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|`prefix`|此 Web 要求模組所處理的要求 URI 前置詞。|  
-|`type`|完整的類型名稱 (由<xref:System.Type.FullName%2A>屬性) 和組件名稱 (由<xref:System.Reflection.Assembly.FullName%2A>屬性)，以實作此 Web 要求模組逗號分隔。|  
+|`prefix`|此 Web 要求模組所處理之要求的 URI 前置詞。|  
+|`type`|執行此 Web 要求模組的完整類型名稱<xref:System.Type.FullName%2A> (以屬性工作表示) 和元件名稱 ( <xref:System.Reflection.Assembly.FullName%2A>由屬性工作表示) (以逗號分隔)。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -51,22 +51,22 @@ ms.locfileid: "61705138"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定要求資訊從網路主機使用的模組。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|指定要用來要求網路主機資訊的模組。|  
   
 ## <a name="remarks"></a>備註  
- `prefix`屬性定義會使用指定的 Web 要求模組的 URI 前置詞。 Web 要求模組來處理特定的通訊協定，例如 HTTP 或 FTP，通常註冊，但可以向處理要求，以特定伺服器或伺服器上的路徑。  
+ `prefix`屬性會定義使用指定 Web 要求模組的 URI 前置詞。 Web 要求模組通常會註冊來處理特定的通訊協定 (例如 HTTP 或 FTP), 但是可以註冊以處理對伺服器上特定伺服器或路徑的要求。  
   
- 當符合 URI 的前置詞會傳遞至建立 Web 要求模組<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。  
+ 當 URI 符合前置詞傳遞至<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法時, 就會建立 Web 要求模組。  
   
- 值`prefix`屬性應為有效的 URI 的前置字元。 例如，`http` 或 `http://www.contoso.com`。
+ `prefix`屬性的值應該是有效 URI 的前置字元。 例如，`http` 或 `http://www.contoso.com`。
   
- 值`type`屬性應為有效的型別名稱和對應的組件名稱，以逗號分隔。
+ `type`屬性的值應該是有效的型別名稱和對應的元件名稱, 並以逗號分隔。
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會註冊自訂的 Web 要求模組的 HTTP。 您應該取得版本和 PublicKeyToken 的值取代為正確的值，指定模組。  
+ 下列範例會註冊 HTTP 的自訂 Web 要求模組。 您應該將 Version 和 PublicKeyToken 的值取代為指定模組的正確值。  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ ms.locfileid: "61705138"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.WebRequest>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

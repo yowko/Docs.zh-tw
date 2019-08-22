@@ -8,19 +8,19 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12797e2f06d03aacd81700eae57d5776c1a6f354
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674411"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664000"
 ---
-# <a name="settings-element-network-settings"></a>\<設定 > 項目 （網路設定）
+# <a name="settings-element-network-settings"></a>\<設定 > 元素 (網路設定)
 為 <xref:System.Net?displayProperty=nameWithType> 命名空間設定基本的網路選項。  
   
  \<configuration>  
 \<system.net>  
-\<settings>  
+\<設定 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,21 +44,21 @@ ms.locfileid: "61674411"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|自訂所使用的參數<xref:System.Net.HttpListener>類別。|  
-|[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|自訂 Web 要求參數。|  
-|[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|可讓網際網路通訊協定第 6 版 (IPv6) 支援。|  
-|[\<performanceCounter > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|啟用網路效能計數器。|  
-|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|設定網路資源的連線。|  
-|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|指定通訊端作業是否使用完成通訊埠。|  
-|[\<webProxyScript > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|設定用來探索 Web proxy 指令碼的特性。|  
+|[httpListener](httplistener-element-network-settings.md)|自訂類別所<xref:System.Net.HttpListener>使用的參數。|  
+|[httpWebRequest](httpwebrequest-element-network-settings.md)|自訂 Web 要求參數。|  
+|[ipv6](ipv6-element-network-settings.md)|啟用網際網路通訊協定第6版 (IPv6) 支援。|  
+|[\<performanceCounter > 元素 (網路設定)](performancecounter-element-network-settings.md)|啟用網路效能計數器。|  
+|[servicePointManager](servicepointmanager-element-network-settings.md)|設定網路資源的連接。|  
+|[socket](socket-element-network-settings.md)|指定通訊端作業是否使用完成埠。|  
+|[\<webProxyScript > 元素 (網路設定)](webproxyscript-element-network-settings.md)|設定用來探索 Web proxy 之腳本的特性。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
+|[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -68,4 +68,4 @@ ms.locfileid: "61674411"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net?displayProperty=nameWithType>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

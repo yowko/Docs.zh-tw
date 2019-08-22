@@ -8,15 +8,15 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: d3d986dae478f49504dae21b9f39574b7887b4d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10d2a025096579c6bed64f82cc955deb0542717c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674619"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664196"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist > 項目 （網路設定）
-提供一組規則運算式，其中說明不使用 proxy 的位址。  
+# <a name="bypasslist-element-network-settings"></a>\<bypasslist > 元素 (網路設定)
+提供一組正則運算式, 描述不使用 proxy 的位址。  
   
  \<configuration>  
 \<system.net>  
@@ -40,28 +40,28 @@ ms.locfileid: "61674619"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|將 IP 位址或 DNS 名稱加入至 proxy 略過清單中。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|清除 略過清單。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Proxy 略過清單移除 IP 位址或 DNS 名稱。|  
+|[add](add-element-for-bypasslist-network-settings.md)|將 IP 位址或 DNS 名稱新增至 proxy 略過清單。|  
+|[clear](clear-element-for-bypasslist-network-settings.md)|清除略過清單。|  
+|[remove](remove-element-for-bypasslist-network-settings.md)|從 proxy 略過清單中移除 IP 位址或 DNS 名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
   
 ## <a name="remarks"></a>備註  
- 略過清單包含說明 Uri 的規則運算式，<xref:System.Net.WebRequest>執行個體直接而不是透過 proxy 伺服器存取。  
+ 「略過清單」包含正則運算式, <xref:System.Net.WebRequest>可描述實例直接存取而不是透過 proxy 伺服器存取的 uri。  
   
- 指定這個項目的規則運算式時，您應謹慎小心。 規則運算式"[a-z]、[0-9]、[_] +\\.contoso\\.com 」 比對任何裝載在 contoso.com 網域，但它也會比對 contoso.com.cpandl.com 網域中的任何主機。 若要比對 contoso.com 網域中的主機，使用錨點 （"$"）:"[a-z]、[0-9]、[_] +\\.contoso\\.com$"。  
+ 為此元素指定正則運算式時, 請務必小心。 正則運算式 "[a-z] +\\. contoso\\.com" 符合 contoso.com 網域中的任何主機, 但也符合 contoso.com.cpandl.com 網域中的任何主機。 若只要比對 contoso.com 網域中的主機, 請使用錨點 ("$"): "[a-z] +\\. contoso\\.com $"。  
   
- 如需有關規則運算式的詳細資訊，請參閱。[.NET framework 規則運算式](../../../../../docs/standard/base-types/regular-expressions.md)。  
+ 如需正則運算式的詳細資訊, 請參閱。[.NET Framework 正則運算式](../../../../../docs/standard/base-types/regular-expressions.md)。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會將略過清單中的兩個位址。 第一個會略過在 contoso.com 網域中的所有伺服器的 proxy第二個會略過的所有伺服器開始其 IP 位址 192.168 的 proxy。  
+ 下列範例會將兩個位址新增至略過清單。 第一個會略過 contoso.com 網域中所有伺服器的 proxy;第二個會略過其 IP 位址開頭為192.168 的所有伺服器的 proxy。  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ ms.locfileid: "61674619"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

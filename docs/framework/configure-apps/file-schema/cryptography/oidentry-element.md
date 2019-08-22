@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013994e36c4c63410a753967cbac92c38783ae62
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674742"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659581"
 ---
-# <a name="oidentry-element"></a>\<oidEntry > 項目
+# <a name="oidentry-element"></a>\<y > 元素
 將 ASN.1 物件識別碼 (OID) 對應至易記名稱。  
   
  \<configuration>  
@@ -35,28 +35,28 @@ ms.locfileid: "61674742"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|**OID**|必要屬性。<br /><br /> 指定的 ASN.1 OID 對應至您的類別所實作的演算法。|  
-|**name**|必要屬性。<br /><br /> 指定的值**名稱**屬性中[ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)標記。|  
+|**OID**|必要屬性。<br /><br /> 指定對應至您的類別所實演算法的 asn.1 OID。|  
+|**name**|必要屬性。<br /><br /> [指定\<y >](nameentry-element.md)標記中**name**屬性的值。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`cryptographySettings`|包含密碼編譯設定。|  
-|`mscorlib`|包含`cryptographySettings`項目。|  
-|`oidMap`|包含類別的 ASN.1 物件識別碼 (OID) 對應。|  
+|`mscorlib`|`cryptographySettings`包含元素。|  
+|`oidMap`|包含對類別的 asn.1 物件識別元 (OID) 對應。|  
   
 ## <a name="remarks"></a>備註  
- ASN.1 物件識別碼會識別在部分密碼編譯的格式中的演算法。 將物件識別碼對應至您想要識別演算法的易記名稱。  
+ Asn.1 物件識別碼會識別一些密碼編譯格式的演算法。 將物件識別碼對應至您想要識別之演算法的易記名稱。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<oidEntry >** 將 RIPEMD-160 雜湊演算法的物件識別項對應至該雜湊演算法的實作的項目。  
+ 下列範例示範如何使用 **\<y >** 元素, 將 RIPEMD-160 雜湊演算法的物件識別碼對應至該雜湊演算法的執行。  
   
 ```xml  
 <configuration>  
@@ -80,8 +80,8 @@ ms.locfileid: "61674742"
   
 ## <a name="see-also"></a>另請參閱
 
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [組態檔結構描述](../index.md)
+- [密碼編譯設定結構描述](index.md)
 - [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
-- [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [對應物件識別項至密碼編譯演算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [設定密碼編譯類別](../../configure-cryptography-classes.md)
+- [對應物件識別項至密碼編譯演算法](../../map-object-identifiers-to-cryptography-algorithms.md)

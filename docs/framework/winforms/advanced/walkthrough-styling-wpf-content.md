@@ -6,24 +6,19 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 32ca9658ddf4ab6e8690f29797b7ac7b09df2ca7
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 287ed08db8a4266e5044a81d47a697949257e113
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012950"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658488"
 ---
 # <a name="walkthrough-style-wpf-content"></a>逐步解說：樣式 WPF 內容
 
-本逐步解說示範如何將樣式套用至 Windows Form 上裝載的 Windows Presentation Foundation (WPF) 控制項。
-
- 在這個逐步解說中，您將執行下列工作：
-
-- 建立專案。
-
-- 建立 WPF 控制項類型。
-
-- 將樣式套用至 WPF 控制項。
+本文說明如何將樣式套用至裝載于 Windows Form 的 Windows Presentation Foundation (WPF) 控制項。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -42,9 +37,9 @@ ms.locfileid: "69012950"
 
 1. 將新的 WPF <xref:System.Windows.Controls.UserControl> 專案加入方案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說：在設計階段](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)于 Windows Forms 上建立新的 WPF 內容。
 
-2. 在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱[如何：選取並移動 Design Surface](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))上的元素。
+2. 在 [設計] 檢視中，確定已選取 `UserControl1`。
 
-3. 在 [**屬性**] 視窗中, 將<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>屬性的值設定`200`為。
+3. 在 [**屬性**] 視窗中, 將<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>屬性的值設定為**200**。
 
 4. 將控制項加入<xref:System.Windows.Controls.UserControl>至, 並將屬性的值設定<xref:System.Windows.Controls.ContentControl.Content%2A>為 [**取消**]。 <xref:System.Windows.Controls.Button?displayProperty=nameWithType>
 
@@ -60,15 +55,13 @@ ms.locfileid: "69012950"
 
 1. 在 [**工具箱**] 中, 按兩下`UserControl1`以在表單上`UserControl1`建立的實例。
 
-     `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。
+   `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。
 
 1. 在的智慧標籤面板`elementHost1`中, 按一下下拉式清單中的 [**編輯主控內容**]。
 
-     `UserControl1` 會在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 中開啟。
+   `UserControl1`在 WPF 設計工具中開啟。
 
-1. 在 [XAML] 檢閱中，插入下列 XAML 到 `<UserControl>` 開頭標記後面。
-
-     此 XAML 會建立具有對比漸層框線的漸層。 按一下控制項時，漸層會變更，產生已按下的按鈕外觀。 如需詳細資訊，請參閱 [設定樣式和範本](../../wpf/controls/styling-and-templating.md)。
+1. 在 [XAML] 檢閱中，插入下列 XAML 到 `<UserControl>` 開頭標記後面。 此 XAML 會建立具有對比漸層框線的漸層。 按一下控制項時，漸層會變更，產生已按下的按鈕外觀。 如需詳細資訊，請參閱 [設定樣式和範本](../../wpf/controls/styling-and-templating.md)。
 
    ```xaml
    <UserControl.Resources>
@@ -118,7 +111,7 @@ ms.locfileid: "69012950"
    </UserControl.Resources>
    ```
 
-1. 藉由插入 [取消] 按鈕`<Button>` 標籤中的下列 XAML，套用前一個步驟中定義的 `SimpleButton` 樣式到 [取消] 按鈕。
+1. 藉由在 [**取消**] 按鈕的`<Button>`標記中插入下列 XAML, 將上一個步驟中定義的樣式套用至[取消]按鈕。`SimpleButton`
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -139,7 +132,7 @@ ms.locfileid: "69012950"
 
 1. 從 [**調試**程式] 功能表中, 選取 [**開始調試**] 以執行應用程式。
 
-1. 按一下 [確定] 和 [取消] 按鈕，然後檢視其差異。
+1. 按一下 [**確定]** 和 [**取消**] 按鈕, 並查看差異。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c2ed46e1d26d829fbe832e44efb40844ae7d56f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba74907e2f6fc2ca14e12a24113fa7654c9b967e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592717"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663804"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > 項目
-指定是否要停用的繫結失敗發生因為藉由探查來找不到組件快取。  
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > 元素
+指定是否要停用發生的系結失敗快取, 因為探查找不到元件。  
   
- \<組態 > 項目  
-\<執行階段 > 項目  
+ \<configuration > 元素  
+\<執行時間 > 元素  
 \<disableCachingBindingFailures>  
   
 ## <a name="syntax"></a>語法  
@@ -39,14 +39,14 @@ ms.locfileid: "64592717"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|enabled|必要屬性。<br /><br /> 指定是否要停用的繫結失敗發生因為藉由探查來找不到組件快取。|  
+|enabled|必要屬性。<br /><br /> 指定是否要停用發生的系結失敗快取, 因為探查找不到元件。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|0|請勿停用的繫結失敗發生因為藉由探查來找不到組件快取。 這是從.NET Framework 2.0 版開始的預設繫結行為。|  
-|1|停用的繫結失敗發生因為藉由探查來找不到組件快取。 此設定會還原為.NET Framework 1.1 版的繫結行為。|  
+|0|請勿停用發生的系結失敗快取, 因為探查找不到元件。 從 .NET Framework 版本2.0 開始, 這是預設的系結行為。|  
+|1|停用發生的系結失敗快取, 因為探查找不到元件。 此設定會還原為 .NET Framework 版本1.1 的系結行為。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -59,18 +59,18 @@ ms.locfileid: "64592717"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 從.NET Framework 2.0 版開始，載入組件的預設行為是快取所有的繫結和載入失敗。 也就是嘗試載入組件時，載入相同組件的後續要求會立即失敗，而不需要任何嘗試找出組件。 這個項目會停用繫結失敗發生因為探查路徑中找不到組件的預設行為。 這些失敗擲回<xref:System.IO.FileNotFoundException>。  
+ 從 .NET Framework 版本2.0 開始, 載入元件的預設行為是快取所有的系結和載入失敗。 也就是說, 如果嘗試載入元件失敗, 後續載入相同元件的要求會立即失敗, 而不會嘗試找出元件。 這個元素會針對發生的系結失敗停用預設行為, 因為在探查路徑中找不到該元件。 這些失敗會<xref:System.IO.FileNotFoundException>擲回。  
   
- 繫結的某些載入失敗不會受到這個項目，並一律會快取。 找不到組件，但無法載入，就會發生這些失敗。 則會擲回<xref:System.BadImageFormatException>或<xref:System.IO.FileLoadException>。 下列清單包含這類失敗的一些範例。  
+ 某些系結和載入失敗不會受到此元素的影響, 而且一律會進行快取。 因為找到元件, 但無法載入, 所以會發生這些失敗。 它們會<xref:System.BadImageFormatException>擲<xref:System.IO.FileLoadException>回或。 下列清單包含一些這類失敗的範例。  
   
-- 如果您嘗試載入的檔案不是有效的組件，即使不正確的檔案隨即取代成正確的組件，載入組件的後續嘗試將會失敗。  
+- 如果您嘗試載入的檔案不是有效的元件, 則後續載入元件的嘗試將會失敗, 即使錯誤的檔案已被正確的元件取代也一樣。  
   
-- 如果您嘗試載入組件鎖定的檔案系統，後續的嘗試載入組件將會失敗，即使檔案系統所發行的組件。  
+- 如果您嘗試載入由檔案系統鎖定的元件, 則即使檔案系統釋放元件之後, 載入元件的後續嘗試也會失敗。  
   
-- 如果您嘗試載入的組件的一或多個版本是在探查路徑中，但您所要求的特定版本不是在它們之間，後續嘗試載入該版本將會失敗，即使正確的版本會移到探查路徑。  
+- 如果您嘗試載入的一個或多個元件版本是在探查路徑中, 但您要求的特定版本不在其中, 則後續嘗試載入該版本的動作將會失敗, 即使將正確的版本移入探查路徑也一樣。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何停用快取發生因為藉由探查來找不到組件的組件繫結失敗。  
+ 下列範例示範如何停用因為探查找不到元件而發生的元件系結失敗的快取。  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ ms.locfileid: "64592717"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)
+- [執行階段如何找出組件](../../../deployment/how-the-runtime-locates-assemblies.md)

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: fa6881614725ddf7628ddc484a9a4130bb23bc77
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 12b506e859579a0755c2e9842e792c59968c94a8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040232"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666745"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>逐步解說：使用 Visual C 撰寫複合控制項\#
 
 複合控制項提供可以建立及重複使用自訂圖形介面的方法。 複合控制項基本上是具有視覺表示的元件。 因此，它可能包含一或多個 Windows Forms 控制項、元件或程式碼區塊，可以藉由驗證使用者輸入、修改顯示屬性，或執行作者需要的其他工作來擴充功能。 複合控制項可以放在 Windows Forms 上，與其他控制項的方式相同。 在本逐步解說的第一個部分中，您可以建立簡單的複合控制項，稱為 `ctlClock`。 在逐步解說的第二個部分中，您透過繼承擴充 `ctlClock` 的功能。
-
 
 ## <a name="creating-the-project"></a>建立專案
 
@@ -143,7 +142,7 @@ ms.locfileid: "69040232"
     }
     ```
 
-     上述程式碼會製作兩個自訂屬性，`ClockForeColor` 和 `ClockBackColor`，以供此控制項的後續使用者使用。           `get` 和 `set` 陳述式提供屬性值的儲存和擷取，以及用來實作適合該屬性之功能的程式碼。
+     上述程式碼會製作兩個自訂屬性，`ClockForeColor` 和 `ClockBackColor`，以供此控制項的後續使用者使用。 `get` 和 `set` 陳述式提供屬性值的儲存和擷取，以及用來實作適合該屬性之功能的程式碼。
 
 4. 在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。
 
@@ -237,7 +236,7 @@ ms.locfileid: "69040232"
 
 1. 在 [方案總管] 中，以滑鼠右鍵按一下 [ctlAlarmClock]，然後按一下 [檢視表設計工具]。
 
-               `ctlAlarmClock` 的設計工具隨即在主視窗中開啟。
+     `ctlAlarmClock` 的設計工具隨即在主視窗中開啟。
 
 2. 按一下控制項的顯示部分，並檢視 [屬性] 視窗。
 
@@ -312,7 +311,7 @@ ms.locfileid: "69040232"
     }
     ```
 
-     新增這個程式碼會完成幾項工作。           `override` 陳述式會指示控制項使用這個方法來取代繼承自基底控制項的方法。 呼叫這個方法時，它會呼叫它藉由叫用 `base.timer1_Tick` 陳述式覆寫的方法，確保併入原始控制項的所有功能在此控制項中重現。 接著，它會執行其他程式碼以併入警示功能。 發生警示時，閃爍標籤控制項就會出現。
+     新增這個程式碼會完成幾項工作。 `override` 陳述式會指示控制項使用這個方法來取代繼承自基底控制項的方法。 呼叫這個方法時，它會呼叫它藉由叫用 `base.timer1_Tick` 陳述式覆寫的方法，確保併入原始控制項的所有功能在此控制項中重現。 接著，它會執行其他程式碼以併入警示功能。 發生警示時，閃爍標籤控制項就會出現。
 
      警示時鐘控制項已接近完成。 唯一剩餘的事項是實作將它關閉的方式。 若要這樣做，您要將程式碼新增至 `lblAlarm_Click` 方法。
 

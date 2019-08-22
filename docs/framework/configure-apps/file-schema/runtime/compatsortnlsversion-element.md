@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b426eaaa2dab4d54ea4c82483c079428f3bfac57
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689918"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663856"
 ---
-# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 項目
+# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 元素
 指定執行階段在執行字串比較時，應使用舊版排序次序。  
   
  \<configuration>  
-\<執行階段 >  
-\<CompatSortNLSVersion > 項目  
+\<執行時間 >  
+\<CompatSortNLSVersion > 元素  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,15 +36,15 @@ ms.locfileid: "66689918"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`enabled`|必要屬性。<br /><br /> 指定要使用其排序次序的地區設定 ID。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|4096|表示替代排序次序的地區設定 ID。 在此情況下，4096 表示.NET Framework 3.5 和更早版本的排序次序。|  
+|4096|表示替代排序次序的地區設定 ID。 在此情況下, 4096 代表 .NET Framework 3.5 及舊版的排序次序。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -57,7 +57,7 @@ ms.locfileid: "66689918"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 因為由執行字串比較、 排序和大小寫作業<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>.NET Framework 4 中的類別例如符合 Unicode 5.1 標準，字串比較方法的結果<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>可能不同於舊版.NET Framework 中。 如果您的應用程式相依於舊版的行為，您可以還原字串比較和排序規則，包括在.NET Framework 3.5 和更早版本中使用`<CompatSortNLSVersion>`在您的應用程式組態檔中的項目。  
+ 由於 .NET Framework 4 中的類別所<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>執行的字串比較、排序和大小寫作業符合 Unicode 5.1 標準, 因此字串比較方法<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> (例如和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> ) 的結果可能會與舊版的 .NET Framework。 如果您的應用程式相依于舊版行為, 您可以在應用程式的設定檔中包含`<CompatSortNLSVersion>`專案, 以還原 .NET Framework 3.5 和更早版本中使用的字串比較和排序規則。  
   
 > [!IMPORTANT]
 >  還原舊版字串比較和排序規則也必須要有可在本機系統上提供的 sort00001000.dll 動態連結程式庫。  
@@ -70,19 +70,19 @@ ms.locfileid: "66689918"
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- 當您在.NET Framework 4 上執行範例時，它會顯示下列輸出。  
+ 當您執行 .NET Framework 4 上的範例時, 它會顯示下列輸出。  
   
 ```  
 sta follows a in the sort order.  
 ```  
   
- 這是您在.NET Framework 3.5 上執行範例時，會顯示的輸出完全不同。  
+ 這與您在 .NET Framework 3.5 上執行範例時所顯示的輸出完全不同。  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- 不過，如果您將下列組態檔新增至範例的目錄，然後在 .NET Framework 4 上執行這個範例的輸出完全相同的.NET Framework 3.5 上執行時，所產生的範例。  
+ 不過, 如果您將下列設定檔新增至範例的目錄, 然後在 .NET Framework 4 上執行範例, 則輸出會與範例在 .NET Framework 3.5 上執行時所產生的相同。  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -95,5 +95,5 @@ sta equals a in the sort order.
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [執行階段設定結構描述](index.md)
+- [組態檔結構描述](../index.md)

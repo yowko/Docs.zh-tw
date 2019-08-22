@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 53faf31c8dd3be1606c491e95594c4aae5aedf98
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 6d7d867b7c9e83b68589e046565bfb0199692f5f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039664"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658505"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>作法：使用設計工具設定 Windows Forms DataGridView 控制項的預設儲存格樣式和資料格式
 
@@ -23,7 +23,6 @@ ms.locfileid: "69039664"
 您也可以使用<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>屬性來設定樣式, 以影響將加入至控制項的所有資料列。 如需資料列範本的詳細資訊, [請參閱如何:使用 [資料列] 範本來自訂 Windows Forms DataGridView 控制項](use-the-row-template-to-customize-rows-in-the-datagrid.md)中的資料列。
 
 下列程式需要具有包含<xref:System.Windows.Forms.DataGridView>控制項之表單的**Windows 應用程式**專案。 如需設定這類專案的相關資訊, [請參閱如何:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project) , [以及如何:將控制項新增至](how-to-add-controls-to-windows-forms.md)Windows Forms。
-
 
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>設定控制項中所有儲存格的預設樣式
 

@@ -9,22 +9,21 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 5de7645ecbf2123df849046a152643cd629b4898
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 49e93f12bebbf409e6b3a06634556b9103c85f44
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038229"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666210"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>作法：使用設計工具定義工具列按鈕的圖示
+# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>HOW TO：使用設計工具定義工具列按鈕的圖示
 
 > [!NOTE]
->           <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。
+> <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。
 
 <xref:System.Windows.Forms.ToolBar>按鈕可以在其中顯示圖示, 供使用者輕鬆識別。 這可以透過將影像新增至<xref:System.Windows.Forms.ImageList>元件, 並將它<xref:System.Windows.Forms.ToolBar>與控制項產生關聯來達成。
 
 下列程式需要具有包含<xref:System.Windows.Forms.ToolBar>控制項和<xref:System.Windows.Forms.ImageList>元件之表單的**Windows 應用程式**專案。 如需設定這類專案的相關資訊, [請參閱如何:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project) , [以及如何:將控制項新增至](how-to-add-controls-to-windows-forms.md)Windows Forms。
-
 
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>在設計階段設定工具列按鈕的圖示
 

@@ -2,14 +2,14 @@
 title: <add> 的 <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 03bf1bbb8156e4722d987e171d9034747ac6bb61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53af01a519c244376b262db1f6515a438dcc554f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701199"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663375"
 ---
-# <a name="add-of-backuplist"></a>\<新增 > 的\<a d d >
+# <a name="add-of-backuplist"></a>\<新增 backupList > \<的 >
 表示定義備份端點項目的組態項目。  
   
  \<system.serviceModel>  
@@ -30,9 +30,6 @@ ms.locfileid: "61701199"
 </routing>
 ```  
   
-```csharp  
-```  
-  
 ## <a name="attributes-and-elements"></a>屬性和項目  
  下列各節描述屬性、子項目和父項目。  
   
@@ -40,16 +37,16 @@ ms.locfileid: "61701199"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|名稱|指定備份端點名稱的字串。|  
+|NAME|指定備份端點名稱的字串。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含一份您希望路由服務在無法找到主要端點時使用的端點。|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含您希望路由服務在無法連上主要端點時使用的端點清單。|  
   
 ## <a name="see-also"></a>另請參閱
 
