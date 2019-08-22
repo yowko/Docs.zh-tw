@@ -6,17 +6,16 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 052e619acb23fb2e25f42daf7b4eaaacb0688f31
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b5ad85a9477ca32cd28f246abe4ece3cace43182
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039430"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666776"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>HOW TO：建立繫結控制項並格式化顯示的資料
 
 藉由 Windows Forms 資料系結, 您可以使用 [**格式化] 和 [高級**系結] 對話方塊來格式化資料繫結控制項中顯示的資料。
-
 
 ### <a name="to-bind-a-control-and-format-the-displayed-data"></a>繫結控制項並格式化顯示的資料
 
@@ -26,7 +25,7 @@ ms.locfileid: "69039430"
 
 2. 在表單中選取控制項，然後開啟屬性視窗。
 
-3. 展開 [ **(** 系結)] 屬性, 然後在 [ **(Advanced)** ] 方塊中, 按一下省略號![按鈕 (屬性視窗](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)中 Visual Studio 的省略號按鈕 (...)) 以顯示**格式設定和 [高級]** [系結] 對話方塊, 其中包含該控制項的完整屬性清單。
+3. 展開  **(** 系結)] 屬性, 然後在 [ **(Advanced)** ] 方塊中, 按一下省略號![按鈕 (屬性視窗](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)中 Visual Studio 的省略號按鈕 (...)) 以顯示**格式設定和 [高級]** [系結] 對話方塊, 其中包含該控制項的完整屬性清單。
 
 4. 選取您要系結的屬性, 然後按一下 [系結] 箭號。
 
