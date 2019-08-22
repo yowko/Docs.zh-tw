@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634414"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567477"
 ---
 # <a name="details-of-regular-expression-behavior"></a>規則運算式行為的詳細資訊
 .NET Framework 規則運算式引擎是回溯規則運算式比對器，它結合了傳統的非決定性有限自動化 (NFA) 引擎，例如 Perl、Python、Emacs 和 Tcl 所使用的引擎。 這使得它與較快速、但限制較多的純規則運算式決定性有限自動化 (DFA) 引擎有所區別，例如 awk、egrep 或 lex 中的引擎。 這也和標準的但較緩慢的 POSIX NFA 有差異。 下節描述這三種規則運算式引擎，並說明為何要在 .NET Framework 中使用傳統 NFA 引擎來實作規則運算式。  
@@ -24,7 +24,7 @@ ms.locfileid: "64634414"
 ## <a name="benefits-of-the-nfa-engine"></a>NFA 引擎的優點  
  當 DFA 引擎執行模式比對時，其處理順序是由輸入字串所驅動。 引擎會從輸入字串的開頭開始執行，並循序地繼續判斷下一個字元是否符合規則運算式模式。 它們可以保證比對可能最長的字串。 因為 DFA 引擎絕不會測試相同的字元兩次，所以不支援回溯。 但因為 DFA 引擎只包含有限狀態，它不能以反向參考比對模式，並且因為它不建構明確的展開，所以不能擷取子運算式。  
   
- 和 DFA 引擎不同，傳統 NFA 引擎在執行模式比對時，其處理順序是由規則運算式模式所驅動。 在處理某特定 language 元素時，引擎會使用 Greedy (窮盡) 比對，亦即盡可能比對輸入字串的最多內容。 但是，它也會在成功比對子運算式之後儲存其狀態。 如果比對最終失敗，此引擎可以回到儲存的狀態，以便嘗試其他比對。 放棄成功的子運算式比對，以便還能比對規則運算式中後續的語言元素，這個程序稱為「回溯」。 NFA 引擎會使用回溯依特定順序測試規則運算式的所有可能展開，並接受第一個符合項目。 因為傳統 NFA 引擎會為成功的比對建構規則運算式的特定展開，所以可以擷取子運算式符合項目和比對的反向參考。 但因為傳統 NFA 會回溯，所以可多次造訪相同的狀態，如果此狀態是經由不同的路徑到達。 結果最壞的情況是，它可以指數方式緩慢執行。 因為傳統 NFA 引擎接受找到的第一個符合項目，所以也可能發現不了其他 (可能是更長的) 符合項目。  
+ 和 DFA 引擎不同，傳統 NFA 引擎在執行模式比對時，其處理順序是由規則運算式模式所驅動。 在處理某特定 language 元素時，引擎會使用 Greedy (窮盡) 比對，亦即盡可能比對輸入字串的最多內容。 但是，它也會在成功比對子運算式之後儲存其狀態。 如果比對最終失敗，此引擎可以回到儲存的狀態，以便嘗試其他比對。 放棄成功的子運算式比對，以便還能比對規則運算式中後續的語言元素，這個程序稱為「回溯」  。 NFA 引擎會使用回溯依特定順序測試規則運算式的所有可能展開，並接受第一個符合項目。 因為傳統 NFA 引擎會為成功的比對建構規則運算式的特定展開，所以可以擷取子運算式符合項目和比對的反向參考。 但因為傳統 NFA 會回溯，所以可多次造訪相同的狀態，如果此狀態是經由不同的路徑到達。 結果最壞的情況是，它可以指數方式緩慢執行。 因為傳統 NFA 引擎接受找到的第一個符合項目，所以也可能發現不了其他 (可能是更長的) 符合項目。  
   
  POSIX NFA 引擎很像傳統 NFA 引擎，只是它們會繼續回溯直到能夠保證已經找到最長的可能符合項目。 結果，POSIX NFA 引擎比傳統 NFA 引擎更緩慢，而且當您使用 POSIX NFA 引擎時，您不能變更回溯搜尋的順序，讓較短的符合項目優先於較長的符合項目。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "64634414"
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
-     此規則運算式的 Greedy (窮盡) 和 Lazy (最少) 版本定義如下表所示。  
+     此規則運算式的 Greedy (窮盡) 和 Lazy (最少) 版本定義如下表所示：
   
     |模式|說明|  
     |-------------|-----------------|  
@@ -129,13 +129,13 @@ ms.locfileid: "64634414"
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     規則運算式 `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` 的定義如下表所示。  
+     規則運算式 ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` 的定義如下表所示。  
   
     |模式|說明|  
     |-------------|-----------------|  
     |`^`|從字串的開頭開始比對。|  
     |`[A-Z0-9]`|比對任何數值或英數字元。 (此比較不區分大小寫。)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|比對出現零或多次的任何文字字元，或下列任一個字元：-、!、#、$、%、&、'、.、\*、+、/、=、?、^、\`、{、}、&#124; 或 ~。|  
     |`(?<=[A-Z0-9])`|向左合樣前一個字元，而該字元必須是數值或英數字元。 (此比較不區分大小寫。)|  
     |`$`|在字串的結尾結束比對。|  
   

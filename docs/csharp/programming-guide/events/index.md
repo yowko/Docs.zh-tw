@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 0373d9150349dc24653270600a317b0d41b945b1
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 7a8a8e6b6a393f151d69d1879f475e04f44df5fa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859646"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590376"
 ---
 # <a name="events-c-programming-guide"></a>事件 (C# 程式設計手冊)
-事件可讓 [類別](../../../csharp/language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或 *「引發」* (raise)) 事件的類別稱為 *「發行者」* (publisher)，而接收 (或 *「處理」* (handle)) 事件的類別則稱為 *「訂閱者」* (subscriber)。  
+事件可讓 [類別](../../language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或 *「引發」* (raise)) 事件的類別稱為 *「發行者」* (publisher)，而接收 (或 *「處理」* (handle)) 事件的類別則稱為 *「訂閱者」* (subscriber)。  
   
- 在典型的 C# Windows Forms 或 Web 應用程式中，您可訂閱由控制項 (如按鈕和清單方塊) 引發的事件。 您可以使用 Visual C# 整合式開發環境 (IDE) 來瀏覽控制項發行的事件，並選擇您想要處理的事件。 IDE 提供一種簡單的方式來自動新增空的事件處理常式方法，及用來訂閱該事件的程式碼。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。  
+ 在典型的 C# Windows Forms 或 Web 應用程式中，您可訂閱由控制項 (如按鈕和清單方塊) 引發的事件。 您可以使用 Visual C# 整合式開發環境 (IDE) 來瀏覽控制項發行的事件，並選擇您想要處理的事件。 IDE 提供一種簡單的方式來自動新增空的事件處理常式方法，及用來訂閱該事件的程式碼。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)。  
   
 ## <a name="events-overview"></a>事件概觀  
  事件有下列屬性：  
@@ -30,22 +30,22 @@ ms.locfileid: "67859646"
   
 - 事件通常用於對使用者的動作 (例如在圖形化使用者介面內按一下按鈕或選取功能表) 發出信號。  
   
-- 當某事件擁有多個訂閱者時，便會在事件引發的同時叫用事件處理常式。 若要以非同步方式叫用事件，請參閱 [Calling Synchronous Methods Asynchronously](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)。  
+- 當某事件擁有多個訂閱者時，便會在事件引發的同時叫用事件處理常式。 若要以非同步方式叫用事件，請參閱 [Calling Synchronous Methods Asynchronously](../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)。  
   
 - 在 .NET Framework 類別庫中，事件取決於 <xref:System.EventHandler> 委派以及 <xref:System.EventArgs> 基底類別。  
   
 ## <a name="related-sections"></a>相關章節  
  如需詳細資訊，請參閱:  
   
-- [如何：訂閱及取消訂閱事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
+- [如何：訂閱及取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)  
   
-- [如何：發行符合 .NET Framework 指導方針的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [如何：發行符合 .NET Framework 指導方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
   
-- [如何：在衍生類別中引發基底類別事件](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
+- [如何：在衍生類別中引發基底類別事件](./how-to-raise-base-class-events-in-derived-classes.md)  
   
-- [如何：實作介面事件](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
+- [如何：實作介面事件](./how-to-implement-interface-events.md)  
   
-- [如何：實作自訂事件存取子](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
+- [如何：實作自訂事件存取子](./how-to-implement-custom-event-accessors.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
@@ -59,6 +59,6 @@ ms.locfileid: "67859646"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.EventHandler>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [委派](../../../csharp/programming-guide/delegates/index.md)
-- [在 Windows Forms 中建立事件處理常式](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [C# 程式設計指南](../index.md)
+- [委派](../delegates/index.md)
+- [在 Windows Forms 中建立事件處理常式](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)

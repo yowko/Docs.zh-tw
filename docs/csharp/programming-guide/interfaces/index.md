@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 330e4e8b36f03b028786920422cd325b31d814e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61711196"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589187"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 
@@ -31,7 +31,7 @@ ms.locfileid: "61711196"
   
 如需抽象類別的詳細資訊，請參閱[抽象和密封類別以及類別成員](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
-介面可以包含方法、屬性、事件、索引子，或以上四個成員類型的組合。 如需範例的連結，請參閱[相關章節](../interfaces/index.md#BKMK_RelatedSections)。 介面不能包含常數、欄位、運算子、執行個體建構函式、完成項或類型。 介面成員會自動變成公用，且它們不能包含任何存取修飾詞。 成員也不能是 [static](../../language-reference/keywords/static.md)。  
+介面可以包含方法、屬性、事件、索引子，或以上四個成員類型的組合。 如需範例的連結，請參閱[相關章節](./index.md#BKMK_RelatedSections)。 介面不能包含常數、欄位、運算子、執行個體建構函式、完成項或類型。 介面成員會自動變成公用，且它們不能包含任何存取修飾詞。 成員也不能是 [static](../../language-reference/keywords/static.md)。  
   
 若要實作介面成員，實作類別的對應成員必須是公用、非靜態，且具有與介面成員相同的名稱和簽章。  
   
