@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: c57e2849d608b1706c41beca91ff8026ebd9ca45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20a586e945a889d1fd8a8d4c5c09c8b790c56fc3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705021"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664022"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<移除 > webRequestModules （網路設定） 的項目
-移除應用程式自訂的 Web 要求模組。  
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<移除 Webrequestmodules 專案的 > 元素 (網路設定)
+從應用程式中移除自訂 Web 要求模組。  
   
  \<configuration>  
 \<system.net>  
@@ -40,7 +40,7 @@ ms.locfileid: "61705021"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|`prefix`|此 Web 要求模組所處理的要求 URI 前置詞。|  
+|`prefix`|此 Web 要求模組所處理之要求的 URI 前置詞。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -49,19 +49,19 @@ ms.locfileid: "61705021"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定要求資訊從網路主機使用的模組。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|指定要用來要求網路主機資訊的模組。|  
   
 ## <a name="remarks"></a>備註  
- `remove`項目會移除已註冊的 Web 要求模組指定的 URI 前置詞。  
+ `remove`元素會移除所指定 URI 前置詞的已註冊 Web 要求模組。  
   
- 值`prefix`屬性應為有效的 URI-前置字元，例如"`http`"，或 「`http://www.contoso.com`"。  
+ `prefix`屬性的值應該是有效 URI 的前置字元, 例如 "`http`" 或 "`http://www.contoso.com`"。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
 
-下列範例會移除現有的 Web 要求模組的 HTTP，然後註冊新的自訂 Web 要求模組的 HTTP 要求`www.contoso.com`。
+下列範例會移除 HTTP 的現有 Web 要求模組, 然後針對 HTTP 要求`www.contoso.com`註冊新的自訂 web 要求模組。
   
 ```xml  
 <configuration>  
@@ -80,4 +80,4 @@ ms.locfileid: "61705021"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.WebRequest>
-- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [網路設定結構描述](index.md)

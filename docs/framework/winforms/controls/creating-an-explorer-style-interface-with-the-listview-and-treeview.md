@@ -13,17 +13,16 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 540226dbbada0373854144ac874d2164208ad943
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039917"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658575"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
 
 Visual Studio 的優點之一, 就是能夠在短時間內建立專業型式的 Windows Forms 應用程式。 常見的案例是使用<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>控制項來建立使用者介面 (UI), 這與 windows 作業系統的 windows Explorer 功能相似。 Windows Explorer 會顯示使用者電腦上檔案和資料夾的階層式結構。
-
 
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>建立包含 ListView 和 TreeView 控制項的表單
 
@@ -35,7 +34,7 @@ Visual Studio 的優點之一, 就是能夠在短時間內建立專業型式的 
 
     2. 在範本清單中, 選擇 [ **Windows Forms 應用程式**]。
 
-3. 按一下 [確定 **Deploying Office Solutions**]。 隨即建立新的 Windows Forms 專案。
+3. 按一下 [確定]。 隨即建立新的 Windows Forms 專案。
 
 4. 將控制項新增至表單, 並將<xref:System.Windows.Forms.SplitContainer.Dock%2A>其屬性設定為<xref:System.Windows.Forms.DockStyle.Fill>。 <xref:System.Windows.Forms.SplitContainer>
 
