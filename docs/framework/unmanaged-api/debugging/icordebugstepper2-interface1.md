@@ -16,26 +16,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 256f67d21a22ee4692d88311cc150736e61563a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d86f4bbec8971d164966298734388f0744a2d41c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987411"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953028"
 ---
 # <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 介面
-提供支援剛 my code (JMC) 偵錯。  
+僅提供 my code (JMC) 偵錯工具的支援。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
-|[SetJMC 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|設定值，這個值指出是否此 ICorDebugStepper 步驟只能透過應用程式的開發人員所撰寫的程式碼。|  
+|[SetJMC 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|設定值, 指定此 ICorDebugStepper 步驟是否只透過應用程式開發人員所撰寫的程式碼進行。|  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "61987411"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

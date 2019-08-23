@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 079718c96a4818285c0b469da9f23213a6915c19
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: fb9300917f06ec8e48f2dd412e008efec4dc6917
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941664"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException 類別 (.NET Native)
 
-**適用於 Windows 10，僅限.NET Native 的 Windows 應用程式的.NET**
+**適用于 Windows 10 的 Windows 應用程式的 .NET, 僅限 .NET Native**
 
 使用反映來擷取不存在的中繼資料時，所擲回的例外狀況。
 
 **命名空間：** System.Reflection
 
 > [!IMPORTANT]
-> `MissingMetadataException`類別是僅供內部使用的.NET Native 工具鏈。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。
+> `MissingMetadataException`類別僅供 .NET Native 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。
 
 ## <a name="syntax"></a>語法
 
@@ -34,8 +34,8 @@ ms.locfileid: "66052513"
 
 |建構函式|描述|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|使用系統提供的錯誤說明訊息，初始化 `MissingMetadataException` 類別的新執行個體。<br /><br /> 這個建構函式是.NET Native 工具鏈僅供內部使用。|
-|`public MissingMetadataException(String message)`|使用指定的錯誤訊息，初始化 `MissingMetadataException` 類別的新執行個體。<br /><br /> 這個建構函式是.NET Native 工具鏈僅供內部使用。|
+|`public MissingMetadataException()`|使用系統提供的錯誤說明訊息，初始化 `MissingMetadataException` 類別的新執行個體。<br /><br /> 此函式僅供 .NET Native 工具鏈內部使用。|
+|`public MissingMetadataException(String message)`|使用指定的錯誤訊息，初始化 `MissingMetadataException` 類別的新執行個體。<br /><br /> 此函式僅供 .NET Native 工具鏈內部使用。|
 
 ## <a name="properties"></a>屬性
 
@@ -74,7 +74,7 @@ ms.locfileid: "66052513"
 
 使用反映來存取組件中沒有的中繼資料時，就會擲回 `MissingMetadataException` 例外狀況。
 
-應用程式在執行階段是否有中繼資料可用，是由執行階段指示詞 (XML 組態) 檔案 *.rd.xml 所定義。 若要防止您的應用程式擲回這個例外狀況，您必須修改 \*.rd.xml，以定義必須出現在執行階段的中繼資料。 如需 \*.rd.xml 檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。
+應用程式在執行時間可使用的中繼資料是由執行時間指示詞 (XML 設定) 檔案 ( \*app.config) 所定義。 若要防止您的應用程式擲回這個例外狀況，您必須修改 \*.rd.xml，以定義必須出現在執行階段的中繼資料。 如需 \*.rd.xml 檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。
 
 > [!IMPORTANT]
 > 因為這個例外狀況指出應用程式所需的中繼資料在執行階段無法使用，所以您不應該在 `try`/`catch` 區塊中處理這個例外狀況。 相反地，您應該診斷例外狀況的原因，然後透過執行階段指示詞檔案來去除這個例外狀況。 若要取得可加入執行階段指示詞檔案以消除例外狀況的項目，您可以使用下列兩個疑難排解工具之一：

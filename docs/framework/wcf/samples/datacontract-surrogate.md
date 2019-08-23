@@ -2,18 +2,18 @@
 title: DataContract Surrogate
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: a56fbcabfacf146142f7b0c0623325cc8e69c29a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 436c5778487e6cd272ba3a873be9d243a427db97
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953491"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Surrogate
-這個範例示範如何使用資料合約 Surrogate 類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。 此範例示範如何在用戶端和伺服器的案例，其中資料會序列化並傳送 Windows Communication Foundation (WCF) 用戶端與服務之間使用代理。  
+這個範例示範如何使用資料合約 Surrogate 類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。 這個範例示範如何在用戶端和伺服器案例中使用代理, 其中資料會在 Windows Communication Foundation (WCF) 用戶端和服務之間進行序列化和傳輸。  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+> 此範例的安裝程序與建置指示位於本主題的結尾。  
   
  此範例使用下列服務合約：  
   
@@ -220,7 +220,7 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
   
  此外，還必須執行其他步驟，才能將 Surrogate 插入以供中繼資料產生期間使用。 有一個機制可以用來達到這個目的，即提供 `IWsdlExportExtension`，而這也是本範例所示範的。 另一個方法則是直接修改 `WsdlExporter`。  
   
- `AllowNonSerializableTypesAttribute`屬性會實作`IWsdlExportExtension`和`IContractBehavior`。 延伸模組可以是`IContractBehavior`或`IEndpointBehavior`在此情況下。 `IWsdlExportExtension.ExportContract` 方法實作會將此延伸新增至 DataContract 結構描述產生期間所使用的 `XsdDataContractExporter`，以啟用 Surrogate。 下列程式碼片段示範如何執行這項操作。  
+ 屬性會執行`IContractBehavior`和。 `IWsdlExportExtension` `AllowNonSerializableTypesAttribute` 在此情況下, 延伸`IContractBehavior`可以`IEndpointBehavior`是或。 `IWsdlExportExtension.ExportContract` 方法實作會將此延伸新增至 DataContract 結構描述產生期間所使用的 `XsdDataContractExporter`，以啟用 Surrogate。 下列程式碼片段示範如何執行這項操作。  
   
 ```  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -247,24 +247,24 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- 當您執行範例時，用戶端會在呼叫 AddEmployee 之後接著呼叫 GetEmployee，以檢查第一項呼叫是否成功。 GetEmployee 作業要求的結果會顯示在用戶端主控台視窗中。 GetEmployee 作業必須成功找到員工，並列印 「 找到 」。  
+ 當您執行範例時，用戶端會在呼叫 AddEmployee 之後接著呼叫 GetEmployee，以檢查第一項呼叫是否成功。 GetEmployee 作業要求的結果會顯示在用戶端主控台視窗中。 GetEmployee 作業必須成功尋找員工並列印「找到」。  
   
 > [!NOTE]
->  這個範例示範如何插入 Surrogate 以進行序列化、還原序列化和中繼資料產生作業， 但是不示範如何插入 Surrogate，以從中繼資料產生程式碼。 若要查看如何使用 「 代理 」 插入用戶端程式碼產生的範例，請參閱[自訂 WSDL 發行物](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)範例。  
+> 這個範例示範如何插入 Surrogate 以進行序列化、還原序列化和中繼資料產生作業， 但是不示範如何插入 Surrogate，以從中繼資料產生程式碼。 若要查看如何使用代理外掛程式來加入用戶端程式代碼產生的範例, 請參閱[自訂 WSDL 發行](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)集範例。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建置方案的 C# 版本，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要建立C#解決方案的版本, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
   
-3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: b63d94789d081ce7337b5f9c2abca3f7d9e99eeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38c7742f3e4691f29490e73b05616754415eac58
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775712"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953908"
 ---
 # <a name="use-caching-in-ui-automation"></a>使用 UI 自動化中的快取
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本節說明如何實作 <xref:System.Windows.Automation.AutomationElement> 屬性和控制項模式的快取。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "61775712"
   
 5. 如果要提高效率而不擷取物件的完整參考，可以將 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 屬性設為 <xref:System.Windows.Automation.AutomationElementMode.None> 。 (如此將無法從這些物件擷取目前值。)  
   
-6. 啟用要求，請使用<xref:System.Windows.Automation.CacheRequest.Activate%2A>內`using`區塊 (`Using`在 Microsoft Visual Basic.NET)。  
+6. 在<xref:System.Windows.Automation.CacheRequest.Activate%2A> 區塊`using`內使用 (`Using`在 Microsoft Visual Basic .net 中) 來啟動要求。  
   
- 在取得 <xref:System.Windows.Automation.AutomationElement> 物件或訂閱事件之後，使用 <xref:System.Windows.Automation.CacheRequest.Pop%2A> (若使用 <xref:System.Windows.Automation.CacheRequest.Push%2A> ) 或處置 <xref:System.Windows.Automation.CacheRequest.Activate%2A>所建立的物件，以停用要求。 (使用<xref:System.Windows.Automation.CacheRequest.Activate%2A>中`using`區塊 (`Using`在 Microsoft Visual Basic.NET)。  
+ 在取得 <xref:System.Windows.Automation.AutomationElement> 物件或訂閱事件之後，使用 <xref:System.Windows.Automation.CacheRequest.Pop%2A> (若使用 <xref:System.Windows.Automation.CacheRequest.Push%2A> ) 或處置 <xref:System.Windows.Automation.CacheRequest.Activate%2A>所建立的物件，以停用要求。 (在<xref:System.Windows.Automation.CacheRequest.Activate%2A> `using` 區塊`Using`中使用 (在 Microsoft Visual Basic .net 中)。  
   
 ### <a name="cache-automationelement-properties"></a>快取 AutomationElement 屬性  
   

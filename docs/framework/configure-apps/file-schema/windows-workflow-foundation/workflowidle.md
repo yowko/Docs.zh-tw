@@ -3,20 +3,20 @@ title: <workflowIdle>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b2ef703c-3e01-4213-9d2e-c14c7dba94d2
-ms.openlocfilehash: 1dc186f5899935dab43c0d33894e659c4b19748c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 16a485b6d0ba2584cccd08a36506582fd3930f71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201113"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947170"
 ---
 # <a name="workflowidle"></a>\<workflowIdle>
 這個服務行為可控制卸載及保存閒置工作流程執行個體的時間。  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<workflowIdle>  
   
 ## <a name="syntax"></a>語法  
@@ -39,8 +39,8 @@ ms.locfileid: "59201113"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|timeToPersist|Timespan 值，指定工作流程變成閒置，且會保存的時間之間的持續時間。 預設值為 TimeSpan.MaxValue。<br /><br /> 持續期間會開始在工作流程執行個體閒置時開始消逝。 這個屬性是很有用，如果您想要更積極地保存工作流程執行個體，同時仍保留在記憶體中的 盡可能長時間的執行個體。 這個屬性才有效，如果其值為小於**timeToUnload**屬性。 如果此屬性的值較大，則會忽略此屬性。 如果這個屬性所指定的值之前要經過**timeToUnload**屬性持續性必須先完成工作流程已卸載。 也就是說，卸載作業可能會延遲到保存工作流程之後。 保存層負責處理重試暫時性錯誤，而且只會針對無法復原的錯誤擲回例外狀況。 因此，在保存期間擲回的所有例外狀況都會視為嚴重例外狀況，並且會中止工作流程執行個體。|  
-|timeToUnload|Timespan 值，可指定在工作流程進入閒置狀態以及卸載之間的持續期間。 預設值為 1 分鐘。<br /><br /> 卸載工作流程表示會同時保存該工作流程。 如果這個屬性設定為零的工作流程執行個體保留及卸載之後立即工作流程變成閒置狀態。 將此屬性設定為 timespan.maxvalue 可有效地停用卸載作業。 閒置的工作流程執行個體永遠不會卸載。|  
+|timeToPersist|Timespan 值, 指定工作流程閒置和保存之間的持續時間。 預設值為 Timespan.zero。<br /><br /> 持續期間會開始在工作流程執行個體閒置時開始消逝。 如果您想要更積極地保存工作流程實例, 但仍將實例保持在記憶體中最長的時間, 這個屬性就很有用。 只有在其值小於**timeToUnload**屬性時, 這個屬性才有效。 如果此屬性的值較大，則會忽略此屬性。 如果此屬性在**timeToUnload**屬性所指定的值之前過期, 則持續性必須在卸載工作流程之前完成。 也就是說，卸載作業可能會延遲到保存工作流程之後。 保存層負責處理重試暫時性錯誤，而且只會針對無法復原的錯誤擲回例外狀況。 因此，在保存期間擲回的所有例外狀況都會視為嚴重例外狀況，並且會中止工作流程執行個體。|  
+|timeToUnload|Timespan 值，可指定在工作流程進入閒置狀態以及卸載之間的持續期間。 預設值為 1 分鐘。<br /><br /> 卸載工作流程表示會同時保存該工作流程。 如果此屬性設定為零, 則會在工作流程變成閒置之後, 立即保存工作流程實例並將其卸載。 將此屬性設定為 TimeSpan, 會有效地停用卸載作業。 閒置的工作流程執行個體永遠不會卸載。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -49,7 +49,7 @@ ms.locfileid: "59201113"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<行為 > 的\<v >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|指定行為項目。|  
+|[\<serviceBehaviors > 的\<行為 >](behavior-of-servicebehaviors-of-workflow.md)|指定行為項目。|  
   
 ## <a name="see-also"></a>另請參閱
 

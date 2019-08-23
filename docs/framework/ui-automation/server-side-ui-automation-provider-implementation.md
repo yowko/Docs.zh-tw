@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: f888923736d384af2c6d955a126bacacb16113af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a5fcceb3c39092deaa4a9dca258ba60117019c36
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651155"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961223"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>伺服器端 UI 自動化提供者實作
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本節描述如何為自訂控制項實作伺服器端使用者介面自動化提供者。  
   
- 實作中的，Windows Presentation Foundation (WPF) 項目，且非位[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]項目 (例如專為[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 本質上不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過衍生自 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的類別提供 <xref:System.Windows.Automation.Peers.AutomationPeer>的支援。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過提供者介面的實作提供支援。  
+ Windows Presentation Foundation (WPF) 專案和非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]元素的執行 (例如針對所[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]設計的專案) 基本上不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過衍生自 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的類別提供 <xref:System.Windows.Automation.Peers.AutomationPeer>的支援。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過提供者介面的實作提供支援。  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>安全性考量  
@@ -102,7 +102,7 @@ ms.locfileid: "64651155"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
   
 > [!NOTE]
->  簡單項目的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 或裝載在視窗中之片段根的項目取自於視窗；不過，根之下的片段項目 (例如清單方塊中的清單項目) 必須提供自己的識別項。 如需詳細資訊，請參閱 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。  
+> 簡單項目的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 或裝載在視窗中之片段根的項目取自於視窗；不過，根之下的片段項目 (例如清單方塊中的清單項目) 必須提供自己的識別項。 如需詳細資訊，請參閱 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。  
 >   
 >  應該針對 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> 控制項中裝載的提供者傳回 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 。 在此情況下，預設視窗提供者可能無法擷取正確值。  
 >   
@@ -114,7 +114,7 @@ ms.locfileid: "64651155"
 ### <a name="events-in-non-wpf-providers"></a>非 WPF 提供者中的事件  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者應該引發事件，將 UI 狀態中的變更通知用戶端應用程式。 下列方法會用於引發事件。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|引發各種事件，包括由控制項模式觸發的事件。|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性變更後，即會引發事件。|  
@@ -124,7 +124,7 @@ ms.locfileid: "64651155"
   
  若要最佳化效能，提供者可以選擇性地引發事件，或如果沒有註冊任何用戶端應用程式來接收事件，則完全不引發任何事件。 下列方法會用於最佳化。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|這個靜態屬性會指定是否有任何用戶端應用程式已訂閱 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|提供者在片段根上實作此介面，可讓提供者在用戶端針對片段上的事件註冊和取消註冊事件處理常式時接到通知。|  
@@ -134,7 +134,7 @@ ms.locfileid: "64651155"
  簡單控制項 (例如裝載於視窗 (HWND) 的自訂按鈕) 的提供者不需要支援 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構內的導覽。 項目之間的導覽是由主控視窗的預設提供者處理，而預設提供者則於 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>的實作中指定。 不過，當您實作複雜自訂控制項的提供者時，您必須支援片段的根節點與子系之間的導覽，以及同層級節點之間的導覽。  
   
 > [!NOTE]
->  根以外的片段項目必須從 `null` 傳回 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>參考，因為它們不會直接裝載在視窗中，而且沒有預設提供者可支援項目之間的導覽。  
+> 根以外的片段項目必須從 `null` 傳回 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>參考，因為它們不會直接裝載在視窗中，而且沒有預設提供者可支援項目之間的導覽。  
   
  片段的結構取決於您的 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>實作。 對於每個片段的可能方向，此方法會傳回該方向中項目的提供者物件。 如果該方向中沒有任何項目，此方法會傳回 `null` 參考。  
   

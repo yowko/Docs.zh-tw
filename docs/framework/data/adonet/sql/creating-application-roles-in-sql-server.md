@@ -2,18 +2,18 @@
 title: 在 SQL Server 中建立應用程式角色
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910716"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961171"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中建立應用程式角色
 應用程式角色可以用於將權限指派給應用程式，而不是資料庫角色或使用者。 使用者可以連接到資料庫、啟動應用程式角色，並採用授與應用程式的權限。 授與應用程式角色的權限在連接期間內都會維持有效。  
   
 > [!IMPORTANT]
->  當用戶端應用程式在連接字串中提供應用程式角色名稱和密碼時，就會啟動應用程式角色。 這些角色在雙層 (Two-Tier) 應用程式中會造成安全性弱點，因為密碼必須儲存在用戶端電腦上。 在三層 (Three-Tier) 應用程式中，則可以用應用程式使用者無法存取的方式來儲存密碼。  
+> 當用戶端應用程式在連接字串中提供應用程式角色名稱和密碼時，就會啟動應用程式角色。 這些角色在雙層 (Two-Tier) 應用程式中會造成安全性弱點，因為密碼必須儲存在用戶端電腦上。 在三層 (Three-Tier) 應用程式中，則可以用應用程式使用者無法存取的方式來儲存密碼。  
   
 ## <a name="application-role-features"></a>應用程式角色功能  
  應用程式角色有下列功能：  
@@ -47,14 +47,14 @@ ms.locfileid: "64910716"
   
  您可能要考慮以下的替代方案。  
   
-- 藉由 EXECUTE AS 陳述式 (使用 NO REVERT 和 WITH COOKIE 子句) 使用內容切換。 您可以在資料庫中建立不與登入對應的使用者帳戶， 然後再將權限指派給這個帳戶。 以無登入的使用者來使用 EXECUTE AS 比較安全，因為這種方式是以權限為基礎，而不是以密碼為基礎。 如需詳細資訊，請參閱 <<c0> [ 自訂權限，在 SQL Server 中使用模擬](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
+- 藉由 EXECUTE AS 陳述式 (使用 NO REVERT 和 WITH COOKIE 子句) 使用內容切換。 您可以在資料庫中建立不與登入對應的使用者帳戶， 然後再將權限指派給這個帳戶。 以無登入的使用者來使用 EXECUTE AS 比較安全，因為這種方式是以權限為基礎，而不是以密碼為基礎。 如需詳細資訊, 請參閱[在 SQL Server 中使用模擬自訂許可權](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
   
-- 使用憑證來簽署預存程序，且僅授與執行程序的權限。 如需詳細資訊，請參閱 < [SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
+- 使用憑證來簽署預存程序，且僅授與執行程序的權限。 如需詳細資訊, 請參閱[在 SQL Server 中簽署預存程式](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
   
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
   
-|資源|描述|  
+|Resource|描述|  
 |--------------|-----------------|  
 |[應用程式角色](/sql/relational-databases/security/authentication-access/application-roles)|說明如何在 SQL Server 2008 中建立及使用應用程式角色。|  
   
