@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ee08e9ca243ac086a0b75892bf9258246e8fd7c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 343abf450a49ad222c403c28e46c6e3aac33e1b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490670"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966157"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>強式命名 (Unmanaged API 參考)
 強式命名 API 可讓用戶端管理組件的強式命名簽署。  
@@ -23,7 +23,7 @@ ms.locfileid: "66490670"
 ## <a name="in-this-section"></a>本節內容  
   
 > [!NOTE]
->  從 .NET Framework 4 開始，所有這些函式都已過時。 如需建議的替代函式，請參閱 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) 介面。  
+> 從 .NET Framework 4 開始，所有這些函式都已過時。 如需建議的替代函式，請參閱 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) 介面。  
   
  [GetHashFromAssemblyFile 函式](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
  使用指定的雜湊演算法取得所指定組件檔案的雜湊。 自 .NET Framework 4 起淘汰。  
