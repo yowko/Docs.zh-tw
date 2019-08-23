@@ -2,30 +2,30 @@
 title: WF 中的集合活動
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945973"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935449"
 ---
-# <a name="collection-activities-in-wf"></a><span data-ttu-id="ba0e8-102">WF 中的集合活動</span><span class="sxs-lookup"><span data-stu-id="ba0e8-102">Collection Activities in WF</span></span>
-<span data-ttu-id="ba0e8-103">集合活動可用來處理工作流程中的集合物件。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-103">Collection activities are used to work with collection objects in a workflow.</span></span> [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] <span data-ttu-id="ba0e8-104">含有系統提供的活動，可用於加入與移除集合中的物件、測試集合中項目的存在，以及清除集合。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-104">has system-provided activities for adding and removing items from a collection, testing for the existence of an item in a collection, and clearing a collection.</span></span> <span data-ttu-id="ba0e8-105">`ExistsInCollection` 並`RemoveFromCollection`有<xref:System.Activities.OutArgument%601>型別的<xref:System.Boolean>，這會表示結果。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-105">`ExistsInCollection` and `RemoveFromCollection` have an <xref:System.Activities.OutArgument%601> of type <xref:System.Boolean>, which indicates the result.</span></span>  
+# <a name="collection-activities-in-wf"></a><span data-ttu-id="66893-102">WF 中的集合活動</span><span class="sxs-lookup"><span data-stu-id="66893-102">Collection Activities in WF</span></span>
+<span data-ttu-id="66893-103">集合活動可用來處理工作流程中的集合物件。</span><span class="sxs-lookup"><span data-stu-id="66893-103">Collection activities are used to work with collection objects in a workflow.</span></span> [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] <span data-ttu-id="66893-104">含有系統提供的活動，可用於加入與移除集合中的物件、測試集合中項目的存在，以及清除集合。</span><span class="sxs-lookup"><span data-stu-id="66893-104">has system-provided activities for adding and removing items from a collection, testing for the existence of an item in a collection, and clearing a collection.</span></span> <span data-ttu-id="66893-105">`ExistsInCollection`和`RemoveFromCollection` 具有型<xref:System.Boolean>別為的,這表示結果。<xref:System.Activities.OutArgument%601></span><span class="sxs-lookup"><span data-stu-id="66893-105">`ExistsInCollection` and `RemoveFromCollection` have an <xref:System.Activities.OutArgument%601> of type <xref:System.Boolean>, which indicates the result.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ba0e8-106">如果集合活動在設定基礎集合物件之前執行，便會擲回 <xref:System.InvalidOperationException> 與活動錯誤。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-106">If a collection activity is executed before setting the underlying collection object, an <xref:System.InvalidOperationException> is thrown and the activity faults.</span></span>  
+> <span data-ttu-id="66893-106">如果集合活動在設定基礎集合物件之前執行，便會擲回 <xref:System.InvalidOperationException> 與活動錯誤。</span><span class="sxs-lookup"><span data-stu-id="66893-106">If a collection activity is executed before setting the underlying collection object, an <xref:System.InvalidOperationException> is thrown and the activity faults.</span></span>  
   
-## <a name="collection-activities"></a><span data-ttu-id="ba0e8-107">集合活動</span><span class="sxs-lookup"><span data-stu-id="ba0e8-107">Collection activities</span></span>  
+## <a name="collection-activities"></a><span data-ttu-id="66893-107">集合活動</span><span class="sxs-lookup"><span data-stu-id="66893-107">Collection activities</span></span>  
   
 |||  
 |-|-|  
-|<xref:System.Activities.Statements.AddToCollection%601>|<span data-ttu-id="ba0e8-108">將項目加入指定集合。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-108">Adds an item to a specified collection.</span></span>|  
-|<xref:System.Activities.Statements.ClearCollection%601>|<span data-ttu-id="ba0e8-109">清除指定集合中的所有項目。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-109">Clears all items from a specified collection.</span></span>|  
-|<xref:System.Activities.Statements.ExistsInCollection%601>|<span data-ttu-id="ba0e8-110">如果項目存在於集合中，則傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-110">Returns `true` if an item exists in a collection.</span></span>|  
-|<xref:System.Activities.Statements.RemoveFromCollection%601>|<span data-ttu-id="ba0e8-111">移除指定集合中的項目，若順利移除該項目，則傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-111">Removes an item from a specified collection and returns `true` if the item was successfully removed.</span></span>|  
+|<xref:System.Activities.Statements.AddToCollection%601>|<span data-ttu-id="66893-108">將項目加入指定集合。</span><span class="sxs-lookup"><span data-stu-id="66893-108">Adds an item to a specified collection.</span></span>|  
+|<xref:System.Activities.Statements.ClearCollection%601>|<span data-ttu-id="66893-109">清除指定集合中的所有項目。</span><span class="sxs-lookup"><span data-stu-id="66893-109">Clears all items from a specified collection.</span></span>|  
+|<xref:System.Activities.Statements.ExistsInCollection%601>|<span data-ttu-id="66893-110">如果項目存在於集合中，則傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="66893-110">Returns `true` if an item exists in a collection.</span></span>|  
+|<xref:System.Activities.Statements.RemoveFromCollection%601>|<span data-ttu-id="66893-111">移除指定集合中的項目，若順利移除該項目，則傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="66893-111">Removes an item from a specified collection and returns `true` if the item was successfully removed.</span></span>|  
   
-## <a name="using-collection-activities"></a><span data-ttu-id="ba0e8-112">使用集合活動</span><span class="sxs-lookup"><span data-stu-id="ba0e8-112">Using collection activities</span></span>  
- <span data-ttu-id="ba0e8-113">下列程式碼範例示範如何與宣告為工作流程變數的集合互動。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-113">The following code example demonstrates how to interact with a collection declared as a workflow variable.</span></span> <span data-ttu-id="ba0e8-114">所使用的集合是名為 <xref:System.Collections.Generic.List%601> 之 <xref:System.String> 物件的 `fruitList`。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-114">The collection used is a <xref:System.Collections.Generic.List%601> of <xref:System.String> objects named `fruitList`.</span></span>  
+## <a name="using-collection-activities"></a><span data-ttu-id="66893-112">使用集合活動</span><span class="sxs-lookup"><span data-stu-id="66893-112">Using collection activities</span></span>  
+ <span data-ttu-id="66893-113">下列程式碼範例示範如何與宣告為工作流程變數的集合互動。</span><span class="sxs-lookup"><span data-stu-id="66893-113">The following code example demonstrates how to interact with a collection declared as a workflow variable.</span></span> <span data-ttu-id="66893-114">所使用的集合是名為 <xref:System.Collections.Generic.List%601> 之 <xref:System.String> 物件的 `fruitList`。</span><span class="sxs-lookup"><span data-stu-id="66893-114">The collection used is a <xref:System.Collections.Generic.List%601> of <xref:System.String> objects named `fruitList`.</span></span>  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- <span data-ttu-id="ba0e8-115">您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 代替 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 來建立上述程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="ba0e8-115">The above code samples can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601></span></span>  
+ <span data-ttu-id="66893-115">您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 代替 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 來建立上述程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="66893-115">The above code samples can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601></span></span>  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -425,6 +425,6 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ba0e8-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ba0e8-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66893-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="66893-116">See also</span></span>
 
-- [<span data-ttu-id="ba0e8-117">使用命令式程式碼撰寫工作流程、活動與運算式</span><span class="sxs-lookup"><span data-stu-id="ba0e8-117">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [<span data-ttu-id="66893-117">使用命令式程式碼撰寫工作流程、活動與運算式</span><span class="sxs-lookup"><span data-stu-id="66893-117">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](authoring-workflows-activities-and-expressions-using-imperative-code.md)

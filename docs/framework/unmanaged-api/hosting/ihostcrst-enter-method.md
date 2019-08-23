@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a54135a0daff3f207d1365d2c27335440f7f1fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bdc597e741023af1c7cc1f48e378083157dd4a5d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763785"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937744"
 ---
-# <a name="ihostcrstenter-method"></a><span data-ttu-id="bf84d-102">IHostCrst::Enter 方法</span><span class="sxs-lookup"><span data-stu-id="bf84d-102">IHostCrst::Enter Method</span></span>
-<span data-ttu-id="bf84d-103">進入重要區段表示由目前[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)執行個體。</span><span class="sxs-lookup"><span data-stu-id="bf84d-103">Enters the critical section that is represented by the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  
+# <a name="ihostcrstenter-method"></a><span data-ttu-id="18160-102">IHostCrst::Enter 方法</span><span class="sxs-lookup"><span data-stu-id="18160-102">IHostCrst::Enter Method</span></span>
+<span data-ttu-id="18160-103">輸入目前[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)實例所代表的重要區段。</span><span class="sxs-lookup"><span data-stu-id="18160-103">Enters the critical section that is represented by the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf84d-104">語法</span><span class="sxs-lookup"><span data-stu-id="bf84d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18160-104">語法</span><span class="sxs-lookup"><span data-stu-id="18160-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Enter (  
@@ -35,38 +35,38 @@ HRESULT Enter (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bf84d-105">參數</span><span class="sxs-lookup"><span data-stu-id="bf84d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18160-105">參數</span><span class="sxs-lookup"><span data-stu-id="18160-105">Parameters</span></span>  
  `option`  
- <span data-ttu-id="bf84d-106">[in]其中一個[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)值，指出如果，主應用程式應執行的動作作業封鎖。</span><span class="sxs-lookup"><span data-stu-id="bf84d-106">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, indicating what action the host should take if the operation blocks.</span></span>  
+ <span data-ttu-id="18160-106">在其中一個[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)值, 指出當作業封鎖時, 主機應採取的動作。</span><span class="sxs-lookup"><span data-stu-id="18160-106">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, indicating what action the host should take if the operation blocks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bf84d-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="bf84d-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="18160-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="18160-107">Return Value</span></span>  
   
-|<span data-ttu-id="bf84d-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bf84d-108">HRESULT</span></span>|<span data-ttu-id="bf84d-109">描述</span><span class="sxs-lookup"><span data-stu-id="bf84d-109">Description</span></span>|  
+|<span data-ttu-id="18160-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="18160-108">HRESULT</span></span>|<span data-ttu-id="18160-109">描述</span><span class="sxs-lookup"><span data-stu-id="18160-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="bf84d-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="bf84d-110">S_OK</span></span>|<span data-ttu-id="bf84d-111">`Enter` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="bf84d-111">`Enter` returned successfully.</span></span>|  
-|<span data-ttu-id="bf84d-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="bf84d-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="bf84d-113">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="bf84d-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="bf84d-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="bf84d-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="bf84d-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="bf84d-115">The call timed out.</span></span>|  
-|<span data-ttu-id="bf84d-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="bf84d-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="bf84d-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="bf84d-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="bf84d-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="bf84d-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="bf84d-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="bf84d-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="bf84d-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="bf84d-120">E_FAIL</span></span>|<span data-ttu-id="bf84d-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="bf84d-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="bf84d-122">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="bf84d-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="bf84d-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="bf84d-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="18160-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="18160-110">S_OK</span></span>|<span data-ttu-id="18160-111">`Enter`已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="18160-111">`Enter` returned successfully.</span></span>|  
+|<span data-ttu-id="18160-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="18160-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="18160-113">Common language runtime (CLR) 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="18160-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="18160-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="18160-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="18160-115">呼叫超時。</span><span class="sxs-lookup"><span data-stu-id="18160-115">The call timed out.</span></span>|  
+|<span data-ttu-id="18160-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="18160-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="18160-117">呼叫端沒有擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="18160-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="18160-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="18160-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="18160-119">已封鎖的執行緒或光纖在等候時取消了事件。</span><span class="sxs-lookup"><span data-stu-id="18160-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="18160-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="18160-120">E_FAIL</span></span>|<span data-ttu-id="18160-121">發生不明的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="18160-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="18160-122">當方法傳回 E_FAIL 時, CLR 就無法在進程內使用。</span><span class="sxs-lookup"><span data-stu-id="18160-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="18160-123">對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="18160-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bf84d-124">備註</span><span class="sxs-lookup"><span data-stu-id="bf84d-124">Remarks</span></span>  
- <span data-ttu-id="bf84d-125">`Enter` 鏡像處理 Win32`EnterCriticalSection`函式。</span><span class="sxs-lookup"><span data-stu-id="bf84d-125">`Enter` mirrors the Win32 `EnterCriticalSection` function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18160-124">備註</span><span class="sxs-lookup"><span data-stu-id="18160-124">Remarks</span></span>  
+ <span data-ttu-id="18160-125">`Enter`鏡像 Win32 `EnterCriticalSection`函數。</span><span class="sxs-lookup"><span data-stu-id="18160-125">`Enter` mirrors the Win32 `EnterCriticalSection` function.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bf84d-126">這個方法不會傳回，直到在進入重要區段。</span><span class="sxs-lookup"><span data-stu-id="bf84d-126">This method does not return until the critical section is entered.</span></span>  
+> <span data-ttu-id="18160-126">在輸入重要區段之前, 這個方法不會傳回。</span><span class="sxs-lookup"><span data-stu-id="18160-126">This method does not return until the critical section is entered.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf84d-127">需求</span><span class="sxs-lookup"><span data-stu-id="bf84d-127">Requirements</span></span>  
- <span data-ttu-id="bf84d-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bf84d-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18160-127">需求</span><span class="sxs-lookup"><span data-stu-id="18160-127">Requirements</span></span>  
+ <span data-ttu-id="18160-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="18160-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf84d-129">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bf84d-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="18160-129">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="18160-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="bf84d-130">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="bf84d-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="18160-130">**LIBRARY:** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="18160-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="bf84d-131">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf84d-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="18160-131">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18160-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf84d-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bf84d-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18160-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="18160-132">See also</span></span>
 
-- [<span data-ttu-id="bf84d-133">ICLRSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="bf84d-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="bf84d-134">IHostCrst 介面</span><span class="sxs-lookup"><span data-stu-id="bf84d-134">IHostCrst Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [<span data-ttu-id="bf84d-135">IHostSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="bf84d-135">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="18160-133">ICLRSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="18160-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="18160-134">IHostCrst 介面</span><span class="sxs-lookup"><span data-stu-id="18160-134">IHostCrst Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
+- [<span data-ttu-id="18160-135">IHostSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="18160-135">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

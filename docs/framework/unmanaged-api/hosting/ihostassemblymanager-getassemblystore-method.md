@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 194b40b0873cee848124a5afc9a47740d59969c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 62965fa928522052b6885769e02c0211ca8d3fe0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779463"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937939"
 ---
-# <a name="ihostassemblymanagergetassemblystore-method"></a><span data-ttu-id="b7478-102">IHostAssemblyManager::GetAssemblyStore 方法</span><span class="sxs-lookup"><span data-stu-id="b7478-102">IHostAssemblyManager::GetAssemblyStore Method</span></span>
-<span data-ttu-id="b7478-103">取得的介面指標[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)表示主應用程式所載入的組件清單。</span><span class="sxs-lookup"><span data-stu-id="b7478-103">Gets an interface pointer to an [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md) that represents the list of assemblies loaded by the host.</span></span>  
+# <a name="ihostassemblymanagergetassemblystore-method"></a><span data-ttu-id="f1bbc-102">IHostAssemblyManager::GetAssemblyStore 方法</span><span class="sxs-lookup"><span data-stu-id="f1bbc-102">IHostAssemblyManager::GetAssemblyStore Method</span></span>
+<span data-ttu-id="f1bbc-103">取得[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)的介面指標, 表示主機所載入的元件清單。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-103">Gets an interface pointer to an [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md) that represents the list of assemblies loaded by the host.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b7478-104">語法</span><span class="sxs-lookup"><span data-stu-id="b7478-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1bbc-104">語法</span><span class="sxs-lookup"><span data-stu-id="f1bbc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyStore (  
@@ -35,38 +35,38 @@ HRESULT GetAssemblyStore (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b7478-105">參數</span><span class="sxs-lookup"><span data-stu-id="b7478-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f1bbc-105">參數</span><span class="sxs-lookup"><span data-stu-id="f1bbc-105">Parameters</span></span>  
  `ppAssemblyStore`  
- <span data-ttu-id="b7478-106">[out]函式指標`IHostAssemblyStore`執行個體，則為 null，如果主機未實作`IHostAssemblyStore`。</span><span class="sxs-lookup"><span data-stu-id="b7478-106">[out] A function pointer to an `IHostAssemblyStore` instance, or null, if the host does not implement `IHostAssemblyStore`.</span></span>  
+ <span data-ttu-id="f1bbc-106">脫銷`IHostAssemblyStore`實例的函式指標, 如果主機未執行`IHostAssemblyStore`, 則為 null。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-106">[out] A function pointer to an `IHostAssemblyStore` instance, or null, if the host does not implement `IHostAssemblyStore`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b7478-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="b7478-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f1bbc-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="f1bbc-107">Return Value</span></span>  
   
-|<span data-ttu-id="b7478-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b7478-108">HRESULT</span></span>|<span data-ttu-id="b7478-109">描述</span><span class="sxs-lookup"><span data-stu-id="b7478-109">Description</span></span>|  
+|<span data-ttu-id="f1bbc-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f1bbc-108">HRESULT</span></span>|<span data-ttu-id="f1bbc-109">描述</span><span class="sxs-lookup"><span data-stu-id="f1bbc-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="b7478-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="b7478-110">S_OK</span></span>|<span data-ttu-id="b7478-111">`GetAssemblyStore` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="b7478-111">`GetAssemblyStore` returned successfully.</span></span>|  
-|<span data-ttu-id="b7478-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b7478-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b7478-113">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="b7478-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="b7478-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="b7478-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="b7478-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="b7478-115">The call timed out.</span></span>|  
-|<span data-ttu-id="b7478-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="b7478-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="b7478-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="b7478-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="b7478-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="b7478-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="b7478-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="b7478-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="b7478-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b7478-120">E_FAIL</span></span>|<span data-ttu-id="b7478-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="b7478-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b7478-122">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="b7478-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b7478-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="b7478-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="b7478-124">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="b7478-124">E_NOINTERFACE</span></span>|<span data-ttu-id="b7478-125">主機並未提供的實作`IHostAssemblyStore`。</span><span class="sxs-lookup"><span data-stu-id="b7478-125">The host does not provide an implementation of `IHostAssemblyStore`.</span></span>|  
+|<span data-ttu-id="f1bbc-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="f1bbc-110">S_OK</span></span>|<span data-ttu-id="f1bbc-111">`GetAssemblyStore`已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-111">`GetAssemblyStore` returned successfully.</span></span>|  
+|<span data-ttu-id="f1bbc-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f1bbc-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f1bbc-113">Common language runtime (CLR) 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="f1bbc-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f1bbc-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f1bbc-115">呼叫超時。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-115">The call timed out.</span></span>|  
+|<span data-ttu-id="f1bbc-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f1bbc-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f1bbc-117">呼叫端沒有擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="f1bbc-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f1bbc-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f1bbc-119">已封鎖的執行緒或光纖在等候時取消了事件。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="f1bbc-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f1bbc-120">E_FAIL</span></span>|<span data-ttu-id="f1bbc-121">發生不明的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f1bbc-122">當方法傳回 E_FAIL 時, CLR 就無法在進程內使用。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f1bbc-123">對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="f1bbc-124">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="f1bbc-124">E_NOINTERFACE</span></span>|<span data-ttu-id="f1bbc-125">主機未提供的`IHostAssemblyStore`執行。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-125">The host does not provide an implementation of `IHostAssemblyStore`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b7478-126">備註</span><span class="sxs-lookup"><span data-stu-id="b7478-126">Remarks</span></span>  
- <span data-ttu-id="b7478-127">`IHostAssemblyStore` 提供方法，可讓主應用程式繫結至組件和模組與 CLR 無關。</span><span class="sxs-lookup"><span data-stu-id="b7478-127">`IHostAssemblyStore` provides methods that allow a host to bind to assemblies and modules independently of the CLR.</span></span> <span data-ttu-id="b7478-128">主機通常會提供以允許從非檔案系統中載入的組件的組件存放區。</span><span class="sxs-lookup"><span data-stu-id="b7478-128">Hosts typically provide assembly stores to allow assemblies to be loaded from formats other than the file system.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f1bbc-126">備註</span><span class="sxs-lookup"><span data-stu-id="f1bbc-126">Remarks</span></span>  
+ <span data-ttu-id="f1bbc-127">`IHostAssemblyStore`提供的方法可讓主機與 CLR 獨立系結至元件和模組。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-127">`IHostAssemblyStore` provides methods that allow a host to bind to assemblies and modules independently of the CLR.</span></span> <span data-ttu-id="f1bbc-128">主機通常會提供元件存放區, 以允許從檔案系統以外的格式載入元件。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-128">Hosts typically provide assembly stores to allow assemblies to be loaded from formats other than the file system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b7478-129">如果主機未實作`IHostAssemblyStore`，`GetAssemblyStore`應該會傳回 E_NOINTERFACE，HRESULT 值和應該設定`ppAssemblyStore`為 null。</span><span class="sxs-lookup"><span data-stu-id="b7478-129">If the host does not implement `IHostAssemblyStore`, `GetAssemblyStore` should return an HRESULT value of E_NOINTERFACE, and should set `ppAssemblyStore` to null.</span></span>  
+> <span data-ttu-id="f1bbc-129">如果主機未執行`IHostAssemblyStore`, `GetAssemblyStore`應該會傳回 E_NOINTERFACE 的 HRESULT 值, 而且應該將設定`ppAssemblyStore`為 null。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-129">If the host does not implement `IHostAssemblyStore`, `GetAssemblyStore` should return an HRESULT value of E_NOINTERFACE, and should set `ppAssemblyStore` to null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b7478-130">需求</span><span class="sxs-lookup"><span data-stu-id="b7478-130">Requirements</span></span>  
- <span data-ttu-id="b7478-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b7478-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1bbc-130">需求</span><span class="sxs-lookup"><span data-stu-id="f1bbc-130">Requirements</span></span>  
+ <span data-ttu-id="f1bbc-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f1bbc-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b7478-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b7478-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f1bbc-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f1bbc-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b7478-133">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="b7478-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f1bbc-133">**LIBRARY:** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="f1bbc-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b7478-134">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7478-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f1bbc-134">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1bbc-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b7478-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b7478-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1bbc-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1bbc-135">See also</span></span>
 
-- [<span data-ttu-id="b7478-136">IHostAssemblyManager 介面</span><span class="sxs-lookup"><span data-stu-id="b7478-136">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [<span data-ttu-id="b7478-137">IHostAssemblyStore 介面</span><span class="sxs-lookup"><span data-stu-id="b7478-137">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="f1bbc-136">IHostAssemblyManager 介面</span><span class="sxs-lookup"><span data-stu-id="f1bbc-136">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [<span data-ttu-id="f1bbc-137">IHostAssemblyStore 介面</span><span class="sxs-lookup"><span data-stu-id="f1bbc-137">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)

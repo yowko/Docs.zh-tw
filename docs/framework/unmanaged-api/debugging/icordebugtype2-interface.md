@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e953fa129308527f63df8dd8c5061252f8be57b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2f2c1e4c95c61eab4c9da6103d4ac479b4bbdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936048"
 ---
-# <a name="icordebugtype2-interface"></a><span data-ttu-id="47dbe-102">ICorDebugType2 介面</span><span class="sxs-lookup"><span data-stu-id="47dbe-102">ICorDebugType2 Interface</span></span>
-<span data-ttu-id="47dbe-103">可擴充 ICorDebugType 介面來擷取基底型別或複雜的 （使用者定義） 型別的型別識別項。</span><span class="sxs-lookup"><span data-stu-id="47dbe-103">Extends the ICorDebugType interface to retrieve the type identifier  of a base type or complex (user-defined) type.</span></span>  
+# <a name="icordebugtype2-interface"></a><span data-ttu-id="42835-102">ICorDebugType2 介面</span><span class="sxs-lookup"><span data-stu-id="42835-102">ICorDebugType2 Interface</span></span>
+<span data-ttu-id="42835-103">擴充 ICorDebugType 介面, 以取得基底類型或複雜 (使用者定義) 類型的類型識別碼。</span><span class="sxs-lookup"><span data-stu-id="42835-103">Extends the ICorDebugType interface to retrieve the type identifier  of a base type or complex (user-defined) type.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="47dbe-104">方法</span><span class="sxs-lookup"><span data-stu-id="47dbe-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="42835-104">方法</span><span class="sxs-lookup"><span data-stu-id="42835-104">Methods</span></span>  
   
-|<span data-ttu-id="47dbe-105">方法</span><span class="sxs-lookup"><span data-stu-id="47dbe-105">Method</span></span>||  
+|<span data-ttu-id="42835-105">方法</span><span class="sxs-lookup"><span data-stu-id="42835-105">Method</span></span>||  
 |------------|-|  
-|[<span data-ttu-id="47dbe-106">GetTypeID 方法</span><span class="sxs-lookup"><span data-stu-id="47dbe-106">GetTypeID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|<span data-ttu-id="47dbe-107">取得[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)這種類型。</span><span class="sxs-lookup"><span data-stu-id="47dbe-107">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>|  
+|[<span data-ttu-id="42835-106">GetTypeID 方法</span><span class="sxs-lookup"><span data-stu-id="42835-106">GetTypeID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|<span data-ttu-id="42835-107">取得此類型的[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 。</span><span class="sxs-lookup"><span data-stu-id="42835-107">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="47dbe-108">備註</span><span class="sxs-lookup"><span data-stu-id="47dbe-108">Remarks</span></span>  
- <span data-ttu-id="47dbe-109">這個介面是 ICorDebugType 介面的邏輯擴充。</span><span class="sxs-lookup"><span data-stu-id="47dbe-109">This interface is a logical extension of the ICorDebugType interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="42835-108">備註</span><span class="sxs-lookup"><span data-stu-id="42835-108">Remarks</span></span>  
+ <span data-ttu-id="42835-109">這個介面是 ICorDebugType 介面的邏輯擴充。</span><span class="sxs-lookup"><span data-stu-id="42835-109">This interface is a logical extension of the ICorDebugType interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="47dbe-110">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="47dbe-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="42835-110">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="42835-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="47dbe-111">範例</span><span class="sxs-lookup"><span data-stu-id="47dbe-111">Example</span></span>  
- <span data-ttu-id="47dbe-112">下列程式碼片段說明如何使用[ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="47dbe-112">The following code fragment illustrates the use of the [ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) method.</span></span>  
+## <a name="example"></a><span data-ttu-id="42835-111">範例</span><span class="sxs-lookup"><span data-stu-id="42835-111">Example</span></span>  
+ <span data-ttu-id="42835-112">下列程式碼片段說明如何使用[ICorDebugType2:: GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="42835-112">The following code fragment illustrates the use of the [ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) method.</span></span>  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -54,15 +54,15 @@ pType2->GetTypeID(&id);
 // now we can use existing APIs to get information about this COR_TYPEID  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="47dbe-113">需求</span><span class="sxs-lookup"><span data-stu-id="47dbe-113">Requirements</span></span>  
- <span data-ttu-id="47dbe-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="47dbe-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="42835-113">需求</span><span class="sxs-lookup"><span data-stu-id="42835-113">Requirements</span></span>  
+ <span data-ttu-id="42835-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="42835-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="47dbe-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="47dbe-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="42835-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="42835-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="47dbe-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="47dbe-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="42835-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="42835-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="47dbe-117">**.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="47dbe-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="42835-117">**.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42835-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47dbe-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="47dbe-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42835-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42835-118">See also</span></span>
 
-- [<span data-ttu-id="47dbe-119">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="47dbe-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="42835-119">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="42835-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
