@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Forms ListView 控制項中顯示插入標記
+title: 作法：在 Windows Forms ListView 控制項中顯示插入標記
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,40 +11,40 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: f3dff351052eaaf70737c6410c1367ab568f6fd0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f5de00fd41b24fc1a7f1ff4484c3a126e98952a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586515"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967825"
 ---
-# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a><span data-ttu-id="49ddd-102">HOW TO：在 Windows Forms ListView 控制項中顯示插入標記</span><span class="sxs-lookup"><span data-stu-id="49ddd-102">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>
-<span data-ttu-id="49ddd-103"><xref:System.Windows.Forms.ListView> 控制項中的插入標記會向使用者顯示將會插入拖曳項目的點。</span><span class="sxs-lookup"><span data-stu-id="49ddd-103">The insertion mark in the <xref:System.Windows.Forms.ListView> control shows users the point where dragged items will be inserted.</span></span> <span data-ttu-id="49ddd-104">當使用者將項目拖曳至另外兩個項目之間的某個點時，插入標記會顯示該項目的預期新位置。</span><span class="sxs-lookup"><span data-stu-id="49ddd-104">When a user drags an item to a point between two other items, the insertion mark shows the item's expected new location.</span></span>  
+# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a><span data-ttu-id="19739-102">HOW TO：在 Windows Forms ListView 控制項中顯示插入標記</span><span class="sxs-lookup"><span data-stu-id="19739-102">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>
+<span data-ttu-id="19739-103"><xref:System.Windows.Forms.ListView> 控制項中的插入標記會向使用者顯示將會插入拖曳項目的點。</span><span class="sxs-lookup"><span data-stu-id="19739-103">The insertion mark in the <xref:System.Windows.Forms.ListView> control shows users the point where dragged items will be inserted.</span></span> <span data-ttu-id="19739-104">當使用者將項目拖曳至另外兩個項目之間的某個點時，插入標記會顯示該項目的預期新位置。</span><span class="sxs-lookup"><span data-stu-id="19739-104">When a user drags an item to a point between two other items, the insertion mark shows the item's expected new location.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="49ddd-105">當您的應用程式呼叫 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 方法時，只有 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] 上會出現插入標記功能。</span><span class="sxs-lookup"><span data-stu-id="49ddd-105">The insertion mark feature is available only on [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] when your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="49ddd-106">在舊版作業系統上，與插入標記相關的任何程式碼都沒有任何作用，而且不會出現插入標記。</span><span class="sxs-lookup"><span data-stu-id="49ddd-106">On earlier operating systems, any code relating to the insertion mark has no effect and the insertion mark will not appear.</span></span> <span data-ttu-id="49ddd-107">如需詳細資訊，請參閱 <xref:System.Windows.Forms.ListViewInsertionMark>。</span><span class="sxs-lookup"><span data-stu-id="49ddd-107">For more information, see <xref:System.Windows.Forms.ListViewInsertionMark>.</span></span>  
+> <span data-ttu-id="19739-105">當您的應用程式呼叫 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 方法時，只有 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] 上會出現插入標記功能。</span><span class="sxs-lookup"><span data-stu-id="19739-105">The insertion mark feature is available only on [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] when your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="19739-106">在舊版作業系統上，與插入標記相關的任何程式碼都沒有任何作用，而且不會出現插入標記。</span><span class="sxs-lookup"><span data-stu-id="19739-106">On earlier operating systems, any code relating to the insertion mark has no effect and the insertion mark will not appear.</span></span> <span data-ttu-id="19739-107">如需詳細資訊，請參閱 <xref:System.Windows.Forms.ListViewInsertionMark>。</span><span class="sxs-lookup"><span data-stu-id="19739-107">For more information, see <xref:System.Windows.Forms.ListViewInsertionMark>.</span></span>  
   
- <span data-ttu-id="49ddd-108">下圖顯示插入標記：</span><span class="sxs-lookup"><span data-stu-id="49ddd-108">The following image shows an insertion mark:</span></span>  
+ <span data-ttu-id="19739-108">下圖顯示插入標記：</span><span class="sxs-lookup"><span data-stu-id="19739-108">The following image shows an insertion mark:</span></span>  
   
- <span data-ttu-id="49ddd-109">![如果螢幕擷取畫面顯示 ListView 插入標記。](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")</span><span class="sxs-lookup"><span data-stu-id="49ddd-109">![Screenshot that shows a ListView insertion mark.](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")</span></span>  
+ <span data-ttu-id="19739-109">![顯示 ListView 插入標記的螢幕擷取畫面。](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")</span><span class="sxs-lookup"><span data-stu-id="19739-109">![Screenshot that shows a ListView insertion mark.](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")</span></span>  
   
- <span data-ttu-id="49ddd-110">下列程式碼範例示範如何使用這項功能。</span><span class="sxs-lookup"><span data-stu-id="49ddd-110">The following code example demonstrates how to use this feature.</span></span>  
+ <span data-ttu-id="19739-110">下列程式碼範例示範如何使用這項功能。</span><span class="sxs-lookup"><span data-stu-id="19739-110">The following code example demonstrates how to use this feature.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="49ddd-111">範例</span><span class="sxs-lookup"><span data-stu-id="49ddd-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="19739-111">範例</span><span class="sxs-lookup"><span data-stu-id="19739-111">Example</span></span>  
  [!code-cpp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#1)]
  [!code-csharp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="49ddd-112">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="49ddd-112">Compiling the Code</span></span>  
- <span data-ttu-id="49ddd-113">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="49ddd-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="19739-112">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="19739-112">Compiling the Code</span></span>  
+ <span data-ttu-id="19739-113">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="19739-113">This example requires:</span></span>  
   
-- <span data-ttu-id="49ddd-114">System 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="49ddd-114">References to the System and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="19739-114">System 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="19739-114">References to the System and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49ddd-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="49ddd-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19739-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19739-115">See also</span></span>
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewInsertionMark>
-- [<span data-ttu-id="49ddd-116">ListView 控制項</span><span class="sxs-lookup"><span data-stu-id="49ddd-116">ListView Control</span></span>](listview-control-windows-forms.md)
-- [<span data-ttu-id="49ddd-117">ListView 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="49ddd-117">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)
-- [<span data-ttu-id="49ddd-118">逐步解說：在 Windows Form 中執行拖放作業</span><span class="sxs-lookup"><span data-stu-id="49ddd-118">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [<span data-ttu-id="19739-116">ListView 控制項</span><span class="sxs-lookup"><span data-stu-id="19739-116">ListView Control</span></span>](listview-control-windows-forms.md)
+- [<span data-ttu-id="19739-117">ListView 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="19739-117">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)
+- [<span data-ttu-id="19739-118">逐步解說：在 Windows Forms 中執行拖放操作</span><span class="sxs-lookup"><span data-stu-id="19739-118">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05c4e2a5c16f11f80cc8356a65b746eab81a3899
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9120119056fda3f16b4a0bf8bad839b74463d633
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744406"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959333"
 ---
-# <a name="icordebugassembly3enumeratecontainedassemblies-method"></a><span data-ttu-id="54e8e-102">ICorDebugAssembly3::EnumerateContainedAssemblies 方法</span><span class="sxs-lookup"><span data-stu-id="54e8e-102">ICorDebugAssembly3::EnumerateContainedAssemblies Method</span></span>
-<span data-ttu-id="54e8e-103">取得這個組件所包含之組件的列舉值。</span><span class="sxs-lookup"><span data-stu-id="54e8e-103">Gets an enumerator for the assemblies contained in this assembly.</span></span>  
+# <a name="icordebugassembly3enumeratecontainedassemblies-method"></a><span data-ttu-id="d5465-102">ICorDebugAssembly3::EnumerateContainedAssemblies 方法</span><span class="sxs-lookup"><span data-stu-id="d5465-102">ICorDebugAssembly3::EnumerateContainedAssemblies Method</span></span>
+<span data-ttu-id="d5465-103">取得這個組件所包含之組件的列舉值。</span><span class="sxs-lookup"><span data-stu-id="d5465-103">Gets an enumerator for the assemblies contained in this assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54e8e-104">語法</span><span class="sxs-lookup"><span data-stu-id="54e8e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d5465-104">語法</span><span class="sxs-lookup"><span data-stu-id="d5465-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateContainedAssemblies(  
@@ -22,29 +22,29 @@ HRESULT EnumerateContainedAssemblies(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="54e8e-105">參數</span><span class="sxs-lookup"><span data-stu-id="54e8e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d5465-105">參數</span><span class="sxs-lookup"><span data-stu-id="d5465-105">Parameters</span></span>  
  `ppAssemblies`  
- <span data-ttu-id="54e8e-106">[out]ICorDebugAssemblyEnum 介面物件，列舉值的位址指標。</span><span class="sxs-lookup"><span data-stu-id="54e8e-106">[out] A pointer to the address of an ICorDebugAssemblyEnum interface object that is the enumerator.</span></span>  
+ <span data-ttu-id="d5465-106">脫銷做為列舉值之 ICorDebugAssemblyEnum 介面物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="d5465-106">[out] A pointer to the address of an ICorDebugAssemblyEnum interface object that is the enumerator.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="54e8e-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="54e8e-107">Return Value</span></span>  
- <span data-ttu-id="54e8e-108">如果這個 `S_OK` 物件是容器，則為 `ICorDebugAssembly3`；否則為 `S_FALSE` 且列舉是空的。</span><span class="sxs-lookup"><span data-stu-id="54e8e-108">`S_OK` if this `ICorDebugAssembly3` object is a container; otherwise, `S_FALSE`, and the enumeration is empty.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d5465-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="d5465-107">Return Value</span></span>  
+ <span data-ttu-id="d5465-108">如果這個 `S_OK` 物件是容器，則為 `ICorDebugAssembly3`；否則為 `S_FALSE` 且列舉是空的。</span><span class="sxs-lookup"><span data-stu-id="d5465-108">`S_OK` if this `ICorDebugAssembly3` object is a container; otherwise, `S_FALSE`, and the enumeration is empty.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="54e8e-109">備註</span><span class="sxs-lookup"><span data-stu-id="54e8e-109">Remarks</span></span>  
- <span data-ttu-id="54e8e-110">需要符號才能列舉所包含的組件。</span><span class="sxs-lookup"><span data-stu-id="54e8e-110">Symbols are needed to enumerate the contained assemblies.</span></span> <span data-ttu-id="54e8e-111">如果不存在，則這個方法會傳回 `S_FALSE` 並且不會提供任何有效的列舉值。</span><span class="sxs-lookup"><span data-stu-id="54e8e-111">If they aren't present, the method returns `S_FALSE`, and no valid enumerator is provided.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d5465-109">備註</span><span class="sxs-lookup"><span data-stu-id="d5465-109">Remarks</span></span>  
+ <span data-ttu-id="d5465-110">需要符號才能列舉所包含的組件。</span><span class="sxs-lookup"><span data-stu-id="d5465-110">Symbols are needed to enumerate the contained assemblies.</span></span> <span data-ttu-id="d5465-111">如果不存在，則這個方法會傳回 `S_FALSE` 並且不會提供任何有效的列舉值。</span><span class="sxs-lookup"><span data-stu-id="d5465-111">If they aren't present, the method returns `S_FALSE`, and no valid enumerator is provided.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="54e8e-112">這個方法僅適用於 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="54e8e-112">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="d5465-112">這個方法僅適用於 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="d5465-112">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54e8e-113">需求</span><span class="sxs-lookup"><span data-stu-id="54e8e-113">Requirements</span></span>  
- <span data-ttu-id="54e8e-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="54e8e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d5465-113">需求</span><span class="sxs-lookup"><span data-stu-id="d5465-113">Requirements</span></span>  
+ <span data-ttu-id="d5465-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d5465-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54e8e-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="54e8e-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d5465-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d5465-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="54e8e-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54e8e-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d5465-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5465-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="54e8e-117">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54e8e-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="d5465-117">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5465-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54e8e-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="54e8e-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5465-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d5465-118">See also</span></span>
 
-- [<span data-ttu-id="54e8e-119">ICorDebugAssembly3 介面</span><span class="sxs-lookup"><span data-stu-id="54e8e-119">ICorDebugAssembly3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)
-- [<span data-ttu-id="54e8e-120">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="54e8e-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="d5465-119">ICorDebugAssembly3 介面</span><span class="sxs-lookup"><span data-stu-id="d5465-119">ICorDebugAssembly3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)
+- [<span data-ttu-id="d5465-120">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="d5465-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

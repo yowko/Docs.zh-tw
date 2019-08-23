@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將增強功能新增至 ToolStripMenuItems
+title: 作法：將增強功能新增至 ToolStripMenuItems
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,63 +24,63 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 2aa2315667b34ac448ac34cd29402e39d59e79dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9e95c3623bf9bad8395f586392a0557ad1cde880
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624090"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912576"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a><span data-ttu-id="c91f6-102">HOW TO：將增強功能新增至 ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="c91f6-102">How to: Add Enhancements to ToolStripMenuItems</span></span>
-<span data-ttu-id="c91f6-103">您可以增強的可用性<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenuStrip>控制項如下：</span><span class="sxs-lookup"><span data-stu-id="c91f6-103">You can enhance the usability of <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> controls in the following ways:</span></span>  
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a><span data-ttu-id="aa912-102">HOW TO：將增強功能新增至 ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="aa912-102">How to: Add Enhancements to ToolStripMenuItems</span></span>
+<span data-ttu-id="aa912-103">您可以利用下列方式增強<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenuStrip>控制項的可用性:</span><span class="sxs-lookup"><span data-stu-id="aa912-103">You can enhance the usability of <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> controls in the following ways:</span></span>  
   
-- <span data-ttu-id="c91f6-104">新增指定一項功能開啟或關閉，例如沿著文書處理應用程式，邊界是否顯示尺規，或指出的檔案清單中的檔案正在顯示，例如上的核取記號**視窗**功能表。</span><span class="sxs-lookup"><span data-stu-id="c91f6-104">Add check marks to designate whether a feature is turned on or off, such as whether a ruler is displayed along the margin of a word-processing application, or to indicate which file in a list of files is being displayed, such as on a **Window** menu.</span></span>  
+- <span data-ttu-id="aa912-104">加入核取記號以指定是否開啟或關閉功能, 例如尺規是否會沿著文字處理應用程式的邊界顯示, 或表示要顯示的檔案清單中的哪個檔案, 例如在 [**視窗]** 功能表上。</span><span class="sxs-lookup"><span data-stu-id="aa912-104">Add check marks to designate whether a feature is turned on or off, such as whether a ruler is displayed along the margin of a word-processing application, or to indicate which file in a list of files is being displayed, such as on a **Window** menu.</span></span>  
   
-- <span data-ttu-id="c91f6-105">新增以視覺方式表示功能表命令的映像。</span><span class="sxs-lookup"><span data-stu-id="c91f6-105">Add images that visually represent menu commands.</span></span>  
+- <span data-ttu-id="aa912-105">新增以視覺方式表示功能表命令的影像。</span><span class="sxs-lookup"><span data-stu-id="aa912-105">Add images that visually represent menu commands.</span></span>  
   
-- <span data-ttu-id="c91f6-106">顯示要執行命令提供替代滑鼠的鍵盤快速鍵。</span><span class="sxs-lookup"><span data-stu-id="c91f6-106">Display shortcut keys to provide a keyboard alternative to the mouse for performing commands.</span></span> <span data-ttu-id="c91f6-107">例如，按下 CTRL + C 會執行**複製**命令。</span><span class="sxs-lookup"><span data-stu-id="c91f6-107">For example, pressing CTRL+C performs the **Copy** command.</span></span>  
+- <span data-ttu-id="aa912-106">顯示快速鍵, 以提供鍵盤替代滑鼠來執行命令。</span><span class="sxs-lookup"><span data-stu-id="aa912-106">Display shortcut keys to provide a keyboard alternative to the mouse for performing commands.</span></span> <span data-ttu-id="aa912-107">例如, 按下 CTRL + C 會執行 [**複製**] 命令。</span><span class="sxs-lookup"><span data-stu-id="aa912-107">For example, pressing CTRL+C performs the **Copy** command.</span></span>  
   
-- <span data-ttu-id="c91f6-108">顯示存取金鑰 功能表導覽提供替代滑鼠的鍵盤。</span><span class="sxs-lookup"><span data-stu-id="c91f6-108">Display access keys to provide a keyboard alternative to the mouse for menu navigation.</span></span> <span data-ttu-id="c91f6-109">例如，按下 ALT + F 會選擇**檔案**功能表。</span><span class="sxs-lookup"><span data-stu-id="c91f6-109">For example, pressing ALT+F chooses the **File** menu.</span></span>  
+- <span data-ttu-id="aa912-108">顯示存取金鑰以提供鍵盤替代滑鼠來流覽功能表。</span><span class="sxs-lookup"><span data-stu-id="aa912-108">Display access keys to provide a keyboard alternative to the mouse for menu navigation.</span></span> <span data-ttu-id="aa912-109">例如, 按 ALT + F 會選擇 [檔案] 功能表。</span><span class="sxs-lookup"><span data-stu-id="aa912-109">For example, pressing ALT+F chooses the **File** menu.</span></span>  
   
-- <span data-ttu-id="c91f6-110">顯示分組相關的命令，並讓功能表更容易閱讀的分隔線。</span><span class="sxs-lookup"><span data-stu-id="c91f6-110">Show separator bars to group related commands and make menus more readable.</span></span>  
+- <span data-ttu-id="aa912-110">顯示分隔線以將相關的命令分組, 並讓功能表更容易閱讀。</span><span class="sxs-lookup"><span data-stu-id="aa912-110">Show separator bars to group related commands and make menus more readable.</span></span>  
   
-### <a name="to-display-a-check-mark-on-a-menu-command"></a><span data-ttu-id="c91f6-111">若要顯示功能表命令上的核取記號</span><span class="sxs-lookup"><span data-stu-id="c91f6-111">To display a check mark on a menu command</span></span>  
+### <a name="to-display-a-check-mark-on-a-menu-command"></a><span data-ttu-id="aa912-111">若要在功能表命令上顯示核取記號</span><span class="sxs-lookup"><span data-stu-id="aa912-111">To display a check mark on a menu command</span></span>  
   
-- <span data-ttu-id="c91f6-112">設定其<xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>屬性設`true`。</span><span class="sxs-lookup"><span data-stu-id="c91f6-112">Set its <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> property to `true`.</span></span>  
+- <span data-ttu-id="aa912-112">將其<xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>屬性設`true`為。</span><span class="sxs-lookup"><span data-stu-id="aa912-112">Set its <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> property to `true`.</span></span>  
   
-     <span data-ttu-id="c91f6-113">這也會設定<xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A>屬性設`true`。</span><span class="sxs-lookup"><span data-stu-id="c91f6-113">This also sets the <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> property to `true`.</span></span> <span data-ttu-id="c91f6-114">只有當您想要顯示為已核取，根據預設，不論是否選取的功能表命令，請使用此程序。</span><span class="sxs-lookup"><span data-stu-id="c91f6-114">Use this procedure only if you want the menu command to appear as checked by default, regardless of whether it is selected.</span></span>  
+     <span data-ttu-id="aa912-113">這也會將<xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A>屬性設定`true`為。</span><span class="sxs-lookup"><span data-stu-id="aa912-113">This also sets the <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> property to `true`.</span></span> <span data-ttu-id="aa912-114">只有在您想要讓功能表命令預設顯示為 [已核取] 時 (不論是否已選取), 才使用此程式。</span><span class="sxs-lookup"><span data-stu-id="aa912-114">Use this procedure only if you want the menu command to appear as checked by default, regardless of whether it is selected.</span></span>  
   
-### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a><span data-ttu-id="c91f6-115">若要顯示 變更狀態時，使用每按一下核取記號</span><span class="sxs-lookup"><span data-stu-id="c91f6-115">To display a check mark that changes state with each click</span></span>  
+### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a><span data-ttu-id="aa912-115">顯示每次點擊時都變更狀態的核取記號</span><span class="sxs-lookup"><span data-stu-id="aa912-115">To display a check mark that changes state with each click</span></span>  
   
-- <span data-ttu-id="c91f6-116">將功能表命令的<xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A>屬性設`true`。</span><span class="sxs-lookup"><span data-stu-id="c91f6-116">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> property to `true`.</span></span>  
+- <span data-ttu-id="aa912-116">將功能表命令的<xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A>屬性設定為。 `true`</span><span class="sxs-lookup"><span data-stu-id="aa912-116">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> property to `true`.</span></span>  
   
-### <a name="to-add-an-image-to-a-menu-command"></a><span data-ttu-id="c91f6-117">若要將影像加入功能表命令</span><span class="sxs-lookup"><span data-stu-id="c91f6-117">To add an image to a menu command</span></span>  
+### <a name="to-add-an-image-to-a-menu-command"></a><span data-ttu-id="aa912-117">將影像新增至功能表命令</span><span class="sxs-lookup"><span data-stu-id="aa912-117">To add an image to a menu command</span></span>  
   
-- <span data-ttu-id="c91f6-118">將功能表命令的<xref:System.Windows.Forms.ToolStripItem.Image%2A>映像名稱的屬性。</span><span class="sxs-lookup"><span data-stu-id="c91f6-118">Set the menu command's <xref:System.Windows.Forms.ToolStripItem.Image%2A> property to the name of the image.</span></span> <span data-ttu-id="c91f6-119">如果<xref:System.Windows.Forms.ToolStripItemDisplayStyle>這個功能表命令的屬性設定為<xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>或<xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>，無法顯示影像。</span><span class="sxs-lookup"><span data-stu-id="c91f6-119">If the <xref:System.Windows.Forms.ToolStripItemDisplayStyle> property of this menu command is set to <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> or <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, the image cannot be displayed.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="c91f6-120">影像邊界也可以顯示勾號，是否您選擇如此。</span><span class="sxs-lookup"><span data-stu-id="c91f6-120">The image margin can also show a check mark if you so choose.</span></span> <span data-ttu-id="c91f6-121">此外，您可以設定<xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>映像，以屬性`true`，並具有其周圍的陰影框線呈現的影像，就將它在執行階段。</span><span class="sxs-lookup"><span data-stu-id="c91f6-121">Also, you can set the <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> property of the image to `true`, and the image will appear with a hatched border around it at run time.</span></span>  
-  
-### <a name="to-display-a-shortcut-key-for-a-menu-command"></a><span data-ttu-id="c91f6-122">若要顯示的功能表命令的快速鍵</span><span class="sxs-lookup"><span data-stu-id="c91f6-122">To display a shortcut key for a menu command</span></span>  
-  
-- <span data-ttu-id="c91f6-123">將功能表命令的<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>屬性所需要的鍵盤組合，例如 CTRL + O**開啟**功能表命令，以及組<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>屬性設`true`。</span><span class="sxs-lookup"><span data-stu-id="c91f6-123">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> property to the desired keyboard combination, such as CTRL+O for the **Open** menu command, and set the <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> property to `true`.</span></span>  
-  
-### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a><span data-ttu-id="c91f6-124">若要顯示的功能表命令的自訂快速鍵</span><span class="sxs-lookup"><span data-stu-id="c91f6-124">To display custom shortcut keys for a menu command</span></span>  
-  
-- <span data-ttu-id="c91f6-125">將功能表命令的<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A>屬性所需要的鍵盤組合，例如 CTRL + SHIFT + O，而非 SHIFT + CTRL + O，以及組<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>屬性設`true`。</span><span class="sxs-lookup"><span data-stu-id="c91f6-125">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> property to the desired keyboard combination, such as CTRL+SHIFT+O rather than SHIFT+CTRL+O, and set the <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> property to `true`.</span></span>  
-  
-### <a name="to-display-an-access-key-for-a-menu-command"></a><span data-ttu-id="c91f6-126">若要顯示的功能表命令的存取金鑰</span><span class="sxs-lookup"><span data-stu-id="c91f6-126">To display an access key for a menu command</span></span>  
-  
-- <span data-ttu-id="c91f6-127">當您將設定<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性功能表命令，請輸入連字號 (&) 您想要作為便捷鍵加上底線的字母前面。</span><span class="sxs-lookup"><span data-stu-id="c91f6-127">When you set the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property for the menu command, enter an ampersand (&) before the letter you want to be underlined as the access key.</span></span> <span data-ttu-id="c91f6-128">例如，輸入`&Open`作為<xref:System.Windows.Forms.ToolStripItem.Text%2A>功能表項目的屬性會顯示為功能表命令<u>O</u>畫筆。</span><span class="sxs-lookup"><span data-stu-id="c91f6-128">For example, typing `&Open` as the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property of a menu item will result in a menu command that appears as <u>O</u>pen.</span></span>
-  
-     <span data-ttu-id="c91f6-129">瀏覽至這個功能表命令、 按下 ALT 以焦點轉給<xref:System.Windows.Forms.MenuStrip>，然後按 的功能表名稱的存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="c91f6-129">To navigate to this menu command, press ALT to give focus to the <xref:System.Windows.Forms.MenuStrip>, and press the access key of the menu name.</span></span> <span data-ttu-id="c91f6-130">當功能表會隨即開啟，並顯示具有便捷鍵的項目時，您只需要按下便捷鍵以選取功能表命令。</span><span class="sxs-lookup"><span data-stu-id="c91f6-130">When the menu opens and shows items with access keys, you only need to press the access key to select the menu command.</span></span>  
+- <span data-ttu-id="aa912-118">將功能表命令的<xref:System.Windows.Forms.ToolStripItem.Image%2A>屬性設定為映射的名稱。</span><span class="sxs-lookup"><span data-stu-id="aa912-118">Set the menu command's <xref:System.Windows.Forms.ToolStripItem.Image%2A> property to the name of the image.</span></span> <span data-ttu-id="aa912-119">如果此<xref:System.Windows.Forms.ToolStripItemDisplayStyle>功能表命令的屬性設定為<xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>或<xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, 則無法顯示影像。</span><span class="sxs-lookup"><span data-stu-id="aa912-119">If the <xref:System.Windows.Forms.ToolStripItemDisplayStyle> property of this menu command is set to <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> or <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, the image cannot be displayed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c91f6-131">應避免定義重複的便捷鍵，例如定義相同的功能表系統中的兩倍的 ALT + F。</span><span class="sxs-lookup"><span data-stu-id="c91f6-131">Avoid defining duplicate access keys, such as defining ALT+F twice in the same menu system.</span></span> <span data-ttu-id="c91f6-132">重複的便捷鍵的選取項目順序，將無法保證。</span><span class="sxs-lookup"><span data-stu-id="c91f6-132">The selection order of duplicate access keys cannot be guaranteed.</span></span>  
+> <span data-ttu-id="aa912-120">如果您選擇, 影像邊界也可以顯示核取記號。</span><span class="sxs-lookup"><span data-stu-id="aa912-120">The image margin can also show a check mark if you so choose.</span></span> <span data-ttu-id="aa912-121">此外, 您可以將影像<xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>的屬性設定為`true`, 而且影像會在執行時間以陰影框線括住。</span><span class="sxs-lookup"><span data-stu-id="aa912-121">Also, you can set the <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> property of the image to `true`, and the image will appear with a hatched border around it at run time.</span></span>  
   
-### <a name="to-display-a-separator-bar-between-menu-commands"></a><span data-ttu-id="c91f6-133">若要顯示功能表命令之間的分隔線</span><span class="sxs-lookup"><span data-stu-id="c91f6-133">To display a separator bar between menu commands</span></span>  
+### <a name="to-display-a-shortcut-key-for-a-menu-command"></a><span data-ttu-id="aa912-122">若要顯示功能表命令的快速鍵</span><span class="sxs-lookup"><span data-stu-id="aa912-122">To display a shortcut key for a menu command</span></span>  
   
-- <span data-ttu-id="c91f6-134">定義之後您<xref:System.Windows.Forms.MenuStrip>和項目會包含使用<xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A>或是<xref:System.Windows.Forms.ToolStripItemCollection.Add%2A>方法來加入功能表命令和<xref:System.Windows.Forms.ToolStripSeparator>控制項新增至<xref:System.Windows.Forms.MenuStrip>您想要的順序。</span><span class="sxs-lookup"><span data-stu-id="c91f6-134">After you define your <xref:System.Windows.Forms.MenuStrip> and the items it will contain, use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> or <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add the menu commands and <xref:System.Windows.Forms.ToolStripSeparator> controls to the <xref:System.Windows.Forms.MenuStrip> in the order you want.</span></span>  
+- <span data-ttu-id="aa912-123">將功能表命令<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>的屬性設為所需的鍵盤組合 (例如, CTRL + O 用於 [**開啟**] 功能表命令<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> ), 並將屬性設定為。 `true`</span><span class="sxs-lookup"><span data-stu-id="aa912-123">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> property to the desired keyboard combination, such as CTRL+O for the **Open** menu command, and set the <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> property to `true`.</span></span>  
+  
+### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a><span data-ttu-id="aa912-124">若要顯示功能表命令的自訂快速鍵</span><span class="sxs-lookup"><span data-stu-id="aa912-124">To display custom shortcut keys for a menu command</span></span>  
+  
+- <span data-ttu-id="aa912-125">將功能表命令的<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A>屬性設為所需的鍵盤組合, 例如 CTRL + SHIFT + o, 而不是 SHIFT + CTRL + o, 然後<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>將屬性設定為。 `true`</span><span class="sxs-lookup"><span data-stu-id="aa912-125">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> property to the desired keyboard combination, such as CTRL+SHIFT+O rather than SHIFT+CTRL+O, and set the <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> property to `true`.</span></span>  
+  
+### <a name="to-display-an-access-key-for-a-menu-command"></a><span data-ttu-id="aa912-126">若要顯示功能表命令的存取金鑰</span><span class="sxs-lookup"><span data-stu-id="aa912-126">To display an access key for a menu command</span></span>  
+  
+- <span data-ttu-id="aa912-127">當您設定<xref:System.Windows.Forms.ToolStripItem.Text%2A>功能表命令的屬性時, 請在您想要加上底線做為存取金鑰的字母前面輸入連字號 (&)。</span><span class="sxs-lookup"><span data-stu-id="aa912-127">When you set the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property for the menu command, enter an ampersand (&) before the letter you want to be underlined as the access key.</span></span> <span data-ttu-id="aa912-128">例如, 輸入`&Open`做為功能表<xref:System.Windows.Forms.ToolStripItem.Text%2A>項的屬性, 將會產生顯示為 [ <u>O</u>畫筆] 的功能表命令。</span><span class="sxs-lookup"><span data-stu-id="aa912-128">For example, typing `&Open` as the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property of a menu item will result in a menu command that appears as <u>O</u>pen.</span></span>
+  
+     <span data-ttu-id="aa912-129">若要流覽至此功能表命令, 請按下 ALT 將焦點放<xref:System.Windows.Forms.MenuStrip>在, 然後按下功能表名稱的存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="aa912-129">To navigate to this menu command, press ALT to give focus to the <xref:System.Windows.Forms.MenuStrip>, and press the access key of the menu name.</span></span> <span data-ttu-id="aa912-130">當功能表開啟並顯示具有存取金鑰的專案時, 您只需要按下存取金鑰, 即可選取功能表命令。</span><span class="sxs-lookup"><span data-stu-id="aa912-130">When the menu opens and shows items with access keys, you only need to press the access key to select the menu command.</span></span>  
+  
+> [!NOTE]
+> <span data-ttu-id="aa912-131">避免在相同的功能表系統中定義重複的存取金鑰, 例如定義 ALT + F 兩次。</span><span class="sxs-lookup"><span data-stu-id="aa912-131">Avoid defining duplicate access keys, such as defining ALT+F twice in the same menu system.</span></span> <span data-ttu-id="aa912-132">無法保證重複存取金鑰的選取順序。</span><span class="sxs-lookup"><span data-stu-id="aa912-132">The selection order of duplicate access keys cannot be guaranteed.</span></span>  
+  
+### <a name="to-display-a-separator-bar-between-menu-commands"></a><span data-ttu-id="aa912-133">若要在功能表命令之間顯示分隔線</span><span class="sxs-lookup"><span data-stu-id="aa912-133">To display a separator bar between menu commands</span></span>  
+  
+- <span data-ttu-id="aa912-134">定義<xref:System.Windows.Forms.MenuStrip>和它將包含的專案之後, 請<xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A>使用或<xref:System.Windows.Forms.ToolStripItemCollection.Add%2A>方法, 依您想要的順序, <xref:System.Windows.Forms.ToolStripSeparator> <xref:System.Windows.Forms.MenuStrip>將功能表命令和控制項加入至。</span><span class="sxs-lookup"><span data-stu-id="aa912-134">After you define your <xref:System.Windows.Forms.MenuStrip> and the items it will contain, use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> or <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add the menu commands and <xref:System.Windows.Forms.ToolStripSeparator> controls to the <xref:System.Windows.Forms.MenuStrip> in the order you want.</span></span>  
   
     ```vb  
     ' This code adds a top-level File menu to the MenuStrip.  
@@ -113,8 +113,8 @@ ms.locfileid: "64624090"
     this.exitToolStripMenuItem});  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="c91f6-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c91f6-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa912-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aa912-135">See also</span></span>
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [<span data-ttu-id="c91f6-136">MenuStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="c91f6-136">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="aa912-136">MenuStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="aa912-136">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)

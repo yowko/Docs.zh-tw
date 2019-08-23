@@ -1,44 +1,44 @@
 ---
-title: HOW TO：註冊和設定服務 Moniker
+title: 作法：註冊和設定服務 Moniker
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: f1f2b462ef0412b0f11a9ba5074f7546e6ee84f2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d14facf435d575b9db5129b732938658c921f97f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643760"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934311"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a><span data-ttu-id="1959e-102">HOW TO：註冊和設定服務 Moniker</span><span class="sxs-lookup"><span data-stu-id="1959e-102">How to: Register and Configure a Service Moniker</span></span>
-<span data-ttu-id="1959e-103">之前使用型別之合約中的 Windows Communication Foundation (WCF) 服務 moniker，在 COM 應用程式中的，您必須向 COM 註冊必要的屬性的類型，並使用必要的繫結設定 COM 應用程式和 moniker組態設定。</span><span class="sxs-lookup"><span data-stu-id="1959e-103">Before using the Windows Communication Foundation (WCF) service moniker within a COM application with a typed contract, you must register the required attributed types with COM, and configure the COM application and the moniker with the required binding configuration.</span></span>  
+# <a name="how-to-register-and-configure-a-service-moniker"></a><span data-ttu-id="106fe-102">作法：註冊和設定服務 Moniker</span><span class="sxs-lookup"><span data-stu-id="106fe-102">How to: Register and Configure a Service Moniker</span></span>
+<span data-ttu-id="106fe-103">在具有具型別合約的 COM 應用程式中使用 Windows Communication Foundation (WCF) 服務標記之前, 您必須使用 COM 註冊必要的屬性化型別, 並以必要的系結設定 COM 應用程式和名字標記配置.</span><span class="sxs-lookup"><span data-stu-id="106fe-103">Before using the Windows Communication Foundation (WCF) service moniker within a COM application with a typed contract, you must register the required attributed types with COM, and configure the COM application and the moniker with the required binding configuration.</span></span>  
   
-### <a name="to-register-the-required-attributed-types-with-com"></a><span data-ttu-id="1959e-104">使用 COM 註冊必要的屬性化型別</span><span class="sxs-lookup"><span data-stu-id="1959e-104">To register the required attributed types with COM</span></span>  
+### <a name="to-register-the-required-attributed-types-with-com"></a><span data-ttu-id="106fe-104">使用 COM 註冊必要的屬性化型別</span><span class="sxs-lookup"><span data-stu-id="106fe-104">To register the required attributed types with COM</span></span>  
   
-1. <span data-ttu-id="1959e-105">使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具從 WCF 服務擷取中繼資料合約。</span><span class="sxs-lookup"><span data-stu-id="1959e-105">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool to retrieve the metadata contract from the WCF service.</span></span> <span data-ttu-id="1959e-106">此 WCF 用戶端組件和用戶端應用程式組態檔中產生的原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="1959e-106">This generates the source code for a WCF client assembly and a client application configuration file.</span></span>  
+1. <span data-ttu-id="106fe-105">使用[System.servicemodel 中繼資料公用程式工具 (Svcutil)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具, 從 WCF 服務抓取中繼資料合約。</span><span class="sxs-lookup"><span data-stu-id="106fe-105">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool to retrieve the metadata contract from the WCF service.</span></span> <span data-ttu-id="106fe-106">這會產生 WCF 用戶端元件和用戶端應用程式設定檔的原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="106fe-106">This generates the source code for a WCF client assembly and a client application configuration file.</span></span>  
   
-2. <span data-ttu-id="1959e-107">請確定組件中的型別已標示為 `ComVisible`。</span><span class="sxs-lookup"><span data-stu-id="1959e-107">Ensure that the types in the assembly are marked as `ComVisible`.</span></span> <span data-ttu-id="1959e-108">若要這樣做，請在 Visual Studio 專案中將下列屬性新增至 AssemblyInfo.cs 檔。</span><span class="sxs-lookup"><span data-stu-id="1959e-108">To do so, add the following attribute to the AssemblyInfo.cs file in your Visual Studio project.</span></span>  
+2. <span data-ttu-id="106fe-107">請確定組件中的型別已標示為 `ComVisible`。</span><span class="sxs-lookup"><span data-stu-id="106fe-107">Ensure that the types in the assembly are marked as `ComVisible`.</span></span> <span data-ttu-id="106fe-108">若要這樣做，請在 Visual Studio 專案中將下列屬性新增至 AssemblyInfo.cs 檔。</span><span class="sxs-lookup"><span data-stu-id="106fe-108">To do so, add the following attribute to the AssemblyInfo.cs file in your Visual Studio project.</span></span>  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3. <span data-ttu-id="1959e-109">編譯 managed 的 WCF 用戶端，做為強式名稱組件。</span><span class="sxs-lookup"><span data-stu-id="1959e-109">Compile the managed WCF client as a strong-named assembly.</span></span> <span data-ttu-id="1959e-110">這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。</span><span class="sxs-lookup"><span data-stu-id="1959e-110">This requires signing with a cryptographic key pair.</span></span> <span data-ttu-id="1959e-111">如需詳細資訊，請參閱 <<c0> [ 簽署以強式名稱組件](https://go.microsoft.com/fwlink/?LinkId=94874).NET 開發人員指南中。</span><span class="sxs-lookup"><span data-stu-id="1959e-111">For more information, see [Signing an Assembly with a Strong Name](https://go.microsoft.com/fwlink/?LinkId=94874) in the .NET Developer's Guide.</span></span>  
+3. <span data-ttu-id="106fe-109">將 managed WCF 用戶端編譯為強式名稱的元件。</span><span class="sxs-lookup"><span data-stu-id="106fe-109">Compile the managed WCF client as a strong-named assembly.</span></span> <span data-ttu-id="106fe-110">這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。</span><span class="sxs-lookup"><span data-stu-id="106fe-110">This requires signing with a cryptographic key pair.</span></span> <span data-ttu-id="106fe-111">如需詳細資訊, 請參閱《 .NET 開發人員手冊》中的[使用強式名稱簽署元件](https://go.microsoft.com/fwlink/?LinkId=94874)。</span><span class="sxs-lookup"><span data-stu-id="106fe-111">For more information, see [Signing an Assembly with a Strong Name](https://go.microsoft.com/fwlink/?LinkId=94874) in the .NET Developer's Guide.</span></span>  
   
-4. <span data-ttu-id="1959e-112">使用組件註冊 (Regasm.exe) 工具並搭配 `/tlb` 選項，以使用 COM 註冊組件中的型別。</span><span class="sxs-lookup"><span data-stu-id="1959e-112">Use the Assembly Registration (Regasm.exe) tool with the `/tlb` option to register the types in the assembly with COM.</span></span>  
+4. <span data-ttu-id="106fe-112">使用組件註冊 (Regasm.exe) 工具並搭配 `/tlb` 選項，以使用 COM 註冊組件中的型別。</span><span class="sxs-lookup"><span data-stu-id="106fe-112">Use the Assembly Registration (Regasm.exe) tool with the `/tlb` option to register the types in the assembly with COM.</span></span>  
   
-5. <span data-ttu-id="1959e-113">使用全域組件快取 (Gacutil.exe) 工具，將組件新增至全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="1959e-113">Use the Global Assembly Cache (Gacutil.exe) tool to add the assembly to the global assembly cache.</span></span>  
+5. <span data-ttu-id="106fe-113">使用全域組件快取 (Gacutil.exe) 工具，將組件新增至全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="106fe-113">Use the Global Assembly Cache (Gacutil.exe) tool to add the assembly to the global assembly cache.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="1959e-114">簽署組件並將該組件新增至全域組件快取都是選用性步驟，但這兩個步驟可以簡化在執行階段時，從正確的位置載入組件的程序。</span><span class="sxs-lookup"><span data-stu-id="1959e-114">Signing the assembly and adding it to the Global Assembly Cache are optional steps, but they can simplify the process of loading the assembly from the correct location at runtime.</span></span>  
+    > <span data-ttu-id="106fe-114">簽署組件並將該組件新增至全域組件快取都是選用性步驟，但這兩個步驟可以簡化在執行階段時，從正確的位置載入組件的程序。</span><span class="sxs-lookup"><span data-stu-id="106fe-114">Signing the assembly and adding it to the Global Assembly Cache are optional steps, but they can simplify the process of loading the assembly from the correct location at runtime.</span></span>  
   
-### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a><span data-ttu-id="1959e-115">使用必要的繫結組態設定 COM 應用程式和 Moniker</span><span class="sxs-lookup"><span data-stu-id="1959e-115">To configure the COM application and the moniker with the required binding configuration</span></span>  
+### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a><span data-ttu-id="106fe-115">使用必要的繫結組態設定 COM 應用程式和 Moniker</span><span class="sxs-lookup"><span data-stu-id="106fe-115">To configure the COM application and the moniker with the required binding configuration</span></span>  
   
-- <span data-ttu-id="1959e-116">將繫結定義放 (所產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生的用戶端應用程式組態檔中) 用戶端應用程式組態檔中。</span><span class="sxs-lookup"><span data-stu-id="1959e-116">Place the binding definitions (generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) in the generated client application configuration file) in the client application's configuration file.</span></span> <span data-ttu-id="1959e-117">例如，若是名稱為 CallCenterClient.exe 的 Visual Basic 6.0 可執行檔，應該將組態放置在與可執行檔相同之目錄內的 CallCenterConfig.exe.config 檔案中。</span><span class="sxs-lookup"><span data-stu-id="1959e-117">For example, for a Visual Basic 6.0 executable named CallCenterClient.exe, the configuration should be placed in a file named CallCenterConfig.exe.config within the same directory as the executable.</span></span> <span data-ttu-id="1959e-118">用戶端應用程式現在就可使用 Moniker。</span><span class="sxs-lookup"><span data-stu-id="1959e-118">The client application can now use the moniker.</span></span> <span data-ttu-id="1959e-119">請注意，如果使用其中一個標準繫結 WCF 所提供的型別，不需要繫結設定。</span><span class="sxs-lookup"><span data-stu-id="1959e-119">Note that the binding configuration is not required if using one of the standard binding types provided by WCF.</span></span>  
+- <span data-ttu-id="106fe-116">在用戶端應用程式的設定檔中, 將「配置」[中繼資料公用程式工具 (Svcutil)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的系結定義放在產生的用戶端應用程式設定檔中。</span><span class="sxs-lookup"><span data-stu-id="106fe-116">Place the binding definitions (generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) in the generated client application configuration file) in the client application's configuration file.</span></span> <span data-ttu-id="106fe-117">例如，若是名稱為 CallCenterClient.exe 的 Visual Basic 6.0 可執行檔，應該將組態放置在與可執行檔相同之目錄內的 CallCenterConfig.exe.config 檔案中。</span><span class="sxs-lookup"><span data-stu-id="106fe-117">For example, for a Visual Basic 6.0 executable named CallCenterClient.exe, the configuration should be placed in a file named CallCenterConfig.exe.config within the same directory as the executable.</span></span> <span data-ttu-id="106fe-118">用戶端應用程式現在就可使用 Moniker。</span><span class="sxs-lookup"><span data-stu-id="106fe-118">The client application can now use the moniker.</span></span> <span data-ttu-id="106fe-119">請注意, 如果使用 WCF 所提供的其中一個標準系結類型, 則不需要系結設定。</span><span class="sxs-lookup"><span data-stu-id="106fe-119">Note that the binding configuration is not required if using one of the standard binding types provided by WCF.</span></span>  
   
-     <span data-ttu-id="1959e-120">接著會註冊下列型別。</span><span class="sxs-lookup"><span data-stu-id="1959e-120">The following type is registered.</span></span>  
+     <span data-ttu-id="106fe-120">接著會註冊下列型別。</span><span class="sxs-lookup"><span data-stu-id="106fe-120">The following type is registered.</span></span>  
   
     ```  
     using System.ServiceModel;  
@@ -55,7 +55,7 @@ ms.locfileid: "64643760"
     }  
     ```  
   
-     <span data-ttu-id="1959e-121">已使用 `wsHttpBinding` 繫結公開應用程式。</span><span class="sxs-lookup"><span data-stu-id="1959e-121">The application is exposed using a `wsHttpBinding` binding.</span></span> <span data-ttu-id="1959e-122">針對提供的型別和應用程式組態，將會使用下列範例 Moniker 字串。</span><span class="sxs-lookup"><span data-stu-id="1959e-122">For the given type and application configuration, the following example moniker strings are used.</span></span>  
+     <span data-ttu-id="106fe-121">已使用 `wsHttpBinding` 繫結公開應用程式。</span><span class="sxs-lookup"><span data-stu-id="106fe-121">The application is exposed using a `wsHttpBinding` binding.</span></span> <span data-ttu-id="106fe-122">針對提供的型別和應用程式組態，將會使用下列範例 Moniker 字串。</span><span class="sxs-lookup"><span data-stu-id="106fe-122">For the given type and application configuration, the following example moniker strings are used.</span></span>  
   
     ```  
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
@@ -67,7 +67,7 @@ ms.locfileid: "64643760"
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
     ```  
   
-     <span data-ttu-id="1959e-123">在將參考新增至包含 `IMathService` 型別的組件之後，您就可以從 Visual Basic 6.0 應用程式中使用這些 Moniker 字串，如下列範例程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="1959e-123">You can use either of these moniker strings from within a Visual Basic 6.0 application, after adding a reference to the assembly that contains the `IMathService` types, as shown in the following sample code.</span></span>  
+     <span data-ttu-id="106fe-123">在將參考新增至包含 `IMathService` 型別的組件之後，您就可以從 Visual Basic 6.0 應用程式中使用這些 Moniker 字串，如下列範例程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="106fe-123">You can use either of these moniker strings from within a Visual Basic 6.0 application, after adding a reference to the assembly that contains the `IMathService` types, as shown in the following sample code.</span></span>  
   
     ```  
     Dim MathProxy As IMathService  
@@ -81,22 +81,22 @@ ms.locfileid: "64643760"
     result = MathProxy.Add(3, 5)  
     ```  
   
-     <span data-ttu-id="1959e-124">在這個範例中，針對用戶端應用程式將繫結組態 `Binding1` 的定義存放在適當命名的組態檔中，例如 vb6appname.exe.config。</span><span class="sxs-lookup"><span data-stu-id="1959e-124">In this example, the definition for the binding configuration `Binding1` is stored in a suitably named configuration file for the client application, such as vb6appname.exe.config.</span></span>  
+     <span data-ttu-id="106fe-124">在這個範例中，針對用戶端應用程式將繫結組態 `Binding1` 的定義存放在適當命名的組態檔中，例如 vb6appname.exe.config。</span><span class="sxs-lookup"><span data-stu-id="106fe-124">In this example, the definition for the binding configuration `Binding1` is stored in a suitably named configuration file for the client application, such as vb6appname.exe.config.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="1959e-125">您可以在 C#、C++ 或其他 .NET 語言應用程式中使用類似的程式碼。</span><span class="sxs-lookup"><span data-stu-id="1959e-125">You can use similar code in a C#, a C++, or any other .NET Language application.</span></span>  
+    > <span data-ttu-id="106fe-125">您可以在 C#、C++ 或其他 .NET 語言應用程式中使用類似的程式碼。</span><span class="sxs-lookup"><span data-stu-id="106fe-125">You can use similar code in a C#, a C++, or any other .NET Language application.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="1959e-126">:如果 moniker 的格式不正確，或如果服務無法使用，呼叫`GetObject`會傳回 「 無效的語法 」 錯誤。</span><span class="sxs-lookup"><span data-stu-id="1959e-126">: If the moniker is malformed or if the service is unavailable, the call to `GetObject` returns an error of "Invalid Syntax".</span></span> <span data-ttu-id="1959e-127">如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。</span><span class="sxs-lookup"><span data-stu-id="1959e-127">If you receive this error, make sure the moniker you are using is correct and the service is available.</span></span>  
+    > <span data-ttu-id="106fe-126">:如果標記的格式不正確或服務無法使用, 則呼叫`GetObject`會傳回「不正確語法」錯誤。</span><span class="sxs-lookup"><span data-stu-id="106fe-126">: If the moniker is malformed or if the service is unavailable, the call to `GetObject` returns an error of "Invalid Syntax".</span></span> <span data-ttu-id="106fe-127">如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。</span><span class="sxs-lookup"><span data-stu-id="106fe-127">If you receive this error, make sure the moniker you are using is correct and the service is available.</span></span>  
   
-     <span data-ttu-id="1959e-128">雖然本主題著重於從 VB 6.0 程式碼中使用服務 Moniker，但您也可以使用其他語言中的服務 Moniker。</span><span class="sxs-lookup"><span data-stu-id="1959e-128">Although this topic focuses on using the service moniker from VB 6.0 code, you can use a service moniker from other languages.</span></span> <span data-ttu-id="1959e-129">從 C++ 程式碼中使用 Moniker 時，應該以 "no_namespace named_guids raw_interfaces_only" 這個名稱匯入 Svcutil.exe 產生的組件，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="1959e-129">When using a moniker from C++ code the Svcutil.exe generated assembly should be imported with "no_namespace named_guids raw_interfaces_only" as shown in the following code.</span></span>  
+     <span data-ttu-id="106fe-128">雖然本主題著重於從 VB 6.0 程式碼中使用服務 Moniker，但您也可以使用其他語言中的服務 Moniker。</span><span class="sxs-lookup"><span data-stu-id="106fe-128">Although this topic focuses on using the service moniker from VB 6.0 code, you can use a service moniker from other languages.</span></span> <span data-ttu-id="106fe-129">從 C++ 程式碼中使用 Moniker 時，應該以 "no_namespace named_guids raw_interfaces_only" 這個名稱匯入 Svcutil.exe 產生的組件，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="106fe-129">When using a moniker from C++ code the Svcutil.exe generated assembly should be imported with "no_namespace named_guids raw_interfaces_only" as shown in the following code.</span></span>  
   
     ```  
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   
-     <span data-ttu-id="1959e-130">這樣會修改匯入的介面定義，讓所有方法都會傳回 `HResult`。</span><span class="sxs-lookup"><span data-stu-id="1959e-130">This modifies the imported interface definitions so that all methods return an `HResult`.</span></span> <span data-ttu-id="1959e-131">其他傳回值都會轉換為 Out 參數。</span><span class="sxs-lookup"><span data-stu-id="1959e-131">Any other return values are converted into out parameters.</span></span> <span data-ttu-id="1959e-132">整體的執行方法仍然相同。</span><span class="sxs-lookup"><span data-stu-id="1959e-132">The overall execution of the methods remains the same.</span></span> <span data-ttu-id="1959e-133">這樣可讓您在 Proxy 上呼叫方法時，判斷發生例外狀況的原因。</span><span class="sxs-lookup"><span data-stu-id="1959e-133">This allows you to determine the cause of an exception when calling a method on the proxy.</span></span> <span data-ttu-id="1959e-134">不過這個功能只能用於 C++ 程式碼。</span><span class="sxs-lookup"><span data-stu-id="1959e-134">This functionality is only available from C++ code.</span></span>  
+     <span data-ttu-id="106fe-130">這樣會修改匯入的介面定義，讓所有方法都會傳回 `HResult`。</span><span class="sxs-lookup"><span data-stu-id="106fe-130">This modifies the imported interface definitions so that all methods return an `HResult`.</span></span> <span data-ttu-id="106fe-131">其他傳回值都會轉換為 Out 參數。</span><span class="sxs-lookup"><span data-stu-id="106fe-131">Any other return values are converted into out parameters.</span></span> <span data-ttu-id="106fe-132">整體的執行方法仍然相同。</span><span class="sxs-lookup"><span data-stu-id="106fe-132">The overall execution of the methods remains the same.</span></span> <span data-ttu-id="106fe-133">這樣可讓您在 Proxy 上呼叫方法時，判斷發生例外狀況的原因。</span><span class="sxs-lookup"><span data-stu-id="106fe-133">This allows you to determine the cause of an exception when calling a method on the proxy.</span></span> <span data-ttu-id="106fe-134">不過這個功能只能用於 C++ 程式碼。</span><span class="sxs-lookup"><span data-stu-id="106fe-134">This functionality is only available from C++ code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1959e-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1959e-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="106fe-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="106fe-135">See also</span></span>
 
-- [<span data-ttu-id="1959e-136">ServiceModel 中繼資料公用程式工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="1959e-136">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [<span data-ttu-id="106fe-136">ServiceModel 中繼資料公用程式工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="106fe-136">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fd42f13f699b0b79fd69311186f2b2ca0c9998a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8192bd7ccaebab78158f11adb79509031132ecd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645291"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937009"
 ---
-# <a name="icordebugbreakpointenum-interface"></a><span data-ttu-id="d2b04-102">ICorDebugBreakpointEnum 介面</span><span class="sxs-lookup"><span data-stu-id="d2b04-102">ICorDebugBreakpointEnum Interface</span></span>
+# <a name="icordebugbreakpointenum-interface"></a><span data-ttu-id="d7562-102">ICorDebugBreakpointEnum 介面</span><span class="sxs-lookup"><span data-stu-id="d7562-102">ICorDebugBreakpointEnum Interface</span></span>
 
-<span data-ttu-id="d2b04-103">實作 ICorDebugEnum 方法，並列舉 ICorDebugBreakpoint 陣列。</span><span class="sxs-lookup"><span data-stu-id="d2b04-103">Implements ICorDebugEnum methods, and enumerates ICorDebugBreakpoint arrays.</span></span>  
+<span data-ttu-id="d7562-103">會執行 ICorDebugEnum 方法, 並列舉 ICorDebugBreakpoint 陣列。</span><span class="sxs-lookup"><span data-stu-id="d7562-103">Implements ICorDebugEnum methods, and enumerates ICorDebugBreakpoint arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d2b04-104">方法</span><span class="sxs-lookup"><span data-stu-id="d2b04-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d7562-104">方法</span><span class="sxs-lookup"><span data-stu-id="d7562-104">Methods</span></span>  
   
-|<span data-ttu-id="d2b04-105">方法</span><span class="sxs-lookup"><span data-stu-id="d2b04-105">Method</span></span>|<span data-ttu-id="d2b04-106">描述</span><span class="sxs-lookup"><span data-stu-id="d2b04-106">Description</span></span>|  
+|<span data-ttu-id="d7562-105">方法</span><span class="sxs-lookup"><span data-stu-id="d7562-105">Method</span></span>|<span data-ttu-id="d7562-106">描述</span><span class="sxs-lookup"><span data-stu-id="d7562-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d2b04-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="d2b04-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|<span data-ttu-id="d2b04-108">取得指定的數目`ICorDebugBreakpoint`從列舉型別，從目前位置開始的執行個體。</span><span class="sxs-lookup"><span data-stu-id="d2b04-108">Gets the specified number of `ICorDebugBreakpoint` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="d7562-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="d7562-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|<span data-ttu-id="d7562-108">從列舉中取得指定`ICorDebugBreakpoint`的實例數目, 從目前位置開始。</span><span class="sxs-lookup"><span data-stu-id="d7562-108">Gets the specified number of `ICorDebugBreakpoint` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d2b04-109">備註</span><span class="sxs-lookup"><span data-stu-id="d2b04-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d7562-109">備註</span><span class="sxs-lookup"><span data-stu-id="d7562-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d2b04-110">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="d2b04-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="d7562-110">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="d7562-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2b04-111">需求</span><span class="sxs-lookup"><span data-stu-id="d2b04-111">Requirements</span></span>  
- <span data-ttu-id="d2b04-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d2b04-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d7562-111">需求</span><span class="sxs-lookup"><span data-stu-id="d7562-111">Requirements</span></span>  
+ <span data-ttu-id="d7562-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d7562-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2b04-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d2b04-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d7562-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d7562-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d2b04-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d2b04-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d7562-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7562-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d2b04-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2b04-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d7562-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7562-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2b04-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d2b04-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7562-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d7562-116">See also</span></span>
 
-- [<span data-ttu-id="d2b04-117">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="d2b04-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="d7562-117">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="d7562-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

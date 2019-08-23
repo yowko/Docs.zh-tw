@@ -5,26 +5,26 @@ helpviewer_keywords:
 - UI Automation, raising events
 - raising UI Automation events
 ms.assetid: 9fe2f01b-f7d8-49a8-a185-d4472b9976c0
-ms.openlocfilehash: 3deb4c6716d83af4b05e15b5b8a4b89e28317406
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c973d6ddba498f4bdab4be764a4be6bff1cacf9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906603"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966367"
 ---
-# <a name="raise-events-from-a-ui-automation-provider"></a><span data-ttu-id="c0b62-102">UI 自動化提供者引發事件</span><span class="sxs-lookup"><span data-stu-id="c0b62-102">Raise Events from a UI Automation Provider</span></span>
+# <a name="raise-events-from-a-ui-automation-provider"></a><span data-ttu-id="9dc49-102">UI 自動化提供者引發事件</span><span class="sxs-lookup"><span data-stu-id="9dc49-102">Raise Events from a UI Automation Provider</span></span>
 > [!NOTE]
->  <span data-ttu-id="c0b62-103">這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="c0b62-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="c0b62-104">如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="c0b62-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="9dc49-103">這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="9dc49-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="9dc49-104">如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。</span><span class="sxs-lookup"><span data-stu-id="9dc49-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="c0b62-105">本主題包含範例程式碼，說明如何透過使用者介面自動化提供者來引發事件。</span><span class="sxs-lookup"><span data-stu-id="c0b62-105">This topic contains example code that shows how to raise an event from a UI Automation provider.</span></span>  
+ <span data-ttu-id="9dc49-105">本主題包含範例程式碼，說明如何透過使用者介面自動化提供者來引發事件。</span><span class="sxs-lookup"><span data-stu-id="9dc49-105">This topic contains example code that shows how to raise an event from a UI Automation provider.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c0b62-106">範例</span><span class="sxs-lookup"><span data-stu-id="c0b62-106">Example</span></span>  
- <span data-ttu-id="c0b62-107">下列範例會在自訂按鈕控制項的實作中引發 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="c0b62-107">In the following example, a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event is raised in the implementation of a custom button control.</span></span> <span data-ttu-id="c0b62-108">該實作可讓使用者介面自動化用戶端應用程式模擬按鈕點選動作。</span><span class="sxs-lookup"><span data-stu-id="c0b62-108">The implementation enables a UI Automation client application to simulate a button click.</span></span>  
+## <a name="example"></a><span data-ttu-id="9dc49-106">範例</span><span class="sxs-lookup"><span data-stu-id="9dc49-106">Example</span></span>  
+ <span data-ttu-id="9dc49-107">下列範例會在自訂按鈕控制項的實作中引發 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="9dc49-107">In the following example, a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event is raised in the implementation of a custom button control.</span></span> <span data-ttu-id="9dc49-108">該實作可讓使用者介面自動化用戶端應用程式模擬按鈕點選動作。</span><span class="sxs-lookup"><span data-stu-id="9dc49-108">The implementation enables a UI Automation client application to simulate a button click.</span></span>  
   
- <span data-ttu-id="c0b62-109">為了避免不必要的處理，範例會檢查 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A> 以查看是否應該引發事件。</span><span class="sxs-lookup"><span data-stu-id="c0b62-109">To avoid unnecessary processing, the example checks <xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A> to see whether events should be raised.</span></span>  
+ <span data-ttu-id="9dc49-109">為了避免不必要的處理，範例會檢查 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A> 以查看是否應該引發事件。</span><span class="sxs-lookup"><span data-stu-id="9dc49-109">To avoid unnecessary processing, the example checks <xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A> to see whether events should be raised.</span></span>  
   
  [!code-csharp[UIAProvider_snip#150](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#150)]  
   
-## <a name="see-also"></a><span data-ttu-id="c0b62-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0b62-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9dc49-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9dc49-110">See also</span></span>
 
-- [<span data-ttu-id="c0b62-111">UI 自動化提供者概觀</span><span class="sxs-lookup"><span data-stu-id="c0b62-111">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [<span data-ttu-id="9dc49-111">UI 自動化提供者概觀</span><span class="sxs-lookup"><span data-stu-id="9dc49-111">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
