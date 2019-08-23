@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: d973dd59c1f0612962b89775e1fb2cf6bdd756ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566940"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953923"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自動化進行自動化測試
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本概觀說明 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 在自動化測試案例中做為程式設計存取的架構有何幫助。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "69566940"
  若要實作 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 讓它成為跟自動化測試工具一樣有用，就需要有提供者和用戶端。 使用者介面自動化提供者是應用程式，例如 Microsoft Word、Excel 和其他以 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 作業系統為基礎的協力廠商應用程式或控制項。 使用者介面自動化用戶端則包括自動化測試指令碼和輔助技術應用程式。  
   
 > [!NOTE]
->  本概觀的用意是展示 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]全新和改善的自動化測試功能， 並不會提供協助工具功能的資訊，除非必要，否則不會說明協助工具。  
+> 本概觀的用意是展示 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]全新和改善的自動化測試功能， 並不會提供協助工具功能的資訊，除非必要，否則不會說明協助工具。  
   
 <a name="Using_UI_Automation_During_Development"></a>   
 ## <a name="ui-automation-in-a-provider"></a>提供者中的使用者介面自動化  
@@ -35,7 +35,7 @@ ms.locfileid: "69566940"
  一旦識別出這些按鍵動作，就應該在控制項上實作對應的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式 (也就是可鏡像 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目功能和行為的控制項模式)。 例如，與下拉式方塊控制項 (例如執行對話方塊) 的使用者互動一般會涉及到展開及摺疊下拉式方塊，以隱藏或顯示項目清單、從該清單中選取項目，或透過鍵盤輸入加入新值。  
   
 > [!NOTE]
->  藉由其他協助工具模式，開發人員必須直接從個別按鈕、功能或其他控制項收集資訊。 可惜的是，每種控制項類型都有許多次要變化。 換句話說，即使按鈕的十個變化全都以相同方式運作，並執行相同功能，仍必須全都視為唯一的控制項。 無法得知這些控制項是否功能對等。 開發控制項模式的目的就是為了呈現這些常見的控制項行為。 如需詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+> 藉由其他協助工具模式，開發人員必須直接從個別按鈕、功能或其他控制項收集資訊。 可惜的是，每種控制項類型都有許多次要變化。 換句話說，即使按鈕的十個變化全都以相同方式運作，並執行相同功能，仍必須全都視為唯一的控制項。 無法得知這些控制項是否功能對等。 開發控制項模式的目的就是為了呈現這些常見的控制項行為。 如需詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>實作使用者介面自動化  
@@ -79,7 +79,7 @@ ms.locfileid: "69566940"
  在同層級之間以唯一的方式識別自動化項目。 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 並未當地語系化，與發行多國語言版本的產品時通常會當地語系化的屬性 (例如 <xref:System.Windows.Automation.AutomationElement.NameProperty> ) 不同。 請參閱 [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不保證整個自動化樹狀結構中的唯一識別。 例如，應用程式可能會包含具有多個最上層功能表項目的功能表控制項，而這些項目也有多個子功能表項目。 這些次要功能表項目可由「項目 1」、「項目 2」、「項目 3」(依此類推) 之類的一般配置識別，因此最上層功能表項目的子系可以有重複識別項。  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不保證整個自動化樹狀結構中的唯一識別。 例如，應用程式可能會包含具有多個最上層功能表項目的功能表控制項，而這些項目也有多個子功能表項目。 這些次要功能表項目可由「項目 1」、「項目 2」、「項目 3」(依此類推) 之類的一般配置識別，因此最上層功能表項目的子系可以有重複識別項。  
   
 #### <a name="controltype"></a>ControlType  
  識別自動化項目所代表的控制項類型。 重要的資訊可以從對控制項類型的了解加以推斷。 請參閱 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)。  

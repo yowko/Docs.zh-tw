@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671815"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963537"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 陳述式 (Visual Basic)
 啟用錯誤處理常式, 並在程式中指定常式的位置;也可以用來停用錯誤處理常式。 `On Error`語句用於非結構化錯誤處理中, 而且可以用來取代結構化例外狀況處理。 [結構化例外狀況處理](../../../standard/exceptions/index.md)內建于 .net 中, 通常更有效率, 而且在處理應用程式中的執行階段錯誤時建議使用。
@@ -35,7 +35,7 @@ ms.locfileid: "68671815"
  如果沒有錯誤處理或例外狀況處理, 則發生的任何執行階段錯誤都是嚴重的: 會顯示錯誤訊息, 並停止執行。
 
 > [!NOTE]
->  關鍵字也用於[Error 語句](../../../visual-basic/language-reference/statements/error-statement.md), 這是為了回溯相容性所支援的。 `Error`
+> 關鍵字也用於[Error 語句](../../../visual-basic/language-reference/statements/error-statement.md), 這是為了回溯相容性所支援的。 `Error`
 
 ## <a name="syntax"></a>語法
 
@@ -55,7 +55,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
->  我們建議您盡可能在程式碼中使用結構化例外狀況處理, 而不是使用非結構化`On Error`例外狀況處理和語句。 如需詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。
+> 我們建議您盡可能在程式碼中使用結構化例外狀況處理, 而不是使用非結構化`On Error`例外狀況處理和語句。 如需詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。
 
  「已啟用」錯誤處理常式是由`On Error`語句開啟的。 「作用中」錯誤處理常式是已啟用的處理常式, 正在處理錯誤。
 
@@ -66,7 +66,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  每次錯誤處理常式將控制權回傳給呼叫的進程時, 該程式就會成為目前的程式。 一旦任何程式中的錯誤處理常式處理錯誤之後, 就會在`Resume`語句所指定的目前程式中繼續執行。
   
 > [!NOTE]
->  錯誤處理常式不是一個`Sub`程式`Function`或程式。 它是以線條標籤或行號標記的程式碼區段。
+> 錯誤處理常式不是一個`Sub`程式`Function`或程式。 它是以線條標籤或行號標記的程式碼區段。
   
 ## <a name="number-property"></a>Number 屬性
  錯誤處理常式會依賴`Number` `Err`物件之屬性中的值, 以判斷錯誤的原因。 常式應該先測試或儲存物件中的`Err`相關屬性值, 然後才會發生任何其他錯誤, 或呼叫可能造成錯誤的程式之前。 `Err`物件中的屬性值只會反映最近的錯誤。 與`Err.Number`相關聯的錯誤訊息包含在`Err.Description`中。  
@@ -82,7 +82,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error Resume Next`讓執行繼續進行, 緊接在導致執行階段錯誤的語句之後的語句, 或緊接在包含`On Error Resume Next`語句的程式之外的最後一次呼叫後面的語句。 即使執行階段錯誤, 此語句仍可繼續執行。 您可以將錯誤處理常式放在發生錯誤的位置, 而不是將控制權轉移到程式內的另一個位置。 呼叫`On Error Resume Next`另一個程式時, 語句會變成非作用中, 因此, `On Error Resume Next`如果您想要在該常式內進行內嵌錯誤處理, 則應該在每個呼叫的常式中執行語句。
   
 > [!NOTE]
->  在`On Error Resume Next`處理存取其他物件期間`On Error GoTo`所產生的錯誤時, 可能會比較理想。 在`Err`每個與物件的互動之後檢查, 會移除程式碼所存取的物件不明確。 您可以確定哪個物件將錯誤碼放在中`Err.Number`, 以及最初產生錯誤的物件 (在中`Err.Source`指定的物件)。
+> 在`On Error Resume Next`處理存取其他物件期間`On Error GoTo`所產生的錯誤時, 可能會比較理想。 在`Err`每個與物件的互動之後檢查, 會移除程式碼所存取的物件不明確。 您可以確定哪個物件將錯誤碼放在中`Err.Number`, 以及最初產生錯誤的物件 (在中`Err.Source`指定的物件)。
 
 ## <a name="on-error-goto-0"></a>On Error GoTo 0
  `On Error GoTo 0`停用目前程式中的錯誤處理。 它不會將第0行指定為錯誤處理常式代碼的開頭, 即使套裝程式含編號為0的行。 如果沒有`On Error GoTo 0`語句, 當程式結束時, 就會自動停用錯誤處理常式。

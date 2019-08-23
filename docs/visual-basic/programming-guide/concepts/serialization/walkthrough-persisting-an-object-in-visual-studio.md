@@ -1,30 +1,30 @@
 ---
-title: 保存物件在 Visual Studio (Visual Basic)
+title: 在 Visual Studio (Visual Basic) 中保存物件
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 3e1ae81b2871899e6efc4be4dfc7c62ed45a133a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6f25c2a6f06b56dcbb5ba7e63165d06ff77d9ca8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624345"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937368"
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：保存物件在 Visual Studio (Visual Basic)
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio (Visual Basic) 中保存物件
 雖然您可以在設計階段將物件的屬性設為預設值，但當物件終結時，於執行階段輸入的任何值都會遺失。 您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。  
   
 > [!NOTE]
->  在 Visual Basic 中，您可以使用 `My.Settings` 物件來儲存簡單的資料，例如名稱或號碼。 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
+> 在 Visual Basic 中，您可以使用 `My.Settings` 物件來儲存簡單的資料，例如名稱或號碼。 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
   
  在本逐步解說中，您將建立簡單的 `Loan` 物件，並將其資料保存至檔案。 當您重新建立物件時，即會從檔案擷取資料。  
   
 > [!IMPORTANT]
->  如果檔案不存在，此範例就會建立新的檔案。 如果應用程式需要建立檔案，該應用程式就必須具有 `Create` 資料夾的權限。 您可以使用存取控制清單來設定權限。 如果檔案已經存在，則應用程式只需要 `Write` 權限，這是較小的權限。 若有可能，更為安全的做法是在部署期間建立檔案，並只授與單一檔案的 `Read` 權限 (而不是資料夾的 Create 權限)。 此外，將資料寫入使用者資料夾，而不是根資料夾或 Program Files 資料夾，也更加安全。  
+> 如果檔案不存在，此範例就會建立新的檔案。 如果應用程式需要建立檔案，該應用程式就必須具有 `Create` 資料夾的權限。 您可以使用存取控制清單來設定權限。 如果檔案已經存在，則應用程式只需要 `Write` 權限，這是較小的權限。 若有可能，更為安全的做法是在部署期間建立檔案，並只授與單一檔案的 `Read` 權限 (而不是資料夾的 Create 權限)。 此外，將資料寫入使用者資料夾，而不是根資料夾或 Program Files 資料夾，也更加安全。  
   
 > [!IMPORTANT]
->  這個範例會將資料儲存在二進位檔中。 這些格式不適用於敏感性資料，例如密碼或信用卡資訊。  
+> 這個範例會將資料儲存在二進位檔中。 這些格式不適用於敏感性資料，例如密碼或信用卡資訊。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
+> 根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請在 [工具] 功能表上按一下 [匯入和匯出設定] 。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="creating-the-loan-object"></a>建立 Loan 物件  
  第一個步驟是建立 `Loan` 類別，以及使用該類別的測試應用程式。  
@@ -33,7 +33,7 @@ ms.locfileid: "64624345"
   
 1. 建立新的類別庫專案，並將它命名為 "LoanClass"。 如需詳細資訊，請參閱[建立方案與專案](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)。  
   
-2. 在方案總管中，開啟 Class1 檔案的捷徑功能表，然後選擇 [重新命名] 。 將檔案重新命名為 `Loan`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `Loan`。  
+2. 在方案總管中，開啟 Class1 檔案的捷徑功能表，然後選擇 [重新命名]。 將檔案重新命名為 `Loan`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `Loan`。  
   
 3. 將下列 Public 成員新增至類別：  
   
@@ -85,11 +85,11 @@ ms.locfileid: "64624345"
   
 4. 在 [專案] 功能表上，選擇 [設定為啟始專案]。  
   
-5. 在 [專案]  功能表上，選擇 [加入參考] 。  
+5. 在 [專案] 功能表上，選擇 [加入參考]。  
   
 6. 在 [新增參考] 對話方塊中，依序選擇 [專案] 索引標籤和 LoanClass 專案。  
   
-7. 按一下 [確定]  關閉對話方塊。  
+7. 按一下 [確定] 關閉對話方塊。  
   
 8. 在設計工具中，將四個 <xref:System.Windows.Forms.TextBox> 控制項加入表單。  
   

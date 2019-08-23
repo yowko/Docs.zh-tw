@@ -1,13 +1,13 @@
 ---
-title: HOW TO：建立交易式服務
+title: 作法：建立交易式服務
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: 7f7f060db5a4ffd66524e220e3e3291debd8a3fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be364e7638394a30c199b05dd15ef4c44e18e688
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787591"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964010"
 ---
 # <a name="how-to-create-a-transactional-service"></a>HOW TO：建立交易式服務
 這個範例示範建立異動式服務的各層面，以及使用用戶端初始化的異動以協調服務作業。  
@@ -65,7 +65,7 @@ ms.locfileid: "61787591"
     }  
     ```  
   
-3. 在組態檔中設定繫結程序、指定應該流動的異動內容，以及要用來執行這些動作的通訊協定。 如需詳細資訊，請參閱 < [ServiceModel 異動組態](servicemodel-transaction-configuration.md)。 明確地說，在端點項目的 `binding` 屬性中會指定繫結類型。 [\<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)項目包含`bindingConfiguration`參考名為繫結組態的屬性`transactionalOleTransactionsTcpBinding`，如下列範例組態所示。  
+3. 在組態檔中設定繫結程序、指定應該流動的異動內容，以及要用來執行這些動作的通訊協定。 如需詳細資訊, 請參閱[配置交易](servicemodel-transaction-configuration.md)設定。 明確地說，在端點項目的 `binding` 屬性中會指定繫結類型。 `bindingConfiguration` `transactionalOleTransactionsTcpBinding`端點 > 元素包含參考名為之系結設定的屬性, 如下列範例設定所示。 [ \< ](../../configure-apps/file-schema/wcf/endpoint-element.md)  
   
     ```xml  
     <service name="CalculatorService">  
@@ -91,7 +91,7 @@ ms.locfileid: "61787591"
   
 ### <a name="supporting-multiple-transaction-protocols"></a>支援多個交易通訊協定  
   
-1. 為了達到最佳效能，您應該使用 OleTransactions 通訊協定，涉及用戶端和服務使用 Windows Communication Foundation (WCF) 所撰寫的案例。 但是，WS-AtomicTransaction (WS-AT) 通訊協定在需要協力廠商堆疊之互通性的案例中很有用。 您可以設定兩種通訊協定接受適當的通訊協定特定繫結，提供多個端點，如下列範例組態所示的 WCF 服務。  
+1. 為了達到最佳效能, 您應該在牽涉到使用 Windows Communication Foundation (WCF) 撰寫之用戶端和服務的案例中使用 OleTransactions 通訊協定。 但是，WS-AtomicTransaction (WS-AT) 通訊協定在需要協力廠商堆疊之互通性的案例中很有用。 您可以使用適當的通訊協定特定系結提供多個端點, 將 WCF 服務設定為接受這兩個通訊協定, 如下列範例設定所示。  
   
     ```xml  
     <service name="CalculatorService">  
@@ -126,7 +126,7 @@ ms.locfileid: "61787591"
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>控制交易完成  
   
-1. 根據預設，WCF 作業自動完成的交易如果沒有未處理的例外狀況。 您可以藉由使用 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 屬性和 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 方法修改這個行為。 當作業需要發生在與其他作業相同的異動中 (例如，借貸作業) 時，您可以將 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 屬性設定為 `false` 以停用自動完成行為，如同下列 `Debit` 作業範例所示。 在呼叫 `Debit` 屬性設定為 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 的方法 (如同作業 `true` 中所示)，或是呼叫 `Credit1` 方法以明確標記異動完成 (如同作業 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 中所示) 後，`Credit2` 作業使用的異動才完成。 請注意，這兩個貸款作業是為了示範目的，而單一貸款作業會更單純。  
+1. 根據預設, 如果未發生未處理的例外狀況, 則 WCF 作業會自動完成交易。 您可以藉由使用 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 屬性和 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 方法修改這個行為。 當作業需要發生在與其他作業相同的異動中 (例如，借貸作業) 時，您可以將 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 屬性設定為 `false` 以停用自動完成行為，如同下列 `Debit` 作業範例所示。 在呼叫 `Debit` 屬性設定為 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 的方法 (如同作業 `true` 中所示)，或是呼叫 `Credit1` 方法以明確標記異動完成 (如同作業 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 中所示) 後，`Credit2` 作業使用的異動才完成。 請注意，這兩個貸款作業是為了示範目的，而單一貸款作業會更單純。  
   
     ```csharp
     [ServiceBehavior]  
@@ -182,7 +182,7 @@ ms.locfileid: "61787591"
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>控制異動式服務執行個體的存留時間  
   
-1. WCF 會使用<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>屬性來指定在異動完成時，是否要釋放基礎服務執行個體。 因為這個預設值為`true`，除非另外設定，否則為 WCF 展示有效率且可預測 「 在 just-in-time"啟動行為。 呼叫後續交易的服務，可以確保新服務執行個體不會有之前交易狀態的殘餘資料。 雖然這方法通常很有用，但是有時候您可能會想要在異動完成之外維護服務執行個體中的狀態。 這種情況的範例是，當必要的狀態或資源控制代碼很難擷取或重組時。 藉由將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 屬性設定為 `false`，您可以達到這個目的。 使用這項設定時，後續呼叫就可以使用執行個體與任何關聯的狀態。 當使用這項功能時，請特別考量清除與完成狀態及異動的時機與方式。 下列範例示範如何使用 `runningTotal` 變數來維護執行個體以進行這項作業。  
+1. WCF 使用<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>屬性來指定當交易完成時, 是否要釋放基礎服務實例。 由於這預設為`true`, 除非另有設定, 否則 WCF 會呈現有效率且可預測的「及時」啟用行為。 呼叫後續交易的服務，可以確保新服務執行個體不會有之前交易狀態的殘餘資料。 雖然這方法通常很有用，但是有時候您可能會想要在異動完成之外維護服務執行個體中的狀態。 這種情況的範例是，當必要的狀態或資源控制代碼很難擷取或重組時。 藉由將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 屬性設定為 `false`，您可以達到這個目的。 使用這項設定時，後續呼叫就可以使用執行個體與任何關聯的狀態。 當使用這項功能時，請特別考量清除與完成狀態及異動的時機與方式。 下列範例示範如何使用 `runningTotal` 變數來維護執行個體以進行這項作業。  
   
     ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
@@ -217,4 +217,4 @@ ms.locfileid: "61787591"
     ```  
   
     > [!NOTE]
-    >  因為執行個體的存留時間是服務的內部行為，並且透過 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性控制，所以不需要修改服務組態或服務合約來設定執行個體行為。 此外，網路中不會包含任何表示法。
+    > 因為執行個體的存留時間是服務的內部行為，並且透過 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性控制，所以不需要修改服務組態或服務合約來設定執行個體行為。 此外，網路中不會包含任何表示法。

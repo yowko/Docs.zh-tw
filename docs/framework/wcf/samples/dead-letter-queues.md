@@ -2,21 +2,21 @@
 title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 59e2344d2bd6a9de3396f7d6d878182333138ff3
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: a1e9ad000b83aab1e0d17d3443e1bd6f87310c9a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425489"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962619"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
-這個範例示範如何處理已傳遞失敗的訊息。 它根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
+這個範例示範如何處理已傳遞失敗的訊息。 它是以交易式[MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結範例為基礎。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
 
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。
+> 此範例的安裝程序與建置指示位於本主題的結尾。
 
 > [!NOTE]
->  這個範例會示範每個應用程式的「寄不出的信件」佇列，而此佇列只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中使用。 您可以修改此範例，以便在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用 MSMQ 3.0 的預設全系統佇列。
+> 這個範例會示範每個應用程式的「寄不出的信件」佇列，而此佇列只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中使用。 您可以修改此範例，以便在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用 MSMQ 3.0 的預設全系統佇列。
 
  在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。
 
@@ -26,11 +26,11 @@ ms.locfileid: "67425489"
 
 - <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 屬性，用來表示用戶端所需之寄不出的信件佇列種類。 這個列舉具有下列值：
 
-- `None`：沒有寄不出信件佇列所需的用戶端。
+- `None`：用戶端不需要寄不出的信件佇列。
 
-- `System`：系統寄不出信件佇列用來儲存無法傳遞的訊息。 電腦上執行的所有應用程式會共用系統之寄不出的信件佇列。
+- `System`：系統寄不出的信件佇列是用來儲存死訊息。 電腦上執行的所有應用程式會共用系統之寄不出的信件佇列。
 
-- `Custom`：使用指定的自訂寄不出信件佇列<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>屬性用來儲存無法傳遞的訊息。 這項功能只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。 當應用程式必須使用自己的寄不出的信件佇列，而不與執行於同一台電腦的其他應用程式共用時，會使用這項功能。
+- `Custom`：使用<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>屬性指定的自訂寄不出的信件佇列會用來儲存死信訊息。 這項功能只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。 當應用程式必須使用自己的寄不出的信件佇列，而不與執行於同一台電腦的其他應用程式共用時，會使用這項功能。
 
 - <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 屬性，用來表示要當做寄不出的信件佇列使用的特定佇列。 這只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
 
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }
 ```
 
- 服務程式碼範例中的是屬於[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。
+ 範例中的服務程式代碼就是交易式[MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結的。
 
  與服務進行的通訊會在交易範圍內發生。 服務會讀取佇列中的訊息、執行作業，然後顯示作業的結果。 應用程式也會為寄不出的信件訊息建立寄不出的信件佇列。
 
@@ -111,7 +111,7 @@ class Client
  用戶端的組態會指定很短的期間讓訊息送達服務。 如果無法在指定期間內傳輸訊息，訊息就會過期，然後移入寄不出的信件佇列。
 
 > [!NOTE]
->  用戶端可能會在指定的時間內將訊息傳遞到服務佇列。 為確保您看得到寄不出的信件服務的實際執行過程，您必須先執行用戶端，再啟動服務。 此訊息會逾時，然後傳遞到寄不出的信件服務。
+> 用戶端可能會在指定的時間內將訊息傳遞到服務佇列。 為確保您看得到寄不出的信件服務的實際執行過程，您必須先執行用戶端，再啟動服務。 此訊息會逾時，然後傳遞到寄不出的信件服務。
 
  應用程式必須定義要當做寄不出的信件佇列使用的佇列。 如果未指定佇列，就會使用預設全系統交易式寄不出的信件佇列，將無法傳遞的訊息加入佇列。 在這個範例中，用戶端應用程式會指定它自己的應用程式寄不出的信件佇列。
 
@@ -149,7 +149,7 @@ class Client
  寄不出的信件訊息服務會從寄不出的信件佇列讀取訊息。 寄不出的信件訊息服務會實作 `IOrderProcessor` 合約。 然而，這個實作不是要用來處理訂單。 寄不出的信件訊息服務是用戶端服務，並沒有處理訂單的能力。
 
 > [!NOTE]
->  寄不出的信件佇列是用戶端佇列，而且是用戶端佇列管理員本機上的佇列。
+> 寄不出的信件佇列是用戶端佇列，而且是用戶端佇列管理員本機上的佇列。
 
  寄不出的信件訊息服務實作會檢查訊息傳遞失敗的原因，然後採取更正措施。 訊息失敗的原因可以擷取自兩個列舉：<xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> 和 <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>。 您可以從 <xref:System.ServiceModel.Channels.MsmqMessageProperty> 擷取 <xref:System.ServiceModel.OperationContext>，如下列範例程式碼所示：
 
@@ -169,7 +169,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 寄不出的信件佇列中的訊息是針對處理訊息之服務所發出的訊息。 因此，當無法投遞的信件訊息服務會從佇列讀取訊息，Windows Communication Foundation (WCF) 通道層端點中尋找不符合，從而不分派訊息。 在本例中，訊息是針對訂單處理服務發出的，但是會由寄不出的信件訊息服務接收。 為了接收針對不同端點發出的訊息，在 `ServiceBehavior` 中會指定用來比對所有位址的位址篩選條件。 若要順利處理從寄不出的信件佇列中讀取的訊息，就必須這麼做。
+ 寄不出的信件佇列中的訊息是針對處理訊息之服務所發出的訊息。 因此, 當寄不出的信件訊息服務從佇列讀取訊息時, Windows Communication Foundation (WCF) 通道層會尋找端點不相符, 而且不會分派訊息。 在本例中，訊息是針對訂單處理服務發出的，但是會由寄不出的信件訊息服務接收。 為了接收針對不同端點發出的訊息，在 `ServiceBehavior` 中會指定用來比對所有位址的位址篩選條件。 若要順利處理從寄不出的信件佇列中讀取的訊息，就必須這麼做。
 
  在這個範例中，如果失敗的原因是訊息逾時，寄不出的信件訊息服務將會重新傳送訊息。對於其他所有原因，則顯示傳遞失敗，如下列範例程式碼所示：
 
@@ -268,7 +268,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
  在執行的範例中，有 3 個可執行檔要執行，藉以觀察每個應用程式 (用戶端、服務和寄不出的信件服務) 運用寄不出的信件佇列的方式；每個應用程式都會從各自寄不出的信件佇列讀取訊息，然後重新傳送給服務。 這些都是會在主控台視窗中產生輸出的主控台應用程式。
 
 > [!NOTE]
->  因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。 您應該啟動服務再加以關閉，這樣就可以建立佇列。
+> 因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。 您應該啟動服務再加以關閉，這樣就可以建立佇列。
 
  執行用戶端時，用戶端會顯示訊息：
 
@@ -310,23 +310,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
-    1. 開啟 Visual Studio 2012 中的 伺服器管理員。
+    1. 在 Visual Studio 2012 中開啟伺服器管理員。
 
-    2. 依序展開**功能** 索引標籤。
+    2. 展開 [**功能**] 索引標籤。
 
-    3. 以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
+    3. 以滑鼠右鍵按一下 [**私人訊息佇列**], 然後選取 [**新增**]、[**私用佇列**]。
 
-    4. 請檢查**Transactional**  方塊中。
+    4. 選取 [**交易**式] 方塊。
 
     5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-4. 若要執行本範例中單一或跨電腦組態變更佇列名稱，並以完整的電腦名稱取代 localhost，並依照[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. 若要在單一或跨電腦設定中執行此範例, 請適當地變更佇列名稱, 並以電腦的完整名稱取代 localhost, 並遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>若要在加入至工作群組的電腦上執行範例
 
@@ -350,13 +350,13 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     >  將 `security mode` 設定為 `None`，相當於將 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全性設定為 `None`。
 
 ## <a name="comments"></a>註解
- 根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您不屬於網域的電腦上執行此範例中，您會收到下列錯誤：「 使用者的內部訊息佇列憑證不存在 」。
+ 根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您在不屬於網域的電腦上執行此範例, 則會收到下列錯誤:「使用者的內部訊息佇列憑證不存在」。
 
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

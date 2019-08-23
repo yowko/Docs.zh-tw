@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: da9eaf127a4db02cddbb36e53a0d0ddb5b28b841
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 703fafad283c11e6ee5e6d9c9da3760ea4a36361
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818058"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966151"
 ---
 # <a name="threading-model"></a>執行緒模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是設計來避免開發人員遇到執行緒的難題。 因此, 大部分的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開發人員都不需要撰寫使用多個執行緒的介面。 由於多執行緒的程式非常複雜且很難偵錯，因此，若有單一執行緒解決方案，就應避免使用多執行緒程式。  
@@ -31,7 +31,7 @@ ms.locfileid: "68818058"
  不過, 無論架構有多完善, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]架構都無法為每種問題提供單一執行緒的解決方案。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]已關閉, 但仍有多個執行緒改善[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]回應性或應用程式效能的情況。 討論一些背景資料之後，本文將說明這其中的一些情況，然後以一些較低層級詳細資訊的討論來做出結論。  
 
 > [!NOTE]
->  本主題討論如何使用非同步呼叫<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>的方法來進行執行緒。 您也可以藉由呼叫<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法 ( <xref:System.Action>接受或<xref:System.Func%601>做為參數) 來進行非同步呼叫。  方法會傳回<xref:System.Windows.Threading.DispatcherOperation%601>或<xref:System.Windows.Threading.DispatcherOperation.Task%2A>,其具有屬性。 <xref:System.Windows.Threading.DispatcherOperation> <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> 您可以使用`await`關鍵字<xref:System.Windows.Threading.DispatcherOperation>搭配或相關聯<xref:System.Threading.Tasks.Task>的。 如果<xref:System.Threading.Tasks.Task>您需要以同步<xref:System.Windows.Threading.DispatcherOperation>方式等候或<xref:System.Windows.Threading.DispatcherOperation%601>所傳回的, 請呼叫<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>擴充方法。  呼叫<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>會導致鎖死。 如需使用<xref:System.Threading.Tasks.Task>來執行非同步作業的詳細資訊, 請參閱工作平行處理原則。  方法也具有<xref:System.Action>接受或<xref:System.Func%601>做為參數的多載。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A>  您可以使用<xref:System.Windows.Threading.Dispatcher.Invoke%2A>方法, <xref:System.Action>透過傳入委派或<xref:System.Func%601>來進行同步呼叫。  
+> 本主題討論如何使用非同步呼叫<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>的方法來進行執行緒。 您也可以藉由呼叫<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法 ( <xref:System.Action>接受或<xref:System.Func%601>做為參數) 來進行非同步呼叫。  方法會傳回<xref:System.Windows.Threading.DispatcherOperation%601>或<xref:System.Windows.Threading.DispatcherOperation.Task%2A>,其具有屬性。 <xref:System.Windows.Threading.DispatcherOperation> <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> 您可以使用`await`關鍵字<xref:System.Windows.Threading.DispatcherOperation>搭配或相關聯<xref:System.Threading.Tasks.Task>的。 如果<xref:System.Threading.Tasks.Task>您需要以同步<xref:System.Windows.Threading.DispatcherOperation>方式等候或<xref:System.Windows.Threading.DispatcherOperation%601>所傳回的, 請呼叫<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>擴充方法。  呼叫<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>會導致鎖死。 如需使用<xref:System.Threading.Tasks.Task>來執行非同步作業的詳細資訊, 請參閱工作平行處理原則。  方法也具有<xref:System.Action>接受或<xref:System.Func%601>做為參數的多載。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A>  您可以使用<xref:System.Windows.Threading.Dispatcher.Invoke%2A>方法, <xref:System.Action>透過傳入委派或<xref:System.Func%601>來進行同步呼叫。  
   
 <a name="threading_overview"></a>   
 ## <a name="overview-and-the-dispatcher"></a>概觀和發送器  
@@ -43,7 +43,7 @@ ms.locfileid: "68818058"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式應該如何處理大型作業？ 如果您的程式碼牽涉到大型計算，或需要查詢某些遠端伺服器上的資料庫，又該怎麼做？ 通常, 答案是在不同的執行緒中處理 big 作業, 讓[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒可以自由地在<xref:System.Windows.Threading.Dispatcher>佇列中的專案。 當 big 作業完成時, 它可以將其結果回報給[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒以供顯示。  
   
- 在過去[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] , [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]只允許由建立專案的執行緒存取元素。 這表示負責某些長時間執行工作的背景執行緒無法在完成時更新文字方塊。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]這麼做是為了確保[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元件的完整性。 如果背景執行緒已在繪製期間更新了清單方塊的內容，則該清單方塊看起來可能很奇怪。  
+ 在過去, Windows [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]只允許透過建立元素的執行緒來存取專案。 這表示負責某些長時間執行工作的背景執行緒無法在完成時更新文字方塊。 Windows 會執行此工作, 以確保[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元件的完整性。 如果背景執行緒已在繪製期間更新了清單方塊的內容，則該清單方塊看起來可能很奇怪。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 有個內建的互斥機制，會強制執行這項協調。 中的大部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]類別都<xref:System.Windows.Threading.DispatcherObject>是衍生自。 在結構上, <xref:System.Windows.Threading.DispatcherObject>會儲存連結至目前<xref:System.Windows.Threading.Dispatcher>執行中線程之的參考。 實際上, <xref:System.Windows.Threading.DispatcherObject>會與建立它的執行緒產生關聯。 在程式執行期間, <xref:System.Windows.Threading.DispatcherObject>可以呼叫其公用<xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>方法。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>檢查與<xref:System.Windows.Threading.Dispatcher>目前線程相關聯的, 並將其與<xref:System.Windows.Threading.Dispatcher>在結構中儲存的參考做比較。 如果兩者不相符, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>則會擲回例外狀況。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>的目的是要在每個屬於的<xref:System.Windows.Threading.DispatcherObject>方法開始時呼叫。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68818058"
 ### <a name="multiple-windows-multiple-threads"></a>多個視窗，多個執行緒  
  某些[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式需要多個最上層視窗。 一個執行緒/<xref:System.Windows.Threading.Dispatcher>組合可以完全接受, 以管理多個視窗, 但有時候有數個執行緒會有更好的工作。 如果有可能發生某一個視窗將獨佔執行緒的情況，這特別適用。  
   
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 檔案總管會以這種方式運作。 每個新的檔案總管視窗都屬於原始的程序，但會在獨立執行緒的控制下建立它。  
+ Windows Explorer 以這種方式運作。 每個新的檔案總管視窗都屬於原始的程序，但會在獨立執行緒的控制下建立它。  
   
  藉由使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame>控制項, 我們可以顯示網頁。 我們可以輕鬆地建立簡單的 Internet Explorer 替代方案。 我們從一個重要功能開始︰開啟新檔案總管視窗的能力。 當使用者按一下 [New Window (新視窗)] 按鈕時，我們會在另一個執行緒中啟動視窗複本。 如此一來，在其中一個視窗中長時間執行或封鎖的作業就不會鎖定所有其他視窗。  
   

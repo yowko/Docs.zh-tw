@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec65c75fcfd907097f1cd1e0d3092a547272a782
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933239"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>結構和其他程式設計項目 (Visual Basic)
-您可以使用結構搭配使用陣列、 物件和程序，以及彼此。 因為這些項目使用個別的互動會使用相同的語法。  
+您可以搭配使用結構與陣列、物件和程式, 以及彼此結合。 互動會使用與這些元素個別使用相同的語法。  
   
 > [!NOTE]
->  您無法初始化任何在結構宣告中的結構項目。 您只能指派值給變數已宣告為結構類型的項目。  
+> 您無法初始化結構宣告中的任何結構元素。 您只能將值指派給已宣告為結構類型之變數的元素。  
   
 ## <a name="structures-and-arrays"></a>結構和陣列  
- 結構包含一個或多個子項目陣列。 下列範例將說明這點。  
+ 結構可以包含陣列做為它的一個或多個元素。 下列範例將說明這點。  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- 存取陣列在結構中的值相同的方式存取物件的屬性。 下列範例將說明這點。  
+ 在結構中存取陣列的值, 與存取物件上屬性的方式相同。 下列範例將說明這點。  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -47,7 +47,7 @@ mySystem.diskDrives(0) = "1.44 MB"
 Dim allSystems(100) As systemInfo  
 ```  
   
- 您遵循相同的規則，來存取此資料架構的元件。 下列範例將說明這點。  
+ 您會遵循相同的規則來存取此資料結構的元件。 下列範例將說明這點。  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -56,7 +56,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>結構和物件  
- 結構包含一個或多個子項目物件。 下列範例將說明這點。  
+ 結構可以包含物件做為其一個或多個元素。 下列範例將說明這點。  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- 您應該使用特定的物件類別，在這類宣告中，而非`Object`。  
+ 您應該在這類宣告中使用特定的物件類別, 而`Object`不是。  
   
-## <a name="structures-and-procedures"></a>結構和程序  
- 您可以傳遞結構做為程序引數。 下列範例將說明這點。  
+## <a name="structures-and-procedures"></a>結構和程式  
+ 您可以將結構當做程式引數來傳遞。 下列範例將說明這點。  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- 上述範例中將結構傳遞*傳址*，可讓程序來修改其項目，讓呼叫端程式碼中所做的變更才會生效。 如果您想要保護對這類修改的結構，傳值方式傳遞。  
+ 上述範例會以傳*址方式*傳遞結構, 讓程式可以修改其專案, 讓變更在呼叫程式碼中生效。 如果您想要針對這類修改來保護結構, 請以傳值方式傳遞。  
   
- 您也可以傳回結構，以從`Function`程序。 下列範例將說明這點。  
+ 您也可以從`Function`程式傳回結構。 下列範例將說明這點。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -118,9 +118,9 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- 您也可以使用這項技術來封裝在不同的模組中定義的結構內的其中一個模組中定義的結構。  
+ 您也可以使用這項技術, 將一個模組中定義的結構封裝在不同模組中定義的結構內。  
   
- 結構可以包含其他結構到任意深度。  
+ 結構可以包含任意深度的其他結構。  
   
 ## <a name="see-also"></a>另請參閱
 

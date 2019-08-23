@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26dbd7cb5f0dc3a385fe15d6c417d6fb8e1c9bc4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a3a4e6ccb8a43f9bde5aa7a447e28c30f8d72f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738360"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965128"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 方法
-取得程式庫提供者回呼介面，可讓 common language runtime (CLR) 版本特定偵錯程式庫尋找並載入需求。  
+取得程式庫提供者回呼介面, 允許視需要尋找並載入 common language runtime (CLR) 版本特定的偵錯工具程式庫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,16 +39,16 @@ HRESULT ProvideLibrary(
   
 ## <a name="parameters"></a>參數  
  `pwszFilename`  
- [in]所要求的模組名稱。  
+ 在所要求的模組名稱。  
   
  `dwTimestamp`  
- [in]COFF 檔案標頭的 PE 檔中儲存的日期時間戳記。  
+ 在儲存在 PE 檔案之 COFF 檔案標頭中的日期時間戳記。  
   
  `pLibraryProvider`  
- [in]`SizeOfImage` COFF 選用的檔案標頭的 PE 檔中儲存的欄位。  
+ 在儲存在 PE 檔案之 COFF 選擇性檔案標頭中的欄位。`SizeOfImage`  
   
  `hModule`  
- [out]要求的模組控制代碼。  
+ 脫銷要求之模組的控制碼。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
@@ -60,14 +60,14 @@ HRESULT ProvideLibrary(
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- `ProvideLibrary` 可讓偵錯工具提供所需的偵錯特定的 CLR 檔案，例如 mscordbi.dll 和 mscordacwks.dll 的模組。 模組控制代碼必須保持有效，直到呼叫[iclrdebugging:: Canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)方法表示它們可能會釋出，此時必須負責呼叫者釋放控制代碼。  
+ `ProvideLibrary`可讓偵錯工具提供用來偵測特定 CLR 檔案 (例如 mscordbi.dll 和 mscordacwks) 所需的模組。 模組控制碼必須保持有效, 直到呼叫[ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)方法指出它們可能被釋放為止, 此時呼叫端會負責釋放控制碼。  
   
- 偵錯工具可以使用任何可用的方式，來找出或購買的偵錯的模組。  
+ 偵錯工具可能會使用任何可用的方法來尋找或購買偵錯工具模組。  
   
 > [!IMPORTANT]
->  這項功能可讓 API 呼叫端，以提供包含可執行檔，並可能是惡意的程式碼的模組。 為了安全起見，呼叫端不應該使用`ProvideLibrary`散發不願意執行本身的任何程式碼。  
+> 這項功能可讓 API 呼叫端提供包含可執行檔的模組, 以及可能的惡意程式碼。 做為安全性預防措施, 呼叫端不應該`ProvideLibrary`使用來散發不願意自行執行的任何程式碼。  
 >   
->  如果已發行的文件庫，例如 mscordbi.dll 或 mscordacwks.dll 中, 探索到嚴重的安全性問題可辨識不正確的版本檔案的修補填充碼。 填充碼然後發出要求的修補檔案的版本，並拒絕不正確的版本，如果提供以回應任何要求。 這可能是只有當使用者有新的版本，填充碼修正的項目。 未更新的版本仍易受攻擊。  
+>  如果在已發行的程式庫 (例如 mscordbi.dll 或 mscordacwks) 中發現嚴重的安全性問題, 則可以修補填充碼來辨識檔案的錯誤版本。 填充碼接著可以發出已修補之檔案版本的要求, 並在回應任何要求時, 拒絕不正確的版本。 只有在使用者已修補新版本的填充碼時, 才會發生這種情況。 未修補的版本將會保持易受攻擊。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

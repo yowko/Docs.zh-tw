@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039410"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916699"
 ---
 # <a name="application-settings-architecture"></a>應用程式設定架構
 本主題描述應用程式設定的運作方式，並且瀏覽架構的進階功能 (例如群組設定和設定索引鍵)。
@@ -142,7 +142,7 @@ ms.locfileid: "69039410"
  一個提供者可供多個執行緒同時呼叫，但永遠寫入相同的儲存位置。因此，應用程式設定架構只會具現化提供者類別的單一執行個體。
 
 > [!IMPORTANT]
->  您應該確定您的提供者是安全執行緒，而且一次只允許一個執行緒寫入組態檔。
+> 您應該確定您的提供者是安全執行緒，而且一次只允許一個執行緒寫入組態檔。
 
  您的提供者<xref:System.Configuration?displayProperty=nameWithType>不需要支援命名空間中定義的所有設定屬性, 但至少<xref:System.Configuration.ApplicationScopedSettingAttribute>必須支援和<xref:System.Configuration.UserScopedSettingAttribute>, 而且也應該支援<xref:System.Configuration.DefaultSettingValueAttribute>。 對於不支援的屬性，您的提供者應該失敗且不需要通知，也就是不應該擲回例外狀況。 不過, 如果 settings 類別使用不正確屬性組合 (例如<xref:System.Configuration.ApplicationScopedSettingAttribute> , 將和<xref:System.Configuration.UserScopedSettingAttribute>套用至相同的設定), 您的提供者應該會擲回例外狀況並停止作業。
 

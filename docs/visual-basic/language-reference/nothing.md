@@ -8,53 +8,53 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12c88db49dc7723fc269195e7d174bfa822c64d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778621"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963752"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
-代表任何資料類型的預設值。 若是參考類型，預設值是`null`參考。 實值型別，預設值取決於實值型別是否可為 null。  
+表示任何資料類型的預設值。 對於參考型別, 預設值為`null`參考。 對於實數值型別, 預設值取決於實數值型別是否可為 null。  
   
 > [!NOTE]
->  不可為 null 的實值型別，如`Nothing`在 Visual Basic 中與不同`null`在C#。 在 Visual Basic 中，如果您的變數設定為不可為 null 的實值型別`Nothing`，此變數會設為其宣告類型的預設值。 在C#，如果您指派至不可為 null 的實值型別的變數`null`，就會發生編譯時期錯誤。  
+> 針對不可為 null 的實值`Nothing`類型, 在中`null` , C#Visual Basic 與中的不同。 在 Visual Basic 中, 如果您將不可為 null 的實數值型別變數設`Nothing`為, 則變數會設定為其宣告類型的預設值。 在C#中, 如果您將不可為 null 的實數值型別的變數`null`指派給, 就會發生編譯時期錯誤。  
   
 ## <a name="remarks"></a>備註  
- `Nothing` 表示資料類型的預設值。 預設值取決於變數是否是參考類型或實值類型。  
+ `Nothing`表示資料類型的預設值。 預設值取決於變數是實數值型別或參考型別。  
   
- 變數*實值型別*直接包含其值。 實值型別包含的所有數值資料類型， `Boolean`， `Char`， `Date`，所有的結構和所有列舉型別。 變數*參考的型別*在記憶體中儲存物件的執行個體的參考。 參考型別包括類別、 陣列、 委派和字串。 如需詳細資訊，請參閱 [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
+ 實*值型*別的變數直接包含它的值。 實數值型別包括所有數值資料類型`Boolean`、 `Char`、 `Date`、、所有結構和所有列舉。 *參考型別*的變數會將物件實例的參考儲存在記憶體中。 參考型別包括類別、陣列、委派和字串。 如需詳細資訊，請參閱 [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
   
- 如果變數是實值類型，行為`Nothing`取決於是否可為 null 的資料類型的變數。 若要表示可為 null 的實值型別，新增`?`修飾詞加入型別名稱。 指派`Nothing`可為 null 的變數的值設定為`null`。 如需詳細資訊和範例，請參閱 <<c0> [ 可為 Null 的實值型別](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。  
+ 如果變數是實值型別, 則的行為`Nothing`取決於變數是否為可為 null 的資料型別。 若要表示可為 null 的實值`?`型別, 請將修飾詞加入至型別名稱。 指派`Nothing`給可為 null 的變數會將`null`值設定為。 如需詳細資訊和範例, 請參閱[可為 null 的實數值型別](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。  
   
- 如果變數屬於實值型別不是可為 null，指派`Nothing`要它將它設定為預設值為其宣告的型別。 如果該類型包含變數的成員，它們會都設為其預設值。 下列範例會說明這點的純量類型。  
+ 如果變數是不可為 null 的實數值型別, 則指派`Nothing`給它會將它設定為其宣告類型的預設值。 如果該類型包含變數成員, 則會將它們全部設定為預設值。 下列範例會針對純量類型說明這種情況。  
   
  [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]  
   
- 如果變數屬於參考類型，將指派`Nothing`變數將它設定為`null`參考變數的類型。 此變數會設為`null`參考不是任何物件相關聯。 下列範例為其示範。  
+ 如果變數是參考型別, 則指派`Nothing`給變數會將它設定`null`為變數類型的參考。 設定為`null`參考的變數不會與任何物件相關聯。 下列範例為其示範。  
   
  [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]  
   
- 檢查變數是否參照 （或可為 null 的實值類型） 時`null`，請勿使用`= Nothing`或`<> Nothing`。 一律使用`Is Nothing`或`IsNot Nothing`。  
+ 檢查參考 (或可為 null 的實數值型別) 變數`null`是否為時, `= Nothing`請`<> Nothing`不要使用或。 請一律`Is Nothing`使用`IsNot Nothing`或。  
   
- 在 Visual Basic 中的字串，則為空字串就等於`Nothing`。 因此，`"" = Nothing`為 true。  
+ 對於 Visual Basic 中的字串, 空字串等於`Nothing`。 因此, `"" = Nothing`為 true。  
   
- 下列範例示範使用的比較`Is`和`IsNot`運算子。  
+ 下列範例顯示使用`Is`和`IsNot`運算子的比較。  
   
  [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]  
   
- 如果您宣告變數時不用`As`子句並將它設定為`Nothing`，該變數具有一種`Object`。 這個範例是`Dim something = Nothing`。 在此情況下發生編譯時期錯誤時`Option Strict`位於和`Option Infer`已關閉。  
+ 如果您在不使用`As`子句的情況下宣告變數, 並將它設定為`Nothing`, 則`Object`變數的類型為。 其中一個範例是`Dim something = Nothing`。 當是 on 且為 off 時`Option Strict` , `Option Infer`就會發生編譯時期錯誤。  
   
- 當您將指派`Nothing`給物件變數，它不再是指任何物件執行個體。 如果之前已將該變數參考執行個體，將它設定為`Nothing`並不會終止執行個體本身。 終止執行個體，並與它相關聯的記憶體和系統資源的發行，記憶體回收行程 (GC) 偵測到沒有剩餘的作用中參考時，才。  
+ 當您指派`Nothing`給物件變數時, 它不會再參考任何物件實例。 如果變數先前已參考實例, 將其設定為`Nothing`不會終止實例本身。 實例會終止, 而且只有在垃圾收集行程 (GC) 偵測到沒有任何使用中的參考之後, 才會釋放與它相關聯的記憶體和系統資源。  
   
- `Nothing` 不同於<xref:System.DBNull>物件，表示未初始化的變數或不存在的資料庫資料行。  
+ `Nothing`不同于<xref:System.DBNull>物件, 代表未初始化的 variant 或不存在的資料庫資料行。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [Dim 陳述式](../../visual-basic/language-reference/statements/dim-statement.md)
-- [物件存留期：如何建立和終結物件](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
-- [在 Visual Basic 中的存留期](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [物件存留期:物件的建立和終結方式](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Visual Basic 中的存留期](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Is 運算子](../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 運算子](../../visual-basic/language-reference/operators/isnot-operator.md)
 - [可為 Null 的值類型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

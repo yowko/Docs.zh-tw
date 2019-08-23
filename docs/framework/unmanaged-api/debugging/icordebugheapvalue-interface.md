@@ -16,28 +16,28 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5fcd8c17c4006714fa9d11aece5cccc57c97087
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb130f11975eb95db7807126d6f163425439b0c4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700822"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914904"
 ---
 # <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue 介面
 
-「 ICorDebugValue"，表示已由 common language runtime (CLR) 記憶體回收行程回收物件的子類別。  
+"ICorDebugValue" 的子類別, 代表由 common language runtime (CLR) 垃圾收集行程所收集的物件。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
 |[CreateRelocBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|未實作。|  
-|[IsValid 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|取得值，表示物件是否表示由此`ICorDebugHeapValue`有效，或已經由記憶體回收行程回收。 這個方法已被取代，在.NET Framework 2.0 版。|  
+|[IsValid 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|取得值, 指出這個`ICorDebugHeapValue`所表示的物件是否有效, 或已由垃圾收集行程回收。 這個方法已在 .NET Framework 版本2.0 中被取代。|  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "61700822"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401435"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965469"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>HOW TO：建立和繫結至 ObservableCollection
 這個範例示範如何建立和系結至衍生自<xref:System.Collections.ObjectModel.ObservableCollection%601>類別的集合, 這是可在新增或移除專案時提供通知的集合類別。  
@@ -136,7 +136,7 @@ End Class
  這裡並未顯示 `NameItemTemplate` 的定義。  
   
 > [!NOTE]
->  集合中的物件必須滿足[繫結來源概觀](binding-sources-overview.md)中所述的需求。 特別是, 如果您使用<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay> (例如, 想[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要在來源屬性動態變更時進行更新), 您必須執行適當的屬性變更通知機制, 例如<xref:System.ComponentModel.INotifyPropertyChanged>介面。  
+> 集合中的物件必須滿足[繫結來源概觀](binding-sources-overview.md)中所述的需求。 特別是, 如果您使用<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay> (例如, 想[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要在來源屬性動態變更時進行更新), 您必須執行適當的屬性變更通知機制, 例如<xref:System.ComponentModel.INotifyPropertyChanged>介面。  
   
  如需詳細資訊，請參閱[資料繫結概觀](data-binding-overview.md)中的＜繫結至集合＞一節。  
   

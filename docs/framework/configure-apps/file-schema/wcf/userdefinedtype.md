@@ -2,12 +2,12 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a48fa2ed90999a66f4c1f84b7cfaa9a0e79f6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769833"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940575"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType>
 表示要包含在服務合約中的使用者定義型別 (User Defined Type，UDT)。  
@@ -38,7 +38,7 @@ ms.locfileid: "61769833"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`name`|選擇性屬性，其中包含提供可讀型別名稱的字串。 雖然這不是供執行階段使用，但是可幫助讀者分辨型別。|  
 |`TypeDefID`|GUID 字串，識別已註冊型別程式庫內的特定 UDT 型別。|  
@@ -59,7 +59,7 @@ ms.locfileid: "61769833"
   
  如果要避免這個問題，您可以將這些 UDT 新增至組態檔中，以便包含它們做為適當服務合約中的已知型別。 如果要這樣做，您必須唯一識別這些 UDT 和合約，也就是使用其原始的 COM 介面。  
   
- 下列範例示範如何將兩個特定的 Udt 到 <`userDefinedTypes`> 一節，組態檔，針對此目的。  
+ 下列範例示範如何將兩個特定的 udt 新增`userDefinedTypes`至設定檔的 < > 區段中, 以供此用途之用。  
   
 ```xml  
 <comContracts>
@@ -95,6 +95,6 @@ ms.locfileid: "61769833"
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [整合 COM 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [如何：設定 COM + 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [整合 COM 應用程式](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [如何：設定 COM + 服務設定](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

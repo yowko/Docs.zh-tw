@@ -3,15 +3,15 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: 59d47eda97e97629408ece12a1d1dfbe804feb3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74ca031f7017d51adaa7a71593f537b64abbeae6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667310"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942896"
 ---
 # <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager>
-註冊的連入宣告的宣告授權管理員。  
+為傳入宣告註冊宣告授權管理員。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -34,29 +34,29 @@ ms.locfileid: "61667310"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|類型|自訂型別衍生自<xref:System.Security.Claims.ClaimsAuthorizationManager>類別。 如需有關如何指定`type`屬性，請參閱[自訂型別參考](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
+|型別|衍生<xref:System.Security.Claims.ClaimsAuthorizationManager>自類別的自訂類型。 如需如何指定屬性的`type`詳細資訊, 請參閱[自訂類型參考](../windows-workflow-foundation/index.md)。|  
   
 ### <a name="child-elements"></a>子元素  
- 如果沒有任何`type`屬性，或如果`type`屬性參考<xref:System.Security.Claims.ClaimsAuthenticationManager>類別`<claimsAuthorizationManager>`項目不會子項目; 不過，類別衍生自<xref:System.Security.Claims.ClaimsAuthorizationManager>可以定義子組態項目。  
+ <xref:System.Security.Claims.ClaimsAuthenticationManager> `<claimsAuthorizationManager>` <xref:System.Security.Claims.ClaimsAuthorizationManager>如果沒有`type`屬性, 或屬性參考類別, 則專案不會採用子項目; 不過, 衍生自的類別可以定義子設定元素。 `type`  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
+|[\<identityConfiguration>](identityconfiguration.md)|指定服務層級的身分識別設定。|  
   
 ## <a name="remarks"></a>備註  
- 透過所提供的預設行為<xref:System.Security.Claims.ClaimsAuthorizationManager>類別一律會授與的連入宣告。 如果沒有`type`指定屬性或如果`type`屬性會指定<xref:System.Security.Claims.ClaimsAuthorizationManager>類別，`<claimsAuthorizationManager>`項目未採用子元素。 您可以指定`type`屬性來註冊型別衍生自<xref:System.Security.Claims.ClaimsAuthorizationManager>類別來實作自訂行為。 在衍生的類別可支援透過子項目的設定`<claimsAuthorizationManager>`藉由覆寫的項目<xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A>方法來處理這些項目。 子項目定義的結構描述是由設計工具的類別。  
+ 透過<xref:System.Security.Claims.ClaimsAuthorizationManager>類別提供的預設行為一律會授權傳入宣告。 如果未`type`指定任何屬性, 或`type`屬性指定了<xref:System.Security.Claims.ClaimsAuthorizationManager>類別, 則`<claimsAuthorizationManager>`專案不會採用子項目。 您可以指定`type`屬性來註冊衍生自類別的<xref:System.Security.Claims.ClaimsAuthorizationManager>型別, 以執行自訂行為。 衍生類別可以藉由覆`<claimsAuthorizationManager>` <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A>寫方法來處理這些專案, 藉以支援透過專案的子專案進行設定。 為子專案定義的架構是由類別的設計工具所組成。  
   
 > [!IMPORTANT]
->  使用時<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別，以提供您的程式碼所參考的識別組態中的宣告型存取控制`<federationConfiguration>`項目會設定宣告授權管理員和用來進行的原則授權決策。 這是為 true，即使在不是被動的 Web 案例，例如 「 Windows Communication Foundation (WCF) 應用程式 」 或 「 不是以 Web 為基礎的應用程式的案例。 如果應用程式不是被動的 Web 應用程式，`<claimsAuthorizationManager>`元素 （和其子原則項目，如果有的話） 參考的身分識別組態所套用的唯一設定。 會忽略所有其他設定。 如需詳細資訊，請參閱 < [ \<Federationconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)項目。  
+> 當使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>或類別在您的程式碼中提供宣告型存取控制時, `<federationConfiguration>`元素所參考的身分識別設定會設定宣告授權管理員和原則, 以用來進行授權決策。 這也適用于非被動 Web 案例的情況, 例如 Windows Communication Foundation (WCF) 應用程式或不是以 Web 為基礎的應用程式。 如果應用程式不是被動的 Web 應用程式, `<claimsAuthorizationManager>`則會套用所參考身分識別設定的專案 (及其子原則元素 (如果有的話))。 所有其他設定都會被忽略。 如需詳細資訊, 請參閱[ \<federationConfiguration >](federationconfiguration.md)元素。  
   
- 這個項目設定<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType>屬性。  
+ 這個元素會設定<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType>屬性。  
   
 ## <a name="example"></a>範例  
- 下列 XML 顯示宣告授權的組態管理員，它會實作的原則資源 / 動作配對所組成的每一個都會指定要求者必須擁有在資源上執行動作的宣告布林值的組合。 實作宣告授權管理員能夠使用此原則的程式碼可在`ClaimsBasedAuthorization`範例。  
+ 下列 XML 顯示宣告授權管理員的設定, 其會執行由資源動作配對組成的原則, 其中每個都指定要求者必須擁有才能在資源上執行動作的宣告的布林組合。 `ClaimsBasedAuthorization`範例中可以找到可使用此原則來執行宣告授權管理員的程式碼。  
   
 ```xml  
 <system.identityModel>  

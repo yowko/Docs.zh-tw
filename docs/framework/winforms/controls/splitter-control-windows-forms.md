@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Splitter control [Windows Forms]
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-ms.openlocfilehash: 37d9cb91e28a93b98394620a4385989968700fae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac4ba64bc4bbec94171cee73625d18330728b66d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009665"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964440"
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter 控制項 (Windows Form)
-Windows Form`Splitter`控制項可用來在執行階段調整停駐的控制項的大小。 `Splitter`控制項通常用於與各種長度的資料，呈現，例如 Windows 檔案總管中，其資料 窗格包含在不同時間的變動寬度資訊的控制項的表單上。  
+Windows Forms `Splitter`控制項是用來在執行時間調整停駐的控制項大小。 `Splitter`控制項通常用於具有不同資料長度的控制項 (例如 Windows Explorer), 其資料窗格包含不同時間的差異寬度資訊。  
   
 > [!NOTE]
->  雖然<xref:System.Windows.Forms.SplitContainer>取代，並將功能加入至`Splitter`先前的版本控制`Splitter`您可以選擇保留回溯相容性以及供未來使用。  
+> 雖然<xref:System.Windows.Forms.SplitContainer>會取代並加入舊版的`Splitter`控制項功能, 但如果`Splitter`您選擇, 則會保留以提供回溯相容性及未來使用。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Splitter 控制項概觀](splitter-control-overview-windows-forms.md)  

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca8db6fd1296420011dcbfbbb0e5682f8a484dc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768808"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965349"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication 方法
-用於以指定要啟動新的網域中的應用程式的資訊清單為基礎的 ClickOnce 部署案例。 如需有關這些案例的詳細資訊，請參閱 < [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。  
+在以資訊清單為基礎的 ClickOnce 部署案例中使用, 以指定要在新的網域中啟動的應用程式。 如需這些案例的詳細資訊, 請參閱[ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,48 +42,48 @@ HRESULT ExecuteApplication(
   
 ## <a name="parameters"></a>參數  
  `pwzAppFullName`  
- [in]應用程式，針對所定義的完整名稱<xref:System.ApplicationIdentity>。  
+ 在應用程式的完整名稱, 如所定義<xref:System.ApplicationIdentity>。  
   
  `dwManifestPaths`  
- [in]中所包含的字串數目`ppwzManifestPaths`陣列。  
+ 在`ppwzManifestPaths`陣列中包含的字串數目。  
   
  `ppwzManifestPaths`  
- [in] 選用。 字串陣列，其中包含應用程式資訊清單的路徑。  
+ [in] 選用。 字串陣列, 其中包含應用程式的資訊清單路徑。  
   
  `dwActivationData`  
- [in]中所包含的字串數目`ppwzActivationData`陣列。  
+ 在`ppwzActivationData`陣列中包含的字串數目。  
   
  `ppwzActivationData`  
- [in] 選用。 字串陣列，其中包含應用程式的啟動資料，例如透過 Web 部署的應用程式的 URL 查詢字串部分。  
+ [in] 選用。 字串陣列, 其中包含應用程式的啟用資料, 例如透過 Web 部署之應用程式的 URL 查詢字串部分。  
   
  `pReturnValue`  
- [out]從應用程式的進入點傳回的值。  
+ 脫銷從應用程式的進入點傳回的值。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 如果方法會傳回 E_FAIL，CLR 不再使用舊的處理序內。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|`ExecuteApplication`已成功傳回。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 如果方法傳回 E_FAIL, 則 CLR 在進程內將無法再使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `ExecuteApplication` 用來啟動新建立的應用程式定義域中的 ClickOnce 應用程式。  
+ `ExecuteApplication`是用來在新建立的應用程式域中啟動 ClickOnce 應用程式。  
   
- `pReturnValue`輸出參數設定為應用程式所傳回的值。 如果您提供的值為 null，如`pReturnValue`，`ExecuteApplication`不會失敗，但它不會傳回值。  
+ `pReturnValue`輸出參數會設定為應用程式所傳回的值。 如果您提供的值為 null `pReturnValue`, `ExecuteApplication`則不會失敗, 但不會傳回值。  
   
 > [!IMPORTANT]
->  請勿呼叫[啟動方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)方法之前呼叫`ExecuteApplication`方法，以啟用資訊清單為基礎的應用程式。 如果`Start`首先，呼叫方法`ExecuteApplication`方法呼叫將會失敗。  
+> 在呼叫`ExecuteApplication`方法來啟動以資訊清單為基礎的應用程式之前, 請不要呼叫[Start 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)方法。 如果先呼叫`ExecuteApplication`方法,方法呼叫將會失敗。 `Start`  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

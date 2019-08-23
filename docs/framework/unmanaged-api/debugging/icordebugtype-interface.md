@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74863af1096f8600b8095e593c1f3c820c512e9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b830af5d59c0eb177d815451ecedbdc14121aaad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663852"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964751"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType 介面
-表示型別，基本或複雜 （也就是，使用者定義）。 如果是泛型類型，則 `ICorDebugType` 表示具現化的泛型類型。  
+代表基本或複雜的類型 (也就是使用者定義的)。 如果是泛型類型，則 `ICorDebugType` 表示具現化的泛型類型。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
-|[EnumerateTypeParameters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|取得的介面指標參考泛型 ICorDebugTypeEnum<xref:System.Type>類別所參考的參數`ICorDebugType`。|  
-|[GetBase 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|取得的介面指標`ICorDebugType`參考所參考的類別的基底類別`ICorDebugType`，如果有的話。|  
-|[GetClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|取得的介面指標來參考這個型別建構函式 ICorDebugClass `ICorDebugType`。|  
-|[GetFirstTypeParameter 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|取得的介面指標`ICorDebugType`參考的第一個泛型<xref:System.Type>參數所參考的類別的建構函式`ICorDebugType`。|  
-|[GetRank 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|取得陣列型別中的維度數目。|  
-|[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|取得包含指定的欄位所參考的靜態欄位值 ICorDebugValue 的介面指標權杖中指定的堆疊框架。|  
-|[GetType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|取得描述通用語言執行平台的原生類型 CorElementType 值<xref:System.Type>所參考`ICorDebugType`。|  
+|[EnumerateTypeParameters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|取得參考此<xref:System.Type> `ICorDebugType`所參考類別之泛型參數的 ICorDebugTypeEnum 介面指標。|  
+|[GetBase 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|取得`ICorDebugType`的介面指標, 它會參考這個`ICorDebugType`所參考之類別的基類 (如果有的話)。|  
+|[GetClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|取得參考這個之具型別 (this `ICorDebugType`) 之 ICorDebugClass 的介面指標。|  
+|[GetFirstTypeParameter 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|取得的介面指標, 其`ICorDebugType`參考這個`ICorDebugType`所參考之<xref:System.Type>類別的函式的第一個泛型參數。|  
+|[GetRank 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|取得陣列類型中的維度數目。|  
+|[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|取得 ICorDebugValue 的介面指標, 其中包含指定之堆疊框架中指定欄位標記所參考的靜態欄位值。|  
+|[GetType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|取得 CorElementType 值, 描述這個<xref:System.Type> `ICorDebugType`所參考之通用語言執行時間的原生類型。|  
   
 ## <a name="remarks"></a>備註  
- 如果類型是泛型，`ICorDebugClass`表示未具現化的型別。 `ICorDebugType`介面表示未具現化的泛型型別。 例如，雜湊表\<K，V > 會由`ICorDebugClass`，而雜湊表\<Int32，字串 > 會由`ICorDebugType`。  
+ 如果類型是泛型, `ICorDebugClass`則表示未具現化的類型。 `ICorDebugType`介面表示具現化的泛型型別。 例如, hashtable\<K, V > 會由`ICorDebugClass`表示, 而雜湊表\< `ICorDebugType`Int32, 則字串 > 會以表示。  
   
- 非泛型類型都由兩者`ICorDebugClass`和`ICorDebugType`。 處理類型具現化的.NET Framework 2.0 版中引進了第二個介面。  
+ 非泛型型別是以`ICorDebugClass`和`ICorDebugType`表示。 第二個介面是在 .NET Framework 版本2.0 中引進, 以處理類型具現化。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "61663852"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

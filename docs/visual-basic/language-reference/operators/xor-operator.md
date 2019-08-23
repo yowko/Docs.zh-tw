@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: 0cba3a995fb1ab774c8a5308e58f0b6905fc23f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59f27b92996e1506be5967de88c22fb88e06f5b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781169"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965851"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor 運算子 (Visual Basic)
-對兩個執行邏輯排除`Boolean`運算式或兩個數值運算式的位元互斥。  
+在兩個`Boolean`運算式上執行邏輯排除, 或在兩個數值運算式上執行位排除。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,18 +32,18 @@ result = expression1 Xor expression2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何`Boolean`或數值的變數。 布林值相較之下，如`result`是兩個邏輯互斥 （獨佔邏輯分離）`Boolean`值。 對於位元運算，`result`是數值，表示兩個數值位元模式的位元互斥 （獨佔位元分離）。  
+ 必要項。 Any `Boolean`或 numeric 變數。 針對布林比較, `result`是兩個`Boolean`值的邏輯排除 (獨佔邏輯分離)。 對於位運算而言`result` , 是代表兩個數值位模式之位排除 (獨佔位分離) 的數值。  
   
  `expression1`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要項。 Any `Boolean`或 numeric 運算式。  
   
  `expression2`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要項。 Any `Boolean`或 numeric 運算式。  
   
 ## <a name="remarks"></a>備註  
- 布林值相較之下，如`result`是`True`才之一`expression1`和`expression2`評估為`True`。 亦即，如果且只有`expression1`並`expression2`評估為相反`Boolean`值。 下表將說明如何`result`決定。  
+ 對於布林值比較`result` , `True` `expression1`只有在只有一個和`expression2`會評估為`True`時, 才會是。 也就是說, 如果`expression1` `expression2`和都評估為相反`Boolean`的值, 則為。 下表說明如何`result`決定。  
   
-|如果`expression1`是|和`expression2`是|值`result`是|  
+|如果`expression1`為|和`expression2`為|的值`result`為|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`False`|  
 |`True`|`False`|`True`|  
@@ -51,11 +51,11 @@ result = expression1 Xor expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  布林值相較之下，`Xor`運算子一律會評估這兩個運算式，這可能包括程序呼叫。 沒有任何最少運算的對應項目來`Xor`，因為結果一定會相依於這兩個運算元。 針對*最少運算*邏輯運算子，請參閱[AndAlso 運算子](../../../visual-basic/language-reference/operators/andalso-operator.md)並[OrElse 運算子](../../../visual-basic/language-reference/operators/orelse-operator.md)。  
+> 在布林值比較中, `Xor`運算子一律會評估兩個運算式, 這可能包括進行程序呼叫。 沒有與`Xor`的簡短對應, 因為結果一律取決於這兩個運算元。 如需最*小*運算邏輯運算子, 請參閱[AndAlso 運算子](../../../visual-basic/language-reference/operators/andalso-operator.md)和[OrElse 運算子](../../../visual-basic/language-reference/operators/orelse-operator.md)。  
   
- 位元運算，如`Xor`運算子會在兩個數值運算式之間執行位元比較相同位置的位元，並對應中位元設`result`根據下表。  
+ 對於位運算, `Xor`運算子會在兩個數值運算式中執行相同位置位的位比較, 並根據下表設定中`result`的對應位。  
   
-|如果位元`expression1`是|在位元和`expression2`是|中的位元`result`是|  
+|如果中的`expression1`位是|中的`expression2`和位為|中`result`的位是|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|0|  
 |1|0|1|  
@@ -63,35 +63,35 @@ result = expression1 Xor expression2
 |0|0|0|  
   
 > [!NOTE]
->  因為邏輯和位元運算子會有較低的優先順序高於其他算術和關係運算子，所以任何位元的作業應該含括括號，以確保能夠正確執行。  
+> 由於邏輯和位運算子的優先順序比其他算術和關係運算子低, 因此應該將任何位運算括在括弧中, 以確保正確執行。  
   
- 例如，5 `Xor` 3 為 6。 若要查看這為何因此，轉換成其二進位的表示法、 101 和 011 的 5 和 3。 然後使用上表來判斷 101 Xor 011 是 110，這是 6 的十進位數字的二進位表示法。  
+ 例如, 5 `Xor` 3 是6。 若要瞭解原因, 請將5和3轉換成其二進位表示, 101 和011。 然後使用上表來判斷 101 Xor 011 是 110, 這是十進位數6的二進位標記法。  
   
 ## <a name="data-types"></a>資料類型  
- 如果包含運算元`Boolean`Visual Basic 運算式及一個數值運算式，將轉換`Boolean`為數值的運算式 (– 1`True`以 0 代表`False`) 和執行位元運算。  
+ 如果運算元是由`Boolean`一個運算式和一個數值運算式所組成, Visual Basic 會`Boolean`將運算式轉換為數值 (-1 代表`True` , 0 則代表`False`), 並執行位運算。  
   
- 針對`Boolean`相較之下，結果的資料型別是`Boolean`。 如需位元的比較，將結果資料類型是數值類型適合的資料類型`expression1`和`expression2`。 請參閱 < 關聯式和位元比較 」 的表格[資料類型的運算子結果](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。  
+ 為了進行`Boolean`比較, 結果的資料類型是。 `Boolean` 針對位比較, 結果資料類型是適用于和`expression1` `expression2`之資料類型的數數值型別。 請參閱[運算子結果的資料類型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的「關聯式和位比較」資料表。  
   
 ## <a name="overloading"></a>多載化  
- `Xor`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ 運算子可以多載, 這表示當運算元具有該類別或結構的類型時, 類別或結構可以重新定義其行為。 `Xor` 如果您的程式碼在這類類別或結構上使用這個運算子, 請確定您瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`Xor`運算子上兩個運算式執行邏輯互斥 （獨佔邏輯分離）。 結果是`Boolean`值，表示只有其中一個運算式是否`True`。  
+ 下列範例會使用`Xor`運算子, 在兩個運算式上執行邏輯排除 (獨佔邏輯分離)。 結果會是一個`Boolean`值, 表示是否只有一個`True`運算式。  
   
  [!code-vb[VbVbalrOperators#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#40)]  
   
- 前一個範例產生的結果`False`， `True`，和`False`分別。  
+ 先前的範例會分別產生`False`、 `True`和`False`的結果。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`Xor`運算子的兩個數值運算式的個別位元執行邏輯互斥 （獨佔邏輯分離）。 如果只有其中一個運算元的對應位元設為 1，會設定結果模式中的位元。  
+ 下列範例會使用`Xor`運算子, 在兩個數值運算式的個別位上執行邏輯排除 (獨佔邏輯分離)。 如果運算元中只有一個對應的位設為 1, 則結果模式中的位會設定為。  
   
  [!code-vb[VbVbalrOperators#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#41)]  
   
- 前一個範例會分別產生的 2、 第 12 和 14 的結果。  
+ 先前的範例會分別產生2、12和14的結果。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [邏輯/位元運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [邏輯/位運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [在 Visual Basic 中的邏輯和位元運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 中的邏輯和位運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

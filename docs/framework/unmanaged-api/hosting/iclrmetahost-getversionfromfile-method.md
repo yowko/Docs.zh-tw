@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b17b36f66a9b8b78b16057ec37d3ee5f484f7ae2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd5d2e820bd1d733bb4ab968a89174124bc91357
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962931"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile 方法
-取得組件的原始.NET Framework 編譯版本 （儲存於中繼資料），提供其檔案路徑。 這個方法會取代[GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)函式。  
+取得元件的原始 .NET Framework 編譯版本 (儲存在中繼資料中), 並指定其檔案路徑。 這個方法會取代[GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,18 +39,18 @@ HRESULT GetVersionFromFile (
   
 ## <a name="parameters"></a>參數  
  `pwzFilePath`  
- [in]完整的組件檔案路徑。  
+ 在完整的元件檔案路徑。  
   
  `pwzbuffer`  
- [out].NET Framework 編譯版本儲存在中繼資料，格式為"v*A*。*B*[。*X*]"。 *A*， *B*，以及*X*是對應至主要版本、 次要版本和組建編號的十進位數字。 這個字串的長度限於 MAX_PATH。  
+ 脫銷儲存在中繼資料中的 .NET Framework 編譯版本, 格式為 "v*A*。*B*[.*X*] "。 *A*、 *B*和*X*是對應至主要版本、次要版本和組建編號的十進位數。 此字串的長度限制為 MAX_PATH。  
   
 > [!NOTE]
->  此輸出符合.NET Framework 版本中，目錄名稱，C:\Windows\Microsoft.NET\Framework 底下所顯示的樣子。  
+> 此輸出符合 .NET Framework 版本的目錄名稱, 因為它出現在 C:\Windows\Microsoft.NET\Framework。  
   
- 範例值為"v1.0.3705"、"v1.1.4322"、"v2.0.50727"和"v4.0。*X*"，其中*X*取決於已安裝的組建編號。 請注意，"v"前置詞，就需要。  
+ 範例值為 "v v1.0.3705"、"v 1.1.4322"、"v 2.0.50727" 和 "v4.0"。*X*", 其中*X*取決於安裝的組建編號。 請注意, 需要 "v" 前置詞。  
   
  `pcchBuffer`  
- [in、 out]大小`pwzbuffer`以避免緩衝區滿溢。  
+ [in、out]`pwzbuffer`要避免緩衝區溢位的大小。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
@@ -59,14 +59,14 @@ HRESULT GetVersionFromFile (
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_POINTER|`pwzbuffer` 或 `pcchBuffer` 為 null。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|緩衝區是太小。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|緩衝區太小。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

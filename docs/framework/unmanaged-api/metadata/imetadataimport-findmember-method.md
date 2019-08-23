@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: caec760cea52cb14d3fdb5d4cf0b59adcae5633b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4eefb7ec1e7d0d130ec64531a59d1d5bbce04963
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782510"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968925"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember 方法
-取得的 memberdef 語彙基元指標的欄位或方法是由指定<xref:System.Type>且具有指定的名稱和中繼資料簽章。  
+取得欄位或方法的 MemberDef token 指標, 此標記是由指定<xref:System.Type>的所括住, 且具有指定的名稱和中繼資料簽章。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,36 +41,36 @@ HRESULT FindMember (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in]類別或介面，包含要搜尋的成員 TypeDef 語彙基元。 如果此值為`mdTokenNil`，全域變數或全域函式完成的查詢。  
+ 在用來括住要搜尋之成員的類別或介面的 TypeDef token。 如果這個值為`mdTokenNil`, 則會針對全域變數或全域函式進行查閱。  
   
  `szName`  
- [in]要搜尋的成員名稱。  
+ 在要搜尋之成員的名稱。  
   
  `pvSigBlob`  
- [in]二進位中繼資料簽章的成員指標。  
+ 在成員的二進位中繼資料簽章的指標。  
   
  `cbSigBlob`  
- [in]以位元組為單位的大小`pvSigBlob`。  
+ 在的`pvSigBlob`大小 (以位元組為單位)。  
   
  `pmb`  
- [out]比對的 MemberDef 語彙基元指標。  
+ 脫銷對應之 MemberDef token 的指標。  
   
 ## <a name="remarks"></a>備註  
- 指定使用其封入類別或介面的成員 (`td`)，其名稱 (`szName`)，和 （選擇性） 其簽章 (`pvSigBlob`)。 可能有多個具有相同名稱的類別或介面中的成員。 在此情況下，傳遞該成員的簽章，以尋找唯一相符項目。  
+ 您可以使用其封入類別或介面 (`td`)、其名稱 (`szName`), 以及選擇性的簽章 (`pvSigBlob`) 來指定成員。 類別或介面中可能有多個具有相同名稱的成員。 在此情況下, 請傳遞成員的簽章來尋找唯一的相符項。  
   
- 簽章傳遞至`FindMember`必須已產生在目前的範圍內，因為簽章會繫結至特定的範圍。 簽章可以內嵌識別封入類別或實值類型的語彙基元。 語彙基元是本機 TypeDef 資訊表內的索引。 您無法建置目前範圍的內容以外的執行階段簽章，並使用該簽章為輸入至輸入`FindMember`。  
+ 傳遞至`FindMember`的簽章必須已在目前的範圍中產生, 因為簽章已系結至特定範圍。 簽章可以內嵌可識別封閉類別或實數值型別的 token。 Token 是本機 TypeDef 資料表的索引。 您無法在目前範圍的內容之外建立執行時間簽章, 並使用該簽章做為輸入來輸入`FindMember`至。  
   
- `FindMember` 尋找直接在類別或介面中所定義的成員找不到繼承的成員。  
+ `FindMember`只尋找直接定義于類別或介面中的成員;它找不到繼承的成員。  
   
 > [!NOTE]
->  `FindMember` 是 helper 方法。 它會呼叫[imetadataimport:: Findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); 如果該呼叫找不到相符項目，`FindMember`然後呼叫[imetadataimport:: Findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)。  
+> `FindMember`是 helper 方法。 它會呼叫[IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md);如果該呼叫找不到相符的, `FindMember`則會呼叫[IMetaDataImport:: FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **標頭：** Cor。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 020ea101ae38b9be854398a55ddd31e67b9fda35
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 9fac4e1a98f67c6d5d946ade1b7f2115ce0d5f8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859663"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964869"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的各種文件功能可以建立高精確度的內容，此種內容的設計會比在舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中更加容易存取與閱讀。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供廣泛的檔功能, 可讓您建立更容易存取和讀取的高精確度內容, 而不是在舊版的 Windows 中。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
 
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>文件的類型  
@@ -30,36 +30,36 @@ ms.locfileid: "67859663"
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>文件控制項和文字配置  
- .NET Framework 提供一組預先建置的控制項，可簡化使用固定格式文件、 非固定格式文件和應用程式內的一般文字。  使用支援固定格式文件內容的顯示<xref:System.Windows.Controls.DocumentViewer>控制項。  顯示非固定格式文件內容由三個不同的控制項支援： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>其對應至不同的使用者案例 （請參閱下列各節）。  其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項提供簡化的配置，以支援一般文字用途 (請參閱下方的[使用者介面中的文字](#text_in_the_user_interface))。  
+ .NET Framework 提供一組預先建立的控制項, 可簡化在您的應用程式中使用固定檔、非固定格式檔和一般文字。  使用<xref:System.Windows.Controls.DocumentViewer>控制項可支援顯示固定的檔內容。  顯示非固定格式檔內容是由三個不同的<xref:System.Windows.Controls.FlowDocumentReader>控制項<xref:System.Windows.Controls.FlowDocumentPageViewer>所支援<xref:System.Windows.Controls.FlowDocumentScrollViewer> :、和, 其對應至不同的使用者案例 (請參閱以下各節)。  其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項提供簡化的配置，以支援一般文字用途 (請參閱下方的[使用者介面中的文字](#text_in_the_user_interface))。  
   
 ### <a name="fixed-document-control---documentviewer"></a>固定格式文件控制項 - DocumentViewer  
- <xref:System.Windows.Controls.DocumentViewer>控制項用來顯示<xref:System.Windows.Documents.FixedDocument>內容。 <xref:System.Windows.Controls.DocumentViewer>控制項提供直覺式使用者介面，提供內建支援，以一般的作業，包括列印輸出，請將複製到剪貼簿、 縮放和文字搜尋功能。 此控制項可透過常見的捲動機制，來存取多頁內容。 如同所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項，<xref:System.Windows.Controls.DocumentViewer>支援完整或部分樣式重新設定，讓控制項以視覺化方式整合到幾乎任何應用程式或環境。  
+ 控制項<xref:System.Windows.Controls.DocumentViewer>的設計目的是要<xref:System.Windows.Documents.FixedDocument>顯示內容。 <xref:System.Windows.Controls.DocumentViewer>控制項提供直覺的使用者介面, 可提供內建的支援, 包括列印輸出、複製到剪貼簿、縮放和文字搜尋功能。 此控制項可透過常見的捲動機制，來存取多頁內容。 就像[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]所有控制項<xref:System.Windows.Controls.DocumentViewer>一樣, 支援完整或部分 restyling, 可讓控制項視覺化地整合到幾乎任何應用程式或環境中。  
   
- <xref:System.Windows.Controls.DocumentViewer> 被設計來顯示內容以唯讀方式;編輯或修改的內容不提供，並不支援。  
+ <xref:System.Windows.Controls.DocumentViewer>的設計目的是要以唯讀方式顯示內容;內容的編輯或修改無法使用, 且不受支援。  
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>非固定格式文件控制項  
 
 > [!NOTE]
->  如需詳細的非固定格式文件功能及如何建立這些資訊，請參閱 <<c0> [ 非固定格式文件概觀](flow-document-overview.md)。  
+> 如需非固定格式檔功能及其建立方式的詳細資訊, 請參閱非固定格式[檔總覽](flow-document-overview.md)。  
   
- 顯示非固定格式文件內容由三個控制項支援： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
+ 顯示非固定格式檔內容是由三個控制項<xref:System.Windows.Controls.FlowDocumentReader>所<xref:System.Windows.Controls.FlowDocumentPageViewer>支援: <xref:System.Windows.Controls.FlowDocumentScrollViewer>、和。  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> 包含可讓使用者動態選擇各種檢視模式，包括單一頁面 （頁面-一次） 檢視模式中，兩個-頁面-一次 （書本閱讀格式） 檢視模式，以及連續捲動 （無底邊） 檢視模式的功能。  如需這些檢視模式的詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  如果您不需要動態切換不同檢視模式的能力<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>特定檢視模式固定的內容檢視器提供輕量型非固定格式。  
+ <xref:System.Windows.Controls.FlowDocumentReader>包含的功能可讓使用者在各種不同的視圖模式之間進行動態選擇, 包括單頁 (一次一頁) 的瀏覽模式、兩頁的一次性 (書籍閱讀格式) 觀賞模式, 以及連續滾動 (無底邊) 查看模式。  如需這些查看模式的詳細資訊, <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>請參閱。  如果您不需要在不同的視圖模式之間進行動態切換的功能<xref:System.Windows.Controls.FlowDocumentPageViewer> , <xref:System.Windows.Controls.FlowDocumentScrollViewer>並提供在特定的瀏覽模式中固定的較輕量流程內容檢視器。  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 和 FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer> 顯示內容頁-一次檢視模式，而<xref:System.Windows.Controls.FlowDocumentScrollViewer>會以連續捲動模式顯示內容。  兩者<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>都有固定的特定檢視模式。 比較<xref:System.Windows.Controls.FlowDocumentReader>，包含的功能可讓使用者動態選擇各種檢視模式 (藉由提供<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>列舉型別)，但代價是更多的資源量<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer>在頁面一次的瀏覽模式中顯示內容, 同時<xref:System.Windows.Controls.FlowDocumentScrollViewer>以連續滾動模式顯示內容。  <xref:System.Windows.Controls.FlowDocumentPageViewer> 和<xref:System.Windows.Controls.FlowDocumentScrollViewer>都固定于特定的瀏覽模式。 相較<xref:System.Windows.Controls.FlowDocumentReader>于, 其中包含的功能可讓使用者在各種不同的瀏覽模式 (由列舉所<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>提供) 之間進行動態選擇, 代價是比<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>更耗費資源的成本。  
   
- 預設一定會顯示垂直捲軸，而水平捲動則會視需要顯示。 預設值[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]for<xref:System.Windows.Controls.FlowDocumentScrollViewer>不包含工具列; 不過，<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A>屬性可用來啟用內建工具列。  
+ 預設一定會顯示垂直捲軸，而水平捲動則會視需要顯示。 的預設[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]值<xref:System.Windows.Controls.FlowDocumentScrollViewer>不包含<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A>工具列, 但是屬性可以用來啟用內建工具列。  
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>使用者介面中的文字  
- 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般情況下，<xref:System.Windows.Controls.TextBlock>必要項目，例如一個簡短的句子，在有限的文字支援時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文字支援時，可以使用。 如需詳細資訊，請參閱 [TextBlock 概觀](../controls/textblock-overview.md)。  
+ 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般而言, 需要有限<xref:System.Windows.Controls.TextBlock>的文字支援時 (例如[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]中的簡短句子), 應使用元素。 <xref:System.Windows.Controls.Label>當需要最少的文字支援時, 可以使用。 如需詳細資訊，請參閱 [TextBlock 概觀](../controls/textblock-overview.md)。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文件封裝  
- <xref:System.IO.Packaging> Api 提供有效率的方法來組織應用程式資料、 文件內容和相關的資源，以供存取、 可攜性，以及輕鬆地散發至單一容器中。 ZIP 檔案是範例<xref:System.IO.Packaging.Package>可以當做單一單位保留多個物件的型別。 封裝 Api，提供預設<xref:System.IO.Packaging.ZipPackage>而設計的開放封裝慣例標準使用 XML 和 ZIP 檔案架構的實作。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封裝 Api 會讓您輕鬆地建立封裝，以及儲存和存取其中的物件。 中儲存的物件<xref:System.IO.Packaging.Package>指<xref:System.IO.Packaging.PackagePart>（「 組件 」）。 封裝也可以包含簽署的數位憑證，該憑證可用來識別組件的建立者，以及驗證封裝內容是否未遭修改。  封裝也包含<xref:System.IO.Packaging.PackageRelationship>功能，可讓其他資訊加入至封裝或與特定的組件相關聯，而不需要實際修改現有的組件的內容。  封裝服務也支援 [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)]。  
+ <xref:System.IO.Packaging> Api 提供有效率的方法, 在單一容器中組織應用程式資料、檔內容和相關資源, 這種方式可輕鬆存取、攜帶和輕鬆散發。 ZIP 檔案是能夠將多個物件<xref:System.IO.Packaging.Package>當做單一單位來保存之類型的範例。 封裝 api 提供了使用開放式<xref:System.IO.Packaging.ZipPackage>封裝慣例標準搭配 XML 和 ZIP 檔案架構所設計的預設實體系。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封裝 api 可讓您輕鬆建立封裝, 並在其中儲存和存取物件。 儲存在中<xref:System.IO.Packaging.Package>的物件稱為<xref:System.IO.Packaging.PackagePart> (「元件」)。 封裝也可以包含簽署的數位憑證，該憑證可用來識別組件的建立者，以及驗證封裝內容是否未遭修改。  套件也包含一<xref:System.IO.Packaging.PackageRelationship>項功能, 可讓您將其他資訊新增至封裝或與特定元件相關聯, 而不需要實際修改現有元件的內容。  封裝服務也支援 [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)]。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 封裝架構是下列幾個重要技術的基礎：  
   
@@ -69,13 +69,13 @@ ms.locfileid: "67859663"
   
 - 適用於您自己應用程式設計的自訂儲存格式。  
   
- 封裝 Api，為基礎<xref:System.Windows.Xps.Packaging.XpsDocument>專為儲存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]修正內容的文件。           <xref:System.Windows.Xps.Packaging.XpsDocument>是獨立的文件，可以在檢視器 中顯示開啟<xref:System.Windows.Controls.DocumentViewer>控制項來列印多工緩衝處理，路由或輸出直接[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-相容的印表機。  
+ 根據封裝 api, <xref:System.Windows.Xps.Packaging.XpsDocument>是特別設計來儲存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定的內容檔。 <xref:System.Windows.Xps.Packaging.XpsDocument>是獨立的文件，可以在檢視器 中顯示開啟<xref:System.Windows.Controls.DocumentViewer>控制項來列印多工緩衝處理，路由或輸出直接[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-相容的印表機。  
   
- 下列各節提供的其他資訊<xref:System.IO.Packaging.Package>並<xref:System.Windows.Xps.Packaging.XpsDocument>使用所提供的 Api [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
+ 下列各節提供有關提供<xref:System.IO.Packaging.Package> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]之和<xref:System.Windows.Xps.Packaging.XpsDocument> api 的其他資訊。  
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>封裝元件  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 封裝 API 可將應用程式資料和文件組織成單一可攜式單位。 ZIP 檔案就是其中一種最常見的封裝類型，而且是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 隨附的預設封裝類型。  <xref:System.IO.Packaging.Package> 本身是抽象類別，從其中<xref:System.IO.Packaging.ZipPackage>使用開放標準 XML 和 ZIP 檔案架構實作。  <xref:System.IO.Packaging.Package.Open%2A>方法會使用<xref:System.IO.Packaging.ZipPackage>建立並使用預設的 ZIP 檔案。 一個封裝可以包含三種基本項目類型：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 封裝 API 可將應用程式資料和文件組織成單一可攜式單位。 ZIP 檔案就是其中一種最常見的封裝類型，而且是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 隨附的預設封裝類型。  <xref:System.IO.Packaging.Package>本身是抽象類別, 使用開放式<xref:System.IO.Packaging.ZipPackage>標準 XML 和 ZIP 檔案架構來執行。  根據預設, <xref:System.IO.Packaging.ZipPackage>方法會使用來建立和使用 ZIP 檔案。 <xref:System.IO.Packaging.Package.Open%2A> 一個封裝可以包含三種基本項目類型：  
   
 |||  
 |-|-|  
@@ -85,11 +85,11 @@ ms.locfileid: "67859663"
   
 <a name="PackageParts"></a>   
 #### <a name="packageparts"></a>PackageParts  
- A <xref:System.IO.Packaging.PackagePart> （「 組件 」） 是指儲存在物件的抽象類別<xref:System.IO.Packaging.Package>。 在 ZIP 檔案中，封裝組件會對應至儲存在 ZIP 檔案中的個別檔案。  <xref:System.IO.Packaging.ZipPackagePart> 提供儲存在可序列化物件的預設實作<xref:System.IO.Packaging.ZipPackage>。  就像檔案系統，封裝中包含的組件會儲存在階層式目錄或「資料夾樣式」的組織中。  使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封裝 Api，應用程式可以撰寫、 儲存及讀取多個<xref:System.IO.Packaging.PackagePart>物件，使用單一 ZIP 檔案容器。  
+ A <xref:System.IO.Packaging.PackagePart> ("part") 是參考儲存<xref:System.IO.Packaging.Package>在中之物件的抽象類別。 在 ZIP 檔案中，封裝組件會對應至儲存在 ZIP 檔案中的個別檔案。  <xref:System.IO.Packaging.ZipPackagePart>提供儲存在中<xref:System.IO.Packaging.ZipPackage>之 serializable 物件的預設執行。  就像檔案系統，封裝中包含的組件會儲存在階層式目錄或「資料夾樣式」的組織中。  使用封裝 api, 應用程式可以使用單一 ZIP 檔案容器來撰寫<xref:System.IO.Packaging.PackagePart> 、儲存和讀取多個物件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
 <a name="PackageDigitalSignatures"></a>   
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
- 為了安全性， <xref:System.IO.Packaging.PackageDigitalSignature> （「 數位簽章 」） 可以在封裝內的組件與相關聯。 A<xref:System.IO.Packaging.PackageDigitalSignature>納入 [509] 提供兩個功能：  
+ 基於安全性, <xref:System.IO.Packaging.PackageDigitalSignature>可以將 (「數位簽章」) 與封裝內的元件產生關聯。 會<xref:System.IO.Packaging.PackageDigitalSignature>合併提供兩個功能的 [509]:  
   
 1. 識別並驗證組件的建立者。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "67859663"
   
 <a name="PackageRelationships"></a>   
 #### <a name="packagerelationships"></a>PackageRelationships  
- A <xref:System.IO.Packaging.PackageRelationship> （「 關聯性 」） 提供一個機制，來將關聯封裝或封裝內的組件中的其他資訊。 關聯性是封裝層級功能，可將其他資訊與組件產生關聯，而不需要修改實際組件內容。 直接將新資料插入組件內容，在許多情況下通常並不可行：  
+ A <xref:System.IO.Packaging.PackageRelationship> (「關聯性」) 提供了一種機制, 可讓其他資訊與封裝或封裝內的元件產生關聯。 關聯性是封裝層級功能，可將其他資訊與組件產生關聯，而不需要修改實際組件內容。 直接將新資料插入組件內容，在許多情況下通常並不可行：  
   
 - 不知道組件及其內容結構描述的實際類型。  
   
@@ -113,19 +113,19 @@ ms.locfileid: "67859663"
   
 2. 定義新增附註或組件之其他相關資料的資訊關聯性。  
   
- A<xref:System.IO.Packaging.PackageRelationship>提供快速且顯而易見的方法，來定義相依性，並新增與封裝或整個封裝組件相關聯的其他資訊。  
+ <xref:System.IO.Packaging.PackageRelationship>提供快速且可探索的方法來定義相依性, 並加入與封裝或整個封裝相關聯的其他資訊。  
   
 <a name="Dependency_Relationships"></a>   
 ##### <a name="dependency-relationships"></a>相依性關聯性  
- 相依性關聯性可用來描述某個組件與其他組件的相依性。 例如，一個封裝可能包含具有一或多個 \<img> 影像標記的 HTML 組件。 影像標記所參考的影像，就是位於封裝內部或外部 (例如可透過網際網路存取) 的其他組件。 建立<xref:System.IO.Packaging.PackageRelationship>與 HTML 檔案探索和存取快速且輕鬆的相依資源相關聯。 瀏覽器或檢視器應用程式可以直接存取組件關聯性，並立即開始組合相依資源，而不需要知道結構描述或剖析文件。  
+ 相依性關聯性可用來描述某個組件與其他組件的相依性。 例如，一個封裝可能包含具有一或多個 \<img> 影像標記的 HTML 組件。 影像標記所參考的影像，就是位於封裝內部或外部 (例如可透過網際網路存取) 的其他組件。 建立與<xref:System.IO.Packaging.PackageRelationship> HTML 檔案相關聯的, 可讓您快速輕鬆地探索和存取相依的資源。 瀏覽器或檢視器應用程式可以直接存取組件關聯性，並立即開始組合相依資源，而不需要知道結構描述或剖析文件。  
   
 <a name="Information_Relationships"></a>   
 ##### <a name="information-relationships"></a>資訊關聯性  
- 類似於附註或註解，<xref:System.IO.Packaging.PackageRelationship>也可以用來儲存其他類型的資訊是與組件相關聯，而不需要實際修改組件內容本身。  
+ 類似于便箋或批註, 也<xref:System.IO.Packaging.PackageRelationship>可以用來儲存其他類型的資訊, 使其與元件相關聯, 而不需要實際修改元件內容本身。  
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS 文件  
- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件是一種封裝，其中包含一或多份固定格式文件，以及進行呈現所需的所有資源和資訊。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 也是原生 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 列印多工緩衝檔案格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>會儲存在標準 ZIP 資料集中，而且可以包含 XML 和二進位的元件，例如影像和字型檔案組成。 [PackageRelationships](#PackageRelationships) 可用來定義完整呈現文件所需的內容和資源之間的相依性。  <xref:System.Windows.Xps.Packaging.XpsDocument>設計提供支援多個使用單一、 高精確文件解決方案：  
+ [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件是一種封裝，其中包含一或多份固定格式文件，以及進行呈現所需的所有資源和資訊。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 也是原生 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 列印多工緩衝檔案格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>會儲存在標準 ZIP 資料集中, 而且可以包含 XML 和二進位元件的組合, 例如影像和字型檔案。 [PackageRelationships](#PackageRelationships) 可用來定義完整呈現文件所需的內容和資源之間的相依性。  此<xref:System.Windows.Xps.Packaging.XpsDocument>設計提供單一、高精確度的檔解決方案, 可支援多個用途:  
   
 - 將固定格式文件內容和資源當做單一可攜式且容易散發的檔案，進行讀取、寫入及儲存。  
   

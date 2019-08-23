@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486684"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941388"
 ---
-# <a name="systemweb-element-web-settings"></a>\<system.web > 項目 （Web 設定）
-包含 ASP.NET 裝載層管理整個處理序行為的方式的相關資訊。  
+# <a name="systemweb-element-web-settings"></a>\<system.web > 元素 (Web 設定)
+包含 ASP.NET 裝載層如何管理整個進程行為的相關資訊。  
   
  \<configuration>  
-\<system.web > 項目 （Web 設定）  
+\<system.web > 元素 (Web 設定)  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,19 +38,19 @@ ms.locfileid: "67486684"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|指定在 aspnet.config 檔中的 IIS 應用程式集區的組態設定。|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|在 aspnet .config 檔案中指定 IIS 應用程式集區的配置設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|所有由 common language runtime 和.NET Framework 應用程式的組態檔中指定的根項目。|  
+|[\<configuration>](../configuration-element.md)|指定通用語言執行時間和 .NET Framework 應用程式所使用之每個設定檔中的根項目。|  
   
 ## <a name="remarks"></a>備註  
- `system.web`項目和其子系`applicationPool`元素已新增至.NET Framework，.NET Framework 3.5 sp1。 當您在整合模式中執行 IIS 7.0 或更新版本時，此項目組合，可讓您設定 ASP.NET 如何管理執行緒，以及如何它排入佇列的要求 ASP.NET 裝載在 IIS 應用程式集區時。 如果您在 [傳統] 或 [ISAPI] 模式中執行 IIS 7.0 或更新版本，則會忽略這些設定。  
+ 元素及其子`applicationPool`專案已加入至 .NET Framework, 從 .NET Framework 3.5 SP1。 `system.web` 當您在整合模式中執行 IIS 7.0 或更新版本時, 此元素組合可讓您設定 ASP.NET 管理執行緒的方式, 以及當 ASP.NET 裝載于 IIS 應用程式集區時, 如何將要求排入佇列。 如果您以傳統或 ISAPI 模式執行 IIS 7.0 或更新版本, 則會忽略這些設定。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何在 aspnet.config 檔中設定 ASP.NET 全處理序行為，當 ASP.NET 裝載於 IIS 應用程式集區。 此範例假設 IIS 正在執行中整合式驗證模式和應用程式使用.NET Framework 3.5 SP1 或更新版本。 在.NET Framework 3.5 SP1 之前的.NET framework 的版本中，不會發生此行為。 在範例中的值是預設值。  
+ 下列範例顯示當 ASP.NET 裝載于 IIS 應用程式集區時, 如何在 aspnet .config 檔案中設定 ASP.NET 全進程行為。 此範例假設 IIS 是在整合模式中執行, 且應用程式使用 .NET Framework 3.5 SP1 或更新版本。 這種行為不會發生在 .NET Framework 3.5 SP1 之前的 .NET Framework 版本中。 範例中的值為預設值。  
   
 ```xml  
 <configuration>  
@@ -70,8 +70,8 @@ ms.locfileid: "67486684"
 |命名空間||  
 |結構描述名稱||  
 |驗證檔||  
-|可以是空白||  
+|可以是空的||  
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<applicationPool> 項目 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [\<applicationPool> 項目 (Web 設定)](applicationpool-element-web-settings.md)

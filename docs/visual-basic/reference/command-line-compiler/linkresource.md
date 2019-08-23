@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 637a1d4b7a523feb2fc8da10a0c18e68774c480a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d92b0d08daf660880b648875c67c3b78069143d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586692"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924865"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 建立與 Managed 資源的連結。  
@@ -29,27 +29,27 @@ ms.locfileid: "65586692"
   
 ## <a name="arguments"></a>引數  
  `filename`  
- 必要項。 要連結至組件的資源檔。 如果檔案名稱包含空格，將名稱括在引號 ("")。  
+ 必要項。 要連結至元件的資源檔。 如果檔案名包含空格, 請將名稱括在引號 ("") 中。  
   
  `identifier`  
- 選擇性。 資源的邏輯名稱。 用來載入資源的名稱。 預設值是檔案的名稱。 您可以選擇性地指定檔案是否公用或私用組件資訊清單中，例如： `-linkres:filename.res,myname.res,public`。 根據預設，`filename`是公用的組件中。  
+ 選擇性。 資源的邏輯名稱。 用來載入資源的名稱。 預設值是檔案的名稱。 (選擇性) 您可以在組件資訊清單中指定檔案是否為公用或私用, 例如`-linkres:filename.res,myname.res,public`:。 根據預設, `filename`在元件中是公用的。  
   
 ## <a name="remarks"></a>備註  
- `-linkresource`選項不會將資源檔內嵌至輸出檔; 使用`-resource`選項來執行這項操作。  
+ 此選項不會將資源檔內嵌在輸出檔案中, 而是`-resource`使用選項來執行此動作。 `-linkresource`  
   
- `-linkresource`選項需要其中一個`-target`以外的其他選項`-target:module`。  
+ 選項需要以外的`-target`其中一個選項`-target:module`。 `-linkresource`  
   
- 如果`filename`是.NET Framework 建立的資源檔，例如，藉由[Resgen.exe （資源檔產生器）](../../../framework/tools/resgen-exe-resource-file-generator.md)或在開發環境中，它可以存取使用中的成員<xref:System.Resources>命名空間。 (如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>)。若要在執行階段存取所有其他資源，請使用 開頭的方法`GetManifestResource`在<xref:System.Reflection.Assembly>類別。  
+ 例如`filename` , 如果是由[resgen.exe (資源檔](../../../framework/tools/resgen-exe-resource-file-generator.md)產生器) 或在開發環境中建立的 .NET Framework 資源檔, 則可以使用命名空間中的<xref:System.Resources>成員進行存取。 (如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>)。若要在執行時間存取所有其他資源, 請在`GetManifestResource` <xref:System.Reflection.Assembly>類別中使用以開頭的方法。  
   
- 檔案名稱可以是任何檔案格式。 例如，您可能需要產生組件的原生 DLL 部分，以便安裝到全域組件快取中，並從組件的 Managed 程式碼存取。  
+ 檔案名可以是任何檔案格式。 例如，您可能需要產生組件的原生 DLL 部分，以便安裝到全域組件快取中，並從組件的 Managed 程式碼存取。  
   
  `-linkresource` 的簡短形式為 `-linkres`。  
   
 > [!NOTE]
->  `-linkresource`選項不是可從 Visual Studio 開發環境; 它是使用只有您在編譯時從命令列。  
+> Visual Studio 開發環境中無法使用選項,只有當您從命令列編譯時才可以使用。`-linkresource`  
   
 ## <a name="example"></a>範例  
- 下列程式碼會編譯`in.vb`以及資源檔的連結`rf.resource`。  
+ 下列程式碼會`in.vb`編譯並連結至資源`rf.resource`檔。  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  

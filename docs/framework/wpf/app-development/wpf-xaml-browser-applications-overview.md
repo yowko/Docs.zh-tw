@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a83b3e68365cccc96cfe7eaa4baaabf8c991c98f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611480"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956042"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
@@ -40,7 +40,7 @@ ms.locfileid: "69611480"
  當您執行 XBAP 專案時，它會在瀏覽器視窗中開啟，而不是在獨立視窗中開啟。 當您從 Visual Studio 來對 XBAP 進行偵錯工具時, 應用程式會以網際網路區域許可權執行, 因此如果超過這些許可權, 將會擲回安全性例外狀況。 如需詳細資訊，請參閱[安全性](../security-wpf.md)和 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   
 > [!NOTE]
->  如果您不是使用 Visual Studio 進行開發, 或想要深入瞭解專案檔, 請參閱[建立 WPF 應用程式](building-a-wpf-application-wpf.md)。  
+> 如果您不是使用 Visual Studio 進行開發, 或想要深入瞭解專案檔, 請參閱[建立 WPF 應用程式](building-a-wpf-application-wpf.md)。  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>部署 XBAP  
@@ -174,7 +174,7 @@ ms.locfileid: "69611480"
 |網際網路|因為「未授與信任」而失敗|使用憑證簽署 XBAP。|  
   
 > [!NOTE]
->  上表中描述的行為是針對未遵循 ClickOnce 受信任部署模型的完全信任 XBAP。  
+> 上表中描述的行為是針對未遵循 ClickOnce 受信任部署模型的完全信任 XBAP。  
   
  建議您使用 ClickOnce 受信任部署模型來部署完全信任 XBAP。 此模型可讓您的 XBAP 自動授與完全信任，無論安全性區域為何，因此系統不會提示使用者。 做為此模型的一部分，您必須使用受信任發行者的憑證來簽署應用程式。 如需詳細資訊，請參閱[受信任應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)和[程式碼簽署簡介](https://go.microsoft.com/fwlink/?LinkId=166327)。  
   

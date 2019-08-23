@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdc889dd6b2854654bfe43b24afbe4cc19863c80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3bb2f6333f306c8a19c8b2f67986b23819b74ee0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993685"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966867"
 ---
 # <a name="icordebugvalue-interface"></a>ICorDebugValue 介面
-表示正在進行偵錯程序中的值。 值可以是讀取或寫入值。  
+表示正在進行調試之進程中的值。 此值可以是讀取或寫入值。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|這個方法目前尚未實作。|  
-|[GetAddress 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|取得這個位址`ICorDebugValue`物件，這是正在進行偵錯。|  
-|[GetSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|取得大小，以位元組為單位，這個`ICorDebugValue`物件。|  
-|[GetType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|取得這個基本型別`ICorDebugValue`物件。|  
+|[CreateBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|這個方法目前未執行。|  
+|[GetAddress 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|取得此物件的位址`ICorDebugValue` , 此為正在進行調試的進程。|  
+|[GetSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|取得這個`ICorDebugValue`物件的大小 (以位元組為單位)。|  
+|[GetType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|取得此`ICorDebugValue`物件的基本類型。|  
   
 ## <a name="remarks"></a>備註  
- 一般情況下，它會傳回時，會傳遞值物件的擁有權。 收件者會負責與物件完成時，從物件移除參考。  
+ 一般情況下, 值物件的擁有權會在傳回時傳遞。 當物件完成時, 收件者會負責從物件中移除參考。  
   
- 根據位置已從擷取的值，值可能不會維持有效之後繼續此程序。 因此，在一般情況下，保留的值不應該呼叫跨越[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法。  
+ 根據從其中抓取值的位置而定, 此值在進程繼續之後可能不會保持有效。 因此, 一般而言, 此值不應保留在[ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法的呼叫中。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "61993685"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

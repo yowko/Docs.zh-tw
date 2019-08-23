@@ -9,31 +9,31 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52b9b99b0af38d797e4a3c98dc0979211c930c1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947338"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923384"
 ---
-# <a name="how-to-hit-test-geometry-in-a-visual"></a>HOW TO：對視覺物件中的幾何進行點擊測試
-此範例示範如何組成一或多個視覺物件上執行點擊的測試<xref:System.Windows.Media.Geometry>物件。  
+# <a name="how-to-hit-test-geometry-in-a-visual"></a>作法：對視覺物件中的幾何進行點擊測試
+這個範例示範如何在由一個或多個<xref:System.Windows.Media.Geometry>物件所組成的視覺物件上執行點擊測試。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何擷取<xref:System.Windows.Media.DrawingGroup>使用的視覺物件從<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>方法。 然後根據每個繪圖的呈現內容來執行點擊的測試，且<xref:System.Windows.Media.DrawingGroup>來判斷所點擊的幾何。  
+ 下列範例示範如何<xref:System.Windows.Media.DrawingGroup>從<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>使用方法的視覺物件取得。 接著會對中<xref:System.Windows.Media.DrawingGroup>每個繪圖的轉譯內容執行點擊測試, 以判斷已叫用的幾何。  
   
 > [!NOTE]
->  在大部分情況下，您會使用<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>方法，以判斷是否點相交的任何視覺效果呈現內容。  
+> 在大部分的情況下, 您會<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>使用方法來判中斷點是否與視覺效果的任何轉譯內容相交。  
   
  [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
  [!code-vb[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
- <xref:System.Windows.Media.Geometry.FillContains%2A>方法是多載的方法，可讓您使用指定的點擊測試<xref:System.Windows.Point>或<xref:System.Windows.Media.Geometry>。 如果幾何是經過繪製，筆觸可延伸至填滿範圍外。 在此情況下，您可能想要呼叫<xref:System.Windows.Media.Geometry.StrokeContains%2A>除了<xref:System.Windows.Media.Geometry.FillContains%2A>。  
+ 方法是一種多載的方法, 可讓您使用指定<xref:System.Windows.Point>的或<xref:System.Windows.Media.Geometry>來點擊測試。 <xref:System.Windows.Media.Geometry.FillContains%2A> 如果幾何是經過繪製，筆觸可延伸至填滿範圍外。 在這種情況下, 您可能會<xref:System.Windows.Media.Geometry.StrokeContains%2A>想要在<xref:System.Windows.Media.Geometry.FillContains%2A>之外呼叫。  
   
- 您也可以提供<xref:System.Windows.Media.ToleranceType>用於目的貝茲壓平合併。  
+ 您也可以提供<xref:System.Windows.Media.ToleranceType>用於貝塞爾簡維用途的。  
   
 > [!NOTE]
->  這個範例不會將任何可能套用至幾何的轉換或裁剪列入考慮。 此外，這個範例無法搭配樣式化控制項運作，因為它不具備任何直接與其相關聯的圖案。  
+> 這個範例不會將任何可能套用至幾何的轉換或裁剪列入考慮。 此外，這個範例無法搭配樣式化控制項運作，因為它不具備任何直接與其相關聯的圖案。  
   
 ## <a name="see-also"></a>另請參閱
 

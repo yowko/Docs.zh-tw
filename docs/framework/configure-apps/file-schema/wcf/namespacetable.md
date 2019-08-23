@@ -2,20 +2,20 @@
 title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: ee7a0c23adca883af279addf9d1f221bd4056d00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0316e983446644671ead2f8f843dc91b493b29c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772407"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933162"
 ---
 # <a name="namespacetable"></a>\<namespaceTable>
 
 代表定義一組項目的組態區段，其中包含前置詞對應的命名空間，這些對應稍後可在 XPath 篩選條件中用於路由。
 
-**\<system.serviceModel>**   
-&nbsp;&nbsp;**\<routing>**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable>**
+**\<system.serviceModel>**    
+&nbsp;&nbsp; **\<routing>**    
+&nbsp;&nbsp;&nbsp;&nbsp; **\<namespaceTable>**
   
 ## <a name="syntax"></a>語法  
   
@@ -42,13 +42,13 @@ None
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | 定義用於 XPath 運算式的命名空間前置詞對應。 |
+| [ **\<filter>** ](filter.md) | 定義用於 XPath 運算式的命名空間前置詞對應。 |
 
 ### <a name="parent-elements"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<routing>**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 代表定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>評估內送訊息，以及路由資料表定義目標端點時要使用將訊息傳送至篩選條件的比對。 |
+| [ **\<routing>** ](routing.md) | 表示定義一組路由篩選的設定區段, 其決定在評估傳入訊息時所使用的 Windows Communication Foundation<xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) 類型, 以及將目標端點定義為的路由表。當篩選準則相符時, 將訊息傳送至。 |
 
 ## <a name="see-also"></a>另請參閱
 

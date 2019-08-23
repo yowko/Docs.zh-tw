@@ -1,17 +1,17 @@
 ---
-title: 'Icordebugvirtualunwinder:: Next 方法'
+title: 'ICorDebugVirtualUnwinder:: Next 方法'
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd12861b34d577a002fbf0cc8a7962b7bfc35fe1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20a3d4bac42731bc94ecef7a0756392c8c0882fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775339"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967928"
 ---
-# <a name="icordebugvirtualunwindernext-method"></a>Icordebugvirtualunwinder:: Next 方法
+# <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder:: Next 方法
 進入呼叫端的內容。  
   
 ## <a name="syntax"></a>語法  
@@ -29,10 +29,10 @@ HRESULT Next();
  如果傳回失敗的 HRESULT，ICorDebug 應用程式開發介面會傳回 `CORDBG_E_DATA_TARGET_ERROR`。  
   
 ## <a name="remarks"></a>備註  
- 堆疊查核器應該會確保其繼續進行，以致於最後呼叫 `Next` 時，會傳回失敗 HRESULT 或 `CORDBG_S_AT_END_OF_STACK`。 傳回`S_OK`無限期可能會造成無限迴圈。  
+ 堆疊查核器應該會確保其繼續進行，以致於最後呼叫 `Next` 時，會傳回失敗 HRESULT 或 `CORDBG_S_AT_END_OF_STACK`。 `S_OK`無限期地傳回可能會造成無限迴圈。  
   
 > [!NOTE]
->  這個方法僅適用於 .NET Native。  
+> 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

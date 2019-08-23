@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545265"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944812"
 ---
 # <a name="panels-overview"></a>面板概觀
 <xref:System.Windows.Controls.Panel>元素是控制專案轉譯的元件, 其大小和維度、位置, 以及其子內容的相片順序。 提供數個預先定義<xref:System.Windows.Controls.Panel>的專案, 以及可建立自訂<xref:System.Windows.Controls.Panel>元素的能力。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -149,7 +149,7 @@ ms.locfileid: "69545265"
  在中定義的<xref:System.Windows.Controls.Grid>資料行和資料列可以<xref:System.Windows.GridUnitType.Star>利用調整大小, 以按比例分配其餘的空間。 當<xref:System.Windows.GridUnitType.Star>選取做為資料列或資料行的高度或寬度時, 該資料行或資料列會收到剩餘可用空間的加權比例。 這與不同<xref:System.Windows.GridUnitType.Auto>, 它會根據資料行或資料列內的內容大小, 將空間平均分散。 使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 時，這個值是以 `*` 或 `2*` 表示。 在第一個案例中，資料列或資料行會獲得一倍的可用空間，在第二個案例中，則會獲得兩倍的可用空間，依此類推。 藉由結合這項技術來按比例分配<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>具有<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>和值`Stretch`的空間, 可以透過螢幕空間百分比分割版面配置空間。 <xref:System.Windows.Controls.Grid>是唯一能夠以這種方式散佈空間的版面配置面板。  
   
 #### <a name="defining-and-using-a-grid"></a>定義和使用 Grid  
- 下列範例示範如何建置一個與 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] [開始] 功能表中 [執行] 對話方塊上的 UI 類似的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
+ 下列範例示範如何建立[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]類似于在 Windows [開始] 功能表上的 [執行] 對話方塊中找到的。  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

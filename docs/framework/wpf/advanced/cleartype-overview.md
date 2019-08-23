@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672051"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964920"
 ---
 # <a name="cleartype-overview"></a>ClearType 概觀
 本主題提供在中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]找到的 Microsoft ClearType 技術總覽。  
@@ -55,7 +55,7 @@ ms.locfileid: "68672051"
 ## <a name="hardware-acceleration"></a>硬體加速  
  中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 ClearType 可以利用硬體加速以獲得更好的效能, 並減少 CPU 負載和系統記憶體需求。 透過使用圖形配接器的圖元著色器和視訊記憶體, ClearType 可提供更快速的文字呈現, 特別是使用動畫時。  
   
- 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 cleartype 不會修改全系統的 ClearType 設定。 停用中[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType 會將消除鋸齒設定為灰階模式。 此外, 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 cleartype 不會修改[cleartype 調諧器 PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)的設定。  
+ 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 cleartype 不會修改全系統的 ClearType 設定。 在 Windows 中停用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType 會將消除鋸齒設定為灰階模式。 此外, 中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 cleartype 不會修改[cleartype 調諧器 PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)的設定。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構設計決策之一，就是解析度獨立的版面配置能更有效地支援日益普及的高解析度 DPI 監視器。 這樣做的後果是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 不支援別名文字轉譯或某些東亞文字字型的點陣圖，因為它們兩個都是解析度相依。  
   

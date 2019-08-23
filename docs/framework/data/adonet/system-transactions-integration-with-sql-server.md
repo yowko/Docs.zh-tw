@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 25b443d8234909a4d8525c2ce2b4e70c3baa337b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880586"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965224"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 與 SQL Server 整合
-.NET Framework 2.0 版導入的交易架構，您可以透過<xref:System.Transactions>命名空間。 此架構會公開在某種程度的完全整合在.NET Framework 中，包括 ADO.NET 中的交易。  
+.NET Framework 版本2.0 引進了可透過<xref:System.Transactions>命名空間存取的交易架構。 此架構會以在 .NET Framework 中完全整合的方式來公開交易, 包括 ADO.NET。  
   
- 可程式性增強功能，除了<xref:System.Transactions>，以及 ADO.NET 可以一起運作協調出最佳效能，當您使用交易時。 可提升的交易是可視需要自動提升為完全分散式交易的輕量型 (本機) 交易。  
+ 除了可程式性增強功能之外<xref:System.Transactions> , 當您使用交易時, 和 ADO.NET 可以共同合作以協調優化。 可提升的交易是可視需要自動提升為完全分散式交易的輕量型 (本機) 交易。  
   
- 從 ADO.NET 2.0 開始<xref:System.Data.SqlClient>支援可提升交易，當您使用 SQL Server。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 可提升交易是自動的而且需要從開發人員不需要介入。  
+ 從 ADO.NET 2.0 開始, <xref:System.Data.SqlClient>當您使用 SQL Server 時, 支援可提升交易。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 可提升交易是自動的, 而且不需要開發人員介入。  
   
- 您可以使用.NET Framework Data Provider for SQL Server 時，才可以使用可提升交易 (`SqlClient`) 與 SQL Server。  
+ 只有當您使用 .NET Framework Data Provider 搭配 SQL Server 的 SQL Server (`SqlClient`) 時, 才可提升交易。  
   
 ## <a name="creating-promotable-transactions"></a>建立可提升交易  
- .NET Framework Provider for SQL Server 支援可提升交易，都會透過.NET Framework 中的類別處理<xref:System.Transactions>命名空間。 可提升交易藉由直到需要時才建立分散式交易的方式，來最佳化分散式交易。 如果只需要一個資源管理員，則不會發生分散式交易。  
+ SQL Server 的 .NET Framework 提供者提供可提升交易的支援, 這會透過 .NET Framework <xref:System.Transactions>命名空間中的類別來處理。 可提升交易藉由直到需要時才建立分散式交易的方式，來最佳化分散式交易。 如果只需要一個資源管理員，則不會發生分散式交易。  
   
 > [!NOTE]
->  在部分信任案例中，當某筆交易提升至分散式交易時， <xref:System.Transactions.DistributedTransactionPermission> 就是必要項目。  
+> 在部分信任案例中，當某筆交易提升至分散式交易時， <xref:System.Transactions.DistributedTransactionPermission> 就是必要項目。  
   
 ## <a name="promotable-transaction-scenarios"></a>可提升交易案例  
- 分散式交易通常要耗用大量的系統資源，並由「Microsoft 分散式交易協調器 (MS DTC)」進行管理，其整合了交易中會存取的所有資源管理者。 可提升交易是一種特殊形式的<xref:System.Transactions>有效地委派工作給簡單的 SQL Server 交易的交易。 <xref:System.Transactions><xref:System.Data.SqlClient>，和 SQL Server 在視需要將其提升為完全分散式交易協調參與處理交易的工作。  
+ 分散式交易通常要耗用大量的系統資源，並由「Microsoft 分散式交易協調器 (MS DTC)」進行管理，其整合了交易中會存取的所有資源管理者。 可提升交易是<xref:System.Transactions>交易的特殊形式, 可有效地將工作委派給簡單的 SQL Server 交易。 <xref:System.Transactions>、 <xref:System.Data.SqlClient>和 SQL Server 會協調處理交易時所涉及的工作, 並視需要將它升級為完整的分散式交易。  
   
  使用可提升交易的好處是：當以作用中的 <xref:System.Transactions.TransactionScope> 交易開啟連接，且未開啟其他連接時，會將交易認可為輕量型交易，不會產生完全分散式交易的額外負擔。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65880586"
   
  下表說明可能出現的值。  
   
-|關鍵字|描述|  
+|關鍵字|說明|  
 |-------------|-----------------|  
 |Implicit Unbind|預設值。 結束時，連接會與交易中斷連結，並切換回自動認可模式。|  
 |Explicit Unbind|連接會維持附加至交易的狀態，直到交易關閉為止。 如果相關聯的交易並非使用中或與 <xref:System.Transactions.Transaction.Current%2A>不符，連接將會失敗。|  
@@ -52,10 +52,10 @@ ms.locfileid: "65880586"
  如果 <xref:System.Transactions.TransactionScope>中發生例外狀況，則會將交易標記為不一致並放棄。 處置 <xref:System.Transactions.TransactionScope> 時，則會復原該交易。 如果沒有發生任何例外狀況，則會認可參與的交易。  
   
 > [!NOTE]
->  根據預設， `TransactionScope` 類別會建立其 <xref:System.Transactions.Transaction.IsolationLevel%2A> 為 `Serializable` 的交易。 根據應用程式，您可能會考慮降低隔離等級，以避免應用程式中發生劇烈的爭用現象。  
+> 根據預設， `TransactionScope` 類別會建立其 <xref:System.Transactions.Transaction.IsolationLevel%2A> 為 `Serializable` 的交易。 根據應用程式，您可能會考慮降低隔離等級，以避免應用程式中發生劇烈的爭用現象。  
   
 > [!NOTE]
->  建議您在分散式交易內僅執行更新、插入及刪除作業，因為它們會耗用大量的資料庫資源。 SELECT 陳述式可能會不必要地鎖定資料庫資源，而在某些案例中，您可能需要使用交易而不是選取。 除非涉及其他已交易的資源管理者，否則所有非資料庫工作都應在交易範圍外執行。 雖然交易範圍內的例外狀況會防止認可交易，但 <xref:System.Transactions.TransactionScope> 類別不支援針對在交易本身範圍外所做的任何程式碼變更進行復原。 如果在復原交易時需要採取某些動作，則必須撰寫您自己的 <xref:System.Transactions.IEnlistmentNotification> 介面實作，並在交易中明確登記。  
+> 建議您在分散式交易內僅執行更新、插入及刪除作業，因為它們會耗用大量的資料庫資源。 SELECT 陳述式可能會不必要地鎖定資料庫資源，而在某些案例中，您可能需要使用交易而不是選取。 除非涉及其他已交易的資源管理者，否則所有非資料庫工作都應在交易範圍外執行。 雖然交易範圍內的例外狀況會防止認可交易，但 <xref:System.Transactions.TransactionScope> 類別不支援針對在交易本身範圍外所做的任何程式碼變更進行復原。 如果在復原交易時需要採取某些動作，則必須撰寫您自己的 <xref:System.Transactions.IEnlistmentNotification> 介面實作，並在交易中明確登記。  
   
 ## <a name="example"></a>範例  
  您需要參考 System.Transactions.dll，才能使用 <xref:System.Transactions> 。  

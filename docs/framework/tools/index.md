@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 47d6fe1d4c99adaf3313c87e0b3411049e3b2452
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489660"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933640"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 .NET Framework 工具可讓您更輕鬆地建立、部署和管理以 .NET Framework 為目標的應用程式和元件。  
@@ -26,7 +26,7 @@ ms.locfileid: "66489660"
  執行命令列工具的最佳方式，是使用 Visual Studio 的 [開發人員命令提示字元]。 這些公用程式可讓您輕鬆執行工具，而不必巡覽至安裝資料夾。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
 > [!NOTE]
->  某些工具為 32 位元電腦或 64 位元電腦專用。 請務必執行電腦適用的工具版本。  
+> 某些工具為 32 位元電腦或 64 位元電腦專用。 請務必執行電腦適用的工具版本。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)  

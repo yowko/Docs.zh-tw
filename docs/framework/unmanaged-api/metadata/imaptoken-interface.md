@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3fed44fe814ec873cffb1aa4006e11445f8e03db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111666"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965777"
 ---
 # <a name="imaptoken-interface"></a>IMapToken 介面
-提供組件之間的對應功能。  
+提供元件之間的對應功能。  
   
 > [!NOTE]
->  `IMapToken`介面必須由用戶端實作。  
+> `IMapToken`介面必須由用戶端執行。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Map 方法](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|對應使用中繼資料簽章的兩個組件之間的關聯性。|  
+|[Map 方法](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|使用中繼資料簽章來對應兩個元件之間的關聯性。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **標頭：** Cor。h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 Mscoree.dll 中的資源使用  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

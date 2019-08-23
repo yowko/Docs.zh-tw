@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7281f1aa0da417eba618b748ac68ba1fefb4907d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c133338ec0edac19f49d435df41e3081c486f51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780845"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948457"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 方法
-Managed 程式碼指令指標會對應至函式的 JIT 重新編譯版本。  
+將 managed 程式碼指令指標對應至 JIT 重新編譯的函式版本。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,24 +38,24 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>參數  
  `ip`  
- [in]在 managed 程式碼指令指標。  
+ 在Managed 程式碼中的指令指標。  
   
  `pFunctionId`  
- [out]函式識別碼。  
+ 脫銷函數識別碼。  
   
  `pReJitId`  
- [out]函式的 JIT 重新編譯版本的身分識別。  
+ 脫銷函式之 JIT 重新編譯版本的識別。  
   
 ## <a name="remarks"></a>備註  
- `GetFunctionFromIP2` 類似於`GetFunctionFromIP`，只不過它取得的 JIT 重新編譯識別碼而不是包含指定的 IP 位址的函式的函式識別碼。  
+ `GetFunctionFromIP2`類似`GetFunctionFromIP`于, 不同之處在于它會取得 JIT 重新編譯的識別碼, 而不是包含指定之 IP 位址的函式的函數識別碼。  
   
 > [!NOTE]
->  `GetFunctionFromIP2` 可以觸發記憶體回收，而`GetFunctionFromIP`不會。  如需詳細資訊，請參閱 < [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)。  
+> `GetFunctionFromIP2`可以觸發垃圾收集, 而`GetFunctionFromIP`則不會。  如需詳細資訊, 請參閱[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** Corprof.idl .idl, Corprof.idl。h  
   
  **LIBRARY:** CorGuids.lib  
   

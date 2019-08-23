@@ -2,18 +2,18 @@
 title: 自訂權杖
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 11b89f6d4f2800f079ba6576801b39c85324f6e0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 7203b55b01f51851fa94fedc4950a05343b792bd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425075"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953582"
 ---
 # <a name="custom-token"></a>自訂權杖
-此範例示範如何新增自訂權杖實作 Windows Communication Foundation (WCF) 應用程式。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結程序項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。
+這個範例會示範如何將自訂權杖實作為新增至 Windows Communication Foundation (WCF) 應用程式。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結程序項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。
 
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。
+> 此範例的安裝程序與建置指示位於本主題的結尾。
 
  簡而言之，這個範例示範下面的情形：
 
@@ -21,7 +21,7 @@ ms.locfileid: "67425075"
 
 - 服務如何取用並驗證自訂安全性權杖。
 
-- WCF 服務程式碼如何取得接收到的安全性權杖，包括自訂安全性權杖的相關資訊。
+- WCF 服務程式代碼如何取得所收到安全性權杖的相關資訊, 包括自訂安全性權杖。
 
 - 如何使用伺服器的 X.509 憑證保護用於訊息加密和簽章的對稱金鑰。
 
@@ -113,9 +113,9 @@ channelFactory.Close();
 ```
 
 ## <a name="custom-security-token-implementation"></a>自訂安全性權杖實作
- 若要啟用 WCF 中的自訂安全性權杖，建立自訂安全性權杖的物件表示。 範例會在 `CreditCardToken` 類別中產生這個表示。 此物件表示負責保存所有相關的安全性權杖資訊，並提供安全性權杖所含安全性金鑰的清單。 在本例中，信用卡安全性權杖未包含任何安全性金鑰。
+ 若要在 WCF 中啟用自訂安全性權杖, 請建立自訂安全性權杖的物件標記法。 範例會在 `CreditCardToken` 類別中產生這個表示。 此物件表示負責保存所有相關的安全性權杖資訊，並提供安全性權杖所含安全性金鑰的清單。 在本例中，信用卡安全性權杖未包含任何安全性金鑰。
 
- 下一節會描述什麼必須完成，以啟用透過網路傳輸的自訂權杖和由 WCF 端點。
+ 下一節將說明必須完成哪些動作, 才能讓自訂權杖透過網路傳輸, 並由 WCF 端點使用。
 
 ```csharp
 class CreditCardToken : SecurityToken
@@ -153,7 +153,7 @@ class CreditCardToken : SecurityToken
 ```
 
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>在訊息中存取自訂信用卡權杖
- 在 WCF 中的安全性權杖序列化程式會負責從訊息中的 XML 建立安全性權杖的物件表示，以及建立安全性權杖的 XML 格式。 它們還負責像是讀取和寫入指向安全性權杖之金鑰識別項等其他的功能，但是本範例僅使用與安全性權杖相關的功能。 若要啟用自訂權杖，就必須實作您自己的安全性權杖序列化程式。 本範例會使用 `CreditCardSecurityTokenSerializer` 類別來達到這個目的。
+ WCF 中的安全性權杖序列化程式負責從訊息中的 XML 建立安全性權杖的物件表示, 並建立安全性權杖的 XML 形式。 它們還負責像是讀取和寫入指向安全性權杖之金鑰識別項等其他的功能，但是本範例僅使用與安全性權杖相關的功能。 若要啟用自訂權杖，就必須實作您自己的安全性權杖序列化程式。 本範例會使用 `CreditCardSecurityTokenSerializer` 類別來達到這個目的。
 
  在服務上，自訂序列化程式會讀取自訂權杖的 XML 表單，並由其中建立自訂權杖物件表示。
 
@@ -584,24 +584,24 @@ string GetCallerCreditCardNumber()
     ```
 
 > [!NOTE]
->  Setup.bat 批次檔被設計來從 Visual Studio 2012 命令提示字元執行。 路徑環境變數設定在 Visual Studio 2012 命令提示字元會指向包含 Setup.bat 指令碼所需的可執行檔的目錄。
+> 安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。
 
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例
 
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+2. 若要建立方案, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 
-1. 以系統管理員權限開啟 Visual Studio 2012 的命令提示字元 視窗並執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。確認路徑中包含 Makecert.exe 所在的資料夾。
+1. 以系統管理員許可權開啟 [Visual Studio 2012 命令提示字元] 視窗, 然後從範例安裝資料夾中執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。確認路徑中包含 Makecert.exe 所在的資料夾。
 
 > [!NOTE]
->  當您完成範例時，請務必執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
+> 當您完成範例時，請務必執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
   
 1. 從 \client\bin 目錄啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-2. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+2. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computer"></a>若要跨電腦執行範例  
   
@@ -609,7 +609,7 @@ string GetCallerCreditCardNumber()
   
 2. 將服務程式檔複製到服務電腦上的服務目錄中。 別忘了複製 CreditCardFile.txt，否則信用卡驗證器將無法驗證用戶端傳來的信用卡資訊。 同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-3. 您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 只要將 `%SERVER_NAME%` 變數變更為裝載服務之電腦的完整名稱，您就可以使用 Setup.bat 建立憑證。 請注意，Setup.bat 檔必須在開發人員命令提示字元中執行 Visual studio 開啟系統管理員權限。  
+3. 您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 只要將 `%SERVER_NAME%` 變數變更為裝載服務之電腦的完整名稱，您就可以使用 Setup.bat 建立憑證。 請注意, 安裝程式 .bat 檔案必須在開發人員命令提示字元中執行, 才能以系統管理員許可權開啟 Visual Studio。  
   
 4. 將伺服器憑證複製到用戶端的 CurrentUser-TrustedPeople 存放區中。 只有在伺服器憑證不是由受信任的簽發者發行時才必須這麼做。  
   
@@ -623,7 +623,7 @@ string GetCallerCreditCardNumber()
   
 9. 在用戶端電腦上，從命令提示字元視窗啟動 Client.exe。  
   
-10. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

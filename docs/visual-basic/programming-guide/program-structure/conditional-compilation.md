@@ -5,61 +5,61 @@ helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: 4698435cb2ab15d16d8a8a898a01a9ffbc4f69c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1bee64568ff92468e29226a395f7e5335387e256
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639819"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945577"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic 中的條件式編譯
-在 *條件式編譯*，而忽略其他特定的程式中的程式碼區塊會選擇性地編譯。  
+在*條件式編譯*中, 程式中的特定程式碼區塊會選擇性地進行編譯, 而有些則會被忽略。  
   
- 例如，您可能想要撰寫偵錯陳述式，比較不同的方法相同的程式設計工作，或您的速度可能會想要將應用程式在多國語言的當地語系化。 條件式編譯陳述式被設計為在編譯期間，不是在執行階段執行。  
+ 例如, 您可能會想要撰寫可比較不同方法與相同程式設計工作之速度的偵錯工具, 或者您可能想要將多個語言的應用程式當地語系化。 條件式編譯語句是設計用來在編譯時期執行, 而不是在執行時間執行。  
   
- 表示有條件地編譯的程式碼區塊`#If...Then...#Else`指示詞。 比方說，若要建立法文及德文語言版本相同的應用程式，從相同來源的程式碼，您將內嵌平台特定程式碼區段中的`#If...Then`陳述式使用預先定義的常數`FrenchVersion`和`GermanVersion`。 下列範例示範如何：  
+ 您可以使用指示詞來表示要有`#If...Then...#Else`條件地編譯的程式碼區塊。 例如, 若要從相同的原始程式碼建立相同應用程式的法文和德文版, 您可以使用預先定義的常數`#If...Then` `FrenchVersion`和`GermanVersion`, 在語句中內嵌平臺特定的程式碼區段。 下列範例示範如何:  
   
  [!code-vb[VbVbalrConditionalComp#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#5)]  
   
- 如果您設定的值`FrenchVersion`條件式編譯常數，以`True`在編譯時期，法文版的條件式程式碼會編譯。 如果您設定的值`GermanVersion`常數`True`，編譯器會使用德文版。 如果沒有設定任何`True`，在過去的程式碼`Else`封鎖執行。  
+ 如果您在編譯時期將`FrenchVersion`條件式編譯常數的值設為`True` , 則會編譯法文版本的條件式程式碼。 如果您將`GermanVersion`常數的值設為`True`, 則編譯器會使用德文版。 如果兩者都未設定`True`為, 則最後一個`Else`區塊中的程式碼會執行。  
   
 > [!NOTE]
->  Not 函式時編輯程式碼，並使用條件式編譯指示詞，如果程式碼不是最新分支的一部分，將會自動完成。  
+> 如果程式碼不是最新分支的一部分, 則在編輯程式碼和使用條件式編譯指示詞時, 自動完成將無法運作。  
   
 ## <a name="declaring-conditional-compilation-constants"></a>宣告條件式編譯常數  
- 您可以使用三種方式之一來設定條件式編譯常數：  
+ 您可以透過下列三種方式之一來設定條件式編譯常數:  
   
-- 在 **專案設計工具**  
+- 在 [**專案設計**工具] 中  
   
-- 在命令列使用命令列編譯器時  
+- 使用命令列編譯器時, 在命令列中  
   
-- 在您的程式碼  
+- 在您的程式碼中  
   
- 條件式編譯常數有特殊的範圍，並不能從標準的程式碼存取。 條件式編譯常數的範圍是取決於它的設定方式。 下表列出使用每個先前所述的三種方式宣告的常數的範圍。  
+ 條件式編譯常數具有特殊範圍, 而且無法從標準程式碼存取。 條件式編譯常數的範圍取決於其設定方式。 下表列出使用上述三種方式宣告的常數範圍。  
   
 |如何設定常數|常數的範圍|  
 |---|---|  
-|**專案設計工具**|公用專案中的所有檔案|  
-|命令列|公開的所有檔案傳遞至命令列編譯器|  
-|`#Const` 在程式碼中的陳述式|私人雲端擴充到宣告它的檔案|  
+|**專案設計工具**|專案中所有檔案的公用|  
+|命令列|所有傳遞至命令列編譯器的檔案都是公用的|  
+|`#Const`程式碼中的語句|私用到其宣告所在的檔案|  
   
-|若要設定 專案設計工具中的常數|  
+|在專案設計工具中設定常數|  
 |---|  
-|之前建立可執行檔，請在中設定常數**專案設計工具**依照所提供的步驟[管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)。|  
+|-在建立可執行檔之前, 請遵循[管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)中提供的步驟, 在 [**專案設計**工具] 中設定常數。|  
   
 |若要在命令列設定常數|  
 |---|  
-|-使用 **/d**切換到輸入條件式編譯常數，如下列範例所示：<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     不不需要之間任何空間 **/d**交換器與第一個常數。 如需詳細資訊，請參閱 < [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)。<br />     命令列宣告覆寫輸入中的宣告**專案設計工具**，但不是會將它們清除。 在 設定引數**專案設計工具**對後續編譯仍然有效。<br />     當撰寫程式碼本身中的常數，沒有嚴格的規則，對於其放置的功能，因為它們的範圍是整個模組在宣告。|  
+|-使用 **/d**參數輸入條件式編譯常數, 如下列範例所示:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     **/D**參數和第一個常數之間不需要有空格。 如需詳細資訊, 請參閱[/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)。<br />     命令列宣告會覆寫在 [**專案設計**工具] 中輸入的宣告, 但不會將它們清除。 在 [**專案設計**工具] 中設定的引數會在後續的編譯中繼續生效。<br />     在程式碼本身撰寫常數時, 並沒有任何嚴格的位置規則, 因為其範圍是宣告它們的整個模組。|  
   
-|若要設定您的程式碼中的常數|  
+|若要在程式碼中設定常數|  
 |---|  
-|-將放在其中使用的模組宣告區塊中的常數。 如此一來，可協助組織更容易閱讀，確保您的程式碼。|  
+|-將常數放在使用它們之模組的宣告區塊中。 這有助於讓您的程式碼井然有序且更容易閱讀。|  
   
 ## <a name="related-topics"></a>相關主題  
   
 |標題|描述|  
 |---|---|  
-|[程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|提供讓您輕鬆地閱讀和維護的程式碼的建議。|  
+|[程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|提供讓您的程式碼易於閱讀和維護的建議。|  
   
 ## <a name="reference"></a>參考資料  
  [#Const 指示詞](../../../visual-basic/language-reference/directives/const-directive.md)  

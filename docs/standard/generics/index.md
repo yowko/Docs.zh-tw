@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5c9f15a7ff30d5647338bf1954aca441b47281b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948747"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -128,7 +128,7 @@ ms.locfileid: "69666440"
 - 在 Visual Basic、C# 和 C++ 中，括在泛型類型中的巢狀類型無法具現化，除非已將指派給類型所有封入類型的類型參數。 另一個說法是，在反映中，已定義使用這些語言的巢狀類型，包括了其所有封入類型的類型參數。 這讓封入類型的類型參數，可用於巢狀類型的成員定義中。 如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A>中的「巢狀類型」。  
   
     > [!NOTE]
-    >  透過發出動態組件中的程式碼或使用 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 所定義的巢狀型別，不一定要包含其封入型別的型別參數；不過，如果它不包含這些，型別參數就不在巢狀類別的範圍中。  
+    > 透過發出動態組件中的程式碼或使用 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 所定義的巢狀型別，不一定要包含其封入型別的型別參數；不過，如果它不包含這些，型別參數就不在巢狀類別的範圍中。  
   
      如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A>中的「巢狀類型」。  
   

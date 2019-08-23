@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 7f982c97bd76288ecd1a8d1f53fc2b25b0bb829e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9a9aed51f6d7bf3233e6e89116b8209b22f3d15d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623890"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912409"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 陳述式 (Visual Basic)
-一組陳述式會重複指定的次數。  
+重複指定次數的語句群組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,101 +49,101 @@ Next [ counter ]
   
 |組件|描述|  
 |----------|-----------------|  
-|`counter`|需要`For`陳述式。 數值變數。 For 迴圈控制變數。 如需詳細資訊，請參閱 < [Counter 引數](#BKMK_Counter)本主題稍後的。|  
-|`datatype`|選擇性。 資料類型的`counter`。 如需詳細資訊，請參閱 < [Counter 引數](#BKMK_Counter)本主題稍後的。|  
+|`counter`|語句中的`For`必要項。 數值變數。 迴圈的控制變數。 如需詳細資訊, 請參閱本主題稍後的[計數器引數](#BKMK_Counter)。|  
+|`datatype`|選擇性。 的`counter`資料類型。 如需詳細資訊, 請參閱本主題稍後的[計數器引數](#BKMK_Counter)。|  
 |`start`|必要項。 數值運算式。 `counter` 的初始值。|  
-|`end`|必要項。 數值運算式。 最終值`counter`。|  
-|`step`|選擇性。 數值運算式。 所用的數量`counter`會遞增每次執行迴圈。|  
-|`statements`|選擇性。 一或多個陳述式之間`For`和`Next`執行指定重試次數。|  
-|`Continue For`|選擇性。 將控制權傳輸至下一個迴圈反覆項目。|  
-|`Exit For`|選擇性。 控制權轉移共`For`迴圈。|  
-|`Next`|必要項。 結束的定義`For`迴圈。|  
+|`end`|必要項。 數值運算式。 的最終值`counter`。|  
+|`step`|選擇性。 數值運算式。 每次透過迴圈`counter`遞增的數量。|  
+|`statements`|選擇性。 在和`For` `Next`之間執行指定次數的一或多個語句。|  
+|`Continue For`|選擇性。 將控制權轉移至下一個迴圈反復專案。|  
+|`Exit For`|選擇性。 將`For`控制權轉移給迴圈。|  
+|`Next`|必要項。 終止`For`迴圈的定義。|  
   
 > [!NOTE]
->  `To`關鍵字用以在此陳述式中指定計數器的範圍。 您也可以使用這個關鍵字在[選取...Case 陳述式](../../../visual-basic/language-reference/statements/select-case-statement.md)和陣列宣告中。 如需陣列宣告的詳細資訊，請參閱[Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)。  
+> 此語句中會使用關鍵字來指定計數器的範圍。`To` 您也可以在 [選取 ...] 中使用此關鍵字[Case 語句](../../../visual-basic/language-reference/statements/select-case-statement.md)和陣列宣告。 如需陣列宣告的詳細資訊, 請參閱[Dim 語句](../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
-## <a name="simple-examples"></a>簡單的範例  
- 您使用`For`...`Next`結構，當您想要重複執行陳述式的一組固定數目的時間。  
+## <a name="simple-examples"></a>簡單範例  
+ 您可以使用`For`。`Next`當您想要以設定的次數重複一組語句時的結構。  
   
- 在下列範例中，`index`變數的值為 1 以開頭，且會隨著每次反覆運算迴圈時，結束之後的值`index`達到 5。  
+ 在下列範例中, `index`變數會以1的值開頭, 並隨著迴圈的每個反復專案而遞增, 並在的`index`值到達5之後結束。  
   
  [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
   
- 在下列範例中，`number`變數開始 2，並在每次反覆運算迴圈時，結束之後的值 0.25 可降低`number`到達 0。 `Step`引數`-.25`減少 0.25 迴圈的每個反覆運算上的值。  
+ 在下列範例中, `number`變數會從2開始, 並在迴圈的每次反覆運算時減少 0.25, 並在的`number`值到達0之後結束。 的`Step` 引數會在迴圈的每個反復專案上,將`-.25`值減少0.25。  
   
  [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
->  A[時...While 陳述式結束](../../../visual-basic/language-reference/statements/while-end-while-statement.md)或[執行...迴圈陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)非常適合在不知道事先多少次，在迴圈中執行的陳述式。 不過，當您預期要執行迴圈以特定次數， `For`...`Next`迴圈是較好的選擇。 當您第一次輸入迴圈時，您可以判斷反覆項目的數目。  
+>  A [While 。End While 語句](../../../visual-basic/language-reference/statements/while-end-while-statement.md)或[Do 。](../../../visual-basic/language-reference/statements/do-loop-statement.md)當您事先不知道要在迴圈中執行語句的次數時, Loop 語句的運作效果很好。 不過, 當您預期執行迴圈的特定次數時, `For`。`Next` 「迴圈」是較佳的選擇。 您會在第一次進入迴圈時判斷反覆運算次數。  
   
-## <a name="nesting-loops"></a>巢狀迴圈  
- 您可以巢狀`For`放在另一個迴圈的迴圈。 下列範例會示範巢狀`For`...`Next`具有不同步驟值的結構。 外部迴圈會建立迴圈的每個反覆項目的字串。 「 內部迴圈遞減迴圈計數器變數的迴圈的每個反覆項目。  
+## <a name="nesting-loops"></a>嵌套迴圈  
+ 您可以藉`For`由在另一個迴圈中放入迴圈來加以嵌套。 下列範例示範 nested `For`。`Next`具有不同步驟值的結構。 外部迴圈會為迴圈的每個反覆運算建立一個字串。 內部迴圈會針對迴圈的每個反覆運算遞減迴圈計數器變數。  
   
  [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
   
- 當建立巢狀迴圈，每個迴圈必須具有唯一`counter`變數。  
+ 當嵌套迴圈時, 每個迴圈都必須`counter`有唯一的變數。  
   
- 您也可以巢狀內彼此不同種類的控制結構。 如需詳細資訊，請參閱 <<c0> [ 巢狀控制結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。  
+ 您也可以將不同類型的控制結構分別放在其中。 如需詳細資訊, 請參閱[嵌套控制項結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。  
   
-## <a name="exit-for-and-continue-for"></a>針對結束後繼續  
- `Exit For`陳述式會立即結束`For`...`Next` 後面的陳述式的迴圈和傳輸控制項`Next`陳述式。  
+## <a name="exit-for-and-continue-for"></a>結束並繼續進行  
+ 語句會立即`For`結束... `Exit For``Next` 迴圈, 並將控制權轉移至`Next`語句後面的語句。  
   
- `Continue For`陳述式控制將立即轉移到迴圈的下一個反覆項目。 如需詳細資訊，請參閱 < [Continue 陳述式](../../../visual-basic/language-reference/statements/continue-statement.md)。  
+ `Continue For`語句會立即將控制權轉移到迴圈的下一個反復專案。 如需詳細資訊, 請參閱[Continue 語句](../../../visual-basic/language-reference/statements/continue-statement.md)。  
   
- 下列範例示範如何將`Continue For`和`Exit For`陳述式。  
+ 下列範例說明如何使用`Continue For`和`Exit For`語句。  
   
  [!code-vb[VbVbalrStatements#115](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#115)]  
   
- 您可以將任意數目的放`Exit For`中的陳述式`For`...`Next` 迴圈。 當用在巢狀`For`...`Next` 迴圈、`Exit For`結束最內層的迴圈，並將控制權傳輸至下一個較高的層級，巢狀。  
+ 您可以將任意數目的`Exit For`語句放`For`在 。`Next` 進入. 在 nested `For`中使用時 。`Next` 迴圈, `Exit For`結束最內層的迴圈, 並將控制權轉移至下一個較高層級的嵌套。  
   
- `Exit For` 通常用在您評估某些條件後 (例如，在`If`...`Then`...`Else`結構)。 您可能想要使用`Exit For`下列條件：  
+ `Exit For`通常是在評估某個條件之後使用 (例如, 在`If`。`Then`...`Else`結構)。 在下列情況下, `Exit For`您可能會想要使用:  
   
-- 繼續向逐一查看是不必要或不可能。 錯誤的數值或終止要求可能會建立這種情況。  
+- 繼續進行反覆運算是不必要或不可能的。 錯誤值或終止要求可能會建立此條件。  
   
-- A `Try`...`Catch`...`Finally`陳述式攔截到例外狀況。 您可以使用`Exit For`結尾的`Finally`區塊。  
+- 答`Try`:`Catch`...`Finally`語句會攔截例外狀況。 您可以在`Exit For` `Finally`區塊結尾使用。  
   
-- 您有無止盡的迴圈，也就是無法執行大型或甚至是無限次數的迴圈。 如果您偵測到這種情況，您可以使用`Exit For`來逸出迴圈。 如需詳細資訊，請參閱[執行...迴圈陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
+- 您有一個無止盡的迴圈, 這是一種迴圈, 可能會執行很長或甚至無限次數。 如果您偵測到這種情況, 您可以`Exit For`使用來將迴圈轉義。 如需詳細資訊, 請參閱[Do 。Loop 語句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
   
 ## <a name="technical-implementation"></a>技術實作  
- 當`For`...`Next`迴圈開始，Visual Basic 會評估`start`， `end`，和`step`。 Visual Basic 會評估這些值只能在此時間，然後指派`start`至`counter`。 之前的陳述式區塊會執行，Visual Basic 比較`counter`至`end`。 如果`counter`已經是大於`end`值 (或較小的 if`step`為負數)，則`For`迴圈結束，並控制傳遞到後面的陳述式`Next`陳述式。 否則，會執行陳述式區塊。  
+ `For`當 。迴圈啟動, Visual Basic 評估`start`、 `end`和`step`。 `Next` Visual Basic 只會在此時評估這些值, 然後將`start`指派`counter`給。 在執行語句區塊之前, Visual Basic 會`counter`與`end`進行比較。 如果`counter`已經大於`end`值 (如果`step`是負數, 則為較小), `For` `Next`迴圈就會結束, 並將控制權傳遞至語句後面的語句。 否則, 會執行語句區塊。  
   
- 每次 Visual Basic 遇到`Next`陳述式，就會自動遞增`counter`由`step`，並返回`For`陳述式。 再次比較`counter`至`end`，和一次它執行的區塊或結束迴圈時，根據結果。 此程序一直`counter`通過`end`或`Exit For`遇到陳述式。  
+ 每`Next`次 Visual Basic 遇到語句時, 它會`counter` `step`遞增並返回`For`語句。 同樣地, `counter`它`end`會與進行比較, 並再次執行區塊或結束迴圈, 視結果而定。 此程式會繼續`counter`進行`end` , 直到`Exit For`遇到 pass 或語句為止。  
   
- 迴圈不停止直到`counter`已經過`end`。 如果`counter`等於`end`，迴圈會繼續。 比較，決定是否要執行區塊會`counter`  <=  `end`如果`step`正並`counter`  >=  `end`如果`step`為負數。  
+ 迴圈不會停止, `counter`直到通過`end`為止。 `counter` 如果`end`等於, 迴圈就會繼續。 判斷是否要執行區塊的比較是正向`counter` , `step`而且如果`end` `counter`  >=   <=  `end` 是負值`step` , 則為。  
   
- 如果您變更的值`counter`在迴圈中，內您的程式碼可能會更難閱讀及偵錯。 變更的值`start`， `end`，或`step`並不會影響所決定時初次進入迴圈的反覆項目值。  
+ 如果您在迴圈內變更`counter`的值, 則您的程式碼可能會更容易讀取和 debug。 變更`start`、 `end`或`step`的值, 並不會影響第一次進入迴圈時所決定的反復專案值。  
   
- 如果您使用巢狀迴圈，編譯器會發出錯誤信號如果遇到`Next`陳述式的外部的巢狀層級之前`Next`內部層級的陳述式。 不過，編譯器可以偵測此重疊錯誤，只有當您指定`counter`在每個`Next`陳述式。  
+ 如果您嵌套迴圈, 編譯器在內部層級的`Next` `Next`語句之前遇到外部嵌套層級的語句時, 會發出錯誤信號。 不過, 只有當您在每個`counter` `Next`語句中指定時, 編譯器才會偵測到這個重迭的錯誤。  
   
-### <a name="step-argument"></a>步驟引數  
- 值`step`可以是正數或負數。 這個參數會決定迴圈處理，根據下表：  
+### <a name="step-argument"></a>Step 引數  
+ 的值`step`可以是正數或負數。 這個參數會根據下表來決定迴圈處理:  
   
-|**間距值**|**執行迴圈的條件**|  
+|**步驟值**|**迴圈執行 (如果**|  
 |--------------------|--------------------------|  
 |正數或零|`counter` <= `end`|  
 |負|`counter` >= `end`|  
   
- 預設值`step`為 1。  
+ 的預設值`step`為1。  
   
-### <a name="BKMK_Counter"></a> Counter 引數  
- 下表會指出是否`counter`定義新的本機變數的範圍是整個`For…Next`迴圈。 這個決定取決於是否`datatype`存在以及是否`counter`已經定義。  
+### <a name="BKMK_Counter"></a>Counter 引數  
+ 下表指出是否`counter`定義範圍為整個`For…Next`迴圈的新本機變數。 這項決定取決於`datatype`是否存在, 以及`counter`是否已定義。  
   
-|是`datatype`存在？|是`counter`已經定義嗎？|結果 (是否`counter`定義新的本機變數的範圍是整個`For...Next`迴圈)|  
+|`datatype`存在嗎？|已經`counter`定義了嗎？|Result (是否`counter`定義範圍設定為整個`For...Next`迴圈的新區域變數)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|否|是|否，因為`counter`已經定義。 如果範圍`counter`不是本機程序，就會發生編譯時期警告。|  
-|否|否|可以。 資料類型從推斷`start`， `end`，和`step`運算式。 型別推斷的相關資訊，請參閱[Option Infer 陳述式](../../../visual-basic/language-reference/statements/option-infer-statement.md)並[區域型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。|  
-|是|是|可以，但只有當現有`counter`變數定義在程序之外。 該變數會維持獨立的。 如果現有的範圍`counter`變數是本機程序，就會發生編譯時期錯誤。|  
-|是|否|可以。|  
+|否|是|否, 因為`counter`已經定義過。 如果的範圍`counter`不是程式的本機, 就會發生編譯時期警告。|  
+|否|否|是的。 資料類型是從`start`、 `end`和`step`運算式推斷而來。 如需型別推斷的詳細資訊, 請參閱[Option 推斷語句](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[區欄位型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。|  
+|是|是|是, 但只有在程式之外`counter`定義了現有的變數時。 該變數會保持不變。 如果現有`counter`變數的範圍是程式的本機, 就會發生編譯時期錯誤。|  
+|是|否|是的。|  
   
- 資料類型`counter`決定反覆項目，必須是下列類型的其中一種：  
+ 的資料類型`counter`決定反復專案的類型, 必須是下列其中一種類型:  
   
-- A `Byte`， `SByte`， `UShort`， `Short`， `UInteger`， `Integer`， `ULong`， `Long`， `Decimal`， `Single`，或`Double`。  
+- `Byte`、 `SByte`、 、、`Integer`、、、、、或。`Double` `UShort` `Short` `UInteger` `ULong` `Long` `Decimal` `Single`  
   
-- 您使用宣告列舉[Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)。  
+- 使用[Enum 語句](../../../visual-basic/language-reference/statements/enum-statement.md)宣告的列舉。  
   
 - `Object`。  
   
-- 型別`T`具有下列的運算子，其中`B`是類型，可用於`Boolean`運算式。  
+- 具有下列`T`運算子的類型, 其中`B`是`Boolean`可以在運算式中使用的類型。  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   
@@ -153,22 +153,22 @@ Next [ counter ]
   
      `Public Shared Operator + (op1 As T, op2 As T) As T`  
   
- 您可以選擇性地指定`counter`變數中`Next`陳述式。 此語法可改善可讀性的程式碼，尤其是如果您有巢狀`For`迴圈。 您必須指定此變數會出現在對應`For`陳述式。  
+ 您可以選擇性地指定`counter` `Next`語句中的變數。 此語法可改善程式的可讀性, 特別是當您有嵌套`For`的迴圈時。 您必須指定出現在對應`For`語句中的變數。  
   
- `start`， `end`，並`step`運算式可以評估為任何資料類型可擴展成的型別`counter`。 如果您使用的使用者定義類型`counter`，您可能必須定義`CType`轉換運算子的類型轉換成`start`， `end`，或`step`的型別`counter`。  
+ 、和運算式可以評估為任何擴大至類型的`counter`資料類型。 `step` `end` `start` 如果您使用`counter`的使用者定義型別, 您可能必須`CType`定義轉換運算子`start`, 以將、 `end`或`step`的類型轉換成的類型`counter`。  
   
 ## <a name="example"></a>範例  
- 下列範例會移除的泛型清單中的所有項目。 而不是[每個...下一個陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)，此範例將示範`For`...`Next`以遞減順序反覆運算的陳述式。 此範例會使用這項技術，因為`removeAt`方法導致項目後面移除的項目具有較低的索引值。  
+ 下列範例會從泛型清單中移除所有元素。 而不是[針對每個 。下一個語句](../../../visual-basic/language-reference/statements/for-each-next-statement.md), 此範例會`For`顯示 。`Next`以遞減順序逐一查看的語句。 此範例會使用這項技術`removeAt` , 因為方法會使已移除專案之後的元素具有較低的索引值。  
   
  [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   
 ## <a name="example"></a>範例  
- 下列範例會逐一宣告可透過列舉[Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)。  
+ 下列範例會逐一查看使用[Enum 語句](../../../visual-basic/language-reference/statements/enum-statement.md)宣告的列舉。  
   
  [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
   
 ## <a name="example"></a>範例  
- 在下列範例中，陳述式參數使用類別，具有的運算子多載`+`， `-`， `>=`，和`<=`運算子。  
+ 在下列範例中, 語句參數會使用`+`具有、 `-`、 `>=`和`<=`運算子之運算子多載的類別。  
   
  [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   

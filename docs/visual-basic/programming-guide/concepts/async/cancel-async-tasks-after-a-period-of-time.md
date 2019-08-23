@@ -1,30 +1,30 @@
 ---
-title: 一段時間 (Visual Basic) 後取消非同步工作
+title: 在一段時間後取消非同步工作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: 2f3fee4909338155ed4b8917fd1de46984614908
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 636e8ffc86ce2849d563094bb780943f57d9cfa4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613417"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958139"
 ---
-# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>一段時間 (Visual Basic) 後取消非同步工作
+# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>在一段時間後取消非同步工作 (Visual Basic)
 如果不想等候作業完成，則可以使用 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 方法，在一段時間之後取消非同步作業。 這個方法排定取消未在 `CancelAfter` 運算式所指定之2期間內完成的任何相關工作。  
   
- 此範例會將開發中的程式碼加入[取消一項非同步工作或工作清單 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)下載網站的清單，並顯示每個內容的長度。  
+ 這個範例會將新增至 [[取消非同步工作] 或 [工作清單 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) ] 中所開發的程式碼, 以下載網站清單並顯示每一項的內容長度。  
   
 > [!NOTE]
->  若要執行範例，您必須擁有 Visual Studio 2012 或更新版本和.NET Framework 4.5 或更新版本安裝在電腦上。  
+> 若要執行範例, 您必須在電腦上安裝 Visual Studio 2012 或更新版本, 以及 .NET Framework 4.5 或更新版本。  
   
 ## <a name="downloading-the-example"></a>下載範例  
  您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。  
   
 1. 解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
-2. 在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
+2. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。  
   
-3. 在 [**開啟專案**] 對話方塊中，開啟您解壓縮之範例程式碼的資料夾，然後再開啟 AsyncFineTuningVB 的方案 (.sln) 檔案。  
+3. 在 [**開啟專案**] 對話方塊中, 開啟保存解壓縮之範例程式碼的資料夾, 然後開啟 AsyncFineTuningVB 的方案 (.sln) 檔案。  
   
 4. 在方案總管中，開啟 **CancelAfterTime** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "61613417"
   
 6. 執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。  
   
- 如果您不想要下載的專案，您可以檢閱本主題結尾的 MainWindow.xaml.vb 檔案。  
+ 如果您不想要下載專案, 您可以參閱本主題結尾的 Mainwindow.xaml。  
   
 ## <a name="building-the-example"></a>建置範例  
- 本主題中的範例將加入專案中所開發[取消一項非同步工作或工作清單 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)取消工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。  
+ 本主題中的範例會新增至取消一項非同步工作[或工作清單 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)中所開發的專案, 以取消工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。  
   
  若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks] 作為 [啟始專案]。 將本主題中的變更新增至該專案。  
   
@@ -84,7 +84,7 @@ Downloads canceled.
 ```  
   
 ## <a name="complete-example"></a>完整範例  
- 下列程式碼是範例的 MainWindow.xaml.vb 檔案的完整文字。 星號會標記已針對此範例新增的項目。  
+ 下列程式碼是範例的 Mainwindow.xaml 檔案的完整文字。 星號會標記已針對此範例新增的項目。  
   
  請注意，您必須新增 <xref:System.Net.Http> 的參考。  
   
@@ -192,7 +192,7 @@ End Class
 ## <a name="see-also"></a>另請參閱
 
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [取消一項非同步工作或一份工作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
+- [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [取消一項非同步工作或工作清單 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
 - [微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

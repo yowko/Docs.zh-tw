@@ -3,15 +3,15 @@ title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2159a73ca79fc362a8138eea95dbd173dafb11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790490"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944289"
 ---
 # <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
-啟用權杖重新執行偵測，並指定權杖的到期時間。  
+啟用權杖重新執行偵測, 並指定權杖的到期時間。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -36,22 +36,22 @@ ms.locfileid: "61790490"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|enabled|值，指定是否啟用權杖重新執行偵測。"true"來啟用權杖重新執行偵測。|  
-|expirationPeriod|A <xref:System.TimeSpan> ，指定最大項目被視為過期並從快取移除之前的時間量。  如需有關如何指定<xref:System.TimeSpan>值，請參閱[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
+|enabled|值, 指定是否啟用權杖重新執行偵測;"true" 表示啟用權杖重新執行偵測。|  
+|expirationPeriod|<xref:System.TimeSpan> , 指定將專案視為過期並從快取中移除之前的最大時間量。  如需如何指定<xref:System.TimeSpan>值的詳細資訊, 請參閱[Timespan 值](../windows-workflow-foundation/index.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
+|[\<identityConfiguration>](identityconfiguration.md)|指定服務層級的身分識別設定。|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|提供安全性權杖處理常式集合的設定。|  
   
 ## <a name="remarks"></a>備註  
- A`<tokenReplayDetection>`項目可以指定服務層級底下`<identityConfiguration>`項目或之下的安全性權杖處理常式集合層級`<securityTokenHandlerConfiguration>`項目。 權杖處理常式集合上的設定會覆寫所指定的服務。  
+ 元素可以在專案`<identityConfiguration>`下的服務層級或專案底下的安全性權杖`<securityTokenHandlerConfiguration>`處理常式集合層級指定。 `<tokenReplayDetection>` 權杖處理常式集合上的設定會覆寫在服務上指定的值。  
   
- 權杖重新執行快取的類型由[ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)項目。
+ 權杖重新執行快取的類型是由[ \<tokenReplayCache >](tokenreplaycache.md)元素所指定。

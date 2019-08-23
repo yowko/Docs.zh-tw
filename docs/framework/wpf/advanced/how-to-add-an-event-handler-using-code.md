@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用程式碼新增事件處理常式
+title: 作法：使用程式碼新增事件處理常式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 017b32dc07f62cc4553a84f7b91687fb34a53c65
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401173"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937465"
 ---
-# <a name="how-to-add-an-event-handler-using-code"></a>HOW TO：使用程式碼新增事件處理常式
+# <a name="how-to-add-an-event-handler-using-code"></a>作法：使用程式碼新增事件處理常式
 這個範例示範如何使用程式碼, 將事件處理常式新增至專案。  
   
  如果您想要將事件處理常式加入至[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]專案, 而且已經載入包含該專案的標記頁面, 則必須使用程式碼加入處理常式。 或者, 如果您要完全使用程式碼來建立應用程式的專案樹狀結構, 而不使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]宣告任何專案, 您可以呼叫特定方法, 將事件處理常式加入至結構化專案樹狀結構。  
@@ -35,7 +35,7 @@ ms.locfileid: "68401173"
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  在初始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]剖析的頁面中新增事件處理常式會簡單許多。 在您要加入事件處理常式的物件專案中, 加入與您要處理的事件名稱相符的屬性。 然後指定該屬性的值, 做為您在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面的程式碼後置檔案中定義的事件處理常式方法的名稱。 如需詳細資訊, 請參閱[XAML 總覽 (WPF)](xaml-overview-wpf.md)或[路由事件總覽](routed-events-overview.md)。  
+> 在初始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]剖析的頁面中新增事件處理常式會簡單許多。 在您要加入事件處理常式的物件專案中, 加入與您要處理的事件名稱相符的屬性。 然後指定該屬性的值, 做為您在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面的程式碼後置檔案中定義的事件處理常式方法的名稱。 如需詳細資訊, 請參閱[XAML 總覽 (WPF)](xaml-overview-wpf.md)或[路由事件總覽](routed-events-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

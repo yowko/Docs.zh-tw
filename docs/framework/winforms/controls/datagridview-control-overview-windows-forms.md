@@ -19,55 +19,55 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: 4db2a8b0e30a6bb3db0c5c629d868bc01dc15a8c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 992bf57642c955a87cd7675e0bbe7c52131e8039
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648087"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969141"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView 控制項概觀 (Windows Form)
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+> <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- 使用<xref:System.Windows.Forms.DataGridView>控制項，您可以顯示和編輯多種不同的資料來源的表格式資料。  
+ <xref:System.Windows.Forms.DataGridView>使用控制項, 您可以從許多不同類型的資料來源顯示和編輯表格式資料。  
   
- 若要將資料繫結<xref:System.Windows.Forms.DataGridView>控制項是簡單又直覺，並在許多情況下很簡單，只要設定<xref:System.Windows.Forms.DataGridView.DataSource%2A>屬性。 當您繫結至資料來源包含多個清單或資料表時，設定<xref:System.Windows.Forms.DataGridView.DataMember%2A>屬性設為指定的清單或繫結資料表的字串。  
+ 將資料系結<xref:System.Windows.Forms.DataGridView>至控制項既簡單又直覺, 而且在許多情況下, 它就像<xref:System.Windows.Forms.DataGridView.DataSource%2A>設定屬性一樣簡單。 當您系結至包含多個清單或資料表的資料來源時, <xref:System.Windows.Forms.DataGridView.DataMember%2A>請將屬性設定為指定要系結之清單或資料表的字串。  
   
- <xref:System.Windows.Forms.DataGridView>控制項支援標準的 Windows Form 資料繫結模型，因此它會繫結至下列清單所述類別的執行個體：  
+ <xref:System.Windows.Forms.DataGridView>控制項支援標準 Windows Forms 資料系結模型, 因此它會系結至下列清單中所述類別的實例:  
   
-- 任何實作類別<xref:System.Collections.IList>介面，包括一維陣列。  
+- 任何會<xref:System.Collections.IList>執行介面的類別, 包括一維陣列。  
   
-- 任何實作類別<xref:System.ComponentModel.IListSource>介面，例如<xref:System.Data.DataTable>和<xref:System.Data.DataSet>類別。  
+- 任何會<xref:System.ComponentModel.IListSource>執行介面的類別, 例如<xref:System.Data.DataTable>和<xref:System.Data.DataSet>類別。  
   
-- 任何實作類別<xref:System.ComponentModel.IBindingList>介面，例如<xref:System.ComponentModel.BindingList%601>類別。  
+- 任何會<xref:System.ComponentModel.IBindingList>執行介面的類別, 例如<xref:System.ComponentModel.BindingList%601>類別。  
   
-- 任何實作類別<xref:System.ComponentModel.IBindingListView>介面，例如<xref:System.Windows.Forms.BindingSource>類別。  
+- 任何會<xref:System.ComponentModel.IBindingListView>執行介面的類別, 例如<xref:System.Windows.Forms.BindingSource>類別。  
   
- <xref:System.Windows.Forms.DataGridView>控制項支援資料繫結至這些介面所傳回的物件的公用屬性或所傳回的屬性集合<xref:System.ComponentModel.ICustomTypeDescriptor>介面，如果傳回的物件上實作。  
+ 控制項支援將資料系結至這些介面所傳回之物件的公用屬性或<xref:System.ComponentModel.ICustomTypeDescriptor>介面所傳回的屬性集合 (如果在傳回的物件上執行)。 <xref:System.Windows.Forms.DataGridView>  
   
- 一般而言，您會繫結，來<xref:System.Windows.Forms.BindingSource>元件，並繫結<xref:System.Windows.Forms.BindingSource>元件到另一個資料來源，或商務物件以進行擴展。 <xref:System.Windows.Forms.BindingSource>元件是慣用的資料來源，因為它可以繫結至各種資料來源，而且可以自動解決許多資料繫結的問題。 如需詳細資訊，請參閱 < [BindingSource 元件](bindingsource-component.md)。  
+ 一般來說, 您會系結至<xref:System.Windows.Forms.BindingSource>元件, 並<xref:System.Windows.Forms.BindingSource>將元件系結至另一個資料來源, 或將它填入商務物件。 <xref:System.Windows.Forms.BindingSource>元件是慣用的資料來源, 因為它可以系結至各種不同的資料來源, 而且可以自動解決許多資料系結問題。 如需詳細資訊, 請參閱[BindingSource Component](bindingsource-component.md)。  
   
- <xref:System.Windows.Forms.DataGridView>控制項也會用於*未繫結*模式中的，沒有基礎資料存放區。 使用未繫結的程式碼範例<xref:System.Windows.Forms.DataGridView>控制項，請參閱[逐步解說：建立未繫結的 Windows Form DataGridView 控制項](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)。  
+ 控制項也可以在未系結模式中使用, 但不含基礎資料存放區。 <xref:System.Windows.Forms.DataGridView> 如需使用未<xref:System.Windows.Forms.DataGridView>系結控制項的程式碼範例, 請參閱[逐步解說:建立未系結的 Windows Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)DataGridView 控制項。  
   
- <xref:System.Windows.Forms.DataGridView>控制項是高度可設定和擴充性，並提供許多屬性、 方法和事件，以自訂其外觀和行為。 當您想要顯示表格式資料，Windows Forms 應用程式時，請考慮使用<xref:System.Windows.Forms.DataGridView>比其他控制項 (例如<xref:System.Windows.Forms.DataGrid>)。 如果您要顯示的唯讀值的小型格線，或如果您要啟用使用者無法編輯的資料表的數百萬筆記錄，<xref:System.Windows.Forms.DataGridView>控制會提供您隨時可程式化、 記憶體有效率的解決方案。  
+ 此<xref:System.Windows.Forms.DataGridView>控制項可高度設定和擴充, 並提供許多屬性、方法和事件來自訂其外觀和行為。 當您想要 Windows Forms 應用程式顯示表格式資料時, 請考慮<xref:System.Windows.Forms.DataGridView>在其他人之前使用控制項 ( <xref:System.Windows.Forms.DataGrid>例如)。 如果您要顯示唯讀值的小型方格, 或如果您要讓使用者編輯含有數百萬筆記錄的資料表, 此<xref:System.Windows.Forms.DataGridView>控制項將提供您容易程式化、記憶體有效率的解決方案。  
   
 ## <a name="in-this-section"></a>本節內容  
  [DataGridView 控制項技術摘要](datagridview-control-technology-summary-windows-forms.md)  
- 摘要說明<xref:System.Windows.Forms.DataGridView>控制概念和使用相關的類別。  
+ 摘要<xref:System.Windows.Forms.DataGridView>說明控制項概念和相關類別的使用。  
   
  [DataGridView 控制項架構](datagridview-control-architecture-windows-forms.md)  
- 描述的架構<xref:System.Windows.Forms.DataGridView>控制項，說明它的型別階層架構和繼承結構。  
+ 描述<xref:System.Windows.Forms.DataGridView>控制項的架構, 說明其類型階層和繼承結構。  
   
  [DataGridView 控制項案例](datagridview-control-scenarios-windows-forms.md)  
- 描述最常見的案例，在其中<xref:System.Windows.Forms.DataGridView>控制項可用。  
+ 描述使用<xref:System.Windows.Forms.DataGridView>控制項的最常見案例。  
   
  [DataGridView 控制項程式碼目錄](datagridview-control-code-directory-windows-forms.md)  
- 提供各種文件中的程式碼範例連結<xref:System.Windows.Forms.DataGridView>工作。 這些範例是以工作類型分類。  
+ 提供各種<xref:System.Windows.Forms.DataGridView>工作檔中程式碼範例的連結。 這些範例是以工作類型分類。  
   
 ## <a name="related-sections"></a>相關章節  
  [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)  
- 討論 Windows Form 中的資料行類型<xref:System.Windows.Forms.DataGridView>用來顯示資訊，並允許使用者修改或新增資訊的控制項。  
+ 討論用來顯示資訊的 Windows Forms <xref:System.Windows.Forms.DataGridView>控制項中的資料行類型, 並允許使用者修改或加入資訊。  
   
  [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)  
  提供主題描述如何以手動方式或從外部資料來源將資料填入控制項。  

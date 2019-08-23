@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 1d40b133beb68c14e7392139bf0753cedb67a4ef
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 0ff8a5002c82b274a95f7e1ae83bb23707d6cb39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971826"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968211"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>實作 UI 自動化 Window 控制項模式
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本主題簡介實作 <xref:System.Windows.Automation.Provider.IWindowProvider>的方針和慣例，包括 <xref:System.Windows.Automation.WindowPattern> 屬性、方法和事件的相關資訊。 其他參考的連結列於主題的結尾。  
   
@@ -39,17 +39,17 @@ ms.locfileid: "68971826"
 ## <a name="required-members-for-iwindowprovider"></a>IWindowProvider 的必要成員  
  IWindowProvider 介面需要下列屬性、方法和事件。  
   
-|必要成員|成員類型|附註|  
+|必要成員|成員類型|注意|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|屬性|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|None|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event - 事件|無|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event - 事件|無|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Event - 事件|不保證是 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  

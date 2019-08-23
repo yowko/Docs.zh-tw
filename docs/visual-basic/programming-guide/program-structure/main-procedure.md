@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039988"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962765"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic 中的 Main 程序
 每個 Visual Basic 應用程式都必須包含`Main`名為的程式。 此程式可做為您應用程式的起點和整體控制。 .NET Framework 會在載入`Main`您的應用程式並準備好將控制權傳遞給它時, 呼叫您的程式。 除非您要建立 Windows Forms 應用程式, 否則必須針對自己`Main`執行的應用程式撰寫程式。
@@ -33,7 +33,7 @@ ms.locfileid: "69039988"
  有四種方式可以`Main`宣告程式。 它可以接受引數, 也可以傳回值。
 
 > [!NOTE]
->  如果您`Main`在類別中宣告, 則必須`Shared`使用關鍵字。 在模組中, `Main`不需要是。 `Shared`
+> 如果您`Main`在類別中宣告, 則必須`Shared`使用關鍵字。 在模組中, `Main`不需要是。 `Shared`
 
 - 最簡單的方式是`Sub`宣告不接受引數或傳回值的程式。
 

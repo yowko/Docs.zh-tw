@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: d914310559403fba2f1fe8e4a60469ec3a867c24
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733443"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913038"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>作法：啟用和停用自動繫結重新導向
 
@@ -91,15 +91,15 @@ ms.locfileid: "68733443"
 
 1. 在 Visual Studio 中編譯應用程式，並檢查是否有建置警告。
 
-   ![元件參考衝突的組建警告](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![元件參考衝突的組建警告](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. 如果有組件繫結衝突，則會出現警告。 按兩下警告, 或選取警告, 然後按**enter**鍵。
 
    可讓您自動將必要的系結重新導向加入至來源**web.config**檔案的對話方塊隨即出現。
 
-   [系結重新![導向許可權] 對話方塊](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   [系結重新![導向許可權] 對話方塊](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>另請參閱
 
-- [\<bindingRedirect > 元素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
-- [重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [\<bindingRedirect > 元素](./file-schema/runtime/bindingredirect-element.md)
+- [重新導向組件版本](redirect-assembly-versions.md)

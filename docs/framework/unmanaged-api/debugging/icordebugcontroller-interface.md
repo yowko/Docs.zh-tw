@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7628aa0ad10398f92d475c4c776810e13fac22b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2a083f46f24d6f3f24c63dd2415b85f975cfa29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749497"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912856"
 ---
 # <a name="icordebugcontroller-interface"></a>ICorDebugController 介面
 
@@ -29,24 +29,24 @@ ms.locfileid: "61749497"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|這個方法已過時。|  
 |`ICorDebugController::CommitChanges`|這個方法已過時。|  
-|[Continue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)|之後繼續執行的受管理的執行緒呼叫[icordebugcontroller:: Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。|  
-|[Detach 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-detach-method.md)|中斷連結處理序或應用程式定義域與偵錯工具。|  
-|[EnumerateThreads 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)|取得作用中的 managed 執行緒處理序中的列舉值。|  
-|[HasQueuedCallbacks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)|取得值，指出是否任何受管理的回呼目前在佇列中等待指定的執行緒。|  
-|[IsRunning 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-isrunning-method.md)|取得值，指出是否在程序中的執行緒目前正在自由。|  
-|[SetAllThreadsDebugState 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)|設定程序中的所有 managed 執行緒的偵錯狀態。|  
-|[Stop 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)|在此程序中執行 managed 程式碼的所有執行緒上執行合作式的停駐點。|  
-|[Terminate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-terminate-method.md)|終止與指定的結束代碼的程序。|  
+|[Continue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)|呼叫[ICorDebugController:: Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)之後, 繼續執行 managed 執行緒。|  
+|[Detach 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-detach-method.md)|從進程或應用程式域中卸離偵錯工具。|  
+|[EnumerateThreads 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)|取得進程中使用中 managed 執行緒的列舉值。|  
+|[HasQueuedCallbacks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)|取得值, 指出目前是否已針對指定的執行緒將任何 managed 回呼排入佇列。|  
+|[IsRunning 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-isrunning-method.md)|取得值, 指出進程中的執行緒目前是否可自由執行。|  
+|[SetAllThreadsDebugState 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)|設定進程中所有 managed 執行緒的偵錯工具狀態。|  
+|[Stop 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)|在進程中執行 managed 程式碼的所有線程上執行合作性停止。|  
+|[Terminate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-terminate-method.md)|使用指定的結束代碼終止進程。|  
   
 ## <a name="remarks"></a>備註  
- 如果`ICorDebugController`是控制處理程序，其範圍包括所有執行緒的處理程序。 如果`ICorDebugController`會控制應用程式定義域，範圍包括該特定應用程式定義域的執行緒。  
+ 如果`ICorDebugController`正在控制進程, 範圍會包含進程的所有線程。 如果`ICorDebugController`正在控制應用程式域, 範圍只會包含該特定應用程式域的執行緒。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "61749497"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

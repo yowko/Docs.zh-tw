@@ -5,50 +5,50 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: 58e65ee9d95329c3583515b99db47b87b3749c8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b4d566d377a3cda73bf8422caa798134d356f63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973780"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962575"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows Form DataGrid 控制項的鍵盤快速鍵
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+> <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- 下表列出可用於巡覽 Windows 表單中的鍵盤快速鍵<xref:System.Windows.Forms.DataGrid>控制項：  
+ 下表列出可用於 Windows Forms <xref:System.Windows.Forms.DataGrid>控制項內導覽的鍵盤快速鍵:  
   
 |動作|快速鍵|  
 |------------|--------------|  
-|完成的資料格的項目，並向下移至下一個儲存格。<br /><br /> 如果焦點是在子資料表連結，瀏覽至該資料表。|ENTER|  
-|如果在 儲存格編輯模式中，則會取消儲存格編輯。<br /><br /> 在點線框選取項目，如果會取消資料列上編輯。|ESC|  
-|編輯儲存格時，請刪除插入點之前的字元。|退格鍵|  
-|編輯儲存格時，會在插入點後刪除的字元。|DELETE|  
-|移至目前的資料列的第一個儲存格。|首頁|  
-|移至最後一個目前的資料列中的資料格。|END|  
-|反白顯示目前儲存格中的字元，並放在該行結尾的插入點。 與按兩下儲存格有相同的行為。|F2|  
-|如果焦點是在儲存格上，移至下一個儲存格的資料列中。<br /><br /> 如果焦點是在資料列中最後一個儲存格上，移至 資料列的第一個子資料表連結並將其展開。<br /><br /> 如果焦點是子系 連結，移至下一步 的 子系 連結。<br /><br /> 如果焦點是最後一個子系連結，移至下一個資料列的第一個資料格。|TAB|  
-|如果焦點是在儲存格上，移至先前的儲存格中的資料列中。<br /><br /> 如果焦點是資料列中的第一個儲存格上，移至先前的資料列的最後一個擴充的子資料表連結，或移到最後一個資料格前一個資料列。<br /><br /> 如果焦點是子系 連結，移至前一個子連結。<br /><br /> 如果焦點是在第一個子連結，移到最後的前一個資料列的資料格。|SHIFT+TAB|  
+|完成儲存格專案, 並向下移動至下一個儲存格。<br /><br /> 如果焦點是在子資料工作表連結上, 請流覽至該資料表。|ENTER|  
+|如果在儲存格編輯模式中, 則取消儲存格編輯。<br /><br /> 如果在字幕選取範圍中, 取消資料列的編輯。|ESC|  
+|在編輯儲存格時, 刪除插入點之前的字元。|倒退鍵|  
+|編輯資料格時, 刪除插入點之後的字元。|Delete|  
+|移至目前資料列中的第一個資料格。|首頁|  
+|移至目前資料列中的最後一個資料格。|END|  
+|反白顯示目前儲存格中的字元, 並將插入點放在行尾。 與按兩下資料格的行為相同。|F2|  
+|如果焦點是在資料格上, 請移至資料列中的下一個儲存格。<br /><br /> 如果焦點是在資料列中的最後一個資料格上, 請移至資料列的第一個子資料工作表連結, 然後將它展開。<br /><br /> 如果焦點是在子連結上, 請移至下一個子連結。<br /><br /> 如果焦點是在最後一個子連結上, 請移至下一個資料列的第一個資料格。|TAB|  
+|如果焦點是在資料格上, 請移至資料列中的上一個儲存格。<br /><br /> 如果焦點是在資料列中的第一個資料格上, 請移至前一個資料列的最後一個展開的子資料工作表連結, 或移至前一個資料列的最後一個資料格。<br /><br /> 如果焦點是在子連結上, 請移至上一個子連結。<br /><br /> 如果焦點是在第一個子系連結上, 請移至上一個資料列的最後一個資料格。|SHIFT+TAB|  
 |移至定位順序中的下一個控制項。|CTRL+TAB|  
-|移至定位順序中的前一個控制項。|CTRL+SHIFT+TAB|  
-|子資料表中，移至父資料表。 與按一下 [上一頁] 按鈕的行為相同。|ALT+向左鍵|  
-|展開子資料表的連結。 ALT + 向下箭號展開所有連結，而不只是選取的連結。|ALT + 向下鍵或 CTRL + 加號|  
-|摺疊子資料表的連結。 ALT + 向上鍵摺疊所有連結，而不只是選取的連結。|ALT + 向上鍵或 CTRL + 減號|  
-|移至的箭頭方向遠的非空白儲存格。|CTRL + 方向鍵|  
-|延伸選取範圍中的資料列的方向 （不包括子資料表連結） 的箭號。|SHIFT + 向上/向下箭號|  
-|延伸選取範圍 （不包括子資料表連結） 的箭頭方向中的最遠的非空白資料列。|CTRL + SHIFT + 向上/向下鍵|  
-|移至左上方儲存格。|CTRL + HOME|  
-|移至右下方儲存格中。|CTRL + END|  
-|延伸選取範圍到上方的資料列。|CTRL + SHIFT + HOME|  
-|延伸選取範圍到下方的資料列。|CTRL + SHIFT + END|  
-|選取目前的資料列 （不包括子資料表連結）。|SHIFT + 空格鍵|  
-|選取整個方格 （不包括子資料表連結）。|CTRL+A|  
-|顯示子資料表中的父資料列。|CTRL+PAGE DOWN|  
-|隱藏在子資料表中的父資料列。|CTRL+PAGE UP|  
-|延伸選取範圍向下一個畫面 （不包括子資料表連結）。|SHIFT+PAGE DOWN|  
-|向上延伸選取範圍 （不包括子資料表連結） 的其中一個畫面。|SHIFT+PAGE UP|  
-|呼叫<xref:System.Windows.Forms.DataGrid.EndEdit%2A>目前資料列的方法。|CTRL+ENTER|  
-|輸入<xref:System.DBNull.Value?displayProperty=nameWithType>在編輯模式中的儲存格中的值。|CTRL+0|  
+|移至定位順序中的上一個控制項。|CTRL+SHIFT+TAB|  
+|如果在子資料工作表中, 則移到父資料表。 與按一下 [上一頁] 按鈕的行為相同。|ALT+向左鍵|  
+|展開 [子資料工作表連結]。 ALT + 向下鍵會展開所有的連結, 而不只是選取的連結。|ALT + 向下鍵或 CTRL + 加號|  
+|折迭子資料工作表連結。 ALT + 向上鍵會折迭所有的連結, 而不只是選取的連結。|ALT + 向上鍵或 CTRL + 減號|  
+|移至箭號方向的最遠非空白儲存格。|CTRL + 箭號|  
+|以箭號的方向, 將選取範圍延伸一個資料列 (不包括子資料工作表連結)。|SHIFT + 向上鍵/向下鍵|  
+|以箭號的方向, 將選取範圍擴充到最遠的非空白資料列 (不包括子資料工作表連結)。|CTRL + SHIFT + 向上/向下鍵|  
+|移至左上方資料格。|CTRL + HOME|  
+|移至右下方的資料格。|CTRL + END|  
+|將選取範圍延伸到頂端資料列。|CTRL + SHIFT + HOME|  
+|將選取範圍延伸至底部資料列。|CTRL + SHIFT + END|  
+|選取目前的資料列 (不包括子資料工作表連結)。|SHIFT + 空格鍵|  
+|選取整個方格 (不包括子資料工作表連結)。|CTRL+A|  
+|在子資料工作表中顯示父資料列。|CTRL+PAGE DOWN|  
+|在子資料工作表中隱藏父資料列。|CTRL+PAGE UP|  
+|將選取範圍向下延伸一個畫面 (不包括子資料工作表連結)。|SHIFT+PAGE DOWN|  
+|將選取範圍向上延伸一個畫面 (不包括子資料工作表連結)。|SHIFT+PAGE UP|  
+|呼叫目前<xref:System.Windows.Forms.DataGrid.EndEdit%2A>資料列的方法。|CTRL+ENTER|  
+|當處於編輯模式時, 將值輸入儲存格。<xref:System.DBNull.Value?displayProperty=nameWithType>|CTRL+0|  
   
 ## <a name="see-also"></a>另請參閱
 

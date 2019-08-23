@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: b5ad2280c832b62e043a1f65f082d5475697c38c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545363"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960339"
 ---
 # <a name="packaging-fonts-with-applications"></a>將字型與應用程式一起封裝
 本主題提供如何使用您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的應用程式封裝字型的總覽。  
   
 > [!NOTE]
->  與大部分類型的軟體一樣，字型檔是經由授權而非販售的。 控制字型使用方式的授權會因廠商而異, 但一般大部分的授權, 包括涵蓋應用程式所[!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)]提供之字型的[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]授權, 以及不允許將字型內嵌在應用程式內或其他情況下轉散發. 因此，身為開發人員，您的職責是確保對於您內嵌在應用程式中或是以其他方式轉散發的任何字型，您必須有必要的授權權限。  
+> 與大部分類型的軟體一樣，字型檔是經由授權而非販售的。 控制字型使用方式的授權會因廠商而異, 但一般大部分的授權 (包括涵蓋應用程式和[!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] Windows 所提供字型的授權), 都不允許將字型內嵌在應用程式內, 否則轉散發. 因此，身為開發人員，您的職責是確保對於您內嵌在應用程式中或是以其他方式轉散發的任何字型，您必須有必要的授權權限。  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>封裝字型簡介  
@@ -81,7 +81,7 @@ ms.locfileid: "69545363"
 ```  
   
 > [!NOTE]
->  當您將字型當做資源新增至應用程式時, 請確定您正在`<Resource>`設定元素, 而不`<EmbeddedResource>`是應用程式專案檔中的元素。 不`<EmbeddedResource>`支援組建動作的元素。  
+> 當您將字型當做資源新增至應用程式時, 請確定您正在`<Resource>`設定元素, 而不`<EmbeddedResource>`是應用程式專案檔中的元素。 不`<EmbeddedResource>`支援組建動作的元素。  
   
  下列標記範例示範如何參考應用程式的字型資源。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69545363"
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  此 SDK 包含一組您可以搭配[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式使用的範例 OpenType 字型。 字型定義於僅含資源的程式庫中。 如需詳細資訊，請參閱[範例 OpenType 字型套件](sample-opentype-font-pack.md)。  
+> 此 SDK 包含一組您可以搭配[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式使用的範例 OpenType 字型。 字型定義於僅含資源的程式庫中。 如需詳細資訊，請參閱[範例 OpenType 字型套件](sample-opentype-font-pack.md)。  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>字型使用限制  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: c3ec6ca6feba975517a9f982bb58e4b061516a61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567527"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962809"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全性
 <a name="introduction"></a> 一般而言，網際網路應用程式應該限制不得直接存取重要的系統資源，以防止惡意損害。 根據預設, HTML 和用戶端指令碼語言無法存取重要的系統資源。 因為 Windows Presentation Foundation (WPF) 瀏覽器裝載的應用程式可以從瀏覽器啟動, 所以它們應該符合一組類似的限制。 若要強制執行這些[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]限制, 必須同時依賴代碼啟用安全性 (CAS) 和 ClickOnce (請參閱[WPF 安全性策略-平臺安全性](wpf-security-strategy-platform-security.md))。 根據預設, 瀏覽器裝載的應用程式會要求網際網路區域 CA 的許可權集, 而不論它們是從網際網路、近端內部網路或本機電腦啟動。 使用少於完整權限集執行的應用程式便是以部分信任執行。  
@@ -87,7 +87,7 @@ ms.locfileid: "69567527"
 |網際網路|因為「未授與信任」而失敗|使用憑證簽署 XBAP。|  
   
 > [!NOTE]
->  上表中描述的行為是針對未遵循 ClickOnce 受信任部署模型的完全信任 XBAP。  
+> 上表中描述的行為是針對未遵循 ClickOnce 受信任部署模型的完全信任 XBAP。  
   
  一般而言，可能超過允許權限的程式碼很可能是在獨立式與瀏覽器裝載的應用程式之間共用的通用程式碼。 CAS 和[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供數種管理此案例的技術。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69567527"
  當您需要檢查每個許可權時, 使用 CAS 檢查許可權是適合的技巧。 不過，這項技巧依賴在一般處理時攔截例外狀況，一般而言不建議這麼做，其可能會發生效能問題。 相反地, 如果[!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]您只在網際網路區域沙箱中執行, 您可以<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>使用屬性, 它會針對[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]傳回 true。  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>只會區分應用程式是否在瀏覽器中執行, 而不是應用程式執行時所使用的許可權集。  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>只會區分應用程式是否在瀏覽器中執行, 而不是應用程式執行時所使用的許可權集。  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>管理權限  
@@ -149,7 +149,7 @@ ms.locfileid: "69567527"
 |網頁瀏覽器|HTML 框架安全瀏覽|是|是|  
   
 > [!NOTE]
->  在部分信任中，只有在使用者啟動時，才允許剪下和貼上。  
+> 在部分信任中，只有在使用者啟動時，才允許剪下和貼上。  
   
  如果您需要提高權限，您需要變更專案設定和 ClickOnce 應用程式資訊清單。 如需詳細資訊，請參閱 [WPF XAML 瀏覽器應用程式概觀](./app-development/wpf-xaml-browser-applications-overview.md)。 下列文件可能有用。  
   

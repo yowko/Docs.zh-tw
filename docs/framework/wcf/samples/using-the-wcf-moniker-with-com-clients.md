@@ -2,25 +2,25 @@
 title: 利用 COM 用戶端使用 WCF Moniker
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 827ea3295bc052f7272eeff241ece10caf5a9704
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 38b5a1e4328d403671454e78a9b968ae74b34dff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624246"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966791"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>利用 COM 用戶端使用 WCF Moniker
-此範例示範如何使用 Windows Communication Foundation (WCF) 服務 moniker 將 Web 服務整合至 COM 架構開發環境，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
+這個範例會示範如何使用 Windows Communication Foundation (WCF) 服務名字, 將 Web 服務整合至 COM 開發環境, 例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+> 此範例的安裝程序與建置指示位於本主題的結尾。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
@@ -50,7 +50,7 @@ public interface ICalculator
 - 中繼資料交換合約：會在執行階段從中繼資料交換 (MEX) 端點擷取合約。  
   
 ## <a name="typed-contract"></a>型別合約  
- 若要搭配使用 Moniker 和型別合約，必須使用 COM 適當地註冊服務合約的屬性化型別。 首先，必須使用所產生的用戶端[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 請從用戶端目錄中的命令提示字元執行下列命令，以產生具有型別的 Proxy。  
+ 若要搭配使用 Moniker 和型別合約，必須使用 COM 適當地註冊服務合約的屬性化型別。 首先, 必須使用[System.servicemodel 中繼資料公用程式工具 (Svcutil)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端。 請從用戶端目錄中的命令提示字元執行下列命令，以產生具有型別的 Proxy。  
   
 ```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
@@ -75,7 +75,7 @@ gacutil.exe /i client.dll
 ```  
   
 > [!NOTE]
->  服務 Moniker 只需要型別註冊，而不會使用 Proxy 與服務進行通訊。  
+> 服務 Moniker 只需要型別註冊，而不會使用 Proxy 與服務進行通訊。  
   
  ComCalcClient.vbs 用戶端應用程式會使用 `GetObject` 函式以建構服務的 Proxy，進而使用服務 Moniker 語法來指定服務的位址、繫結和合約。  
   
@@ -100,7 +100,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
   
- 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這示範了 COM 用戶端進行通訊的 WCF 服務使用具型別的 moniker 進行 COM 呼叫。 就算在用戶端應用程式中使用 COM，服務通訊只能包含 Web 服務呼叫。  
+ 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這會示範使用具類型的名字標記進行 COM 呼叫, 以與 WCF 服務進行通訊的 COM 用戶端。 就算在用戶端應用程式中使用 COM，服務通訊只能包含 Web 服務呼叫。  
   
 ## <a name="wsdl-contract"></a>WSDL 合約  
  若要搭配使用 Moniker 和 WSDL 合約，您不需要用戶端程式庫註冊，但必須透過超出範圍之外的機制擷取服務的 WSDL 合約，例如使用瀏覽器存取服務的 WSDL 端點。 Moniker 接著可在執行階段存取該合約。  
@@ -136,7 +136,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 - 合約的名稱與命名空間。 這是必要的識別，因為 WSDL 可能包含多個合約。  
   
     > [!NOTE]
-    >  根據預設，WCF 服務會產生不同的 WSDL 檔案，每個命名空間的使用。 而這些檔案則與使用 WSDL 匯入建構相連結。 由於 Moniker 預期使用單一 WSDL 定義，服務必須如同本範例所示範使用單一命名空間，或必須以手動方式合併不同的檔案。  
+    >  根據預設, WCF 服務會為所使用的每個命名空間產生個別的 WSDL 檔案。 而這些檔案則與使用 WSDL 匯入建構相連結。 由於 Moniker 預期使用單一 WSDL 定義，服務必須如同本範例所示範使用單一命名空間，或必須以手動方式合併不同的檔案。  
   
  使用服務 Moniker 建構 Proxy 執行個體完畢之後，用戶端應用程式就可以針對 Proxy 呼叫方法，使服務 Moniker 基礎結構呼叫對應的服務作業。  
   
@@ -145,7 +145,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
   
- 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這示範了 COM 用戶端進行通訊的 WCF 服務搭配使用 moniker 和 WSDL 合約的 COM 呼叫。  
+ 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這會示範使用標記搭配 WSDL 合約進行 COM 呼叫, 以與 WCF 服務進行通訊的 COM 用戶端。  
   
 ## <a name="metadata-exchange-contract"></a>中繼資料交換合約  
  若要搭配使用 Moniker 和 MEX 合約，就如同搭配使用 WSDL 合約一樣，將不需要用戶端註冊。 透過內部使用中繼資料交換，即可在執行階段擷取服務合約。  
@@ -180,32 +180,32 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
   
- 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這示範了 COM 用戶端進行通訊的 WCF 服務搭配使用 moniker 和 MEX 合約的 COM 呼叫。  
+ 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這會示範使用具有 MEX 合約的名字標記來進行 COM 呼叫, 以與 WCF 服務通訊的 COM 用戶端。  
   
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3. 從開發人員命令提示字元中適用於 Visual Studio，開啟語言特定資料夾下 \client\bin 資料夾中。  
+3. 從 Visual Studio 的開發人員命令提示字元中, 開啟 [語言特定] 資料夾下的 [\client\bin] 資料夾。  
   
     > [!NOTE]
     >  如果您是使用 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7 或 Windows Server 2008 R2，請務必使用系統管理員權限來執行命令提示字元。  
   
-4. 輸入`tlbexp.exe client.dll /out:CalcProxy.tlb`dll 匯出至 tlb 檔案。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
+4. `tlbexp.exe client.dll /out:CalcProxy.tlb`輸入, 將 dll 匯出至 tlb 檔案。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
   
-5. 輸入`regasm.exe /tlb:CalcProxy.tlb client.dll`向 COM 註冊型別 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
+5. `regasm.exe /tlb:CalcProxy.tlb client.dll`輸入, 以向 COM 註冊類型。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
   
-6. 輸入`gacutil.exe /i client.dll`加入到全域組件快取的組件。  
+6. `gacutil.exe /i client.dll`輸入, 將元件加入至全域組件快取。  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例  
   
-1. 您可以使用瀏覽器輸入下列位址的服務的測試： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。  
+1. 輸入下列位址, 測試您是否可以使用瀏覽器存取服務: `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。  
   
 2. 在語言特定資料夾下的 \client 中，執行 ComCalcClient.vbs。 用戶端活動會顯示在訊息方塊視窗中。  
   
-3. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+3. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -223,11 +223,11 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 7. 從命令提示字元巡覽至用戶端電腦上的目的目錄。 如果使用 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，請務必使用系統管理員身分執行命令提示字元。  
   
-8. 輸入`tlbexp.exe client.dll /out:CalcProxy.tlb`dll 匯出至 tlb 檔案。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
+8. `tlbexp.exe client.dll /out:CalcProxy.tlb`輸入, 將 dll 匯出至 tlb 檔案。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
   
-9. 輸入`regasm.exe /tlb:CalcProxy.tlb client.dll`向 COM 註冊型別 請確定該路徑已設定為包含的資料夾`regasm.exe`執行命令之前。  
+9. `regasm.exe /tlb:CalcProxy.tlb client.dll`輸入, 以向 COM 註冊類型。 執行命令之前, 請確定已將路徑設定為`regasm.exe`包含的資料夾。  
   
-10. 輸入`gacutil.exe /i client.dll`加入到全域組件快取的組件。 請確定該路徑已設定為包含的資料夾`gacutil.exe`執行命令之前。  
+10. `gacutil.exe /i client.dll`輸入, 將元件加入至全域組件快取。 執行命令之前, 請確定已將路徑設定為`gacutil.exe`包含的資料夾。  
   
 11. 測試您是否能夠使用瀏覽器，從用戶端電腦存取服務。  
   

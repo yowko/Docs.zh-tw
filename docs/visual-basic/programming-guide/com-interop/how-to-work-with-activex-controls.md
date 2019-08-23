@@ -5,30 +5,30 @@ helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: 5950779e1f0d1e76b933b83135a8bf516161aced
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f46459615430dc61ff5cb9fcbde5ae568fce31af
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022333"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969336"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>HOW TO：使用 ActiveX 控制項 (Visual Basic)
-ActiveX 控制項是 COM 元件或您可以將其插入 Web 網頁或其他應用程式重複使用其他人已撰寫的已封裝的功能的物件。 您可以使用 Visual Basic 6.0 和更早版本所開發的 ActiveX 控制項，若要將功能加入至**工具箱**的 Visual Studio。  
+ActiveX 控制項是 COM 元件或物件, 您可以將其插入網頁或其他應用程式中, 以重複使用其他人所編寫的封裝功能。 您可以使用針對 Visual Basic 6.0 和舊版所開發的 ActiveX 控制項, 將功能加入 Visual Studio 的 [**工具箱**] 中。  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>將 ActiveX 控制項新增至工具箱  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>將 ActiveX 控制項加入至工具箱  
   
-1. 在 **工具**功能表上，按一下**選擇工具箱項目**。  
+1. 在 [**工具**] 功能表上, 按一下 **[選擇工具箱專案**]。  
   
-     **[選擇工具箱**] 對話方塊隨即出現。  
+     [**選擇工具箱**] 對話方塊隨即出現。  
   
 2. 按一下 [ **COM 元件**] 索引標籤。  
   
-3. 選取您想要使用此項目，然後按一下 ActiveX 控制項旁的核取方塊**確定**。  
+3. 選取您想要使用之 ActiveX 控制項旁的核取方塊, 然後按一下 **[確定]** 。  
   
-     中的其他工具會顯示新的控制項**工具箱**。  
+     新的控制項隨即出現, 並顯示 [**工具箱**] 中的其他工具。  
   
     > [!NOTE]
-    >  若要手動建立 ActiveX 控制項的 interop 組件，您可以使用 Aximp 公用程式。 如需詳細資訊，請參閱 < [Aximp.exe （Windows Form ActiveX 控制項匯入工具）](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)。  
+    > 您可以使用 Aximp.exe 公用程式, 以手動方式建立 ActiveX 控制項的 interop 元件。 如需詳細資訊, 請參閱[aximp.exe (Windows Forms ActiveX 控制項匯入工具)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

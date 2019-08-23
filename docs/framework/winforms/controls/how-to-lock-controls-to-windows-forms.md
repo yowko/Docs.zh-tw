@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cbf82f1481ee9779cec5cfbf3fb057b7ea399a1c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 9eb762a9691a6127e2419f9ddc25f3010d3383fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039910"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966531"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>作法：鎖定 Windows Forms 的控制項
 當您設計 Windows 應用程式的使用者介面 (UI) 時, 可以在控制項正確定位之後鎖定它們, 以便在設定其他屬性時不會不慎移動或調整其大小。
@@ -24,14 +24,14 @@ ms.locfileid: "69039910"
      或者, 以滑鼠右鍵按一下控制項, 然後選擇 [**鎖定控制項**]。
 
     > [!NOTE]
-    >  鎖定控制項可避免將它們拖曳至設計介面上的新大小或位置。 不過, 您仍然可以透過 [**屬性**] 視窗或在程式碼中變更控制項的大小或位置。
+    > 鎖定控制項可避免將它們拖曳至設計介面上的新大小或位置。 不過, 您仍然可以透過 [**屬性**] 視窗或在程式碼中變更控制項的大小或位置。
 
 ## <a name="to-lock-all-the-controls-on-a-form"></a>鎖定表單上的所有控制項
 
 1. 從 [**格式**] 功能表選擇 [**鎖定控制項**]。
 
     > [!NOTE]
-    >  此命令也會鎖定表單的大小, 因為表單是控制項。
+    > 此命令也會鎖定表單的大小, 因為表單是控制項。
 
 ## <a name="to-unlock-all-locked-controls-on-a-form"></a>解除鎖定表單上所有鎖定的控制項
 

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 80973e16445079876e01c89f20b5ecbdca602eb8
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 818f36633575b248d92da475c462cc0f211fe969
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039717"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966544"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>HOW TO：將 Windows Forms 上的物件分層
+# <a name="how-to-layer-objects-on-windows-forms"></a>作法：將 Windows Forms 上的物件分層
 當您建立複雜的使用者介面, 或使用多重文件介面 (MDI) 表單時, 您通常會想要將控制項和子表單分層, 以建立更複雜的使用者介面 (UI)。 若要移動和追蹤群組內容中的控制項和視窗, 您可以操控其迭置順序。 迭置*順序*是表單上控制項的視覺分層, 沿著表單的 Z 軸 (深度)。 位於 z 順序頂端的視窗會與所有其他視窗重迭。 所有其他視窗會在迭置順序的底部重迭視窗。
 
 ## <a name="to-layer-controls-at-design-time"></a>在設計階段圖層控制項
@@ -47,7 +47,7 @@ ms.locfileid: "69039717"
     ```
 
 > [!NOTE]
->  Windows Forms 支援*控制項*內含專案。 控制項內含專案牽涉到將一些控制項放在包含控制項內, 例如<xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox>控制項內的一些控制項。 然後, 您可以在包含控制項內分層控制項。 移動 [群組方塊] 也會移動控制項, 因為它們包含在其中。
+> Windows Forms 支援*控制項*內含專案。 控制項內含專案牽涉到將一些控制項放在包含控制項內, 例如<xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox>控制項內的一些控制項。 然後, 您可以在包含控制項內分層控制項。 移動 [群組方塊] 也會移動控制項, 因為它們包含在其中。
 
 ## <a name="see-also"></a>另請參閱
 

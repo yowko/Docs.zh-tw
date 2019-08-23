@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d27799e427efd3659dc2864e7d1e8e2061c5c19
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ac7014962b99ac167e8192c13b2bae5ca92470f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780767"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948518"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped 方法
-主應用程式提供有機會初始化任何自訂的資料，要附加至 Win32`OVERLAPPED`非同步的 I/O 要求所使用的結構。  
+讓主機有機會初始化任何自訂資料, 以附加至用於非同步 i/o `OVERLAPPED`要求的 Win32 結構。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,34 +37,34 @@ HRESULT InitializeHostOverlapped (
   
 ## <a name="parameters"></a>參數  
  `pvOverlapped`  
- [in]Win32 指標`OVERLAPPED`結構以包含在 I/O 要求。  
+ 在要包含在 i/o 要求`OVERLAPPED`中的 Win32 結構指標。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`InitializeHostOverlapped` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_OUTOFMEMORY|記憶體不足，無法配置所要求的資源。|  
+|S_OK|`InitializeHostOverlapped`已成功傳回。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時, CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_OUTOFMEMORY|沒有足夠的記憶體可用來配置要求的資源。|  
   
 ## <a name="remarks"></a>備註  
- Windows 平台函式會使用`OVERLAPPED`非同步 I/O 要求的狀態儲存的結構。 CLR 會呼叫`InitializeHostOverlapped`方法，讓主應用程式来新增自訂資料的機會`OVERLAPPED`執行個體。  
+ Windows 平臺函式會使用`OVERLAPPED`結構來儲存非同步 i/o 要求的狀態。 CLR 會呼叫`InitializeHostOverlapped`方法, 讓主機有`OVERLAPPED`機會將自訂資料附加至實例。  
   
 > [!IMPORTANT]
->  若要取得其自訂資料區塊的開頭，主機必須的大小設定位移`OVERLAPPED`結構 (`sizeof(OVERLAPPED)`)。  
+> 若要取得自訂資料區塊的開頭, 主機必須將位移設定為`OVERLAPPED`結構的大小 (`sizeof(OVERLAPPED)`)。  
   
- 傳回值 E_OUTOFMEMORY 表示主機已無法初始化其自訂的資料。 在此情況下，CLR 會回報錯誤，並使呼叫失敗。  
+ E_OUTOFMEMORY 的傳回值表示主機無法初始化其自訂資料。 在此情況下, CLR 會報告錯誤, 並導致呼叫失敗。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

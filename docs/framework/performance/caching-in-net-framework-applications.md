@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 54e0c8f8153780e5a5d45b91b1aea391dec19933
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 779785e9793939cf121fedf99b23a07288173637
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689391"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967611"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 應用程式中的快取
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。  
@@ -19,7 +19,7 @@ ms.locfileid: "66689391"
  .NET Framework 所提供的快取功能可用來改善 Windows 用戶端和伺服器應用程式的效能和延展性，包含 ASP.NET。  
   
 > [!NOTE]
->  在.NET Framework 3.5 和更早版本中，ASP.NET 會提供在記憶體中快取實作<xref:System.Web.Caching>命名空間。 在舊版的.NET framework 中，快取是僅適用於<xref:System.Web>命名空間，因此需要對 ASP.NET 類別的相依性。 在 .NET Framework 4 中，<xref:System.Runtime.Caching> 命名空間包含針對 Web 和非 Web 應用程式所設計的 API。  
+> 在 .NET Framework 3.5 和更早版本中, ASP.NET 提供了<xref:System.Web.Caching>命名空間中的記憶體內部快取實作為功能。 在舊版的 .NET Framework 中, 快取僅適用于<xref:System.Web>命名空間, 因此需要 ASP.NET 類別的相依性。 在 .NET Framework 4 中，<xref:System.Runtime.Caching> 命名空間包含針對 Web 和非 Web 應用程式所設計的 API。  
   
 ## <a name="caching-data"></a>快取資料  
  您可以使用 <xref:System.Runtime.Caching> 命名空間中的類別來快取資訊。 這個命名空間中的快取類別提供下列功能：  
@@ -39,18 +39,18 @@ ms.locfileid: "66689391"
  <xref:System.Runtime.Caching.MemoryCache> 類別是 <xref:System.Runtime.Caching.ObjectCache> 類別的記憶體內部物件快取實作。 您可以使用大部分快取工作的 <xref:System.Runtime.Caching.MemoryCache> 類別。  
   
 > [!NOTE]
->  在 <xref:System.Web.Caching> 命名空間中所定義的 ASP.NET 快取物件上，建立 <xref:System.Runtime.Caching.MemoryCache> 類別的模型。 因此，內部快取邏輯類似於舊版 ASP.NET 中所提供的邏輯。  
+> 在 <xref:System.Web.Caching> 命名空間中所定義的 ASP.NET 快取物件上，建立 <xref:System.Runtime.Caching.MemoryCache> 類別的模型。 因此，內部快取邏輯類似於舊版 ASP.NET 中所提供的邏輯。  
   
- 如需如何使用 WPF 應用程式中的快取的範例，請參閱[逐步解說：快取中的 WPF 應用程式的應用程式資料](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)。  
+ 如需如何在 WPF 應用程式中使用快取的範例, 請[參閱逐步解說:在 WPF 應用程式](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)中快取應用程式資料。  
   
 ## <a name="caching-in-aspnet-applications"></a>ASP.NET 應用程式中的快取  
  <xref:System.Runtime.Caching> 命名空間中的快取類別提供在 ASP.NET 中快取資料的功能。  
   
 > [!NOTE]
->  如果您的應用程式的目標.NET Framework 3.5 或更早版本，您必須使用的快取的類別中定義的<xref:System.Web.Caching>命名空間。 如需詳細資訊，請參閱 [ASP.NET 快取概觀](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))。  
+> 如果您的應用程式以 .NET Framework 3.5 或更早版本為目標, 則必須使用在<xref:System.Web.Caching>命名空間中定義的快取類別。 如需詳細資訊，請參閱 [ASP.NET 快取概觀](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))。  
   
 > [!NOTE]
->  當您開發新的應用程式時，建議您使用 <xref:System.Runtime.Caching.MemoryCache> 類別。 <xref:System.Runtime.Caching> 命名空間中所提供的 API 就像 <xref:System.Web.Caching.Cache> 命名空間中提供的 API。 因此，如果您已在舊版 ASP.NET 中使用快取，則會熟悉 API。 如需如何使用快取 ASP.NET 應用程式中的範例，請參閱[逐步解說：快取 ASP.NET 中的應用程式資料](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))。  
+> 當您開發新的應用程式時，建議您使用 <xref:System.Runtime.Caching.MemoryCache> 類別。 <xref:System.Runtime.Caching> 命名空間中所提供的 API 就像 <xref:System.Web.Caching.Cache> 命名空間中提供的 API。 因此，如果您已在舊版 ASP.NET 中使用快取，則會熟悉 API。 如需如何在 ASP.NET 應用程式中使用快取的範例[, 請參閱逐步解說:在 ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))中快取應用程式資料。  
   
 ### <a name="output-caching"></a>輸出快取  
  若要手動快取應用程式資料，您可以在 ASP.NET 中使用 <xref:System.Runtime.Caching.MemoryCache> 類別。 ASP.NET 也支援輸出快取，以將所產生的頁面、控制項和 HTTP 回應輸出儲存至記憶體中。 您可以在 ASP.NET 網頁中透過宣告方式設定輸出快取，或使用 Web.config 檔案中的設定來設定輸出快取。 如需詳細資訊，請參閱[快取的 outputCache 項目 (ASP.NET 設定結構描述)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100))。  
@@ -79,5 +79,5 @@ ms.locfileid: "66689391"
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [逐步解說：快取中的 WPF 應用程式的應用程式資料](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
-- [逐步解說：在 ASP.NET 中快取的應用程式資料](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))
+- [逐步解說：在 WPF 應用程式中快取應用程式資料](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [逐步解說：在 ASP.NET 中快取應用程式資料](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

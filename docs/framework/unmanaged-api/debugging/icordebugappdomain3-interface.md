@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 256fd900fa73948b4ca42ac6b6f21f145effc461
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: c3676cb32ceaf6f241672751f0feafbd3cb83e05
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025889"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968867"
 ---
 # <a name="icordebugappdomain3-interface"></a>ICorDebugAppDomain3 介面
-提供方法來擷取目前已載入應用程式定義域中的 Windows 執行階段類型的 managed 表示法的相關資訊。 這個介面是 ICorDebugAppDomain 和 ICorDebugAppDomain2 介面的延伸模組。  
+提供方法, 以取得目前載入應用程式域之 Windows 執行階段類型的 managed 標記法的相關資訊。 這個介面是 ICorDebugAppDomain 和 ICorDebugAppDomain2 介面的延伸。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|取得所有快取的 Windows 執行階段類型的列舉值。|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|取得其介面識別項為基礎的應用程式定義域中快取的 Windows 執行階段類型的列舉值。|  
+|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|取得所有快取 Windows 執行階段類型的列舉值。|  
+|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|根據介面識別碼, 取得應用程式域中快取 Windows 執行階段類型的列舉值。|  
   
 ## <a name="remarks"></a>備註  
- 這個介面適用於偵錯工具的函式評估呼叫搭配`M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`。 方法會擷取支援的 Windows 執行階段伺服器物件的介面識別項，偵錯工具可以將其對應到對應至這些介面的 managed 類型中使用此介面中定義的方法。  
+ 這個介面適用于偵錯工具搭配的函式評估呼叫`M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`使用。 當方法抓取 Windows 執行階段 server 物件所支援的介面識別碼時, 偵錯工具可能會使用在這個介面中定義的方法, 將它們對應到與這些介面相對應的 managed 類型。  
   
- 若要擷取此介面的執行個體，請執行`QueryInterface`ICorDebugAppDomain 或 ICorDebugAppDomain2 介面的執行個體上。  
+ 若要取得此介面的實例, 請`QueryInterface`在 ICorDebugAppDomain 或 ICorDebugAppDomain2 介面的實例上執行。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** Windows 執行階段  

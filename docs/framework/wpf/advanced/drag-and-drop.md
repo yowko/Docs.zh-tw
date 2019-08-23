@@ -8,20 +8,20 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a610d41d9db7f205d868713a6e1cd59c311ea916
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010406"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964827"
 ---
 # <a name="drag-and-drop"></a>拖放
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供高彈性的拖曳和卸除基礎結構可支援拖曳和卸除的資料都[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式，以及其他[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]應用程式。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供高度彈性的拖放基礎結構, 可支援在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式及其他 Windows 應用程式中拖放資料。  
   
 ## <a name="in-this-section"></a>本節內容  
  [拖放概觀](drag-and-drop-overview.md)  
  [資料與資料物件](data-and-data-objects.md)  
- [逐步解說：啟用拖曳並放在使用者控制項](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [逐步解說：在使用者控制項上啟用拖放](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
  [HOW-TO 主題](drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  

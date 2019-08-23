@@ -1,5 +1,5 @@
 ---
-title: Error 陳述式 (Visual Basic)
+title: Error 語句 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.error
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b926214d3be7f5f57783a8599acf1bb1042f956
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982393"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944449"
 ---
 # <a name="error-statement"></a>Error 陳述式
-模擬錯誤的相符項目。  
+模擬發生錯誤的次數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,26 +31,26 @@ Error errornumber
  必要項。 可以是任何有效的錯誤號碼。  
   
 ## <a name="remarks"></a>備註  
- `Error`回溯相容性支援陳述式。 在新的程式碼，尤其是在建立物件時，使用`Err`物件的`Raise`方法來產生執行階段錯誤。  
+ `Error`語句支援回溯相容性。 在新程式碼中, 尤其是在建立物件`Err`時, `Raise`請使用物件的方法來產生執行階段錯誤。  
   
- 如果`errornumber`定義，則`Error`陳述式會呼叫錯誤處理常式的屬性之後`Err`物件會指派預設值如下：  
+ 如果`errornumber`已定義, 則`Error`語句會在`Err`物件的屬性被指派下列預設值之後, 呼叫錯誤處理常式:  
   
 |屬性|值|  
 |--------------|-----------|  
-|`Number`|指定為引數的值`Error`陳述式。 可以是任何有效的錯誤號碼。|  
-|`Source`|目前的 Visual Basic 專案的名稱。|  
-|`Description`|字串對應至的傳回值的運算式`Error`函式指定`Number`，如果這個字串已存在。 如果字串不存在，`Description`包含零長度字串 ("")。|  
-|`HelpFile`|完整格式的磁碟機、 路徑和適當的 Visual Basic 說明檔的檔案名稱。|  
-|`HelpContext`|適當的 Visual Basic 說明檔內容識別碼對應至錯誤`Number`屬性。|  
-|`LastDLLError`|為零。|  
+|`Number`|指定為`Error`語句之引數的值。 可以是任何有效的錯誤號碼。|  
+|`Source`|目前 Visual Basic 專案的名稱。|  
+|`Description`|對應至指定`Error` `Number`之函式傳回值的字串運算式 (如果這個字串存在)。 如果字串不存在, `Description`則包含長度為零的字串 ("")。|  
+|`HelpFile`|適當 Visual Basic 說明檔的完整磁片磁碟機、路徑和檔案名。|  
+|`HelpContext`|適當的 Visual Basic 說明檔內容識別碼, 用於對應于`Number`屬性的錯誤。|  
+|`LastDLLError`|零.|  
   
- 如果沒有錯誤處理常式存在，或如果沒有任何已啟用，建立並從顯示的錯誤訊息`Err`物件屬性。  
+ 如果沒有錯誤處理常式存在, 或未啟用, 則會建立錯誤訊息, 並從`Err`物件屬性顯示。  
   
 > [!NOTE]
->  某些 Visual Basic 主應用程式無法建立物件。 請參閱主應用程式的文件，以判斷它是否可以建立類別和物件。  
+> 某些 Visual Basic 主應用程式無法建立物件。 請參閱主機應用程式的檔, 以判斷它是否可以建立類別和物件。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用`Error`陳述式產生錯誤代碼 11。  
+ 這個範例會使用`Error`語句來產生錯誤號碼11。  
   
 ```  
 On Error Resume Next   ' Defer error handling.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空間：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **組件：** Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)  
+ **Assembly**Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>另請參閱
 

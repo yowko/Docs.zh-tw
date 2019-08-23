@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 570b3d382157d4be832f57265ad3a064fcd3df9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccd30e3d1b0d716b6393fdb093d47cddf7302f8d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963281"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>多層式架構應用程式中的資料擷取和 CUD 作業 (LINQ to SQL)
 當您將像是 Customers 或 Orders 等實體物件透過網路序列化到用戶端時，這些實體會與其資料內容中斷連結。 資料內容不會再追蹤它們的變更或它們與其他物件的關聯。 如果用戶端只讀取資料，這就不成問題。 此外，要讓用戶端加入資料列到資料庫，也相對來說簡單。 不過，如果您的應用程式要讓用戶端能夠更新或刪除資料，就必須將實體附加到新的資料內容，才能呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>。 此外，如果您使用開放式並行存取 (Optimistic Concurrency) 來檢查原始值，那麼也需要想辦法將原始實體和修改過的實體提供給資料庫。 `Attach` 方法即是提供來讓您將中斷連結的實體放入新的資料內容。  
   
- 即使您序列化 proxy 物件來取代[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]實體，您仍然必須建構實體上的資料存取層 (DAL)，並將它附加至新<xref:System.Data.Linq.DataContext?displayProperty=nameWithType>，以便將資料提交至資料庫。  
+ 即使您要序列化 proxy 物件來取代[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]實體, 仍然必須在資料存取層 (DAL) 上建立實體, 並將它附加至新<xref:System.Data.Linq.DataContext?displayProperty=nameWithType>的, 才能將資料提交至資料庫。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 是完全不管實體如何序列化。 如需如何使用物件關聯式設計工具和 SQLMetal 工具來產生類別，使用 Windows Communication Foundation (WCF) 都是可序列化的詳細資訊，請參閱[How to:讓實體可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]會完全不在乎實體如何序列化。 如需如何使用物件關聯式設計工具和 SQLMetal 工具來產生可使用 Windows Communication Foundation (WCF) 序列化之類別的詳細資訊, 請參閱[如何:讓實體可](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)序列化。  
   
 > [!NOTE]
->  請只在新的或還原序列化的實體上呼叫 `Attach` 方法。 要將實體與其原始資料內容中斷連結的唯一方式就是使其序列化。 如果您嘗試將未中斷連結的實體附加到新的資料內容，而該實體仍擁有先前資料內容的延遲載入器，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 就會擲回例外狀況。 若實體擁有來自兩個不同資料內容的延遲載入器，當您在該實體上執行插入、更新和刪除作業時，可能會導致不想要的結果。 如需有關延遲載入器的詳細資訊，請參閱 <<c0> [ 延後執行與立即載入](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  
+> 請只在新的或還原序列化的實體上呼叫 `Attach` 方法。 要將實體與其原始資料內容中斷連結的唯一方式就是使其序列化。 如果您嘗試將未中斷連結的實體附加到新的資料內容，而該實體仍擁有先前資料內容的延遲載入器，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 就會擲回例外狀況。 若實體擁有來自兩個不同資料內容的延遲載入器，當您在該實體上執行插入、更新和刪除作業時，可能會導致不想要的結果。 如需延遲載入器的詳細資訊, 請參閱[延後與立即載入](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  
   
 ## <a name="retrieving-data"></a>擷取資料  
   
@@ -121,7 +121,7 @@ public IEnumerable<Product> GetProductsByCategory(int categoryID)
   
  資料內容的執行個體應具有「工作單元」的存留期 (Lifetime)。 在鬆散結合的環境中，工作單元通常很小，可能是一個開放式異動，其中包含對 `SubmitChanges` 的單一呼叫。 因此，資料內容會在方法範圍內建立和處置 (Dispose)。 如果工作單元包含對商務規則邏輯的呼叫，那麼通常會需要在整個作業期間保留 `DataContext` 執行個體。 無論在哪種情況下，`DataContext` 執行個體都不適合跨任意數目的交易而長期保持作用中。  
   
- 這個方法將傳回 Product 物件，而不是與每個 Project 相關聯之 Order_Detail 物件的集合。 請使用 <xref:System.Data.Linq.DataLoadOptions> 物件來變更此預設行為。 如需詳細資訊，請參閱[如何：控制擷取的相關的資料多寡](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)。  
+ 這個方法將傳回 Product 物件，而不是與每個 Project 相關聯之 Order_Detail 物件的集合。 請使用 <xref:System.Data.Linq.DataLoadOptions> 物件來變更此預設行為。 如需詳細資訊，請參閱[如何：控制要抓取多少相關資料](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)。  
   
 ## <a name="inserting-data"></a>插入資料  
  若要插入新物件，展示層會在中介層介面上呼叫相關方法，並傳入要插入的新物件即可。 在某些情況下，為提高效率，用戶端可能只會傳入部分值，再由中介層建構完整物件。  
@@ -157,7 +157,7 @@ End Sub
 ## <a name="deleting-data"></a>刪除資料  
  若要刪除資料庫中的現有物件，展示層會在中介層介面上呼叫相關方法，然後針對要刪除的物件，傳入包含其原始值的複本。  
   
- 刪除作業包含開放式並行存取檢查，而要刪除的物件必須先附加到新的資料內容。 在這個範例中，`Boolean` 參數會設定為 `false`，表示物件沒有時間戳記 (RowVersion)。 如果資料庫資料表會為每個資料錄產生時間戳記，那麼開放式並行存取檢查會簡單許多，對用戶端來說尤然。 這只要傳入原始或修改過的物件，再將 `Boolean` 參數設定為 `true` 即可。 無論在哪種情況下，在中介層上通常需要攔截 <xref:System.Data.Linq.ChangeConflictException>。 如需如何處理開放式並行存取衝突的詳細資訊，請參閱[開放式並行存取：概觀](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
+ 刪除作業包含開放式並行存取檢查，而要刪除的物件必須先附加到新的資料內容。 在這個範例中，`Boolean` 參數會設定為 `false`，表示物件沒有時間戳記 (RowVersion)。 如果資料庫資料表會為每個資料錄產生時間戳記，那麼開放式並行存取檢查會簡單許多，對用戶端來說尤然。 這只要傳入原始或修改過的物件，再將 `Boolean` 參數設定為 `true` 即可。 無論在哪種情況下，在中介層上通常需要攔截 <xref:System.Data.Linq.ChangeConflictException>。 如需如何處理開放式平行存取衝突的詳細資訊, [請參閱開放式平行存取:總覽](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
   
  刪除在關聯資料表上具有外部索引鍵條件約束的實體時，您必須先刪除其 <xref:System.Data.Linq.EntitySet%601> 集合中的所有物件。  
   
@@ -218,7 +218,7 @@ public void DeleteOrder(Order order)
   
  您也可以對實體連同其關聯一起執行更新或刪除，例如 Customer 及其關聯 Order 物件的集合。 當您在用戶端上修改實體物件及子 (`EntitySet`) 集合的圖形，而開放式並行存取需要原始值時，用戶端必須提供每個實體和 <xref:System.Data.Linq.EntitySet%601> 物件的原始值。 如果要讓用戶端能夠在單一方法呼叫中執行一組相關的更新、刪除和插入，您必須提供用戶端方式來指出要對每個實體執行何種作業。 接著在中介層上，您必須為每個實體呼叫適當的 <xref:System.Data.Linq.ITable.Attach%2A> 方法，再呼叫 <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>、<xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A> 或 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (插入不需要 `Attach`)，才能呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>。 請不要擷取資料庫的值來當做更新之前取得原始值的方式。  
   
- 如需有關開放式並行存取的詳細資訊，請參閱[開放式並行存取：概觀](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。 如需解決開放式並行存取變更衝突，請參閱[How to:管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+ 如需開放式平行存取的詳細資訊[, 請參閱開放式平行存取:總覽](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。 如需解決開放式平行存取變更衝突的詳細資訊[, 請參閱如何:管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
   
  下列範例將示範每個案例：  
   
@@ -400,7 +400,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
 3. 使用接受第二個布林值參數 (設為 true) 的 <xref:System.Data.Linq.Table%601.Attach%2A> 多載附加。 這會指示變更 Tracker 將物件視為已修改，而無須提供任何原始值。 在此方式中，物件必須有版本/時間戳記欄位。  
   
- 如需詳細資訊，請參閱 <<c0> [ 物件狀態和變更追蹤](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)。  
+ 如需詳細資訊, 請參閱[物件狀態和變更追蹤](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)。  
   
  如果實體物件已出現在 ID 快取，而其識別與要附加的物件相同，就會擲回 <xref:System.Data.Linq.DuplicateKeyException>。  
   

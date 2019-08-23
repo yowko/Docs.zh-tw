@@ -2,15 +2,15 @@
 title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: f9def3004b116afdc629de136cdfe0b0eb6e75c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c62f29c53d807cab397ff09c6163d924a71ea319
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673533"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926604"
 ---
 # <a name="allowaccounts"></a>\<allowAccounts>
-包含指定使用者帳戶的處理序裝載 Windows Communication Foundation (WCF) 服務和已授權可連線共用服務的組態項目的集合。  
+包含設定專案的集合, 這些專案會指定主控 Windows Communication Foundation (WCF) 服務之進程的使用者帳戶, 並授與共享服務的連接存取權。  
   
  \<system.serviceModel.activation>  
   
@@ -32,13 +32,13 @@ ms.locfileid: "61673533"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|加入的使用者帳戶，以便裝載 WCF 服務，且已授權可連線共用服務的存取權的處理程序|  
+|[\<add>](add-of-allowaccounts.md)|加入裝載 WCF 服務之進程的使用者帳戶, 並授與共享服務的連接存取權。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<net.pipe>](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md) or [\<net.tcp>](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)|指定 Net Pipe 或 TCP 共用服務的組態設定。|  
+|[\<net.pipe>](net-pipe.md) or [\<net.tcp>](net-tcp.md)|指定 Net Pipe 或 TCP 共用服務的組態設定。|  
   
 ## <a name="see-also"></a>另請參閱
 

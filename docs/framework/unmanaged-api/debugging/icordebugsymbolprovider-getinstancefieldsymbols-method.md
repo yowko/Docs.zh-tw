@@ -1,17 +1,17 @@
 ---
-title: 'Icordebugsymbolprovider:: Getinstancefieldsymbols 方法'
+title: 'ICorDebugSymbolProvider:: GetInstanceFieldSymbols 方法'
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ffabfc43861d3d295a0bd2ea09213b06b6868a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6bba47500b024bc1f2a2be21d461a6f5933f0ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771418"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964615"
 ---
-# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Icordebugsymbolprovider:: Getinstancefieldsymbols 方法
+# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider:: GetInstanceFieldSymbols 方法
 取得對應 TypeSpec 簽章的執行個體欄位符號。  
   
 ## <a name="syntax"></a>語法  
@@ -40,12 +40,12 @@ HRESULT GetInstanceFieldSymbols(
  [out] 方法所擷取之符號數的指標。  
   
  `pSymbols`  
- [out]指標[ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)陣列，其中包含所要求的執行個體欄位符號。  
+ 脫銷[ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)陣列的指標, 其中包含所要求的實例欄位符號。  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個方法僅適用於 .NET Native。  
+> 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

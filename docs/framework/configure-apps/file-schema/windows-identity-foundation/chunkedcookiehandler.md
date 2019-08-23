@@ -3,15 +3,15 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: d9c81d5de7bea343f0d67fa00037763fbae7b8c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3b4cf0d7c2748079af7a94534622b1dbadd3ab5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667336"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941884"
 ---
 # <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler>
-設定<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 這個項目只會出現如果`mode`屬性的`<cookieHandler>`項目是 「 預設 」 或 「 區塊 」。  
+<xref:System.IdentityModel.Services.ChunkedCookieHandler>設定。 只有當`mode` `<cookieHandler>`元素的屬性為「預設」或「區塊」時, 才會出現此元素。  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -38,24 +38,24 @@ ms.locfileid: "61667336"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|chunkSize|最大的大小，以字元為單位的任何一個的 HTTP cookie 的 HTTP cookie 資料。 您必須小心調整區塊大小。 網頁瀏覽器 cookie 和每一個網域允許的數字的大小有不同的限制。 例如，原始的 Netscape 規格約定這些限制：4096 個位元組，每個 cookie 標頭 （包括中繼資料，不只是 cookie 值），以及每個網域的 20 cookie 總 300 的 cookie。 預設值是 2000年。 必要項。|  
+|chunkSize|任何一個 HTTP cookie 的 HTTP cookie 資料大小上限 (以字元為單位)。 調整區塊大小時, 您必須小心。 網頁瀏覽器對於 cookie 大小和每個網域允許的數目有不同的限制。 例如, 原始的 Netscape 規格會約定這些限制:300 cookies 總計、每個 cookie 標頭4096個位元組 (包括中繼資料, 而不只是 cookie 值) 和每個網域20個 cookie。 預設值為2000。 必要項。|  
   
 ### <a name="child-elements"></a>子元素  
  None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|會設定<xref:System.IdentityModel.Services.CookieHandler>， <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) 會使用來讀取和寫入 cookie。|  
+|[\<cookieHandler>](cookiehandler.md)|<xref:System.IdentityModel.Services.CookieHandler> 設定(SAM)用來讀取<xref:System.IdentityModel.Services.SessionAuthenticationModule>和寫入 cookie 的。|  
   
 ## <a name="remarks"></a>備註  
- 當您指定<xref:System.IdentityModel.Services.ChunkedCookieHandler>splittunneling`mode`屬性`<cookieHandler>`"Default"或"Chunked"的項目，您可以指定區塊大小的 cookie 處理常式用來讀取和寫入 cookie 包括`<chunkedCookieHandler>`子項目和設定其`chunkSize`屬性。 如果`<chunkedCookieHandler>`項目不存在，使用 2000 個位元組的預設區塊大小。 此元素不能指定何時`mode`屬性設為"Custom"。  
+ 當您<xref:System.IdentityModel.Services.ChunkedCookieHandler>將專案的`mode`屬性`<cookieHandler>`設定為 [預設] 或 [區塊] 時, 您可以指定 cookie 處理常式用`<chunkedCookieHandler>`來讀取和寫入 cookie 的區塊大小, 方法是包含子項目和設定其`chunkSize`屬性。 `<chunkedCookieHandler>`如果元素不存在, 則會使用預設的區塊大小2000個位元組。 當屬性設定為 "Custom" `mode`時, 無法指定此元素。  
   
- `<chunkedCookieHandler>`項目由<xref:System.IdentityModel.Services.ChunkedCookieHandlerElement>類別。  
+ `<chunkedCookieHandler>`元素是<xref:System.IdentityModel.Services.ChunkedCookieHandlerElement>由類別表示。  
   
 ## <a name="example"></a>範例  
- 下列範例會設定區塊的 cookie 處理常式會將 cookie 寫入以 3000 位元組的區塊。  
+ 下列範例會設定區塊 cookie 處理常式, 以3000個位元組的區塊寫入 cookie。  
   
 ```xml  
 <cookieHandler mode="Chunked">  

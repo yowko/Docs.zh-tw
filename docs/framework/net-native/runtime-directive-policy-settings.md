@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93352fffbe155183687a9b666d2fe5541428fca9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe78e2bd9c31bfb122e90b97977117adfc0235d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64752022"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967881"
 ---
 # <a name="runtime-directive-policy-settings"></a>執行階段指示詞原則設定
 
 > [!NOTE]
->  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。
+> 本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。
 
 .NET Native 的執行階段指示詞原則設定，可決定類型和類型成員的中繼資料在執行階段的可用性。 如果沒有必要的中繼資料，依賴反映、序列化和還原序列化的作業，或是將 .NET Framework 類型封送處理至 COM 或 Windows 執行階段的作業會失敗，並擲回例外狀況。 最常見的例外狀況是 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和 (在 Interop 的案例中) [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)。
 
@@ -117,7 +117,7 @@ ms.locfileid: "64752022"
 
 每個原則類型都可以設定為下表列出的其中一個值。 請注意，代表類型成員的元素可支援不同於其他元素的原則設定集。
 
-|原則設定|描述|`Assembly`、`Namespace`、`Type` 和 `TypeInstantiation` 元素|`Event`、`Field`、`Method`、`MethodInstantiation` 和 `Property` 元素|
+|原則設定|說明|`Assembly`、`Namespace`、`Type` 和 `TypeInstantiation` 元素|`Event`、`Field`、`Method`、`MethodInstantiation` 和 `Property` 元素|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|針對 .NET Native 工具鏈未移除的所有類型和成員啟用原則。|✓||
 |`Auto`|指定應將預設原則用於該程式元素的原則類型。 此設定如同省略該原則類型的原則。 `Auto` 通常是用來指示從父元素繼承原則。|✓|✓|

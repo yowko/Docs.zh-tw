@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3037fc704ffc3aac4d050cef7857261f138f7d35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de37bb34aee9b6536ff892ac30855761bcc69445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738066"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963135"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate 方法
-終止`ICorDebug`物件。  
+`ICorDebug`終止物件。  
   
 > [!NOTE]
->  `Terminate` 之前，不應該呼叫[icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)回呼已收到所有正在偵錯的處理程序。  
+> `Terminate`必須等到針對所有正在進行調試的進程收到[ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)回呼之後, 才能呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +37,7 @@ HRESULT Terminate ();
 ```  
   
 ## <a name="remarks"></a>備註  
- `Terminate` 時，必須呼叫`ICorDebug`不再需要物件。  
+ `Terminate`當不再需要物件時`ICorDebug` , 必須呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

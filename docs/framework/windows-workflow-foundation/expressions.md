@@ -2,12 +2,12 @@
 title: 運算式-WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 092272db2f7979cf12917dfe35e116295db79bf3
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 93d437ae6d20f5d31d80ef3a40f409c589ae084e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868901"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962412"
 ---
 # <a name="expressions"></a>運算式
 Windows Workflow Foundation (WF) 運算式是傳回結果的任何活動。 所有運算式活動會間接自 <xref:System.Activities.Activity%601> 衍生，其包含名為 <xref:System.Activities.OutArgument> 的 <xref:System.Activities.Activity%601.Result%2A> 做為活動的傳回值。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 隨附範圍廣大的運算式活動，包括簡單的活動 (例如 <xref:System.Activities.Expressions.VariableValue%601> 和 <xref:System.Activities.Expressions.VariableReference%601>，可透過運算子活動存取單一工作流程變數) 及複雜的活動 (例如 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，可存取完整範圍的 Visual Basic 語言以產生結果)。 其他運算式活動可從 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 來衍生建立。  
@@ -16,7 +16,7 @@ Windows Workflow Foundation (WF) 運算式是傳回結果的任何活動。 所�
  工作流程設計工具會將 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 用於 Visual Basic 專案中的所有運算式，並將 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 和 <xref:Microsoft.CSharp.Activities.CSharpReference%601> 用於 C# 工作流程專案中的運算式。  
   
 > [!NOTE]
->  工作流程C#專案中的運算式支援是在 .NET Framework 4.5 中引進。 如需詳細資訊, 請參閱[ C#運算式](csharp-expressions.md)。  
+> 工作流程C#專案中的運算式支援是在 .NET Framework 4.5 中引進。 如需詳細資訊, 請參閱[ C#運算式](csharp-expressions.md)。  
   
  由設計工具產生的工作流程會儲存為 XAML，其中會以方括號括住運算式，如以下範例所示。  
   

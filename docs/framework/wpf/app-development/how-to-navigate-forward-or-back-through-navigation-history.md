@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在瀏覽記錄中向前或向後巡覽
+title: 作法：在瀏覽記錄中向前或向後巡覽
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: 85d3562246170901d83d6314caec5747d52fb9a0
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 76a78debdce14123cc465ac9abf4db906fe0a2df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817960"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961357"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>作法：在瀏覽記錄中向前或向後巡覽
 此範例說明如何向前或向後導覽至導覽歷程記錄中的專案。  
@@ -40,4 +40,4 @@ ms.locfileid: "68817960"
  **CanGoForward**、 **GoForward**、 **CanGoBack**和**GoBack**是由<xref:System.Windows.Navigation.NavigationWindow>、 <xref:System.Windows.Controls.Frame>和<xref:System.Windows.Navigation.NavigationService>所執行。  
   
 > [!NOTE]
->  如果您呼叫**GoForward**, 而且正嚮導覽歷程記錄中沒有任何專案, 或者如果您呼叫**GoBack**, 而且後端導覽歷程<xref:System.InvalidOperationException>記錄中沒有任何專案, 則會擲回。
+> 如果您呼叫**GoForward**, 而且正嚮導覽歷程記錄中沒有任何專案, 或者如果您呼叫**GoBack**, 而且後端導覽歷程<xref:System.InvalidOperationException>記錄中沒有任何專案, 則會擲回。

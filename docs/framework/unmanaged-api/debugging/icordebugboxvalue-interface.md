@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c21e5bb70815fa54d1b458894ca33becde204758
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645405"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912914"
 ---
 # <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue 介面
 
-「 ICorDebugHeapValue"，表示 boxed 實的值類別物件的子類別。  
+"ICorDebugHeapValue" 的子類別, 表示已裝箱的實值類別物件。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetObject 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|取得 boxed"ICorDebugObjectValue 」 執行個體的介面指標。|  
+|[GetObject 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|取得指向已裝箱之 "ICorDebugObjectValue" 實例的介面指標。|  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "61645405"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

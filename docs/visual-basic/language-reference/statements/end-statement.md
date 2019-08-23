@@ -1,5 +1,5 @@
 ---
-title: End 陳述式 (Visual Basic)
+title: End 語句 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.End
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 4fc4fd36fb6b057195e9d8a79eb0a5b3ac9ff95c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9307cf10e6125441bd49baa0e663a5a13f234005
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638138"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944470"
 ---
 # <a name="end-statement"></a>End 陳述式
-立即結束執行。  
+立即終止執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,32 +31,32 @@ End
 ```  
   
 ## <a name="remarks"></a>備註  
- 您可以將`End`強制整個應用程式停止執行程序中的任何位置的陳述式。 `End` 關閉任何開啟的檔案`Open`陳述式，並清除所有應用程式的變數。 只要不有任何其他程式會儲存其物件的參考，並沒有其程式碼正在關閉應用程式。  
+ 您可以將`End`語句放在程式中的任何位置, 以強制整個應用程式停止執行。 `End`關閉任何以`Open`語句開啟的檔案, 並清除所有應用程式的變數。 應用程式會在沒有任何其他程式持有其物件的參考, 而且沒有任何執行中的程式碼時立即關閉。  
   
 > [!NOTE]
->  `End`陳述式會突然，停止執行程式碼，並不會呼叫`Dispose`或`Finalize`方法或任何其他 Visual Basic 程式碼。 其他程式所持有的物件參考都會失效。 如果`End`陳述式中遇到`Try`或是`Catch`區塊中，控制項不會通過對應`Finally`區塊。  
+> 語句會突然停止程式碼執行, 而且不會`Dispose`叫用`Finalize`或方法, 或是任何其他 Visual Basic 程式碼。 `End` 其他程式所持有的物件參考無效。 `Finally`如果在或區塊`Catch`內遇到語句,則控制項不會傳遞至`End`對應 `Try`的區塊。  
   
- `Stop`陳述式暫停執行，但不同於`End`，不會關閉任何檔案或清除任何變數，但若發生在已編譯可執行檔 (.exe) 檔案中。  
+ 語句會暫停執行, 但與`End`不同的是, 它不會關閉任何檔案或清除任何變數, 除非在編譯的可執行檔 (.exe) 中遇到此錯誤。 `Stop`  
   
- 因為`End`會終止您的應用程式不會理會可能已經開啟的任何資源，您應該試著關閉完全後才能使用它。 比方說，如果您的應用程式有任何開啟的表單，您應該先關閉這些控制項達到`End`陳述式。  
+ 由於`End`會終止您的應用程式, 而不會參與任何可能開啟的資源, 因此您應該在使用之前, 先徹底關閉。 例如, 如果您的應用程式開啟了任何表單, 您應該先關閉它們, `End`然後再控制到達語句。  
   
- 您應該使用`End`盡量節制，而且只有當您需要立即停止。 終止程序的一般方式 ([Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)並[Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)) 不僅完全關閉程序，但也可讓呼叫端程式碼完全關閉。 主控台應用程式，比方說，只要`Return`從`Main`程序。  
+ 您應該謹慎`End`使用, 而且只有在需要立即停止時才會用到。 結束程式 ([Return 語句](../../../visual-basic/language-reference/statements/return-statement.md)和[Exit 語句](../../../visual-basic/language-reference/statements/exit-statement.md)) 的一般方法不只是完全關閉程式, 還能讓呼叫程式碼有機會完全關閉。 例如, 主控台應用程式可以只`Return` `Main`從程式中進行。  
   
 > [!IMPORTANT]
->  `End`陳述式會呼叫<xref:System.Environment.Exit%2A>方法<xref:System.Environment>類別在<xref:System>命名空間。 <xref:System.Environment.Exit%2A> 您必須有`UnmanagedCode`權限。 如果您未這麼做，<xref:System.Security.SecurityException>就會發生錯誤。  
+> 語句會<xref:System.Environment>在命名<xref:System>空間中<xref:System.Environment.Exit%2A>呼叫類別的方法。 `End` <xref:System.Environment.Exit%2A>需要您擁有`UnmanagedCode`許可權。 如果不這麼做, <xref:System.Security.SecurityException>就會發生錯誤。  
   
- 其他的關鍵字，後面跟著[結束\<關鍵字 > 陳述式](../../../visual-basic/language-reference/statements/end-keyword-statement.md)描述定義適當的程序或區塊的結尾。 例如，`End Function`結束的定義`Function`程序。  
+ 當後面加上額外的關鍵字時, [end \<關鍵字 > 語句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)會描寫適當程式或區塊定義的結尾。 例如, `End Function`會結束程式的定義`Function` 。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`End`陳述式來終止執行程式碼，如果在使用者要求。  
+ 下列範例會使用`End`語句來結束程式碼執行 (如果使用者要求)。  
   
  [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
 ## <a name="smart-device-developer-notes"></a>智慧型裝置開發人員注意事項  
- 不支援此陳述式。  
+ 不支援此語句。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Stop 陳述式](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [結束\<關鍵字 > 陳述式](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [End \<關鍵字 > 語句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

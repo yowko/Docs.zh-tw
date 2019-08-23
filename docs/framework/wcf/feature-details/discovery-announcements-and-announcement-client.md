@@ -2,21 +2,21 @@
 title: 探索公告與公告用戶端
 ms.date: 03/30/2017
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74362343dc1fd5df6d1b91537f7fed5bc08f8fe0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856581"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968820"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>探索公告與公告用戶端
-WCF 探索功能可讓元件公告其可用性。 如果進行此設定，服務會傳送 Hello 和 Bye 公告。 用戶端或其他元件可以接聽此類公告訊息，然後採取行動。 此方法是讓用戶端注意服務存在的替代方法。 公告功能具有多種用途，例如，如果服務頻繁進出網路，公告便可能會是較搜尋服務更好的方法。 透過此方法，除了可降低網路流量之外，用戶端也會在收到公告的同時得知服務的出現或離開。  
+WCF 探索功能可讓元件宣告其可用性。 如果進行此設定，服務會傳送 Hello 和 Bye 公告。 用戶端或其他元件可以接聽此類公告訊息，然後採取行動。 此方法是讓用戶端注意服務存在的替代方法。 公告功能具有多種用途，例如，如果服務頻繁進出網路，公告便可能會是較搜尋服務更好的方法。 透過此方法，除了可降低網路流量之外，用戶端也會在收到公告的同時得知服務的出現或離開。  
   
 ## <a name="discovery-announcements"></a>探索公告  
  當設定為公告的服務加入網路且變成可探索時，公告將會傳送 Hello 訊息，向接聽的用戶端告知其可用性。 訊息會包含與服務有關的探索相關資訊，例如合約、端點位址和關聯範圍。 您可以指定與 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 類別一同傳送的公告訊息位置。 如果公告端點為 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>，則會視情形多點傳送 Hello 和 Bye，或者如果公告端點為單點傳送，則會將訊息直接傳送至指定的端點。  
   
 > [!NOTE]
->  當服務主機開啟和關閉時會傳送公告。 如果這些呼叫並未順利完成，則可能不會傳送公告訊息。例如，如果服務發生錯誤，則不會傳送 Bye 公告訊息。  
+> 當服務主機開啟和關閉時會傳送公告。 如果這些呼叫並未順利完成，則可能不會傳送公告訊息。例如，如果服務發生錯誤，則不會傳送 Bye 公告訊息。  
   
 > [!TIP]
 >  您可以自訂公告功能，以便在選定的時間傳送公告。  

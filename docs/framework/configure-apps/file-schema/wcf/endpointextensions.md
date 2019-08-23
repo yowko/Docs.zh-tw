@@ -2,12 +2,12 @@
 title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: 12ac8d9a7b0ed584fb1308e56d197a03b1c53e51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe57cb84cfa70b1f6b92abf1dbac89ddad9d4dc8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700874"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925703"
 ---
 # <a name="endpointextensions"></a>\<endpointExtensions>
 這個區段會在電腦或應用程式的組態檔的擴充區段中註冊新的標準端點。 您可以透過使用 `add` 關鍵字，並將項目的 `type` 屬性設定為端點型別，同時將 `name` 屬性設定為標準端點的名稱，將標準端點加入至這個集合。  
@@ -25,7 +25,7 @@ ms.locfileid: "61700874"
 </system.serviceModel>
 ```  
   
- 註冊標準端點後，您可以如下列範例所示使用該端點。 在  [\<端點 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)項目，`kind`屬性會指定在已註冊的標準端點類型`<endpointExtensions>`一節。 `endpointConfiguration`屬性將會等於`name`屬性中的標準端點之組態項目的`<standardEndpoints>`一節。  
+ 註冊標準端點後，您可以如下列範例所示使用該端點。 在端點 > 元素中, `kind`屬性會指定已在`<endpointExtensions>`區段中註冊的標準端點類型。 [ \< ](endpoint-element.md) 屬性會與`<standardEndpoints>`一節中標準`name`端點之 configuration 元素的屬性相同。 `endpointConfiguration`  
   
 ```xml  
 <system.serviceModel>

@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 1db509d8f1c672bf51cac7f1ca6b1af91b34fa4d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 76ac5fad653604c7abe403def72d31696d26b547
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591271"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967838"
 ---
 # <a name="using-the-message-class"></a>使用 Message 類別
-<xref:System.ServiceModel.Channels.Message>類別是以 Windows Communication Foundation (WCF) 的基礎。 用戶端和服務之間的通訊，最終結果都是要傳送和接收 <xref:System.ServiceModel.Channels.Message> 執行個體。  
+類別<xref:System.ServiceModel.Channels.Message>是 Windows Communication Foundation (WCF) 的基礎。 用戶端和服務之間的通訊，最終結果都是要傳送和接收 <xref:System.ServiceModel.Channels.Message> 執行個體。  
   
- 您通常不會直接和 <xref:System.ServiceModel.Channels.Message> 類別進行互動。 相反地，WCF 服務模型建構，例如資料合約、 訊息合約和作業合約會用來描述傳入和傳出訊息。 不過，在某些進階案例中，您可以直接使用 <xref:System.ServiceModel.Channels.Message> 類別來設計程式。 例如，您可能想要使用 <xref:System.ServiceModel.Channels.Message> 類別：  
+ 您通常不會直接和 <xref:System.ServiceModel.Channels.Message> 類別進行互動。 而是使用 WCF 服務模型結構 (例如資料合約、訊息合約和作業合約) 來描述傳入和傳出訊息。 不過，在某些進階案例中，您可以直接使用 <xref:System.ServiceModel.Channels.Message> 類別來設計程式。 例如，您可能想要使用 <xref:System.ServiceModel.Channels.Message> 類別：  
   
-- 當您需要建立外寄訊息的內容 （例如，直接從磁碟上的檔案建立訊息），而不序列化.NET Framework 物件的替代方式。  
+- 當您需要建立外寄訊息內容的替代方式 (例如, 直接從磁片上的檔案建立訊息), 而不是將 .NET Framework 物件序列化。  
   
-- 當您需要使用傳入訊息內容 （例如，當您想要在 XSLT 轉換套用至未經處理的 XML 內容時），而不還原序列化成.NET Framework 物件的替代方式。  
+- 當您需要使用傳入訊息內容的替代方式 (例如, 當您想要將 XSLT 轉換套用至原始 XML 內容), 而不是還原序列化為 .NET Framework 物件時。  
   
 - 當您需要以一般方法處理訊息，而不管訊息內容時 (例如，當建置路由器、負載平衡器或發行/訂閱系統遞送或轉寄訊息時)。  
   
- 使用之前<xref:System.ServiceModel.Channels.Message>類別中中的 WCF 資料傳輸架構熟悉[資料傳輸架構概觀](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)。  
+ 在使用<xref:System.ServiceModel.Channels.Message>類別之前, 請先熟悉[資料傳輸架構總覽](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)中的 WCF 資料傳輸架構。  
   
  <xref:System.ServiceModel.Channels.Message> 是資料的一般用途容器，但是其設計則緊密遵循 SOAP 通訊協定中的訊息設計。 就和在 SOAP 中一樣，訊息同時具有訊息本文和標頭。 訊息本文中包含實際的承載資料，而標頭則包含其他具名的資料容器。 讀取及撰寫本文和標頭的規則不太一樣，例如，標頭一定會在記憶體中緩衝處理並且可不限次數以任何順序存取，而本文可能只讀取一次，並可能進行資料流處理。 一般來說，使用 SOAP 時，訊息本文會對映至 SOAP 本文，而訊息標頭則對映至 SOAP 標頭。  
   
@@ -78,16 +78,16 @@ ms.locfileid: "65591271"
 ## <a name="extracting-message-body-data"></a>擷取訊息本文資料  
  `Message` 類別支援多種方法，可從其本文擷取資訊。 這些方法則分類為下列類別：  
   
-- 取得一次寫出至 XML 寫入器的訊息本文。 這指*寫入訊息*。  
+- 取得一次寫出至 XML 寫入器的訊息本文。 這就是所謂的*寫入訊息*。  
   
-- 取得訊息本文的 XML 讀取器。 這樣可讓您在之後有需要時，一點一點的存取訊息本文。 這指*讀取訊息*。  
+- 取得訊息本文的 XML 讀取器。 這樣可讓您在之後有需要時，一點一點的存取訊息本文。 這稱為「*讀取訊息*」。  
   
-- 整個訊息 (包含其本文) 都可複製至 <xref:System.ServiceModel.Channels.MessageBuffer> 型別的記憶體中緩衝區。 這指*將訊息複製*。  
+- 整個訊息 (包含其本文) 都可複製至 <xref:System.ServiceModel.Channels.MessageBuffer> 型別的記憶體中緩衝區。 這稱為「*複製訊息*」。  
   
  不管您使用何種方式存取本文，都只能存取 `Message` 本文一次。 訊息物件中帶有 `State` 屬性，這個屬性一開始會設定為「已建立」。 先前的清單中所描述的三個存取方法，會分別將狀態設定為「已寫入」、「已讀取」和「已複製」。 此外，`Close` 方法可以在不再需要訊息本文內容時，將狀態設定為「已關閉」。 您只能在「已建立」狀態中存取訊息本文，而在變更狀態之後，就無法再回到「已建立」狀態。  
   
 ## <a name="writing-messages"></a>寫入訊息  
- <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 方法會將所提供的 `Message` 執行個體的本文內容寫出至所提供的 XML 寫入器。 <xref:System.ServiceModel.Channels.Message.WriteBody%2A>方法會執行相同，差別在於它是將本文內容放在適當的包裝函式項目 (例如，<`soap:body`>)。 最後，<xref:System.ServiceModel.Channels.Message.WriteMessage%2A> 會寫出整個訊息，包括包裝的 SOAP 封套和標頭。 如果關閉 SOAP (<xref:System.ServiceModel.Channels.Message.Version>是<xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>)，這三種方法執行相同的動作： 寫出訊息本文內容。  
+ <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 方法會將所提供的 `Message` 執行個體的本文內容寫出至所提供的 XML 寫入器。 方法會執行相同的工作, 不同之處在于它會將本文內容括在適當的包裝函式`soap:body`元素中 (例如 < >)。 <xref:System.ServiceModel.Channels.Message.WriteBody%2A> 最後，<xref:System.ServiceModel.Channels.Message.WriteMessage%2A> 會寫出整個訊息，包括包裝的 SOAP 封套和標頭。 如果 SOAP 已關閉 (<xref:System.ServiceModel.Channels.Message.Version>是<xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>), 這三種方法都會執行相同的動作: 它們會寫出訊息本文的內容。  
   
  例如，下列程式碼會將傳入訊息的本文寫出至檔案。  
   
@@ -133,12 +133,12 @@ ms.locfileid: "65591271"
  `MessageBuffer` 類別則具有不重要的成員。 不再需要緩衝區內容時，可以呼叫 <xref:System.ServiceModel.Channels.MessageBuffer.Close%2A> 方法釋放資源。 <xref:System.ServiceModel.Channels.MessageBuffer.BufferSize%2A> 屬性會傳回所配置緩衝區的大小。 <xref:System.ServiceModel.Channels.MessageBuffer.MessageContentType%2A> 屬性則會傳回訊息的 MIME 內容型別。  
   
 ## <a name="accessing-the-message-body-for-debugging"></a>存取訊息本文以進行偵錯  
- 為了進行偵錯，您可以呼叫 <xref:System.ServiceModel.Channels.Message.ToString%2A> 方法而取得以訊息做為字串的表示。 這個表示通常會符合訊息在網路上的呈現方式 (若此訊息是以文字編碼器編碼)，差別在於 XML 會針對人們可讀取性達成更佳的格式化效果。 此項的例外為訊息本文。 本文只能讀取一次，而且 `ToString` 不會變更訊息狀態。 因此，`ToString`方法可能無法存取本文，並可能替代預留位置 （例如，"..."或三個點） 而非訊息本文。 所以，如果訊息的本文內容十分重要，請勿使用 `ToString` 來記錄訊息。  
+ 為了進行偵錯，您可以呼叫 <xref:System.ServiceModel.Channels.Message.ToString%2A> 方法而取得以訊息做為字串的表示。 這個表示通常會符合訊息在網路上的呈現方式 (若此訊息是以文字編碼器編碼)，差別在於 XML 會針對人們可讀取性達成更佳的格式化效果。 此項的例外為訊息本文。 本文只能讀取一次，而且 `ToString` 不會變更訊息狀態。 因此, `ToString`方法可能無法存取本文, 而且可能會替代預留位置 (例如, "..."或三個點), 而不是訊息本文。 所以，如果訊息的本文內容十分重要，請勿使用 `ToString` 來記錄訊息。  
   
 ## <a name="accessing-other-message-parts"></a>存取其他訊息部分  
  將會提供各種屬性以存取訊息 (而非其本文內容) 的相關資訊。 不過，一旦關閉訊息就無法呼叫這些屬性：  
   
-- <xref:System.ServiceModel.Channels.Message.Headers%2A> 屬性表示訊息標頭。 請參閱本主題稍後的 「 使用標頭 」 上一節。  
+- <xref:System.ServiceModel.Channels.Message.Headers%2A> 屬性表示訊息標頭。 請參閱本主題稍後的「使用標頭」一節。  
   
 - <xref:System.ServiceModel.Channels.Message.Properties%2A> 屬性表示訊息屬性，這些訊息屬性為附加至訊息 (傳送訊息時通常不會發出的訊息) 的具名資料片段。 請參閱本主題稍後的「使用屬性」這一節。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "65591271"
  您可以使用 <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29> 方法，存取以特定名稱和命名空間所識別之本文包裝函式項目 (例如，`<soap:Body>`) 上的特定屬性。 如果找不到這類屬性，則會傳回 `null`。 只有當 `Message` 處於「已建立」狀態時 (訊息本文尚未被存取)，才能呼叫這個方法。  
   
 ## <a name="working-with-headers"></a>使用標頭  
- A`Message`可以包含任意數目的具名 XML 片段，呼叫*標頭*。 每個片段通常都會對映至 SOAP 標頭。 您可以透過型別為 `Headers` 的 <xref:System.ServiceModel.Channels.MessageHeaders> 屬性來存取標頭。 <xref:System.ServiceModel.Channels.MessageHeaders> 是 <xref:System.ServiceModel.Channels.MessageHeaderInfo> 物件的集合，而您可以藉由標頭的 <xref:System.Collections.IEnumerable> 介面或索引子 (Indexer) 來存取個別標頭。 例如，下列程式碼會列出 `Message` 中所有標頭的名稱。  
+ 可以包含任何數目的已命名 XML 片段, 稱為*標頭。* `Message` 每個片段通常都會對映至 SOAP 標頭。 您可以透過型別為 `Headers` 的 <xref:System.ServiceModel.Channels.MessageHeaders> 屬性來存取標頭。 <xref:System.ServiceModel.Channels.MessageHeaders> 是 <xref:System.ServiceModel.Channels.MessageHeaderInfo> 物件的集合，而您可以藉由標頭的 <xref:System.Collections.IEnumerable> 介面或索引子 (Indexer) 來存取個別標頭。 例如，下列程式碼會列出 `Message` 中所有標頭的名稱。  
   
  [!code-csharp[C_UsingTheMessageClass#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#8)]
  [!code-vb[C_UsingTheMessageClass#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#8)]  
@@ -161,14 +161,14 @@ ms.locfileid: "65591271"
   
  您可使用 <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A> 方法擷取特定標頭。 這個方法會採用要尋找的標頭名稱和命名空間，並傳回其索引。 如果標頭在多個地方出現，則會擲出例外狀況。 如果找不到標頭，則會傳回 -1。  
   
- 在 SOAP 標頭模型中，標頭所擁有的 `Actor` 值會指定標頭的預定收件者。 最基本的 `FindHeader` 多載只會搜尋用於訊息最終接收者的標頭。 不過，其他多載則可讓您指定搜尋中所含的 `Actor` 值。 如需詳細資訊，請參閱 SOAP 規格。  
+ 在 SOAP 標頭模型中，標頭所擁有的 `Actor` 值會指定標頭的預定收件者。 最基本的 `FindHeader` 多載只會搜尋用於訊息最終接收者的標頭。 不過，其他多載則可讓您指定搜尋中所含的 `Actor` 值。 如需詳細資訊, 請參閱 SOAP 規格。  
   
  將會提供 <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> 方法以將標頭從 <xref:System.ServiceModel.Channels.MessageHeaders> 集合複製至 <xref:System.ServiceModel.Channels.MessageHeaderInfo> 物件的陣列。  
   
  若要存取標頭中的 XML 資料，您可以對特定標頭索引呼叫 <xref:System.ServiceModel.Channels.MessageHeaders.GetReaderAtHeader%2A> 並傳回 XML 讀取器。 如果您要將標頭內容還原序列化至物件，請使用 <xref:System.ServiceModel.Channels.MessageHeaders.GetHeader%60%601%28System.Int32%29> 或其他多載。 最基本的多載會使用以預設方法設定的 <xref:System.Runtime.Serialization.DataContractSerializer> 來還原序列化標頭。 如果您要使用不同的序列化程式或不同的 `DataContractSerializer` 組態，請使用下列其中一個會採用 `XmlObjectSerializer` 的多載。 也會有採用標頭名稱、命名空間和選擇性採用 `Actor` 值清單，而不採用索引的多載；而這是 `FindHeader` 和 `GetHeader` 的組合。  
   
 ## <a name="working-with-properties"></a>使用屬性  
- `Message` 執行個體中可包含任意數目、任意型別的具名物件。 您可以透過型別為 `Properties` 的 `MessageProperties` 屬性來存取這個集合。 這個集合會實作 <xref:System.Collections.Generic.IDictionary%602> 介面，並且會做為從 <xref:System.String> 到 <xref:System.Object> 的對應。 一般來說，屬性值不會對應至訊息的網路上的任何部分直接，但提供各種訊息處理提示的 WCF 通道堆疊中的各種通道<xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29>服務架構。 如需範例，請參閱[資料傳輸架構概觀](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)。  
+ `Message` 執行個體中可包含任意數目、任意型別的具名物件。 您可以透過型別為 `Properties` 的 `MessageProperties` 屬性來存取這個集合。 這個集合會實作 <xref:System.Collections.Generic.IDictionary%602> 介面，並且會做為從 <xref:System.String> 到 <xref:System.Object> 的對應。 一般來說, 屬性值不會直接對應到網路上的任何部分訊息, 而是會提供各種訊息處理提示給 WCF 通道堆疊中的各種通道或<xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29>服務架構。 如需範例, 請參閱[資料傳輸架構總覽](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)。  
   
 ## <a name="inheriting-from-the-message-class"></a>繼承自 Message 類別  
  如果使用 `CreateMessage` 建立的內建訊息類型不符合您的需求，請建立衍生自 `Message` 類別的類別。  
@@ -181,7 +181,7 @@ ms.locfileid: "65591271"
  [!code-csharp[C_UsingTheMessageClass#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#9)]
  [!code-vb[C_UsingTheMessageClass#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#9)]  
   
- <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents> 和 <xref:System.ServiceModel.Channels.Message.OnCreateBufferedCopy%2A> 方法都具有可用於大多數情況的預設實作。 預設實作會呼叫 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>，然後緩衝處理結果，再使用產生的緩衝區。 不過，在某些情況下，只有此實作可能不太夠。 在先前的範例中，讀取訊息會造成緩衝處理 100,000 個 XML 項目，而這可能不是想要的目的。 您可能想要覆寫 <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents>，以傳回提供亂數的自訂 <xref:System.Xml.XmlDictionaryReader> 衍生類別。 您接著可以覆寫<xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>若要使用讀取器，<xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents>方法傳回時，如下列範例所示。  
+ <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents> 和 <xref:System.ServiceModel.Channels.Message.OnCreateBufferedCopy%2A> 方法都具有可用於大多數情況的預設實作。 預設實作會呼叫 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>，然後緩衝處理結果，再使用產生的緩衝區。 不過，在某些情況下，只有此實作可能不太夠。 在先前的範例中，讀取訊息會造成緩衝處理 100,000 個 XML 項目，而這可能不是想要的目的。 您可能想要覆寫 <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents>，以傳回提供亂數的自訂 <xref:System.Xml.XmlDictionaryReader> 衍生類別。 接著, 您可以<xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>覆寫以使用<xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents>方法傳回的讀取器, 如下列範例所示。  
   
  [!code-csharp[C_UsingTheMessageClass#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#10)]
  [!code-vb[C_UsingTheMessageClass#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#10)]  
@@ -196,7 +196,7 @@ ms.locfileid: "65591271"
  您可以覆寫 <xref:System.ServiceModel.Channels.Message.OnWriteStartEnvelope%2A>、<xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A> 和 <xref:System.ServiceModel.Channels.Message.OnWriteStartBody%2A> 方法，以指定寫出 SOAP 信封、SOAP 標頭和 SOAP 本文項目開始標記的方法。這些方法通常會對應至 `<soap:Envelope>`、`<soap:Header>` 和 `<soap:Body>`。 如果 <xref:System.ServiceModel.Channels.Message.Version> 正確地傳回 <xref:System.ServiceModel.Channels.MessageVersion.None>，則這些方法一般不應該寫出任何項目。  
   
 > [!NOTE]
->  `OnGetReaderAtBodyContents` 預設實作會在呼叫 `OnWriteStartEnvelope` 和緩衝處理結果之前，先呼叫 `OnWriteStartBody` 和 `OnWriteBodyContents`。 如此將不會寫出標頭。  
+> `OnGetReaderAtBodyContents` 預設實作會在呼叫 `OnWriteStartEnvelope` 和緩衝處理結果之前，先呼叫 `OnWriteStartBody` 和 `OnWriteBodyContents`。 如此將不會寫出標頭。  
   
  覆寫 <xref:System.ServiceModel.Channels.Message.OnWriteMessage%2A> 方法，以變更從各種訊息片段建構整個訊息的方法。 將會從 `OnWriteMessage` 和預設 <xref:System.ServiceModel.Channels.Message.WriteMessage%2A> 實作中呼叫 <xref:System.ServiceModel.Channels.Message.OnCreateBufferedCopy%2A> 方法。 請注意，覆寫 <xref:System.ServiceModel.Channels.Message.WriteMessage%2A> 不是最佳作法。 最好是覆寫適當的 `On` 方法 (例如，<xref:System.ServiceModel.Channels.Message.OnWriteStartEnvelope%2A>、<xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A> 和 <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%2A>)。  
   

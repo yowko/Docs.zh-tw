@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039951"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930173"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms 建立多窗格使用者介面
 在下列程式中, 您將建立類似于 Microsoft Outlook 中所用的多窗格使用者介面, 以及**資料夾**清單、[**訊息**] 窗格和 [**預覽**] 窗格。 這種安排是透過將控制項與表單停駐的方式來 chiefly。
@@ -39,7 +39,7 @@ ms.locfileid: "69039951"
      此時, 如果您按 F5 執行應用程式, 表單會顯示三個部分的使用者介面, 類似于 Microsoft Outlook。
 
     > [!NOTE]
-    >  當您將滑鼠指標放在<xref:System.Windows.Forms.SplitContainer>控制項內的任何一個分隔器上方時, 您可以調整內部維度的大小。
+    > 當您將滑鼠指標放在<xref:System.Windows.Forms.SplitContainer>控制項內的任何一個分隔器上方時, 您可以調整內部維度的大小。
 
 在應用程式開發的這個階段中, 您已經製作了複雜的使用者介面。 下一步是繼續應用程式本身的設計, 也許是將<xref:System.Windows.Forms.TreeView>控制項和<xref:System.Windows.Forms.ListView>控制項連接到某種資料來源。 如需將控制項連接至資料的詳細資訊, 請參閱資料系結[和 Windows Forms](../data-binding-and-windows-forms.md)。
 

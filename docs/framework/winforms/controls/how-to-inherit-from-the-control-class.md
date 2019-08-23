@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: 535827db660ab1113a25a01b7a0553a1c4414c74
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 0cb63be6774fd82cd94a1bc59b8a1025efa47df5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037780"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966574"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>作法：繼承控制項類別
 如果您想要建立完全自訂的控制項以在 Windows Form 上使用, 您應該繼承<xref:System.Windows.Forms.Control>自類別。 從<xref:System.Windows.Forms.Control>類別繼承時, 需要您執行更多規劃和實作為, 同時也會提供您最大範圍的選項。 當繼承自<xref:System.Windows.Forms.Control>時, 您會繼承可讓控制項運作的非常基本功能。 <xref:System.Windows.Forms.Control>類別中固有的功能會透過鍵盤和滑鼠來處理使用者輸入、定義控制項的界限和大小、提供 windows 控制碼, 以及提供訊息處理和安全性。 它不會併入任何繪製功能 (在此例中是控制項圖形化介面的實際轉譯)，也不會併入任何特定的使用者互動功能。 您必須透過自訂程式碼來提供上述一切。
@@ -46,5 +46,5 @@ ms.locfileid: "69037780"
 - [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
 - [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
 - [如何：Windows Forms 的作者控制項](how-to-author-controls-for-windows-forms.md)
-- [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Visual Basic 中的繼承事件處理常式疑難排解](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)

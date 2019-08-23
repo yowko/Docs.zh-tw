@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 38a34a4662d969fd526963744b8bd493952d9cff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3d26932c23299c6fbcb53b1389abd7694f529eef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615076"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963322"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 陳述式 (Visual Basic)
 執行一系列重複參考單一物件或結構的陳述式，使陳述式在存取物件或結構的成員時，可以使用簡化的語法。  使用結構時，您可以只讀取成員的值或叫用方法，如果嘗試指派值給 `With...End With` 陳述式中使用的結構成員，將會收到錯誤。  
@@ -62,10 +62,10 @@ End With
   
  您無法從區塊外部分支進入 `With` 陳述式區塊。  
   
- 除非區塊包含迴圈，否則陳述式只會執行一次。 您可以巢狀方式處理不同種類的控制結構。 如需詳細資訊，請參閱 <<c0> [ 巢狀控制結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。  
+ 除非區塊包含迴圈，否則陳述式只會執行一次。 您可以巢狀方式處理不同種類的控制結構。 如需詳細資訊, 請參閱[嵌套控制項結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。  
   
 > [!NOTE]
->  您可以在物件初始設定式中使用 `With` 關鍵字。 如需詳細資訊和範例，請參閱[物件初始設定式：具名和匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)並[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+> 您可以在物件初始設定式中使用 `With` 關鍵字。 如需詳細資訊和範例, [請參閱物件初始化運算式:命名和匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)型別和[匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)型別。  
 >   
 >  如果您只有在初始化剛具現化之物件的屬性或欄位時使用 `With` 區塊，請考慮改用物件初始設定式。  
   
@@ -83,5 +83,5 @@ End With
 
 - <xref:System.Collections.Generic.List%601>
 - [巢狀控制結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [物件初始化運算式:命名和匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

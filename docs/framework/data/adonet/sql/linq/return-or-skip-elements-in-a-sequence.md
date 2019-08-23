@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661902"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963866"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>傳回或略過序列中的項目
 使用 <xref:System.Linq.Queryable.Take%2A> 運算子傳回序列中指定數目的項目，然後略過其餘的項目。  
@@ -18,9 +18,9 @@ ms.locfileid: "67661902"
  使用 <xref:System.Linq.Queryable.Skip%2A> 運算子略過序列中指定數目的項目，然後傳回其餘的項目。  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱中的"Skip 和 Take 例外狀況在 SQL Server 2000"項目[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
+> <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊, 請參閱[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)中的「略過並採取 SQL Server 2000 中的例外狀況」專案。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 將轉譯<xref:System.Linq.Queryable.Skip%2A>藉由使用子查詢與 SQL`NOT EXISTS`子句。 這項轉譯具有下列限制：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]會使用子查詢搭配 SQL `NOT EXISTS`子句來轉譯。<xref:System.Linq.Queryable.Skip%2A> 這項轉譯具有下列限制：  
   
 - 引數必須為集合。 即使多重集 (Multiset) 已排序，仍不支援多重集。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "67661902"
  由於在 SQL 中排序的限制，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試將 <xref:System.Linq.Queryable.Take%2A> 或 <xref:System.Linq.Queryable.Skip%2A> 運算子的引數排序移至運算子的結果。  
   
 > [!NOTE]
->  轉譯是不同的 SQL Server 2000 和 SQL Server 2005。 如果您打算使用<xref:System.Linq.Queryable.Skip%2A>任何複雜度的查詢，使用 SQL Server 2005。  
+> SQL Server 2000 和 SQL Server 2005 的轉譯不同。 如果您打算搭配任何<xref:System.Linq.Queryable.Skip%2A>複雜度的查詢來使用, 請使用 SQL Server 2005。  
   
- 請考慮下列[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server 2000 的查詢：  
+ 請考慮下列[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server 2000 的查詢:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
