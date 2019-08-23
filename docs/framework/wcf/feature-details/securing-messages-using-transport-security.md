@@ -2,18 +2,18 @@
 title: 使用傳輸安全性來確保訊息的安全
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331515"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911712"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用傳輸安全性來確保訊息的安全
 本節討論訊息佇列 (MSMQ) 的傳輸安全性，您可以使用這項傳輸安全性確保傳送至佇列之訊息的安全。  
   
 > [!NOTE]
->  閱讀本主題之前, 建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
+> 閱讀本主題之前, 建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
  下圖提供使用 Windows Communication Foundation (WCF) 之佇列通訊的概念模型。 這張圖與用語可用來解釋傳輸安全性的概念。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68331515"
  若選擇使用 Windows 安全性，就需要整合 Active Directory。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是預設的傳輸安全性模式。 當此設定時, WCF 通道會將 Windows SID 附加至 MSMQ 訊息, 並使用從 Active Directory 取得的內部憑證。 MSMQ 使用此內部憑證確保訊息安全。 接收方的佇列管理員會使用 Active Directory 來搜尋並尋找符合的憑證以驗證用戶端，並檢查 SID 與用戶端是否相符。 若以 `WindowsDomain` 驗證模式內部產生的憑證或 `Certificate` 驗證模式外部產生的憑證附加於訊息時，那麼即使目標佇列未標示需要驗證，仍然會執行驗證步驟。  
   
 > [!NOTE]
->  建立佇列時，您可標示佇列為驗證佇列，表示佇列需要對傳送訊息至佇列的用戶端進行驗證。 如此可確保佇列只會接受已驗證的訊息。  
+> 建立佇列時，您可標示佇列為驗證佇列，表示佇列需要對傳送訊息至佇列的用戶端進行驗證。 如此可確保佇列只會接受已驗證的訊息。  
   
  訊息附加的 SID 也會用來和目標佇列的 ACL 檢查比對，確保用戶端擁有發送訊息至佇列的授權。  
   
@@ -76,13 +76,13 @@ ms.locfileid: "68331515"
  除了對訊息簽章之外，MSMQ 訊息還使用取自 Active Directory 的憑證公開金鑰進行加密。此 Active Directory 屬於裝載目標佇列之接收方的佇列管理員所有。 傳送佇列管理員會確定 MSMQ 訊息在傳輸中已加密。 接收佇列管理員會使用內部憑證的私密金鑰解密 MSMQ 訊息，並將訊息以明文儲存於佇列 (若已驗證並授權) 中。  
   
 > [!NOTE]
->  若要加密訊息，需要能存取 Active Directory (`UseActiveDirectory` 的 <xref:System.ServiceModel.NetMsmqBinding> 屬性必須設為 `true`) 並且能同時使用於 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 及 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
+> 若要加密訊息，需要能存取 Active Directory (`UseActiveDirectory` 的 <xref:System.ServiceModel.NetMsmqBinding> 屬性必須設為 `true`) 並且能同時使用於 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 及 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
   
 #### <a name="none-protection-level"></a>無保護層級  
  這代表 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 設定為 <xref:System.Net.Security.ProtectionLevel.None>的時候。 這對任何其他驗證模式而言，不是有效值。  
   
 > [!NOTE]
->  若 MSMQ 訊息已簽章，則 MSMQ 會檢查訊息是否以附加的憑證 (內部或外部) 簽章，而不理會佇列狀態，亦即佇列是否為驗證過的佇列。  
+> 若 MSMQ 訊息已簽章，則 MSMQ 會檢查訊息是否以附加的憑證 (內部或外部) 簽章，而不理會佇列狀態，亦即佇列是否為驗證過的佇列。  
   
 ### <a name="msmq-encryption-algorithm"></a>MSMQ 加密演算法  
  加密演算法可指定用來在網路上加密 MSMQ 訊息的演算法。 這個屬性只能在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 設定為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 時使用。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68364072"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941740"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
 
@@ -55,7 +55,7 @@ ms.locfileid: "68364072"
 
 例如，資料繫結會要求應用程式能夠將屬性名稱對應至函式。 在適用於 Windows 市集應用程式的 .NET 中，通用語言執行平台會自動使用反映來提供這項功能給 Managed 類型和可公開取得的原生類型。 在 .NET Native 中, 編譯器會自動包含您要系結資料之類型的中繼資料。
 
-.NET Native 編譯器也可以處理常用的泛型型別 (例如<xref:System.Collections.Generic.List%601>和<xref:System.Collections.Generic.Dictionary%602>), 而不需要任何提示或指示詞。 在某些限制下，也可支援 [動態](~/docs/csharp/language-reference/keywords/dynamic.md) 關鍵字。
+.NET Native 編譯器也可以處理常用的泛型型別 (例如<xref:System.Collections.Generic.List%601>和<xref:System.Collections.Generic.Dictionary%602>), 而不需要任何提示或指示詞。 在某些限制下，也可支援 [動態](../../csharp/language-reference/keywords/dynamic.md) 關鍵字。
 
 > [!NOTE]
 > 將應用程式移植到 .NET Native 時, 您應該徹底測試所有動態程式碼路徑。
@@ -129,7 +129,7 @@ ms.locfileid: "68364072"
 
 - 不支援動態建立多維陣列。 這類陣列的建立，通常是藉由呼叫包含 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 參數之 `lengths` 方法的多載，或是呼叫 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 方法。
 
-- 不支援具有 4 個 (含) 以上維度的多維陣列，意即，其 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 屬性值為 4 (含) 以上。 請改用 [不規則陣列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (陣列的陣列)。 例如， `array[x,y,z]` 無效，但 `array[x][y][z]` 有效。
+- 不支援具有 4 個 (含) 以上維度的多維陣列，意即，其 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 屬性值為 4 (含) 以上。 請改用 [不規則陣列](../../csharp/programming-guide/arrays/jagged-arrays.md) (陣列的陣列)。 例如， `array[x,y,z]` 無效，但 `array[x][y][z]` 有效。
 
 - 不支援多維陣列的變異數，它會在執行階段導致 <xref:System.InvalidCastException> 例外狀況。
 
@@ -668,4 +668,4 @@ ms.locfileid: "68364072"
 - [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [適用于 Windows Store 應用程式的 .NET 總覽](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

@@ -2,12 +2,12 @@
 title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: 939a29e90ee21e94ccb78842d6f7224e9a6288d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcfd338e289b5151688724f0e84b6878707d32be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783314"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933827"
 ---
 # <a name="persistabletype"></a>\<persistableType>
 指定所有永久性型別。  
@@ -41,7 +41,7 @@ ms.locfileid: "61783314"
 |屬性|描述|  
 |---------------|-----------------|  
 |id|必要屬性，其中包含的字串可指定永久性類別的唯一識別碼。|  
-|名稱|選擇性屬性，其中包含的字串可指定永久性類別的名稱。|  
+|NAME|選擇性屬性，其中包含的字串可指定永久性類別的名稱。|  
   
 ### <a name="child-elements"></a>子元素  
  None  
@@ -50,12 +50,12 @@ ms.locfileid: "61783314"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|`persistableType` 項目的集合。|  
+|[\<persistableTypes>](persistabletypes.md)|`persistableType` 項目的集合。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>
 - <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [整合 COM 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [如何：設定 COM + 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [整合 COM 應用程式](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [如何：設定 COM + 服務設定](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

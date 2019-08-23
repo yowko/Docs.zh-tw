@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: d38c8d73bc70e7e521b476ca78c8f102d003c538
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 7ebdf7a1598ac3cd61005ae607e5bfbe7cb49059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040328"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933708"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>作法：使用設計工具凍結 Windows Forms DataGridView 控制項的資料行
 當使用者檢視顯示於 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項的資料時，有時候需要經常參考單一資料行或資料行集合。 例如, 當您顯示包含許多資料行的客戶資訊資料表時, 您可以隨時顯示客戶名稱, 同時讓其他資料行在可見區域之外滾動。
@@ -30,7 +30,7 @@ ms.locfileid: "69040328"
 3. 在 [資料**行屬性**] 方格中<xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> , 將`true`屬性設定為。
 
     > [!NOTE]
-    >  您也可以選取 [**加入資料行**] 對話方塊中的 [**凍結**] 方塊來加入資料行。
+    > 您也可以選取 [**加入資料行**] 對話方塊中的 [**凍結**] 方塊來加入資料行。
 
 ## <a name="see-also"></a>另請參閱
 

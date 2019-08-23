@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e482303e684813574a092f0a2d5812445ed7fa6e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052610"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910607"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>範例：針對動態程式設計進行疑難排解
 > [!NOTE]
->  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
+> 本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
   
- 並非所有的中繼資料查閱失敗，應用程式中開發使用.NET Native 工具鏈結果的例外狀況。  有些中繼資料查閱失敗會在應用程式中以無法預期的方式顯露出來。  下列範例顯示因為參考 null 物件而造成的存取違規：  
+ 並非使用 .NET Native 工具鏈開發之應用程式中的所有中繼資料查閱失敗都會導致例外狀況。  有些中繼資料查閱失敗會在應用程式中以無法預期的方式顯露出來。  下列範例顯示因為參考 null 物件而造成的存取違規：  
   
 ```  
 Access violation - code c0000005 (first chance)  
@@ -52,7 +52,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  在此情況下，為 `App.Core.ViewModels` 加入執行階段指示詞就解決了問題。 根本原因是對 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 方法進行的 API 呼叫傳回 **null**，而應用程式靜靜忽略這個問題，直到發生當機。  
   
- 在動態程式設計中，使用反映 Api 在.NET 原生時最好是使用<xref:System.Type.GetType%2A?displayProperty=nameWithType>多載，可在失敗時擲回的例外狀況。  
+ 在動態程式設計中, 使用 .NET Native 下的反映 api 時, 最好是使用<xref:System.Type.GetType%2A?displayProperty=nameWithType>會在失敗時擲回例外狀況的多載。  
   
 ## <a name="is-this-an-isolated-case"></a>這是個案嗎？  
  使用 `App.Core.ViewModels` 時，可能也會發生其他問題。  您必須決定是否值得識別並修正每個遺失中繼資料的例外狀況，還是要節省時間，並為較大類別的類型加入指示詞。  在這裡，如果輸出二進位檔產生的結果大小增加並不是問題，則為 `dynamic` 加入 `App.Core.ViewModels` 中繼資料可能是最佳方法。  
@@ -63,4 +63,4 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="see-also"></a>另請參閱
 
 - [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [例如：資料繫結時處理例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [例如：在系結資料時處理例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

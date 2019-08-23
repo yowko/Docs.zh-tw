@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Forms 中列印多頁文字檔
+title: 作法：在 Windows Forms 中列印多頁文字檔
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: 07e1bb4bcdcaa99635db293f23e5ecb689b6063e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd858279a4d8a3509a91bcd1c62fb1f61d6d2bb9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621322"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931795"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>HOW TO：在 Windows Forms 中列印多頁文字檔
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>作法：在 Windows Forms 中列印多頁文字檔
 Windows 應用程式列印文字的情況極為常見。 <xref:System.Drawing.Graphics> 類別提供將物件 (圖形或文字) 繪製到螢幕或印表機等裝置的方法。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.TextRenderer> 的 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 方法不支援列印。 您應該一律使用 <xref:System.Drawing.Graphics> 的 <xref:System.Drawing.Graphics.DrawString%2A> 方法，來繪製要用於列印的文字，如下列程式碼範例所示：  
+> <xref:System.Windows.Forms.TextRenderer> 的 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 方法不支援列印。 您應該一律使用 <xref:System.Drawing.Graphics> 的 <xref:System.Drawing.Graphics.DrawString%2A> 方法，來繪製要用於列印的文字，如下列程式碼範例所示：  
   
 ### <a name="to-print-text"></a>列印文字  
   
@@ -58,7 +58,7 @@ Windows 應用程式列印文字的情況極為常見。 <xref:System.Drawing.Gr
   
 - System、System.Windows.Forms、System.Drawing 組件的參考。  
   
-- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
+- 如需從 Visual Basic 或視覺效果C#的命令列建立此範例的詳細資訊, 請參閱[從命令列建立](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc 建立命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以藉由將程式碼貼入新的專案中, 在 Visual Studio 中建立此範例。  
   
 ## <a name="see-also"></a>另請參閱
 

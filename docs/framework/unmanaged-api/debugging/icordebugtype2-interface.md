@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e953fa129308527f63df8dd8c5061252f8be57b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2f2c1e4c95c61eab4c9da6103d4ac479b4bbdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936048"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 介面
-可擴充 ICorDebugType 介面來擷取基底型別或複雜的 （使用者定義） 型別的型別識別項。  
+擴充 ICorDebugType 介面, 以取得基底類型或複雜 (使用者定義) 類型的類型識別碼。  
   
 ## <a name="methods"></a>方法  
   
 |方法||  
 |------------|-|  
-|[GetTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|取得[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)這種類型。|  
+|[GetTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|取得此類型的[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 。|  
   
 ## <a name="remarks"></a>備註  
  這個介面是 ICorDebugType 介面的邏輯擴充。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="example"></a>範例  
- 下列程式碼片段說明如何使用[ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)方法。  
+ 下列程式碼片段說明如何使用[ICorDebugType2:: GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)方法。  
   
 ```cpp  
 // (error checking omitted for brevity)  

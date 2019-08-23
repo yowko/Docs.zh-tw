@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 889ec7f93d0503edac51652dda217c6a9f654f9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 248f3cf31f686de3af2ea06012aa4a6d4f3f29fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621425"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942911"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA 常值 (Visual Basic)
-常值代表<xref:System.Xml.Linq.XCData>物件。  
+代表<xref:System.Xml.Linq.XCData>物件的常值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,10 +26,10 @@ ms.locfileid: "64621425"
   
 ## <a name="parts"></a>組件  
  `<![CDATA[`  
- 必要項。 代表 XML CDATA 區段的開始。  
+ 必要項。 表示 XML CDATA 區段的開頭。  
   
  `content`  
- 必要項。 在 XML CDATA 區段中顯示的文字內容。  
+ 必要項。 要出現在 XML CDATA 區段中的文字內容。  
   
  `]]>`  
  必要項。 表示區段的結尾。  
@@ -38,21 +38,21 @@ ms.locfileid: "64621425"
  <xref:System.Xml.Linq.XCData> 物件。  
   
 ## <a name="remarks"></a>備註  
- XML CDATA 區段包含應該包括但不是剖析 xml，其中包含它的原始文字。 XML CDATA 區段可以包含任何文字。 這包括保留的 XML 字元。 XML CDATA 區段結尾序列"]] > 」。 這表示下列各點：  
+ XML CDATA 區段包含應包含但未剖析的原始文字, 以及包含它的 XML。 XML CDATA 區段可以包含任何文字。 這包括保留的 XML 字元。 XML CDATA 區段的結尾是序列 "]] >"。 這表示下列幾點:  
   
-- 您無法在 XML CDATA 常值中使用內嵌的運算式，因為內嵌的運算式分隔符號是有效的 XML 註解內容。  
+- 您不能在 XML CDATA 常值中使用內嵌運算式, 因為內嵌的運算式分隔符號是有效的 XML CDATA 內容。  
   
-- XML CDATA 區段不能巢狀，因為`content`不能包含值"]] > 」。  
+- XML CDATA 區段無法嵌套, 因為`content`不能包含值 "]] >"。  
   
- 您可以將 XML CDATA 常值指派給變數，或將它包含在 XML 元素常值。  
+ 您可以將 XML CDATA 常值指派給變數, 或將它包含在 XML 元素常值中。  
   
 > [!NOTE]
->  XML 常值可以跨越多行，但不會使用行接續字元。 這可讓您從 XML 文件複製內容，並將它貼到 Visual Basic 程式直接。  
+> XML 常值可以跨越多行, 但不會使用行接續字元。 這可讓您從 XML 檔案複製內容, 並將它直接貼到 Visual Basic 程式中。  
   
- Visual Basic 編譯器會將 XML CDATA 常值轉換成呼叫<xref:System.Xml.Linq.XCData.%23ctor%2A>建構函式。  
+ Visual Basic 編譯器會將 XML CDATA 常值轉換為對此<xref:System.Xml.Linq.XCData.%23ctor%2A>函式的呼叫。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立包含文字的 CDATA 區段 」 可以包含常值\<XML > 標記 」。  
+ 下列範例會建立一個 CDATA 區段, 其中包含「可以包含常\<值 XML > 標記」文字。  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   

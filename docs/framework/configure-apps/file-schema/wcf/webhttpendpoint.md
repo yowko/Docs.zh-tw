@@ -2,15 +2,15 @@
 title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 6fb31fca6ac38f6cb92ef087cc277a4d5066521c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 866be522cb1c64142227a8d6a1a8f88551ca9105
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769768"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940476"
 ---
 # <a name="webhttpendpoint"></a>\<webHttpEndpoint>
-此組態元素定義具有固定的標準端點[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)繫結，會自動加入[ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行為。 撰寫 REST 服務時，請使用這個端點。  
+此設定元素會定義標準端點, 其中具有固定[ \<的 webHttpBinding >](webhttpbinding.md)系結[ \< ](webhttp.md) , 會自動新增 webHttp > 行為。 撰寫 REST 服務時，請使用這個端點。  
   
 \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -35,7 +35,7 @@ ms.locfileid: "61769768"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |automaticFormatSelectionEnabled|布林值，指出是否啟用自動格式化選取範圍。<br /><br /> 啟用自動格式化選取範圍時，基礎結構會剖析要求訊息的 `Accept` 標頭，並且判斷最適合的回應格式。 如果 `Accept` 標頭未指定適合的回應格式，基礎結構會使用要求訊息的 `Content-Type` 或作業的預設回應格式。|  
 |defaultOutgoingResponseFormat|屬性，用來指定預設的傳出回應格式。 此屬性的型別為 <xref:System.ServiceModel.Web.WebMessageFormat>。|  
@@ -49,7 +49,7 @@ ms.locfileid: "61769768"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
+|[\<standardEndpoints>](standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
   
 ## <a name="see-also"></a>另請參閱
 

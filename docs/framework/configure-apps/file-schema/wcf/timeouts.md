@@ -2,20 +2,20 @@
 title: <timeOuts>
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-ms.openlocfilehash: b6ae5faa2dd2ffef9669a0245a75227b0f669cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b159488efa2a80a9dea625e4c6dfe2f215dfc457
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758219"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939192"
 ---
 # <a name="timeouts"></a>\<timeOuts>
 表示組態項目，指定允許服務主機開啟或關閉的時間間隔。  
   
  \<system.ServiceModel>  
-\<client>  
-\<endpoint>  
-\<host>  
+\<用戶端 >  
+\<端點 >  
+\<主機 >  
 \<timeOuts>  
   
 ## <a name="syntax"></a>語法  
@@ -30,7 +30,7 @@ ms.locfileid: "61758219"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`closeTimeout`|<xref:System.TimeSpan> 值，指定允許服務主機關閉的時間間隔。|  
 |`openTimeout`|<xref:System.TimeSpan> 值，指定允許服務主機開啟的時間間隔。|  
@@ -42,10 +42,10 @@ ms.locfileid: "61758219"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定服務主機設定的組態項目。|  
+|[\<host>](host.md)|指定服務主機設定的組態項目。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
-- [裝載](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [裝載](../../../wcf/feature-details/hosting.md)

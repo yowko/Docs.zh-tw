@@ -2,20 +2,20 @@
 title: <callbackDebug>
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: a1190eb1c015ba07488ff5a5952f2f5f1b10974c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91e7bd63bf496f2c38776d88173ed2ac12a3b888
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926313"
 ---
 # <a name="callbackdebug"></a>\<callbackDebug>
-指定 Windows Communication Foundation (WCF) 回呼物件的偵錯服務。  
+指定 Windows Communication Foundation (WCF) 回呼物件的服務偵錯工具。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行為 >  
 \<callbackDebug>  
   
 ## <a name="syntax"></a>語法  
@@ -32,9 +32,9 @@ ms.locfileid: "61704514"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|`includeExceptionDetailInFaults`|這個值會指定用戶端回呼物件是否將 SOAP 錯誤中的 Managed 例外狀況資訊傳回給服務。<br /><br /> 如果您以程式設計方式將這個屬性設定為 `true`，您可以讓用戶端回呼物件中的 Managed 例外狀況資訊的流動回到服務，以達偵錯的目的。 **注意：** 將 Managed 例外狀況資訊傳回用戶端時，可能會有安全性風險。 這是因為例外狀況細節會公開內部服務實作 (Implementation) 的相關資訊，可能會被未經授權的用戶端加以利用。|  
+|`includeExceptionDetailInFaults`|這個值會指定用戶端回呼物件是否將 SOAP 錯誤中的 Managed 例外狀況資訊傳回給服務。<br /><br /> 如果您以程式設計方式將這個屬性設定為 `true`，您可以讓用戶端回呼物件中的 Managed 例外狀況資訊的流動回到服務，以達偵錯的目的。 **注意**：將 Managed 例外狀況資訊傳回用戶端時，可能會有安全性風險。 這是因為例外狀況細節會公開內部服務實作 (Implementation) 的相關資訊，可能會被未經授權的用戶端加以利用。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -43,7 +43,7 @@ ms.locfileid: "61704514"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定端點行為。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定端點行為。|  
   
 ## <a name="see-also"></a>另請參閱
 

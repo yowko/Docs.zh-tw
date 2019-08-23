@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91a97807d45d3cafdac0c0608dc9590533b185dc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 67ead643afd34b4c3422d85e6f7876879de477ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927234"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<> 元素 (快取設定)
 
@@ -55,7 +55,7 @@ ms.locfileid: "69663437"
 這個命名空間中的類別提供如同在 ASP.NET 中使用快取設備的方式，但是不需要在 `System.Web` 組件上的相依性。 如需詳細資訊，請參閱 [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md)。  
   
 > [!NOTE]
->  <xref:System.Runtime.Caching>命名空間中的輸出快取功能和類型在 .NET Framework 4 中是新的。  
+> <xref:System.Runtime.Caching>命名空間中的輸出快取功能和類型在 .NET Framework 4 中是新的。  
   
 ## <a name="example"></a>範例
 

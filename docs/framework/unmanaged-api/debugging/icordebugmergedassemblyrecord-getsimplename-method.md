@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3df84fa7c316d3cd0c97b79478159a5a97ad1e64
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f3256a1a50b66be74561bfc992380669a4495dde
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762371"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939992"
 ---
 # <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord::GetSimpleName 方法
 取得組件的簡單名稱。  
@@ -38,7 +38,7 @@ HRESULT GetSimpleName(
  這個方法會擷取組件的簡單名稱 (例如 "System.Collections")，其中不含副檔名、版本、文化特性或公開金鑰語彙基元。 它會對應至 Managed 程式碼中的 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 屬性。  
   
 > [!NOTE]
->  這個方法僅適用於 .NET Native。  
+> 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

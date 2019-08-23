@@ -2,12 +2,12 @@
 title: <add> 的 <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 3052a7570d1d93836603454817be921b37d26060
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 690fd07159e07b7e037f7330b31fdcba423e80f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658830"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920134"
 ---
 # <a name="add-of-entries"></a>\<新增專案的\<> >
 代表將篩選條件對應至先前定義之用戶端端點的路由項目。 將符合此篩選條件的訊息傳送至這個目的地。  
@@ -41,7 +41,7 @@ ms.locfileid: "69658830"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |backupList|字串，指定端點備份清單的參考。|  
 |端點|字串，指定對用戶端端點的參考，該端點會接收與 `filterName` 屬性指定之篩選條件相符的訊息。|  
@@ -55,7 +55,7 @@ ms.locfileid: "69658830"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含路由組態項目的組態區段。|  
+|[\<routing>](routing.md)|包含路由組態項目的組態區段。|  
   
 ## <a name="see-also"></a>另請參閱
 

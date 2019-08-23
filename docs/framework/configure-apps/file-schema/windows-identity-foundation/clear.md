@@ -3,20 +3,20 @@ title: <clear>
 ms.date: 03/30/2017
 ms.assetid: 54dcd1d1-038f-4fc8-a3a4-56ba7a1ca0fd
 author: BrucePerlerMS
-ms.openlocfilehash: b7320b6504c252770bed803666201df633e161a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5e5dbae87480929fca89dad48618450f0eb1442
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791751"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942815"
 ---
-# <a name="clear"></a>\<clear>
-清除所有的安全性權杖處理常式，從目前的權杖處理常式集合。  
+# <a name="clear"></a>\<清除 >
+清除目前權杖處理常式集合中的所有安全性權杖處理常式。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<clear>  
+\<清除 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,13 +35,13 @@ ms.locfileid: "61791751"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- None  
+ 無  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定登錄與端點的安全性權杖處理常式的集合。|
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|指定已向端點註冊的安全性權杖處理常式集合。|

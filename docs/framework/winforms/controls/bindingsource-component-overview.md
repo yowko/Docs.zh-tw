@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: bd1b38b434f9932a575745d7a1761ff18b009115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917817"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 元件概觀
 <xref:System.Windows.Forms.BindingSource> 元件的設計目的，是為了簡化將控制項繫結至基礎資料來源的程序。 <xref:System.Windows.Forms.BindingSource> 元件可同時做為管線和其他控制項繫結程序的目標資料來源。 它可以在透過命令傳遞至基礎資料清單時，提供表單資料連接的抽象層。 此外，您也可以直接加入資料，將元件本身當做資料來源使用。  
@@ -25,7 +25,7 @@ ms.locfileid: "68364446"
  ![繫結來源和資料繫結架構](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
->  在設計階段，有些動作 (例如將資料庫資料表從資料視窗拖曳到空白表單上) 可在一個作業之內同時完成建立 <xref:System.Windows.Forms.BindingSource> 元件、將之繫結至基礎資料來源及加入資料感知控制項。 另請參閱[在 Visual Studio 中將 Windows Forms 控制項繫結至資料](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)。  
+> 在設計階段，有些動作 (例如將資料庫資料表從資料視窗拖曳到空白表單上) 可在一個作業之內同時完成建立 <xref:System.Windows.Forms.BindingSource> 元件、將之繫結至基礎資料來源及加入資料感知控制項。 另請參閱[在 Visual Studio 中將 Windows Forms 控制項繫結至資料](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)。  
   
 ## <a name="bindingsource-component-as-a-data-source"></a>做為資料來源的 BindingSource 元件  
  如果沒有事先指定要繫結的清單，就開始將項目加入 <xref:System.Windows.Forms.BindingSource> 元件，則這個元件的作用會類似清單樣式的資料來源，並會接受這些加入的項目。  
@@ -38,7 +38,7 @@ ms.locfileid: "68364446"
 ## <a name="data-manipulation"></a>資料管理  
  <xref:System.Windows.Forms.BindingSource> 可做為其所有繫結的 <xref:System.Windows.Forms.CurrencyManager>，因此可存取有關資料來源的貨幣和位置資訊。 下表顯示 <xref:System.Windows.Forms.BindingSource> 元件所提供用於存取和管理基礎資料的成員。  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.BindingSource.Current%2A> 屬性|取得資料來源的目前項目。|  
 |<xref:System.Windows.Forms.BindingSource.Position%2A> 屬性|取得或設定基礎清單中的目前位置。|  

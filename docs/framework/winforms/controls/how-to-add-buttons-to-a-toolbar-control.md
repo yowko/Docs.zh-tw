@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8ab1fa8fc163ed50e51801769d40e61483e8ed5b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343684"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912637"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>HOW TO：將按鈕新增至 ToolBar 控制項
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>作法：將按鈕新增至 ToolBar 控制項
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
+> <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
   
- 不可或缺的一部分<xref:System.Windows.Forms.ToolBar>控制項是您加入的按鈕。 這些可以用來讓您輕鬆存取功能表命令，或者，或者，他們可以放在您的應用程式的命令公開給您的使用者功能表結構中所沒有的使用者介面的另一個區域。  
+ <xref:System.Windows.Forms.ToolBar>控制項的整數部分是您加入其中的按鈕。 這些可以用來提供功能表命令的輕鬆存取, 或者將它們放在應用程式使用者介面的另一個區域, 以向您的使用者公開功能表結構中無法使用的命令。  
   
- 下列範例假設<xref:System.Windows.Forms.ToolBar>的控制項已經加入至 Windows 表單 (`Form1`)。  
+ 下列範例假設<xref:System.Windows.Forms.ToolBar>控制項已加入至 Windows Form (`Form1`)。  
   
-### <a name="to-add-buttons-programmatically"></a>若要以程式設計方式加入按鈕  
+### <a name="to-add-buttons-programmatically"></a>以程式設計方式新增按鈕  
   
-1. 在程序中，建立工具列按鈕加入至<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合。  
+1. 在程式中, 藉由將工具列按鈕新增至<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合來建立它們。  
   
-2. 藉由傳遞的按鈕索引，透過指定屬性設定為個別的按鈕<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性。  
+2. 透過<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性傳遞按鈕的索引, 以指定個別按鈕的屬性設定。  
   
-     下列範例假設表單<xref:System.Windows.Forms.ToolBar>已經加入的控制項。  
+     下列範例假設已加入<xref:System.Windows.Forms.ToolBar>控制項的表單。  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合是以零為起始的集合，因此應視情況繼續執行程式碼。  
+    > 此<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合是以零為基底的集合, 因此程式碼應據此繼續進行。  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -152,6 +152,6 @@ ms.locfileid: "59343684"
 
 - <xref:System.Windows.Forms.ToolBar>
 - [如何：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)
-- [如何：觸發程序的工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [如何：觸發工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [工具列控制項概觀](toolbar-control-overview-windows-forms.md)
 - [ToolBar 控制項](toolbar-control-windows-forms.md)

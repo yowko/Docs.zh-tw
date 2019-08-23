@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 9270552245b3867f0f09741ded3f9da6a8b6c135
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d8f4d4aa9c80990cdf858da9fcdf6465438866cf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664273"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927566"
 ---
 # <a name="nameentry-element"></a>\<y > 元素
 將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。  
@@ -79,5 +79,5 @@ ms.locfileid: "69664273"
 
 - [組態檔結構描述](../index.md)
 - [密碼編譯設定結構描述](index.md)
-- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../../standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../configure-cryptography-classes.md)

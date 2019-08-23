@@ -10,12 +10,12 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: a2aa56f8b2a92f906293adfae9d23ed8959336fb
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a7964d01905be4e3dd6e8149e5533e9a2cfd9a71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664288"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927623"
 ---
 # <a name="cryptography-settings-schema"></a>密碼編譯設定結構描述
 密碼編譯設定結構描述包含指定如何將易記的演算法名稱對應至實作密碼編譯演算法之類別的項目。  
@@ -38,7 +38,7 @@ ms.locfileid: "69664288"
   
  [ **\<oidEntry>** ](oidentry-element.md)  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[ **\<cryptoClasses**>](cryptoclasses-element.md)|包含密碼編譯類別清單，其具有 **\<nameEntry>** 項目中易記名稱的對應。|  
 |[ **\<cryptoClass**>](cryptoclass-element.md)|包含密碼編譯類別，其具有 **\<nameEntry>** 項目中易記名稱的對應。|  
@@ -52,4 +52,4 @@ ms.locfileid: "69664288"
 ## <a name="see-also"></a>另請參閱
 
 - [組態檔結構描述](../index.md)
-- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../../standard/security/cryptographic-services.md)

@@ -2,20 +2,20 @@
 title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 4d7fdfb1cccb14f03d11864f1939cb578c79880a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 462a06e5a773310b6364838ae2ebc14da0a2ee1b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704111"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925893"
 ---
 # <a name="defaultports"></a>\<defaultPorts>
 預設連接埠的集合，這些連接埠會接聽用戶端應用程式所接聽的預設通訊端點。  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<useRequestHeadersForMetadataAddress>  
 \<defaultPorts>  
   
@@ -38,15 +38,15 @@ ms.locfileid: "61704111"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<add> of \<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|預設通訊端點，用戶端應用程式會接聽這個端點。|  
+|[\<新增 defaultPorts > \<的 >](add-of-defaultports.md)|預設通訊端點，用戶端應用程式會接聽這個端點。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<useRequestHeadersForMetadataAddress>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|預設連接埠清單。|  
+|[\<useRequestHeadersForMetadataAddress>](userequestheadersformetadataaddress.md)|預設連接埠清單。|  
   
 ## <a name="see-also"></a>另請參閱
 

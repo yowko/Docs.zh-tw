@@ -3,15 +3,15 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 5238ea7b96c09fb976a25bc00b952539ddd44b49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942806"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
-會設定<xref:System.IdentityModel.Services.CookieHandler>， <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) 會使用來讀取和寫入 cookie。  
+<xref:System.IdentityModel.Services.CookieHandler> 設定(SAM)用來讀取<xref:System.IdentityModel.Services.SessionAuthenticationModule>和寫入 cookie 的。  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -43,41 +43,41 @@ ms.locfileid: "61791738"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|名稱|指定寫入的任何 cookie 的基底名稱。 預設值為"FedAuth"。|  
-|路徑|指定寫入的任何 cookie 的路徑值。 預設值為"HttpRuntime.AppDomainAppVirtualPath 」。|  
-|模式|其中一個<xref:System.IdentityModel.Services.CookieHandlerMode>指定 SAM 所使用的 cookie 處理常式類型的值。 可以使用下列值：<br /><br /> -"Default"，"Chunked"相同。<br />-「 區塊 」 — 使用的執行個體<xref:System.IdentityModel.Services.ChunkedCookieHandler>類別。 此 cookie 處理常式可確保個別 cookie 不會超過設定的最大大小。 這是可能 「 區塊處理 」 邏輯 cookie cookie 上連線的數目。<br />-「 自訂 」 — 使用一個衍生自的自訂類別的執行個體<xref:System.IdentityModel.Services.CookieHandler>。 在衍生的類別由參考`<customCookieHandler>`子項目。<br /><br /> 預設值為"Default"。|  
-|persistentSessionLifetime|指定持續性工作階段的存留期。 如果是零，永遠使用暫時性工作階段。 預設值是"0:0:0 」，其指定的暫時性工作階段。 最大值是"365:0:0 」，其指定為 365 天的工作階段。 應該指定的值，根據下列限制： `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`，其中最左邊的值會指定天、 中間值 （如果有的話） 會指定小時，而最右邊的值 （如果有的話） 會指定分鐘。|  
-|requireSsl|指定是否為任何撰寫的 cookie 發出"Secure"旗標。 如果此值設定時，登入工作階段 cookie 只可透過 HTTPS。 預設為 "true"。|  
-|hideFromScript|控制是否"HttpOnly 」 旗標，就會發出任何寫入的 cookie。 某些網頁瀏覽器會接受這個旗標，保留用戶端指令碼存取 cookie 值。 預設為 "true"。|  
-|網域|寫入的任何 cookie 網域值。 預設值為 ""。|  
+|NAME|指定任何寫入 cookie 的基底名稱。 預設值為 "FedAuth"。|  
+|路徑|指定任何寫入 cookie 的路徑值。 預設值為 "HttpRuntime. AppDomainAppVirtualPath"。|  
+|模式|其中一個值, 指定 SAM 所使用的 cookie 處理常式種類。 <xref:System.IdentityModel.Services.CookieHandlerMode> 可能會使用下列值:<br /><br /> -「預設」-與「區塊」相同。<br />-「區塊」-使用<xref:System.IdentityModel.Services.ChunkedCookieHandler>類別的實例。 此 cookie 處理常式可確保個別 cookie 不會超過設定的大小上限。 這是因為可能會將一個邏輯 cookie 「區塊化」到多個網路上的 cookie。<br />-「自訂」—使用衍生自之<xref:System.IdentityModel.Services.CookieHandler>自訂類別的實例。 衍生類別是由`<customCookieHandler>`子項目所參考。<br /><br /> 預設值為 "Default"。|  
+|persistentSessionLifetime|指定持續性會話的存留期。 如果為零, 則一律使用暫時性會話。 預設值為 "0:0:0", 指定暫時性會話。 最大值為 "365:0:0", 指定365天的會話。 應該根據下列限制來指定值: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, 其中最左邊的值會指定 days、中間值 (如果有的話) 指定小時, 而最右邊的值 (如果有的話) 會指定分鐘。|  
+|requireSsl|指定是否針對任何寫入的 cookie 發出 "Secure" 旗標。 如果設定此值, 登入會話 cookie 只會透過 HTTPS 提供。 預設為 "true"。|  
+|hideFromScript|控制是否針對任何寫入的 cookie 發出 "HttpOnly" 旗標。 某些網頁瀏覽器會藉由保留用戶端腳本來存取 cookie 值, 以接受此旗標。 預設為 "true"。|  
+|網域|任何寫入 cookie 的網域值。 預設值為 ""。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<chunkedCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|設定<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 這個項目只會出現如果`mode`屬性的`<cookieHandler>`項目是 「 預設 」 或 「 區塊 」。|  
-|[\<customCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|設定自訂 cookie 處理常式型別。 必須有此項目如果`mode`屬性的`<cookieHandler>`項目是 「 自訂 」。 它不能存在的任何其他值`mode`屬性。 自訂型別必須衍生自<xref:System.IdentityModel.Services.CookieHandler>類別。|  
+|[\<chunkedCookieHandler>](chunkedcookiehandler.md)|<xref:System.IdentityModel.Services.ChunkedCookieHandler>設定。 只有當`mode` `<cookieHandler>`元素的屬性為「預設」或「區塊」時, 才會出現此元素。|  
+|[\<customCookieHandler>](customcookiehandler.md)|設定自訂 cookie 處理常式類型。 如果`mode` `<cookieHandler>`元素的屬性為 "Custom", 則必須要有此元素。 它不能存在於`mode`屬性的任何其他值。 自訂類型必須衍生<xref:System.IdentityModel.Services.CookieHandler>自類別。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|包含設定的設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。|  
+|[\<federationConfiguration>](federationconfiguration.md)|包含設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) <xref:System.IdentityModel.Services.SessionAuthenticationModule>和 (SAM) 的設定。|  
   
 ## <a name="remarks"></a>備註  
- <xref:System.IdentityModel.Services.CookieHandler>負責讀取和寫入未經處理的 cookie 在 HTTP 通訊協定層級。 您可以設定其中一個<xref:System.IdentityModel.Services.ChunkedCookieHandler>或自訂 cookie 處理常式衍生自<xref:System.IdentityModel.Services.CookieHandler>類別。  
+ <xref:System.IdentityModel.Services.CookieHandler>負責讀取及寫入 HTTP 通訊協定層級的原始 cookie。 您可以設定<xref:System.IdentityModel.Services.ChunkedCookieHandler> <xref:System.IdentityModel.Services.CookieHandler>從類別衍生的或自訂 cookie 處理常式。  
   
- 若要設定區塊的 cookie 處理常式，將模式屬性設定為"Chunked"或"Default"。 預設區塊大小為 2000 個位元組，但您可以選擇性地指定不同的區塊大小包含`<chunkedCookieHandler>`子項目。  
+ 若要設定區塊 cookie 處理常式, 請將 mode 屬性設為 "分塊" 或 "Default"。 預設的區塊大小是2000個位元組, 但是您可以選擇性地指定不同的區塊大小, `<chunkedCookieHandler>`方法是包含子項目。  
   
- 若要設定自訂 cookie 處理常式，將模式屬性設定為 「 自訂 」。 您也必須指定`<customCookieHandler>`子項目會參考您的自訂處理常式的類型。  
+ 若要設定自訂的 cookie 處理常式, 請將 mode 屬性設為 "Custom"。 您也必須指定`<customCookieHandler>`參考自訂處理常式類型的子項目。  
   
- `<cookieHandler>`項目由<xref:System.IdentityModel.Services.CookieHandlerElement>類別。 已在組態中指定的 cookie 處理常式是可從<xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A>的屬性<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>物件，在設定<xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>屬性。  
+ `<cookieHandler>`元素是<xref:System.IdentityModel.Services.CookieHandlerElement>由類別表示。 在設定中指定的 cookie 處理常式, 可從<xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>屬性上<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>物件集的屬性取得。  
   
 ## <a name="example"></a>範例  
- 下列 XML 會說明`<cookieHandler>`項目。 在此範例中，因為`mode`屬性未指定，SAM 將使用預設的 cookie 處理常式。 這是執行個體<xref:System.IdentityModel.Services.ChunkedCookieHandler>類別。 因為`<chunkedCookieHandler>`子項目未指定，將使用預設區塊大小。 不需要 HTTPS，因為`requireSsl`屬性設定`false`。  
+ 下列 XML 會顯示`<cookieHandler>`元素。 在此範例中, 因為`mode`未指定屬性, 所以 SAM 會使用預設的 cookie 處理常式。 這是<xref:System.IdentityModel.Services.ChunkedCookieHandler>類別的實例。 由於未指定子項目, 因此會使用預設的區塊大小。 `<chunkedCookieHandler>` 不需要 HTTPS, `requireSsl`因為已設定`false`屬性。  
   
 > [!WARNING]
->  在此範例中，HTTPS 不是需要撰寫工作階段 cookie。 這是因為`requireSsl`屬性`<cookieHandler>`元素設定為`false`。 此設定不會建議用於大部分的生產環境，因為它可能會有安全性風險。  
+>  在此範例中, 不需要 HTTPS 來寫入會話 cookie。 這是因為`<cookieHandler>`元素`requireSsl`上的屬性設定為。 `false` 在大部分的生產環境中, 不建議使用此設定, 因為這可能會有安全性風險。  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

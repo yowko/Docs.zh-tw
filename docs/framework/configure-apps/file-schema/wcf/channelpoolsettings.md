@@ -2,12 +2,12 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: 70f7452a22ae08d6eccd7d3644bdc8df45087ae0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: dd81821c74678cae8602458fe796a72bf5d379e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423191"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919562"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 指定自訂繫結的通道集區設定。  
@@ -15,7 +15,7 @@ ms.locfileid: "67423191"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<oneWay>  
 \<channelPoolSettings>  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67423191"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|啟用自訂繫結的封包路由。|  
+|[\<oneWay>](oneway.md)|啟用自訂繫結的封包路由。|  
   
 ## <a name="remarks"></a>備註  
  配額是一種用來避免資源過度耗費的原則機制。 這類配額會防止惡意或是無意間發生的阻斷服務 (DOS) 攻擊。 當設定自訂通道配額的時候，請使用這個項目。  
@@ -65,8 +65,8 @@ ms.locfileid: "67423191"
 - <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>
 - <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [\<oneWay>](oneway.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

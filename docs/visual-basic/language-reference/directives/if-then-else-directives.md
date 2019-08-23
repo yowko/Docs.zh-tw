@@ -1,5 +1,5 @@
 ---
-title: '#If......#Else 指示詞 (Visual Basic)'
+title: '#如果 .。。Then ... #Else 指示詞 (Visual Basic)'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 8c0aece749edf144fdd5c8ede9ec7e2e4c96ad54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697521276e2d5a8d0a4aaae38789a21b7aa87fcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746709"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940764"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else 指示詞
 有條件地編譯選取的 Visual Basic 程式碼區塊。  
@@ -45,25 +45,25 @@ ms.locfileid: "61746709"
   
 ## <a name="parts"></a>組件  
  `expression`  
- 所需`#If`和`#ElseIf`陳述式，選擇性在其他地方。 任何運算式，以獨佔方式組成一或多個條件式編譯器常數、 常值和運算子，評估`True`或`False`。  
+ `#If` 和`#ElseIf`語句的必要, 其他地方則為選擇性。 由評估為`True`或`False`的一個或多個條件式編譯器常數、常值和運算子所組成的任何運算式。  
   
  `statements`  
- 所需的`#If`陳述式區塊，選擇性在其他地方。 Visual Basic 程式行或如果相關聯的運算式評估為編譯的編譯器指示詞`True`。  
+ 語句區塊`#If`的必要參數, 其他地方則為選擇性。 當相關聯的運算式評估為`True`時, Visual Basic 編譯的程式列或編譯器指示詞。  
   
  `#End If`  
- 終止`#If`陳述式區塊。  
+ `#If`終止語句區塊。  
   
 ## <a name="remarks"></a>備註  
- 在介面中，行為`#If...Then...#Else`指示詞會出現相同的`If...Then...Else`陳述式。 不過，`#If...Then...#Else`指示詞評估功能由編譯器編譯而`If...Then...Else`陳述式在執行階段評估的條件。  
+ 在介面上, 指示`#If...Then...#Else` `If...Then...Else`詞的行為會與語句相同。 不過, `#If...Then...#Else`指示詞會評估編譯器所編譯的內容, `If...Then...Else`而語句會在執行時間評估條件。  
   
- 條件式編譯通常會用來編譯不同的平台的相同程式中。 它也會用來防止偵錯不會出現在可執行檔的程式碼。 條件式編譯期間排除的程式碼完全中會省略最終的可執行檔，所以其大小或效能沒有影響。  
+ 條件式編譯通常用來針對不同的平臺編譯相同的程式。 它也可用來防止程式碼在可執行檔中出現。 在條件式編譯期間排除的程式碼會完全從最終可執行檔中省略, 因此它不會影響大小或效能。  
   
- 不論任何評估結果，評估所有運算式都使用`Option Compare Binary`。 `Option Compare`陳述式不會影響運算式中的`#If`和`#ElseIf`陳述式。  
+ 不論任何評估的結果為何, 都會使用`Option Compare Binary`來評估所有運算式。 語句不會影響和`#ElseIf`語句中`#If`的運算式。 `Option Compare`  
   
 > [!NOTE]
->  沒有單一線條形式`#If`， `#Else`， `#ElseIf`，和`#End If`指示詞存在。 沒有其他程式碼可以出現在任何指示詞的同一行。 
+> 沒有`#If`、 `#Else`、 `#ElseIf`和指示詞的單行形式存在。`#End If` 任何其他程式碼都無法出現在與任何指示詞相同的行上。 
 
-條件式編譯區塊內的陳述式必須是完整的邏輯陳述式。 例如，您不能有條件地編譯函式的屬性，但您可以有條件地宣告的函式和其屬性：
+條件式編譯區塊內的語句必須是完整的邏輯語句。 例如, 您不能有條件地只編譯函式的屬性, 但您可以有條件地宣告函式及其屬性:
 
 ```vb
    #If DEBUG Then
@@ -76,7 +76,7 @@ ms.locfileid: "61746709"
 ```
 
 ## <a name="example"></a>範例
- 這個範例會使用`#If...Then...#Else`建構函式來判斷是否要編譯特定陳述式。  
+ 這個範例會使用`#If...Then...#Else`結構來判斷是否要編譯特定語句。  
   
  [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]  
   

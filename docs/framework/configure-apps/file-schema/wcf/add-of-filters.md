@@ -2,18 +2,18 @@
 title: <add> 的 <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7975bea1435abdb77528628e7b96c65a72cbbc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704540"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926691"
 ---
-# <a name="add-of-filters"></a>\<新增 > 的\<篩選條件 >
+# <a name="add-of-filters"></a>\<新增篩選的\<> >
 XPath 篩選條件，指定要記錄的訊息類型。  
   
  \<system.ServiceModel>  
-\<diagnostic>  
+\<診斷 >  
 \<messageLogging>  
 \<filters>  
 \<add>  
@@ -33,7 +33,7 @@ XPath 篩選條件，指定要記錄的訊息類型。
   
 |屬性|描述|  
 |---------------|-----------------|  
-|篩選|字串，指定查詢由 XPath 1.0 運算式定義的 XML 文件。 如需詳細資訊，請參閱<xref:System.ServiceModel.Dispatcher.XPathMessageFilter>。|  
+|篩選|字串，指定查詢由 XPath 1.0 運算式定義的 XML 文件。 如需詳細資訊，請參閱 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -42,7 +42,7 @@ XPath 篩選條件，指定要記錄的訊息類型。
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|包含 XPath 篩選條件的集合，這些篩選條件可用於控制藥記錄的訊息類型。|  
+|[\<filters>](filters.md)|包含 XPath 篩選條件的集合，這些篩選條件可用於控制藥記錄的訊息類型。|  
   
 ## <a name="remarks"></a>備註  
  篩選條件只會於套用傳輸層，指定方式是將 `logMessagesAtTransportLevel` 設定為 `true`。 服務等級和格式錯誤訊息記錄不受篩選條件的影響。  
@@ -79,5 +79,5 @@ XPath 篩選條件，指定要記錄的訊息類型。
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [設定訊息記錄](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [設定訊息記錄](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](messagelogging.md)

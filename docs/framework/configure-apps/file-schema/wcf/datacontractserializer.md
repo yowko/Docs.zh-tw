@@ -2,20 +2,20 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8814a48df8933cf08db78e397c24d42f2da26026
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704124"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919237"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的組態資料。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行為 >  
 \<dataContractSerializer>  
   
 ## <a name="syntax"></a>語法  
@@ -40,9 +40,9 @@ ms.locfileid: "61704124"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定端點行為。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定端點行為。|  
   
 ## <a name="remarks"></a>備註  
  如需已知型別的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataContractSerializer> 文件。  
@@ -55,5 +55,5 @@ ms.locfileid: "61704124"
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [資料合約已知類型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [資料傳輸與序列化](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [資料合約已知類型](../../../wcf/feature-details/data-contract-known-types.md)
+- [資料傳輸與序列化](../../../wcf/feature-details/data-transfer-and-serialization.md)

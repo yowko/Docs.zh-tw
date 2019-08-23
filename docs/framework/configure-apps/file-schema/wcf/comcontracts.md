@@ -2,18 +2,18 @@
 title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: 47a7d862cf85254f88373d582169ff421be2b5b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d061d48374a8745dc61e1ca156e4fcbbccee5ef7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673286"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919481"
 ---
 # <a name="comcontracts"></a>\<comContracts>
 `comContracts` 組態區段包含的項目可讓您指定 COM+ 整合服務合約的各種屬性。  
   
 ## <a name="specifying-namespace-and-contract"></a>指定命名空間和合約  
- COM + 整合服務合約是目前僅限於`http://tempuri.org`命名空間，而合約名稱衍生自支援的 COM 介面。 然而，您可以使用組態檔中的 `comContracts` 區段來指定替代項目。  
+ Com + 整合服務合約目前僅限於`http://tempuri.org`命名空間, 而合約名稱是衍生自支援的 COM 介面。 然而，您可以使用組態檔中的 `comContracts` 區段來指定替代項目。  
   
  例如，您可以使用下列組態來指定服務合約的命名空間和合約名稱，以及指定選項來強制工作階段繫結上的使用。  
   
@@ -31,15 +31,15 @@ ms.locfileid: "61673286"
   
  當這個區段是空白時，服務初始化會套用取自支援的 COM 介面 ID 的預設命名空間和合約名稱。  
   
- 此外，您可以使用[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)項目來指定 COM + 方法的 COM + 元件上的介面公開為 Web 服務時公開。 您也可以使用[ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)來指定整合中使用的永久性型別。 最後，您可以使用[ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)包含使用者定義型別 (UDT) 是包含服務合約中的項目。  
+ 此外, 您可以使用[ \<exposedMethod >](exposedmethod.md)專案, 指定在 com + 元件上的介面公開為 Web 服務時所公開的 com + 方法。 您也可以使用[ \<persistableTypes >](persistabletypes.md)來指定整合中使用的永久性類型。 最後, 您可以使用[ \<userDefinedType >](userdefinedtype.md)元素來包含要包含在服務合約中的使用者定義類型 (UDT)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)
-- [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)
-- [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)
-- [\<comContract>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)
-- [整合 COM 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [如何：設定 COM + 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<exposedMethod>](exposedmethod.md)
+- [\<persistableTypes>](persistabletypes.md)
+- [\<userDefinedType>](userdefinedtype.md)
+- [\<comContract>](comcontract.md)
+- [整合 COM 應用程式](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [如何：設定 COM + 服務設定](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

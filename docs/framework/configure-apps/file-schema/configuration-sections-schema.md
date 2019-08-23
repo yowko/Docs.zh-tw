@@ -1,5 +1,5 @@
 ---
-title: 組態區段結構描述
+title: 設定區段架構
 ms.date: 05/02/2017
 helpviewer_keywords:
 - configuration settings [.NET Framework], custom
@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: c7559a95099608ea462c838591ddb43e18d8f80c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 120733873a7ea29303fe7f82c4c324d411532897
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301225"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921213"
 ---
-# <a name="configuration-sections-schema"></a>組態區段結構描述
+# <a name="configuration-sections-schema"></a>設定區段架構
 
-組態區段結構描述包含在組態檔中定義自訂設定的項目。 如需組態檔和結構描述的一般資訊，請參閱[適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)。
+設定區段架構包含的元素會定義設定檔案中的自訂設定。 如需設定檔案和架構的一般資訊, 請參閱[.NET Framework 的設定檔架構](index.md)。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-[ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
-[ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
-[ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md)   
-[ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+[ **\<configuration>** ](configuration-element.md)   
+[ **\<configSections>** ](configsections-element-for-configuration.md)   
+[ **\<clear>** ](clear-element-for-configsections.md)   
+[ **\<remove>** ](remove-element-for-configsections.md)   
+[ **\<section>** ](section-element.md)   
+[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)
 
-|     | 描述 |
+|     | 說明 |
 | --- | ----------- |
-| [ **\<clear>** for **\<configSections>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有先前定義的區段和區段群組。 |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有先前定義的區段和區段群組。 |
-| [ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
-| [ **\<remove>** for **\<configSections>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 移除預先定義的區段或區段群組。 |
-| [ **\<section>** for **\<configSections>** and **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含組態區段宣告。 |
-| [ **\<sectionGroup>** for **\<configSections>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定義組態區段的命名空間。 |
+| [ **\<clear>** for **\<configSections>** ](clear-element-for-configsections.md) | 清除所有先前定義的區段和區段群組。 |
+| [ **\<clear>** ](clear-element-for-configsections.md) | 清除所有先前定義的區段和區段群組。 |
+| [ **\<configSections>** ](configsections-element-for-configuration.md) | 包含設定區段和命名空間宣告。 |
+| [ **\<remove>** for **\<configSections>** ](remove-element-for-configsections.md) | 移除預先定義的區段或區段群組。 |
+| [**configSections > \<**  **和sectionGroup的區段>\<>** **\<** ](section-element.md) | 包含設定區段宣告。 |
+| [ **\<sectionGroup>** for **\<configSections>** ](sectiongroup-element-for-configsections.md) | 定義設定區段的命名空間。 |

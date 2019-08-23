@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9104550438a2a066cdf052b8d6592e86b831194
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87ba947b9564f82f8daf8cd2ba0acac5cc3587ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749993"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928668"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits 方法
-層代 0 設定區段的大小和大小上限。  
+設定層代0的區段大小和大小上限。  
   
 > [!IMPORTANT]
->  從.NET Framework 4.5 開始，您可以設定區段的大小和最大層代 0 大小的值大於`DWORD`利用[IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法。  
+> 從 .NET Framework 4.5 開始, 您可以使用[IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法, 將區段大小和最大`DWORD`層代0的大小設定為大於的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,20 +41,20 @@ HRESULT SetGCStartupLimits (
   
 ## <a name="parameters"></a>參數  
  `SegmentSize`  
- [in]記憶體回收系統所使用的區段大小。  
+ 在垃圾收集系統所使用的區段大小。  
   
  `MaxGen0Size`  
- [in]層代 0 的大小上限。  
+ 在層代0的大小上限。  
   
 ## <a name="remarks"></a>備註  
- `SetGCStartupLimits`可能只有一次呼叫方法。 稍後無法變更這些值。  
+ `SetGCStartupLimits`方法可能只會呼叫一次。 之後就無法變更這些值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** GCHost.idl GCHost.h  
+ **標頭：** GCHost .idl, GCHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

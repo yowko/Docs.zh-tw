@@ -1,23 +1,23 @@
 ---
-title: HOW TO：以 WorkflowServiceHost 設定閒置行為
+title: 作法：以 WorkflowServiceHost 設定閒置行為
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: 5b2ebf6ddc5f275bd499a8abf7e68e019a1e0cef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57a9e0487ff605e99adc22471b02f5a288fc4a2b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586679"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912146"
 ---
-# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>HOW TO：以 WorkflowServiceHost 設定閒置行為
+# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>作法：以 WorkflowServiceHost 設定閒置行為
 工作流程遇到必須由外部刺激繼續執行的書籤時，例如工作流程執行個體正在等候訊息使用 <xref:System.ServiceModel.Activities.Receive> 活動加以傳遞時，工作流程就會進入閒置狀態。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 是一種行為，可讓您指定從服務執行個體進入閒置到此執行個體保存或卸載的間隔時間。 其中包含兩個屬性，可用來設定這些時間範圍。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 會指定從工作流程服務執行個體進入閒置到工作流程服務執行個體保存的時間範圍。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 會指定從工作流程服務執行個體進入閒置到工作流程服務執行個體卸載的時間範圍，而卸載的意義是將執行個體保存到執行個體儲存區並從記憶體中移除。 本主題說明如何設定組態檔中的 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 。  
   
 ### <a name="to-configure-workflowidlebehavior"></a>若要設定 WorkflowIdleBehavior  
   
-1. 加入 <`workflowIdle`> 項目至 <`behavior`> 項目內 <`serviceBehaviors`> 項目，如下列範例所示。  
+1. 將 <`workflowIdle`> 元素新增至 <`serviceBehaviors`>`behavior`專案中的 < > 專案, 如下列範例所示。  
   
     ```xml  
     <behaviors>  
@@ -29,10 +29,10 @@ ms.locfileid: "64586679"
     </behaviors>  
     ```  
   
-     `timeToUnload` 屬性會指定從工作流程服務執行個體進入閒置到工作流程服務卸載的時間間隔。 `timeToPersist` 屬性會指定從工作流程服務執行個體進入閒置到工作流程服務保存的時間間隔。 `timeToUnload` 的預設值為 1 分鐘。 `timeToPersist` 的預設值為 <xref:System.TimeSpan.MaxValue>。 如果您想要將閒置的執行個體保留在記憶體中，但保存它們以提供健全度，請設定下列值，讓 `timeToPersist` < `timeToUnload`。 如果您想要防止系統卸載閒置的執行個體，請將 `timeToUnload` 設定為 <xref:System.TimeSpan.MaxValue>。 如需詳細資訊<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>，請參閱[Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
+     `timeToUnload` 屬性會指定從工作流程服務執行個體進入閒置到工作流程服務卸載的時間間隔。 `timeToPersist` 屬性會指定從工作流程服務執行個體進入閒置到工作流程服務保存的時間間隔。 `timeToUnload` 的預設值為 1 分鐘。 `timeToPersist` 的預設值為 <xref:System.TimeSpan.MaxValue>。 如果您想要將閒置的執行個體保留在記憶體中，但保存它們以提供健全度，請設定下列值，讓 `timeToPersist` < `timeToUnload`。 如果您想要防止系統卸載閒置的執行個體，請將 `timeToUnload` 設定為 <xref:System.TimeSpan.MaxValue>。 如需的詳細<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>資訊, 請參閱[工作流程服務主機](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)擴充性  
   
     > [!NOTE]
-    >  上述組態範例會使用簡化的組態。 如需詳細資訊，請參閱 < [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)。  
+    > 上述組態範例會使用簡化的組態。 如需詳細資訊, 請參閱[簡化](../../../../docs/framework/wcf/simplified-configuration.md)的設定。  
   
 ### <a name="to-change-idle-behavior-in-code"></a>若要在程式碼中變更閒置行為  
   

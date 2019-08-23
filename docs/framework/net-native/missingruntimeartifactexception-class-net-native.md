@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 246584a34d6a3a8aaf4cac9845e8bb77d1654fa1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: caa929225701a62c0abb3b335bfd7fb6a129e9e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941630"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException 類別 (.NET Native)
-**適用於 Windows 10，僅限.NET Native 的 Windows 應用程式的.NET**  
+**適用于 Windows 10 的 Windows 應用程式的 .NET, 僅限 .NET Native**  
   
  當類型或類型成員的中繼資料可用，但已移除其實作時，會擲回這個例外狀況。  
   
  **命名空間：** System.Reflection  
   
 > [!IMPORTANT]
->  `MissingRuntimeArtifactException`類別是僅供內部使用的.NET Native 工具鏈。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
+> `MissingRuntimeArtifactException`類別僅供 .NET Native 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
   
 ## <a name="syntax"></a>語法  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -32,8 +32,8 @@ ms.locfileid: "66052440"
   
 |建構函式|描述|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|使用系統提供的錯誤說明訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。<br /><br /> 這個建構函式是.NET Native 工具鏈僅供內部使用。|  
-|`public MissingRuntimeArtifactException(String message)`|使用指定的錯誤訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。<br /><br /> 這個建構函式是.NET Native 工具鏈僅供內部使用。|  
+|`public MissingRuntimeArtifactException()`|使用系統提供的錯誤說明訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。<br /><br /> 此函式僅供 .NET Native 工具鏈內部使用。|  
+|`public MissingRuntimeArtifactException(String message)`|使用指定的錯誤訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。<br /><br /> 此函式僅供 .NET Native 工具鏈內部使用。|  
   
 ## <a name="properties"></a>屬性  
   
@@ -70,10 +70,10 @@ ms.locfileid: "66052440"
 ## <a name="usage-details"></a>用法詳細資料  
  當嘗試具現化類型或叫用類型成員時，雖然存在該類型或成員的中繼資料，但已移除其實作，在此情況下會擲回 `MissingRuntimeArtifactException` 例外狀況。  
   
- 中繼資料和動態執行方法的實作程式碼是否可使用的應用程式在執行階段由執行階段指示詞 （XML 組態） 檔案的方式來定義\*。 rd.xml。 若要防止應用程式擲回這個例外狀況，您必須修改 \*.rd.xml，以確保在執行階段存在類型或類型成員所需的中繼資料。 如需 \*.rd.xml 檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
+ 在執行時間, 應用程式是否可以使用可動態執行方法的中繼資料和實作為程式碼, \*是由執行時間指示詞 (XML 設定) 檔案. XML 所定義。 若要防止應用程式擲回這個例外狀況，您必須修改 \*.rd.xml，以確保在執行階段存在類型或類型成員所需的中繼資料。 如需 \*.rd.xml 檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 > [!IMPORTANT]
->  因為這個例外狀況指出應用程式所需的實作程式碼在執行階段無法使用，所以您不應該在 `try`/`catch` 區塊中處理這個例外狀況。 相反地，您應該診斷例外狀況的原因，然後透過執行階段指示詞檔案來去除這個例外狀況。 一般而言，指定適當來去除這個例外狀況`Activate`或是`Dynamic`程式項目執行階段指示詞檔案中的原則 (\*.rd.xml 檔)。 若要取得可加入執行階段指示詞檔案以消除例外狀況的項目，您可以使用下列兩個疑難排解工具之一：  
+> 因為這個例外狀況指出應用程式所需的實作程式碼在執行階段無法使用，所以您不應該在 `try`/`catch` 區塊中處理這個例外狀況。 相反地，您應該診斷例外狀況的原因，然後透過執行階段指示詞檔案來去除這個例外狀況。 一般來說, 您可以在執行時間指示詞檔案`Activate` ( `Dynamic` \*. i .xml 檔案) 中指定程式元素的適當或原則, 以消除這個例外狀況。 若要取得可加入執行階段指示詞檔案以消除例外狀況的項目，您可以使用下列兩個疑難排解工具之一：  
 >   
 > - 針對類型的 [MissingMetadataException 疑難排解工具](https://dotnet.github.io/native/troubleshooter/type.html) 。  
 > - 針對方法的 [MissingMetadataException 疑難排解工具](https://dotnet.github.io/native/troubleshooter/method.html) 。  

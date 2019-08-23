@@ -2,20 +2,20 @@
 title: <transport> 的 <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 265b68e058919d1d5c5f1dbcfb1419b57be9aeab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788306"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915554"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<netTcpBinding> 的 \<transport>
-定義設定之端點的訊息層級安全性需求的型別[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
+定義使用[ \<netTcpBinding >](nettcpbinding.md)設定之端點的訊息層級安全性需求類型。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netTcpBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
 \<transport>  
   
@@ -46,9 +46,9 @@ ms.locfileid: "61788306"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|clientCredentialType|選擇性。 指定當使用傳輸安全性執行用戶端驗證時，要使用的認證類型。<br /><br /> -預設值是`Windows`。<br />-此屬性為類型<xref:System.ServiceModel.TcpClientCredentialType>。|  
+|clientCredentialType|選擇性。 指定當使用傳輸安全性執行用戶端驗證時，要使用的認證類型。<br /><br /> -預設值是`Windows`。<br />-這個屬性的類型<xref:System.ServiceModel.TcpClientCredentialType>為。|  
 |protectionLevel|選擇性。 定義 TCP 傳輸層級的安全性。 簽章訊息可降低訊息在傳輸期間遭第三方竄改的風險。 加密會提供傳輸期間的資料層級隱私權。<br /><br /> 預設值為 `EncryptAndSign`。|  
-|sslProtocols|SslProtocols 列舉旗標值，可指定所支援的 SslProtocols。 預設值是 Tls&#124;Tls11&#124;Tls12。|  
+|sslProtocols|SslProtocols 列舉旗標值，可指定所支援的 SslProtocols。 預設值為 [&#124;Tls&#124;Tls11 Tls12]。|  
 |policyEnforcement|此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 的時間。<br /><br /> 1.Never：絕不強制執行此原則 (延伸保護已停用)。<br />2.WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。<br />3.Always：一律強制執行此原則。 不支援延伸保護的用戶端將無法驗證。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 屬性  
@@ -65,16 +65,16 @@ ms.locfileid: "61788306"
 |-----------|-----------------|  
 |None|無保護。|  
 |Sign|訊息會經過簽署。|  
-|EncryptAndSign|-訊息會經過加密及簽署。|  
+|EncryptAndSign|-訊息會經過加密和簽署。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|指定的安全性功能[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。|  
+|[\<security>](security-of-nettcpbinding.md)|指定[ \<netTcpBinding >](nettcpbinding.md)的安全性功能。|  
   
 ## <a name="remarks"></a>備註  
  使用傳輸安全性來達成 SOAP 訊息的完整性與機密性，以及交互驗證。 如果在繫結上選取這個安全性模式，便會使用安全性傳輸設定通道堆疊，並以傳輸安全性 (如 Windows Negotiate 或 SSL over TCP) 保護 SOAP 訊息。  
@@ -85,8 +85,8 @@ ms.locfileid: "61788306"
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

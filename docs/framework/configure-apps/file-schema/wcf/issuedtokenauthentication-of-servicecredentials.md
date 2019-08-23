@@ -2,20 +2,20 @@
 title: <issuedTokenAuthentication> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: d093b45269b230b4ff074d07a66290ab09592f60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 280aa49019f68a0906307e24842a585a92c6600a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756711"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925373"
 ---
-# <a name="issuedtokenauthentication-of-servicecredentials"></a>\<issuedTokenAuthentication> of \<serviceCredentials>
+# <a name="issuedtokenauthentication-of-servicecredentials"></a>\<serviceCredentials > 的\<n >
 指定發行為服務認證的自訂權杖。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<serviceCredentials>  
 \<issuedTokenAuthentication>  
   
@@ -46,7 +46,7 @@ ms.locfileid: "61756711"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`allowedAudienceUris`|取得目標 URI 的集合，<xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖會以其為目標，這樣該 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 執行個體才會將其視為有效。 如需使用這個屬性的詳細資訊，請參閱 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>。|  
 |`allowUntrustedRsaIssuers`|布林值，指定是否允許使用未受信任的 RSA 憑證簽發者。<br /><br /> 憑證是由憑證授權單位 (CA) 簽署，以確認真實性。 未受信任的簽發者，是指未指定為可信任進行簽署憑證的 CA。|  
@@ -54,7 +54,7 @@ ms.locfileid: "61756711"
 |`certificateValidationMode`|設定憑證驗證模式。 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 的其中一個有效值。 如果設定為 `Custom`，也必須提供 `customCertificateValidator`。 預設為 `ChainTrust`。|  
 |`customCertificateValidatorType`|選擇性字串。 用來驗證自訂型別的型別和組件。 當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。|  
 |`revocationMode`|設定撤銷模式，這個模式會指定是否進行撤銷檢查，並且指定以線上或離線的方式執行。 此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>。|  
-|`samlSerializer`|選用性字串屬性，指定用於服務認證之 SamlSerializer 的型別。 預設為空字串。|  
+|`samlSerializer`|選用性字串屬性，指定用於服務認證之 SamlSerializer 的型別。 預設值是空字串。|  
 |`trustedStoreLocation`|選擇性列舉。 兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -67,12 +67,12 @@ ms.locfileid: "61756711"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。|  
+|[\<serviceCredentials>](servicecredentials.md)|指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。|  
   
 ## <a name="remarks"></a>備註  
- 發行之權杖的情況有三個階段。 在第一個階段中，嘗試存取服務的用戶端指*安全權杖服務*。 此安全權杖服務接著會驗證用戶端，隨後並對用戶端發出權杖，通常是安全性判斷提示標記語言 (SAML) 權杖。 用戶端接著會以權杖傳回服務。 此服務會檢查資料的權杖，使服務能夠驗證權杖，因此也能夠驗證用戶端。 若要驗證權杖，安全權杖服務所使用的憑證必須讓服務知道。  
+ 發行之權杖的情況有三個階段。 在第一個階段中, 嘗試存取服務的用戶端稱為「*安全權杖服務*」。 此安全權杖服務接著會驗證用戶端，隨後並對用戶端發出權杖，通常是安全性判斷提示標記語言 (SAML) 權杖。 用戶端接著會以權杖傳回服務。 此服務會檢查資料的權杖，使服務能夠驗證權杖，因此也能夠驗證用戶端。 若要驗證權杖，安全權杖服務所使用的憑證必須讓服務知道。  
   
- 這個項目是任何此類安全權杖服務憑證的存放庫。 若要新增的憑證，請使用[ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)。 插入[\<新增 >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)為每個憑證，如下列範例所示。  
+ 這個項目是任何此類安全權杖服務憑證的存放庫。 若要新增憑證, 請使用[ \<knownCertificates >](knowncertificates.md)。 為每個憑證插入「 [新增>,如下列範例所示。\< ](add-of-knowncertificates.md)  
   
 ```xml  
 <issuedTokenAuthentication>
@@ -87,7 +87,7 @@ ms.locfileid: "61756711"
   
  根據預設，必須從安全權杖服務取得憑證。 這些「已知的」憑證可確保只有合法的用戶端可以存取服務。  
   
- 如需有關使用這個組態項的詳細資訊，請參閱[How to:Federation Service 上設定認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
+ 如需使用此設定元素的詳細資訊, [請參閱如何:在同盟服務](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)上設定認證。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -98,5 +98,5 @@ ms.locfileid: "61756711"
 - <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [如何：Federation Service 上設定認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [如何：在同盟服務上設定認證](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

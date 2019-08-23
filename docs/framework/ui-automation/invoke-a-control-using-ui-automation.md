@@ -9,16 +9,16 @@ helpviewer_keywords:
 - UI Automation, invoking controls
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
-ms.openlocfilehash: 19087cfaa22d166017bcf4e3ce5e6caf73ae5fe5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f17f3ad25f137bbf8d7cf88b43cc52dfdeeb3fd4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624557"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923729"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>使用 UI 自動化叫用控制項
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本主題示範如何執行下列工作：  
   
@@ -40,4 +40,4 @@ ms.locfileid: "64624557"
   
 ## <a name="see-also"></a>另請參閱
 
-- [InvokePattern、 ExpandCollapsePattern 和 TogglePattern 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+- [InvokePattern、ExpandCollapsePattern 和 TogglePattern 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

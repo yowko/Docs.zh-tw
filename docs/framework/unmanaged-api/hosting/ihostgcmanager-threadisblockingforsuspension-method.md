@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0c59d9f5abb200b17d3c46915e73fd3b9e9c8fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb78026f875c18a557951108518c9280f5eb567d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780584"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937672"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>IHostGCManager::ThreadIsBlockingForSuspension 方法
-主應用程式在進行方法呼叫的執行緒即將封鎖記憶體回收。  
+通知主機, 方法呼叫的來源執行緒即將封鎖進行垃圾收集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,25 +37,25 @@ HRESULT ThreadIsBlockingForSuspension ();
   
 |HRESULT|說明|  
 |-------------|-----------------|  
-|S_OK|`ThreadIsBlockingForSuspension` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|`ThreadIsBlockingForSuspension`已成功傳回。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時, CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- CLR 通常會呼叫`ThreadIsBlockForSuspension`方法以準備進行回收，若要讓主應用程式有機會重新排程未受管理的工作的執行緒。  
+ CLR 通常會呼叫`ThreadIsBlockForSuspension`方法來準備垃圾收集, 讓主機有機會重新排程未受管理工作的執行緒。  
   
 > [!IMPORTANT]
->  主應用程式可以重新排程工作只有在呼叫之後`ThreadIsBlockingForSuspension`。 在執行階段會呼叫後[SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)，主機必須重新排程工作。  
+> 只有在呼叫`ThreadIsBlockingForSuspension`之後, 主機才可以重新排定工作。 在執行時間呼叫[SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)之後, 主機不得重新排定工作。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

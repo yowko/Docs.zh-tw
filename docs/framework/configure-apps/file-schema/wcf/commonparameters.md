@@ -2,20 +2,20 @@
 title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: b9ab4e8ca5a71d54a80d17322b61c83d41af2b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a92a81062e92f832be78af2bfd75270390eaac3e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919485"
 ---
 # <a name="commonparameters"></a>\<commonParameters>
 代表參數集合，這些參數可跨多項服務全域使用。 這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<workflowRuntime>  
 \<commonParameters>  
   
@@ -38,21 +38,21 @@ ms.locfileid: "61673585"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|將服務所使用的一般名稱/值組參數加入至集合。|  
+|[\<add>](add-of-commonparameters.md)|將服務所使用的一般名稱/值組參數加入至集合。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<workflowRuntime>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|指定的執行個體設定<xref:System.Workflow.Runtime.WorkflowRuntime>用於裝載工作流程為基礎的 Windows Communication Foundation (WCF) 服務。|  
+|[\<workflowRuntime>](workflowruntime.md)|針對裝載以工作流程為<xref:System.Workflow.Runtime.WorkflowRuntime>基礎的 Windows Communication Foundation (WCF) 服務, 指定實例的設定。|  
   
 ## <a name="remarks"></a>備註  
  `<commonParameters>` 項目定義全球多種服務間使用的所有參數，例如在使用 `ConnectionString` 時的 <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>。  
   
 > [!NOTE]
->  如果 `ConnectionString` 區段中指定了 SQL 追蹤服務，則此 SQL 追蹤服務就不會統一使用 `<commonParameters>` 值。 這項服務的某些作業 (例如擷取 `StateMachineWorkflowInstance.StateHistory` 屬性 (Property)) 可能會失敗。 若要解決這個問題，請在組態區段中指定追蹤提供者的 `ConnectionString` 屬性 (Attribute)，如下列範例所示。  
+> 如果 `ConnectionString` 區段中指定了 SQL 追蹤服務，則此 SQL 追蹤服務就不會統一使用 `<commonParameters>` 值。 這項服務的某些作業 (例如擷取 `StateMachineWorkflowInstance.StateHistory` 屬性 (Property)) 可能會失敗。 若要解決這個問題，請在組態區段中指定追蹤提供者的 `ConnectionString` 屬性 (Attribute)，如下列範例所示。  
   
  `<add`  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61673585"
 </workflowRuntime>
 ```  
   
- 請注意，`EnableRetries`參數可以設定在全域層級 (如中所示*CommonParameters*一節) 或針對個別支援的服務`EnableRetries`(如中所示*Services*一節)。  
+ 請注意, `EnableRetries`您可以在全域層級 (如*CommonParameters*一節所示), 或針對支援`EnableRetries`的個別服務 (如 [*服務*] 區段中所示) 設定參數。  
   
  下列範例程式碼會示範如何以程式設計方式變更常見的參數。  
   
@@ -91,7 +91,7 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- 如需使用組態檔來控制行為的詳細資訊<xref:System.Workflow.Runtime.WorkflowRuntime>物件的 Windows Workflow Foundation 主應用程式，請參閱[工作流程組態檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
+ 如需使用設定檔控制 Windows Workflow Foundation 主應用程式之<xref:System.Workflow.Runtime.WorkflowRuntime>物件行為的詳細資訊, 請參閱[工作流程設定檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
   
 ## <a name="example"></a>範例  
   
@@ -111,5 +111,5 @@ config.Save();
 - <xref:System.Workflow.Runtime.WorkflowRuntime>
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
-- [工作流程組態檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
+- [工作流程設定檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+- [\<add>](add-of-commonparameters.md)

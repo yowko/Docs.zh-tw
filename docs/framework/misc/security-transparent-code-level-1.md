@@ -1,5 +1,5 @@
 ---
-title: 安全性透明程式碼，層級 1
+title: 安全性透明的程式碼, 層級1
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fd594ef1fea4c8723965ad483a5a124892bcf00
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487868"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910714"
 ---
-# <a name="security-transparent-code-level-1"></a>安全性透明程式碼，層級 1
+# <a name="security-transparent-code-level-1"></a>安全性透明的程式碼, 層級1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 從.NET Framework 4 開始，您可以使用[層級 2 透明度](../../../docs/framework/misc/security-transparent-code-level-2.md)。 不過，以便您可以識別必須以舊版安全性規則執行的舊版程式碼已保留層級 1 透明度。  
+ 透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 從 .NET Framework 4 開始, 您可以使用[層級2透明度](../../../docs/framework/misc/security-transparent-code-level-2.md)。 不過, 層級1透明度已保留, 因此您可以識別必須以先前的安全性規則執行的舊版程式碼。  
   
 > [!IMPORTANT]
->  您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 開發適用於.NET Framework 4 的程式碼，請一律使用層級 2 透明度。  
+> 您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 針對 .NET Framework 4 所開發的程式碼, 請一律使用層級2透明度。  
   
- 此主題包括下列章節：  
+ 本主題包含下列幾節：  
   
-- [層級 1 透明度模型](#the_level_1_transparency_model)  
+- [層級1透明度模型](#the_level_1_transparency_model)  
   
 - [透明度屬性](#transparency_attributes)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66487868"
  您必須明確套用透明度。 處理資料操作與邏輯的大部分程式碼通常可以標記為安全性透明，而執行權限提高的小部分程式碼則可標記為安全性關鍵或安全性安全關鍵。  
   
 > [!IMPORTANT]
->  層級 1 透明度受限於組件範圍；這在組件之間沒有強制執行。 層級 1 透明度主要用於 Microsoft 內部進行安全性稽核。 層級 1 組件內的安全性關鍵類型和成員可以由其他組件中的安全性透明程式碼存取。 請務必在所有層級 1 安全性關鍵類型和成員中執行完全信任的連結要求。 安全性安全關鍵類型和成員還必須確認，對於由類型或成員所存取的受保護資源，呼叫端必須擁有權限。  
+> 層級 1 透明度受限於組件範圍；這在組件之間沒有強制執行。 層級 1 透明度主要用於 Microsoft 內部進行安全性稽核。 層級 1 組件內的安全性關鍵類型和成員可以由其他組件中的安全性透明程式碼存取。 請務必在所有層級 1 安全性關鍵類型和成員中執行完全信任的連結要求。 安全性安全關鍵類型和成員還必須確認，對於由類型或成員所存取的受保護資源，呼叫端必須擁有權限。  
   
  為了與舊版 .NET Framework 回溯相容，會將所有未以透明度屬性標註的成員視為安全性安全關鍵。 會將所有未標註的類型都視為透明。 沒有任何靜態分析規則可以用來驗證透明度。 因此，您可能需要在執行階段偵錯透明度錯誤。  
   
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [安全性透明的程式碼, 層級2](../../../docs/framework/misc/security-transparent-code-level-2.md)
 - [安全性變更](../../../docs/framework/security/security-changes.md)

@@ -2,12 +2,12 @@
 title: MULTISET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-ms.openlocfilehash: 44e411b8ae2f43bf3a729ac091ffd1eb4c462c63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb676feeb168e1fb184f3869a18e138bff34211b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760489"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929348"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (Entity SQL)
 從值清單建立多重集的執行個體。 MULTISET 建構函式 (Constructor) 中的所有值都必須是相容型別 `T`。 不允許空的多重集建構函式。  
@@ -25,10 +25,10 @@ or
  任何有效的值清單。  
   
 ## <a name="return-value"></a>傳回值  
- 集合的型別 MULTISET\<T >。  
+ 型別多重\<集 T > 的集合。  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供三種建構函式：資料列建構函式、物件建構函式和多重集 (或集合) 建構函式。 如需詳細資訊，請參閱 <<c0> [ 建構類型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供三種建構函式：資料列建構函式、物件建構函式和多重集 (或集合) 建構函式。 如需詳細資訊, 請參閱[建立類型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  
   
  多重集建構函式會從值清單建立多重集的例項。 該建構函式中的所有值都必須是相容型別。  
   
@@ -39,12 +39,12 @@ or
  `{1, 2, 3}`  
   
 > [!NOTE]
->  包裝多重集有單一多重集項目; 時，才支援巢狀多重集常值比方說， `{{1, 2, 3}}`。 在包裝多重集有多個多重集項目 (例如 `{{1, 2}, {3, 4}}`) 的情況下，並不支援巢狀多重集常值。  
+> 只有在包裝多重集具有單一多重集元素時, 才支援嵌套的多重集常值。例如, `{{1, 2, 3}}`。 在包裝多重集有多個多重集項目 (例如 `{{1, 2}, {3, 4}}`) 的情況下，並不支援巢狀多重集常值。  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 MULTISET 運算子，從值清單建立多重集的例項。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [遵循 how to:執行可傳回 StructuralType 結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   

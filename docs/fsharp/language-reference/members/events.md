@@ -2,12 +2,12 @@
 title: 事件
 description: 瞭解事件F#如何讓函式呼叫與使用者動作產生關聯, 這在 GUI 程式設計中很重要。
 ms.date: 05/16/2016
-ms.openlocfilehash: eed2caff569638ea5aa972a000dfa71a3b64f60b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627574"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917283"
 ---
 # <a name="events"></a>事件
 
@@ -175,7 +175,7 @@ Application.Run(appForm)
 ## <a name="see-also"></a>另請參閱
 
 - [成員](index.md)
-- [處理和引發事件](../../../../docs/standard/events/index.md)
+- [處理和引發事件](../../../standard/events/index.md)
 - [Lambda 運算式:`fun` 關鍵字](../functions/lambda-expressions-the-fun-keyword.md)
 - [控制事件模組](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control。事件&#60;t&#62;類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)

@@ -2,18 +2,18 @@
 title: 範例 XML 文件 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: d8567d8129dd7ba32e847b8c1e28ffc992d10b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c50abcc6ef4c23bcd78c5ab0e5e5deb4a369b164
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787136"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916534"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>範例 XML 文件 (LINQ to XML)
 下列範例檔案用於整個 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的程式碼範例和程式碼片段。  
   
 > [!NOTE]
->  此處所描述的範例公司、組織、產品、網域名稱、電子郵件地址、商標、人員、地點與事件均屬虛構。 並非影射任何真實的公司、組織、產品、網域名稱、電子郵件地址、商標、人員、地點或事件。  
+> 此處所描述的範例公司、組織、產品、網域名稱、電子郵件地址、商標、人員、地點與事件均屬虛構。 並非影射任何真實的公司、組織、產品、網域名稱、電子郵件地址、商標、人員、地點或事件。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -35,4 +35,4 @@ ms.locfileid: "61787136"
   
 ## <a name="see-also"></a>另請參閱
 
-- [程式設計手冊 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [程式設計指南 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

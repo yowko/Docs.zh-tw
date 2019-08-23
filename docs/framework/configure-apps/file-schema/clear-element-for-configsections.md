@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e79def513637937262d00b0edb1b0f7676fd120b
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: c06fca8b83638fb47bedb21863cb9b200cd211f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300796"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927735"
 ---
 # <a name="clear-element-for-configsections"></a>\<清除>項目\<configSections >
 
 清除所有先前定義的區段和區段群組。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>語法
@@ -34,27 +34,28 @@ ms.locfileid: "66300796"
 
 |           | 描述 |
 | --------- | ----------- |
-| **name**  | 必要屬性。<br><br>指定要移除的區段群組之區段的名稱。 |
+| **name**  | 必要屬性。<br><br>指定要移除之區段或區段群組的名稱。 |
 
 ## <a name="parent-element"></a>父項目
 
-|     | 描述 |
+|     | 說明 |
 | --- | ----------- |
-| [ **\<configSections >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
+| [ **configSections>\<** 元素](configsections-element-for-configuration.md) | 包含設定區段和命名空間宣告。 |
 
 ## <a name="child-elements"></a>子元素
 
-None
+無
 
 ## <a name="remarks"></a>備註
 
-**\<清除>** 項目會從您先前已定義在目前的組態檔中或在組態檔階層架構中較高層級的應用程式移除所有區段和區段群組。
+**
+          \<清除>** 項目會從您先前已定義在目前的組態檔中或在組態檔階層架構中較高層級的應用程式移除所有區段和區段群組。
 
 ## <a name="example"></a>範例
 
 此範例中定義的機器組態檔案和應用程式組態檔，並示範如何使用 **\<清除>** 清除區段中預先定義的應用程式組態檔中的項目電腦組態檔。
 
-下列的機器組態檔案程式碼會宣告兩個區段 **\<sampleSection >** 並 **\<anotherSampleSection >** ，應用程式之前所讀取的來源組態檔：
+下列電腦設定檔程式碼會宣告兩個區段, 分別 **\<是 sampleSection >** 和 **\<anotherSampleSection >** , 會在應用程式佈建檔案之前讀取:
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +72,7 @@ None
 </configuration>
 ```
 
-下列應用程式組態檔程式碼會清除所有先前宣告的區段。 應用程式無法使用，或擷取在電腦組態檔中所宣告的各區段的設定。 不過，它可以在這裡使用的設定 **\<anotherSection>** 因為它的來源之後 **\<清除>** 項目。
+下列應用程式佈建檔程式碼會清除所有先前宣告的區段。 應用程式無法在電腦設定檔中宣告的任一區段中使用或抓取設定。 不過，它可以在這裡使用的設定 **\<anotherSection>** 因為它的來源之後 **\<清除>** 項目。
 
 ```xml
 <!-- Application configuration file -->
@@ -89,8 +90,8 @@ None
 
 ## <a name="configuration-file"></a>組態檔
 
-這個項目可用的應用程式組態檔中，電腦組態檔 (*Machine.config*)，以及*Web.config*不在應用程式的目錄層級的檔案。
+此元素可用於應用程式佈建檔案、電腦設定檔案 (machine.config), 以及不在應用程式目錄層級的 web.config 檔案。
 
 ## <a name="see-also"></a>另請參閱
 
-- [適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的設定檔架構](index.md)

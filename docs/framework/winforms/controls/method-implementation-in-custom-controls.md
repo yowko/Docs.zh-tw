@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 867bf97ea13654de6f9c0209c64b9320824f9665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931744"
 ---
 # <a name="method-implementation-in-custom-controls"></a>自訂控制項中的方法實作
 在控制項中實作方法的方式，與在其他任何元件中實作方法的方式相同。  
@@ -48,7 +48,7 @@ public int ConvertMatterToEnergy(int matter)
  若要允許控制項的使用者提供不同的參數組合給方法，請使用明確的資料類型，為方法提供多個多載。 請避免建立宣告有可能會包含任何資料類型之 `As Object` 的參數，因為這可能會導致測試時無法檢出的錯誤。  
   
 > [!NOTE]
->  常見於語言執行時期的通用資料為 `Object`，而不是 `Variant`。 `Variant` 已從語言中移除。  
+> 常見於語言執行時期的通用資料為 `Object`，而不是 `Variant`。 `Variant` 已從語言中移除。  
   
  例如假設 `Spin` 控制項的 `Widget` 方法可能會允許直接指定微調的方向及速度，或指定其他角動量要被吸收的 `Widget` 物件：  
   

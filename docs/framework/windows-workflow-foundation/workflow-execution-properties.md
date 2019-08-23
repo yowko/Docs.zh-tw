@@ -2,12 +2,12 @@
 title: 工作流程執行屬性
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669377"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913602"
 ---
 # <a name="workflow-execution-properties"></a>工作流程執行屬性
 CLR 會透過執行緒區域儲存區 (TLS) 維護每個執行緒的執行內容。 這個執行內容會管理眾所周知的執行緒屬性，例如執行緒識別、環境異動和目前的權限集，以及使用者定義的執行緒屬性，例如具名位置。  
@@ -157,7 +157,7 @@ End default text.
 ```  
   
 > [!NOTE]
->  雖然未顯示在上述輸出中，但主控台視窗中的每一行文字均會以指定的色彩顯示。  
+> 雖然未顯示在上述輸出中，但主控台視窗中的每一行文字均會以指定的色彩顯示。  
   
  自訂活動作者可以使用工作流程執行屬性，而這些屬性也可以提供活動的處理機制 (例如 <xref:System.ServiceModel.Activities.CorrelationScope> 和 <xref:System.Activities.Statements.TransactionScope> 活動)。  
   

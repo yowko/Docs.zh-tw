@@ -2,20 +2,20 @@
 title: <persistenceProvider>
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: dc8dea0ddd1ea074c08952e3e2ebfef2d12f7183
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fc9e1332effc51e183a84cf2d3653357277d2ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783288"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934145"
 ---
 # <a name="persistenceprovider"></a>\<persistenceProvider>
 指定要使用的持續性提供者實作型別，以及持續性作業所使用的逾時。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<persistenceProvider>  
   
 ## <a name="syntax"></a>語法  
@@ -32,17 +32,17 @@ ms.locfileid: "61783288"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|persistenceOperationTimeout|<xref:System.TimeSpan> 值，此值會指定用於持續性作業的逾時。 預設值是"00: 00:30"。|  
-|類型|字串，指定要使用的持續性提供者處理站之型別。|  
+|persistenceOperationTimeout|<xref:System.TimeSpan> 值，此值會指定用於持續性作業的逾時。 預設值為 "00:00:30"。|  
+|型別|字串，指定要使用的持續性提供者處理站之型別。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
  這個項目會指定持續性提供者，該提供者會用來序列化 WCF 服務的狀態。 它應該搭配在 HTTP 標頭中傳遞狀態資訊的 `wsHttpContextBinding` 使用。  

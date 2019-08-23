@@ -5,22 +5,22 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 405199ff0652303fa5ccae18770307ea10e38b52
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05738fae72d11e66b28acdc22fa1a8745ca7a083
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647221"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932707"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 自動化用戶端中的快取
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本主題將介紹 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性和控制項模式的快取。  
   
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，快取表示預先提取資料。 該資料即可供存取，而不需進一步的跨處理序通訊。 使用者介面自動化用戶端應用程式通常會使用快取來大量擷取屬性和控制項模式。 接著，就會視需要從快取中擷取資訊。 應用程式通常會為了回應 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中有項目已變更的事件，而定期更新快取。  
   
- 快取的優點是與 Windows Presentation Foundation (WPF) 控制項和具有伺服器端 UI 自動化提供者的自訂控制項最為明顯。 在存取用戶端提供者 (如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項的預設提供者) 時，優勢較不明顯。  
+ 快取的優點對於具有伺服器端使用者介面自動化提供者的 Windows Presentation Foundation (WPF) 控制項和自訂控制項最為明顯。 在存取用戶端提供者 (如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項的預設提供者) 時，優勢較不明顯。  
   
  下列情況會發生快取：當應用程式啟動 <xref:System.Windows.Automation.CacheRequest> ，然後使用任何會傳回 <xref:System.Windows.Automation.AutomationElement>的方法或屬性時；例如 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 <xref:System.Windows.Automation.TreeWalker> 類別的方法例外；僅有在指定 <xref:System.Windows.Automation.CacheRequest> 為參數 (例如 <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>) 時會完成快取。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "64647221"
 ## <a name="activating-the-cacherequest"></a>啟動 CacheRequest  
  僅有在目前執行緒的 <xref:System.Windows.Automation.AutomationElement> 為作用中時擷取 <xref:System.Windows.Automation.CacheRequest> 物件才會執行快取。 有兩個方法可以啟動 <xref:System.Windows.Automation.CacheRequest>。  
   
- 一般方式是呼叫 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。 此方法會傳回實作 <xref:System.IDisposable>的物件。 只要 <xref:System.IDisposable> 物件存在，要求就會保持作用中狀態。 若要控制物件的存留期最簡單的方式是在呼叫內`using`(C#) 或`Using`(Visual Basic) 的區塊。 這可確保該要求可從堆疊推出，即使引發例外狀況亦同。  
+ 一般方式是呼叫 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。 此方法會傳回實作 <xref:System.IDisposable>的物件。 只要 <xref:System.IDisposable> 物件存在，要求就會保持作用中狀態。 控制物件存留期最簡單的方式, 就是將呼叫放在`using` (C#) 或`Using` (Visual Basic) 區塊內。 這可確保該要求可從堆疊推出，即使引發例外狀況亦同。  
   
  另一種方法是呼叫 <xref:System.Windows.Automation.CacheRequest.Push%2A>，這種方法在您要將快取要求進行巢狀處理時相當有用。 這會將要求放置在堆疊上，並且啟動要求。 要求會保持作用中狀態，直到 <xref:System.Windows.Automation.CacheRequest.Pop%2A>將要求從堆疊移除為止。 如果另一個要求被推入到堆疊，要求則會暫時變成非作用中，只有堆疊最上層的要求仍然保持作用中的狀態。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "64647221"
  如果 <xref:System.Windows.Automation.TreeScope.Element> 已包含在快取要求的範圍內，隨後即可從任何子項目的 <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> 屬性取得要求的根項目。  
   
 > [!NOTE]
->  您無法快取要求之根項目的父代或祖系。  
+> 您無法快取要求之根項目的父代或祖系。  
   
 <a name="Updating_the_Cache"></a>   
 ## <a name="updating-the-cache"></a>更新快取  

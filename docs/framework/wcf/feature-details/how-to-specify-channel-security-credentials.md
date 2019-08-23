@@ -1,21 +1,21 @@
 ---
-title: HOW TO：指定通道安全性認證
+title: 作法：指定通道安全性認證
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d6131a7488d9932118a988095791dd06fd46c49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038866"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933453"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>HOW TO：指定通道安全性認證
-Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼叫 WCF 服務。 大部分的 WCF 服務要求用戶端指定用於驗證和授權的認證。 當從 WCF 用戶端呼叫 WCF 服務，您可以在 managed 程式碼或應用程式組態檔中指定這些認證。 當從 COM 應用程式呼叫 WCF 服務，您可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
+Windows Communication Foundation (WCF) 服務的標記可讓 COM 應用程式呼叫 WCF 服務。 大部分的 WCF 服務都需要用戶端指定認證以進行驗證和授權。 從 WCF 用戶端呼叫 WCF 服務時, 您可以在受控碼或應用程式佈建檔中指定這些認證。 從 COM 應用程式呼叫 WCF 服務時, 您可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是以 IDispatch 為基礎的介面，因此您無法在 Visual Studio 環境中使用 IntelliSense 功能。  
+> <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是以 IDispatch 為基礎的介面，因此您無法在 Visual Studio 環境中使用 IntelliSense 功能。  
   
- 這篇文章會使用 WCF 服務中定義[訊息安全性範例](../../../../docs/framework/wcf/samples/message-security-sample.md)。  
+ 本文將使用[訊息安全性範例](../../../../docs/framework/wcf/samples/message-security-sample.md)中定義的 WCF 服務。  
   
 ### <a name="to-specify-a-client-certificate"></a>若要指定用戶端憑證  
   
@@ -23,11 +23,11 @@ Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼
   
 2. 開啟「訊息安全性」專案。  
   
-3. 新增`[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]`至`ICalculator`介面定義。  
+3. 將`[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` 加入`ICalculator`至介面定義。  
   
-4. 新增`bindingNamespace="http://Microsoft.ServiceModel.Samples"`至服務的 App.config 中的端點標記。  
+4. 將`bindingNamespace="http://Microsoft.ServiceModel.Samples"`加入至服務的 app.config 中的端點標記。  
   
-5. 建置「訊息安全性範例」並執行 Service.exe。 使用 Internet Explorer 並瀏覽至服務的 URI (http://localhost:8000/ServiceModelSamples/Service)以確保服務正在運作。  
+5. 建置「訊息安全性範例」並執行 Service.exe。 使用 Internet Explorer 並流覽至服務的 URI (http://localhost:8000/ServiceModelSamples/Service) 以確保服務正常運作。  
   
 6. 開啟 Visual Basic 6.0，並建立新的標準 .exe 檔案。 將按鈕加入至表單中，然後按兩下這個按鈕，將下列程式碼加入至 Click 處理常式：  
   
@@ -57,10 +57,10 @@ Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼
     ```  
   
 > [!NOTE]
->  用戶端憑證必須在執行用戶端的電腦上受信任，這個呼叫才會有作用。  
+> 用戶端憑證必須在執行用戶端的電腦上受信任，這個呼叫才會有作用。  
   
 > [!NOTE]
->  如果 Moniker 的格式錯誤或服務無法使用，則呼叫 `GetObject` 時將會傳回「無效的語法」錯誤。 如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
+> 如果 Moniker 的格式錯誤或服務無法使用，則呼叫 `GetObject` 時將會傳回「無效的語法」錯誤。 如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
   
 ### <a name="to-specify-user-name-and-password"></a>若要指定使用者名稱和密碼  
   
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼
 4. 執行 Visual Basic 應用程式及驗證結果。 Visual Basic 應用程式將會顯示含有呼叫 Add(3, 4) 之結果的訊息方塊。  
   
     > [!NOTE]
-    >  在這個範例的服務 Moniker 中指定的繫結已經變更為 WSHttpBinding_ICalculator。 另請注意，您必須在對 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> 的呼叫中提供有效的使用者名稱和密碼。  
+    > 在這個範例的服務 Moniker 中指定的繫結已經變更為 WSHttpBinding_ICalculator。 另請注意，您必須在對 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> 的呼叫中提供有效的使用者名稱和密碼。  
   
 ### <a name="to-specify-windows-credentials"></a>若要指定 Windows 認證  
   
@@ -111,11 +111,11 @@ Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼
 3. 執行 Visual Basic 應用程式及驗證結果。 Visual Basic 應用程式將會顯示含有呼叫 Add(3, 4) 之結果的訊息方塊。  
   
     > [!NOTE]
-    >  您必須以有效值取代 "domain"、"userID" 和 "password"。  
+    > 您必須以有效值取代 "domain"、"userID" 和 "password"。  
   
 ### <a name="to-specify-an-issue-token"></a>指定發行權杖  
   
-1. 發行權杖僅適用於使用聯合安全性的應用程式。 如需聯合安全性的詳細資訊，請參閱[聯合與發行權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)並[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+1. 發行權杖僅適用於使用聯合安全性的應用程式。 如需聯合安全性的詳細資訊, 請參閱[同盟和發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)和[同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
      下列 Visual Basic 程式碼範例示範如何呼叫 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> 方法：  
   
@@ -134,7 +134,7 @@ Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼
 ## <a name="see-also"></a>另請參閱
 
 - [同盟](../../../../docs/framework/wcf/feature-details/federation.md)
-- [如何：Federation Service 上設定認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [如何：建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [如何：在同盟服務上設定認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [如何：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

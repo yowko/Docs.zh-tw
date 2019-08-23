@@ -2,18 +2,18 @@
 title: 基本範例
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d227b3ac64108901b8280ac7887adc30b0fab13e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002634"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915442"
 ---
 # <a name="basic-sample"></a>基本範例
 這個範例示範如何建立可探索的服務，以及如何搜尋和呼叫可探索的服務。 這個範例包含二個專案：服務和用戶端。
 
 > [!NOTE]
->  這個範例會在程式碼中實作探索。  如需在組態中實作探索的範例，請參閱 <<c0> [ 組態](../../../../docs/framework/wcf/samples/configuration-sample.md)。  
+> 這個範例會在程式碼中實作探索。  如需在設定中執行探索的範例, 請參閱[configuration](../../../../docs/framework/wcf/samples/configuration-sample.md)。  
   
 ## <a name="service"></a>服務  
  這是簡單的計算機服務實作。 與探索相關的程式碼位於 `Main` 中，其中 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 會加入至服務主機，並且加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，如下列程式碼所示。  
@@ -82,9 +82,9 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1. 這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 如需詳細資訊，請參閱 <<c0> [ 設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 如需詳細資訊, 請參閱設定[HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2. 使用 Visual Studio 2012，開啟 Basic.sln 並建置範例。  
+2. 使用 Visual Studio 2012, 開啟基本 .sln 並建立範例。  
   
 3. 執行 service.exe 應用程式。  
   
@@ -97,6 +97,6 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  

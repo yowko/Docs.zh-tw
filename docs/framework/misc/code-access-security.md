@@ -17,26 +17,26 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b16f169ca61485cf3031076d32178a9407aa54ff
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f7f089a4482173fd9697738c1643c33c05da4212
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487997"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910953"
 ---
 # <a name="code-access-security"></a>程式碼存取安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 現今高度連接的電腦系統，經常會暴露於源自各種可能未知來源的程式碼。 程式碼可以附加至電子郵件、 包含在文件，或透過網際網路下載。 不幸的是，許多電腦使用者都直接經歷過惡意行動程式碼的效應，包括病毒和蠕蟲，它們可能會損壞或摧毀資料，並造成時間和金錢上的損失。  
+ 現今高度連接的電腦系統，經常會暴露於源自各種可能未知來源的程式碼。 程式碼可以附加至電子郵件、包含在檔中, 或透過網際網路下載。 不幸的是，許多電腦使用者都直接經歷過惡意行動程式碼的效應，包括病毒和蠕蟲，它們可能會損壞或摧毀資料，並造成時間和金錢上的損失。  
   
  最常見的安全性機制是根據使用者的登入認證 (通常是密碼) 來提供權限給使用者，並限制使用者可以存取的資源 (通常是目錄和檔案)。 不過，這個方法無法解決幾個問題：使用者從許多來源取得程式碼，其中有些可能不可靠；程式碼可能包含 Bug 或安全性弱點，而被惡意程式碼利用；而程式碼有時會做使用者不知道它會做的事情。 如此一來，當謹慎且值得信賴的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。 大部分作業系統安全性機制都會要求每個程式碼片段必須受到完全信任才能執行，但是網頁上的指令碼可能除外。 因此，還是需要可廣泛套用的安全性機制，讓源自於一部電腦系統的程式碼，在另一個系統上執行時可以受到保護，即使系統之間沒有信任關係也一樣。  
   
  .NET Framework 提供一種名為程式碼存取安全性的安全性機制，以協助保護電腦系統免於惡意行動程式碼的傷害、允許來自未知來源的程式碼在受到防護的情況下執行，並協助防止受信任的程式碼有意或無意地危及安全性。 程式碼存取安全性依程式碼的來源和程式碼本身的其他部分，分別給與程式碼不同程度的信任等級。 程式碼存取安全性也會在程式碼上強制執行各種信任層級，這會將必須完全信任才能執行的程式碼數量降到最低。 使用程式碼存取安全性可以減少您的程式碼被惡意或充滿錯誤的程式碼誤用的可能性。 它可減少您的負擔，因為您可以指定一組允許您的程式碼執行的作業。 程式碼存取安全性也有助於減少因為您的程式碼中的安全性弱點而導致的損害。  
   
 > [!NOTE]
->  在.NET Framework 4 中的程式碼存取安全性已對重大變更。 最值得注意的變更已[安全性透明度](../../../docs/framework/misc/security-transparent-code.md)，但也有其他會影響程式碼存取安全性的重大變更。 如需這些變更的資訊，請參閱 <<c0> [ 安全性變更](../../../docs/framework/security/security-changes.md)。  
+> .NET Framework 4 中的代碼啟用安全性已進行重大變更。 最值得注意的變更是[安全性透明度](../../../docs/framework/misc/security-transparent-code.md), 但也有其他會影響代碼啟用安全性的重大變更。 如需這些變更的相關資訊, 請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
   
- 程式碼存取安全性主要會影響程式庫程式碼和部分信任的應用程式。 程式庫開發人員必須保護其程式碼，不要受到部分信任應用程式的未經授權存取。 部分信任的應用程式是從外部來源 (例如網際網路) 載入的應用程式。 安裝在桌面上或近端內部網路上的應用程式是以完全信任執行。 完全信任應用程式不會影響程式碼存取安全性除非被標示為[安全性透明](../../../docs/framework/misc/security-transparent-code.md)，因為它們是完全受信任。 完全信任應用程式的唯一限制是，標示 <xref:System.Security.SecurityTransparentAttribute> 屬性的應用程式不能呼叫標示 <xref:System.Security.SecurityCriticalAttribute> 屬性的程式碼。 部分信任的應用程式必須在沙箱 (例如，在 Internet Explorer) 中執行，這樣才能套用程式碼存取安全性。 如果您從網際網路下載應用程式，並嘗試從您的桌面執行，您會收到<xref:System.NotSupportedException>訊息：「 嘗試載入組件從網路位置，這導致要沙箱化，在舊版的.NET Framework 組件。 這一版 .NET Framework 預設不會啟用 CAS 原則，所以此載入可能有危險。」 如果您確定可以信任應用程式時，您可以讓它使用可執行以完全信任[ \<loadFromRemoteSources > 項目](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)。 如需在沙箱中執行的應用程式的資訊，請參閱[How to:在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。  
+ 程式碼存取安全性主要會影響程式庫程式碼和部分信任的應用程式。 程式庫開發人員必須保護其程式碼，不要受到部分信任應用程式的未經授權存取。 部分信任的應用程式是從外部來源 (例如網際網路) 載入的應用程式。 安裝在桌面上或近端內部網路上的應用程式是以完全信任執行。 完全信任的應用程式除非被標示為[安全性透明](../../../docs/framework/misc/security-transparent-code.md), 否則不會受到代碼啟用安全性影響, 因為它們是完全受信任的。 完全信任應用程式的唯一限制是，標示 <xref:System.Security.SecurityTransparentAttribute> 屬性的應用程式不能呼叫標示 <xref:System.Security.SecurityCriticalAttribute> 屬性的程式碼。 部分信任的應用程式必須在沙箱 (例如，在 Internet Explorer) 中執行，這樣才能套用程式碼存取安全性。 如果您從網際網路下載應用程式, 並嘗試從您的桌面執行它, 您會收到<xref:System.NotSupportedException>含有下列訊息的:「嘗試從網路位置載入元件, 這會導致元件在舊版的 .NET Framework 中進行沙箱處理。 這一版 .NET Framework 預設不會啟用 CAS 原則，所以此載入可能有危險。」 如果您確定可以信任應用程式, 您可以使用[ \<loadFromRemoteSources >](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)專案, 讓它以完全信任的方式執行。 如需在沙箱中執行應用程式的詳細資訊[, 請參閱如何:在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。  
   
  以 Common Language Runtime 為目標的所有 Managed 程式碼，皆受益於程式碼存取安全性，即使該程式碼沒有進行單一程式碼存取安全性呼叫也一樣。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../docs/framework/misc/code-access-security-basics.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66487997"
   
  下圖顯示當組件 A4 中的方法要求其呼叫端擁有權限 P 時，堆疊查核行程所造成的結果。  
   
- ![程式碼存取安全性](../../../docs/framework/misc/media/slide-10a.gif "slide_10a")  
+ ![代碼啟用安全性](../../../docs/framework/misc/media/slide-10a.gif "slide_10a")  
 安全性堆疊查核行程  
   
 <a name="related_topics"></a>   
@@ -67,8 +67,8 @@ ms.locfileid: "66487997"
 |標題|描述|  
 |-----------|-----------------|  
 |[程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)|說明程式碼存取安全性及其最常見的用法。|  
-|[安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|描述.NET Framework 4 中的安全性透明度模型。|  
+|[安全性透明的程式碼, 層級2](../../../docs/framework/misc/security-transparent-code-level-2.md)|描述 .NET Framework 4 中的安全性透明度模型。|  
 |[從部分受信任程式碼使用程式庫](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|說明如何讓程式庫能夠與 Unmanaged 程式碼搭配使用，以及如何使用來自 Unmanaged 程式碼的程式庫。|  
-|[重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)|提供 .NET Framework 安全性系統中所使用之許多主要詞彙和概念的概觀。|  
-|[以角色為基礎的安全性](../../../docs/standard/security/role-based-security.md)|說明如何依據角色來納入安全性。|  
-|[The signature is valid](../../../docs/standard/security/cryptographic-services.md)|說明如何將密碼編譯納入您的應用程式中。|
+|[重要的安全性概念](../../standard/security/key-security-concepts.md)|提供 .NET Framework 安全性系統中所使用之許多主要詞彙和概念的概觀。|  
+|[以角色為基礎的安全性](../../standard/security/role-based-security.md)|說明如何依據角色來納入安全性。|  
+|[The signature is valid](../../standard/security/cryptographic-services.md)|說明如何將密碼編譯納入您的應用程式中。|

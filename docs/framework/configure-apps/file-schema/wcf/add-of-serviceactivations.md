@@ -2,16 +2,16 @@
 title: <add> 的 <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929773fcb6b6a3ee5c75aa970147277d9dbe7b45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701459"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920018"
 ---
-# <a name="add-of-serviceactivations"></a>\<add> of \<serviceActivations>
+# <a name="add-of-serviceactivations"></a>\<新增 serviceActivations > \<的 >
 
-可讓您定義虛擬服務啟用設定對應至您的 Windows Communication Foundation (WCF) 服務類型組態項目。 如此一來，不需 .svc 檔案也能啟動裝載於 WAS/IIS 中的服務。
+一種 configuration 專案, 可讓您定義虛擬服務啟用設定, 以對應至您的 Windows Communication Foundation (WCF) 服務類型。 如此一來，不需 .svc 檔案也能啟動裝載於 WAS/IIS 中的服務。
 
 \<system.ServiceModel>\
 \<serviceHostingEnvironment>
@@ -45,9 +45,9 @@ ms.locfileid: "61701459"
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|描述|
+|項目|說明|
 |-------------|-----------------|
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|描述啟動設定的組態區段。|
+|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|描述啟動設定的組態區段。|
 
 ## <a name="remarks"></a>備註
 
@@ -67,9 +67,9 @@ ms.locfileid: "61701459"
 
 使用這個組態時，您不需要使用 .svc 檔案也可以啟動 GreetingService。
 
-請注意，`<serviceHostingEnvironment>` 是應用程式層級的組態。 您必須將包含該組態的 `web.config` 置於虛擬應用程式的根之下。 颾魤 ㄛ`serviceHostingEnvironment`是 machineToApplication 可繼承的區段。 如果在電腦的根中註冊單一服務，則應用程式中的每個服務都會繼承這個服務。
+請注意，`<serviceHostingEnvironment>` 是應用程式層級的組態。 您必須將包含該組態的 `web.config` 置於虛擬應用程式的根之下。 此外, `serviceHostingEnvironment`是可繼承的 machineToApplication 區段。 如果在電腦的根中註冊單一服務，則應用程式中的每個服務都會繼承這個服務。
 
-以組態為主的啟動支援透過 HTTP 和非 HTTP 通訊協定啟動。 它需要中 relativeAddress，也就是.svc、.xoml 或.xamlx。 您可以將自己的擴充對應至已知的 buildProvider，這樣您就可以透過任何擴充啟動服務。 發生衝突時，`<serviceActivations>` 區段會覆寫 .svc 註冊。
+以組態為主的啟動支援透過 HTTP 和非 HTTP 通訊協定啟動。 它需要 relativeAddress 中的延伸模組, 也就是 .svc、. xoml 或. service1.xamlx。 您可以將自己的擴充對應至已知的 buildProvider，這樣您就可以透過任何擴充啟動服務。 發生衝突時，`<serviceActivations>` 區段會覆寫 .svc 註冊。
 
 ## <a name="see-also"></a>另請參閱
 

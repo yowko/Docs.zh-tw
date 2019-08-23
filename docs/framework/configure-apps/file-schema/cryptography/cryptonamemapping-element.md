@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: c2652ac73c1d55f09a1f8511603003dc6d7291f9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 87b24595f5013ad3b981256fd97bc758863c600b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659635"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921105"
 ---
 # <a name="cryptonamemapping-element"></a>\<cryptoNameMapping > 元素
 包含易記名稱的類別對應。  
@@ -38,7 +38,7 @@ ms.locfileid: "69659635"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`cryptoClasses`|包含密碼編譯類別清單，其具有 **\<nameEntry>** 項目中易記名稱的對應。|  
 |`nameEntry`|將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。|  
@@ -78,5 +78,5 @@ ms.locfileid: "69659635"
 
 - [組態檔結構描述](../index.md)
 - [密碼編譯設定結構描述](index.md)
-- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../../standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../configure-cryptography-classes.md)

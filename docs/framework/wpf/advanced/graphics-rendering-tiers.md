@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: fa59621aaf73922af957961af5401170c2872aa9
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972350"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937524"
 ---
 # <a name="graphics-rendering-tiers"></a>圖形轉譯層
 轉譯層定義執行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式之裝置的圖形硬體及效能層級。  
@@ -48,7 +48,7 @@ ms.locfileid: "68972350"
 ### <a name="rendering-tier-1-and-rendering-tier-2"></a>轉譯層 1 和轉譯層 2  
   
 > [!NOTE]
->  從 .NET Framework 4 開始, 轉譯層1已重新定義為僅包含支援 DirectX 9.0 或更新版本的圖形硬體。 支援 DirectX 7 或8的圖形硬體現在已定義為轉譯層0。  
+> 從 .NET Framework 4 開始, 轉譯層1已重新定義為僅包含支援 DirectX 9.0 或更新版本的圖形硬體。 支援 DirectX 7 或8的圖形硬體現在已定義為轉譯層0。  
   
  轉譯層值 1 或 2 表示如果有必要系統資源可用，而且還沒有用完，則 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的大部分圖形功能將會使用硬體加速。 這會對應到大於或等於9.0 的 DirectX 版本。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68972350"
   
  下列是針對轉譯層 1 和轉譯層 2 提供硬體加速的功能：  
   
-|功能|附註|  
+|功能|注意|  
 |-------------|-----------|  
 |2D 轉譯|大部分 2D 轉譯都予以支援。|  
 |3D 點陣化|支援大部分的 3D 點陣化。|  
@@ -76,13 +76,13 @@ ms.locfileid: "68972350"
   
  下列是僅針對轉譯層 2 提供硬體加速的功能：  
   
-|功能|附註|  
+|功能|注意|  
 |-------------|-----------|  
 |3D 消除鋸齒|只有支援 Windows 顯示驅動程式模型 (WDDM) 的作業系統才支援 3D 消除鋸齒，例如 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)]。|  
   
  下列是**未**提供硬體加速的功能：  
   
-|功能|附註|  
+|功能|注意|  
 |-------------|-----------|  
 |列印的內容|所有列印的內容都是使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 軟體管線所轉譯。|  
 |使用的柵格化內容<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|使用<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> 的<xref:System.Windows.Media.Imaging.RenderTargetBitmap>方法呈現的任何內容。|  
@@ -98,19 +98,19 @@ ms.locfileid: "68972350"
 ### <a name="graphics-rendering-registry-settings"></a>圖形轉譯登錄設定  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供四個登錄設定來控制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 轉譯：  
   
-|設定|描述|  
+|設定|說明|  
 |-------------|-----------------|  
 |**停用硬體加速選項**|指定是否應該啟用硬體加速。|  
 |**最大多重取樣值**|指定將3D 內容消除鋸齒的取樣程度。|  
 |**需要的視訊驅動程式日期設定**|指定系統是否停用 2004 年 11 月之前所發行驅動程式的硬體加速。|  
 |**使用軟體模擬轉譯器選項**|指定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否應該使用軟體模擬轉譯器。|  
   
- 這些設定可由知道如何參考 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 登錄設定的外部組態公用程式所存取。 您也可以使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 登錄編輯程式直接存取這些值來建立或修改這些設定。 如需詳細資訊，請參閱[圖形轉譯登錄設定](../graphics-multimedia/graphics-rendering-registry-settings.md)。  
+ 這些設定可由知道如何參考 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 登錄設定的外部組態公用程式所存取。 您也可以使用 Windows 登錄編輯程式直接存取這些值來建立或修改這些設定。 如需詳細資訊，請參閱[圖形轉譯登錄設定](../graphics-multimedia/graphics-rendering-registry-settings.md)。  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF 效能程式碼剖析工具  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一套效能分析工具，可讓您分析應用程式的執行階段行為，並判斷您可以套用的效能最佳化類型。 下表列出 Windows SDK 工具 (WPF 效能套件) 中所包含的效能分析工具:  
   
-|工具|說明|  
+|工具|描述|  
 |----------|-----------------|  
 |Perforator|用於分析轉譯行為。|  
 |Visual Profiler|用於剖析 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 服務的使用情形，例如視覺化樹狀結構中由項目處理的版面配置和事件。|  

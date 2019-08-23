@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 197ab9dbc1ec85bf8961f60bb26496eab788e63f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee56b23b6d5fca6d0527d509c9b6a6fc6dd82336
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663693"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920775"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > 元素
 
@@ -41,7 +41,7 @@ ms.locfileid: "69663693"
 
 ## <a name="enabled-attribute"></a>啟用屬性
 
-|值|說明|
+|值|描述|
 |-----------|-----------------|
 |`false`|垃圾收集不支援多個 CPU 群組。 這是預設值。|
 |`true`|如果已啟用伺服器垃圾收集, 垃圾收集支援多個 CPU 群組。|
@@ -82,4 +82,4 @@ ms.locfileid: "69663693"
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)
 - [停用並行垃圾收集](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [工作站和伺服器記憶體回收](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [工作站和伺服器記憶體回收](../../../../standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

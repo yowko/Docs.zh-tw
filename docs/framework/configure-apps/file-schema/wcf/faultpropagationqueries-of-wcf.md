@@ -1,25 +1,25 @@
 ---
-title: <faultPropagationQueries> WCF 的
+title: <faultPropagationQueries>WCF 的
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
-ms.openlocfilehash: bc016827c5bb243bc83dbb53c1eda7eec1bfd8c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aeb964fc8c96c8cb9aeb316bb95f9565fc4a7f18
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918948"
 ---
-# <a name="faultpropagationqueries-of-wcf"></a>\<faultPropagationQueries> of WCF
+# <a name="faultpropagationqueries-of-wcf"></a>\<WCF 的 faultPropagationQueries >
 
 代表查詢的集合，這些查詢可用來追蹤活動內發生之錯誤的處理。  每當 FaultHandler 處理錯誤時，都會發生這個事件。 您應該使用這種查詢來追蹤活動中發生的錯誤處理。 追蹤參與者必須要具備查詢，才能訂閱錯誤傳播記錄。  
   
-如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
+如需追蹤設定檔查詢的詳細資訊, 請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)。  
   
 \<system.serviceModel>  
-\<tracking>  
+\<追蹤 >  
 \<設定檔 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流程 >  
 \<faultPropagationQueries>  
   
 ## <a name="syntax"></a>語法  
@@ -55,13 +55,13 @@ ms.locfileid: "61704007"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|包括特定工作流程之所有查詢的組態項目，這個工作流程可由 `activityDefinitionId` 屬性識別。|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|包括特定工作流程之所有查詢的組態項目，這個工作流程可由 `activityDefinitionId` 屬性識別。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流程追蹤及追蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)

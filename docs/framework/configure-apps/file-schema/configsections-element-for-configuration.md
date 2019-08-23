@@ -9,38 +9,38 @@ helpviewer_keywords:
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: d522d004630dee942e24c39a936feae7dc957bd5
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 31b53837e24029fc7ff0b576d95c0213041a434e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300795"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927663"
 ---
-# <a name="configsections-element-for-configuration"></a>\<configSections > 項目\<設定 >
+# <a name="configsections-element-for-configuration"></a>\<configuration > 的\<configSections > 元素
 
-包含組態區段和命名空間宣告。
+包含設定區段和命名空間宣告。
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>屬性
 
-None
+無
 
 ## <a name="parent-element"></a>父項目
 
-|     | 描述 |
+|     | 說明 |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
+| [ **\<configuration>** ](configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
 
 ## <a name="child-elements"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含組態區段宣告。 |
-| [ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定義組態區段的命名空間。 |
-| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 移除預先定義的區段或區段群組。 |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有先前定義的區段和區段群組。 |
+| [ **\<區段 >** ](section-element.md) | 包含設定區段宣告。 |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | 定義設定區段的命名空間。 |
+| [ **\<remove>** ](remove-element-for-configsections.md) | 移除預先定義的區段或區段群組。 |
+| [ **\<clear>** ](clear-element-for-configsections.md) | 清除所有先前定義的區段和區段群組。 |
 
 ## <a name="remarks"></a>備註
 
@@ -48,7 +48,7 @@ None
 
 ## <a name="example"></a>範例
 
-下列範例示範如何定義組態區段，並定義該區段的設定：
+下列範例顯示如何定義設定區段, 並定義該區段的設定:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ None
 
 ## <a name="configuration-file"></a>組態檔
 
-這個項目可用的應用程式組態檔中，電腦組態檔 (*Machine.config*)，以及*Web.config*不在應用程式的目錄層級的檔案。
+此元素可用於應用程式佈建檔案、電腦設定檔案 (machine.config), 以及不在應用程式目錄層級的 web.config 檔案。
 
 ## <a name="see-also"></a>另請參閱
 
-- [適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的設定檔架構](index.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545374"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914094"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、轉換及格式化影像。  
@@ -99,7 +99,7 @@ ms.locfileid: "69545374"
  下列範例示範如何使用程式碼呈現 200 像素寬的影像。  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage>會執行<xref:System.ComponentModel.ISupportInitialize>介面, 以優化多個屬性的初始化。 只有在物件初始化期間，才會發生屬性變更。 呼叫<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>以表示初始化已開始, 並<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A>指出初始化已完成。 初始化之後，所做的屬性變更都會被忽略。  
+> <xref:System.Windows.Media.Imaging.BitmapImage>會執行<xref:System.ComponentModel.ISupportInitialize>介面, 以優化多個屬性的初始化。 只有在物件初始化期間，才會發生屬性變更。 呼叫<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>以表示初始化已開始, 並<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A>指出初始化已完成。 初始化之後，所做的屬性變更都會被忽略。  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
@@ -185,7 +185,7 @@ ms.locfileid: "69545374"
  如需擴充性 API 的範例, 請參閱[Win32 範例編解碼器](https://go.microsoft.com/fwlink/?LinkID=160052)。 此範例示範如何針對自訂影像格式建立解碼器和編碼器。  
   
 > [!NOTE]
->  轉碼器必須經過數位簽署，系統才能辨識它。  
+> 轉碼器必須經過數位簽署，系統才能辨識它。  
   
 ## <a name="see-also"></a>另請參閱
 

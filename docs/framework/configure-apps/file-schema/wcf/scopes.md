@@ -2,20 +2,20 @@
 title: <scopes>
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 8bc720238ca3039106345783381cd26134fc46b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd6513930798e9e1ab263f75c9350511c2dcdcd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670621"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935176"
 ---
 # <a name="scopes"></a>\<scopes>
 包含組態項目的集合，這些項目會指定可用於在查詢期間篩選服務端點的自訂範圍 URI。  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行為 >  
 \<endpointDiscovery>  
 \<scopes>  
   
@@ -43,15 +43,15 @@ ms.locfileid: "61670621"
   
 ### <a name="child-elements"></a>子元素  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|加入端點的範圍資訊，可用於比對尋找服務的準則。|  
+|[\<add>](add-of-scopes.md)|加入端點的範圍資訊，可用於比對尋找服務的準則。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<endpointDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|指定端點的各種探索設定，例如其探索能力、範圍以及中繼資料的任何自訂延伸模組。|  
+|[\<endpointDiscovery>](endpointdiscovery.md)|指定端點的各種探索設定，例如其探索能力、範圍以及中繼資料的任何自訂延伸模組。|  
   
 ## <a name="see-also"></a>另請參閱
 

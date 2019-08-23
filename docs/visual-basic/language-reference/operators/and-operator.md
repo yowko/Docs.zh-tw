@@ -13,15 +13,15 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: 7e25f25677fa684427bdaf00cea73916ffbad655
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1802d3a7018b1b6190ff5601eba055e16e62371
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608355"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913162"
 ---
 # <a name="and-operator-visual-basic"></a>And 運算子 (Visual Basic)
-對兩個執行邏輯結合`Boolean`運算式或兩個數值運算式的位元結合。  
+在兩個`Boolean`運算式上執行邏輯結合, 或在兩個數值運算式上進行位結合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,18 +31,18 @@ result = expression1 And expression2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何`Boolean`或數值運算式。 布林值相較之下，如`result`是邏輯結合兩個`Boolean`值。 對於位元運算，`result`是數值，代表兩個數值位元模式位元結合。  
+ 必要項。 Any `Boolean`或 numeric 運算式。 針對布林比較, `result`是兩個`Boolean`值的邏輯結合。 對於位運算而言`result` , 是代表兩個數值位模式之位合的數值。  
   
  `expression1`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要項。 Any `Boolean`或 numeric 運算式。  
   
  `expression2`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要項。 Any `Boolean`或 numeric 運算式。  
   
 ## <a name="remarks"></a>備註  
- 布林值相較之下，如`result`是`True`並僅有兩個`expression1`並`expression2`評估為`True`。 下表將說明如何`result`決定。  
+ 對於布林值比較`result` , `True`只有在和`expression2`都`expression1`評估為`True`時才會是。 下表說明如何`result`決定。  
   
-|如果`expression1`是|和`expression2`是|值`result`是|  
+|如果`expression1`為|和`expression2`為|的值`result`為|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
@@ -50,11 +50,11 @@ result = expression1 And expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  布林值相較之下，`And`運算子一律會評估這兩個運算式，這可能包括程序呼叫。 [AndAlso 運算子](../../../visual-basic/language-reference/operators/andalso-operator.md)會執行*最少運算*，這表示如果`expression1`是`False`，然後`expression2`不會評估。  
+> 在布林值比較中, `And`運算子一律會評估兩個運算式, 這可能包括進行程序呼叫。 [AndAlso 運算子](../../../visual-basic/language-reference/operators/andalso-operator.md)會執行最少運算, 這表示如果`expression1`為`False`, `expression2`則不會評估。  
   
- 套用至數字的值時`And`運算子會在兩個數值運算式之間執行位元比較相同位置的位元，並對應中位元設`result`根據下表。  
+ 套用至數值時, `And`運算子會在兩個數值運算式中執行相同位置位的位比較, 並根據下表設定中`result`的對應位。  
   
-|如果位元`expression1`是|在位元和`expression2`是|中的位元`result`是|  
+|如果中的`expression1`位是|中的`expression2`和位為|中`result`的位是|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|0|  
@@ -62,34 +62,34 @@ result = expression1 And expression2
 |0|0|0|  
   
 > [!NOTE]
->  因為邏輯和位元運算子會有較低的優先順序高於其他算術和關係運算子，所以任何位元的作業應該含括括號，以確保正確的結果。  
+> 由於邏輯和位運算子的優先順序比其他算術和關係運算子低, 因此應該將任何位運算括在括弧中, 以確保結果正確。  
   
 ## <a name="data-types"></a>資料類型  
- 如果包含運算元`Boolean`Visual Basic 運算式及一個數值運算式，將轉換`Boolean`為數值的運算式 (– 1`True`以 0 代表`False`) 和執行位元運算。  
+ 如果運算元是由`Boolean`一個運算式和一個數值運算式所組成, Visual Basic 會`Boolean`將運算式轉換為數值 (-1 代表`True` , 0 則代表`False`), 並執行位運算。  
   
- 如需布林值的比較，結果的資料型別是`Boolean`。 如需位元的比較，將結果資料類型是數值類型適合的資料類型`expression1`和`expression2`。 請參閱 < 關聯式和位元比較 」 的表格[資料類型的運算子結果](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。  
+ 針對布林值比較, 結果的資料類型為`Boolean`。 針對位比較, 結果資料類型是適用于和`expression1` `expression2`之資料類型的數數值型別。 請參閱[運算子結果的資料類型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的「關聯式和位比較」資料表。  
   
 > [!NOTE]
->  `And`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> 運算子可以多載, 這表示當運算元具有該類別或結構的類型時, 類別或結構可以重新定義其行為。 `And` 如果您的程式碼在這類類別或結構上使用這個運算子, 請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`And`運算子執行邏輯結合兩個運算式上。 結果是`Boolean`值，表示兩個運算式是否`True`。  
+ 下列範例會使用`And`運算子, 在兩個運算式上執行邏輯結合。 結果是`Boolean`表示兩個`True`運算式是否為的值。  
   
  [!code-vb[VbVbalrOperators#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#22)]  
   
- 上述範例產生的結果`True`和`False`分別。  
+ 上述範例會分別產生和`True` `False`的結果。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`And`運算子執行邏輯結合的兩個數值運算式的個別位元。 如果運算元的對應位元均設定為 1，則會設定結果模式中的位元。  
+ 下列範例會使用`And`運算子, 在兩個數值運算式的個別位上執行邏輯結合。 如果運算元中對應的位都設定為 1, 則結果模式中的位會設定為。  
   
  [!code-vb[VbVbalrOperators#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#23)]  
   
- 上述範例中會分別產生 8，2，0，的結果。  
+ 上述範例會分別產生8、2和0的結果。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [邏輯/位元運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [邏輯/位運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [AndAlso 運算子](../../../visual-basic/language-reference/operators/andalso-operator.md)
-- [在 Visual Basic 中的邏輯和位元運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 中的邏輯和位運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

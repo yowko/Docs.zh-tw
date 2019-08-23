@@ -2,12 +2,12 @@
 title: 查詢概念
 ms.date: 03/30/2017
 ms.assetid: 9a125749-ccb5-49d5-999d-d2db7171d74d
-ms.openlocfilehash: 62af37399cda5220c429fae2d9ab619989050b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be564ae6fe6dc887b77ea4ae213d56d11f309369
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767516"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938564"
 ---
 # <a name="query-concepts"></a>查詢概念
 本節說明在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中設計 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢的主要概念。  
@@ -32,5 +32,5 @@ ms.locfileid: "61767516"
  [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的物件識別概念。  
   
- [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ [LINQ 查詢簡介 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  提供 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中查詢作業的簡介。

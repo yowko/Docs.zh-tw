@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: f581ca5ee1376251a593e7b8813ef4b0e0f41b64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28eb451c7edd740664f80f8ec35c60192764043c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949869"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Form 中事件的順序
-關於 Windows Form 應用程式中被引發的事件，程式開發人員會特別關注他們的順序，並且盡力依次處理每個事件。 當遇到需要謹慎處理事件的狀況，例如當您重新繪製部分表單時，對於在執行階段時被引發的事件，感知其精確的順序是必需的。 本主題提供一些有關在應用程式以及控制項存留期中，幾個重要階段裡事件順序的詳細資料。 滑鼠輸入事件的順序有關的特定詳細資訊，請參閱[Windows Form 中的滑鼠事件](mouse-events-in-windows-forms.md)。 如需 Windows Form 中事件的概觀，請參閱 <<c0> [ 事件概觀](events-overview-windows-forms.md)。 如需結構的事件處理常式的詳細資訊，請參閱[事件處理常式概觀](event-handlers-overview-windows-forms.md)。  
+關於 Windows Form 應用程式中被引發的事件，程式開發人員會特別關注他們的順序，並且盡力依次處理每個事件。 當遇到需要謹慎處理事件的狀況，例如當您重新繪製部分表單時，對於在執行階段時被引發的事件，感知其精確的順序是必需的。 本主題提供一些有關在應用程式以及控制項存留期中，幾個重要階段裡事件順序的詳細資料。 如需滑鼠輸入事件順序的特定詳細資料, 請參閱[Windows Forms 中的滑鼠事件](mouse-events-in-windows-forms.md)。 如需 Windows Forms 中事件的總覽, 請參閱[事件總覽](events-overview-windows-forms.md)。 如需事件處理常式的相關詳細資訊, 請參閱[事件處理常式總覽](event-handlers-overview-windows-forms.md)。  
   
 ## <a name="application-startup-and-shutdown-events"></a>應用程式啟動和關閉事件  
  <xref:System.Windows.Forms.Form> 和 <xref:System.Windows.Forms.Control> 類別會公開一組關於應用程式啟動和關閉的事件。 當 Windows Form 應用程式啟動時，主要表單的啟動事件會依照下列順序引發：  
@@ -49,7 +49,7 @@ ms.locfileid: "64655585"
  <xref:System.Windows.Forms.Application> 類別的 <xref:System.Windows.Forms.Application.ApplicationExit> 事件會在主要表單的關閉事件之後引發。  
   
 > [!NOTE]
->  Visual Basic 2005 包含其他應用程式事件，例如 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> 和 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>。  
+> Visual Basic 2005 包含其他應用程式事件，例如 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> 和 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>。  
   
 ## <a name="focus-and-validation-events"></a>焦點和驗證事件。  
  當您使用鍵盤 (TAB、SHIFT + TAB 等等) 變更焦點時，藉由呼叫 <xref:System.Windows.Forms.Control.Select%2A> 或 <xref:System.Windows.Forms.Control.SelectNextControl%2A> 方法，或藉由設定 <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> 屬性到目前表單， <xref:System.Windows.Forms.Control> 類別的焦點事件會以下列順序發生：  

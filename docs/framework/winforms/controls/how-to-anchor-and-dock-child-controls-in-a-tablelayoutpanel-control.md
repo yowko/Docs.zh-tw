@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: 7adbf9a98b25b237ee49d2689154e903d8fc0b5a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0e565b56c31d0776f6e89bbbe0b0681ae184758e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586181"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922815"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>作法：錨定和停駐 TableLayoutPanel 控制項中的子控制項
 <xref:System.Windows.Forms.TableLayoutPanel> 控制項在其子控制項中支援 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 屬性。  
@@ -26,25 +26,25 @@ ms.locfileid: "65586181"
   
 1. 請在表單上建立 <xref:System.Windows.Forms.TableLayoutPanel> 控制項。  
   
-2. 設定的值<xref:System.Windows.Forms.TableLayoutPanel>控制項的<xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>並<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>屬性，以**1**。  
+2. 將<xref:System.Windows.Forms.TableLayoutPanel> 控制項的<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>和屬性值設定為1。 <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>  
   
 3. 在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中建立 <xref:System.Windows.Forms.Button> 控制項。 <xref:System.Windows.Forms.Button> 會佔用儲存格的左上角。  
   
 4. 變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Left`。 <xref:System.Windows.Forms.Button> 控制項移到與儲存格左框線對齊。  
   
     > [!NOTE]
-    >  此行為不同於其他容器控制項的行為。 在其他容器控制項中，當 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性被設定時，子控制項不會移動，而且當 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性被設定時，錨定的控制項與父容器界限之間的距離固定。  
+    > 此行為不同於其他容器控制項的行為。 在其他容器控制項中，當 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性被設定時，子控制項不會移動，而且當 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性被設定時，錨定的控制項與父容器界限之間的距離固定。  
   
 5. 變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Top, Left`。 <xref:System.Windows.Forms.Button> 控制項移到佔用儲存格左上角。  
   
-6. 重複步驟 5 的值`Top, Right`移動<xref:System.Windows.Forms.Button>儲存格右上角的控制項。 使用 `Bottom, Left` 和 `Bottom, Right` 值重複進行。  
+6. 重複步驟5與的值`Top, Right` , <xref:System.Windows.Forms.Button>將控制項移至儲存格的右上角。 使用 `Bottom, Left` 和 `Bottom, Right` 值重複進行。  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>若要自動縮放 TableLayoutPanel 儲存格中的子控制項  
   
 1. 變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Left, Right`。 會調整 <xref:System.Windows.Forms.Button> 控制項的大小，自動縮放整個儲存格。  
   
     > [!NOTE]
-    >  此行為不同於其他容器控制項的行為。 在其他容器控制項中，子控制項不是調整大小的時機<xref:System.Windows.Forms.Control.Anchor%2A>屬性設定為`Left, Right`或`Top, Bottom`。  
+    > 此行為不同於其他容器控制項的行為。 在其他容器控制項中, 當<xref:System.Windows.Forms.Control.Anchor%2A>屬性設定為`Left, Right`或`Top, Bottom`時, 不會調整子控制項的大小。  
   
 2. 變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Top, Bottom`。 會調整 <xref:System.Windows.Forms.Button> 控制項的大小，從頂端到底部自動縮放儲存格。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65586181"
 5. 變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性值為 <xref:System.Windows.Forms.DockStyle.Left>。 <xref:System.Windows.Forms.Button> 控制項移到與儲存格左框線對齊。 會保留 <xref:System.Windows.Forms.Button> 控制項寬度，但會調整它高度的大小，以垂直方式填滿儲存格。  
   
     > [!NOTE]
-    >  這與在其他容器控制項中發生的行為相同。  
+    > 這與在其他容器控制項中發生的行為相同。  
   
 6. 變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性值為 <xref:System.Windows.Forms.DockStyle.Fill>。 調整 <xref:System.Windows.Forms.Button> 控制項的大小以填滿儲存格。  
   

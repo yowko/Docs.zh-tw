@@ -1,17 +1,17 @@
 ---
-title: 'Icordebugmergedassemblyrecord:: Getculture 方法'
+title: 'ICorDebugMergedAssemblyRecord:: GetCulture 方法'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0472a52d0893bfd487cd6daa6548ec1ce0c44a9b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f0f3ecee5a003587771871a178356d6dbfd8a636
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762203"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936848"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>Icordebugmergedassemblyrecord:: Getculture 方法
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord:: GetCulture 方法
 取得組件的文化特性名稱字串。  
   
 ## <a name="syntax"></a>語法  
@@ -38,7 +38,7 @@ HRESULT GetCulture(
  文化特性名稱是唯一的字串，可識別文化特性，例如 "zh-TW" (適用於繁體中文文化特性) 或「中性」(適用於中性文化特性)。  
   
 > [!NOTE]
->  這個方法僅適用於 .NET Native。  
+> 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

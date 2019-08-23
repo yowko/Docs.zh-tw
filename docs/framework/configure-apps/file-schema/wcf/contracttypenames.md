@@ -2,15 +2,15 @@
 title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: b1cec9272a1de029ab72ea4d5f36c74630e5b93a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12f9d4eca02ae3b306646826667c4eafef51a95c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673195"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919368"
 ---
 # <a name="contracttypenames"></a>\<contractTypeNames>
-組態區段，這個區段會指定合約型別名稱清單 (要搜尋之服務的合約名稱)，以及通常用於搜尋服務的準則。 如果指定多個合約名稱，則只會回覆符合「所有」合約的服務端點。 請注意，在 Windows Communication Foundation (WCF) 端點僅支援一個合約。  
+組態區段，這個區段會指定合約型別名稱清單 (要搜尋之服務的合約名稱)，以及通常用於搜尋服務的準則。 如果指定多個合約名稱，則只會回覆符合「所有」合約的服務端點。 請注意, 在 Windows Communication Foundation (WCF) 中, 端點只能支援一個合約。  
   
  \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -52,13 +52,13 @@ ms.locfileid: "61673195"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|合約型別名稱是一種屬性，它是指一組通常用於搜尋服務的準則。|  
+|[\<add>](contracttypenames.md)|合約型別名稱是一種屬性，它是指一組通常用於搜尋服務的準則。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<findCriteria>](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。 準則可以分組為搜尋準則 （指定您要尋找的服務），以及尋找終止準則 （搜尋應持續多久）。|  
+|[\<findCriteria>](findcriteria.md)|組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。 準則可以分組為搜尋準則 (指定您要尋找的服務), 並尋找終止準則 (搜尋應持續的時間長度)。|  
   
 ## <a name="see-also"></a>另請參閱
 

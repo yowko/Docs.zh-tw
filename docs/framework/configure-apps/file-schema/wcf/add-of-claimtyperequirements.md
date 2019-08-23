@@ -2,20 +2,20 @@
 title: <add> 的 <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 97d3ecca369aeffb7b2e8464f385eeae13bd470f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e7f0eac41e69e959aa6c4f8f3cfb488d4ea2917
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704475"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926802"
 ---
-# <a name="add-of-claimtyperequirements"></a>\<新增 > 的\<claimTypeRequirements >
+# <a name="add-of-claimtyperequirements"></a>\<新增 claimTypeRequirements > \<的 >
 指定必須在聯合認證中出現的必要及選擇性宣告型別。 例如，服務說明傳入認證必須處理特定的一組宣告型別。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
 \<issuedTokenParameters>  
 \<claimTypeRequirements>  
@@ -44,9 +44,9 @@ ms.locfileid: "61704475"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定必要宣告型別的集合。<br /><br /> 在聯合案例中，服務會聲明對傳入認證的需求。 例如，傳入認證必須處理特定的一組宣告型別。 這個集合中的每一個項目都會指定要顯示在聯合認證中的必要和選擇性宣告型別。|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|指定必要宣告型別的集合。<br /><br /> 在聯合案例中，服務會聲明對傳入認證的需求。 例如，傳入認證必須處理特定的一組宣告型別。 這個集合中的每一個項目都會指定要顯示在聯合認證中的必要和選擇性宣告型別。|  
   
 ## <a name="remarks"></a>備註  
  在聯合案例中，服務會聲明對傳入認證的需求。 例如，傳入認證必須處理特定的一組宣告型別。 這項需求會顯示在安全性原則中。 當用戶端從聯合服務 (例如 CardSpace) 要求認證，它會將需求放入權杖要求 (RequestSecurityToken)，那麼聯合服務便可發出認證，滿足相應的需求。  
@@ -80,10 +80,10 @@ ms.locfileid: "61704475"
 - <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
 - <xref:System.ServiceModel.Configuration.ClaimTypeElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [\<claimTypeRequirements>](claimtyperequirements-element.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [如何：使用 SecurityBindingElement 建立自訂系結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自訂繫結安全性](../../../wcf/samples/custom-binding-security.md)

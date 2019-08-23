@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a71c2b87d0bcb488e4e8fa4de928a103a8e9dabd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c79c76717acf7ff309375313b30534dd0aff9399
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663533"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920701"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 元素
 指定執行時間是否會針對跨應用程式域界限的所有呼叫, 使用 COM Interop 而不是遠端處理。  
@@ -32,7 +32,7 @@ ms.locfileid: "69663533"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`enabled`|必要屬性。<br /><br /> 指出執行時間是否會使用 COM Interop, 而不是跨應用程式域界限進行遠端處理。|  
   
@@ -56,9 +56,9 @@ ms.locfileid: "69663533"
 ## <a name="remarks"></a>備註  
  當您將`enabled`屬性設定為`true`時, 執行時間的行為會如下所示:  
   
-- 當[iunknown](https://go.microsoft.com/fwlink/?LinkId=148003)介面透過 COM 介面進入網域時, 執行時間不會針對[IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md)介面呼叫[IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) 。 相反地, 它會在物件周圍建立執行時間可呼叫[包裝](../../../../../docs/standard/native-interop/runtime-callable-wrapper.md)函式 (RCW)。  
+- 當[iunknown](https://go.microsoft.com/fwlink/?LinkId=148003)介面透過 COM 介面進入網域時, 執行時間不會針對[IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md)介面呼叫[IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) 。 相反地, 它會在物件周圍建立執行時間可呼叫[包裝](../../../../standard/native-interop/runtime-callable-wrapper.md)函式 (RCW)。  
   
-- 執行時間會在收到`QueryInterface`此網域中已建立之任何 COM 可呼叫[包裝](../../../../../docs/standard/native-interop/com-callable-wrapper.md)函式 (CCW) 的[IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md)介面呼叫時傳回 E_NOINTERFACE。  
+- 執行時間會在收到`QueryInterface`此網域中已建立之任何 COM 可呼叫[包裝](../../../../standard/native-interop/com-callable-wrapper.md)函式 (CCW) 的[IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md)介面呼叫時傳回 E_NOINTERFACE。  
   
  這兩種行為可確保跨應用程式域界限的 managed 物件之間的所有呼叫都是使用 COM 和 COM Interop, 而不是遠端處理。  
   

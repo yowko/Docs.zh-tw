@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aac7079d941e6774ca6c00fbece8ff72fbf3f0e1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 92873277b4b25e4c1c5981628187078ac7cb5704
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663877"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920894"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 項目
 指定是否要在已載入完全信任<xref:System.AppDomain>的完全信任元件上略過強式名稱驗證。  
@@ -35,13 +35,13 @@ ms.locfileid: "69663877"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`enabled`|必要屬性。<br /><br /> 指定是否啟用避免為完全信任元件驗證強式名稱的略過功能。 啟用這項功能時, 在載入元件時, 不會驗證強式名稱是否正確。 預設為 `true`。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`true`|當元件載入至完全信任<xref:System.AppDomain>時, 不會驗證完全信任元件上的強式名稱簽章。 這是預設值。|  
 |`false`|當元件載入至完全信任<xref:System.AppDomain>時, 會驗證完全信任元件上的強式名稱簽章。 強式名稱簽章只會檢查簽名碼正確性;它不會與另一個強式名稱進行比較, 以符合相符項。|  
@@ -70,7 +70,7 @@ ms.locfileid: "69663877"
 - 不延遲簽署。  
   
 > [!NOTE]
->  若已使用登錄機碼為電腦上的所有應用程式關閉略過功能, 此設定檔案設定就不會有任何作用。 如需詳細資訊，請參閱[如何：停用強式名稱略過功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
+> 若已使用登錄機碼為電腦上的所有應用程式關閉略過功能, 此設定檔案設定就不會有任何作用。 如需詳細資訊，請參閱[如何：停用強式名稱略過功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
   
 ## <a name="example"></a>範例  
  下列範例顯示如何指定行為, 以驗證完全信任元件上的強式名稱簽章。  

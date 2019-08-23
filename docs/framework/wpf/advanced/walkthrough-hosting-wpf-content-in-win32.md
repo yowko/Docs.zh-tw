@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 9ab046c6f7c070ade9d3e474309b33afbf78370e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 03a35d26fd1917d926f9a26d25ae8a8e32c476f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629644"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917634"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>逐步解說：將 WPF 內容裝載在 Win32 中
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能加入應用程式，可能會比重寫原始程式碼更有效率。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供直接[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]在視窗中裝載內容的機制。  
@@ -25,7 +25,7 @@ ms.locfileid: "68629644"
  由於本教學課程隨附的範例會在/Cli C++中執行, 因此, 本教學課程假設您C++已熟悉如何使用來設計 Windows API, 以及對 managed 程式碼的瞭解。 對C++/cli 的熟悉很有説明, 但並不重要。  
   
 > [!NOTE]
->  本教學課程包含一些來自相關範例的程式碼範例。 不過，為了方便閱讀，並未包含完整的範例程式碼。 如需完整的範例程式碼, 請參閱[在 Win32 視窗中裝載 WPF 內容範例](https://go.microsoft.com/fwlink/?LinkID=160004)。  
+> 本教學課程包含一些來自相關範例的程式碼範例。 不過，為了方便閱讀，並未包含完整的範例程式碼。 如需完整的範例程式碼, 請參閱[在 Win32 視窗中裝載 WPF 內容範例](https://go.microsoft.com/fwlink/?LinkID=160004)。  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>基本程序  
@@ -58,7 +58,7 @@ ms.locfileid: "68629644"
 8. 使用儲存在靜態欄位中的參考來設定屬性等等，以與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容通訊。  
   
 > [!NOTE]
->  您也可以使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]來[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]執行內容。 不過, 您必須個別將它編譯為動態連結程式庫 (DLL), 並從您[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]的應用程式參考該 DLL。 此程序的其餘部分與上述類似。
+> 您也可以使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]來[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]執行內容。 不過, 您必須個別將它編譯為動態連結程式庫 (DLL), 並從您[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]的應用程式參考該 DLL。 此程序的其餘部分與上述類似。
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>實作主應用程式
@@ -77,9 +77,9 @@ ms.locfileid: "68629644"
 ### <a name="the-basic-application"></a>基本應用程式
  主應用程式的起點是建立 Visual Studio 2005 範本。
 
-1. 開啟 Visual Studio 2005, 然後從 [檔案] 功能表  選取 [**新增專案**]。
+1. 開啟 Visual Studio 2005, 然後從 [檔案] 功能表選取 [**新增專案**]。
 
-2. 從  [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]專案類型清單中選取 [Win32]。 如果您的預設語言不C++是, 您會在 [**其他語言**] 底下找到這些專案類型。
+2. 從 [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]專案類型清單中選取 [Win32]。 如果您的預設語言不C++是, 您會在 [**其他語言**] 底下找到這些專案類型。
 
 3. 選取 [ **Win32 專案**] 範本, 將名稱指派給專案, 然後按一下 **[確定]** 以啟動 [ **Win32 應用程式精靈]** 。
 
@@ -91,7 +91,7 @@ ms.locfileid: "68629644"
 
 - 視窗，具有相關聯的視窗程序 (WndProc)。
 
-- 具有 [檔案  ] 和  [說明] 標題的功能表。 [檔案] 功能表有  一個結束專案, 可關閉應用程式。 [說明] 功能表有一個 [**關於**] 專案, 可啟動簡單的對話方塊。
+- 具有 [檔案 ] 和 [說明] 標題的功能表。 [檔案] 功能表有一個結束專案, 可關閉應用程式。 [說明] 功能表有一個 [**關於**] 專案, 可啟動簡單的對話方塊。
 
  在您開始撰寫程式碼來裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容之前, 您必須先對基本範本進行兩個修改。
 
@@ -106,7 +106,7 @@ ms.locfileid: "68629644"
 4. 從下拉式清單方塊中選取 [ **Common Language Runtime 支援 (/clr)** ]。
 
 > [!NOTE]
->  此編譯器旗標可讓您在應用程式中使用 Managed 程式碼，但 Unmanaged 程式碼還是會編譯成和之前一樣。
+> 此編譯器旗標可讓您在應用程式中使用 Managed 程式碼，但 Unmanaged 程式碼還是會編譯成和之前一樣。
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用單一執行緒 Apartment (STA) 執行緒模型。 為了與[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容程式碼正常搭配運作, 您必須將屬性套用至進入點, 將應用程式的執行緒模型設為 STA。
 
@@ -123,7 +123,7 @@ ms.locfileid: "68629644"
  方法會採用大小和位置資訊, 再加上父視窗控制碼, 並傳回主控[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容的視窗控制碼。 `GetHwnd`
 
 > [!NOTE]
->  您不能將 `#using` 指示詞用於 `System::Windows::Interop` 命名空間。 這麼做會在該命名空間中的 <xref:System.Windows.Interop.MSG> 結構與 winuser.h 中宣告的 MSG 結構之間，造成名稱衝突。 您必須改用完整的名稱來存取該命名空間的內容。
+> 您不能將 `#using` 指示詞用於 `System::Windows::Interop` 命名空間。 這麼做會在該命名空間中的 <xref:System.Windows.Interop.MSG> 結構與 winuser.h 中宣告的 MSG 結構之間，造成名稱衝突。 您必須改用完整的名稱來存取該命名空間的內容。
 
  [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 

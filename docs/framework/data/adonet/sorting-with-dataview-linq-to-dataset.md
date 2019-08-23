@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 4d000fd392b653f294a1d749f769f4e3bde5110d
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 496d6f6ffef8d15e368979a67a8beed62ab86c38
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504288"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918196"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>使用 DataView 進行排序 (LINQ to DataSet)
-根據特定準則來排序資料，然後透過 UI 控制項呈現資料給用戶端的功能是資料繫結的重要層面。 <xref:System.Data.DataView> 提供了許多方式來排序資料並傳回依據特定排序準則所排序的資料列。 除了以字串為基礎的排序功能，<xref:System.Data.DataView>也可讓您使用[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]排序準則的運算式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 允許更複雜且功能強大的排序作業，比以字串為基礎的排序運算式。 本主題將說明兩種使用 <xref:System.Data.DataView> 進行排序的方法。  
+根據特定準則來排序資料，然後透過 UI 控制項呈現資料給用戶端的功能是資料繫結的重要層面。 <xref:System.Data.DataView> 提供了許多方式來排序資料並傳回依據特定排序準則所排序的資料列。 除了以字串為基礎的排序功能之外, <xref:System.Data.DataView>也可讓您[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]將運算式用於排序準則。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]運算式除了以字串為基礎的排序, 還允許更複雜且功能更強大的排序作業。 本主題將說明兩種使用 <xref:System.Data.DataView> 進行排序的方法。  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>從含有排序資訊的查詢中建立 DataView  
- A<xref:System.Data.DataView>從 LINQ to DataSet 查詢建立物件。 如果該查詢包含<xref:System.Linq.Enumerable.OrderBy%2A>， <xref:System.Linq.Enumerable.OrderByDescending%2A>， <xref:System.Linq.Enumerable.ThenBy%2A>，或<xref:System.Linq.Enumerable.ThenByDescending%2A>這些子句中的運算式排序中的資料時，可做為基礎的子句<xref:System.Data.DataView>。 例如，如果查詢包含`Order By…`並`Then By…`子句，則產生<xref:System.Data.DataView>會指定兩個資料行來排序資料。  
+ 您可以從 LINQ to DataSet 查詢建立物件。<xref:System.Data.DataView> 如果該查詢包含<xref:System.Linq.Enumerable.OrderBy%2A>、、 <xref:System.Linq.Enumerable.OrderByDescending%2A> <xref:System.Linq.Enumerable.ThenBy%2A>或<xref:System.Linq.Enumerable.ThenByDescending%2A>子句, 這些子句中的運算式<xref:System.Data.DataView>會用來做為排序中資料的基礎。 例如, 如果查詢包含`Order By…`和`Then By…`子句, 則產生<xref:System.Data.DataView>的會依據指定的兩個數據行來排序資料。  
   
  以運算式為基礎的排序會比較簡單的以字串為基礎的排序提供功能更強大且更複雜的排序。 請注意，以字串為基礎的排序和以運算式為基礎的排序會互斥 (Mutually Exclusive)。 如果您從查詢中建立 <xref:System.Data.DataView.Sort%2A> 之後才設定以字串為基礎的 <xref:System.Data.DataView>，就會清除從查詢中推斷的以運算式為基礎的篩選，而且無法加以重設。  
   
- 在您建立 <xref:System.Data.DataView> 以及修改任何排序或篩選資訊時，系統就會建立 <xref:System.Data.DataView> 的索引。 您獲得最佳效能，藉由提供排序準則，在 LINQ to DataSet 查詢<xref:System.Data.DataView>從建立，而且不會修改排序資訊，更新版本。 如需詳細資訊，請參閱 < [DataView 效能](../../../../docs/framework/data/adonet/dataview-performance.md)。  
+ 在您建立 <xref:System.Data.DataView> 以及修改任何排序或篩選資訊時，系統就會建立 <xref:System.Data.DataView> 的索引。 在建立的 LINQ to DataSet 查詢<xref:System.Data.DataView>中提供排序準則, 並在稍後不修改排序資訊, 以獲得最佳效能。 如需詳細資訊, 請參閱[DataView Performance](../../../../docs/framework/data/adonet/dataview-performance.md)。  
   
 > [!NOTE]
->  在大部分清況中，用於排序的運算式不應該具有副作用 (Side Effect) 而且必須具決定性。 此外，這些運算式不應該包含取決於固定執行次數的任何邏輯，因為排序作業可能會執行任何次數。  
+> 在大部分清況中，用於排序的運算式不應該具有副作用 (Side Effect) 而且必須具決定性。 此外，這些運算式不應該包含取決於固定執行次數的任何邏輯，因為排序作業可能會執行任何次數。  
   
 ### <a name="example"></a>範例  
  下列範例會查詢 SalesOrderHeader 資料表並依據訂單日期排序傳回的資料列、從該查詢中建立 <xref:System.Data.DataView>，然後將 <xref:System.Data.DataView> 繫結至 <xref:System.Windows.Forms.BindingSource>。  
@@ -44,11 +44,11 @@ ms.locfileid: "67504288"
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderByThenBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderbythenby)]  
   
 ## <a name="using-the-string-based-sort-property"></a>使用以字串為基礎的 Sort 屬性  
- ，字串為基礎的排序功能<xref:System.Data.DataView>仍適用於 LINQ to DataSet。 在後<xref:System.Data.DataView>已建立從 LINQ to DataSet 查詢中，您可以使用<xref:System.Data.DataView.Sort%2A>屬性來設定對排序<xref:System.Data.DataView>。  
+ 以字串為基礎的排序功能<xref:System.Data.DataView>仍然可與 LINQ to DataSet 搭配使用。 從 LINQ to DataSet 查詢建立之後, 您可以<xref:System.Data.DataView.Sort%2A>使用屬性來<xref:System.Data.DataView>設定上的排序。 <xref:System.Data.DataView>  
   
  以字串為基礎的排序和以運算式為基礎的排序功能會互斥。 因此，設定 <xref:System.Data.DataView.Sort%2A> 屬性將會清除繼承自查詢 (從中建立 <xref:System.Data.DataView>) 的以運算式為基礎的排序。  
   
- 如需有關字串為基礎<xref:System.Data.DataView.Sort%2A>篩選，請參閱[排序及篩選資料](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  
+ 如需以字串為基礎<xref:System.Data.DataView.Sort%2A>之篩選的詳細資訊, 請參閱[排序和篩選資料](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  
   
 ### <a name="example"></a>範例  
  下列範例會從 Contact 資料表中建立 <xref:System.Data.DataView> 並按照姓氏的遞減順序排序資料列，然後再按照名字的遞增順序排序資料列：  

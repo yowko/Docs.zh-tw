@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 983860c680b7c9bcf36406f61582a6b641fd26a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd0010ccd3c7f6b2f4433fe8ce234bc806754260
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916247"
 ---
 # <a name="custom-serialization"></a>自訂序列化
 自訂序列化是控制型別序列化與還原序列化的程序。 控制序列化就可確保序列化相容性，也就是在類型版本之間進行序列化與還原序列化的作業，而不違反類型的核心功能性。 例如，在第一版的型別中，可能只有兩個欄位。 在型別的下一版中，加入了更多的欄位。 然而第二版的應用程式必須對這兩種型別進行序列化及還原序列化。 下列章節會說明控制序列化的方法。
@@ -30,7 +30,7 @@ ms.locfileid: "64645293"
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
->  在 .NET Framework 4.0 之前的版本中，部分信任組件中自訂使用者資料的序列化是使用 GetObjectData 所完成。 從 4.0 版開始，該方法會標記 <xref:System.Security.SecurityCriticalAttribute> 屬性，因此便無法在部分信任組件中執行。 若要解決此狀況，請實作 <xref:System.Runtime.Serialization.ISafeSerializationData> 介面。  
+> 在 .NET Framework 4.0 之前的版本中，部分信任組件中自訂使用者資料的序列化是使用 GetObjectData 所完成。 從 4.0 版開始，該方法會標記 <xref:System.Security.SecurityCriticalAttribute> 屬性，因此便無法在部分信任組件中執行。 若要解決此狀況，請實作 <xref:System.Runtime.Serialization.ISafeSerializationData> 介面。  
   
 ## <a name="running-custom-methods-during-and-after-serialization"></a>序列化期間及序列化之後執行自訂方法  
  最佳做法與最簡單方式 (引入至 .NET Framework 2.0 版) 是套用下列屬性至用來在序列化期間及之後修正資料的方法：  

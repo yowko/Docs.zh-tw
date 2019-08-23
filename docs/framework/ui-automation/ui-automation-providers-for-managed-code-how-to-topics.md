@@ -8,18 +8,18 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-ms.openlocfilehash: 559c2c3f13aa92f5d4e27504e37fd886334e69bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9b20d1fd3356941b75df686b2556b3c3c4f179
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033045"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914419"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Managed 程式碼的 UI 自動化提供者 HOW TO 主題
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
- 本節包含示範工作中撰寫的程式碼範例[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]提供者[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]項目。  
+ 本節包含的程式碼範例示範如何撰寫[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]專案提供者的[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]工作。  
   
 ## <a name="in-this-section"></a>本節內容  
  [公開伺服器端 UI 自動化提供者](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  

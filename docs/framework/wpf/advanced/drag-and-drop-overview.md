@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 0a2fae2acd2b190e6133c1f02010a7e3d35bba67
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663346"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940871"
 ---
 # <a name="drag-and-drop-overview"></a>拖放概觀
 本主題提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中的拖放功能支援概觀。 拖放功能一般是指資料傳送的方法，這種方法需要使用滑鼠 (或其他一些指標裝置) 選取一或多個物件，將這些物件拖曳到 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中一些想要的置放目標上，然後置放這些物件。  
@@ -30,12 +30,12 @@ ms.locfileid: "64663346"
   
  拖放作業期間所執行的特定動作是針對應用程式的動作，而且這些動作通常會取決於內容。  例如，將選取的檔案從一個資料夾拖曳到同一個存放裝置上的另一個資料夾預設會移動檔案，而將檔案從 [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] 共用拖曳到本機資料夾複本預設會複製檔案。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的拖放功能是為了提高彈性和可自訂性所設計，以便支援各種拖放案例。  拖放功能支援在單一應用程式中，或在不同的應用程式之間操作物件； 拖曳放之間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]也完全支援應用程式和其他 Windows 應用程式。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的拖放功能是為了提高彈性和可自訂性所設計，以便支援各種拖放案例。  拖放功能支援在單一應用程式中，或在不同的應用程式之間操作物件； 同時也完全支援應用程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]與其他 Windows 應用程式之間的拖放。  
   
  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，任何 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 都可以參與拖放。 拖放作業所需的事件和方法會在 <xref:System.Windows.DragDrop> 類別中定義。 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 類別包含 <xref:System.Windows.DragDrop> 附加事件的別名，因此當繼承 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 做為基底項目時，便會在類別成員清單中顯示這些事件。 附加至這些事件的事件處理常式會附加至基礎 <xref:System.Windows.DragDrop> 附加事件，並接收相同的事件資料執行個體。 如需詳細資訊，請參閱 <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> 事件。  
   
 > [!IMPORTANT]
->  您無法在網際網路區域中執行 OLE 拖放作業。  
+> 您無法在網際網路區域中執行 OLE 拖放作業。  
   
 <a name="Data_Transfer"></a>   
 ## <a name="data-transfer"></a>資料傳輸  
@@ -122,7 +122,7 @@ ms.locfileid: "64663346"
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>拖放功能範例  
- 本節說明如何實作 <xref:System.Windows.Shapes.Ellipse> 項目的拖放功能。 <xref:System.Windows.Shapes.Ellipse> 同時為拖曳來源和置放目標。 傳送的資料是橢圓形之 <xref:System.Windows.Shapes.Shape.Fill%2A> 屬性的字串表示。 下列 XAML 顯示 <xref:System.Windows.Shapes.Ellipse> 項目及其處理的拖放相關事件。 如需如何實作拖放的完整步驟，請參閱[逐步解說：啟用拖放使用者控制項上的卸除](walkthrough-enabling-drag-and-drop-on-a-user-control.md)。  
+ 本節說明如何實作 <xref:System.Windows.Shapes.Ellipse> 項目的拖放功能。 <xref:System.Windows.Shapes.Ellipse> 同時為拖曳來源和置放目標。 傳送的資料是橢圓形之 <xref:System.Windows.Shapes.Shape.Fill%2A> 屬性的字串表示。 下列 XAML 顯示 <xref:System.Windows.Shapes.Ellipse> 項目及其處理的拖放相關事件。 如需如何執行拖放的完整步驟, 請參閱[逐步解說:在使用者控制項](walkthrough-enabling-drag-and-drop-on-a-user-control.md)上啟用拖放。  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -157,7 +157,7 @@ ms.locfileid: "64663346"
  `allowedEffects` 參數可用來指定拖曳來源允許置放目標對所傳送的資料執行的動作。 拖曳來源的常見值包括 <xref:System.Windows.DragDropEffects.Copy>、<xref:System.Windows.DragDropEffects.Move> 和  <xref:System.Windows.DragDropEffects.All>。  
   
 > [!NOTE]
->  您也可以使用置放目標，來指定預期要回應置放資料的效果。 例如，如果置放目標無法辨識要置放的資料類型，可透過將其允許的效果設定為 <xref:System.Windows.DragDropEffects.None> 來拒絕資料。 通常會在 <xref:System.Windows.DragDrop.DragOver> 事件處理常式中執行這項作業。  
+> 您也可以使用置放目標，來指定預期要回應置放資料的效果。 例如，如果置放目標無法辨識要置放的資料類型，可透過將其允許的效果設定為 <xref:System.Windows.DragDropEffects.None> 來拒絕資料。 通常會在 <xref:System.Windows.DragDrop.DragOver> 事件處理常式中執行這項作業。  
   
  拖曳來源可選擇性地處理 <xref:System.Windows.DragDrop.GiveFeedback> 和 <xref:System.Windows.DragDrop.QueryContinueDrag> 事件。 除非您將事件標記為已處理，否則這些事件會使用預設處理常式。 除非您有變更其預設行為的特定需求，否則通常會忽略這些事件。  
   
@@ -218,6 +218,6 @@ ms.locfileid: "64663346"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Clipboard>
-- [逐步解說：啟用拖曳並放在使用者控制項](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [逐步解說：在使用者控制項上啟用拖放](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
 - [HOW-TO 主題](drag-and-drop-how-to-topics.md)
 - [拖放](drag-and-drop.md)

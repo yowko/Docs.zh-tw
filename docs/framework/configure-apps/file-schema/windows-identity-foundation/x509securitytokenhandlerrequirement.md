@@ -3,15 +3,15 @@ title: <x509SecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
-ms.openlocfilehash: 6e8267f170dbb26381564be7b66df5f617156885
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2851820460a34d62175929b48ad57914df557059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790438"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945173"
 ---
 # <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement>
-提供選擇性組態<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>類別或衍生的類別。  
+提供<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>類別或衍生類別的選擇性設定。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -46,20 +46,20 @@ ms.locfileid: "61790438"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode>值，指定要使用的 X.509 憑證驗證模式。 預設值為"PeerOrChainTrust"。|  
-|mapToWindows|指定的權杖處理常式是否應該使用內送的 「 UPN 」 宣告，將驗證權杖對應至 Windows 帳戶。 預設值為"false"。|  
-|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>值，指定要使用的 X.509 憑證的撤銷模式。 預設值為 「 上線 」。|  
-|trustedStoreLocation|A<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值，指定 X.509 憑證存放區。 預設值為"LocalMachine"。|  
-|certificateValidator|自訂型別衍生自<xref:System.IdentityModel.Selectors.X509CertificateValidator>。 如果`certificateValidationMode`屬性是 「 自訂 」，此類型的執行個體使用的簽發者憑證驗證。|  
+|certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode>值, 指定要用於 x.509 憑證的驗證模式。 預設值為 "PeerOrChainTrust"。|  
+|mapToWindows|指定權杖處理常式是否應使用傳入的 UPN 宣告, 將驗證權杖對應至 Windows 帳戶。 預設值為 "false"。|  
+|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>值, 指定要用於 x.509 憑證的撤銷模式。 預設值為 "Online"。|  
+|trustedStoreLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值, 指定 x.509 憑證存放區。 預設值為 "LocalMachine"。|  
+|certificateValidator|衍生自的自訂類型<xref:System.IdentityModel.Selectors.X509CertificateValidator>。 `certificateValidationMode`如果屬性為 "Custom", 則會使用此類型的實例進行簽發者憑證驗證。|  
   
 ### <a name="child-elements"></a>子元素  
  None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|將指定的安全性權杖處理常式加入至 權杖處理常式集合。|  
+|[\<add>](add.md)|將指定的安全性權杖處理常式加入至權杖處理常式集合。|  
   
 ## <a name="example"></a>範例  
   

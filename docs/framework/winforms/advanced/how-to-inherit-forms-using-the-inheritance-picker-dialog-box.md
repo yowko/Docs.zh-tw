@@ -1,17 +1,17 @@
 ---
-title: 作法：使用繼承選取器對話方塊繼承表單
+title: HOW TO：使用繼承選取器對話方塊繼承表單
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 9382f1bf890fb5a886cf547d9b1e9b3031c12eb6
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 6fdd1e72e4256db30d9fb6a3b560c3d538435c79
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039997"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931885"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker"></a>作法：使用繼承選擇器繼承表單
 
@@ -57,7 +57,7 @@ ms.locfileid: "69039997"
 
 ## <a name="see-also"></a>另請參閱
 
-- [Inherits 陳述式](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [using](../../../csharp/language-reference/keywords/using.md)
 - [修改基底表單外觀的效果](effects-of-modifying-base-form-appearance.md)
 - [Windows Forms 視覺繼承](windows-forms-visual-inheritance.md)

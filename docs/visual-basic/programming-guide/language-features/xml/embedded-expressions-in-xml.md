@@ -8,21 +8,21 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: ef8ac62d9d969ce4463931d69b0302376ca0ccc4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 525fa04db86a299d88e1612aac76d014f35124eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881531"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922624"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML 中內嵌的運算式 (Visual Basic)
-內嵌的運算式可讓您建立 XML 常值包含在執行階段評估的運算式。 內嵌運算式的語法`<%=` `expression` `%>`，這是 ASP.NET 中使用的語法相同。  
+內嵌運算式可讓您建立 XML 常值, 其中包含在執行時間評估的運算式。 內嵌運算式的語法是`<%=` `expression` `%>`, 這與 ASP.NET 中使用的語法相同。  
   
- 例如，您可以建立的 XML 項目常值，結合使用常值的文字內容的內嵌的運算式。  
+ 例如, 您可以建立 XML 元素常值, 並結合內嵌運算式與常值文字內容。  
   
  [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
- 如果`isbnNumber`包含整數 12345 並`modifiedDate`包含日期 3/5/2006，此程式碼執行時，值`book`是：  
+ 如果`isbnNumber`包含整數12345並`modifiedDate`包含日期 3/5/2006, 則當此`book`程式碼執行時, 的值會是:  
   
 ```xml  
 <book category="fiction" isbn="12345">  
@@ -30,55 +30,55 @@ ms.locfileid: "65881531"
 </book>  
 ```  
   
-## <a name="embedded-expression-location-and-validation"></a>內嵌的運算式的位置和驗證  
- 內嵌的運算式只可以出現在 XML 常值運算式內的特定位置。 運算式的位置控制項類型的運算式可以傳回及如何`Nothing`處理。 下表描述允許的位置和內嵌運算式的型別。  
+## <a name="embedded-expression-location-and-validation"></a>內嵌運算式位置和驗證  
+ 內嵌運算式只能出現在 XML 常值運算式內的特定位置。 運算式位置會控制運算式可以傳回的類型, 以及如何`Nothing`處理。 下表描述內嵌運算式的允許位置和類型。  
   
-|常值中的位置|運算式的型別|處理 `Nothing`|  
+|常值中的位置|運算式的類型|處理`Nothing`|  
 |---|---|---|  
-|XML 項目名稱|<xref:System.Xml.Linq.XName>|錯誤|  
-|XML 項目內容|`Object` 或陣列 `Object`|略過|  
-|XML 項目屬性名稱|<xref:System.Xml.Linq.XName>|錯誤，除非屬性值也是 `Nothing`|  
-|XML 項目屬性值|`Object`|忽略的屬性宣告|  
-|XML 項目屬性|<xref:System.Xml.Linq.XAttribute> 或集合 <xref:System.Xml.Linq.XAttribute>|略過|  
-|XML 文件根項目|<xref:System.Xml.Linq.XElement> 或其中一個集合<xref:System.Xml.Linq.XElement>物件和任意數目的<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>物件|略過|  
+|XML 元素名稱|<xref:System.Xml.Linq.XName>|Error|  
+|XML 元素內容|`Object`或的陣列`Object`|略過|  
+|XML 元素屬性名稱|<xref:System.Xml.Linq.XName>|錯誤, 除非屬性值也是`Nothing`|  
+|XML 元素屬性值|`Object`|已忽略屬性宣告|  
+|XML 元素屬性|<xref:System.Xml.Linq.XAttribute>或的集合。<xref:System.Xml.Linq.XAttribute>|略過|  
+|XML 檔根項目|<xref:System.Xml.Linq.XElement>或一個<xref:System.Xml.Linq.XElement>物件的集合, 以及任意數目的<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>物件|略過|  
   
-- XML 項目名稱中內嵌運算式的範例：  
+- XML 元素名稱中內嵌運算式的範例:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
-- XML 項目的內嵌運算式內容中的範例：  
+- XML 元素內容中的內嵌運算式範例:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
-- XML 項目屬性名稱中內嵌運算式的範例：  
+- XML 元素屬性名稱中的內嵌運算式範例:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
-- XML 項目屬性值的內嵌運算式的範例：  
+- XML 元素屬性值中的內嵌運算式範例:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
-- 內嵌運算式中的 XML 項目屬性的範例：  
+- XML 元素屬性中的內嵌運算式範例:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
-- 內嵌運算式的 XML 文件根項目中的範例：  
+- XML 檔根項目中的內嵌運算式範例:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
- 如果您啟用`Option Strict`，編譯器會檢查每個內嵌的運算式類型可擴展為要求的類型。 程式碼執行時驗證的 XML 文件的根項目是唯一的例外狀況。 如果您編譯而不要`Option Strict`，您可以將內嵌類型的運算式`Object`和其類型在執行階段驗證。  
+ 如果您啟用`Option Strict`, 編譯器會檢查每個內嵌運算式的類型是否加寬成所需的類型。 唯一的例外是針對 XML 檔的根項目, 這會在程式碼執行時進行驗證。 如果您在沒有`Option Strict`的情況下編譯, 則可以`Object`內嵌類型的運算式, 並在執行時間驗證其類型。  
   
- 內容是選擇性的其中的位置中內嵌包含的運算式`Nothing`都會被忽略。 這表示您沒有檢查項目內容，屬性值，而且陣列項目不是`Nothing`才能使用 XML 常值。 必要值，例如項目和屬性名稱不可以是`Nothing`。  
+ 在內容為選擇性的位置中, 會忽略包含`Nothing`的內嵌運算式。 這表示您不需要在使用 XML 常值`Nothing`之前, 檢查元素內容、屬性值和陣列元素。 必要的值 (例如元素和屬性名稱) 不能`Nothing`是。  
   
- 如需使用特定類型的常值中的內嵌的運算式的詳細資訊，請參閱[XML 文件常值](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)， [XML 元素常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。  
+ 如需在特定類型的常值中使用內嵌運算式的詳細資訊, 請參閱[Xml 檔常](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)值、 [xml 元素常](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)值。  
   
 ## <a name="scoping-rules"></a>範圍規則  
- 編譯器會將每個 XML 常值轉換成適當的常值類型的建構函式呼叫。 建構函式，會將 XML 常值中內嵌的運算式與常值內容傳遞做為引數。 這表示所有 Visual Basic 程式設計項目可使用 XML 常值都可內嵌的運算式。  
+ 編譯器會將每個 XML 常值轉換成適當常數值型別的函式呼叫。 XML 常值中的常值內容和內嵌運算式會當做引數傳遞至函式。 這表示可用於 XML 常值的所有 Visual Basic 程式設計專案也可用於其內嵌運算式。  
   
- 在 XML 常值，您可以存取以宣告的前置詞的 XML 命名空間`Imports`陳述式。 您可以宣告新的 XML 命名空間前置詞，或遮蔽現有 XML 命名空間前置詞，在項目中使用`xmlns`屬性。 內嵌的運算式中的 XML 常值之子節點的該元素，但不是使用新的命名空間。  
+ 在 xml 常值內, 您可以存取以`Imports`語句宣告的 xml 命名空間前置詞。 您可以使用`xmlns`屬性, 在元素中宣告新的 xml 命名空間前置詞, 或遮蔽現有的 xml 命名空間前置詞。 新的命名空間可用於該元素的子節點, 但不能用於內嵌運算式中的 XML 常值。  
   
 > [!NOTE]
->  當您宣告 XML 命名空間前置詞使用`xmlns`命名空間屬性的屬性值必須是常數字串。 在這方面，使用`xmlns`屬性，就像是`Imports`陳述式來宣告 XML 命名空間。 您無法使用內嵌的運算式來指定 XML 命名空間值。  
+> 當您使用`xmlns` namespace 屬性宣告 XML 命名空間前置詞時, 屬性值必須是常數位串。 在這方面, 使用`xmlns`屬性就像`Imports`使用語句宣告 XML 命名空間。 您不能使用內嵌運算式來指定 XML 命名空間值。  
   
 ## <a name="see-also"></a>另請參閱
 

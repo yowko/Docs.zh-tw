@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e11e7eb477d938d3ccba352ef357d927af966bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3013a0bc0cdcfa0d714328bfe86a87f44a11e829
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770665"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935101"
 ---
 # <a name="icordebugregisterset2setregisters-method"></a>ICorDebugRegisterSet2::SetRegisters 方法
-`SetRegisters` 未實作在.NET Framework 2.0 版。 請勿呼叫這個方法。  
+`SetRegisters`不會在 .NET Framework 版本2.0 中執行。 請勿呼叫此方法。  
   
 > [!NOTE]
->  使用較高層級的作業，例如[icordebugilframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)或是[icordebugnativeframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)。  
+> 使用較高層級的作業, 例如[ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)或[ICorDebugNativeFrame:: setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)。  
   
 ## <a name="syntax"></a>語法  
   

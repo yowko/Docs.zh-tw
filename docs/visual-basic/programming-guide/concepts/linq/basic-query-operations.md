@@ -15,15 +15,15 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: af99a6c22239be1f9f03bafd8323c73f83df5c51
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12f10f30dd767f3435044f2bbebe0eb865c29d0c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642268"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939370"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查詢作業 (Visual Basic)
-本主題提供簡介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]運算式在 Visual Basic 中，以及一些典型的一種您在查詢中執行的作業。 如需詳細資訊，請參閱下列主題：  
+本主題提供 Visual Basic 中的[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]運算式, 以及您在查詢中執行的一些一般作業類型的簡介。 如需詳細資訊，請參閱下列主題：  
   
  [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
@@ -31,126 +31,126 @@ ms.locfileid: "64642268"
   
  [逐步解說：在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
-## <a name="specifying-the-data-source-from"></a>指定資料來源 （來源）  
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢中，第一個步驟是指定您想要查詢的資料來源。 因此，`From`在查詢中的子句一律會先出現。 查詢運算子來選取和塑造結果取決於來源的類型。  
+## <a name="specifying-the-data-source-from"></a>指定資料來源 (從)  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]在查詢中, 第一個步驟是指定您想要查詢的資料來源。 因此, 查詢`From`中的子句一律會先出現。 查詢運算子會根據來源的類型來選取和塑造結果。  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
- `From`子句會指定資料來源`customers`，以及*範圍變數*， `cust`。 範圍變數是迴圈的反覆項目變數，例如，不同之處在於查詢運算式中，在沒有實際反覆項目，就會發生。 查詢執行時，通常使用`For Each`迴圈中，範圍變數做為在每個後續項目的參考`customers`。 因為編譯器可以推斷 `cust` 的類型，所以您不需要明確予以指定。 如需撰寫使用，而不需要明確的輸入查詢的範例，請參閱[查詢作業 (Visual Basic) 中的型別關聯性](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)。  
+ 子句會指定資料`customers`源`cust`和*範圍變數。* `From` 範圍變數就像迴圈反覆運算變數, 不同的是, 在查詢運算式中, 不會發生實際的反復專案。 執行查詢時, 通常會使用`For Each`迴圈, 範圍變數會當做中`customers`每個後續元素的參考。 因為編譯器可以推斷 `cust` 的類型，所以您不需要明確予以指定。 如需使用和而不明確輸入來撰寫之查詢的範例, 請參閱[查詢作業中的類型關聯性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)。  
   
- 如需有關如何使用`From`子句，在 Visual Basic 中，請參閱[From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)。  
+ 如需如何在 Visual Basic 中使用`From`子句的詳細資訊, 請參閱[from 子句](../../../../visual-basic/language-reference/queries/from-clause.md)。  
   
-## <a name="filtering-data-where"></a>篩選資料 （位置）  
- 可能最常見的查詢作業套用篩選的布林運算式的形式。 然後查詢會傳回只在運算式為 true 的元素。 A`Where`子句用來執行篩選。 篩選會指定要包含在產生的序列中的資料來源中的哪些項目。 在下列範例中，僅有的地址在倫敦的客戶則會包含項目。  
+## <a name="filtering-data-where"></a>篩選資料 (Where)  
+ 最常見的查詢作業可能是以布林運算式的形式套用篩選。 然後, 此查詢只會傳回運算式為 true 的元素。 `Where`子句是用來執行篩選。 篩選器會指定要在結果序列中包含的資料來源中的哪些元素。 在下列範例中, 只會包含在倫敦具有位址的客戶。  
   
  [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
   
- 您可以使用邏輯運算子，例如`And`並`Or`結合篩選條件運算式中的`Where`子句。 比方說，如果要傳回的只有這些客戶來自 London 你是誰，且其名稱是 Devon，使用下列程式碼：  
+ 您可以使用邏輯運算子 (例如`And`和`Or` ) 來結合子句中的`Where`篩選條件運算式。 例如, 若只要傳回來自倫敦且其名稱為 Devon 的客戶, 請使用下列程式碼:  
   
 ```vb  
 Where cust.City = "London" And cust.Name = "Devon"   
 ```  
   
- 若要傳回來自 London 或 Paris 的客戶，使用下列程式碼：  
+ 若要傳回來自倫敦或巴黎的客戶, 請使用下列程式碼:  
   
 ```vb  
 Where cust.City = "London" Or cust.City = "Paris"   
 ```  
   
- 如需有關如何使用`Where`子句，在 Visual Basic 中，請參閱[Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)。  
+ 如需如何在 Visual Basic 中使用`Where`子句的詳細資訊, 請參閱[Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)。  
   
 ## <a name="ordering-data-order-by"></a>排序資料 (Order By)  
- 通常很方便就可以放到特定的順序排序傳回的資料。 `Order By`子句會造成指定的欄位或欄位排序傳回的序列的項目。 例如，下列查詢會排序結果根據`Name`屬性。 因為`Name`是字串，會依字母順序，排序傳回的資料，從 A 到 Z。  
+ 將傳回的資料排序為特定的順序, 通常是很方便的方式。 `Order By`子句會使傳回序列中的專案在指定的欄位上進行排序。 例如, 下列查詢會根據`Name`屬性來排序結果。 因為`Name`是字串, 所以傳回的資料會依字母順序從 a 到 Z 排序。  
   
  [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
   
- 若要以相反順序排序結果 (從 Z 到 A)，請使用 `Order By...Descending` 子句。 預設值是`Ascending`時都`Ascending`也`Descending`指定。  
+ 若要以相反順序排序結果 (從 Z 到 A)，請使用 `Order By...Descending` 子句。 當沒有指定`Ascending` 或`Descending`時, 預設值為。 `Ascending`  
   
- 如需有關如何使用`Order By`子句，在 Visual Basic 中，請參閱[Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)。  
+ 如需如何在 Visual Basic 中使用`Order By`子句的詳細資訊, 請參閱[Order by 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)。  
   
-## <a name="selecting-data-select"></a>選取 (Select) 的資料  
- `Select`子句指定的格式和內容傳回的項目。 比方說，您可以指定是否將結果包含完整`Customer`物件，其中一個`Customer`屬性、 屬性的子集、 從各種資料來源或一些新的結果型別屬性的組合為基礎的計算。 `Select` 子句不只產生一份來源項目時，作業稱為「投影」。  
+## <a name="selecting-data-select"></a>選取資料 (選取)  
+ `Select`子句會指定傳回元素的表單和內容。 例如, 您可以指定您的結果是否包含完整`Customer`的物件、只有一個`Customer`屬性、屬性的子集、來自各種資料來源的屬性組合, 或是以計算為基礎的一些新結果型別。 `Select` 子句不只產生一份來源項目時，作業稱為「投影」。  
   
- 若要擷取集合，其中包含完整`Customer`物件選取範圍變數本身：  
+ 若要取出由完整`Customer`物件所組成的集合, 請選取範圍變數本身:  
   
  [!code-vb[VbLINQBasicOps#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#4)]  
   
- 如果`Customer`執行個體的大型物件，都有許多欄位，以及所有您想要擷取是名稱，您可以選取`cust.Name`，如下列範例所示。 區域類型推斷會辨識此集合中的變更的結果型別`Customer`字串集合的物件。  
+ 如果實例是具有許多欄位的大型物件, 而您想要取出的是名稱, 您可以選取`cust.Name`, 如下列範例所示。 `Customer` 區欄位型別推斷會辨識這項`Customer`工作會將結果類型從物件集合變更為字串的集合。  
   
  [!code-vb[VbLINQBasicOps#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#5)]  
   
- 若要選取多個欄位從資料來源，您會有兩個選擇：  
+ 若要從資料來源選取多個欄位, 您有兩個選擇:  
   
-- 在 `Select`子句，指定您想要包含在結果中的欄位。 編譯器會定義匿名型別具有為其屬性的這些欄位。 如需詳細資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+- `Select`在子句中, 指定您想要包含在結果中的欄位。 編譯器會定義具有這些欄位做為其屬性的匿名型別。 如需詳細資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
-     因為傳回的項目，在下列範例中是匿名型別執行個體，您無法為型別依名稱參考其他位置中您的程式碼。 編譯器指定類型名稱包含在一般的 Visual Basic 程式碼中無效的字元。 在下列範例中，在集合中的查詢所傳回的項目`londonCusts4`匿名類型的執行個體  
+     因為下列範例中傳回的元素是匿名型別的實例, 所以您無法在程式碼中的其他地方依名稱參考該型別。 類型的編譯器指定名稱包含在一般 Visual Basic 程式碼中不正確字元。 在下列範例中, 查詢`londonCusts4`所傳回之集合中的元素是匿名型別的實例。  
   
      [!code-vb[VbLINQBasicOps#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#6)]  
   
      -或-  
   
-- 定義具名型別，其中包含您想要包含在結果中，以及建立和初始化中的型別之執行個體的特定欄位`Select`子句。 只有當您必須使用個別的結果，會傳回這些，集合之外，或如果您必須將它們傳遞為方法呼叫中的參數，請使用此選項。 型別`londonCusts5`在下列範例中是 IEnumerable (Of NamePhone)。  
+- 定義名為的型別, 其中包含您想要包含在結果中的特定欄位, 並在`Select`子句中建立和初始化型別的實例。 只有當您必須在傳回的集合以外的個別結果, 或是您必須將它們當做方法呼叫中的參數傳遞時, 才使用此選項。 下列範例`londonCusts5`中的類型是 IEnumerable (of NamePhone)。  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   
      [!code-vb[VbLINQBasicOps#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#8)]  
   
- 如需有關如何使用`Select`子句，在 Visual Basic 中，請參閱[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)。  
+ 如需如何在 Visual Basic 中使用`Select`子句的詳細資訊, 請參閱[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)。  
   
-## <a name="joining-data-join-and-group-join"></a>（聯結及群組聯結） 聯結的資料  
- 您可以結合多個資料來源中的`From`子句以數種方式。 比方說，下列程式碼會使用兩個資料來源，並隱含地結合來自這兩個結果中的屬性。 查詢會選取最後一個名稱以母音開頭的學生。  
+## <a name="joining-data-join-and-group-join"></a>聯結資料 (聯結和群組聯結)  
+ 您可以用數種方式在子句中結合`From`一個以上的資料來源。 例如, 下列程式碼會使用兩個數據源, 並在結果中隱含結合兩者的屬性。 查詢會選取姓氏以母音開頭的學生。  
   
  [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
   
 > [!NOTE]
->  您可以執行此程式碼中建立的學生清單[How to:建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。  
+> 您可以使用下列[方式來執行此程式碼: 建立的學生清單建立專案](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)清單。  
   
- `Join`關鍵字相當於`INNER JOIN`SQL 中。 它結合了兩個集合中的項目之間的比對索引鍵值為基礎的兩個集合。 查詢會傳回所有或部分具有相符索引鍵值的集合項目。 例如，下列程式碼重複先前的隱含聯結的動作。  
+ 關鍵字相當於 SQL 中的`INNER JOIN`。 `Join` 它會根據兩個集合中元素之間相符的索引鍵值, 結合兩個集合。 此查詢會傳回具有相符索引鍵值的全部或部分集合元素。 例如, 下列程式碼會重複先前的隱含聯結動作。  
   
  [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
- `Group Join` 將集合合併成單一的階層式集合，就像`LEFT JOIN`SQL 中。 如需詳細資訊，請參閱 < [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)並[Group Join 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)。  
+ `Group Join`將集合結合成單一階層式集合, 就像`LEFT JOIN` SQL 中的一樣。 如需詳細資訊, 請參閱[聯結子句](../../../../visual-basic/language-reference/queries/join-clause.md)和[群組聯結子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)。  
   
-## <a name="grouping-data-group-by"></a>分組資料 （依群組）  
- 您可以新增`Group By`子句分組查詢結果，根據一個或多個欄位的項目中的項目。 例如，下列程式碼會將學生分組類別年。  
+## <a name="grouping-data-group-by"></a>群組資料 (分組依據)  
+ 您可以加入`Group By`子句, 根據元素的一或多個欄位, 將查詢結果中的專案分組。 例如, 下列程式碼會依類別年度來分組學生。  
   
  [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  
   
- 如果您執行此程式碼使用的中建立的學生清單[How to:建立清單的項目](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)，從輸出`For Each`陳述式：  
+ 如果您使用下列[方式建立的程式碼:建立專案](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)清單, `For Each`語句的輸出為:  
   
- 年份：Junior  
+ 歷年初級  
   
- Tucker Michael  
+ Tucker, Michael  
   
- 牙哥加西亞島 Hugo  
+ Garcia、Hugo  
   
- 牙哥加西亞島 Debra  
+ Garcia、Debra  
   
- Tucker Lance  
+ Tucker、Lance  
   
- 年份：資深  
+ 歷年高  
   
  Omelchenko, Svetlana  
   
- Osada Michiko  
+ Osada、包括 michiko  
   
- Fakhouri Fadi  
+ Fakhouri, Fadi  
   
- Feng Hanying  
+ We feng、Hanying  
   
- Adams Terry  
+ Adams, Terry  
   
- 年份：包括新生諮詢人員  
+ 歷年Freshman  
   
  Mortensen, Sven  
   
- 牙哥加西亞島 Cesar  
+ Garcia、Cesar  
   
- 下列程式碼所示的變化年級，並依姓氏然後排列每年的學生。  
+ 下列程式碼中顯示的變化會排序類別年份, 然後依姓氏排序每年中的學生。  
   
  [!code-vb[VbLINQBasicOps#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#12)]  
   
- 如需詳細資訊`Group By`，請參閱 <<c2> [ 群組的子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
+ 如需的詳細`Group By`資訊, 請參閱[group by 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

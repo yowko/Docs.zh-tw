@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 194b40b0873cee848124a5afc9a47740d59969c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 62965fa928522052b6885769e02c0211ca8d3fe0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779463"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937939"
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore 方法
-取得的介面指標[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)表示主應用程式所載入的組件清單。  
+取得[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)的介面指標, 表示主機所載入的元件清單。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,32 +37,32 @@ HRESULT GetAssemblyStore (
   
 ## <a name="parameters"></a>參數  
  `ppAssemblyStore`  
- [out]函式指標`IHostAssemblyStore`執行個體，則為 null，如果主機未實作`IHostAssemblyStore`。  
+ 脫銷`IHostAssemblyStore`實例的函式指標, 如果主機未執行`IHostAssemblyStore`, 則為 null。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`GetAssemblyStore` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_NOINTERFACE|主機並未提供的實作`IHostAssemblyStore`。|  
+|S_OK|`GetAssemblyStore`已成功傳回。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時, CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_NOINTERFACE|主機未提供的`IHostAssemblyStore`執行。|  
   
 ## <a name="remarks"></a>備註  
- `IHostAssemblyStore` 提供方法，可讓主應用程式繫結至組件和模組與 CLR 無關。 主機通常會提供以允許從非檔案系統中載入的組件的組件存放區。  
+ `IHostAssemblyStore`提供的方法可讓主機與 CLR 獨立系結至元件和模組。 主機通常會提供元件存放區, 以允許從檔案系統以外的格式載入元件。  
   
 > [!NOTE]
->  如果主機未實作`IHostAssemblyStore`，`GetAssemblyStore`應該會傳回 E_NOINTERFACE，HRESULT 值和應該設定`ppAssemblyStore`為 null。  
+> 如果主機未執行`IHostAssemblyStore`, `GetAssemblyStore`應該會傳回 E_NOINTERFACE 的 HRESULT 值, 而且應該將設定`ppAssemblyStore`為 null。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

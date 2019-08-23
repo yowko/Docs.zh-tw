@@ -2,26 +2,26 @@
 title: <add> 的 <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 5c9937cb6302a194228461f3e2e06ecdf4d43269
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 325d6b8111115384b18547bd11ccec8a4a8af711
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673611"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920117"
 ---
-# <a name="add-of-issuerchannelbehaviors"></a>\<新增 > 的\<issuerChannelBehaviors >
+# <a name="add-of-issuerchannelbehaviors"></a>\<新增 issuerChannelBehaviors > \<的 >
 
 新增與 STS 通訊時要使用的端點行為。
 
 > [!NOTE]
-> 如果任何端點行為包含[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)項目，將會擲回例外狀況。
+> 如果任何端點行為包含[ \<clientCredentials >](clientcredentials.md)元素, 則會擲回例外狀況。
 
 \<system.ServiceModel>\
-\<behaviors>\
+\<行為 > \
 endpointBehaviors 區段\<行為 > \
-\<clientCredentials>\
-\<issuedToken>\
-\<issuerChannelBehaviors > Element\
+\<clientCredentials > \
+\<issuedToken > \
+\<issuerChannelBehaviors > 元素 \
 \<add>
 
 ## <a name="syntax"></a>語法
@@ -48,13 +48,13 @@ endpointBehaviors 區段\<行為 > \
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|描述|
+|項目|說明|
 |-------------|-----------------|
-|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|包含與指定的服務權杖服務進行通訊時要使用 Windows Communication Foundation (WCF) 用戶端端點行為的集合。|
+|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|包含與指定的服務權杖服務通訊時, 所要使用的 Windows Communication Foundation (WCF) 用戶端端點行為集合。|
 
 ## <a name="remarks"></a>備註
 
-`issuerAddress` 包含用戶端想要進行通訊之 Security Token Service 的 URI。 `behaviorConfiguration` 指向應用程式建立 Windows Communication Foundation (WCF) 通道中用來從安全性權杖服務取得核發的權杖端點行為。
+`issuerAddress` 包含用戶端想要進行通訊之 Security Token Service 的 URI。 `behaviorConfiguration`指向端點行為, 應用程式會在 Windows Communication Foundation (WCF) 建立的通道中使用該行為, 從安全性權杖服務取得發行的權杖。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -62,12 +62,12 @@ endpointBehaviors 區段\<行為 > \
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>
-- [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [同盟與發行的權杖](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)
-- [如何：建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [如何：設定本機簽發者](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [同盟與發行的權杖](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)
+- [服務身分識別和驗證](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [安全性行為](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [同盟與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [保護用戶端安全](../../../wcf/securing-clients.md)
+- [如何：建立同盟用戶端](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [如何：設定本機簽發者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [同盟與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)

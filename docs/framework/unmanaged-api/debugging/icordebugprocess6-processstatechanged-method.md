@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: fb6d30d9-54f3-462b-8ebf-ce0440791ad5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68dae3839cfb4d04797d81bca41ee212a64cca51
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb158b383745cd7e44c8fede6ddd43ae81ced2d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751564"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930756"
 ---
 # <a name="icordebugprocess6processstatechanged-method"></a>ICorDebugProcess6::ProcessStateChanged 方法
-會告知[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)處理序執行。  
+通知[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)進程正在執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -22,13 +22,13 @@ HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);
   
 ## <a name="parameters"></a>參數  
  `change`  
- [in]成員[ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md)列舉  
+ 在[ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md)列舉的成員  
   
 ## <a name="remarks"></a>備註  
- 偵錯工具呼叫此方法來通知[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)處理序執行。  
+ 偵錯工具會呼叫這個方法, 以通知[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)進程正在執行。  
   
 > [!NOTE]
->  這個方法僅適用於 .NET Native。  
+> 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833806"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935733"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳作法
 
@@ -117,7 +117,7 @@ CLR 不需要額外的程式碼就可以清除執行階段可呼叫包裝函式 
 
 CLR 必須知道程式碼何時處於鎖定，才能知道要卸除 <xref:System.AppDomain>，而不只是中止執行緒。  中止執行緒可能十分危險，因為執行緒所操作的資料可能處於不一致的狀態。 因此，必須回收整個 <xref:System.AppDomain>。  無法識別鎖定的結果可以是發生死結或結果不正確。 使用 <xref:System.Threading.Thread.BeginCriticalRegion%2A> 和 <xref:System.Threading.Thread.EndCriticalRegion%2A> 方法來識別鎖定區域。  它們是 <xref:System.Threading.Thread> 類別上只套用至目前執行緒的靜態方法，有助於防止某個執行緒編輯另一個執行緒的鎖定計數。
 
-<xref:System.Threading.Monitor.Enter%2A> 和 <xref:System.Threading.Monitor.Exit%2A> 內建此 CLR 通知，以建議使用它們，以及使用可使用這些方法的 [lock 陳述式](~/docs/csharp/language-reference/keywords/lock-statement.md)。
+<xref:System.Threading.Monitor.Enter%2A> 和 <xref:System.Threading.Monitor.Exit%2A> 內建此 CLR 通知，以建議使用它們，以及使用可使用這些方法的 [lock 陳述式](../../csharp/language-reference/keywords/lock-statement.md)。
 
 微調鎖定和 <xref:System.Threading.AutoResetEvent> 這類其他鎖定機制必須呼叫這些方法，向 CLR 通知將進入重要區段。  這些方法不會取得任何鎖定；它們會向 CLR 通知程式碼正在重要區段中執行，而且中止執行緒會讓共用狀態不一致。  如果您已經定義自己的鎖定類型 (例如自訂 <xref:System.Threading.ReaderWriterLock> 類別)，請使用這些鎖定計數方法。
 
@@ -143,7 +143,7 @@ CLR 必須知道程式碼何時處於鎖定，才能知道要卸除 <xref:System
 
 ### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>鎖定在整個處理序或是應用程式定義域之間未運作。
 
-過去，使用 <xref:System.Threading.Monitor.Enter%2A> 和 [lock 陳述式](~/docs/csharp/language-reference/keywords/lock-statement.md)來建立全域處理序鎖定。  例如，鎖定 <xref:System.AppDomain> 敏捷式類別時會發生這種情況，例如非共用組件中的 <xref:System.Type> 執行個體、<xref:System.Threading.Thread> 物件、實習字串，以及使用遠端處理跨應用程式定義域共用的一些字串。  這些鎖定不再是針對整個處理序。  若要識別整個處理序應用程式間網域鎖定的目前狀態，請判斷鎖定內的程式碼是否使用任何外部持續性資源，例如磁碟上或可能是資料庫上的檔案。
+過去，使用 <xref:System.Threading.Monitor.Enter%2A> 和 [lock 陳述式](../../csharp/language-reference/keywords/lock-statement.md)來建立全域處理序鎖定。  例如，鎖定 <xref:System.AppDomain> 敏捷式類別時會發生這種情況，例如非共用組件中的 <xref:System.Type> 執行個體、<xref:System.Threading.Thread> 物件、實習字串，以及使用遠端處理跨應用程式定義域共用的一些字串。  這些鎖定不再是針對整個處理序。  若要識別整個處理序應用程式間網域鎖定的目前狀態，請判斷鎖定內的程式碼是否使用任何外部持續性資源，例如磁碟上或可能是資料庫上的檔案。
 
 請注意，如果受保護程式碼使用外部資源，則在 <xref:System.AppDomain> 內鎖定可能會導致問題，因為該程式碼可能會跨多個應用程式定義域同時執行。  寫入至一個記錄檔或是繫結至整個處理序的通訊端時，這可能會造成問題。  這些變更表示沒有簡單的方式可使用 Managed 程式碼來取得處理序全域鎖定，而非使用具名 <xref:System.Threading.Mutex> 或 <xref:System.Threading.Semaphore> 執行個體。  同時建立未在兩個應用程式定義域中執行的程式碼，或使用 <xref:System.Threading.Mutex> 或 <xref:System.Threading.Semaphore> 類別。  如果無法變更現有程式碼，請不要使用 Win32 具名 Mutex 來達成這項同步處理，因為以 Fiber 模式執行表示您無法保證相同的作業系統執行緒會取得和釋放 Mutex。  您必須使用 Managed <xref:System.Threading.Mutex> 類別或具名 <xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent> 或 <xref:System.Threading.Semaphore> 透過 CLR 所知的方式來同步處理程式碼鎖定，而不是使用 Unmanaged 程式碼來同步處理鎖定。
 
@@ -241,11 +241,11 @@ HPA 只會影響裝載 Common Language Runtime 以及實作主機保護的 Unman
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>不要透過 Unmanaged 程式碼無限期封鎖
 
-因為 CLR 無法中止執行緒，所以使用 Unmanaged 程式碼進行封鎖可能會導致拒絕服務攻擊，而不是使用 Managed 程式碼進行封鎖。  已封鎖的執行緒會防止 CLR 卸載 <xref:System.AppDomain>，至少不執行一些非常不安全的作業。  封鎖使用 Windows 同步處理原始物件是不允許事項的清楚範例。  封鎖的呼叫中`ReadFile`通訊端上應該儘可能避免 — Windows API 應該在理想情況下提供的機制，讓這類作業逾時。
+因為 CLR 無法中止執行緒，所以使用 Unmanaged 程式碼進行封鎖可能會導致拒絕服務攻擊，而不是使用 Managed 程式碼進行封鎖。  已封鎖的執行緒會防止 CLR 卸載 <xref:System.AppDomain>，至少不執行一些非常不安全的作業。  使用 Windows 同步處理原始物件進行封鎖, 是我們無法允許的一個明確範例。  如果可能的話, 應該`ReadFile`避免在對通訊端的呼叫中封鎖, 在理想的情況下, Windows API 應該提供一種機制, 讓這類作業的運作時間。
 
 在理想情況下，所有呼叫原生的方法都應該使用具有合理有限逾時的 Win32 呼叫。  如果允許使用者指定逾時，則在沒有某種特定安全性權限時，不應該允許使用者指定無限逾時。  準則是，如果方法將封鎖超過 ~10 秒，則需要使用支援逾時的版本，或需要額外的 CLR 支援。
 
-以下是一些範例有問題的 Api。  管道 (匿名和具名) 可以建立成包含逾時；不過，程式碼必須確定永遠不會使用 NMPWAIT_WAIT_FOREVER 來呼叫 `CreateNamedPipe` 和 `WaitNamedPipe`。  此外，即使指定逾時，還是會有未預期的封鎖。  除非寫入所有位元組，否則會封鎖在匿名管道上呼叫 `WriteFile`；這表示，如果緩衝區中有未讀取的資料，則除非讀取器已釋放管道緩衝區中的空間，否則會封鎖 `WriteFile` 呼叫。  通訊端應該一律使用接受逾時機制的某個 API。
+以下是一些有問題的 Api 範例。  管道 (匿名和具名) 可以建立成包含逾時；不過，程式碼必須確定永遠不會使用 NMPWAIT_WAIT_FOREVER 來呼叫 `CreateNamedPipe` 和 `WaitNamedPipe`。  此外，即使指定逾時，還是會有未預期的封鎖。  除非寫入所有位元組，否則會封鎖在匿名管道上呼叫 `WriteFile`；這表示，如果緩衝區中有未讀取的資料，則除非讀取器已釋放管道緩衝區中的空間，否則會封鎖 `WriteFile` 呼叫。  通訊端應該一律使用接受逾時機制的某個 API。
 
 #### <a name="code-analysis-rule"></a>程式碼分析規則
 
@@ -265,7 +265,7 @@ HPA 只會影響裝載 Common Language Runtime 以及實作主機保護的 Unman
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>盡可能避免 Unmanaged 記憶體
 
-Unmanaged 記憶體可能會流失，就像作業系統控制代碼一樣。 可能的話，請嘗試使用 [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) 或釘選 Managed 物件 (例如 [fixed 陳述式](~/docs/csharp/language-reference/keywords/fixed-statement.md)或使用 byte[] 的 <xref:System.Runtime.InteropServices.GCHandle>) 來使用堆疊上的記憶體。 <xref:System.GC> 最後會清除這些項目。 不過，如果您必須配置 Unmanaged 記憶體，請考慮使用衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 的類別來包裝記憶體配置。
+Unmanaged 記憶體可能會流失，就像作業系統控制代碼一樣。 可能的話，請嘗試使用 [stackalloc](../../csharp/language-reference/operators/stackalloc.md) 或釘選 Managed 物件 (例如 [fixed 陳述式](../../csharp/language-reference/keywords/fixed-statement.md)或使用 byte[] 的 <xref:System.Runtime.InteropServices.GCHandle>) 來使用堆疊上的記憶體。 <xref:System.GC> 最後會清除這些項目。 不過，如果您必須配置 Unmanaged 記憶體，請考慮使用衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 的類別來包裝記憶體配置。
 
 請注意，在至少一種情況下，<xref:System.Runtime.InteropServices.SafeHandle> 不足。  針對配置或釋放記憶體的 COM 方法呼叫，其中一個 DLL 通常會透過 `CoTaskMemAlloc` 來配置記憶體，另一個 DLL 則使用 `CoTaskMemFree` 來釋放該記憶體。  不適合在這些位置使用 <xref:System.Runtime.InteropServices.SafeHandle>，因為它會嘗試將 Unmanaged 記憶體的存留期繫結至 <xref:System.Runtime.InteropServices.SafeHandle> 的存留期，而不是允許另一個 DLL 控制記憶體的存留期。
 
@@ -277,7 +277,7 @@ Unmanaged 記憶體可能會流失，就像作業系統控制代碼一樣。 可
 
 #### <a name="code-analysis-rule"></a>程式碼分析規則
 
-檢閱所有使用 Managed 程式碼並擷取所有物件或擷取所有例外狀況的 catch 區塊。  在C#，這表示同時加上旗標`catch`{}並`catch(Exception)` {}。  請考慮將例外狀況類型設為極為特別，或檢閱程式碼，確保它在擷取到非預期的例外狀況類型時不會以錯誤的方式操作。
+檢閱所有使用 Managed 程式碼並擷取所有物件或擷取所有例外狀況的 catch 區塊。  在C#中, 這表示會`catch`同時`catch(Exception)` {}標記和{}。  請考慮將例外狀況類型設為極為特別，或檢閱程式碼，確保它在擷取到非預期的例外狀況類型時不會以錯誤的方式操作。
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假設 Managed 執行緒是 Win32 執行緒 - 它是 Fiber
 

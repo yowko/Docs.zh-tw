@@ -2,20 +2,20 @@
 title: <security> 的 <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04e7e94f47be37dc9c4cbf404a269b9784281d7d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670465"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936614"
 ---
-# <a name="security-of-nettcpbinding"></a>\<安全性 > 的\<netTcpBinding >
+# <a name="security-of-nettcpbinding"></a>\<netTcpBinding > 的\<安全性 >
 定義繫結的安全性設定。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netTcpBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -42,7 +42,7 @@ ms.locfileid: "61670465"
   
 |值|描述|  
 |-----------|-----------------|  
-|None|停用安全性。|  
+|無|停用安全性。|  
 |Transport|使用 TLS over TCP 或 SPNego 來提供傳輸安全性。 服務必須使用 SSL 憑證來設定。 可使用這個模式控制保護層級。|  
 |訊息|系統會使用 SOAP 訊息安全性來提供安全性。 根據預設，SOAP 本文會經過加密與簽署。 這個模式提供各種功能，如超出範圍的用戶端是否可使用服務認證、使用的演算法套件，以及訊息主體要套用何種保護層級。 每個工作階段會執行一次用戶端驗證，並會快取工作階段期間的驗證結果。|  
 |TransportWithMessageCredential|傳輸安全性會與訊息安全性結合在一起。 傳輸安全性是由 TLS over TCP 或 SPNego 提供，並會確保完整性、機密性和伺服器驗證。 SOAP 訊息安全性提供用戶端驗證。 根據預設，每個工作階段會執行一次用戶端驗證，並會快取工作階段期間的驗證結果。|  
@@ -51,14 +51,14 @@ ms.locfileid: "61670465"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|定義傳輸的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>。|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|定義訊息的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>。|  
+|[\<transport>](transport-of-nettcpbinding.md)|定義傳輸的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>。|  
+|[\<message>](message-element-of-nettcpbinding.md)|定義訊息的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|繫結|繫結項目[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。|  
+|繫結|NetTcpBinding > 的 binding 元素。 [ \< ](nettcpbinding.md)|  
   
 ## <a name="remarks"></a>備註  
  每個標準繫結程序提供了控制傳輸安全性需求的參數。 這些參數通常會包含安全性模式，此模式會指定是否採用訊息層級或傳輸層級安全性，以及選擇用戶端認證型別。 根據這些參數所代表的選取選項，會以適當安全性來建構通道堆疊。  
@@ -73,8 +73,8 @@ ms.locfileid: "61670465"
 - <xref:System.ServiceModel.NetTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

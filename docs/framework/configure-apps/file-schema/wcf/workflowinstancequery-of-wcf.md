@@ -1,25 +1,25 @@
 ---
-title: <workflowInstanceQuery> WCF 的
+title: <workflowInstanceQuery>WCF 的
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 726d4db3bad9f57663790e2bb4e081faba28f1ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e15d7654aeafa5fa7b87922283d6520d5493242
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672961"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915229"
 ---
-# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > 的 WCF
+# <a name="workflowinstancequery-of-wcf"></a>\<WCF 的 workflowInstanceQuery >
 
 表示追蹤工作流程執行個體生命週期變更的查詢，例如已開始或已完成的事件。  
   
-如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+如需追蹤設定檔查詢的詳細資訊, 請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<追蹤 >  
 \<設定檔 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流程 >  
 \<workflowInstanceQueries>  
 \<workflowInstanceQuery>  
   
@@ -95,5 +95,5 @@ ms.locfileid: "61672961"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流程追蹤及追蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)

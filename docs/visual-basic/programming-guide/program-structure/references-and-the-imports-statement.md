@@ -9,50 +9,50 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: f3396eb3e758dc456d86de80246de24349680f2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99afa42994dd09d0b5faaeaf534fbc4b41816998
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967748"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962485"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>參考和 Imports 陳述式 (Visual Basic)
-您可以對外部物件可以使用您的專案選擇**加入參考**命令**專案**功能表。 在 Visual Basic 中的參考可以指向組件，就像型別程式庫，但包含更多資訊。  
+您可以選擇 [**專案**] 功能表上的 [**加入參考**] 命令, 讓外部物件可供專案使用。 Visual Basic 中的參考可以指向類似類型程式庫的元件, 但會包含詳細資訊。  
   
-## <a name="the-imports-statement"></a>Imports 陳述式  
- 組件包含一或多個命名空間。 當您新增組件的參考時，您也可以新增`Imports`陳述式來控制模組內的組件的命名空間的可見性的模組。 `Imports`陳述式提供的範圍的內容，可讓您使用只需要提供唯一的參考命名空間的一部分。  
+## <a name="the-imports-statement"></a>Imports 語句  
+ 元件包含一或多個命名空間。 當您加入元件的參考時, 您也可以將`Imports`語句加入模組中, 以控制該元件在模組內的可見度。 `Imports`語句提供範圍內容, 讓您只使用提供唯一參考所需的命名空間部分。  
   
- `Imports`陳述式的語法如下：  
+ `Imports`語句具有下列語法:  
   
  `Imports [Aliasname =] Namespace`  
   
- `Aliasname` 是指您可以使用程式碼中參考匯入的命名空間的簡短名稱。 `Namespace` 透過定義在專案中，或透過先前的專案參考是可透過其中一個命名空間`Imports`陳述式。  
+ `Aliasname`是指您可以在程式碼內用來參考已匯入之命名空間的簡短名稱。 `Namespace`是透過專案參考、專案內的定義, 或透過上`Imports`一個語句提供的命名空間。  
   
- 模組可能包含任意數目的`Imports`陳述式。 它們必須出現在任何之後`Option`陳述式，如果有的話，但任何其他程式碼之前。  
+ 模組可以包含任意數目的`Imports`語句。 它們必須出現在任何`Option`語句之後 (如果有的話), 但在任何其他程式碼之前。  
   
 > [!NOTE]
->  請勿混淆的專案參考`Imports`陳述式或`Declare`陳述式。 專案參考的組件中的物件等外部物件可讓 Visual Basic 專案。 `Imports`陳述式可用來簡化存取專案的參考，但並不會提供這些物件的存取權。 `Declare`陳述式用來宣告外部程序動態連結程式庫 (DLL) 中的參考。  
+> 請勿混淆專案參考與`Imports`語句`Declare`或語句。 專案參考會使外部物件 (例如元件中的物件) 可用於 Visual Basic 專案。 `Imports`語句可用來簡化對專案參考的存取, 但不會提供這些物件的存取權。 `Declare`語句是用來在動態連結程式庫 (DLL) 中宣告外部程式的參考。  
   
-## <a name="using-aliases-with-the-imports-statement"></a>使用 Imports 陳述式的別名  
- `Imports`陳述式就可以更輕鬆地存取方法的類別不需要明確地輸入完整的名稱的參考。 別名可讓您將容易使用的名稱指派給命名空間的一個部分而已。 比方說，歸位/換行會導致一段文字，以在多行上顯示的順序會是一部分<xref:Microsoft.VisualBasic.ControlChars>中的模組<xref:Microsoft.VisualBasic?displayProperty=nameWithType>命名空間。 若要在程式中不含別名中使用這個常數，您需要輸入下列程式碼：  
+## <a name="using-aliases-with-the-imports-statement"></a>搭配 Imports 語句使用別名  
+ `Imports`語句可讓您藉由排除明確輸入參考完整名稱的需求, 更輕鬆地存取類別的方法。 別名可讓您將易記名稱指派給命名空間的一個部分。 例如, 導致在多行上顯示單一文字片段的線路傳回/換行字元順序, 就是<xref:Microsoft.VisualBasic.ControlChars> <xref:Microsoft.VisualBasic?displayProperty=nameWithType>命名空間中模組的一部分。 若要在沒有別名的程式中使用此常數, 您必須輸入下列程式碼:  
   
  [!code-vb[VbVbalrApplication#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#3)]  
   
- `Imports` 陳述式都必須緊接著任何的前幾行`Option`模組中的陳述式。 下列程式碼片段示範如何匯入並指派至別名<xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType>模組：  
+ `Imports`語句必須一律是緊接在模組中任何`Option`語句之後的第一行。 下列程式碼片段顯示如何匯入並指派別名給<xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType>模組:  
   
  [!code-vb[VbVbalrApplication#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#4)]  
   
- 未來參考此命名空間可以是非常簡短的：  
+ 未來對此命名空間的參考可能會變得很短:  
   
  [!code-vb[VbVbalrApplication#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#5)]  
   
- 如果`Imports`陳述式不包含別名名稱，匯入的命名空間內定義的項目可用在不需完整的模組。 如果指定的別名名稱，則它必須用作辨識符號包含在該命名空間的名稱。  
+ `Imports`如果語句不包含別名名稱, 在匯入的命名空間內定義的專案就可以在模組中使用, 而不需要限定。 如果指定別名名稱, 則必須將它當做包含在該命名空間內之名稱的限定詞使用。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
-- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [.NET 中的組件](../../../standard/assembly/index.md)
 - [如何：使用命令列建立和使用組件](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

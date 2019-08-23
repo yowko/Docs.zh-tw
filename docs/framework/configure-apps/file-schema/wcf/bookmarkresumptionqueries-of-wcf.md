@@ -1,25 +1,25 @@
 ---
-title: <bookmarkResumptionQueries> WCF 的
+title: <bookmarkResumptionQueries>WCF 的
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: 4b11543e240b482d52c157083d1184db4f81bb04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ec9827e9862866096265da576c91b10573012d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673429"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919745"
 ---
-# <a name="bookmarkresumptionqueries-of-wcf"></a>\<bookmarkResumptionQueries > 的 WCF
+# <a name="bookmarkresumptionqueries-of-wcf"></a>\<WCF 的 bookmarkResumptionQueries >
   
 代表查詢的集合，這個集合可用來追蹤工作流程執行個體中的書籤繼續。 追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。  
   
-如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。
+如需追蹤設定檔查詢的詳細資訊, 請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)。
   
 \<system.serviceModel>  
-\<tracking>  
+\<追蹤 >  
 \<設定檔 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流程 >  
 \<bookmarkResumptionQueries>  
 \<bookmarkResumptionQuery>  
   
@@ -57,11 +57,11 @@ ms.locfileid: "61673429"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|包括特定工作流程之所有查詢的組態項目，這個工作流程可由 `activityDefinitionId` 屬性識別。|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|包括特定工作流程之所有查詢的組態項目，這個工作流程可由 `activityDefinitionId` 屬性識別。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流程追蹤及追蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)

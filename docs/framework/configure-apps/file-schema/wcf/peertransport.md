@@ -2,12 +2,12 @@
 title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: 6765259f290047a4199a422b4ad0cced2ffee9ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ad05fd9125ecc8b3d5797e0dd335adbf808db84
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783347"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933849"
 ---
 # <a name="peertransport"></a>\<peerTransport>
 定義自訂繫結的對等傳輸。  
@@ -15,7 +15,7 @@ ms.locfileid: "61783347"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<peerTransport>  
   
 ## <a name="syntax"></a>語法  
@@ -44,15 +44,15 @@ ms.locfileid: "61783347"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|定義此傳輸的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.PeerSecurityElement>。|  
+|[\<security>](security-of-peertransport.md)|定義此傳輸的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.PeerSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  這個傳輸不可與具有要求/回覆作業的合約一起使用。  
@@ -63,9 +63,9 @@ ms.locfileid: "61783347"
 - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [傳輸](../../../wcf/feature-details/transports.md)
+- [選擇傳輸](../../../wcf/feature-details/choosing-a-transport.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

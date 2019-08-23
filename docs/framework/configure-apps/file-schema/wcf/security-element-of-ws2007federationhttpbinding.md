@@ -2,20 +2,20 @@
 title: <security> 的 <ws2007FederationHttpBinding> 項目
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: 15740144b0aad7eb2798db4712e4769d08d893a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61b56ca1fae5c328cda0bbebef4026f0784095a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670543"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936826"
 ---
-# <a name="security-element-of-ws2007federationhttpbinding"></a>\<安全性 > 項目\<ws2007FederationHttpBinding >
-定義的安全性設定[ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)項目。  
+# <a name="security-element-of-ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding > 的\<安全性 > 元素
+定義[ \<ws2007FederationHttpBinding >](ws2007federationhttpbinding.md)元素的安全性設定。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<ws2007FederationHttpBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -40,13 +40,13 @@ ms.locfileid: "61670543"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`mode`|選擇性。 指定套用的安全性類型。 預設值為 `Message`。 此屬性的型別為 <xref:System.ServiceModel.WSFederationHttpSecurityMode>。|  
   
 ## <a name="mode-attribute"></a>mode 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |None|傳輸期間的 SOAP 訊息是不安全的。|  
 |訊息|完整性、機密性、伺服器驗證與用戶端驗證都可透過 SOAP 訊息安全性來提供。 根據預設，本文會經過加密與簽署。 服務必須使用憑證來設定。 用戶端驗證係以安全性權杖服務對用戶端發行的權杖為基礎。|  
@@ -56,13 +56,13 @@ ms.locfileid: "61670543"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|定義訊息層級安全性的設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>。|  
+|[\<message>](message-of-ws2007httpbinding.md)|定義訊息層級安全性的設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義的所有繫結功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。|  
+|[\<binding>](../../../misc/binding.md)|定義[ \<wsDualHttpBinding >](wsdualhttpbinding.md)的所有系結功能。|  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -70,10 +70,10 @@ ms.locfileid: "61670543"
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
-- [如何：建立 WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [如何：建立 WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [選取認證類型](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

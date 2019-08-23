@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb254503f5ce2240a03179da693c66f7ada876be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918291"
 ---
 # <a name="layout"></a>配置
 本主題描述 Windows Presentation Foundation (WPF) 版面配置系統。 瞭解版面配置計算的發生方式和時機, 是在 WPF 中建立使用者介面的必要條件。  
@@ -89,7 +89,7 @@ ms.locfileid: "69666757"
  其次, 會處理定義于<xref:System.Windows.FrameworkElement>的 framework 屬性, 這會影響的`constraintSize`值。 這些屬性通常<xref:System.Windows.UIElement>會描述基礎的調整大小特性, 例如它<xref:System.Windows.FrameworkElement.Height%2A>的、 <xref:System.Windows.FrameworkElement.Margin%2A> <xref:System.Windows.FrameworkElement.Width%2A>、和<xref:System.Windows.FrameworkElement.Style%2A>。 所有這些屬性都可以變更顯示項目所需的空間。 <xref:System.Windows.FrameworkElement.MeasureOverride%2A>接著會使用`constraintSize`做為參數來呼叫。  
   
 > [!NOTE]
->  <xref:System.Windows.FrameworkElement.Height%2A> 和<xref:System.Windows.FrameworkElement.Width%2A>的屬性和和之間的差異。 <xref:System.Windows.FrameworkElement.ActualWidth%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A> 例如, <xref:System.Windows.FrameworkElement.ActualHeight%2A>屬性是以其他高度輸入和版面配置系統為基礎的計算值。 根據實際的轉譯行程, 此值是由配置系統本身設定, 因此可能會稍微落後屬性的設定值 (例如<xref:System.Windows.FrameworkElement.Height%2A>, 這是輸入變更的基礎)。  
+> <xref:System.Windows.FrameworkElement.Height%2A> 和<xref:System.Windows.FrameworkElement.Width%2A>的屬性和和之間的差異。 <xref:System.Windows.FrameworkElement.ActualWidth%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A> 例如, <xref:System.Windows.FrameworkElement.ActualHeight%2A>屬性是以其他高度輸入和版面配置系統為基礎的計算值。 根據實際的轉譯行程, 此值是由配置系統本身設定, 因此可能會稍微落後屬性的設定值 (例如<xref:System.Windows.FrameworkElement.Height%2A>, 這是輸入變更的基礎)。  
 >   
 >  因為<xref:System.Windows.FrameworkElement.ActualHeight%2A>是一個計算值, 所以您應該注意, 由於版面配置系統的各種作業, 可能會有多個或累加的報告變更。 配置系統可能會計算子項目所需的測量空間、父項目的條件約束，依此類推。  
   

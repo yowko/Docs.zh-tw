@@ -1,25 +1,25 @@
 ---
-title: <workflowInstanceQueries> WCF 的
+title: <workflowInstanceQueries>WCF 的
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-ms.openlocfilehash: 89e122b87743a81a80ce63b382ae235c1c4863bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: feae65a75f9f0b2b1b398f3f9e80ac4c8d971dcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790516"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915308"
 ---
-# <a name="workflowinstancequeries-of-wcf"></a>\<workflowInstanceQueries > 的 WCF
+# <a name="workflowinstancequeries-of-wcf"></a>\<WCF 的 workflowInstanceQueries >
 
 代表組態項目的集合，可用來追蹤工作流程執行個體生命週期的變更，例如已開始或已完成的事件。  
   
-如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+如需追蹤設定檔查詢的詳細資訊, 請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<追蹤 >  
 \<設定檔 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流程 >  
 \<workflowInstanceQueries>  
   
 ## <a name="syntax"></a>語法  
@@ -52,7 +52,7 @@ ms.locfileid: "61790516"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](workflowinstancequery-of-wcf.md)|用來追蹤工作流程執行個體生命週期變更的查詢。|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "61790516"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|包含所有的查詢所識別的特定工作流程的組態項目[activityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId)屬性。|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|Configuration 元素, 其中包含[activityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId)屬性所識別之特定工作流程的所有查詢。|  
   
 ## <a name="remarks"></a>備註
 
@@ -94,5 +94,5 @@ ms.locfileid: "61790516"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流程追蹤及追蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)

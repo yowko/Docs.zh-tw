@@ -5,36 +5,36 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 3f0a1b6a7f83753ccae1a129528ed320a2613122
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13a56af0e52897a6fd4e11516fbf4c0b8f6d6b5d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009541"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929572"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar 控制項 (Windows Form)
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 `ToolBar` 控制項並加入其他功能，不過您也可以選擇保留 `ToolBar` 控制項，以提供回溯相容性及未來使用。  
+> <xref:System.Windows.Forms.ToolStrip> 控制項會取代 `ToolBar` 控制項並加入其他功能，不過您也可以選擇保留 `ToolBar` 控制項，以提供回溯相容性及未來使用。  
   
  Windows Form `ToolBar` 控制項在表單中，是當做顯示下拉式功能表其中一列的控制列和啟動命令的點陣圖按鈕使用。 因此，按一下工具列按鈕相當於選擇功能表命令。 您可將這些按鈕設定成和按鈕、下拉式功能表或分隔符號一樣顯示和運作。 一般而言，工具列包含對應至應用程式功能表結構中項目的按鈕和功能表，可以快速存取應用程式中最常使用的功能和命令。  
   
 > [!NOTE]
->  `ToolBar` 控制項的 <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> 屬性會將 <xref:System.Windows.Forms.ContextMenu> 類別的執行個體當做參考。 請仔細考慮在應用程式中實作工具列上這類按鈕時所傳遞的參考，因為這個屬性會接受任何繼承自 <xref:System.Windows.Forms.Menu> 類別的物件。  
+> `ToolBar` 控制項的 <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> 屬性會將 <xref:System.Windows.Forms.ContextMenu> 類別的執行個體當做參考。 請仔細考慮在應用程式中實作工具列上這類按鈕時所傳遞的參考，因為這個屬性會接受任何繼承自 <xref:System.Windows.Forms.Menu> 類別的物件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [工具列控制項概觀](toolbar-control-overview-windows-forms.md)  
  介紹 `ToolBar` 控制項的一般概念，讓您能夠設計自訂工具列以供使用者利用。  
   
- [如何：將按鈕加入至 ToolBar 控制項](how-to-add-buttons-to-a-toolbar-control.md)  
+ [如何：將按鈕加入至工具列控制項](how-to-add-buttons-to-a-toolbar-control.md)  
  描述如何將按鈕加入 `ToolBar` 控制項。  
   
  [如何：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)  
  描述如何在 `ToolBar` 控制項的按鈕內顯示圖示。  
   
- [如何：觸發程序的工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [如何：觸發工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  指示如何撰寫程式碼，來解譯使用者在 `ToolBar` 控制項中按的是哪一個按鈕。  
   
- 另請參閱[How to:定義使用設計工具的工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)， [How to:將按鈕加入 ToolBar 控制項使用設計工具到](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)。  
+ 另請[參閱如何:使用設計](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)工具定義工具列按鈕的圖示, [如何:使用設計](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)工具在工具列控制項中加入按鈕。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ToolBar> 類別  

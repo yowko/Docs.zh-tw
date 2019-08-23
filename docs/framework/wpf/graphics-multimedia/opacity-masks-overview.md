@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 76ec595b1d2cc732e1c8bc2dc2ca6def904bf94c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: d0fea1aac4efb17811404ce45769615bb2e7234f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545350"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929666"
 ---
 # <a name="opacity-masks-overview"></a>不透明度遮罩概觀
 不透明度遮罩可讓您將元素或視覺物件的一部分設定成透明或半透明。 若要建立不透明度遮罩, 請將<xref:System.Windows.Media.Brush>套用<xref:System.Windows.UIElement.OpacityMask%2A>至元素或<xref:System.Windows.Media.Visual>的屬性。  筆刷會對應到元素或視覺物件，且每個筆刷像素的不透明度值會用來決定元素或視覺物件每個對應像素最終的不透明度。  
@@ -25,7 +25,7 @@ ms.locfileid: "69545350"
  不透明度遮罩的運作方式是將其內容對應到元素或視覺物件。 然後筆刷每個像素的 Alpha 色板會用來決定元素或視覺物件所對應像素的最終不透明度 (會忽略筆刷的實際色彩)。 如果筆刷的某一部分是透明的，則元素或視覺物件相對應的部分會變成透明。 如果筆刷的某一部分是不透明的，則元素或視覺物件相對應的部分不會改變。 由不透明度遮罩所指定的不透明度會和元素或視覺物件中現有的任何不透明度設定結合。 例如，如果元素是百分之 25 不透明，並套用從完全不透明轉換成完全透明的不透明度遮罩，結果元素會從百分之 25 不透明度轉換成完全透明。  
   
 > [!NOTE]
->  雖然此總覽中的範例示範如何在影像專案上使用不透明度遮罩, 但不透明度遮罩可能會套用至任何<xref:System.Windows.Media.Visual>元素或, 包括面板和控制項。  
+> 雖然此總覽中的範例示範如何在影像專案上使用不透明度遮罩, 但不透明度遮罩可能會套用至任何<xref:System.Windows.Media.Visual>元素或, 包括面板和控制項。  
   
  不透明度遮罩可以用來建立有趣的視覺效果，例如，建立從檢視淡出的影像或按鈕、為元素添加紋理，或結合漸層來產生玻璃般的表面。 下圖示範不透明度遮罩的使用方式。 會使用棋盤背景來表示遮罩的透明部分。  
   

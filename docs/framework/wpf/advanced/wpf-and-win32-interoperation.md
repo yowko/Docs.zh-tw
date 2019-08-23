@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 47f27b71b282fad9d285143bf8306d7bdbb60da2
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: d13f4ce37dba45dc99f0481043d80640e73d833d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671918"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917478"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 和 Win32 互通
 本主題概述如何交互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式碼。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，則重複使用該程式碼的一部分可能會更有效率。  
@@ -44,7 +44,7 @@ ms.locfileid: "68671918"
  請使用最適合您的方法。  
   
 > [!NOTE]
->  如果您之前尚未使用C++/cli, 您可能會注意到一些「新」關鍵字, `gcnew`例如`nullptr`和在交互操作程式碼範例中。 這些關鍵字會取代較舊的雙底線語法`__gc`(), 並為中C++的 managed 程式碼提供更自然的語法。  若要深入瞭解/Cli C++管理的功能, 請參閱[執行時間平臺的元件延伸](/cpp/windows/component-extensions-for-runtime-platforms)模組和[Hello C++,/cli](https://go.microsoft.com/fwlink/?LinkId=98739)。  
+> 如果您之前尚未使用C++/cli, 您可能會注意到一些「新」關鍵字, `gcnew`例如`nullptr`和在交互操作程式碼範例中。 這些關鍵字會取代較舊的雙底線語法`__gc`(), 並為中C++的 managed 程式碼提供更自然的語法。  若要深入瞭解/Cli C++管理的功能, 請參閱[執行時間平臺的元件延伸](/cpp/windows/component-extensions-for-runtime-platforms)模組和[Hello C++,/cli](https://go.microsoft.com/fwlink/?LinkId=98739)。  
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>WPF 如何使用 Hwnd  
@@ -83,7 +83,7 @@ ms.locfileid: "68671918"
 8. 使用儲存在靜態欄位中的參考來設定屬性及呼叫方法等等，以與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件通訊。  
   
 > [!NOTE]
->  如果您產生不同的組件，然後參考它，則可以針對使用內容類別之預設部分類別的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的步驟一，執行部分或所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容類別定義。 雖然您通常會在<xref:System.Windows.Application>將物件[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]編譯成元件的過程中包含物件, 但您最後不會使用<xref:System.Windows.Application>它做為交互操作的一部分, 但您只需要使用一或多個[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]根類別來處理所參考的檔案供應用程式使用, 並參考其部分類別。 此程序的其餘部分基本上與上述類似。  
+> 如果您產生不同的組件，然後參考它，則可以針對使用內容類別之預設部分類別的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的步驟一，執行部分或所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容類別定義。 雖然您通常會在<xref:System.Windows.Application>將物件[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]編譯成元件的過程中包含物件, 但您最後不會使用<xref:System.Windows.Application>它做為交互操作的一部分, 但您只需要使用一或多個[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]根類別來處理所參考的檔案供應用程式使用, 並參考其部分類別。 此程序的其餘部分基本上與上述類似。  
 >   
 >  所有這些步驟都會透過逐步[解說:將 WPF 內容裝載在](walkthrough-hosting-wpf-content-in-win32.md)Win32 中。  
   

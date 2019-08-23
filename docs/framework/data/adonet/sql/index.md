@@ -2,12 +2,12 @@
 title: SQL Server 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: f30d9d715a2d94deee788f92cfc8eed0cba706de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c58c6da7a6028c9167c73af820e922f59b528f15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033887"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938087"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 本節說明 .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 特有的功能與行為。  
@@ -15,7 +15,7 @@ ms.locfileid: "62033887"
  <xref:System.Data.SqlClient> 封裝了資料庫特有的通訊協定，可讓您存取不同的 SQL Server 版本。 該資料提供者的功能設計類似於 OLE DB、ODBC 及 Oracle 的 .NET Framework 資料提供者。 <xref:System.Data.SqlClient> 包含可直接與 SQL Server 通訊的表格式資料流 (TDS) 剖析器。  
   
 > [!NOTE]
->  若要使用 SQL Server 的 .NET Framework 資料提供者，應用程式必須參考 <xref:System.Data.SqlClient> 命名空間。  
+> 若要使用 SQL Server 的 .NET Framework 資料提供者，應用程式必須參考 <xref:System.Data.SqlClient> 命名空間。  
   
 ## <a name="in-this-section"></a>本節內容  
  [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  

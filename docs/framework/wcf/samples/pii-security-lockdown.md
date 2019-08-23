@@ -2,15 +2,15 @@
 title: PII 安全性鎖定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 16e7c564373eaf241b500c0e3de40ee8fb38f05a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425428"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964599"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全性鎖定
-這個範例示範如何控制的 Windows Communication Foundation (WCF) 服務的數個安全性相關功能：  
+這個範例會示範如何藉由下列方式, 控制 Windows Communication Foundation (WCF) 服務的數個安全性相關功能:  
   
 - 加密服務組態檔中的敏感性資訊。  
   
@@ -23,31 +23,31 @@ ms.locfileid: "67425428"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>討論  
- 您可以單獨或一起使用這些功能，以控制服務安全性的各個方面。 這不是保護 WCF 服務的完整指南。  
+ 您可以單獨或一起使用這些功能，以控制服務安全性的各個方面。 這不是保護 WCF 服務的最終指引。  
   
  .NET Framework 組態檔中包含敏感性資訊，例如連接至資料庫的連線字串。 在共用的 Web 裝載案例中，可能需要針對服務在組態檔中加密此資訊，因此組態檔所含的資料便不會任意讓人檢視。 .NET Framework 2.0 和更新版本可以使用 Windows Data Protection 應用程式開發介面 (DPAPI) 或 RSA 密碼編譯提供者，加密組態檔的各個部分。 使用 DPAPI 或 RSA 的 aspnet_regiis.exe 可以加密組態檔的選取部分。  
   
- 在 Web 裝載的案例中，可能在其他服務的子目錄中還有服務。 判斷組態值的預設語意可允許巢狀目錄中的組態檔複寫上層目錄中的組態值。 在特定情況下，有許多原因都顯示不應該這樣做。 WCF 服務組態支援鎖定組態值，讓巢狀組態會產生例外狀況，巢狀的服務執行時使用覆寫組態值。  
+ 在 Web 裝載的案例中，可能在其他服務的子目錄中還有服務。 判斷組態值的預設語意可允許巢狀目錄中的組態檔複寫上層目錄中的組態值。 在特定情況下，有許多原因都顯示不應該這樣做。 WCF 服務設定支援鎖定設定值, 如此一來, 當使用覆寫的設定值來執行嵌套的服務時, 嵌套的設定就會產生例外狀況。  
   
- 這個範例示範如何控制在追蹤與訊息記錄檔中的已知個人可識別資訊 (PII) 記錄，例如使用者名稱與密碼。 根據預設，已停用記錄已知 PII，不過在特定情況下，記錄 PII 在偵錯應用程式時相當重要。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 此外，這個範例會使用追蹤和訊息記錄。 如需詳細資訊，請參閱 <<c0> [ 追蹤和訊息記錄](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)範例。  
+ 這個範例示範如何控制在追蹤與訊息記錄檔中的已知個人可識別資訊 (PII) 記錄，例如使用者名稱與密碼。 根據預設，已停用記錄已知 PII，不過在特定情況下，記錄 PII 在偵錯應用程式時相當重要。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 此外，這個範例會使用追蹤和訊息記錄。 如需詳細資訊, 請參閱[追蹤和訊息記錄](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)範例。  
   
 ## <a name="encrypting-configuration-file-elements"></a>加密組態檔項目  
- 針對安全性目的，在共用的 Web 裝載環境中，可能需要加密特定組態項目，例如包含敏感性資訊的資料庫連線字串。 可能會使用在.NET Framework 資料夾，例如 %windir%\microsoft.net\framework\v4.0.20728 中找到的 aspnet_regiis.exe 工具加密組態項目。  
+ 針對安全性目的，在共用的 Web 裝載環境中，可能需要加密特定組態項目，例如包含敏感性資訊的資料庫連線字串。 Configuration 元素可以使用 .NET Framework 資料夾中找到的 aspnet_regiis 來加密, 例如%WINDIR%\Microsoft.NET\Framework\v4.0.20728。  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>若要加密範例 Web.config 中 appSettings 區段的值  
   
-1. 開啟命令提示字元中使用 開始-> 執行... 在中輸入`cmd`，按一下  **確定**。  
+1. 使用 [開始-> 執行 ...] 開啟命令提示字元。 輸入, 然後按一下 **[確定]。** `cmd`  
   
 2. 發出下列命令，巡覽至目前的 .NET Framework 目錄：`cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`。  
   
 3. 發出下列命令，加密 Web.config 資料夾中的 appSettings 組態設定：`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`。  
   
- 可以找到加密的組態檔區段的詳細資訊，閱讀 ASP.NET 組態 how to DPAPI ([建置安全的 ASP.NET 應用程式：驗證、 授權和安全通訊](https://go.microsoft.com/fwlink/?LinkId=95137)) 和 RSA 在 ASP.NET 組態中的 how to ([How To:Encrypt Configuration Sections in ASP.NET 2.0 使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138))。  
+ 如需有關加密設定檔區段的詳細資訊, 請參閱 ASP.NET 設定中的 DPAPI ([建立安全 ASP.NET 應用程式:驗證、授權和安全通訊](https://go.microsoft.com/fwlink/?LinkId=95137)) 以及 RSA 在 ASP.NET 設定中的使用方法 ([how to:使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138)加密 ASP.NET 2.0 中的設定區段。  
   
 ## <a name="locking-configuration-file-elements"></a>鎖定組態檔項目  
  在 Web 裝載的案例中，可能在服務的子目錄中還有服務。 在這些情況中，便會計算子目錄中服務的組態值，方法則是先檢查 Machine.config 中的值，接著合併上層目錄到下層目錄樹狀結構中的 Web.config 檔，最後合併其中包含服務之目錄中的 Web.config 檔。 大多數組態項目的預設行為是允許子目錄中的組態檔覆寫上層目錄中的值組。 在特定情況中，可能會防止子目錄中的組態檔覆寫上層目錄組態的值組。  
@@ -87,7 +87,7 @@ ms.locfileid: "67425428"
 ```  
   
 > [!NOTE]
->  Machine.config 檔的預設位置為：%WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG。  
+> Machine.config 檔的預設位置為：%WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG。  
   
  如果 Machine.config 中沒有 `enableLoggingKnownPii` 屬性，則不允許記錄 PII。  
   
@@ -117,26 +117,26 @@ ms.locfileid: "67425428"
  只有當 `enableLoggingKnownPii` 設定為 `true` 而且 `logKnownPii` 設定為 `true` 時，才會記錄 PII。  
   
 > [!NOTE]
->  System.Diagnostics 除了組態檔中列出的第一個屬性外，會忽略所有來源上的所有屬性。 將 `logKnownPii` 屬性新增至組態檔的第二個來源也沒有作用。  
+> System.Diagnostics 除了組態檔中列出的第一個屬性外，會忽略所有來源上的所有屬性。 將 `logKnownPii` 屬性新增至組態檔的第二個來源也沒有作用。  
   
 > [!IMPORTANT]
 >  若要執行這個範例，將會牽涉到手動修改 Machine.config。修改 Machine.config 時請特別小心，因為不正確的值或語法都可能導致所有 .NET Framework 應用程式無法執行。  
   
  也可能使用 DPAPI 和 RSA 加密組態檔項目。 如需詳細資訊，請參閱下列連結：  
   
-- [建置安全的 ASP.NET 應用程式：驗證、 授權和安全通訊](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [建立安全的 ASP.NET 應用程式:驗證、授權和安全通訊](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
-- [如何：Encrypt Configuration Sections in ASP.NET 2.0 使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [如何：使用 RSA 加密 ASP.NET 2.0 中的設定區段](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要設定、建置及執行範例  
   
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 編輯 Machine.config 以將 `enableLoggingKnownPii` 屬性設定為 `true`，需要時並新增父節點。  
   
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 #### <a name="to-clean-up-the-sample"></a>若要清除範例  
   
@@ -144,4 +144,4 @@ ms.locfileid: "67425428"
   
 ## <a name="see-also"></a>另請參閱
 
-- [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 監視範例](https://go.microsoft.com/fwlink/?LinkId=193959)

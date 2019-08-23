@@ -11,15 +11,15 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 8374cdf6526061dfd463574887c2e98d25010910
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c027964d185d7f69c0a56a4386bedc2d8f9d2eac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582773"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912341"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 陳述式 (Visual Basic)
-會強制明確宣告在檔案中，所有變數，或允許隱含宣告的變數。  
+強制明確宣告檔案中的所有變數, 或允許變數的隱含宣告。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,38 +29,38 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>組件  
  `On`  
- 選擇性。 可讓`Option Explicit`檢查。 如果`On`或是`Off`未指定，預設值是`On`。  
+ 選擇性。 啟用`Option Explicit`檢查。 如果`On`未`Off`指定或, 則預設值為`On`。  
   
  `Off`  
- 選擇性。 停用`Option Explicit`檢查。  
+ 選擇性。 停`Option Explicit`用檢查。  
   
 ## <a name="remarks"></a>備註  
- 當`Option Explicit On`或是`Option Explicit`會出現在檔案中，您必須使用，以明確地宣告所有變數`Dim`或`ReDim`陳述式。 如果您嘗試使用了未宣告的變數名稱，則會在編譯時期發生錯誤。 `Option Explicit Off`陳述式可讓隱含宣告的變數。  
+ 當`Option Explicit On`或`Option Explicit`出現在檔案中時, 您必須使用`Dim`或`ReDim`語句來明確宣告所有變數。 如果您嘗試使用未宣告的變數名稱, 則會在編譯時期發生錯誤。 `Option Explicit Off`語句允許隱含宣告變數。  
   
- 如果使用，`Option Explicit`陳述式必須出現在任何其他來源的程式碼陳述式之前的檔案。  
+ 如果使用的話, `Option Explicit`語句必須出現在檔案中的任何其他原始程式碼語句之前。  
   
 > [!NOTE]
->  設定`Option Explicit`至`Off`通常這項操作並不是很好的作法。 一或多個位置中的變數名稱可能有拼字錯誤，這會在程式執行時造成非預期的結果。  
+> 將`Option Explicit`設定`Off`為通常不是很好的作法。 一或多個位置中的變數名稱可能有拼字錯誤，這會在程式執行時造成非預期的結果。  
   
-## <a name="when-an-option-explicit-statement-is-not-present"></a>當 Option Explicit 陳述式不存在  
- 如果原始程式碼不包含`Option Explicit`陳述式中， **Option Explicit**上設定[編譯的 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)用。 如果使用命令列編譯器，則[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)編譯器選項使用。  
+## <a name="when-an-option-explicit-statement-is-not-present"></a>當 Option Explicit 語句不存在時  
+ 如果原始程式碼不包含`Option Explicit`語句, 則會使用 [編譯] 頁面上的 [ **Option Explicit** ] 設定 ([專案設計工具] [(Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 如果使用命令列編譯器, 則會使用[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)編譯器選項。  
   
-#### <a name="to-set-option-explicit-in-the-ide"></a>若要設定在 IDE 中的 Option Explicit  
+#### <a name="to-set-option-explicit-in-the-ide"></a>若要在 IDE 中設定 Option Explicit  
   
 1. 在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
 2. 按一下 [編譯] 索引標籤。  
   
-3. 在設定的值**Option Explicit**  方塊中。  
+3. 在 [**選項明確**] 方塊中設定值。  
   
- 當您建立新的專案中， **Option Explicit**上設定**編譯**索引標籤設定為**Option Explicit**中設定**VB 預設值** 對話方塊。 若要存取**VB 預設值**對話方塊的 **工具**功能表上，按一下 **選項**。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 中的初始預設設定**VB 預設值**是`On`。  
+ 當您建立新的專案時, [**編譯**] 索引標籤上的 [ **option explicit** ] 設定會設定為 [ **VB 預設值**] 對話方塊中的 [ **option explicit** ] 設定。 若要存取 [ **VB 預設值**] 對話方塊, 請在 [**工具**] 功能表上按一下 [**選項**]。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 **VB 預設值**中的初始預設設定`On`為。  
   
-#### <a name="to-set-option-explicit-on-the-command-line"></a>若要設定 命令列上的 Option Explicit  
+#### <a name="to-set-option-explicit-on-the-command-line"></a>若要在命令列上設定 Option Explicit  
   
-- 包含[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)中的編譯器選項**vbc**命令。  
+- 在**vbc**命令中包含[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)編譯器選項。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`Option Explicit`強制明確宣告所有變數的陳述式。 嘗試使用未宣告的變數在編譯時期產生錯誤。  
+ 下列範例會使用`Option Explicit`語句來強制執行所有變數的明確宣告。 嘗試使用未宣告的變數會在編譯時期導致錯誤。  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   

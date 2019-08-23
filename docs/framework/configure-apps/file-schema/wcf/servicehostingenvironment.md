@@ -2,12 +2,12 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 16dacee89576b4ede0f2f80255ba8a0dcbc8c0dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b81c9f3c4260f415f057cd74b6f113d88f635978
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610179"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936293"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 此項目定義服務裝載環境為特定傳輸產生的類型。 如果這個項目是空白的，便會使用預設的類型。 這個項目只能用於應用程式或電腦層級的組態檔。  
@@ -40,19 +40,19 @@ ms.locfileid: "64610179"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|布林值，指出是否已為目前的應用程式開啟 ASP.NET 相容性模式。 預設為 `false`。<br /><br /> 當這個屬性設定為`true`、 Windows Communication Foundation (WCF) 服務的要求流程透過 ASP.NET HTTP 管線，並禁止透過非 HTTP 通訊協定的通訊。 如需詳細資訊，請參閱 < [WCF 服務與 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。|  
-|minFreeMemoryPercentageToActivateService|指定可用的記憶體之前，應該提供給系統，才能啟動 WCF 服務的最小數量的整數。 **注意：** 指定此屬性與 WCF 服務的 web.config 檔案中的部分信任會導致<xref:System.Security.SecurityException>服務執行時。|  
-|multipleSiteBindingsEnabled|布林值，這個值會指定是否啟用每個網站的多個 IIS 繫結。<br /><br /> IIS 包含網站，是包含虛擬目錄之虛擬應用程式的容器。 網站中的應用程式則可以透過一個或多個 IIS 繫結來存取。 IIS 繫結提供兩項資訊：繫結通訊協定和繫結資訊。 繫結通訊協定會定義產生通訊的配置，而繫結資訊則是用來存取網站的資訊。 繫結通訊協定的範例如 HTTP，其中繫結資訊可能會包含 IP 位址、連接埠、主機標題等。<br /><br /> IIS 支援為每個網站指定多個 IIS 繫結，讓每個配置能夠有多個基底位址。 不過，在網站下裝載的 Windows Communication Foundation (WCF) 服務可讓繫結至每個配置的只有一個 baseAddress。<br /><br /> 若要啟用多個 IIS 繫結每個站台的 Windows Communication Foundation (WCF) 服務，請將此屬性設定為`true`。 請注意，僅有 HTTP 通訊協定支援多個網站繫結。 組態檔中的端點位址必須是完整的 URI。|  
+|aspNetCompatibilityEnabled|布林值，指出是否已為目前的應用程式開啟 ASP.NET 相容性模式。 預設為 `false`。<br /><br /> 當這個屬性設定為`true`時, 對 Windows Communication Foundation (WCF) 服務的要求會流經 ASP.NET HTTP 管線, 而非 HTTP 通訊協定的通訊則是禁止的。 如需詳細資訊, 請參閱[WCF 服務和 ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)。|  
+|minFreeMemoryPercentageToActivateService|整數, 指定可供系統使用的最小可用記憶體數量, 然後才能啟動 WCF 服務。 **注意**：在 WCF 服務的 web.config 檔案中指定這個屬性和部分信任, 將會在<xref:System.Security.SecurityException>服務執行時產生。|  
+|multipleSiteBindingsEnabled|布林值，這個值會指定是否啟用每個網站的多個 IIS 繫結。<br /><br /> IIS 包含網站，是包含虛擬目錄之虛擬應用程式的容器。 網站中的應用程式則可以透過一個或多個 IIS 繫結來存取。 IIS 繫結提供兩項資訊：繫結通訊協定和繫結資訊。 繫結通訊協定會定義產生通訊的配置，而繫結資訊則是用來存取網站的資訊。 繫結通訊協定的範例如 HTTP，其中繫結資訊可能會包含 IP 位址、連接埠、主機標題等。<br /><br /> IIS 支援為每個網站指定多個 IIS 繫結，讓每個配置能夠有多個基底位址。 不過, 在網站底下裝載的 Windows Communication Foundation (WCF) 服務, 只允許每個配置系結至一個 baseAddress。<br /><br /> 若要為 Windows Communication Foundation (WCF) 服務啟用每個網站的多個 IIS 系結, `true`請將此屬性設定為。 請注意，僅有 HTTP 通訊協定支援多個網站繫結。 組態檔中的端點位址必須是完整的 URI。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|組態項目的集合，這些項目會指定服務主機使用之基底位址的前置詞篩選條件。|  
-|[\<serviceActivations>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|描述啟動設定的組態區段。|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|組態項目的集合，這些項目會識別特定傳輸的類型。|  
+|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|組態項目的集合，這些項目會指定服務主機使用之基底位址的前置詞篩選條件。|  
+|[\<serviceActivations>](serviceactivations.md)|描述啟動設定的組態區段。|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|組態項目的集合，這些項目會識別特定傳輸的類型。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -96,5 +96,5 @@ ms.locfileid: "64610179"
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [裝載](../../../../../docs/framework/wcf/feature-details/hosting.md)
-- [WCF 服務與 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [裝載](../../../wcf/feature-details/hosting.md)
+- [WCF 服務與 ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)

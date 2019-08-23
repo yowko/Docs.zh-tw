@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658978"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920915"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppCoNtextSwitchOverrides > 元素
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
@@ -35,7 +35,7 @@ ms.locfileid: "69658978"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`value`|必要屬性。<br /><br /> 定義一或多個參數名稱及其相關聯的布林值。|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69658978"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
@@ -138,7 +138,7 @@ ms.locfileid: "69658978"
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|控制 XSD 架構驗證是否忽略複合索引鍵中的空白索引鍵序列。 如需詳細資訊，請參閱[風險降低：XML 架構驗證](../../../migration-guide/mitigation-xml-schema-validation.md)。|.NET Framework 4.6|  
   
 > [!NOTE]
->  除了將專案新增`AppContextSwitchOverrides`至應用程式佈建檔, 您也可以`static`呼叫 (在中C#) 或`Shared` (在 Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>方法中, 以程式設計方式設定參數。  
+> 除了將專案新增`AppContextSwitchOverrides`至應用程式佈建檔, 您也可以`static`呼叫 (在中C#) 或`Shared` (在 Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>方法中, 以程式設計方式設定參數。  
   
  程式庫開發人員也可以定義自訂參數, 以允許呼叫者選擇不要在較新版本的程式庫中引進變更的功能。 如需詳細資訊，請參閱 <xref:System.AppContext> 類別。  
   

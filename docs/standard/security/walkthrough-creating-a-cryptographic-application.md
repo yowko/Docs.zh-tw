@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 124641ed32dc2ea953202dbc6a73ee066a6c4a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916274"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>逐步解說：建立密碼編譯應用程式
 本逐步解說示範如何加密和解密內容。 程式碼範例是針對 Windows Form 應用程式所設計。 此應用程式不會示範真實世界案例，例如使用智慧卡。 相反地，它會示範加密和解密的基本概念。  
@@ -29,11 +29,11 @@ ms.locfileid: "64602514"
 - 使用 <xref:System.Security.Cryptography.RSACryptoServiceProvider> (一個非對稱式演算法)，加密和解密由 <xref:System.Security.Cryptography.RijndaelManaged> 加密之資料的金鑰。 非對稱演算法最適合用於較少量的資料，例如金鑰。  
   
     > [!NOTE]
-    >  如果您想要保護電腦上的資料，而不與其他人交換加密的內容，請考慮使用 <xref:System.Security.Cryptography.ProtectedData> 或 <xref:System.Security.Cryptography.ProtectedMemory> 類別。  
+    > 如果您想要保護電腦上的資料，而不與其他人交換加密的內容，請考慮使用 <xref:System.Security.Cryptography.ProtectedData> 或 <xref:System.Security.Cryptography.ProtectedMemory> 類別。  
   
  下表摘要說明本主題中的密碼編譯工作。  
   
-|工作|描述|  
+|工作|說明|  
 |----------|-----------------|  
 |建立 Windows Form 應用程式|列出執行應用程式所需的控制項。|  
 |宣告全域物件|宣告字串路徑變數、<xref:System.Security.Cryptography.CspParameters>，和 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 以擁有 <xref:System.Windows.Forms.Form> 類別的全域內容。|  
@@ -82,7 +82,7 @@ ms.locfileid: "64602514"
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>加密檔案  
- 這項工作需要兩個方法： 事件處理常式方法，如`Encrypt File` 按鈕 (`buttonEncryptFile_Click`) 和`EncryptFile`方法。 第一種方法會顯示一個對話方塊來選取檔案，並將檔案名稱傳遞給第二個方法，後者則會執行加密。  
+ 這項工作牽涉到兩個方法: `Encrypt File`按鈕的事件處理常式方法 (`buttonEncryptFile_Click`) `EncryptFile`和方法。 第一種方法會顯示一個對話方塊來選取檔案，並將檔案名稱傳遞給第二個方法，後者則會執行加密。  
   
  加密的內容、金鑰和 IV 全都儲存到一個 <xref:System.IO.FileStream>，稱為加密套件。  
   

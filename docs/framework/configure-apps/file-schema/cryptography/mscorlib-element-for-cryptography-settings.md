@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 312db8ea5ae4b66fd00faad1b788eac0356aeaa7
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c780087246ea91846896037a245b82493251e538
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659605"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921058"
 ---
 # <a name="mscorlib-element-for-cryptography-settings"></a>\<用於密碼編譯設定的 mscorlib > 元素
 包含 cryptographySettings [ >元素。\< ](cryptographysettings-element.md)  
@@ -36,7 +36,7 @@ ms.locfileid: "69659605"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`cryptographySettings`|包含密碼編譯設定。|  
   
@@ -74,5 +74,5 @@ ms.locfileid: "69659605"
 - <xref:System.Security.Cryptography>
 - [組態檔結構描述](../index.md)
 - [密碼編譯設定結構描述](index.md)
-- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../../standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../configure-cryptography-classes.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: e01cdd942237141b8ef35495d3b74d6b2282a865
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d2929167f5a7de96a868cd1ac884d2203d09dfb6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664248"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927521"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 元素
 包含對類別的 asn.1 物件識別元 (OID) 對應。  
@@ -38,13 +38,13 @@ ms.locfileid: "69664248"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<oidEntry>](oidentry-element.md)|將 asn.1 OID 對應至易記名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`cryptographySettings`|包含密碼編譯設定。|  
@@ -77,6 +77,6 @@ ms.locfileid: "69664248"
 
 - [組態檔結構描述](../index.md)
 - [密碼編譯設定結構描述](index.md)
-- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../../standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../configure-cryptography-classes.md)
 - [對應物件識別項至密碼編譯演算法](../../map-object-identifiers-to-cryptography-algorithms.md)

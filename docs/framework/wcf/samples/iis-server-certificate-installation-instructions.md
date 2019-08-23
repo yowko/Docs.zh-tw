@@ -2,18 +2,18 @@
 title: 網際網路資訊服務 (IIS) 伺服器憑證安裝指示
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 728232c4e1d6309ae0cfacb407417173ece145da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50fa7f1094d4b05bcadb229072293da233a18a2b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648354"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931863"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>網際網路資訊服務 (IIS) 伺服器憑證安裝指示
 若要執行能與網際網路資訊服務 (IIS) 安全通訊的範例，您必須建立並安裝伺服器憑證。  
   
 ## <a name="step-1-creating-certificates"></a>步驟 1： 建立憑證  
- 若要建立您的電腦的憑證，以系統管理員權限開啟 Visual Studio 開發人員命令提示字元並執行 Setup.bat，它包含在每個使用安全通訊搭配 IIS 使用的範例。 請先確定路徑有將 Makecert.exe 上一層的資料夾包含在內，再執行此批次 (Batch) 檔。 下列命令是用來建立 Setup.bat 中的憑證。  
+ 若要為您的電腦建立憑證, 請以系統管理員許可權開啟 Visual Studio 的開發人員命令提示字元, 然後執行每個使用與 IIS 安全通訊的範例中所包含的安裝程式 .bat。 請先確定路徑有將 Makecert.exe 上一層的資料夾包含在內，再執行此批次 (Batch) 檔。 下列命令是用來建立 Setup.bat 中的憑證。  
   
 ```  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
@@ -26,17 +26,17 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 1. 開啟網際網路資訊服務管理員 MMC 嵌入式管理單元。  
   
-2. 以滑鼠右鍵按一下 預設的網站，然後選取**屬性**。  
+2. 以滑鼠右鍵按一下 [預設的網站], 然後選取 [**屬性**]。  
   
-3. 選取 [**目錄安全**] 索引標籤。  
+3. 選取 [**目錄安全性**] 索引標籤。  
   
 4. 按一下 [**伺服器憑證**] 按鈕。 [Web 伺服器憑證精靈] 隨即啟動。  
   
 5. 完成精靈。 選取選項以指派憑證。 從顯示的憑證清單中，選取 ServiceModelSamples-HTTPS-Server 憑證。  
   
-     ![IIS 憑證精靈](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
+     ![IIS 憑證嚮導](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6. 在瀏覽器中測試服務的存取權，使用 HTTPS 位址`https://localhost/servicemodelsamples/service.svc`。  
+6. 使用 HTTPS 位址`https://localhost/servicemodelsamples/service.svc`, 在瀏覽器中測試服務的存取權。  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>如果先前是使用 Httpcfg.exe 設定 SSL  
   
@@ -55,20 +55,20 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>在 IIS 7.0 (Windows Vista 和 Windows Server 2008) 上安裝 IIS  
   
-1. 從**開始**功能表上，按一下**執行**，然後輸入**inetmgr**以開啟 Internet Information Services (IIS) MMC 嵌入式管理單元。  
+1. 在 [**開始**] 功能表中, 按一下 [**執行**], 然後輸入**inetmgr**以開啟 [Internet Information Services (IIS) mmc 嵌入式管理單元]。  
   
-2. 以滑鼠右鍵按一下**Default Web Site** ，然後選取**編輯繫結...**  
+2. 以滑鼠右鍵按一下 [**預設的網站**], 然後選取 [編輯系結 **...** ]  
   
-3. 按一下 [**新增**按鈕**站台繫結**] 對話方塊。  
+3. 按一下 [**網站**系結] 對話方塊的 [**新增**] 按鈕。  
   
-4. 選取  **HTTPS**從**型別**下拉式清單。  
+4. 從 [**類型**] 下拉式清單中選取 [ **HTTPS** ]。  
   
-5. 選取  **ServiceModelSamples HTTPS 伺服器**從**SSL 憑證**下拉式清單，然後按一下**確定**。  
+5. 從 [ **SSL 憑證**] 下拉式清單中選取 [ **ServiceModelSamples-HTTPS-伺服器**], 然後按一下 **[確定]** 。  
   
-6. 在瀏覽器中測試服務的存取權，使用 HTTPS 位址`https://localhost/servicemodelsamples/service.svc`。  
+6. 使用 HTTPS 位址`https://localhost/servicemodelsamples/service.svc`, 在瀏覽器中測試服務的存取權。  
   
 > [!NOTE]
->  因為您剛剛安裝的測試憑證不是受信任的憑證，您在瀏覽使用這個憑證保護的本機網址時，可能會碰到其他 Internet Explorer 安全性警告。  
+> 因為您剛剛安裝的測試憑證不是受信任的憑證，您在瀏覽使用這個憑證保護的本機網址時，可能會碰到其他 Internet Explorer 安全性警告。  
   
 ## <a name="removing-certificates"></a>移除憑證  
   

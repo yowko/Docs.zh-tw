@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fd82418da26ab0cd32b007b4613d588dfa695eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e94e4da0eea06ce9cc0110002b1def9e4dd4989
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745300"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939148"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next 方法
-取得指定的數目[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)從列舉型別，從目前位置開始的物件。  
+從列舉中取得指定數目的[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)物件, 從目前位置開始。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,29 +38,29 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="parameters"></a>參數  
  `celt`  
- [in]若要擷取的物件數目。  
+ 在要取得的物件數目。  
   
  `values`  
- [out]陣列的指標[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)物件。  
+ 脫銷[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)物件的指標陣列。  
   
  `pceltFetched`  
- [out]已擷取的物件數目指標。  
+ 脫銷已抓取物件數目的指標。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT。  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |S_FALSE|`pceltFetched` 不等於 `celt`。|  
   
 ## <a name="remarks"></a>備註  
- 這個方法會如同一般的 COM 列舉值。  
+ 這個方法的功能就像一般的 COM 列舉值。  
   
- 至少必須為輸入的陣列值的大小`celt`。 陣列會填滿可能的下一步`celt`值的列舉型別中或使用所有剩餘的值，如果少於`celt`保留。 當這個方法傳回時，`pceltFetched`將會填入已擷取的值數目。 如果`values`包含無效的指標或指向小於緩衝區`celt`，或如果`pceltFetched`是無效的指標，結果為未定義。  
+ 輸入陣列值的大小`celt`至少必須為。 陣列將會填入列舉中的下一個`celt`值, 或所有剩餘的值 (如果`celt`少於保留)。 當這個方法傳回時`pceltFetched` , 將會填入已抓取的值數目。 如果`values`包含不正確指標或指向`celt`小於的緩衝區, 或如果`pceltFetched`是不正確指標, 則結果會是未定義的。  
   
 > [!NOTE]
->  雖然[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構不需要釋出，在其內部的"ICorDebugValue 」 介面需要釋出。  
+> 雖然不需要釋放[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構, 但它裡面的 "ICorDebugValue" 介面必須釋放。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

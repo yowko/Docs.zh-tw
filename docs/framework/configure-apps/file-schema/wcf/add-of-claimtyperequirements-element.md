@@ -2,20 +2,20 @@
 title: <add> 項目的 <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: 47eb9f95fd024b7df24a16781b3d89fe6deb0b8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 249227c20dd1610cba088017ae39e84d6cb683d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701147"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920200"
 ---
-# <a name="add-of-claimtyperequirements-element"></a>\<新增 > 的\<claimTypeRequirements > 項目
+# <a name="add-of-claimtyperequirements-element"></a>\<新增 claimTypeRequirements > \<元素的 >
 指定必須在聯合認證中出現的必要及選擇性宣告型別。 例如，服務說明傳入認證必須處理特定的一組宣告型別。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<wsFederatedBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
 \<message>  
 \<claimTypeRequirements>  
@@ -44,9 +44,9 @@ ms.locfileid: "61701147"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|指定必要宣告型別的集合。 每個項目的型別為 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。<br /><br /> 在聯合案例中，服務會聲明對傳入認證的需求。 例如，傳入認證必須處理特定的一組宣告型別。 這個集合中的每一個項目都會指定要顯示在聯合認證中的必要和選擇性宣告型別。|  
+|[\<claimTypeRequirements>](claimtyperequirements-for-message.md)|指定必要宣告型別的集合。 每個項目的型別為 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。<br /><br /> 在聯合案例中，服務會聲明對傳入認證的需求。 例如，傳入認證必須處理特定的一組宣告型別。 這個集合中的每一個項目都會指定要顯示在聯合認證中的必要和選擇性宣告型別。|  
   
 ## <a name="remarks"></a>備註  
  在聯合案例中，服務會聲明對傳入認證的需求。 例如，傳入認證必須處理特定的一組宣告型別。 這項需求會顯示在安全性原則中。 當用戶端從聯合服務 (例如 CardSpace) 要求認證，它會將需求放入權杖要求 (RequestSecurityToken)，那麼聯合服務便可發出認證，滿足相應的需求。  

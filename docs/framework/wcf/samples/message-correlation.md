@@ -2,21 +2,21 @@
 title: 訊息相互關聯
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 630afb728726fb81bbefa2f2cd34b9481b788f6f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f476e94ec3229ee7f5433d54d286165d108e5e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663422"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930755"
 ---
 # <a name="message-correlation"></a>訊息相互關聯
-此範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務，以及如何訊息可以相互關聯的要求/回應案例中的傳送者與接收者應用程式之間。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 K  
+這個範例會示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務, 以及如何在要求/回應案例中, 將訊息相互關聯至寄件者和接收者應用程式。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 K  
   
  這個服務會處理從傳送者接收的訊息，再將回應訊息傳回給傳送者。 傳送者會將收到的回應與它原先傳送的要求相互關聯。 訊息的 `MessageID` 和 `CorrelationID` 屬性是用來使要求與回應訊息產生相互關聯。  
   
  `IOrderProcessor` 服務合約會定義適合與佇列一起使用的單向服務作業。 MSMQ 訊息沒有 Action 標頭，所以不可能自動將不同 MSMQ 訊息對應到作業合約。 因此，這種情況下只能有一個作業合約。 如果您想要在服務中定義更多的作業合約，應用程式就必須提供資訊，說明 MSMQ 訊息中的哪個標頭 (例如，標籤或 correlationID) 可以用來決定分派哪個作業合約。 
   
- MSMQ 訊息也不會包含有關作業合約的不同參數各自對應到哪個標頭的資訊。 因此，在作業合約中只能有一個參數。 參數的類型是<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>，其中包含基礎 MSMQ 訊息。 `MsmqMessage<T>` 類別中的型別 "T" 代表已序列化為 MSMQ 訊息本文的資料。 在這個範例中，`PurchaseOrder` 型別會序列化為 MSMQ 訊息本文。  
+ MSMQ 訊息也不會包含有關作業合約的不同參數各自對應到哪個標頭的資訊。 因此，在作業合約中只能有一個參數。 參數的類型<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>為, 其中包含基礎 MSMQ 訊息。 `MsmqMessage<T>` 類別中的型別 "T" 代表已序列化為 MSMQ 訊息本文的資料。 在這個範例中，`PurchaseOrder` 型別會序列化為 MSMQ 訊息本文。  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -65,9 +65,9 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- 服務會使用自訂用戶端 `OrderResponseClient`，將 MSMQ 訊息傳送至佇列。 接收和處理訊息的應用程式是 MSMQ 應用程式並是 WCF 應用程式，因為沒有隱含的服務合約之間兩個應用程式。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。
+ 服務會使用自訂用戶端 `OrderResponseClient`，將 MSMQ 訊息傳送至佇列。 因為接收和處理訊息的應用程式是 MSMQ 應用程式, 而不是 WCF 應用程式, 所以這兩個應用程式之間不會有隱含的服務合約。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。
 
- 自訂 proxy 基本上是相同的所有 WCF 應用程式使用`msmqIntegrationBinding`繫結傳送訊息。 與其他 Proxy 不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。
+ 所有使用`msmqIntegrationBinding`系結來傳送訊息的 WCF 應用程式, 自訂 proxy 基本上都相同。 與其他 Proxy 不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -213,7 +213,7 @@ static void PlaceOrder()
  接收訂單回應的 MSMQ 佇列是在組態檔的 appSettings 區段中指定，如下列範例組態所示。
 
 > [!NOTE]
->  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址會指定 msmq.formatname 配置，並使用"localhost"代表本機電腦。 根據 MSMQ 方針，正確的格式名稱應遵照 URI 中的 msmq.formatname。
+> 佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址會指定 msmq.formatname 配置, 並使用 "localhost" 代表本機電腦。 根據 MSMQ 方針，正確的格式名稱應遵照 URI 中的 msmq.formatname。
 
 ```xml
 <appSettings>
@@ -267,27 +267,27 @@ static void DisplayOrderStatus()
  當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以看到服務從用戶端接收訊息，再將回應傳送給用戶端。 用戶端會顯示從服務收到的回應。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。
 
 > [!NOTE]
->  這個範例需要安裝訊息佇列 (MSMQ)。 請參閱「請參閱」一節中的 MSMQ 安裝指示。
+> 這個範例需要安裝訊息佇列 (MSMQ)。 請參閱「請參閱」一節中的 MSMQ 安裝指示。
 
 ### <a name="to-setup-build-and-run-the-sample"></a>若要設定、建置及執行範例
 
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
-    1. 開啟 Visual Studio 2012 中的 伺服器管理員。
+    1. 在 Visual Studio 2012 中開啟伺服器管理員。
 
-    2. 依序展開**功能** 索引標籤。
+    2. 展開 [**功能**] 索引標籤。
 
-    3. 以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
+    3. 以滑鼠右鍵按一下 [**私人訊息佇列**], 然後選取 [**新增**]、[**私用佇列**]。
 
-    4. 請檢查**Transactional**  方塊中。
+    4. 選取 [**交易**式] 方塊。
 
     5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-4. 若要在單一電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+4. 若要在單一電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例
 
@@ -308,7 +308,7 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   

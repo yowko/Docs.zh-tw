@@ -2,12 +2,12 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 885cfad7be42f7c48b4c061f3293d667eb5d4ad8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d868d84318db8c9fe188293154dc275060a3952
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772342"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933175"
 ---
 # <a name="netpipe"></a>\<net.pipe>
 指定 Named Pipe Activation Service 的組態設定，該服務會管理具名管道連線的存留期，並且會處理透過具名管道送達的啟用要求。  
@@ -58,13 +58,13 @@ ms.locfileid: "61772342"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|包含的組態項目的集合`securityIdentifier`屬性來指定裝載 WCF 服務，且已授權可連線共用服務的存取權的處理程序的使用者帳戶。|  
+|[\<allowAccounts>](allowaccounts.md)|Configuration 專案的集合, 其中包含`securityIdentifier`屬性, 以指定裝載 WCF 服務之進程的使用者帳戶, 並授與共享服務的連接存取權。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|包含 SMSvcHost.exe 接聽程式處理序的組態設定。|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|包含 SMSvcHost.exe 接聽程式處理序的組態設定。|  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -5,18 +5,18 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dce5984882e48c3e62efc44ef00b6256d9eb64e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919532"
 ---
-# <a name="client"></a>\<client>
+# <a name="client"></a>\<用戶端 >
 `client` 項目會定義用戶端可連線的端點清單。  
   
  \<system.ServiceModel>  
-\<client>  
+\<用戶端 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,20 +35,20 @@ ms.locfileid: "61704293"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- None  
+ 無  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|包含端點項目的清單，其中的端點項目指定這個用戶端可連線的端點。|  
-|[\<metadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|包含處理中繼資料的設定。|  
+|[\<endpoint>](endpoint-of-client.md)|包含端點項目的清單，其中的端點項目指定這個用戶端可連線的端點。|  
+|[\<metadata>](metadata.md)|包含處理中繼資料的設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|所有 Windows Communication Foundation (WCF) 組態項目的根項目。|  
+|[\<system.serviceModel>](system-servicemodel.md)|所有 Windows Communication Foundation (WCF) 組態項目的根項目。|  
   
 ## <a name="remarks"></a>備註  
  `client` 區段會定義用戶端可連線的端點清單。 在用戶端區段中定義的每個端點會定義它自己的繫結、行為和合約。 它是以 `name` 和 `contract` 屬性的組合唯一識別的。 用戶端程式碼指定 `name` 以連線至用戶端所實作服務的端點。 如果省略 `name` 屬性，則端點會做為它所實作合約的預設端點。  
@@ -76,5 +76,5 @@ ms.locfileid: "61704293"
 
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
-- [WCF 用戶端組態](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [用戶端](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF 用戶端組態](../../../wcf/feature-details/client-configuration.md)
+- [用戶端](../../../wcf/feature-details/clients.md)

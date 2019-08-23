@@ -2,15 +2,15 @@
 title: 設定訊息流程追蹤
 ms.date: 03/30/2017
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-ms.openlocfilehash: 02c43b152cb1aef1684185e56eb7f172036ac46b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01a06a50fbb5962fe87c3426957b3294b1bf3ab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917936"
 ---
 # <a name="configuring-message-flow-tracing"></a>設定訊息流程追蹤
-啟用 Windows Communication Foundation (WCF) 的活動追蹤時，整個 WCF 堆疊中的邏輯活動指派端對端活動識別碼。 現在，[!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 針對這項功能提供了具備更高效能且可搭配 Windows 事件追蹤 (ETW) 使用的版本，也就是所謂的訊息流程追蹤。 啟用之後，就會取得傳入訊息的端對端活動識別碼 (若是空的則會指派)，並且傳播給在通道將訊息解碼之後發出的所有追蹤事件。 在解碼之後，客戶可以使用這項功能，利用來自不同服務的追蹤記錄重新建構訊息流程。  
+啟用 Windows Communication Foundation (WCF) 活動追蹤時, 會將端對端活動識別碼指派給整個 WCF 堆疊中的邏輯活動。 現在，[!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 針對這項功能提供了具備更高效能且可搭配 Windows 事件追蹤 (ETW) 使用的版本，也就是所謂的訊息流程追蹤。 啟用之後，就會取得傳入訊息的端對端活動識別碼 (若是空的則會指派)，並且傳播給在通道將訊息解碼之後發出的所有追蹤事件。 在解碼之後，客戶可以使用這項功能，利用來自不同服務的追蹤記錄重新建構訊息流程。  
   
  偵測到應用程式的問題之後，可以啟用追蹤，等到問題解決再停用追蹤。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "61999514"
 ```  
   
 > [!NOTE]
->  由於 `endToEndTracing` 組態項目位於 Web.config 檔案中，所以不能像 ETW 那樣利用動態方式設定。 應用程式必須先進行回收，`endToEndTracing` 組態項目才會生效。  
+> 由於 `endToEndTracing` 組態項目位於 Web.config 檔案中，所以不能像 ETW 那樣利用動態方式設定。 應用程式必須先進行回收，`endToEndTracing` 組態項目才會生效。  
   
  活動會透過交換識別碼 (稱為活動識別碼) 建立相互關聯。 這個識別碼是 GUID，由 System.Diagnostics.CorrelationManager 類別所產生。 如果您要操作 System.Diagnostics.Trace.CorrelationManager.ActivityID，請確定此值在執行控制權傳回給 WCF 程式碼時設定為原始值。  此外，如果您要使用非同步 WCF 程式撰寫模型，請確定 System.Diagnostics.Trace.CorrelationManager.ActivityID 會在執行緒之間傳輸。  
   
