@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489955"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935819"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 將一種資料類型的運算式轉換成另一種。  
@@ -29,7 +29,7 @@ CAST ( expression AS data_type )
  傳回 `data_type`的相同值。  
   
 ## <a name="remarks"></a>備註  
- 轉型運算式的語意很類似 TRANSACT-SQL 將轉換的運算式。 轉型運算式是用來將某個型別的值轉換成另一個型別的值。  
+ Cast 運算式與 Transact-sql CONVERT 運算式具有類似的語義。 轉型運算式是用來將某個型別的值轉換成另一個型別的值。  
   
 ```  
 CAST( e as T )  
@@ -48,12 +48,12 @@ CAST( e as T )
  使用轉型運算式會視為明確轉換。 而明確轉換可能會截斷資料或遺失有效位數。  
   
 > [!NOTE]
->  只有在基本型別和列舉成員型別上能支援 CAST。  
+> 只有在基本型別和列舉成員型別上能支援 CAST。  
   
 ## <a name="example"></a>範例  
  下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢使用 CAST 運算子將某個資料型別的運算式轉型為另一個資料型別。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 請依照下列中的程序[How to:執行可傳回 PrimitiveType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
+1. [遵循 how to:執行可傳回 PrimitiveType 結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   

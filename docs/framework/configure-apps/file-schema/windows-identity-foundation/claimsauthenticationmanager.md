@@ -3,15 +3,15 @@ title: <claimsAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-ms.openlocfilehash: ecf26263bf47e8b4609e7adc208f0a59a2fa795b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3602a4805e86833ba6070d801cef6758aaee8a5c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667323"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941821"
 ---
 # <a name="claimsauthenticationmanager"></a>\<claimsAuthenticationManager>
-註冊的連入宣告的宣告驗證管理員。  
+為傳入宣告註冊宣告驗證管理員。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -34,23 +34,23 @@ ms.locfileid: "61667323"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|類型|指定自訂型別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>類別。 如需有關如何指定`type`屬性，請參閱 [自訂型別參考]。|  
+|型別|指定衍生<xref:System.Security.Claims.ClaimsAuthenticationManager>自類別的自訂類型。 如需如何指定屬性的`type`詳細資訊, 請參閱 [自訂類型參考]。|  
   
 ### <a name="child-elements"></a>子元素  
- 如果沒有任何`type`屬性，或如果`type`屬性參考<xref:System.Security.Claims.ClaimsAuthenticationManager>類別`<claimsAuthenticationManager>`項目不會子項目; 不過，類別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>可以定義子組態項目。  
+ <xref:System.Security.Claims.ClaimsAuthenticationManager> `<claimsAuthenticationManager>` <xref:System.Security.Claims.ClaimsAuthenticationManager>如果沒有`type`屬性, 或屬性參考類別, 則專案不會採用子項目; 不過, 衍生自的類別可以定義子設定元素。 `type`  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
+|[\<identityConfiguration>](identityconfiguration.md)|指定服務層級的身分識別設定。|  
   
 ## <a name="remarks"></a>備註  
- 透過所提供的預設行為<xref:System.Security.Claims.ClaimsAuthenticationManager>類別回應連入宣告。 如果沒有`type`指定屬性或如果`type`屬性會指定<xref:System.Security.Claims.ClaimsAuthenticationManager>類別，`<claimsAuthenticationManager>`項目未採用子元素。 您可以指定`type`屬性來註冊型別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>類別來實作自訂行為。 在衍生的類別可支援透過子項目的設定`<claimsAuthenticationManager>`藉由覆寫的項目<xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A>方法來處理這些項目。 子項目定義的結構描述是由設計工具的類別。  
+ 透過<xref:System.Security.Claims.ClaimsAuthenticationManager>類別提供的預設行為會回顯傳入宣告。 如果未`type`指定任何屬性, 或`type`屬性指定了<xref:System.Security.Claims.ClaimsAuthenticationManager>類別, 則`<claimsAuthenticationManager>`專案不會採用子項目。 您可以指定`type`屬性來註冊衍生自類別的<xref:System.Security.Claims.ClaimsAuthenticationManager>型別, 以執行自訂行為。 衍生類別可以藉由覆`<claimsAuthenticationManager>` <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A>寫方法來處理這些專案, 藉以支援透過專案的子專案進行設定。 為子專案定義的架構是由類別的設計工具所組成。  
   
- `<claimsAuthenticationManager>`項目集<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType>屬性。  
+ `<claimsAuthenticationManager>`元素會<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType>設定屬性。  
   
 ## <a name="example"></a>範例  
   

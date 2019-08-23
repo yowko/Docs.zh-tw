@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: 272976d3c581d3e8a5860ba5cf3f9695ca370d8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b56d2f8cd46f3184f1001c8bd6a70dbfc4968968
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034407"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937022"
 ---
 # <a name="creating-a-datatable"></a>建立 DataTable
 <xref:System.Data.DataTable> 表示記憶體中關聯式資料的某個資料表，它可以單獨建立及使用，也可以由其他 .NET Framework 物件所使用，而它最常見用法是做為 <xref:System.Data.DataSet> 的成員。  
   
- 您可以建立**DataTable**使用適當的物件**DataTable**建構函式。 您可以將它加入**資料集**利用**新增**方法，以將它加入**DataTable**物件的**資料表**集合。  
+ 您可以使用適當的**datatable**函數來建立**datatable**物件。 您可以使用**add**方法將它加入至**DataTable**物件的**Tables**集合, 將它新增至**資料集**。  
   
- 您也可以建立**DataTable**內的物件**資料集**利用**填滿**或是**FillSchema**方法**DataAdapter**物件，或從預先定義或推斷 XML 結構描述使用**ReadXml**， **ReadXmlSchema**，或**InferXmlSchema**方法**資料集**。 請注意，當您新增**DataTable**的成員身分**資料表**的其中一個集合**資料集**，您無法將它加入集合的任何其他資料表**資料集**。  
+ 您也可以使用**DataAdapter**物件的**Fill**或**FillSchema**方法, 或使用**ReadXml**、ReadXmlSchema 的預先定義或推斷 XML 架構, 在**資料集**內建立**DataTable**物件。或**資料集**的**InferXmlSchema**方法。 請注意, 在您將**DataTable**加入為某個**資料集**之**tables**集合的成員之後, 就無法將它加入至任何其他**資料集**的資料表集合。  
   
- 當您第一次建立**DataTable**，它並沒有結構描述 （也就是結構）。 若要定義的資料表結構描述，您必須建立並新增<xref:System.Data.DataColumn>物件至**資料行**資料表的集合。 您也可以定義資料表的主索引鍵資料行並建立及新增**條件約束**物件至**條件約束**資料表的集合。 您已定義的結構描述之後**DataTable**，您也可以加入資料表將資料列**DataRow**物件新增至**的資料列**資料表的集合。  
+ 當您第一次建立**DataTable**時, 它沒有架構 (也就是結構)。 若要定義資料表的架構, 您必須建立物件並將<xref:System.Data.DataColumn>其加入至資料表的**Columns**集合。 您也可以定義資料表的主鍵資料行, 並建立**條件約束**物件, 並將其加入至資料表的**條件約束**集合。 定義**DataTable**的架構之後, 您可以將資料列加入資料表中, 方法是將**DataRow**物件加入至資料表的**rows**集合中。  
   
- 您不需要提供的值<xref:System.Data.DataTable.TableName%2A>當您建立的屬性**DataTable**; 您可以在其他時候，指定的屬性，或可以保持空白。 不過，當您加入的資料表沒有**TableName**值**資料集**，資料表會指定資料表的累加預設名稱*N*，從"Table"開始 （table0)。  
+ 當您建立<xref:System.Data.DataTable.TableName%2A> **DataTable**時, 不需要提供屬性的值; 您可以在另一次指定屬性, 或將它保留空白。 不過, 當您將沒有**TableName**值的資料表加入至**資料集**時, 資料表會被授與資料表*N*的累加預設名稱, 開頭為 "table" 以進行 Table0。  
   
 > [!NOTE]
->  我們建議您避免 「 表格*N*"命名慣例，當您提供**TableName**值，因為您提供的名稱可能與在現有的預設資料表名稱衝突**資料集**. 如果提供的名稱已經存在，便會發生例外狀況。  
+> 當您提供**TableName**值時, 建議您避免使用 "Table*N*" 命名慣例, 因為您所提供的名稱可能會與**資料集中**現有的預設資料表名稱衝突。 如果提供的名稱已經存在，便會發生例外狀況。  
   
- 下列範例建立的執行個體**DataTable**物件，並將它指派名稱 「 客戶 」。  
+ 下列範例會建立**DataTable**物件的實例, 並為其指派「Customers」名稱。  
   
 ```vb  
 Dim workTable as DataTable = New DataTable("Customers")  
@@ -36,7 +36,7 @@ Dim workTable as DataTable = New DataTable("Customers")
 DataTable workTable = new DataTable("Customers");  
 ```  
   
- 下列範例建立的執行個體**DataTable**將它加入至**資料表**集合**資料集**。  
+ 下列範例會建立**DataTable**的實例, 方法是將它加入至**資料集**的**Tables**集合。  
   
 ```vb  
 Dim customers As DataSet = New DataSet  

@@ -2,20 +2,20 @@
 title: <message> 的 <wsFederationHttpBinding> 項目
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4730d7e573eefdfcd5704621d0a7ccaa15f76d3a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769872"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931583"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<訊息 > 項目\<wsFederationHttpBinding >
-定義訊息層級安全性設定[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding > 的\<message > 元素
+定義[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)的訊息層級安全性設定。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<wsFederatedBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
 \<message>  
   
@@ -87,7 +87,7 @@ ms.locfileid: "61769872"
 |屬性|描述|  
 |---------------|-----------------|  
 |algorithmSuite|設定訊息加密和金鑰包裝演算法。 請參閱「algorithmSuite 屬性」表格中此屬性的有效值。 預設值為 `Basic256`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。|  
-|issuedKeyType|指定要發行的金鑰類型。 有效值包括以下的值：<br /><br /> -   SymmetricKey<br />-   PublicKey<br /><br /> 預設為 `SymmetricKey`。 此屬性的型別為 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
+|issuedKeyType|指定要發行的金鑰類型。 有效值包括以下的值：<br /><br /> -   SymmetricKey<br />-PublicKey<br /><br /> 預設為 `SymmetricKey`。 此屬性的型別為 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
 |issuedTokenType|字串，其中包含的 URI 指定要發行的權杖型別。 預設為 `null`。|  
 |negotiateServiceCredential|布林值，指定服務認證是否應交換做為交涉的一部分，或可供超出範圍使用。 預設為 `true`，意指交涉服務認證。|  
   
@@ -114,18 +114,18 @@ ms.locfileid: "61769872"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定這個繫結之宣告型別的集合。 每個項目的型別為 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|指定這個繫結之宣告型別的集合。 每個項目的型別為 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
 |issuer|指定發行安全性權杖的端點。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  
 |issuerMetadata|指定簽發者的端點位址。|  
-|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|權杖要求參數的集合。 每個參數都是 XML 項目。|  
+|[\<tokenRequestParameters>](tokenrequestparameters.md)|權杖要求參數的集合。 每個參數都是 XML 項目。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|定義繫結的安全性設定。|  
+|[\<security>](security-of-wsfederationhttpbinding.md)|定義繫結的安全性設定。|  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -133,8 +133,8 @@ ms.locfileid: "61769872"
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: 1434a859e4c4203aca44b491f139c30b9145c8e9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b0cccefc9ceb186a5278cc4cabbab58944bf44d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877061"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961777"
 ---
 # <a name="default-nettcpbinding"></a>預設 NetTcpBinding
-此範例示範如何使用 <xref:System.ServiceModel.NetTcpBinding> 繫結。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。 在此範例中，服務會自我裝載。 用戶端和服務都是主控台應用程式。  
+此範例示範如何使用 <xref:System.ServiceModel.NetTcpBinding> 繫結。 這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 在此範例中，服務會自我裝載。 用戶端和服務都是主控台應用程式。  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+> 此範例的安裝程序與建置指示位於本主題的結尾。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- 用戶端和服務的組態檔中會指定繫結。 中指定的繫結型別`binding`的屬性[\<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)項目，如下列範例組態所示。  
+ 用戶端和服務的組態檔中會指定繫結。 系結類型是在`binding` [ \<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素的屬性中指定, 如下列範例設定所示。  
   
 ```xml  
 <endpoint address=""  
@@ -94,17 +94,17 @@ Press ENTER to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 安裝 ASP.NET 4.0 使用下列命令。  
+1. 使用下列命令安裝 ASP.NET 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
     > [!NOTE]
     >  由於伺服器會自我裝載，因此您必須在用戶端的 App.config 檔案中指定身分識別，以便在跨電腦組態中執行範例。  

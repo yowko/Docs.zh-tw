@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a264ec3fa1232a058a3bfbabbe8b84712cf87322
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364226"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956417"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自訂類型和程式庫的 XAML 相關 CLR 屬性
 本主題描述 .NET Framework XAML 服務所定義的 common language runtime (CLR) 屬性。 它也會描述在 .NET Framework 中定義的其他 CLR 屬性, 這些屬性具有應用程式對元件或類型的 XAML 相關案例。 將元件、類型或成員加到這些 CLR 屬性的特性, 會提供與您的類型相關的 XAML 類型系統資訊。 會提供資訊給任何使用 .NET Framework XAML 服務的 XAML 取用者, 以直接處理 XAML 節點資料流程, 或透過專屬 XAML 讀取器和 XAML 寫入器。  
@@ -24,7 +24,7 @@ ms.locfileid: "68364226"
   
  **適用於：** 支援可附加屬性的`get`類別、屬性或存取子成員。  
   
- **參量**無  
+ **參量**None  
   
  <xref:System.Windows.Markup.AmbientAttribute>指出屬性 (或所有採用屬性化類型的屬性) 應該在 XAML 中的環境屬性概念下加以解讀。 環境概念與 XAML 處理器如何判斷成員類別擁有者有關。 環境屬性是一個屬性, 在建立物件圖形時, 應該會在剖析器內容中使用此值, 但針對要建立的立即 XAML 節點集暫停一般的類型成員查閱。  
   
@@ -266,7 +266,7 @@ ms.locfileid: "68364226"
 - 您在元件中定義 XAML 語言支援, 並具有<xref:System.Windows.Markup.XmlnsDefinitionAttribute> `http://schemas.microsoft.com/winfx/2006/xaml`的。 在此情況下, 您通常應該升級前置`x`詞。  
   
 > [!NOTE]
->  .NET Framework XAML 服務也會定義與 XAML 相關的<xref:System.Windows.Markup.RootNamespaceAttribute>屬性。 此屬性是專案系統支援的元件層級屬性, 與 XAML 自訂類型無關。  
+> .NET Framework XAML 服務也會定義與 XAML 相關的<xref:System.Windows.Markup.RootNamespaceAttribute>屬性。 此屬性是專案系統支援的元件層級屬性, 與 XAML 自訂類型無關。  
   
 ## <a name="see-also"></a>另請參閱
 

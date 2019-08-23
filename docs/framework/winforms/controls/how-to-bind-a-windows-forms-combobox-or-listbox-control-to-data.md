@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料
+title: 作法：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f361526c44f8fbb9ab282fe15ae109b67e8f01dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054012"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922747"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>HOW TO：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料
-您可以繫結<xref:System.Windows.Forms.ComboBox>和<xref:System.Windows.Forms.ListBox>資料，以執行工作，例如瀏覽資料庫中的資料，以在輸入新的資料，或編輯現有的資料。  
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>作法：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料
+您可以<xref:System.Windows.Forms.ComboBox>將和<xref:System.Windows.Forms.ListBox>系結至資料, 以執行工作, 例如流覽資料庫中的資料、輸入新資料, 或編輯現有的資料。  
   
-### <a name="to-bind-a-combobox-or-listbox-control"></a>將 ComboBox 或 ListBox 控制項繫結  
+### <a name="to-bind-a-combobox-or-listbox-control"></a>若要系結 ComboBox 或 ListBox 控制項  
   
-1. 設定`DataSource`資料來源物件的屬性。 可能的資料來源包括<xref:System.Windows.Forms.BindingSource>管理員、 陣列或任何實作類別的繫結至資料、 資料表、 資料檢視、 資料集，資料檢視<xref:System.Collections.IList>介面。 如需詳細資訊，請參閱 <<c0> [ 支援的 Windows Form 資料來源](../data-sources-supported-by-windows-forms.md)。  
+1. `DataSource`將屬性設定為數據源物件。 可能的資料來源包括<xref:System.Windows.Forms.BindingSource>系結至資料、資料表、資料檢視、dataset、資料檢視管理員、陣列, 或任何可<xref:System.Collections.IList>執行介面的類別。 如需詳細資訊, 請參閱[Windows Forms 支援的資料來源](../data-sources-supported-by-windows-forms.md)。  
   
-2. 如果您要繫結至資料表，將設定`DisplayMember`屬性設為資料來源中的資料行的名稱。  
+2. 如果您要系結至資料表, 請將`DisplayMember`屬性設定為數據源中的資料行名稱。  
   
      \-或-  
   
-     如果您要繫結<xref:System.Collections.IList>，顯示成員設定為清單中類型的公用屬性。  
+     如果您要系結至<xref:System.Collections.IList>, 請將 [顯示成員] 設定為清單中類型的公用屬性。  
   
     ```vb  
     Private Sub BindComboBox()  
@@ -51,7 +51,7 @@ ms.locfileid: "62054012"
     ```  
   
     > [!NOTE]
-    >  如果您繫結至資料來源未實作<xref:System.ComponentModel.IBindingList>介面，例如<xref:System.Collections.ArrayList>，更新資料來源時，將不會更新繫結的控制項的資料。 例如，如果您有下拉式方塊繫結至<xref:System.Collections.ArrayList>而且資料會加入至<xref:System.Collections.ArrayList>，這些新的項目不會出現在下拉式方塊。 不過，您可以在其中強制下拉式方塊，藉由呼叫更新<xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A>並<xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A>執行個體上的方法<xref:System.Windows.Forms.BindingContext>控制項所繫結類別。  
+    > 如果您系結至不會執行<xref:System.ComponentModel.IBindingList>介面的資料來源 (例如<xref:System.Collections.ArrayList>), 則在更新資料來源時, 將不會更新繫結控制項的資料。 例如, 如果您有系結至<xref:System.Collections.ArrayList>的下拉式方塊, 而且資料已加入<xref:System.Collections.ArrayList>至, 這些新專案將不會出現在下拉式方塊中。 不過, 您可以在控制項所系結的<xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> <xref:System.Windows.Forms.BindingContext>類別實例上呼叫和<xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A>方法, 強制更新下拉式方塊。  
   
 ## <a name="see-also"></a>另請參閱
 

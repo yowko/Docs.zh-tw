@@ -2,12 +2,12 @@
 title: 追蹤參與者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a92c3ab710fc9bc86fbf269a4672f1d34737cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699798"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963678"
 ---
 # <a name="tracking-participants"></a>追蹤參與者
 追蹤參與者是可讓工作流程開發人員存取 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 物件並加以處理的擴充點。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含寫入追蹤記錄以做為 Windows 事件追蹤 (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。  
@@ -15,7 +15,7 @@ ms.locfileid: "61699798"
 ## <a name="tracking-participants"></a>追蹤參與者  
  追蹤基礎結構可讓應用程式篩選外送的追蹤記錄，讓參與者可訂閱記錄的子集。 此機制會透過追蹤設定檔來套用篩選。  
   
- Windows Workflow Foundation (WF) 中[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]提供將追蹤記錄寫入至 ETW 工作階段的追蹤參與者。 透過在設定檔中加入特定追蹤的行為，您可以設定工作流程服務上的參與者。 啟用 ETW 追蹤參與者可在事件檢視器中檢視追蹤記錄。 ETW 式追蹤的 SDK 範例是熟悉使用 ETW 式追蹤參與者之 WF 追蹤的理想方式。  
+ 中[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]的 Windows Workflow Foundation (WF) 提供追蹤參與者, 可將追蹤記錄寫入至 ETW 會話。 透過在設定檔中加入特定追蹤的行為，您可以設定工作流程服務上的參與者。 啟用 ETW 追蹤參與者可在事件檢視器中檢視追蹤記錄。 ETW 式追蹤的 SDK 範例是熟悉使用 ETW 式追蹤參與者之 WF 追蹤的理想方式。  
   
 ## <a name="etw-tracking-participant"></a>ETW 追蹤參與者  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 包含將追蹤記錄寫入至 ETW 工作階段的 ETW 追蹤參與者。 這是非常有效率的方式，對應用程式效能或伺服器輸送量所造成的衝擊最小。 使用標準 ETW 追蹤參與者的優點在於，可在 Windows 事件檢視器中使用其他應用程式和系統記錄來檢視它所收到的追蹤記錄。  
@@ -47,7 +47,7 @@ ms.locfileid: "61699798"
 ```  
   
 > [!NOTE]
->  如果未指定 `trackingProfile` 名稱，例如只有 `<etwTracking/>` 或 `<etwTracking profileName=""/>`，則會使用 Machine.config 檔中連同 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安裝的預設追蹤設定檔。  
+> 如果未指定 `trackingProfile` 名稱，例如只有 `<etwTracking/>` 或 `<etwTracking profileName=""/>`，則會使用 Machine.config 檔中連同 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安裝的預設追蹤設定檔。  
   
  在 Machine.config 檔中，預設追蹤設定檔會訂閱工作流程執行個體記錄和錯誤。  
   
@@ -60,14 +60,14 @@ ms.locfileid: "61699798"
   
  下圖顯示透過 ETW 追蹤參與者追蹤資料的流程。 一旦追蹤資料到達 ETW 工作階段，就可以透過多種方式加以存取。 其中最實用的方式之一就是透過事件檢視器，這是常用的 Windows 工具，可用來檢視記錄並從應用程式和服務進行追蹤。  
   
- ![追蹤 ETW 追蹤提供者所提供的資料的流程。](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
+ ![透過 ETW 追蹤提供者追蹤資料的流程。](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>追蹤參與者事件資料  
- 追蹤參與者會以每個追蹤記錄包含一個事件的形式，將已追蹤的事件資料序列化至 ETW 工作階段。  事件會使用從 100 到 199 範圍的 ID 來識別。 如需追蹤事件的定義記錄發出的追蹤參與者，請參閱[追蹤事件參考](tracking-events-reference.md)主題。  
+ 追蹤參與者會以每個追蹤記錄包含一個事件的形式，將已追蹤的事件資料序列化至 ETW 工作階段。  事件會使用從 100 到 199 範圍的 ID 來識別。 如需追蹤參與者所發出之追蹤事件記錄的定義, 請參閱[追蹤事件參考](tracking-events-reference.md)主題。  
   
  ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制，兩者的值都較小。 如果事件大小超過這裡任一種 ETW 限制，則會截斷事件，並任意移除其內容。 變數、引數、附註和自訂資料都不可選擇性移除。 發生截斷情形時，不論造成事件大小超出 ETW 限制的值大小為何，這些元素全都會遭到截斷。  已移除的資料會以 `<item>..<item>` 來取代。  
   
- 複雜型別變數、 引數，和自訂資料項目會序列化至 ETW 記錄使用事件[NetDataContractSerializer 類別](https://go.microsoft.com/fwlink/?LinkId=177537)。 此類別包含序列化 XML 資料流中的 CLR 型別資訊。  
+ 變數、引數和自訂資料項目中的複雜類型會使用[NetDataContractSerializer 類別](https://go.microsoft.com/fwlink/?LinkId=177537)序列化為 ETW 事件記錄。 此類別包含序列化 XML 資料流中的 CLR 型別資訊。  
   
  因 ETW 限制而截斷承載資料，可能會造成將追蹤記錄傳送到 ETW 工作階段。 如果有一個以上的工作階段正在接聽事件，且工作階段有不同的事件承載限制時，就可能會發生這種情況。  
   
@@ -77,17 +77,17 @@ ms.locfileid: "61699798"
  由 ETW 追蹤參與者寫入至 ETW 工作階段的事件，可透過事件檢視器進行存取 (當使用預設提供者 ID 時)。 這可快速檢視已由工作流程發出的追蹤記錄。  
   
 > [!NOTE]
->  發出至 ETW 工作階段的追蹤記錄事件會使用從 100 到 199 範圍的事件 ID。  
+> 發出至 ETW 工作階段的追蹤記錄事件會使用從 100 到 199 範圍的事件 ID。  
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>若要在事件檢視器中檢視追蹤記錄  
   
 1. 啟動事件檢視器 (EVENTVWR.EXE)  
   
-2. 選取 **事件檢視器、 應用程式和服務記錄檔、 Microsoft、 Windows、 應用程式伺服器-應用程式**。  
+2. 選取**事件檢視器、應用程式和服務記錄檔、Microsoft、Windows、應用程式伺服器-應用程式**。  
   
-3. 以滑鼠右鍵按一下，並確定**檢視、 顯示分析與偵錯記錄檔**已選取。 如果未選取該選項，請加以選取，使其旁邊出現核取記號。 這會顯示**分析**，**效能**，並**偵錯**記錄檔。  
+3. 以滑鼠右鍵按一下, 並確認已選取 [**顯示分析] 和 [偵錯工具記錄**]。 如果未選取該選項，請加以選取，使其旁邊出現核取記號。 這會顯示**分析**、效能和**Debug**記錄。  
   
-4. 以滑鼠右鍵按一下**分析**記錄，然後選取**啟用記錄**。 記錄檔將位於 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 檔案。  
+4. 以滑鼠右鍵按一下**分析**記錄, 然後選取 [**啟用記錄**]。 記錄檔將位於 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 檔案。  
   
 ## <a name="custom-tracking-participant"></a>自訂追蹤參與者  
  追蹤參與者 API 允許以使用者提供的追蹤者來擴充追蹤執行階段，可包含自訂邏輯以處理工作流程執行階段發出的追蹤記錄。 若要寫入自訂追蹤參與者，開發人員必須實作 `Track` 類別上的 <xref:System.Activities.Tracking.TrackingParticipant> 方法。 當工作流程執行階段發出追蹤記錄時，會呼叫此方法。  
@@ -142,5 +142,5 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server App Fabric 監視](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [使用 App Fabric 監視應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

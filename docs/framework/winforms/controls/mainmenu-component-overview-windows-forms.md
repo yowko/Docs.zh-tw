@@ -8,21 +8,21 @@ helpviewer_keywords:
 - MainMenu control [Windows Forms], about MainMenu control
 - menus
 ms.assetid: b41cc5a3-cc59-4996-aa3c-8dd9c17d3c90
-ms.openlocfilehash: da1b76a7019f364e7463a8345aa80d9a9bd6089e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe46683faee13bad951d5a7185aad8a687c290ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012780"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952140"
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>MainMenu 元件概觀 (Windows Form)
 > [!IMPORTANT]
->  雖然<xref:System.Windows.Forms.MenuStrip>並<xref:System.Windows.Forms.ContextMenuStrip>取代及新增功能<xref:System.Windows.Forms.MainMenu>並<xref:System.Windows.Forms.ContextMenu>控制項的舊版本中，<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>會保留回溯相容性以及供未來使用，如果您選擇。  
+> 雖然<xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.ContextMenu>會取代並將功能加入舊版的和控制項, 但<xref:System.Windows.Forms.MainMenu>如果您選擇, 則會保留以供回溯相容性和未來使用。 <xref:System.Windows.Forms.ContextMenuStrip>  
   
- Windows Form<xref:System.Windows.Forms.MainMenu>元件會在執行階段顯示功能表。 所有的個別項目與主功能表的子功能表卻<xref:System.Windows.Forms.MenuItem>物件。  
+ Windows Forms <xref:System.Windows.Forms.MainMenu>元件會在執行時間顯示功能表。 主功能表和個別專案的所有子功能表都<xref:System.Windows.Forms.MenuItem>是物件。  
   
 ## <a name="key-properties"></a>索引鍵內容  
- 功能表項目可以指定為預設的項目，藉由設定<xref:System.Windows.Forms.MenuItem.DefaultItem%2A>屬性設`true`。 按一下 [] 功能表時以粗體文字顯示預設項目。 功能表項目的<xref:System.Windows.Forms.MenuItem.Checked%2A>屬性是`true`或`false`，並指出是否已選取功能表項目。 功能表項目的<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>屬性自訂所選取項目的外觀： 如果<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>設為`true`，選項按鈕旁邊的項目; 如果<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>設定為`false`，項目旁的核取記號隨即出現。  
+ 藉由將<xref:System.Windows.Forms.MenuItem.DefaultItem%2A>屬性設定為`true`, 可以將功能表項目指定為預設專案。 按一下功能表時, 預設專案會以粗體文字顯示。 功能表項目的<xref:System.Windows.Forms.MenuItem.Checked%2A>屬性`true`為或`false`, 表示是否已選取功能表項目。 功能表項目<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>的屬性可自訂所選項目的外觀: 如果<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>設定為`true`, 則選項按鈕會出現在專案的旁邊; 如果<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>設為`false`, 則會在專案旁邊出現核取記號。  
   
 ## <a name="see-also"></a>另請參閱
 

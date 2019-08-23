@@ -3,15 +3,15 @@ title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4253aec961b812b6893ee201861d2ab38048032a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667219"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942872"
 ---
 # <a name="claimtype"></a>\<claimType>
-指定連入安全性權杖的單一選用或必要宣告。  
+指定連入安全性權杖的單一選擇性或必要宣告。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -38,14 +38,14 @@ ms.locfileid: "61667219"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|類型|宣告類型。 通常是 URI。 必要項。|  
-|選擇性|指定的宣告型別是否為選擇性的布林值。 選擇性。|  
+|型別|宣告類型。 通常是 URI。 必要項。|  
+|選擇性|指定宣告類型是否為選擇性的布林值。 選擇性。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|指定必要的連入安全性權杖的宣告集。|
+|[\<claimTypeRequired>](claimtyperequired.md)|指定傳入安全性權杖的必要宣告集合。|

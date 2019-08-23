@@ -1,21 +1,21 @@
 ---
-title: HOW TO：使用與多個結果型式對應的預存程序
+title: 作法：使用與多個結果型式對應的預存程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 406e44a0ee3b086ceb47b25a80c4fd0ff5a92607
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22614be8e53d975c4efdf7004f41906c58639c61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902651"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938699"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>HOW TO：使用與多個結果型式對應的預存程序
-如果預存程序 (Stored Procedure) 可以傳回多個結果圖案，則傳回型別不可以強型別 (Strongly Typed) 為單一投影圖案。 雖然[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可以產生所有可能的投影類型，但是無法得知在它們將傳回的順序。  
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>作法：使用與多個結果型式對應的預存程序
+如果預存程序 (Stored Procedure) 可以傳回多個結果圖案，則傳回型別不可以強型別 (Strongly Typed) 為單一投影圖案。 雖然[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可以產生所有可能的投射類型, 但它無法得知傳回的順序。  
   
- 請將這個案例與循序產生多個結果圖案的預存程序案例比較。 如需詳細資訊，請參閱[如何：使用對應的循序結果型式的預存程序](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)。  
+ 請將這個案例與循序產生多個結果圖案的預存程序案例比較。 如需詳細資訊，請參閱[如何：針對順序結果圖形](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)使用對應的預存程式。  
   
  <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 屬性 (Attribute) 會套用至傳回多個結果型別的預存程序，以指定程序可以傳回的型別集。  
   
@@ -38,7 +38,7 @@ else if(@shape = 2)
  您可使用類似下列的程式碼來執行此預存程序。  
   
 > [!NOTE]
->  您必須使用 <xref:System.Data.Linq.IMultipleResults.GetResult%2A> 模式，根據您對預存程序的了解以取得正確型別的列舉值。  
+> 您必須使用 <xref:System.Data.Linq.IMultipleResults.GetResult%2A> 模式，根據您對預存程序的了解以取得正確型別的列舉值。  
   
  [!code-csharp[DLinqSprox#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  

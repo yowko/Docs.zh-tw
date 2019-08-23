@@ -1,19 +1,19 @@
 ---
-title: 作法：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
+title: HOW TO：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XmlDataProvider [WPF], binding to XML data
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: dc4fb2d5f0c48c077d2ff7ca5e5269ce5cba71e5
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4833e024fcd352094a2163f11df8572aa4c241f8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400495"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944640"
 ---
-# <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>作法：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
+# <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>HOW TO：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
 這個範例會示範如何[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] <xref:System.Windows.Data.XmlDataProvider>使用系結至資料。  
   
  使用, 可以透過應用程式中的資料系結存取的基礎資料, 可以是任何節點的[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]樹狀結構。 <xref:System.Windows.Data.XmlDataProvider> 換句話說, <xref:System.Windows.Data.XmlDataProvider>會提供一個便利的方式, 使用任何[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]節點樹狀結構做為系結來源。  
@@ -22,13 +22,13 @@ ms.locfileid: "68400495"
  在下列範例中, 資料會直接內嵌為[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] <xref:System.Windows.FrameworkElement.Resources%2A>區段內的*資料島*。 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料島必須包裝在 `<x:XData>` 標記中，並一律具有單一根節點，在此範例中為 *Inventory*。  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料的根節點具有一個 **xmlns** 屬性，會將 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空間設為空白字串。 這是將 XPath 查詢套用至內嵌於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面內之資料島的需求。 在此內嵌案例[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中,、和因此資料島會<xref:System.Windows>繼承命名空間。 因此, 您必須將命名空間設為空白, 讓 XPath 查詢不受<xref:System.Windows>命名空間的限定, 這會 misdirect 查詢。  
+> [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料的根節點具有一個 **xmlns** 屬性，會將 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空間設為空白字串。 這是將 XPath 查詢套用至內嵌於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面內之資料島的需求。 在此內嵌案例[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中,、和因此資料島會<xref:System.Windows>繼承命名空間。 因此, 您必須將命名空間設為空白, 讓 XPath 查詢不受<xref:System.Windows>命名空間的限定, 這會 misdirect 查詢。  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
  如此範例所示，若要在屬性語法中建立相同的繫結宣告，您必須正確地逸出特殊字元。 如需詳細資訊，請參閱 [XML 字元實體和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)。  
   
- 執行<xref:System.Windows.Controls.ListBox>此範例時, 將會顯示下列專案。 這些是 *Books* 底下之所有元素的 *Title*，其有一個 *Stock* 值為 *out*，或有一個 *Number* 值為 3 或大於等於 8 。 請注意, 在上設定的<xref:System.Windows.Data.XmlDataProvider.XPath%2A> <xref:System.Windows.Data.XmlDataProvider>值表示只會公開*書籍*元素 (基本上是設定篩選器), 因此不會傳回任何 CD 專案。  
+ 執行<xref:System.Windows.Controls.ListBox>此範例時, 將會顯示下列專案。 這些是 *Books* 底下之所有元素的 *Title*，其有一個 *Stock* 值為 *out*，或有一個 *Number* 值為 3 或大於等於 8 。 請注意,在上設定的<xref:System.Windows.Data.XmlDataProvider.XPath%2A> <xref:System.Windows.Data.XmlDataProvider>值表示只會公開*書籍*元素 (基本上是設定篩選器), 因此不會傳回任何 CD 專案。  
   
  ![XPath 範例的螢幕擷取畫面, 其中顯示四本書的標題。](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   

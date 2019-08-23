@@ -16,14 +16,14 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: fee3ee901f3f882091464d7c450f4f144d69a6e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 810a680a1a9d9065e80ed87453a728fe628a953d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666408"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935360"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a>HOW TO：自訂繪製 ToolStrip 控制項
+# <a name="how-to-custom-draw-a-toolstrip-control"></a>作法：自訂繪製 ToolStrip 控制項
 <xref:System.Windows.Forms.ToolStrip> 控制項具有下列相關聯轉譯 (繪製) 類別的項目：  
   
 - <xref:System.Windows.Forms.ToolStripSystemRenderer> 提供您作業系統的外觀和樣式。  
@@ -47,7 +47,7 @@ ms.locfileid: "64666408"
 - 請覆寫 <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>，但不要呼叫基底類別。  
   
 > [!NOTE]
->  該方法有用於 <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer> 和 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 的版本。  
+> 該方法有用於 <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer> 和 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 的版本。  
   
 ### <a name="to-change-the-professionalcolortable"></a>變更 ProfessionalColorTable  
   
@@ -115,7 +115,7 @@ ms.locfileid: "64666408"
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>關閉整個應用程式的 Microsoft Office 色彩  
   
-- 請設定 <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> 為 `false`。  
+- 將 <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> 設定為 `false`。  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>關閉 ToolStrip 控制項的 Microsoft Office 色彩  
   
@@ -139,5 +139,5 @@ ms.locfileid: "64666408"
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [使用內建主控描繪支援的控制項](controls-with-built-in-owner-drawing-support.md)
-- [如何：建立和設定 Windows Form 中 ToolStrip 控制項自訂轉譯器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [如何：在 Windows Forms 中建立和設定 ToolStrip 控制項的自訂轉譯器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)

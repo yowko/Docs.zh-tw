@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c67ce15175f8667139f99cec1ed17531eab473e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969802"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935652"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc 介面
-提供方法來為新的 Microsoft intermediate language (MSIL) 函式主體配置記憶體。  
+提供方法來為新的 Microsoft 中繼語言 (MSIL) 函數主體配置記憶體。  
   
 > [!NOTE]
->  `IMethodMalloc`介面是簡單的記憶體配置器。 它可讓您配置記憶體，但不是能釋放它。  
+> `IMethodMalloc`介面是簡單的記憶體配置器。 它可讓您配置記憶體, 但不能釋放它。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
-|[Alloc 方法](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|嘗試為新的 MSIL 函式主體配置指定的記憶體數量。|  
+|[Alloc 方法](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|嘗試為新的 MSIL 函數主體配置指定的記憶體數量。|  
   
 ## <a name="remarks"></a>備註  
- 每個配置器為特定模組，並確保函式主體會從模組的基底的正面位移。 以上的模組基底的記憶體可能寶貴，因此配置器應該用來只為函式主體配置記憶體。  
+ 每個配置器都是模組特有的, 並可確保函式主體會位於模組基底的正位移。 高於模組基底的記憶體可能非常寶貴, 因此應該使用配置器只為函式主體配置記憶體。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** Corprof.idl .idl, Corprof.idl。h  
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

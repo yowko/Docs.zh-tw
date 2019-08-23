@@ -30,62 +30,62 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95bef937912e35cd828bf0090b4cf48ccb3290cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962470"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>程式碼中的特殊字元 (Visual Basic)
-有時候，您必須使用特殊字元，在您的程式碼，也就是不是字母或數字的字元。 標點符號和特殊字元，Visual Basic 字元集中的有許多用途，從組織程式文字到定義編譯器或編譯的程式執行的工作。 這些字元不指定要執行的作業。  
+有時候您必須在程式碼中使用特殊字元, 也就是不是字母或數位的字元。 Visual Basic 字元集中的標點符號和特殊字元具有各種用途, 從組織程式文字到定義編譯器或編譯器所執行的工作。 這些字元不指定要執行的作業。  
   
-## <a name="parentheses"></a>括號  
- 當您定義這類程序中，使用括號`Sub`或`Function`。 您必須將所有的程序引數清單括在括號中。 您也使用括號將變數或引數放入邏輯群組，特別是若要覆寫中的複雜運算式的運算子優先順序的預設順序。 下列範例將說明這點。  
+## <a name="parentheses"></a>後  
+ 當您定義程式時, 請使用括弧, 例如`Sub`或`Function`。 您必須將所有程式引數清單括在括弧中。 您也可以使用括弧將變數或引數放入邏輯群組, 特別是在複雜運算式中覆寫運算子優先順序的預設順序。 下列範例將說明這點。  
   
  [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
- 執行先前的程式碼的值之後`d`8.225 和的值是`e`為 3。 計算`d`使用的預設優先順序`/`over `+` ，相當於`d = b + (c / a)`。 在計算中的括號`e`覆寫預設的優先順序。  
+ 執行先前的`d`程式碼之後, 的值為 8.225, 且的`e`值為3。 的計算`d`會使用的預設`/`優先順序`d = b + (c / a)`over `+` , 而相當於。 計算中的括弧會覆`e`寫預設優先順序。  
   
 ## <a name="separators"></a>分隔符號  
- 分隔符號執行功能如其名稱示： 在不同的程式碼區段。 在 Visual Basic 中的分隔字元是冒號 (`:`)。 當您想要包含在單一行，而不是個別行上的多個陳述式時，請使用分隔符號字元。 這樣可節省空間，並改善您的程式碼的可讀性。 下列範例示範三個陳述式以冒號分隔。  
+ 分隔符號會執行其名稱的建議: 它們會分隔程式碼區段。 在 Visual Basic 中, 分隔字元是冒號 (`:`)。 當您想要在單一行上包含多個語句, 而不是個別行時, 請使用分隔符號。 這可節省空間並改善程式碼的可讀性。 下列範例顯示三個以冒號分隔的語句。  
   
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
- 如需詳細資訊，請參閱[如何：中斷和合併程式碼中的陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)。  
+ 如需詳細資訊，請參閱[如何：在程式碼](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)中中斷和合併語句。  
   
- 冒號 (`:`) 字元也用來識別陳述式標籤。 如需詳細資訊，請參閱[如何：標記陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
+ 冒號 (`:`) 字元也會用來識別語句標籤。 如需詳細資訊，請參閱[如何：標籤](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)語句。  
   
 ## <a name="concatenation"></a>串連  
- 使用`&`運算子*串連*，或將字串連結在一起。 請勿混淆與`+`運算子，就會將數值相加。 如果您使用`+`運算子進行串連時您操作數字的值，您可以取得不正確的結果。 下列範例為其示範。  
+ 使用運算子進行串連, 或將字串連結在一起。 `&` 請勿將它與`+`運算子混淆, 這會將數值相加。 如果您在操作`+`數值時使用運算子來串連, 您可以取得不正確的結果。 下列範例為其示範。  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
- 執行先前的程式碼的值之後`resultA`21.01 和的值是`resultB`是 「 10.0111"。  
+ 執行先前的`resultA`程式碼之後, 的值為 21.01, 且的`resultB`值為 "10.0111"。  
   
 ## <a name="member-access-operators"></a>成員存取運算子  
- 若要存取之型別的成員，您可以使用點 (`.`) 或驚嘆號 (`!`) 之間的型別名稱和成員名稱的運算子。  
+ 若要存取類型的成員, 請在類型名稱和成員`.`名稱之間使用點 (`!`) 或驚嘆號 () 運算子。  
   
-### <a name="dot--operator"></a>點 （.）運算子  
- 使用`.`操作員的類別、 結構、 介面或列舉型別做為成員存取運算子。 成員可以是欄位、 屬性、 事件或方法。 下列範例將說明這點。  
+### <a name="dot--operator"></a>點 (.)運算子  
+ 在類別、結構、介面或列舉上使用運算子做為成員存取運算子。`.` 成員可以是欄位、屬性、事件或方法。 下列範例將說明這點。  
   
  [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
-### <a name="exclamation-point--operator"></a>驚嘆號 （！）運算子  
- 使用`!`運算子只能在類別或介面上的做為字典存取運算子。 類別或介面都必須具有預設屬性可接受單一`String`引數。 緊接`!`運算子會變成引數值傳遞給預設屬性，做為字串。 下列範例為其示範。  
+### <a name="exclamation-point--operator"></a>驚嘆號 (!)運算子  
+ 只在類別或介面上使用運算子做為字典存取運算子。`!` 類別或介面必須具有接受單一`String`引數的預設屬性。 緊接在`!`運算子後面的識別碼會變成當做字串傳遞至預設屬性的引數值。 下列範例為其示範。  
   
  [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
- 這三個輸出行`MsgBox`所有顯示值`32856`。 第一行會使用傳統的存取權給屬性`index`，第二個會利用這一點，`index`類別的預設屬性`hasDefault`，和第三個會使用字典存取此類別。  
+ 的三個輸出行會`MsgBox`顯示值。 `32856` 第一行使用傳統的存取屬性`index`, 第二行使用的`index`事實是類別`hasDefault`的預設屬性, 而第三個使用類別的字典存取。  
   
- 請注意，第二個運算元`!`運算子必須是有效的 Visual Basic 識別項，並未用雙引號括住 (`" "`)。 換句話說，您無法使用的字串常值或字串變數。 下列的最後一個變更的這一行`MsgBox`呼叫會產生錯誤，因為`"X"`是括住的字串常值。  
+ 請注意, `!`運算子的第二個運算元必須是不以雙引號 (`" "`) 括住的有效 Visual Basic 識別碼。 換句話說, 您不能使用字串常值或字串變數。 `MsgBox`呼叫最後一行的下列變更會產生錯誤, 因為`"X"`是括住的字串常值。  
   
  `"Dictionary access returns " & hD!"X")`  
   
 > [!NOTE]
->  您必須明確預設集合的參考。 特別是，您無法使用`!`晚期繫結變數上的運算子。  
+> 預設集合的參考必須是明確的。 特別的`!`是, 您無法在晚期繫結變數上使用運算子。  
   
- `!`字元也做為`Single`輸入字元。  
+ 字元也會用來`Single`做為類型字元。 `!`  
   
 ## <a name="see-also"></a>另請參閱
 

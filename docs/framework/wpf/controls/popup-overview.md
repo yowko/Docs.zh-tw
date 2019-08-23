@@ -5,26 +5,26 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 53283619d1bd2727bdca1df6a3a408ec0ce873a5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7e6977737d362fd0df6321702bb8a1ac6cad66e0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951434"
 ---
 # <a name="popup-overview"></a>快顯功能表概觀
-<xref:System.Windows.Controls.Primitives.Popup>控制項可用來顯示不同的視窗以漂浮在目前的應用程式視窗相對於指定的項目或螢幕座標中的內容。 本主題將介紹<xref:System.Windows.Controls.Primitives.Popup>控制項，並提供其用法的相關資訊。  
+<xref:System.Windows.Controls.Primitives.Popup>控制項提供一種方式, 可以將內容顯示在另一個視窗中, 以浮動在相對於指定專案或螢幕座標的目前應用程式視窗。 本主題將<xref:System.Windows.Controls.Primitives.Popup>介紹控制項, 並提供其用法的相關資訊。  
 
 <a name="What_Is_a_Popup_"></a>   
 ## <a name="what-is-a-popup"></a>什麼是快顯？  
- A<xref:System.Windows.Controls.Primitives.Popup>控制項會顯示在相對於項目或在螢幕上的點分隔視窗的內容。 當<xref:System.Windows.Controls.Primitives.Popup>是可見的<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A>屬性設定為`true`。  
+ <xref:System.Windows.Controls.Primitives.Popup>控制項會在與螢幕上的專案或點相對的個別視窗中顯示內容。 當為可見時<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> , 屬性會設定為`true`。 <xref:System.Windows.Controls.Primitives.Popup>  
   
 > [!NOTE]
->  A<xref:System.Windows.Controls.Primitives.Popup>不會自動開啟當滑鼠指標移至其父物件時。 如果您想<xref:System.Windows.Controls.Primitives.Popup>若要自動開啟，請使用<xref:System.Windows.Controls.ToolTip>或<xref:System.Windows.Controls.ToolTipService>類別。 如需詳細資訊，請參閱 [ToolTip 概觀](tooltip-overview.md)。  
+> <xref:System.Windows.Controls.Primitives.Popup>當滑鼠指標移到其父物件上方時, 不會自動開啟。 如果您想<xref:System.Windows.Controls.Primitives.Popup>要自動開啟, 請<xref:System.Windows.Controls.ToolTip>使用或<xref:System.Windows.Controls.ToolTipService>類別。 如需詳細資訊，請參閱 [ToolTip 概觀](tooltip-overview.md)。  
   
 <a name="APopupExample"></a>   
 ## <a name="creating-a-popup"></a>建立快顯  
- 下列範例示範如何定義<xref:System.Windows.Controls.Primitives.Popup>控制項的子項目<xref:System.Windows.Controls.Button>控制項。 因為<xref:System.Windows.Controls.Button>可以有只有一個子項目，此範例會針對文字<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.Primitives.Popup>中的控制項<xref:System.Windows.Controls.StackPanel>。 內容<xref:System.Windows.Controls.Primitives.Popup>會出現在<xref:System.Windows.Controls.TextBlock>控制項，其中會漂浮在應用程式視窗上靠近相關的另一個視窗中顯示其文字<xref:System.Windows.Controls.Button>控制項。  
+ 下列範例示範如何定義<xref:System.Windows.Controls.Primitives.Popup>控制項的子項目。 <xref:System.Windows.Controls.Button> 因為只能有一個子專案, 所以這個範例<xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.Popup>會將 <xref:System.Windows.Controls.StackPanel>和控制項的文字放在中。 <xref:System.Windows.Controls.Button> 的內容<xref:System.Windows.Controls.Primitives.Popup>會出現<xref:System.Windows.Controls.TextBlock>在控制項中, 它會在另一個視窗中顯示其文字, 並將其浮動在相關<xref:System.Windows.Controls.Button>控制項附近的應用程式視窗中。  
   
  [!code-xaml[PopupSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
   
@@ -32,59 +32,59 @@ ms.locfileid: "64625714"
   
 <a name="PopupUses"></a>   
 ## <a name="controls-that-implement-a-popup"></a>實作快顯的控制項  
- 您可以建置<xref:System.Windows.Controls.Primitives.Popup>到其他控制項的控制項。 下列控制項會實作<xref:System.Windows.Controls.Primitives.Popup>適用於特定用途的控制項：  
+ 您可以將<xref:System.Windows.Controls.Primitives.Popup>控制項建立在其他控制項中。 下列控制項會針對特定<xref:System.Windows.Controls.Primitives.Popup>用途來執行控制項:  
   
-- <xref:System.Windows.Controls.ToolTip>. 如果您想要建立項目的工具提示，使用<xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ToolTipService>類別。 如需詳細資訊，請參閱 [ToolTip 概觀](tooltip-overview.md)。  
+- <xref:System.Windows.Controls.ToolTip>. 如果您想要建立元素的工具提示, 請使用<xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ToolTipService>類別。 如需詳細資訊，請參閱 [ToolTip 概觀](tooltip-overview.md)。  
   
-- <xref:System.Windows.Controls.ContextMenu>. 如果您想要建立項目的內容功能表中，使用<xref:System.Windows.Controls.ContextMenu>控制項。 如需詳細資訊，請參閱 [ContextMenu 概觀](contextmenu-overview.md)。  
+- <xref:System.Windows.Controls.ContextMenu>. 如果您想要建立元素的內容功能表, 請使用<xref:System.Windows.Controls.ContextMenu>控制項。 如需詳細資訊，請參閱 [ContextMenu 概觀](contextmenu-overview.md)。  
   
-- <xref:System.Windows.Controls.ComboBox>. 如果您想要建立具有可顯示或隱藏的使用下拉式清單方塊的選取項目控制項<xref:System.Windows.Controls.ComboBox>控制項。  
+- <xref:System.Windows.Controls.ComboBox>. 如果您想要建立具有可顯示或隱藏之下拉式清單方塊的選取控制項, 請使用<xref:System.Windows.Controls.ComboBox>控制項。  
   
-- <xref:System.Windows.Controls.Expander>. 如果您想要建立顯示具有可摺疊區域的標頭的控制項，會顯示內容，請使用<xref:System.Windows.Controls.Expander>控制項。 如需詳細資訊，請參閱 [Expander 概觀](expander-overview.md)。  
+- <xref:System.Windows.Controls.Expander>. 如果您想要建立一個顯示標題的控制項, 其中包含顯示內容的可折迭區域, <xref:System.Windows.Controls.Expander>請使用控制項。 如需詳細資訊，請參閱 [Expander 概觀](expander-overview.md)。  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>快顯行為和外觀  
- <xref:System.Windows.Controls.Primitives.Popup>控制項提供可讓您自訂其行為和外觀的功能。 例如，您可以在其中設定開啟和關閉行為、 動畫、 不透明度和點陣圖效果，以及<xref:System.Windows.Controls.Primitives.Popup>大小和位置。  
+ <xref:System.Windows.Controls.Primitives.Popup>控制項提供的功能可讓您自訂其行為和外觀。 例如, 您可以設定開啟和關閉行為、動畫、不透明度和點陣圖效果, 以及<xref:System.Windows.Controls.Primitives.Popup>大小和位置。  
   
 <a name="OpenandCloseBehavior"></a>   
 ### <a name="open-and-close-behavior"></a>開啟和關閉行為  
- A<xref:System.Windows.Controls.Primitives.Popup>控制項會顯示其內容時<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A>屬性設定為`true`。 根據預設，<xref:System.Windows.Controls.Primitives.Popup>保持開啟，直到<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A>屬性設定為`false`。 不過，您可以變更預設行為，藉由設定<xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A>屬性設`false`。 當您將此屬性設定為`false`，則<xref:System.Windows.Controls.Primitives.Popup>內容視窗具有滑鼠擷取。 <xref:System.Windows.Controls.Primitives.Popup>失去滑鼠擷取，且視窗會關閉外部的滑鼠事件發生時<xref:System.Windows.Controls.Primitives.Popup>視窗。  
+ 當屬性設定為`true`時,控制項會顯示其內容。<xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> 根據預設, <xref:System.Windows.Controls.Primitives.Popup>會保持開啟狀態<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> , 直到屬性設定`false`為為止。 不過, 您可以藉由將<xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A>屬性設定為`false`, 來變更預設行為。 當您將此屬性設定`false`為時<xref:System.Windows.Controls.Primitives.Popup> , 內容視窗會有滑鼠捕捉。 當滑鼠事件在<xref:System.Windows.Controls.Primitives.Popup>視窗外發生時,失去滑鼠捕捉和視窗會關閉。<xref:System.Windows.Controls.Primitives.Popup>  
   
- <xref:System.Windows.Controls.Primitives.Popup.Opened>並<xref:System.Windows.Controls.Primitives.Popup.Closed>引發事件時<xref:System.Windows.Controls.Primitives.Popup>內容視窗已開啟還是關閉。  
+ 當內容視窗開啟或關閉時, 會引發<xref:System.Windows.Controls.Primitives.Popup.Closed> 和事件。<xref:System.Windows.Controls.Primitives.Popup.Opened> <xref:System.Windows.Controls.Primitives.Popup>  
   
 <a name="Animation"></a>   
 ### <a name="animation"></a>動畫  
- <xref:System.Windows.Controls.Primitives.Popup>控制項有內建支援通常淡入和滑入之類的行為與相關聯的動畫。 您可以藉由設定開啟這些動畫<xref:System.Windows.Controls.Primitives.Popup.PopupAnimation%2A>屬性設<xref:System.Windows.Controls.Primitives.PopupAnimation>列舉值。 針對<xref:System.Windows.Controls.Primitives.Popup>動畫可以正常運作，您必須設定<xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A>屬性設`true`。  
+ <xref:System.Windows.Controls.Primitives.Popup>控制項內建的動畫支援通常與淡入和滑入等行為相關聯。 您可以藉由將<xref:System.Windows.Controls.Primitives.Popup.PopupAnimation%2A>屬性設定<xref:System.Windows.Controls.Primitives.PopupAnimation>為列舉值來開啟這些動畫。 若<xref:System.Windows.Controls.Primitives.Popup>要讓動畫正常運作, 您必須<xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A>將屬性設定`true`為。  
   
- 您也可以套用之類的動畫<xref:System.Windows.Media.Animation.Storyboard>至<xref:System.Windows.Controls.Primitives.Popup>控制項。  
+ 您也可以將像<xref:System.Windows.Media.Animation.Storyboard>是的<xref:System.Windows.Controls.Primitives.Popup>動畫套用至控制項。  
   
 <a name="OpacityandBitmapEffects"></a>   
 ### <a name="opacity-and-bitmap-effects"></a>不透明度和點陣圖效果  
- <xref:System.Windows.UIElement.Opacity%2A>屬性<xref:System.Windows.Controls.Primitives.Popup>控制項有不會影響其內容。 根據預設，<xref:System.Windows.Controls.Primitives.Popup>是不透明的內容視窗。 若要建立透明<xref:System.Windows.Controls.Primitives.Popup>，將<xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A>屬性設`true`。  
+ <xref:System.Windows.Controls.Primitives.Popup>控制項<xref:System.Windows.UIElement.Opacity%2A>的屬性對其內容不會有任何影響。 根據預設, 內容<xref:System.Windows.Controls.Primitives.Popup>視窗是不透明的。 若要建立透明<xref:System.Windows.Controls.Primitives.Popup>的, 請<xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A>將屬性`true`設定為。  
   
- 內容<xref:System.Windows.Controls.Primitives.Popup>不是繼承的點陣圖效果，例如<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>，，直接設定在<xref:System.Windows.Controls.Primitives.Popup>控制項或其他任何元素的父視窗中。 要顯示的內容上的點陣圖效果<xref:System.Windows.Controls.Primitives.Popup>，您必須設定直接對其內容的點陣圖效果。 比方說，如果子系<xref:System.Windows.Controls.Primitives.Popup>是<xref:System.Windows.Controls.StackPanel>，在上設定點陣圖效果<xref:System.Windows.Controls.StackPanel>。  
+ 的內容<xref:System.Windows.Controls.Primitives.Popup>不會繼承點陣圖效果 ( <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>例如), <xref:System.Windows.Controls.Primitives.Popup>您可以直接在控制項上或在父視窗中的任何其他專案上設定。 若要讓點陣圖效果出現在的內容<xref:System.Windows.Controls.Primitives.Popup>上, 您必須直接在其內容上設定點陣圖效果。 例如, 如果的子<xref:System.Windows.Controls.Primitives.Popup>系<xref:System.Windows.Controls.StackPanel>為, 請在上<xref:System.Windows.Controls.StackPanel>設定點陣圖效果。  
   
 <a name="PopupSize"></a>   
 ### <a name="popup-size"></a>快顯大小  
- 根據預設，<xref:System.Windows.Controls.Primitives.Popup>其內容會自動調整大小。 因為自動調整時，可能隱藏部分點陣圖效果畫面區域中所定義的預設大小<xref:System.Windows.Controls.Primitives.Popup>內容不會提供足夠的空間，以顯示那些點陣圖效果。  
+ 根據預設, <xref:System.Windows.Controls.Primitives.Popup>會自動調整為其內容的大小。 當自動調整大小時, 可能會隱藏某些點陣圖效果, 因為針對<xref:System.Windows.Controls.Primitives.Popup>內容定義的螢幕區域預設大小未提供足夠的空間來顯示點陣圖效果。  
   
- <xref:System.Windows.Controls.Primitives.Popup> 內容也可能會遮蔽當您設定<xref:System.Windows.UIElement.RenderTransform%2A>的內容。 在此案例中，部分內容可能會隱藏如果已轉換的內容<xref:System.Windows.Controls.Primitives.Popup>超出原始區域<xref:System.Windows.Controls.Primitives.Popup>。 如果點陣圖效果或轉換需要更多空間，您可以定義周圍的邊界<xref:System.Windows.Controls.Primitives.Popup>以提供更多區域控制項的內容。  
+ <xref:System.Windows.Controls.Primitives.Popup>當您在內容<xref:System.Windows.UIElement.RenderTransform%2A>上設定時, 內容也可能會遮蔽。 在此案例中, 如果已轉換<xref:System.Windows.Controls.Primitives.Popup>的內容延伸至原始<xref:System.Windows.Controls.Primitives.Popup>區域之外, 某些內容可能會隱藏。 如果點陣圖效果或轉換需要更多空間, 您可以在<xref:System.Windows.Controls.Primitives.Popup>內容周圍定義邊界, 以便為控制項提供更多區域。  
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>定義快顯位置  
- 您可以藉由設定定位快顯<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty>屬性。 如需詳細資訊，請參閱[快顯放置行為](popup-placement-behavior.md)。 當<xref:System.Windows.Controls.Primitives.Popup>會顯示在畫面上，它不會因為其父代重新調整位置。  
+ 您可以藉由設定<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>、 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>、 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty>屬性來定位快顯功能表。 如需詳細資訊，請參閱[快顯放置行為](popup-placement-behavior.md)。 當<xref:System.Windows.Controls.Primitives.Popup>螢幕上顯示時, 如果其父系已重新置放, 則不會重新調整其本身的位置。  
   
 <a name="CustomizingPopupPlacement"></a>   
 ### <a name="customizing-popup-placement"></a>自訂快顯位置  
- 您可以自訂的位置<xref:System.Windows.Controls.Primitives.Popup>控制項，藉由指定一組座標的相對<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>所在<xref:System.Windows.Controls.Primitives.Popup>才會出現。  
+ 您可以指定相對<xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>于您想<xref:System.Windows.Controls.Primitives.Popup>要顯示之位置的一組座標, 以自訂控制項的位置。  
   
- 若要自訂位置，請設定<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>屬性設<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。 然後定義<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>傳回一組可能的位置點和主要軸 （依偏好順序） 的委派<xref:System.Windows.Controls.Primitives.Popup>。 顯示的最大一部分的點<xref:System.Windows.Controls.Primitives.Popup>會自動選取。 如需範例，請參閱[指定自訂快顯位置](how-to-specify-a-custom-popup-position.md)。  
+ 若要自訂位置, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>請將<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>屬性設定為。 然後定義<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>委派, 以傳回的一組可能的放置點和主要軸 (依照喜好設定的順序) <xref:System.Windows.Controls.Primitives.Popup>。 會自動選取顯示最大部分<xref:System.Windows.Controls.Primitives.Popup>的點。 如需範例，請參閱[指定自訂快顯位置](how-to-specify-a-custom-popup-position.md)。  
   
 <a name="PopupandtheVisualTree"></a>   
 ## <a name="popup-and-the-visual-tree"></a>快顯和視覺化樹狀結構  
- A<xref:System.Windows.Controls.Primitives.Popup>控制項沒有自己的視覺化樹狀結構; 相反地會傳回大小為 0 （零） 時，<xref:System.Windows.Controls.Primitives.Popup.MeasureOverride%2A>方法<xref:System.Windows.Controls.Primitives.Popup>呼叫。 但是，當您設定<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A>的屬性<xref:System.Windows.Controls.Primitives.Popup>到`true`，建立新的視窗具有自己視覺化樹狀結構。 新的視窗會包含<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容的<xref:System.Windows.Controls.Primitives.Popup>。 新視窗的寬度和高度不可超過畫面寬度或高度的 75%。  
+ 控制項沒有自己的視覺化樹狀結構; <xref:System.Windows.Controls.Primitives.Popup.MeasureOverride%2A>當呼叫的方法<xref:System.Windows.Controls.Primitives.Popup>時, 它會改為傳回 0 (零) 的大小。 <xref:System.Windows.Controls.Primitives.Popup> 不過, 當您將的<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> <xref:System.Windows.Controls.Primitives.Popup>屬性設定為`true`時, 會建立具有自己的視覺化樹狀結構的新視窗。 新視窗包含<xref:System.Windows.Controls.Primitives.Popup.Child%2A>的<xref:System.Windows.Controls.Primitives.Popup>內容。 新視窗的寬度和高度不可超過畫面寬度或高度的 75%。  
   
- <xref:System.Windows.Controls.Primitives.Popup>控制項會維護指向其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容做為邏輯的子系。 當建立新的視窗的內容<xref:System.Windows.Controls.Primitives.Popup>變成視覺化視窗的子系，並維持的邏輯子系<xref:System.Windows.Controls.Primitives.Popup>。 相反地，<xref:System.Windows.Controls.Primitives.Popup>保持邏輯父代及其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容。  
+ 控制項會將其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容的參考維護為邏輯子系。 <xref:System.Windows.Controls.Primitives.Popup> 建立新視窗時, 的內容<xref:System.Windows.Controls.Primitives.Popup>會成為視窗的視覺子系, 而且會維持的邏輯<xref:System.Windows.Controls.Primitives.Popup>子系。 相反地<xref:System.Windows.Controls.Primitives.Popup> , 會維持其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容的邏輯父系。  
   
 ## <a name="see-also"></a>另請參閱
 

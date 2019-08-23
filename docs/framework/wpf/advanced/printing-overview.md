@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545311"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958550"
 ---
 # <a name="printing-overview"></a>列印概觀
 透過 Microsoft .NET Framework, 使用 Windows Presentation Foundation (WPF) 的應用程式開發人員有一組豐富的列印和列印系統管理 Api。 藉由 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，某些列印系統增強功能也可供建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的開發人員和使用 Unmanaged 程式碼的開發人員使用。 這項新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 檔案格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 列印路徑。  
@@ -35,11 +35,11 @@ ms.locfileid: "69545311"
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 列印路徑  
- XML 檔規格 (XPS) 列印路徑是一項新[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]功能, 可重新定義在 Windows 應用程式中處理列印的方式。 因為[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]可以取代檔呈現語言 (例如 RTF)、列印多工緩衝處理器格式 (例如 WMF), 以及分頁描述語言 (例如 PCL 或 Postscript); 新的列印路徑會維護從應用程式發行到的 XPS 格式。列印驅動程式或裝置中的最後處理。  
+ XML 檔規格 (XPS) 列印路徑是新的 Windows 功能, 可重新定義在 Windows 應用程式中處理列印的方式。 因為[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]可以取代檔呈現語言 (例如 RTF)、列印多工緩衝處理器格式 (例如 WMF), 以及分頁描述語言 (例如 PCL 或 Postscript); 新的列印路徑會維護從應用程式發行到的 XPS 格式。列印驅動程式或裝置中的最後處理。  
   
  Xps 列印路徑是以 xps 印表機驅動程式模型 (XPSDrv) 為基礎, 可為開發人員[!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)]提供數個優點, 例如列印、改良的色彩支援, 以及大幅改進的列印效能。 (如需 XPSDrv 的詳細資訊, 請參閱[Windows 驅動程式套件檔](/windows-hardware/drivers/)。)  
   
- XPS 檔列印多工緩衝處理器的操作, 基本上與舊版 Windows 相同。 不過, 它已經過增強, 可支援現有的 GDI 列印路徑以外的 XPS 列印路徑。 新的列印路徑原本就會使用 XPS 多工緩衝處理檔案。 雖然為舊版所撰寫的[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]使用者模式印表機驅動程式仍會繼續執行, 但還是需要 xps 印表機驅動程式 (XPSDrv) 才能使用 xps 列印路徑。  
+ XPS 檔列印多工緩衝處理器的操作, 基本上與舊版 Windows 相同。 不過, 它已經過增強, 可支援現有的 GDI 列印路徑以外的 XPS 列印路徑。 新的列印路徑原本就會使用 XPS 多工緩衝處理檔案。 雖然為舊版 Windows 撰寫的使用者模式印表機驅動程式仍可繼續使用, 但還是需要 XPS 印表機驅動程式 (XPSDrv) 才能使用 XPS 列印路徑。  
   
  XPS 列印路徑的優點很重要, 其中包括:  
   

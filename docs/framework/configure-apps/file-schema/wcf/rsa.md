@@ -2,18 +2,18 @@
 title: <rsa>
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: 0e307069bd3a98153cc66147ba7bcf511cf13a8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd8e5ab11a7c019a8fe967f1c14b88a922a16c33
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670649"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934742"
 ---
-# <a name="rsa"></a>\<rsa>
+# <a name="rsa"></a>\<rsa >
 使用這個身分識別連接至端點的安全 WCF 用戶端，將確認伺服器提供的宣告是否包含用來建構這個身分識別之 RSA 公開金鑰的宣告。  
   
- \<identity>  
-\<rsa>  
+ \<身分識別 >  
+\<rsa >  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,7 +26,7 @@ ms.locfileid: "61670649"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |value|選擇性字串。 在用戶端上要比對的 RSA 公開金鑰值。|  
   
@@ -35,14 +35,14 @@ ms.locfileid: "61670649"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由用戶端驗證之服務的身分識別。|  
+|[\<identity>](identity.md)|指定要由用戶端驗證之服務的身分識別。|  
   
 ## <a name="remarks"></a>備註  
  RSA 檢查可讓您根據其 RSA 金鑰或所產生之您自己的 RSA 金鑰值，特別將驗證限制為單一憑證。 如此，若 RSA 金鑰值變更了，特定 RSA 金鑰隨即達成更嚴格的驗證，但該服務便無法和現有用戶端運作。  
   
- 如需使用身分識別來驗證用戶端服務的詳細資訊，請參閱[服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 如需使用身分識別向用戶端驗證服務的詳細資訊, 請參閱[服務身分識別和驗證](../../../wcf/feature-details/service-identity-and-authentication.md)。  
   
 ## <a name="example"></a>範例  
  下列組態程式碼會指定用來驗證伺服器之 X.509 憑證的公開金鑰值。  
@@ -59,5 +59,5 @@ ms.locfileid: "61670649"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.RsaEndpointIdentity>
-- [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [服務身分識別和驗證](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

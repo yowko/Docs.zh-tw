@@ -1,5 +1,5 @@
 ---
-title: HOW TO：處理 ListView 中每個項目的 MouseDoubleClick 事件
+title: 作法：處理 ListView 中每個項目的 MouseDoubleClick 事件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e51c810a2e1e4bf4157aa1311255c5547021b60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770990"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962068"
 ---
-# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>HOW TO：處理 ListView 中每個項目的 MouseDoubleClick 事件
-若要處理的事件中的項目<xref:System.Windows.Controls.ListView>，您需要將事件處理常式新增至每個<xref:System.Windows.Controls.ListViewItem>。 當<xref:System.Windows.Controls.ListView>繫結至資料來源，您無法明確建立<xref:System.Windows.Controls.ListViewItem>，但您可以藉由新增來處理每個項目的事件<xref:System.Windows.EventSetter>風格的<xref:System.Windows.Controls.ListViewItem>。  
+# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>作法：處理 ListView 中每個項目的 MouseDoubleClick 事件
+若要處理中<xref:System.Windows.Controls.ListView>某個專案的事件, 您必須將事件處理常式加入至每個。 <xref:System.Windows.Controls.ListViewItem> 當系結至資料來源時, 您不會明確<xref:System.Windows.Controls.ListViewItem>建立, 但是您可以藉由將加入<xref:System.Windows.EventSetter>至的樣式<xref:System.Windows.Controls.ListViewItem>, 來處理每個專案的事件。 <xref:System.Windows.Controls.ListView>  
   
 ## <a name="example"></a>範例  
- 下列範例會建立資料繫結<xref:System.Windows.Controls.ListView>，並建立<xref:System.Windows.Style>將事件處理常式新增至每個<xref:System.Windows.Controls.ListViewItem>。  
+ 下列範例會建立資料<xref:System.Windows.Controls.ListView>系結並<xref:System.Windows.Style>建立, 以便將事件處理常式加入至每<xref:System.Windows.Controls.ListViewItem>個。  
   
  [!code-xaml[ListViewHowTos#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
 [!code-xaml[ListViewHowTos#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
@@ -30,7 +30,7 @@ ms.locfileid: "61770990"
  [!code-vb[ListViewHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
   
 > [!NOTE]
->  雖然它是最常用來繫結<xref:System.Windows.Controls.ListView>到資料來源，您可以將事件處理常式新增至每個使用樣式<xref:System.Windows.Controls.ListViewItem>在非資料-繫結<xref:System.Windows.Controls.ListView>不論您是否明確建立<xref:System.Windows.Controls.ListViewItem>。  如需有關明確和隱含方式建立<xref:System.Windows.Controls.ListViewItem>控制項，請參閱<xref:System.Windows.Controls.ItemsControl>。  
+> 雖然將<xref:System.Windows.Controls.ListView>系結至資料來源是最常見的, 但您可以使用樣式, 將事件處理常式新增至<xref:System.Windows.Controls.ListView>非<xref:System.Windows.Controls.ListViewItem>資料系結中的每個, 而不論您是否明確建立<xref:System.Windows.Controls.ListViewItem>。  如需明確和隱含建立<xref:System.Windows.Controls.ListViewItem>之控制項的詳細資訊, 請參閱。 <xref:System.Windows.Controls.ItemsControl>  
   
 ## <a name="see-also"></a>另請參閱
 

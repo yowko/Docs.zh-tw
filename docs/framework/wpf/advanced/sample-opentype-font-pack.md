@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: e2b3dc3b95cf81a60494f7a02488067717938e97
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 76438b85a12d75efa0fc106a645fb592b3205fad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545234"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960976"
 ---
 # <a name="sample-opentype-font-pack"></a>範例 OpenType 字型套件
 本主題提供與一起[!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]散發之範例 OpenType 字型的總覽。 範例字型支援[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式可使用的擴充 OpenType 功能。  
@@ -38,11 +38,11 @@ ms.locfileid: "69545234"
  範例字型是根據 Ascender Corporation 的授權來提供。 Ascender 是進階字型產品的供應商。 若要授權範例字型的延伸或自訂版本，請參閱 [Ascender Corporation 網站 (英文)](https://go.microsoft.com/fwlink/?LinkId=182627)。  
   
 > [!NOTE]
->  身為開發人員，您的職責是確保對於您內嵌在應用程式中或是以其他方式轉散發的任何字型，您必須有必要的授權權限。  
+> 身為開發人員，您的職責是確保對於您內嵌在應用程式中或是以其他方式轉散發的任何字型，您必須有必要的授權權限。  
   
 <a name="installing_the_fonts"></a>   
 ## <a name="installing-the-fonts"></a>安裝字型  
- 您可以選擇將範例 OpenType 字型安裝到預設[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]字型目錄 **\WINDOWS\Fonts**。 使用 [字型] 控制台來安裝字型。 一旦這些字型位於您的電腦上之後，所有參考預設 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 字型的應用程式就能存取它們。 您可以按兩下字型檔案，以數個字型大小來顯示一組代表字元。 下列螢幕擷取畫面顯示 Lindsey 字型檔案 Linds.ttf。  
+ 您可以選擇將範例 OpenType 字型安裝到預設的 Windows Fonts 目錄 **\WINDOWS\Fonts**。 使用 [字型] 控制台來安裝字型。 一旦這些字型位於您的電腦上, 所有參考預設 Windows 字型的應用程式都可以存取它們。 您可以按兩下字型檔案，以數個字型大小來顯示一組代表字元。 下列螢幕擷取畫面顯示 Lindsey 字型檔案 Linds.ttf。  
   
  ![Lindsey 字型&#40;OpenType&#41; ](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 顯示 Lindsey 字型  

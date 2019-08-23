@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 4835fb42a8976d94be223d8306d1eb16e330f8f5
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 318972c20f6461489226e19b3e517ba0ac069b28
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434015"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933357"
 ---
 # <a name="optimizing-performance-text"></a>優化效能:文字
 
@@ -42,13 +42,13 @@ ms.locfileid: "68434015"
 
   - 使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 作為裝置印表機語言。
 
-  - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].
+  - Microsoft XPS 檔寫入器。
 
   - 先前的印表機驅動程式，從 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 應用程式輸出為固定格式。
 
   - 列印多工緩衝處理格式。
 
-- 固定格式文件呈現，包括舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和其他電腦裝置的用戶端。
+- 固定格式的檔標記法, 包括舊版 Windows 和其他計算裝置的用戶端。
 
 > [!NOTE]
 > <xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>是針對固定格式的檔簡報和列印案例所設計。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]針對一般版面配置和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]案例<xref:System.Windows.Controls.Label> (例如和<xref:System.Windows.Controls.TextBlock>) 提供數個元素。 如需配置和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例的詳細資訊，請參閱 [WPF 中的印刷樣式](typography-in-wpf.md)。

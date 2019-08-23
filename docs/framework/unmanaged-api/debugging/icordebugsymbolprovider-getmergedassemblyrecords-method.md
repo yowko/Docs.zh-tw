@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b436bd844f917aab3c653428c7cd38809be870b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f7859b095d80edb5592af1386457ad72b85bc48
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771391"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957391"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider::GetMergedAssemblyRecords 方法
 取得所有合併組件的符號記錄。  
@@ -32,12 +32,12 @@ HRESULT GetMergedAssemblyRecords(
  [out] 方法所擷取之符號記錄數的指標。  
   
  `pRecords`  
- 陣列的指標[ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)物件。  
+ [ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)物件陣列的指標。  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個方法僅適用於 .NET Native。  
+> 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

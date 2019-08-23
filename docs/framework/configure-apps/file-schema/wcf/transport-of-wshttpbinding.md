@@ -2,21 +2,21 @@
 title: <transport> 的 <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: ea025751020d6d98292f6bc3ecfe9421af0cb793
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 384267e3d018d714f95356461eb303bc9ec0cb3e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788215"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934630"
 ---
-# <a name="transport-of-wshttpbinding"></a>\<transport> of \<wsHttpBinding>
+# <a name="transport-of-wshttpbinding"></a>\<wsHttpBinding > 的\<傳輸 >
 
 定義 HTTP 傳輸的驗證設定。
 
 \<system.serviceModel>\
 \<bindings>\
 \<wsHttpBinding>\
-\<binding>\
+\<系結 > \
 \<安全性 > \
 \<transport>
 
@@ -50,11 +50,11 @@ ms.locfileid: "61788215"
 
 ### <a name="attributes"></a>屬性
 
-|屬性|描述|
+|屬性|說明|
 |---------------|-----------------|
 |`clientCredentialType`|指定用來對服務驗證用戶端的認證。 此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|
 |`proxyCredentialType`|指定用來對網域 Proxy 驗證用戶端的認證。 此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。|
-|`realm`|指定摘要式驗證或基本驗證之驗證領域的字串。 預設為空字串。<br /><br /> 驗證領域至少會指定負責執行驗證之主機的名稱， 也可以指定具有存取權之使用者的集合。 使用者可以查詢驗證領域，以確定可以使用的其中一組使用者名稱和密碼。|
+|`realm`|指定摘要式驗證或基本驗證之驗證領域的字串。 預設值是空字串。<br /><br /> 驗證領域至少會指定負責執行驗證之主機的名稱， 也可以指定具有存取權之使用者的集合。 使用者可以查詢驗證領域，以確定可以使用的其中一組使用者名稱和密碼。|
 |`policyEnforcement`|此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 的時間。<br /><br /> 1.Never：絕不強制執行此原則 (延伸保護已停用)。<br />2.WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。<br />3.Always：一律強制執行此原則。 不支援延伸保護的用戶端將無法驗證。|
 
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 屬性
@@ -87,7 +87,7 @@ ms.locfileid: "61788215"
 
 |項目|描述|
 |-------------|-----------------|
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|代表的安全性功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。|
+|[\<security>](security-of-wshttpbinding.md)|表示[ \<wsHttpBinding >](wshttpbinding.md)的安全性功能。|
 
 ## <a name="see-also"></a>另請參閱
 
@@ -95,8 +95,8 @@ ms.locfileid: "61788215"
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

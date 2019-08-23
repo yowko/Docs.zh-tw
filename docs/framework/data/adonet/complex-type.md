@@ -2,34 +2,34 @@
 title: 複雜類型
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: a6a7190a144280930d67f179373f29f6b19e98cc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fac25ace69938e1245200e10285f4460ac216780
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583666"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948724"
 ---
 # <a name="complex-type"></a>複雜類型
-A*複雜型別*是上定義豐富結構化屬性的範本[實體類型](../../../../docs/framework/data/adonet/entity-type.md)或其他複雜類型。 每個範本包含下列資訊：  
+「*複雜類型」 (complex type* ) 是在[實體類型](../../../../docs/framework/data/adonet/entity-type.md)或其他複雜類型上定義豐富結構化屬性的範本。 每個範本包含下列資訊：  
   
 - 唯一名稱。 (必要項)  
   
     > [!NOTE]
-    >  複雜類型的名稱不可以與同一個命名空間中的實體類型名稱相同。  
+    > 複雜類型的名稱不可以與同一個命名空間中的實體類型名稱相同。  
   
-- 一或多個表單中的資料[屬性](../../../../docs/framework/data/adonet/property.md)。 (選擇性。)  
+- 一或多個[屬性](../../../../docs/framework/data/adonet/property.md)形式的資料。 (選擇性。)  
   
     > [!NOTE]
-    >  複雜類型的屬性可以是另一個複雜類型。  
+    > 複雜類型的屬性可以是另一個複雜類型。  
   
  複雜類型與實體類型相似之處在於，複雜類型可以包含基本型別屬性或其他複雜類型形式的資料承載。 不過，複雜型別和實體類型之間還是有些重大的差異：  
   
 - 複雜類型不具有識別，因此無法獨立存在。 複雜類型只能以實體類型或其他複雜類型的屬性形式存在。  
   
-- 複雜型別不能參與[關聯](../../../../docs/framework/data/adonet/association-type.md)。 關聯的兩個端點可以是複雜類型，因此[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)不能定義於複雜型別。  
+- 複雜類型不能參與[關聯](../../../../docs/framework/data/adonet/association-type.md)。 關聯的兩端都不可以是複雜類型, 因此無法在複雜類型上定義[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)。  
   
 ## <a name="example"></a>範例  
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。 下列 CSDL 以基底類型屬性 `StreetAddress`、`City`、`StateOrProvince`、`Country` 和 `PostalCode` 定義複雜類型 Address。  
+ [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 的特定領域語言 (DSL) 來定義概念模型。 下列 CSDL 以基底類型屬性 `StreetAddress`、`City`、`StateOrProvince`、`Country` 和 `PostalCode` 定義複雜類型 Address。  
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039527"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960630"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>作法：在 Windows Forms 中建立 Windows 檔案總管樣式的介面
 Windows Explorer 是應用程式的常見使用者介面選擇, 因為它已經很熟悉。
@@ -35,7 +35,7 @@ Windows Explorer 是應用程式的常見使用者介面選擇, 因為它已經�
 3. 按下 CTRL 鍵並依序按一下, 以選取所有三個控制項。 當您選取<xref:System.Windows.Forms.SplitContainer>控制項時, 請按一下分隔欄, 而不是面板。
 
     > [!NOTE]
-    >  請勿使用 [**編輯**] 功能表上的 [**全選**] 命令。 如果您這樣做, 下一個步驟所需的屬性將不會出現在 [**屬性**] 視窗中。
+    > 請勿使用 [**編輯**] 功能表上的 [**全選**] 命令。 如果您這樣做, 下一個步驟所需的屬性將不會出現在 [**屬性**] 視窗中。
 
 4. 在 [屬性] 視窗中，將 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。
 
@@ -44,7 +44,7 @@ Windows Explorer 是應用程式的常見使用者介面選擇, 因為它已經�
      表單會顯示兩部分的使用者介面, 類似于 Windows Explorer。
 
     > [!NOTE]
-    >  當您拖曳分隔器時, 面板會自行調整大小。
+    > 當您拖曳分隔器時, 面板會自行調整大小。
 
 ## <a name="see-also"></a>另請參閱
 

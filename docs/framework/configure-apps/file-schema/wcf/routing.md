@@ -2,19 +2,19 @@
 title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: cc7c1a64f9481a7ab41cf35241ade04bd690dae0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c7e9cb1284ab55c8dd199d9fb47a223698814f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786382"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934131"
 ---
 # <a name="routing"></a>\<路由 >
 
-代表定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>評估內送訊息，以及路由資料表定義目標端點時要使用將訊息傳送至篩選條件的比對。
+表示定義一組路由篩選的設定區段, 其決定在評估傳入訊息時所使用的 Windows Communication Foundation <xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) 類型, 以及將目標端點定義為的路由表。當篩選準則相符時, 將訊息傳送至。
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;**\<routing>**
+[ **\<system.serviceModel>** ](system-servicemodel.md)   
+&nbsp;&nbsp; **\<routing>**
   
 ## <a name="syntax"></a>語法  
   
@@ -46,14 +46,14 @@ ms.locfileid: "61786382"
 
 ### <a name="attributes"></a>屬性
 
-None
+無
 
 ### <a name="child-elements"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<filters>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | 包含一組路由篩選，以決定評估內送訊息時，就會使用 Windows Communication Foundation (WCF) MessageFilter 的型別。 |
-| [**\<filterTables>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | 包含路由篩選條件與目標端點之間的對應，可指定當篩選條件符合時所使用的端點。 |
+| [ **\<filters>** ](filters-of-routing.md) | 包含一組路由篩選準則, 決定在評估傳入訊息時, 會使用 Windows Communication Foundation (WCF) MessageFilter 的類型。 |
+| [ **\<filterTables>** ](filtertables.md) | 包含路由篩選條件與目標端點之間的對應，可指定當篩選條件符合時所使用的端點。 |
 
 ### <a name="parent-elements"></a>父元素
 

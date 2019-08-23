@@ -2,12 +2,12 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 574d952e0183eb65c88864f2788eb7d698c9f2ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9074b1c2ea4f8f9206c8de1e658c1aac762a74f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879537"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936098"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 指定要放置查詢 ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 運算式所傳回物件的群組。  
@@ -23,10 +23,10 @@ ms.locfileid: "61879537"
  在其中執行群組作業的任何有效查詢運算式。 `expression` 可以是屬性，或參考 FROM 子句所傳回之屬性的非彙總運算式。 GROUP BY 子句中的每一個運算式都必評估為可以比較是否相等的型別 這些型別通常是純量基本型別，例如數值、字串和日期。 您不可依集合來群組。  
   
 ## <a name="remarks"></a>備註  
- 如果彙總函式都包含 SELECT 子句中\<選取清單 >，GROUP BY 會計算每個群組的摘要值。 當指定 GROUP BY 時，GROUP BY 清單應該包括選取清單中之任何非彙總運算式中的每一個屬性名稱，否則，GROUP BY 運算式必須完全符合選取清單運算式。  
+ 如果 select 子句\<中包含彙總函式 >, [群組依據] 就會計算每個群組的摘要值。 當指定 GROUP BY 時，GROUP BY 清單應該包括選取清單中之任何非彙總運算式中的每一個屬性名稱，否則，GROUP BY 運算式必須完全符合選取清單運算式。  
   
 > [!NOTE]
->  如果未指定 ORDER BY 子句，由 GROUP BY 子句傳回的群組將不會依照任何特定順序。 若要指定特定資料排序，建議您一律使用 ORDER BY 子句。  
+> 如果未指定 ORDER BY 子句，由 GROUP BY 子句傳回的群組將不會依照任何特定順序。 若要指定特定資料排序，建議您一律使用 ORDER BY 子句。  
   
  以明確或隱含方式 (例如，利用查詢中的 HAVING 子句) 指定 GROUP BY 子句時，目前的範圍將會被隱藏，並且導入新的範圍。  
   
@@ -62,7 +62,7 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 GROUP BY 運算子指定查詢傳回的物件所在的群組。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 請依照下列中的程序[How to:執行可傳回 PrimitiveType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
+1. [遵循 how to:執行可傳回 PrimitiveType 結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   

@@ -1,33 +1,33 @@
 ---
-title: HOW TO：摺疊和隱藏部分程式碼 (Visual Basic)
+title: HOW TO：折迭和隱藏程式碼區段 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, code collapsing
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: 367527fd638f6855077caf8ff5911edb333dfcbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db396adf24c12542f720d3b235068aea2329288d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648772"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949723"
 ---
-# <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>HOW TO：摺疊和隱藏部分程式碼 (Visual Basic)
-`#Region`指示詞可讓您摺疊並隱藏 Visual Basic 檔案中的程式碼區段。 `#Region`指示詞可讓您使用 Visual Studio 程式碼編輯器時，指定程式碼，您可以展開或摺疊的區塊。 更容易管理而且更方便閱讀，選擇性地隱藏程式碼的功能可讓您的檔案。 如需詳細資訊，請參閱[大綱](/visualstudio/ide/outlining)。  
+# <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>HOW TO：折迭和隱藏程式碼區段 (Visual Basic)
+`#Region`指示詞可讓您折迭和隱藏 Visual Basic 檔案中的程式碼區段。 `#Region`指示詞可讓您指定程式碼區塊, 當您使用 Visual Studio 程式碼編輯器時, 可以展開或折迭。 可以選擇性地隱藏程式碼, 讓您的檔案更容易管理且更易於閱讀。 如需詳細資訊，請參閱[大綱](/visualstudio/ide/outlining)。  
   
- `#Region` 指示詞支援程式碼區塊的語意，例如`#If...#End If`。 這表示它們無法開始一個區塊中，並在另一個; 結束開始和結束必須位於相同的區塊。 `#Region` 指示詞不支援在函式內。  
+ `#Region`指示詞支援程式碼區塊的`#If...#End If`語義, 例如。 這表示它們不能在一個區塊中開始, 也不能在另一個區塊中結束;開始和結束必須在相同的區塊中。 `#Region`函數中不支援指示詞。  
   
-### <a name="to-collapse-and-hide-a-section-of-code"></a>若要摺疊和隱藏程式碼區段  
+### <a name="to-collapse-and-hide-a-section-of-code"></a>折迭和隱藏程式碼區段  
   
-- 放置之間的程式碼區段`#Region`和`#End Region`陳述式，如下列範例所示：  
+- 將程式碼區段放在`#Region`和`#End Region`語句之間, 如下列範例所示:  
   
      [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]  
   
-     `#Region`區塊可以重複使用程式碼檔案中; 因此，使用者可以定義自己的程序和類別，接著可摺疊區塊。 `#Region` 區塊也能在其他巢狀`#Region`區塊。  
+     `#Region`區塊可以在程式碼檔案中多次使用, 因此, 使用者可以定義自己的程式和類別區塊, 然後再折迭。 `#Region`區塊也可以嵌套在其他`#Region`區塊內。  
   
     > [!NOTE]
-    >  隱藏程式碼不會防止它正在進行編譯，並不會影響`#If...#End If`陳述式。  
+    > 隱藏程式碼不會使其無法編譯, 也不會`#If...#End If`影響語句。  
   
 ## <a name="see-also"></a>另請參閱
 

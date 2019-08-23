@@ -3,18 +3,18 @@ title: WIF API 參考
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: c94ccd3f25be576c57fda798c6b2b8cc25357022
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17a1da0a3b0ea6567fd805e7273f793ace35ae69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645879"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958350"
 ---
 # <a name="wif-api-reference"></a>WIF API 參考
 Windows Identity Foundation (WIF) 類別會分成下列組件：`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。 本主題提供 WIF 命名空間的連結，以及每個命名空間所包含類別的簡短說明。  
   
 > [!IMPORTANT]
->  下列 `System.IdentityModel` 命名空間包含的類別可實作 WCF 宣告式身分識別模型：<xref:System.IdentityModel.Claims?displayProperty=nameWithType>、<xref:System.IdentityModel.Policy?displayProperty=nameWithType> 和 <xref:System.IdentityModel.Selectors?displayProperty=nameWithType>。 從 .NET Framework 4.5 開始，WIF 已取代 WCF 宣告式身分識別模型。 在建置以 WIF 為基礎的方案時，您不應該使用這三個命名空間中的類別。  
+> 下列 `System.IdentityModel` 命名空間包含的類別可實作 WCF 宣告式身分識別模型：<xref:System.IdentityModel.Claims?displayProperty=nameWithType>、<xref:System.IdentityModel.Policy?displayProperty=nameWithType> 和 <xref:System.IdentityModel.Selectors?displayProperty=nameWithType>。 從 .NET Framework 4.5 開始，WIF 已取代 WCF 宣告式身分識別模型。 在建置以 WIF 為基礎的方案時，您不應該使用這三個命名空間中的類別。  
   
  <xref:System.IdentityModel?displayProperty=nameWithType>  
  包含的類別代表 Cookie 轉換、安全性權杖服務，以及特定的 XML 字典讀取器。  

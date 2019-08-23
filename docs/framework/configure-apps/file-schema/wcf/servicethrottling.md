@@ -2,20 +2,20 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 995ff9979096757225c9241e977f86f755955945
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ed5e91f09d9e658deeb7996baaca445b4e0c90
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758102"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937101"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 指定 Windows Communication Foundation (WCF) 服務的節流機制。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<serviceThrottling>  
   
 ## <a name="syntax"></a>語法  
@@ -44,7 +44,7 @@ ms.locfileid: "61758102"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
  節流控制會限制同時呼叫、並行執行個體或工作階段的數目，以防止過度消耗資源。  
@@ -52,7 +52,7 @@ ms.locfileid: "61758102"
  每次達到這些屬性值時，就會寫入追蹤。 第一個追蹤會寫入成為警告。  
   
 ## <a name="example"></a>範例  
- 下列組態範例指定服務將同時呼叫上限限制為 2，且將並行執行個體上限限制為 10。 執行這個範例的詳細範例，請參閱[節流](../../../../../docs/framework/wcf/samples/throttling.md)。  
+ 下列組態範例指定服務將同時呼叫上限限制為 2，且將並行執行個體上限限制為 10。 如需執行此範例的詳細範例, 請參閱[節流](../../../wcf/samples/throttling.md)。  
   
 ```xml  
 <behaviors>
@@ -72,4 +72,4 @@ ms.locfileid: "61758102"
 
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
 - <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
-- [使用 ServiceThrottlingBehavior 來控制 WCF 服務效能](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+- [使用 ServiceThrottlingBehavior 來控制 WCF 服務效能](../../../wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

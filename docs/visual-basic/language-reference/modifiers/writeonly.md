@@ -11,40 +11,40 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: 163ec17f3ea96744290c54a73054ab132f842127
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43507ac8e9b5843e8fa9496737a3d77b3a425a7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647666"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963775"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
-指定可寫入屬性，但無法讀取。  
+指定可寫入但無法讀取的屬性。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="rules"></a>規則  
- **宣告內容。** 您只能在模組層級使用 `WriteOnly`。 這表示的宣告內容`WriteOnly`屬性必須是類別、 結構或模組，並不能是原始程式檔、 命名空間或程序。  
+ **宣告內容。** 您只能在模組層級使用 `WriteOnly`。 這表示`WriteOnly`屬性的宣告內容必須是類別、結構或模組, 而且不能是原始程式檔、命名空間或程式。  
   
- 您可以宣告為屬性`WriteOnly`，但不是變數。  
+ 您可以將屬性宣告為`WriteOnly`, 但不能宣告為變數。  
   
-## <a name="when-to-use-writeonly"></a>何時使用 WriteOnly  
- 有時您想要能夠設定的值，但不是會探索什麼是使用的程式碼。 比方說，機密資料，例如社會的註冊碼或密碼，必須要防範未設定任何元件的存取。 在這些情況下，您可以使用`WriteOnly`屬性來設定的值。  
+## <a name="when-to-use-writeonly"></a>使用 WriteOnly 的時機  
+ 有時候您會想要讓使用中的程式碼能夠設定值, 但不會探索其意義。 例如, 需要保護機密資料 (例如社交註冊號碼或密碼), 使其無法存取未設定它的任何元件。 在這些情況下, 您可以使用`WriteOnly`屬性來設定值。  
   
 > [!IMPORTANT]
->  當您定義並使用`WriteOnly`屬性，請考慮下列的額外保護措施：  
+> 當您定義並使用`WriteOnly`屬性時, 請考慮下列其他保護措施:  
   
-- **覆寫。** 如果屬性是類別的成員，讓它預設為[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)，並不會將宣告`Overridable`或`MustOverride`。 這可防止衍生的類別進行覆寫透過不良的存取。  
+- **覆寫.** 如果屬性是類別的成員, 則允許它預設為[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), 而且不會將它`Overridable`宣告為或。 `MustOverride` 這可防止衍生類別透過覆寫進行不想要的存取。  
   
-- **存取層級。** 如果您在兩個變數中有一或多個保留屬性的機密資料，請宣告這些[私人](../../../visual-basic/language-reference/modifiers/private.md)，讓其他的程式碼可以存取它們。  
+- **存取層級。** 如果您將屬性的機密資料保存在一或多個變數中, 請將其宣告為[私](../../../visual-basic/language-reference/modifiers/private.md)用, 讓其他程式碼都不能存取它們。  
   
-- **加密。** 儲存所有的機密資料，以加密形式中，而不是以純文字。 如果惡意程式碼以某種方式取得對該區域的記憶體存取，就更難進行資料的使用。 也很有用，如果必須序列化的敏感性資料加密。  
+- **加密.** 以加密格式儲存所有機密資料, 而不是純文字。 如果惡意程式碼以某種方式取得該記憶體區域的存取權, 就比較難以利用資料。 如果需要將敏感性資料序列化, 加密也很有用。  
   
-- **正在重設。** 正在終止類別、 結構或模組定義該屬性時，重設的敏感性資料，預設值或其他無意義的值。 釋放該記憶體區域的一般存取時，這會提供額外的保護。  
+- **重設.** 當定義屬性的類別、結構或模組被終止時, 會將敏感性資料重設為預設值或其他無意義的值。 當釋放該記憶體區域以供一般存取時, 這會提供額外的保護。  
   
-- **持續性。** 不會保存任何敏感性資料，例如在磁碟上，如果您可以避免它。 此外，不寫入任何機密資料到剪貼簿。  
+- **暫.** 請勿保存任何機密資料 (例如, 在磁片上), 如果您可以避免它。 此外, 請勿將任何敏感性資料寫入剪貼簿。  
   
- `WriteOnly`修飾詞，請使用此內容中：  
+ `WriteOnly`修飾詞可以在此內容中使用:  
   
  [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   

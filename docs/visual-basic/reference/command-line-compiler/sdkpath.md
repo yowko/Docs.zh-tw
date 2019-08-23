@@ -9,15 +9,15 @@ helpviewer_keywords:
 - /sdkpath compiler option [Visual Basic]
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
-ms.openlocfilehash: 91f64756b2fbf14dc96550420cd936973e6bec87
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 25368d23c398fb3674d5c2d75d4997f917a1c3d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268289"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937359"
 ---
 # <a name="-sdkpath"></a>-sdkpath
-指定 mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。  
+指定 mscorlib.dll 和 Microsoft 的位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -27,18 +27,18 @@ ms.locfileid: "67268289"
   
 ## <a name="arguments"></a>引數  
  `path`  
- 包含 mscorlib.dll 和 Microsoft.VisualBasic.dll 編譯来使用的版本的目錄。 此路徑未驗證之前載入。 將目錄名稱括在引號 ("") 如果它包含空格。  
+ 包含要用於編譯之 mscorlib.dll 和 node.js 版本的目錄。 此路徑要等到載入後才會驗證。 如果目錄名稱包含空格, 請將其括在引號 ("") 中。  
   
 ## <a name="remarks"></a>備註  
- 此選項會告訴 Visual Basic 編譯器，從非預設位置載入 mscorlib.dll 和 Microsoft.VisualBasic.dll 的檔案。 `-sdkpath`選項設計來搭配[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)。 .NET Compact Framework 會使用不同版本的支援程式庫，以避免使用的類型和裝置上找不到的語言功能。  
+ 此選項會告訴 Visual Basic 編譯器從非預設位置載入 mscorlib.dll 和 Microsoft..。 選項`-sdkpath`的設計目的是要搭配[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)使用。 .NET Compact Framework 會使用這些支援程式庫的不同版本, 以避免使用在裝置上找不到的類型和語言功能。  
   
 > [!NOTE]
->  `-sdkpath`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。 `-sdkpath` Visual Basic 裝置專案載入時，設定選項。  
+> 此`-sdkpath`選項無法從 Visual Studio 開發環境中使用; 只有在從命令列進行編譯時, 才能使用此選項。 當`-sdkpath`載入 Visual Basic 裝置專案時, 就會設定此選項。  
   
- 您可以指定編譯器應使用編譯 Visual Basic 執行階段程式庫參考`-vbruntime`編譯器選項。 如需詳細資訊，請參閱 < [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)。  
+ 您可以指定編譯器在不參考 Visual Basic 執行時間程式庫的情況下, 使用`-vbruntime`編譯器選項進行編譯。 如需詳細資訊, 請參閱[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)。  
   
 ## <a name="example"></a>範例  
- 下列程式碼編譯`Myfile.vb`使用.NET Compact Framework 中，使用 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的版本中找到.NET Compact Framework 的 C 磁碟機上的預設安裝目錄。 一般而言，您會使用.NET Compact Framework 的最新版本。  
+ 下列程式碼會`Myfile.vb`使用 .NET Compact Framework 進行編譯, 其方式是在 C 磁片磁碟機上 .NET Compact Framework 的預設安裝目錄中找到 mscorlib.dll 和 Microsoft 的版本。 一般來說, 您會使用最新版本的 .NET Compact Framework。  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  

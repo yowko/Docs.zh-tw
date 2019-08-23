@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80d82e26fe54c5422d1140bba84830879f0b5c2d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 238a5f19bd8cbd89a5537b2b9297bfa9e1f54613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781278"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952878"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 函式
-通知分析工具函式會傳回給呼叫者。  
+通知分析工具, 函式即將傳回給呼叫者。  
   
 > [!NOTE]
->  `FunctionLeave`函式在.NET Framework 2.0 中已被取代。 它會繼續運作，但會對效能帶來負面影響。 使用[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)函式。  
+> `FunctionLeave`函數在 .NET Framework 2.0 中已被取代。 它會繼續工作, 但會造成效能上的負面影響。 請改用[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,20 +39,20 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>參數  
  `funcID`  
- [in]函式傳回的識別項。  
+ 在傳回之函式的識別碼。  
   
 ## <a name="remarks"></a>備註  
- `FunctionLeave`函式是回呼; 您必須實作它。 的實作必須使用`__declspec`(`naked`) 儲存類別屬性。  
+ `FunctionLeave`函式是回呼; 您必須加以執行。 此執行必須使用`__declspec`(`naked`) 儲存類別屬性。  
   
- 呼叫此函式之前，執行引擎不會儲存任何暫存器。  
+ 在呼叫此函式之前, 執行引擎不會儲存任何暫存器。  
   
-- 項目，您必須儲存所有您使用，包括與浮點單位 (FPU) 中的暫存器。  
+- 輸入時, 您必須儲存您所使用的所有暫存器, 包括浮點單位 (FPU) 中的暫存器。  
   
-- 結束時，您必須還原堆疊驅離其呼叫端所推送的所有參數。  
+- 結束時, 您必須透過關閉其呼叫者推送的所有參數來還原堆疊。  
   
- 實作`FunctionLeave`應該不會封鎖，因為它將會延遲記憶體回收。 實作不應嘗試進行記憶體回收，因為堆疊可能無法在記憶體回收方便集合的狀態。 如果嘗試進行記憶體回收，則執行階段將會封鎖直到`FunctionLeave`傳回。  
+ 的執行`FunctionLeave`不應該封鎖, 因為它會延遲垃圾收集。 執行不應嘗試垃圾收集, 因為堆疊可能不會處於垃圾收集的唯讀狀態。 如果嘗試垃圾收集, 執行時間將會封鎖, 直到`FunctionLeave`傳回為止。  
   
- 此外，`FunctionLeave`函式不能呼叫至 managed 程式碼，或以任何方式造成 managed 的記憶體配置。  
+ 此外, 函`FunctionLeave`式不能呼叫 managed 程式碼, 或以任何方式執行 managed 記憶體配置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -61,7 +61,7 @@ void __stdcall FunctionLeave (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：** 1.1, 1.0  
+ **.NET Framework 版本:** 1.1、1。0  
   
 ## <a name="see-also"></a>另請參閱
 

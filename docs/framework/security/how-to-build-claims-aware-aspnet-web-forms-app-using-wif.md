@@ -3,12 +3,12 @@ title: 如何：使用 WIF 建置宣告感知 ASP.NET Web Forms 應用程式
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910591"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941289"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 建置宣告感知 ASP.NET Web Forms 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -103,7 +103,7 @@ ms.locfileid: "64910591"
     </system.webServer>  
     ```  
   
-5. 新增下列 Windows Identity Foundation 相關組態項目，並確認 ASP.NET 應用程式的 URL 和連接埠編號符合 **\<audienceUris>** 項目、**\<wsFederation>** 項目的 **realm** 屬性和 **\<wsFederation>** 項目的 **reply** 屬性。 也請確認 **issuer** 值符合安全性權杖服務 (STS) 的 URL。  
+5. 新增下列 Windows Identity Foundation 相關組態項目，並確認 ASP.NET 應用程式的 URL 和連接埠編號符合 **\<audienceUris>** 項目、 **\<wsFederation>** 項目的 **realm** 屬性和 **\<wsFederation>** 項目的 **reply** 屬性。 也請確認 **issuer** 值符合安全性權杖服務 (STS) 的 URL。  
   
     ```xml  
     <system.identityModel>  
@@ -161,7 +161,7 @@ ms.locfileid: "64910591"
 2. 儲存 **Default.aspx**，然後開啟其名為 **Default.aspx.cs** 的程式碼後置檔案。  
   
     > [!NOTE]
-    >  在方案總管中，**Default.aspx.cs** 可能隱藏在 **Default.aspx** 的下方。 如果看不到 **Default.aspx.cs**，請按一下 **Default.aspx** 旁邊的三角形來展開它。  
+    > 在方案總管中，**Default.aspx.cs** 可能隱藏在 **Default.aspx** 的下方。 如果看不到 **Default.aspx.cs**，請按一下 **Default.aspx** 旁邊的三角形來展開它。  
   
 3. 將 **Default.aspx.cs** 之 **Page_Load** 方法中的現有程式碼，取代為下列程式碼：  
   

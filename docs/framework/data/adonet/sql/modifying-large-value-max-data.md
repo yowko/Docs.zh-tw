@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 134759d729d6f291db61e6f64ebd51dfe5a4443b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19d0c78221f35bd36edce85a60a4a7a2f985bc38
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947014"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大量數值 (max) 資料
 大型物件 (LOB) 資料型別是指資料列大小上限超過 8 KB 的資料型別。 SQL Server 可提供 `max`、`varchar` 和 `nvarchar` 資料型別的 `varbinary` 規範，允許儲存最大達 2^32 位元組的值。 資料表資料行及 Transact-SQL 變數可指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料型別。 在 ADO.NET 中，`max` 資料型別可透過 `DataReader` 來擷取，也可指定為輸入及輸出參數值，並且不需要任何特殊處理。 對於大型 `varchar` 資料型別，可透過遞增方式擷取及更新資料。  
@@ -37,9 +37,9 @@ ms.locfileid: "64648714"
   
  `OPENROWSET` 函式包含 `BULK` 資料列集提供者，可讓您直接從檔案讀取資料，不需將資料載入目標資料表中。 這可讓您在簡單的 INSERT SELECT 陳述式中使用 `OPENROWSET`。  
   
- `OPENROWSET BULK`選項引數可有效地控制何處開始及結束讀取資料、 如何處理錯誤，以及如何解譯資料。 例如，您可以指定將資料檔案讀取為具有型別 `varbinary`、`varchar` 或 `nvarchar` 的單一資料列及單一資料行資料列集。 如需完整的語法及選項，請參閱《SQL Server 線上叢書》。  
+ `OPENROWSET BULK`選項引數可讓您有效控制開始和結束讀取資料的位置、如何處理錯誤, 以及如何解讀資料。 例如，您可以指定將資料檔案讀取為具有型別 `varbinary`、`varchar` 或 `nvarchar` 的單一資料列及單一資料行資料列集。 如需完整的語法及選項，請參閱《SQL Server 線上叢書》。  
   
- 下列範例會將相片插入 AdventureWorks 範例資料庫中的 ProductPhoto 資料表。 當使用`BULK OPENROWSET`提供者，您必須提供偶數的資料行的具名的清單，如果您未將值插入每個資料行。 在此情況下，將主索引鍵定義為識別欄位，也可從資料行清單省略。 請注意，您還必須提供關聯名稱，將其置於 `OPENROWSET` 陳述式的結尾處 (此情況中為 ThumbnailPhoto)。 這會與要載入檔案之 `ProductPhoto` 資料表中的資料行關聯。  
+ 下列範例會將相片插入 AdventureWorks 範例資料庫中的 ProductPhoto 資料表。 當您使用`BULK OPENROWSET`提供者時, 即使不將值插入每個資料行, 也必須提供已命名的資料行清單。 在此情況下，將主索引鍵定義為識別欄位，也可從資料行清單省略。 請注意，您還必須提供關聯名稱，將其置於 `OPENROWSET` 陳述式的結尾處 (此情況中為 ThumbnailPhoto)。 這會與要載入檔案之 `ProductPhoto` 資料表中的資料行關聯。  
   
 ```  
 INSERT Production.ProductPhoto (  
@@ -63,17 +63,17 @@ FROM OPENROWSET
   
  { *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }  
   
- WRITE 方法指定的值的一個區段*column_name*將予修改。 運算式是值，將會複製到*column_name*，則`@Offset`是要寫入的運算式的起點和`@Length`引數是資料行中區段的長度。  
+ WRITE 方法指定將會修改*column_name*值的區段。 運算式是將複製到*column_name*中的值, `@Offset`是要`@Length`寫入運算式的起點, 而引數是資料行中區段的長度。  
   
 |如果|然後|  
 |--------|----------|  
-|運算式設為 NULL|`@Length` 會忽略與中的值*column_name*截斷指定`@Offset`。|  
-|`@Offset` 為 NULL|更新作業將附加至結尾的現有運算式*column_name*值並`@Length`會被忽略。|  
+|運算式設為 NULL|`@Length`會忽略, 而且*column_name*中的值會在指定`@Offset`的處截斷。|  
+|`@Offset`為 Null|更新作業會在現有*column_name*值的結尾附加運算式, 並`@Length`予以忽略。|  
 |`@Offset` 大於 column_name 值的長度|SQL Server 會傳回錯誤。|  
-|`@Length` 為 NULL|更新作業會移除從 `@Offset` 到 `column_name` 值結尾的所有資料。|  
+|`@Length`為 Null|更新作業會移除從 `@Offset` 到 `column_name` 值結尾的所有資料。|  
   
 > [!NOTE]
->  `@Offset` 及 `@Length` 都不可為負數。  
+> `@Offset` 及 `@Length` 都不可為負數。  
   
 ## <a name="example"></a>範例  
  此 Transact-SQL 範例會更新 DocumentSummary 中的部分值，其為 AdventureWorks 資料庫中 Document 資料表內的 `nvarchar(max)` 資料行。 藉由指定取代單字、現有資料中要取代之單字的開始位置 (位移)，以及要取代的字元數 (長度)，將 components 這個字取代為 features 這個字。 該範例會將 SELECT 陳述式併入到 UPDATE 陳述式之前與之後來比較結果。  
@@ -104,7 +104,7 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>在 ADO.NET 中使用大數值型別  
- 您可以使用 ADO.NET 中的大型值型別指定為大型值型別<xref:System.Data.SqlClient.SqlParameter>中的物件<xref:System.Data.SqlClient.SqlDataReader>才會傳回結果集，或使用<xref:System.Data.SqlClient.SqlDataAdapter>填滿`DataSet` / `DataTable`。 大型值型別與其相關的小型值資料型別在使用方式上並無差異。  
+ 您可以在 ADO.NET 中使用大數數值型別<xref:System.Data.SqlClient.SqlParameter> <xref:System.Data.SqlClient.SqlDataAdapter> , 方法是指定大數數值型別做為<xref:System.Data.SqlClient.SqlDataReader>中的物件以傳回結果集, 或`DataSet` / `DataTable`使用來填滿。 大型值型別與其相關的小型值資料型別在使用方式上並無差異。  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>使用 GetSqlBytes 擷取資料  
  `GetSqlBytes` 的 <xref:System.Data.SqlClient.SqlDataReader> 方法可用於擷取 `varbinary(max)` 資料行的內容。 下列程式碼片段假設名為 <xref:System.Data.SqlClient.SqlCommand> 的 `cmd` 物件會從資料表選取 `varbinary(max)` 資料；名為 <xref:System.Data.SqlClient.SqlDataReader> 的 `reader` 物件會以 <xref:System.Data.SqlTypes.SqlBytes> 形式擷取資料。  
@@ -222,13 +222,13 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>範例  
- 下列程式碼會從 `LargePhoto` 資料庫中的 `ProductPhoto` 資料表擷取名稱及 `AdventureWorks` 物件，並將其儲存至檔案。 組件 (Assembly) 需要參考 <xref:System.Drawing> 命名空間 (Namespace) 才能進行編譯。  <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 的 <xref:System.Data.SqlClient.SqlDataReader> 方法會傳回 <xref:System.Data.SqlTypes.SqlBytes> 物件，其會公開 `Stream` 屬性。 程式碼所使用的是這來建立新`Bitmap`物件，然後再將它儲存在 Gif `ImageFormat`。  
+ 下列程式碼會從 `LargePhoto` 資料庫中的 `ProductPhoto` 資料表擷取名稱及 `AdventureWorks` 物件，並將其儲存至檔案。 組件 (Assembly) 需要參考 <xref:System.Drawing> 命名空間 (Namespace) 才能進行編譯。  <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 的 <xref:System.Data.SqlClient.SqlDataReader> 方法會傳回 <xref:System.Data.SqlTypes.SqlBytes> 物件，其會公開 `Stream` 屬性。 程式碼會使用此來建立新`Bitmap`的物件, 然後將它儲存在 Gif `ImageFormat`中。  
   
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
   
 ## <a name="using-large-value-type-parameters"></a>使用大型值型別參數  
- 大型值型別可用於 <xref:System.Data.SqlClient.SqlParameter> 物件，其使用方式與在 <xref:System.Data.SqlClient.SqlParameter> 物件中使用小型值型別相同。 您可以擷取大數值類型為<xref:System.Data.SqlClient.SqlParameter>值，如下列範例所示。 該程式碼假設下列 GetDocumentSummary 預存程序存在於 AdventureWorks 範例資料庫中。 預存程序會採用名為輸入的參數@DocumentID並傳回 DocumentSummary 資料行中的內容@DocumentSummary輸出參數。  
+ 大型值型別可用於 <xref:System.Data.SqlClient.SqlParameter> 物件，其使用方式與在 <xref:System.Data.SqlClient.SqlParameter> 物件中使用小型值型別相同。 您可以將大數數值型別抓取<xref:System.Data.SqlClient.SqlParameter>為值, 如下列範例所示。 該程式碼假設下列 GetDocumentSummary 預存程序存在於 AdventureWorks 範例資料庫中。 預存程式會接受名為@DocumentID的輸入參數, 並傳回@DocumentSummary輸出參數中 DocumentSummary 資料行的內容。  
   
 ```  
 CREATE PROCEDURE GetDocumentSummary   
@@ -244,7 +244,7 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### <a name="example"></a>範例  
- ADO.NET 程式碼會建立 <xref:System.Data.SqlClient.SqlConnection> 及 <xref:System.Data.SqlClient.SqlCommand> 物件來執行 GetDocumentSummary 預存程序並擷取文件摘要 (以大型值型別儲存)。 程式碼會將值傳遞@DocumentID輸入參數，並顯示結果傳回到@DocumentSummary輸出在主控台視窗中的參數。  
+ ADO.NET 程式碼會建立 <xref:System.Data.SqlClient.SqlConnection> 及 <xref:System.Data.SqlClient.SqlCommand> 物件來執行 GetDocumentSummary 預存程序並擷取文件摘要 (以大型值型別儲存)。 程式@DocumentID代碼會傳遞輸入參數的值, 並在主控台視窗的@DocumentSummary輸出參數中顯示傳回的結果。  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  

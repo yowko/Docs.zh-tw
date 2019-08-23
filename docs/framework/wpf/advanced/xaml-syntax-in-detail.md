@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400781"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958792"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題定義用來描述 XAML 語法元素的詞彙。 本檔的其餘部分會經常使用這些詞彙, 這兩者都是針對 WPF 檔, 特別是針對使用 XAML 的其他架構, 或是在 .xaml 層級由 XAML 語言支援啟用的基本 XAML 概念。 本主題將針對[XAML 總覽 (WPF)](xaml-overview-wpf.md)主題中引進的基本術語進行擴充。  
@@ -86,7 +86,7 @@ ms.locfileid: "68400781"
  屬性語法是 XAML 標記語法, 會藉由宣告現有物件專案上的屬性來設定屬性的值。 屬性名稱必須符合可支援相關物件專案之類別的屬性 (property) 的 CLR 成員名稱。 屬性名稱後面接著指派運算子 (=)。 屬性值必須是括在引號內的字串。  
   
 > [!NOTE]
->  您可以使用替代引號將常值引號放在屬性中。 例如, 您可以使用單引號來宣告字串, 其中包含其中的雙引號字元。 無論您使用單引號或雙引號, 都應該使用相符的配對來開啟和關閉屬性值字串。 還有其他可用來處理任何特定 XAML 語法所加上之字元限制的逸出序列或其他技術。 請參閱[XML 字元實體和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)。  
+> 您可以使用替代引號將常值引號放在屬性中。 例如, 您可以使用單引號來宣告字串, 其中包含其中的雙引號字元。 無論您使用單引號或雙引號, 都應該使用相符的配對來開啟和關閉屬性值字串。 還有其他可用來處理任何特定 XAML 語法所加上之字元限制的逸出序列或其他技術。 請參閱[XML 字元實體和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)。  
   
  若要透過屬性語法設定, 屬性必須是公用的, 而且必須是可寫入的。 支援型別系統中的屬性值必須是實值型別, 或必須是參考型別, 而且在存取相關的支援型別時, XAML 處理器可以加以具現化或參照。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "68400781"
  隱含的集合元素會在邏輯樹狀結構標記法中建立成員, 即使它不會以專案形式出現在標記中。 通常, 父類型的函式會針對屬於其屬性之一的集合執行具現化, 而初始空集合會成為物件樹狀結構的一部分。  
   
 > [!NOTE]
->  不支援泛型清單和字典介面<xref:System.Collections.Generic.IList%601> ( <xref:System.Collections.Generic.IDictionary%602>和) 進行集合偵測。 不過, <xref:System.Collections.Generic.List%601>您可以使用類別作為基類, 因為<xref:System.Collections.IList>它會直接執行, 或<xref:System.Collections.Generic.Dictionary%602>當做基類, 因為它會<xref:System.Collections.IDictionary>直接實作為。  
+> 不支援泛型清單和字典介面<xref:System.Collections.Generic.IList%601> ( <xref:System.Collections.Generic.IDictionary%602>和) 進行集合偵測。 不過, <xref:System.Collections.Generic.List%601>您可以使用類別作為基類, 因為<xref:System.Collections.IList>它會直接執行, 或<xref:System.Collections.Generic.Dictionary%602>當做基類, 因為它會<xref:System.Collections.IDictionary>直接實作為。  
   
  在集合類型的 .NET 參考頁面中, XAML 語法區段偶爾會以隱含的集合語法的形式, 將此語法視為集合的 object 元素。  
   

@@ -1,21 +1,21 @@
 ---
-title: HOW TO：使用有參數的預存程序
+title: 作法：使用有參數的預存程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033602"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938705"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a>HOW TO：使用有參數的預存程序
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a>作法：使用有參數的預存程序
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將輸出參數對應至參考參數，而且會針對實值型別 (Value Type)，將參數宣告為可為 Null。  
   
- 如需如何使用輸入的參數中的查詢會傳回一個資料列集的範例，請參閱[How to:傳回資料列集](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)。  
+ 如需如何在傳回資料列集的查詢中使用輸入參數的範例, 請參閱[如何:傳回資料](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)列集。  
   
 ## <a name="example"></a>範例  
  下列範例取用單一輸入參數 (客戶 ID)，並傳回輸出參數 (該客戶的總銷售量)。  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [使用可為 Null 的型別](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [可為 Null 的值類型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [使用可為 Null 的型別](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [可為 Null 的值類型](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

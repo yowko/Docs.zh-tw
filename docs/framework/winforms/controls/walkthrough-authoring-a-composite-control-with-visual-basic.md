@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: abfb91c61ef72bfc1626b4cc4dcea42b75e2ab35
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: cb54ef372e6da551b95f1edf61e3844b9dcba4c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040247"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950046"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>逐步解說：使用 Visual Basic 撰寫複合控制項
 複合控制項提供可以建立及重複使用自訂圖形介面的方法。 複合控制項基本上是具有視覺表示的元件。 因此，它可能包含一或多個 Windows Forms 控制項、元件或程式碼區塊，可以藉由驗證使用者輸入、修改顯示屬性，或執行作者需要的其他工作來擴充功能。 複合控制項可以放在 Windows Forms 上，與其他控制項的方式相同。 在本逐步解說的第一個部分中，您可以建立簡單的複合控制項，稱為 `ctlClock`。 在逐步解說的第二個部分中，您透過繼承擴充 `ctlClock` 的功能。
@@ -37,7 +37,7 @@ ms.locfileid: "69040247"
 3. 以滑鼠右鍵按一下 [方案總管] 中的 [UserControl1.vb]，然後按一下 [重新命名]。 將檔案名稱變更為 `ctlClock.vb`。 當系統詢問您是否要重新命名程式碼元素 "UserControl1" 的所有參考時，按一下 [是]按鈕。
 
     > [!NOTE]
-    >  根據預設, 複合控制項會繼承系統所提供<xref:System.Windows.Forms.UserControl>的類別。 類別<xref:System.Windows.Forms.UserControl>提供所有複合控制項所需的功能, 並實作為標準方法和屬性。
+    > 根據預設, 複合控制項會繼承系統所提供<xref:System.Windows.Forms.UserControl>的類別。 類別<xref:System.Windows.Forms.UserControl>提供所有複合控制項所需的功能, 並實作為標準方法和屬性。
 
 4. 在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。
 
@@ -139,7 +139,7 @@ ms.locfileid: "69040247"
     End Property
     ```
 
-     上述程式碼會製作兩個自訂屬性，`ClockForeColor` 和 `ClockBackColor`，藉由叫用 `Property` 陳述式，以供此控制項的後續使用者使用。           `Get` 和 `Set` 陳述式提供屬性值的儲存和擷取，以及用來實作適合該屬性之功能的程式碼。
+     上述程式碼會製作兩個自訂屬性，`ClockForeColor` 和 `ClockBackColor`，藉由叫用 `Property` 陳述式，以供此控制項的後續使用者使用。 `Get` 和 `Set` 陳述式提供屬性值的儲存和擷取，以及用來實作適合該屬性之功能的程式碼。
 
 4. 在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。
 
@@ -184,7 +184,7 @@ ms.locfileid: "69040247"
 5. 在 [方案總管] 中，瀏覽目前的專案。
 
     > [!NOTE]
-    >  名為 **ctlAlarmClock.vb** 的檔案已新增至目前的專案。
+    > 名為 **ctlAlarmClock.vb** 的檔案已新增至目前的專案。
 
 ### <a name="adding-the-alarm-properties"></a>新增警示屬性
  屬性會以新增至複合控制項的相同方式，新增至繼承的控制項。 您現在會使用屬性宣告語法將兩個屬性新增至您的控制項︰`AlarmTime`，它將會儲存警示停止之日期和時間的值，以及 `AlarmSet`，它將會指示是否已設定警示。
@@ -225,15 +225,15 @@ ms.locfileid: "69040247"
 
 1. 在 [方案總管] 中，以滑鼠右鍵按一下 [ctlAlarmClock]，然後按一下 [檢視表設計工具]。
 
-               `ctlAlarmClock` 的設計工具隨即在主視窗中開啟。
+     `ctlAlarmClock` 的設計工具隨即在主視窗中開啟。
 
 2. 按一下 `lblDisplay` (控制項的顯示部分)，並檢視 [屬性] 視窗。
 
     > [!NOTE]
-    >  所有屬性顯示時，它們會以灰色顯示。 這表示這些屬性是 `lblDisplay` 的原生屬性，而且無法修改或在 [屬性] 視窗中存取。 根據預設，包含在複合控制項中的控制項是 `Private`，而且其屬性無法使用任何方法存取。
+    > 所有屬性顯示時，它們會以灰色顯示。 這表示這些屬性是 `lblDisplay` 的原生屬性，而且無法修改或在 [屬性] 視窗中存取。 根據預設，包含在複合控制項中的控制項是 `Private`，而且其屬性無法使用任何方法存取。
 
     > [!NOTE]
-    >  如果您想要讓複合控制項的後續使用者可以存取其內部控制項，請將它們宣告為 `Public` 或 `Protected`。 這可讓您使用適當的程式碼，設定及修改包含在複合控制項中的控制項屬性。
+    > 如果您想要讓複合控制項的後續使用者可以存取其內部控制項，請將它們宣告為 `Public` 或 `Protected`。 這可讓您使用適當的程式碼，設定及修改包含在複合控制項中的控制項屬性。
 
 3. <xref:System.Windows.Forms.Label>將控制項新增至您的複合控制項。
 
@@ -295,10 +295,10 @@ ms.locfileid: "69040247"
     End Sub
     ```
 
-     新增這個程式碼會完成幾項工作。           `Overrides` 陳述式會指示控制項使用這個方法來取代繼承自基底控制項的方法。 呼叫這個方法時，它會呼叫它藉由叫用 `MyBase.Timer1_Tick` 陳述式覆寫的方法，確保併入原始控制項的所有功能在此控制項中重現。 接著，它會執行其他程式碼以併入警示功能。 發生警示時，閃爍標籤控制項就會出現，而且會聽到嗶聲。
+     新增這個程式碼會完成幾項工作。 `Overrides` 陳述式會指示控制項使用這個方法來取代繼承自基底控制項的方法。 呼叫這個方法時，它會呼叫它藉由叫用 `MyBase.Timer1_Tick` 陳述式覆寫的方法，確保併入原始控制項的所有功能在此控制項中重現。 接著，它會執行其他程式碼以併入警示功能。 發生警示時，閃爍標籤控制項就會出現，而且會聽到嗶聲。
 
     > [!NOTE]
-    >  因為您正在覆寫繼承的事件處理常式，您不需要指定事件與 `Handles` 關鍵字。 事件已傳入。 您覆寫的所有項目是處理常式的實作。
+    > 因為您正在覆寫繼承的事件處理常式，您不需要指定事件與 `Handles` 關鍵字。 事件已傳入。 您覆寫的所有項目是處理常式的實作。
 
      警示時鐘控制項已接近完成。 唯一剩餘的事項是實作將它關閉的方式。 若要這樣做，您要將程式碼新增至 `lblAlarm_Click` 方法。
 

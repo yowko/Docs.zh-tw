@@ -2,18 +2,18 @@
 title: 變更傳送活動的快取共用層級
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 587440bd343513aeff51f1ed0947573fbe612f22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363845"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952594"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>變更傳送活動的快取共用層級
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 擴充可讓您為使用 <xref:System.ServiceModel.Activities.Send> 傳訊活動傳送訊息至服務端點的工作流程自訂快取共用層級、通道處理站快取的設定，以及通道快取的設定。 這些工作流程通常是用戶端工作流程，但也可以是裝載於 <xref:System.ServiceModel.WorkflowServiceHost> 中的工作流程服務。 通道處理站快取會包含快取的 <xref:System.ServiceModel.ChannelFactory%601> 物件。 通道快取則包含快取的通道。  
   
 > [!NOTE]
->  工作流程可以利用 <xref:System.ServiceModel.Activities.Send> 傳訊活動傳送訊息或參數。 工作流程執行階段會將通道處理站加入快取，這個快取會在您使用 <xref:System.ServiceModel.Channels.IRequestChannel> 活動搭配 <xref:System.ServiceModel.Activities.ReceiveReply> 活動時建立 <xref:System.ServiceModel.Activities.Send> 型別的通道，以及在您只使用 <xref:System.ServiceModel.Channels.IOutputChannel> 活動 (無 <xref:System.ServiceModel.Activities.Send>) 時建立 <xref:System.ServiceModel.Activities.ReceiveReply> 型別的通道。  
+> 工作流程可以利用 <xref:System.ServiceModel.Activities.Send> 傳訊活動傳送訊息或參數。 工作流程執行階段會將通道處理站加入快取，這個快取會在您使用 <xref:System.ServiceModel.Channels.IRequestChannel> 活動搭配 <xref:System.ServiceModel.Activities.ReceiveReply> 活動時建立 <xref:System.ServiceModel.Activities.Send> 型別的通道，以及在您只使用 <xref:System.ServiceModel.Channels.IOutputChannel> 活動 (無 <xref:System.ServiceModel.Activities.Send>) 時建立 <xref:System.ServiceModel.Activities.ReceiveReply> 型別的通道。  
   
 ## <a name="the-cache-sharing-levels"></a>快取共用層級  
  根據預設，在 <xref:System.ServiceModel.WorkflowServiceHost> 所裝載的工作流程中，<xref:System.ServiceModel.Activities.Send> 中的所有工作流程執行個體會共用 <xref:System.ServiceModel.WorkflowServiceHost> 傳訊活動使用的快取 (主機層級快取)。 針對並非由 <xref:System.ServiceModel.WorkflowServiceHost> 裝載的用戶端工作流程，快取只能供工作流程執行個體使用 (執行個體層級快取)。 此快取僅適用於 <xref:System.ServiceModel.Activities.Send> 活動 (此活動不使用組態中定義的端點，除非已啟用不安全的快取)。  

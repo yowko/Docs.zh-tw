@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 267cdffdc532aaa2b31de835c31d23e93aca8c54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a9b6ddb67f914c2c1c228f3042152ef9582f7b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990336"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961795"
 ---
 # <a name="default-message-contract"></a>預設訊息合約
-預設訊息合約範例會示範一個服務，在這個服務中可以對服務作業來回傳遞自訂的使用者定義訊息。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)會實作計算機介面做為具類型的服務。 而不是加法、 減法、 乘法和除法中使用的個別服務作業[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，此範例會傳遞包含運算元和運算子，並傳回的自訂訊息算術計算的結果。  
+預設訊息合約範例會示範一個服務，在這個服務中可以對服務作業來回傳遞自訂的使用者定義訊息。 這個範例是以將計算機介面實作為具型別服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 這個範例會傳遞包含運算元和運算子的自訂訊息, 而不是[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)使用個別的服務作業, 而是會同時傳回下列結果:算術計算。  
   
  用戶端是主控台程式 (.exe)，而服務程式庫 (.dll) 是由網際網路資訊服務 (IIS) 所裝載。 您可以在主控台視窗中看到用戶端活動。  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+> 此範例的安裝程序與建置指示位於本主題的結尾。  
   
  在服務中，會定義單一服務作業，而這個作業會接受並傳回型別為 `MyMessage` 的自訂訊息。 雖然這個範例中的要求和回應訊息型別相同，但在必要時一定是不同的訊息合約。  
   
@@ -131,7 +131,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- 用戶端產生的用戶端程式碼經由[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具。 必要時，這個工具會自動在產生的用戶端程式碼中建立訊息合約類型。 您也可以指定 `/messageContract` 命令選項來強制產生訊息合約。  
+ 為用戶端產生的用戶端程式代碼是使用[System.servicemodel 中繼資料公用程式工具 (Svcutil)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具所建立。 必要時，這個工具會自動在產生的用戶端程式碼中建立訊息合約類型。 您也可以指定 `/messageContract` 命令選項來強制產生訊息合約。  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
@@ -170,17 +170,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: f67733b89d2bde652449e2338362868fdb84bcf3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a00fcd53211dd126c0e9203d6d577959b971e70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592947"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922912"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>HOW TO：錨定和停駐 FlowLayoutPanel 控制項中的子控制項
 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項在其子控制項中支援 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 屬性。  
@@ -21,16 +21,16 @@ ms.locfileid: "65592947"
   
 1. 請在表單上建立 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。  
   
-2. 設定<xref:System.Windows.Forms.Control.Width%2A>的<xref:System.Windows.Forms.FlowLayoutPanel>若要控制**300**，並設定其<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>至<xref:System.Windows.Forms.FlowDirection.TopDown>。  
+2. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> <xref:System.Windows.Forms.FlowDirection.TopDown>將控制項的設定為 300, 並將其設定為。 <xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.Control.Width%2A>  
   
 3. 建立兩個 <xref:System.Windows.Forms.Button> 控制項，並置入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。  
   
-4. 設定<xref:System.Windows.Forms.Control.Width%2A>的第一個按鈕**200**。  
+4. 將第一個按鈕的設為**200。** <xref:System.Windows.Forms.Control.Width%2A>  
   
 5. 將第二個按鈕的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
     > [!NOTE]
-    >  第二個按鈕會假設與第一個按鈕的寬度相同。 它不會自動縮放 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的寬度。  
+    > 第二個按鈕會假設與第一個按鈕的寬度相同。 它不會自動縮放 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的寬度。  
   
 6. 將第二個按鈕的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為 `None`。 這會使按鈕假設為原始的寬度。  
   

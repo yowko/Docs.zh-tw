@@ -2,12 +2,12 @@
 title: 自訂 WSDL 發行物
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 6b83f225c7c410c3f7dc86f39978b5fef32ae3f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc0731276fcf9178403fd434e03a0666d11ac1f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650156"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953586"
 ---
 # <a name="custom-wsdl-publication"></a>自訂 WSDL 發行物
 這個範例會示範如何：  
@@ -18,10 +18,10 @@ ms.locfileid: "64650156"
   
 - 在自訂合約行為和自訂作業行為上分別實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，將匯入的附註寫入為 CodeDOM 中的註解，以用於匯入的合約和作業。  
   
-- 使用<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>來下載 WSDL、<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>匯入使用自訂的 WSDL 匯入工具，和<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>產生 Windows Communication Foundation (WCF) 用戶端程式碼具有 WSDL 附註做 / / 和 '' C# 和 Visual 中的註解基本的。  
+- 使用下載 wsdl <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 、使用自訂<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> wsdl 匯入工具匯入 wsdl, 以及在和中C#產生具有 wsdl 附注的 Windows Communication Foundation (WCF) 用戶端程式代碼做為///和 ' ' ' 批註<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>Visual Basic。  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+> 此範例的安裝程序與建置指示位於本主題的結尾。  
   
 ## <a name="service"></a>服務  
  在這個範例中，會使用兩個自訂屬性來標示服務。 第一個是 `WsdlDocumentationAttribute`，它會在建構函式中接受字串，您可以套用此屬性來為合約介面或作業提供描述其使用方式的字串。 第二個是 `WsdlParamOrReturnDocumentationAttribute`，您可以將它套用至傳回值或參數，在作業中描述這些值。 下列範例示範使用這些屬性所描述的服務合約 `ICalculator`。  
@@ -231,7 +231,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- 一旦已指定自訂匯入工具，WCF 中繼資料系統會將自訂匯入工具載入至任何<xref:System.ServiceModel.Description.WsdlImporter>為此目的建立。 這個範例會使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 來下載中繼資料、使用已正確設定的 <xref:System.ServiceModel.Description.WsdlImporter> 以使用範例所建立之自訂匯入工具來匯入中繼資料，以及使用 <xref:System.ServiceModel.Description.ServiceContractGenerator> 將修改的合約資訊編譯成 Visual Basic 和 C# 用戶端程式碼，此程式碼可以用於 Visual Studio 以支援 Intellisense，也可以編譯為 XML 文件。  
+ 一旦指定了自訂匯入工具, WCF 中繼資料系統就會將自訂<xref:System.ServiceModel.Description.WsdlImporter>匯入工具載入至任何針對該用途所建立的。 這個範例會使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 來下載中繼資料、使用已正確設定的 <xref:System.ServiceModel.Description.WsdlImporter> 以使用範例所建立之自訂匯入工具來匯入中繼資料，以及使用 <xref:System.ServiceModel.Description.ServiceContractGenerator> 將修改的合約資訊編譯成 Visual Basic 和 C# 用戶端程式碼，此程式碼可以用於 Visual Studio 以支援 Intellisense，也可以編譯為 XML 文件。  
   
 ```  
 /// From WSDL Documentation:  
@@ -289,17 +289,17 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 ProtectionLevel 屬性
+title: 作法：設定 ProtectionLevel 屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 77596d682af6f2579ca512b0a6de1694452e025b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 222fda180923cdc7b0d7b7ab413c151c69add259
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928956"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950971"
 ---
-# <a name="how-to-set-the-protectionlevel-property"></a>HOW TO：設定 ProtectionLevel 屬性
-您可以套用適當的屬性 (Attribute) 並設定屬性 (Property)，藉此設定保護層級。 您可以設定服務層級的保護，以影響每一個訊息的所有部分，或是從方法到訊息部分，設定越發細微的保護層級。 如需詳細資訊`ProtectionLevel`屬性，請參閱 <<c2> [ 了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。  
+# <a name="how-to-set-the-protectionlevel-property"></a>作法：設定 ProtectionLevel 屬性
+您可以套用適當的屬性 (Attribute) 並設定屬性 (Property)，藉此設定保護層級。 您可以設定服務層級的保護，以影響每一個訊息的所有部分，或是從方法到訊息部分，設定越發細微的保護層級。 如需有關屬性的`ProtectionLevel`詳細資訊, 請參閱[瞭解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。  
   
 > [!NOTE]
->  您只能在程式碼中設定保護層級，而不能在組態中設定。  
+> 您只能在程式碼中設定保護層級，而不能在組態中設定。  
   
 ### <a name="to-sign-all-messages-for-a-service"></a>簽署服務的所有訊息  
   
@@ -42,7 +42,7 @@ ms.locfileid: "61928956"
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>保護錯誤訊息  
- 在服務上擲回的例外狀況可以當成 SOAP 錯誤傳送至用戶端。 如需有關建立強型別錯誤，請參閱 <<c0> [ 指定及處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)和[How to:在服務合約中宣告錯誤](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)。  
+ 在服務上擲回的例外狀況可以當成 SOAP 錯誤傳送至用戶端。 如需建立強型別錯誤的詳細資訊, 請參閱[指定和處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)和[如何:宣告服務合約](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)中的錯誤。  
   
 #### <a name="to-protect-a-fault-message"></a>保護錯誤訊息  
   
@@ -61,7 +61,7 @@ ms.locfileid: "61928956"
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>保護訊息部分  
- 使用訊息合約保護訊息的部分。 如需有關訊息合約的詳細資訊，請參閱[Using Message Contracts](../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
+ 使用訊息合約保護訊息的部分。 如需訊息合約的詳細資訊, 請參閱[使用訊息合約](../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
   
 #### <a name="to-protect-a-message-body"></a>保護訊息本文  
   
@@ -71,7 +71,7 @@ ms.locfileid: "61928956"
   
 3. 將 <xref:System.ServiceModel.MessageHeaderAttribute> 屬性 (Attribute) 套用以訊息標頭表示的欄位，並且將 `ProtectionLevel` 屬性 (Property) 設為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>。  
   
-4. 適用於<xref:System.ServiceModel.MessageBodyMemberAttribute>，將會以訊息內文的部分表示，並設定的任何欄位`ProtectionLevel`屬性設<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>，如下列範例所示。  
+4. 將套用`ProtectionLevel` <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>至任何將表示為訊息主體一部分的欄位, 並將屬性設定為, 如下列範例所示。 <xref:System.ServiceModel.MessageBodyMemberAttribute>  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  

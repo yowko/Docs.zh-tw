@@ -2,20 +2,20 @@
 title: <security> 的 <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: acb4d04663d841a9b494153caa180855959c145e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bbc3a460ce707e71b72a469af2e03acd8dc79e5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936692"
 ---
-# <a name="security-of-netmsmqbinding"></a>\<安全性 > 的\<netMsmqBinding >
+# <a name="security-of-netmsmqbinding"></a>\<netMsmqBinding > 的\<安全性 >
 定義 MSMQ 繫結的安全性設定。 它指定是否啟用傳輸或 SOAP 安全性，以及如果啟用，正在使用的驗證模式和保護層級。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netMsmqBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -38,20 +38,20 @@ ms.locfileid: "61670504"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|模式|指定負責控制完整性、機密性和驗證的安全性類型。 有效值包括以下的值：<br /><br /> -None:這會停用安全性。<br />-傳輸：保護和驗證是由傳輸提供。 這會套用在兩個佇列管理員之間的訊息安全性。 應用程式和佇列管理員之間沒有提供安全性。 現有 Msmq 應用程式在功能上相當於這個安全性模式類型。<br />訊息：指定端應用程式的安全性。 在傳輸層沒有提供安全性。 這與其他標準繫結程序提供的安全性類似。<br />-兩者：提供傳輸和 SOAP 訊息層級的安全性。 這兩個層級需要相同的認證。<br /><br /> 預設值為 Transport。 此屬性的型別為 <xref:System.ServiceModel.NetMsmqSecurityMode>。|  
+|模式|指定負責控制完整性、機密性和驗證的安全性類型。 有效值包括以下的值：<br /><br /> 無這會停用安全性。<br />運送傳輸會提供保護和驗證。 這會套用在兩個佇列管理員之間的訊息安全性。 應用程式和佇列管理員之間沒有提供安全性。 現有 Msmq 應用程式在功能上相當於這個安全性模式類型。<br />提示指定端對端應用程式安全性。 在傳輸層沒有提供安全性。 這與其他標準繫結程序提供的安全性類似。<br />既提供傳輸和 SOAP 訊息層的安全性。 這兩個層級需要相同的認證。<br /><br /> 預設值為 Transport。 此屬性的型別為 <xref:System.ServiceModel.NetMsmqSecurityMode>。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-netmsmqbinding.md)|定義 SOAP 訊息安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>。|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|定義 MSMQ 傳輸的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。|  
+|[\<message>](message-of-netmsmqbinding.md)|定義 SOAP 訊息安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>。|  
+|[\<transport>](transport-of-netmsmqbinding.md)|定義 MSMQ 傳輸的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|繫結|繫結項目[ \<netMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|  
+|繫結|NetMsmqBinding 的 binding 元素 > [ \<](netmsmqbinding.md)|  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -59,9 +59,9 @@ ms.locfileid: "61670504"
 - <xref:System.ServiceModel.NetMsmqBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>
 - <xref:System.ServiceModel.NetMsmqSecurity>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [WCF 中的佇列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)
+- [WCF 中的佇列](../../../wcf/feature-details/queues-in-wcf.md)

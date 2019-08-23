@@ -3,20 +3,20 @@ title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: 31490c7425572909cc30fe4237af9309754b68e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79230c65d8eb8c15cef5dce73698448ca7b1e003
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768845"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947305"
 ---
-# <a name="tracking"></a>\<tracking>
+# <a name="tracking"></a>\<追蹤 >
 代表定義工作流程服務之追蹤設定的組態區段。  
   
- 如需在工作流程追蹤和其設定的詳細資訊，請參閱[工作流程追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)並[流程設定追蹤](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
+ 如需工作流程追蹤及其設定的詳細資訊, 請參閱工作流程[追蹤和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)追蹤和設定[工作流程的追蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
   
 \<system.serviceModel>  
-\<tracking>  
+\<追蹤 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -86,8 +86,8 @@ ms.locfileid: "61768845"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|訂閱追蹤記錄的組態項目定義的參與者集合。 追蹤參與者包含處理來自追蹤記錄之裝載的邏輯 (例如，他們可以選擇寫入檔案)。|  
-|[\<trackingProfile>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|篩選工作流程執行個體發出之追蹤記錄的追蹤設定檔。|  
+|[\<participants>](participants.md)|定義訂閱追蹤記錄之參與者的 configuration 專案集合。 追蹤參與者包含處理來自追蹤記錄之裝載的邏輯 (例如，他們可以選擇寫入檔案)。|  
+|[\<trackingProfile>](trackingprofile.md)|篩選工作流程執行個體發出之追蹤記錄的追蹤設定檔。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -101,4 +101,4 @@ ms.locfileid: "61768845"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [工作流程追蹤及追蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)

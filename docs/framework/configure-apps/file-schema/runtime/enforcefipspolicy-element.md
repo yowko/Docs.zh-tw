@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb28eddf7e9f13bceaf47de28633073f59f3920d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f13243ddef7020f4d7a50e519ae8281702b0d261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663748"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927423"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy > 元素
 指定是否強制執行電腦設定需求，以便讓密碼編譯演算法符合美國聯邦資訊處理標準 (FIPS) 的規範。  
@@ -40,7 +40,7 @@ ms.locfileid: "69663748"
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |`true`|如果您的電腦設定為要求密碼編譯演算法符合 FIPS 規範, 則會強制執行該需求。 如果類別會執行不符合 FIPS 規範的演算法, 則該類別的函`Create`式或方法會在該電腦上執行時擲回例外狀況。 這是預設值。|  
 |`false`|無論電腦設定為何, 應用程式所使用的密碼編譯演算法都不需要符合 FIPS。|  
@@ -50,7 +50,7 @@ ms.locfileid: "69663748"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
@@ -75,4 +75,4 @@ ms.locfileid: "69663748"
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)
-- [加密模型](../../../../../docs/standard/security/cryptography-model.md)
+- [加密模型](../../../../standard/security/cryptography-model.md)

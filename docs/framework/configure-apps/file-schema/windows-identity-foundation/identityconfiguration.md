@@ -3,16 +3,16 @@ title: <identityConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 91d64ce0d6a5cdbf32fec4a476fb111afe9a7952
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f5e0c5ded3d750a1102492c7a506e6d5643b2d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791699"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942742"
 ---
 # <a name="identityconfiguration"></a>\<identityConfiguration>
 
-指定服務層級身分識別設定。
+指定服務層級的身分識別設定。
 
  \<system.identityModel>\
 \<identityConfiguration>
@@ -37,59 +37,59 @@ ms.locfileid: "61791699"
 
 |屬性|描述|
 |---------------|-----------------|
-|名稱|身分識別組態區段的名稱。 您可以使用此名稱來參考特定的組態區段。 如果沒有`name`屬性指定，則 [] 區段中定義的預設組態。 被動同盟案例的一律使用預設組態。 如需詳細資訊，請參閱 < [ \<Federationconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)項目。|
-|saveBootstrapContext|指定是否應包含啟動程序權杖中的工作階段權杖。 值可能也會在集合上設定權杖處理常式設定`saveBootstrapContext`屬性[ \<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目。 權杖處理常式集合上所設定的值會覆寫在服務上設定的值。|
-|maximumClockSkew|A <xref:System.TimeSpan> ，指定最大允許的時鐘誤差。 執行時間緊迫的作業，例如驗證登入工作階段的到期時間時，控制最大允許的時鐘誤差。 預設值為 5 分鐘，"00: 05:00"。 如需有關如何指定<xref:System.TimeSpan>值，請參閱[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。 最大時鐘誤差可能也會設定權杖處理常式集合上設定`maximumClockSkew`屬性[ \<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目。 權杖處理常式集合上所設定的值會覆寫在服務上設定的值。|
+|NAME|身分識別設定區段的名稱。 您可以使用這個名稱來參考特定的設定區段。 如果未`name`指定任何屬性, 區段會定義預設設定。 預設設定一律用於被動同盟案例。 如需詳細資訊, 請參閱[ \<federationConfiguration >](federationconfiguration.md)元素。|
+|saveBootstrapContext|指定啟動程式權杖是否應包含在會話權杖中。 您也可以在`saveBootstrapContext` [ \<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)專案上設定屬性, 以在權杖處理常式集合上設定此值。 在權杖處理常式集合上設定的值會覆寫服務上設定的值。|
+|maximumClockSkew|<xref:System.TimeSpan> , 指定允許的最大時鐘誤差。 控制執行時間緊迫作業時允許的時鐘誤差上限, 例如驗證登入會話的到期時間。 預設值為5分鐘, "00:05:00"。 如需如何指定<xref:System.TimeSpan>值的詳細資訊, 請參閱[Timespan 值](../windows-workflow-foundation/index.md)。 您也可以在`maximumClockSkew` [ \<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)專案上設定屬性, 以在權杖處理常式集合上設定最大時鐘誤差。 在權杖處理常式集合上設定的值會覆寫服務上設定的值。|
 
 ### <a name="child-elements"></a>子元素
 
 |項目|描述|
 |-------------|-----------------|
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|註冊用於工作階段權杖和權杖重新執行偵測快取。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|
-|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制權杖處理常式用來驗證憑證的設定。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|
-|[\<claimsAuthenticationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|註冊的連入宣告的宣告驗證管理員。 選擇性。|
-|[\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|註冊的連入宣告的宣告授權管理員。 選擇性。|
-|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|指定必要的連入安全性權杖的宣告集。 選擇性。|
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定安全性權杖處理常式的集合。 您可以指定零個或多個安全性權杖處理常式集合。 選擇性。|
-|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|啟用權杖重新執行偵測，並指定權杖的到期時間。 可以在服務層級或上指定的安全性權杖處理常式集合。 選擇性。|
+|[\<caches>](caches.md)|註冊用於會話權杖和權杖重新執行偵測的快取。 可以在服務層級或安全性權杖處理常式集合中指定。 選擇性。|
+|[\<certificateValidation>](certificatevalidation.md)|控制權杖處理常式用來驗證憑證的設定。 可以在服務層級或安全性權杖處理常式集合中指定。 選擇性。|
+|[\<claimsAuthenticationManager>](claimsauthenticationmanager.md)|為傳入宣告註冊宣告驗證管理員。 選擇性。|
+|[\<claimsAuthorizationManager>](claimsauthorizationmanager.md)|為傳入宣告註冊宣告授權管理員。 選擇性。|
+|[\<claimTypeRequired>](claimtyperequired.md)|指定傳入安全性權杖的必要宣告集合。 選擇性。|
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|指定安全性權杖處理常式的集合。 可以指定零個或多個安全性權杖處理常式集合。 選擇性。|
+|[\<tokenReplayDetection>](tokenreplaydetection.md)|啟用權杖重新執行偵測, 並指定權杖的到期時間。 可以在服務層級或安全性權杖處理常式集合中指定。 選擇性。|
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|描述|
+|項目|說明|
 |-------------|-----------------|
-|[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|提供啟用應用程式中的 Windows Identity Foundation (WIF) 選項的設定。|
+|[\<system.identityModel>](system-identitymodel.md)|提供在應用程式中啟用 Windows Identity Foundation (WIF) 選項的設定。|
 
 ## <a name="remarks"></a>備註
 
-多個身分識別可能會定義組態，每個都有唯一的名稱。 的行為如下所示：
+可以定義多個身分識別設定, 每個都有唯一的名稱。 其行為如下所示:
 
-1. 如果沒有`<identityConfiguration>`指定項目。 預設的身分識別組態是在執行階段建立並填入預設值。
+1. 如果未`<identityConfiguration>`指定任何元素, 則為。 預設身分識別設定會在執行時間建立, 並以預設值填入。
 
-2. 如果單一`<identityConfiguration>`指定項目。 它是預設的身分識別組態。 它並不重要是還是名為未命名的。
+2. 如果已指定`<identityConfiguration>`單一元素, 則為。 這是預設的身分識別設定。 無論是命名或未命名, 都不重要。
 
-3. 如果有多個`<identityConfiguration>`指定項目。 未命名的項目會指定預設的身分識別組態。 它時，建議您指定多個`<identityConfiguration>`元素，其中一個應該是未命名。
+3. 如果指定`<identityConfiguration>`了多個元素, 則為。 未命名的元素會指定預設的身分識別設定。 建議您在指定多個`<identityConfiguration>`元素時, 其中一個專案應該是未命名的。
 
 > [!WARNING]
-> 如果您指定多個`<identityConfiguration>`元素，其中一個應該是未命名。 未命名的項目將會預設身分識別組態。
+> 如果您指定多`<identityConfiguration>`個元素, 其中一個專案應為未命名。 未命名的元素會是預設的身分識別設定。
 
- 某些設定中指定`<identityConfiguration>`上的安全性權杖處理常式集合的設定，或在個別的安全性權杖處理常式上的設定，可以覆寫項目。
-
-> [!IMPORTANT]
-> 使用時<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別，以提供您的程式碼所參考的識別組態中的宣告型存取控制`<federationConfiguration>`項目會設定宣告授權管理員和用來進行的原則授權決策。 這是為 true，即使在不是被動的 Web 案例，例如 「 Windows Communication Foundation (WCF) 應用程式 」 或 「 不是以 Web 為基礎的應用程式的案例。 如果應用程式不是被動的 Web 應用程式中， [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)元素 （和其子原則項目，如果有的話） 參考的身分識別組態所套用的唯一設定。 會忽略所有其他設定。 如需詳細資訊，請參閱 < [ \<Federationconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)項目。
-
-`<identityConfiguration>`項目由<xref:System.IdentityModel.Configuration.IdentityConfigurationElement>類別。 身分識別組態區段表示<xref:System.IdentityModel.Configuration.IdentityConfiguration>類別。
+ 在專案中`<identityConfiguration>`指定的部分設定可以由安全性權杖處理常式集合上的設定或個別安全性權杖處理常式的設定覆寫。
 
 > [!IMPORTANT]
-> 指定下列項目作為子項目的`<identityConfiguration>`，也已被取代的項目，雖然行為仍然會支援回溯相容性。 這些項目，相反地，必須指定底下[ \<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目。
+> 當使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>或類別在您的程式碼中提供宣告型存取控制時, `<federationConfiguration>`元素所參考的身分識別設定會設定宣告授權管理員和原則, 以用來進行授權決策。 這也適用于非被動 Web 案例的情況, 例如 Windows Communication Foundation (WCF) 應用程式或不是以 Web 為基礎的應用程式。 如果應用程式不是被動 Web 應用程式, [ \<](claimsauthorizationmanager.md)則只會套用所參考身分識別設定的 claimsAuthorizationManager > 專案 (及其子原則元素, 如果有的話)。 所有其他設定都會被忽略。 如需詳細資訊, 請參閱[ \<federationConfiguration >](federationconfiguration.md)元素。
+
+`<identityConfiguration>`元素是<xref:System.IdentityModel.Configuration.IdentityConfigurationElement>由類別表示。 身分識別設定區段是由<xref:System.IdentityModel.Configuration.IdentityConfiguration>類別表示。
+
+> [!IMPORTANT]
+> 將下列專案指定為專案的子`<identityConfiguration>`專案已被取代, 但仍支援此行為以提供回溯相容性。 這些元素應改為在[ \<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)元素下指定。
 >
-> - [\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)
-> - [\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)
-> - [\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)
-> - [\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)
+> - [\<audienceUris>](audienceuris.md)
+> - [\<issuerNameRegistry>](issuernameregistry.md)
+> - [\<issuerTokenResolver>](issuertokenresolver.md)
+> - [\<serviceTokenResolver>](servicetokenresolver.md)
 
 ## <a name="example"></a>範例
 
-下列範例會建立名為"alternateConfiguration"的身分識別組態。 身分識別組態會指定預設設定。
+下列範例會建立名為 "alternateConfiguration" 的身分識別設定。 身分識別設定會指定預設值。
 
 ```xml
 <system.identityModel>

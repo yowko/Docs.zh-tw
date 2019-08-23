@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abcbfaf803e930baaaf798986a585a7da5f9134d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9bb5a2629e435d76691d48feef6689191b66373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780804"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957892"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread 方法
-初始化目前的執行緒之前後續的程式碼剖析工具 API 呼叫在相同的執行緒，因此可以避免死結。  
+在同一個執行緒上的後續分析工具 API 呼叫之前, 將目前的執行緒初始化, 以便避免鎖死。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,15 +34,15 @@ HRESULT InitializeCurrentThread ();
 ```  
   
 ## <a name="remarks"></a>備註  
- 我們建議您呼叫`InitializeCurrentThread`在任何執行緒會呼叫程式碼剖析工具 API 有暫止執行緒。 這個方法通常由建立自己的執行緒來呼叫的取樣分析工具[ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)目標執行緒暫停執行時，會逐步引導方法，以執行堆疊。 藉由呼叫`InitializeCurrentThread`分析工具之後當分析工具會先建立取樣執行緒，可以確保的第一個呼叫期間，否則執行 CLR，每個執行緒延遲初始設定`DoStackSnapshot`現在可能安全地當沒有其他執行緒都在暫止。  
+ 我們建議您在有`InitializeCurrentThread`擱置的執行緒時, 于任何將呼叫分析工具 API 的執行緒上呼叫。 這個方法通常是由取樣分析工具所使用, 它會建立自己的執行緒來呼叫[ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法, 以便在目標執行緒暫停時執行堆疊的逐步解說。 當分析`InitializeCurrentThread`工具第一次建立取樣執行緒時呼叫一次, 分析工具可以確保在第一次`DoStackSnapshot`呼叫時, CLR 原本就會執行的延遲每一線程初始化, 現在可以在沒有其他執行緒時安全地進行。掛.  
   
 > [!NOTE]
->  `InitializeCurrentThread` 會初始化事先完成工作，會取得鎖定，並可能會發生死結。 呼叫`InitializeCurrentThread`只在不有任何暫止的執行緒。  
+> `InitializeCurrentThread`會事先進行初始化, 以完成會產生鎖定的工作, 而且可能會鎖死。 只有`InitializeCurrentThread`在沒有暫止的執行緒時, 才呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** Corprof.idl .idl, Corprof.idl。h  
   
  **LIBRARY:** CorGuids.lib  
   

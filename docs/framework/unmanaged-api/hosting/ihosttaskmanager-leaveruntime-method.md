@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 959cb541013ca0a26557e849874dbb329489d855
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749540"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959031"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime 方法
-主應用程式目前正在執行的工作是要將 common language runtime (CLR) 並輸入 unmanaged 程式碼。  
+通知主機目前正在執行的工作即將離開 common language runtime (CLR), 並輸入非受控碼。  
   
 > [!IMPORTANT]
->  對應呼叫[ihosttaskmanager:: Enterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)主應用程式目前正在執行的工作重新進入 managed 程式碼。  
+> 對[IHostTaskManager:: EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)的對應呼叫, 會通知主機目前正在執行的工作是重新進入 managed 程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,38 +40,38 @@ HRESULT LeaveRuntime (
   
 ## <a name="parameters"></a>參數  
  `target`  
- [in]呼叫 unmanaged 函式對應可攜式執行檔內的位址。  
+ 在要呼叫之非受控函式的對應可攜式可執行檔內的位址。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_OUTOFMEMORY|沒有足夠的記憶體可完成要求的配置。|  
+|S_OK|`LeaveRuntime`已成功傳回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時, CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_OUTOFMEMORY|沒有足夠的記憶體可用來完成要求的配置。|  
   
 ## <a name="remarks"></a>備註  
- 與 unmanaged 程式碼的呼叫序列可以是巢狀。 例如，下列清單描述的假設性情況的呼叫順序`LeaveRuntime`， [ihosttaskmanager:: Reverseenterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)， [ihosttaskmanager:: Reverseleaveruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)，和`IHostTaskManager::EnterRuntime`可讓主機識別巢狀層級。  
+ 不受管理程式碼的呼叫序列可以進行嵌套。 例如, 下列清單描述一種假設的情況, 其中的呼叫`LeaveRuntime`順序為[IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), 並`IHostTaskManager::EnterRuntime`允許主機識別嵌套層。  
   
 |動作|對應的方法呼叫|  
 |------------|-------------------------------|  
-|受管理的 Visual Basic 可執行檔呼叫 unmanaged 函式以 C 撰寫使用平台叫用。|`IHostTaskManager::LeaveRuntime`|  
-|Unmanaged 的 C 函式呼叫的方法中撰寫的 managed DLL C#。|`IHostTaskManager::ReverseEnterRuntime`|  
-|ManagedC#函式會呼叫另一個以 C 撰寫的 unmanaged 函式，也使用平台叫用。|`IHostTaskManager::LeaveRuntime`|  
-|第二個 unmanaged 函式會傳回執行C#函式。|`IHostTaskManager::EnterRuntime`|  
-|C#函式會傳回第一個非受控函式執行。|`IHostTaskManager::ReverseLeaveRuntime`|  
-|第一個非受控函式執行傳回 Visual Basic 程式。|`IHostTaskManager::EnterRuntime`|  
+|Managed Visual Basic 可執行檔會使用平台叫用, 呼叫以 C 撰寫的非受控函式。|`IHostTaskManager::LeaveRuntime`|  
+|非受控 C 函式會在以C#撰寫的 managed DLL 中呼叫方法。|`IHostTaskManager::ReverseEnterRuntime`|  
+|Managed C#函式會呼叫以 C 撰寫的另一個非受控函式, 也會使用平台叫用。|`IHostTaskManager::LeaveRuntime`|  
+|第二個非受控函式會C#將執行傳回函式。|`IHostTaskManager::EnterRuntime`|  
+|C#函式會將執行傳回第一個非受控函式。|`IHostTaskManager::ReverseLeaveRuntime`|  
+|第一個非受控函式會將執行傳回給 Visual Basic 程式。|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

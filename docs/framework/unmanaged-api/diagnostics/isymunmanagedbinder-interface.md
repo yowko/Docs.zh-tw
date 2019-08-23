@@ -16,28 +16,28 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6d91f68ac737ce28cdbef926119bb3711bc1096
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2160ad4174d9cdfe6e27d2ba7f4748bd473a5f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940058"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944224"
 ---
 # <a name="isymunmanagedbinder-interface"></a>ISymUnmanagedBinder 介面
-表示 unmanaged 程式碼的符號繫結器。  
+表示非受控程式碼的符號系結器。  
   
 > [!IMPORTANT]
->  它是從受信任的來源開啟程式資料庫 (PDB) 檔的安全性風險。  
+> 從不受信任的來源開啟程式資料庫 (PDB) 檔案會有安全性風險。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetReaderForFile 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|提供中繼資料介面和檔案名稱，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)會讀取偵錯符號的模組相關聯的結構。|  
-|[GetReaderFromStream 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|提供中繼資料介面並包含符號存放區的資料流，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)指定的符號存放區的結構，將讀取偵錯符號。|  
+|[GetReaderForFile 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|提供中繼資料介面和檔案名, 會傳回正確的[ISymUnmanagedReader](isymunmanagedreader-interface.md)結構, 以讀取與模組相關聯的偵錯工具符號。|  
+|[GetReaderFromStream 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|假設中繼資料介面和包含符號存放區的資料流程, 會傳回正確的[ISymUnmanagedReader](isymunmanagedreader-interface.md)結構, 以便從指定的符號存放區讀取偵錯工具符號。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **標頭：** CorSym .idl, CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

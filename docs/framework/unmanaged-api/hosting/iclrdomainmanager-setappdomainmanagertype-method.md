@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28feddffff7dc5dba1860b3d2d1327a17bd08190
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b142f1a05036eddf44c69d8b7da95091dc8f445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772945"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963097"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType 方法
-指定的型別，衍生自<xref:System.AppDomainManager?displayProperty=nameWithType>類別，將會用來初始化預設應用程式定義域的應用程式定義域管理員。  
+指定將用來初始化預設應用<xref:System.AppDomainManager?displayProperty=nameWithType>程式域之應用程式網域管理員的類型 (衍生自類別)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,36 +37,36 @@ HRESULT SetAppDomainManagerType(
   
 ## <a name="parameters"></a>參數  
  `wszAppDomainManagerAssembly`  
- [in]包含應用程式定義域管理員類型; 組件的顯示名稱例如：「 AdMgrExample，version=1.0.0.0，Culture = neutral，PublicKeyToken = 6856bccf150f00b3"。  
+ 在包含應用程式域管理員類型之元件的顯示名稱;例如:"AdMgrExample, Version = 1.0.0.0, Culture = 中性, PublicKeyToken = 6856bccf150f00b3"。  
   
  `wszAppDomainManagerType`  
- [in]應用程式定義域管理員，包括命名空間型別名稱。  
+ 在應用程式域管理員的類型名稱, 包括命名空間。  
   
  `dwInitializeDomainFlags`  
- [in]組合[EInitializeNewDomainFlags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)提供應用程式定義域管理員的相關資訊的列舉值。  
+ 在[EInitializeNewDomainFlags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)列舉值的組合, 可提供應用程式域管理員的相關資訊。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
   
 ## <a name="remarks"></a>備註  
- 目前，唯一定義的值`dwInitializeDomainFlags`已`eInitializeNewDomainFlags_NoSecurityChanges`，這會告知 common language runtime (CLR)，應用程式定義域管理員不會修改安全性設定執行期間<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>方法。 這可讓 CLR 的最佳化的條件式的組件載入<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 屬性。 如果這個集合的組件的可轉移關閉很大，這會導致啟動時間大幅提升。  
+ 目前, 唯一定義的值`dwInitializeDomainFlags`是, 它會`eInitializeNewDomainFlags_NoSecurityChanges`告知 common language runtime (CLR), 應用程式域管理員在<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>方法執行期間將不會修改安全性設定。 這可讓 CLR 優化具有條件<xref:System.Security.AllowPartiallyTrustedCallersAttribute>式 (APTCA) 屬性之元件的載入。 如果這組元件的可轉移關閉很大, 這會導致啟動時間大幅改善。  
   
 > [!IMPORTANT]
->  如果指定了主機`eInitializeNewDomainFlags_NoSecurityChanges`應用程式網域管理員，<xref:System.InvalidOperationException>任何嘗試修改應用程式定義域的安全性，便會擲回。  
+> 如果主機為應用`eInitializeNewDomainFlags_NoSecurityChanges`程式域管理員指定<xref:System.InvalidOperationException> , 則在嘗試修改應用程式域的安全性時, 就會擲回。  
   
- 呼叫[iclrcontrol:: Setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)方法就相當於呼叫`ICLRDomainManager::SetAppDomainManagerType`使用`eInitializeNewDomainFlags_None`。  
+ 呼叫[ICLRControl:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)方法相當於使用`ICLRDomainManager::SetAppDomainManagerType` `eInitializeNewDomainFlags_None`呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：水平分割視窗
+title: 作法：水平分割視窗
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: a43d632a82678f362a1cdf6b3ee4486a8db5adde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ef3fe1210ae42c52a4fd7f23633d6566bc102a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012928"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956064"
 ---
-# <a name="how-to-split-a-window-horizontally"></a>HOW TO：水平分割視窗
-下列程式碼範例會將分割的分隔器<xref:System.Windows.Forms.SplitContainer>控制水平。  
+# <a name="how-to-split-a-window-horizontally"></a>作法：水平分割視窗
+下列程式碼範例會建立將<xref:System.Windows.Forms.SplitContainer>控制項水準分割的分隔器。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>控制項會決定起的分隔器，而不是控制項本身的方向。  
+> <xref:System.Windows.Forms.SplitContainer>控制項<xref:System.Windows.Forms.SplitContainer.Orientation%2A>的屬性會決定分隔器的方向, 而不是控制項本身。  
   
-### <a name="to-split-a-window-horizontally"></a>若要水平分隔視窗  
+### <a name="to-split-a-window-horizontally"></a>水準分割視窗  
   
-1. 在程序中，設定<xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性<xref:System.Windows.Forms.SplitContainer>若要控制<xref:System.Windows.Forms.Orientation.Horizontal>。  
+1. 在程式中, 將<xref:System.Windows.Forms.SplitContainer.Orientation%2A> <xref:System.Windows.Forms.SplitContainer>控制項的屬性設為<xref:System.Windows.Forms.Orientation.Horizontal>。  
   
     ```vb  
     Sub ShowSplitContainer()  

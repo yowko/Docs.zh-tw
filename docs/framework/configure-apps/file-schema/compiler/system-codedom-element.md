@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659690"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927699"
 ---
 # <a name="systemcodedom-element"></a>\<system.object > 元素
 指定可用語言提供者的編譯器組態設定。  
@@ -38,13 +38,13 @@ ms.locfileid: "69659690"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<compilers>](compilers-element.md)|編譯器組態項目的容器；內含零或多個 [\<compiler>](compiler-element.md) 項目。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<configuration>](../configuration-element.md)|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
@@ -56,7 +56,7 @@ ms.locfileid: "69659690"
  開發人員和編譯器廠商可以針對新<xref:System.CodeDom.Compiler.CodeDomProvider>的執行, 將設定值新增至電腦設定檔 (machine.config)。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>使用方法, 以程式設計方式列舉電腦上的編譯器設定所識別的預設語言提供者和語言提供者。  
   
 > [!NOTE]
->  在 .NET Framework 版本1.0 和1.1 中, .NET Framework 所提供的預設語言提供者會在[ \<編譯器 >](compilers-element.md)元素中識別出來。 在 .NET Framework 版本2.0 中, [ \<編譯器 >](compilers-element.md)元素中不會識別預設語言提供者, 但可以使用<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>方法來列舉。  
+> 在 .NET Framework 版本1.0 和1.1 中, .NET Framework 所提供的預設語言提供者會在[ \<編譯器 >](compilers-element.md)元素中識別出來。 在 .NET Framework 版本2.0 中, [ \<編譯器 >](compilers-element.md)元素中不會識別預設語言提供者, 但可以使用<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>方法來列舉。  
   
 ## <a name="net-framework-versions-10-and-11"></a>.NET Framework 版本1.0 和1。1  
  System.web > 元素包含電腦上語言提供者的編譯器設定。 [ \< ](system-codedom-element.md) 編譯器 > 元素包含零或多個[ \<編譯器 >](compiler-element.md)元素。 [ \< ](compilers-element.md) 每個[ \<編譯器 >](compiler-element.md)元素都會指定特定語言提供者的編譯器設定屬性。  

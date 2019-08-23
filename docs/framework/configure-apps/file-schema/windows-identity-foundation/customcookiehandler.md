@@ -3,15 +3,15 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf1f7f3de1b44dba63977bf524dea9af2690fb1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791725"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942789"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
-設定自訂 cookie 處理常式型別。 這個項目只會出現如果`mode`屬性的`<cookieHandler>`項目是 「 自訂 」。 自訂型別必須衍生自<xref:System.IdentityModel.Services.CookieHandler>類別。  
+設定自訂 cookie 處理常式類型。 只有當`mode` `<cookieHandler>`元素的屬性是 "Custom" 時, 才會出現此元素。 自訂類型必須衍生<xref:System.IdentityModel.Services.CookieHandler>自類別。  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -38,24 +38,24 @@ ms.locfileid: "61791725"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|類型|指定自訂型別衍生自<xref:System.IdentityModel.Services.CookieHandler>類別。 如需有關如何指定`type`屬性，請參閱[自訂型別參考](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
+|型別|指定衍生<xref:System.IdentityModel.Services.CookieHandler>自類別的自訂類型。 如需如何指定屬性的`type`詳細資訊, 請參閱[自訂類型參考](../windows-workflow-foundation/index.md)。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|會設定<xref:System.IdentityModel.Services.CookieHandler>，<xref:System.IdentityModel.Services.SessionAuthenticationModule>用以讀取和寫入 cookie。|  
+|[\<cookieHandler>](cookiehandler.md)|<xref:System.IdentityModel.Services.CookieHandler> 設定用來讀取<xref:System.IdentityModel.Services.SessionAuthenticationModule>和寫入 cookie 的。|  
   
 ## <a name="remarks"></a>備註  
- 當您設定以指定自訂 cookie 處理常式`mode`的屬性`<cookieHandler>`項目為"Custom"，您必須指定自訂 cookie 處理常式的類型包括`<customCookieHandler>`子項目會參考的 cookie 處理常式類型。 此元素不能指定何時`mode`屬性設為"Chunked"或"Default"。 自訂 cookie 處理常式必須衍生自<xref:System.IdentityModel.Services.CookieHandler>類別。  
+ 當您藉由將專案的`mode`屬性`<cookieHandler>`設定為 "custom" 來指定自訂 cookie 處理常式時, 您必須包含參考 cookie 處理常式類型的`<customCookieHandler>`子項目, 以指定自訂 cookie 處理常式的類型。 當屬性設定為 "分塊" `mode`或 "Default" 時, 無法指定此元素。 自訂 cookie 處理常式必須衍生<xref:System.IdentityModel.Services.CookieHandler>自類別。  
   
- `<customCookieHandler>`項目由<xref:System.IdentityModel.Configuration.CustomTypeElement>類別。  
+ `<customCookieHandler>`元素是<xref:System.IdentityModel.Configuration.CustomTypeElement>由類別表示。  
   
 ## <a name="example"></a>範例  
- 下列範例會設定使用自訂的 cookie 處理常式類型的 SAM `MyNamespace.MyCustomCookieHandler`。  
+ 下列範例會將 SAM 設定為使用類型`MyNamespace.MyCustomCookieHandler`的自訂 cookie 處理常式。  
   
 ```xml  
 <cookieHandler mode="Custom">  

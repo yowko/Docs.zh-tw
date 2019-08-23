@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 87788906cfbf5b230c3b976395d9a40c655ae41a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: c66ca9356d1db157688349dfeea4270001513e0b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591655"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949211"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和還原序列化
-Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework 物件與 XML 之間轉譯兩個方向。 本主題會說明序列化程式的運作方式。  
+Windows Communication Foundation (WCF) 包含新的序列化引擎, 也<xref:System.Runtime.Serialization.DataContractSerializer>就是。 會<xref:System.Runtime.Serialization.DataContractSerializer>在兩個方向的 .NET Framework 物件和 XML 之間轉譯。 本主題會說明序列化程式的運作方式。  
   
- 在序列化.NET Framework 物件，序列化程式了解各種不同的程式設計模型，包括新的序列化*資料合約*模型。 如需完整的支援型別清單，請參閱 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 如需資料合約的簡介，請參閱 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 序列化 .NET Framework 物件時, 序列化程式會瞭解各種不同的序列化程式設計模型, 包括新的*資料合約*模型。 如需完整的支援型別清單，請參閱 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 如需資料合約的簡介，請參閱 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
- 還原序列化 XML 時，序列化程式會使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別。 它也支援<xref:System.Xml.XmlDictionaryReader>和<xref:System.Xml.XmlDictionaryWriter>類別，讓它能夠產生最佳化 XML，在某些情況下，例如當使用 WCF 二進位 XML 格式。  
+ 還原序列化 XML 時，序列化程式會使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別。 它也支援<xref:System.Xml.XmlDictionaryReader>和<xref:System.Xml.XmlDictionaryWriter>類別, 讓它在某些情況下產生優化的 xml, 例如使用 WCF 二進位 XML 格式時。  
   
- WCF 也包含搭配的序列化程式， <xref:System.Runtime.Serialization.NetDataContractSerializer>。 <xref:System.Runtime.Serialization.NetDataContractSerializer>大致<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>和<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>序列化程式因為它同時會發出的.NET Framework 型別名稱做為序列化資料的一部分。 當序列化和還原序列化兩端共用相同的型別時，就會使用它。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 兩者同時衍生自一般基底類別， <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
+ WCF 也包含隨附的序列化程式, <xref:System.Runtime.Serialization.NetDataContractSerializer>也就是。 <xref:System.Runtime.Serialization.NetDataContractSerializer> 類似<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>于和<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>序列化程式, 因為它也會發出 .NET Framework 型別名稱做為序列化資料的一部分。 當序列化和還原序列化兩端共用相同的型別時，就會使用它。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 兩者同時衍生自一般基底類別， <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
   
 > [!WARNING]
->  <xref:System.Runtime.Serialization.DataContractSerializer> 會將包含十六進位值低於 20 之控制字元的字串序列化成 XML 實體。 將這類資料傳送至 WCF 服務時，這可能會導致非 WCF 用戶端的問題。  
+>  <xref:System.Runtime.Serialization.DataContractSerializer> 會將包含十六進位值低於 20 之控制字元的字串序列化成 XML 實體。 這可能會在將這類資料傳送至 WCF 服務時, 導致非 WCF 用戶端發生問題。  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>建立 DataContractSerializer 執行個體  
  建構 <xref:System.Runtime.Serialization.DataContractSerializer> 的執行個體是很重要的步驟。 建構完成之後，您將無法變更任何設定。  
@@ -41,7 +41,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>指定已知型別  
- 如果透過 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性或其他一些機制來序列化尚未處理的型別時運用了多型 (Polymorphism)，則必須透過 `knownTypes` 參數將可能的已知型別清單傳遞至序列化程式的建構函式中。 如需已知型別的詳細資訊，請參閱[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
+ 如果透過 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性或其他一些機制來序列化尚未處理的型別時運用了多型 (Polymorphism)，則必須透過 `knownTypes` 參數將可能的已知型別清單傳遞至序列化程式的建構函式中。 如需已知類型的詳細資訊, 請參閱[資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
  下列範例說明類別 ( `LibraryPatron`)，其中包含了特定型別的集合 ( `LibraryItem`)。 第二個類別定義了 `LibraryItem` 型別。 第三與第四個類別 (`Book` 和 `Newspaper`) 則繼承了 `LibraryItem` 類別。  
   
@@ -74,12 +74,12 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
  這些值都可以傳遞做為 <xref:System.Xml.XmlDictionaryString> 類別的字串或執行個體，以便透過二進位 XML 格式加以最佳化。  
   
 ### <a name="setting-the-maximum-objects-quota"></a>設定最大物件數量配額  
- 某些 `DataContractSerializer` 建構函式多載包含有 `maxItemsInObjectGraph` 參數。 這項參數可決定序列化程式在單一 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法呼叫中能夠序列化或還原序列化的最大物件數量 (此方法一定會讀取一個根物件，但是這個物件可能會在其資料成員中又有其他物件。 這些物件可能又會有其他物件，依此類推)。預設值為 65536。 請注意，當序列化或還原序列化陣列時，每個陣列項目都視為個別物件。 另外請注意，有些物件可能有大量記憶體表示，因此只有這個配額可能不足以防止阻絕服務攻擊。 如需詳細資訊，請參閱 <<c0> [ 資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 如果您需要將這個配額調高到預設值以上，請在傳送 (序列化) 和接收 (還原序列化) 端都執行這項操作，因為它會在讀取與寫入資料時同時套用。  
+ 某些 `DataContractSerializer` 建構函式多載包含有 `maxItemsInObjectGraph` 參數。 這項參數可決定序列化程式在單一 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法呼叫中能夠序列化或還原序列化的最大物件數量 (此方法一定會讀取一個根物件，但是這個物件可能會在其資料成員中又有其他物件。 這些物件可能又會有其他物件，依此類推)。預設值為 65536。 請注意，當序列化或還原序列化陣列時，每個陣列項目都視為個別物件。 另外請注意，有些物件可能有大量記憶體表示，因此只有這個配額可能不足以防止阻絕服務攻擊。 如需詳細資訊, 請參閱[資料的安全性考慮](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 如果您需要將這個配額調高到預設值以上，請在傳送 (序列化) 和接收 (還原序列化) 端都執行這項操作，因為它會在讀取與寫入資料時同時套用。  
   
 ### <a name="round-trips"></a>來回行程  
  在一個作業中還原序列化物件後重新加以序列化的程序，我們稱為「 *來回行程* 」(Round Trip)。 因此，它會從 XML 變成物件執行個體，並回到原本的 XML 資料流。  
   
- 某些 `DataContractSerializer` 建構函式多載包含有 `ignoreExtensionDataObject` 參數 (預設為 `false` )。 在此預設模式中，只要資料合約實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面，資料就可以從較新版的資料合約一路經由較舊版本的資料合約再傳回較新版的資料合約來完成無資料損失的來回行程。 例如，假定 `Person` 資料合約的第 1 版包含 `Name` 和 `PhoneNumber` 資料成員，而第 2 版新增了 `Nickname` 成員。 如果實作了 `IExtensibleDataObject` ，則當從第 2 版傳送資訊到第 1 版時，會儲存 `Nickname` 資料，然後在資料序列化期間重新將它發出，這樣一來，來回行程期間就不會損失任何資料。 如需詳細資訊，請參閱 <<c0> [ 向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)並[資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。  
+ 某些 `DataContractSerializer` 建構函式多載包含有 `ignoreExtensionDataObject` 參數 (預設為 `false` )。 在此預設模式中，只要資料合約實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面，資料就可以從較新版的資料合約一路經由較舊版本的資料合約再傳回較新版的資料合約來完成無資料損失的來回行程。 例如，假定 `Person` 資料合約的第 1 版包含 `Name` 和 `PhoneNumber` 資料成員，而第 2 版新增了 `Nickname` 成員。 如果實作了 `IExtensibleDataObject` ，則當從第 2 版傳送資訊到第 1 版時，會儲存 `Nickname` 資料，然後在資料序列化期間重新將它發出，這樣一來，來回行程期間就不會損失任何資料。 如需詳細資訊, 請參閱[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)和[資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>來回行程的安全性與結構描述有效性考量  
  來回行程可能包含一些安全性意涵。 例如，還原序列化與儲存大量的非直接關聯資料時，可能會帶來安全性風險。 由於重新發出這項資料時並無法加以驗證，特別是當牽涉到數位簽章時，因此可能會有一些安全上的考量。 例如，在之前的案例中，第 1 版的端點可能會簽署包含惡意資料的 `Nickname` 值。 最後，還是可能有一些結構描述上的有效性考量：端點可能想要一直發出能夠恪遵其陳述的合約規定，而非其他額外值的資料。 在先前的範例中，第 1 版端點的合約告知僅發出 `Name` 和 `PhoneNumber`，而且假如使用結構描述驗證法的話，發出額外的 `Nickname` 值將讓驗證失敗。  
@@ -115,7 +115,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
 - 語意。 有時候兩個參照是針對同一個物件，而不是針對兩個一樣的物件，這點要特別注意。  
   
- 因此，某些 `DataContractSerializer` 建構函式多載包含有 `preserveObjectReferences` 參數 (預設為 `false`)。 當此參數設定為`true`，使用編碼物件的參考，其中唯一的 WCF 了解，特殊方法。 設定為 `true`時，XML 程式碼範例就會類似如下所示。  
+ 因此，某些 `DataContractSerializer` 建構函式多載包含有 `preserveObjectReferences` 參數 (預設為 `false`)。 當此參數設定為`true`時, 就會使用僅供 WCF 瞭解的特殊方法編碼物件參考。 設定為 `true`時，XML 程式碼範例就會類似如下所示。  
   
 ```xml  
 <PurchaseOrder ser:id="1">  
@@ -124,10 +124,10 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
 </PurchaseOrder>  
 ```  
   
- "Ser"命名空間是指標準序列化命名空間， `http://schemas.microsoft.com/2003/10/Serialization/`。 每個資料片段只會序列化一次，並賦予一個 ID 號碼，後續使用時會導致參照到已經序列化的資料。  
+ 「Ser」命名空間是指標准序列化命名空間`http://schemas.microsoft.com/2003/10/Serialization/`。 每個資料片段只會序列化一次，並賦予一個 ID 號碼，後續使用時會導致參照到已經序列化的資料。  
   
 > [!IMPORTANT]
->  如果 "id" 及 "ref" 這兩個屬性都出現在資料合約 `XMLElement`中，那麼會接受 "ref" 屬性而忽略 "id" 屬性。  
+> 如果 "id" 及 "ref" 這兩個屬性都出現在資料合約 `XMLElement`中，那麼會接受 "ref" 屬性而忽略 "id" 屬性。  
   
  了解此模式的限制是很重要的：  
   
@@ -141,7 +141,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
 >  啟用 `preserveObjectReferences` 模式時，請將 `maxItemsInObjectGraph` 值設定為正確的配額，這點請您要特別注意。 因為陣列在此模式中的處理方式不同，攻擊者很容易就能夠建構小型的惡意訊息，導致大量的記憶體取用只受到 `maxItemsInObjectGraph` 配額的限制。  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>指定資料合約代理  
- 某些 `DataContractSerializer` 建構函式多載包含有 `dataContractSurrogate` 參數 (可能會設定為 `null`)。 另一方面，您可以用它來指定「 *資料合約代理*」(Data Contract Surrogate)，這是一種可實作 <xref:System.Runtime.Serialization.IDataContractSurrogate> 介面的型別。 您可以接著使用此介面來自訂序列化與還原序列化處理序。 如需詳細資訊，請參閱 <<c0> [ 資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
+ 某些 `DataContractSerializer` 建構函式多載包含有 `dataContractSurrogate` 參數 (可能會設定為 `null`)。 另一方面，您可以用它來指定「 *資料合約代理*」(Data Contract Surrogate)，這是一種可實作 <xref:System.Runtime.Serialization.IDataContractSurrogate> 介面的型別。 您可以接著使用此介面來自訂序列化與還原序列化處理序。 如需詳細資訊, 請參閱[資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
   
 ## <a name="serialization"></a>序列化  
  下列資訊將套用至任何繼承自 <xref:System.Runtime.Serialization.XmlObjectSerializer>的類別，包括 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 類別。  
@@ -149,7 +149,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
 ### <a name="simple-serialization"></a>簡單序列化  
  序列化物件的最基本方式，就是將它傳遞給 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 方法。 有三種多載，各自負責寫入至 <xref:System.IO.Stream>、 <xref:System.Xml.XmlWriter>，或是 <xref:System.Xml.XmlDictionaryWriter>。 在使用 <xref:System.IO.Stream> 多載的情況下，將輸出 UTF-8 編碼格式的 XML。 在使用 <xref:System.Xml.XmlDictionaryWriter> 多載的情況下，序列化程式會最佳化二進位 XML 的輸出。  
   
- 當使用<xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A>方法，序列化程式的包裝函式項目使用的預設名稱和命名空間，並與 （請參閱上的 「 指定預設的根名稱和命名空間 」 一節） 的內容一起寫出。  
+ 使用<xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A>方法時, 序列化程式會使用包裝函式專案的預設名稱和命名空間, 並連同內容一起寫出 (請參閱先前的「指定預設的根名稱和命名空間」一節)。  
   
  下列範例示範使用 <xref:System.Xml.XmlDictionaryWriter>來寫入。  
   
@@ -169,7 +169,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
  請使用 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A>、 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A>，以及 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> 方法來分別寫入結束項目、物件內容，並關閉包裝函式項目。  
   
 > [!NOTE]
->  這些方法不包含 <xref:System.IO.Stream> 多載。  
+> 這些方法不包含 <xref:System.IO.Stream> 多載。  
   
  這項逐步序列化含有兩個常見的用途。 其中一個就是在 `WriteStartObject` 和 `WriteObjectContent`之間插入屬性或註解之類的內容，如下列範例所示。  
   
@@ -200,7 +200,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
 ```  
   
 > [!NOTE]
->  使用逐步序列化可能產生結構描述無效的 XML。  
+> 使用逐步序列化可能產生結構描述無效的 XML。  
   
 ## <a name="deserialization"></a>還原序列化  
  下列資訊將套用至任何繼承自 <xref:System.Runtime.Serialization.XmlObjectSerializer>的類別，包括 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 類別。  
@@ -221,12 +221,12 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
  請注意，在將讀取器交給 `ReadObject`之前，可以讀取此包裝函式項目的屬性。  
   
- 當使用其中一種簡單`ReadObject`多載，還原序列化程式會尋找預設名稱和命名空間上的包裝函式項目 （請參閱上一節 「 指定預設的根名稱和命名空間 」），並擲回例外狀況，如果它找到未知項目。 在先前的範例中，預期會使用 `<Person>` 包裝函式項目。 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> 方法會被呼叫，以驗證讀取器位於如預期命名的項目上。  
+ 使用其中一個簡單`ReadObject`的多載時, 還原序列化程式會在包裝函式專案上尋找預設的名稱和命名空間 (請參閱上一節「指定預設的根名稱和命名空間」), 並在發現不明的時擲回例外狀況。元素. 在先前的範例中，預期會使用 `<Person>` 包裝函式項目。 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> 方法會被呼叫，以驗證讀取器位於如預期命名的項目上。  
   
  有一種方式可以停用此包裝函式項目名稱檢查；某些 `ReadObject` 方法的多載會採用布林參數 `verifyObjectName`(預設會設定為 `true` )。 一旦設定為 `false`，就會忽略包裝函式項目的名稱與命名空間。 讀取以先前所述之逐步序列化機制撰寫的 XML 時，這種方式很有用。  
   
 ## <a name="using-the-netdatacontractserializer"></a>使用 NetDataContractSerializer  
- 主要差異`DataContractSerializer`而<xref:System.Runtime.Serialization.NetDataContractSerializer>在於`DataContractSerializer`會使用資料合約名稱，而`NetDataContractSerializer`輸出完整序列化的 XML 中的.NET Framework 組件和類型名稱。 也就是說，序列化與還原序列化端點兩者必須共用完全相同的型別。 這表示 `NetDataContractSerializer` 並不需要已知型別機制，因為要還原序列化的完全相同型別一律呈現已知狀態。  
+ 和之間`DataContractSerializer` `NetDataContractSerializer`的主要差異在於會使用資料合約名稱,而輸出會在序列化的XML中完整.NETFramework元件和類型名稱。<xref:System.Runtime.Serialization.NetDataContractSerializer> `DataContractSerializer` 也就是說，序列化與還原序列化端點兩者必須共用完全相同的型別。 這表示 `NetDataContractSerializer` 並不需要已知型別機制，因為要還原序列化的完全相同型別一律呈現已知狀態。  
   
  但是，還是會發生一些問題：  
   
@@ -234,11 +234,11 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
 - 版本控制。 在 XML 中使用完整的型別與組件名稱會嚴格限制型別的版本設定。 下列為無法變更的項目：型別名稱、命名空間、組件名稱以及組件版本。 將 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 屬性或建構函式設定為 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> (而不是 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> 的預設值) 可允許組件版本變更，但不適用於泛型參數型別。  
   
-- 互通性。 在 XML 中包含.NET Framework 型別和組件名稱，因為.NET Framework 以外的平台無法存取產生的資料。  
+- 互通性。 因為 .NET Framework 類型和元件名稱包含在 XML 中, 所以 .NET Framework 以外的平臺無法存取產生的資料。  
   
 - 效能。 寫出型別和組件名稱會大幅增加最後 XML 的大小。  
   
- 這項機制是二進位或 SOAP 序列化的.NET Framework 遠端處理所使用的類似 (具體而言，<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>而<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>)。  
+ 這項機制類似于 .NET Framework 遠端處理 (具體而言<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>是<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>和) 所使用的二進位或 SOAP 序列化。  
   
  使用 `NetDataContractSerializer` 類似於使用 `DataContractSerializer`，除了下列幾點差異以外：  
   
@@ -254,16 +254,16 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
 - <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 方法都是 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法的別名。 這些都是為了在使用二進位或 SOAP 序列化時提供更一致的程式設計模型而存在的。  
   
- 如需這些功能的詳細資訊，請參閱[二進位序列化](../../../../docs/standard/serialization/binary-serialization.md)。  
+ 如需這些功能的詳細資訊, 請參閱[二進位序列化](../../../standard/serialization/binary-serialization.md)。  
   
  `NetDataContractSerializer` 和 `DataContractSerializer` 使用的 XML 格式一般都不相容。 亦即，不支援使用其中一個序列化程式來序列化，並以另一個序列化程式來還原序列化的情況。  
   
- 另請注意，`NetDataContractSerializer`不會輸出物件圖形中每個節點的.NET Framework 型別和組件名稱完整。 它只會針對不夠清楚的部分來輸出資訊。 亦即，它會在根物件層級以及任何多型案例中輸出。  
+ 另請注意`NetDataContractSerializer` , 不會針對物件圖形中的每個節點輸出完整的 .NET Framework 型別和元件名稱。 它只會針對不夠清楚的部分來輸出資訊。 亦即，它會在根物件層級以及任何多型案例中輸出。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
 - <xref:System.Runtime.Serialization.XmlObjectSerializer>
-- [二進位序列化](../../../../docs/standard/serialization/binary-serialization.md)
+- [二進位序列化](../../../standard/serialization/binary-serialization.md)
 - [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
