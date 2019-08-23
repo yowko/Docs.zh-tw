@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be8d860f508644e68bf69892a63e145e7ffd5b90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2e01a5cf2b2aa25e91ebf0f8e3927858b12bea3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740241"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967560"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>CorDebugDebugEventKind 列舉
-表示的事件解碼其資訊的型別[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法。  
+表示[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法解碼其資訊的事件種類。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +37,7 @@ typedef enum CorDebugDebugEventKind {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`DEBUG_EVENT_KIND_MODULE_LOADED`|模組載入事件。|  
 |`DEBUG_EVENT_KIND_MODULE_UNLOADED`|模組卸載事件。|  
@@ -47,10 +47,10 @@ typedef enum CorDebugDebugEventKind {
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|未處理的例外狀況。|  
   
 ## <a name="remarks"></a>備註  
- 成員`CorDebugDebugEventKind`列舉型別由呼叫[icordebugdebugevent:: Geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)方法。  
+ `CorDebugDebugEventKind`列舉的成員會藉由呼叫[ICorDebugDebugEvent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)方法來傳回。  
   
 > [!NOTE]
->  這個列舉僅適用於 .NET Native 偵錯案例。  
+> 這個列舉僅適用於 .NET Native 偵錯案例。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

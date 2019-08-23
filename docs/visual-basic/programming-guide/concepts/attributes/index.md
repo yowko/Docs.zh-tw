@@ -2,12 +2,12 @@
 title: 屬性概觀 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 2ecc3fb0a3bf7365b6eec39e1c5086d99f2c5a19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c799b9be9b936beadde28374bd9882ebc6e2d9a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966312"
 ---
 # <a name="attributes-overview-visual-basic"></a>屬性概觀 (Visual Basic)
 屬性提供一種功能強大的方法，可將中繼資料或宣告資訊關聯至程式碼 (組建、型別、方法、屬性等)。 將屬性關聯至程式實體之後，就能在執行階段使用稱為「反映」的技術來查詢該屬性。 如需詳細資訊，請參閱[反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)。  
@@ -67,7 +67,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  依照慣例，所有的屬性名稱都會以 "Attribute" 這個字結尾，以便與 .NET Framework 中的其他項目有所區別。 不過，您在程式碼中使用屬性時，不需要指定屬性的後置詞。 例如，`[DllImport]` 相當於 `[DllImportAttribute]`，但 `DllImportAttribute` 是屬性在 .NET Framework 中的實際名稱。  
+> 依照慣例，所有的屬性名稱都會以 "Attribute" 這個字結尾，以便與 .NET Framework 中的其他項目有所區別。 不過，您在程式碼中使用屬性時，不需要指定屬性的後置詞。 例如，`[DllImport]` 相當於 `[DllImportAttribute]`，但 `DllImportAttribute` 是屬性在 .NET Framework 中的實際名稱。  
   
 ### <a name="attribute-parameters"></a>屬性參數  
  許多屬性的參數可以是位置、未命名或具名的參數。 任何位置參數都必須以特定順序指定，而且不能省略；具名參數是選擇性且可依任何順序指定。 位置參數會先指定。 例如，這三個屬性是相等的：  
@@ -130,13 +130,13 @@ Module: CLSCompliant(True)>
 - 取得有關方法之呼叫端的資訊。  
   
 ## <a name="related-sections"></a>相關章節  
- 如需詳細資訊，請參閱:  
+ 如需詳細資訊，請參閱：  
   
 - [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
 - [使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
-- [如何：建立 C /C++聯集，使用屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [如何：使用屬性建立 CC++ /Union (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
 - [通用屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   

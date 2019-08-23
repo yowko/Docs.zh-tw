@@ -6,30 +6,30 @@ helpviewer_keywords:
 - data [Windows Forms], formatting in grids
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5966f16238999655d6072c1127e5bf16aefde5e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011411"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969178"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料格式
-<xref:System.Windows.Forms.DataGridView>控制項提供資料格的值與父資料行顯示的資料類型之間的自動轉換。 文字 方塊中的資料行，例如，顯示的日期、 時間、 數字和列舉值的字串表示法，並將使用者輸入的字串值轉換為資料存放區所需的類型。  
+控制項<xref:System.Windows.Forms.DataGridView>會在資料格值與父資料行所顯示的資料類型之間提供自動轉換。 文字方塊資料行, 例如, 顯示日期、時間、數位和列舉值的字串標記法, 並將使用者輸入的字串值轉換成資料存放區所需的類型。  
   
-## <a name="formatting-with-the-datagridviewcellstyle-class"></a>格式化與 DataGridViewCellStyle 類別  
- <xref:System.Windows.Forms.DataGridView>控制項提供基本的資料格式的資料格的值，透過<xref:System.Windows.Forms.DataGridViewCellStyle>類別。 您可以使用<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>目前使用中所述的格式規範的預設文化特性的格式日期、 時間、 數字和列舉值的屬性[格式化型別](../../../standard/base-types/formatting-types.md)。 您也可以格式化特定文化特性，使用這些值<xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>屬性。 若要顯示的資料和剖析使用者輸入中指定的格式的資料，則會使用指定的格式。  
+## <a name="formatting-with-the-datagridviewcellstyle-class"></a>使用 DataGridViewCellStyle 類別進行格式設定  
+ <xref:System.Windows.Forms.DataGridView> 控制項會<xref:System.Windows.Forms.DataGridViewCellStyle>透過類別提供儲存格值的基本資料格式。 您可以使用<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>屬性, 利用[格式化](../../../standard/base-types/formatting-types.md)型別中所述的格式規範來格式化目前預設文化特性的日期、時間、數位和列舉值。 您也可以使用<xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>屬性, 針對特定文化特性來格式化這些值。 指定的格式會用於顯示資料, 以及剖析使用者以指定格式輸入的資料。  
   
- <xref:System.Windows.Forms.DataGridViewCellStyle>類別提供額外的格式化屬性自動換行、 文字對齊方式，以及自訂資料庫 null 值的顯示。 如需詳細資訊，請參閱[如何：格式資料中的 Windows Forms DataGridView 控制項](how-to-format-data-in-the-windows-forms-datagridview-control.md)。  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>類別會針對自動換行、文字對齊以及 null 資料庫值的自訂顯示, 提供額外的格式屬性。 如需詳細資訊，請參閱[如何：格式化 Windows Forms DataGridView 控制項](how-to-format-data-in-the-windows-forms-datagridview-control.md)中的資料。  
   
-## <a name="formatting-with-the-cellformatting-event"></a>格式化與 CellFormatting 事件  
- 如果基本的格式不符合您的需求，您可以提供自訂中的資料格式的處理常式<xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>事件。 <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>傳遞至處理常式有<xref:System.Windows.Forms.ConvertEventArgs.Value%2A>屬性一開始不包含儲存格的值。 一般來說，這個值會自動轉換為顯示型別。 若要自行轉換值，設定<xref:System.Windows.Forms.ConvertEventArgs.Value%2A>屬性設為顯示類型的值。  
+## <a name="formatting-with-the-cellformatting-event"></a>使用 CellFormatting 事件格式化  
+ 如果基本格式不符合您的需求, 您可以在<xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>事件的處理常式中提供自訂的資料格式。 傳遞<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>至處理常式的會具有<xref:System.Windows.Forms.ConvertEventArgs.Value%2A>一開始包含儲存格值的屬性。 一般來說, 此值會自動轉換成顯示類型。 若要自行轉換值, 請將<xref:System.Windows.Forms.ConvertEventArgs.Value%2A>屬性設定為顯示類型的值。  
   
 > [!NOTE]
->  如果格式字串的儲存格內作用中時，它會覆寫您的變更<xref:System.Windows.Forms.ConvertEventArgs.Value%2A>屬性值，除非您設定<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A>屬性設`true`。  
+> 如果格式字串對儲存格有效, 除非您<xref:System.Windows.Forms.ConvertEventArgs.Value%2A> <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A>將屬性設定為`true`, 否則會覆寫屬性值的變更。  
   
- <xref:System.Windows.Forms.DataGridView.CellFormatting>事件十分有用，當您想要設定<xref:System.Windows.Forms.DataGridViewCellStyle>其值為基礎的個別資料格的屬性。 如需詳細資訊，請參閱[如何：自訂 Windows Form DataGridView 控制項中的資料格式](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
+ 當<xref:System.Windows.Forms.DataGridView.CellFormatting>您想要根據值來設定<xref:System.Windows.Forms.DataGridViewCellStyle>個別資料格的屬性時, 此事件也很有用。 如需詳細資訊，請參閱[如何：自訂 Windows Forms DataGridView 控制項](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)中的資料格式。  
   
- 如果使用者指定值的預設值剖析，不符合您的需求，您可以處理<xref:System.Windows.Forms.DataGridView.CellParsing>事件的<xref:System.Windows.Forms.DataGridView>控制項來提供自訂的剖析。  
+ 如果使用者指定值的預設剖析不符合您的需求, 您可以處理<xref:System.Windows.Forms.DataGridView.CellParsing> <xref:System.Windows.Forms.DataGridView>控制項的事件, 以提供自訂剖析。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -37,5 +37,5 @@ ms.locfileid: "62011411"
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [如何：格式資料中的 Windows Forms DataGridView 控制項](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [如何：自訂 Windows Form DataGridView 控制項中的資料格式](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [如何：格式化 Windows Forms DataGridView 控制項中的資料](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [如何：自訂 Windows Forms DataGridView 控制項中的資料格式](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

@@ -3,15 +3,15 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: cebfc2f3598f32f233db6039dfe82076d2ffce46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32aad3529ded6d0234b1bcb388ecbbc3b0a11c87
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790477"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944264"
 ---
 # <a name="trustedissuers"></a>\<trustedIssuers>
-設定使用的組態為基礎的簽發者名稱登錄的受信任簽發者憑證的清單 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)。  
+設定以設定為基礎的簽發者名稱登錄 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>) 所使用的受信任簽發者憑證清單。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -50,23 +50,23 @@ ms.locfileid: "61790477"
   
 |項目|描述|  
 |-------------|-----------------|  
-|`<add thumbprint=xs:string name=xs:string>`|將憑證加入至受信任簽發者的集合。 使用指定的憑證`thumbprint`屬性。 這個屬性是必要的而且應該包含憑證指紋的 ASN.1 編碼形式。 `name`屬性是選擇性的而且可用來指定憑證的易記名稱。|  
-|`<clear>`|清除集合中的受信任簽發者的所有憑證。|  
-|`<remove thumbprint=xs:string>`|從受信任簽發者的集合中移除憑證。 使用指定的憑證`thumbprint`屬性。 這是必要屬性。|  
+|`<add thumbprint=xs:string name=xs:string>`|將憑證新增至受信任簽發者的集合。 憑證是以`thumbprint`屬性指定。 此為必要屬性, 且應包含憑證指紋的 asn.1 編碼形式。 屬性`name`是選擇性的, 可以用來指定憑證的易記名稱。|  
+|`<clear>`|清除受信任簽發者集合中的所有憑證。|  
+|`<remove thumbprint=xs:string>`|從受信任簽發者的集合中移除憑證。 憑證是以`thumbprint`屬性指定。 這是必要屬性。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|設定簽發者名稱登錄。 **重要：**`type`的屬性`<issuerNameRegistry>`元素必須參照<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>類別`<trustedIssuers>`為有效的項目。|  
+|[\<issuerNameRegistry>](issuernameregistry.md)|設定簽發者名稱登錄。 **重要：** `<issuerNameRegistry>` <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>元素的`type`屬性必須`<trustedIssuers>`參考類別, 專案才會是有效的。|  
   
 ## <a name="remarks"></a>備註  
- Windows Identity Foundation (WIF) 提供的單一實作<xref:System.IdentityModel.Tokens.IssuerNameRegistry>根據預設，類別<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>類別。 設定簽發者名稱登錄會維護從組態載入信任的簽發者清單。 清單會將每個簽發者名稱關聯才能驗證簽發者所產生之權杖的簽章的 X.509 憑證。 受信任的簽發者憑證的清單下，會指定`<trustedIssuers>`項目。 在清單中的每個項目關聯，才能驗證該簽發者所產生之權杖的簽章的 X.509 憑證的助憶鍵簽發者名稱。 受信任的憑證使用 ASN.1 編碼的憑證指紋的格式指定，而且會藉由新增集合`<add>`項目。 您可以清除，或從清單中移除簽發者 （憑證），使用`<clear>`和`<remove>`項目。  
+ Windows Identity Foundation (WIF) 提供<xref:System.IdentityModel.Tokens.IssuerNameRegistry>類別<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>的單一實作為類別。 設定簽發者名稱登錄會維護從設定載入之受信任簽發者的清單。 此清單會將每個簽發者名稱與 x.509 憑證建立關聯, 以驗證簽發者所產生之權杖的簽章。 受信任簽發者憑證的清單是在`<trustedIssuers>`元素下指定。 清單中的每個元素會將助憶鍵簽發者名稱與 x.509 憑證產生關聯, 以驗證該簽發者所產生之權杖的簽章。 受信任的憑證是使用憑證指紋的 asn.1 編碼形式來指定, 並使用`<add>`元素來新增集合。 您可以使用`<clear>`和`<remove>`元素, 從清單中清除或移除簽發者 (憑證)。  
   
- `type`的屬性`<issuerNameRegistry>`元素必須參照<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>類別`<trustedIssuers>`為有效的項目。  
+ `<issuerNameRegistry>` <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>元素的`type`屬性必須`<trustedIssuers>`參考類別, 專案才會是有效的。  
   
 ## <a name="example"></a>範例  
- 下列 XML 程式碼顯示如何指定組態的簽發者名稱登錄。  
+ 下列 XML 顯示如何指定以設定為基礎的簽發者名稱登錄。  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

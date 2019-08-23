@@ -2,21 +2,21 @@
 title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 5561cf61cef2258ec61bd32770538add1c69f5c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 610ba29ec98f4b1f2a9b1db3542bcb3aefb46457
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704202"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925656"
 ---
-# <a name="entries"></a>\<entries>
+# <a name="entries"></a>\<專案 >
 這個路由項目會包含當篩選條件符合時，路由篩選條件與訊息傳送目標端點之間的對應。  
   
  \<system.serviceModel>  
 \<路由 >  
 \<routingTables>  
-\<table>  
-\<entries>  
+\<資料表 >  
+\<專案 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,13 +45,13 @@ ms.locfileid: "61704202"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|將篩選條件對應至先前定義的用戶端端點。 將符合此篩選條件的訊息傳送至這個目的地。|  
+|[\<filters>](filters-of-routing.md)|將篩選條件對應至先前定義的用戶端端點。 將符合此篩選條件的訊息傳送至這個目的地。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含路由表的組態區段。|  
+|[\<routing>](routing.md)|包含路由表的組態區段。|  
   
 ## <a name="see-also"></a>另請參閱
 

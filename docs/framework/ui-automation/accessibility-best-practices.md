@@ -5,16 +5,16 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: a29c31e93523e0843728d2fd7fa555946b139c55
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4096d6441c64499dae8003a63100b59037897ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629594"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932783"
 ---
 # <a name="accessibility-best-practices"></a>協助工具最佳作法
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  在控制項或應用程式中執行下列最佳作法, 將可改善使用輔助技術裝置之人員的協助工具。 這些最佳做法有許多是著眼於良好的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 設計。 每個最佳做法包含 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控制項或應用程式的實作資訊。 在許多情況下，符合這些最佳做法的工作已經包含在 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控制項中。  
   

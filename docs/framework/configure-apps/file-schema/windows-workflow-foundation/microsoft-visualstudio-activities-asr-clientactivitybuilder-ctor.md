@@ -9,15 +9,15 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6b44b13c-7a23-4df2-8f9f-45e2b1430002
-ms.openlocfilehash: 0ce9be30182f9181bcb6449529d9b9796aadbc2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99f2eb9447bdf43cb57cfe86f35d2c09044ed470
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794520"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947620"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderctor"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
-建立的執行個體[Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)類別。  
+會建立[ClientActivityBuilder](microsoft-visualstudio-activities-asr-clientactivitybuilder.md)類別的實例 (instance)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -30,16 +30,16 @@ public ClientActivityBuilder(OperationDescription operationDescription, string c
 ## <a name="parameter-values"></a>參數值  
  *operationDescription*  
   
- 描述要在產生之工作流程活動中執行的作業，包括作業名稱、傳回型別和參數資訊。 此參數的值不能**null**。 它應描述會使用訊息合約並接收含有一則訊息之引數的同步作業。 如果沒有滿足這些條件，則不會定義在執行階段使用此類別的建構函式和其他方法的結果。  
+ 描述要在產生之工作流程活動中執行的作業，包括作業名稱、傳回型別和參數資訊。 此參數的值不得為**null**。 它應描述會使用訊息合約並接收含有一則訊息之引數的同步作業。 如果沒有滿足這些條件，則不會定義在執行階段使用此類別的建構函式和其他方法的結果。  
   
  *configurationName*  
   
- 指定端點組態名稱。 此參數的值不能是**null**或空白。 如果沒有滿足這些條件，則不會定義在執行階段使用此類別的建構函式和其他方法的結果。  
+ 指定端點組態名稱。 這個參數的值不可以是**null**或空白。 如果沒有滿足這些條件，則不會定義在執行階段使用此類別的建構函式和其他方法的結果。  
   
  *proxyNamespace*  
   
- 指定作業的服務命名空間。 此參數的值不能是**null**或空白。 如果沒有滿足這些條件，則不會定義在執行階段使用此類別的建構函式和其他方法的結果。  
+ 指定作業的服務命名空間。 這個參數的值不可以是**null**或空白。 如果沒有滿足這些條件，則不會定義在執行階段使用此類別的建構函式和其他方法的結果。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)
+- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](microsoft-visualstudio-activities-asr-clientactivitybuilder.md)

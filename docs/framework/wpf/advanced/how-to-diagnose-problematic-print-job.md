@@ -10,20 +10,20 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: d64e77b7fc6862eead3cb7e791b3a8f68ac52713
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 181248f69684860fd43648952ef4eb3cced1c0ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944628"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>HOW TO：診斷問題列印工作
-網路系統管理經常處理使用者對於列印工作的相關抱怨 (不會列印或列印緩慢)。 一組豐富的公開 Api 的 Microsoft.NET Framework 中的列印工作屬性會提供方法來執行列印工作的快速遠端診斷。  
+網路系統管理經常處理使用者對於列印工作的相關抱怨 (不會列印或列印緩慢)。 在 .NET Framework Microsoft 的 Api 中公開的一組豐富的列印工作內容, 提供了一種方法來執行列印工作的快速遠端診斷。  
   
 ## <a name="example"></a>範例  
  建立這類公用程式的主要步驟如下所示。  
   
-1. 找出使用者所抱怨的列印工作。 使用者通常無法準確地找出來。 他們可能不知道印表機的列印伺服器名稱。 它們可能會描述在不同的術語印表機的位置，比用於設定其<xref:System.Printing.PrintQueue.Location%2A>屬性。 因此，最好能產生使用者目前已提交的工作清單。 如果有多項工作，使用者與列印系統管理員之間的通訊則可用來指出有問題的工作。 子步驟如下所示。  
+1. 找出使用者所抱怨的列印工作。 使用者通常無法準確地找出來。 他們可能不知道印表機的列印伺服器名稱。 他們可能會以不同于設定其<xref:System.Printing.PrintQueue.Location%2A>屬性的術語來描述印表機的位置。 因此，最好能產生使用者目前已提交的工作清單。 如果有多項工作，使用者與列印系統管理員之間的通訊則可用來指出有問題的工作。 子步驟如下所示。  
   
     1. 取得所有列印伺服器的清單。  
   
@@ -35,31 +35,31 @@ ms.locfileid: "67859738"
   
 2. 找出有問題的列印工作後，檢查相關屬性以了解問題所在。 例如，工作處於錯誤狀態，或者是為佇列提供服務的印表機在可列印工作之前離線？  
   
- 下列程式碼是一系列的程式碼範例。 第一個程式碼範例包含列印佇列的迴圈執行。 (上面步驟 1c。)變數`myPrintQueues`是<xref:System.Printing.PrintQueueCollection>目前的列印伺服器物件。  
+ 下列程式碼是一系列的程式碼範例。 第一個程式碼範例包含列印佇列的迴圈執行。 (上面步驟 1c。)變數`myPrintQueues`是目前列印<xref:System.Printing.PrintQueueCollection>伺服器的物件。  
   
- 在程式碼範例一開始會重新整理目前的列印佇列物件<xref:System.Printing.PrintQueue.Refresh%2A?displayProperty=nameWithType>。 這可確保物件的屬性精確地呈現它所代表之實體印表機的狀態。 然後，應用程式會取得列印工作的集合目前列印佇列中使用<xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>。  
+ 程式碼範例一開始會使用<xref:System.Printing.PrintQueue.Refresh%2A?displayProperty=nameWithType>重新整理目前的列印佇列物件。 這可確保物件的屬性精確地呈現它所代表之實體印表機的狀態。 然後, 應用程式會使用<xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>來取得目前列印佇列中的列印工作集合。  
   
- 接下來的應用程式中執行迴圈<xref:System.Printing.PrintSystemJobInfo>集合並比較每個<xref:System.Printing.PrintSystemJobInfo.Submitter%2A>屬性與抱怨使用者的別名。 如果兩者相符，應用程式會將有關工作的識別資訊新增至將要呈現的字串。 (`userName` 和 `jobList` 變數稍早已在應用程式中初始化。)  
+ 接下來, 應用程式會<xref:System.Printing.PrintSystemJobInfo>在集合中迴圈<xref:System.Printing.PrintSystemJobInfo.Submitter%2A> , 並比較每個屬性與抱怨使用者的別名。 如果兩者相符，應用程式會將有關工作的識別資訊新增至將要呈現的字串。 (`userName` 和 `jobList` 變數稍早已在應用程式中初始化。)  
   
  [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
  [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
  [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
   
- 下一個程式碼範例會在步驟 2 中挑選應用程式。 (請參閱上面的資訊。)已找出有問題的工作，而且應用程式提示輸入將用來識別該工作的資訊。 這項資訊，它會建立<xref:System.Printing.PrintServer>， <xref:System.Printing.PrintQueue>，和<xref:System.Printing.PrintSystemJobInfo>物件。  
+ 下一個程式碼範例會在步驟 2 中挑選應用程式。 (請參閱上面的資訊。)已找出有問題的工作，而且應用程式提示輸入將用來識別該工作的資訊。 在此資訊中, <xref:System.Printing.PrintServer>它<xref:System.Printing.PrintQueue>會建立<xref:System.Printing.PrintSystemJobInfo> 、和物件。  
   
  此時應用程式包含一個分支結構，其對應於檢查列印工作狀態的兩種方法︰  
   
-- 您可以閱讀的旗標<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>類型的屬性<xref:System.Printing.PrintJobStatus>。  
+- 您可以讀取屬於類型<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> <xref:System.Printing.PrintJobStatus>之屬性的旗標。  
   
-- 您可以讀取每個相關的屬性，例如<xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A>和<xref:System.Printing.PrintSystemJobInfo.IsInError%2A>。  
+- 您可以讀取每個相關屬性<xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> , 例如和。 <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>  
   
- 此範例會示範這兩種方法，所以使用者先前已提示要使用的方法，且如果他或她想要使用的旗標，回應"Y"<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>屬性。 請參閱以下兩種方法的詳細資訊。 最後，應用程式會使用稱為 **ReportQueueAndJobAvailability** 的方法來報告是否可以在每天此時列印此工作。 [得知列印工作是否可在此時列印](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)會討論此方法。  
+ 這個範例會示範這兩種方法, 因此, 如果使用者想要使用<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>屬性的旗標, 則先前會提示使用者輸入要使用的方法, 並以 "Y" 回應。 請參閱以下兩種方法的詳細資訊。 最後，應用程式會使用稱為 **ReportQueueAndJobAvailability** 的方法來報告是否可以在每天此時列印此工作。 [得知列印工作是否可在此時列印](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)會討論此方法。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#identifyanddiagnoseproblematicjob)]
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- 若要檢查使用的旗標的列印工作狀態<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>屬性，檢查以查看是否已設定每個相關旗標。 若要查看是否已在一組位元旗標中設定一個位元，標準方法就是以這組旗標做為一個運算元，而旗標本身做為另一個運算元來執行邏輯 AND 運算。 因為旗標本身只會設定一個位元，所以邏輯 AND 的結果是最多設定相同的位元。 若要查明是否如此，只要比較邏輯 AND 的結果與旗標本身。 如需詳細資訊，請參閱 < <xref:System.Printing.PrintJobStatus>，則[& 運算子 (C#參考)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)，和<xref:System.FlagsAttribute>。  
+ 若要使用<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>屬性的旗標來檢查列印工作狀態, 請檢查每個相關的旗標, 以查看是否已設定。 若要查看是否已在一組位元旗標中設定一個位元，標準方法就是以這組旗標做為一個運算元，而旗標本身做為另一個運算元來執行邏輯 AND 運算。 因為旗標本身只會設定一個位元，所以邏輯 AND 的結果是最多設定相同的位元。 若要查明是否如此，只要比較邏輯 AND 的結果與旗標本身。 如需詳細資訊, <xref:System.Printing.PrintJobStatus>請參閱[& 運算子 (C#參考)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)和。 <xref:System.FlagsAttribute>  
   
  對於已設定位元的每個屬性，程式碼會將此回報至主控台畫面，而且有時會建議回應方式。 (下面會討論工作或佇列暫停時所呼叫的 **HandlePausedJob** 方法。)  
   
@@ -73,9 +73,9 @@ ms.locfileid: "67859738"
  [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
  [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
   
- **HandlePausedJob** 方法可讓應用程式的使用者從遠端繼續進行已暫停的工作。 因為列印佇列暫停可能有充分的理由，所以此方法一開始會提示使用者決定是否要繼續進行。 如果答案是"Y"，則<xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType>呼叫方法。  
+ **HandlePausedJob** 方法可讓應用程式的使用者從遠端繼續進行已暫停的工作。 因為列印佇列暫停可能有充分的理由，所以此方法一開始會提示使用者決定是否要繼續進行。 如果答案是「Y」, <xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType>則會呼叫方法。  
   
- 接著會提示使用者決定工作本身是否應該繼續進行，以防萬一其獨立暫停 (與列印佇列無關)。 (比較<xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType>和<xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>。)如果答案是"Y"，則<xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType>被呼叫，否則為<xref:System.Printing.PrintSystemJobInfo.Cancel%2A>呼叫。  
+ 接著會提示使用者決定工作本身是否應該繼續進行，以防萬一其獨立暫停 (與列印佇列無關)。 (比較<xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType>和<xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>)。如果答案是「Y」, 則<xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType>會呼叫, 否則<xref:System.Printing.PrintSystemJobInfo.Cancel%2A>會呼叫。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
  [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
@@ -87,6 +87,6 @@ ms.locfileid: "67859738"
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& 運算子 (C#參考)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
+- [& 運算子 (C#參考)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [WPF 中的文件](documents-in-wpf.md)
 - [列印概觀](printing-overview.md)

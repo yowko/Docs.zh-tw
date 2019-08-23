@@ -3,15 +3,15 @@ title: <userNameSecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
-ms.openlocfilehash: 18769794da8528f085c567264827db5aa6b214f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fed8964e03b80e365fdc5eafd45b4fc372a6e352
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944258"
 ---
 # <a name="usernamesecuritytokenhandlerrequirement"></a>\<userNameSecurityTokenHandlerRequirement>
-提供組態<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>類別或衍生的類別。  
+<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>提供類別或衍生類別的設定。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -41,19 +41,19 @@ ms.locfileid: "61790451"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|membershipProviderName|指定<xref:System.Web.Security.MembershipProvider>，應該由安全性權杖處理常式。|  
+|membershipProviderName|<xref:System.Web.Security.MembershipProvider>指定安全性權杖處理常式應該使用的。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|將指定的安全性權杖處理常式加入至 權杖處理常式集合。|  
+|[\<add>](add.md)|將指定的安全性權杖處理常式加入至權杖處理常式集合。|  
   
 ## <a name="remarks"></a>備註  
- `<userNameSecurityTokenHandlerRequirement>`項目集<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A>屬性時<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>物件從組態初始化。  
+ 元素會在<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>物件<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A>從設定初始化時設定屬性。 `<userNameSecurityTokenHandlerRequirement>`  
   
 ## <a name="example"></a>範例  
   

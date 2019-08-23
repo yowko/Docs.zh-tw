@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1d776730053cd6af3c930a33e13582a8906c4d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769755"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940390"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 啟用在用於 Windows Communication Foundation (WCF) 繫結時，要讀取與寫入的純文字 XML、JavaScript Object Notation (JSON) 訊息編碼和「未經處理」二進位內容。  
@@ -15,7 +15,7 @@ ms.locfileid: "61769755"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<webMessageEncoding>  
   
 ## <a name="syntax"></a>語法  
@@ -31,23 +31,23 @@ ms.locfileid: "61769755"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`maxReadPoolSize`|可以同時讀取，而不需配置新讀取器的訊息數。 較大的集區大小可讓系統容許更多活動失效的情況，但是會產生較大的工作集。 每個內部編碼器 (text、JSON 與 "raw") 都預設有 64 個讀取器。<br /><br /> 增加這個數字會增加記憶體消耗量，但是可讓編碼器做好處理傳入訊息量突然暴增的準備，因為編碼器可以使用集區中已經建立的讀取器，而不必建立新的讀取器。|  
 |`maxWritePoolSize`|可以同時傳送，而不需配置新寫入器的訊息數。 較大的集區大小可讓系統容許更多活動失效的情況，但是會產生較大的工作集。 每個內部編碼器 (text、JSON 與 "raw") 都預設有 16 個寫入器。<br /><br /> 增加這個數字會增加記憶體消耗量，但是可讓編碼器做好處理傳出訊息量突然暴增的準備，因為編碼器可以使用集區中已經建立的寫入器，而不必建立新的寫入器。|  
-|`writeEncoding`|指定要在繫結上發出訊息時使用的字元集編碼方式。 有效值為：<br /><br /> -UnicodeFffeTextEncoding:Unicode Bigendian 編碼方式。<br />-Utf16textencoding:unicodeUnicode 編碼方式。<br />-Utf8TextEncoding:8 位元編碼方式。<br /><br /> 預設為 Utf8TextEncoding。 此屬性的型別為 <xref:System.Text.Encoding>。|  
+|`writeEncoding`|指定要在繫結上發出訊息時使用的字元集編碼方式。 有效值為：<br /><br /> UnicodeFffeTextEncodingUnicode Big Endian 編碼。<br />Utf16TextEncodingUnicode 編碼。<br />Utf8TextEncoding8位編碼。<br /><br /> 預設為 Utf8TextEncoding。 此屬性的型別為 <xref:System.Text.Encoding>。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  編碼是將訊息轉換成位元組序列的處理序， 解碼則是相反的處理序。 這些處理序需要字元編碼的規格。  
@@ -60,7 +60,7 @@ ms.locfileid: "61769755"
   
  `maxReadPoolSize` 和 `maxWritePoolSize` 也可以用來設定要分別配置之讀取器和寫入器的最大數目。 根據預設，將配置 64 個讀取器和 16 個寫入器。  
   
- 預設複雜度條件約束也會設定使用[ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))項目，以防止阻絕服務 (DOS) 類別攻擊試圖使用訊息複雜性困住端點處理資源。  
+ 預設複雜性條件約束也會使用[ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))元素來設定, 以防止拒絕服務 (DOS) 攻擊的類別, 嘗試使用訊息複雜性來系結端點處理資源。  
   
 ## <a name="example"></a>範例  
   
@@ -77,9 +77,9 @@ ms.locfileid: "61769755"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
-- [訊息編碼](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [選擇訊息編碼器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [訊息編碼](message-encoding.md)
+- [選擇訊息編碼器](../../../wcf/feature-details/choosing-a-message-encoder.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

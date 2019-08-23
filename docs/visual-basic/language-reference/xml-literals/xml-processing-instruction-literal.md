@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 3fbb16a4d47801b671d37566573215d3a57afff1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c589d3f4ac6bbb9aa9b2b8f2535888bddbf9c934
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938602"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958473"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 處理指示常值 (Visual Basic)
-常值代表<xref:System.Xml.Linq.XProcessingInstruction>物件。  
+代表<xref:System.Xml.Linq.XProcessingInstruction>物件的常值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,37 +26,37 @@ ms.locfileid: "61938602"
   
 ## <a name="parts"></a>組件  
  `<?`  
- 必要項。 代表 XML 處理指示常值的開頭。  
+ 必要項。 表示 XML 處理指示常值的開頭。  
   
  `piName`  
- 必要項。 名稱指出哪個應用程式的處理指示目標。 無法以"xml"或"XML"開頭。  
+ 必要項。 指出處理指示以哪個應用程式為目標的名稱。 不能以 "xml" 或 "XML" 開頭。  
   
  `piData`  
- 選擇性。 字串，表示應用程式設為目標的`piName`應該處理 XML 文件。  
+ 選擇性。 字串, 指出以`piName`為目標的應用程式應該如何處理 XML 檔。  
   
  `?>`  
- 必要項。 代表處理指示的結尾。  
+ 必要項。 表示處理指示的結尾。  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XProcessingInstruction> 物件。  
   
 ## <a name="remarks"></a>備註  
- XML 處理指示常值會指出應用程式應該如何處理 XML 文件。 當應用程式載入 XML 文件時，應用程式可以檢查以判斷如何處理文件的 XML 處理指示。 應用程式會將解譯的意義`piName`和`piData`。  
+ XML 處理指示常值指出應用程式應該如何處理 XML 檔。 當應用程式載入 XML 檔時, 應用程式可以檢查 XML 處理指示, 以決定如何處理檔。 應用程式會解讀`piName`和`piData`的意義。  
   
- XML 文件常值會使用類似的 XML 處理指示的語法。 如需詳細資訊，請參閱 < [XML 文件常值](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)。  
-  
-> [!NOTE]
->  `piName`與字串"xml"或"XML"，無法開始項目，因為 XML 1.0 規格會保留這些識別項。  
-  
- 您可以指派給變數的 XML 處理指示常值，或將它包含在 XML 文件常值。  
+ XML 檔常值會使用類似于 XML 處理指示的語法。 如需詳細資訊, 請參閱[XML 檔常](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)值。  
   
 > [!NOTE]
->  XML 常值可以跨越多行，而不需要行接續字元。 這可讓您從 XML 文件複製內容，並將它貼到 Visual Basic 程式直接。  
+> `piName`元素的開頭不能是 "xml" 或 "xml" 字串, 因為 xml 1.0 規格會保留這些識別碼。  
   
- Visual Basic 編譯器會將 XML 處理指示常值轉換成呼叫<xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>建構函式。  
+ 您可以將 XML 處理指示常值指派給變數, 或將它包含在 XML 檔常值中。  
+  
+> [!NOTE]
+> XML 常值可以跨越多行, 而不需要行接續字元。 這可讓您從 XML 檔案複製內容, 並將它直接貼到 Visual Basic 程式中。  
+  
+ Visual Basic 編譯器會將 XML 處理指示常值轉換為對此<xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>函式呼叫的呼叫。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立用來識別 XML 文件樣式表處理指示。  
+ 下列範例會建立一個處理指示, 以識別 XML 檔的樣式表單。  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   

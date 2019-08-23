@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10df17f2f21928ab89c65be7fd07afe81c468a07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf285b6e1f703c8776937fa33c7ab5801f04f80f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950165"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived 方法
-取得最後一個完整的封鎖記憶體回收回收的和目前的應用程式定義域所參考之位元組數目。  
+取得最後一次完整、封鎖垃圾收集以及目前應用程式域所參考的位元組數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,39 +38,39 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
   
 ## <a name="parameters"></a>參數  
  `dwAppDomainId`  
- [in]要求的應用程式定義域的識別碼。  
+ 在要求之應用程式域的識別碼。  
   
  `pAppDomainBytesSurvived`  
- [out]在上一個記憶體回收後殘留下來這個應用程式定義域所持有的位元組數目指標。 在完整收集之後, 這個數字是精確且完整。 暫時的集合，這個數字之後可能不完整。 這個參數可以是 `null`。  
+ 脫銷這個應用程式域所持有的最後一次垃圾收集之後, 被回收的位元組數目指標。 在完整集合之後, 此數位會正確且完整。 在暫時集合之後, 此數位可能不完整。 這個參數可以是 `null`。  
   
  `pRuntimeBytesSurvived`  
- [out]從上一個記憶體回收中存活下來的位元組總數目指標。 在完整收集之後, 這個數字代表 managed 堆積保留的位元組數目。 在暫時的集合之後, 這個數字會代表持有即時暫時層代中的位元組數目。 這個參數可以是 `null`。  
+ 脫銷從上一次垃圾收集中未被回收之位元組總數的指標。 在完整集合之後, 此數位代表保留在受控堆積中的位元組數目。 在暫時集合之後, 此數位代表暫時層代中存留的位元組數目。 這個參數可以是 `null`。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|COR_E_APPDOMAINUNLOADED|應用程式定義域已卸載或不存在。|  
+|COR_E_APPDOMAINUNLOADED|應用程式域已卸載或不存在。|  
   
 ## <a name="remarks"></a>備註  
- 完整的封鎖記憶體回收; 之後，才會更新統計資料也就是的集合，其中包含所有層代和，以停止應用程式，這時集合就會發生。 比方說，<xref:System.GC.Collect?displayProperty=nameWithType>方法多載會執行完整、 阻斷式收集。 並行記憶體回收會在背景進行，並不會封鎖應用程式。  
+ 只有在完整的封鎖垃圾收集之後, 才會更新統計資料。也就是包含所有層代的集合, 而且會在收集時停止應用程式。 例如, <xref:System.GC.Collect?displayProperty=nameWithType>方法多載會執行完整的封鎖集合。 並行垃圾收集會在背景進行, 而且不會封鎖應用程式。  
   
- `GetCurrentSurvived`方法相當於未受管理的受管理<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>屬性。  
+ 方法是 managed <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>屬性的不受管理對等。 `GetCurrentSurvived`  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MetaHost.h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
 - [ICLRAppDomainResourceMonitor 介面](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [應用程式定義域資源監視](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [應用程式定義域資源監視](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

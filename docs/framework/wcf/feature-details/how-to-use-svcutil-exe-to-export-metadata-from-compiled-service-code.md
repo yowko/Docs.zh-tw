@@ -2,14 +2,14 @@
 title: HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 40c684cbc1b14bf14d3ca23cbc044020e36b85f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b8ddbaf896ee4c6ea8b6f8e8ce7d0ecef28140ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650221"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932563"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>作法：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
 Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型，如下：  
   
 - 若要使用 Svcutil.exe 針對組件集合匯出所有編譯服務合約的中繼資料，請指定組件為輸入參數。 這是預設行為。  
@@ -19,7 +19,7 @@ Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型�
 - 若要匯出組件集合內所有資料合約類型，請使用 `/dataContractOnly` 選項。  
   
 > [!NOTE]
->  使用 `/reference` 選項為任何相依組件指定檔案路徑。  
+> 使用 `/reference` 選項為任何相依組件指定檔案路徑。  
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>若要匯出編譯服務合約的中繼資料  
   
@@ -28,7 +28,7 @@ Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型�
 2. 執行 Svcutil.exe 處理編譯組件。  
   
     > [!NOTE]
-    >  您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。  
+    > 您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。  
   
     ```  
     svcutil.exe Contracts.dll  
@@ -56,7 +56,7 @@ Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型�
 3. 使用 `/serviceName` 參數指定服務組態名稱，以 Svcutil.exe 處理編譯服務可執行檔。  
   
     > [!NOTE]
-    >  您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。  
+    > 您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
@@ -69,7 +69,7 @@ Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型�
 2. 執行 Svcutil.exe 處理編譯組件，將 `/dataContract` 參數指定只產生資料合約的中繼資料。  
   
     > [!NOTE]
-    >  您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。  
+    > 您可能需要使用 `/reference` 參數來指定任何相依組件的檔案路徑。  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  

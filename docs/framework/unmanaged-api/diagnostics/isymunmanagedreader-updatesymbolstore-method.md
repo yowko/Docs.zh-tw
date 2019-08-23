@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfc4507557102e19d95f1b746b3a76a231882d7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d84d4fccb2cb4e500f07f6bfbfb93b8c7b81f5d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938998"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore 方法
-以差異符號存放區來更新現有的符號存放區。 這個方法用於編輯後繼續的案例中，以更新以符合原始可攜式執行檔 (PE) 的差異符號存放區。  
+以差異符號存放區來更新現有的符號存放區。 這個方法是在編輯後繼續案例中使用, 以更新符號存放區, 以符合原始可移植執行檔 (PE) 檔案的差異。  
   
 > [!NOTE]
->  您需要指定的其中之一`filename`或`pIStream`不可同時為兩者的參數。 如果`filename`指定符號存放區將會更新該檔案中的符號。 如果`pIStream`未指定，將使用中的資料更新存放區<xref:System.Runtime.InteropServices.ComTypes.IStream>。  
+> 您只需要指定其中一個`filename`或`pIStream`參數, 而不是兩者。 如果`filename`指定了, 符號存放區將會以該檔案中的符號進行更新。 如果`pIStream`指定了, 則會使用<xref:System.Runtime.InteropServices.ComTypes.IStream>中的資料來更新存放區。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,16 +40,16 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>參數  
  `filename`  
- [in]包含符號存放區的檔案名稱。  
+ 在包含符號存放區的檔案名。  
   
  `pIStream`  
- [in]檔案資料流，做為替代`filename`參數。  
+ 在檔案資料流程, 用來`filename`做為參數的替代方法。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ 如果方法成功, 則為 S_OK;否則, E_FAIL 或其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **標頭：** CorSym .idl, CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

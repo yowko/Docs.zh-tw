@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 9456340834c06e87f977cd784a37f7436523d29e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 31a5aa0f147d43e94ce885c541f11b9aec4ae6d2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743145"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938658"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>實作商務邏輯 (LINQ to SQL)
 本主題中的「商務邏輯」一詞，指的是您套用到資料的任何自訂規則或驗證測試，待套用之後，資料才會在資料庫中插入、更新或刪除。 商務邏輯有時也稱為「商務規則」或「定義域邏輯」。 在 N-Tier 應用程式中，這通常會設計為邏輯層，以便與展示層或資料存取層分開修改。 資料存取層可在資料庫中的資料更新、插入或刪除之前或之後叫用 (Invoke) 商務邏輯。  
   
- 商務邏輯可以簡單如結構描述驗證，用來確定欄位的型別與資料表資料行相容。 或者也可以包含一組物件，以各種複雜的方式互動。 這些規則可實作為資料庫上的預存程序 (Stored Procedure) 或實作為記憶體中的物件。 不過實作商務邏輯，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可讓您將商務邏輯分開資料存取程式碼使用部分類別和部分方法。  
+ 商務邏輯可以簡單如結構描述驗證，用來確定欄位的型別與資料表資料行相容。 或者也可以包含一組物件，以各種複雜的方式互動。 這些規則可實作為資料庫上的預存程序 (Stored Procedure) 或實作為記憶體中的物件。 不過, 商務邏輯會實作為[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , 可讓您使用部分類別和部分方法, 將商務邏輯與資料存取程式碼分開。  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>LINQ to SQL 如何叫用商務邏輯  
- 當以手動方式或使用物件關聯式設計工具、 SQLMetal，您可以產生在設計階段的實體類別時，則會將它定義為部分類別。 這表示，您可以在不同的程式碼檔案中，定義包含自訂商務邏輯之實體類別的另一個部分。 在編譯階段，這兩個部分會合併成單一類別。 但如果您有使用物件關聯式設計工具或 SQLMetal 重新產生實體類別，可以這麼做，將不會修改您的類別部分。  
+ 當您在設計階段產生實體類別時, 不論是手動或使用物件關聯式設計工具或 SQLMetal, 都會將它定義為部分類別。 這表示，您可以在不同的程式碼檔案中，定義包含自訂商務邏輯之實體類別的另一個部分。 在編譯階段，這兩個部分會合併成單一類別。 但是, 如果您必須使用物件關聯式設計工具或 SQLMetal 重新產生實體類別, 您可以這麼做, 而您的類別部分將不會被修改。  
   
  定義實體和 <xref:System.Data.Linq.DataContext> 的部分類別包含部分方法。 您可使用這些方法當做擴充點，在實體或實體屬性進行任何更新、插入或刪除之前和之後套用商務邏輯。 部分方法可視為編譯時間事件。 程式碼產生器會定義方法簽章，當 `DataContext` 被呼叫時，會在 get 和 set 屬性存取子、<xref:System.Data.Linq.DataContext.SubmitChanges%2A> 建構函式，以及某些情況下在幕後呼叫方法。 不過，如果您沒有實作特定部分方法，則對該方法的所有參考以及定義將在編譯時期移除。  
   
  您可以在另外一個程式碼檔案撰寫的實作定義中，執行任何必要的自訂邏輯。 您可以使用部分類別本身當做定義域層，或可以從部分方法的實作定義呼叫到另外的物件。 無論使用哪種方式，商務邏輯都能完全與資料存取程式碼和展示層程式碼分開。  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>詳述擴充點  
- 下列範例顯示的物件關聯式設計工具所產生的程式碼的一部分`DataContext`有兩個資料表的類別：`Customers`和`Orders`。 請注意，這個類別中的每個資料表都定義了 Insert、Update 和 Delete 方法。  
+ 下列範例會顯示具有兩個數據表之`DataContext`類別的物件關聯式設計工具所產生的部分程式碼: `Customers`和`Orders`。 請注意，這個類別中的每個資料表都定義了 Insert、Update 和 Delete 方法。  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- 如果您在部分類別中實作 Insert、Update 和 Delete 方法，則當 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 被呼叫時，<xref:System.Data.Linq.DataContext.SubmitChanges%2A> 執行階段會呼叫這些方法，而不會呼叫自己的預設方法。 這可讓您覆寫建立/讀取/更新/刪除作業的預設行為。 如需詳細資訊，請參閱[逐步解說：自訂插入、 更新和刪除實體類別的行為](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)。  
+ 如果您在部分類別中實作 Insert、Update 和 Delete 方法，則當 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 被呼叫時，<xref:System.Data.Linq.DataContext.SubmitChanges%2A> 執行階段會呼叫這些方法，而不會呼叫自己的預設方法。 這可讓您覆寫建立/讀取/更新/刪除作業的預設行為。 如需詳細資訊，請參閱[逐步解說：自訂實體類別](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)的插入、更新和刪除行為。  
   
  `OnCreated` 方法是在類別建構函式中呼叫的。  
   
@@ -155,7 +155,7 @@ public string CustomerID
 }  
 ```  
   
- 在您的類別部分中，您可以撰寫方法的實作定義。 在 Visual Studio 中，輸入之後`partial`您會看到 IntelliSense 中的其他部分類別的方法定義。  
+ 在您的類別部分中，您可以撰寫方法的實作定義。 在 Visual Studio 中, 輸入`partial`之後, 您將會在類別的另一個部分中, 看到方法定義的 IntelliSense。  
   
 ```vb  
 Partial Public Class Customer  
@@ -181,11 +181,11 @@ partial class Customer
   
  [逐步解說：自訂實體類別的插入、更新和刪除行為](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [逐步解說：將驗證新增至實體類別](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
+ [逐步解說：將驗證加入至實體類別](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>另請參閱
 
 - [部分類別和方法](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
-- [部分方法](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [部分方法](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)
 - [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e9b9221aa2f5e048a94c225660ba2ac9214549c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64cf11ec294486fdc14d424e731eac8e4745d892
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780894"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939859"
 ---
 # <a name="icordebugmetadatalocator-interface"></a>ICorDebugMetaDataLocator 介面
 提供中繼資料資訊給偵錯工具。  
@@ -35,7 +35,7 @@ ms.locfileid: "61780894"
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "61780894"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

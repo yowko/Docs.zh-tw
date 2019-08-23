@@ -2,20 +2,20 @@
 title: <security> 的 <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89fb1f766906c02a5e3ef9a9cdd1aef94ede80fa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670567"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936719"
 ---
-# <a name="security-of-custombinding"></a>\<安全性 > 的\<customBinding >
+# <a name="security-of-custombinding"></a>\<customBinding > 的\<安全性 >
 指定自訂繫結的安全性選項。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -51,8 +51,8 @@ ms.locfileid: "61670567"
 |authenticationMode|選擇性。 指定啟動器和回應程式之間使用的驗證模式。 所有值如下所示。<br /><br /> 預設為 `sspiNegotiated`。|  
 |defaultAlgorithmSuite|選擇性。 設定訊息加密和金鑰包裝演算法。 這些演算法和金鑰大小是由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 類別所決定。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。<br /><br /> 可能的值如下所示。 預設值為 `Basic256`。<br /><br /> 當使用另一個平台，且該平台選擇一組和預設值不同的演算法時，則使用這個屬性。 在修改這個設定時，您應該了解相關演算法的優點和缺點。 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。|  
 |includeTimestamp|布林值，指定每個訊息是否包含時間戳記。 預設為 `true`。|  
-|keyEntropyMode|指定保護訊息安全之金鑰的計算方法。 金鑰可僅根據用戶端金鑰資料、僅根據服務金鑰資料，或兩者的組合。 有效值為<br /><br /> -   `ClientEntropy`：工作階段金鑰根據用戶端所提供的金鑰資料。<br />-   `ServerEntropy`：工作階段金鑰根據伺服器所提供的金鑰資料。<br />-   `CombinedEntropy`：工作階段金鑰根據用戶端和服務所提供的金鑰資料。<br /><br /> 預設為 `CombinedEntropy`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。|  
-|messageProtectionOrder|設定順序，訊息層級安全性演算法會以這個順序套用至訊息。 有效值包括以下的值：<br /><br /> -   `SignBeforeEncrypt`：先簽署，再加密。<br />-   `SignBeforeEncryptAndEncryptSignature`：先簽署、 加密，再加密簽章。<br />-   `EncryptBeforeSign`：先加密，再簽署。<br /><br /> 預設值取決於所使用的 WS-Security 版本。 使用 WS-Security 1.1 時，預設值為 `SignBeforeEncryptAndEncryptSignature`。 使用 WS-Security 1.0 時，預設值為 `SignBeforeEncrypt`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.MessageProtectionOrder>。|  
+|keyEntropyMode|指定保護訊息安全之金鑰的計算方法。 金鑰可僅根據用戶端金鑰資料、僅根據服務金鑰資料，或兩者的組合。 有效值為<br /><br /> -   `ClientEntropy`：工作階段金鑰是以用戶端提供的金鑰資料為基礎。<br />-   `ServerEntropy`：工作階段金鑰是根據伺服器所提供的重要資料。<br />-   `CombinedEntropy`：工作階段金鑰是以用戶端和服務提供的金鑰資料為基礎。<br /><br /> 預設為 `CombinedEntropy`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>。|  
+|messageProtectionOrder|設定順序，訊息層級安全性演算法會以這個順序套用至訊息。 有效值包括以下的值：<br /><br /> -   `SignBeforeEncrypt`：先簽署, 再進行加密。<br />-   `SignBeforeEncryptAndEncryptSignature`：先簽署、加密, 然後加密簽章。<br />-   `EncryptBeforeSign`：先加密, 然後再簽署。<br /><br /> 預設值取決於所使用的 WS-Security 版本。 使用 WS-Security 1.1 時，預設值為 `SignBeforeEncryptAndEncryptSignature`。 使用 WS-Security 1.0 時，預設值為 `SignBeforeEncrypt`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.MessageProtectionOrder>。|  
 |messageSecurityVersion|選擇性。 設定使用的 WS-Security 版本。 有效值包括以下的值：<br /><br /> -   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-   WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> 預設值為 WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11，而且可以使用 XML 格式單純表示為 `Default`。 此屬性的型別為 <xref:System.ServiceModel.MessageSecurityVersion>。|  
 |requireDerivedKeys|布林值，指定是否可以從原始的證明金鑰衍生金鑰。 預設為 `true`。|  
 |requireSecurityContextCancellation|選擇性。 布林值，指定當不再需要安全性內容時是否應取消及終止它。 預設為 `true`。|  
@@ -88,28 +88,28 @@ ms.locfileid: "61670567"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定目前發行的權杖。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。|  
-|[\<localClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|指定此繫結之本機用戶端的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
-|[\<localServiceSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|指定此繫結之本機服務的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。|  
-|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
+|[\<issuedTokenParameters>](issuedtokenparameters.md)|指定目前發行的權杖。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。|  
+|[\<localClientSettings>](localclientsettings-element.md)|指定此繫結之本機用戶端的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
+|[\<localServiceSettings>](localservicesettings-element.md)|指定此繫結之本機服務的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
- 如需使用此項目的詳細資訊，請參閱 < [SecurityBindingElement 驗證模式](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)和[How to:建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
+ 如需使用此元素的詳細資訊, 請參閱[SecurityBindingElement 驗證模式](../../../wcf/feature-details/securitybindingelement-authentication-modes.md)和[如何:使用 SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)建立自訂系結。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用自訂繫結設定安全性。 它會顯示如何使用自訂繫結同時啟用訊息層級安全性和安全傳輸。 當在用戶端和服務之間傳輸訊息需要安全傳輸，且同時必須保護訊息層級上訊息的安全時，這是相當有用的。 系統提供的繫結不支援這個組態。  
   
- 服務組態定義的自訂繫結，使用 TLS/SSL 通訊協定和 Windows 訊息安全性，支援受保護的 TCP 通訊。 自訂繫結使用服務憑證來驗證傳輸層級上的服務，並在用戶端和服務之間進行傳輸時保護訊息。 這透過[ \<Custombinding> >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)繫結項目。 服務的憑證是使用服務行為來設定。  
+ 服務組態定義的自訂繫結，使用 TLS/SSL 通訊協定和 Windows 訊息安全性，支援受保護的 TCP 通訊。 自訂繫結使用服務憑證來驗證傳輸層級上的服務，並在用戶端和服務之間進行傳輸時保護訊息。 這是由[ \<sslStreamSecurity >](sslstreamsecurity.md)繫結項目來完成。 服務的憑證是使用服務行為來設定。  
   
- 此外，自訂繫結使用 Windows 認證類型 (預設認證類型) 的訊息安全性。 這透過[安全性](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)繫結項目。 如果可以使用 Kerberos 驗證機制，則會使用訊息層級安全性來驗證用戶端和服務。 如果 Kerberos 驗證機制無法使用，則使用 NTLM 驗證。 NTLM 會對服務驗證用戶端，但不會對用戶端驗證服務。 [安全性](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)繫結項目設定為使用`SecureConversation`authenticationType，結果會在用戶端和服務上的安全性工作階段的建立。 若要讓服務的雙工合約能運作，這是必要的。 如需有關如何執行此範例的詳細資訊，請參閱 <<c0> [ 自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)。  
+ 此外，自訂繫結使用 Windows 認證類型 (預設認證類型) 的訊息安全性。 這是由[安全性](security-of-custombinding.md)繫結項目來完成。 如果可以使用 Kerberos 驗證機制，則會使用訊息層級安全性來驗證用戶端和服務。 如果 Kerberos 驗證機制無法使用，則使用 NTLM 驗證。 NTLM 會對服務驗證用戶端，但不會對用戶端驗證服務。 [安全性](security-of-custombinding.md)繫結項目是設定為使用`SecureConversation` authenticationType, 這會導致在用戶端和服務上建立安全性會話。 若要讓服務的雙工合約能運作，這是必要的。 如需執行此範例的詳細資訊, 請參閱[自訂](../../../wcf/samples/custom-binding-security.md)系結安全性。  
   
 ```xml  
 <configuration>
@@ -171,9 +171,9 @@ ms.locfileid: "61670567"
 - <xref:System.ServiceModel.Configuration.SecurityElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [如何：使用 SecurityBindingElement 建立自訂系結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自訂繫結安全性](../../../wcf/samples/custom-binding-security.md)

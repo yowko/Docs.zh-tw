@@ -13,27 +13,27 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: a659de62965d17e965eee2f750337a08ae1801e0
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 6229d8965949641105cd0e9708474c3249d52d1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053726"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965714"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>HOW TO：判斷在 Windows Forms StatusBar 控制項中按下了哪個面板
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip>及<xref:System.Windows.Forms.ToolStripStatusLabel>控制項會取代及新增功能<xref:System.Windows.Forms.StatusBar>並<xref:System.Windows.Forms.StatusBarPanel>控制項，不過，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控制項保留回溯相容性和未來使用，如果您選擇。  
+> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel>和控制項會取代和加入和<xref:System.Windows.Forms.StatusBarPanel>控制項的功能; 不過, 如果您這樣做, 和控制項就會保留, 以提供回溯相容性及未來使用。 <xref:System.Windows.Forms.ToolStripStatusLabel> <xref:System.Windows.Forms.StatusStrip>決定.  
   
- 來計劃[StatusBar 控制項](statusbar-control-windows-forms.md)回應使用者點選動作，請使用 case 陳述式內的控制項<xref:System.Windows.Forms.StatusBar.PanelClick>事件。 事件包含引數 （面板引數），其中包含的參考已按下 的<xref:System.Windows.Forms.StatusBarPanel>。 使用此參考，您就可以判斷所按的面板的索引，並依此進行程式設計。  
+ 若要程式設計[狀態列控制項](statusbar-control-windows-forms.md)以回應使用者的點擊, 請在<xref:System.Windows.Forms.StatusBar.PanelClick>事件內使用 case 語句。 事件包含引數 (panel 引數), 其中包含所按下的<xref:System.Windows.Forms.StatusBarPanel>參考。 使用此參考, 您可以判斷所按下的面板索引, 並據以進行程式。  
   
 > [!NOTE]
->  請確認<xref:System.Windows.Forms.StatusBar>控制項的<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>屬性設定為`true`。  
+> 請確定<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>控制項的屬性設定為`true`。 <xref:System.Windows.Forms.StatusBar>  
   
-### <a name="to-determine-which-panel-was-clicked"></a>若要判斷已按下的面板  
+### <a name="to-determine-which-panel-was-clicked"></a>判斷按一下的面板  
   
-1. 在 <xref:System.Windows.Forms.StatusBar.PanelClick>事件處理常式，使用`Select Case`（在 Visual Basic) 或`switch case`(VisualC#或視覺效果C++) 陳述式來判斷已按下的面板藉由檢查事件引數中所按面板的索引。  
+1. `switch case` `Select Case`在事件處理常式中, 使用 (在 Visual Basic 中) 或 ( C# visual 或C++visual) 語句, 藉由檢查事件引數中已按下之面板的索引來判斷按一下的面板。 <xref:System.Windows.Forms.StatusBar.PanelClick>  
   
-     下列程式碼範例的需要，請在目前狀態，在表單中，<xref:System.Windows.Forms.StatusBar>控制項中， `StatusBar1`，並將兩個<xref:System.Windows.Forms.StatusBarPanel>物件`StatusBarPanel1`和`StatusBarPanel2`。  
+     下列程式碼<xref:System.Windows.Forms.StatusBar>範例需要`StatusBar1`控制項的目前狀態、和兩個<xref:System.Windows.Forms.StatusBarPanel>物件, `StatusBarPanel1`以及`StatusBarPanel2`。  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -79,7 +79,7 @@ ms.locfileid: "66053726"
        }  
     ```  
   
-     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (視覺C#效果, C++視覺效果)將下列程式碼放在表單的函式中, 以註冊事件處理常式。  
   
     ```csharp  
     this.statusBar1.PanelClick += new   
@@ -98,5 +98,5 @@ ms.locfileid: "66053726"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [如何：設定狀態列面板的大小](how-to-set-the-size-of-status-bar-panels.md)
-- [逐步解說：在執行階段更新狀態列資訊](walkthrough-updating-status-bar-information-at-run-time.md)
+- [逐步解說：在執行時間更新狀態列資訊](walkthrough-updating-status-bar-information-at-run-time.md)
 - [StatusBar 控制項概觀](statusbar-control-overview-windows-forms.md)

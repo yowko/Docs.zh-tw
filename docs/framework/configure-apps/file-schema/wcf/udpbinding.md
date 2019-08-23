@@ -2,12 +2,12 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 84a5bc763f898b3d323a6cee468c6e22d27d85a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 743eaa281fef233ddc2e8af5cee890bd10ce0963
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788202"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941182"
 ---
 # <a name="udpbinding"></a>\<udpBinding>
 用來設定 <xref:System.ServiceModel.UdpBinding> 繫結的組態元素。  
@@ -58,11 +58,11 @@ ms.locfileid: "61788202"
 |`maxReceivedMessageSize`|正整數，定義在使用此繫結設定之通道上可以接收的訊息大小上限 (以位元組為單位，包括標頭)。 如果對收件者而言訊息太大，寄件者便會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設為 65,536 個位元組。|  
 |`maxRetransmitCount`|指定重新傳輸訊息數目上限的整數值。|  
 |`multicastInterfaceId`|指定多點傳送介面 ID 的整數值。|  
-|`name`|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 每一個繫結都有一個 `name` 和 `namespace` 屬性，兩者結合在一起便可在服務的中繼資料中唯一識別各個繫結。 此外，這個名稱在相同型別的繫結中也是唯一的。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需有關預設組態和無名稱繫結和行為的詳細資訊，請參閱 < [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md)並[Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。|  
+|`name`|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 每一個繫結都有一個 `name` 和 `namespace` 屬性，兩者結合在一起便可在服務的中繼資料中唯一識別各個繫結。 此外，這個名稱在相同型別的繫結中也是唯一的。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊, 請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|  
 |`openTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |`receiveTimeout`|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:10:00。|  
 |`sendTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
-|`textEncoding`|設定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> -BigEndianUnicode:Unicode BigEndian 編碼方式。<br />Unicode:16 位元編碼方式。<br />-UTF8:8 位元編碼<br /><br /> 預設為 UTF8。 此屬性的型別為 <xref:System.Text.Encoding>。|  
+|`textEncoding`|設定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> BigEndianUnicodeUnicode BigEndian 編碼。<br />消除16位編碼。<br />UTF88位編碼<br /><br /> 預設為 UTF8。 此屬性的型別為 <xref:System.Text.Encoding>。|  
 |`timeToLive`|指定繫結存留時間的 timespan 值。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -75,13 +75,13 @@ ms.locfileid: "61788202"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings>](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
- UdpBinding 允許 WCF 服務透過 UDP 傳輸進行通訊。 它允許 「 射後不理 」 訊息交換其中用戶端將訊息傳送至服務，而不預期有回應傳回。  
+ UdpBinding 允許 WCF 服務透過 UDP 傳輸進行通訊。 它允許「引發並忘記」訊息交換, 其中用戶端會將訊息傳送至服務, 並預期不會傳迴響應。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何設定<xref:System.ServiceModel.UdpBinding>使用 <`udpBinding`> 項目。  
+ 下列範例示範如何<xref:System.ServiceModel.UdpBinding>使用 <`udpBinding`> 元素來設定。  
   
 ```xml  
 <udpBinding>
@@ -109,7 +109,7 @@ ms.locfileid: "61788202"
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

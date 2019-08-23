@@ -6,22 +6,22 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: dadce167de31ad033e5e062c57f1d735af75648d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 22bb78040b023a59fd46f0a2be45659d6d7220b8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626023"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914517"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>實作 UI 自動化 Scroll 控制項模式
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本主題將介紹實作 <xref:System.Windows.Automation.Provider.IScrollProvider>的方針和慣例，包括事件和屬性的相關資訊。 其他參考的連結列於主題的結尾。  
   
  <xref:System.Windows.Automation.ScrollPattern> 控制項模式是用來支援放有一組子項目的捲動式容器控制項。 控制項不一定要使用捲軸才能支援捲動功能，不過它通常會這麼做。  
   
- ![沒有捲軸的捲軸控制項。](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
+ ![不含捲軸的滾動控制項。](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
 不使用捲軸的捲動控制項範例  
   
  如需實作此控制項的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
@@ -50,12 +50,12 @@ ms.locfileid: "64626023"
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|屬性|None|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|方法|無|  
   
  此控制項模式沒有任何相關聯的事件。  
   

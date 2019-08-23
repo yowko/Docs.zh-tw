@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56fe777a3bca1e2b54b61d1586f78a2df4fb475f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963816"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>傳回數值序列的平均值
 <xref:System.Linq.Enumerable.Average%2A> 運算子會計算數值序列的平均值。  
   
 > [!NOTE]
->  整數值 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 `Average` 轉譯會計算為整數，而不是雙精度浮點數 (Double)。  
+> 整數值 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 `Average` 轉譯會計算為整數，而不是雙精度浮點數 (Double)。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回 `Freight` 資料表中 `Orders` 值的平均值。  

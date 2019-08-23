@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a62bd3507c14e42798c903ae51edb0187e666c8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 46cf37ee800c05eb7fe12e8491ad3b2130c3a04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663755"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920813"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > 元素
 判斷日期和時間剖析方法是否使用一組已調整的規則來剖析包含 day、month、hour 和 AM/PM 指示項的日期字串。  
@@ -68,7 +68,7 @@ ms.locfileid: "69663755"
  <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>元素不會影響、 、<xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>和<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>方法。 `<EnableAmPmParseAdjustment>`  
   
 > [!IMPORTANT]
->  在 .NET Core 和 .NET Native 中, 根據預設會啟用已調整的 AM/PM 剖析規則。  
+> 在 .NET Core 和 .NET Native 中, 根據預設會啟用已調整的 AM/PM 剖析規則。  
   
  如果未啟用剖析調整規則, 則會將字串的第一個數位視為12小時制的小時, 而除了 AM/PM 指示項以外的字串其餘部分會被忽略。 剖析方法所傳回的日期和時間是由目前的日期和從日期字串解壓縮的日小時所組成。  
   

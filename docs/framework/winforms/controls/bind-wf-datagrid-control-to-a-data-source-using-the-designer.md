@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: de8b8d16f45221fbafe9f61ca634f144d8f6f6ae
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 665a1af990aaf615c763c1c2eae508024d9de5c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040004"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917833"
 ---
-# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>作法：使用設計工具將 Windows Forms DataGrid 控制項繫結至資料來源
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>HOW TO：使用設計工具將 Windows Forms DataGrid 控制項繫結至資料來源
 
 > [!NOTE]
->            <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。
+> <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。
 
  Windows Forms <xref:System.Windows.Forms.DataGrid>控制項是特別設計來顯示資料來源中的資訊。 在設計階段, 您可以藉由設定<xref:System.Windows.Forms.DataGrid.DataSource%2A>和<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性, 或在<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>執行時間呼叫方法來系結控制項。 雖然您可以顯示來自各種資料來源的資料, 但最常見的來源是資料集和資料檢視。
 

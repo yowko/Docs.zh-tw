@@ -3,15 +3,15 @@ title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 2f0040fb7084b9d53adbd1a114f1cfc62d58e5a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 286ae88946692e6894ca3c7ee9e1348415c84ade
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793753"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943591"
 ---
 # <a name="systemidentitymodel"></a>\<system.identityModel>
-提供啟用應用程式中的 Windows Identity Foundation (WIF) 選項的設定。  
+提供在應用程式中啟用 Windows Identity Foundation (WIF) 選項的設定。  
   
  \<system.identityModel>  
   
@@ -26,13 +26,13 @@ ms.locfileid: "61793753"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- None  
+ 無  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
+|[\<identityConfiguration>](identityconfiguration.md)|指定服務層級的身分識別設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -41,10 +41,10 @@ ms.locfileid: "61793753"
 |`<configuration>`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
 ## <a name="remarks"></a>備註  
- 新增`<system.identityModel>`區段來設定服務或應用程式以使用 Windows Identity Foundation (WIF) 組態檔。 `<system.identityModel>`項目由<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>類別。  
+ `<system.identityModel>`將區段新增至設定檔, 將服務或應用程式設定為使用 Windows Identity Foundation (WIF)。 `<system.identityModel>`元素是<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>由類別表示。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何新增`<system.identityModel>`組態檔的區段。 您必須先新增底下的組態區段和命名空間宣告`<configSections>`項目。 然後您可以新增`<system.IdentityModel>`至組態檔來指定一或多個身分識別組態項目。  
+ 下列範例顯示如何將`<system.identityModel>`區段新增至設定檔。 您必須先在`<configSections>`元素下新增設定區段和命名空間宣告。 接著, 您可以將`<system.IdentityModel>`元素新增至設定檔, 以指定一或多個身分識別設定。  
   
 ```xml  
 <configuration>  

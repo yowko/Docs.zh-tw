@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 99c18bd5b779845d52831b4a9591eaf4d5e5530b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659230"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920955"
 ---
 # <a name="remove-element-for-bypasslist-network-settings"></a>\<移除 bypasslist 的 > 元素 (網路設定)
 
@@ -61,7 +61,7 @@ ms.locfileid: "69659230"
 
 `address`屬性的值應該是描述一組 IP 位址或主機名稱的正則運算式。
 
-如需正則運算式的詳細資訊, 請參閱。[.NET Framework 正則運算式](../../../../../docs/standard/base-types/regular-expressions.md)。
+如需正則運算式的詳細資訊, 請參閱。[.NET Framework 正則運算式](../../../../standard/base-types/regular-expressions.md)。
 
 ## <a name="configuration-files"></a>組態檔
 

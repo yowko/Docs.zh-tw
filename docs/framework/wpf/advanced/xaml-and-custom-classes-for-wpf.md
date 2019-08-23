@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 9fe53ed4d677f5604911c02d0426ed1b567d51e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917326"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF 的 XAML 和自訂類別
 通用語言執行平臺 (CLR) 架構中所實做的 XAML 支援以任何 common language runtime (CLR) 語言定義自訂類別或結構, 然後使用 XAML 標記存取該類別的功能。 您可以在相同的標記檔案內混用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定義的類型與您的自訂類型，方法一般是透過將自訂類型對應至 XAML 命名空間前置詞。 本主題討論自訂類別必須滿足才能用作 XAML 項目的需求。  
@@ -69,7 +69,7 @@ ms.locfileid: "68400829"
  若要以 CLR 事件的形式使用, 必須在支援無參數的函式的類別上, 或在可于衍生類別上存取事件的抽象類別上, 將事件公開為公用事件。 為了方便地當做路由事件使用, 您的 clr 事件應該`add`會執行明確的和`remove`方法, 這會新增和移除 CLR 事件簽章的處理常式, 並將這些處理常式<xref:System.Windows.UIElement.AddHandler%2A>轉送至和<xref:System.Windows.UIElement.RemoveHandler%2A>方法. 這些方法會在附加事件的執行個體上新增或移除路由事件處理常式存放區的處理常式。  
   
 > [!NOTE]
->  您可以使用<xref:System.Windows.UIElement.AddHandler%2A>來直接為路由事件註冊處理常式, 並故意不要定義會公開路由事件的 CLR 事件。 通常不會建議您使用此方式，因為事件不會啟用用於附加處理常式的 XAML 屬性語法，而且產生的類別將針對該類型的功能提供較不容易明瞭的 XAML 檢視。  
+> 您可以使用<xref:System.Windows.UIElement.AddHandler%2A>來直接為路由事件註冊處理常式, 並故意不要定義會公開路由事件的 CLR 事件。 通常不會建議您使用此方式，因為事件不會啟用用於附加處理常式的 XAML 屬性語法，而且產生的類別將針對該類型的功能提供較不容易明瞭的 XAML 檢視。  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>撰寫集合屬性  
@@ -92,7 +92,7 @@ ms.locfileid: "68400829"
  CLR 中的所有這些類型都會有 `Add` 方法，而 XAML 處理器使用此方法，在建立物件圖形時，將項目新增至基礎集合。  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 處理器`List`不`Dictionary`支援泛型<xref:System.Collections.Generic.IList%601>和<xref:System.Collections.Generic.IDictionary%602>介面 (和) 進行集合偵測。 不過, <xref:System.Collections.Generic.List%601>您可以使用類別作為基類, 因為<xref:System.Collections.IList>它會直接執行, 或<xref:System.Collections.Generic.Dictionary%602>當做基類, 因為它會<xref:System.Collections.IDictionary>直接實作為。  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 處理器`List`不`Dictionary`支援泛型<xref:System.Collections.Generic.IList%601>和<xref:System.Collections.Generic.IDictionary%602>介面 (和) 進行集合偵測。 不過, <xref:System.Collections.Generic.List%601>您可以使用類別作為基類, 因為<xref:System.Collections.IList>它會直接執行, 或<xref:System.Collections.Generic.Dictionary%602>當做基類, 因為它會<xref:System.Collections.IDictionary>直接實作為。  
   
  當您宣告採用集合的屬性時，請注意如何在類型的新執行個體中初始化該屬性值。 如果您未將屬性實作為相依性屬性，則讓屬性使用可呼叫集合類型建構函式的支援欄位就已足夠。 如果您的屬性是相依性屬性，則可能需要將集合屬性初始化為預設類型建構函式的一部分。 這是因為相依性屬性會從中繼資料取得其預設值，而且您通常不想要集合屬性的初始值成為靜態共用集合。 一個包含類型執行個體應該要有一個集合執行個體。 如需詳細資訊，請參閱[自訂相依性屬性](custom-dependency-properties.md)。  
   

@@ -3,15 +3,15 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 34643d10ef1ed2e87152e5013634e62859e0594e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9505970c1fd7fcdfe62d3c6ef58f5d653fab4106
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941999"
 ---
 # <a name="add"></a>\<add>
-將指定的安全性權杖處理常式加入至 權杖處理常式集合。  
+將指定的安全性權杖處理常式加入至權杖處理常式集合。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -40,25 +40,25 @@ ms.locfileid: "61791764"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|類型|要加入的權杖處理常式的 CLR 型別名稱。 如需有關如何指定`type`屬性，請參閱[自訂型別參考](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)。|  
+|型別|要加入之標記處理常式的 CLR 型別名稱。 如需如何指定屬性的`type`詳細資訊, 請參閱[自訂類型參考](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|提供組態<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>類別，<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別或其中一個這些類別的衍生的類別。|  
-|[\<sessionTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md)|提供組態<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>類別或衍生的類別。|  
-|[\<userNameSecurityTokenHandlerRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/usernamesecuritytokenhandlerrequirement.md)|提供組態<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>類別或衍生的類別。|  
-|[\<x509SecurityTokenHandlerRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/x509securitytokenhandlerrequirement.md)|提供選擇性組態<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>類別或衍生的類別。|  
+|[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>提供類別<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 、類別或其中任一個類別的衍生類別的設定。|  
+|[\<sessionTokenRequirement>](sessiontokenrequirement.md)|<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>提供類別或衍生類別的設定。|  
+|[\<userNameSecurityTokenHandlerRequirement>](usernamesecuritytokenhandlerrequirement.md)|<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>提供類別或衍生類別的設定。|  
+|[\<x509SecurityTokenHandlerRequirement>](x509securitytokenhandlerrequirement.md)|提供<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>類別或衍生類別的選擇性設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定登錄與端點的安全性權杖處理常式的集合。|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|指定已向端點註冊的安全性權杖處理常式集合。|  
   
 ## <a name="remarks"></a>備註  
- `<add>`項目可能需要單一子項目，指定的權杖處理常式的組態。 這是取決於是否有處理常式類別參考透過`type`屬性的`<add>`元素提供這項功能的支援。 提供這項功能的權杖處理常式類別必須公開 （expose) 的建構函式<xref:System.Xml.XmlElement>物件。  
+ `<add>`元素可以接受指定權杖處理常式之設定的單一子項目。 這取決於透過專案的`type`屬性`<add>`所參考的處理常式類別是否會提供這項功能的支援。 提供這項功能的 Token 處理常式類別必須公開接受物件的<xref:System.Xml.XmlElement>函式。  
   
 ```  
 public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHandler  
@@ -69,15 +69,15 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
 }  
 ```  
   
- 數個內建的安全性權杖處理常式類別並提供這項功能。 這些類別是<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>， <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>， <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>， <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>，和<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>。  
+ 有數個內建的安全性權杖處理常式類別提供這項功能。 這些類別包括<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>、 <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>和。<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
   
 > [!IMPORTANT]
->  權杖處理常式集合只能包含單一的處理任何的常式指定的型別。 這表示，例如，如果您想要新增的處理常式，衍生自<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別加入集合中，您必須先移除<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>，這是預設的情況下，從集合存在。 您可以使用[\<移除 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)若要移除的集合或使用單一處理常式的項目[\<清除 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)從集合中移除所有的處理常式的項目。  
+> Token 處理常式集合只能包含任何指定類型的單一處理程式。 這表示, 例如, 如果您想要將衍生自<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別的處理常式加入至集合, 則必須先從集合中移除預設存在的。 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 您可以使用[ \<remove >](remove.md)專案, 從[ \<](clear.md)集合中移除單一處理程式, 或使用 clear > 元素來移除集合中的所有處理常式。  
   
- 指定處理常式上設定覆寫下的權杖處理常式集合中指定的對等設定[ \<Securitytokenhandlerconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目和指定底下的服務層級[ \<Identityconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目。  
+ 在處理常式上指定的設定會覆寫在[ \<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)專案下的權杖處理常式集合中指定的對等設定, 以及在[ \<服務層級的identityConfiguration >](identityconfiguration.md)元素。  
   
 ## <a name="example"></a>範例  
- 下列 XML 示範如何使用`<add>`和`<remove>`自訂工作階段權杖處理常式以取代預設的工作階段權杖處理常式的項目。 XML 取自`ClaimsAwareWebFarm`範例。  
+ 下列 XML 顯示如何使用`<add>`和`<remove>`專案, 以自訂會話權杖處理常式取代預設會話權杖處理常式。 XML 取自`ClaimsAwareWebFarm`範例。  
   
 ```xml  
 <securityTokenHandlers>  

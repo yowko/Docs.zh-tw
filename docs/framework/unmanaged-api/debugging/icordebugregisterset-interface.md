@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b0a5d80d984a3c696b178c4d8c936bd47354945
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6419a525a8a542295751defb97e67a83220730b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782872"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965071"
 ---
 # <a name="icordebugregisterset-interface"></a>ICorDebugRegisterSet 介面
-代表目前正在執行的程式碼的電腦上的可用暫存器組。  
+代表目前執行程式碼的電腦上可用的暫存器集合。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetRegisters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)|取得每個暫存器值 （在電腦上目前正在執行的程式碼） 所指定的位元遮罩。|  
-|[GetRegistersAvailable 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)|取得位元遮罩，指出其會登錄在此`ICorDebugRegisterSet`目前可用。|  
-|[GetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getthreadcontext-method.md)|取得目前執行緒的內容。|  
-|[SetRegisters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setregisters-method.md)|未實作適用於.NET Framework 2.0 版。|  
-|[SetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setthreadcontext-method.md)|.NET Framework 2.0 中，未實作。|  
+|[GetRegisters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)|取得位元遮罩所指定之每個暫存器 (目前執行程式碼的電腦) 的值。|  
+|[GetRegistersAvailable 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)|取得位元遮罩, 指出目前有哪些`ICorDebugRegisterSet`暫存器可供使用。|  
+|[GetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getthreadcontext-method.md)|取得目前線程的內容。|  
+|[SetRegisters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setregisters-method.md)|未針對 .NET Framework 版本2.0 進行執行。|  
+|[SetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setthreadcontext-method.md)|未針對 .NET Framework 2.0 執行。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugRegisterSet`介面支援僅 32 位元暫存器。 使用[ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)需要其他暫存器，例如 IA-64 平台上的介面。  
+ `ICorDebugRegisterSet`介面僅支援32位暫存器。 在需要額外暫存器的平臺 (例如 IA-64) 上使用[ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)介面。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "61782872"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

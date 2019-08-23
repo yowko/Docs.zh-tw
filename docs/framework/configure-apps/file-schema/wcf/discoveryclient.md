@@ -2,12 +2,12 @@
 title: <discoveryClient>
 ms.date: 03/30/2017
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
-ms.openlocfilehash: a5ea10601732021af578c17d4f5c5ab69c98f17a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9d7e3a4957d2a8f30724f0bfc04e58a57fc5f7d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704020"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919256"
 ---
 # <a name="discoveryclient"></a>\<discoveryClient>
 組態項目，用於建立自訂繫結，該繫結可讓用戶端應用程式自動搜尋可探索的服務，並且在執行階段時尋找其位址。  
@@ -15,7 +15,7 @@ ms.locfileid: "61704020"
 \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<discoveryClient>  
   
 ## <a name="syntax"></a>語法  
@@ -50,13 +50,13 @@ ms.locfileid: "61704020"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。 準則可以分組為搜尋準則 （指定您要尋找的服務），以及尋找終止準則 （搜尋應持續多久）。|  
+|[\<standardEndpoints>](standardendpoints.md)|組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。 準則可以分組為搜尋準則 (指定您要尋找的服務), 並尋找終止準則 (搜尋應持續的時間長度)。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="see-also"></a>另請參閱
 

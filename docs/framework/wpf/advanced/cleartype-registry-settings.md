@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629935"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964888"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 登錄設定
 本主題概要說明 WPF 應用程式所使用的 Microsoft ClearType 登錄設定。  
@@ -29,19 +29,19 @@ ms.locfileid: "68629935"
 ## <a name="registry-settings"></a>登錄設定  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]指定用來控制 ClearType 功能的四個登錄設定:  
   
-|設定|描述|  
+|設定|說明|  
 |-------------|-----------------|  
 |ClearType 層級|描述 ClearType 色彩清晰度的層級。|  
 |色差補正層級|說明顯示裝置的像素色彩元件層級。|  
 |像素結構|說明顯示裝置的像素排列。|  
 |文字對比層級|說明顯示文字的對比層級。|  
   
- 這些設定可由外部設定公用程式存取, 知道如何參考已識別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的 ClearType 登錄設定。 您也可以使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 登錄編輯程式直接存取這些值來建立或修改這些設定。  
+ 這些設定可由外部設定公用程式存取, 知道如何參考已識別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的 ClearType 登錄設定。 您也可以使用 Windows 登錄編輯程式直接存取這些值來建立或修改這些設定。  
   
- 如果未設定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ClearType 登錄設定 (這是預設狀態), 應用程式會查詢系統參數資訊中的字型平滑設定。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+ 如果未設定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType登錄設定(這是預設狀態),應用程式會查詢Windows系統參數資訊中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]字型平滑設定。  
   
 > [!NOTE]
->  如需列舉顯示裝置名稱的詳細資訊, `SystemParametersInfo`請參閱[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式。  
+> 如需列舉顯示裝置名稱的詳細資訊, `SystemParametersInfo`請參閱[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式。  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType 層級  
@@ -59,7 +59,7 @@ ms.locfileid: "68629935"
  ![登錄編輯程式中的 ClearType 設定。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式會以兩種模式的其中一種來轉譯文字, 而不論是否使用 ClearType。 轉譯不含 ClearType 的文字時, 就稱為「灰階呈現」。  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式會以兩種模式的其中一種來轉譯文字, 而不論是否使用 ClearType。 轉譯不含 ClearType 的文字時, 就稱為「灰階呈現」。  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Gamma 層級  
@@ -80,7 +80,7 @@ ms.locfileid: "68629935"
 ## <a name="pixel-structure"></a>像素結構  
  像素結構說明構成顯示裝置的像素類型。 像素結構定義有三種類型︰  
   
-|類型|值|說明|  
+|類型|值|描述|  
 |----------|-----------|-----------------|  
 |一般|0|顯示裝置沒有像素結構。 這表示每種色彩光源都平均分布在像素區域，此即為灰階轉譯。 這是標準顯示裝置運作的方式。 ClearType 永遠不會套用至呈現的文字。|  
 |RGB|1|顯示裝置的像素色帶組成順序如下︰紅色、綠色和藍色。 ClearType 會套用至呈現的文字。|  
@@ -89,7 +89,7 @@ ms.locfileid: "68629935"
  像素結構對應至範圍從 0 到 2 的整數值。 預設層級為 0 表示一般的像素結構。  
   
 > [!NOTE]
->  如需列舉顯示裝置名稱的詳細資訊, `EnumDisplayDevices`請參閱[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式。  
+> 如需列舉顯示裝置名稱的詳細資訊, `EnumDisplayDevices`請參閱[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式。  
   
 ### <a name="registry-setting"></a>登錄設定  
  像素結構的登錄設定位置是對應到特定顯示裝置名稱的本機電腦設定：  

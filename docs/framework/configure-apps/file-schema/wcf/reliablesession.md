@@ -2,12 +2,12 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 324c46d88d084605dc2b873c65d2a7e7c7a2c4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 548c4884ecd2f4b9a71fcc9d6647a9e258b183c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783145"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934240"
 ---
 # <a name="reliablesession"></a>\<reliableSession>
 定義 WS-Reliable 訊息設定。 將這個項目新增至自訂繫結時，產生的通道可支援確實傳送一次保證。  
@@ -15,7 +15,7 @@ ms.locfileid: "61783145"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<reliableSession>  
   
 ## <a name="syntax"></a>語法  
@@ -48,20 +48,20 @@ ms.locfileid: "61783145"
 |reliableMessagingVersion|<xref:System.ServiceModel.ReliableMessagingVersion> 中的有效值，指定要使用的 WS-ReliableMessaging 版本。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  可靠的工作階段會提供可靠傳訊和工作階段功能。 可靠的傳訊失敗時會重試通訊，而且允許指定傳遞保證，例如訊息依序到達。 工作階段會保持呼叫之間的用戶端狀態。 這個項目還會選擇性地提供排序式的訊息傳遞。 這個實作的工作階段可以跨 SOAP 和傳輸媒介。  
   
  每個繫結項目都代表傳送或接收訊息時的一個處理步驟。 繫結項目會在執行階段建立通道處理站和接聽程式，它們是在傳送和接收訊息時所需要之傳出和傳入通道堆疊的必要建置項目。 `reliableSession` 在堆疊中提供選擇性的層級，而透過該層級可以在端點之間建立可靠工作階段，並設定這個工作階段的行為。  
   
- 如需詳細資訊，請參閱 <<c0> [ 可靠工作階段](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
+ 如需詳細資訊, 請參閱[可靠會話](../../../wcf/feature-details/reliable-sessions.md)。  
   
 ## <a name="example"></a>範例  
  以下範例將示範如何使用各種傳輸和訊息編碼項目來設定自訂繫結，尤其是啟用可靠的工作階段，因為這麼做可保持用戶端狀態並指定依序傳遞保證。 這個功能是在用戶端和服務的應用程式組態檔中設定。 該範例會顯示服務組態。  
@@ -124,8 +124,8 @@ ms.locfileid: "61783145"
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
-- [可靠工作階段](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [可靠工作階段](../../../wcf/feature-details/reliable-sessions.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: f9f12d9e61e2472b897169727bbb4fbf9833efd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4550d4c4cd9ff37c5937ad366cccf91387c0e3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701342"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927012"
 ---
-# <a name="listeners-element-for-trace"></a>\<接聽程式 > 項目\<追蹤 >
-指定的接聽程式會收集、 存放區，並將訊息路由。 接聽程式將追蹤輸出導向至適當的目標。  
+# <a name="listeners-element-for-trace"></a>\<追蹤 > 的接聽\<程式 > 元素
+指定收集、儲存及路由傳送訊息的接聽程式。 接聽程式會將追蹤輸出導向至適當的目標。  
   
- \<組態 > 項目  
-\<system.diagnostics > 項目  
-\<追蹤 > 項目  
-\<接聽程式 > 項目\<追蹤 >  
+ \<configuration > 元素  
+\<> 元素的診斷  
+\<追蹤 > 元素  
+\<追蹤 > 的接聽\<程式 > 元素  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,9 +42,9 @@ ms.locfileid: "61701342"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|將接聽項新增至 `Listeners` 集合。|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|清除追蹤的 `Listeners` 集合。|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|移除接聽程式從`Listeners`集合。|  
+|[\<add>](add-element-for-listeners-for-trace.md)|將接聽項新增至 `Listeners` 集合。|  
+|[\<clear>](clear-element-for-listeners-for-trace.md)|清除追蹤的 `Listeners` 集合。|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|從`Listeners`集合中移除接聽程式。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -55,13 +55,13 @@ ms.locfileid: "61701342"
 |`trace`|包含用於收集、儲存及路由傳送追蹤訊息的接聽項。|  
   
 ## <a name="remarks"></a>備註  
- <xref:System.Diagnostics.Debug>並<xref:System.Diagnostics.Trace>類別會共用相同**接聽程式**集合。 如果您加入接聽程式物件至集合中的其中一個這些類別時，另一個類別會使用相同接聽程式。 .NET Framework 隨附的接聽程式類別衍生自<xref:System.Diagnostics.TraceListener>類別。  
+ 和類別會共用相同的接聽程式集合。 <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> 如果您將接聽程式物件加入其中一個類別中的集合, 另一個類別會使用相同的接聽程式。 隨附于 .NET Framework 的接聽程式類別衍生自<xref:System.Diagnostics.TraceListener>類別。  
   
 ## <a name="configuration-file"></a>組態檔  
- 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 此元素可用於電腦設定檔 (Machine.config) 和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<接聽程式>** 加入接聽程式的項目`MyListener`並`MyEventListener`來**接聽程式**集合。 `MyListener` 建立一個稱為檔案`MyListener.log`並將輸出寫入檔案。 `MyEventListener` 建立事件記錄檔中的項目。  
+ 下列範例示範如何使用 **\<接聽程式>** 加入接聽程式的項目`MyListener`並`MyEventListener`來**接聽程式**集合。 `MyListener`建立名`MyListener.log`為的檔案, 並將輸出寫入檔案。 `MyEventListener`在事件記錄檔中建立專案。  
   
 ```xml  
 <configuration>  
@@ -87,4 +87,4 @@ ms.locfileid: "61701342"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.TraceListener>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [追蹤和偵錯設定結構描述](index.md)

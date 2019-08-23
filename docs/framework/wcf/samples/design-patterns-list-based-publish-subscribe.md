@@ -2,20 +2,20 @@
 title: 設計模式：以清單為基礎的發行訂閱
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 1b99908c1b83bb0d75e295b7a12e8c5933fe86a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf6fe2da3101918e25aa9548fd18973088f348a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650116"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961737"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
-這個範例說明實作 Windows Communication Foundation (WCF) 程式的清單架構發行訂閱模式。  
+這個範例說明實作為 Windows Communication Foundation (WCF) 程式之以清單為基礎的發行訂閱模式。  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+> 此範例的安裝程序與建置指示位於本主題的結尾。  
   
- Microsoft Patterns & Practices 發行中描述的清單架構發行訂閱設計模式[整合模式](https://go.microsoft.com/fwlink/?LinkId=95894)。 發行訂閱模式會傳遞資訊給已訂閱某個資訊主題的收件者集合。 以清單為基礎的發行訂閱會維護訂閱者的清單。 當有要分享的資訊時，清單上的每個訂閱者都會接獲一份複本。 這個範例示範動態的清單架構發行訂閱模式，用戶端可以視需要在這裡訂閱或取消訂閱。  
+ 以清單為基礎的發行訂閱設計模式在 Microsoft 模式 & 實務發行集、[整合模式](https://go.microsoft.com/fwlink/?LinkId=95894)中有所描述。 發行訂閱模式會傳遞資訊給已訂閱某個資訊主題的收件者集合。 以清單為基礎的發行訂閱會維護訂閱者的清單。 當有要分享的資訊時，清單上的每個訂閱者都會接獲一份複本。 這個範例示範動態的清單架構發行訂閱模式，用戶端可以視需要在這裡訂閱或取消訂閱。  
   
  以清單為基礎的發行訂閱範例是由用戶端、服務和資料來源程式所組成。 可以有一個以上的用戶端和一個以上的資料來源程式在其中執行。 用戶端會訂閱服務、接收通知和取消訂閱。 資料來源程式會將資訊傳送至服務，以供目前所有訂閱者分享。  
   
@@ -112,25 +112,25 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1. 您可以使用瀏覽器中輸入下列位址的服務的測試： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。  
+1. 輸入下列位址, 測試您是否可以使用瀏覽器存取服務: `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。  
   
-2. 從 \client\bin 執行 Client.exe\\，從語言特定資料夾之下。 用戶端活動會顯示在用戶端主控台視窗上。 啟動數個用戶端。  
+2. 從語言特定資料夾下的\\\client\bin 執行 Client .exe。 用戶端活動會顯示在用戶端主控台視窗上。 啟動數個用戶端。  
   
-3. 從 \datasource\bin 執行 Datasource.exe\\，從語言特定資料夾之下。 資料來源活動會顯示在主控台視窗上。 一旦資料來源將資訊傳送至服務，服務就必須將它傳遞給每個用戶端。  
+3. 從語言特定資料夾下的\\\datasource\bin 執行 Datasource .exe。 資料來源活動會顯示在主控台視窗上。 一旦資料來源將資訊傳送至服務，服務就必須將它傳遞給每個用戶端。  
   
-4. 如果用戶端、 資料來源和服務程式能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端、資料來源和服務程式無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
 1. 設定服務機器：  
   
-    1. 在服務機器上，建立一個名稱為 ServiceModelSamples 的虛擬目錄。 批次檔 Setupvroot.bat [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用來建立磁碟目錄與虛擬目錄。  
+    1. 在服務機器上，建立一個名稱為 ServiceModelSamples 的虛擬目錄。 [Windows Communication Foundation 範例的一次性安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)中的批次檔 setupvroot.bat 可以用來建立磁碟目錄和虛擬目錄。  
   
     2. 將服務程式檔案從 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 複製到服務機器上的 ServiceModelSamples 虛擬目錄。 請務必將檔案放在 \bin 目錄中。  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

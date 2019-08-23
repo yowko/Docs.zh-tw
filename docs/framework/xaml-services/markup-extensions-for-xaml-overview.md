@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364326"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939701"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 標記延伸概觀
 標記延伸是一種 XAML 技巧，用於取得不是基本類型和特定 XAML 類型的值。 對於屬性使用方式，標記延伸使用左大括號 `{` 的已知字元序列進入標記延伸範圍，並使用右大括號 `}` 結束。 使用 .NET Framework XAML 服務時，您可以使用 System.Xaml 組件中的一些預先定義 XAML 語言標記延伸。 您也可以從 <xref:System.Windows.Markup.MarkupExtension> 類別產生子類別 (定義於 System.Xaml 中)，以及定義您自己的標記延伸。 或者，您可以使用特定架構所定義的標記延伸 (如果已參考該架構)。  
@@ -22,7 +22,7 @@ ms.locfileid: "68364326"
  .NET Framework XAML 服務會針對 XAML 語言支援實作數個標記延伸。 這些標記延伸對應至 XAML 規格的各部分，做為語言。 這些通常可透過常見使用方式中所見語法的 `x:` 前置詞予以識別。 這些 XAML 語言項目的 .NET Framework XAML 服務實作都是衍生自  <xref:System.Windows.Markup.MarkupExtension> 基底類別。  
   
 > [!NOTE]
->  `x:` 前置詞用於 XAML 生產的根項目中 XAML 語言命名空間的一般 XAML 命名空間對應。 例如, 各種特定架構的 Visual Studio 專案和頁面範本會使用此`x:`對應來起始 XAML 檔案。 您可以選擇專屬 XAML 命名空間對應中的不同前置詞語彙基元，但是這份文件將假設使用預設 `x:` 對應來識別這些是 XAML 語言 XAML 命名空間之定義部分的實體，而非特定 Framework 的預設 XAML 命名空間或其他任意 CLR 或 XML 命名空間。  
+> `x:` 前置詞用於 XAML 生產的根項目中 XAML 語言命名空間的一般 XAML 命名空間對應。 例如, 各種特定架構的 Visual Studio 專案和頁面範本會使用此`x:`對應來起始 XAML 檔案。 您可以選擇專屬 XAML 命名空間對應中的不同前置詞語彙基元，但是這份文件將假設使用預設 `x:` 對應來識別這些是 XAML 語言 XAML 命名空間之定義部分的實體，而非特定 Framework 的預設 XAML 命名空間或其他任意 CLR 或 XML 命名空間。  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` 提供具名類型的 <xref:System.Type> 物件。 這項功能最常用於延遲機制，而延遲機制使用基礎 CLR 類型和類型衍生做為群組 Moniker 或識別碼。 WPF 樣式和樣板 (以及其 `TargetType` 屬性使用方式) 是特定範例。 如需詳細資訊，請參閱 [x:Type Markup Extension](x-type-markup-extension.md)。  

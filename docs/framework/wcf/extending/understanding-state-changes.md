@@ -2,12 +2,12 @@
 title: 了解狀態變更
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363950"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963077"
 ---
 # <a name="understanding-state-changes"></a>了解狀態變更
 本主題說明通道具有的狀態和轉換、用來建構通道狀態的型別，以及如何實作。  
@@ -58,7 +58,7 @@ ms.locfileid: "68363950"
  <xref:System.ServiceModel.Channels.CommunicationObject> 提供了 Abort、Close 和 Open 實作。 此外，還提供 Fault 方法，會將狀態轉換為 Faulted 狀態。 圖 2 說明 <xref:System.ServiceModel.ICommunicationObject> 狀態機器，其中每個轉換都由造成轉換的方法所標記 (在造成上一個已標記轉換的方法實作內部，會發生未標記的轉換)。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Channels.CommunicationObject> 所有的通訊狀態取得/設定實作，都是執行緒同步。  
+> <xref:System.ServiceModel.Channels.CommunicationObject> 所有的通訊狀態取得/設定實作，都是執行緒同步。  
   
  建構函式  
   

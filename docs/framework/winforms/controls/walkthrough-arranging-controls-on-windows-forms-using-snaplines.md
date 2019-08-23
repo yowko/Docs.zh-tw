@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040261"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950064"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線排列 Windows Forms 的控制項
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 Windows Form 設計工具提供您許多版面組態工具來完成此動作。 其中一個最重要的就是<xref:System.Windows.Forms.Design.Behavior.SnapLine>此功能。
@@ -87,7 +87,7 @@ ms.locfileid: "69040261"
 1. 選取其中一個<xref:System.Windows.Forms.Button>控制項, 然後將它移到靠近表單的右框線, 直到對齊線出現為止。 對齊線與右框線的距離是控制項的<xref:System.Windows.Forms.Control.Margin%2A>屬性與表單的<xref:System.Windows.Forms.Control.Padding%2A>屬性值的總和。
 
 > [!NOTE]
->  如果表單的<xref:System.Windows.Forms.Control.Padding%2A>屬性設定為 0, 0, 0, 0, 則 Windows Form 設計工具會提供陰影<xref:System.Windows.Forms.Control.Padding%2A>值9、9、9、9的格式。 若要覆寫此行為, 請指派0、0、0、0以外的值。
+> 如果表單的<xref:System.Windows.Forms.Control.Padding%2A>屬性設定為 0, 0, 0, 0, 則 Windows Form 設計工具會提供陰影<xref:System.Windows.Forms.Control.Padding%2A>值9、9、9、9的格式。 若要覆寫此行為, 請指派0、0、0、0以外的值。
 
 1. 藉由展開 [**屬性**] 視窗<xref:System.Windows.Forms.Control.Margin%2A>中的<xref:System.Windows.Forms.Control.Margin%2A> <xref:System.Windows.Forms.Padding.All%2A>專案, 並將屬性設定為 0, 來變更<xref:System.Windows.Forms.Button>控制項的屬性值。 如需詳細資訊[, 請參閱逐步解說:配置具有填補、邊界和 AutoSize 屬性](windows-forms-controls-padding-autosize.md)的 Windows Forms 控制項。
 

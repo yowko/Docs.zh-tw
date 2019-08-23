@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cea8f6827d3e361b3f6498e6612d8b11a2357285
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a662185bb84e9a66573b43b26ffcd256ecb943f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916665"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909856"
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA 介面
 表示 Managed 偵錯助理 (MDA) 訊息。  
@@ -30,16 +30,16 @@ ms.locfileid: "61916665"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetDescription 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|取得字串，包含此 MDA 的描述。|  
-|[GetFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|取得與這個 MDA 相關聯的旗標。|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|取得字串，包含此 MDA 的名稱。|  
-|[GetOSThreadId 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|取得此 MDA 賴以執行的作業系統執行緒識別碼。|  
-|[GetXML 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|取得與這個 MDA 相關聯的完整 XML 資料流。|  
+|[GetDescription 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|取得包含此 MDA 描述的字串。|  
+|[GetFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|取得與此 MDA 相關聯的旗標。|  
+|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|取得包含此 MDA 名稱的字串。|  
+|[GetOSThreadId 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|取得此 MDA 執行時所用的作業系統執行緒識別碼。|  
+|[GetXML 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|取得與此 MDA 相關聯的完整 XML 資料流程。|  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "61916665"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

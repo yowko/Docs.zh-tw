@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e3a348ac8da855e458b6208c51f9c51b48da3134
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663856"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927441"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 元素
 指定執行階段在執行字串比較時，應使用舊版排序次序。  
@@ -36,13 +36,13 @@ ms.locfileid: "69663856"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`enabled`|必要屬性。<br /><br /> 指定要使用其排序次序的地區設定 ID。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |4096|表示替代排序次序的地區設定 ID。 在此情況下, 4096 代表 .NET Framework 3.5 及舊版的排序次序。|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69663856"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
@@ -60,7 +60,7 @@ ms.locfileid: "69663856"
  由於 .NET Framework 4 中的類別所<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>執行的字串比較、排序和大小寫作業符合 Unicode 5.1 標準, 因此字串比較方法<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> (例如和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> ) 的結果可能會與舊版的 .NET Framework。 如果您的應用程式相依于舊版行為, 您可以在應用程式的設定檔中包含`<CompatSortNLSVersion>`專案, 以還原 .NET Framework 3.5 和更早版本中使用的字串比較和排序規則。  
   
 > [!IMPORTANT]
->  還原舊版字串比較和排序規則也必須要有可在本機系統上提供的 sort00001000.dll 動態連結程式庫。  
+> 還原舊版字串比較和排序規則也必須要有可在本機系統上提供的 sort00001000.dll 動態連結程式庫。  
   
  您也可以在建立應用程式定義域時，將字串 "NetFx40_Legacy20SortingBehavior" 傳遞給 <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> 方法，這樣做就可以在特定應用程式定義域中使用舊版字串排序和比較規則。  
   

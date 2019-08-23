@@ -1,5 +1,5 @@
 ---
-title: <filter> 項目<add>的 <sharedListeners>
+title: <filter><add> For 的元素<sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 571a3add232f3e4f9747040dc104b85e8cc3085e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673715"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920515"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<篩選條件 > 項目\<新增 > 針對\<sharedListeners >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<針對\<s > 的\<[新增 >] 篩選 > 元素
 將篩選新增至 `sharedListeners` 集合中的接聽項。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<sharedListeners > 項目  
+\<s > 元素  
 \<add>  
 \<filter>  
   
@@ -40,8 +40,8 @@ ms.locfileid: "61673715"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**type**|必要屬性。<br /><br /> 指定的篩選器類型。 您可以使用類型的完整名稱 (格式為<xref:System.Type.FullName%2A?displayProperty=nameWithType>屬性)，或者您可以使用完整的類型名稱包括組件資訊 (格式為<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>屬性)。 如需建立完整限定的類型名稱的資訊，請參閱[指定完整的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
-|**initializeData**|選擇性屬性。<br /><br /> 指定的類別，建構函式傳遞的字串。|  
+|**type**|必要屬性。<br /><br /> 指定篩選準則的類型。 您只能使用類型的完整名稱 (以<xref:System.Type.FullName%2A?displayProperty=nameWithType>屬性的格式), 也可以使用包含元件資訊的完整類型名稱 (以<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>屬性的格式)。 如需建立完整型別名稱的相關資訊, 請參閱[指定完整的型別名稱](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|**initializeData**|選擇性屬性。<br /><br /> 傳遞至指定類別之函數的字串。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -52,16 +52,16 @@ ms.locfileid: "61673715"
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
-|`sharedListeners`|任何來源或追蹤項目可以參考的接聽程式的集合。|  
-|`add`|新增接聽程式，以**sharedListeners**集合。|  
+|`sharedListeners`|任何來源或追蹤元素可以參考的接聽程式集合。|  
+|`add`|將接聽程式加入至**s**集合。|  
   
 ## <a name="remarks"></a>備註  
- 如果接聽程式已定義在`<add>`項目`<sharedListeners>`項目，應在定義該接聽項的篩選條件`<filter>`子系的項目`<add>`項目。  
+ 如果`<add>`在專案`<sharedListeners>`的專案中定義了接聽程式, 則該接聽程式的篩選器`<filter>`應該定義于專案子`<add>`系的專案中。  
   
- 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 此元素可用於電腦設定檔 (Machine.config) 和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<filter>`新增至追蹤接聽項的篩選條件的項目`console`在`sharedListeners`集合。  
+ 下列範例顯示如何使用`<filter>`專案, 將篩選加入`sharedListeners`集合`console`中的追蹤接聽項。  
   
 ```xml  
 <configuration>  
@@ -90,4 +90,4 @@ ms.locfileid: "61673715"
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [追蹤和偵錯設定結構描述](index.md)

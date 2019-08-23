@@ -6,16 +6,16 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 361d6d684485e07a958e8272997bb989b8e4fc1b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dd5f744a67481b03802887ff2baa0571b30e4b5d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629632"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965239"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>用戶端 UI 自動化提供者實作
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 作業系統中，包括 [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] 、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，使用數個不同的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]架構。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 會公開使用者介面項目相關資訊給用戶端。 不過， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 本身不會知道這些架構中存在的不同控制項類型，也不具備從這些架構中擷取資訊的必要技術。 它會將這項工作交給稱為提供者的物件。 提供者會從特定控制項擷取資訊，並將該資訊傳遞給 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，再由它以一致的方式呈現給用戶端。  
   

@@ -1,33 +1,33 @@
 ---
-title: HOW TO：使用主要畫面格建立物件的動畫
+title: 作法：使用主要畫面格建立物件的動畫
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: b0a0f7c00125a43228a2658415b72f4d541f37be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ffbe1845b634c8f94eb6a10dfa44fcf9903e0cd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020149"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933913"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>HOW TO：使用主要畫面格建立物件的動畫
-此範例示範如何以動畫顯示物件，這在此範例中是<xref:System.Windows.Controls.Page.Background%2A>屬性<xref:System.Windows.Controls.Page>控制項，使用主要畫面格。  
+這個範例示範如何使用主要畫面格, 以動畫顯示物件 (在<xref:System.Windows.Controls.Page.Background%2A>此範例中<xref:System.Windows.Controls.Page>為控制項的屬性)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>類別以動畫顯示色彩變更為<xref:System.Windows.Controls.Page.Background%2A>屬性<xref:System.Windows.Controls.Page>控制項。 範例動畫會定期變成不同的背景筆刷。 這個動畫使用<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>類別來建立三個不同的主要畫面格。 動畫會使用主要畫面格，以下列方式：  
+ 下列範例會使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>類別, 以動畫顯示<xref:System.Windows.Controls.Page>控制項<xref:System.Windows.Controls.Page.Background%2A>屬性的色彩變更。 範例動畫會以固定間隔變更為不同的背景筆刷。 這個動畫會使用<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>類別來建立三個不同的主要畫面格。 動畫會以下列方式使用主要畫面格:  
   
-1. 在第一次的第二個結束時，以動畫顯示的執行個體<xref:System.Windows.Media.LinearGradientBrush>類別。 本節的範例適用於線性漸層背景色彩，使色彩從黃色轉換為橙色為紅色。  
+1. 在第一秒結束時, 會以動畫呈現<xref:System.Windows.Media.LinearGradientBrush>類別的實例。 範例的這個部分會將線性漸層套用至背景色彩, 讓色彩從黃色轉換成紅色。  
   
-2. 在下一步 的第二個結束時，以動畫顯示的執行個體<xref:System.Windows.Media.RadialGradientBrush>類別。 本節的範例適用於放射狀漸層背景色彩，以便從白色到黑色藍色的色彩轉換。  
+2. 在下一秒結束時, 會以動畫呈現<xref:System.Windows.Media.RadialGradientBrush>類別的實例。 範例的這個部分會將放射漸層套用至背景色彩, 讓色彩從白色轉換成黑色。  
   
-3. 在第三個第二個結束時，以動畫顯示的執行個體<xref:System.Windows.Media.DrawingBrush>類別。 本節的範例適用於在背景以棋盤式圖樣。  
+3. 在第三秒結束時, 會以動畫呈現<xref:System.Windows.Media.DrawingBrush>類別的實例。 範例的這個部分會將棋盤圖樣套用到背景。  
   
-4. 再次開始動畫，並且不斷重複。  
+4. 動畫會重新開始, 並無限期地重複。  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> 是唯一的類型，您可以搭配使用的主要畫面格<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>類別。 主要畫面格像<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>也就是在值中，建立突然的變更，在此範例中的色彩變更會突然發生。  
+> <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>是唯一可與<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>類別搭配使用的主要畫面格類型。 像<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>是在值中建立突然變更的主要畫面格 (也就是此範例中的色彩變更突然發生)。  
   
  [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   

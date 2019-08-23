@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立、初始化和設定追蹤參數
+title: 作法：建立、初始化和設定追蹤參數
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c947dcd3fa3a71d5bbfdf742b106bf56d8444fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b1575d484c58afa3558d9f5b446473b4c89bc51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948003"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>HOW TO：建立、初始化和設定追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。  
@@ -65,7 +65,7 @@ ms.locfileid: "64596738"
  除了指定要設定的參數名稱之外，您也必須指定參數的值。 這個值是整數。 如果是 <xref:System.Diagnostics.BooleanSwitch>，0 值會對應至 **Off**，而任何非零值則對應至 **On**。 如果是 <xref:System.Diagnostics.TraceSwitch>，0、1、2、3 和 4 分別對應至 **Off**、**Error**、**Warning**、**Info** 和 **Verbose**。 大於 4 的任何數字都會視為 **Verbose**，而小於零的任何數字則會視為 **Off**。  
   
 > [!NOTE]
->  在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 例如，<xref:System.Diagnostics.BooleanSwitch> 的 `true`，或是代表列舉值的文字 (例如 <xref:System.Diagnostics.TraceSwitch> 的 `Error`)。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
+> 在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 例如，<xref:System.Diagnostics.BooleanSwitch> 的 `true`，或是代表列舉值的文字 (例如 <xref:System.Diagnostics.TraceSwitch> 的 `Error`)。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
   
  為了讓終端使用者能夠設定應用程式的追蹤參數，您必須在應用程式中提供有關參數的詳細文件。 您應詳述參數類型及其控制項目，以及如何開啟和關閉參數。 您也應為使用者提供 .config 檔案，以在註解中提供適當的說明。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "64596738"
   
 2. 如果您的專案未包含組態檔 (app.config 或 Web.config)，請從 [專案] 功能表中選取 [新增項目]。  
   
-    - **Visual Basic:** 在 **加入新項目**對話方塊方塊中，選擇**應用程式組態檔**。  
+    - **Visual Basic:** 在 [**加入新專案**] 對話方塊中, 選擇 [**應用程式佈建檔**]。  
   
          隨即會建立並開啟應用程式組態檔。 這是根項目為 `<configuration>.` 的 XML 文件。  
   
-    - **視覺化C#:** 在 **加入新項目**對話方塊方塊中，選擇**XML 檔案**。 將這個檔案命名為 **app.config**。在 XML 編輯器中，於 XML 宣告後加入下列 XML：  
+    - **視覺C#效果:** 在 [**加入新專案**] 對話方塊中, 選擇 [ **XML**檔案]。 將這個檔案命名為 **app.config**。在 XML 編輯器中，於 XML 宣告後加入下列 XML：  
   
         ```xml  
         <configuration>  
@@ -128,6 +128,6 @@ ms.locfileid: "64596738"
 ## <a name="see-also"></a>另請參閱
 
 - [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：將追蹤語句新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [追蹤和偵錯設定結構描述](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

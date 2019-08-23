@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96d38abad37f9460230164de784a1258e7e937a4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 29fbe951b955c97e39ebaf80885729a45c1a3fd7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663715"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927400"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<Q s > 元素
 指定 PerfCounter.dll 是否在 .NET Framework 1.1 版的應用程式中使用 CategoryOptions 登錄設定，以決定要從類別特定共用記憶體或從全域記憶體載入效能計數器資料。  
@@ -33,13 +33,13 @@ enabled="true|false"/>
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`enabled`|必要屬性。<br /><br /> 指出 PerfCounter 是否使用 CategoryOptions 登錄設定來判斷是否要從類別特定的共用記憶體或全域記憶體載入效能計數器資料。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |`false`|PerfCounter 不會使用 CategoryOptions 登錄設定, 這是預設值。|  
 |`true`|PerfCounter 會使用 CategoryOptions 登錄設定。|  
@@ -62,7 +62,7 @@ enabled="true|false"/>
  為了與舊版相容, .NET Framework 4 PerfCounter 在 .NET Framework 1.1 應用程式中執行時, 不會檢查 CategoryOptions 登錄專案。 它只會使用全域共用記憶體, 如同 .NET Framework 1.1 PerfCounter。 不過, 您可以藉由啟用`<forcePerformanceCounterUniqueSharedMemoryReads>`元素, 指示 .NET Framework 4 PerfCounter 檢查登錄設定。  
   
 > [!NOTE]
->  `<forcePerformanceCounterUniqueSharedMemoryReads>`啟用元素並不保證會使用類別特定的共用記憶體。 將 [已`true`啟用] 設定為 [僅] 會導致 PerfCounter 參考 CategoryOptions 登錄設定。 CategoryOptions 的預設設定是使用類別特定的共用記憶體;不過, 您可以變更 CategoryOptions, 以指出應該使用全域共用記憶體。  
+> `<forcePerformanceCounterUniqueSharedMemoryReads>`啟用元素並不保證會使用類別特定的共用記憶體。 將 [已`true`啟用] 設定為 [僅] 會導致 PerfCounter 參考 CategoryOptions 登錄設定。 CategoryOptions 的預設設定是使用類別特定的共用記憶體;不過, 您可以變更 CategoryOptions, 以指出應該使用全域共用記憶體。  
   
  包含 CategoryOptions 設定的登錄機碼是 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< 類別名稱 \Performance.\> 根據預設, CategoryOptions 會設為 3, 指示 PerfCounter 使用類別特定的共用記憶體。 如果 CategoryOptions 設定為 0, 則 PerfCounter 會使用全域共用記憶體。 只有當所建立之實例的名稱與要重複使用的實例相同時, 才會重複使用實例資料。 所有版本都可以寫入類別目錄。 如果 CategoryOptions 設為 1, 則會使用全域共用記憶體, 但是如果類別目錄名稱的長度與要重複使用的類別相同, 就可以重複使用實例資料。  
   

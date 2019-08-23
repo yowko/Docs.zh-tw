@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6575acfb1f75cbc8e3d59ddca5fea0953274cf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67006603747abd89f1b635c065860dcbe1c47a29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782950"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965637"
 ---
 # <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue 介面
-提供方法，可管理的參考物件的值。 （也就是這個介面提供管理指標的方法）。這個介面會實作 「 ICorDebugValue"。  
+提供管理物件之參考值的方法。 (亦即, 此介面提供管理指標的方法)。此介面會執行 "ICorDebugValue"。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Dereference 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-dereference-method.md)|取得參考的物件。|  
-|[DereferenceStrong 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-dereferencestrong-method.md)|未實作。 請勿呼叫這個方法。|  
-|[GetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-getvalue-method.md)|取得參考物件的目前記憶體位址。|  
-|[IsNull 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-isnull-method.md)|取得值，指出是否這`ICorDebugReferenceValue`為 null 值，在此情況下`ICorDebugReferenceValue`未指向物件。|  
-|[SetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-setvalue-method.md)|設定目前的記憶體位址。 也就是說，這個方法會設定這個`ICorDebugReferenceValue`指向物件。|  
+|[Dereference 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-dereference-method.md)|取得所參考的物件。|  
+|[DereferenceStrong 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-dereferencestrong-method.md)|未實作。 請勿呼叫此方法。|  
+|[GetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-getvalue-method.md)|取得受參考物件目前的記憶體位址。|  
+|[IsNull 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-isnull-method.md)|取得值, 指出這`ICorDebugReferenceValue`是否為 null 值, 在此`ICorDebugReferenceValue`情況下, 不會指向物件。|  
+|[SetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-setvalue-method.md)|設定目前的記憶體位址。 也就是說, 這個方法會將此`ICorDebugReferenceValue`設定為指向物件。|  
   
 ## <a name="remarks"></a>備註  
- Common language runtime (CLR) 偵錯的處理序會繼續時，可以執行回收物件。 記憶體回收可能會移動物件在記憶體中。 `ICorDebugReferenceValue`會是與合作的記憶體回收，讓記憶體回收之後, 會更新其資訊，或它之前的記憶體回收會以隱含方式失效。  
+ 通用語言執行平臺 (CLR) 可能會在已調試的進程繼續時, 對物件進行垃圾收集。 垃圾收集可能會在記憶體中移動物件。 `ICorDebugReferenceValue`會與垃圾收集合作, 以便在垃圾收集之後更新其資訊, 或在垃圾收集之前隱含地將其視為無效。  
   
- `ICorDebugReferenceValue`物件可能會因為隱含失效之後繼續執行偵錯的處理序。 衍生的 」 ICorDebugHandleValue 」 不會失效，直到明確釋放或公開。  
+ 繼續`ICorDebugReferenceValue`進行已調試的進程之後, 可能會隱含地使物件失效。 衍生的 "ICorDebugHandleValue" 在明確釋放或公開之前不會無效。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "61782950"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,24 +1,24 @@
 ---
-title: HOW TO：以唯讀形式擷取資訊
+title: 作法：以唯讀形式擷取資訊
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: 131562e9ee0fbfde8c94f580bcb6d452918f42ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b98c5e6ea49695015eb566ca2176b23c5260017a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037579"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928705"
 ---
-# <a name="how-to-retrieve-information-as-read-only"></a>HOW TO：以唯讀形式擷取資訊
+# <a name="how-to-retrieve-information-as-read-only"></a>作法：以唯讀形式擷取資訊
 不想要變更資料時，可以搜尋唯讀結果以增加查詢效能。  
   
  將 <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> 設定為 `false`，即可實作唯讀處理。  
   
 > [!NOTE]
->  <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> 設定為 `false` 時，<xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> 會隱含地設定為 `false`。  
+> <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> 設定為 `false` 時，<xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> 會隱含地設定為 `false`。  
   
 ## <a name="example"></a>範例  
  下列程式碼會擷取員工雇用日期的唯讀集合。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a983561f34bee96f5de1e05d608bff930c7ec8c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5445fb223e34aa82d4b93032bb059093978f6bd1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750240"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910337"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder 方法
 建立新的堆疊 unwinder，以從初始內容 (不一定是執行緒的分葉) 開始回溯。  
@@ -43,12 +43,12 @@ HRESULT CreateVirtualUnwinder(
  [out] ICorDebugVirtualUnwinder 介面物件的位址指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，則為 `S_OK`。 其他任何 `HRESULT` 表示失敗。 任何失敗`HRESULT`mscordbi 收到的會視為嚴重錯誤，並造成[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)方法，以傳回`CORDBG_E_DATA_TARGET_ERROR`。  
+ 如果成功，則為 `S_OK`。 其他任何 `HRESULT` 表示失敗。 Mscordbi.dll 收到`HRESULT`的任何失敗都會被視為嚴重錯誤, 並導致[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)方法`CORDBG_E_DATA_TARGET_ERROR`傳回。  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個方法僅適用於 .NET Native。  
+> 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

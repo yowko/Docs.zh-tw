@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: df88f9ae0b32ecd3b79686f3271e09b92ad7d4fd
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c06639ef2f2ced8bd128adea636efe8be1715764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040196"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931028"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>逐步解說：使用 Visual C 從 Windows Forms 控制項繼承\#
 使用視覺C#效果, 您可以透過*繼承*來建立功能強大的自訂控制項。 您可以透過繼承建立控制項，不僅保留標準 Windows Forms 控制項的所有固有功能，同時也納入自訂功能。 在本逐步解說中，您將會建立簡單的繼承控制項，名為 `ValueButton`。 此按鈕將繼承標準 Windows Forms <xref:System.Windows.Forms.Button>控制項的功能, 並會公開名`ButtonValue`為的自訂屬性。
@@ -42,7 +42,7 @@ ms.locfileid: "69040196"
 8. 從 [檔案] 功能表選擇 [全部儲存] 以儲存專案。
 
     > [!NOTE]
-    >  視覺化設計工具再也無法使用。 <xref:System.Windows.Forms.Button>由於控制項會進行自己的繪製, 因此您無法在設計工具中修改其外觀。 它的視覺標記法會與繼承自的類別 (也就是<xref:System.Windows.Forms.Button>) 完全相同, 除非在程式碼中修改。 您仍然可以將元件 (其中沒有任何 UI 元素) 新增至設計介面。
+    > 視覺化設計工具再也無法使用。 <xref:System.Windows.Forms.Button>由於控制項會進行自己的繪製, 因此您無法在設計工具中修改其外觀。 它的視覺標記法會與繼承自的類別 (也就是<xref:System.Windows.Forms.Button>) 完全相同, 除非在程式碼中修改。 您仍然可以將元件 (其中沒有任何 UI 元素) 新增至設計介面。
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>將屬性新增至繼承的控制項
  繼承 Windows Forms 控制項的可能用法之一是建立外觀及操作與標準的 Windows Forms 控制項相同的控制項，但是公開自訂屬性。 在本節中，您會將名為 `ButtonValue` 的屬性新增至您的控制項。
@@ -73,7 +73,7 @@ ms.locfileid: "69040196"
     }
     ```
 
-     此程式碼會設定方法，系統會使用該方法來儲存和擷取 `ButtonValue` 屬性。           `get` 陳述式會將傳回值設為儲存在私用變數 `varValue` 的值，而 `set` 陳述式會使用 `value` 關鍵字設定私用變數的值。
+     此程式碼會設定方法，系統會使用該方法來儲存和擷取 `ButtonValue` 屬性。 `get` 陳述式會將傳回值設為儲存在私用變數 `varValue` 的值，而 `set` 陳述式會使用 `value` 關鍵字設定私用變數的值。
 
 3. 從 [檔案] 功能表選擇 [全部儲存] 以儲存專案。
 

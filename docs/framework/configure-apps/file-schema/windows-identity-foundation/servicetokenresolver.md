@@ -3,15 +3,15 @@ title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: 1143717882652fc8a03947327b5f1ea89dde7373
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69d34cb54c2236f178ac4291ed24a3f5b45db48e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793805"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923101"
 ---
 # <a name="servicetokenresolver"></a>\<serviceTokenResolver>
-註冊的服務權杖解析程式由權杖處理常式集合中的處理常式。 服務權杖解析程式用來解析上傳入的權杖和訊息的加密語彙基元。  
+註冊權杖處理常式集合中處理常式所使用的服務 token 解析程式。 服務權杖解析程式是用來解析傳入權杖和訊息上的加密權杖。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -41,7 +41,7 @@ ms.locfileid: "61793805"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|類型|指定服務權杖解析程式的類型。 任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類型或衍生自類型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。 如需有關如何指定`type`屬性，請參閱 [自訂型別參考]。 必要項。|  
+|型別|指定服務權杖解析程式的類型。 <xref:System.IdentityModel.Selectors.SecurityTokenResolver>可能是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類型或衍生自類別的類型。 如需如何指定屬性的`type`詳細資訊, 請參閱 [自訂類型參考]。 必要項。|  
   
 ### <a name="child-elements"></a>子元素  
  None  
@@ -50,15 +50,15 @@ ms.locfileid: "61793805"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|提供安全性權杖處理常式集合的設定。|  
   
 ## <a name="remarks"></a>備註  
- 若要解決上傳入的權杖和訊息的加密語彙基元可用服務權杖解析程式。 它用來擷取應該用來解密傳入權杖的金鑰。 您必須指定`type`屬性。 指定的型別可以是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>或自訂的型別衍生自<xref:System.IdentityModel.Selectors.SecurityTokenResolver>類別。  
+ 服務權杖解析程式可以用來解析傳入權杖和訊息上的加密權杖。 它是用來抓取用來解密傳入權杖的金鑰。 您必須指定`type`屬性。 指定的型別可以是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>或衍生<xref:System.IdentityModel.Selectors.SecurityTokenResolver>自類別的自訂型別。  
   
- 某些權杖處理常式可讓您在組態中指定服務權杖解析程式設定。 在個別的權杖處理常式上的設定會覆寫所指定的安全性權杖處理常式集合。  
+ 某些權杖處理常式可讓您在設定中指定服務權杖解析程式設定。 個別權杖處理常式上的設定會覆寫安全性權杖處理常式集合上指定的設定。  
   
 > [!NOTE]
->  指定`<serviceTokenResolver>`元素的子元素當做[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目已被取代，但仍支援回溯相容性。 上的設定`<securityTokenHandlerConfiguration>`項目會覆寫上`<identityConfiguration>`項目。  
+> 將專案指定為[ \<identityConfiguration >](identityconfiguration.md)專案的子項目已被取代, 但仍支援回溯相容性。 `<serviceTokenResolver>` 元素上的`<securityTokenHandlerConfiguration>`設定會覆寫專案`<identityConfiguration>`上的專案。  
   
 ## <a name="example"></a>範例  
   

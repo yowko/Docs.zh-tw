@@ -2,20 +2,20 @@
 title: <transport> 的 <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dbc55db25c0c49d72ec2cd8dd1041a3f8705d8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940638"
 ---
-# <a name="transport-of-peertransport"></a>\<傳輸 > 的\<peerTransport >
+# <a name="transport-of-peertransport"></a>\<peerTransport > 的\<傳輸 >
 指定使用這個繫結設定之對等所傳送安全訊息的傳輸類型。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<peerTransport>  
 \<安全性 >  
 \<transport>  
@@ -39,22 +39,22 @@ ms.locfileid: "61788280"
   
 ## <a name="credentialtype-attribute"></a>credentialType 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |憑證|對等通道傳輸的驗證作業需要 X509 憑證。|  
 |密碼|對等通道傳輸的驗證作業需要正確的密碼。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|定義對等傳輸的安全性設定。|  
+|[\<security>](security-of-peertransport.md)|定義對等傳輸的安全性設定。|  
   
 ## <a name="remarks"></a>備註  
- 只有當設定這個項目的 mode 屬性[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)設定為`Transport`或`TransportWithMessageCredential`。  
+ 只有在  [ \<安全性 >](security-of-peertransport.md)的 [模式] 屬性設定為`Transport`或`TransportWithMessageCredential`時, 才會設定此元素。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -62,10 +62,10 @@ ms.locfileid: "61788280"
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [傳輸安全性](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [傳輸安全性](../../../wcf/feature-details/transport-security.md)
+- [傳輸](../../../wcf/feature-details/transports.md)
+- [選擇傳輸](../../../wcf/feature-details/choosing-a-transport.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

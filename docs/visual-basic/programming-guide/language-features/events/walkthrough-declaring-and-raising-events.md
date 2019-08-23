@@ -9,28 +9,28 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: fe96e54e92c09cf65c312306214e4460550c685d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 20e2b0efbf40597049c515134f408927f18d5603
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626449"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956327"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>逐步解說：宣告和引發事件 (Visual Basic)
-本逐步解說示範如何宣告及引發事件的類別，名為`Widget`。 完成步驟後，您可能想要閱讀系列主題中，[逐步解說：處理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)，但會示範如何使用事件`Widget`來提供應用程式中的狀態資訊的物件。  
+本逐步解說示範如何針對名為`Widget`的類別宣告和引發事件。 完成這些步驟之後, 您可能會想要閱讀隨附主題[: 逐步解說:處理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), 顯示如何使用`Widget`物件中的事件來提供應用程式中的狀態資訊。  
   
-## <a name="the-widget-class"></a>小工具類別  
- 假設您有目前`Widget`類別。 您`Widget`類別具有的方法，可能需要很長的時間執行，而且您希望能夠架設完成指標的某種類型的應用程式。  
+## <a name="the-widget-class"></a>Widget 類別  
+ 假設您有一個`Widget`類別。 您`Widget`的類別具有可能需要很長時間才能執行的方法, 而且您想要讓應用程式能夠放置某種類型的完成指標。  
   
- 當然，您可以製作`Widget`物件顯示完成百分比的對話方塊，但接著您會停在動彈不得該對話方塊，在您使用每個專案`Widget`類別。 物件設計的很好原則是讓使用的物件控制代碼的使用者介面的應用程式，除非物件的目的就是在表單或對話方塊的 管理。  
+ 當然, 您可以讓物件顯示`Widget` [完成百分比] 對話方塊, 但是您會在`Widget`使用類別的每個專案中, 停滯該對話方塊。 物件設計的一個良好原則是讓使用物件的應用程式處理使用者介面, 除非物件的整個目的是要管理表單或對話方塊。  
   
- 目的`Widget`是執行其他工作，因此會將`PercentDone`事件，然後讓程序會呼叫`Widget`的方法會處理事件和顯示狀態更新。 `PercentDone`事件也可以提供一種機制，取消的工作。  
+ 的目的`Widget`是要執行其他工作`PercentDone` , 因此最好新增事件, 然後讓呼叫`Widget`的方法處理該事件並顯示狀態更新的程式。 `PercentDone`事件也可以提供取消工作的機制。  
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>若要建立本主題的程式碼範例  
   
-1. 開啟新的 Visual Basic Windows 應用程式專案，並建立表單名為`Form1`。  
+1. 開啟新的 Visual Basic Windows 應用程式專案, 並建立名`Form1`為的表單。  
   
-2. 新增兩個按鈕和標籤以`Form1`。  
+2. 將兩個按鈕和標籤`Form1`新增至。  
   
 3. 依照下表所示的方式，命名物件。  
   
@@ -40,24 +40,24 @@ ms.locfileid: "64626449"
     |`Button2`|`Text`|取消|  
     |`Label`|`(Name)`、 `Text`|lblPercentDone, 0|  
   
-4. 在上**專案**功能表上，選擇**加入類別**類別，名為`Widget.vb`至專案。  
+4. 在 [**專案**] 功能表上, 選擇 [**加入類別**], `Widget.vb`將名為的類別新增至專案。  
   
-#### <a name="to-declare-an-event-for-the-widget-class"></a>若要宣告事件，小工具類別  
+#### <a name="to-declare-an-event-for-the-widget-class"></a>若要宣告 Widget 類別的事件  
   
-- 使用`Event`關鍵字來宣告中的事件`Widget`類別。 請注意，事件可以有`ByVal`並`ByRef`引數，做為`Widget`的`PercentDone`事件示範：  
+- 使用關鍵字來宣告`Widget`類別中的事件。 `Event` 請注意, 事件可以有`ByVal`和`ByRef`引數, `Widget`如`PercentDone`的事件所示:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
- 當呼叫物件收到`PercentDone`事件，`Percent`引數包含工作已完成的百分比。 `Cancel`引數可以設定為`True`取消引發事件的方法。  
+ 當呼叫物件收到`PercentDone`事件時`Percent` , 引數會包含已完成之工作的百分比。 引數可以設定為`True` , 以取消引發事件的方法。 `Cancel`  
   
 > [!NOTE]
->  您可以宣告事件引數，就像您一樣的程序，但有下列例外狀況的引數：事件不可以有`Optional`或`ParamArray`引數，以及事件沒有傳回值。  
+> 您可以宣告事件引數, 就如同執行程式的引數一樣, 但有下列例外狀況:事件不能`Optional`有`ParamArray`或引數, 而且事件沒有傳回值。  
   
- `PercentDone`引發事件時`LongTask`方法`Widget`類別。 `LongTask` 採用兩個引數： 的時間長度偽裝成工作和之前的最短的時間間隔時要執行的方法`LongTask`引發暫停`PercentDone`事件。  
+ 事件是`Widget` `LongTask`由類別的方法引發。 `PercentDone` `LongTask`採用兩個引數: 方法假裝執行工作的時間長度, 以及暫停之前`LongTask`的最小時間間隔, 以`PercentDone`引發事件。  
   
 #### <a name="to-raise-the-percentdone-event"></a>若要引發 PercentDone 事件  
   
-1. 若要簡化對存取`Timer`這個類別中，使用的屬性加入`Imports`陳述式的類別模組中，「 宣告 」 區段的上面`Class Widget`陳述式。  
+1. 若要簡化這個類別`Timer`所使用之屬性的存取權, `Imports`請在`Class Widget`語句上方的類別模組的宣告區段頂端新增語句。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
@@ -65,13 +65,13 @@ ms.locfileid: "64626449"
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
- 當您的應用程式呼叫`LongTask`方法中，`Widget`類別會引發`PercentDone`事件每`MinimumInterval`秒。 事件會傳回`LongTask`檢查是否`Cancel`引數設定為`True`。  
+ 當您的`Widget`應用程式`LongTask`呼叫方法時, 類別會`PercentDone`每秒`MinimumInterval`引發事件一次。 當事件傳回時, `LongTask`會檢查`Cancel`是否已將引數設定為`True`。  
   
- 以下幾個免責聲明是必要的。 為了簡單起見，`LongTask`程序假設您事先知道此工作將會花費多少時間。 這幾乎絕不會是大小寫。 將工作分割成區塊 （chunk） 的平均大小可能很困難，而且通常最關切的使用者只要他們取得的項目進行的指示之前，所經過的時間長度。  
+ 這裡有幾個必要的免責聲明。 為了簡單起見, `LongTask`此程式會假設您事先知道工作會花多少時間。 幾乎不會發生這種情況。 將工作劃分成甚至大小的區塊可能會很難, 而對使用者而言, 最重要的就是在收到某個專案的指示之前傳遞的時間量。  
   
- 您可能會在此範例中發現另一個缺點。 `Timer`屬性會傳回自午夜以來已經過的秒數; 因此，應用程式當機午夜之前啟動。 更謹慎的方法，來測量時間會需要這類的界限條件納入考量，或完全避免使用它們，例如使用屬性`Now`。  
+ 您可能已在此範例中發現另一個缺陷。 `Timer`屬性會傳回從午夜開始的秒數; 因此, 如果在午夜之前啟動應用程式, 就會停滯。 更小心測量時間的方法會將界限條件 (例如這種情況) 納入考慮, 或使用之類的屬性`Now`加以避免。  
   
- 既然`Widget`類別可以引發事件，您可以移至下一個逐步解說。 [逐步解說：處理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)示範如何使用`WithEvents`產生關聯的事件處理常式和`PercentDone`事件。  
+ 現在, 類別可以引發事件, 您可以移至下一個逐步解說。 `Widget` [逐步解說：處理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)示範如何使用`WithEvents`將事件處理常式與`PercentDone`事件產生關聯。  
   
 ## <a name="see-also"></a>另請參閱
 

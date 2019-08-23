@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 198dd630a08ae454ad1d9d9af460b1f288b2a1d8
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 9ac18fae126425126712dafeb80f05663dfc2ebc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037778"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966592"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>HOW TO：繼承現有的 Windows Forms 控制項
 如果您想要擴充現有控制項的功能，您可以透過繼承來建立衍生自現有控制項的控制項。 繼承自現有的控制項時，您會繼承該控制項的所有功能和視覺屬性。 例如, 如果您要建立繼承自<xref:System.Windows.Forms.Button>的控制項, 新控制項的外觀和作用就和標準<xref:System.Windows.Forms.Button>控制項完全一樣。 您就可以透過實作自訂方法和屬性，來擴充或修改新控制項的功能。 在某些控制項中, 您也可以藉由覆寫其<xref:System.Windows.Forms.Control.OnPaint%2A>方法來變更繼承控制項的視覺外觀。
@@ -56,7 +56,7 @@ ms.locfileid: "69037778"
 10. 如果您想要修改控制項的圖形外觀, 請覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法。
 
     > [!NOTE]
-    >  覆<xref:System.Windows.Forms.Control.OnPaint%2A>寫將不允許您修改所有控制項的外觀。 所有由 Windows 完成其繪製的控制項 (例如, <xref:System.Windows.Forms.TextBox>) 永遠不會呼叫其<xref:System.Windows.Forms.Control.OnPaint%2A>方法, 因此永遠不會使用自訂程式碼。 請參閱您想要修改之特定控制項的說明文件, 以查看該<xref:System.Windows.Forms.Control.OnPaint%2A>方法是否可用。 如需所有 Windows Forms 控制項的清單，請參閱[要在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)。 如果控制項未<xref:System.Windows.Forms.Control.OnPaint%2A>列為成員方法, 您就無法藉由覆寫這個方法來改變其外觀。 如需自訂繪製的詳細資訊，請參閱[自訂控制項繪製和轉譯](custom-control-painting-and-rendering.md)。
+    > 覆<xref:System.Windows.Forms.Control.OnPaint%2A>寫將不允許您修改所有控制項的外觀。 所有由 Windows 完成其繪製的控制項 (例如, <xref:System.Windows.Forms.TextBox>) 永遠不會呼叫其<xref:System.Windows.Forms.Control.OnPaint%2A>方法, 因此永遠不會使用自訂程式碼。 請參閱您想要修改之特定控制項的說明文件, 以查看該<xref:System.Windows.Forms.Control.OnPaint%2A>方法是否可用。 如需所有 Windows Forms 控制項的清單，請參閱[要在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)。 如果控制項未<xref:System.Windows.Forms.Control.OnPaint%2A>列為成員方法, 您就無法藉由覆寫這個方法來改變其外觀。 如需自訂繪製的詳細資訊，請參閱[自訂控制項繪製和轉譯](custom-control-painting-and-rendering.md)。
 
     ```vb
     Protected Overrides Sub OnPaint(ByVal e As _
@@ -86,6 +86,6 @@ ms.locfileid: "69037778"
 - [如何：繼承自控制項類別](how-to-inherit-from-the-control-class.md)
 - [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
 - [如何：Windows Forms 的作者控制項](how-to-author-controls-for-windows-forms.md)
-- [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Visual Basic 中的繼承事件處理常式疑難排解](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [逐步解說：從具有 Visual Basic 的 Windows Forms 控制項繼承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [逐步解說：使用視覺效果從 Windows Forms 控制項繼承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

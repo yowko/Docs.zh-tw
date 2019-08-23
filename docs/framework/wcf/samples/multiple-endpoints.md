@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 90b8c3cb49ff7b246b6bf7799d6b76f8549b23e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fe38e685b662a0dbfe6f818a597776802eada42
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755957"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930344"
 ---
 # <a name="multiple-endpoints"></a>多個端點
-多個端點範例會示範如何在服務上設定多個端點，以及如何從用戶端與每個端點進行通訊。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服務組態已修改成定義支援 `ICalculator` 合約的兩個端點，但是每個端點會位在不同的位址，同時使用不同的繫結。 用戶端組態與程式碼已修改成可與這兩個服務端點進行通訊。  
+多個端點範例會示範如何在服務上設定多個端點，以及如何從用戶端與每個端點進行通訊。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 服務組態已修改成定義支援 `ICalculator` 合約的兩個端點，但是每個端點會位在不同的位址，同時使用不同的繫結。 用戶端組態與程式碼已修改成可與這兩個服務端點進行通訊。  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+> 此範例的安裝程序與建置指示位於本主題的結尾。  
   
  服務 Web.config 檔已修改成定義兩個端點，每個端點都支援相同的 `ICalculator` 合約，但是分別位在不同的位址及使用不同繫結。 第一個端點是定義位在基底位址且 `basicHttpBinding` 使用繫結，其並未啟用安全性。 第二個端點是定義位在 {baseaddress}/secure 且使用 `wsHttpBinding` 繫結，其已透過搭配 Windows 驗證使用 WS-Security，因此預設為安全端點。  
   
@@ -104,17 +104,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  

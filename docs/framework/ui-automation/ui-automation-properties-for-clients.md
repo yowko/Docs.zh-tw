@@ -8,16 +8,16 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: e687533d618cef3fcc59b3ecd2b205b80b13b97d
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6f02a4825206da0dd4949083cc54f555a8ae40b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796669"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914449"
 ---
 # <a name="ui-automation-properties-for-clients"></a>用戶端的 UI 自動化屬性
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本概觀向您介紹公開至使用者介面自動化用戶端應用程式的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。  
   
@@ -29,13 +29,11 @@ ms.locfileid: "68796669"
   
  若要改善效能，擷取 <xref:System.Windows.Automation.AutomationElement> 物件時，可以快取控制項和控制項模式的屬性值。 如需詳細資訊, 請參閱[在 UI 自動化用戶端中](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)快取。  
   
-<a name="Property_IDs"></a>   
 ## <a name="property-ids"></a>屬性識別碼  
  屬性識別碼 (id) 是封裝在物件中<xref:System.Windows.Automation.AutomationProperty>的唯一、常數值。 使用者介面自動化用戶端應用程式會從<xref:System.Windows.Automation.AutomationElement>類別或適當的控制項模式類別 ( <xref:System.Windows.Automation.ScrollPattern>例如) 取得這些識別碼。 使用者介面自動化提供者從 <xref:System.Windows.Automation.AutomationElementIdentifiers> 取得這些，或是從控制項模式識別項類別的其中一項取得，例如 <xref:System.Windows.Automation.ScrollPatternIdentifiers>。  
   
  提供者使用 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 的 <xref:System.Windows.Automation.AutomationProperty> 數值來識別在 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> 方法中要查詢的屬性。 一般而言，用戶端應用程式不需要檢查 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> 僅供偵錯和診斷之用。  
   
-<a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>屬性條件  
  屬性識別碼是用來建立<xref:System.Windows.Automation.PropertyCondition>用來尋找<xref:System.Windows.Automation.AutomationElement>物件的物件。 例如，您要尋找有特定名稱的 <xref:System.Windows.Automation.AutomationElement> 或是所有已啟用的控制項。 每個 <xref:System.Windows.Automation.PropertyCondition> 都會指定一項 <xref:System.Windows.Automation.AutomationProperty> 識別項和必須與屬性相符的值。  
   
@@ -47,7 +45,6 @@ ms.locfileid: "68796669"
   
 - <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
-<a name="Retrieving_Properties"></a>   
 ## <a name="retrieving-properties"></a>擷取屬性  
  <xref:System.Windows.Automation.AutomationElement> 的某些屬性和控制項模式類別的所有屬性公開為 `Current` 的巢狀屬性或 `Cached` 或控制項模式物件的 <xref:System.Windows.Automation.AutomationElement> 屬性。  
   
@@ -73,7 +70,6 @@ ms.locfileid: "68796669"
   
  `Get` 方法會傳回 <xref:System.Object>。 應用程式必須在使用值之前將傳回的物件轉換成適當的類型。  
   
-<a name="_Default_Property_Values"></a>   
 ## <a name="default-property-values"></a>預設屬性值  
  如果使用者介面自動化提供者並未實作屬性，則 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 系統便能提供預設值。 例如，如果控制項的提供者不支援 <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>所識別之屬性， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 就會傳回空字串。 同樣地，如果提供者不支援 <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>所識別之屬性， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 就會傳回 `false`。  
   
@@ -86,17 +82,15 @@ ms.locfileid: "68796669"
   
  若要找出項目支援哪些屬性，請使用 <xref:System.Windows.Automation.AutomationElement.GetSupportedProperties%2A>。 這會傳回 <xref:System.Windows.Automation.AutomationProperty> 識別項的陣列。  
   
-<a name="Property_changed_Events"></a>   
 ## <a name="property-changed-events"></a>屬性變更事件  
  當 <xref:System.Windows.Automation.AutomationElement> 或控制項模式的屬性值變更，便會引發事件。 應用程式可以訂閱這類事件，方法是呼叫 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>、提供 <xref:System.Windows.Automation.AutomationProperty> 識別碼的陣列做為最後一個參數來指定想要的屬性。  
   
  在 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>，您可以檢查事件引數的 <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> 成員，辨識已變更的屬性。 引數也包含已變更的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性之舊值與新值。 這些值的類型都是 <xref:System.Object> ，而且必須在使用之前轉型成正確的類型。  
   
-<a name="Additional_AutomationElement_Properties"></a>   
 ## <a name="additional-automationelement-properties"></a>其他 AutomationElement 屬性  
  除了 <xref:System.Windows.Automation.AutomationElement.Current%2A> 和 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 屬性結構， <xref:System.Windows.Automation.AutomationElement> 具有下列屬性，這會透過簡單的屬性存取子擷取。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|快取中的子 <xref:System.Windows.Automation.AutomationElement> 物件集合。|  
 |<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|快取中的 <xref:System.Windows.Automation.AutomationElement> 父物件。|  

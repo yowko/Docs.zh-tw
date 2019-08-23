@@ -2,12 +2,12 @@
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 7b147a84a43677afa53f7872f8042f1cf44137cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76a63140668fb1f41cf9e6f901d9a43240a1d098
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774708"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936075"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 指定群組或彙總的搜尋條件。  
@@ -26,7 +26,7 @@ ms.locfileid: "61774708"
  HAVING 子句是用來在群組的結果上指定額外篩選條件。 如果查詢運算式中未指定 GROUP BY 子句，便會假設為一組隱含的單一群組。  
   
 > [!NOTE]
->  只能搭配可用 HAVING[選取](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)陳述式。 當[GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)是未使用，HAVING 的行為就像是 WHERE 子句。  
+> HAVING 只能搭配[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)語句使用。 未使用[GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)時, HAVING 的行為就像是 WHERE 子句。  
   
  HAVING 子句的運作方式很類似 WHERE 字句，唯一不同的是它必須套用在 GROUP BY 運算後面。 這表示 HAVING 子句只能參考群組別名和彙總，如以下範例所述。  
   
@@ -40,7 +40,7 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 HAVING 和 GROUP BY 運算子指定群組或彙總的搜尋條件。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 請依照下列中的程序[How to:執行可傳回 PrimitiveType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
+1. [遵循 how to:執行可傳回 PrimitiveType 結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   

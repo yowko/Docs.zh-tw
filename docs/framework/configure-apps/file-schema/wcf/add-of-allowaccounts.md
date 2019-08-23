@@ -2,15 +2,15 @@
 title: <add> 的 <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 1c6764b37b2aa5349b8ccf63e6b7c2bc580b69b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ed0b5025ab969c45d7440f2a209426c5c87f549
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701134"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920281"
 ---
-# <a name="add-of-allowaccounts"></a>\<新增 > 的\<a d d >
-指定處理序裝載 WCF 服務，且已授權可連線共用服務的存取權的使用者的帳戶。  
+# <a name="add-of-allowaccounts"></a>\<新增 d > \<的 >
+為裝載 WCF 服務的進程指定使用者帳戶, 並授與共享服務的連接存取權。  
   
  \<system.serviceModel.activation>  
   
@@ -38,7 +38,7 @@ ms.locfileid: "61701134"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|包含的組態項目的集合`securityIdentifier`屬性來指定裝載 WCF 服務，且已授權可連線共用服務的存取權的處理程序的使用者帳戶。|  
+|[\<allowAccounts>](allowaccounts.md)|Configuration 專案的集合, 其中包含`securityIdentifier`屬性, 以指定裝載 WCF 服務之進程的使用者帳戶, 並授與共享服務的連接存取權。|  
   
 ## <a name="example"></a>範例  
  下列組態範例會新增使用者帳戶的五個預設識別項到此集合中。  

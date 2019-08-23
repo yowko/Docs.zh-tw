@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 6bd597cd2719fb96b8633f724da46a76e416b454
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 019035247b1316eb236b025d4527c42bb6ef526c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817903"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962814"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>開發 Windows Presentation Foundation (WPF) 獨立和瀏覽器裝載的應用程式時, 您必須考慮安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式會以不受限制的許可權 (CAS**FullTrust**許可權集合) 執行, 不論是使用 Windows Installer (.msi)、XCopy 或 ClickOnce 部署。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過, 完全信任的主應用程式可以使用 .NET Framework 增益集模型<xref:System.AppDomain>來建立部分信任。 如需詳細資訊, 請參閱[WPF 增益集總覽](./app-development/wpf-add-ins-overview.md)。  
@@ -59,13 +59,13 @@ ms.locfileid: "68817903"
   
 |內容類型|描述|URI 範例|  
 |------------------|-----------------|-----------------|  
-|資源|新增至組建類型為**資源**之專案的檔案。|`pack://application:,,,/MyResourceFile.xaml`|  
+|Resource|新增至組建類型為**資源**之專案的檔案。|`pack://application:,,,/MyResourceFile.xaml`|  
 |內容|新增至專案的檔案, 其組建類型為**Content**。|`pack://application:,,,/MyContentFile.xaml`|  
 |Site of origin|新增至組建類型為**None**之專案的檔案。|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
 |應用程式程式碼|具有已編譯程式碼後置的 XAML 資源。<br /><br /> -或-<br /><br /> 加入至組建類型為**Page**之專案的 XAML 檔案。|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
->  如需有關應用程式資料檔案和套件[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]的詳細資訊, 請參閱[WPF 應用程式資源、內容和資料檔案](./app-development/wpf-application-resource-content-and-data-files.md)。  
+> 如需有關應用程式資料檔案和套件[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]的詳細資訊, 請參閱[WPF 應用程式資源、內容和資料檔案](./app-development/wpf-application-resource-content-and-data-files.md)。  
   
  使用者或透過程式設計方式可以巡覽到這些內容類型的檔案︰  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68817903"
      ![顯示 [安全性設定] 對話方塊的螢幕擷取畫面。](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
->  您也可以從 Internet Explorer 到達 [網際網路選項] 對話方塊。 按一下 [**工具**], 然後按一下 [**網際網路選項**]。  
+> 您也可以從 Internet Explorer 到達 [網際網路選項] 對話方塊。 按一下 [**工具**], 然後按一下 [**網際網路選項**]。  
   
  從 Windows Internet Explorer 7 開始, 會包含下列專為 .NET Framework 所提供的安全性設定:  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68817903"
  WPF <xref:System.Windows.Controls.WebBrowser>控制項可以用來裝載 Web 內容。 WPF <xref:System.Windows.Controls.WebBrowser>控制項會包裝基礎 WebBrowser ActiveX 控制項。 當您使用 wpf <xref:System.Windows.Controls.WebBrowser>控制項來裝載不受信任的 Web 內容時, wpf 會提供一些保護應用程式的支援。 不過, 某些安全性功能必須由使用<xref:System.Windows.Controls.WebBrowser>控制項的應用程式直接套用。 如需 WebBrowser ActiveX 控制項的詳細資訊, 請參閱[Webbrowser 控制項總覽和教學](https://go.microsoft.com/fwlink/?LinkId=179388)課程。  
   
 > [!NOTE]
->  本節也適用<xref:System.Windows.Controls.Frame>于控制項, 因為它會<xref:System.Windows.Controls.WebBrowser>使用來流覽至 HTML 內容。  
+> 本節也適用<xref:System.Windows.Controls.Frame>于控制項, 因為它會<xref:System.Windows.Controls.WebBrowser>使用來流覽至 HTML 內容。  
   
  如果 WPF <xref:System.Windows.Controls.WebBrowser>控制項是用來裝載不受信任的 Web 內容, 您的應用程式應該使用<xref:System.AppDomain>部分信任, 協助將您的應用程式程式碼與可能惡意的 HTML 腳本隔離。 特別是當您的應用程式使用<xref:System.Windows.Controls.WebBrowser.InvokeScript%2A>方法<xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>和屬性與裝載的腳本互動時, 更是如此。 如需詳細資訊, 請參閱[WPF 增益集總覽](./app-development/wpf-add-ins-overview.md)。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68817903"
  功能控制項是由具現化 WebBrowser ActiveX 物件的進程所套用。 因此，如果您要建立的獨立應用程式會巡覽到不受信任的內容，則應該認真考慮啟用其他功能控制項。  
   
 > [!NOTE]
->  這項建議根據 MSHTML 和 SHDOCVW 主機安全性的一般建議。 如需詳細資訊, [請參閱 MSHTML 主機安全性常見問題:第 I](https://go.microsoft.com/fwlink/?LinkId=179396)部分和[MSHTML 主機安全性常見問題:II](https://go.microsoft.com/fwlink/?LinkId=179415)的第二部分。  
+> 這項建議根據 MSHTML 和 SHDOCVW 主機安全性的一般建議。 如需詳細資訊, [請參閱 MSHTML 主機安全性常見問題:第 I](https://go.microsoft.com/fwlink/?LinkId=179396)部分和[MSHTML 主機安全性常見問題:II](https://go.microsoft.com/fwlink/?LinkId=179415)的第二部分。  
   
  針對可執行檔，請考慮將登錄值設定為 1 來啟用下列功能控制項。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "68817903"
  與一般獨立應用程式相較之下，在 Internet Explorer 中執行的 XBAP 也會取得額外層級的安全性。 這項額外的安全性是因為 Internet Explorer (因此 WebBrowser ActiveX 控制項) 預設會在和[!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] [!INCLUDE[win7](../../../includes/win7-md.md)]上以受保護模式執行。 如需受保護模式的詳細資訊, 請參閱[瞭解及使用受保護模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
   
 > [!NOTE]
->  如果您嘗試在 Firefox 中執行包含 WPF <xref:System.Windows.Controls.WebBrowser>控制項的 XBAP, 而在網際網路區域中<xref:System.Security.SecurityException> , 則會擲回。 這是因為 WPF 安全性原則。  
+> 如果您嘗試在 Firefox 中執行包含 WPF <xref:System.Windows.Controls.WebBrowser>控制項的 XBAP, 而在網際網路區域中<xref:System.Security.SecurityException> , 則會擲回。 這是因為 WPF 安全性原則。  
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>停用部分信任用戶端應用程式的 APTCA 組件  
@@ -241,7 +241,7 @@ ms.locfileid: "68817903"
  如果必須停用部分信任用戶端應用程式的組件，您可以撰寫可建立登錄機碼和值的更新。  
   
 > [!NOTE]
->  核心 .NET Framework 元件不會受到以這種方式停用的影響, 因為受控應用程式必須執行它們。 停用 APTCA 組件的支援主要是針對協力廠商應用程式。  
+> 核心 .NET Framework 元件不會受到以這種方式停用的影響, 因為受控應用程式必須執行它們。 停用 APTCA 組件的支援主要是針對協力廠商應用程式。  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>鬆散 XAML 檔案的沙箱行為  
@@ -258,13 +258,13 @@ ms.locfileid: "68817903"
  使用此設定，會將外部內容載入與裝載應用程式的程序不同的程序。 此程序僅限於預設網際網路區域權限集，可有效地隔離它與裝載應用程式和用戶端電腦。  
   
 > [!NOTE]
->  即使從[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Navigation.NavigationWindow>或在獨立應用程式中流覽到鬆散檔案,也是根據WPF瀏覽器裝載基礎結構(涉及presentationhost.exe程式)來執行,安全性層級是<xref:System.Windows.Controls.Frame>將內容直接載入到 Internet Explorer 的[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]和[!INCLUDE[win7](../../../includes/win7-md.md)] (仍然是透過 presentationhost.exe) 時稍微小於。 這是因為使用 Web 瀏覽器的獨立 WPF 應用程式不會提供 Internet Explorer 的額外受保護模式安全性功能。  
+> 即使從[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Navigation.NavigationWindow>或在獨立應用程式中流覽到鬆散檔案,也是根據WPF瀏覽器裝載基礎結構(涉及presentationhost.exe程式)來執行,安全性層級是<xref:System.Windows.Controls.Frame>將內容直接載入到 Internet Explorer 的[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]和[!INCLUDE[win7](../../../includes/win7-md.md)] (仍然是透過 presentationhost.exe) 時稍微小於。 這是因為使用 Web 瀏覽器的獨立 WPF 應用程式不會提供 Internet Explorer 的額外受保護模式安全性功能。  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>用於開發可提高安全性的 WPF 應用程式的資源  
  以下是一些額外的資源, 可協助[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]開發提升安全性的應用程式:  
   
-|區域|資源|  
+|區域|Resource|  
 |----------|--------------|  
 |Managed 程式碼|[Patterns and Practices Security Guidance for Applications](https://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)|  
 |CAS|[程式碼存取安全性](../misc/code-access-security.md)|  

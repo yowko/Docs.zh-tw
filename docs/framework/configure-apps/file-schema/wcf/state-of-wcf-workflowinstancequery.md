@@ -1,28 +1,28 @@
 ---
-title: <state> WCF 的 <workflowInstanceQuery>
+title: <state>在 WCF 中,<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99387a8f60e96beb2ec7706d9abf4bb6ae84b868
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757959"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938214"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<狀態 > 的 WCF， \<workflowInstanceQuery >
+# <a name="state-of-wcf-workflowinstancequery"></a>\<WCF、 \<workflowInstanceQuery > 的狀態 >
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
   
- 如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 如需追蹤設定檔查詢的詳細資訊, 請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<追蹤 >  
 \<設定檔 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流程 >  
 \<workflowInstanceQueries>  
 \<workflowInstanceQuery>  
-\<states>  
-\<state>  
+\<狀態 >  
+\<狀態 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,9 +68,9 @@ ms.locfileid: "61757959"
 
 按照此集合中的狀態篩選傳回的記錄。  
   
-下表說明可能的狀態值：
+下表說明可能的狀態值:
   
-|狀況|描述|  
+|State|描述|  
 |-----------|-----------------|  
 |已中止|工作流程執行個體已中止。|  
 |已完成|工作流程執行個體已完成。|  
@@ -105,5 +105,5 @@ ms.locfileid: "61757959"
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流程追蹤及追蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)

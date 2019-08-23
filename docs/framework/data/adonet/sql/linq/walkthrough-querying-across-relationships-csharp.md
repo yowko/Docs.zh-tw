@@ -2,22 +2,22 @@
 title: 逐步解說：跨關聯性查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742643"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946949"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>逐步解說：跨關聯性查詢 (C#)
-本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*關聯*表示在資料庫中的外部索引鍵關聯性。  
+本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]關聯來表示資料庫中的外鍵*關聯*性。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  本逐步解說的內容是依據 Visual C# 開發設定所撰寫的。  
   
 ## <a name="prerequisites"></a>必要條件  
- 您必須先完成[逐步解說：簡單的物件模型和查詢 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)。 此逐步解說建立於該逐步解說之上，其中包含出現在 c:\linqtest5 中的 northwnd.mdf 檔。  
+ 您必須已完成[逐步解說:簡單的物件模型和查詢C#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md))。 此逐步解說建立於該逐步解說之上，其中包含出現在 c:\linqtest5 中的 northwnd.mdf 檔。  
   
 ## <a name="overview"></a>總覽  
  此逐步解說包含三項主要工作：  
@@ -47,7 +47,7 @@ ms.locfileid: "67742643"
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>建立和執行客戶-訂單關聯性的查詢  
- 您現在可以直接從 `Order` 物件存取 `Customer` 物件，反之亦然。 您不需要明確*聯結*客戶和訂單之間。  
+ 您現在可以直接從 `Order` 物件存取 `Customer` 物件，反之亦然。 您不需要在客戶和訂單之間進行明確*聯結*。  
   
 ### <a name="to-access-order-objects-by-using-customer-objects"></a>若要使用 Customer 物件存取 Order 物件  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67742643"
 2. 按 F5 對應用程式進行偵錯。  
   
     > [!NOTE]
-    >  您可以將 `db.Log = Console.Out;` 標記為註解，以便在主控台視窗中排除 SQL 程式碼。  
+    > 您可以將 `db.Log = Console.Out;` 標記為註解，以便在主控台視窗中排除 SQL 程式碼。  
   
 3. 在主控台視窗中按 Enter 鍵，以停止偵錯。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "67742643"
 4. 在主控台視窗中按 Enter 鍵，以停止偵錯。  
   
 ## <a name="next-steps"></a>後續步驟  
- 下一個逐步解說 ([逐步解說：操作資料 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 會示範如何操作資料。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
+ 下一個逐步解說[(逐步解說:運算元據 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 示範如何運算元據。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
   
 ## <a name="see-also"></a>另請參閱
 

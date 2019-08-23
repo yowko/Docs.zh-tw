@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 ComboBox 控制項中建立各種大小的文字
+title: 作法：在 ComboBox 控制項中建立各種大小的文字
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 1fa9b04063d8f606f674cc54190dad5a669adbeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c0dc40f6cac0af1f88e72089865caa3a17fcf2a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666413"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914740"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>HOW TO：在 ComboBox 控制項中建立各種大小的文字
-此範例示範自訂繪圖中的文字<xref:System.Windows.Forms.ComboBox>控制項。 當項目符合特定準則時，它是以較大的字型繪製，而且變成紅色。  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>作法：在 ComboBox 控制項中建立各種大小的文字
+這個範例示範<xref:System.Windows.Forms.ComboBox>控制項中文字的自訂繪製。 當專案符合特定準則時, 它會以較大的字型繪製並變成紅色。  
   
 ## <a name="example"></a>範例  
   
@@ -58,12 +58,12 @@ End Sub
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- Windows 表單。  
+- Windows form。  
   
-- A<xref:System.Windows.Forms.ComboBox>控制項，名為`ListBox1`中的三個項目與<xref:System.Windows.Forms.ComboBox.Items%2A>屬性。 在此範例中，三個項目會命名為`"One", Two", and Three"`。 <xref:System.Windows.Forms.ComboBox.DrawMode%2A>的屬性`ComboBox1`必須設為<xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>。  
+- 名<xref:System.Windows.Forms.ComboBox>為`ListBox1`的控制項<xref:System.Windows.Forms.ComboBox.Items%2A> , 其屬性中有三個專案。 在此範例中, 這三個專案`"One", Two", and Three"`的名稱為。 的<xref:System.Windows.Forms.ComboBox.DrawMode%2A> <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>屬性必須設定為。`ComboBox1`  
   
     > [!NOTE]
-    >  這項技術也是適用於<xref:System.Windows.Forms.ListBox>控制項，您可以使用替代<xref:System.Windows.Forms.ListBox>如<xref:System.Windows.Forms.ComboBox>。  
+    > 這項技術也適用于<xref:System.Windows.Forms.ListBox>控制項, 您可以將<xref:System.Windows.Forms.ListBox>取代為<xref:System.Windows.Forms.ComboBox>。  
   
 - <xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 命名空間的參考。  
   

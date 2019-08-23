@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fbce22755b3732896a226c00bbf8e068dc1f098e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586524"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929403"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。  
@@ -43,7 +43,7 @@ ms.locfileid: "65586524"
  `-link` 選項只能內嵌介面、結構和委派。 不支援內嵌 COM 類別。  
   
 > [!NOTE]
->  當您在程式碼中建立內嵌 COM 類型的執行個體時，必須使用適當的介面來建立執行個體。 嘗試使用 CoClass 建立內嵌 COM 類型的執行個體將會導致錯誤。  
+> 當您在程式碼中建立內嵌 COM 類型的執行個體時，必須使用適當的介面來建立執行個體。 嘗試使用 CoClass 建立內嵌 COM 類型的執行個體將會導致錯誤。  
   
  若要在 Visual Studio 中設定 `-link` 選項，請新增組件參考，並將 `Embed Interop Types` 屬性設定為 **true**。 `Embed Interop Types` 屬性的預設值為 **false**。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "65586524"
   
 - 所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
   
- 使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一或多個組件參考所在的目錄。  
+ 請使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)來指定您的一或多個元件參考所在的目錄。  
   
- 像是[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項，`-link`編譯器選項會使用參考常用的.NET Framework 組件的 Vbc.rsp 回應檔。 使用  [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)編譯器選項，如果不想讓編譯器使用 Vbc.rsp 檔案。  
+ 如同[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項, `-link`編譯器選項會使用會參考常用 .NET Framework 元件的 Vbc 回應檔。 如果您不想要編譯器使用 Vbc .rsp 檔案, 請使用[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)編譯器選項。  
   
  `-link` 的簡短形式為 `-l`。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65586524"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>範例  
- 下列命令列編譯原始程式檔`OfficeApp.vb`，而且參考的組件`COMData1.dll`並`COMData2.dll`產生`OfficeApp.exe`。  
+ `OfficeApp.vb`下列命令列會從`COMData1.dll`編譯原始程式檔和參考元件, `COMData2.dll`並產生`OfficeApp.exe`。  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -89,7 +89,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [逐步解說：從受控組件內嵌類型](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [-參考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

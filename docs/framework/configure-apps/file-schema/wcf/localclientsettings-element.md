@@ -2,20 +2,20 @@
 title: <localClientSettings> 項目
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7331105582a4a48b7edd8cd4f6a691771b0b8ff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765774"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930803"
 ---
-# <a name="localclientsettings-element"></a>\<localClientSettings > 項目
+# <a name="localclientsettings-element"></a>\<localClientSettings > 元素
 指定此繫結之本機用戶端的安全性設定。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -41,7 +41,7 @@ ms.locfileid: "61765774"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`cacheCookies`|布林值，指定是否啟用 Cookie 快取。 預設為 `false`。|  
 |`cookieRenewalThresholdPercentage`|整數，指定可更新的 Cookie 百分比上限。 這個值應介於 0 到 100 之間 (含 0 和 100)。 預設值為 90。|  
@@ -56,14 +56,14 @@ ms.locfileid: "61765774"
 |`timestampValidityDuration`|正的 <xref:System.TimeSpan>，指定時間戳記有效的持續期間。 預設為 "00:15:00"。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
-|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
+|[\<security>](security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
   
 ## <a name="remarks"></a>備註  
  這些是本機設定，這意味著它們不是衍生自服務之安全性原則的設定。  
@@ -75,9 +75,9 @@ ms.locfileid: "61765774"
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [如何：使用 SecurityBindingElement 建立自訂系結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自訂繫結安全性](../../../wcf/samples/custom-binding-security.md)

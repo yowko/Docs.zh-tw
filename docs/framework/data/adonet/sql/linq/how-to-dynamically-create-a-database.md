@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623857"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940079"
 ---
-# <a name="how-to-dynamically-create-a-database"></a>HOW TO：動態建立資料庫
+# <a name="how-to-dynamically-create-a-database"></a>作法：動態建立資料庫
 在 LINQ to SQL 中，物件模型 (Object Model) 會對應至關聯式資料庫。 對應的啟用方式是使用以屬性 (Attribute) 為基礎的對應或外部對應檔案來描述關聯式資料庫的結構。 在這兩種情況中，系統會提供足夠的關聯式資料庫相關資訊，可讓您使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法來建立新的資料庫執行個體 (Instance)。  
   
  <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法只會針對物件模型中所編碼的資訊範圍，建立資料庫的複本。 物件模型中的對應檔案和屬性可能不會編碼現有資料庫結構的所有項目。 對應資訊並不代表使用者定義函式、預存程序 (Stored Procedure)、觸發程序 (Trigger) 或檢查條件約束 (Check Constraint) 的內容。 這個行為對各種資料庫而言就已足夠。  
@@ -26,7 +26,7 @@ ms.locfileid: "64623857"
  根據連接字串，您也可以使用 .mdf 檔案或目錄名稱來搭配使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法與 SQL Server。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用連接字串來定義要建立的資料庫，以及要在其上建立資料庫的伺服器。  
   
 > [!NOTE]
->  請盡可能使用 Windows 整合式安全性來連接至資料庫，如此連接字串就不需要使用密碼。  
+> 請盡可能使用 Windows 整合式安全性來連接至資料庫，如此連接字串就不需要使用密碼。  
   
 ## <a name="example"></a>範例  
  下列程式碼會提供如何建立名為 MyDVDs.mdf 之新資料庫的範例。  

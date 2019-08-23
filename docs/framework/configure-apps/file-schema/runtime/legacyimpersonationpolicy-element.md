@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cf997c8ff13e0a6a4664ea3b538ac0def1baacf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da01d0dac2e67d6c0131a2b5965472bbd19213fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663632"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927320"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 元素
 指定 Windows 識別不會流經非同步點，而不論目前執行緒上執行內容的流程設定為何。  
@@ -42,7 +42,7 @@ ms.locfileid: "69663632"
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Principal.WindowsIdentity>根據目前線程的流程設定, <xref:System.Threading.ExecutionContext>在非同步點之間流動。 這是預設值。|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity>不會流經非同步點, 而不論<xref:System.Threading.ExecutionContext>目前線程上的流程設定為何。|  
@@ -63,7 +63,7 @@ ms.locfileid: "69663632"
  從 .NET Framework 2.0 開始, 您可以使用`<legacyImpersonationPolicy>`元素來<xref:System.Security.Principal.WindowsIdentity>指定不流經非同步點。  
   
 > [!NOTE]
->  通用語言執行平臺 (CLR) 會感知僅使用 managed 程式碼執行的模擬作業, 而不是在 managed 程式碼外部執行的模擬, 例如透過平台叫用來進行非受控程式碼, 或透過直接呼叫 Win32 函數。 除非專案<xref:System.Security.Principal.WindowsIdentity>已設定為 true (`<alwaysFlowImpersonationPolicy enabled="true"/>`), 否則只有managed物件可以流經非同步點。`alwaysFlowImpersonationPolicy` `alwaysFlowImpersonationPolicy`將專案設定為 true, 會指定 Windows 識別一律流經非同步點, 而不論模擬的執行方式為何。 如需有關跨非同步點流動非受控模擬的詳細資訊, 請參閱[ \<alwaysFlowImpersonationPolicy > 元素](alwaysflowimpersonationpolicy-element.md)。  
+> 通用語言執行平臺 (CLR) 會感知僅使用 managed 程式碼執行的模擬作業, 而不是在 managed 程式碼外部執行的模擬, 例如透過平台叫用來進行非受控程式碼, 或透過直接呼叫 Win32 函數。 除非專案<xref:System.Security.Principal.WindowsIdentity>已設定為 true (`<alwaysFlowImpersonationPolicy enabled="true"/>`), 否則只有managed物件可以流經非同步點。`alwaysFlowImpersonationPolicy` `alwaysFlowImpersonationPolicy`將專案設定為 true, 會指定 Windows 識別一律流經非同步點, 而不論模擬的執行方式為何。 如需有關跨非同步點流動非受控模擬的詳細資訊, 請參閱[ \<alwaysFlowImpersonationPolicy > 元素](alwaysflowimpersonationpolicy-element.md)。  
   
  您可以透過兩種其他方式來改變此預設行為:  
   

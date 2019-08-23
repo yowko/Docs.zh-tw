@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a93cb9da44985fa29a4975875564b384117ce76f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780285"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938460"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 應用程式中的 SqlDependency
 本節中的範例將顯示如何藉由使用 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 物件，間接使用 <xref:System.Web.Caching.SqlCacheDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 物件會使用 <xref:System.Data.SqlClient.SqlDependency> 來接聽通知並正確地更新快取。  
   
 > [!NOTE]
->  範例程式碼會假設您已啟用查詢通知所執行的指令碼[啟用查詢通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)。  
+> 範例程式碼假設您已藉由執行[啟用查詢通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)中的腳本來啟用查詢通知。  
   
 ## <a name="about-the-sample-application"></a>關於範例應用程式  
- 範例應用程式會使用單一 ASP.NET 網頁顯示中的產品資訊**AdventureWorks**中的 SQL Server 資料庫<xref:System.Web.UI.WebControls.GridView>控制項。 載入頁面時，此程式碼會將目前時間寫入 <xref:System.Web.UI.WebControls.Label> 控制項。 然後會定義 <xref:System.Web.Caching.SqlCacheDependency> 物件，並在 <xref:System.Web.Caching.Cache> 物件上設定屬性，以儲存快取資料長達三分鐘。 然後，此程式碼會連接到資料庫並擷取資料。 當頁面已載入而且應用程式正在執行時，ASP.NET 將從快取中擷取資料，而且您可以注意頁面上的時間沒有變更來確認這點。 如果正在監視的資料有變更，ASP.NET 會讓快取無效並將新資料重新填入 `GridView` 控制項，而且更新 `Label` 控制項中顯示的時間。  
+ 範例應用程式會使用單一 ASP.NET 網頁, 在<xref:System.Web.UI.WebControls.GridView>控制項中顯示**AdventureWorks** SQL Server 資料庫的產品資訊。 載入頁面時，此程式碼會將目前時間寫入 <xref:System.Web.UI.WebControls.Label> 控制項。 然後會定義 <xref:System.Web.Caching.SqlCacheDependency> 物件，並在 <xref:System.Web.Caching.Cache> 物件上設定屬性，以儲存快取資料長達三分鐘。 然後，此程式碼會連接到資料庫並擷取資料。 當頁面已載入而且應用程式正在執行時，ASP.NET 將從快取中擷取資料，而且您可以注意頁面上的時間沒有變更來確認這點。 如果正在監視的資料有變更，ASP.NET 會讓快取無效並將新資料重新填入 `GridView` 控制項，而且更新 `Label` 控制項中顯示的時間。  
   
 ## <a name="creating-the-sample-application"></a>建立範例應用程式  
  請遵循下列步驟來建立並執行範例應用程式：  
@@ -47,7 +47,7 @@ ms.locfileid: "61780285"
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5. 加入兩個 Helper 方法：`GetConnectionString` 及 `GetSQL`。 定義的連接字串會使用整合安全性。 您必須確認您使用的帳戶具有必要的資料庫權限，而且範例資料庫**AdventureWorks**，已啟用通知。
+5. 加入兩個 Helper 方法：`GetConnectionString` 及 `GetSQL`。 定義的連接字串會使用整合安全性。 您必須確認所使用的帳戶具有必要的資料庫許可權, 而且範例資料庫**AdventureWorks**已啟用通知。
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

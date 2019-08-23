@@ -2,12 +2,12 @@
 title: SQL Server 中的伺服器和資料庫角色
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645964"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961086"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的伺服器和資料庫角色
 所有的 SQL Server 版本都會使用角色架構的安全性，讓您可以將權限指派給角色或使用者群組，而不是個別的使用者。 固定伺服器角色和固定資料庫角色都指派有固定的權限組。  
@@ -16,18 +16,18 @@ ms.locfileid: "61645964"
  固定伺服器角色擁有固定的權限組和整個伺服器的範圍， 這些角色專門用於管理 SQL Server，且指派給角色的權限都無法變更。 您可以將登入指派給固定伺服器角色，而不必擁有資料庫的使用者脹戶。  
   
 > [!IMPORTANT]
->  `sysadmin` 固定伺服器角色涵蓋所有其他的角色，而且範圍不受限制。 除非高度信任主體的安全性，否則請勿將主體新增到此角色中。 `sysadmin` 角色成員對於所有的伺服器資料庫和資源都具有不可撤銷的管理權限。  
+> `sysadmin` 固定伺服器角色涵蓋所有其他的角色，而且範圍不受限制。 除非高度信任主體的安全性，否則請勿將主體新增到此角色中。 `sysadmin` 角色成員對於所有的伺服器資料庫和資源都具有不可撤銷的管理權限。  
   
- 當您要將使用者新增到固定伺服器角色時，請嚴加篩選。 例如，`bulkadmin` 角色可讓使用者加任何本機檔案的內容插入至資料表，因而可能危及資料完整性。 如需固定的伺服器角色和權限的完整清單，請參閱 SQL Server 線上叢書 》。  
+ 當您要將使用者新增到固定伺服器角色時，請嚴加篩選。 例如，`bulkadmin` 角色可讓使用者加任何本機檔案的內容插入至資料表，因而可能危及資料完整性。 如需固定伺服器角色和許可權的完整清單, 請參閱 SQL Server 線上叢書。  
   
 ## <a name="fixed-database-roles"></a>固定資料庫角色  
  固定資料庫角色擁有預先定義的權限集合，其目的是讓您可以輕鬆地管理權限群組。 `db_owner` 角色的成員可以在資料庫上執行所有組態和維護活動。  
   
  如需 SQL Server 預先定義角色的詳細資訊，請參閱下列資源。  
   
-|資源|描述|  
+|Resource|說明|  
 |--------------|-----------------|  
-|[伺服器層級角色](/sql/relational-databases/security/authentication-access/server-level-roles)|說明固定的伺服器角色與 SQL Server 中與其相關聯的權限。|  
+|[伺服器層級角色](/sql/relational-databases/security/authentication-access/server-level-roles)|描述 SQL Server 中的固定伺服器角色和與其相關聯的許可權。|  
 |[資料庫層級角色](/sql/relational-databases/security/authentication-access/database-level-roles)|說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。|  
   
 ## <a name="database-roles-and-users"></a>資料庫角色和使用者  
@@ -42,7 +42,7 @@ ms.locfileid: "61645964"
  `dbo` (也稱為資料庫擁有者) 是使用者帳戶，擁有可在資料庫中執行所有活動的隱含權限。 `sysadmin` 固定伺服器角色的成員會自動對應至 `dbo`。  
   
 > [!NOTE]
->  `dbo` 也是名稱的結構描述中所述[擁有權和 SQL Server 中的使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)。  
+> `dbo`也是架構的名稱, 如 SQL Server 中的[擁有權和使用者架構分離中](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)所述。  
   
  `dbo` 使用者帳戶經常會與 `db_owner` 固定資料庫角色混淆。 `db_owner` 的範圍是一個資料庫，而 `sysadmin` 的範圍是整個伺服器。 `db_owner` 角色中的成員資格不會授與 `dbo` 使用權限。  
   
@@ -52,14 +52,14 @@ ms.locfileid: "61645964"
  在所有版本的 SQL Server 中，`guest` 帳戶都是內建帳戶。 依預設，此帳戶在新資料庫中是停用狀態。 如果有啟用此帳戶，則可以藉由執行 Transact-SQL REVOKE CONNECT FROM GUEST 陳述式撤銷其 CONNECT 權限而加以停用。  
   
 > [!IMPORTANT]
->  請避免使用 `guest` 帳戶；所有本身不具資料庫權限的登入，都會取得授與此帳戶的資料庫權限。 如果必須使用 `guest` 帳戶，請為其授與最小權限。  
+> 請避免使用 `guest` 帳戶；所有本身不具資料庫權限的登入，都會取得授與此帳戶的資料庫權限。 如果必須使用 `guest` 帳戶，請為其授與最小權限。  
   
  如需有關 SQL Server 登入、使用者和角色的詳細資訊，請參閱下列資源。  
   
-|資源|描述|  
+|Resource|描述|  
 |--------------|-----------------|  
-|[開始使用 Database Engine 權限](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
-|[主體](/sql/relational-databases/security/authentication-access/principals-database-engine)|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
+|[具有資料庫引擎許可權的消費者入門](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
+|[原理](/sql/relational-databases/security/authentication-access/principals-database-engine)|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
   
 ## <a name="see-also"></a>另請參閱
 

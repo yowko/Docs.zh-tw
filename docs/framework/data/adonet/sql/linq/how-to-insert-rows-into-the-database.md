@@ -1,24 +1,24 @@
 ---
-title: 作法：將資料列插入至資料庫
+title: HOW TO：將資料列插入至資料庫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cb62522a951afd3a7159114d3b6575f1d83278bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2852b0593f8b213f8cad6f9a2ab8f08eeb2a4dec
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743327"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943641"
 ---
-# <a name="how-to-insert-rows-into-the-database"></a>HOW TO：將資料列插入至資料庫
-您將資料列插入資料庫將物件新增至相關聯[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Table%601>集合，然後將變更提交至資料庫。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會轉譯成適當的 SQL 變更`INSERT`命令。  
+# <a name="how-to-insert-rows-into-the-database"></a>作法：將資料列插入至資料庫
+您可以將物件加入至相關聯[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>的集合, 然後將變更提交至資料庫, 藉以將資料列插入資料庫中。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]將您的變更轉譯成適當`INSERT`的 SQL 命令。  
   
 > [!NOTE]
->  您可以覆寫 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 預設方法，以執行 `Insert`、`Update` 和 `Delete` 資料庫作業。 如需詳細資訊，請參閱 <<c0> [ 自訂插入、 更新和刪除作業](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)。  
+> 您可以覆寫 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 預設方法，以執行 `Insert`、`Update` 和 `Delete` 資料庫作業。 如需詳細資訊, 請參閱[自訂插入、更新和刪除作業](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)。  
 >   
->  使用 Visual Studio 的開發人員可以使用物件關聯式設計工具來開發預存程序，針對相同目的。  
+>  使用 Visual Studio 的開發人員可以使用物件關聯式設計工具, 針對相同的目的來開發預存程式。  
   
  下列步驟假設一個有效的 <xref:System.Data.Linq.DataContext> 會將您連接至 Northwind 資料庫。 如需詳細資訊，請參閱[如何：連接到資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "67743327"
   
 1. 建立包含所要提交之資料欄資料的新物件。  
   
-2. 將新的物件加入[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]`Table`資料庫之目標資料表相關聯的集合。  
+2. 將新的物件加入至[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]與資料庫中目標資料表相關聯的`Table`集合。  
   
 3. 將變更提交至資料庫。  
   

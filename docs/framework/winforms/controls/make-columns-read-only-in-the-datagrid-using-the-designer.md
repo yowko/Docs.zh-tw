@@ -1,5 +1,5 @@
 ---
-title: 作法：使用設計工具將 Windows Forms DataGridView 控制項的資料行設為唯讀
+title: HOW TO：使用設計工具將 Windows Forms DataGridView 控制項的資料行設為唯讀
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, columns
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 6bdd561c863a461f43a5a7aac025fead1f971bb0
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 82be9d31ff6bb3f2f5dd8a55b4426103d466bdd6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039813"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952098"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>作法：使用設計工具將 Windows Forms DataGridView 控制項的資料行設為唯讀
 根據預設, 使用者可以修改顯示在 Windows Forms <xref:System.Windows.Forms.DataGridView>控制項中的文字和數值資料。 如果您想要顯示不適用於修改的資料, 您必須將包含資料的資料行設為唯讀。 如需如何讓控制項完全唯讀的相關資訊, 請參閱[如何:使用設計](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)工具防止在 Windows Forms DataGridView 控制項中新增和刪除資料列。
@@ -28,7 +28,7 @@ ms.locfileid: "69039813"
 3. 在 [資料**行屬性**] 方格中<xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> , 將`true`屬性設定為。
 
     > [!NOTE]
-    >  您也可以選取 [**加入資料行**] 對話方塊中的 [**唯讀**] 核取方塊, 在加入資料行時將它設為唯讀。
+    > 您也可以選取 [**加入資料行**] 對話方塊中的 [**唯讀**] 核取方塊, 在加入資料行時將它設為唯讀。
 
 ## <a name="see-also"></a>另請參閱
 

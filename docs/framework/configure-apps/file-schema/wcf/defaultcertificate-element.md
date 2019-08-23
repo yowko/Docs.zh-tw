@@ -2,20 +2,20 @@
 title: <defaultCertificate> 項目
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93410e815a156f91db1962f05fb1aa6baca7f955
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919269"
 ---
-# <a name="defaultcertificate-element"></a>\<defaultCertificate > 項目
+# <a name="defaultcertificate-element"></a>\<defaultCertificate > 元素
 指定服務或 STS 不透過交涉通訊協定提供憑證時要使用的 X.509 憑證。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 endpointBehaviors 區段  
-\<behavior>  
+\<行為 >  
 \<clientCredentials>  
 \<serviceCertificate>  
 \<defaultCertificate>  
@@ -43,7 +43,7 @@ endpointBehaviors 區段
   
 ## <a name="findvalue-attribute"></a>findValue 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |String|這個值取決於要搜尋的欄位 (由 X509FindType 屬性指定)。 例如，如果搜尋指紋，則此值必須是十六進位數字字串。|  
   
@@ -51,7 +51,7 @@ endpointBehaviors 區段
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|這些值包括：FindByThumbprint、 FindBySubjectName、 FindBySubjectDistinguishedName、 FindByIssuerName、 FindByIssuerDistinguishedName、 FindBySerialNumber、 FindByTimeValid、 FindByTimeNotYetValid、 FindBySerialNumber、 FindByTimeExpired、 FindByTemplateNameFindByApplicationPolicy、 FindByCertificatePolicy、 FindByExtension、 FindByKeyUsage、 FindBySubjectKeyIdentifier。|  
+|列舉|這些值包括：FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation 屬性  
   
@@ -61,9 +61,9 @@ endpointBehaviors 區段
   
 ## <a name="storename-attribute"></a>storeName 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|列舉|這些值包括：AddressBook、 AuthRoot、 CertificateAuthority、 Disallowed、 My、 Root、 TrustedPeople 和 TrustedPublisher。|  
+|列舉|這些值包括：通訊錄、AuthRoot、CertificateAuthority、不允許、My、Root、TrustedPeople 和 TrustedPublisher。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -72,7 +72,7 @@ endpointBehaviors 區段
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|指定對用戶端驗證服務時所使用的憑證。|  
+|[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|指定對用戶端驗證服務時所使用的憑證。|  
   
 ## <a name="remarks"></a>備註  
  對於使用以憑證為基礎之訊息安全性的繫結，這個組態項目指定的憑證會用來加密傳送給服務的訊息，而且預期會由服務用來簽署對用戶端的回覆。 它會儲存當服務未指定憑證時所要使用的單一憑證。  
@@ -103,7 +103,7 @@ endpointBehaviors 區段
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
-- [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
-- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [使用憑證](../../../wcf/feature-details/working-with-certificates.md)
+- [\<authentication>](authentication-of-clientcertificate-element.md)
+- [保護用戶端安全](../../../wcf/securing-clients.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)

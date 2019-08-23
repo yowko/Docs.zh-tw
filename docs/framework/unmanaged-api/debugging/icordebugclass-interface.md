@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e1ad830e728fbe764085a5808a48e4cacedc595
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc5099af23a2b706694bfcb655d295607c97ea8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750834"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969273"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass 介面
 
@@ -32,16 +32,16 @@ ms.locfileid: "61750834"
 |方法|描述|  
 |------------|-----------------|  
 |[GetModule 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|取得定義此類別的模組。|  
-|[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|取得指定的靜態欄位的值。|  
-|[GetToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|取得`TypeDef`這個類別的中繼資料語彙基元。|  
+|[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|取得指定靜態欄位的值。|  
+|[GetToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|取得這個`TypeDef`類別的元資料標記。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugClass`介面表示未具現化的泛型型別。 ICorDebugType 介面表示未具現化的泛型型別。 例如，`Hashtable<K, V>`會由`ICorDebugClass`，而`Hashtable<Int32, String>`會由`ICorDebugType`。  
+ `ICorDebugClass`介面代表未具現化的泛型型別。 ICorDebugType 介面代表具現化的泛型型別。 例如, `Hashtable<K, V>`會`ICorDebugClass`以表示`Hashtable<Int32, String>` ,`ICorDebugType`而會以表示。  
   
- 非泛型類型都由兩者`ICorDebugClass`和`ICorDebugType`。 處理類型具現化的.NET Framework 2.0 版中引進了第二個介面。  
+ 非泛型型別是以`ICorDebugClass`和`ICorDebugType`表示。 第二個介面是在 .NET Framework 版本2.0 中引進, 以處理類型具現化。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "61750834"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

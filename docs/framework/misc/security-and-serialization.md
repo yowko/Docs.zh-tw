@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c275e7179daf0dfdf2dda8bf364a4682565f28a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0b1f8979929dbb6872bbd53e1840b2d0520a31d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596713"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910664"
 ---
 # <a name="security-and-serialization"></a>安全性和序列化
 由於序列化可允許其他程式碼看到或修改在其他情況下無法存取的物件執行個體資料，因此執行序列化的程式碼需要特殊權限： <xref:System.Security.Permissions.SecurityPermission> ，並指定 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 旗標。 依照預設原則，這個使用權限不會授與給網際網路下載或內部網路的程式碼；只有本機電腦上的程式碼才會被授與這個使用權限。  
@@ -49,4 +49,4 @@ ms.locfileid: "64596713"
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全程式碼撰寫方針](../../standard/security/secure-coding-guidelines.md)

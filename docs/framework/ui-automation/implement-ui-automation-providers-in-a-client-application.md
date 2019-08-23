@@ -8,16 +8,16 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation within applications
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
-ms.openlocfilehash: b368ab3bc842fda5a99a64e0220093ebd60698b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef3d03bee412b97ed88ec76e81ad2fd19a9595eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609811"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968952"
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>在用戶端應用程式中實作 UI 自動化提供者
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本主題包含範例程式碼，說明如何在應用程式內實作用戶端的使用者介面自動化提供者。  
   

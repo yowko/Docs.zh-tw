@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: e1382c4daa513477011a1d1c2132840dfae84de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15664da02189dd618784d55c07aaf4db38a2f656
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879563"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929295"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 將特定基底類型的物件視為所指定之衍生型別的物件。  
@@ -23,13 +23,13 @@ TREAT ( expression as type)
  任何傳回實體的有效查詢運算式。  
   
 > [!NOTE]
->  所指定運算式的型別必須是所指定資料型別的子型別，或者此資料型別必須是運算式之型別的子型別。  
+> 所指定運算式的型別必須是所指定資料型別的子型別，或者此資料型別必須是運算式之型別的子型別。  
   
  `type`  
  任何實體類型。 此型別必須以命名空間 (Namespace) 限定。  
   
 > [!NOTE]
->  所指定的運算式必須是所指定資料型別的子型別，或者此資料型別必須是此運算式的子型別。  
+> 所指定的運算式必須是所指定資料型別的子型別，或者此資料型別必須是此運算式的子型別。  
   
 ## <a name="return-value"></a>傳回值  
  屬於所指定資料型別的值。  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  這個查詢將 `Person` 實體向上轉型成為 `Employee` 型別。 如果 p 的值實際上不是 `Employee`型別，此運算式將會產生值 `null`。  
   
 > [!NOTE]
->  指定的運算式`Employee`指定的資料型別的型別必須是`Person`，或資料類型必須是運算式的子型別。 否則此運算式將會造成編譯時期錯誤。  
+> 指定的運算式`Employee`必須是所指定資料類型`Person`的子類型, 或者資料類型必須是運算式的子類型。 否則此運算式將會造成編譯時期錯誤。  
   
  下表所示為 TREAT 在某些一般模式及一些較不常見的模式中的行為。 所有例外狀況都是在叫用提供者之前從用戶端擲回：  
   

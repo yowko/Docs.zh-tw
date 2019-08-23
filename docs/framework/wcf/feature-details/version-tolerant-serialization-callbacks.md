@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: da13f9989b427da047c4a94f77907847ed2ae4d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0736f94b1fe1a91b20ee76da673e0bc139aa802a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932622"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959559"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>版本相容序列化回呼
 資料合約程式設計模型完整支援 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 類別所支援的版本相容序列化回呼方法。  
@@ -48,4 +48,4 @@ ms.locfileid: "61932622"
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>
 - <xref:System.Runtime.Serialization.StreamingContext>
-- [版本相容序列化](../../../../docs/standard/serialization/version-tolerant-serialization.md)
+- [版本相容序列化](../../../standard/serialization/version-tolerant-serialization.md)

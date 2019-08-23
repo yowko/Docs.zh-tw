@@ -3,22 +3,22 @@ title: <customTrackingQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
-ms.openlocfilehash: 92060260075017359d8a5f0500d52e52c2217d3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9605f5d050baf046ff3c549c19191934299a65e2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790178"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945746"
 ---
 # <a name="customtrackingquery"></a>\<customTrackingQuery>
 代表查詢的集合，這個集合可用來追蹤程式碼活動中定義的事件。 追蹤參與者必須要具備查詢，才能訂閱自訂追蹤記錄。  
   
- 如需有關追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 如需追蹤設定檔查詢的詳細資訊, 請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
+\<追蹤 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流程 >  
 \<customTrackingQueries>  
 \<customTrackingQuery>  
   
@@ -42,10 +42,10 @@ ms.locfileid: "61790178"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |activityName|字串，可指定產生追蹤記錄的活動名稱。|  
-|名稱|字串，可指定發出自訂追蹤記錄的名稱。|  
+|NAME|字串，可指定發出自訂追蹤記錄的名稱。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -54,11 +54,11 @@ ms.locfileid: "61790178"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<customTrackingQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/customtrackingquery.md)|查詢，可用來追蹤程式碼活動中定義的事件。|  
+|[\<customTrackingQuery>](customtrackingquery.md)|查詢，可用來追蹤程式碼活動中定義的事件。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流程追蹤及追蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)

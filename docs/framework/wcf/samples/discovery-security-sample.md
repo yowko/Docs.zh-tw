@@ -2,15 +2,15 @@
 title: 探索安全性範例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: f644d0098ddb09ee115c6d6429ce7b005ee0b77a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8512dbddc5d27e75d98d281c0bdccf142a113d7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650106"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961730"
 ---
 # <a name="discovery-security-sample"></a>探索安全性範例
-探索規格不會要求參與探索程序的端點是安全的。 增強探索訊息的安全性會減少各種攻擊 (訊息變更、阻斷服務、重新執行、詐騙)。 此範例使用精簡簽章格式 (如 WS-Discovery 規格的第 8.2 節所述) 實作計算與驗證訊息簽章的自訂通道。 此範例同時支援[2005年探索規格](https://go.microsoft.com/fwlink/?LinkId=177912)並[1.1 版](https://go.microsoft.com/fwlink/?LinkId=179677)。  
+探索規格不會要求參與探索程序的端點是安全的。 增強探索訊息的安全性會減少各種攻擊 (訊息變更、阻斷服務、重新執行、詐騙)。 此範例使用精簡簽章格式 (如 WS-Discovery 規格的第 8.2 節所述) 實作計算與驗證訊息簽章的自訂通道。 此範例同時支援[2005 探索規格](https://go.microsoft.com/fwlink/?LinkId=177912)和[1.1 版本](https://go.microsoft.com/fwlink/?LinkId=179677)。  
   
  自訂通道會針對探索和公告端點，套用到現有通道堆疊的頂端。 如此一來，每個傳送的訊息都會套用簽章標頭。 系統會驗證收到之訊息上的簽章，而且當該簽章不符或訊息沒有簽章時，就會捨棄訊息。 為簽署與驗證訊息，此範例使用憑證。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "64650106"
 ```  
   
 > [!NOTE]
->  `PrefixList` 會在 2008 探索版本通訊協定中加入。  
+> `PrefixList` 會在 2008 探索版本通訊協定中加入。  
   
- 為計算簽章，此範例決定展開的簽章項目。 XML 簽章 (`SignedInfo`) 會使用 WS-Discovery 規格所要求的 `ds` 命名空間前置詞建立。 探索與定址命名空間中的本文和所有標頭都會在簽章中參考，因此無法進行竄改。 每個參考的項目會轉換使用 「 獨佔標準化 」 (http://www.w3.org/2001/10/xml-exc-c14n# )，然後計算 sha-1 摘要值和 (http://www.w3.org/2000/09/xmldsig#sha1 )。 根據所有參考的項目和其摘要值，簽章計算的值是使用 RSA 演算法 (http://www.w3.org/2000/09/xmldsig#rsa-sha1 )。  
+ 為計算簽章，此範例決定展開的簽章項目。 XML 簽章 (`SignedInfo`) 會使用 WS-Discovery 規格所要求的 `ds` 命名空間前置詞建立。 探索與定址命名空間中的本文和所有標頭都會在簽章中參考，因此無法進行竄改。 每個參考的專案都會使用專屬的標準化 http://www.w3.org/2001/10/xml-exc-c14n# () 進行轉換, 然後再計算 sha-1 摘要值 (http://www.w3.org/2000/09/xmldsig#sha1 )。 根據所有參考的元素及其摘要值, 會使用 RSA 演算法 (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ) 來計算簽章值。  
   
  訊息會使用用戶端指定的憑證簽署。 建立繫結項目時，必須指定存放位置、名稱和憑證主體名稱。 精簡簽章中的 `KeyId` 表示簽章權杖的金鑰識別碼，而且是簽署權杖的主體金鑰識別碼 (SKI)，或 (如果 SKI 不存在) 簽署權杖公開金鑰的 SHA-1 雜湊。  
   
@@ -47,22 +47,22 @@ ms.locfileid: "64650106"
 ## <a name="sample-details"></a>範例詳細資料  
  此範例包含程式庫和 4 個主控台應用程式：  
   
-- **DiscoverySecurityChannels**:會公開安全繫結程式庫。 此程式庫會計算與驗證傳出/傳入訊息的精簡簽章。  
+- **DiscoverySecurityChannels**:公開安全系結的程式庫。 此程式庫會計算與驗證傳出/傳入訊息的精簡簽章。  
   
-- **服務**：公開 ICalculatorService 合約，自我裝載服務。 此服務會標示為可搜尋。 使用者會透過指定存放位置和名稱、憑證的主體名稱或其他唯一識別碼，以及用戶端憑證所在的存放位置 (用來檢查傳入訊息之簽章的憑證)，指定簽署訊息所使用之憑證的詳細資料。 根據這些詳細資料，就會建立並使用具有額外安全性的 UdpDiscoveryEndpoint。  
+- **服務**：公開 ICalculatorService 合約 (自我裝載) 的服務。 此服務會標示為可搜尋。 使用者會透過指定存放位置和名稱、憑證的主體名稱或其他唯一識別碼，以及用戶端憑證所在的存放位置 (用來檢查傳入訊息之簽章的憑證)，指定簽署訊息所使用之憑證的詳細資料。 根據這些詳細資料，就會建立並使用具有額外安全性的 UdpDiscoveryEndpoint。  
   
-- **用戶端**:此類別會嘗試探索 ICalculatorService 並呼叫服務上的方法。 同樣地，系統會建立並使用具有額外安全性的 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 來簽署與驗證訊息。  
+- **用戶端**:這個類別會嘗試探索 ICalculatorService, 並在服務上呼叫方法。 同樣地，系統會建立並使用具有額外安全性的 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 來簽署與驗證訊息。  
   
-- **AnnouncementListener**:自我裝載的服務會接聽線上與離線公告，並使用安全公告端點。  
+- **AnnouncementListener**:自我裝載的服務, 可接聽線上和離線公告, 並使用安全公告端點。  
   
 > [!NOTE]
->  如果多次執行 Setup.bat，憑證管理員會因為有重複的憑證而提示您選擇要加入的憑證。 在該情況下，應該中止 Setup.bat 並呼叫 Cleanup.bat，因為已經產生重複。 Cleanup.bat 也會提示您選擇要刪除的憑證。 選取清單中的憑證並繼續執行 Cleanup.bat，直到沒有剩下任何憑證為止。  
+> 如果多次執行 Setup.bat，憑證管理員會因為有重複的憑證而提示您選擇要加入的憑證。 在該情況下，應該中止 Setup.bat 並呼叫 Cleanup.bat，因為已經產生重複。 Cleanup.bat 也會提示您選擇要刪除的憑證。 選取清單中的憑證並繼續執行 Cleanup.bat，直到沒有剩下任何憑證為止。  
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1. Visual Studio 執行 Setup.bat 指令碼從開發人員命令提示字元。 此範例會使用憑證來簽署與驗證訊息。 指令碼會使用 Makecert.exe 建立憑證，然後使用 Certmgr.exe 進行安裝。 此指令碼必須以系統管理員權限的身分來執行。  
+1. 從 Visual Studio 的開發人員命令提示字元執行安裝程式 .bat 腳本。 此範例會使用憑證來簽署與驗證訊息。 指令碼會使用 Makecert.exe 建立憑證，然後使用 Certmgr.exe 進行安裝。 此指令碼必須以系統管理員權限的身分來執行。  
   
-2. 若要建置並執行範例，在 Visual Studio 中開啟的 Security.sln 檔案，然後選擇**Rebuild All**。 更新方案屬性以啟動多個專案： 選取**啟動**discoverysecurechannels 的所有專案。 按照一般方式執行方案。  
+2. 若要建立並執行範例, 請在 Visual Studio 中開啟安全性 .sln 檔案, 然後選擇 [**全部重建**]。 更新方案屬性以啟動多個專案: 針對 [DiscoverySecureChannels] 以外的所有專案選取 [**啟動**]。 按照一般方式執行方案。  
   
 3. 完成此範例之後，請執行 Cleanup.bat 指令碼，以移除針對此範例建立的憑證。  
   
@@ -71,6 +71,6 @@ ms.locfileid: "64650106"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

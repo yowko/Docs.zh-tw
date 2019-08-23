@@ -1,16 +1,16 @@
 ---
-title: HOW TO：實作使用探索 Proxy 的用戶端應用程式來尋找服務
+title: 作法：實作使用探索 Proxy 的用戶端應用程式來尋找服務
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 9f04c3ba59b67f2f19a3f65ce96d4d9f624a0e82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 30db2bfc6191b1703f6d63ec2a925df42ecc93e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630689"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963879"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>HOW TO：實作使用探索 Proxy 的用戶端應用程式來尋找服務
-本主題是三個主題中的第三個，討論如何實作探索 Proxy。 在上一個主題中， [How to:實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，實作使用探索 proxy 註冊其本身的 WCF 服務。 本主題中，您會建立使用探索 proxy 來尋找 WCF 服務的 WCF 用戶端。  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>作法：實作使用探索 Proxy 的用戶端應用程式來尋找服務
+本主題是三個主題中的第三個，討論如何實作探索 Proxy。 在上一個主題中[, how to:執行向探索 proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)註冊的可探索服務, 您已實作為向探索 proxy 註冊其本身的 WCF 服務。 在本主題中, 您會建立使用探索 proxy 來尋找 WCF 服務的 WCF 用戶端。  
   
 ### <a name="implement-the-client"></a>實作用戶端  
   
@@ -25,7 +25,7 @@ ms.locfileid: "64630689"
 3. 將在此主題底部找到的 GeneratedClient.cs 加入至專案。  
   
     > [!NOTE]
-    >  這個檔案通常會使用 Svcutil.exe 之類的工具產生。 本主題會提供該檔案以簡化這項工作。  
+    > 這個檔案通常會使用 Svcutil.exe 之類的工具產生。 本主題會提供該檔案以簡化這項工作。  
   
 4. 開啟 Program.cs 檔案並加入下列方法。 此方法會採用端點位址，並將其用於初始化服務用戶端 (Proxy)。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "64630689"
     }  
     ```  
   
- 您已經完成實作用戶端應用程式。 繼續前往[How to:測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。  
+ 您已經完成實作用戶端應用程式。 繼續進行[操作說明:測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。  
   
 ## <a name="example"></a>範例  
  以下是這個主題的完整程式碼清單。  
@@ -284,5 +284,5 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>另請參閱
 
 - [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [如何：實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [如何：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [如何：執行探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [如何：執行向探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
