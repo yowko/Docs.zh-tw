@@ -2,20 +2,20 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 5d6bfb1e4aa1651cd8c3a869f681d71cfb15725c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751879"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926096"
 ---
-# <a name="comcontract"></a><span data-ttu-id="4d7c1-101">\<comContract></span><span class="sxs-lookup"><span data-stu-id="4d7c1-101">\<comContract></span></span>
-<span data-ttu-id="4d7c1-102">指定 COM+ 整合服務合約。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-102">Specifies a COM+ integration service contract.</span></span>  
+# <a name="comcontract"></a><span data-ttu-id="5209a-101">\<comContract></span><span class="sxs-lookup"><span data-stu-id="5209a-101">\<comContract></span></span>
+<span data-ttu-id="5209a-102">指定 COM+ 整合服務合約。</span><span class="sxs-lookup"><span data-stu-id="5209a-102">Specifies a COM+ integration service contract.</span></span>  
   
- <span data-ttu-id="4d7c1-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="4d7c1-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="4d7c1-104">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="4d7c1-104">\<comContracts></span></span>  
+ <span data-ttu-id="5209a-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="5209a-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="5209a-104">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="5209a-104">\<comContracts></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4d7c1-105">語法</span><span class="sxs-lookup"><span data-stu-id="4d7c1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5209a-105">語法</span><span class="sxs-lookup"><span data-stu-id="5209a-105">Syntax</span></span>  
   
 ```xml  
 <comContracts>
@@ -42,34 +42,34 @@ ms.locfileid: "64751879"
 </comContracts>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4d7c1-106">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="4d7c1-106">Attributes and Elements</span></span>  
- <span data-ttu-id="4d7c1-107">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5209a-106">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="5209a-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="5209a-107">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="5209a-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4d7c1-108">屬性</span><span class="sxs-lookup"><span data-stu-id="4d7c1-108">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5209a-108">屬性</span><span class="sxs-lookup"><span data-stu-id="5209a-108">Attributes</span></span>  
   
-|<span data-ttu-id="4d7c1-109">屬性</span><span class="sxs-lookup"><span data-stu-id="4d7c1-109">Attribute</span></span>|<span data-ttu-id="4d7c1-110">描述</span><span class="sxs-lookup"><span data-stu-id="4d7c1-110">Description</span></span>|  
+|<span data-ttu-id="5209a-109">屬性</span><span class="sxs-lookup"><span data-stu-id="5209a-109">Attribute</span></span>|<span data-ttu-id="5209a-110">描述</span><span class="sxs-lookup"><span data-stu-id="5209a-110">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="4d7c1-111">Contract - 合約</span><span class="sxs-lookup"><span data-stu-id="4d7c1-111">contract</span></span>|<span data-ttu-id="4d7c1-112">包含合約型別的字串。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-112">A string that contains the contract type.</span></span>|  
-|<span data-ttu-id="4d7c1-113">名稱</span><span class="sxs-lookup"><span data-stu-id="4d7c1-113">name</span></span>|<span data-ttu-id="4d7c1-114">包含合約名稱的字串。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-114">A string that contains the contract name.</span></span>|  
-|<span data-ttu-id="4d7c1-115">namespace</span><span class="sxs-lookup"><span data-stu-id="4d7c1-115">namespace</span></span>|<span data-ttu-id="4d7c1-116">包含合約命名空間的字串。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-116">A string that contains the contract namespace.</span></span>|  
-|<span data-ttu-id="4d7c1-117">requiresSession</span><span class="sxs-lookup"><span data-stu-id="4d7c1-117">requiresSession</span></span>|<span data-ttu-id="4d7c1-118">布林值，指定合約是否只能用在工作階段繫結上。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-118">A Boolean value that specifies whether the contract can only be used on sessionful bindings.</span></span> <span data-ttu-id="4d7c1-119">當服務初始化時，整合執行階段會確保這個設定與要使用的繫結型別是一致的。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-119">When the service is initialized, the integration runtime ensures that this setting is consistent with the type of binding to be used.</span></span> <span data-ttu-id="4d7c1-120">如果合約的一或多個繫結有衝突，便會產生例外狀況 (Exception)。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-120">An exception is generated if one or more of the bindings for the contract are in conflict.</span></span> <span data-ttu-id="4d7c1-121">如果這個屬性是 `false`，而且正在使用單向通道且存在任何 [out] 參數時，也會產生例外狀況。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-121">If this property is `false`, and a one-way channel is in use and there are any [out] parameters, an exception is also generated.</span></span>|  
+|<span data-ttu-id="5209a-111">合約</span><span class="sxs-lookup"><span data-stu-id="5209a-111">contract</span></span>|<span data-ttu-id="5209a-112">包含合約型別的字串。</span><span class="sxs-lookup"><span data-stu-id="5209a-112">A string that contains the contract type.</span></span>|  
+|<span data-ttu-id="5209a-113">NAME</span><span class="sxs-lookup"><span data-stu-id="5209a-113">name</span></span>|<span data-ttu-id="5209a-114">包含合約名稱的字串。</span><span class="sxs-lookup"><span data-stu-id="5209a-114">A string that contains the contract name.</span></span>|  
+|<span data-ttu-id="5209a-115">namespace</span><span class="sxs-lookup"><span data-stu-id="5209a-115">namespace</span></span>|<span data-ttu-id="5209a-116">包含合約命名空間的字串。</span><span class="sxs-lookup"><span data-stu-id="5209a-116">A string that contains the contract namespace.</span></span>|  
+|<span data-ttu-id="5209a-117">requiresSession</span><span class="sxs-lookup"><span data-stu-id="5209a-117">requiresSession</span></span>|<span data-ttu-id="5209a-118">布林值，指定合約是否只能用在工作階段繫結上。</span><span class="sxs-lookup"><span data-stu-id="5209a-118">A Boolean value that specifies whether the contract can only be used on sessionful bindings.</span></span> <span data-ttu-id="5209a-119">當服務初始化時，整合執行階段會確保這個設定與要使用的繫結型別是一致的。</span><span class="sxs-lookup"><span data-stu-id="5209a-119">When the service is initialized, the integration runtime ensures that this setting is consistent with the type of binding to be used.</span></span> <span data-ttu-id="5209a-120">如果合約的一或多個繫結有衝突，便會產生例外狀況 (Exception)。</span><span class="sxs-lookup"><span data-stu-id="5209a-120">An exception is generated if one or more of the bindings for the contract are in conflict.</span></span> <span data-ttu-id="5209a-121">如果這個屬性是 `false`，而且正在使用單向通道且存在任何 [out] 參數時，也會產生例外狀況。</span><span class="sxs-lookup"><span data-stu-id="5209a-121">If this property is `false`, and a one-way channel is in use and there are any [out] parameters, an exception is also generated.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4d7c1-122">子元素</span><span class="sxs-lookup"><span data-stu-id="4d7c1-122">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5209a-122">子元素</span><span class="sxs-lookup"><span data-stu-id="5209a-122">Child Elements</span></span>  
   
-|<span data-ttu-id="4d7c1-123">項目</span><span class="sxs-lookup"><span data-stu-id="4d7c1-123">Element</span></span>|<span data-ttu-id="4d7c1-124">描述</span><span class="sxs-lookup"><span data-stu-id="4d7c1-124">Description</span></span>|  
+|<span data-ttu-id="5209a-123">項目</span><span class="sxs-lookup"><span data-stu-id="5209a-123">Element</span></span>|<span data-ttu-id="5209a-124">描述</span><span class="sxs-lookup"><span data-stu-id="5209a-124">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4d7c1-125">persistableTypes</span><span class="sxs-lookup"><span data-stu-id="4d7c1-125">persistableTypes</span></span>|<span data-ttu-id="4d7c1-126">所有永久性型別。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-126">All the persistable types.</span></span>|  
-|<span data-ttu-id="4d7c1-127">userDefinedTypes</span><span class="sxs-lookup"><span data-stu-id="4d7c1-127">userDefinedTypes</span></span>|<span data-ttu-id="4d7c1-128">要包含在服務合約中之使用者定義型別 (UDT) 的集合。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-128">A collection of User Defined Types (UDT) that is to be included in the service contract.</span></span>|  
-|<span data-ttu-id="4d7c1-129">exposedMethods</span><span class="sxs-lookup"><span data-stu-id="4d7c1-129">exposedMethods</span></span>|<span data-ttu-id="4d7c1-130">COM+ 方法的集合，這些方法會在 COM+ 元件上的介面公開為 Web 服務時公開。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-130">A collection of COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span>|  
+|<span data-ttu-id="5209a-125">persistableTypes</span><span class="sxs-lookup"><span data-stu-id="5209a-125">persistableTypes</span></span>|<span data-ttu-id="5209a-126">所有永久性型別。</span><span class="sxs-lookup"><span data-stu-id="5209a-126">All the persistable types.</span></span>|  
+|<span data-ttu-id="5209a-127">userDefinedTypes</span><span class="sxs-lookup"><span data-stu-id="5209a-127">userDefinedTypes</span></span>|<span data-ttu-id="5209a-128">要包含在服務合約中之使用者定義型別 (UDT) 的集合。</span><span class="sxs-lookup"><span data-stu-id="5209a-128">A collection of User Defined Types (UDT) that is to be included in the service contract.</span></span>|  
+|<span data-ttu-id="5209a-129">exposedMethods</span><span class="sxs-lookup"><span data-stu-id="5209a-129">exposedMethods</span></span>|<span data-ttu-id="5209a-130">COM+ 方法的集合，這些方法會在 COM+ 元件上的介面公開為 Web 服務時公開。</span><span class="sxs-lookup"><span data-stu-id="5209a-130">A collection of COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="4d7c1-131">父項目</span><span class="sxs-lookup"><span data-stu-id="4d7c1-131">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5209a-131">父項目</span><span class="sxs-lookup"><span data-stu-id="5209a-131">Parent Elements</span></span>  
   
-|<span data-ttu-id="4d7c1-132">項目</span><span class="sxs-lookup"><span data-stu-id="4d7c1-132">Element</span></span>|<span data-ttu-id="4d7c1-133">描述</span><span class="sxs-lookup"><span data-stu-id="4d7c1-133">Description</span></span>|  
+|<span data-ttu-id="5209a-132">項目</span><span class="sxs-lookup"><span data-stu-id="5209a-132">Element</span></span>|<span data-ttu-id="5209a-133">描述</span><span class="sxs-lookup"><span data-stu-id="5209a-133">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4d7c1-134">comContracts</span><span class="sxs-lookup"><span data-stu-id="4d7c1-134">comContracts</span></span>|<span data-ttu-id="4d7c1-135">包含 `comContract` 項目的集合。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-135">Contains a collection of `comContract` elements.</span></span>|  
+|<span data-ttu-id="5209a-134">comContracts</span><span class="sxs-lookup"><span data-stu-id="5209a-134">comContracts</span></span>|<span data-ttu-id="5209a-135">包含 `comContract` 項目的集合。</span><span class="sxs-lookup"><span data-stu-id="5209a-135">Contains a collection of `comContract` elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4d7c1-136">備註</span><span class="sxs-lookup"><span data-stu-id="4d7c1-136">Remarks</span></span>  
- <span data-ttu-id="4d7c1-137">COM + 整合服務合約是目前僅限於`http://tempuri.org`命名空間，而合約名稱衍生自支援的 COM 介面。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-137">COM+ integration service contracts are currently restricted to the `http://tempuri.org` namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="4d7c1-138">然而，您可以使用 `comContracts` 區段，以及組態檔中的 `comContract` 項目，來指定替代項目。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-138">You can, however, specify alternatives by using the `comContracts` section, as well as the `comContract` element in the configuration file.</span></span> <span data-ttu-id="4d7c1-139">例如，您可以使用下列組態來指定要包含的命名空間、合約名稱、使用者定義型別，以及服務合約的其他設定。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-139">For example, you can use the following configuration to specify the namespace, contract name, and user defined types to be included, as well as other settings for a service contract.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5209a-136">備註</span><span class="sxs-lookup"><span data-stu-id="5209a-136">Remarks</span></span>  
+ <span data-ttu-id="5209a-137">Com + 整合服務合約目前僅限於`http://tempuri.org`命名空間, 而合約名稱是衍生自支援的 COM 介面。</span><span class="sxs-lookup"><span data-stu-id="5209a-137">COM+ integration service contracts are currently restricted to the `http://tempuri.org` namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="5209a-138">然而，您可以使用 `comContracts` 區段，以及組態檔中的 `comContract` 項目，來指定替代項目。</span><span class="sxs-lookup"><span data-stu-id="5209a-138">You can, however, specify alternatives by using the `comContracts` section, as well as the `comContract` element in the configuration file.</span></span> <span data-ttu-id="5209a-139">例如，您可以使用下列組態來指定要包含的命名空間、合約名稱、使用者定義型別，以及服務合約的其他設定。</span><span class="sxs-lookup"><span data-stu-id="5209a-139">For example, you can use the following configuration to specify the namespace, contract name, and user defined types to be included, as well as other settings for a service contract.</span></span>  
   
 ```xml  
 <comContracts>
@@ -86,12 +86,12 @@ ms.locfileid: "64751879"
 </comContracts>
 ```  
   
- <span data-ttu-id="4d7c1-140">當服務初始化時，指定的命名空間和合約名稱就會套用至所產生的服務描述。</span><span class="sxs-lookup"><span data-stu-id="4d7c1-140">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
+ <span data-ttu-id="5209a-140">當服務初始化時，指定的命名空間和合約名稱就會套用至所產生的服務描述。</span><span class="sxs-lookup"><span data-stu-id="5209a-140">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d7c1-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4d7c1-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5209a-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5209a-141">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [<span data-ttu-id="4d7c1-142">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="4d7c1-142">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [<span data-ttu-id="4d7c1-143">整合 COM 應用程式</span><span class="sxs-lookup"><span data-stu-id="4d7c1-143">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [<span data-ttu-id="4d7c1-144">如何：設定 COM + 服務設定</span><span class="sxs-lookup"><span data-stu-id="4d7c1-144">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [<span data-ttu-id="5209a-142">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="5209a-142">\<comContracts></span></span>](comcontracts.md)
+- [<span data-ttu-id="5209a-143">整合 COM 應用程式</span><span class="sxs-lookup"><span data-stu-id="5209a-143">Integrating with COM+ Applications</span></span>](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="5209a-144">如何：設定 COM + 服務設定</span><span class="sxs-lookup"><span data-stu-id="5209a-144">How to: Configure COM+ Service Settings</span></span>](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
