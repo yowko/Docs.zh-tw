@@ -1,5 +1,5 @@
 ---
-title: <filter> 項目<add>的 <sharedListeners>
+title: <filter><add> For 的元素<sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,58 +10,58 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 571a3add232f3e4f9747040dc104b85e8cc3085e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673715"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920515"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a><span data-ttu-id="25f23-102">\<篩選條件 > 項目\<新增 > 針對\<sharedListeners ></span><span class="sxs-lookup"><span data-stu-id="25f23-102">\<filter> Element for \<add> for \<sharedListeners></span></span>
-<span data-ttu-id="25f23-103">將篩選新增至 `sharedListeners` 集合中的接聽項。</span><span class="sxs-lookup"><span data-stu-id="25f23-103">Adds a filter to a listener in the `sharedListeners` collection.</span></span>  
+# <a name="filter-element-for-add-for-sharedlisteners"></a><span data-ttu-id="bcb57-102">\<針對\<s > 的\<[新增 >] 篩選 > 元素</span><span class="sxs-lookup"><span data-stu-id="bcb57-102">\<filter> Element for \<add> for \<sharedListeners></span></span>
+<span data-ttu-id="bcb57-103">將篩選新增至 `sharedListeners` 集合中的接聽項。</span><span class="sxs-lookup"><span data-stu-id="bcb57-103">Adds a filter to a listener in the `sharedListeners` collection.</span></span>  
   
- <span data-ttu-id="25f23-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="25f23-104">\<configuration></span></span>  
-<span data-ttu-id="25f23-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="25f23-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="25f23-106">\<sharedListeners > 項目</span><span class="sxs-lookup"><span data-stu-id="25f23-106">\<sharedListeners> Element</span></span>  
-<span data-ttu-id="25f23-107">\<add></span><span class="sxs-lookup"><span data-stu-id="25f23-107">\<add></span></span>  
-<span data-ttu-id="25f23-108">\<filter></span><span class="sxs-lookup"><span data-stu-id="25f23-108">\<filter></span></span>  
+ <span data-ttu-id="bcb57-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="bcb57-104">\<configuration></span></span>  
+<span data-ttu-id="bcb57-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="bcb57-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="bcb57-106">\<s > 元素</span><span class="sxs-lookup"><span data-stu-id="bcb57-106">\<sharedListeners> Element</span></span>  
+<span data-ttu-id="bcb57-107">\<add></span><span class="sxs-lookup"><span data-stu-id="bcb57-107">\<add></span></span>  
+<span data-ttu-id="bcb57-108">\<filter></span><span class="sxs-lookup"><span data-stu-id="bcb57-108">\<filter></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="25f23-109">語法</span><span class="sxs-lookup"><span data-stu-id="25f23-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bcb57-109">語法</span><span class="sxs-lookup"><span data-stu-id="bcb57-109">Syntax</span></span>  
   
 ```xml  
 <filter type="System.Diagnostics.EventTypeFilter"   
   initializeData="Warning" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="25f23-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="25f23-110">Attributes and Elements</span></span>  
- <span data-ttu-id="25f23-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="25f23-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bcb57-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="bcb57-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="bcb57-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="bcb57-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="25f23-112">屬性</span><span class="sxs-lookup"><span data-stu-id="25f23-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="bcb57-112">屬性</span><span class="sxs-lookup"><span data-stu-id="bcb57-112">Attributes</span></span>  
   
-|<span data-ttu-id="25f23-113">屬性</span><span class="sxs-lookup"><span data-stu-id="25f23-113">Attribute</span></span>|<span data-ttu-id="25f23-114">描述</span><span class="sxs-lookup"><span data-stu-id="25f23-114">Description</span></span>|  
+|<span data-ttu-id="bcb57-113">屬性</span><span class="sxs-lookup"><span data-stu-id="bcb57-113">Attribute</span></span>|<span data-ttu-id="bcb57-114">描述</span><span class="sxs-lookup"><span data-stu-id="bcb57-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="25f23-115">**type**</span><span class="sxs-lookup"><span data-stu-id="25f23-115">**type**</span></span>|<span data-ttu-id="25f23-116">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="25f23-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="25f23-117">指定的篩選器類型。</span><span class="sxs-lookup"><span data-stu-id="25f23-117">Specifies the type of the filter.</span></span> <span data-ttu-id="25f23-118">您可以使用類型的完整名稱 (格式為<xref:System.Type.FullName%2A?displayProperty=nameWithType>屬性)，或者您可以使用完整的類型名稱包括組件資訊 (格式為<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>屬性)。</span><span class="sxs-lookup"><span data-stu-id="25f23-118">You can use only the full name of the type (in the format of the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property), or you can use the fully qualified type name including the assembly information (in the format of the <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> property).</span></span> <span data-ttu-id="25f23-119">如需建立完整限定的類型名稱的資訊，請參閱[指定完整的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。</span><span class="sxs-lookup"><span data-stu-id="25f23-119">For information on creating a fully qualified type name, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
-|<span data-ttu-id="25f23-120">**initializeData**</span><span class="sxs-lookup"><span data-stu-id="25f23-120">**initializeData**</span></span>|<span data-ttu-id="25f23-121">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="25f23-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="25f23-122">指定的類別，建構函式傳遞的字串。</span><span class="sxs-lookup"><span data-stu-id="25f23-122">The string passed to the constructor for the specified class.</span></span>|  
+|<span data-ttu-id="bcb57-115">**type**</span><span class="sxs-lookup"><span data-stu-id="bcb57-115">**type**</span></span>|<span data-ttu-id="bcb57-116">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="bcb57-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="bcb57-117">指定篩選準則的類型。</span><span class="sxs-lookup"><span data-stu-id="bcb57-117">Specifies the type of the filter.</span></span> <span data-ttu-id="bcb57-118">您只能使用類型的完整名稱 (以<xref:System.Type.FullName%2A?displayProperty=nameWithType>屬性的格式), 也可以使用包含元件資訊的完整類型名稱 (以<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>屬性的格式)。</span><span class="sxs-lookup"><span data-stu-id="bcb57-118">You can use only the full name of the type (in the format of the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property), or you can use the fully qualified type name including the assembly information (in the format of the <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> property).</span></span> <span data-ttu-id="bcb57-119">如需建立完整型別名稱的相關資訊, 請參閱[指定完整的型別名稱](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)。</span><span class="sxs-lookup"><span data-stu-id="bcb57-119">For information on creating a fully qualified type name, see [Specifying Fully Qualified Type Names](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|<span data-ttu-id="bcb57-120">**initializeData**</span><span class="sxs-lookup"><span data-stu-id="bcb57-120">**initializeData**</span></span>|<span data-ttu-id="bcb57-121">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="bcb57-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="bcb57-122">傳遞至指定類別之函數的字串。</span><span class="sxs-lookup"><span data-stu-id="bcb57-122">The string passed to the constructor for the specified class.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="25f23-123">子元素</span><span class="sxs-lookup"><span data-stu-id="25f23-123">Child Elements</span></span>  
- <span data-ttu-id="25f23-124">無。</span><span class="sxs-lookup"><span data-stu-id="25f23-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="bcb57-123">子元素</span><span class="sxs-lookup"><span data-stu-id="bcb57-123">Child Elements</span></span>  
+ <span data-ttu-id="bcb57-124">無。</span><span class="sxs-lookup"><span data-stu-id="bcb57-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="25f23-125">父項目</span><span class="sxs-lookup"><span data-stu-id="25f23-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="bcb57-125">父項目</span><span class="sxs-lookup"><span data-stu-id="bcb57-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="25f23-126">項目</span><span class="sxs-lookup"><span data-stu-id="25f23-126">Element</span></span>|<span data-ttu-id="25f23-127">描述</span><span class="sxs-lookup"><span data-stu-id="25f23-127">Description</span></span>|  
+|<span data-ttu-id="bcb57-126">項目</span><span class="sxs-lookup"><span data-stu-id="bcb57-126">Element</span></span>|<span data-ttu-id="bcb57-127">描述</span><span class="sxs-lookup"><span data-stu-id="bcb57-127">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="25f23-128">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="25f23-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="25f23-129">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="25f23-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sharedListeners`|<span data-ttu-id="25f23-130">任何來源或追蹤項目可以參考的接聽程式的集合。</span><span class="sxs-lookup"><span data-stu-id="25f23-130">A collection of listeners that any source or trace element can reference.</span></span>|  
-|`add`|<span data-ttu-id="25f23-131">新增接聽程式，以**sharedListeners**集合。</span><span class="sxs-lookup"><span data-stu-id="25f23-131">Adds a listener to the **sharedListeners** collection.</span></span>|  
+|`configuration`|<span data-ttu-id="bcb57-128">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="bcb57-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="bcb57-129">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="bcb57-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sharedListeners`|<span data-ttu-id="bcb57-130">任何來源或追蹤元素可以參考的接聽程式集合。</span><span class="sxs-lookup"><span data-stu-id="bcb57-130">A collection of listeners that any source or trace element can reference.</span></span>|  
+|`add`|<span data-ttu-id="bcb57-131">將接聽程式加入至**s**集合。</span><span class="sxs-lookup"><span data-stu-id="bcb57-131">Adds a listener to the **sharedListeners** collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="25f23-132">備註</span><span class="sxs-lookup"><span data-stu-id="25f23-132">Remarks</span></span>  
- <span data-ttu-id="25f23-133">如果接聽程式已定義在`<add>`項目`<sharedListeners>`項目，應在定義該接聽項的篩選條件`<filter>`子系的項目`<add>`項目。</span><span class="sxs-lookup"><span data-stu-id="25f23-133">If a listener is defined in an `<add>` element of the `<sharedListeners>` element, the filter for that listener should be defined in a `<filter>` element that is a child of the `<add>` element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bcb57-132">備註</span><span class="sxs-lookup"><span data-stu-id="bcb57-132">Remarks</span></span>  
+ <span data-ttu-id="bcb57-133">如果`<add>`在專案`<sharedListeners>`的專案中定義了接聽程式, 則該接聽程式的篩選器`<filter>`應該定義于專案子`<add>`系的專案中。</span><span class="sxs-lookup"><span data-stu-id="bcb57-133">If a listener is defined in an `<add>` element of the `<sharedListeners>` element, the filter for that listener should be defined in a `<filter>` element that is a child of the `<add>` element.</span></span>  
   
- <span data-ttu-id="25f23-134">這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。</span><span class="sxs-lookup"><span data-stu-id="25f23-134">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="bcb57-134">此元素可用於電腦設定檔 (Machine.config) 和應用程式佈建檔。</span><span class="sxs-lookup"><span data-stu-id="bcb57-134">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="25f23-135">範例</span><span class="sxs-lookup"><span data-stu-id="25f23-135">Example</span></span>  
- <span data-ttu-id="25f23-136">下列範例示範如何使用`<filter>`新增至追蹤接聽項的篩選條件的項目`console`在`sharedListeners`集合。</span><span class="sxs-lookup"><span data-stu-id="25f23-136">The following example shows how to use the `<filter>` element to add a filter to the trace listener `console` in the `sharedListeners` collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="bcb57-135">範例</span><span class="sxs-lookup"><span data-stu-id="bcb57-135">Example</span></span>  
+ <span data-ttu-id="bcb57-136">下列範例顯示如何使用`<filter>`專案, 將篩選加入`sharedListeners`集合`console`中的追蹤接聽項。</span><span class="sxs-lookup"><span data-stu-id="bcb57-136">The following example shows how to use the `<filter>` element to add a filter to the trace listener `console` in the `sharedListeners` collection.</span></span>  
   
 ```xml  
 <configuration>  
@@ -85,9 +85,9 @@ ms.locfileid: "61673715"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="25f23-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="25f23-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bcb57-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bcb57-137">See also</span></span>
 
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [<span data-ttu-id="25f23-138">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="25f23-138">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="bcb57-138">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="bcb57-138">Trace and Debug Settings Schema</span></span>](index.md)

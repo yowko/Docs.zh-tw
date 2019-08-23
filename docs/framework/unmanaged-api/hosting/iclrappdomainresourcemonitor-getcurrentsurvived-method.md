@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10df17f2f21928ab89c65be7fd07afe81c468a07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf285b6e1f703c8776937fa33c7ab5801f04f80f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950165"
 ---
-# <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a><span data-ttu-id="3897f-102">ICLRAppDomainResourceMonitor::GetCurrentSurvived 方法</span><span class="sxs-lookup"><span data-stu-id="3897f-102">ICLRAppDomainResourceMonitor::GetCurrentSurvived Method</span></span>
-<span data-ttu-id="3897f-103">取得最後一個完整的封鎖記憶體回收回收的和目前的應用程式定義域所參考之位元組數目。</span><span class="sxs-lookup"><span data-stu-id="3897f-103">Gets the number of bytes that survived the last full, blocking garbage collection and that are referenced by the current application domain.</span></span>  
+# <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a><span data-ttu-id="c3be6-102">ICLRAppDomainResourceMonitor::GetCurrentSurvived 方法</span><span class="sxs-lookup"><span data-stu-id="c3be6-102">ICLRAppDomainResourceMonitor::GetCurrentSurvived Method</span></span>
+<span data-ttu-id="c3be6-103">取得最後一次完整、封鎖垃圾收集以及目前應用程式域所參考的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="c3be6-103">Gets the number of bytes that survived the last full, blocking garbage collection and that are referenced by the current application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3897f-104">語法</span><span class="sxs-lookup"><span data-stu-id="3897f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3be6-104">語法</span><span class="sxs-lookup"><span data-stu-id="c3be6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT STDMETHODCALLTYPE GetCurrentSurvived(  
@@ -36,41 +36,41 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
              [out] ULONGLONG *pTotalBytesSurvived);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3897f-105">參數</span><span class="sxs-lookup"><span data-stu-id="3897f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3be6-105">參數</span><span class="sxs-lookup"><span data-stu-id="c3be6-105">Parameters</span></span>  
  `dwAppDomainId`  
- <span data-ttu-id="3897f-106">[in]要求的應用程式定義域的識別碼。</span><span class="sxs-lookup"><span data-stu-id="3897f-106">[in] The ID of the requested application domain.</span></span>  
+ <span data-ttu-id="c3be6-106">在要求之應用程式域的識別碼。</span><span class="sxs-lookup"><span data-stu-id="c3be6-106">[in] The ID of the requested application domain.</span></span>  
   
  `pAppDomainBytesSurvived`  
- <span data-ttu-id="3897f-107">[out]在上一個記憶體回收後殘留下來這個應用程式定義域所持有的位元組數目指標。</span><span class="sxs-lookup"><span data-stu-id="3897f-107">[out] A pointer to the number of bytes that survived after the last garbage collection that are held by this application domain.</span></span> <span data-ttu-id="3897f-108">在完整收集之後, 這個數字是精確且完整。</span><span class="sxs-lookup"><span data-stu-id="3897f-108">After a full collection, this number is accurate and complete.</span></span> <span data-ttu-id="3897f-109">暫時的集合，這個數字之後可能不完整。</span><span class="sxs-lookup"><span data-stu-id="3897f-109">After an ephemeral collection, this number is potentially incomplete.</span></span> <span data-ttu-id="3897f-110">這個參數可以是 `null`。</span><span class="sxs-lookup"><span data-stu-id="3897f-110">This parameter can be `null`.</span></span>  
+ <span data-ttu-id="c3be6-107">脫銷這個應用程式域所持有的最後一次垃圾收集之後, 被回收的位元組數目指標。</span><span class="sxs-lookup"><span data-stu-id="c3be6-107">[out] A pointer to the number of bytes that survived after the last garbage collection that are held by this application domain.</span></span> <span data-ttu-id="c3be6-108">在完整集合之後, 此數位會正確且完整。</span><span class="sxs-lookup"><span data-stu-id="c3be6-108">After a full collection, this number is accurate and complete.</span></span> <span data-ttu-id="c3be6-109">在暫時集合之後, 此數位可能不完整。</span><span class="sxs-lookup"><span data-stu-id="c3be6-109">After an ephemeral collection, this number is potentially incomplete.</span></span> <span data-ttu-id="c3be6-110">這個參數可以是 `null`。</span><span class="sxs-lookup"><span data-stu-id="c3be6-110">This parameter can be `null`.</span></span>  
   
  `pRuntimeBytesSurvived`  
- <span data-ttu-id="3897f-111">[out]從上一個記憶體回收中存活下來的位元組總數目指標。</span><span class="sxs-lookup"><span data-stu-id="3897f-111">[out] A pointer to the total number of bytes that survived from the last garbage collection.</span></span> <span data-ttu-id="3897f-112">在完整收集之後, 這個數字代表 managed 堆積保留的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="3897f-112">After a full collection, this number represents the number of the bytes that are held in managed heaps.</span></span> <span data-ttu-id="3897f-113">在暫時的集合之後, 這個數字會代表持有即時暫時層代中的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="3897f-113">After an ephemeral collection, this number represents the number of bytes that are held live in ephemeral generations.</span></span> <span data-ttu-id="3897f-114">這個參數可以是 `null`。</span><span class="sxs-lookup"><span data-stu-id="3897f-114">This parameter can be `null`.</span></span>  
+ <span data-ttu-id="c3be6-111">脫銷從上一次垃圾收集中未被回收之位元組總數的指標。</span><span class="sxs-lookup"><span data-stu-id="c3be6-111">[out] A pointer to the total number of bytes that survived from the last garbage collection.</span></span> <span data-ttu-id="c3be6-112">在完整集合之後, 此數位代表保留在受控堆積中的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="c3be6-112">After a full collection, this number represents the number of the bytes that are held in managed heaps.</span></span> <span data-ttu-id="c3be6-113">在暫時集合之後, 此數位代表暫時層代中存留的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="c3be6-113">After an ephemeral collection, this number represents the number of bytes that are held live in ephemeral generations.</span></span> <span data-ttu-id="c3be6-114">這個參數可以是 `null`。</span><span class="sxs-lookup"><span data-stu-id="c3be6-114">This parameter can be `null`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3897f-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="3897f-115">Return Value</span></span>  
- <span data-ttu-id="3897f-116">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="3897f-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c3be6-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="c3be6-115">Return Value</span></span>  
+ <span data-ttu-id="c3be6-116">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="c3be6-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="3897f-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3897f-117">HRESULT</span></span>|<span data-ttu-id="3897f-118">說明</span><span class="sxs-lookup"><span data-stu-id="3897f-118">Description</span></span>|  
+|<span data-ttu-id="c3be6-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c3be6-117">HRESULT</span></span>|<span data-ttu-id="c3be6-118">描述</span><span class="sxs-lookup"><span data-stu-id="c3be6-118">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3897f-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="3897f-119">S_OK</span></span>|<span data-ttu-id="3897f-120">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="3897f-120">The method completed successfully.</span></span>|  
-|<span data-ttu-id="3897f-121">COR_E_APPDOMAINUNLOADED</span><span class="sxs-lookup"><span data-stu-id="3897f-121">COR_E_APPDOMAINUNLOADED</span></span>|<span data-ttu-id="3897f-122">應用程式定義域已卸載或不存在。</span><span class="sxs-lookup"><span data-stu-id="3897f-122">The application domain has been unloaded or does not exist.</span></span>|  
+|<span data-ttu-id="c3be6-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="c3be6-119">S_OK</span></span>|<span data-ttu-id="c3be6-120">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="c3be6-120">The method completed successfully.</span></span>|  
+|<span data-ttu-id="c3be6-121">COR_E_APPDOMAINUNLOADED</span><span class="sxs-lookup"><span data-stu-id="c3be6-121">COR_E_APPDOMAINUNLOADED</span></span>|<span data-ttu-id="c3be6-122">應用程式域已卸載或不存在。</span><span class="sxs-lookup"><span data-stu-id="c3be6-122">The application domain has been unloaded or does not exist.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3897f-123">備註</span><span class="sxs-lookup"><span data-stu-id="3897f-123">Remarks</span></span>  
- <span data-ttu-id="3897f-124">完整的封鎖記憶體回收; 之後，才會更新統計資料也就是的集合，其中包含所有層代和，以停止應用程式，這時集合就會發生。</span><span class="sxs-lookup"><span data-stu-id="3897f-124">Statistics are updated only after a full, blocking garbage collection; that is, a collection that includes all generations and that stops the application while collection occurs.</span></span> <span data-ttu-id="3897f-125">比方說，<xref:System.GC.Collect?displayProperty=nameWithType>方法多載會執行完整、 阻斷式收集。</span><span class="sxs-lookup"><span data-stu-id="3897f-125">For example, the <xref:System.GC.Collect?displayProperty=nameWithType> method overload performs a full, blocking collection.</span></span> <span data-ttu-id="3897f-126">並行記憶體回收會在背景進行，並不會封鎖應用程式。</span><span class="sxs-lookup"><span data-stu-id="3897f-126">Concurrent garbage collection occurs in the background and does not block the application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c3be6-123">備註</span><span class="sxs-lookup"><span data-stu-id="c3be6-123">Remarks</span></span>  
+ <span data-ttu-id="c3be6-124">只有在完整的封鎖垃圾收集之後, 才會更新統計資料。也就是包含所有層代的集合, 而且會在收集時停止應用程式。</span><span class="sxs-lookup"><span data-stu-id="c3be6-124">Statistics are updated only after a full, blocking garbage collection; that is, a collection that includes all generations and that stops the application while collection occurs.</span></span> <span data-ttu-id="c3be6-125">例如, <xref:System.GC.Collect?displayProperty=nameWithType>方法多載會執行完整的封鎖集合。</span><span class="sxs-lookup"><span data-stu-id="c3be6-125">For example, the <xref:System.GC.Collect?displayProperty=nameWithType> method overload performs a full, blocking collection.</span></span> <span data-ttu-id="c3be6-126">並行垃圾收集會在背景進行, 而且不會封鎖應用程式。</span><span class="sxs-lookup"><span data-stu-id="c3be6-126">Concurrent garbage collection occurs in the background and does not block the application.</span></span>  
   
- <span data-ttu-id="3897f-127">`GetCurrentSurvived`方法相當於未受管理的受管理<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="3897f-127">The `GetCurrentSurvived` method is the unmanaged equivalent of the managed <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
+ <span data-ttu-id="c3be6-127">方法是 managed <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>屬性的不受管理對等。 `GetCurrentSurvived`</span><span class="sxs-lookup"><span data-stu-id="c3be6-127">The `GetCurrentSurvived` method is the unmanaged equivalent of the managed <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3897f-128">需求</span><span class="sxs-lookup"><span data-stu-id="3897f-128">Requirements</span></span>  
- <span data-ttu-id="3897f-129">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3897f-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3be6-128">需求</span><span class="sxs-lookup"><span data-stu-id="c3be6-128">Requirements</span></span>  
+ <span data-ttu-id="c3be6-129">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c3be6-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3897f-130">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="3897f-130">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="c3be6-130">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="c3be6-130">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="3897f-131">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="3897f-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c3be6-131">**LIBRARY:** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c3be6-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3897f-132">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3897f-132">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c3be6-132">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3be6-132">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3897f-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3897f-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3be6-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c3be6-133">See also</span></span>
 
-- [<span data-ttu-id="3897f-134">ICLRAppDomainResourceMonitor 介面</span><span class="sxs-lookup"><span data-stu-id="3897f-134">ICLRAppDomainResourceMonitor Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [<span data-ttu-id="3897f-135">應用程式定義域資源監視</span><span class="sxs-lookup"><span data-stu-id="3897f-135">Application Domain Resource Monitoring</span></span>](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
-- [<span data-ttu-id="3897f-136">裝載介面</span><span class="sxs-lookup"><span data-stu-id="3897f-136">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="3897f-137">裝載</span><span class="sxs-lookup"><span data-stu-id="3897f-137">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="c3be6-134">ICLRAppDomainResourceMonitor 介面</span><span class="sxs-lookup"><span data-stu-id="c3be6-134">ICLRAppDomainResourceMonitor Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [<span data-ttu-id="c3be6-135">應用程式定義域資源監視</span><span class="sxs-lookup"><span data-stu-id="c3be6-135">Application Domain Resource Monitoring</span></span>](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
+- [<span data-ttu-id="c3be6-136">裝載介面</span><span class="sxs-lookup"><span data-stu-id="c3be6-136">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="c3be6-137">裝載</span><span class="sxs-lookup"><span data-stu-id="c3be6-137">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

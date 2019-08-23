@@ -1,20 +1,20 @@
 ---
-title: ICorDebugVariableSymbol::GetSize 方法
+title: 'ICorDebugVariableSymbol:: GetSize 方法'
 ms.date: 03/30/2017
 ms.assetid: add0cd9d-9a29-49b1-ae07-d9d3786b4ccd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e963e655c933c9191953bb32ba0b73adf0ae86d7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 782073968030d3dcdbbe49e0ed7732fe15c4a3bb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774877"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968170"
 ---
-# <a name="icordebugvariablesymbolgetsize-method"></a><span data-ttu-id="36fed-102">ICorDebugVariableSymbol::GetSize 方法</span><span class="sxs-lookup"><span data-stu-id="36fed-102">ICorDebugVariableSymbol::GetSize Method</span></span>
-<span data-ttu-id="36fed-103">取得變數的大小 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="36fed-103">Gets the size of a variable in bytes.</span></span>  
+# <a name="icordebugvariablesymbolgetsize-method"></a><span data-ttu-id="5a57c-102">ICorDebugVariableSymbol:: GetSize 方法</span><span class="sxs-lookup"><span data-stu-id="5a57c-102">ICorDebugVariableSymbol::GetSize Method</span></span>
+<span data-ttu-id="5a57c-103">取得變數的大小 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="5a57c-103">Gets the size of a variable in bytes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36fed-104">語法</span><span class="sxs-lookup"><span data-stu-id="36fed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a57c-104">語法</span><span class="sxs-lookup"><span data-stu-id="5a57c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSize(  
@@ -22,25 +22,25 @@ HRESULT GetSize(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="36fed-105">參數</span><span class="sxs-lookup"><span data-stu-id="36fed-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5a57c-105">參數</span><span class="sxs-lookup"><span data-stu-id="5a57c-105">Parameters</span></span>  
  `pcbValue`  
- <span data-ttu-id="36fed-106">32 位元不帶正負號的整數指標，這個整數包含變數的大小。</span><span class="sxs-lookup"><span data-stu-id="36fed-106">A pointer to a 32-bit unsigned integer containing the size of the variable.</span></span>  
+ <span data-ttu-id="5a57c-106">32 位元不帶正負號的整數指標，這個整數包含變數的大小。</span><span class="sxs-lookup"><span data-stu-id="5a57c-106">A pointer to a 32-bit unsigned integer containing the size of the variable.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="36fed-107">備註</span><span class="sxs-lookup"><span data-stu-id="36fed-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5a57c-107">備註</span><span class="sxs-lookup"><span data-stu-id="5a57c-107">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="36fed-108">這個方法僅適用於 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="36fed-108">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="5a57c-108">這個方法僅適用於 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="5a57c-108">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="36fed-109">需求</span><span class="sxs-lookup"><span data-stu-id="36fed-109">Requirements</span></span>  
- <span data-ttu-id="36fed-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="36fed-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a57c-109">需求</span><span class="sxs-lookup"><span data-stu-id="5a57c-109">Requirements</span></span>  
+ <span data-ttu-id="5a57c-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5a57c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="36fed-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="36fed-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5a57c-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5a57c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="36fed-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="36fed-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5a57c-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5a57c-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="36fed-113">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36fed-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="5a57c-113">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a57c-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36fed-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="36fed-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a57c-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5a57c-114">See also</span></span>
 
-- [<span data-ttu-id="36fed-115">ICorDebugVariableSymbol 介面</span><span class="sxs-lookup"><span data-stu-id="36fed-115">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [<span data-ttu-id="36fed-116">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="36fed-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5a57c-115">ICorDebugVariableSymbol 介面</span><span class="sxs-lookup"><span data-stu-id="5a57c-115">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
+- [<span data-ttu-id="5a57c-116">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="5a57c-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

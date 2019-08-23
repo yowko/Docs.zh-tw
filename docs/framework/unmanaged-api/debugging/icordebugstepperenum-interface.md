@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89552a099241f1bec61f9aa8a8321ef9932e886c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7336f958019c2f696a9b1a26b075c076cfc84f5d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953024"
 ---
-# <a name="icordebugstepperenum-interface"></a><span data-ttu-id="cfdaf-102">ICorDebugStepperEnum 介面</span><span class="sxs-lookup"><span data-stu-id="cfdaf-102">ICorDebugStepperEnum Interface</span></span>
-<span data-ttu-id="cfdaf-103">實作 ICorDebugEnum 方法，並列舉 ICorDebugStepper 陣列。</span><span class="sxs-lookup"><span data-stu-id="cfdaf-103">Implements ICorDebugEnum methods, and enumerates ICorDebugStepper arrays.</span></span>  
+# <a name="icordebugstepperenum-interface"></a><span data-ttu-id="351a1-102">ICorDebugStepperEnum 介面</span><span class="sxs-lookup"><span data-stu-id="351a1-102">ICorDebugStepperEnum Interface</span></span>
+<span data-ttu-id="351a1-103">會執行 ICorDebugEnum 方法, 並列舉 ICorDebugStepper 陣列。</span><span class="sxs-lookup"><span data-stu-id="351a1-103">Implements ICorDebugEnum methods, and enumerates ICorDebugStepper arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="cfdaf-104">方法</span><span class="sxs-lookup"><span data-stu-id="cfdaf-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="351a1-104">方法</span><span class="sxs-lookup"><span data-stu-id="351a1-104">Methods</span></span>  
   
-|<span data-ttu-id="cfdaf-105">方法</span><span class="sxs-lookup"><span data-stu-id="cfdaf-105">Method</span></span>|<span data-ttu-id="cfdaf-106">描述</span><span class="sxs-lookup"><span data-stu-id="cfdaf-106">Description</span></span>|  
+|<span data-ttu-id="351a1-105">方法</span><span class="sxs-lookup"><span data-stu-id="351a1-105">Method</span></span>|<span data-ttu-id="351a1-106">描述</span><span class="sxs-lookup"><span data-stu-id="351a1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="cfdaf-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="cfdaf-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|<span data-ttu-id="cfdaf-108">取得指定的數目`ICorDebugStepper`從列舉型別，從目前位置開始的執行個體。</span><span class="sxs-lookup"><span data-stu-id="cfdaf-108">Gets the specified number of `ICorDebugStepper` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="351a1-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="351a1-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|<span data-ttu-id="351a1-108">從列舉中取得指定`ICorDebugStepper`的實例數目, 從目前位置開始。</span><span class="sxs-lookup"><span data-stu-id="351a1-108">Gets the specified number of `ICorDebugStepper` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cfdaf-109">備註</span><span class="sxs-lookup"><span data-stu-id="cfdaf-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="351a1-109">備註</span><span class="sxs-lookup"><span data-stu-id="351a1-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cfdaf-110">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="cfdaf-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="351a1-110">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="351a1-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cfdaf-111">需求</span><span class="sxs-lookup"><span data-stu-id="cfdaf-111">Requirements</span></span>  
- <span data-ttu-id="cfdaf-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cfdaf-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="351a1-111">需求</span><span class="sxs-lookup"><span data-stu-id="351a1-111">Requirements</span></span>  
+ <span data-ttu-id="351a1-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="351a1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cfdaf-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cfdaf-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="351a1-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="351a1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cfdaf-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cfdaf-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="351a1-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="351a1-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cfdaf-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cfdaf-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="351a1-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="351a1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cfdaf-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cfdaf-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="351a1-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="351a1-116">See also</span></span>
 
-- [<span data-ttu-id="cfdaf-117">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="cfdaf-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="351a1-117">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="351a1-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
