@@ -2,12 +2,12 @@
 title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: e2ce2111e4bb26cc6a51b4a772b1d8a4d3238c70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7349bf61082c5d8e5bd4249e01b8835a1861cb9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783158"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934264"
 ---
 # <a name="privacynoticeat"></a>\<privacyNoticeAt>
 表示組態項目，指定用於 `wsFederationHttp` 繫結中的隱私權注意事項。  
@@ -15,7 +15,7 @@ ms.locfileid: "61783158"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<privacyNotice>  
   
 ## <a name="syntax"></a>語法  
@@ -33,7 +33,7 @@ ms.locfileid: "61783158"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`url`|指定隱私權注意事項所在之 URI 的字串。|  
 |`version`|指定這個隱私權注意事項版本的整數。|  
@@ -45,14 +45,14 @@ ms.locfileid: "61783158"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>
 - <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

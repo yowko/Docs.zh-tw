@@ -2,20 +2,20 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 54a9833f56927568af711a103bd3831b767711e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a99edd3a62a40c2efbc63a166b8c0b0d124e8a72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788410"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936279"
 ---
 # <a name="servicediscovery"></a>\<serviceDiscovery>
 指定服務端點的探索能力。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<serviceDiscovery>  
   
 ## <a name="syntax"></a>語法  
@@ -49,17 +49,17 @@ ms.locfileid: "61788410"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|公告端點的集合。 使用此區段指定用於傳送公告訊息的端點。|  
-|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|探索端點的集合。 使用此區段指定用於接聽探索訊息的端點。|  
+|[\<announcementEndpoint>](announcementendpoint.md)|公告端點的集合。 使用此區段指定用於傳送公告訊息的端點。|  
+|[\<discoveryEndpoint>](discoveryendpoint.md)|探索端點的集合。 使用此區段指定用於接聽探索訊息的端點。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
- 加入至服務的行為組態時，這個組態項目會將該服務的所有端點標示為可探索。 您可以使用，以進一步設定這類端點的探索功能[ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)或是[ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)子項目。 使用  [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)一節，以指定用來傳送服務公告 （線上 /hello 與離線 /bye） 的端點組態，以設定公告。 使用[ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)區段手動指定用於接聽探索訊息的端點。  
+ 加入至服務的行為組態時，這個組態項目會將該服務的所有端點標示為可探索。 您可以使用[ \<discoveryEndpoint >](discoveryendpoint.md)或[ \<announcementEndpoint >](announcementendpoint.md)子項目, 進一步設定這類端點的探索功能。 使用[announcementEndpoint > 區段來設定通知, 方法是指定要用來傳送服務宣告 (online/Hello 和 offline/再見) 的端點設定。 \< ](announcementendpoint.md) 使用 [ [ \<discoveryEndpoint >](discoveryendpoint.md) ] 區段, 以手動方式指定要接聽探索訊息的端點。  
   
 ## <a name="example"></a>範例  
  下列組態範例將 CalculatorService 指定為可探索，並且選擇性地指定要使用的公告端點。  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立縮圖影像
+title: 作法：建立縮圖影像
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,47 +8,47 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 786a92d99f5e7a0c27f502efa9a5fe617ac4d4d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063780"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923745"
 ---
-# <a name="how-to-create-thumbnail-images"></a>HOW TO：建立縮圖影像
-縮圖的影像是影像的縮小版本。 您可以藉由呼叫建立縮圖影像<xref:System.Drawing.Image.GetThumbnailImage%2A>方法的<xref:System.Drawing.Image>物件。  
+# <a name="how-to-create-thumbnail-images"></a>作法：建立縮圖影像
+縮圖影像是影像的小型版本。 您可以藉由呼叫<xref:System.Drawing.Image.GetThumbnailImage%2A> <xref:System.Drawing.Image>物件的方法來建立縮圖影像。  
   
 ## <a name="example"></a>範例  
- 下列範例會建構<xref:System.Drawing.Image>JPG 檔案中的物件。 原始的映像有 640 像素的寬度和高度為 479 個像素。 程式碼會建立具有 100 像素的寬度和高度為 100 像素的縮圖影像。  
+ 下列範例<xref:System.Drawing.Image>會從 JPG 檔案中建立物件。 原始影像的寬度為640圖元, 而高度為479圖元。 程式碼會建立寬度為100圖元且高度為100圖元的縮圖影像。  
   
- 下圖顯示的縮圖影像：  
+ 下圖顯示縮圖影像:  
   
- ![螢幕擷取畫面顯示輸出的縮圖。](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
+ ![顯示輸出縮圖的螢幕擷取畫面。](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
->  在此範例中，回呼方法已宣告但從未使用。 這可支援所有版本的 GDI +。  
+> 在此範例中, 回呼方法已宣告, 但從未使用過。 這支援所有的 GDI + 版本。  
   
  [!code-csharp[System.Drawing.WorkingWithImages#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。 若要執行此範例，請遵循下列步驟：  
+ 上述範例是針對與 Windows Forms 搭配使用所設計, 而且它<xref:System.Windows.Forms.PaintEventArgs>需要`e`, 這<xref:System.Windows.Forms.Control.Paint>是事件處理常式的參數。 若要執行範例, 請遵循下列步驟:  
   
 1. 新建 Windows Forms 應用程式  
   
-2. 將範例程式碼加入至表單。  
+2. 將範例程式碼新增至表單。  
   
-3. 建立表單的處理常式<xref:System.Windows.Forms.Control.Paint>事件  
+3. 建立表單<xref:System.Windows.Forms.Control.Paint>事件的處理常式  
   
-4. 在 <xref:System.Windows.Forms.Control.Paint>處理常式中，呼叫`GetThumbnail`方法並傳遞`e`如<xref:System.Windows.Forms.PaintEventArgs>。  
+4. 在處理常式中, `GetThumbnail`呼叫方法並傳遞給<xref:System.Windows.Forms.PaintEventArgs>。 `e` <xref:System.Windows.Forms.Control.Paint>  
   
-5. 尋找您想要的縮圖的影像檔。  
+5. 尋找您要做為縮圖的影像檔案。  
   
-6. 在 `GetThumbnail`方法指定的路徑和檔案加入至映像的名稱。  
+6. `GetThumbnail`在方法中, 指定影像的路徑和檔案名。  
   
 7. 按 F5 執行範例。  
   
-     100 x 100 的縮圖影像會出現在表單上。  
+     100 x 100 縮圖影像會出現在表單上。  
   
 ## <a name="see-also"></a>另請參閱
 

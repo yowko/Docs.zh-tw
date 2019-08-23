@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 0891b64fdb26953ab90f3da931f04513ac9e8bcf
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 378d7b0c67791e6c48e9859e0546594df3ccc85e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040218"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931010"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>逐步解說：使用 Visual Basic 繼承 Windows Forms 控制項
 有了 Visual Basic, 您就可以透過*繼承*來建立功能強大的自訂控制項。 您可以透過繼承建立控制項，不僅保留標準 Windows Forms 控制項的所有固有功能，同時也納入自訂功能。 在本逐步解說中，您將會建立簡單的繼承控制項，名為 `ValueButton`。 此按鈕將繼承標準 Windows Forms <xref:System.Windows.Forms.Button>控制項的功能, 並會公開名`ButtonValue`為的自訂屬性。
@@ -29,7 +29,7 @@ ms.locfileid: "69040218"
 
 2. 從 Visual Basic 專案清單中選取 [ **Windows Forms 控制項程式庫**] 專案範本, 然後`ValueButtonLib`在 [**名稱**] 方塊中輸入。
 
-     專案名稱，`ValueButtonLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為 `ValueButton`，您可以使用 `ValueButtonLib.ValueButton` 指定您的 `ValueButton` 元件。 如需詳細資訊，請參閱 [Visual Basic 中的命名空間](~/docs/visual-basic/programming-guide/program-structure/namespaces.md)。
+     專案名稱，`ValueButtonLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為 `ValueButton`，您可以使用 `ValueButtonLib.ValueButton` 指定您的 `ValueButton` 元件。 如需詳細資訊，請參閱 [Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)。
 
 3. 在 [方案總管] 中，以滑鼠右鍵按一下 [UserControl1.vb]，然後從捷徑功能表選擇 [重新命名]。 將檔案名稱變更為 `ValueButton.vb`。 當系統詢問您是否要重新命名程式碼元素 'UserControl1' 的所有參考時，按一下 [是]按鈕。
 
@@ -46,7 +46,7 @@ ms.locfileid: "69040218"
      請注意，視覺化設計工具再也無法使用。 <xref:System.Windows.Forms.Button>由於控制項會進行自己的繪製, 因此您無法在設計工具中修改其外觀。 它的視覺標記法會與繼承自的類別 (也就是<xref:System.Windows.Forms.Button>) 完全相同, 除非在程式碼中修改。
 
 > [!NOTE]
->  您仍然可以將元件 (其中沒有任何 UI 元素) 新增至設計介面。
+> 您仍然可以將元件 (其中沒有任何 UI 元素) 新增至設計介面。
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>將屬性新增至繼承的控制項
  繼承 Windows Forms 控制項的可能用法之一是建立外觀和行為 (外觀及操作) 與標準的 Windows Forms 控制項相同的控制項，但是公開自訂屬性。 在本節中，您會將名為 `ButtonValue` 的屬性新增至您的控制項。
@@ -74,7 +74,7 @@ ms.locfileid: "69040218"
     End Property
     ```
 
-     此程式碼會設定方法，系統會使用該方法來儲存和擷取 `ButtonValue` 屬性。           `Get` 陳述式會將傳回值設為儲存在私用變數 `varValue` 的值，而 `Set` 陳述式會使用 `Value` 關鍵字設定私用變數的值。
+     此程式碼會設定方法，系統會使用該方法來儲存和擷取 `ButtonValue` 屬性。 `Get` 陳述式會將傳回值設為儲存在私用變數 `varValue` 的值，而 `Set` 陳述式會使用 `Value` 關鍵字設定私用變數的值。
 
 3. 從 [檔案] 功能表選擇 [全部儲存] 以儲存專案。
 
@@ -148,4 +148,4 @@ ms.locfileid: "69040218"
 - [逐步解說：使用 Visual Basic 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [如何：在 [選擇工具箱專案] 對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
-- [繼承基本概念 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [繼承基本概念 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -3,20 +3,20 @@ title: WSFederation 驗證模組概觀
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0bd6c7432f79894c9e31952b72f3426fc88f9d03
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: MT
+ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877197"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915508"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 驗證模組概觀
 Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-同盟驗證模組 (WS-FAM) 提供同盟驗證的支援。 本主題將協助您了解同盟驗證的運作方式以及如何使用它。  
   
 ### <a name="overview-of-federated-authentication"></a>同盟驗證的概觀  
- 同盟驗證可讓一個信任網域中的安全性權杖服務 (STS) 將驗證資訊提供給另一個信任網域中的 STS，條件是這兩個網域之間要有信任關係。 這個範例是由下列圖所示：  
+ 同盟驗證可讓一個信任網域中的安全性權杖服務 (STS) 將驗證資訊提供給另一個信任網域中的 STS，條件是這兩個網域之間要有信任關係。 下圖顯示這種情況的範例:  
   
- ![此圖表顯示同盟的驗證情節。](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
+ ![顯示聯合驗證案例的圖表。](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
   
 1. Fabrikam 信任網域中的用戶端將某個要求傳送到 Contoso 信任網域中的信賴憑證者 (RP) 應用程式。  
   
@@ -31,26 +31,26 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
 6. RP 從安全性權杖擷取用戶端的宣告，並進行授權決策。  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>搭配 ASP.NET 來使用同盟驗證模組  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是 HTTP 模組，可讓您將同盟的驗證新增至 ASP.NET 應用程式。 同盟驗證會將驗證邏輯交給 STS 處理，讓您可以專心地撰寫商務邏輯。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(FAM) 是一個 HTTP 模組, 可讓您將同盟驗證新增至 ASP.NET 應用程式。 同盟驗證會將驗證邏輯交給 STS 處理，讓您可以專心地撰寫商務邏輯。  
   
  您可以設定 WS-FAM，以便指定非驗證要求將重新導向至其中的 STS。 WIF 可讓您使用兩種方式來驗證使用者：  
   
-1. 被動式重新導向：當未驗證的使用者嘗試存取受保護的資源，並想要只是重新導向至 STS 而不需要登入頁面時，這是正確的方法。 STS 會驗證使用者的身分識別，並簽發包含該使用者之適當宣告的安全性權杖。 這個選項會要求 WS-FAM 必須加入 HTTP 模組管線中。 您可以使用 Visual Studio 2012 的身分識別與存取工具 ，修改應用程式組態檔來使用 WS-FAM 以及建立與 STS 的同盟。 如需詳細資訊，請參閱 [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
+1. 被動重新導向:當未驗證的使用者嘗試存取受保護的資源, 而您只想將它們重新導向至 STS 而不需要登入頁面時, 這是正確的方法。 STS 會驗證使用者的身分識別，並簽發包含該使用者之適當宣告的安全性權杖。 這個選項會要求 WS-FAM 必須加入 HTTP 模組管線中。 您可以使用 Visual Studio 2012 的身分識別與存取工具 ，修改應用程式組態檔來使用 WS-FAM 以及建立與 STS 的同盟。 如需詳細資訊，請參閱 [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
   
 2. 您可以針對 RP 應用程式的登入頁面，在程式碼後置中呼叫 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
   
  在被動式重新導向中，所有通訊都是透過用戶端 (通常是瀏覽器) 的回應/重新導向來執行。 您可以將 WS-FAM 新增至應用程式的 HTTP 管線，它會在其中監看是否有未經驗證的使用者要求，並將使用者重新導向至您指定的 STS。  
   
- WS-FAM 也會引發數個事件，可讓您自訂其功能的 ASP.NET 應用程式中。  
+ FAM 也會引發數個事件, 讓您在 ASP.NET 應用程式中自訂其功能。  
   
 ### <a name="how-the-ws-fam-works"></a>WS-FAM 的運作方式  
- WS-FAM 會使用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 類別進行實作。 一般而言，您將 WS-FAM 新增至 ASP.NET RP 應用程式的 HTTP 管線。 當未驗證使用者嘗試存取受保護資源時，RP 就會傳回「401 授權遭拒」HTTP 回應。 WS-FAM 會攔截這個回應而不讓用戶端接收，接著將使用者重新導向至指定的 STS。 STS 會簽發安全性權杖，而 WS-FAM 又會再度攔截此權杖。 WS-FAM 會使用權杖來建立的執行個體<xref:System.Security.Claims.ClaimsPrincipal>通過驗證的使用者，讓一般的.NET Framework 授權機制開始運作。  
+ WS-FAM 會使用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 類別進行實作。 一般來說, 您會將 FAM 新增至 ASP.NET RP 應用程式的 HTTP 管線。 當未驗證使用者嘗試存取受保護資源時，RP 就會傳回「401 授權遭拒」HTTP 回應。 WS-FAM 會攔截這個回應而不讓用戶端接收，接著將使用者重新導向至指定的 STS。 STS 會簽發安全性權杖，而 WS-FAM 又會再度攔截此權杖。 FAM 會使用權杖來為已驗證的使用者建立的<xref:System.Security.Claims.ClaimsPrincipal>實例, 讓一般 .NET Framework 授權機制能夠運作。  
   
  因為 HTTP 是無狀態的，所以我們需要採用一種方法，以避免每當使用者嘗試存取其他受保護資源時，就得重複這一整個程序的狀況。 這時就需要用到 <xref:System.IdentityModel.Services.SessionAuthenticationModule>。 當 STS 簽發使用者的安全性權杖時，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 也會建立該使用者的工作階段安全性權杖，並將它放入 Cookie 中。 在處理後續要求時，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 會攔截這個 Cookie，並使用它來重新建構使用者的 <xref:System.Security.Claims.ClaimsPrincipal>。  
   
  下圖顯示在被動式重新導向情況下的整體資訊流程。 該要求會自動透過 STS 進行重新導向來建立認證，而無需使用登入頁面：  
   
- ![此圖顯示使用被動式重新導向登入。](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
+ ![顯示使用被動重新導向登入的圖表。](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
   
  下圖針對使用者已向 STS 完成驗證，其安全性權杖接著由 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 處理時所發生的狀況，提供更多詳細資料：  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
  ![顯示使用控制項進行登入的 SAM 時機圖表](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>事件  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和其父類別 <xref:System.IdentityModel.Services.HttpModuleBase>，會在許多不同的 HTTP 要求處理階段引發事件。 您可以處理這些事件`global.asax`ASP.NET 應用程式的檔案。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和其父類別 <xref:System.IdentityModel.Services.HttpModuleBase>，會在許多不同的 HTTP 要求處理階段引發事件。 您可以在 ASP.NET 應用程式的`global.asax`檔案中處理這些事件。  
   
 - ASP.NET 基礎結構會叫用模組的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法來初始化模組。  
   
@@ -91,7 +91,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
 - WS-FAM 會在每個使用者的工作階段關閉時，針對每一個工作階段引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> 事件一次。 如果工作階段是在用戶端上關閉 (例如，藉由刪除工作階段 Cookie)，則不會引發此事件。 在 SSO 環境中，IP-STS 也可以要求每個 RP 登出。 若將 <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> 設定為 `true`，這也會引發此事件。  
   
 > [!NOTE]
->  您不應該在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 所引發的任何事件期間使用 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性。 這是因為 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 會在驗證程序之後才設定，而事件則是在驗證程序期間引發。  
+> 您不應該在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 所引發的任何事件期間使用 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性。 這是因為 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 會在驗證程序之後才設定，而事件則是在驗證程序期間引發。  
   
 ### <a name="configuration-of-federated-authentication"></a>同盟驗證的組態  
  WS-FAM 和 SAM 是透過 [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 元素進行設定。 [\<wsFederation>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) 子元素可設定 WS-FAM 屬性的預設值；例如 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> 屬性和 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> 屬性。 (藉由提供某些 WS FAM 事件的處理常式，即可依要求來變更這些值；例如 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>)。SAM 所使用的 Cookie 處理常式則是透過 [\<cookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) 子元素進行設定。 WIF 提供了已在 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 類別中實作的預設 Cookie 處理常式，其區塊大小可透過 [\<chunkedCookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) 元素來設定。 `<federationConfiguration>` 元素會參考 <xref:System.IdentityModel.Configuration.IdentityConfiguration>，這樣便可提供應用程式所使用之其他 WIF 元件的組態，例如 <xref:System.Security.Claims.ClaimsAuthenticationManager> 和 <xref:System.Security.Claims.ClaimsAuthorizationManager>。 透過在 `<federationConfiguration>` 元素的 `identityConfigurationName` 屬性中指定具名的 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素，即可明確參考身分識別組態。 如果未明確參考身分識別組態，將會使用預設的身分識別組態。  

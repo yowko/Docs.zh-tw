@@ -2,20 +2,20 @@
 title: <workflowRuntime>
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: db5e1083c07d4e204eb19eaae9257ed44439132e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cd04f66cc4b73eb5f1c43bd6c8dc9189dfceff1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673143"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915209"
 ---
 # <a name="workflowruntime"></a>\<workflowRuntime>
-指定的執行個體設定<xref:System.Workflow.Runtime.WorkflowRuntime>用於裝載工作流程為基礎的 Windows Communication Foundation (WCF) 服務。  
+針對裝載以工作流程為<xref:System.Workflow.Runtime.WorkflowRuntime>基礎的 Windows Communication Foundation (WCF) 服務, 指定實例的設定。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<workflowRuntime>  
   
 ## <a name="syntax"></a>語法  
@@ -44,7 +44,7 @@ ms.locfileid: "61673143"
 |---------------|-----------------|  
 |cachedInstanceExpiration|選擇性 <xref:System.TimeSpan> 值，指定工作流程執行個體在遭到強制卸載或中止之前，能以閒置狀態存留在記憶體中的最長期間。 如果工作流程執行階段具有會執行 unloadOnIdle 的 `PersistenceService`，則會忽略此屬性。|  
 |enablePerformanceCounters|選擇性布林值，指定是否啟用效能計數器。 效能計數器會提供各種工作流程的相關統計資料，但是當工作流程執行階段引擎啟動和工作流程執行個體正在執行時，會對效能帶來負面影響。 預設值為 `true`。|  
-|名稱|字串，包含工作流程執行階段引擎的名稱。 名稱用於輸出以識別此執行階段及可能在系統執行的其他執行階段，例如在效能計數器中。<br /><br /> 預設為空字串。|  
+|NAME|字串，包含工作流程執行階段引擎的名稱。 名稱用於輸出以識別此執行階段及可能在系統執行的其他執行階段，例如在效能計數器中。<br /><br /> 預設值是空字串。|  
 |validateOnCreate|選擇性布林值，指定當 WorkflowServiceHost 開啟時，是否會發生工作流程定義驗證。  當此屬性設定為 `true` 時，每次呼叫 `WorkflowServiceHost.Open` 都會執行一次工作流程驗證。 如果發現驗證錯誤，則會擲回 <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> 錯誤。<br /><br /> 當此屬性設定為 `false` 時，將不會執行工作流程定義驗證。<br /><br /> 這個屬性的預設值為 `true`。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -58,10 +58,10 @@ ms.locfileid: "61673143"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
- 如需使用組態檔來控制行為的詳細資訊<xref:System.Workflow.Runtime.WorkflowRuntime>物件的 Windows Workflow Foundation 主應用程式，請參閱[工作流程組態檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
+ 如需使用設定檔控制 Windows Workflow Foundation 主應用程式之<xref:System.Workflow.Runtime.WorkflowRuntime>物件行為的詳細資訊, 請參閱[工作流程設定檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
   
 ## <a name="example"></a>範例  
   
@@ -88,4 +88,4 @@ ms.locfileid: "61673143"
 - <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
 - <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
 - <xref:System.Workflow.Runtime.WorkflowRuntime>
-- [工作流程組態檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+- [工作流程設定檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))

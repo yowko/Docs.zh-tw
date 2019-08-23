@@ -2,18 +2,18 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: 70fb2df1d37af23d9ec19932806989ce3329bf3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f54028489ec5aa34ae38115d7a582b01b9da92f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768910"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931418"
 ---
 # <a name="messagelogging"></a>\<messageLogging>
 這個項目會定義 Windows Communication Foundation (WCF) 的訊息記錄功能設定。  
   
  \<system.ServiceModel>  
-\<diagnostic>  
+\<診斷 >  
 \<messageLogging>  
   
 ## <a name="syntax"></a>語法  
@@ -46,7 +46,7 @@ ms.locfileid: "61768910"
 |`logMalformedMessages`|布林值，指定是否記錄格式錯誤的訊息。 格式錯誤的訊息不會計入 `maxMessagesToLog`。 預設為 `false`。|  
 |`logMessagesAtServiceLevel`|布林值，指定是否在服務層級追蹤訊息 (在加密和傳輸相關轉換之前)。 預設為 `false`。|  
 |`logMessagesAtTransportLevel`|布林值，指定是否在傳輸層級追蹤訊息。 在組態檔中指定的任何篩選條件都會套用，且只會追蹤符合篩選條件的訊息。 預設為 `false`。|  
-|`maxMessagesToLog`|正整數，指定要記錄的訊息數目上限。 預設值為 1000。|  
+|`maxMessagesToLog`|正整數，指定要記錄的訊息數目上限。 預設值是 1000。|  
 |`maxSizeOfMessageToLog`|正整數，指定要記錄之訊息的大小上限 (以位元組為單位)。 大於限制的訊息將不會記錄。 這個設定會影響所有的追蹤層級。 預設為 262144(0x4000)。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -127,4 +127,4 @@ ms.locfileid: "61768910"
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement>
-- [設定訊息記錄](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [設定訊息記錄](../../../wcf/diagnostics/configuring-message-logging.md)

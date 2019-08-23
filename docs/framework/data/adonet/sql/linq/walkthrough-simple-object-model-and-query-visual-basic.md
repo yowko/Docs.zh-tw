@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: a7d278dd424fbb3167a30d627379f78d0c65476f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971792"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946772"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>逐步解說：簡單的物件模型和查詢 (Visual Basic)
 
@@ -57,7 +57,7 @@ ms.locfileid: "68971792"
 
 4. 在 [**名稱**] 方塊中, 輸入**LinqConsoleApp**。
 
-5. 按一下 [確定]。
+5. 按一下 [確定 **Deploying Office Solutions**]。
 
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞
 
@@ -121,7 +121,7 @@ ms.locfileid: "68971792"
 
 ## <a name="creating-a-simple-query"></a>建立簡單查詢
 
-在這個步驟中，您會建立查詢以尋找資料庫 Customers 資料表中有哪些客戶位於倫敦。 這個步驟中的查詢程式碼只會描述查詢， 而不會實際執行。 這種方法稱為*延後執行*。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。
+在這個步驟中，您會建立查詢以尋找資料庫 Customers 資料表中有哪些客戶位於倫敦。 這個步驟中的查詢程式碼只會描述查詢， 而不會實際執行。 這種方法稱為*延後執行*。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。
 
 此外，您還會產生記錄檔輸出，以顯示 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 所產生的 SQL 命令。 這項記錄功能 (其使用 <xref:System.Data.Linq.DataContext.Log%2A>) 有助於進行偵錯，以及判斷要傳送至資料庫的命令是否正確地表示您的查詢。
 

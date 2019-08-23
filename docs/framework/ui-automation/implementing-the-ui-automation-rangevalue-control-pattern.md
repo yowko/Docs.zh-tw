@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: bb486dc210bc2d03be6400e9fe5c80b2a7c1de8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70ee5009e2763348f7c69613a1776e02e82e0391
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659873"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932128"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>實作 UI 自動化 RangeValue 控制項模式
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本主題將介紹實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider>的方針和慣例，包括事件和屬性的相關資訊。 其他參考的連結列於主題的結尾。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "64659873"
 |必要成員|成員類型|注意|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|屬性|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|屬性|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|屬性|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|屬性|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|屬性|無|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|屬性|無|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|屬性|無|  
 |<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|屬性|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|屬性|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|屬性|無|  
 |<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|方法|None|  
   
  此控制項模式沒有任何相關聯的事件。  

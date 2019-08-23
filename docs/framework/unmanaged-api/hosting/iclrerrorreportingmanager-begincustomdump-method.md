@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d0a85607586a8cdf0a319f2e43d9815d24be21b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98eebd489792f57f7f98d3596d4f25be2e847441
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772915"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966284"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump 方法
-指定錯誤報告的自訂堆積傾印的組態。  
+指定錯誤報表的自訂堆積傾印設定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,40 +40,40 @@ HRESULT BeginCustomDump (
   
 ## <a name="parameters"></a>參數  
  `dwFlavor`  
- [in]A [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)值，指出來建置自訂的堆積傾印的堆積傾印的種類。  
+ 在[ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)值, 指出要在其上建立自訂堆積傾印的堆積傾印類型。  
   
  `dwNumItems`  
- [in]長度`items`陣列。 如果`dwFlavor`不是 DUMP_FLAVOR_Mini，`dwNumItems`應為零。  
+ 在`items`陣列的長度。 如果`dwFlavor`不是 DUMP_FLAVOR_Mini, `dwNumItems`應該是零。  
   
  `items`  
- [in]陣列[CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)執行個體，指定要加入 小型傾印的項目。 如果`dwFlavor`不是 DUMP_FLAVOR_Mini，`items`應為 null。  
+ 在[CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)實例的陣列, 指定要加入至迷你傾印的專案。 如果`dwFlavor`不是 DUMP_FLAVOR_Mini, `items`應該是 null。  
   
  `dwReserved`  
- [in]保留供日後使用。  
+ 在保留供日後使用。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|此方法傳回成功。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL 之後，CLR 不再使用舊的處理序內。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|已成功傳回方法。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 在方法傳回 E_FAIL 之後, CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `BeginCustomDump`方法會設定自訂的堆積傾印組態。 [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)方法會清除自訂的堆積傾印組態，並釋放任何相關聯的狀態。 自訂的堆積傾印完成之後，應該會呼叫它。  
+ `BeginCustomDump`方法會設定自訂堆積傾印設定。 [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)方法會清除自訂堆積傾印設定, 並釋放任何相關聯的狀態。 這應該在自訂堆積傾印完成後呼叫。  
   
 > [!IMPORTANT]
->  無法呼叫`EndCustomDump`會造成記憶體遺漏。  
+> 呼叫`EndCustomDump`失敗會造成記憶體流失。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

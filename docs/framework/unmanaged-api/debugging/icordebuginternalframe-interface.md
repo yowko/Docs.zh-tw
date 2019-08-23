@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f16b4628215bee2410708edeb337b41fbdc0311
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9764cdcd07a09f5192a8f43b9baa5be40305c40b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946363"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910161"
 ---
 # <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame 介面
 
-表示執行階段內部的框架在堆疊上。 這個介面是 ICorDebugFrame 介面的子類別。  
+表示堆疊上的執行時間內部框架。 這個介面是 ICorDebugFrame 介面的子類別。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetFrameType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|取得這個內部框架的類型。|  
+|[GetFrameType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|取得此內部框架的類型。|  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "61946363"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Forms 控制項中套用屬性
+title: 作法：在 Windows Forms 控制項中套用屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 720172e9fcb13837b527d72176a35d366d83c948
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 273d32927582f4467a92cd3b8f87e699c1f167d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612819"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922789"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>HOW TO：在 Windows Forms 控制項中套用屬性
-若要開發元件和控制項的設計環境中正確互動，並在執行階段會正確執行，您需要正確地將屬性套用至類別和成員。  
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>作法：在 Windows Forms 控制項中套用屬性
+若要開發與設計環境正確互動並在執行時間正確執行的元件和控制項, 您需要將屬性正確地套用至類別和成員。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例示範如何使用自訂控制項上的數個屬性。 控制項將示範簡單的記錄功能。 當控制項已繫結至資料來源時，它會顯示傳送中的資料來源的值<xref:System.Windows.Forms.DataGridView>控制項。 如果值超過所指定的值`Threshold`屬性，`ThresholdExceeded`就會引發事件。  
+ 下列程式碼範例示範如何在自訂控制項上使用多個屬性。 此控制項會示範簡單的記錄功能。 當控制項系結至資料來源時, 它會在<xref:System.Windows.Forms.DataGridView>控制項中顯示資料來源所傳送的值。 如果某個值超過`Threshold`屬性所指定的值`ThresholdExceeded` , 就會引發事件。  
   
- `AttributesDemoControl`記錄值`LogEntry`類別。 `LogEntry`類別是範本類別，這表示它所記錄的型別上參數化。 例如，如果`AttributesDemoControl`是記錄值的型別`float`，每個`LogEntry`宣告執行個體，然後使用，如下所示。  
+ 會`AttributesDemoControl`記錄`LogEntry`具有類別的值。 `LogEntry`類別是樣板類別, 這表示它會在其所記錄的類型上進行參數化。 例如, 如果`AttributesDemoControl`是記錄類型`float`的值, 則每個`LogEntry`實例都會宣告並使用, 如下所示。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#110)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#110)]  
   
 > [!NOTE]
->  因為`LogEntry`已參數化的任意型別，它必須使用反映來操作參數型別。 閾值項功能就能運作，參數型別`T`必須實作<xref:System.IComparable>介面。  
+> 因為`LogEntry`是由任意型別參數化, 所以它必須使用反映來指令引數型別。 若要讓閾值功能正常`T` <xref:System.IComparable>執行, 參數類型必須實作用介面。  
   
- 表單裝載`AttributesDemoControl`定期查詢的效能計數器。 每個值封裝在`LogEntry`適當的類型，並加入表單的<xref:System.Windows.Forms.BindingSource>。 `AttributesDemoControl`接收透過其資料繫結的值，並顯示在值<xref:System.Windows.Forms.DataGridView>控制項。  
+ 主控的`AttributesDemoControl`表單會定期查詢效能計數器。 每個值都封裝在`LogEntry`適當類型的中, 並新增至表單<xref:System.Windows.Forms.BindingSource>的。 會透過其資料系結<xref:System.Windows.Forms.DataGridView> 接收值,並在控制項中顯示值。`AttributesDemoControl`  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#1)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#1)]  
@@ -38,34 +38,34 @@ ms.locfileid: "64612819"
  [!code-csharp[System.ComponentModel.AttributesDemoControl#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/form1.cs#100)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#100)]  
   
- 第一個程式碼範例是`AttributesDemoControl`實作。 第二個程式碼範例示範如何使用的表單`AttributesDemoControl`。  
+ 第一個程式碼範例為`AttributesDemoControl` 「執行」。 第二個程式碼範例示範使用的`AttributesDemoControl`表單。  
   
 ## <a name="class-level-attributes"></a>類別層級屬性  
- 有些屬性被套用在類別層級。 下列程式碼範例會顯示通常會套用至 Windows Form 控制項的屬性。  
+ 某些屬性會在類別層級套用。 下列程式碼範例顯示常用於 Windows Forms 控制項的屬性。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#20)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
   
 ### <a name="typeconverter-attribute"></a>TypeConverter 屬性  
- <xref:System.ComponentModel.TypeConverterAttribute> 是另一個常用的類別層級屬性。 下列程式碼範例示範使用`LogEntry`類別。 此範例也會示範實作<xref:System.ComponentModel.TypeConverter>for`LogEntry`型別，稱為`LogEntryTypeConverter`。  
+ <xref:System.ComponentModel.TypeConverterAttribute>是另一個常用的類別層級屬性。 下列程式`LogEntry`代碼範例示範如何使用類別。 這個範例也會顯示<xref:System.ComponentModel.TypeConverter> `LogEntry`型別的實作為, 稱為`LogEntryTypeConverter`。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#5)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#5)]  
   
 ## <a name="member-level-attributes"></a>成員層級屬性  
- 有些屬性是在成員層級套用。 下列程式碼範例示範一些通常會套用到 Windows Form 控制項的屬性的屬性。  
+ 某些屬性會在成員層級套用。 下列程式碼範例顯示一些通常會套用至 Windows Forms 控制項屬性的屬性。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#21)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#21)]  
   
 ### <a name="ambientvalue-attribute"></a>AmbientValue 屬性  
- 下列範例示範<xref:System.ComponentModel.AmbientValueAttribute>而且顯示支援與設計環境互動的程式碼。 這種互動會呼叫*氣氛*。  
+ 下列範例示範<xref:System.ComponentModel.AmbientValueAttribute> , 並顯示支援其與設計環境互動的程式碼。 此互動稱為「*環境*」。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#23)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#23)]  
   
-### <a name="databinding-attributes"></a>資料繫結屬性  
- 下列範例示範複雜資料繫結的實作。 類別層級<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>、 顯示之前，指定`DataSource`和`DataMember`来用於資料繫結屬性。 <xref:System.ComponentModel.AttributeProviderAttribute>指定的型別`DataSource`屬性會繫結。  
+### <a name="databinding-attributes"></a>資料系結屬性  
+ 下列範例示範複雜資料系結的執行。 先前所示的<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>類別層級會指定用於`DataSource`資料`DataMember`系結的和屬性。 會<xref:System.ComponentModel.AttributeProviderAttribute>指定`DataSource`屬性將系結的類型。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
@@ -75,7 +75,7 @@ ms.locfileid: "64612819"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
-- 裝載表單`AttributesDemoControl`需要參考`AttributesDemoControl`若要建置的組件。  
+- 主控的`AttributesDemoControl`表單需要`AttributesDemoControl`元件的參考, 才能建立。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -83,4 +83,4 @@ ms.locfileid: "64612819"
 - <xref:System.Windows.Forms.DataGridView>
 - [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
 - [Windows Forms 控制項中的屬性](attributes-in-windows-forms-controls.md)
-- [如何：序列化標準類型使用 DesignerSerializationVisibilityAttribute 的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
+- [如何：使用 Designerserializationvisibilityattribute 序列化序列化標準類型的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

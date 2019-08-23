@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 800bf80e5ba3e697c122bcf4b1bc0f302357d087
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 154a2543c62de545e8b2df711d6ad51989d0689d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401623"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964842"
 ---
 # <a name="dependency-property-metadata"></a>相依性屬性中繼資料
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]屬性系統包含的元資料包告系統, 超出了透過反映或通用 common language runtime (CLR) 特性來報告屬性的內容。 相依性屬性的中繼資料也可由定義相依性屬性的類別唯一指派、在相依性屬性新增至不同類別時變更，以及由從定義的基底類別繼承相依性屬性的所有衍生類別明確覆寫。  
@@ -38,7 +38,7 @@ ms.locfileid: "68401623"
  然後<xref:System.Windows.PropertyMetadata> , 類別會衍生自, 以針對架構分割 (例如 WPF 架構層級類別) 提供更具體的中繼資料。 <xref:System.Windows.UIPropertyMetadata>加入動畫報表, 並<xref:System.Windows.FrameworkPropertyMetadata>提供上一節中所述的 WPF 架構層級屬性。 註冊相依性屬性時, 可以向這些<xref:System.Windows.PropertyMetadata>衍生類別註冊。 當檢查中繼資料時, 基底<xref:System.Windows.PropertyMetadata>類型可能會轉換成衍生類別, 讓您可以檢查更具體的屬性。  
   
 > [!NOTE]
->  在此檔中, 可以指定<xref:System.Windows.FrameworkPropertyMetadata>的屬性特性有時稱為「旗標」。 當您建立新的中繼資料實例以用於相依性屬性註冊或中繼資料覆寫時, 您可以使用<xref:System.Windows.FrameworkPropertyMetadataOptions>旗標型列舉來指定這些值, 然後將列舉的可能串連值提供給<xref:System.Windows.FrameworkPropertyMetadata>函數。 不過, 在結構化之後, 這些選項特性會<xref:System.Windows.FrameworkPropertyMetadata>以一系列的布林值屬性 (而不是「結構化列舉值」) 的形式公開在中。 布林值屬性可讓您查看每個條件，而不需要將遮罩套用到旗標型列舉值以取得所需的資訊。 此函式會使用<xref:System.Windows.FrameworkPropertyMetadataOptions>串連的, 以保持可合理的函式簽章長度, 而實際的結構化中繼資料會公開離散屬性, 讓查詢中繼資料更加直覺。  
+> 在此檔中, 可以指定<xref:System.Windows.FrameworkPropertyMetadata>的屬性特性有時稱為「旗標」。 當您建立新的中繼資料實例以用於相依性屬性註冊或中繼資料覆寫時, 您可以使用<xref:System.Windows.FrameworkPropertyMetadataOptions>旗標型列舉來指定這些值, 然後將列舉的可能串連值提供給<xref:System.Windows.FrameworkPropertyMetadata>函數。 不過, 在結構化之後, 這些選項特性會<xref:System.Windows.FrameworkPropertyMetadata>以一系列的布林值屬性 (而不是「結構化列舉值」) 的形式公開在中。 布林值屬性可讓您查看每個條件，而不需要將遮罩套用到旗標型列舉值以取得所需的資訊。 此函式會使用<xref:System.Windows.FrameworkPropertyMetadataOptions>串連的, 以保持可合理的函式簽章長度, 而實際的結構化中繼資料會公開離散屬性, 讓查詢中繼資料更加直覺。  
   
 <a name="override_or_subclass"></a>   
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>何時覆寫中繼資料及衍生類別  
@@ -78,7 +78,7 @@ ms.locfileid: "68401623"
  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，附加屬性會以相依性屬性的方式實作。 這表示它們也有屬性中繼資料，可供個別類別覆寫。 在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , 附加屬性的範圍考慮通常是任何<xref:System.Windows.DependencyObject>可以設定的附加屬性。 因此, 任何<xref:System.Windows.DependencyObject>衍生的類別都可以覆寫任何附加屬性的中繼資料, 因為它可能會在類別的實例上設定。 您可以覆寫預設值、回呼或 WPF 架構層級特性報告屬性。 如果在類別執行個體上設定附加屬性，則會套用這些覆寫屬性中繼資料特性。 例如，您可以覆寫預設值，只要沒有另外設定屬性，就會將覆寫值回報為類別執行個體上附加屬性的值。  
   
 > [!NOTE]
->  <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>屬性與附加屬性不相關。  
+> <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>屬性與附加屬性不相關。  
   
 <a name="dp_add_owner"></a>   
 ### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>新增類別作為現有相依性屬性的擁有者  

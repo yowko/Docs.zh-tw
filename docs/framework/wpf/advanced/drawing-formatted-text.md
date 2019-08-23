@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 3b410bcf609aca2cb201042247b8768f243ac93a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eeba54ebd63b26a50c8c01a2478e847b3e660a3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937697"
 ---
 # <a name="drawing-formatted-text"></a>繪製格式化的文字
 本主題提供<xref:System.Windows.Media.FormattedText>物件功能的總覽。 這個物件提供在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中繪製文字的低階控制項。  
@@ -26,7 +26,7 @@ ms.locfileid: "68629738"
  ![使用 FormattedText 物件顯示的文字](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
->  針對從 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 移轉的開發人員，[Win32 移轉](#win32_migration)一節中的資料表會列出 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 旗標和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的大概對等項目。  
+> 針對從 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 移轉的開發人員，[Win32 移轉](#win32_migration)一節中的資料表會列出 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 旗標和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的大概對等項目。  
   
 ### <a name="reasons-for-using-formatted-text"></a>使用格式化文字的原因  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般而言, 需要有限<xref:System.Windows.Controls.TextBlock>的文字支援時 (例如[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]中的簡短句子), 應使用元素。 <xref:System.Windows.Controls.Label>當需要最少的文字支援時, 可以使用。 如需詳細資訊，請參閱 [WPF 中的文件](documents-in-wpf.md)。  
@@ -88,16 +88,16 @@ ms.locfileid: "68629738"
 ## <a name="win32-migration"></a>Win32 移轉  
  <xref:System.Windows.Media.FormattedText>用於繪製文字的功能與[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 函式的功能類似。 針對從 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 移轉的開發人員，下列資料表會列出 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 旗標和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的大概對等項目。  
   
-|DrawText 旗標|WPF 對等項目|附註|  
+|DrawText 旗標|WPF 對等項目|注意|  
 |-------------------|--------------------|-----------|  
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|使用屬性來計算適當[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]的 DrawText ' y ' 位置。 <xref:System.Windows.Media.FormattedText.Height%2A>|  
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>、 <xref:System.Windows.Media.FormattedText.Width%2A>|<xref:System.Windows.Media.FormattedText.Height%2A>使用和<xref:System.Windows.Media.FormattedText.Width%2A>屬性來計算輸出矩形。|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用屬性, 並將值設定為<xref:System.Windows.TextAlignment.Center>。 <xref:System.Windows.Media.FormattedText.TextAlignment%2A>|  
-|DT_EDITCONTROL|None|不需要。 架構編輯控制項中的空間寬度和最後一行轉譯相同。|  
+|DT_EDITCONTROL|無|不需要。 架構編輯控制項中的空間寬度和最後一行轉譯相同。|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用具有值<xref:System.Windows.TextTrimming.CharacterEllipsis>的屬性。<xref:System.Windows.Media.FormattedText.Trimming%2A><br /><br /> 使用<xref:System.Windows.TextTrimming.WordEllipsis>來取得[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]具有 DT_WORD_ELIPSIS 結尾省略號的 DT_END_ELLIPSIS, 在此情況下, 字元省略號只會出現在不符合單一行的單字上。|  
 |DT_EXPAND_TABS|無|不需要。 索引標籤每 4 ems 就會自動展開至停駐點，大約 8 個語言獨立字元的寬度。|  
 |DT_EXTERNALLEADING|無|不需要。 行距中一律包含外部前置。 <xref:System.Windows.Media.FormattedText.LineHeight%2A>使用屬性來建立使用者定義的行間距。|  
-|DT_HIDEPREFIX|None|不支援。 請先從字串中移除 ' & ', 然後<xref:System.Windows.Media.FormattedText>再建立物件。|  
+|DT_HIDEPREFIX|無|不支援。 請先從字串中移除 ' & ', 然後<xref:System.Windows.Media.FormattedText>再建立物件。|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|這是預設的文字對齊方式。 使用屬性, 並將值設定為<xref:System.Windows.TextAlignment.Left>。 <xref:System.Windows.Media.FormattedText.TextAlignment%2A> (僅限 WPF)|  
 |DT_MODIFYSTRING|None|不支援。|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|不自動執行裁剪。 如果您想要裁剪文字, 請使用<xref:System.Windows.Media.Visual.VisualClip%2A>屬性。|  
@@ -105,14 +105,14 @@ ms.locfileid: "68629738"
 |DT_NOPREFIX|無|不需要。 字串中的 '&' 字元一律視為一般字元。|  
 |DT_PATHELLIPSIS|無|使用具有值<xref:System.Windows.TextTrimming.WordEllipsis>的屬性。<xref:System.Windows.Media.FormattedText.Trimming%2A>|  
 |DT_PREFIX|None|不支援。 如果您想要使用底線做為文字 (例如快速鍵或連結), 請使用<xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>方法。|  
-|DT_PREFIXONLY|None|不支援。|  
+|DT_PREFIXONLY|無|不支援。|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用屬性, 並將值設定為<xref:System.Windows.TextAlignment.Right>。 <xref:System.Windows.Media.FormattedText.TextAlignment%2A> (僅限 WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|將 <xref:System.Windows.Media.FormattedText.FlowDirection%2A> 屬性設定為 <xref:System.Windows.FlowDirection.RightToLeft>。|  
-|DT_SINGLELINE|無|不需要。 <xref:System.Windows.Media.FormattedText>除非設定了<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>屬性或文字包含一個換行字元 (CR/LF), 否則物件會以單一線條控制項的方式運作。|  
-|DT_TABSTOP|無|不支援使用者定義的定位停駐點位置。|  
+|DT_SINGLELINE|None|不需要。 <xref:System.Windows.Media.FormattedText>除非設定了<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>屬性或文字包含一個換行字元 (CR/LF), 否則物件會以單一線條控制項的方式運作。|  
+|DT_TABSTOP|None|不支援使用者定義的定位停駐點位置。|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|不需要。 預設值為靠上對齊。 您可以使用<xref:System.Windows.Media.FormattedText.Height%2A>屬性來定義其他垂直定位值, 以計算適當[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]的 DrawText ' y ' 位置。|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|使用屬性來計算適當[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]的 DrawText ' y ' 位置。 <xref:System.Windows.Media.FormattedText.Height%2A>|  
-|DT_WORDBREAK|None|不需要。 斷詞會自動與<xref:System.Windows.Media.FormattedText>物件一起發生。 您無法停用它。|  
+|DT_WORDBREAK|無|不需要。 斷詞會自動與<xref:System.Windows.Media.FormattedText>物件一起發生。 您無法停用它。|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用具有值<xref:System.Windows.TextTrimming.WordEllipsis>的屬性。<xref:System.Windows.Media.FormattedText.Trimming%2A>|  
   
 ## <a name="see-also"></a>另請參閱

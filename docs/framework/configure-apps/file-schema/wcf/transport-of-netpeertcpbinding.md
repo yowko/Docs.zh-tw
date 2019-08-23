@@ -2,20 +2,20 @@
 title: <transport> 的 <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 157637615abafbd5913e4d90b702bb0224d5f121
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837d01540fa63579877ab4085bd8034c78f2fbe0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788319"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915567"
 ---
-# <a name="transport-of-netpeertcpbinding"></a>\<transport> of \<netPeerTcpBinding>
-使用時，指定傳輸層級安全性設定[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。  
+# <a name="transport-of-netpeertcpbinding"></a>\<netPeerTcpBinding > 的\<傳輸 >
+指定使用[ \<netPeerTcpBinding >](netpeertcpbinding.md)時的傳輸層級安全性設定。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netPeerTcpBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
 \<transport>  
   
@@ -36,7 +36,7 @@ ms.locfileid: "61788319"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |credentialType|選擇性。 指定認證的類型，用於驗證對等傳輸所傳送的訊息。 此屬性的型別為 <xref:System.ServiceModel.PeerTransportCredentialType>。|  
   
@@ -48,13 +48,13 @@ ms.locfileid: "61788319"
 |密碼|對等通道傳輸的驗證作業需要正確的密碼。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|定義的安全性設定[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
+|[\<security>](security-of-netpeerbinding.md)|定義[ \<netPeerTcpBinding >](netpeertcpbinding.md)的安全性設定。|  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -62,8 +62,8 @@ ms.locfileid: "61788319"
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

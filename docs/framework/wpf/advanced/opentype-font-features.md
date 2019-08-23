@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 580f9ce81e9b3652a9defec25dfd05f47e296d7a
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545385"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933693"
 ---
 # <a name="opentype-font-features"></a>OpenType 字型功能
 
@@ -37,7 +37,7 @@ ms.locfileid: "69545385"
 - 進階印刷樣式控制項的廣泛支援。  
   
 > [!NOTE]
->  Windows SDK 包含一組您可以搭配[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式使用的範例 OpenType 字型。 本主題後文會說明這些字型提供的大部分功能。 如需詳細資訊，請參閱[範例 OpenType 字型套件](sample-opentype-font-pack.md)。  
+> Windows SDK 包含一組您可以搭配[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式使用的範例 OpenType 字型。 本主題後文會說明這些字型提供的大部分功能。 如需詳細資訊，請參閱[範例 OpenType 字型套件](sample-opentype-font-pack.md)。  
   
  如需 OpenType 字型格式的詳細資訊, 請參閱[Opentype 規格](https://go.microsoft.com/fwlink/?LinkId=96731)。  
   

@@ -2,15 +2,15 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 77e22a64310959f66af14137f312b225d42fe56f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662160"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950360"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
-指定中使用的集合[選取](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)陳述式。  
+指定[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)語句中使用的集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ LOB.Customers
  如果未指定別名，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 會嘗試依據集合運算式產生別名。  
   
 ### <a name="join-from-clause-item"></a>JOIN FROM 子句項目  
- `JOIN FROM` 子句項目代表介於兩個 `FROM` 子句項目之間的聯結。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援交叉聯結、內部聯結、左右外部連結，以及完整外部連結。 類似於在 TRANSACT-SQL 中支援的方式支援所有這些聯結。 與 TRANSACT-SQL，這兩個`FROM`子句項目參與`JOIN`必須是獨立的。 也就是不能相互關聯。 `CROSS APPLY` 或 `OUTER APPLY` 適用於這些案例。  
+ `JOIN FROM` 子句項目代表介於兩個 `FROM` 子句項目之間的聯結。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援交叉聯結、內部聯結、左右外部連結，以及完整外部連結。 這些聯結的支援方式類似 Transact-sql 中支援的聯結。 如同在 transact-sql 中, 包含`FROM` `JOIN`在中的兩個子句專案必須是獨立的。 也就是不能相互關聯。 `CROSS APPLY` 或 `OUTER APPLY` 適用於這些案例。  
   
 #### <a name="cross-joins"></a>交叉聯結  
  `CROSS JOIN` 查詢運算式可產生兩個集合的笛卡兒乘積，如下列範例所示：  
@@ -77,7 +77,7 @@ LOB.Customers
  前述查詢運算式可對照右集合的每個項目處理左集合的每個項目的組合，其中 `ON` 條件為 true。 如果 `ON` 條件為 false，該運算式仍會對照右項目處理左項目的一個例項，但其結果值會是 null。 如果也對照左項目處理右項目的一個例項，其結果值會是 null。  
   
 > [!NOTE]
->  為了維持與 SQL-92，在 TRANSACT-SQL 中的相容性中 OUTER 關鍵字是選擇性的。 因此，`LEFT JOIN`、`RIGHT JOIN` 和 `FULL JOIN` 是 `LEFT OUTER JOIN`、`RIGHT OUTER JOIN` 和 `FULL OUTER JOIN` 的同義字。  
+> 為了保留與 SQL-92 的相容性, 在 Transact-sql 中, OUTER 關鍵字是選擇性的。 因此，`LEFT JOIN`、`RIGHT JOIN` 和 `FULL JOIN` 是 `LEFT OUTER JOIN`、`RIGHT OUTER JOIN` 和 `FULL OUTER JOIN` 的同義字。  
   
 ### <a name="apply-clause-item"></a>APPLY Clause 子句項目  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 可支援兩種 `APPLY`：`CROSS APPLY` 和 `OUTER APPLY`。  
@@ -93,17 +93,17 @@ LOB.Customers
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  不同於在 TRANSACT-SQL 中則不需要明確無巢狀步驟中針對[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。  
+> 與 Transact-sql 不同的是, 在中[!INCLUDE[esql](../../../../../../includes/esql-md.md)]不需要明確的 unnest 步驟。  
   
 > [!NOTE]
->  `CROSS` 和`OUTER APPLY`運算子導入 SQL Server 2005 中。 在某些案例中，查詢管線可能產生含有 `CROSS APPLY` 和 (或) `OUTER APPLY` 運算子的 Transact-SQL。 因為有些後端提供者，包括 SQL Server 2005 之前的 SQL Server 版本不支援這些運算子，無法在這些後端提供者上執行這類查詢。  
+> `CROSS`和`OUTER APPLY`運算子是在 SQL Server 2005 中引進。 在某些案例中，查詢管線可能產生含有 `CROSS APPLY` 和 (或) `OUTER APPLY` 運算子的 Transact-SQL。 因為有些後端提供者 (包括早于 SQL Server 2005 的 SQL Server 版本) 不支援這些運算子, 所以無法在這些後端提供者上執行這類查詢。  
 >   
 >  下列一些典型的案例可能導致 `CROSS APPLY` 和 (或) `OUTER APPLY` 運算子出現在輸出查詢中：AnyElement 是在相互關聯的子查詢之上或是在導覽產生的集合之上；在 LINQ 查詢中使用的群組方法接受元素選擇器；在查詢中明確指定 `CROSS APPLY` 或 `OUTER APPLY`；在查詢中的 `DEREF` 建構是在 `REF` 建構之上。  
   
 ## <a name="multiple-collections-in-the-from-clause"></a>FROM 子句中的多個集合  
  `FROM` 子句可以包含一個以上的集合並用逗號分隔。 這些案例中假設集合聯結在一起。 請將這些集合視為 n 向 CROSS JOIN。  
   
- 在下列範例中，`C`並`D`是獨立的集合，但`c.Names`取決於`C`。  
+ 在下列範例中, `C`和`D`是獨立的集合`C`, `c.Names`但是相依于。  
   
 ```  
 FROM C AS c, D AS d, c.Names AS e  

@@ -2,21 +2,21 @@
 title: 如何：動態更新
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 7e2fbd6c179444ef4c6e1df5e5068dbd1c5d29fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c651bc4ff23b2534e81f190fc8b63771c7587d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773045"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911145"
 ---
 # <a name="how-to-dynamic-update"></a>如何：動態更新
 本主題概要說明建立和動態更新路由組態所需的基本步驟。 在此範例中，初始路由組態是從組態檔取得，並且會將所有訊息路由傳送至 regularCalc 計算機服務。不過，該組態接著會以程式設計的方式更新，以變更 roundingCalc 服務的目的端點。  
   
 > [!NOTE]
->  在許多實作中，組態將完全為動態，而且不會倚賴預設組態。不過，在某些情況下，例如本主題中的情況，會希望服務啟動時為預設的組態狀態。  
+> 在許多實作中，組態將完全為動態，而且不會倚賴預設組態。不過，在某些情況下，例如本主題中的情況，會希望服務啟動時為預設的組態狀態。  
   
 > [!NOTE]
->  動態更新只會在記憶體中發生，而不會導致修改組態檔。  
+> 動態更新只會在記憶體中發生，而不會導致修改組態檔。  
   
  regularCalc 和 roundingCalc 兩者都支援相同的加、減、乘、除作業。不過，roundingCalc 會先將所有計算四捨五入至最接近的整數值再傳回。 組態檔可用來設定讓服務將所有訊息路由傳送至 regularCalc 服務。 路由服務啟動後，<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 可用來重新設定服務，使其將訊息路由傳送至 roundingCalc 服務。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "61773045"
     </filterTables>  
     ```  
   
-3. 若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。 下列範例示範如何將"filterTable1"與服務端點。  
+3. 若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。 下列範例示範如何將 "filterTable1" 與服務端點產生關聯。  
   
     ```xml  
     <behaviors>  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673793"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920403"
 ---
-# <a name="trace-element"></a>\<追蹤 > 項目
+# <a name="trace-element"></a>\<追蹤 > 元素
 包含用於收集、儲存及路由傳送追蹤訊息的接聽項。  
   
  \<configuration>  
@@ -39,29 +39,29 @@ ms.locfileid: "61673793"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`autoflush`|選擇性屬性。<br /><br /> 指定的追蹤接聽程式是否會自動清除之後每次寫入作業的輸出緩衝區。|  
-|`indentsize`|選擇性屬性。<br /><br /> 指定要縮排空格的數目。|  
+|`autoflush`|選擇性屬性。<br /><br /> 指定追蹤接聽程式是否會在每次寫入作業之後自動清除輸出緩衝區。|  
+|`indentsize`|選擇性屬性。<br /><br /> 指定要縮排的空格數目。|  
 |`useGlobalLock`|選擇性屬性。<br /><br /> 指出是否應該使用全域鎖定。|  
   
 ## <a name="autoflush-attribute"></a>autoflush 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|不會自動清除輸出緩衝區。 這是預設值。|  
+|`false`|不會自動排清輸出緩衝區。 這是預設值。|  
 |`true`|會自動排清輸出緩衝區。|  
   
-## <a name="usegloballock-attribute"></a>useGlobalLock Attribute  
+## <a name="usegloballock-attribute"></a>useGlobalLock 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|如果接聽程式是具備執行緒安全; 不會使用全域鎖定否則，會使用全域鎖定。|  
-|`true`|使用全域鎖定，而不論接聽程式是否具備執行緒安全。 這是預設值。|  
+|`false`|如果接聽程式是安全線程, 則不會使用全域鎖定;否則, 會使用全域鎖定。|  
+|`true`|不論接聽程式是否為安全線程, 都會使用全域鎖定。 這是預設值。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|指定的接聽程式會收集、 存放區，並將訊息路由。|  
+|[\<listeners>](listeners-element-for-trace.md)|指定收集、儲存及路由傳送訊息的接聽程式。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -71,7 +71,7 @@ ms.locfileid: "61673793"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<trace>`加入接聽程式的項目`MyListener`到`Listeners`集合。 `MyListener` 建立檔案，稱為`MyListener.log`並將輸出寫入檔案。 `useGlobalLock`屬性設為`false`，因而導致全域鎖定不會使用追蹤接聽程式是否具備執行緒安全。 `autoflush`屬性設定為`true`，這會讓追蹤接聽項寫入至檔案，無論<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>呼叫方法。 `indentsize`屬性設為 0 （零），這會導致要為零的縮排的接聽程式時<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>呼叫方法。  
+ 下列範例顯示如何使用`<trace>`專案, 將接聽程式加入`MyListener`至`Listeners`集合。 `MyListener`建立名`MyListener.log`為的檔案, 並將輸出寫入檔案。 屬性會設定為`false`, 如果追蹤接聽程式是安全線程, 則不會使用全域鎖定。 `useGlobalLock` 屬性會設定為`true`, 這會使追蹤接聽程式寫入檔案, 而不論是否<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>呼叫方法。 `autoflush` 屬性會設定為 0 (零), 這會導致接聽程式在呼叫<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>方法時縮排零空間。 `indentsize`  
   
 ```xml  
 <configuration>  
@@ -91,4 +91,4 @@ ms.locfileid: "61673793"
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [追蹤和偵錯設定結構描述](index.md)

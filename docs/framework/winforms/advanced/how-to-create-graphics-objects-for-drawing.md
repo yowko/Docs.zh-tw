@@ -10,51 +10,51 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 3d3ab62896f6b799cd38a8180b90f33125a9929b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505499"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964346"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>作法：建立繪製的圖形物件
-您可以繪製線條和形狀、 呈現文字，或顯示和操作使用 GDI + 的映像之前，您需要建立<xref:System.Drawing.Graphics>物件。 <xref:System.Drawing.Graphics>物件代表 GDI + 繪圖介面，而且是用來建立圖形影像的物件。  
+# <a name="how-to-create-graphics-objects-for-drawing"></a>HOW TO：建立繪製的圖形物件
+您必須先建立<xref:System.Drawing.Graphics>物件, 才可以繪製線條和圖形、呈現文字, 或使用 gdi + 來顯示及操作影像。 <xref:System.Drawing.Graphics>物件代表 gdi + 繪圖介面, 而則是用來建立圖形影像的物件。  
   
- 使用圖形有兩個步驟：  
+ 使用圖形的步驟有兩個:  
   
-1. 建立<xref:System.Drawing.Graphics>物件。  
+1. <xref:System.Drawing.Graphics>建立物件。  
   
-2. 使用<xref:System.Drawing.Graphics>物件來繪製線條和形狀、 呈現文字，或顯示和操作的映像。  
+2. <xref:System.Drawing.Graphics>使用物件繪製線條和圖形、呈現文字, 或顯示和操作影像。  
   
-## <a name="creating-a-graphics-object"></a>建立圖形物件  
- 圖形物件可由各種不同的方式。  
+## <a name="creating-a-graphics-object"></a>建立繪圖物件  
+ 繪圖物件可以用各種方式建立。  
   
-#### <a name="to-create-a-graphics-object"></a>若要建立圖形物件  
+#### <a name="to-create-a-graphics-object"></a>若要建立繪圖物件  
   
-- 接收圖形物件的參考的一部分<xref:System.Windows.Forms.PaintEventArgs>在<xref:System.Windows.Forms.Control.Paint>的表單或控制項的事件。 這通常是取得圖形物件的參考，建立控制項的繪製程式碼時。 您也可以做的屬性取得圖形物件的同樣地，<xref:System.Drawing.Printing.PrintPageEventArgs>處理時<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件<xref:System.Drawing.Printing.PrintDocument>。  
-  
-     -或-  
-  
-- 呼叫<xref:System.Windows.Forms.Control.CreateGraphics%2A>方法的控制項或表單，以取得參考<xref:System.Drawing.Graphics>物件，表示該控制項或表單的繪圖介面。 如果您想要在表單或已經存在的控制項上繪製，請使用這個方法。  
+- 在表單或控制項的事件中,接收繪圖物件的參考做為的一部分。<xref:System.Windows.Forms.Control.Paint> <xref:System.Windows.Forms.PaintEventArgs> 這通常是您在建立控制項的繪製程式碼時, 取得繪圖物件參考的方式。 同樣地, 您也可以在<xref:System.Drawing.Printing.PrintPageEventArgs> <xref:System.Drawing.Printing.PrintDocument.PrintPage>處理的事件<xref:System.Drawing.Printing.PrintDocument>時, 取得繪圖物件做為的屬性。  
   
      -或-  
   
-- 建立<xref:System.Drawing.Graphics>從繼承自任何物件的物件<xref:System.Drawing.Image>。 當您想要變更現有的映像時，這個方法很有用。  
+- 呼叫控制項或表單的<xref:System.Drawing.Graphics> 方法,取得代表該控制項或表單之繪圖介面的物件參考。<xref:System.Windows.Forms.Control.CreateGraphics%2A> 如果您想要在已經存在的表單或控制項上進行繪製, 請使用這個方法。  
   
-     下列各節提供有關這些程序的詳細資料。  
+     -或-  
   
-## <a name="painteventargs-in-the-paint-event-handler"></a>在 [小畫家] 事件處理常式的 PaintEventArgs  
- 進行程式設計時<xref:System.Windows.Forms.PaintEventHandler>控制項或<xref:System.Drawing.Printing.PrintDocument.PrintPage>for <xref:System.Drawing.Printing.PrintDocument>，圖形物件可作為屬性之一<xref:System.Windows.Forms.PaintEventArgs>或<xref:System.Drawing.Printing.PrintPageEventArgs>。  
+- 從繼承自<xref:System.Drawing.Image>的任何物件建立物件。<xref:System.Drawing.Graphics> 當您想要改變已經存在的映射時, 這個方法很有用。  
   
-#### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>若要取得在繪製事件 PaintEventArgs 圖形物件的參考  
+     下列各節提供有關每個處理常式的詳細資料。  
   
-1. 宣告<xref:System.Drawing.Graphics>物件。  
+## <a name="painteventargs-in-the-paint-event-handler"></a>繪製事件處理常式中的 PaintEventArgs  
+ <xref:System.Windows.Forms.PaintEventHandler>針對控制項<xref:System.Windows.Forms.PaintEventArgs> <xref:System.Drawing.Printing.PrintPageEventArgs>或<xref:System.Drawing.Printing.PrintDocument.PrintPage> 的進行程式設計時,會將繪圖物件當做或的其中一個<xref:System.Drawing.Printing.PrintDocument>屬性來提供。  
   
-2. 指派的變數來參考<xref:System.Drawing.Graphics>物件做為一部分傳遞<xref:System.Windows.Forms.PaintEventArgs>。  
+#### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>從繪製事件中的 PaintEventArgs 取得繪圖物件的參考  
   
-3. 插入程式碼以繪製的表單或控制項。  
+1. <xref:System.Drawing.Graphics>宣告物件。  
   
-     下列範例示範如何參考<xref:System.Drawing.Graphics>物件從<xref:System.Windows.Forms.PaintEventArgs>在<xref:System.Windows.Forms.Control.Paint>事件：  
+2. 指派變數來參考<xref:System.Drawing.Graphics>當做一部分<xref:System.Windows.Forms.PaintEventArgs>傳遞的物件。  
+  
+3. 插入程式碼以繪製表單或控制項。  
+  
+     下列範例顯示如何從<xref:System.Drawing.Graphics> <xref:System.Windows.Forms.Control.Paint>事件的<xref:System.Windows.Forms.PaintEventArgs>中參考物件:  
   
     ```vb  
     Private Sub Form1_Paint(sender As Object, pe As PaintEventArgs) Handles _  
@@ -89,12 +89,12 @@ ms.locfileid: "67505499"
        }  
     ```  
   
-## <a name="creategraphics-method"></a>包含 CreateGraphics 方法  
- 您也可以使用<xref:System.Windows.Forms.Control.CreateGraphics%2A>方法的控制項或表單，以取得參考<xref:System.Drawing.Graphics>物件，表示該控制項或表單的繪圖介面。  
+## <a name="creategraphics-method"></a>CreateGraphics 方法  
+ 您也可以使用<xref:System.Windows.Forms.Control.CreateGraphics%2A>控制項或表單的方法, 取得代表該控制項或表單之繪圖介面的<xref:System.Drawing.Graphics>物件參考。  
   
-#### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>若要建立 Graphics 物件，包含 CreateGraphics 方法  
+#### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>若要使用 CreateGraphics 方法建立繪圖物件  
   
-- 呼叫<xref:System.Windows.Forms.Control.CreateGraphics%2A>表單或控制項的項目，您想要呈現圖形的方法。  
+- 呼叫您要呈現圖形的表單或控制項的方法。<xref:System.Windows.Forms.Control.CreateGraphics%2A>  
   
     ```vb  
     Dim g as Graphics  
@@ -117,14 +117,14 @@ ms.locfileid: "67505499"
     g = this->CreateGraphics();  
     ```  
   
-## <a name="create-from-an-image-object"></a>從映像物件建立  
- 此外，您可以從任何物件都衍生自建立 graphics 物件<xref:System.Drawing.Image>類別。  
+## <a name="create-from-an-image-object"></a>從 Image 物件建立  
+ 此外, 您可以從衍生自<xref:System.Drawing.Image>類別的任何物件建立繪圖物件。  
   
-#### <a name="to-create-a-graphics-object-from-an-image"></a>若要建立 Graphics 物件，從映像  
+#### <a name="to-create-a-graphics-object-from-an-image"></a>若要從影像建立繪圖物件  
   
-- 呼叫<xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType>方法，並提供您想要建立的映像變數名稱<xref:System.Drawing.Graphics>物件。  
+- 呼叫方法, 並提供您想要從中<xref:System.Drawing.Graphics>建立物件之映射變數的名稱。 <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType>  
   
-     下列範例示範如何使用<xref:System.Drawing.Bitmap>物件：  
+     下列範例顯示如何使用<xref:System.Drawing.Bitmap>物件:  
   
     ```vb  
     Dim myBitmap as New Bitmap("C:\Documents and Settings\Joe\Pics\myPic.bmp")  
@@ -144,30 +144,30 @@ ms.locfileid: "67505499"
     ```  
   
 > [!NOTE]
->  您只能建立<xref:System.Drawing.Graphics>從非索引.bmp 檔案，例如 16 位元、 24 位元和 32 位元之.bmp 檔案的物件。 每個像素的非索引.bmp 檔案包含一種色彩，相較於像素為單位的色彩表來保存索引的索引的.bmp 檔案。  
+> 您只能從非<xref:System.Drawing.Graphics>索引的 .bmp 檔案 (例如, 16 位、24位和32位的 .bmp 檔案) 建立物件。 非索引 .bmp 檔案的每個圖元都有一個色彩, 相對於已編制索引之 .bmp 檔案的圖元, 這些檔案會保存色彩表的索引。  
   
-## <a name="drawing-and-manipulating-shapes-and-images"></a>繪圖和圖案和影像操作  
- 在建立之後，<xref:System.Drawing.Graphics>物件可能會用來繪製線條和形狀、 呈現文字，或顯示和操作的映像。 搭配使用的主體物件<xref:System.Drawing.Graphics>物件：  
+## <a name="drawing-and-manipulating-shapes-and-images"></a>繪製和操作圖形和影像  
+ 建立之後, <xref:System.Drawing.Graphics>物件可以用來繪製線條和圖形、呈現文字, 或顯示和操作影像。 與<xref:System.Drawing.Graphics>物件搭配使用的主要物件為:  
   
-- <xref:System.Drawing.Pen>類別，用於繪製線條、 大綱圖形，或轉譯其他幾何表示相互轉換。  
+- <xref:System.Drawing.Pen>類別: 用於繪製線條、大綱圖形或轉譯其他幾何標記法。  
   
-- <xref:System.Drawing.Brush>類別，用於填滿圖形，例如 填滿的圖案、 影像或文字的區域。  
+- <xref:System.Drawing.Brush>類別: 用來填滿圖形的區域, 例如填滿的圖形、影像或文字。  
   
-- <xref:System.Drawing.Font>類別 — 提供什麼圖形來轉譯文字時使用的描述。  
+- <xref:System.Drawing.Font>類別: 提供呈現文字時所要使用之圖形的描述。  
   
-- <xref:System.Drawing.Color>結構，表示要顯示的不同色彩。  
+- <xref:System.Drawing.Color>結構: 代表要顯示的不同色彩。  
   
-#### <a name="to-use-the-graphics-object-you-have-created"></a>若要使用您已建立的圖形物件  
+#### <a name="to-use-the-graphics-object-you-have-created"></a>若要使用您所建立的繪圖物件  
   
-- 使用適當的物件來繪製您的需要上面所列。  
+- 使用上方所列的適當物件來繪製您所需的內容。  
   
      如需詳細資訊，請參閱下列主題：  
   
-    |若要轉譯|請參閱|  
+    |呈現|請參閱|  
     |---------------|---------|  
     |線條|[如何：在 Windows Form 上繪製線條](how-to-draw-a-line-on-a-windows-form.md)|  
-    |圖形|[如何：繪製外框的形狀](how-to-draw-an-outlined-shape.md)|  
-    |文字|[如何：Windows Form 上繪製文字](how-to-draw-text-on-a-windows-form.md)|  
+    |圖形|[如何：繪製外框形狀](how-to-draw-an-outlined-shape.md)|  
+    |文字|[如何：在 Windows Form 上繪製文字](how-to-draw-text-on-a-windows-form.md)|  
     |影像|[如何：使用 GDI + 呈現影像](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>另請參閱

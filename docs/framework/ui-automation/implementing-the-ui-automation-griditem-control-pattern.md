@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: 81be2c07f9fd3cc449527c389b0e6bf46182c382
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fa0de86ee59a48d0d64156b41ad2db794dff761
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659846"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968890"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>實作 UI 自動化 GridItem 控制項模式
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本主題將介紹實作 <xref:System.Windows.Automation.Provider.IGridItemProvider>的方針和慣例，包括屬性的相關資訊。 其他參考的連結會在概觀的結尾列出。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "64659846"
   
 |必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|屬性|無|  
   
  此控制項模式沒有任何相關聯的方法或事件。  
   

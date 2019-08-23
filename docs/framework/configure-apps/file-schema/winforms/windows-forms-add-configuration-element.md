@@ -1,5 +1,5 @@
 ---
-title: Windows Form 加入組態項目
+title: Windows Forms 新增 Configuration 元素
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms Add configuration element
@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75a66ee7ca1d7c99de6e2cc9a1d502ea58dbf9f7
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: cb607af0933ea64b7d67f8ed082ffce6e7d21f51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422819"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913067"
 ---
-# <a name="windows-forms-add-configuration-element"></a>Windows Form 加入組態項目
+# <a name="windows-forms-add-configuration-element"></a>Windows Forms 新增 Configuration 元素
 
-`<add>`元素會將預先定義的索引鍵，指定您的 Windows Form 應用程式是否支援新增至 Windows Forms 應用程式在.NET Framework 4.7 或更新版本的功能。
+`<add>`元素會新增預先定義的索引鍵, 指定您的 Windows Form 應用程式是否支援在 .NET Framework 4.7 或更新版本中新增至 Windows Forms 應用程式的功能。
 
 ## <a name="syntax"></a>語法
 
@@ -34,22 +34,22 @@ ms.locfileid: "67422819"
 
 | 屬性 | 描述 |
 | --------- | ----------- |
-| `key`     | 必要屬性。 預先定義的索引鍵名稱對應至特定的 Windows Forms 可自訂的功能。 |
-| `value`   | 必要屬性。 要指派給值`key`。 |
+| `key`     | 必要屬性。 預先定義的索引鍵名稱, 對應到特定 Windows Forms 可自訂的功能。 |
+| `value`   | 必要屬性。 要指派給`key`的值。 |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key` 屬性名稱和相關聯的值
+### <a name="key-attribute-names-and-associated-values"></a>`key`屬性名稱和相關聯的值
 
-| `key` 名稱 | 值 | 描述 |
+| `key`檔案名 | 值 | 描述 |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 指出是否在單一行程中縮放錨定的控制項。 "true"停用單一傳遞調整;否則為 false。 請參閱 「 單一成功調整 」 一節[備註](#remarks)如需詳細資訊。 |
-| 「 DpiAwareness" | "PerMonitorV2"&#124;"false" | 指出是否為 DPI 感知應用程式。 設定 「 PerMonitorV2"，以支援 Dpi 感知; 的索引鍵否則，請將它設定為"false"。 DPI 感知是選用的功能;若要利用 Windows Form 的高 DPI 支援，您應該設定其值以"PerMonitorV2 」。 請參閱[備註](#remarks)節的詳細資訊。 |
-| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 指出是否<xref:System.Windows.Forms.CheckedListBox>控制項利用的調整和配置.NET Framework 4.7 中引入的改進功能。 "true"退出調整和配置的增強功能;否則即為"false"。 |
-| "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | 指出是否<xref:System.Windows.Forms.DataGridView>控制調整和配置採用的.NET Framework 4.7 中的增強功能。 若要退出 DPI 感知;"true""false"否則。 |
-| "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true"以選擇退出接收 DPI 縮放比例變更與相關的訊息"false"否則。 請參閱[備註](#remarks)節的詳細資訊。 |
-| "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | 表示在 Windows Forms 應用程式會自動調整大小由於 DPI 縮放比例的變更。 若要啟用自動調整大小;"true"否則為 false。 |
-| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | 指出是否<xref:System.Windows.Forms.Form>相應縮小單一行程。 調整;"true"停用單一行程否則為 false。 請參閱 「 單一成功調整 」 一節[備註](#remarks)如需詳細資訊。 |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | 指出是否<xref:System.Windows.Forms.MonthCalendar>在單一行程中縮放控制項。 調整;"true"停用單一行程否則為 false。 請參閱 「 單一成功調整 」 一節[備註](#remarks)如需詳細資訊。 |
-| "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | 指出是否<xref:System.Windows.Forms.ToolStrip>控制項利用的調整和配置.NET Framework 4.7 中引入的改進功能。 若要退出 DPI 感知;"true""false"否則。 |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 指出錨定控制項是否會在單一階段中縮放。 "true" 表示停用單一傳遞調整;否則為 false。 如需詳細資訊, 請參閱[備註](#remarks)中的「單一傳遞調整」一節。 |
+| "DpiAwareness" | "PerMonitorV2"&#124;"false" | 指出應用程式是否為 DPI 感知。 將金鑰設為 "PerMonitorV2" 以支援 Dpi 感知;否則, 請將它設定為 "false"。 DPI 感知是加入宣告的功能;若要利用 Windows Forms 的高 DPI 支援, 您應該將其值設定為 "PerMonitorV2"。 如需詳細資訊, 請參閱[備註](#remarks)一節。 |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 指出<xref:System.Windows.Forms.CheckedListBox>控制項是否利用 .NET Framework 4.7 中引進的縮放和版面配置改良功能。 「true」可選擇不進行調整和版面配置改善;否則為 "false"。 |
+| "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | 指出是否<xref:System.Windows.Forms.DataGridView>在 .NET Framework 4.7 中導入控制項縮放和版面配置改進。 "true" 表示退出 DPI 感知;否則為 "false"。 |
+| "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" 表示選擇不接收與 DPI 縮放比例變更相關的訊息;否則為 "false"。 如需詳細資訊, 請參閱[備註](#remarks)一節。 |
+| "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | 指出是否因為 DPI 縮放比例變更, 而自動調整 Windows Forms 應用程式的大小。 "true" 表示啟用自動調整大小;否則為 false。 |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | 指出是否<xref:System.Windows.Forms.Form>要在單一階段中縮放。 "true" 表示停用單一傳遞調整;否則為 false。 如需詳細資訊, 請參閱[備註](#remarks)中的「單一傳遞調整」一節。 |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | 指出<xref:System.Windows.Forms.MonthCalendar>控制項是否在單一階段中縮放。 "true" 表示停用單一傳遞調整;否則為 false。 如需詳細資訊, 請參閱[備註](#remarks)中的「單一傳遞調整」一節。 |
+| "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | 指出<xref:System.Windows.Forms.ToolStrip>控制項是否利用 .NET Framework 4.7 中引進的縮放和版面配置改良功能。 "true" 表示退出 DPI 感知;否則為 "false"。 |
 
 ### <a name="child-elements"></a>子元素
 
@@ -57,37 +57,37 @@ ms.locfileid: "67422819"
 
 ### <a name="parent-elements"></a>父元素
 
-| 元素 | 描述 |
+| 元素 | 說明 |
 | ------- | ----------- |
-| [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | 設定新的 Windows Forms 應用程式功能的支援。 |
+| [`<System.Windows.Forms.ApplicationConfigurationSection>`](index.md) | 設定新 Windows Forms 應用程式功能的支援。 |
 
 ## <a name="remarks"></a>備註
 
 從 .NET Framework 4.7 開始，`<System.Windows.Forms.ApplicationConfigurationSection>` 元素能允許您設定 Windows Forms 應用程式，以利用 .NET Framework 最新版本中的新增功能。
 
-`<System.Windows.Forms.ApplicationConfigurationSection>`項目可讓您新增一或多個子`<add>`項目，其中每一個定義特定的組態設定。
+元素可讓您新增一或多個子`<add>`專案, 每個專案都會定義特定的設定。 `<System.Windows.Forms.ApplicationConfigurationSection>`
 
-如需 Windows Form 中的高 DPI 支援的概觀，請參閱 <<c0> [ 在 Windows Form 中的高 DPI 支援](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)。
+如需 Windows Forms 高 DPI 支援的總覽, 請參閱[Windows Forms 中的高 Dpi 支援](../../../winforms/high-dpi-support-in-windows-forms.md)。
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
-從.NET Framework 4.7 開始從 Windows 10 Creators 版和.NET Framework 版本為目標的 Windows 版本之下執行的 Windows Forms 應用程式可以設定為充分利用.NET Framework 中引進的高 DPI 改良功能4.7。 它們包括：
+在 Windows 版本下執行的應用程式 Windows Forms 從 Windows 10 建立者版本開始, 而且從 .NET Framework 4.7 開始的目標版本 .NET Framework, 可以設定為利用在 .NET Framework 中引進的高 DPI 改良功能4.7。 它們包括：
 
-- 已啟動的 Windows Forms 應用程式之後變更的 DPI 或小數位數的比例的使用者的動態 DPI 案例的支援。
+- 支援動態 DPI 案例, 在這種情況下, 使用者會在啟動 Windows Forms 應用程式之後變更 DPI 或縮放比例。
 
-- 改進調整和配置數個 Windows Form 控制項，例如<xref:System.Windows.Forms.MonthCalendar>控制項和<xref:System.Windows.Forms.CheckedListBox>控制項。
+- 改善數個 Windows Forms 控制項 (例如<xref:System.Windows.Forms.MonthCalendar>控制項<xref:System.Windows.Forms.CheckedListBox>和控制項) 的縮放和版面配置。
 
-高 DPI 感知是選用的功能;根據預設，windows 7`DpiAwareness`是`false`。 您可以選擇將 Windows Form 支援 DPI 感知此機碼值設`PerMonitorV2`應用程式組態檔中。 如果啟用 DPI 感知，則也會啟用所有個別的 DPI 功能。 它們包括：
+高 DPI 感知是加入宣告功能;根據預設, 的值`DpiAwareness`為。 `false` 您可以在應用程式佈建檔中, 將此機碼的值設定為`PerMonitorV2` , 以選擇 Windows Forms ' DPI 感知的支援。 如果已啟用 DPI 感知, 則也會啟用所有個別的 DPI 功能。 它們包括：
 
-- DPI 變更訊息，就會受`DisableDpiChangedMessageHandling`索引鍵。
+- DPI 變更的訊息, 由`DisableDpiChangedMessageHandling`索引鍵所控制。
 
-- 動態 DPI 支援，由控制`EnableWindowsFormsHighDpiAutoResizing`索引鍵。
+- 動態 DPI 支援, 它是由`EnableWindowsFormsHighDpiAutoResizing`金鑰所控制。
 
-- 單一行程控制項縮放比例，這會受到`Form.DisableSinglePassControlScaling`針對個別<xref:System.Windows.Forms.Form>控制項，藉由`AnchorLayout.DisableSinglePassControlScaling`錨定的控制項，以及索引鍵`MonthCalendar.DisableSinglePassControlScaling`金鑰<xref:System.Windows.Forms.MonthCalendar>控制項
+- 單一傳遞控制項調整, `Form.DisableSinglePassControlScaling`由個別<xref:System.Windows.Forms.Form>控制項的、 `AnchorLayout.DisableSinglePassControlScaling`錨定<xref:System.Windows.Forms.MonthCalendar>控制項的索引鍵, 以及控制項的`MonthCalendar.DisableSinglePassControlScaling`索引鍵所控制
 
-- 高 DPI 縮放比例和版面配置的增強功能，會受到`CheckListBox.DisableHighDpiImprovements`金鑰<xref:System.Windows.Forms.CheckedListBox>控制項，藉由`DataGridView.DisableHighDpiImprovements`金鑰<xref:System.Windows.Forms.DataGridView>控制項，並依據`Toolstrip.DisableHighDpiImprovements`金鑰<xref:System.Windows.Forms.ToolStrip>控制項。
+- 高 DPI 縮放比例和版面配置改進, 由控制項的`CheckListBox.DisableHighDpiImprovements`索引鍵<xref:System.Windows.Forms.CheckedListBox> 、 <xref:System.Windows.Forms.DataGridView>控制項的`DataGridView.DisableHighDpiImprovements`索引鍵, 以及<xref:System.Windows.Forms.ToolStrip>控制項的`Toolstrip.DisableHighDpiImprovements`索引鍵所控制。
 
-提供藉由設定選擇加入設定一個預設`DpiAwareness`至`PerMonitorV2`通常適用於新的 Windows Forms 應用程式。 不過，您可以再退出個別的高 DPI 改進應用程式組態檔中加入對應的索引鍵。 比方說，若要使用的所有動態 DPI 支援除了新 DPI 功能，您可以加入下列應用程式組態檔來：
+將設定`DpiAwareness`為`PerMonitorV2`所提供的單一預設加入宣告設定, 通常適用于新的 Windows Forms 應用程式。 不過, 您可以藉由將對應的索引鍵新增至應用程式佈建檔, 來選擇不使用個別的高 DPI 增強功能。 例如, 若要利用動態 DPI 支援以外的所有新 DPI 功能, 您可以將下列內容新增至您的應用程式佈建檔:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -97,19 +97,19 @@ ms.locfileid: "67422819"
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
-一般而言，您選擇退出特定功能因為您已選擇要以程式設計方式處理它。
+您通常會選擇不使用特定功能, 因為您已選擇以程式設計方式處理它。
 
-如需利用 Windows Forms 應用程式中的高 DPI 支援的詳細資訊，請參閱[在 Windows Form 中的高 DPI 支援](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)。
+如需利用 Windows Forms 應用程式中高 DPI 支援的詳細資訊, 請參閱[Windows Forms 中的高 Dpi 支援](../../../winforms/high-dpi-support-in-windows-forms.md)。
 
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
-從.NET Framework 4.7 開始，Windows Form 控制項引發的 DPI 縮放比例的變更相關的事件數目。 其中包括<xref:System.Windows.Forms.Control.DpiChangedAfterParent>， <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>，和<xref:System.Windows.Forms.Form.DpiChanged>事件。 值`DisableDpiChangedMessageHandling`金鑰會決定在 Windows Forms 應用程式是否會引發這些事件。
+從 .NET Framework 4.7 開始, Windows Forms 控制項會引發一些與 DPI 縮放比例變更相關的事件。 其中包括<xref:System.Windows.Forms.Control.DpiChangedAfterParent>、 <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>和<xref:System.Windows.Forms.Form.DpiChanged>事件。 索引`DisableDpiChangedMessageHandling`鍵的值會決定這些事件是否會在 Windows Forms 應用程式中引發。
 
-### <a name="single-pass-scaling"></a>單一行程調整
+### <a name="single-pass-scaling"></a>單一傳遞調整
 
-它們會隨相應單一或多階段調整影響的使用者介面的認知回應能力和視覺外觀的使用者介面項目。 從.NET Framework 4.7 開始，Windows Form 會使用單一行程調整。 在舊版的.NET Framework 中，透過多個行程，這造成一些控制項進行調整，多個必須執行調整。 單一行程調整應該才可停用舊的行為取決於您的應用程式。
+單一或多重傳遞調整會影響使用者介面的觀察回應能力, 以及使用者介面專案在調整時的視覺外觀。 從 .NET Framework 4.7 開始, Windows Forms 使用單一傳遞調整。 在舊版的 .NET Framework 中, 縮放是透過多個階段來執行, 這會導致某些控制項的縮放比例超出所需。 只有當您的應用程式相依于舊的行為時, 才應該停用單一傳遞調整。
 
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Forms 組態區段](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
-- [Windows Forms 中的高 DPI 支援](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+- [Windows Forms 組態區段](index.md)
+- [Windows Forms 中的高 DPI 支援](../../../winforms/high-dpi-support-in-windows-forms.md)

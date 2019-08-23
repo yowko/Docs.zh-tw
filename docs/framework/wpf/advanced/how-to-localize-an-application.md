@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將應用程式當地語系化
+title: 作法：將應用程式當地語系化
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666794"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913676"
 ---
 # <a name="how-to-localize-an-application"></a>HOW TO：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
   
 > [!NOTE]
->  LocBaml 工具不是可實際執行的應用程式。 這只是個範例，示範如何使用一些當地語系化的 API，並說明如何撰寫當地語系化工具。  
+> LocBaml 工具不是可實際執行的應用程式。 這只是個範例，示範如何使用一些當地語系化的 API，並說明如何撰寫當地語系化工具。  
   
 <a name="Introduction"></a>   
 ## <a name="overview"></a>總覽  
@@ -28,9 +28,9 @@ ms.locfileid: "69666794"
   
 <a name="Requirements"></a>   
 ## <a name="requirements"></a>需求  
- 在這個討論的過程中，您將會使用 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]，這是從命令列執行的編譯器。  
+ 在此討論的過程中, 您將使用 Microsoft build engine (MSBuild), 這是從命令列執行的編譯器。  
   
- 此外，也會指引您使用專案檔。 如需如何使用[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]和專案檔的指示, 請參閱[組建和部署](../app-development/building-and-deploying-wpf-applications.md)。  
+ 此外，也會指引您使用專案檔。 如需如何使用 MSBuild 和專案檔的指示, 請參閱[組建和部署](../app-development/building-and-deploying-wpf-applications.md)。  
   
  此討論中的所有範例都是使用 en-US (美式英文) 做為文化特性。 這可讓您逐步執行範例中的所有步驟，而不需要安裝不同的語言。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69666794"
   
 1. 將您的應用程式開發至您要當地語系化的開始點。  
   
-2. 在專案檔中指定開發語言，讓 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 產生主要組件和附屬組件 (副檔名為 .resources.dll 的檔案)，以包含中性語言資源。 HelloApp 範例中的專案檔是 HelloApp.csproj。 在該檔案中，您會發現識別如下的開發語言：  
+2. 在專案檔中指定開發語言, 讓 MSBuild 產生主要元件和附屬元件 (副檔名為 .resources 的檔案), 以包含中性語言資源。 HelloApp 範例中的專案檔是 HelloApp.csproj。 在該檔案中，您會發現識別如下的開發語言：  
   
      `<UICulture>en-US</UICulture>`  
   
@@ -108,7 +108,7 @@ ms.locfileid: "69666794"
     - **冗余**顯示詳細資訊模式資訊。  
   
     > [!NOTE]
-    >  如果您在執行此工具時需要選項清單, 請輸入**LocBaml** , 然後按 enter 鍵。  
+    > 如果您在執行此工具時需要選項清單, 請輸入**LocBaml** , 然後按 enter 鍵。  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>使用 LocBaml 來剖析檔案  
@@ -121,7 +121,7 @@ ms.locfileid: "69666794"
      **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
-    >  如果輸入檔 HelloApp.resources.dll 不是在與 LocBaml.exe 相同的目錄中，請移動其中一個檔案，讓這兩個檔案都在相同的目錄中。  
+    > 如果輸入檔 HelloApp.resources.dll 不是在與 LocBaml.exe 相同的目錄中，請移動其中一個檔案，讓這兩個檔案都在相同的目錄中。  
   
 3. 當您執行 LocBaml 來剖析檔案時，輸出中會包含以逗號 (.csv 檔案) 或定位點 (.txt 檔) 分隔的七個欄位。 下面顯示針對 HelloApp.resources.dll 所剖析的 .csv 檔案：
 
@@ -172,7 +172,7 @@ ms.locfileid: "69666794"
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
-    >  如果輸入檔 Hello.csv 不是在與可執行檔 LocBaml.exe 相同的目錄中，請移動其中一個檔案，讓這兩個檔案都在相同的目錄中。  
+    > 如果輸入檔 Hello.csv 不是在與可執行檔 LocBaml.exe 相同的目錄中，請移動其中一個檔案，讓這兩個檔案都在相同的目錄中。  
   
 2. 以新建立的 HelloApp.resources.dll 檔案，取代 C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll 目錄中舊的 HelloApp.resources.dll 檔案。  
   

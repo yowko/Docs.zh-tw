@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 870de1d3db1e415792437e9763dc13bf8066913f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa872453ed72a3095c135aa25e81284610ad2436
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700900"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910215"
 ---
 # <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 介面
 
-ICorDebugHeapValue，提供支援，以通用語言執行平台 (CLR) 所處理的延伸模組。  
+ICorDebugHeapValue 的延伸模組, 可提供 common language runtime (CLR) 控制碼的支援。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
-|[CreateHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|建立指定型別的控制代碼，這個`ICorDebugHeapValue2`物件。|  
+|[CreateHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|建立這個`ICorDebugHeapValue2`物件之指定類型的控制碼。|  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -45,7 +45,7 @@ ICorDebugHeapValue，提供支援，以通用語言執行平台 (CLR) 所處理�
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

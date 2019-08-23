@@ -5,58 +5,58 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d743ccae38d101eda5bb9780b33ae18dfb608a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956217"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918454"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料行排序模式
-<xref:System.Windows.Forms.DataGridView> 資料行有三種排序模式。 透過所指定的每個資料行的排序模式<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>資料行，可以設定為下列其中一種屬性<xref:System.Windows.Forms.DataGridViewColumnSortMode>列舉值。  
+<xref:System.Windows.Forms.DataGridView>資料行有三種排序模式。 每個資料行的排序模式都是透過<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>資料行的屬性來指定, 這可設為下列<xref:System.Windows.Forms.DataGridViewColumnSortMode>其中一個列舉值。  
   
 |`DataGridViewColumnSortMode` 值|描述|  
 |----------------------------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|文字方塊資料行的預設值。 除非資料行標頭用於選項，按一下資料行標頭會自動排序<xref:System.Windows.Forms.DataGridView>依據此資料行，並顯示圖像 （glyph），表示排序順序。|  
-|<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|非文字方塊的資料行的預設值。 您可以排序此資料行，以程式設計的方式;不過，它並不適用於排序，因此會不保留任何空間，用於排序圖像。|  
-|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>|您可以透過程式設計的方式，排序這個資料行和排序圖像 （glyph） 保留的空間。|  
+|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|文字方塊資料行的預設值。 除非使用資料行標頭做為選取範圍, 否則按一下欄標題會<xref:System.Windows.Forms.DataGridView>自動依此欄排序, 並顯示表示排序次序的圖像。|  
+|<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|非 text box 資料行的預設值。 您可以用程式設計方式排序此資料行;不過, 它不適合用于排序, 因此不會保留任何空間給排序圖像。|  
+|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>|您可以用程式設計方式排序此資料行, 並保留空間給排序圖像。|  
   
- 您可能想要變更預設的資料行的排序模式<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>如果它包含可以有意義地排序的值。 比方說，如果您有包含數字，代表項目狀態的資料庫資料行時，您可以顯示這些數字為對應的圖示的影像資料行繫結至資料庫資料行。 您可以變更數字的資料格的值到映像中的處理常式的顯示值<xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>事件。 在此情況下，設定<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>屬性設<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>會讓使用者排序資料行。 自動排序，可讓您的使用者群組項目具有相同的狀態，即使對應的數字的狀態並沒有自然的順序。 核取方塊資料行是另一個範例是用於群組的相同狀態的項目自動排序。  
+ <xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>如果資料行包含可以有意義排序的值, 您可能會想要變更預設值的排序模式。 例如, 如果您的資料庫資料行包含代表專案狀態的數位, 您可以藉由將 image 資料行系結至資料庫資料行, 將這些數字顯示為對應的圖示。 然後, 您可以在<xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>事件的處理常式中, 將數值資料格的值變更為影像顯示值。 在此情況下, 將<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>屬性設定<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>為, 可讓您的使用者排序資料行。 自動排序可讓您的使用者群組具有相同狀態的專案, 即使對應到數位的狀態沒有自然順序也一樣。 核取方塊資料行是另一個範例, 其中自動排序適用于將相同狀態的專案分組。  
   
- 您可以排序<xref:System.Windows.Forms.DataGridView>多個資料行，不論在任何資料行中選取的值，以程式設計方式<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>設定。 當您想要提供您自己的使用者介面 (UI) 進行排序，或當您想要實作自訂排序，以程式設計方式排序非常有用。 提供排序的 UI 是非常有用，例如，當您將設定<xref:System.Windows.Forms.DataGridView>選取模式，以啟用資料行的標頭選取範圍。 在此情況下，雖然資料行標頭不能用於排序，但是您仍想標頭來顯示適當的排序圖像，因此您會設定<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>屬性設<xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>。  
+ <xref:System.Windows.Forms.DataGridView> 不論<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>設定為何, 您都可以透過任何資料行或多個資料行中的值, 以程式設計方式排序。 當您想要提供您自己的使用者介面 (UI) 進行排序時, 或當您想要執行自訂排序時, 程式設計排序就很有用。 提供您自己的<xref:System.Windows.Forms.DataGridView>排序 UI 很有用, 例如, 當您設定選取模式來啟用資料行標頭選擇時。 在此情況下, 雖然資料行標頭無法用於排序, 但您仍希望標頭顯示適當的排序圖像, 因此您可以將<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>屬性設定為。 <xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>  
   
- 設定為以程式設計方式排序模式資料行不會自動顯示排序圖像。 針對這些資料行中，您必須顯示圖像 （glyph） 自行設定<xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>屬性。 這是必要，如果您想自訂排序的彈性。 例如，如果您排序<xref:System.Windows.Forms.DataGridView>多個資料行，您可能想要顯示多個排序圖像 （glyph） 或未排序圖像 （glyph）。  
+ 設定為以程式設計方式排序模式的資料行不會自動顯示排序圖像。 對於這些資料行, 您必須藉由設定<xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>屬性來自行顯示圖像。 如果您想要在自訂排序中有彈性, 這是必要的。 例如, 如果您<xref:System.Windows.Forms.DataGridView>依多個資料行排序, 您可能會想要顯示多個排序字元或沒有排序圖像。  
   
- 雖然您可以以程式設計的方式排序<xref:System.Windows.Forms.DataGridView>依任何資料行，某些資料行，例如按鈕資料行，可能不會包含可以有意義地排序的值。 針對這些資料行中，<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>屬性設定<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>表示，它將永遠不會用於排序，因此不需要排序圖像 （glyph） 的標頭中保留的空間。  
+ 雖然您可以<xref:System.Windows.Forms.DataGridView>依任何資料行以程式設計方式排序, 但某些欄 (例如按鈕資料行) 可能不會包含可有意義地排序的值。 對於這些資料行, <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>的屬性<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>設定表示永遠不會用於排序, 因此不需要在排序圖像的標頭中保留空間。  
   
- 當<xref:System.Windows.Forms.DataGridView>是已排序，您可以決定排序資料行和排序次序所檢查的值<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>和<xref:System.Windows.Forms.DataGridView.SortOrder%2A>屬性。 這些值不是自訂的排序作業之後有意義。 如需有關自訂排序的詳細資訊，請參閱本主題稍後的自訂排序 」 一節。  
+ 當排序時, 您可以藉由檢查<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>和<xref:System.Windows.Forms.DataGridView.SortOrder%2A>屬性的值來判斷排序資料行和排序次序。 <xref:System.Windows.Forms.DataGridView> 在自訂排序作業之後, 這些值沒有意義。 如需自訂排序的詳細資訊, 請參閱本主題稍後的自訂排序一節。  
   
- 當<xref:System.Windows.Forms.DataGridView>控制項包含繫結和解除繫結的資料行已排序且未繫結的資料行的值不能自動維護。 為了維護這些值，您必須實作虛擬模式，藉由設定<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性，以`true`和處理<xref:System.Windows.Forms.DataGridView.CellValueNeeded>和<xref:System.Windows.Forms.DataGridView.CellValuePushed>事件。 如需詳細資訊，請參閱[如何：實作虛擬模式中的 Windows Form DataGridView 控制項](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)。 不支援未繫結中繫結模式的資料行排序。  
+ 當同時包含系結和未系結資料行的控制項進行排序時,無法自動維護未系結資料行中的值。<xref:System.Windows.Forms.DataGridView> 若要維護這些值<xref:System.Windows.Forms.DataGridView.VirtualMode%2A> , 您必須將屬性設定為`true`並處理和<xref:System.Windows.Forms.DataGridView.CellValuePushed>事件, 以<xref:System.Windows.Forms.DataGridView.CellValueNeeded>實作為虛擬模式。 如需詳細資訊，請參閱[如何：在 Windows Forms DataGridView 控制項](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)中執行虛擬模式。 不支援以系結模式的未系結資料行排序。  
   
 ## <a name="programmatic-sorting"></a>程式設計排序  
- 您可以排序<xref:System.Windows.Forms.DataGridView>程式設計的方式是藉由呼叫其<xref:System.Windows.Forms.DataGridView.Sort%2A>方法。  
+ 您可以藉由<xref:System.Windows.Forms.DataGridView>呼叫其<xref:System.Windows.Forms.DataGridView.Sort%2A>方法, 以程式設計方式排序。  
   
- `Sort(DataGridViewColumn,ListSortDirection)`多載<xref:System.Windows.Forms.DataGridView.Sort%2A>方法會採用<xref:System.Windows.Forms.DataGridViewColumn>和<xref:System.ComponentModel.ListSortDirection>做為參數的列舉值。 值，可以有意義地排序，但不是想設定自動排序的資料行排序時，這個多載會很有用。 當您呼叫這個多載，並傳入的資料行<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>屬性值<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic?displayProperty=nameWithType>，則<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>和<xref:System.Windows.Forms.DataGridView.SortOrder%2A>屬性會自動設定，並適當排序圖像 （glyph） 出現在資料行標頭。  
+ 方法的`Sort(DataGridViewColumn,ListSortDirection)`多載會採用<xref:System.Windows.Forms.DataGridViewColumn>和列舉值做為參數。<xref:System.ComponentModel.ListSortDirection> <xref:System.Windows.Forms.DataGridView.Sort%2A> 當排序依據的資料行具有可有意義排序的值, 但您不想設定自動排序時, 這個多載就很有用。 當您呼叫此多載, 並<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>傳入屬性值為的<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic?displayProperty=nameWithType>資料行時, <xref:System.Windows.Forms.DataGridView.SortedColumn%2A>會<xref:System.Windows.Forms.DataGridView.SortOrder%2A>自動設定和屬性, 且適當的排序圖像會出現在資料行標頭中。  
   
 > [!NOTE]
->  當<xref:System.Windows.Forms.DataGridView>控制項繫結至外部資料來源藉由設定<xref:System.Windows.Forms.DataGridView.DataSource%2A>屬性，`Sort(DataGridViewColumn,ListSortDirection)`方法多載不適用於未繫結的資料行。 此外，當<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性是`true`，您可以呼叫這個多載只對繫結的資料行。 若要判斷資料行是否為資料繫結，請檢查<xref:System.Windows.Forms.DataGridViewColumn.IsDataBound%2A>屬性值。 不支援排序繫結模式中的未繫結資料行。  
+> 藉由`Sort(DataGridViewColumn,ListSortDirection)`設定屬性來將控制項系結至外部資料源時,方法多載無法用於未系結資料行。<xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridView.DataSource%2A> 此外, 當<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性為`true`時, 您可以只針對系結的資料行呼叫此多載。 若要判斷資料行是否為數據系結, 請<xref:System.Windows.Forms.DataGridViewColumn.IsDataBound%2A>檢查屬性值。 不支援以系結模式排序未系結的資料行。  
   
 ## <a name="custom-sorting"></a>自訂排序  
- 您可以自訂<xref:System.Windows.Forms.DataGridView>利用`Sort(IComparer)`多載<xref:System.Windows.Forms.DataGridView.Sort%2A>方法或透過處理<xref:System.Windows.Forms.DataGridView.SortCompare>事件。  
+ 您可以使用<xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridView.Sort%2A>方法的`Sort(IComparer)`多載或藉由處理<xref:System.Windows.Forms.DataGridView.SortCompare>事件來自訂。  
   
- `Sort(IComparer)`方法多載會採用實作類別的執行個體<xref:System.Collections.IComparer>做為參數的介面。 這個多載會很有用，當您想要提供自訂排序;例如，當資料行的值沒有自然排序次序，或當自然排序次序不適當。 在此情況下，您無法使用自動排序，但您仍可以使用者按一下資料行標頭來排序。 您可以在處理常式中呼叫這個多載<xref:System.Windows.Forms.DataGridView.ColumnHeaderMouseClick>事件，如果您選擇不使用資料行標頭。  
-  
-> [!NOTE]
->  `Sort(IComparer)`方法多載的運作時，才<xref:System.Windows.Forms.DataGridView>控制項未繫結至外部資料來源並<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性值是`false`。 若要自訂的繫結至外部資料來源的資料行排序，您必須使用資料來源所提供的排序作業。 在虛擬模式中，您必須提供您自己未繫結的資料行的排序作業。  
-  
- 若要使用`Sort(IComparer)`方法多載，您必須建立您自己的類別可實作<xref:System.Collections.IComparer>介面。 此介面需要您的類別來實作<xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType>方法，要<xref:System.Windows.Forms.DataGridView>通過<xref:System.Windows.Forms.DataGridViewRow>物件做為輸入時`Sort(IComparer)`方法多載會呼叫。 以此方式，您可以計算任何資料行的值為基礎的正確的資料列排序。  
-  
- `Sort(IComparer)`方法多載不會設定<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>並<xref:System.Windows.Forms.DataGridView.SortOrder%2A>屬性，因此您必須一律設定<xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>顯示排序圖像 （glyph） 的屬性。  
-  
- 做為替代`Sort(IComparer)`方法多載，您可以藉由實作的處理常式自訂排序<xref:System.Windows.Forms.DataGridView.SortCompare>事件。 當使用者按一下 設定用於自動排序，或當您呼叫的資料行的標頭，就會發生此事件`Sort(DataGridViewColumn,ListSortDirection)`多載<xref:System.Windows.Forms.DataGridView.Sort%2A>方法。 事件發生的每個組的控制項，讓您可以計算其正確的順序中的資料列。  
+ 方法多載會採用將<xref:System.Collections.IComparer>介面實作為參數之類別的實例。 `Sort(IComparer)` 當您想要提供自訂排序時, 這個多載非常有用;例如, 當資料行中的值沒有自然排序次序, 或自然排序次序不適當時。 在此情況下, 您不能使用自動排序, 但是您可能還是想要讓使用者按一下資料行標頭來排序。 如果您未使用資料行標頭來進行選取<xref:System.Windows.Forms.DataGridView.ColumnHeaderMouseClick> , 則可以在事件的處理常式中呼叫這個多載。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView.SortCompare>不會發生事件時<xref:System.Windows.Forms.DataGridView.DataSource%2A>屬性設定或當<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性值是`true`。  
+> 只有當控制項未系結到<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>外部資料源, 且屬性值為時, `false`方法多載才會運作。`Sort(IComparer)` <xref:System.Windows.Forms.DataGridView> 若要針對系結至外部資料源的資料行自訂排序, 您必須使用資料來源所提供的排序作業。 在虛擬模式中, 您必須為未系結的資料行提供自己的排序作業。  
+  
+ 若要使用`Sort(IComparer)`方法多載, 您必須建立自己的類別來<xref:System.Collections.IComparer>執行介面。 此介面<xref:System.Collections.IComparer.Compare%2A?displayProperty=nameWithType>需要您的類別來執行方法, <xref:System.Windows.Forms.DataGridView>在呼叫`Sort(IComparer)`方法多<xref:System.Windows.Forms.DataGridViewRow>載時, 會將物件當做輸入傳遞。 有了這項功能, 您就可以根據任何資料行中的值來計算正確的資料列排序。  
+  
+ 方法多載不會<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>設定和<xref:System.Windows.Forms.DataGridView.SortOrder%2A> <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>屬性, 因此您必須一律設定屬性來顯示排序圖像。 `Sort(IComparer)`  
+  
+ 除了方法多載以外, 您還可以藉由執行<xref:System.Windows.Forms.DataGridView.SortCompare>事件的處理常式來提供自訂排序。 `Sort(IComparer)` 當使用者按一下已設定自動排序的資料行標頭, 或當您呼叫`Sort(DataGridViewColumn,ListSortDirection)` <xref:System.Windows.Forms.DataGridView.Sort%2A>方法的多載時, 就會發生這個事件。 此事件會針對控制項中的每一對資料列進行, 讓您能夠計算其正確的順序。  
+  
+> [!NOTE]
+> 當屬性已設定或<xref:System.Windows.Forms.DataGridView.SortCompare> `true`屬性值為時, 就不會發生此事件。 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> <xref:System.Windows.Forms.DataGridView.DataSource%2A>  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -67,5 +67,5 @@ ms.locfileid: "61956217"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [在 Windows Forms DataGridView 控制項中排序資料](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [如何：設定 Windows Form DataGridView 控制項中的資料行排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [如何：自訂 Windows Form DataGridView 控制項中排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [如何：設定 Windows Forms DataGridView 控制項中的資料行排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [如何：在 Windows Forms DataGridView 控制項中自訂排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

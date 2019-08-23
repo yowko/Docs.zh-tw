@@ -7,26 +7,26 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: 4e1816ef221641f5ad54fb429442ed43289b592a
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: bd58d4c70e3a3c88e57fe242957f669d1944fd71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505433"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964428"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>StatusBar 控制項概觀 (Windows Form)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip>及<xref:System.Windows.Forms.ToolStripStatusLabel>控制項會取代及新增功能<xref:System.Windows.Forms.StatusBar>並<xref:System.Windows.Forms.StatusBarPanel>控制項，不過，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控制項保留回溯相容性和未來使用，如果您選擇。  
+> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel>和控制項會取代和加入和<xref:System.Windows.Forms.StatusBarPanel>控制項的功能; 不過, 如果您這樣做, 和控制項就會保留, 以提供回溯相容性及未來使用。 <xref:System.Windows.Forms.ToolStripStatusLabel> <xref:System.Windows.Forms.StatusStrip>決定.  
   
- Windows Forms [StatusBar 控制項](statusbar-control-windows-forms.md)可在表單區域的區域，通常會顯示在視窗中，以何種應用程式可以顯示各種狀態資訊的底部。 <xref:System.Windows.Forms.StatusBar> 控制項可以有狀態列面板上顯示的文字或圖示以表示狀態或一系列的動畫表示正在處理程序; 的圖示比方說，指出 Microsoft Word 文件正在儲存。  
+ [Windows Forms[狀態列] 控制項](statusbar-control-windows-forms.md)用於表單上作為區域, 通常會顯示在視窗底部, 應用程式可以在其中顯示各種類型的狀態資訊。 <xref:System.Windows.Forms.StatusBar>控制項可以有狀態列面板, 它們會顯示文字或圖示來表示狀態, 或是動畫中表示進程正在運作的一系列圖示。例如, 表示正在儲存檔的 Microsoft Word。  
   
-## <a name="using-the-statusbar-control"></a>使用 StatusBar 控制項  
- Internet Explorer 使用狀態列來表示頁面的 URL，當滑鼠跨過超連結;Microsoft Word 會提供您資訊所在位置、 區段位置，以及編輯模式，例如取代和修訂追蹤;和 Visual Studio 用來提供內容相關的資訊，例如告訴您如何操作為停駐或浮動可停駐視窗的 [狀態] 列。  
+## <a name="using-the-statusbar-control"></a>使用狀態列控制項  
+ 當滑鼠變換超連結時, Internet Explorer 會使用狀態列來指出頁面的 URL;Microsoft Word 提供頁面位置、區段位置和編輯模式的資訊, 例如改寫和修訂追蹤;和 Visual Studio 會使用狀態列來提供內容相關資訊, 例如, 告訴您如何將可停駐的視窗操作為停駐或浮動。  
   
- 您可以在狀態列上顯示的單一訊息，藉由設定<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>屬性，以`false`（預設值） 和設定<xref:System.Windows.Forms.StatusBar.Text%2A>狀態列以您想要出現在狀態列中文字的屬性。 您可以將 [狀態] 列分成面板，以藉由設定顯示多個類型的資訊<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>屬性，以`true`並使用<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A>方法<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。  
+ 您可以將<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>屬性設定為`false` ( <xref:System.Windows.Forms.StatusBar.Text%2A>預設值), 並將狀態列的屬性設定為您要在狀態列中顯示的文字, 以在狀態列上顯示單一訊息。 您<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>可以藉由將屬性設定為`true` <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>, 並使用的<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A>方法, 將狀態列分割成面板, 以顯示一種以上的資訊。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [如何：判斷按一下 Windows Forms 狀態列控制項中的哪一個面板](determine-which-panel-wf-statusbar-control-was-clicked.md)

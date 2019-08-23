@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 381f796bec31bece354001ad46bf5079381d1b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877953"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914550"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
->  <xref:System.Data.OracleClient> 中的型別已被取代。 目前版本的 .NET Framework 仍然支援這些型別，不過未來的版本就會將其移除。 Microsoft 建議您使用協力廠商的 Oracle 提供者。  
+> <xref:System.Data.OracleClient> 中的型別已被取代。 目前版本的 .NET Framework 仍然支援這些型別，不過未來的版本就會將其移除。 Microsoft 建議您使用協力廠商的 Oracle 提供者。  
   
- 本章節描述功能和行為，專屬於.NET Framework Data Provider for Oracle。  
+ 本節說明 Oracle 的 .NET Framework Data Provider 特有的功能和行為。  
   
- .NET Framework Data Provider for Oracle 提供使用 Oracle Call Interface (OCI) 由 Oracle 用戶端軟體所提供的 Oracle 資料庫的存取權。 資料提供者的功能設計類似於 SQL Server、 OLE DB 和 ODBC 的.NET Framework 資料提供者。  
+ Oracle 的 .NET Framework Data Provider 可讓您使用 oracle 用戶端軟體所提供的 Oracle 呼叫介面 (OCI) 來存取 Oracle 資料庫。 資料提供者的功能設計類似于 SQL Server、OLE DB 和 ODBC 的 .NET Framework 資料提供者。  
   
- 若要使用.NET Framework Data Provider for Oracle，應用程式必須參考<xref:System.Data.OracleClient>命名空間，如下所示：  
+ 若要使用 Oracle 的 .NET Framework Data Provider, 應用程式必須參考<xref:System.Data.OracleClient>命名空間, 如下所示:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>本節內容  
  [系統需求](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- 說明使用.NET Framework Data Provider for Oracle，需求以及一些使用它時要注意的問題。  
+ 描述使用 Oracle 的 .NET Framework Data Provider 的需求, 並說明使用時要注意的一些問題。  
   
  [Oracle BFILE](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  說明用來與 Oracle BFILE 資料型別搭配使用的 <xref:System.Data.OracleClient.OracleBFile> 類別。  

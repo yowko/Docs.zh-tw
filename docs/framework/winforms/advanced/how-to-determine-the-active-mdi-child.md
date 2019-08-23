@@ -11,26 +11,26 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91100b37e4cae9041479b209e40034efe376df5b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937549"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946225"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a>HOW TO：決定作用中的 MDI 子系
-在某些情況下，您要在目前作用中的子表單具有焦點的控制項上提供作業的命令。 例如，假設您想要選取的文字複製到剪貼簿的子表單的文字方塊。 您會建立一個程序，將選取的文字複製到剪貼簿使用<xref:System.Windows.Forms.Control.Click>的複製功能表項目，標準的 [編輯] 功能表上的事件。  
+# <a name="how-to-determine-the-active-mdi-child"></a>作法：決定作用中的 MDI 子系
+在某些情況下, 您會想要提供一個命令, 以在焦點放在目前使用中子表單的控制項上操作。 例如, 假設您想要從子表單的文字方塊中, 將選取的文字複製到剪貼簿。 您會建立一個程式, 使用<xref:System.Windows.Forms.Control.Click>標準 [編輯] 功能表上 [複製] 功能表項目的事件, 將選取的文字複製到剪貼簿。  
   
- 由於 MDI 應用程式有許多相同的子表單的執行個體，程序，就必須知道要使用哪個表單。 若要指定正確的格式，請使用<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>屬性，會傳回具有焦點，或所最近使用的子表單。  
+ 由於 MDI 應用程式可以有多個相同子表單的實例, 因此程式需要知道要使用哪一個表單。 若要指定正確的格式, 請<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>使用屬性, 它會傳回具有焦點或最近使用中的子表單。  
   
- 當您有數個控制項在表單上的時，您也需要指定哪一個控制項處於現用狀態。 像是<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>屬性，<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A>屬性會傳回具有焦點的控制項作用中的子表單上。 下列程序會說明可以從 子表單功能表、 MDI 表單或工具列按鈕上的功能表中呼叫的複製程序。  
+ 當您在表單上有數個控制項時, 您也必須指定要使用哪一個控制項。 <xref:System.Windows.Forms.Form.ActiveMdiChild%2A>如同屬性<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> , 屬性會將焦點放在使用中子表單上的控制項。 下列程式說明可從子表單功能表、MDI 表單上的功能表或工具列按鈕呼叫的複製程式。  
   
-### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>若要判斷使用中的 MDI 子系 （若要將它的文字複製到剪貼簿）  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>判斷現用 MDI 子系 (將其文字複製到剪貼簿)  
   
-1. 在方法中，將作用中的子表單的作用中控制項的文字複製到剪貼簿。  
+1. 在方法內, 將現用子表單的作用中控制項文字複製到剪貼簿。  
   
     > [!NOTE]
-    >  這個範例假設沒有 MDI 父表單 (`Form1`)，其包含的一或多個 MDI 子視窗<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱 <<c0> [ 建立 MDI 父表單](how-to-create-mdi-parent-forms.md)。  
+    > 這個範例假設有一個 mdi 父表單 (`Form1`), 其中有一個或多個<xref:System.Windows.Forms.RichTextBox>包含控制項的 mdi 子視窗。 如需詳細資訊, 請參閱[建立 MDI 父表單](how-to-create-mdi-parent-forms.md)。  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  

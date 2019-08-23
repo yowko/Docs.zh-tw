@@ -2,19 +2,19 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: 26b45b17ecd7bbd3fffb5d03553834ec22eedc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35d33fd4d174c8e4ccdaaf1ac33884663340e16a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700926"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919129"
 ---
 # <a name="dns"></a>\<dns>
 指定伺服器的預期身分識別。 如果伺服器的憑證包含具有相同值的 DNS，這個身分識別對於 X509 憑證驗證模式是有效的。 如果 SPN 具有相同的值，則對於 Windows 驗證模式也是有效的。  
   
- 如需設定項目值的詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 如需設定元素值的詳細資訊, 請參閱[服務身分識別和驗證](../../../wcf/feature-details/service-identity-and-authentication.md)。  
   
- \<identity>  
+ \<身分識別 >  
 \<dns>  
   
 ## <a name="syntax"></a>語法  
@@ -30,16 +30,16 @@ ms.locfileid: "61700926"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|value|憑證的 DNS。 DNS 是業界標準通訊協定，用來尋找 IP 網路上的電腦。 使用者可以記住顯示名稱，例如<https://go.microsoft.com/fwlink/?prd=10929>或是[ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165)、 數字為基礎的位址，例如 207.46.131.137 比更容易。|  
+|value|憑證的 DNS。 DNS 是業界標準通訊協定，用來尋找 IP 網路上的電腦。 使用者可以記住顯示名稱, 例如<https://go.microsoft.com/fwlink/?prd=10929>或[https://go.microsoft.com/fwlink/?LinkID=96165](https://go.microsoft.com/fwlink/?LinkID=96165), 比以數位為基礎的位址 (例如 207.46.131.137) 簡單) 更容易。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由用戶端驗證之服務的身分識別。|  
+|[\<identity>](identity.md)|指定要由用戶端驗證之服務的身分識別。|  
   
 ## <a name="example"></a>範例  
  下列組態程式碼會指定用來驗證伺服器之 X.509 憑證的 DNS。  
@@ -56,5 +56,5 @@ ms.locfileid: "61700926"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.DnsEndpointIdentity>
-- [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [服務身分識別和驗證](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

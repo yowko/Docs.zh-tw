@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da1fc949109455cf50767191a99a8a727116f77c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c48c222a34e2e78f29c33e49da331d97d409bae1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949752"
 ---
 # <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum 介面
 
-提供`Next`方法，以傳回指定的數目的`ICorDebugAppDomainEnum`列舉中的下一個位置開始的值。 這個介面是 「 ICorDebugEnum"的子類別。  
+提供方法, 它會從列舉中的下`ICorDebugAppDomainEnum`一個位置開始, 傳回指定的值數目。 `Next` 這個介面是 "ICorDebugEnum" 的子類別。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|從集合中，從目前游標位置開始，取得指定的應用程式定義域數目。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|從目前的資料指標位置開始, 取得集合中指定的應用程式域數目。|  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "61989504"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

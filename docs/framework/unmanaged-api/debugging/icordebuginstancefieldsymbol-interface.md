@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a4a8f259-b83a-4425-ae8b-72b067dbc0d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5c0759989e069169c7e68b71206d9a50b04ad63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e5f63df9354df6a4d142c2f6ae12f9a0d5600fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946388"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910145"
 ---
 # <a name="icordebuginstancefieldsymbol-interface"></a>ICorDebugInstanceFieldSymbol 介面
 代表執行個體欄位的偵錯符號資訊。  
@@ -26,7 +26,7 @@ ms.locfileid: "61946388"
  `ICorDebugInstanceFieldSymbol` 介面用來擷取執行個體欄位的偵錯符號資訊。  
   
 > [!NOTE]
->  這個介面僅適用於 .NET 原生。 如果您在 .NET 原生之外針對 ICorDebug 案例實作這個介面，Common Language Runtime 會忽略這個介面。  
+> 這個介面僅適用於 .NET 原生。 如果您在 .NET 原生之外針對 ICorDebug 案例實作這個介面，Common Language Runtime 會忽略這個介面。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "61946388"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

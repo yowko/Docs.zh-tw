@@ -1,5 +1,5 @@
 ---
-title: <clear> 項目<listeners>的 <source>
+title: <clear><listeners> For 的元素<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673781"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920538"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<清除 > 項目\<接聽程式 > 針對\<來源 >
+# <a name="clear-element-for-listeners-for-source"></a>\<針對來源 > 的\<接聽程式\<> 清除 > 元素
 清除追蹤來源的 `Listeners` 集合。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<sources>  
-\<source>  
-\<listeners>  
-\<clear>  
+\<來源 >  
+\<來源 >  
+\<接聽程式 >  
+\<清除 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,16 +47,16 @@ ms.locfileid: "61673781"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
 |`sources`|包含起始追蹤訊息的追蹤來源。|  
 |`source`|指定起始追蹤訊息的追蹤來源。|  
-|`listeners`|指定用於收集、 儲存及路由傳送訊息的接聽程式。|  
+|`listeners`|指定收集、儲存及路由傳送訊息的接聽程式。|  
   
 ## <a name="remarks"></a>備註  
- `<clear>`項目會移除所有的接聽程式，從`Listeners`集合的追蹤來源，包括<xref:System.Diagnostics.DefaultTraceListener>。 您可以使用`<clear>`項目之前使用`<add>`確有沒有其他作用中接聽程式集合中的項目。  
+ 元素會從集合中移除<xref:System.Diagnostics.DefaultTraceListener>追蹤來源的所有接聽程式, 包括。 `Listeners` `<clear>` `<clear>` 在`<add>`使用專案之前, 您可以使用專案, 以確保集合中沒有其他作用中的接聽程式。  
   
 ## <a name="configuration-file"></a>組態檔  
- 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 此元素可用於電腦設定檔 (Machine.config) 和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<clear>`項目之前使用`<add>`加入接聽程式的項目`console`並`textListener`來`Listeners`追蹤來源的集合`TraceSourceApp`。  
+ 下列範例顯示`<clear>`如何使用專案, 然後`<add>`使用專案將接聽程式`console`和`textListener`加入至追蹤來源`TraceSourceApp`的`Listeners`集合。  
   
 ```xml  
 <configuration>  
@@ -88,5 +88,5 @@ ms.locfileid: "61673781"
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [追蹤和偵錯設定結構描述](index.md)
+- [追蹤接聽項](../../../debug-trace-profile/trace-listeners.md)

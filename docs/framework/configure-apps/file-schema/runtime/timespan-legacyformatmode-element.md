@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bd74460c7d5d077686c723936d140b07ac21dd0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f16a2bbd2470b4aec9e95ab67ccb0e736c4c6d02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663398"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920681"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 元素
 
@@ -44,7 +44,7 @@ ms.locfileid: "69663398"
 
 ## <a name="enabled-attribute"></a>啟用屬性
 
-|值|描述|
+|值|說明|
 |-----------|-----------------|
 |`false`|執行時間不會還原舊版格式設定行為。|
 |`true`|執行時間會還原舊版格式設定行為。|
@@ -64,7 +64,7 @@ ms.locfileid: "69663398"
 
 從 .NET Framework 4 開始, <xref:System.TimeSpan?displayProperty=nameWithType>結構<xref:System.IFormattable>會執行介面, 並支援標準和自訂格式字串的格式化作業。 如果剖析方法遇到不支援的格式規範或格式字串, 它會<xref:System.FormatException>擲回。
 
-在舊版的 .NET Framework 中, <xref:System.TimeSpan>結構不會執行<xref:System.IFormattable> , 且不支援格式字串。 不過, 許多開發人員<xref:System.TimeSpan>不小心認為的確支援一組格式字串, 而且在[複合格式作業](../../../../../docs/standard/base-types/composite-formatting.md)中, 使用像是<xref:System.String.Format%2A?displayProperty=nameWithType>的方法。 一般來說, 如果型<xref:System.IFormattable>別會實作為並支援格式字串, 則使用不支援的格式字串呼叫格式化方法通常會<xref:System.FormatException>擲回。 不過, 因為<xref:System.TimeSpan>並未執行<xref:System.IFormattable>, 所以執行時間會忽略格式<xref:System.TimeSpan.ToString?displayProperty=nameWithType>字串, 而改為呼叫方法。 這表示, 雖然格式字串不會影響格式化作業, 但它們的存在並不會產生<xref:System.FormatException>。
+在舊版的 .NET Framework 中, <xref:System.TimeSpan>結構不會執行<xref:System.IFormattable> , 且不支援格式字串。 不過, 許多開發人員<xref:System.TimeSpan>不小心認為的確支援一組格式字串, 而且在[複合格式作業](../../../../standard/base-types/composite-formatting.md)中, 使用像是<xref:System.String.Format%2A?displayProperty=nameWithType>的方法。 一般來說, 如果型<xref:System.IFormattable>別會實作為並支援格式字串, 則使用不支援的格式字串呼叫格式化方法通常會<xref:System.FormatException>擲回。 不過, 因為<xref:System.TimeSpan>並未執行<xref:System.IFormattable>, 所以執行時間會忽略格式<xref:System.TimeSpan.ToString?displayProperty=nameWithType>字串, 而改為呼叫方法。 這表示, 雖然格式字串不會影響格式化作業, 但它們的存在並不會產生<xref:System.FormatException>。
 
 若是舊版程式碼傳遞複合格式化方法和不正確格式字串, 而且該程式碼無法重新編譯的情況, 您可以使用`<TimeSpan_LegacyFormatMode>`專案來還原舊版<xref:System.TimeSpan>行為。 當您將這個`enabled`元素的屬性設定為`true`時, 複合格式化方法會<xref:System.TimeSpan.ToString?displayProperty=nameWithType>導致<xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>的呼叫, 而不是, 而且<xref:System.FormatException>不會擲回。
 

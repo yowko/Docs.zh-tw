@@ -5,25 +5,25 @@ helpviewer_keywords:
 - progress controls
 - ProgressBar control [Windows Forms]
 ms.assetid: 5be6b642-e8a6-4565-8ebd-ae73c7b10dc9
-ms.openlocfilehash: 2ad6450e26777a4642f0b9c685c9f5e552b5fdc7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a941189eb8ca00de6fb2ef75cada5762c0bcc973
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012507"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968294"
 ---
 # <a name="progressbar-control-windows-forms"></a>ProgressBar 控制項 (Windows Form)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> 控制項會取代 <xref:System.Windows.Forms.ProgressBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ProgressBar> 控制項，以提供回溯相容性及未來使用。  
+> <xref:System.Windows.Forms.ToolStripProgressBar> 控制項會取代 <xref:System.Windows.Forms.ProgressBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ProgressBar> 控制項，以提供回溯相容性及未來使用。  
   
- Windows Form<xref:System.Windows.Forms.ProgressBar>控制項顯示適量的矩形排列在水平列表示動作的進度。 完成此動作時，會填滿的列。 進度列通常用來授與使用者的方式指出長等待時間的動作，來完成 — 比方說，當載入大型檔案時。  
+ Windows Forms <xref:System.Windows.Forms.ProgressBar>控制項會以水準橫條顯示適當數目的矩形, 來指出動作的進度。 當動作完成時, 會填滿橫條。 進度列通常用來提供使用者等候 protracted 動作完成所需時間的指示, 例如, 載入大型檔案時。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ProgressBar 控制項概觀](progressbar-control-overview-windows-forms.md)  
- 導入的一般概念<xref:System.Windows.Forms.ProgressBar>控制，可讓您以圖形方式顯示作業的進度。  
+ 介紹<xref:System.Windows.Forms.ProgressBar>控制項的一般概念, 可讓您以圖形方式顯示作業的進度。  
   
- [如何：設定 Windows Form ProgressBar 控制項顯示的值](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
- 討論幾個不同的方式，以增加所顯示的值的<xref:System.Windows.Forms.ProgressBar>控制項。  
+ [如何：設定 Windows Forms ProgressBar 控制項顯示的值](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ 討論數種不同的方式, 以增加<xref:System.Windows.Forms.ProgressBar>控制項所顯示的值。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ProgressBar>  

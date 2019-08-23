@@ -2,20 +2,20 @@
 title: <security> 的 <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0996a98438dc344d96d640abced52ac99709adbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670517"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936679"
 ---
-# <a name="security-of-netnamedpipebinding"></a>\<安全性 > 的\<netNamedPipeBinding >
+# <a name="security-of-netnamedpipebinding"></a>\<netNamedPipeBinding > 的\<安全性 >
 定義繫結的安全性設定。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netNamedPipeBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -35,9 +35,9 @@ ms.locfileid: "61670517"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|模式|指定套用至這個繫結的安全性類型。 有效值包括以下的值：<br /><br /> -None:這會停用安全性。<br />-傳輸：使用基礎傳輸型安全性來提供安全性。 可使用這個模式控制保護層級。<br />-預設值是傳輸。 此屬性的型別為 <xref:System.ServiceModel.NetNamedPipeSecurityMode>。|  
+|模式|指定套用至這個繫結的安全性類型。 有效值包括以下的值：<br /><br /> 無這會停用安全性。<br />運送安全性是以基礎傳輸為基礎的安全性來提供。 可使用這個模式控制保護層級。<br />-預設值是 Transport。 此屬性的型別為 <xref:System.ServiceModel.NetNamedPipeSecurityMode>。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -49,7 +49,7 @@ ms.locfileid: "61670517"
   
 |項目|描述|  
 |-------------|-----------------|  
-|繫結|繫結項目[ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)。|  
+|繫結|NetNamedPipeBinding > 的 binding 元素。 [ \< ](netnamedpipebinding.md)|  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -57,9 +57,9 @@ ms.locfileid: "61670517"
 - <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [選取認證類型](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

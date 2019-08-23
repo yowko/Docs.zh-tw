@@ -9,28 +9,28 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 18c3b300d4e32cee06208caecb7166b73ae1c565
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913103"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915029"
 ---
-# <a name="how-to-resize-controls-on-windows-forms"></a>HOW TO：調整 Windows Forms 的控制項大小
-您也可以調整個別控制項，以及您可以多個調整控制項的大小相同或不同的種類，例如<xref:System.Windows.Forms.Button>和<xref:System.Windows.Forms.GroupBox>控制項。  
+# <a name="how-to-resize-controls-on-windows-forms"></a>作法：調整 Windows Forms 的控制項大小
+您可以調整個別控制項的大小, 也可以調整相同或不同種類 (例如<xref:System.Windows.Forms.Button>和<xref:System.Windows.Forms.GroupBox>控制項) 的多個控制項大小。  
   
-### <a name="to-resize-a-control"></a>若要調整控制項大小  
+### <a name="to-resize-a-control"></a>調整控制項的大小  
   
-1. 按一下控制項調整大小，然後拖曳其中一個八個調整大小控點。  
+1. 按一下要調整大小的控制項, 然後拖曳八個調整大小控點的其中一個。  
   
     > [!NOTE]
-    >  選取的控制項，然後按住 SHIFT 鍵可調整控制項的一個像素大小一次按下方向鍵。 按住 SHIFT 與 CTRL 鍵，以調整大小以大量遞增控制項中按向下或向右箭號鍵。  
+    > 選取控制項, 然後在按住 SHIFT 鍵時按方向鍵, 一次調整控制項的一個圖元。 按向下鍵或向右鍵, 同時按住 SHIFT 和 CTRL 鍵, 以大幅增加控制項的大小。  
   
-### <a name="to-resize-multiple-controls-on-a-form"></a>若要調整大小的表單上的多個控制項  
+### <a name="to-resize-multiple-controls-on-a-form"></a>調整表單上的多個控制項大小  
   
-1. 按住 CTRL 或 SHIFT 鍵，然後選取您想要調整大小的控制項。 您選取的第一個控制項的大小使用於其他控制項。  
+1. 按住 CTRL 或 SHIFT 鍵, 然後選取您想要調整大小的控制項。 您選取的第一個控制項的大小會用於其他控制項。  
   
-2. 在上**格式**功能表上，選擇**成相同大小**，並選取四個選項之一。 前三個命令會變更要比對的第一個選取的控制項之控制項的維度。  
+2. 在 [**格式**] 功能表上, 選擇 [**設成相同大小**], 然後選取四個選項的其中一個。 前三個命令會變更控制項的維度, 以符合第一個選取的控制項。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -39,4 +39,4 @@ ms.locfileid: "61913103"
 - [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
 - [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)
-- [如何：調整 Windows Form 使用設計工具的大小](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))
+- [如何：使用設計工具調整 Windows Forms 大小](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

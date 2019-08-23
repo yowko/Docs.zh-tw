@@ -1,5 +1,5 @@
 ---
-title: My.Forms 物件 (Visual Basic)
+title: Forms 物件 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.Forms
@@ -7,54 +7,54 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 4998097b910a504461a34af3cc159ddb1c74cc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fa5c77dd12c98100e3d17fc473a6802180d1e32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949314"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965974"
 ---
 # <a name="myforms-object"></a>My.Forms 物件
-提供存取目前專案中宣告的每個 Windows form 的執行個體的屬性。  
+提供屬性, 以存取目前專案中宣告之每個 Windows form 的實例。  
   
 ## <a name="remarks"></a>備註  
- `My.Forms`物件會提供目前專案中的每個表單的執行個體。 屬性存取表單的名稱相同的屬性名稱。   
+ `My.Forms`物件會在目前的專案中提供每個表單的實例。 屬性的名稱與屬性所存取的表單名稱相同。   
   
- 您可以存取所提供的表單`My.Forms`物件使用的格式，但是不限定的名稱。 屬性名稱是表單的類型名稱相同，因為這可讓您存取表單，如同它已有的預設執行個體。 例如，`My.Forms.Form1.Show` 等於 `Form1.Show`。  
+ 您可以使用表單的名稱來`My.Forms`存取物件所提供的表單, 而不需要限定。 因為屬性名稱與表單的類型名稱相同, 所以可讓您存取表單, 就像它有預設的實例一樣。 例如，`My.Forms.Form1.Show` 等於 `Form1.Show`。  
   
- `My.Forms`物件會公開僅將目前的專案相關聯的表單。 它不提供宣告之參考的 Dll 中表單的存取。 若要存取 DLL 所提供的表單，您必須使用表單時，寫成的限定的名稱*DllName*。*FormName*。  
+ `My.Forms`物件只會公開與目前專案相關聯的表單。 它不會提供參考的 Dll 中所宣告之表單的存取權。 若要存取 DLL 提供的表單, 您必須使用表單的限定名稱, 此格式寫成*DllName*。*FormName*。  
   
- 您可以使用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>屬性來取得應用程式的所有開啟表單的集合。  
+ 您可以使用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>屬性來取得應用程式所有開啟表單的集合。  
   
- 物件和其屬性是僅適用於 Windows 應用程式。  
+ 物件及其屬性僅適用于 Windows 應用程式。  
   
 ## <a name="properties"></a>屬性  
- 每一個屬性的`My.Forms`物件提供存取目前專案中撰寫表單的執行個體。 屬性的名稱與相同的屬性存取時，表單的名稱，屬性型別是表單的類型相同。  
+ `My.Forms`物件的每個屬性都可讓您存取目前專案中的表單實例。 屬性的名稱與屬性所存取的表單名稱相同, 而且屬性類型與表單的類型相同。  
   
 > [!NOTE]
->  如果名稱有衝突時，要存取表單的屬性名稱是*RootNamespace*_*命名空間*\_*FormName*。 例如，假設名為兩種形式`Form1.`其中一種形式是否在根命名空間`WindowsApplication1`和命名空間`Namespace1`，存取透過該表單`My.Forms.WindowsApplication1_Namespace1_Form1`。  
+> 如果發生名稱衝突, 存取表單的屬性名稱是*RootNamespace*_*Namespace* \_ *FormName*。 例如, 假設有兩個窗`Form1.`體名為, 如果其中一個表單是`WindowsApplication1`在根命名空間`Namespace1`中, 而在命名空間中`My.Forms.WindowsApplication1_Namespace1_Form1`, 您會透過存取該表單。  
   
- `My.Forms`物件提供在啟動時建立的應用程式的主要表單的執行個體的存取。 所有其他形式，`My.Forms`物件會建立表單的新執行個體，當它存取，並將它儲存。 後續嘗試存取該屬性會傳回該執行個體的格式。  
+ `My.Forms`物件提供在啟動時所建立之應用程式主要表單實例的存取權。 對於所有其他表單, `My.Forms`物件會在存取並儲存表單時, 建立其新的實例。 後續嘗試存取該屬性時, 會傳回該表單的實例。  
   
- 您可以藉由指派處置表單`Nothing`設為該表單的屬性。 屬性 setter 呼叫<xref:System.Windows.Forms.Form.Close%2A>方法的表單，然後指派`Nothing`的預存值。 如果您指派任何值以外`Nothing`於屬性 setter 會擲回<xref:System.ArgumentException>例外狀況。  
+ 您可以藉由指派`Nothing`給該表單的屬性來處置表單。 屬性 setter 會呼叫<xref:System.Windows.Forms.Form.Close%2A>表單的方法, 然後將指派`Nothing`給儲存的值。 如果您將以外`Nothing`的任何值指派給屬性, setter <xref:System.ArgumentException>就會擲回例外狀況。  
   
- 您可以測試的屬性是否`My.Forms`物件會儲存表單的執行個體使用`Is`或`IsNot`運算子。 您可以使用這些運算子，來檢查屬性的值是否為`Nothing`。  
+ 您可以`My.Forms` `Is`使用or`IsNot`運算子來測試物件的屬性是否儲存表單的實例。 您可以使用這些運算子來檢查屬性的值是否為`Nothing`。  
   
 > [!NOTE]
->  通常`Is`或`IsNot`操作員必須讀取要比較之屬性的值。 不過，如果屬性目前儲存`Nothing`，屬性會建立表單的新執行個體，並接著會傳回該執行個體。 不過，Visual Basic 編譯器會將屬性`My.Forms`物件以不同的方式，並可讓`Is`或`IsNot`運算子來檢查屬性的狀態，而不需要變更其值。  
+> 一般而言, `Is`或`IsNot`運算子必須讀取屬性的值, 才能執行比較。 不過, 如果屬性目前儲存`Nothing`, 則屬性會建立表單的新實例, 然後傳回該實例。 不過, Visual Basic 編譯器會以不同的方式來`My.Forms`處理物件的屬性, `Is`並`IsNot`允許或運算子檢查屬性的狀態, 而不需要變更其值。  
   
 ## <a name="example"></a>範例  
- 這個範例會變更的預設標題`SidebarMenu`表單。  
+ 這個範例會變更預設`SidebarMenu`表單的標題。  
   
  [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]  
   
- 此範例正常運作，您的專案必須表單名為`SidebarMenu`。  
+ 若要讓此範例能夠正常執行, 您的專案必須`SidebarMenu`具有名為的表單。  
   
- 此程式碼將僅適用於的 Windows 應用程式專案。  
+ 這段程式碼只適用于 Windows 應用程式專案。  
   
 ## <a name="requirements"></a>需求  
   
-### <a name="availability-by-project-type"></a>專案類型的可用性  
+### <a name="availability-by-project-type"></a>依專案類型的可用性  
   
 |專案類型|可用|  
 |---|---|  

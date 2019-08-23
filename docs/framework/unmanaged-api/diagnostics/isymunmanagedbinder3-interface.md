@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdfd8e8fc419809a3a490639ada1c533f286fe8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6f514cc070a0a38eb09a5387efc8611100765b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939993"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944101"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 介面
-擴充的符號繫結器介面。 取得這個介面，藉由呼叫`QueryInterface`實作的物件上`ISymUnmanagedBinder`介面。  
+擴充符號系結器介面。 在執行`ISymUnmanagedBinder`介面的物件`QueryInterface`上呼叫, 以取得此介面。  
   
 > [!IMPORTANT]
->  它是從受信任的來源開啟程式資料庫 (PDB) 檔的安全性風險。  
+> 從不受信任的來源開啟程式資料庫 (PDB) 檔案會有安全性風險。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetReaderFromCallback 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|可讓使用者實作，或可能是提供透過回呼`IID_IDiaReadExeAtRVACallback`或`IID_IDiaReadExeAtOffsetCallback`從記憶體中取得的偵錯資訊|  
+|[GetReaderFromCallback 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|可讓使用者透過回呼`IID_IDiaReadExeAtRVACallback`來執行或提供, 或`IID_IDiaReadExeAtOffsetCallback`從記憶體取得 Debug 目錄資訊|  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **標頭：** CorSym .idl, CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

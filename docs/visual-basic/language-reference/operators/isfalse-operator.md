@@ -7,25 +7,25 @@ helpviewer_keywords:
 - AndAlso operator [Visual Basic]
 - IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-ms.openlocfilehash: 9f25c406038486224c2c4708c86ef86889c44c15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49b8493575685a220808df1522ce16835b3ce0ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013539"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917149"
 ---
 # <a name="isfalse-operator-visual-basic"></a>IsFalse 運算子 (Visual Basic)
 判斷運算式是否為`False`。  
   
- 您不能呼叫`IsFalse`明確地在您的程式碼，但 Visual Basic 編譯器可以用它來產生程式碼從`AndAlso`子句。 如果您定義類別或結構，然後使用 在該類型的變數`AndAlso`子句中，您必須定義`IsFalse`該類別或結構上。  
+ 您無法在`IsFalse`程式碼中明確呼叫, 但是 Visual Basic 編譯器可以使用它來產生來自子句`AndAlso`的程式碼。 如果您定義了類別或結構, 然後在`AndAlso`子句中使用該類型的變數, 您必須在該類別或結構上定義。 `IsFalse`  
   
- 編譯器會考慮`IsFalse`並`IsTrue`做為運算子*比對組*。 這表示，如果您定義其中一個，您也必須定義，另一個。  
+ 編譯器會將`IsFalse`和`IsTrue`運算子視為相符的*配對*。 這表示如果您定義其中一個, 則也必須定義另一個。  
   
 > [!NOTE]
->  `IsFalse`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時其運算元的該類別或結構的類型。 如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> 運算子可以多載, 這表示當類別或結構的運算元具有該類別或結構的類型時, 可以重新定義其行為。 `IsFalse` 如果您的程式碼在這類類別或結構上使用這個運算子, 請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會定義結構，其中包含定義的外框`IsFalse`和`IsTrue`運算子。  
+ 下列程式碼範例會定義包含`IsFalse`和`IsTrue`運算子之定義的結構外框。  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   

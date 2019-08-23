@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a31a42362e934d14b9cb66724618814e2b232c06
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 2486316cf582da09eaa8998d06efb8a4e4ea3a88
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567278"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967216"
 ---
 # <a name="runtime-profiling"></a>執行階段分析
 分析是在任何開發或部署案例中蒐集效能資料的一種方法。 本節適用對象為想要蒐集應用程式效能資訊的開發人員和系統管理員。  
@@ -49,12 +49,12 @@ ms.locfileid: "69567278"
      若要區別多個執行階段版本，或釐清多個同名的應用程式，您也必須修改登錄機碼。 如需詳細資訊，請參閱 [效能計數器與同處理序並存應用程式](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md)。  
   
 > [!NOTE]
->  如果在執行 [效能] 主控台時安裝新的效能計數器，請停止並重新啟動 [效能] 主控台，以顯示新的計數器。  
+> 如果在執行 [效能] 主控台時安裝新的效能計數器，請停止並重新啟動 [效能] 主控台，以顯示新的計數器。  
   
  如果您想要分析某個區域或遠端共用中的組件，請確定該遠端組件在執行效能計數器的電腦上受到完全信任。 如果沒有充分信任該組件，則效能計數器將無法運作。 如需將信任授與不同區域的資訊，請參閱 [Caspol.exe (程式碼存取安全性原則工具)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
   
 > [!NOTE]
->  在安裝 .NET Framework 4 的系統上, 效能監視器可能不會顯示某些類別的效能計數器資料, 例如 **.NET Clr 資料**和 **.net clr 網路**, 適用于使用 .net 開發的應用程式。Framework 1.1。 如果出現這種情況，只要將 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 項目新增至應用程式組態檔，就可以設定效能監視器來顯示此資料。  
+> 在安裝 .NET Framework 4 的系統上, 效能監視器可能不會顯示某些類別的效能計數器資料, 例如 **.NET Clr 資料**和 **.net clr 網路**, 適用于使用 .net 開發的應用程式。Framework 1.1。 如果出現這種情況，只要將 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 項目新增至應用程式組態檔，就可以設定效能監視器來顯示此資料。  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>以程式設計方式讀取及建立效能計數器  
  .NET Framework 提供類別, 您可以用來以程式設計方式存取效能主控台中可用的相同效能資訊。 您也可以使用這些類別，建立自訂效能計數器。 下表描述 .NET Framework 中提供的一些效能監視類別。  

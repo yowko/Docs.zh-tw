@@ -1,5 +1,5 @@
 ---
-title: HOW TO：傳送資料至作用中的 MDI 子系
+title: 作法：傳送資料至作用中的 MDI 子系
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a7a2475891488d1fdd60f0db4a483c144a73f0d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966899"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947849"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>HOW TO：傳送資料至作用中的 MDI 子系
-內容中，通常[多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)，您必須將資料傳送至作用中的子視窗，例如當使用者將資料從剪貼簿貼到 MDI 應用程式。  
+通常, 在[多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)的內容中, 您必須將資料傳送至使用中的子視窗, 例如當使用者將資料從剪貼簿貼入 MDI 應用程式時。  
   
 > [!NOTE]
->  正在驗證哪一個子視窗有焦點，並將其內容傳送到剪貼簿的相關資訊，請參閱[判斷使用中的 MDI 子系](how-to-determine-the-active-mdi-child.md)。  
+> 如需驗證哪個子視窗具有焦點並將其內容傳送至剪貼簿的詳細資訊, 請參閱判斷作用中[的 MDI 子](how-to-determine-the-active-mdi-child.md)系。  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>若要將資料傳送至作用中的 MDI 子視窗中，從剪貼簿  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>若要從剪貼簿將資料傳送至作用中的 MDI 子視窗  
   
-1. 在方法中，將文字複製到剪貼簿上到作用中的子表單的作用中的控制項。  
+1. 在方法內, 將剪貼簿上的文字複製到現用子表單的作用中控制項。  
   
     > [!NOTE]
-    >  這個範例假設沒有 MDI 父表單 (`Form1`)，其包含的一或多個 MDI 子視窗<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱 <<c0> [ 建立 MDI 父表單](how-to-create-mdi-parent-forms.md)。  
+    > 這個範例假設有一個 mdi 父表單 (`Form1`), 其中有一個或多個<xref:System.Windows.Forms.RichTextBox>包含控制項的 mdi 子視窗。 如需詳細資訊, 請參閱[建立 MDI 父表單](how-to-create-mdi-parent-forms.md)。  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  

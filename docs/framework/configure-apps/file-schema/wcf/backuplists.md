@@ -2,15 +2,15 @@
 title: <backupLists>
 ms.date: 03/30/2017
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
-ms.openlocfilehash: 6e44dbe3c0966c6d243db343b9f9b0dec2480cb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b65cc4d04b5304e93b70509c9db3bc2248accb7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701069"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926440"
 ---
 # <a name="backuplists"></a>\<backupLists>
-代表組態區段，用於定義錯誤處理中使用的一組備份服務。 每個子項目是備份清單會列舉一組您希望路由服務在無法找到主要端點時使用的端點。 如果清單中的第一個端點關閉，路由服務將自動容錯移轉至清單中的下一個端點。  如此可提供您快速提升應用程式可靠性的方式，而不需教導用戶端應用程式如何處理複雜的模式以及部署所有服務的位置。  
+代表組態區段，用於定義錯誤處理中使用的一組備份服務。 每個子專案都是一個備份清單, 它會列舉一組您希望路由服務在無法連上主要端點時使用的端點。 如果清單中的第一個端點關閉，路由服務將自動容錯移轉至清單中的下一個端點。  如此可提供您快速提升應用程式可靠性的方式，而不需教導用戶端應用程式如何處理複雜的模式以及部署所有服務的位置。  
   
  \<system.serviceModel>  
 \<路由 >  
@@ -38,13 +38,13 @@ ms.locfileid: "61701069"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)|包含一份您希望路由服務在無法找到主要端點時使用的端點。 。|  
+|[\<filter>](filter.md)|包含您希望路由服務在無法連上主要端點時使用的端點清單。 .|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|代表定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>評估內送訊息，以及路由資料表定義目標端點時要使用將訊息傳送至篩選條件的比對。|  
+|[\<routing>](routing.md)|表示定義一組路由篩選的設定區段, 其決定在評估傳入訊息時所使用的 Windows Communication Foundation<xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) 類型, 以及將目標端點定義為的路由表。當篩選準則相符時, 將訊息傳送至。|  
   
 ## <a name="see-also"></a>另請參閱
 

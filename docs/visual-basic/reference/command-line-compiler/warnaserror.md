@@ -6,15 +6,15 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4382ec8feda2df1e83fd2fdc509abb66984e501f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796171"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937245"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
-可讓編譯器在第一個出現的警告視為錯誤。  
+使編譯器將第一次出現的警告視為錯誤。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,36 +26,36 @@ ms.locfileid: "61796171"
   
 |詞彙|定義|  
 |---|---|  
-|+ &#124; -|選擇性。 根據預設，`-warnaserror-`是作用中; 警告不會防止編譯器產生的輸出檔。 `-warnaserror`相同的選項為`-warnaserror+`，會導致警告視為錯誤。|  
-|`numberList`|選擇性。 以逗號分隔的清單，警告識別碼的數字的`-warnaserror`選項會套用。 如果未不指定任何警告識別碼，則`-warnaserror`選項會套用至所有警告。|  
+|+ &#124; -|選擇性。 根據預設, `-warnaserror-`會生效; 警告不會防止編譯器產生輸出檔。 選項 (與`-warnaserror+`相同) 會導致警告視為錯誤。 `-warnaserror`|  
+|`numberList`|選擇性。 以逗號分隔的清單, 其中列出`-warnaserror`選項所套用的警告識別碼編號。 如果未指定警告識別碼, 此`-warnaserror`選項會套用至所有警告。|  
   
 ## <a name="remarks"></a>備註  
- `-warnaserror`選項會將所有警告都視為錯誤。 任何會報告為警告而是會回報為錯誤的訊息。 編譯器會報告為警告的相同警告後面出現。  
+ 此`-warnaserror`選項會將所有警告視為錯誤。 通常會回報為警告的任何訊息會改為回報為錯誤。 編譯器會報告與警告相同的後續出現的警告。  
   
- 根據預設，`-warnaserror-`會生效，這會導致只是告知性警告。 `-warnaserror`相同的選項為`-warnaserror+`，會導致警告視為錯誤。  
+ 根據預設, `-warnaserror-`會生效, 這會導致警告僅供參考。 選項 (與`-warnaserror+`相同) 會導致警告視為錯誤。 `-warnaserror`  
   
- 如果您想只將少數特定警告視為錯誤，您可以指定以逗號分隔的警告編號清單視為錯誤。  
+ 如果您只想要將幾個特定警告視為錯誤, 您可以指定以逗號分隔的警告編號清單來視為錯誤。  
   
 > [!NOTE]
->  `-warnaserror`選項不會控制警告的顯示方式。 使用[-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)停用警告的選項。  
+> `-warnaserror`選項不會控制警告的顯示方式。 使用[-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)選項可停用警告。  
   
-|若要設定將所有警告視為錯誤，Visual Studio IDE 中-warnaserror|  
+|若要設定-warnaserror 以將所有警告視為錯誤在 Visual Studio IDE 中|  
 |---|  
-|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [編譯] 索引標籤。<br />3.請確定**停用所有警告**未核取核取方塊。<br />4.請檢查**將所有警告視為錯誤**核取方塊。|  
+|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [編譯] 索引標籤。<br />3.請確定未核取 [**停用所有警告**] 核取方塊。<br />4.勾選 [將**所有警告視為錯誤**] 核取方塊。|  
   
-|若要設定將特定警告視為錯誤，Visual Studio IDE 中-warnaserror|  
+|若要設定-warnaserror 以將特定警告視為 Visual Studio IDE 中的錯誤|  
 |---|  
-|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。<br />2.按一下 [編譯] 索引標籤。<br />3.請確定**停用所有警告**未核取核取方塊。<br />4.請確定**將所有警告視為錯誤**未核取核取方塊。<br />5.選取 **錯誤**從**通知**應該視為錯誤的警告相鄰的資料行。|  
+|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。<br />2.按一下 [編譯] 索引標籤。<br />3.請確定未核取 [**停用所有警告**] 核取方塊。<br />4.請確定未核取 [將**所有警告視為錯誤**] 核取方塊。<br />5.從應視為錯誤的警告旁的**通知**資料行中, 選取 [**錯誤**]。|  
   
 ## <a name="example"></a>範例  
- 下列程式碼編譯`In.vb`和指示編譯器將會顯示錯誤，它會尋找每個警告的第一個相符項目。  
+ 下列程式碼會`In.vb`編譯並指示編譯器在第一次出現的每個警告發現時顯示錯誤。  
   
 ```console
 vbc -warnaserror in.vb  
 ```  
   
 ## <a name="example"></a>範例  
- 下列程式碼編譯`T2.vb`和未使用的本機變數 (42024) 警告視為錯誤。  
+ 下列程式碼會`T2.vb`將未使用的區域變數 (42024) 的警告編譯並視為錯誤。  
   
 ```console
 vbc -warnaserror:42024 t2.vb  

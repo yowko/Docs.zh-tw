@@ -1,35 +1,35 @@
 ---
-title: HOW TO：使用 COM+ 服務模型組態工具
+title: 作法：使用 COM+ 服務模型組態工具
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 6f677d067ea0a93310036b13dba90e43731e8094
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9677e516ef6c91ef344e10bc8f608a397a4ed157
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606489"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966129"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>HOW TO：使用 COM+ 服務模型組態工具
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>作法：使用 COM+ 服務模型組態工具
 一旦您選取了適當的裝載模式，請使用 COM+ 服務模型組態命令列工具 (ComSvcConfig.exe) 來設定將公開為 Web 服務的應用程式介面。  
   
 > [!NOTE]
->  您必須是電腦的系統管理員，才能執行下列任何一項工作。  
+> 您必須是電腦的系統管理員，才能執行下列任何一項工作。  
   
  在 Windows 7 電腦上使用 ComSvcConfig.exe 設定 Web 服務以使用最新的服務模型版本 (目前為 4.5 版) 時，請執行下列步驟：  
   
-1. 設定登錄機碼`[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR`DWORD 值 0x00000001  
+1. 將登錄機碼`[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR`設定為0x00000001 的 DWORD 值  
   
 2. 執行 comsvcconfig.exe  
   
 3. 將步驟 1 新增的登錄機碼還原成其原始值，或將它刪除 (如果不存在的話)。  
   
 > [!IMPORTANT]
->  將這個登錄機碼還原是非常重要的步驟。 此為相容性的關鍵。 未還原這項變更可能會導致在電腦上執行的其他 .NET 應用程式發生問題)。  
+> 將這個登錄機碼還原是非常重要的步驟。 此為相容性的關鍵。 未還原這項變更可能會導致在電腦上執行的其他 .NET 應用程式發生問題)。  
   
 > [!WARNING]
->  當使用 ComSvcConfig.exe /install 在 Windows 8 電腦上的對話方塊會顯示指出 「 您的電腦上的應用程式需要下列 Windows 功能：.NET Framework 3.5 (包括.NET 2.0 和.NET 3.0 」 如果未安裝.NET Framework 3.5。 您可以忽略這個對話方塊， 也可以將 OnlyUseLatestCLR 登錄機碼設定為 DWORD 值 (0x00000001)  
+>  在 Windows 8 電腦上使用 ComSvcConfig/install 時, 會顯示一個對話方塊, 指出「電腦上的應用程式需要下列 Windows 功能: .NET Framework 3.5 (包括 .NET 2.0 和 .NET 3.0」, 如果未安裝 .NET Framework 3.5。 您可以忽略這個對話方塊， 也可以將 OnlyUseLatestCLR 登錄機碼設定為 DWORD 值 (0x00000001)  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>若要將介面新增到即將公開為 Web 服務的介面集合，請使用 COM+ 裝載模式  
   

@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb7e2ed7b076cfa20064902b3592c8f958efc0ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754508"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917042"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>ICorDebugFunction2::EnumerateNativeCode 方法
-ICorDebugCodeEnum 物件，包含這個 ICorDebugFunction2 物件所參考的函式中的原生程式碼陳述式中取得的介面指標。  
+取得 ICorDebugCodeEnum 物件的介面指標, 其中包含這個 ICorDebugFunction2 物件所參考之函式中的機器碼語句。  
   
 > [!NOTE]
->  `EnumerateNativeCode` 未在目前版本的.NET framework 中實作。  
+> `EnumerateNativeCode`不是在目前的 .NET Framework 版本中執行。  
   
 ## <a name="syntax"></a>語法  
   

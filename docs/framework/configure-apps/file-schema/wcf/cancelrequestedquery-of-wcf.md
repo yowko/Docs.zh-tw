@@ -1,25 +1,25 @@
 ---
-title: <cancelRequestedQuery> WCF 的
+title: <cancelRequestedQuery>WCF 的
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: bd6157e63761efa954744ab08ea6c66535def514
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7952520edbf799e5fab6864e50962c6ec2860928
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673345"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919652"
 ---
-# <a name="cancelrequestedquery-of-wcf"></a>\<cancelRequestedQuery > 的 WCF
+# <a name="cancelrequestedquery-of-wcf"></a>\<WCF 的 cancelRequestedQuery >
 
 代表查詢，可用來追蹤由父活動取消子活動的要求。 追蹤參與者必須要具備這個查詢，才能訂閱取消要求記錄物件。  
   
-如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。
+如需追蹤設定檔查詢的詳細資訊, 請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)。
   
 \<system.serviceModel>  
-\<tracking>  
+\<追蹤 >  
 \<設定檔 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流程 >  
 \<cancelRequestedQueries>  
 \<cancelRequestedQuery>  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61673345"
   
 ### <a name="parent-elements"></a>父元素
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |[\<cancelRequestedQueries>](cancelrequestedqueries-of-wcf.md)|代表查詢的集合，這個集合可用來追蹤由父活動取消子活動的要求。|  
   
@@ -65,5 +65,5 @@ ms.locfileid: "61673345"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [工作流程追蹤及追蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)

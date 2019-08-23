@@ -2,18 +2,18 @@
 title: <issuerMetadata> 的 <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: e46e56c6285af24941a550b2c4f7dec3b441db69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9d7d41277eff1de43f717816b35fdc10d52192e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764097"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928882"
 ---
-# <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata> of \<issuedTokenParameters>
+# <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuermetadata > 的\<issuerMetadata >
 \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
 \<issuedTokenParameters>  
 \<issuerMetadata>  
@@ -35,29 +35,29 @@ ms.locfileid: "61764097"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|位址標頭的集合。|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。|  
+|[\<headers>](headers-element.md)|位址標頭的集合。|  
+|[\<identity>](identity.md)|身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定在聯合安全性案例中核發之安全性權杖的參數。|  
+|[\<issuedTokenParameters>](issuedtokenparameters.md)|指定在聯合安全性案例中核發之安全性權杖的參數。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [同盟與發行的權杖](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [自訂繫結的安全性功能](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [同盟與發行的權杖](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [服務身分識別和驗證](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [同盟與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [自訂繫結的安全性功能](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [同盟與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [如何：使用 SecurityBindingElement 建立自訂系結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自訂繫結安全性](../../../wcf/samples/custom-binding-security.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: dd8790efa14018817c9e51e688b17c22d31d482f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da234402c6ec7e2c1f85e4bd674517b1147f0d18
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659577"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927486"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<新增 bypasslist 的 > 元素 (網路設定)
 將 IP 位址或 DNS 名稱新增至 proxy 略過清單。  
@@ -59,7 +59,7 @@ ms.locfileid: "69659577"
   
  為此元素指定正則運算式時, 請務必小心。 正則運算式 "[a-z] +\\. contoso\\.com" 符合 contoso.com 網域中的任何主機, 但也符合 contoso.com.cpandl.com 網域中的任何主機。 若只要比對 contoso.com 網域中的主機, 請使用錨點 ("$"): "[a-z] +\\. contoso\\.com $"。  
   
- 如需正則運算式的詳細資訊, 請參閱。[.NET Framework 正則運算式](../../../../../docs/standard/base-types/regular-expressions.md)。  
+ 如需正則運算式的詳細資訊, 請參閱。[.NET Framework 正則運算式](../../../../standard/base-types/regular-expressions.md)。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  

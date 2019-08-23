@@ -2,20 +2,20 @@
 title: <windowsAuthentication> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: ffddbae7effabcdafdc2638d588bbbf3e42d2c2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81793b0d58a95166bc23f98d46ce94a5f1e1d018
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769690"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940296"
 ---
-# <a name="windowsauthentication-of-servicecredentials"></a>\<windowsAuthentication> of \<serviceCredentials>
+# <a name="windowsauthentication-of-servicecredentials"></a>\<serviceCredentials > 的\<windowsAuthentication >
 指定 Windows 服務認證的設定。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<serviceCredentials>  
 \<windowsAuthentication>  
   
@@ -41,9 +41,9 @@ ms.locfileid: "61769690"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。|  
+|[\<serviceCredentials>](servicecredentials.md)|指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。|  
   
 ## <a name="remarks"></a>備註  
  使用此項目並藉由設定 `allowAnonymousLogons` 屬性，指定是否允許匿名 Windows 使用者存取。 您也可以藉由設定 `includeWindowsGroups` 屬性，指定是否要在 AuthorizationContext 中包含使用者所屬群組的資訊。 如果該屬性設為 `true` (預設值)，服務就可以判斷用戶端屬於哪個 Windows 群組。  

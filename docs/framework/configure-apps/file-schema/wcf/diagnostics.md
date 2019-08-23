@@ -2,12 +2,12 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3fc7828d399555f7c459f6dd067ce9a24b8998b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 170cae5b328c86073c1d8e7710bb19e98ab5688c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925870"
 ---
 # <a name="diagnostics"></a>\<diagnostics>
 `diagnostics` 項目會定義可由系統管理員用於執行階段檢查和控制的設定。  
@@ -47,19 +47,19 @@ ms.locfileid: "61704049"
 |屬性|描述|  
 |---------------|-----------------|  
 |etwProviderId|字串，這個字串會指定 Event-Tracing 提供者的識別項，此識別項會將事件寫入至 ETW 工作階段。|  
-|performanceCounters|指定是否啟用組件的效能計數器。 有效值為<br /><br /> 關閉：停用效能計數器。<br />-ServiceOnly:僅啟用與這個服務相關的效能計數器。<br />-所有：可在執行階段檢視效能計數器。<br />-預設值：已建立單一效能計數器執行個體 _WCF_Admin。 這個執行個體用於啟用基礎結構所使用之 SQM 資料的集合。 這個執行個體所有的計數器值都未更新，因此將維持在零。 如果沒有 WCF 的組態，則這是預設值。|  
+|performanceCounters|指定是否啟用組件的效能計數器。 有效值為<br /><br /> 停止停用效能計數器。<br />ServiceOnly僅啟用與這個服務相關的效能計數器。<br />這可在執行階段檢視效能計數器。<br />預設已建立單一效能計數器執行個體 _WCF_Admin。 這個執行個體用於啟用基礎結構所使用之 SQM 資料的集合。 這個執行個體所有的計數器值都未更新，因此將維持在零。 如果沒有 WCF 的組態，則這是預設值。|  
 |wmiProviderEnabled|布林值，指定是否為組件啟用 WMI 提供者。 使用者需要 WMI 提供者來取得 Windows Communication Foundation (WCF) 的檢查和控制功能的執行階段存取權。 預設為 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|組態檔項目，此項目可讓您啟用與停用執行服務應用程式期間不同層面的端對端追蹤。|  
-|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|描述 WCF 訊息記錄的設定。|  
+|[\<endToEndTracing>](endtoendtracing.md)|組態檔項目，此項目可讓您啟用與停用執行服務應用程式期間不同層面的端對端追蹤。|  
+|[\<messageLogging>](messagelogging.md)|描述 WCF 訊息記錄的設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |serviceModel|所有 WCF 組態項目的根項目。|  
   

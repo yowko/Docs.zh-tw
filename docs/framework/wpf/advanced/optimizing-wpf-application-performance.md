@@ -7,18 +7,18 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4724e6264c0108924629055525e46d84e86a6e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772979"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953412"
 ---
 # <a name="optimizing-wpf-application-performance"></a>最佳化 WPF 應用程式效能
-本節的目的要當做參考[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式開發人員所需的方法，來改進其應用程式的效能。 如果您是開發人員而言是 Microsoft.NET Framework 的新功能和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，您應該先熟悉這兩個平台。 本章節的同時的操作知識，並撰寫的程式設計人員已經知道如何取得其應用程式啟動並執行。  
+本節旨在做為[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式開發人員的參考, 以尋找改善其應用程式效能的方法。 如果您是 Microsoft .NET Framework 和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的新手開發人員, 您應該先熟悉這兩個平臺。 本章節假設您對兩者都有了解, 而且是針對已經知道要讓應用程式啟動並執行的程式設計人員所撰寫的。  
   
 > [!NOTE]
->  在本節中提供的效能資料會根據[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]RAM 和 ATI Radeon 9700，2.8 GHz 電腦上執行與 512 應用程式的圖形卡。  
+> 本節所提供的效能資料是以 2.8 GHz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]電腦上執行的應用程式為基礎, 其中包含 512 RAM 和一個 ATI Radeon 9700 圖形配接器。  
   
 ## <a name="in-this-section"></a>本節內容  
  [應用程式效能規劃](planning-for-application-performance.md)  
@@ -62,4 +62,4 @@ ms.locfileid: "61772979"
 - [資料繫結概觀](../data/data-binding-overview.md)
 - [瀏覽概觀](../app-development/navigation-overview.md)
 - [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
-- [逐步解說：快取中的 WPF 應用程式的應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [逐步解說：在 WPF 應用程式中快取應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)

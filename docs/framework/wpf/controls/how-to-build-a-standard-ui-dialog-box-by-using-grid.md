@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Grid 建置標準 UI 對話方塊
+title: 作法：使用 Grid 建置標準 UI 對話方塊
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68c9653e616388374aad2ad33ac7dab68446241d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051048"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923411"
 ---
-# <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>HOW TO：使用 Grid 建置標準 UI 對話方塊
-此範例示範如何建立標準[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]對話方塊中，使用<xref:System.Windows.Controls.Grid>項目。  
+# <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>作法：使用 Grid 建置標準 UI 對話方塊
+這個範例示範如何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] <xref:System.Windows.Controls.Grid>使用專案來建立標準對話方塊。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立類似的對話方塊**執行** 對話方塊中的[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]作業系統。  
+ 下列範例會建立對話方塊, 例如 Windows 作業系統中的 [**執行**] 對話方塊。  
   
- 此範例會建立<xref:System.Windows.Controls.Grid>並用<xref:System.Windows.Controls.ColumnDefinition>和<xref:System.Windows.Controls.RowDefinition>類別定義五個資料行和四個資料列。  
+ 此範例會建立<xref:System.Windows.Controls.Grid> , 並<xref:System.Windows.Controls.ColumnDefinition>使用和<xref:System.Windows.Controls.RowDefinition>類別來定義五個數據行和四個數據列。  
   
- 此範例會將加入並放置<xref:System.Windows.Controls.Image>， `RunIcon.png`，以代表對話方塊中找到的映像。 影像會放在第一個資料行和資料列的<xref:System.Windows.Controls.Grid>（左上角）。  
+ 然後, 此範例會新增並<xref:System.Windows.Controls.Image>放置`RunIcon.png`, 以代表在對話方塊中找到的影像。 影像會放在<xref:System.Windows.Controls.Grid> (左上角) 的第一個資料行和資料列中。  
   
- 接下來，此範例會新增<xref:System.Windows.Controls.TextBlock>第一個資料行，其涵蓋其餘的資料行的第一個資料列的項目。 它會新增另一個<xref:System.Windows.Controls.TextBlock>中的第一個資料行，來代表第二個資料列的項目**開啟**文字方塊。 A<xref:System.Windows.Controls.TextBlock>如下所示，代表資料輸入區。  
+ 接下來, 此範例會<xref:System.Windows.Controls.TextBlock>將專案加入至第一個資料行, 該資料行會跨越第一個資料列的其餘資料行。 它會將<xref:System.Windows.Controls.TextBlock>另一個元素新增至第一個資料行中的第二個數據列, 以代表 [**開啟**] 文字方塊。 <xref:System.Windows.Controls.TextBlock>如下所示, 表示資料輸入區域。  
   
- 最後，範例會將三個<xref:System.Windows.Controls.Button>最後一個資料列，代表項目 **[確定]**，**取消**，和**瀏覽**事件。  
+ 最後, 此範例會將<xref:System.Windows.Controls.Button>三個元素加入至最後一個資料列, 這表示 [**確定]** 、[**取消** **] 和 [流覽]** 事件。  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6663b4875fc2c3698b612a4958140ba199ea2669
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c27732de448e19c4227062706c7a7d73c98e5f19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631926"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966881"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用偵錯工具顯示屬性增強偵錯功能
 
-偵錯工具顯示屬性能讓指定並最了解該類型執行階段行為的開發人員，也指定該類型在偵錯工具中顯示的外觀。 此外，提供 `Target` 屬性的偵錯工具顯示屬性，也可供沒有原始程式碼背景的使用者在組件層級使用。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 屬性控制類型或成員在偵錯工具變數視窗中顯示的方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 屬性決定欄位或屬性是否以及如何顯示在偵錯工具變數視窗中。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 屬性會指定類型的替代類型 (或 Proxy)，並且變更在偵錯工具視窗中顯示類型的方式。 當您檢視有 proxy 或替代類型的變數時，proxy 會替代偵錯工具顯示視窗中的原始類型。 偵錯工具變數視窗只會顯示 proxy 型別的 Public 成員。 私用成員不會顯示。  
+偵錯工具顯示屬性能讓指定並最了解該類型執行階段行為的開發人員，也指定該類型在偵錯工具中顯示的外觀。 此外，提供 `Target` 屬性的偵錯工具顯示屬性，也可供沒有原始程式碼背景的使用者在組件層級使用。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 屬性控制類型或成員在偵錯工具變數視窗中顯示的方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 屬性決定欄位或屬性是否以及如何顯示在偵錯工具變數視窗中。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 屬性會指定類型的替代類型 (或 Proxy)，並且變更在偵錯工具視窗中顯示類型的方式。 當您查看具有 proxy 或替代類型的變數時, proxy 會在 [偵錯工具顯示] 視窗中代表原始類型。 偵錯工具變數視窗只會顯示 proxy 型別的 Public 成員。 私用成員不會顯示。  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>使用 DebuggerDisplayAttribute  
 
@@ -52,7 +52,7 @@ class MyHashtable
 - <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> 指出成員本身不會顯示，但如果它是陣列或集合，則會顯示其組成物件。
 
 > [!NOTE]
->  .NET Framework 2.0 版中的 Visual Basic 不支援 <xref:System.Diagnostics.DebuggerBrowsableAttribute>。
+> .NET Framework 2.0 版中的 Visual Basic 不支援 <xref:System.Diagnostics.DebuggerBrowsableAttribute>。
 
 下列程式碼範例示範，使用 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 防止它後面的屬性出現在類別的偵錯視窗中。
 
@@ -95,9 +95,9 @@ class MyHashtable : Hashtable
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>描述
+### <a name="description"></a>說明
 
-下列程式碼範例可以在 Visual Studio 以查看套用的結果中檢視<xref:System.Diagnostics.DebuggerDisplayAttribute>， <xref:System.Diagnostics.DebuggerBrowsableAttribute>，和<xref:System.Diagnostics.DebuggerTypeProxyAttribute>屬性。
+您可以在 Visual Studio 中查看下列程式碼範例<xref:System.Diagnostics.DebuggerDisplayAttribute>, 以查看套用、 <xref:System.Diagnostics.DebuggerBrowsableAttribute>和<xref:System.Diagnostics.DebuggerTypeProxyAttribute>屬性的結果。
 
 ### <a name="code"></a>程式碼
 

@@ -2,20 +2,20 @@
 title: <message> 的 <ws2007FederationHttpBinding> 項目
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: f05bd90bd2e4c7e1fd606518d9e5cb8d4e5ad974
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4340727026cb151f2efe813dfa005c1c5a1908be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767568"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931628"
 ---
-# <a name="message-element-of-ws2007federationhttpbinding"></a>\<訊息 > 項目\<ws2007FederationHttpBinding >
-定義訊息層級安全性設定[ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)項目。  
+# <a name="message-element-of-ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding > 的\<message > 元素
+定義[ \<ws2007FederationHttpBinding >](ws2007federationhttpbinding.md)元素的訊息層級安全性設定。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<ws2007FederationHttpBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
 \<message>  
   
@@ -87,7 +87,7 @@ ms.locfileid: "61767568"
 |屬性|描述|  
 |---------------|-----------------|  
 |`algorithmSuite`|選擇性。 設定訊息加密、簽章和金鑰包裝演算法。 這些演算法和金鑰大小是由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 類別所決定。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。<br /><br /> 請參閱下表列出的可能值。 預設值為 Basic256。|  
-|`issuedKeyType`|指定要發行的金鑰類型。 有效值包括以下的值：<br /><br /> -   SymmetricKey<br />-   PublicKey<br />-   BearerKey<br /><br /> 預設為 SymmetricKey。 此屬性的型別為 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
+|`issuedKeyType`|指定要發行的金鑰類型。 有效值包括以下的值：<br /><br /> -   SymmetricKey<br />-PublicKey<br />-   BearerKey<br /><br /> 預設為 SymmetricKey。 此屬性的型別為 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
 |`issuedTokenType`|URI，指定要發行的權杖型別。 預設為 `null`。|  
 |`negotiateServiceCredential`|這個值會指定服務認證是否應交換做為交涉的一部分，或可供超出範圍使用。 預設為 `true`，意指交涉服務認證。|  
   
@@ -116,16 +116,16 @@ ms.locfileid: "61767568"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定這個繫結之宣告型別的集合。 每個項目的型別為 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
-|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定發行安全性權杖的端點。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|指定簽發者的端點位址。|  
-|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|權杖要求參數的集合。 每個參數都是 XML 項目。|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|指定這個繫結之宣告型別的集合。 每個項目的型別為 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
+|[\<issuer>](issuer.md)|指定發行安全性權杖的端點。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  
+|[\<issuerMetadata>](issuermetadata.md)|指定簽發者的端點位址。|  
+|[\<tokenRequestParameters>](tokenrequestparameters.md)|權杖要求參數的集合。 每個參數都是 XML 項目。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|定義繫結的安全性設定。|  
+|[\<security>](security-element-of-ws2007federationhttpbinding.md)|定義繫結的安全性設定。|  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -133,8 +133,8 @@ ms.locfileid: "61767568"
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

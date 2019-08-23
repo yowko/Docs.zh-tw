@@ -2,20 +2,20 @@
 title: <routing> 的 <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73a610056f94efe144705968eaf97c8314c1ae0d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783054"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934190"
 ---
-# <a name="routing-of-servicebehavior"></a>\<路由 > 的\<v >
+# <a name="routing-of-servicebehavior"></a>\<serviceBehavior > 的\<路由 >
 提供於執行階段存取路由服務的功能，可用來動態修改路由組態。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<路由 >  
   
 ## <a name="syntax"></a>語法  
@@ -39,7 +39,7 @@ ms.locfileid: "61783054"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|filterTable|字串，指定路由表的名稱，該路由表包含將由路由服務評估的篩選條件。 此值必須符合`name`的屬性[ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md)中的項目[ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md)一節。|  
+|filterTable|字串，指定路由表的名稱，該路由表包含將由路由服務評估的篩選條件。 這個值必須符合`name` [filterTables > 區段中 filterTable > 元素的屬性。 \< ](filtertables.md) [ \< ](filtertable.md)|  
 |routeOnHeaderOnly|布林值，指定篩選器會檢查訊息本文和標頭，或者只檢查標頭。 預設為 `true`。|  
 |soapProcessingEnabled|布林值，指定是否應進行 SOAP 處理。|  
   
@@ -48,9 +48,9 @@ ms.locfileid: "61783054"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
  加入至服務的行為組態時，這個組態項目會啟用服務的路由。 您可以指定這個項目中的服務使用實際的路由表。  

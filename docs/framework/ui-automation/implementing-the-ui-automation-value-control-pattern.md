@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: d8b05238b55369fca3df76cf309f5cf742685b41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55290e8f14f81c50239097905e5407dbcf547c4c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603311"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968227"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>實作 UI 自動化 Value 控制項模式
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  本主題將介紹實作 <xref:System.Windows.Automation.Provider.IValueProvider>的方針和慣例，包括事件和屬性的相關資訊。 其他參考的連結列於主題的結尾。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64603311"
   
 - 如果任何項目的值是可編輯的，則例如 <xref:System.Windows.Automation.ControlType.ListItem> 和 <xref:System.Windows.Automation.ControlType.TreeItem> 等控制項必須支援 <xref:System.Windows.Automation.ValuePattern> ，而不論控制項目前的編輯模式為何。 如果子項目是可編輯的，父控制項也必須支援 <xref:System.Windows.Automation.ValuePattern> 。  
   
- ![可編輯的清單項目。](../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
+ ![可編輯的清單專案。](../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
 可編輯的清單項目範例  
   
 - 單行編輯控制項支援藉由實作 <xref:System.Windows.Automation.Provider.IValueProvider>，以程式設計方式存取其內容。 不過，多行編輯控制項不會實作 <xref:System.Windows.Automation.Provider.IValueProvider>；它們是改為藉由實作 <xref:System.Windows.Automation.Provider.ITextProvider>來提供其內容的存取。  
@@ -38,7 +38,7 @@ ms.locfileid: "64603311"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> 必須由例如來自 **F:System.Windows.Automation.ValuePattern.IsReadOnlyProperty** 的色彩選擇器 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 選擇控制項等控制項實作 (下面詳述)，它可支援色彩值 (例如「黃色」) 和對等內部 [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] 結構之間的字串對應。  
   
- ![反白顯示黃色的色彩選擇器。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ 反![白顯示黃色的色彩選擇器。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色樣字串對應範例  
   
 - 控制項的 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> 應該設為 `true` ， <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> 應該設為 `false` ，才能允許呼叫 <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>。  
@@ -49,9 +49,9 @@ ms.locfileid: "64603311"
   
 |必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|屬性|None|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|屬性|None|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|None|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|屬性|無|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|屬性|無|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|無|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>例外狀況  
@@ -59,9 +59,9 @@ ms.locfileid: "64603311"
   
 |例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -如果地區設定特有的資訊會傳遞至例如格式不正確的日期格式不正確的控制項。|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -如果新的值不能從字串轉換成格式可辨識的控制項。|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -當會嘗試將管理未啟用的控制項。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -如果地區設定特有的資訊以不正確的格式傳遞至控制項, 例如格式不正確的日期。|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -如果新的值無法從字串轉換成控制項可辨識的格式。|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -嘗試操作未啟用的控制項時。|  
   
 ## <a name="see-also"></a>另請參閱
 

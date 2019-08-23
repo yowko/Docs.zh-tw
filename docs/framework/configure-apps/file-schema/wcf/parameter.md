@@ -2,22 +2,22 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3f2179835ad1232e115cad0decdd3d41bbdc160
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783431"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932839"
 ---
 # <a name="parameter"></a>\<parameter>
 指定當宣告型別為泛型型別時的泛型參數。  
   
  \<system.runtime.serialization>  
 \<dataContractSerializer>  
-\<a d d > 項目  
-\<新增 > 項目\<a d d >  
-\<knownType > 項目  
-\<參數 > 項目  
+\<declaredTypes > 元素  
+\<新增 declaredTypes > 的\<> 元素  
+\<knownType > 元素  
+\<參數 > 元素  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ ms.locfileid: "61783431"
 |屬性|描述|  
 |---------------|-----------------|  
 |索引|當宣告型別為泛型型別時，會指定將傳回已知型別的泛型參數。|  
-|類型|字串，說明用來序列化和還原序列化的已知型別。|  
+|型別|字串，說明用來序列化和還原序列化的已知型別。|  
   
 ## <a name="index-attribute"></a>index 屬性  
   
@@ -50,18 +50,18 @@ ms.locfileid: "61783431"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<knownType>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|指定可由宣告型別的欄位或屬性傳回的已知型別。|  
+|[\<knownType>](knowntype.md)|指定可由宣告型別的欄位或屬性傳回的已知型別。|  
   
 ## <a name="remarks"></a>備註  
- 如需已知型別的詳細資訊，請參閱[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
+ 如需已知類型的詳細資訊, 請參閱[資料合約已知類型](../../../wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
- 請參閱[ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)如需使用這個項目的範例。  
+ 如需使用此元素的範例, 請參閱[ dataContractSerializer>。\< ](datacontractserializer-element.md)  
   
  此組態項目不可以同時具有這兩個屬性。 如果同時設定了這兩個屬性，就會發生 <xref:System.Configuration.ConfigurationErrorsException>。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [資料合約已知類型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [資料合約已知類型](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](datacontractserializer-element.md)
+- [\<add>](add-of-declaredtypes-element.md)

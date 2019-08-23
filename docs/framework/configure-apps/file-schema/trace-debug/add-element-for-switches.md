@@ -7,19 +7,19 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcd5cbe63a323a7509f5ff8c615364295c244d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673806"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920553"
 ---
-# <a name="add-element-for-switches"></a>\<新增 > 項目\<參數 >
+# <a name="add-element-for-switches"></a>\<為\<參數新增 > 元素 >
 指定設定追蹤參數的層級。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<switches>  
+\<切換 >  
 \<add>  
   
 ## <a name="syntax"></a>語法  
@@ -34,10 +34,10 @@ ms.locfileid: "61673806"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|**name**|必要屬性。<br /><br /> 指定參數的名稱。 此屬性的值會對應到*displayName*傳遞至參數的建構函式的參數。|  
-|**value**|必要屬性。<br /><br /> 指定的交換器層級。|  
+|**name**|必要屬性。<br /><br /> 指定參數的名稱。 這個屬性的值會對應至傳遞給 switch 函數的*displayName*參數。|  
+|**value**|必要屬性。<br /><br /> 指定參數的層級。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -51,7 +51,7 @@ ms.locfileid: "61673806"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 您可以將它放在組態檔中，以變更追蹤參數的層級。 如果參數為<xref:System.Diagnostics.BooleanSwitch>，可以先開啟和關閉。 如果參數為<xref:System.Diagnostics.TraceSwitch>，您可以將不同層級指派，以便指定類型的追蹤或偵錯訊息的應用程式輸出。  
+ 您可以變更追蹤參數的層級, 方法是將它放在設定檔中。 如果參數是<xref:System.Diagnostics.BooleanSwitch>, 您可以開啟和關閉它。 如果參數是<xref:System.Diagnostics.TraceSwitch>, 您可以為其指派不同的層級, 以指定應用程式輸出的追蹤或 debug 訊息的類型。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用 **\<新增>** 要設定項目`General`追蹤參數設<xref:System.Diagnostics.TraceLevel>層級，並且啟用`Data`布林追蹤參數。  
@@ -72,4 +72,4 @@ ms.locfileid: "61673806"
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [追蹤和偵錯設定結構描述](index.md)

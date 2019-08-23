@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將浮水印新增至 TextBox
+title: 作法：將浮水印新增至 TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe276c686d394ded13ec03f08deae65e4098d03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911611"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923568"
 ---
-# <a name="how-to-add-a-watermark-to-a-textbox"></a>HOW TO：將浮水印新增至 TextBox
-下列範例示範如何協助的可用性<xref:System.Windows.Controls.TextBox>藉由顯示說明的背景映像內<xref:System.Windows.Controls.TextBox>直到使用者輸入文字，此時映像會移除。 此外，背景影像是一次時還原使用者移除他們的意見。 請參閱下圖。  
+# <a name="how-to-add-a-watermark-to-a-textbox"></a>作法：將浮水印新增至 TextBox
+下列範例示範如何藉<xref:System.Windows.Controls.TextBox>由在中<xref:System.Windows.Controls.TextBox>顯示說明的背景影像, 在使用者輸入文字之前, 移除影像, 以協助的可用性。 此外, 如果使用者移除其輸入, 則會再次還原背景影像。 請參閱下圖。  
   
- ![具有背景影像的 TextBox](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
+ ![含有背景影像的 TextBox](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
   
 > [!NOTE]
->  而是，則只需要管理此範例中使用的背景影像的原因<xref:System.Windows.Controls.TextBox.Text%2A>屬性<xref:System.Windows.Controls.TextBox>，是背景映像不會干擾資料繫結。  
+> 在此範例中使用背景影像<xref:System.Windows.Controls.TextBox.Text%2A> <xref:System.Windows.Controls.TextBox>, 而只是操作的屬性, 是背景影像不會干擾資料系結。  
   
 ## <a name="example"></a>範例  
  [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664255"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963170"
 ---
-# <a name="retrieve-data-using-a-datareader"></a>使用 DataReader 擷取資料
-若要擷取的資料使用**DataReader**，建立的執行個體**命令**物件，然後再建立**DataReader**藉由呼叫**Command.ExecuteReader**從資料來源擷取資料列。 **DataReader**提供未緩衝處理資料流的資料，可讓程序邏輯有效地循序處理來自資料來源的結果。 **DataReader**是不錯的選擇，因為資料不會快取記憶體，在擷取大量資料時。
+# <a name="retrieve-data-using-a-datareader"></a>使用 DataReader 取出資料
+若要使用**DataReader**來抓取資料, 請建立**command**物件的實例, 然後呼叫**ExecuteReader**來建立**DataReader** , 以從資料來源中取出資料列。 **DataReader**提供了未緩衝的資料流程, 可讓程式邏輯依序有效率地處理來自資料來源的結果。 當您正在抓取大量資料時, **DataReader**是不錯的選擇, 因為資料不會快取到記憶體中。
 
-下列範例說明如何利用**DataReader**，其中`reader`代表有效的 DataReader 和`command`代表有效的命令物件。  
+下列範例說明如何使用**DataReader**, 其中`reader`代表有效的 datareader, 並`command`代表有效的命令物件。  
 
 ```csharp
 reader = command.ExecuteReader();  
@@ -25,39 +25,39 @@ reader = command.ExecuteReader();
 reader = command.ExecuteReader()
 ```  
 
-使用**DataReader.Read**方法，以從查詢結果取得資料列。 您可以藉由傳遞的名稱或序數編號的資料行傳回的資料列的每個資料行**DataReader**。 不過，為了達到最佳效能， **DataReader**提供一系列的方法，可讓您存取其原生資料類型的資料行值 (**GetDateTime**， **GetDouble**， **GetGuid**， **GetInt32**等等)。 如需資料提供者特有的具型別存取子方法的清單**Datareader**，請參閱<xref:System.Data.OleDb.OleDbDataReader>和<xref:System.Data.SqlClient.SqlDataReader>。 使用具型別存取子方法，當您知道的基本資料型別可減少擷取資料行的值時所需的型別轉換的量。  
+使用**DataReader. Read**方法, 從查詢結果取得資料列。 您可以將資料行的名稱或序數傳遞至**DataReader**, 以存取傳回之資料列的每個資料行。 不過, 為了達到最佳效能, **DataReader**提供一系列的方法, 可讓您存取其原生資料類型 (**GetDateTime**、 **GetDouble**、 **GetGuid**、 **GetInt32**等) 中的資料行值。 如需資料提供者特定**datareader**之具類型存取子方法的清單<xref:System.Data.OleDb.OleDbDataReader> , <xref:System.Data.SqlClient.SqlDataReader>請參閱和。 當您知道基礎資料類型時, 使用具類型的存取子方法, 可減少在抓取資料行值時所需的類型轉換數量。  
   
- 下列範例會逐一**DataReader**物件，並傳回每個資料列的兩個資料行。  
+ 下列範例會逐一查看**DataReader**物件, 並傳回每個資料列中的兩個數據行。  
   
  [!code-csharp[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/VB/source.vb#1)]  
   
 ## <a name="closing-the-datareader"></a>關閉 DataReader  
- 請務必呼叫**關閉**方法，當您完成使用**DataReader**物件。  
+ 當您完成使用**DataReader**物件時, 請一律呼叫**Close**方法。  
   
- 如果您**命令**包含輸出參數或傳回值，這些值沒有直到**DataReader**已關閉。  
+ 如果您的**命令**包含輸出參數或傳回值, 則在**DataReader**關閉之前, 這些值都無法使用。  
   
- 雖然**DataReader**開啟，請**連線**處於只能供該**DataReader**。 您無法執行任何命令**連接**，包括建立其他**DataReader**，直到原始**DataReader**已關閉。  
+ 當**datareader**開啟時, 該**datareader**會以獨佔方式使用**連接**。 您無法執行**連接**的任何命令, 包括建立另一個**datareader**, 直到原始**DataReader**關閉為止。  
   
 > [!NOTE]
->  不要呼叫**關閉**或**Dispose**上**連接**，則**DataReader**，或在任何其他 managed 的物件**Finalize**您類別的方法。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果您的類別未擁有任何 unmanaged 的資源，並包含**Finalize**類別定義中的方法。 如需詳細資訊，請參閱 <<c0> [ 回收](../../../../docs/standard/garbage-collection/index.md)。  
+> 請勿在**連接**、 **DataReader**或您類別的**Finalize**方法中的任何其他 Managed 物件上呼叫**Close**或**Dispose** 。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果您的類別未擁有任何非受控資源, 請勿在您的類別定義中包含**Finalize**方法。 如需詳細資訊, 請參閱[垃圾收集](../../../standard/garbage-collection/index.md)。  
   
-## <a name="retrieving-multiple-result-sets-using-nextresult"></a>使用 nextresult 來擷取多個結果設定  
- 如果**DataReader**會傳回多個結果集，呼叫**NextResult**來逐一查看結果的方法會以循序方式設定。 下列範例顯示 <xref:System.Data.SqlClient.SqlDataReader> 使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 方法，處理兩個 SELECT 陳述式的結果。  
+## <a name="retrieving-multiple-result-sets-using-nextresult"></a>使用 NextResult 抓取多個結果集  
+ 如果**DataReader**傳回多個結果集, 請呼叫**NextResult**方法, 依序逐一查看結果集。 下列範例顯示 <xref:System.Data.SqlClient.SqlDataReader> 使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 方法，處理兩個 SELECT 陳述式的結果。  
   
  [!code-csharp[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
-## <a name="getting-schema-information-from-the-datareader"></a>從 DataReader 取得結構描述資訊  
- 雖然**DataReader**已開啟，您可以擷取目前結果集使用的結構描述資訊**GetSchemaTable**方法。 **GetSchemaTable**傳回<xref:System.Data.DataTable>填入資料列和資料行包含目前的結果集的結構描述資訊的物件。 **DataTable**包含一個資料列結果集的每個資料行。 結構描述資料表的每個資料行對應到屬性中傳回的資料行結果的資料列集，其中**ColumnName**是屬性的名稱和資料行的值是屬性的值。 下列範例會寫出的結構描述資訊**DataReader**。  
+## <a name="getting-schema-information-from-the-datareader"></a>從 DataReader 取得架構資訊  
+ 當**DataReader**開啟時, 您可以使用**GetSchemaTable**方法來抓取目前結果集的架構資訊。 **GetSchemaTable**會傳回<xref:System.Data.DataTable>一個物件, 其中填入包含目前結果集之架構資訊的資料列和資料行。 **DataTable**會針對結果集的每個資料行, 各包含一個資料列。 架構資料表的每個資料行都會對應到結果集資料列中所傳回之資料行的屬性, 其中**ColumnName**是屬性的名稱, 而資料行的值是屬性的值。 下列範例會寫出**DataReader**的架構資訊。  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
   
 ## <a name="working-with-ole-db-chapters"></a>使用 OLE DB 章節  
- 階層式資料列集或章節 (OLE DB 型別**DBTYPE_HCHAPTER**、 ADO 型別**adChapter**)，您可以使用擷取<xref:System.Data.OleDb.OleDbDataReader>。 當其中一章包含的查詢會以傳回**DataReader**，章節會傳回做為資料行中的**DataReader** ，並公開為**DataReader**物件。  
+ 您可以使用<xref:System.Data.OleDb.OleDbDataReader>來抓取階層式資料列集, 或章節 (OLE DB 類型**DBTYPE_HCHAPTER**、ADO 類型**adChapter**)。 當包含章節的查詢當做**datareader**傳回時, 該章節會當做 datareader 中的資料行傳回, 並公開為**datareader**物件。  
   
- ADO.NET**資料集**也可用來代表階層式資料列集使用資料表之間的父子式關聯性。 如需詳細資訊，請參閱 < [Dataset、 Datatable 和 Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)。  
+ ADO.NET**資料集**也可以使用資料表之間的父子式關聯性, 來表示階層資料列集。 如需詳細資訊, 請參閱[dataset、datatable 和 dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)。  
   
  下列程式碼範例使用 MSDataShape 提供者，替客戶清單中每位客戶的訂單產生章節資料行。  
   
@@ -133,14 +133,14 @@ using (OleDbConnection connection = new OleDbConnection(
 }
 ```  
   
-## <a name="returning-results-with-oracle-ref-cursors"></a>傳回使用 Oracle REF Cursor 的結果  
+## <a name="returning-results-with-oracle-ref-cursors"></a>使用 Oracle REF 資料指標傳回結果  
  Oracle 的 .NET Framework 資料提供者支援使用 Oracle REF CURSOR 傳回查詢結果。 Oracle REF CURSOR 以 <xref:System.Data.OracleClient.OracleDataReader> 傳回。  
   
- 您可以擷取<xref:System.Data.OracleClient.OracleDataReader>物件，表示所使用的 Oracle REF CURSOR<xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>方法。 您也可以指定<xref:System.Data.OracleClient.OracleCommand>會傳回做為一或多個 Oracle REF Cursor **SelectCommand**如<xref:System.Data.OracleClient.OracleDataAdapter>用來填滿<xref:System.Data.DataSet>。  
+ 您可以<xref:System.Data.OracleClient.OracleDataReader> <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>使用方法來抓取代表 Oracle REF 資料指標的物件。 您也可以指定<xref:System.Data.OracleClient.OracleCommand> , 它會傳回一個或多個 Oracle REF 資料指標做為<xref:System.Data.OracleClient.OracleDataAdapter>用來填滿<xref:System.Data.DataSet>之的**SelectCommand** 。  
   
- 若要存取從 Oracle 資料來源傳回的 REF CURSOR，請建立<xref:System.Data.OracleClient.OracleCommand>為您的查詢，並新增參考至 REF CURSOR 輸出參數<xref:System.Data.OracleClient.OracleCommand.Parameters>的集合您<xref:System.Data.OracleClient.OracleCommand>。 參數的名稱必須符合查詢中 REF CURSOR 參數的名稱。 設定以參數的型別<xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType>。 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType>方法您<xref:System.Data.OracleClient.OracleCommand>傳回<xref:System.Data.OracleClient.OracleDataReader>REF cursor。  
+ 若要存取從 Oracle 資料來源傳回的 REF CURSOR, 請<xref:System.Data.OracleClient.OracleCommand>為您的查詢建立, 並將參考參考游標的輸出參數加入至的<xref:System.Data.OracleClient.OracleCommand.Parameters>集合<xref:System.Data.OracleClient.OracleCommand>。 參數的名稱必須符合查詢中 REF CURSOR 參數的名稱。 將參數的類型設定為<xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType>。 的<xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType>方法<xref:System.Data.OracleClient.OracleCommand> 會針對REF<xref:System.Data.OracleClient.OracleDataReader>資料指標傳回。  
   
- 如果您<xref:System.Data.OracleClient.OracleCommand>傳回多個 REF CURSOR，新增多個輸出參數。 您可以藉由呼叫不同的 REF Cursor<xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType>方法。 若要在呼叫<xref:System.Data.OracleClient.OracleCommand.ExecuteReader>傳回<xref:System.Data.OracleClient.OracleDataReader>參考第一個 REF CURSOR。 您可以接著呼叫<xref:System.Data.OracleClient.OracleDataReader.NextResult?displayProperty=nameWithType>方法來存取後續的 REF Cursor。 雖然的參數，在您<xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType>集合與 REF CURSOR 輸出參數名稱，<xref:System.Data.OracleClient.OracleDataReader>存取它們的順序已新增至<xref:System.Data.OracleClient.OracleCommand.Parameters>集合。  
+ 如果您<xref:System.Data.OracleClient.OracleCommand>傳回多個 REF 資料指標, 請加入多個輸出參數。 您可以藉由呼叫<xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType>方法來存取不同的 REF 資料指標。 對的呼叫<xref:System.Data.OracleClient.OracleCommand.ExecuteReader> <xref:System.Data.OracleClient.OracleDataReader>會傳回參考第一個 REF 資料指標的。 接著, 您可以呼叫<xref:System.Data.OracleClient.OracleDataReader.NextResult?displayProperty=nameWithType>方法來存取後續的 REF 資料指標。 雖然<xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType>集合中的參數符合 REF CURSOR 輸出參數的名稱<xref:System.Data.OracleClient.OracleDataReader> , 但<xref:System.Data.OracleClient.OracleCommand.Parameters>會依其加入集合的順序來存取它們。  
   
  例如，請考慮下列的 Oracle Package 和 Package 內容。  
   
@@ -162,7 +162,7 @@ CREATE OR REPLACE PACKAGE BODY CURSPKG AS
 END CURSPKG;   
 ```  
   
- 下列程式碼會建立<xref:System.Data.OracleClient.OracleCommand>，從上一個 Oracle package 傳回 REF Cursor 加上兩個參數類型<xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType>到<xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType>集合。  
+ 下列程式碼<xref:System.Data.OracleClient.OracleCommand>會建立, 它會將類型<xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType>的兩個參數加入至<xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType>集合, 以傳回先前 Oracle 封裝的 REF 資料指標。  
   
 ```vb  
 Dim cursCmd As OracleCommand = New OracleCommand("CURSPKG.OPEN_TWO_CURSORS", oraConn)  
@@ -176,7 +176,7 @@ cursCmd.Parameters.Add("EMPCURSOR", OracleType.Cursor).Direction = ParameterDire
 cursCmd.Parameters.Add("DEPTCURSOR", OracleType.Cursor).Direction = ParameterDirection.Output;  
 ```  
   
- 下列程式碼會傳回前一個命令使用的結果<xref:System.Data.OracleClient.OracleDataReader.Read>並<xref:System.Data.OracleClient.OracleDataReader.NextResult>方法<xref:System.Data.OracleClient.OracleDataReader>。 REF CURSOR 參數會依順序傳回。  
+ 下列程式碼會使用<xref:System.Data.OracleClient.OracleDataReader.Read>的和<xref:System.Data.OracleClient.OracleDataReader.NextResult>方法<xref:System.Data.OracleClient.OracleDataReader>, 傳回上一個命令的結果。 REF CURSOR 參數會依順序傳回。  
   
 ```vb  
 oraConn.Open()  
@@ -232,7 +232,7 @@ reader.Close();
 oraConn.Close();  
 ```  
   
- 下列範例會使用前一個命令來填入<xref:System.Data.DataSet>Oracle package 的結果。  
+ 下列範例會使用先前的命令, 將 Oracle <xref:System.Data.DataSet>封裝的結果填入。  
   
 ```vb  
 Dim ds As DataSet = New DataSet()  
@@ -255,7 +255,7 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
->  若要避免**OverflowException**，我們建議您也會處理任何從 Oracle NUMBER 型別轉換為有效的.NET Framework 型別儲存中的值之前<xref:System.Data.DataRow>。 您可以使用<xref:System.Data.Common.DataAdapter.FillError>事件判斷是否**OverflowException**發生。 如需詳細資訊<xref:System.Data.Common.DataAdapter.FillError>事件，請參閱 <<c2> [ 處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
+> 若要避免**OverflowException**, 建議您同時處理從 Oracle NUMBER 類型到有效 .NET Framework 類型的任何轉換, 然後再將值儲存在中<xref:System.Data.DataRow>。 您可以使用<xref:System.Data.Common.DataAdapter.FillError>事件來判斷是否已發生**OverflowException** 。 如需<xref:System.Data.Common.DataAdapter.FillError>事件的詳細資訊, 請參閱[處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

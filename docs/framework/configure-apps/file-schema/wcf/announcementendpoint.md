@@ -2,15 +2,15 @@
 title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 4f3cf2748acc75b0ec83732664c5f97114f3663a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa4cd8f4d7dcfa438ede71c394f1d0b0ac6faa50
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701251"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926556"
 ---
 # <a name="announcementendpoint"></a>\<announcementEndpoint>
-這個組態項目會定義具有固定公告合約的標準端點。 服務可以選擇性地公告其可用性，方法是分別在開啟與關閉該服務時傳送線上及離線公告訊息。 Windows Communication Foundation (WCF) 服務指定公告端點，在[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)項目，並且使用 AnnouncementClient 來執行公告。 想要從其他服務公告所接聽的用戶端實際上做為 WCF 服務;因此您必須在該用戶端設定公告端點[ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)一節。  
+這個組態項目會定義具有固定公告合約的標準端點。 服務可以選擇性地公告其可用性，方法是分別在開啟與關閉該服務時傳送線上及離線公告訊息。 Windows Communication Foundation (WCF) 服務會在[ \<serviceDiscovery >](servicediscovery.md)元素中指定公告端點, 並使用 AnnouncementClient 來執行公告。 想要接聽來自其他服務之公告的用戶端實際上是作為 WCF 服務;因此, 您必須在 [ [ \<服務 >](services.md) ] 區段中設定該用戶端的宣告端點。  
   
 \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -38,7 +38,7 @@ ms.locfileid: "61701251"
 |---------------|-----------------|  
 |discoveryVersion|字串，此字串會指定兩個 WS-Discovery 通訊協定版本的其中之一。 有效的值為 WSDiscovery11 和 WSDiscoveryApril2005。 這個值的型別為 <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>。|  
 |maxAnnouncementDelay|Timespan 值，這個值指定 Discovery 通訊協定傳送 Hello 訊息之前會等候的延遲值上限。 系統會等候一段隨機時間值 (介於 0 和此屬性的值之間)，之後才傳送訊息。 這個屬性用於設定一小段隨機的延遲，避免網路關閉而所有服務同時再次上線時網路負荷過大。|  
-|名稱|字串，這個字串會指定標準端點之組態的名稱。 這個名稱用於服務端點的 `endpointConfiguration` 屬性中，可將標準端點連結至其組態。|  
+|NAME|字串，這個字串會指定標準端點之組態的名稱。 這個名稱用於服務端點的 `endpointConfiguration` 屬性中，可將標準端點連結至其組態。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -47,7 +47,7 @@ ms.locfileid: "61701251"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
+|[\<standardEndpoints>](standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
   
 ## <a name="example"></a>範例  
  下列範例示範透過 http 及 peernet 接聽公告訊息的用戶端。  

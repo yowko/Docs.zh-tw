@@ -2,22 +2,22 @@
 title: <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
-ms.openlocfilehash: b627105dc4aae49557b0a6684569719622e13f08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7facf3eb54637445d1ae20297effc92605c81a61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783327"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933995"
 ---
 # <a name="peerauthentication"></a>\<peerAuthentication>
 指定等節點使用之對等憑證的驗證設定。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<serviceCredentials>  
-\<peer>  
+\<對等 >  
 \<peerAuthentication>  
   
 ## <a name="syntax"></a>語法  
@@ -37,9 +37,9 @@ ms.locfileid: "61783327"
 |屬性|描述|  
 |---------------|-----------------|  
 |`certificateValidationMode`|選擇性列舉。 指定用來驗證認證之三個模式的其中一個。 此屬性的型別為 <xref:System.ServiceModel.Security.X509CertificateValidationMode>。 如果設定為 `Custom`，也必須提供 `customCertificateValidator`。|  
-|`customCertificateValidatorType`|選擇性字串。 指定用來驗證自訂型別的型別和組件。 當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。 此屬性的型別為 <xref:System.IdentityModel.Selectors.X509CertificateValidator>。 Windows Communication Foundation (WCF) 提供預設的對等驗證對受信任的人存放區的對等憑證的憑證驗證程式。 它也會驗證憑證鏈結直到有效根憑證。 您可以實作自訂的驗證程式以指定不同的行為，並使用這個屬性指向自訂的驗證程式。|  
+|`customCertificateValidatorType`|選擇性字串。 指定用來驗證自訂型別的型別和組件。 當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。 此屬性的型別為 <xref:System.IdentityModel.Selectors.X509CertificateValidator>。 Windows Communication Foundation (WCF) 提供預設的對等憑證驗證程式, 可對受信任的人存放區驗證對等憑證。 它也會驗證憑證鏈結直到有效根憑證。 您可以實作自訂的驗證程式以指定不同的行為，並使用這個屬性指向自訂的驗證程式。|  
 |`revocationMode`|選擇性列舉。 指定憑證撤銷模式。 此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>。 系統會在撤銷憑證清單中查詢，以確認對等憑證尚未被撤銷。 這項檢查可以藉由線上檢查或是針對快取的撤銷清單來執行。 將此屬性設定為 NoCheck 可以關閉撤銷檢查。|  
-|`trustedStoreLocation`|選擇性列舉。 指定 WCF 安全性系統，驗證對等憑證的受信任存放區位置。 此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。|  
+|`trustedStoreLocation`|選擇性列舉。 指定 WCF 安全性系統驗證對等憑證的受信任存放區位置。 此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -48,7 +48,7 @@ ms.locfileid: "61783327"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|指定對等節點的目前認證。|  
+|[\<peer>](peer-of-servicecredentials.md)|指定對等節點的目前認證。|  
   
 ## <a name="remarks"></a>備註  
  `<authentication>` 項目對應至 <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> 類別。 這個項目會指定驗證程式，當網狀結構中進行鄰居對鄰居驗證時，就會叫用此驗證程式。 當新對等嘗試建立鄰居連線時，它會將自己的認證傳遞至對應的對等。 會叫用回應程式的驗證器來驗證遠端方的認證。 每次在網狀結構中建立對等連線時，對等的兩方會互相驗證，亦即會叫用兩端的驗證程式。  
@@ -60,8 +60,8 @@ ms.locfileid: "61783327"
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
-- [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [使用憑證](../../../wcf/feature-details/working-with-certificates.md)
+- [對等網路](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [對等通道訊息驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [對等通道自訂驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [保護對等通道應用程式的安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [保護對等通道應用程式的安全](../../../wcf/feature-details/securing-peer-channel-applications.md)

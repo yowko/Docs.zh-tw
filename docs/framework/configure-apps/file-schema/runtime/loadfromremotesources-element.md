@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8e8663bf9d119007eb7d3771d16d55b1aa54856
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2268d07fb643621c944ef9bf561156b5332aaafc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663598"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920711"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 元素
 指定是否應將 .NET Framework 4 和更新版本中的完全信任授與從遠端來源載入的元件。
   
 > [!NOTE]
->  如果您因為 Visual Studio 專案錯誤清單中的錯誤訊息或組建錯誤而被導向本文, 請參閱[如何:在 Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))中使用來自 Web 的元件。  
+> 如果您因為 Visual Studio 專案錯誤清單中的錯誤訊息或組建錯誤而被導向本文, 請參閱[如何:在 Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))中使用來自 Web 的元件。  
   
  \<configuration>  
 \<執行時間 >  

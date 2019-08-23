@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 12b506e859579a0755c2e9842e792c59968c94a8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 1de1ff4147ddb8cb3316795aefd38622de205a73
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666745"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950056"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>逐步解說：使用 Visual C 撰寫複合控制項\#
 
@@ -187,7 +187,7 @@ ms.locfileid: "69666745"
 5. 在 [方案總管] 中，瀏覽目前的專案。
 
     > [!NOTE]
-    >  名為 **ctlAlarmClock.cs** 的檔案已新增至目前的專案。
+    > 名為 **ctlAlarmClock.cs** 的檔案已新增至目前的專案。
 
 ### <a name="adding-the-alarm-properties"></a>新增警示屬性
 

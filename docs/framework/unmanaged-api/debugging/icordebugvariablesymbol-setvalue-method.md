@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5c1c77b92d94062206cf9eb38981f38ff2a1cad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5436f56d3dcad7de3df2296485b0a36e5b3cfd79
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775462"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967971"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue Method
 指派位元組陣列的值給變數。  
@@ -49,7 +49,7 @@ HRESULT SetValue(
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個方法僅適用於 .NET Native。  
+> 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

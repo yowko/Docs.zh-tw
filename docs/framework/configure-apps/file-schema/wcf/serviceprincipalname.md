@@ -2,19 +2,19 @@
 title: <servicePrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: 75e95bcbaee229f19bdfdd119b548ed612f4ddaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28ae27481ea9cb86c31b5be1f12b5491f8ca143e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758180"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936159"
 ---
 # <a name="serviceprincipalname"></a>\<servicePrincipalName>
 由其服務原則名稱 (SPN) 指定的服務身分識別。  
   
- 如需有關如何設定 SPN 的詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 如需設定 SPN 的詳細資訊, 請參閱[服務身分識別和驗證](../../../wcf/feature-details/service-identity-and-authentication.md)。  
   
- \<identity>  
+ \<身分識別 >  
 \<servicePrincipalName>  
   
 ## <a name="syntax"></a>語法  
@@ -37,12 +37,12 @@ ms.locfileid: "61758180"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由用戶端驗證之服務的身分識別。|  
+|[\<identity>](identity.md)|指定要由用戶端驗證之服務的身分識別。|  
   
 ## <a name="remarks"></a>備註  
- 安全的 Windows Communication Foundation (WCF) 用戶端連接至使用這個身分識別端點對端點進行 SSPI 驗證時，會使用 SPN。  
+ 使用此身分識別連接到端點的安全 Windows Communication Foundation (WCF) 用戶端會在對端點執行 SSPI 驗證時使用 SPN。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -50,5 +50,5 @@ ms.locfileid: "61758180"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.SpnEndpointIdentity>
-- [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [服務身分識別和驗證](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

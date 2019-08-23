@@ -8,26 +8,26 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-ms.openlocfilehash: f2a97ab80cde00a47bbdf6830bdba325e1c9f3ef
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3cfd3f306d4a18ce8a194b5197060fbca1d157d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880965"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965291"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider 元件概觀 (Windows Form)
-Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md)元件用來驗證使用者輸入，在表單或控制項上的。 通常用於搭配驗證在表單上的使用者輸入或顯示在資料集內的錯誤。 錯誤提供者會是較好的選擇，比在訊息方塊中，顯示一則錯誤訊息，因為一旦關閉訊息方塊，出現錯誤訊息不再顯示。 <xref:System.Windows.Forms.ErrorProvider>元件會顯示錯誤圖示 (![紅色圓形。 白色驚嘆號](./media/errorprovider-component-overview-windows-forms/vb-error-provider-icon.gif)) 旁邊相關的控制項，例如文字方塊; 當使用者將滑鼠指標置於錯誤圖示時，工具提示隨即出現，顯示錯誤訊息字串。  
+Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md)元件是用來驗證表單或控制項上的使用者輸入。 它通常會與驗證表單上的使用者輸入, 或在資料集內顯示錯誤一起使用。 錯誤提供者是比在訊息方塊中顯示錯誤訊息更好的替代方式, 因為一旦關閉訊息方塊, 就不會再看到錯誤訊息。 元件會在相關控制項 (例如![文字方塊) 旁邊顯示錯誤圖示 (紅色圓](./media/errorprovider-component-overview-windows-forms/vb-error-provider-icon.gif))。當使用者將滑鼠指標放在錯誤圖示上方時, 就會出現工具提示。 <xref:System.Windows.Forms.ErrorProvider>顯示錯誤訊息字串。  
   
 ## <a name="key-properties"></a>索引鍵內容  
- <xref:System.Windows.Forms.ErrorProvider>元件的索引鍵屬性是<xref:System.Windows.Forms.ErrorProvider.DataSource%2A>， <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>，和<xref:System.Windows.Forms.ErrorProvider.Icon%2A>。 使用時<xref:System.Windows.Forms.ErrorProvider>元件與資料繫結控制項<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>屬性必須設定為適當的容器 （通常為 Windows 表單），以在表單上顯示錯誤圖示之元件的順序。 在設計師中，加入元件時<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>屬性設定為包含表單; 如果您在程式碼中加入控制項，您必須自行設定。  
+ 元件的索引鍵屬性為<xref:System.Windows.Forms.ErrorProvider.DataSource%2A>、 <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>和<xref:System.Windows.Forms.ErrorProvider.Icon%2A>。 <xref:System.Windows.Forms.ErrorProvider> 搭配使用<xref:System.Windows.Forms.ErrorProvider>元件與資料繫結控制項時<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> , 必須將屬性設定為適當的容器 (通常是 Windows Form), 元件才會在表單上顯示錯誤圖示。 當元件新增至設計工具時, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>屬性會設定為包含表單; 如果您在程式碼中加入控制項, 則必須自行設定。  
   
- <xref:System.Windows.Forms.ErrorProvider.Icon%2A>屬性可以設定為自訂的錯誤圖示，而不是預設值。 當<xref:System.Windows.Forms.ErrorProvider.DataSource%2A>屬性設定，<xref:System.Windows.Forms.ErrorProvider>元件可以顯示資料集的錯誤訊息。 主要方法<xref:System.Windows.Forms.ErrorProvider>元件是<xref:System.Windows.Forms.ErrorProvider.SetError%2A>方法，以指定的錯誤訊息字串和錯誤圖示應該出現的位置。  
+ <xref:System.Windows.Forms.ErrorProvider.Icon%2A>屬性可以設定為自訂錯誤圖示, 而不是預設值。 當設定<xref:System.Windows.Forms.ErrorProvider>屬性時, 元件可以顯示資料集的錯誤訊息。 <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> <xref:System.Windows.Forms.ErrorProvider>元件的主要方法<xref:System.Windows.Forms.ErrorProvider.SetError%2A>是方法, 它會指定錯誤訊息字串, 以及應該出現錯誤圖示的位置。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ErrorProvider>元件不提供協助工具用戶端的內建支援。 若要讓您的應用程式存取，使用此元件時中,，您必須提供額外的、 可存取的意見反應機制。  
+> 此<xref:System.Windows.Forms.ErrorProvider>元件不會提供協助工具用戶端的內建支援。 若要讓您的應用程式在使用此元件時可供存取, 您必須提供其他可存取的意見反應機制。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ErrorProvider>
-- [如何：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [如何：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [如何：使用 Windows Forms ErrorProvider 元件來查看資料集內的錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [如何：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示](display-error-icons-for-form-validation-with-wf-errorprovider.md)

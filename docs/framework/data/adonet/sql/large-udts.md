@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 2114efcc4d39cb4d2ea9ca33d7ff244c81a7097f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650582"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909874"
 ---
 # <a name="large-udts"></a>大型 UDT
 使用者定義型別 (UDT) 可透過在 SQL Server 資料庫中儲存 Common Language Runtime (CLR) 物件，讓開發人員擴充伺服器的純量型別 (Scalar Type) 系統。 UDT 可以包含多個項目而且可以具有行為，這點與單一 SQL Server 系統資料型別所組成的傳統別名資料型別不同。  
   
 > [!NOTE]
->  您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能運用大型 UDT 的強化 SqlClient 支援。  
+> 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能運用大型 UDT 的強化 SqlClient 支援。  
   
  之前 UDT 有 8 KB 的大小上限。 在 SQL Server 2008 中，使用 <xref:Microsoft.SqlServer.Server.Format.UserDefined> 格式的 UDT 已不再具有這項限制。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64650582"
 1. [CLR 使用者定義類型](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>使用 GetSchema 來擷取 UDT 結構描述  
- <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:System.Data.SqlClient.SqlConnection> 方法會在 <xref:System.Data.DataTable> 中傳回資料庫結構描述資訊。 如需詳細資訊，請參閱 < [SQL Server 結構描述集合](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)。  
+ <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:System.Data.SqlClient.SqlConnection> 方法會在 <xref:System.Data.DataTable> 中傳回資料庫結構描述資訊。 如需詳細資訊, 請參閱[SQL Server 架構集合](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)。  
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT 的 GetSchemaTable 資料行值  
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 <xref:System.Data.SqlClient.SqlDataReader> 方法會傳回描述資料行中繼資料的 <xref:System.Data.DataTable>。 下表將針對 SQL Server 2005 與 SQL Server 2008 之間的大型 UDT 描述資料行中繼資料的差異。  
@@ -41,7 +41,7 @@ ms.locfileid: "64650582"
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT 執行個體|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|三部分名稱指定為*Database.SchemaName.TypeName*。|  
+|`DataTypeName`|`SqlDbType.VarBinary`|三部分名稱指定為*SchemaName*。|  
 |`IsLong`|視情況而定|視情況而定|  
   
 ## <a name="sqldatareader-considerations"></a>SqlDataReader 考量  

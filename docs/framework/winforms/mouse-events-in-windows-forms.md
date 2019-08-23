@@ -15,16 +15,16 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 818364ceddb03df51ed656c8ff7b69fd433ac86a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750887"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949917"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Form 中的滑鼠事件
 
-當您處理滑鼠輸入時，您通常會要知道滑鼠指標的位置，以及滑鼠按鈕的狀態。 本主題提供如何從滑鼠事件取得此資訊的詳細說明，並說明在 Windows Form 控制項中引發滑鼠點按事件的順序。 如需清單和所有滑鼠事件的描述，請參閱 <<c0> [ 滑鼠輸入的運作方式在 Windows Form 中](how-mouse-input-works-in-windows-forms.md)。  另請參閱[事件處理常式概觀 (Windows Form)](event-handlers-overview-windows-forms.md)並[事件概觀 (Windows Form)](events-overview-windows-forms.md)。
+當您處理滑鼠輸入時，您通常會要知道滑鼠指標的位置，以及滑鼠按鈕的狀態。 本主題提供如何從滑鼠事件取得此資訊的詳細說明，並說明在 Windows Form 控制項中引發滑鼠點按事件的順序。 如需所有滑鼠事件的清單和描述, 請參閱[Windows Forms 中的滑鼠輸入運作方式](how-mouse-input-works-in-windows-forms.md)。  另請參閱[事件處理常式總覽 (Windows Forms)](event-handlers-overview-windows-forms.md)和[事件總覽 (Windows Forms)](events-overview-windows-forms.md)。
 
 ## <a name="mouse-information"></a>滑鼠資訊
 
@@ -66,7 +66,7 @@ ms.locfileid: "64750887"
 
 8. <xref:System.Windows.Forms.Control.MouseUp> 事件。
 
-程式碼範例，示範滑鼠的順序 click 事件，請參閱[How to:處理使用者輸入事件在 Windows Form 控制項](how-to-handle-user-input-events-in-windows-forms-controls.md)。
+如需示範滑鼠點擊事件順序的程式碼範例, 請參閱[如何:處理 Windows Forms 控制項](how-to-handle-user-input-events-in-windows-forms-controls.md)中的使用者輸入事件。
 
 ### <a name="individual-controls"></a>個別控制項
 
@@ -79,11 +79,11 @@ ms.locfileid: "64750887"
 
   - 按一下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 以滑鼠右鍵按一下：任何引發的 click 事件
+  - 按一下滑鼠右鍵:未引發 click 事件
 
   - 按兩下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>；<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 按兩下滑鼠右鍵：任何引發的 click 事件
+  - 以滑鼠右鍵按一下:未引發 click 事件
 
 - <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox> 和 <xref:System.Windows.Forms.CheckedListBox> 控制項
 
@@ -92,11 +92,11 @@ ms.locfileid: "64750887"
 
   - 按一下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 以滑鼠右鍵按一下：任何引發的 click 事件
+  - 按一下滑鼠右鍵:未引發 click 事件
 
   - 按兩下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - 按兩下滑鼠右鍵：任何引發的 click 事件
+  - 以滑鼠右鍵按一下:未引發 click 事件
 
 - <xref:System.Windows.Forms.ListView> 控制項
 
@@ -145,7 +145,7 @@ ms.locfileid: "64750887"
 8. 便會引發 <xref:System.Windows.Forms.Control.MouseUp> 事件。
 
     > [!NOTE]
-    >  如果使用者在按下滑鼠按鈕的同時，將指標移出切換控制項 (例如在按下滑鼠按鈕的同時，將滑鼠從 <xref:System.Windows.Forms.Button> 控制項移開)，切換控制項將會以所引發的狀態繪製，而且只會發生 <xref:System.Windows.Forms.Control.MouseUp> 事件。 在此情況下，不會發生 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件。
+    > 如果使用者在按下滑鼠按鈕的同時，將指標移出切換控制項 (例如在按下滑鼠按鈕的同時，將滑鼠從 <xref:System.Windows.Forms.Button> 控制項移開)，切換控制項將會以所引發的狀態繪製，而且只會發生 <xref:System.Windows.Forms.Control.MouseUp> 事件。 在此情況下，不會發生 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件。
 
 ## <a name="see-also"></a>另請參閱
 

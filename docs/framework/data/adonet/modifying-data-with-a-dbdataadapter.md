@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec4f0527b73a506b3c98675f77f8f49a1eeb1e1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772173"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934460"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>使用 DbDataAdapter 修改資料
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> 物件的 <xref:System.Data.Common.DbProviderFactory> 方法可提供 <xref:System.Data.Common.DbDataAdapter> 物件，而它是建立 Factory 時指定之基礎資料提供者的強型別 (Strongly Typed) 物件。 然後，您可以使用 <xref:System.Data.Common.DbCommandBuilder> 來建立命令，以便針對資料來源插入、更新和刪除 <xref:System.Data.DataSet> 的資料。  
@@ -40,7 +40,7 @@ ms.locfileid: "61772173"
  此 Factory 模型對於建立參數化 `DbCommand` 和 `DbDataAdapter` 物件沒有幫助。 您必須建立程式碼的分支，以便建立針對資料提供者量身訂做的參數。  
   
 > [!IMPORTANT]
->  基於安全性考量，我們不建議您使用字串串連來建構直接 SQL 陳述式，藉以完全避免提供者專用的參數。 使用字串串連來取代參數會讓應用程式容易遭受 SQL 插入式攻擊。  
+> 基於安全性考量，我們不建議您使用字串串連來建構直接 SQL 陳述式，藉以完全避免提供者專用的參數。 使用字串串連來取代參數會讓應用程式容易遭受 SQL 插入式攻擊。  
   
 ## <a name="see-also"></a>另請參閱
 

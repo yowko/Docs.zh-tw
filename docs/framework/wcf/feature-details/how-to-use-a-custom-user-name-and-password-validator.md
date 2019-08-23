@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 593e3e97ad7e5ae65447d8618caacf22f762f9b4
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 57bd650caef831f3ee886c0422e13cc4149d3416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960068"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968813"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>作法：使用自訂使用者名稱與密碼驗證程式
-根據預設，使用者名稱和密碼是用來進行驗證，Windows Communication Foundation (WCF) 會使用 Windows 驗證的使用者名稱和密碼。 不過，WCF 可讓自訂使用者名稱和密碼驗證配置，也稱為*驗證*。 若要納入自訂的使用者名稱和密碼驗證程式，請建立衍生自 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 的類別，然後予以設定。  
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>HOW TO：使用自訂使用者名稱與密碼驗證程式
+根據預設, 當使用使用者名稱和密碼進行驗證時, Windows Communication Foundation (WCF) 會使用 Windows 來驗證使用者名稱和密碼。 不過, WCF 允許自訂的使用者名稱和密碼驗證配置, 也稱為*驗證*程式。 若要納入自訂的使用者名稱和密碼驗證程式，請建立衍生自 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 的類別，然後予以設定。  
   
- 範例應用程式，請參閱[使用者名稱密碼驗證程式](../../../../docs/framework/wcf/samples/user-name-password-validator.md)。  
+ 如需範例應用程式, 請參閱[使用者名稱密碼驗證](../../../../docs/framework/wcf/samples/user-name-password-validator.md)程式。  
   
 ### <a name="to-create-a-custom-user-name-and-password-validator"></a>建立自訂的使用者名稱和密碼驗證程式  
   
@@ -39,32 +39,32 @@ ms.locfileid: "65960068"
   
 1. 設定繫結，此繫結會在 HTTP(S) 上的任何傳輸或傳輸層級安全性使用訊息安全性。  
   
-     使用訊息安全性時，將其中一個系統提供的繫結，例如[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)，或有[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)支援訊息安全性，`UserName`認證類型。  
+     使用訊息安全性時, 請新增其中一個系統提供的系結, 例如[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), 或是`UserName` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)支援訊息安全性和認證類型的 customBinding >。  
   
-     使用傳輸層級安全性時透過 HTTP (S)，新增[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)或是[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)，則[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)或是[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)使用 HTTP (S) 和`Basic`驗證配置。  
+     在 HTTP (S) 上使用傳輸層級安全性時, 請新增[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)或[ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) [ \<basicHttpBinding >、netTcpBinding > 或 customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)使用 HTTP (S) 和`Basic`驗證配置的。  
   
     > [!NOTE]
-    >  使用 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (含) 以後版本時，您可以將自訂使用者名稱和密碼驗證器搭配訊息安全性和傳輸安全性使用。 使用 WinFX，自訂的使用者名稱和密碼驗證程式僅能搭配訊息安全性。  
+    > 使用 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (含) 以後版本時，您可以將自訂使用者名稱和密碼驗證器搭配訊息安全性和傳輸安全性使用。 有了 WinFX, 自訂使用者名稱和密碼驗證程式只能搭配訊息安全性使用。  
   
     > [!TIP]
-    >  如需有關使用\<netTcpBinding > 在此情況下，請參閱[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
+    >  如需在此內容\<中使用 netTcpBinding > 的詳細資訊, 請參閱[ \<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
   
-    1. 在組態檔底下[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)項目，新增[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目。  
+    1. 在設定檔案的[ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素底下, 新增系結 > 元素。  
   
-    2. 新增[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)或是[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)項目加入繫結區段。 如需建立 WCF 繫結元素的詳細資訊，請參閱[How to:在組態中指定的服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+    2. 將[wsHttpBinding > 或 basicHttpBinding > 元素新增至 [系結] 區段。 \< ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 如需建立 WCF 繫結項目的詳細資訊, 請[參閱如何:在設定中](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)指定服務系結。  
   
-    3. 設定`mode`的屬性[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)或是[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)至`Message`， `Transport`，或`TransportWithMessageCredential`。  
+    3. `Message` `Transport`[將安全性\<>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)或`mode` `TransportWithMessageCredential`[安全性>的屬性設定為、或。\< ](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  
   
-    4. 設定`clientCredentialType`的屬性[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)或是[\<傳輸 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)。  
+    4. 設定訊息 > 或`clientCredentialType` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)傳輸 > 的屬性。 [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)  
   
-         使用訊息安全性時，設定`clientCredentialType`的屬性[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)到`UserName`。  
+         當使用訊息安全性時, 請`clientCredentialType`將[ \<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)的屬性設定`UserName`為。  
   
-         使用傳輸層級安全性時透過 HTTP (S)，設定`clientCredentialType`的屬性[\<傳輸 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)或是[\<傳輸 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)至`Basic`。  
+         在 HTTP (S) 上使用傳輸層級安全性時, 請`clientCredentialType`將[ \<傳輸 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)或[ \<傳輸 >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)的屬性設定`Basic`為。  
   
         > [!NOTE]
-        >  當 WCF 服務裝載在網際網路資訊服務 (IIS) 使用傳輸層級安全性和<xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A>屬性設定為<xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>，自訂驗證配置會使用 Windows 驗證的子集。 這是因為在此案例中，IIS 會執行 Windows 驗證，才能叫用自訂驗證器的 WCF。  
+        >  當 WCF 服務裝載于使用傳輸層級安全性的<xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> Internet Information Services (IIS) 中, 而且屬性設定為<xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>時, 自訂驗證配置會使用 Windows 驗證的子集。 這是因為在此案例中, IIS 會在 WCF 叫用自訂驗證器之前執行 Windows 驗證。  
   
-     如需建立 WCF 繫結元素的詳細資訊，請參閱[How to:在組態中指定的服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+     如需建立 WCF 繫結項目的詳細資訊, 請[參閱如何:在設定中](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)指定服務系結。  
   
      下列程式碼範例顯示繫結的組態程式碼。  
   
@@ -84,20 +84,20 @@ ms.locfileid: "65960068"
   
 2. 設定行為，指定自訂使用者名稱和密碼驗證程式用來驗證傳入之 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 安全性權杖的使用者名稱和密碼組。  
   
-    1. 做為子項[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)項目，新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目。  
+    1. 做為[ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)專案的子系, 請在[ \<元素 > 加入行為](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)。  
   
-    2. 新增[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)要[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目。  
+    2. 將 serviceBehaviors > 新增至[行為>元素\< ](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 。 [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)  
   
-    3. 新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)項目並將`name`屬性設為適當的值。  
+    3. 新增[行為 > 元素, 並將屬性設定為適當的值。 \< ](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) `name`  
   
-    4. 新增[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)要[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)項目。  
+    4. 將 serviceCredentials > 新增至[行為>元素\< ](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 。 [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)  
   
-    5. 新增[ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)要[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。  
+    5. 將 userNameAuthentication > 新增至[ serviceCredentials>\< ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。 [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)  
   
     6. 將 `userNamePasswordValidationMode` 設定為 `Custom`。  
   
         > [!IMPORTANT]
-        >  如果`userNamePasswordValidationMode`未設定值，WCF 會使用 Windows 驗證，而不是自訂的使用者名稱和密碼驗證程式。  
+        >  如果未`userNamePasswordValidationMode`設定此值, WCF 會使用 Windows 驗證, 而不是自訂使用者名稱和密碼驗證程式。  
   
     7. 將 `customUserNamePasswordValidatorType` 設為代表自訂使用者名稱和密碼驗證程式的類型。  
   

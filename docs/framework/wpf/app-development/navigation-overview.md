@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 574449f95ee9632d37f277d61806802457494df0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817996"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964594"
 ---
 # <a name="navigation-overview"></a>巡覽概觀
 
@@ -106,7 +106,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 若要讓標記檔案和程式碼後置檔案一起工作，需要設定下列項目：
 
-- 在標記中, `Page`元素必須`x:Class`包含屬性。 建立應用程式`x:Class`時, 標記檔案中的存在會導致[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]建立`partial`衍生自<xref:System.Windows.Controls.Page>的類別, 而且具有`x:Class`屬性所指定的名稱。 這需要新增[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架構的命名空間宣告 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 產生`partial` 的`InitializeComponent`類別會執行, 它會呼叫來註冊事件, 並設定在標記中實作為的屬性。
+- 在標記中, `Page`元素必須`x:Class`包含屬性。 建立應用程式時`x:Class` , 標記檔案中的存在會導致 Microsoft build engine (MSBuild) `partial`建立衍生自<xref:System.Windows.Controls.Page>的類別, 並`x:Class`具有屬性所指定的名稱。 這需要新增[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架構的命名空間宣告 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 產生`partial` 的`InitializeComponent`類別會執行, 它會呼叫來註冊事件, 並設定在標記中實作為的屬性。
 
 - 在程式碼後置中, 類別必須是`partial`具有與標記中的`x:Class`屬性所指定相同名稱的類別, 而且必須衍生自<xref:System.Windows.Controls.Page>。 這可讓程式碼後置檔案與`partial`建立應用程式時為標記檔案產生的類別相關聯 (請參閱[建立 WPF 應用程式](building-a-wpf-application-wpf.md))。
 
@@ -123,7 +123,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 需要瀏覽器中裝載一定數量的應用程式基礎結構。 在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中<xref:System.Windows.Application> , 類別是應用程式定義的一部分, 可建立必要的應用程式基礎結構 (請參閱[應用程式管理總覽](application-management-overview.md))。
 
-應用程式定義通常會使用標記和程式碼後置來執行, 並將標記檔案設定為[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition`專案。 以下是的應用程式定義[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]。
+應用程式定義通常會使用標記和程式碼後置來實作為, 並將標記檔案設定為`ApplicationDefinition` MSBuild 專案。 以下是的應用程式定義[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]。
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
@@ -527,7 +527,7 @@ Windows Presentation Foundation (WPF) 支援瀏覽器樣式的導覽, 可用於�
 
 「名稱」`=`「值」`; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
-具有到期日的 cookie 會儲存在目前[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]安裝的 [Internet Files] 資料夾中, 直到 cookie 到期為止。 這類 cookie 稱為*持續性 cookie* , 因為它會在應用程式會話之間持續保存。
+具有到期日的 cookie 會儲存在目前 Windows 安裝的 [Internet Files] 資料夾中, 直到 cookie 到期為止。 這類 cookie 稱為*持續性 cookie* , 因為它會在應用程式會話之間持續保存。
 
 您可以藉由呼叫<xref:System.Windows.Application.GetCookie%2A>方法來取得會話和持續性的 cookie, <xref:System.Uri>傳遞使用<xref:System.Windows.Application.SetCookie%2A>方法設定 cookie 的位置。
 

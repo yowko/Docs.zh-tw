@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 519ff6f40ea303b64864683db222b55c6e5a23aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817994"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964807"
 ---
 # <a name="application-development"></a>應用程式開發
 <a name="introduction"></a>Windows Presentation Foundation (WPF) 是一種呈現架構, 可用來開發下列類型的應用程式:  
   
-- 獨立應用程式 (建置為可執行組件的傳統式 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 應用程式，這些應用程式會安裝到用戶端電腦並從中執行)。  
+- 獨立應用程式 (傳統樣式的 Windows 應用程式, 建作為可執行元件, 並從用戶端電腦執行)。  
   
 - [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](應用程式是由建立為可執行元件並由網頁瀏覽器 (例如 Microsoft Internet Explorer 或 Mozilla Firefox) 所裝載的流覽頁面所組成。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "68817994"
 - 類別庫 (非可執行組件，其中包含可重複使用的類別)。  
   
 > [!NOTE]
->  強烈建議不要在 Windows 服務中使用 WPF 類型。 如果您嘗試在 Windows 服務中使用這些功能，它們可能無法如預期般運作。  
+> 強烈建議不要在 Windows 服務中使用 WPF 類型。 如果您嘗試在 Windows 服務中使用這些功能，它們可能無法如預期般運作。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會實作多項服務，以建置這組應用程式。 本主題提供這些服務的概觀，並說明何處可以找到更多資訊。  
 
@@ -119,7 +119,7 @@ ms.locfileid: "68817994"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[應用程式管理概觀](application-management-overview.md)|提供 <xref:System.Windows.Application> 類別的概觀，包括管理應用程式存留期、視窗、應用程式資源和瀏覽。|  
 |[WPF 中的視窗](windows-in-wpf-applications.md)|提供在應用程式中管理視窗的詳細資料，包括如何使用 <xref:System.Windows.Window> 類別和對話方塊。|  

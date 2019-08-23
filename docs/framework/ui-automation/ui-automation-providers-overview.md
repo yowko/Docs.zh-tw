@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 1ffb8101ba0182c8ff11667f59d9bc10c5ffe670
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629566"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914383"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自動化提供者概觀
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
  使用者介面自動化提供者可以讓控制項與使用者介面自動化用戶端應用程式進行通訊。 一般而言， [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中的每個控制項或其他不同項目都是由提供者表示。 提供者會公開項目的相關資訊並選擇性地實作控制項模式，讓用戶端應用程式與控制項互動。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68629566"
   
  應用程式中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同架構組成。 例如, HWND 應用程式視窗可能包含動態 HTML (DHTML), 而後者又包含一個元件, 例如 HWND 中的下拉式方塊。  
   
-### <a name="fragments"></a>片段  
+### <a name="fragments"></a>Fragments  
  片段是來自特定架構之項目的完整子樹狀結構。 子樹狀結構之根目錄節點的項目稱為片段根目錄。 片段根目錄沒有父代，但會裝載於某些其他架構內，通常是 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 視窗 (HWND)。  
   
 ### <a name="hosts"></a>主機  

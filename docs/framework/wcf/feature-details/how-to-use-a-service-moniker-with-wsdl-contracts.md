@@ -2,12 +2,12 @@
 title: HOW TO：使用服務 Moniker 搭配 WSDL 合約
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 2968641538bf0b4d0e136d5784bf69e5e7fcb3a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80b0d034b92123862d0500106f81d4a566cac467
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972883"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968786"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>HOW TO：使用服務 Moniker 搭配 WSDL 合約
 在某些情況中，您可能會想要有完全獨立的 COM Interop 用戶端。 您要呼叫的服務可能不會公開 MEX 端點，而且系統可能也不會註冊 COM Interop 的 WCF 用戶端 DLL。 在這些情況中，您可以建立 WSDL 檔案，使其描述服務並傳遞至 WCF 服務 Moniker 中。 本主題說明如何使用 WCF WSDL Moniker 來呼叫使用者入門 WCF 範例。  
@@ -50,7 +50,7 @@ ms.locfileid: "61972883"
     ```  
   
     > [!NOTE]
-    >  如果 Moniker 格式錯誤或服務無法使用，則呼叫 `GetObject` 時將會傳回「無效的語法」錯誤。  如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
+    > 如果 Moniker 格式錯誤或服務無法使用，則呼叫 `GetObject` 時將會傳回「無效的語法」錯誤。  如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
   
 7. 執行 Visual Basic 應用程式。 訊息方塊會和呼叫 Subtract(145, 76.54) 的結果一起顯示。  
   

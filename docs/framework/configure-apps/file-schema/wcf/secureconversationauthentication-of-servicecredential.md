@@ -2,20 +2,20 @@
 title: <secureConversationAuthentication> 的 <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: f35392b91d047c46e65ce433ef544b86cf6c88c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61034c2c66a6d8e27a87ec5380aa7297247eb31e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670608"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935826"
 ---
-# <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication> of \<serviceCredential>
+# <a name="secureconversationauthentication-of-servicecredential"></a>\<n > 的\<secureConversationAuthentication >
 指定安全對話服務的設定。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<serviceCredentials>  
 \<secureConversationAuthentication>  
   
@@ -41,7 +41,7 @@ ms.locfileid: "61670608"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。|  
+|[\<serviceCredentials>](servicecredentials.md)|指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。|  
   
 ## <a name="remarks"></a>備註  
  使用此組態項目指定安全性內容權杖 (SCT) Cookie 序列化的已知宣告型別清單，以及指定可編碼與確保 Cookie 資訊安全的編碼器。 如需 SCT 的詳細資訊，請參閱<xref:System.ServiceModel.Security.SecureConversationServiceCredential>。  

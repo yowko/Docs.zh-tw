@@ -2,22 +2,22 @@
 title: 大量複製範例設定
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 6244afff348edbde46fdfda7481910aca2b25939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a7c0ddef42ff56306a42288c6960987ce7f714a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878653"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918083"
 ---
 # <a name="bulk-copy-example-setup"></a>大量複製範例設定
-<xref:System.Data.SqlClient.SqlBulkCopy> 類別可用於僅將資料寫入 SQL Server 資料表。 本主題所示的程式碼範例使用 SQL Server 範例資料庫**AdventureWorks**。 為了避免變更現有資料表的程式碼範例，請將資料寫入您必須先建立的資料表中。  
+<xref:System.Data.SqlClient.SqlBulkCopy> 類別可用於僅將資料寫入 SQL Server 資料表。 本主題所顯示的程式碼範例會使用 SQL Server 範例資料庫**AdventureWorks**。 為了避免變更現有資料表的程式碼範例，請將資料寫入您必須先建立的資料表中。  
   
- **BulkCopyDemoMatchingColumns**並**BulkCopyDemoDifferentColumns**資料表都採用**AdventureWorks** **Production.Products**資料表。 在使用這些資料表的程式碼範例中，資料會加入從**Production.Products**資料表加入其中一個範例資料表。 **BulkCopyDemoDifferentColumns**資料表可在此範例會說明如何將對應至目的地資料表中; 從來源資料的資料行**BulkCopyDemoMatchingColumns**用於大部分其他範例。  
+ **BulkCopyDemoMatchingColumns**和**BulkCopyDemoDifferentColumns**資料表都是以**AdventureWorks** **生產產品**資料表為基礎。 在使用這些資料表的程式碼範例中, 會將資料從**Products**資料表加入至這些範例資料表的其中一個。 當範例示範如何將資料行從來源資料對應至目的地資料表時, 會使用**BulkCopyDemoDifferentColumns**資料表。**BulkCopyDemoMatchingColumns**用於大部分的其他範例。  
   
- 幾個程式碼範例會示範如何使用一個 <xref:System.Data.SqlClient.SqlBulkCopy> 類別來寫入多個資料表。 如需這些範例中， **BulkCopyDemoOrderHeader**並**BulkCopyDemoOrderDetail**資料表做為目的地資料表。 這些資料表為基礎**Sales.SalesOrderHeader**並**Sales.SalesOrderDetail**中的資料表**AdventureWorks**。  
+ 幾個程式碼範例會示範如何使用一個 <xref:System.Data.SqlClient.SqlBulkCopy> 類別來寫入多個資料表。 在這些範例中, 會使用**BulkCopyDemoOrderHeader**和**BulkCopyDemoOrderDetail**資料表做為目的地資料表。 這些資料表是以**AdventureWorks**中的**SalesOrderHeader**和**SalesOrderDetail**資料表為基礎。  
   
 > [!NOTE]
->  **SqlBulkCopy**程式碼範例示範使用下列語法提供**SqlBulkCopy**只。 如果來源及目的地資料表位於相同的 SQL Server 執行個體中，則使用 Transact-SQL `INSERT … SELECT` 陳述式來複製資料會更方便且快速。  
+> 提供的**SqlBulkCopy**程式碼範例僅示範使用**SqlBulkCopy**的語法。 如果來源及目的地資料表位於相同的 SQL Server 執行個體中，則使用 Transact-SQL `INSERT … SELECT` 陳述式來複製資料會更方便且快速。  
   
 ## <a name="table-setup"></a>資料表設定  
  若要建立讓程式碼範例正確執行所需的資料表，您必須在 SQL Server 資料庫中執行下列 Transact-SQL 陳述式。  

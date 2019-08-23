@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: bcd0a11aef2372cc6e5830892eb3b71fa841ba2f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 8b33ac800144577ba5f8610afdc50a1ba56eec0f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545260"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937699"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹在為全球市場撰寫[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式時, 您應該注意的問題。 全球化程式設計項目定義于[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]中`System.Globalization`的。
@@ -152,7 +152,7 @@ ms.locfileid: "69545260"
  從資源的觀點來看, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]設計用來描述與語言相關[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的檔案是資源元素, 因此其最終散發格式必須可當地語系化以支援國際語言。 因為[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]無法處理事件, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]所以許多應用程式都包含執行這項操作所需的程式碼區塊。 如需詳細資訊, 請參閱[XAML 總覽 (WPF)](xaml-overview-wpf.md)。 當檔案標記為 XAML 的 BAML 形式時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , 程式碼會被移除並編譯成不同的二進位檔。 BAML 格式的 XAML 檔案、映像和其他類型的 Managed 資源物件會內嵌到附屬資源組件中，以當地語系化為其他語言，或在不需要當地語系化時內嵌到主要組件中。
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式支援所有[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的 CLR 資源, 包括字串資料表、影像等等。
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式支援所有[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的 CLR 資源, 包括字串資料表、影像等等。
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>組建可當地語系化的應用程式

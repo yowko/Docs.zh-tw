@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1b088d138948ed7e9ae5514fb62e37c324427dd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ceb1d22500f73a29ffdfa6f16907478628358c3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782196"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969397"
 ---
 # <a name="icorprofilerinfo3enumjitedfunctions-method"></a>ICorProfilerInfo3::EnumJITedFunctions 方法
-傳回所有已先前 JIT 編譯的函式的列舉值。  
+傳回先前已進行 JIT 編譯之所有函式的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +35,18 @@ HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);
   
 ## <a name="parameters"></a>參數  
  `ppEnum`  
- [out]指標[ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)列舉值。  
+ 脫銷[ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)列舉值的指標。  
   
 ## <a name="remarks"></a>備註  
- 這個方法可能與重疊`JITCompilation`這類的回呼[icorprofilercallback:: Jitcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)方法。 這個方法所傳回的列舉值不包含以 Ngen.exe 產生的原生映像從載入的函式。  
+ 這個方法可能會與`JITCompilation`回呼 (例如[ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)方法) 重迭。 這個方法所傳回的列舉值不包含從 Ngen.exe 產生的原生映射載入的函式。  
   
 > [!NOTE]
->  傳回的列舉會包含只有"0"值的`COR_PRF_FUNCTION::reJitId`欄位。  如果您需要有效`COR_PRF_FUNCTION::reJitId`值，會使用[ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md)方法。  
+> 傳回的列舉只包含 "0" 代表`COR_PRF_FUNCTION::reJitId`欄位的值。  如果您需要有效`COR_PRF_FUNCTION::reJitId`的值, 請使用[ICorProfilerInfo4:: EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** Corprof.idl .idl, Corprof.idl。h  
   
  **LIBRARY:** CorGuids.lib  
   

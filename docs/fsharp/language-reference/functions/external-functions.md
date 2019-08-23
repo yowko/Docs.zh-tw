@@ -1,17 +1,17 @@
 ---
 title: 外部函式
-description: 深入了解F#在原生程式碼中呼叫函式的語言支援。
+description: 瞭解在機器碼F#中呼叫函數的語言支援。
 ms.date: 05/16/2016
-ms.openlocfilehash: 73e38d8942bfc8ddb3c51d126d7678e84903326b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3c8edaba25e07b6ca2c44a58c4b55dc98a13b4fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968724"
 ---
 # <a name="external-functions"></a>外部函式
 
-本主題描述F#在原生程式碼中呼叫函式的語言支援。
+本主題描述F#在機器碼中呼叫函數的語言支援。
 
 ## <a name="syntax"></a>語法
 
@@ -22,9 +22,9 @@ extern declaration
 
 ## <a name="remarks"></a>備註
 
-在先前的語法*引數*代表引數提供給`System.Runtime.InteropServices.DllImportAttribute`屬性。 第一個引數是字串，表示包含此函式，但不包括.dll 副檔名 DLL 的名稱。 其他引數可以提供任何的公用屬性`System.Runtime.InteropServices.DllImportAttribute`類別，例如呼叫慣例。
+在先前的語法中,*引數*代表提供給`System.Runtime.InteropServices.DllImportAttribute`屬性的引數。 第一個引數是字串, 代表包含此函式之 DLL 的名稱, 但不含 .dll 副檔名。 可以為`System.Runtime.InteropServices.DllImportAttribute`類別的任何公用屬性提供其他引數, 例如呼叫慣例。
 
-假設您有原生C++包含下列匯出的函式的 DLL。
+假設您有一個包含C++下列匯出函式的原生 DLL。
 
 ```cpp
 #include <stdio.h>
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-您可以呼叫這個函式從F#使用下列程式碼。
+您可以使用下列程式碼F# , 從呼叫這個函式。
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,7 +46,7 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-與原生程式碼的互通性指*平台叫用*而且它是在 CLR 的功能。 如需詳細資訊，請參閱[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)。 該區段中的資訊是適用於F#。
+與機器碼的互通性稱為「*平台叫用*」, 它是 CLR 的一項功能。 如需詳細資訊，請參閱[與 Unmanaged 程式碼互通](../../../framework/interop/index.md)。 該區段中的資訊適用于F#。
 
 ## <a name="see-also"></a>另請參閱
 

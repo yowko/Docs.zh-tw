@@ -9,19 +9,19 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: 44f5c918f19f84daf827ad4e8f3b6bfbc3e9f439
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92a1c8db43579048945d76082e3ebd2862efd7ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704501"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920434"
 ---
-# <a name="switches-element"></a>\<交換器 > 項目
+# <a name="switches-element"></a>\<切換 > 元素
 包含追蹤參數及設定追蹤參數的層級。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<switches>  
+\<切換 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,17 +40,17 @@ ms.locfileid: "61704501"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|指定設定追蹤參數的層級。|  
+|[\<add>](add-element-for-switches.md)|指定設定追蹤參數的層級。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`System.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 您可以將它放在組態檔中，以變更追蹤參數的層級。 如果參數為<xref:System.Diagnostics.BooleanSwitch>，可以先開啟和關閉。 如果參數為<xref:System.Diagnostics.TraceSwitch>，您可以將不同層級指派，以便指定類型的追蹤或偵錯訊息的應用程式輸出。  
+ 您可以變更追蹤參數的層級, 方法是將它放在設定檔中。 如果參數是<xref:System.Diagnostics.BooleanSwitch>, 您可以開啟和關閉它。 如果參數是<xref:System.Diagnostics.TraceSwitch>, 您可以為其指派不同的層級, 以指定應用程式輸出的追蹤或 debug 訊息的類型。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用 **\<切換>** 要設定項目`General`追蹤參數設<xref:System.Diagnostics.TraceLevel>層級，並且啟用`Data`布林追蹤參數。  
@@ -71,4 +71,4 @@ ms.locfileid: "61704501"
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [追蹤和偵錯設定結構描述](index.md)

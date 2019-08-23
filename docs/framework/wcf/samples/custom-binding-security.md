@@ -2,12 +2,12 @@
 title: 自訂繫結安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 71bc3d463330b893e8b415892a9bdcc2dae88a2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99fa1e7dea09601de5efff9ef8d8c6a66eae1bac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616034"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953766"
 ---
 # <a name="custom-binding-security"></a>自訂繫結安全性
 這個範例會示範如何使用自訂繫結來設定安全性。 它會顯示如何使用自訂繫結同時啟用訊息層級安全性和安全傳輸。 當在用戶端和服務之間傳輸訊息需要安全傳輸，且同時必須保護訊息層級上訊息的安全時，這是相當有用的。 系統提供的繫結不支援這個組態。
@@ -15,7 +15,7 @@ ms.locfileid: "64616034"
  這個範例是由用戶端主控台程式 (EXE) 與服務主控台程式 (EXE) 所組成。 服務會實作雙工合約。 合約是由 `ICalculatorDuplex` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 `ICalculatorDuplex` 介面允許用戶端執行數學運算，計算整個工作階段的執行結果。 服務可能會獨立地傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。 自訂繫結已定義成支援雙工通訊，而且具備安全性。
 
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。
+> 此範例的安裝程序與建置指示位於本主題的結尾。
 
  服務組態會定義支援下列作業的自訂繫結：
 
@@ -23,7 +23,7 @@ ms.locfileid: "64616034"
 
 - Windows 訊息安全性。
 
- 自訂繫結組態會同時啟用訊息層級安全性以啟用安全傳輸。 繫結項目的順序很重要定義自訂繫結，因為每個都代表通道堆疊中的圖層 (請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md))。 自訂繫結會定義在服務與用戶端組態檔中，如下列範例組態所示。
+ 自訂繫結組態會同時啟用訊息層級安全性以啟用安全傳輸。 繫結項目的順序對於定義自訂系結很重要, 因為每個都代表通道堆疊中的一層 (請參閱[自訂](../../../../docs/framework/wcf/extending/custom-bindings.md)系結)。 自訂繫結會定義在服務與用戶端組態檔中，如下列範例組態所示。
 
 ```xml
 <bindings>
@@ -105,24 +105,24 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 
-1. 以系統管理員權限開啟 Visual Studio 視窗的開發人員命令提示字元並執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。
+1. 以系統管理員許可權開啟 Visual Studio 視窗的開發人員命令提示字元, 然後從範例安裝資料夾中執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
-    >  Setup.bat 批次檔被設計來從 Visual Studio 2012 命令提示字元執行。 路徑環境變數設定在 Visual Studio 2012 命令提示字元會指向包含 Setup.bat 指令碼所需的可執行檔的目錄。  
+    >  安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。  
   
 2. 從 \service\bin 啟動 Service.exe。  
   
 3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -134,12 +134,12 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3. 將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-    4. 以系統管理員權限開啟 Visual Studio 中開發人員命令提示字元執行下列命令： `Setup.bat service`。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。  
+    4. 在開發人員命令提示字元中, 針對以系統管理員許可權開啟的 Visual Studio 執行下列`Setup.bat service`命令:。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。  
   
         > [!NOTE]
         >  Setup.bat 批次檔是設計用來從 Visual Studio 2010 命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 2010 命令提示字元中設定。
 
-    5. 變更[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Service.exe.config 檔以反映上一個步驟中產生的憑證的主體名稱。
+    5. 變更 machine.config 檔案內的[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) , 以反映在上一個步驟中產生之憑證的主體名稱。
 
     6. 從命令提示字元執行 Service.exe。
 
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2. 執行 Cleanup.bat，移除先前範例的任何舊憑證。
 
-    3. 匯出服務的憑證，以系統管理權限開啟 Visual studio 的開發人員命令提示字元，並在服務電腦上執行下列命令 (取代`%SERVER_NAME%`完整電腦名稱與位置服務正在執行）：
+    3. 使用系統管理許可權開啟 Visual Studio 的開發人員命令提示字元, 然後在服務電腦上執行下列命令, 以匯出服務的憑證 (以電腦`%SERVER_NAME%`的完整名稱取代, 其中服務正在執行中):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4. 將 %SERVER_NAME%.cer 複製到用戶端電腦 (將 %SERVER_NAME% 取代成執行此服務之電腦的完整名稱)。
 
-    5. 以系統管理權限開啟 Visual studio 的開發人員命令提示字元，並在用戶端電腦上執行下列命令匯入服務的憑證 (取代 %server_name%取代成完整名稱的電腦，服務正在執行）：
+    5. 使用系統管理許可權開啟 Visual Studio 的開發人員命令提示字元, 然後在用戶端電腦上執行下列命令, 以匯入服務的憑證 (請將% SERVER_NAME% 取代為電腦的完整名稱, 其中服務正在執行中):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -178,7 +178,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7. 如果用於執行服務的帳戶有別於網域環境中的 NetworkService 或 LocalSystem 帳戶，您可能需要修改用戶端 App.config 檔中服務端點的端點身分識別，以根據用來執行服務之帳戶設定適當的 UPN 或 SPN。 如需端點身分識別的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)主題。
+    7. 如果用於執行服務的帳戶有別於網域環境中的 NetworkService 或 LocalSystem 帳戶，您可能需要修改用戶端 App.config 檔中服務端點的端點身分識別，以根據用來執行服務之帳戶設定適當的 UPN 或 SPN。 如需有關端點身分識別的詳細資訊, 請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)主題。
 
     8. 從命令提示字元執行 Client.exe。
 

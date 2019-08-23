@@ -2,12 +2,12 @@
 title: 支援權杖
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: fba9a44342da5b064897b3ab81f34fa39498d379
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: a8464d7f32b52152b5371ff9edbb396578df6a57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964477"
 ---
 # <a name="supporting-tokens"></a>支援權杖
 這個支援權杖範例會示範如何將其他權杖加入至使用 WS-Security 的訊息。 範例除了使用者名稱安全性權杖之外，還會新增 X.509 二進位安全性權杖。 權杖會在 WS-Security 訊息標頭中從用戶端傳遞至服務，而且使用與 X.509 安全性權杖相關聯的私密金鑰簽署該訊息的一部分，以便向接收者證明持有 X.509 憑證。 在必須有多個宣告與訊息產生關聯才能驗證或授權傳送者的情況下，這將十分有幫助。 服務會實作定義要求-回覆通訊模式的合約。
@@ -22,7 +22,7 @@ ms.locfileid: "67425442"
 - 如何使用伺服器的 X.509 憑證保護用於訊息加密和簽章的對稱金鑰。
 
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。
+> 此範例的安裝程序與建置指示位於本主題的結尾。
 
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>用戶端透過使用者名稱權杖和支援的 X.509 安全性權杖進行驗證
  服務會公開用來通訊的單一端點，此端點是使用 `BindingHelper` 和 `EchoServiceHost` 類別，透過程式設計所建立的。 端點是由位址、繫結及合約所組成。 繫結是透過使用 `SymmetricSecurityBindingElement` 和 `HttpTransportBindingElement` 的自訂繫結所設定。 這個範例會設定 `SymmetricSecurityBindingElement`，使其在傳輸期間使用服務 X.509 憑證來保護對稱金鑰，以及在 WS-Security 訊息標頭中傳遞 `UserNameToken` 以及支援的 `X509SecurityToken`。 對稱金鑰會用來加密訊息本文和使用者名稱安全性權杖。 支援權杖會包含在 WS-Security 訊息標頭中，當做其他二進位安全性權杖傳遞。 支援權杖的真實性是使用與支援之 X.509 安全性權杖相關聯的私密金鑰來簽署訊息的一部分，而獲得證明。
@@ -282,7 +282,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>顯示呼叫端的資訊
- 若要顯示呼叫者的資訊，您可以使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下列程式碼所示。 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含與目前呼叫者關聯的授權宣告。 這些宣告會自動提供 Windows Communication Foundation (WCF) 的每個訊息中收到的權杖。
+ 若要顯示呼叫者的資訊，您可以使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下列程式碼所示。 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含與目前呼叫者關聯的授權宣告。 Windows Communication Foundation (WCF) 會針對訊息中收到的每個權杖, 自動提供這些宣告。
 
 ```csharp
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
@@ -345,7 +345,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```
 
 ## <a name="running-the-sample"></a>執行範例
- 當您執行範例時，用戶端首先會提示您提供使用者名稱權杖的使用者名稱和密碼。 請務必提供正確的值，您的系統帳戶，因為 WCF 服務上的對應至系統所提供的身分識別提供使用者名稱權杖中的值。 然後，用戶端便會顯示服務的回應。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
+ 當您執行範例時，用戶端首先會提示您提供使用者名稱權杖的使用者名稱和密碼。 請務必為您的系統帳戶提供正確的值, 因為服務上的 WCF 會將使用者名稱權杖中提供的值對應到系統所提供的身分識別。 然後，用戶端便會顯示服務的回應。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
 ## <a name="setup-batch-file"></a>設定批次檔
  這個範例隨附的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的網際網路資訊服務 (IIS) 裝載應用程式。 這個批次檔必須經過修改才能跨機器運作，或在非裝載的情況下運作。
@@ -414,22 +414,22 @@ iisreset
 
 ##### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+2. 若要建立方案, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
 
 3. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。
 
 ##### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例
 
-1. 從範例安裝資料夾內以系統管理員權限執行 Visual Studio 2012 命令提示字元執行 Setup.bat。 這會安裝執行範例所需的所有憑證。
+1. 從使用系統管理員許可權執行 Visual Studio 2012 命令提示字元內的範例安裝資料夾中執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
-    >  Setup.bat 批次檔被設計來從 Visual Studio 2012 命令提示字元執行。 路徑環境變數設定在 Visual Studio 2012 命令提示字元會指向包含 Setup.bat 指令碼所需的可執行檔的目錄。 當您完成範例時，請務必執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
+    >  安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。 當您完成範例時，請務必執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
   
 2. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-3. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+3. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ##### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
@@ -441,13 +441,13 @@ iisreset
   
 4. 將用戶端程式檔複製到用戶端機器上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-5. 在伺服器上，執行`setup.bat service`在開發人員命令提示字元適用於 Visual Studio 開啟系統管理員權限。 執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
+5. 在伺服器上, 于`setup.bat service`使用系統管理員許可權開啟 Visual Studio 的開發人員命令提示字元中執行。 `setup.bat` 使用引數執行時,會建立具有電腦完整功能變數名稱的服務憑證,並將服務憑證匯出至名`service`為 .cer 的檔案。  
   
-6. 編輯 Web.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 做為機器的完整網域名稱相同。  
+6. 編輯 web.config 以反映新的憑證名稱 (在[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的`findValue`屬性中), 這與電腦的完整功能變數名稱相同。  
   
 7. 從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
   
-8. 在用戶端，執行`setup.bat client`在開發人員命令提示字元適用於 Visual Studio 開啟系統管理員權限。 使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。  
+8. 在用戶端上, `setup.bat client`于使用系統管理員許可權開啟 Visual Studio 的開發人員命令提示字元中執行。 使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。  
   
 9. 在用戶端機器上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。 若要這麼做，請使用伺服器的完整網域名稱取代 localhost。  
   
@@ -457,11 +457,11 @@ iisreset
   
 12. 在伺服器上執行 ImportClientCert.bat，這樣會從 Client.cer 檔案中將用戶端憑證匯入至 LocalMachine - TrustedPeople 存放區中。  
   
-13. 在用戶端機器上，從命令提示字元視窗啟動 Client.exe。 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+13. 在用戶端機器上，從命令提示字元視窗啟動 Client.exe。 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ##### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 - 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
 > [!NOTE]
->  跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨機器使用憑證的 WCF 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這樣做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+> 跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 WCF 範例, 請務必清除已安裝在 CurrentUser-TrustedPeople 存放區中的服務憑證。 若要這麼做, 請使用下列命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。

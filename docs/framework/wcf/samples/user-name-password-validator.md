@@ -2,12 +2,12 @@
 title: 使用者名稱密碼驗證程式
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 16e5f854dbe76150945145c0ce81d0d5fa4ac0d0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b02533641785b24019f10a3c224b09e252cbb2ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421818"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966774"
 ---
 # <a name="user-name-password-validator"></a>使用者名稱密碼驗證程式
 這個範例會示範如何實作自訂的 UserNamePassword 驗證程式。 當內建 UserNamePassword 驗證模式都不符合應用程式需求時，這個驗證程式就很有用；例如，當使用者名稱/密碼組儲存在某些外部存放區時，例如資料庫中。 這個範例示範的服務具有可檢查兩組特定使用者名稱/密碼組的自訂驗證程式。 用戶端會使用這些使用者名稱/密碼組來向服務驗證。
@@ -17,12 +17,12 @@ ms.locfileid: "67421818"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
 > [!NOTE]
->  因為任何人都可以建構使用自訂驗證程式能接受之使用者名稱/密碼組的使用者名稱認證，所以服務的安全性會低於標準 UserNamePassword 驗證程式提供之預設行為的安全性。 標準 UserNamePassword 驗證程式會嘗試將提供的使用者名稱/密碼組對應至 Windows 帳戶，並在這個對應失敗時發生驗證失敗。 這個範例中的自訂 UserNamePassword 驗證程式「不得」用於實際執行程式碼 (Production Code) 中，這個驗證程式僅供說明用途。
+> 因為任何人都可以建構使用自訂驗證程式能接受之使用者名稱/密碼組的使用者名稱認證，所以服務的安全性會低於標準 UserNamePassword 驗證程式提供之預設行為的安全性。 標準 UserNamePassword 驗證程式會嘗試將提供的使用者名稱/密碼組對應至 Windows 帳戶，並在這個對應失敗時發生驗證失敗。 這個範例中的自訂 UserNamePassword 驗證程式「不得」用於實際執行程式碼 (Production Code) 中，這個驗證程式僅供說明用途。
 
  這個範例所示範的作業摘要如下：
 
@@ -32,7 +32,7 @@ ms.locfileid: "67421818"
 
 - 伺服器是使用該伺服器的 X.509 憑證來驗證的。
 
- 服務會公開 (Expose) 單一的端點來與已使用組態檔 App.config 定義之服務進行通訊。端點是由位址、繫結及合約所組成。 繫結設定為標準`wsHttpBinding`經由預設使用 Ws-security 和使用者名稱驗證。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 伺服器憑證必須包含相同的值，如`SubjectName`作為`findValue`中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。
+ 服務會公開 (Expose) 單一的端點來與已使用組態檔 App.config 定義之服務進行通訊。端點是由位址、繫結及合約所組成。 系結會使用預設為使用`wsHttpBinding` WS-Security 和使用者名稱驗證的標準來設定。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 伺服器憑證必須包含與[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) `findValue`中相同的值`SubjectName` 。
 
 ```xml
 <system.serviceModel>
@@ -278,22 +278,22 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例
 
-1. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+1. 若要建立方案, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
 
 2. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例
 
-1. 從範例安裝資料夾，在 Visual Studio 2012 的命令提示字元執行 Setup.bat。 這會安裝執行範例所需的所有憑證。
+1. 在 Visual Studio 2012 命令提示字元中, 從範例安裝資料夾執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
-    >  Setup.bat 批次檔被設計來從 Visual Studio 2012 命令提示字元執行。 路徑環境變數設定在 Visual Studio 2012 命令提示字元會指向包含 Setup.bat 指令碼所需的可執行檔的目錄。  
+    >  安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。  
   
 2. 從 service\bin 啟動 Service.exe。  
   
 3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
@@ -315,7 +315,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 9. 在用戶端機器上，從命令提示字元視窗啟動 Client.exe。  
   
-10. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

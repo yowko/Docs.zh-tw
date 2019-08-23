@@ -2,12 +2,12 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: 67ec30b2bf3c322b949700789ce942e4281b77a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ed87adfb3963513602844fc69afce8f7994fa8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757985"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932428"
 ---
 # <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
 表示以 SSL 資料流支援通道安全性的自訂繫結項目。  
@@ -15,7 +15,7 @@ ms.locfileid: "61757985"
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<sslStreamSecurity>  
   
 ## <a name="syntax"></a>語法  
@@ -30,10 +30,10 @@ ms.locfileid: "61757985"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |requireClientCertificate|布林值，指定這個繫結是否需要用戶端憑證。 預設為 `false`。|  
-|sslProtocols|SslProtocols 列舉旗標值，可指定所支援的 SslProtocols。 預設值是 Ssl3&#124;Tls&#124;Tls11&#124;Tls12。|  
+|sslProtocols|SslProtocols 列舉旗標值，可指定所支援的 SslProtocols。 預設值為 Ssl3&#124;Tls&#124;Tls11&#124;Tls12。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -42,14 +42,14 @@ ms.locfileid: "61757985"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

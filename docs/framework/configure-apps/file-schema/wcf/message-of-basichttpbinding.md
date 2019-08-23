@@ -2,20 +2,20 @@
 title: <message> 的 <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 746acd91074863029211a1ca2584743c464c9ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 320aca16bde9fc27aa35cad27286d402745e4710
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768975"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931564"
 ---
-# <a name="message-of-basichttpbinding"></a>\<message> of \<basicHttpBinding>
-定義訊息層級安全性的設定[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
+# <a name="message-of-basichttpbinding"></a>\<basicHttpBinding > 的\<訊息 >
+定義[ \<basicHttpBinding >](basichttpbinding.md)的訊息層級安全性設定。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<basicHttpBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
 \<message>  
   
@@ -31,7 +31,7 @@ ms.locfileid: "61768975"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |algorithmSuite|設定訊息加密和金鑰包裝演算法。 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>，它會指定演算法和金鑰大小。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。<br /><br /> 預設值為 `Basic256`。|  
 |clientCredentialType|指定當使用訊息安全性執行用戶端驗證時，要使用的認證類型。 預設為 `UserName`。|  
@@ -40,8 +40,8 @@ ms.locfileid: "61768975"
   
 |值|描述|  
 |-----------|-----------------|  
-|使用者名稱|-需要使用 UserName 認證的伺服器驗證用戶端。 這個認證必須使用來指定[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)。<br />WCF 不支援傳送密碼摘要或衍生金鑰使用密碼，並使用訊息安全性這類金鑰。 因此，傳輸保護使用 UserName 認證時，會強制執行 WCF。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
-|憑證|需要使用憑證對伺服器驗證用戶端。 在此情況下必須使用指定的用戶端認證[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)並[ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 在此情況下必須使用指定的服務認證<xref:System.ServiceModel.Description.ClientCredentials>類別或`ClientCredentials`行為項目，並指定服務憑證使用[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。|  
+|使用者名稱|-要求用戶端必須使用 UserName 認證向伺服器進行驗證。 此認證必須使用[ \<clientCredentials >](clientcredentials.md)來指定。<br />-WCF 不支援傳送密碼摘要或使用密碼衍生金鑰, 以及使用這類金鑰來取得訊息安全性。 因此, 在使用使用者名稱認證時, WCF 會強制保護傳輸。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
+|憑證|需要使用憑證對伺服器驗證用戶端。 此案例中的用戶端認證必須使用[ \<clientCredentials](clientcredentials.md) [ \<> 和 clientCertificate >](clientcertificate-of-servicecredentials.md)來指定。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 此案例中的服務認證必須使用<xref:System.ServiceModel.Description.ClientCredentials>類別或`ClientCredentials`行為元素來指定, 並使用[ \<serviceCertificate >](servicecertificate-of-servicecredentials.md)指定服務憑證。|  
   
 ### <a name="child-elements"></a>子元素  
  None  
@@ -50,7 +50,7 @@ ms.locfileid: "61768975"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。|  
+|[\<security>](security-of-basichttpbinding.md)|定義[ \<basicHttpBinding >](basichttpbinding.md)的安全性功能。|  
   
 ## <a name="example"></a>範例  
  這個範例會示範如何實作一個使用 basicHttpBinding 和訊息安全性的應用程式。 在下列服務組態範例中，端點定義會指定 basicHttpBinding，並參考名為 `Binding1` 的繫結組態。 服務對用戶端驗證它自己時所使用的憑證是在組態檔案 `behaviors` 區段中的 `serviceCredentials` 項目下設定。 用戶端用來對服務驗證本身之憑證所套用的驗證模式，也是在 `behaviors` 項目下的 `clientCertificate` 區段中設定。  
@@ -125,8 +125,8 @@ ms.locfileid: "61768975"
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

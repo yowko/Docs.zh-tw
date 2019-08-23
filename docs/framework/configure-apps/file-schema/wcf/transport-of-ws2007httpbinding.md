@@ -2,20 +2,20 @@
 title: <transport> 的 <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce8b2acb7d87b094958e20ca0b6cca9fc8266a8d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911978"
 ---
-# <a name="transport-of-ws2007httpbinding"></a>\<傳輸 > 的\<lt;ws2007httpbinding&gt >
+# <a name="transport-of-ws2007httpbinding"></a>\<ws2007HttpBinding > 的\<傳輸 >
 定義 HTTP 傳輸的驗證設定。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<ws2007HttpBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
 \<transport>  
   
@@ -39,13 +39,13 @@ ms.locfileid: "61788293"
 |---------------|-----------------|  
 |`clientCredentialType`|指定用來對服務驗證用戶端的認證。 此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|  
 |`proxyCredentialType`|指定用來對網域 Proxy 驗證用戶端的認證。 此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
-|`realm`|摘要式或基本驗證的驗證領域。 預設為空字串。<br /><br /> 驗證領域至少會指定負責執行驗證之主機的名稱， 也可以指定具有存取權之使用者的集合。 使用者可以查詢驗證領域，判斷其中可以使用的一組使用者名稱和密碼。|  
+|`realm`|摘要式或基本驗證的驗證領域。 預設值是空字串。<br /><br /> 驗證領域至少會指定負責執行驗證之主機的名稱， 也可以指定具有存取權之使用者的集合。 使用者可以查詢驗證領域，判斷其中可以使用的一組使用者名稱和密碼。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|None|停用安全性。|  
+|無|停用安全性。|  
 |基本|使用基本驗證。|  
 |摘要|使用摘要式驗證。|  
 |Ntlm|使用 NTLM 驗證做為 Windows 網域的後援。|  
@@ -56,7 +56,7 @@ ms.locfileid: "61788293"
   
 |值|描述|  
 |-----------|-----------------|  
-|None|停用安全性。|  
+|無|停用安全性。|  
 |基本|使用基本驗證。|  
 |摘要|使用摘要式驗證。|  
 |Ntlm|使用 NTLM 做為 Windows 網域的後援。|  
@@ -68,9 +68,9 @@ ms.locfileid: "61788293"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|代表的安全性功能[ \<lt;ws2007httpbinding&gt >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)項目。|  
+|[\<security>](security-of-ws2007httpbinding.md)|表示[ \<ws2007HttpBinding >](ws2007httpbinding.md)元素的安全性功能。|  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -78,8 +78,8 @@ ms.locfileid: "61788293"
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

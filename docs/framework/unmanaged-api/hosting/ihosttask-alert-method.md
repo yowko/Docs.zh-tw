@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a5e3b82645456ffa574f63931abbf60a2194540
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75b3fc0b1dde35e743e699d22c5766cab4cf0faf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764531"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964723"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert 方法
-要求主機喚醒表示由目前的工作[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體，因此可以中止的工作。  
+要求主機喚醒目前[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)實例所代表的工作, 讓工作可以中止。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,25 +37,25 @@ HRESULT Alert ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|此方法傳回成功。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|已成功傳回方法。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時, CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- CLR 會呼叫`Alert`方法時<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>呼叫使用者程式碼，或當<xref:System.AppDomain>目前相關聯<xref:System.Threading.Thread>關閉。 主機必須立即傳回，因為以非同步方式進行呼叫。 如果主應用程式無法立即警示工作，它必須喚醒的下次進入中警示的狀態。  
+ 當`Alert` <xref:System.AppDomain> <xref:System.Threading.Thread>從使用者程式碼呼叫, 或與目前的相關聯的關閉時, CLR 會呼叫方法。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 主機必須立即傳回, 因為呼叫是以非同步方式進行。 如果主機無法立即警示工作, 它必須在下一次進入可警示的狀態時喚醒。  
   
 > [!NOTE]
->  `Alert` 會影響執行階段已傳遞到的工作[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)這類方法的 WAIT_ALERTABLE 值[聯結](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md)。  
+> `Alert`只會影響執行時間已將 WAIT_ALERTABLE 的[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)值傳遞至方法 (例如[Join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md)) 的工作。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

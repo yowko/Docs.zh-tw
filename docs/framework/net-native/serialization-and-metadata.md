@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567056"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913795"
 ---
 # <a name="serialization-and-metadata"></a>序列化和中繼資料
 
@@ -39,7 +39,7 @@ ms.locfileid: "69567056"
   
 ### <a name="typeof-used-in-the-constructor"></a>用於建構函式的 typeof
 
- 如果您呼叫這些序列化類別的函式, 並在C#方法呼叫中包含[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子,**則不需要執行任何額外的工作**。 例如，在對序列化類別建構函式進行的下列每個呼叫中，`typeof` 關鍵字會用來做為傳遞至建構函式之運算式的一部分。  
+ 如果您呼叫這些序列化類別的函式, 並在C#方法呼叫中包含[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子,**則不需要執行任何額外的工作**。 例如，在對序列化類別建構函式進行的下列每個呼叫中，`typeof` 關鍵字會用來做為傳遞至建構函式之運算式的一部分。  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69567056"
   
 ### <a name="typeof-used-outside-the-constructor"></a>在建構函式外部使用的 typeof
 
- 如果您呼叫這些序列化類別的處理常式, 並在C#提供給<xref:System.Type>此函式參數的運算式外部使用[typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子 (如下列程式碼所示), 則 .NET Native 編譯器無法解析類型:  
+ 如果您呼叫這些序列化類別的處理常式, 並在C#提供給<xref:System.Type>此函式參數的運算式外部使用[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子 (如下列程式碼所示), 則 .NET Native 編譯器無法解析類型:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   

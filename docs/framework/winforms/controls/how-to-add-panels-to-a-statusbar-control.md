@@ -10,27 +10,27 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27d65c07f0a6ec4a25d057e2c16a8b59933bb8fd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011069"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925102"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>HOW TO：將面板新增至 StatusBar 控制項
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip>及<xref:System.Windows.Forms.ToolStripStatusLabel>控制項會取代及新增功能<xref:System.Windows.Forms.StatusBar>並<xref:System.Windows.Forms.StatusBarPanel>控制項，不過，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控制項保留回溯相容性和未來使用，如果您選擇。  
+> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel>和控制項會取代和加入和<xref:System.Windows.Forms.StatusBarPanel>控制項的功能; 不過, 如果您這樣做, 和控制項就會保留, 以提供回溯相容性及未來使用。 <xref:System.Windows.Forms.ToolStripStatusLabel> <xref:System.Windows.Forms.StatusStrip>決定.  
   
- 可程式化的區域內[StatusBar 控制項](statusbar-control-windows-forms.md)控制項的執行個體包含<xref:System.Windows.Forms.StatusBarPanel>類別。 透過新增這些<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>類別。  
+ [狀態列控制項](statusbar-control-windows-forms.md)控制項中的可程式化區域是由<xref:System.Windows.Forms.StatusBarPanel>類別的實例所組成。 這些會透過新增至<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>類別來新增。  
   
-### <a name="to-add-panels-to-a-status-bar"></a>若要將面板新增至狀態列  
+### <a name="to-add-panels-to-a-status-bar"></a>將面板新增至狀態列  
   
-1. 在程序中，以建立狀態列面板新增至<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。 指定屬性設定為個別的面板，您可以使用其索引傳遞<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性。  
+1. 在程式中, 藉由將狀態列面板新增至來<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>建立它們。 藉由使用透過<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性傳遞的索引, 指定個別面板的屬性設定。  
   
-     在下列程式碼範例中，將路徑設為圖示的位置**我的文件**資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此資料夾，會使用此位置。 選擇此位置也可讓具有最少的系統存取層級的使用者安全地執行應用程式。 下列範例需要表單<xref:System.Windows.Forms.StatusBar>已經加入的控制項。  
+     在下列程式碼範例中, 為圖示的位置設定的路徑是 [**我的文件**] 資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦都包含此資料夾, 所以會使用這個位置。 選擇此位置也可讓具有最低系統存取層級的使用者安全地執行應用程式。 下列範例需要已加入<xref:System.Windows.Forms.StatusBar>控制項的表單。  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>是以零為起始的集合，因此應視情況繼續執行程式碼。  
+    > <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>是以零為基底的集合, 因此程式碼應據此繼續進行。  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -126,6 +126,6 @@ ms.locfileid: "62011069"
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [集合編輯器對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
 - [如何：設定狀態列面板的大小](how-to-set-the-size-of-status-bar-panels.md)
-- [逐步解說：在執行階段更新狀態列資訊](walkthrough-updating-status-bar-information-at-run-time.md)
-- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [逐步解說：在執行時間更新狀態列資訊](walkthrough-updating-status-bar-information-at-run-time.md)
+- [如何：判斷按一下 Windows Forms 狀態列控制項中的哪一個面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar 控制項概觀](statusbar-control-overview-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：手動呈現已緩衝的圖形
+title: 作法：手動呈現已緩衝的圖形
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: 48dd1d76a42661df6ba642c032c991be4d6a2900
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6655652a7c5dedb8e183356688972c07a705cbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756581"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931843"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>HOW TO：手動呈現已緩衝的圖形
 如果您在管理自己的已緩衝圖形，將需要能夠建立及呈現圖形緩衝區。 您可以藉由呼叫類別 <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> 方法，針對與螢幕上繪圖介面相關聯的 <xref:System.Drawing.BufferedGraphics> 類別建立其執行個體。 這個方法會建立與特定轉譯介面 (例如表單或控制項) 相關聯之  <xref:System.Drawing.BufferedGraphics> 的執行個體。 建立 <xref:System.Drawing.BufferedGraphics> 執行個體之後，您可以透過 <xref:System.Drawing.BufferedGraphics.Graphics%2A> 屬性，繪製圖形到它所代表的緩衝區。 在您執行所有圖形作業之後，可以藉由呼叫 <xref:System.Drawing.BufferedGraphics.Render%2A> 方法，將緩衝區的內容複製到螢幕上。  
   
 > [!NOTE]
->  如果您執行您自己的轉譯，將會增加記憶體耗用量，不過可能只會稍微增加。  
+> 如果您執行您自己的轉譯，將會增加記憶體耗用量，不過可能只會稍微增加。  
   
 ### <a name="to-manually-display-buffered-graphics"></a>手動顯示已緩衝的圖形  
   
-1. 取得 <xref:System.Drawing.BufferedGraphicsContext> 類別執行個體的參考。 如需詳細資訊，請參閱[如何：手動管理已緩衝的圖形](how-to-manually-manage-buffered-graphics.md)。  
+1. 取得 <xref:System.Drawing.BufferedGraphicsContext> 類別執行個體的參考。 如需詳細資訊，請參閱[如何：手動管理已緩衝](how-to-manually-manage-buffered-graphics.md)處理的圖形。  
   
 2. 藉由呼叫 <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> 方法，建立 <xref:System.Drawing.BufferedGraphics> 類別的執行個體，如下列程式碼範例所示。  
   
@@ -50,4 +50,4 @@ ms.locfileid: "61756581"
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
 - [雙重緩衝的圖形](double-buffered-graphics.md)
-- [如何：手動管理已緩衝的圖形](how-to-manually-manage-buffered-graphics.md)
+- [如何：手動管理緩衝的圖形](how-to-manually-manage-buffered-graphics.md)

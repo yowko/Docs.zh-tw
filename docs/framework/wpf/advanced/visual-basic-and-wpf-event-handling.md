@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 4ff006099dd2fa706cb575eec18e135d6e74ad46
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8407958ec76be7e402025ece57371e67581e5291
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972325"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942122"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 和 WPF 事件處理
 特別針對 Microsoft Visual Basic .net 語言, 您可以使用特定`Handles`語言的關鍵字, 將事件處理常式與實例產生關聯, 而不是附加具有屬性的事件處理常式或<xref:System.Windows.UIElement.AddHandler%2A>使用方法。 不過，將處理常式附加至執行個體的 `Handles` 技術有一些限制，因為 `Handles` 語法無法支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系統中某些特定的路由事件功能。  
@@ -34,13 +34,13 @@ ms.locfileid: "68972325"
  `Handles` 無法附加要針對已經標示為已處理之事件叫用的處理常式。 相反地, 您必須使用程式碼並`handledEventsToo`呼叫<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>的多載。  
   
 > [!NOTE]
->  當您為 XAML `Handles`中的相同事件指定事件處理常式時, 請勿在 Visual Basic 程式碼中使用語法。 在這個情況下，會呼叫事件處理常式兩次。  
+> 當您為 XAML `Handles`中的相同事件指定事件處理常式時, 請勿在 Visual Basic 程式碼中使用語法。 在這個情況下，會呼叫事件處理常式兩次。  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF 如何實作「Handles」功能  
  編譯[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]頁面時, 中繼檔案會宣告頁面上具有<xref:System.Windows.FrameworkContentElement.Name%2A>屬性集 (或已宣告 [x:Name 指示詞](../../xaml-services/x-name-directive.md)) 之每個元素的`Friend``WithEvents`參考。 每個具名執行個體可能都是可透過 `Handles` 指派給處理常式的元素。  
   
 > [!NOTE]
->  在[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]中, IntelliSense 可以顯示可在頁面中`Handles`參考哪些元素的完成。 不過，這可能需要採取一次編譯傳遞，讓中繼檔案可以填入所有的 `Friends` 參考。  
+> 在[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]中, IntelliSense 可以顯示可在頁面中`Handles`參考哪些元素的完成。 不過，這可能需要採取一次編譯傳遞，讓中繼檔案可以填入所有的 `Friends` 參考。  
   
 ## <a name="see-also"></a>另請參閱
 

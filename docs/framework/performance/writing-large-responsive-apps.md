@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aa3d428d311fd954d092c3859cf8ad273e8a5c1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613807"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915544"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。 
@@ -23,34 +23,34 @@ ms.locfileid: "64613807"
   
  當您的終端使用者與您的應用程式互動時，他們期望應用程式會有回應。 因此，請不要封鎖輸入或命令處理等動作。 說明應該迅速快顯，或在使用者繼續輸入時放棄顯示。 您的應用程式應該避免冗長的運算使得應用程式緩慢，而導致封鎖 UI 執行緒。 
   
- 如需 Roslyn 編譯器的詳細資訊，請參閱[.NET 編譯器平台 SDK](../../csharp/roslyn-sdk/index.md)。
+ 如需 Roslyn 編譯器的詳細資訊, 請參閱[.NET COMPILER PLATFORM SDK](../../csharp/roslyn-sdk/index.md)。
   
 ## <a name="just-the-facts"></a>認清事實  
  調整效能和建立回應能力佳的 .NET Framework 應用程式時，請考慮下列幾點事實。 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>事實 1:不要太早進行最佳化  
+### <a name="fact-1-dont-prematurely-optimize"></a>事實 1:不要提前優化  
  撰寫比所需還要複雜的程式碼，會產生維護、偵錯和修改成本。 有經驗的程式設計人員直覺便知道如何解決程式碼問題，以及如何撰寫更有效率的程式碼。 不過，他們有時會太早最佳化程式碼。 例如，他們可能會在簡單陣列便已足夠的情況下，使用雜湊資料表；或者使用可能會造成記憶體流失的複雜快取，而不直接重新計算值。 即使您是有經驗的程式設計人員，仍應測試效能，並在發現問題時分析程式碼。 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事實 2:如果未經測量，不過臆測  
- 程式碼剖析和測量資料不會說謊。 程式碼剖析顯示 CPU 是否滿載，或者磁碟 I/O 是否發生封鎖的情況。 程式碼剖析告訴您目前配置的記憶體類型和數量，以及您的 CPU 是否花很多時間在[記憶體回收](../../../docs/standard/garbage-collection/index.md) (GC)。 
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事實 2:如果您不是測量, 您會猜測  
+ 程式碼剖析和測量資料不會說謊。 程式碼剖析顯示 CPU 是否滿載，或者磁碟 I/O 是否發生封鎖的情況。 程式碼剖析告訴您目前配置的記憶體類型和數量，以及您的 CPU 是否花很多時間在[記憶體回收](../../standard/garbage-collection/index.md) (GC)。 
   
  您應該為應用程式中的關鍵客戶體驗或案例設定效能目標，並撰寫測試以測量效能。 應用科學方法來調查失敗的測試：使用程式碼剖析來引導您、假設可能的問題，以及透過實驗或變更程式碼來測試您的假設。 透過定期測試建立一段時間的基準效能測量資料，以便您隔離出導致效能降低的變更。 當您以嚴謹的方式來處理效能工作時，便可避免浪費時間在不必要的程式碼更新。 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>事實 3:好的工具可讓所有的差異  
- 良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。 Microsoft 提供各種效能工具，例如[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)並[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
+### <a name="fact-3-good-tools-make-all-the-difference"></a>事實 3:良好的工具讓所有的差異  
+ 良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。 Microsoft 隨附各種效能工具, 例如[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)和[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
   
  PerfView 是非常強大的免費工具，可協助您專注於深入的問題，例如磁碟 I/O、GC 事件和記憶體。 您可以擷取與效能相關的 [Windows 事件追蹤](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，並輕鬆檢視每種應用程式、處理序、堆疊和執行緒的資訊。 PerfView 顯示您的應用程式配置的記憶體數量和類型，以及哪些函式或呼叫堆疊佔用了多少記憶體配置。 如需詳細資訊，請參閱工具隨附的豐富說明主題、示範和影片 (例如 Channel 9 上的 [PerfView Tutorial](https://channel9.msdn.com/Series/PerfView-Tutorial) (PerfView 教學課程)。 
   
-### <a name="fact-4-its-all-about-allocations"></a>事實 4:它是重點在於配置  
+### <a name="fact-4-its-all-about-allocations"></a>事實 4:這一切都是關於配置  
  您可能會認為建置回應能力佳的 .NET Framework 應用程式的重點在於演算法，例如使用快速排序取代反昇排序，但實際上卻不然。 配置記憶體才是建置回應能力佳的應用程式的最大要素，特別是當您的應用程式很龐大或處理大量資料時。 
   
- 使用新編譯器應用程式開發介面建置回應能力佳的 IDE 體驗的幾乎所有工作，都與避免配置和管理快取策略相關。 PerfView 追蹤顯示新的 C# 和 Visual Basic 編譯器的效能很少佔用龐大的 CPU 資源。 當編譯器讀取數十萬或數百萬行程式碼、讀取中繼資料或發出產生的程式碼時，可能會受限於 I/O。 UI 執行緒延遲幾乎全部都是由於記憶體回收所造成。 .NET Framework GC 為了效能而高度調整，並在應用程式的程式碼執行同時執行大部分的工作。 但是，單一配置可能會觸發耗費大量資源的[gen2](../../../docs/standard/garbage-collection/fundamentals.md) 收集，並停止所有執行緒。 
+ 使用新編譯器應用程式開發介面建置回應能力佳的 IDE 體驗的幾乎所有工作，都與避免配置和管理快取策略相關。 PerfView 追蹤顯示新的 C# 和 Visual Basic 編譯器的效能很少佔用龐大的 CPU 資源。 當編譯器讀取數十萬或數百萬行程式碼、讀取中繼資料或發出產生的程式碼時，可能會受限於 I/O。 UI 執行緒延遲幾乎全部都是由於記憶體回收所造成。 .NET Framework GC 為了效能而高度調整，並在應用程式的程式碼執行同時執行大部分的工作。 但是，單一配置可能會觸發耗費大量資源的[gen2](../../standard/garbage-collection/fundamentals.md) 收集，並停止所有執行緒。 
   
 ## <a name="common-allocations-and-examples"></a>常見配置和範例  
  本節中的範例運算式隱藏了看起來很小的配置。 但是，如果大型應用程式執行運算式夠多次，則可能造成數百個 MB，甚至是 GB 的配置。 例如，模擬開發人員在編輯器中輸入的一分鐘測試，會配置數 GB 記憶體，而導致效能小組專注於輸入案例。 
   
 ### <a name="boxing"></a>Boxing  
- 當通常存留在堆疊或資料結構中的實值型別包裝在物件中時，會發生 [Boxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md)。 換句話說，您可以配置保存資料的物件，再傳回物件的指標。 .NET Framework 有時由於方法的簽章或儲存位置的類型而以 Boxing 處理值。 在物件中包裝實值類型會導致記憶體配置。 許多 Boxing 作業可能導致數 MB 或 GB 的應用程式配置，這表示您的應用程式會造成更多 GC。 .NET Framework 和語言編譯器會盡可能避免 Boxing，但有時還是會在您預想不到的情況下發生。 
+ 當通常存留在堆疊或資料結構中的實值型別包裝在物件中時，會發生 [Boxing](../../csharp/programming-guide/types/boxing-and-unboxing.md)。 換句話說，您可以配置保存資料的物件，再傳回物件的指標。 .NET Framework 有時由於方法的簽章或儲存位置的類型而以 Boxing 處理值。 在物件中包裝實值類型會導致記憶體配置。 許多 Boxing 作業可能導致數 MB 或 GB 的應用程式配置，這表示您的應用程式會造成更多 GC。 .NET Framework 和語言編譯器會盡可能避免 Boxing，但有時還是會在您預想不到的情況下發生。 
   
  若要在 PerfView 中查看 Boxing，請開啟追蹤，然後檢視您的應用程式之處理序名稱下的 GC Heap Alloc Stacks (請記住，PerfView 會報告所有處理序)。 如果您在配置下看到類似 <xref:System.Int32?displayProperty=nameWithType> 和 <xref:System.Char?displayProperty=nameWithType> 的類型，則表示您以 Boxing 處理實值類型。 選擇其中一種類型可顯示以 Boxing 處理類型所在的堆疊和函式。 
   
@@ -195,9 +195,9 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。 它也會檢查"/ / 」。 修訂過的程式碼只會使用索引，而不會進行任何配置。 它會找到第一個字元不是空白字元，並接著會逐字元檢查以查看是否以"/ / 」 開頭的字串。 新的程式碼會使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>後，傳回第一個索引 （指定的起始索引） 發生非空格字元。 此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。 您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。 
+ `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。 它也會檢查是否有 "///"。 修訂過的程式碼只會使用索引，而不會進行任何配置。 它會尋找不是空白字元的第一個字元, 然後依字元檢查字元, 以查看字串是否以 "///" 開頭。 新的程式碼`IndexOfFirstNonWhiteSpaceChar`會使用<xref:System.String.TrimStart%2A> , 而不是傳回出現非空白字元的第一個索引 (在指定的起始索引之後)。 此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。 您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。 
   
- **範例 4︰StringBuilder**  
+ **範例 4:StringBuilder**  
   
  此範例使用 <xref:System.Text.StringBuilder> 物件。 下列函式會為泛型類型產生完整的類型名稱：  
   
@@ -276,9 +276,9 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  此簡單的快取策略遵守良好的快取設計，因為該策略具有大小限制。 但是，現在的程式碼比原始程式碼更多，這表示維護成本會更高。 您應該僅在發現效能問題時才採用快取策略，而 PerfView 顯示 <xref:System.Text.StringBuilder> 配置是影響效能的主要因素。 
   
 ### <a name="linq-and-lambdas"></a>LINQ 和 Lambdas  
-Language Integrated Query (LINQ)，搭配使用 lambda 運算式是產能功能的範例。 不過，它的使用可能會對經過一段時間，效能的重大的影響，而且您可能會發現您需要重寫程式碼。
+與 lambda 運算式搭配使用的語言整合式查詢 (LINQ) 就是生產力功能的範例。 不過, 其使用可能會對效能有重大影響, 而且您可能會發現需要重寫程式碼。
   
- **範例 5:清單的 lambda\<T >，和 IEnumerable\<T >**  
+ **範例 5:Lambda、List\<T > 和 IEnumerable\<T >**  
   
  這個範例會使用 [LINQ 和功能樣式程式碼](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)來找出編譯器模型中的符號，並指定名稱字串：  
   
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 在第一行中， [lambda 運算式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [覆蓋](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)區域變數`name`。 這表示除了配置 `predicate` 保存的[委派](~/docs/csharp/language-reference/keywords/delegate.md)物件之外，此程式碼還會配置靜態類別，以維持可擷取 `name` 值的環境。 此編譯器產生類似如下的程式碼：  
+ 在第一行中, [lambda 運算式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name`會在本機變數`name`[上關閉](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx)。 這表示除了配置 `predicate` 保存的[委派](../../csharp/language-reference/keywords/delegate.md)物件之外，此程式碼還會配置靜態類別，以維持可擷取 `name` 值的環境。 此編譯器產生類似如下的程式碼：  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -408,11 +408,11 @@ class Compilation { /*...*/
 }  
 ```  
   
- 您會看到新程式碼具有內含名為 `SyntaxTree` 之 `cachedResult` 欄位的快取。 當此欄位為 null 時，`GetSyntaxTreeAsync()` 會執行工作並將結果儲存在快取中。 `GetSyntaxTreeAsync()` 傳回`SyntaxTree`物件。 問題在於當您具有 `async` 類型的 `Task<SyntaxTree>` 函式，並傳回 `SyntaxTree` 類型的值時，編譯器會發出程式碼，配置一項 Task 以保存結果 (透過使用 `Task<SyntaxTree>.FromResult()`)。 此 Task 會標記為已完成，並會立即提供結果。 在新編譯器的程式碼中，已完成的 <xref:System.Threading.Tasks.Task> 物件經常出現，使得修正這些配置可大幅提升回應能力。 
+ 您會看到新程式碼具有內含名為 `SyntaxTree` 之 `cachedResult` 欄位的快取。 當此欄位為 null 時，`GetSyntaxTreeAsync()` 會執行工作並將結果儲存在快取中。 `GetSyntaxTreeAsync()``SyntaxTree`傳回物件。 問題在於當您具有 `async` 類型的 `Task<SyntaxTree>` 函式，並傳回 `SyntaxTree` 類型的值時，編譯器會發出程式碼，配置一項 Task 以保存結果 (透過使用 `Task<SyntaxTree>.FromResult()`)。 此 Task 會標記為已完成，並會立即提供結果。 在新編譯器的程式碼中，已完成的 <xref:System.Threading.Tasks.Task> 物件經常出現，使得修正這些配置可大幅提升回應能力。 
   
  **範例 6 的修正**  
   
- 若要移除已完成<xref:System.Threading.Tasks.Task>配置，您可以快取具有完成結果的 Task 物件：  
+ 若要移除完成<xref:System.Threading.Tasks.Task>的配置, 您可以使用已完成的結果來快取工作物件:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -463,10 +463,10 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>另請參閱
 
-- [本主題的簡報影片](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [本主題簡報的影片](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [效能](../../../docs/framework/performance/index.md)
-- [.NET 效能祕訣](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
+- [.NET 效能秘訣](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Channel 9 PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)
-- [.NET 編譯器平台 SDK](../../csharp/roslyn-sdk/index.md)
-- [在 GitHub 上的 dotnet/roslyn 存放庫](https://github.com/dotnet/roslyn)
+- [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
+- [GitHub 上的 dotnet/roslyn 存放庫](https://github.com/dotnet/roslyn)

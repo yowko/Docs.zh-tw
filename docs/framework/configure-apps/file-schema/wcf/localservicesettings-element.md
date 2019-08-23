@@ -2,20 +2,20 @@
 title: <localServiceSettings> 項目
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 91e9944de30a78b904d1679512f622bcc2955af4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36fcc9454a5762a4a375cc7f6eaee1c4cf0580e2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610188"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931722"
 ---
-# <a name="localservicesettings-element"></a>\<localServiceSettings > 項目
+# <a name="localservicesettings-element"></a>\<localServiceSettings > 元素
 指定此繫結之本機服務的安全性設定。  
   
  \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
   
 ## <a name="syntax"></a>語法  
@@ -44,12 +44,12 @@ ms.locfileid: "64610188"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`detectReplays`|布林值，這個值會指定是否會偵測及自動處理對通道所發出的重新執行攻擊。 預設為 `false`。|  
 |`inactivityTimeout`|正的 <xref:System.TimeSpan>，指定通道在無活動的狀態下要等候多長的時間才會逾時。預設為 "01:00:00"。|  
 |`issuedCookieLifeTime`|<xref:System.TimeSpan>，指定發出給所有新的安全性 Cookie 的存留期。 超過存留期的 Cookie 會回收，而且必須再次交涉。 預設值為 "10:00:00"。|  
-|`maxCachedCookies`|正整數，這個值會指定可以快取的 Cookie 數目上限。 預設值為 1000。|  
+|`maxCachedCookies`|正整數，這個值會指定可以快取的 Cookie 數目上限。 預設值是 1000。|  
 |`maxClockSkew`|<xref:System.TimeSpan>，指定通訊雙方之系統時鐘之間的最大時間差異。 預設值為 "00:05:00"。<br /><br /> 當這個值設定為預設值時，接收者接受之訊息的傳送時間時間戳記會比收到訊息的時間早或晚 5 分鐘。 沒有通過傳送時間測試的訊息會遭到拒絕。 這個設定會配合 `replayWindow` 屬性使用。|  
 |`maxPendingSessions`|正整數，這個值會指定服務支援之擱置中安全性工作階段數目上限。 當達到這個限制時，所有新的用戶端都會收到 SOAP 錯誤。 預設值為 1000。|  
 |`maxStatefulNegotiations`|正整數，這個值會指定可以同時為作用中的安全性交涉數目。 超過限制的交涉工作階段會排入佇列，而且只有在低於限制的空間可供使用時才能完成。 預設值為 1024。|  
@@ -66,10 +66,10 @@ ms.locfileid: "64610188"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
-|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
+|[\<security>](security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
   
 ## <a name="remarks"></a>備註  
  這些是本機設定，因為它們並未發行成為服務之安全性原則的一部分，因此不會影響用戶端的繫結。  
@@ -93,9 +93,9 @@ ms.locfileid: "64610188"
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [繫結](../../../wcf/bindings.md)
+- [擴充繫結](../../../wcf/extending/extending-bindings.md)
+- [自訂繫結](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [如何：使用 SecurityBindingElement 建立自訂系結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自訂繫結安全性](../../../wcf/samples/custom-binding-security.md)

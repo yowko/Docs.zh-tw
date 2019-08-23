@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad2209c6e28c7749bd149902e5b696955ee7f13f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36c2ed5529151a7ea18ccaffc2202ad6c69bcbd9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988672"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910222"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue 介面
 
-「 ICorDebugValue"，套用至所有值的子類別。 這個介面提供值的 Get 和 Set 方法。  
+套用至所有值之 "ICorDebugValue" 的子類別。 這個介面提供值的 Get 和 Set 方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
 |[GetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|將值複製到指定的緩衝區。|  
-|[SetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|複製指定的緩衝區中的新值。|  
+|[SetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|從指定的緩衝區複製新的值。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugGenericValue` 因為它是非可遠端處理，則是子介面。  
+ `ICorDebugGenericValue`是子介面, 因為它無法遠端處理。  
   
- 若是參考類型，值會是參考，而不是參考的內容。  
+ 對於參考型別, 此值為參考, 而不是參考的內容。  
   
  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "61988672"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

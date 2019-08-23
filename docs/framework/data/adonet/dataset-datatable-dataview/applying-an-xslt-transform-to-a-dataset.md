@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56f6e13763b5230e046c0838892393b3672a54be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034459"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937046"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>將 XSLT 轉換套用至 DataSet
-**WriteXml**方法<xref:System.Data.DataSet>可讓您的內容寫入**DataSet**為 XML 資料。 接下來，通用工作會使用 XML 轉換 (XSLT)，將這個 XML 轉換為另一種格式。 不過，同步處理**資料集**具有<xref:System.Xml.XmlDataDocument>可讓您套用 XSLT 樣式表的內容**DataSet**而不必先寫入的內容**資料集**做為 XML 資料使用**WriteXml**。  
+的**WriteXml**方法<xref:System.Data.DataSet>可讓您將**資料集**的內容撰寫為 XML 資料。 接下來，通用工作會使用 XML 轉換 (XSLT)，將這個 XML 轉換為另一種格式。 <xref:System.Xml.XmlDataDocument>不過, 使用同步處理**資料集**可讓您將 XSLT 樣式表單套用至**資料集**的內容, 而不需要先使用**WriteXml**將**資料集**的內容寫入為 XML 資料。  
   
- 下列範例會填入**資料集**與資料表和關聯性，同步處理**資料集**具有**XmlDataDocument**，並將寫入一部分**資料集**為 HTML 檔案中使用的 XSLT 樣式表。 下列為 XSLT 樣式表的內容。  
+ 下列範例會以資料表和關聯性填入**資料集**、使用**XmlDataDocument**同步處理**資料集**, 並使用 XSLT 樣式表單將部分**資料集**寫入為 HTML 檔案。 下列為 XSLT 樣式表的內容。  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -56,10 +56,10 @@ ms.locfileid: "62034459"
 </xsl:stylesheet>  
 ```  
   
- 下列程式碼會填入**資料集**並套用 XSLT 樣式表。  
+ 下列程式碼會填入**資料集**, 並套用 XSLT 樣式表單。  
   
 > [!NOTE]
->  如果您要套用至 XSLT 樣式表**資料集**，其中包含的關聯，即可達到最佳效能，如果您將設定**巢狀**屬性<xref:System.Data.DataRelation>至**true**每個巢狀關聯性。 這樣您就可以使用一般由上往下執行的 XSLT 樣式表，而不使用增強效能的 XPath 位置軸 (例如，樣式表中之前和之後同層級節點測試運算式)，來巡覽階層並轉換資料。 如需有關巢狀關聯的詳細資訊，請參閱[巢狀 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
+> 如果您要將 XSLT 樣式表單套用至包含關聯性的**資料集**, 如果您將每個嵌套關聯的的**Nested** <xref:System.Data.DataRelation>屬性設定為**true** , 就能達到最佳效能。 這樣您就可以使用一般由上往下執行的 XSLT 樣式表，而不使用增強效能的 XPath 位置軸 (例如，樣式表中之前和之後同層級節點測試運算式)，來巡覽階層並轉換資料。 如需有關嵌套關聯的詳細資訊, 請參閱 nested [datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

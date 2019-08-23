@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-ms.openlocfilehash: 69452f24e5c485ce0aba454648b59c50fb0ce1e3
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 77233517203989f188a2b3ddf436656bc8da82a6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966560"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>HOW TO：繼承 UserControl 類別
 若要結合一或多個 Windows Forms 控制項的功能與自訂程式碼，您可以建立「使用者控制項」。 使用者控制項可結合快速控制項開發、標準 Windows Forms 控制項功能，以及自訂屬性和方法的各種用途。 當您開始建立使用者控制項時，您會看到吸引人的設計工具，您可以在其上放置標準 Windows Forms 控制項。 這些控制項會保留其所有固有功能，以及標準控制項的外觀和行為 (外觀及操作)。 不過，這些控制項一旦內建於使用者控制項，您就無法再透過程式碼使用它們。 使用者控制項會進行自己的繪製，也會處理與控制項相關聯的所有基本功能。
@@ -37,5 +37,5 @@ ms.locfileid: "69037758"
 - [如何：繼承自控制項類別](how-to-inherit-from-the-control-class.md)
 - [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
 - [如何：Windows Forms 的作者控制項](how-to-author-controls-for-windows-forms.md)
-- [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Visual Basic 中的繼承事件處理常式疑難排解](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [如何：測試 UserControl 的執行時間行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

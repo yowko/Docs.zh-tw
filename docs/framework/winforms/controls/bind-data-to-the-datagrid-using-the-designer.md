@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 51e18555a322e32f0877167d42cd30776068c746
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 609878416be26786ce865168c996c78e18b1897f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040028"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917882"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>作法：使用設計工具將資料繫結至 Windows Forms DataGridView 控制項
 您可以使用設計工具, 將<xref:System.Windows.Forms.DataGridView>控制項連接到數種不同種類的資料來源, 包括資料庫、商務物件或 Web 服務。 當您使用設計工具將控制項系結至資料來源時, 控制項會自動系結至<xref:System.Windows.Forms.BindingSource>代表資料來源的元件。 此外，控制項中會自動產生資料行，以符合資料來源所提供的結構描述資訊。
@@ -39,7 +39,7 @@ ms.locfileid: "69040028"
 6. 若要建立主要/詳細資料關聯性, 請在第二個<xref:System.Windows.Forms.DataGridView>控制項的 [**選擇資料來源**] 下拉式視窗<xref:System.Windows.Forms.BindingSource>中, 展開針對父資料表所建立的, 然後從顯示的清單中選取相關的子資料工作表。
 
     > [!NOTE]
-    >  如果專案已經有資料來源，您也可以使用 [資料來源] 視窗建立資料表單。 如需詳細資訊，請參閱[資料來源視窗](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))。
+    > 如果專案已經有資料來源，您也可以使用 [資料來源] 視窗建立資料表單。 如需詳細資訊，請參閱[資料來源視窗](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))。
 
 ## <a name="see-also"></a>另請參閱
 

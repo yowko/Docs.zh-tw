@@ -2,24 +2,24 @@
 title: <add> 項目的 <scopedCertificates>
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 06a624d0146745581dfe907d044d1f7d3b857902
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9756d37527fcf888cad930b24677ae8e6a2c8fba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673858"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920048"
 ---
-# <a name="add-of-scopedcertificates-element"></a>\<新增 > 的\<scopedCertificates > 項目
+# <a name="add-of-scopedcertificates-element"></a>\<新增 scopedCertificates > \<元素的 >
 將 X.509 憑證加入至範圍憑證的集合。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 endpointBehaviors 區段  
-\<behavior>  
+\<行為 >  
 \<clientCredentials>  
 \<serviceCertificate>  
 \<scopedCertificates>  
-\<add> element for \<scopedCertificates>  
+\<新增 scopedCertificates > 的\<> 元素  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,9 +52,9 @@ endpointBehaviors 區段
   
 ## <a name="x509findtype-attribute"></a>x509FindType 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|列舉|這些值包括：FindByThumbprint、 FindBySubjectName、 FindBySubjectDistinguishedName、 FindByIssuerName、 FindByIssuerDistinguishedName、 FindBySerialNumber、 FindByTimeValid、 FindByTimeNotYetValid、 FindBySerialNumber、 FindByTimeExpired、 FindByTemplateNameFindByApplicationPolicy、 FindByCertificatePolicy、 FindByExtension、 FindByKeyUsage、 FindBySubjectKeyIdentifier。|  
+|列舉|這些值包括：FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation 屬性  
   
@@ -66,23 +66,23 @@ endpointBehaviors 區段
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|這些值包括：AddressBook、 AuthRoot、 CertificateAuthority、 Disallowed、 My、 Root、 TrustedPeople 和 TrustedPublisher。|  
+|列舉|這些值包括：通訊錄、AuthRoot、CertificateAuthority、不允許、My、Root、TrustedPeople 和 TrustedPublisher。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<scopedCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|表示特定服務 (範圍服務) 為驗證所提供之 X.509 憑證的集合。|  
+|[\<scopedCertificates>](scopedcertificates-element.md)|表示特定服務 (範圍服務) 為驗證所提供之 X.509 憑證的集合。|  
   
 ## <a name="remarks"></a>備註  
  這個項目可讓用戶端根據與其進行通訊之服務的 URL 設定要使用的服務憑證。 在用戶端可以與多重服務 (終端服務以及中繼安全性權杖服務) 進行通訊的已核發權杖情況中，這個屬性特別有用。 對於使用以憑證為基礎之訊息安全性的繫結，這個憑證會用來加密傳送給服務的訊息，而且預期會被服務用來簽署對用戶端的回覆。  
   
  如果繫結需要服務的憑證，但是在 ScopedCertificates 中找不到服務 URL 的專屬憑證，則會使用預設的憑證。  
   
- 如需詳細資訊，請參閱的 < 範圍憑證 > 一節[How to:建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
+ 如需詳細資訊, 請參閱[如何:建立同盟用戶端](../../../wcf/feature-details/how-to-create-a-federated-client.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會將 X.509 憑證新增至集合。  
@@ -114,7 +114,7 @@ endpointBehaviors 區段
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [如何：建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [如何：建立同盟用戶端](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [使用憑證](../../../wcf/feature-details/working-with-certificates.md)
+- [保護用戶端安全](../../../wcf/securing-clients.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)

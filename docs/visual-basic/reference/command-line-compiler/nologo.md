@@ -7,15 +7,15 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: c1824e4a086ecdd4b6a776bd6894f6e003d02867
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07e1718554b158635b9d8b04958834e804e1fe9f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788998"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964382"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-在編譯期間隱藏著作權橫幅和參考用訊息的顯示。  
+在編譯期間隱藏著作權橫幅和參考用訊息。  
   
 ## <a name="syntax"></a>語法  
   
@@ -24,13 +24,13 @@ ms.locfileid: "61788998"
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果您指定`-nologo`，編譯器不顯示著作權橫幅。 `-nologo` 預設為非作用中。  
+ 如果您指定`-nologo`, 編譯器不會顯示著作權橫幅。 `-nologo` 預設為非作用中。  
   
 > [!NOTE]
->  `-nologo`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。  
+> 此`-nologo`選項無法從 Visual Studio 開發環境中使用; 只有在從命令列進行編譯時, 才能使用此選項。  
   
 ## <a name="example"></a>範例  
- 下列程式碼編譯`T2.vb`並不顯示著作權橫幅。  
+ 下列程式碼會`T2.vb`編譯並不顯示著作權橫幅。  
   
 ```console
 vbc -nologo t2.vb  

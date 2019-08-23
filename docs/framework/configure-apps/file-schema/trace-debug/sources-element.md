@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73d4eb2741bdbe5a07704ca0f3b2f779706e66dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926947"
 ---
-# <a name="sources-element"></a>\<來源 > 項目
+# <a name="sources-element"></a>\<> 元素的來源
 指定起始追蹤訊息的追蹤來源。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<sources>  
+\<來源 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,9 +39,9 @@ ms.locfileid: "61701264"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|必要項目。<br /><br /> 指定起始追蹤訊息的追蹤來源。|  
+|[\<source>](source-element.md)|必要項目。<br /><br /> 指定起始追蹤訊息的追蹤來源。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -51,10 +51,10 @@ ms.locfileid: "61701264"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 此元素可用於電腦設定檔 (Machine.config) 和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<sources>`要加入追蹤來源項目`mySource`]，將來源交換器層級設定為 [ `sourceSwitch`。 主控台追蹤接聽程式會加入，將追蹤資訊寫入主控台。  
+ 下列範例顯示如何使用`<sources>`專案來新增追蹤來源`mySource` , 以及設定名`sourceSwitch`為之來源交換器的層級。 隨即加入主控台追蹤接聽程式, 將追蹤資訊寫入主控台。  
   
 ```xml  
 <configuration>  
@@ -87,5 +87,5 @@ ms.locfileid: "61701264"
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [追蹤和偵錯設定結構描述](index.md)
+- [\<source>](source-element.md)

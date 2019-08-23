@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 263ec73af7f4a6f52c4570e17cd140b6afb53601
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd64531116b1588683c2f5c8964e78e41e371ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637842"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955347"
 ---
 # <a name="message-security-with-mutual-certificates"></a>相互憑證的訊息安全性
-下列案例示範 Windows Communication Foundation (WCF) 服務和用戶端使用訊息安全性模式保護。 用戶端與服務以憑證加以驗證。  
+下列案例顯示使用訊息安全性模式保護的 Windows Communication Foundation (WCF) 服務和用戶端。 用戶端與服務以憑證加以驗證。  
   
  因為案例使用具有 X.509 憑證權杖設定檔的 WS-Security，所以這個案例是互通的。  
   
 > [!NOTE]
->  這個案例並不執行服務憑證的交涉。 在任何通訊前，必須先對用戶端提供服務憑證。 伺服器憑證可在應用程式散發，或在超出範圍通訊中提供。  
+> 這個案例並不執行服務憑證的交涉。 在任何通訊前，必須先對用戶端提供服務憑證。 伺服器憑證可在應用程式散發，或在超出範圍通訊中提供。  
   
- ![訊息相互憑證的安全性](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![相互憑證的訊息安全性](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |安全性模式|訊息|  
 |互通性|是的，採用 WS-Security 及 X.509 憑證權杖設定檔相容的用戶端及服務。|  
@@ -95,7 +95,7 @@ ms.locfileid: "64637842"
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
-- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -107,7 +107,7 @@ ms.locfileid: "64637842"
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>組態  
- 下列組態會設定用戶端。 必須使用指定的用戶端憑證[ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。 此外，使用指定的服務憑證[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)。  
+ 下列組態會設定用戶端。 您必須使用[ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)來指定用戶端憑證。 此外, 也會使用[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)來指定服務憑證。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -162,4 +162,4 @@ ms.locfileid: "64637842"
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [如何：建立並在 WCF 中安裝暫時憑證來獲得傳輸安全性在開發期間](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [如何：在 WCF 中建立和安裝用於開發期間傳輸安全性的暫時性憑證](https://go.microsoft.com/fwlink/?LinkId=244264)

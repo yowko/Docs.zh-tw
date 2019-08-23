@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662142"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913906"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知問題和考量
-本節提供使用 LINQ to Entities 查詢的已知問題的相關資訊。  
+本節提供 LINQ to Entities 查詢之已知問題的相關資訊。  
   
 - [無法快取的 LINQ 查詢](#LINQQueriesThatAreNotCached)  
   
-- [排序資訊遺失](#OrderingInfoLost)  
+- [訂單資訊遺失](#OrderingInfoLost)  
   
 - [不支援不帶正負號的整數](#UnsignedIntsUnsupported)  
   
-- [型別轉換錯誤](#TypeConversionErrors)  
+- [類型轉換錯誤](#TypeConversionErrors)  
   
 - [不支援參考非純量變數](#RefNonScalarClosures)  
   
-- [使用 SQL Server 2000 的巢狀的查詢可能會失敗](#NestedQueriesSQL2000)  
+- [嵌套的查詢可能會因 SQL Server 2000 而失敗](#NestedQueriesSQL2000)  
   
-- [投影至匿名型別](#ProjectToAnonymousType)  
+- [投射至匿名型別](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>不能快取的 LINQ 查詢  
@@ -35,14 +35,14 @@ ms.locfileid: "67662142"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>排序資訊遺失  
- 將資料行投影至匿名型別，將會造成排序資訊遺失的都針對 SQL Server 2005 資料庫設定為"80"的相容性層級執行某些查詢中。  如果 order-by 清單中的資料行名稱與 selector 中的資料行名稱相符，就會發生這種情況，如以下範例所示：  
+ 將資料行投射到匿名型別, 會導致在某些查詢中, 針對設定為相容性層級為 "80" 的 SQL Server 2005 資料庫而遺失的順序資訊。  如果 order-by 清單中的資料行名稱與 selector 中的資料行名稱相符，就會發生這種情況，如以下範例所示：  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>不支援不帶正負號的整數  
- LINQ to Entities 查詢中指定不帶正負號的整數型別不支援，因為[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]不支援不帶正負號的整數。 如果您指定的不帶正負號的整數，<xref:System.ArgumentException>將會擲回例外狀況在查詢運算式轉譯期間，在下列範例所示。 此範例會查詢 ID 為 48000 的訂單。  
+ 不支援在 LINQ to Entities 查詢中指定不帶正負號的整數類型[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] , 因為不支援不帶正負號的整數。 如果您指定不帶正負號的<xref:System.ArgumentException>整數, 查詢運算式轉譯期間將會擲回例外狀況, 如下列範例所示。 此範例會查詢 ID 為 48000 的訂單。  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -58,7 +58,7 @@ ms.locfileid: "67662142"
  不支援在查詢中參考非純量變數，例如實體。 執行這類查詢時，系統會擲回 <xref:System.NotSupportedException> 例外狀況，並且顯示一則訊息，表示「無法建立 `EntityType` 型別的常數值。 在此僅支援基本型別 (『例如 Int32、String 和 Guid』)」。  
   
 > [!NOTE]
->  支援參考純量變數的集合。  
+> 支援參考純量變數的集合。  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  

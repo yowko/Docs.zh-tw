@@ -2,20 +2,20 @@
 title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 0940248364488bb38a329c5e461d72463c574e74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65488c34931f6d7c424ece58a4855e746ea455bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670374"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936417"
 ---
 # <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager>
 提供工作流程組態項目，這個項目會在服務層級建立傳輸、訊息或建立者的有效性。  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<serviceAuthenticationManager>  
   
 ## <a name="syntax"></a>語法  
@@ -35,7 +35,7 @@ ms.locfileid: "61670374"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |serviceAuthenticationManagerType|字串，指定目前行為的驗證原則類型。|  
   
@@ -44,9 +44,9 @@ ms.locfileid: "61670374"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="see-also"></a>另請參閱
 

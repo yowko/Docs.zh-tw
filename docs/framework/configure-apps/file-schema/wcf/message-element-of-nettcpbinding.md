@@ -2,20 +2,20 @@
 title: <message> 的 <netTcpBinding> 項目
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbbacee00533b72d9e06ee3a79d1e9c0414b337c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767555"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931641"
 ---
-# <a name="message-element-of-nettcpbinding"></a>\<訊息 > 項目\<netTcpBinding >
-定義設定之端點的訊息層級安全性需求的型別[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
+# <a name="message-element-of-nettcpbinding"></a>\<netTcpBinding > 的\<message > 元素
+定義使用[ \<netTcpBinding >](nettcpbinding.md)設定之端點的訊息層級安全性需求類型。  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<netTcpBinding>  
-\<binding>  
+\<系結 >  
 \<安全性 >  
 \<message>  
   
@@ -59,11 +59,11 @@ ms.locfileid: "61767555"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |None|這會允許服務與匿名用戶端互動。 在服務上，這表示此服務不需要任何用戶端認證。 在用戶端上，這表示此用戶端不提供任何用戶端認證。|  
 |Windows|允許 SOAP 交換在 Windows 認證的已驗證內容中。|  
-|使用者名稱|允許服務要求用戶端必須使用 UserName 認證進行驗證。 WCF 不支援傳送密碼摘要或衍生金鑰使用的密碼，並使用訊息安全性這類金鑰。 因此，WCF 會強制使用 UserName 認證時，保護傳輸。 這個認證模式會產生可互通交換或是無法互通的交涉 (根據 `negotiateServiceCredential` 屬性)。|  
+|使用者名稱|允許服務要求用戶端必須使用 UserName 認證進行驗證。 WCF 不支援傳送密碼摘要或使用密碼衍生金鑰, 以及使用這類金鑰來取得訊息安全性。 因此, 在使用使用者名稱認證時, WCF 會強制保護傳輸。 這個認證模式會產生可互通交換或是無法互通的交涉 (根據 `negotiateServiceCredential` 屬性)。|  
 |憑證|允許服務要求用戶端使用憑證進行驗證。 如果使用訊息安全性模式且 `negotiateServiceCredential` 屬性設定為 `false`，則必須為用戶端提供服務憑證。|  
 |IssuedToken|指定通常由安全性權杖服務 (STS) 所發出的自訂權杖。|  
   
@@ -72,9 +72,9 @@ ms.locfileid: "61767555"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|定義 <xref:System.ServiceModel.Configuration.NetTcpBindingElement> 的安全性功能。|  
+|[\<security>](security-of-nettcpbinding.md)|定義 <xref:System.ServiceModel.Configuration.NetTcpBindingElement> 的安全性功能。|  
   
 ## <a name="remarks"></a>備註  
  訊息會使用訊息層級安全性達成 SOAP 訊息的完整性與機密性，以及通訊對等兩端的交互驗證。 如果繫結上選取了這個安全性模式，通道堆疊會以訊息安全性繫結項目進行設定，且 SOAP 訊息的安全性會符合 WS-Security* 標準。  
@@ -85,8 +85,8 @@ ms.locfileid: "61767555"
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [繫結](../../../../../docs/framework/wcf/bindings.md)
-- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
+- [繫結](../../../wcf/bindings.md)
+- [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

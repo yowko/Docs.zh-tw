@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89462d05b9da7fc63bda58955517bfa9f0c50ab9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608836"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964193"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ 服務模型組態工具 (ComSvcConfig.exe)
 COM+ 服務模型組態命令列工具 (ComSvcConfig.exe) 可讓您設定要公開為 Web 服務的 COM+ 介面。  
@@ -24,17 +24,17 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  您必須是本機電腦的系統管理員，才能使用 ComSvcConfig.exe。  
+> 您必須是本機電腦的系統管理員，才能使用 ComSvcConfig.exe。  
   
  您可以在下列位置找到這個工具  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
- 如需 ComSvcConfig.exe 的詳細資訊，請參閱[How to:使用 COM + 服務模型組態工具](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
+ 如需有關 ComSvcConfig 的詳細資訊, 請[參閱如何:使用 COM + 服務模型設定工具](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
   
  下表說明可以和 ComSvcConfig.exe 搭配使用的模式。  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |`install`|安裝服務模型整合的 COM+ 介面組態。<br /><br /> 簡短形式：`/i`。|  
 |`uninstall`|解除安裝服務模型整合的 COM+ 介面組態。<br /><br /> 簡短形式：`/u`。|  
@@ -45,9 +45,9 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 |選項|描述|  
 |------------|-----------------|  
 |`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|指定要設定的 COM+ 應用程式。<br /><br /> 簡短形式：`/a`。|  
-|`/contract:` \<*ClassID*  &#124; *ProgID*  &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; \*\>|指定要設定為服務合約的 COM+ 元件和介面。<br /><br /> 簡短形式：`/c`。<br /><br /> 雖然萬用字元 (\*) 可在您指定的元件和介面的名稱，我們建議您不要使用它，因為您可能會公開您不想要的介面。|  
-|`/hosting:` \<*complus*  &#124; *was*\>|指定使用 COM+ 主控模式或 Web 主控模式。<br /><br /> 簡短形式：`/h`。<br /><br /> 使用 COM+ 主控模式必須明確啟動 COM+ 應用程式。 使用 Web 主控模式可讓 COM+ 應用程式視需要自動啟動。 如果 COM+ 應用程式是程式庫應用程式，它會在網際網路資訊服務 (IIS) 處理序中執行。 如果 COM+ 應用程式是伺服器應用程式，它會在 Dllhost.exe 處理序中執行。|  
-|`/webSite:` \<*WebsiteName*\>|指定使用 Web 主控模式時用於主控的網站 (請參閱 `/hosting` 旗標)。<br /><br /> 簡短形式：`/w`。<br /><br /> 如果未指定網站，則會使用預設網站。|  
+|`/contract:`&#124; &#124; &#124; ClassID ProgID&#124; , InterfaceID介面名稱\* \<    \*\>|指定要設定為服務合約的 COM+ 元件和介面。<br /><br /> 簡短形式：`/c`。<br /><br /> 雖然當您指定元件\*和介面名稱時可以使用萬用字元 (), 但我們建議您不要使用它, 因為您可能會公開不想要的介面。|  
+|`/hosting:`&#124; complus \<為  \>|指定使用 COM+ 主控模式或 Web 主控模式。<br /><br /> 簡短形式：`/h`。<br /><br /> 使用 COM+ 主控模式必須明確啟動 COM+ 應用程式。 使用 Web 主控模式可讓 COM+ 應用程式視需要自動啟動。 如果 COM+ 應用程式是程式庫應用程式，它會在網際網路資訊服務 (IIS) 處理序中執行。 如果 COM+ 應用程式是伺服器應用程式，它會在 Dllhost.exe 處理序中執行。|  
+|`/webSite:`\< *WebsiteName*\>|指定使用 Web 主控模式時用於主控的網站 (請參閱 `/hosting` 旗標)。<br /><br /> 簡短形式：`/w`。<br /><br /> 如果未指定網站，則會使用預設網站。|  
 |`/webDirectory:` \<*WebDirectoryName*\>|指定使用 Web 主控模式時用於主控的虛擬目錄 (請參閱 `/hosting` 旗標)。<br /><br /> 簡短形式：`/d`。|  
 |`/mex`|將 Metadata Exchange (MEX) 服務端點新增至預設服務組態，以支援要從服務擷取合約定義的用戶端。<br /><br /> 簡短形式：`/x`。|  
 |`/id`|以 ID 的方式顯示應用程式、元件和介面資訊。<br /><br /> 簡短形式：`/k`。|  
@@ -96,4 +96,4 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：使用 COM + 服務模型組態工具](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [如何：使用 COM + 服務模型設定工具](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 193232ce1006a9cf209db9330343386404948440
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afbf480d69e97662b5963706bb8c192aec0325a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786330"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966286"
 ---
 # <a name="icordebug-interface"></a>ICorDebug 介面
-提供方法，可讓開發人員能夠偵錯在 common language runtime (CLR) 環境中的應用程式。  
+提供可讓開發人員在 common language runtime (CLR) 環境中, 對應用程式進行 debug 的方法。  
   
 > [!NOTE]
->  不支援偵錯混合 （managed 和原生程式碼），在 Windows 95、windows Windows 98 或 Windows ME，或在非 x86 平台 （例如 IA64 和 AMD64） 上。  
+> Windows 95、Windows 98 或 Windows ME 或非 x86 平臺 (例如 IA64 和 AMD64) 不支援混合模式 (managed 和機器碼) 的偵錯工具。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
-|[CanLaunchOrAttach 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|判斷是否有可能在目前的電腦以及執行階段組態的內容中啟動新的處理序，或附加至指定的處理序。|  
-|[CreateProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|啟動處理程序和它所控制的偵錯工具的主要執行緒。|  
-|[DebugActiveProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|將偵錯工具附加至現有的處理序。|  
-|[EnumerateProcesses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|取得正在偵錯的處理程序中的列舉值。|  
-|[GetProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|傳回"ICorDebugProcess 」 物件與指定的處理序識別碼。|  
+|[CanLaunchOrAttach 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|判斷是否可以在目前的電腦和執行時間設定的內容中, 啟動新的進程或附加至指定的進程。|  
+|[CreateProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|在偵錯工具的控制項底下啟動進程和其主要執行緒。|  
+|[DebugActiveProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|將偵錯工具附加至現有的進程。|  
+|[EnumerateProcesses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|取得正在進行調試之進程的列舉值。|  
+|[GetProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|傳回具有指定處理序識別碼的 "ICorDebugProcess" 物件。|  
 |[Initialize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|初始化 `ICorDebug` 物件。|  
 |[SetManagedHandler 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|指定 managed 事件的事件處理常式物件。|  
-|[SetUnmanagedHandler 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|指定未受管理的事件的事件處理常式物件。|  
-|[Terminate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|終止`ICorDebug`物件。|  
+|[SetUnmanagedHandler 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|指定非受控事件的事件處理常式物件。|  
+|[Terminate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|`ICorDebug`終止物件。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebug` 代表偵錯工具處理序的事件處理迴圈。 偵錯工具必須等到[icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)從正在偵錯之前釋出此介面的所有處理序的回呼。  
+ `ICorDebug`表示偵錯工具進程的事件處理迴圈。 偵錯工具必須等到所有進程中的[ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)回呼, 才會釋放此介面。  
   
- `ICorDebug`物件是初始的物件，以控制所有進一步 managed 偵錯。 在.NET framework 1.0 和 1.1 版中，這個物件是`CoClass`建立 COM 物件 在.NET Framework 2.0 版中，此物件已不再`CoClass`物件。 它必須先建立[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函式，也就是多版本感知。 這個新建立的函式可讓用戶端取得的特定實作`ICorDebug`，這也會模擬偵錯 API 的特定版本。  
+ `ICorDebug`物件是用來控制所有進一步 managed 調試的初始物件。 在 .NET Framework 版本1.0 和1.1 中, 此物件是從`CoClass` COM 建立的物件。 在 .NET Framework 版本2.0 中, 此物件`CoClass`不再是物件。 它必須由[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函式所建立, 這是更容易感知版本的功能。 這個新的建立功能可讓用戶端取得的特定`ICorDebug`執行, 這也會模擬特定版本的調試 API。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -58,7 +58,7 @@ ms.locfileid: "61786330"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
