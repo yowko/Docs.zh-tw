@@ -3,24 +3,24 @@ title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: 5202e162a7eb5fc4e36d6a6c0a2c18af48872a69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47366c5bb2bd9228268fce3ae6e1fb5ad457dab1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791595"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942612"
 ---
-# <a name="nameclaimtype"></a><span data-ttu-id="dd08b-101">\<nameClaimType></span><span class="sxs-lookup"><span data-stu-id="dd08b-101">\<nameClaimType></span></span>
-<span data-ttu-id="dd08b-102">設定指定的宣告型<xref:System.Security.Principal.IIdentity.Name%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="dd08b-102">Sets the claim type that specifies the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="dd08b-103">宣告類型用來搜尋<xref:System.Security.Claims.Claim>集合中的<xref:System.Security.Claims.ClaimsIdentity>所傳回的物件<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>此語彙基元處理常式的方法。</span><span class="sxs-lookup"><span data-stu-id="dd08b-103">The claim type is used to search for a <xref:System.Security.Claims.Claim> in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of this token handler.</span></span> <span data-ttu-id="dd08b-104">比對的宣告的值將做為名稱<xref:System.Security.Principal.IIdentity>產生從這個權杖處理常式。</span><span class="sxs-lookup"><span data-stu-id="dd08b-104">The value of the matching claim is then set as the name of the <xref:System.Security.Principal.IIdentity> generated from this token handler.</span></span>  
+# <a name="nameclaimtype"></a><span data-ttu-id="0a353-101">\<nameClaimType></span><span class="sxs-lookup"><span data-stu-id="0a353-101">\<nameClaimType></span></span>
+<span data-ttu-id="0a353-102">設定指定<xref:System.Security.Principal.IIdentity.Name%2A>屬性的宣告類型。</span><span class="sxs-lookup"><span data-stu-id="0a353-102">Sets the claim type that specifies the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="0a353-103">宣告類型是用來搜尋此標記處理<xref:System.Security.Claims.Claim>程式的<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>方法所<xref:System.Security.Claims.ClaimsIdentity>傳回的物件集合中的。</span><span class="sxs-lookup"><span data-stu-id="0a353-103">The claim type is used to search for a <xref:System.Security.Claims.Claim> in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of this token handler.</span></span> <span data-ttu-id="0a353-104">然後, 比對宣告的值會設定為從這個 token 處理<xref:System.Security.Principal.IIdentity>程式產生之的名稱。</span><span class="sxs-lookup"><span data-stu-id="0a353-104">The value of the matching claim is then set as the name of the <xref:System.Security.Principal.IIdentity> generated from this token handler.</span></span>  
   
- <span data-ttu-id="dd08b-105">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="dd08b-105">\<system.identityModel></span></span>  
-<span data-ttu-id="dd08b-106">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="dd08b-106">\<identityConfiguration></span></span>  
-<span data-ttu-id="dd08b-107">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="dd08b-107">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="dd08b-108">\<add></span><span class="sxs-lookup"><span data-stu-id="dd08b-108">\<add></span></span>  
-<span data-ttu-id="dd08b-109">\<samlSecurityTokenRequirement></span><span class="sxs-lookup"><span data-stu-id="dd08b-109">\<samlSecurityTokenRequirement></span></span>  
-<span data-ttu-id="dd08b-110">\<nameClaimType></span><span class="sxs-lookup"><span data-stu-id="dd08b-110">\<nameClaimType></span></span>  
+ <span data-ttu-id="0a353-105">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="0a353-105">\<system.identityModel></span></span>  
+<span data-ttu-id="0a353-106">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="0a353-106">\<identityConfiguration></span></span>  
+<span data-ttu-id="0a353-107">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="0a353-107">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="0a353-108">\<add></span><span class="sxs-lookup"><span data-stu-id="0a353-108">\<add></span></span>  
+<span data-ttu-id="0a353-109">\<samlSecurityTokenRequirement></span><span class="sxs-lookup"><span data-stu-id="0a353-109">\<samlSecurityTokenRequirement></span></span>  
+<span data-ttu-id="0a353-110">\<nameClaimType></span><span class="sxs-lookup"><span data-stu-id="0a353-110">\<nameClaimType></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd08b-111">語法</span><span class="sxs-lookup"><span data-stu-id="dd08b-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a353-111">語法</span><span class="sxs-lookup"><span data-stu-id="0a353-111">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -37,28 +37,28 @@ ms.locfileid: "61791595"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="dd08b-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="dd08b-112">Attributes and Elements</span></span>  
- <span data-ttu-id="dd08b-113">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="dd08b-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0a353-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="0a353-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="0a353-113">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="0a353-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="dd08b-114">屬性</span><span class="sxs-lookup"><span data-stu-id="dd08b-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0a353-114">屬性</span><span class="sxs-lookup"><span data-stu-id="0a353-114">Attributes</span></span>  
   
-|<span data-ttu-id="dd08b-115">屬性</span><span class="sxs-lookup"><span data-stu-id="dd08b-115">Attribute</span></span>|<span data-ttu-id="dd08b-116">描述</span><span class="sxs-lookup"><span data-stu-id="dd08b-116">Description</span></span>|  
+|<span data-ttu-id="0a353-115">屬性</span><span class="sxs-lookup"><span data-stu-id="0a353-115">Attribute</span></span>|<span data-ttu-id="0a353-116">描述</span><span class="sxs-lookup"><span data-stu-id="0a353-116">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="dd08b-117">value</span><span class="sxs-lookup"><span data-stu-id="dd08b-117">value</span></span>|<span data-ttu-id="dd08b-118">字串，指定代表要用於宣告的宣告類型 URI<xref:System.Security.Principal.IIdentity.Name%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="dd08b-118">A string that specifies the URI that represents the claim type of the claim to use for the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="dd08b-119">必要項。</span><span class="sxs-lookup"><span data-stu-id="dd08b-119">Required.</span></span>|  
+|<span data-ttu-id="0a353-117">value</span><span class="sxs-lookup"><span data-stu-id="0a353-117">value</span></span>|<span data-ttu-id="0a353-118">指定 URI 的字串, 代表要<xref:System.Security.Principal.IIdentity.Name%2A>用於屬性之宣告的宣告類型。</span><span class="sxs-lookup"><span data-stu-id="0a353-118">A string that specifies the URI that represents the claim type of the claim to use for the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="0a353-119">必要項。</span><span class="sxs-lookup"><span data-stu-id="0a353-119">Required.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="dd08b-120">子元素</span><span class="sxs-lookup"><span data-stu-id="dd08b-120">Child Elements</span></span>  
- <span data-ttu-id="dd08b-121">None</span><span class="sxs-lookup"><span data-stu-id="dd08b-121">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0a353-120">子元素</span><span class="sxs-lookup"><span data-stu-id="0a353-120">Child Elements</span></span>  
+ <span data-ttu-id="0a353-121">無</span><span class="sxs-lookup"><span data-stu-id="0a353-121">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="dd08b-122">父項目</span><span class="sxs-lookup"><span data-stu-id="dd08b-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0a353-122">父項目</span><span class="sxs-lookup"><span data-stu-id="0a353-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="dd08b-123">項目</span><span class="sxs-lookup"><span data-stu-id="dd08b-123">Element</span></span>|<span data-ttu-id="dd08b-124">描述</span><span class="sxs-lookup"><span data-stu-id="dd08b-124">Description</span></span>|  
+|<span data-ttu-id="0a353-123">項目</span><span class="sxs-lookup"><span data-stu-id="0a353-123">Element</span></span>|<span data-ttu-id="0a353-124">說明</span><span class="sxs-lookup"><span data-stu-id="0a353-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="dd08b-125">\<samlSecurityTokenRequirement></span><span class="sxs-lookup"><span data-stu-id="dd08b-125">\<samlSecurityTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|<span data-ttu-id="dd08b-126">提供組態<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>類別，<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別或其中一個這些類別的衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="dd08b-126">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
+|[<span data-ttu-id="0a353-125">\<samlSecurityTokenRequirement></span><span class="sxs-lookup"><span data-stu-id="0a353-125">\<samlSecurityTokenRequirement></span></span>](samlsecuritytokenrequirement.md)|<span data-ttu-id="0a353-126"><xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>提供類別<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 、類別或其中任一個類別的衍生類別的設定。</span><span class="sxs-lookup"><span data-stu-id="0a353-126">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dd08b-127">備註</span><span class="sxs-lookup"><span data-stu-id="dd08b-127">Remarks</span></span>  
- <span data-ttu-id="dd08b-128">`<nameClaimType>`項目集<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>屬性時<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>物件從組態初始化。</span><span class="sxs-lookup"><span data-stu-id="dd08b-128">The `<nameClaimType>` element sets the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> property when a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> object is initialized from configuration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0a353-127">備註</span><span class="sxs-lookup"><span data-stu-id="0a353-127">Remarks</span></span>  
+ <span data-ttu-id="0a353-128">元素會在<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>物件<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>從設定初始化時設定屬性。 `<nameClaimType>`</span><span class="sxs-lookup"><span data-stu-id="0a353-128">The `<nameClaimType>` element sets the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> property when a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> object is initialized from configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dd08b-129">範例</span><span class="sxs-lookup"><span data-stu-id="dd08b-129">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0a353-129">範例</span><span class="sxs-lookup"><span data-stu-id="0a353-129">Example</span></span>  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
@@ -68,6 +68,6 @@ ms.locfileid: "61791595"
 </add>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dd08b-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dd08b-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a353-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0a353-130">See also</span></span>
 
 - <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

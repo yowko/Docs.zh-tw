@@ -11,67 +11,68 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0b56ac66302f11c59c149197a84bb96691282a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674645"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921006"
 ---
-# <a name="linkedconfiguration-element"></a><span data-ttu-id="13e13-102">\<linkedConfiguration > 項目</span><span class="sxs-lookup"><span data-stu-id="13e13-102">\<linkedConfiguration> element</span></span>
+# <a name="linkedconfiguration-element"></a><span data-ttu-id="6b5e2-102">\<linkedConfiguration > 元素</span><span class="sxs-lookup"><span data-stu-id="6b5e2-102">\<linkedConfiguration> element</span></span>
 
-<span data-ttu-id="13e13-103">指定要包含的組態檔。</span><span class="sxs-lookup"><span data-stu-id="13e13-103">Specifies a configuration file to include.</span></span>
+<span data-ttu-id="6b5e2-103">指定要包含的組態檔。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-103">Specifies a configuration file to include.</span></span>
 
-<span data-ttu-id="13e13-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="13e13-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="13e13-105">&nbsp;&nbsp;[ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="13e13-105">&nbsp;&nbsp;[**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) </span></span>  
-<span data-ttu-id="13e13-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**</span><span class="sxs-lookup"><span data-stu-id="13e13-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**</span></span>
+<span data-ttu-id="6b5e2-104">[ **\<configuration>** ](configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="6b5e2-104">[**\<configuration>**](configuration-element.md) </span></span>  
+<span data-ttu-id="6b5e2-105">&nbsp;&nbsp;[ **\<assemblyBinding>** ](assemblybinding-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="6b5e2-105">&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-configuration.md) </span></span>  
+<span data-ttu-id="6b5e2-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**</span><span class="sxs-lookup"><span data-stu-id="6b5e2-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="13e13-107">語法</span><span class="sxs-lookup"><span data-stu-id="13e13-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="6b5e2-107">語法</span><span class="sxs-lookup"><span data-stu-id="6b5e2-107">Syntax</span></span>
 
 ```xml
 <linkedConfiguration href="URL of linked configuration file" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="13e13-108">屬性</span><span class="sxs-lookup"><span data-stu-id="13e13-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="6b5e2-108">屬性</span><span class="sxs-lookup"><span data-stu-id="6b5e2-108">Attribute</span></span>
 
-|           | <span data-ttu-id="13e13-109">描述</span><span class="sxs-lookup"><span data-stu-id="13e13-109">Description</span></span> |
+|           | <span data-ttu-id="6b5e2-109">描述</span><span class="sxs-lookup"><span data-stu-id="6b5e2-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="13e13-110">**href**</span><span class="sxs-lookup"><span data-stu-id="13e13-110">**href**</span></span>  | <span data-ttu-id="13e13-111">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="13e13-111">Required attribute.</span></span><br><br><span data-ttu-id="13e13-112">包含組態檔的 URL。</span><span class="sxs-lookup"><span data-stu-id="13e13-112">The URL of the configuration file to include.</span></span> <span data-ttu-id="13e13-113">唯一支援的格式**href**屬性是`file://`。</span><span class="sxs-lookup"><span data-stu-id="13e13-113">The only format supported for the **href** attribute is `file://`.</span></span> <span data-ttu-id="13e13-114">支援本機檔案和 UNC 檔案。</span><span class="sxs-lookup"><span data-stu-id="13e13-114">Local files and UNC files are supported.</span></span> |
+| <span data-ttu-id="6b5e2-110">**href**</span><span class="sxs-lookup"><span data-stu-id="6b5e2-110">**href**</span></span>  | <span data-ttu-id="6b5e2-111">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-111">Required attribute.</span></span><br><br><span data-ttu-id="6b5e2-112">要包含的設定檔的 URL。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-112">The URL of the configuration file to include.</span></span> <span data-ttu-id="6b5e2-113">**Href**屬性唯一支援的格式為`file://`。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-113">The only format supported for the **href** attribute is `file://`.</span></span> <span data-ttu-id="6b5e2-114">支援本機檔案和 UNC 檔案。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-114">Local files and UNC files are supported.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="13e13-115">父項目</span><span class="sxs-lookup"><span data-stu-id="13e13-115">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="6b5e2-115">父項目</span><span class="sxs-lookup"><span data-stu-id="6b5e2-115">Parent element</span></span>
 
-|     | <span data-ttu-id="13e13-116">描述</span><span class="sxs-lookup"><span data-stu-id="13e13-116">Description</span></span> |
+|     | <span data-ttu-id="6b5e2-116">描述</span><span class="sxs-lookup"><span data-stu-id="6b5e2-116">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="13e13-117"> *\*\<Assemblybinding> >** 項目</span><span class="sxs-lookup"><span data-stu-id="13e13-117">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | <span data-ttu-id="13e13-118">指定位於組態層級的組件繫結原則。</span><span class="sxs-lookup"><span data-stu-id="13e13-118">Specifies assembly binding policy at the configuration level.</span></span> |
+| [<span data-ttu-id="6b5e2-117"> **assemblyBinding>\<** 元素</span><span class="sxs-lookup"><span data-stu-id="6b5e2-117">**\<assemblyBinding>** Element</span></span>](assemblybinding-element-for-configuration.md) | <span data-ttu-id="6b5e2-118">指定位於組態層級的組件繫結原則。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-118">Specifies assembly binding policy at the configuration level.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="13e13-119">子元素</span><span class="sxs-lookup"><span data-stu-id="13e13-119">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="6b5e2-119">子元素</span><span class="sxs-lookup"><span data-stu-id="6b5e2-119">Child elements</span></span>
 
-<span data-ttu-id="13e13-120">None</span><span class="sxs-lookup"><span data-stu-id="13e13-120">None</span></span>
+<span data-ttu-id="6b5e2-120">無</span><span class="sxs-lookup"><span data-stu-id="6b5e2-120">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="13e13-121">備註</span><span class="sxs-lookup"><span data-stu-id="13e13-121">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="6b5e2-121">備註</span><span class="sxs-lookup"><span data-stu-id="6b5e2-121">Remarks</span></span>
 
-<span data-ttu-id="13e13-122">**\<LinkedConfiguration >** 項目可簡化元件組件的服務。</span><span class="sxs-lookup"><span data-stu-id="13e13-122">The **\<linkedConfiguration>** element simplifies servicing for component assemblies.</span></span> <span data-ttu-id="13e13-123">如果一或多個應用程式會使用具有組態檔位於已知位置中的組件，可以使用使用組件的應用程式的組態檔 **\<linkedConfiguration >** 包含組件的組態檔，而不是直接包括組態資訊的項目。</span><span class="sxs-lookup"><span data-stu-id="13e13-123">If one or more applications use an assembly that has a configuration file residing in a well-known location, the configuration files of the applications that use the assembly can use the **\<linkedConfiguration>** element to include the assembly configuration file, rather than including configuration information directly.</span></span> <span data-ttu-id="13e13-124">當元件組件受到服務時，更新常見的組態檔提供使用組件的所有應用程式的更新的組態資訊。</span><span class="sxs-lookup"><span data-stu-id="13e13-124">When the component assembly is serviced, updating the common configuration file provides updated configuration information to all applications that use the assembly.</span></span>
+<span data-ttu-id="6b5e2-122">LinkedConfiguration > 元素會簡化元件元件的服務。 **\<**</span><span class="sxs-lookup"><span data-stu-id="6b5e2-122">The **\<linkedConfiguration>** element simplifies servicing for component assemblies.</span></span> <span data-ttu-id="6b5e2-123">如果一或多個應用程式使用的元件具有位於已知位置的設定檔, 則使用該元件之應用程式的設定檔案可以使用 **\<linkedConfiguration >** 元素來包含元件設定檔, 而不是直接包含設定資訊。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-123">If one or more applications use an assembly that has a configuration file residing in a well-known location, the configuration files of the applications that use the assembly can use the **\<linkedConfiguration>** element to include the assembly configuration file, rather than including configuration information directly.</span></span> <span data-ttu-id="6b5e2-124">服務元件元件時, 更新通用設定檔案會將更新的設定資訊提供給所有使用該元件的應用程式。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-124">When the component assembly is serviced, updating the common configuration file provides updated configuration information to all applications that use the assembly.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="13e13-125">**\<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。</span><span class="sxs-lookup"><span data-stu-id="13e13-125">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
+> <span data-ttu-id="6b5e2-125">**
+          \<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-125">The **\<linkedConfiguration>** element is not supported for applications with Windows side-by-side manifests.</span></span>
 
-<span data-ttu-id="13e13-126">下列規則管理連結的組態檔的使用：</span><span class="sxs-lookup"><span data-stu-id="13e13-126">The following rules govern the use of linked configuration files:</span></span>
+<span data-ttu-id="6b5e2-126">下列規則會管理連結的設定檔使用:</span><span class="sxs-lookup"><span data-stu-id="6b5e2-126">The following rules govern the use of linked configuration files:</span></span>
 
-- <span data-ttu-id="13e13-127">包含的組態檔中設定只會影響載入器繫結原則，且僅供載入器。</span><span class="sxs-lookup"><span data-stu-id="13e13-127">The settings in included configuration files only affect loader binding policy and are used only by the loader.</span></span> <span data-ttu-id="13e13-128">包含的組態檔可能會有非繫結原則，設定，但這些設定不具有任何作用。</span><span class="sxs-lookup"><span data-stu-id="13e13-128">The included configuration files can have settings other than binding policies, but those settings don't have any effect.</span></span>
+- <span data-ttu-id="6b5e2-127">包含的設定檔案中的設定只會影響載入器系結原則, 而且僅供載入器使用。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-127">The settings in included configuration files only affect loader binding policy and are used only by the loader.</span></span> <span data-ttu-id="6b5e2-128">包含的設定檔案可以具有系結原則以外的設定, 但這些設定不會有任何作用。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-128">The included configuration files can have settings other than binding policies, but those settings don't have any effect.</span></span>
 
-- <span data-ttu-id="13e13-129">唯一支援的格式`href`屬性是`file://`。</span><span class="sxs-lookup"><span data-stu-id="13e13-129">The only format supported for the `href` attribute is `file://`.</span></span> <span data-ttu-id="13e13-130">支援本機檔案和 UNC 檔案。</span><span class="sxs-lookup"><span data-stu-id="13e13-130">Local files and UNC files are supported.</span></span>
+- <span data-ttu-id="6b5e2-129">`href`屬性唯一支援的格式為`file://`。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-129">The only format supported for the `href` attribute is `file://`.</span></span> <span data-ttu-id="6b5e2-130">支援本機檔案和 UNC 檔案。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-130">Local files and UNC files are supported.</span></span>
 
-- <span data-ttu-id="13e13-131">連結的組態，每個組態檔的數目沒有限制。</span><span class="sxs-lookup"><span data-stu-id="13e13-131">There is no constraint on the number of linked configurations per configuration file.</span></span>
+- <span data-ttu-id="6b5e2-131">每個設定檔的連結設定數目沒有條件約束。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-131">There is no constraint on the number of linked configurations per configuration file.</span></span>
 
-- <span data-ttu-id="13e13-132">所有連結的組態檔會合併以形成一個檔案，類似的行為`#include`指示詞 C /C++。</span><span class="sxs-lookup"><span data-stu-id="13e13-132">All linked configuration files are merged to form one file, similar to the behavior of the `#include` directive in C/C++.</span></span>
+- <span data-ttu-id="6b5e2-132">所有連結的設定檔都會合並成一個檔案, 類似于 C/ `#include` C++中指示詞的行為。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-132">All linked configuration files are merged to form one file, similar to the behavior of the `#include` directive in C/C++.</span></span>
 
-- <span data-ttu-id="13e13-133">**\<LinkedConfiguration >** 項目只允許在應用程式組態檔，它會忽略*Machine.config*。</span><span class="sxs-lookup"><span data-stu-id="13e13-133">The **\<linkedConfiguration>** element is allowed only in application configuration files; it's ignored in *Machine.config*.</span></span>
+- <span data-ttu-id="6b5e2-133">只有在應用程式佈建檔中,  **\<才允許 linkedConfiguration >** 元素; machine.config 中會忽略它。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-133">The **\<linkedConfiguration>** element is allowed only in application configuration files; it's ignored in *Machine.config*.</span></span>
 
-- <span data-ttu-id="13e13-134">已偵測到循環參考，並終止。</span><span class="sxs-lookup"><span data-stu-id="13e13-134">Circular references are detected and terminated.</span></span> <span data-ttu-id="13e13-135">也就是說，如果 **\<linkedConfiguration >** 的一系列的組態檔項目形成迴圈，是偵測到迴圈，並將其停止。</span><span class="sxs-lookup"><span data-stu-id="13e13-135">That is, if the **\<linkedConfiguration>** elements of a series of configuration files form a loop, the loop is detected and stopped.</span></span>
+- <span data-ttu-id="6b5e2-134">偵測到迴圈參考並結束。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-134">Circular references are detected and terminated.</span></span> <span data-ttu-id="6b5e2-135">也就是說, 如果 **\<linkedConfiguration >** 一系列設定檔中的元素形成迴圈, 就會偵測到迴圈並停止。</span><span class="sxs-lookup"><span data-stu-id="6b5e2-135">That is, if the **\<linkedConfiguration>** elements of a series of configuration files form a loop, the loop is detected and stopped.</span></span>
 
-## <a name="example"></a><span data-ttu-id="13e13-136">範例</span><span class="sxs-lookup"><span data-stu-id="13e13-136">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6b5e2-136">範例</span><span class="sxs-lookup"><span data-stu-id="6b5e2-136">Example</span></span>
 
-<span data-ttu-id="13e13-137">下列範例示範如何包含從本機硬碟的組態檔：</span><span class="sxs-lookup"><span data-stu-id="13e13-137">The following example shows how to include configuration file from the local hard disk:</span></span>
+<span data-ttu-id="6b5e2-137">下列範例顯示如何包含本機硬碟的設定檔:</span><span class="sxs-lookup"><span data-stu-id="6b5e2-137">The following example shows how to include configuration file from the local hard disk:</span></span>
 
 ```xml
 <configuration>
@@ -81,7 +82,7 @@ ms.locfileid: "61674645"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="13e13-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13e13-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b5e2-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6b5e2-138">See also</span></span>
 
-- [<span data-ttu-id="13e13-139"> *\*\<Assemblybinding> >** 項目</span><span class="sxs-lookup"><span data-stu-id="13e13-139">**\<assemblyBinding>** Element</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
-- [<span data-ttu-id="13e13-140">適用於.NET Framework 的組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="13e13-140">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="6b5e2-139"> **assemblyBinding>\<** 元素</span><span class="sxs-lookup"><span data-stu-id="6b5e2-139">**\<assemblyBinding>** Element</span></span>](assemblybinding-element-for-configuration.md)
+- [<span data-ttu-id="6b5e2-140">.NET Framework 的設定檔架構</span><span class="sxs-lookup"><span data-stu-id="6b5e2-140">Configuration file schema for the .NET Framework</span></span>](index.md)

@@ -10,37 +10,37 @@ helpviewer_keywords:
 - local animation [WPF]
 - animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
-ms.openlocfilehash: 93609cdeb4d879cbec0f90096e4fa2c131a2ec5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71711c0392576930e97986078ec5926ff6ca9813
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761282"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963015"
 ---
-# <a name="how-to-animate-a-property-without-using-a-storyboard"></a><span data-ttu-id="a54d1-102">HOW TO：不使用分鏡腳本而建立屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="a54d1-102">How to: Animate a Property Without Using a Storyboard</span></span>
-<span data-ttu-id="a54d1-103">此範例示範套用至屬性的動畫，而不使用的一種方法<xref:System.Windows.Media.Animation.Storyboard>。</span><span class="sxs-lookup"><span data-stu-id="a54d1-103">This example shows one way to apply an animation to a property without using a <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
+# <a name="how-to-animate-a-property-without-using-a-storyboard"></a><span data-ttu-id="8fdcb-102">作法：不使用分鏡腳本而建立屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="8fdcb-102">How to: Animate a Property Without Using a Storyboard</span></span>
+<span data-ttu-id="8fdcb-103">這個範例示範將動畫套用至屬性的一種方式, 而不<xref:System.Windows.Media.Animation.Storyboard>使用。</span><span class="sxs-lookup"><span data-stu-id="8fdcb-103">This example shows one way to apply an animation to a property without using a <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a54d1-104">[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中無法使用此功能。</span><span class="sxs-lookup"><span data-stu-id="a54d1-104">This functionality is not available in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="a54d1-105">如需以動畫顯示 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中屬性的詳細資訊，請參閱[使用分鏡腳本建立屬性的動畫](how-to-animate-a-property-by-using-a-storyboard.md)。</span><span class="sxs-lookup"><span data-stu-id="a54d1-105">For information about animating a property in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], see [Animate a Property by Using a Storyboard](how-to-animate-a-property-by-using-a-storyboard.md).</span></span>  
+> <span data-ttu-id="8fdcb-104">[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中無法使用此功能。</span><span class="sxs-lookup"><span data-stu-id="8fdcb-104">This functionality is not available in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="8fdcb-105">如需以動畫顯示 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中屬性的詳細資訊，請參閱[使用分鏡腳本建立屬性的動畫](how-to-animate-a-property-by-using-a-storyboard.md)。</span><span class="sxs-lookup"><span data-stu-id="8fdcb-105">For information about animating a property in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], see [Animate a Property by Using a Storyboard](how-to-animate-a-property-by-using-a-storyboard.md).</span></span>  
   
- <span data-ttu-id="a54d1-106">若要將本機動畫套用至屬性，使用<xref:System.Windows.UIElement.BeginAnimation%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a54d1-106">To apply a local animation to a property, use the <xref:System.Windows.UIElement.BeginAnimation%2A> method.</span></span> <span data-ttu-id="a54d1-107">這個方法會採用兩個參數：<xref:System.Windows.DependencyProperty>可指定的屬性，以動畫顯示，以及要套用到該屬性的動畫。</span><span class="sxs-lookup"><span data-stu-id="a54d1-107">This method takes two parameters: a <xref:System.Windows.DependencyProperty> that specifies the property to animate, and the animation to apply to that property.</span></span>  
+ <span data-ttu-id="8fdcb-106">若要將本機動畫套用至屬性, 請使用<xref:System.Windows.UIElement.BeginAnimation%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="8fdcb-106">To apply a local animation to a property, use the <xref:System.Windows.UIElement.BeginAnimation%2A> method.</span></span> <span data-ttu-id="8fdcb-107">這個方法會採用兩個參數<xref:System.Windows.DependencyProperty> :, 指定要建立動畫的屬性, 以及要套用至該屬性的動畫。</span><span class="sxs-lookup"><span data-stu-id="8fdcb-107">This method takes two parameters: a <xref:System.Windows.DependencyProperty> that specifies the property to animate, and the animation to apply to that property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a54d1-108">範例</span><span class="sxs-lookup"><span data-stu-id="a54d1-108">Example</span></span>  
- <span data-ttu-id="a54d1-109">下列範例示範如何以動畫顯示的寬度和背景色彩<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="a54d1-109">The following example shows how to animate the width and background color of a <xref:System.Windows.Controls.Button>.</span></span>  
+## <a name="example"></a><span data-ttu-id="8fdcb-108">範例</span><span class="sxs-lookup"><span data-stu-id="8fdcb-108">Example</span></span>  
+ <span data-ttu-id="8fdcb-109">下列範例示範如何以動畫顯示的寬度和背景色彩<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="8fdcb-109">The following example shows how to animate the width and background color of a <xref:System.Windows.Controls.Button>.</span></span>  
   
  [!code-cpp[animateproperty#11](~/samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
  [!code-csharp[animateproperty#11](~/samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
  [!code-vb[animateproperty#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
   
- <span data-ttu-id="a54d1-110">中的動畫類別的各種<xref:System.Windows.Media.Animation>命名空間存在以動畫顯示不同類型的屬性。</span><span class="sxs-lookup"><span data-stu-id="a54d1-110">A variety of animation classes in the <xref:System.Windows.Media.Animation> namespace exist for animating different types of properties.</span></span> <span data-ttu-id="a54d1-111">如需將屬性顯示為動畫的詳細資訊，請參閱[動畫概觀](animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a54d1-111">For more information about animating properties, see [Animation Overview](animation-overview.md).</span></span> <span data-ttu-id="a54d1-112">如需相依性屬性 (這些範例所示的內容類型) 和其功能的詳細資訊，請參閱[相依性屬性概觀](../advanced/dependency-properties-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a54d1-112">For more information about dependency properties (the type of properties that are shown in these examples) and their features, see [Dependency Properties Overview](../advanced/dependency-properties-overview.md).</span></span>  
+ <span data-ttu-id="8fdcb-110">命名空間中的各種動畫類別<xref:System.Windows.Media.Animation>都存在, 以動畫顯示不同類型的屬性。</span><span class="sxs-lookup"><span data-stu-id="8fdcb-110">A variety of animation classes in the <xref:System.Windows.Media.Animation> namespace exist for animating different types of properties.</span></span> <span data-ttu-id="8fdcb-111">如需將屬性顯示為動畫的詳細資訊，請參閱[動畫概觀](animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8fdcb-111">For more information about animating properties, see [Animation Overview](animation-overview.md).</span></span> <span data-ttu-id="8fdcb-112">如需相依性屬性 (這些範例所示的內容類型) 和其功能的詳細資訊，請參閱[相依性屬性概觀](../advanced/dependency-properties-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8fdcb-112">For more information about dependency properties (the type of properties that are shown in these examples) and their features, see [Dependency Properties Overview](../advanced/dependency-properties-overview.md).</span></span>  
   
- <span data-ttu-id="a54d1-113">還有其他方式，而不使用動畫<xref:System.Windows.Media.Animation.Storyboard>物件; 如需詳細資訊，請參閱[屬性動畫技術概觀](property-animation-techniques-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a54d1-113">There are other ways to animate without using <xref:System.Windows.Media.Animation.Storyboard> objects; for more information, see [Property Animation Techniques Overview](property-animation-techniques-overview.md).</span></span>  
+ <span data-ttu-id="8fdcb-113">還有其他方式可建立動畫, 而<xref:System.Windows.Media.Animation.Storyboard>不使用物件。如需詳細資訊, 請參閱[屬性動畫技術總覽](property-animation-techniques-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8fdcb-113">There are other ways to animate without using <xref:System.Windows.Media.Animation.Storyboard> objects; for more information, see [Property Animation Techniques Overview](property-animation-techniques-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a54d1-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a54d1-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8fdcb-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8fdcb-114">See also</span></span>
 
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [<span data-ttu-id="a54d1-115">屬性動畫技術概觀</span><span class="sxs-lookup"><span data-stu-id="a54d1-115">Property Animation Techniques Overview</span></span>](property-animation-techniques-overview.md)
-- [<span data-ttu-id="a54d1-116">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="a54d1-116">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="8fdcb-115">屬性動畫技術概觀</span><span class="sxs-lookup"><span data-stu-id="8fdcb-115">Property Animation Techniques Overview</span></span>](property-animation-techniques-overview.md)
+- [<span data-ttu-id="8fdcb-116">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="8fdcb-116">Animation Overview</span></span>](animation-overview.md)

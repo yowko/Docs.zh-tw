@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: dd5625fd3f2c0cc2e1e2a261b091a029cd4226ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58845ab7b9da7377f4fdaa7da13e7c407226d63c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039410"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912198"
 ---
-# <a name="how-to-configure-com-service-settings"></a><span data-ttu-id="98101-102">HOW TO：設定 COM+ 服務設定</span><span class="sxs-lookup"><span data-stu-id="98101-102">How to: Configure COM+ Service Settings</span></span>
-<span data-ttu-id="98101-103">使用 COM+ 服務組態工具加入或移除應用程式介面時，Web 服務組態會在應用程式的組態檔中更新。</span><span class="sxs-lookup"><span data-stu-id="98101-103">When an application interface is added or removed by using the COM+ Service Configuration tool, the Web service configuration is updated within the application's configuration file.</span></span> <span data-ttu-id="98101-104">在 COM + 裝載模式中，Application.config 檔案放在應用程式根目錄中 (%PROGRAMFILES%\ComPlus 應用程式\\{appid} 是預設值)。</span><span class="sxs-lookup"><span data-stu-id="98101-104">In the COM+ hosted mode, the Application.config file is placed in the Application Root Directory (%PROGRAMFILES%\ComPlus Applications\\{appid} is the default).</span></span> <span data-ttu-id="98101-105">在兩個 Web 裝載模式中，Web.config 檔案都會放在指定的 vroot 目錄中。</span><span class="sxs-lookup"><span data-stu-id="98101-105">In either of the Web-hosted modes, the Web.config file is placed in the specified vroot directory.</span></span>  
+# <a name="how-to-configure-com-service-settings"></a><span data-ttu-id="0b8ab-102">作法：設定 COM+ 服務設定</span><span class="sxs-lookup"><span data-stu-id="0b8ab-102">How to: Configure COM+ Service Settings</span></span>
+<span data-ttu-id="0b8ab-103">使用 COM+ 服務組態工具加入或移除應用程式介面時，Web 服務組態會在應用程式的組態檔中更新。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-103">When an application interface is added or removed by using the COM+ Service Configuration tool, the Web service configuration is updated within the application's configuration file.</span></span> <span data-ttu-id="0b8ab-104">在 com + 裝載模式中, app.config 檔案會放在應用程式根目錄中 (%programfiles%\complus applications\ 應用程式\\{appid} 是預設值)。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-104">In the COM+ hosted mode, the Application.config file is placed in the Application Root Directory (%PROGRAMFILES%\ComPlus Applications\\{appid} is the default).</span></span> <span data-ttu-id="0b8ab-105">在兩個 Web 裝載模式中，Web.config 檔案都會放在指定的 vroot 目錄中。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-105">In either of the Web-hosted modes, the Web.config file is placed in the specified vroot directory.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="98101-106">訊息簽章應用來保護用戶端和伺服器之間的訊息不受竄改。</span><span class="sxs-lookup"><span data-stu-id="98101-106">Message signing should be used to protect against tampering of messages between a client and a server.</span></span> <span data-ttu-id="98101-107">此外，訊息或傳輸層加密也應該用來保護用戶端和伺服器之間的訊息，以免資訊洩漏。</span><span class="sxs-lookup"><span data-stu-id="98101-107">Also, message or transport layer encryption should be used to protect against information disclosure from messages between a client and a server.</span></span> <span data-ttu-id="98101-108">如同 Windows Communication Foundation (WCF) 服務，您應該使用節流來限制同時呼叫、 連線、 執行個體和暫止的作業數目。</span><span class="sxs-lookup"><span data-stu-id="98101-108">As with Windows Communication Foundation (WCF) services, you should use throttling to limit the number of concurrent calls, connections, instances, and pending operations.</span></span> <span data-ttu-id="98101-109">這有助防止資源過度消耗。</span><span class="sxs-lookup"><span data-stu-id="98101-109">This helps prevent over-consumption of resources.</span></span> <span data-ttu-id="98101-110">節流行為是透過服務組態檔設定所指定的。</span><span class="sxs-lookup"><span data-stu-id="98101-110">Throttling behavior is specified through service configuration file settings.</span></span>  
+> <span data-ttu-id="0b8ab-106">訊息簽章應用來保護用戶端和伺服器之間的訊息不受竄改。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-106">Message signing should be used to protect against tampering of messages between a client and a server.</span></span> <span data-ttu-id="0b8ab-107">此外，訊息或傳輸層加密也應該用來保護用戶端和伺服器之間的訊息，以免資訊洩漏。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-107">Also, message or transport layer encryption should be used to protect against information disclosure from messages between a client and a server.</span></span> <span data-ttu-id="0b8ab-108">如同 Windows Communication Foundation (WCF) 服務, 您應該使用節流來限制同時呼叫、連接、實例和暫止作業的數目。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-108">As with Windows Communication Foundation (WCF) services, you should use throttling to limit the number of concurrent calls, connections, instances, and pending operations.</span></span> <span data-ttu-id="0b8ab-109">這有助防止資源過度消耗。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-109">This helps prevent over-consumption of resources.</span></span> <span data-ttu-id="0b8ab-110">節流行為是透過服務組態檔設定所指定的。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-110">Throttling behavior is specified through service configuration file settings.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="98101-111">範例</span><span class="sxs-lookup"><span data-stu-id="98101-111">Example</span></span>  
- <span data-ttu-id="98101-112">試想實作下列介面的元件：</span><span class="sxs-lookup"><span data-stu-id="98101-112">Consider a component that implements the following interface:</span></span>  
+## <a name="example"></a><span data-ttu-id="0b8ab-111">範例</span><span class="sxs-lookup"><span data-stu-id="0b8ab-111">Example</span></span>  
+ <span data-ttu-id="0b8ab-112">試想實作下列介面的元件：</span><span class="sxs-lookup"><span data-stu-id="0b8ab-112">Consider a component that implements the following interface:</span></span>  
   
 ```  
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
@@ -29,7 +29,7 @@ public interface IFinances
 }  
 ```  
   
- <span data-ttu-id="98101-113">如果元件公開為 Web 服務，則公開 (且用戶端必須符合) 的對應服務合約如下：</span><span class="sxs-lookup"><span data-stu-id="98101-113">If the component is exposed as a Web service, the corresponding service contract that is exposed, and that clients would need to conform to, is as follows:</span></span>  
+ <span data-ttu-id="0b8ab-113">如果元件公開為 Web 服務，則公開 (且用戶端必須符合) 的對應服務合約如下：</span><span class="sxs-lookup"><span data-stu-id="0b8ab-113">If the component is exposed as a Web service, the corresponding service contract that is exposed, and that clients would need to conform to, is as follows:</span></span>  
   
 ```  
 [ServiceContract(Session = true,  
@@ -45,21 +45,21 @@ public interface IFinancesContract : IDisposable
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="98101-114">IID 是做為合約的初始命名空間一部分。</span><span class="sxs-lookup"><span data-stu-id="98101-114">IID forms part of the initial namespace for the contract.</span></span>  
+> <span data-ttu-id="0b8ab-114">IID 是做為合約的初始命名空間一部分。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-114">IID forms part of the initial namespace for the contract.</span></span>  
   
- <span data-ttu-id="98101-115">使用這個服務的用戶端應用程式必須符合這個合約，並且使用與應用程式組態中所指定的繫結相容的繫結。</span><span class="sxs-lookup"><span data-stu-id="98101-115">Client applications that use this service would need to conform to this contract, along with using a binding that is compatible with the one specified in the application configuration.</span></span>  
+ <span data-ttu-id="0b8ab-115">使用這個服務的用戶端應用程式必須符合這個合約，並且使用與應用程式組態中所指定的繫結相容的繫結。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-115">Client applications that use this service would need to conform to this contract, along with using a binding that is compatible with the one specified in the application configuration.</span></span>  
   
- <span data-ttu-id="98101-116">下列程式碼範例中會示範預設組態檔。</span><span class="sxs-lookup"><span data-stu-id="98101-116">The following code example shows a default configuration file.</span></span> <span data-ttu-id="98101-117">這是 Windows Communication Foundation (WCF) Web 服務，符合標準的服務模型組態結構描述，可以在其他 WCF 服務組態檔的相同方式來編輯。</span><span class="sxs-lookup"><span data-stu-id="98101-117">Being a Windows Communication Foundation (WCF) Web service, this conforms to the standard service model configuration schema and can be edited in the same way as other WCF services configuration files.</span></span>  
+ <span data-ttu-id="0b8ab-116">下列程式碼範例中會示範預設組態檔。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-116">The following code example shows a default configuration file.</span></span> <span data-ttu-id="0b8ab-117">做為 Windows Communication Foundation (WCF) Web 服務, 這符合標準的服務模型設定架構, 而且可以使用與其他 WCF 服務設定檔相同的方式進行編輯。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-117">Being a Windows Communication Foundation (WCF) Web service, this conforms to the standard service model configuration schema and can be edited in the same way as other WCF services configuration files.</span></span>  
   
- <span data-ttu-id="98101-118">一般修改包含：</span><span class="sxs-lookup"><span data-stu-id="98101-118">Typical modifications would include:</span></span>  
+ <span data-ttu-id="0b8ab-118">一般修改包含：</span><span class="sxs-lookup"><span data-stu-id="0b8ab-118">Typical modifications would include:</span></span>  
   
-- <span data-ttu-id="98101-119">將端點位址從預設形式 ApplicationName/ComponentName/InterfaceName 變更為更容易使用的形式。</span><span class="sxs-lookup"><span data-stu-id="98101-119">Changing the endpoint address from the default ApplicationName/ComponentName/InterfaceName form to a more usable form.</span></span>  
+- <span data-ttu-id="0b8ab-119">將端點位址從預設形式 ApplicationName/ComponentName/InterfaceName 變更為更容易使用的形式。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-119">Changing the endpoint address from the default ApplicationName/ComponentName/InterfaceName form to a more usable form.</span></span>  
   
-- <span data-ttu-id="98101-120">修改預設的服務命名空間`http://tempuri.org/InterfaceID`到更多相關表單的表單。</span><span class="sxs-lookup"><span data-stu-id="98101-120">Modifying the namespace of the service from the default `http://tempuri.org/InterfaceID` form to a more relevant form.</span></span>  
+- <span data-ttu-id="0b8ab-120">將服務的命名空間從預設`http://tempuri.org/InterfaceID`表單修改為更相關的表單。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-120">Modifying the namespace of the service from the default `http://tempuri.org/InterfaceID` form to a more relevant form.</span></span>  
   
-- <span data-ttu-id="98101-121">變更端點以使用不同的傳輸繫結。</span><span class="sxs-lookup"><span data-stu-id="98101-121">Changing the endpoint to use a different transport binding.</span></span>  
+- <span data-ttu-id="0b8ab-121">變更端點以使用不同的傳輸繫結。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-121">Changing the endpoint to use a different transport binding.</span></span>  
   
-     <span data-ttu-id="98101-122">在 COM+ 裝載案例中，預設會使用具名管道，但也可以使用像 TCP 的電腦外傳輸。</span><span class="sxs-lookup"><span data-stu-id="98101-122">In the COM+-hosted case, the named pipes transport is used by default, but an off-machine transport like TCP can be used instead.</span></span>  
+     <span data-ttu-id="0b8ab-122">在 COM+ 裝載案例中，預設會使用具名管道，但也可以使用像 TCP 的電腦外傳輸。</span><span class="sxs-lookup"><span data-stu-id="0b8ab-122">In the COM+-hosted case, the named pipes transport is used by default, but an off-machine transport like TCP can be used instead.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -96,6 +96,6 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="98101-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="98101-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b8ab-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b8ab-123">See also</span></span>
 
-- [<span data-ttu-id="98101-124">整合 COM 應用程式</span><span class="sxs-lookup"><span data-stu-id="98101-124">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="0b8ab-124">整合 COM 應用程式</span><span class="sxs-lookup"><span data-stu-id="0b8ab-124">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

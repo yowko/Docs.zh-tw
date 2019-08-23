@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876573"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964727"
 ---
-# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="fe764-102">將 XML 值指定為參數</span><span class="sxs-lookup"><span data-stu-id="fe764-102">Specifying XML Values as Parameters</span></span>
-<span data-ttu-id="fe764-103">如果查詢需要的參數，其值為 XML 字串，開發人員可以提供使用的執行個體該值**SqlXml**資料型別。</span><span class="sxs-lookup"><span data-stu-id="fe764-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="fe764-104">真的有沒什麼訣竅;SQL Server 中的 XML 資料行接受參數值中其他資料型別完全相同的方式。</span><span class="sxs-lookup"><span data-stu-id="fe764-104">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  
+# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="c8d58-102">將 XML 值指定為參數</span><span class="sxs-lookup"><span data-stu-id="c8d58-102">Specifying XML Values as Parameters</span></span>
+<span data-ttu-id="c8d58-103">如果查詢需要的參數值為 XML 字串, 則開發人員可以使用**SqlXml**資料類型的實例來提供該值。</span><span class="sxs-lookup"><span data-stu-id="c8d58-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="c8d58-104">其實沒有任何訣竅;SQL Server 中的 XML 資料行接受參數值的方式與其他資料類型完全相同。</span><span class="sxs-lookup"><span data-stu-id="c8d58-104">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fe764-105">範例</span><span class="sxs-lookup"><span data-stu-id="fe764-105">Example</span></span>  
- <span data-ttu-id="fe764-106">下列主控台應用程式會建立新的資料表中**AdventureWorks**資料庫。</span><span class="sxs-lookup"><span data-stu-id="fe764-106">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="fe764-107">新的資料表包含名為資料行**SalesID**和名為 XML 資料行**SalesInfo**。</span><span class="sxs-lookup"><span data-stu-id="fe764-107">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
+## <a name="example"></a><span data-ttu-id="c8d58-105">範例</span><span class="sxs-lookup"><span data-stu-id="c8d58-105">Example</span></span>  
+ <span data-ttu-id="c8d58-106">下列主控台應用程式會在**AdventureWorks**資料庫中建立新的資料表。</span><span class="sxs-lookup"><span data-stu-id="c8d58-106">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="c8d58-107">新的資料表包含名為**SalesID**的資料行, 以及名為**SalesInfo**的 XML 資料行。</span><span class="sxs-lookup"><span data-stu-id="c8d58-107">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="fe764-108">**AdventureWorks**當您安裝 SQL Server 時，預設未安裝範例資料庫。</span><span class="sxs-lookup"><span data-stu-id="fe764-108">The **AdventureWorks** sample database is not installed by default when you install SQL Server.</span></span> <span data-ttu-id="fe764-109">您可以藉由執行 SQL Server 安裝程式來安裝它。</span><span class="sxs-lookup"><span data-stu-id="fe764-109">You can install it by running SQL Server Setup.</span></span>  
+> <span data-ttu-id="c8d58-108">當您安裝 SQL Server 時, 預設不會安裝**AdventureWorks**範例資料庫。</span><span class="sxs-lookup"><span data-stu-id="c8d58-108">The **AdventureWorks** sample database is not installed by default when you install SQL Server.</span></span> <span data-ttu-id="c8d58-109">您可以藉由執行 SQL Server 安裝程式來安裝它。</span><span class="sxs-lookup"><span data-stu-id="c8d58-109">You can install it by running SQL Server Setup.</span></span>  
   
- <span data-ttu-id="fe764-110">該範例準備了 <xref:System.Data.SqlClient.SqlCommand> 物件，以在新資料表中插入資料列。</span><span class="sxs-lookup"><span data-stu-id="fe764-110">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="fe764-111">已儲存的檔案提供所需的 XML 資料**SalesInfo**資料行。</span><span class="sxs-lookup"><span data-stu-id="fe764-111">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
+ <span data-ttu-id="c8d58-110">該範例準備了 <xref:System.Data.SqlClient.SqlCommand> 物件，以在新資料表中插入資料列。</span><span class="sxs-lookup"><span data-stu-id="c8d58-110">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="c8d58-111">已儲存的檔案會提供**SalesInfo**資料行所需的 XML 資料。</span><span class="sxs-lookup"><span data-stu-id="c8d58-111">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
   
- <span data-ttu-id="fe764-112">若要建立執行範例所需的檔案，請在與您專案相同的資料夾中建立新的文字檔。</span><span class="sxs-lookup"><span data-stu-id="fe764-112">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="fe764-113">將其命名為 MyTestStoreData.xml。</span><span class="sxs-lookup"><span data-stu-id="fe764-113">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="fe764-114">在 [記事本] 中開啟該檔案，然後複製並貼上下列文字：</span><span class="sxs-lookup"><span data-stu-id="fe764-114">Open the file in Notepad and copy and paste the following text:</span></span>  
+ <span data-ttu-id="c8d58-112">若要建立執行範例所需的檔案，請在與您專案相同的資料夾中建立新的文字檔。</span><span class="sxs-lookup"><span data-stu-id="c8d58-112">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="c8d58-113">將其命名為 MyTestStoreData.xml。</span><span class="sxs-lookup"><span data-stu-id="c8d58-113">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="c8d58-114">在 [記事本] 中開啟該檔案，然後複製並貼上下列文字：</span><span class="sxs-lookup"><span data-stu-id="c8d58-114">Open the file in Notepad and copy and paste the following text:</span></span>  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
@@ -159,8 +159,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fe764-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fe764-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8d58-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c8d58-115">See also</span></span>
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [<span data-ttu-id="fe764-116">SQL Server 中的 XML 資料</span><span class="sxs-lookup"><span data-stu-id="fe764-116">XML Data in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [<span data-ttu-id="fe764-117">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="fe764-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="c8d58-116">SQL Server 中的 XML 資料</span><span class="sxs-lookup"><span data-stu-id="c8d58-116">XML Data in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
+- [<span data-ttu-id="c8d58-117">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="c8d58-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
