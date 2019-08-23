@@ -2,12 +2,12 @@
 title: 版本相容序列化技術範例
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: 6c30c39848be02785b6b808ecf4af711c0c9e95d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 317a47d46b839417e01eed9deca2459a96aaa201
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483004"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960785"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>版本相容序列化技術範例
 [下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -22,7 +22,7 @@ ms.locfileid: "66483004"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>若要使用 Visual Studio 建置範例  
   
-1. 開啟檔案總管並瀏覽至其中一個範例的語言特定子目錄。  
+1. 開啟 [檔案瀏覽器], 然後流覽至範例的其中一個語言特定子目錄。  
   
 2. 巡覽至您在前一個步驟選取之目錄的 [V1 Application] 子目錄。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66483004"
  或者，巡覽至新可執行檔所在的目錄，然後循序執行這些可執行檔。  
   
 > [!NOTE]
->  這個範例會建置一個主控台應用程式。 您必須在 [命令提示字元] 視窗中啟動及執行這些應用程式，才能檢視這些應用程式的輸出。  
+> 這個範例會建置一個主控台應用程式。 您必須在 [命令提示字元] 視窗中啟動及執行這些應用程式，才能檢視這些應用程式的輸出。  
   
 ## <a name="see-also"></a>另請參閱
 

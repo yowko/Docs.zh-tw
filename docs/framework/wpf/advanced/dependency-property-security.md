@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400763"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940831"
 ---
 # <a name="dependency-property-security"></a>相依性屬性的安全性
 相依性屬性通常應該視為公用屬性。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統在本質上會防止進行相依性屬性值的安全性保證。  
@@ -29,7 +29,7 @@ ms.locfileid: "68400763"
  若為自訂相依性屬性, 您可以將屬性註冊為唯讀相依性屬性, 這樣做會提供有效的方法, 防止未持有該屬性之參考<xref:System.Windows.DependencyPropertyKey>的任何人設定屬性。 如需詳細資訊，請參閱[唯讀相依性屬性](read-only-dependency-properties.md)。  
   
 > [!NOTE]
->  不允許將識別碼欄位設為私用, 而且它可以用來協助減少立即公開的自訂類別命名空間, 但是這類屬性不應視為「私用」, 與通用語言相同<xref:System.Windows.DependencyProperty>執行時間 (CLR) 語言定義會定義該存取層級, 原因如下一節中所述。  
+> 不允許將識別碼欄位設為私用, 而且它可以用來協助減少立即公開的自訂類別命名空間, 但是這類屬性不應視為「私用」, 與通用語言相同<xref:System.Windows.DependencyProperty>執行時間 (CLR) 語言定義會定義該存取層級, 原因如下一節中所述。  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>相依性屬性的屬性系統公開  

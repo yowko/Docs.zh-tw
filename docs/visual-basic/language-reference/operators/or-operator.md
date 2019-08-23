@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: 0277b6f24e62ed5f0cad3dae225c86fffc4c09b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d11a6d009f6ecfea9fb1a86b00c67b87d5555dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955845"
 ---
 # <a name="or-operator-visual-basic"></a>Or 運算子 (Visual Basic)
-對兩個執行邏輯分離`Boolean`運算式或兩個數值運算式的位元分離。  
+在兩個`Boolean`運算式上執行邏輯分離, 或在兩個數值運算式上執行位析取。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,18 +33,18 @@ result = expression1 Or expression2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何`Boolean`或數值運算式。 針對`Boolean`相較之下，`result`是兩個內含邏輯分離`Boolean`值。 對於位元運算，`result`是數值，代表兩個數值位元模式 （含） 的位元分離。  
+ 必要項。 Any `Boolean`或 numeric 運算式。 為了`Boolean`進行比較`result` , 是兩個`Boolean`值的內含邏輯分離。 對於位運算而言`result` , 是代表兩個數值位模式之內含位分離的數值。  
   
  `expression1`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要項。 Any `Boolean`或 numeric 運算式。  
   
  `expression2`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要項。 Any `Boolean`或 numeric 運算式。  
   
 ## <a name="remarks"></a>備註  
- 針對`Boolean`相較之下，`result`是`False`並僅有兩個`expression1`並`expression2`評估為`False`。 下表將說明如何`result`決定。  
+ 為了`Boolean`進行比較`result` `expression1` ,只有和`expression2`都評估為`False`時才為。 `False` 下表說明如何`result`決定。  
   
-|如果`expression1`是|和`expression2`是|值`result`是|  
+|如果`expression1`為|和`expression2`為|的值`result`為|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`True`|  
@@ -52,11 +52,11 @@ result = expression1 Or expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  在 `Boolean`相較之下，`Or`運算子一律會評估這兩個運算式，這可能包括程序呼叫。 [OrElse 運算子](../../../visual-basic/language-reference/operators/orelse-operator.md)會執行*最少運算*，這表示如果`expression1`是`True`，然後`expression2`不會評估。  
+> 在比較中`Or` , 運算子一律會評估兩個運算式, 這可能包括進行程序呼叫。 `Boolean` [OrElse 運算子](../../../visual-basic/language-reference/operators/orelse-operator.md)會執行最少運算, 這表示如果`expression1`為`True`, `expression2`則不會評估。  
   
- 位元運算，如`Or`運算子會在兩個數值運算式之間執行位元比較相同位置的位元，並對應中位元設`result`根據下表。  
+ 對於位運算, `Or`運算子會在兩個數值運算式中執行相同位置位的位比較, 並根據下表設定中`result`的對應位。  
   
-|如果位元`expression1`是|在位元和`expression2`是|中的位元`result`是|  
+|如果中的`expression1`位是|中的`expression2`和位為|中`result`的位是|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|1|  
@@ -64,34 +64,34 @@ result = expression1 Or expression2
 |0|0|0|  
   
 > [!NOTE]
->  因為邏輯和位元運算子會有較低的優先順序高於其他算術和關係運算子，所以任何位元的作業應該含括括號，以確保能夠正確執行。  
+> 由於邏輯和位運算子的優先順序比其他算術和關係運算子低, 因此應該將任何位運算括在括弧中, 以確保正確執行。  
   
 ## <a name="data-types"></a>資料類型  
- 如果包含運算元`Boolean`Visual Basic 運算式及一個數值運算式，將轉換`Boolean`為數值的運算式 (– 1`True`以 0 代表`False`) 和執行位元運算。  
+ 如果運算元是由`Boolean`一個運算式和一個數值運算式所組成, Visual Basic 會`Boolean`將運算式轉換為數值 (-1 代表`True` , 0 則代表`False`), 並執行位運算。  
   
- 針對`Boolean`相較之下，結果的資料型別是`Boolean`。 如需位元的比較，將結果資料類型是數值類型適合的資料類型`expression1`和`expression2`。 請參閱 < 關聯式和位元比較 」 的表格[資料類型的運算子結果](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。  
+ 為了進行`Boolean`比較, 結果的資料類型是。 `Boolean` 針對位比較, 結果資料類型是適用于和`expression1` `expression2`之資料類型的數數值型別。 請參閱[運算子結果的資料類型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的「關聯式和位比較」資料表。  
   
 ## <a name="overloading"></a>多載化  
- `Or`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 如果您的程式碼會使用這個運算子，這類類別或結構上，請務必了解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ 運算子可以多載, 這表示當運算元具有該類別或結構的類型時, 類別或結構可以重新定義其行為。 `Or` 如果您的程式碼在這類類別或結構上使用這個運算子, 請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`Or`操作員兩個運算式上執行內含邏輯分離。 結果是`Boolean`值，表示其中兩個運算式是否`True`。  
+ 下列範例會使用`Or`運算子, 在兩個運算式上執行內含邏輯分離。 結果是`Boolean`值, 表示兩個運算式的其中一個是否為`True`。  
   
  [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
- 上述範例產生的結果`True`， `True`，和`False`分別。  
+ 上述範例會分別產生、 `True` `True`和`False`的結果。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`Or`運算子的兩個數值運算式的個別位元執行內含邏輯分離。 如果任一運算元的對應位元設為 1，會設定結果模式中的位元。  
+ 下列範例會使用`Or`運算子, 在兩個數值運算式的個別位上執行內含邏輯分離。 如果運算元中的其中一個對應位設為 1, 則結果模式中的位會設定為。  
   
  [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
- 上述範例中會分別產生 10、 14 及 14 的結果。  
+ 上述範例會分別產生10、14和14的結果。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [邏輯/位元運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [邏輯/位運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [OrElse 運算子](../../../visual-basic/language-reference/operators/orelse-operator.md)
-- [在 Visual Basic 中的邏輯和位元運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 中的邏輯和位運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

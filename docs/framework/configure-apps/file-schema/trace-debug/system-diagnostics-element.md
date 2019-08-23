@@ -1,5 +1,5 @@
 ---
-title: < System.diagnostics > 項目
+title: < diagnostics > 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: 026805ffb9b89aa55e84cf9a5c4afb8ed63cec09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673689"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926937"
 ---
-# <a name="systemdiagnostics-element"></a>\<system.diagnostics > 項目
+# <a name="systemdiagnostics-element"></a>\<> 元素的診斷
 指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。  
   
  \<configuration>  
@@ -36,14 +36,14 @@ ms.locfileid: "61673689"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。|  
-|[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|指定效能計數器共用之全域記憶體的大小。|  
-|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|包含任何來源或追蹤項目可參考的接聽項。 識別為共用接聽項可以依名稱加入到來源或追蹤接聽程式。|  
-|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|指定起始追蹤訊息的追蹤來源。|  
-|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|包含追蹤參數和其中設定追蹤參數的層級。|  
-|[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|包含用於收集、儲存及路由傳送追蹤訊息的接聽項。|  
+|[\<assert>](assert-element.md)|指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。|  
+|[\<performanceCounters>](performancecounters-element.md)|指定效能計數器共用之全域記憶體的大小。|  
+|[\<sharedListeners>](sharedlisteners-element.md)|包含任何來源或追蹤項目可參考的接聽項。 識別為共用接聽項的接聽程式可以依名稱新增至來源或追蹤。|  
+|[\<sources>](sources-element.md)|指定起始追蹤訊息的追蹤來源。|  
+|[\<switches>](switches-element.md)|包含追蹤參數和設定追蹤參數的層級。|  
+|[\<trace>](trace-element.md)|包含用於收集、儲存及路由傳送追蹤訊息的接聽項。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -52,10 +52,10 @@ ms.locfileid: "61673689"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何內嵌追蹤參數和追蹤接聽程式內 **\<system.diagnostics >** 項目。 `General`若要設定追蹤參數<xref:System.Diagnostics.TraceLevel>層級。 追蹤接聽項`myListener`建立一個稱為檔案`MyListener.log`並將輸出寫入檔案。  
+ 下列範例示範如何將追蹤參數和追蹤接聽項內嵌在 **\<diagnostics >** 元素中。 追蹤參數會設定<xref:System.Diagnostics.TraceLevel>為層級。 `General` 追蹤`myListener`接聽程式會建立名`MyListener.log`為的檔案, 並將輸出寫入檔案。  
   
 > [!NOTE]
->  在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 比方說，您可以指定`true`for <xref:System.Diagnostics.BooleanSwitch> ，或使用的文字表示的列舉值，例如`Error`如<xref:System.Diagnostics.TraceSwitch>。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
+> 在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 `true`例如, 您可以<xref:System.Diagnostics.BooleanSwitch>為指定, 或使用代表列舉<xref:System.Diagnostics.TraceSwitch>值`Error`的文字, 例如的。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ ms.locfileid: "61673689"
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [追蹤和偵錯設定結構描述](index.md)

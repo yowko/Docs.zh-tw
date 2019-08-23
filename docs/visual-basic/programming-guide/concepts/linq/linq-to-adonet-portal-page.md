@@ -2,25 +2,25 @@
 title: LINQ to ADO.NET (入口網站頁面)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 850e154b40e69cc655ee1b59161351b0b2898033
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 25ec71086d501e6ac9be22871563b0fb4e3cfb8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539377"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957586"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (入口網站頁面)
-LINQ to ADO.NET 可讓您藉由查詢任何可列舉的物件，在 ADO.NET 中[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]程式設計模型。  
+LINQ to ADO.NET 可讓您使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 程式設計模型來查詢 ADO.NET 中所有可列舉的物件。  
   
 > [!NOTE]
->  LINQ to ADO.NET 文件位於.NET Framework SDK 的 ADO.NET 區段：[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。
+> LINQ to ADO.NET 文件位於 .NET Framework SDK 的 ADO.NET 章節︰[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。
   
- 有三個不同的 ADO.NET[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]技術：LINQ to DataSet， [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]，與 LINQ to Entities。 LINQ to DataSet 可讓您提供更豐富且最佳化的查詢<xref:System.Data.DataSet>，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]可讓您直接查詢 SQL Server 資料庫結構描述，與 LINQ to Entities 可讓您查詢實體資料模型。  
+ 有三種不同的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技術：LINQ to DataSet、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 LINQ to Entities。 LINQ to DataSet 可提供更豐富且最佳化的 <xref:System.Data.DataSet> 查詢，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 可讓您直接查詢 SQL Server 資料庫結構描述，而 LINQ to Entities 可讓您查詢實體資料模型。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> 是 ADO.NET 中最廣為使用的元件之一，也是中斷連線程式設計模型 (ADO.NET 建置於其上) 的重要元素。 雖然 <xref:System.Data.DataSet> 具有上述優點，但是它的查詢功能仍然有限。  
   
- LINQ to DataSet 可讓您更豐富查詢功能建置在<xref:System.Data.DataSet>藉由使用適用於許多其他資料來源的相同查詢功能。  
+ LINQ to DataSet 可讓您使用許多其他資料來源適用的相同查詢功能，將更為豐富的查詢功能建置在 <xref:System.Data.DataSet> 中。  
   
  如需詳細資訊，請參閱 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)。  
   

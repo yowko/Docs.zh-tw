@@ -10,25 +10,25 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 760a800e7e7fe0ef13a333525aa45088bea736d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955944"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962167"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu 元件 (Windows Form)
 > [!NOTE]
->  雖然`MenuStrip`並`ContextMenuStrip`取代及新增功能<xref:System.Windows.Forms.MainMenu>並<xref:System.Windows.Forms.ContextMenu>控制項的舊版本中，<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>會保留回溯相容性以及供未來使用，如果您選擇。  
+> 雖然`MenuStrip` <xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.ContextMenu>會取代並將功能加入舊版的和控制項, 但<xref:System.Windows.Forms.MainMenu>如果您選擇, 則會保留以供回溯相容性和未來使用。 `ContextMenuStrip`  
   
- Windows Form`ContextMenu`元件可用來為使用者提供與所選物件相關聯的常用命令的更容易存取的捷徑功能表。 快顯功能表中的項目通常是從主應用程式中其他地方出現的功能表項目的子集。 快顯功能表通常都可以按一下滑鼠右鍵。 在 Windows Forms 上與其相關聯的其他控制項項目。  
+ Windows Forms `ContextMenu`元件是用來為使用者提供可輕鬆存取的快捷方式功能表, 其中包含與所選物件相關聯的常用命令。 快捷方式功能表中的專案通常是主功能表中出現在應用程式其他位置之專案的子集。 快捷方式功能表通常是透過以滑鼠右鍵按一下滑鼠來提供。 在 Windows Forms 它們會與其他控制項相關聯。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ContextMenu 元件概觀](contextmenu-component-overview-windows-forms.md)  
- 導入的一般概念`ContextMenu`元件，可讓使用者建立與所選物件相關聯的常用命令的功能表。  
+ 介紹`ContextMenu`元件的一般概念, 可讓使用者建立與所選物件相關聯之常用命令的功能表。  
   
- [如何：新增和移除功能表項目，使用 Windows Form ContextMenu 元件](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
- 說明如何新增和移除 Windows Form 中的捷徑功能表項目。  
+ [如何：使用 Windows Forms CoNtextMenu 元件新增和移除功能表項目](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ 說明如何新增和移除 Windows Forms 中的快捷方式功能表項目。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ContextMenu>  

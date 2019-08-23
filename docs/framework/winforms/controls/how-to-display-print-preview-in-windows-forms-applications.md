@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Windows Forms 應用程式中顯示預覽列印
+title: HOW TO：在 Windows Forms 應用程式中顯示預覽列印
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,30 +10,30 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 9efccc220bb27706448ae555db8958afb0ccd9fa
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 8252906de9a574f49617609a4cb08a1e8aa6a992
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053599"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929012"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>作法：在 Windows Forms 應用程式中顯示預覽列印
-您可以使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項，讓使用者以顯示文件，通常要列印之前。  
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>HOW TO：在 Windows Forms 應用程式中顯示預覽列印
+您可以使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項, 讓使用者在列印前經常顯示檔。  
   
- 若要這樣做，您需要指定的執行個體<xref:System.Drawing.Printing.PrintDocument>類別; 這是要列印的文件。 如需有關使用使用預覽列印<xref:System.Drawing.Printing.PrintDocument>元件，請參閱[How to:使用預覽列印 Windows Forms 中列印](../advanced/how-to-print-in-windows-forms-using-print-preview.md)。  
+ 若要這樣做, 您必須指定<xref:System.Drawing.Printing.PrintDocument>類別的實例, 這是要列印的檔。 如需搭配使用「預覽列印」和<xref:System.Drawing.Printing.PrintDocument>元件的詳細[資訊, 請參閱如何:使用預覽列印](../advanced/how-to-print-in-windows-forms-using-print-preview.md)在 Windows Forms 中列印。  
   
 > [!NOTE]
->  若要使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項在執行階段，使用者必須擁有在本機或透過網路，在他們的電腦上安裝印表機，這有一部分是如何<xref:System.Windows.Forms.PrintPreviewDialog>元件可讓您判斷文件列印的樣子。  
+> 若要在<xref:System.Windows.Forms.PrintPreviewDialog>執行時間使用此控制項, 使用者必須在電腦上安裝印表機 (不論是在本機或透過網路), 因為<xref:System.Windows.Forms.PrintPreviewDialog>元件會在列印時決定檔的外觀。  
   
- <xref:System.Windows.Forms.PrintPreviewDialog>控制項會使用<xref:System.Drawing.Printing.PrinterSettings>類別。 此外，<xref:System.Windows.Forms.PrintPreviewDialog>控制項會使用<xref:System.Drawing.Printing.PageSettings>類別，就如同<xref:System.Windows.Forms.PrintPreviewDialog>元件。 列印文件中指定<xref:System.Windows.Forms.PrintPreviewDialog>控制項的<xref:System.Windows.Forms.PrintPreviewControl.Document%2A>屬性會參考兩個執行個體<xref:System.Drawing.Printing.PrinterSettings>和<xref:System.Drawing.Printing.PageSettings>類別，以及這些用來呈現預覽視窗中的文件。  
+ <xref:System.Windows.Forms.PrintPreviewDialog> 控制項<xref:System.Drawing.Printing.PrinterSettings>使用類別。 此外, <xref:System.Windows.Forms.PrintPreviewDialog>控制項也會<xref:System.Drawing.Printing.PageSettings>使用<xref:System.Windows.Forms.PrintPreviewDialog>類別, 就像元件一樣。 在<xref:System.Windows.Forms.PrintPreviewDialog>控制項的<xref:System.Windows.Forms.PrintPreviewControl.Document%2A>屬性中指定的列印檔案會參考<xref:System.Drawing.Printing.PrinterSettings>和<xref:System.Drawing.Printing.PageSettings>類別的實例, 而這些是用來在預覽視窗中呈現檔。  
   
-### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>若要檢視使用 PrintPreviewDialog 控制項的頁面  
+### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>若要使用 PrintPreviewDialog 控制項來查看頁面  
   
 - 使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法顯示對話方塊，並指定要使用的 <xref:System.Drawing.Printing.PrintDocument> 。  
   
-     在下列程式碼範例中，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式會開啟的執行個體<xref:System.Windows.Forms.PrintPreviewDialog>控制項。 列印文件中指定<xref:System.Windows.Forms.PrintDialog.Document%2A>屬性。 在下列範例中，指定不列印的文件。  
+     在下列程式碼範例中, <xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式<xref:System.Windows.Forms.PrintPreviewDialog>會開啟控制項的實例。 列印檔案是在<xref:System.Windows.Forms.PrintDialog.Document%2A>屬性中指定的。 在下列範例中, 不會指定列印檔案。  
   
-     這個範例需要您的表單具有<xref:System.Windows.Forms.Button>控制<xref:System.Drawing.Printing.PrintDocument>名元件`myDocument`，和<xref:System.Windows.Forms.PrintPreviewDialog>控制項。  
+     此範例會要求您的表單<xref:System.Windows.Forms.Button>具有控制項、 <xref:System.Drawing.Printing.PrintDocument>名為`myDocument`的<xref:System.Windows.Forms.PrintPreviewDialog>元件, 以及控制項。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -70,7 +70,7 @@ ms.locfileid: "66053599"
        }  
     ```  
   
-     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (視覺C#效果, C++視覺效果)將下列程式碼放在表單的函式中, 以註冊事件處理常式。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

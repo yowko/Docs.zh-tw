@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 7dec86c724479fde78fcb2e2881dce40b1bf747a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877108"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957185"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立 Windows 架構的協助工具應用程式
 
@@ -43,7 +43,7 @@ ms.locfileid: "65877108"
 
 #### <a name="to-begin-making-the-application"></a>開始建立應用程式
 
-- 建立新的 Windows 應用程式在 Visual Basic 或 Visual C#。 將專案命名為 **PizzaOrder** (如需詳細資訊，請參閱[建立新的方案和專案](/visualstudio/ide/creating-solutions-and-projects))。
+- 在 Visual Basic 或視覺效果C#中建立新的 Windows 應用程式。 將專案命名為 **PizzaOrder** (如需詳細資訊，請參閱[建立新的方案和專案](/visualstudio/ide/creating-solutions-and-projects))。
 
 ## <a name="adding-the-controls-to-the-form"></a>將控制項加入表單
 
@@ -58,9 +58,9 @@ ms.locfileid: "65877108"
 
 - 確定任何描述 TextBox 控制項的 Label 控制項都是依定位順序，緊接著位於 TextBox 控制項之前。
 
-- 將便捷鍵，使用"&"字元中，新增<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要瀏覽至任何控制項的屬性。
+- 使用 "&" 字元, 將存取金鑰新增至使用者可能想<xref:System.Windows.Forms.Control.Text%2A>要流覽的任何控制項的屬性。
 
-- 將便捷鍵，使用"&"字元中，新增<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要瀏覽至的控制項前面之標籤的屬性。 將標籤的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 屬性設定為 `true`如此一來，當使用者按下便捷鍵時，焦點便會設定為定位順序的下一個控制項。
+- 使用 "&" 字元, 將存取金鑰加入至<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要流覽之控制項前面的標籤屬性。 將標籤的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 屬性設定為 `true`如此一來，當使用者按下便捷鍵時，焦點便會設定為定位順序的下一個控制項。
 
 - 將便捷鍵加入所有功能表項目。
 
@@ -140,13 +140,13 @@ ms.locfileid: "65877108"
    |MenuItem|名稱|exitApp|
    ||文字|結束(&X)|
 
-   您的表單看起來如下圖所示：
+   您的表單看起來會像下圖:
 
-   ![名稱文字方塊中，與大小配料選取比薩訂購表單。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   ![[比薩訂單] 表單的 [名稱] 文字方塊和 [大小] 和 [配料] 選項。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
 ## <a name="supporting-high-contrast-mode"></a>支援高對比模式
 
-高對比模式是 Windows 系統的一項設定，使用對比色彩和字型大小以提升可讀性，對於視覺受損的使用者很有幫助。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>屬性可用來判斷是否已設定高對比模式。
+高對比模式是 Windows 系統的一項設定，使用對比色彩和字型大小以提升可讀性，對於視覺受損的使用者很有幫助。 提供<xref:System.Windows.Forms.SystemInformation.HighContrast%2A>屬性來判斷是否已設定高對比模式。
 
 如果 SystemInformation.HighContrast 為 `true`，應用程式應該：
 
@@ -158,7 +158,7 @@ ms.locfileid: "65877108"
 
 當應用程式啟動並回應 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 系統事件時，應該會檢查 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的設定。 只要 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的值變更，便會引發 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。
 
-在應用程式中，唯一不使用色彩系統設定的項目是 `lblCompanyName`。 <xref:System.Drawing.SystemColors>類別用來將標籤的色彩設定變更為使用者選取的系統色彩。
+在應用程式中，唯一不使用色彩系統設定的項目是 `lblCompanyName`。 <xref:System.Drawing.SystemColors>類別是用來將標籤的色彩設定變更為使用者選取的系統色彩。
 
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>有效啟用高對比模式
 
@@ -303,7 +303,7 @@ ms.locfileid: "65877108"
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>透過音效以外的其他方式提供資訊
 
-1. 使用 Windows 應用程式開發介面函式 FlashWindow 讓標題列閃爍。 如需如何呼叫 Windows API 函式的範例，請參閱[逐步解說：呼叫 Windows Api](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
+1. 使用 Windows 應用程式開發介面函式 FlashWindow 讓標題列閃爍。 如需如何呼叫 Windows API 函式的範例, 請[參閱逐步解說:呼叫 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
 
     > [!NOTE]
     > 使用者可以啟動 Windows 聲音感測服務，當系統音效透過電腦內建喇叭播放時，同時能使視窗閃爍。

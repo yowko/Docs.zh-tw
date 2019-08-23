@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6fb0b11c26ff65f74681d1e3bf7324bfb0e559d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 44241d02051c9bd54f93a19fa6044e4973fdef9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766619"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950263"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 類別
-提供建立原生可攜式執行檔 (PE) 的功能。 介面將通常用於由編譯器產生可執行其編譯的輸出。  
+提供建立原生可移植執行檔 (PE) 檔案的功能。 編譯器通常會使用此介面來產生其已編譯的輸出可執行檔。  
   
 > [!NOTE]
->  `ICeeFileGen` 支援.NET Framework 基礎結構，並不是直接從您的程式碼使用。  
+> `ICeeFileGen`支援 .NET Framework 的基礎結構, 但不適合直接從您的程式碼使用。  
   
- 此介面已被取代，並將在未來版本中移除。  
+ 這個介面已被取代, 將在未來的版本中移除。  
   
 ## <a name="syntax"></a>語法  
   
@@ -241,7 +241,7 @@ public:
   
  **標頭：** ICeeFileGen.h  
   
- **.NET framework 版本：** 1.0  
+ **.NET Framework 版本:** 1.0  
   
 ## <a name="see-also"></a>另請參閱
 

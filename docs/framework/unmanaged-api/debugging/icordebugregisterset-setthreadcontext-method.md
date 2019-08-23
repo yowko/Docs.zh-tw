@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: debb704900d852df1d66c7bac65ab385e0d72ec5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff1365ddb46ca28cbcaa4f1383b293681e6ec214
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769938"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956777"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>ICorDebugRegisterSet::SetThreadContext 方法
-`SetThreadContext` 未實作在.NET Framework 2.0 版。 請勿呼叫這個方法。  
+`SetThreadContext`不會在 .NET Framework 版本2.0 中執行。 請勿呼叫此方法。  
   
 > [!NOTE]
->  使用較高層級的作業[icordebugnativeframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)來設定執行緒的內容。  
+> 使用較高層級的作業[ICorDebugNativeFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)來設定執行緒的內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ HRESULT SetThreadContext (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：** 1.1, 1.0  
+ **.NET Framework 版本:** 1.1、1。0  
   
 ## <a name="see-also"></a>另請參閱
 

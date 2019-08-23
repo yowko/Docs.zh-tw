@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16f4155cefea20868185febb3d2a566dc1524cc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817950"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956277"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者透過 Windows 與 Windows Presentation Foundation (WPF) 獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式會<xref:System.Windows.Window>使用類別來提供自己的視窗。 本主題將<xref:System.Windows.Window>介紹在獨立應用程式中建立和管理 windows 的基本概念。  
   
 > [!NOTE]
->  瀏覽器裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的應用程式[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (包括[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和鬆散頁面) 不會提供自己的視窗。 相反地, 它們是裝載于 Windows Internet Explorer 所提供的 windows 中。 請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。  
+> 瀏覽器裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的應用程式[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (包括[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和鬆散頁面) 不會提供自己的視窗。 相反地, 它們是裝載于 Windows Internet Explorer 所提供的 windows 中。 請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 類別  
@@ -88,14 +88,14 @@ ms.locfileid: "68817950"
   
  若要讓[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記檔和程式碼後置檔案一起工作, 需要下列各項:  
   
-- 在標記中, `Window`元素必須`x:Class`包含屬性。 建立應用程式`x:Class`時, 標記檔案中的存在會導致[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]建立`partial`衍生自<xref:System.Windows.Window>的類別, 而且具有`x:Class`屬性所指定的名稱。 這需要新增[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架構的命名空間宣告 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 產生`partial`的類別`InitializeComponent`會執行方法, 其會呼叫來註冊事件並設定在標記中執行的屬性。  
+- 在標記中, `Window`元素必須`x:Class`包含屬性。 建立應用程式時`x:Class` , 標記檔案中的存在會導致 Microsoft build engine (MSBuild) `partial`建立衍生自<xref:System.Windows.Window>的類別, 並`x:Class`具有屬性所指定的名稱。 這需要新增[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架構的命名空間宣告 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 產生`partial`的類別`InitializeComponent`會執行方法, 其會呼叫來註冊事件並設定在標記中執行的屬性。  
   
 - 在程式碼後置中, 類別必須是`partial`具有與標記中的`x:Class`屬性所指定相同名稱的類別, 而且必須衍生自<xref:System.Windows.Window>。 這可讓程式碼後置檔案與`partial`建立應用程式時為標記檔案產生的類別相關聯 (請參閱[建立 WPF 應用程式](building-a-wpf-application-wpf.md))。  
   
 - 在程式碼後置中<xref:System.Windows.Window> , 類別必須執行`InitializeComponent`呼叫方法的函式。 `InitializeComponent`會由標記檔案產生`partial`的類別來執行, 以註冊事件並設定在標記中定義的屬性。  
   
 > [!NOTE]
->  當您使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]將新<xref:System.Windows.Window>的新增至專案時, <xref:System.Windows.Window>會使用標記和程式碼後置來實作為, 並包含必要的設定來建立標記和程式碼後置檔案之間的關聯, 如下所示:此處所述。  
+> 當您使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]將新<xref:System.Windows.Window>的新增至專案時, <xref:System.Windows.Window>會使用標記和程式碼後置來實作為, 並包含必要的設定來建立標記和程式碼後置檔案之間的關聯, 如下所示:此處所述。  
   
  設定好此設定之後, 您可以專注于在標記中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]定義視窗的外觀, 並在程式碼後置中執行其行為。 下列範例會顯示一個視窗, 其中包含按鈕、在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記中實作為, 以及<xref:System.Windows.Controls.Primitives.ButtonBase.Click>按鈕事件的事件處理常式 (在程式碼後置中執行)。  
   
@@ -106,13 +106,13 @@ ms.locfileid: "68817950"
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>設定 MSBuild 的視窗定義  
- 您執行視窗的[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]方式會決定其設定方式。 針對使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記和程式碼後置定義的視窗:  
+ 您在視窗中的執行方式會決定如何設定 MSBuild。 針對使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記和程式碼後置定義的視窗:  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記檔案會設定為[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page`專案。  
+- XAML 標記檔案會設定為 MSBuild `Page`專案。  
   
-- 程式碼後置檔案會設定[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]為`Compile`專案。  
+- 程式碼後置檔案會設定為`Compile` MSBuild 專案。  
   
- 這會顯示在下列[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]專案檔中。  
+ 這會顯示在下列 MSBuild 專案檔中。  
   
 ```xml  
 <Project ...  
@@ -149,7 +149,7 @@ ms.locfileid: "68817950"
  藉由呼叫<xref:System.Windows.Window.Show%2A>開啟的視窗為非強制回應視窗, 這表示應用程式會以可讓使用者在相同應用程式中啟用其他視窗的模式運作。  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>呼叫來以模式開啟視窗, 例如對話方塊。 如需詳細資訊, 請參閱[對話方塊總覽](dialog-boxes-overview.md)。  
+> <xref:System.Windows.Window.ShowDialog%2A>呼叫來以模式開啟視窗, 例如對話方塊。 如需詳細資訊, 請參閱[對話方塊總覽](dialog-boxes-overview.md)。  
   
  當<xref:System.Windows.Window.Show%2A>呼叫時, 視窗會先執行初始化工作, 然後才會顯示它, 以建立可讓它接收使用者輸入的基礎結構。 初始化視窗時, <xref:System.Windows.Window.SourceInitialized>會引發事件並顯示視窗。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68817950"
  當視窗第一次開啟時, 它會變成作用中的視窗 (除非它<xref:System.Windows.Window.ShowActivated%2A>是以`false`設定為的顯示)。 *使用中視窗*是目前正在捕捉使用者輸入的視窗, 例如按鍵筆劃和滑鼠點擊。 當視窗變成作用中狀態時, 它<xref:System.Windows.Window.Activated>會引發事件。  
   
 > [!NOTE]
->  當第一次開啟視窗時, <xref:System.Windows.FrameworkElement.Loaded>只有<xref:System.Windows.Window.ContentRendered>在引發<xref:System.Windows.Window.Activated>事件之後, 才會引發和事件。 記住這一點之後, 當引發時<xref:System.Windows.Window.ContentRendered> , 可以有效地將視窗視為已開啟。  
+> 當第一次開啟視窗時, <xref:System.Windows.FrameworkElement.Loaded>只有<xref:System.Windows.Window.ContentRendered>在引發<xref:System.Windows.Window.Activated>事件之後, 才會引發和事件。 記住這一點之後, 當引發時<xref:System.Windows.Window.ContentRendered> , 可以有效地將視窗視為已開啟。  
   
  視窗成為使用中之後，使用者可以在相同應用程式中啟動另一個視窗，或啟動另一個應用程式。 發生這種情況時, 目前作用中的視窗會變成<xref:System.Windows.Window.Deactivated>停用狀態, 並引發事件。 同樣地, 當使用者選取目前已停用的視窗時, 視窗會再次<xref:System.Windows.Window.Activated>變成使用中狀態, 並引發。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "68817950"
  如果背景工作完成, 視窗可能會想要藉由呼叫<xref:System.Windows.Window.Activate%2A>方法, 更迫切地通知使用者。 如果使用者與呼叫時<xref:System.Windows.Window.Activate%2A>啟動的另一個應用程式互動, 視窗的工作列按鈕會閃爍。 如果使用者與目前的應用程式互動, 則呼叫<xref:System.Windows.Window.Activate%2A>會將視窗帶到前景。  
   
 > [!NOTE]
->  您可以使用<xref:System.Windows.Application.Activated?displayProperty=nameWithType>和<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>事件來處理應用程式範圍啟用。  
+> 您可以使用<xref:System.Windows.Application.Activated?displayProperty=nameWithType>和<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>事件來處理應用程式範圍啟用。  
   
 <a name="Closing_a_Window"></a>   
 ### <a name="closing-a-window"></a>關閉視窗  
@@ -262,9 +262,9 @@ ms.locfileid: "68817950"
  如果<xref:System.Windows.Window.Closing>未處理, 或已處理但未取消, 視窗將會關閉。 在視窗實際關閉之前, <xref:System.Windows.Window.Closed>會引發。 此時無法防止視窗關閉。  
   
 > [!NOTE]
->  應用程式可以設定為在主應用程式視窗關閉時自動關閉 (請參閱<xref:System.Windows.Application.MainWindow%2A>), 或最後一個視窗關閉。 如需詳細資訊，請參閱 <xref:System.Windows.Application.ShutdownMode%2A>。  
+> 應用程式可以設定為在主應用程式視窗關閉時自動關閉 (請參閱<xref:System.Windows.Application.MainWindow%2A>), 或最後一個視窗關閉。 如需詳細資訊，請參閱 <xref:System.Windows.Application.ShutdownMode%2A>。  
   
- 雖然可以透過非用戶端和用戶端區域中提供的機制明確地關閉視窗, 但也可以在應用程式[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]的其他部分中, 以隱含方式關閉視窗, 包括下列各項:  
+ 雖然可以透過非用戶端和用戶端區域中提供的機制明確地關閉視窗, 但也可以在應用程式或視窗的其他部分中, 以隱含方式關閉視窗, 包括下列各項:  
   
 - 使用者登出或關閉 Windows。  
   
@@ -275,7 +275,7 @@ ms.locfileid: "68817950"
 - 呼叫 <xref:System.Windows.Application.Shutdown%2A>。  
   
 > [!NOTE]
->  在關閉之後就無法重新開啟視窗。  
+> 在關閉之後就無法重新開啟視窗。  
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>視窗存留期事件  
@@ -377,7 +377,7 @@ ms.locfileid: "68817950"
  具有*最大化*狀態的視窗會展開為它可以達到的最大大小, 而這只會與其<xref:System.Windows.FrameworkElement.MaxWidth%2A>、 <xref:System.Windows.FrameworkElement.MaxHeight%2A>和<xref:System.Windows.Window.SizeToContent%2A>屬性所指定的大小一樣大。 就像最小化的視窗，最大化的視窗無法使用調整大小底框或藉由拖曳框線來調整大小。  
   
 > [!NOTE]
->  視窗的<xref:System.Windows.Window.Top%2A>、 <xref:System.Windows.Window.Left%2A>、 <xref:System.Windows.FrameworkElement.Width%2A>和屬性值一律代表正常狀態的值,即使視窗目前已最大化或最小化。<xref:System.Windows.FrameworkElement.Height%2A>  
+> 視窗的<xref:System.Windows.Window.Top%2A>、 <xref:System.Windows.Window.Left%2A>、 <xref:System.Windows.FrameworkElement.Width%2A>和屬性值一律代表正常狀態的值,即使視窗目前已最大化或最小化。<xref:System.Windows.FrameworkElement.Height%2A>  
   
  視窗的狀態可以藉由設定其<xref:System.Windows.Window.WindowState%2A>屬性來設定, 它可以有下列<xref:System.Windows.WindowState>其中一個列舉值:  
   

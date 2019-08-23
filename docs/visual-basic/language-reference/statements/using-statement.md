@@ -9,15 +9,15 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: 111dba1316691b9c6c999b4c021ac06dac7c7a8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 346a26ad5751599831d8b0d3e0497e4d488eb76c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615094"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957537"
 ---
 # <a name="using-statement-visual-basic"></a>Using 陳述式 (Visual Basic)
-宣告的開頭`Using`封鎖，並選擇性地取得區塊所控制的系統資源。  
+宣告`Using`區塊的開頭, 並選擇性地取得區塊所控制的系統資源。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,12 +31,12 @@ End Using
   
 |詞彙|定義|  
 |---|---|  
-|`resourcelist`|如果您未提供所需`resourceexpression`。 這個清單的一或多個系統資源`Using`封鎖控制項，並以逗號分隔。|  
-|`resourceexpression`|如果您未提供所需`resourcelist`。 參考變數或運算式，指的系統資源，來控制這個`Using`區塊。|  
-|`statements`|選擇性。 陳述式區塊，`Using`封鎖執行。|  
-|`End Using`|必要項。 結束的定義`Using`區塊，並處置它所控制的所有資源。|  
+|`resourcelist`|如果您沒有提供`resourceexpression`, 則為必要。 這個`Using`區塊所控制的一或多個系統資源清單, 並以逗號分隔。|  
+|`resourceexpression`|如果您沒有提供`resourcelist`, 則為必要。 參考要由這個`Using`區塊控制之系統資源的參考變數或運算式。|  
+|`statements`|選擇性。 `Using`區塊執行的語句區塊。|  
+|`End Using`|必要項。 結束`Using`區塊的定義, 並處置它所控制的所有資源。|  
   
- 在每個資源`resourcelist`組件具有下列語法和組成部分：  
+ `resourcelist`元件中的每個資源都有下列語法和部分:  
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
@@ -44,43 +44,43 @@ End Using
   
  `resourcename As resourcetype = resourceexpression`  
   
-## <a name="resourcelist-parts"></a>resourcelist 組件  
+## <a name="resourcelist-parts"></a>resourcelist 元件  
   
 |詞彙|定義|  
 |---|---|  
-|`resourcename`|必要項。 指的是系統資源的參考變數，`Using`封鎖控制權。|  
-|`New`|需要`Using`陳述式會取得資源。 如果您已經取得資源，請使用第二個語法替代方案。|  
-|`resourcetype`|必要項。 資源的類別。 此類別必須實作<xref:System.IDisposable>介面。|  
-|`arglist`|選擇性。 您要傳遞至要建立的執行個體建構函式的引數清單的`resourcetype`。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`resourceexpression`|必要項。 變數或運算式指滿足需求的系統資源`resourcetype`。 如果您使用第二個語法替代方案，您必須先取得資源，將控制項傳遞至`Using`陳述式。|  
+|`resourcename`|必要項。 參考`Using`區塊所控制之系統資源的參考變數。|  
+|`New`|如果語句取得`Using`資源, 則為必要。 如果您已經取得資源, 請使用第二個替代語法。|  
+|`resourcetype`|必要項。 資源的類別。 類別必須執行<xref:System.IDisposable>介面。|  
+|`arglist`|選擇性。 您要傳遞至函式的引數清單, 以建立的`resourcetype`實例。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
+|`resourceexpression`|必要項。 參考滿足需求之`resourcetype`系統資源的變數或運算式。 如果您使用第二個語法替代, 則必須先取得資源, 然後再將`Using`控制權傳遞給語句。|  
   
 ## <a name="remarks"></a>備註  
- 有時候您的程式碼需要 unmanaged 的資源，例如檔案控制代碼、 COM 包裝函式或 SQL 連接。 A`Using`區塊與他們完成您的程式碼時，保證一或多個這類資源的處置。 這使其可供其他程式碼使用。  
+ 有時候, 您的程式碼需要非受控資源, 例如檔案控制代碼、COM 包裝函式或 SQL 連接。 當您的程式碼完成時,區塊會保證一或多個這類資源的處置。`Using` 這讓它們可供其他程式碼使用。  
   
- 受管理的資源處置掉.NET Framework 記憶體回收行程 (GC) 而不需要任何額外的程式碼，就在您的組件。 您不需要`Using`區塊的 managed 資源。 不過，您仍然可以使用`Using`區塊，以強制受管理的資源，而不是等待記憶體回收行程的處置。  
+ 受控資源會由 .NET Framework 垃圾收集行程 (GC) 處置, 而不需要您進行任何額外的程式碼撰寫。 您不需要受控資源`Using`的區塊。 不過, 您仍然可以使用`Using`區塊來強制處置受管理的資源, 而不是等候垃圾收集行程。  
   
- A`Using`區塊有三個部分︰ 取得、 使用量以及各種可供使用。  
+ `Using`區塊有三個部分: [取得]、[使用方式] 和 [處置]。  
   
-- *取得*表示建立變數，並初始化參考的系統資源。 `Using`陳述式可以取得一或多個資源，或您可以輸入區塊之前，先取得一個資源，並提供它`Using`陳述式。 如果您提供`resourceexpression`，您必須先取得資源，將控制項傳遞至`Using`陳述式。  
+- 取得表示建立變數, 並將它初始化以參考系統資源。 語句可以取得一或多個資源, 您也可以在進入區塊並將它提供`Using`給語句之前, 取得剛好一個資源。 `Using` 如果您提供`resourceexpression`, 則必須先取得資源, 然後再將控制權`Using`傳遞給語句。  
   
-- *使用量*表示的資源存取和使用它們執行動作。 之間的陳述式`Using`和`End Using`代表資源的使用量。  
+- *使用*方式表示存取資源, 並對它們執行動作。 `Using` 和`End Using`之間的語句代表資源的使用。  
   
-- *處置*方法呼叫<xref:System.IDisposable.Dispose%2A>方法中的物件上`resourcename`。 這可讓物件完全終止其資源。 `End Using`陳述式處置的資源下`Using`區塊的控制項。  
+- *處置*表示在中<xref:System.IDisposable.Dispose%2A> `resourcename`的物件上呼叫方法。 這可讓物件完全終止其資源。 語句會處置`Using`區塊控制項底下的資源。 `End Using`  
   
 ## <a name="behavior"></a>行為  
- A`Using`區塊的行為類似`Try`...`Finally`所在的建構`Try`區塊中使用的資源和`Finally`區塊處置它們。 因為這個緣故，`Using`區塊都保證會處置的資源，無論您如何結束區塊。 即使發生例外狀況，則為 true，這是除了<xref:System.StackOverflowException>。  
+ 區塊的行為`Try`就像 ... `Using`區塊會使用資源, 而區塊會處置它們的結構。`Finally` `Finally` `Try` 因此, `Using`不論您如何結束區塊, 區塊都會保證資源的處置。 即使是未處理的例外狀況 (除外<xref:System.StackOverflowException>), 也是如此。  
   
- 取得每個資源變數的範圍`Using`陳述式僅限於`Using`區塊。  
+ `Using`語句所取得之每個資源變數的範圍會限制`Using`為區塊。  
   
- 如果您指定一個以上的系統資源，在`Using`陳述式，效果會相同，如同您巢狀`Using`封鎖其中一個在另一個。  
+ 如果您在`Using`語句中指定多個系統資源, 其效果會與您在另一個中嵌套`Using`區塊的結果相同。  
   
- 如果`resourcename`是`Nothing`，不需要呼叫<xref:System.IDisposable.Dispose%2A>進行，而且會擲回任何例外狀況。  
+ 如果`resourcename` <xref:System.IDisposable.Dispose%2A>為`Nothing`, 則不會呼叫, 而且不會擲回任何例外狀況。  
   
-## <a name="structured-exception-handling-within-a-using-block"></a>處理使用的區塊內的結構化例外狀況  
- 如果您需要處理中可能發生的例外狀況`Using`區塊中，您可以新增完整`Try`...`Finally`給它的建構。 如果您要處理的情況所在`Using`陳述式不成功取得資源，您可以測試是否`resourcename`是`Nothing`。  
+## <a name="structured-exception-handling-within-a-using-block"></a>Using 區塊內的結構化例外狀況處理  
+ 如果您需要處理區塊內可能發生的例外狀況, `Using`您可以新增 [完成`Try`...]`Finally`對它進行結構。 如果您需要處理`Using`語句無法成功取得資源的情況, 您可以測試以`resourcename`查看是否為`Nothing`。  
   
-## <a name="structured-exception-handling-instead-of-a-using-block"></a>結構化例外狀況，而不使用區塊處理  
- 如果您需要更精細地控制擷取的資源，或您需要額外的程式碼中`Finally`區塊中，您可以重新撰寫`Using`封鎖`Try`...`Finally`建構。 下列範例示範基本架構`Try`並`Using`建構，而且相當於取得和處置`resource`。  
+## <a name="structured-exception-handling-instead-of-a-using-block"></a>結構化例外狀況處理, 而不是 Using 區塊  
+ 如果您需要更精確地控制資源的取得, 或在`Finally`區塊中需要額外的程式碼, 您可以將`Using`區塊重寫為`Try`.。。`Finally`結構。 下列範例會顯示`Try`在`resource`的`Using`取得與處置中, 對等的基本架構和結構。  
   
 ```vb  
 Using resource As New resourceType   
@@ -100,12 +100,12 @@ End Try
 ```  
   
 > [!NOTE]
->  內的程式碼`Using`區塊不應該指派中的物件`resourcename`給另一個變數。 當您結束`Using`區塊中，資源處置，而另一個變數無法存取它所指向的資源。  
+> `Using`區塊內的程式碼不應該將中`resourcename`的物件指派給另一個變數。 當您`Using`結束區塊時, 系統會處置資源, 而另一個變數無法存取其指向的資源。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立名為 log.txt，並將兩行文字寫入檔案的檔案。 範例也會讀取該相同的檔案，並顯示的文字行。  
+ 下列範例會建立名為 log .txt 的檔案, 並將兩行文字寫入檔案。 此範例也會讀取相同的檔案, 並顯示文字行。  
   
- 因為<xref:System.IO.TextWriter>並<xref:System.IO.TextReader>類別會實作<xref:System.IDisposable>介面，可以使用程式碼`Using`陳述式來確認檔案正確關閉之後寫入和讀取作業。  
+ <xref:System.IDisposable> `Using`由於和類別<xref:System.IO.TextReader>會實作為介面, 因此程式碼可以使用語句來確保檔案在寫入和讀取作業之後會正確地關閉。 <xref:System.IO.TextWriter>  
   
  [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]  
   

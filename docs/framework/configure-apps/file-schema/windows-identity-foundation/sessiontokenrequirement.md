@@ -3,15 +3,15 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 0c575e02862884e8f7ecf062138c36fe731f8e19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 254d34149892abeaf31b9227f7567eb0a66ec0b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793766"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943670"
 ---
 # <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
-提供組態<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>類別或衍生的類別。  
+<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>提供類別或衍生類別的設定。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -41,16 +41,16 @@ ms.locfileid: "61793766"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|存留期|指定工作階段權杖的存留期。|  
+|存留期|指定會話權杖的存留期。|  
   
 ### <a name="child-elements"></a>子元素  
  None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|將指定的安全性權杖處理常式加入至 權杖處理常式集合。|  
+|[\<add>](add.md)|將指定的安全性權杖處理常式加入至權杖處理常式集合。|  
   
 ## <a name="example"></a>範例  
   

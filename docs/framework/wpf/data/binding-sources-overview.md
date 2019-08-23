@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401445"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944687"
 ---
 # <a name="binding-sources-overview"></a>繫結來源概觀
 在資料繫結中，繫結來源物件是指您取得資料的來源物件。 本主題討論可以當做繫結來源的物件類型。  
@@ -20,7 +20,7 @@ ms.locfileid: "68401445"
 ## <a name="binding-source-types"></a>繫結來源類型  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結支援下列繫結來源類型：  
   
-|繫結來源|描述|  
+|繫結來源|說明|  
 |--------------------|-----------------|  
 |common language runtime (CLR) 物件|您可以系結至任何 common language runtime (CLR) 物件的公用屬性、子屬性和索引子。 系結引擎會使用 CLR 反映來取得屬性的值。 或者, 也可以使用<xref:System.ComponentModel.ICustomTypeDescriptor>系結引擎來<xref:System.ComponentModel.TypeDescriptionProvider>執行或擁有已註冊的物件。<br /><br /> 如需如何實作可做為繫結來源之類別的詳細資訊，請參閱本主題稍後的[為繫結來源實作類別](#classes)。|  
 |動態物件|您可以系結至可用於執行<xref:System.Dynamic.IDynamicMetaObjectProvider>介面之物件的可用屬性和索引子。 如果您可以在程式碼中存取某個成員，就可以繫結至該成員。 例如，若動態物件可讓您在程式碼中透過 `someObjet.AProperty` 存取某個成員，您就可以將繫結路徑設定為 `AProperty`，以繫結至該成員。|  
@@ -88,7 +88,7 @@ ms.locfileid: "68401445"
   
  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 繫結也有類似的使用權限需求。 在部分信任的沙箱中, <xref:System.Windows.Data.XmlDataProvider>當它沒有存取指定資料的許可權時, 會失敗。  
   
- 具有匿名型別的物件為內部物件。 只有在完全信任狀況下執行時，您才能繫結至匿名型別的屬性。 如需匿名型別的詳細資訊，請參閱[匿名型別 (C# 程式設計手冊)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md) 或[匿名型別 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic)。  
+ 具有匿名型別的物件為內部物件。 只有在完全信任狀況下執行時，您才能繫結至匿名型別的屬性。 如需匿名型別的詳細資訊，請參閱[匿名型別 (C# 程式設計手冊)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) 或[匿名型別 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic)。  
   
  如需部分信任安全性的詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   

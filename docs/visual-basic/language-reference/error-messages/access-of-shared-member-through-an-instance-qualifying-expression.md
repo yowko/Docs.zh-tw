@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 311f4c025072162e0cfb6b87587f8602d33fcd19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3174d463744303e8c90ed0b2e1a4d86ed08fbcfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646872"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947703"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>透過執行個體存取共用成員。將不會評估合格的運算式
-使用類別或結構的執行個體變數存取`Shared`變數、 屬性、 程序或該類別或結構中定義的事件。 如果執行個體變數用來存取的類別或結構，例如常數或列舉型別，或巢狀的類別或結構的隱含共用的成員，也會發生這個警告。  
+類別或結構的執行個體變數是用來存取`Shared`該類別或結構中定義的變數、屬性、程式或事件。 如果執行個體變數是用來存取類別或結構的隱含共用成員, 例如常數或列舉, 或是嵌套的類別或結構, 也可能會發生此警告。  
   
- 共用成員的目的是建立該成員的單一複本，並讓該單一複本使用類別或結構宣告它的每個執行個體。 若要存取此用途與一致`Shared`透過其類別或結構的名稱，而不是透過此變數會保存個別的執行個體，該類別或結構的成員。  
+ 共用成員的目的是只建立該成員的單一複本, 並將該單一複本提供給其宣告所在類別或結構的每個實例使用。 它會與此用途一致, 以透過`Shared`其類別或結構的名稱存取成員, 而不是透過保存該類別或結構之個別實例的變數。  
   
- 存取`Shared`透過執行個體變數的成員可以讓程式碼更難以了解藉由模糊的成員是事實`Shared`。 此外，如果這類存取權是運算式的一部分，就會執行其他動作，例如`Function`傳回共用成員的執行個體的程序，Visual Basic 會略過的運算式，否則它會執行任何其他動作。  
+ 透過執行個體變數存取`Shared`成員,可以藉由遮蔽成員的事實,讓您的程式碼更容易瞭解。`Shared` 此外, 如果這類存取是執行其他動作之運算式的一部分, 例如`Function`會傳回共用成員實例的程式, Visual Basic 會略過運算式, 以及其他任何會執行的動作。  
   
- 如需詳細資訊和範例，請參閱 <<c0> [ 共用](../../../visual-basic/language-reference/modifiers/shared.md)。  
+ 如需詳細資訊和範例, 請參閱[Shared](../../../visual-basic/language-reference/modifiers/shared.md)。  
   
  根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID:** BC42025  
+ **錯誤識別碼:** BC42025  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 使用類別或結構，其定義的名稱`Shared`成員，才能存取它，如下列範例所示。  
+- 使用定義`Shared`要存取之成員的類別或結構的名稱, 如下列範例所示。  
   
 ```vb  
 Public Class testClass  
@@ -53,9 +53,9 @@ End Module
 ```  
   
 > [!NOTE]
->  兩個程式設計項目具有相同名稱時，請為警示之範圍的效果。 在上述範例中，如果您使用宣告執行個體`Dim testClass as testClass = Nothing`，編譯器會將呼叫`testClass.sayHello()`透過類別名稱，而不發出警告方法存取權的過程。  
+> 當兩個程式設計項目具有相同的名稱時, 請警示範圍的效果。 在上述範例中, 如果您使用`Dim testClass as testClass = Nothing`來宣告實例, 編譯器會透過類別名稱將`testClass.sayHello()`呼叫視為方法的存取, 而不會發生警告。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [在 Visual Basic 中的範圍](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 中的範圍](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

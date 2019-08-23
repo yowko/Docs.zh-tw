@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8043ae8a3d384ab0936ae96e39174a7afc80a636
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f74e06ea4cb4d7a8eace8c7852f487bbdcbcd875
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776205"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964632"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 方法
-通知分析工具 COM interop 的 vtable 正在被終結。  
+通知分析工具, COM Interop 的 vtable 已終結。  
   
 > [!NOTE]
->  此回呼是可能永遠不會發生，，因為發生 vtable 的解構非常接近關機。  
+> 此回呼可能永遠不會發生, 因為 vtable 的銷毀會非常接近關閉。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,23 +41,23 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>參數  
  `wrappedClassId`  
- [in]為其建立此 vtable 類別的識別碼。  
+ 在建立此 vtable 之類別的識別碼。  
   
  `implementedIID`  
- [in]此類別所實作的介面識別碼。 如果介面僅供內部，這個值可以是 NULL。  
+ 在類別所實作為介面的識別碼。 如果介面僅供內部用, 這個值可能會是 Null。  
   
  `pVTable`  
- [in]Vtable 開頭指標。  
+ 在Vtable 開頭的指標。  
   
 ## <a name="remarks"></a>備註  
- 因為堆疊可能無法在狀態，讓記憶體回收，分析工具不應在實作這個方法封鎖，因此無法啟用先佔式記憶體回收。 如果分析工具會封鎖這裡並嘗試進行記憶體回收、 執行階段將會封鎖，直到此回呼中傳回。  
+ 分析工具不應在此方法的執行中封鎖, 因為堆疊可能不是處於允許垃圾收集的狀態, 因此無法啟用「搶先垃圾收集」。 如果分析工具在此處封鎖並嘗試垃圾收集, 執行時間將會封鎖, 直到這個回呼傳回為止。  
   
- Managed 程式碼，或以任何方式造成 managed 記憶體配置，不應該呼叫這個方法的程式碼剖析工具的實作。  
+ 分析工具的此方法的執行不應呼叫 managed 程式碼, 或以任何方式進行, 以造成 managed 記憶體配置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** Corprof.idl .idl, Corprof.idl。h  
   
  **LIBRARY:** CorGuids.lib  
   

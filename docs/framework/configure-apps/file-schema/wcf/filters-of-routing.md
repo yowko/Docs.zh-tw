@@ -2,20 +2,20 @@
 title: <filters> 的 <routing>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 8b2c735a19c4cece16dcb77e3ec548eb2d39ec18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba60958ad33b46b40285f3f70001273bb3af3a63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701030"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925609"
 ---
-# <a name="filters-of-routing"></a>\<篩選條件 > 的\<路由 >
+# <a name="filters-of-routing"></a>\<> 路由 > \<的篩選準則
 
-代表定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>傳入訊息時使用。
+表示定義一組路由篩選的設定區段, 其決定在評估傳入訊息時所使用的 Windows Communication Foundation <xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) 類型。
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;[**\<routing>**](routing.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**
+[ **\<system.serviceModel>** ](system-servicemodel.md)   
+&nbsp;&nbsp;[ **\<routing>** ](routing.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<filters>**
   
 ## <a name="syntax"></a>語法  
   
@@ -38,19 +38,19 @@ ms.locfileid: "61701030"
 
 ### <a name="attributes"></a>屬性
 
-None
+無
 
 ### <a name="child-elements"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | 包含路由篩選條件，決定類型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>傳入訊息時，會使用。 |
+| [ **\<filter>** ](filter.md) | 包含路由篩選準則, 決定在評估傳入訊息時, 將<xref:System.ServiceModel.Dispatcher.MessageFilter>使用的 Windows Communication Foundation 類型 (WCF)。 |
 
 ### <a name="parent-elements"></a>父元素
 
-|     | 描述 |
+|     | 說明 |
 | --- | ----------- |
-| [**\<routing>**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 代表定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>評估內送訊息，以及路由資料表定義目標端點時要使用將訊息傳送至篩選條件的比對。 |
+| [ **\<routing>** ](routing.md) | 表示定義一組路由篩選的設定區段, 其決定在評估傳入訊息時所使用的 Windows Communication Foundation<xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) 類型, 以及將目標端點定義為的路由表。當篩選準則相符時, 將訊息傳送至。 |
 
 ## <a name="see-also"></a>另請參閱
 

@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6709b14ce8e7bc131f9feb7a277fb41851ee4352
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cfaf886d09d843f4dbf61af55a9388454b050ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994262"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957419"
 ---
 # <a name="icordebugstringvalue-interface"></a>ICorDebugStringValue 介面
-ICorDebugHeapValue 套用至字串值的子類別。  
+適用于字串值之 ICorDebugHeapValue 的子類別。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
-|[GetLength 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|取得所參考的字串中的字元數目`ICorDebugStringValue`。|  
-|[GetString 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|取得所參考的字串`ICorDebugStringValue`。|  
+|[GetLength 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|取得這個`ICorDebugStringValue`所參考字串中的字元數。|  
+|[GetString 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|取得這個`ICorDebugStringValue`所參考的字串。|  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -45,7 +45,7 @@ ICorDebugHeapValue 套用至字串值的子類別。
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

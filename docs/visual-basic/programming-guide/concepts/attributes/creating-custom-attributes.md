@@ -2,12 +2,12 @@
 title: 建立自訂屬性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 90e8e9b9a3fa8e0b488f41d035b017d6113213b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4b55f92466fde47011937d08c946c9c75ca07b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903548"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966324"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>建立自訂屬性 (Visual Basic)
 您可以建立自己的自訂屬性，方法是定義屬性類別，這是直接或間接衍生自 <xref:System.Attribute> 的類別，它能快速且簡單地在中繼資料中識別屬性定義。 假設您想要用撰寫類型的程式設計人員姓名來標記類型。 您可能會定義自訂的 `Author` 屬性類別：  
@@ -60,7 +60,7 @@ End Class
 ```  
   
 > [!NOTE]
->  如果您的屬性類別包含屬性，則該屬性必須是讀寫。  
+> 如果您的屬性類別包含屬性，則該屬性必須是讀寫。  
   
 ## <a name="see-also"></a>另請參閱
 

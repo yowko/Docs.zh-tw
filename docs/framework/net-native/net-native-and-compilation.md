@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711b4c79b32aa3db4d3681d29e08dbd3d2ddbd02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1cb53818d0e12d625b0609a80b4d8473713525d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941649"
 ---
 # <a name="net-native-and-compilation"></a>.NET 原生和編譯
 以 .NET Framework 為目標的 Windows 8.1 應用程式及 Windows 桌面應用程式，會以特定的程式設計語言撰寫，並會編譯成中繼語言 (IL)。 在執行階段，Just-In-Time (JIT) 編譯器在第一次執行方法之前，才會負責編譯 IL 為本機電腦的原生程式碼。 相較之下，.NET 原生工具鏈會在編譯時期轉換原始碼為原生程式碼。 本主題比較 .NET 原生與其他適用於 .NET Framework 應用程式的編譯技術，並提供 .NET 原生如何產生原生程式碼的實用概觀，可協助您了解為什麼在以 .NET 原生編譯的程式碼中發生的例外狀況不會發生在 JIT 編譯程式碼中。  
   
-## <a name="net-native-generating-native-binaries"></a>.NET 原生：產生的原生二進位檔  
+## <a name="net-native-generating-native-binaries"></a>.NET Native:產生原生二進位檔  
  目標為 .NET Framework 且不使用 .NET 原生工具鏈編譯的應用程式，可由您的應用程式組件組成，其中包含下列項目：  
   
-- 描述組件、其相依性、包含的類型和其成員的[中繼資料](../../../docs/standard/metadata-and-self-describing-components.md)。 中繼資料用於反映和晚期繫結存取，以及在某些情況下也由編譯器及建置工具所使用。  
+- 描述組件、其相依性、包含的類型和其成員的[中繼資料](../../standard/metadata-and-self-describing-components.md)。 中繼資料用於反映和晚期繫結存取，以及在某些情況下也由編譯器及建置工具所使用。  
   
 - 實作程式碼。 這包含中繼語言 (IL) Opcode。 在執行階段，Just-In-Time (JIT) 編譯器將其轉譯成目標平台的原生程式碼。  
   
@@ -50,16 +50,16 @@ ms.locfileid: "64660275"
 - 它會取代完整的 CLR 為重構的執行階段，主要包含記憶體回收行程。 重構的執行階段會在名為 mrt100_app.dll 的程式庫中找到，對於應用程式而言是本機的，而且也只有數百 KB 大小。 這可能是因為靜態連結不需要許多由 Common Language Runtime 所執行的服務。  
   
     > [!NOTE]
-    >  .NET 原生使用相同的記憶體回收行程，如同標準的 Common Language Runtime 。 在 .NET 原生記憶體回收行程中，預設會啟用背景記憶體回收。 如需記憶體回收的詳細資訊，請參閱[記憶體回收的基本概念](../../../docs/standard/garbage-collection/fundamentals.md)。  
+    > .NET 原生使用相同的記憶體回收行程，如同標準的 Common Language Runtime 。 在 .NET 原生記憶體回收行程中，預設會啟用背景記憶體回收。 如需記憶體回收的詳細資訊，請參閱[記憶體回收的基本概念](../../standard/garbage-collection/fundamentals.md)。  
   
 > [!IMPORTANT]
->  .NET 原生會編譯整個應用程式為原生應用程式。 它不允許您編譯包含類別程式庫的單一組件為原生程式碼，如此一來才可單獨從 Managed 程式碼中呼叫它。  
+> .NET 原生會編譯整個應用程式為原生應用程式。 它不允許您編譯包含類別程式庫的單一組件為原生程式碼，如此一來才可單獨從 Managed 程式碼中呼叫它。  
   
  由 .NET 原生工具鏈所產生的應用程式會寫入名為 ilc.out 的目錄，位於您專案目錄的偵錯或發行目錄中。 它包含下列檔案：  
   
-- *\<appName>*.exe 是虛設常式可執行檔，只會將控制項傳輸至 *\<appName>*.dll 中的特殊 `Main` 匯出。  
+- *\<appName>* .exe 是虛設常式可執行檔，只會將控制項傳輸至 *\<appName>* .dll 中的特殊 `Main` 匯出。  
   
-- *\<appName>*.dll 為 Windows 動態連結程式庫，其中包含您應用程式的程式碼，以及來自 .NET Framework Class Library 的程式碼，和任何有相依性的協力廠商程式庫的程式碼。  它也包含支援程式碼，例如應用程式中與 Windows 交互操作及序列化物件所必需的程式碼。  
+- *\<appName>* .dll 為 Windows 動態連結程式庫，其中包含您應用程式的程式碼，以及來自 .NET Framework Class Library 的程式碼，和任何有相依性的協力廠商程式庫的程式碼。  它也包含支援程式碼，例如應用程式中與 Windows 交互操作及序列化物件所必需的程式碼。  
   
 - mrt100_app.dll 為重構的執行階段，會提供執行階段服務，例如記憶體回收。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "64660275"
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料和自我描述元件](../../../docs/standard/metadata-and-self-describing-components.md)
-- [深入探討.NET Native （Channel 9 影片）](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [中繼資料和自我描述元件](../../standard/metadata-and-self-describing-components.md)
+- [內部 .NET Native (Channel 9 影片)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [.NET Native 一般疑難排解](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

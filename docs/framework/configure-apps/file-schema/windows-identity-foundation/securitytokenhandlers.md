@@ -3,15 +3,15 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 678e5c705181c55257b1ddb853690ada60ecd17a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793831"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942464"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
-指定登錄與端點的安全性權杖處理常式的集合。  
+指定已向端點註冊的安全性權杖處理常式集合。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -33,28 +33,28 @@ ms.locfileid: "61793831"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|名稱|指定的權杖處理常式集合的名稱。 架構所辨識的唯一值是"ActAs"和"OnBehalfOf"。 如果使用這些名稱指定權杖處理常式集合，分別處理 ActAs 或 OnBehalfOf 權杖時，將會使用集合。|  
+|NAME|指定權杖處理常式集合的名稱。 架構所能辨識的唯一值為 "ActAs" 和 "OnBehalfOf"。 如果使用上述其中一個名稱來指定權杖處理常式集合, 則會在分別處理 ActAs 或 OnBehalfOf 權杖時使用集合。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|將權杖處理常式集合中的安全性權杖處理常式。|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|清除所有的安全性權杖處理常式，從權杖處理常式集合。|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|從權杖處理常式集合中移除的安全性權杖處理常式。|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供的權杖處理常式集合的組態。|  
+|[\<add>](add.md)|將安全性權杖處理常式加入至權杖處理常式集合。|  
+|[\<clear>](clear.md)|清除權杖處理常式集合中的所有安全性權杖處理常式。|  
+|[\<remove>](remove.md)|從權杖處理常式集合中移除安全性權杖處理常式。|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|提供權杖處理常式集合的設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
+|[\<identityConfiguration>](identityconfiguration.md)|指定服務層級的身分識別設定。|  
   
 ## <a name="remarks"></a>備註  
- 您可以在服務組態中指定一個或多個安全性權杖處理常式的具名的集合。 您可以指定集合的名稱使用`name`屬性。 架構會處理的唯一名稱是"ActAs"和"OnBehalfOf"。 如果處理常式存在於這些集合，這些安全性權杖服務 (STS) 而不預設處理常式處理時使用`ActAs`和`OnBehalfOf`語彙基元。  
+ 您可以在服務設定中指定一或多個已命名的安全性權杖處理常式集合。 您可以使用`name`屬性來指定集合的名稱。 架構所處理的唯一名稱是 "ActAs" 和 "OnBehalfOf"。 如果處理常式存在於這些集合中, 則會由 Security Token Service (STS) 使用, 而不是處理`ActAs`和`OnBehalfOf`標記時的預設處理常式。  
   
- 根據預設，集合會填入下列處理常式類型： <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>， <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>， <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>， <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>， <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>， <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>，和<xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>。 您可以使用，以修改集合`<add>`， `<remove>`，和`<clear>`項目。 您必須確定任何特定的型別中的單一處理常式存在於集合。 比方說，如果您衍生從處理常式<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別，可能是您的處理常式或<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>可能在單一集合，但不是能同時設定。  
+ 根據預設, 集合會填入下列處理<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>程式類型:、 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler> <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>、和<xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>。 您可以使用`<add>`、 `<remove>`和`<clear>`元素來修改集合。 您必須確定集合中只存在任何特定類型的單一處理程式。 例如, 如果您從<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別衍生處理常式, 則您的<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>處理常式或可以在單一集合中設定, 但不能同時在兩者中設定。  
   
- 使用`<securityTokenHandlerConfiguration>`項目來指定集合中的處理常式的組態設定。 透過這個項目指定的設定會覆寫透過在服務上指定[ \<Identityconfiguration> >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目。 有些 （包括數個內建的處理常式型別） 的處理常式可以支援額外的設定，透過的子項目`<add>`項目。 指定處理常式上設定覆寫集合或服務上所指定的對等設定。
+ `<securityTokenHandlerConfiguration>`使用元素來指定集合中處理常式的設定。 透過這個專案指定的設定, 會透過[ \<identityConfiguration >](identityconfiguration.md)專案來覆寫在服務上指定的設定。 某些處理常式 (包括數個內建處理常式類型) 可以透過專案的子`<add>`專案支援其他設定。 在處理常式上指定的設定會覆寫集合或服務上指定的對等設定。

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05900f55885f8f3a4c470d6842c42d0fc3e0171e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987697"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957448"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 介面
 控制自訂偵錯工具通知。  
@@ -30,13 +30,13 @@ ms.locfileid: "61987697"
   
 |方法|描述|  
 |------------|-----------------|  
-|[SetEnableCustomNotification 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|啟用和停用指定之型別的自訂偵錯工具通知。|  
+|[SetEnableCustomNotification 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|啟用和停用指定類型的自訂偵錯工具通知。|  
   
 ## <a name="remarks"></a>備註  
  這個介面會以邏輯方式擴充 ICorDebugProcess 和 ICorDebugProcess2 介面。  
   
 > [!NOTE]
->  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
+> 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "61987697"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

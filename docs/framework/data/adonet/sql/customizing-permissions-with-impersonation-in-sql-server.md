@@ -2,12 +2,12 @@
 title: 在 SQL Server 中使用模擬來自訂權限
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: d44e410727924260640f0f50aea5ea41f264f3af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52e11bd983a8c9155d90659834df03dea6449a8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650349"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961123"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模擬來自訂權限
 許多應用程式會使用預存程序 (Stored Procedure) 來存取資料，並仰賴擁有權鏈結來限制基底資料表的存取。 您可以授與預存程序的 EXECUTE 權限，並撤銷或拒絕基底資料表的權限。 如果預存程序和資料表具有相同的擁有者，SQL Server 就不會檢查呼叫端的權限。 不過，如果物件具有不同的擁有者或在動態 SQL 的情況中，擁有權鏈結便沒有作用。  
@@ -28,7 +28,7 @@ EXECUTE AS USER = 'userName';
  您可以在預存程序、觸發程序或使用者定義函式 (內嵌 (Inline) 資料表值函式除外) 的定義標頭中使用 EXECUTE AS 子句。 這樣做會導致此程序在 EXECUTE AS 子句中指定之使用者名稱或關鍵字的內容中執行。 您可以在資料庫中建立沒有對應至登入的 Proxy 使用者，並僅授與此程序所存取之物件的必要權限給該位使用者。 只有 EXECUTE AS 子句中指定的 Proxy 使用者必須擁有此模組所存取之所有物件的權限。  
   
 > [!NOTE]
->  某些動作 (例如 TRUNCATE TABLE) 沒有可授與的權限。 您可以在程序中併入陳述式並指定擁有 ALTER TABLE 權限的 Proxy 使用者，藉以針對僅擁有程序之 EXECUTE 權限的呼叫端擴充截斷資料表的權限。  
+> 某些動作 (例如 TRUNCATE TABLE) 沒有可授與的權限。 您可以在程序中併入陳述式並指定擁有 ALTER TABLE 權限的 Proxy 使用者，藉以針對僅擁有程序之 EXECUTE 權限的呼叫端擴充截斷資料表的權限。  
   
  EXECUTE AS 子句中指定的內容在此程序的持續期間內有效，包括巢狀程序和觸發程序。 當執行完成或發出 REVERT 陳述式時，內容就會還原成呼叫端。  
   
@@ -49,12 +49,12 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ```  
   
 > [!NOTE]
->  需要稽核的應用程式可能會中斷，因為系統沒有保留呼叫端的原始安全性內容。 傳回目前使用者之識別 (例如 SESSION_USER、USER 或 USER_NAME) 的內建函式會傳回與 EXECUTE AS 子句相關聯的使用者，而非原始呼叫端。  
+> 需要稽核的應用程式可能會中斷，因為系統沒有保留呼叫端的原始安全性內容。 傳回目前使用者之識別 (例如 SESSION_USER、USER 或 USER_NAME) 的內建函式會傳回與 EXECUTE AS 子句相關聯的使用者，而非原始呼叫端。  
   
 ### <a name="using-execute-as-with-revert"></a>使用 EXECUTE AS 搭配 REVERT  
  您可以使用 Transact-SQL REVERT 陳述式來還原成原始執行內容。  
   
- 選擇性子句 WITH NO REVERT COOKIE = @variableName，可讓您將執行內容切換回呼叫端若@variableName變數包含正確的值。 這樣可讓您在使用連接共用 (Connection Pooling) 的環境中，將執行內容切換回呼叫端。 因為值@variableName只有知道呼叫端的 EXECUTE AS 陳述式，呼叫端可以保證叫用應用程式的使用者無法變更執行內容。 關閉連接時，它就會傳回集區。 如需有關連接集區在 ADO.NET 中，請參閱[SQL Server 連線共用 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 選擇性子句 (不含 REVERT COOKIE = @variableName) 可讓您在@variableName變數包含正確的值時, 將執行內容切換回呼叫端。 這樣可讓您在使用連接共用 (Connection Pooling) 的環境中，將執行內容切換回呼叫端。 因為的值@variableName只有 EXECUTE AS 語句的呼叫者知道, 所以呼叫端可以保證叫用應用程式的使用者無法變更執行內容。 關閉連接時，它就會傳回集區。 如需 ADO.NET 中連接共用的詳細資訊, 請參閱[SQL Server 連接共用 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
   
 ### <a name="specifying-the-execution-context"></a>指定執行內容  
  除了指定使用者以外，您也可以使用 EXECUTE AS 搭配下列任何關鍵字。  

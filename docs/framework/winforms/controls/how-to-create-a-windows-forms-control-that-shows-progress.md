@@ -10,14 +10,14 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 877df5139fd0e626cd2242e3790bc7100f6233aa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 84f0caace70f9877e84fdd01dc69216dc10fe485
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599333"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950568"
 ---
-# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>HOW TO：建立顯示進度的 Windows Forms 控制項
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>作法：建立顯示進度的 Windows Forms 控制項
 下列程式碼範例會顯示稱為 `FlashTrackBar` 的自訂控制項，其可用來對使用者顯示應用程式的層級或進度。 它會使用漸層來以視覺方式表示進度。  
   
  `FlashTrackBar` 控制項可說明下列概念︰  
@@ -26,9 +26,9 @@ ms.locfileid: "64599333"
   
 - 定義自訂事件。 (`FlashTrackBar` 會定義 `ValueChanged` 事件。)  
   
-- 覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，以提供繪製控制項的邏輯。  
+- 覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法以提供繪製控制項的邏輯。  
   
-- 計算區域可用於繪製控制項使用其<xref:System.Windows.Forms.Control.ClientRectangle%2A>屬性。 `FlashTrackBar` 會在其 `OptimizedInvalidate` 方法中執行此作業。  
+- 計算可用來繪製控制項的區域, 方法是使用<xref:System.Windows.Forms.Control.ClientRectangle%2A>其屬性。 `FlashTrackBar` 會在其 `OptimizedInvalidate` 方法中執行此作業。  
   
 - 在 Windows Forms 設計工具中變更屬性時，請實作該屬性的序列化或持續性。 `FlashTrackBar` 會定義 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法，以便將其 `StartColor` 和`EndColor` 屬性序列化。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "64599333"
 |`OnValueChanged`|引發 `ValueChanged` 事件的方法。|  
   
 > [!NOTE]
->  `FlashTrackBar` 會使用<xref:System.EventArgs>事件資料的類別和<xref:System.EventHandler>事件委派。  
+> `FlashTrackBar`使用事件<xref:System.EventArgs>資料和<xref:System.EventHandler>事件委派的類別。  
   
- 為了處理對應*EventName*事件`FlashTrackBar`覆寫下列方法，它繼承自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ 若要處理對應的事件事件`FlashTrackBar` , 會覆寫其繼承自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>的下列方法:  
   
 - <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -69,7 +69,7 @@ ms.locfileid: "64599333"
   
 - <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- 為了處理對應的屬性變更事件，`FlashTrackBar`覆寫下列方法，它繼承自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ 若要處理對應的屬性變更事件, `FlashTrackBar`會覆寫其繼承自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>的下列方法:  
   
 - <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb6841dd24c4c7587cc2424cc1e606194da34585
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032691"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944067"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable 和 DataColumn 對應
-A **DataAdapter**包含零或多個集合<xref:System.Data.Common.DataTableMapping>中的物件及其**TableMappings**屬性。 A **DataTableMapping**提供對資料來源，查詢所傳回的資料之間的主要對應和<xref:System.Data.DataTable>。 **DataTableMapping**可以傳遞名稱，取代**DataTable**名稱**填滿**方法**DataAdapter**。 下列範例會建立**DataTableMapping**名為**AuthorsMapping** for**作者**資料表。  
+**DataAdapter**在其 TableMappings 屬性中包含零個<xref:System.Data.Common.DataTableMapping>或多個物件的集合。 **DataTableMapping**會在從查詢傳回的資料與資料來源之間提供主要對應, 以及<xref:System.Data.DataTable>。 **DataTableMapping**名稱可以代替**DataTable**名稱傳遞到**DataAdapter**的**Fill**方法。 下列範例會為**作者**資料表建立名為**AuthorsMapping**的**DataTableMapping** 。  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -23,11 +23,11 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors")
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");  
 ```  
   
- A **DataTableMapping**可讓您使用的資料行名稱**DataTable**不同於與資料庫中。 **DataAdapter**使用對應來更新資料表時，符合的資料行。  
+ **DataTableMapping**可讓您在**DataTable**中使用與資料庫中不同的資料行名稱。 當更新資料表時, **DataAdapter**會使用對應來比對資料行。  
   
- 如果您未指定**TableName**或**DataTableMapping**名稱就呼叫**填滿**或是**更新**方法**DataAdapter**，則**DataAdapter**會尋找**DataTableMapping**名為"Table"。 如果該**DataTableMapping**不存在， **TableName**的**DataTable**為"Table"。 您可以指定預設值**DataTableMapping**藉由建立**DataTableMapping** "Table"的名稱。  
+ 如果您在呼叫**DataAdapter**的**Fill**或**Update**方法時未指定**TableName**或**DataTableMapping**名稱, **dataadapter**會尋找名為 "Table" 的**DataTableMapping** 。 如果該**DataTableMapping**不存在, **DataTable**的**TableName**就是 "Table"。 您可以藉由建立名為 "Table" 的**DataTableMapping**來指定預設**DataTableMapping** 。  
   
- 下列程式碼範例會建立**DataTableMapping** (從<xref:System.Data.Common>命名空間)，並使其指定的預設對應**DataAdapter**藉由將它命名為 「 資料表 」。 範例接著會對應從查詢結果中的第一個資料表的資料行 (**客戶**的資料表**Northwind**資料庫) 的使用者易記的名稱，在一組**Northwind Customers**資料表中<xref:System.Data.DataSet>。 未被對應的資料行會使用來自資料來源的資料行名稱。  
+ 下列程式碼範例會建立**DataTableMapping** (從<xref:System.Data.Common>命名空間), 並將它命名為 "Table", 使其成為指定**DataAdapter**的預設對應。 然後, 此範例會將查詢結果 ( **northwind**資料庫的**Customers**資料表) 中第一個資料表的資料行對應至中**Northwind** <xref:System.Data.DataSet>Customers 資料表內的一組更好的使用者名稱。 未被對應的資料行會使用來自資料來源的資料行名稱。  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -49,11 +49,11 @@ mapping.ColumnMappings.Add("PostalCode", "ZIPCode");
 adapter.Fill(custDS);  
 ```  
   
- 在更進階的情況下，您可以決定讓相同**DataAdapter**無法支援載入不同的資料表，具有不同的對應。 若要這樣做，只要另外加**DataTableMapping**物件。  
+ 在更先進的情況下, 您可能會決定您想要讓相同的**DataAdapter**支援使用不同的對應來載入不同的資料表。 若要這樣做, 只需新增額外的**DataTableMapping**物件即可。  
   
- 當**填滿**傳遞給方法的執行個體**資料集**並**DataTableMapping**名稱，如果具有該名稱的對應存在，則為， **DataTable**會使用的名稱。  
+ 將**資料集**的實例和**DataTableMapping**名稱傳遞給**Fill**方法時, 如果使用該名稱的對應存在, 則會使用它;否則, 會使用具有該名稱的**DataTable** 。  
   
- 下列範例會建立**DataTableMapping**名稱取代**客戶**並**DataTable**名稱**BizTalkSchema**。 此範例則會對應到 SELECT 陳述式所傳回的資料列**BizTalkSchema** **DataTable**。  
+ 下列範例會建立**DataTableMapping** , 其名稱為**Customers** , 而**DataTable**名稱為**BizTalkSchema**。 然後, 此範例會將 SELECT 語句所傳回的資料列對應至**BizTalkSchema** **DataTable**。  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -78,19 +78,19 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
->  若未提供來源資料行名稱給資料行對應，或是未提供來源資料表名稱給資料表對應，便會自動產生預設名稱。 如果沒有來源資料行提供資料行對應，該資料行對應會指定的遞增預設名稱**SourceColumn** *N*開頭**SourceColumn1**。 如果沒有來源資料表名稱提供給資料表對應，該資料表對應會指定的遞增預設名稱**SourceTable** *N*，從**SourceTable1**。  
+> 若未提供來源資料行名稱給資料行對應，或是未提供來源資料表名稱給資料表對應，便會自動產生預設名稱。 如果未提供資料行對應的來源資料行, 則會從**SourceColumn1**開始, 資料行對應會提供一個增量預設名稱**SourceColumn** *N* 。 如果沒有為資料表對應提供來源資料表名稱, 則會為數據表對應提供**SourceTable** *N*的累加預設名稱, 從**SourceTable1**開始。  
   
 > [!NOTE]
->  我們建議您避免命名慣例**SourceColumn** *N*資料行對應，或**SourceTable** *N*資料表對應，因為您提供的名稱可能與在現有的預設資料行對應名稱衝突**ColumnMappingCollection**或 資料表對應名稱**DataTableMappingCollection**. 如果提供的名稱已經存在，便會擲回例外狀況。  
+> 我們建議您避免資料行對應使用**SourceColumn** *N*的命名慣例, 或針對資料表對應來**SourceTable** *N* , 因為您所提供的名稱可能會與中**現有的預設資料行對應名稱衝突。** **衝突**中的 ColumnMappingCollection 或資料表對應名稱。 如果提供的名稱已經存在，便會擲回例外狀況。  
   
 ## <a name="handling-multiple-result-sets"></a>處理多重結果集  
- 如果您**SelectCommand**會傳回多個資料表，**填滿**會自動產生具遞增值的資料表中的資料表名稱**資料集**開始，在表單上指定資料表名稱，並繼續**TableName** *N*，從**TableName1**。 您可以使用 資料表對應至自動產生的資料表名稱對應至您想要指定資料表名稱**資料集**。 例如，對於**SelectCommand**會傳回兩個資料表**客戶**和**訂單**，發出下列呼叫來**填滿**。  
+ 如果您的**SelectCommand**傳回多個資料表, **Fill**會自動針對**資料集**內的資料表產生具有累加值的資料表名稱, 並以指定的資料表名稱作為開頭, 並在表單**TableName**中繼續進行。*N*, 從**TableName1**開始。 您可以使用資料表對應, 將自動產生的資料表名稱對應至您想要在**資料集中**為數據表指定的名稱。 例如, 針對傳回兩個數據表 ( **Customers**和**Orders**) 的**SelectCommand** , 請發出下列呼叫以進行**填滿**。  
   
 ```  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- 中會建立兩個資料表**資料集**:**客戶**並**Customers1**。 您可以使用資料表對應，以確保第二個資料表名為**訂單**而不是**Customers1**。 若要這樣做，請將對應的來源資料表**Customers1**要**資料集**表格**訂單**，如下列範例所示。  
+ **資料集**內會建立兩個數據表:**客戶**和**Customers1**。 您可以使用資料表對應來確保第二個數據表的名稱是**Orders** , 而不是**Customers1**。 若要這樣做, 請將**Customers1**的來源資料表對應至**資料集**資料表**訂單**, 如下列範例所示。  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  

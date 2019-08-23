@@ -6,15 +6,15 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-ms.openlocfilehash: 2fe1834c3e92c3eff016ffd7857a0473eb2e8b3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4281c7bf5a7972d323e1e649aaef437c7ee901ff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788847"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956269"
 ---
 # <a name="-recurse"></a>-recurse
-編譯指定的目錄或專案目錄中的所有子目錄中的原始程式檔。  
+編譯指定目錄或專案目錄之所有子目錄中的原始程式碼檔。  
   
 ## <a name="syntax"></a>語法  
   
@@ -24,16 +24,16 @@ ms.locfileid: "61788847"
   
 ## <a name="arguments"></a>引數  
  `dir`  
- 選擇性。 您想要開始搜尋的目錄。 如果未指定，則會在專案目錄中開始搜尋。  
+ 選擇性。 您想要開始搜尋的目錄。 如果未指定, 則搜尋會從專案目錄開始。  
   
  `file`  
  必要項。 要搜尋的檔案。 允許萬用字元。  
   
 ## <a name="remarks"></a>備註  
- 您可以在 檔案名稱使用萬用字元，來編譯專案目錄中的所有相符檔案，而不需使用`-recurse`。 如果不指定任何輸出檔案名稱，編譯器會根據處理的第一個輸入檔案的輸出檔案名稱。 這通常是依字母順序檢視時所編譯檔的清單中的第一個檔案。 基於這個理由，最好是指定輸出檔案使用`-out`選項。  
+ 您可以在檔案名中使用萬用字元, 來編譯專案目錄中的所有相符檔案, 而`-recurse`不使用。 如果未指定輸出檔名稱, 編譯器會在第一個處理的輸入檔案上以輸出檔案名為基礎。 這通常是在按字母順序查看時所編譯的檔案清單中的第一個檔案。 基於這個理由, 最好是使用`-out`選項來指定輸出檔。  
   
 > [!NOTE]
->  `-recurse`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。  
+> 此`-recurse`選項無法從 Visual Studio 開發環境中使用; 只有在從命令列進行編譯時, 才能使用此選項。  
   
 ## <a name="example"></a>範例  
  下列命令會編譯目前目錄中的所有 Visual Basic 檔案。  
@@ -42,7 +42,7 @@ ms.locfileid: "61788847"
 vbc *.vb  
 ```  
   
- 下列命令會編譯中的所有 Visual Basic 檔案`Test\ABC`目錄和其下的任何目錄，然後產生`Test.ABC.dll`。  
+ 下列命令會編譯目錄中的所有 Visual Basic `Test\ABC`檔案和其底下的任何目錄, 然後產生`Test.ABC.dll`。  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

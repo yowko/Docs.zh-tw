@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 40d89f7bd7a1f4a38a1c4030a86405e09c497899
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee60b990bc749dbb9c5d0e7426c57e9392ddf9d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659319"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920978"
 ---
 # <a name="network-element-network-settings"></a>\<網路 > 元素 (網路設定)
 設定外部簡易郵件傳輸通訊協定 (SMTP) 伺服器的網路選項。  
@@ -44,7 +44,7 @@ ms.locfileid: "69659319"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`clientDomain`|指定要在初始 SMTP 通訊協定要求中用來連接 SMTP 郵件伺服器的用戶端功能變數名稱。 預設值是傳送要求的本機電腦的 localhost 名稱。|  
 |`defaultCredentials`|指定是否應該使用預設的使用者認證來存取 smtp 交易的 SMTP 郵件伺服器。 預設值為 `false`。|  
@@ -60,7 +60,7 @@ ms.locfileid: "69659319"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<smtp > 元素 (網路設定)](smtp-element-network-settings.md)|設定簡單郵件傳輸通訊協定 (SMTP) 郵件傳送選項。|  
   
@@ -70,7 +70,7 @@ ms.locfileid: "69659319"
  您也可以使用基本驗證 (使用者名稱和密碼) 向 SMTP 伺服器驗證您自己的身分。 若要使用此選項, 您必須為指定的 SMTP 伺服器指定有效的使用者名稱和密碼。  
   
 > [!NOTE]
->  基本驗證會`userName`將`password`和值傳送到未加密的伺服器。 監視網路流量的任何人都可以看到您的認證, 並使用它們來連接到伺服器。 您應該考慮使用更安全的驗證機制, 例如 Kerberos 或 NT LAN Manager (NTLM)。如果`defaultCredentials` 為`true`, 則如果伺服器支援這些通訊協定, 則會使用 Kerberos 或 NTLM。  
+> 基本驗證會`userName`將`password`和值傳送到未加密的伺服器。 監視網路流量的任何人都可以看到您的認證, 並使用它們來連接到伺服器。 您應該考慮使用更安全的驗證機制, 例如 Kerberos 或 NT LAN Manager (NTLM)。如果`defaultCredentials` 為`true`, 則如果伺服器支援這些通訊協定, 則會使用 Kerberos 或 NTLM。  
   
  [基本驗證] 和 [預設網路認證] 選項互斥。如果您將`defaultCredentials`設定`true`為, 並指定使用者名稱和密碼, 則會使用預設網路認證, 而且會忽略基本驗證資料。  
   

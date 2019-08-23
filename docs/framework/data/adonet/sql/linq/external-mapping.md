@@ -2,28 +2,28 @@
 title: 外部對應
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 0b6ced31f5534bd040917ecc5d241d54d9bee95f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619717"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950322"
 ---
 # <a name="external-mapping"></a>外部對應
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援*外部對應*，供您必須使用個別的 XML 檔案來指定資料庫的資料模型和物件模型之間對應的程序。 使用外部對應檔案的好處如下：  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援*外部對應*, 這是一種程式, 您可以使用個別的 XML 檔案來指定資料庫的資料模型與物件模型之間的對應。 使用外部對應檔案的好處如下：  
   
 - 您可以將對應程式碼與應用程式的程式碼分開來。 如此一來，就可以避免應用程式的程式碼變得雜亂。  
   
 - 您可以將外部對應檔案視為組態檔。 例如，在交付二進位碼檔案之後，只要換掉外部對應檔案，就可以更新應用程式的行為。  
   
 ## <a name="requirements"></a>需求  
- 對應檔案必須是 XML 檔案，然後以該檔案必須驗證[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]結構描述定義 (.xsd) 檔案。  
+ 對應檔必須是 XML 檔案, 而且檔案必須根據[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]架構定義 (.xsd) 檔進行驗證。  
   
  可套用下列規則：  
   
 - 對應檔案必須是 XML 檔。  
   
-- XML 對應檔案必須根據 XML 結構描述定義檔進行驗證。 如需詳細資訊，請參閱[如何：驗證 DBML 和外部對應檔](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+- XML 對應檔案必須根據 XML 結構描述定義檔進行驗證。 如需詳細資訊，請參閱[如何：驗證 DBML 和外部對應](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)檔案。  
   
 - 外部對應會覆寫以屬性 (Attribute) 為基礎的對應。 也就是說，當您使用外部對應來源建立 <xref:System.Data.Linq.DataContext> 時，<xref:System.Data.Linq.DataContext> 會忽略已在類別上建立的所有對應屬性。 不論類別是否包含在外部對應檔案中，結果都是一樣。  
   
@@ -32,10 +32,10 @@ ms.locfileid: "64619717"
 ## <a name="xml-schema-definition-file"></a>XML 結構描述定義檔  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的外部對應必須根據下列 XML 結構描述定義進行驗證。  
   
- 這個結構描述定義檔與用來驗證 DBML 檔案的結構描述定義檔不同。 如需詳細資訊，請參閱 < [LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md))。  
+ 這個結構描述定義檔與用來驗證 DBML 檔案的結構描述定義檔不同。 如需詳細資訊, 請參閱[LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md))。  
   
 > [!NOTE]
->  Visual Studio 使用者也可找到這個 XSD 檔在 XML 結構描述 對話方塊中為"LinqToSqlMapping.xsd"。 若要正確使用此檔案來驗證外部對應檔案，請參閱[How to:驗證 DBML 和外部對應檔](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+> Visual Studio 使用者也會在 [XML 架構] 對話方塊中, 將這個 XSD 檔案尋找為 "Linqtosqlmapping.xsd"。 若要正確使用此檔案來驗證外部對應檔案, 請[參閱如何:驗證 DBML 和外部對應](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)檔案。  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [如何：產生物件模型當做外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [如何：產生物件模型做為外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

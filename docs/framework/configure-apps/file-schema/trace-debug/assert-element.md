@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ba781598542d271f41476b1a1e9d61faeb6ff74
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701355"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927189"
 ---
-# <a name="assert-element"></a>\<判斷提示 > 項目
+# <a name="assert-element"></a>\<> 元素的 assert
 指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<assert>  
+\<assert >  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,8 +35,8 @@ ms.locfileid: "61701355"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`assertuienabled`|選擇性屬性。<br /><br /> 指定是否要顯示訊息方塊的時機**Debug.Assert**方法會評估要**false**。|  
-|`logfilename`|選擇性屬性。<br /><br /> 指定要寫入訊息，如果檔案名稱**Debug.Assert**評估為**false**。|  
+|`assertuienabled`|選擇性屬性。<br /><br /> 指定當**Debug. Assert**方法評估為**false**時, 是否要顯示訊息方塊。|  
+|`logfilename`|選擇性屬性。<br /><br /> 指定在**Debug. Assert**評估為**false**時, 要寫入訊息的檔案名。|  
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled 屬性  
   
@@ -56,10 +56,10 @@ ms.locfileid: "61701355"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 在這兩個屬性 **\<判斷提示>** 是選擇性的項目。 您可以將訊息方塊停用未指定要寫入至訊息的檔案，或者您可以指定要寫入訊息時保留訊息方塊，啟用檔案。  
+ 在這兩個屬性 **\<判斷提示>** 是選擇性的項目。 您可以停用訊息方塊, 但不指定要寫入訊息的檔案, 或者您也可以指定要寫入訊息的檔案, 同時讓訊息方塊保持啟用。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何停用顯示訊息方塊，當您呼叫**Debug.Assert**寫入到訊息`c:\log.txt`。  
+ 下列範例顯示當您呼叫**Debug. Assert**並將訊息`c:\log.txt`寫入時, 如何停用顯示訊息方塊。  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ ms.locfileid: "61701355"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.Debug>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [追蹤和偵錯設定結構描述](index.md)

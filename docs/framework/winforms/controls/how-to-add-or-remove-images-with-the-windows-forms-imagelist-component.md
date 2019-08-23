@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 31ae91958dbc02a2f64945af896b4a2408224d05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 430b7f573b115c21b9e2fa87f0ace74205717285
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624027"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925125"
 ---
-# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>HOW TO：使用 Windows Forms ImageList 元件新增或移除影像
-Windows Form<xref:System.Windows.Forms.ImageList>元件通常是填入映像之前與控制項相關聯。 不過，您可以新增並移除與控制項產生關聯的影像清單後的映像。  
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>作法：使用 Windows Forms ImageList 元件新增或移除影像
+Windows Forms <xref:System.Windows.Forms.ImageList>元件在與控制項相關聯之前, 通常會先填入影像。 不過, 您可以在將影像清單與控制項建立關聯之後, 新增和移除影像。  
   
 > [!NOTE]
->  當您移除映像時，請確認<xref:System.Windows.Forms.ButtonBase.ImageIndex%2A>任何的屬性相關聯的控制項是否仍然有效。  
+> 當您移除映射時, 請確認<xref:System.Windows.Forms.ButtonBase.ImageIndex%2A>任何相關聯控制項的屬性仍然有效。  
   
-### <a name="to-add-images-programmatically"></a>以程式設計方式將映像  
+### <a name="to-add-images-programmatically"></a>以程式設計方式新增影像  
   
-- 使用<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>影像清單的方法<xref:System.Windows.Forms.ImageList.Images%2A>屬性。  
+- 使用影像清單的<xref:System.Windows.Forms.ImageList.Images%2A>屬性的方法。<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>  
   
-     在下列程式碼範例中，將路徑設為映像的位置**我的文件**資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此資料夾，會使用此位置。 選擇此位置也可讓具有最少的系統存取層級更多安全地執行應用程式的使用者。 下列程式碼範例，您需要表單<xref:System.Windows.Forms.ImageList>已經加入的控制項。  
+     在下列程式碼範例中, 為影像位置設定的路徑是 [我的**文檔**] 資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦都包含此資料夾, 所以會使用這個位置。 選擇此位置也可讓具有最低系統存取層級的使用者更安全地執行應用程式。 下列程式碼範例要求您的表單<xref:System.Windows.Forms.ImageList>已經加入控制項。  
   
     ```vb  
     Public Sub LoadImage()  
@@ -74,11 +74,11 @@ Windows Form<xref:System.Windows.Forms.ImageList>元件通常是填入映像之�
        }  
     ```  
   
-### <a name="to-add-images-with-a-key-value"></a>若要加入具有索引鍵值的影像。  
+### <a name="to-add-images-with-a-key-value"></a>新增具有金鑰值的映射。  
   
-- 使用其中一種<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>影像清單的方法<xref:System.Windows.Forms.ImageList.Images%2A>接受的索引鍵值的屬性。  
+- 使用影像<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> <xref:System.Windows.Forms.ImageList.Images%2A>清單屬性的其中一個方法, 以取得索引鍵值。  
   
-     在下列程式碼範例中，將路徑設為映像的位置**我的文件**資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此資料夾，會使用此位置。 選擇此位置也可讓具有最少的系統存取層級更多安全地執行應用程式的使用者。 下列程式碼範例，您需要表單<xref:System.Windows.Forms.ImageList>已經加入的控制項。  
+     在下列程式碼範例中, 為影像位置設定的路徑是 [我的**文檔**] 資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦都包含此資料夾, 所以會使用這個位置。 選擇此位置也可讓具有最低系統存取層級的使用者更安全地執行應用程式。 下列程式碼範例要求您的表單<xref:System.Windows.Forms.ImageList>已經加入控制項。  
   
     ```vb  
     Public Sub LoadImage()  
@@ -105,13 +105,13 @@ public void addImage()
 }  
 ```  
   
-### <a name="to-remove-all-images-programmatically"></a>若要以程式設計方式移除所有映像  
+### <a name="to-remove-all-images-programmatically"></a>以程式設計方式移除所有影像  
   
-- 使用<xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A>方法以移除單一映像  
+- <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A>使用方法來移除單一映射  
   
-     -  
+     、-或-  
   
-     使用<xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A>方法，以清除所有的映像清單中的影像。  
+     <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A>使用方法清除影像清單中的所有影像。  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -127,9 +127,9 @@ imageList1.Images.Remove(myImage);
 imageList1.Images.Clear();  
 ```  
   
-### <a name="to-remove-images-by-key"></a>若要移除依索引鍵的影像  
+### <a name="to-remove-images-by-key"></a>依索引鍵移除映射  
   
-- 使用<xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>依其索引鍵中移除單一映像的方法。  
+- <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>使用方法, 依其索引鍵來移除單一映射。  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  

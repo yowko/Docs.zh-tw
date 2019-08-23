@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在沙箱中執行部分信任的程式碼
+title: 作法：在沙箱中執行部分信任的程式碼
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff750e6140b1eda8f6537c2f51b9f4769c1d892c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a439e02046e04d8628415237d6717a74b9922371
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645565"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910938"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>HOW TO：在沙箱中執行部分信任的程式碼
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>作法：在沙箱中執行部分信任的程式碼
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  沙箱是指在受限制的安全性環境中執行程式碼的做法，這會限制授與程式碼的存取權限。 例如，如果您有來自不完全信任來源的 Managed 程式庫，則不應該以完全信任的方式執行。 相反地，您應該將程式碼放在沙箱，限制其權限為您所預期它會需要的權限 (例如，<xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 權限)。  
@@ -275,4 +275,4 @@ class Sandboxer : MarshalByRefObject
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全程式碼撰寫方針](../../standard/security/secure-coding-guidelines.md)

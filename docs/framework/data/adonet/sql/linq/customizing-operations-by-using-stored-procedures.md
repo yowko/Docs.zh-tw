@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: d9f8d15b46f6e5575bd206bf572ffda0365e58f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08cc8aedac545ffa5648034119fc2267c860d499
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743561"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963285"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>使用預存程序來自訂作業
 預存程序表示用以覆寫預設行為的常見方法。 本主題中的範例顯示如何使用針對預存程序產生的方法包裝函式，以及如何才能直接呼叫預存程序。  
   
- 如果您使用 Visual Studio，您可以使用物件關聯式設計工具，來指定執行插入、 更新和刪除的預存程序。  
+ 如果您使用 Visual Studio, 您可以使用物件關聯式設計工具指派預存程式來執行插入、更新和刪除。  
   
 > [!NOTE]
->  若要讀回資料庫產生的值，請在預存程序中使用輸出參數。 如果您無法使用輸出參數，撰寫部分方法實作，而不是依賴會覆寫物件關聯式設計工具所產生。 在順利完成 `INSERT` 或 `UPDATE` 作業之後，對應至資料庫產生值的成員必須設為適當的值。 如需詳細資訊，請參閱 <<c0> [ 開發人員在覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)。  
+> 若要讀回資料庫產生的值，請在預存程序中使用輸出參數。 如果您無法使用輸出參數, 請撰寫部分方法實作為, 而不要依賴物件關聯式設計工具所產生的覆寫。 在順利完成 `INSERT` 或 `UPDATE` 作業之後，對應至資料庫產生值的成員必須設為適當的值。 如需詳細資訊, 請參閱[開發人員覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67743561"
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列類別使用這些方法進行覆寫。  
   
 ### <a name="code"></a>程式碼  
@@ -40,7 +40,7 @@ ms.locfileid: "67743561"
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>說明  
  您使用 `NorthwindThroughSprocs` 的方式完全與使用 `Northwnd` 相同。  
   
 ### <a name="code"></a>程式碼  

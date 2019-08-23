@@ -6,36 +6,36 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b38ed931cab3a333a56dd027d5843b1c8f00dcb9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699723"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916688"
 ---
 # <a name="application-settings-attributes"></a>應用程式設定屬性
-應用程式設定架構提供許多可套用至應用程式設定包裝函式類別或其個別屬性的屬性。 這些屬性會檢查在執行階段應用程式設定基礎結構，通常會特別設定提供者，才能調整其運作的自訂包裝函式所述的需求。  
+應用程式設定架構提供許多可套用至應用程式設定包裝函式類別或其個別屬性的屬性。 這些屬性會在執行時間由應用程式設定基礎結構進行檢查, 通常是設定提供者, 以便根據自訂包裝函式的指定需求來量身打造。  
   
- 下表列出的屬性可以套用到應用程式設定包裝函式類別，這個類別的個別屬性，或兩者。 根據定義，只是單一的 scope 屬性 —**UserScopedSettingAttribute**或是**ApplicationScopedSettingAttribute**— 必須套用至每個設定屬性。  
+ 下表列出可套用至應用程式設定包裝函式類別、這個類別的個別屬性或兩者的屬性。 根據定義, 只有單一範圍屬性 (**system.configuration.userscopedsettingattribute>** 或**system.configuration.applicationscopedsettingattribute>** ) 必須套用至每個設定屬性。  
   
 > [!NOTE]
->  為自訂設定提供者中，衍生自<xref:System.Configuration.SettingsProvider>類別中，只有需要辨識下列的三個屬性：**ApplicationScopedSettingAttribute**， **UserScopedSettingAttribute**，以及**DefaultSettingValueAttribute**。  
+> 從<xref:System.Configuration.SettingsProvider>類別衍生的自訂設定提供者, 只需要辨識下列三個屬性:**System.configuration.applicationscopedsettingattribute>** 、 **system.configuration.userscopedsettingattribute>** 和**system.configuration.defaultsettingvalueattribute>** 。  
   
-|屬性|Target|描述|  
+|屬性|目標|描述|  
 |---------------|------------|-----------------|  
-|<xref:System.Configuration.SettingsProviderAttribute>|兩者|指定要用於持續性設定提供者的簡短名稱。<br /><br /> 如果未提供這個屬性，預設的提供者， <xref:System.Configuration.LocalFileSettingsProvider>，會假設。|  
-|<xref:System.Configuration.UserScopedSettingAttribute>|兩者|為使用者範圍的應用程式設定中定義的屬性。|  
-|<xref:System.Configuration.ApplicationScopedSettingAttribute>|兩者|做為應用程式範圍的應用程式設定中定義的屬性。|  
-|<xref:System.Configuration.DefaultSettingValueAttribute>|屬性|指定可以還原序列化提供者的硬式編碼預設值，這個屬性的字串。<br /><br /> <xref:System.Configuration.LocalFileSettingsProvider>不需要這個屬性，而且將會覆寫任何值，提供這個屬性是否有值已保存。|  
-|<xref:System.Configuration.SettingsDescriptionAttribute>|屬性|有個別的設定，主要是由執行階段和設計階段工具提供描述性的測試。|  
-|<xref:System.Configuration.SettingsGroupNameAttribute>|類別|提供明確的設定群組的名稱。 如果這個屬性已遺失，<xref:System.Configuration.ApplicationSettingsBase>使用包裝函式類別名稱。|  
-|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|類別|設定群組中，主要是由執行階段和設計階段工具提供描述性的測試。|  
-|<xref:System.Configuration.SettingsManageabilityAttribute>|兩者|指定應該提供給屬性的設定群組的零或多個可管理性服務。 可用的服務描述<xref:System.Configuration.SettingsManageability>列舉型別。|  
-|<xref:System.Configuration.SpecialSettingAttribute>|屬性|指出設定屬於特殊的預先定義的類別，例如連接字串，所建議的設定提供者的特殊處理。 預先定義的類別，這個屬性由定義<xref:System.Configuration.SpecialSetting>列舉型別。|  
-|<xref:System.Configuration.SettingsSerializeAsAttribute>|兩者|指定的設定群組或屬性的慣用的序列化機制。 可用的序列化機制由定義<xref:System.Configuration.SettingsSerializeAs>列舉型別。|  
-|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|屬性|指定設定提供者，應該停用所有的應用程式升級功能以標示屬性。|  
+|<xref:System.Configuration.SettingsProviderAttribute>|兩者|指定要用於持續性之設定提供者的簡短名稱。<br /><br /> 如果未提供這個屬性, 則會假設為預設<xref:System.Configuration.LocalFileSettingsProvider>的提供者。|  
+|<xref:System.Configuration.UserScopedSettingAttribute>|兩者|將屬性定義為使用者範圍的應用程式設定。|  
+|<xref:System.Configuration.ApplicationScopedSettingAttribute>|兩者|將屬性定義為應用程式範圍的應用程式設定。|  
+|<xref:System.Configuration.DefaultSettingValueAttribute>|屬性|指定可由提供者還原序列化為此屬性之硬式編碼預設值的字串。<br /><br /> <xref:System.Configuration.LocalFileSettingsProvider>不需要這個屬性, 而且如果有值已經保存, 將會覆寫這個屬性所提供的任何值。|  
+|<xref:System.Configuration.SettingsDescriptionAttribute>|屬性|提供個別設定的描述性測試, 主要是由執行時間和設計階段工具所使用。|  
+|<xref:System.Configuration.SettingsGroupNameAttribute>|類別|提供設定群組的明確名稱。 如果遺漏此屬性, <xref:System.Configuration.ApplicationSettingsBase>則會使用包裝函式類別名稱。|  
+|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|類別|提供設定群組的描述性測試, 主要用於執行時間和設計階段工具。|  
+|<xref:System.Configuration.SettingsManageabilityAttribute>|兩者|指定應該提供給設定群組或屬性的零個或多個管理服務。 <xref:System.Configuration.SettingsManageability>列舉會描述可用的服務。|  
+|<xref:System.Configuration.SpecialSettingAttribute>|屬性|表示設定屬於特殊的預先定義類別, 例如連接字串, 這會建議由設定提供者進行特殊處理。 這個屬性的預先定義類別是由<xref:System.Configuration.SpecialSetting>列舉所定義。|  
+|<xref:System.Configuration.SettingsSerializeAsAttribute>|兩者|為設定群組或屬性指定慣用的序列化機制。 可用的序列化機制是由<xref:System.Configuration.SettingsSerializeAs>列舉所定義。|  
+|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|屬性|指定設定提供者應該停用標示屬性的所有應用程式升級功能。|  
   
- *類別*指出，屬性可以只套用至應用程式設定包裝函式類別。 *屬性*指出屬性可以套用唯一的設定屬性。 *兩者*指出屬性可以套用在任一個層級。  
+ *類別*指出屬性只能套用至應用程式設定包裝函式類別。 *屬性*表示屬性只能套用設定屬性。 *這兩個都*表示屬性可以在任一層級套用。  
   
 ## <a name="see-also"></a>另請參閱
 

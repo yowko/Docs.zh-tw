@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 572a5856c9f92f105e727df1ecd8eb2e0a92fc09
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 462db50a42e55c0c5a9570317ceeeb0ae69215a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927657"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings > 元素
 包含密碼編譯設定。  
@@ -37,14 +37,14 @@ ms.locfileid: "69664275"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<cryptoNameMapping>](cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
 |[\<oidMap>](oidmap-element.md)|包含對類別的 asn.1 物件識別元 (OID) 對應。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`mscorlib`|`cryptographySettings`包含元素。|  
@@ -80,4 +80,4 @@ ms.locfileid: "69664275"
 
 - [組態檔結構描述](../index.md)
 - [密碼編譯設定結構描述](index.md)
-- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../../standard/security/cryptographic-services.md)

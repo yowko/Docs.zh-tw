@@ -7,21 +7,21 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673740"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920498"
 ---
-# <a name="listeners-element-for-source"></a>\<接聽程式 > 項目\<來源 >
-新增或移除接聽程式中的<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。 接聽程式會將適當的目標，例如記錄檔、 視窗或文字檔追蹤輸出。  
+# <a name="listeners-element-for-source"></a>\<來源 > 的\<接聽項 > 元素
+在的<xref:System.Diagnostics.TraceSource.Listeners%2A>集合中加入或移除接聽<xref:System.Diagnostics.TraceSource>程式。 接聽程式會將追蹤輸出導向至適當的目標, 例如記錄檔、視窗或文字檔。  
   
  \<configuration>  
 \<system.diagnostics>  
-\<sources>  
-\<source>  
-\<接聽程式 > 項目  
+\<來源 >  
+\<來源 >  
+\<> 元素的接聽程式  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,15 +41,15 @@ ms.locfileid: "61673740"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|將接聽項新增至 `Listeners` 集合。|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|移除接聽程式從`Listeners`集合。|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|清除追蹤來源的 `Listeners` 集合。|  
+|[\<add>](add-element-for-listeners-for-source.md)|將接聽項新增至 `Listeners` 集合。|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|從`Listeners`集合中移除接聽程式。|  
+|[\<clear>](clear-element-for-listeners-for-source.md)|清除追蹤來源的 `Listeners` 集合。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
@@ -59,10 +59,10 @@ ms.locfileid: "61673740"
 ## <a name="remarks"></a>備註  
   
 ## <a name="configuration-file"></a>組態檔  
- 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 此元素可用於電腦設定檔 (Machine.config) 和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<listeners>`要加入的主控台追蹤接聽程式項目`mySource`來源，以及移除預設的追蹤接聽程式。  
+ 下列範例顯示如何使用`<listeners>`專案, 將主控台追蹤接聽程式加入`mySource`至來源, 並移除預設的追蹤接聽程式。  
   
 ```xml  
 <configuration>  
@@ -90,5 +90,5 @@ ms.locfileid: "61673740"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.TraceListener>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [追蹤和偵錯設定結構描述](index.md)
+- [追蹤接聽項](../../../debug-trace-profile/trace-listeners.md)

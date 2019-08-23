@@ -2,18 +2,18 @@
 title: 序列化工具
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
-ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8b362ec061dd7f9ad6e1547cbc70ece420adc72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778309"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960824"
 ---
 # <a name="serialization-tools"></a>序列化工具
 本章節內容包含序列化工具的詳細資訊。 您可以從命令列執行所有工具。  
   
 > [!IMPORTANT]
->  為了讓 .NET Framework 工具正常運作，必須正確地設定 Path、Include 和 Lib 等環境變數。 執行位於 \<SDK>\v2.0\Bin 目錄中的 SDKVars.bat，即可設定這些環境變數。 SDKVars.bat 必須在每一個命令提示字元中執行。  
+> 為了讓 .NET Framework 工具正常運作，必須正確地設定 Path、Include 和 Lib 等環境變數。 執行位於 \<SDK>\v2.0\Bin 目錄中的 SDKVars.bat，即可設定這些環境變數。 SDKVars.bat 必須在每一個命令提示字元中執行。  
   
 ## <a name="in-this-section"></a>本節內容  
   

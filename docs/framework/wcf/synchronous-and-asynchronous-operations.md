@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: c2e6a955a151e0e11bcf189085dc24e7815fb747
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952929"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -110,11 +110,11 @@ public class AsyncExample
  如需事件架構非同步模式的詳細資訊，請參閱[事件架構非同步模式](https://go.microsoft.com/fwlink/?LinkId=232515)。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 非同步模式  
- 可以實作服務作業，以非同步方式使用.NET Framework 非同步程式設計模式，並將標示`<Begin>`方法<xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>屬性設定為`true`。 在此情況下，非同步作業會在相同的格式為同步作業的中繼資料：它會公開為要求訊息和相互關聯的回應訊息的單一作業。 用戶端程式設計模型接著就會做出選擇。 只要在叫用服務時發生要求/回應訊息交換，這些程式設計模型就會將此模式表示為同步作業或非同步作業。  
+ 服務作業可以使用 .NET Framework 非同步程式設計模式來以非同步方式執行, 並將`<Begin>` <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>屬性 (property) 設定為來`true`標記方法。 在此情況下, 非同步作業會以與同步作業相同的格式, 在中繼資料中公開:它會公開為單一作業, 其中包含要求訊息和相互關聯的回應訊息。 用戶端程式設計模型接著就會做出選擇。 只要在叫用服務時發生要求/回應訊息交換，這些程式設計模型就會將此模式表示為同步作業或非同步作業。  
   
  一般而言，基於系統的非同步本質，您不應該相依於執行緒。  將資料傳遞至作業分派處理之各種階段最可靠的方式就是使用延伸模組。  
   
- 如需範例，請參閱[如何：實作非同步服務作業](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。  
+ 如需範例，請參閱[如何：執行非同步服務](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)作業。  
   
  若不管在用戶端應用程式中呼叫合約作業的方式，而要定義以非同步方式執行的合約作業 `X`：  
   
@@ -155,7 +155,7 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 ```  
   
 > [!NOTE]
->  <xref:System.ServiceModel.OperationContractAttribute> 屬性只會套用至 `BeginDoWork` 方法。 產生的合約具有一個名為 `DoWork` 的 WSDL 作業。  
+> <xref:System.ServiceModel.OperationContractAttribute> 屬性只會套用至 `BeginDoWork` 方法。 產生的合約具有一個名為 `DoWork` 的 WSDL 作業。  
   
 ### <a name="client-side-asynchronous-invocations"></a>用戶端非同步叫用  
  WCF 用戶端應用程式可以使用前述三個非同步呼叫模型中的任何一個模型  
@@ -172,7 +172,7 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- 當完成時，Svcutil.exe 會產生 WCF 用戶端類別，其中的事件基礎結構能夠呼叫應用程式去實作與指派事件處理常式，以接收回應並採取適當的動作。 如需完整範例，請參閱[如何：以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 當完成時，Svcutil.exe 會產生 WCF 用戶端類別，其中的事件基礎結構能夠呼叫應用程式去實作與指派事件處理常式，以接收回應並採取適當的動作。 如需完整範例，請參閱[如何：以非同步方式](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)呼叫服務作業。  
   
  但是，事件架構非同步呼叫只能在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中使用。 此外，使用 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 建立 WCF 用戶端通道時，即使在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中亦不支援此呼叫。 透過 WCF 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件以非同步方式叫用您的作業。 若要使用此方法，請使用 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 指定 **/async** 命令選項，如下列範例所示。  
   
@@ -180,12 +180,12 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   
- 這會產生服務合約，其中的每個作業會模型化為其 `<Begin>` 屬性會設為 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 的 `true` 方法，和對應的 `<End>` 方法。 完整範例，使用<xref:System.ServiceModel.ChannelFactory%601>，請參閱[How to:呼叫作業以非同步方式使用通道處理站](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。  
+ 這會產生服務合約，其中的每個作業會模型化為其 `<Begin>` 屬性會設為 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 的 `true` 方法，和對應的 `<End>` 方法。 如需使用<xref:System.ServiceModel.ChannelFactory%601>的完整範例, 請[參閱如何:使用通道](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)處理站以非同步方式呼叫作業。  
   
- 無論何種情況下，即使是以同步方式實作服務，應用程式仍可以使用非同步方式叫用作業，而透過相同的方式，應用程式可以使用相同的模式，以非同步方式叫用本機同步方法。 實作作業的方式並不重要的用戶端。回應訊息送達時，其內容會分派至用戶端的非同步 <`End`> 方法，而用戶端擷取資訊。  
+ 無論何種情況下，即使是以同步方式實作服務，應用程式仍可以使用非同步方式叫用作業，而透過相同的方式，應用程式可以使用相同的模式，以非同步方式叫用本機同步方法。 執行作業的方式對用戶端來說並不重要;回應訊息抵達時, 其內容會分派至用戶端的非同步 <`End`> 方法, 而用戶端會抓取資訊。  
   
 ### <a name="one-way-message-exchange-patterns"></a>單向訊息交換模式  
- 您也可以建立非同步訊息交換模式，而在這個模式中，用戶端或服務可以不管另一端，以任何方向傳送單向作業 (這是 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 為 `true` 的作業，而且沒有相關聯的回應)  (這會使用具有單向訊息的雙工訊息交換模式)。在這個情況下，服務合約會指定單向訊息交換，這表示每一端都可在適當時，選擇是否要實作為非同步呼叫或實作。 一般來說，當合約為單向訊息交換時，就可以大量地非同步實作，因為一旦傳送訊息時，應用程式不會等待回覆就可繼續執行其他工作。  
+ 您也可以建立非同步訊息交換模式，而在這個模式中，用戶端或服務可以不管另一端，以任何方向傳送單向作業 (這是 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 為 `true` 的作業，而且沒有相關聯的回應) (這會使用具有單向訊息的雙工訊息交換模式)。在這個情況下，服務合約會指定單向訊息交換，這表示每一端都可在適當時，選擇是否要實作為非同步呼叫或實作。 一般來說，當合約為單向訊息交換時，就可以大量地非同步實作，因為一旦傳送訊息時，應用程式不會等待回覆就可繼續執行其他工作。  
   
 ### <a name="event-based-asynchronous-clients-and-message-contracts"></a>事件架構非同步用戶端和訊息合約  
  事件架構非同步模型的設計方針指出，如果傳回多個值，則其中一個值會傳回做為 `Result` 屬性，其他值則傳回做為 <xref:System.EventArgs> 物件上的屬性。 這麼做的結果就是，如果用戶端使用事件架構非同步命令選項匯入中繼資料，且作業傳回多個值，則預設 <xref:System.EventArgs> 物件會傳回一個值做為 `Result` 屬性，而其餘則做為 <xref:System.EventArgs> 物件的屬性。  

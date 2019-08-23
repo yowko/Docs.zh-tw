@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9b60cdef2af25ce712fcb2401b7f776d3add5b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df1f1c7e28464781a73a0939c3413f4c9d620d7d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660403"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942389"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>HOW TO：使用追蹤和偵錯進行條件式編譯
 當您於開發期間偵錯應用程式時，追蹤及偵錯輸出都會移至 Visual Studio 中的 [輸出] 視窗。 然而，若要在已部署的應用程式中包含追蹤功能，您必須在啟用 **TRACE** 編譯器指示詞的情況下編譯已經過檢測的應用程式。 這可將追蹤程式碼編譯成應用程式的發行版本。 如果您沒有啟用 **TRACE** 指示詞，則在編譯期間會忽略所有的追蹤程式碼，並且不會在您將部署的可執行程式碼中包含追蹤程式碼。  
   
  追蹤和偵錯方法均具有相關聯的Conditional 屬性。 例如，如果追蹤的 Conditional 屬性為 **true**，則會在組件 (已編譯的 .exe 檔案或 .dll) 中包含所有的追蹤陳述式，如果 **Trace** Conditional 屬性為 **false**，則不會包含追蹤陳述式。  
   
- 您可以為組建開啟 **Trace** 或 **Debug** Conditional 屬性，或兩者都開啟或都關閉。 因此，有四種類型的組建：**偵錯**，**追蹤**、 兩者或兩者都關閉。 部分產品部署的發行組建可能不含兩者；大部分的偵錯組建則包含兩者。  
+ 您可以為組建開啟 **Trace** 或 **Debug** Conditional 屬性，或兩者都開啟或都關閉。 因此, 有四種類型的組建:**Debug**、 **Trace**、both 或兩者皆非。 部分產品部署的發行組建可能不含兩者；大部分的偵錯組建則包含兩者。  
   
  您可用數種方式來指定應用程式的編譯器設定：  
   
@@ -50,9 +50,9 @@ ms.locfileid: "64660403"
   
      例如，在命令列上輸入下列編譯器指令會在已編譯可執行檔中包含追蹤程式碼：  
   
-     Visual basic: **vbc-r:System.dll-d： 追蹤 = TRUE-d： 偵錯 = FALSE MyApplication.vb**  
+     針對 Visual Basic: **vbc-r:System.dll-d:TRACE = TRUE-d:DEBUG = FALSE MyApplication .vb**  
   
-     針對C#: **csc-r:System.dll-d： 追蹤-d： 偵錯 = FALSE MyApplication.cs**  
+     適用C#于: **csc-r:System.dll-d:TRACE-d:DEBUG = FALSE MyApplication.cs**  
   
     > [!TIP]
     >  若要編譯一個以上的應用程式檔案，請在檔案名稱之間保留一個空格，例如，**MyApplication1.vb MyApplication2.vb MyApplication3.vb** 或 **MyApplication1.cs MyApplication2.cs MyApplication3.cs**。  
@@ -67,7 +67,7 @@ ms.locfileid: "64660403"
     |`-d:`|定義條件式編譯的符號|  
   
     > [!NOTE]
-    >  您必須使用大寫字母來拼寫 TRACE 或 DEBUG。 如需條件式編譯命令的詳細資訊，請在命令提示字元中輸入 `vbc /?` (若為 Visual Basic) 或 `csc /?` (若為 C#)。 如需詳細資訊，請參閱[從命令列建置](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) 或[叫用命令列編譯器](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic)。  
+    > 您必須使用大寫字母來拼寫 TRACE 或 DEBUG。 如需條件式編譯命令的詳細資訊，請在命令提示字元中輸入 `vbc /?` (若為 Visual Basic) 或 `csc /?` (若為 C#)。 如需詳細資訊，請參閱[從命令列建置](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) 或[叫用命令列編譯器](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic)。  
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>使用 #CONST 或 #define 來執行條件式編譯  
   
@@ -93,14 +93,14 @@ ms.locfileid: "64660403"
 將編譯器指示詞標為註解。  
   
 > [!NOTE]
->  當您準備編譯時，可從 [建置] 功能表中選取 [建置]，或使用命令列方法 (但不輸入 **d:**) 來定義條件式編譯的符號。  
+> 當您準備編譯時，可從 [建置] 功能表中選取 [建置]，或使用命令列方法 (但不輸入 **d:** ) 來定義條件式編譯的符號。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [如何：建立、初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [如何：為 Visual Studio 命令列設定環境變數](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [如何：叫用命令列編譯器](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [如何：將追蹤語句新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：為 Visual Studio 命令列設定環境變數](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [如何：叫用命令列編譯器](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

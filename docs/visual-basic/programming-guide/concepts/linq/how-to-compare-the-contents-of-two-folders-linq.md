@@ -1,15 +1,15 @@
 ---
-title: 作法：比較兩個資料夾內容 (LINQ) (Visual Basic)
+title: HOW TO：比較兩個資料夾的內容 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5db73b57cfa21de4f1d14299ed7956a322876898
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593015"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940668"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>作法：比較兩個資料夾內容 (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>HOW TO：比較兩個資料夾的內容 (LINQ) (Visual Basic)
 本例示範三種比較兩個檔案清單的方式︰  
   
 - 查詢指定兩個檔案清單是否完全相同的布林值。  
@@ -19,7 +19,7 @@ ms.locfileid: "65593015"
 - 查詢集合差異，以擷取一個資料夾中有而另一個沒有的檔案。  
   
     > [!NOTE]
-    >  這裡顯示的技巧可用於比較任何類型的物件序列。  
+    > 這裡顯示的技巧可用於比較任何類型的物件序列。  
   
  這裡顯示的 `FileComparer` 類別會示範如何一起使用自訂比較子類別和標準查詢運算子。 此類別不適用於實際案例。 它僅使用每個檔案以位元組計的名稱和長度，來判斷每個資料夾的內容是否相同。 在實際案例中，您應該修改此比較子以執行更嚴格的相等檢查。  
   
@@ -114,7 +114,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立 VB.NET 的主控台應用程式專案，使用`Imports`System.Linq 命名空間陳述式。
+ 建立 VB.NET 主控台應用程式專案, 其中包含`Imports` System. Linq 命名空間的語句。
  
 ## <a name="see-also"></a>另請參閱
 

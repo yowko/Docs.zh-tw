@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: ee53e6e5fc360c5155e1682f829a45be922caf22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 968e5d9bb08f168e3c77b40ea42b16dc66e93e64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665415"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956288"
 ---
 # <a name="interfaces-visual-basic"></a>介面 (Visual Basic)
 「介面」可定義類別可實作的屬性、方法和事件。 介面可讓您將功能定義為一小組緊密相關的屬性、方法和事件；這會降低相容性問題，因為您可以為您的介面開發增強的實作，而不會危及現有程式碼。 只要開發額外的介面和實作，您就可以隨時加入新功能。  
@@ -33,20 +33,20 @@ ms.locfileid: "64665415"
  在命名空間中，介面陳述式預設為 `Friend`，但它們也可以明確宣告為 `Public` 或 `Friend`。 類別、模組、介面和結構中定義的介面預設為 `Public`，但它們也可以明確宣告為 `Public`、`Friend`、`Protected` 或 `Private`。  
   
 > [!NOTE]
->  `Shadows` 關鍵字可以套用至所有介面成員。 `Overloads` 關鍵字可以套用至介面定義中宣告的 `Sub`、`Function` 和 `Property` 陳述式。 此外，`Property` 陳述式可以有 `Default`、`ReadOnly` 或 `WriteOnly` 修飾詞。 不允許其他修飾詞，即 `Public`、`Private`、`Friend`、`Protected`、`Shared`、`Overrides`、`MustOverride` 或 `Overridable`。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+> `Shadows` 關鍵字可以套用至所有介面成員。 `Overloads` 關鍵字可以套用至介面定義中宣告的 `Sub`、`Function` 和 `Property` 陳述式。 此外，`Property` 陳述式可以有 `Default`、`ReadOnly` 或 `WriteOnly` 修飾詞。 不允許其他修飾詞，即 `Public`、`Private`、`Friend`、`Protected`、`Shared`、`Overrides`、`MustOverride` 或 `Overridable`。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
  例如，下列程式碼會定義一個介面，其包含一個函式、一個屬性與一個事件。  
   
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>實作介面  
- Visual Basic 保留字`Implements`用於兩種方式。 `Implements` 陳述式表示類別或結構實作介面。 `Implements` 關鍵字表示類別成員或結構成員實作特定介面成員。  
+ Visual Basic 的保留字`Implements`會以兩種方式使用。 `Implements` 陳述式表示類別或結構實作介面。 `Implements` 關鍵字表示類別成員或結構成員實作特定介面成員。  
   
 ### <a name="implements-statement"></a>Implements 陳述式  
  如果類別或結構實作一或多個介面，它在 `Class` 或 `Structure` 陳述式後面必須緊接著 `Implements` 陳述式。 `Implements` 陳述式需要由類別實作的介面清單 (以逗號分隔)。 類別或結構必須使用 `Implements` 關鍵字實作所有介面成員。  
   
 ### <a name="implements-keyword"></a>Implements 關鍵字  
-  `Implements` 關鍵字需要實作介面成員之逗號分隔清單。 一般而言，只會指定單一介面成員，但您可以指定多個成員。 介面成員的規格包含介面名稱 (必須在類別內的實作陳述式中指定)、句號，以及要實作的成員函式、屬性或事件的名稱。 實作介面成員的成員名稱可以使用任何合法的識別項，並不限於`InterfaceName_MethodName`舊版的 Visual Basic 中使用的慣例。  
+ `Implements` 關鍵字需要實作介面成員之逗號分隔清單。 一般而言，只會指定單一介面成員，但您可以指定多個成員。 介面成員的規格包含介面名稱 (必須在類別內的實作陳述式中指定)、句號，以及要實作的成員函式、屬性或事件的名稱。 執行介面成員的成員名稱可以使用任何合法的識別碼, 而且不限於舊版 Visual Basic 中使用的`InterfaceName_MethodName`慣例。  
   
  例如，下列程式碼顯示如何宣告實作介面的方法、且名為 `Sub1` 的副程式：  
   
@@ -81,7 +81,7 @@ ms.locfileid: "64665415"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[逐步解說：建立和實作介面](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|提供詳細的程序，引導您定義和實作您自己的介面之程序。|  
 |[泛型介面中的變異數](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|

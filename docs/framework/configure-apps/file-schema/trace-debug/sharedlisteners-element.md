@@ -11,15 +11,15 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41cabcbce13409b0842cbbd625028b51d32d59d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701212"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926975"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedListeners > 項目
-包含任何來源或追蹤項目可參考的接聽項。  根據預設，這些接聽程式沒有收到任何追蹤，則不可能在執行階段擷取這些接聽程式。 識別為共用接聽項可以依名稱加入到來源或追蹤接聽程式。  
+# <a name="sharedlisteners-element"></a>\<s > 元素
+包含任何來源或追蹤項目可參考的接聽項。  這些接聽程式預設不會接收任何追蹤, 而且在執行時間不可能取得這些接聽程式。 識別為共用接聽項的接聽程式可以依名稱新增至來源或追蹤。  
   
  \<configuration>  
 \<system.diagnostics>  
@@ -43,22 +43,22 @@ ms.locfileid: "61701212"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|將接聽項新增至 `sharedListeners` 集合。|  
+|[\<add>](add-element-for-listeners-for-trace.md)|將接聽項新增至 `sharedListeners` 集合。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`Configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`system.diagnostics`|指定 ASP.NET 組態區段的根項目。|  
   
 ## <a name="remarks"></a>備註  
- 加入共用接聽項集合中的接聽程式不會進行它的作用中接聽程式。 它必須仍會加入至追蹤來源或追蹤將它加入至`Listeners`該追蹤項目的集合。 .NET Framework 中的接聽程式類別衍生自<xref:System.Diagnostics.TraceListener>類別。  
+ 將接聽程式加入至共用的接聽程式集合並不會使其成為作用中的接聽項。 它仍然必須加入追蹤來源或追蹤中, 方法是將它新增至該`Listeners`追蹤元素的集合。 .NET Framework 中的接聽程式類別衍生自<xref:System.Diagnostics.TraceListener>類別。  
   
- 這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
+ 此元素可用於電腦設定檔 (Machine.config) 和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<sharedListeners>`加入接聽程式的項目`console`要`Listeners`兩個集合<xref:System.Diagnostics.TraceSource>和<xref:System.Diagnostics.Trace>類別。 主控台追蹤接聽項會將追蹤資訊寫入主控台中，透過呼叫其中一個<xref:System.Diagnostics.TraceSource>或<xref:System.Diagnostics.Trace>。  
+ 下列範例顯示如何`<sharedListeners>`使用專案, 將接聽程式<xref:System.Diagnostics.TraceSource>新增`console`至`Listeners`和<xref:System.Diagnostics.Trace>類別的集合。 主控台追蹤接聽程式會透過呼叫<xref:System.Diagnostics.TraceSource>或<xref:System.Diagnostics.Trace>, 將追蹤資訊寫入主控台。  
   
 ```xml  
 <configuration>  
@@ -91,5 +91,5 @@ ms.locfileid: "61701212"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.TraceListener>
-- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [追蹤和偵錯設定結構描述](index.md)
+- [追蹤接聽項](../../../debug-trace-profile/trace-listeners.md)

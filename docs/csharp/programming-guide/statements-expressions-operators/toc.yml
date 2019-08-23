@@ -7,8 +7,6 @@
       href: expressions.md
     - name: 運算式主體成員
       href: expression-bodied-members.md
-    - name: 運算子
-      href: operators.md
     - name: 匿名函式
       items:
         - name: 總覽

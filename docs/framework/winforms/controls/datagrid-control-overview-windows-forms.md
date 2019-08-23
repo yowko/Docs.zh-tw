@@ -20,40 +20,40 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: e1e9ce761baa77ea06b3d66aa5b296a186f054b4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7c67ed499d96ced9bcd9537bd83d6f60037ec27e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878855"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969197"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控制項概觀 (Windows Form)
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+> <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  Windows Form <xref:System.Windows.Forms.DataGrid> 控制項會在一連串的資料列和資料行中顯示資料。 最簡單的案例是，以沒有包含關聯性的單一資料表，將格線繫結至資料來源。 在此案例中，資料會出現在簡單的資料列和資料行中，就像在試算表中一樣。 如需將資料繫結至其他控制項的詳細資訊，請參閱[資料繫結和 Windows Forms](../data-binding-and-windows-forms.md)。  
   
  如果以多個相關資料表將 <xref:System.Windows.Forms.DataGrid> 繫結至資料，以及如果格線上啟用巡覽，格線就會在每個資料列中顯示展開器。 使用展開器可讓使用者從父資料表移到子資料表。 按一下節點會顯示子資料表，按一下上一頁按鈕，就會顯示原始的父資料表。 格線會以這種方式來顯示資料表之間的階層式關聯性。  
   
- 下列螢幕擷取畫面顯示 DataGrid 繫結至多個資料表的資料：  
+ 下列螢幕擷取畫面顯示系結至具有多個資料表之資料的 DataGrid:  
   
- ![顯示資料格的 WinForms 應用程式繫結至具有多個資料表的資料。](./media/datagrid-control-overview-windows-forms/datagrid-bound-multiple-tables.gif)  
+ ![WinForms 應用程式, 顯示系結至具有多個資料表之資料的 DataGrid。](./media/datagrid-control-overview-windows-forms/datagrid-bound-multiple-tables.gif)  
   
  <xref:System.Windows.Forms.DataGrid> 可以提供資料集的使用者介面、相關資料表之間的巡覽，以及豐富的格式化和編輯功能。  
   
- 顯示和操作資料是不同的功能：控制處理使用者介面，而資料更新處理由 Windows Form 資料繫結架構和.NET Framework 資料提供者。 因此，繫結至相同的資料來源的多個控制項將保持同步。  
+ 資料的顯示和操作是不同的功能:控制項會處理使用者介面, 而資料更新則是由 Windows Forms 的資料系結架構和 .NET Framework 資料提供者來處理。 因此，繫結至相同的資料來源的多個控制項將保持同步。  
   
 > [!NOTE]
->  如果您熟悉 Visual Basic 6.0 中的 DataGrid 控制項，您會在 Windows Form <xref:System.Windows.Forms.DataGrid> 控制項中發現一些顯著的差異。  
+> 如果您熟悉 Visual Basic 6.0 中的 DataGrid 控制項，您會在 Windows Form <xref:System.Windows.Forms.DataGrid> 控制項中發現一些顯著的差異。  
   
  當格線繫結至 <xref:System.Data.DataSet> 時，會自動建立、格式化並填滿資料行和資料列。 如需詳細資訊，請參閱 [Data Binding and Windows Forms](../data-binding-and-windows-forms.md)。 遵循 <xref:System.Windows.Forms.DataGrid> 控制項的產生，您可以依據您的需求來加入、刪除、重新排列及格式化資料行和資料列。  
   
 ## <a name="binding-data-to-the-control"></a>將資料繫結至控制項  
  為了讓 <xref:System.Windows.Forms.DataGrid> 控制項運作，應在設計階段使用 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 和 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 屬性，或在執行階段使用 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法，將其繫結至資料來源。 此繫結會將 <xref:System.Windows.Forms.DataGrid> 指向具現化的資料來源物件，例如 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable>)。 <xref:System.Windows.Forms.DataGrid> 控制項會顯示在資料上執行之動作的結果。 大部分資料特定動作都不是透過 <xref:System.Windows.Forms.DataGrid> 來執行，而是透過資料來源。  
   
- 如果透過任何機制將繫結資料集中的資料更新， <xref:System.Windows.Forms.DataGrid> 控制項會反映那些變更。 如果資料格及其資料表樣式和資料行樣式`ReadOnly`屬性設定為`false`，可以透過更新資料集內的<xref:System.Windows.Forms.DataGrid>控制項。  
+ 如果透過任何機制將繫結資料集中的資料更新， <xref:System.Windows.Forms.DataGrid> 控制項會反映那些變更。 如果資料格和其資料表樣式和資料行樣式的`ReadOnly`屬性設定為`false`, 則<xref:System.Windows.Forms.DataGrid>可以透過控制項更新資料集中的資料。  
   
- 在 <xref:System.Windows.Forms.DataGrid> 中，一次只能顯示一個資料表。 如果資料表之間有定義父子關聯性，則使用者可以在相關的資料表之間移動，以選取要顯示在 <xref:System.Windows.Forms.DataGrid> 控制項中的資料表。 如需有關繫結資訊<xref:System.Windows.Forms.DataGrid>至 ADO.NET 資料來源控制項在設計階段或執行的階段，請參閱[How to:將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
+ 在 <xref:System.Windows.Forms.DataGrid> 中，一次只能顯示一個資料表。 如果資料表之間有定義父子關聯性，則使用者可以在相關的資料表之間移動，以選取要顯示在 <xref:System.Windows.Forms.DataGrid> 控制項中的資料表。 如需在設計階段<xref:System.Windows.Forms.DataGrid>或執行時間將控制項系結至 ADO.NET 資料來源的詳細資訊, [請參閱如何:將 Windows Forms DataGrid 控制項系結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
   
  <xref:System.Windows.Forms.DataGrid> 的有效資料來源包括：  
   
@@ -89,22 +89,22 @@ ms.locfileid: "65878855"
 |多個相關的資料表。|格線可以顯示用來選取資料表的樹狀檢視，或者您可以指定格線顯示父資料表。 父資料表中的記錄可讓使用者巡覽至相關的子資料列。|  
   
 > [!NOTE]
-> 資料集中的資料表會使用 <xref:System.Data.DataRelation> 來建立關聯。 另請參閱[建立資料集之間的關聯性](/visualstudio/data-tools/relationships-in-datasets)。
+> 資料集中的資料表會使用 <xref:System.Data.DataRelation> 來建立關聯。 另請參閱[建立資料集之間的關聯](/visualstudio/data-tools/relationships-in-datasets)性。
   
  當 <xref:System.Windows.Forms.DataGrid> 控制項顯示資料表，且 <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> 屬性設為 `true` 時，按一下資料行標頭，即可重新排序資料。 使用者也可以加入資料列以及編輯儲存格。  
   
- 一組資料表之間的關聯性，會以巡覽的父/子結構向使用者顯示。 父資料表是資料的最高層級，而子資料表是從父資料表中的個別清單衍生的那些資料表。 包含子資料表的每個父資料列中，都會顯示展開器。 按一下展開器，就會產生類似網頁的子資料表連結清單。 當使用者選取連結時，就會顯示子資料表。 按一下顯示/隱藏父資料列圖示 （![顯示/隱藏父資料列圖示](./media/datagrid-control-overview-windows-forms/show-hide-parent-rows.gif)) 會隱藏父資料表的相關資訊，則會使其重新顯示，如果使用者先前已隱藏它。 使用者可以按一下上一頁按鈕，以回到先前檢視的資料表。  
+ 一組資料表之間的關聯性，會以巡覽的父/子結構向使用者顯示。 父資料表是資料的最高層級，而子資料表是從父資料表中的個別清單衍生的那些資料表。 包含子資料表的每個父資料列中，都會顯示展開器。 按一下展開器，就會產生類似網頁的子資料表連結清單。 當使用者選取連結時，就會顯示子資料表。 按一下 [顯示/隱藏父資料列] 圖示 (![顯示/隱藏父資料列圖示](./media/datagrid-control-overview-windows-forms/show-hide-parent-rows.gif)) 會隱藏父資料表的相關資訊, 如果使用者先前已隱藏, 則會使其重新出現。 使用者可以按一下上一頁按鈕，以回到先前檢視的資料表。  
   
 ## <a name="columns-and-rows"></a>資料行和資料列  
- <xref:System.Windows.Forms.DataGrid> 是由 <xref:System.Windows.Forms.DataGridTableStyle> 物件的集合所組成，這些物件包含在 <xref:System.Windows.Forms.DataGrid> 控制項的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 屬性中。 資料表樣式可能包含 <xref:System.Windows.Forms.DataGridColumnStyle> 物件的集合，這些物件包含在 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 屬性中。 您可以編輯<xref:System.Windows.Forms.DataGrid.TableStyles%2A>並<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>屬性使用透過存取的集合編輯器**屬性**視窗。  
+ <xref:System.Windows.Forms.DataGrid> 是由 <xref:System.Windows.Forms.DataGridTableStyle> 物件的集合所組成，這些物件包含在 <xref:System.Windows.Forms.DataGrid> 控制項的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 屬性中。 資料表樣式可能包含 <xref:System.Windows.Forms.DataGridColumnStyle> 物件的集合，這些物件包含在 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 屬性中。 您可以使用透過<xref:System.Windows.Forms.DataGrid.TableStyles%2A> [ <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> **屬性**] 視窗存取的集合編輯器, 來編輯和屬性。  
   
  與 <xref:System.Windows.Forms.DataGrid> 控制項相關聯的任何 <xref:System.Windows.Forms.DataGridTableStyle>，都可以透過 <xref:System.Windows.Forms.GridTableStylesCollection> 來存取。 <xref:System.Windows.Forms.GridTableStylesCollection> 可以在具有 <xref:System.Windows.Forms.DataGridTableStyle> 集合編輯器的設計工具中編輯，或是透過 <xref:System.Windows.Forms.DataGrid> 控制項的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 屬性，以程式設計方式編輯。  
 
- 下圖顯示 DataGrid 控制項中所包含的物件：
+ 下圖顯示 DataGrid 控制項中包含的物件:
 
- ![此圖顯示 DataGrid 控制項中包含的物件。](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
+ ![顯示 DataGrid 控制項中包含之物件的圖表。](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
- 若要將資料表樣式和資料行樣式與 <xref:System.Data.DataTable> 物件和 <xref:System.Data.DataColumn> 物件同步處理，可以將其 `MappingName` 屬性設為適當的 <xref:System.Data.DataTable.TableName%2A> 和 <xref:System.Data.DataColumn.ColumnName%2A> 屬性。 將沒有任何資料行樣式的 <xref:System.Windows.Forms.DataGridTableStyle>，加入繫結至有效資料來源的 <xref:System.Windows.Forms.DataGrid> 控制項，且該資料表樣式的 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 屬性設為有效的 <xref:System.Data.DataTable.TableName%2A> 屬性時，就會針對該資料表樣式建立 <xref:System.Windows.Forms.DataGridColumnStyle> 物件的集合。 針對在 <xref:System.Data.DataTable> 的 <xref:System.Data.DataTable.Columns%2A> 集合中找到的每個 <xref:System.Data.DataColumn>，會將對應的 <xref:System.Windows.Forms.DataGridColumnStyle> 加入 <xref:System.Windows.Forms.GridColumnStylesCollection> 中。 <xref:System.Windows.Forms.GridColumnStylesCollection> 可透過 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 屬性來存取。 若要在格線中加入或刪除資料行，可以在 <xref:System.Windows.Forms.GridColumnStylesCollection> 上使用 <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> 或 <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> 方法。 如需詳細資訊，請參閱[如何：新增資料表和資料行以 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)和[How to:刪除或隱藏資料行中的 Windows Forms DataGrid 控制項](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)。  
+ 若要將資料表樣式和資料行樣式與 <xref:System.Data.DataTable> 物件和 <xref:System.Data.DataColumn> 物件同步處理，可以將其 `MappingName` 屬性設為適當的 <xref:System.Data.DataTable.TableName%2A> 和 <xref:System.Data.DataColumn.ColumnName%2A> 屬性。 將沒有任何資料行樣式的 <xref:System.Windows.Forms.DataGridTableStyle>，加入繫結至有效資料來源的 <xref:System.Windows.Forms.DataGrid> 控制項，且該資料表樣式的 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 屬性設為有效的 <xref:System.Data.DataTable.TableName%2A> 屬性時，就會針對該資料表樣式建立 <xref:System.Windows.Forms.DataGridColumnStyle> 物件的集合。 針對在 <xref:System.Data.DataTable> 的 <xref:System.Data.DataTable.Columns%2A> 集合中找到的每個 <xref:System.Data.DataColumn>，會將對應的 <xref:System.Windows.Forms.DataGridColumnStyle> 加入 <xref:System.Windows.Forms.GridColumnStylesCollection> 中。 <xref:System.Windows.Forms.GridColumnStylesCollection> 可透過 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 屬性來存取。 若要在格線中加入或刪除資料行，可以在 <xref:System.Windows.Forms.GridColumnStylesCollection> 上使用 <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> 或 <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> 方法。 如需詳細資訊，請參閱[如何：將資料表和資料行新增至 Windows Forms DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)控制項[, 以及如何:刪除或隱藏 Windows Forms DataGrid 控制項](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)中的資料行。  
   
  資料行類型的集合可以用擴充具有豐富格式化和編輯功能的 <xref:System.Windows.Forms.DataGridColumnStyle> 類別。 所有資料行類型皆繼承自 <xref:System.Windows.Forms.DataGridColumnStyle> 基底類別。 所建立的類別取決於 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataColumn.DataType%2A> 屬性，其為 <xref:System.Web.UI.WebControls.DataGridColumn> 的基礎。 例如，將 <xref:System.Data.DataColumn.DataType%2A> 屬性設為 <xref:System.Boolean> 的 <xref:System.Data.DataColumn>，將會與 <xref:System.Windows.Forms.DataGridBoolColumn> 相關聯。 下表針對每個資料行類型進行說明。  
   
@@ -124,12 +124,12 @@ ms.locfileid: "65878855"
   
  資料行樣式與資料集中的資料行相關，就像資料表樣式與資料表相關。 就像每個資料表一次只能有一個為其定義的資料表樣式，因此，在特定資料表樣式中，每個資料行也只能有一個為其定義的資料行樣式。 此關聯性定義在資料行的 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 屬性中。  
   
- 如果您已經建立資料表樣式沒有資料行樣式加入至它，Visual Studio 將會加入預設資料行樣式，在執行階段建立表單和格線時。 不過，如果您已建立資料表樣式，並加入任何資料行樣式，Visual Studio 不會建立任何資料行樣式。 此外，您也需要定義資料行樣式，並為它們指派對應名稱，使您想要資料行出現在格線中。  
+ 如果您已建立不含資料行樣式的資料表樣式, Visual Studio 將會在執行時間建立表單和方格時加入預設的資料行樣式。 不過, 如果您已經建立資料表樣式, 並在其中加入任何資料行樣式, Visual Studio 將不會建立任何資料行樣式。 此外，您也需要定義資料行樣式，並為它們指派對應名稱，使您想要資料行出現在格線中。  
   
  因為您藉由指派資料行樣式給資料行，指定將哪些資料行內含在資料格中，但沒有任何資料行樣式已指派給資料行，所以您包含資料集中未顯示在格線內的資料行。 不過，因為資料行內含在資料集中，所以您可以用程式設計方式來編輯未顯示的資料。  
   
 > [!NOTE]
->  一般而言，要先建立資料行樣式，並將其加入資料行樣式集合中，然後再將資料表樣式加入資料表樣式集合中。 當您將空的資料表樣式加入集合中時，會自動為您產生資料行樣式。 因此，如果您嘗試將具有重複 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 值的新資料行樣式加入資料行樣式集合，將會擲回例外狀況。  
+> 一般而言，要先建立資料行樣式，並將其加入資料行樣式集合中，然後再將資料表樣式加入資料表樣式集合中。 當您將空的資料表樣式加入集合中時，會自動為您產生資料行樣式。 因此，如果您嘗試將具有重複 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 值的新資料行樣式加入資料行樣式集合，將會擲回例外狀況。  
 >   
 >  有時候，您會想要在許多資料行之間，只調整一個資料行；例如，資料集包含 50 個資料行，而您只想要其中 49 個。 在此情況下，將所有 50 個資料行匯入，再以程式設計方式移除其中一個，會比以程式設計方式，將 49 個您想要的資料行一一加入容易。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "65878855"
 ## <a name="see-also"></a>另請參閱
 
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
-- [如何：將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [如何：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [如何：將 Windows Forms DataGrid 控制項系結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [如何：將資料表和資料行加入至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [如何：格式化 Windows Forms DataGrid 控制項](how-to-format-the-windows-forms-datagrid-control.md)

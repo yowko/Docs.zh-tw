@@ -12,17 +12,17 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a878ccf94fb4f6d67daa3a4dd42fcf98faf34a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95b463b23c230d620d746e48da49d75238ef2cb7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748636"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955365"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [在 .NET Framework 4.6.1 及更新版本中支援]  
   
- 從記憶體中的符號資料流讀取位元組。  
+ 從記憶體中的符號資料流程讀取位元組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,35 +38,35 @@ HRESULT ReadInMemorySymbols(
   
 ## <a name="parameters"></a>參數  
  `moduleId`  
- [in]包含記憶體中資料流之模組的識別碼。  
+ 在包含記憶體中資料流程之模組的識別碼。  
   
  `symbolsReadOffset`  
- [in]要開始讀取位元組的記憶體資料流內的位移。  
+ 在記憶體內部資料流程內要開始讀取位元組的位移。  
   
  `pSymbolBytes`  
- [out]要將資料複製到其中的緩衝區指標。 緩衝區應該有`countSymbolBytes`的可用空間。  
+ 脫銷要將資料複製到其中之緩衝區的指標。 緩衝區應該有`countSymbolBytes`可用的空間。  
   
  `countSymbolBytes`  
- [in]要複製的位元組數目。  
+ 在要複製的位元組數目。  
   
  `pCountSymbolBytesRead`  
- [out]當方法傳回時，會包含實際讀取的位元組數目。  
+ 脫銷當此方法傳回時, 會包含實際讀取的位元組數目。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK`如果已讀取的非零位元組數目。  
+ `S_OK`如果讀取非零的位元組數目, 則為。  
   
- `CORPROF_E_MODULE_IS_DYNAMIC`如果模組使用建立<xref:System.Reflection.Emit>。  
+ `CORPROF_E_MODULE_IS_DYNAMIC`, 如果模組是使用<xref:System.Reflection.Emit>建立的, 則為。  
   
 ## <a name="remarks"></a>備註  
- `ReadInMemorySymbols`方法會嘗試讀取`countSymbolBytes`的資料位移處開始`symbolsReadOffset`記憶體資料流中。 將資料複製到`pSymbolBytes`，其中應該有`countSymbolBytes`的可用空間。     `pCountSymbolsBytesRead` 包含實際讀取，可能會較少的位元組數目比`countSymbolBytes`如果已到達資料流結尾。  
+ 方法會嘗試從記憶體`countSymbolBytes`中資料流程內的位移`symbolsReadOffset`開始讀取資料。 `ReadInMemorySymbols` 資料會複製到`pSymbolBytes`, 這應該會有`countSymbolBytes`可用的空間。     `pCountSymbolsBytesRead`包含讀取的實際位元組數目, `countSymbolBytes`如果到達資料流程末端, 則可能小於。  
   
 > [!NOTE]
->  目前的實作不支援這些事件處理常式。 如果使用 Reflection.Emit 建立模組，則方法會傳回`CORPROF_E_MODULE_IS_DYNAMIC`。  
+> 目前的執行不支援反映。發出。 如果模組是使用反映所建立, 則方法`CORPROF_E_MODULE_IS_DYNAMIC`會傳回。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** Corprof.idl .idl, Corprof.idl。h  
   
  **LIBRARY:** CorGuids.lib  
   

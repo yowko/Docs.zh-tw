@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤
+title: 作法：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dbd2ccca607869a6f28bc5b3bd1c9f0769db9f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962574"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950074"
 ---
-# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>HOW TO：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤
-您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件來檢視資料集或其他資料來源內的資料行錯誤。 針對<xref:System.Windows.Forms.ErrorProvider>元件，以在表單上顯示資料的錯誤不一定要直接控制項相關聯。 一旦它已繫結至資料來源，它可以顯示錯誤圖示旁邊繫結至相同的資料來源的任何控制項。  
+# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>作法：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤
+您可以使用 Windows Forms <xref:System.Windows.Forms.ErrorProvider>元件來查看資料集或其他資料來源中的資料行錯誤。 若要讓元件顯示表單上的資料錯誤, 則不需要直接與控制項相關聯。 <xref:System.Windows.Forms.ErrorProvider> 一旦系結至資料來源, 它就可以在系結至相同資料來源的任何控制項旁顯示錯誤圖示。  
   
 > [!NOTE]
->  如果您變更的錯誤提供者<xref:System.Windows.Forms.ErrorProvider.DataSource%2A>並<xref:System.Windows.Forms.ErrorProvider.DataMember%2A>在執行階段的屬性，您應該使用<xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A>方法，以避免發生衝突。  
+> 如果您在執行時間變更錯誤<xref:System.Windows.Forms.ErrorProvider.DataSource%2A>提供<xref:System.Windows.Forms.ErrorProvider.DataMember%2A>者的和屬性<xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> , 您應該使用方法來避免衝突。  
   
 ### <a name="to-display-data-errors"></a>若要顯示資料錯誤  
   
-1. 將元件的繫結至資料表中的特定資料行。  
+1. 將元件系結至資料表中的特定資料行。  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ ms.locfileid: "61962574"
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2. 設定<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>屬性到表單。  
+2. <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>將屬性設定為表單。  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ ms.locfileid: "61962574"
     errorProvider1.ContainerControl = this;  
     ```  
   
-3. 將目前記錄的位置，設定包含資料行發生錯誤的資料列。  
+3. 將目前記錄的位置設定為包含資料行錯誤的資料列。  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  
@@ -65,4 +65,4 @@ ms.locfileid: "61962574"
 ## <a name="see-also"></a>另請參閱
 
 - [ErrorProvider 元件概觀](errorprovider-component-overview-windows-forms.md)
-- [如何：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [如何：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示](display-error-icons-for-form-validation-with-wf-errorprovider.md)

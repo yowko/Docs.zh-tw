@@ -1,16 +1,16 @@
 ---
-title: HOW TO：建立基本 Atom 摘要
+title: 作法：建立基本 Atom 摘要
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 11aa71f82af5a1bd764a4cc9e3514a795d559fc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82095f397195fbf333bab8d043da18114e2a5dba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000853"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968463"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>HOW TO：建立基本 Atom 摘要
 Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要的服務。 本主題討論如何建立可公開 Atom 新聞訂閱摘要的新聞訂閱服務。  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要�
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  所有套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的服務作業都會對應至 HTTP GET 要求。 若要將您的作業對應至不同的 HTTP 方法，請改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 如需詳細資訊，請參閱[如何：建立基本 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)。  
+    > 所有套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的服務作業都會對應至 HTTP GET 要求。 若要將您的作業對應至不同的 HTTP 方法，請改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 如需詳細資訊，請參閱[如何：建立基本的 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)。  
   
 2. 實作服務合約。  
   
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要�
   
 ### <a name="to-call-getblog-with-an-http-get"></a>若要使用 HTTP GET 呼叫 GetBlog()  
   
-1. 開啟 Internet Explorer 中，輸入下列 URL，然後按 ENTER: `http://localhost:8000/BlogService/GetBlog`  
+1. 開啟 Internet Explorer, 輸入下列 URL, 然後按 ENTER 鍵:`http://localhost:8000/BlogService/GetBlog`  
   
-     URL 包含服務的基底位址 (`http://localhost:8000/BlogService`)，端點，並呼叫服務作業的相對位址。  
+     URL 包含服務的基底位址 (`http://localhost:8000/BlogService`)、端點的相對位址, 以及要呼叫的服務作業。  
   
 ### <a name="to-call-getblog-from-code"></a>若要從程式碼呼叫 GetBlog()  
   

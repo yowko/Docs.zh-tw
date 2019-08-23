@@ -2,30 +2,30 @@
 title: 成員資格和角色提供者
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876738"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948540"
 ---
 # <a name="membership-and-role-provider"></a>成員資格和角色提供者
-成員資格和角色提供者範例示範如何服務可以使用 ASP.NET 成員資格和角色提供者來驗證及授權用戶端。  
+成員資格和角色提供者範例會示範服務如何使用 ASP.NET 成員資格和角色提供者來驗證及授權用戶端。  
   
  在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+> 此範例的安裝程序與建置指示位於本主題的結尾。  
   
  此範例會示範：  
   
 - 用戶端可以使用使用者名稱-密碼組合進行驗證。  
   
-- 伺服器可以驗證的 ASP.NET 成員資格提供者的用戶端認證。  
+- 伺服器可以針對 ASP.NET 成員資格提供者驗證用戶端認證。  
   
 - 您可以使用伺服器的 X.509 憑證來驗證伺服器。  
   
-- 伺服器可以使用 ASP.NET 角色提供者，以對應至角色驗證的用戶端。  
+- 伺服器可以使用 ASP.NET 角色提供者, 將已驗證的用戶端對應至角色。  
   
 - 伺服器可以使用 `PrincipalPermissionAttribute` 來控制對服務所公開特定方法的存取。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65876738"
 </system.web>  
 ```  
   
- 服務會公開單一端點，以便與使用 Web.config 組態檔定義的服務進行通訊。 端點是由位址、繫結及合約所組成。 繫結是以預設為使用 Windows 驗證的標準 `wsHttpBinding` 來設定。 這個範例會將標準 `wsHttpBinding` 設定為使用使用者名稱驗證。 此行為會指定伺服器憑證要用於服務驗證。 伺服器憑證必須包含相同的值，如`SubjectName`作為`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)組態項目。 除了此行為會指定驗證的使用者名稱密碼組由 ASP.NET 成員資格提供者執行，而且角色對應時，會執行 ASP.NET 角色提供者上，可以指定針對兩個提供者所定義的名稱。  
+ 服務會公開單一端點，以便與使用 Web.config 組態檔定義的服務進行通訊。 端點是由位址、繫結及合約所組成。 繫結是以預設為使用 Windows 驗證的標準 `wsHttpBinding` 來設定。 這個範例會將標準 `wsHttpBinding` 設定為使用使用者名稱驗證。 此行為會指定伺服器憑證要用於服務驗證。 伺服器憑證必須包含與[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) configuration 元素中`SubjectName`的`findValue`屬性相同的值。 此外, 此行為會指定使用者名稱-密碼配對的驗證是由 ASP.NET 成員資格提供者執行, 而角色對應是由 ASP.NET 角色提供者藉由指定針對兩個提供者所定義的名稱來執行。  
   
 ```xml  
 <system.serviceModel>  
@@ -114,19 +114,19 @@ ms.locfileid: "65876738"
 </system.serviceModel>  
 ```  
   
- 當您執行範例時，用戶端呼叫各種服務作業在三個不同的使用者帳戶：Alice、 Bob 和 Charlie。 作業要求和回應會顯示在用戶端主控台視窗中。 所有四個以使用者 "Alice" 所進行的呼叫應該都會成功。 使用者 "Bob" 在嘗試呼叫 Divide 方法時，應該會收到拒絕存取錯誤。 使用者 "Charlie" 在嘗試呼叫 Multiply 方法時，應該會收到拒絕存取錯誤。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
+ 當您執行範例時, 用戶端會在三個不同的使用者帳戶下呼叫各種服務作業:Alice、Bob 和 Charlie。 作業要求和回應會顯示在用戶端主控台視窗中。 所有四個以使用者 "Alice" 所進行的呼叫應該都會成功。 使用者 "Bob" 在嘗試呼叫 Divide 方法時，應該會收到拒絕存取錯誤。 使用者 "Charlie" 在嘗試呼叫 Multiply 方法時，應該會收到拒絕存取錯誤。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 若要建置方案的 C# 或 Visual Basic.NET 版本，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+1. 若要建立C#或 Visual Basic .net 版本的解決方案, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 2. 請確定您已設定[ASP.NET 應用程式服務資料庫](https://go.microsoft.com/fwlink/?LinkId=94997)。  
   
     > [!NOTE]
-    >  如果您要執行 SQL Server Express Edition，則伺服器名稱為 .\SQLEXPRESS。 設定 ASP.NET 應用程式服務資料庫以及與 Web.config 連接字串時，就應該使用此伺服器。  
+    >  如果您要執行 SQL Server Express Edition，則伺服器名稱為 .\SQLEXPRESS。 設定 ASP.NET 應用程式服務資料庫以及 Web.config 連接字串時, 應該使用此伺服器。  
   
     > [!NOTE]
-    >  ASP.NET 工作者處理序帳戶必須在此步驟中建立資料庫權限。 請使用 sqlcmd 公用程式或 SQL Server Management Studio 來執行這項操作。  
+    >  ASP.NET 背景工作進程帳戶必須擁有在此步驟中建立之資料庫的許可權。 請使用 sqlcmd 公用程式或 SQL Server Management Studio 來執行這項操作。  
   
 3. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。  
   
@@ -134,11 +134,11 @@ ms.locfileid: "65876738"
   
 1. 確認路徑中包含 Makecert.exe 所在的資料夾。  
   
-2. 以系統管理員權限執行 Visual studio，從範例安裝資料夾中開發人員命令提示字元執行 Setup.bat。 這會安裝執行範例所需的服務憑證。  
+2. 從開發人員命令提示字元中的範例安裝資料夾執行安裝程式 .bat, Visual Studio 以系統管理員許可權執行。 這會安裝執行範例所需的服務憑證。  
   
 3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -150,24 +150,24 @@ ms.locfileid: "65876738"
   
 4. 將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-5. 在伺服器上，以系統管理權限開啟 Visual Studio 開發人員命令提示字元，並執行`setup.bat service`。 執行`setup.bat`與`service`引數會建立具有電腦完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
+5. 在伺服器上, 以系統管理許可權開啟 Visual Studio 的開發人員命令提示字元, 然後`setup.bat service`執行。 `setup.bat` 使用引數執行時,會建立具有電腦完整功能變數名稱的服務憑證,並將服務憑證匯出至名`service`為 .cer 的檔案。  
   
-6. 編輯 Web.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))，這是電腦的完整網域名稱相同。  
+6. 編輯 web.config 以反映新的憑證名稱 (在[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的`findValue`屬性中), 這與電腦的完整功能變數名稱相同。  
   
 7. 從服務目錄中將 Service.cer 檔案複製至用戶端電腦上的用戶端目錄。  
   
 8. 在用戶端電腦上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。  
   
-9. 在用戶端，以系統管理權限開啟 Visual Studio 開發人員命令提示字元，然後執行 ImportServiceCert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
+9. 在用戶端上, 以系統管理許可權開啟 Visual Studio 的開發人員命令提示字元, 並執行 Importservicecert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
   
-10. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 - 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
 > [!NOTE]
->  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這樣做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+> 跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已在電腦上執行使用憑證的 Windows Communication Foundation (WCF) 範例, 請務必清除已安裝在 CurrentUser-TrustedPeople 存放區中的服務憑證。 若要這麼做, 請使用下列命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="the-setup-batch-file"></a>設定批次檔  
  本範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的自我裝載應用程式。 這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。  

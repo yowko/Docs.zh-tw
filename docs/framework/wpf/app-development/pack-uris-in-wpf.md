@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: f9ea4acfc7ba86d3424bb11af0de685651f99c61
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad928fb223ce22c65bb86a78c7d4cd006651a2d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796750"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950761"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 
@@ -85,7 +85,7 @@ pack://*授權*/單位*路徑*
 
 ## <a name="resource-file-pack-uris"></a>資源檔套件 URI
 
-資源檔會設定為[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource`專案, 並編譯成元件。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支援套件[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]的結構, 可用來識別編譯成本機組件或編譯成元件 (從本機組件參考) 的資源檔。
+資源檔會設定為 MSBuild `Resource`專案, 並編譯成元件。 WPF 支援封裝 Uri 的結構, 可用來識別編譯成本機組件或編譯成元件 (從本機組件參考) 的資源檔。
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -186,9 +186,9 @@ pack://*授權*/單位*路徑*
 
 ## <a name="page-files"></a>分頁檔
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]設定為[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page`專案的檔案會以與資源檔相同的方式編譯成元件。 因此, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page`可以使用資源檔的套件[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]來識別專案。
+設定為 MSBuild `Page`專案的 XAML 檔案, 會以與資源檔相同的方式編譯成元件。 因此, 可以`Page`使用資源檔的套件 uri 來識別 MSBuild 專案。
 
-通常設定為[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]專案的檔類型,具有下列其中一項做為其根項目:`Page`
+通常設定為[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] MSBuild`Page`專案的檔案類型具有下列其中一項做為其根項目:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 

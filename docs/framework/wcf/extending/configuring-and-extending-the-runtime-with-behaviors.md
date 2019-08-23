@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 297a951e4678e05da73193133bd6050360b041ff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 481e0983a40bb551d08894ea32f76f332b8fe5a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587339"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943143"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>使用行為來設定與擴充執行階段
-行為可讓您修改預設行為，並新增自訂延伸模組，檢查及驗證服務組態或修改在 Windows Communication Foundation (WCF) 用戶端和服務應用程式的執行階段行為。 本主題會說明行為介面、如何實作這些介面，以及如何透過程式設計方式或組態檔來將它們新增到服務描述 (在服務應用程式中) 或端點 (在用戶端應用程式中)。 如需使用系統提供行為的詳細資訊，請參閱 <<c0> [ 指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)並[指定用戶端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
+行為可讓您修改預設行為, 並加入自訂延伸模組, 以檢查和驗證服務設定, 或修改 Windows Communication Foundation (WCF) 用戶端和服務應用程式中的執行時間行為。 本主題會說明行為介面、如何實作這些介面，以及如何透過程式設計方式或組態檔來將它們新增到服務描述 (在服務應用程式中) 或端點 (在用戶端應用程式中)。 如需使用系統提供之行為的詳細資訊, 請參閱[指定服務執行時間行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)和[指定用戶端執行時間行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
   
 ## <a name="behaviors"></a>「行為」  
- 行為類型會新增至服務或服務端點描述物件 (服務或用戶端，分別) 使用這些物件由 Windows Communication Foundation (WCF) 來建立執行 WCF 服務或 WCF 用戶端執行階段之前。 當在執行階段建構程序期間呼叫這些行為之後，這些行為即可存取可修改由合約、繫結及位址所構成之執行階段的執行階段屬性和方法。  
+ 行為類型會先新增至服務或服務端點描述物件 (分別在服務或用戶端上), Windows Communication Foundation (WCF) 使用這些物件來建立執行 WCF 服務或 WCF 用戶端的執行時間。 當在執行階段建構程序期間呼叫這些行為之後，這些行為即可存取可修改由合約、繫結及位址所構成之執行階段的執行階段屬性和方法。  
   
 ### <a name="behavior-methods"></a>行為方法  
- 所有的行為有`AddBindingParameters`方法中，`ApplyDispatchBehavior`方法，`Validate`方法，和`ApplyClientBehavior`有一個例外狀況的方法：因為<xref:System.ServiceModel.Description.IServiceBehavior>無法執行在用戶端，它不會實作`ApplyClientBehavior`。  
+ 所有行為都有`AddBindingParameters`方法`ApplyDispatchBehavior` 、方法、 `Validate`方法和`ApplyClientBehavior`方法, 但有一個例外狀況:因為<xref:System.ServiceModel.Description.IServiceBehavior>無法在用戶端中執行, 所以不會`ApplyClientBehavior`實行。  
   
 - 使用 `AddBindingParameters` 方法來修改自訂物件，或將其加入至自訂繫結可在執行階段建構時存取以供自己使用的集合中。 例如，在這種情況下，通道開發人員不知道實際影響通道建置方式的保護需求指定方式。  
   
@@ -27,16 +27,16 @@ ms.locfileid: "64587339"
 - 使用 `ApplyDispatchBehavior` 和 `ApplyClientBehavior` 方法來檢查描述樹狀目錄，以及修改服務或用戶端上之特定範圍的執行階段。 您也可以插入擴充物件。  
   
     > [!NOTE]
-    >  雖然在這些方法中有提供描述樹狀目錄，但它僅供檢查用途。 如果描述樹狀目錄遭到修改，該行為便屬於未定義的。  
+    > 雖然在這些方法中有提供描述樹狀目錄，但它僅供檢查用途。 如果描述樹狀目錄遭到修改，該行為便屬於未定義的。  
   
  您可以修改的屬性及可以實作的自訂介面，將透過服務和用戶端執行階段類別來存取。 這些服務類型是 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 與 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 類別。 用戶端類型則是 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 與 <xref:System.ServiceModel.Dispatcher.ClientOperation> 類別。 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 與 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 類別分別是存取全用戶端及全服務執行階段屬性和擴充集合的擴充性進入點 (Entry Point)。 同樣地，<xref:System.ServiceModel.Dispatcher.ClientOperation> 與 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 類別會分別公開 (Expose) 用戶端作業及服務作業執行階段屬性和擴充集合。 不過，您可以從作業執行階段物件存取範圍更廣的執行階段物件，或是在需要時反向執行。  
   
 > [!NOTE]
->  如需執行階段屬性和延伸模組類型可供您修改用戶端的執行行為的討論，請參閱 <<c0> [ 擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 如需執行階段屬性和延伸模組類型可供您修改服務發送器的執行行為的討論，請參閱 <<c0> [ 擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
+> 如需您可以用來修改用戶端執行行為的執行時間屬性和擴充類型的討論, 請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 如需您可以用來修改服務發送器之執行行為的執行時間屬性和擴充類型的討論, 請參閱[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
   
- 大部分的 WCF 使用者直接; 不會互動的執行階段改為使用核心程式設計模型建構，例如端點、 合約、 繫結、 位址和行為上的類別或行為在組態檔中的屬性。 這些建構組成*描述樹狀目錄*，這是完整的規格來建構執行階段以支援服務，或描述樹狀結構所描述的用戶端。  
+ 大部分的 WCF 使用者都不會直接與執行時間互動;相反地, 它們會在設定檔中的類別或行為上使用核心程式設計模型結構, 例如端點、合約、系結、位址及行為屬性。 這些結構組成*描述樹狀結構*, 這是用來建立執行時間以支援描述樹狀目錄所描述之服務或用戶端的完整規格。  
   
- 有四種 WCF 中的行為：  
+ 在 WCF 中有四種行為:  
   
 - 服務行為 (<xref:System.ServiceModel.Description.IServiceBehavior> 類型) 讓整個服務執行階段 (包括 <xref:System.ServiceModel.ServiceHostBase>) 能夠進行自訂。  
   
@@ -65,24 +65,24 @@ ms.locfileid: "64587339"
   
 3. 實作會擴充組態的自訂 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 這樣便可從應用程式組態檔使用服務行為。  
   
- 在 WCF 中的服務行為的範例包括<xref:System.ServiceModel.ServiceBehaviorAttribute>屬性， <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>，和<xref:System.ServiceModel.Description.ServiceMetadataBehavior>行為。  
+ WCF 中的服務行為範例包括<xref:System.ServiceModel.ServiceBehaviorAttribute>屬性<xref:System.ServiceModel.Description.ServiceThrottlingBehavior>、和<xref:System.ServiceModel.Description.ServiceMetadataBehavior>行為。  
   
 #### <a name="contract-behaviors"></a>合約行為  
  實作 <xref:System.ServiceModel.Description.IContractBehavior> 介面的合約行為，可用於擴充整個合約的用戶端與服務執行階段。  
   
- 將合約行為新增到合約時可以使用兩種機制。  第一種機制是建立要在合約介面上使用的自訂屬性。 當合約介面傳遞至<xref:System.ServiceModel.ServiceHost>或<xref:System.ServiceModel.ChannelFactory%601>，WCF 會檢查在介面上的屬性。 如果其中任何一個屬性是 <xref:System.ServiceModel.Description.IContractBehavior> 的實作，這些屬性便會新增到為該介面建立之 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> 上的行為集合中。  
+ 將合約行為新增到合約時可以使用兩種機制。  第一種機制是建立要在合約介面上使用的自訂屬性。 當合約介面傳遞至<xref:System.ServiceModel.ServiceHost> <xref:System.ServiceModel.ChannelFactory%601>或時, WCF 會檢查介面上的屬性。 如果其中任何一個屬性是 <xref:System.ServiceModel.Description.IContractBehavior> 的實作，這些屬性便會新增到為該介面建立之 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> 上的行為集合中。  
   
  您也可以在自訂合約行為屬性上實作 <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType>。 在此情況下，將依套用對象產生類似下列的行為：  
   
- •合約介面。 在此情況下，行為會套用至任何端點中該類型的所有合約，WCF 會忽略值<xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType>屬性。  
+ •合約介面。 在此情況下, 行為會套用至任何端點中該類型的所有合約, 而 WCF 會忽略<xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType>屬性的值。  
   
  •服務類別。 在此情況下，行為只會套用至其中合約為 <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> 屬性值的端點。  
   
- •回呼類別。 在此情況下，行為會套用至雙工用戶端的端點，WCF 會忽略值<xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>屬性。  
+ •回呼類別。 在此情況下, 行為會套用至雙工用戶端的端點, 而 WCF 會忽略<xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>屬性的值。  
   
  第二種機制是將行為新增至 <xref:System.ServiceModel.Description.ContractDescription> 上的行為集合。  
   
- 在 WCF 中的合約行為的範例包括<xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType>屬性。 如需詳細資訊和範例，請參閱參考主題。  
+ WCF 中的合約行為範例包括<xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType>屬性。 如需詳細資訊和範例，請參閱參考主題。  
   
 #### <a name="endpoint-behaviors"></a>端點行為  
  實作 <xref:System.ServiceModel.Description.IEndpointBehavior> 的端點行為，是您用來針對特定端點修改整個服務或用戶端執行階段的主要機制。  
@@ -98,11 +98,11 @@ ms.locfileid: "64587339"
 #### <a name="operation-behaviors"></a>作業行為  
  實作 <xref:System.ServiceModel.Description.IOperationBehavior> 介面的作業行為，可用來擴充每個作業的用戶端與服務執行階段。  
   
- 將作業行為新增到作業時可以使用兩種機制。 第一種機制是建立要用於建立作業模型之方法的自訂屬性。 當將作業新增至<xref:System.ServiceModel.ServiceHost>或<xref:System.ServiceModel.ChannelFactory>，WCF 新增<xref:System.ServiceModel.Description.IOperationBehavior>屬性的行為集合<xref:System.ServiceModel.Description.OperationDescription>建立該作業。  
+ 將作業行為新增到作業時可以使用兩種機制。 第一種機制是建立要用於建立作業模型之方法的自訂屬性。 <xref:System.ServiceModel.ServiceHost>將作業新增至<xref:System.ServiceModel.ChannelFactory>或時, WCF 會將任何<xref:System.ServiceModel.Description.IOperationBehavior>屬性新增至針對該作業所<xref:System.ServiceModel.Description.OperationDescription>建立之上的行為集合。  
   
  第二種機制是將行為直接新增至已建構 <xref:System.ServiceModel.Description.OperationDescription> 上的行為集合中。  
   
- 在 WCF 中的作業行為的範例包括<xref:System.ServiceModel.OperationBehaviorAttribute>而<xref:System.ServiceModel.TransactionFlowAttribute>。  
+ WCF 中的作業行為範例包括<xref:System.ServiceModel.OperationBehaviorAttribute> <xref:System.ServiceModel.TransactionFlowAttribute>和。  
   
  如需詳細資訊和範例，請參閱參考主題。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "64587339"
  服務行為、端點行為以及合約行為都可以設計成透過程式碼或使用屬性來加以指定；只有服務行為和端點行為可以使用應用程式或 Web 組態檔來加以設定。 使用屬性公開行為，可讓開發人員在編譯時期指定在執行階段時所無法新增、移除或修改的行為。 這種做法往往適用於正確服務作業一定需要的行為 (例如，<xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 屬性的異動相關參數)。 使用組態公開行為，可讓開發人員將這些行為的規格和組態留給部署該服務的人員來決定。 這種做法適用於屬於選擇性元件或其他部署特定組態的行為，例如是否要向服務公開中繼資料，或是服務的特定授權組態。  
   
 > [!NOTE]
->  您也可以使用支援組態強制公司應用程式原則的行為，使用方法是將這些行為插入 machine.config 組態檔，並鎖定這些項目。 如需說明和範例，請參閱[How to:鎖定在企業中的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
+> 您也可以使用支援組態強制公司應用程式原則的行為，使用方法是將這些行為插入 machine.config 組態檔，並鎖定這些項目。 如需說明和範例, 請參閱[如何:鎖定企業](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)中的端點。  
   
  若要使用組態公開行為，開發人員必須建立 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 的衍生類別 (Derived Class)，然後再向組態註冊該延伸。  
   
@@ -181,7 +181,7 @@ protected override object CreateBehavior()
 </configuration>  
 ```  
   
- 何處`Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector`是行為延伸型別和`HostApplication`是該類別已編譯所在的組件的名稱。  
+ 其中`Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector` , 是行為延伸型別`HostApplication` , 而是該類別已編譯成的元件名稱。  
   
 ### <a name="evaluation-order"></a>評估順序  
  <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 和 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 會負責從程式設計模型及描述來建置執行階段。 正如先前所述，行為會作用於位在服務、端點、合約及作業時的建置程序。  

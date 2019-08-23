@@ -2,12 +2,12 @@
 title: 逐步解說：簡單的物件模型和查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 43092eb7490d5629f1ababac1d8f8b3aff94299b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971858"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946916"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>逐步解說：簡單的物件模型和查詢 (C#)
 
@@ -117,7 +117,7 @@ ms.locfileid: "68971858"
 
 ## <a name="creating-a-simple-query"></a>建立簡單查詢
 
-在這個步驟中，您會建立查詢以尋找資料庫 Customers 資料表中有哪些客戶位於倫敦。 這個步驟中的查詢程式碼只會描述查詢， 而不會實際執行。 這種方法稱為*延後執行*。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。
+在這個步驟中，您會建立查詢以尋找資料庫 Customers 資料表中有哪些客戶位於倫敦。 這個步驟中的查詢程式碼只會描述查詢， 而不會實際執行。 這種方法稱為*延後執行*。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。
 
 此外，您還會產生記錄檔輸出，以顯示 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 所產生的 SQL 命令。 這項記錄功能 (其使用 <xref:System.Data.Linq.DataContext.Log%2A>) 有助於進行偵錯，以及判斷要傳送至資料庫的命令是否正確地表示您的查詢。
 
@@ -140,7 +140,7 @@ ms.locfileid: "68971858"
 2. 按 F5，進行應用程式偵錯。
 
     > [!NOTE]
-    >  如果您的應用程式產生執行階段錯誤, 請參閱[學習逐步](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)解說的疑難排解一節。
+    > 如果您的應用程式產生執行階段錯誤, 請參閱[學習逐步](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)解說的疑難排解一節。
 
      主控台視窗中的查詢結果應如下所示：
 

@@ -7,22 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 829bdda3f3302d8d3c41e704dc8caf88720d1ebc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 18d0ea97f1de40044d40fa85c9792c809fb73346
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637599"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959887"
 ---
 # <a name="using-message-contracts"></a>使用訊息合約
-通常當建置 Windows Communication Foundation (WCF) 應用程式，開發人員密切注意資料結構與序列化的問題，並不需要顧慮傳送資料的訊息結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 (如需詳細資訊，請參閱 < [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
+通常在建立 Windows Communication Foundation (WCF) 應用程式時, 開發人員會特別注意資料結構和序列化問題, 而不需要考慮資料的結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 (如需詳細資訊, 請參閱[在服務合約中指定資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md))。  
   
- 但是，有時候完整控制 SOAP 訊息的結構與控制其內容一樣重要。 當互通性很重要，或是要具體控制在訊息層級或訊息部分的安全性問題時，這就顯得特別重要。 在這些情況下，您可以建立*訊息合約*，可讓您指定所需的精確 SOAP 訊息的結構。  
+ 但是，有時候完整控制 SOAP 訊息的結構與控制其內容一樣重要。 當互通性很重要，或是要具體控制在訊息層級或訊息部分的安全性問題時，這就顯得特別重要。 在這些情況下, 您可以建立*訊息合約*, 讓您指定所需的精確 SOAP 訊息的結構。  
   
  此主題會討論如何使用各種訊息合約屬性，以建立作業的特定訊息合約。  
   
 ## <a name="using-message-contracts-in-operations"></a>在作業中使用訊息合約  
- WCF 支援在建立模型的作業*遠端程序呼叫 (RPC) 樣式*或*傳訊樣式*。 在 RPC 樣式作業中，您可以使用任何可序列化類型，並且有存取本機呼叫的功能，例如多個參數以及 `ref` 與 `out` 參數。 在此樣式中，選擇的序列化形式會控制基礎訊息中中的資料結構，並在 WCF 執行階段會建立訊息以支援此作業。 這可以讓不熟悉 SOAP 和 SOAP 訊息的程式開發人員，快速而輕鬆地建立與使用服務應用程式。  
+ WCF 支援以*遠端程序呼叫 (RPC) 樣式*或*訊息樣式*為模型的作業。 在 RPC 樣式作業中，您可以使用任何可序列化類型，並且有存取本機呼叫的功能，例如多個參數以及 `ref` 與 `out` 參數。 在此樣式中, 選擇的序列化形式會控制基礎訊息中的資料結構, 而 WCF 執行時間會建立訊息以支援作業。 這可以讓不熟悉 SOAP 和 SOAP 訊息的程式開發人員，快速而輕鬆地建立與使用服務應用程式。  
   
  下列程式碼範例顯示根據 RPC 樣式建立模型的服務作業。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "64637599"
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 通常資料合約已足夠定義訊息的結構描述。 例如，在之前的範例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 都有定義基礎 SOAP 訊息內容的資料合約，對大部分的應用程式來說就已足夠。 如需有關資料合約的詳細資訊，請參閱[Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 通常資料合約已足夠定義訊息的結構描述。 例如，在之前的範例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 都有定義基礎 SOAP 訊息內容的資料合約，對大部分的應用程式來說就已足夠。 如需資料合約的詳細資訊, 請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  但是，偶爾也會需要精確控制透過網路傳輸 SOAP 訊息結構的方式。 最常見的案例是插入自訂 SOAP 標頭。 另一個常見的案例是定義訊息標頭與本文的安全性屬性，也就是決定是否要數位簽署或加密這些項目。 最後，某些協力廠商 SOAP 堆疊會要求訊息使用特定的格式。 訊息樣式作業提供這項控制。  
   
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> 可讓您指定 WrapperName 和 WrapperNamespace 屬性，用來控制 SOAP 訊息本文中包裝函式元素的名稱。 預設情況下，訊息合約型別的名稱會用於包裝函式，而在訊息合約中定義的命名空間 `http://tempuri.org/` 會當做預設命名空間使用。  
   
 > [!NOTE]
->  在訊息合約中會忽略 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。 如果需要 <xref:System.Runtime.Serialization.KnownTypeAttribute>，請將其置於使用有問題之訊息合約的作業。  
+> 在訊息合約中會忽略 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。 如果需要 <xref:System.Runtime.Serialization.KnownTypeAttribute>，請將其置於使用有問題之訊息合約的作業。  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>控制標頭和本文部分的名稱與命名空間  
  在訊息合約的 SOAP 表示法中，每個標頭和本文部分會對應至擁有名稱與命名空間的 XML 項目。  
@@ -151,10 +151,10 @@ public class BankingTransaction
  若要隱藏包裝函式項目，請將 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> 屬性設定為 `false`。 若要控制包裝函式項目的名稱與命名空間，請使用 <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> 和 <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A> 屬性。  
   
 > [!NOTE]
->  在訊息中如果有一個以上未包裝的訊息本文部分，就不符合 WS-I Basic Profile 1.1 並且不建議在設計新訊息合約時使用。 但是，在某些特定互通性案例中，可能會需要有一個以上未包裝的訊息本文部分。 如果您要在訊息本文中傳輸一段以上的資料，建議您使用預設 (包裝) 模式。 在未包裝訊息中有一個以上的訊息標頭是完全可接受的。  
+> 在訊息中如果有一個以上未包裝的訊息本文部分，就不符合 WS-I Basic Profile 1.1 並且不建議在設計新訊息合約時使用。 但是，在某些特定互通性案例中，可能會需要有一個以上未包裝的訊息本文部分。 如果您要在訊息本文中傳輸一段以上的資料，建議您使用預設 (包裝) 模式。 在未包裝訊息中有一個以上的訊息標頭是完全可接受的。  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>在訊息合約中使用自訂類型  
- 每個個別訊息標頭與訊息本文部分，會針對使用訊息的服務合約，使用選擇的序列化引擎進行序列化 (轉變成 XML)。 預設的序列化引擎 `XmlFormatter` 能夠處理擁有資料合約的任何類型，不論是使用明確的方式 (藉由擁有 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) 或隱含的方式 (藉由成為基本型別、擁有 <xref:System.SerializableAttribute?displayProperty=nameWithType> 等等)。 如需詳細資訊，請參閱 < [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 每個個別訊息標頭與訊息本文部分，會針對使用訊息的服務合約，使用選擇的序列化引擎進行序列化 (轉變成 XML)。 預設的序列化引擎 `XmlFormatter` 能夠處理擁有資料合約的任何類型，不論是使用明確的方式 (藉由擁有 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) 或隱含的方式 (藉由成為基本型別、擁有 <xref:System.SerializableAttribute?displayProperty=nameWithType> 等等)。 如需詳細資訊, 請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  在之前的範例中，`Operation` 和 `BankingTransactionData` 型別必須擁有資料合約，並且 `transactionDate` 是可序列化的，因為 <xref:System.DateTime> 是基本型別 (並且擁有隱含資料合約)。  
   
@@ -250,7 +250,7 @@ public class PatientRecord
   
 - `Relay`  
   
- `Actor` 或 `Role` 屬性會定義指定標頭想要之節點的統一資源識別元 (URI)。 `MustUnderstand` 屬性會指定處理標頭的節點是否必須識別它。 `Relay` 屬性會指定標頭是否要轉送至下游節點。 WCF 不會執行任何處理傳入訊息上的這些屬性除了`MustUnderstand`屬性，如本主題稍後的 「 訊息合約版本控制 」 一節中所指定。 但是，它允許您依需要讀取和寫入這些屬性，如同下列所描述。  
+ `Actor` 或 `Role` 屬性會定義指定標頭想要之節點的統一資源識別元 (URI)。 `MustUnderstand` 屬性會指定處理標頭的節點是否必須識別它。 `Relay` 屬性會指定標頭是否要轉送至下游節點。 除了屬性以外, WCF 不會對傳入訊息執行這些屬性的任何處理`MustUnderstand` , 如本主題稍後的「訊息合約版本控制」一節中所指定。 但是，它允許您依需要讀取和寫入這些屬性，如同下列所描述。  
   
  當傳送訊息時，根據預設不會發出這些屬性。 變更這項作業的方法有兩種： 首先，您可以藉由變更 <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> 屬性 (Property)，使用靜態方式將屬性 (Attribute) 設定為任何需要的值，如下列程式碼範例所示。 (請注意並沒有 `Role` 屬性 (Property)；如果您使用 SOAP 1.2，設定 <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> 屬性 (Property) 會發出 `Role` 屬性 (Attribute))。  
   
@@ -303,7 +303,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  當接收到訊息然後傳回訊息時，SOAP 屬性設定只會為 <xref:System.ServiceModel.MessageHeader%601> 型別的標頭而往返。  
   
 ## <a name="order-of-soap-body-parts"></a>SOAP 本文部分的順序  
- 在某些情況下，您會需要控制本文部分的順序。 根據預設，本文項目的順序是依字母順序排列，但是可以透過 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性控制。 這個屬性與 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性有相同的語意，除了在繼承案例中的行為有所不同 (在訊息合約中，基底型別本文成員不會排序在衍生型別本文成員之前)。 如需詳細資訊，請參閱 <<c0> [ 資料成員順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)。  
+ 在某些情況下，您會需要控制本文部分的順序。 根據預設，本文項目的順序是依字母順序排列，但是可以透過 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性控制。 這個屬性與 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性有相同的語意，除了在繼承案例中的行為有所不同 (在訊息合約中，基底型別本文成員不會排序在衍生型別本文成員之前)。 如需詳細資訊, 請參閱[資料成員順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)。  
   
  在下列程式碼範例中，`amount` 通常會第一個出現 (因為依字母順序它是第一個)。 但是，<xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> 屬性會將它放在第三位。  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  下列規則會套用至版本控制標頭：  
   
-- WCF 不會拒絕處理缺少標頭，對應的成員會保留其預設值。  
+- WCF 不會將物件指向遺漏的標頭, 而對應的成員會保留其預設值。  
   
-- 此外，WCF 也會忽略未預期的額外標頭。 這個規則的其中一個例外狀況是，如果在傳入 SOAP 訊息中的額外標頭將 `MustUnderstand` 屬性設定為 `true`，在這樣的情況下，因為無法處理必須解讀的標頭而會發生例外狀況。  
+- WCF 也會忽略未預期的額外標頭。 這個規則的其中一個例外狀況是，如果在傳入 SOAP 訊息中的額外標頭將 `MustUnderstand` 屬性設定為 `true`，在這樣的情況下，因為無法處理必須解讀的標頭而會發生例外狀況。  
   
  訊息本文有類似的版本控制規則：缺少與額外的訊息本文部分都會受到忽略。  
   
@@ -370,7 +370,7 @@ public class PatientRecord : PersonRecord
 - 當您在多個作業中使用相同的訊息合約時，在 WSDL 文件中會產生多個訊息類型。 藉由在後續使用時新增數字 "2"、"3" 等等，可以讓名稱具有唯一性。 當匯回 WSDL 時，會建立多個訊息合約類型，並且除了名稱以外都完全相同。  
   
 ## <a name="soap-encoding-considerations"></a>SOAP 編碼考量  
- WCF 可讓您使用舊版 SOAP 編碼樣式的 XML，不過，它不是建議使用。 當使用這個樣式時 (藉由將套用至服務合約之 `Use` 的 `Encoded` 屬性設定為 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>)，則適用下列其他考量：  
+ WCF 可讓您使用 XML 的舊版 SOAP 編碼樣式, 但不建議使用。 當使用這個樣式時 (藉由將套用至服務合約之 `Use` 的 `Encoded` 屬性設定為 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>)，則適用下列其他考量：  
   
 - 不支援訊息標頭，這表示屬性 <xref:System.ServiceModel.MessageHeaderAttribute> 和陣列屬性 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 與 SOAP 編碼不相容。  
   

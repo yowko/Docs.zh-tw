@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eeb92845d9b4eb40eef496ffaf5b35e38ed91423
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301161"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968698"
 ---
 # <a name="encrypting-data"></a>加密資料
 對稱式加密和非對稱式加密是使用不同的程序執行。 對稱式加密在資料流上執行，因此適用於加密大量資料。 非對稱式加密在少數的位元組上執行，因此只適用於小量的資料。  
@@ -43,7 +43,7 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor()
  下列範例顯示建立資料流、加密資料流、寫入資料流，然後關閉資料流的整個程序。 這個範例會建立使用 **CryptoStream** 類別和 **RijndaelManaged** 類別加密的網路資料流。 訊息會使用 <xref:System.IO.StreamWriter> 類別寫入至加密的資料流。  
   
 > [!NOTE]
->  您也可以使用此範例寫入至檔案。 若要這樣做，請刪除 <xref:System.Net.Sockets.TcpClient> 參考，並將 <xref:System.Net.Sockets.NetworkStream> 取代為 <xref:System.IO.FileStream>。  
+> 您也可以使用此範例寫入至檔案。 若要這樣做，請刪除 <xref:System.Net.Sockets.TcpClient> 參考，並將 <xref:System.Net.Sockets.NetworkStream> 取代為 <xref:System.IO.FileStream>。  
   
 ```vb  
 Imports System  
