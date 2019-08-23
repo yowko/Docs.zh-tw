@@ -3,23 +3,23 @@ title: <bufferReceive>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b23c3a54-10d4-4f13-ab6d-98b26b76f22a
-ms.openlocfilehash: 360d26fda964fa33640e833ad22dab7e06e153f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d4611d6fee9dad057985f7d8f5ef961d384efcd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790256"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945966"
 ---
-# <a name="bufferreceive"></a><span data-ttu-id="95bbf-101">\<bufferReceive></span><span class="sxs-lookup"><span data-stu-id="95bbf-101">\<bufferReceive></span></span>
-<span data-ttu-id="95bbf-102">讓服務可以使用緩衝接收處理的服務行為，該處理可讓工作流程服務處理失序的訊息。</span><span class="sxs-lookup"><span data-stu-id="95bbf-102">A service behavior that enables a service to use buffered receive processing, which enables a workflow service to process out-of-order messages.</span></span>  
+# <a name="bufferreceive"></a><span data-ttu-id="1cbeb-101">\<bufferReceive></span><span class="sxs-lookup"><span data-stu-id="1cbeb-101">\<bufferReceive></span></span>
+<span data-ttu-id="1cbeb-102">讓服務可以使用緩衝接收處理的服務行為，該處理可讓工作流程服務處理失序的訊息。</span><span class="sxs-lookup"><span data-stu-id="1cbeb-102">A service behavior that enables a service to use buffered receive processing, which enables a workflow service to process out-of-order messages.</span></span>  
   
-<span data-ttu-id="95bbf-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="95bbf-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="95bbf-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="95bbf-104">\<behaviors></span></span>  
-<span data-ttu-id="95bbf-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="95bbf-105">\<serviceBehaviors></span></span>  
-<span data-ttu-id="95bbf-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="95bbf-106">\<behavior></span></span>  
-<span data-ttu-id="95bbf-107">\<bufferReceive></span><span class="sxs-lookup"><span data-stu-id="95bbf-107">\<bufferReceive></span></span>  
+<span data-ttu-id="1cbeb-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="1cbeb-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="1cbeb-104">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="1cbeb-104">\<behaviors></span></span>  
+<span data-ttu-id="1cbeb-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="1cbeb-105">\<serviceBehaviors></span></span>  
+<span data-ttu-id="1cbeb-106">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="1cbeb-106">\<behavior></span></span>  
+<span data-ttu-id="1cbeb-107">\<bufferReceive></span><span class="sxs-lookup"><span data-stu-id="1cbeb-107">\<bufferReceive></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95bbf-108">語法</span><span class="sxs-lookup"><span data-stu-id="95bbf-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1cbeb-108">語法</span><span class="sxs-lookup"><span data-stu-id="1cbeb-108">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -31,25 +31,25 @@ ms.locfileid: "61790256"
 </behaviors>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="95bbf-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="95bbf-109">Attributes and Elements</span></span>  
- <span data-ttu-id="95bbf-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="95bbf-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1cbeb-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="1cbeb-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="1cbeb-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="1cbeb-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="95bbf-111">屬性</span><span class="sxs-lookup"><span data-stu-id="95bbf-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1cbeb-111">屬性</span><span class="sxs-lookup"><span data-stu-id="1cbeb-111">Attributes</span></span>  
   
-|<span data-ttu-id="95bbf-112">屬性</span><span class="sxs-lookup"><span data-stu-id="95bbf-112">Attribute</span></span>|<span data-ttu-id="95bbf-113">描述</span><span class="sxs-lookup"><span data-stu-id="95bbf-113">Description</span></span>|  
+|<span data-ttu-id="1cbeb-112">屬性</span><span class="sxs-lookup"><span data-stu-id="1cbeb-112">Attribute</span></span>|<span data-ttu-id="1cbeb-113">描述</span><span class="sxs-lookup"><span data-stu-id="1cbeb-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="95bbf-114">maxPendingMessagesPerChannel</span><span class="sxs-lookup"><span data-stu-id="95bbf-114">maxPendingMessagesPerChannel</span></span>|<span data-ttu-id="95bbf-115">整數，可指定每個通道允許的暫止訊息數目上限。</span><span class="sxs-lookup"><span data-stu-id="95bbf-115">An integer that specifies the maximum number of pending messages allowed for each channel.</span></span> <span data-ttu-id="95bbf-116">預設值為 512。</span><span class="sxs-lookup"><span data-stu-id="95bbf-116">The default value is 512.</span></span> <span data-ttu-id="95bbf-117">這個屬性會限制工作流程服務所能接收的失序訊息數目。</span><span class="sxs-lookup"><span data-stu-id="95bbf-117">This property limits the number of out-of-order messages that can be received by a workflow service.</span></span>|  
+|<span data-ttu-id="1cbeb-114">maxPendingMessagesPerChannel</span><span class="sxs-lookup"><span data-stu-id="1cbeb-114">maxPendingMessagesPerChannel</span></span>|<span data-ttu-id="1cbeb-115">整數，可指定每個通道允許的暫止訊息數目上限。</span><span class="sxs-lookup"><span data-stu-id="1cbeb-115">An integer that specifies the maximum number of pending messages allowed for each channel.</span></span> <span data-ttu-id="1cbeb-116">預設值為 512。</span><span class="sxs-lookup"><span data-stu-id="1cbeb-116">The default value is 512.</span></span> <span data-ttu-id="1cbeb-117">這個屬性會限制工作流程服務所能接收的失序訊息數目。</span><span class="sxs-lookup"><span data-stu-id="1cbeb-117">This property limits the number of out-of-order messages that can be received by a workflow service.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="95bbf-118">子元素</span><span class="sxs-lookup"><span data-stu-id="95bbf-118">Child Elements</span></span>  
- <span data-ttu-id="95bbf-119">無。</span><span class="sxs-lookup"><span data-stu-id="95bbf-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1cbeb-118">子元素</span><span class="sxs-lookup"><span data-stu-id="1cbeb-118">Child Elements</span></span>  
+ <span data-ttu-id="1cbeb-119">無。</span><span class="sxs-lookup"><span data-stu-id="1cbeb-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="95bbf-120">父項目</span><span class="sxs-lookup"><span data-stu-id="95bbf-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1cbeb-120">父項目</span><span class="sxs-lookup"><span data-stu-id="1cbeb-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="95bbf-121">項目</span><span class="sxs-lookup"><span data-stu-id="95bbf-121">Element</span></span>|<span data-ttu-id="95bbf-122">描述</span><span class="sxs-lookup"><span data-stu-id="95bbf-122">Description</span></span>|  
+|<span data-ttu-id="1cbeb-121">項目</span><span class="sxs-lookup"><span data-stu-id="1cbeb-121">Element</span></span>|<span data-ttu-id="1cbeb-122">說明</span><span class="sxs-lookup"><span data-stu-id="1cbeb-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="95bbf-123">\<行為 > 的\<v ></span><span class="sxs-lookup"><span data-stu-id="95bbf-123">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="95bbf-124">指定行為項目。</span><span class="sxs-lookup"><span data-stu-id="95bbf-124">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="1cbeb-123">\<serviceBehaviors > 的\<行為 ></span><span class="sxs-lookup"><span data-stu-id="1cbeb-123">\<behavior> of \<serviceBehaviors></span></span>](behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="1cbeb-124">指定行為項目。</span><span class="sxs-lookup"><span data-stu-id="1cbeb-124">Specifies a behavior element.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="95bbf-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="95bbf-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cbeb-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1cbeb-125">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Description.BufferedReceiveServiceBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.BufferedReceiveElement>
