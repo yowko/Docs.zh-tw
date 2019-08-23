@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: dfb957247a50d16d2aa4c3c4be147e6badf0703a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 80878ec1a592a368db246fc294ebc42556874832
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590609"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921934"
 ---
 # <a name="delegates-c-programming-guide"></a>委派 (C# 程式設計手冊)
 [委派](../../language-reference/keywords/delegate.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。 當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。 您可以透過委派執行個體叫用 (或呼叫) 方法。  
@@ -23,7 +23,7 @@ ms.locfileid: "69590609"
  來自符合委派類型之任何可存取類別或結構的任何方法都可以指派給委派。 方法可以是靜態或執行個體方法。 如此即可用程式設計的方式變更方法呼叫，也可將新的程式碼插入現有的類別中。  
   
 > [!NOTE]
->  在方法多載的內容中，方法的簽章並不包括傳回值。 不過在委派的內容中，簽章卻包含傳回值。 換句話說，方法必須與委派擁有相同的傳回類型。  
+> 在方法多載的內容中，方法的簽章並不包括傳回值。 不過在委派的內容中，簽章卻包含傳回值。 換句話說，方法必須與委派擁有相同的傳回類型。  
   
  由於委派能夠將方法當做參數來參考，因此很適合用來定義回呼方法。 例如，可以將比較兩個物件的方法參考當成引數傳遞至排序演算法。 因為比較程式碼是在獨立的程序中，因此排序演算法可以用較普通的方式撰寫。  
   
