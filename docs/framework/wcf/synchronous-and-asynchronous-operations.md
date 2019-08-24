@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 14bf9c89fd7142746b93cc45af6c2152e8700571
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952929"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988532"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -76,7 +76,7 @@ public class SampleService:ISampleService
  SampleMethodTaskAsync 作業會傳回 Task\<string>，因為邏輯作業傳回的是字串。 如需工作架構非同步模式的詳細資訊，請參閱[工作架構非同步模式](https://go.microsoft.com/fwlink/?LinkId=232504) \(英文\)。  
   
 > [!WARNING]
->  使用工作架構非同步模式時，如果在等待作業完成期間發生例外狀況，則可能擲回 T:System.AggregateException。 這個例外狀況可能在用戶端或服務上發生  
+> 使用工作架構非同步模式時，如果在等待作業完成期間發生例外狀況，則可能擲回 T:System.AggregateException。 這個例外狀況可能在用戶端或服務上發生  
   
 #### <a name="event-based-asynchronous-pattern"></a>事件架構非同步模式  
  支援事件架構非同步模式的服務會有一個或多個名為 MethodNameAsync 的方法。 這些方法可能鏡像在目前執行緒上執行相同作業的同步版本。 這個類別可能也具有 MethodNameCompleted 事件，並且具有 MethodNameAsyncCancel (或簡單地說 CancelAsync) 方法。 想要呼叫作業的用戶端將會定義要在作業完成時呼叫的事件處理常式。  

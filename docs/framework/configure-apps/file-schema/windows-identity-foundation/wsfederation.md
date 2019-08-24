@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 57a1513f6de7f7bd9ea441b6cbc3db6a06d76fc2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ace76475b67245a6ac5ef9f5b61db5023ffa0c1f
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940267"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988310"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>提供 (WSFAM) 的設定。  
@@ -48,7 +48,7 @@ ms.locfileid: "69940267"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |authenticationType|指定驗證類型的 URI。 設定 WS-同盟登入要求 wauth 參數。 選擇性。 預設值為空字串, 指定 wauth 參數不包含在要求中。|  
 |常|驗證要求的所需最長使用期限 (以分鐘為單位)。 設定 WS-同盟登入要求 wfresh 參數。 選擇性。 預設值是零。 選擇性。 **警告：** 在下一版的 .NET Framework 4.5 中, `freshness`屬性的類型`xs:string`會是, 而其預設值將`null`是。|  
@@ -68,7 +68,7 @@ ms.locfileid: "69940267"
 |signOutReply|指定在透過 WS-同盟通訊協定進行被動式登出期間, Security Token Service (STS) 應將用戶端重新導向至的 URL。 在 WS-同盟登出要求上設定 wreply 參數。 選擇性。 預設值為空字串, 指定不應在要求中包含任何其他參數。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -85,7 +85,7 @@ ms.locfileid: "69940267"
  下列 XML 顯示`<wsFederation>`的元素會指定 WSFAM 的設定。  
   
 > [!WARNING]
->  在此範例中, 不需要 WSFAM 就能使用 HTTPS。 這是因為已`requireHttps`設定`<wsFederation>` `false`元素上的屬性。 在大部分的生產環境中, 不建議使用此設定, 因為這可能會有安全性風險。  
+> 在此範例中, 不需要 WSFAM 就能使用 HTTPS。 這是因為已`requireHttps`設定`<wsFederation>` `false`元素上的屬性。 在大部分的生產環境中, 不建議使用此設定, 因為這可能會有安全性風險。  
   
 ```xml
 <wsFederation passiveRedirectEnabled="true"   

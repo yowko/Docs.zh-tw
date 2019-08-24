@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 966c3c17c3c42e20ad55681e1c17b13d3f466fa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 665ede5b5a46c4093382bed5ed28a0d2bba979be
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967824"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988600"
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 類別
 Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技術, 將您應用程式中的資料轉換成 XML, 在用戶端與服務之間傳輸, 這是一種稱為序列化的進程。  
@@ -97,7 +97,7 @@ Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技�
  實作 `IXmlSerializable` 介面的型別完全受到 `DataContractSerializer` 的支援。 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性應永遠套用至這些型別，以控制其結構描述。  
   
 > [!WARNING]
->  如果您要序列化多型型別，必須將 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 套用至型別，以確保序列化正確型別。  
+> 如果您要序列化多型型別，必須將 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 套用至型別，以確保序列化正確型別。  
   
  實作 `IXmlSerializable` 的型別有三種：代表任意內容的型別、代表單一項目的型別以及舊版 <xref:System.Data.DataSet> 型別。  
   

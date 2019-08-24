@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953260"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988305"
 ---
 # <a name="handling-datatable-events"></a>處理 DataTable 的事件
 <xref:System.Data.DataTable> 物件提供一系列可由應用程式處理的事件。 下表說明 `DataTable` 事件。  
   
-|Event - 事件|描述|  
+|Event - 事件|說明|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|發生在呼叫 <xref:System.Data.DataTable.EndInit%2A> 的 `DataTable` 方法之後。 這個事件主要是為了支援設計階段案例而提供。|  
 |<xref:System.Data.DataTable.ColumnChanged>|發生在成功變更 <xref:System.Data.DataColumn> 中的值之後。|  
@@ -33,7 +33,7 @@ ms.locfileid: "69953260"
 > 大多數加入或刪除資料列的作業都不會引發 `ColumnChanged` 和 `ColumnChanging` 事件。 不過，`ReadXml` 方法不會引發 `ColumnChanged` 和 `ColumnChanging` 事件，除非正在讀取的 XML 文件是 `XmlReadMode`，而 `DiffGram` 是設為 `Auto` 或 `DiffGram`。  
   
 > [!WARNING]
->  如果從中引發 `DataSet` 事件的 `RowChanged` 已修改了資料，就可能會發生資料損毀。 如果發生這類資料損毀，就不會引發任何例外狀況 (Exception)。  
+> 如果從中引發 `DataSet` 事件的 `RowChanged` 已修改了資料，就可能會發生資料損毀。 如果發生這類資料損毀，就不會引發任何例外狀況 (Exception)。  
   
 ## <a name="additional-related-events"></a>其他相關事件  
  <xref:System.Data.DataTable.Constraints%2A> 屬性會保存 <xref:System.Data.ConstraintCollection> 執行個體 (Instance)。 <xref:System.Data.ConstraintCollection> 類別會公開 <xref:System.Data.ConstraintCollection.CollectionChanged> 事件。 從 `ConstraintCollection` 加入、修改或移除條件約束 (Constraint) 時，就會引發這個事件。  
@@ -71,7 +71,7 @@ ms.locfileid: "69953260"
 > 對運算式資料行的變更永遠不會引發 `DataTable` 事件。 對運算式資料行的變更僅會引發 `DataView` 和 `DataRowView` 事件。 運算式資料行可能會相依於其他多個資料行，而且可在單一的 `DataRow` 作業期間進行多次評估。 每個運算式評估都會引發事件；在運算式資料行受到影響時，單一的 `DataRow` 作業則可能會引發多個 `ListChanged` 和 `PropertyChanged` 事件，而相同的運算式資料行則可能會包含多個事件。  
   
 > [!WARNING]
->  請勿在 <xref:System.NullReferenceException> 事件處理常式內部擲回 `RowChanged`。 如果在 <xref:System.NullReferenceException> 的 `RowChanged` 事件內部擲回 `DataTable`，將會損毀 `DataTable`。  
+> 請勿在 <xref:System.NullReferenceException> 事件處理常式內部擲回 `RowChanged`。 如果在 <xref:System.NullReferenceException> 的 `RowChanged` 事件內部擲回 `DataTable`，將會損毀 `DataTable`。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何建立 `RowChanged`、`RowChanging`、`RowDeleted`、`RowDeleting`、`ColumnChanged`、`ColumnChanging`、`TableNewRow`、`TableCleared` 和 `TableClearing` 事件的事件處理常式。 每個事件處理常式在引發時，都會將輸出顯示在主控台視窗中。  

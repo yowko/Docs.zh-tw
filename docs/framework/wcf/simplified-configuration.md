@@ -2,12 +2,12 @@
 title: 簡化的組態
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 5aaca8ae8c456e2377326ee2e9e22c3dcf6a21a7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: cdb5d819ce3af372ce44ee2c038556c1383acfe3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923003"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987214"
 ---
 # <a name="simplified-configuration"></a>簡化的組態
 設定 Windows Communication Foundation (WCF) 服務可能是一項複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然設定檔會增加 WCF 服務的彈性, 但它們也是許多難以發現問題的來源。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 能夠解決這些問題，並且提供可讓使用者降低服務組態大小與複雜度的方式。  
@@ -49,7 +49,7 @@ ms.locfileid: "69923003"
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]藉由移除 <`service`> 元素的需求, 讓您更輕鬆地設定 WCF 服務。 如果您未在 <`service` `service`> 區段中加入 < > 區段或加入任何端點, 而且您的服務不會以程式設計方式定義任何端點, 則會自動將一組預設端點新增至您的服務, 每一個服務基底位址, 以及服務所執行之每個合約的。 每一個端點中的端點位置都會對應至基底位址，繫結是由基底位址配置所決定，而合約則是服務實作的合約。 如果您不需要指定任何端點或服務行為，或是進行任何繫結設定變更，就不需要指定服務組態檔。 如果服務實作兩個合約，而且主機同時啟用 HTTP 和 TCP 傳輸，服務主機就會建立四個預設端點，使用各個傳輸的每一個合約都會有一個端點。 若要建立預設端點，服務主機必須知道要使用哪些繫結。 這些設定是在 [<`protocolMappings` `system.serviceModel`>] 區段內的 [< >] 區段中指定。 <`protocolMappings`> 區段包含對應至系結類型的傳輸通訊協定配置清單。 服務主機會使用傳遞至主機本身的基底位址判斷要使用的繫結。 下列範例會使用 <`protocolMappings`> 元素。  
   
 > [!WARNING]
->  變更預設組態項目 (例如繫結或行為) 可能會影響定義於組態階層架構中較低層級的服務，因為它們可能會使用這些預設繫結和行為。 因此，變更預設繫結和行為的所有人員都必須注意，這些變更可能會影響階層中的其他服務。  
+> 變更預設組態項目 (例如繫結或行為) 可能會影響定義於組態階層架構中較低層級的服務，因為它們可能會使用這些預設繫結和行為。 因此，變更預設繫結和行為的所有人員都必須注意，這些變更可能會影響階層中的其他服務。  
   
 > [!NOTE]
 > Internet Information Services (IIS) 或 Windows 處理序啟用服務 (WAS) 底下裝載的服務會使用虛擬目錄做為其基底位址。  

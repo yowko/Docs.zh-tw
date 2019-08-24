@@ -2,12 +2,12 @@
 title: 路由簡介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: eaf09c0d724521c3c69fde0e90ecd7cd5aadb253
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933962"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988664"
 ---
 # <a name="routing-introduction"></a>路由簡介
 路由服務提供了泛型的可外掛式 SOAP 媒介，此媒介能夠根據訊息內容路由傳送訊息。 透過路由服務，您就可以建立複雜路由邏輯，以便實作服務彙總、服務版本控制、優先權路由和多點傳送路由等案例。 路由服務還提供錯誤處理，可讓您設定備份端點清單，當傳送至主要目的端點期間發生錯誤時，訊息就會傳送至此清單中的端點。  
@@ -395,7 +395,7 @@ using (ServiceHost serviceHost =
  搭配路由服務的模擬需要使用 ASP.NET 模擬 (採用 ASP.NET 相容模式時) 或 Windows 認證 (這已設定為允許模擬)。 如需 ASP.NET 相容性模式的詳細資訊, 請參閱[WCF 服務和 ASP.NET](wcf-services-and-aspnet.md)。  
   
 > [!WARNING]
->  WCF 路由服務不支援基本驗證的模擬。  
+> WCF 路由服務不支援基本驗證的模擬。  
   
  若要搭配路由服務使用 ASP.NET 模擬，請在服務裝載環境中啟用 ASP.NET 相容模式。 路由服務已經標記為允許 ASP.NET 相容模式，將會自動啟用模擬。 ASP.NET 與路由服務整合時，模擬是唯一受支援的使用方式。  
   

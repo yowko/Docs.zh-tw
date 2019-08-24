@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbe28c01891464ff45dfec97b1d8b4685ba8a51a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4cda67145a0e624f87e93cf02ebdb6bc77c34d2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744371"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69987603"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>ICorDebugAssembly3::GetContainerAssembly 方法
 傳回這個 `ICorDebugAssembly3` 物件的容器組件。  
@@ -24,16 +24,16 @@ HRESULT GetContainerAssembly(
   
 ## <a name="parameters"></a>參數  
  `ppAssembly`  
- ICorDebugAssembly 物件，代表容器組件的位址指標或**null**如果方法呼叫失敗。  
+ 代表容器元件之 ICorDebugAssembly 物件位址的指標, 如果方法呼叫失敗, 則為**null** 。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果方法呼叫成功，則否則，請`S_FALSE`，並`ppAssembly`是**null**。  
+ `S_OK`如果方法呼叫成功, 則為,否則, `S_FALSE`、和`ppAssembly`為**null**。  
   
 ## <a name="remarks"></a>備註  
- 如果這個組件與其他組件已合併到單一容器組件內，這個方法會傳回該容器組件。 如需詳細資訊和術語，請參閱 < [ICorDebugProcess6::EnableVirtualModuleSplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md)主題。  
+ 如果這個組件與其他組件已合併到單一容器組件內，這個方法會傳回該容器組件。 如需詳細資訊和術語, 請參閱[ICorDebugProcess6:: EnableVirtualModuleSplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md)主題。  
   
 > [!NOTE]
->  這個方法僅適用於 .NET Native。  
+> 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

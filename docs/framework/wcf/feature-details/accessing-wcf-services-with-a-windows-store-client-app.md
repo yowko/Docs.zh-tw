@@ -2,12 +2,12 @@
 title: 使用 Windows 市集用戶端應用程式存取 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a2f1ef37914c932801699bb2f9c2323dd0408e7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9316a46f809eec21f73e8eeadb49baf1748c6ca0
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964959"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988257"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows 市集用戶端應用程式存取 WCF 服務
 Windows 8 引入新的應用程式型別，稱為 Windows 市集應用程式。 這些應用程式都是以觸控式螢幕介面為設計主軸。 .NET Framework 4.5 可讓 Windows 市集應用程式呼叫 WCF 服務。  
@@ -19,7 +19,7 @@ Windows 8 引入新的應用程式型別，稱為 Windows 市集應用程式。 
 > 使用 WinRT 新聞訂閱應用程式開發介面，而不使用由 WCF 所公開的介面。 如需詳細資訊，請參閱 [WinRT 新聞訂閱應用程式開發介面](https://go.microsoft.com/fwlink/?LinkId=236265)  
   
 > [!WARNING]
->  不支援使用 [加入服務參考]，將 Web 服務參考加入 Windows 執行階段元件。  
+> 不支援使用 [加入服務參考]，將 Web 服務參考加入 Windows 執行階段元件。  
   
 ### <a name="supported-bindings"></a>支援的繫結  
  Windows 市集應用程式支援下列 WCF 繫結：  
@@ -104,7 +104,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 3. XmlSerializer  
   
 > [!WARNING]
->  XmlDictionaryWriter.Write(DateTime) 現在會將 DateTime 物件當做字串寫入。  
+> XmlDictionaryWriter.Write(DateTime) 現在會將 DateTime 物件當做字串寫入。  
   
 ### <a name="security"></a>安全性  
 
@@ -154,7 +154,7 @@ Windows Store 應用程式支援下列用戶端認證類型:
  建議您只定義使用以工作為基礎之非同步模式的非同步服務作業。 這樣可以確保 Windows 市集應用程式在呼叫服務作業時仍能保持回應。  
   
 > [!WARNING]
->  雖然定義同步作業並不會擲回例外狀況，還是強烈建議您只定義非同步作業。  
+> 雖然定義同步作業並不會擲回例外狀況，還是強烈建議您只定義非同步作業。  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>從 Windows 市集應用程式呼叫 WCF 服務  
  正如前面提到的，所有組態都必須在所產生 Proxy 類別的 GetBindingForEndpoint 方法中，以程式碼來設定。 呼叫服務作業的方式與呼叫任何以工作為基礎的非同步方法相同，如下列程式碼片段中所示。  

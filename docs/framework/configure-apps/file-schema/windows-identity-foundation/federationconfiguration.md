@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942770"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988334"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 透過 WS-同盟通訊協定來<xref:System.IdentityModel.Services.SessionAuthenticationModule>使用聯合驗證時, 會設定(WSFAM)和(SAM)。<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 使用或<xref:System.Security.Claims.ClaimsAuthorizationManager> 類別<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>來提供宣告型存取控制時, 設定。 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission>  
@@ -37,7 +37,7 @@ ms.locfileid: "69942770"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<cookieHandler>](cookiehandler.md)|設定 SAM 所使用的 cookie 處理常式。 選擇性。|  
 |[\<serviceCertificate>](servicecertificate.md)|設定用來加密和解密權杖的憑證。 選擇性。|  
@@ -45,7 +45,7 @@ ms.locfileid: "69942770"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<system.identityModel.services>](system-identitymodel-services.md)|使用 WS-同盟通訊協定進行驗證的設定區段。|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "69942770"
  下列 XML 顯示`<federationConfiguration>`的元素會指定 WSFAM 的設定, 並指定 SAM 使用預設的 cookie 處理常式 ( <xref:System.IdentityModel.Services.ChunkedCookieHandler>類別的實例)。  
   
 > [!WARNING]
->  在此範例中, cookie 處理常式或 WSFAM 都不需要使用 HTTPS。 `requireHttps`這是因為`false` `<cookieHandlerElement>` `requireSsl`元素上的屬性和上的屬性為。 `<wsFederation>` 在大部分的生產環境中, 不建議使用這些設定, 因為它們可能會有安全性風險。  
+> 在此範例中, cookie 處理常式或 WSFAM 都不需要使用 HTTPS。 `requireHttps`這是因為`false` `<cookieHandlerElement>` `requireSsl`元素上的屬性和上的屬性為。 `<wsFederation>` 在大部分的生產環境中, 不建議使用這些設定, 因為它們可能會有安全性風險。  
   
 ```xml  
 <system.identityModel.services>  

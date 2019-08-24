@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 345b5028ccc5c24bd60cf7ecbd2610b27f44b8b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 463d2fc374870661185a625a0b07a102aa54498c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968672"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988618"
 ---
 # <a name="transport-security-overview"></a>傳輸安全性概觀
 Windows Communication Foundation (WCF) 中的傳輸安全性機制取決於所使用的系結和傳輸。 例如，使用 <xref:System.ServiceModel.WSHttpBinding> 類別時，傳輸為 HTTP，而保護此傳輸的主要機制則為 Secure Sockets Layer (SSL) over HTTP，通常稱為 HTTPS。 本主題討論 WCF 系統提供之系結中所使用的主要傳輸安全性機制。  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) 中的傳輸安全性機制取決於所�
 > 當 SSL 安全性與 .NET Framework 3.5 和更新版本搭配使用時, WCF 用戶端會使用其憑證存放區中的中繼憑證, 以及在 SSL 協商期間收到的中繼憑證, 在服務的上執行憑證鏈驗證證書. .NET Framework 3.0 只會使用安裝在本機憑證存放區中的中繼憑證。  
   
 > [!WARNING]
->  使用傳輸安全性時，可能會覆寫 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性。 若要避免發生這種情況<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> , <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>請將設定為。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可在服務描述上設定的服務行為。  
+> 使用傳輸安全性時，可能會覆寫 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性。 若要避免發生這種情況<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> , <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>請將設定為。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可在服務描述上設定的服務行為。  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  根據預設，<xref:System.ServiceModel.BasicHttpBinding> 類別不會提供安全性。 這個繫結是設計用來與未實作安全性的 Web 服務提供者互通。 不過，您可以透過將 <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> 屬性設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.None> 以外的任何值來啟動安全性。 若要啟用傳輸安全性，請將此屬性設為 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。  

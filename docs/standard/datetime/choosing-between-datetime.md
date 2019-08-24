@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c86ab618f6434a6a9ce4f056eeb001cacc84bc
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9d2ae7430c10254274eed6fb8a602aa8bc11bffb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709193"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988505"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>在 DateTime、DateTimeOffset、 TimeSpan 和  TimeZoneInfo 之間選擇
 
@@ -43,7 +43,7 @@ ms.locfileid: "68709193"
 .Net 包含<xref:System.DateTime>、 <xref:System.DateTimeOffset>、 <xref:System.TimeSpan>和類型,這些都可以用來建立使用日期和時間的應用程式。<xref:System.TimeZoneInfo>
 
 > [!NOTE]
-> 本主題並不討論第四個類型， <xref:System.TimeZone>，因為它的功能幾乎已完全合併入 <xref:System.TimeZoneInfo> 類別。 可能的話，開發人員應該使用 <xref:System.TimeZoneInfo> 類別而非 <xref:System.TimeZone> 類別。
+> 本主題不會<xref:System.TimeZone>討論, 因為它的功能幾乎已完全<xref:System.TimeZoneInfo>納入類別中。 盡可能使用<xref:System.TimeZoneInfo>類別, 而不是<xref:System.TimeZone>類別。
 
 ## <a name="the-datetime-structure"></a>DateTime 結構
 

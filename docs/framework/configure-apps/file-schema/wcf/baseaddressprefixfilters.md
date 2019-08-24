@@ -2,18 +2,18 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 8a59f651318e18411b1485fc4eebeb7a550afca0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 55ffcfb5c0c84d68033d082cbe451696bd3c9dc2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919860"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988353"
 ---
 # <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters>
 代表設定專案的集合, 這些專案會指定 [傳遞篩選準則], 以在 IIS 中裝載 Windows Communication Foundation (WCF) 應用程式時, 提供挑選適當 Internet Information Services (IIS) 系結的機制。  
   
 > [!WARNING]
->  \<baseAddressPrefixFilters > 無法辨識 "localhost", 請改用完整的電腦名稱稱。  
+> \<baseAddressPrefixFilters > 無法辨識 "localhost", 請改用完整的電腦名稱稱。  
   
  \<system.ServiceModel>  
 \<ServiceHostingEnvironment>  
@@ -36,7 +36,7 @@ ms.locfileid: "69919860"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<add>](add-of-baseaddressprefixfilter.md)|新增組態項目，這個項目會指定由服務主機使用之基底位址的前置詞篩選條件。|  
   

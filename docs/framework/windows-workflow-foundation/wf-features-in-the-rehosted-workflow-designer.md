@@ -2,12 +2,12 @@
 title: 針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 69c3577c82c7a0899fb94461255721f4b2ab3ecd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 20623c8d2f6bf66d2668fd07b0acae67865a3235
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913697"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987225"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 .NET Framework 4.5 中的 Windows Workflow Foundation (WF) 引進了許多新功能, 包括工作流程設計工具體驗的幾項增強功能。 本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。
@@ -22,7 +22,7 @@ ms.locfileid: "69913697"
  在 .NET Framework 4.5 之前, 工作流程中的所有運算式都只能以 Visual Basic 寫入。 在 .NET Framework 4.5 中, Visual Basic 運算式僅用於使用 Visual Basic 建立的專案。 Visual C# 專案現在使用 C# 來撰寫運算式。 在 Visual Studio 2012 中撰寫工作流程時, 會C#提供功能完整的運算式編輯器, 例如文法反白顯示和 intellisense。 在舊版中使用 Visual Basic 運算式建立的 C# 工作流程專案仍可繼續運作。
 
 > [!WARNING]
->  重新裝載的設計工具不支援 C# 運算式。
+> 重新裝載的設計工具不支援 C# 運算式。
 
 ## <a name="new-designer-capabilities"></a>新的設計工具功能
 
@@ -30,7 +30,7 @@ ms.locfileid: "69913697"
  重新裝載設計工具不支援 .NET Framework 4.5 引進的 [[快速尋找](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)] 和 [檔案[中尋找](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)] 功能。 重新裝載的設計工具支援 `Toolbox` 搜尋。 如需這些功能的詳細資訊, 請參閱[設計工具搜尋](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)。
 
 > [!WARNING]
->  重新裝載設計工具不支援 [[快速尋找](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)] 和 [檔案[中尋找](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)]。
+> 重新裝載設計工具不支援 [[快速尋找](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)] 和 [檔案[中尋找](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)]。
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>變數和引數設計工具中的刪除內容功能表項目
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用鍵盤刪除設計工具中的變數和引數。 從 .NET Framework 4.5 開始, 您可以使用內容功能表來刪除變數和引數。 重新裝載的設計工具支援此功能。
@@ -103,7 +103,7 @@ ms.locfileid: "69913697"
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，不會將工作流程驗證錯誤計為工作流程專案建置期間的建置錯誤。 這表示，即使有工作流程驗證錯誤，仍可能成功建置工作流程專案。 在 .NET Framework 4.5 中, 工作流程驗證錯誤會導致組建失敗。
 
 > [!WARNING]
->  重新裝載的設計工具不支援建置階段驗證。  
+> 重新裝載的設計工具不支援建置階段驗證。  
   
 ### <a name="design-time-background-validation"></a>設計階段背景驗證  
  在[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]中, 工作流程已驗證為前景進程, 這可能會在複雜或耗時的驗證程式中封鎖 UI。 現在，工作流程驗證會在背景執行緒中進行，因此不會封鎖 UI。  
@@ -142,4 +142,4 @@ ms.locfileid: "69913697"
  合約優先工作流程開發工具可讓開發人員在 code first 中設計合約, 然後在 Visual Studio 中按幾下滑鼠按鍵, 就會在工具箱中自動產生代表每個作業的活動範本。 之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。 工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。 開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。 如需有關合約優先工作流程服務開發的詳細資訊[, 請參閱如何:建立使用現有服務合約](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)的工作流程服務。  
   
 > [!WARNING]
->  工作流程設計工具不支援合約優先工作流程開發。
+> 工作流程設計工具不支援合約優先工作流程開發。

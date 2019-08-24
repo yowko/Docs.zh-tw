@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942806"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988349"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
 <xref:System.IdentityModel.Services.CookieHandler> 設定(SAM)用來讀取<xref:System.IdentityModel.Services.SessionAuthenticationModule>和寫入 cookie 的。  
@@ -41,7 +41,7 @@ ms.locfileid: "69942806"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |NAME|指定任何寫入 cookie 的基底名稱。 預設值為 "FedAuth"。|  
 |路徑|指定任何寫入 cookie 的路徑值。 預設值為 "HttpRuntime. AppDomainAppVirtualPath"。|  
@@ -60,7 +60,7 @@ ms.locfileid: "69942806"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](federationconfiguration.md)|包含設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) <xref:System.IdentityModel.Services.SessionAuthenticationModule>和 (SAM) 的設定。|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69942806"
  下列 XML 會顯示`<cookieHandler>`元素。 在此範例中, 因為`mode`未指定屬性, 所以 SAM 會使用預設的 cookie 處理常式。 這是<xref:System.IdentityModel.Services.ChunkedCookieHandler>類別的實例。 由於未指定子項目, 因此會使用預設的區塊大小。 `<chunkedCookieHandler>` 不需要 HTTPS, `requireSsl`因為已設定`false`屬性。  
   
 > [!WARNING]
->  在此範例中, 不需要 HTTPS 來寫入會話 cookie。 這是因為`<cookieHandler>`元素`requireSsl`上的屬性設定為。 `false` 在大部分的生產環境中, 不建議使用此設定, 因為這可能會有安全性風險。  
+> 在此範例中, 不需要 HTTPS 來寫入會話 cookie。 這是因為`<cookieHandler>`元素`requireSsl`上的屬性設定為。 `false` 在大部分的生產環境中, 不建議使用此設定, 因為這可能會有安全性風險。  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

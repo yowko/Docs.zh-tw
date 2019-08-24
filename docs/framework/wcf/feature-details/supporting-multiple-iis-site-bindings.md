@@ -2,12 +2,12 @@
 title: 支援多重 IIS 網站繫結
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 3a4c9a55a8479980bd12333278d8a1e28f2ca775
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a1fc2de3a10641dfc1c6181c7258bd4160f900e2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943044"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988641"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>支援多重 IIS 網站繫結
 在 Internet Information Services (IIS) 7.0 下裝載 Windows Communication Foundation (WCF) 服務時, 您可能會想要在相同的網站上提供多個使用相同通訊協定的基底位址。 這樣可讓相同的服務回應數個不同的 URI。 當您想要裝載在和`http://www.contoso.com` `http://contoso.com`上接聽的服務時, 這會很有用。 當您所建立的服務具有內部使用者基底位址，同時具有外部使用者個別基底位址時，也適用此方式。 例如: `http://internal.contoso.com`和`http://www.contoso.com`。  
@@ -27,4 +27,4 @@ ms.locfileid: "69943044"
  為相同網站指定多個基底位址會影響 WCF 說明頁面的內容、匯入架構, 以及服務所產生的 WSDL/MEX 資訊。 [WCF 說明] 頁面會顯示用來產生可與服務進行通訊之 WCF 用戶端的命令列。 此命令列僅包含在 IIS 繫結中指定的第一個網站位址。 同樣地，在匯入結構時，只會使用在 IIS 繫結中指定的第一個基底位址。 WSDL 和 MEX 資料包含所有在 IIS 繫結中指定的基底位址。  
   
 > [!WARNING]
->  這表示如果服務擁有兩個基底位址，一個用於內部使用者，另一個用於外部使用者，則會在由服務所產生的 WSDL/MEX 資訊中指定這兩個位址。
+> 這表示如果服務擁有兩個基底位址，一個用於內部使用者，另一個用於外部使用者，則會在由服務所產生的 WSDL/MEX 資訊中指定這兩個位址。

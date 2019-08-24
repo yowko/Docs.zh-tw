@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: c66ca9356d1db157688349dfeea4270001513e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949211"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988649"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和還原序列化
 Windows Communication Foundation (WCF) 包含新的序列化引擎, 也<xref:System.Runtime.Serialization.DataContractSerializer>就是。 會<xref:System.Runtime.Serialization.DataContractSerializer>在兩個方向的 .NET Framework 物件和 XML 之間轉譯。 本主題會說明序列化程式的運作方式。  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎, 也<xref:Sys
  WCF 也包含隨附的序列化程式, <xref:System.Runtime.Serialization.NetDataContractSerializer>也就是。 <xref:System.Runtime.Serialization.NetDataContractSerializer> 類似<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>于和<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>序列化程式, 因為它也會發出 .NET Framework 型別名稱做為序列化資料的一部分。 當序列化和還原序列化兩端共用相同的型別時，就會使用它。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 兩者同時衍生自一般基底類別， <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
   
 > [!WARNING]
->  <xref:System.Runtime.Serialization.DataContractSerializer> 會將包含十六進位值低於 20 之控制字元的字串序列化成 XML 實體。 這可能會在將這類資料傳送至 WCF 服務時, 導致非 WCF 用戶端發生問題。  
+> <xref:System.Runtime.Serialization.DataContractSerializer> 會將包含十六進位值低於 20 之控制字元的字串序列化成 XML 實體。 這可能會在將這類資料傳送至 WCF 服務時, 導致非 WCF 用戶端發生問題。  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>建立 DataContractSerializer 執行個體  
  建構 <xref:System.Runtime.Serialization.DataContractSerializer> 的執行個體是很重要的步驟。 建構完成之後，您將無法變更任何設定。  

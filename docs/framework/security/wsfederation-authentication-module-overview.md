@@ -3,12 +3,12 @@ title: WSFederation 驗證模組概觀
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915508"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987699"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 驗證模組概觀
 Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-同盟驗證模組 (WS-FAM) 提供同盟驗證的支援。 本主題將協助您了解同盟驗證的運作方式以及如何使用它。  
@@ -99,7 +99,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
  下列 XML 顯示 ASP.NET 信賴憑證者 (RP) 應用程式的組態。 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> 和 <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> 組態區段會新增到 `<configSections>` 元素下。 SAM 和 WS-FAM 則會新增到 `<system.webServer>`/`<modules>` 元素下的 HTTP 模組。 最後，會在 `<system.identityModel>`/`<identityConfiguration>`和 `<system.identityModel.services>`/`<federationConfiguration>` 元素下設定 WIF 元件。 這個組態會指定區塊 Cookie 處理常式，因為它是預設的 Cookie 處理常式，但沒有在 `<cookieHandler>` 元素中指定的 Cookie 處理常式類型。  
   
 > [!WARNING]
->  在下列範例中，`<wsFederation>` 元素的 `requireHttps` 屬性和 `<cookieHandler>` 元素的 `requireSsl` 屬性都是 `false`。 這會造成潛在的安全性威脅。 在生產環境中，這兩個值都應該設定為 `true`。  
+> 在下列範例中，`<wsFederation>` 元素的 `requireHttps` 屬性和 `<cookieHandler>` 元素的 `requireSsl` 屬性都是 `false`。 這會造成潛在的安全性威脅。 在生產環境中，這兩個值都應該設定為 `true`。  
   
 ```xml  
 <configuration>  

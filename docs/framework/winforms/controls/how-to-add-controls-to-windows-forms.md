@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912619"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987514"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>作法：將控制項新增至 Windows Forms
 大部分的表單都是藉由將控制項新增至表單介面來定義使用者介面 (UI) 而設計。 *控制項*是表單上用來顯示資訊或接受使用者輸入的元件。 如需控制項的詳細資訊, 請參閱[Windows Forms 控制項](index.md)。
@@ -89,7 +89,6 @@ ms.locfileid: "69912619"
 ## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
-- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
 - [如何：調整 Windows Forms 上控制項的大小](how-to-resize-controls-on-windows-forms.md)
 - [如何：設定 Windows Forms 控制項所顯示的文字](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

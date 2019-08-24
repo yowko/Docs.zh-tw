@@ -2,12 +2,12 @@
 title: 設定 Net.TCP Port Sharing Service
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949608"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988231"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>設定 Net.TCP Port Sharing Service
 使用 Net.TCP 傳輸的自我裝載服務可以控制好幾項進階設定，例如 `ListenBacklog` 和 `MaxPendingAccepts`，這些設定掌管網路通訊時使用的基礎 TCP 通訊端行為。 但是，如果傳輸繫結已經停用連接埠共用 (預設為啟用)，則每個通訊端的這些設定只能套用在繫結層級中。  
@@ -59,7 +59,7 @@ ms.locfileid: "69949608"
 > 在啟用了使用者帳戶控制 (UAC) 的 [!INCLUDE[wv](../../../../includes/wv-md.md)] 系統上，即使本機使用者屬於 Administrators 群組的成員之一，還是需要較高的權限。 若要允許這些使用者使用埠共用服務而不提高許可權, 則必須將使用者的 SID (或使用者所屬群組的 sid) 明確新增至 smsvchost.exe 的\<d > 區段。  
   
 > [!WARNING]
->  預設的 SMSvcHost.exe.config 檔案會指定自訂 `etwProviderId` 來防止 SMSvcHost.exe 追蹤干擾服務追蹤。  
+> 預設的 SMSvcHost.exe.config 檔案會指定自訂 `etwProviderId` 來防止 SMSvcHost.exe 追蹤干擾服務追蹤。  
   
 ## <a name="see-also"></a>另請參閱
 

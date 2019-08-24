@@ -7,25 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 76fd6ad954b2cf004c6fdfcf51ef0c619e8c3892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da67d923b36d673c87c90ba79b72ad4e1fc64a0c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662774"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988765"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：使用 SecurityBindingElement 建立自訂繫結
-Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可以設定，但不是能提供充分的彈性設定 WCF 支援的所有安全性選項時。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 如需建立自訂繫結的詳細資訊，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>作法：使用 SecurityBindingElement 建立自訂繫結
+Windows Communication Foundation (WCF) 包含數個系統提供的系結, 這些系結可在設定 WCF 支援的所有安全性選項時, 但不提供完整的彈性。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 如需建立自訂系結的詳細資訊, 請參閱[擴充](../../../../docs/framework/wcf/extending/extending-bindings.md)系結。  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支援 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道圖案，當 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Buffered> 時，這是 TCP 傳輸使用的預設通道圖案。 您必須將 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Streamed>，才能在這個情況中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
+> <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支援 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道圖案，當 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Buffered> 時，這是 TCP 傳輸使用的預設通道圖案。 您必須將 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Streamed>，才能在這個情況中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
   
 ## <a name="creating-a-custom-binding"></a>建立自訂繫結  
- 在 WCF 中的所有繫結組成*繫結項目*。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 如果是標準系統提供的繫結，雖然您可以自訂某些屬性設定，但是系統仍會為您先建立並且設定好繫結項目。  
+ 在 WCF 中, 所有系結都是由*綁定*項所組成。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 如果是標準系統提供的繫結，雖然您可以自訂某些屬性設定，但是系統仍會為您先建立並且設定好繫結項目。  
   
  相反的，若要建立自訂繫結，會建立並且設定繫結項目，並且從自訂項目建立一個<xref:System.ServiceModel.Channels.CustomBinding>。  
   
- 若要進行這個步驟，您可以將個別的繫結項目加入到由 <xref:System.ServiceModel.Channels.BindingElementCollection>`Elements`類別之執行個體所表示的集合，然後，將 `CustomBinding`的 屬性設定為等同於該物件的項目。 您必須依下列順序加入繫結項目：交易流程、 可靠工作階段、 安全性、 複合雙工、 單向、 Stream Security、 訊息編碼，和傳輸。 請注意，並非每個繫結都需要所列的所有繫結項目。  
+ 若要進行這個步驟，您可以將個別的繫結項目加入到由 <xref:System.ServiceModel.Channels.BindingElementCollection>`Elements`類別之執行個體所表示的集合，然後，將 `CustomBinding`的 屬性設定為等同於該物件的項目。 您必須以下列順序加入繫結項目:交易流程, 可靠會話, 安全性, 複合雙工, 單向, 資料流程安全性, 訊息編碼和傳輸。 請注意，並非每個繫結都需要所列的所有繫結項目。  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  有三個繫結項目與訊息層級安全性相關，這些項目全都衍生自 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別。 這三個項目分別是 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>。 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> 用於提供混合模式安全性。 當訊息層提供安全性時，則使用另外兩個項目。  
@@ -75,9 +75,9 @@ Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可�
 |||SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- 請注意，SecurityBindingElements 有許多可以設定的項目。 如需詳細資訊，請參閱 < [SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
+ 請注意，SecurityBindingElements 有許多可以設定的項目。 如需詳細資訊, 請參閱[SecurityBindingElement Authentication 模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
   
- 如需詳細資訊，請參閱 <<c0> [ 安全對話與安全工作階段](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)。  
+ 如需詳細資訊, 請參閱[安全對話和安全會話](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)。  
   
 ## <a name="procedures"></a>程序  
   
