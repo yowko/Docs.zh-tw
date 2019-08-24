@@ -1,5 +1,5 @@
 ---
-title: 作法：繼承現有的 Windows Forms 控制項
+title: HOW TO：繼承現有的 Windows Forms 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,23 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 9ac18fae126425126712dafeb80f05663dfc2ebc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966592"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015880"
 ---
-# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>HOW TO：繼承現有的 Windows Forms 控制項
+# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>作法：繼承現有的 Windows Forms 控制項
+
 如果您想要擴充現有控制項的功能，您可以透過繼承來建立衍生自現有控制項的控制項。 繼承自現有的控制項時，您會繼承該控制項的所有功能和視覺屬性。 例如, 如果您要建立繼承自<xref:System.Windows.Forms.Button>的控制項, 新控制項的外觀和作用就和標準<xref:System.Windows.Forms.Button>控制項完全一樣。 您就可以透過實作自訂方法和屬性，來擴充或修改新控制項的功能。 在某些控制項中, 您也可以藉由覆寫其<xref:System.Windows.Forms.Control.OnPaint%2A>方法來變更繼承控制項的視覺外觀。
 
 ## <a name="to-create-an-inherited-control"></a>建立繼承的控制項
 
-1. 建立新的 [Windows Forms 應用程式] 專案。
+1. 在 Visual Studio 中, 建立新的**Windows Forms 應用程式**專案。
 
 2. 從 [專案] 功能表選擇 [新增項目]。
 
@@ -30,9 +34,10 @@ ms.locfileid: "69966592"
 
      新的自訂控制項會新增至您的專案。
 
-4. 如果您使用 Visual Basic，請在 [方案總管] 的頂端，按一下 [顯示所有檔案]。 展開 CustomControl1.vb，然後在程式碼編輯器中開啟 CustomControl1.Designer.vb。
+4. 如果您使用:
 
-5. 如果您使用 C#，請在程式碼編輯器中開啟 CustomControl1.cs。
+   - Visual Basic 中, 按一下**方案總管**頂端的 [**顯示所有**檔案]。 展開 CustomControl1.vb，然後在程式碼編輯器中開啟 CustomControl1.Designer.vb。
+   - C#, 在程式碼編輯器中開啟 CustomControl1.cs。
 
 6. 找出繼承自<xref:System.Windows.Forms.Control>的類別宣告。
 
@@ -86,6 +91,5 @@ ms.locfileid: "69966592"
 - [如何：繼承自控制項類別](how-to-inherit-from-the-control-class.md)
 - [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
 - [如何：Windows Forms 的作者控制項](how-to-author-controls-for-windows-forms.md)
-- [Visual Basic 中的繼承事件處理常式疑難排解](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [逐步解說：從具有 Visual Basic 的 Windows Forms 控制項繼承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [逐步解說：使用視覺效果從 Windows Forms 控制項繼承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [逐步解說：繼承自 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

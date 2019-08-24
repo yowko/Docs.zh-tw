@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 8b33ac800144577ba5f8610afdc50a1ba56eec0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 948d147a0990961a8706298f1112f85882e30119
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937699"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015623"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹在為全球市場撰寫[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式時, 您應該注意的問題。 全球化程式設計項目定義于[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]中`System.Globalization`的。
@@ -143,7 +143,7 @@ ms.locfileid: "69937699"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>多語系使用者介面
- 多語系使用者介面 (MUI) 是[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]從某種語言[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]切換到另一種語言的支援。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式會使用元件模型來支援 MUI。 一個應用程式包含語言中性的組件以及語言相關的附屬資源組件。 進入點是主要組件中的 Managed .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]資源載入器會利用[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的資源管理員來支援資源查閱和回退。 多語言附屬組件使用相同的主要組件。 載入的資源元件取決於<xref:System.Globalization.CultureInfo.CurrentUICulture%2A>目前線程的。
+ 多語系使用者介面 (MUI) 是 Microsoft 的支援, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可將一種語言切換成另一種語言。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式會使用元件模型來支援 MUI。 一個應用程式包含語言中性的組件以及語言相關的附屬資源組件。 進入點是主要組件中的 Managed .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]資源載入器會利用[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的資源管理員來支援資源查閱和回退。 多語言附屬組件使用相同的主要組件。 載入的資源元件取決於<xref:System.Globalization.CultureInfo.CurrentUICulture%2A>目前線程的。
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>可當地語系化的使用者介面

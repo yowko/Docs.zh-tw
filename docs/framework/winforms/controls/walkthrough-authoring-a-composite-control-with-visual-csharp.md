@@ -1,6 +1,8 @@
 ---
 title: 逐步解說：使用 Visual C# 撰寫複合控制項
 ms.date: 03/30/2017
+dev_langs:
+- CSharp
 helpviewer_keywords:
 - custom controls [C#]
 - user controls [Windows Forms], creating with Visual C#
@@ -8,43 +10,44 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 1de1ff4147ddb8cb3316795aefd38622de205a73
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: d1af6c0e013f82569eed8d085df0249f4fb991bb
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950056"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015685"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>逐步解說：使用 Visual C 撰寫複合控制項\#
+# <a name="walkthrough-author-a-composite-control-with-c"></a>逐步解說：撰寫具有 C 的複合控制項\#
 
 複合控制項提供可以建立及重複使用自訂圖形介面的方法。 複合控制項基本上是具有視覺表示的元件。 因此，它可能包含一或多個 Windows Forms 控制項、元件或程式碼區塊，可以藉由驗證使用者輸入、修改顯示屬性，或執行作者需要的其他工作來擴充功能。 複合控制項可以放在 Windows Forms 上，與其他控制項的方式相同。 在本逐步解說的第一個部分中，您可以建立簡單的複合控制項，稱為 `ctlClock`。 在逐步解說的第二個部分中，您透過繼承擴充 `ctlClock` 的功能。
 
-## <a name="creating-the-project"></a>建立專案
+## <a name="create-the-project"></a>建立專案
 
 當您建立新的專案時，您會指定其名稱以設定根命名空間、組件名稱和專案名稱，並且確定預設元件將會在正確的命名空間中。
 
 ### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>建立 ctlClockLib 控制項程式庫和 ctlClock 控制項
 
-1. 在 [檔案] 功能表上，指向 [新增]，然後按一下 [專案]，開啟 [新增專案] 對話方塊。
-
-2. 從 Visual C#專案清單中, 選取 [ **Windows Forms 控制項程式庫**] 專案範本, `ctlClockLib`在 [**名稱**] 方塊中輸入, 然後按一下 **[確定]** 。
+1. 在 Visual Studio 中, 建立新的**Windows Forms 控制項程式庫**專案, 並將其命名為**ctlClockLib**。
 
      專案名稱，`ctlClockLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為 `ctlClock`，您可以使用 `ctlClockLib.ctlClock.` 指定您的 `ctlClock` 元件
 
-3. 以滑鼠右鍵按一下 [方案總管] 中的 [UserControl1.cs]，然後按一下 [重新命名]。 將檔案名稱變更為 `ctlClock.cs`。 當系統詢問您是否要重新命名程式碼元素 "UserControl1" 的所有參考時，按一下 [是]按鈕。
+2. 在**方案總管**中, 以滑鼠右鍵按一下 [ **UserControl1.cs**], 然後按一下 [**重新命名**]。 將檔案名稱變更為 `ctlClock.cs`。 當系統詢問您是否要重新命名程式碼元素 "UserControl1" 的所有參考時，按一下 [是]按鈕。
 
     > [!NOTE]
     > 根據預設, 複合控制項會繼承系統所提供<xref:System.Windows.Forms.UserControl>的類別。 類別<xref:System.Windows.Forms.UserControl>提供所有複合控制項所需的功能, 並實作為標準方法和屬性。
 
-4. 在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。
+3. 在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。
 
-## <a name="adding-windows-controls-and-components-to-the-composite-control"></a>將 Windows 控制項和元件新增至複合控制項
+## <a name="add-windows-controls-and-components-to-the-composite-control"></a>將 Windows 控制項和元件新增至複合控制項
 
 視覺化介面是複合控制項不可或缺的一部分。 這個視覺化介面是藉由將一或多個 Windows 控制項新增至設計工具介面來實作。 在下列示範中，您將 Windows 控制項合併到您的複合控制項，並且撰寫程式碼來實作功能。
 
 ### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>將標籤和計時器新增至複合控制項
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [ctlClock.cs]，然後按一下 [檢視表設計工具]。
+1. 在**方案總管**中, 以滑鼠右鍵按一下 [ **ctlClock.cs**], 然後按一下 [**視圖設計**工具]。
 
 2. 在 [工具箱] 中展開 [通用控制項] 節點，然後再按兩下 [標籤]。
 
@@ -89,13 +92,13 @@ ms.locfileid: "69950056"
 
 9. 在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。
 
-## <a name="adding-properties-to-the-composite-control"></a>將屬性新增至複合控制項
+## <a name="add-properties-to-the-composite-control"></a>將屬性加入至複合控制項
 
 您的時鐘控制項現在會<xref:System.Windows.Forms.Label>封裝控制項<xref:System.Windows.Forms.Timer>和元件, 每個都有自己的一組固有屬性。 雖然這些控制項的個別屬性無法供控制項的後續使用者存取，但是您可以建立並公開自訂屬性，方法是撰寫適當的程式碼區塊。 在下列程序中，您會將屬性新增至控制項，讓使用者變更背景與文字的色彩。
 
 ### <a name="to-add-a-property-to-your-composite-control"></a>若要將屬性新增至複合控制項
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [ctlClock.cs]，然後按一下 [檢視程式碼]。
+1. 在**方案總管**中, 以滑鼠右鍵按一下 [ **ctlClock.cs**], 然後按一下 [ **View Code**]。
 
      控制項的 [程式碼編輯器] 隨即開啟。
 
@@ -108,7 +111,7 @@ ms.locfileid: "69950056"
 
      這些陳述式會建立私用變數，您將用來儲存您即將建立之屬性的值。
 
-3. 在 步驟 2 的變數宣告底下輸入下列程式碼。
+3. 在步驟2的變數宣告底下, 輸入或貼上下列程式碼。
 
     ```csharp
     // Declares the name and type of the property.
@@ -146,25 +149,25 @@ ms.locfileid: "69950056"
 
 4. 在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。
 
-## <a name="testing-the-control"></a>測試控制項
+## <a name="test-the-control"></a>測試控制項
 
 控制項不是獨立應用程式；它們必須裝載在容器中。 測試控制項的執行階段行為，並且使用 **UserControl 測試容器**執行其屬性。 如需詳細資訊，請參閱[如何：測試 UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)的執行時間行為。
 
 ### <a name="to-test-your-control"></a>若要測試控制項
 
-1. 按下 F5 鍵以建置專案，並且在 **UserControl 測試容器**中執行您的控制項。
+1. 按**F5**以建立專案, 並在**UserControl 測試容器**中執行您的控制項。
 
 2. 在測試容器的屬性方格中，尋找 `ClockBackColor` 屬性，然後選取屬性以顯示色彩調色盤。
 
 3. 按一下它以選擇色彩。
 
-     控制項的背景色彩會變更為您所選取的色彩。
+   控制項的背景色彩會變更為您所選取的色彩。
 
 4. 使用類似的一連串事件，確認 `ClockForeColor` 屬性是否如預期運作。
 
-     在本節和先前的章節中，您已經知道元件和 Windows 控制項如何與程式碼合併並且封裝，以複合控制項的形式提供自訂功能。 您已經了解如何在您的複合控制項中公開屬性，以及如何在完成之後測試您的控制項。 在下一節中，您將學習如何使用 `ctlClock` 做為基底，建構繼承的複合控制項。
+   在本節和先前的章節中，您已經知道元件和 Windows 控制項如何與程式碼合併並且封裝，以複合控制項的形式提供自訂功能。 您已經了解如何在您的複合控制項中公開屬性，以及如何在完成之後測試您的控制項。 在下一節中，您將學習如何使用 `ctlClock` 做為基底，建構繼承的複合控制項。
 
-## <a name="inheriting-from-a-composite-control"></a>繼承自複合控制項
+## <a name="inherit-from-a-composite-control"></a>繼承自複合控制項
 
 在先前章節中，您了解如何將 Windows 控制項、元件和程式碼合併成可重複使用的複合控制項。 複合控制項現在可以做為建置其他控制項的基底。 從基底類別衍生類別的處理序稱為「繼承」。 在本節中，您將建立稱為 `ctlAlarmClock` 的複合控制項。 這個控制項將會從其父控制項 (`ctlClock`) 衍生。 您將學習藉由覆寫父方法並且新增新方法和屬性，來擴充 `ctlClock` 的功能。
 
@@ -172,7 +175,7 @@ ms.locfileid: "69950056"
 
 ### <a name="to-create-the-inherited-control"></a>若要建立繼承的控制項
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [ctlClockLib]，指向 [新增]，然後按一下 [使用者控制項]。
+1. 在**方案總管**中, 以滑鼠右鍵按一下 [ **ctlClockLib**], 指向 [**新增**], 然後按一下 [**使用者控制項**]。
 
      [新增項目] 對話方塊隨即開啟。
 
@@ -184,18 +187,18 @@ ms.locfileid: "69950056"
 
 4. 在 [元件名稱] 底下，按兩下 [ctlClock]。
 
-5. 在 [方案總管] 中，瀏覽目前的專案。
+5. 在**方案總管**中, 流覽目前的專案。
 
     > [!NOTE]
     > 名為 **ctlAlarmClock.cs** 的檔案已新增至目前的專案。
 
-### <a name="adding-the-alarm-properties"></a>新增警示屬性
+### <a name="add-the-alarm-properties"></a>新增警示屬性
 
 屬性會以新增至複合控制項的相同方式，新增至繼承的控制項。 您現在會使用屬性宣告語法將兩個屬性新增至您的控制項︰`AlarmTime`，它將會儲存警示停止之日期和時間的值，以及 `AlarmSet`，它將會指示是否已設定警示。
 
 #### <a name="to-add-properties-to-your-composite-control"></a>若要將屬性新增至複合控制項
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [ctlAlarmClock]，然後按一下 [檢視程式碼]。
+1. 在**方案總管**中, 以滑鼠右鍵按一下  **ctlalarmclock**, 然後按一下  **View Code**。
 
 2. 尋找 `public class` 陳述式。 請注意，您的控制項繼承自`ctlClockLib.ctlClock`。 在左大括號 (`{)` 陳述式底下，輸入下列程式碼。
 
@@ -228,13 +231,13 @@ ms.locfileid: "69950056"
     }
     ```
 
-### <a name="adding-to-the-graphical-interface-of-the-control"></a>新增至控制項的圖形化介面
+### <a name="add-to-the-graphical-interface-of-the-control"></a>將加入至控制項的圖形化介面
 
 繼承的控制項具有視覺化介面，與它所繼承的控制項相同。 它擁有與其父控制項相同的組成控制項，但是無法使用組成控制項的屬性，除非特別公開。 您可以使用新增至任何複合控制項的相同方式，新增至繼承的複合控制項的圖形化介面。 若要繼續新增至警示時鐘的視覺化介面，您要新增標籤控制項，該控制項會在警示響起時閃爍。
 
 #### <a name="to-add-the-label-control"></a>若要新增標籤控制項
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [ctlAlarmClock]，然後按一下 [檢視表設計工具]。
+1. 在**方案總管**中, 以滑鼠右鍵按一下  **ctlalarmclock**, 然後按一下 **視圖設計**工具。
 
      `ctlAlarmClock` 的設計工具隨即在主視窗中開啟。
 
@@ -257,7 +260,7 @@ ms.locfileid: "69950056"
     |**TextAlign**|`MiddleCenter`|
     |**可見**|`false`|
 
-### <a name="adding-the-alarm-functionality"></a>新增警示功能
+### <a name="add-the-alarm-functionality"></a>新增鬧鐘功能
 
 在先前的程序中，您新增屬性和控制項，在您的複合控制項中啟用警示功能。 在此程序中，您將會新增程式碼以比較目前時間與警示時間，如果它們相同，則讓警示閃爍。 藉由覆寫 `ctlClock` 的 `timer1_Tick` 方法，並且將額外程式碼新增至其中，您就可以擴充 `ctlAlarmClock` 的功能，同時保留 `ctlClock` 的所有固有功能。
 
@@ -317,7 +320,7 @@ ms.locfileid: "69950056"
 
 #### <a name="to-implement-the-shutoff-method"></a>若要實作關閉方法
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [ctlAlarmClock.cs]，然後按一下 [檢視表設計工具]。
+1. 在**方案總管**中, 以滑鼠右鍵按一下 [ **ctlAlarmClock.cs**], 然後按一下 [**視圖設計**工具]。
 
      設計工具隨即開啟。
 
@@ -346,21 +349,21 @@ ms.locfileid: "69950056"
 
 5. 在 [檔案] 功能表上按一下 [全部儲存] 以儲存專案。
 
-### <a name="using-the-inherited-control-on-a-form"></a>在表單上使用繼承的控制項
+### <a name="use-the-inherited-control-on-a-form"></a>在表單上使用繼承的控制項
 
-您可以依照測試基類控制項`ctlClock`的相同方式來測試繼承的控制項:按下 F5 鍵以建置專案，並且在 **UserControl 測試容器**中執行您的控制項。 如需詳細資訊，請參閱[如何：測試 UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)的執行時間行為。
+您可以依照測試基類控制項`ctlClock`的相同方式來測試繼承的控制項:按**F5**以建立專案, 並在**UserControl 測試容器**中執行您的控制項。 如需詳細資訊，請參閱[如何：測試 UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)的執行時間行為。
 
 若要使用控制項，您必須將它裝載在表單上。 如同標準複合控制項，繼承的複合控制項無法獨立存在，而且必須裝載在表單或其他容器。 由於 `ctlAlarmClock` 有更深入的功能，需要額外的程式碼來進行測試。 在此程序中，您將撰寫一個簡單的程式來測試 `ctlAlarmClock` 的功能。 您將撰寫程式碼以設定及顯示 `ctlAlarmClock` 的 `AlarmTime` 屬性，然後測試其固有功能。
 
 #### <a name="to-build-and-add-your-control-to-a-test-form"></a>若要建置控制項並且新增至測試表單
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 [ctlClockLib]，然後按一下 [建置]。
+1. 在**方案總管**中, 以滑鼠右鍵按一下 [ **ctlClockLib**], 然後按一下 [**建立**]。
 
-2. 將新的 **Windows 應用程式**專案新增至解決方案，並且將它命名為 `Test`。
+2. 將新的**Windows 應用程式**專案新增至方案, 並將其命名為**Test**。
 
-3. 在 [方案總管] 中，以滑鼠右鍵按一下測試專案的 [參考] 節點。 按一下 [加入參考]以顯示 [加入參考] 對話方塊。 按一下標籤為 [專案] 的索引標籤。 您的 `ctlClockLib` 專案會列在 [專案名稱] 底下。 按兩下專案以將參考新增至測試專案。
+3. 在**方案總管**中, 以滑鼠右鍵按一下測試專案的 [**參考**] 節點。 按一下 [加入參考]以顯示 [加入參考] 對話方塊。 按一下標籤為 [專案] 的索引標籤。 您的 `ctlClockLib` 專案會列在 [專案名稱] 底下。 按兩下專案以將參考新增至測試專案。
 
-4. 在 [方案總管] 中，以滑鼠右鍵按一下 [測試]，然後按一下 [建置]。
+4. 在**方案總管**中, 以滑鼠右鍵按一下 [**測試**], 然後按一下 [**建立**]。
 
 5. 在 [工具箱] 中，展開 [ctlClockLib 元件] 節點。
 
@@ -395,7 +398,7 @@ ms.locfileid: "69950056"
     }
     ```
 
-12. 在 [方案總管] 中，以滑鼠右鍵按一下 [測試]，然後按一下 [設定為啟始專案]。
+12. 在**方案總管**中, 以滑鼠右鍵按一下 [**測試**], 然後按一下 [**設定為啟始專案**]。
 
 13. 按一下 [偵錯] 功能表上的 [開始偵錯]。
 
@@ -409,7 +412,7 @@ ms.locfileid: "69950056"
 
 16. 按一下 `btnAlarmOff` 來關閉警示。 您現在可以重設警示。
 
-     本逐步解說涵蓋了數個重要概念。 您已經了解藉由將控制項和元件合併成複合控制項容器，來建立複合控制項。 您已經了解將屬性新增至您的控制項，以及撰寫程式碼來實作自訂功能。 在最後一節中，您會了解透過繼承擴充指定複合控制項的功能，並且藉由覆寫這些方法來變更主方法的功能。
+本文涵蓋數個重要概念。 您已經了解藉由將控制項和元件合併成複合控制項容器，來建立複合控制項。 您已經了解將屬性新增至您的控制項，以及撰寫程式碼來實作自訂功能。 在最後一節中，您會了解透過繼承擴充指定複合控制項的功能，並且藉由覆寫這些方法來變更主方法的功能。
 
 ## <a name="see-also"></a>另請參閱
 

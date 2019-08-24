@@ -5,19 +5,19 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dbef816a995d9f4909a887f017da29bab6fc3702
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964920"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015644"
 ---
 # <a name="cleartype-overview"></a>ClearType 概觀
 本主題提供在中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]找到的 Microsoft ClearType 技術總覽。  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技術概觀  
- ClearType 是由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]所開發的軟體技術, 可改善現有 lcd (液晶顯示器) 的文字可讀性, 例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。  ClearType 的運作方式是存取 LCD 螢幕每個圖元內的個別垂直色彩 stripe 元素。 在 ClearType 之前, 電腦可以顯示的最小詳細資料層級是單一圖元, 但在 LCD 監視器上執行 ClearType 時, 我們現在可以將文字的功能顯示為寬度圖元的小部分。 額外的解析度可提高文字顯示細節的解析度，即使經過長時間也很容易閱讀。  
+ ClearType 是由 Microsoft 開發的軟體技術, 可改善現有 Lcd (液晶顯示器) 的文字可讀性, 例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。  ClearType 的運作方式是存取 LCD 螢幕每個圖元內的個別垂直色彩 stripe 元素。 在 ClearType 之前, 電腦可以顯示的最小詳細資料層級是單一圖元, 但在 LCD 監視器上執行 ClearType 時, 我們現在可以將文字的功能顯示為寬度圖元的小部分。 額外的解析度可提高文字顯示細節的解析度，即使經過長時間也很容易閱讀。  
   
  中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供的 cleartype 是最新一代的 cleartype, 對 Microsoft Windows 圖形裝置介面 (GDI) 中找到的版本有數項改善。  
   

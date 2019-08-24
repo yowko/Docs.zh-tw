@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964888"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015602"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 登錄設定
 本主題概要說明 WPF 應用程式所使用的 Microsoft ClearType 登錄設定。  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技術概觀  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]將文字呈現到顯示裝置的應用程式會使用 ClearType 功能來提供增強的閱讀體驗。 ClearType 是由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]所開發的軟體技術, 可改善現有 lcd (液晶顯示器) 的文字可讀性, 例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 ClearType 的運作方式是存取 LCD 螢幕每個圖元內的個別垂直色彩 stripe 元素。 如需 ClearType 的詳細資訊, 請參閱[Cleartype 總覽](cleartype-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]將文字呈現到顯示裝置的應用程式會使用 ClearType 功能來提供增強的閱讀體驗。 ClearType 是由 Microsoft 開發的軟體技術, 可改善現有 Lcd (液晶顯示器) 的文字可讀性, 例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 ClearType 的運作方式是存取 LCD 螢幕每個圖元內的個別垂直色彩 stripe 元素。 如需 ClearType 的詳細資訊, 請參閱[Cleartype 總覽](cleartype-overview.md)。  
   
  在各種顯示裝置上觀看時, 以 ClearType 轉譯的文字會明顯不同。 例如, 少數監視器會以藍色、綠色、紅色順序來執行彩色 stripe 元素, 而不是較常見的紅色、綠色、藍色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 順序。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "69964888"
 ## <a name="registry-settings"></a>登錄設定  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]指定用來控制 ClearType 功能的四個登錄設定:  
   
-|設定|說明|  
+|設定|描述|  
 |-------------|-----------------|  
 |ClearType 層級|描述 ClearType 色彩清晰度的層級。|  
 |色差補正層級|說明顯示裝置的像素色彩元件層級。|  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7d69f299b0b7638d6f8052e6aa0e77fac39c8e4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960339"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016105"
 ---
 # <a name="packaging-fonts-with-applications"></a>將字型與應用程式一起封裝
 本主題提供如何使用您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的應用程式封裝字型的總覽。  
   
 > [!NOTE]
-> 與大部分類型的軟體一樣，字型檔是經由授權而非販售的。 控制字型使用方式的授權會因廠商而異, 但一般大部分的授權 (包括涵蓋應用程式和[!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] Windows 所提供字型的授權), 都不允許將字型內嵌在應用程式內, 否則轉散發. 因此，身為開發人員，您的職責是確保對於您內嵌在應用程式中或是以其他方式轉散發的任何字型，您必須有必要的授權權限。  
+> 與大部分類型的軟體一樣，字型檔是經由授權而非販售的。 控制字型使用方式的授權會因廠商而異, 但一般大部分的授權 (包括涵蓋 Microsoft 隨附于應用程式和 Windows 的字型) 都不允許將字型內嵌在應用程式中或以其他方式轉散發。 因此，身為開發人員，您的職責是確保對於您內嵌在應用程式中或是以其他方式轉散發的任何字型，您必須有必要的授權權限。  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>封裝字型簡介  

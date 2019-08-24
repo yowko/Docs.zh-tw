@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933693"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016132"
 ---
 # <a name="opentype-font-features"></a>OpenType 字型功能
 
@@ -22,7 +22,7 @@ ms.locfileid: "69933693"
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 字型格式  
- OpenType 字型格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字型格式的延伸模組, 加入 PostScript 字型資料的支援。 OpenType 字型格式是由[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]和 Adobe Corporation 共同開發。 Opentype 字型和支援 OpenType 字型的作業系統服務, 可讓使用者使用簡單的方式來安裝和使用字型, 無論字型包含[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]外框或 CFF (PostScript) 外框。  
+ OpenType 字型格式是[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字型格式的延伸模組, 加入 PostScript 字型資料的支援。 OpenType 字型格式是由 Microsoft 和 Adobe Corporation 共同開發。 Opentype 字型和支援 OpenType 字型的作業系統服務, 可讓使用者使用簡單的方式來安裝和使用字型, 無論字型包含[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]外框或 CFF (PostScript) 外框。  
   
  OpenType 字型格式解決下列開發人員的挑戰:  
   

@@ -7,78 +7,80 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: 40451aea3026a492864cf94031c0bea196a18ff3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fba10de27f7ba6f4c799d2110acd87394b7dbc95
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930258"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015992"
 ---
 # <a name="control-type-recommendations"></a>控制項類型建議
-.NET Framework 可讓您有能力開發及實作新的控制項。 除了熟悉的使用者控制項，現在您會發現您也可以撰寫自訂控制項來執行它們自己的繪製，而且甚至能夠透過繼承，擴充現有控制項的功能。 決定要建立的控制項類型可能會令人困擾。 本章節強調您可以繼承的各類型控制項之間的差異，並提供關於為您的專案選擇類型的注意事項。  
-  
+
+.NET Framework 可讓您有能力開發及實作新的控制項。 除了熟悉的使用者控制項，現在您會發現您也可以撰寫自訂控制項來執行它們自己的繪製，而且甚至能夠透過繼承，擴充現有控制項的功能。 決定要建立的控制項類型可能會令人困擾。 本章節強調您可以繼承的各類型控制項之間的差異，並提供關於為您的專案選擇類型的注意事項。
+
 > [!NOTE]
-> 如果您想要撰寫 Web Forms 上使用的控制項，請參閱[開發自訂 ASP.NET 伺服器控制項](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。  
-  
-## <a name="inheriting-from-a-windows-forms-control"></a>繼承 Windows Form 控制項  
- 您可以從任何現有的 Windows Form 控制項衍生繼承的控制項。 這種方法可讓您保留 Windows Form 控制項的所有固有功能，然後藉由加入自訂屬性、方法或其他功能，以擴充該功能。 例如，您可以建立從 <xref:System.Windows.Forms.TextBox> 衍生的控制項，它只接受數字，而且會自動將輸入轉換成值。 這類控制項可能會包含在文字方塊中的文字變更呼叫的驗證程式碼，而且可能會有一個額外的屬性 Value。 在一些控制項中，您也可以藉由覆寫基底類別的 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法，將自訂外觀加入至控制項的圖形化介面。  
-  
- 如果有下列情況，便繼承自 Windows Form 控制項：  
-  
-- 大部分的所需功能已經與現有的 Windows Form 控制項相同。  
-  
-- 您不需要自訂的圖形化介面，或是您想要為現有的控制項設計新的圖形化前端。  
-  
-## <a name="inheriting-from-the-usercontrol-class"></a>繼承自 UserControl 類別  
- 使用者控制項是封裝成通用容器的 Windows Form 控制項的集合。 容器保存了與每個 Windows Form 控制項相關聯的所有固有功能，並可讓您選擇性地公開 (expose) 和繫結其屬性。 使用者控制項的一個例子可能是建置用來顯示資料庫中客戶地址資料的控制項。 這個控制項可包括數個文字方塊來顯示每個欄位，以及按鈕控制項來巡覽記錄。 資料繫結屬性可以選擇性地公開，而整個控制項可以封裝，並且在各應用程式之間重複使用。  
-  
- 如果有下列情況，便繼承自 <xref:System.Windows.Forms.UserControl> 類別：  
-  
-- 您想要將數個 Windows Form 控制項的功能結合成一個可重複使用的單位。  
-  
-## <a name="inheriting-from-the-control-class"></a>繼承自 Control 類別  
- 建立控制項的另一個方法是藉由繼承自 <xref:System.Windows.Forms.Control>，實際地從頭建立一個控制項。 <xref:System.Windows.Forms.Control> 類別會提供控制項所需的所有基本功能 (例如事件)，但不提供控制項特有的功能或圖形化介面。 藉由繼承自 <xref:System.Windows.Forms.Control> 類別來建立控制項，比繼承自使用者控制項或現有的 Windows Form 控制項需要更多的思考和投入工作。 作者必須撰寫控制項 <xref:System.Windows.Forms.Control.OnPaint%2A> 事件程式碼，以及任何所需的功能特定程式碼。 不過這允許更多的彈性，且您可以自訂控制項，以符合您的確切需求。 自訂控制項的一個例子是複製類比時鐘外觀和動作的時鐘控制項。 會叫用自訂繪製，讓時鐘指針移動以回應內部計時器元件的 <xref:System.Windows.Forms.Timer.Tick> 事件。  
-  
- 如果有下列情況，便繼承自 <xref:System.Windows.Forms.Control> 類別：  
-  
-- 您想要提供控制項的自訂圖形表示。  
-  
-- 您需要實作無法透過標準控制項使用的自訂功能。  
-  
-- [如何：在 [選擇工具箱專案] 對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
-  
-- [逐步解說：使用 Designerserializationvisibilityattribute 序列化序列化標準類型的集合](serializing-collections-designerserializationvisibilityattribute.md)  
-  
-- [逐步解說：使用視覺效果從 Windows Forms 控制項繼承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
-  
-- [如何：提供控制項的工具箱點陣圖](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
-  
-- [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)  
-  
-- [逐步解說：在設計階段針對自訂 Windows Forms 控制項進行偵錯](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
-  
-- [如何：繼承自控制項類別](how-to-inherit-from-the-control-class.md)  
-  
-- [如何：測試 UserControl 的執行時間行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
-  
-- [如何：在設計階段將控制項對齊表單邊緣](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
-  
-- [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)  
-  
-- [如何：Windows Forms 的作者控制項](how-to-author-controls-for-windows-forms.md)  
-  
-- [如何：撰寫複合控制項](how-to-author-composite-controls.md)  
-  
-- [逐步解說：使用 Visual Basic 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
-  
-- [逐步解說：使用視覺效果撰寫複合控制項C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
-  
-- [逐步解說：從具有 Visual Basic 的 Windows Forms 控制項繼承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
-  
-- [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](creating-a-wf-control-design-time-features.md)  
-  
-- [如何：建立會利用設計階段功能的 Windows Forms 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
-  
+> 如果您想要撰寫 Web Forms 上使用的控制項，請參閱[開發自訂 ASP.NET 伺服器控制項](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。
+
+## <a name="inheriting-from-a-windows-forms-control"></a>繼承 Windows Form 控制項
+
+您可以從任何現有的 Windows Form 控制項衍生繼承的控制項。 這種方法可讓您保留 Windows Form 控制項的所有固有功能，然後藉由加入自訂屬性、方法或其他功能，以擴充該功能。 例如，您可以建立從 <xref:System.Windows.Forms.TextBox> 衍生的控制項，它只接受數字，而且會自動將輸入轉換成值。 這類控制項可能會包含在文字方塊中的文字變更呼叫的驗證程式碼，而且可能會有一個額外的屬性 Value。 在一些控制項中，您也可以藉由覆寫基底類別的 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法，將自訂外觀加入至控制項的圖形化介面。
+
+ 如果有下列情況，便繼承自 Windows Form 控制項：
+
+- 大部分的所需功能已經與現有的 Windows Form 控制項相同。
+
+- 您不需要自訂的圖形化介面，或是您想要為現有的控制項設計新的圖形化前端。
+
+## <a name="inheriting-from-the-usercontrol-class"></a>繼承自 UserControl 類別
+
+使用者控制項是封裝成通用容器的 Windows Form 控制項的集合。 容器保存了與每個 Windows Form 控制項相關聯的所有固有功能，並可讓您選擇性地公開 (expose) 和繫結其屬性。 使用者控制項的一個例子可能是建置用來顯示資料庫中客戶地址資料的控制項。 這個控制項可包括數個文字方塊來顯示每個欄位，以及按鈕控制項來巡覽記錄。 資料繫結屬性可以選擇性地公開，而整個控制項可以封裝，並且在各應用程式之間重複使用。
+
+如果有下列情況，便繼承自 <xref:System.Windows.Forms.UserControl> 類別：
+
+- 您想要將數個 Windows Form 控制項的功能結合成一個可重複使用的單位。
+
+## <a name="inheriting-from-the-control-class"></a>繼承自 Control 類別
+
+建立控制項的另一個方法是藉由繼承自 <xref:System.Windows.Forms.Control>，實際地從頭建立一個控制項。 <xref:System.Windows.Forms.Control> 類別會提供控制項所需的所有基本功能 (例如事件)，但不提供控制項特有的功能或圖形化介面。 藉由繼承自 <xref:System.Windows.Forms.Control> 類別來建立控制項，比繼承自使用者控制項或現有的 Windows Form 控制項需要更多的思考和投入工作。 作者必須撰寫控制項 <xref:System.Windows.Forms.Control.OnPaint%2A> 事件程式碼，以及任何所需的功能特定程式碼。 不過這允許更多的彈性，且您可以自訂控制項，以符合您的確切需求。 自訂控制項的一個例子是複製類比時鐘外觀和動作的時鐘控制項。 會叫用自訂繪製，讓時鐘指針移動以回應內部計時器元件的 <xref:System.Windows.Forms.Timer.Tick> 事件。
+
+如果有下列情況，便繼承自 <xref:System.Windows.Forms.Control> 類別：
+
+- 您想要提供控制項的自訂圖形表示。
+
+- 您需要實作無法透過標準控制項使用的自訂功能。
+
+## <a name="related-articles"></a>相關文章
+
+- [如何：在 [選擇工具箱專案] 對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+
+- [逐步解說：使用 Designerserializationvisibilityattribute 序列化序列化標準類型的集合](serializing-collections-designerserializationvisibilityattribute.md)
+
+- [逐步解說：繼承自 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+
+- [如何：提供控制項的工具箱點陣圖](how-to-provide-a-toolbox-bitmap-for-a-control.md)
+
+- [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
+
+- [逐步解說：在設計階段針對自訂 Windows Forms 控制項進行偵錯](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+
+- [如何：繼承自控制項類別](how-to-inherit-from-the-control-class.md)
+
+- [如何：測試 UserControl 的執行時間行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+
+- [如何：在設計階段將控制項對齊表單邊緣](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+
+- [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
+
+- [如何：Windows Forms 的作者控制項](how-to-author-controls-for-windows-forms.md)
+
+- [如何：撰寫複合控制項](how-to-author-composite-controls.md)
+
+- [逐步解說：撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+
+- [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](creating-a-wf-control-design-time-features.md)
+
+- [如何：建立會利用設計階段功能的 Windows Forms 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+
 ## <a name="see-also"></a>另請參閱
 
 - [如何：開發簡單的 Windows Forms 控制項](how-to-develop-a-simple-windows-forms-control.md)

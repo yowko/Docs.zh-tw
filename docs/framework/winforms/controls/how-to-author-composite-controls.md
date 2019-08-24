@@ -7,23 +7,23 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7b0ee8efa62175e2ced2a810ca6dd76e8adc103b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039887"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015927"
 ---
 # <a name="how-to-author-composite-controls"></a>作法：撰寫複合控制項
 
 複合控制項的運用方式有許多種。 您可以將它們撰寫成 Windows 桌面應用程式專案的一部分，且只在專案中的表單上使用它們。 或者，您可以在 Windows 控制項程式庫專案中撰寫它們、將專案編譯成組件，然後在其他專案中使用控制項。 您甚至可以從它們繼承, 並使用視覺繼承來快速地自訂它們以進行特殊用途。
 
-> [!NOTE]
-> 如果您想要撰寫複合控制項以在 Web Forms 上使用，請參閱[開發自訂 ASP.NET 伺服器控制項](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。
-
 ## <a name="to-author-a-composite-control"></a>撰寫複合控制項
 
-1. 在 Visual Studio 中, 建立名`DemoControlHost`為的新**Windows 應用程式**專案。
+1. 在 Visual Studio 中, 建立新的**Windows 應用程式**專案, 並將其命名為**DemoControlHost**。
 
 2. 在 [專案] 功能表上，按一下 [加入使用者控制項]。
 
@@ -79,10 +79,8 @@ ms.locfileid: "69039887"
 
 ## <a name="see-also"></a>另請參閱
 
-- [逐步解說：使用 Visual Basic 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [逐步解說：使用視覺效果撰寫複合控制項C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [逐步解說：從具有 Visual Basic 的 Windows Forms 控制項繼承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [逐步解說：使用視覺效果從 Windows Forms 控制項繼承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [逐步解說：撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [逐步解說：繼承自 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [控制項類型建議](control-type-recommendations.md)
 - [如何：Windows Forms 的作者控制項](how-to-author-controls-for-windows-forms.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

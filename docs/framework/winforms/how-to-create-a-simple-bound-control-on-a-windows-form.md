@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df87f00e6e03de67c3fb1adc28472c96f4a47ef4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039512"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015637"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>作法：在 Windows Form 上建立簡單繫結控制項
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>HOW TO：在 Windows Form 上建立簡單繫結控制項
 
 使用*簡單*系結, 您可以在控制項中顯示單一資料元素, 例如資料集資料表中的資料行值。 您可以簡單地將控制項的任何屬性系結至資料值。
 
-### <a name="to-simple-bind-a-control"></a>簡單-系結控制項
+## <a name="to-simple-bind-a-control"></a>簡單-系結控制項
 
 1. 連接至資料來源。 如需詳細資訊, 請參閱[連接到資料來源](../data/adonet/connecting-to-a-data-source.md)。
 
-2. 在表單中選取控制項, 並顯示 [**屬性**] 視窗。
+2. 在 Visual Studio 中, 選取表單上的控制項, 並顯示 [**屬性**] 視窗。
 
 3. 展開 [ **(** 系結)] 屬性。
 
