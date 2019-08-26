@@ -2,12 +2,12 @@
 title: 作法：建立包含命名空間的文件 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 9b9e81a131d4e17ce2d87dd3f511ed66e370d884
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709998"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593891"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>作法：建立包含命名空間的文件 (C#) (LINQ to XML)
 本主題顯示如何利用命名空間建立文件。  
@@ -123,7 +123,7 @@ Console.WriteLine(root);
   
  這個方法會有效能隱含作用。 每次您將包含展開名稱的字串傳遞到 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 時，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 就必須剖析名稱、尋找不可部分完成的命名空間，然後尋找不可部分完成的名稱。 這個程序會使用 CPU 時間。 如果效能對您很重要，您可能會想要明確宣告並使用 <xref:System.Xml.Linq.XNamespace> 物件。  
   
- 如果效能是很重要的問題，請參閱[預先同質化 XName 物件 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) 以取得詳細資訊。  
+ 如果效能是很重要的問題，請參閱[預先同質化 XName 物件 (LINQ to XML) (C#)](./pre-atomization-of-xname-objects-linq-to-xml.md) 以取得詳細資訊。  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  

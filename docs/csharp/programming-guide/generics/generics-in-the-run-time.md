@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: c739ae9b9804ffcb27d6bdc969bf7b5c0fe90512
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: a627ac51399b67aeb7da8c3d98a4530248a84703
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423333"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659740"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>執行階段中的泛型 (C# 程式設計手冊)
 當泛型型別或方法編譯到 Microsoft intermediate language (MSIL) 時，會包含可將其識別為具有型別參數的中繼資料。 泛型型別 MSIL 的使用方法，因提供的型別參數為實值型別或參考型別而異。  
@@ -50,6 +50,6 @@ ms.locfileid: "66423333"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [泛型簡介](../../../csharp/programming-guide/generics/index.md)
-- [泛型](~/docs/standard/generics/index.md)
+- [C# 程式設計指南](../index.md)
+- [泛型簡介](./index.md)
+- [泛型](../../../standard/generics/index.md)

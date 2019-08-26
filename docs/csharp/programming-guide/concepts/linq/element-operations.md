@@ -2,12 +2,12 @@
 title: 項目作業 (C#)
 ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: ecffc140c3730043fa10099599ed64f0a28365ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b32066d13e700d95e4d2eef29e24e8b87690037d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493764"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594582"
 ---
 # <a name="element-operations-c"></a>項目作業 (C#)
 
@@ -31,5 +31,5 @@ ms.locfileid: "54493764"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
-- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [如何：查詢樹狀目錄中的最大檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
+- [如何：查詢樹狀目錄中的最大檔案 (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

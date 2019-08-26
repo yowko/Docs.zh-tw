@@ -2,12 +2,12 @@
 title: 作法：使用群組建立階層 (C#)
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 685c8ad1360ba2959dc81632ae084b935bd37c47
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7d9a58e5b36d6096c156f458c8ba700e04fd8eca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485850"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593847"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>作法：使用群組建立階層 (C#)
 此範例顯示如何群組資料，然後根據該群組產生 XML。  
@@ -15,7 +15,7 @@ ms.locfileid: "66485850"
 ## <a name="example"></a>範例  
  此範例會先按照類別群組資料，然後產生 XML 階層會反映群組的新 XML 檔案。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：數值資料 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：數值資料 (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)。  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：為 Visual Studio 命令列設定環境變數
+title: 作法：為 Visual Studio 命令列設定環境變數
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 9eea7f76d386816aad060e9b99cea6b906a09ab9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9b26f6b80488ad4043054cd23f0f351773e8d6d1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612117"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602863"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>HOW TO：為 Visual Studio 命令列設定環境變數
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>作法：為 Visual Studio 命令列設定環境變數
 
 VsDevCmd.bat 檔案可設定適當的環境變數，以啟用命令列組建。
 
@@ -33,7 +33,7 @@ VsDevCmd.bat 檔案可設定適當的環境變數，以啟用命令列組建。
 
 ### <a name="to-run-vsdevcmdbat"></a>執行 VsDevCmd.BAT
 
-1. 從 [開始] 功能表中，開啟 [適用於 VS 2017 的開發人員命令提示字元]。  位置在 **Visual Studio 2017** 資料夾中。
+1. 從 [開始]  功能表中，開啟 [適用於 VS 2017 的開發人員命令提示字元]  。  位置在 **Visual Studio 2017** 資料夾中。
 
 2. 根據您的安裝變更到 \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 或是 \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 子目錄。  (目前的*版本*為 *2017*。 *供應項目*為 *Enterprise*、*Professional* 或 *Community* 中的其中一個。)
 
@@ -52,4 +52,4 @@ VsDevCmd.bat -help
 
 ## <a name="see-also"></a>另請參閱
 
-- [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [使用 csc.exe 建置命令列](./command-line-building-with-csc-exe.md)

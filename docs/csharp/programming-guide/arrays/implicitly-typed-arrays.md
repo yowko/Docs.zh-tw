@@ -7,16 +7,16 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 7aa820d87ec36f1963183b7e4e2e46de998a08c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 36ca18adc392643107b43a947656846f3b94a2eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487500"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597351"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>隱含類型陣列 (C# 程式設計手冊)
 
-您可以建立隱含型別陣列，其中陣列執行個體的類型是從陣列初始設定式中所指定的項目推斷而來。 任何隱含型別變數的規則也適用於隱含型別陣列。 如需詳細資訊，請參閱[隱含類型區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。
+您可以建立隱含型別陣列，其中陣列執行個體的類型是從陣列初始設定式中所指定的項目推斷而來。 任何隱含型別變數的規則也適用於隱含型別陣列。 如需詳細資訊，請參閱[隱含類型區域變數](../classes-and-structs/implicitly-typed-local-variables.md)。
 
 隱含型別的陣列以及匿名型別與物件和集合初始設定式通常用於查詢運算式中。
 
@@ -34,10 +34,10 @@ ms.locfileid: "57487500"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [隱含型別區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
-- [陣列](../../../csharp/programming-guide/arrays/index.md)
-- [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [var](../../../csharp/language-reference/keywords/var.md)
-- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# 程式設計指南](../index.md)
+- [隱含型別區域變數](../classes-and-structs/implicitly-typed-local-variables.md)
+- [陣列](./index.md)
+- [匿名類型](../classes-and-structs/anonymous-types.md)
+- [物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)
+- [var](../../language-reference/keywords/var.md)
+- [LINQ 查詢運算式](../linq-query-expressions/index.md)

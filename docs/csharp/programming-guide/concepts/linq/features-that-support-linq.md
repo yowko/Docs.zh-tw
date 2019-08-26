@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722545"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594410"
 ---
 # <a name="c-features-that-support-linq"></a>支援 LINQ 的 C# 功能
 
@@ -26,11 +26,11 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-如需詳細資訊，請參閱 [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)。
+如需詳細資訊，請參閱 [LINQ 查詢運算式](../../linq-query-expressions/index.md)。
 
 ## <a name="implicitly-typed-variables-var"></a>隱含型別變數 (var)
 
-除了在宣告和初始化變數時明確指定類型，您還可以使用 [var](../../../../csharp/language-reference/keywords/var.md) 修飾詞，指示編譯器推斷並指派類型，如下所示：
+除了在宣告和初始化變數時明確指定類型，您還可以使用 [var](../../../language-reference/keywords/var.md) 修飾詞，指示編譯器推斷並指派類型，如下所示：
 
 ```csharp
 var number = 5;
@@ -42,7 +42,7 @@ var query = from str in stringArray
 
 宣告為 `var` 的變數和明確指定類型的變數一樣具有強型別。 `var` 可用來建立匿名型別，但僅可用於區域變數。 陣列也可以使用隱含型別進行宣告。
 
-如需詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。
+如需詳細資訊，請參閱[隱含類型區域變數](../../classes-and-structs/implicitly-typed-local-variables.md)。
 
 ## <a name="object-and-collection-initializers"></a>物件和集合初始設定式
 
@@ -68,9 +68,9 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 
 如需詳細資訊，請參閱:
 
-- [物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [物件和集合初始設定式](../../classes-and-structs/object-and-collection-initializers.md)
 
-- [標準查詢運算子的查詢運算式語法](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [標準查詢運算子的查詢運算式語法](./query-expression-syntax-for-standard-query-operators.md)
 
 ## <a name="anonymous-types"></a>匿名類型
 
@@ -80,13 +80,13 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-如需詳細資訊，請參閱[匿名型別](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。
+如需詳細資訊，請參閱[匿名型別](../../classes-and-structs/anonymous-types.md)。
 
 ## <a name="extension-methods"></a>擴充方法
 
 擴充方法是一種可以與類型相關聯的靜態方法，因此可以像呼叫類型上的執行個體方法一樣呼叫它。 這項功能實際上可讓您「新增」方法至現有的類型，而不需要實際修改這些類型。 標準查詢運算子是一組擴充方法，可為實作 <xref:System.Collections.Generic.IEnumerable%601> 的任何類型提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。
 
-如需詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。
+如需詳細資訊，請參閱[擴充方法](../../classes-and-structs/extension-methods.md)。
 
 ## <a name="lambda-expressions"></a>Lambda 運算式
 
@@ -94,12 +94,12 @@ Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數
 
 如需詳細資訊，請參閱:
 
-- [匿名函式](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+- [匿名函式](../../statements-expressions-operators/anonymous-functions.md)
 
-- [Lambda 運算式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Lambda 運算式](../../statements-expressions-operators/lambda-expressions.md)
 
-- [運算式樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [運算式樹狀結構 (C#)](../expression-trees/index.md)
 
 ## <a name="see-also"></a>另請參閱
 
-- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language-Integrated Query (LINQ) (C#)](./index.md)

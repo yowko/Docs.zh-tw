@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 1ba179c23d9b0e526cdc0dd436ca545377a0db81
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398420"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596382"
 ---
 # <a name="objects-c-programming-guide"></a>物件 (C# 程式設計手冊)
 類別或結構定義就像是指定型別可以做什麼的藍圖。 物件基本上是根據藍圖配置和設定的記憶體區塊。 程式可建立許多同類別的物件。 物件也稱為執行個體，可儲存在具名變數或陣列或集合中。 用戶端程式碼是使用這些變數呼叫方法，並存取物件公用屬性的程式碼。 在 C# 之類的物件導向語言中，一般程式包含多個動態互動的物件。  
   
 > [!NOTE]
-> 靜態型別的行為會和此處描述的不同。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。
+> 靜態型別的行為會和此處描述的不同。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](./static-classes-and-static-class-members.md)。
   
 ## <a name="struct-instances-vs-class-instances"></a>結構執行個體與類別執行個體  
  因為類別是參考型別，所以類別物件的變數會將參考保留在 Managed 堆積上的物件位址中。 如果同型別的第二個物件指派給第一個物件，則這兩個變數都會參考位於該位址的物件。 本主題稍後會詳細討論這一點。  
   
- 使用 [new 運算子](../../../csharp/language-reference/operators/new-operator.md) 建立類別的執行個體。 在下例中，`Person` 是型別，而 `person1` 和 `person 2` 則是該型別的執行個體或物件。  
+ 使用 [new 運算子](../../language-reference/operators/new-operator.md) 建立類別的執行個體。 在下例中，`Person` 是型別，而 `person1` 和 `person 2` 則是該型別的執行個體或物件。  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -46,27 +46,27 @@ ms.locfileid: "67398420"
   
  由於 `Equals` 的 <xref:System.ValueType?displayProperty=nameWithType> 實作必須能夠判斷結構中有哪些欄位，因此會使用反映。 建立您自己的結構時，請覆寫 `Equals` 方法以提供型別專屬的有效相等演算法。  
   
-- 若要判斷兩個類別執行個體中的欄位值是否相等，您或許可以使用 <xref:System.Object.Equals%2A> 方法或 [== 運算子](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-)。 但請只有當類別覆寫或多載它們，以提供「相等」表示的型別物件的自訂定義時，才使用它們。 此類別可能也會實作 <xref:System.IEquatable%601> 介面或 <xref:System.Collections.Generic.IEqualityComparer%601> 介面。 這兩個介面都會提供可用以測試值相等的方法。 若要設計自己的類別以覆寫 `Equals`，請務必遵循[如何：定義類型的實值相等](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)和 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 所述的指導方針。  
+- 若要判斷兩個類別執行個體中的欄位值是否相等，您或許可以使用 <xref:System.Object.Equals%2A> 方法或 [== 運算子](../../language-reference/operators/equality-operators.md#equality-operator-)。 但請只有當類別覆寫或多載它們，以提供「相等」表示的型別物件的自訂定義時，才使用它們。 此類別可能也會實作 <xref:System.IEquatable%601> 介面或 <xref:System.Collections.Generic.IEqualityComparer%601> 介面。 這兩個介面都會提供可用以測試值相等的方法。 若要設計自己的類別以覆寫 `Equals`，請務必遵循[如何：定義類型的實值相等](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md)和 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 所述的指導方針。  
   
 ## <a name="related-sections"></a>相關章節  
  如需詳細資訊：  
   
-- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [類別](./classes.md)  
   
-- [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [結構](./structs.md)  
   
-- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [建構函式](./constructors.md)  
   
-- [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [完成項](./destructors.md)  
   
-- [事件](../../../csharp/programming-guide/events/index.md)  
+- [事件](../events/index.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [object](../../../csharp/language-reference/keywords/object.md)
-- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [new 運算子](../../../csharp/language-reference/operators/new-operator.md)
+- [C# 程式設計指南](../index.md)
+- [object](../../language-reference/keywords/object.md)
+- [繼承](./inheritance.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [new 運算子](../../language-reference/operators/new-operator.md)
 - [一般類型系統](../../../standard/base-types/common-type-system.md)

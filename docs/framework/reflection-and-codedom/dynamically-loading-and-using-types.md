@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469670"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915468"
 ---
 # <a name="dynamically-loading-and-using-types"></a>動態載入和使用類型
 反映會提供語言編譯器所使用的基礎結構，以實作隱含晚期繫結。 繫結是尋找對應至唯一指定的類型宣告 (也就是實作) 的程序。 當此程序發生在執行階段，而不是在編譯時期時，它稱為晚期繫結。 Visual Basic 可讓您在程式碼內使用隱含晚期繫結；Visual Basic 編譯器會呼叫 Helper 方法，它會使用反映來取得物件類型。 傳遞至 helper 方法的引數會導致在執行階段叫用適當的方法。 這些引數是在其上叫用方法的執行個體 (物件)、被叫用方法的名稱 (字串)，以及傳遞給被叫用方法的引數 (物件陣列)。  
@@ -44,7 +44,7 @@ End Module
 ## <a name="custom-binding"></a>自訂繫結  
  除了編譯器隱含地用來進行晚期繫結，反映也可明確地用於程式碼，來完成晚期繫結。  
   
- [Common Language Runtime](../../../docs/standard/clr.md) 支援多種程式設計語言，而這些語言的繫結規則不同。 在早期繫結案例中，程式碼產生器可以完全控制這個繫結。 不過，在透過反映的晚期繫結中，繫結必須受自訂繫結控制。 <xref:System.Reflection.Binder> 類別會提供成員選取和叫用的自訂控制。  
+ [Common Language Runtime](../../standard/clr.md) 支援多種程式設計語言，而這些語言的繫結規則不同。 在早期繫結案例中，程式碼產生器可以完全控制這個繫結。 不過，在透過反映的晚期繫結中，繫結必須受自訂繫結控制。 <xref:System.Reflection.Binder> 類別會提供成員選取和叫用的自訂控制。  
   
  您可以使用自訂繫結，在執行階段載入組件、取得該組件中的類型相關資訊、指定您要的類型，然後對該類型叫用方法或存取欄位或屬性。 這個技術非常有用，如果您在編譯時期不知道物件的類型，例如當物件類型取決於使用者輸入之時。  
   
@@ -67,7 +67,7 @@ End Module
   
  **BindToMethod** 會傳回要叫用的 <xref:System.Reflection.MethodBase>，如果不可能進行這種叫用則傳回 null 參考 (在 Visual Basic 中為 **Nothing**)。 **MethodBase** 傳回值不一定要是 *match* 參數中所包含的其中一者，雖然這是常見的情況。  
   
- 有 ByRef 引數存在時，呼叫端可能會想要取回它們。 因此，**Binder** 允許用戶端將引數的陣列對應回其原始形式，如果 **BindToMethod** 已操作引數陣列的話。 若要這樣做，必須向呼叫端保證，引數的順序不變。 依名稱傳遞引數時，**Binder** 會重新排列引數陣列，那也是呼叫端看到的情況。 如需詳細資訊，請參閱<xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>。  
+ 有 ByRef 引數存在時，呼叫端可能會想要取回它們。 因此，**Binder** 允許用戶端將引數的陣列對應回其原始形式，如果 **BindToMethod** 已操作引數陣列的話。 若要這樣做，必須向呼叫端保證，引數的順序不變。 依名稱傳遞引數時，**Binder** 會重新排列引數陣列，那也是呼叫端看到的情況。 如需詳細資訊，請參閱 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>。  
   
  可用成員的集合是在類型或任何基底類型中定義的成員。 如果指定 <xref:System.Reflection.BindingFlags>，則會在集合中傳回任何存取範圍的成員。 如果未指定 **BindingFlags.NonPublic**，繫結器必須強制執行存取範圍規則。 指定 **Public** 或 **NonPublic** 繫結旗標時，您也必須指定 **Instance** 或 **Static** 繫結旗標，否則不會傳回任何成員。  
   
@@ -79,7 +79,7 @@ End Module
   
  程式碼範例的案例 3 中，類型 **String** 的實際引數以及值 "5.5" 會傳遞至具有類型 **Double** 的型式引數的方法。 叫用要成功，字串值 "5.5" 必須轉換為雙精度浮點數值。 **ChangeType** 會執行這項轉換。  
   
- **ChangeType** 只能執行不失真或[擴展強制型轉](../../../docs/standard/base-types/type-conversion.md)，如下表所示。  
+ **ChangeType** 只能執行不失真或[擴展強制型轉](../../standard/base-types/type-conversion.md)，如下表所示。  
   
 |來源類型|目標類型|  
 |-----------------|-----------------|  
@@ -104,4 +104,4 @@ End Module
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [.NET Framework 中的型別轉換](../../../docs/standard/base-types/type-conversion.md)
+- [.NET Framework 中的型別轉換](../../standard/base-types/type-conversion.md)

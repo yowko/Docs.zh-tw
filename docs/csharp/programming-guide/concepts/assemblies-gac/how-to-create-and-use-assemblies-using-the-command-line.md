@@ -2,12 +2,12 @@
 title: 作法：使用命令列建立和使用組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0a8db22a05d834d15f6e6b7f049f59f86bc1fe1d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586031"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595974"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>作法：使用命令列建立和使用組件 (C#)
 組件又稱為動態連結程式庫 (DLL)，會在執行階段連結到您的程式。 為了示範如何建立和使用 DLL，請考慮下列案例：  
@@ -105,6 +105,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../index.md)
 - [.NET 中的組件](../../../../standard/assembly/index.md)
 - [建立類別以包裝 DLL 函式](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567061"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933658"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL 組譯工具)
 
-IL Assembler 可從中繼語言 (IL) 中產生可攜式執行檔 (PE) (如需 IL 的詳細資訊，請參閱 [Managed 執行程序](../../../docs/standard/managed-execution-process.md))。您可以執行產生的可執行檔 (包含 IL 和所需的中繼資料)，來判斷 IL 是否如預期般地執行。
+IL Assembler 可從中繼語言 (IL) 中產生可攜式執行檔 (PE) (如需 IL 的詳細資訊，請參閱 [Managed 執行程序](../../standard/managed-execution-process.md))。您可以執行產生的可執行檔 (包含 IL 和所需的中繼資料)，來判斷 IL 是否如預期般地執行。
 
 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
@@ -231,5 +231,5 @@ public class Hello
 
 - [工具](../../../docs/framework/tools/index.md)
 - [*Ildasm.exe* (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
-- [Managed 執行程序](../../../docs/standard/managed-execution-process.md)
+- [Managed 執行程序](../../standard/managed-execution-process.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

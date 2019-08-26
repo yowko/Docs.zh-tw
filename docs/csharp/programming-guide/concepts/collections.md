@@ -2,18 +2,18 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481102"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595290"
 ---
 # <a name="collections-c"></a>集合 (C#)
 
 在許多應用程式中，您想要建立和管理相關物件的群組。 有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。
 
-陣列是最適用於建立和處理固定數目的強類型物件。 如需陣列的資訊，請參閱[陣列](../../../csharp/programming-guide/arrays/index.md)。
+陣列是最適用於建立和處理固定數目的強類型物件。 如需陣列的資訊，請參閱[陣列](../arrays/index.md)。
 
 集合會提供較具彈性的方式來使用物件群組。 與陣列不同的是，您使用的物件群組可依程式變更的需要來動態增減。 對於某些集合，您可以將鍵值指派給您放入集合的任何物件，讓您可以藉由使用鍵值快速擷取物件。
 
@@ -22,7 +22,7 @@ ms.locfileid: "59481102"
 如果集合包含只有一個資料類型的項目，則可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間內的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。 當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。
 
 > [!NOTE]
-> 在本主題的範例中，請包括 `System.Collections.Generic` 和 `System.Linq` 命名空間的 [using](../../../csharp/language-reference/keywords/using-directive.md) 指示詞。
+> 在本主題的範例中，請包括 `System.Collections.Generic` 和 `System.Linq` 命名空間的 [using](../../language-reference/keywords/using-directive.md) 指示詞。
 
  **本主題內容**
 
@@ -36,11 +36,11 @@ ms.locfileid: "59481102"
 
   - [System.Collections 類別](#BKMK_Collections)
 
-- [實作索引鍵/值組集合。](#BKMK_KeyValuePairs)
+- [實作索引鍵/值組集合](#BKMK_KeyValuePairs)
 
 - [使用 LINQ 存取集合](#BKMK_LINQ)
 
-- [為集合排序](#BKMK_Sorting)
+- [排序集合](#BKMK_Sorting)
 
 - [定義自訂集合](#BKMK_CustomCollection)
 
@@ -52,7 +52,7 @@ ms.locfileid: "59481102"
 
 本節中的範例使用泛型 <xref:System.Collections.Generic.List%601> 類別，能夠讓您使用強型別物件清單。
 
-以下範例會建立字串清單，並使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式逐一查看字串。
+以下範例會建立字串清單，並使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式逐一查看字串。
 
 ```csharp
 // Create a list of strings.
@@ -70,7 +70,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-如果預先知道集合的內容，即可使用「集合初始設定式」來初始化集合。 如需詳細資訊，請參閱[物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。
+如果預先知道集合的內容，即可使用「集合初始設定式」  來初始化集合。 如需詳細資訊，請參閱[物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)。
 
 下列範例與前一個範例相同，但有一點除外，就是集合初始設定式是用來將項目加入集合中。
 
@@ -87,7 +87,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-您可以使用 [for](../../../csharp/language-reference/keywords/for.md) 陳述式來逐一查看集合，而不是使用 `foreach` 陳述式。 您可以藉由依索引位置存取集合項目來完成這項作業。 項目的索引以 0 開始，並以項目計數減 1 結束。
+您可以使用 [for](../../language-reference/keywords/for.md) 陳述式來逐一查看集合，而不是使用 `foreach` 陳述式。 您可以藉由依索引位置存取集合項目來完成這項作業。 項目的索引以 0 開始，並以項目計數減 1 結束。
 
 下列範例會使用 `for` 來逐一查看集合的項目，而不是使用 `foreach`。
 
@@ -122,7 +122,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-下列範例會移除泛型清單中的項目。 使用以遞減順序反覆運算的 [for](../../../csharp/language-reference/keywords/for.md) 陳述式，而不是 `foreach` 陳述式。 這是因為 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法導致在已移除之項目後面的項目具有較低的索引值。
+下列範例會移除泛型清單中的項目。 使用以遞減順序反覆運算的 [for](../../language-reference/keywords/for.md) 陳述式，而不是 `foreach` 陳述式。 這是因為 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法導致在已移除之項目後面的項目具有較低的索引值。
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>使用 LINQ 存取集合
 
-LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。 LINQ 查詢提供篩選、排序和分組功能。 如需詳細資訊，請參閱[開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)。
+LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。 LINQ 查詢提供篩選、排序和分組功能。 如需詳細資訊，請參閱[開始使用 C# 中的 LINQ](./linq/getting-started-with-linq.md)。
 
 下列範例會對泛型 `List` 執行 LINQ 查詢。 LINQ 查詢會傳回包含結果的不同集合。
 
@@ -563,13 +563,13 @@ public class Color
 
 ## <a name="iterators"></a>迭代器
 
-「迭代器」是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 迭代器會使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式，一次一個地傳回集合中的每個項目。
+「迭代器」  是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式，一次一個地傳回集合中的每個項目。
 
-您會使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式來呼叫迭代器。 `foreach` 迴圈的每個反覆項目都會呼叫迭代器。 在迭代器中到達 `yield return` 陳述式時，會傳回運算式，並保留程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
+您會使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式來呼叫迭代器。 `foreach` 迴圈的每個反覆項目都會呼叫迭代器。 在迭代器中到達 `yield return` 陳述式時，會傳回運算式，並保留程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
 
-如需詳細資訊，請參閱[迭代器 (C#)](../../../csharp/programming-guide/concepts/iterators.md)。
+如需詳細資訊，請參閱[迭代器 (C#)](./iterators.md)。
 
-下列範例使用了 iterator 方法。 Iterator 方法具有 [for](../../../csharp/language-reference/keywords/for.md) 迴圈內的 `yield return` 陳述式。 在 `ListEvenNumbers` 方法中，`foreach` 陳述式主體的每個反覆項目都會建立對 Iterator 方法的呼叫，這個方法將繼續執行下一個 `yield return` 陳述式。
+下列範例使用了 iterator 方法。 Iterator 方法具有 [for](../../language-reference/keywords/for.md) 迴圈內的 `yield return` 陳述式。 在 `ListEvenNumbers` 方法中，`foreach` 陳述式主體的每個反覆項目都會建立對 Iterator 方法的呼叫，這個方法將繼續執行下一個 `yield return` 陳述式。
 
 ```csharp
 private static void ListEvenNumbers()
@@ -598,10 +598,10 @@ private static IEnumerable<int> EvenSequence(
 
 ## <a name="see-also"></a>另請參閱
 
-- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [程式設計概念 (C#)](../../../csharp/programming-guide/concepts/index.md)
-- [Long](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)
+- [程式設計概念 (C#)](./index.md)
+- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (C#)](./linq/linq-to-objects.md)
 - [平行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [集合和資料結構](../../../standard/collections/index.md)
 - [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)

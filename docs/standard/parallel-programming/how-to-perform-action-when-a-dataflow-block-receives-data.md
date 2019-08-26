@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f79b244f35bfe006b1f83f2689fe5fafcca4e6fd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 54eb9723f44924919ca1b4631e35e1e4da4af2af
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592038"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666349"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>作法：在資料流程區塊收到資料時執行動作
-「執行資料流程區塊」(Execution Dataflow Block) 類型會在收到資料時呼叫使用者提供的委派。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 類別都是執行資料流程區塊類型。 當您將工作函式提供給執行資料流程區塊時，可以使用 `delegate` 關鍵字 (在 Visual Basic 中為 `Sub`)、<xref:System.Action%601>、<xref:System.Func%602> 或 Lambda 運算式。 本文件將說明如何使用 <xref:System.Func%602> 和 Lambda 運算式在執行區塊中執行動作。  
+「執行資料流程區塊」(Execution Dataflow Block)  類型會在收到資料時呼叫使用者提供的委派。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 類別都是執行資料流程區塊類型。 當您將工作函式提供給執行資料流程區塊時，可以使用 `delegate` 關鍵字 (在 Visual Basic 中為 `Sub`)、<xref:System.Action%601>、<xref:System.Func%602> 或 Lambda 運算式。 本文件將說明如何使用 <xref:System.Func%602> 和 Lambda 運算式在執行區塊中執行動作。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "65592038"
  [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)文件的＜委派類型摘要＞一節將摘要說明您可提供給 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件的委派類型。 表中也會指出委派類型是以同步或非同步方式運作。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
- 這個範例會將 <xref:System.Func%602> 類型的委派提供給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件，以同步方式執行資料流程區塊的工作。 若要讓資料流程區塊以非同步方式執行，請將 <xref:System.Func%601> 類型的委派提供給資料流程區塊。 當資料流程區塊以非同步方式執行時，資料流程區塊的工作會在傳回的 <xref:System.Threading.Tasks.Task%601> 物件完成後才完成。 下列範例會修改 `CountBytes` 方法並使用 [async](~/docs/csharp/language-reference/keywords/async.md) 和 [await](~/docs/csharp/language-reference/keywords/await.md) 運算子 (在 Visual Basic 中為 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 和 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md))，以非同步方式計算所提供檔案中零位元組的總數。 <xref:System.IO.FileStream.ReadAsync%2A> 方法會以非同步方式執行讀取作業。  
+ 這個範例會將 <xref:System.Func%602> 類型的委派提供給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件，以同步方式執行資料流程區塊的工作。 若要讓資料流程區塊以非同步方式執行，請將 <xref:System.Func%601> 類型的委派提供給資料流程區塊。 當資料流程區塊以非同步方式執行時，資料流程區塊的工作會在傳回的 <xref:System.Threading.Tasks.Task%601> 物件完成後才完成。 下列範例會修改 `CountBytes` 方法並使用 [async](../../csharp/language-reference/keywords/async.md) 和 [await](../../csharp/language-reference/keywords/await.md) 運算子 (在 Visual Basic 中為 [Async](../../visual-basic/language-reference/modifiers/async.md) 和 [Await](../../visual-basic/language-reference/operators/await-operator.md))，以非同步方式計算所提供檔案中零位元組的總數。 <xref:System.IO.FileStream.ReadAsync%2A> 方法會以非同步方式執行讀取作業。  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  

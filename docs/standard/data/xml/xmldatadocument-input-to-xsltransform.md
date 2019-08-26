@@ -5,16 +5,16 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 308725ecc139d3c95ddff6bdf2d75746750673ce
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: a5c2fb203a1a6975d2b30e47528b15a9005a2583
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170845"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916014"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XslTransform 的 XmlDataDocument 輸入
 > [!NOTE]
->  在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
+> 在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
   
  Microsoft .NET Framework 實作 XML 文件物件模型 (DOM)，以提供 XML 文件中資料的存取權，以及其他可用來在 XML 文件中讀取、寫入和巡覽的類別。 <xref:System.Xml.XmlDataDocument> 位於 <xref:System.Xml> 命名空間中，可透過與 <xref:System.Data.DataSet> 中之關聯式資料的同步處理，而提供資料的關聯式存取權。 您可以透過 <xref:System.Data.DataSet> 的關聯式表示法同時檢視及管理結構化 XML，或透過 <xref:System.Xml.XmlDataDocument> 的 DOM 表示法來管理半結構化的 XML。 <xref:System.Xml.XmlDataDocument> 因此能夠跨越 XML 與關聯式領域的界限。  
   

@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: af39ba6e20fb1a7c9e1a356ef5015afd885dbbca
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4a3342e73fef3effd54f72e68283eb6085eef5b5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241164"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608442"
 ---
 # <a name="this-c-reference"></a>this (C# 參考)
 
 `this` 關鍵字指的是類別的目前執行個體，也用作擴充方法第一個參數的修飾詞。
 
 > [!NOTE]
-> 本文討論如何搭配使用 `this` 與類別執行個體。 如需其在擴充方法中之用法的詳細資訊，請參閱[擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。
+> 本文討論如何搭配使用 `this` 與類別執行個體。 如需其在擴充方法中之用法的詳細資訊，請參閱[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)。
 
 下列是 `this` 的常見用法：
 

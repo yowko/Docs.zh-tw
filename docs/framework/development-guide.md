@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: efbb99027004221bff1985bba8372c4415c02d4f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950307"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 本節說明如何建立、設定、偵錯、保護和部署 .NET Framework 應用程式。 本節也提供有關技術領域的資訊，例如動態程式設計、互通性、擴充性、記憶體管理和執行緒。  
   
 ## <a name="in-this-section"></a>本節內容  
- [應用程式基本概念](../../docs/standard/application-essentials.md)  
+ [應用程式基本概念](../standard/application-essentials.md)  
  提供基本應用程式開發工作的相關資訊，例如應用程式定義域和組件的程式設計、使用屬性、格式設定和分析基底類型、使用集合、處理事件和例外狀況、使用檔案和資料流，以及使用泛型。  
   
  [資料與模型化](../../docs/framework/data/index.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "66052739"
  [Windows 服務應用程式](../../docs/framework/windows-services/index.md)  
  說明如何使用 Visual Studio 及 .NET Framework 建立要安裝為服務的應用程式，以及啟動、停止及控制其行為。  
   
- [.NET 中的平行處理、並行和非同步程式設計](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [.NET 中的平行處理、並行和非同步程式設計](../standard/parallel-processing-and-concurrency.md)  
  提供有關 Managed 執行緒、平行程式設計和非同步程式設計模式的資訊。  
   
  [以 .NET Framework 進行網路程式設計](../../docs/framework/network-programming/index.md)  
@@ -50,13 +50,13 @@ ms.locfileid: "66052739"
  [使用 .NET Native 編譯應用程式](../../docs/framework/net-native/index.md)  
  說明如何使用 .NET Native 預先編譯技術，建置及部署「Windows 市集」的應用程式。 .NET Native 會編譯以受控程式碼 (C#) 所撰寫，並以 .NET Framework 做為機器碼的應用程式。  
   
- [安全性](../../docs/standard/security/index.md)  
+ [安全性](../standard/security/index.md)  
  提供 .NET Framework 中，可加強應用程式開發安全性的類別及服務的相關資訊。  
   
  [偵錯、追蹤和程式碼剖析](../../docs/framework/debug-trace-profile/index.md)  
  說明如何測試、最佳化及分析 .NET Framework 應用程式與應用程式的環境。 本章節包含可供系統管理員和開發者使用的資訊。  
   
- [進行多平台開發](../../docs/standard/cross-platform/index.md)  
+ [進行多平台開發](../standard/cross-platform/index.md)  
  提供如何使用 .NET Framework ，建置可以讓多種平台與裝置 (例如電話、桌面與 Web) 共用之組件的資訊。  
   
  [部署](../../docs/framework/deployment/index.md)  

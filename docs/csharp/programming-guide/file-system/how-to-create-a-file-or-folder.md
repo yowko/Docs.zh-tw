@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c29d0638e2429119020fee5317d40a95b00e40ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595645"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590099"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>作法：建立檔案或資料夾 (C# 程式設計手冊)
 您可以程式設計的方式在電腦上建立資料夾、建立子資料夾、在子資料夾中建立檔案，以及將資料寫入檔案。  
@@ -71,5 +71,5 @@ ms.locfileid: "64595645"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)
+- [C# 程式設計指南](../index.md)
+- [檔案系統和登錄 (C# 程式設計指南)](./index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 0982baea2327daf23726ef269d53388d6011703d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e67a80fa8f9a088f0eefe2dd2eeaa983e0a5a2c3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596152"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590035"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>作法：在登錄中建立機碼 (Visual C#)
 本範例會將 "Name" 和 "Isabella" 的值組新增至目前使用者之登錄的 "Names" 索引鍵下。  
@@ -58,6 +58,6 @@ key.Close();
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)
+- [C# 程式設計指南](../index.md)
+- [檔案系統和登錄 (C# 程式設計指南)](./index.md)
 - [使用 C# 從登錄進行讀取、寫入和刪除](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

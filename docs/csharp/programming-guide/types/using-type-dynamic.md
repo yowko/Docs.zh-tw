@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: a9e1f1fafcee4723c4aed37a0473c0f75512e11a
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 4141c64ff6dbbec60b53a41862a4273df6ef51ab
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169865"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588355"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用 dynamic 類型 (C# 程式設計手冊)
 
@@ -66,7 +66,7 @@ Dynamic Language Runtime (DLR) 是 .NET Framework 4 中的新 API。 它提供�
 
 C# 4 包含幾項功能，可改善與 COM API (例如 Office Automation API) 相互操作的體驗。 這些改進包括使用 `dynamic` 類型，以及使用[具名和選擇性引數](../classes-and-structs/named-and-optional-arguments.md)。
 
-許多 COM 方法允許針對引數類型和傳回型別進行變化，方法是將類型指定為 `object`。 這需要對值進行明確轉型，才能與 C# 中的強型別變數配合使用。 如果您使用 [/link (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 選項進行編譯，則引進 `dynamic` 類型可讓您將 COM 簽章中出現的 `object` 項目視為具有 `dynamic` 類型，藉此避免大部分的轉型。 例如，下列陳述式將比較使用 `dynamic` 類型和不使用 `dynamic` 類型存取 Microsoft Office Excel 試算表中儲存格的方式。
+許多 COM 方法允許針對引數類型和傳回型別進行變化，方法是將類型指定為 `object`。 這需要對值進行明確轉型，才能與 C# 中的強型別變數配合使用。 如果您使用 [/link (C# 編譯器選項)](../../language-reference/compiler-options/link-compiler-option.md) 選項進行編譯，則引進 `dynamic` 類型可讓您將 COM 簽章中出現的 `object` 項目視為具有 `dynamic` 類型，藉此避免大部分的轉型。 例如，下列陳述式將比較使用 `dynamic` 類型和不使用 `dynamic` 類型存取 Microsoft Office Excel 試算表中儲存格的方式。
 
 [!code-csharp[csOfficeWalkthrough#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#12)]
 

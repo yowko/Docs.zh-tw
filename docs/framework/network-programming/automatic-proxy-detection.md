@@ -14,20 +14,20 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: d7d0dae2ffbec5e334057715cd1d8d44e52cec9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295753"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910456"
 ---
 # <a name="automatic-proxy-detection"></a>自動 Proxy 偵測
 自動 Proxy 偵測是一種程序，透過此程序，系統會識別 Web Proxy 伺服器，並用來代表用戶端傳送要求。 這項功能也稱為「Web Proxy 自動探索 (WPAD)」。 啟用自動 Proxy 偵測時，系統會嘗試找出負責傳回可用於要求之這組 Proxy 的 Proxy 組態指令碼。 如果找到 Proxy 組態指令碼，則會在針對使用 <xref:System.Net.WebProxy> 執行個體的要求取得 Proxy 資訊、要求資料流或回應時，在本機電腦上下載、編譯和執行指令碼。  
   
- 自動 Proxy 偵測是透過 <xref:System.Net.WebProxy> 類別所執行，而且可以利用要求層級設定、組態檔中的設定，以及使用 Internet Explorer [區域網路 (LAN)] 對話方塊所指定的設定。  
+ 自動 Proxy 偵測是透過 <xref:System.Net.WebProxy> 類別所執行，而且可以利用要求層級設定、組態檔中的設定，以及使用 Internet Explorer [區域網路 (LAN)]  對話方塊所指定的設定。  
   
 > [!NOTE]
->  從 Internet Explorer 主功能表中選取 [工具]，然後選取 [網際網路選項]，即可顯示 Internet Explorer [區域網路 (LAN) 設定] 對話方塊。 接下來，選取 [連線] 索引標籤，然後按一下 [區域網路設定]。  
+> 從 Internet Explorer 主功能表中選取 [工具]  ，然後選取 [網際網路選項]  ，即可顯示 Internet Explorer [區域網路 (LAN) 設定]  對話方塊。 接下來，選取 [連線]  索引標籤，然後按一下 [區域網路設定]  。  
   
  啟用自動 Proxy 偵測時，<xref:System.Net.WebProxy> 類別會嘗試找到 Proxy 組態指令碼，如下所示：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "59295753"
 4. 如果找不到主機，但由 Internet Explorer 區域網路設定或組態檔指定 Proxy 組態指令碼的位置，則會使用此位置。  
   
 > [!NOTE]
->  執行為 NT 服務或 ASP.NET 一部分的應用程式會使用叫用使用者的 Internet Explorer Proxy 伺服器設定 (可用時)。 這些設定可能無法用於所有服務應用程式。  
+> 執行為 NT 服務或 ASP.NET 一部分的應用程式會使用叫用使用者的 Internet Explorer Proxy 伺服器設定 (可用時)。 這些設定可能無法用於所有服務應用程式。  
   
  Proxy 是根據 connectoid 所設定。 connectoid 是網路連線對話方塊中的項目，而且可以是實體網路裝置 (數據機或乙太網路卡) 或虛擬介面 (例如透過網路裝置執行的 VPN 連線)。 connectoid 變更時 (例如，無線連線變更存取點，或啟用 VPN)，會再次執行 Proxy 偵測演算法。  
   

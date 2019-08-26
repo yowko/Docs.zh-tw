@@ -1,25 +1,25 @@
 ---
 title: 搭配模型產生器使用迴歸來預測價格
-description: 此教學課程會特別示範如何使用 ML.NET 模型產生器來建置迴歸模型以預測紐約市的計程車費用。
+description: 本教學課程會特別示範如何使用 ML.NET 模型產生器來建置迴歸模型以預測紐約市的計程車費用。
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331683"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611451"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>搭配模型產生器使用迴歸來預測價格
 
-了解如何使用 ML.NET 模型建立器建置迴歸模型來預測價格。  您在此教學課程中開發的 .NET 主控台應用程式會根據紐約的歷史計程車費用資料來預測計程車費用。
+了解如何使用 ML.NET 模型建立器建置迴歸模型來預測價格。  在本教學課程中您所開發 .NET 主控台應用程式會根據紐約的歷史計程車費用資料來預測計程車費用。
 
 模型建置器價格預測範例可用於任何需要數字預測值的案例。 範例案例包括：房價預測、需求預測及銷售預測。
 
-在此教學課程中，您將了解如何：
+在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 準備並了解資料
 > * 選擇案例
@@ -86,7 +86,7 @@ ms.locfileid: "68331683"
 
 ## <a name="train-the-model"></a>將模型定型
 
-在此教學課程中用來定型價格預測模型的機器學習服務工作是迴歸。 在模型定型程序的期間，模型產生器會使用不同迴歸演算法及設定來定型不同模型以尋找可最佳執行您資料集的模型。
+在本教學課程中用來定型價格預測模型的機器學習服務工作是迴歸。 在模型定型程序的期間，模型產生器會使用不同迴歸演算法及設定來定型不同模型以尋找可最佳執行您資料集的模型。
 
 定型模型所需要的時間會與資料量成比例。 請使用此圖表作為指導，為 `Time to train (seconds)` 欄位選取適當的值：
 
@@ -188,7 +188,7 @@ ms.locfileid: "68331683"
 
 ## <a name="next-steps"></a>後續步驟
 
-在此教學課程中，您將了解如何：
+在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 準備並了解資料
 > * 選擇案例
@@ -202,7 +202,6 @@ ms.locfileid: "68331683"
 若要深入了解此教學課程中提及的主題，請瀏覽下列資源：
 
 - [模型建立器案例](../automate-training-with-model-builder.md#scenarios)
-- [模型建立器資料格式](../automate-training-with-model-builder.md#data-formats)
 - [迴歸](../resources/glossary.md#regression)
 - [迴歸模型計量](../resources/metrics.md#metrics-for-regression)
 - [NYC TLC 計程車旅程資料集](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) \(英文\)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29e0b95ad91c93f3a23246daf2be128b10d7e2ce
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591425"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952412"
 ---
 # <a name="how-to-write-services-programmatically"></a>作法：以程式設計方式撰寫服務
 如果您選擇不使用 Windows 服務專案範本，則可以藉由自行設定繼承和其他基礎結構元素來撰寫自己的服務。 當您以程式設計方式建立服務時，必須執行範本會為您處理的數個步驟：  
@@ -29,13 +29,13 @@ ms.locfileid: "64591425"
   
 1. 依照下列步驟來建立空白的專案，並建立必要命名空間的參考：  
   
-    1. 在 [方案總管] 中，以滑鼠右鍵按一下 [參考] 節點，然後按一下 [加入參考]。  
+    1. 在 [方案總管]  中，以滑鼠右鍵按一下 [參考]  節點，然後按一下 [加入參考]  。  
   
-    2. 在 [.NET Framework] 索引標籤上，捲動到 [System.dll]，然後按一下 [選取]。  
+    2. 在 [.NET Framework]  索引標籤上，捲動到 [System.dll]  ，然後按一下 [選取]  。  
   
-    3. 捲動到 [System.ServiceProcess.dll]，然後按一下 [選取]。  
+    3. 捲動到 [System.ServiceProcess.dll]  ，然後按一下 [選取]  。  
   
-    4. 按一下 [確定]。  
+    4. 按一下 [確定]  。  
   
 2. 加入類別，並將它設定為繼承自 <xref:System.ServiceProcess.ServiceBase>：  
   
@@ -61,10 +61,10 @@ ms.locfileid: "64591425"
   
 7. 為服務應用程式加入必要的安裝程式。 如需詳細資訊，請參閱[如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
-8. 從 [建置] 功能表選取 [建置方案]，以建置您的專案。  
+8. 從 [建置]  功能表選取 [建置方案]  ，以建置您的專案。  
   
     > [!NOTE]
-    >  請勿按 F5 執行您的專案，您無法透過這個方法來執行服務專案。  
+    > 請勿按 F5 執行您的專案，您無法透過這個方法來執行服務專案。  
   
 9. 建立安裝專案和自訂動作來安裝您的服務。 如需範例，請參閱[逐步解說：在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)。  
   

@@ -2,12 +2,12 @@
 title: 排序資料 (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: bceb599d9e8eb3c51c07526b9ad22d3d4206efdd
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 28cf4025d0b9bca841695c9873a0ff7972726b98
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125716"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591035"
 ---
 # <a name="sorting-data-c"></a>排序資料 (C#)
 排序作業會根據一個或多個屬性來排序序列的項目。 第一個排序準則會執行元素的主要排序； 您可以藉由指定第二個排序準則來排序每一個主要排序群組內的元素。  
@@ -129,7 +129,7 @@ foreach (string str in query)
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
-- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [orderby 子句](../../../../csharp/language-reference/keywords/orderby-clause.md)
-- [如何：排序 Join 子句的結果](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [如何：依任何字或欄位排序或篩選文字資料 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
+- [orderby 子句](../../../language-reference/keywords/orderby-clause.md)
+- [如何：排序 Join 子句的結果](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [如何：依任何字或欄位排序或篩選文字資料 (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

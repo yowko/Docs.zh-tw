@@ -2,12 +2,12 @@
 title: 依據執行方式將標準查詢運算子分類 (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: eaf0be4faee01e94b508b31bf878a537471750a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711768"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924284"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>依據執行方式將標準查詢運算子分類 (C#)
 會使用兩種主要方式之一執行標準查詢運算子方法的 LINQ to Objects 實作：立即或延後。 使用延後執行的查詢運算子可以另外細分成兩個分類︰資料流和非資料流。 如果您知道如何執行不同的查詢運算子，則可以協助您了解透過給定查詢所取得的結果。 如果資料來源變更，或您所建置的查詢是根據另一個查詢，則這特別有用。 本主題會根據執行方式來分類標準查詢運算子。  
@@ -32,7 +32,7 @@ ms.locfileid: "54711768"
  下表會根據執行方法來分類每個標準查詢運算子方法。  
   
 > [!NOTE]
->  如果在兩個資料行中標記運算子，則作業包含兩個輸入序列，而且會以不同的方式評估每個序列。 在這些情況下，它一律是參數清單中以延後資料流方式評估的第一個序列。  
+> 如果在兩個資料行中標記運算子，則作業包含兩個輸入序列，而且會以不同的方式評估每個序列。 在這些情況下，它一律是參數清單中以延後資料流方式評估的第一個序列。  
   
 |標準查詢運算子|傳回型別|立即執行|延後資料流執行|延後非資料流執行|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
@@ -90,6 +90,6 @@ ms.locfileid: "54711768"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.Enumerable>
-- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [標準查詢運算子的查詢運算式語法 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
+- [標準查詢運算子的查詢運算式語法 (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

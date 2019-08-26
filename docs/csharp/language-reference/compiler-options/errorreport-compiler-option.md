@@ -8,18 +8,18 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: dc876f609643b7112c0f54574bd202c7c19cb119
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345088"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924774"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# 編譯器選項)
 此選項提供將 C# 編譯器內部錯誤回報給 Microsoft 的便利方式。  
   
 > [!NOTE]
->  在 Windows Vista 和 Windows Server 2008 上，您為 Visual Studio 建立的錯誤報告設定不會覆寫透過 Windows 錯誤報告 (WER) 所做的設定。 WER 設定一律優先於 Visual Studio 錯誤報告設定。  
+> 在 Windows Vista 和 Windows Server 2008 上，您為 Visual Studio 建立的錯誤報告設定不會覆寫透過 Windows 錯誤報告 (WER) 所做的設定。 WER 設定一律優先於 Visual Studio 錯誤報告設定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ ms.locfileid: "59345088"
  **提示**  
  提示您在收到內部編譯器錯誤時傳送報告。 **提示**是您在開發環境中編譯應用程式的預設值。  
   
- **佇列**  
+ **queue**  
  佇列錯誤報告。 當您使用系統管理認證登入時，您可以報告自上次登入後的任何失敗。 系統提示您傳送錯誤報告的頻率，最多三天一次。 **佇列**是您在命令列編譯應用程式的預設值。  
   
  **傳送**  
@@ -51,9 +51,9 @@ ms.locfileid: "59345088"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性] 頁面。 如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+1. 開啟專案的 [屬性]  頁面。 如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2. 按一下 [建置] 屬性頁面。  
+2. 按一下 [建置]  屬性頁面。  
   
 3. 按一下 [ **進階** ] 按鈕。  
   
@@ -63,4 +63,4 @@ ms.locfileid: "59345088"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)

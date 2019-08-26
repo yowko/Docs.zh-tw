@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25121ea2b089df49efa77dcf363e2a0e400b3bff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550483"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968432"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 類別代表具名 (系統) 或區域號誌。 它是 Win32 號誌物件周圍的精簡型包裝函式。 Win32 號誌是計算的號誌，可以用來控制資源集區的存取。  
@@ -40,7 +40,7 @@ ms.locfileid: "54550483"
  您可以建立 <xref:System.Threading.Semaphore> 物件，使用其中一個指定名稱的建構函式來代表具名系統號誌。  
   
 > [!NOTE]
->  由於具名號誌是全系統性的，因此可能有多個 <xref:System.Threading.Semaphore> 物件，代表相同的具名號誌。 每次呼叫建構函式或 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> 方法時，便會建立新的 <xref:System.Threading.Semaphore> 物件。 重複指定相同的名稱，會建立多個代表相同具名號誌的物件。  
+> 由於具名號誌是全系統性的，因此可能有多個 <xref:System.Threading.Semaphore> 物件，代表相同的具名號誌。 每次呼叫建構函式或 <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> 方法時，便會建立新的 <xref:System.Threading.Semaphore> 物件。 重複指定相同的名稱，會建立多個代表相同具名號誌的物件。  
   
  使用具名號誌時請小心。 因為它們是全系統性的，使用相同名稱的另一個處理序可能會意外地進入您的號誌。 在同一部電腦上執行的惡意程式碼便可使用此點作為拒絕服務攻擊的基礎。  
   

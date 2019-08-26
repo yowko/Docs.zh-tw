@@ -6,16 +6,16 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844732"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666586"
 ---
 # <a name="async-in-depth"></a>深入了解非同步
 
-撰寫 I/O-bound 和 CPU-bound 非同步程式碼的直接做法，就是使用以 .NET 工作為基礎的非同步模型。 在 C# 和 Visual Basic 中，此模型是由 `Task` 和 `Task<T>` 類型以及 `async` 和 `await` 關鍵字所公開。 (您可以在[另請參閱](#see-also)一節中找到特定語言資源)。此文章說明如何使用 .NET 非同步，並深入解析幕後所使用的非同步架構。
+撰寫 I/O-bound 和 CPU-bound 非同步程式碼的直接做法，就是使用以 .NET 工作為基礎的非同步模型。 在 C# 和 Visual Basic 中，此模型是由 `Task` 和 `Task<T>` 類型以及 `async` 和 `await` 關鍵字所公開。 (您可以在[另請參閱](#see-also)一節中找到特定語言資源)。本文說明如何使用 .NET 非同步，並深入解析幕後所使用的非同步架構。
 
 ## <a name="task-and-taskt"></a>Task 與 Task\<T>
 
@@ -24,13 +24,13 @@ Task 是用來實作稱為 [Promise 並行存取模型](https://en.wikipedia.org
 * `Task` 代表不會傳回值的單一作業。
 * `Task<T>` 代表會傳回類型為 `T` 之值的單一作業。
 
-您必須了解 Task 是以非同步方式執行工作的抽象層，而「不是」透過執行緒的抽象層。 根據預設，Task 會在目前的執行緒上執行，並視需要將工作委派給作業系統。 您可以選擇明確要求透過 `Task.Run` API 在個別執行緒上執行工作。
+您必須了解 Task 是以非同步方式執行工作的抽象層，而「不是」  透過執行緒的抽象層。 根據預設，Task 會在目前的執行緒上執行，並視需要將工作委派給作業系統。 您可以選擇明確要求透過 `Task.Run` API 在個別執行緒上執行工作。
 
 Task 會公開 API 通訊協定，以監視、等候及存取 Task 的結果值 (如果是 `Task<T>`)。 與 `await` 關鍵字的語言整合提供更高層級的抽象層來使用 Task。
 
-使用 `await` 可在某個 Task 正在執行時，藉由將控制權轉讓給其呼叫端直到該 Task 完成為止，來允許您的應用程式或服務執行有用的工作。 您的程式碼不需要依賴回呼或事件，就能在 Task 完成之後繼續執行。 語言和工作 API 整合會為您執行此作業。 如果您使用 `Task<T>`，`await` 關鍵字會另外將工作完成時所傳回的值「解除包裝」。  以下將進一步說明其運作方式的細節。
+使用 `await` 可在某個 Task 正在執行時，藉由將控制權轉讓給其呼叫端直到該 Task 完成為止，來允許您的應用程式或服務執行有用的工作。 您的程式碼不需要依賴回呼或事件，就能在 Task 完成之後繼續執行。 語言和工作 API 整合會為您執行這項作業。 如果您使用 `Task<T>`，`await` 關鍵字會另外將工作完成時所傳回的值「解除包裝」。  以下將進一步說明其運作方式的細節。
 
-如需工作及與其互動之不同方式的詳細資訊，請參閱[工作架構非同步模式 (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 主題。
+如需工作及與其互動之不同方式的詳細資訊，請參閱[工作架構非同步模式 (TAP)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 主題。
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>更深入了解 I/O-Bound 作業的 Task
 
@@ -78,13 +78,13 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 在上述第二個範例中，會從 `GetStringAsync` 傳回 `Task<T>` 物件。 使用 `await` 關鍵字會導致方法傳回新建立的 Task 物件。 控制權會從 `GetFirstCharactersCountAsync` 方法的此位置返回呼叫端。 [Task&lt;T&gt;](xref:System.Threading.Tasks.Task%601) 物件的方法和屬性可讓呼叫端監視 Task 的進度，此 Task 將在 GetFirstCharactersCountAsync 中的其餘程式碼都已執行之後完成。
 
-系統 API 呼叫之後，要求現在會在核心空間，直到抵達 OS 的網路子系統 (例如 Linux 核心中的 `/net`)。  OS 將在此「以非同步方式」處理網路要求。  相關細節可能會因使用的 OS 而有所不同 (裝置驅動程式呼叫可能會排程作為傳回執行階段的信號，或裝置驅動程式呼叫可能會發出「再」傳回信號)，但最後都會通知執行階段此網路要求正在進行中。  此時，裝置驅動程式的工作將會是已排程、進行中或已完成 (要求已「透過網路」送出)，但由於全部都會以非同步方式進行，因此裝置驅動程式能夠立即處理其他工作！
+系統 API 呼叫之後，要求現在會在核心空間，直到抵達 OS 的網路子系統 (例如 Linux 核心中的 `/net`)。  OS 將在此「以非同步方式」  處理網路要求。  相關細節可能會因使用的 OS 而有所不同 (裝置驅動程式呼叫可能會排程作為傳回執行階段的信號，或裝置驅動程式呼叫可能會發出「再」  傳回信號)，但最後都會通知執行階段此網路要求正在進行中。  此時，裝置驅動程式的工作將會是已排程、進行中或已完成 (要求已「透過網路」送出)，但由於全部都會以非同步方式進行，因此裝置驅動程式能夠立即處理其他工作！
 
 例如，在 Windows 中，OS 執行緒會呼叫網路裝置驅動程式，並要求它透過代表網路作業的插斷要求封包 (IRP) 來執行此作業。  裝置驅動程式會接收 IRP、對網路進行呼叫、將 IRP 標記為「擱置」，然後傳回給 OS。  因為 OS 執行緒現在知道 IRP 處於「擱置」狀態，所以沒有任何要讓此作業執行的工作，並且會「傳回」以便用來執行其他工作。
 
-要求完成並透過裝置驅動程式傳回資料之後，它會通知 CPU 透過插斷收到的新資料。  此插斷的處理方式會因 OS 而有所不同，但最後會將資料傳遞通過 OS，直到抵達系統 Interop 呼叫 (例如在 Linux 中，插斷處理常式會排程 IRQ 的後半部，以非同步方式將資料上傳通過 OS)。  請注意，這「也是」以非同步方式進行！  此結果會排入佇列，等候下一個可用的執行緒能夠執行非同步方法並將已完成工作的結果「解除包裝」。
+要求完成並透過裝置驅動程式傳回資料之後，它會通知 CPU 透過插斷收到的新資料。  此插斷的處理方式會因 OS 而有所不同，但最後會將資料傳遞通過 OS，直到抵達系統 Interop 呼叫 (例如在 Linux 中，插斷處理常式會排程 IRQ 的後半部，以非同步方式將資料上傳通過 OS)。  請注意，這「也是」  以非同步方式進行！  此結果會排入佇列，等候下一個可用的執行緒能夠執行非同步方法並將已完成工作的結果「解除包裝」。
 
-這整個過程的重點是**沒有專門用來執行 Task 的執行緒**。  雖然在某些情況下會執行工作 (也就是，OS 必須將資料傳遞給裝置驅動程式並回應插斷)，但沒有專門用來「等候」所要求資料傳回的執行緒。  比起等候一些 I/O 呼叫完成，這樣做可讓系統處理更大量的工作。
+這整個過程的重點是**沒有專門用來執行 Task 的執行緒**。  雖然在某些情況下會執行工作 (也就是，OS 必須將資料傳遞給裝置驅動程式並回應插斷)，但沒有專門用來「等候」  所要求資料傳回的執行緒。  比起等候一些 I/O 呼叫完成，這樣做可讓系統處理更大量的工作。
 
 雖然上述做法似乎需要完成許多工作，但以時鐘時間測量時，它所花費的時間相較於實際 I/O 工作簡直是小巫見大巫。 雖然不完全精確，但這類呼叫的時間軸可能類似如下：
 
@@ -100,9 +100,9 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 以兩部伺服器為例︰一部執行非同步程式碼，另一部不執行。  在此範例中，每部伺服器只有 5 個執行緒可用來服務要求。  請注意，此數目比想像中的小，僅供示範內容使用。
 
-假設這兩部伺服器收到 6 個並行要求。 每個要求會執行一個 I/O 作業。  「未使用」非同步程式碼的伺服器必須等到 5 個執行緒的其中一個已完成 I/O-bound 工作並寫入回應，才能將第 6 個要求排入佇列。 排到第 20 個要求時，由於佇列變得太長，因此伺服器可能會開始變慢。
+假設這兩部伺服器收到 6 個並行要求。 每個要求會執行一個 I/O 作業。  「未使用」  非同步程式碼的伺服器必須等到 5 個執行緒的其中一個已完成 I/O-bound 工作並寫入回應，才能將第 6 個要求排入佇列。 排到第 20 個要求時，由於佇列變得太長，因此伺服器可能會開始變慢。
 
-在其上「執行」非同步程式碼的伺服器仍可將第 6 個要求排入佇列，但因為它使用 `async` 和 `await`，所以當 I/O-bound 工作開始時 (而不是完成時)，將會釋放其所包含的每個執行緒。  排到第 20 個要求時，傳入要求的佇列會很小 (如果有任何內容)，而且伺服器不會變慢。
+在其上「執行」  非同步程式碼的伺服器仍可將第 6 個要求排入佇列，但因為它使用 `async` 和 `await`，所以當 I/O-bound 工作開始時 (而不是完成時)，將會釋放其所包含的每個執行緒。  排到第 20 個要求時，傳入要求的佇列會很小 (如果有任何內容)，而且伺服器不會變慢。
 
 雖然這是虛擬範例，但其運作方式與真實世界非常類似。  事實上，您可以預期伺服器使用 `async` 和 `await` 時，會比針對所收到的每個要求設定專用執行緒，能夠處理更大量的要求。
 
@@ -142,11 +142,11 @@ public async Task<int> CalculateResult(InputData data)
 
 ### <a name="why-does-async-help-here"></a>為什麼非同步有助於此作業？
 
-當您需要快速回應，`async` 與 `await` 是管理 CPU 瓶頸工作的最佳做法。 搭配 CPU-bound 工作使用 async 的模式有許多種。 請務必注意使用 async 會耗費少量成本，而且不建議用於緊密迴圈。  您必須自行決定要如何撰寫以此新功能為主的程式碼。
+當您需要快速回應，`async` 與 `await` 是管理 CPU 瓶頸工作的最佳做法。 搭配 CPU-bound 工作使用 async 的模式有許多種。 請務必注意使用 async 會耗費少量成本，而且不建議用於緊密迴圈。  您必須自行決定要如何撰寫以這項新功能為主的程式碼。
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 中的非同步程式設計](~/docs/csharp/async.md)
+- [C# 中的非同步程式設計](../csharp/async.md)
 - [使用 async 和 await 進行非同步程式設計 (C#)](../csharp/programming-guide/concepts/async/index.md)
-- [F# 中的非同步程式設計](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [F# 中的非同步程式設計](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

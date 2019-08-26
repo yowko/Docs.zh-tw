@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 560597770d667cf8c7668bf2338ac4bac3eb192f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331749"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968579"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>規則運算式中的替代建構
 <a name="top"></a> 交替建構會修改規則運算式來啟用二選一或條件式比對。 .NET 支援下列三種替代建構：  
@@ -80,7 +80,7 @@ ms.locfileid: "68331749"
  其中 `(?=`*expression*`)`) 是零寬度的判斷提示建構 (如需詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。)由於規則運算式引擎會將 *expression* 解譯為錨點 (零寬度的判斷提示)，因此 *expression* 必須是零寬度的判斷提示 (如需詳細資訊，請參閱[錨點](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) 或是同樣包含在 *yes* 中的子運算式。 否則就無法比對 *yes* 模式。  
   
 > [!NOTE]
->  如果 *expression*是具名或編號的擷取群組，則交替建構會解譯為擷取測試。如需詳細資訊，請參閱下一節 [依據有效擷取群組進行的條件式比對](#Conditional_Group)。 換句話說，規則運算式引擎不會嘗試比對擷取的子字串，而會測試群組是否存在。  
+> 如果 *expression*是具名或編號的擷取群組，則交替建構會解譯為擷取測試。如需詳細資訊，請參閱下一節 [依據有效擷取群組進行的條件式比對](#Conditional_Group)。 換句話說，規則運算式引擎不會嘗試比對擷取的子字串，而會測試群組是否存在。  
   
  下列範例是[以 &#124; 進行的二選一模式比對](#Either_Or)一節中使用的範例變化。 它使用條件式比對，來判斷字邊界後的前三個字元是否為兩個位數後接連字號。 如果是，它會嘗試比對美國美國雇主識別碼 (EIN)。 如果不是，它會嘗試比對美國社會安全碼 (SSN)。  
   

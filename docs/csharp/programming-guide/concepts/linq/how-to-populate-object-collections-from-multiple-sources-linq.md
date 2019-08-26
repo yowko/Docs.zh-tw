@@ -2,12 +2,12 @@
 title: 作法：從多個來源填入物件集合 (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584386"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593060"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>作法：從多個來源填入物件集合 (LINQ) (C#)
 
@@ -18,7 +18,7 @@ ms.locfileid: "65584386"
 
 ## <a name="to-create-the-data-file"></a>建立資料檔
 
-將 names.csv 和 scores.csv 檔案複製到您的專案資料夾中，如[如何：從不同的檔案聯結內容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) 中所述。
+將 names.csv 和 scores.csv 檔案複製到您的專案資料夾中，如[如何：從不同的檔案聯結內容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) 中所述。
 
 ## <a name="example"></a>範例
 
@@ -107,7 +107,7 @@ class PopulateCollection
  */
 ```
 
-在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中，會使用物件初始設定式，透過兩個來源的資料具現化每個新的 `Student` 物件。
+在 [select](../../../language-reference/keywords/select-clause.md) 子句中，會使用物件初始設定式，透過兩個來源的資料具現化每個新的 `Student` 物件。
 
 如果您不需要儲存查詢的結果，則匿名型別會比具名類型更方便使用。 如果要在執行查詢的方法外傳遞查詢結果，則必須使用具名類型。 下列範例會執行與上述範例相同的工作，但使用匿名型別而不是具名類型：
 
@@ -141,6 +141,6 @@ foreach (var student in queryNamesScores2)
 
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [匿名類型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [LINQ 和字串 (C#)](./linq-and-strings.md)
+- [物件和集合初始設定式](../../classes-and-structs/object-and-collection-initializers.md)
+- [匿名類型](../../classes-and-structs/anonymous-types.md)

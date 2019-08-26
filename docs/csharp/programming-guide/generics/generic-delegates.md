@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: ff19b3d71858552158a8ae5d0ab362a86dc98e65
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 31ab511bf88bfbc2134029564ecbf70aa75119d7
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423503"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659841"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>泛型委派 (C# 程式設計手冊)
-[委派](../../../csharp/language-reference/keywords/delegate.md)可以定義自己的型別參數。 參考泛型委派的程式碼，可以指定型別引數建立封閉式建構類型，就像在具現化泛型類別或呼叫泛型方法時一樣，如下列範例所示：  
+[委派](../../language-reference/keywords/delegate.md)可以定義自己的型別參數。 參考泛型委派的程式碼，可以指定型別引數建立封閉式建構類型，就像在具現化泛型類別或呼叫泛型方法時一樣，如下列範例所示：  
   
  [!code-csharp[csProgGuideGenerics#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#36)]  
   
@@ -37,10 +37,10 @@ ms.locfileid: "66423503"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [泛型簡介](../../../csharp/programming-guide/generics/index.md)
-- [泛型方法](../../../csharp/programming-guide/generics/generic-methods.md)
-- [泛型類別](../../../csharp/programming-guide/generics/generic-classes.md)
-- [泛型介面](../../../csharp/programming-guide/generics/generic-interfaces.md)
-- [委派](../../../csharp/programming-guide/delegates/index.md)
-- [泛型](~/docs/standard/generics/index.md)
+- [C# 程式設計指南](../index.md)
+- [泛型簡介](./index.md)
+- [泛型方法](./generic-methods.md)
+- [泛型類別](./generic-classes.md)
+- [泛型介面](./generic-interfaces.md)
+- [委派](../delegates/index.md)
+- [泛型](../../../standard/generics/index.md)

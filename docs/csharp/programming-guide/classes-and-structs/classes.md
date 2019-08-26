@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398583"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597183"
 ---
 # <a name="classes-c-programming-guide"></a>類別 (C# 程式設計手冊)
 
 ## <a name="reference-types"></a>參考型別  
-定義為 [class](../../../csharp/language-reference/keywords/class.md) 的類型即為「參考型別」  。 在執行階段，當您宣告參考型別的變數時，該變數會包含 [null](../../../csharp/language-reference/keywords/null.md) 值，直到您使用 [new](../../../csharp/language-reference/operators/new-operator.md) 運算子明確地建立類別的執行個體，或為其指派在他處建立的相容類型物件為止，如下列範例所示：
+定義為 [class](../../language-reference/keywords/class.md) 的類型即為「參考型別」  。 在執行階段，當您宣告參考型別的變數時，該變數會包含 [null](../../language-reference/keywords/null.md) 值，直到您使用 [new](../../language-reference/operators/new-operator.md) 運算子明確地建立類別的執行個體，或為其指派在他處建立的相容類型物件為止，如下列範例所示：
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -31,7 +31,7 @@ MyClass mc2 = mc;
   
 ## <a name="declaring-classes"></a>宣告類別
 
- 使用 [class](../../../csharp/language-reference/keywords/class.md) 關鍵字並在後面接著唯一識別碼來宣告類別，如下列範例所示：
+ 使用 [class](../../language-reference/keywords/class.md) 關鍵字並在後面接著唯一識別碼來宣告類別，如下列範例所示：
 
  ```csharp
 //[access modifier] - [class] - [identifier]
@@ -70,7 +70,7 @@ MyClass mc2 = mc;
   
 ## <a name="class-inheritance"></a>類別繼承  
 
-類別完全支援「繼承」  ，這是物件導向程式設計的基礎特性。 當您建立類別時，可以繼承自任何未定義為 [sealed](../../../csharp/language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫類別虛擬方法。
+類別完全支援「繼承」  ，這是物件導向程式設計的基礎特性。 當您建立類別時，可以繼承自任何未定義為 [sealed](../../language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫類別虛擬方法。
 
 使用「衍生」  可完成繼承，這表示使用從中繼承資料和行為的「基底類別」  來宣告類別。 附加冒號以及接著衍生類別名稱後面的基底類別名稱，以指定基底類別，與下面類似：  
 

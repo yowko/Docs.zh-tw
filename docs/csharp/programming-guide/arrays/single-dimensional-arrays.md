@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: d221cb9071a2c58f9d7068d5a43dd3a750ba716b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398564"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597306"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一維陣列 (C# 程式設計手冊)
 
@@ -19,7 +19,7 @@ ms.locfileid: "67398564"
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- 這個陣列包含從 `array[0]` 到 `array[4]` 的項目。 [new](../../../csharp/language-reference/operators/new-operator.md) 運算子是用來建立陣列，並將陣列元素初始化為其預設值。 在此範例中，所有陣列元素都會初始化為零。  
+ 這個陣列包含從 `array[0]` 到 `array[4]` 的項目。 [new](../../language-reference/operators/new-operator.md) 運算子是用來建立陣列，並將陣列元素初始化為其預設值。 在此範例中，所有陣列元素都會初始化為零。  
   
  儲存字串項目的陣列可以使用相同的方式進行宣告。 例如：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67398564"
   
  [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
- C# 3.0 引進隱含型別陣列。 如需詳細資訊，請參閱[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
+ C# 3.0 引進隱含型別陣列。 如需詳細資訊，請參閱[隱含型別陣列](./implicitly-typed-arrays.md)。  
   
 ## <a name="value-type-and-reference-type-arrays"></a>實值型別和參考型別陣列
 
@@ -55,12 +55,12 @@ ms.locfileid: "67398564"
   
  此陳述式的結果取決於 `SomeType` 是實值型別還是參考型別。 如果它是實值型別，陳述式會建立 10 個項目的陣列，且每個都具有 `SomeType` 類型。 如果 `SomeType` 是參考型別，陳述式會建立 10 個項目的陣列，且每個都會初始化為 Null 參考。  
   
- 如需實值型別和參考型別的詳細資訊，請參閱[類型](../../../csharp/language-reference/keywords/types.md)。  
+ 如需實值型別和參考型別的詳細資訊，請參閱[類型](../../language-reference/keywords/types.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Array>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [陣列](../../../csharp/programming-guide/arrays/index.md)
-- [多維陣列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
-- [不規則陣列](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+- [C# 程式設計指南](../index.md)
+- [陣列](./index.md)
+- [多維陣列](./multidimensional-arrays.md)
+- [不規則陣列](./jagged-arrays.md)

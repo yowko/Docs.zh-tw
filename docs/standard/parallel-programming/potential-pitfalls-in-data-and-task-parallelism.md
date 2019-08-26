@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ee939096ef4e24397d03aa8a64405d66c740580
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621004"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946336"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>資料和工作平行處理原則中可能出現的錯誤
 在許多情況下，相較於一般循序迴圈，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 更能提供顯著的效能改良。 不過，平行處理迴圈的工作所帶來的複雜性可能會造成問題，而在循序程式碼中，這些問題不是不常見，就是完全不會發生。 本主題列出一些您在撰寫平行迴圈時應該避免的作法。  
@@ -33,7 +33,7 @@ ms.locfileid: "64621004"
   
 - 已知內部迴圈太長。  
   
-- 您正在對每個順序執行昂貴的計算  (範例所示作業並不昂貴)。  
+- 您正在對每個順序執行昂貴的計算 (範例所示作業並不昂貴)。  
   
 - 已知目標系統有足夠的處理器，可處理因為在 `cust.Orders` 上平行處理查詢而會產生的執行緒數目。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "64621004"
  .NET Framework 中的大部分靜態方法都是安全執行緒，並可從多個執行緒同時呼叫。 不過，即使在這些情況下，所牽涉到的同步處理作業也可能會導致查詢速度顯著變慢。  
   
 > [!NOTE]
->  您可以自行測試這一點，方法是在您的查詢中插入一些 <xref:System.Console.WriteLine%2A> 呼叫。 雖然本文件的範例使用這個方法來做示範，但除非必要，請勿將它用在平行迴圈中。  
+> 您可以自行測試這一點，方法是在您的查詢中插入一些 <xref:System.Console.WriteLine%2A> 呼叫。 雖然本文件的範例使用這個方法來做示範，但除非必要，請勿將它用在平行迴圈中。  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>注意執行緒相似性問題  
  有些技術 (例如，適用於單一執行緒 Apartment (STA) 元件、Windows Forms 和 Windows Presentation Foundation (WPF) 的 COM 互通性) 會施加執行緒相似性限制，以要求程式碼在特定執行緒上執行。 例如，在 Windows Forms 和 WPF 中，只有用來建立控制項的執行緒能夠存取該控制項。 這表示 (舉例來說) 除非您設定執行緒排程器，讓它排定只利用 UI 執行緒執行工作，否則您無法從平行迴圈更新清單控制項。 如需詳細資訊，請參閱[指定同步處理內容](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context)。  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>在等候 Parallel.Invoke 所呼叫的委派時請小心  
- 在某些情況下，工作平行程式庫會內嵌工作，這表示它會在目前執行中之執行緒的工作上執行  (如需詳細資訊，請參閱[工作排程器](xref:System.Threading.Tasks.TaskScheduler))。在某些案例中，此效能最佳化作業可能會導致死結。 例如，兩項工作可能會執行相同的委派程式碼，此程式碼會在事件發生時發出信號，然後等候另一項工作發出信號。 如果第二項工作在相同的執行緒中內嵌為第一項工作，而原本的第一項工作進入等候狀態，則第二項工作將永遠無法針對其事件發出信號。 若要避免這類情況，您可以對等候作業指定逾時設定，或使用明確的執行緒建構函式以協助確保兩項工作不會互相封鎖對方。  
+ 在某些情況下，工作平行程式庫會內嵌工作，這表示它會在目前執行中之執行緒的工作上執行 (如需詳細資訊，請參閱[工作排程器](xref:System.Threading.Tasks.TaskScheduler))。在某些案例中，此效能最佳化作業可能會導致死結。 例如，兩項工作可能會執行相同的委派程式碼，此程式碼會在事件發生時發出信號，然後等候另一項工作發出信號。 如果第二項工作在相同的執行緒中內嵌為第一項工作，而原本的第一項工作進入等候狀態，則第二項工作將永遠無法針對其事件發出信號。 若要避免這類情況，您可以對等候作業指定逾時設定，或使用明確的執行緒建構函式以協助確保兩項工作不會互相封鎖對方。  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>不要認為 ForEach、For 和 ForAll 的反覆項目一定要以平行方式執行  
  請記住 <xref:System.Threading.Tasks.Parallel.For%2A>、<xref:System.Threading.Tasks.Parallel.ForEach%2A> 或 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 迴圈中個別的反覆項目可能會以平行方式執行，但不見得需要這麼做。 因此，您所撰寫的程式碼不應依靠系統是否有正確地平行執行反覆項目，也不應依靠系統是否有正確地以特定順序執行反覆項目。 例如，下列程式碼有可能會發生死結︰  

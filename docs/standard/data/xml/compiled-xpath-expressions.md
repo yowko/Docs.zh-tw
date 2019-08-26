@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647946"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916665"
 ---
 # <a name="compiled-xpath-expressions"></a>編譯 XPath 運算式
 <xref:System.Xml.XPath.XPathExpression> 物件表示從 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 類別的靜態 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 方法傳回的編譯 XPath 查詢。  
@@ -45,7 +45,7 @@ ms.locfileid: "64647946"
 |`String`|<xref:System.String>|UCS 字元的順序。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 方法會接受 XPath 運算式做為它的參數。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 方法會傳回 <xref:System.Xml.XPath.XPathNavigator> 物件，而不是其中一個 W3C XPath 傳回型別。  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 方法會接受 XPath 運算式做為它的參數。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 方法會傳回 <xref:System.Xml.XPath.XPathNavigator> 物件，而不是其中一個 W3C XPath 傳回型別。  
   
 ### <a name="the-returntype-property"></a>ReturnType 屬性  
  將 XPath 查詢編譯到 <xref:System.Xml.XPath.XPathExpression> 物件中之後，您可使用 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 物件的 <xref:System.Xml.XPath.XPathExpression> 屬性來判斷 XPath 查詢傳回的型別。  

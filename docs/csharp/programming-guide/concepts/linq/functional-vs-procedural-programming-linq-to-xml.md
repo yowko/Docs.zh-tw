@@ -2,12 +2,12 @@
 title: 功能性與程序性程式設計的比較 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: 1f713e54cefed5b1fcf8c29cd88aa7587a737327
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e87114d2edcda4b2df14eb2d84f62ebe9638b5eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486955"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594256"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>功能性與程序性程式設計的比較 (LINQ to XML) (C#)
 XML 應用程式有很多種：  
@@ -36,10 +36,10 @@ XML 應用程式有很多種：
   
  您可以搭配任一種方法使用 LINQ to XML。 您可以使用相同的類別，在某些情況下，也可以使用相同的方法。 但是，兩種方法的結構與目標差異相當大。 例如，在不同的情況下，其中一種方法的效能通常會比較好，而且或多或少會使用到記憶體。 此外，其中一種方法會比較容易撰寫，並產生較容易維護的程式碼。  
   
- 若要查看這兩種對照方法，請參閱[記憶體中 XML 樹狀結構修改與函數式建構的比較 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)。  
+ 若要查看這兩種對照方法，請參閱[記憶體中 XML 樹狀結構修改與函數式建構的比較 (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)。  
   
- 如需撰寫功能性轉換的教學課程，請參閱 [XML 的純功能性轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)。  
+ 如需撰寫功能性轉換的教學課程，請參閱 [XML 的純功能性轉換 (C#)](./introduction-to-pure-functional-transformations.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to XML 程式設計概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [LINQ to XML 程式設計概觀 (C#)](./linq-to-xml-overview.md)

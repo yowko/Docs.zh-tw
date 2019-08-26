@@ -2,12 +2,12 @@
 title: 作法：投影新類型 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 2bb521d1445dcecdad8b9c7b28bed90e1e38c8e8
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: bec4e7c7d87dffb90b49b76aa00a5de093d68436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012933"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593042"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>作法：投影新類型 (LINQ to XML) (C#)
 
@@ -17,7 +17,7 @@ ms.locfileid: "69012933"
 
 此範例顯示如何具現化 `select` 子句中的物件。 此程式碼會先利用建構函式定義新的類別，然後修改 `select` 陳述式，讓運算式成為新類別的新執行個體。
 
-此範例使用下列 XML 文件：[XML 範例檔：典型訂購單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。
+此範例使用下列 XML 文件：[XML 範例檔：典型訂購單 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。
 
 ```csharp
 class NameQty 

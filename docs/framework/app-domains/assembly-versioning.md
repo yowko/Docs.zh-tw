@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d295f394a9ce7f038e2c64d42193e2d18040a98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593658"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921657"
 ---
 # <a name="assembly-versioning"></a>組件版本控制
 使用 Common Language Runtime 之組件的所有版本控制都是在組件層級進行的。 組件的特定版本和相依組件的版本是記錄在組件的資訊清單中。 Runtime 的預設版本原則為，除非被組態檔 (應用程式組態檔、發行者原則檔和電腦的系統管理員組態檔) 中的明確版本原則強制取代，否則應用程式只能搭配用來建置和測試它們的版本執行。  
   
 > [!NOTE]
->  版本控制只能在具有強式名稱 (Strong Name) 的組件上進行。  
+> 版本控制只能在具有強式名稱 (Strong Name) 的組件上進行。  
   
  Runtime 會執行以下幾個步驟來解析組件繫結要求：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64593658"
 ### <a name="assembly-version-number"></a>組件版本號碼  
  每一組件都有一個版本號碼做為其識別的一部分。 因此，兩個版本號碼不同的組件會被執行階段視為完全不同的組件。 這個版本號碼實際上會以下列格式表示為四個部分的字串：  
   
- \<主要版本>.\<次要版本>.\<組建編號>.\<修訂>  
+ \<主要版本  >.\<次要版本  >.\<組建編號  >.\<修訂  >  
   
  例如，在版本 1.5.1254.0 中，1 表示主要版本、5 是次要版本、1254 是組建編號，而 0 則是修訂編號。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "64593658"
  資訊版本是個將其他版本資訊附加到組件僅供資訊用途的字串；這項資訊不會在執行階段時使用。 文字架構的資訊版本會對應到該產品的行銷刊物、包裝或產品名稱，並且不會被執行階段使用。 例如，資訊版本可以是 "Common Language Runtime Version 1.0" 或 "NET Control SP 2"。 在 Microsoft Windows 中檔案 [內容] 對話方塊的 [版本] 索引標籤上，這項資訊會出現在 [產品版本] 項目之中。  
   
 > [!NOTE]
->  儘管您可以指定任何文字，如果字串不屬於組件版本號碼所使用的格式，或是屬於這種格式卻包含萬用字元，在編譯時就會出現警告訊息。 這項警告是無害的。  
+> 儘管您可以指定任何文字，如果字串不屬於組件版本號碼所使用的格式，或是屬於這種格式卻包含萬用字元，在編譯時就會出現警告訊息。 這項警告是無害的。  
   
  資訊版本是使用自訂屬性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 如需資訊版本屬性的詳細資訊，請參閱[設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   

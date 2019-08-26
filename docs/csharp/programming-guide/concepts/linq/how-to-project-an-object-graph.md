@@ -2,18 +2,18 @@
 title: 作法：投影物件圖形 (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 759db3800b02ee3f6e263b4d43374a9160703b2f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: dcfdd8cba95d729a1f9bda3adb4b5fd8690b724a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486571"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592985"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>作法：投影物件圖形 (C#)
 本主題說明如何從 XML 規劃或填入物件圖形。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會填入具有 `Address`、`PurchaseOrder` 和 `PurchaseOrderItem` 類別的物件圖形，這些類別來自[XML 範例檔：典型訂購單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 文件。  
+ 下列程式碼會填入具有 `Address`、`PurchaseOrder` 和 `PurchaseOrderItem` 類別的物件圖形，這些類別來自[XML 範例檔：典型訂購單 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 文件。  
   
 ```csharp  
 class Address  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a581cc17859f7f4e0215017bfc405eae3cc15e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660882"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956702"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 
@@ -98,7 +98,7 @@ ms.locfileid: "67660882"
 
 ## <a name="serialization"></a>序列化
 
-進行序列化時，不論存取範圍為何，具有 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.SecurityPermission> 都可讓您取得或設定可序列化類型的成員。 此權限可讓程式碼探索及變更執行個體的私用狀態。 (除了授與適當的權限，也必須在中繼資料中將該類型[標示](../../../docs/standard/attributes/applying-attributes.md)為可序列化。)
+進行序列化時，不論存取範圍為何，具有 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.SecurityPermission> 都可讓您取得或設定可序列化類型的成員。 此權限可讓程式碼探索及變更執行個體的私用狀態。 (除了授與適當的權限，也必須在中繼資料中將該類型[標示](../../standard/attributes/applying-attributes.md)為可序列化。)
 
 ## <a name="parameters-of-type-methodinfo"></a>MethodInfo 類型的參數
 
@@ -121,5 +121,5 @@ ms.locfileid: "67660882"
 - [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)
 - [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [套用屬性](../../../docs/standard/attributes/applying-attributes.md)
+- [套用屬性](../../standard/attributes/applying-attributes.md)
 - [存取自訂屬性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

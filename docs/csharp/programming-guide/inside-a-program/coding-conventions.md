@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: a37109ab2712ea824baab95ca0b175cfa82aab3a
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267899"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589422"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 編碼慣例 (C# 程式設計手冊)
  編碼慣例有下列用途：  
@@ -29,7 +29,7 @@ ms.locfileid: "67267899"
   
 ## <a name="naming-conventions"></a>命名規範  
   
-- 在不包含 [using 指示詞](../../../csharp/language-reference/keywords/using-directive.md)的簡短範例中，使用命名空間限定。 如果您知道專案中預設會匯入命名空間，則無須完整限定該命名空間的名稱。 如果限定的名稱太長無法顯示在同一行，則可以在點 (.) 之後中斷名稱，如下範例所示。  
+- 在不包含 [using 指示詞](../../language-reference/keywords/using-directive.md)的簡短範例中，使用命名空間限定。 如果您知道專案中預設會匯入命名空間，則無須完整限定該命名空間的名稱。 如果限定的名稱太長無法顯示在同一行，則可以在點 (.) 之後中斷名稱，如下範例所示。  
   
      [!code-csharp[csProgGuideCodingConventions#1](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#1)]  
   
@@ -81,11 +81,11 @@ ms.locfileid: "67267899"
   
 ### <a name="implicitly-typed-local-variables"></a>隱含類型區域變數  
   
-- 如果區域變數的類型明顯來自指派的右側，或精確類型並不重要，請針對該變數使用[隱含類型](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
+- 如果區域變數的類型明顯來自指派的右側，或精確類型並不重要，請針對該變數使用[隱含類型](../classes-and-structs/implicitly-typed-local-variables.md)。  
   
      [!code-csharp[csProgGuideCodingConventions#8](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#8)]  
   
-- 當類型不是明顯來自指派的右側時，請不要使用 [var](../../../csharp/language-reference/keywords/var.md)。  
+- 當類型不是明顯來自指派的右側時，請不要使用 [var](../../language-reference/keywords/var.md)。  
   
      [!code-csharp[csProgGuideCodingConventions#9](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#9)]  
   
@@ -93,9 +93,9 @@ ms.locfileid: "67267899"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- 避免使用 `var` 取代 [dynamic](../../../csharp/language-reference/keywords/dynamic.md)。  
+- 避免使用 `var` 取代 [dynamic](../../language-reference/keywords/dynamic.md)。  
   
-- 使用隱含類型，確定 [for](../../../csharp/language-reference/keywords/for.md) 和 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 迴圈中迴圈變數的類型。  
+- 使用隱含類型，確定 [for](../../language-reference/keywords/for.md) 和 [foreach](../../language-reference/keywords/foreach-in.md) 迴圈中迴圈變數的類型。  
   
      下列範例在 `for` 陳述式中使用隱含類型。  
   
@@ -125,11 +125,11 @@ ms.locfileid: "67267899"
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>例外狀況處理中的 try-catch 和 using 陳述式  
   
-- 針對大部分例外狀況處理，請使用 [try-catch](../../../csharp/language-reference/keywords/try-catch.md) 陳述式。  
+- 針對大部分例外狀況處理，請使用 [try-catch](../../language-reference/keywords/try-catch.md) 陳述式。  
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
-- 使用 C# [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)，可簡化程式碼。 如果您有 [try-finally](../../../csharp/language-reference/keywords/try-finally.md) 陳述式，而其中 `finally` 區塊內唯一的程式碼是 <xref:System.IDisposable.Dispose%2A> 方法的呼叫，則請改用 `using` 陳述式。  
+- 使用 C# [using 陳述式](../../language-reference/keywords/using-statement.md)，可簡化程式碼。 如果您有 [try-finally](../../language-reference/keywords/try-finally.md) 陳述式，而其中 `finally` 區塊內唯一的程式碼是 <xref:System.IDisposable.Dispose%2A> 方法的呼叫，則請改用 `using` 陳述式。  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
@@ -163,7 +163,7 @@ ms.locfileid: "67267899"
   
 ### <a name="static-members"></a>靜態成員  
   
-- 使用類別名稱呼叫 [static](../../../csharp/language-reference/keywords/static.md) 成員：*ClassName.StaticMember*。 這種作法可讓靜態存取更加清晰，從而讓程式碼更易於閱讀。  請勿使用衍生類別的名稱，限定在基底類別中定義的靜態成員。  編譯該程式碼時，如果將具有相同名稱的靜態成員加入衍生類別，則會破壞程式碼的清楚程度，且程式碼之後可能會在中斷。  
+- 使用類別名稱呼叫 [static](../../language-reference/keywords/static.md) 成員：*ClassName.StaticMember*。 這種作法可讓靜態存取更加清晰，從而讓程式碼更易於閱讀。  請勿使用衍生類別的名稱，限定在基底類別中定義的靜態成員。  編譯該程式碼時，如果將具有相同名稱的靜態成員加入衍生類別，則會破壞程式碼的清楚程度，且程式碼之後可能會在中斷。  
   
 ### <a name="linq-queries"></a>LINQ 查詢  
   
@@ -183,13 +183,13 @@ ms.locfileid: "67267899"
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
-- 在 [from](../../../csharp/language-reference/keywords/from-clause.md) 子句下對齊查詢子句，如先前範例所示。  
+- 在 [from](../../language-reference/keywords/from-clause.md) 子句下對齊查詢子句，如先前範例所示。  
   
-- 在其他查詢子句前，使用 [where](../../../csharp/language-reference/keywords/where-clause.md) 子句以確保之後的查詢子句，會對已經過篩選而減少數量的一組資料進行操作。  
+- 在其他查詢子句前，使用 [where](../../language-reference/keywords/where-clause.md) 子句以確保之後的查詢子句，會對已經過篩選而減少數量的一組資料進行操作。  
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
-- 使用多個 `from` 子句來存取內部集合，而非使用 [join](../../../csharp/language-reference/keywords/join-clause.md) 子句。 例如，`Student` 物件的集合可能每一個都包含測驗分數的集合。 執行下列查詢時，會傳回每個超過 90 的分數，以及取得該分數的學生姓氏。  
+- 使用多個 `from` 子句來存取內部集合，而非使用 [join](../../language-reference/keywords/join-clause.md) 子句。 例如，`Student` 物件的集合可能每一個都包含測驗分數的集合。 執行下列查詢時，會傳回每個超過 90 的分數，以及取得該分數的學生姓氏。  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   

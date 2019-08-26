@@ -2,12 +2,12 @@
 title: XML 功能性轉換 (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: b1325644873db29b2c40901ded3eb254b3a31073
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3c563c5dde1543c6ede53de0a9bb627f34108eaf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485967"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594298"
 ---
 # <a name="functional-transformation-of-xml-c"></a>XML 功能性轉換 (C#)
 本主題討論修改 XML 文件的純功能性轉換方法，並與程序性方法對照。  
@@ -26,14 +26,14 @@ ms.locfileid: "66485967"
 ### <a name="xml-functional-transformational-technologies"></a>XML 功能性轉換技術  
  Microsoft 提供兩個用於 XML 文件的功能性轉換技術：XSLT 和 LINQ to XML。 在 <xref:System.Xml.Xsl> Managed 命名空間與 MSXML 的原始 COM 實作中支援 XSLT。 雖然 XSLT 是強大的管理 XML 文件技術，但是它需要特殊領域的專業知識，也就是 XSLT 語言及其支援的 API。  
   
- LINQ to XML 在 C# 或 Visual Basic 程式碼中，提供以明確而且強大的方式撰寫純功能性轉換之程式碼所需的工具。 例如，LINQ to XML 文件中的許多範例都使用純功能性方法。 同時，在[教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 中，我們以功能性方法使用 LINQ to XML 來管理 Microsoft Word 文件中的資訊。  
+ LINQ to XML 在 C# 或 Visual Basic 程式碼中，提供以明確而且強大的方式撰寫純功能性轉換之程式碼所需的工具。 例如，LINQ to XML 文件中的許多範例都使用純功能性方法。 同時，在[教學課程：管理 WordprocessingML 文件中的內容 (C#)](./shape-of-wordprocessingml-documents.md) 中，我們以功能性方法使用 LINQ to XML 來管理 Microsoft Word 文件中的資訊。  
   
- 如需 LINQ to XML 與其他 Microsoft XML 技術的更完整比較，請參閱 [LINQ to XML 與其他 XML 技術的比較](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)。  
+ 如需 LINQ to XML 與其他 Microsoft XML 技術的更完整比較，請參閱 [LINQ to XML 與其他 XML 技術的比較](./linq-to-xml-vs-other-xml-technologies.md)。  
   
- 當來源文件具有不規則的結構時，XSLT 是文件中心轉換的建議工具。 不過，LINQ to XML 也可以執行文件中心的轉換。 如需詳細資訊，請參閱[如何：使用註釋轉換 XSLT 樣式的 LINQ to XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)。  
+ 當來源文件具有不規則的結構時，XSLT 是文件中心轉換的建議工具。 不過，LINQ to XML 也可以執行文件中心的轉換。 如需詳細資訊，請參閱[如何：使用註釋轉換 XSLT 樣式的 LINQ to XML 樹狀結構 (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [LINQ to XML 與其他 XML 技術的比較](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [純功能性轉換簡介 (C#)](./introduction-to-pure-functional-transformations.md)
+- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](./shape-of-wordprocessingml-documents.md)
+- [LINQ to XML 與其他 XML 技術的比較](./linq-to-xml-vs-other-xml-technologies.md)

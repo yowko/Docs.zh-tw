@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: b1b05a5548beb7e7c1f0ec8e96b6e02350318ef9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310976"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921409"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Common Language Runtime 中的類型轉送
 型別轉送可讓您將型別移至另一個組件，而無須重新編譯使用原始組件的應用程式。  
@@ -25,7 +25,7 @@ ms.locfileid: "59310976"
  `Utility.dll` 的開發人員可以使用 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> 屬性轉送 `Example` 類別要求，避免這個狀況。 如果屬性已套用至新版的 `Utility.dll`，`Example` 類別的要求會轉送給現在包含類別的組件。 現有的應用程式會繼續正常運作，而不必重新編譯。  
   
 > [!NOTE]
->  在 .NET Framework 2.0 版中，您無法從在 Visual Basic 中撰寫的組件轉送型別。 不過，在 Visual Basic 中撰寫的應用程式可以使用轉送型別。 也就是說，如果應用程式使用以 C# 或 C++ 編碼的組件，且來自該組件的型別轉送至另一個組件，則 Visual Basic 應用程式可以使用轉送型別。  
+> 在 .NET Framework 2.0 版中，您無法從在 Visual Basic 中撰寫的組件轉送型別。 不過，在 Visual Basic 中撰寫的應用程式可以使用轉送型別。 也就是說，如果應用程式使用以 C# 或 C++ 編碼的組件，且來自該組件的型別轉送至另一個組件，則 Visual Basic 應用程式可以使用轉送型別。  
   
 ## <a name="forwarding-types"></a>轉送型別  
  轉送型別有四個步驟︰  
@@ -44,7 +44,7 @@ ms.locfileid: "59310976"
   
 3. 編譯現在包含型別的組件。  
   
-4. 重新編譯型別曾經所在的組件，具有現在包含型別之組件的參考。 例如，如果您正在從命令列編譯 C# 檔案，請使用 [/reference (C# 編譯器選項) ](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) 選項來指定包含型別的組件。 在 C++ 中，在來源檔案中使用 [#using](/cpp/preprocessor/hash-using-directive-cpp) 指示詞以指定包含型別的組件。  
+4. 重新編譯型別曾經所在的組件，具有現在包含型別之組件的參考。 例如，如果您正在從命令列編譯 C# 檔案，請使用 [/reference (C# 編譯器選項) ](../../csharp/language-reference/compiler-options/reference-compiler-option.md) 選項來指定包含型別的組件。 在 C++ 中，在來源檔案中使用 [#using](/cpp/preprocessor/hash-using-directive-cpp) 指示詞以指定包含型別的組件。  
   
 ## <a name="see-also"></a>另請參閱
 

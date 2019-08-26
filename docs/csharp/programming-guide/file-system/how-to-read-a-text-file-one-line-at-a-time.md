@@ -6,12 +6,12 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 4e6c4cfce1b5e97f70040b318eb68ee78ee4a953
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75274d93ee29feb5f79dfc29c24109f25fd98a5c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595394"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589957"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>作法：一次一行讀取文字檔 (Visual C#)
 此範例會使用 `StreamReader` 類別的 `ReadLine` 方法，將文字檔的內容一次一行讀入字串中。 每個文字行都會儲存到字串 `line` 中並顯示在畫面上。  
@@ -53,5 +53,5 @@ System.Console.ReadLine();
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)
+- [C# 程式設計指南](../index.md)
+- [檔案系統和登錄 (C# 程式設計指南)](./index.md)

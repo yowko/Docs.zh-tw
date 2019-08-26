@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301510"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968533"
 ---
 # <a name="substitutions-in-regular-expressions"></a>在規則運算式中執行替代
 <a name="Top"></a> 替代是指只有在取代模式內才能辨識的語言項目。 這些項目使用規則運算式模式定義要取代輸入字串中相符文字的全部或部分文字。 取代模式可以包含一個或多個替代，以及常值字元。 取代模式會提供給具有 `replacement` 參數的 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法多載，以及提供給 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 這些方法會將符合的模式取代為 `replacement` 參數所定義的模式。  
@@ -44,7 +44,7 @@ ms.locfileid: "66301510"
  唯一能夠在規則運算式模式或替代中出現的字元是 `$` 字元，不過它在這兩種內容中的意義不同。 在規則運算式模式中， `$` 是比對字串結尾的錨點。 在取代模式中， `$` 表示替代開頭。  
   
 > [!NOTE]
->  如需規則運算式內類似取代模式的功能，請使用反向參考。 如需反向參考的詳細資訊，請參閱 [反向參考建構](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。  
+> 如需規則運算式內類似取代模式的功能，請使用反向參考。 如需反向參考的詳細資訊，請參閱 [反向參考建構](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。  
   
 <a name="Numbered"></a>   
 ## <a name="substituting-a-numbered-group"></a>替代編號群組  

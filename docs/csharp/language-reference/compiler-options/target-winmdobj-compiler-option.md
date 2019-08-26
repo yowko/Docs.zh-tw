@@ -2,12 +2,12 @@
 title: -target:winmdobj (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe1332f9ed6de9c50c2509e29f22ed7c0e57ade9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319296"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606352"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# 編譯器選項)
 如果您使用 **-target:winmdobj** 編譯器選項，編譯器會建立一個可轉換成 Windows 執行階段二進位檔案 (.winmd) 的中繼 .winmdobj 檔案。 除了 Managed 語言程式之外，JavaScript 和 C++ 程式也可以使用 .winmd 檔案。  
@@ -23,19 +23,19 @@ ms.locfileid: "59319296"
   
  使用 **-target:winmdobj** 編譯器選項所編譯之檔案的輸出，其設計目的只作為 WimMDExp 匯出工具的輸入，並不能直接參考 .winmdobj 檔案本身。  
   
- 除非您使用 [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 選項指定輸出檔案名稱，否則輸出檔案名稱會採用第一個輸入檔案的名稱。 不需要 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法。  
+ 除非您使用 [-out](./out-compiler-option.md) 選項指定輸出檔案名稱，否則輸出檔案名稱會採用第一個輸入檔案的名稱。 不需要 [Main](../../programming-guide/main-and-command-args/index.md) 方法。  
   
- 如果您在命令提示字元指定 -target:winmdobj 選項，下一個 **-out** 或 [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 選項之前的所有檔案都是用來建立 Windows 程式。  
+ 如果您在命令提示字元指定 -target:winmdobj 選項，下一個 **-out** 或 [-target:module](./target-module-compiler-option.md) 選項之前的所有檔案都是用來建立 Windows 程式。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>若要在 Visual Studio IDE 中為 Windows 市集應用程式設定這個編譯器選項  
   
-1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。  
+1. 在方案總管  中，開啟專案的捷徑功能表，然後選擇 [屬性]  。  
   
-2. 選擇 [應用程式] 索引標籤。  
+2. 選擇 [應用程式]  索引標籤。  
   
-3. 在 [輸出類型] 清單中，選擇 [WinMD 檔案]。  
+3. 在 [輸出類型]  清單中，選擇 [WinMD 檔案]  。  
   
-     [WinMD 檔案] 選項僅適用於 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式範本。  
+     [WinMD 檔案]  選項僅適用於 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式範本。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
@@ -48,5 +48,5 @@ csc -target:winmdobj filename.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [-target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [-target (C# 編譯器選項)](./target-compiler-option.md)
+- [C# 編譯器選項](./index.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b3e39deca8b483413d2a2c42dbacbf821b3e42e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613839"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942365"
 ---
 # <a name="time-based-cache-policies"></a>以時間為基礎的快取原則
 以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 設定以時間為基礎的快取原則時，您可以使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間基礎原則，或建立自訂的時間基礎原則。 為使用超文字傳輸通訊協定 (HTTP) 取得的資源，使用以時間為基礎的預設原則時，確切的快取行為是由快取回應中包含的標頭，以及 RFC 2616 的 13 與 14 一節中所指定的行為來，RFC 2616 可在[網際網路工程任務推動小組 (IETF)](https://www.ietf.org/) 網站取得。 如需程式碼範例來示範如何為 HTTP 資源設定以時間為基礎的預設原則，請參閱[如何：為應用程式設定以時間為基礎的預設快取原則](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "64613839"
 - 快取同步處理日期  
   
 > [!NOTE]
->  使用時間為基礎的預設快取原則不應與設定應用程式的預設快取原則混淆。 以時間為基礎的預設原則是可以用於要求或應用程式層級的特定原則。 應用程式的預設快取原則是在要求上未設定原則時生效的原則 (以位置為基礎或以時間為基礎)。 如需設定應用程式之預設快取原則的詳細資料，請參閱<xref:System.Net.WebRequest.DefaultCachePolicy%2A>。  
+> 使用時間為基礎的預設快取原則不應與設定應用程式的預設快取原則混淆。 以時間為基礎的預設原則是可以用於要求或應用程式層級的特定原則。 應用程式的預設快取原則是在要求上未設定原則時生效的原則 (以位置為基礎或以時間為基礎)。 如需設定應用程式之預設快取原則的詳細資料，請參閱<xref:System.Net.WebRequest.DefaultCachePolicy%2A>。  
   
 ### <a name="maximum-age"></a>最長使用期限  
  最長使用期限原則準則指定可以使用資源快取複本的時間量。 如果資源的快取複本超過指定的時間量，則必須藉由針對伺服器上的內容檢查資源，來重新驗證資源。 如果最長使用期限允許在資源到期後還使用它，則除非同時指定最長過時值，否則不會採用此準則。  

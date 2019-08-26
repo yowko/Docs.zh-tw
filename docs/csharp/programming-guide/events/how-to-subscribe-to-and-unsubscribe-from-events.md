@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 777eb3be5cbefe0a136bf49f826ad67685a8456d
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 523045e990532f1475e1c4816c98d1af76daa92b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401073"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590407"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>作法：訂閱及取消訂閱事件 (C# 程式設計手冊)
 如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。 例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。  
@@ -83,7 +83,7 @@ ms.locfileid: "68401073"
     };  
     ```  
   
-     請務必注意，如果使用了匿名函式訂閱事件，則無法輕易取消訂閱事件。 若要在這種情況下取消訂閱，您必須回到訂閱事件所在的程式碼，將此匿名方法儲存在委派變數中，然後將委派新增至事件。 一般而言，如果您稍後必須在程式碼中取消訂閱事件，建議您不要使用匿名函式訂閱事件。 如需匿名函式的詳細資訊，請參閱[匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)。  
+     請務必注意，如果使用了匿名函式訂閱事件，則無法輕易取消訂閱事件。 若要在這種情況下取消訂閱，您必須回到訂閱事件所在的程式碼，將此匿名方法儲存在委派變數中，然後將委派新增至事件。 一般而言，如果您稍後必須在程式碼中取消訂閱事件，建議您不要使用匿名函式訂閱事件。 如需匿名函式的詳細資訊，請參閱[匿名函式](../statements-expressions-operators/anonymous-functions.md)。  
   
 ## <a name="unsubscribing"></a>取消訂閱  
  若要防止在引發事件時叫用事件處理常式，請取消訂閱事件。 為了避免資源流失，請先取消訂閱事件，再處置訂閱者物件。 在取消訂閱事件之前，發行物件的事件之下的多點傳送委派都會參考封裝訂閱者事件處理常式的委派。 只要發行物件還有該參考，記憶體回收就不會刪除訂閱者物件。  
@@ -100,8 +100,8 @@ ms.locfileid: "68401073"
   
 ## <a name="see-also"></a>另請參閱
 
-- [事件](../../../csharp/programming-guide/events/index.md)
-- [event](../../../csharp/language-reference/keywords/event.md)
-- [如何：發行符合 .NET Framework 指導方針的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [事件](./index.md)
+- [event](../../language-reference/keywords/event.md)
+- [如何：發行符合 .NET Framework 指導方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [- 及 = 運算子](../../language-reference/operators/subtraction-operator.md)
 - [+ 及 += 運算子](../../language-reference/operators/addition-operator.md)

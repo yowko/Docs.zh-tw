@@ -6,12 +6,12 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200672"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597336"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>不規則陣列 (C# 程式設計手冊)
 
@@ -45,7 +45,7 @@ ms.locfileid: "57200672"
   
  [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
- 可以混合使用不規則陣列與多維陣列。 以下是一維不規則陣列的宣告和初始化，而此陣列包含三個不同大小的二維陣列元素。 如需二維陣列的詳細資訊，請參閱[多維陣列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)。  
+ 可以混合使用不規則陣列與多維陣列。 以下是一維不規則陣列的宣告和初始化，而此陣列包含三個不同大小的二維陣列元素。 如需二維陣列的詳細資訊，請參閱[多維陣列](./multidimensional-arrays.md)。  
   
  [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
@@ -68,7 +68,7 @@ ms.locfileid: "57200672"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Array>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [陣列](../../../csharp/programming-guide/arrays/index.md)
-- [一維陣列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [多維陣列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+- [C# 程式設計指南](../index.md)
+- [陣列](./index.md)
+- [一維陣列](./single-dimensional-arrays.md)
+- [多維陣列](./multidimensional-arrays.md)

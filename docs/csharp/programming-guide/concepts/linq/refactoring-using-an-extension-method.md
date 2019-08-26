@@ -2,15 +2,15 @@
 title: 使用擴充方法進行重構 (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 06c09b1c76e0c5287cc3bf96947b2ebf54337592
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2be848d6454abf0dd37a6974cff915a107336503
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487268"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591295"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>使用擴充方法進行重構 (C#)
-這個範例是根據上述範例 ([擷取段落的文字 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)) 所建置，方法是使用當成擴充方法實作的純虛擬函式來重構字串的串連。  
+這個範例是根據上述範例 ([擷取段落的文字 (C#)](./retrieving-the-text-of-the-paragraphs.md)) 所建置，方法是使用當成擴充方法實作的純虛擬函式來重構字串的串連。  
   
  前一個範例使用 <xref:System.Linq.Enumerable.Aggregate%2A> 標準查詢運算子，將多個字串串連到一個字串。 不過，撰寫擴充方法來執行這個動作更為方便，因為所產生的查詢更小而且更簡單。  
   
@@ -19,7 +19,7 @@ ms.locfileid: "66487268"
   
  此範例包含 `StringConcatenate` 方法的多個多載。  
   
- 您可以在[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) 中找到建立此範例之來源文件的指示。  
+ 您可以在[建立來源 Office Open XML 文件 (C#)](./creating-the-source-office-open-xml-document.md) 中找到建立此範例之來源文件的指示。  
   
  這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
@@ -219,7 +219,7 @@ class Program
 }  
 ```  
   
- 這個範例會在套用至[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) 中所述的文件時產生下列輸出。  
+ 這個範例會在套用至[建立來源 Office Open XML 文件 (C#)](./creating-the-source-office-open-xml-document.md) 中所述的文件時產生下列輸出。  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -248,5 +248,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [重構為純虛擬函式 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](./shape-of-wordprocessingml-documents.md)
+- [重構為純虛擬函式 (C#)](./refactoring-into-pure-functions.md)

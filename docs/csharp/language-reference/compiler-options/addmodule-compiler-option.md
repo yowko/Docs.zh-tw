@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: f45afd277818d7e1658751f2aae0b2153c940eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2fae0be3ba958dc9776ed253c178933e4f76024
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617508"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69607041"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# 編譯器選項)
 此選項會將使用 target:module 參數所建立的模組新增至目前的編譯。  
@@ -31,9 +31,9 @@ ms.locfileid: "54617508"
 ## <a name="remarks"></a>備註  
  所有加上 **-addmodule** 的模組都必須和執行階段的輸出檔案位於相同的目錄中。 也就是說，您可以在編譯時間指定任一目錄中的模組，但該模組於執行階段必須位在應用程式目錄中。 如果模組於執行階段不在應用程式目錄中，您就會有 <xref:System.TypeLoadException>。  
   
- `file` 不包含組件。 例如，如果輸出檔案是使用 [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 所建立，則其中繼資料可以使用 **-addmodule** 匯入。  
+ `file` 不包含組件。 例如，如果輸出檔案是使用 [-target:module](./target-module-compiler-option.md) 所建立，則其中繼資料可以使用 **-addmodule** 匯入。  
   
- 如果輸出檔案是使用 **-target** 選項而不是使用 **-target:module** 所建立，則其中繼資料無法使用 **-addmodule** 進行匯入，但可以使用 [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 進行匯入。  
+ 如果輸出檔案是使用 **-target** 選項而不是使用 **-target:module** 所建立，則其中繼資料無法使用 **-addmodule** 進行匯入，但可以使用 [-reference](./reference-compiler-option.md) 進行匯入。  
   
  Visual Studio 不提供這個編譯器選項，專案無法參考模組。 此外，這個編譯器選項也不能以程式設計方式變更。  
   
@@ -46,7 +46,7 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
 - [多檔案組件](../../../framework/app-domains/multifile-assemblies.md)
 - [如何：建置多檔案組件](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)

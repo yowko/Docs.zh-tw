@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 PLINQ 中指定合併選項
+title: 作法：在 PLINQ 中指定合併選項
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87079337ae3cea81dbb4aab13ec2043b74498d9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 947f3cb15b7eb372d20884ece73374114c48f472
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573565"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988849"
 ---
-# <a name="how-to-specify-merge-options-in-plinq"></a>HOW TO：在 PLINQ 中指定合併選項
+# <a name="how-to-specify-merge-options-in-plinq"></a>作法：在 PLINQ 中指定合併選項
 此範例示範如何指定將套用到 PLINQ 查詢中所有後續運算子的合併選項。 您不需明確地設定合併選項，但這樣做可改善效能。 如需合併選項的詳細資訊，請參閱 [PLINQ 中的合併選項](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
   
 > [!WARNING]
->  這個範例是為了示範用法，執行速度可能比不上對應的循序 LINQ to Objects 查詢。 如需加速的詳細資訊，請參閱[認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
+> 這個範例是為了示範用法，執行速度可能比不上對應的循序 LINQ to Objects 查詢。 如需加速的詳細資訊，請參閱[認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
   
 ## <a name="example"></a>範例  
  下列範例示範具有未排序來源之基本案例中的合併選項行為，並將高度耗費資源的函式套用至每個元素。  

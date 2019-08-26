@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: f4e3c3edbe1d542f9bf5c984c403e0486a9da61b
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: b4ac4fd3277fb53251e87321500d1b8007458037
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611974"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608533"
 ---
 # <a name="line-c-reference"></a>#line (C# 參考)
 
@@ -83,6 +83,6 @@ class MainClass
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 前置處理器指示詞](./index.md)

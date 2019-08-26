@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58037694"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602760"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>依字母順序列出 C# 編譯器選項
 
@@ -77,7 +77,7 @@ ms.locfileid: "58037694"
 |-ruleset:\<檔案>|指定停用特定診斷的規則集檔案。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|指定可執行檔能夠使用的最低子系統版本。|
 |[-target](target-compiler-option.md)|使用下列四個選項之一來指定輸出檔案的格式：[-target:appcontainerexe](target-appcontainerexe-compiler-option.md)、[-target:exe](target-exe-compiler-option.md)、[-target:library](target-library-compiler-option.md)、[-target:module](target-module-compiler-option.md)、[-target:winexe](target-winexe-compiler-option.md)、[-target:winmdobj](target-winmdobj-compiler-option.md)。|
-|[-unsafe](unsafe-compiler-option.md)|允許 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 程式碼。|
+|[-unsafe](unsafe-compiler-option.md)|允許 [unsafe](../keywords/unsafe.md) 程式碼。|
 |[-utf8output](utf8output-compiler-option.md)|在 UTF-8 編碼中輸出編譯器訊息。|
 |-version|顯示編譯器版本號碼並結束。|
 |[-warn](warn-compiler-option.md)|設定警告層級 (0-4)。|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483217"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924100"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>逐步解說：在 C# 中撰寫查詢 (LINQ)
 本逐步解說示範用以撰寫 LINQ 查詢運算式的 C# 語言功能。  
@@ -20,7 +20,7 @@ ms.locfileid: "66483217"
 ## <a name="create-a-c-project"></a>建立 C# 專案  
   
 > [!NOTE]
->  下列指示適用於 Visual Studio。 如果您使用不同的開發環境，可搭配 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=nameWithType> 命名空間的 `using` 指示詞來建立主控台專案。  
+> 下列指示適用於 Visual Studio。 如果您使用不同的開發環境，可搭配 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=nameWithType> 命名空間的 `using` 指示詞來建立主控台專案。  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>若要在 Visual Studio 中建立專案  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66483217"
   
 - 系統會使用集合初始設定式，來初始化清單本身。  
   
- 系統會初始化整個資料結構，並將其具現化，而不需要明確呼叫任何建構函式，亦不需明確的成員存取。 如需這些新功能的詳細資訊，請參閱[自動實作的屬性](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)以及[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
+ 系統會初始化整個資料結構，並將其具現化，而不需要明確呼叫任何建構函式，亦不需明確的成員存取。 如需這些新功能的詳細資訊，請參閱[自動實作的屬性](../../classes-and-structs/auto-implemented-properties.md)以及[物件和集合初始設定式](../../classes-and-structs/object-and-collection-initializers.md)。  
   
 #### <a name="to-add-the-data-source"></a>若要新增資料來源  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66483217"
   
 #### <a name="to-create-a-simple-query"></a>建立簡單查詢  
   
-- 在應用程式的 `Main` 方法中，建立簡單的查詢，即可在執行查詢時產生第一次測驗分數超過 90 分之所有學生的清單。 請注意，因為已選取整個 `Student` 物件，所以查詢的類型是 `IEnumerable<Student>`。 雖然程式碼也可以藉由 [var](../../../../csharp/language-reference/keywords/var.md) 關鍵字來使用隱含類型，但需使用明確類型來清楚說明結果 (如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md))。  
+- 在應用程式的 `Main` 方法中，建立簡單的查詢，即可在執行查詢時產生第一次測驗分數超過 90 分之所有學生的清單。 請注意，因為已選取整個 `Student` 物件，所以查詢的類型是 `IEnumerable<Student>`。 雖然程式碼也可以藉由 [var](../../../language-reference/keywords/var.md) 關鍵字來使用隱含類型，但需使用明確類型來清楚說明結果 (如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../classes-and-structs/implicitly-typed-local-variables.md))。  
   
      另請注意，查詢的範圍變數 `student` 可作為來源中每個 `Student` 的參考，並提供每個物件的成員存取。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66483217"
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     如需詳細資訊，請參閱 [where 子句](../../../../csharp/language-reference/keywords/where-clause.md)。  
+     如需詳細資訊，請參閱 [where 子句](../../../language-reference/keywords/where-clause.md)。  
   
 ## <a name="modify-the-query"></a>修改查詢  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66483217"
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     如需詳細資訊，請參閱 [orderby 子句](../../../../csharp/language-reference/keywords/orderby-clause.md)。  
+     如需詳細資訊，請參閱 [orderby 子句](../../../language-reference/keywords/orderby-clause.md)。  
   
 #### <a name="to-group-the-results"></a>若要將結果分組  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66483217"
   
 3. 執行應用程式，並在 [主控台]  視窗中檢視結果。  
   
-     如需詳細資訊，請參閱 [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)。  
+     如需詳細資訊，請參閱 [group 子句](../../../language-reference/keywords/group-clause.md)。  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>若要將變數設為隱含類型  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66483217"
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
-     如需 [var](../../../../csharp/language-reference/keywords/var.md) 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
+     如需 [var](../../../language-reference/keywords/var.md) 的詳細資訊，請參閱[隱含類型區域變數](../../classes-and-structs/implicitly-typed-local-variables.md)。  
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>若要依索引鍵值排序群組  
   
@@ -153,11 +153,11 @@ ms.locfileid: "66483217"
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     如需詳細資訊，請參閱 [let 子句](../../../../csharp/language-reference/keywords/let-clause.md)。  
+     如需詳細資訊，請參閱 [let 子句](../../../language-reference/keywords/let-clause.md)。  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>若要在查詢運算式中使用方法語法  
   
-1. 如 [LINQ 中的查詢語法及方法語法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)中所述，某些查詢作業只能使用方法語法來表示。 下列程式碼會針對來源序列中的每個 `Student` 計算總分，然後在該查詢結果上呼叫 `Average()` 方法以計算班級的平均分數。
+1. 如 [LINQ 中的查詢語法及方法語法](./query-syntax-and-method-syntax-in-linq.md)中所述，某些查詢作業只能使用方法語法來表示。 下列程式碼會針對來源序列中的每個 `Student` 計算總分，然後在該查詢結果上呼叫 `Average()` 方法以計算班級的平均分數。
   
      [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
@@ -174,15 +174,15 @@ ms.locfileid: "66483217"
 ## <a name="next-steps"></a>後續步驟  
  熟悉使用 C# 進行查詢的基本概念之後，您即可開始閱讀自己感興趣之特定類型 LINQ 提供者的相關文件和範例：  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
+ [LINQ to XML (C#)](./linq-to-xml-overview.md)  
   
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects (C#)](./linq-to-objects.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Language-Integrated Query (LINQ) (C#)](./index.md)
+- [LINQ 查詢運算式](../../linq-query-expressions/index.md)

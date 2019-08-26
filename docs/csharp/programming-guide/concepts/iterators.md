@@ -2,20 +2,20 @@
 title: 在 C# 中逐一查看集合
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 931f0662b71b4dd99ac4a419c279be5058c61e92
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635512"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594972"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 
-「迭代器」可用來逐步執行集合，例如清單和陣列。
+「迭代器」  可用來逐步執行集合，例如清單和陣列。
 
-迭代器方法或 `get` 存取子會對集合執行自訂反覆運算。 迭代器方法使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式，一次傳回一個項目。 當到達 `yield return` 陳述式時，系統會記住程式碼中的目前位置。 下次呼叫迭代器函式時，便會從這個位置重新開始執行。
+迭代器方法或 `get` 存取子會對集合執行自訂反覆運算。 迭代器方法使用 [yield return](../../language-reference/keywords/yield.md) 陳述式，一次傳回一個項目。 當到達 `yield return` 陳述式時，系統會記住程式碼中的目前位置。 下次呼叫迭代器函式時，便會從這個位置重新開始執行。
 
-您會使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式或使用 LINQ 查詢，透過用戶端程式碼取用迭代器。
+您會使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式或使用 LINQ 查詢，透過用戶端程式碼取用迭代器。
 
 在下列範例中，第一次反覆運算 `foreach` 迴圈會使 `SomeNumbers` 迭代器方法中的執行繼續，直到到達第一個 `yield return` 陳述式為止。 此反覆運算會傳回值 3，並保留迭代器方法中的目前位置。 下次反覆運算迴圈時，迭代器方法中的執行會從上次停止的位置繼續，並且在到達 `yield return` 陳述式時再次停止。 此反覆運算會傳回值 5，並再次保留迭代器方法中的目前位置。 當到達迭代器方法結尾時，迴圈便完成。
 
@@ -43,11 +43,11 @@ public static System.Collections.IEnumerable SomeNumbers()
 您可以使用 `yield break` 陳述式結束反覆項目。
 
 > [!NOTE]
-> 如需本主題中除簡易迭代器範例以外的其他所有範例，請加入 `System.Collections` 和 `System.Collections.Generic` 命名空間的 [using](../../../csharp/language-reference/keywords/using-directive.md) 指示詞。
+> 如需本主題中除簡易迭代器範例以外的其他所有範例，請加入 `System.Collections` 和 `System.Collections.Generic` 命名空間的 [using](../../language-reference/keywords/using-directive.md) 指示詞。
 
 ## <a name="simple-iterator"></a>簡單的 Iterator
 
-下列範例在 [for](../../../csharp/language-reference/keywords/for.md) 迴圈內有一行 `yield return` 陳述式。 在 `Main` 中，每次反覆運算 `foreach` 陳述式主體都會建立迭代器函式的呼叫，以繼續進行下一個 `yield return` 陳述式。
+下列範例在 [for](../../language-reference/keywords/for.md) 迴圈內有一行 `yield return` 陳述式。 在 `Main` 中，每次反覆運算 `foreach` 陳述式主體都會建立迭代器函式的呼叫，以繼續進行下一個 `yield return` 陳述式。
 
 ```csharp
 static void Main()
@@ -336,7 +336,7 @@ public class Stack<T> : IEnumerable<T>
 
 若要查看編譯器的功能，您可以使用 Ildasm.exe 工具，檢視為迭代器方法產生的 Microsoft 中繼語言程式碼。
 
-當您建立 [class](../../../csharp/language-reference/keywords/class.md) 或 [struct](../../../csharp/language-reference/keywords/struct.md) 的迭代器時，您不需要實作整個 <xref:System.Collections.IEnumerator> 介面。 當編譯器偵測到迭代器時，它會自動產生 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601> 介面的 `Current`、`MoveNext` 和 `Dispose` 方法。
+當您建立 [class](../../language-reference/keywords/class.md) 或 [struct](../../language-reference/keywords/struct.md) 的迭代器時，您不需要實作整個 <xref:System.Collections.IEnumerator> 介面。 當編譯器偵測到迭代器時，它會自動產生 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601> 介面的 `Current`、`MoveNext` 和 `Dispose` 方法。
 
 之後每次反覆運算 `foreach` 迴圈 (或直接呼叫 `IEnumerator.MoveNext`)，下一個迭代器程式碼主體都會在上一個 `yield return` 陳述式之後繼續。 然後繼續執行至下一個 `yield return` 陳述式，直到達到迭代器主體結尾，或遇到 `yield break` 陳述式為止。
 
@@ -358,7 +358,7 @@ public class Stack<T> : IEnumerable<T>
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)
-- [yield](../../../csharp/language-reference/keywords/yield.md)
-- [搭配陣列使用 foreach](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)
-- [泛型](../../../csharp/programming-guide/generics/index.md)
+- [foreach、in](../../language-reference/keywords/foreach-in.md)
+- [yield](../../language-reference/keywords/yield.md)
+- [搭配陣列使用 foreach](../arrays/using-foreach-with-arrays.md)
+- [泛型](../generics/index.md)

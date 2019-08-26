@@ -1,15 +1,15 @@
 ---
-title: HOW TO：使用屬性建立 C-C++ 等位 (C#)
+title: 作法：使用屬性建立 C-C++ 等位 (C#)
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdadc9505b93f40c66001ac36345efada2edd270
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599032"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595367"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>HOW TO：使用屬性建立 C/C++ 等位 (C#)
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>作法：使用屬性建立 C/C++ 等位 (C#)
 您可以使用屬性，自訂如何在記憶體中配置結構。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。  
   
 ## <a name="example"></a>範例  
@@ -70,9 +70,9 @@ ms.locfileid: "54599032"
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
-- [屬性](../../../../../docs/standard/attributes/index.md)
-- [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [C# 程式設計指南](../../index.md)
+- [屬性](../../../../standard/attributes/index.md)
+- [反映 (C#)](../reflection.md)
+- [屬性 (C#)](./index.md)
+- [建立自訂屬性 (C#)](./creating-custom-attributes.md)
+- [使用反射存取屬性 (C#)](./accessing-attributes-by-using-reflection.md)

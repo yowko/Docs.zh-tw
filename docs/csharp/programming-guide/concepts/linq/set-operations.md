@@ -2,12 +2,12 @@
 title: 設定作業 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 9e507bbaa39bf040a8ce1564630fb5fbb8c0dbe4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: cea0c0ba4dd6c7f874f69e3ec4a179248397b67d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408908"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591125"
 ---
 # <a name="set-operations-c"></a>設定作業 (C#)
 LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是根據相同或不同集合 (集) 內是否有對等項目而定。  
@@ -47,6 +47,6 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
-- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [如何：合併和比較字串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [如何：尋找兩個清單之間的集合差異 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
+- [如何：合併和比較字串集合 (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
+- [如何：尋找兩個清單之間的集合差異 (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)

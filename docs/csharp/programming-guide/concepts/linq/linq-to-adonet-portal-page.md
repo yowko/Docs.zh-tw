@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (入口網站頁面)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 8c39582ee95619bfddc7b89380e0a86305eeac27
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 3bea3dffb98f0745947e4a672f70df5010bc2824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539509"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924268"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (入口網站頁面)
 LINQ to ADO.NET 可讓您使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 程式設計模型來查詢 ADO.NET 中所有可列舉的物件。  
   
 > [!NOTE]
->  LINQ to ADO.NET 文件位於 .NET Framework SDK 的 ADO.NET 章節︰[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。  
+> LINQ to ADO.NET 文件位於 .NET Framework SDK 的 ADO.NET 章節︰[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。  
   
  有三種不同的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技術：LINQ to DataSet、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 LINQ to Entities。 LINQ to DataSet 可提供更豐富且最佳化的 <xref:System.Data.DataSet> 查詢，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 可讓您直接查詢 SQL Server 資料庫結構描述，而 LINQ to Entities 可讓您查詢實體資料模型。  
   
@@ -29,7 +29,7 @@ LINQ to ADO.NET 可讓您使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 可支援資料庫的預存程序和使用者定義函式，以及物件模型中的繼承。  
   
- 如需詳細資訊，請參閱 [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)。  
+ 如需詳細資訊，請參閱 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)。  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  透過實體資料模型，關聯式資料會公開為 .NET 環境內的物件。 如此一來，物件層就成為理想的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 支援目標，讓程式開發人員可以根據用於建置商務邏輯的語言，針對資料庫編寫查詢。 這項功能稱為 LINQ to Entities。 如需詳細資訊，請參閱 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
@@ -37,4 +37,4 @@ LINQ to ADO.NET 可讓您使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-
 ## <a name="see-also"></a>另請參閱
 
 - [LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)
-- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language-Integrated Query (LINQ) (C#)](./index.md)

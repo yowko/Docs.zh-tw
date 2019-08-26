@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /help compiler option [C#]
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
-ms.openlocfilehash: d6759ec878f34ebd5031fb3465901412f8cbda05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693820"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602916"
 ---
 # <a name="-help---c-compiler-options"></a>-help、-? (C# 編譯器選項)
 這個選項會將編譯器選項清單和每個選項的簡短描述傳送至 stdout。  
@@ -36,5 +36,5 @@ ms.locfileid: "54693820"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

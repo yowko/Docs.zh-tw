@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1c48e42e55025aff0ce1a24a3ef45ddf8005eab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e512f2077c2e6b9feba5024c4eabc2568357ecab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44204313"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965920"
 ---
 # <a name="entity-references-are-preserved"></a>保留實體參照
 當實體參照並未擴充但保留下來時，若 XML 文件物件模型 (DOM) 遇到實體參照，就會建置 **XmlEntityReference** 節點。  
@@ -30,7 +30,7 @@ ms.locfileid: "44204313"
  **XmlEntityReference** 的子節點是在遇到實體宣告時，由 **XmlEntity** 節點建立的所有子節點的複本。  
   
 > [!NOTE]
->  從 **XmlEntity** 複製的節點不一定就是曾置於實體參照節點下的複本。 在實體參照節點的範圍中可能有命名空間，這會影響子節點的最後組態。  
+> 從 **XmlEntity** 複製的節點不一定就是曾置於實體參照節點下的複本。 在實體參照節點的範圍中可能有命名空間，這會影響子節點的最後組態。  
   
  根據預設，會保留 `&abc;` 之類的一般實體，且一律會建立 **XmlEntityReference** 節點。  
   

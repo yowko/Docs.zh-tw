@@ -2,12 +2,12 @@
 title: 轉換資料型別 (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 918a9fbfc523e62c7b4a5d915c28c00ea781d3e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9e8b7726b94871a17a4be50a9b24d8b73abcf79c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597716"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594610"
 ---
 # <a name="converting-data-types-c"></a>轉換資料型別 (C#)
 轉換方法會變更輸入物件的類型。  
@@ -77,7 +77,7 @@ static void Cast()
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
-- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [from 子句](../../../../csharp/language-reference/keywords/from-clause.md)
-- [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [如何：使用 LINQ 查詢 ArrayList (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
+- [from 子句](../../../language-reference/keywords/from-clause.md)
+- [LINQ 查詢運算式](../../linq-query-expressions/index.md)
+- [如何：使用 LINQ 查詢 ArrayList (C#)](./how-to-query-an-arraylist-with-linq.md)

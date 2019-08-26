@@ -2,12 +2,12 @@
 title: 作法：合併和比較字串集合 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: cdddf0aaac4264ae70c89590ef61e7b1bbf4cb9b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3fe1f9dbac864f4eca8ea92f84c35d290ab14642
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585967"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594098"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>作法：合併和比較字串集合 (LINQ) (C#)
 本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。  
@@ -173,5 +173,5 @@ class MergeStrings
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 和字串 (C#)](./linq-and-strings.md)
+- [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

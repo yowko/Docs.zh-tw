@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: ecf07a11b92dccee888fb8113b6f3e2f333cf591
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57c7811246dd1de3f009033403ec269082915c09
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595332"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590033"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>作法：取得有關檔案、資料夾和磁碟機的資訊 (C# 程式設計手冊)
 在 .NET Framework 中，您可以使用下列類別來存取檔案系統資訊：  
@@ -56,5 +56,5 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)
+- [C# 程式設計指南](../index.md)
+- [檔案系統和登錄 (C# 程式設計指南)](./index.md)

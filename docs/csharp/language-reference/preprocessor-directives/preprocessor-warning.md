@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 55768a354b2841021607ed40b4ef87b9767edcad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d09cd95ef4d53e3f11d9feb9675ebba22d6f857
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620314"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608519"
 ---
 # <a name="warning-c-reference"></a>#warning (C# 參考)
 `#warning` 可讓您從程式碼中的特定位置產生 [CS1030](../../misc/cs1030.md) 層級一的編譯器警告。 例如：  
@@ -22,7 +22,7 @@ ms.locfileid: "54620314"
 ```  
   
 ## <a name="remarks"></a>備註
- `#warning` 常見於條件指示詞中。 也可以使用 [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md) 產生使用者定義錯誤。  
+ `#warning` 常見於條件指示詞中。 也可以使用 [#error](./preprocessor-error.md) 產生使用者定義錯誤。  
   
 ## <a name="example"></a>範例  
 
@@ -43,6 +43,6 @@ class MainClass
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 前置處理器指示詞](./index.md)

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 280b818534238207f901e1dcd125e03f5ce1d1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 783814a575e95fc9deb5c9cdef235a5636f5f529
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675181"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602140"
 ---
 # <a name="get-c-reference"></a>get (C# 參考)
 
-`get` 關鍵字會在屬性或索引子中定義「存取子」方法，以傳回屬性值或索引子項目。 如需詳細資訊，請參閱[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引子](../../../csharp/programming-guide/indexers/index.md)。  
+`get` 關鍵字會在屬性或索引子中定義「存取子」  方法，以傳回屬性值或索引子項目。 如需詳細資訊，請參閱[屬性](../../programming-guide/classes-and-structs/properties.md)、[自動實作的屬性](../../programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引子](../../programming-guide/indexers/index.md)。  
   
 下列範例會為名為 `Seconds` 的屬性定義 `get` 和 `set` 存取子。 它使用名為 `_seconds` 的私用欄位來支援屬性值。  
  
@@ -37,7 +37,7 @@ ms.locfileid: "54675181"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 關鍵字](./index.md)
+- [屬性](../../programming-guide/classes-and-structs/properties.md)

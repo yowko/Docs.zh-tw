@@ -12,12 +12,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 25a9ee1b27836dfb00dcbc72712ed068639fa2fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bec99ca582070a99fd8b734ef8a7b9e71d945488
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320028"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606608"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (C# 編譯器選項)
 **-optimize** 選項啟用或停用由編譯器執行的最佳化，讓您的輸出檔案變得更小、更快且更有效率。  
@@ -37,13 +37,13 @@ ms.locfileid: "59320028"
   
  **-o** 是 **-optimize** 的簡短形式。  
   
- 它可以合併 **-optimize** 和 [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) 選項。  
+ 它可以合併 **-optimize** 和 [-debug](./debug-compiler-option.md) 選項。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性]  頁面。  
   
-2. 按一下 [建置] 屬性頁面。  
+2. 按一下 [建置]  屬性頁面。  
   
 3. 修改**最佳化程式碼**屬性。  
   
@@ -58,5 +58,5 @@ csc t2.cs -optimize
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

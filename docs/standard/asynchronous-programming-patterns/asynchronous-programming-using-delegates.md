@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41c9793900c3e7accd5463a19de10d1cb81afd59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce77e57eb049c031ed506e8812fff59ba97a978e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950854"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>使用委派非同步設計程式
 委派可讓您以非同步方式呼叫同步方法。 當您同步呼叫委派時，`Invoke` 方法會在目前的執行緒上直接呼叫目標方法。 如果呼叫 `BeginInvoke` 方法，通用語言執行平台 (CLR) 會將要求排入佇列，並立即返回呼叫端。 在執行緒集區中的執行緒上會非同步呼叫目標方法。 送出要求的原始執行緒不被佔用，可以繼續與目標方法平行執行。 如果已在 `BeginInvoke` 方法呼叫中指定回撥方法，目標方法結束時會呼叫回撥方法。 在回撥方法中，`EndInvoke` 方法會取得傳回值和任何輸入/輸出或僅輸出參數。 如果呼叫 `BeginInvoke` 時未指定回撥方法，則可以從呼叫 `BeginInvoke` 的執行緒呼叫 `EndInvoke`。  
   
 > [!IMPORTANT]
->  編譯器應該利用由使用者指定的委派簽章，使用 `Invoke`、`BeginInvoke` 和 `EndInvoke` 方法發出委派類別。 `BeginInvoke` 和 `EndInvoke` 方法應該裝飾為原生。 因為這些方法標示為原生，CLR 會在類別載入時自動提供實作。 載入器可確保不覆寫它們。  
+> 編譯器應該利用由使用者指定的委派簽章，使用 `Invoke`、`BeginInvoke` 和 `EndInvoke` 方法發出委派類別。 `BeginInvoke` 和 `EndInvoke` 方法應該裝飾為原生。 因為這些方法標示為原生，CLR 會在類別載入時自動提供實作。 載入器可確保不覆寫它們。  
   
 ## <a name="in-this-section"></a>本節內容  
  [非同步呼叫同步方法](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  

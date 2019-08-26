@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b947ea2bfabe1c3fa9afb43cb5ecc41ab92be89
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647243"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929910"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (隔離儲存區工具)
 隔離儲存區 (Isolated Storage) 工具可以列出或移除目前使用者的所有現有存放區。  
@@ -56,12 +56,12 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 - 電腦存放區為電腦上所有使用者通用，並且存放在該電腦的通用目錄下。  
   
     > [!NOTE]
-    >  電腦存放區是 .NET Framework 2.0 版中的新功能。  
+    > 電腦存放區是 .NET Framework 2.0 版中的新功能。  
   
  使用者的漫遊實際上是否啟用，並不會影響 Storeadm.exe 的系統管理。 執行該工具而沒有使用任何選項時，會將所有動作套用至本機存放區。 執行該工具搭配 **/roaming** 選項時，會將所有動作套用至能夠漫遊的存放區。 執行該工具搭配 **/machine** 選項時，會將所有動作套用至電腦存放區。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [工具](../../../docs/framework/tools/index.md)
-- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)
+- [隔離儲存區](../../standard/io/isolated-storage.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 342c570bff89d4c03780cdc280199c722b53890a
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: c082e5dbb1f7b2bb8c5236d0c480302a6e387ebe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170456"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910997"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  
   
 > [!NOTE]
->  如需下載和安裝 .NET Framework 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
+> 如需下載和安裝 .NET Framework 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
   
  下表摘要說明 .NET Framework 版本記錄，並將每個版本與 Visual Studio、Windows 和 Windows Server 相互關聯。 請注意，Visual Studio 提供多目標功能，因此不受限於所列出的 .NET Framework 版本。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "67170456"
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
  
-|.NET Framework 版本|CLR 版本|包含在<br /> Visual Studio<br/>版本|✓ 隨附於<br />+ 可安裝於<br />Windows|✓ 隨附於<br />+ 可安裝於<br />Windows Server|判斷已安裝的 .NET 版本|  
+|.NET Framework 版本|CLR 版本|包含在<br /> Visual Studio<br/>version|✓ 隨附於<br />+ 可安裝於<br />Windows|✓ 隨附於<br />+ 可安裝於<br />Windows Server|判斷已安裝的 .NET 版本|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
 |4.8<br/><br/>[新功能](../whats-new/index.md#whats-new-in-net-framework-48)<br/><br/>[協助工具的新功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-48)<br /><br >[版本資訊](https://github.com/Microsoft/dotnet/tree/master/releases/net48/README.md)|4| | ✓ 10 2019 年 5 月更新<br/><br/> + 10 2018 年 10 月更新 (版本 1809) <br/> + 10 2018 年 4 月更新 (版本 1803) <br/> + 10 Fall Creators Update (版本 1709) <br/> + 10 Creators Update (版本 1703) <br/> + 10 Anniversary Update (版本 1607) <br/> + 8.1 <br/> +7 | + Windows Server 2019<br/> + Windows Server，版本 1809 <br/> + Windows Server，版本 1803 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 528040 (Windows 10 2019 年 5 月更新) <br/> - 528049 (所有其他作業系統版本) <br/><br/> (請參閱[相關指示](how-to-determine-which-versions-are-installed.md))|
 |4.7.2<br/><br/>[新功能](../whats-new/index.md#whats-new-in-net-framework-472)<br/><br/>[協助工具的新功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-472)<br /><br >[版本資訊](https://github.com/Microsoft/dotnet/tree/master/releases/net472/README.md)|4| | ✓ 10 2018 年 10 月更新 (版本 1809) <br/> ✓ 10 2018 年 4 月更新 (版本 1803) <br/><br/> + 10 Fall Creators Update (版本 1709) <br/> + 10 Creators Update (版本 1703) <br/> + 10 Anniversary Update (版本 1607) <br/> + 8.1 <br/> +7 | ✓ Windows Server 2019<br/> ✓ Windows Server，版本 1809 <br/> ✓ Windows Server，版本 1803 <br/><br/> + Windows Server，版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461814 (Windows 10 2018 年 10 月更新) <br/> - 461808 (Windows 10 2018 年 4 月更新及 Windows Server，版本 1803) <br/> - 461814 (所有其他作業系統版本) <br/><br/> (請參閱[相關指示](how-to-determine-which-versions-are-installed.md))|

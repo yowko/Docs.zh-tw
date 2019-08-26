@@ -2,12 +2,12 @@
 title: 作法：從 XmlReader 串流 XML 片段 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: 6937a7160c83def3238c8d2fe3e2b83c996396fd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c27c2165af95b8b781564e14efc0668f596e3057
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484904"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592403"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>作法：從 XmlReader 串流 XML 片段 (C#)
 當您必須處理大型 XML 檔案時，可能無法將整個 XML 樹狀載入記憶體中。 這個主題顯示如何使用 <xref:System.Xml.XmlReader> 串流片段。  
@@ -18,9 +18,9 @@ ms.locfileid: "66484904"
   
  如果您要建立部分樹狀結構，您可以具現化 <xref:System.Xml.XmlReader>、將讀取器定位在您要轉換為 <xref:System.Xml.Linq.XElement> 樹狀結構的節點上，然後建立 <xref:System.Xml.Linq.XElement> 物件。  
   
- [如何：串流 XML 片段並存取標頭資訊 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 主題包含如何串流更複雜文件的資訊與範例。  
+ [如何：串流 XML 片段並存取標頭資訊 (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) 主題包含如何串流更複雜文件的資訊與範例。  
   
- [如何：執行大型 XML 文件的串流轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) 主題包含範例，示範如何使用 LINQ to XML 來轉換超大型 XML 文件，同時將記憶體使用量維持在很小。  
+ [如何：執行大型 XML 文件的串流轉換 (C#)](./how-to-perform-streaming-transform-of-large-xml-documents.md) 主題包含範例，示範如何使用 LINQ to XML 來轉換超大型 XML 文件，同時將記憶體使用量維持在很小。  
   
 ## <a name="example"></a>範例  
  這個範例會建立自訂座標軸方法。 您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢進行查詢。 自訂座標軸方法  `StreamRootChildDoc` 是一種方法，特別針對讀取具有重複 `Child` 項目的文件而設計。  

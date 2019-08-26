@@ -2,12 +2,12 @@
 title: WordprocessingML 文件以及樣式
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 4f465294ad299e83156ca458f28717c3abae741f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8f335303f2e288103520d0bedf81e295ab56efef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483147"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590877"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>WordprocessingML 文件以及樣式
 更複雜的 WordprocessingML 文件擁有使用樣式格式化的段落。  
@@ -17,7 +17,7 @@ ms.locfileid: "66483147"
  存取封裝時，最好透過這些部分之間的關聯性 (而非使用任意路徑) 進行。 這個問題超出＜管理 WordprocessingML 文件中的內容＞教學課程的範圍，但隨附在此教學課程中的範例程式會示範正確的方法。  
   
 ## <a name="a-document-that-uses-styles"></a>使用樣式的文件  
- 顯示在 [WordprocessingML 文件的組織結構 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 主題中的 WordML 範例相當簡單。 下列文件較為複雜：該文件擁有使用樣式格式化的段落。 查看組成 Office Open XML 文件之 XML 的最簡單方式是執行[輸出 Office Open XML 文件部分內容的範例 (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)。  
+ 顯示在 [WordprocessingML 文件的組織結構 (C#)](./shape-of-wordprocessingml-documents.md) 主題中的 WordML 範例相當簡單。 下列文件較為複雜：該文件擁有使用樣式格式化的段落。 查看組成 Office Open XML 文件之 XML 的最簡單方式是執行[輸出 Office Open XML 文件部分內容的範例 (C#)](./example-that-outputs-office-open-xml-document-parts.md)。  
   
  在下列文件中，第一個段落的樣式為 `Heading1`。 具有預設樣式的段落有好幾個。 同時，具有樣式 `Code` 的段落也有好幾個。 由於這個相對複雜度，這是利用 LINQ to XML 進行剖析更有趣的文件。  
   

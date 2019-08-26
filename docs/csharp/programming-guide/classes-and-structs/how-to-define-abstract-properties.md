@@ -6,15 +6,15 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: ef19b80e7f4c32830aabfcf1ad595348c2107228
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fae526f5dcd452fbc381ee86c892b72e61956f0b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599977"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596862"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>作法：定義抽象屬性 (C# 程式設計手冊)
-下例示範如何定義[抽象](../../../csharp/language-reference/keywords/abstract.md)屬性。 抽象屬性宣告不提供屬性存取子實作 -- 它會宣告類別支援屬性，但保留衍生類別的存取子實作。 下例示範如何實作繼承自基底類別的抽象屬性。  
+下例示範如何定義[抽象](../../language-reference/keywords/abstract.md)屬性。 抽象屬性宣告不提供屬性存取子實作 -- 它會宣告類別支援屬性，但保留衍生類別的存取子實作。 下例示範如何實作繼承自基底類別的抽象屬性。  
   
  這個範例包含三個檔案，每個檔案都是各自編譯，產生的組件是下次編譯參考的對象：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "64599977"
     public abstract double Area  
     ```  
   
-- 宣告抽象屬性時 (例如本例的 `Area`)，您只要指出有哪些屬性存取子可用即可，不用實作它們。 本例中只有 [get](../../../csharp/language-reference/keywords/get.md) 存取子可用，所以此屬性是唯讀的。  
+- 宣告抽象屬性時 (例如本例的 `Area`)，您只要指出有哪些屬性存取子可用即可，不用實作它們。 本例中只有 [get](../../language-reference/keywords/get.md) 存取子可用，所以此屬性是唯讀的。  
   
 ## <a name="example"></a>範例  
  下列程式碼會示範 `Shape` 的三個子類別，以及它們如何覆寫 `Area` 屬性以提供它們自己的實作。  
@@ -55,8 +55,8 @@ ms.locfileid: "64599977"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C# 程式設計指南](../index.md)
+- [類別和結構](./index.md)
+- [抽象和密封類別以及類別成員](./abstract-and-sealed-classes-and-class-members.md)
+- [屬性](./properties.md)
 - [如何：使用命令列建立和使用組件](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

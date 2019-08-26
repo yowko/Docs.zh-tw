@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: dde621395f407cd64e047ddfe8c6539e976b3061
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633016"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608461"
 ---
 # <a name="query-keywords-c-reference"></a>查詢關鍵字 (C# 參考)
 
@@ -40,5 +40,5 @@ ms.locfileid: "65633016"
 
 - [C# 關鍵字](index.md)
 - [LINQ (Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)
-- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ 查詢運算式](../../programming-guide/linq-query-expressions/index.md)
+- [開始使用 C# 中的 LINQ](../../programming-guide/concepts/linq/getting-started-with-linq.md)

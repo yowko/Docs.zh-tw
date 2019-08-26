@@ -2,12 +2,12 @@
 title: 作法：建立簽署的 Friend 組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7715726a200150b044fb8e97216fa02d0e784838
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582975"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595935"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>作法：建立簽署的 Friend 組件 (C#)
 此範例示範如何搭配具有強式名稱的組件使用 friend 組件。 這兩個組件都必須具有強式名稱。 雖然此範例中的兩個組件使用相同的金鑰，但您可以針對這兩個組件使用不同的金鑰。  
@@ -79,7 +79,7 @@ ms.locfileid: "64582975"
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用 `/out` 編譯器選項，明確指定輸出組件 (.exe 或 .dll) 的名稱。  如需詳細資訊，請參閱 [/out (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)。  
+     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用 `/out` 編譯器選項，明確指定輸出組件 (.exe 或 .dll) 的名稱。  如需詳細資訊，請參閱 [/out (C# 編譯器選項)](../../../language-reference/compiler-options/out-compiler-option.md)。  
   
 7. 執行 friend_signed_B.exe 檔案。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "64582975"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 中的組件](../../../../standard/assembly/index.md)
 - [Friend 組件](../../../../standard/assembly/friend-assemblies.md)
-- [如何：建立未簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
-- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [如何：建立未簽署的 Friend 組件 (C#)](./how-to-create-unsigned-friend-assemblies.md)
+- [/keyfile](../../../language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe (強式名稱工具)](../../../../framework/tools/sn-exe-strong-name-tool.md)
-- [建立和使用強式名稱的組件](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
+- [建立和使用強式名稱的組件](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [C# 程式設計指南](../../index.md)

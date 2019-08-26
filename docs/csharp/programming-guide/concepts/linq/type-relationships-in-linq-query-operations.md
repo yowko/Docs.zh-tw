@@ -12,19 +12,19 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b58219a8a4d45ce01f80fd367ed56b13a773e4bc
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 42519a74be1bd6934bc7a3304d154321697d128c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483407"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591016"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 查詢作業中的類型關聯性 (C#)
 若要有效地撰寫查詢，您應該了解完整查詢作業中的變數類型如何彼此相關。 如果您了解這些關聯性，則可更輕鬆地理解文件中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 範例和程式碼範例。 此外，您將了解使用 `var` 讓變數成為隱含類型時的幕後作業。  
   
  在資料來源、查詢本身和查詢執行中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢作業都是強型別。 查詢中的變數類型必須與資料來源中的項目類型以及 `foreach` 陳述式中的反覆運算變數類型相容。 如果類型錯誤可以在使用者遇到它們之前進行更正，則這個強型別可確保在編譯時期攔截到它們。  
   
- 為了示範這些類型關聯性，後面的大部分範例都會使用所有變數的明確類型。 最後一個範例示範即使使用隱含類型時，還是如何使用 [var](../../../../csharp/language-reference/keywords/var.md) 來套用相同原則。  
+ 為了示範這些類型關聯性，後面的大部分範例都會使用所有變數的明確類型。 最後一個範例示範即使使用隱含類型時，還是如何使用 [var](../../../language-reference/keywords/var.md) 來套用相同原則。  
   
 ## <a name="queries-that-do-not-transform-the-source-data"></a>未轉換來源資料的查詢  
  下圖顯示未對資料執行任何轉換的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 查詢作業。 來源包含一系列的字串，而且查詢輸出也是一系列的字串。  
@@ -59,8 +59,8 @@ ms.locfileid: "66483407"
 3. 因為查詢變數的類型是隱含的，所以 `foreach` 迴圈中的反覆運算變數也是隱含的。  
   
 ## <a name="letting-the-compiler-infer-type-information"></a>讓編譯器推斷類型資訊  
- 雖然您應該了解查詢作業中的類型關聯性，但可以選擇讓編譯器為您執行所有工作。 [var](../../../../csharp/language-reference/keywords/var.md) 關鍵字可以用於查詢作業中的任何區域變數。 下圖與先前討論的範例 2 類似。 不過，編譯器會提供查詢作業中每個變數的強型別。  
+ 雖然您應該了解查詢作業中的類型關聯性，但可以選擇讓編譯器為您執行所有工作。 [var](../../../language-reference/keywords/var.md) 關鍵字可以用於查詢作業中的任何區域變數。 下圖與先前討論的範例 2 類似。 不過，編譯器會提供查詢作業中每個變數的強型別。  
   
  ![顯示具有隱含類型之類型流程的圖表。](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
- 如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
+ 如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../classes-and-structs/implicitly-typed-local-variables.md)。  

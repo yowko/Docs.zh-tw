@@ -1,5 +1,5 @@
 ---
-title: 如何：註冊取消要求的回呼
+title: 作法：註冊取消要求的回呼
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2d61ba254a76235a12ca5dda23fdecb8838ae75
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 187d47f04761b85420f894c98d9495cd74c0c253
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863578"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913293"
 ---
-# <a name="how-to-register-callbacks-for-cancellation-requests"></a>如何：註冊取消要求的回呼
+# <a name="how-to-register-callbacks-for-cancellation-requests"></a>作法：註冊取消要求的回呼
 下列範例示範如何註冊委派，當因為在建立權杖的物件上呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A>，而使 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性變成 true 時，將會叫用此委派。 您可以使用這個技巧來取消原本不支援整合取消架構的非同步作業，以及解除封鎖可能會等候非同步作業完成的方法。  
   
 > [!NOTE]
->  啟用 [Just My Code] 時，Visual Studio 在某些情況下會在擲回例外狀況的字行上中斷，並顯示錯誤訊息，指出「使用者程式碼未處理例外狀況」。 這個錯誤是良性的。 您可以按 F5 鍵繼續，並查看下面範例中示範的例外狀況處理行為。 若要防止 Visual Studio 在遇到第一個錯誤時就中斷，只要取消核取 [工具]、[選項]、[偵錯]、[一般] 下的 [Just My Code] 核取方塊即可。  
+> 啟用 [Just My Code] 時，Visual Studio 在某些情況下會在擲回例外狀況的字行上中斷，並顯示錯誤訊息，指出「使用者程式碼未處理例外狀況」。 這個錯誤是良性的。 您可以按 F5 鍵繼續，並查看下面範例中示範的例外狀況處理行為。 若要防止 Visual Studio 在遇到第一個錯誤時就中斷，只要取消核取 [工具]、[選項]、[偵錯]、[一般]  下的 [Just My Code] 核取方塊即可。  
   
 ## <a name="example"></a>範例  
  在下列範例中，<xref:System.Net.WebClient.CancelAsync%2A> 方法註冊為透過取消語彙基元要求取消時，所要叫用的方法。  

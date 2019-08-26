@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661539"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608363"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術運算子 (C# 參考)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67661539"
 
 ## <a name="increment-operator-"></a>遞增運算子 ++
 
-一元遞增運算子 `++` 的運算元遞增量為 1。 運算元必須是變數、[屬性](../../programming-guide/classes-and-structs/properties.md)存取或[索引子](../../../csharp/programming-guide/indexers/index.md)存取。
+一元遞增運算子 `++` 的運算元遞增量為 1。 運算元必須是變數、[屬性](../../programming-guide/classes-and-structs/properties.md)存取或[索引子](../../programming-guide/indexers/index.md)存取。
 
 遞增運算子支援兩種形式：後置遞增運算子 `x++` 和前置遞增運算子 `++x`。
 
@@ -63,7 +63,7 @@ ms.locfileid: "67661539"
 
 ## <a name="decrement-operator---"></a>遞減運算子 --
 
-一元遞減運算子 (`--`) 的運算元遞減量為 1。 運算元必須是變數、[屬性](../../programming-guide/classes-and-structs/properties.md)存取或[索引子](../../../csharp/programming-guide/indexers/index.md)存取。
+一元遞減運算子 (`--`) 的運算元遞減量為 1。 運算元必須是變數、[屬性](../../programming-guide/classes-and-structs/properties.md)存取或[索引子](../../programming-guide/indexers/index.md)存取。
 
 遞減運算子支援兩種形式：後置遞減運算子 `x--` 和前置遞減運算子 `--x`。
 

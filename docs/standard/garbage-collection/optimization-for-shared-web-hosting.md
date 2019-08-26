@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: affdbb357cac14f258822591c3817c93ce6077f8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033476"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915907"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>共用 Web 裝載的最佳化
 如果您是透過裝載數個小型 Web 站台所共用之伺服器的系統管理員，則可以將下列 `gcTrimCommitOnLowMemory` 設定加入 .NET 目錄中 Aspnet.config 檔案的 `runtime` 節點，以最佳化效能與增加站台的容量：  
@@ -22,7 +22,7 @@ ms.locfileid: "48033476"
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
->  此設定僅建議針對共用 Web 裝載案例使用。  
+> 此設定僅建議針對共用 Web 裝載案例使用。  
   
  因為記憶體回收行程會保留供未來配置使用的記憶體，其認可空間可以超過嚴格需要的空間。 您可以減少這個空間，以容納系統記憶體負載過重的時間。 減少此認可空間會改善效能，並擴充容量以裝載更多站台。  
   

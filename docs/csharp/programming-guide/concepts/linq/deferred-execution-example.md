@@ -2,12 +2,12 @@
 title: 延後執行範例 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: c9ac87cf2b2af4114e5a20c211b4a6b3f7fced6b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a934645d0d7ad807e1524031ca3f023f7b11c5b4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486103"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594553"
 ---
 # <a name="deferred-execution-example-c"></a>延後執行範例 (C#)
 本主題顯示延後執行與延遲評估如何影響您 LINQ to XML 查詢的執行。  
@@ -61,8 +61,8 @@ Main: str GHI
   
  本教學課程中的下一個主題說明將查詢鏈結在一起：  
   
-- [鏈結查詢範例 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+- [鏈結查詢範例 (C#)](./chaining-queries-example.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [教學課程：將查詢鏈結在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

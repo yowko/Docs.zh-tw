@@ -2,15 +2,15 @@
 title: 在委派中使用變異數 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 44a6153a9a1c0aa0aebb18710ea9e770fd4e57fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00e11d4ce755c8c75b73023fec14d95ebc96b4fe
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667267"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595272"
 ---
 # <a name="using-variance-in-delegates-c"></a>在委派中使用變異數 (C#)
-當您將方法指派給委派時，「共變數」和「反變數」可讓您彈性地比對委派類型和方法簽章。 共變數允許某個方法的傳回型別與定義於委派中的傳回型別相比，其衍生程度較大。 反變數允許某個方法的參數類型與委派類型中的參數類型相比，其衍生程度較小。  
+當您將方法指派給委派時，「共變數」  和「反變數」  可讓您彈性地比對委派類型和方法簽章。 共變數允許某個方法的傳回型別與定義於委派中的傳回型別相比，其衍生程度較大。 反變數允許某個方法的參數類型與委派類型中的參數類型相比，其衍生程度較小。  
   
 ## <a name="example-1-covariance"></a>範例 1：共變數  
   
@@ -79,5 +79,5 @@ public Form1()
   
 ## <a name="see-also"></a>另請參閱
 
-- [委派中的差異 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [針對 Func 與 Action 泛型委派使用變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [委派中的差異 (C#)](./variance-in-delegates.md)
+- [針對 Func 與 Action 泛型委派使用變異數 (C#)](./using-variance-for-func-and-action-generic-delegates.md)

@@ -5,18 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 675369936b9f90620b03365104255a622855fa9f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f62255be9c74a221836b23058bd48a835f38f629
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401792"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608624"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾詞 (C# 參考)
 
 `new` 關鍵字做為宣告修飾詞使用時，會明確隱藏繼承自基底類別的成員。 當您隱藏繼承的成員時，該成員的衍生版本就會取代基底類別版本。 雖然您可以在不使用 `new` 修飾詞的情況下隱藏成員，但是編譯器會發出警告。 如果您使用 `new` 明確隱藏成員，它會隱藏這個警告。
 
-您也可以使用 `new` 關鍵字來[建立型別執行個體](../operators/new-operator.md)或作為[泛型型別條件約束](../keywords/new-constraint.md)。
+您也可以使用 `new` 關鍵字來[建立型別執行個體](../operators/new-operator.md)或作為[泛型型別條件約束](./new-constraint.md)。
 
 若要隱藏繼承的成員，請在衍生類別中使用相同的成員名稱宣告該成員，並且使用 `new` 關鍵讚加以修飾。 例如：
 

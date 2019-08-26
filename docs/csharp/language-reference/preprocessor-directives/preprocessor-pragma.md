@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 8b39d6760a5e30986d5d4bbe9bb1281dbf6742a2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 65ca38ff6993117b6ed9f716d4ac93ba2d4a9ddf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471001"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605664"
 ---
 # <a name="pragma-c-reference"></a>#pragma (C# 參考)
 `#pragma` 將編譯編譯器所在檔案的特殊指示提供給編譯器。 編譯器必須支援指示。 換句話說，您不能使用 `#pragma` 來建立自訂前置處理指示。 Microsoft C# 編譯器支援下列兩個 `#pragma` 指示：  
   
- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
+ [#pragma warning](./preprocessor-pragma-warning.md)  
   
- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
+ [#pragma checksum](./preprocessor-pragma-checksum.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,8 +36,8 @@ ms.locfileid: "57471001"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)
-- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
-- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 前置處理器指示詞](./index.md)
+- [#pragma warning](./preprocessor-pragma-warning.md)
+- [#pragma checksum](./preprocessor-pragma-checksum.md)

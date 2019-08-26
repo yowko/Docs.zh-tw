@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d47fa4d4ef7a55182dd27aa6f64542fec1fa99c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40d7ef11dde882d99c21fe541c2689c52a634edf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704312"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915942"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 結構描述編譯
 **XmlSchemaCollection** 是一種快取 (Cache) 或程式庫，您可在此儲存和驗證 XML 資料精簡 (XDR) 和 XML 結構描述定義語言 (XSD) 結構描述。 **XmlSchemaCollection** 會藉由在記憶體中快取結構描述，而不是從檔案或 URL 存取它們的方式來提升效能。  
   
 > [!NOTE]
->  雖然 **XmlSchemaCollection** 類別同時儲存了 XDR 結構描述和 XML 結構描述，但任何會使用或傳回 **XmlSchema** 物件的方法和屬性都只能支援 XML 結構描述。  
+> 雖然 **XmlSchemaCollection** 類別同時儲存了 XDR 結構描述和 XML 結構描述，但任何會使用或傳回 **XmlSchema** 物件的方法和屬性都只能支援 XML 結構描述。  
   
 > [!IMPORTANT]
->  <xref:System.Xml.Schema.XmlSchemaCollection> 類別目前已過時，並已由 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。 如需有關 <xref:System.Xml.Schema.XmlSchemaSet> 類別的詳細資訊，請參閱[用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
+> <xref:System.Xml.Schema.XmlSchemaCollection> 類別目前已過時，並已由 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。 如需有關 <xref:System.Xml.Schema.XmlSchemaSet> 類別的詳細資訊，請參閱[用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
   
 ## <a name="add-schemas-to-the-collection"></a>將結構描述加入集合  
  **XmlSchemaCollection** 的 **Add** 方法會將結構描述載入集合，這時結構描述會和命名空間 URI 建立關聯。 對 XML 結構描述來說，命名空間 URI 通常是結構描述的目標命名空間。 對 XDR 結構描述來說，命名空間 URI 是當將結構描述加入集合時指定的命名空間。  

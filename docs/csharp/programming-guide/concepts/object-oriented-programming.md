@@ -2,12 +2,12 @@
 title: 物件導向程式設計 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8bf02cbfca30d6dfc29c4e5e6c30a5013931e71b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398070"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659872"
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
 
@@ -79,9 +79,9 @@ struct SampleStruct
 
 如需詳細資訊，請參閱:
 
-- [class](../../../csharp/language-reference/keywords/class.md)
+- [class](../../language-reference/keywords/class.md)
 
-- [struct](../../../csharp/language-reference/keywords/struct.md)
+- [struct](../../language-reference/keywords/struct.md)
 
 ### <a name="Members"></a> 類別成員
 
@@ -133,9 +133,9 @@ class SampleClass
 
 如需詳細資訊，請參閱:
 
-- [get](../../../csharp/language-reference/keywords/get.md)
+- [get](../../language-reference/keywords/get.md)
 
-- [set](../../../csharp/language-reference/keywords/set.md)
+- [set](../../language-reference/keywords/set.md)
 
 #### <a name="Methods"></a> 方法
 
@@ -166,9 +166,9 @@ public int sampleMethod(int sampleParam) {}
 
 如需詳細資訊，請參閱:
 
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [方法](../classes-and-structs/methods.md)
 
-- [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [擴充方法](../classes-and-structs/extension-methods.md)
 
 #### <a name="Constructors"></a> 建構函式
 
@@ -188,7 +188,7 @@ public class SampleClass
 
 如需詳細資訊，請參閱:
 
-[建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)。
+[建構函式](../classes-and-structs/constructors.md)。
 
 #### <a name="Finalizers"></a> 完成項
 
@@ -200,7 +200,7 @@ public class SampleClass
 
 事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或引發) 事件的類別稱為「發行者」  ，而接收 (或處理) 事件的類別則稱為「訂閱者」  。 如需事件的詳細資訊以及如何引發和處理事件，請參閱[處理和引發事件](../../../standard/events/index.md)。
 
-- 若要宣告類別中的事件，請使用 [event](../../../csharp/language-reference/keywords/event.md) 關鍵字。
+- 若要宣告類別中的事件，請使用 [event](../../language-reference/keywords/event.md) 關鍵字。
 
 - 要引發事件，請叫用事件委派。
 
@@ -234,14 +234,14 @@ Container.Nested nestedInstance = new Container.Nested()
 
 |C# 修飾詞|定義|
 |------------------|----------------|
-|[public](../../../csharp/language-reference/keywords/public.md)|類型或成員可由相同組件或參考該組件的另一個組件中的任何其他程式碼存取。|
-|[private](../../../csharp/language-reference/keywords/private.md)|類型或成員只能由相同類別中的程式碼存取。|
-|[protected](../../../csharp/language-reference/keywords/protected.md)|類型或成員只能由相同類別中，或是衍生類別中的程式碼存取。|
-|[internal](../../../csharp/language-reference/keywords/internal.md)|類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。|
-|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|類型或成員可由相同組件中的任何程式碼，或是其他組件中的任何衍生類別存取。|
-|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|只有在基底類別組件中，於相同類別或衍生類別內的程式碼才能存取類型或成員。|
+|[public](../../language-reference/keywords/public.md)|類型或成員可由相同組件或參考該組件的另一個組件中的任何其他程式碼存取。|
+|[private](../../language-reference/keywords/private.md)|類型或成員只能由相同類別中的程式碼存取。|
+|[protected](../../language-reference/keywords/protected.md)|類型或成員只能由相同類別中，或是衍生類別中的程式碼存取。|
+|[internal](../../language-reference/keywords/internal.md)|類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。|
+|[protected internal](../../language-reference/keywords/protected-internal.md)|類型或成員可由相同組件中的任何程式碼，或是其他組件中的任何衍生類別存取。|
+|[private protected](../../language-reference/keywords/private-protected.md)|只有在基底類別組件中，於相同類別或衍生類別內的程式碼才能存取類型或成員。|
 
-如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。
+如需詳細資訊，請參閱[存取修飾詞](../classes-and-structs/access-modifiers.md)。
 
 ### <a name="InstantiatingClasses"></a> 具現化類別
 
@@ -270,9 +270,9 @@ SampleClass sampleObject = new SampleClass
 
 如需詳細資訊，請參閱:
 
-- [new 運算子](../../../csharp/language-reference/operators/new-operator.md)
+- [new 運算子](../../language-reference/operators/new-operator.md)
 
-- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)
 
 ### <a name="Static"></a> 靜態類別與成員
 
@@ -295,7 +295,7 @@ Console.WriteLine(SampleClass.SampleString);
 
 C# 中的靜態類別只有靜態成員，且無法具現化。 靜態成員也無法存取非靜態屬性、欄位或方法
 
-如需詳細資訊，請參閱[靜態](../../../csharp/language-reference/keywords/static.md)。
+如需詳細資訊，請參閱[靜態](../../language-reference/keywords/static.md)。
 
 ### <a name="AnonymousTypes"></a> 匿名型別
 
@@ -309,7 +309,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-如需詳細資訊，請參閱:[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。
+如需詳細資訊，請參閱:[匿名型別](../classes-and-structs/anonymous-types.md)。
 
 ## <a name="Inheritance"></a> 繼承
 
@@ -340,9 +340,9 @@ public abstract class B { }
 
 如需詳細資訊，請參閱:
 
-- [sealed](../../../csharp/language-reference/keywords/sealed.md)
+- [sealed](../../language-reference/keywords/sealed.md)
 
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="Overriding"></a> 覆寫成員
 
@@ -352,10 +352,10 @@ public abstract class B { }
 
 |C# 修飾詞|定義|
 |------------------|----------------|
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|允許在衍生類別中覆寫類別成員。|
-|[override](../../../csharp/language-reference/keywords/override.md)|覆寫在基底類別中定義的虛擬 (可覆寫) 成員。|
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|要求在衍生類別中覆寫類別成員。|
-|[new 修飾詞](../../../csharp/language-reference/keywords/new-modifier.md)|隱藏繼承自基底類別的成員。|
+|[virtual](../../language-reference/keywords/virtual.md)|允許在衍生類別中覆寫類別成員。|
+|[override](../../language-reference/keywords/override.md)|覆寫在基底類別中定義的虛擬 (可覆寫) 成員。|
+|[abstract](../../language-reference/keywords/abstract.md)|要求在衍生類別中覆寫類別成員。|
+|[new 修飾詞](../../language-reference/keywords/new-modifier.md)|隱藏繼承自基底類別的成員。|
 
 ## <a name="Interfaces"></a> 介面
 
@@ -384,9 +384,9 @@ class SampleClass : ISampleInterface
 
 如需詳細資訊，請參閱:
 
-[介面](../../../csharp/programming-guide/interfaces/index.md)
+[介面](../interfaces/index.md)
 
-[interface](../../../csharp/language-reference/keywords/interface.md)
+[interface](../../language-reference/keywords/interface.md)
 
 ## <a name="Generics"></a> 泛型
 
@@ -410,9 +410,9 @@ sampleObject.Field = "Sample string";
 
 如需詳細資訊，請參閱:
 
-- [泛型](~/docs/standard/generics/index.md)
+- [泛型](../../../standard/generics/index.md)
 
-- [泛型](../../../csharp/programming-guide/generics/index.md)
+- [泛型](../generics/index.md)
 
 ## <a name="Delegates"></a> 委派
 
@@ -448,10 +448,10 @@ class SampleClass
 
 如需詳細資訊，請參閱:
 
-- [委派](../../../csharp/programming-guide/delegates/index.md)
+- [委派](../delegates/index.md)
 
-- [delegate](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../index.md)

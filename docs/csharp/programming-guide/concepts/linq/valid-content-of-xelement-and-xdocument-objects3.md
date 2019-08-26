@@ -2,12 +2,12 @@
 title: XElement 和 XDocument 物件的有效內容
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: c179f2e57abf0e2028ec58428e75c8df786b4214
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483266"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590943"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 和 XDocument 物件的有效內容
 本主題說明可以傳遞給用於將內容加入至項目和文件之建構函式 (Constructor) 和方法的有效引數。  
@@ -90,4 +90,4 @@ ms.locfileid: "66483266"
   
 ## <a name="see-also"></a>另請參閱
 
-- [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [建立 XML 樹狀結構 (C#)](./linq-to-xml-overview.md)

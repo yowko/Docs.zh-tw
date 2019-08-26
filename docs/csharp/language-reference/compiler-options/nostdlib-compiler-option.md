@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: cf87d8d2ac4531142288a8637f7fbeb9139382ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545825"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602683"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# 編譯器選項)
 
@@ -29,12 +29,12 @@ ms.locfileid: "54545825"
 
 如果您想要定義或建立自己的系統命名空間和物件，請使用此選項。
 
-若您沒有指定 **-nostdlib**，mscorlib.dll 會匯入您的程式中 (與指定 **-nostdlib-** 相同)。 指定 **-nostdlib** 等同於指定 **-nostdlib+**。
+若您沒有指定 **-nostdlib**，mscorlib.dll 會匯入您的程式中 (與指定 **-nostdlib-** 相同)。 指定 **-nostdlib** 等同於指定 **-nostdlib+** 。
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中設定這個編譯器選項
 
 > [!NOTE]
-> 下列指示僅適用於 Visual Studio 2015 (及更早版本)。 [不要參考 mscorlib.dl] 建置屬性在 Visual Studio 2017 中不存在。
+> 下列指示僅適用於 Visual Studio 2015 (及更早版本)。 [不要參考 mscorlib.dl]  建置屬性在 Visual Studio 2017 中不存在。
 
 1. 開啟專案的 [屬性]  頁面。
 
@@ -50,4 +50,4 @@ ms.locfileid: "54545825"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)

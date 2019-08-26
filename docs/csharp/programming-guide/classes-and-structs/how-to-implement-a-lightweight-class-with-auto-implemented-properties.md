@@ -6,22 +6,22 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4cbed8145487325d8b06882bbab843321a49d0d3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398502"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596898"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>作法：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊)
 
 這個範例顯示如何建立不可變的輕量型類別，只用來封裝一組自動實作屬性。 當您必須使用參考類型語意時，請使用這種建構，而不是結構。
 
 您可以使用兩種方式建立固定屬性：
-- 您可以將 [set](../../../csharp/language-reference/keywords/set.md) 存取子宣告為 [private](../../../csharp/language-reference/keywords/private.md)。  屬性只有在類型內才可設定，但是它對於使用者而言是不可變的。
+- 您可以將 [set](../../language-reference/keywords/set.md) 存取子宣告為 [private](../../language-reference/keywords/private.md)。  屬性只有在類型內才可設定，但是它對於使用者而言是不可變的。
 
   當您宣告私用 `set` 存取子時，則無法使用物件初始設定式來初始化屬性。 您必須使用建構函式或 Factory 方法。
-- 您可以只宣告 [get](../../../csharp/language-reference/keywords/get.md) 存取子，讓屬性在該型別建構函式外的任何位置皆為固定。
+- 您可以只宣告 [get](../../language-reference/keywords/get.md) 存取子，讓屬性在該型別建構函式外的任何位置皆為固定。
 
 ## <a name="example"></a>範例
 
@@ -120,6 +120,6 @@ public class Program
 
 ## <a name="see-also"></a>另請參閱
 
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [屬性](./properties.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [物件和集合初始設定式](./object-and-collection-initializers.md)

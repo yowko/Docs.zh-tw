@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: e33877d2a5e79866bbef12cd9fec5cb11b044240
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fb11fb1a81b8407e2585e32d4217e08a75ea19b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433849"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605828"
 ---
 # <a name="enum-c-reference"></a>enum (C# 參考)
 
@@ -99,7 +99,7 @@ int x = (int)Day.Sun;
 - [C# 參考](../index.md)
 - [列舉型別](../../programming-guide/enumeration-types.md)
 - [C# 關鍵字](index.md)
-- [整數型別](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
+- [整數型別](../builtin-types/integral-numeric-types.md)
 - [內建型別表](built-in-types-table.md)
 - [隱含數值轉換表](implicit-numeric-conversions-table.md)
 - [明確數值轉換表](explicit-numeric-conversions-table.md)

@@ -2,12 +2,12 @@
 title: 作法：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 08b4f936532b3ba3744ec31dc691b166e7ba7109
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012935"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594020"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>作法：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
 本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。 此處顯示的範例準則可以套用至其他類型的結構化文字。  
@@ -163,5 +163,5 @@ class SumColumns
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 和字串 (C#)](./linq-and-strings.md)
+- [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

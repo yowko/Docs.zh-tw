@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567315"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912496"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 反組譯工具)
 
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|包含原始程式行的參考。|
 |**/nobar**|隱藏反組譯碼進度指示器快顯視窗。|
 |**/noca**|隱藏自訂屬性的輸出。|
-|**/project**|以對受控程式碼顯示的方式顯示中繼資料，而不採用在原生 Windows 執行階段中顯示的方式。 如果 `PEfilename` 不是 Windows 中繼資料 ( *.winmd*) 檔案，這個選項就沒有任何作用。 請參閱[適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。|
+|**/project**|以對受控程式碼顯示的方式顯示中繼資料，而不採用在原生 Windows 執行階段中顯示的方式。 如果 `PEfilename` 不是 Windows 中繼資料 ( *.winmd*) 檔案，這個選項就沒有任何作用。 請參閱[適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。|
 |**/pubonly**|僅反組譯公用類型和成員。 相當於 **/visibility:PUB**。|
 |**/quoteallnames**|將所有名稱包含在單引號內。|
 |**/raweh**|以未經處理格式顯示例外狀況處理子句。|
@@ -188,5 +188,5 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 - [工具](../../../docs/framework/tools/index.md)
 - [Ilasm.exe (IL 組譯工具)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Managed 執行程序](../../../docs/standard/managed-execution-process.md)
+- [Managed 執行程序](../../standard/managed-execution-process.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

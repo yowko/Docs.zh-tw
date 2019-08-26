@@ -2,19 +2,19 @@
 title: 建立 Variant 泛型介面 (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: ad82ba27a98d27a18d9cff1e65ab929cd9d711a6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673752"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595317"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>建立 Variant 泛型介面 (C#)
 
-您可以在介面中將泛型型別參數宣告為 Covariant 或 Contravariant。 「共變數」允許介面方法具有比泛型型別參數衍生程度更大的傳回型別。 「反變數」允許介面具有比泛型參數所指定引數型別衍生程度更小的引數類型。 具有 Covariant 或 Contravariant 泛型型別參數的泛型介面稱為「變異」。
+您可以在介面中將泛型型別參數宣告為 Covariant 或 Contravariant。 「共變數」  允許介面方法具有比泛型型別參數衍生程度更大的傳回型別。 「反變數」  允許介面具有比泛型參數所指定引數型別衍生程度更小的引數類型。 具有 Covariant 或 Contravariant 泛型型別參數的泛型介面稱為「變異」  。
 
 > [!NOTE]
-> .NET Framework 4 引入了對於數個現有泛型介面的變異數支援。 .NET Framework 中的 Variant 介面清單，請參閱[泛型介面中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。
+> .NET Framework 4 引入了對於數個現有泛型介面的變異數支援。 .NET Framework 中的 Variant 介面清單，請參閱[泛型介面中的變異數 (C#)](./variance-in-generic-interfaces.md)。
 
 ## <a name="declaring-variant-generic-interfaces"></a>宣告 Variant 泛型介面
 
@@ -37,7 +37,7 @@ ms.locfileid: "57673752"
     }
     ```
 
-    這個規則只有一個例外。 如果您以 Contravariant 泛型委派作為方法參數，則可將類型用作委派的泛型型別參數。 以下範例的 `R` 類型說明這種情況： 如需詳細資訊，請參閱[委派中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) 和[針對 Func 與 Action 泛型委派使用變異數](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。
+    這個規則只有一個例外。 如果您以 Contravariant 泛型委派作為方法參數，則可將類型用作委派的泛型型別參數。 以下範例的 `R` 類型說明這種情況： 如需詳細資訊，請參閱[委派中的變異數 (C#)](./variance-in-delegates.md) 和[針對 Func 與 Action 泛型委派使用變異數](./using-variance-for-func-and-action-generic-delegates.md)。
 
     ```csharp
     interface ICovariant<out R>
@@ -192,5 +192,5 @@ class Program
 
 ## <a name="see-also"></a>另請參閱
 
-- [泛型介面中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [針對 Func 與 Action 泛型委派使用變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [泛型介面中的變異數 (C#)](./variance-in-generic-interfaces.md)
+- [針對 Func 與 Action 泛型委派使用變異數 (C#)](./using-variance-for-func-and-action-generic-delegates.md)

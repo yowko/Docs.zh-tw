@@ -2,12 +2,12 @@
 title: 作法：統計某個字在字串中出現的次數 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 5855250661f5288203ae0be841bcfb3a49f8369a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 12118c6322df0cfb93cb3d4a4dbbc02d68a0c776
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585820"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593911"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>作法：統計某個字在字串中出現的次數 (LINQ) (C#)
 本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。 請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。 <xref:System.String.Split%2A> 方法有效能成本。 如果字串上唯一的作業是計算字數，您應該考慮改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。 不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。  
@@ -59,4 +59,4 @@ class CountWords
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 和字串 (C#)](./linq-and-strings.md)

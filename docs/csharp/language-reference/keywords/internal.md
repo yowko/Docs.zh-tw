@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661175"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602079"
 ---
 # <a name="internal-c-reference"></a>internal (C# 參考)
-`internal` 關鍵字是類型和類型成員的[存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。 
+`internal` 關鍵字是類型和類型成員的[存取修飾詞](./access-modifiers.md)。 
   
  > 此頁面涵蓋 `internal` 存取。 `internal` 關鍵字也是屬於 [`protected internal`](./protected-internal.md) 存取修飾詞。
   
@@ -30,7 +30,7 @@ public class BaseClass
 }  
 ```  
 
- 如需 `internal` 和其他存取修飾詞的比較，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)和[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 如需 `internal` 和其他存取修飾詞的比較，請參閱[存取範圍層級](./accessibility-levels.md)和[存取修飾詞](../../programming-guide/classes-and-structs/access-modifiers.md)。  
   
  如需組件的詳細資訊，請參閱 [.NET 中的組件](../../../standard/assembly/index.md)。  
   
@@ -93,12 +93,12 @@ public class TestAccess
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
-- [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 關鍵字](./index.md)
+- [存取修飾詞](./access-modifiers.md)
+- [存取範圍層級](./accessibility-levels.md)
+- [修飾詞](./modifiers.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)

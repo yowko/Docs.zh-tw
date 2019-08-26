@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2652c080951823e5289785b5906d2b0f48f5d658
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773659"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950783"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>作法：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
@@ -82,7 +82,7 @@ ms.locfileid: "67773659"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#6)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#6)]  
   
-## <a name="checkpoint"></a>Checkpoint  
+## <a name="checkpoint"></a>檢查點  
  現在，您可以建置元件。  
   
 ### <a name="to-test-your-component"></a>測試元件  
@@ -153,7 +153,7 @@ ms.locfileid: "67773659"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
   
-## <a name="checkpoint"></a>Checkpoint  
+## <a name="checkpoint"></a>檢查點  
  現在，您可以建置元件。  
   
 ### <a name="to-test-your-component"></a>測試元件  
@@ -176,7 +176,7 @@ ms.locfileid: "67773659"
  `CalculateWorker` 方法會包裝在委派中，且叫用此方法時，會藉由對 `BeginInvoke` 的呼叫以非同步方式叫用。  
   
 > [!NOTE]
->  實作進度回報時，是在 `BuildPrimeNumberList` 方法中實作。 在執行速度快的電腦上，可以快速地連續引發 `ProgressChanged` 事件。 作為這些事件之引發位置的用戶端執行緒必須能夠處理此情況。 使用者介面程式碼可能會湧入大量訊息而來不及處理，導致停止回應。 如需可處理此情形的使用者介面範例，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
+> 實作進度回報時，是在 `BuildPrimeNumberList` 方法中實作。 在執行速度快的電腦上，可以快速地連續引發 `ProgressChanged` 事件。 作為這些事件之引發位置的用戶端執行緒必須能夠處理此情況。 使用者介面程式碼可能會湧入大量訊息而來不及處理，導致停止回應。 如需可處理此情形的使用者介面範例，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 ### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>以非同步方式執行質數計算：  
   
@@ -207,7 +207,7 @@ ms.locfileid: "67773659"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#29)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#29)]  
   
-## <a name="checkpoint"></a>Checkpoint  
+## <a name="checkpoint"></a>檢查點  
  現在，您可以建置元件。  
   
 ### <a name="to-test-your-component"></a>測試元件  
@@ -233,7 +233,7 @@ ms.locfileid: "67773659"
      [!code-csharp[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#4)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#4)]  
   
-## <a name="checkpoint"></a>Checkpoint  
+## <a name="checkpoint"></a>檢查點  
  現在，您可以建置元件。  
   
 ### <a name="to-test-your-component"></a>測試元件  
@@ -253,6 +253,6 @@ ms.locfileid: "67773659"
   
 ## <a name="see-also"></a>另請參閱
 
-- [操作說明：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [如何：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

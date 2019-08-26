@@ -9,16 +9,16 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 11cbe6600a75b2db6174841790aa69efdf5da035
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 57ab0282c88a85b59c8fed7506ef811c8cced58f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398286"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924438"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>靜態類別和靜態類別成員 (C# 程式設計手冊)
 
-[static](../../../csharp/language-reference/keywords/static.md) 類別基本上與非靜態類別相同，但有一項差異︰無法具現化靜態類別。 換句話說，您不能使用 [new](../../../csharp/language-reference/operators/new-operator.md) 運算子來建立類別型別的變數。 因為沒有任何執行個體變數，所以您可以使用類別名稱本身來存取靜態類別的成員。 例如，如果您的 `UtilityClass` 靜態類別包含 `MethodA` 公用靜態方法，則會呼叫方法，如下列範例所示︰  
+[static](../../language-reference/keywords/static.md) 類別基本上與非靜態類別相同，但有一項差異︰無法具現化靜態類別。 換句話說，您不能使用 [new](../../language-reference/operators/new-operator.md) 運算子來建立類別型別的變數。 因為沒有任何執行個體變數，所以您可以使用類別名稱本身來存取靜態類別的成員。 例如，如果您的 `UtilityClass` 靜態類別包含 `MethodA` 公用靜態方法，則會呼叫方法，如下列範例所示︰  
   
 ```csharp  
 UtilityClass.MethodA();  
@@ -41,7 +41,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  與所有類別型別的情況相同，載入可參考類別的程式時，.NET Framework Common Language Runtime (CLR) 會載入靜態類別的型別資訊。 程式無法指定確實載入類別的時間。 不過，一定會載入類別、初始化其欄位，並在第一次於程式中參考類別之前呼叫其靜態建構函式。 只會呼叫靜態建構函式一次，而且靜態類別在程式所在應用程式定義域的存留期間保留在記憶體中。  
   
 > [!NOTE]
->  若要建立只允許建立它本身之一個執行個體的非靜態類別，請參閱 [Implementing Singleton in C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29) (在 C# 中實作單一)。  
+> 若要建立只允許建立它本身之一個執行個體的非靜態類別，請參閱 [Implementing Singleton in C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29) (在 C# 中實作單一)。  
   
  下列清單提供靜態類別的主要功能︰  
   
@@ -51,11 +51,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 - 已密封。  
   
-- 不能包含[執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
+- 不能包含[執行個體建構函式](./instance-constructors.md)。  
   
  因此，建立靜態類別，基本上與建立只包含靜態成員和私用建構函式的類別相同。 私用建構函式可防止具現化類別。 使用靜態類別的優點在於編譯器可以確認不會意外新增任何執行個體成員。 編譯器將保證無法建立此類別的執行個體。  
   
- 靜態類別已密封，因此無法進行繼承。 它們無法繼承自 <xref:System.Object> 以外的任何類別。 靜態類別不能包含執行個體建構函式，但可以包含靜態建構函式。 如果類別包含需要重要初始化的靜態成員，則非靜態類別也應該定義靜態建構函式。 如需詳細資訊，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
+ 靜態類別已密封，因此無法進行繼承。 它們無法繼承自 <xref:System.Object> 以外的任何類別。 靜態類別不能包含執行個體建構函式，但可以包含靜態建構函式。 如果類別包含需要重要初始化的靜態成員，則非靜態類別也應該定義靜態建構函式。 如需詳細資訊，請參閱[靜態建構函式](./static-constructors.md)。  
   
 ## <a name="example"></a>範例  
  以下是包含兩種方法可將溫度從攝氏轉換為華氏以及從華氏轉換為攝氏的靜態類別範例︰  
@@ -69,7 +69,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  可以多載但無法覆寫靜態方法，因為它們屬於類別，而不是類別的任何執行個體。  
   
- 雖然欄位不可以宣告為 `static const`，但是 [const](../../../csharp/language-reference/keywords/const.md) 欄位在其行為中基本上是靜態的。 它屬於類型，而不是類型的執行個體。 因此，使用用於靜態欄位的相同 `ClassName.MemberName` 標記法可以存取 const 欄位。 不需要物件執行個體。  
+ 雖然欄位不可以宣告為 `static const`，但是 [const](../../language-reference/keywords/const.md) 欄位在其行為中基本上是靜態的。 它屬於類型，而不是類型的執行個體。 因此，使用用於靜態欄位的相同 `ClassName.MemberName` 標記法可以存取 const 欄位。 不需要物件執行個體。  
   
  C# 不支援靜態區域變數 (方法範圍中所宣告的變數)。  
   
@@ -91,9 +91,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [static](../../../csharp/language-reference/keywords/static.md)
-- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)
-- [執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+- [C# 程式設計指南](../index.md)
+- [static](../../language-reference/keywords/static.md)
+- [類別](./classes.md)
+- [class](../../language-reference/keywords/class.md)
+- [靜態建構函式](./static-constructors.md)
+- [執行個體建構函式](./instance-constructors.md)

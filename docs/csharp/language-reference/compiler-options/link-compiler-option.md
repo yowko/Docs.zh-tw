@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 049d1ce7a27a812b58fb09802e1ce520e96ed925
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 724a848d4c31b2c4f6fc3427d70fc84f4fd944c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586013"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924753"
 ---
 # <a name="-link-c-compiler-options"></a>-link (C# 編譯器選項)
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。  
@@ -41,7 +41,7 @@ ms.locfileid: "65586013"
  `-link` 選項只能內嵌介面、結構和委派。 不支援內嵌 COM 類別。  
   
 > [!NOTE]
->  當您在程式碼中建立內嵌 COM 類型的執行個體時，必須使用適當的介面來建立執行個體。 嘗試使用 CoClass 建立內嵌 COM 類型的執行個體將會導致錯誤。  
+> 當您在程式碼中建立內嵌 COM 類型的執行個體時，必須使用適當的介面來建立執行個體。 嘗試使用 CoClass 建立內嵌 COM 類型的執行個體將會導致錯誤。  
   
  若要在 Visual Studio 中設定 `-link` 選項，請新增組件參考，並將 `Embed Interop Types` 屬性設定為 **true**。 `Embed Interop Types` 屬性的預設值為 **false**。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65586013"
   
 - 所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
   
- 如同 [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 編譯器選項，`-link` 編譯器選項會使用 Csc.rsp 回應檔，參考常用的 .NET Framework 組件。 如果您不想要讓編譯器使用 Csc.rsp 檔，請使用 [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) 編譯器選項。  
+ 如同 [-reference](./reference-compiler-option.md) 編譯器選項，`-link` 編譯器選項會使用 Csc.rsp 回應檔，參考常用的 .NET Framework 組件。 如果您不想要讓編譯器使用 Csc.rsp 檔，請使用 [-noconfig](./noconfig-compiler-option.md) 編譯器選項。  
   
  `-link` 的簡短形式為 `-l`。  
   
@@ -83,9 +83,9 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)
 - [逐步解說：從受控組件內嵌類型](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [-reference (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
-- [-noconfig (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)
-- [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [互通性概觀](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [-reference (C# 編譯器選項)](./reference-compiler-option.md)
+- [-noconfig (C# 編譯器選項)](./noconfig-compiler-option.md)
+- [使用 csc.exe 建置命令列](./command-line-building-with-csc-exe.md)
+- [互通性概觀](../../programming-guide/interop/interoperability-overview.md)

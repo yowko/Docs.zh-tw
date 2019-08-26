@@ -2,19 +2,19 @@
 title: 針對泛型集合使用介面中的變異數 (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 6119d8756295606fc2ef66f5157e815b4d903659
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53aaf49ee0802c0d207e0b0a29661cee7c628b4d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562111"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595213"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>針對泛型集合使用介面中的變異數 (C#)
 Covariant 介面允許其方法傳回與介面中指定的類型相比，其衍生程度較大的類型。 Contravariant 介面允許其方法接受與介面中指定的參數相比，其類型衍生程度較小的參數。  
   
  在 .NET Framework 4 中，有數個現有介面已變成 Covariant 和 Contravariant。 這些結構包括 <xref:System.Collections.Generic.IEnumerable%601> 及 <xref:System.IComparable%601>。 因此，您可以針對衍生類型的集合，重複使用搭配基底類型之泛型集合運作的方法。  
   
- 如需 .NET Framework 中的 Variant 介面清單，請參閱[泛型介面中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
+ 如需 .NET Framework 中的 Variant 介面清單，請參閱[泛型介面中的變異數 (C#)](./variance-in-generic-interfaces.md)。  
   
 ## <a name="converting-generic-collections"></a>轉換泛型集合  
  下列範例說明在 <xref:System.Collections.Generic.IEnumerable%601> 介面中支援共變數的好處。 `PrintFullName` 方法接受 `IEnumerable<Person>` 類型的集合作為參數。 不過，您可以重複用於 `IEnumerable<Employee>` 類型的集合，因為 `Employee` 會繼承 `Person`。  
@@ -115,4 +115,4 @@ class Program
   
 ## <a name="see-also"></a>另請參閱
 
-- [泛型介面中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [泛型介面中的變異數 (C#)](./variance-in-generic-interfaces.md)

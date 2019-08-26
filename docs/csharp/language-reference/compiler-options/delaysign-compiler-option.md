@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 1d49733531507fc80165e034fde1969305cfd2e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae309a8de6c4691f0009e5beb8ac2adc8772805b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681725"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603021"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (C# 編譯器選項)
 
@@ -29,11 +29,11 @@ ms.locfileid: "54681725"
 
 `+` &#124; `-`
 
-如果需要完整簽署的組件，請使用 **-delaysign-**。 如果只想在組件中放置公開金鑰，請使用 **-delaysign+**。 預設值為 **-delaysign-**。
+如果需要完整簽署的組件，請使用 **-delaysign-** 。 如果只想在組件中放置公開金鑰，請使用 **-delaysign+** 。 預設值為 **-delaysign-** 。
 
 ## <a name="remarks"></a>備註
 
-**-delaysign** 選項必須搭配 [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) 或 [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md) 才有作用。
+**-delaysign** 選項必須搭配 [-keyfile](./keyfile-compiler-option.md) 或 [-keycontainer](./keycontainer-compiler-option.md) 才有作用。
 
 **-delaysign** 和 **-publicsign** 選項是互斥的。
 
@@ -46,7 +46,7 @@ ms.locfileid: "54681725"
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
 1. 開啟專案的 [屬性]  頁面。
-1. 修改 [僅延遲簽署] 屬性。
+1. 修改 [僅延遲簽署]  屬性。
 
 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。
 

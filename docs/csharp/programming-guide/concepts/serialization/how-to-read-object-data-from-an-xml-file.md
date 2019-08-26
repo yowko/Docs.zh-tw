@@ -2,12 +2,12 @@
 title: 作法：從 XML 檔案讀取物件資料 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 2608c737744f5c0789c69147063f9ced0ffd6d9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d6ec71b9e408e1536063fc3d8f1badc0f38551e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595237"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590748"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>作法：從 XML 檔案讀取物件資料 (C#)
 此範例會讀取先前使用 <xref:System.Xml.Serialization.XmlSerializer> 類別來寫入 XML 檔案的物件資料。  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 以內含序列化資料之檔案的名稱取代檔案名稱 "c:\temp\SerializationOverview.xml"。 如需將資料序列化的詳細資訊，請參閱[如何：將物件資料寫入 XML 檔案 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)。  
+ 以內含序列化資料之檔案的名稱取代檔案名稱 "c:\temp\SerializationOverview.xml"。 如需將資料序列化的詳細資訊，請參閱[如何：將物件資料寫入 XML 檔案 (C#)](./how-to-write-object-data-to-an-xml-file.md)。  
   
  此類別必須有不具參數的公用建構函式。  
   
@@ -64,6 +64,6 @@ public void ReadXML()
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.StreamWriter>
-- [如何：將物件資料寫入 XML 檔案 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-- [序列化 (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
-- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
+- [如何：將物件資料寫入 XML 檔案 (C#)](./how-to-write-object-data-to-an-xml-file.md)
+- [序列化 (C#)](./index.md)
+- [C# 程式設計指南](../../index.md)

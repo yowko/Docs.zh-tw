@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: e77db451103919df5809b2558fcb53a3d7fba71c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 26241dab70a3b6a0cf80b374868fa759647cd8d9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479957"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588005"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -92,5 +92,5 @@ The summary for this other type.
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# 程式設計指南](../index.md)
+- [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

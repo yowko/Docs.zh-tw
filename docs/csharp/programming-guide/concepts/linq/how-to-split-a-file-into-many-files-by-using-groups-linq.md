@@ -2,12 +2,12 @@
 title: 作法：使用群組將檔案分割成許多檔案 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: f38cfebae17ea6db9df2445f71852f7f4e6f201f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 171d0aababfe4ff4ba5be4c8d307c917474671fc
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584355"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592378"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>作法：使用群組將檔案分割成許多檔案 (LINQ) (C#)
 此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。  
@@ -130,5 +130,5 @@ class SplitWithGroups
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 和字串 (C#)](./linq-and-strings.md)
+- [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

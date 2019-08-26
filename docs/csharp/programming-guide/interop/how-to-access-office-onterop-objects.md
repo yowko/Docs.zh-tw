@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 765a150953075cf9afb2dd3bde7a66cfe3ff6eb5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398143"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589132"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>作法：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
 
@@ -95,7 +95,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     如果 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考組件；或者，同樣地，如果 Excel [內嵌 Interop 型別]  屬性設定為 true，C# 4 和更新版本會自動將傳回的 `Object` 轉換為 `dynamic`。 這個屬性的預設值為 True。
+     如果 [/link](../../language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考組件；或者，同樣地，如果 Excel [內嵌 Interop 型別]  屬性設定為 true，C# 4 和更新版本會自動將傳回的 `Object` 轉換為 `dynamic`。 這個屬性的預設值為 True。
 
 ## <a name="to-run-the-project"></a>執行專案
 
@@ -137,9 +137,9 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
 ## <a name="to-set-the-embed-interop-types-property"></a>設定內嵌 Interop 類型屬性
 
-1. 當您在執行階段呼叫不需要主要 Interop 組件 (PIA) 的 COM 類型時，可以使用其他增強功能。 移除與 PIA 的相依性，可達成版本獨立且更容易進行部署。 如需沒有 PIA 的程式設計優點詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。
+1. 當您在執行階段呼叫不需要主要 Interop 組件 (PIA) 的 COM 類型時，可以使用其他增強功能。 移除與 PIA 的相依性，可達成版本獨立且更容易進行部署。 如需沒有 PIA 的程式設計優點詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。
 
-     此外，程式設計會更為容易，因為 COM 方法所需和所傳回的類型可以使用類型 `dynamic` 而非 `Object` 加以呈現。 除非處於執行階段，否則不會評估類型為 `dynamic` 的變數，如此即無須明確轉型。 如需詳細資訊，請參閱[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。
+     此外，程式設計會更為容易，因為 COM 方法所需和所傳回的類型可以使用類型 `dynamic` 而非 `Object` 加以呈現。 除非處於執行階段，否則不會評估類型為 `dynamic` 的變數，如此即無須明確轉型。 如需詳細資訊，請參閱[使用動態類型](../types/using-type-dynamic.md)。
 
      在 C# 4 中，預設行為是內嵌型別資訊，而非使用 PIA。 因為使用該預設值，已簡化了數個先前的範例，因為明確轉型已非必要。 例如，`worksheet` 中的 `DisplayInExcel` 宣告，撰寫為 `Excel._Worksheet workSheet = excelApp.ActiveSheet`，而非 `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`。 如果沒有預設值，則相同方法中的 `AutoFit` 呼叫也需要明確轉型，因為 `ExcelApp.Columns[1]` 會傳回 `Object`，而 `AutoFit` 是 Excel 方法。 下列程式碼會顯示轉型。
 
@@ -149,7 +149,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
 3. 如果看不到 [屬性]  視窗，請按 **F4** 鍵。
 
-4. 在屬性清單中尋找 [內嵌 Interop 類型]  ，並將其值變更為 **False**。 同樣地，也可以在命令提示字元處使用 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 編譯器選項，而非 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 進行編譯。
+4. 在屬性清單中尋找 [內嵌 Interop 類型]  ，並將其值變更為 **False**。 同樣地，也可以在命令提示字元處使用 [/reference](../../language-reference/compiler-options/reference-compiler-option.md) 編譯器選項，而非 [/link](../../language-reference/compiler-options/link-compiler-option.md) 進行編譯。
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>加入表格的其他格式
 
@@ -176,7 +176,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [使用動態型別](../types/using-type-dynamic.md)
+- [具名和選擇性引數](../classes-and-structs/named-and-optional-arguments.md)
+- [如何：在 Office 程式設計中使用具名和選擇性引數](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

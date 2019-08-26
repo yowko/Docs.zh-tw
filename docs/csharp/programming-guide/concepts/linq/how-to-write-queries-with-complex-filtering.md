@@ -2,22 +2,22 @@
 title: 作法：撰寫具有複雜篩選功能的查詢 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 08c1e124542e6d7e4c728102b2aa7fb4a804794c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 3fe62b4a3c78c61de28311adf3feec1a613ff167
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710048"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592166"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>作法：撰寫具有複雜篩選功能的查詢 (C#)
 有時候您會想要利用複雜篩選撰寫 LINQ to XML 查詢。 例如，您可能必須尋找其子項目包含特定名稱和值的所有項目。 本主題提供利用複雜篩選撰寫查詢的範例。  
   
 ## <a name="example"></a>範例  
- 這個範例顯示如何尋找其 `PurchaseOrder` 子項目的 `Address` 屬性等於 "Shipping"，而 `Type` 子項目等於 "NY" 的所有 `State` 項目。 它會在 `Where` 子句中使用巢狀查詢，而且如果集合在其中有任何項目，`Any` 運算子會傳回 `true`。 如需使用以方法為基礎之查詢語法的資訊，請參閱 [LINQ 中的查詢語法及方法語法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。  
+ 這個範例顯示如何尋找其 `PurchaseOrder` 子項目的 `Address` 屬性等於 "Shipping"，而 `Type` 子項目等於 "NY" 的所有 `State` 項目。 它會在 `Where` 子句中使用巢狀查詢，而且如果集合在其中有任何項目，`Any` 運算子會傳回 `true`。 如需使用以方法為基礎之查詢語法的資訊，請參閱 [LINQ 中的查詢語法及方法語法](./query-syntax-and-method-syntax-in-linq.md)。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
- 如需 `Any` 運算子的詳細資訊，請參閱[數量詞作業 (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)。  
+ 如需 `Any` 運算子的詳細資訊，請參閱[數量詞作業 (C#)](./quantifier-operations.md)。  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrders.xml");  
@@ -44,7 +44,7 @@ foreach (XElement el in purchaseOrders)
 ## <a name="example"></a>範例  
  下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：命名空間中的多個訂購單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：命名空間中的多個訂購單](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrdersInNamespace.xml");  
@@ -73,5 +73,5 @@ foreach (XElement el in purchaseOrders)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [投影作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
-- [數量詞作業 (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
+- [投影作業 (C#)](./projection-operations.md)
+- [數量詞作業 (C#)](./quantifier-operations.md)

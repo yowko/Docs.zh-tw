@@ -7,16 +7,16 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 0a0cf7c3b6024f75196abed5fdb7d18a058c58db
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398375"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596283"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 
-有可能將 [class](../../../csharp/language-reference/keywords/class.md)、[struct](../../../csharp/language-reference/keywords/struct.md)、[interface](../../../csharp/language-reference/keywords/interface.md) 或方法的定義，分割到兩個以上的來源檔案。 每一個來源檔案都包含型別或方法定義的一個區段，而當編譯應用程式時，就會將所有區段結合起來。
+有可能將 [class](../../language-reference/keywords/class.md)、[struct](../../language-reference/keywords/struct.md)、[interface](../../language-reference/keywords/interface.md) 或方法的定義，分割到兩個以上的來源檔案。 每一個來源檔案都包含型別或方法定義的一個區段，而當編譯應用程式時，就會將所有區段結合起來。
 
 ## <a name="partial-classes"></a>部分類別
 
@@ -26,7 +26,7 @@ ms.locfileid: "67398375"
 
 - 處理自動產生的來源時，程式碼可以加入類別，不必重新建立來源檔案。 Visual Studio 建立 Windows Forms、Webb 服務包裝函式程式碼等等時，會使用這種方法。 您可以建立使用這些類別的程式碼，不必修改 Visual Studio 建立的檔案。
 
-- 若要分割類別定義，請使用 [partial](../../../csharp/language-reference/keywords/partial-type.md) 關鍵字修飾詞，如下所示︰
+- 若要分割類別定義，請使用 [partial](../../language-reference/keywords/partial-type.md) 關鍵字修飾詞，如下所示︰
 
   [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]
 
@@ -91,25 +91,25 @@ ms.locfileid: "67398375"
 
 - 下列部分型別定義中的關鍵字是選擇項目，但如果出現在一個部分型別定義中，即不能與同類型的另一個部分定義中指定的關鍵字衝突︰
 
-  - [public](../../../csharp/language-reference/keywords/public.md)
+  - [public](../../language-reference/keywords/public.md)
 
-  - [private](../../../csharp/language-reference/keywords/private.md)
+  - [private](../../language-reference/keywords/private.md)
 
-  - [protected](../../../csharp/language-reference/keywords/protected.md)
+  - [protected](../../language-reference/keywords/protected.md)
 
-  - [internal](../../../csharp/language-reference/keywords/internal.md)
+  - [internal](../../language-reference/keywords/internal.md)
 
-  - [abstract](../../../csharp/language-reference/keywords/abstract.md)
+  - [abstract](../../language-reference/keywords/abstract.md)
 
-  - [sealed](../../../csharp/language-reference/keywords/sealed.md)
+  - [sealed](../../language-reference/keywords/sealed.md)
 
   - 基底類別
 
-  - [new](../../../csharp/language-reference/keywords/new-modifier.md) 修飾詞 (巢狀組件)
+  - [new](../../language-reference/keywords/new-modifier.md) 修飾詞 (巢狀組件)
 
   - 泛型條件約束
 
-如需詳細資訊，請參閱[型別參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)。
+如需詳細資訊，請參閱[型別參數的條件約束](../generics/constraints-on-type-parameters.md)。
 
 ## <a name="example-1"></a>範例 1
 
@@ -152,19 +152,19 @@ partial void onNameChanged()
 }
 ```
 
-- 部分方法宣告必須以內容關鍵字 [partial](../../../csharp/language-reference/keywords/partial-type.md) 開頭，且此方法必須傳回 [void](../../../csharp/language-reference/keywords/void.md)。
+- 部分方法宣告必須以內容關鍵字 [partial](../../language-reference/keywords/partial-type.md) 開頭，且此方法必須傳回 [void](../../language-reference/keywords/void.md)。
 
-- 部分方法可以有 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 或 [ref](../../../csharp/language-reference/keywords/ref.md)，但不能有 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數。
+- 部分方法可以有 [in](../../language-reference/keywords/in-parameter-modifier.md) 或 [ref](../../language-reference/keywords/ref.md)，但不能有 [out](../../language-reference/keywords/out-parameter-modifier.md) 參數。
 
-- 部分方法為隱含的[私用](../../../csharp/language-reference/keywords/private.md)，因此它們不能為[虛擬](../../../csharp/language-reference/keywords/virtual.md)。
+- 部分方法為隱含的[私用](../../language-reference/keywords/private.md)，因此它們不能為[虛擬](../../language-reference/keywords/virtual.md)。
 
-- 部分方法不可以是 [extern](../../../csharp/language-reference/keywords/extern.md)，因為有主體會決定它們要定義或實作。
+- 部分方法不可以是 [extern](../../language-reference/keywords/extern.md)，因為有主體會決定它們要定義或實作。
 
-- 部分方法可以有 [static](../../../csharp/language-reference/keywords/static.md) 和 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 修飾詞。
+- 部分方法可以有 [static](../../language-reference/keywords/static.md) 和 [unsafe](../../language-reference/keywords/unsafe.md) 修飾詞。
 
 - 部分方法可以為泛型。 條件約束放在定義部分方法宣告中，可選擇性地在實作宣告時重複。 參數和型別參數名稱在實作宣告中不必相同，但在定義宣告中要相同。
 
-- 您可以[委派](../../../csharp/language-reference/keywords/delegate.md)已定義且實作的部分方法，但不能委派只經定義的部分方法。
+- 您可以[委派](../../language-reference/keywords/delegate.md)已定義且實作的部分方法，但不能委派只經定義的部分方法。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -172,8 +172,8 @@ partial void onNameChanged()
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)
-- [介面](../../../csharp/programming-guide/interfaces/index.md)
-- [partial (型別)](../../../csharp/language-reference/keywords/partial-type.md)
+- [C# 程式設計指南](../index.md)
+- [類別](./classes.md)
+- [結構](./structs.md)
+- [介面](../interfaces/index.md)
+- [partial (型別)](../../language-reference/keywords/partial-type.md)

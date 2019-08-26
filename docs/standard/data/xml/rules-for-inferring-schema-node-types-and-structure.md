@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338705"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939647"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>推斷結構描述節點型別與結構的規則
 本主題說明結構描述推斷程序如何將 XML 文件中所發現的節點型別轉譯為 XML 結構描述定義語言 (XSD) 結構。  
@@ -35,7 +35,7 @@ ms.locfileid: "59338705"
 8. 具有項目子系與屬性選擇序列的項目  
   
 > [!NOTE]
->  所有 `complexType` 宣告都會被推斷為匿名型別。 唯一會進行推斷的全域項目為根項目；其他項目都是區域項目。  
+> 所有 `complexType` 宣告都會被推斷為匿名型別。 唯一會進行推斷的全域項目為根項目；其他項目都是區域項目。  
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59338705"
  下表顯示對 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 輸入及產生的 XML 結構描述。 粗體的項目表示針對具有項目子系序列的項目所推斷的結構描述。  
   
 > [!NOTE]
->  即使某個項目只有一個項目子系，仍會被視為序列。  
+> 即使某個項目只有一個項目子系，仍會被視為序列。  
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "59338705"
  下表顯示對 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 輸入及產生的 XML 結構描述。 粗體的項目表示針對具有項目子系與屬性序列的項目所推斷的結構描述。  
   
 > [!NOTE]
->  即使某個項目只有一個項目子系，仍會被視為序列。  
+> 即使某個項目只有一個項目子系，仍會被視為序列。  
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "59338705"
  下表顯示對 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 輸入及產生的 XML 結構描述。 粗體的項目表示針對具有項目子系選擇序列的項目所推斷的結構描述。  
   
 > [!NOTE]
->  在推斷的結構描述中，`maxOccurs` 項目的 `xs:choice` 屬性會設為 `"unbounded"`。  
+> 在推斷的結構描述中，`maxOccurs` 項目的 `xs:choice` 屬性會設為 `"unbounded"`。  
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "59338705"
  下表顯示對 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 輸入及產生的 XML 結構描述。 粗體的項目表示針對具有項目子系與屬性之序列與選擇的項目所推斷的結構描述。  
   
 > [!NOTE]
->  在推斷的結構描述中，`maxOccurs` 項目的 `xs:choice` 屬性會設為 `"unbounded"`。  
+> 在推斷的結構描述中，`maxOccurs` 項目的 `xs:choice` 屬性會設為 `"unbounded"`。  
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   

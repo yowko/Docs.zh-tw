@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362900"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666406"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 與 Span\<T> 使用指導方針
 
@@ -78,7 +78,7 @@ class Program
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-我們也可以搭配 [`using`](~/docs/csharp/language-reference/keywords/using-statement.md) 來撰寫此範例：
+我們也可以搭配 [`using`](../../csharp/language-reference/keywords/using-statement.md) 來撰寫此範例：
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ void DisplayBufferToConsole(ReadOnlyMemory<char> buffer);
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-`DisplayBufferToConsole` 方法現在能與幾乎所有已知的緩衝區類型搭配運作：`T[]`、搭配 [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) 配置的儲存體等。 您甚至可以直接將 <xref:System.String> 傳遞給它！
+`DisplayBufferToConsole` 方法現在能與幾乎所有已知的緩衝區類型搭配運作：`T[]`、搭配 [stackalloc](../../csharp/language-reference/operators/stackalloc.md) 配置的儲存體等。 您甚至可以直接將 <xref:System.String> 傳遞給它！
 
 **規則 #3：如果您的方法接受 Memory\<T> 並會傳回 `void`，您不能在方法傳回時使用 Memory\<T> 執行個體。**
 
@@ -246,7 +246,7 @@ class Person
 
 **規則 #9：如果您正在包裝同步的 p/invoke 方法，您的 API 應該接受 Span\<T> 作為參數。**
 
-根據規則 #1，<xref:System.Span%601> 通常是應該用於同步 API 的正確類型。 您可以透過 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 關鍵字釘選 <xref:System.Span%601> 執行個體，如下列範例所示。
+根據規則 #1，<xref:System.Span%601> 通常是應該用於同步 API 的正確類型。 您可以透過 [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) 關鍵字釘選 <xref:System.Span%601> 執行個體，如下列範例所示。
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **規則 #10：如果您正在包裝非同步的 p/invoke 方法，您的 API 應該接受 Memory\<T> 作為參數。**
 
-由於您無法在非同步作業上使用 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 關鍵字，您會使用 <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> 方法來釘選 <xref:System.Memory%601> 執行個體，無論該執行個體所代表的連續記憶體類型為何。 下列範例示範如何使用此 API 來執行非同步 p/invoke 呼叫。
+由於您無法在非同步作業上使用 [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) 關鍵字，您會使用 <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> 方法來釘選 <xref:System.Memory%601> 執行個體，無論該執行個體所代表的連續記憶體類型為何。 下列範例示範如何使用此 API 來執行非同步 p/invoke 呼叫。
 
 ```csharp
 using System.Runtime.InteropServices;

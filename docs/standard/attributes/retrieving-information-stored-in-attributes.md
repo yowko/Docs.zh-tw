@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623661"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968588"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>擷取儲存於屬性中的資訊
 擷取自訂屬性是一個簡單的程序。 首先，對想要擷取的屬性宣告執行個體。 然後，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法將新屬性初始化為所要擷取之屬性的值。 在將新屬性 (Attribute) 初始化之後，只要使用其屬性 (Poperty) 即可取得值。  
   
 > [!IMPORTANT]
->  本文說明如何針對載入到執行內容的程式碼擷取屬性。 若要對載入僅限反射內容中的程式碼擷取屬性，您必須使用 <xref:System.Reflection.CustomAttributeData> 類別，如以下連結所示：[如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+> 本文說明如何針對載入到執行內容的程式碼擷取屬性。 若要對載入僅限反射內容中的程式碼擷取屬性，您必須使用 <xref:System.Reflection.CustomAttributeData> 類別，如以下連結所示：[如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
  本節說明下列擷取屬性的方式：  
   

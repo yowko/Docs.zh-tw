@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bcf1773cfe839d9a4ac197d701d155b68cdb949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109418"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937992"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)
 類型程式庫匯出工具可以產生類型程式庫，這個類型程式庫描述定義在通用語言執行平台組件中的類型。  
@@ -54,13 +54,13 @@ tlbexp assemblyName [options]
 |**/?**|顯示工具的命令語法和選項。|  
   
 > [!NOTE]
->  Tlbexp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 例如，**/n** 相當於 **/nologo**，且 **/o:** *outfile.tlb* 相當於 **/out:** *outfile.tlb*。  
+> Tlbexp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 例如， **/n** 相當於 **/nologo**，且 **/o:** *outfile.tlb* 相當於 **/out:** *outfile.tlb*。  
   
 ## <a name="remarks"></a>備註  
  Tlbexp.exe 會產生一個類型程式庫，其含有組件中所定義的類型定義。 應用程式 (例如 Visual Basic 6.0) 可以使用產生的類型程式庫來繫結至組件中所定義的 .NET 類型。  
   
 > [!IMPORTANT]
->  您無法使用 Tlbexp.exe 匯出 Windows 中繼資料 (.winmd) 檔案。 不支援匯出 Windows 執行階段組件。  
+> 您無法使用 Tlbexp.exe 匯出 Windows 中繼資料 (.winmd) 檔案。 不支援匯出 Windows 執行階段組件。  
   
  全部組件會一次同時轉換。 您無法使用 Tlbexp.exe 來為組件中所定義的類型子集產生類型資訊。  
   

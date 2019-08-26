@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335e6578767c130760f322aa2b015ea7b0f317f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0199efb172466305af22c4ade7c47115a5cefd8f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557928"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939611"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>使用 XPathNavigator 進行結構描述驗證
 您可以使用 <xref:System.Xml.XmlDocument> 類別，透過兩種方式驗證 <xref:System.Xml.XmlDocument> 物件中包含的 XML 內容。 第一種方式是使用驗證 <xref:System.Xml.XmlReader> 物件來驗證 XML 內容，第二種方式是使用 <xref:System.Xml.XmlDocument.Validate%2A> 類別的 <xref:System.Xml.XmlDocument> 方法。 此外，您也可以使用 <xref:System.Xml.XPath.XPathDocument> 類別，執行 XML 內容的唯讀驗證。  
@@ -129,7 +129,7 @@ class ValidatingReaderExample
  <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A> 屬性可用來決定當使用 <xref:System.Xml.XPath.XPathNavigator> 存取屬性或項目時，個別的屬性或項目是否有效。  
   
 > [!NOTE]
->  當 XML 文件載入至具有可定義預設值之關聯結構描述的 <xref:System.Xml.XmlDocument> 物件時，<xref:System.Xml.XmlDocument> 會處理這些預設值，就好像它們是出現在 XML 文件中。 這表示針對結構描述中預設的項目，即使在 XML 文件中將其做為空白項目寫入，<xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> 屬性永遠會傳回 `false`。  
+> 當 XML 文件載入至具有可定義預設值之關聯結構描述的 <xref:System.Xml.XmlDocument> 物件時，<xref:System.Xml.XmlDocument> 會處理這些預設值，就好像它們是出現在 XML 文件中。 這表示針對結構描述中預設的項目，即使在 XML 文件中將其做為空白項目寫入，<xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> 屬性永遠會傳回 `false`。  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>使用驗證方法驗證文件  
  <xref:System.Xml.XmlDocument.Validate%2A> 類別的 <xref:System.Xml.XmlDocument> 方法會根據 <xref:System.Xml.XmlDocument> 物件之 <xref:System.Xml.XmlDocument> 屬性中指定的結構描述，驗證 <xref:System.Xml.XmlDocument.Schemas%2A> 物件中包含的 XML 文件，並執行資訊集增加。 其結果是以具型別文件取代 <xref:System.Xml.XmlDocument> 物件中先前不具型別的 XML 文件。  

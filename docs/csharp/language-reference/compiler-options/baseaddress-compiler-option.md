@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: aa76e3d1d30e394f28b5112e45fc72229e9a78fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e96ab3ece6edc36c913a8efc0097ff9c4a1e3c22
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295779"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69607026"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (C# 編譯器選項)
 **-baseaddress** 選項讓您指定要載入 DLL 的慣用基底位址。 如需此選項的使用時機與使用原因之詳細資訊，請參閱 [Larry Osterman 的部落格](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)。  
@@ -37,9 +37,9 @@ ms.locfileid: "59295779"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性]  頁面。  
   
-2. 按一下 [建置] 屬性頁面。  
+2. 按一下 [建置]  屬性頁面。  
   
 3. 按一下 [ **進階** ] 按鈕。  
   
@@ -50,5 +50,5 @@ ms.locfileid: "59295779"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

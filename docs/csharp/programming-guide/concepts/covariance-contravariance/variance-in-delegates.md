@@ -2,12 +2,12 @@
 title: 委派中的差異 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 213c295782c10d15f0515eeb653322eafdb390d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924384"
 ---
 # <a name="variance-in-delegates-c"></a>委派中的差異 (C#)
 .NET framework 3.5 推出差異支援，在 C# 中比對方法簽章和所有委派的委派型別。 這表示您可以指派給委派的不只是具有相符簽章的方法，也可以是會傳回更多衍生型別 (共變數) 的方法，或接受衍生型別 (反變數) 比委派型別指定少的參數的方法。 這包括泛型和非泛型委派。  
@@ -62,7 +62,7 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- 如需更多範例，請參閱[在委派中使用差異 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) 和[針對 Func 與 Action 泛型委派使用差異 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
+ 如需更多範例，請參閱[在委派中使用差異 (C#)](./using-variance-in-delegates.md) 和[針對 Func 與 Action 泛型委派使用差異 (C#)](./using-variance-for-func-and-action-generic-delegates.md)。  
   
 ## <a name="variance-in-generic-type-parameters"></a>泛型型別參數中的差異  
  在 .NET Framework 4 或更新版本中可以啟用委派之間的隱含轉換，因此具有泛型型別參數所指定的不同型別的泛型委派可互相指派，如果型別繼承自彼此，如差異所要求。  
@@ -122,10 +122,10 @@ public static void Test()
   
 - <xref:System.Converter%602> 委派  
   
- 如需詳細資訊及更多範例，請參閱[針對 Func 與 Action 泛型委派使用差異 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
+ 如需詳細資訊及更多範例，請參閱[針對 Func 與 Action 泛型委派使用差異 (C#)](./using-variance-for-func-and-action-generic-delegates.md)。  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>宣告泛型委派中的 Variant 型別參數  
- 如果泛型委派具有 Covariant 或 Contravariant 泛型型別參數，它可以稱之為「Variant 泛型委派」。  
+ 如果泛型委派具有 Covariant 或 Contravariant 泛型型別參數，它可以稱之為「Variant 泛型委派」  。  
   
  您可以使用 `out` 關鍵字將泛型委派中的泛型型別參數宣告為 Covariant。 Covariant 型別僅可用為方法傳回型別，不能用為方法引數的型別。 以下程式碼範例會示範如何宣告 Covariant 泛型委派。  
   
@@ -140,7 +140,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
->  C# 中的 `ref`、`in` 和 `out` 參數不可標示為可變動。  
+> C# 中的 `ref`、`in` 和 `out` 參數不可標示為可變動。  
   
  您也可以支援相同委派中不同型別參數的差異和共變數。 這在下列範例中顯示。  
   
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>另請參閱
 
-- [泛型](~/docs/standard/generics/index.md)
-- [針對 Func 與 Action 泛型委派使用變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [如何：組合委派 (多點傳送委派)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [泛型](../../../../standard/generics/index.md)
+- [針對 Func 與 Action 泛型委派使用變異數 (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [如何：組合委派 (多點傳送委派)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

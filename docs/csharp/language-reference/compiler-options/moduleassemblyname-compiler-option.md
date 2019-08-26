@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d57279128c0909ba3e62d55d596705cfde6be75c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593060"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606672"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C# 編譯器選項)
 指定 .netmodule 可以存取其非公用類型的組件。  
@@ -37,7 +37,7 @@ ms.locfileid: "64593060"
   
 - 現存組件已對將在其中建置 .netmodule 的組件授與 friend 組件的存取權。  
   
- 如需建置 .netmodule 的詳細資訊，請參閱 [-target:module (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)。  
+ 如需建置 .netmodule 的詳細資訊，請參閱 [-target:module (C# 編譯器選項)](./target-module-compiler-option.md)。  
   
  如需 Friend 組件的詳細資訊，請參閱 [Friend 組件](../../../standard/assembly/friend-assemblies.md)。  
   
@@ -97,5 +97,5 @@ class A {
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-ms.openlocfilehash: 2389ea01a980f80c7723f9b481ede2e1fe915b28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e5f4dc22ad75dc4d4f7dc30f44e6ae304403ef16
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624532"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914522"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>作法：覆寫全域 Proxy 的選取範圍
 這個範例會在連接埠 80 上將 **WebRequest** 傳送到 `www.contoso.com`，以使用名為 `alternateproxy` 的 Proxy 伺服器覆寫全域 Proxy 的選取範圍。  
@@ -30,7 +30,7 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- **System.Net** 命名空間的[`using`指示詞](~/docs/csharp/language-reference/keywords/using-directive.md)。  
+- **System.Net** 命名空間的[`using`指示詞](../../csharp/language-reference/keywords/using-directive.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

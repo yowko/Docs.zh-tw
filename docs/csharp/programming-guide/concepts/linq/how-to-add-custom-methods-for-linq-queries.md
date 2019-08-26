@@ -1,19 +1,19 @@
 ---
-title: HOW TO：新增 LINQ 查詢的自訂方法 (C#)
+title: 作法：新增 LINQ 查詢的自訂方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: 5aca346c182d63967f02a7f5444c5fd6d86ae3d1
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: fcf6814c8b3076a18e807a378796094a9ce2cf84
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610895"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594142"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>HOW TO：新增 LINQ 查詢的自訂方法 (C#)
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>作法：新增 LINQ 查詢的自訂方法 (C#)
 
 您可以將擴充方法新增至 <xref:System.Collections.Generic.IEnumerable%601> 介面，來延伸您可以用於 LINQ 查詢的方法組。 例如，除了標準平均值或最多作業，您可以建立自訂的彙總方法，計算一系列值的單一值。 您也可以建立一個方法，用為自訂篩選器或一系列值的特定資料轉換，並傳回新的序列。 這類方法的範例包括 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A>。
 
-當您延伸 <xref:System.Collections.Generic.IEnumerable%601> 介面時，可將自訂方法套用至任何可列舉的集合。 如需詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。
+當您延伸 <xref:System.Collections.Generic.IEnumerable%601> 介面時，可將自訂方法套用至任何可列舉的集合。 如需詳細資訊，請參閱[擴充方法](../../classes-and-structs/extension-methods.md)。
 
 ## <a name="adding-an-aggregate-method"></a>新增彙總方法
 
@@ -217,4 +217,4 @@ foreach (var element in query)
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [擴充方法](../../classes-and-structs/extension-methods.md)

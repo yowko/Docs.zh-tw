@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566251"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604208"
 ---
 # <a name="built-in-reference-types-c-reference"></a>內建參考型別 (C# 參考)
 
@@ -172,7 +172,7 @@ obj = obj + 3;
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](../keywords/index.md)
-- [事件](../../../csharp/programming-guide/events/index.md)
+- [事件](../../programming-guide/events/index.md)
 - [使用動態型別](../../programming-guide/types/using-type-dynamic.md)
 - [使用字串的最佳做法](../../../standard/base-types/best-practices-strings.md)
 - [基本字串作業](../../../standard/base-types/basic-string-operations.md)

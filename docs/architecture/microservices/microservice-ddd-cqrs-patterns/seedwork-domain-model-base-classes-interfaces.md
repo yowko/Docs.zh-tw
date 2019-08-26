@@ -2,12 +2,12 @@
 title: Seedwork (網域模型的可重複使用基底類別和介面)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 seedwork 概念作為起點，開始實作 DDD 導向的領域模型。
 ms.date: 10/08/2018
-ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676305"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660766"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (網域模型的可重複使用基底類別和介面)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68676305"
 
 ## <a name="the-custom-entity-base-class"></a>自訂 Entity 基底類別
 
-下列程式碼是 Entity 基底類別的範例，您可以在其中放置可由任何領域實體透過相同方式使用的程式碼，例如實體識別碼、[等號比較運算子](~/docs/csharp/language-reference/operators/equality-operators.md)、每的實體的領域事件清單等。
+下列程式碼是 Entity 基底類別的範例，您可以在其中放置可由任何領域實體透過相同方式使用的程式碼，例如實體識別碼、[等號比較運算子](../../../csharp/language-reference/operators/equality-operators.md)、每的實體的領域事件清單等。
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 75b8889f5f1f1b0dab4aa365daa34ef5ae226b02
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306647"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588828"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>使用可為 Null 的型別 (C# 程式設計指南)
 
@@ -31,7 +31,7 @@ ms.locfileid: "59306647"
   
 - <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> 指出可為 Null 型別的執行個體是否有其基礎型別的值。
   
-- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 會取得基礎型別的值 (若 <xref:System.Nullable%601.HasValue%2A>為 `true`)。 若 <xref:System.Nullable%601.HasValue%2A> 為 `false`，則 <xref:System.Nullable%601.Value%2A> 屬性會擲回 <xref:System.InvalidOperationException>。
+- 若 <xref:System.Nullable%601.HasValue%2A> 為 `true`，則 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 會取得基礎型別的值。 若 <xref:System.Nullable%601.HasValue%2A> 為 `false`，則 <xref:System.Nullable%601.Value%2A> 屬性會擲回 <xref:System.InvalidOperationException>。
   
 下列範例中的程式碼會使用 `HasValue` 屬性，在顯示之前測試變數是否包含值：
   
@@ -95,5 +95,5 @@ ms.locfileid: "59306647"
 ## <a name="see-also"></a>另請參閱
 
 - [可為 Null 的型別](index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
-- [「增益」(Lift) 的真正意義是什麼？](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [C# 程式設計指南](../index.md)
+- [「增益」(Lift) 的真正意義是什麼？(英文)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

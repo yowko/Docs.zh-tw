@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a94e0db3598cb5e2d00298144fa4826035a8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27c19c82270b9d67b6cd308386aa93c6112d59ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674137"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909688"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 移除 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組可用來從 XML 文件移除節點及值的方法。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
@@ -33,7 +33,7 @@ ms.locfileid: "54674137"
  刪除作業不會影響定位於已刪除節點上任何 <xref:System.Xml.XPath.XPathNavigator> 物件的位置。 這些 <xref:System.Xml.XPath.XPathNavigator> 物件是有效的，這表示它們可在已刪除的樹狀子目錄內移動，但無法使用 <xref:System.Xml.XPath.XPathNavigator> 類別的一般節點集巡覽方法，移至主節點樹狀目錄。  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 方法可用來將這些 <xref:System.Xml.XPath.XPathNavigator> 物件移回主節點樹狀目錄，或從主節點樹狀目錄移至刪除的樹狀子目錄。  
+> <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 方法可用來將這些 <xref:System.Xml.XPath.XPathNavigator> 物件移回主節點樹狀目錄，或從主節點樹狀目錄移至刪除的樹狀子目錄。  
   
  在下列範例中，使用 `price` 方法，刪除 `book` 檔案之第一個 `contosoBooks.xml` 項目的 <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> 項目。 刪除 <xref:System.Xml.XPath.XPathNavigator> 項目之後，`price` 物件的位置在父 `book` 項目上。  
   

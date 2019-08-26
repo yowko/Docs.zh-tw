@@ -20,18 +20,18 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 0831a22b0c1d3333cc37f86a764006c934597390
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66378171"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968566"
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 <a name="top"></a> 回溯 (Backtracking) 會在規則運算式模式包含選擇性的 [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
   
 > [!NOTE]
->  大致而言，像是 .NET 規則運算式引擎這類非決定性有限自動化 (NFA) 引擎將設計有效率且快速之規則運算式的責任交給了開發人員。  
+> 大致而言，像是 .NET 規則運算式引擎這類非決定性有限自動化 (NFA) 引擎將設計有效率且快速之規則運算式的責任交給了開發人員。  
   
  此主題包括下列章節：  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66378171"
  從 .NET Framework 4.5 開始，您可以設定逾時值，表示規則運算式引擎開始搜尋單一符合項目到放棄嘗試並擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外狀況之前的最長間隔。 您可以提供執行個體規則運算式之 <xref:System.TimeSpan> 建構函式的 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 值，藉此指定逾時間隔。 此外，每一個靜態模式比對方法都有 <xref:System.TimeSpan> 參數的多載，可讓您指定逾時值。 根據預設，逾時間隔會設為 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> ，表示規則運算式引擎不會逾時。  
   
 > [!IMPORTANT]
->  如果您的規則運算式倚賴回溯，建議您一定要設定逾時間隔。  
+> 如果您的規則運算式倚賴回溯，建議您一定要設定逾時間隔。  
   
  <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外狀況表示規則運算式引擎在指定的逾時間隔內找不到相符項目，但不會指出擲回例外狀況的原因。 這個原因可能是大量回溯，不過也有可能是對於擲回例外狀況當時的系統負載而言，設定的逾時間隔太低。 當您處理例外狀況時，可以選擇中放棄一步比對輸入字串，或增加逾時間隔並重試比對作業。  
   

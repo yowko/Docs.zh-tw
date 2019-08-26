@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f283aad7c6727aff111aaaf78beb1e8da4b45898
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592710"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988369"
 ---
 # <a name="strong-named-assemblies"></a>強式名稱的組件
 強式命名組件會為組件建立唯一識別，並可防止發生組件衝突。  
@@ -25,7 +25,7 @@ ms.locfileid: "64592710"
  建立強式名稱的組件時，會包含組件的簡單文字名稱、版本號碼、文化特性資訊 (選擇性)、數位簽章，以及對應至用於簽署之私密金鑰的公開金鑰。  
   
 > [!WARNING]
->  請勿依賴強式名稱提供安全性。 強式名稱僅提供唯一識別。  
+> 請勿依賴強式名稱提供安全性。 強式名稱僅提供唯一識別。  
   
 ## <a name="why-strong-name-your-assemblies"></a>為什麼需要強式命名您的組件？  
  當您參考強式名稱的組件時，您會希望取得某些優點，例如版本控制和命名保護。 強式名稱的組件可安裝在全域組件快取中，在某些情況下您必須這麼做。  

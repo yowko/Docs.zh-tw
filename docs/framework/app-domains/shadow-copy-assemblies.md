@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 531e8f576dcbe0fc272c61a57a689d993fb03445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347385"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927904"
 ---
 # <a name="shadow-copying-assemblies"></a>陰影複製組件
 陰影複製可讓應用程式定義域中使用的組件更新，而不需卸載應用程式定義域。 這對必須連續運作的應用程式特別有用，例如 ASP.NET 網站。  
   
 > [!IMPORTANT]
->  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式不支援陰影複製。  
+> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式不支援陰影複製。  
   
  Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸載組件之前無法更新檔案。 若要從應用程式定義域卸載組件，唯一的方式為卸載應用程式定義域，如此在正常情況下，就無法在磁碟上更新組件，直到使用組件的所有應用程式定義域已卸載為止。  
   
  當設定應用程式定義域來陰影複製檔案時，會從應用程式路徑複製組件到另一個位置，並從該位置載入。 複本會遭到鎖定，但原始組件檔已解除鎖定，而且可以更新。  
   
 > [!IMPORTANT]
->  唯一可以進行陰影複製的組件是儲存在應用程式目錄或其子目錄的，在設定應用程式定義域時可由 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 屬性指定。 儲存在全域組件快取的組件不會進行陰影複製。  
+> 唯一可以進行陰影複製的組件是儲存在應用程式目錄或其子目錄的，在設定應用程式定義域時可由 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 屬性指定。 儲存在全域組件快取的組件不會進行陰影複製。  
   
  本文包含下列章節：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67347385"
      藉由串連 <xref:System.AppDomainSetup.ApplicationName%2A> 屬性至 <xref:System.AppDomainSetup.CachePath%2A> 屬性做為子目錄，形成此位置的基底路徑。 這會陰影複製組件到這個路徑的子目錄，而非本身的基底路徑。  
   
     > [!NOTE]
-    >  如果未設定 <xref:System.AppDomainSetup.ApplicationName%2A> 屬性，則會忽略 <xref:System.AppDomainSetup.CachePath%2A> 屬性，並使用下載快取。 不會有例外狀況擲回。  
+    > 如果未設定 <xref:System.AppDomainSetup.ApplicationName%2A> 屬性，則會忽略 <xref:System.AppDomainSetup.CachePath%2A> 屬性，並使用下載快取。 不會有例外狀況擲回。  
   
      如果您指定自訂位置，則當您不再需要檔案時，要負責清除目錄及複製檔案。 它們不會自動刪除。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67347385"
      當您啟用應用程式定義域的陰影複製時，預設會複製所有組件到應用程式路徑中；也就是 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 屬性所指定的目錄中。 您可以藉由建立字串限制所選目錄的複製，該字串只包含您想要陰影複製的目錄，並指派字串至 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 屬性。 請以分號分隔目錄。 只會對在所選目錄中的組件陰影複製。  
   
     > [!NOTE]
-    >  如果您不指派字串給 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 屬性，或如果您將這個屬性設定為 `null`，則會陰影複製 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 屬性所指定目錄中的所有組件。  
+    > 如果您不指派字串給 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 屬性，或如果您將這個屬性設定為 `null`，則會陰影複製 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 屬性所指定目錄中的所有組件。  
   
     > [!IMPORTANT]
     >  目錄路徑不可包含分號，因為分號是分隔符號字元。 分號沒有逸出字元。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1334f8c8e1b5898e93697461f609429d4aae764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607834"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921695"
 ---
 # <a name="assembly-contents"></a>組件內容
 一般而言，靜態組件可包含四個項目：  
@@ -40,7 +40,7 @@ ms.locfileid: "64607834"
  ![顯示多檔案組件的圖表。](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
->  構成多檔案組件的檔案沒有與檔案系統實際連結。 而是透過組件資訊清單連結，而且 Common Language Runtime 會將它們當做一個單位來管理。  
+> 構成多檔案組件的檔案沒有與檔案系統實際連結。 而是透過組件資訊清單連結，而且 Common Language Runtime 會將它們當做一個單位來管理。  
   
  在這個圖中，這三個檔案都屬於一個組件，如同 MyAssembly.dll 中所含組件資訊清單中的描述。 對於檔案系統而言，它們是三個不同的檔案。 請注意，Util.netmodule 這個檔案會編譯為模組，這是因為它並不包含組件資訊。 建立這個組件時，已將組件資訊清單加入至 MyAssembly.dll 中，指出它與 Util.netmodule 和 Graphic.bmp 的關聯性。  
   

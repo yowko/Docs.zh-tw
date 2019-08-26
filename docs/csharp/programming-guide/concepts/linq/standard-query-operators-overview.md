@@ -2,12 +2,12 @@
 title: 標準查詢運算子概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537955"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590970"
 ---
 # <a name="standard-query-operators-overview-c"></a>標準查詢運算子概觀 (C#)
 「標準查詢運算子」  是形成 LINQ 模式的方法。 這些方法大多會在序列上運作，而序列是指其類型會實作 <xref:System.Collections.Generic.IEnumerable%601> 介面或 <xref:System.Linq.IQueryable%601> 介面的物件。 標準查詢運算子所提供的查詢功能包括篩選、投影、彙總、排序等等。  
@@ -67,7 +67,7 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>查詢運算式語法  
- 某些更常用的標準查詢運算子具有專用 C# 和 Visual Basic 語言關鍵字語法，可將它們呼叫為「查詢運算式」   的一部分。 如需具有專用關鍵字和其對應語法之標準查詢運算子的詳細資訊，請參閱[標準查詢運算子的查詢運算式語法 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)。  
+ 某些更常用的標準查詢運算子具有專用 C# 和 Visual Basic 語言關鍵字語法，可將它們呼叫為「查詢運算式」   的一部分。 如需具有專用關鍵字和其對應語法之標準查詢運算子的詳細資訊，請參閱[標準查詢運算子的查詢運算式語法 (C#)](./query-expression-syntax-for-standard-query-operators.md)。  
   
 ## <a name="extending-the-standard-query-operators"></a>擴充標準查詢運算子  
  您可以建立適用於目標定義域或技術的定義域特定方法，來擴增一組標準查詢運算子。 您也可以將標準查詢運算子取代為提供額外服務的專屬實作，例如遠端評估、查詢轉譯和最佳化。 如需範例，請參閱 <xref:System.Linq.Enumerable.AsEnumerable%2A>。  
@@ -75,39 +75,39 @@ foreach (var obj in query)
 ## <a name="related-sections"></a>相關章節  
  下列連結會將您帶到根據功能而提供各種標準查詢運算子的其他資訊的主題。  
   
- [排序資料 (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+ [排序資料 (C#)](./sorting-data.md)  
   
- [設定作業 (C#)](../../../../csharp/programming-guide/concepts/linq/set-operations.md)  
+ [設定作業 (C#)](./set-operations.md)  
   
- [篩選資料 (C#)](../../../../csharp/programming-guide/concepts/linq/filtering-data.md)  
+ [篩選資料 (C#)](./filtering-data.md)  
   
- [數量詞作業 (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)  
+ [數量詞作業 (C#)](./quantifier-operations.md)  
   
- [投影作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
+ [投影作業 (C#)](./projection-operations.md)  
   
- [分割資料 (C#)](../../../../csharp/programming-guide/concepts/linq/partitioning-data.md)  
+ [分割資料 (C#)](./partitioning-data.md)  
   
- [聯結作業 (C#)](../../../../csharp/programming-guide/concepts/linq/join-operations.md)  
+ [聯結作業 (C#)](./join-operations.md)  
   
- [分組資料 (C#)](../../../../csharp/programming-guide/concepts/linq/grouping-data.md)  
+ [分組資料 (C#)](./grouping-data.md)  
   
- [產生作業 (C#)](../../../../csharp/programming-guide/concepts/linq/generation-operations.md)  
+ [產生作業 (C#)](./generation-operations.md)  
   
- [相等比較作業 (C#)](../../../../csharp/programming-guide/concepts/linq/equality-operations.md)  
+ [相等比較作業 (C#)](./equality-operations.md)  
   
- [項目作業 (C#)](../../../../csharp/programming-guide/concepts/linq/element-operations.md)  
+ [項目作業 (C#)](./element-operations.md)  
   
- [轉換資料類型 (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)  
+ [轉換資料類型 (C#)](./converting-data-types.md)  
   
- [串連作業 (C#)](../../../../csharp/programming-guide/concepts/linq/concatenation-operations.md)  
+ [串連作業 (C#)](./concatenation-operations.md)  
   
- [彙總作業 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+ [彙總作業 (C#)](./aggregation-operations.md)  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [LINQ 查詢簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
-- [標準查詢運算子的查詢運算式語法 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [依據執行方式將標準查詢運算子分類 (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [LINQ 查詢簡介 (C#)](./introduction-to-linq-queries.md)
+- [標準查詢運算子的查詢運算式語法 (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [依據執行方式將標準查詢運算子分類 (C#)](./classification-of-standard-query-operators-by-manner-of-execution.md)
+- [擴充方法](../../classes-and-structs/extension-methods.md)

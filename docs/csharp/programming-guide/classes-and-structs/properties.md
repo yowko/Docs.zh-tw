@@ -8,27 +8,27 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583078"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596148"
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
-屬性是提供彈性機制以讀取、寫入或計算私用欄位值的成員。 使用屬性時可將其視為公用資料成員，但實際上屬性是名為「存取子」的特殊方法。 如此可讓資料更容易存取，同時有助於提升方法的安全性和彈性。  
+屬性是提供彈性機制以讀取、寫入或計算私用欄位值的成員。 使用屬性時可將其視為公用資料成員，但實際上屬性是名為「存取子」  的特殊方法。 如此可讓資料更容易存取，同時有助於提升方法的安全性和彈性。  
 
 ## <a name="properties-overview"></a>屬性概觀  
   
 - 屬性可讓類別公開取得和設定值的公用方式，同時隱藏實作或驗證程式碼。  
   
-- [get](../../../csharp/language-reference/keywords/get.md) 屬性存取子可用來傳回屬性值，而 [set](../../../csharp/language-reference/keywords/set.md) 屬性存取子則用來指派新值。 這些存取子可以有不同的存取層級。 如需詳細資訊，請參閱[限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)。  
+- [get](../../language-reference/keywords/get.md) 屬性存取子可用來傳回屬性值，而 [set](../../language-reference/keywords/set.md) 屬性存取子則用來指派新值。 這些存取子可以有不同的存取層級。 如需詳細資訊，請參閱[限制存取子的存取範圍](./restricting-accessor-accessibility.md)。  
   
-- [value`set` 關鍵字是用來定義 ](../../../csharp/language-reference/keywords/value.md) 存取子要指派的值。  
-- 屬性可以是「讀寫」(同時具有 `get` 和 `set` 存取子)、「唯讀」(具有 `get` 存取子但沒有 `set` 存取子) 或「唯寫」(具有 `set` 存取子但沒有 `get` 存取子)。 唯寫屬性很少見，而且最常用來限制對機密資料的存取。
+- [value`set` 關鍵字是用來定義 ](../../language-reference/keywords/value.md) 存取子要指派的值。  
+- 屬性可以是「讀寫」  (同時具有 `get` 和 `set` 存取子)、「唯讀」  (具有 `get` 存取子但沒有 `set` 存取子) 或「唯寫」  (具有 `set` 存取子但沒有 `get` 存取子)。 唯寫屬性很少見，而且最常用來限制對機密資料的存取。
 
-- 不需要自訂存取子程式碼的簡單屬性，則可以實作為運算式主體定義或[自動實作屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)。
+- 不需要自訂存取子程式碼的簡單屬性，則可以實作為運算式主體定義或[自動實作屬性](./auto-implemented-properties.md)。
  
 ## <a name="properties-with-backing-fields"></a>含有支援欄位的屬性
 
@@ -60,15 +60,15 @@ ms.locfileid: "64583078"
 
 ## <a name="related-sections"></a>相關章節  
   
-- [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [使用屬性](./using-properties.md)  
   
-- [介面屬性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [介面屬性](./interface-properties.md)  
   
-- [屬性與索引子之間的比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [屬性與索引子之間的比較](../indexers/comparison-between-properties-and-indexers.md)  
   
-- [限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [限制存取子的存取範圍](./restricting-accessor-accessibility.md)  
   
-- [自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [自動實作的屬性](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
@@ -76,8 +76,8 @@ ms.locfileid: "64583078"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [索引子](../../../csharp/programming-guide/indexers/index.md)
-- [get 關鍵字](../../../csharp/language-reference/keywords/get.md)
-- [set 關鍵字](../../../csharp/language-reference/keywords/set.md)
+- [C# 程式設計指南](../index.md)
+- [使用屬性](./using-properties.md)
+- [索引子](../indexers/index.md)
+- [get 關鍵字](../../language-reference/keywords/get.md)
+- [set 關鍵字](../../language-reference/keywords/set.md)

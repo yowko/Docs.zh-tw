@@ -2,17 +2,17 @@
 title: LINQ to XML 比較其他 XML 技術的比較
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 345e777b93497f483ca30f5c42fbf5a5c146dea3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1cafa8b690afb753dfdb0301dc6a19f5f257e9c0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484306"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591867"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 比較其他 XML 技術之比較
 這個主題會比較 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與下列 XML 技術：<xref:System.Xml.XmlReader>、XSLT、MSXML 和 XmlLite。 這個資訊可以協助您決定要使用的技術。  
   
- 若要比較 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與文件物件模型 (DOM)，請參閱 [LINQ to XML 與DOM (C#) 之比較](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)。  
+ 若要比較 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與文件物件模型 (DOM)，請參閱 [LINQ to XML 與DOM (C#) 之比較](./linq-to-xml-vs-dom.md)。  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML 比較XmlReader  
  <xref:System.Xml.XmlReader> 是一個快速、順向、非快取的剖析器。  
@@ -54,4 +54,4 @@ ms.locfileid: "66484306"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用者入門 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [使用者入門 (LINQ to XML)](./linq-to-xml-overview.md)

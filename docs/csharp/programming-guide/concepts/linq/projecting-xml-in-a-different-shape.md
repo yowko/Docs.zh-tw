@@ -2,12 +2,12 @@
 title: 以不同的組織結構投影 XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 3b992b9eb56f978ce92f3b0210223da978f44e2b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484041"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591530"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>以不同的組織結構投影 XML (C#)
 本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。  
@@ -17,7 +17,7 @@ ms.locfileid: "66484041"
 ## <a name="example"></a>範例  
  此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。 它也可以識別每個段落的樣式和文字。 最後，此範例會使用不同的組織結構規劃 XML。 此範例在這個教學課程中，會在先前的範例上建置。 進行規劃的新陳述式會在以下程式碼的註解中叫出。  
   
- 如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](./creating-the-source-office-open-xml-document.md)。  
   
  這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
@@ -233,5 +233,5 @@ class Program
 ## <a name="next-steps"></a>後續步驟  
  在下一個範例中，您將在 Word 文件中進行查詢以尋找所有文字：  
   
-- [尋找 Word 文件中的文字 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [尋找 Word 文件中的文字 (C#)](./finding-text-in-word-documents.md)  
   

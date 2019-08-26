@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 0ec661e5fb0e13eaf8c3c8e4a7b274ab58853f58
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6adbb864b0450cdd1dbfcc56abdbad2034c5c7a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978081"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590242"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>作法：使用 finally 執行清除程式碼 (C# 程式設計手冊)
 `finally` 陳述式的目的是為了確保在必要時會立即清除物件 (通常是含有外部資源的物件)，即使擲回例外狀況也一樣。 這類清除的一個例子，是在使用後立即呼叫 <xref:System.IO.FileStream> 的 <xref:System.IO.Stream.Close%2A>，而不等候 Common Language Runtime 回收物件的記憶體，如下所示：  
@@ -30,10 +30,10 @@ ms.locfileid: "56978081"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)
-- [例外狀況處理](../../../csharp/programming-guide/exceptions/exception-handling.md)
-- [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [C# 程式設計指南](../index.md)
+- [例外狀況和例外狀況處理](./index.md)
+- [例外狀況處理](./exception-handling.md)
+- [using 陳述式](../../language-reference/keywords/using-statement.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)

@@ -1,15 +1,15 @@
 ---
-title: HOW TO：建立未簽署的 Friend 組件 (C#)
+title: 作法：建立未簽署的 Friend 組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5dadd725234048c4b6a4f9a0fa9b38dbf92671aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318230"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595915"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>HOW TO：建立未簽署的 Friend 組件 (C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>作法：建立未簽署的 Friend 組件 (C#)
 此範例示範如何搭配未簽署的組件使用 friend 組件。  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>建立組件和 friend 組件  
@@ -81,7 +81,7 @@ ms.locfileid: "59318230"
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用 `/out` 編譯器選項，明確指定輸出組件 (.exe 或 .dll) 的名稱。 如需詳細資訊，請參閱 [/out (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)。  
+     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用 `/out` 編譯器選項，明確指定輸出組件 (.exe 或 .dll) 的名稱。 如需詳細資訊，請參閱 [/out (C# 編譯器選項)](../../../language-reference/compiler-options/out-compiler-option.md)。  
   
 6. 執行 friend_unsigned_B.exe 檔案。  
   
@@ -95,5 +95,5 @@ ms.locfileid: "59318230"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 中的組件](../../../../standard/assembly/index.md)
 - [Friend 組件](../../../../standard/assembly/friend-assemblies.md)
-- [如何：建立簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
+- [如何：建立簽署的 Friend 組件 (C#)](./how-to-create-signed-friend-assemblies.md)
+- [C# 程式設計指南](../../index.md)

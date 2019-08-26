@@ -11,15 +11,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 699ae27df2423638f38a22cc17dc83b828383394
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 454915454f3faf15933257f3e3e221afec51d0ee
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711341"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606761"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# 編譯器選項)
-在輸出檔中建立 .NET Framework 資源連結。 資源檔不會新增至輸出檔。 這點與 [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) 選項不同；後者會將資源檔內嵌在輸出檔案中。  
+在輸出檔中建立 .NET Framework 資源連結。 資源檔不會新增至輸出檔。 這點與 [-resource](./resource-compiler-option.md) 選項不同；後者會將資源檔內嵌在輸出檔案中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,9 +40,9 @@ ms.locfileid: "54711341"
 ## <a name="remarks"></a>備註  
  根據預設，使用 C# 編譯器建立連結資源時，這些資源在組件中為公用狀態。 若要將資源設為私用，可將 `private` 指定為存取範圍修飾詞。 您只能使用 `public` 或 `private` 修飾詞。  
   
- **-linkresource** 必須使用其中一個 [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 選項 (**-target:module** 除外)。  
+ **-linkresource** 必須使用其中一個 [-target](./target-compiler-option.md) 選項 ( **-target:module** 除外)。  
   
- 例如，如果 `filename` 是由 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱<xref:System.Resources.ResourceManager?displayProperty=nameWithType>。 對於其他所有資源，請使用 <xref:System.Reflection.Assembly> 類別中的 `GetManifestResource` 方法，以在執行階段存取資源。  
+ 例如，如果 `filename` 是由 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>。 對於其他所有資源，請使用 <xref:System.Reflection.Assembly> 類別中的 `GetManifestResource` 方法，以在執行階段存取資源。  
   
  `filename` 中指定的檔案可以為任何格式。 例如，您可能需要產生組件的原生 DLL 部分，以便安裝到全域組件快取中，並從組件的 Managed 程式碼存取。 下方第二個範例顯示如何執行此操作。 您可以在組件連結器中執行相同的動作。 下方第三個範例顯示如何執行此操作。 如需詳細資訊，請參閱 [Al.exe (組件連結器)](../../../framework/tools/al-exe-assembly-linker.md) 和[使用組件和全域組件快取](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)。  
   
@@ -76,7 +76,7 @@ gacutil -i A.dll
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)
 - [Al.exe (組件連結器)](../../../framework/tools/al-exe-assembly-linker.md)
 - [使用組件和全域組件快取](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

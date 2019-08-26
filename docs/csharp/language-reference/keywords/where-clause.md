@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: fc259f0e0a83d2f55bf2d50fa336c9201b8b5bef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: aceda6cfd33a53388a5afb046359c4dcfddfd1f8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633233"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602031"
 ---
 # <a name="where-clause-c-reference"></a>where 子句 (C# 參考)
 
@@ -51,5 +51,5 @@ ms.locfileid: "65633233"
 - [from 子句](from-clause.md)
 - [select 子句](select-clause.md)
 - [篩選資料](../../programming-guide/concepts/linq/filtering-data.md)
-- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ 查詢運算式](../../programming-guide/linq-query-expressions/index.md)
 - [開始使用 C# 中的 LINQ](../../programming-guide/concepts/linq/getting-started-with-linq.md)

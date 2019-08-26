@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 047207e495f542108d6f41247b25009d9c9bb909
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 259f0d5e7e1a67a273bccc7847c38a4d694c69ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634790"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588100"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>作法：使用 XML 文件功能
 
@@ -134,6 +134,6 @@ XML 文件是以 /// 開頭。 當您建立新的專案時，精靈會為您在�
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML 文件註解](../../../csharp/programming-guide/xmldoc/index.md)
+- [C# 程式設計指南](../index.md)
+- [/doc (C# 編譯器選項)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML 文件註解](./index.md)

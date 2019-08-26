@@ -6,15 +6,15 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c02e4f62aabb17213ce172e7e3a773e86d1e9908
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cdd425970442e284d6fd6488bbb13394c12e939a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201595"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596447"
 ---
 # <a name="interface-properties-c-programming-guide"></a>介面屬性 (C# 程式設計手冊)
-屬性可以宣告於 [interface](../../../csharp/language-reference/keywords/interface.md) 上。 介面屬性存取子的範例如下：  
+屬性可以宣告於 [interface](../../language-reference/keywords/interface.md) 上。 介面屬性存取子的範例如下：  
   
  [!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]  
   
@@ -27,7 +27,7 @@ ms.locfileid: "57201595"
   
  [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
   
- 這稱為[明確介面實作](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)。 例如，如果 `Employee` 類別實作 `ICitizen` 和 `IEmployee` 這兩個介面，而且這兩個介面都具有 `Name` 屬性，則需要明確介面成員實作。 也就是說，下列屬性宣告：  
+ 這稱為[明確介面實作](../interfaces/explicit-interface-implementation.md)。 例如，如果 `Employee` 類別實作 `ICitizen` 和 `IEmployee` 這兩個介面，而且這兩個介面都具有 `Name` 屬性，則需要明確介面成員實作。 也就是說，下列屬性宣告：  
   
  [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
   
@@ -53,9 +53,9 @@ ms.locfileid: "57201595"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [屬性與索引子之間的比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
-- [索引子](../../../csharp/programming-guide/indexers/index.md)
-- [介面](../../../csharp/programming-guide/interfaces/index.md)
+- [C# 程式設計指南](../index.md)
+- [屬性](./properties.md)
+- [使用屬性](./using-properties.md)
+- [屬性與索引子之間的比較](../indexers/comparison-between-properties-and-indexers.md)
+- [索引子](../indexers/index.md)
+- [介面](../interfaces/index.md)

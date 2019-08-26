@@ -2,15 +2,15 @@
 title: 將標準查詢運算子鏈結在一起 (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: e09b918ab6c33c8e3ccae6f99826dd86f4a2d1e6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 89cf7f526bdc60881e901d7ca8f556e97488b220
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487611"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594835"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>將標準查詢運算子鏈結在一起 (C#)
-這是[教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 中的最後一個主題。  
+這是[教學課程：將查詢鏈結在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 中的最後一個主題。  
   
  標準的查詢運算子也可以鏈結在一起。 例如，您可以插入 <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> 運算子，也可以用延遲的方式操作。 但該運算子不會具體化任何中繼結果。  
   

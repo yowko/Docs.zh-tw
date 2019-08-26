@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593024"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602603"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# 編譯器選項)
 **-out** 選項指定輸出檔案的名稱。  
@@ -49,9 +49,9 @@ ms.locfileid: "64593024"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性]  頁面。  
   
-2. 按一下 [應用程式] 屬性頁。  
+2. 按一下 [應用程式]  屬性頁。  
   
 3. 修改**組件名稱**屬性。  
   
@@ -66,6 +66,6 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)
 - [Friend 組件](../../../standard/assembly/friend-assemblies.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

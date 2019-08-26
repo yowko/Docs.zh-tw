@@ -6,17 +6,17 @@ helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 057532cae42d7a0b6d11750ae0e33e43108cfda9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2b4b7b7bdd03077a78aa2a6375764fa86a885ef5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203583"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588634"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>作法：參考相等 (識別) 的測試 (C# 程式設計指南)
 不必實作任何自訂邏輯，就能支援您類型中的參考相等比較。 此功能是透過靜態 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法提供給所有類型。  
   
- 下列範例示範如何判斷兩個變數是否具有「參考相等」，這表示它們會參考記憶體中的相同物件。  
+ 下列範例示範如何判斷兩個變數是否具有「參考相等」  ，這表示它們會參考記憶體中的相同物件。  
   
  範例中同時顯示為何 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 一律對實值類型傳回 `false`，以及為何不應使用 <xref:System.Object.ReferenceEquals%2A> 來判斷字串是否相等。  
   
@@ -29,4 +29,4 @@ ms.locfileid: "57203583"
   
 ## <a name="see-also"></a>另請參閱
 
-- [相等比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
+- [相等比較](./equality-comparisons.md)

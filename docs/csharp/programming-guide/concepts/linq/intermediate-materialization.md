@@ -2,12 +2,12 @@
 title: 中繼具體化 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: d83bbc5e3de992e9ad4d86d0f684e2dfc3a29411
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 273cd68b9714287f259e763c9b7c534aac1931e6
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484537"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592127"
 ---
 # <a name="intermediate-materialization-c"></a>中繼具體化 (C#)
 如果不小心，在某些情況下，造成查詢中的集合過早具體化，可能會徹底改變應用程式的記憶體與效能設定檔。 有些標準查詢運算子會在產生單一項目前，造成其來源集合具體化。 例如，<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> 會先逐一查看其完整的來源集合，然後排序所有的項目，最後產生第一個項目。 也就是說，取得順序集合的第一個項目會高度耗費資源；之後每個項目則不會高度耗費資源。 這很合理：該查詢運算子不可能以其他方式執行。  
@@ -84,8 +84,8 @@ Main: str >GHI!!!<
   
  標準的查詢運算子也可以鏈結在一起。 此教學課程中的最後一個主題有加以說明。  
   
-- [將標準查詢運算子鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+- [將標準查詢運算子鏈結在一起 (C#)](./chaining-standard-query-operators-together.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [教學課程：將查詢鏈結在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

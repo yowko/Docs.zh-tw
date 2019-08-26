@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 62aaf8785b0dfb646ea804dab6918940f1e33346
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635290"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589382"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一個程式 (C# 程式設計手冊)
 
@@ -28,17 +28,17 @@ ms.locfileid: "65635290"
 
 1. 啟動 Visual Studio。
 
-2. 在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。
+2. 在功能表列上，選擇 [檔案]  、[新增]  、[專案]  。
 
      [ **新增專案** ] 對話方塊隨即開啟。
 
-3. 依序展開 [已安裝]、[範本] 和 [Visual C#]，然後選擇 [主控台應用程式]。
+3. 依序展開 [已安裝]  、[範本]  和 [Visual C#]  ，然後選擇 [主控台應用程式]  。
 
-4. 在 [名稱] 文字方塊中指定專案名稱，然後選擇 [確定] 按鈕。
+4. 在 [名稱]  文字方塊中指定專案名稱，然後選擇 [確定]  按鈕。
 
-     新的專案隨即會出現在方案總管中。
+     新的專案隨即會出現在方案總管  中。
 
-5. 如果 [程式碼編輯器] 中未開啟 Program.cs，請在方案總管中開啟 **Program.cs** 的捷徑功能表，然後選擇 [檢視程式碼]。
+5. 如果 [程式碼編輯器]  中未開啟 Program.cs，請在方案總管  中開啟 **Program.cs** 的捷徑功能表，然後選擇 [檢視程式碼]  。
 
 6. 以下列程式碼取代 Program.cs 的內容。
 
@@ -62,7 +62,7 @@ ms.locfileid: "65635290"
 
 C# 主控台應用程式必須包含 `Main` 方法，控制項在此開始和結束。 `Main` 方法是您建立物件和執行其他方法的所在。
 
-`Main` 方法是位於類別或結構內的[靜態](../../../csharp/language-reference/keywords/static.md)方法。 在上一個 "Hello World!" 範例中，它位於名為 `Hello` 的類別中。 您可以下列方式之一宣告 `Main` 方法：
+`Main` 方法是位於類別或結構內的[靜態](../../language-reference/keywords/static.md)方法。 在上一個 "Hello World!" 範例中，它位於名為 `Hello` 的類別中。 您可以下列方式之一宣告 `Main` 方法：
 
 - 它會傳回 `void`。
 
@@ -82,7 +82,7 @@ C# 主控台應用程式必須包含 `Main` 方法，控制項在此開始和結
 
 `Main` 方法的參數 `args`，是包含用來叫用程式的命令列引數的 `string` 陣列。 不像在 C++ 中，陣列不包含可執行檔 (exe) 的檔案名稱。
 
-如需如何使用命令列引數的詳細資訊，請參閱 [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)和[如何：使用命令列建立和使用組件](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。
+如需如何使用命令列引數的詳細資訊，請參閱 [Main() 和命令列引數](../main-and-command-args/index.md)和[如何：使用命令列建立和使用組件](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。
 
 在 `Main` 方法的結尾呼叫 <xref:System.Console.ReadKey%2A>，可讓您在按下 F5 以於偵錯模式中執行程式時，防止主控台視窗在您有機會讀取輸出之前關閉。
 
@@ -106,17 +106,17 @@ C# 程式通常會使用 .NET Framework 執行階段程式庫所提供的輸入/
 
 2. 執行下列步驟之一來開啟命令提示字元視窗︰
 
-    - 在 Windows 10 的 [開始] 功能表中搜尋 `Developer Command Prompt`，然後點選或選擇 [VS 2017 開發人員命令提示字元]。
+    - 在 Windows 10 的 [開始]  功能表中搜尋 `Developer Command Prompt`，然後點選或選擇 [VS 2017 開發人員命令提示字元]  。
 
          [開發人員命令提示字元] 視窗隨即出現。
 
-    - 開啟 Windows 7 的 [開始] 功能表，展開最新版 Visual Studio 的資料夾，開啟 **Visual Studio Tools** 的捷徑功能表，然後選擇 [VS 2017 開發人員命令提示字元]。
+    - 開啟 Windows 7 的 [開始]  功能表，展開最新版 Visual Studio 的資料夾，開啟 **Visual Studio Tools** 的捷徑功能表，然後選擇 [VS 2017 開發人員命令提示字元]  。
 
          [開發人員命令提示字元] 視窗隨即出現。
 
     - 從標準的命令提示字元視窗啟用命令列組建。
 
-         請參閱[如何：為 Visual Studio 命令列設定環境變數](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
+         請參閱[如何：為 Visual Studio 命令列設定環境變數](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
 
 3. 在命令提示字元視窗中，巡覽至包含 `Hello.cs` 檔案的資料夾。
 
@@ -130,14 +130,14 @@ C# 程式通常會使用 .NET Framework 執行階段程式庫所提供的輸入/
 
      `Hello`
 
- 如需 C# 編譯器及其選項的詳細資訊，請參閱[C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)。
+ 如需 C# 編譯器及其選項的詳細資訊，請參閱[C# 編譯器選項](../../language-reference/compiler-options/index.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)
-- [字串](../../../csharp/programming-guide/strings/index.md)
+- [C# 程式設計指南](../index.md)
+- [C# 程式內部](./index.md)
+- [字串](../strings/index.md)
 - [範例與教學課程](../../../samples-and-tutorials/index.md)
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [C# 參考](../../language-reference/index.md)
+- [Main() 和命令列引數](../main-and-command-args/index.md)
 - [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

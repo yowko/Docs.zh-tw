@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72cbcf1294f3d13f406d8db177f66fdc367c0758
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724443"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967358"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 修改 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組可用於修改 XML 文件中節點及值的方法。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
@@ -39,7 +39,7 @@ ms.locfileid: "54724443"
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|不支援。|  
   
 > [!NOTE]
->  不支援編輯 <xref:System.Xml.XPath.XPathNodeType.Namespace> 節點或 <xref:System.Xml.XPath.XPathNodeType.Root> 節點。  
+> 不支援編輯 <xref:System.Xml.XPath.XPathNodeType.Namespace> 節點或 <xref:System.Xml.XPath.XPathNodeType.Root> 節點。  
   
  <xref:System.Xml.XPath.XPathNavigator> 類別還提供一組可用於插入及移除節點的方法。 如需有關從n XML 文件插入和移除節點的詳細資訊，請參閱[使用 XPathNavigator 插入 XML 資料](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)和[使用 XPathNavigator 移除 XML 資料](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)主題。  
   
@@ -106,10 +106,10 @@ navigator.SetTypedValue(DateTime.Now);
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 #### <a name="the-effects-of-editing-strongly-typed-xml-data"></a>編輯強型別 XML 資料的影響  
- <xref:System.Xml.XPath.XPathNavigator> 類別使用 W3C XML 結構描述，做為說明強型別 XML 的基礎。 根據對 W3C XML 結構描述文件的驗證，可為項目及屬性加上型別資訊標註。 可包含其他項目或屬性的項目稱為複雜型別，而那些僅包含文字內容的則稱為簡單型別。  
+ <xref:System.Xml.XPath.XPathNavigator> 類別使用 W3C XML 結構描述，做為說明強型別 XML 的基礎。 根據對 W3C XML 結構描述文件的驗證，可為項目及屬性加上型別資訊附註。 可包含其他項目或屬性的項目稱為複雜型別，而那些僅包含文字內容的則稱為簡單型別。  
   
 > [!NOTE]
->  屬性僅可具有簡單型別。  
+> 屬性僅可具有簡單型別。  
   
  如果項目或屬性符合其型別定義的所有特定規則，則認為是結構描述有效。 具有簡單型別 `xs:int` 的項目必須包含 -2147483648 與 2147483647 之間的數值，才為結構描述有效。 對於複雜型別，項目的結構描述有效性取決於其項目子系及屬性的結構描述有效性。 因此，如果項目對其複雜型別定義有效，則其所有項目子系及屬性對其型別定義都有效。 同樣地，如果項目中有一個項目子系或屬性對其型別定義無效或有效性不明，則該項目也會無效或具有不明有效性。  
   
@@ -243,7 +243,7 @@ Console.WriteLine(navigator.OuterXml);
  如果使用 <xref:System.Xml.XPath.XPathNavigator> 物件將內容加入至 `xsi:nil` 屬性值為 `true` 的有效項目，則會將其 `xsi:nil` 屬性值設為 `false`。  
   
 > [!NOTE]
->  對於 `xsi:nil` 屬性設為 `false` 的項目，即使刪除其內容，該屬性的值也不會變更為 `true`。  
+> 對於 `xsi:nil` 屬性設為 `false` 的項目，即使刪除其內容，該屬性的值也不會變更為 `true`。  
   
 ## <a name="saving-an-xml-document"></a>儲存 XML 文件  
  儲存對 <xref:System.Xml.XmlDocument> 物件所進行的變更 (由本主題中說明的編輯方法所導致) 是使用 <xref:System.Xml.XmlDocument> 類別的方法來執行。 如需儲存 <xref:System.Xml.XmlDocument> 物件之變更的詳細資訊，請參閱[儲存與寫入文件](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  

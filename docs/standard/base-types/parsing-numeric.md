@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8903d0443594885b3b0e8cca716eda8177c60cca
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633328"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988798"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>在 .NET 中剖析數值字串
 所有數值類型皆有兩個靜態剖析方法：`Parse` 和 `TryParse`，可將數字的字串表示轉換成數值類型。 這些方法可讓您剖析使用[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)和[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)中記錄的格式字串所產生的字串。 根據預設，`Parse` 和 `TryParse` 方法只能將包含十進位數字的字串成功轉換為整數值。 它們可以將包含整數和小數的十進位數字、群組分隔符號，以及小數分隔符號的字串，成功轉換為浮點值。 如果作業失敗，即 `TryParse` 方法傳回 `false`，則 `Parse` 方法會擲回例外狀況。  
@@ -46,7 +46,7 @@ ms.locfileid: "64633328"
  [!code-vb[Parsing.Numbers#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/styles1.vb#2)]  
   
 > [!WARNING]
->  剖析作業一律使用特定文化特性的格式化慣例。 如果未藉由傳遞 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 物件來指定文化特性，就會使用與目前執行緒相關聯的文化特性。  
+> 剖析作業一律使用特定文化特性的格式化慣例。 如果未藉由傳遞 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 物件來指定文化特性，就會使用與目前執行緒相關聯的文化特性。  
   
  下表列出 <xref:System.Globalization.NumberStyles> 列舉的成員，並說明它們對剖析作業的影響。  
   

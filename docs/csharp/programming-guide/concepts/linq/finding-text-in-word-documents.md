@@ -2,12 +2,12 @@
 title: 尋找 Word 文件中的文字 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 9f81795c00c29da34bb5f229afb557eb89af6509
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 99a6bc2bb08af47ab725ef94ae8cd77d54cbad0a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487491"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594349"
 ---
 # <a name="finding-text-in-word-documents-c"></a>尋找 Word 文件中的文字 (C#)
 本主題會延伸先前的查詢以進行實用的操作：在文件中尋找出現的所有字串。  
@@ -15,7 +15,7 @@ ms.locfileid: "66487491"
 ## <a name="example"></a>範例  
  此範例會處理 WordprocessingML 文件，以便在文件中尋找所有出現的特定文字片段。 如果要這樣做，我們會使用尋找字串 "Hello" 的查詢。 此範例在這個教學課程中，會在先前的範例上建置。 新的查詢會在以下程式碼的註解中叫出。  
   
- 如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](./creating-the-source-office-open-xml-document.md)。  
   
  這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
@@ -320,15 +320,15 @@ StyleName:Code ><
   
  當然，這個範例可以利用數種方式增強。 例如，我們可以使用規則運算式 (Regular Expression) 來搜尋文字；我們可以在特定的字典中逐一查看所有 Word 檔案等等。  
   
- 請注意，這個範例的執行方式與撰寫為單一查詢的執行方式約略相同。 由於每個查詢都會使用延遲、延後的方式實作，因此每個查詢在反覆運算前不會產生其結果。 如需執行和延遲評估的詳細資訊，請參閱 [LINQ to XML 中的延後執行和延遲評估 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
+ 請注意，這個範例的執行方式與撰寫為單一查詢的執行方式約略相同。 由於每個查詢都會使用延遲、延後的方式實作，因此每個查詢在反覆運算前不會產生其結果。 如需執行和延遲評估的詳細資訊，請參閱 [LINQ to XML 中的延後執行和延遲評估 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
   
 ## <a name="next-steps"></a>後續步驟  
  下一節提供有關 WordprocessingML 文件的詳細資訊：  
   
-- [Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)  
+- [Office Open XML WordprocessingML 文件的詳細資料 (C#)](./wordprocessingml-document-with-styles.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [使用純虛擬函式進行重構 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [LINQ to XML 中的延後執行和延遲評估 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](./shape-of-wordprocessingml-documents.md)
+- [使用純虛擬函式進行重構 (C#)](./refactoring-using-a-pure-function.md)
+- [LINQ to XML 中的延後執行和延遲評估 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

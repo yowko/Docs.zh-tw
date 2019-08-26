@@ -2,12 +2,12 @@
 title: 作法：查詢樹狀目錄中的最大檔案 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 0ff1b5cb4e9563e64b95b9cbcc338f15771cbcab
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 966138795dca53db99a0752b9bb7b85cc4601ee3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585866"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592763"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>作法：查詢樹狀目錄中的最大檔案 (LINQ) (C#)
 此範例顯示五個與檔案位元組大小相關的查詢：  
@@ -147,5 +147,5 @@ class QueryBySize
  
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

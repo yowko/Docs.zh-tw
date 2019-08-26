@@ -6,19 +6,19 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a34b57eb0a22dcf206456775cdd5817431292e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956829"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>作法：將事件資訊寫入至文字檔 (Visual Basic)
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。 這個範例示範如何使用 `My.Application.Log.WriteEntry` 方法將追蹤資訊記錄到記錄檔。  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>新增和設定檔案記錄檔接聽程式  
   
-1. 在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。  
+1. 在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。    
   
      \-或-  
   
@@ -26,9 +26,9 @@ ms.locfileid: "64665758"
   
     1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
+    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔]  。  
   
-    3. 按一下 [加入] 。  
+    3. 按一下 [加入]  。  
   
 2. 在應用程式組態檔中找出 `<listeners>` 區段。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64665758"
      將 `customlocation` 屬性的值變更為記錄檔目錄。  
   
     > [!NOTE]
-    >  若要設定 listener 屬性的值，請使用與屬性 (property) 同名的屬性 (attribute)，而名稱中的所有字母都是小寫。 例如，`location` 和 `customlocation` 屬性會設定 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 屬性的值。  
+    > 若要設定 listener 屬性的值，請使用與屬性 (property) 同名的屬性 (attribute)，而名稱中的所有字母都是小寫。 例如，`location` 和 `customlocation` 屬性會設定 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 屬性的值。  
   
 ### <a name="to-write-event-information-to-the-file-log"></a>將事件資訊寫入檔案記錄檔  
   

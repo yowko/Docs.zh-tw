@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 3cef2f2d2af2d285504daea14aa57c55b9e9a21b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 81b2110e6a571e174693fd272d1c6b4bf44dbae3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833465"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588214"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>指標轉換 (C# 程式設計手冊)
 下表顯示預先定義的隱含指標轉換。 在許多情況下可能會發生隱含轉換，包括方法叫用和指派陳述式。  
@@ -41,9 +41,9 @@ ms.locfileid: "66833465"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
-- [型別](../../../csharp/language-reference/keywords/types.md)
-- [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)
-- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../../csharp/language-reference/operators/stackalloc.md)
+- [C# 程式設計指南](../index.md)
+- [指標型別](./pointer-types.md)
+- [型別](../../language-reference/keywords/types.md)
+- [Unsafe.DangerousAPI](../../language-reference/keywords/unsafe.md)
+- [fixed 陳述式](../../language-reference/keywords/fixed-statement.md)
+- [stackalloc](../../language-reference/operators/stackalloc.md)

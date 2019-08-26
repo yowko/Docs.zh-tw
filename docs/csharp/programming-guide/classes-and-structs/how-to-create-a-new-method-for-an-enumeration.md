@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 2ca388d19c0e4e1b098076caa5baa0a83cc0dd4c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 99a2005e1a64fa214776145a903341fb162f0633
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585870"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597053"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>作法：建立列舉類型的新方法 (C# 程式設計手冊)
 您可以使用擴充方法來新增專屬於特定列舉類型的功能。  
@@ -26,5 +26,5 @@ ms.locfileid: "65585870"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [C# 程式設計指南](../index.md)
+- [擴充方法](./extension-methods.md)

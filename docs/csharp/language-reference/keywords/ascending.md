@@ -8,23 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
-ms.openlocfilehash: b04c2b3cf9069c12073ba36600125aaf24b96434
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 479e15b8c1103ea1e5fdd803812944d25d965a81
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123834"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602339"
 ---
 # <a name="ascending-c-reference"></a>ascending (C# 參考)
-在查詢運算式的 [orderby 子句](../../../csharp/language-reference/keywords/orderby-clause.md) `ascending`中使用內容關鍵字，指定由小到大的排序次序。 因為 `ascending` 是預設的排序次序，所以不必指定它。  
+在查詢運算式的 [orderby 子句](./orderby-clause.md) `ascending`中使用內容關鍵字，指定由小到大的排序次序。 因為 `ascending` 是預設的排序次序，所以不必指定它。  
   
 ## <a name="example"></a>範例  
- 下列範例示範 [orderby 子句](../../../csharp/language-reference/keywords/orderby-clause.md)中 `ascending` 的用法。  
+ 下列範例示範 [orderby 子句](./orderby-clause.md)中 `ascending` 的用法。  
   
 [!code-csharp[csrefKeywordsContextual#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#14)]
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [descending](../../../csharp/language-reference/keywords/descending.md)
+- [C# 參考](../index.md)
+- [LINQ 查詢運算式](../../programming-guide/linq-query-expressions/index.md)
+- [descending](./descending.md)

@@ -1,16 +1,16 @@
 ---
-title: HOW TO：複製、刪除和移動檔案和資料夾 - C# 程式設計指南
+title: 作法：複製、刪除和移動檔案和資料夾 - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [C#]
 ms.assetid: 62e52cd7-9597-4e4a-acf9-1315f5cdbf05
-ms.openlocfilehash: 609e14141538543c9318efbd4899ec16967cc23f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dd32798062dbfc9a10acd27ce51d8d5dd3b164f6
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972063"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590098"
 ---
 # <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>作法：複製、刪除和移動檔案和資料夾 (C# 程式設計指南)
 下列範例會示範如何使用 <xref:System.IO?displayProperty=nameWithType> 命名空間的 <xref:System.IO.File?displayProperty=nameWithType>、<xref:System.IO.Directory?displayProperty=nameWithType>、<xref:System.IO.FileInfo?displayProperty=nameWithType> 和 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 類別，以同步方式複製、移動和刪除檔案與資料夾。 這些範例不提供進度列或任何其他的使用者介面。 如果您想要提供標準的進度對話方塊，請參閱[如何：提供檔案作業的進度對話方塊](how-to-provide-a-progress-dialog-box-for-file-operations.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "56972063"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../index.md)
 - [檔案系統和登錄 (C# 程式設計指南)](index.md)
 - [如何：提供檔案作業的進度對話方塊](how-to-provide-a-progress-dialog-box-for-file-operations.md)
 - [檔案和資料流 I/O](../../../standard/io/index.md)

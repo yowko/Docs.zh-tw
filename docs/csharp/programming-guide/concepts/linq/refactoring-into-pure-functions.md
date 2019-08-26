@@ -2,19 +2,19 @@
 title: 重構為純虛擬函式 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 453b128ecaea62fd58c54bfb383091f65a082370
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483983"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924200"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重構為純虛擬函式 (C#)
 
 純功能性轉換的重要觀點為學習如何使用純虛擬函式重構程式碼。  
   
 > [!NOTE]
->  功能性程式設計的常見命名法為使用純虛擬函式重構程式。 在 Visual Basic 和 C++ 中，這可以利用個別的語言，調整函式的用法。 不過，在 C# 中，函式稱為方法。 就這個討論而言，純虛擬函式會當成 C# 中的方法實作。  
+> 功能性程式設計的常見命名法為使用純虛擬函式重構程式。 在 Visual Basic 和 C++ 中，這可以利用個別的語言，調整函式的用法。 不過，在 C# 中，函式稱為方法。 就這個討論而言，純虛擬函式會當成 C# 中的方法實作。  
   
  如同本節先前所述，純虛擬函式擁有兩個實用的特性：  
   
@@ -24,7 +24,7 @@ ms.locfileid: "66483983"
   
  轉換為功能性程式設計的其中一種方式為重構現有的程式碼以排除不必要的副作用與外部相依性。 以此種方式，您可以建立現有程式碼的純虛擬函式版本。  
   
- 這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 教學課程顯示如何管理 WordprocessingML 文件，並包含兩個如何使用純虛擬函式重構的範例。  
+ 這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 文件中的內容 (C#)](./shape-of-wordprocessingml-documents.md) 教學課程顯示如何管理 WordprocessingML 文件，並包含兩個如何使用純虛擬函式重構的範例。  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>排除副作用與外部相依性  
  下列範例對照兩個非純虛擬函式與一個純虛擬函式。  
@@ -81,7 +81,7 @@ public class Program
  這個版本的程式會產生與第一版相同的輸出，因為 `HyphenatedConcat` 函式已經叫用 <xref:System.Text.StringBuilder.Append%2A> 成員函式來變更其第一個參數的值 (狀態)。 請注意，雖然 `HyphenatedConcat` 使用 call-by-value 參數傳遞 (Parameter Passing)，還是會發生這個改變。  
   
 > [!IMPORTANT]
->  若是參考型別 (Reference Type)，如果您依據值傳遞參數，會使參考的副本傳遞到物件。 這個副本仍然跟原始參考一樣，與相同的執行個體資料相關聯 (直到將參考變數指派給新的物件)。 對於要修改參數的函式，則不一定需要 Call-by-reference。  
+> 若是參考型別 (Reference Type)，如果您依據值傳遞參數，會使參考的副本傳遞到物件。 這個副本仍然跟原始參考一樣，與相同的執行個體資料相關聯 (直到將參考變數指派給新的物件)。 對於要修改參數的函式，則不一定需要 Call-by-reference。  
   
 ### <a name="pure-function"></a>純虛擬函式  
 這個下一版的程式會顯示如何將 `HyphenatedConcat` 函式實作為純虛擬函式。  
@@ -110,9 +110,9 @@ class Program
 ## <a name="standard-query-operators"></a>標準查詢運算子  
  標準查詢運算子的重要特性為它們會被當做純虛擬函式實作。  
   
- 如需詳細資訊，請參閱[標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+ 如需詳細資訊，請參閱[標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [函數式程式設計與命令式程式設計的比較 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [純功能性轉換簡介 (C#)](./introduction-to-pure-functional-transformations.md)
+- [函數式程式設計與命令式程式設計的比較 (C#)](./functional-programming-vs-imperative-programming.md)

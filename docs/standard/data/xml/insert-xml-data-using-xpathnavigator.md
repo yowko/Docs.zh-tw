@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647918"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966959"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 插入 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組方式，可在 XML 文件中插入同層級節點、子節點及屬性節點。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
@@ -236,7 +236,7 @@ navigator.SetTypedValue(DateTime.Now);
 - 如果 <xref:System.Xml.XmlReader> 物件內容及 <xref:System.Xml.XPath.XPathNavigator> 物件內容中的前置詞及命名空間 URI 相同，則不會將新的命名空間宣告加入至新插入的節點。  
   
 > [!NOTE]
->  上述說明還適用於將空白 `string` 做為前置詞的命名空間宣告 (例如，預設命名空間宣告)。  
+> 上述說明還適用於將空白 `string` 做為前置詞的命名空間宣告 (例如，預設命名空間宣告)。  
   
  下列是可能的 `xml:lang` 衝突。  
   

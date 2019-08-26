@@ -3,12 +3,12 @@ title: 處理 LINQ
 description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609314"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587174"
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -142,7 +142,7 @@ public static void Main(string[] args)
 
 不過，標準程式庫中並未利用任何洗牌方法，所以您將必須自行撰寫。 您將建立的洗牌方法會舉例說明您將與 LINQ 型程式搭配使用的數種技術，以便在步驟中說明此程序的每個部分。
 
-若要針對您與從 LINQ 查詢中取回的 <xref:System.Collections.Generic.IEnumerable%601> 進行互動的方式新增一些功能，您必須撰寫一些稱為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)的特殊種類方法。 簡單地說，擴充方法是具有特殊用途的「靜態方法」  ，其會將新功能新增到已經存在的類型，而不需修改您想要將功能新增到其中的原始類型。
+若要針對您與從 LINQ 查詢中取回的 <xref:System.Collections.Generic.IEnumerable%601> 進行互動的方式新增一些功能，您必須撰寫一些稱為[擴充方法](../programming-guide/classes-and-structs/extension-methods.md)的特殊種類方法。 簡單地說，擴充方法是具有特殊用途的「靜態方法」  ，其會將新功能新增到已經存在的類型，而不需修改您想要將功能新增到其中的原始類型。
 
 藉由將新的「靜態」  類別檔案新增到名為 `Extensions.cs` 的程式，來為您的擴充方法提供一個新家，然後開始建置第一個擴充方法：
 

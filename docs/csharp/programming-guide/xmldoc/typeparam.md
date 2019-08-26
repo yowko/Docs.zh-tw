@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: fc2c0ec29dd2652d48a6f941bec939bbd9aac8e9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ea48cf0cdfc2dc48ad29ab6219449f801739bc8f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471637"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587590"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -32,17 +32,17 @@ ms.locfileid: "57471637"
 ## <a name="remarks"></a>備註  
  `<typeparam>` 標記應該用於泛型型別或方法宣告的註解中，以描述型別參數。 新增泛型型別或方法之每個型別參數的標記。  
   
- 如需詳細資訊，請參閱[泛型](../../../csharp/programming-guide/generics/index.md)。  
+ 如需詳細資訊，請參閱[泛型](../generics/index.md)。  
   
  `<typeparam>` 標記的文字將會顯示於 IntelliSense，即 [Object Browser Window](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) (物件瀏覽器視窗) 程式碼註解 Web 報告。  
   
- 編譯搭配 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
+ 編譯搭配 [/doc](../../language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# 參考](../../language-reference/index.md)
+- [C# 程式設計指南](../index.md)
+- [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

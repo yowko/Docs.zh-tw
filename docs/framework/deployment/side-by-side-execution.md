@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641029"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911014"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework 並存執行
 並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。 在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。  
@@ -46,7 +46,7 @@ ms.locfileid: "64641029"
      使用 .NET Framework，您可以建立隔離執行的應用程式和元件。 這種隔離執行的功能是並存執行的基本構成要素。 隔離的主要因素在於能夠掌握您要使用的資源，並且能放心地在應用程式或元件的多個版本之間共用資源。 隔離也包括使用版本特定的方式儲存檔案。 如需隔離的詳細資訊，請參閱[建立並存執行元件的方針](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)。  
   
 ## <a name="version-compatibility"></a>版本相容性  
- .NET Framework 的 1.0 和 1.1 版設計成可彼此相容。 用 .NET Framework 1.0 版建置的應用程式應該可以在 1.1 版上執行，而用 .NET Framework 1.1 版建置的應用程式也應該可以在 1.0 版上執行。 但請注意，.NET Framework 1.1 版中加入的 API 功能無法在 1.0 版的 .NET Framework 中使用。 以 2.0 版建立的應用程式僅能在 2.0 版上執行。 2.0 版的應用程式在 1.1 或之前的版本上無法執行。  
+ .NET Framework 的 1.0 和 1.1 版設計成可彼此相容。 用 .NET Framework 1.0 版建置的應用程式應該可以在 1.1 版上執行，而用 .NET Framework 1.1 版建置的應用程式也應該可以在 1.0 版上執行。 但請注意，.NET Framework 1.1 版中加入的 API 功能無法在 1.0 版的 .NET Framework 中使用。 以 2.0 版建立的應用程式僅能在 2.0 版上執行。 2\.0 版的應用程式在 1.1 或之前的版本上無法執行。  
   
  .NET Framework 的版本被視為一個由執行階段及其關聯的 .NET Framework 組件組成的單一單位 (這個概念稱為「組件的版本對應轉換」)。 您可以將組件繫結重新導向，以包含 .NET Framework 組件的其他版本，但是覆寫預設組件繫結可能會有風險，因此部署之前必須經過棈密的測試。  
   
@@ -82,10 +82,10 @@ ms.locfileid: "64641029"
 3. 執行階段顯示訊息，指出應用程式支援的執行階段版本無法使用。 此時不會載入執行階段。  
   
     > [!NOTE]
-    >  您可以使用登錄機碼 HKLM\Software\Microsoft\\.NETFramework 下的 NoGuiFromShim 值，或使用環境變數 COMPLUS_NoGuiFromShim，來隱藏這項訊息。 例如，您可以隱藏通常不需與使用者互動之應用程式 (例如自動安裝或 Windows 服務) 的訊息。 隱藏這項訊息之後，執行階段會將訊息寫入事件記錄檔。  將登錄值 NoGuiFromShim 設定為 1，以隱藏電腦上所有應用程式的這項訊息。 或者，將 COMPLUS_NoGuiFromShim 環境變數設定為 1，以隱藏特定使用者內容中所執行之應用程式的這項訊息。  
+    > 您可以使用登錄機碼 HKLM\Software\Microsoft\\.NETFramework 下的 NoGuiFromShim 值，或使用環境變數 COMPLUS_NoGuiFromShim，來隱藏這項訊息。 例如，您可以隱藏通常不需與使用者互動之應用程式 (例如自動安裝或 Windows 服務) 的訊息。 隱藏這項訊息之後，執行階段會將訊息寫入事件記錄檔。  將登錄值 NoGuiFromShim 設定為 1，以隱藏電腦上所有應用程式的這項訊息。 或者，將 COMPLUS_NoGuiFromShim 環境變數設定為 1，以隱藏特定使用者內容中所執行之應用程式的這項訊息。  
   
 > [!NOTE]
->  載入執行階段版本之後，組件繫結重新導向可以指定載入個別 .NET Framework 組件的不同版本。 這些繫結重新導向只會影響被重新導向的特定組件。  
+> 載入執行階段版本之後，組件繫結重新導向可以指定載入個別 .NET Framework 組件的不同版本。 這些繫結重新導向只會影響被重新導向的特定組件。  
   
 ## <a name="partially-qualified-assembly-names-and-side-by-side-execution"></a>部分限定的組件名稱和並存執行  
  由於不完整的組件參考可能會造成並存問題，因此只能用來繫結至應用程式目錄中的組件。 請避免在您的程式碼中使用不完整的組件參考。  
@@ -107,7 +107,7 @@ publicKeyToken=...,
  當組件載入陳述式參考 `myAssembly` 時，這些組態檔設定便會使執行階段自動將不完整的 `myAssembly` 參考轉譯成完整的參考。 例如，Assembly.Load("myAssembly") 會變成 Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral")。  
   
 > [!NOTE]
->  您可以使用 **LoadWithPartialName** 方法，略過禁止從全域組件快取載入不完整參考組件的 Common Language Runtime 限制。 這個方法只能用於遠端處理案例，因為它很容易造成並存執行的問題。  
+> 您可以使用 **LoadWithPartialName** 方法，略過禁止從全域組件快取載入不完整參考組件的 Common Language Runtime 限制。 這個方法只能用於遠端處理案例，因為它很容易造成並存執行的問題。  
   
 ## <a name="related-topics"></a>相關主題  
   

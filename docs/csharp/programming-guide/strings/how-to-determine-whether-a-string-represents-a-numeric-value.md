@@ -7,15 +7,15 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 626fce590ba08bbdabf27ac33287a0b46b592f9c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 831f0fc83c8a7066b40d64e4765a312b8b4847bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423621"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921773"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>作法：判斷字串是否表示數值 (C# 程式設計指南)
-若要判斷字串是否為所指定數值類型的有效呈現，請使用靜態 `TryParse` 方法，而這個方法是由所有基本數字類型以及 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 此等類型所實作。 下列範例示範如何判斷 "108" 是否為有效 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)。  
+若要判斷字串是否為所指定數值類型的有效呈現，請使用靜態 `TryParse` 方法，而這個方法是由所有基本數字類型以及 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 此等類型所實作。 下列範例示範如何判斷 "108" 是否為有效 [int](../../language-reference/builtin-types/integral-numeric-types.md)。  
   
 ```  
 int i = 0;   
@@ -26,7 +26,7 @@ bool result = int.TryParse(s, out i); //i now = 108
  如果字串包含非數值字元，或所指定之特定類型的數值太大或太小，則 `TryParse` 會傳回 false，並將 out 參數設定為零。 否則會傳回 true，並將 out 參數設定為字串的數值。  
   
 > [!NOTE]
->  字串只能包含數值字元，而且仍然不適用於您所使用 `TryParse` 方法的類型。 例如，"256" 不是 `byte` 的有效值，但為 `int` 的有效值。 "98.6" 不是 `int` 的有效值，但為有效的 `decimal`。  
+> 字串只能包含數值字元，而且仍然不適用於您所使用 `TryParse` 方法的類型。 例如，"256" 不是 `byte` 的有效值，但為 `int` 的有效值。 "98.6" 不是 `int` 的有效值，但為有效的 `decimal`。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何搭配使用 `TryParse` 與 `long`、`byte` 和 `decimal` 值的字串呈現。  
@@ -41,8 +41,8 @@ bool result = int.TryParse(s, out i); //i now = 108
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：將位元組陣列轉換為成整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)
-- [如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
-- [如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+- [如何：將位元組陣列轉換為成整數](../types/how-to-convert-a-byte-array-to-an-int.md)
+- [如何：將字串轉換為數值](../types/how-to-convert-a-string-to-a-number.md)
+- [如何：在十六進位字串和數字類型間轉換](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
 - [剖析數值字串](../../../standard/base-types/parsing-numeric.md)
 - [格式化類型](../../../standard/base-types/formatting-types.md)

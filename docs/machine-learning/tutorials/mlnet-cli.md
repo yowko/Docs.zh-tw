@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053637"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963594"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>使用 CLI 自動產生二元分類器
 
@@ -47,7 +47,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 1. 下載 [UCI 情感標記句子資料集 ZIP 檔案 (請參閱下列注意中的引文)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)，然後將它解壓縮到您選擇的任何資料夾。
 
     > [!NOTE]
-    > 此教學課程所使用的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人， KDD 2015)，而且裝載於「UCI Machine Learning Repository (UCI 機器學習存放庫)」- Dua, D. and Karra Taniskidou, E.(2017)。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 爾灣，加利福尼亞州：加州大學，資訊與電腦科學學院。
+    > 此教學課程所使用的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人， KDD 2015)，而且裝載於「UCI Machine Learning Repository (UCI 機器學習存放庫)」- Dua, D. and Karra Taniskidou, E.(2017)。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml ]。 爾灣，加利福尼亞州：加州大學，資訊與電腦科學學院。
 
 2. 將 `yelp_labelled.txt` 檔案複製到您先前建立的任何資料夾 (例如 `/cli-test`)。
 
@@ -75,7 +75,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
     現在，您可以開始使用 CLI 來進行這個「情感分析」案例。
 
     > [!NOTE]
-    > 完成本教學課程之後，您也可以嘗試自己的資料集，但前提是這些資料集可供 ML.NET CLI 預覽功能目前支援的 ML 工作 (亦即「二元分類」、「多元分類」和「迴歸」) 使用。
+    > 完成本教學課程之後，您也可以嘗試自己的資料集，但前提是這些資料集可供 ML.NET CLI 預覽功能目前支援的 ML 工作 (亦即「二元分類」、「多元分類」和「迴歸」  ) 使用。
 
 ## <a name="run-the-mlnet-auto-train-command"></a>執行 'mlnet auto-train' 命令
 
@@ -88,7 +88,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
     此命令會執行 **`mlnet auto-train` 命令**：
     - 針對 **`binary-classification`** 類型的 **ML 工作**
     - 使用**資料集檔案`yelp_labelled.txt`** 作為定型和測試資料集 (CLI 會在內部使用交叉驗證，或將它分成兩個資料集：一個用於定型，另一個用於測試)
-    - 其中您要預測的**目標/目的資料行** (通常稱為「標籤」) 是**索引為 1 的資料行** (也就是第二個資料行，因為索引是以零起始)
+    - 其中您要預測的**目標/目的資料行** (通常稱為「標籤」  ) 是**索引為 1 的資料行** (也就是第二個資料行，因為索引是以零起始)
     - **不會使用具有資料行名稱的檔案標頭**，因為這個特定的資料集檔案沒有標頭
     - 實驗的**目標探索時間**為 **10 秒**
 
@@ -116,7 +116,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
     如需其他計量，以及**計量的更詳細資訊** (例如用於評估不同模型的準確度、AUC、AUCPR、F1 分數)，您可以閱讀[了解 ML.NET 計量](../resources/metrics.md)
 
     > [!NOTE]
-    >  您可以嘗試這個完全相同的資料集，並將 `--max-exploration-time` 指定為幾分鐘 (例如三分鐘則指定 180 秒)，針對此資料集 (相當小、有 1000 個資料列) 使用不同的定型管線設定，來為您尋找更好的「最佳模型」。 
+    > 您可以嘗試這個完全相同的資料集，並將 `--max-exploration-time` 指定為幾分鐘 (例如三分鐘則指定 180 秒)，針對此資料集 (相當小、有 1000 個資料列) 使用不同的定型管線設定，來為您尋找更好的「最佳模型」。 
         
     若要尋找的「最佳/高品質」模型是以大型資料集為目標且「已準備好用於生產環境的模型」，您應該使用 CLI 來實驗 (通常會根據資料集大小指定更多的探索時間)。 事實上，在許多情況下，您可能需要數小時的探索時間，尤其是資料集有龐大的資料列和資料行時。 
 
@@ -174,13 +174,13 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 - 第一行程式碼只會建立每當執行 ML.NET 程式碼時所需的 `MLContext` 物件。 
 
-- 第二行程式碼會加上註解，因為您不需要定型模型，CLI 工具已為您定型模型，並儲存到模型的序列化 .ZIP 檔案。 但如果您想要看看 CLI「如何定型模型」，您可以取消註解該行，並執行/偵錯用於該特定 ML 模型的定型程式碼。
+- 第二行程式碼會加上註解，因為您不需要定型模型，CLI 工具已為您定型模型，並儲存到模型的序列化 .ZIP 檔案。 但如果您想要看看 CLI「如何定型模型」  ，您可以取消註解該行，並執行/偵錯用於該特定 ML 模型的定型程式碼。
 
 - 在第三行程式碼中，您會提供該模型 .ZIP 檔案的路徑，使用 `mlContext.Model.Load()` API 從序列化模型 .ZIP 檔案載入模型。
 
 - 在第四行程式碼中，您會使用 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API 載入建立 `PredictionEngine` 物件。 每當您想要建立以單一範例資料為目標的預測時 (在本例中會以一段文字來預測其情感)，都需要 `PredictionEngine` 物件。
 
-- 在第五行程式碼中，您會呼叫函式 `CreateSingleDataSample()` 來建立用於預測的「單一範例資料」。 由於 CLI 工具不知道要使用哪種範例資料類型，因此會在該函式中載入資料集的第一個資料列。 不過，在此情況下，您也可以建立自己的「硬式編碼」資料，藉由更新為實作 `CreateSingleDataSample()` 函式的更簡單程式碼，來取代該函式的目前實作：
+- 在第五行程式碼中，您會呼叫函式 `CreateSingleDataSample()` 來建立用於預測的「單一範例資料」  。 由於 CLI 工具不知道要使用哪種範例資料類型，因此會在該函式中載入資料集的第一個資料列。 不過，在此情況下，您也可以建立自己的「硬式編碼」資料，藉由更新為實作 `CreateSingleDataSample()` 函式的更簡單程式碼，來取代該函式的目前實作：
 
     ```csharp
     private static ModelInput CreateSingleDataSample()
@@ -229,7 +229,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 針對第二個物件，也就是 `PredictionEngine` 物件，則沒有那麼容易。由於 `PredictionEngine` 物件不是安全執行緒，因此您無法在 ASP.NET Core 應用程式中將物件具現化為單一或靜態物件。 這篇[部落格文章](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)中將深入探討此安全執行緒和延展性問題。 
 
-不過，事情會比該部落格文章中所述更簡單。 我們為您開發了更簡單的方法，並已建立可輕鬆用於 ASP.NET Core 應用程式和服務的良好「.NET Core 整合套件」，只要在應用程式 DI 服務 (相依性插入服務) 中註冊它，即可從程式碼直接使用。 請查看下列教學課程和做法範例：
+不過，事情會比該部落格文章中所述更簡單。 我們為您開發了更簡單的方法，並已建立可輕鬆用於 ASP.NET Core 應用程式和服務的良好「.NET Core 整合套件」  ，只要在應用程式 DI 服務 (相依性插入服務) 中註冊它，即可從程式碼直接使用。 請查看下列教學課程和做法範例：
 
 - [教學課程：在可調整規模的 ASP.NET Core Web 應用程式和 WebAPI 上執行 ML.NET 模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [範例：ASP.NET Core WebAPI 上可調整規模的 ML.NET 模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)

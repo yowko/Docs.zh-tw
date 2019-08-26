@@ -2,12 +2,12 @@
 title: 常見屬性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603329"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595455"
 ---
 # <a name="common-attributes-c"></a>常見屬性 (C#)
 本主題描述最常在 C# 程式中使用的屬性。  
@@ -225,15 +225,15 @@ class SampleClass
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含呼叫端的原始程式檔完整路徑。 這是編譯時期的路徑。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|原始程式檔中呼叫方法的行號。|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼叫端的方法名稱或屬性名稱。 如需詳細資訊，請參閱[呼叫端資訊 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)。|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼叫端的方法名稱或屬性名稱。 如需詳細資訊，請參閱[呼叫端資訊 (C#)](../caller-information.md)。|`String`|  
   
- 如需「呼叫端資訊」屬性的詳細資訊，請參閱[呼叫端資訊 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)。  
+ 如需「呼叫端資訊」屬性的詳細資訊，請參閱[呼叫端資訊 (C#)](../caller-information.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
-- [屬性](../../../../../docs/standard/attributes/index.md)
-- [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [C# 程式設計指南](../../index.md)
+- [屬性](../../../../standard/attributes/index.md)
+- [反映 (C#)](../reflection.md)
+- [使用反射存取屬性 (C#)](./accessing-attributes-by-using-reflection.md)
