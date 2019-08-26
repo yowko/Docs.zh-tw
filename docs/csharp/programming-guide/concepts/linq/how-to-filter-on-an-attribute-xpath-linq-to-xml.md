@@ -2,24 +2,24 @@
 title: 作法：篩選屬性 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 927dd781a16aa745b88de3c446682590bd601597
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 96c6d26c035d70fb50e0b5dc022bd28fd0242edd
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485749"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593821"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="dcfa5-102">作法：篩選屬性 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="dcfa5-102">How to: Filter on an Attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="dcfa5-103">本主題顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。</span><span class="sxs-lookup"><span data-stu-id="dcfa5-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="592aa-102">作法：篩選屬性 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="592aa-102">How to: Filter on an Attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="592aa-103">本主題顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。</span><span class="sxs-lookup"><span data-stu-id="592aa-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- <span data-ttu-id="dcfa5-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="dcfa5-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="592aa-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="592aa-104">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a><span data-ttu-id="dcfa5-105">範例</span><span class="sxs-lookup"><span data-stu-id="dcfa5-105">Example</span></span>  
- <span data-ttu-id="dcfa5-106">此範例會尋找具有 `Address` 之名稱，以及具有值為 "Shipping" 之 `Type` 屬性的所有子代項目。</span><span class="sxs-lookup"><span data-stu-id="dcfa5-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
+## <a name="example"></a><span data-ttu-id="592aa-105">範例</span><span class="sxs-lookup"><span data-stu-id="592aa-105">Example</span></span>  
+ <span data-ttu-id="592aa-106">此範例會尋找具有 `Address` 之名稱，以及具有值為 "Shipping" 之 `Type` 屬性的所有子代項目。</span><span class="sxs-lookup"><span data-stu-id="592aa-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- <span data-ttu-id="dcfa5-107">此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="dcfa5-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="592aa-107">此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="592aa-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -42,7 +42,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="dcfa5-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="dcfa5-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="592aa-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="592aa-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  

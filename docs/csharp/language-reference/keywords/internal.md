@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661175"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602079"
 ---
-# <a name="internal-c-reference"></a><span data-ttu-id="3d6b9-102">internal (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="3d6b9-102">internal (C# Reference)</span></span>
-<span data-ttu-id="3d6b9-103">`internal` 關鍵字是類型和類型成員的[存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-103">The `internal` keyword is an [access modifier](../../../csharp/language-reference/keywords/access-modifiers.md) for types and type members.</span></span> 
+# <a name="internal-c-reference"></a><span data-ttu-id="daf96-102">internal (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="daf96-102">internal (C# Reference)</span></span>
+<span data-ttu-id="daf96-103">`internal` 關鍵字是類型和類型成員的[存取修飾詞](./access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="daf96-103">The `internal` keyword is an [access modifier](./access-modifiers.md) for types and type members.</span></span> 
   
- > <span data-ttu-id="3d6b9-104">此頁面涵蓋 `internal` 存取。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-104">This page covers `internal` access.</span></span> <span data-ttu-id="3d6b9-105">`internal` 關鍵字也是屬於 [`protected internal`](./protected-internal.md) 存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-105">The `internal` keyword is also part of the [`protected internal`](./protected-internal.md) access modifier.</span></span>
+ > <span data-ttu-id="daf96-104">此頁面涵蓋 `internal` 存取。</span><span class="sxs-lookup"><span data-stu-id="daf96-104">This page covers `internal` access.</span></span> <span data-ttu-id="daf96-105">`internal` 關鍵字也是屬於 [`protected internal`](./protected-internal.md) 存取修飾詞。</span><span class="sxs-lookup"><span data-stu-id="daf96-105">The `internal` keyword is also part of the [`protected internal`](./protected-internal.md) access modifier.</span></span>
   
-<span data-ttu-id="3d6b9-106">內部類型或成員只能在相同組件的檔案內存取，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="3d6b9-106">Internal types or members are accessible only within files in the same assembly, as in this example:</span></span>  
+<span data-ttu-id="daf96-106">內部類型或成員只能在相同組件的檔案內存取，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="daf96-106">Internal types or members are accessible only within files in the same assembly, as in this example:</span></span>  
   
 ```csharp  
 public class BaseClass   
@@ -30,16 +30,16 @@ public class BaseClass
 }  
 ```  
 
- <span data-ttu-id="3d6b9-107">如需 `internal` 和其他存取修飾詞的比較，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)和[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-107">For a comparison of `internal` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) and [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
+ <span data-ttu-id="daf96-107">如需 `internal` 和其他存取修飾詞的比較，請參閱[存取範圍層級](./accessibility-levels.md)和[存取修飾詞](../../programming-guide/classes-and-structs/access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="daf96-107">For a comparison of `internal` with the other access modifiers, see [Accessibility Levels](./accessibility-levels.md) and [Access Modifiers](../../programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
- <span data-ttu-id="3d6b9-108">如需組件的詳細資訊，請參閱 [.NET 中的組件](../../../standard/assembly/index.md)。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-108">For more information about assemblies, see [Assemblies in .NET](../../../standard/assembly/index.md).</span></span>  
+ <span data-ttu-id="daf96-108">如需組件的詳細資訊，請參閱 [.NET 中的組件](../../../standard/assembly/index.md)。</span><span class="sxs-lookup"><span data-stu-id="daf96-108">For more information about assemblies, see [Assemblies in .NET](../../../standard/assembly/index.md).</span></span>  
   
- <span data-ttu-id="3d6b9-109">內部存取常用於以元件為基礎的開發作業，因為它可讓一組元件私下相互合作，而不會公開給應用程式的其餘程式碼。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-109">A common use of internal access is in component-based development because it enables a group of components to cooperate in a private manner without being exposed to the rest of the application code.</span></span> <span data-ttu-id="3d6b9-110">例如，建立圖形化使用者介面的架構可提供 `Control` 和 `Form` 類別，這兩個類別會以內部存取方式透過成員來相互合作。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-110">For example, a framework for building graphical user interfaces could provide `Control` and `Form` classes that cooperate by using members with internal access.</span></span> <span data-ttu-id="3d6b9-111">由於這些是內部成員，因此不會公開給使用此架構的程式碼。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-111">Since these members are internal, they are not exposed to code that is using the framework.</span></span>  
+ <span data-ttu-id="daf96-109">內部存取常用於以元件為基礎的開發作業，因為它可讓一組元件私下相互合作，而不會公開給應用程式的其餘程式碼。</span><span class="sxs-lookup"><span data-stu-id="daf96-109">A common use of internal access is in component-based development because it enables a group of components to cooperate in a private manner without being exposed to the rest of the application code.</span></span> <span data-ttu-id="daf96-110">例如，建立圖形化使用者介面的架構可提供 `Control` 和 `Form` 類別，這兩個類別會以內部存取方式透過成員來相互合作。</span><span class="sxs-lookup"><span data-stu-id="daf96-110">For example, a framework for building graphical user interfaces could provide `Control` and `Form` classes that cooperate by using members with internal access.</span></span> <span data-ttu-id="daf96-111">由於這些是內部成員，因此不會公開給使用此架構的程式碼。</span><span class="sxs-lookup"><span data-stu-id="daf96-111">Since these members are internal, they are not exposed to code that is using the framework.</span></span>  
   
- <span data-ttu-id="3d6b9-112">在定義類型或成員的組件外部，以內部存取方式來參考此類型或成員是錯誤的做法。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-112">It is an error to reference a type or a member with internal access outside the assembly within which it was defined.</span></span>  
+ <span data-ttu-id="daf96-112">在定義類型或成員的組件外部，以內部存取方式來參考此類型或成員是錯誤的做法。</span><span class="sxs-lookup"><span data-stu-id="daf96-112">It is an error to reference a type or a member with internal access outside the assembly within which it was defined.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3d6b9-113">範例</span><span class="sxs-lookup"><span data-stu-id="3d6b9-113">Example</span></span>  
- <span data-ttu-id="3d6b9-114">此範例包含兩個檔案：`Assembly1.cs` 和 `Assembly1_a.cs`。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-114">This example contains two files, `Assembly1.cs` and `Assembly1_a.cs`.</span></span> <span data-ttu-id="3d6b9-115">第一個檔案包含內部基底類別 `BaseClass`。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-115">The first file contains an internal base class, `BaseClass`.</span></span> <span data-ttu-id="3d6b9-116">在第二個檔案中，嘗試具現化 `BaseClass` 會產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-116">In the second file, an attempt to instantiate `BaseClass` will produce an error.</span></span>  
+## <a name="example"></a><span data-ttu-id="daf96-113">範例</span><span class="sxs-lookup"><span data-stu-id="daf96-113">Example</span></span>  
+ <span data-ttu-id="daf96-114">此範例包含兩個檔案：`Assembly1.cs` 和 `Assembly1_a.cs`。</span><span class="sxs-lookup"><span data-stu-id="daf96-114">This example contains two files, `Assembly1.cs` and `Assembly1_a.cs`.</span></span> <span data-ttu-id="daf96-115">第一個檔案包含內部基底類別 `BaseClass`。</span><span class="sxs-lookup"><span data-stu-id="daf96-115">The first file contains an internal base class, `BaseClass`.</span></span> <span data-ttu-id="daf96-116">在第二個檔案中，嘗試具現化 `BaseClass` 會產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="daf96-116">In the second file, an attempt to instantiate `BaseClass` will produce an error.</span></span>  
   
 ```csharp  
 // Assembly1.cs  
@@ -62,8 +62,8 @@ class TestAccess
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="3d6b9-117">範例</span><span class="sxs-lookup"><span data-stu-id="3d6b9-117">Example</span></span>  
- <span data-ttu-id="3d6b9-118">在此範例中，請使用您在範例 1 中所用的相同檔案，並將 `BaseClass` 的存取範圍層級變更為 `public`。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-118">In this example, use the same files you used in example 1, and change the accessibility level of `BaseClass` to `public`.</span></span> <span data-ttu-id="3d6b9-119">同時將成員 `intM` 的存取範圍層級變更為 `internal`。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-119">Also change the accessibility level of the member `intM` to `internal`.</span></span> <span data-ttu-id="3d6b9-120">在此情況下，您可以具現化類別，但無法存取內部成員。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-120">In this case, you can instantiate the class, but you cannot access the internal member.</span></span>  
+## <a name="example"></a><span data-ttu-id="daf96-117">範例</span><span class="sxs-lookup"><span data-stu-id="daf96-117">Example</span></span>  
+ <span data-ttu-id="daf96-118">在此範例中，請使用您在範例 1 中所用的相同檔案，並將 `BaseClass` 的存取範圍層級變更為 `public`。</span><span class="sxs-lookup"><span data-stu-id="daf96-118">In this example, use the same files you used in example 1, and change the accessibility level of `BaseClass` to `public`.</span></span> <span data-ttu-id="daf96-119">同時將成員 `intM` 的存取範圍層級變更為 `internal`。</span><span class="sxs-lookup"><span data-stu-id="daf96-119">Also change the accessibility level of the member `intM` to `internal`.</span></span> <span data-ttu-id="daf96-120">在此情況下，您可以具現化類別，但無法存取內部成員。</span><span class="sxs-lookup"><span data-stu-id="daf96-120">In this case, you can instantiate the class, but you cannot access the internal member.</span></span>  
   
 ```csharp  
 // Assembly2.cs  
@@ -87,18 +87,18 @@ public class TestAccess
 }  
 ```  
   
-## <a name="c-language-specification"></a><span data-ttu-id="3d6b9-121">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="3d6b9-121">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="daf96-121">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="daf96-121">C# Language Specification</span></span>  
 
-<span data-ttu-id="3d6b9-122">如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[已宣告存取範圍](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-122">For more information, see [Declared accessibility](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="3d6b9-123">語言規格是 C# 語法及用法的限定來源。</span><span class="sxs-lookup"><span data-stu-id="3d6b9-123">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="daf96-122">如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[已宣告存取範圍](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。</span><span class="sxs-lookup"><span data-stu-id="daf96-122">For more information, see [Declared accessibility](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="daf96-123">語言規格是 C# 語法及用法的限定來源。</span><span class="sxs-lookup"><span data-stu-id="daf96-123">The language specification is the definitive source for C# syntax and usage.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="3d6b9-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3d6b9-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="daf96-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="daf96-124">See also</span></span>
 
-- [<span data-ttu-id="3d6b9-125">C# 參考</span><span class="sxs-lookup"><span data-stu-id="3d6b9-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="3d6b9-126">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="3d6b9-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="3d6b9-127">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="3d6b9-127">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
-- [<span data-ttu-id="3d6b9-128">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="3d6b9-128">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [<span data-ttu-id="3d6b9-129">存取範圍層級</span><span class="sxs-lookup"><span data-stu-id="3d6b9-129">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [<span data-ttu-id="3d6b9-130">修飾詞</span><span class="sxs-lookup"><span data-stu-id="3d6b9-130">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
-- [<span data-ttu-id="3d6b9-131">public</span><span class="sxs-lookup"><span data-stu-id="3d6b9-131">public</span></span>](../../../csharp/language-reference/keywords/public.md)
-- [<span data-ttu-id="3d6b9-132">private</span><span class="sxs-lookup"><span data-stu-id="3d6b9-132">private</span></span>](../../../csharp/language-reference/keywords/private.md)
-- [<span data-ttu-id="3d6b9-133">protected</span><span class="sxs-lookup"><span data-stu-id="3d6b9-133">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)
+- [<span data-ttu-id="daf96-125">C# 參考</span><span class="sxs-lookup"><span data-stu-id="daf96-125">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="daf96-126">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="daf96-126">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="daf96-127">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="daf96-127">C# Keywords</span></span>](./index.md)
+- [<span data-ttu-id="daf96-128">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="daf96-128">Access Modifiers</span></span>](./access-modifiers.md)
+- [<span data-ttu-id="daf96-129">存取範圍層級</span><span class="sxs-lookup"><span data-stu-id="daf96-129">Accessibility Levels</span></span>](./accessibility-levels.md)
+- [<span data-ttu-id="daf96-130">修飾詞</span><span class="sxs-lookup"><span data-stu-id="daf96-130">Modifiers</span></span>](./modifiers.md)
+- [<span data-ttu-id="daf96-131">public</span><span class="sxs-lookup"><span data-stu-id="daf96-131">public</span></span>](./public.md)
+- [<span data-ttu-id="daf96-132">private</span><span class="sxs-lookup"><span data-stu-id="daf96-132">private</span></span>](./private.md)
+- [<span data-ttu-id="daf96-133">protected</span><span class="sxs-lookup"><span data-stu-id="daf96-133">protected</span></span>](./protected.md)

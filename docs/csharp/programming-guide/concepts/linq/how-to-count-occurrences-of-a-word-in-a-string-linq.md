@@ -2,17 +2,17 @@
 title: 作法：統計某個字在字串中出現的次數 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 5855250661f5288203ae0be841bcfb3a49f8369a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 12118c6322df0cfb93cb3d4a4dbbc02d68a0c776
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585820"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593911"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="6882d-102">作法：統計某個字在字串中出現的次數 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="6882d-102">How to: Count Occurrences of a Word in a String (LINQ) (C#)</span></span>
-<span data-ttu-id="6882d-103">本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。</span><span class="sxs-lookup"><span data-stu-id="6882d-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="6882d-104">請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。</span><span class="sxs-lookup"><span data-stu-id="6882d-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="6882d-105"><xref:System.String.Split%2A> 方法有效能成本。</span><span class="sxs-lookup"><span data-stu-id="6882d-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="6882d-106">如果字串上唯一的作業是計算字數，您應該考慮改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="6882d-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="6882d-107">不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。</span><span class="sxs-lookup"><span data-stu-id="6882d-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="5053b-102">作法：統計某個字在字串中出現的次數 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="5053b-102">How to: Count Occurrences of a Word in a String (LINQ) (C#)</span></span>
+<span data-ttu-id="5053b-103">本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。</span><span class="sxs-lookup"><span data-stu-id="5053b-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="5053b-104">請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。</span><span class="sxs-lookup"><span data-stu-id="5053b-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="5053b-105"><xref:System.String.Split%2A> 方法有效能成本。</span><span class="sxs-lookup"><span data-stu-id="5053b-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="5053b-106">如果字串上唯一的作業是計算字數，您應該考慮改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="5053b-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="5053b-107">不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。</span><span class="sxs-lookup"><span data-stu-id="5053b-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6882d-108">範例</span><span class="sxs-lookup"><span data-stu-id="6882d-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5053b-108">範例</span><span class="sxs-lookup"><span data-stu-id="5053b-108">Example</span></span>  
   
 ```csharp  
 class CountWords  
@@ -54,9 +54,9 @@ class CountWords
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="6882d-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="6882d-109">Compiling the Code</span></span>  
- <span data-ttu-id="6882d-110">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="6882d-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="5053b-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="5053b-109">Compiling the Code</span></span>  
+ <span data-ttu-id="5053b-110">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="5053b-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6882d-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6882d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5053b-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5053b-111">See also</span></span>
 
-- [<span data-ttu-id="6882d-112">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="6882d-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="5053b-112">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="5053b-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)

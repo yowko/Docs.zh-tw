@@ -2,22 +2,22 @@
 title: 作法：修改 Office Open XML 文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 3a6edd31ff2a22e32c979e1a6a548b212406cbf5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ac46dc1b0051613457b7306a9fe0e8d419afe35f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486657"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593128"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a><span data-ttu-id="f5def-102">作法：修改 Office Open XML 文件 (C#)</span><span class="sxs-lookup"><span data-stu-id="f5def-102">How to: Modify an Office Open XML Document (C#)</span></span>
-<span data-ttu-id="f5def-103">這個主題顯示會開啟、修改以及儲存 Office Open XML 文件的範例。</span><span class="sxs-lookup"><span data-stu-id="f5def-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
+# <a name="how-to-modify-an-office-open-xml-document-c"></a><span data-ttu-id="2bc8c-102">作法：修改 Office Open XML 文件 (C#)</span><span class="sxs-lookup"><span data-stu-id="2bc8c-102">How to: Modify an Office Open XML Document (C#)</span></span>
+<span data-ttu-id="2bc8c-103">這個主題顯示會開啟、修改以及儲存 Office Open XML 文件的範例。</span><span class="sxs-lookup"><span data-stu-id="2bc8c-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
   
- <span data-ttu-id="f5def-104">如需 Office Open XML 的詳細資訊，請參閱 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) \(英文\) 和 [www.ericwhite.com](http://ericwhite.com/) \(英文\)。</span><span class="sxs-lookup"><span data-stu-id="f5def-104">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
+ <span data-ttu-id="2bc8c-104">如需 Office Open XML 的詳細資訊，請參閱 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) \(英文\) 和 [www.ericwhite.com](http://ericwhite.com/) \(英文\)。</span><span class="sxs-lookup"><span data-stu-id="2bc8c-104">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5def-105">範例</span><span class="sxs-lookup"><span data-stu-id="f5def-105">Example</span></span>  
- <span data-ttu-id="f5def-106">這個範例會尋找文件中的第一個段落元件。</span><span class="sxs-lookup"><span data-stu-id="f5def-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="f5def-107">它會從段落擷取文字，然後刪除段落中的所有文字執行。</span><span class="sxs-lookup"><span data-stu-id="f5def-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="f5def-108">它所建立的新文字執行包含已轉換為大寫的第一個段落文字。</span><span class="sxs-lookup"><span data-stu-id="f5def-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="f5def-109">接著，它會將變更的 XML 序列化為 Open XML 封裝並加以關閉。</span><span class="sxs-lookup"><span data-stu-id="f5def-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
+## <a name="example"></a><span data-ttu-id="2bc8c-105">範例</span><span class="sxs-lookup"><span data-stu-id="2bc8c-105">Example</span></span>  
+ <span data-ttu-id="2bc8c-106">這個範例會尋找文件中的第一個段落元件。</span><span class="sxs-lookup"><span data-stu-id="2bc8c-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="2bc8c-107">它會從段落擷取文字，然後刪除段落中的所有文字執行。</span><span class="sxs-lookup"><span data-stu-id="2bc8c-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="2bc8c-108">它所建立的新文字執行包含已轉換為大寫的第一個段落文字。</span><span class="sxs-lookup"><span data-stu-id="2bc8c-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="2bc8c-109">接著，它會將變更的 XML 序列化為 Open XML 封裝並加以關閉。</span><span class="sxs-lookup"><span data-stu-id="2bc8c-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
   
- <span data-ttu-id="f5def-110">這個範例會使用在 WindowsBase 組件中找到的類別。</span><span class="sxs-lookup"><span data-stu-id="f5def-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="f5def-111">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="f5def-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="2bc8c-110">這個範例會使用在 WindowsBase 組件中找到的類別。</span><span class="sxs-lookup"><span data-stu-id="2bc8c-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="2bc8c-111">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="2bc8c-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -139,9 +139,9 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="f5def-112">如果您在執行此程式後開啟 `SampleDoc.docx`，就可以看到此程式已將文件中第一個段落轉換成大寫。</span><span class="sxs-lookup"><span data-stu-id="f5def-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
+ <span data-ttu-id="2bc8c-112">如果您在執行此程式後開啟 `SampleDoc.docx`，就可以看到此程式已將文件中第一個段落轉換成大寫。</span><span class="sxs-lookup"><span data-stu-id="2bc8c-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
   
- <span data-ttu-id="f5def-113">執行[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) 中所描述的範例 Open XML 文件時，此範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="f5def-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="2bc8c-113">執行[建立來源 Office Open XML 文件 (C#)](./creating-the-source-office-open-xml-document.md) 中所描述的範例 Open XML 文件時，此範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="2bc8c-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
