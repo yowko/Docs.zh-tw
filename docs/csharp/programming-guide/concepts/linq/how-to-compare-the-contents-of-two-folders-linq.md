@@ -2,12 +2,12 @@
 title: 作法：比較兩個資料夾的內容 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 5d944025d8d442bb80c492d1898487dff88c5bc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: df71712ca1b59c706ede66488af8b1580677e299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585897"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924229"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>作法：比較兩個資料夾的內容 (LINQ) (C#)
 本例示範三種比較兩個檔案清單的方式︰  
@@ -19,7 +19,7 @@ ms.locfileid: "65585897"
 - 查詢集合差異，以擷取一個資料夾中有而另一個沒有的檔案。  
   
     > [!NOTE]
-    >  這裡顯示的技巧可用於比較任何類型的物件序列。  
+    > 這裡顯示的技巧可用於比較任何類型的物件序列。  
   
  這裡顯示的 `FileComparer` 類別會示範如何一起使用自訂比較子類別和標準查詢運算子。 此類別不適用於實際案例。 它僅使用每個檔案以位元組計的名稱和長度，來判斷每個資料夾的內容是否相同。 在實際案例中，您應該修改此比較子以執行更嚴格的相等檢查。  
   
@@ -130,5 +130,5 @@ namespace QueryCompareTwoDirs
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

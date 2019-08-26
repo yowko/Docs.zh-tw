@@ -2,12 +2,12 @@
 title: 作法：尋找同層級節點 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: d225b30b8bfcae09c5824d974e194f8a06ddfc86
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c64806c4505b507a9058a03d5cb882412f6868da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485384"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593410"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>作法：尋找同層級節點 (XPath-LINQ to XML) (C#)
 您可能想要尋找具有特定名稱之節點的所有同層級。 如果內容節點也有特定的名稱，所產生的集合可能包含內容節點。  
@@ -19,7 +19,7 @@ ms.locfileid: "66485384"
 ## <a name="example"></a>範例  
  此範例會先尋找 `Book` 項目，然後尋找名稱為 `Book` 的所有同層級項目。 所產生的集合包含內容節點。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：書籍 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：書籍 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)。  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

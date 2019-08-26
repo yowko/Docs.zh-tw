@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782637"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934769"
 ---
 # <a name="common-type-system"></a>一般類型系統
 一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。 一般型別系統可執行下列功能：  
@@ -82,7 +82,7 @@ ms.locfileid: "67782637"
 |exported 或 not exported|指出是否可在定義類別的組件中看見類別。 這項特性僅適用於最上層類別，並不適用於巢狀類別。|  
   
 > [!NOTE]
->  類別也可以透過巢狀方式置於父類別或結構中。 巢狀類別也具有成員特性。 如需詳細資訊，請參閱[巢狀型別](#NestedTypes)。  
+> 類別也可以透過巢狀方式置於父類別或結構中。 巢狀類別也具有成員特性。 如需詳細資訊，請參閱[巢狀型別](#NestedTypes)。  
   
  沒有實作的類別成員是抽象成員。 有一個或多個抽象成員的類別本身就是抽象的；所以無法建立它的新執行個體。 有些以執行階段為目標的語言即使沒有任何抽象的成員，也允許您將類別標記為抽象。 當您需要封裝一組衍生類別在適當時可繼承或覆寫的基本功能時，可以使用抽象類別 (Abstract Class)。 非抽象的類別即稱為實體類別 (Concrete Class)。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "67782637"
 - 除非是巢狀置於泛型型別中，否則不能是泛型。 換句話說，列舉型別不能有自己的型別參數。  
   
     > [!NOTE]
-    >  使用 Visual Basic、C# 和 C++ 建立的巢狀型別 (包括列舉型別) 包含所有封入泛型型別的型別參數，因此，即使沒有自己的型別參數，仍舊是泛型型別。 如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 參考主題中的＜巢狀型別＞。  
+    > 使用 Visual Basic、C# 和 C++ 建立的巢狀型別 (包括列舉型別) 包含所有封入泛型型別的型別參數，因此，即使沒有自己的型別參數，仍舊是泛型型別。 如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 參考主題中的＜巢狀型別＞。  
   
  <xref:System.FlagsAttribute> 屬性代表一種特殊的列舉型別，稱為位元欄位 (Bit Field)。 Runtime 本身無法區別傳統列舉型別和位元欄位，但是您所使用的語言或許可以區分出來。 在區分時，可在位元欄位上使用位元 (Bitwise) 運算子來產生未命名的數值，但是不能用於列舉型別。 列舉型別通常用於唯一的項目 (Element) 清單，例如該星期的天數、國別或區域名稱等。 位元欄位通常用於可能以組合形式出現的特性或數量清單，例如 `Red And Big And Fast`。  
   
@@ -157,14 +157,14 @@ ms.locfileid: "67782637"
  由於委派繼承自 <xref:System.MulticastDelegate>，所以委派會具有引動過程清單，這是委派所代表方法的清單，在叫用 (Invoke) 委派時就會執行這些方法。 清單中的所有方法都會接收到叫用委派時所提供的引數。  
   
 > [!NOTE]
->  在引動過程清單中具有一個以上方法的委派，即使擁有傳回型別，其傳回值也不會具有定義。  
+> 在引動過程清單中具有一個以上方法的委派，即使擁有傳回型別，其傳回值也不會具有定義。  
   
  在許多情況下，例如回呼方法中，委派只代表一個方法，而且您所需要採取的動作，就是建立委派然後再叫用委派。  
   
  對於代表多個方法的委派，.NET 會提供 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 委派類別的方法，來支援將方法加入至委派引動清單 (<xref:System.Delegate.Combine%2A?displayProperty=nameWithType> 方法)、移除方法 (<xref:System.Delegate.Remove%2A?displayProperty=nameWithType> 方法)，以及取得引動清單 (<xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> 方法) 等諸如此類的作業。  
   
 > [!NOTE]
->  在 C#、C++ 和 Visual Basic 中，並不需要對事件處理常式委派使用這些方法，因為這些語言都提供加入和移除事件處理常式的語法。  
+> 在 C#、C++ 和 Visual Basic 中，並不需要對事件處理常式委派使用這些方法，因為這些語言都提供加入和移除事件處理常式的語法。  
 
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>類型定義  
@@ -193,7 +193,7 @@ ms.locfileid: "67782637"
 |協助工具選項|說明|  
 |-------------------|-----------------|  
 |public|型別可供所有組件存取|  
-|組件|型別只能在本身的組件中存取|  
+|組件 (assembly)|型別只能在本身的組件中存取|  
   
  巢狀型別的存取範圍是依據其存取範圍定義域，由成員的宣告存取範圍和立即包含型別的存取範圍定義域來決定。 但是，巢狀型別的存取範圍領域不能超過包含型別 (Containing Type) 的存取範圍領域。  
   
@@ -307,7 +307,7 @@ ms.locfileid: "67782637"
  每一個型別成員都具有唯一 (Unique) 的簽章。 方法簽章包含方法名稱和參數清單 (方法引數的順序和型別)。 只要簽章不相同，就可以在型別中定義具有相同名稱的多個方法。 定義兩個或多個具有相同名稱的方法時，就說這個方法是多載。 例如在 <xref:System.Char?displayProperty=nameWithType> 中，會多載 <xref:System.Char.IsDigit%2A> 方法。 其中一個方法採用 <xref:System.Char>， 另一個方法則採用 <xref:System.String> 與 <xref:System.Int32>。  
   
 > [!NOTE]
->  傳回型別並不會視為方法簽章的一部分。 換言之，如果這些方法的差異只在於傳回型別，就不能多載這些方法。  
+> 傳回型別並不會視為方法簽章的一部分。 換言之，如果這些方法的差異只在於傳回型別，就不能多載這些方法。  
   
 ### <a name="inheriting-overriding-and-hiding-members"></a>繼承、覆寫和隱藏成員  
  衍生型別會繼承其基底型別的所有成員；也就是說，在衍生型別上會定義這些成員，並供衍生型別使用。 繼承成員的行為或品質可用下列兩種方式來修改：  

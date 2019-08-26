@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a16f51408de5ed7b2a0a7d45af81113fe8c7b386
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586154"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928298"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>作法：使用反映發出定義泛型方法
 第一個程序示範如何建立有兩個類型參數的簡單泛型方法，以及如何將類別條件約束、介面條件約束和特殊條件約束套用至類型參數。  
@@ -26,7 +26,7 @@ ms.locfileid: "65586154"
  第三個程序示範如何叫用泛型方法。  
   
 > [!IMPORTANT]
->  方法不是只因為屬於泛型型別並使用該類型的類型參數，而成為泛型。 方法只有在有自己的類型參數清單時，才會是泛型。 泛型方法可以出現在非泛型型別中，如本例所示。 如需泛型型別的非泛型方法範例，請參閱[如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
+> 方法不是只因為屬於泛型型別並使用該類型的類型參數，而成為泛型。 方法只有在有自己的類型參數清單時，才會是泛型。 泛型方法可以出現在非泛型型別中，如本例所示。 如需泛型型別的非泛型方法範例，請參閱[如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
   
 ### <a name="to-define-a-generic-method"></a>定義泛型方法  
   
@@ -155,7 +155,7 @@ ms.locfileid: "65586154"
  執行程式碼時，動態組件會儲存為 DemoGenericMethod1.dll，以及可以使用檢查[Ildasm.exe （IL 反組譯工具）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)。  
   
 > [!NOTE]
->  若要瞭解如何發出程式碼的好方法是撰寫執行的工作，您嘗試發出，並可用於檢查編譯器所產生的 MSIL 反組譯工具的 Visual Basic、 C# 或 Visual c + + 程式。  
+> 若要瞭解如何發出程式碼的好方法是撰寫執行的工作，您嘗試發出，並可用於檢查編譯器所產生的 MSIL 反組譯工具的 Visual Basic、 C# 或 Visual c + + 程式。  
   
  程式碼範例包含相當於發出的方法的原始程式碼。 發出的方法會叫用晚期繫結，也使用泛型委派宣告在程式碼範例。  
   

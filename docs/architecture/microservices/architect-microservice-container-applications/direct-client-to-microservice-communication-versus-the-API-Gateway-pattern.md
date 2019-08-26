@@ -2,12 +2,12 @@
 title: API 閘道模式與直接用戶端對微服務通訊
 description: 了解 API 閘道模式和直接用戶端對微服務通訊的差異與使用方式。
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892244"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914666"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -170,7 +170,7 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Charles Richardson：模式：API 閘道/前端的後端** \
+- **Chris Richardson：模式：API 閘道/前端的後端** \
   <https://microservices.io/patterns/apigateway.html>
 
 - **API 閘道模式** \

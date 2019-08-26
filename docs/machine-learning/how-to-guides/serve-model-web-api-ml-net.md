@@ -1,16 +1,16 @@
 ---
 title: 在 ASP.NET Core Web API 中部署模型
 description: 使用 ASP.NET Core Web API 在網際網路上提供 ML.NET 情感分析機器學習模型
-ms.date: 05/03/2019
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: f8b8f74f752aeb243d4a2987929bd28ddc5f7d5a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641087"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666653"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
@@ -27,21 +27,21 @@ ms.locfileid: "65641087"
 
 ## <a name="create-aspnet-core-web-api-project"></a>建立 ASP.NET Core Web API 專案
 
-1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案] > [新增] > [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [Web] 節點。 然後，選取 [ASP.NET Core Web 應用程式] 專案範本。 在 [名稱] 文字方塊中，輸入 "SentimentAnalysisWebAPI"，然後選取 [確定] 按鈕。
+1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案] > [新增] > [專案]  。 在 [新增專案] 對話方塊中，選取 [Visual C#]  節點，然後選取 [Web]  節點。 然後，選取 [ASP.NET Core Web 應用程式]  專案範本。 在 [名稱]  文字方塊中，輸入 "SentimentAnalysisWebAPI"，然後選取 [確定]  按鈕。
 
-1. 在顯示不同類型的 ASP.NET Core 專案的視窗中，選取 [API]，然後選取 [確定] 按鈕。
+1. 在顯示不同類型的 ASP.NET Core 專案的視窗中，選取 [API]  ，然後選取 [確定]  按鈕。
 
 1. 在專案中建立名為 *MLModels* 的目錄，以儲存您預先建置的機器學習模型檔案：
 
     在 [方案總管] 中，以滑鼠右鍵按一下您的專案，然後選取 [新增] > [新增資料夾]。 輸入 "MLModels"，然後按 Enter。
 
-1. 安裝「Microsoft.ML NuGet 套件」：
+1. 安裝「Microsoft.ML NuGet 套件」  ：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。
 
 1. 安裝 **Microsoft.Extensions.ML Nuget 套件**：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.Extensions.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.Extensions.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。
 
 ### <a name="add-model-to-aspnet-core-web-api-project"></a>將模型新增至 ASP.NET Core Web API 專案
 
@@ -57,7 +57,7 @@ ms.locfileid: "65641087"
     在 [方案總管] 中，以滑鼠右鍵按一下您的專案，然後選取 [新增] > [新增資料夾]。 輸入 "DataModels"，然後按 **Enter**。
 
 2. 在 [方案總管] 中，以滑鼠右鍵按一下 *DataModels* 目錄，然後選取 [新增] > [新增項目]。
-3. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *SentimentData.cs*。 接著，選取 [新增] 按鈕。 *SentimentData.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 using 陳述式新增至 *SentimentData.cs* 頂端：
+3. 在 [新增項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *SentimentData.cs*。 接著，選取 [新增]  按鈕。 *SentimentData.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 using 陳述式新增至 *SentimentData.cs* 頂端：
 
     ```csharp
     using Microsoft.ML.Data;
@@ -77,8 +77,8 @@ ms.locfileid: "65641087"
     }
     ```
 
-4. 在 [方案總管] 中，以滑鼠右鍵按一下 *DataModels* 目錄，然後選取 [新增] > [新增項目]。
-5. 在 [加入新項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *SentimentPrediction.cs*。 接著，選取 [新增] 按鈕。 *SentimentPrediction.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 using 陳述式新增至 *SentimentPrediction.cs* 頂端：
+4. 在 [方案總管] 中，以滑鼠右鍵按一下 *DataModels* 目錄，然後選取 [新增] > [新增項目]  。
+5. 在 [加入新項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *SentimentPrediction.cs*。 接著，選取 [新增] 按鈕。 *SentimentPrediction.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 using 陳述式新增至 *SentimentPrediction.cs* 頂端：
 
     ```csharp
     using Microsoft.ML.Data;
@@ -139,9 +139,9 @@ ms.locfileid: "65641087"
 
 若要處理傳入的 HTTP 要求，請建立一個控制器。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 *Controllers* 目錄，然後選取 [新增] > [控制器]。
-1. 在 [加入新項目] 對話方塊中，選取 [API 控制器 - 空白]，然後選取 [新增]。
-1. 在提示中，將 [控制器名稱] 欄位變更為 *PredictController.cs*。 接著，選取 [新增] 按鈕。 *PredictController.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 using 陳述式新增至 *PredictController.cs* 頂端：
+1. 在 [方案總管] 中，以滑鼠右鍵按一下 *Controllers* 目錄，然後選取 [新增] > [控制器]  。
+1. 在 [加入新項目]  對話方塊中，選取 [API 控制器 - 空白]  ，然後選取 [新增]  。
+1. 在提示中，將 [控制器名稱]  欄位變更為 *PredictController.cs*。 接著，選取 [新增] 按鈕。 *PredictController.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 using 陳述式新增至 *PredictController.cs* 頂端：
 
     ```csharp
     using System;
@@ -189,7 +189,7 @@ ms.locfileid: "65641087"
 1. 開啟 Powershell 並輸入下列程式碼，其中 PORT 是應用程式正在接聽的連接埠。
 
     ```powershell
-    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{SentimentText="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
     ```
 
     如果成功，輸出看起來應該類似下列文字：

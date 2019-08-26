@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19f1cc3708d2d552da3d94bc6b490ebaa2ece657
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b5c6de2bde111ae459dbcfa1c0a7363d406f5f80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586162"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928249"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>作法：定義和執行動態方法
 下列程序顯示如何定義及執行簡單的動態方法及繫結至類別執行個體的動態方法。 如需動態方法的詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別和[反映發出動態方法案例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))。  
@@ -38,7 +38,7 @@ ms.locfileid: "65586162"
 3. 建立 <xref:System.Reflection.Emit.DynamicMethod>。 本例中的方法名為 `SquareIt`。  
   
     > [!NOTE]
-    >  不需要提供動態方法名稱，它們無法依名稱叫用。 多個動態方法可有相同的名稱。 不過，名稱會出現在呼叫堆疊中，有利於偵錯。  
+    > 不需要提供動態方法名稱，它們無法依名稱叫用。 多個動態方法可有相同的名稱。 不過，名稱會出現在呼叫堆疊中，有利於偵錯。  
   
      傳回值的類型指定為 `long`。 與包含 `Example` 類別的模組建立關聯的方法，包含範例程式碼。 可指定任何已載入的模組。 動態方法的行為如同模組層級的 `static` 方法 (Visual Basic 為 `Shared`)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65586162"
 5. 呼叫 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> 方法多載，以建立表示動態方法之 (步驟 1 所宣告的) 委派的執行個體。 建立委派即會完成方法，而任何進一步變更方法的嘗試，例如新增更多的 MSIL，則予以忽略。  
   
     > [!NOTE]
-    >  您可以多次呼叫 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 方法，建立繫結至其他目標類型執行個體的委派。  
+    > 您可以多次呼叫 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 方法，建立繫結至其他目標類型執行個體的委派。  
   
      下列程式碼會將方法繫結至 `Example` 類別的新執行個體，此類別的私用測試欄位設為 42。 亦即，每次叫用委派時，`Example` 的執行個體都會傳遞至方法的第一個參數。  
   

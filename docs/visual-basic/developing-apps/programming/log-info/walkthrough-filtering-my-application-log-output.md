@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af1dc3e1ce22112d76ad566873f40c1c2ac05c9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591278"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968691"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
 本逐步解說示範如何變更 `My.Application.Log` 物件的預設記錄檔篩選，以控制哪些資訊會從 `Log` 物件傳遞至接聽程式，而哪些資訊會由接聽程式寫入。 由於組態資訊是儲存在應用程式的組態檔中，因此即使在建置應用程式之後，您仍可以變更記錄行為。  
@@ -44,7 +44,7 @@ ms.locfileid: "65591278"
      如需如何檢視應用程式偵錯輸出視窗的資訊，請參閱[輸出視窗](/visualstudio/ide/reference/output-window)。 如需應用程式記錄檔位置的資訊，請參閱[逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。  
   
     > [!NOTE]
-    >  根據預設，應用程式會在應用程式關閉時清除記錄檔輸出。  
+    > 根據預設，應用程式會在應用程式關閉時清除記錄檔輸出。  
   
      在上述範例，第二次呼叫 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 方法和呼叫 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 方法會產生記錄輸出，而第一次和最後一次呼叫 `WriteEntry` 方法則不會。 這是因為 `WriteEntry` 和 `WriteException` 的嚴重性層級為 "Information" 和 "Error"，兩者皆為 `My.Application.Log` 物件的預設記錄檔篩選所允許。 不過，具有 "Start" 和 "Stop" 嚴重性層級的事件會阻礙記錄檔輸出的產生。  
   
@@ -65,13 +65,13 @@ ms.locfileid: "65591278"
 |`Off`|封鎖所有訊息。|  
   
 > [!NOTE]
->  `WriteEntry` 和 `WriteException` 方法都有未指定嚴重性層級的多載。 `WriteEntry` 多載的隱含嚴重性層級是 "Information"，而 `WriteException` 多載的隱含嚴重性層級是 "Error"。  
+> `WriteEntry` 和 `WriteException` 方法都有未指定嚴重性層級的多載。 `WriteEntry` 多載的隱含嚴重性層級是 "Information"，而 `WriteException` 多載的隱含嚴重性層級是 "Error"。  
   
  下表說明上一個範例中所顯示的記錄檔輸出︰使用 "Information" 的預設 `DefaultSwitch` 設定時，僅有第二個 `WriteEntry` 方法呼叫，以及 `WriteException` 方法呼叫會產生記錄檔輸出。  
   
 #### <a name="to-log-only-activity-tracing-events"></a>若只要記錄活動追蹤事件  
   
-1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選取 [開啟]。  
+1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選取 [開啟]。    
   
      -或-  
   
@@ -79,9 +79,9 @@ ms.locfileid: "65591278"
   
     1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
+    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔]  。  
   
-    3. 按一下 [加入]。  
+    3. 按一下 [加入]。   
   
 2. 找出位於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<switches>` 區段。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "65591278"
 9. 將 `value` 屬性值變更回 "Information"。  
   
     > [!NOTE]
-    >  `DefaultSwitch` 參數設定只會控制 `My.Application.Log`。 它不會變更 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 類別的行為。  
+    > `DefaultSwitch` 參數設定只會控制 `My.Application.Log`。 它不會變更 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 類別的行為。  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>個別篩選 My.Application.Log 接聽程式  
  上一個範例示範如何變更所有 `My.Application.Log` 輸出的篩選。 此範例示範如何篩選個別的記錄檔接聽程式。 應用程式預設會有兩個接聽程式，以寫入應用程式的偵錯輸出和記錄檔。  
@@ -146,7 +146,7 @@ ms.locfileid: "65591278"
   
 #### <a name="to-log-only-activity-tracing-events"></a>若只要記錄活動追蹤事件  
   
-1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。  
+1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。    
   
      -或-  
   
@@ -154,11 +154,11 @@ ms.locfileid: "65591278"
   
     1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
+    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔]  。  
   
-    3. 按一下 [加入] 。  
+    3. 按一下 [加入]  。  
   
-2. 在方案總管中，以滑鼠右鍵按一下 app.config。 選擇 [開啟]。  
+2. 在方案總管中，以滑鼠右鍵按一下 app.config。  選擇 [開啟]  。  
   
 3. 找出 `<listeners>` 區段，其位於具有 `name` 屬性 "DefaultSource" 之 `<source>` 區段中的 `<sources>` 區段下方。 `<sources>` 區段位於最上層 `<configuration>` 區段中的 `<system.diagnostics>` 區段下方。  
   

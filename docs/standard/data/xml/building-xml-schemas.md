@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 451893cf09b0d1ebdfb33d0020376aa35240b6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8c8e1b0d9a79ff22f3194e86cd580f3a7e199b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650989"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962033"
 ---
 # <a name="building-xml-schemas"></a>建置 XML 結構描述
 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的類別會對應至全球資訊網協會 (W3C) XML 結構描述建議事項中定義的結構，並可用於建置記憶體中的 XML 結構描述。  
@@ -35,14 +35,14 @@ ms.locfileid: "54650989"
  項目及屬性的內容是由其型別來定義。 若要建立其型別為其中一個內建結構描述型別的項目及屬性 (Attribute)，請使用 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 類別，以內建型別之對應的限定名稱設定 <xref:System.Xml.Schema.XmlSchemaElement> 或 <xref:System.Xml.Schema.XmlSchemaAttribute> 類別的 <xref:System.Xml.XmlQualifiedName> 屬性 (Property)。 若要建立項目及屬性的使用者定義型別，請使用 <xref:System.Xml.Schema.XmlSchemaSimpleType> 或 <xref:System.Xml.Schema.XmlSchemaComplexType> 類別，建立新的簡單或複雜型別。  
   
 > [!NOTE]
->  若要建立做為項目或屬性 (Attribute) 之匿名子系的未命名簡單或複雜型別 (僅簡單型別適用於屬性 (Attribute))，請將 <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 或 <xref:System.Xml.Schema.XmlSchemaElement> 類別的 <xref:System.Xml.Schema.XmlSchemaAttribute> 屬性設為未命名的簡單或複雜型別，而不是 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 或 <xref:System.Xml.Schema.XmlSchemaElement> 類別的 <xref:System.Xml.Schema.XmlSchemaAttribute> 屬性 (Property)。  
+> 若要建立做為項目或屬性 (Attribute) 之匿名子系的未命名簡單或複雜型別 (僅簡單型別適用於屬性 (Attribute))，請將 <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 或 <xref:System.Xml.Schema.XmlSchemaElement> 類別的 <xref:System.Xml.Schema.XmlSchemaAttribute> 屬性設為未命名的簡單或複雜型別，而不是 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 或 <xref:System.Xml.Schema.XmlSchemaElement> 類別的 <xref:System.Xml.Schema.XmlSchemaAttribute> 屬性 (Property)。  
   
  XML 結構描述允許匿名及具名簡單型別，利用限制其他簡單型別 (內建的或使用者定義的) 衍生，或建構為其他簡單型別的清單或聯集。 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> 類別可用於藉由限制內建 `xs:string` 型別，來建立簡單型別。 您也可以使用 <xref:System.Xml.Schema.XmlSchemaSimpleTypeList> 或 <xref:System.Xml.Schema.XmlSchemaSimpleTypeUnion> 類別，建立清單或聯集型別。 <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A?displayProperty=nameWithType> 屬性可表示它是簡單型別限制、清單還是聯集。  
   
  在下列程式碼範例中，`FirstName` 項目的型別為內建型別 `xs:string`，`LastName` 項目的型別為限制內建型別 `xs:string` 的具名簡單型別 (`MaxLength` Facet 值為 20)，而 `CustomerId` 屬性的型別為內建型別 `xs:positiveInteger`。 `Customer` 項目為匿名的複雜型別，其物件是 `FirstName` 及 `LastName` 項目的序列，而且其屬性包含 `CustomerId` 屬性。  
   
 > [!NOTE]
->  您也可以將 <xref:System.Xml.Schema.XmlSchemaChoice> 或 <xref:System.Xml.Schema.XmlSchemaAll> 類別做為複雜型別的物件，以複寫 `<xs:choice />` 或 `<xs:all />` 語意。  
+> 您也可以將 <xref:System.Xml.Schema.XmlSchemaChoice> 或 <xref:System.Xml.Schema.XmlSchemaAll> 類別做為複雜型別的物件，以複寫 `<xs:choice />` 或 `<xs:all />` 語意。  
   
  [!code-cpp[XmlSchemaCreateExample#3](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#3)]
  [!code-csharp[XmlSchemaCreateExample#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCreateExample/CS/XmlSchemaCreateExample.cs#3)]
@@ -58,7 +58,7 @@ ms.locfileid: "54650989"
  <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType> 方法會根據 XML 結構描述的規則，驗證客戶結構描述，並使 Post-Schema-Compilation 屬性可用。  
   
 > [!NOTE]
->  SOM API 中的所有 Post-Schema-Compilation 屬性都與 Post-Schema-Validation-Infoset 不同。  
+> SOM API 中的所有 Post-Schema-Compilation 屬性都與 Post-Schema-Validation-Infoset 不同。  
   
  加入 <xref:System.Xml.Schema.ValidationEventHandler> 的 <xref:System.Xml.Schema.XmlSchemaSet> 是一種委派屬性，它會呼叫回呼方法 `ValidationCallback`，以處理結構描述驗證警告及錯誤。  
   

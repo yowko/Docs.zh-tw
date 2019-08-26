@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364040"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967195"
 ---
 # <a name="reflection-and-generic-types"></a>反映和泛用類型
 <a name="top"></a> 從反映的的觀點來看，泛型類型與一般類型間的差異在於泛型類型具有與其相關聯的一組類型參數 (若其定義為泛型類型) 或類型引數 (若其為建構類型)。 泛型方法與一般方法的差異也如同上述。  
@@ -32,7 +32,7 @@ ms.locfileid: "68364040"
 - <xref:System.Type> 類別的執行個體，代表泛型類型定義與泛型方法定義的類型參數。  
   
     > [!NOTE]
-    >  <xref:System.Type> 物件代表泛型類型參數時，許多 <xref:System.Type> 的屬性與方法會有不同的行為。 這些差異皆記錄在屬性與方法主題中。 如需範例，請參閱 <xref:System.Type.IsAutoClass%2A> 與 <xref:System.Type.DeclaringType%2A>。 此外，部分成員僅限於 <xref:System.Type> 物件代表泛型類型參數時才有效。 如需範例，請參閱 <xref:System.Type.GetGenericTypeDefinition%2A>。  
+    > <xref:System.Type> 物件代表泛型類型參數時，許多 <xref:System.Type> 的屬性與方法會有不同的行為。 這些差異皆記錄在屬性與方法主題中。 如需範例，請參閱 <xref:System.Type.IsAutoClass%2A> 與 <xref:System.Type.DeclaringType%2A>。 此外，部分成員僅限於 <xref:System.Type> 物件代表泛型類型參數時才有效。 如需範例，請參閱 <xref:System.Type.GetGenericTypeDefinition%2A>。  
   
 - 如果 <xref:System.Type> 的執行個體代表泛型類型，則其包含一個代表類型參數 (若是泛型類型定義) 或代表類型引數 (若是建構類型) 的類型陣列。 上述同樣適用於代表泛型方法之 <xref:System.Reflection.MethodInfo> 類別的執行個體。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68364040"
   
  如需示範此處討論之方法的範例程式碼，請參閱[如何：使用反映檢查和具現化泛型型別](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)。  
   
- 下列討論假設您熟悉泛型術語，例如類型參數與引數之間的差異，以及引數與開放式或封閉式的建構類型。 如需詳細資訊，請參閱[泛型](../../../docs/standard/generics/index.md)。  
+ 下列討論假設您熟悉泛型術語，例如類型參數與引數之間的差異，以及引數與開放式或封閉式的建構類型。 如需詳細資訊，請參閱[泛型](../../standard/generics/index.md)。  
   
  本概觀包含下列各節：  
   
@@ -131,7 +131,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  <xref:System.Type.GenericParameterAttributes%2A> 屬性會取得表示變異數 (共變數或反變數) 及類型參數特殊條件約束的 <xref:System.Reflection.GenericParameterAttributes> 值。  
   
 #### <a name="covariance-and-contravariance"></a>共變數和反變數  
- 若要判斷類型參數是共變數或是反變數，請套用 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> 遮罩至由 <xref:System.Reflection.GenericParameterAttributes> 屬性所傳回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果結果為 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，則類型參數為非變異值。 請參閱 [共變數和反變數](../../../docs/standard/generics/covariance-and-contravariance.md)。  
+ 若要判斷類型參數是共變數或是反變數，請套用 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> 遮罩至由 <xref:System.Reflection.GenericParameterAttributes> 屬性所傳回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果結果為 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，則類型參數為非變異值。 請參閱 [共變數和反變數](../../standard/generics/covariance-and-contravariance.md)。  
   
 #### <a name="special-constraints"></a>特殊條件約束  
  若要判斷類型參數的特殊條件約束，請套用 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 遮罩至 <xref:System.Reflection.GenericParameterAttributes> 屬性所傳回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果結果是 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，則沒有特殊條件約束。 型別參數可以限制為參考型別、非 Null 實值型別，以及具有無參數建構函式。  
@@ -150,6 +150,6 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 |標題|說明|  
 |-----------|-----------------|  
 |[如何：使用反映檢視並具現化泛型型別](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|示範如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的屬性及方法，來檢查泛型類型。|  
-|[泛型](../../../docs/standard/generics/index.md)|說明泛型功能，及在 .NET Framework 下如何加以支援。|  
+|[泛型](../../standard/generics/index.md)|說明泛型功能，及在 .NET Framework 下如何加以支援。|  
 |[如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|示範如何在動態組件中使用反映發出以產生泛型類型。|  
 |[檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|描述 <xref:System.Type> 類別，並提供程式碼範例以說明如何搭配不同的反映類別來使用 <xref:System.Type>，以取得建構函式、方法、欄位、屬性與事件的相關資訊。|

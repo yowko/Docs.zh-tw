@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b7b54ab569a3f03363b2f30bf595c2087b9fe70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152902"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963945"
 ---
 # <a name="managing-connections"></a>管理連接
 使用 HTTP 連線至資料資源的應用程式可以使用 .NET Framework 的 <xref:System.Net.ServicePoint> 和 <xref:System.Net.ServicePointManager> 類別管理網際網路連線，以及協助它們達到最佳規模和效能。  
@@ -36,7 +36,7 @@ ms.locfileid: "59152902"
  用戶端與伺服器之間的連線數目會對應用程式輸送量造成很大的影響。 根據預設，使用 <xref:System.Net.HttpWebRequest> 類別的應用程式最多會使用兩個與指定伺服器的持續性連線，但您可以設定個別應用程式的最大連線數目。  
   
 > [!NOTE]
->  HTTP/1.1 規格會將應用程式的連線數目限制成一部伺服器有兩個連線。  
+> HTTP/1.1 規格會將應用程式的連線數目限制成一部伺服器有兩個連線。  
   
  最佳連線數目取決於實際執行應用程式的條件。 增加應用程式的可用連線數目，可能不會影響應用程式效能。 若要判斷多個連線的影響，請執行效能測試，同時改變連線數目。 您可以在應用程式初始化時變更 **ServicePointManager** 類別上的靜態 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 屬性，以變更應用程式所使用的連線數目，如下列程式碼範例所示。  
   

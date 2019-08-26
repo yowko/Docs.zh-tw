@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd500d8eda81708d67254cbc5dc8da701ae4e09
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588837"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963347"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>作法：在非西曆中顯示日期
 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型使用西曆作為其預設月曆。 這表示即使該日期和時間是使用其他月曆所建立，呼叫日期和時間值的 `ToString` 方法仍會使用西曆顯示該日期和時間的字串表示。 以下範例將說明這種情況，其中使用兩種不同方式來建立波斯曆的日期和時間值，但在呼叫 <xref:System.DateTime.ToString%2A> 方法時，仍以西曆顯示這些日期和時間值。 此範例反映兩種常用來顯示特殊月曆之日期，但不正確的技術。  
@@ -39,7 +39,7 @@ ms.locfileid: "65588837"
 4. 將月曆物件指派給 <xref:System.Globalization.DateTimeFormatInfo> 物件的 <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> 屬性，該物件是由 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性所傳回的。  
   
     > [!NOTE]
-    >  <xref:System.Globalization.CultureInfo> 類別也會有 <xref:System.Globalization.CultureInfo.Calendar%2A> 屬性。 不過，該屬性是唯讀且固定的，不會變更以反映指派給 <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> 屬性的新預設月曆。  
+    > <xref:System.Globalization.CultureInfo> 類別也會有 <xref:System.Globalization.CultureInfo.Calendar%2A> 屬性。 不過，該屬性是唯讀且固定的，不會變更以反映指派給 <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> 屬性的新預設月曆。  
   
 5. 呼叫 <xref:System.DateTime.ToString%2A> 或 <xref:System.DateTime.ToString%2A> 方法，並將 <xref:System.Globalization.CultureInfo> 物件傳遞給它，該物件的預設月曆已在上一個步驟中加以修改。  
   

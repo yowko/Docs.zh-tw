@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8527f5f4a52c02744b02fea7ffaf833c223fa3f1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586217"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912525"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>作法：使用反映發出定義泛型型別
 本主題示範如何建立具有兩個型別參數的簡單泛型類型、如何將類別條件約束、介面條件約束及特殊條件約束套用至型別參數，以及如何建立成員，以使用類別的型別參數作為參數類型及傳回類型。  
   
 > [!IMPORTANT]
->  方法不是只因為屬於泛型型別並使用該類型的型別參數，而成為泛型。 方法只有在有自己的型別參數清單時，才會是泛型。 泛型型別上的大部分方法不是泛型，如本例所示。 如需發出泛型方法的範例，請參閱[如何：使用反映發出定義泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
+> 方法不是只因為屬於泛型型別並使用該類型的型別參數，而成為泛型。 方法只有在有自己的型別參數清單時，才會是泛型。 泛型型別上的大部分方法不是泛型，如本例所示。 如需發出泛型方法的範例，請參閱[如何：使用反映發出定義泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
   
 ### <a name="to-define-a-generic-type"></a>定義泛型型別  
   
@@ -84,7 +84,7 @@ ms.locfileid: "65586217"
      此程式碼範例所使用的建構函式接受 `IEnumerable<T>`。 但是請注意，這不是 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面的泛型型別定義；相反地，來自 `List<T>` 的型別參數 `T` 必須取代 `IEnumerable<T>` 的型別參數 `T`。 (這似乎很令人困惑，只因為這兩個類型都有名為 `T` 的型別參數。 這就是這個程式碼範例使用名稱 `TFirst` 和 `TSecond` 的原因。)若要取得建構函式引數的類型，請從使用泛型型別定義 `IEnumerable<T>`，並以 `List<T>` 的第一個泛型型別參數呼叫 <xref:System.Type.MakeGenericType%2A> 開始。 建構函式引數清單必須當成陣列傳遞，本例中只有一個引數。  
   
     > [!NOTE]
-    >  當您在 C# 中使用 `typeof` 運算子時，泛型型別定義會表示為 `IEnumerable<>`；在 Visual Basic 中使用 `GetType` 運算子時，會表示為 `IEnumerable(Of )`。  
+    > 當您在 C# 中使用 `typeof` 運算子時，泛型型別定義會表示為 `IEnumerable<>`；在 Visual Basic 中使用 `GetType` 運算子時，會表示為 `IEnumerable(Of )`。  
   
      現在，在泛型型別定義上呼叫 <xref:System.Type.GetConstructor%2A>，即可能取得 `List<T>` 的建構函式。 若要將此建構函式轉換成對應的 `List<TFirst>` 的建構函式，請從 `List<T>` 將 `List<TFirst>` 和建構函式傳遞至靜態的 <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29?displayProperty=nameWithType> 方法。  
   

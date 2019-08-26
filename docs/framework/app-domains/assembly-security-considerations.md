@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 53b33bdc70f00d5c824d502043a69f4ee05acc71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423402"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927969"
 ---
 # <a name="assembly-security-considerations"></a>組件安全性考量
 <a name="top"></a> 當您建置組件時，您可以指定一組該組件需要用來執行的使用權限。 是否將某些使用權限授予組件則以辨識項 (Evidence) 為基礎。  
@@ -40,7 +40,7 @@ ms.locfileid: "67423402"
 - 不要利用使用權限要求來取得程式碼可能需要的使用權限，但是要準備處理萬一使用權限未獲授予時的安全性例外狀況。  
   
     > [!NOTE]
-    >  安全性是個複雜的領域，有許多的選項可以供您選擇。 如需詳細資訊，請參閱[重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)。  
+    > 安全性是個複雜的領域，有許多的選項可以供您選擇。 如需詳細資訊，請參閱[重要的安全性概念](../../standard/security/key-security-concepts.md)。  
   
  在載入期間，組件的辨識項 (Evidence) 是用來做為安全性原則的輸入。 安全性原則是由企業和電腦的系統管理員以及使用者原則設定所建立的，它決定在執行時授予所有 Managed 程式碼的使用權限集。 安全性原則可以針對組件 (如果具有簽署工具產生的簽章) 的發行者、針對要從其中下載組件的 Web 網站和區域 (Internet Explorer 的用詞)，或針對組件的強式名稱 (Strong Name) 建立。 例如，電腦的系統管理員可以建立安全性原則，允許從某一 Web 網站下載並且由特定軟體公司簽名的所有程式碼存取電腦上的某個資料庫，但是不授予寫入該電腦磁碟的存取權。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67423402"
  您可以同時對組件賦予強式名稱和使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 建立的數位簽章，或是只使用其中一種。 這兩種簽署工具只能同時簽署一個檔案。對於多檔案組件，您必須簽署含有組件資訊清單的檔案。 強式名稱儲存在包含組件資訊清單的檔案中，但是使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 建立的簽章，則是儲存在包含組件資訊清單的可攜式執行檔 (PE) 中的保留位置。 當您已經擁有依靠 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 所產生簽章的信任階層，或您的原則只使用金鑰部分而不檢查信任鏈結，即可使用 [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md) 來簽署組件 (不論是否使用強式名稱)。  
   
 > [!NOTE]
->  在組件上同時使用強式名稱和簽署工具簽章時，必須先指定強式名稱。  
+> 在組件上同時使用強式名稱和簽署工具簽章時，必須先指定強式名稱。  
   
  Common Language Runtime 也會執行雜湊驗證；組件資訊清單包含構成組件的所有檔案清單，包括建置資訊清單時所在的每一個檔案的雜湊。 載入每一個檔案時，它的內容會被雜湊並且與資訊清單中儲存的雜湊值進行比對。 如果兩個雜湊不相符，就無法載入組件。  
   

@@ -2,17 +2,17 @@
 title: 針對 Func 與 Action 泛型委派使用變異數 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540594"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659915"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>針對 Func 與 Action 泛型委派使用變異數 (C#)
 下列範例示範如何在 `Func` 和 `Action` 泛型委派中使用共變數和反變數，以便在您的程式碼中重複使用方法並提供更多彈性。  
   
- 如需共變數與反變數的詳細資訊，請參閱[委派中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
+ 如需共變數與反變數的詳細資訊，請參閱[委派中的變異數 (C#)](./variance-in-delegates.md)。  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>使用具有 Covariant 型別參數的委派  
  下列範例說明在泛型 `Func` 委派中支援共變數的好處。 `FindByTitle` 方法使用 `String` 類型的參數，並傳回 `Employee` 類型的物件。 不過，您可以將此方法指派給 `Func<String, Person>` 委派，因為 `Employee` 會繼承 `Person`。  
@@ -83,5 +83,5 @@ class Program
   
 ## <a name="see-also"></a>另請參閱
 
-- [共變數和反變數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
-- [泛型](~/docs/standard/generics/index.md)
+- [共變數和反變數 (C#)](./index.md)
+- [泛型](../../../../standard/generics/index.md)

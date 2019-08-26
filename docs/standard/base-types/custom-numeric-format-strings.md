@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9f05d91dd53d9dee534e5dd429bf6399fd677258
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268221"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963406"
 ---
 # <a name="custom-numeric-format-strings"></a>自訂數值格式字串
 
@@ -175,7 +175,7 @@ ms.locfileid: "67268221"
  若要在結果字串中加上反斜線，您必須再加上一個反斜線 (變成`\\`)，才能將反斜線解譯為常值。  
   
 > [!NOTE]
->  某些編譯器 (例如 C++ 和 C# 編譯器) 也可能會將單一反斜線字元解譯為逸出字元。 為了確保字串在格式化時能夠正確獲得解譯，您可以在 C# 中的字串前面加上逐字字串常值字元 (@ 字元)，或在 C# 和 C++ 中的每個反斜線前面再加上一個反斜線字元。 下列 C# 範例示範這兩種做法。  
+> 某些編譯器 (例如 C++ 和 C# 編譯器) 也可能會將單一反斜線字元解譯為逸出字元。 為了確保字串在格式化時能夠正確獲得解譯，您可以在 C# 中的字串前面加上逐字字串常值字元 (@ 字元)，或在 C# 和 C++ 中的每個反斜線前面再加上一個反斜線字元。 下列 C# 範例示範這兩種做法。  
   
  下列範例會使用逸出字元，以避免格式化作業將 "#"、"0" 和 "\\" 字元解譯為逸出字元或格式規範。 C# 範例會多使用一個反斜線，以確保反斜線會解譯為常值字元。  
   

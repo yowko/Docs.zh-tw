@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dededed9bcd4558296323532c0ecbfb60bf5b311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b2edf1f06873796bd63fceaca9a4bb99e509589
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567915"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910351"
 ---
 # <a name="mutexes"></a>Mutex
 您可以使用 <xref:System.Threading.Mutex> 物件來提供獨佔的資源存取權。 <xref:System.Threading.Mutex> 類別所使用的系統資源比 <xref:System.Threading.Monitor> 類別還多，但前者可跨越應用程式定義域的界限進行封送處理、可搭配多個等候使用，並可用來同步處理不同處理序內的執行緒。 如需受管理之同步處理機制的比較，請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "54567915"
  如果執行緒終止時未釋放 <xref:System.Threading.Mutex>，就表示已放棄 Mutex。 這通常代表程式在設計上有嚴重錯誤，因為 Mutex 所保護的資源可能仍處於不一致的狀態。 在 .NET Framework 2.0 版中，下一個取得 Mutex 的執行緒中會擲回 <xref:System.Threading.AbandonedMutexException>。  
   
 > [!NOTE]
->  在 .NET Framework 1.0 和 1.1 版中，會將遭到放棄的 <xref:System.Threading.Mutex> 設為已發出信號的狀態，下一個等候中的執行緒則會取得擁有權。 如果沒有執行緒在等候，<xref:System.Threading.Mutex> 就會保持已發出信號的狀態。 不會有例外狀況擲回。  
+> 在 .NET Framework 1.0 和 1.1 版中，會將遭到放棄的 <xref:System.Threading.Mutex> 設為已發出信號的狀態，下一個等候中的執行緒則會取得擁有權。 如果沒有執行緒在等候，<xref:System.Threading.Mutex> 就會保持已發出信號的狀態。 不會有例外狀況擲回。  
   
  如果是全系統 Mutex，遭到放棄的 Mutex 可能表示應用程式已意外終止 (例如，透過使用「Windows 工作管理員」)。  
   

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 3a5915d23fea02a031cedd9063018fffbdc34180
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 13adfbb96cea2c192b84931b529bf92fd2b50116
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633767"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922320"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>使用存取範圍層級的限制 (C# 參考)
 
@@ -34,7 +34,7 @@ public class MyClass: BaseClass {...} // Error
 |[屬性](../../programming-guide/classes-and-structs/properties.md)|屬性的類型至少必須可以像屬性本身一樣地存取。|
 |[事件](../../programming-guide/events/index.md)|事件的類型至少必須可以像事件本身一樣地存取。|
 |[索引子](../../programming-guide/indexers/index.md)|索引子的類型和參數類型至少必須可以像索引子本身一樣地存取。|
-|[運算子](../../programming-guide/statements-expressions-operators/operators.md)|運算子的傳回類型和參數類型至少必須可以像運算子本身一樣地存取。|
+|[運算子](../operators/index.md)|運算子的傳回類型和參數類型至少必須可以像運算子本身一樣地存取。|
 |[建構函式](../../programming-guide/classes-and-structs/constructors.md)|建構函式的參數類型至少必須可以像建構函式本身一樣地存取。|
 
 ## <a name="example"></a>範例

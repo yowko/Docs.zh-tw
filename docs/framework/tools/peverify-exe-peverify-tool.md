@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1de17ec2537282fe87b5613a63e2a954383aeab6
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 93820120e91d80a3215673982348fd17f2fdb5d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567328"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957976"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify 工具)
 PEVerify 工具可以協助像是編譯器撰寫者、指令碼引擎開發人員等產生 Microsoft Intermediate Language (MSIL) 的開發人員，判斷其 MSIL 程式碼和相關聯的中繼資料是否符合類型安全需求。 只有在避免使用某些語言建構時，某些編譯器才會產生可驗證的類型安全程式碼。 如果您是使用這類編譯器的開發人員，可能會想要驗證您並未損及程式碼的類型安全。 在這種情況下，您可以在檔案上執行 PEVerify 工具來檢查 MSIL 和中繼資料。  
@@ -57,7 +57,7 @@ peverify filename [options]
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  
- 通用語言執行平台透過以類型安全的方式執行應用程式程式碼，協助強制執行安全性和隔離機制。 正常情況下，不是[可驗證型別安全](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)的程式碼無法執行，但是您可以設定安全性原則，讓受信任但無法驗證的程式碼執行。  
+ 通用語言執行平台透過以類型安全的方式執行應用程式程式碼，協助強制執行安全性和隔離機制。 正常情況下，不是[可驗證型別安全](../../standard/security/key-security-concepts.md#type-safety-and-security)的程式碼無法執行，但是您可以設定安全性原則，讓受信任但無法驗證的程式碼執行。  
   
  如果 **/md** 和 **/il** 兩個選項都未指定，則 Peverify.exe 會執行這兩種檢查。 Peverify.exe 會先執行 **/md** 檢查。 如果沒有任何錯誤，則會執行 **/il** 檢查。 如果您同時指定 **/md** 和 **/il**，則即使中繼資料有錯誤，還是會執行 **/il** 檢查。 因此，如果中繼資料沒有錯誤，**peverify** *filename* 就相當於 **peverify** *filename* **/md** **/il**。  
   
@@ -124,5 +124,5 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 
 - [工具](../../../docs/framework/tools/index.md)
 - [撰寫可驗證的型別安全程式碼](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
-- [型別安全和安全性](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
+- [型別安全和安全性](../../standard/security/key-security-concepts.md#type-safety-and-security)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

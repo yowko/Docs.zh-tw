@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 1f1c512e1995df07fc4b9e18e34a85119e270bda
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 95c36cd039436dcddd3e2e2a3e1fae98ee885677
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433774"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924671"
 ---
 # <a name="struct-c-reference"></a>struct (C# 參考)
 
@@ -30,7 +30,7 @@ public struct Book
 
 ## <a name="remarks"></a>備註
 
-結構還包含[建構函式](../../programming-guide/classes-and-structs/constructors.md)、[常數](../../programming-guide/classes-and-structs/constants.md)、[欄位](../../programming-guide/classes-and-structs/fields.md)、[方法](../../programming-guide/classes-and-structs/methods.md)、[屬性](../../programming-guide/classes-and-structs/properties.md)、[索引子](../../programming-guide/indexers/index.md)、[運算子](../../programming-guide/statements-expressions-operators/operators.md)、[事件](../../programming-guide/events/index.md)和[巢狀型別](../../programming-guide/classes-and-structs/nested-types.md)，不過如果需要數個這類成員，您應該考慮以類別來取代類型。
+結構還包含[建構函式](../../programming-guide/classes-and-structs/constructors.md)、[常數](../../programming-guide/classes-and-structs/constants.md)、[欄位](../../programming-guide/classes-and-structs/fields.md)、[方法](../../programming-guide/classes-and-structs/methods.md)、[屬性](../../programming-guide/classes-and-structs/properties.md)、[索引子](../../programming-guide/indexers/index.md)、[運算子](../operators/index.md)、[事件](../../programming-guide/events/index.md)和[巢狀型別](../../programming-guide/classes-and-structs/nested-types.md)，不過如果需要數個這類成員，您應該考慮以類別來取代類型。
 
 如需範例，請參閱[使用結構](../../programming-guide/classes-and-structs/using-structs.md)。
 

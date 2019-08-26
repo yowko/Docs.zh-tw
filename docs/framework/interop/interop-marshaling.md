@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 20766f4f7971d8aa304c7c3eead94f089f059d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469707"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946709"
 ---
 # <a name="interop-marshaling"></a>Interop 封送處理
 <a name="top"></a> Interop 封送處理會控制如何以方法引數傳遞資料，以及控制呼叫期間於 Managed 和 Unmanaged 記憶體之間的傳回值。 Interop 封送處理是由 Common Language Runtime 的封送處理服務所執行的執行階段活動。  
@@ -91,7 +91,7 @@ ms.locfileid: "65469707"
 - 將用戶端執行緒設定為 STA 或 MTA 來變更主執行緒。 例如，如果您的 C# 用戶端呼叫許多 STA COM 元件，您可以將主執行緒設定為 STA，以避免跨 Apartment 封送處理。  
   
     > [!NOTE]
-    >  將 C# 用戶端的執行緒設定為 STA 之後，對 MTA COM 元件的呼叫會需要跨 Apartment 封送處理。  
+    > 將 C# 用戶端的執行緒設定為 STA 之後，對 MTA COM 元件的呼叫會需要跨 Apartment 封送處理。  
   
  如需明確選取 Apartment 模型的指示，請參閱 [Managed 和 Unmanaged 執行緒處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65469707"
 - Managed 用戶端會從 COM 物件取得 Managed 物件的參考 (COM 物件會從遠端主機取得這個參考)。 遠端處理機制是 DCOM。  
   
     > [!NOTE]
-    >  必須註冊 Managed 伺服器的匯出類型程式庫。  
+    > 必須註冊 Managed 伺服器的匯出類型程式庫。  
   
  呼叫端和被呼叫端之間的處理序界限數目並不相關；同處理序和跨處理序呼叫會有相同的直接參考。  
   

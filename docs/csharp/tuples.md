@@ -3,12 +3,12 @@ title: Tuple 型別 - C# 手冊
 description: 了解 C# 中的未具名和具名 Tuple 類型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dc02fceb2901fb9cb7bf71869213d8b178520900
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882054"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988410"
 ---
 # <a name="c-tuple-types"></a>C# Tuple 型別
 
@@ -31,20 +31,20 @@ C# Tuple 是您使用輕量型語法所定義的型別。 優點包括更簡單�
 若要避免這些缺點，您可以建立 `class` 或 `struct` 來帶出多個元素。 不幸的是，您需要執行更多工作，並且會模糊您的設計目的。 設定 `struct` 或 `class` 表示您定義的類型同時具有資料和行為。 許多次，您都只想要將多個值儲存在單一物件中。
 
 語言功能和 `ValueTuple` 泛型結構會強制執行您無法將任何行為 (方法) 新增至這些 Tuple 類型的規則。
-所有 `ValueTuple` 類型都是「可變動結構」。 每個成員欄位都是公用欄位。 這可將它們設為非常輕量型。 不過，這表示，如果不變性十分重要，則不應該使用 Tuple。
+所有 `ValueTuple` 類型都是「可變動結構」  。 每個成員欄位都是公用欄位。 這可將它們設為非常輕量型。 不過，這表示，如果不變性十分重要，則不應該使用 Tuple。
 
 Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容器。 讓我們來探索這些差異。
 
 ## <a name="named-and-unnamed-tuples"></a>具名和未具名 Tuple
 
 `ValueTuple` 結構具有名為 `Item1`、`Item2`、`Item3` 等等的欄位，而這些欄位與現有 `Tuple` 型別中所定義的屬性類似。
-這些名稱只是您可用於「未具名 Tuple」的名稱。 當您未將任何替代欄位名稱提供給 Tuple 時，即已建立未具名 Tuple：
+這些名稱只是您可用於「未具名 Tuple」  的名稱。 當您未將任何替代欄位名稱提供給 Tuple 時，即已建立未具名 Tuple：
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
-上述範例中使用了常值常數將 Tuple 初始化，且不會有在 C# 7.1 中使用「Tuple 欄位名稱投射轉換」建立的元素名稱。
+上述範例中使用了常值常數將 Tuple 初始化，且不會有在 C# 7.1 中使用「Tuple 欄位名稱投射轉換」  建立的元素名稱。
 
-不過，當您初始化 Tuple 時，可以使用新的語言功能，讓每個欄位具有更適合的名稱。 這麼做會建立「具名 Tuple」。
+不過，當您初始化 Tuple 時，可以使用新的語言功能，讓每個欄位具有更適合的名稱。 這麼做會建立「具名 Tuple」  。
 具名元組仍會有名為 `Item1`、`Item2`、`Item3` 等等的元素。
 但對於您已命名的任一元素，也會有同義字。
 您可以指定每個元素的名稱來建立具名元組。 其中一個方式是在 Tuple 初始化期間指定名稱：
@@ -53,7 +53,7 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 這些同義字是由編譯器和語言所處理，讓您可以有效率地使用具名 Tuple。 IDE 和編輯器可以使用 Roslyn API 來讀取這些語意名稱。 您可以在相同組件的任何地方，依據這些語意名稱來參考具名 Tuple 的元素。 產生所編譯的輸出時，編譯器會將您定義的名稱取代為 `Item*` 對等項目。 編譯過的 Microsoft Intermediate Language (MSIL) 不會包括您為這些元素指定的名稱。
 
-從 C# 7.1 開始，元組的欄位名稱可從用來將元組初始化的變數提供。 即為 **[元組投影初始設定式](#tuple-projection-initializers)**。 下列程式碼會建立名為 `accumulation` 的元組，並有元素 `count` (整數) 與 `sum` (雙精度浮點數)。
+從 C# 7.1 開始，元組的欄位名稱可從用來將元組初始化的變數提供。 即為 **[元組投影初始設定式](#tuple-projection-initializers)** 。 下列程式碼會建立名為 `accumulation` 的元組，並有元素 `count` (整數) 與 `sum` (雙精度浮點數)。
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -216,7 +216,7 @@ Tuple 很有用的另一個習慣用法是當您撰寫 LINQ 查詢時。 最終�
 
 ## <a name="deconstruction"></a>解構
 
-您可以「解構」方法所傳回的 Tuple，來解除封裝 Tuple 中的所有項目。 有三種不同的方法可以解構 Tuple。  首先，您可以在括弧內明確宣告每個欄位的類型，以建立元組中每個元素的離散變數：
+您可以「解構」  方法所傳回的 Tuple，來解除封裝 Tuple 中的所有項目。 有三種不同的方法可以解構 Tuple。  首先，您可以在括弧內明確宣告每個欄位的類型，以建立元組中每個元素的離散變數：
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
@@ -245,7 +245,7 @@ public class Point
 ```
 
 > [!WARNING]
->  您不能混用現有宣告與括弧內的宣告。 例如，不允許使用下列項目：`(var x, y) = MyMethod();`。 這會產生錯誤 CS8184，因為 *x* 是在括弧內宣告，而 *y* 先前已在其他位置宣告。
+> 您不能混用現有宣告與括弧內的宣告。 例如，不允許使用下列項目：`(var x, y) = MyMethod();`。 這會產生錯誤 CS8184，因為 *x* 是在括弧內宣告，而 *y* 先前已在其他位置宣告。
 
 ### <a name="deconstructing-user-defined-types"></a>解構使用者定義型別
 

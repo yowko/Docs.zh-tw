@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878043"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917966"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 的概觀
 
@@ -75,7 +75,7 @@ Runtime 是為增強效能所設計的。 雖然 Common Language Runtime 提供�
 
 如同您對物件導向類別庫的期望，.NET Framework 型別讓您完成許多常見的程式設計工作，包括字串管理、資料收集、資料庫連接和檔案存取等。 除了通用工作，類別庫還包括能夠支援各種特定開發案例的型別。 您可以使用 .NET Framework 開發下列類型的應用程式和服務：
 
-- 主控台應用程式。 請參閱[建置主控台應用程式](../../../docs/standard/building-console-apps.md)。
+- 主控台應用程式。 請參閱[建置主控台應用程式](../../standard/building-console-apps.md)。
 
 - Windows GUI 應用程式 (Windows Forms)。 請參閱 [Windows Forms](../../../docs/framework/winforms/index.md)。
 

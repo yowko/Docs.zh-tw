@@ -11,18 +11,18 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: bf5c603dfc6668f8378ba7997df543889b733482
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2bfb33944007f84992d95ebc35c04ab9b97b3a7d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963973"
 ---
 # <a name="making-asynchronous-requests"></a>進行非同步要求
 <xref:System.Net> 類別會使用 .NET Framework 的標準非同步程式設計模型，非同步存取網際網路資源。 <xref:System.Net.WebRequest> 類別的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法會啟動和完成網際網路資源的非同步要求。  
   
 > [!NOTE]
->  在非同步回呼方法中使用同步呼叫可能會導致嚴重效能降低。 使用 **WebRequest** 和其子系所進行的內部要求，必須使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> 來讀取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 方法所傳回的資料流。  
+> 在非同步回呼方法中使用同步呼叫可能會導致嚴重效能降低。 使用 **WebRequest** 和其子系所進行的內部要求，必須使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> 來讀取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 方法所傳回的資料流。  
   
  下列範例程式碼示範如何搭配使用非同步呼叫與 **WebRequest** 類別。 此範例是一種主控台程式，可從命令列接受 URI，並要求 URI 上的資源，然後將從網際網路收到的資料列印至主控台。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67422447"
 - `ReadCallBack()` 方法會實作非同步回呼方法來讀取回應資料流。 它會將接收自網際網路資源的資料傳送至 **RequestState** 執行個體的 **ResponseData** 屬性，接著對回應資料流啟動另一個非同步讀取，直到不再傳回其他資料為止。 已讀取所有資料之後，`ReadCallBack()` 會關閉回應資料流，並呼叫 `allDone.Set()` 方法，指出整個回應存在於 **ResponseData** 中。  
   
     > [!NOTE]
-    >  請務必關閉所有網路資料流。 如果您未關閉每個要求和回應資料流，應用程式就會耗盡與該伺服器的連線，而無法處理其他要求。  
+    > 請務必關閉所有網路資料流。 如果您未關閉每個要求和回應資料流，應用程式就會耗盡與該伺服器的連線，而無法處理其他要求。  
   
 ```csharp  
 using System;  

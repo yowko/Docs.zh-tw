@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238641"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666869"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -51,7 +51,7 @@ Visual Basic / Visual Studio .NET 2002 第一版的 Visual Basic .NET
 
 **最佳化的浮點數至整數轉換**
 
-在舊版的 Visual Basic 中，將 [Double](../language-reference/data-types/double-data-type.md) 和 [Single](../language-reference/data-types/single-data-type.md) 值轉換成整數會提供相對較差的效能。 當您將下列任一方法所傳回的值傳遞至其中一個[內建的 Visual Basic 整數轉換函式](../language-reference/functions/type-conversion-functions.md)(CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng) 時，或在 [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) 設定為 `Off` 的情況下，將下列任一方法所傳回的值隱含地轉換成整數類型時，Visual Basic 15.8 可大幅增強浮點數轉換成整數的效能：
+在舊版的 Visual Basic 中，將 [Double](../language-reference/data-types/double-data-type.md) 和 [Single](../language-reference/data-types/single-data-type.md) 值轉換成整數會提供相對較差的效能。 當您將下列任一方法所傳回的值傳遞至其中一個[內建的 Visual Basic 整數轉換函式](../language-reference/functions/type-conversion-functions.md)(CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng) 時，或在 [Option Strict](../language-reference/statements/option-strict-statement.md) 設定為 `Off` 的情況下，將下列任一方法所傳回的值隱含地轉換成整數類型時，Visual Basic 15.8 可大幅增強浮點數轉換成整數的效能：
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
@@ -82,7 +82,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 
-[無後置具名引數](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+[非後置具名引數](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
 
 在 Visual Basic 15.3 和更早版本中，當方法呼叫同時包含位置和名稱引數時，位置引數必須在具名引數之前。 從 Visual Basic 15.5 開始，位置和具名引數可依任何順序顯示，但前提是最後一個位置引數之前的所有引數都位於正確位置。 當使用具名引數讓程式碼更容易閱讀時，這會特別有用。
 

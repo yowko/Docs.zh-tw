@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c98e41624abc931bd03e4ddea09ed55d0d3f39
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648489"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968527"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>風險降低：新的 64 位元 JIT 編譯器
 從 .NET Framework 4.6 開始，執行階段包含新的 64 位元 JIT 編譯器，用於 Just-In-Time 編譯。 這項變更不會影響使用 32 位元 JIT 編譯器的編譯。  
@@ -22,7 +22,7 @@ ms.locfileid: "64648489"
  在某些情況下，使用新版 64 位元 JIT 編譯器的編譯會產生執行階段例外狀況，或是產生在執行舊版 64 位元 JIT 編譯器所編譯的程式碼時未觀察到的行為。 下列是已知的差異︰  
   
 > [!IMPORTANT]
->  上述所有已知問題都已在隨 .NET Framework 4.6.2 發行的新版 64 位元編譯器中解決。 大部分問題已在隨附於 Windows Update 的 .NET Framework 4.6 和 4.6.1 服務版本中解決。 將您的 Windows 版本更新至最新版或升級至 .NET Framework 4.6.2，即可解決這些問題。  
+> 上述所有已知問題都已在隨 .NET Framework 4.6.2 發行的新版 64 位元編譯器中解決。 大部分問題已在隨附於 Windows Update 的 .NET Framework 4.6 和 4.6.1 服務版本中解決。 將您的 Windows 版本更新至最新版或升級至 .NET Framework 4.6.2，即可解決這些問題。  
   
 - 在某些情況下，已開啟最佳化的發行組建中的 Unboxing 作業可能會擲回 <xref:System.NullReferenceException>。  
   

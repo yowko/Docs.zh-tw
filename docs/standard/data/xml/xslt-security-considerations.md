@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615327"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910483"
 ---
 # <a name="xslt-security-considerations"></a>XSLT 安全性考量
 XSLT 語言具有一組豐富的功能，可讓您擁有強大的能力與彈性。 它還包含許多可由外部來源利用的功能 (若有幫助)。 若要安全使用 XSLT，您必須瞭解使用 XSLT 時會出現的各種安全性問題，以及為了減緩這些危險可使用的基本策略。  
@@ -39,7 +39,7 @@ XSLT 語言具有一組豐富的功能，可讓您擁有強大的能力與彈性
 - 執行轉換時，會使用 <xref:System.Xml.XmlResolver> 解析 `document()` 函式。  
   
     > [!NOTE]
-    >  `document()` 函式在 <xref:System.Xml.Xsl.XslCompiledTransform> 類別上預設為停用。 可透過將 <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> 屬性設為 `true`，並將 <xref:System.Xml.Xsl.XsltSettings> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法，即可啟用此功能。  
+    > `document()` 函式在 <xref:System.Xml.Xsl.XslCompiledTransform> 類別上預設為停用。 可透過將 <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> 屬性設為 `true`，並將 <xref:System.Xml.Xsl.XsltSettings> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法，即可啟用此功能。  
   
  <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 及 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法都包含多載，可接受 <xref:System.Xml.XmlResolver> 做為其中一個引數。 如果未指定 <xref:System.Xml.XmlResolver>，則會使用沒有任何認證的預設 <xref:System.Xml.XmlUrlResolver>。  
   

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：參考以強式名稱命名的組件
+title: 作法：參考以強式名稱命名的組件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 080d05a27b9e0b6ad4ff52d67ef8d9209dc1c697
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301018"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927949"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>HOW TO：參考以強式名稱命名的組件
+# <a name="how-to-reference-a-strong-named-assembly"></a>作法：參考以強式名稱命名的組件
 參考強式名稱組件中類型或資源的程序通常十分簡單。 您可以在編譯時間 (早期繫結) 或執行階段進行參考。  
   
  當您對編譯器指出您的組件明確參考另一個組件時，就會發生編譯時間參考。 當您使用編譯時間參考時，編譯器會自動取得目標強式名稱組件的公開金鑰，並將它放在所編譯組件的組件參考中。  
   
 > [!NOTE]
->  強式名稱的組件只可使用來自其他強式名稱組件的類型。 否則，強式名稱組件的安全性將會受到危害。  
+> 強式名稱的組件只可使用來自其他強式名稱組件的類型。 否則，強式名稱組件的安全性將會受到危害。  
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>建立強式名稱組件的編譯時間參考  
   
 1. 在命令提示字元中輸入下列命令：  
   
-     \<*編譯器命令*> **/reference:**\<組件名稱>  
+     \<*編譯器命令*>  **/reference:** \<組件名稱  >  
   
-     在這個命令中，「編譯器命令」是您所使用語言的編譯器命令，而「組件名稱」是所參考的強式名稱組件的名稱。 您也可以使用其他編譯器選項，例如 **/t:library** 選項來建立程式庫組件。  
+     在這個命令中，「編譯器命令」  是您所使用語言的編譯器命令，而「組件名稱」  是所參考的強式名稱組件的名稱。 您也可以使用其他編譯器選項，例如 **/t:library** 選項來建立程式庫組件。  
   
  下列範例會建立稱為 `myAssembly.dll` 的組件，而此組件從稱為 `myAssembly.cs` 的程式碼模組參考稱為 `myLibAssembly.dll` 的強式名稱組件。  
   
@@ -46,7 +46,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 1. 當您建立強式名稱組件的執行階段參考時 (例如，使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 方法)，必須使用所參考之強式名稱組件的顯示名稱。 顯示名稱的語法如下：  
   
-     \<組件名稱>**,** \<版本號碼>**,** \<文化特性>**,** \<公開金鑰權杖>  
+     \<組件名稱  > **,** \<版本號碼  > **,** \<文化特性  > **,** \<公開金鑰權杖  >  
   
      例如：  
   

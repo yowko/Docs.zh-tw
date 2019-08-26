@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b47abc2adb7b515e4d1d76da58c150703a8693d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392573"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957444"
 ---
 # <a name="composition-analysis-tool-mefx"></a>撰寫分析工具 (Mefx)
 撰寫分析工具 (Mefx) 是命令列應用程式，可分析包含 Managed Extensibility Framework (MEF) 組件的程式庫 (.dll) 和應用程式檔案 (.exe)。 Mefx 的主要目的在於提供開發人員診斷其 MEF 應用程式中複合錯誤的方式，而不必將累贅的追蹤程式碼加入應用程式本身。 它還有助於了解協力廠商所提供程式庫的組件。 本主題說明如何使用 Mefx 及提供其語法的參考。  
@@ -37,7 +37,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
 ```  
   
 > [!NOTE]
->  每個 .dll 或 .exe 都應該只載入一次。 如果多次載入檔案，此工具可能傳回不正確的資訊。  
+> 每個 .dll 或 .exe 都應該只載入一次。 如果多次載入檔案，此工具可能傳回不正確的資訊。  
   
  在檔案與目錄清單之後，您必須指定命令，以及該命令使用的任何選項。  
   
@@ -72,7 +72,7 @@ MyAddin.AddIn
   
 <a name="finding_rejected_parts"></a>   
 ## <a name="finding-rejected-parts"></a>尋找遭拒的組件  
- 一旦 Mefx 載入了可用的組件，就會使用 MEF 組合引擎組合這些組件。 無法成功組合的組件即為 *「遭拒」*(rejected) 組件。 若要列出所有遭拒的組件，請使用 `/rejected` 動作。  
+ 一旦 Mefx 載入了可用的組件，就會使用 MEF 組合引擎組合這些組件。 無法成功組合的組件即為 *「遭拒」* (rejected) 組件。 若要列出所有遭拒的組件，請使用 `/rejected` 動作。  
   
  您可以使用 `/verbose` 選項搭配 `/rejected` 動作，列印遭拒絕組件的詳細資訊。 在下列範例中， `ClassLibrary1` DLL 包含 `AddIn` 組件，該組件會匯入 `MemberPart` 和 `ChainOne` 組件。 `ChainOne` 會匯入 `ChainTwo`，但是 `ChainTwo` 不存在。 這表示， `ChainOne` 遭拒，而這種情況會造成 `AddIn` 遭拒。  
   
@@ -114,7 +114,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
  在前面的範例中使用 `/causes` 動作，可能只會列出 `ChainOne`的資訊，它的未填入匯入就是 `AddIn`遭拒的根本原因。 `/causes` 動作可以同時在一般和 `/verbose` 選項中使用。  
   
 > [!NOTE]
->  大部分情況下，Mefx 都能夠診斷階層式失敗的根本原因。 不過，若組件是以程式設計的方式加入至容器、內含階層式容器的案例或內含自訂 `ExportProvider` 實作的案例，Mefx 就無法診斷原因。 一般而言，上述案例應盡量避免，因為失敗通常不易診斷出來。  
+> 大部分情況下，Mefx 都能夠診斷階層式失敗的根本原因。 不過，若組件是以程式設計的方式加入至容器、內含階層式容器的案例或內含自訂 `ExportProvider` 實作的案例，Mefx 就無法診斷原因。 一般而言，上述案例應盡量避免，因為失敗通常不易診斷出來。  
   
 <a name="white_lists"></a>   
 ## <a name="white-lists"></a>允許清單  

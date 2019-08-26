@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340031"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946837"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
 平台叫用服務，可讓受控碼呼叫實作在動態連結程式庫 (DLL) 中的非受控函式，如 Windows API 中的函式。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
@@ -65,7 +65,7 @@ ms.locfileid: "59340031"
 3. 在記憶體中找出函式的位址，並將其引數推送至堆疊中，視需要封送處理資料。  
   
     > [!NOTE]
-    >  僅在首次呼叫函式時尋找和載入 DLL，且尋找記憶體中的函式位址。  
+    > 僅在首次呼叫函式時尋找和載入 DLL，且尋找記憶體中的函式位址。  
   
 4. 將控制項傳輸至 Unmanaged 函式。  
   

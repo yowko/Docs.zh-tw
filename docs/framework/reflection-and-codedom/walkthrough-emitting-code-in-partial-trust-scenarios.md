@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5aca9d3eae3f566e02e7bf3dae4ac971b8fae5c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742458"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956629"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任情節中發出程式碼
 反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。 此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。  
   
 > [!NOTE]
->  在 .NET Framework 3.5 之前，發出程式碼需要 <xref:System.Security.Permissions.ReflectionPermission> 及 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標。 根據預設，此權限包含在 `FullTrust` 和 `Intranet` 具名權限集合中，不在 `Internet` 權限集合中。 因此，只有在程式庫有 <xref:System.Security.SecurityCriticalAttribute> 屬性，同時執行了 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 方法，才能從部分信任使用該程式庫。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 .NET Framework 3.5 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓發出程式碼的程式庫成為安全性透明的，並移除判斷提示 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的需要，讓撰寫安全的程式庫不需要仔細的安全性檢閱。  
+> 在 .NET Framework 3.5 之前，發出程式碼需要 <xref:System.Security.Permissions.ReflectionPermission> 及 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標。 根據預設，此權限包含在 `FullTrust` 和 `Intranet` 具名權限集合中，不在 `Internet` 權限集合中。 因此，只有在程式庫有 <xref:System.Security.SecurityCriticalAttribute> 屬性，同時執行了 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 方法，才能從部分信任使用該程式庫。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 .NET Framework 3.5 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓發出程式碼的程式庫成為安全性透明的，並移除判斷提示 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的需要，讓撰寫安全的程式庫不需要仔細的安全性檢閱。  
   
  這個逐步解說將說明下列工作：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67742458"
  例如，主機可能會授與網際網路應用程式加上 RMA 的網際網路權限，讓網際網路應用程式可以發出程式碼，存取自己組件中的私用資料。 因為存取已限制在相同或較低信任的組件，所以網際網路應用程式無法存取完全信任組件的成員，例如 .NET Framework 組件。  
   
 > [!NOTE]
->  為防止提高權限，建構匿名裝載的動態方法時，會包含發出組件的堆疊資訊。 叫用方法時會檢查堆疊資訊。 因此，從完全信任程式碼叫用的匿名裝載動態方法，其信任層級仍限於發出組件的信任層級。  
+> 為防止提高權限，建構匿名裝載的動態方法時，會包含發出組件的堆疊資訊。 叫用方法時會檢查堆疊資訊。 因此，從完全信任程式碼叫用的匿名裝載動態方法，其信任層級仍限於發出組件的信任層級。  
   
 #### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>建立加上 RMA 的部份信任應用程式定義域  
   
@@ -97,7 +97,7 @@ ms.locfileid: "67742458"
      權限若未包含在內，<xref:System.Security.PermissionSet.AddPermission%2A> 方法會將權限新增至授權集。 如果授權集已包含權限，指定的旗標就會新增至現有的權限。  
   
     > [!NOTE]
-    >  RMA 是匿名裝載動態方法的功能。 當一般的動態方法略過 JIT 可見度檢查時，發出的程式碼需要完全信任。  
+    > RMA 是匿名裝載動態方法的功能。 當一般的動態方法略過 JIT 可見度檢查時，發出的程式碼需要完全信任。  
   
 2. 建立應用程式定義域，指定應用程式定義域安裝資訊及授權集。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "67742458"
      <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法會在目標應用程式定義域中建立物件，傳回可以用來呼叫物件屬性和方法的 proxy。  
   
     > [!NOTE]
-    >  如果您在 Visual Studio 中使用此程式碼，則必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
+    > 如果您在 Visual Studio 中使用此程式碼，則必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
   
 6. 新增程式碼以呼叫 `SimpleEmitDemo` 方法。 呼叫會跨應用程式定義域界限封送處理，而程式碼則在沙箱應用程式定義域中執行。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "67742458"
  匿名裝載動態方法與系統提供的透明組件相關聯。 因此，它們所包含的程式碼是透明的。 另一方面，一般的動態方法必須與現有的模組相關聯 (不論是直接指定或推斷的相關聯類型)），並接受該模組的安全性層級。  
   
 > [!NOTE]
->  動態方法與提供匿名裝載之組件建立關聯的唯一方法，是使用下列程序中描述的建構函式。 您不能在匿名裝載的組件中明確指定模組。  
+> 動態方法與提供匿名裝載之組件建立關聯的唯一方法，是使用下列程序中描述的建構函式。 您不能在匿名裝載的組件中明確指定模組。  
   
  一般的動態方法可以存取相關聯模組的內部成員，或相關聯類型的私用成員。 因為匿名裝載的動態方法和其他程式碼是分開的，所以它們不能存取私用資料。 但是，它們在有限的情況下可以略過 JIT 可見度檢查，存取私用資料。 這項功能僅限於信任層級等於或低於發出程式碼組件信任層級的組件。  
   
@@ -174,12 +174,12 @@ ms.locfileid: "67742458"
      只有當主應用程式授權有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 時，匿名裝載動態方法才可以使用此有限功能略過 JIT 可見度檢查。 叫用方法時才要求此權限。  
   
     > [!NOTE]
-    >  建構動態方法時會包含發出組件的呼叫堆疊資訊。 因此，會要求發出組件的權限，而不是叫用方法的組件權限。 這可防止以提高的權限執行發出的程式碼。  
+    > 建構動態方法時會包含發出組件的呼叫堆疊資訊。 因此，會要求發出組件的權限，而不是叫用方法的組件權限。 這可防止以提高的權限執行發出的程式碼。  
   
      本逐步解說結尾的[完整程式碼範例](#Example)會示範有限成員存取的用法和限制。 其 `Worker` 類別有一方法，可以建立匿名裝載動態方法，有受限或不受限制略過可視性檢查的功能，而此範例會示範在不同信任層級的應用程式定義域中執行此方法的結果。  
   
     > [!NOTE]
-    >  有限略過可視性檢查是匿名裝載動態方法的功能。 當一般的動態方法略過 JIT 可見度檢查時，它們必須獲授與完全信任。  
+    > 有限略過可視性檢查是匿名裝載動態方法的功能。 當一般的動態方法略過 JIT 可見度檢查時，它們必須獲授與完全信任。  
   
 <a name="Example"></a>   
 ## <a name="example"></a>範例  

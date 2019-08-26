@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0b109ec82d139e3b3eb321c90d5f41dd1eae216f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593556"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927925"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>作法：使用強式名稱簽署組件
 以下是幾種以強式名稱簽署組件的方式：  
@@ -35,22 +35,22 @@ ms.locfileid: "64593556"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>若要使用 Visual Studio 建立組件並以強式名稱簽署組件  
   
-1. 在 **方案總管**中，開啟專案的捷徑功能表，然後選擇 [屬性] 。  
+1. 在 **方案總管**中，開啟專案的捷徑功能表，然後選擇 [屬性]  。  
   
 2. 選擇 [ **簽署** ] 索引標籤。  
   
-3. 選取 [簽署組件] 方塊。  
+3. 選取 [簽署組件]  方塊。  
   
-4. 在 [選擇強式名稱金鑰檔] 方塊中，選擇 [\<瀏覽...>]，然後巡覽至金鑰檔。 若要建立新的金鑰檔，請選擇 [\<新增...>]，並且在 [建立強式名稱金鑰] 對話方塊中輸入其名稱。  
+4. 在 [選擇強式名稱金鑰檔]  方塊中，選擇 [\<瀏覽...>]  ，然後巡覽至金鑰檔。 若要建立新的金鑰檔，請選擇 [\<新增...>]  ，並且在 [建立強式名稱金鑰]  對話方塊中輸入其名稱。  
   
 > [!NOTE]
->  若要[延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)，請選擇公開金鑰檔案。  
+> 若要[延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)，請選擇公開金鑰檔案。  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>若要使用組件連結器建立組件並以強式名稱簽署組件  
   
 - 在 [Visual Studio 開發人員命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)中鍵入下列命令：  
   
-     **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
+     **al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
   
      其中：  
   
@@ -78,7 +78,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 2. 以一般方式編譯原始程式碼檔。  
   
 > [!NOTE]
->  C# 和 Visual Basic 編譯器在原始程式碼中遇到 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 屬性時，會發出編譯器警告 (分別為 CS1699 和 BC41008)。 您可以忽略這些警告。  
+> C# 和 Visual Basic 編譯器在原始程式碼中遇到 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 屬性時，會發出編譯器警告 (分別為 CS1699 和 BC41008)。 您可以忽略這些警告。  
   
  下列範例將搭配稱為 <xref:System.Reflection.AssemblyKeyFileAttribute> 的金鑰檔使用 `keyfile.snk`屬性，這個金鑰檔位於編譯組件所在的目錄中。  
   

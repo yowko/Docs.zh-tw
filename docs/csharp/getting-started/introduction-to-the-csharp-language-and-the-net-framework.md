@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504028"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608308"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 
@@ -44,9 +44,9 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  下列是一些其他 C# 資源：  
   
-- 如需此語言的一般簡介，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification/index.md)的第 1 章。  
+- 如需此語言的一般簡介，請參閱 [C# 語言規格](../language-reference/language-specification/index.md)的第 1 章。  
   
-- 如需有關 C# 語言特定層面的詳細資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。  
+- 如需有關 C# 語言特定層面的詳細資訊，請參閱 [C# 參考](../language-reference/index.md)。  
   
 - 如需 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 的詳細資訊，請參閱 [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md)。  
 
@@ -68,5 +68,5 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 ## <a name="see-also"></a>另請參閱
 
-- [C#](../../csharp/index.md)
+- [C#](../index.md)
 - [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

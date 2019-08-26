@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584378"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924502"
 ---
 # <a name="finalizers-c-programming-guide"></a>完成項 (C# 程式設計手冊)
 完成項 (也稱為**解構函式**) 可在記憶體回收行程收集類別執行個體時，用來執行任何必要的最後清除。  
@@ -56,7 +56,7 @@ protected override void Finalize()
  這表示，會依最高衍生性到最低衍生性的順序，對繼承鏈結中的所有執行個體遞迴呼叫 `Finalize` 方法。  
   
 > [!NOTE]
->  不應該使用空的完成項。 類別包含完成項時，會在 `Finalize` 佇列中建立一個項目。 呼叫完成項時，會叫用記憶體回收行程來處理佇列。 空的完成項只會導致不必要的效能損失。  
+> 不應該使用空的完成項。 類別包含完成項時，會在 `Finalize` 佇列中建立一個項目。 呼叫完成項時，會叫用記憶體回收行程來處理佇列。 空的完成項只會導致不必要的效能損失。  
   
  因為這是由記憶體回收行程所決定，所以程式設計人員無法控制完成項的呼叫時機。 記憶體回收行程會檢查應用程式不再使用的物件。 如果它認為物件適合進行完成，則會呼叫完成項 (如果有的話)，並回收用來儲存物件的記憶體。 
  
@@ -76,7 +76,7 @@ protected override void Finalize()
   
 - [實作 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
   
-- [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using 陳述式](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>範例  
  下列範例會建立三個產生繼承鏈結的類別。 `First` 類別是基底類別、`Second` 衍生自 `First`，而 `Third` 衍生自 `Second`。 所有這三個都有完成項。 在 `Main` 中，會建立最高衍生性類別的執行個體。 程式執行時，請注意，會依最高衍生性到最低衍生性的順序，自動呼叫這三個類別的完成項。  
@@ -90,6 +90,6 @@ protected override void Finalize()
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IDisposable>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [C# 程式設計指南](../index.md)
+- [建構函式](./constructors.md)
 - [記憶體回收](../../../standard/garbage-collection/index.md)

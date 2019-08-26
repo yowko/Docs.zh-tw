@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ef2ea6bf9d10baabea39133b2e0a9a72a6ce4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da32d514b19424487cebc1d113388cfa9a2dbdf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674842"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913234"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的受控與非受控執行緒處理
 
@@ -27,7 +27,7 @@ ms.locfileid: "54674842"
  在 Managed 執行緒中， <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> 是穩定的 Managed 執行緒識別。 在執行緒的存留期間，此值不會與其他任何執行緒的值相衝突，不論您是從哪一個應用程式定義域取得此值。  
   
 > [!NOTE]
->  作業系統的 **ThreadId** 與 Managed 執行緒之間沒有固定的關係，因為未受管理的主機可控制 Managed 執行緒與 Unmanaged 執行緒之間的關係。 具體來說，精密的主機可使用 Fiber 應用程式開發介面，對同一個作業系統執行緒排程許多 Managed 執行緒，或是在不同的作業系統執行緒之間移動 Managed 執行緒。  
+> 作業系統的 **ThreadId** 與 Managed 執行緒之間沒有固定的關係，因為未受管理的主機可控制 Managed 執行緒與 Unmanaged 執行緒之間的關係。 具體來說，精密的主機可使用 Fiber 應用程式開發介面，對同一個作業系統執行緒排程許多 Managed 執行緒，或是在不同的作業系統執行緒之間移動 Managed 執行緒。  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>從 Win32 執行緒處理對應至受控執行緒處理
 
@@ -40,7 +40,7 @@ ms.locfileid: "54674842"
 |**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
 |**ResumeThread**|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
 |**Sleep**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
-|執行緒控制代碼上的**WaitForSingleObject** |<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
+|執行緒控制代碼上的**WaitForSingleObject**|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
 |**ExitThread**|沒有對等項目|  
 |**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
 |**SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
@@ -57,7 +57,7 @@ ms.locfileid: "54674842"
  如果啟動執行緒之前未設定 Apartment 狀態，則會將執行緒初始化為多執行緒 Apartment (MTA)。 受到 <xref:System.Threading.ThreadPool> 控制的完成項執行緒及所有執行緒都是 MTA。  
   
 > [!IMPORTANT]
->  對於應用程式啟動程式碼而言，控制 Apartment 狀態的唯一方式是將 <xref:System.MTAThreadAttribute> 或 <xref:System.STAThreadAttribute> 套用至進入點程序。 在 .NET Framework 1.0 和 1.1 中， <xref:System.Threading.Thread.ApartmentState%2A> 屬性可設定為程式碼的第一行。 在 .NET Framework 2.0 中則不允許這麼做。  
+> 對於應用程式啟動程式碼而言，控制 Apartment 狀態的唯一方式是將 <xref:System.MTAThreadAttribute> 或 <xref:System.STAThreadAttribute> 套用至進入點程序。 在 .NET Framework 1.0 和 1.1 中， <xref:System.Threading.Thread.ApartmentState%2A> 屬性可設定為程式碼的第一行。 在 .NET Framework 2.0 中則不允許這麼做。  
   
  公開至 COM 之 Managed 物件的行為會像是已彙總無限制執行緒封送處理器。 換句話說，您可以使用無限制執行緒方式從任何 COM Apartment 呼叫 Managed 物件。 只有衍生自 <xref:System.EnterpriseServices.ServicedComponent> 或 <xref:System.Runtime.InteropServices.StandardOleMarshalObject> 的 Managed 物件才不會表現出無限制執行緒行為。  
   

@@ -2,20 +2,20 @@
 title: 功能性程式設計與命令式程式設計的比較 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596711"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594322"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>功能性程式設計與命令式程式設計的比較 (C#)
 本主題比較與對照功能性程式設計與更傳統的命令性 (程序性) 程式設計。  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>功能性程式設計與命令式程式設計  
- 明確建立「功能性程式設計」開發架構時，可支援解決問題的純功能性方法。 功能性程式設計是一種「宣告式程式設計」。 相較之下，多數主流語言 (包括物件導向程式設計 (OOP) 語言，例如 C#、Visual Basic、C++ 與 Java) 的設計主要支援「命令性」(程序性) 程式設計。  
+ 明確建立「功能性程式設計」  開發架構時，可支援解決問題的純功能性方法。 功能性程式設計是一種「宣告式程式設計」  。 相較之下，多數主流語言 (包括物件導向程式設計 (OOP) 語言，例如 C#、Visual Basic、C++ 與 Java) 的設計主要支援「命令性」  (程序性) 程式設計。  
   
- 利用命令性方法，開發人員可以撰寫詳細描寫電腦必須採取之步驟以達成目標的程式碼。 這有時候稱為「演算法」程式設計。 相較之下，功能性方法包含將問題撰寫成要執行的一組函式。 您可以仔細定義每個函式的輸入，以及每個函式會傳回的東西。 下表描述這兩種方法之間的幾項一般差異。  
+ 利用命令性方法，開發人員可以撰寫詳細描寫電腦必須採取之步驟以達成目標的程式碼。 這有時候稱為「演算法」  程式設計。 相較之下，功能性方法包含將問題撰寫成要執行的一組函式。 您可以仔細定義每個函式的輸入，以及每個函式會傳回的東西。 下表描述這兩種方法之間的幾項一般差異。  
   
 |特性|命令性方法|功能性方法|  
 |--------------------|-------------------------|-------------------------|  
@@ -52,6 +52,6 @@ ms.locfileid: "64596711"
   
 ## <a name="see-also"></a>另請參閱
 
-- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [純功能性轉換簡介 (C#)](./introduction-to-pure-functional-transformations.md)
 - [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)
-- [重構為純虛擬函式 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [重構為純虛擬函式 (C#)](./refactoring-into-pure-functions.md)

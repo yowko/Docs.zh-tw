@@ -25,18 +25,18 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77dff7af6a5d869c6635d5fe0caaf70bc31c3ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592355"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949398"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>建立桌面應用程式的附屬組件
 資源檔在當地語系化的應用程式中扮演重要角色。 它們可讓應用程式以使用者自己的語言和文化特性顯示字串、影像和其他資料，以及在使用者自己的語言或文化特性的資源無法使用時提供替代資料。 .NET Framework 會使用中樞和支點模型來尋找並擷取當地語系化的資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；當地語系化的資源無法使用時會使用它。 您使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性來指定應用程式之預設文化特性的文化特性。 每個支點都會連線至附屬組件，其中包含單一當地語系化文化特性但未包含任何程式碼的資源。 因為附屬組件不是主要組件的一部分，所以您可以輕鬆地更新或取代對應至特定文化特性的資源，而不需要取代應用程式的主要組件。  
   
 > [!NOTE]
->  應用程式之預設文化特性的資源也可以儲存在附屬組件中。 若要這樣做，請將 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType> 的值指派給 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性。  
+> 應用程式之預設文化特性的資源也可以儲存在附屬組件中。 若要這樣做，請將 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType> 的值指派給 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性。  
   
 ## <a name="satellite-assembly-name-and-location"></a>附屬組件名稱和位置  
  中樞和支點模型需要您將資源放入特定位置，以輕鬆地找到和使用它們。 如果您未如預期編譯和命名資源，或未將它們放在正確位置，則 Common Language Runtime 會找不到它們，並改為使用預設文化特性的資源。 以 <xref:System.Resources.ResourceManager> 物件代表的 .NET Framework Resource Manager 是用來自動存取當地語系化資源。 Resource Manager 需要下列各項：  
@@ -46,7 +46,7 @@ ms.locfileid: "64592355"
 - 在儲存該文化特性資源之每個當地語系化文化特性的應用程式目錄中，都必須有不同的子目錄。 子目錄名稱必須與文化特性名稱相同。 或者，您可以在全域組件快取中儲存附屬組件。 在此情況下，組件強式名稱的文化特性資訊元件必須指出其文化特性。 (請參閱本主題稍後的[在全域組件快取中安裝附屬組件](#SN)一節)。  
   
     > [!NOTE]
-    >  如果您的應用程式包括子文化特性的資源，請將每個子文化特性放在應用程式目錄下的不同子目錄中。 請不要將子文化特性放在其主要文化特性目錄的子目錄中。  
+    > 如果您的應用程式包括子文化特性的資源，請將每個子文化特性放在應用程式目錄下的不同子目錄中。 請不要將子文化特性放在其主要文化特性目錄的子目錄中。  
   
 - 附屬組件的名稱必須與應用程式相同，而且必須使用副檔名 ".resources.dll"。 例如，如果應用程式命名為 Example.exe，則每個附屬組件的名稱應該是 Example.resources.dll。 請注意，附屬組件名稱不會指出其資源檔的文化特性。 不過，附屬組件會出現在確實指定文化特性的目錄中。  
   
@@ -80,7 +80,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 |**-target:** lib|指定將附屬組件編譯成程式庫 (.dll) 檔案。 因為附屬組件未包含可執行程式碼，而且不是應用程式的主要組件，所以您必須將附屬組件儲存為 DLL。|  
 |**-embed:** strings.de.resources|指定要在 Al.exe 編譯組件時內嵌的資源檔名稱。 您可以在附屬組件中內嵌多個 .resources 檔案；但是，如果您遵循中樞和支點模型，則必須為每個文化特性編譯一個附屬組件。 不過，您可以為字串和物件建立個別的 .resources 檔案。|  
 |**-culture:** de|指定要編譯之資源的文化特性。 Common Language Runtime 在搜尋所指定文化特性的資源時會使用這項資訊。 如果您省略這個選項，Al.exe 還是會編譯資源，但執行階段在使用者要求資源時會找不到。|  
-|**-out:** Example.resources.dll|指定輸出檔案的名稱。 名稱必須遵循命名標準 <基底名稱>.resources.<副檔名>，其中 <基底名稱> 為主要組件的名稱，<副檔名> 則為有效的副檔名 (例如 .dll)。 請注意，執行階段無法根據輸出檔名稱來判斷附屬組件的文化特性；您必須使用 **/culture** 選項來指定它。|  
+|**-out:** Example.resources.dll|指定輸出檔案的名稱。 名稱必須遵循命名標準 <基底名稱>  .resources.<副檔名>  ，其中 <基底名稱>  為主要組件的名稱，<副檔名>  則為有效的副檔名 (例如 .dll)。 請注意，執行階段無法根據輸出檔名稱來判斷附屬組件的文化特性；您必須使用 **/culture** 選項來指定它。|  
 |**-template:** Example.dll|指定附屬組件要從中繼承所有組件中繼資料的組件，但不包括文化特性欄位。 只有在您指定的組件具有[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)時，此選項才會影響附屬組件。|  
   
  如需 Al.exe 的完整可用選項清單，請參閱[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)。  
@@ -209,7 +209,7 @@ gacutil -i:StringLibrary.resources.dll
     sn –k ResKey.snk  
     ```  
   
-     如果您使用 Visual Studio，請使用專案 [屬性] 對話方塊的 [簽署] 索引標籤來產生金鑰檔。  
+     如果您使用 Visual Studio，請使用專案 [屬性]  對話方塊的 [簽署]  索引標籤來產生金鑰檔。  
   
 2. 使用下列[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令來建立名為 PublicKey.snk 的公用金鑰檔案：  
   
@@ -238,7 +238,7 @@ gacutil -i:StringLibrary.resources.dll
     resgen filename  
     ```  
   
-     其中 <檔案名稱> 是 .resx 或文字檔的選擇性路徑、檔案名稱和副檔名。  
+     其中 <檔案名稱>  是 .resx 或文字檔的選擇性路徑、檔案名稱和副檔名。  
   
 7. 將 StringLibrary.vb 或 StringLibrary.cs 的下列原始程式碼以及預設文化特性的資源編譯為名為 StringLibrary.dll 的延遲簽署程式庫組件：  
   
@@ -288,7 +288,7 @@ gacutil -i:StringLibrary.resources.dll
     gacutil -i filename  
     ```  
   
-     其中 <檔案名稱> 是要註冊之檔案的名稱。  
+     其中 <檔案名稱>  是要註冊之檔案的名稱。  
   
 13. 如果您使用 Visual Studio，請建立名為 `Example` 的新**主控台應用程式**專案，並在其中新增 StringLibrary.dll 參考和下列原始程式碼，然後進行編譯。  
   

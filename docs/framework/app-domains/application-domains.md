@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607913"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927987"
 ---
 # <a name="application-domains"></a>應用程式定義域
 
@@ -46,9 +46,9 @@ ms.locfileid: "64607913"
 - 可以停止個別應用程式而不需停止整個處理序。 使用應用程式定義域可以讓您卸載在單一應用程式中執行的程式碼。  
   
     > [!NOTE]
-    >  您不能卸載個別組件或型別。 只有完整的定義域可以卸載。  
+    > 您不能卸載個別組件或型別。 只有完整的定義域可以卸載。  
   
-- 在某一應用程式中執行的程式碼不能直接從其他應用程式存取程式碼或資源。 Common Language Runtime 是藉由防止不同應用程式定義域中物件之間的呼叫來強制執行這種隔離。 在不同定義域之間傳遞的物件必須用複製方式傳遞或由 Proxy 存取。 如果物件是複製的，那麼對該物件的呼叫就是區域呼叫。 也就是說，呼叫端和被參考的物件是在同一個應用程式定義域中。 如果物件是透過 Proxy 存取，那麼對物件的呼叫便是遠端呼叫。 在這種情況下，呼叫端和被參考的物件是在不同的應用程式定義域中。 跨定義域呼叫是使用與兩個處理序或兩部電腦之間呼叫相同的遠端呼叫基礎結構。 因此，所參考之物件的中繼資料 (Metadata) 必須在這兩個應用程式定義域中都能使用，才能讓該方法呼叫被 JIT 適當地編譯。 如果呼叫定義域無權存取所呼叫物件的中繼資料，則編譯可能會失敗，並擲回 <xref:System.IO.FileNotFoundException> 類型的例外狀況。 如需詳細資訊，請參閱 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 決定如何跨定義域存取物件的機制是由該物件決定。 如需詳細資訊，請參閱<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
+- 在某一應用程式中執行的程式碼不能直接從其他應用程式存取程式碼或資源。 Common Language Runtime 是藉由防止不同應用程式定義域中物件之間的呼叫來強制執行這種隔離。 在不同定義域之間傳遞的物件必須用複製方式傳遞或由 Proxy 存取。 如果物件是複製的，那麼對該物件的呼叫就是區域呼叫。 也就是說，呼叫端和被參考的物件是在同一個應用程式定義域中。 如果物件是透過 Proxy 存取，那麼對物件的呼叫便是遠端呼叫。 在這種情況下，呼叫端和被參考的物件是在不同的應用程式定義域中。 跨定義域呼叫是使用與兩個處理序或兩部電腦之間呼叫相同的遠端呼叫基礎結構。 因此，所參考之物件的中繼資料 (Metadata) 必須在這兩個應用程式定義域中都能使用，才能讓該方法呼叫被 JIT 適當地編譯。 如果呼叫定義域無權存取所呼叫物件的中繼資料，則編譯可能會失敗，並擲回 <xref:System.IO.FileNotFoundException> 類型的例外狀況。 如需詳細資訊，請參閱 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 決定如何跨定義域存取物件的機制是由該物件決定。 如需詳細資訊，請參閱 <xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
   
 - 程式碼的行為範圍是由執行該程式碼的應用程式決定。 換言之，應用程式定義域會提供應用程式版本原則、它所取之任何遠端組件的位置，以及有關在哪裡尋找載入定義域中之組件等組態設定。  
   
@@ -118,11 +118,11 @@ ms.locfileid: "64607913"
 |<xref:System.AppDomain.Unload%2A>|執行定義域的非失誤性的關閉。 一直要到在定義域中執行的所有執行緒都已停止或者已經離開定義域，應用程式定義域才會被卸載。|  
   
 > [!NOTE]
->  Common Language Runtime 並不支援全域方法的序列化 (Serialization)，因此不能使用委派 (Delegate) 在其他應用程式定義域中執行全域方法。  
+> Common Language Runtime 並不支援全域方法的序列化 (Serialization)，因此不能使用委派 (Delegate) 在其他應用程式定義域中執行全域方法。  
   
  Common Language Runtime 裝載介面規格中描述的 Unmanaged 介面也可提供應用程式定義域的存取。 Runtime 主應用程式可以從 Unmanaged 程式碼使用這些介面來建立並且取得處理序內應用程式定義域的存取。  
   
-## <a name="the-complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 環境變數
+## <a name="the-complus_loaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization 環境變數
 
  環境變數，用於設定可執行應用程式的預設載入器最佳化原則。  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13f1b2c3e3e651cb6c25b966d778cb436967509e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6de6091b8970fde4a958148acf32dcefe1a6726
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629413"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946563"
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫者是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -24,7 +24,7 @@ Interop 封送處理會依據規則作業，這些規則指定與方法參數關
  本節指出 Interop 封送處理服務的預設行為特性， 提供有關封送處理陣列、Boolean 類型、char 類型、委派、類別、物件、字串和結構的詳細資訊。  
   
 > [!NOTE]
->  不支援封送處理泛型類型。 如需詳細資訊，請參閱[使用泛型型別互通](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))。  
+> 不支援封送處理泛型類型。 如需詳細資訊，請參閱[使用泛型型別互通](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))。  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>使用 Interop 封送處理器進行記憶體管理  
  Interop 封送處理器一律會嘗試釋放 Unmanaged 程式碼所配置的記憶體。 這個行為使用 COM 記憶體管理規則進行編譯，但與管理原生 C++ 的規則不同。  
@@ -117,7 +117,7 @@ interface DelegateTest : IDispatch {
 在此範例中，當兩個委派封送處理成 <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType> 時，結果就是 `int` 和 `int` 的指標。 因為正在封送處理委派型別，所以這裡的 `int` 代表 void (`void*`) 的指標，這是記憶體中的委派位址。 換句話說，此結果是 32 位元 Windows 系統所特有，因為這裡的 `int` 代表函式指標的大小。
 
 > [!NOTE]
->  Unmanaged 程式碼所持有之 Managed 委派的函式指標參考，無法防止 Common Language Runtime 在 Managed 物件上執行記憶體回收。  
+> Unmanaged 程式碼所持有之 Managed 委派的函式指標參考，無法防止 Common Language Runtime 在 Managed 物件上執行記憶體回收。  
   
  例如，下列程式碼不正確，因為傳遞給 `SetChangeHandler` 方法的 `cb` 物件參考無法使 `cb` 在過了 `Test` 方法的存留期後仍保持運作。 一旦 `cb` 物件的記憶體被回收，傳遞給 `SetChangeHandler` 的函式指標便不再有效。  
   
@@ -246,12 +246,12 @@ internal static class NativeMethods
  `Rect` 實值類型必須以傳址方式傳遞，因為 Unmanaged 應用程式開發介面必須將 `RECT` 的指標傳遞至函式。 `Point` 實值類型必須以傳值方式傳遞，因為 Unmanaged 應用程式開發介面必須在堆疊上傳遞 `POINT`。 這種微妙的差異是非常重要的。 參考會當做指標傳遞至 Unmanaged 程式碼， 而值會在堆疊上傳遞至 Unmanaged 程式碼。  
   
 > [!NOTE]
->  當格式化類型封送處理為結構時，只能存取類型內的欄位。 如果類型具有方法、屬性或事件，您無法從 Unmanaged 程式碼存取這些項目。  
+> 當格式化類型封送處理為結構時，只能存取類型內的欄位。 如果類型具有方法、屬性或事件，您無法從 Unmanaged 程式碼存取這些項目。  
   
  只要類別有固定成員配置，也可以當做 C 樣式結構封送處理至 Unmanaged 程式碼。 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性也會提供類別的成員配置資訊。 具有固定配置的實值類型和具有固定配置的類別之間的主要差異在於，將其封送處理至 Unmanaged 程式碼的方式不同。 實值類型是以傳值方式 (在堆疊上) 傳遞，因此呼叫端不會看到被呼叫端對類型的成員所做的任何變更。 參考類型是以傳址方式 (在堆疊上傳遞類型的參考) 傳遞，因此呼叫端會看到被呼叫端對類型的 Blittable 類型成員所做的所有變更。  
   
 > [!NOTE]
->  如果參考類型具有非 Blittable 類型的成員，則需要轉換兩次：第一次是在將引數傳遞至 Unmanaged 端時，第二次是從呼叫傳回時。 由於這會增加額外負荷，因此如果呼叫端想要看到被呼叫端所做的變更，就必須將 In/Out 參數明確套用至引數。  
+> 如果參考類型具有非 Blittable 類型的成員，則需要轉換兩次：第一次是在將引數傳遞至 Unmanaged 端時，第二次是從呼叫傳回時。 由於這會增加額外負荷，因此如果呼叫端想要看到被呼叫端所做的變更，就必須將 In/Out 參數明確套用至引數。  
   
  在下列範例中，`SystemTime` 類別具有循序成員配置，可以傳遞至 Windows API **GetSystemTime** 函式。  
   
@@ -351,7 +351,7 @@ interface _Graphics {
  當透過 COM 介面進行封送處理時，會使用與封送處理平台叫用呼叫的值和參考時相同的規則。 例如，將 `Point` 實值類型的執行個體從 .NET Framework 傳遞至 COM 時，會以傳值方式傳遞 `Point`。 如果以傳址方式傳遞 `Point` 實值類型，則會在堆疊上傳遞 `Point` 的指標。 Interop 封送處理器不支援任一方向中更高層級的間接取值 (**Point** \*\*)。  
   
 > [!NOTE]
->  由於匯出的型別程式庫無法表示明確的配置，因此不可在 COM Interop 中使用將 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值設定為 [明確]  的結構。  
+> 由於匯出的型別程式庫無法表示明確的配置，因此不可在 COM Interop 中使用將 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值設定為 [明確]  的結構。  
   
 ### <a name="system-value-types"></a>系統實值類型  
  <xref:System> 命名空間具有數個實值類型，代表執行階段基本類型的 Boxed 格式。 例如，實值型別 <xref:System.Int32?displayProperty=nameWithType> 結構代表 **ELEMENT_TYPE_I4** 的 Boxed 格式。 如同其他格式化類型，封送處理這些類型的方式與這些類型 Box 處理基本類型的方式相同，而不是將其封送處理為結構。 因此會將 **System.Int32** 封送處理為 **ELEMENT_TYPE_I4**，而不是封送處理為包含 **long** 類型之單一成員的結構。 下表包含 **System** 命名空間中的實值型別清單，這些類型是基本類型的 Boxed 表示。  

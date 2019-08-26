@@ -2,12 +2,12 @@
 title: LINQ to XML 中的延後執行和延遲評估 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 1f68a6c7de943d4a38ad0e5777298368e1c4e554
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487559"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594561"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML 中的延後執行和延遲評估 (C#)
 若要使用延後執行，通常會實作查詢和座標軸運算。 本主題說明延後執行的條件與優點以及一些實作考量。  
@@ -17,7 +17,7 @@ ms.locfileid: "66487559"
   
  LINQ 技術可讓延後執行大量用於 <xref:System.Linq?displayProperty=nameWithType> 核心類別的成員以及各種 LINQ 命名空間中的擴充方法，例如，<xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>。  
   
- 在 Iterator 區塊中使用時，支援在 C# 語言中，透過 [yield](../../../../csharp/language-reference/keywords/yield.md) 關鍵字 (以 `yield-return` 陳述式的形式) 直接支援延後執行。 此類 Iterator 必須傳回型別 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601> (或衍生型別) 的集合。  
+ 在 Iterator 區塊中使用時，支援在 C# 語言中，透過 [yield](../../../language-reference/keywords/yield.md) 關鍵字 (以 `yield-return` 陳述式的形式) 直接支援延後執行。 此類 Iterator 必須傳回型別 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601> (或衍生型別) 的集合。  
   
 ## <a name="eager-vs-lazy-evaluation"></a>急切評估與延遲評估之比較  
  當您撰寫實作延後執行的方法時，您也必須決定要使用延遲評估或急切評估來實作方法。  
@@ -31,11 +31,11 @@ ms.locfileid: "66487559"
 ## <a name="next-steps"></a>後續步驟  
  此教學課程中的下一個主題說明延後執行：  
   
-- [延後執行範例 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [延後執行範例 (C#)](./deferred-execution-example.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
-- [概念和術語 (函數式轉換) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [彙總作業 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)
-- [yield](../../../../csharp/language-reference/keywords/yield.md)
+- [教學課程：將查詢鏈結在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [概念和術語 (函數式轉換) (C#)](./concepts-and-terminology-functional-transformation.md)
+- [彙總作業 (C#)](./aggregation-operations.md)
+- [yield](../../../language-reference/keywords/yield.md)

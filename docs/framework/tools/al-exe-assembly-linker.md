@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 9674e4d3f465cd3bad55a32d0a13136e6cff974d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567198"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946371"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
 組件連結器 (Assembly Linker) 會從一個或多個模組或資源檔中產生一個包含組件資訊清單的檔案。 模組是不包含組件資訊清單的中繼語言 (IL) 檔案。
 
 > [!NOTE]
-> 從 Visual Studio 2008 開始，C# 和 Visual Basic 編譯器都會自動將 Win32 資訊清單嵌入組件中。 如需詳細資訊，請參閱 [/win32manifest (C# 編譯器選項)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
+> 從 Visual Studio 2008 開始，C# 和 Visual Basic 編譯器都會自動將 Win32 資訊清單嵌入組件中。 如需詳細資訊，請參閱 [/win32manifest (C# 編譯器選項)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
 
 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
@@ -41,7 +41,7 @@ al sources options
 | ------ | ----------- |
 |`file`[,`target`]|將 `file` (模組) 的內容複製到 `target` 所指定的檔案名稱中。 複製完成後，*Al.exe* 會將 `target` 編譯成組件。|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|將 `file` 所指定的資源嵌入包含組件資訊清單的映像中，*Al.exe* 會將 `file` 的內容複製到可攜式執行檔 (PE) 映像中。<br /><br /> `name` 參數是資源的內部識別項。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由[資源檔產生器 (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|將資源檔連結至組件。 `file` 所指定的資源會變成組件的一部分，但是不會複製檔案。 `file` 參數可以是任何檔案格式。 例如，您可以指定原生 DLL 做為 `file` 參數。 這樣就會產生組件的原生 DLL 部分，以便安裝到全域組件快取中，並從組件的 Managed 程式碼存取。 您也可以利用 **/linkresource** 編譯器選項，進行上述作業。 如需詳細資訊，請參閱 [/linkresource (C# 編譯器選項)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md)。<br /><br /> `name` 參數是資源的內部識別項。 `target` 參數會指定 *Al.exe* 要在其中複製 `file` 的路徑和檔案名稱 *。* 複製完成後，*Al.exe* 會將 `target` 編譯成組件。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由資源檔產生器 (*Resgen.exe*) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 類別中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|將資源檔連結至組件。 `file` 所指定的資源會變成組件的一部分，但是不會複製檔案。 `file` 參數可以是任何檔案格式。 例如，您可以指定原生 DLL 做為 `file` 參數。 這樣就會產生組件的原生 DLL 部分，以便安裝到全域組件快取中，並從組件的 Managed 程式碼存取。 您也可以利用 **/linkresource** 編譯器選項，進行上述作業。 如需詳細資訊，請參閱 [/linkresource (C# 編譯器選項)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)。<br /><br /> `name` 參數是資源的內部識別項。 `target` 參數會指定 *Al.exe* 要在其中複製 `file` 的路徑和檔案名稱 *。* 複製完成後，*Al.exe* 會將 `target` 編譯成組件。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由資源檔產生器 (*Resgen.exe*) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 類別中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
 
 您可以指定下列 `options`，但是必須指定 **/out**。
 

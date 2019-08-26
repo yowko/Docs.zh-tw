@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffc698910fe722fe761c62b87b059068d5f243f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591656"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935526"
 ---
 # <a name="how-to-log-information-about-services"></a>作法：記錄關於服務的資訊
 根據預設，所有的 Windows 服務專案都能與應用程式事件記錄檔互動，並在其中寫入資訊和例外狀況。 您使用 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性來表示在您的應用程式中是否要這項功能。 根據預設，會為您以 Windows 服務專案範本建立任何服務開啟記錄。 您可以使用靜態形式的 <xref:System.Diagnostics.EventLog> 類別將服務資訊寫入記錄檔，而不需要建立 <xref:System.Diagnostics.EventLog> 元件的執行個體或手動註冊來源。  
@@ -28,14 +28,14 @@ ms.locfileid: "64591656"
  如果您想要寫入應用程式記錄檔以外的事件記錄檔，您必須將 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性設為 `false`、在您的服務程式碼內建立自己的自訂事件記錄檔，然後將您的服務註冊為該記錄檔項目的有效來源。 接著，您必須撰寫程式碼，每當您感興趣的動作發生時，就將項目記錄至記錄檔。  
   
 > [!NOTE]
->  如果您使用自訂的事件記錄檔，並設定服務應用程式寫入其中，則在您的程式碼中設定服務的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 屬性之前，不得嘗試存取事件記錄檔。 事件記錄檔需要此屬性的值才能將您的服務註冊為有效的事件來源。  
+> 如果您使用自訂的事件記錄檔，並設定服務應用程式寫入其中，則在您的程式碼中設定服務的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 屬性之前，不得嘗試存取事件記錄檔。 事件記錄檔需要此屬性的值才能將您的服務註冊為有效的事件來源。  
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>啟用服務的預設事件記錄  
   
 - 將您的元件 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性設為 `true`。  
   
     > [!NOTE]
-    >  根據預設，這個屬性設定為 `true`。 您不需要明確地設定這個屬性，除非您正在建置更複雜的處理，例如評估條件，然後根據該條件的結果設定 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性。  
+    > 根據預設，這個屬性設定為 `true`。 您不需要明確地設定這個屬性，除非您正在建置更複雜的處理，例如評估條件，然後根據該條件的結果設定 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性。  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>停用服務的事件記錄  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64591656"
 1. 將 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性設定為 `false`。  
   
     > [!NOTE]
-    >  您必須將 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 設為 false 以使用自訂的記錄檔。  
+    > 您必須將 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 設為 false 以使用自訂的記錄檔。  
   
 2. 在 Windows 服務應用程式中，設定 <xref:System.Diagnostics.EventLog> 元件的執行個體。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64591656"
      下列程式碼示範如何設定記錄至自訂的記錄檔。  
   
     > [!NOTE]
-    >  在此程式碼範例中， <xref:System.Diagnostics.EventLog> 元件的執行個體命名為 `eventLog1` (在 Visual Basic 中為`EventLog1` )。 如果您在步驟 2 中以另一個名稱建立執行個體，請跟著變更程式碼。  
+    > 在此程式碼範例中， <xref:System.Diagnostics.EventLog> 元件的執行個體命名為 `eventLog1` (在 Visual Basic 中為`EventLog1` )。 如果您在步驟 2 中以另一個名稱建立執行個體，請跟著變更程式碼。  
   
      [!code-csharp[VbRadconService#14](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#14)]
      [!code-vb[VbRadconService#14](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#14)]  

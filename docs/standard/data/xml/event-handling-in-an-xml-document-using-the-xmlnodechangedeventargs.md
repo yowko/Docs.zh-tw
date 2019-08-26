@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44204886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965885"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>使用 XmlNodeChangedEventArgs 之 XML 文件中的事件處理
 **XmlNodeChangedEventArgs** 會封裝傳入註冊在處理事件之 **XmlDocument** 物件上的事件處理常式之引數。 下列表格說明事件和引發事件的時機。  
@@ -28,7 +28,7 @@ ms.locfileid: "44204886"
 |<xref:System.Xml.XmlDocument.NodeChanged>|當節點的值已經變更。|  
   
 > [!NOTE]
->  若 **XmlDataDocument** 記憶體使用已完全最佳化為使用 **DataSet** 存放區，則在變更基礎 **DataSet** 時，**XmlDataDocument** 可能不會引發上列的任何事件。 如果您需要這些事件，則必須周遊整個 **XmlDocument** 一次，讓記憶體使用成為非完全最佳化。  
+> 若 **XmlDataDocument** 記憶體使用已完全最佳化為使用 **DataSet** 存放區，則在變更基礎 **DataSet** 時，**XmlDataDocument** 可能不會引發上列的任何事件。 如果您需要這些事件，則必須周遊整個 **XmlDocument** 一次，讓記憶體使用成為非完全最佳化。  
   
  下列程式碼範例將說明如何定義事件處理常式，以及如何將事件處理常式加入事件中。  
   

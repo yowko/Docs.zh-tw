@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363080"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608387"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68363080"
 
 與參考型別不同，您無法從實值型別衍生新的類型。 不過，就像參考型別，結構可以實作介面。
 
-實值型別預設不可為 `null`。 不過，相對應的[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)則可為 `null`。
+實值型別預設不可為 `null`。 不過，相對應的[可為 Null 的型別](../../programming-guide/nullable-types/index.md)則可為 `null`。
 
 每種實值型別都具有初始化該型別預設值的隱含無參數建構函式。 如需有關實值型別預設值的資訊，請參閱[預設值表](default-values-table.md)。
 
