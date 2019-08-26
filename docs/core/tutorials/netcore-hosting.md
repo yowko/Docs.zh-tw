@@ -4,12 +4,12 @@ description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: d3bdaacd4be776e0e9fff01698cca360ea4c9c6d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8eebc04390514bca288b67952ec7748366a45d6e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402029"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660528"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -23,7 +23,7 @@ ms.locfileid: "67402029"
 
 由於主機是原生應用程式，因此本教學課程將說明如何建構 C++ 應用程式以裝載 .NET Core。 您將需要 C++ 開發環境 (例如 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 所提供的環境)。
 
-您也需要一個簡單的 .NET Core 應用程式來測試主機，因此您必須安裝 [.NET Core SDK](https://www.microsoft.com/net/core) 並[建置一個小型的.NET Core 測試應用程式](../../core/tutorials/with-visual-studio.md) (例如 'Hello World' 應用程式)。 由新的 .NET Core 主控台專案範本建立的 'Hello World' 應用程式就已足夠。
+您也需要一個簡單的 .NET Core 應用程式來測試主機，因此您必須安裝 [.NET Core SDK](https://www.microsoft.com/net/core) 並[建置一個小型的.NET Core 測試應用程式](with-visual-studio.md) (例如 'Hello World' 應用程式)。 由新的 .NET Core 主控台專案範本建立的 'Hello World' 應用程式就已足夠。
 
 ## <a name="hosting-apis"></a>裝載 API
 有三個不同的 API 可用來裝載 .NET Core。 本文件 (及其相關聯的[範例](https://github.com/dotnet/samples/tree/master/core/hosting) \(英文\)) 會涵蓋所有的選項。

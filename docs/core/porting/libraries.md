@@ -4,12 +4,12 @@ description: 了解如何將程式庫專案從 .NET Framework 移植到 .NET Cor
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745556"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660704"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>將 .NET Framework 程式庫移植到 .NET Core
 
@@ -29,16 +29,16 @@ ms.locfileid: "56745556"
 [.NET Standard](../../standard/net-standard.md)\
 本主題描述計畫在所有 .NET 實作上提供的正式 .NET API 規格。
 
-[套件、中繼套件和架構](~/docs/core/packages.md)   
+[套件、中繼套件和架構](../packages.md)   
 本文討論 .NET Core 如何定義及使用套件，以及套件如何支援在多個 .NET 實作上執行的程式碼。
 
-[使用跨平台工具開發程式庫](~/docs/core/tutorials/libraries.md)   
+[使用跨平台工具開發程式庫](../tutorials/libraries.md)   
 本主題說明如何使用跨平台 CLI 工具撰寫 .NET 的程式庫。
 
-[適用於 .NET Core 之 *csproj* 格式的新增項目](~/docs/core/tools/csproj.md)   
+[適用於 .NET Core 之 *csproj* 格式的新增項目](../tools/csproj.md)   
 本文概述從改為使用 *csproj* 和 MSBuild 時，新增至專案檔的變更。
 
-[移植到 .NET Core - 分析協力廠商相依性](~/docs/core/porting/third-party-deps.md)   
+[移植到 .NET Core - 分析協力廠商相依性](third-party-deps.md)   
 本主題討論協力廠商相依性的可攜性，以及當某個 NuGet 套件相依性無法在 .NET Core 上執行時的解決方法。
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>將您的 .NET Framework 程式碼目標重新設定為 .NET Framework 4.7.2
@@ -47,8 +47,8 @@ ms.locfileid: "56745556"
 
 針對您想要移轉的每個 Visual Studio 專案，執行下列作業︰
 
-1. 以滑鼠右鍵按一下專案並選取 [屬性]。
-1. 在 [目標 Framework] 下拉式清單中，選取 [.NET Framework 4.7.2]。
+1. 以滑鼠右鍵按一下專案並選取 [屬性]  。
+1. 在 [目標 Framework]  下拉式清單中，選取 [.NET Framework 4.7.2]  。
 1. 重新編譯您的專案。
 
 因為您的專案現在是以 .NET Framework 4.7.2 為目標，請使用該版本的 .NET Framework 作為基礎移植程式碼。
@@ -122,7 +122,7 @@ ms.locfileid: "56745556"
 
 ## <a name="recommended-approach-to-porting"></a>建議的移植方法
 
-不管如何，移植工作都會大幅取決於 .NET Framework 程式碼的架構方式。 移植程式碼的良好方式，是從程式庫的「基底」開始，也就是程式碼的基本元件。 它可能是資料模型，也可能是所有其他項目會直接或間接使用的基礎類別和方法。
+不管如何，移植工作都會大幅取決於 .NET Framework 程式碼的架構方式。 移植程式碼的良好方式，是從程式庫的「基底」  開始，也就是程式碼的基本元件。 它可能是資料模型，也可能是所有其他項目會直接或間接使用的基礎類別和方法。
 
 1. 針對測試目前正在移植之程式庫層的測試專案進行移植。
 1. 將程式庫的基底複製到新的 .NET Core 專案，然後選取您想要支援的 .NET Standard 版本。

@@ -3,12 +3,12 @@ title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: 738c6b07f77bdbf6fd946253f95c8691e4172f31
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: d513965a60416392fb8acd15c9f89c8af0ec7876
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410355"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660582"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -18,7 +18,7 @@ ms.locfileid: "67410355"
 
 範本引擎是開放原始碼，而線上程式碼存放庫位於 GitHub 的 [dotnet/templating](https://github.com/dotnet/templating/)。 如需範本範例，請瀏覽 [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) 存放庫。 GitHub 的 [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (dotnet new 的可用範本) 中，有包括協力廠商範本在內的更多範本。 如需建立與使用自訂範本的詳細資訊，請參閱[如何建立您自己的 dotnet new 範本](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)以及 [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)。
 
-若要遵循逐步解說並建立範本，請參閱[建立 dotnet new 的自訂範本](~/docs/core/tutorials/create-custom-template.md)教學課程。
+若要遵循逐步解說並建立範本，請參閱[建立 dotnet new 的自訂範本](../tutorials/create-custom-template.md)教學課程。
 
 ### <a name="net-default-templates"></a>.NET 預設範本
 

@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專案。
 ms.date: 05/06/2019
-ms.openlocfilehash: f8bc8cb59ae6e421f4e9bd05925376399939056d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c9e960bab0e28e88b0cc8d431dad3b9f3f00c9c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878320"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660545"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -66,7 +66,7 @@ dotnet new [-h|--help]
 
 要在叫用命令時具現化的範本。 每個範本可能會有您可以傳遞的特定選項。 如需詳細資訊，請參閱[範本選項](#template-options)。
 
-如果 `TEMPLATE` 值與 [範本] 或 [簡短名稱] 欄中的文字不完全相符，則會對這兩欄執行子字串比對作業。
+如果 `TEMPLATE` 值與 [範本]  或 [簡短名稱]  欄中的文字不完全相符，則會對這兩欄執行子字串比對作業。
 
 # <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
 
@@ -774,6 +774,6 @@ dotnet new [-h|--help]
 ## <a name="see-also"></a>另請參閱
 
 - [dotnet new 的自訂範本](custom-templates.md)
-- [建立適用於 dotnet new 的自訂範本](~/docs/core/tutorials/create-custom-template.md)
+- [建立適用於 dotnet new 的自訂範本](../tutorials/create-custom-template.md)
 - [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples) (dotnet/dotnet-template-samples GitHub 存放庫)
 - [dotnet new 的可用範本](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

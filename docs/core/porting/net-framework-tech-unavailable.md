@@ -4,12 +4,12 @@ description: 了解無法在 .NET Core 上使用的 .NET Framework 技術
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: bfeea58f4d80b789a7174a77e0784f2326906416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737099"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660604"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 上無法使用的 .NET Framework 技術
 
@@ -33,13 +33,13 @@ ms.locfileid: "67737099"
 
 ## <a name="code-access-security-cas"></a>程式碼存取安全性 (CAS)
 
-依賴執行階段或架構來限制受控應用程式或程式庫可使用或執行之資源的沙箱功能，[在 .NET Framework 上並不受支援](~/docs/framework/misc/code-access-security.md)，因此 .NET Core 也不予支援。 .NET Framework 和執行階段中發生太多提高權限的情況，因而無法繼續將 CAS 視為安全性界限。 此外，CAS 會讓實作更為複雜，且經常會對不需要使用它的應用程式，正確性與效能之間帶來潛在的相互影響。
+依賴執行階段或架構來限制受控應用程式或程式庫可使用或執行之資源的沙箱功能，[在 .NET Framework 上並不受支援](../../framework/misc/code-access-security.md)，因此 .NET Core 也不予支援。 .NET Framework 和執行階段中發生太多提高權限的情況，因而無法繼續將 CAS 視為安全性界限。 此外，CAS 會讓實作更為複雜，且經常會對不需要使用它的應用程式，正確性與效能之間帶來潛在的相互影響。
 
 請使用作業系統提供的安全性界限 (例如虛擬化、容器或使用者帳戶) 以一組最小權限執行處理序。
 
 ## <a name="security-transparency"></a>安全性透明度
 
-與 CAS 類似，安全性透明度會以宣告方式區隔沙箱化程式碼和安全性關鍵程式碼，但已[不再支援作為安全性界限](~/docs/framework/misc/security-transparent-code.md)。 Silverlight 會大量使用這項功能。 
+與 CAS 類似，安全性透明度會以宣告方式區隔沙箱化程式碼和安全性關鍵程式碼，但已[不再支援作為安全性界限](../../framework/misc/security-transparent-code.md)。 Silverlight 會大量使用這項功能。 
 
 使用由作業系統提供的安全性界線 (例如虛擬化、容器或使用者帳戶) 來以最少的權限集合執行處理序。
 
