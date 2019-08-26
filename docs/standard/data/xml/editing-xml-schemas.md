@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3d0d67c82e753b044f759b4d1139c5f6b4837b31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948476"
 ---
 # <a name="editing-xml-schemas"></a>編輯 XML 結構描述
 編輯 XML 結構描述是結構描述物件模型 (SOM) 的其中一項最重要功能。 SOM 的所有前結構描述編譯屬性都可用於變更 XML 結構描述中的現有值。 然後可重新編譯該 XML 結構描述以反映這些變更。  
@@ -93,7 +93,7 @@ ms.locfileid: "59308714"
 8. 重複處理前結構描述編譯 <xref:System.Xml.Schema.XmlSchemaObject> 集合中的每個 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>。  
   
 > [!NOTE]
->  因為 `FirstName` 項目不是結構描述中的全域項目，所以它不可用在 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 或 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合中。 程式碼範例會藉由先尋找 `FirstName` 項目，以尋找 `Customer` 項目。  
+> 因為 `FirstName` 項目不是結構描述中的全域項目，所以它不可用在 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 或 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合中。 程式碼範例會藉由先尋找 `FirstName` 項目，以尋找 `Customer` 項目。  
 >   
 >  第一個程式碼範例會使用後結構描述編譯 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合，以往返結構描述。 在此範例中，前結構描述編譯 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合用於往返結構描述。 當兩個集合都提供對結構描述中全域項目的存取權時，重複處理 <xref:System.Xml.Schema.XmlSchema.Items%2A> 集合會浪費更多時間，因為您必須重複處理結構描述中的所有全域項目，且其不具有任何 PSCI 屬性。 PSCI 集合 (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>、<xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>、<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> 等) 可提供其全域項目、屬性、型別及其 PSCI 屬性的直接存取權。  
   

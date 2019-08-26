@@ -7,35 +7,37 @@
       href: choosing-between-datetime.md
     - name: 尋找定義於本機系統的時區
       href: finding-the-time-zones-on-local-system.md
-    - name: HOW TO：列舉電腦上既有的時區
+    - name: 作法：列舉電腦上既有的時區
       href: enumerate-time-zones.md
-    - name: HOW TO：存取預先定義的 UTC 和當地時區物件
+    - name: 作法：存取預先定義的 UTC 和當地時區物件
       href: access-utc-and-local.md
-    - name: HOW TO：將 TimeZoneInfo 物件具現化
+    - name: 作法：將 TimeZoneInfo 物件具現化
       href: instantiate-time-zone-info.md
     - name: 具現化 DateTimeOffset 物件
       href: instantiating-a-datetimeoffset-object.md
-    - name: HOW TO：建立沒有調整規則的時區
+    - name: 作法：建立沒有調整規則的時區
       href: create-time-zones-without-adjustment-rules.md
-    - name: HOW TO：建立有調整規則的時區
+    - name: 作法：建立有調整規則的時區
       href: create-time-zones-with-adjustment-rules.md
     - name: 儲存和還原時區
       href: saving-and-restoring-time-zones.md
-    - name: HOW TO：將時區儲存到內嵌資源
+    - name: 作法：將時區儲存到內嵌資源
       href: save-time-zones-to-an-embedded-resource.md
-    - name: HOW TO：從內嵌資源還原時區
+    - name: 作法：從內嵌資源還原時區
       href: restore-time-zones-from-an-embedded-resource.md
     - name: 使用日曆
       href: working-with-calendars.md
     - name: 使用日期和時間執行算術運算
       href: performing-arithmetic-operations.md
-    - name: HOW TO：在日期和時間算術中使用時區
+    - name: 作法：在日期和時間算術中使用時區
       href: use-time-zones-in-arithmetic.md
     - name: 在 DateTime 與 DateTimeOffset 之間轉換
       href: converting-between-datetime-and-offset.md
     - name: 在各時區間轉換時間
       href: converting-between-time-zones.md
-    - name: HOW TO：解決模稜兩可的時間
+    - name: 作法：解決模稜兩可的時間
       href: resolve-ambiguous-times.md
-    - name: HOW TO：讓使用者解決模稜兩可的時間
+    - name: 作法：讓使用者解決模稜兩可的時間
       href: let-users-resolve-ambiguous-times.md
+    - name: System.Text.Json 中的 DateTime 和 DateTimeOffset 支援
+      href: system-text-json-support.md

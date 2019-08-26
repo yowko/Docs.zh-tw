@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b4ba0cbb25e2c83a33ffba99ccbb29d5b414b3c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664484"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918198"
 ---
 # <a name="resolving-external-resources"></a>解析外部資源
 **XmlDocument** 類別可以使用 **XmlDocument** 的 **XmlResolver** 屬性尋找沒有內嵌到 XML 資料的資源，例如外部文件類型定義 (DTD)、實體和結構描述。 這些項目可位於網路或本機磁碟上，並且可以由統一資源識別元 (URI) 辨識。 如此可讓 **XmlDocument** 解析文件中出現的 **EntityReference** 節點，並依據外部 DTD 或結構描述驗證文件。  
@@ -48,7 +48,7 @@ ms.locfileid: "45664484"
  設定 XmlResolver 使其含有正確的認證，即可存取外部資源。  
   
 > [!NOTE]
->  您無法擷取 **XmlResolver** 屬性。 這有助於防止使用者重複使用已經在其上設定安全性認證的 **XmlResolver**。 此外，若使用 **XmlTextReader** 或驗證的 <xref:System.Xml.XmlReader> 來載入 **XmlDocument**，且 **XmlDocument** 具有已經設定的解析程式，則 **XmlDocument** 在 **Load** 階段之後將不會快取這些讀取器的解析程式，因為這也會帶來安全性方面的風險。  
+> 您無法擷取 **XmlResolver** 屬性。 這有助於防止使用者重複使用已經在其上設定安全性認證的 **XmlResolver**。 此外，若使用 **XmlTextReader** 或驗證的 <xref:System.Xml.XmlReader> 來載入 **XmlDocument**，且 **XmlDocument** 具有已經設定的解析程式，則 **XmlDocument** 在 **Load** 階段之後將不會快取這些讀取器的解析程式，因為這也會帶來安全性方面的風險。  
   
  如需詳細資訊，請參閱 <xref:System.Xml.XmlResolver> 參考頁面的＜備註＞一節。  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2752ecd05caec207955b2366ed19b3713f571f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f37f55f5af70a232952bdb94f0c111a27fcbab1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613905"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948775"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>管理陣列和清單的泛型委派
 本主題概略說明轉換、搜尋述詞以及要在陣列或集合的項目上採取之動作的泛型委派。  
@@ -28,7 +28,7 @@ ms.locfileid: "54613905"
  <xref:System.Collections.Generic.List%601> 泛型類別也有提供一個使用 <xref:System.Action%601> 委派的 <xref:System.Collections.Generic.List%601.ForEach%2A> 方法。 這不是泛型方法。  
   
 > [!NOTE]
->  這對於泛型類型和方法形成有趣的一點。 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 方法必須為靜態 (在 Visual Basic 中為 `Shared`) 和泛型，因為 <xref:System.Array> 不是泛型類型；您可以為 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 指定操作類型的唯一理由，就是該方法有它自己的類型參數清單。 相對地，非泛型 <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> 方法屬於泛型類別 <xref:System.Collections.Generic.List%601>，因此它會直接使用其類別的類型參數。 該類別為強類型，因此這個方法可以是執行個體方法。  
+> 這對於泛型類型和方法形成有趣的一點。 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 方法必須為靜態 (在 Visual Basic 中為 `Shared`) 和泛型，因為 <xref:System.Array> 不是泛型類型；您可以為 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 指定操作類型的唯一理由，就是該方法有它自己的型別參數清單。 相對地，非泛型 <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> 方法屬於泛型類別 <xref:System.Collections.Generic.List%601>，因此它會直接使用其類別的類型參數。 該類別為強類型，因此這個方法可以是執行個體方法。  
   
  <xref:System.Predicate%601> 泛型委派表示用來判斷特定項目是否符合您定義之準則的方法。 您可以將其與 <xref:System.Array> 的下列靜態泛型方法搭配使用，以搜尋單一項目或一組項目：<xref:System.Array.Exists%2A>、<xref:System.Array.Find%2A>、<xref:System.Array.FindAll%2A>、<xref:System.Array.FindIndex%2A>、<xref:System.Array.FindLast%2A>、<xref:System.Array.FindLastIndex%2A> 和 <xref:System.Array.TrueForAll%2A>。  
   

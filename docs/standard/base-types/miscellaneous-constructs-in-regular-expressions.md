@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7b7783d3360bfb042880f5d1e74bfac77e729299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959473"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>規則運算式中的其他建構
 .NET 中的規則運算式包含三個其他語言建構。 其中一個可讓您在規則運算式模式的中間，啟用或停用特定比對選項。 其餘兩個可讓您在規則運算式中包含註解。  
@@ -31,7 +31,7 @@ ms.locfileid: "48836280"
   
  您在問號之後列出要啟用的選項，並在減號之後列出要停用的選項。 下表會說明每個選項。 如需每個選項的詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |`i`|不區分大小寫的比對。|  
 |`m`|多行模式。|  
@@ -42,7 +42,7 @@ ms.locfileid: "48836280"
  `(?imnsx-imnsx)` 建構所定義之規則運算式選項中的任何變更，其效果會一直維持到封入群組的結尾。  
   
 > [!NOTE]
->  `(?imnsx-imnsx:`*subexpression*`)` 群組建構會為子運算式提供完全相同的功能。 如需詳細資訊，請參閱 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+> `(?imnsx-imnsx:`*subexpression*`)` 群組建構會為子運算式提供完全相同的功能。 如需詳細資訊，請參閱[分組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
  下列範例會使用 `i`、`n` 及 `x` 選項來啟用不區分大小寫和明確擷取，並忽略規則運算式中間規則運算式模式中的空白字元。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48836280"
   
  此範例會定義兩個規則運算式。 第一個規則運算式 `\b(D\w+)\s(d\w+)\b` 會比對開頭為大寫 "D" 和小寫 "d" 的兩個連續字組。 第二個規則運算式 `\b(D\w+)(?ixn) \s (d\w+) \b` 會使用內嵌選項來修改此模式，如下表所述。 然後比較結果，以確認 `(?ixn)` 建構的效果。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
 |`(D\w+)`|比對後面接著一個或多個文字字元的大寫 "D"。 這是第一個擷取群組。|  
@@ -65,7 +65,7 @@ ms.locfileid: "48836280"
   
  下列範例會重複上一節範例中的第一個規則運算式模式。 它會將兩個內嵌註解加入規則運算式，以指出比較是否區分大小寫。 規則運算式模式 `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` 定義如下。  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
 |`(?# case-sensitive comparison)`|註解。 它不會影響模式比對行為。|  
@@ -86,7 +86,7 @@ ms.locfileid: "48836280"
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|模式|描述|  
+|模式|說明|  
 |-------------|-----------------|  
 |`\{`|比對左括號。|  
 |`\d+`|比對一個或多個十進位數字。|  

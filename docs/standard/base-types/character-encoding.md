@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 82b936b753dff4230be6162583a50524e8c5254b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960327"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987173"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 字元是可以用許多不同的方式來表示的抽象實體。 字元編碼是一套系統，可將所支援之字元集中的每個字元與代表該字元的特定值配對。 例如，摩斯密碼就是一種字元編碼，可將羅馬字母中的每個字元與適合透過電報線路傳輸的點和虛線圖樣配對。 電腦的字元編碼可將所支援之字元集中的每個字元與代表該字元的數值配對。 字元編碼包含兩個不同的元件：  
@@ -31,7 +31,7 @@ ms.locfileid: "65960327"
  字元編碼描述編碼器和解碼器運作時所依據的規則。 例如， <xref:System.Text.UTF8Encoding> 類別描述編碼和解碼 8 位元 Unicode 轉換格式 (UTF-8) 的規則，該格式使用一到四個位元組來表示單一 Unicode 字元。 編碼和解碼也可包含驗證。 例如， <xref:System.Text.UnicodeEncoding> 類別會檢查所有 Surrogate，確定它們是由有效的 Surrogate 字組所組成。 (Surrogate 字組是由包含範圍從 U+D800 到 U+DBFF 之字碼指標的字元，後面接著包含範圍從 U+DC00 到 U+DFFF 之字碼指標的字元所組成)。後援策略決定編碼器如何處理無效的字元，或解碼器如何處理無效的位元組。  
   
 > [!WARNING]
->  .NET 編碼類別提供儲存和轉換字元資料的方法。 這些類別不應用來儲存字串格式的二進位資料。 根據使用的編碼方式，使用編碼類別將二進位資料轉換成字串格式可能會導致未預期的行為，並且產生不正確或損毀的資料。 若要將二進位資料轉換成字串格式，請使用 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法。  
+> .NET 編碼類別提供儲存和轉換字元資料的方法。 這些類別不應用來儲存字串格式的二進位資料。 根據使用的編碼方式，使用編碼類別將二進位資料轉換成字串格式可能會導致未預期的行為，並且產生不正確或損毀的資料。 若要將二進位資料轉換成字串格式，請使用 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法。  
   
  .NET 使用 UTF-16 編碼 (以 <xref:System.Text.UnicodeEncoding> 類別表示) 來表示字元和字串。 以 Common Language Runtime 為目標的應用程式使用編碼器將 Common Language Runtime 所支援的 Unicode 字元表示對應至其他編碼配置， 並使用解碼器將非 Unicode 編碼的字元對應至 Unicode。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65960327"
 - 呼叫 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法，這個方法會傳回 .NET 中可用的任何標準、字碼頁或 DBCS 編碼。 多載可讓您同時為編碼器和解碼器指定後援物件。  
   
 > [!NOTE]
->  Unicode 標準會對每個受支援字集中的每個字元，指派一個字碼指標 (數字) 和一個名稱。 例如，字元 "A" 是由字碼指標 U+0041 和名稱 "LATIN CAPITAL LETTER A" 來表示。 Unicode 轉換格式 (UTF) 編碼定義將字碼指標編碼為一或多個位元組序列的方式。 Unicode 編碼配置簡化全球化應用程式的開發作業，因為它能夠以單一編碼表示任何字元集的字元。 應用程式開發人員不再需要追蹤用來產生特定語言或書寫系統字元的編碼配置，同時資料可在各國系統之間共用，而不會損毀。  
+> Unicode 標準會對每個受支援字集中的每個字元，指派一個字碼指標 (數字) 和一個名稱。 例如，字元 "A" 是由字碼指標 U+0041 和名稱 "LATIN CAPITAL LETTER A" 來表示。 Unicode 轉換格式 (UTF) 編碼定義將字碼指標編碼為一或多個位元組序列的方式。 Unicode 編碼配置簡化全球化應用程式的開發作業，因為它能夠以單一編碼表示任何字元集的字元。 應用程式開發人員不再需要追蹤用來產生特定語言或書寫系統字元的編碼配置，同時資料可在各國系統之間共用，而不會損毀。  
 >   
 >  .NET 支援由 Unicode 標準定義的三種編碼：UTF-8、UTF-16 和 UTF-32。 如需詳細資訊，請參閱 [Unicode 首頁](https://www.unicode.org/) \(英文\) 的＜Unicode 標準＞。  
   
@@ -137,19 +137,19 @@ ms.locfileid: "65960327"
 - Exception Fallback  
   
 > [!IMPORTANT]
->  編碼作業最常在 Unicode 字元無法對應至特定字碼頁編碼時發生問題。 解碼作業最常在無效的位元組序列無法轉譯為有效的 Unicode 字元時發生問題。 因此，您應該知道特定編碼物件所使用的後援策略。 您應該在執行個體化編碼物件時，盡可能指定該物件所使用的後援策略。  
+> 編碼作業最常在 Unicode 字元無法對應至特定字碼頁編碼時發生問題。 解碼作業最常在無效的位元組序列無法轉譯為有效的 Unicode 字元時發生問題。 因此，您應該知道特定編碼物件所使用的後援策略。 您應該在執行個體化編碼物件時，盡可能指定該物件所使用的後援策略。  
   
 <a name="BestFit"></a>   
 ### <a name="best-fit-fallback"></a>Best-Fit Fallback  
  當字元在目標編碼中沒有完全相符的字元時，編碼器可以嘗試將該字元對應至類似的字元 (自動調整後援大部分是針對編碼問題，而不是針對解碼問題。 很少有字碼頁包含無法成功對應至 Unicode 的字元)。自動調整後援是 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 和 <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> 多載所擷取之字碼頁和雙位元組字元集編碼的預設值。  
   
 > [!NOTE]
->  理論上，.NET 中提供的 Unicode 編碼類別 (<xref:System.Text.UTF8Encoding>、<xref:System.Text.UnicodeEncoding> 和 <xref:System.Text.UTF32Encoding>) 支援每個字元集中的每個字元，因此這些類別可以用來解決自動調整後援的問題。  
+> 理論上，.NET 中提供的 Unicode 編碼類別 (<xref:System.Text.UTF8Encoding>、<xref:System.Text.UnicodeEncoding> 和 <xref:System.Text.UTF32Encoding>) 支援每個字元集中的每個字元，因此這些類別可以用來解決自動調整後援的問題。  
   
  自動調整的策略會因不同的字碼頁而異。 例如，某些字碼頁的全形拉丁字元會對應至更常見的半形拉丁字元。 至於其他字碼頁，則不會進行這項對應。 即使有主動的自動調整策略，還是會有些字元在特定編碼中沒有適當的對應。 例如，中文表意字元在字碼頁 1252 中便沒有適當的對應。 在這種情況下，會使用取代字串。 根據預設，這個字串只是單一 QUESTION MARK (U+003F)。  
   
 > [!NOTE]
->  自動調整的策略不會詳細記錄。 不過，[Unicode Consortium](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) \(英文\) 網站上記載了數個字碼頁。 請檢閱該資料夾的 **readme.txt** 檔案，以取得如何解譯對應檔案的說明。
+> 自動調整的策略不會詳細記錄。 不過，[Unicode Consortium](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) \(英文\) 網站上記載了數個字碼頁。 請檢閱該資料夾的 **readme.txt** 檔案，以取得如何解譯對應檔案的說明。
   
  下列範例會使用字碼頁 1252 (西歐語言的 Windows 字碼頁) 說明自動調整對應及其缺點。 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法可用來為字碼頁 1252 擷取編碼物件。 根據預設，它會針對不支援的 Unicode 字元使用自動調整對應。 這個範例會執行個體化包含三個非 ASCII 字元的字串：CIRCLED LATIN CAPITAL LETTER S (U+24C8)、SUPERSCRIPT FIVE (U+2075) 和 INFINITY (U+221E) (以空格分隔)。 如範例的輸出所示，編碼字串時，這三個原始非空格字元會被 QUESTION MARK (U+003F)、DIGIT FIVE (U+0035) 和 DIGIT EIGHT (U+0038) 取代。 DIGIT EIGHT 對於不支援的 INFINITY 字元來說，是相當差的取代，QUESTION MARK 則表示沒有可供原始字元使用的對應。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "65960327"
  自動調整對應是 <xref:System.Text.Encoding> 物件的預設行為，可將 Unicode 資料編碼為字碼頁資料，有些舊版應用程式需要這個行為。 不過，基於安全性理由，大多數的新應用程式都應該避免自動調整行為。 例如，應用程式不應該透過自動調整編碼方式放入定義域名稱。  
   
 > [!NOTE]
->  您也可以實作編碼的自訂自動調整後援對應。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一節。  
+> 您也可以實作編碼的自訂自動調整後援對應。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一節。  
   
  如果自動調整後援是編碼物件的預設值，則當您藉由呼叫 <xref:System.Text.Encoding> 或 <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 多載擷取 <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 物件時，可以選擇其他後援策略。 下一節包含的範例會取代無法使用星號 (*) 對應至字碼頁 1252 的每一個字元。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "65960327"
  [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]  
   
 > [!NOTE]
->  您也可以實作編碼的取代類別。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一節。  
+> 您也可以實作編碼的取代類別。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一節。  
   
  除了 QUESTION MARK (U+003F) 之外，還常使用 Unicode REPLACEMENT CHARACTER (U+FFFD) 做為取代字串，特別是當解碼無法成功轉譯成 Unicode 字元的位元組序列時。 不過，您可以自由選擇任何取代字串，而且該字串可以包含多個字元。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "65960327"
  [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]  
   
 > [!NOTE]
->  您也可以實作編碼作業的自訂例外狀況處理常式。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一節。  
+> 您也可以實作編碼作業的自訂例外狀況處理常式。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一節。  
   
  <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 物件提供下列造成例外狀況之條件的相關資訊：  
   

@@ -1,37 +1,44 @@
 ---
 title: C# 運算子 - C# 參考
-ms.date: 04/30/2019
+ms.date: 08/20/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
 - operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+- operator precedence [C#]
+- operator associativity [C#]
+- expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7db61e530ba5c3e0b5ae0ee0002621e369e1833b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 75697a7a52fbfb04e1b44ecf591e271217a69bf4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566848"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924657"
 ---
 # <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
-C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運算子](arithmetic-operators.md)會執行含內建數值型別運算元的算術運算，而[布林邏輯運算子](boolean-logical-operators.md)會執行含 [bool](../keywords/bool.md) 運算元的邏輯運算。
+C# 提供許多由內建類型支援的運算子。 舉例來說，以數值運算元執行算術運算的[算術運算子](arithmetic-operators.md)，以及以[布林](../keywords/bool.md)運算元執行邏輯運算的[布林值邏輯運算子](boolean-logical-operators.md)。 部分運算子可以[多載](operator-overloading.md)。 進行運算子多載時，您可以為使用者定義類型指定運算元的運算子行為。
 
-使用者定義型別可以多載特定運算子，以定義該型別運算元的對應行為。 如需詳細資訊，請參閱[運算子多載](operator-overloading.md)。
+再[運算式](../../programming-guide/statements-expressions-operators/expressions.md)中，運算子優先順序和關聯性會決定作業的執行順序。 您可以使用括弧來變更由運算子優先順序和關聯性強制執行的評估順序。
 
-下表列出 C# 運算子，從最高優先順序開始到最低優先順序。 相同列內的所有運算子都會共用相同的優先順序層級。
+## <a name="operator-precedence"></a>運算子優先順序
+
+在具有多個運算子的運算式中，具有較高優先順序的運算子會在優先順序較低的運算子之前進行評估。 在下列範例中，因為乘法的優先順序高於加法，所以會先執行乘法：
+
+```csharp-interactive
+var a = 2 + 2 * 2;
+Console.WriteLine(a); //  output: 6
+```
+
+使用括弧變更由運算子優先順序強制執行的評估順序：
+
+```csharp-interactive
+var a = (2 + 2) * 2;
+Console.WriteLine(a); //  output: 8
+```
+
+下表列出 C# 運算子，從最高優先順序開始到最低優先順序。 每個資料列中的運算子都具有相同的優先順序。
 
 | 運算子 | 類別或名稱 |
 | --------- | ---------------- |
@@ -51,7 +58,39 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 | [c ? t : f](conditional-operator.md) | 條件運算子 |
 | [x = y](assignment-operator.md)、[x += y](arithmetic-operators.md#compound-assignment)、[x -= y](arithmetic-operators.md#compound-assignment)、[x *= y](arithmetic-operators.md#compound-assignment)、[x /= y](arithmetic-operators.md#compound-assignment)、[x %= y](arithmetic-operators.md#compound-assignment)、[x &= y](boolean-logical-operators.md#compound-assignment)、[x &#124;= y](boolean-logical-operators.md#compound-assignment)、[x ^= y](boolean-logical-operators.md#compound-assignment)、[x <<= y](bitwise-and-shift-operators.md#compound-assignment)、[x >>= y](bitwise-and-shift-operators.md#compound-assignment)、[=>](lambda-operator.md) | 指派和 Lambda 宣告 |
 
+## <a name="operator-associativity"></a>運算子關聯性
+
+當運算子具有相同的優先順序時，運算子的關聯性會決定作業的執行順序：
+
+- *左向關聯*運算子會依由左至右的順序進行評估。 除了[指派運算子](assignment-operator.md)和 [null 聯合運算子 `??`](null-coalescing-operator.md) 以外，所有二元運算子都是靠左關聯。 例如，`a + b - c` 會判斷值為 `(a + b) - c`。
+- *右向關聯*運算子會依由右至左的順序進行評估。 指派運算子、null 聯合運算子 `??` 和[條件運算子 `?:`](conditional-operator.md) 是右向關聯。 例如，`x = y = z` 會判斷值為 `x = (y = z)`。
+
+使用括弧來變更由運算子關聯性強制執行的評估順序：
+
+```csharp-interactive
+int a = 13 / 5 / 2;
+int b = 13 / (5 / 2);
+Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
+```
+
+## <a name="operand-evaluation"></a>運算元評估
+
+與運算子優先順序和關聯性無關，運算式中的運算元會由左至右評估。 下列範例示範了運算子和運算元的評估順序：
+
+| 運算式 | 評估的順序 |
+| ---------- | ------------------- |
+|`a + b`|a，b，+|
+|`a + b * c`|a，b，c，*，+|
+|`a / b + c * d`|a，b，/，c，d，*，+|
+|`a / (b + c) * d`|a，b，c，+，/，d，*|
+
+通常會評估所有運算子運算元。 有些運算子會視條件評估運算元。 也就是說，這類運算子第一個運算元的值會定義是否應該評估 (或要評估的) 其他運算元。 這些運算子包括條件式邏輯 [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) 和 [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 運算子、[null 聯合運算子 `??`](null-coalescing-operator.md)、[null 條件式運算子 `?.``?[]`](member-access-operators.md#null-conditional-operators--and-)和[條件式運算子 `?:`](conditional-operator.md)。 如需更多詳細資料，請參閱每個運算子的說明。
+
+## <a name="c-language-specification"></a>C# 語言規格
+
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[運算子](~/_csharplang/spec/expressions.md#operators)一節。
+
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [運算子](../../programming-guide/statements-expressions-operators/operators.md)
+- [運算式](../../programming-guide/statements-expressions-operators/expressions.md)

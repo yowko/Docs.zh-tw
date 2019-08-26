@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423862"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950687"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>事件架構非同步模式概觀
 要同時執行許多工作，還能繼續回應使用者互動，這樣的應用程式通常都需要可以使用多執行緒的設計。 <xref:System.Threading> 命名空間提供建立高效能多執行緒應用程式的所有必要工具，但是要有效地使用這些工具，需要具備多執行緒軟體工程的豐富經驗。 對於較簡單的多執行緒應用程式，<xref:System.ComponentModel.BackgroundWorker> 元件提供了簡單明瞭的方案。 如果是較為複雜精細的非同步應用程式，請考慮實作遵守事件架構非同步模式的類別。  
@@ -115,7 +115,7 @@ public class AsyncExample
  如果使用多個引動過程多載，程式碼就必須持續追蹤暫止工作的 `userState` 物件 (工作 ID)。 對於 `Method1Async(string param, object userState)` 的每個呼叫，一般都會產生新的、唯一的 `userState` 物件，並將該物件加入至集合中。 當對應至這個 `userState` 物件的工作引發完成事件時，完成方法實作就會檢查 <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType>，並將它從您的集合中移除。 如果使用這種方式，`userState` 參數就會成為工作 ID。  
   
 > [!NOTE]
->  在對多個引動過程多載的呼叫中，請務必謹慎地為 `userState` 提供唯一值。 非唯一的工作 ID 將會使非同步類別擲回 <xref:System.ArgumentException>。  
+> 在對多個引動過程多載的呼叫中，請務必謹慎地為 `userState` 提供唯一值。 非唯一的工作 ID 將會使非同步類別擲回 <xref:System.ArgumentException>。  
   
 ### <a name="canceling-pending-operations"></a>取消暫止的作業  
  在非同步作業完成之前，隨時都能取消這些作業是非常重要的。 實作事件架構非同步模式的類別會具有 `CancelAsync` 方法 (如果只有一個非同步方法) 或 _MethodName_**AsyncCancel** 方法 (如果有多個非同步方法)。  

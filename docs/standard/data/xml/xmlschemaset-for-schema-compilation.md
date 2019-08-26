@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615379"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969022"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用於結構描述編譯的 XmlSchemaSet
 說明 <xref:System.Xml.Schema.XmlSchemaSet>，它是一種可儲存及驗證 XML 結構描述定義語言 (XSD) 結構描述的快取。  
@@ -133,12 +133,12 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  透過 <xref:System.Xml.Schema.XmlSchemaSet> 的 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法，可將 <xref:System.Xml.Schema.XmlSchemaSet> 中的結構描述編譯成一個邏輯結構描述。  
   
 > [!NOTE]
->  不同於過時的 <xref:System.Xml.Schema.XmlSchemaCollection> 類別，當呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法時，不會編譯結構描述。  
+> 不同於過時的 <xref:System.Xml.Schema.XmlSchemaCollection> 類別，當呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法時，不會編譯結構描述。  
   
  如果 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法執行成功，則 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 屬性會設為 `true`。  
   
 > [!NOTE]
->  如果結構描述是在 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 時編輯的，則 <xref:System.Xml.Schema.XmlSchemaSet> 屬性不受影響。 也不會追蹤 <xref:System.Xml.Schema.XmlSchemaSet> 中個別結構描述的更新。 因此，即使 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 中的其中一個結構描述已變更，只要未在 `true` 中加入或移除結構描述，<xref:System.Xml.Schema.XmlSchemaSet> 屬性就可為 <xref:System.Xml.Schema.XmlSchemaSet>。  
+> 如果結構描述是在 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 時編輯的，則 <xref:System.Xml.Schema.XmlSchemaSet> 屬性不受影響。 也不會追蹤 <xref:System.Xml.Schema.XmlSchemaSet> 中個別結構描述的更新。 因此，即使 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 中的其中一個結構描述已變更，只要未在 `true` 中加入或移除結構描述，<xref:System.Xml.Schema.XmlSchemaSet> 屬性就可為 <xref:System.Xml.Schema.XmlSchemaSet>。  
   
  下列範例會將 `books.xsd` 檔案加入至 <xref:System.Xml.Schema.XmlSchemaSet>，然後呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法。  
   

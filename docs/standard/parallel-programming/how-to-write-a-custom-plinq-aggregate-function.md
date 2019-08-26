@@ -1,5 +1,5 @@
 ---
-title: HOW TO：撰寫自訂 PLINQ 彙總函式
+title: 作法：撰寫自訂 PLINQ 彙總函式
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03bbb9b7cf33eda1cc479759740e6c5325f635fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09e128c98b61ecc4ac673d8c9911f4bac476d521
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580664"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988439"
 ---
-# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>HOW TO：撰寫自訂 PLINQ 彙總函式
+# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>作法：撰寫自訂 PLINQ 彙總函式
 此範例示範如何使用 <xref:System.Linq.ParallelEnumerable.Aggregate%2A> 方法，將自訂彙總函式套用至來源序列。  
   
 > [!WARNING]
->  這個範例是為了示範用法，執行速度可能比不上對應的循序 LINQ to Objects 查詢。 如需加速的詳細資訊，請參閱[認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
+> 這個範例是為了示範用法，執行速度可能比不上對應的循序 LINQ to Objects 查詢。 如需加速的詳細資訊，請參閱[認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會計算整數序列的標準差。  

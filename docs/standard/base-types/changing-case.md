@@ -17,12 +17,12 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bce927c6426fc32cd2fe26dcc488432199612d
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648968"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987200"
 ---
 # <a name="changing-case-in-net"></a>在 .NET 中變更大小寫
 如果您要撰寫接受使用者輸入的應用程式，則無法確定使用者輸入資料時會使用大寫或小寫。 通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。 下表描述三種變更大小寫的方法。 前兩種方法提供接受文化特性的多載。  
@@ -34,7 +34,7 @@ ms.locfileid: "54648968"
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|將字串轉換成字首大寫。|  
   
 > [!WARNING]
->  請注意，您不應該使用 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法來轉換字串，以便對字串進行比較或測試字串是否相等。 如需詳細資訊，請參閱[比較混合大小寫的字串](#Comparing)一節。  
+> 請注意，您不應該使用 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法來轉換字串，以便對字串進行比較或測試字串是否相等。 如需詳細資訊，請參閱[比較混合大小寫的字串](#Comparing)一節。  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>比較混合大小寫的字串  

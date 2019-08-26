@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519b92cd24d75dd8e98fc28dbce3701c521a041d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a8fc6f59b7a295cb73489a644da80976345cb172
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922695"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的類型轉換
 <a name="top"></a>每個值都有相關聯的類型，該類型定義屬性，例如配置給值的空間量、能夠擁有的可能值範圍，以及提供的成員。 許多值都可以表示成多種類型。 例如，數值 4 就可以表示成整數值或浮點 (Floating-Point) 值。 類型轉換會建立新類型的值，與舊類型的值相等，但是不一定會保留原始物件的識別 (或實際的值)。  
@@ -63,7 +63,7 @@ ms.locfileid: "65593514"
  擴展轉換包含從現有類型的值來建立新的值，這個類型具有比目標類型更嚴格的範圍或更受限制的成員清單。 擴展轉換不可能導致資料遺失 (雖然可能導致精確度降低)。 因為不可能遺失資料，編譯器可以隱含地 (或直接地) 處理轉換，而不需要使用明確的轉換方法或轉型運算子。  
   
 > [!NOTE]
->  雖然執行隱含轉換的程式碼可以呼叫轉換方法或使用轉型運算子，但支援隱含轉換的編譯器並不需要這些動作。  
+> 雖然執行隱含轉換的程式碼可以呼叫轉換方法或使用轉型運算子，但支援隱含轉換的編譯器並不需要這些動作。  
   
  例如，<xref:System.Decimal> 類型支援從 <xref:System.Byte>、<xref:System.Char>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.UInt16>、<xref:System.UInt32> 和 <xref:System.UInt64> 值的隱含轉換。 下列範例說明其中一部分隱含轉換在指派值給 <xref:System.Decimal> 變數時的情形。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65593514"
  縮小轉換包含從現有類型的值來建立新的值，這個類型具有比目標類型更廣的範圍或更大的成員清單。 因為縮小轉換可能導致資料遺失，編譯器通常會要求必須透過呼叫轉換方法或轉型運算子來明確執行轉換。 也就是說，開發人員程式碼中必須明確處理轉換。  
   
 > [!NOTE]
->  縮小轉換需要轉換方法或轉型運算子的主要目的是讓開發人員知道可能遺失資料，或可能發生 <xref:System.OverflowException>，以便在程式碼中處理。 不過，某些編譯器可能會放寬這項需求。 例如，在 Visual Basic 中，如果 `Option Strict` 已關閉 (此為預設)，則 Visual Basic 編譯器會嘗試隱含地執行縮小轉換。  
+> 縮小轉換需要轉換方法或轉型運算子的主要目的是讓開發人員知道可能遺失資料，或可能發生 <xref:System.OverflowException>，以便在程式碼中處理。 不過，某些編譯器可能會放寬這項需求。 例如，在 Visual Basic 中，如果 `Option Strict` 已關閉 (此為預設)，則 Visual Basic 編譯器會嘗試隱含地執行縮小轉換。  
   
  例如，<xref:System.UInt32>、<xref:System.Int64> 和 <xref:System.UInt64> 資料類型的範圍超過 <xref:System.Int32> 資料類型的範圍，如下表所示。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65593514"
  大多數的編譯器都允許明確轉換以已檢查或未檢查的方式執行。 如果執行已檢查的轉換，當要轉換之類型的值不在目標類型的範圍內時，則會擲回 <xref:System.OverflowException>。 在同樣的狀況下執行未檢查的轉換時，轉換可能不會擲回例外狀況，但實際行為會變得不明確，且可能產生不正確的值。  
   
 > [!NOTE]
->  在 C# 中，已檢查的轉換可以透過使用 `checked` 關鍵字搭配轉型運算子來執行，也可以指定 `/checked+` 編譯器選項來執行。 相反地，未檢查的轉換可使用 `unchecked` 關鍵字搭配轉型運算子來執行，或可以指定 `/checked-` 編譯器選項來執行。 根據預設，明確轉換是未檢查的。 在 Visual Basic 中，已檢查的轉換可藉由清除專案的 [進階編譯器設定] 對話方塊中的 [移除整數的溢位檢查] 核取方塊來執行，或可以指定 `/removeintchecks-` 編譯器選項來執行。 相反地，未檢查的轉換可以藉由選取專案的 [進階編譯器設定] 對話方塊中的 [移除整數的溢位檢查] 核取方塊來執行，也可以指定 `/removeintchecks+` 編譯器選項來執行。 根據預設，明確轉換是檢查的。  
+> 在 C# 中，已檢查的轉換可以透過使用 `checked` 關鍵字搭配轉型運算子來執行，也可以指定 `/checked+` 編譯器選項來執行。 相反地，未檢查的轉換可使用 `unchecked` 關鍵字搭配轉型運算子來執行，或可以指定 `/checked-` 編譯器選項來執行。 根據預設，明確轉換是未檢查的。 在 Visual Basic 中，已檢查的轉換可藉由清除專案的 [進階編譯器設定]  對話方塊中的 [移除整數的溢位檢查]  核取方塊來執行，或可以指定 `/removeintchecks-` 編譯器選項來執行。 相反地，未檢查的轉換可以藉由選取專案的 [進階編譯器設定]  對話方塊中的 [移除整數的溢位檢查]  核取方塊來執行，也可以指定 `/removeintchecks+` 編譯器選項來執行。 根據預設，明確轉換是檢查的。  
   
  下列 C# 範例使用 `checked` 和 `unchecked` 關鍵字，說明將超出 <xref:System.Byte> 範圍的值轉換為 <xref:System.Byte> 時的行為差異。 已檢查的轉換會擲回例外狀況，但未檢查的轉換會指派 <xref:System.Byte.MaxValue?displayProperty=nameWithType> 給 <xref:System.Byte> 變數。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "65593514"
  由於必須呼叫其介面上的轉換方法，而不是呼叫實作類型上的轉換方法，這種需求使得明確介面實作相當耗費資源。 相反地，在通用語言執行平台基底類型之間轉換時，我們建議您呼叫 <xref:System.Convert> 類別的適當成員。 如需詳細資訊，請參閱下一節 [Convert 類別](#Convert)。  
   
 > [!NOTE]
->  除了 .NET Framework 提供的 <xref:System.IConvertible> 介面和 <xref:System.Convert> 類別之外，個別語言可能還會提供執行轉換的方式。 例如，C# 使用轉型 (Casting) 運算子、Visual Basic 使用編譯器實作的轉換函式，例如 `CType`、`CInt` 和 `DirectCast`。  
+> 除了 .NET Framework 提供的 <xref:System.IConvertible> 介面和 <xref:System.Convert> 類別之外，個別語言可能還會提供執行轉換的方式。 例如，C# 使用轉型 (Casting) 運算子、Visual Basic 使用編譯器實作的轉換函式，例如 `CType`、`CInt` 和 `DirectCast`。  
   
  在大多數情況下，<xref:System.IConvertible> 介面的設計主要是支援在 .NET Framework 中的各基底類型之間轉換。 不過，也可以使用自訂類型來實作介面，以支援從該類型轉換至其他自訂類型。 如需詳細資訊，請參閱本主題稍後的[使用 ChangeType 方法的自訂轉換](#ChangeType)一節。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "65593514"
  <xref:System.Convert> 類別提供在基底類型之間轉換的語言中立方式，且所有以通用語言執行平台為目標的語言都可以使用。 它對於擴展和縮小轉換提供一組完整的方法，且對於不支援的轉換會擲回 <xref:System.InvalidCastException> (例如，將 <xref:System.DateTime> 值轉換為整數值)。 縮小轉換是在已檢查的情況下執行，如果轉換失敗，則會擲回 <xref:System.OverflowException>。  
   
 > [!IMPORTANT]
->  因為 <xref:System.Convert> 類別包含在每一個基底類型之間來回轉換的方法，所以不需要呼叫每一個基底類型的 <xref:System.IConvertible> 明確介面實作。  
+> 因為 <xref:System.Convert> 類別包含在每一個基底類型之間來回轉換的方法，所以不需要呼叫每一個基底類型的 <xref:System.IConvertible> 明確介面實作。  
   
  下列範例說明如何使用 <xref:System.Convert?displayProperty=nameWithType> 類別，在 .NET Framework 基底類型之間執行數個擴展和縮小轉換。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "65593514"
  <xref:System.Convert> 類別除了支援轉換為每一個基底類型，也可以用於將自訂類型轉換為一個或多個預先定義的類型。 這種轉換由 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法執行，而這個方法會進一步包裝對於 <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> 參數之 `value` 方法的呼叫。 這表示由 `value` 參數所表示的物件必須提供 <xref:System.IConvertible> 介面的實作。  
   
 > [!NOTE]
->  由於 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> 和 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法會使用 <xref:System.Type> 物件指定轉換 `value` 的目標類型，因此這兩種方法可以在編譯時期用來動態轉換不明類型的物件。 但請注意，<xref:System.IConvertible> 的 `value` 實作仍然必須支援這項轉換。  
+> 由於 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> 和 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法會使用 <xref:System.Type> 物件指定轉換 `value` 的目標類型，因此這兩種方法可以在編譯時期用來動態轉換不明類型的物件。 但請注意，<xref:System.IConvertible> 的 `value` 實作仍然必須支援這項轉換。  
   
  下列範例說明 <xref:System.IConvertible> 介面可能的實作，這種實作允許 `TemperatureCelsius` 物件轉換為 `TemperatureFahrenheit` 物件，反之亦然。 範例中定義一個基底類別 `Temperature`，這個類別實作 <xref:System.IConvertible> 介面並覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法。 衍生的 `TemperatureCelsius` 和 `TemperatureFahrenheit` 類別分別覆寫基底類別的 `ToType` 和 `ToString` 方法。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "65593514"
  .NET Framework 也可讓您延伸 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> 類別，並透過 <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType> 屬性來建立類型轉換子與類型之間的關聯，以定義自訂類型的類型轉換子。 下表特別強調這種作法與實作自訂類型之 <xref:System.IConvertible> 介面的差異。  
   
 > [!NOTE]
->  只要自訂類型有為其定義的類型轉換子，即會提供設計階段支援給自訂類型。  
+> 只要自訂類型有為其定義的類型轉換子，即會提供設計階段支援給自訂類型。  
   
 |使用 TypeConverter 的轉換|使用 IConvertible 的轉換|  
 |------------------------------------|-----------------------------------|  

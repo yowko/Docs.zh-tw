@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: efa3abdcb7aa9db6dee4f772c1c1564947151c96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267924"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949605"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準日期和時間格式字串
 標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。 任何包含一個以上字元 (包括空白字元) 的日期和時間格式字串都會解譯為自訂日期和時間格式字串；如需詳細資訊，請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 標準或自訂格式字串有兩種使用方式：  
@@ -79,7 +79,7 @@ ms.locfileid: "67267924"
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
->  如需有關自訂格式化日期與時間值所使用之模式或字串的詳細資訊，請參閱 <xref:System.Globalization.NumberFormatInfo> 類別主題。  
+> 如需有關自訂格式化日期與時間值所使用之模式或字串的詳細資訊，請參閱 <xref:System.Globalization.NumberFormatInfo> 類別主題。  
   
  在某些情況下，標準格式字串可做為不變之長自訂格式字串的簡便縮寫。 有四個標準格式字串屬於此分類："O" (或 "o")、"R" (或 "r")、"s" 和 "u"。 這些字串相當於不因文化特性而異所定義的自訂格式字串。 它們針對日期和時間值所產生的字串表示在各文化特性中都相同。 下表提供這四種標準日期和時間格式字串的相關資訊。  
   

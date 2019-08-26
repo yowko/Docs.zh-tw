@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774895"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923289"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 編譯器 (xsltc.exe)
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後編譯的樣式表可以直接傳遞到新的 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 您無法使用 xsltc.exe 產生簽署的組件。  
@@ -34,7 +34,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |選項|說明|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|為下列樣式表的類別指定名稱。 類別名稱可以是完整名稱。<br /><br /> 類別名稱預設為樣式表的名稱。 例如，如果編譯了樣式表 customers.xsl，預設類別名稱就是 customers。|  
-|`/debug[`+&#124;-`]`|指定是否要產生偵錯資訊。<br /><br /> 指定 `+` 或 `/debug` 會讓編譯器產生偵錯資訊，並將其放在程式資料庫 (PDB) 檔案中。 產生的 PDB 檔案名稱是 `assemblyName`.pdb。<br /><br /> 指定 `-` (當您未指定 `/debug` 時，它就會生效) 不會建立任何偵錯資訊。 產生正式版本組件。 **附註：** 在偵錯模式下編譯會對 XSLT 效能造成顯著的影響。|  
+|`/debug[`+&#124;-`]`|指定是否要產生偵錯資訊。<br /><br /> 指定 `+` 或 `/debug` 會讓編譯器產生偵錯資訊，並將其放在程式資料庫 (PDB) 檔案中。 產生的 PDB 檔案名稱是 `assemblyName`.pdb。<br /><br /> 指定 `-` (當您未指定 `/debug` 時，它就會生效) 不會建立任何偵錯資訊。 產生正式版本組件。 **注意：** 在偵錯模式下編譯會對 XSLT 效能造成顯著的影響。|  
 |`/help`|顯示工具的命令語法和選項。|  
 |`/nologo`|隱藏編譯器著作權訊息，使其無法顯示。|  
 |`/platform:` `string`|指定可執行組件的平台。 以下將描述有效的平台值：<br /><br /> `x86` 會編譯將由 32 位元、x86 相容的 Common Language Runtime 所執行的組件。<br /><br /> `x64` 會在支援 AMD64 或 EM64T 指令集的電腦上編譯將由 64 位元 Common Language Runtime 所執行的組件。<br /><br /> Itanium 會在搭載 Itanium 處理器的電腦上編譯要由 64 位元通用語言執行平台執行的組件。<br /><br /> `anycpu` 會編譯要在任何平台上執行的組件。 這是預設值。|  
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  XSLT 方案可由多個樣式表模組所組成。 xsltc.exe 工具會從樣式表產生組件。 然後此組件可以傳遞到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 如此將有助於在某些 XSLT 部署案例中減少效能成本。  
   
 > [!NOTE]
->  您也必須將編譯的組件當做參考併入應用程式中。  
+> 您也必須將編譯的組件當做參考併入應用程式中。  
   
  xsltc.exe 工具不會驗證類別 (`/class:`*name*) 或組件 (`/out:`*assemblyName*) 名稱。 如果這些名稱無效，Common Language Runtime 會擲回錯誤。  
   
@@ -85,5 +85,5 @@ xsltc booksort.xsl output.xsl
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [操作說明：使用組件執行 XSLT 轉換](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
+- [如何：使用組件執行 XSLT 轉換](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
 - [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：控制 PLINQ 查詢中的順序
+title: 作法：控制 PLINQ 查詢中的順序
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30be9fc661ce05a664f9e901edef621d9de62e34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7416f2f9c200d687d3f2c1f14b01cafdb48f85b1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713440"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988188"
 ---
-# <a name="how-to-control-ordering-in-a-plinq-query"></a>HOW TO：控制 PLINQ 查詢中的順序
+# <a name="how-to-control-ordering-in-a-plinq-query"></a>作法：控制 PLINQ 查詢中的順序
 這些範例示範如何使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 擴充方法來控制 PLINQ 查詢中的順序。  
   
 > [!WARNING]
->  這些範例主要是為了示範用法，執行速度可能比對應的循序 LINQ to Objects 查詢快或慢。  
+> 這些範例主要是為了示範用法，執行速度可能比對應的循序 LINQ to Objects 查詢快或慢。  
   
 ## <a name="example"></a>範例  
  下列範例會保留來源序列中的順序。 這有時是必要的；比方說，有些查詢運算子需要已排序的來源序列才能產生正確結果。  

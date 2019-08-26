@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377458"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960067"
 ---
 # <a name="exceptions-in-managed-threads"></a>Managed 執行緒中的例外狀況
 從 .NET Framework version 2.0 開始，通用語言執行平台允許執行緒中大多數未處理的例外狀況自然地繼續。 在大多數情況下，這表示未處理的例外狀況導致應用程式終止。  
   
 > [!NOTE]
->  這是 .NET Framework 1.0 和 1.1 的重大變更，其針對許多未處理的例外狀況提供了防護網 — 例如，執行緒集區執行緒中的例外狀況。 請參閱本主題後面的[從舊版變更](#ChangeFromPreviousVersions)。  
+> 這是 .NET Framework 1.0 和 1.1 的重大變更，其針對許多未處理的例外狀況提供了防護網 — 例如，執行緒集區執行緒中的例外狀況。 請參閱本主題後面的[從舊版變更](#ChangeFromPreviousVersions)。  
   
  通用語言執行平台針對用於控制程式流程的特定未處理例外狀況提供了防護網︰  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66377458"
  如果未在主要執行緒中，或在從 Unmanaged 程式碼進入執行平台的執行緒中處理這些例外狀況，這些例外狀況會正常進行，而導致應用程式終止。  
   
 > [!NOTE]
->  在任何 Managed 程式碼有機會安裝例外狀況處理常式之前，執行平台可能會擲回未處理的例外狀況。 即使 Managed 程式碼沒有機會處理這類例外狀況，但允許例外狀況自然地進行。  
+> 在任何 Managed 程式碼有機會安裝例外狀況處理常式之前，執行平台可能會擲回未處理的例外狀況。 即使 Managed 程式碼沒有機會處理這類例外狀況，但允許例外狀況自然地進行。  
   
 ## <a name="exposing-threading-problems-during-development"></a>公開開發期間的執行緒問題  
  若允許執行緒以無訊息模式失敗，而不終止應用程式，則可能偵測不到嚴重的程式設計問題。 這是長時間執行的服務和其他應用程式特有的問題。 因為執行緒失敗，所以程式狀態會逐漸變差。 應用程式效能可能會降低，或應用程式可能會停止回應。  
