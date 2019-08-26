@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 305c29e33f6cd421f39004e09d27c75b02ba8354
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591210"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912560"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>逐步解說：判斷 My.Application.Log 寫入資訊的位置 (Visual Basic)
 
@@ -24,10 +24,10 @@ ms.locfileid: "65591210"
 
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>判斷 My.Application.Log 的接聽程式
 
-1. 找出組件的組態檔。 如果您正在開發組件，則可以從 [方案總管] 存取 Visual Studio 中的 app.config。 否則組態檔名稱會是組件的名稱加上 ".config"，而且會位於與組件相同的目錄內。
+1. 找出組件的組態檔。 如果您正在開發組件，則可以從 [方案總管]  存取 Visual Studio 中的 app.config。 否則組態檔名稱會是組件的名稱加上 ".config"，而且會位於與組件相同的目錄內。
 
     > [!NOTE]
-    >  並非每個組件都有組態檔。
+    > 並非每個組件都有組態檔。
 
     組態檔為 XML 檔案。
 
@@ -55,7 +55,7 @@ ms.locfileid: "65591210"
 
     - 如簡介中所述，<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 接聽程式會寫入檔案記錄檔。
 
-    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 接聽程式會將資訊寫入由 `initializeData` 參數所指定的電腦事件記錄檔。 若要檢視事件記錄檔，您可以使用 [伺服器總管] 或 [Windows 事件檢視器]。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 接聽程式會將資訊寫入由 `initializeData` 參數所指定的電腦事件記錄檔。 若要檢視事件記錄檔，您可以使用 [伺服器總管] 或 [Windows 事件檢視器]。   如需詳細資訊，請參閱 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
 
     - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 接聽程式會寫入 `initializeData` 參數中指定的檔案。
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 0d96b9af0eaee81da8532c1facbfa8b1d1a8128f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c31f1243b1394bfe826b02c14c73faf402640849
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633502"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608423"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (C# 參考)
 
@@ -41,8 +41,8 @@ ms.locfileid: "65633502"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [Checked 與 Unchecked](checked-and-unchecked.md)
 - [checked](checked.md)

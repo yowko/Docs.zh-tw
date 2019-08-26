@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3dcee9c45cdbf029ccba90a963c9cea0a9c7ad4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644924"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963569"
 ---
 # <a name="pausing-and-interrupting-threads"></a>暫停和中斷執行緒
 
@@ -41,7 +41,7 @@ ms.locfileid: "64644924"
  您可藉由在封鎖的執行緒上呼叫 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 方法來中斷等候中的執行緒，以擲回 <xref:System.Threading.ThreadInterruptedException>，這會中斷執行緒的封鎖呼叫。 執行緒應該攔截 <xref:System.Threading.ThreadInterruptedException>並執行任何適合繼續進行的工作。 如果執行緒忽略例外狀況，則執行階段會攔截例外狀況，並停止執行緒。  
   
 > [!NOTE]
->  在呼叫 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 時，如果未封鎖目標執行緒，則到封鎖之前，執行緒不會中斷。 如果執行緒永不封鎖，它可在沒有任何中斷的情況下完成。  
+> 在呼叫 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 時，如果未封鎖目標執行緒，則到封鎖之前，執行緒不會中斷。 如果執行緒永不封鎖，它可在沒有任何中斷的情況下完成。  
   
  如果等候是 Managed 等候，那麼 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 兩者都會立即喚醒執行緒。 如果等候是非受控的等候 (例如，平台叫用 Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) 函式的呼叫)，則 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 都無法控制執行緒，直到它傳回或呼叫受控程式碼為止。 在 Managed 程式碼中，行為如下所示：  
   

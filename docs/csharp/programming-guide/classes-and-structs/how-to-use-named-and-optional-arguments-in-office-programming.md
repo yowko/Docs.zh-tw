@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: a8b09061157c45b865613c31ae1425e5820687f4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 708ed7582c353160ce15c5b5429951e12a0a3fed
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170390"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596652"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>作法：在 Office 程式設計中使用具名引數和選用引數 (C# 程式設計指南)
 C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的便利性、彈性和可讀性。 此外，這些功能還可大幅加速對 COM 介面 (例如 Microsoft Office Automation API) 的存取。  
@@ -108,4 +108,4 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
   
 ## <a name="see-also"></a>另請參閱
 
-- [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [具名和選擇性引數](./named-and-optional-arguments.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877530"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923890"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 您可以使用下列其中一種方式，透過定義方法以將引數傳送給 `Main` 方法：  
@@ -20,7 +20,7 @@ ms.locfileid: "65877530"
  [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
->  若要在 Windows Forms 應用程式的 `Main` 方法中啟用命令列引數，您必須手動修改 program.cs 中 `Main` 的簽章。 Windows Forms 設計工具所產生的程式碼會建立沒有輸入參數的 `Main`。 您也可以使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType>，以從主控台或 Windows 應用程式的任何點存取命令列引數。  
+> 若要在 Windows Forms 應用程式的 `Main` 方法中啟用命令列引數，您必須手動修改 program.cs 中 `Main` 的簽章。 Windows Forms 設計工具所產生的程式碼會建立沒有輸入參數的 `Main`。 您也可以使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType>，以從主控台或 Windows 應用程式的任何點存取命令列引數。  
   
  `Main` 方法的參數是代表命令列引數的 <xref:System.String> 陣列。 您通常會透過測試 `Length` 屬性來決定引數是否存在，例如：  
   
@@ -55,7 +55,7 @@ long num = Convert.ToInt64(s);
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2. 從 [開始] 畫面或 [開始] 功能表中，開啟 Visual Studio [開發人員命令提示字元] 視窗，然後巡覽至包含剛剛建立之檔案的資料夾。  
+2. 從 [開始]  畫面或 [開始]  功能表中，開啟 Visual Studio [開發人員命令提示字元]  視窗，然後巡覽至包含剛剛建立之檔案的資料夾。  
   
 3. 輸入下列命令以編譯應用程式。  
   
@@ -70,15 +70,15 @@ long num = Convert.ToInt64(s);
 5. 命令會產生以下輸出：`The factorial of 3 is 6.`  
   
 > [!NOTE]
->  在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁面](/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
+> 在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁面](/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
   
- 如需如何使用命令列引數的詳細資訊，請參閱[如何：使用命令列建立和使用組件](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
+ 如需如何使用命令列引數的詳細資訊，請參閱[如何：使用命令列建立和使用組件](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
-- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [C# 程式設計指南](../index.md)
+- [Main() 和命令列引數](./index.md)
+- [如何：顯示命令列引數](./how-to-display-command-line-arguments.md)
+- [Main() 傳回值](./main-return-values.md)
+- [類別](../classes-and-structs/classes.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e2cdaa312c037714a34e25e62ad318c9bc745ea7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953183"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 和非 Blittable 類型
-大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。 這些類型稱為「Blittable 類型」，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。  
+大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。 這些類型稱為「Blittable 類型」  ，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。  
   
  從平台叫用呼叫傳回的結構必須是 Blittable 類型。 平台叫用不支援非 Blittable 結構作為傳回類型。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "65469448"
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|轉換成具有固定記憶體配置的結構。|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
   
- COM Interop 只能支援類別和物件類型。 如需 Visual Basic、C# 和 C++ 中的對應類型，請參閱[類別庫概觀](../../../docs/standard/class-library-overview.md)。  
+ COM Interop 只能支援類別和物件類型。 如需 Visual Basic、C# 和 C++ 中的對應類型，請參閱[類別庫概觀](../../standard/class-library-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

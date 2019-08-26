@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589970"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939595"
 ---
 # <a name="script-blocks-using-msxslscript"></a>使用 msxsl:script 的指令碼區塊
 <xref:System.Xml.Xsl.XslCompiledTransform> 類別支援使用 `msxsl:script` 項目的內嵌指令碼。 載入樣式表時，程式碼文件物件模型 (CodeDOM) 會將任何已定義的函式編譯成 Microsoft Intermediate Language (MSIL)，並在執行階段期間執行。 從內嵌指令碼區塊產生的組件不同於為樣式表產生的組件。  
@@ -22,7 +22,7 @@ ms.locfileid: "64589970"
  內嵌指令碼支援是 <xref:System.Xml.Xsl.XslCompiledTransform> 類別上的選擇性 XSLT 設定。 預設會停用指令碼支援。 若要啟用指令碼支援，請建立 <xref:System.Xml.Xsl.XsltSettings> 物件 (將 <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> 屬性設為 `true`)，並將該物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法。  
   
 > [!NOTE]
->  僅當需要指令碼支援且在完全受信任的環境中運作時，才應啟用 XSLT 指令碼。  
+> 僅當需要指令碼支援且在完全受信任的環境中運作時，才應啟用 XSLT 指令碼。  
   
 ## <a name="msxslscript-element-definition"></a>msxsl:script 項目定義  
  `msxsl:script` 項目是 XSLT 1.0 版建議事項的 Microsoft 擴充功能，其定義如下：  
@@ -38,7 +38,7 @@ ms.locfileid: "64589970"
  `implements-prefix` 屬性是必要的。 這個屬性用來宣告命名空間，並把它與指令碼區塊產生關聯。 這個屬性的值是表示命名空間的前置詞。 這個前置詞可以被定義在樣式表內的任意處。  
   
 > [!NOTE]
->  使用 `msxsl:script` 項目時，無論所使用的語言為何，都強烈建議將指令碼置於 CDATA 區段內。 因為指令碼可能包含給定語言的運算子、識別項或分隔符號，所以如果未包含在 CDATA 區段中，則有可能會錯誤解譯為 XML。 下列 XML 顯示可將程式碼放置其中的 CDATA 區段範本。  
+> 使用 `msxsl:script` 項目時，無論所使用的語言為何，都強烈建議將指令碼置於 CDATA 區段內。 因為指令碼可能包含給定語言的運算子、識別項或分隔符號，所以如果未包含在 CDATA 區段中，則有可能會錯誤解譯為 XML。 下列 XML 顯示可將程式碼放置其中的 CDATA 區段範本。  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  

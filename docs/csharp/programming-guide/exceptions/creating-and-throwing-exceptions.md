@@ -8,15 +8,15 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: e569742943e121faeae340512544956b674da083
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 605a28f8f804c11a9a6636c7a17ec5782cc5a429
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595347"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590311"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>建立和擲回例外狀況 (C# 程式設計手冊)
-例外狀況是用來表示執行程式時發生錯誤。 建立描述錯誤的例外狀況物件，然後使用 [throw](../../../csharp/language-reference/keywords/throw.md) 關鍵字「擲回」。 執行階段接著會搜尋最相容的例外狀況處理常式。  
+例外狀況是用來表示執行程式時發生錯誤。 建立描述錯誤的例外狀況物件，然後使用 [throw](../../language-reference/keywords/throw.md) 關鍵字「擲回」  。 執行階段接著會搜尋最相容的例外狀況處理常式。  
   
  符合下列其中一或多個條件時，程式設計人員應該會擲回例外狀況：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "64595347"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)
+- [C# 程式設計指南](../index.md)
+- [例外狀況和例外狀況處理](./index.md)
 - [例外狀況階層架構](../../../standard/exceptions/index.md)
-- [例外狀況處理](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [例外狀況處理](./exception-handling.md)

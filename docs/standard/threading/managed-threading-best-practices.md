@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8319424c82327fd9743c573846663bdd76ed1b9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb262f5a02343aeb91c28eb21c939edef8a70f61
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644617"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666289"
 ---
 # <a name="managed-threading-best-practices"></a>受控執行緒處理最佳做法
 在為多執行緒功能設計程式時需要非常小心。 您可以藉由將要求排入佇列以供執行緒集區的執行緒執行，來降低大部分工作的複雜性。 本主題要解決的是更困難的情況，例如協調多個執行緒的工作，或處理封鎖起來的執行緒。  
@@ -96,7 +96,7 @@ else {
   
 - 鎖定執行個體時請小心，例如 C# 中的 `lock(this)` 或 Visual Basic 中的 `SyncLock(Me)`。 如果您應用程式中屬於該型別之外的其他程式碼鎖定物件，系統可能會發生死結。  
   
-- 請務必要確定已進入監視器的執行緒一律會離開該監視器，即使執行緒還在監視器內卻發生例外狀況時亦然。 C# [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) 陳述式和 Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 陳述式會自動提供這種行為，利用 **finally** 區塊來確保系統會呼叫 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>。 如果您無法確保系統會呼叫 **Exit**，請考慮將您的設計改為使用 **Mutex**。 目前擁有 Mutex 的執行緒在終止時會自動將其釋放。  
+- 請務必要確定已進入監視器的執行緒一律會離開該監視器，即使執行緒還在監視器內卻發生例外狀況時亦然。 C# [lock](../../csharp/language-reference/keywords/lock-statement.md) 陳述式和 Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 陳述式會自動提供這種行為，利用 **finally** 區塊來確保系統會呼叫 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>。 如果您無法確保系統會呼叫 **Exit**，請考慮將您的設計改為使用 **Mutex**。 目前擁有 Mutex 的執行緒在終止時會自動將其釋放。  
   
 - 對於需要不同資源的工作，請使用多個執行緒，並避免將多個執行緒指派給單一資源。 例如，任何涉及 I/O 的工作都可受惠於擁有自己的執行緒，因為該執行緒會在 I/O 作業期間封鎖起來，進而讓其他執行緒得以執行。 使用者輸入是受惠於專用執行緒的另一項資源。 在單一處理器電腦上，涉及大量計算的工作會與使用者輸入共存，並與涉及 I/O 的工作共存，但多個需要大量計算的工作會彼此爭用。  
   

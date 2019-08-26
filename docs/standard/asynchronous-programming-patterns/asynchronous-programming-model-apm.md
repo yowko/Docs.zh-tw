@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628945"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950875"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同步程式設計模型 (APM)
 使用 <xref:System.IAsyncResult> 設計模式的非同步作業會實作為兩種方法，一種名為 `BeginOperationName`，另一種名為 `EndOperationName`，這兩種方法分別負責開始和結束非同步作業 *OperationName*。 例如， <xref:System.IO.FileStream> 類別提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法，以非同步方式讀取檔案的位元組。 這些方法實作 <xref:System.IO.FileStream.Read%2A> 方法的非同步版本。  
   
 > [!NOTE]
->  從 .NET Framework 4 開始，工作平行程式庫會為非同步處理和平行程式設計提供新的模型。 如需詳細資訊，請參閱 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 和 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。  
+> 從 .NET Framework 4 開始，工作平行程式庫會為非同步處理和平行程式設計提供新的模型。 如需詳細資訊，請參閱 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 和 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。  
   
  呼叫 `BeginOperationName` 之後，應用程式可以繼續對進行呼叫的執行緒執行指令，而非同步作業會在不同的執行緒上執行。 每次呼叫 `BeginOperationName` 後，應用程式也要呼叫 `EndOperationName` 才能取得作業的結果。  
   
@@ -48,10 +48,10 @@ ms.locfileid: "64628945"
  如果呼叫 `EndOperationName` 時，<xref:System.IAsyncResult> 物件所代表的非同步作業還沒有完成，`EndOperationName` 就會封鎖呼叫執行緒，直到非同步作業完成為止。 非同步作業所擲回的例外狀況都是從 `EndOperationName` 方法擲回。 使用相同的 `EndOperationName` 多次呼叫 <xref:System.IAsyncResult> 方法的效果尚未定義。 使用並非由相關 Begin 方法所傳回的 <xref:System.IAsyncResult> 呼叫 `EndOperationName` 方法的方式，也同樣尚未定義。  
   
 > [!NOTE]
->  對任一未定義的情況，實施者應該考慮擲回 <xref:System.InvalidOperationException>。  
+> 對任一未定義的情況，實施者應該考慮擲回 <xref:System.InvalidOperationException>。  
   
 > [!NOTE]
->  這個設計模式的實施者應該告知呼叫端，非同步作業已透過將 <xref:System.IAsyncResult.IsCompleted%2A> 設定為 true、呼叫非同步回呼方法 (如果有指定) 和傳送訊號給 <xref:System.IAsyncResult.AsyncWaitHandle%2A>而完成。  
+> 這個設計模式的實施者應該告知呼叫端，非同步作業已透過將 <xref:System.IAsyncResult.IsCompleted%2A> 設定為 true、呼叫非同步回呼方法 (如果有指定) 和傳送訊號給 <xref:System.IAsyncResult.AsyncWaitHandle%2A>而完成。  
   
  應用程式開發人員有數項設計選擇，可存取非同步作業的結果。 正確的選擇取決於當作業完成時，應用程式是否有可以執行的指示。 如果應用程式一直到接收到非同步作業的結果，都無法執行任何額外的工作，它就必須封鎖直到取得結果為止。 若要封鎖到非同步作業完成，您可以使用下列方法的其中之一：  
   

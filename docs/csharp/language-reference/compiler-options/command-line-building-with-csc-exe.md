@@ -5,19 +5,19 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833353"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606985"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 建置命令列
 您可以在命令提示字元中輸入 C# 編譯器的可執行檔名稱 (*csc.exe*)，藉此叫用該編譯器。
 
 如果您使用 [Visual Studio 的開發人員命令提示字元]  視窗，所有必要的環境變數都會自動完成設定。 如需如何存取此工具的資訊，請參閱 [Visual Studio 的開發人員命令提示字元](../../../framework/tools/developer-command-prompt-for-vs.md)主題。 
 
-如果您使用標準 [命令提示字元] 視窗，則必須先調整路徑，才能在電腦上的任何子目錄中叫用 *csc.exe*。 您也必須執行 *vsvars32.bat* 來設定適當的環境變數，以便支援命令列組建。 如需 *vsvars32.bat* 的詳細資訊，包括如何尋找和執行的指示，請參閱[如何：為 Visual Studio 命令列設定環境變數](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
+如果您使用標準 [命令提示字元] 視窗，則必須先調整路徑，才能在電腦上的任何子目錄中叫用 *csc.exe*。 您也必須執行 *vsvars32.bat* 來設定適當的環境變數，以便支援命令列組建。 如需 *vsvars32.bat* 的詳細資訊，包括如何尋找和執行的指示，請參閱[如何：為 Visual Studio 命令列設定環境變數](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
 
 如果您是在只有 Windows 軟體開發套件 (SDK) 的電腦上工作，則可以在 [SDK 命令提示字元]  (其可從 [Microsoft .NET Framework SDK]  功能表選項開啟) 中使用 C# 編譯器。
 
@@ -97,10 +97,10 @@ csc -target:library -out:Something.xyz *.cs
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
-- [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)
-- [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [命令列引數](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
-- [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [C# 編譯器選項](./index.md)
+- [依字母順序列出 C# 編譯器選項](./listed-alphabetically.md)
+- [依分類列出的 C# 編譯器選項](./listed-by-category.md)
+- [Main() 和命令列引數](../../programming-guide/main-and-command-args/index.md)
+- [命令列引數](../../programming-guide/main-and-command-args/command-line-arguments.md)
+- [如何：顯示命令列引數](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Main() 傳回值](../../programming-guide/main-and-command-args/main-return-values.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629577"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915426"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Form ActiveX 控制項匯入工具)
 ActiveX 控制項匯入工具可以將 ActiveX 控制項在 COM 類型程式庫中的類型定義，轉換成 Windows Form 控制項。  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|隱藏 Microsoft 程式啟始資訊顯示。|  
 |`/out:` *filename*|指定要建立的組件名稱。|  
 |`/publickey:` *filename*|使用由 *filename* 所指定之檔案中找到的公開金鑰，以強式名稱簽署產生的控制項。|  
-|`/rcw:` *filename*|使用指定的執行階段可呼叫包裝函式，而不是產生新的執行階段可呼叫包裝函式。 您可以指定多個執行個體。 目前的目錄用於相對路徑。 如需詳細資訊，請參閱[執行階段可呼叫包裝函式](../../../docs/standard/native-interop/runtime-callable-wrapper.md)。|  
+|`/rcw:` *filename*|使用指定的執行階段可呼叫包裝函式，而不是產生新的執行階段可呼叫包裝函式。 您可以指定多個執行個體。 目前的目錄用於相對路徑。 如需詳細資訊，請參閱[執行階段可呼叫包裝函式](../../standard/native-interop/runtime-callable-wrapper.md)。|  
 |`/silent`|隱藏顯示成功訊息。|  
 |`/source`|產生 Windows Form 包裝函式的 C# 原始程式碼。|  
 |`/verbose`|指定詳細資訊模式；顯示其他進度資訊。|  
@@ -62,7 +62,7 @@ aximp [options]{file.dll | file.ocx}
  適用於 ActiveX 控制項的 Windows Forms Proxy (其中 Ax 代表 ActiveX)：Ax*progid*.dll  
   
 > [!NOTE]
->  如果 ActiveX 控制項的成員名稱符合 .NET Framework 中定義的名稱，則 Aximp.exe 在建立 AxHost 衍生類別時就會在成員名稱前面加上 "Ctl"。 例如，如果您的 ActiveX 控制項有一個名為 "Layout" 的成員，它在 AxHost 衍生類別中就會被重新命名為 "CtlLayout"，因為 Layout 事件是在 .NET Framework 中定義的。  
+> 如果 ActiveX 控制項的成員名稱符合 .NET Framework 中定義的名稱，則 Aximp.exe 在建立 AxHost 衍生類別時就會在成員名稱前面加上 "Ctl"。 例如，如果您的 ActiveX 控制項有一個名為 "Layout" 的成員，它在 AxHost 衍生類別中就會被重新命名為 "CtlLayout"，因為 Layout 事件是在 .NET Framework 中定義的。  
   
  您可以使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 這類工具，檢查這些產生的檔案。  
   

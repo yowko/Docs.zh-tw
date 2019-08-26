@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1879f5b5aa2fbe6b0e51f9b38fca3af1f4c0cedf
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 48d550a526336cf3e9de9cb53a16ddcf86f3af5d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971762"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946520"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>將 .NET Framework 元件公開給 COM
 
 撰寫 .NET 類型和從 Unmanaged 程式碼取用該類型，對開發人員來說是不同的活動。 本節描述幾個撰寫與 COM 用戶端交互操作之 Managed 程式碼的祕訣：
 
-- [限定交互操作的 .NET 類型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)。
+- [限定交互操作的 .NET 類型](../../standard/native-interop/qualify-net-types-for-interoperation.md)。
 
      所有您想要公開給 COM 的 Managed 類型、方法、屬性、欄位和事件，都必須是公用的。 型別必須有公用無參數建構函式，它是可透過 COM 叫用的唯一建構函式。
 
-- [套用 Interop 屬性](../../../docs/standard/native-interop/apply-interop-attributes.md)。
+- [套用 Interop 屬性](../../standard/native-interop/apply-interop-attributes.md)。
 
      Managed 程式碼中的自訂屬性，可以加強元件的互通性。
 

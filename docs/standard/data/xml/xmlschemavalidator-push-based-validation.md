@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e2b6ca8ef04ad6ff637a59f03f3b4cf04cb06ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e37a6657c9fc6315b6b77ed3cfc07d969317fc5c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615357"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966939"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 推入型驗證
 <xref:System.Xml.Schema.XmlSchemaValidator> 類別提供有效率的高效能機制，可根據 XML 結構描述以推入方式驗證 XML 資料。 例如，<xref:System.Xml.Schema.XmlSchemaValidator> 類別可讓您就地驗證 XML 資訊集，而無需將其序列化為 XML 文件，然後使用驗證 XML 讀取器重新剖析該文件。  
@@ -23,7 +23,7 @@ ms.locfileid: "64615357"
  以下是使用 <xref:System.Xml.Schema.XmlSchemaValidator> 類別，根據 `contosoBooks.xml` 結構描述驗證 `contosoBooks.xsd` 檔案的範例。 此範例使用 <xref:System.Xml.Serialization.XmlSerializer> 類別，將 `contosoBooks.xml` 檔案還原序列化，並將節點的值傳遞給 <xref:System.Xml.Schema.XmlSchemaValidator> 類別的方法。  
   
 > [!NOTE]
->  此範例用於本主題的各節中。  
+> 此範例用於本主題的各節中。  
   
  [!code-csharp[XmlSchemaValidatorExamples#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
  [!code-vb[XmlSchemaValidatorExamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
@@ -137,7 +137,7 @@ validator.ValidateEndElement(null);
  <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 類別的 <xref:System.Xml.Schema.XmlSchemaValidator> 方法，可用於在驗證期間將 XML 結構描述加入至一組結構描述。 <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 方法可用於模擬在要驗證之 XML 資訊集中遇到內嵌 XML 結構描述時的效果。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchema> 參數的目標命名空間與 <xref:System.Xml.Schema.XmlSchemaValidator> 物件已遇到之任何項目或屬性的目標命名空間均不相符。  
+> <xref:System.Xml.Schema.XmlSchema> 參數的目標命名空間與 <xref:System.Xml.Schema.XmlSchemaValidator> 物件已遇到之任何項目或屬性的目標命名空間均不相符。  
 >   
 >  如果未將 <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema?displayProperty=nameWithType> 值做為參數傳遞給 <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A> 建構函式，則 <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 方法將不起作用。  
   
@@ -160,7 +160,7 @@ validator.ValidateEndElement(null);
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|結束驗證，並且若已設定 <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints> 驗證選項，則檢查整個 XML 文件的識別條件約束。|  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator> 類別具有定義的狀態轉換，可強制轉換對前一表格中說明之每個方法的呼叫順序及次數。 <xref:System.Xml.Schema.XmlSchemaValidator> 類別的特定狀態轉換，在本主題的＜XmlSchemaValidator 狀態轉換＞一節中加以說明。  
+> <xref:System.Xml.Schema.XmlSchemaValidator> 類別具有定義的狀態轉換，可強制轉換對前一表格中說明之每個方法的呼叫順序及次數。 <xref:System.Xml.Schema.XmlSchemaValidator> 類別的特定狀態轉換，在本主題的＜XmlSchemaValidator 狀態轉換＞一節中加以說明。  
   
  如需用來驗證 XML 資訊集中項目、屬性及內容之方法的範例，請參閱前一節中的範例。 如需這些方法的詳細資訊，請參閱 <xref:System.Xml.Schema.XmlSchemaValidator> 類別參考文件。  
   
@@ -243,7 +243,7 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
  當內容模型的複合器為 `xs:sequence` 時，只傳回序列中的下一個物件。 如果內容模型的複合器為 `xs:all` 或 `xs:choice`，則傳回目前項目內容中所有後續的有效物件。  
   
 > [!NOTE]
->  如果在呼叫 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法後立即呼叫<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 方法，則 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法會傳回所有的全域項目。  
+> 如果在呼叫 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法後立即呼叫<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 方法，則 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法會傳回所有的全域項目。  
   
  例如，在隨後的 XML 結構描述定義語言 (XSD) 結構描述及 XML 文件中，驗證 `book` 項目之後，`book` 項目會成為目前的項目內容。 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法會傳回包含單一 <xref:System.Xml.Schema.XmlSchemaElement> 物件的陣列，該物件表示 `title` 項目。 當驗證內容為 `title` 項目時，<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法會傳回空陣列。 如果在驗證 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 項目之後、驗證 `title` 項目之前，呼叫 `description` 方法，則它會傳回包含單一 <xref:System.Xml.Schema.XmlSchemaElement> 物件的陣列，該物件表示 `description` 項目。 如果在驗證 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 項目之後呼叫 `description` 方法，則它會傳回包含單一 <xref:System.Xml.Schema.XmlSchemaAny> 物件的陣列，該物件表示萬用字元。  
   
@@ -370,7 +370,7 @@ validator.ValidateEndElement(null);
  `</book>`  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 及 <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 類別之 <xref:System.Xml.Schema.XmlSchemaValidator> 方法的結果，取決於要驗證的目前內容。 如需詳細資訊，請參閱本主題的＜驗證內容＞一節。  
+> <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 及 <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 類別之 <xref:System.Xml.Schema.XmlSchemaValidator> 方法的結果，取決於要驗證的目前內容。 如需詳細資訊，請參閱本主題的＜驗證內容＞一節。  
   
  如需 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法的範例，請參閱簡介中的範例。 如需 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> 方法的詳細資訊，請參閱 <xref:System.Xml.Schema.XmlSchemaValidator> 類別參考文件。  
   
@@ -382,7 +382,7 @@ validator.ValidateEndElement(null);
  如果在呼叫 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 方法之後立即呼叫 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> 方法，則會傳回 XML 文件中出現的所有屬性。 但是，如果在對 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 方法進行一或多次呼叫之後呼叫 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> 方法，則會傳回目前項目之尚未驗證的屬性。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 及 <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 類別之 <xref:System.Xml.Schema.XmlSchemaValidator> 方法的結果，取決於要驗證的目前內容。 如需詳細資訊，請參閱本主題的＜驗證內容＞一節。  
+> <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 及 <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> 類別之 <xref:System.Xml.Schema.XmlSchemaValidator> 方法的結果，取決於要驗證的目前內容。 如需詳細資訊，請參閱本主題的＜驗證內容＞一節。  
   
  如需 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 方法的範例，請參閱簡介中的範例。 如需 <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> 方法的詳細資訊，請參閱 <xref:System.Xml.Schema.XmlSchemaValidator> 類別參考文件。  
   
@@ -442,7 +442,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |內容|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 項目|  
   
 > [!NOTE]
->  根據 <xref:System.InvalidOperationException> 物件的目前狀態，如果呼叫上表中的每個方法的順序不正確，則它們會擲回 <xref:System.Xml.Schema.XmlSchemaValidator>。  
+> 根據 <xref:System.InvalidOperationException> 物件的目前狀態，如果呼叫上表中的每個方法的順序不正確，則它們會擲回 <xref:System.Xml.Schema.XmlSchemaValidator>。  
   
  以上狀態轉換表會使用標點符號，說明可針對 <xref:System.Xml.Schema.XmlSchemaValidator> 類別之狀態轉換的每個狀態呼叫的方法及其他狀態。 所使用的符號與在物件型別定義 (DTD) 之 XML 標準參考中找到的符號相同。  
   
@@ -452,7 +452,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |------------|-----------------|  
 |&#124;|可呼叫方法或狀態 (垂直線前後的項目)。|  
 |?|問號之前的方法或狀態是選擇性的，但如果呼叫它，則只能呼叫一次。|  
-|*|* 符號之前的方法或狀態是選擇性的，可對其呼叫多次。|  
+|*|\* 符號之前的方法或狀態是選擇性的，可對其呼叫多次。|  
   
 ## <a name="validation-context"></a>驗證內容  
  用於驗證 XML 資訊集中項目、屬性及內容之 <xref:System.Xml.Schema.XmlSchemaValidator> 類別的方法，可變更 <xref:System.Xml.Schema.XmlSchemaValidator> 物件的驗證內容。 例如，<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> 方法會略過目前項目內容的驗證，並準備 <xref:System.Xml.Schema.XmlSchemaValidator> 物件以驗證父項目內容 (Context) 中的內容 (Content)；這相當於略過目前項目之所有項目子系的驗證，並呼叫 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> 方法。  
@@ -475,7 +475,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|傳回空陣列。|傳回空陣列。|同上。|  
   
 > [!NOTE]
->  呼叫上表中的任何方法，均不會改變 <xref:System.Xml.Schema.XmlSchemaValidator> 類別之各種屬性所傳回的值。  
+> 呼叫上表中的任何方法，均不會改變 <xref:System.Xml.Schema.XmlSchemaValidator> 類別之各種屬性所傳回的值。  
   
 ## <a name="see-also"></a>另請參閱
 

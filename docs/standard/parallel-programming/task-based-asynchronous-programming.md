@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300628"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666310"
 ---
 # <a name="task-based-asynchronous-programming"></a>工作型非同步程式設計
 
@@ -256,11 +256,11 @@ ms.locfileid: "66300628"
 
 ## <a name="tasks-without-delegates"></a>不含委派的工作
 
-在某些情況下，您可能需要使用 <xref:System.Threading.Tasks.Task> 來封裝由外部元件 (而非您自己的使用者委派) 所執行的一些非同步作業。 如果作業是根據非同步程式設計模型 Begin/End 模式，您可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是根據這個模式，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件將作業包裝在工作中，進而享有利用 <xref:System.Threading.Tasks.Task> 撰寫程式的一些優點，例如支援例外狀況傳播和接續。 如需詳細資訊，請參閱<xref:System.Threading.Tasks.TaskCompletionSource%601>。
+在某些情況下，您可能需要使用 <xref:System.Threading.Tasks.Task> 來封裝由外部元件 (而非您自己的使用者委派) 所執行的一些非同步作業。 如果作業是根據非同步程式設計模型 Begin/End 模式，您可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是根據這個模式，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件將作業包裝在工作中，進而享有利用 <xref:System.Threading.Tasks.Task> 撰寫程式的一些優點，例如支援例外狀況傳播和接續。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskCompletionSource%601>。
 
 ## <a name="custom-schedulers"></a>自訂排程器
 
-大部分的應用程式或程式庫開發人員並不在意工作會在哪一個處理器上執行、工作會如何將自己的成品與其他工作同步，或是工作會如何排定在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 上。 他們只要求工作能夠在主機電腦上盡可能有效率地執行。 如果您需要進一步控制排程細節，工作平行程式庫可讓您設定預設工作排程器上的某些設定，甚至可讓您提供自訂的排程器。 如需詳細資訊，請參閱<xref:System.Threading.Tasks.TaskScheduler>。
+大部分的應用程式或程式庫開發人員並不在意工作會在哪一個處理器上執行、工作會如何將自己的成品與其他工作同步，或是工作會如何排定在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 上。 他們只要求工作能夠在主機電腦上盡可能有效率地執行。 如果您需要進一步控制排程細節，工作平行程式庫可讓您設定預設工作排程器上的某些設定，甚至可讓您提供自訂的排程器。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskScheduler>。
 
 ## <a name="related-data-structures"></a>相關資料結構
 
@@ -268,7 +268,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 
 ## <a name="custom-task-types"></a>自訂工作類型
 
-建議您不要繼承自 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>， 建議您改用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 屬性，建立其他資料或狀態與 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件的關聯。 您也可以使用擴充方法，擴充 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類別的功能。 如需擴充方法的詳細資訊，請參閱[擴充方法](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md)和[擴充方法](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md)。
+建議您不要繼承自 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>， 建議您改用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 屬性，建立其他資料或狀態與 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件的關聯。 您也可以使用擴充方法，擴充 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類別的功能。 如需擴充方法的詳細資訊，請參閱[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)和[擴充方法](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。
 
 如果必須繼承自 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，則不可以使用 <xref:System.Threading.Tasks.Task.Run%2A>、<xref:System.Threading.Tasks.Task.Run%2A> 或 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>、<xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 類別來建立自訂工作類型的執行個體，因為這些機制只會建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
 

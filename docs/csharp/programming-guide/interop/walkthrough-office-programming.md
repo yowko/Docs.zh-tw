@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: a9b7a32cc3eb9d65b7c4a8e241eedca14cbf11bb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8ed6e759f682f0db76938661fdcf668bec1eef1c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398144"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588978"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>逐步解說：Office 程式設計 (C# 與 Visual Basic)
 
 Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式設計的功能。 有助益的 C# 功能包括具名和選擇性引數以及類型為 `dynamic` 的傳回值。 在 COM 程式設計中，您可以省略 `ref` 關鍵字並存取索引的屬性。 Visual Basic 中的功能包含自動實作的屬性、Lambda 運算式中的陳述式，以及集合初始設定式。
 
-這兩種語言都會啟用類型資訊的內嵌，以允許部署與 COM 元件互動的組件，而不需要將主要 Interop 組件 (PIA) 部署至使用者電腦。 如需詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。
+這兩種語言都會啟用類型資訊的內嵌，以允許部署與 COM 元件互動的組件，而不需要將主要 Interop 組件 (PIA) 部署至使用者電腦。 如需詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。
 
 這個逐步解說會示範 Office 程式設計內容中的這些功能，但其中大部分也適用於一般的程式設計。 在這個逐步解說中，您會使用 Excel 增益集應用程式來建立 Excel 活頁簿。 接著，建立含有活頁簿連結的 Word 文件。 最後，了解如何啟用和停用 PIA 相依性。
 
@@ -94,7 +94,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 
     - [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) 方法提供用來指定特定範本的選擇性參數  。 如果您想要使用參數的預設值，則可利用選擇性參數 (C# 4 中的新功能) 省略該參數的引數。 因為上一個範例中未傳送引數，所以 `Add` 會使用預設範本並建立新的活頁簿。 舊版 C# 中對等的陳述式需要有預留位置引數：`excelApp.Workbooks.Add(Type.Missing)`。
 
-         如需詳細資訊，請參閱[具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)。
+         如需詳細資訊，請參閱[具名和選擇性引數](../classes-and-structs/named-and-optional-arguments.md)。
 
     - [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 物件的 `Range` 和 `Offset` 屬性會使用「編製過索引的屬性」  功能。 您可利用這項功能使用下列一般 C# 語法，來使用 COM 類型的這些屬性。 您可利用編製過索引的屬性，使用 `Value` 物件的 `Range` 屬性，而不需要使用 `Value2` 屬性。 `Value` 屬性編製過索引，但您可選擇是否要編製索引。 在下列範例中，同時使用了選擇性引數與編製過索引的屬性。
 
@@ -106,7 +106,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 
          您無法建立自己本身的編製過索引的屬性。 這個功能僅支援使用現有已編製過索引的屬性。
 
-         如需詳細資訊，請參閱[如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)。
+         如需詳細資訊，請參閱[如何：在 COM Interop 程式設計中使用已編製索引的屬性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)。
 
 2. 在 `DisplayInExcel` 結尾加入下列程式碼，以調整資料行寬度以容納內容。
 
@@ -114,13 +114,13 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     這些新增內容可示範 C# 中的另一項功能：將 COM 主機 (例如 Office) 傳回的 `Object` 值，視為具有 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 類型。 如果已將 [內嵌 Interop 類型]  設定為其預設值 `True`，則會自動發生這種情況；同樣地，當 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考了組件時也會如此。 `dynamic` 類型可以進行晚期繫結 (Visual Basic 中已有這個功能)，並避免在 C# 3.0 和語言舊版本中需要明確轉型。
+     這些新增內容可示範 C# 中的另一項功能：將 COM 主機 (例如 Office) 傳回的 `Object` 值，視為具有 [dynamic](../../language-reference/keywords/dynamic.md) 類型。 如果已將 [內嵌 Interop 類型]  設定為其預設值 `True`，則會自動發生這種情況；同樣地，當 [/link](../../language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考了組件時也會如此。 `dynamic` 類型可以進行晚期繫結 (Visual Basic 中已有這個功能)，並避免在 C# 3.0 和語言舊版本中需要明確轉型。
 
      例如，`excelApp.Columns[1]` 會傳回 `Object`；而 `AutoFit` 則為 Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 方法。 如果沒有 `dynamic`，則在呼叫 `excelApp.Columns[1]` 方法之前，必須將 `Range` 所傳回的物件，轉型為 `AutoFit` 執行個體。
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
-     如需內嵌 Interop 類型的詳細資訊，請參閱本主題稍後的＜尋找 PIA 參考＞和＜還原 PIA 相依性＞程序。 如需 `dynamic` 的詳細資訊，請參閱 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 或[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。
+     如需內嵌 Interop 類型的詳細資訊，請參閱本主題稍後的＜尋找 PIA 參考＞和＜還原 PIA 相依性＞程序。 如需 `dynamic` 的詳細資訊，請參閱 [dynamic](../../language-reference/keywords/dynamic.md) 或[使用動態類型](../types/using-type-dynamic.md)。
 
 ### <a name="to-invoke-displayinexcel"></a>叫用 DisplayInExcel
 
@@ -192,20 +192,20 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 ## <a name="see-also"></a>另請參閱
 
 - [自動實作的屬性 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [自動實作的屬性 (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [自動實作的屬性 (C#)](../classes-and-structs/auto-implemented-properties.md)
 - [集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)
 - [選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
 - [依位置和名稱傳遞引數](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
-- [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [具名和選擇性引數](../classes-and-structs/named-and-optional-arguments.md)
 - [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [使用動態型別](../types/using-type-dynamic.md)
 - [Lambda 運算式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Lambda 運算式 (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Lambda 運算式 (C#)](../statements-expressions-operators/lambda-expressions.md)
+- [如何：在 COM Interop 程式設計中使用已編製索引的屬性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120)) \(英文\)
-- [逐步解說：從受控組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [逐步解說：從受控組件內嵌類型](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [逐步解說：建立 Excel 的第一個 VSTO 增益集](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
-- [互通性](../../../csharp/programming-guide/interop/index.md)
+- [互通性](./index.md)

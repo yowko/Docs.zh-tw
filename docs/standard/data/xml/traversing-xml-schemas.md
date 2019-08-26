@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 5fd81a7eaf299217a17cd8051d77cd7a3695441e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939453"
 ---
 # <a name="traversing-xml-schemas"></a>周遊 XML 結構描述
 使用結構描述物件模型 (SOM) API 周遊 XML 結構描述，可以提供對儲存於 SOM 之項目、屬性及型別的存取權。 周遊載入到 SOM 的 XML 結構描述也是使用 SOM API 編輯 XML 結構描述的第一步。  
@@ -29,13 +29,13 @@ ms.locfileid: "59305035"
 |<xref:System.Xml.Schema.XmlSchema.AttributeGroups%2A>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Groups%2A>|<xref:System.Xml.Schema.XmlSchemaGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>、<xref:System.Xml.Schema.XmlSchemaInclude>、<xref:System.Xml.Schema.XmlSchemaImport> 或 <xref:System.Xml.Schema.XmlSchemaRedefine>|  
-|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (可提供對所有全域層級項目、屬性及類型的存取權)。|  
+|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (可提供對所有全域層級項目、屬性及型別的存取權)。|  
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|  
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>中， <xref:System.Xml.Schema.XmlSchemaSimpleType>中， <xref:System.Xml.Schema.XmlSchemaComplexType>|  
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>、<xref:System.Xml.Schema.XmlSchemaSimpleType>、<xref:System.Xml.Schema.XmlSchemaComplexType>|  
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (提供對不屬於結構描述命名空間之屬性的存取權)|  
   
 > [!NOTE]
->  上述表格中列出的所有屬性 (除 <xref:System.Xml.Schema.XmlSchema.Items%2A> 屬性之外)，都是後結構描述編譯資訊集 (PSCI) 屬性，僅在編譯結構描述之後才可用。 <xref:System.Xml.Schema.XmlSchema.Items%2A> 屬性是前結構描述編譯屬性，其可在編譯結構描述之前使用，以存取及編輯所有全域層級項目、屬性及型別。  
+> 上述表格中列出的所有屬性 (除 <xref:System.Xml.Schema.XmlSchema.Items%2A> 屬性之外)，都是後結構描述編譯資訊集 (PSCI) 屬性，僅在編譯結構描述之後才可用。 <xref:System.Xml.Schema.XmlSchema.Items%2A> 屬性是前結構描述編譯屬性，其可在編譯結構描述之前使用，以存取及編輯所有全域層級項目、屬性及型別。  
 >   
 >  <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> 屬性提供對不屬於結構描述命名空間之所有屬性的存取權。 結構描述處理器不會處理這些屬性。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "59305035"
 ## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)

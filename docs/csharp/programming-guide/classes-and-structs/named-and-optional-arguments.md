@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 74cfc6a425e82014bbcf5093f52f476ff09db130
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad3f7949e01a387c3c7de2a0702d11b106ea0040
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922202"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
 C# 4 引進具名和選擇性引數。 「具名引數」  可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」  可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
@@ -70,9 +70,9 @@ C# 4 引進具名和選擇性引數。 「具名引數」  可讓您使用參數
   
 - 常數運算式；  
   
-- `new ValType()` 形式的運算式，其中 `ValType` 是實值型別，例如 [enum](../../../csharp/language-reference/keywords/enum.md) 或 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)；  
+- `new ValType()` 形式的運算式，其中 `ValType` 是實值型別，例如 [enum](../../language-reference/keywords/enum.md) 或 [struct](./structs.md)；  
   
-- [default(ValType)](../../../csharp/language-reference/operators/default.md) 形式的運算式，其中 `ValType` 是實值型別。  
+- [default(ValType)](../../language-reference/operators/default.md) 形式的運算式，其中 `ValType` 是實值型別。  
   
  選擇性參數是定義在參數清單的結尾，在任何必要參數之後。 如果呼叫端為任何一個連續的選擇性參數提供引數，它就必須提供所有前面選擇性參數的引數。 不支援引數清單使用逗點分隔間距。 例如，在下列程式碼中，執行個體方法 `ExampleMethod` 使用一個必要參數及兩個選擇性參數來定義。  
   
@@ -91,7 +91,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」  可讓您使用參數
  ![顯示 ExampleMethod 方法之 IntelliSense 快速諮詢的螢幕擷取畫面。](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
->  您也可以使用 .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 類別來宣告選擇性參數。 `OptionalAttribute` 參數不需要預設值。  
+> 您也可以使用 .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 類別來宣告選擇性參數。 `OptionalAttribute` 參數不需要預設值。  
   
 ## <a name="example"></a>範例  
  在下例中，`ExampleClass` 的建構函式有一個參數，而它是選擇性的。 `ExampleMethod` 執行個體方法有一個必要參數 `required` 和兩個選擇性參數 `optionalstr` 及 `optionalint`。 `Main` 中的程式碼會示範叫用建構函式和方法的不同方式。  
@@ -113,7 +113,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」  可讓您使用參數
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 如需詳細資訊及範例，請參閱[如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何：使用 Visual C# 功能存取 Office Interop 物件](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)。  
+ 如需詳細資訊及範例，請參閱[如何：在 Office 程式設計中使用具名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何：使用 Visual C# 功能存取 Office Interop 物件](../interop/how-to-access-office-onterop-objects.md)。  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  使用具名和選擇性引數會以下列方式影響多載解析︰  
@@ -129,7 +129,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」  可讓您使用參數
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [使用索引子](../../../csharp/programming-guide/indexers/using-indexers.md)
+- [如何：在 Office 程式設計中使用具名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [使用動態型別](../types/using-type-dynamic.md)
+- [使用建構函式](./using-constructors.md)
+- [使用索引子](../indexers/using-indexers.md)

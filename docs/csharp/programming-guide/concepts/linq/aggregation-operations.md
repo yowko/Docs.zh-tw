@@ -2,12 +2,12 @@
 title: 彙總作業 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-ms.openlocfilehash: 151332964b4efd495acff5d8763dfab5f380ee6c
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 04415c430059057cef26b3750faa03b925cfa994
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675623"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594978"
 ---
 # <a name="aggregation-operations-c"></a>彙總作業 (C#)
 彙總運算會計算值集合中的單一值。 彙總運算的一個範例是，當您使用一個月中每天的溫度值來計算每天平均溫度時。  
@@ -33,7 +33,7 @@ ms.locfileid: "58675623"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
-- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [如何：計算 CSV 文字檔中的資料行值 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)
-- [如何：查詢樹狀目錄中的最大檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
-- [如何：查詢一組資料夾中的位元組總數 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)
+- [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
+- [如何：計算 CSV 文字檔中的資料行值 (LINQ) (C#)](./how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [如何：查詢樹狀目錄中的最大檔案 (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- [如何：查詢一組資料夾中的位元組總數 (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)

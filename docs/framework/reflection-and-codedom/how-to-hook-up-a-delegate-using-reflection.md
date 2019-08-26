@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364060"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935717"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>作法：使用反映連結委派
-當您使用反映來載入和執行組件時，無法使用 C# `+=` 運算子或 Visual Basic [AddHandler 陳述式](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)這類語言功能來連結事件。 下列程序示範如何透過反映取得所有必要類型以將現有方法連結至事件，以及如何使用反映發出建立動態方法並將它連結至事件。  
+當您使用反映來載入和執行組件時，無法使用 C# `+=` 運算子或 Visual Basic [AddHandler 陳述式](../../visual-basic/language-reference/statements/addhandler-statement.md)這類語言功能來連結事件。 下列程序示範如何透過反映取得所有必要類型以將現有方法連結至事件，以及如何使用反映發出建立動態方法並將它連結至事件。  
   
 > [!NOTE]
->  如需連結事件處理委派的另一種方式，請參閱 <xref:System.Reflection.EventInfo> 類別之 <xref:System.Reflection.EventInfo.AddEventHandler%2A> 方法的程式碼範例。  
+> 如需連結事件處理委派的另一種方式，請參閱 <xref:System.Reflection.EventInfo> 類別之 <xref:System.Reflection.EventInfo.AddEventHandler%2A> 方法的程式碼範例。  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>使用反映連結委派  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68364060"
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. 取得 `add` 存取子方法，並叫用它來連結事件。 所有事件都有高階語言語法所隱藏的 `add` 存取子和 `remove` 存取子。 例如，C# 使用 `+=` 運算子來連結事件，Visual Basic 則使用 [AddHandler 陳述式](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)。 下列程式碼會取得 <xref:System.Windows.Forms.Control.Click> 事件的 `add` 存取子，以及透過晚期繫結叫用它，並傳入委派執行個體。 引數必須傳遞為陣列。  
+6. 取得 `add` 存取子方法，並叫用它來連結事件。 所有事件都有高階語言語法所隱藏的 `add` 存取子和 `remove` 存取子。 例如，C# 使用 `+=` 運算子來連結事件，Visual Basic 則使用 [AddHandler 陳述式](../../visual-basic/language-reference/statements/addhandler-statement.md)。 下列程式碼會取得 <xref:System.Windows.Forms.Control.Click> 事件的 `add` 存取子，以及透過晚期繫結叫用它，並傳入委派執行個體。 引數必須傳遞為陣列。  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 32a06c596c44cdf28e5c1bb3422b9cf8262f2c08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1884230f1779f9d425ef6e54cda6967c8e51d985
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738088"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602486"
 ---
 # <a name="-c-compiler-options"></a>@ (C# 編譯器選項)
 @ 選項可讓您指定檔案，內含要編譯的編譯器選項和原始程式碼檔。  
@@ -38,11 +38,11 @@ ms.locfileid: "54738088"
   
  在回應檔中，多個編譯器選項和原始程式碼檔可以出現在一行上。 單一編譯器選項規格必須出現在一行上 (無法跨越多行)。 回應檔可以有開頭為 # 符號的註解。  
   
- 在回應檔內指定編譯器選項，就像在命令列上發出這些命令一樣。 如需詳細資訊，請參閱[從命令列建置](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。  
+ 在回應檔內指定編譯器選項，就像在命令列上發出這些命令一樣。 如需詳細資訊，請參閱[從命令列建置](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)。  
   
  編譯器會處理遇到的命令選項。 因此，命令列引數可以覆寫回應檔中先前列出的選項。 相反地，回應檔中的選項將會覆寫在命令列或其他回應檔中先前所列的選項。  
   
- C# 提供 csc.rsp 檔案，而此檔案位於與 csc.exe 檔案相同的目錄中。 如需 csc.rsp 的詳細資訊，請參閱 [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。  
+ C# 提供 csc.rsp 檔案，而此檔案位於與 csc.exe 檔案相同的目錄中。 如需 csc.rsp 的詳細資訊，請參閱 [-noconfig](./noconfig-compiler-option.md)。  
   
  無法在 Visual Studio 開發環境中設定此編譯器選項，也無法以程式設計方式進行變更。  
   
@@ -56,4 +56,4 @@ ms.locfileid: "54738088"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 編譯器選項](./index.md)

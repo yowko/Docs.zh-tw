@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 102ed3977d56ace0dab63b1f066cc10a6fc5dfbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a7e8e61f65704a2e99385a1be320048d950324c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514058"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922526"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (C# 編譯器選項)
 **-appconfig** 編譯器選項可讓 C# 應用程式將組件應用程式組態檔 (app.config) 的位置指定到組件繫結時間的通用語言執行平台 (CLR)。  
@@ -38,7 +38,7 @@ ms.locfileid: "54514058"
  編譯器會將檔案位置傳遞至 CLR 的組件繫結關係邏輯。  
   
 > [!NOTE]
->  如果使用 Microsoft Build Engine (MSBuild) 來建置應用程式，您可以將屬性標記新增至 .csproj 檔案，以設定 **-appconfig** 編譯器選項。 若要使用專案中已設定的 app.config 檔案，請將屬性標記 `<UseAppConfigForCompiler>` 新增至 .csproj 檔案，並將其值設定為 `true`。 若要指定不同的 app.config 檔案，請新增屬性標記 `<AppConfigForCompiler>` 並將其值設定為檔案位置。  
+> 如果使用 Microsoft Build Engine (MSBuild) 來建置應用程式，您可以將屬性標記新增至 .csproj 檔案，以設定 **-appconfig** 編譯器選項。 若要使用專案中已設定的 app.config 檔案，請將屬性標記 `<UseAppConfigForCompiler>` 新增至 .csproj 檔案，並將其值設定為 `true`。 若要指定不同的 app.config 檔案，請新增屬性標記 `<AppConfigForCompiler>` 並將其值設定為檔案位置。  
   
 ## <a name="example"></a>範例  
  下例示範的 app.config 檔案，可讓應用程式同時參考存在於兩個實作中之任何 .NET Framework 組件的 .NET Framework 實作和 .NET Framework for Silverlight 實作。 **-appconfig** 編譯器選項會指定此 app.config 檔案的位置。  
@@ -57,4 +57,4 @@ ms.locfileid: "54514058"
 ## <a name="see-also"></a>另請參閱
 
 - [\<supportPortability> 項目](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
-- [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [依字母順序列出 C# 編譯器選項](./listed-alphabetically.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423673"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590541"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>列舉類型 (C# 程式設計手冊)
 
-列舉類型 (也稱為列舉 (enumeration) 或列舉 (enum)) 提供有效率的方式，來定義一組可指派給變數的具名整數常數。 例如，假設您必須定義一個變數，其值代表星期幾。 該變數只會儲存七個有意義的值。 若要定義這些值，您可以使用以 [enum](../../csharp/language-reference/keywords/enum.md) 關鍵字宣告的列舉類型。
+列舉類型 (也稱為列舉 (enumeration) 或列舉 (enum)) 提供有效率的方式，來定義一組可指派給變數的具名整數常數。 例如，假設您必須定義一個變數，其值代表星期幾。 該變數只會儲存七個有意義的值。 若要定義這些值，您可以使用以 [enum](../language-reference/keywords/enum.md) 關鍵字宣告的列舉類型。
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-根據預設，每個項目在列舉中的基礎類型是 [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md)。您可以使用冒號指定其他的整數數值類型，如上例所示。 如需可能類型的完整清單，請參閱 [enum (C# 參考)](../../csharp/language-reference/keywords/enum.md)。
+根據預設，每個項目在列舉中的基礎類型是 [int](../language-reference/builtin-types/integral-numeric-types.md)。您可以使用冒號指定其他的整數數值類型，如上例所示。 如需可能類型的完整清單，請參閱 [enum (C# 參考)](../language-reference/keywords/enum.md)。
 
 您可以透過轉換為基礎類型來驗證基礎數字值，如下例所示。
 
@@ -86,10 +86,10 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 如需詳細資訊，請參閱 <xref:System.Enum?displayProperty=nameWithType>。
 
-您也可以使用擴充方法，為列舉建立新的方法。 如需詳細資訊，請參閱[如何：為列舉建立新方法](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
+您也可以使用擴充方法，為列舉建立新的方法。 如需詳細資訊，請參閱[如何：為列舉建立新方法](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Enum?displayProperty=nameWithType>
-- [C# 程式設計指南](../../csharp/programming-guide/index.md)
-- [enum](../../csharp/language-reference/keywords/enum.md)
+- [C# 程式設計指南](./index.md)
+- [enum](../language-reference/keywords/enum.md)

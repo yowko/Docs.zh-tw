@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42aa63c20e1643bc3f5377fa0ad66b63c1d4433a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e8d51149c01b4c8018609ca9313cc4eea2afbb5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422598"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946565"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在 Managed 程式碼中建立原型
 本主題描述如何存取 Unmanaged 函式，並介紹數個以 Managed 程式碼來註解方法定義的屬性欄位。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "67422598"
  在您可以從 Managed 程式碼存取 Unmanaged DLL 函式之前，您需要知道函式的名稱，以及將它匯出的 DLL 名稱。 利用此資訊，您可以開始撰寫 Managed 定義給在 DLL 中實作的 Unmanaged 函式。 此外，您可以調整叫用平台建立函式和封送處理資料給予或來自函式的方式。  
   
 > [!NOTE]
->  配置字串的 Windows API 函式可讓您使用下列方法釋放字串，例如 `LocalFree`。 平台叫用以不同方式處理這類參數。 為了平台叫用呼叫，將參數設定為 `IntPtr` 類型而非 `String` 類型。 使用 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 類別所提供的方法來手動將類型轉換為字串，並手動釋放。  
+> 配置字串的 Windows API 函式可讓您使用下列方法釋放字串，例如 `LocalFree`。 平台叫用以不同方式處理這類參數。 為了平台叫用呼叫，將參數設定為 `IntPtr` 類型而非 `String` 類型。 使用 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 類別所提供的方法來手動將類型轉換為字串，並手動釋放。  
   
 ## <a name="declaration-basics"></a>宣告的基本概念  
  Unmanaged 函式的 Managed 定義會依語言而異，您可以在下列範例中觀察到。 如需更完整的程式碼範例，請參閱[平台叫用範例](platform-invoke-examples.md)。  

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 255a4ab3d6d6e3fc133e809ce360b25d6f82c8d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097157"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940073"
 ---
 # <a name="handling-errors"></a>處理錯誤
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別會擲回兩個系統例外狀況 (例如 <xref:System.ArgumentException>) 和 Web 特定例外狀況 (這些是 <xref:System.Net.WebRequest.GetResponse%2A> 方法所擲回的 <xref:System.Net.WebException>)。  
@@ -169,5 +169,5 @@ End Try
   
 ## <a name="see-also"></a>另請參閱
 
-- [例外狀況處理基本概念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [例外狀況處理基本概念](../../standard/exceptions/exception-handling-fundamentals.md)
 - [要求資料](../../../docs/framework/network-programming/requesting-data.md)

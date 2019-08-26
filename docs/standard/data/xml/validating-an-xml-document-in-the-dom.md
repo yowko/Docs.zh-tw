@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589855"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939401"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>驗證 DOM 中的 XML 文件
 依預設，<xref:System.Xml.XmlDocument> 類別不會根據 XML 結構描述定義語言 (XSD) 結構描述或文件類型定義 (DTD)，驗證文件物件模型 (DOM) 中的 XML；只會驗證 XML 的格式是否正確。  
@@ -76,7 +76,7 @@ ms.locfileid: "64589855"
  驗證錯誤由 <xref:System.Xml.Schema.ValidationEventHandler> 來處理。 如果將 <xref:System.Xml.Schema.ValidationEventHandler> 指派給 <xref:System.Xml.XmlReaderSettings> 執行個體，或傳遞至 <xref:System.Xml.XmlDocument.Validate%2A> 類別的 <xref:System.Xml.XmlDocument> 方法，則 <xref:System.Xml.Schema.ValidationEventHandler> 將處理結構描述驗證錯誤；否則當遇到結構描述驗證錯誤時，會引發 <xref:System.Xml.Schema.XmlSchemaValidationException>。  
   
 > [!NOTE]
->  除非 <xref:System.Xml.Schema.ValidationEventHandler> 引發例外狀況並停止處理序，否則即使發生結構描述驗證錯誤，也會將 XML 資料載入到 DOM。  
+> 除非 <xref:System.Xml.Schema.ValidationEventHandler> 引發例外狀況並停止處理序，否則即使發生結構描述驗證錯誤，也會將 XML 資料載入到 DOM。  
 >   
 >  除非將 <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> 旗標指定至 <xref:System.Xml.XmlReaderSettings> 物件，否則不會報告結構描述驗證警告。  
   

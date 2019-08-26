@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634723"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988830"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中規則運算式的最佳做法
 <a name="top"></a> .NET 中的規則運算式引擎是一項強大且功能完整的工具，會依據模式比對而非比較與比對常值文字的方式處理文字。 在大部分情況下，它會快速且有效率地執行模式比對。 不過，在某些情況下，規則運算式引擎速度可能變得相當慢。 而只有鮮少情況下，它甚至可能在處理相對小的輸入卻耗費數小時甚至數天時停止回應。  
@@ -54,7 +54,7 @@ ms.locfileid: "64634723"
  最後一種文字對於專為處理受限制輸入的規則運算式而言尤其繁瑣。 如果該規則運算式也依賴大量[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)，則規則運算式引擎可能耗費相當長的時間 (有些情況需要許多小時或許多天) 處理看似無關緊要的文字。  
   
 > [!WARNING]
->  下列範例將使用容易造成大量回溯，而且可能拒絕有效電子郵件地址的規則運算式。 這個規則運算式不應該在電子郵件驗證常式中使用。 如果您想要驗證電子郵件地址的規則運算式，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+> 下列範例將使用容易造成大量回溯，而且可能拒絕有效電子郵件地址的規則運算式。 這個規則運算式不應該在電子郵件驗證常式中使用。 如果您想要驗證電子郵件地址的規則運算式，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
   
  例如，像是驗證電子郵件地址別名的規則運算式，這種規則運算式相當常用卻也極為繁瑣。 規則運算式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` 主要用來處理一般視為有效的電子郵件地址，其中包含英數字元，後面接著零個或多個字元，而這些字元可以是英數字、句號或連字號。 規則運算式的結尾必須是英數字元。 不過，如下面的範例所示，雖然這個規則運算式可輕鬆處理有效的輸入，但是當它處理幾乎有效的輸入時就非常沒有效率。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64634723"
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別是 .NET 規則運算式物件模型的核心，它代表規則運算式引擎。 使用 <xref:System.Text.RegularExpressions.Regex> 引擎的方式經常是影響規則運算式效能最重要的一項因素。 定義規則運算式的工作與結合規則運算式引擎和規則運算式模式息息相關。 無論是傳遞規則運算式模式給 <xref:System.Text.RegularExpressions.Regex> 物件的建構函式，藉此將該物件具現化，或是將規則運算式模式連同要分析的字串一併傳遞給靜態方法，藉此呼叫該方法，這個結合的過程都必然相當昂貴。  
   
 > [!NOTE]
->  如需使用已解譯和已編譯規則運算式所造成不良效能影響的詳細討論，請參閱 BCL Team 部落格中的 [Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (將規則運算式的效能最佳化，第 II 部分：控制回溯)。  
+> 如需使用已解譯和已編譯規則運算式所造成不良效能影響的詳細討論，請參閱 BCL Team 部落格中的 [Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (將規則運算式的效能最佳化，第 II 部分：控制回溯)。  
   
  您可以結合規則運算式引擎與特定規則運算式模式，然後使用引擎透過數種方式比對文字：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64634723"
  您呼叫規則運算式比對方法的特殊方式可能對應用程式造成大幅影響。 下列各節將討論何時使用靜態方法呼叫、解譯的規則運算式以及編譯的規則運算式改善應用程式的效能。  
   
 > [!IMPORTANT]
->  如果在方法呼叫中重複使用相同的規則運算式，或是應用程式大量使用規則運算式物件，則方法呼叫的形式 (靜態、解譯、編譯) 就會影響效能。  
+> 如果在方法呼叫中重複使用相同的規則運算式，或是應用程式大量使用規則運算式物件，則方法呼叫的形式 (靜態、解譯、編譯) 就會影響效能。  
   
 ### <a name="static-regular-expressions"></a>靜態規則運算式  
  建議您使用靜態規則運算式方法來替代使用相同的規則運算式重複具現化規則運算式物件。 與規則運算式物件所使用的規則運算式模式不同的是，規則運算式引擎會在內部快取作業程式碼或是從執行個體方法呼叫中所使用模式編譯的 Microsoft intermediate language (MSIL)。  
@@ -177,7 +177,7 @@ ms.locfileid: "64634723"
  通常規則運算式引擎會使用線性迴歸逐一處理輸入字串，並且與規則運算式模式比較。 不過，當規則運算式模式中使用不定數的數量詞 (例如 `*`、`+` 和 `?`) 時，規則運算式引擎可能會放棄一部分成功的部分符合結果，並且返回之前儲存的狀態，以便搜尋與整個模式完全相符的結果。 這個程序稱為「回溯」(Backtracking)。  
   
 > [!NOTE]
->  如需有關回溯的詳細資訊，請參閱[規則運算式行為的詳細資料](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)和[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。 如需回溯的詳細討論，請參閱 BCL Team 部落格中的 [Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (將規則運算式的效能最佳化，第 II 部分：控制回溯)。  
+> 如需有關回溯的詳細資訊，請參閱[規則運算式行為的詳細資料](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)和[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。 如需回溯的詳細討論，請參閱 BCL Team 部落格中的 [Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (將規則運算式的效能最佳化，第 II 部分：控制回溯)。  
   
  支援回溯能讓規則運算式更強大且更靈活， 同時還能讓規則運算式開發人員負責掌控規則運算式引擎的作業。 由於開發人員經常忽略這個責任而誤用回溯或大量使用回溯，因而時常是造成規則運算式效能低落的最重要原因。 在最糟的情況下，輸入字串中每個超出字元的執行時間可能會倍增。 事實上，如果輸入幾乎符合規則運算式模式的話，大量使用回溯很容易製造相當於程式設計上的無窮迴圈，而規則運算式引擎可能需要數小時，甚至數天來處理相對來說很短的輸入字串。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "64634723"
  在許多情況下，回溯是比對規則運算式模式與輸入文字時所必要。 不過，大量回溯可能嚴重降低效能，並且製造應用程式停止回應的印象。 尤其是當數量詞為巢狀，而且符合外部子運算式的文字是符合內部子運算式之文字的子集時，就會發生這種情況。  
   
 > [!WARNING]
->  除了避免大量回溯以外，您應該使用逾時功能確保大量回溯不會嚴重降低規則運算式的效能。 如需詳細資訊，請參閱[使用逾時值](#Timeouts)一節。  
+> 除了避免大量回溯以外，您應該使用逾時功能確保大量回溯不會嚴重降低規則運算式的效能。 如需詳細資訊，請參閱[使用逾時值](#Timeouts)一節。  
   
  例如，規則運算式模式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` 的目的在於比對至少包含一個英數字元的零件編號。 任何額外的字元都可能包含英數字元、連字號、底線或句號，不過最後一個字元必須是英數字。 $ 符號則結束零件編號。 在某些情況下，這個規則運算式模式可能顯現出極差的效能，因為數量詞為巢狀，而且子運算式 `[0-9A-Z]` 是 `[-.\w]*` 子運算式的子集。  
   
