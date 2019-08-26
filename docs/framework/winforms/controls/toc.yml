@@ -1,33 +1,28 @@
-- name: Windows Form 控制項
+- name: Windows Forms 控制項
   href: index.md
   items:
-    - name: 排列 Windows Form 上的控制項
-      href: arranging-controls-on-windows-forms.md
+    - name: 排列 Windows Forms 上的控制項
       items:
-        - name: 作法：對齊 Windows Forms 上的多個控制項
+        - name: 作法：對齊多個控制項
           href: how-to-align-multiple-controls-on-windows-forms.md
-        - name: 作法：錨定 Windows Forms 上的控制項
+        - name: 作法：錨點控制項
           href: how-to-anchor-controls-on-windows-forms.md
-        - name: 作法：在 Windows Forms 之間複製控制項
-          href: how-to-copy-controls-between-windows-forms.md
-        - name: 作法：固定 Windows Forms 上的控制項
+        - name: 作法：停駐控制項
           href: how-to-dock-controls-on-windows-forms.md
-        - name: 作法：將 Windows Forms 上的物件分層
+        - name: 作法：圖層物件
           href: how-to-layer-objects-on-windows-forms.md
-        - name: 作法：鎖定 Windows Forms 的控制項
+        - name: 作法：鎖定控制項
           href: how-to-lock-controls-to-windows-forms.md
-        - name: 作法：定位 Windows Forms 的控制項
+        - name: 作法：位置控制項
           href: how-to-position-controls-on-windows-forms.md
-        - name: 作法：調整 Windows Forms 的控制項大小
+        - name: 作法：調整控制項大小
           href: how-to-resize-controls-on-windows-forms.md
         - name: 作法：設定所有 Windows Forms 的格線選項
           href: how-to-set-grid-options-for-all-windows-forms.md
-        - name: 作法：設定 Windows Forms 的定位順序
+        - name: 作法：設定定位順序
           href: how-to-set-the-tab-order-on-windows-forms.md
-        - name: 逐步解說：使用對齊線排列 Windows Forms 的控制項
+        - name: 逐步解說：使用對齊線來排列控制項
           href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-        - name: 作法：使用 Windows Forms 中的對齊線和格線排列控制項
-          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
         - name: 作法：將現有控制項重新指派至不同的父代
           href: how-to-reassign-existing-controls-to-a-different-parent.md
         - name: 逐步解說：使用邊框間距、邊界和自動調整屬性配置 Windows Forms 控制項
@@ -35,15 +30,15 @@
     - name: 將控制項加入 Windows Form
       href: putting-controls-on-windows-forms.md
       items:
-        - name: 作法：將控制項新增至 Windows Forms
+        - name: 作法：新增控制項
           href: how-to-add-controls-to-windows-forms.md
-        - name: 作法：將沒有使用者介面的控制項新增至 Windows Forms
+        - name: 作法：新增不含使用者介面的控制項
           href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
         - name: 作法：在執行階段於控制項集合中新增或移除
           href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
         - name: 逐步解說：自動將自訂元件填入工具箱
           href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-        - name: 作法：將 ActiveX 控制項新增至 Windows Forms
+        - name: 作法：新增 ActiveX 控制項
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: 在 Windows Form 上裝載 ActiveX 控制項的考慮因素
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
@@ -140,7 +135,7 @@
               href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
             - name: 作法：使用設計工具將 Windows Forms 的按鈕指定為取消按鈕
               href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-            - name: 作法：回應 Windows Forms 按鈕的按一下動作
+            - name: 作法：回應按鈕點選
               href: how-to-respond-to-windows-forms-button-clicks.md
             - name: 選取 Windows Form Button 控制項的方法
               href: ways-to-select-a-windows-forms-button-control.md
@@ -149,9 +144,9 @@
           items:
             - name: CheckBox 控制項概觀
               href: checkbox-control-overview-windows-forms.md
-            - name: 作法：回應 Windows Forms 核取方塊的按一下動作
+            - name: 作法：回應 CheckBox 點選
               href: how-to-respond-to-windows-forms-checkbox-clicks.md
-            - name: 作法：使用 Windows Forms CheckBox 控制項設定選項
+            - name: 作法：使用 CheckBox 控制項設定選項
               href: how-to-set-options-with-windows-forms-checkbox-controls.md
         - name: CheckedListBox 控制項
           href: checkedlistbox-control-windows-forms.md
@@ -330,9 +325,9 @@
                   href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
                 - name: 作法：將未繫結資料行新增至已繫結資料的 Windows Forms DataGridView 控制項
                   href: unbound-column-to-a-data-bound-datagridview.md
-                - name: 作法：將物件繫結至 Windows Forms DataGridView 控制項
+                - name: 作法：將物件繫結至 DataGridView 控制項
                   href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-                - name: 作法：存取繫結至 Windows Forms DataGridView 資料列的物件
+                - name: 作法：存取繫結至 DataGridView 資料列的物件
                   href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
                 - name: 作法：存取 Windows Forms DataGridViewComboBoxCell 下拉式清單中的物件
                   href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
@@ -462,7 +457,7 @@
           items:
             - name: DomainUpDown 控制項概觀
               href: domainupdown-control-overview-windows-forms.md
-            - name: 作法：以程式設計的方式將項目新增至 Windows Forms DomainUpDown 控制項
+            - name: 作法：以程式設計方式將項目新增至 DomainUpDown 控制項
               href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
             - name: 作法：從 Windows Forms DomainUpDown 控制項中移除項目
               href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
