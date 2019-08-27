@@ -1,4 +1,4 @@
-- name: 歡迎使用
+- name: 歡迎畫面
   href: welcome.md
 - name: .NET 指南
   href: standard/index.md
@@ -120,7 +120,7 @@
       href: standard/numerics.md
     - name: 日期、時間和時區
       href: standard/datetime/
-    - name: 活動
+    - name: 事件
       href: standard/events/
     - name: Managed 執行程序
       href: standard/managed-execution-process.md
@@ -269,7 +269,7 @@
           href: /visualstudio/containers/overview
     - name: 診斷工具
       items:
-        - name: 概觀
+        - name: 總覽
           href: core/diagnostics/index.md
         - name: 受控偵錯工具
           href: core/diagnostics/managed-debuggers.md
@@ -304,7 +304,7 @@
           href: core/testing/unit-testing-published-output.md
         - name: Visual Studio 的即時單元測試 .NET Core 專案
           href: /visualstudio/test/live-unit-testing-start
-    - name: 持續整合
+    - name: 連續整合
       href: core/tools/using-ci-with-cli.md
     - name: 版本控制
       href: core/versions/index.md
@@ -319,12 +319,12 @@
       href: core/sdk.md
     - name: .NET Core CLI
       items:
-        - name: 概觀
+        - name: 總覽
           href: core/tools/index.md
         - name: 通用工具
           expanded: true
           items:
-            - name: 概觀
+            - name: 總覽
               href: core/tools/global-tools.md
             - name: 建立全域工具
               href: core/tools/global-tools-how-to-create.md
@@ -440,6 +440,28 @@
           href: core/porting/winforms.md
         - name: 移植 WPF 專案
           href: core/porting/wpf.md
+    - name: 相依性載入
+      items:
+        - name: 總覽
+          href: core/dependency-loading/overview.md
+        - name: 了解 AssemblyLoadContext
+          href: core/dependency-loading/understanding-assemblyloadcontext.md
+        - name: 載入詳細資料
+          items:
+            - name: 預設相依性探查
+              href: core/dependency-loading/default-probing.md
+            - name: 載入受控組件
+              href: core/dependency-loading/loading-managed.md
+            - name: 載入附屬組件
+              href: core/dependency-loading/loading-resources.md
+            - name: 載入非受控組件
+              href: core/dependency-loading/loading-unmanaged.md
+        - name: 教學課程
+          items:
+            - name: 建立具有外掛程式的 .NET Core 應用程式
+              href: core/tutorials/creating-app-with-plugin-support.md
+            - name: 如何使用 .NET Core 中的組件卸載功能及對其進行偵錯
+              href: standard/assembly/unloadability-howto.md
     - name: 從原始檔建置 .NET Core
       href: core/build/index.md
       items:
@@ -465,7 +487,7 @@
           href: framework/app-domains/
         - name: 桌面應用程式中的資源
           href: framework/resources/
-        - name: 協助工具
+        - name: 協助工具選項
           href: framework/ui-automation/
         - name: 資料與模型化
           href: framework/data/
@@ -521,13 +543,13 @@
       href: csharp/getting-started/
     - name: 教學課程
       items:
-        - name: 概觀
+        - name: 總覽
           href: csharp/tutorials/index.md
         - name: '使用 C# 設計程式的簡介'
           items:
             - name: 選擇您的第一課
               href: csharp/tutorials/intro-to-csharp/index.md
-            - name: Hello world
+            - name: Hello World
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'C# 中的數字'
               href: csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -625,7 +647,7 @@
           href: csharp/methods.md
         - name: Lambda 運算式
           href: csharp/programming-guide/statements-expressions-operators/lambda-expressions.md
-        - name: properties
+        - name: 屬性
           href: csharp/properties.md
         - name: 索引子
           href: csharp/indexers.md
@@ -763,7 +785,7 @@
           items:
             - name: 算術運算子
               href: fsharp/language-reference/symbol-and-operator-reference/arithmetic-operators.md
-            - name: 布林運算子
+            - name: Boolean 運算子
               href: fsharp/language-reference/symbol-and-operator-reference/boolean-operators.md
             - name: 位元運算子
               href: fsharp/language-reference/symbol-and-operator-reference/bitwise-operators.md
@@ -867,7 +889,7 @@
               href: fsharp/language-reference/members/methods.md
             - name: 建構函式
               href: fsharp/language-reference/members/constructors.md
-            - name: 活動
+            - name: 事件
               href: fsharp/language-reference/members/events.md
             - name: 明確欄位：`val` 關鍵字
               href: fsharp/language-reference/members/explicit-fields-the-val-keyword.md
@@ -954,7 +976,7 @@
           href: fsharp/language-reference/compiler-directives.md
         - name: 編譯器選項
           href: fsharp/language-reference/compiler-options.md
-        - name: 'F# 互動選項'
+        - name: 'F# Interactive 選項'
           href: fsharp/language-reference/fsharp-interactive-options.md
         - name: 原始碼程式行、檔案與路徑識別項
           href: fsharp/language-reference/source-line-file-path-identifiers.md
@@ -1206,7 +1228,7 @@
           href: visual-basic/programming-guide/language-features/early-late-binding/index.md
         - name: 錯誤類型
           href: visual-basic/programming-guide/language-features/error-types.md
-        - name: 活動
+        - name: 事件
           href: visual-basic/programming-guide/language-features/events/index.md
         - name: 介面
           href: visual-basic/programming-guide/language-features/interfaces/index.md
@@ -1353,7 +1375,7 @@
               href: visual-basic/language-reference/directives/if-then-else-directives.md
             - name: '#Region 指示詞'
               href: visual-basic/language-reference/directives/region-directive.md
-        - name: Functions
+        - name: 函式
           href: visual-basic/language-reference/functions/index.md
           items:
             - name: 轉換函式
@@ -1374,9 +1396,9 @@
           items:
             - name: Ansi
               href: visual-basic/language-reference/modifiers/ansi.md
-            - name: 組件
+            - name: Assembly
               href: visual-basic/language-reference/modifiers/assembly.md
-            - name: 非同步處理
+            - name: Async
               href: visual-basic/language-reference/modifiers/async.md
             - name: 自動
               href: visual-basic/language-reference/modifiers/auto.md
@@ -1384,7 +1406,7 @@
               href: visual-basic/language-reference/modifiers/byref.md
             - name: ByVal
               href: visual-basic/language-reference/modifiers/byval.md
-            - name: 預設值
+            - name: 預設
               href: visual-basic/language-reference/modifiers/default.md
             - name: Friend
               href: visual-basic/language-reference/modifiers/friend.md
@@ -1394,11 +1416,11 @@
               href: visual-basic/language-reference/modifiers/iterator.md
             - name: Key
               href: visual-basic/language-reference/modifiers/key.md
-            - name: 模組
+            - name: Module
               href: visual-basic/language-reference/modifiers/module-keyword.md
             - name: MustInherit
               href: visual-basic/language-reference/modifiers/mustinherit.md
-            - name: MustOverride
+            - name: New
               href: visual-basic/language-reference/modifiers/mustoverride.md
             - name: Narrowing
               href: visual-basic/language-reference/modifiers/narrowing.md
@@ -1406,7 +1428,7 @@
               href: visual-basic/language-reference/modifiers/notinheritable.md
             - name: NotOverridable
               href: visual-basic/language-reference/modifiers/notoverridable.md
-            - name: 選用
+            - name: Optional
               href: visual-basic/language-reference/modifiers/optional.md
             - name: In (泛型修飾詞)
               href: visual-basic/language-reference/modifiers/out-generic-modifier.md
@@ -1414,13 +1436,13 @@
               href: visual-basic/language-reference/modifiers/overloads.md
             - name: Overrides
               href: visual-basic/language-reference/modifiers/overridable.md
-            - name: 覆寫
+            - name: Overrides
               href: visual-basic/language-reference/modifiers/overrides.md
             - name: ParamArray
               href: visual-basic/language-reference/modifiers/paramarray.md
-            - name: 部分
+            - name: Partial
               href: visual-basic/language-reference/modifiers/partial.md
-            - name: 私人
+            - name: Private
               href: visual-basic/language-reference/modifiers/private.md
             - name: Private Protected
               href: visual-basic/language-reference/modifiers/private-protected.md
@@ -1428,15 +1450,15 @@
               href: visual-basic/language-reference/modifiers/protected.md
             - name: Protected Friend
               href: visual-basic/language-reference/modifiers/protected-friend.md
-            - name: 公開
+            - name: Public
               href: visual-basic/language-reference/modifiers/public.md
-            - name: 唯讀
+            - name: ReadOnly
               href: visual-basic/language-reference/modifiers/readonly.md
             - name: Shadows
               href: visual-basic/language-reference/modifiers/shadows.md
-            - name: 共用
+            - name: Shared
               href: visual-basic/language-reference/modifiers/shared.md
-            - name: 靜態
+            - name: Static
               href: visual-basic/language-reference/modifiers/static.md
             - name: Unicode
               href: visual-basic/language-reference/modifiers/unicode.md
@@ -1610,7 +1632,7 @@
                   href: visual-basic/language-reference/operators/like-operator.md
                 - name: Mod 運算子
                   href: visual-basic/language-reference/operators/mod-operator.md
-                - name: 新增操作員
+                - name: New 運算子
                   href: visual-basic/language-reference/operators/new-operator.md
                 - name: Not 運算子
                   href: visual-basic/language-reference/operators/not-operator.md
@@ -1626,7 +1648,7 @@
                   href: visual-basic/language-reference/operators/typeof-operator.md
                 - name: Xor 運算子
                   href: visual-basic/language-reference/operators/xor-operator.md
-        - name: properties
+        - name: 屬性
           href: visual-basic/language-reference/properties.md
         - name: 查詢
           href: visual-basic/language-reference/queries/index.md
@@ -2164,7 +2186,7 @@
               href: visual-basic/language-reference/error-messages/path-not-found.md
             - name: 路徑 - 檔案存取錯誤
               href: visual-basic/language-reference/error-messages/path-file-access-error.md
-            - name: 使用權限被拒
+            - name: 權限遭拒
               href: visual-basic/language-reference/error-messages/permission-denied.md
             - name: 程序呼叫或引數無效
               href: visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md
