@@ -2,12 +2,12 @@
 title: 持續性資料庫結構描述
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 384a9aceaf0b5619bbc4eca5929b6e6d7855e3d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962886"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038328"
 ---
 # <a name="persistence-database-schema"></a>持續性資料庫結構描述
 本主題描述 SQL 工作流程執行個體存放區所支援的公用檢視表。  
@@ -15,7 +15,7 @@ ms.locfileid: "69962886"
 ## <a name="instances-view"></a>Instances 檢視表  
  [**實例**] 視圖包含有關資料庫中所有工作流程實例的一般資訊。  
   
-|資料行名稱|資料行型別|描述|  
+|資料行名稱|資料行型別|說明|  
 |-----------------|-----------------|-----------------|  
 |InstanceId|UniqueIdentifier|工作流程執行個體的識別碼。|  
 |PendingTimer|DateTime|表示工作流程在 Delay 活動上遭到封鎖，將在計時器逾時後繼續執行。 如果工作流程未遭到封鎖，不需等候計時器逾時，此值可以是 null。|  
@@ -44,12 +44,12 @@ ms.locfileid: "69962886"
 |修訂|BigInt|工作流程版本的修訂編號。|  
   
 > [!CAUTION]
->  [**實例**] 視圖也包含 Delete 觸發程式。 具有適當權限的使用者可以對此檢視表執行 Delete 陳述式，從資料庫強制移除工作流程執行個體。 直接從檢視表刪除，建議只當做最後手段，因為刪除工作流程執行階段底下的執行個體會造成非預期的結果。 請改用工作流程執行個體管理端點，讓工作流程執行階段結束執行個體。 如果您想要從檢視表刪除大量執行個體，請確認沒有使用中的執行階段正在操作這些執行個體。  
+> [**實例**] 視圖也包含 Delete 觸發程式。 具有適當權限的使用者可以對此檢視表執行 Delete 陳述式，從資料庫強制移除工作流程執行個體。 直接從檢視表刪除，建議只當做最後手段，因為刪除工作流程執行階段底下的執行個體會造成非預期的結果。 請改用工作流程執行個體管理端點，讓工作流程執行階段結束執行個體。 如果您想要從檢視表刪除大量執行個體，請確認沒有使用中的執行階段正在操作這些執行個體。  
   
 ## <a name="servicedeployments-view"></a>ServiceDeployments 檢視表  
  **Servicedeployments 表**view 包含所有 WEB (IIS/WAS) 主控的工作流程服務的部署資訊。 Web 裝載的每個工作流程實例都將包含參考此視圖中資料列的**ServiceDeploymentId** 。  
   
-|資料行名稱|資料行型別|說明|  
+|資料行名稱|資料行型別|描述|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|此檢視表的主索引鍵。|  
 |SiteName|Nvarchar(max)|表示包含工作流程服務之網站的名稱 (例如 [預設的**網站**])。|  
@@ -67,7 +67,7 @@ ms.locfileid: "69962886"
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties 檢視表  
  **Instancepromotedproperties 表**view 包含使用者指定之所有升級屬性的資訊。 已提升的屬性是做為第一級屬性，供使用者用於查詢以擷取執行個體。  例如, 使用者可以加入 PurchaseOrder 促銷, 其一律會在**Value1**資料行中儲存訂單的成本。 這可讓使用者查詢成本超過特定值的所有採購單。  
   
-|資料行型別|資料行型別|描述|  
+|資料行型別|資料行型別|說明|  
 |-|-|-|  
 |InstanceId|UniqueIdentifier|工作流程執行個體的識別碼。|  
 |EncodingOption|TinyInt|描述用來序列化已提升之二進位屬性的編碼方式。<br /><br /> -0 –無編碼<br />-1 – GZipStream|  

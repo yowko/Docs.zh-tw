@@ -2,12 +2,12 @@
 title: WCF 組態結構描述
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 8d7b4cbad1876888e7a22a92bdb28a17b880e159
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 37330b571553bb5e8f17ffad85faafbcaf19d217
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925395"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041278"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 組態結構描述
 Windows Communication Foundation (WCF) configuration 元素可讓您設定 WCF 服務和用戶端應用程式。 您可使用[組態編輯器工具 (SvcConfigEditor.exe)](../../../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 來建立並修改用戶端與服務的組態檔。 由於組態檔採用 XML 格式，因此，如果要使用文字編輯器手動編輯這些檔案，則必須熟悉 XML。 否則，您可能會碰到 XML 項目標記或屬性找不到等問題， 因為 XML 項目標記與屬性有區分大小寫。  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) configuration 元素可讓您設定 WCF �
  ![顯示 WCF 設定架構的圖表。](./media/index/windows-communication-foundation-configuration-schema.gif)  
   
 > [!CAUTION]
->  您應該使用適當的存取控制清單 (ACL) 來保護應用程式佈建檔 (app.config) 中的 WCF 設定區段, 以避免任何潛在的安全性威脅。  例如，您要確定只有適當人員才能存取或修改應用程式繫結上的安全性設定，或是服務組態檔的服務模型區段。  
+> 您應該使用適當的存取控制清單 (ACL) 來保護應用程式佈建檔 (app.config) 中的 WCF 設定區段, 以避免任何潛在的安全性威脅。  例如，您要確定只有適當人員才能存取或修改應用程式繫結上的安全性設定，或是服務組態檔的服務模型區段。  
   
 ## <a name="in-this-section"></a>本節內容  
  [\<system.serviceModel>](system-servicemodel.md)  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 3bb41fa476f15c5fc16a942cc0c82fd8e0aba7bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911676"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044098"
 ---
 # <a name="ui-automation-events-for-clients"></a>用戶端的 UI 自動化事件
 > [!NOTE]
@@ -44,7 +44,7 @@ ms.locfileid: "69911676"
 > 若要處理視窗關閉事件，將傳遞給事件處理常式的引數類型轉型為 <xref:System.Windows.Automation.WindowClosedEventArgs>。 由於視窗的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 項目已不再有效，您不能使用 `sender` 參數來擷取資訊，請改用 <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>。  
   
 > [!CAUTION]
->  如果您的應用程式可能會接收來自本身的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 事件，請勿使用您應用程式的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 執行緒來訂閱或取消訂閱事件。 這樣可能會導致無法預期的行為。 如需詳細資訊，請參閱 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
+> 如果您的應用程式可能會接收來自本身的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 事件，請勿使用您應用程式的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 執行緒來訂閱或取消訂閱事件。 這樣可能會導致無法預期的行為。 如需詳細資訊，請參閱 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
   
  關閉時或當應用程式不再對 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件感興趣時，使用者介面自動化用戶端應該呼叫下列方法之一。  
   

@@ -2,12 +2,12 @@
 title: 成員資格和角色提供者
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948540"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039442"
 ---
 # <a name="membership-and-role-provider"></a>成員資格和角色提供者
 成員資格和角色提供者範例會示範服務如何使用 ASP.NET 成員資格和角色提供者來驗證及授權用戶端。  
@@ -123,10 +123,10 @@ ms.locfileid: "69948540"
 2. 請確定您已設定[ASP.NET 應用程式服務資料庫](https://go.microsoft.com/fwlink/?LinkId=94997)。  
   
     > [!NOTE]
-    >  如果您要執行 SQL Server Express Edition，則伺服器名稱為 .\SQLEXPRESS。 設定 ASP.NET 應用程式服務資料庫以及 Web.config 連接字串時, 應該使用此伺服器。  
+    > 如果您要執行 SQL Server Express Edition，則伺服器名稱為 .\SQLEXPRESS。 設定 ASP.NET 應用程式服務資料庫以及 Web.config 連接字串時, 應該使用此伺服器。  
   
     > [!NOTE]
-    >  ASP.NET 背景工作進程帳戶必須擁有在此步驟中建立之資料庫的許可權。 請使用 sqlcmd 公用程式或 SQL Server Management Studio 來執行這項操作。  
+    > ASP.NET 背景工作進程帳戶必須擁有在此步驟中建立之資料庫的許可權。 請使用 sqlcmd 公用程式或 SQL Server Management Studio 來執行這項操作。  
   
 3. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。  
   

@@ -2,12 +2,12 @@
 title: 訊息記錄的安全性考量
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: c5db9fbf0dfb91ecb903660ebfb42c33f55b27bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933603"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044261"
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
@@ -91,7 +91,7 @@ ms.locfileid: "69933603"
  電腦的系統管理員和應用程式部署人員在使用這兩個參數時，應該特別小心謹慎。 如果啟用 PII 記錄，則會記錄安全性金鑰和 PII。 如果停用，敏感資料和應用程式特定資料仍然會記錄在訊息標頭和本文中。 如需隱私權和保護 PII 免于公開的詳細討論, 請參閱[使用者隱私權](https://go.microsoft.com/fwlink/?LinkID=94647)。  
   
 > [!CAUTION]
->  格式錯誤的訊息中不會隱藏 PII。 這類訊息會依現狀記錄，不做任何修改。 上述的屬性在此不會有任何作用。  
+> 格式錯誤的訊息中不會隱藏 PII。 這類訊息會依現狀記錄，不做任何修改。 上述的屬性在此不會有任何作用。  
   
 ### <a name="custom-trace-listener"></a>自訂追蹤接聽項  
  在訊息記錄追蹤來源上加入自訂追蹤接聽項，是僅限於系統管理員的權限。 這是因為惡意的自訂接聽項可以設定為從遠端傳送訊息，進而導致敏感資訊洩漏。 此外，如果您將自訂接聽項設定為在網路上傳送訊息，例如傳送至遠端資料庫，在遠端電腦的訊息記錄檔上應該強制採取適當的存取控制。  

@@ -2,12 +2,12 @@
 title: PII 安全性鎖定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 16e7c564373eaf241b500c0e3de40ee8fb38f05a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f82d3f19a3bf6fc6a5ac038034880dafc03fcce1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964599"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044791"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全性鎖定
 這個範例會示範如何藉由下列方式, 控制 Windows Communication Foundation (WCF) 服務的數個安全性相關功能:  
@@ -19,13 +19,13 @@ ms.locfileid: "69964599"
 - 控制追蹤和訊息記錄檔中個人可識別資訊 (PII) 的記錄。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>討論  
  您可以單獨或一起使用這些功能，以控制服務安全性的各個方面。 這不是保護 WCF 服務的最終指引。  
@@ -120,7 +120,7 @@ ms.locfileid: "69964599"
 > System.Diagnostics 除了組態檔中列出的第一個屬性外，會忽略所有來源上的所有屬性。 將 `logKnownPii` 屬性新增至組態檔的第二個來源也沒有作用。  
   
 > [!IMPORTANT]
->  若要執行這個範例，將會牽涉到手動修改 Machine.config。修改 Machine.config 時請特別小心，因為不正確的值或語法都可能導致所有 .NET Framework 應用程式無法執行。  
+> 若要執行這個範例，將會牽涉到手動修改 Machine.config。修改 Machine.config 時請特別小心，因為不正確的值或語法都可能導致所有 .NET Framework 應用程式無法執行。  
   
  也可能使用 DPAPI 和 RSA 加密組態檔項目。 如需詳細資訊，請參閱下列連結：  
   

@@ -4,51 +4,51 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 766b95163f164ec76135b964115069b6855ceebf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07c215d373e4ac1cbadf82a48b8cb3d90efdbdb4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750673"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040549"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>未設定物件變數或 With 區塊變數
-正在參考無效的物件變數。   發生這個錯誤的原因有下列幾種︰
+參考的物件變數無效。   發生這個錯誤的原因有下列幾種︰
 
-- 未指定類型所宣告的變數。 如果未指定的型別宣告變數，則預設為輸入`Object`。
+- 已宣告變數, 但未指定類型。 如果在未指定類型的情況下宣告變數, 則會預設`Object`為類型。
 
-    例如，以宣告的變數`Dim x`的型別`Object;`以宣告的變數`Dim x As String`的型別`String`。
+    例如, 以`Dim x`宣告`Object;`的變數會是類型, 以宣告的變數`Dim x As String`會是類型`String`。
 
     > [!TIP]
-    >  `Option Strict`陳述式不允許隱含型別，會導致`Object`型別。 如果您省略類型時，會發生編譯時期錯誤。 請參閱[Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)。
+    > 語句不允許產生`Object`類型的隱含類型。 `Option Strict` 如果您省略型別, 就會發生編譯時期錯誤。 請參閱[Option Strict 語句](../../../visual-basic/language-reference/statements/option-strict-statement.md)。
 
-- 您嘗試參考已設定為物件`Nothing`。
+- 您嘗試參考已設定為`Nothing`的物件。
 
-- 您嘗試存取未正確地宣告陣列變數的項目。
+- 您嘗試存取未正確宣告之陣列變數的元素。
 
-    例如，陣列宣告為`products() As String`如果您嘗試參考陣列項目，將會觸發錯誤`products(3) = "Widget"`。 陣列沒有任何項目，並會被視為物件。
+    例如, 如果您嘗試參考陣列`products() As String` `products(3) = "Widget"`的元素, 則宣告為的陣列將會觸發錯誤。 陣列沒有任何元素, 而且會被視為物件。
 
-- 您嘗試存取程式碼內`With...End With`區塊之前尚未初始化的區塊。   A`With...End With`區塊必須初始化執行`With`陳述式的進入點。
+- 您正嘗試在區塊初始化之前, `With...End With`先存取區塊內的程式碼。   區塊必須藉由`With`執行語句進入點來初始化。 `With...End With`
 
 > [!NOTE]
-> 在舊版的 Visual Basic 或 VBA 這項錯誤也觸發指派給變數的值，而不使用`Set`關鍵字 (`x = "name"`而不是`Set x = "name"`)。 `Set`關鍵字已不再有效 Visual Basic.Net 中。
+> 在舊版的 Visual Basic 或 VBA 中, 也會藉由指派值給變數而不使用`Set`關鍵字 (`x = "name"`而不是`Set x = "name"`) 來觸發此錯誤。 `Set`關鍵字在 Visual Basic .net 中已不再有效。
 
 ## <a name="to-correct-this-error"></a>更正這個錯誤
 
-1. 設定`Option Strict`至`On`藉由將下列程式碼新增至檔案的開頭：
+1. 將`Option Strict`下列`On`程式碼新增至檔案的開頭, 將設為:
 
     ```vb
     Option Strict On
     ```
 
-    當您執行專案時，編譯器錯誤會出現在**錯誤清單**指定不具型別的任何變數。
+    當您執行專案時, 如果未指定任何類型的變數, 則會在**錯誤清單**中顯示編譯器錯誤。
 
-2. 如果您不想要啟用`Option Strict`，搜尋您的程式碼所指定型別沒有任何變數 (`Dim x`而不是`Dim x As String`) 並將預定的型別新增至宣告。
+2. 如果您不想要啟用`Option Strict`, 請在您的程式碼中搜尋未使用類型 (`Dim x`而非`Dim x As String`) 指定的任何變數, 並將所需的類型加入至宣告。
 
-3. 請確定您已設定為物件變數不參考`Nothing`。  搜尋您的程式碼，關鍵字`Nothing`，和修訂您的程式碼，讓物件未設定為`Nothing`直到之後，您已參考它。
+3. 請確定您未參考已設定為`Nothing`的物件變數。  在您的程式碼中`Nothing`搜尋關鍵字, 然後修改您的程式碼, 讓物件`Nothing`不會設定為, 直到您參考它為止。
 
-4. 請確定陣列的任何變數建立維度，才能存取它們。 當您第一次建立陣列時，您可以是指派維度 (`Dim x(5) As String`而非`Dim x() As String`)，或使用`ReDim`設定陣列的維度，然後第一次存取關鍵字。
+4. 在存取之前, 請確定所有陣列變數都已建立維度。 您可以在第一次建立陣列時指派維度 (`Dim x(5) As String` `Dim x() As String`而不是`ReDim` ), 或使用關鍵字來設定陣列的維度, 然後再進行第一次存取。
 
-5. 請確定您`With`區塊會藉由執行初始化`With`陳述式的進入點。
+5. 請確定您`With`的區塊是藉由`With`執行語句進入點來初始化。
 
 ## <a name="see-also"></a>另請參閱
 

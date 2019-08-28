@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3badda7afeb25b44b0de574f97452d05efe75bfc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f0e5dc232411633626add460ffc29cc7a79d81
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962292"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044357"
 ---
-# <a name="how-to-run-a-workflow"></a>作法：執行工作流程
+# <a name="how-to-run-a-workflow"></a>HOW TO：執行工作流程
 本主題是 Windows Workflow Foundation 消費者入門教學課程的接續, 並討論如何建立工作流程主機, 並執行先前[的 how to:建立工作流程](how-to-create-a-workflow.md)主題。
 
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "69962292"
 2. 在 [ **方案總管** ] 中，以滑鼠右鍵按一下 [ **WF45GettingStartedTutorial** ] 方案，並依序選取 [ **加入**]、[ **新增專案**]。  
   
     > [!TIP]
-    >  如果沒有顯示 [ **方案總管** ] 視窗，請選取 [ **檢視** ] 功能表上的 [ **方案總管** ]。
+    > 如果沒有顯示 [ **方案總管** ] 視窗，請選取 [ **檢視** ] 功能表上的 [ **方案總管** ]。
 
 3. 在 [ **已安裝** ] 節點中，選取 [ **Visual C#** ]、[ **工作流程** ] (或 [ **Visual Basic**]、[ **工作流程**])。
 
@@ -46,7 +46,7 @@ ms.locfileid: "69962292"
 1. 按兩下 [ **方案總管** ] 中的 [ **Program.cs** ] 或 [ **Module1.vb** ]，顯示其程式碼。
 
     > [!TIP]
-    >  如果沒有顯示 [ **方案總管** ] 視窗，請選取 [ **檢視** ] 功能表上的 [ **方案總管** ]。
+    > 如果沒有顯示 [ **方案總管** ] 視窗，請選取 [ **檢視** ] 功能表上的 [ **方案總管** ]。
 
      因為這個專案是使用 [ **工作流程主控台應用程式** ] 範本所建立，所以 [ **Program.cs** ] 或 [ **Module1.vb** ] 會包含下列基本工作流程裝載程式碼。
 

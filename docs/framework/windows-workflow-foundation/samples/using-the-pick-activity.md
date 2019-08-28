@@ -2,12 +2,12 @@
 title: 使用 Pick 活動
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 50946571c1ca3b3fb66d7da11e402f61739c9962
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637783"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037872"
 ---
 # <a name="using-the-pick-activity"></a>使用 Pick 活動
 這個範例示範如何使用 <xref:System.Activities.Statements.Pick> 活動。
@@ -22,33 +22,33 @@ ms.locfileid: "65637783"
 ## <a name="discussion"></a>討論
  此範例包含設計工具工作流程和程式碼工作流程。
 
- 設計工具的工作流程設計工具版本的範例示範如何建立工作流程設計工具中。 包含下列檔案：
+ 設計工具工作流程範例的設計工具版本會示範如何在設計工具中建立工作流程。 包含下列檔案：
 
-- Program.cs:包含`Main`執行範例工作流程函式。
+- Program.cs:`Main`包含執行範例工作流程的函式。
 
-- ReadString.cs:從主控台讀取輸入的自訂活動。
+- ReadString.cs:從主控台讀取部分輸入的自訂活動。
 
-- Sequence1.xaml:使用 Pick 的設計工具中建立工作流程。
+- Sequence1。 xaml:使用使用 Pick 的設計工具所建立的工作流程。
 
- 自動程式化的工作流程範例的程式碼版本示範如何建立工作流程設計工具中。 包含下列檔案：
+ 自動程式碼工作流程範例的程式碼版本示範如何在設計工具中建立工作流程。 包含下列檔案：
 
-- Program.cs:包含`Main`執行範例工作流程函式。
+- Program.cs:`Main`包含執行範例工作流程的函式。
 
-- ReadString.cs:從主控台讀取輸入的自訂活動。
+- ReadString.cs:從主控台讀取部分輸入的自訂活動。
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1. 使用 Visual Studio 2010 開啟 Pick.sln 方案檔案。
+1. 使用 Visual Studio 2010, 開啟 [挑選 .sln 方案檔]。
 
 2. 若要建置此方案，請按 CTRL+SHIFT+B。
 
 3. 若要執行此方案，請按 F5。
 
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

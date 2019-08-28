@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4474b217147aca74f2c6e5376c8f55318a05bf4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963537"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046506"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 陳述式 (Visual Basic)
 啟用錯誤處理常式, 並在程式中指定常式的位置;也可以用來停用錯誤處理常式。 `On Error`語句用於非結構化錯誤處理中, 而且可以用來取代結構化例外狀況處理。 [結構化例外狀況處理](../../../standard/exceptions/index.md)內建于 .net 中, 通常更有效率, 而且在處理應用程式中的執行階段錯誤時建議使用。
@@ -104,7 +104,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
->  呼叫 Windows 動態連結程式庫 (Dll) 期間發生系統錯誤, 並不會引發例外狀況, 也無法在 Visual Basic 錯誤捕捉時加以攔截。 呼叫 DLL 函式時, 您應該檢查每個傳回值是否成功或失敗 (根據 API 規格), 並在發生失敗時檢查`Err` `LastDLLError`物件屬性中的值。
+> 呼叫 Windows 動態連結程式庫 (Dll) 期間發生系統錯誤, 並不會引發例外狀況, 也無法在 Visual Basic 錯誤捕捉時加以攔截。 呼叫 DLL 函式時, 您應該檢查每個傳回值是否成功或失敗 (根據 API 規格), 並在發生失敗時檢查`Err` `LastDLLError`物件屬性中的值。
 
 ## <a name="example"></a>範例
  這個範例會先使用`On Error GoTo`語句來指定程式內的錯誤處理常式位置。 在此範例中, 嘗試零除會產生錯誤號碼6。 錯誤會在錯誤處理常式中處理, 然後再將控制權傳回給造成錯誤的語句。 `On Error GoTo 0`語句會關閉錯誤捕捉。 然後, `On Error Resume Next`語句會用來延遲錯誤捕捉, 讓下一個語句所產生的錯誤內容可以知道。 請注意`Err.Clear` , 在處理錯誤之後`Err` , 會用來清除物件的屬性。

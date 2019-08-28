@@ -16,19 +16,19 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: df7c6caf7b23824a596e94e1bd62205907b0b56a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e06b18558f6b3fa3cef47613bbaef16fb7c740f0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592418"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046196"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>作法：實作使用背景作業的表單
 下列範例程式會建立表單，計算 Fibonacci 數字。 該計算在執行緒上執行，與使用者介面執行緒中的不同，因此使用者介面會繼續執行，在繼續計算時不會造成延遲。  
   
  在 Visual Studio 中對於本工作有更詳盡的支援。  
   
- 另請參閱[逐步解說：實作使用背景作業的表單](walkthrough-implementing-a-form-that-uses-a-background-operation.md)。  
+ 另請[參閱逐步解說:執行使用背景](walkthrough-implementing-a-form-that-uses-a-background-operation.md)作業的表單。  
   
 ## <a name="example"></a>範例  
  [!code-cpp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
@@ -43,7 +43,7 @@ ms.locfileid: "65592418"
 ## <a name="robust-programming"></a>穩固程式設計  
   
 > [!CAUTION]
->  無論使用何種多執行緒作業，您都可能會面臨嚴重而複雜的錯誤。 請在實作使用多執行緒的任何解決方案之前參閱 [Managed 執行緒最佳做法](../../../standard/threading/managed-threading-best-practices.md)。  
+> 無論使用何種多執行緒作業，您都可能會面臨嚴重而複雜的錯誤。 請在實作使用多執行緒的任何解決方案之前參閱 [Managed 執行緒最佳做法](../../../standard/threading/managed-threading-best-practices.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

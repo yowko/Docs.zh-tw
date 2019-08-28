@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: cbeb0d254bf6716296f34020ea8796885e0f368a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936259"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041272"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 指定 Windows Communication Foundation (WCF) 服務的偵錯工具和說明資訊功能。  
@@ -54,7 +54,7 @@ ms.locfileid: "69936259"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "69936259"
  將`includeExceptionDetailInFaults`設定`true`為, 可讓服務傳回應用程式代碼所擲回的任何例外狀況, 即使例外狀況未使用<xref:System.ServiceModel.FaultContractAttribute>宣告。 當在伺服器擲回非預期例外狀況的案例中偵錯時，這個設定非常有用。 使用這個屬性會傳回未知例外狀況的序列化表單，而且您可以查看例外狀況的詳細資訊。  
   
 > [!CAUTION]
->  將 Managed 例外狀況資訊傳回用戶端可能導致安全性風險，因為例外狀況詳細資料會公開未授權的用戶端可使用的內部服務實作相關資訊。 由於涉及安全性問題，因此強烈建議您只在受控制的偵錯狀況下這樣做。 部署應用程式時，`includeExceptionDetailInFaults` 應該要設為 `false`。  
+> 將 Managed 例外狀況資訊傳回用戶端可能導致安全性風險，因為例外狀況詳細資料會公開未授權的用戶端可使用的內部服務實作相關資訊。 由於涉及安全性問題，因此強烈建議您只在受控制的偵錯狀況下這樣做。 部署應用程式時，`includeExceptionDetailInFaults` 應該要設為 `false`。  
   
  如需與 managed 例外狀況相關之安全性問題的詳細資訊, 請參閱[指定和處理合約和服務中的錯誤](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 如需程式碼範例, 請參閱[服務的 Debug 行為](../../../wcf/samples/service-debug-behavior.md)。  
   

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: 5f60bcdb02f61d39711115b07ba989229e39c28c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1faed5717c65c4973c3f1965df649df6f2e24722
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929136"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045893"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>作法：使用程式碼發行服務的中繼資料
 這是討論 Windows Communication Foundation (WCF) 服務發行中繼資料的兩個 how to 主題之一。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用程式碼發行服務的中繼資料。  
   
 > [!CAUTION]
->  本主題將示範以不安全的方法發行中繼資料。 任何用戶端都能從服務擷取中繼資料。 若您的服務需要以安全的方法發行中繼資料。 請參閱[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
+> 本主題將示範以不安全的方法發行中繼資料。 任何用戶端都能從服務擷取中繼資料。 若您的服務需要以安全的方法發行中繼資料。 請參閱[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
   
  如需在設定檔中發行中繼資料的詳細資訊[, 請參閱如何:使用設定檔](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)發佈服務的中繼資料。 發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。 若要確定程式碼可以運作，您必須建立基本的 WCF 服務。 下列程式碼提供您基本的自我裝載服務。  
   

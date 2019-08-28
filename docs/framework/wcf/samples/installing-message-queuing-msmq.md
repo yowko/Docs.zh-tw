@@ -2,12 +2,12 @@
 title: 安裝訊息佇列 (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 42e66029f8538877ded424f72cb6c829444d1ee0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 118143f2d434e9f4399c3e9141743fc0254b61ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935985"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039617"
 ---
 # <a name="installing-message-queuing-msmq"></a>安裝訊息佇列 (MSMQ)
 下列程序示範如何安裝 Message Queuing 4.0 和 Message Queuing 3.0。  
@@ -41,7 +41,7 @@ ms.locfileid: "69935985"
   
     - MSMQ HTTP 支援。  
   
-4. 按一下 [確定]。  
+4. 按一下 [確定 **Deploying Office Solutions**]。  
   
 5. 如果系統提示您重新開機電腦, 請按一下 **[確定]** 以完成安裝。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "69935985"
 3. 選取 [訊息佇列], 然後按一下 [**詳細資料**]。  
   
     > [!NOTE]
-    >  如果您執行的是 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，請選取 [應用程式伺服器] 來存取訊息佇列。  
+    > 如果您執行的是 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，請選取 [應用程式伺服器] 來存取訊息佇列。  
   
 4. 確定在詳細資料頁面上選取 MSMQ HTTP 支援的選項。  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: ddaa49e65a164c7bf074a541c9a4df8f3dace1d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a764b18cc3016610b8a149631b4de89923a7a5b4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965620"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040622"
 ---
 # <a name="designing-service-contracts"></a>設計服務合約
 本主題說明何謂服務合約、如何定義服務合約、能夠進行哪些作業 (以及對基礎訊息交換的影響)、使用哪些資料型別以及其他問題，協助您設計能夠適當滿足情況需求的作業。  
@@ -146,7 +146,7 @@ Sub Hello (ByVal greeting As String)
  如需建立服務的範例, 以及存取該服務的用戶端, 請參閱[如何:建立雙工合約](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)和[如何:使用雙工合約](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)來存取服務。 如需實用範例, 請參閱[雙工](../../../docs/framework/wcf/samples/duplex.md)。 如需有關使用雙工合約之問題的詳細資訊, 請參閱[雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)。  
   
 > [!CAUTION]
->  當服務收到雙工訊息時，會查看該傳入訊息中的 `ReplyTo` 項目，以判斷傳送回覆的位置。 如果用來接收訊息的通道不安全，那麼未受信任的用戶端可能會傳送惡意訊息，其中包含目標電腦的 `ReplyTo`，而導致該目標電腦拒絕服務 (DOS)。  
+> 當服務收到雙工訊息時，會查看該傳入訊息中的 `ReplyTo` 項目，以判斷傳送回覆的位置。 如果用來接收訊息的通道不安全，那麼未受信任的用戶端可能會傳送惡意訊息，其中包含目標電腦的 `ReplyTo`，而導致該目標電腦拒絕服務 (DOS)。  
   
 ##### <a name="out-and-ref-parameters"></a>Out 和 Ref 參數  
  在大部分的情況下, 您`in`可以使用`ByVal`參數 (Visual Basic 中`out` ) `ref`和和`ByRef`參數 (在 Visual Basic 中)。 由於 `out` 和 `ref` 這兩個參數都表示資料是從作業傳回，因此即使作業簽章 (如下所示) 傳回 `void`，仍會指定必須要求/回覆作業。  

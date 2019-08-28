@@ -1,5 +1,5 @@
 ---
-title: 物件初始設定式：具名和匿名類型 (Visual Basic)
+title: 物件初始設定式：命名和匿名型別 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ObjectInitializer
@@ -10,82 +10,82 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e1f461cc98fb104f78a6c83a207cff7f4eda9227
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783244"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046456"
 ---
-# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>物件初始設定式：具名和匿名類型 (Visual Basic)
-物件初始設定式可讓您使用單一運算式中指定的複雜物件的屬性。 它們可用來建立執行個體的具名型別和匿名型別。  
+# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>物件初始設定式：命名和匿名型別 (Visual Basic)
+物件初始化運算式可讓您使用單一運算式來指定複雜物件的屬性。 它們可以用來建立命名類型和匿名型別的實例。  
   
 ## <a name="declarations"></a>宣告  
- 具名和匿名型別的執行個體的宣告可以看起來幾乎完全相同，但其效果不相同。 每個類別目錄具有功能以及其本身的限制。 下列範例示範宣告和初始化具名的類別的執行個體的便利方式`Customer`，使用物件初始設定式清單。 請注意，類別的名稱關鍵字後面指定`New`。  
+ 已命名和匿名型別的實例宣告看起來幾乎完全相同, 但其效果並不相同。 每個類別都有自己的能力和限制。 下列範例顯示使用物件初始化運算式清單來宣告和初始化命名類別`Customer`之實例的便利方式。 請注意, 類別的名稱是在關鍵字`New`之後指定。  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
   
- 匿名型別已經沒有可用的名稱。 因此匿名型別的具現化不能包含的類別名稱。  
+ 匿名型別沒有可用的名稱。 因此, 匿名型別的具現化不能包含類別名稱。  
   
  [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
- 需求和兩個宣告的結果不相同。 針對`namedCust`，則`Customer`類別，具有`Name`屬性必須已經存在，並宣告會建立該類別的執行個體。 針對`anonymousCust`，編譯器會定義新的類別具有一個屬性，一個字串稱為`Name`，並建立該類別的新執行個體。  
+ 這兩個宣告的需求和結果不同。 若`namedCust`為,具有`Name`屬性的類別必須已經存在,而且宣告會建立該類別的實例。`Customer` 針對`anonymousCust`, 編譯器會定義具有一個屬性的新類別、名`Name`為的字串, 並建立該類別的新實例。  
   
-## <a name="named-types"></a>具名的類型  
- 物件初始設定式會提供簡單的方式來呼叫類型的建構函式，並在單一陳述式將部分或所有屬性的值。 編譯器會叫用適當的建構函式陳述式： 如果任何引數會不呈現，無參數建構函式或如果會傳送一或多個引數的參數化建構函式。 在那之後，初始設定式清單中出現的順序會初始化指定的屬性。  
+## <a name="named-types"></a>命名類型  
+ 物件初始化運算式提供簡單的方法來呼叫類型的函式, 然後在單一語句中設定部分或所有屬性的值。 編譯器會針對語句叫用適當的函式: 如果沒有提供任何引數, 則為無參數的函式, 或如果傳送了一或多個引數, 則為參數化的函數 之後, 指定的屬性會依照它們在初始化運算式清單中的顯示順序來初始化。  
   
- 初始設定式清單中的每個初始設定包含初始值之類別成員的指派。 當已定義類別時，決定的名稱和資料類型的成員。 在下列範例中，`Customer`的類別必須存在，並必須有成員具名`Name`和`City`，可以接受的字串值。  
+ 初始化運算式清單中的每個初始設定都包含將初始值指派給類別的成員。 定義類別時, 會決定成員的名稱和資料類型。 在下列範例中, `Customer`類別必須存在, 而且必須具有名為`Name`且`City`可接受字串值的成員。  
   
  [!code-vb[VbVbalrObjectInit#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#3)]  
   
- 或者，您也可以使用下列程式碼取得相同的結果：  
+ 或者, 您可以使用下列程式碼來取得相同的結果:  
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- 每個這些宣告就相當於下列的範例中，建立`Customer`物件使用的無參數建構函式，然後再指定初始值`Name`並`City`屬性使用`With`陳述式。  
+ 這些宣告中的每一個都相當於下列範例, 其會`Customer`使用無參數的函式來建立物件, 然後使用`With`來指定`Name`和`City`屬性的初始值句.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   
- 如果`Customer`類別包含可讓您傳送的值中的參數化建構函式`Name`，例如，您可以也宣告並初始化`Customer`物件如下：  
+ 例如, 如果`Name` `Customer`類別包含參數化的函式, 可讓您傳送的值, 您也可以透過下列方式來宣告和初始化物件: `Customer`  
   
  [!code-vb[VbVbalrObjectInit#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#6)]  
   
- 您沒有初始化所有的屬性，如下列程式碼所示。  
+ 您不需要初始化所有屬性, 如下列程式碼所示。  
   
  [!code-vb[VbVbalrObjectInit#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#7)]  
   
- 不過，在初始設定清單不可為空白。 未初始化的屬性會保留其預設值。  
+ 不過, 初始化清單不可以是空的。 未初始化的屬性會保留其預設值。  
   
-### <a name="type-inference-with-named-types"></a>使用具名類型的型別推斷  
- 您可以縮短的宣告的程式碼`cust1`藉由結合物件初始設定式和區域類型推斷。 這可讓您省略`As`在變數宣告中的子句。 變數的資料型別會從指派所建立的物件型別推斷。 在下列範例中，類型`cust6`是`Customer`。  
+### <a name="type-inference-with-named-types"></a>具有命名類型的類型推斷  
+ 您可以藉`cust1`由結合物件初始化運算式和區欄位型別推斷, 縮短宣告的程式碼。 這可讓您省略變數`As`宣告中的子句。 變數的資料類型是從指派所建立的物件類型推斷而來。 在下列範例中, 的類型`cust6`是。 `Customer`  
   
  [!code-vb[VbVbalrObjectInit#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#8)]  
   
-### <a name="remarks-about-named-types"></a>具名類型的相關註解  
+### <a name="remarks-about-named-types"></a>命名類型的相關備註  
   
-- 類別成員無法初始化物件初始設定式清單中一個以上的時間。 Deklarace`cust7`會造成錯誤。  
+- 類別成員在物件初始化運算式清單中無法初始化一次以上。 的宣告會造成錯誤。 `cust7`  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
-- 成員可以用來初始化本身或另一個欄位中。 如果它已初始化以前，如下列宣告所示，存取成員`cust8`，將會使用預設值。 請記住，處理會使用物件初始設定式的宣告時，會發生第一件事是適當的建構函式會叫用。 在那之後，會初始化初始設定式清單中的個別欄位。 在下列範例中，預設值`Name`指派給`cust8`，並初始化的值指派在`cust9`。  
+- 成員可以用來初始化本身或其他欄位。 如果成員在初始化之前被存取 (如的下列`cust8`宣告所示), 則會使用預設值。 請記住, 當處理使用物件初始化運算式的宣告時, 第一件事就是叫用適當的函式。 之後, 初始化運算式清單中的個別欄位便會進行初始化。 在下列範例中, `Name`會為`cust8`指派的預設值, 並在中`cust9`指派初始化的值。  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
-     下列範例會使用參數化建構函式從`cust3`並`cust4`來宣告和初始化`cust10`和`cust11`。  
+     下列範例會`cust3`從和`cust4`使用參數化的函式, 以宣告`cust11`和初始化`cust10`和。  
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
-- 物件初始設定式可以是巢狀。 在下列範例中，`AddressClass`是具有兩個屬性的類別`City`並`State`，而`Customer`類別具有`Address`的執行個體的屬性`AddressClass`。  
+- 物件初始化運算式可以嵌套。 在下列範例中, `AddressClass`是具有兩個屬性 ( `City`和`State`) 的類別, 而`Customer`類別具有`Address`屬於實例的`AddressClass`屬性。  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
-- 在初始設定清單不可為空白。  
+- 初始化清單不可以是空的。  
   
-- 正在初始化的執行個體不能屬於類型物件。  
+- 要初始化的實例不可以是 Object 類型。  
   
-- 要初始化的類別成員不能共用的成員、 唯讀成員、 常數或方法呼叫。  
+- 要初始化的類別成員不能是共用成員、唯讀成員、常數或方法呼叫。  
   
-- 要初始化的類別成員無法編製索引，或限定。 下列範例會產生編譯器錯誤：  
+- 無法為已初始化的類別成員編制索引或限定。 下列範例會引發編譯器錯誤:  
   
      `'' Not valid.`  
   
@@ -94,44 +94,44 @@ ms.locfileid: "67783244"
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
 ## <a name="anonymous-types"></a>匿名類型  
- 匿名型別會使用物件初始設定式來建立新您未明確定義的型別和名稱的執行個體。 相反地，編譯器會產生類型，以根據您指定的屬性在物件初始設定式清單。 未指定類型的名稱，因為它指*匿名型別*。 例如，比較到較早的下列宣告`cust6`。  
+ 匿名型別會使用物件初始化運算式, 來建立您未明確定義和命名的新類型實例。 相反地, 編譯器會根據您在物件初始化運算式清單中指定的屬性來產生型別。 因為未指定類型的名稱, 所以稱為*匿名型別*。 例如, 比較的下列宣告與先前`cust6`的宣告。  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
   
- 唯一的差別在語法上是沒有指定任何名稱之後,`New`資料類型。 不過，會發生什麼事都相當不同。 編譯器會定義新的匿名型別，有兩個屬性，`Name`和`City`，並建立它的執行個體使用指定的值。 類型推斷的類型可決定`Name`和`City`在範例中為字串。  
+ 唯一的不同之處在于, 在資料類型之後`New`未指定任何名稱。 不過, 這種情況會有很大的差異。 編譯器會定義具有兩個屬性 ( `Name`和`City`) 的新匿名型別, 並使用指定的值建立它的實例。 型別推斷會將範例`Name`中`City`的和類型判斷為字串。  
   
 > [!CAUTION]
->  匿名型別名稱由編譯器產生，並可能會有所不同的編譯。 您的程式碼不應該使用或依賴匿名型別的名稱。  
+> 匿名型別的名稱是由編譯器所產生, 而且可能會因編譯而異。 您的程式碼不應該使用或依賴匿名型別的名稱。  
   
- 因為型別名稱無法使用，您無法使用`As`子句來宣告`cust13`。 必須推斷其型別。 不使用晚期繫結，這會限制使用本機變數的匿名型別。  
+ 因為類型的名稱無法使用, 所以您不能使用`As`子句`cust13`來宣告。 必須推斷其型別。 如果沒有使用晚期繫結, 這會限制使用匿名型別來做為本機變數。  
   
- 匿名型別提供重要支援[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢。 在查詢中的匿名型別的用法的相關資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)並[在 Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
+ 匿名型別提供查詢的[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]關鍵支援。 如需在查詢中使用匿名型別的詳細資訊, 請參閱[匿名](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)型別和 Visual Basic 中的[LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
   
-### <a name="remarks-about-anonymous-types"></a>匿名型別的備註  
+### <a name="remarks-about-anonymous-types"></a>匿名型別的相關備註  
   
-- 一般來說，所有或大部分的匿名類型宣告中的屬性會是索引鍵屬性，由輸入關鍵字`Key`屬性名稱前面。  
+- 一般來說, 匿名型別宣告中的所有或大部分屬性都是索引鍵屬性, 這是藉由在屬性名稱`Key`前面輸入關鍵字來表示。  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
-     如需有關索引鍵屬性的詳細資訊，請參閱[金鑰](../../../../visual-basic/language-reference/modifiers/key.md)。  
+     如需索引鍵屬性的詳細資訊, 請參閱索引[鍵](../../../../visual-basic/language-reference/modifiers/key.md)。  
   
-- 匿名型別定義都必須宣告至少一個屬性，例如具名類型初始設定式清單。  
+- 就像命名類型, 匿名型別定義的初始化運算式清單必須宣告至少一個屬性。  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
-- 宣告匿名類型的執行個體時，編譯器會產生相符的匿名型別定義。 名稱和資料類型的屬性會從執行個體宣告，而且會包含在定義中，編譯器。 屬性不是名為和具名型別，其方式時，預先定義。 會推斷其類型。 您無法使用，以指定屬性的資料型別`As`子句。  
+- 宣告匿名型別的實例時, 編譯器會產生相符的匿名型別定義。 屬性的名稱和資料類型取自實例宣告, 並由編譯器在定義中包含。 屬性不會事先命名並定義, 就像是針對已命名的型別一樣。 系統會推斷其類型。 您不能使用`As`子句來指定屬性的資料類型。  
   
-- 匿名型別也可以建立的名稱和其屬性的值以數種其他方式。 例如，匿名型別屬性可能需要的名稱和變數，或名稱的值與另一個物件的屬性的值。  
+- 匿名型別也可以用數種其他方式來建立其屬性的名稱和值。 例如, 匿名型別屬性可以同時接受變數的名稱和值, 或是另一個物件之屬性的名稱和值。  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   
-     如需匿名型別中定義屬性選項的詳細資訊，請參閱[How to:推斷屬性名稱和匿名類型宣告中的型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)。  
+     如需有關在匿名型別中定義屬性之選項的詳細[資訊, 請參閱如何:在匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)宣告中推斷屬性名稱和類型。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [如何：推斷屬性名稱和匿名類型宣告中的類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [如何：在匿名型別宣告中推斷屬性名稱和類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Key](../../../../visual-basic/language-reference/modifiers/key.md)
-- [如何：使用物件初始設定式宣告物件](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [如何：使用物件初始化運算式宣告物件](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

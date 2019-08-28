@@ -2,12 +2,12 @@
 title: 聯合範例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 10087c4c18a4bc24dd36d814619fc265f9987c8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d3a326f08e78edb79908485361f161c1b6da6625
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961432"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044980"
 ---
 # <a name="federation-sample"></a>聯合範例
 這個範例將示範聯合安全性。  
@@ -89,7 +89,7 @@ ms.locfileid: "69961432"
 1. 開啟 SDK 命令視窗。 在範例的路徑中，執行 Setup.bat。 這會建立範例所需的虛擬目錄，並安裝具有適當權限的必要憑證。  
   
     > [!NOTE]
-    >  Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。 它要求 MSSDK 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Windows SDK 命令提示字元中設定。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，您必須確定已安裝 IIS 6.0 管理相容性，因為安裝會使用 IIS 系統管理員指令碼。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上執行安裝指令碼時，需要系統管理員權限。  
+    > Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。 它要求 MSSDK 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Windows SDK 命令提示字元中設定。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，您必須確定已安裝 IIS 6.0 管理相容性，因為安裝會使用 IIS 系統管理員指令碼。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上執行安裝指令碼時，需要系統管理員權限。  
   
 2. 在 Visual Studio 中開啟 FederationSample, 然後從 [**建立**] 功能表中選取 [**建立方案**]。 這會建置通用專案檔、Bookstore 服務、Bookstore STS、HomeRealm STS，然後將它們部署在 IIS 中。 還會建置 Bookstore 用戶端應用程式，並將可執行檔 BookStoreClient.exe 放置在 FederationSample\BookStoreClient\bin\Debug 資料夾中。  
   
@@ -102,17 +102,17 @@ ms.locfileid: "69961432"
      此範例已設定為允許使用者購買價值在 $15 (含) 以下的書籍。 嘗試購買價值超過 15 美元的書籍，會導致用戶端從「書店服務」(Book Store Service) 收到「拒絕存取」訊息。  
   
     > [!NOTE]
-    >  此範例不會在使用者購買之後更新其信用額度限制。 您可以在使用者的 (固定) 信用額度限制以內重複購買書籍。  
+    > 此範例不會在使用者購買之後更新其信用額度限制。 您可以在使用者的 (固定) 信用額度限制以內重複購買書籍。  
   
 #### <a name="to-clean-up"></a>若要清除  
   
 1. 執行 Cleanup.bat。 這會刪除安裝期間建立的虛擬目錄，也會移除安裝期間所安裝的憑證。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

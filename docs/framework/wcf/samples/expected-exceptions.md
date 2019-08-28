@@ -2,12 +2,12 @@
 title: 預期的例外狀況
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 7611b070df31b7a0997a94c07594716ee264af5e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 963606f4cfd34acb1c4400324cdbb318e3186103
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961600"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039703"
 ---
 # <a name="expected-exceptions"></a>預期的例外狀況
 此範例示範如何在使用型別用戶端時，攔截預期的例外狀況。 這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
@@ -48,7 +48,7 @@ catch (CommunicationException exception)
  如果發生預期的例外狀況，日後用戶端可能還能使用，也可能無法使用。 若要判斷用戶端是否仍可使用，請檢查 `State` 屬性是否設為 `CommunicationState`.Opened。 如果仍為開啟狀態，表示仍可使用。 否則，您應該中止用戶端，並釋放所有用戶端的參考。  
   
 > [!CAUTION]
->  您可以發現，具有工作階段的用戶端通常在發生例外狀況後無法繼續使用，而不具有工作階段的用戶端卻常常在發生例外狀況後還能使用。 但是，這兩種情況並不必然發生，因此假如您想要在發生例外狀況後繼續使用用戶端，則您的應用程式應該檢查 `State` 屬性以確定用戶端仍為開啟狀態。  
+> 您可以發現，具有工作階段的用戶端通常在發生例外狀況後無法繼續使用，而不具有工作階段的用戶端卻常常在發生例外狀況後還能使用。 但是，這兩種情況並不必然發生，因此假如您想要在發生例外狀況後繼續使用用戶端，則您的應用程式應該檢查 `State` 屬性以確定用戶端仍為開啟狀態。  
   
  當您執行範例時，作業回應和例外狀況會顯示在用戶端主控台視窗中。  
   
@@ -72,10 +72,10 @@ Got System.TimeoutException
 3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  

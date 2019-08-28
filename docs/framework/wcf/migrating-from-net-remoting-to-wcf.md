@@ -2,12 +2,12 @@
 title: 從 .NET 遠端處理移轉到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 71e26ddd93605b02031aecba280e382528378ba6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943040"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045860"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>從 .NET 遠端處理移轉到 WCF
 此文章說明如何將使用 .NET 遠端處理的應用程式移轉為使用 Windows Communication Foundation (WCF)。 此文章會先比較這這些產品的類似概念，再說明如何在 WCF 中完成幾個常見的遠端處理案例。  
@@ -466,7 +466,7 @@ public class RemotingServer : MarshalByRefObject
    ```  
   
     > [!TIP]
-    >  請注意，工作階段物件是以 [ServiceContract] 標記，因此是一般 WCF 服務介面。 設定 SessionMode 屬性表示它將會是工作階段服務。 在 WCF 中，工作階段是將兩個端點之間傳送的多個訊息相互關聯的方式。 這表示一旦用戶端取得此服務的連接，便會在用戶端與伺服器之間建立工作階段。 用戶端會針對這個工作階段內的所有互動，使用伺服器端物件的唯一執行個體。  
+    > 請注意，工作階段物件是以 [ServiceContract] 標記，因此是一般 WCF 服務介面。 設定 SessionMode 屬性表示它將會是工作階段服務。 在 WCF 中，工作階段是將兩個端點之間傳送的多個訊息相互關聯的方式。 這表示一旦用戶端取得此服務的連接，便會在用戶端與伺服器之間建立工作階段。 用戶端會針對這個工作階段內的所有互動，使用伺服器端物件的唯一執行個體。  
   
 2. 接下來，我們需要提供此服務介面的實作。 我們透過以 [ServiceBehavior] 標記並設定 InstanceContextMode，來告知 WCF 將要為每個工作階段使用此類型的唯一執行個體。  
   

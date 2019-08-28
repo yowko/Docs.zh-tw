@@ -2,12 +2,12 @@
 title: 虛擬目錄安裝指示
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: f755fadf6bef2bdd58fd31f3460a143b8f52eddf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6dccc5174e3fb9ab67023310d8c060d598a707c9
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966732"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038639"
 ---
 # <a name="virtual-directory-setup-instructions"></a>虛擬目錄安裝指示
 Windows Communication Foundation (WCF) 範例的目的是共用名稱為 servicemodelsamples 的通用虛擬目錄, 其對應至%SystemDrive%\inetpub\wwwroot\servicemodelsamples 資料夾。  
@@ -33,13 +33,13 @@ Windows Communication Foundation (WCF) 範例的目的是共用名稱為 service
   
 6. 設定到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 的實體路徑。  建立時，大部分的 WCF 範例會將服務可執行檔複製到這個位置。  
   
-7. 按一下 [確定 **Deploying Office Solutions**]。 隨即為 WCF 範例建立 Web 應用程式。  
+7. 按一下 [確定]。 隨即為 WCF 範例建立 Web 應用程式。  
   
     > [!NOTE]
-    >  這項工作只需執行一次, 因為所有 WCF 範例都使用相同的 servicemodelsamples Web 應用程式。  
+    > 這項工作只需執行一次, 因為所有 WCF 範例都使用相同的 servicemodelsamples Web 應用程式。  
   
     > [!NOTE]
-    >  就此文件的用途而言，`virtual directory`一詞是 `Web application`的同義詞。  
+    > 就此文件的用途而言，`virtual directory`一詞是 `Web application`的同義詞。  
   
      除了建立虛擬目錄以外, 您還必須設定其屬性, 讓 WCF 服務得以執行。 如需詳細資訊，請參閱下方。  
   
@@ -55,7 +55,7 @@ Windows Communication Foundation (WCF) 範例的目的是共用名稱為 service
   
 5. 設定到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 的路徑。 建立時，大部分的 WCF 範例會將服務可執行檔複製到這個位置。  
   
-6. 按一下 [下一步]。  
+6. 按 [ **下一步**]。  
   
 7. 預設會選取下列核取方塊：  
   
@@ -66,7 +66,7 @@ Windows Communication Foundation (WCF) 範例的目的是共用名稱為 service
 8. 按 **[下一步**], 然後按一下 **[完成**] 以完成嚮導。  
   
     > [!NOTE]
-    >  這項工作只需執行一次, 因為所有 WCF 範例都使用相同的 servicemodelsamples 虛擬目錄。  
+    > 這項工作只需執行一次, 因為所有 WCF 範例都使用相同的 servicemodelsamples 虛擬目錄。  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>若要在 IIS 7.0 或7.5 中設定其他虛擬目錄屬性  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b5a13b362f565cfae9247908bcf3cf35c899ae4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e2a86fbcd78c6768a91cc0d12e45053f8da6cdec
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910724"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041166"
 ---
 # <a name="using-the-assert-method"></a>使用 Assert 方法
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "69910724"
  <xref:System.Security.CodeAccessPermission.Assert%2A> 是一種方法，可以在程式碼存取權限類別以及 <xref:System.Security.PermissionSet> 類別上呼叫。 您可以使用**Assert**讓程式碼 (和下游呼叫端) 執行您的程式碼有權執行的動作, 但其呼叫端可能沒有許可權。 安全性判斷提示會變更執行階段在安全性檢查期間執行的一般程序。 當您判斷提示權限時，它會告訴安全性系統不要檢查已判斷提示權限的程式碼呼叫端。  
   
 > [!CAUTION]
->  請小心使用判斷提示，因為它們可能會開啟安全性漏洞，破壞的執行階段強制執行安全性限制的機制。  
+> 請小心使用判斷提示，因為它們可能會開啟安全性漏洞，破壞的執行階段強制執行安全性限制的機制。  
   
  判斷提示適用於程式庫呼叫 Unmanaged 程式碼，或呼叫需要與程式庫預期用途不明顯相關的權限時。 例如, 呼叫非受控碼的所有 managed 程式碼, 都必須具有指定的**UnmanagedCode**旗標的**SecurityPermission** 。 非來自本機電腦的程式碼，例如從近端內部網路下載的程式碼，預設不會授與此權限。 因此，為了讓從近端內部網路下載的程式碼，能夠呼叫使用 Unmanaged 程式碼的程式庫，它必須具備由程式庫判斷提示的權限。 此外，某些程式庫可能會進行呼叫端看不到且需要特殊權限的呼叫。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69910724"
  例如，假設您受高度信任的程式庫類別具有刪除檔案的方法。 它會藉由呼叫 Unmanaged 的 Win32 函式來存取檔案。 呼叫者叫用您程式碼的**Delete**方法, 並傳入要刪除之檔案的名稱, 對 c:\test.txt 在**Delete**方法中, 您的程式碼<xref:System.Security.Permissions.FileIOPermission>會建立代表對 c:\test.txt 寫入存取權的物件。 (必須要有寫入權限才能刪除檔案。)您的程式碼接著會藉由呼叫**FileIOPermission**物件的**Demand**方法, 叫用命令式安全性檢查。 如果呼叫堆疊中的其中一個呼叫端沒有這個權限，就會擲回 <xref:System.Security.SecurityException>。 如果未擲回任何例外狀況，您便知道所有呼叫端都擁有存取 C:\Test.txt 的權限。 因為您相信大部分的呼叫端都沒有存取非受控碼的許可權, 您的<xref:System.Security.Permissions.SecurityPermission>程式碼接著會建立物件, 代表呼叫非受控碼的許可權, 並呼叫物件的**Assert**方法。 最後，它會呼叫 Unmanaged 的 Win32 函式，刪除 C:\Text.txt，並將控制權傳回給呼叫端。  
   
 > [!CAUTION]
->  您必須確定您的程式碼使用判斷提示時，不會是程式碼可以供其他程式碼用來存取由您正在判斷提示之權限所保護的資源的情況。 例如, 在寫入檔案的程式碼中, 呼叫者將其名稱指定為參數時, 您不會判斷提示**FileIOPermission**寫入檔案, 因為您的程式碼會開放給協力廠商誤用。  
+> 您必須確定您的程式碼使用判斷提示時，不會是程式碼可以供其他程式碼用來存取由您正在判斷提示之權限所保護的資源的情況。 例如, 在寫入檔案的程式碼中, 呼叫者將其名稱指定為參數時, 您不會判斷提示**FileIOPermission**寫入檔案, 因為您的程式碼會開放給協力廠商誤用。  
   
  當您使用命令式安全性語法時, 針對相同方法中的多個許可權呼叫**Assert**方法, 會導致擲回安全性例外狀況。 相反地, 您應該建立**PermissionSet**物件, 將您要叫用的個別許可權傳遞給它, 然後在**PermissionSet**物件上呼叫**Assert**方法。 當您使用宣告式安全性語法時, 可以多次呼叫**Assert**方法。  
   

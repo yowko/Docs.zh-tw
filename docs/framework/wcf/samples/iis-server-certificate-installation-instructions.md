@@ -2,12 +2,12 @@
 title: 網際網路資訊服務 (IIS) 伺服器憑證安裝指示
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 50fa7f1094d4b05bcadb229072293da233a18a2b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1bb9c8bb2fedc846f46f665fbfd00178e5c72975
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931863"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044916"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>網際網路資訊服務 (IIS) 伺服器憑證安裝指示
 若要執行能與網際網路資訊服務 (IIS) 安全通訊的範例，您必須建立並安裝伺服器憑證。  
@@ -47,7 +47,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
 3. 在用戶端程式加入下面這行程式碼。  
   
 > [!IMPORTANT]
->  只有測試憑證才需要這段程式碼，例如 Makecert.exe 建立的憑證。 在實際執行程式碼中不建議這樣做。  
+> 只有測試憑證才需要這段程式碼，例如 Makecert.exe 建立的憑證。 在實際執行程式碼中不建議這樣做。  
   
 ```  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  

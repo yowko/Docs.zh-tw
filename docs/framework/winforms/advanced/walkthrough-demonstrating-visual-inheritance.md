@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 32df98852b28963ffb748895156f7d9977c74b92
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040326"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046142"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>逐步解說：示範視覺化繼承
 
@@ -35,19 +35,19 @@ ms.locfileid: "69040326"
 > [!CAUTION]
 > 並非所有控制項都支援來自基底表單的視覺化繼承。 下列控制項並不支援在此逐步解說中所描述的案例：
 >
->  <xref:System.Windows.Forms.WebBrowser>
+> - <xref:System.Windows.Forms.WebBrowser>
 >
->  <xref:System.Windows.Forms.ToolStrip>
+> - <xref:System.Windows.Forms.ToolStrip>
 >
->  <xref:System.Windows.Forms.ToolStripPanel>
+> - <xref:System.Windows.Forms.ToolStripPanel>
 >
->  <xref:System.Windows.Forms.TableLayoutPanel>
+> - <xref:System.Windows.Forms.TableLayoutPanel>
 >
->  <xref:System.Windows.Forms.FlowLayoutPanel>
+> - <xref:System.Windows.Forms.FlowLayoutPanel>
 >
->  <xref:System.Windows.Forms.DataGridView>
+> - <xref:System.Windows.Forms.DataGridView>
 >
->  繼承的表單中的這些控制項永遠唯讀，不論您使用的修飾詞為何 (`private``protected` 或 `public`)。
+> 繼承的表單中的這些控制項永遠唯讀，不論您使用的修飾詞為何 (`private``protected` 或 `public`)。
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>建立包含基底表單的類別庫專案
 
@@ -61,7 +61,7 @@ ms.locfileid: "69040326"
 
 5. 從 [檔案] 功能表中, 選擇 [**全部儲存**], 將專案和檔案儲存到預設位置。
 
- 下面兩個程序將按鈕加入至基底表單。 為了示範視覺化繼承，您將藉由設定 `Modifiers` 屬性，授與這些按鈕不同存取層級。
+下面兩個程序將按鈕加入至基底表單。 為了示範視覺化繼承，您將藉由設定 `Modifiers` 屬性，授與這些按鈕不同存取層級。
 
 ## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>新增基底表單繼承者可以修改的按鈕
 
@@ -135,7 +135,7 @@ ms.locfileid: "69040326"
 
 5. 按兩下設計工具中的繼承表單 (**Form2**), 如果尚未開啟, 請將它開啟。
 
-     在設計工具中, 繼承的按鈕具有符號 (![Visual Basic 繼承符號的螢幕擷取畫面。](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)), 表示它們會被繼承。
+    在設計工具中, 繼承的按鈕具有符號 (![Visual Basic 繼承符號的螢幕擷取畫面。](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)), 表示它們會被繼承。
 
 6. 選取 [ **Hello** ] 按鈕, 並觀察調整大小控點。 因為此按鈕已受到保護，所以繼承者可以移動它、調整大小、變更標題和進行其他修改。
 

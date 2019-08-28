@@ -2,28 +2,29 @@
 title: 自訂繫結安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 99fa1e7dea09601de5efff9ef8d8c6a66eae1bac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a597e1fb7c239b49c03e964b513b4248a9c020c3
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953766"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045606"
 ---
 # <a name="custom-binding-security"></a>自訂繫結安全性
+
 這個範例會示範如何使用自訂繫結來設定安全性。 它會顯示如何使用自訂繫結同時啟用訊息層級安全性和安全傳輸。 當在用戶端和服務之間傳輸訊息需要安全傳輸，且同時必須保護訊息層級上訊息的安全時，這是相當有用的。 系統提供的繫結不支援這個組態。
 
- 這個範例是由用戶端主控台程式 (EXE) 與服務主控台程式 (EXE) 所組成。 服務會實作雙工合約。 合約是由 `ICalculatorDuplex` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 `ICalculatorDuplex` 介面允許用戶端執行數學運算，計算整個工作階段的執行結果。 服務可能會獨立地傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。 自訂繫結已定義成支援雙工通訊，而且具備安全性。
+這個範例是由用戶端主控台程式 (EXE) 與服務主控台程式 (EXE) 所組成。 服務會實作雙工合約。 合約是由 `ICalculatorDuplex` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 `ICalculatorDuplex` 介面允許用戶端執行數學運算，計算整個工作階段的執行結果。 服務可能會獨立地傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。 自訂繫結已定義成支援雙工通訊，而且具備安全性。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
 
- 服務組態會定義支援下列作業的自訂繫結：
+服務組態會定義支援下列作業的自訂繫結：
 
 - 使用 TLS/SSL 通訊協定保護的 TCP 通訊。
 
 - Windows 訊息安全性。
 
- 自訂繫結組態會同時啟用訊息層級安全性以啟用安全傳輸。 繫結項目的順序對於定義自訂系結很重要, 因為每個都代表通道堆疊中的一層 (請參閱[自訂](../../../../docs/framework/wcf/extending/custom-bindings.md)系結)。 自訂繫結會定義在服務與用戶端組態檔中，如下列範例組態所示。
+自訂繫結組態會同時啟用訊息層級安全性以啟用安全傳輸。 繫結項目的順序對於定義自訂系結很重要, 因為每個都代表通道堆疊中的一層 (請參閱[自訂](../../../../docs/framework/wcf/extending/custom-bindings.md)系結)。 自訂繫結會定義在服務與用戶端組態檔中，如下列範例組態所示。
 
 ```xml
 <bindings>
@@ -41,7 +42,7 @@ ms.locfileid: "69953766"
 </bindings>
 ```
 
- 自訂繫結使用服務憑證來驗證傳輸層級上的服務，並在用戶端和服務之間進行傳輸時保護訊息。 這是由 `sslStreamSecurity` 繫結項目所完成。 服務的憑證會使用服務行為設定，如下列範例組態所示。
+自訂繫結使用服務憑證來驗證傳輸層級上的服務，並在用戶端和服務之間進行傳輸時保護訊息。 這是由 `sslStreamSecurity` 繫結項目所完成。 服務的憑證會使用服務行為設定，如下列範例組態所示。
 
 ```xml
 <behaviors>
@@ -57,9 +58,9 @@ ms.locfileid: "69953766"
 </behaviors>
 ```
 
- 此外，自訂繫結使用 Windows 認證類型 (預設認證類型) 的訊息安全性。 這是由 `security` 繫結項目所完成。 如果可以使用 Kerberos 驗證機制，則會使用訊息層級安全性來驗證用戶端和服務。 如果此範例是執行於 Active Directory 環境，就會發生這種情況。 如果 Kerberos 驗證機制無法使用，則使用 NTLM 驗證。 NTLM 會對服務驗證用戶端，但不會對用戶端驗證服務。 `security` 繫結項目已設定為使用 `SecureConversation` `authenticationType`，結果會在用戶端和服務上建立安全性工作階段。 若要讓服務的雙工合約能運作，這是必要的。
+此外，自訂繫結使用 Windows 認證類型 (預設認證類型) 的訊息安全性。 這是由 `security` 繫結項目所完成。 如果可以使用 Kerberos 驗證機制，則會使用訊息層級安全性來驗證用戶端和服務。 如果此範例是執行於 Active Directory 環境，就會發生這種情況。 如果 Kerberos 驗證機制無法使用，則使用 NTLM 驗證。 NTLM 會對服務驗證用戶端，但不會對用戶端驗證服務。 `security` 繫結項目已設定為使用 `SecureConversation` `authenticationType`，結果會在用戶端和服務上建立安全性工作階段。 若要讓服務的雙工合約能運作，這是必要的。
 
- 當您執行範例時，作業要求和回應會顯示在用戶端的主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
+當您執行範例時，作業要求和回應會顯示在用戶端的主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
 ```
 Press <ENTER> to terminate client.
@@ -70,38 +71,38 @@ Result(441.25)
 Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 ```
 
- 當執行範例時，您會看到訊息在回呼服務所傳送的介面時傳回到用戶端。 完成所有作業時，每個中繼結果都會顯示，並接著顯示整個方程式。 按 ENTER 鍵關閉用戶端。
+當執行範例時，您會看到訊息在回呼服務所傳送的介面時傳回到用戶端。 完成所有作業時，每個中繼結果都會顯示，並接著顯示整個方程式。 按 ENTER 鍵關閉用戶端。
 
- 這個已包含的 Setup.bat 檔可讓您使用相關的服務憑證設定用戶端與伺服器，以執行需要憑證安全性的自我裝載應用程式。 這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。
+這個已包含的 Setup.bat 檔可讓您使用相關的服務憑證設定用戶端與伺服器，以執行需要憑證安全性的自我裝載應用程式。 這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。
 
- 下面提供套用至此範例之批次檔的各區段的簡要概觀，讓批次檔得以修改為在適當的組態下執行：
+下面提供套用至此範例之批次檔的各區段的簡要概觀，讓批次檔得以修改為在適當的組態下執行：
 
 - 建立伺服器憑證。
 
-     下列 Setup.bat 檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔的名稱預設為伺服器名稱，localhost。
+  下列 Setup.bat 檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔的名稱預設為伺服器名稱，localhost。
 
-     憑證會儲存在 Web 裝載服務的 CurrentUser 存放區中。
+  憑證會儲存在 Web 裝載服務的 CurrentUser 存放區中。
 
-    ```bat
-    echo ************
-    echo Server cert setup starting
-    echo %SERVER_NAME%
-    echo ************
-    echo making server cert
-    echo ************
-    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
-    ```
+  ```bat
+  echo ************
+  echo Server cert setup starting
+  echo %SERVER_NAME%
+  echo ************
+  echo making server cert
+  echo ************
+  makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
+  ```
 
 - 將伺服器憑證安裝至用戶端的受信任憑證存放區中。
 
-     Setup.bat 檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。
+  Setup.bat 檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。
 
-    ```
-    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
-    ```
+  ```
+  certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
+  ```
 
-    > [!NOTE]
-    >  Setup.bat 批次檔是設計用來從 Visual Studio 2010 命令提示字元執行。 它要求 MSSDK 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 2010 命令提示字元中設定。
+  > [!NOTE]
+  > Setup.bat 批次檔是設計用來從 Visual Studio 2010 命令提示字元執行。 它要求 MSSDK 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 2010 命令提示字元中設定。
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
@@ -116,28 +117,28 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 1. 以系統管理員許可權開啟 Visual Studio 視窗的開發人員命令提示字元, 然後從範例安裝資料夾中執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
-    >  安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。  
-  
-2. 從 \service\bin 啟動 Service.exe。  
-  
-3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
-  
-4. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
-  
-### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
-  
-1. 在服務電腦上：  
-  
-    1. 在服務電腦上建立名為 servicemodelsamples 的虛擬目錄。  
-  
-    2. 將 \inetpub\wwwroot\servicemodelsamples 中的服務程式檔複製至服務電腦上的虛擬目錄中。 確定複製 \bin 子目錄中的檔案。  
-  
-    3. 將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
-  
-    4. 在開發人員命令提示字元中, 針對以系統管理員許可權開啟的 Visual Studio 執行下列`Setup.bat service`命令:。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。  
-  
+    > 安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。
+
+2. 從 \service\bin 啟動 Service.exe。
+
+3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。
+
+4. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
+
+### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例
+
+1. 在服務電腦上：
+
+    1. 在服務電腦上建立名為 servicemodelsamples 的虛擬目錄。
+
+    2. 將 \inetpub\wwwroot\servicemodelsamples 中的服務程式檔複製至服務電腦上的虛擬目錄中。 確定複製 \bin 子目錄中的檔案。
+
+    3. 將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。
+
+    4. 在開發人員命令提示字元中, 針對以系統管理員許可權開啟的 Visual Studio 執行下列`Setup.bat service`命令:。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。
+
         > [!NOTE]
-        >  Setup.bat 批次檔是設計用來從 Visual Studio 2010 命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 2010 命令提示字元中設定。
+        > Setup.bat 批次檔是設計用來從 Visual Studio 2010 命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 2010 命令提示字元中設定。
 
     5. 變更 machine.config 檔案內的[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) , 以反映在上一個步驟中產生之憑證的主體名稱。
 
@@ -163,7 +164,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 
-         如果憑證是由信任的簽發者發行，就不需要執行步驟 c、d 和 e。
+        如果憑證是由信任的簽發者發行，就不需要執行步驟 c、d 和 e。
 
     6. 修改用戶端的 App.config 檔，如下所示：
 
@@ -174,7 +175,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
                 binding="customBinding"
                 bindingConfiguration="Binding1"
                 contract="Microsoft.ServiceModel.Samples.ICalculatorDuplex"
-        behaviorConfiguration="CalculatorClientBehavior" />
+                behaviorConfiguration="CalculatorClientBehavior" />
         </client>
         ```
 

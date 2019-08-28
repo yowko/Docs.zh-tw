@@ -1,21 +1,21 @@
 ---
-title: HOW TO：使用組態檔發行服務的中繼資料
+title: 作法：使用組態檔發行服務的中繼資料
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: f3fda88f4ec2f2695d6026d6e4df79243124b7b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26894a3951b91879a7b3e6f66731891113394082
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643663"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045298"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>HOW TO：使用組態檔發行服務的中繼資料
-這是其中兩個示範 Windows Communication Foundation (WCF) 服務發行中繼資料的使用說明主題。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用組態檔發行服務的中繼資料。  
+這是示範發行 Windows Communication Foundation (WCF) 服務之中繼資料的兩個 how to 主題之一。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用組態檔發行服務的中繼資料。  
   
 > [!CAUTION]
->  本主題將示範以不安全的方法發行中繼資料。 任何用戶端都能從服務擷取中繼資料。 如果您需要您的服務，以安全的方式發行中繼資料，請參閱[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
+> 本主題將示範以不安全的方法發行中繼資料。 任何用戶端都能從服務擷取中繼資料。 如果您需要服務以安全的方式發行中繼資料, 請參閱[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
   
- 如需程式碼中發行中繼資料的詳細資訊，請參閱[How to:發行服務，使用程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。 發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。 若要確定可運作的程式碼，建立基本的 WCF 服務。 為了方便使用，下列程式碼提供基本的自我裝載服務。  
+ 如需在程式碼中發行中繼資料的[詳細資訊, 請參閱如何:使用程式碼](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)發行服務的中繼資料。 發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。 若要確定程式碼是否正常運作, 請建立基本的 WCF 服務。 為了方便使用，下列程式碼提供基本的自我裝載服務。  
   
 ```csharp  
 using System;  
@@ -158,7 +158,7 @@ namespace Metadata.Samples
   
 9. 建置並執行主控台應用程式。  
   
-10. 使用 Internet Explorer 瀏覽至服務的基底位址 (http://localhost:8001/MetadataSample在此範例中)，並確認已開啟 中繼資料發行。 如果沒有，則會顯示在產生的頁面頂端的訊息：「 中繼資料發行，此服務是目前停用。 」  
+10. 使用 Internet Explorer 流覽至服務的基底位址 (http://localhost:8001/MetadataSample 在此範例中為), 並確認已開啟中繼資料發佈。 如果不是, 則會在產生的頁面頂端顯示一則訊息:「此服務的中繼資料發行目前已停用。」  
   
 ### <a name="to-use-default-endpoints"></a>若要使用預設端點  
   
@@ -182,7 +182,7 @@ namespace Metadata.Samples
      因為服務有 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 且 `httpGetEnabled` 設為 `true`，服務已經啟用發行中繼資料，但是因為沒有明確加入端點，所以執行階段加入預設端點。 如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服務的簡化組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例顯示基本的 WCF 服務和組態檔發行服務中繼資料的實作。  
+ 下列程式碼範例示範如何執行基本 WCF 服務, 以及發行服務中繼資料的設定檔。  
   
 ```csharp  
 using System;  
@@ -256,8 +256,8 @@ namespace Metadata.Samples
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [如何：裝載 WCF 服務中的受管理的應用程式](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [如何：在受控應用程式中裝載 WCF 服務](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [自我裝載](../../../../docs/framework/wcf/samples/self-host.md)
 - [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [如何：發行服務，使用程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [如何：使用程式碼發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

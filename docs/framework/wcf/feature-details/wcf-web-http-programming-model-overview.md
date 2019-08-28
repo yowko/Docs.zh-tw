@@ -2,12 +2,12 @@
 title: WCF Web HTTP 程式設計模型概觀
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: e63a6c4a68da2b7e51dc1fc24353922912262806
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8c13ad943bf4ef272c28266e12e175a0a21d5d40
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988581"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045237"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 程式設計模型概觀
 Windows Communication Foundation (WCF) WEB HTTP 程式設計模型提供使用 WCF 建立 WEB HTTP 服務所需的基本元素。 WCF WEB HTTP 服務的設計可供最廣泛的可能用戶端存取, 包括網頁瀏覽器, 並具有下列獨特的需求:  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) WEB HTTP 程式設計模型提供使用 W
  可從 WEB HTTP 服務傳回的資料型別沒有額外的限制。 WEB HTTP 服務作業可傳回任何可序列化型別。 因為 WEB HTTP 服務作業可由 Web 瀏覽器叫用，所以可在 URL 中指定的資料型別具有一項限制。 如需預設支援哪些類型的詳細資訊, 請參閱下面的**UriTemplate 查詢字串參數和 url**一節。 您可以提供自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 實作來變更預設行為，其中指定如何將 URL 中指定的參數轉換成實際的參數型別。 如需詳細資訊，請參閱<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
   
 > [!CAUTION]
->  使用 WCF WEB HTTP 程式設計模型所撰寫的服務不會使用 SOAP 訊息。 因為未使用 SOAP, 所以無法使用 WCF 所提供的安全性功能。 不過，您可透過以 HTTPS 裝載服務的方式來使用傳輸型安全性。 如需 WCF 安全性的詳細資訊, 請參閱[安全性總覽](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+> 使用 WCF WEB HTTP 程式設計模型所撰寫的服務不會使用 SOAP 訊息。 因為未使用 SOAP, 所以無法使用 WCF 所提供的安全性功能。 不過，您可透過以 HTTPS 裝載服務的方式來使用傳輸型安全性。 如需 WCF 安全性的詳細資訊, 請參閱[安全性總覽](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
 > 安裝適用於 IIS 的 WebDAV 延伸模組可能會導致 Web HTTP 服務傳回 HTTP 405 錯誤，因為 WebDAV 延伸模組會嘗試處理所有 PUT 要求。 若要解決此問題，您可以解除安裝 WebDAV 延伸模組或停用網站的 WebDAV 延伸模組。 如需詳細資訊, 請參閱[IIS 和 WebDav](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  

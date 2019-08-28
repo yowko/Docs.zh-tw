@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74548df512f68761b006e064a6db968e82b03813
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 164384f043a1722ace6e5c4098cb31c4327cba1e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779126"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044064"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 函式
-強制 common language runtime (CLR) 版本所有的介面指標，它就會保存於執行階段可呼叫包裝函式 (RCW)。 這有釋放 RCW 的所有快取的效果。 在.NET Framework 4 中，此全域函式已被取代。 相反地，針對特定執行階段使用的進入點。  
+強制 common language runtime (CLR) 釋放它在執行時間可呼叫包裝函式 (RCW) 內所擁有的所有介面指標。 這有釋放所有 RCW 快取的效果。 此全域函數在 .NET Framework 4 中已被取代。 相反地, 請使用特定執行時間的進入點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,19 +37,19 @@ void CoEEShutDownCOM ();
 ```  
   
 ## <a name="remarks"></a>備註  
- `CoEEShutDownCOM`函式第一次釋放所有的快取，和所有的內容中的所有 Rcw，則會移除任何現有的安裝程式中的終止通知。 沒有 DLL 卸載時發生。  
+ `CoEEShutDownCOM`函式會先釋放所有內容和所有快取中的所有 rcw, 然後移除安裝程式中現有的任何中斷通知。 不會卸載任何 DLL。  
   
 > [!CAUTION]
->  此函式會影響所有的執行階段載入處理序。  
+> 此函式會影響載入進程中的所有執行時間。  
   
- 從.NET Framework 4 開始，在您想要影響的特定執行階段上的這個函式呼叫的進入點。 若要取得的進入點，請呼叫[iclrruntimeinfo:: Getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)方法並指定"CoEEShutDownCOM 」。  
+ 從 .NET Framework 4 開始, 請在您想要影響的特定執行時間上呼叫此函式的進入點。 若要取得進入點, 請呼叫[ICLRRuntimeInfo:: GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)方法並指定 "CoEEShutDownCOM"。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **標頭：** Cor。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

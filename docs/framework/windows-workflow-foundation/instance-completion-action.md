@@ -2,19 +2,20 @@
 title: 執行個體完成動作
 ms.date: 03/30/2017
 ms.assetid: 90cc99d2-9fef-42fd-bcbf-a56917993721
-ms.openlocfilehash: d68f41a586e44f96c9ca26cf8a142a2782adaa36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 698ac0ed5a7cbd4f6a5623cf8d9b6fbea1128d0a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662969"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044334"
 ---
 # <a name="instance-completion-action"></a>執行個體完成動作
-**執行個體完成動作**SQL 工作流程執行個體存放區的屬性可讓您指定是否的資料和工作流程執行個體的中繼資料從持續性資料庫完成後，刪除執行個體。 允許的值，這個屬性為**DeleteAll**並**DeleteNothing**。 下列清單描述這些選項：  
-  
-- **DeleteAll （預設值）。** 如果將屬性的值設定為 DeleteAll，則在執行個體完成後，就會自持續性資料庫刪除工作流程執行個體的資料和中繼資料。  
-  
-- **DeleteNothing。** 如果將屬性的值設定為 DeleteNothing，則即使執行個體已完成，仍會將工作流程執行個體的資料和中繼資料保存在持續性資料庫中。  
-  
-    > [!CAUTION]
-    >  在執行個體完成後仍保留執行個體狀態資訊，會使持續性資料庫變大。 隨著資料庫的擴充，持續性子系統執行資料庫作業的時間就會變長，因此您需要定期清除持續性資料庫中的執行個體狀態資訊，服務的執行層級才能符合您的效能需求。
+
+SQL 工作流程實例存放區的 [**實例完成動作**] 屬性, 可讓您指定是否要在完成實例之後, 從持續性資料庫中刪除工作流程實例的資料和中繼資料。 此屬性允許的值為**DeleteAll**和**DeleteNothing**。 下列清單描述這些選項：
+
+- **DeleteAll (預設值)。** 如果將屬性的值設定為 DeleteAll，則在執行個體完成後，就會自持續性資料庫刪除工作流程執行個體的資料和中繼資料。
+
+- **DeleteNothing.** 如果將屬性的值設定為 DeleteNothing，則即使執行個體已完成，仍會將工作流程執行個體的資料和中繼資料保存在持續性資料庫中。
+
+  > [!CAUTION]
+  > 在執行個體完成後仍保留執行個體狀態資訊，會使持續性資料庫變大。 隨著資料庫的擴充，持續性子系統執行資料庫作業的時間就會變長，因此您需要定期清除持續性資料庫中的執行個體狀態資訊，服務的執行層級才能符合您的效能需求。

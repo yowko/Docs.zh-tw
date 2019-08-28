@@ -2,12 +2,12 @@
 title: ASP.NET 用戶端中的資料繫結
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 7b466c8282544f00ae314aa54845644e7215f8d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5faeb99fa8fb153f1ab74f5f00786355af50016
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953518"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045098"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 用戶端中的資料繫結
 這個範例會示範如何在 Web Forms 應用程式中系結一般 Windows Communication Foundation (WCF) 服務所傳回的資料。  
@@ -30,10 +30,10 @@ ms.locfileid: "69953518"
 3. 這個範例的用戶端是在程式開發 Web 伺服器中執行的網站。 若要啟動開發 Web 服務器, 請在命令提示字元中輸入下列`%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`命令:。 然後流覽至`http://localhost:8000/client`。 如果要在多部電腦上執行這個範例，請使用伺服器的電腦名稱來取代用戶端的 Web.config 檔案中的 `localhost`的所有參照。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`

@@ -2,12 +2,12 @@
 title: 使用編輯範圍
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: d1e251abf2dd4d3f7ca15d66a4f5ea96e273a351
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c94e5c6761bb704efc9e48723d0e91a4aaf6b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623829"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037792"
 ---
 # <a name="using-editing-scope"></a>使用編輯範圍
 這個範例示範如何批次處理一組變更，以便在單一不可部分完成的單位中復原這些變更。 根據預設，活動設計工具作者所執行的動作會自動整合至復原/取消復原系統。  
@@ -26,19 +26,19 @@ ms.locfileid: "64623829"
   
 1. 建置及執行範例，然後使用左側按鈕修改工作流程。  
   
-2. 按一下 **開啟 編輯範圍**。  
+2. 按一下 [**開啟編輯範圍**]。  
   
     1. 這個命令會呼叫 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>，用於建立編輯範圍並將其發送至編輯堆疊上。  
   
     2. 三個活動接著會加入至選取的 <xref:System.Activities.Presentation.Model.ModelItem>。 請注意，如果編輯範圍尚未使用 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> 開啟，三個新活動會出現在設計工具畫布上。 因為這項作業在 <xref:System.Activities.Presentation.Model.EditingScope> 中仍為暫止，所以設計工具尚未更新。  
   
-3. 按下**關閉編輯範圍**認可編輯範圍。 三個活動隨即出現在設計工具中。  
+3. 按 [**關閉編輯範圍**] 認可編輯範圍。 三個活動隨即出現在設計工具中。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

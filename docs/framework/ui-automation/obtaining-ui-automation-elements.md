@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 8c222cb2cf70502024a5934c4c527334c9f24165
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966376"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044137"
 ---
 # <a name="obtaining-ui-automation-elements"></a>取得 UI 自動化項目
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69966376"
  本主題描述取得 <xref:System.Windows.Automation.AutomationElement> 項目之 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 物件的各種方式。  
   
 > [!CAUTION]
->  如果用戶端應用程式可能會嘗試尋找本身使用者介面中的項目，您就必須在個別執行緒上進行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 呼叫。 如需詳細資訊，請參閱 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
+> 如果用戶端應用程式可能會嘗試尋找本身使用者介面中的項目，您就必須在個別執行緒上進行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 呼叫。 如需詳細資訊，請參閱 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>根項目  
@@ -28,7 +28,7 @@ ms.locfileid: "69966376"
  受所有項目繼承的桌面根項目取自靜態 <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> 屬性。  
   
 > [!CAUTION]
->  一般而言，您應該試著取得 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子系。 如果搜尋子代可能會逐一查看數百或甚至數千個項目，就很有可能會造成堆疊溢位。 如果您嘗試取得較低層級的特定項目，您就應該要從應用程式視窗或較低層級的容器開始搜尋。  
+> 一般而言，您應該試著取得 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子系。 如果搜尋子代可能會逐一查看數百或甚至數千個項目，就很有可能會造成堆疊溢位。 如果您嘗試取得較低層級的特定項目，您就應該要從應用程式視窗或較低層級的容器開始搜尋。  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>Conditions  

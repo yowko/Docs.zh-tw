@@ -2,12 +2,12 @@
 title: 服務身分識別範例
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 999e05918eb7ac852336136a1e7512a2e9d7b9db
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d5fce313200cdfdb8007ceffe9ff97b033d9f82
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964542"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045526"
 ---
 # <a name="service-identity-sample"></a>服務身分識別範例
 這個服務身分識別範例示範如何設定服務的身分識別。 在設計階段，用戶端可以使用服務的中繼資料擷取身分識別，然後在執行階段，用戶端就可以驗證服務的身分識別。 服務身分識別的概念主要是允許用戶端在呼叫任何作業之前驗證服務，從而保護用戶端以免遭到未經驗證的呼叫。 在安全連線上，服務還會在允許用戶端存取之前驗證其認證，但這不是本範例的重點。 請參閱[用戶端](../../../../docs/framework/wcf/samples/client.md)中顯示伺服器驗證的範例。
@@ -24,7 +24,7 @@ ms.locfileid: "69964542"
 - 如何在用戶端設定自訂身分識別。 自訂身分識別通常是對身分識別現有類型進行的自訂，這可讓用戶端檢查服務認證中提供的其他宣告資訊，以便在呼叫服務之前做出授權決策。
 
     > [!NOTE]
-    >  這個範例會檢查特定憑證的身分識別 (名為 identity.com) 以及此憑證內含的 RSA 金鑰。 在用戶端的組態中使用憑證和 RSA 身分識別類型時，取得這些值的簡易方式是檢查這些值序列化所在之處的服務 WSDL。
+    > 這個範例會檢查特定憑證的身分識別 (名為 identity.com) 以及此憑證內含的 RSA 金鑰。 在用戶端的組態中使用憑證和 RSA 身分識別類型時，取得這些值的簡易方式是檢查這些值序列化所在之處的服務 WSDL。
 
  下列範例程式碼示範如何使用 WSHttpBinding，透過憑證的「網域名稱伺服器」(DNS) 來設定服務端點的身分識別。
 
@@ -120,7 +120,7 @@ class CustomIdentityVerifier : IdentityVerifier
 2. 在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]上, 使用系統管理員許可權在 Visual Studio 2012 命令提示字元內的範例安裝資料夾中執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
-    >  安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。 當您完成範例時，請務必執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
+    > 安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。 當您完成範例時，請務必執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
   
 3. 從 \service\bin 目錄啟動 Service.exe。 確定服務指出它已準備就緒, 並顯示按\<下 enter > 終止服務的提示。  
   
@@ -157,4 +157,4 @@ class CustomIdentityVerifier : IdentityVerifier
 - 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已在電腦上執行使用憑證的 Windows Communication Foundation (WCF) 範例, 請務必清除已安裝在 CurrentUser-TrustedPeople 存放區中的服務憑證。 若要這麼做, 請使用下列命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+    > 跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已在電腦上執行使用憑證的 Windows Communication Foundation (WCF) 範例, 請務必清除已安裝在 CurrentUser-TrustedPeople 存放區中的服務憑證。 若要這麼做, 請使用下列命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。

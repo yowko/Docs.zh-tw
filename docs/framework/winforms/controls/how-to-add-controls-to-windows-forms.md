@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bfe9449ecc862c361719d27dba2f5ed9af563957
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987514"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046056"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>作法：將控制項新增至 Windows Forms
+
 大部分的表單都是藉由將控制項新增至表單介面來定義使用者介面 (UI) 而設計。 *控制項*是表單上用來顯示資訊或接受使用者輸入的元件。 如需控制項的詳細資訊, 請參閱[Windows Forms 控制項](index.md)。
 
 ## <a name="to-draw-a-control-on-a-form"></a>若要在表單上繪製控制項
@@ -27,7 +28,7 @@ ms.locfileid: "69987514"
 
 3. 在表單上, 按一下您想要找出控制項左上角的位置, 並將其拖曳至您想要放置控制項右下角的位置。
 
-     控制項會以指定的位置和大小加入表單中。
+    控制項會以指定的位置和大小加入表單中。
 
     > [!NOTE]
     > 每個控制項都有定義的預設大小。 您可以將控制項從 [**工具箱**] 拖曳至表單, 以將控制項的預設大小加入表單中。
@@ -38,12 +39,12 @@ ms.locfileid: "69987514"
 
 2. 在 [**工具箱**] 中, 按一下您想要的控制項, 並將它拖曳至您的表單。
 
-     控制項會在其預設大小的指定位置加入表單中。
+    控制項會在其預設大小的指定位置加入表單中。
 
     > [!NOTE]
     > 您可以在 [**工具箱**] 中按兩下控制項, 將它新增至表單的左上角 (其預設大小)。
 
-     您也可以在執行時間以動態方式將控制項新增至表單。 在下列程式碼範例中, <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Button>當您按一下控制項時, 控制項就會加入表單中。
+    您也可以在執行時間以動態方式將控制項新增至表單。 在下列程式碼範例中, <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Button>當您按一下控制項時, 控制項就會加入表單中。
 
     > [!NOTE]
     > 下列程序需要有的表單 **按鈕** 控制項， `Button1` 、 已放在其上。
@@ -84,7 +85,7 @@ ms.locfileid: "69987514"
     > 您也可以加入程式碼來初始化控制項的其他屬性。
 
     > [!IMPORTANT]
-    >  藉由參考惡意`UserControl`, 您可能會透過網路將本機電腦暴露在安全性風險中。 這只是在惡意人士建立損毀的自訂控制項, 然後誤將它新增至專案時的問題。
+    > 藉由參考惡意`UserControl`, 您可能會透過網路將本機電腦暴露在安全性風險中。 這只是在惡意人士建立損毀的自訂控制項, 然後誤將它新增至專案時的問題。
 
 ## <a name="see-also"></a>另請參閱
 

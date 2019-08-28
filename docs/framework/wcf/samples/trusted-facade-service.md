@@ -2,15 +2,15 @@
 title: 信任的外觀服務
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 27e541c0c9738e93678d32081e49798944160715
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea2aa3840c48ba24bafeee3f10d0cb903b25dcac
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665979"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045424"
 ---
 # <a name="trusted-facade-service"></a>信任的外觀服務
-此案例的範例示範如何呼叫者的身分識別資訊從一個服務到另一個使用 Windows Communication Foundation (WCF) 安全性基礎結構。  
+此案例範例示範如何使用 Windows Communication Foundation (WCF) 安全性基礎結構, 將呼叫者的身分識別資訊從一個服務流動到另一個服務。  
   
  這是使用外觀服務將服務提供的功能公開至公用網路的一般設計模式。 外觀服務通常是在周邊網路中 (也就是非警戒區域和遮蔽式子網路)，並會與實作商務邏輯並可存取內部資料的後端服務進行通訊。 外觀服務和後端服務之間的通訊通道會經過防火牆，而且其目的通常僅限一項。  
   
@@ -22,10 +22,10 @@ ms.locfileid: "64665979"
   
 - 計算機後端服務  
   
- 外觀服務主要負責驗證要求及呼叫者。 在成功驗證之後，會使用周邊網路到內部網路之間的控制式通訊通道，將要求轉遞至後端服務。 做為轉遞要求的一部分，外觀服務會包含呼叫者身分識別的相關資訊，讓後端服務可以用此資訊進行處理。 將使用訊息 `Username` 標頭內的 `Security` 安全性權杖來傳輸呼叫者身分識別。 此範例會使用 WCF 安全性基礎結構傳輸及擷取這項資訊從`Security`標頭。  
+ 外觀服務主要負責驗證要求及呼叫者。 在成功驗證之後，會使用周邊網路到內部網路之間的控制式通訊通道，將要求轉遞至後端服務。 做為轉遞要求的一部分，外觀服務會包含呼叫者身分識別的相關資訊，讓後端服務可以用此資訊進行處理。 將使用訊息 `Username` 標頭內的 `Security` 安全性權杖來傳輸呼叫者身分識別。 此範例會使用 WCF 安全性基礎結構, 從`Security`標頭傳輸並解壓縮此資訊。  
   
 > [!IMPORTANT]
->  後端服務會信任外觀服務以驗證呼叫者。 因此，後端服務不會再次驗證呼叫者，而是會在轉遞要求中使用外觀服務提供的身分識別資訊。 由於此信任關係，後端服務必須驗證外觀服務，確保轉遞的訊息是來自可信任的來源，在此例中也就是指外觀服務。  
+> 後端服務會信任外觀服務以驗證呼叫者。 因此，後端服務不會再次驗證呼叫者，而是會在轉遞要求中使用外觀服務提供的身分識別資訊。 由於此信任關係，後端服務必須驗證外觀服務，確保轉遞的訊息是來自可信任的來源，在此例中也就是指外觀服務。  
   
 ## <a name="implementation"></a>實作  
  在本範例中有兩個通訊路徑。 第一個是在用戶端和外觀服務之間，第二個則是在外觀服務和後端服務之間。  
@@ -109,9 +109,9 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- [\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)繫結項目會處理初始呼叫者的使用者名稱傳輸和擷取。 [ \<Windowsstreamsecurity 正在 >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)並[ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md)負責驗證外觀和後端服務和訊息保護。  
+ 安全性 > 繫結項目會負責處理初始呼叫者的使用者名稱傳輸和解壓縮。 [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) Windowsstreamsecurity 正在 > 和[ tcpTransport>負責驗證外觀和後端服務,以及訊息保護\< ](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) 。 [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)  
   
- 若要轉遞要求，外觀服務實作必須提供初始呼叫者的使用者名稱，讓該 WCF 安全性基礎結構可將此轉送的訊息。 會在外觀服務實作中提供初始呼叫者的使用者名稱，方法是在用戶端 Proxy 執行個體 (外觀服務用此執行個體與後端服務通訊) 上的 `ClientCredentials` 屬性設定即可。  
+ 若要轉送要求, 外觀服務的執行必須提供初始呼叫者的使用者名稱, 讓 WCF 安全性基礎結構可以將它放入轉送的訊息。 會在外觀服務實作中提供初始呼叫者的使用者名稱，方法是在用戶端 Proxy 執行個體 (外觀服務用此執行個體與後端服務通訊) 上的 `ClientCredentials` 屬性設定即可。  
   
  下列程式碼會顯示如何在外觀服務上實作 `GetCallerIdentity` 方法。 其他方法也使用相同的模式。  
   
@@ -126,9 +126,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 如前面程式碼所示，不會在 `ClientCredentials` 屬性中設定密碼，而只會設定使用者名稱。 WCF 安全性基礎結構會建立不含密碼的使用者名稱安全性權杖在此情況下，這就是所需在此案例中。  
+ 如前面程式碼所示，不會在 `ClientCredentials` 屬性中設定密碼，而只會設定使用者名稱。 在此情況下, WCF 安全性基礎結構會建立沒有密碼的使用者名稱安全性權杖, 這就是此案例中的必要功能。  
   
- 在後端服務上，必須驗證使用者名稱安全性權杖中所含的資訊。 根據預設，WCF 安全性會嘗試將使用者對應至 Windows 帳戶使用提供的密碼。 在此情況下，將不會提供密碼，而且驗證使用者名稱也不需要後端服務，這是因為外觀服務已經執行驗證了。 若要實作這項功能在 WCF 中，自訂`UserNamePasswordValidator`提供，它只會強制使用者名稱權杖中所指定，並不會執行任何額外的驗證。  
+ 在後端服務上，必須驗證使用者名稱安全性權杖中所含的資訊。 根據預設, WCF 安全性會嘗試使用提供的密碼, 將使用者對應至 Windows 帳戶。 在此情況下，將不會提供密碼，而且驗證使用者名稱也不需要後端服務，這是因為外觀服務已經執行驗證了。 為了在 WCF 中執行這項功能, `UserNamePasswordValidator`會提供自訂, 只會強制執行權杖中指定的使用者名稱, 而且不會執行任何額外的驗證。  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -209,7 +209,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 使用 `ServiceSecurityContext.Current.WindowsIdentity` 屬性擷取外觀服務的帳戶資訊。 若要存取初始呼叫者的相關資訊，後端服務會使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 屬性。 這個屬性會查詢型別為 `Identity` 的 `Name`宣告。 WCF 安全性基礎結構中所包含的資訊會自動產生此宣告`Username`安全性權杖。  
+ 使用 `ServiceSecurityContext.Current.WindowsIdentity` 屬性擷取外觀服務的帳戶資訊。 若要存取初始呼叫者的相關資訊，後端服務會使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 屬性。 這個屬性會查詢型別為 `Identity` 的 `Name`宣告。 WCF 安全性基礎結構會自動從`Username`安全性權杖中包含的資訊產生此宣告。  
   
 ## <a name="running-the-sample"></a>執行範例  
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。 您可以在外觀和後端服務的主控台視窗中按 ENTER 鍵，即可關閉服務。  
@@ -260,7 +260,7 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
@@ -276,17 +276,17 @@ Press <ENTER> to terminate client.
   
 5. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-6. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+6. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 1. 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  

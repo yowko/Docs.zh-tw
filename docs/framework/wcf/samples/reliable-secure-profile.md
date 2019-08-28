@@ -2,35 +2,35 @@
 title: 可靠的安全設定檔
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: e1895da0805a5282fc328b0c8d48d7042a1e5784
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787565"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044808"
 ---
 # <a name="reliable-secure-profile"></a>可靠的安全設定檔
-這個範例會示範如何撰寫 WCF 及[可靠的安全設定檔](https://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。 這個範例會示範實作[建立連線](https://go.microsoft.com/fwlink/?LinkId=178141)通道可以使用來撰寫與可靠的傳訊，並選擇性地建立可靠的安全繫結的安全通道根據 RSP 規格。  
+這個範例會示範如何撰寫 WCF 和[可靠的安全設定檔](https://go.microsoft.com/fwlink/?LinkId=178140)(.rsp)。 這個範例會示範如何執行「[建立連接](https://go.microsoft.com/fwlink/?LinkId=178141)通道」, 它可以與可靠的訊息結合在一起, 並選擇性地建立安全的通道, 以根據 RSP 規格建立可靠的安全系結。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
 ## <a name="discussion"></a>討論  
  此範例示範可靠的非同步雙向訊息交換案例。 此服務擁有雙工合約，而且用戶端會實作雙工回呼合約。 用戶端會向服務起始一個要求，這個要求預期在不同的連線上得到回應。 要求訊息是以可靠的方式傳送。 用戶端不想在其結尾開啟接聽端點。 因此，它會利用服務的「建立連線」要求輪詢服務，以便在這個「建立連線」要求的返回通道傳回回應。 此範例示範如何透過 HTTP 進行安全可靠的雙工通訊，而不讓用戶端公開接聽端點 (以及建立防火牆例外狀況)。  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 開啟**ReliableSecureProfile**解決方案。  
+1. 開啟**ReliableSecureProfile**方案。  
   
-2. 以滑鼠右鍵按一下**服務**專案中**方案總管**，選取**偵錯**，**開始新執行個體**從內容功能表。 這會啟動服務主機。  
+2. 以滑鼠右鍵按一下**方案總管**中的**服務**專案, 並從內容功能表中選取 [ **Debug**]、[**啟動新實例**]。 這會啟動服務主機。  
   
-3. 以滑鼠右鍵按一下**用戶端**專案中**方案總管**，選取**偵錯**，**開始新執行個體**從內容功能表。 這會啟動用戶端。  
+3. 以滑鼠右鍵按一下**方案總管**中的**用戶端**專案, 並從內容功能表中選取 [ **Debug**]、[**啟動新實例**]。 這會啟動用戶端。  
   
 4. 在用戶端主控台視窗的提示中輸入任何字串，然後按一下 ENTER。這會將輸入字串傳送到服務，然後計算此字串的雜湊。  
   

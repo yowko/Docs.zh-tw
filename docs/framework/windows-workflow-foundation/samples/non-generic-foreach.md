@@ -2,12 +2,12 @@
 title: 非泛型 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 46db1d455bcbdd28e02d3cddfe0c9248b4abd91c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620847"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038067"
 ---
 # <a name="non-generic-foreach"></a>非泛型 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的工具箱中隨附一組控制流程活動，包括允許逐一查看 <xref:System.Activities.Statements.ForEach%601> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。  
@@ -67,12 +67,12 @@ Activity sampleUsage =
    };  
 ```  
   
-|條件|訊息|嚴重性|例外狀況類型|  
+|條件|訊息|Severity|例外狀況類型|  
 |---------------|-------------|--------------|--------------------|  
-|Values 為 `null`。|未提供必要活動引數 'Values' 的值。|錯誤|<xref:System.InvalidOperationException>|  
+|Values 為 `null`。|未提供必要活動引數 'Values' 的值。|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach 設計工具  
- 此範例的活動設計工具在外觀上與針對內建 <xref:System.Activities.Statements.ForEach%601> 活動所提供的設計工具類似。 在工具箱 中的設計工具隨即出現**範例**，**非泛型活動**類別目錄。 名為設計工具**ForEachWithBodyFactory**在工具箱中，因為活動會公開<xref:System.Activities.Presentation.IActivityTemplateFactory>在工具箱中，這會建立活動有適當設定<xref:System.Activities.ActivityAction>。  
+ 此範例的活動設計工具在外觀上與針對內建 <xref:System.Activities.Statements.ForEach%601> 活動所提供的設計工具類似。 設計工具會出現在 [**範例**]、[**非泛型活動**] 分類的 [工具箱] 中。 設計工具會在 [工具箱] 中命名為**ForEachWithBodyFactory** , 因為活動<xref:System.Activities.Presentation.IActivityTemplateFactory>會在 [工具箱] 中公開, 這會建立已<xref:System.Activities.ActivityAction>正確設定的活動。  
   
 ```  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -93,21 +93,21 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 }  
 ```  
   
-#### <a name="to-run-this-sample"></a>若要執行這個範例  
+#### <a name="to-run-this-sample"></a>執行此範例  
   
 1. 將您選擇的專案設定為方案的啟始專案：  
   
-    1. **CodeTestClient**示範如何使用使用程式碼的活動。  
+    1. **CodeTestClient**顯示如何使用程式碼來使用活動。  
   
-    2. **DesignerTestClient**示範如何使用設計工具內的活動。  
+    2. **DesignerTestClient**顯示如何在設計工具中使用活動。  
   
 2. 建置並執行專案。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

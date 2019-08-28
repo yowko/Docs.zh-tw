@@ -16,85 +16,85 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 24da407de24a924a68466e4301cc3f4a74cb2e94
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505633"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044244"
 ---
 # <a name="matrix-representation-of-transformations"></a>以矩陣來表示轉換
-M × n 矩陣是一組在億個資料列和 n 個資料行中排列的數字。 下圖顯示數個矩陣。  
+M × n 矩陣是以 m 列和 n 個數據行排列的一組數位。 下圖顯示數個矩陣。  
   
  ![Transformations](./media/aboutgdip05-art04.gif "AboutGdip05_art04")  
   
- 您可以藉由新增個別的項目加入相同大小的兩個矩陣。 下圖顯示兩個矩陣新增範例。  
+ 您可以藉由加入個別元素, 加入相同大小的兩個矩陣。 下圖顯示兩個矩陣加法的範例。  
   
  ![Transformations](./media/aboutgdip05-art05.gif "AboutGdip05_art05")  
   
- M × n 矩陣乘以 n × p 矩陣，且結果為 m × p 矩陣。 第一個矩陣中的資料行數目必須是第二個矩陣中的資料列數目相同。 例如，4 × 2 的矩陣可以乘以 2 的 × 3 矩陣，以產生 4 × 3 的矩陣。  
+ M × n 矩陣可以乘以 n × p 矩陣, 而結果則是 m × p 矩陣。 第一個矩陣中的資料行數目必須與第二個矩陣中的資料列數目相同。 例如, 4 ×2矩陣可以乘以2×3矩陣, 以產生4×3矩陣。  
   
- 在平面和資料列和資料行的矩陣中的點可以視為向量。 例如，（2，5） 是具有兩個元件的向量和 （3，7，1） 是具有三個元件的向量。 兩個向量的內積定義，如下所示：  
+ 平面中的點和矩陣的資料列和資料行可以視為向量。 例如, (2, 5) 是包含兩個元件的向量, 而 (3, 7, 1) 是包含三個元件的向量。 兩個向量的點乘積定義如下:  
   
- (a、 b） • (c，d) = ac + bd  
+ (a, b) • (c, d) = ac + bd  
   
- (a、 b、 c） • （d，e，f） = ad + 是 + cf  
+ (a、b、c) • (d, e, f) = ad + 是 + cf  
   
- 比方說，積 （2、 3） 和 （5，4） 是 (2)(5) + (3)(4) = 22。 積 （2，5，1） 和 （4，3，1） 是 (2)(4) + (5)(3) + (1)(1) = 24。 請注意，兩個向量的內積數字，而非另一個向量。 也請注意，您就可以計算積，只有當兩個向量擁有相同數目的元件。  
+ 例如, (2, 3) 和 (5, 4) 的點乘積為 (2) (5) + (3) (4) = 22。 (2, 5, 1) 和 (4, 3, 1) 的點乘積為 (2) (4) + (5) (3) + (1) (1) = 24。 請注意, 兩個向量的點乘積是一個數位, 而不是另一個向量。 另請注意, 只有當兩個向量具有相同數目的元件時, 您才可以計算網點乘積。  
   
- 讓 A(i, j) 是矩陣的第 i 個資料列和第 j 個資料行中的項目。 比方說的 （3，2） 是矩陣的第 3 個資料列和第 2 個資料行中的項目。 假設 A、 B 和 C 是矩陣和 AB = c。C 的項目計算，如下所示：  
+ 讓 (i, j) 成為第 i 個數據列和第 j 個數據行中 [矩陣 A] 的專案。 例如, (3, 2) 是第3列和第2個數據行之矩陣 A 中的專案。 假設 A、B 和 C 是矩陣, 而 AB = C。C 的專案計算方式如下:  
   
- C （i，j） = （資料列 i A） • （資料行 j B）  
+ C (i, j) = (資料列 i) • (B 的資料行 j)  
   
- 下圖矩陣相乘的數個的範例。  
+ 下圖顯示數個矩陣乘法的範例。  
   
  ![Transformations](./media/aboutgdip05-art06.gif "AboutGdip05_art06")  
   
- 如果您將做為 1 的 × 2 矩陣平面中的點，您可以藉由將它乘以 2 × 2 矩陣來轉換該點。 下圖顯示數個轉換套用到 （2，1） 的點。  
+ 如果您想要將平面中的某個點視為1×2矩陣, 可以將該點乘以2×2矩陣來進行轉換。 下圖顯示數個套用至點的轉換 (2, 1)。  
   
  ![Transformations](./media/aboutgdip05-art07.gif "AboutGdip05_art07")  
   
- 所有在上圖中顯示的轉換都是線性轉換。 某些其他轉換，例如轉譯，而且非屬線性，不能表示為乘以 2 × 2 矩陣。 假設您想要開始使用點 （2，1），旋轉 90 度、 將它轉譯成 3 個單位 x 方向和將其轉譯在 y 方向的 4 個單位。 您可以使用後面接著矩陣加入矩陣相乘來完成。  
+ 上圖中顯示的所有轉換都是線性轉換。 某些其他轉換 (例如轉譯) 不是線性的, 而且無法以2×2矩陣的乘法表示。 假設您想要從點 (2, 1) 開始, 旋轉90度, 將 x 方向轉譯為3個單位, 然後在 y 方向轉譯為4個單位。 您可以使用矩陣乘法, 再加上矩陣加法來完成這項操作。  
   
  ![Transformations](./media/aboutgdip05-art08.gif "AboutGdip05_art08")  
   
- 後面的翻譯 （加 1 × 2 矩陣的） 的線性轉換 （由 2 × 2 矩陣乘法） 稱為仿射轉換。 儲存仿射轉換矩陣 （一個為線性的一部分），做為轉換的一組中的替代方式是將整個轉換儲存 3 × 3 矩陣中。 若要讓這項工作，在平面的點必須儲存在與虛擬的第 3 個座標 1 × 3 的矩陣。 常用的技巧是讓所有的第 3 個座標等於 1。 例如，（2，1） 的點被以矩陣 [2 1 1]。 下圖顯示仿射轉換 （旋轉 90 度; 轉譯在 x 方向的 3 個單位，在 y 方向的 4 個單位） 乘以 3 × 3 矩陣以表示。  
+ 線性轉換 (乘以2×2矩陣) 後面接著平移 (加入1×2矩陣) 稱為「仿射」轉換。 另一個方法是在一對矩陣中儲存仿射轉換 (一個用於線性部分, 另一個用於轉譯), 是將整個轉換儲存在3×3矩陣中。 若要進行這項作業, 平面中的點必須儲存在具有虛擬3座標的1×3矩陣中。 一般的技巧是讓所有的第3個座標都等於1。 例如, 點 (2, 1) 是以矩陣 [2 1 1] 表示。 下圖顯示仿射轉換 (旋轉90度; 以 x 方向轉譯3個單位, y 方向為4個單位), 以乘單一3×3矩陣的方式來表示。  
   
  ![Transformations](./media/aboutgdip05-art09.gif "AboutGdip05_art09")  
   
- 在上述範例中，點 （2，1） 會對應到點 （2，6）。 請注意 3 × 3 矩陣的第三個資料行包含數字 0，0，1。 這一律會是 3 × 3 矩陣仿射轉換的情況。 重要的數字是 1 和 2 的資料行中的六個數字。 矩陣的左上方 2 × 2 部分代表線性的組件的轉換，而第 3 個資料列中的前兩個項目代表轉譯。  
+ 在上述範例中, 點 (2, 1) 會對應到點 (2, 6)。 請注意, 3 ×3矩陣的第三個數據行包含數位 0, 0, 1。 這一律是仿射轉換的3×3矩陣的情況。 重要數位是資料行1和2中的六個數字。 矩陣的左上2×2部分代表轉換的線性部分, 而第三個數據列中的前兩個專案代表轉譯。  
   
  ![Transformations](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- 在 GDI + 中，您可以儲存在仿射轉換<xref:System.Drawing.Drawing2D.Matrix>物件。 因為代表仿射轉換矩陣的第三個資料行一律是 （0，0，1），當您建構時，在前兩個資料行中指定的六個數字<xref:System.Drawing.Drawing2D.Matrix>物件。 陳述式`Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)`建構如上圖所示的矩陣。  
+ 在 gdi + 中, 您可以將仿射<xref:System.Drawing.Drawing2D.Matrix>轉換儲存在物件中。 因為代表仿射轉換之矩陣的第三個數據行一律是 (0, 0, 1), 所以您在建立<xref:System.Drawing.Drawing2D.Matrix>物件時, 只會在前兩個數據行中指定六個數字。 語句`Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)`會結構如上圖所示的矩陣。  
   
 ## <a name="composite-transformations"></a>複合轉換  
- 複合轉換是一連串的轉換，後面接著另一個。 請考慮下列清單中的轉換與矩陣：  
+ 複合轉換是一系列的轉換, 再接著另一個。 請考慮下列清單中的矩陣和轉換:  
   
 |||  
 |-|-|  
-|矩陣的|旋轉 90 度|  
-|矩陣 B|在 x 方向的 2 倍縮放|  
-|矩陣 C|轉譯在 y 方向的 3 個單位|  
+|矩陣 A|旋轉90度|  
+|矩陣 B|以 x 方向的2因數來縮放|  
+|矩陣 C|以 y 方向轉譯3個單位|  
   
- 如果我們開始點 （2，1） — 矩陣 [2 1 1] 表示的 — 並乘以 A，然後 B，則 C，（2，1） 的點將會進行三種轉換中列出的順序。  
+ 如果一開始是以矩陣 [2 1 1] 表示的點 (2, 1), 然後乘以 A、B、C, 則點 (2, 1) 會依照列出的順序進行三個轉換。  
   
  [2 1 1]ABC = [-2 5 1]  
   
- 而非 「 複合 」 轉換的三個部分儲存在三個個別的矩陣中，您可以將 A、 B 和 C 來取得儲存整個複合轉換單一 3 × 3 矩陣。 假設 ABC = d。然後乘以 D 點會給予相同的結果為點乘以 A，然後 B，然後 c。  
+ 與其將複合轉換的三個部分儲存在三個不同的矩陣中, 您可以將 A、B 和 C 相乘, 以取得儲存整個複合轉換的單一3×3矩陣。 假設 ABC = D。然後乘以 D 的點會得到與點相乘的結果, 再乘以 B, 然後 C。  
   
  [2 1 1]D = [-2 5 1]  
   
- 下圖顯示矩陣的 A、 B、 C 和 d。  
+ 下圖顯示矩陣 A、B、C 和 D。  
   
  ![Transformations](./media/aboutgdip05-art12.gif "AboutGdip05_art12")  
   
- 複合轉換矩陣可以依據個別的轉換矩陣相乘，這表示仿射轉換的任何序列都可以儲存在單一<xref:System.Drawing.Drawing2D.Matrix>物件。  
+ 複合轉換的矩陣可以藉由乘以個別轉換矩陣來形成, 這表示任何仿射轉換的順序都可以儲存在單一<xref:System.Drawing.Drawing2D.Matrix>物件中。  
   
 > [!CAUTION]
->  複合轉換順序很重要。 一般情況下，旋轉，然後調整，然後轉換並不相同小數位數為然後旋轉，然後轉換。 同樣地，矩陣相乘的順序很重要的。 一般情況下，ABC 不與備份相同。  
+> 複合轉換的順序很重要。 在 [一般] 中, [旋轉]、[調整]、[轉譯] 和 [縮放] 不同, 然後旋轉, 然後平移。 同樣地, 矩陣乘法的順序也很重要。 一般來說, ABC 與 k 不同。  
   
- <xref:System.Drawing.Drawing2D.Matrix>類別提供多種方法來建置複合轉換： <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>， <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>， <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>， <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>， <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>，和<xref:System.Drawing.Drawing2D.Matrix.Translate%2A>。 下列範例會建立複合的轉換，先旋轉 30 度，則在 y 方向的 2 倍縮放，然後再平移 x 方向的 5 個單位矩陣：  
+ <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A> <xref:System.Drawing.Drawing2D.Matrix.Translate%2A> <xref:System.Drawing.Drawing2D.Matrix.Scale%2A> <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A> <xref:System.Drawing.Drawing2D.Matrix.Shear%2A> <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>類別提供數種方法來建立複合轉換:、、、、和。 <xref:System.Drawing.Drawing2D.Matrix> 下列範例會建立複合轉換的矩陣, 其會先旋轉30度, 然後在 y 方向以2的因數來縮放, 然後在 x 方向轉譯5個單位:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.CoordinateSystems#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  

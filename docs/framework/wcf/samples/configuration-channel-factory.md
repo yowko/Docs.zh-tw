@@ -2,15 +2,15 @@
 title: 組態通道處理站
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: 5bee4c7cc2c2e64c6e0d8d0ec2634f9500cd9d51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b74c15599ebc932a2a0ed46d646b54bec986794
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002299"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045648"
 ---
 # <a name="configuration-channel-factory"></a>組態通道處理站
-此範例涵蓋 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的使用方法。 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>允許從中央管理 WCF 用戶端組態。 如果在應用程式網域載入時間之後選取或變更組態，這可能也相當實用。
+此範例涵蓋 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的使用方法。 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>可集中管理 WCF 用戶端設定。 如果在應用程式網域載入時間之後選取或變更組態，這可能也相當實用。
 
 ## <a name="demonstrates"></a>示範
  <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>
@@ -33,21 +33,21 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 系統管理員權限開啟 Visual Studio 2012。
+1. 以系統管理員許可權開啟 Visual Studio 2012。
 
-2. 以滑鼠右鍵按一下 ConfigurationChannelFactory 方案 （2 個專案），然後選取**屬性**。
+2. 以滑鼠右鍵按一下 [ConfigurationChannelFactory 方案 (2 個專案)], 然後選取 [**屬性**]。
 
-3. 在 **通用屬性**，選取**啟始專案**，然後按一下**多個啟始專案**。
+3. 在 [**通用屬性**] 中, 選取 [**啟始專案**], 然後按一下 [**多個啟始專案**]。
 
-4. 移動**服務**專案的清單中，開頭**動作 'Start'**，然後移動**用戶端**專案之後**服務**專案，也可以搭配**動作 'Start'**，因此**用戶端**之後執行專案**服務**專案。
+4. 將**服務**專案移至清單的開頭, 並使用**動作「開始」** , 然後在**服務**專案之後移動**用戶端**專案, 並同時執行 **「啟動」動作**, 以便執行**用戶端**專案。在**服務**專案之後。
 
-5. 按一下 **確定**，然後按下 F5 （或 CTRL + F5） 執行範例。
+5. 按一下 **[確定]** , 然後按 F5 (或 CTRL + F5) 以執行範例。
 
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`

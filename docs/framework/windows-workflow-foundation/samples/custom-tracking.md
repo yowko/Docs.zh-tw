@@ -2,20 +2,20 @@
 title: 自訂追蹤
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: fff88c50dd2004d4491e050258ef760c033f6de5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622556"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044293"
 ---
 # <a name="custom-tracking"></a>自訂追蹤
 這個範例示範如何建立自訂追蹤參與者，以及將追蹤資料的內容寫入主控台中。 此外，範例還會示範如何發出其中填入使用者定義資料的 <xref:System.Activities.Tracking.CustomTrackingRecord> 物件。 主控台式追蹤參與者會使用程式碼中建立的追蹤設定檔物件，篩選工作流程所發出的 <xref:System.Activities.Tracking.TrackingRecord> 物件。
 
 ## <a name="sample-details"></a>範例詳細資料
- Windows Workflow Foundation (WF) 提供追蹤基礎結構，來追蹤工作流程執行個體的執行。 追蹤執行階段會實作工作流程執行個體，以發出與工作流程生命週期相關的事件、工作流程活動的事件，以及自訂追蹤事件。 下表詳細說明追蹤基礎結構的主要元件。
+ Windows Workflow Foundation (WF) 提供追蹤基礎結構, 以追蹤工作流程實例的執行。 追蹤執行階段會實作工作流程執行個體，以發出與工作流程生命週期相關的事件、工作流程活動的事件，以及自訂追蹤事件。 下表詳細說明追蹤基礎結構的主要元件。
 
-|元件|描述|
+|元件|說明|
 |---------------|-----------------|
 |追蹤執行階段|提供基礎結構以發出追蹤記錄。|
 |追蹤參與者|耗用追蹤記錄。 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 隨附追蹤參與者，可將追蹤記錄當做 Windows 事件追蹤 (ETW) 事件撰寫。|
@@ -23,7 +23,7 @@ ms.locfileid: "64622556"
 
  下表詳細說明工作流程執行階段發出的追蹤記錄。
 
-|追蹤記錄|描述|
+|追蹤記錄|說明|
 |---------------------|-----------------|
 |工作流程執行個體追蹤記錄。|描述在工作流程執行個體的生命週期。 例如，當工作流程開始或完成時，就會發出執行個體記錄。|
 |活動狀態追蹤記錄。|活動執行詳細資訊。 這些記錄會指出工作流程活動的狀態，例如活動排程時間、活動完成時間，或是擲回錯誤的時間。|
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 
 - 除了會建立 <xref:System.Activities.Tracking.CustomTrackingRecord> 物件之外，還會在其中填入希望隨記錄發出的使用者定義資料。
 
-- <xref:System.Activities.Tracking.CustomTrackingRecord>藉由呼叫的追蹤方法，就會發出<xref:System.Activities.ActivityContext>。
+- 會藉由呼叫的 track 方法<xref:System.Activities.ActivityContext>來發出。 <xref:System.Activities.Tracking.CustomTrackingRecord>
 
  下列範例示範如何在自訂活動內發出 <xref:System.Activities.Tracking.CustomTrackingRecord> 物件。
 
@@ -133,21 +133,21 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1. 使用 Visual Studio 2010，請開啟 [customtrackingsample.sln] 方案檔案。
+1. 使用 Visual Studio 2010, 開啟 [CustomTrackingSample] 方案檔。
 
 2. 若要建置此方案，請按 CTRL+SHIFT+B。
 
 3. 若要執行此方案，請按下 CTRL+F5。
 
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>另請參閱
 
-- [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 監視範例](https://go.microsoft.com/fwlink/?LinkId=193959)

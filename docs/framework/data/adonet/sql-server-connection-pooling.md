@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 0a8d10b9d6ae80bb4fa38445e0335151661c41eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918145"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041198"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 連接共用 (ADO.NET)
 連接到資料庫伺服器通常需要執行幾個很費時的步驟。 必須要建立實體頻道 (如通訊端或具名管道)，必須建立與伺服器的初始信號交換、必須剖析連接字串資訊、伺服器必須要驗證連接，以及必須檢查是否已在現行交易中登記等。  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  連接共用器會藉由重新配置釋放回集區的連接，來滿足連接的請求。 如果已達到最大集區大小，但仍沒有可用的連接，則會將要求排入佇列。 共用器接下來會嘗試回收所有連接，直到達到逾時 (預設值是 15 秒)。 如果連接逾時之前共用器無法滿足要求，則會擲回例外狀況。  
   
 > [!CAUTION]
->  強烈建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 您`Close`可以使用`Connection`物件的或`Dispose`方法, 或開啟中`using` C#的語句內的所有連接, 或 Visual Basic 中的`Using`語句, 來執行這項操作。 可能不會將未明確關閉的連接加入或傳回集區。 如需詳細資訊, 請參閱[using 語句](../../../csharp/language-reference/keywords/using-statement.md)或[如何:處置 Visual Basic 的系統資源](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) 。  
+> 強烈建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 您`Close`可以使用`Connection`物件的或`Dispose`方法, 或開啟中`using` C#的語句內的所有連接, 或 Visual Basic 中的`Using`語句, 來執行這項操作。 可能不會將未明確關閉的連接加入或傳回集區。 如需詳細資訊, 請參閱[using 語句](../../../csharp/language-reference/keywords/using-statement.md)或[如何:處置 Visual Basic 的系統資源](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) 。  
   
 > [!NOTE]
 > 請不要在您類別之 `Close` 方法中的 `Dispose`、`Connection` 或任何其他 Managed 物件上呼叫 `DataReader` 或 `Finalize`。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 `Finalize` 方法。 如需詳細資訊, 請參閱[垃圾收集](../../../standard/garbage-collection/index.md)。  

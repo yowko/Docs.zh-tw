@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940871"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046411"
 ---
 # <a name="drag-and-drop-overview"></a>拖放概觀
 本主題提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中的拖放功能支援概觀。 拖放功能一般是指資料傳送的方法，這種方法需要使用滑鼠 (或其他一些指標裝置) 選取一或多個物件，將這些物件拖曳到 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中一些想要的置放目標上，然後置放這些物件。  
@@ -166,7 +166,7 @@ ms.locfileid: "69940871"
  在拖曳來源被拖曳的期間，會持續引發 <xref:System.Windows.DragDrop.QueryContinueDrag> 事件。 您可以處理這個事件，根據 ESC、SHIFT、CTRL 鍵和 ALT 鍵的狀態，以及滑鼠按鈕的狀態，來決定拖放作業的結束動作。 這個事件的預設處理常式會在按下 ESC 鍵時取消拖放作業，並在放開滑鼠按鈕時置放資料。  
   
 > [!CAUTION]
->  在拖放作業期間，會持續引發這些事件。 因此，您應該避免事件處理常式有需要大量資源的工作。  例如，使用快取資料指標，而不是每次引發 <xref:System.Windows.DragDrop.GiveFeedback> 事件都建立新的資料指標。  
+> 在拖放作業期間，會持續引發這些事件。 因此，您應該避免事件處理常式有需要大量資源的工作。  例如，使用快取資料指標，而不是每次引發 <xref:System.Windows.DragDrop.GiveFeedback> 事件都建立新的資料指標。  
   
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>使某個項目成為置放目標  
  置放目標物件負責：  

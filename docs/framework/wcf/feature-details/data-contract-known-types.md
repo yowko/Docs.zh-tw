@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 054beab97a77bd466d2c3d8c734e37f8ded7eb62
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2ab0a41e87a9b14d1beac9fb0c39586f0ea16a4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945264"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040189"
 ---
 # <a name="data-contract-known-types"></a>資料合約已知型別
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 類別可讓您預先指定在還原序列化期間應該納入考量的型別。 如需實用範例，請參閱 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 範例。  
@@ -77,7 +77,7 @@ ms.locfileid: "69945264"
  在下列範例中，資料合約會儲存數字與用來執行數字的運算式。 `Numbers` 資料成員可以是整數、整數陣列，或是包含整數的 <xref:System.Collections.Generic.List%601> 。  
   
 > [!CAUTION]
->  如果使用 SVCUTIL.EXE 來產生 WCF Proxy，這將只能在用戶端上運作。 SVCUTIL.EXE 會從服務擷取中繼資料，包括所有已知的型別。 如果沒有這項資訊，用戶端將無法還原序列化型別。  
+> 如果使用 SVCUTIL.EXE 來產生 WCF Proxy，這將只能在用戶端上運作。 SVCUTIL.EXE 會從服務擷取中繼資料，包括所有已知的型別。 如果沒有這項資訊，用戶端將無法還原序列化型別。  
   
  [!code-csharp[C_KnownTypeAttribute#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#6)]
  [!code-vb[C_KnownTypeAttribute#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#6)]  

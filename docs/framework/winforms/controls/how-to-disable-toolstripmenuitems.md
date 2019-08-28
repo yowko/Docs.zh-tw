@@ -13,19 +13,19 @@ helpviewer_keywords:
 - menu items [Windows Forms], enabling
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-ms.openlocfilehash: a4bc24c5a514beaa17fdb201329b9729ec712406
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f86a2934e799e4604693491dacbecc517d44d810
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603547"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046217"
 ---
-# <a name="how-to-disable-toolstripmenuitems"></a>HOW TO：停用 ToolStripMenuItems
-您可以限制，或擴大使用者可能會進行啟用和停用功能表項目，以回應使用者活動的命令。 依預設會啟用功能表項目，當建立，但這可以透過調整<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>屬性。 您可以使用這個屬性在設計階段**屬性**視窗或以程式設計方式在程式碼中設定它。  
+# <a name="how-to-disable-toolstripmenuitems"></a>作法：停用 ToolStripMenuItems
+您可以啟用和停用功能表項目以回應使用者活動, 以限制或放寬使用者可能進行的命令。 建立功能表項目時, 預設會啟用這些專案, 但可透過<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>屬性來調整。 您可以在設計階段于 [**屬性**] 視窗中操作這個屬性, 或是在程式碼中設定它以程式設計方式。  
   
-### <a name="to-disable-a-menu-item-programmatically"></a>若要以程式設計方式停用功能表項目  
+### <a name="to-disable-a-menu-item-programmatically"></a>以程式設計方式停用功能表項目  
   
-- 在方法中您用來設定功能表項目的屬性，加入程式碼以設定<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>屬性設`false`。  
+- 在您設定功能表項目屬性的方法中, 加入程式碼以將<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>屬性設定為。 `false`  
   
     ```vb  
     MenuItem1.Enabled = False  
@@ -40,7 +40,7 @@ ms.locfileid: "64603547"
     ```  
   
     > [!TIP]
-    >  停用功能表中的第一個或最上層功能表項目會隱藏在功能表中，包含的所有功能表項目，但不會不停用它們。 同樣地，停用功能表項目具有子功能表項目就會隱藏子功能表項目，但不會不停用它們。 如果使用者無法使用指定的功能表上的所有命令，它會視為良好的程式設計作法，同時隱藏並停用整個功能表中，這帶來全新的使用者介面。 您應該隱藏及停用功能表，並停用每個項目和子功能表項目在功能表中，因為單獨隱藏並不會防止攠摝坫透過功能表命令的存取。 設定<xref:System.Windows.Forms.ToolStripItem.Visible%2A>屬性的最上層的功能表項目`false`隱藏整個功能表。  
+    > 停用功能表中的第一個或最上層功能表項目, 會隱藏功能表中包含的所有功能表項目, 但不會停用它們。 同樣地, 停用具有子功能表專案的功能表項目會隱藏子功能表專案, 但不會停用它們。 如果指定功能表上的所有命令都無法供使用者使用, 就會被視為良好的程式設計實務, 可以隱藏和停用整個功能表, 因為這會呈現全新的使用者介面。 您應該隱藏和停用功能表, 並停用功能表中的每個專案和子功能表專案, 因為單獨隱藏並不會阻止透過快速鍵存取功能表命令。 將最上層功能表項目的`false` 屬性設定為,以隱藏整個功能表。<xref:System.Windows.Forms.ToolStripItem.Visible%2A>  
   
 ## <a name="see-also"></a>另請參閱
 

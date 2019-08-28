@@ -2,12 +2,12 @@
 title: 分散式異動
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: f5ed99928534dc31832ac0baf1bb1bfa7e83ded2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60a455d51d7ae80f5434f9564ca7416c70bef9f5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956762"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041240"
 ---
 # <a name="distributed-transactions"></a>分散式異動
 異動是一組相關工作，尤其是它會做為一個單位的成功 (認可) 或失敗 (中止)。 *分散式交易*是影響數個資源的交易。 對於要認可的分散式異動，所有參與者都必須保證資料的任何變更都是永久的。 不管系統是否當機，還是發生其他不可預見的事件，變更必須持續。 如果單一參與者無法做出此保證，則整個異動會失敗，異動範圍內的任何資料變更都將復原。  
@@ -39,7 +39,7 @@ ms.locfileid: "69956762"
 > 在交易上明確地登記連接之後，直到第一個交易完成之前，無法取消登記或在其他交易中登記它。  
   
 > [!CAUTION]
->  如果連接已使用連接的 `EnlistTransaction` 方法啟動異動，則 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 會擲回例外狀況。 不過，如果異動是在資料來源上啟動的本機異動 (例如，使用 <xref:System.Data.SqlClient.SqlCommand>，明確執行 BEGIN TRANSACTION 陳述式)，則 `EnlistTransaction` 將復原本機異動，並按要求在現有的分散式異動中登記。 您不會收到復原本機異動的通知，而且必須管理所有非使用 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 啟動的本機異動。 如果您是將 .NET Framework Data Provider for SQL Server (`SqlClient`) 用於 SQL Server，則嘗試登記會擲回例外狀況。 將不會偵測到所有其他情況。  
+> 如果連接已使用連接的 `EnlistTransaction` 方法啟動異動，則 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 會擲回例外狀況。 不過，如果異動是在資料來源上啟動的本機異動 (例如，使用 <xref:System.Data.SqlClient.SqlCommand>，明確執行 BEGIN TRANSACTION 陳述式)，則 `EnlistTransaction` 將復原本機異動，並按要求在現有的分散式異動中登記。 您不會收到復原本機異動的通知，而且必須管理所有非使用 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 啟動的本機異動。 如果您是將 .NET Framework Data Provider for SQL Server (`SqlClient`) 用於 SQL Server，則嘗試登記會擲回例外狀況。 將不會偵測到所有其他情況。  
   
 ## <a name="promotable-transactions-in-sql-server"></a>SQL Server 中的可提升異動  
  SQL Server 支援可提升異動，在該異動中，本機輕量型異動可在必要時自動提升為分散式異動。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 如需詳細資訊和程式碼範例, 請參閱[System. 交易與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)。  
