@@ -1,16 +1,16 @@
 ---
 title: 將模型部署到 Azure Functions
 description: 使用 Azure Functions 在網際網路上提供 ML.NET 情感分析機器學習模型以進行預測
-ms.date: 06/11/2019
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 7df7a6f9fcc5a4702171e1aac4b6b67e0c343748
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 96b62017994da5b7b209c441b3e7fb760cad5201
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025987"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666674"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>將模型部署到 Azure Functions
 
@@ -47,7 +47,7 @@ ms.locfileid: "67025987"
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.Extensions.ML**、從清單中選取該套件，然後選取 [安裝]  按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受]  對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。
 
-1. 將 **Microsoft.NET.Sdk.Functions NuGet 套件**版本更新至 1.0.28：
+1. 將 **Microsoft.NET.Sdk.Functions NuGet 套件**更新至 1.0.28 (含) 以後版本：
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為套件來源、選取 [安裝] 索引標籤、搜尋 **Microsoft.NET.Sdk.Functions**、從 [版本] 下拉式清單選取 1.0.28 或更新版本，然後選取 [更新]  按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受]  對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。
 
@@ -155,8 +155,7 @@ ms.locfileid: "67025987"
     *Startup.cs* 檔案隨即在程式碼編輯器中開啟。 將下列的 using 陳述式新增到 *Startup.cs* 的頂端：
 
     ```csharp
-    using Microsoft.Azure.WebJobs;
-    using Microsoft.Azure.WebJobs.Hosting;
+    using Microsoft.Azure.Functions.Extensions.DependencyInjection;
     using Microsoft.Extensions.ML;
     using SentimentAnalysisFunctionsApp;
     using SentimentAnalysisFunctionsApp.DataModels;
@@ -165,12 +164,12 @@ ms.locfileid: "67025987"
     移除 using 陳述式下方的現有程式碼，並將下列程式碼新增到 *Startup.cs* 檔案：
 
     ```csharp
-    [assembly: WebJobsStartup(typeof(Startup))]
+    [assembly: FunctionsStartup(typeof(Startup))]
     namespace SentimentAnalysisFunctionsApp
     {
-        class Startup : IWebJobsStartup
+        public class Startup : FunctionsStartup
         {
-            public void Configure(IWebJobsBuilder builder)
+            public override void Configure(IFunctionsHostBuilder builder)
             {
                 builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
                     .FromFile("MLModels/sentiment_model.zip");

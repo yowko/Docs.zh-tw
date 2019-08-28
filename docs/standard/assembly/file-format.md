@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 0bde31a004b1952be488569f89cfd3b129c82771
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ef5d459195bea752ec5380f2853d8011cb189aa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68671223"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666629"
 ---
 # <a name="net-assembly-file-format"></a>.NET 組件檔格式
 
@@ -35,4 +35,4 @@ ms.locfileid: "68671223"
 
 ## <a name="processing-the-assemblies"></a>處理組件
 
-可能會撰寫工具或 API 來處理組件。 組件資訊可在執行階段進行程式設計決策、重新撰寫組件、在編輯器中提供 API IntelliSense，以及產生文件。 <xref:System.Reflection?displayProperty=nameWithType> 和 [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用於此目的之工具的不錯範例。
+可能會撰寫工具或 API 來處理組件。 組件資訊可在執行階段進行程式設計決策、重新撰寫組件、在編輯器中提供 API IntelliSense，以及產生文件。 <xref:System.Reflection?displayProperty=nameWithType>、<xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> 和 [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用於此目的工具的不錯範例。

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eddf605ab085aa39494bef0818ef51403cb032ef
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633632"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988782"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>規則運算式中的數量詞
 數量詞指定輸入中要有多少字元、群組或字元類別的執行個體，才能找到相符項目。  下表列出 .NET 支援的數量詞。  
@@ -38,13 +38,13 @@ ms.locfileid: "64633632"
  數量 `n` 和 `m` 都是整數常數。 數量詞通常是 Greedy (窮盡)。其會讓規則運算式引擎盡可能多地從每次出現的特定模式進行比對。 在數量詞中加上 `?` 字元會使它 Lazy (最少)，造成規則運算式引擎比對的項目愈少愈好。 如需 greedy (匹配優先) 與 lazy (忽略優先) 量詞間差異的完整說明，請參閱本主題稍後的 [Greedy (匹配優先) 與 Lazy (忽略優先) 量詞](#Greedy)一節。  
   
 > [!IMPORTANT]
->  巢狀數量詞 (如規則運算式模式 `(a*)*` 所做) 會增加規則運算式引擎必須執行的比較次數，如輸入字串中的字元數指數函數一樣。 如需此行為與其因應措施的詳細資訊，請參閱[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。  
+> 巢狀數量詞 (如規則運算式模式 `(a*)*` 所做) 會增加規則運算式引擎必須執行的比較次數，如輸入字串中的字元數指數函數一樣。 如需此行為與其因應措施的詳細資訊，請參閱[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。  
   
 ## <a name="regular-expression-quantifiers"></a>規則運算式量詞  
  下列章節會列出 .NET 規則運算式支援的數量詞。  
   
 > [!NOTE]
->  如果規則運算式模式中同時出現 *、+、?、{ 和 } 字元，除非它們包含在[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)中，否則，規則運算式引擎會將它們解譯為數量詞或數量詞建構的一部分。 若要在字元類別外將這些字元解譯為常值字元，您必須在它們前面加上反斜線以逸出字元。 例如，會將規則運算式模式中的字串 `\*` 解譯為常值星號 ("\*") 字元。  
+> 如果規則運算式模式中同時出現 *、+、?、{ 和 } 字元，除非它們包含在[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)中，否則，規則運算式引擎會將它們解譯為數量詞或數量詞建構的一部分。 若要在字元類別外將這些字元解譯為常值字元，您必須在它們前面加上反斜線以逸出字元。 例如，會將規則運算式模式中的字串 `\*` 解譯為常值星號 ("\*") 字元。  
   
 ### <a name="match-zero-or-more-times-"></a>比對零或多次：*  
  `*` 數量詞會比對前置元素零次或多次。 它相當於 `{0,}` 數量詞。 `*` 是 Greedy (窮盡) 數量詞，其 Lazy (最少) 對等項目是 `*?`。  
@@ -185,7 +185,7 @@ ms.locfileid: "64633632"
 |`\(??`|比對出現零或一次的左括號。|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>確實比對 n 次 (Lazy (忽略優先) 比對)：{n}?  
- `{`*n*`}?` 數量詞會確實比對 `n` 次前置項目，其中 *n* 是任何整數。 它是 Greedy (窮盡) 數量詞 `{`*n*`}+` 的對應 Lazy (最少)。  
+ `{`*n*`}?` 數量詞會確實比對 `n` 次前置項目，其中 *n* 是任何整數。 它是 Greedy (窮盡) 數量詞 `{`*n*`}` 的對應 Lazy (最少)。  
   
  下例會使用規則運算式 `\b(\w{3,}?\.){2}?\w{3,}?\b` 來識別網站位址。 請注意它會比對 "www.microsoft.com" 和 "msdn.microsoft.com"，但不比對 "mywebsite" 或 "mycompany.com"。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "64633632"
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>比對 n 到 m 次 (Lazy (忽略優先) 比對)：{n,m}?  
  `{`*n*`,`*m*`}?` 數量詞會比對前置項目 `n` 至 `m` 次，其中 *n* 和 *m* 都是整數，但次數越少越好。 它是 Greedy (窮盡) 數量詞 `{`*n*`,`*m*`}` 的對應 Lazy (最少)。  
   
- 在下例中，規則運算式 `\b[A-Z](\w*\s+){1,10}?[.!?]` 會比對包含一到十個單字的句子。 它會比對輸入字串中的所有句子，除了包含 18 個字的句子。  
+ 在下例中，規則運算式 `\b[A-Z](\w*?\s*?){1,10}[.!?]` 會比對包含一到十個單字的句子。 它會比對輸入字串中的所有句子，除了包含 18 個字的句子。  
   
  [!code-csharp[RegularExpressions.Quantifiers#12](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#12)]
  [!code-vb[RegularExpressions.Quantifiers#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#12)]  
@@ -220,8 +220,8 @@ ms.locfileid: "64633632"
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
 |`[A-Z]`|比對從 A 到 Z 的大寫字元。|  
-|`(\w*\s+)`|比對零或多個後接一或多個空白字元的單字字元。 這是第一個擷取群組。|  
-|`{1,10}?`|比對 1 到 10 次上一個模式，但次數愈少愈好。|  
+|`(\w*?\s*?)`|比對零或多個後面接著一或多個空白字元的文字字元，但次數愈少愈好。 這是第一個擷取群組。|  
+|`{1,10}`|比對 1 到 10 次上一個模式。|  
 |`[.!?]`|比對任一標點符號字元 "."、"!" 或 "?"。|  
   
 <a name="Greedy"></a>   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 6966d0b7a4f8a96bddb17ce2017fd53fc07ae922
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69572312"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922287"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>型別測試和轉換運算子 (C# 參考)
 
@@ -115,7 +115,7 @@ E is T ? (T)(E) : (T)null
 
 您也使用括號來[呼叫方法或叫用委派](member-access-operators.md#invocation-operator-)。
 
-括號的其他用法是指定評估運算式中作業的順序。 如需詳細資訊，請參閱[運算子](../../programming-guide/statements-expressions-operators/operators.md)一文的[新增括號](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses)小節。 對於按優先順序層級排序的運算子清單，請參閱 [C# 運算子](index.md)。
+括弧的其他用法是調整評估運算式中作業的順序。 如需詳細資訊，請參閱 [C# 運算子](index.md)。
 
 ## <a name="typeof-operator"></a>typeof 運算子
 

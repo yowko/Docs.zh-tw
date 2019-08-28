@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 07/25/2019
-ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.date: 08/21/2019
+ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039441"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922553"
 ---
-# <a name="whats-new-in-net-core-30-preview-7"></a>.NET Core 3.0 (Preview 7) 的新功能
+# <a name="whats-new-in-net-core-30-preview-8"></a>.NET Core 3.0 (Preview 8) 的新功能
 
-本文描述 .NET Core 3.0 (到 Preview 7) 的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
+本文描述 .NET Core 3.0 (到 Preview 8) 的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
 
 .NET Core 3.0 新增 C# 8.0 支援。 強烈建議您搭配 OmniSharp 延伸模組使用[最新版的 Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) 或 Visual Studio Code。
 
-立即在 Windows、Mac 及 Linux 上[下載並開始使用 .NET Core 3.0 Preview 7](https://aka.ms/netcore3download)。
+立即在 Windows、macOS 或 Linux 上[下載並開始使用 .NET Core 3.0 Preview 8](https://aka.ms/netcore3download)。
 
 如需每個預覽版的詳細資訊，請參閱下列公告：
 
+- [.NET Core 3.0 Preview 8 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3.0 Preview 7 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3.0 Preview 6 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/) \(英文\)
 - [.NET Core 3.0 Preview 5 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
@@ -34,7 +35,9 @@ ms.locfileid: "69039441"
 
 ## <a name="production-supported-preview"></a>支援生產環境的預覽
 
-Microsoft 已將 .NET Core Preview 7 視為生產環境就緒，且已提供完整支援。 從 Preview 7 開始，版本會著重於改善 .NET Core 3.0，而非新增新功能。 如需 Preview 7 中變更項目的詳細資訊，請參閱 [Preview 7 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)。
+Microsoft 已將 .NET Core Preview 8 視為生產環境就緒，且已提供完整支援。 從 Preview 7 開始，版本會著重於改善 .NET Core 3.0，而非新增新功能。 如需 Preview 8 中變更項目的詳細資訊，請參閱 [Preview 8 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)。
+
+如果您使用先前的預覽版本，您必須移至 Preview 8 以繼續取得「上線」支援。
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -52,11 +55,11 @@ Windows 的 MSI 安裝程式從 .NET Core 3.0 開始即已變更。 SDK 安裝�
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
- 
+
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
- 
+
 </Project>
 ```
 
@@ -91,7 +94,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ## <a name="net-platform-dependent-intrinsics"></a>.NET 平台相依內建
 
-已新增 API，允許存取特定效能導向的 CPU 指令，例如 **SIMD** 或**位元操作指令**集合。 這些指令可協助您在某些情況 (例如有效率地平行處理資料) 下大幅提升效能。 
+已新增 API，允許存取特定效能導向的 CPU 指令，例如 **SIMD** 或**位元操作指令**集合。 這些指令可協助您在某些情況 (例如有效率地平行處理資料) 下大幅提升效能。
 
 .NET 程式庫 (如果適用) 已開始使用這些指令來提升效能。
 
@@ -103,8 +106,8 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 在 `dotnet build` 或 `dotnet publish` 期間，會建立符合您所用 SDK 環境和平台的可執行檔。 針對這些可執行檔，您可以預期能夠進行與其他原生可執行檔相同的操作，例如：
 
-* 您可以按兩下可執行檔。
-* 您可以直接從命令提示字元啟動應用程式，例如在 Windows 上為 `myapp.exe`，在 Linux 和 macOS 上為 `./myapp`。
+- 您可以按兩下可執行檔。
+- 您可以直接從命令提示字元啟動應用程式，例如在 Windows 上為 `myapp.exe`，在 Linux 和 macOS 上為 `./myapp`。
 
 ## <a name="single-file-executables"></a>單一檔案可執行檔
 
@@ -297,11 +300,11 @@ Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.
 
 可能的 `highDpiMode` 值 (如 <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> 列舉所示) 為：
 
-* `DpiUnaware`
-* `SystemAware`
-* `PerMonitor`
-* `PerMonitorV2`
-* `DpiUnawareGdiScaled`
+- `DpiUnaware`
+- `SystemAware`
+- `PerMonitor`
+- `PerMonitorV2`
+- `DpiUnawareGdiScaled`
 
 如需高 DPI 模式的詳細資訊，請參閱 [Windows 上的高 DPI 傳統型應用程式開發](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)。
 
@@ -335,7 +338,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -350,31 +353,31 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 剖析與格式化修正包括：
 
-* 正確地剖析並捨入任意長度的輸入。
-* 正確地剖析並格式化負零。
-* 正確地剖析 `Infinity` 和 `NaN`，方法為執行不區分大小寫的檢查，並允許適當時在前面選擇性加上 `+`。
+- 正確地剖析並捨入任意長度的輸入。
+- 正確地剖析並格式化負零。
+- 正確地剖析 `Infinity` 和 `NaN`，方法為執行不區分大小寫的檢查，並允許適當時在前面選擇性加上 `+`。
 
 新的 <xref:System.Math?displayProperty=nameWithType> API 包括：
 
-* <xref:System.Math.BitIncrement(System.Double)> 和 <xref:System.Math.BitDecrement(System.Double)>\
+- <xref:System.Math.BitIncrement(System.Double)> 和 <xref:System.Math.BitDecrement(System.Double)>\
 對應至 `nextUp` 和 `nextDown` IEEE 作業。 它們會傳回最小浮點數，比較大於或小於輸入 (分別)。 例如，`Math.BitIncrement(0.0)` 會傳回 `double.Epsilon`。
 
-* <xref:System.Math.MaxMagnitude(System.Double,System.Double)> 和 <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> 和 <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
 對應至 `maxNumMag` 和 `minNumMag`IEEE 作業，它們傳回的值大於或小於兩個輸入的範圍 (分別)。 例如，`Math.MaxMagnitude(2.0, -3.0)` 會傳回 `-3.0`。
 
-* <xref:System.Math.ILogB(System.Double)>\
+- <xref:System.Math.ILogB(System.Double)>\
 對應至傳回整數值的 `logB` IEEE 作業，它會傳回輸入參數的對數，以整數 2 為底數。 此方法實際上與 `floor(log2(x))` 相同，但完成時發生最少捨入錯誤。
 
-* <xref:System.Math.ScaleB(System.Double,System.Int32)>\
+- <xref:System.Math.ScaleB(System.Double,System.Int32)>\
 對應至採用整數值的 `scaleB` IEEE 作業，它會有效傳回 `x * pow(2, n)`，但完成時發生最少捨入錯誤。
 
-* <xref:System.Math.Log2(System.Double)>\
+- <xref:System.Math.Log2(System.Double)>\
 對應至 `log2` IEEE 作業，它會傳回 2 為底數的對數。 它會將捨入錯誤減至最少。
 
-* <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
+- <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
 對應至 `fma` IEEE 作業，它會執行融合的乘積和。 亦即，它會將 `(x * y) + z` 當作單一作業來執行，藉此將捨入錯誤減至最少。 範例將是傳回 `1e308` 的 `FusedMultiplyAdd(1e308, 2.0, -1e308)`。 一般 `(1e308 * 2.0) - 1e308` 會傳回 `double.PositiveInfinity`。
 
-* <xref:System.Math.CopySign(System.Double,System.Double)>\
+- <xref:System.Math.CopySign(System.Double,System.Double)>\
 對應至 `copySign` IEEE 作業，它會傳回 `x` 的值，但具有 `y` 的符號。
 
 ## <a name="fast-built-in-json-support"></a>快速的內建 JSON 支援
@@ -453,8 +456,8 @@ Windows 提供豐富的原生 API，其採用的形式為一般 C API、COM 和 
 
 .NET Core 現在會利用 [OpenSSL 1.1.1 中的 TLS 1.3 支援](https://www.openssl.org/blog/blog/2018/09/11/release111/) (當在指定的環境中有提供時)。 透過 TLS 1.3：
 
-* 因為用戶端與伺服器之間所需的來回行程次數減少，所以改善了連線時間。
-* 因為移除各種已淘汰和不安全的密碼編譯演算法，所以提升了安全性。
+- 因為用戶端與伺服器之間所需的來回行程次數減少，所以改善了連線時間。
+- 因為移除各種已淘汰和不安全的密碼編譯演算法，所以提升了安全性。
 
 .NET Core 3.0 在 Linux 系統上使用 **OpenSSL 1.1.1**、**OpenSSL 1.1.0** 或 **OpenSSL 1.0.2** (若可供使用)。 當 **OpenSSL 1.1.1** 可供使用時，<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 類型就會使用 **TLS 1.3** (假設用戶端和伺服器都支援 **TLS 1.3**)。
 
@@ -479,20 +482,20 @@ Windows 提供豐富的原生 API，其採用的形式為一般 C API、COM 和 
 
 所有金鑰類型 (例如 *RSA*、*DSA*、*ECDsa* 和 *ECDiffieHellman*) 都支援下列格式：
 
-* **公開金鑰**
-  * X.509 SubjectPublicKeyInfo
+- **公開金鑰**
+  - X.509 SubjectPublicKeyInfo
 
-* **私密金鑰**
-  * PKCS#8 PrivateKeyInfo
-  * PKCS#8 EncryptedPrivateKeyInfo
+- **私密金鑰**
+  - PKCS#8 PrivateKeyInfo
+  - PKCS#8 EncryptedPrivateKeyInfo
 
 RSA 金鑰也支援：
 
-* **公開金鑰**
-  * PKCS#1 RSAPublicKey
+- **公開金鑰**
+  - PKCS#1 RSAPublicKey
 
-* **私密金鑰**
-  * PKCS#1 RSAPrivateKey
+- **私密金鑰**
+  - PKCS#1 RSAPrivateKey
 
 匯出方法會產生 DER 編碼的二進位資料，而匯入方法也是如此。 如果金鑰是以適合文字的 PEM 格式儲存的，呼叫端在呼叫匯入方法之前，就必須先對內容進行 Base64 解碼。
 
@@ -502,17 +505,19 @@ RSA 金鑰也支援：
 
 ## <a name="serialport-for-linux"></a>適用於 Linux 的 SerialPort
 
-.NET Core 3.0 在 Linux 上支援 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>。
+.NET Core 3.0 提供 Linux 上 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 的基本支援。
 
 先前，.NET Core 僅支援在 Windows 上使用 `SerialPort`。
+
+如需 Linux 上序列埠有限支援的詳細資訊，請參閱 [GitHub 問題 #33146](https://github.com/dotnet/corefx/issues/33146)。
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Docker 和 cgroup 記憶體限制
 
 從 Preview 3 開始，在 Linux 上執行 .NET Core 3.0 和 Docker 搭配 cgroup 記憶體限制的效果最佳。 使用記憶體限制 (例如使用 `docker run -m`) 執行 Docker 容器會變更 .NET Core 的運作方式。
 
-* 預設記憶體回收行程 (GC) 堆積大小：上限為 20 MB，或容器上 75% 的記憶體限制。
-* 可將明確大小設定為 cgroup 限制的絕對數目或百分比。
-* 每個 GC 堆積的保留區段大小下限為 16 MB。 此大小可減少電腦上所建立的堆積數目。
+- 預設記憶體回收行程 (GC) 堆積大小：上限為 20 MB，或容器上 75% 的記憶體限制。
+- 可將明確大小設定為 cgroup 限制的絕對數目或百分比。
+- 每個 GC 堆積的保留區段大小下限為 16 MB。 此大小可減少電腦上所建立的堆積數目。
 
 ## <a name="smaller-garbage-collection-heap-sizes"></a>較小的記憶體回收堆積大小
 
@@ -528,8 +533,8 @@ RSA 金鑰也支援：
 
 兩個套件已發佈至您可以用於 GPIO 程式設計的 NuGet：
 
-* [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
-* [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
+- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
+- [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
 GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結套件包含裝置繫結。 如需詳細資訊，請參閱[裝置 GitHub 存放庫](https://github.com/dotnet/iot/blob/master/src/devices/)。
 

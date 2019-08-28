@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 31d5df6521b7c420943a7d3d0efcf6e4bee2d3a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479775"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666283"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步處理原始物件概觀
 
 .NET 提供可用來同步對共用資源的存取或協調執行緒互動的一系列類型。
 
 > [!IMPORTANT]
-> 使用相同的同步處理原始物件執行個體，來保護對共用資源的所有存取。 如果您使用不同的同步處理原始物件執行個體，來保護對資源或程式碼會直接存取資源之部分的存取，則多個執行緒便可以並行存取某個資源。
+> 使用相同同步處理原始物件執行個體來保護共用資源的存取。 如果您使用不同的同步處理原始物件執行個體來保護相同資源，則會規避同步處理原始物件所提供的保護。
 
 ## <a name="waithandle-class-and-lightweight-synchronization-types"></a>WaitHandle 類別和輕量型同步處理類別
 

@@ -5,16 +5,16 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570719"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70014950"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
-.NET 應用程式是針對一或多個「.NET 實作」所開發並在其中執行。  .NET 實作包括 .NET Framework、.NET Core 和 Mono。 所有 .NET 實作有一個通用的 API 規格，稱為 .NET Standard。 本文提供上述每個概念的簡介。
+.NET 應用程式是針對一或多個「.NET 實作」  所開發並在其中執行。  .NET 實作包括 .NET Framework、.NET Core 和 Mono。 所有 .NET 實作有一個通用的 API 規格，稱為 .NET Standard。 本文提供上述每個概念的簡介。
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -30,20 +30,20 @@ ms.locfileid: "54570719"
 
 - 一或多個執行階段。 例如：適用於 .NET Framework 的 CLR、適用於 .NET Core 的 CoreCLR 和 CoreRT。
 - 實作 .NET Standard 並可能實作其他 API 的類別庫。 範例：.NET Framework 基底類別庫、.NET Core 基底類別庫。
-- (選擇性) 一或多個應用程式架構。 例如：[ASP.NET](https://www.asp.net/)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 會包含在 .NET Framework 中。
+- (選擇性) 一或多個應用程式架構。 例如：[ASP.NET](https://www.asp.net/)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 會包含在 .NET Framework 和 .NET Core 中。
 - (選擇性) 開發工具。 某些開發工具可在多個實作之間共用。
 
 Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.NET Framework、Mono 和 UWP。
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。 可在 Windows、macOS 及 Linux 執行。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 ASP.NET Core 會在 .NET Core 上執行。 
+.NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。 可在 Windows、macOS 及 Linux 執行。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 都是在 .NET Core 上執行。
 
 若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.md)及[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。
 
 ### <a name="net-framework"></a>.NET Framework
 
-.NET Framework 是自 2002年以來已存在的原始 .NET 實作。 它就是現有 .NET 開發人員一律會使用的同一個 .NET Framework。 4.5 和更新版本會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在這些 .NET Framework 版本上執行。 它包含其他 Windows 特定的 API，例如，使用 Windows Form 和 WPF 進行適用於 Windows 桌面開發的 API。 .NET Framework 最適合用來建置 Windows 傳統型應用程式。
+.NET Framework 是自 2002年以來已存在的原始 .NET 實作。 它就是現有 .NET 開發人員一律會使用的同一個 .NET Framework。 4\.5 和更新版本會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在這些 .NET Framework 版本上執行。 它包含其他 Windows 特定的 API，例如，使用 Windows Form 和 WPF 進行適用於 Windows 桌面開發的 API。 .NET Framework 最適合用來建置 Windows 傳統型應用程式。
 
 若要深入了解 .NET Framework，請參閱 [.NET Framework 指南](../framework/index.md)。
 
@@ -79,7 +79,7 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 您可以存取一組詳盡的工具和基礎結構元件，以搭配各種 .NET 實作使用。 這些包括 (但不限於) 下列項目：
 
 - .NET 語言及其編譯器
-- .NET 專案系統 (以 *.csproj*、*.vbproj* 和 *.fsproj* 檔案為基礎)
+- .NET 專案系統 (以 *.csproj*、 *.vbproj* 和 *.fsproj* 檔案為基礎)
 - [MSBuild](/visualstudio/msbuild/msbuild)，用來建置專案的建置引擎
 - [NuGet](/nuget/)，適用於 .NET 的 Microsoft 套件管理員
 - 開放原始碼建置協調流程工具，例如 [CAKE](https://cakebuild.net/) 和 [FAKE](https://fake.build/)

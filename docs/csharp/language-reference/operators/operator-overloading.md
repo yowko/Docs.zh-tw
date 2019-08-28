@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 93e4845cab6735e74c711d720beeb06c8883a44b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 5fcf9c774592c0fbcdcca951ef99c1a2efa6f05e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566875"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922301"
 ---
 # <a name="operator-overloading-c-reference"></a>運算子多載 (C# 參考)
 
-使用者定義型別可以多載預先定義的 C# 運算子。 也就是說，當其中一個或這兩個運算元屬於某類型時，該類型可以提供作業的自訂實作。 [可多載運算子](#overloadable-operators)一節會說明可多載的 C# 運算子。
+使用者定義型別可以多載預先定義的 C# 運算子。 亦即，當其中一個或這兩個運算元屬於某類型時，該類型可以提供作業的自訂實作。 [可多載運算子](#overloadable-operators)一節會說明可多載的 C# 運算子。
 
 使用 `operator` 關鍵字來宣告運算子。 運算子宣告必須滿足下列規則：
 

@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 383cfbe72d89f4360692f002a7104f7ae0bc0bdc
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 0a6c2ea2fe2f02dc1897cb1348f4c2585b730036
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170867"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924960"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform 的輸出
 由於樣式表可以使用 `<xsl:output>` 陳述式以及 `method` 屬性決定輸出格式，因此下表將說明在使用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法寫入輸出，且輸出格式宣告為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，將產生何種輸出格式。  
   
 > [!NOTE]
->  在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
+> 在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
   
  由於樣式表可以使用 `<xsl:output>` 陳述式以及 `method` 屬性決定輸出格式，因此下表將說明在使用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法寫入輸出，且輸出格式宣告為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，將產生何種輸出格式。 下表說明在輸出型別由 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法進行宣告，並且搭配使用 `<xsl:output>` 陳述式時，將發生哪些情況：  
   
@@ -27,7 +27,7 @@ ms.locfileid: "67170867"
 |method="text"|Text|  
   
 > [!NOTE]
->  注意:當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法的輸出是 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 時，將會忽略 `<xsl:output>` 陳述式。  
+> 注意：當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法的輸出是 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 時，將會忽略 `<xsl:output>` 陳述式。  
   
  當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法輸出為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，可支援下列屬性：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67170867"
 - indent  
   
     > [!NOTE]
-    >  *當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法傳送它的輸出給 <xref:System.IO.TextWriter> 時，將會忽略編碼屬性。 會改用 <xref:System.IO.TextWriter> 上的編碼屬性。  
+    > \*當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法傳送其輸出給 <xref:System.IO.TextWriter> 時，將會忽略編碼屬性。 會改用 <xref:System.IO.TextWriter> 上的編碼屬性。 
   
  當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法輸出是 <xref:System.IO.Stream> 時，將會忽略下列屬性：  
   

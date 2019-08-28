@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135686"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963385"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的分組建構
 分組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用分組建構來執行下列作業：  
@@ -59,7 +59,7 @@ ms.locfileid: "67135686"
  其中 *subexpression* 是任何有效的規則運算式模式。 使用括號的擷取會依據規則運算式中的左括號順序，從一開始，由左至右自動編號。 編號零的擷取是整個規則運算式模式比對的文字。  
   
 > [!NOTE]
->  根據預設， `(`*子運算式*`)` 語言項目會擷取相符的子運算式。 但是如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的 [群組選項](#group_options) )，則不會擷取相符子運算式。  
+> 根據預設， `(`*子運算式*`)` 語言項目會擷取相符的子運算式。 但是如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的 [群組選項](#group_options) )，則不會擷取相符子運算式。  
   
  您可以用四種方式來存取擷取群組：  
   
@@ -108,7 +108,7 @@ ms.locfileid: "67135686"
  其中 *name* 是有效的群組名稱，而 *subexpression* 是任何有效的規則運算式模式。 *name* 絕不能包含任何標點符號字元，而且不能以數字開頭。  
   
 > [!NOTE]
->  如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的 [群組選項](#group_options) )，則擷取子運算式的唯一方式，就是明確地為擷取群組命名。  
+> 如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的 [群組選項](#group_options) )，則擷取子運算式的唯一方式，就是明確地為擷取群組命名。  
   
  您可以用下列方式來存取具名的擷取群組：  
   
@@ -190,7 +190,7 @@ ms.locfileid: "67135686"
  平衡群組定義將 *name2* 當作堆疊使用。 每個巢狀建構的開頭字元都會放在群組及其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。 找到配對的結尾字元時，就會從群組中移除其對應的開頭字元，而 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合中就會減少一個。 所有巢狀建構的開頭和結尾字元都配成對之後，*name2* 就空了。  
   
 > [!NOTE]
->  在您修改下列範例中的規則運算式來使用巢狀建構的適當開頭和結尾字元之後，即可用它來處理大部分的巢狀建構，例如包含多個巢狀方法呼叫的數學運算式或程式碼字行。  
+> 在您修改下列範例中的規則運算式來使用巢狀建構的適當開頭和結尾字元之後，即可用它來處理大部分的巢狀建構，例如包含多個巢狀方法呼叫的數學運算式或程式碼字行。  
   
  下列範例使用平衡群組定義來比對輸入字串中的左右角括號 (<>)。 此範例定義兩個具名群組 `Open` 和 `Close`，像堆疊一樣可用來追蹤成對的角括號。 所擷取的每個左角括號都會被推送至 `Open` 群組的擷取集合中，而所擷取的每個右角括號都會被推送至 `Close` 群組的擷取集合中。 平衡群組定義可確保每個左角括號都有成對的右角括號。 如果沒有，唯有當 `(?(Open)(?!))`群組不是空的 (而因此如果所有巢狀建構都未關閉)，才會評估最後的子模式 `Open` 。 如果評估最後的子模式，比對會失敗，因為 `(?!)` 子模式是一律會失敗的零寬度右不合樣 (Negative Lookahead) 判斷提示。  
   
@@ -211,7 +211,7 @@ ms.locfileid: "67135686"
 |`[^<>]*`|比對非左右角括號的零或多個字元。|  
 |`(?'Open'<)`|比對左角括號，並將其指派給名為 `Open`的群組。|  
 |`[^<>]*`|比對非左右角括號的零或多個字元。|  
-|`((?'Open'<)[^<>]*) +`|比對出現一或數次、後面接零或多個非左右角括號字元的左角括號。 這是第二個擷取群組。|  
+|`((?'Open'<)[^<>]*)+`|比對出現一或數次、後面接零或多個非左右角括號字元的左角括號。 這是第二個擷取群組。|  
 |`(?'Close-Open'>)`|比對右角括號，將 `Open` 群組與目前群組之間的子字串指派給 `Close` 群組，並刪除 `Open` 群組的定義。|  
 |`[^<>]*`|比對出現零或數次、非左右角括號的任何字元。|  
 |`((?'Close-Open'>)[^<>]*)+`|比對出現一或數次、後接零或多個非左右角括號字元的右角括號。 比對右角括號時，將 `Open` 群組與目前群組之間的子字串指派給 `Close` 群組，並刪除 `Open` 群組的定義。 這是第三個擷取群組。|  
@@ -234,13 +234,13 @@ ms.locfileid: "67135686"
 |7|`[^<>]*`|在右角括號之後尋找非角括號字元；沒有找到配對。|  
 |8|`)+`|第三個擷取群組的值是 ">"。<br /><br /> 輸入字串中的下一個字元不是右角括號，所以規則運算式引擎未回送至 `((?'Close-Open'>)[^<>]*)` 子模式。|  
 |9|`)*`|第一個擷取群組的值是 "\<abc>"。<br /><br /> 輸入字串中的下一個字元是左角括號，所以規則運算式引擎會回送至 `(((?'Open'<)` 子模式。|  
-|10|`(((?'Open'<)`|比對 "\<mno>" 中的左角括號，並將其指派給 `Open` 群組。 其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合現在有單一值 "<"。|  
+|10|`(((?'Open'<)`|比對 "\<mno" 中的左角括弧，並將其指派給 `Open` 群組。 其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合現在有單一值 "<"。|  
 |11|`[^<>]*`|比對 "mno"。|  
 |12|`)+`|"<mno" 是第二個擷取群組的值。<br /><br /> 輸入字串中的下一個字元是左角括號，所以規則運算式引擎會回送至 `(?'Open'<)[^<>]*)` 子模式。|  
-|13|`(((?'Open'<)`|比對 "\<xyz>" 中的左角括號，並將其指派給 `Open` 群組。 `Open` 群組的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合現在包含兩個擷取："\<mno>" 的左角括號，以及 "\<xyz>" 的左角括號。|  
+|13|`(((?'Open'<)`|比對 "\<xyz>" 中的左角括號，並將其指派給 `Open` 群組。 `Open` 群組的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合現在包含兩個擷取："\<mno" 的左角括弧，以及 "\<xyz>" 的左角括弧。|  
 |14|`[^<>]*`|比對 "xyz"。|  
 |15|`)+`|"<xyz" 是第二個擷取群組的值。<br /><br /> 輸入字串中的下一個字元不是左角括號，所以規則運算式引擎未回送至 `(?'Open'<)[^<>]*)` 子模式。|  
-|16|`((?'Close-Open'>)`|比對 "\<xyz>" 的右角括弧。 "xyz"，將 `Open` 群組與右角括弧之間的子字串指派給 `Close` 群組，並刪除 `Open` 群組目前的值。 先前擷取的值 ("\<mno>" 中的左角括號) 會變成 `Open` 群組目前的值。 `Open` 群組的 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合現在包含單一擷取："\<xyz>" 的左角括號。|  
+|16|`((?'Close-Open'>)`|比對 "\<xyz>" 的右角括弧。 "xyz"，將 `Open` 群組與右角括弧之間的子字串指派給 `Close` 群組，並刪除 `Open` 群組目前的值。 先前擷取的值 ("\<mno" 中的左角括弧) 會變成 `Open` 群組目前值。 `Open` 群組的 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合現在包含單一擷取："\<xyz>" 的左角括號。|  
 |17|`[^<>]*`|尋找非角括號字元；沒有找到配對。|  
 |18|`)+`|第三個擷取群組的值是 ">"。<br /><br /> 輸入字串中的下一個字元是右角括號，所以規則運算式引擎會回送至 `((?'Close-Open'>)[^<>]*)` 子模式。|  
 |19|`((?'Close-Open'>)`|比對 "xyz>>" 中的最後一個右角括號，將 "mno\<xyz>" (介於 `Open` 群組與右角括號之間的子字串) 指派給 `Close` 群組，並刪除 `Open` 群組的目前值。 `Open` 群組現在是空的。|  
@@ -261,7 +261,7 @@ ms.locfileid: "67135686"
  其中 *subexpression* 是任何有效的規則運算式模式。 將數量詞套用至群組時，通常會使用非擷取分組建構，但是群組擷取的子字串沒有用。  
   
 > [!NOTE]
->  如果規則運算式包含巢狀分組建構，則外部非擷取分組建構不會套用至內部巢狀分組建構。  
+> 如果規則運算式包含巢狀分組建構，則外部非擷取分組建構不會套用至內部巢狀分組建構。  
   
  下列範例說明包含非擷取群組的規則運算式。 請注意，輸出沒有包含任何擷取群組。  
   
@@ -287,7 +287,7 @@ ms.locfileid: "67135686"
  其中 *subexpression* 是任何有效的規則運算式模式。 例如， `(?i-s:)` 會開啟不區分大小寫，並停用單行模式。 如需您可以指定之內嵌選項的詳細資訊，請參閱 [規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
   
 > [!NOTE]
->  若要將指定的選項套用至整個規則運算式，而不是單一子運算式，您可以使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別建構函式或靜態方法。 您也可以使用 `(?imnsx-imnsx)` 語言建構，以指定套用於規則運算式特定點之後的內嵌選項。  
+> 若要將指定的選項套用至整個規則運算式，而不是單一子運算式，您可以使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別建構函式或靜態方法。 您也可以使用 `(?imnsx-imnsx)` 語言建構，以指定套用於規則運算式特定點之後的內嵌選項。  
   
  群組選項建構不是擷取群組。 也就是說，雖然 *subexpression* 擷取之字串的任何部分都會包含在比對中，但不會包含在擷取群組中，也不會用來填入 <xref:System.Text.RegularExpressions.GroupCollection> 物件。  
   
@@ -396,7 +396,7 @@ ms.locfileid: "67135686"
   
  其中 *subexpression* 是任何規則運算式模式。 若要讓比對成功， *subexpression* 絕不能出現在目前位置左邊的輸入字串中。 不過，不符合 `subexpression` 的任何子字串都不會包含在比對結果中。  
   
- 零寬度左不合樣 (Negative Lookbehind) 判斷提示通常會用在規則運算式開頭。 其定義的模式排除了後面字串中的比對。 當擷取群組中的最後一或多個字元，絕不能是符合該群組規則運算式模式的一或多個字元時，此判斷提示也可以用來限制回溯。 例如，如果群組擷取所有連續的文字字元，您就可以使用零寬度左合樣 (Positive Lookbehind) 判斷提示，要求最後一個字元不能是底線 (_)。  
+ 零寬度左不合樣 (Negative Lookbehind) 判斷提示通常會用在規則運算式開頭。 其定義的模式排除了後面字串中的比對。 當擷取群組中的最後一或多個字元，絕不能是符合該群組規則運算式模式的一或多個字元時，此判斷提示也可以用來限制回溯。 例如，如果群組擷取所有連續的文字字元，您就可以使用零寬度左合樣 (Positive Lookbehind) 判斷提示，要求最後一個字元不能是底線 (\_)。  
   
  下列範例會比對週間非週末 (不是星期六也不是星期日) 任何一天的日期。  
   
@@ -459,16 +459,16 @@ ms.locfileid: "67135686"
  [!code-csharp[RegularExpressions.Language.Grouping#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/objectmodel1.cs#4)]
  [!code-vb[RegularExpressions.Language.Grouping#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/objectmodel1.vb#4)]  
   
- 規則運算式模式 `\b(\w+)\W+)+` 會從字串擷取個別文字。 其定義方式如下表所示。  
+ 規則運算式模式 `(\b(\w+)\W+)+` 會從字串擷取個別文字。 其定義方式如下表所示。  
   
 |模式|說明|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(\w+)`|比對一個或多個文字字元。 這些字元共同構成一個單字。 這是第二個擷取群組。|  
 |`\W+`|比對一或多個非文字字元。|  
-|`(\w+)\W+)+`|一或多次比對一或多個文字字元後面接著一或多個非文字字元的模式。 這是第一個擷取群組。|  
+|`(\b(\w+)\W+)`|一或多次比對一或多個文字字元後面接著一或多個非文字字元的模式。 這是第一個擷取群組。|  
   
- 第一個擷取群組會比對句子中的每個字。 第二個擷取群組會比對每個字以及接在該字後面的標點符號和空格。 索引為 2 的 <xref:System.Text.RegularExpressions.Group> 物件會提供第二個擷取群組所比對之文字的相關資訊。 您可以從 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件取得擷取群組所擷取的一整組文字。  
+ 第二個擷取群組會比對句子中的每個字。 第一個擷取群組會比對每個字以及接在該字後面的標點符號和空白字元。 索引為 2 的 <xref:System.Text.RegularExpressions.Group> 物件會提供第二個擷取群組所比對之文字的相關資訊。 您可以從 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件取得擷取群組所擷取的一整組文字。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 83e7d278b38e17dac668b32687a368211399d437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652068"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922395"
 ---
 # <a name="class-c-reference"></a>類別 (C# 參考)
 
@@ -33,48 +33,48 @@ class TestClass
 
 |繼承|範例|
 |-----------------|-------------|
-|無|`class ClassA { }`|
+|None|`class ClassA { }`|
 |Single|`class DerivedClass: BaseClass { }`|
 |無，實作兩個介面|`class ImplClass: IFace1, IFace2 { }`|
 |單一，實作一個介面|`class ImplDerivedClass: BaseClass, IFace1 { }`|
 
-直接在命名空間內宣告的類別 (未巢狀在其他類別內) 可以是 [public](../../../csharp/language-reference/keywords/public.md) 或 [internal](../../../csharp/language-reference/keywords/internal.md)。 類別預設為 `internal`。
+直接在命名空間內宣告的類別 (未巢狀在其他類別內) 可以是 [public](./public.md) 或 [internal](./internal.md)。 類別預設為 `internal`。
 
 類別成員 (包含巢狀類別) 可以是 [public](public.md)、[protected internal](protected-internal.md)、[protected](protected.md)、[internal](internal.md)、[private](private.md) 或 [private protected](private-protected.md)。 成員預設是 `private`。
 
-如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。
+如需詳細資訊，請參閱[存取修飾詞](../../programming-guide/classes-and-structs/access-modifiers.md)。
 
-您可以宣告具有型別參數的泛型類別。 如需詳細資訊，請參閱[泛型類別](../../../csharp/programming-guide/generics/generic-classes.md)。
+您可以宣告具有型別參數的泛型類別。 如需詳細資訊，請參閱[泛型類別](../../programming-guide/generics/generic-classes.md)。
 
 類別可以包含下列成員的宣告︰
 
-- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [建構函式](../../programming-guide/classes-and-structs/constructors.md)
 
-- [常數](../../../csharp/programming-guide/classes-and-structs/constants.md)
+- [常數](../../programming-guide/classes-and-structs/constants.md)
 
-- [欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [欄位](../../programming-guide/classes-and-structs/fields.md)
 
-- [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [完成項](../../programming-guide/classes-and-structs/destructors.md)
 
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [方法](../../programming-guide/classes-and-structs/methods.md)
 
-- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [屬性](../../programming-guide/classes-and-structs/properties.md)
 
-- [索引子](../../../csharp/programming-guide/indexers/index.md)
+- [索引子](../../programming-guide/indexers/index.md)
 
-- [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [運算子](../operators/index.md)
 
-- [事件](../../../csharp/programming-guide/events/index.md)
+- [事件](../../programming-guide/events/index.md)
 
-- [委派](../../../csharp/programming-guide/delegates/index.md)
+- [委派](../../programming-guide/delegates/index.md)
 
-- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [類別](../../programming-guide/classes-and-structs/classes.md)
 
-- [介面](../../../csharp/programming-guide/interfaces/index.md)
+- [介面](../../programming-guide/interfaces/index.md)
 
-- [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [結構](../../programming-guide/classes-and-structs/structs.md)
 
-- [列舉](../../../csharp/programming-guide/enumeration-types.md)
+- [列舉](../../programming-guide/enumeration-types.md)
 
 ## <a name="example"></a>範例
 
@@ -94,7 +94,7 @@ Console.Write(child1.name);   // Error
 
 類型已宣告在存取修飾詞未預設為 `private` 的類別內，因此，如果已移除關鍵字，則此範例中的資料成員仍然會是 `private`。
 
-最後，請注意到針對使用預設建構函式 (`child3`) 建立的物件，`age` 欄位預設已初始化為零。
+最後，請注意到針對使用無參數建構函式 (`child3`) 建立的物件，`age` 欄位預設已初始化為零。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -102,7 +102,7 @@ Console.Write(child1.name);   // Error
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
-- [參考型別](../../../csharp/language-reference/keywords/reference-types.md)
+- [C# 參考](../index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 關鍵字](./index.md)
+- [參考型別](./reference-types.md)

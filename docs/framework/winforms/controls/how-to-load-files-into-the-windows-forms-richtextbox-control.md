@@ -15,71 +15,72 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 1288d89bc9ffd729b59626b88fd2f3ca61c8669d
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 0f52b4ff869d7a2220dd2d40e0ab90bbfb7d24ae
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053547"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046173"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>作法：將檔案載入 Windows Forms RichTextBox 控制項
-Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以顯示純文字、Unicode 純文字或 Rich Text 格式 (RTF) 檔案。 執行方式是呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法。 您也可以使用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法從資料流載入資料。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
-  
-### <a name="to-load-a-file-into-the-richtextbox-control"></a>將檔案載入 RichTextBox 控制項  
-  
-1. 決定要使用 <xref:System.Windows.Forms.OpenFileDialog> 元件開啟的檔案路徑。 如需概觀，請參閱[OpenFileDialog 元件概觀](openfiledialog-component-overview-windows-forms.md)。  
-  
-2. 呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 控制項的 <xref:System.Windows.Forms.RichTextBox> 方法，指定要載入的檔案，也可指定檔案類型。 在下例中，要載入的檔案取自 <xref:System.Windows.Forms.OpenFileDialog> 元件的 <xref:System.Windows.Forms.FileDialog.FileName%2A> 屬性。 如果呼叫的方法以檔案名稱為其唯一引數，則檔案類型會假設為 RTF。 若要指定其他檔案類型，請呼叫以 <xref:System.Windows.Forms.RichTextBoxStreamType> 列舉值為其第二個引數的方法。  
-  
-     在下例中，按一下按鈕即會顯示 <xref:System.Windows.Forms.OpenFileDialog> 元件。 所選檔案會隨即開啟，並顯示在 <xref:System.Windows.Forms.RichTextBox> 控制項中。 本例假設表單有`btnOpenFile`按鈕。  
-  
-    ```vb  
-    Private Sub btnOpenFile_Click(ByVal sender As System.Object, _  
-       ByVal e As System.EventArgs) Handles btnOpenFile.Click  
-         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then  
-           RichTextBox1.LoadFile(OpenFileDialog1.FileName, _  
-              RichTextBoxStreamType.RichText)  
-          End If  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    private void btnOpenFile_Click(object sender, System.EventArgs e)  
-    {  
-       if(openFileDialog1.ShowDialog() == DialogResult.OK)  
-       {  
-         richTextBox1.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.RichText);  
-       }  
-    }  
-    ```  
-  
-    ```cpp  
-    private:  
-       void btnOpenFile_Click(System::Object ^  sender,  
-          System::EventArgs ^  e)  
-       {  
-          if(openFileDialog1->ShowDialog() == DialogResult::OK)  
-          {  
-             richTextBox1->LoadFile(openFileDialog1->FileName,  
-                RichTextBoxStreamType::RichText);  
-          }  
-       }  
-    ```  
-  
-     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
-  
-    ```csharp  
-    this.btnOpenFile.Click += new System.EventHandler(this. btnOpenFile_Click);  
-    ```  
-  
-    ```cpp  
-    this->btnOpenFile->Click += gcnew   
-       System::EventHandler(this, &Form1::btnOpenFile_Click);  
-    ```  
-  
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>HOW TO：將檔案載入 Windows Forms RichTextBox 控制項
+
+Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以顯示純文字、Unicode 純文字或 Rich Text 格式 (RTF) 檔案。 執行方式是呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法。 您也可以使用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法從資料流載入資料。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。
+
+### <a name="to-load-a-file-into-the-richtextbox-control"></a>將檔案載入 RichTextBox 控制項
+
+1. 決定要使用 <xref:System.Windows.Forms.OpenFileDialog> 元件開啟的檔案路徑。 如需總覽, 請參閱[OpenFileDialog 元件總覽](openfiledialog-component-overview-windows-forms.md)。
+
+2. 呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 控制項的 <xref:System.Windows.Forms.RichTextBox> 方法，指定要載入的檔案，也可指定檔案類型。 在下例中，要載入的檔案取自 <xref:System.Windows.Forms.OpenFileDialog> 元件的 <xref:System.Windows.Forms.FileDialog.FileName%2A> 屬性。 如果呼叫的方法以檔案名稱為其唯一引數，則檔案類型會假設為 RTF。 若要指定其他檔案類型，請呼叫以 <xref:System.Windows.Forms.RichTextBoxStreamType> 列舉值為其第二個引數的方法。
+
+    在下例中，按一下按鈕即會顯示 <xref:System.Windows.Forms.OpenFileDialog> 元件。 所選檔案會隨即開啟，並顯示在 <xref:System.Windows.Forms.RichTextBox> 控制項中。 本例假設表單有`btnOpenFile`按鈕。
+
+    ```vb
+    Private Sub btnOpenFile_Click(ByVal sender As System.Object, _
+       ByVal e As System.EventArgs) Handles btnOpenFile.Click
+         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+           RichTextBox1.LoadFile(OpenFileDialog1.FileName, _
+              RichTextBoxStreamType.RichText)
+          End If
+    End Sub
+    ```
+
+    ```csharp
+    private void btnOpenFile_Click(object sender, System.EventArgs e)
+    {
+       if(openFileDialog1.ShowDialog() == DialogResult.OK)
+       {
+         richTextBox1.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.RichText);
+       }
+    }
+    ```
+
+    ```cpp
+    private:
+       void btnOpenFile_Click(System::Object ^  sender,
+          System::EventArgs ^  e)
+       {
+          if(openFileDialog1->ShowDialog() == DialogResult::OK)
+          {
+             richTextBox1->LoadFile(openFileDialog1->FileName,
+                RichTextBoxStreamType::RichText);
+          }
+       }
+    ```
+
+    (視覺C#效果, C++視覺效果)將下列程式碼放在表單的函式中, 以註冊事件處理常式。
+
+    ```csharp
+    this.btnOpenFile.Click += new System.EventHandler(this. btnOpenFile_Click);
+    ```
+
+    ```cpp
+    this->btnOpenFile->Click += gcnew
+       System::EventHandler(this, &Form1::btnOpenFile_Click);
+    ```
+
     > [!IMPORTANT]
-    >  若要執行此程序，您的組件可能需要由 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../misc/code-access-security-basics.md)。  
-  
+    > 若要執行此程序，您的組件可能需要由 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../misc/code-access-security-basics.md)。
+
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>

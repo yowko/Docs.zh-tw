@@ -1,9 +1,9 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: 適用于 Apache Spark 檔的 .NET
+title: 適用於 Apache Spark 的 .NET 文件
 metadata:
   document_id: na
-  title: 適用于 Apache Spark 的 .NET 檔-教學課程和 API 參考
+  title: 適用於 Apache Spark 的 .NET 文件 - 教學課程、API 參考
   meta.description: 'Learn how to use .NET for Apache Spark, the .NET bindings for Spark written on the Spark interop layer. You can process batches of data, real-time streams, machine learning, and ad-hoc query with Apache Spark anywhere you write .NET code.'
   ms.prod: dotnet-spark
   ms.topic: landing-page
@@ -11,23 +11,23 @@ metadata:
   ms.author: mamccrea
   author: mamccrea
 abstract:
-  description: '瞭解如何使用適用于 Apache Spark 的 .NET, 這是以 Spark interop 層撰寫之 Spark 的 .NET 系結。 您可以 Apache Spark 使用您撰寫 .NET 程式碼的任何位置, 處理資料的批次、即時串流、機器學習和特定查詢。 教學課程、程式碼範例、API 參考和其他文件會示範如何進行。'
+  description: 了解如何使用適用於 Apache Spark 的 .NET，它是撰寫在 Spark Interop 層上的 Spark .NET 繫結。 您可以在撰寫 .NET 程式碼的任何位置上使用 Apache Spark 來處理資料批次、即時串流、機器學習和臨機操作查詢。 教學課程、程式碼範例、API 參考和其他文件會示範如何進行。
 sections:
   - title: 逐步教學課程
     items:
       - type: paragraph
-        text: '將 Apache Spark 的威力帶入您的 .NET 應用程式:'
+        text: 將 Apache Spark 的威力帶入您的 .NET 應用程式：
       - type: list
         style: unordered
         items:
-          - html: <a href="/dotnet/spark/tutorials/get-started">開始使用適用于 Apache Spark 的 .NET</a>
-          - html: <a href="/dotnet/spark/tutorials/hdinsight-deployment">將適用于 Apache Spark 應用程式的 .NET 部署至 Azure HDInsight</a>
-          - html: <a href="/dotnet/spark/tutorials/amazon-emr-spark-deployment">將適用于 Apache Spark 應用程式的 .NET 部署至 Amazon EMR Spark</a>
-          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">將適用于 Apache Spark 應用程式的 .NET 部署至 Databricks</a>
+          - html: <a href="/dotnet/spark/tutorials/get-started">開始使用適用於 Apache Spark 的 .NET</a>
+          - html: <a href="/dotnet/spark/tutorials/hdinsight-deployment">將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight</a>
+          - html: <a href="/dotnet/spark/tutorials/amazon-emr-spark-deployment">將適用於 Apache Spark 的 .NET 應用程式部署到 Amazon EMR Spark</a>
+          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks</a>
   - title: 參考和資源
     items:
       - type: list
         style: unordered
         items:
-          - html: <a href="/dotnet/api/?view=spark-dotnet">適用于 Apache Spark API 的 .NET</a>
-          - html: '<a href="https://github.com/dotnet/spark">Git Hub 上的 Apache Spark 的 .NET</a>'
+          - html: <a href="/dotnet/api/?view=spark-dotnet">適用於 Apache Spark 的 .NET API</a>
+          - html: '<a href="https://github.com/dotnet/spark">Git Hub 上適用於 Apache Spark 的 .NET</a>'
