@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: b0cccefc9ceb186a5278cc4cabbab58944bf44d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e45899ddbb4c244e43d3b097cc046acf34fd433e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961777"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045588"
 ---
-# <a name="default-nettcpbinding"></a><span data-ttu-id="8fa14-102">預設 NetTcpBinding</span><span class="sxs-lookup"><span data-stu-id="8fa14-102">Default NetTcpBinding</span></span>
-<span data-ttu-id="8fa14-103">此範例示範如何使用 <xref:System.ServiceModel.NetTcpBinding> 繫結。</span><span class="sxs-lookup"><span data-stu-id="8fa14-103">This sample demonstrates the use of the <xref:System.ServiceModel.NetTcpBinding> binding.</span></span> <span data-ttu-id="8fa14-104">這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。</span><span class="sxs-lookup"><span data-stu-id="8fa14-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="8fa14-105">在此範例中，服務會自我裝載。</span><span class="sxs-lookup"><span data-stu-id="8fa14-105">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="8fa14-106">用戶端和服務都是主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="8fa14-106">Both the client and service are console applications.</span></span>  
+# <a name="default-nettcpbinding"></a><span data-ttu-id="6f2b0-102">預設 NetTcpBinding</span><span class="sxs-lookup"><span data-stu-id="6f2b0-102">Default NetTcpBinding</span></span>
+<span data-ttu-id="6f2b0-103">此範例示範如何使用 <xref:System.ServiceModel.NetTcpBinding> 繫結。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-103">This sample demonstrates the use of the <xref:System.ServiceModel.NetTcpBinding> binding.</span></span> <span data-ttu-id="6f2b0-104">這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="6f2b0-105">在此範例中，服務會自我裝載。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-105">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="6f2b0-106">用戶端和服務都是主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-106">Both the client and service are console applications.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="8fa14-107">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="8fa14-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="6f2b0-107">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="8fa14-108">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="8fa14-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8fa14-109">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="8fa14-109">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="6f2b0-108">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="6f2b0-109">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-109">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="8fa14-110">如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。</span><span class="sxs-lookup"><span data-stu-id="8fa14-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8fa14-111">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="8fa14-111">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="6f2b0-110">如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6f2b0-111">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-111">This sample is located in the following directory.</span></span>  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- <span data-ttu-id="8fa14-112">用戶端和服務的組態檔中會指定繫結。</span><span class="sxs-lookup"><span data-stu-id="8fa14-112">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="8fa14-113">系結類型是在`binding` [ \<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素的屬性中指定, 如下列範例設定所示。</span><span class="sxs-lookup"><span data-stu-id="8fa14-113">The binding type is specified in the `binding` attribute of the [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) element as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="6f2b0-112">用戶端和服務的組態檔中會指定繫結。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-112">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="6f2b0-113">系結類型是在`binding` [ \<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素的屬性中指定, 如下列範例設定所示。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-113">The binding type is specified in the `binding` attribute of the [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) element as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <endpoint address=""  
@@ -34,7 +34,7 @@ ms.locfileid: "69961777"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="8fa14-114">前一個範例說明如何設定端點，以使用 `netTcpBinding` 繫結搭配預設值。</span><span class="sxs-lookup"><span data-stu-id="8fa14-114">The previous sample shows how to configure an endpoint to use the `netTcpBinding` binding with the default settings.</span></span> <span data-ttu-id="8fa14-115">如果您要設定 `netTcpBinding` 繫結，並變更其部分設定，則必須定義繫結組態。</span><span class="sxs-lookup"><span data-stu-id="8fa14-115">If you want to configure the `netTcpBinding` binding and change some of its settings, it is necessary to define a binding configuration.</span></span> <span data-ttu-id="8fa14-116">端點必須使用 `bindingConfiguration` 屬性，按照名稱參考繫結組態。</span><span class="sxs-lookup"><span data-stu-id="8fa14-116">The endpoint must reference the binding configuration by name with a `bindingConfiguration` attribute.</span></span> <span data-ttu-id="8fa14-117">在此範例中，繫結組態會命名為 `Binding1`，並且如下列範例組態中所示加以定義。</span><span class="sxs-lookup"><span data-stu-id="8fa14-117">In this sample, the binding configuration is named `Binding1` and is defined as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="6f2b0-114">前一個範例說明如何設定端點，以使用 `netTcpBinding` 繫結搭配預設值。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-114">The previous sample shows how to configure an endpoint to use the `netTcpBinding` binding with the default settings.</span></span> <span data-ttu-id="6f2b0-115">如果您要設定 `netTcpBinding` 繫結，並變更其部分設定，則必須定義繫結組態。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-115">If you want to configure the `netTcpBinding` binding and change some of its settings, it is necessary to define a binding configuration.</span></span> <span data-ttu-id="6f2b0-116">端點必須使用 `bindingConfiguration` 屬性，按照名稱參考繫結組態。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-116">The endpoint must reference the binding configuration by name with a `bindingConfiguration` attribute.</span></span> <span data-ttu-id="6f2b0-117">在此範例中，繫結組態會命名為 `Binding1`，並且如下列範例組態中所示加以定義。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-117">In this sample, the binding configuration is named `Binding1` and is defined as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <services>  
@@ -81,7 +81,7 @@ ms.locfileid: "69961777"
 </bindings>  
 ```  
   
- <span data-ttu-id="8fa14-118">當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="8fa14-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="8fa14-119">在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。</span><span class="sxs-lookup"><span data-stu-id="8fa14-119">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="6f2b0-118">當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="6f2b0-119">在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-119">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -92,22 +92,22 @@ Divide(22,7) = 3.14285714285714
 Press ENTER to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="8fa14-120">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="8fa14-120">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="6f2b0-120">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="6f2b0-120">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="8fa14-121">使用下列命令安裝 ASP.NET 4.0。</span><span class="sxs-lookup"><span data-stu-id="8fa14-121">Install ASP.NET 4.0 using the following command.</span></span>  
+1. <span data-ttu-id="6f2b0-121">使用下列命令安裝 ASP.NET 4.0。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-121">Install ASP.NET 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. <span data-ttu-id="8fa14-122">請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="8fa14-122">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+2. <span data-ttu-id="6f2b0-122">請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-122">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3. <span data-ttu-id="8fa14-123">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="8fa14-123">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+3. <span data-ttu-id="6f2b0-123">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-123">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4. <span data-ttu-id="8fa14-124">若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="8fa14-124">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+4. <span data-ttu-id="6f2b0-124">若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-124">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="8fa14-125">由於伺服器會自我裝載，因此您必須在用戶端的 App.config 檔案中指定身分識別，以便在跨電腦組態中執行範例。</span><span class="sxs-lookup"><span data-stu-id="8fa14-125">Because the server is self-hosted, you must specify an identity in the client's App.config file to run the sample in a cross-machine configuration.</span></span>  
+    > <span data-ttu-id="6f2b0-125">由於伺服器會自我裝載，因此您必須在用戶端的 App.config 檔案中指定身分識別，以便在跨電腦組態中執行範例。</span><span class="sxs-lookup"><span data-stu-id="6f2b0-125">Because the server is self-hosted, you must specify an identity in the client's App.config file to run the sample in a cross-machine configuration.</span></span>  
   
     ```xml  
     <client>  

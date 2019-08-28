@@ -12,87 +12,91 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: b2fafdd9959123e27c4b58484281408c3115e4d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cee6fe3b049378fa7bbe2585a3607049eaf231bc
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624176"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046083"
 ---
-# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="43272-102">逐步解說：處理 Windows Forms DataGridView 控制項在資料輸入期間發生的錯誤</span><span class="sxs-lookup"><span data-stu-id="43272-102">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="43272-103">處理錯誤，從基礎資料存放區是輸入資料的應用程式的必要的功能。</span><span class="sxs-lookup"><span data-stu-id="43272-103">Handling errors from the underlying data store is a required feature for a data-entry application.</span></span> <span data-ttu-id="43272-104">Windows Forms<xref:System.Windows.Forms.DataGridView>控制項提供了簡單的藉由公開<xref:System.Windows.Forms.DataGridView.DataError>條件約束違規或損毀的商務規則，會偵測到資料存放區時所引發的事件。</span><span class="sxs-lookup"><span data-stu-id="43272-104">The Windows Forms <xref:System.Windows.Forms.DataGridView> control makes this easy by exposing the <xref:System.Windows.Forms.DataGridView.DataError> event, which is raised when the data store detects a constraint violation or a broken business rule.</span></span>  
-  
- <span data-ttu-id="43272-105">在本逐步解說中，您將擷取的資料列`Customers`Northwind 範例資料庫中的表格，以及它們顯示在<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="43272-105">In this walkthrough, you will retrieve rows from the `Customers` table in the Northwind sample database and display them in a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="43272-106">當重複`CustomerID`中新的資料列或編輯現有的資料列，偵測到的值<xref:System.Windows.Forms.DataGridView.DataError>事件就會發生，這會顯示處理<xref:System.Windows.Forms.MessageBox>，描述例外狀況。</span><span class="sxs-lookup"><span data-stu-id="43272-106">When a duplicate `CustomerID` value is detected in a new row or an edited existing row, the <xref:System.Windows.Forms.DataGridView.DataError> event will occur, which will be handled by displaying a <xref:System.Windows.Forms.MessageBox> that describes the exception.</span></span>  
-  
- <span data-ttu-id="43272-107">若要將此主題中的程式碼複製為單一清單，請參閱[如何：在 Windows 中的資料輸入期間所發生處理錯誤 Form DataGridView 控制項](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)。</span><span class="sxs-lookup"><span data-stu-id="43272-107">To copy the code in this topic as a single listing, see [How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control](handle-errors-that-occur-during-data-entry-in-the-datagrid.md).</span></span>  
-  
-## <a name="prerequisites"></a><span data-ttu-id="43272-108">必要條件</span><span class="sxs-lookup"><span data-stu-id="43272-108">Prerequisites</span></span>  
- <span data-ttu-id="43272-109">若要完成這個逐步解說，您將需要：</span><span class="sxs-lookup"><span data-stu-id="43272-109">In order to complete this walkthrough, you will need:</span></span>  
-  
-- <span data-ttu-id="43272-110">存取權可 Northwind SQL Server 範例資料庫的伺服器。</span><span class="sxs-lookup"><span data-stu-id="43272-110">Access to a server that has the Northwind SQL Server sample database.</span></span>  
-  
-## <a name="creating-the-form"></a><span data-ttu-id="43272-111">建立表單</span><span class="sxs-lookup"><span data-stu-id="43272-111">Creating the Form</span></span>  
-  
-#### <a name="to-handle-data-entry-errors-in-the-datagridview-control"></a><span data-ttu-id="43272-112">若要處理 DataGridView 控制項中的資料輸入錯誤</span><span class="sxs-lookup"><span data-stu-id="43272-112">To handle data-entry errors in the DataGridView control</span></span>  
-  
-1. <span data-ttu-id="43272-113">建立衍生自類別<xref:System.Windows.Forms.Form>且包含<xref:System.Windows.Forms.DataGridView>控制項和<xref:System.Windows.Forms.BindingSource>元件。</span><span class="sxs-lookup"><span data-stu-id="43272-113">Create a class that derives from <xref:System.Windows.Forms.Form> and contains a <xref:System.Windows.Forms.DataGridView> control and a <xref:System.Windows.Forms.BindingSource> component.</span></span>  
-  
-     <span data-ttu-id="43272-114">下列程式碼範例提供基本的初始化，而且包含`Main`方法。</span><span class="sxs-lookup"><span data-stu-id="43272-114">The following code example provides basic initialization and includes a `Main` method.</span></span>  
-  
-     [!code-csharp[System.Windows.Forms.DataGridView.DataError#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#01)]
-     [!code-vb[System.Windows.Forms.DataGridView.DataError#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#01)]  
+# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="13042-102">逐步解說：處理 Windows Forms DataGridView 控制項在資料輸入期間發生的錯誤</span><span class="sxs-lookup"><span data-stu-id="13042-102">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>
+
+<span data-ttu-id="13042-103">從基礎資料存放區處理錯誤是資料輸入應用程式的必要功能。</span><span class="sxs-lookup"><span data-stu-id="13042-103">Handling errors from the underlying data store is a required feature for a data-entry application.</span></span> <span data-ttu-id="13042-104">Windows Forms <xref:System.Windows.Forms.DataGridView>控制項藉由公開事件來簡化這<xref:System.Windows.Forms.DataGridView.DataError>項工作, 這會在資料存放區偵測到條件約束違規或中斷的商務規則時引發。</span><span class="sxs-lookup"><span data-stu-id="13042-104">The Windows Forms <xref:System.Windows.Forms.DataGridView> control makes this easy by exposing the <xref:System.Windows.Forms.DataGridView.DataError> event, which is raised when the data store detects a constraint violation or a broken business rule.</span></span>
+
+<span data-ttu-id="13042-105">在此逐步解說中, 您將從 Northwind `Customers`範例資料庫中的資料表抓取資料列, 並將<xref:System.Windows.Forms.DataGridView>其顯示在控制項中。</span><span class="sxs-lookup"><span data-stu-id="13042-105">In this walkthrough, you will retrieve rows from the `Customers` table in the Northwind sample database and display them in a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="13042-106">在新的`CustomerID`資料列或已編輯的現有資料列中偵測到重複的<xref:System.Windows.Forms.DataGridView.DataError>值時, 將會發生此事件, 這會<xref:System.Windows.Forms.MessageBox>藉由顯示描述例外狀況的來處理。</span><span class="sxs-lookup"><span data-stu-id="13042-106">When a duplicate `CustomerID` value is detected in a new row or an edited existing row, the <xref:System.Windows.Forms.DataGridView.DataError> event will occur, which will be handled by displaying a <xref:System.Windows.Forms.MessageBox> that describes the exception.</span></span>
+
+<span data-ttu-id="13042-107">若要將此主題中的程式碼複製為單一清單，請參閱[如何：處理 Windows Forms DataGridView 控制項](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)中的資料輸入期間所發生的錯誤。</span><span class="sxs-lookup"><span data-stu-id="13042-107">To copy the code in this topic as a single listing, see [How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control](handle-errors-that-occur-during-data-entry-in-the-datagrid.md).</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="13042-108">必要條件</span><span class="sxs-lookup"><span data-stu-id="13042-108">Prerequisites</span></span>
+
+<span data-ttu-id="13042-109">若要完成這個逐步解說，您將需要：</span><span class="sxs-lookup"><span data-stu-id="13042-109">In order to complete this walkthrough, you will need:</span></span>
+
+- <span data-ttu-id="13042-110">具有 Northwind SQL Server 範例資料庫之伺服器的存取權。</span><span class="sxs-lookup"><span data-stu-id="13042-110">Access to a server that has the Northwind SQL Server sample database.</span></span>
+
+## <a name="creating-the-form"></a><span data-ttu-id="13042-111">建立表單</span><span class="sxs-lookup"><span data-stu-id="13042-111">Creating the Form</span></span>
+
+#### <a name="to-handle-data-entry-errors-in-the-datagridview-control"></a><span data-ttu-id="13042-112">處理 DataGridView 控制項中的資料輸入錯誤</span><span class="sxs-lookup"><span data-stu-id="13042-112">To handle data-entry errors in the DataGridView control</span></span>
+
+1. <span data-ttu-id="13042-113">建立衍生自<xref:System.Windows.Forms.Form>的類別, 並<xref:System.Windows.Forms.DataGridView>包含控制項和<xref:System.Windows.Forms.BindingSource>元件。</span><span class="sxs-lookup"><span data-stu-id="13042-113">Create a class that derives from <xref:System.Windows.Forms.Form> and contains a <xref:System.Windows.Forms.DataGridView> control and a <xref:System.Windows.Forms.BindingSource> component.</span></span>
+
+    <span data-ttu-id="13042-114">下列程式碼範例提供基本的`Main`初始化, 並包含方法。</span><span class="sxs-lookup"><span data-stu-id="13042-114">The following code example provides basic initialization and includes a `Main` method.</span></span>
+
+    [!code-csharp[System.Windows.Forms.DataGridView.DataError#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#01)]
+    [!code-vb[System.Windows.Forms.DataGridView.DataError#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#01)]
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#02)]
-    [!code-vb[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#02)]  
-  
-2. <span data-ttu-id="43272-115">在您的表單類別定義處理資料庫連接的詳細資料中實作的方法。</span><span class="sxs-lookup"><span data-stu-id="43272-115">Implement a method in your form's class definition for handling the details of connecting to the database.</span></span>  
-  
-     <span data-ttu-id="43272-116">此程式碼範例會使用`GetData`方法會傳回填入<xref:System.Data.DataTable>物件。</span><span class="sxs-lookup"><span data-stu-id="43272-116">This code example uses a `GetData` method that returns a populated <xref:System.Data.DataTable> object.</span></span> <span data-ttu-id="43272-117">請確定您設定`connectionString`變數的值，適用於您的資料庫。</span><span class="sxs-lookup"><span data-stu-id="43272-117">Be sure that you set the `connectionString` variable to a value that is appropriate for your database.</span></span>  
-  
+    [!code-vb[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#02)]
+
+2. <span data-ttu-id="13042-115">在表單的類別定義中執行方法, 以處理連接至資料庫的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="13042-115">Implement a method in your form's class definition for handling the details of connecting to the database.</span></span>
+
+    <span data-ttu-id="13042-116">這個程式碼範例會`GetData`使用方法來傳回已<xref:System.Data.DataTable>填入的物件。</span><span class="sxs-lookup"><span data-stu-id="13042-116">This code example uses a `GetData` method that returns a populated <xref:System.Data.DataTable> object.</span></span> <span data-ttu-id="13042-117">請務必將`connectionString`變數設定為適用于您資料庫的值。</span><span class="sxs-lookup"><span data-stu-id="13042-117">Be sure that you set the `connectionString` variable to a value that is appropriate for your database.</span></span>
+
     > [!IMPORTANT]
-    >  <span data-ttu-id="43272-118">在連接字串內儲存機密資訊 (例如密碼) 會影響應用程式的安全性。</span><span class="sxs-lookup"><span data-stu-id="43272-118">Storing sensitive information, such as a password, within the connection string can affect the security of your application.</span></span> <span data-ttu-id="43272-119">使用 Windows 驗證 (也稱為整合式安全性) 是控制資料庫存取的更安全方式。</span><span class="sxs-lookup"><span data-stu-id="43272-119">Using Windows Authentication (also known as integrated security) is a more secure way to control access to a database.</span></span> <span data-ttu-id="43272-120">如需詳細資訊，請參閱[保護連線資訊](../../data/adonet/protecting-connection-information.md)。</span><span class="sxs-lookup"><span data-stu-id="43272-120">For more information, see [Protecting Connection Information](../../data/adonet/protecting-connection-information.md).</span></span>  
-  
-     [!code-csharp[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#30)]
-     [!code-vb[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#30)]  
-  
-3. <span data-ttu-id="43272-121">實作您的表單的處理常式<xref:System.Windows.Forms.Form.Load>初始化的事件<xref:System.Windows.Forms.DataGridView>和<xref:System.Windows.Forms.BindingSource>和設定資料繫結。</span><span class="sxs-lookup"><span data-stu-id="43272-121">Implement a handler for your form's <xref:System.Windows.Forms.Form.Load> event that initializes the <xref:System.Windows.Forms.DataGridView> and <xref:System.Windows.Forms.BindingSource> and sets up the data binding.</span></span>  
-  
-     [!code-csharp[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#10)]
-     [!code-vb[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#10)]  
-  
-4. <span data-ttu-id="43272-122">處理<xref:System.Windows.Forms.DataGridView.DataError>上的事件<xref:System.Windows.Forms.DataGridView>。</span><span class="sxs-lookup"><span data-stu-id="43272-122">Handle the <xref:System.Windows.Forms.DataGridView.DataError> event on the <xref:System.Windows.Forms.DataGridView>.</span></span>  
-  
-     <span data-ttu-id="43272-123">如果此錯誤的內容是 「 認可 」 作業，顯示中的錯誤<xref:System.Windows.Forms.MessageBox>。</span><span class="sxs-lookup"><span data-stu-id="43272-123">If the context for the error is a commit operation, display the error in a <xref:System.Windows.Forms.MessageBox>.</span></span>  
-  
-     [!code-csharp[System.Windows.Forms.DataGridView.DataError#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#20)]
-     [!code-vb[System.Windows.Forms.DataGridView.DataError#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#20)]  
-  
-## <a name="testing-the-application"></a><span data-ttu-id="43272-124">測試應用程式</span><span class="sxs-lookup"><span data-stu-id="43272-124">Testing the Application</span></span>  
- <span data-ttu-id="43272-125">您現在可以測試表單，以確定它如預期般運作。</span><span class="sxs-lookup"><span data-stu-id="43272-125">You can now test the form to make sure it behaves as expected.</span></span>  
-  
-#### <a name="to-test-the-form"></a><span data-ttu-id="43272-126">若要測試表單</span><span class="sxs-lookup"><span data-stu-id="43272-126">To test the form</span></span>  
-  
-- <span data-ttu-id="43272-127">按 F5 執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="43272-127">Press F5 to run the application.</span></span>  
-  
-     <span data-ttu-id="43272-128">您會看到<xref:System.Windows.Forms.DataGridView>控制項填入 Customers 資料表中的資料。</span><span class="sxs-lookup"><span data-stu-id="43272-128">You will see a <xref:System.Windows.Forms.DataGridView> control filled with data from the Customers table.</span></span> <span data-ttu-id="43272-129">如果您輸入的值重複`CustomerID`和認可編輯、 儲存格的值將會自動還原，您會看到<xref:System.Windows.Forms.MessageBox>顯示資料的項目時發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="43272-129">If you enter a duplicate value for `CustomerID` and commit the edit, the cell value will revert automatically and you will see a <xref:System.Windows.Forms.MessageBox> that displays the data entry error.</span></span>  
-  
-## <a name="next-steps"></a><span data-ttu-id="43272-130">後續步驟</span><span class="sxs-lookup"><span data-stu-id="43272-130">Next Steps</span></span>  
- <span data-ttu-id="43272-131">此應用程式可讓您的基本了解<xref:System.Windows.Forms.DataGridView>控制項的功能。</span><span class="sxs-lookup"><span data-stu-id="43272-131">This application gives you a basic understanding of the <xref:System.Windows.Forms.DataGridView> control's capabilities.</span></span> <span data-ttu-id="43272-132">您可以自訂外觀和行為<xref:System.Windows.Forms.DataGridView>控制項以數種方式：</span><span class="sxs-lookup"><span data-stu-id="43272-132">You can customize the appearance and behavior of the <xref:System.Windows.Forms.DataGridView> control in several ways:</span></span>  
-  
-- <span data-ttu-id="43272-133">變更框線和標題的樣式。</span><span class="sxs-lookup"><span data-stu-id="43272-133">Change border and header styles.</span></span> <span data-ttu-id="43272-134">如需詳細資訊，請參閱[如何：變更框線和格線樣式，在 Windows Form DataGridView 控制項](change-the-border-and-gridline-styles-in-the-datagrid.md)。</span><span class="sxs-lookup"><span data-stu-id="43272-134">For more information, see [How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control](change-the-border-and-gridline-styles-in-the-datagrid.md).</span></span>  
-  
-- <span data-ttu-id="43272-135">啟用或限制使用者的輸入<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="43272-135">Enable or restrict user input to the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="43272-136">如需詳細資訊，請參閱[如何：防止資料列中新增和刪除 Windows Form DataGridView 控制項](prevent-row-addition-and-deletion-datagridview.md)，和[How to:資料行設為唯讀模式中的 Windows Form DataGridView 控制項](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="43272-136">For more information, see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md), and [How to: Make Columns Read-Only in the Windows Forms DataGridView Control](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).</span></span>  
-  
-- <span data-ttu-id="43272-137">驗證使用者輸入，<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="43272-137">Validate user input to the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="43272-138">如需詳細資訊，請參閱[逐步解說：驗證資料，在 Windows Form DataGridView 控制項](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="43272-138">For more information, see [Walkthrough: Validating Data in the Windows Forms DataGridView Control](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).</span></span>  
-  
-- <span data-ttu-id="43272-139">處理非常大型的資料集使用的虛擬模式。</span><span class="sxs-lookup"><span data-stu-id="43272-139">Handle very large data sets using virtual mode.</span></span> <span data-ttu-id="43272-140">如需詳細資訊，請參閱[逐步解說：實作虛擬模式中的 Windows Form DataGridView 控制項](implementing-virtual-mode-wf-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="43272-140">For more information, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
-  
-- <span data-ttu-id="43272-141">自訂儲存格的外觀。</span><span class="sxs-lookup"><span data-stu-id="43272-141">Customize the appearance of cells.</span></span> <span data-ttu-id="43272-142">如需詳細資訊，請參閱[如何：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](customize-the-appearance-of-cells-in-the-datagrid.md)和[How to:設定 Windows Form DataGridView 控制項的預設儲存格樣式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="43272-142">For more information, see [How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control](customize-the-appearance-of-cells-in-the-datagrid.md) and [How to: Set Default Cell Styles for the Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="43272-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="43272-143">See also</span></span>
+    > <span data-ttu-id="13042-118">在連接字串內儲存機密資訊 (例如密碼) 會影響應用程式的安全性。</span><span class="sxs-lookup"><span data-stu-id="13042-118">Storing sensitive information, such as a password, within the connection string can affect the security of your application.</span></span> <span data-ttu-id="13042-119">使用 Windows 驗證 (也稱為整合式安全性) 是控制資料庫存取的更安全方式。</span><span class="sxs-lookup"><span data-stu-id="13042-119">Using Windows Authentication (also known as integrated security) is a more secure way to control access to a database.</span></span> <span data-ttu-id="13042-120">如需詳細資訊，請參閱[保護連線資訊](../../data/adonet/protecting-connection-information.md)。</span><span class="sxs-lookup"><span data-stu-id="13042-120">For more information, see [Protecting Connection Information](../../data/adonet/protecting-connection-information.md).</span></span>
+
+    [!code-csharp[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#30)]
+    [!code-vb[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#30)]
+
+3. <span data-ttu-id="13042-121">為表單的<xref:System.Windows.Forms.Form.Load>事件執行處理常式, 以<xref:System.Windows.Forms.DataGridView>初始化和<xref:System.Windows.Forms.BindingSource> , 並設定資料系結。</span><span class="sxs-lookup"><span data-stu-id="13042-121">Implement a handler for your form's <xref:System.Windows.Forms.Form.Load> event that initializes the <xref:System.Windows.Forms.DataGridView> and <xref:System.Windows.Forms.BindingSource> and sets up the data binding.</span></span>
+
+    [!code-csharp[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#10)]
+    [!code-vb[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#10)]
+
+4. <span data-ttu-id="13042-122"><xref:System.Windows.Forms.DataGridView.DataError> 處理<xref:System.Windows.Forms.DataGridView>上的事件。</span><span class="sxs-lookup"><span data-stu-id="13042-122">Handle the <xref:System.Windows.Forms.DataGridView.DataError> event on the <xref:System.Windows.Forms.DataGridView>.</span></span>
+
+    <span data-ttu-id="13042-123">如果錯誤的內容是認可作業, 則會在中<xref:System.Windows.Forms.MessageBox>顯示錯誤。</span><span class="sxs-lookup"><span data-stu-id="13042-123">If the context for the error is a commit operation, display the error in a <xref:System.Windows.Forms.MessageBox>.</span></span>
+
+    [!code-csharp[System.Windows.Forms.DataGridView.DataError#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#20)]
+    [!code-vb[System.Windows.Forms.DataGridView.DataError#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#20)]
+
+## <a name="testing-the-application"></a><span data-ttu-id="13042-124">測試應用程式</span><span class="sxs-lookup"><span data-stu-id="13042-124">Testing the Application</span></span>
+
+<span data-ttu-id="13042-125">您現在可以測試表單, 以確定它會如預期般運作。</span><span class="sxs-lookup"><span data-stu-id="13042-125">You can now test the form to make sure it behaves as expected.</span></span>
+
+#### <a name="to-test-the-form"></a><span data-ttu-id="13042-126">測試表單</span><span class="sxs-lookup"><span data-stu-id="13042-126">To test the form</span></span>
+
+- <span data-ttu-id="13042-127">按 F5 執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="13042-127">Press F5 to run the application.</span></span>
+
+  <span data-ttu-id="13042-128">您會看到<xref:System.Windows.Forms.DataGridView>已填入 [Customers] 資料表之資料的控制項。</span><span class="sxs-lookup"><span data-stu-id="13042-128">You will see a <xref:System.Windows.Forms.DataGridView> control filled with data from the Customers table.</span></span> <span data-ttu-id="13042-129">如果您為輸入重複的`CustomerID`值, 並認可編輯, 資料格值將會自動還原, 而您會<xref:System.Windows.Forms.MessageBox>看到顯示資料項目錯誤的。</span><span class="sxs-lookup"><span data-stu-id="13042-129">If you enter a duplicate value for `CustomerID` and commit the edit, the cell value will revert automatically and you will see a <xref:System.Windows.Forms.MessageBox> that displays the data entry error.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="13042-130">後續步驟</span><span class="sxs-lookup"><span data-stu-id="13042-130">Next Steps</span></span>
+
+<span data-ttu-id="13042-131">此應用程式可讓您對<xref:System.Windows.Forms.DataGridView>控制項的功能有基本瞭解。</span><span class="sxs-lookup"><span data-stu-id="13042-131">This application gives you a basic understanding of the <xref:System.Windows.Forms.DataGridView> control's capabilities.</span></span> <span data-ttu-id="13042-132">您可以透過數種方式自訂<xref:System.Windows.Forms.DataGridView>控制項的外觀和行為:</span><span class="sxs-lookup"><span data-stu-id="13042-132">You can customize the appearance and behavior of the <xref:System.Windows.Forms.DataGridView> control in several ways:</span></span>
+
+- <span data-ttu-id="13042-133">變更框線和標題樣式。</span><span class="sxs-lookup"><span data-stu-id="13042-133">Change border and header styles.</span></span> <span data-ttu-id="13042-134">如需詳細資訊，請參閱[如何：變更 Windows Forms DataGridView 控制項](change-the-border-and-gridline-styles-in-the-datagrid.md)中的框線和格線樣式。</span><span class="sxs-lookup"><span data-stu-id="13042-134">For more information, see [How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control](change-the-border-and-gridline-styles-in-the-datagrid.md).</span></span>
+
+- <span data-ttu-id="13042-135">啟用或限制控制項的<xref:System.Windows.Forms.DataGridView>使用者輸入。</span><span class="sxs-lookup"><span data-stu-id="13042-135">Enable or restrict user input to the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="13042-136">如需詳細資訊，請參閱[如何：防止在 Windows Forms DataGridView 控制項](prevent-row-addition-and-deletion-datagridview.md)中新增和刪除資料列, 以及[如何:將 Windows Forms DataGridView 控制項](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)中的資料行設為唯讀。</span><span class="sxs-lookup"><span data-stu-id="13042-136">For more information, see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md), and [How to: Make Columns Read-Only in the Windows Forms DataGridView Control](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).</span></span>
+
+- <span data-ttu-id="13042-137">驗證控制項的<xref:System.Windows.Forms.DataGridView>使用者輸入。</span><span class="sxs-lookup"><span data-stu-id="13042-137">Validate user input to the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="13042-138">如需詳細資訊，請參閱[逐步解說：驗證 Windows Forms DataGridView 控制項](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)中的資料。</span><span class="sxs-lookup"><span data-stu-id="13042-138">For more information, see [Walkthrough: Validating Data in the Windows Forms DataGridView Control](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).</span></span>
+
+- <span data-ttu-id="13042-139">使用虛擬模式處理非常大型的資料集。</span><span class="sxs-lookup"><span data-stu-id="13042-139">Handle very large data sets using virtual mode.</span></span> <span data-ttu-id="13042-140">如需詳細資訊，請參閱[逐步解說：在 Windows Forms DataGridView 控制項](implementing-virtual-mode-wf-datagridview-control.md)中執行虛擬模式。</span><span class="sxs-lookup"><span data-stu-id="13042-140">For more information, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).</span></span>
+
+- <span data-ttu-id="13042-141">自訂儲存格的外觀。</span><span class="sxs-lookup"><span data-stu-id="13042-141">Customize the appearance of cells.</span></span> <span data-ttu-id="13042-142">如需詳細資訊，請參閱[如何：在 Windows Forms DataGridView 控制項](customize-the-appearance-of-cells-in-the-datagrid.md)中自訂儲存格的外觀, 以及[如何:設定 Windows Forms DataGridView 控制項](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)的預設儲存格樣式。</span><span class="sxs-lookup"><span data-stu-id="13042-142">For more information, see [How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control](customize-the-appearance-of-cells-in-the-datagrid.md) and [How to: Set Default Cell Styles for the Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="13042-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13042-143">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [<span data-ttu-id="43272-144">Windows Forms DataGridView 控制項中的資料輸入</span><span class="sxs-lookup"><span data-stu-id="43272-144">Data Entry in the Windows Forms DataGridView Control</span></span>](data-entry-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="43272-145">如何：處理 Windows Form DataGridView 控制項中的資料輸入期間所發生的錯誤</span><span class="sxs-lookup"><span data-stu-id="43272-145">How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [<span data-ttu-id="43272-146">逐步解說：驗證 Windows Form DataGridView 控制項中的資料</span><span class="sxs-lookup"><span data-stu-id="43272-146">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="43272-147">保護連線資訊</span><span class="sxs-lookup"><span data-stu-id="43272-147">Protecting Connection Information</span></span>](../../data/adonet/protecting-connection-information.md)
+- [<span data-ttu-id="13042-144">Windows Forms DataGridView 控制項中的資料輸入</span><span class="sxs-lookup"><span data-stu-id="13042-144">Data Entry in the Windows Forms DataGridView Control</span></span>](data-entry-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="13042-145">如何：處理 Windows Forms DataGridView 控制項中的資料輸入期間所發生的錯誤</span><span class="sxs-lookup"><span data-stu-id="13042-145">How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [<span data-ttu-id="13042-146">逐步解說：驗證 Windows Forms DataGridView 控制項中的資料</span><span class="sxs-lookup"><span data-stu-id="13042-146">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="13042-147">保護連線資訊</span><span class="sxs-lookup"><span data-stu-id="13042-147">Protecting Connection Information</span></span>](../../data/adonet/protecting-connection-information.md)

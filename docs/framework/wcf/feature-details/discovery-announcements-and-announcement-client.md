@@ -2,39 +2,42 @@
 title: 探索公告與公告用戶端
 ms.date: 03/30/2017
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-ms.openlocfilehash: 74362343dc1fd5df6d1b91537f7fed5bc08f8fe0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ad0b3ea5c257fa3117c426391bd59ad7b560d4f
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968820"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040173"
 ---
-# <a name="discovery-announcements-and-announcement-client"></a><span data-ttu-id="91074-102">探索公告與公告用戶端</span><span class="sxs-lookup"><span data-stu-id="91074-102">Discovery Announcements and Announcement Client</span></span>
-<span data-ttu-id="91074-103">WCF 探索功能可讓元件宣告其可用性。</span><span class="sxs-lookup"><span data-stu-id="91074-103">The WCF discovery feature enables components to announce their availability.</span></span> <span data-ttu-id="91074-104">如果進行此設定，服務會傳送 Hello 和 Bye 公告。</span><span class="sxs-lookup"><span data-stu-id="91074-104">If configured to do so, a service sends Hello and Bye announcements.</span></span> <span data-ttu-id="91074-105">用戶端或其他元件可以接聽此類公告訊息，然後採取行動。</span><span class="sxs-lookup"><span data-stu-id="91074-105">Clients or other components can listen for such announcement messages and act on them.</span></span> <span data-ttu-id="91074-106">此方法是讓用戶端注意服務存在的替代方法。</span><span class="sxs-lookup"><span data-stu-id="91074-106">This provides an alternative method for clients to be aware of services.</span></span> <span data-ttu-id="91074-107">公告功能具有多種用途，例如，如果服務頻繁進出網路，公告便可能會是較搜尋服務更好的方法。</span><span class="sxs-lookup"><span data-stu-id="91074-107">Announcement functionality has several uses, for example, if the services enter and leave a network frequently, announcements may be a better alternative than searching for services.</span></span> <span data-ttu-id="91074-108">透過此方法，除了可降低網路流量之外，用戶端也會在收到公告的同時得知服務的出現或離開。</span><span class="sxs-lookup"><span data-stu-id="91074-108">With this approach, the network traffic is reduced and the client can learn about the presence or departure of the service as soon as announcements are received.</span></span>  
-  
-## <a name="discovery-announcements"></a><span data-ttu-id="91074-109">探索公告</span><span class="sxs-lookup"><span data-stu-id="91074-109">Discovery Announcements</span></span>  
- <span data-ttu-id="91074-110">當設定為公告的服務加入網路且變成可探索時，公告將會傳送 Hello 訊息，向接聽的用戶端告知其可用性。</span><span class="sxs-lookup"><span data-stu-id="91074-110">When a service configured for announcements joins a network and becomes discoverable, it sends a Hello message announcing its availability to listening clients.</span></span> <span data-ttu-id="91074-111">訊息會包含與服務有關的探索相關資訊，例如合約、端點位址和關聯範圍。</span><span class="sxs-lookup"><span data-stu-id="91074-111">The message contains discovery related information about the service, such as its contract, endpoint address and associated scopes.</span></span> <span data-ttu-id="91074-112">您可以指定與 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 類別一同傳送的公告訊息位置。</span><span class="sxs-lookup"><span data-stu-id="91074-112">You can specify where the announcement message is sent with the <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> class.</span></span> <span data-ttu-id="91074-113">如果公告端點為 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>，則會視情形多點傳送 Hello 和 Bye，或者如果公告端點為單點傳送，則會將訊息直接傳送至指定的端點。</span><span class="sxs-lookup"><span data-stu-id="91074-113">If the announcement endpoint is a <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> then the Hello and Bye are multicast appropriately, or if the announcement endpoint is unicast, the messages are sent directly to the specified endpoint.</span></span>  
-  
+# <a name="discovery-announcements-and-announcement-client"></a><span data-ttu-id="1b922-102">探索公告與公告用戶端</span><span class="sxs-lookup"><span data-stu-id="1b922-102">Discovery Announcements and Announcement Client</span></span>
+
+<span data-ttu-id="1b922-103">WCF 探索功能可讓元件宣告其可用性。</span><span class="sxs-lookup"><span data-stu-id="1b922-103">The WCF discovery feature enables components to announce their availability.</span></span> <span data-ttu-id="1b922-104">如果進行此設定，服務會傳送 Hello 和 Bye 公告。</span><span class="sxs-lookup"><span data-stu-id="1b922-104">If configured to do so, a service sends Hello and Bye announcements.</span></span> <span data-ttu-id="1b922-105">用戶端或其他元件可以接聽此類公告訊息，然後採取行動。</span><span class="sxs-lookup"><span data-stu-id="1b922-105">Clients or other components can listen for such announcement messages and act on them.</span></span> <span data-ttu-id="1b922-106">此方法是讓用戶端注意服務存在的替代方法。</span><span class="sxs-lookup"><span data-stu-id="1b922-106">This provides an alternative method for clients to be aware of services.</span></span> <span data-ttu-id="1b922-107">公告功能具有多種用途，例如，如果服務頻繁進出網路，公告便可能會是較搜尋服務更好的方法。</span><span class="sxs-lookup"><span data-stu-id="1b922-107">Announcement functionality has several uses, for example, if the services enter and leave a network frequently, announcements may be a better alternative than searching for services.</span></span> <span data-ttu-id="1b922-108">透過此方法，除了可降低網路流量之外，用戶端也會在收到公告的同時得知服務的出現或離開。</span><span class="sxs-lookup"><span data-stu-id="1b922-108">With this approach, the network traffic is reduced and the client can learn about the presence or departure of the service as soon as announcements are received.</span></span>
+
+## <a name="discovery-announcements"></a><span data-ttu-id="1b922-109">探索公告</span><span class="sxs-lookup"><span data-stu-id="1b922-109">Discovery Announcements</span></span>
+
+<span data-ttu-id="1b922-110">當設定為公告的服務加入網路且變成可探索時，公告將會傳送 Hello 訊息，向接聽的用戶端告知其可用性。</span><span class="sxs-lookup"><span data-stu-id="1b922-110">When a service configured for announcements joins a network and becomes discoverable, it sends a Hello message announcing its availability to listening clients.</span></span> <span data-ttu-id="1b922-111">訊息會包含與服務有關的探索相關資訊，例如合約、端點位址和關聯範圍。</span><span class="sxs-lookup"><span data-stu-id="1b922-111">The message contains discovery related information about the service, such as its contract, endpoint address and associated scopes.</span></span> <span data-ttu-id="1b922-112">您可以指定與 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 類別一同傳送的公告訊息位置。</span><span class="sxs-lookup"><span data-stu-id="1b922-112">You can specify where the announcement message is sent with the <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> class.</span></span> <span data-ttu-id="1b922-113">如果公告端點為 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>，則會視情形多點傳送 Hello 和 Bye，或者如果公告端點為單點傳送，則會將訊息直接傳送至指定的端點。</span><span class="sxs-lookup"><span data-stu-id="1b922-113">If the announcement endpoint is a <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> then the Hello and Bye are multicast appropriately, or if the announcement endpoint is unicast, the messages are sent directly to the specified endpoint.</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="91074-114">當服務主機開啟和關閉時會傳送公告。</span><span class="sxs-lookup"><span data-stu-id="91074-114">Announcements are sent when the service host opens and closes.</span></span> <span data-ttu-id="91074-115">如果這些呼叫並未順利完成，則可能不會傳送公告訊息。例如，如果服務發生錯誤，則不會傳送 Bye 公告訊息。</span><span class="sxs-lookup"><span data-stu-id="91074-115">If these calls do not finish properly the announcement message may not be sent out. For example if the service faults, then the Bye announcement message is not sent.</span></span>  
-  
+> <span data-ttu-id="1b922-114">當服務主機開啟和關閉時會傳送公告。</span><span class="sxs-lookup"><span data-stu-id="1b922-114">Announcements are sent when the service host opens and closes.</span></span> <span data-ttu-id="1b922-115">如果這些呼叫並未順利完成，則可能不會傳送公告訊息。例如，如果服務發生錯誤，則不會傳送 Bye 公告訊息。</span><span class="sxs-lookup"><span data-stu-id="1b922-115">If these calls do not finish properly the announcement message may not be sent out. For example if the service faults, then the Bye announcement message is not sent.</span></span>
+
 > [!TIP]
->  <span data-ttu-id="91074-116">您可以自訂公告功能，以便在選定的時間傳送公告。</span><span class="sxs-lookup"><span data-stu-id="91074-116">You can customize the announcement functionality, allowing you to send announcements whenever you choose.</span></span>  
-  
- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] <span data-ttu-id="91074-117">會將 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 和 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 定義為標準端點，使服務和用戶端可輕鬆地傳送 Hello 和 Bye 公告。</span><span class="sxs-lookup"><span data-stu-id="91074-117">defines the <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> and <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> as standard endpoints to allow services and clients to easily send Hello and Bye announcements.</span></span>  
-  
-### <a name="announcements-on-the-service"></a><span data-ttu-id="91074-118">服務上的公告</span><span class="sxs-lookup"><span data-stu-id="91074-118">Announcements on the Service</span></span>  
- <span data-ttu-id="91074-119">若要設定服務以傳送公告，請透過公告端點加入 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>。</span><span class="sxs-lookup"><span data-stu-id="91074-119">To configure the service to send announcements, add a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> with an announcement endpoint.</span></span> <span data-ttu-id="91074-120">下列範例示範如何將此行為以程式設計方式加入至服務主機。</span><span class="sxs-lookup"><span data-stu-id="91074-120">The following example shows how to programmatically add this behavior to the service host.</span></span> <span data-ttu-id="91074-121">此範例使用 `UdpAnnouncementEndpoint`，這表示公告會多點傳送至由該標準端點指定的位置。</span><span class="sxs-lookup"><span data-stu-id="91074-121">This example uses the `UdpAnnouncementEndpoint`, which implies that the announcements are multicast to a location specified by that standard endpoint.</span></span>  
-  
-```  
+> <span data-ttu-id="1b922-116">您可以自訂公告功能，以便在選定的時間傳送公告。</span><span class="sxs-lookup"><span data-stu-id="1b922-116">You can customize the announcement functionality, allowing you to send announcements whenever you choose.</span></span>
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] <span data-ttu-id="1b922-117">會將 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 和 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 定義為標準端點，使服務和用戶端可輕鬆地傳送 Hello 和 Bye 公告。</span><span class="sxs-lookup"><span data-stu-id="1b922-117">defines the <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> and <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> as standard endpoints to allow services and clients to easily send Hello and Bye announcements.</span></span>
+
+### <a name="announcements-on-the-service"></a><span data-ttu-id="1b922-118">服務上的公告</span><span class="sxs-lookup"><span data-stu-id="1b922-118">Announcements on the Service</span></span>
+
+<span data-ttu-id="1b922-119">若要設定服務以傳送公告，請透過公告端點加入 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>。</span><span class="sxs-lookup"><span data-stu-id="1b922-119">To configure the service to send announcements, add a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> with an announcement endpoint.</span></span> <span data-ttu-id="1b922-120">下列範例示範如何將此行為以程式設計方式加入至服務主機。</span><span class="sxs-lookup"><span data-stu-id="1b922-120">The following example shows how to programmatically add this behavior to the service host.</span></span> <span data-ttu-id="1b922-121">此範例使用 `UdpAnnouncementEndpoint`，這表示公告會多點傳送至由該標準端點指定的位置。</span><span class="sxs-lookup"><span data-stu-id="1b922-121">This example uses the `UdpAnnouncementEndpoint`, which implies that the announcements are multicast to a location specified by that standard endpoint.</span></span>
+
+```csharp
 ServiceDiscoveryBehavior serviceDiscoveryBehavior = new ServiceDiscoveryBehavior();
 serviceDiscoveryBehavior.AnnouncementEndpoints.Add(new UdpAnnouncementEndpoint());
 serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);
-```  
-  
- <span data-ttu-id="91074-122">此行為也可以在組態檔中設定，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="91074-122">The behavior can be configured in the configuration file as well, as shown in the following example.</span></span>  
-  
-```xml  
+```
+
+<span data-ttu-id="1b922-122">此行為也可以在組態檔中設定，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="1b922-122">The behavior can be configured in the configuration file as well, as shown in the following example.</span></span>
+
+```xml
 <services>
   <service behaviorConfiguration="CalculatorBehavior" name="Microsoft.Samples.Discovery.CalculatorService">
     <!--Add Discovery Endpoint-->
@@ -52,46 +55,47 @@ serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);
       </serviceDiscovery>
     </behavior>
   </serviceBehaviors>
-</behaviors>  
-```  
-  
- <span data-ttu-id="91074-123">先前的範例會將服務設定為自動傳送公告訊息。</span><span class="sxs-lookup"><span data-stu-id="91074-123">The preceding examples configure a service to automatically send announcement messages.</span></span> <span data-ttu-id="91074-124">您也可以使用 <xref:System.ServiceModel.Discovery.AnnouncementClient> 類別，明確傳送公告訊息。</span><span class="sxs-lookup"><span data-stu-id="91074-124">You can also send announcement messages explicitly by using the <xref:System.ServiceModel.Discovery.AnnouncementClient> class.</span></span>  
-  
-### <a name="announcements-on-the-client"></a><span data-ttu-id="91074-125">用戶端上的公告</span><span class="sxs-lookup"><span data-stu-id="91074-125">Announcements on the Client</span></span>  
- <span data-ttu-id="91074-126">用戶端應用程式必須裝載公告服務才能回應 Hello 和 Bye 訊息，並訂閱 <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> 和 <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> 事件。</span><span class="sxs-lookup"><span data-stu-id="91074-126">A client application must host an announcement service to respond to the Hello and Bye messages and subscribe to the <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> and <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> events.</span></span> <span data-ttu-id="91074-127">下列範例顯示如何執行這項工作。</span><span class="sxs-lookup"><span data-stu-id="91074-127">The following example shows how to do this.</span></span>  
-  
-```  
+</behaviors>
+```
+
+<span data-ttu-id="1b922-123">先前的範例會將服務設定為自動傳送公告訊息。</span><span class="sxs-lookup"><span data-stu-id="1b922-123">The preceding examples configure a service to automatically send announcement messages.</span></span> <span data-ttu-id="1b922-124">您也可以使用 <xref:System.ServiceModel.Discovery.AnnouncementClient> 類別，明確傳送公告訊息。</span><span class="sxs-lookup"><span data-stu-id="1b922-124">You can also send announcement messages explicitly by using the <xref:System.ServiceModel.Discovery.AnnouncementClient> class.</span></span>
+
+### <a name="announcements-on-the-client"></a><span data-ttu-id="1b922-125">用戶端上的公告</span><span class="sxs-lookup"><span data-stu-id="1b922-125">Announcements on the Client</span></span>
+
+<span data-ttu-id="1b922-126">用戶端應用程式必須裝載公告服務才能回應 Hello 和 Bye 訊息，並訂閱 <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> 和 <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> 事件。</span><span class="sxs-lookup"><span data-stu-id="1b922-126">A client application must host an announcement service to respond to the Hello and Bye messages and subscribe to the <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> and <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> events.</span></span> <span data-ttu-id="1b922-127">下列範例顯示如何執行這項工作。</span><span class="sxs-lookup"><span data-stu-id="1b922-127">The following example shows how to do this.</span></span>
+
+```csharp
 // Create an AnnouncementService instance
 AnnouncementService announcementService = new AnnouncementService();
-  
+
 // Subscribe the announcement events
 announcementService.OnlineAnnouncementReceived += OnOnlineEvent;
 announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
-  
+
 // Create ServiceHost for the AnnouncementService
 using (ServiceHost announcementServiceHost = new ServiceHost(announcementService))
-{  
+{
     // Listen for the announcements sent over UDP multicast
     announcementServiceHost.AddServiceEndpoint(new UdpAnnouncementEndpoint());
     announcementServiceHost.Open();
-  
+
     Console.WriteLine("Press <ENTER> to terminate.");
     Console.ReadLine();
-}  
-```  
-  
- <span data-ttu-id="91074-128">收到 Hello 或 Bye 訊息時，您可以透過 <xref:System.ServiceModel.Discovery.AnnouncementEventArgs> 存取端點探索中繼資料，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="91074-128">When a Hello or Bye message is received, you can access the endpoint discovery metadata through <xref:System.ServiceModel.Discovery.AnnouncementEventArgs> as shown in the following example.</span></span>  
-  
-```  
+}
+```
+
+<span data-ttu-id="1b922-128">收到 Hello 或 Bye 訊息時，您可以透過 <xref:System.ServiceModel.Discovery.AnnouncementEventArgs> 存取端點探索中繼資料，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="1b922-128">When a Hello or Bye message is received, you can access the endpoint discovery metadata through <xref:System.ServiceModel.Discovery.AnnouncementEventArgs> as shown in the following example.</span></span>
+
+```csharp
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)
 {
-    Console.WriteLine("Received an online announcement from {0}", 
+    Console.WriteLine("Received an online announcement from {0}",
 e.EndpointDiscoveryMetadata.Address);
 }
 
 static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 {
-    Console.WriteLine("Received an offline announcement from {0}", 
+    Console.WriteLine("Received an offline announcement from {0}",
 e.EndpointDiscoveryMetadata.Address);
 }
 ```

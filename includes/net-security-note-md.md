@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 023b7d8c5aa9d435d3493935b4439ae4262c85bb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f70452cbadc8927521f0fcfda693586c277e4d0f
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65670844"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041156"
 ---
 > [!CAUTION]
->  <span data-ttu-id="634a5-101">程式碼存取安全性和部分信任的程式碼</span><span class="sxs-lookup"><span data-stu-id="634a5-101">Code Access Security and Partially Trusted Code</span></span>  
->   
->  <span data-ttu-id="634a5-102">.NET Framework 提供一個稱為程式碼存取安全性 (CAS) 的機制，可對在同一個應用程式中執行的不同程式碼強制執行各種信任層級。</span><span class="sxs-lookup"><span data-stu-id="634a5-102">The .NET Framework provides a mechanism for the enforcement of varying levels of trust on different code running in the same application called Code Access Security (CAS).</span></span>  <span data-ttu-id="634a5-103">.NET Framework 中的程式碼存取安全性不應該用作一種機制，以根據程式碼來源或其他身分識別層面的來強制安全性界限。</span><span class="sxs-lookup"><span data-stu-id="634a5-103">Code Access Security in .NET Framework should not  be used as a mechanism for enforcing security boundaries based on code origination or other identity aspects.</span></span> <span data-ttu-id="634a5-104">我們正在更新指南，以反映程式碼存取安全性與安全性透明的程式碼，將不會如同部分程式碼受信任的安全性界限般受到支援，特別是來源不明的程式碼。</span><span class="sxs-lookup"><span data-stu-id="634a5-104">We are updating our guidance to reflect that Code Access Security and Security-Transparent Code will not be supported as a security boundary with partially trusted code, especially code of unknown origin.</span></span> <span data-ttu-id="634a5-105">建議不要載入及執行未知來源的程式碼，如此便不需要使用替代的安全措施。</span><span class="sxs-lookup"><span data-stu-id="634a5-105">We advise against loading and executing code of unknown origins without putting alternative security measures in place.</span></span>  
->   
->  <span data-ttu-id="634a5-106">這項原則適用於所有 .NET Framework 版本，但不適用於 Silverlight 隨附的 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="634a5-106">This policy applies to all versions of .NET Framework, but does not apply to the .NET Framework included in Silverlight.</span></span>
+> <span data-ttu-id="3ae2a-101">程式碼存取安全性和部分信任的程式碼</span><span class="sxs-lookup"><span data-stu-id="3ae2a-101">Code Access Security and Partially Trusted Code</span></span>
+>
+> <span data-ttu-id="3ae2a-102">.NET Framework 提供一個稱為程式碼存取安全性 (CAS) 的機制，可對在同一個應用程式中執行的不同程式碼強制執行各種信任層級。</span><span class="sxs-lookup"><span data-stu-id="3ae2a-102">The .NET Framework provides a mechanism for the enforcement of varying levels of trust on different code running in the same application called Code Access Security (CAS).</span></span>  <span data-ttu-id="3ae2a-103">.NET Framework 中的程式碼存取安全性不應該用作一種機制，以根據程式碼來源或其他身分識別層面的來強制安全性界限。</span><span class="sxs-lookup"><span data-stu-id="3ae2a-103">Code Access Security in .NET Framework should not  be used as a mechanism for enforcing security boundaries based on code origination or other identity aspects.</span></span> <span data-ttu-id="3ae2a-104">我們正在更新指南，以反映程式碼存取安全性與安全性透明的程式碼，將不會如同部分程式碼受信任的安全性界限般受到支援，特別是來源不明的程式碼。</span><span class="sxs-lookup"><span data-stu-id="3ae2a-104">We are updating our guidance to reflect that Code Access Security and Security-Transparent Code will not be supported as a security boundary with partially trusted code, especially code of unknown origin.</span></span> <span data-ttu-id="3ae2a-105">建議不要載入及執行未知來源的程式碼，如此便不需要使用替代的安全措施。</span><span class="sxs-lookup"><span data-stu-id="3ae2a-105">We advise against loading and executing code of unknown origins without putting alternative security measures in place.</span></span>
+>
+> <span data-ttu-id="3ae2a-106">這項原則適用於所有 .NET Framework 版本，但不適用於 Silverlight 隨附的 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="3ae2a-106">This policy applies to all versions of .NET Framework, but does not apply to the .NET Framework included in Silverlight.</span></span>
