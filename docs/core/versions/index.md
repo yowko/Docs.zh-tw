@@ -4,12 +4,12 @@ description: 此文章說明 .NET Core SDK 與 Runtime 如何進行版本設定 
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646861"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104963"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 版本設定概觀
 
@@ -36,8 +36,8 @@ SDK 版本號碼的第三個位置同時傳達次要與修補號碼。 次要版
 
 注意：
 
-* 若 SDK 在執行階段功能更新之前有 10 個功能更新，版本號碼會滾入 1000 系列，且具有 2.2.1000 做為 2.2.900 之後的未來發行版本。 此情況不應該發生。
-* 不會發生沒有功能發行版本的 99 修補發行版本。 若發行版本接近此號碼，它會強制功能發行版本。
+- 若 SDK 在執行階段功能更新之前有 10 個功能更新，版本號碼會滾入 1000 系列，且具有 2.2.1000 做為 2.2.900 之後的未來發行版本。 此情況不應該發生。
+- 不會發生沒有功能發行版本的 99 修補發行版本。 若發行版本接近此號碼，它會強制功能發行版本。
 
 您可以在 [dotnet/designs](https://github.com/dotnet/designs/pull/29) 存放庫 \(英文\) 中查看此初始提案的詳細資訊。
 
@@ -55,24 +55,24 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 `MAJOR` 的遞增時機為：
 
-* 產品或新產品方向發生重大便更。
-* 接受中斷性變更。 接受中斷性變更的標準較高。
-* 不再支援舊版本。
-* 採用現有相依性的較新 `MAJOR` 版本。
+- 產品或新產品方向發生重大便更。
+- 接受中斷性變更。 接受中斷性變更的標準較高。
+- 不再支援舊版本。
+- 採用現有相依性的較新 `MAJOR` 版本。
 
 `MINOR` 的遞增時機為：
 
-* 新增公用 API 介面區。
-* 新增新的行為。
-* 採用現有相依性的較新 `MINOR` 版本。
-* 引入新的相依性。
+- 新增公用 API 介面區。
+- 新增新的行為。
+- 採用現有相依性的較新 `MINOR` 版本。
+- 引入新的相依性。
 
 `PATCH` 的遞增時機為：
 
-* 已修正 Bug。
-* 新增對較新平台的支援。
-* 採用現有相依性的較新 `PATCH` 版本。
-* 任何其他不符合其中一個先前案例的變更。
+- 已修正 Bug。
+- 新增對較新平台的支援。
+- 採用現有相依性的較新 `PATCH` 版本。
+- 任何其他不符合其中一個先前案例的變更。
 
 當有多項變更時，因個別變更而影響的最高項目就會遞增，而下列項目會重設為零。 例如，當 `MAJOR` 遞增時，`MINOR` 和 `PATCH` 會重設為零。 當 `MINOR` 遞增時，`PATCH` 會重設為零而 `MAJOR` 保持不變。
 

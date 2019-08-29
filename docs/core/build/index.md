@@ -4,12 +4,12 @@ description: 了解如何從原始程式碼建置 .NET Core 和 .NET Core CLI。
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650878"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105389"
 ---
 # <a name="build-net-core-from-source"></a>從原始檔建置 .NET Core
 
@@ -22,28 +22,28 @@ ms.locfileid: "61650878"
 
 此組建目前相依於下列必要條件：
 
-* [Git](https://git-scm.com/)
-* [CMake](https://cmake.org/)
-* [Python](https://www.python.org/)
-* C++ 編譯器。
+- [Git](https://git-scm.com/)
+- [CMake](https://cmake.org/)
+- [Python](https://www.python.org/)
+- C++ 編譯器。
 
 安裝這些必要條件之後，您可以叫用 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存放庫基底的組建指令碼 (在 Windows 上為 `build.cmd`，或者在 Linux 和 macOS 上為 `build.sh`) 來建置 CLR。
 
 安裝的元件會隨著作業系統 (OS) 而有所不同。 請參閱特定 OS 的建置指示：
 
-* [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
-* [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
-* [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
-* [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
-* [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
+- [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
+- [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
+- [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
+- [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
+- [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
 
 無法跨 OS 建置 (僅適用於建置在 X64 上的 ARM)。  
 您必須在特定平台上，才能建置該平台。  
 
 組建有兩個主要的 `buildTypes`：
 
-* 偵錯 (預設)：以最低最佳化來編譯執行階段，並進行額外的執行階段檢查 (判斷提示)。 降低最佳化層級與額外的檢查會讓執行階段的執行變慢，但是有助於偵錯。 這是開發和測試環境的建議設定。
-* 發行：以完整最佳化來編譯執行階段，且沒有額外的執行階段檢查。 如此會提高執行階段的效能，但是需要較長的建置時間，且偵錯較為困難。 若要選取此建置類型，請將 `release` 傳遞至建置指令碼。
+- 偵錯 (預設)：以最低最佳化來編譯執行階段，並進行額外的執行階段檢查 (判斷提示)。 降低最佳化層級與額外的檢查會讓執行階段的執行變慢，但是有助於偵錯。 這是開發和測試環境的建議設定。
+- 發行：以完整最佳化來編譯執行階段，且沒有額外的執行階段檢查。 如此會提高執行階段的效能，但是需要較長的建置時間，且偵錯較為困難。 若要選取此建置類型，請將 `release` 傳遞至建置指令碼。
 
 此外根據預設，組建不只會建立執行階段可執行檔，也會建立所有測試。
 由於有相當多的測試，因此如果您只想要試驗變更，這些測試會花費不必要的大量時間。
@@ -86,12 +86,12 @@ ms.locfileid: "61650878"
 
 若要建置 .NET Core CLI，您需要在電腦上安裝下列項目。
 
-* Windows 和 Linux：
-  * PATH 上的 git
-* macOS：
-  * PATH 上的 git
-  * Xcode
-  * Openssl
+- Windows 和 Linux：
+  - PATH 上的 git
+- macOS：
+  - PATH 上的 git
+  - Xcode
+  - Openssl
 
 若要建置，請從根目錄執行 `build.cmd` (在 Windows 上) 或 `build.sh` (在 Linux 和 macOS 上)。 如果您不想要執行測試，請執行 `build.cmd -t:Compile` 或 `./build.sh -t:Compile`。 若要在 macOS Sierra 中建置 CLI，您必須執行 `export DOTNET_RUNTIME_ID=osx.10.11-x64` 來設定 DOTNET_RUNTIME_ID 環境變數。
 

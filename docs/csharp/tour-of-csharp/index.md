@@ -3,12 +3,12 @@ title: C# 的教學課程 - C# 指南
 description: 第一次接觸 C#？ 了解該語言的基本概念。
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706529"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105655"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 語言教學課程
 
@@ -51,28 +51,28 @@ Hello, World
 
 C# 還有更多可探討的主題。  下列主題提供 C# 語言元素的概觀。 這些概觀提供此語言所有元素的基本資訊，並且提供您深入了解 C# 語言元素的必要資訊：
 
-* [程式結構](program-structure.md)
+- [程式結構](program-structure.md)
   - 了解 C# 語言的重要組織概念：***程式***、***命名空間***、***型別***、***成員***和***組件***。
-* [類型與變數](types-and-variables.md)
+- [類型與變數](types-and-variables.md)
   - 了解 C# 語言中的***實值型別***、***參考型別***和***變數***。
-* [運算式](expressions.md)
+- [運算式](expressions.md)
   - 「運算式」是由「運算元」和「運算子」建構而成。 運算式會產生值。
-* [陳述式](statements.md)
+- [陳述式](statements.md)
   - 您會使用***陳述式***來表達程式的動作。
-* [類別與物件](classes-and-objects.md)
+- [類別與物件](classes-and-objects.md)
   - ***類別***是 C# 最基本的型別。 ***物件***是類別的執行個體。 類別是使用***成員*** (此主題中也有探討) 來建置。
-* [結構](structs.md)
+- [結構](structs.md)
   - 不同於類別，***結構***是屬於實值型別的資料結構。
-* [陣列](arrays.md)
+- [陣列](arrays.md)
   - ***陣列***是一種資料結構，其中包含一些可透過計算索引存取的變數。
-* [介面](interfaces.md)
+- [介面](interfaces.md)
   - 「介面」定義可由類別和結構實作的合約。 介面可以包含方法、屬性、事件和索引子。 介面不提供它所定義之成員的實作 (它只會指定必須由類別提供的成員或實作介面的結構)。
-* [列舉](enums.md)
+- [列舉](enums.md)
   - 「列舉型別」是含一組具名常數的相異實值型別。
-* [委派](delegates.md)
+- [委派](delegates.md)
   - 「委派型別」代表對方法的參考，其中含有特定參數清單與傳回型別。 委派讓您可將方法視為實體，而實體能指派給變數或當作參數來傳遞。 委派就類似其他程式設計語言中的函式指標，但與函式指標的不同之處是，委派是物件導向且為型別安全。
-* [屬性](attributes.md)
-  * ***屬性***讓程式能指定型別、成員與實體的相關額外宣告資訊。
+- [屬性](attributes.md)
+  - ***屬性***讓程式能指定型別、成員與實體的相關額外宣告資訊。
 
 > [!div class="step-by-step"]
 > [下一步](program-structure.md)
