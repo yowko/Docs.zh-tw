@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e08e90f61429f01f360808866fdc3d963323ba23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5b78e3985169954d71b479aa2e8a034f61afc01
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901808"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106956"
 ---
 # <a name="converting-times-between-time-zones"></a>在各時區間轉換時間
 
-對於使用日期和時間來處理時區差異的任何應用程式，它會變得越來越重要。 應用程式不會再假設，隨時可以是以當地時間表示，這是時間可從<xref:System.DateTime>結構。 例如，顯示美國東部目前時間的網頁對東亞地區的客戶不具公信力。 本主題說明如何將時間從某個時區轉換到另一個，以及如何將轉換<xref:System.DateTimeOffset>具有有限時區感知的值。
+對於使用日期和時間來處理時區差異的任何應用程式，它會變得越來越重要。 應用程式無法再假設所有時間都可以用當地時程表示, 也就是可從<xref:System.DateTime>結構取得的時間。 例如，顯示美國東部目前時間的網頁對東亞地區的客戶不具公信力。 本主題說明如何將時間從某個時區轉換為另一個時區, 以及如何轉換<xref:System.DateTimeOffset>具有有限時區感知的值。
 
 ## <a name="converting-to-coordinated-universal-time"></a>轉換為國際標準時間
 
-國際標準時間 (UTC) 是高精確度且不可部分完成的時間標準。 全世界的時區都會表示為與 UTC 的正或負位移。 因此，UTC 提供一種無時區或時區中性時間。 跨電腦的日期和時間可攜性十分重要時，建議使用 UTC 時間。 (如需詳細資料和其他使用日期和時間的最佳做法，請參閱[撰寫程式碼使用.NET Framework 中的日期時間的最佳做法](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10))。)將個別時區轉換為 UTC 可輕鬆地比較時間。
+國際標準時間 (UTC) 是高精確度且不可部分完成的時間標準。 全世界的時區都會表示為與 UTC 的正或負位移。 因此，UTC 提供一種無時區或時區中性時間。 跨電腦的日期和時間可攜性十分重要時，建議使用 UTC 時間。 (如需使用日期和時間的詳細資訊和其他最佳作法, 請參閱在[.NET Framework 中使用 DateTime 的編碼最佳做法](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10)))。將個別時區轉換為 UTC 可輕鬆地比較時間。
 
 > [!NOTE]
-> 您也可以序列化<xref:System.DateTimeOffset>結構來明確代表單一點的時間。 因為<xref:System.DateTimeOffset>物件會儲存日期和時間的值，以及其與 UTC 的時差，所以它們一律代表特定點的關聯性中的時間為 UTC。
+> 您也可以將<xref:System.DateTimeOffset>結構序列化, 以明確地表示單一時間點。 因為<xref:System.DateTimeOffset>物件會儲存日期和時間值以及其與 utc 的位移, 所以它們一律代表與 utc 關聯性的特定時間點。
 
-將時間轉換為 UTC 的最簡單方式是呼叫`static`(`Shared` Visual Basic 中)<xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType>方法。 方法所執行的確切轉換取決於 windows 7`dateTime`參數的<xref:System.DateTime.Kind%2A>屬性，如下表所示。
+將時間轉換為 UTC 的最簡單方式是呼叫`static` (`Shared` Visual Basic) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType>方法。 方法所執行的確切轉換取決於`dateTime`參數的<xref:System.DateTime.Kind%2A>屬性值, 如下表所示。
 
 | `DateTime.Kind`            | 轉換                                                                     |
 | -------------------------- | ------------------------------------------------------------------------------ |
@@ -45,25 +45,25 @@ ms.locfileid: "61901808"
 [!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
 [!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]
 
-如果日期和時間值不代表當地時間或 UTC，<xref:System.DateTime.ToUniversalTime%2A>方法可能會傳回錯誤結果。 不過，您可以使用<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType>方法，以從指定的時區轉換的日期和時間。 (如需有關擷取<xref:System.TimeZoneInfo>物件，代表目的地時區中，請參閱[尋找定義於本機系統的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)。)下列程式碼會使用<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType>方法將美加東部標準時間轉換為 UTC。
+如果日期和時間值不是當地時間或 UTC, 此<xref:System.DateTime.ToUniversalTime%2A>方法可能會傳回錯誤的結果。 不過, 您可以使用<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType>方法, 從指定的時區轉換日期和時間。 (如需有關抓取代表<xref:System.TimeZoneInfo>目的地時區之物件的詳細資訊, 請參閱[尋找定義于本機系統的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)。)下列程式碼會使用<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType>方法, 將美加東部標準時間轉換為 UTC。
 
 [!code-csharp[System.TimeZone2.Concepts#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#7)]
 [!code-vb[System.TimeZone2.Concepts#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#7)]
 
-請注意，此方法會擲回<xref:System.ArgumentException>如果<xref:System.DateTime>物件的<xref:System.DateTime.Kind%2A>屬性和時區不相符。 如果發生不符的情形<xref:System.DateTime.Kind%2A>屬性是<xref:System.DateTimeKind.Local?displayProperty=nameWithType>但<xref:System.TimeZoneInfo>物件不代表當地時區，或如果<xref:System.DateTime.Kind%2A>屬性<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>但<xref:System.TimeZoneInfo>物件不等於<xref:System.TimeZoneInfo.Utc?displayProperty=nameWithType>。
+請注意, <xref:System.ArgumentException> <xref:System.DateTime>如果物件的<xref:System.DateTime.Kind%2A>屬性和時區不相符, 這個方法會擲回。 <xref:System.DateTime.Kind%2A>如果屬性為<xref:System.DateTimeKind.Utc?displayProperty=nameWithType> <xref:System.DateTime.Kind%2A> <xref:System.TimeZoneInfo.Utc?displayProperty=nameWithType> <xref:System.TimeZoneInfo> , 但<xref:System.TimeZoneInfo>物件不代表本地時區, 或屬性為但物件不等於, 則會發生不相符的情況。 <xref:System.DateTimeKind.Local?displayProperty=nameWithType>
 
-所有這些方法採取<xref:System.DateTime>值做為參數和傳回<xref:System.DateTime>值。 針對<xref:System.DateTimeOffset>值，<xref:System.DateTimeOffset>結構具有<xref:System.DateTimeOffset.ToUniversalTime%2A>執行個體方法，將目前的執行個體的時間與日期轉換為 UTC。 下列範例會呼叫<xref:System.DateTimeOffset.ToUniversalTime%2A>方法，以將當地時間和數個其他時間轉換為 Coordinated Universal Time (UTC)。
+所有這些方法都會採用<xref:System.DateTime>值做為參數, 並<xref:System.DateTime>傳回值。 對於<xref:System.DateTimeOffset>值<xref:System.DateTimeOffset.ToUniversalTime%2A> , 結構具有實例方法, 可將目前實例的日期和時間轉換為 UTC。 <xref:System.DateTimeOffset> 下列範例會呼叫<xref:System.DateTimeOffset.ToUniversalTime%2A>方法, 將當地時間和數個其他時間轉換為國際標準時間 (UTC)。
 
 [!code-csharp[System.DateTimeOffset.Methods#16](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/cs/Methods.cs#16)]
 [!code-vb[System.DateTimeOffset.Methods#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/vb/Methods.vb#16)]
 
 ## <a name="converting-utc-to-a-designated-time-zone"></a>將 UTC 轉換為指定的時區
 
-若要將 UTC 轉換為當地時間，請參閱 「 轉換 UTC 到本地時間 」 一節。 若要將 UTC 轉換為您指定的任何時區的時間，呼叫<xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>方法。 這個方法採用兩個參數：
+若要將 UTC 轉換為當地時間, 請參閱後面的「將 UTC 轉換為當地時間」一節。 若要將 UTC 轉換為您指定之任何時區的時間, 請呼叫<xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>方法。 這個方法採用兩個參數：
 
-* 要轉換的 UTC。 這必須是<xref:System.DateTime>值<xref:System.DateTime.Kind%2A>屬性設定為`Unspecified`或`Utc`。
+- 要轉換的 UTC。 這必須<xref:System.DateTime>是<xref:System.DateTime.Kind%2A>屬性設定為`Unspecified`或`Utc`的值。
 
-* 要將 UTC 轉換為的時區。
+- 要將 UTC 轉換為的時區。
 
 下列程式碼會將 UTC 轉換為美加中部標準時間。
 
@@ -72,41 +72,41 @@ ms.locfileid: "61901808"
 
 ## <a name="converting-utc-to-local-time"></a>將 UTC 轉換為當地時間
 
-若要將 UTC 轉換為當地時間，呼叫<xref:System.DateTime.ToLocalTime%2A>方法的<xref:System.DateTime>物件您想要轉換的時間。 方法的確切行為取決於物件的值<xref:System.DateTime.Kind%2A>屬性，如下表所示。
+若要將 UTC 轉換為當地時間, <xref:System.DateTime.ToLocalTime%2A>請呼叫您<xref:System.DateTime>想要轉換其時間之物件的方法。 方法的確切行為取決於物件的<xref:System.DateTime.Kind%2A>屬性值, 如下表所示。
 
 | `DateTime.Kind`            | 轉換                                                                               |
 | -------------------------- | ---------------------------------------------------------------------------------------- |
-| `DateTimeKind.Local`       | 傳回<xref:System.DateTime>保持不變的值。                                      |
-| `DateTimeKind.Unspecified` | 假設<xref:System.DateTime>值為 UTC，並將 UTC 轉換為當地時間。 |
-| `DateTimeKind.Utc`         | 將轉換<xref:System.DateTime>為當地時間的值。                                 |
+| `DateTimeKind.Local`       | 傳回未<xref:System.DateTime>變更的值。                                      |
+| `DateTimeKind.Unspecified` | <xref:System.DateTime>假設值為 utc, 並將 utc 轉換為當地時間。 |
+| `DateTimeKind.Utc`         | <xref:System.DateTime>將值轉換為本地時間。                                 |
 
 > [!NOTE]
-> <xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType>方法的行為相同`DateTime.ToLocalTime`方法。 它會採用單一參數，這是要轉換的日期和時間值。
+> 方法<xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType>的行為`DateTime.ToLocalTime`與方法完全相同。 它接受單一參數, 也就是要轉換的日期和時間值。
 
-您也可以轉換為當地時間的時間，在任何指定的時區中，使用`static`(`Shared` Visual Basic 中)<xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType>方法。 這項技術會在下一節中討論。
+您也可以使用`static` (`Shared` Visual Basic) <xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType>方法, 將任何指定時區的時間轉換為本地時間。 下一節將討論這項技術。
 
 ## <a name="converting-between-any-two-time-zones"></a>在兩個時區之間轉換
 
-您可以使用下列兩個的任兩個時區之間轉換`static`(`Shared` Visual Basic 中) 的方法<xref:System.TimeZoneInfo>類別：
+您可以使用`static` <xref:System.TimeZoneInfo>類別的下列兩個 (`Shared`在 Visual Basic) 方法中的其中一種, 在任何兩個時區之間轉換:
 
-* <xref:System.TimeZoneInfo.ConvertTime%2A>
+- <xref:System.TimeZoneInfo.ConvertTime%2A>
 
-  此方法的參數是日期和時間值轉換時，`TimeZoneInfo`物件，表示日期和時間值的時區和`TimeZoneInfo`物件，表示要轉換的日期和時間值的時區。
+  這個方法的參數是要轉換的日期和時間值、 `TimeZoneInfo`代表日期和時間值時區的物件, `TimeZoneInfo`以及代表要將日期和時間值轉換成之時區的物件。
 
-* <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>
+- <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>
 
-  此方法的參數是時區的日期和時間值轉換、 的日期和時間值的時區識別項以及日期和時間值轉換為識別項。
+  這個方法的參數是要轉換的日期和時間值、日期和時間值時區的識別碼, 以及要轉換日期和時間值的時區識別碼。
 
-這兩種方法需要<xref:System.DateTime.Kind%2A>要轉換的日期和時間值的屬性和<xref:System.TimeZoneInfo>代表其時區的物件或時區的識別項對應至另一部。 否則會擲回 <xref:System.ArgumentException>。 例如，如果`Kind`屬性的日期和時間值是`DateTimeKind.Local`，如果擲回例外狀況`TimeZoneInfo`做為參數傳遞給方法的物件是否不等於`TimeZoneInfo.Local`。 例外狀況也會擲回做為參數傳遞給方法的識別項是否不等於`TimeZoneInfo.Local.Id`。
+這兩種方法都<xref:System.DateTime.Kind%2A>需要要轉換之日期和時間值的屬性<xref:System.TimeZoneInfo> , 以及代表其時區的物件或時區識別碼會對應到另一個。 否則會擲回 <xref:System.ArgumentException>。 例如, 如果`Kind`日期和時間值的屬性是`DateTimeKind.Local`, 則如果當做`TimeZoneInfo.Local`參數傳遞至方法的`TimeZoneInfo`物件不等於, 則會擲回例外狀況 (exception)。 如果當做參數傳遞至方法的識別碼不等於`TimeZoneInfo.Local.Id`, 則也會擲回例外狀況 (exception)。
 
-下列範例會使用<xref:System.TimeZoneInfo.ConvertTime%2A>方法，將夏威夷標準時間轉換為當地時間。
+下列範例會使用<xref:System.TimeZoneInfo.ConvertTime%2A>方法, 從夏威夷標準時間轉換為本地時間。
 
 [!code-csharp[System.TimeZone2.Concepts#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#9)]
 [!code-vb[System.TimeZone2.Concepts#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#9)]
 
 ## <a name="converting-datetimeoffset-values"></a>轉換 DateTimeOffset 值
 
-所表示的日期和時間值<xref:System.DateTimeOffset>物件不是完全時區感知物件會與其時區解除關聯時，因為它具現化。 不過，在許多情況下，應用程式只需要根據與 UTC 的兩個不同位移來轉換日期和時間，而不是根據特定時區的時間。 若要執行這項轉換，您可以呼叫目前的執行個體<xref:System.DateTimeOffset.ToOffset%2A>方法。 方法的單一參數是新的日期和時間值，這個方法會傳回值的位移。
+<xref:System.DateTimeOffset>物件所代表的日期和時間值不是完全時區感知, 因為物件在具現化時與其時區解除關聯。 不過，在許多情況下，應用程式只需要根據與 UTC 的兩個不同位移來轉換日期和時間，而不是根據特定時區的時間。 若要執行這種轉換, 您可以呼叫目前實例<xref:System.DateTimeOffset.ToOffset%2A>的方法。 方法的單一參數是方法要傳回的新日期和時間值的位移。
 
 例如，如果網頁使用者要求的日期和時間已知且序列化為字串 (格式為 MM/dd/yyyy hh:mm:ss zzzz)，則下列 `ReturnTimeOnServer` 方法會將這個日期和時間值轉換為 Web 伺服器上的時間和日期。
 
@@ -115,7 +115,7 @@ ms.locfileid: "61901808"
 
 如果將字串 "9/1/2007 5:32:07 -05:00" 傳遞給這個方法，代表時區中的日期和時間比 UTC 早五個小時，就會傳回 9/1/2007 3:32:07 AM -07:00，代表伺服器位於美國太平洋標準時區。
 
-<xref:System.TimeZoneInfo>類別也包含的多載<xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType>方法，會使用時區轉換<xref:System.DateTimeOffset.ToOffset(System.TimeSpan)>值。 方法的參數是<xref:System.DateTimeOffset>值以及時區的時間要轉換的參考。 方法呼叫傳回<xref:System.DateTimeOffset>值。 例如，`ReturnTimeOnServer`可以如下所示改寫上一個範例中的方法，來呼叫<xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29>方法。
+類別也包含方法的多載, <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType>其會使用<xref:System.DateTimeOffset.ToOffset(System.TimeSpan)>值來執行時區轉換。 <xref:System.TimeZoneInfo> 方法的參數是一個<xref:System.DateTimeOffset>值, 以及要轉換時間的時區參考。 方法呼叫<xref:System.DateTimeOffset>會傳回值。 例如, 上述範例`ReturnTimeOnServer`中的方法可以改寫如下, 以<xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29>呼叫方法。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]

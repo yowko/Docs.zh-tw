@@ -2,12 +2,12 @@
 title: 參數和引數
 description: 瞭解定義F#參數的語言支援, 以及將引數傳遞至函式、方法和屬性的功能。
 ms.date: 05/16/2016
-ms.openlocfilehash: 561cefb1d437b2f38f6ee4ca37cd955235ca06fa
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627310"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106597"
 ---
 # <a name="parameters-and-arguments"></a>參數和引數
 
@@ -163,9 +163,9 @@ type C =
 
 以傳F#址方式傳遞值牽涉到[byref](byrefs.md), 也就是 managed 指標類型。 要使用何種類型的指導方針如下:
 
-* 如果`inref<'T>`您只需要讀取指標, 請使用。
-* 如果`outref<'T>`您只需要寫入指標, 請使用。
-* 如果`byref<'T>`您需要讀取和寫入指標, 請使用。
+- 如果`inref<'T>`您只需要讀取指標, 請使用。
+- 如果`outref<'T>`您只需要寫入指標, 請使用。
+- 如果`byref<'T>`您需要讀取和寫入指標, 請使用。
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x

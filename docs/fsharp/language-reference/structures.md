@@ -2,12 +2,12 @@
 title: 結構
 description: 瞭解F#結構, 精簡的物件類型通常比具有少量資料和簡單行為之類型的類別更有效率。
 ms.date: 05/16/2016
-ms.openlocfilehash: e638b450fe43e0993c9980cade246c3f26d25e2d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1e9652cc4776e4d1d52eb20e41b6dd87a6c5ba05
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630767"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106818"
 ---
 # <a name="structures"></a>結構
 
@@ -66,10 +66,10 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `byref`中F#的「類似」結構是堆疊系結的實值型別。 它永遠不會在受控堆積上配置。 類似`byref`的結構適用于高效能程式設計, 因為它會強制執行一組有關存留期和非捕捉的強式檢查。 規則包括:
 
-* 它們可用來做為函式參數、方法參數、區域變數、方法傳回。
-* 它們不能是類別或一般結構的靜態或實例成員。
-* 它們不能由任何結束結構 (`async`方法或 lambda 運算式) 來捕捉。
-* 它們不能用來做為泛型參數。
+- 它們可用來做為函式參數、方法參數、區域變數、方法傳回。
+- 它們不能是類別或一般結構的靜態或實例成員。
+- 它們不能由任何結束結構 (`async`方法或 lambda 運算式) 來捕捉。
+- 它們不能用來做為泛型參數。
 
 雖然這些規則非常嚴格地限制使用方式, 但它們會以安全的方式滿足高效能運算的承諾。
 

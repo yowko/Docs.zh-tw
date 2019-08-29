@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e1979b6ceb1b343764900cc7d49a576a7a4030
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630544"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106706"
 ---
 # <a name="working-with-calendars"></a>使用日曆
 
@@ -30,39 +30,39 @@ ms.locfileid: "68630544"
 
 .Net 中的所有行事曆都<xref:System.Globalization.Calendar?displayProperty=nameWithType>衍生自類別, 它會提供基本行事曆的執行。 其中一個衍生自 <xref:System.Globalization.Calendar> 類別的類別是 <xref:System.Globalization.EastAsianLunisolarCalendar> 類別，其為所有陰陽曆的基底類別。 .NET 包含下列行事曆實現:
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>，表示中文陰陽曆。
+- <xref:System.Globalization.ChineseLunisolarCalendar>，表示中文陰陽曆。
 
-* <xref:System.Globalization.GregorianCalendar>，表示西曆。 這個曆法會進一步細分成子類型 (例如阿拉伯和中東法文)，這些子類別是由 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列舉類型所定義。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 屬性會指定西曆的子類型。
+- <xref:System.Globalization.GregorianCalendar>，表示西曆。 這個曆法會進一步細分成子類型 (例如阿拉伯和中東法文)，這些子類別是由 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列舉類型所定義。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 屬性會指定西曆的子類型。
 
-* <xref:System.Globalization.HebrewCalendar>，表示希伯來曆法。
+- <xref:System.Globalization.HebrewCalendar>，表示希伯來曆法。
 
-* <xref:System.Globalization.HijriCalendar>，表示回曆。
+- <xref:System.Globalization.HijriCalendar>，表示回曆。
 
-* <xref:System.Globalization.JapaneseCalendar>，表示日本曆法。
+- <xref:System.Globalization.JapaneseCalendar>，表示日本曆法。
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>，表示日文陰陽曆。
+- <xref:System.Globalization.JapaneseLunisolarCalendar>，表示日文陰陽曆。
 
-* <xref:System.Globalization.JulianCalendar>，表示凱撒曆法。
+- <xref:System.Globalization.JulianCalendar>，表示凱撒曆法。
 
-* <xref:System.Globalization.KoreanCalendar>，表示韓國曆法。
+- <xref:System.Globalization.KoreanCalendar>，表示韓國曆法。
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>，表示韓文陰陽曆。
+- <xref:System.Globalization.KoreanLunisolarCalendar>，表示韓文陰陽曆。
 
-* <xref:System.Globalization.PersianCalendar>，表示波斯曆。
+- <xref:System.Globalization.PersianCalendar>，表示波斯曆。
 
-* <xref:System.Globalization.TaiwanCalendar>，表示台灣曆法。
+- <xref:System.Globalization.TaiwanCalendar>，表示台灣曆法。
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>，表示台灣使用的陰陽曆。
+- <xref:System.Globalization.TaiwanLunisolarCalendar>，表示台灣使用的陰陽曆。
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>，表示泰國佛教曆法。
+- <xref:System.Globalization.ThaiBuddhistCalendar>，表示泰國佛教曆法。
 
-* <xref:System.Globalization.UmAlQuraCalendar>，表示 Um Al Qura 曆法。
+- <xref:System.Globalization.UmAlQuraCalendar>，表示 Um Al Qura 曆法。
 
 曆法的使用方式有兩種：
 
-* 做為特定文化特性使用的曆法。 每個 <xref:System.Globalization.CultureInfo> 物件都有現行的曆法，也就是物件目前使用的曆法。 所有日期和時間值的字串表示都會自動反映目前的文化特性及其現行曆法。 通常現行曆法是文化特性的預設曆法。 <xref:System.Globalization.CultureInfo>物件也有選擇性的行事曆, 其中包括文化特性可以使用的其他行事曆。
+- 做為特定文化特性使用的曆法。 每個 <xref:System.Globalization.CultureInfo> 物件都有現行的曆法，也就是物件目前使用的曆法。 所有日期和時間值的字串表示都會自動反映目前的文化特性及其現行曆法。 通常現行曆法是文化特性的預設曆法。 <xref:System.Globalization.CultureInfo>物件也有選擇性的行事曆, 其中包括文化特性可以使用的其他行事曆。
 
-* 做為與特定文化特性無關的獨立曆法。 這種情況下會使用 <xref:System.Globalization.Calendar> 方法以反映曆法的值表達日期。
+- 做為與特定文化特性無關的獨立曆法。 這種情況下會使用 <xref:System.Globalization.Calendar> 方法以反映曆法的值表達日期。
 
 請注意，這六種曆法類別 <xref:System.Globalization.ChineseLunisolarCalendar>、<xref:System.Globalization.JapaneseLunisolarCalendar>、<xref:System.Globalization.JulianCalendar>、<xref:System.Globalization.KoreanLunisolarCalendar>、<xref:System.Globalization.PersianCalendar> 和 <xref:System.Globalization.TaiwanLunisolarCalendar> 只能做為獨立曆法使用。 這些類別不會由任何文化特性做為預設曆法或選擇性曆法使用。
 

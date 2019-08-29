@@ -3,12 +3,12 @@ title: 使用 F# 開始使用 Azure Blob 儲存體
 description: 使用 Azure Blob 儲存體, 將非結構化資料儲存在雲端。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: c8b42339ff1d76f262e956b5e34cc598e0fc855d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c765f38cba7642e813a5966d3b7754c5ce45abbd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630504"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107114"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>開始使用 F 來使用 Azure Blob 儲存體\#
 
@@ -186,9 +186,9 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 若要支援從多個用戶端或多個進程實例平行存取 blob, 您可以使用**etag**或**租用**。
 
-* **Etag** -提供方法來偵測 blob 或容器已由另一個進程修改過
+- **Etag** -提供方法來偵測 blob 或容器已由另一個進程修改過
 
-* **租用**-提供一段時間取得對 blob 的獨佔、可續訂、寫入或刪除存取權的方法
+- **租用**-提供一段時間取得對 blob 的獨佔、可續訂、寫入或刪除存取權的方法
 
 如需詳細資訊, 請參閱[管理 Microsoft Azure 儲存體中的並行](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)存取。
 

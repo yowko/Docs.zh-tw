@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從內嵌資源還原時區
+title: 作法：從內嵌資源還原時區
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,49 +11,49 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98813bf6685be78d33ebd5cc5e8c07a61a811c25
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026532"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106755"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>HOW TO：從內嵌資源還原時區
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>作法：從內嵌資源還原時區
 
-本主題描述如何還原已儲存在資源檔的時區。 如相關資訊與指示儲存時區，請參閱[How to:將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)。
+本主題描述如何還原已儲存在資源檔中的時區。 如需儲存時區的相關資訊和指示, [請參閱如何:將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)。
 
-### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>若要還原序列化從內嵌資源之 TimeZoneInfo 物件
+### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>從內嵌資源還原序列化 TimeZoneInfo 物件
 
-1. 如果要擷取的時區不是自訂的時區，請試著它具現化使用<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>方法。
+1. 如果要抓取的時區不是自訂時區, 請嘗試使用<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>方法具現化該時區。
 
-2. 具現化<xref:System.Resources.ResourceManager>物件，並傳遞的內嵌的資源檔和包含的資源檔的組件參考的完整限定的名稱。
+2. 藉由傳遞內嵌資源檔的完整名稱, 以及包含資源檔之元件的參考, 來具現化物件。<xref:System.Resources.ResourceManager>
 
-   如果您無法判斷內嵌的資源檔的完整的名稱，請使用[Ildasm.exe （IL 反組譯工具）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)來檢查組件的資訊清單。 `.mresource`項目識別的資源。 在範例中，資源的完整的名稱是`SerializeTimeZoneData.SerializedTimeZones`。
+   如果您無法判斷內嵌資源檔的完整名稱, 請使用[Ildasm (IL](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)解譯器) 來檢查元件的資訊清單。 `.mresource`專案會識別資源。 在範例中, 資源的完整名稱是`SerializeTimeZoneData.SerializedTimeZones`。
 
-   如果資源檔內嵌在相同的組件包含時區具現化程式碼中，您可以呼叫來擷取它的參考`static`(`Shared` Visual Basic 中)<xref:System.Reflection.Assembly.GetExecutingAssembly%2A>方法。
+   如果資源檔內嵌在包含時區具現化程式碼的相同元件中, 您可以藉由呼叫`static` (`Shared`在 Visual Basic) <xref:System.Reflection.Assembly.GetExecutingAssembly%2A>方法來抓取它的參考。
 
-3. 如果在呼叫<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>方法失敗，或如果自訂的時區來具現化時，擷取字串，包含已序列化的時區，藉由呼叫<xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>方法。
+3. 如果<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>方法的呼叫失敗, 或是要具現化自訂時區, 請<xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>呼叫方法來抓取包含序列化時區的字串。
 
-4. 時區資料還原序列化呼叫<xref:System.TimeZoneInfo.FromSerializedString%2A>方法。
+4. 藉由呼叫<xref:System.TimeZoneInfo.FromSerializedString%2A>方法, 將時區資料還原序列化。
 
 ## <a name="example"></a>範例
 
-下列範例會還原序列化<xref:System.TimeZoneInfo>內嵌.NET XML 資源檔中儲存的物件。
+下列範例會將儲存<xref:System.TimeZoneInfo>在內嵌 .net XML 資源檔中的物件還原序列化。
 
 [!code-csharp[TimeZone2.Serialization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#3)]
 [!code-vb[TimeZone2.Serialization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#3)]
 
-此程式碼說明例外狀況處理，以確保<xref:System.TimeZoneInfo>應用程式所需的物件已存在。 它會先嘗試具現化<xref:System.TimeZoneInfo>物件擷取登錄使用<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>方法。 如果時區不能具現化，程式碼會擷取它從內嵌的資源檔。
+這段程式碼說明例外狀況處理, <xref:System.TimeZoneInfo>以確保應用程式所需的物件存在。 它會先嘗試<xref:System.TimeZoneInfo> <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>使用方法, 從登錄中抓取物件, 以將它具現化。 如果無法具現化時區, 則程式碼會從內嵌的資源檔抓取該時區。
 
-因為資料的自訂時區 (具現化所使用的時區<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法) 不會儲存在登錄中，程式碼不會呼叫<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>來具現化時區 Palmer，南極大陸。 相反地，立即呈現內嵌的資源檔，來擷取字串，包含時區的資料，然後呼叫<xref:System.TimeZoneInfo.FromSerializedString%2A>方法。
+由於自訂時區的資料 (使用<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法具現化的時區) 不會儲存在登錄中, 因此程式碼不會<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A>呼叫來為 Palmer、南極洲具現化時區。 相反地, 它會立即尋找內嵌資源檔, 以在呼叫<xref:System.TimeZoneInfo.FromSerializedString%2A>方法之前, 先取出包含時區資料的字串。
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
 這個範例需要：
 
-* System.Windows.Forms.dll 和 System.Core.dll 的參考加入至專案。
+- 系統會將對 System.web 和 system.string 的參考加入至專案中。
 
-* 下列命名空間會匯入：
+- 匯入下列命名空間:
 
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]

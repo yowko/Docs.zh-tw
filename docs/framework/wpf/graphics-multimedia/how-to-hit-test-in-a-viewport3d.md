@@ -1,5 +1,5 @@
 ---
-title: HOW TO：Viewport3D 中的點擊測試
+title: 作法：Viewport3D 中的點擊測試
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,23 @@ helpviewer_keywords:
 - hit tests [WPF], for 3-D visuals
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
-ms.openlocfilehash: c3238161a01df67b05be6284b8eed61981ff3974
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54d3ee859a50ed348308b083c48f2dd73d312bbe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947325"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106931"
 ---
-# <a name="how-to-hit-test-in-a-viewport3d"></a>HOW TO：Viewport3D 中的點擊測試
-此範例示範如何進行點擊測試中的 3D 視覺效果<xref:System.Windows.Controls.Viewport3D>。  
+# <a name="how-to-hit-test-in-a-viewport3d"></a>作法：Viewport3D 中的點擊測試
+這個範例示範如何對中<xref:System.Windows.Controls.Viewport3D>的3d 視覺效果進行點擊測試。  
   
- 因為<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>2D 和 3D 的資訊，會傳回可逐一查看測試結果，以讀取只 3D 的結果。  
+ 因為<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>會傳回2d 和3d 的資訊, 所以可以逐一查看測試結果, 唯讀取3d 結果。  
   
  [!code-csharp[HitTest3D#HitTest3D3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn4)]
  [!code-vb[HitTest3D#HitTest3D3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn4)]  
   
- <xref:System.Windows.Media.HitTestResultBehavior>在下列程式碼會決定點擊的測試結果的處理方式。  `UpdateResultInfo` 和`UpdateMaterial`本機定義的方法。  
+ 下列<xref:System.Windows.Media.HitTestResultBehavior>程式碼中的會決定如何處理點擊測試結果。  `UpdateResultInfo`和`UpdateMaterial`是本機定義的方法。  
   
  [!code-csharp[HitTest3D#HitTest3D3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn5)]
  [!code-vb[HitTest3D#HitTest3D3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
-  
-## <a name="see-also"></a>另請參閱
-
-- [3d 點擊測試範例](https://go.microsoft.com/fwlink/?LinkID=159959)
+ 

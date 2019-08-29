@@ -1,42 +1,42 @@
 ---
 title: 計算運算式
-description: 了解如何建立方便的語法，以寫入計算的F#，可以是循序和合併使用控制流程建構和繫結。
+description: 瞭解如何在中F#建立可使用控制流程結構和系結進行排序和合併的方便撰寫運算語法。
 ms.date: 03/15/2019
-ms.openlocfilehash: b352c5541bc31b5c583904b99651de9180c8afb3
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152034"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106575"
 ---
 # <a name="computation-expressions"></a>計算運算式
 
-在 計算運算式F#提供方便的語法來撰寫可以進行排序和合併使用控制流程建構和繫結的計算。 根據計算運算式的類型，它們可以視為 express monads、 monoids、 monad transformer 和 applicative 函式的方式。 不過，不同於其他語言 (例如*do 標記法*Haskell 中)，它們不會繫結至單一的抽象概念，並不依賴巨集或其他形式的 metaprogramming 完成方便且內容相關的語法。
+中F#的計算運算式提供便利的語法, 可讓您撰寫使用控制流程結構和系結進行排序和結合的計算。 視計算運算式的種類而定, 您可以將其視為表示 monad、monoids、monad 轉換器和 applicative 函子的方式。 不過, 不同于其他語言 (例如 Haskell 中的*標記法*), 它們不會系結至單一抽象概念, 而且不依賴宏或其他形式的元處理來完成方便且內容相關的語法。
 
 ## <a name="overview"></a>總覽
 
-計算可以有許多形式。 計算的最常見形式是單一執行緒執行，也就是容易了解和修改。 不過，並非所有的形式是計算的單一執行緒執行一樣直接。 其中某些範例包括：
+計算可能會採用許多形式。 最常見的計算形式是單一執行緒執行, 這很容易瞭解和修改。 不過, 並非所有形式的計算都是單一執行緒執行的簡單方式。 其中某些範例包括：
 
-* 不具決定性的計算
-* 非同步計算
-* Effectful 計算
-* 富有生產力的計算
+- 不具決定性的計算
+- 非同步計算
+- Effectful 計算
+- 有生產力計算
 
-更一般來說，有*即時線上*您必須執行的應用程式特定部分中的計算。 撰寫即時程式碼可能相當困難，因為很容易之外指定的內容，而不需要的抽象概念，讓您無法這樣的 「 洩漏 」 計算。 這些抽象概通常很難撰寫您自己，這也是為什麼F#已有一般化的作法所謂**計算運算式**。
+一般來說, 您必須在應用程式的某些部分中執行*內容相關*的計算。 撰寫與內容相關的程式碼可能很有挑戰性, 因為在沒有抽象概念的情況下, 您可以輕鬆地在指定的內容外部「流失」計算, 以避免發生這種情況。 這些抽象概念通常是很難撰寫的, 這也是F#為什麼有一般化的方法, 稱為**計算運算式**。
 
-計算運算式提供統一的語法和抽象概念模型的即時線上計算的編碼方式。
+計算運算式提供統一的語法和抽象概念, 以編碼內容相關的計算。
 
-每個計算運算式做為後盾*產生器*型別。 產生器型別會定義可供計算運算式的作業。 請參閱[建立新類型的計算運算式](computation-expressions.md#creating-a-new-type-of-computation-expression)，其中顯示如何建立自訂的計算運算式。
+每個計算運算式都是由產生器型別支援。 產生器型別會定義可用於計算運算式的作業。 請參閱[建立新類型的計算運算式](computation-expressions.md#creating-a-new-type-of-computation-expression), 其中會顯示如何建立自訂計算運算式。
 
-### <a name="syntax-overview"></a>語法概觀
+### <a name="syntax-overview"></a>語法總覽
 
-所有的計算運算式具有下列格式：
+所有計算運算式的形式如下:
 
 ```
 builder-expr { cexper }
 ```
 
-何處`builder-expr`是定義計算運算式產生器型別名稱和`cexper`是計算運算式的運算式主體。 比方說，`async`計算運算式程式碼可以看起來像這樣：
+其中`builder-expr` , 是定義計算運算式的產生器型別名稱, 而`cexper`是計算運算式的運算式主體。 例如, `async`計算運算式程式碼看起來會像這樣:
 
 ```fsharp
 let fetchAndDownload url =
@@ -49,7 +49,7 @@ let fetchAndDownload url =
     }
 ```
 
-有可用的特殊的其他語法在計算運算式中，在上述範例所示。 下列運算式形式會使用計算運算式：
+計算運算式中有特殊的額外語法可用, 如先前範例所示。 下列運算式形式可以搭配計算運算式使用:
 
 ```fsharp
 expr { let! ... }
@@ -61,13 +61,13 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-每個這些關鍵字，以及其他標準F#關鍵字才可在計算運算式，如果已定義在支援產生器類型。 是唯一的例外`match!`，這是本身使用的語法捷徑`let!`後面模式比對的結果。
+這些關鍵字和其他標準F#關鍵字僅適用于計算運算式 (如果已在支援產生器型別中定義)。 唯一的例外是`match!`, 這本身就是語法, 可供`let!`使用, 後面接著結果的模式比對。
 
-產生器型別是物件，定義方式結合，計算運算式的片段; 的特殊方法也就是它的方法來控制計算運算式的運作方式。 描述產生器類別的另一個方法是說，它可讓您自訂的許多作業F#建構，例如迴圈和繫結。
+產生器型別是一個物件, 它會定義特殊方法來管理計算運算式片段的結合方式;也就是說, 它的方法會控制計算運算式的行為。 描述 builder 類別的另一種方式, 就是讓您自訂許多F#結構的作業, 例如迴圈和系結。
 
 ### `let!`
 
-`let!`關鍵字的另一個計算運算式呼叫的結果繫結的名稱：
+`let!`關鍵字會將另一個計算運算式的呼叫結果系結至名稱:
 
 ```fsharp
 let doThingsAsync url =
@@ -77,13 +77,13 @@ let doThingsAsync url =
     }
 ```
 
-如果您繫結具有的計算運算式呼叫`let`，您不會計算運算式的結果。 相反地，您會有繫結的值*實現*呼叫該計算運算式。 使用`let!`繫結至結果。
+如果您使用`let`來系結計算運算式的呼叫, 則不會取得計算運算式的結果。 相反地, 您會將無法使用的呼叫值系結至該計算運算式。 使用`let!`系結至結果。
 
-`let!` 由定義`Bind(x, f)`產生器型別上的成員。
+`let!`由產生器型`Bind(x, f)`別上的成員定義。
 
 ### `do!`
 
-`do!`關鍵字是呼叫計算運算式，傳回`unit`-例如型別 (由`Zero`成員產生器):
+關鍵字是用來呼叫會傳回類似類型的計算`unit`運算式 (由產生器上的`Zero`成員定義): `do!`
 
 ```fsharp
 let doThingsAsync data url =
@@ -93,13 +93,13 @@ let doThingsAsync data url =
     }
 ```
 
-針對[非同步工作流程](asynchronous-workflows.md)，這個型別是`Async<unit>`。 如需其他計算運算式中，型別很可能是`CExpType<unit>`。
+針對[非同步工作流程](asynchronous-workflows.md), 此類型為`Async<unit>`。 對於其他計算運算式, 類型可能`CExpType<unit>`是。
 
-`do!` 由此`Bind(x, f)`成員產生器型別，其中`f`會產生`unit`。
+`do!`是由產生器`Bind(x, f)`型別上的成員所定義`f` , 其中`unit`會產生。
 
 ### `yield`
 
-`yield`關鍵字是從 計算運算式傳回值，以便它可以作為<xref:System.Collections.Generic.IEnumerable%601>:
+關鍵字是用來從計算運算式傳回值, 讓它可以當做來使用<xref:System.Collections.Generic.IEnumerable%601>: `yield`
 
 ```fsharp
 let squares =
@@ -112,13 +112,13 @@ for sq in squares do
     printfn "%d" sq
 ```
 
-如同[產生 C# 關鍵字](../../csharp/language-reference/keywords/yield.md)，因為它會在逐一查看產生的計算運算式中的每個項目。
+如同[ C#中的 yield 關鍵字](../../csharp/language-reference/keywords/yield.md), 計算運算式中的每個專案都會在反覆運算時傳回。
 
-`yield` 由此`Yield(x)`成員產生器型別，其中`x`是要重新產生的項目。
+`yield`是由`Yield(x)`產生器型別上的成員所定義`x` , 其中是要傳回的專案。
 
 ### `yield!`
 
-`yield!`關鍵字是簡維集合，從 計算運算式的值：
+`yield!`關鍵字是用來從計算運算式簡維值的集合:
 
 ```fsharp
 let squares =
@@ -140,13 +140,13 @@ let squaresAndCubes =
 printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 ```
 
-計算運算式評估時，由呼叫`yield!`將其項目產生後--逐一壓平合併結果。
+評估時, 所呼叫`yield!`的計算運算式會將其專案逐一傳回, 並將結果簡維。
 
-`yield!` 由此`YieldFrom(x)`成員產生器型別，其中`x`是值的集合。
+`yield!`是由產生器`YieldFrom(x)`型別上的成員所定義`x` , 其中是值的集合。
 
 ### `return`
 
-`return`關鍵字包裝型別對應至 計算運算式中的值。 除了使用的計算運算式`yield`，它用來 「 完成 」 的計算運算式：
+`return`關鍵字會包裝對應于計算運算式之類型中的值。 除了使用`yield`的計算運算式之外, 它還可用來「完成」計算運算式:
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -159,11 +159,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return` 由此`Return(x)`成員產生器型別，其中`x`是要包裝的項目。
+`return`是由`Return(x)`產生器型別上的成員所定義`x` , 其中是要包裝的專案。
 
 ### `return!`
 
-`return!`關鍵字發現計算運算式的值，並將結果包裝型別對應至 計算運算式中：
+`return!`關鍵字會發現計算運算式的值, 並將結果包裝為對應于計算運算式的類型:
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -175,11 +175,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return!` 由此`ReturnFrom(x)`成員產生器型別，其中`x`是另一個計算運算式。
+`return!`是由產生器`ReturnFrom(x)`型別上的成員所定義`x` , 其中是另一個計算運算式。
 
 ### `match!`
 
-開頭為F#4.5`match!`關鍵字可讓您將內嵌呼叫另一個計算運算式和模式比對其結果：
+從F# 4.5 開始, `match!`關鍵字可讓您內嵌對另一個計算運算式的呼叫, 並對其結果進行模式比對:
 
 ```fsharp
 let doThingsAsync url =
@@ -190,45 +190,45 @@ let doThingsAsync url =
     }
 ```
 
-當呼叫的計算運算式`match!`，它將會了解像是呼叫的結果`let!`。 這通常用時呼叫的計算運算式結果的所在[選擇性](options.md)。
+使用`match!`呼叫計算運算式時, 它會實現呼叫的結果, 例如`let!`。 這通常是在呼叫計算運算式 (其中的結果為[選擇性](options.md)) 時使用。
 
-## <a name="built-in-computation-expressions"></a>內建的計算運算式
+## <a name="built-in-computation-expressions"></a>內建計算運算式
 
-F#核心程式庫會定義三個內建的計算運算式：[排序運算式](sequences.md)，[非同步工作流程](asynchronous-workflows.md)，以及[查詢運算式](query-expressions.md)。
+F#核心程式庫會定義三個內建計算運算式:[順序運算式](sequences.md)、[非同步工作流程](asynchronous-workflows.md)和[查詢運算式](query-expressions.md)。
 
-## <a name="creating-a-new-type-of-computation-expression"></a>建立新的計算運算式的類型
+## <a name="creating-a-new-type-of-computation-expression"></a>建立新類型的計算運算式
 
-您可以建立產生器類別，並在類別上定義特定的特殊方法，以定義您自己的計算運算式的特性。 下表中所列，產生器類別可以選擇性地定義的方法。
+您可以藉由建立產生器類別並在類別上定義某些特殊方法, 來定義自己的計算運算式的特性。 Builder 類別可以選擇性地定義下表所列的方法。
 
-下表描述可用於工作流程產生器類別的方法。
+下表描述可在工作流程產生器類別中使用的方法。
 
-|**方法**|**典型的簽章**|**描述**|
+|**方法**|**一般簽章**|**描述**|
 |----|----|----|
-|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|針對呼叫`let!`和`do!`計算運算式中。|
-|`Delay`|`(unit -> M<'T>) -> M<'T>`|包裝函式為計算運算式。|
-|`Return`|`'T -> M<'T>`|針對呼叫`return`計算運算式中。|
-|`ReturnFrom`|`M<'T> -> M<'T>`|針對呼叫`return!`計算運算式中。|
+|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|在計算`let!`運算式`do!`中針對和呼叫。|
+|`Delay`|`(unit -> M<'T>) -> M<'T>`|將計算運算式包裝為函數。|
+|`Return`|`'T -> M<'T>`|在計算`return`運算式中針對進行呼叫。|
+|`ReturnFrom`|`M<'T> -> M<'T>`|在計算`return!`運算式中針對進行呼叫。|
 |`Run`|`M<'T> -> M<'T>` 或<br /><br />`M<'T> -> 'T`|執行計算運算式。|
-|`Combine`|`M<'T> * M<'T> -> M<'T>` 或<br /><br />`M<unit> * M<'T> -> M<'T>`|呼叫在計算運算式中排序。|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` 或<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|針對呼叫`for...do`計算運算式中的運算式。|
-|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|針對呼叫`try...finally`計算運算式中的運算式。|
-|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|針對呼叫`try...with`計算運算式中的運算式。|
-|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|針對呼叫`use`計算運算式中的繫結。|
-|`While`|`(unit -> bool) * M<'T> -> M<'T>`|針對呼叫`while...do`計算運算式中的運算式。|
-|`Yield`|`'T -> M<'T>`|針對呼叫`yield`計算運算式中的運算式。|
-|`YieldFrom`|`M<'T> -> M<'T>`|針對呼叫`yield!`計算運算式中的運算式。|
-|`Zero`|`unit -> M<'T>`|呼叫空`else`分支`if...then`計算運算式中的運算式。|
-|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|表示 計算運算式會傳遞至`Run`為引號的成員。 它會轉譯成引號是計算的所有執行個體。|
+|`Combine`|`M<'T> * M<'T> -> M<'T>` 或<br /><br />`M<unit> * M<'T> -> M<'T>`|呼叫以在計算運算式中進行排序。|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` 或<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|針對計算`for...do`運算式中的運算式呼叫。|
+|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|針對計算`try...finally`運算式中的運算式呼叫。|
+|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|針對計算`try...with`運算式中的運算式呼叫。|
+|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|在計算`use`運算式中呼叫以進行系結。|
+|`While`|`(unit -> bool) * M<'T> -> M<'T>`|針對計算`while...do`運算式中的運算式呼叫。|
+|`Yield`|`'T -> M<'T>`|針對計算`yield`運算式中的運算式呼叫。|
+|`YieldFrom`|`M<'T> -> M<'T>`|針對計算`yield!`運算式中的運算式呼叫。|
+|`Zero`|`unit -> M<'T>`|在計算運算式`else`中針對`if...then`運算式的空分支呼叫。|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|指出計算運算式會以引號的形式傳遞`Run`給成員。 它會將計算的所有實例轉譯為引號。|
 
-許多產生器類別中的方法使用，並傳回`M<'T>`建構，這通常是分開定義的類型特性的組合，計算種類，例如，`Async<'T>`非同步工作流程和`Seq<'T>`序列工作流程。 這些方法的簽章會啟用這些要結合並彼此巢狀，以便從一個建構傳回的工作流程物件可以傳遞至下一步。 剖析計算運算式時，編譯器會使用上表中的方法和計算運算式中的程式碼，將運算式轉換成一系列的巢狀函式呼叫。
+產生器類別中的許多方法都會使用並`M<'T>`傳回結構, 這通常是個別定義的型別, 以表示要合併的運算種類, 例如, `Async<'T>`針對非同步工作流程和`Seq<'T>`適用于序列工作流程。 這些方法的簽章可讓它們彼此結合並加以合併, 讓從一個結構傳回的工作流程物件可以傳遞至下一個。 編譯器在剖析計算運算式時, 會使用上表中的方法和計算運算式中的程式碼, 將運算式轉換成一系列的嵌套函式呼叫。
 
-巢狀的運算式是下列格式：
+此嵌套運算式的格式如下:
 
 ```fsharp
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-在上述程式碼來呼叫`Run`和`Delay`會省略所計算的運算式產生器類別中有未定義。 計算運算式，這裡表示為主體`{| cexpr |}`，轉譯成牽涉到的產生器類別方法的呼叫下表中所述的翻譯。 計算運算式`{| cexpr |}`會定義以遞迴方式，根據這些翻譯其中`expr`是F#運算式並`cexpr`是計算運算式。
+在上述程式碼中, 如果不`Run`是`Delay`在計算運算式產生器類別中定義, 則會省略和的呼叫。 計算運算式的主體 (此處所表示`{| cexpr |}`的) 會轉譯為包含 builder 類別之方法的呼叫, 其方式如下表中所述。 計算運算式`{| cexpr |}`會根據這些翻譯以遞迴方式定義, `expr`其中是F#運算式, `cexpr`而是計算運算式。
 
 |運算式|轉譯|
 |----------|-----------|
@@ -253,9 +253,9 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 |<code>{ other-expr; cexpr }</code>|<code>expr; { cexpr }</code>|
 |<code>{ other-expr }</code>|`expr; builder.Zero()`|
 
-在上表中，`other-expr`告訴您，否則為未列在資料表的運算式。 產生器類別不必實作的所有方法，並支援所有在上表中列出的翻譯。 無法使用該類型的計算運算式中不會實作這些建構。 例如，如果您不想要支援`use`計算運算式中的關鍵字，您可以省略的定義`Use`產生器類別中。
+在上表中, `other-expr`描述資料表中未列出的運算式。 產生器類別不需要執行所有方法, 並且支援上表中所列的所有翻譯。 該類型的計算運算式無法使用未實作為的結構。 例如, 如果您不想要在計算運算式中`use`支援關鍵字, 可以`Use`在您的 builder 類別中省略的定義。
 
-下列程式碼範例會顯示封裝計算為一系列的步驟可評估一次的一個步驟的計算運算式。 差別等位型別， `OkOrException`，編碼錯誤狀態的運算式，評估為止。 此程式碼示範您可以使用您的計算運算式，例如產生器方法的一部分的未定案實作中的數種一般模式。
+下列程式碼範例顯示的計算運算式會將計算封裝成一系列步驟, 一次可以評估一個步驟。 區分聯集類型`OkOrException`, 會編碼到目前為止所評估之運算式的錯誤狀態。 這段程式碼會示範幾個您可以在計算運算式中使用的一般模式, 例如一些產生器方法的樣板化。
 
 ```fsharp
 // Computations that can be run step by step
@@ -378,17 +378,17 @@ comp |> step |> step
 comp |> step |> step |> step |> step 
 ```
 
-計算運算式具有基礎類型，則運算式會傳回。 計算的結果或可執行的延遲的計算，可能代表基礎類型，或者它可能提供逐一查看集合的某種類型的方法。 在上述範例中，基礎類型是**最終**。 序列運算式中，基礎類型是<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 查詢運算式的基礎類型是<xref:System.Linq.IQueryable?displayProperty=nameWithType>。 非同步工作流程的基礎類型是[ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)。 `Async`物件代表要計算的結果執行的工作。 例如，您呼叫[ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)來執行計算並傳回結果。
+計算運算式具有基礎類型, 此運算式會傳回。 基礎類型可能代表可執行檔計算結果或延遲計算, 或可提供方法來逐一查看某種類型的集合。 在上述範例中, 基礎類型**最後**是。 若為序列運算式, 基礎類型為<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 若為查詢運算式, 基礎類型為<xref:System.Linq.IQueryable?displayProperty=nameWithType>。 針對非同步工作流程, 基礎類型為[`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)。 `Async`物件代表要執行以計算結果的工作。 例如, 您呼叫[`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)來執行計算, 並傳回結果。
 
 ## <a name="custom-operations"></a>自訂作業
 
-您可以定義自訂的作業，在 計算運算式，並為計算運算式中運算子使用的自訂作業。 比方說，您可以在查詢運算式中包含的查詢運算子。 當您定義的自訂作業時，您必須定義在 Yield 和計算運算式中的方法。 若要定義自訂的作業，將它放在 計算運算式產生器類別，然後套用[ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)。 這個屬性會接受字串做為引數，也就是使用中的自訂作業的名稱。 此名稱來自進入範圍內的計算運算式的左大括號開頭。 因此，您不應該使用在這個區塊中有相同名稱的自訂作業的識別碼。 例如，避免識別項使用這類`all`或`last`查詢運算式中。
+您可以在計算運算式上定義自訂運算, 並使用自訂作業作為計算運算式中的運算子。 例如, 您可以在查詢運算式中包含查詢運算子。 當您定義自訂作業時, 您必須在計算運算式中定義 Yield 和 For 方法。 若要定義自訂作業, 請將它放在計算運算式的產生器類別中, 然後[`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)套用。 這個屬性會採用字串做為引數, 這是要在自訂作業中使用的名稱。 在計算運算式的左大括弧開頭, 此名稱會進入範圍內。 因此, 您不應該使用與此區塊中的自訂作業同名的識別碼。 例如, 請避免在查詢運算式中使用識別碼`all` , `last`例如或。
 
-### <a name="extending-existing-builders-with-new-custom-operations"></a>擴充現有的產生器與新的自訂作業
+### <a name="extending-existing-builders-with-new-custom-operations"></a>以新的自訂作業擴充現有的產生器
 
-如果您已經產生器類別，可以從擴充其自訂作業，此產生器的類別之外。 延伸模組必須在模組中宣告。 命名空間不能包含相同的檔案和相同的命名空間宣告群組定義類型的位置中的擴充成員除外。
+如果您已經有 builder 類別, 則可以從這個產生器類別的外部延伸其自訂作業。 擴充功能必須在模組中宣告。 命名空間不能包含延伸成員, 除非在相同檔案和定義類型的相同命名空間宣告群組中。
 
-下列範例示範的現有擴充`Microsoft.FSharp.Linq.QueryBuilder`類別。
+下列範例會顯示現有`Microsoft.FSharp.Linq.QueryBuilder`類別的延伸。
 
 ```fsharp
 type Microsoft.FSharp.Linq.QueryBuilder with
