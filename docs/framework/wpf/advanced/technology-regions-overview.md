@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 4f1489065a70065700d2f8ceb974e66ecceeebd0
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671839"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133806"
 ---
 # <a name="technology-regions-overview"></a>技術領域概觀
 如果應用程式中使用了多種展示技術 (例如 WPF、Win32 或 DirectX)，它們就必須在通用的最上層視窗中共用轉譯區域。 本主題所描述的問題可能會影響您 WPF 交互操作應用程式的展示與輸入。  
@@ -54,11 +54,9 @@ ms.locfileid: "68671839"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 分層視窗在不同作業系統上有不同的功能。 這是因為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]會使用 DirectX 來轉譯, 而分層視窗主要是針對 GDI 轉譯 (而非 DirectX 轉譯) 所設計。  
   
-- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 在 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] 和更新版本上支援硬體加速的分層視窗。 硬體加速分層 windows on [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]需要 Microsoft directx 的支援, 因此功能會視該電腦上的 Microsoft DirectX 版本而定。  
+- WPF 支援硬體加速分層視窗。  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不支援透明色鍵，因為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 無法保證可確實呈現您要求的色彩，特別當轉譯是透過硬體加速時。  
-  
-- 如果您的應用程式是[!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]在上執行, 則 directx 應用程式轉譯時, directx 表面上的分層視窗會閃爍。  (實際的轉譯順序是 Microsoft Windows 圖形裝置介面 (GDI) 會隱藏分層視窗, 然後再進行 DirectX 繪製, 然後 Microsoft Windows 圖形裝置介面 (GDI) 會將分層視窗放回去)。  非 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的分層視窗也有這項限制。  
   
 ## <a name="see-also"></a>另請參閱
 

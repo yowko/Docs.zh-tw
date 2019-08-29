@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 35b46d2030ee887eb98618fbed127097cec1f0c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e0f7bd553096be0674827aa0498a53df5247940e
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044189"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133770"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自動化和畫面縮放比例
 > [!NOTE]
 > 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]可讓使用者變更 [每英寸的時數 (DPI)] 設定[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , 讓螢幕上的大部分元素看起來更大。 雖然在 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]中早已經提供這項功能，但在舊版中，縮放比例必須由應用程式實作。 在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]中，桌面視窗管理員會針對所有不處理其本身縮放比例的應用程式執行預設的縮放功能。 使用者介面自動化用戶端應用程式必須將這項功能納入考量。  
+從 Windows Vista 開始, Windows 可讓使用者變更每英寸的時數 (DPI) 設定, 讓畫面上大部分的使用者介面 (UI) 元素看起來更大。 雖然 Windows 中已提供這項功能, 但在舊版中, 調整必須由應用程式來執行。 從 Windows Vista 開始, 桌面視窗管理員會針對所有不會處理其本身調整的應用程式執行預設調整。 使用者介面自動化用戶端應用程式必須將這項功能納入考量。  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Windows Vista 中的縮放比例  

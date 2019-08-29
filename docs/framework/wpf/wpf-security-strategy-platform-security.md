@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817878"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133756"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全性策略 – 平台安全性
 雖然 Windows Presentation Foundation (WPF) 提供各種安全性服務, 但它也會利用基礎平臺的安全性功能, 其中包括作業系統、CLR 和 Internet Explorer。 這三層安全性功能一起為 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供了強大、深入防禦的安全性模型，即使其中一層失敗，還有兩層可以幫忙把關，如下圖所示：  
@@ -33,7 +33,7 @@ ms.locfileid: "68817878"
 
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>作業系統安全性  
-           [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 需要的最低作業系統層級是 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]。 的核心[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]提供數項安全性功能, 可構成所有 Windows 應用程式的安全性基礎, 包括以[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]為基礎的。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 加入 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 的安全性功能，並做進一步擴充。 本主題會詳細討論這些對 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 至為重要的安全性功能，以及 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 如何整合這些功能來提供進一步的深入防禦。  
+Windows 的核心提供數項安全性功能, 可構成所有 Windows 應用程式的安全性基礎, 包括 WPF 所建立的。 本主題將討論這些對 WPF 而言很重要的安全性功能, 以及 WPF 如何與它們整合以提供進一步的深度防禦。  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
@@ -57,21 +57,21 @@ ms.locfileid: "68817878"
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 上的 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 使用者將會得到這個作業系統額外提供的安全性增強功能，包括「最低權限使用者存取」、程式碼完整性檢查和權限隔離。  
+Windows Vista 上的 WPF 使用者將受益于作業系統的其他安全性增強功能, 包括「最低許可權使用者存取」、程式碼完整性檢查和許可權隔離。  
   
 #### <a name="user-account-control-uac"></a>使用者帳戶控制 (UAC)  
  目前, Windows 使用者通常會以系統管理員許可權執行, 因為許多應用程式都需要它們來進行安裝或執行, 或兩者都有。 其中一個例子是，使用者必須能夠將預設應用程式設定寫入至登錄。  
   
  以系統管理員權限執行，實際上表示應用程式會從具有系統管理員權限的處理序執行。 這樣做會有安全性風險，那就是劫持以系統管理員權限執行之處理序的任何惡意程式碼，都會自動繼承這些權限，包括重要系統資源的存取權。  
   
- 防範這個安全性威脅的方法之一，就是以最少的必要權限執行應用程式。 這就是所謂的最低權限原則，也是 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 作業系統的核心功能。 這項功能稱為使用者帳戶控制 (UAC)，是由 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] UAC 以兩種主要的方式加以使用：  
+ 防範這個安全性威脅的方法之一，就是以最少的必要權限執行應用程式。 這就是所謂的最低許可權原則, 也是 Windows 作業系統的核心功能。 這項功能稱為使用者帳戶控制 (UAC), 由 Windows UAC 以兩種主要方式使用:  
   
 - 讓大多數的應用程式預設以 UAC 權限執行，即使使用者是系統管理員也一樣。只有需要系統管理員權限的應用程式才會以系統管理員權限執行。 若要以系統管理員權限執行，應用程式必須在其應用程式資訊清單中明確標記，或明確標記為安全性原則中的項目。  
   
 - 提供像是虛擬化的相容性解決方案。 例如，許多應用程式會嘗試寫入限制位置，例如 C:\Program Files。 如果應用程式是以 UAC 執行，則會建立依使用者而定的替代位置，應用程式不需要有系統管理員權限就能寫入至這個位置。 如果應用程式是以 UAC 執行，則 UAC 會將 C:\Program Files 虛擬化，讓以為寫入至這個位置的應用程式，實際上是寫入至依使用者而定的替代位置。 這種相容性轉換工作可讓作業系統執行更多應用程式 (之前在 UAC 中執行時，並無法執行這麼多應用程式)。  
   
 #### <a name="code-integrity-checks"></a>程式碼完整性檢查  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 加入更深入的程式碼完整性檢查，以協助防止在載入/執行階段將惡意程式插入系統檔案或核心中。 這已經超過系統檔案保護範圍。  
+ Windows Vista 整合了更深入的程式碼完整性檢查, 協助防止惡意程式碼在載入/執行時間插入系統檔案或核心。 這已經超過系統檔案保護範圍。  
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>瀏覽器裝載之應用程式的有限權限處理序  

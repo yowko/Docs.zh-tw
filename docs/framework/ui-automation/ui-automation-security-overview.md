@@ -5,17 +5,17 @@ helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: c74f770f917fc3b2a7d3a18c08270745dac68b12
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b798aef528cccdedb1fcaa53c1782632037600d
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422438"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133791"
 ---
 # <a name="ui-automation-security-overview"></a>UI 自動化安全性概觀
 
 > [!NOTE]
-> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。
 
 本概觀說明 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 中 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)]的安全性模型。
 
@@ -41,7 +41,7 @@ ms.locfileid: "67422438"
 
 ## <a name="manifest-files"></a>資訊清單檔
 
-若要存取受保護的系統 UI，應用程式必須建置資訊清單檔案，其中包含`uiAccess`屬性中`requestedExecutionLevel`標記，如下所示：
+若要取得受保護系統 UI 的存取權, 應用程式必須使用包含`uiAccess` `requestedExecutionLevel`標記中屬性的資訊清單檔來建立, 如下所示:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,6 +57,4 @@ ms.locfileid: "67422438"
 
 這個程式碼中 `level` 屬性的值只是範例。
 
-`uiAccess` 為"false"預設;也就是說，如果省略這個屬性，或是否有任何資訊清單組件，應用程式將無法存取受保護的 UI。
-
-如需詳細資訊[!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)]安全性、 簽署應用程式和建立組件資訊清單，請參閱[開發人員最佳實務和最低權限環境中的應用程式的指導方針](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480150(v=msdn.10))。
+`uiAccess`預設為 "false";也就是說, 如果省略屬性, 或元件沒有資訊清單, 應用程式將無法取得受保護 UI 的存取權。

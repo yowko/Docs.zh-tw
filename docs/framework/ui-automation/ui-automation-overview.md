@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: af4abf060e9a8606f69a94f27ecd76487a2ff51c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914596"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133793"
 ---
 # <a name="ui-automation-overview"></a>UI 自動化概觀
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "69914596"
   
  撰寫使用者介面自動化用戶端應用程式時，可以保證應用程式可在多個架構上運作。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心可以降低組成 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]各種元件之架構的任何差異。 例如， `Content` 按鈕的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 屬性、 `Caption` 按鈕的 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 屬性以及 HTML 影像的 `ALT` 屬性，都會對應至 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>檢視中的單一屬性 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]、 [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]和 [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)]中的完整功能。  
+使用者介面自動化會在執行 .NET Framework 的支援 Windows 作業系統上提供完整的功能 (請參閱從 .NET Core 3.0 開始, [.NET Framework 系統需求](../get-started/system-requirements.md)或 .net core 版本。  
   
  使用者介面自動化提供者會透過內建的橋接服務, 提供 Microsoft Active Accessibility 用戶端應用程式的一些支援。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "69914596"
 ## <a name="providers-and-clients"></a>提供者和用戶端  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 具有四個主要元件，如下表所示。  
   
-|元件|描述|  
+|元件|說明|  
 |---------------|-----------------|  
 |提供者 API (Uiautomationprovider.dll .dll 和 UIAutomationTypes)|一組由使用者介面自動化提供者實作的介面定義，提供 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目之相關資訊，以及對程式設計輸入做出回應的物件。|  
 |用戶端 API (UIAutomationClient.dll 和 UIAutomationTypes.dll)|一組 Managed 程式碼，可讓使用者介面自動化用戶端應用程式取得 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的相關資訊，並將輸入傳送至控制項。|  
