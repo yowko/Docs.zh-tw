@@ -4,12 +4,12 @@ description: 了解如何連接到 .NET 中的原生元件。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 3ca213bc7228d2e4337607df2d47b334c5bea14f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062707"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106810"
 ---
 # <a name="native-interoperability"></a>原生互通性
 
@@ -17,9 +17,9 @@ ms.locfileid: "65062707"
 
 以下為您應呼叫機器碼的幾個原因︰
 
-* 作業系統隨附大量受控類別庫中所沒有的 API。 此情節的基本範例將會說明存取硬體或作業系統管理功能。
-* 與其他擁有或可產生 C 樣式 ABI (原生 ABI) 的元件通訊，像是透過 [Java Native Interface (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) 公開的 Java 程式碼，或是任何可產生原生元件的受控語言。
-* 在 Windows 上，大部分的已安裝軟體 (例如 Microsoft Office 套件) 會註冊 COM 元件，這些元件代表其程式，且可讓開發人員予以自動化或使用。 而這也需要原生互通性。
+- 作業系統隨附大量受控類別庫中所沒有的 API。 此情節的基本範例將會說明存取硬體或作業系統管理功能。
+- 與其他擁有或可產生 C 樣式 ABI (原生 ABI) 的元件通訊，像是透過 [Java Native Interface (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) 公開的 Java 程式碼，或是任何可產生原生元件的受控語言。
+- 在 Windows 上，大部分的已安裝軟體 (例如 Microsoft Office 套件) 會註冊 COM 元件，這些元件代表其程式，且可讓開發人員予以自動化或使用。 而這也需要原生互通性。
 
 上述清單並未涵蓋所有開發人員會想要，或必須與原生元件互動的可能情況和情節。 舉例來說，.NET 類別庫會使用原生互通性支援來實作其一部分的 API，例如主控台支援和操作、檔案系統存取權及其他項目。 不過請務必注意，您可視需要選擇使用。
 
