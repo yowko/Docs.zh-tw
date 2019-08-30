@@ -8,22 +8,22 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6642fad7d20e60a8b92e5860b763511f4fc0be72
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052439"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169174"
 ---
-# <a name="how-to-programmatically-print-xps-files"></a>HOW TO：以程式設計方式列印 XPS 檔
-您可以使用一個多載<xref:System.Printing.PrintQueue.AddJob%2A>方法來列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]不需開啟的檔案<xref:System.Windows.Controls.PrintDialog>或基本上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]完全。  
+# <a name="how-to-programmatically-print-xps-files"></a>作法：以程式設計方式列印 XPS 檔
+您<xref:System.Printing.PrintQueue.AddJob%2A>可以使用方法的其中一個多載來列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]檔, 而不需要開啟或, 也[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]就是<xref:System.Windows.Controls.PrintDialog>任何一種。  
   
- 您也可以列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]檔案所使用的許多<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>並<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>。 如需詳細資訊，請參閱[列印 XPS 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))。  
+ 您也可以使用[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]的多<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>個和<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>來列印檔案。 如需詳細資訊，請參閱[列印 XPS 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))。  
   
- 另一種列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]是使用<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>或是<xref:System.Windows.Controls.PrintDialog.PrintVisual%2A>方法<xref:System.Windows.Controls.PrintDialog>控制項。 請參閱[叫用列印對話方塊](how-to-invoke-a-print-dialog.md)。  
+ 另一個列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]方式是使用<xref:System.Windows.Controls.PrintDialog>控制項的<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>或<xref:System.Windows.Controls.PrintDialog.PrintVisual%2A>方法。 請參閱[叫用列印對話方塊](how-to-invoke-a-print-dialog.md)。  
   
 ## <a name="example"></a>範例  
- 使用三個參數的主要步驟<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法如下所示。 下列範例會提供詳細資料。  
+ 使用三個參數<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法的主要步驟如下所示。 下列範例會提供詳細資料。  
   
 1. 判斷印表機是否為 XPSDrv 印表機。 (如需 XPSDrv 的詳細資訊，請參閱[列印概觀](printing-overview.md)。)  
   
@@ -31,32 +31,32 @@ ms.locfileid: "62052439"
   
 3. 將列印伺服器與列印佇列物件具現化。  
   
-4. 呼叫方法，指定作業名稱、 要列印的檔案和<xref:System.Boolean>旗標，指出印表機是否為 XPSDrv 印表機。  
+4. 呼叫方法, 指定工作名稱、要列印的檔案, 以及<xref:System.Boolean>指出印表機是否為 XPSDrv 印表機的旗標。  
   
- 下列範例示範如何批次列印目錄中的所有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案。 雖然應用程式會提示使用者指定的目錄，包含三個參數<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法不需要[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 它可以使用於任何程式碼路徑，其中包含您可以傳遞至的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案名稱和路徑。  
+ 下列範例示範如何批次列印目錄中的所有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案。 雖然應用程式會提示使用者指定目錄, 但是三個參數<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>的方法並不[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]需要。 它可以使用於任何程式碼路徑，其中包含您可以傳遞至的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案名稱和路徑。  
   
- 包含三個參數<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>多載<xref:System.Printing.PrintQueue.AddJob%2A>必須在單一執行緒 apartment 中執行每當<xref:System.Boolean>參數是`false`，它必須是在使用非 XPSDrv 印表機時。 不過，[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 的預設 Apartment 狀態為多執行緒。 必須還原此預設值，因為此範例採用非 XPSDrv 印表機。  
+ 當<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> <xref:System.Boolean>參數<xref:System.Printing.PrintQueue.AddJob%2A> 為`false`時, 的三參數多載必須在單一線程中執行, 這在使用非 XPSDrv 印表機時必須是。 不過, .NET 的預設單元狀態為多執行緒。 必須還原此預設值，因為此範例採用非 XPSDrv 印表機。  
   
- 變更預設值的方式有兩種。 其中一種方式是直接加入<xref:System.STAThreadAttribute>(也就是"`[System.STAThreadAttribute()]`") 正上方的應用程式的第一行`Main`方法 (通常是"`static void Main(string[] args)`」)。 不過，許多應用程式，需要`Main`方法具有多執行緒的 apartment 狀態，因此沒有第二個方法： put 呼叫<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>在個別執行緒的 apartment 狀態會設為<xref:System.Threading.ApartmentState.STA>使用<xref:System.Threading.Thread.SetApartmentState%2A>。 下列範例使用此第二種技術。  
+ 變更預設值的方式有兩種。 其中一種方式是直接在<xref:System.STAThreadAttribute>應用程式`Main`方法的第`[System.STAThreadAttribute()]`一行 (通常是 "`static void Main(string[] args)`") 正上方加入 (也就是 "")。 不過, 許多應用程式都需要`Main`方法具有多執行緒的單元狀態, 因此有第二個方法: 將的<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>呼叫放入另一個執行緒, 其的單元<xref:System.Threading.Thread.SetApartmentState%2A>狀態設定為<xref:System.Threading.ApartmentState.STA> 。 下列範例使用此第二種技術。  
   
- 因此，此範例一開始具現化<xref:System.Threading.Thread>物件，並將其傳遞**PrintXPS**方法，以作為<xref:System.Threading.ThreadStart>參數。 (**PrintXPS** 方法稍後會定義在範例中。)接下來執行緒會設定為單一執行緒 Apartment。 `Main` 方法唯一剩餘的程式碼會啟動新的執行緒。  
+ 因此, 此範例一<xref:System.Threading.Thread>開始會先具現化物件, 並傳遞**PrintXPS**方法<xref:System.Threading.ThreadStart>做為參數。 (**PrintXPS** 方法稍後會定義在範例中。)接下來執行緒會設定為單一執行緒 Apartment。 `Main` 方法唯一剩餘的程式碼會啟動新的執行緒。  
   
- 範例的實質內容是在 `static`**BatchXPSPrinter.PrintXPS** 方法中。 建立列印伺服器和佇列之後，此方法會提示使用者提供一個包含 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案的目錄。 驗證目錄是否存在以及是否有之後\*.xps 檔案中，方法會將每個這類檔案加入到列印佇列。 此範例假設印表機是非 XPSDrv，因此我們傳遞`false`的最後一個參數以<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法。 基於這個理由，此方法會先驗證檔案中的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 標記，再嘗試將它轉換成印表機的頁面描述語言。 如果驗證失敗，則會擲回例外狀況。 範例程式碼會攔截例外狀況、通知使用者，然後繼續處理下一個 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案。  
+ 範例的實質內容是在 `static`**BatchXPSPrinter.PrintXPS** 方法中。 建立列印伺服器和佇列之後，此方法會提示使用者提供一個包含 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案的目錄。 在驗證目錄是否存在, 以及其中是否有 .xps \*檔案之後, 方法會將每個這類檔案新增至列印佇列。 此範例假設印表機不是 XPSDrv, 所以我們會傳遞`false`至<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法的最後一個參數。 基於這個理由，此方法會先驗證檔案中的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 標記，再嘗試將它轉換成印表機的頁面描述語言。 如果驗證失敗，則會擲回例外狀況。 範例程式碼會攔截例外狀況、通知使用者，然後繼續處理下一個 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案。  
   
  [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
  [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
   
- 如果您使用 XPSDrv 印表機，則可以將最終參數設定為 `true`。 在此情況下，因為 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 是印表機的頁面描述語言，所以此方法會將檔案傳送至印表機，而不需要進行驗證，或將它轉換成另一種頁面描述語言。 如果您不確定在設計階段是否應用程式將會使用 XPSDrv 印表機，您可以修改應用程式，讓它讀取<xref:System.Printing.PrintQueue.IsXpsDevice%2A>屬性和根據它所找到的分支。  
+ 如果您使用 XPSDrv 印表機，則可以將最終參數設定為 `true`。 在此情況下，因為 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 是印表機的頁面描述語言，所以此方法會將檔案傳送至印表機，而不需要進行驗證，或將它轉換成另一種頁面描述語言。 如果您在設計階段不確定應用程式是否會使用 XPSDrv 印表機, 您可以修改應用程式, 讓它根據找到的<xref:System.Printing.PrintQueue.IsXpsDevice%2A>內容來讀取屬性和分支。  
   
- 因為有一開始可幾部 XPSDrv 印表機立即發行後[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]和 Microsoft.NET Framework 中，您可能需要偽裝成 XPSDrv 印表機非 XPSDrv 印表機。 若要這樣做，請將 Pipelineconfig.xml 新增至執行您應用程式之電腦的下列登錄機碼中的檔案清單︰  
+ 由於在發行[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]和 Microsoft .NET Framework 之後, 一開始會有少數的 XPSDrv 印表機可供使用, 因此您可能需要將非 xpsdrv 印表機偽裝成 xpsdrv 印表機。 若要這樣做，請將 Pipelineconfig.xml 新增至執行您應用程式之電腦的下列登錄機碼中的檔案清單︰  
   
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>* \DependentFiles  
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\ *\<PseudoXPSPrinter>* \DependentFiles  
   
  其中 *\<PseudoXPSPrinter>* 是任何列印佇列。 電腦之後必須重新開機。  
   
- 此偽裝可讓您傳遞`true`做為最後的參數<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>而不會造成例外狀況，但由於 *\<Pseudoxpsprinter> >* 並非真正的 XPSDrv 印表機，只是記憶體回收會列印。  
+ 這種偽裝方式可讓您`true`傳遞做為的最後<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>一個參數, 而不會造成例外狀況, 但由於 *\<pseudoxpsprinter> >* 並不是 XPSDrv 印表機, 因此只會列印垃圾。  
   
- **附註**為了簡單起見，上述範例中使用的目前狀態\*.xps 副檔名的檔案來測試[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。 不過，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案不一定要有此副檔名。 [isXPS.exe (isXPS 一致性工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) 是一種測試檔案之 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。  
+ **注意**為了簡單起見, 上述範例會\* [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]使用 .xps 副檔名, 做為其測試檔案。 不過，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案不一定要有此副檔名。 [isXPS.exe (isXPS 一致性工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) 是一種測試檔案之 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -64,9 +64,9 @@ ms.locfileid: "62052439"
 - <xref:System.Printing.PrintQueue.AddJob%2A>
 - <xref:System.Threading.ApartmentState>
 - <xref:System.STAThreadAttribute>
-- [XPS 文件](/windows/desktop/printdocs/documents)
-- [列印 XPS 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
-- [Managed 和 Unmanaged 執行緒處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [XPS 檔](/windows/desktop/printdocs/documents)
+- [列印 XPS 檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
+- [Managed 和非受控執行緒](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
 - [isXPS.exe (isXPS 一致性工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [WPF 中的文件](documents-in-wpf.md)
 - [列印概觀](printing-overview.md)

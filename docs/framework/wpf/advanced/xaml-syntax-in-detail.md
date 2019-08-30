@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958792"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168995"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題定義用來描述 XAML 語法元素的詞彙。 本檔的其餘部分會經常使用這些詞彙, 這兩者都是針對 WPF 檔, 特別是針對使用 XAML 的其他架構, 或是在 .xaml 層級由 XAML 語言支援啟用的基本 XAML 概念。 本主題將針對[XAML 總覽 (WPF)](xaml-overview-wpf.md)主題中引進的基本術語進行擴充。  
@@ -62,7 +62,7 @@ ms.locfileid: "69958792"
   
 - 開頭標記必須以右角括弧 (>) 完成。 其他物件元素、屬性專案或內部文字則可以跟隨在開頭標記之後。 此處所包含的內容, 通常會受到元素的物件模型所限制。 物件元素的對等結束記號也必須存在, 以適當的對應, 並與其他開頭和結束記號配對進行平衡。  
   
- .NET 所實作為的 XAML 具有一組規則, 可將物件元素對應至類型、屬性為屬性或事件, 以及 XAML 命名空間與 CLR 命名空間加上元件。 針對 WPF 和 .NET Framework, XAML 物件專案會對應至[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]所參考元件中所定義的類型, 而屬性會對應至這些類型的成員。 當您在 XAML 中參考 CLR 型別時, 您也可以存取該型別的繼承成員。  
+ .NET 所實作為的 XAML 具有一組規則, 可將物件元素對應至類型、屬性為屬性或事件, 以及 XAML 命名空間與 CLR 命名空間加上元件。 針對 WPF 和 .NET, XAML 物件專案會對應至所參考元件中所定義的 .NET 類型, 而屬性會對應至這些類型的成員。 當您在 XAML 中參考 CLR 型別時, 您也可以存取該型別的繼承成員。  
   
  例如, 下列範例是物件專案語法, 可具現化<xref:System.Windows.Controls.Button>類別的新實例, 也會<xref:System.Windows.FrameworkElement.Name%2A>指定屬性和該屬性的值:  
   

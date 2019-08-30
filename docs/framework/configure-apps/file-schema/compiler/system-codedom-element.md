@@ -9,18 +9,18 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 19f37095bd01b76fda8b1e29423c413dbdb06a65
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927699"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168909"
 ---
 # <a name="systemcodedom-element"></a>\<system.object > 元素
 指定可用語言提供者的編譯器組態設定。  
   
- \<configuration > 元素  
-\<system.object > 元素  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<system.object >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69927699"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<configuration>](../configuration-element.md)|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   

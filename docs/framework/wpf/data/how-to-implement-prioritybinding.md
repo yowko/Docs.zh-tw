@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: ad19db9d686469e3ade1ff188553fceb8d525674
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4be1ce434eb1e169e8a19b56c92ca1efb48773d2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937438"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169078"
 ---
-# <a name="how-to-implement-prioritybinding"></a>作法：實作 PriorityBinding
+# <a name="how-to-implement-prioritybinding"></a>HOW TO：實作 PriorityBinding
 <xref:System.Windows.Data.PriorityBinding>在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] [運作方式] 中, 指定系結的清單。 系結清單的排序次序是從最高優先順序到最低優先順序。 如果在處理時, 最高優先順序的系結成功傳回值, 則不需要處理清單中的其他系結。 可能是最高優先順序的系結需要較長的時間才能進行評估, 則會使用成功傳回值的下一個最高優先順序, 直到較高優先權的系結成功傳回值為止。  
   
 ## <a name="example"></a>範例  
@@ -27,7 +27,7 @@ ms.locfileid: "69937438"
  Get 存取`SlowestDP`子會等待5秒, 然後才傳回`_slowestDP`資料成員的值。  
   
 > [!NOTE]
-> 此範例僅供示範之用。 本[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]指導方針建議您不要定義的屬性, 其速度比欄位集還慢。 如需詳細資訊, 請參閱[在屬性和方法之間選擇](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))。  
+> 此範例僅供示範之用。 .NET 指導方針建議定義的屬性, 其速度比欄位集還慢。 如需詳細資訊, 請參閱[在屬性和方法之間選擇](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))。  
   
  [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

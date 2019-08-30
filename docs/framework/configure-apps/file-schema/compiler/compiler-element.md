@@ -10,18 +10,21 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: 80eea3373e2f4b7e45ebeb31dd6552ea02c109e1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a19cf8182cdb338fd8596ef38311916de0daae37
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659736"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168946"
 ---
 # <a name="compiler-element"></a>\<編譯器 > 元素
 
 指定語言提供者的編譯器組態屬性。
 
-\<configuration 元素 > \<system.object 元素 > \<編譯器元素 > \<編譯器 > 元素
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<system.object >** ](system-codedom-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<編譯器 >** ](compilers-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<編譯器 >**  
 
 ## <a name="syntax"></a>語法
 
