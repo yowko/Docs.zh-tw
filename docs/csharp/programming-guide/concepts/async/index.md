@@ -2,14 +2,14 @@
 title: C# 中的非同步程式設計
 description: 使用 async、await、Task 和 Task<T> 進行非同步程式設計的 C# 語言支援概觀
 ms.date: 03/18/2019
-ms.openlocfilehash: a306ff75357f9f61ec9b086485472d99de5ad083
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 4ed48a2e74dde5ae0f24ebd680ace133e05e15d4
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307132"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167882"
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>C\# 中的非同步工作程式設計模型
+# <a name="asynchronous-programming-with-async-and-await"></a>使用 async 和 await 進行非同步程式設計
 
 非同步工作程式設計模型 (TAP) 在非同步程式碼上提供一個抽象層。 您可以和往常一樣，將程式碼撰寫成一連串的陳述式。 您可以將該程式碼讀成每個陳述式會先完成，再開始下一個陳述式。 編譯器會執行一些轉換，因為部分陳述式可能會開始工作，並傳回表示進行工作的 <xref:System.Threading.Tasks.Task>。
 
