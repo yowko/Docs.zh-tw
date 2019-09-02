@@ -2,29 +2,29 @@
 title: 將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 611322065a4df53d1a3149ef4e1ca5592f149081
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604028"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203448"
 ---
-# <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="fa197-102">將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="fa197-102">Map keyref XML Schema (XSD) Constraints to DataSet Constraints</span></span>
-<span data-ttu-id="fa197-103">**Keyref**元素可讓您建立文件內的項目之間的連結。</span><span class="sxs-lookup"><span data-stu-id="fa197-103">The **keyref** element allows you to establish links between elements within a document.</span></span> <span data-ttu-id="fa197-104">這與關聯式資料庫中的外部索引鍵關聯性很類似。</span><span class="sxs-lookup"><span data-stu-id="fa197-104">This is similar to a foreign key relationship in a relational database.</span></span> <span data-ttu-id="fa197-105">如果指定了結構描述**keyref**項目，項目會轉換至對應外部索引鍵條件約束的資料表中的資料行的結構描述對應程序<xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="fa197-105">If a schema specifies the **keyref** element, the element is converted during the schema mapping process to a corresponding foreign key constraint on the columns in the tables of the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="fa197-106">根據預設， **keyref**項目也會產生關聯，以**ParentTable**， **ChildTable**， **ParentColumn**，以及**ChildColumn**在關聯上指定的屬性。</span><span class="sxs-lookup"><span data-stu-id="fa197-106">By default, the **keyref** element also generates a relation, with the **ParentTable**, **ChildTable**, **ParentColumn**, and **ChildColumn** properties specified on the relation.</span></span>  
+# <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="6279f-102">將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="6279f-102">Map keyref XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="6279f-103">**Keyref**元素可讓您在檔內的元素之間建立連結。</span><span class="sxs-lookup"><span data-stu-id="6279f-103">The **keyref** element allows you to establish links between elements within a document.</span></span> <span data-ttu-id="6279f-104">這與關聯式資料庫中的外部索引鍵關聯性很類似。</span><span class="sxs-lookup"><span data-stu-id="6279f-104">This is similar to a foreign key relationship in a relational database.</span></span> <span data-ttu-id="6279f-105">如果架構指定**keyref**專案, 則在架構對應程式期間, 專案會轉換為數據表<xref:System.Data.DataSet>中資料行上對應的外鍵條件約束。</span><span class="sxs-lookup"><span data-stu-id="6279f-105">If a schema specifies the **keyref** element, the element is converted during the schema mapping process to a corresponding foreign key constraint on the columns in the tables of the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="6279f-106">根據預設, **keyref**元素也會產生關聯性, 並在關聯上指定**ParentTable**、 **ChildTable**、 **ParentColumn**和**ChildColumn**屬性。</span><span class="sxs-lookup"><span data-stu-id="6279f-106">By default, the **keyref** element also generates a relation, with the **ParentTable**, **ChildTable**, **ParentColumn**, and **ChildColumn** properties specified on the relation.</span></span>  
   
- <span data-ttu-id="fa197-107">下表列出**msdata**您可以在指定的屬性**keyref**項目。</span><span class="sxs-lookup"><span data-stu-id="fa197-107">The following table outlines the **msdata** attributes you can specify in the **keyref** element.</span></span>  
+ <span data-ttu-id="6279f-107">下表列出您可以在**keyref**元素中指定的**msdata**屬性。</span><span class="sxs-lookup"><span data-stu-id="6279f-107">The following table outlines the **msdata** attributes you can specify in the **keyref** element.</span></span>  
   
-|<span data-ttu-id="fa197-108">屬性名稱</span><span class="sxs-lookup"><span data-stu-id="fa197-108">Attribute name</span></span>|<span data-ttu-id="fa197-109">描述</span><span class="sxs-lookup"><span data-stu-id="fa197-109">Description</span></span>|  
+|<span data-ttu-id="6279f-108">屬性名稱</span><span class="sxs-lookup"><span data-stu-id="6279f-108">Attribute name</span></span>|<span data-ttu-id="6279f-109">說明</span><span class="sxs-lookup"><span data-stu-id="6279f-109">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="fa197-110">**msdata:ConstraintOnly**</span><span class="sxs-lookup"><span data-stu-id="fa197-110">**msdata:ConstraintOnly**</span></span>|<span data-ttu-id="fa197-111">如果**ConstraintOnly ="true"** 上指定**keyref**結構描述中的項目，建立條件約束，但不會建立關聯。</span><span class="sxs-lookup"><span data-stu-id="fa197-111">If **ConstraintOnly="true"** is specified on the **keyref** element in the schema, a constraint is created, but no relation is created.</span></span> <span data-ttu-id="fa197-112">如果未指定此屬性 (或設為**假**)，條件約束和關聯性會建立於**資料集**。</span><span class="sxs-lookup"><span data-stu-id="fa197-112">If this attribute is not specified (or is set to **False**), both the constraint and the relation are created in the **DataSet**.</span></span>|  
-|<span data-ttu-id="fa197-113">**msdata:ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="fa197-113">**msdata:ConstraintName**</span></span>|<span data-ttu-id="fa197-114">如果**ConstraintName**指定屬性，則會使用該值做為條件約束的名稱。</span><span class="sxs-lookup"><span data-stu-id="fa197-114">If the **ConstraintName** attribute is specified, its value is used as the name of the constraint.</span></span> <span data-ttu-id="fa197-115">否則，請**名稱**屬性**keyref**結構描述中的項目提供中的條件約束名稱**資料集**。</span><span class="sxs-lookup"><span data-stu-id="fa197-115">Otherwise, the **name** attribute of the **keyref** element in the schema provides the constraint name in the **DataSet**.</span></span>|  
-|<span data-ttu-id="fa197-116">**msdata:UpdateRule**</span><span class="sxs-lookup"><span data-stu-id="fa197-116">**msdata:UpdateRule**</span></span>|<span data-ttu-id="fa197-117">如果**UpdateRule**屬性中指定**keyref**結構描述中的項目，其值指派給**UpdateRule**中的條件約束屬性**資料集**。</span><span class="sxs-lookup"><span data-stu-id="fa197-117">If the **UpdateRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **UpdateRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="fa197-118">否則**UpdateRule**屬性設定為**Cascade**。</span><span class="sxs-lookup"><span data-stu-id="fa197-118">Otherwise the **UpdateRule** property is set to **Cascade**.</span></span>|  
-|<span data-ttu-id="fa197-119">**msdata:DeleteRule**</span><span class="sxs-lookup"><span data-stu-id="fa197-119">**msdata:DeleteRule**</span></span>|<span data-ttu-id="fa197-120">如果**DeleteRule**屬性中指定**keyref**結構描述中的項目，其值指派給**DeleteRule**中的條件約束屬性**資料集**。</span><span class="sxs-lookup"><span data-stu-id="fa197-120">If the **DeleteRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **DeleteRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="fa197-121">否則**DeleteRule**屬性設定為**Cascade**。</span><span class="sxs-lookup"><span data-stu-id="fa197-121">Otherwise the **DeleteRule** property is set to **Cascade**.</span></span>|  
-|<span data-ttu-id="fa197-122">**msdata:AcceptRejectRule**</span><span class="sxs-lookup"><span data-stu-id="fa197-122">**msdata:AcceptRejectRule**</span></span>|<span data-ttu-id="fa197-123">如果**AcceptRejectRule**屬性中指定**keyref**結構描述中的項目，其值指派給**AcceptRejectRule** 中的條件約束屬性**資料集**。</span><span class="sxs-lookup"><span data-stu-id="fa197-123">If the **AcceptRejectRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **AcceptRejectRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="fa197-124">否則**AcceptRejectRule**屬性設定為**無**。</span><span class="sxs-lookup"><span data-stu-id="fa197-124">Otherwise the **AcceptRejectRule** property is set to **None**.</span></span>|  
+|<span data-ttu-id="6279f-110">**msdata:ConstraintOnly**</span><span class="sxs-lookup"><span data-stu-id="6279f-110">**msdata:ConstraintOnly**</span></span>|<span data-ttu-id="6279f-111">如果在架構的**keyref**元素上指定**ConstraintOnly = "true"** , 則會建立條件約束, 但不會建立關聯性。</span><span class="sxs-lookup"><span data-stu-id="6279f-111">If **ConstraintOnly="true"** is specified on the **keyref** element in the schema, a constraint is created, but no relation is created.</span></span> <span data-ttu-id="6279f-112">如果未指定這個屬性 (或設定為**False**), 則會在**資料集中**建立條件約束和關聯性。</span><span class="sxs-lookup"><span data-stu-id="6279f-112">If this attribute is not specified (or is set to **False**), both the constraint and the relation are created in the **DataSet**.</span></span>|  
+|<span data-ttu-id="6279f-113">**msdata:ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="6279f-113">**msdata:ConstraintName**</span></span>|<span data-ttu-id="6279f-114">如果已指定**ConstraintName**屬性, 則會使用其值做為條件約束的名稱。</span><span class="sxs-lookup"><span data-stu-id="6279f-114">If the **ConstraintName** attribute is specified, its value is used as the name of the constraint.</span></span> <span data-ttu-id="6279f-115">否則, 在架構中, **keyref**元素的**name**屬性會提供**資料集**內的條件約束名稱。</span><span class="sxs-lookup"><span data-stu-id="6279f-115">Otherwise, the **name** attribute of the **keyref** element in the schema provides the constraint name in the **DataSet**.</span></span>|  
+|<span data-ttu-id="6279f-116">**msdata:UpdateRule**</span><span class="sxs-lookup"><span data-stu-id="6279f-116">**msdata:UpdateRule**</span></span>|<span data-ttu-id="6279f-117">如果在架構的**keyref**專案中指定了**UpdateRule**屬性, 其值會指派給**DataSet**中的**UpdateRule**條件約束屬性。</span><span class="sxs-lookup"><span data-stu-id="6279f-117">If the **UpdateRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **UpdateRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="6279f-118">否則, **UpdateRule**屬性會設定為**Cascade**。</span><span class="sxs-lookup"><span data-stu-id="6279f-118">Otherwise the **UpdateRule** property is set to **Cascade**.</span></span>|  
+|<span data-ttu-id="6279f-119">**msdata:DeleteRule**</span><span class="sxs-lookup"><span data-stu-id="6279f-119">**msdata:DeleteRule**</span></span>|<span data-ttu-id="6279f-120">如果在架構的**keyref**專案中指定了**DeleteRule**屬性, 其值會指派給**DataSet**中的**DeleteRule**條件約束屬性。</span><span class="sxs-lookup"><span data-stu-id="6279f-120">If the **DeleteRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **DeleteRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="6279f-121">否則, **DeleteRule**屬性會設定為**Cascade**。</span><span class="sxs-lookup"><span data-stu-id="6279f-121">Otherwise the **DeleteRule** property is set to **Cascade**.</span></span>|  
+|<span data-ttu-id="6279f-122">**msdata:AcceptRejectRule**</span><span class="sxs-lookup"><span data-stu-id="6279f-122">**msdata:AcceptRejectRule**</span></span>|<span data-ttu-id="6279f-123">如果在架構的**keyref**專案中指定了**AcceptRejectRule**屬性, 其值會指派給**DataSet**中的**AcceptRejectRule**條件約束屬性。</span><span class="sxs-lookup"><span data-stu-id="6279f-123">If the **AcceptRejectRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **AcceptRejectRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="6279f-124">否則, **AcceptRejectRule**屬性會設定為**None**。</span><span class="sxs-lookup"><span data-stu-id="6279f-124">Otherwise the **AcceptRejectRule** property is set to **None**.</span></span>|  
   
- <span data-ttu-id="fa197-125">下列範例包含指定的結構描述**金鑰**並**keyref**之間的關聯性**OrderNumber**子項目**順序**項目和**OrderNo**子項目**OrderDetail**項目。</span><span class="sxs-lookup"><span data-stu-id="fa197-125">The following example contains a schema that specifies the **key** and **keyref** relationships between the **OrderNumber** child element of the **Order** element and the **OrderNo** child element of the **OrderDetail** element.</span></span>  
+ <span data-ttu-id="6279f-125">下列範例包含的架構, 會指定**Order**元素的**OrderNumber**子專案與**OrderDetail**的**OrderNo**子項目之間的索引**鍵**和**keyref**關聯性。元素.</span><span class="sxs-lookup"><span data-stu-id="6279f-125">The following example contains a schema that specifies the **key** and **keyref** relationships between the **OrderNumber** child element of the **Order** element and the **OrderNo** child element of the **OrderDetail** element.</span></span>  
   
- <span data-ttu-id="fa197-126">在範例中， **OrderNumber**子項目**OrderDetail**項目是指**OrderNo**的索引鍵的子項目**順序**項目。</span><span class="sxs-lookup"><span data-stu-id="fa197-126">In the example, the **OrderNumber** child element of the **OrderDetail** element refers to the **OrderNo** key child element of the **Order** element.</span></span>  
+ <span data-ttu-id="6279f-126">在範例中, **OrderDetail**元素的**OrderNumber**子項目會參考**Order**元素的**OrderNo** key 子項目。</span><span class="sxs-lookup"><span data-stu-id="6279f-126">In the example, the **OrderNumber** child element of the **OrderDetail** element refers to the **OrderNo** key child element of the **Order** element.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -66,16 +66,16 @@ ms.locfileid: "64604028"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="fa197-127">XML 結構描述定義語言 (XSD) 結構描述對應處理會產生下列**資料集**具有兩個資料表：</span><span class="sxs-lookup"><span data-stu-id="fa197-127">The XML Schema definition language (XSD) schema mapping process produces the following **DataSet** with two tables:</span></span>  
+ <span data-ttu-id="6279f-127">XML 架構定義語言 (XSD) 架構對應進程會產生具有兩個數據表的下列**資料集**:</span><span class="sxs-lookup"><span data-stu-id="6279f-127">The XML Schema definition language (XSD) schema mapping process produces the following **DataSet** with two tables:</span></span>  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- <span data-ttu-id="fa197-128">颾魤 ㄛ**資料集**定義下列條件約束：</span><span class="sxs-lookup"><span data-stu-id="fa197-128">In addition, the **DataSet** defines the following constraints:</span></span>  
+ <span data-ttu-id="6279f-128">此外,**資料集會**定義下列條件約束:</span><span class="sxs-lookup"><span data-stu-id="6279f-128">In addition, the **DataSet** defines the following constraints:</span></span>  
   
-- <span data-ttu-id="fa197-129">Unique 條件約束**順序**資料表。</span><span class="sxs-lookup"><span data-stu-id="fa197-129">A unique constraint on the **Order** table.</span></span>  
+- <span data-ttu-id="6279f-129">**Order**資料表上的 unique 條件約束。</span><span class="sxs-lookup"><span data-stu-id="6279f-129">A unique constraint on the **Order** table.</span></span>  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
-- <span data-ttu-id="fa197-130">之間的關聯性**順序**並**OrderDetail**資料表。</span><span class="sxs-lookup"><span data-stu-id="fa197-130">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="fa197-131">**巢狀**屬性設定為**False**因為兩個項目無巢狀結構描述中。</span><span class="sxs-lookup"><span data-stu-id="fa197-131">The **Nested** property is set to **False** because the two elements are not nested in the schema.</span></span>  
+- <span data-ttu-id="6279f-130">**Order**和**OrderDetail**資料表之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="6279f-130">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="6279f-131">**Nested**屬性會設定為**False** , 因為這兩個元素並未嵌套在架構中。</span><span class="sxs-lookup"><span data-stu-id="6279f-131">The **Nested** property is set to **False** because the two elements are not nested in the schema.</span></span>  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
-- <span data-ttu-id="fa197-132">上的外部索引鍵條件約束**OrderDetail**資料表。</span><span class="sxs-lookup"><span data-stu-id="fa197-132">A foreign key constraint on the **OrderDetail** table.</span></span>  
+- <span data-ttu-id="6279f-132">**OrderDetail**資料表上的 foreign key 條件約束。</span><span class="sxs-lookup"><span data-stu-id="6279f-132">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
     ```  
               ConstraintName: OrderNoRef  
@@ -109,8 +109,8 @@ Order(OrderNumber, EmpNumber)
     RelatedColumns: OrderNumber   
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="fa197-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fa197-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6279f-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6279f-133">See also</span></span>
 
-- [<span data-ttu-id="fa197-134">將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="fa197-134">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [<span data-ttu-id="fa197-135">從 XML 結構描述 (XSD) 產生資料集關聯</span><span class="sxs-lookup"><span data-stu-id="fa197-135">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [<span data-ttu-id="fa197-136">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="fa197-136">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="6279f-134">將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="6279f-134">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="6279f-135">從 XML 結構描述 (XSD) 產生資料集關聯</span><span class="sxs-lookup"><span data-stu-id="6279f-135">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="6279f-136">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="6279f-136">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

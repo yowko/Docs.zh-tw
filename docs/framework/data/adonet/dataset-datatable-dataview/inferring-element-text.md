@@ -2,17 +2,17 @@
 title: 推斷項目文字
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879628"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203536"
 ---
-# <a name="inferring-element-text"></a><span data-ttu-id="8149e-102">推斷項目文字</span><span class="sxs-lookup"><span data-stu-id="8149e-102">Inferring Element Text</span></span>
-<span data-ttu-id="8149e-103">如果項目包含文字，而且沒有任何子項目，來推斷為資料表 （具有屬性的項目） 或重複的項目，例如新的資料行同名**TableName_Text**會加入項目，推斷的資料表。</span><span class="sxs-lookup"><span data-stu-id="8149e-103">If an element contains text and has no child elements to be inferred as tables (such as elements with attributes or repeated elements), a new column with the name **TableName_Text** will be added to the table that is inferred for the element.</span></span> <span data-ttu-id="8149e-104">項目中包含的文字會加入資料表中的資料列，並儲存在新資料行內。</span><span class="sxs-lookup"><span data-stu-id="8149e-104">The text contained in the element will be added to a row in the table and stored in the new column.</span></span> <span data-ttu-id="8149e-105">**ColumnMapping**的新資料行的屬性會設定為**MappingType.SimpleContent**。</span><span class="sxs-lookup"><span data-stu-id="8149e-105">The **ColumnMapping** property of the new column will be set to **MappingType.SimpleContent**.</span></span>  
+# <a name="inferring-element-text"></a><span data-ttu-id="a5791-102">推斷項目文字</span><span class="sxs-lookup"><span data-stu-id="a5791-102">Inferring Element Text</span></span>
+<span data-ttu-id="a5791-103">如果專案包含文字, 且沒有任何子專案要推斷為數據表 (例如具有屬性或重複元素的專案), 則會將名稱為**TableName_Text**的新資料行加入至為專案推斷的資料表。</span><span class="sxs-lookup"><span data-stu-id="a5791-103">If an element contains text and has no child elements to be inferred as tables (such as elements with attributes or repeated elements), a new column with the name **TableName_Text** will be added to the table that is inferred for the element.</span></span> <span data-ttu-id="a5791-104">項目中包含的文字會加入資料表中的資料列，並儲存在新資料行內。</span><span class="sxs-lookup"><span data-stu-id="a5791-104">The text contained in the element will be added to a row in the table and stored in the new column.</span></span> <span data-ttu-id="a5791-105">新資料行的**ColumnMapping**屬性會設定為**MappingType**。</span><span class="sxs-lookup"><span data-stu-id="a5791-105">The **ColumnMapping** property of the new column will be set to **MappingType.SimpleContent**.</span></span>  
   
- <span data-ttu-id="8149e-106">例如，請考量下列 XML。</span><span class="sxs-lookup"><span data-stu-id="8149e-106">For example, consider the following XML.</span></span>  
+ <span data-ttu-id="a5791-106">例如，請考量下列 XML。</span><span class="sxs-lookup"><span data-stu-id="a5791-106">For example, consider the following XML.</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -20,17 +20,17 @@ ms.locfileid: "61879628"
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="8149e-107">推斷程序會產生一個名為資料表**Element1**兩個資料行： **attr1**並**Element1_Text**。</span><span class="sxs-lookup"><span data-stu-id="8149e-107">The inference process will produce a table named **Element1** with two columns: **attr1** and **Element1_Text**.</span></span> <span data-ttu-id="8149e-108">**ColumnMapping**屬性**attr1**資料行都會設定為**MappingType.Attribute**。</span><span class="sxs-lookup"><span data-stu-id="8149e-108">The **ColumnMapping** property of the **attr1** column will be set to **MappingType.Attribute**.</span></span> <span data-ttu-id="8149e-109">**ColumnMapping**屬性**Element1_Text**資料行都會設定為**MappingType.SimpleContent**。</span><span class="sxs-lookup"><span data-stu-id="8149e-109">The **ColumnMapping** property of the **Element1_Text** column will be set to **MappingType.SimpleContent**.</span></span>  
+ <span data-ttu-id="a5791-107">推斷進程會產生名為**Element1**的資料表, 其中包含兩個數據行: **attr1**和**Element1_Text**。</span><span class="sxs-lookup"><span data-stu-id="a5791-107">The inference process will produce a table named **Element1** with two columns: **attr1** and **Element1_Text**.</span></span> <span data-ttu-id="a5791-108">**Attr1**資料行的**ColumnMapping**屬性會設定為**MappingType. Attribute**。</span><span class="sxs-lookup"><span data-stu-id="a5791-108">The **ColumnMapping** property of the **attr1** column will be set to **MappingType.Attribute**.</span></span> <span data-ttu-id="a5791-109">**Element1_Text**資料行的**ColumnMapping**屬性會設定為**MappingType。**</span><span class="sxs-lookup"><span data-stu-id="a5791-109">The **ColumnMapping** property of the **Element1_Text** column will be set to **MappingType.SimpleContent**.</span></span>  
   
- <span data-ttu-id="8149e-110">**資料集：** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="8149e-110">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="a5791-110">**集中**DocumentElement</span><span class="sxs-lookup"><span data-stu-id="a5791-110">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="8149e-111">**資料表：** Element1</span><span class="sxs-lookup"><span data-stu-id="8149e-111">**Table:** Element1</span></span>  
+ <span data-ttu-id="a5791-111">**目錄**Element1</span><span class="sxs-lookup"><span data-stu-id="a5791-111">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="8149e-112">attr1</span><span class="sxs-lookup"><span data-stu-id="8149e-112">attr1</span></span>|<span data-ttu-id="8149e-113">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="8149e-113">Element1_Text</span></span>|  
+|<span data-ttu-id="a5791-112">attr1</span><span class="sxs-lookup"><span data-stu-id="a5791-112">attr1</span></span>|<span data-ttu-id="a5791-113">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="a5791-113">Element1_Text</span></span>|  
 |-----------|--------------------|  
-|<span data-ttu-id="8149e-114">value1</span><span class="sxs-lookup"><span data-stu-id="8149e-114">value1</span></span>|<span data-ttu-id="8149e-115">Text1</span><span class="sxs-lookup"><span data-stu-id="8149e-115">Text1</span></span>|  
+|<span data-ttu-id="a5791-114">value1</span><span class="sxs-lookup"><span data-stu-id="a5791-114">value1</span></span>|<span data-ttu-id="a5791-115">Text1</span><span class="sxs-lookup"><span data-stu-id="a5791-115">Text1</span></span>|  
   
- <span data-ttu-id="8149e-116">如果項目包含文字，但是它的項目子系也包含文字，則不會有資料行加入資料表來儲存項目中包含的文字。</span><span class="sxs-lookup"><span data-stu-id="8149e-116">If an element contains text, but also has child elements that contain text, a column will not be added to the table to store the text contained in the element.</span></span> <span data-ttu-id="8149e-117">包含在項目中的文字會被忽略，而項目子系中的文字會被包含在資料表的資料列內。</span><span class="sxs-lookup"><span data-stu-id="8149e-117">The text contained in the element will be ignored, while the text in the child elements is included in a row in the table.</span></span> <span data-ttu-id="8149e-118">例如，請考量下列 XML。</span><span class="sxs-lookup"><span data-stu-id="8149e-118">For example, consider the following XML.</span></span>  
+ <span data-ttu-id="a5791-116">如果項目包含文字，但是它的項目子系也包含文字，則不會有資料行加入資料表來儲存項目中包含的文字。</span><span class="sxs-lookup"><span data-stu-id="a5791-116">If an element contains text, but also has child elements that contain text, a column will not be added to the table to store the text contained in the element.</span></span> <span data-ttu-id="a5791-117">包含在項目中的文字會被忽略，而項目子系中的文字會被包含在資料表的資料列內。</span><span class="sxs-lookup"><span data-stu-id="a5791-117">The text contained in the element will be ignored, while the text in the child elements is included in a row in the table.</span></span> <span data-ttu-id="a5791-118">例如，請考量下列 XML。</span><span class="sxs-lookup"><span data-stu-id="a5791-118">For example, consider the following XML.</span></span>  
   
 ```xml  
 <Element1>  
@@ -40,21 +40,21 @@ ms.locfileid: "61879628"
 </Element1>  
 ```  
   
- <span data-ttu-id="8149e-119">推斷程序會產生一個名為資料表**Element1**的資料行**ChildElement1**。</span><span class="sxs-lookup"><span data-stu-id="8149e-119">The inference process will produce a table named **Element1** with one column named **ChildElement1**.</span></span> <span data-ttu-id="8149e-120">文字**ChildElement1**項目將會包含在資料表中的資料列。</span><span class="sxs-lookup"><span data-stu-id="8149e-120">The text for the **ChildElement1** element will be included in a row in the table.</span></span> <span data-ttu-id="8149e-121">其他文字則被忽略。</span><span class="sxs-lookup"><span data-stu-id="8149e-121">The other text will be ignored.</span></span> <span data-ttu-id="8149e-122">**ColumnMapping**屬性**ChildElement1**資料行都會設定為**MappingType.Element**。</span><span class="sxs-lookup"><span data-stu-id="8149e-122">The **ColumnMapping** property of the **ChildElement1** column will be set to **MappingType.Element**.</span></span>  
+ <span data-ttu-id="a5791-119">推斷程式會產生名為**Element1**的資料表, 其中有一個名為**ChildElement1**的資料行。</span><span class="sxs-lookup"><span data-stu-id="a5791-119">The inference process will produce a table named **Element1** with one column named **ChildElement1**.</span></span> <span data-ttu-id="a5791-120">**ChildElement1**元素的文字會包含在資料表的資料列中。</span><span class="sxs-lookup"><span data-stu-id="a5791-120">The text for the **ChildElement1** element will be included in a row in the table.</span></span> <span data-ttu-id="a5791-121">其他文字則被忽略。</span><span class="sxs-lookup"><span data-stu-id="a5791-121">The other text will be ignored.</span></span> <span data-ttu-id="a5791-122">**ChildElement1**資料行的**ColumnMapping**屬性會設定為**MappingType。**</span><span class="sxs-lookup"><span data-stu-id="a5791-122">The **ColumnMapping** property of the **ChildElement1** column will be set to **MappingType.Element**.</span></span>  
   
- <span data-ttu-id="8149e-123">**資料集：** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="8149e-123">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="a5791-123">**集中**DocumentElement</span><span class="sxs-lookup"><span data-stu-id="a5791-123">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="8149e-124">**資料表：** Element1</span><span class="sxs-lookup"><span data-stu-id="8149e-124">**Table:** Element1</span></span>  
+ <span data-ttu-id="a5791-124">**目錄**Element1</span><span class="sxs-lookup"><span data-stu-id="a5791-124">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="8149e-125">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="8149e-125">ChildElement1</span></span>|  
+|<span data-ttu-id="a5791-125">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="a5791-125">ChildElement1</span></span>|  
 |-------------------|  
-|<span data-ttu-id="8149e-126">Text2</span><span class="sxs-lookup"><span data-stu-id="8149e-126">Text2</span></span>|  
+|<span data-ttu-id="a5791-126">Text2</span><span class="sxs-lookup"><span data-stu-id="a5791-126">Text2</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="8149e-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8149e-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5791-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a5791-127">See also</span></span>
 
-- [<span data-ttu-id="8149e-128">從 XML 推斷資料集關聯式結構</span><span class="sxs-lookup"><span data-stu-id="8149e-128">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [<span data-ttu-id="8149e-129">從 XML 載入資料集</span><span class="sxs-lookup"><span data-stu-id="8149e-129">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [<span data-ttu-id="8149e-130">從 XML 載入資料集結構描述資訊</span><span class="sxs-lookup"><span data-stu-id="8149e-130">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [<span data-ttu-id="8149e-131">在 DataSet 中使用 XML</span><span class="sxs-lookup"><span data-stu-id="8149e-131">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [<span data-ttu-id="8149e-132">DataSet、DataTable 和 DataView</span><span class="sxs-lookup"><span data-stu-id="8149e-132">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [<span data-ttu-id="8149e-133">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="8149e-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="a5791-128">從 XML 推斷資料集關聯式結構</span><span class="sxs-lookup"><span data-stu-id="a5791-128">Inferring DataSet Relational Structure from XML</span></span>](inferring-dataset-relational-structure-from-xml.md)
+- [<span data-ttu-id="a5791-129">從 XML 載入資料集</span><span class="sxs-lookup"><span data-stu-id="a5791-129">Loading a DataSet from XML</span></span>](loading-a-dataset-from-xml.md)
+- [<span data-ttu-id="a5791-130">從 XML 載入資料集結構描述資訊</span><span class="sxs-lookup"><span data-stu-id="a5791-130">Loading DataSet Schema Information from XML</span></span>](loading-dataset-schema-information-from-xml.md)
+- [<span data-ttu-id="a5791-131">在 DataSet 中使用 XML</span><span class="sxs-lookup"><span data-stu-id="a5791-131">Using XML in a DataSet</span></span>](using-xml-in-a-dataset.md)
+- [<span data-ttu-id="a5791-132">DataSet、DataTable 和 DataView</span><span class="sxs-lookup"><span data-stu-id="a5791-132">DataSets, DataTables, and DataViews</span></span>](index.md)
+- [<span data-ttu-id="a5791-133">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="a5791-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
