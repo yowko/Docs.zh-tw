@@ -44,10 +44,10 @@ eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS �
 - **Martin Fowler：CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Greg Young。CQRS Documents** \ (CQRS 文件)
+- **Greg Young。CQRS 文件** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
-- **Udi Dahan.Clarified CQRS** \ (已釐清的 CQRS)
+- **Udi Dahan.已釐清的 CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
