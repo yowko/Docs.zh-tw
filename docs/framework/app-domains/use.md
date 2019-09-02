@@ -9,11 +9,11 @@ ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742467"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "61674882"
 ---
 # <a name="using-application-domains"></a>使用應用程式定義域
 應用程式定義域為 Common Language Runtime 提供隔離單位。 它們是在處理序內建立和執行。 應用程式定義域通常是由執行階段主機所建立，這是負責將執行階段載入處理序以及在應用程式定義域中執行使用者程式碼的應用程式。 執行階段主機會建立處理序和預設的應用程式定義域，在內部執行 Managed 程式碼。 執行階段主機包括 ASP.NET、Microsoft Internet Explorer 和 Windows 殼層。  
@@ -21,13 +21,13 @@ ms.locfileid: "32742467"
  大部分的應用程式不需要建立自己的應用程式定義域，執行階段主機會為您建立任何必要的應用程式定義域。 但如果您的應用程式需要隔離程式碼或使用及卸載 DLL，您可以建立及設定其他應用程式定義域。  
   
 ## <a name="in-this-section"></a>本節內容  
- [操作說明：建立應用程式定義域](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+ [如何：建立應用程式定義域](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
  描述如何以程式設計方式建立應用程式定義域。  
   
- [操作說明：卸載應用程式定義域](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+ [如何：卸載應用程式定義域](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
  描述如何以程式設計方式卸載應用程式定義域。  
   
- [操作說明：設定應用程式定義域](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+ [如何：設定應用程式定義域](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
  提供設定應用程式定義域的簡介。  
   
  [從應用程式定義域擷取安裝資訊](../../../docs/framework/app-domains/retrieve-setup-information.md)  
@@ -36,13 +36,13 @@ ms.locfileid: "32742467"
  [如何：將組件載入應用程式定義域](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
  說明如何將組件載入應用程式定義域。  
   
- [操作說明：從組件中取得類型和成員資訊](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [如何：從組件中取得類型和成員資訊](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
  說明如何擷取組件的相關資訊。  
   
  [陰影複製組件](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
  說明陰影複製如何在使用組件時更新組件，以及如何設定陰影複製。  
   
- [操作說明：接收第一個可能發生的例外狀況通知](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
+ [如何：接收第一個可能發生的例外狀況通知](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
  說明您如何在 Common Language Runtime 開始搜尋例外狀況處理常式之前，收到已擲回例外狀況的通知。  
   
  [解析組件載入](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
@@ -66,4 +66,4 @@ ms.locfileid: "32742467"
  提供應用程式定義域的概觀。  
   
  [反映概觀](../../../docs/framework/reflection-and-codedom/reflection.md)  
- 描述如何使用「反映」類別，以取得組件的相關資訊。
+ 描述如何使用「反映」  類別，以取得組件的相關資訊。
