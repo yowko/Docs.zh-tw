@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 77bf117b8835623d768f8b8b0ec3e4195174cad7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 105537a5fccef6de7266407c78cc915f8c5d8678
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043954"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204053"
 ---
 # <a name="adding-columns-to-a-datatable"></a>將資料行加入至 DataTable
 包含資料表的 Columns 屬性<xref:System.Data.DataColumn>所參考之物件的集合。 <xref:System.Data.DataTable> 這個資料行集合 (可搭配任何條件約束) 可定義資料表的結構描述 (或結構)。  
@@ -44,7 +44,7 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- 在此範例中, 請注意, **CustID**資料行的屬性會設定為不允許**DBNull**值, 並將值限制為唯一。 不過, 如果您將**CustID**資料行定義為數據表的主鍵資料行, 則**AllowDBNull**屬性會自動設為**false** , 而**Unique**屬性會自動設定為**true**。 如需詳細資訊, 請參閱[定義主要索引鍵](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
+ 在此範例中, 請注意, **CustID**資料行的屬性會設定為不允許**DBNull**值, 並將值限制為唯一。 不過, 如果您將**CustID**資料行定義為數據表的主鍵資料行, 則**AllowDBNull**屬性會自動設為**false** , 而**Unique**屬性會自動設定為**true**。 如需詳細資訊, 請參閱[定義主要索引鍵](defining-primary-keys.md)。  
   
 > [!CAUTION]
 > 如果未提供資料行的資料行名稱, 則在將資料行新增至**DataColumnCollection**時, 會為數據行指定遞增的預設名稱 *(* 從 "Column1" 開始)。 當您提供資料行名稱時, 建議您避免「資料行*N*」的命名慣例, 因為您所提供的名稱可能會與**DataColumnCollection**中現有的預設資料行名稱相衝突。 如果提供的名稱已經存在，便會發生例外狀況。  
@@ -56,6 +56,6 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
-- [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable 結構描述定義](datatable-schema-definition.md)
+- [DataTable](datatables.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

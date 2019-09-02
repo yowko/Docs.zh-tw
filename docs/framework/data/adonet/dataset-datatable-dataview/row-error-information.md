@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af000d104a3b0821e69f11c1bce1392f04fe8f5e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607562"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203232"
 ---
 # <a name="row-error-information"></a>資料列錯誤資訊
-編輯 <xref:System.Data.DataTable> 中的值時，若要避免必須在每次發生資料列錯誤時都回應，則可以將錯誤資訊加入至資料列中，供日後使用。 針對這項用途，<xref:System.Data.DataRow> 物件會為每個資料列提供 <xref:System.Data.DataRow.RowError%2A> 屬性。 將資料加入至**RowError**屬性**DataRow**設定<xref:System.Data.DataRow.HasErrors%2A>屬性**DataRow**至**true**。 如果**DataRow**屬於**DataTable**，並**DataRow.HasErrors**是**true**， **DataTable.HasErrors**屬性也是 **，則為 true**。 這同樣適用於**資料集**要**DataTable**所屬。 在測試是否有錯誤時，您可以檢查**HasErrors**屬性來判斷錯誤資訊是否已新增至任何資料列。 如果**HasErrors**是 **，則為 true**，您可以使用<xref:System.Data.DataTable.GetErrors%2A>方法**DataTable**傳回和檢查的錯誤，資料列，如下列範例所示。  
+編輯 <xref:System.Data.DataTable> 中的值時，若要避免必須在每次發生資料列錯誤時都回應，則可以將錯誤資訊加入至資料列中，供日後使用。 針對這項用途，<xref:System.Data.DataRow> 物件會為每個資料列提供 <xref:System.Data.DataRow.RowError%2A> 屬性。 將資料加入至**datarow**的**RowError**屬性時, 會<xref:System.Data.DataRow.HasErrors%2A>將**datarow**的屬性設為**true**。 如果**datarow**是**DataTable**的一部分, 而**datarow. HasErrors**為**true**, 則**HasErrors**屬性也是**true**。 這也適用于**DataTable**所屬的**資料集**。 測試錯誤時, 您可以檢查**HasErrors**屬性來判斷是否已將錯誤資訊加入任何資料列中。 如果**HasErrors**為**true**, 則您<xref:System.Data.DataTable.GetErrors%2A>可以使用**DataTable**的方法來傳回和檢查只有錯誤的資料列, 如下列範例所示。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -82,5 +82,5 @@ protected static void OnRowChanged(
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
-- [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [在 DataTable 中操作資料](manipulating-data-in-a-datatable.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

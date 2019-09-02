@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 56f6e13763b5230e046c0838892393b3672a54be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8bff92fe40ec668dfa634c3b97f2f1df238f159b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937046"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203959"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>將 XSLT 轉換套用至 DataSet
 的**WriteXml**方法<xref:System.Data.DataSet>可讓您將**資料集**的內容撰寫為 XML 資料。 接下來，通用工作會使用 XML 轉換 (XSLT)，將這個 XML 轉換為另一種格式。 <xref:System.Xml.XmlDataDocument>不過, 使用同步處理**資料集**可讓您將 XSLT 樣式表單套用至**資料集**的內容, 而不需要先使用**WriteXml**將**資料集**的內容寫入為 XML 資料。  
@@ -59,7 +59,7 @@ ms.locfileid: "69937046"
  下列程式碼會填入**資料集**, 並套用 XSLT 樣式表單。  
   
 > [!NOTE]
-> 如果您要將 XSLT 樣式表單套用至包含關聯性的**資料集**, 如果您將每個嵌套關聯的的**Nested** <xref:System.Data.DataRelation>屬性設定為**true** , 就能達到最佳效能。 這樣您就可以使用一般由上往下執行的 XSLT 樣式表，而不使用增強效能的 XPath 位置軸 (例如，樣式表中之前和之後同層級節點測試運算式)，來巡覽階層並轉換資料。 如需有關嵌套關聯的詳細資訊, 請參閱 nested [datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
+> 如果您要將 XSLT 樣式表單套用至包含關聯性的**資料集**, 如果您將每個嵌套關聯的的**Nested** <xref:System.Data.DataRelation>屬性設定為**true** , 就能達到最佳效能。 這樣您就可以使用一般由上往下執行的 XSLT 樣式表，而不使用增強效能的 XPath 位置軸 (例如，樣式表中之前和之後同層級節點測試運算式)，來巡覽階層並轉換資料。 如需有關嵌套關聯的詳細資訊, 請參閱 nested [datarelation](nesting-datarelations.md)。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,5 +125,5 @@ writer.Close();
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料集和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [資料集和 XmlDataDocument 同步處理](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
