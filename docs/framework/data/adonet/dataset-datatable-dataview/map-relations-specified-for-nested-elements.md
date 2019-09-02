@@ -2,17 +2,17 @@
 title: 針對巢狀項目指定的關聯進行對應
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: cd0fd66fe70be4b8dea14ac7420e95c4b8bb1158
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 510a5e676df7bac274c6086b94e9a23e7540da20
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604008"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204644"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>針對巢狀項目指定的關聯進行對應
-結構描述可以包含**msdata: relationship**註釋，明確指定結構描述中任何兩個項目之間的對應。 中指定的兩個元素**msdata: relationship**可以巢狀方式置於結構描述，但並不需要。 對應處理會使用**msdata: relationship**結構描述產生主索引鍵/外部索引鍵關聯性之間的兩個資料行中。  
+架構可以包含**msdata: Relationship**注釋, 以明確指定架構中任何兩個元素之間的對應。 **Msdata: Relationship**中指定的兩個元素可以嵌套在架構中, 但不一定要是。 對應進程會在架構中使用**msdata: Relationship** , 以產生兩個數據行之間的主鍵/外鍵關聯性。  
   
- 下列範例顯示 XML 結構描述所在**OrderDetail**項目是子元素**順序**。 **Msdata: relationship**識別此父子式關聯性，並指定**OrderNumber**產生的資料行**順序**相關資料表**OrderNo**產生的資料行**OrderDetail**資料表。  
+ 下列範例顯示 XML 架構, 其中**OrderDetail**元素是**Order**的子專案。 **Msdata: Relationship**會識別此父子式關聯性, 並指定產生之**Order**資料表的**OrderNumber**資料行與產生的**OrderDetail**資料表的**OrderNo**資料行相關聯。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,14 +54,14 @@ ms.locfileid: "64604008"
   
  XML 結構描述對應處理序會在 <xref:System.Data.DataSet> 內建立下列各項：  
   
-- **順序**並**OrderDetail**資料表。  
+- **Order**和**OrderDetail**資料表。  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- 之間的關聯性**順序**並**OrderDetail**資料表。 **巢狀**此關聯性的屬性設定為 **，則為 True**因為**Order**並**OrderDetail**元素的巢狀結構描述中.  
+- **Order**和**OrderDetail**資料表之間的關聯性。 此關聯性的**Nested**屬性會設定為**True** , 因為**Order**和**OrderDetail**專案會嵌套在架構中。  
   
     ```  
     ParentTable: Order  
@@ -76,6 +76,6 @@ ms.locfileid: "64604008"
   
 ## <a name="see-also"></a>另請參閱
 
-- [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [從 XML 結構描述 (XSD) 產生資料集關聯](generating-dataset-relations-from-xml-schema-xsd.md)
+- [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

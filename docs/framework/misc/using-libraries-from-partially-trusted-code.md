@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e08cb1b3f4708b4314f0cd663f70fa10aaa1aded
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 50428e4e28df812a3a0c985d0d1876dab7b5279c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910677"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206024"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>從部分受信任程式碼使用程式庫
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
-> 本主題說明強式名稱元件的行為, 並且只適用于[層級 1](../../../docs/framework/misc/security-transparent-code-level-1.md)元件。 [安全性透明的程式碼、](../../../docs/framework/misc/security-transparent-code-level-2.md) .NET Framework 4 或更新版本中的層級2元件不會受到強式名稱的影響。 如需安全性系統變更的詳細資訊, 請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
+> 本主題說明強式名稱元件的行為, 並且只適用于[層級 1](security-transparent-code-level-1.md)元件。 [安全性透明的程式碼、](security-transparent-code-level-2.md) .NET Framework 4 或更新版本中的層級2元件不會受到強式名稱的影響。 如需安全性系統變更的詳細資訊, 請參閱[安全性變更](../security/security-changes.md)。  
   
- 從其主機或沙箱獲得低於完全信任的應用程式不允許呼叫共用 Managed 程式庫，除非程式庫撰寫者透過使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 來特別允許它們。 因此，應用程式撰寫者必須知道有些程式庫將無法從部分信任的內容使用它們。 根據預設, 在部分信任的[沙箱](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中執行且不在完全信任元件清單中的所有程式碼, 都是部分信任的。 如果您不希望從部分信任的內容中執行您的程式碼，或由部分信任程式碼呼叫您的程式碼，不必顧慮這一節中的資訊。 不過，如果您撰寫的程式碼必須與部分信任的程式碼互動，或從部分信任的內容操作，則應該考慮下列因素：  
+ 從其主機或沙箱獲得低於完全信任的應用程式不允許呼叫共用 Managed 程式庫，除非程式庫撰寫者透過使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 來特別允許它們。 因此，應用程式撰寫者必須知道有些程式庫將無法從部分信任的內容使用它們。 根據預設, 在部分信任的[沙箱](how-to-run-partially-trusted-code-in-a-sandbox.md)中執行且不在完全信任元件清單中的所有程式碼, 都是部分信任的。 如果您不希望從部分信任的內容中執行您的程式碼，或由部分信任程式碼呼叫您的程式碼，不必顧慮這一節中的資訊。 不過，如果您撰寫的程式碼必須與部分信任的程式碼互動，或從部分信任的內容操作，則應該考慮下列因素：  
   
 - 程式庫必須使用強式名稱簽署，才能由多個應用程式共用。 強式名稱可讓您的程式碼放入全域組件快取，或加入沙箱環境 <xref:System.AppDomain> 的完全信任清單中，並允許取用者驗證行動程式碼的特定部分確實來自您。  
   
-- 根據預設, 強式名稱[層級 1](../../../docs/framework/misc/security-transparent-code-level-1.md)共用程式庫會自動執行完全信任的隱含[LinkDemand](../../../docs/framework/misc/link-demands.md) , 而不需要程式庫撰寫者執行任何動作。  
+- 根據預設, 強式名稱[層級 1](security-transparent-code-level-1.md)共用程式庫會自動執行完全信任的隱含[LinkDemand](link-demands.md) , 而不需要程式庫撰寫者執行任何動作。  
   
 - 如果呼叫端沒有完全信任，但仍嘗試呼叫這類程式庫，執行階段會擲回 <xref:System.Security.SecurityException>，且不允許呼叫端連結程式庫。  
   
@@ -53,4 +53,4 @@ ms.locfileid: "69910677"
   
 ## <a name="see-also"></a>另請參閱
 
-- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)
+- [程式碼存取安全性](code-access-security.md)

@@ -2,24 +2,24 @@
 title: 將 unique XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 650cd6b8b8149529f115f22a11d19178fbd6d302
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 231f23ccf47f60b902fdd5c66b63fe1a750445f9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785368"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203412"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 unique XML 結構描述 (XSD) 條件約束對應至資料集條件約束
-中的 XML 結構描述定義語言 (XSD) 結構描述**唯一**項目會指定元素或屬性的唯一性條件約束。 在將 XML 結構描述轉譯到關聯式結構描述的處理序中，會將 XML 結構描述內項目或屬性上指定的唯一的條件約束 (Constraint)，對應到所產生的對應 <xref:System.Data.DataTable> 內 <xref:System.Data.DataSet> 的唯一的條件約束。  
+在 XML 架構定義語言 (XSD) 架構中, **unique**專案會指定元素或屬性的唯一性條件約束。 在將 XML 結構描述轉譯到關聯式結構描述的處理序中，會將 XML 結構描述內項目或屬性上指定的唯一的條件約束 (Constraint)，對應到所產生的對應 <xref:System.Data.DataTable> 內 <xref:System.Data.DataSet> 的唯一的條件約束。  
   
- 下表列出**msdata**您可以在指定的屬性**唯一**項目。  
+ 下表列出您可以在**unique**元素中指定的**msdata**屬性。  
   
 |屬性名稱|描述|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|如果指定這個屬性，則它的值會被當成條件約束名稱使用。 否則，請**名稱**屬性提供值的條件約束名稱。|  
-|**msdata:PrimaryKey**|如果`PrimaryKey="true"`存在於**唯一**項目，唯一的條件約束會建立具有**IsPrimaryKey**屬性設為**true**。|  
+|**msdata:ConstraintName**|如果指定這個屬性，則它的值會被當成條件約束名稱使用。 否則, **name**屬性會提供條件約束名稱的值。|  
+|**msdata:PrimaryKey**|如果`PrimaryKey="true"` **unique**元素中有, 則會建立 unique 條件約束, 並將**IsPrimaryKey**屬性設定為**true**。|  
   
- 下列範例示範使用 XML 結構描述**唯一**項目指定唯一性條件約束。  
+ 下列範例顯示使用**unique**專案指定唯一性條件約束的 XML 架構。  
   
 ```xml  
 <xs:schema id="SampleDataSet"   
@@ -48,13 +48,13 @@ ms.locfileid: "61785368"
 </xs:schema>  
 ```  
   
- **唯一**結構描述中的項目指定所有**客戶**文件中的項目執行個體的值**CustomerID**必須是唯一的子元素。 在建置**資料集**，對應處理序讀取這個結構描述，並產生下表：  
+ 架構中的**unique**元素會針對檔實例中的所有**Customers**元素指定, **CustomerID**子項目的值必須是唯一的。 在建立**資料集**時, 對應進程會讀取此架構, 並產生下列資料表:  
   
 ```  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- 對應處理序也上建立 unique 條件約束**CustomerID**資料行，如下所示**DataSet**。 (為了便於了解，此處僅顯示相關屬性)。  
+ 對應進程也會在**CustomerID**資料行上建立 unique 條件約束, 如下列**資料集**所示。 (為了便於了解，此處僅顯示相關屬性)。  
   
 ```  
       DataSetName: MyDataSet  
@@ -68,11 +68,11 @@ TableName: Customers
       IsPrimaryKey: False  
 ```  
   
- 在 **資料集**產生， **IsPrimaryKey**屬性設定為**False**唯一條件約束。 **唯一**資料行上的屬性是指出**CustomerID**資料行的值必須是唯一 (但可以是 null 參考，必須按照**AllowDBNull**屬性的資料行）。  
+ 在產生的**資料集中**, unique 條件約束的**IsPrimaryKey**屬性會設定為**False** 。 資料行上的**unique**屬性工作表示**CustomerID**資料行值必須是唯一的 (但它們可以是 null 參考, 如資料行的**AllowDBNull**屬性所指定)。  
   
- 如果您修改結構描述，並將選用**msdata**屬性值來 **，則為 True**，資料表上建立 unique 條件約束。 **AllowDBNull**資料行屬性設定為**False**，而**IsPrimaryKey**屬性設定為條件約束**True**，即可使**CustomerID**資料行主索引鍵資料行。  
+ 如果您修改架構, 並將選擇性的**msdata: PrimaryKey**屬性值設定為**True**, 則會在資料表上建立 unique 條件約束。 **AllowDBNull**資料行屬性設定為**False**, 而條件約束的**IsPrimaryKey**屬性設定為**True**, 因此**CustomerID**資料行是主鍵資料行。  
   
- 您可以在 XML 結構描述中，將唯一的條件約束指定給合併的項目或屬性。 下列範例示範如何指定，多種**CustomerID**並**CompanyName**的值必須是唯一的所有**客戶**在任何情況下，由新增另一個**customers**結構描述中的項目。  
+ 您可以在 XML 結構描述中，將唯一的條件約束指定給合併的項目或屬性。 下列範例示範如何在架構中加入另一個**xs: field**元素, 以指定在任何實例中, 所有**客戶**的**CustomerID**和**名稱**值的組合都必須是唯一的。  
   
 ```xml  
       <xs:unique     
@@ -84,7 +84,7 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- 這是建立在產生的條件約束**資料集**。  
+ 這是在產生的**資料集中**建立的條件約束。  
   
 ```  
 ConstraintName: SomeName  
@@ -95,6 +95,6 @@ ConstraintName: SomeName
   
 ## <a name="see-also"></a>另請參閱
 
-- [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [從 XML 結構描述 (XSD) 產生資料集關聯](generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

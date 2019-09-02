@@ -2,12 +2,12 @@
 title: dotnet migrate 命令
 description: dotnet migrate 命令會移轉專案及其所有相依性。
 ms.date: 06/26/2019
-ms.openlocfilehash: 3304f666d15d9188cdae76a401747d91791f817f
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 86f11592e774da12b010886aaa1e30cee063fea6
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539391"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202529"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -26,7 +26,7 @@ ms.locfileid: "67539391"
 
 ## <a name="synopsis"></a>概要
 
-```
+```console
 dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
 dotnet migrate [-h|--help]
 ```

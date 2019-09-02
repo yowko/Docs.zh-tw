@@ -2,12 +2,12 @@
 title: 交易處理
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-ms.openlocfilehash: dc032746b265a3e781898beb823be0d1bcf1abea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de88247e5916ab6e080c4de361efecee0b193e18
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793662"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205915"
 ---
 # <a name="transaction-processing"></a>交易處理
 當您從線上書店購買一本書時，您以金錢來交易書籍 (以信用方式來支付)。 如果您的信用良好，接下來的一系列作業流程會確保您收到這本書，同時確保書店收到您支付的錢。 但是，如果在一系列交易過程中有任何一個環節出錯，整個交易就會失敗。 您將拿不到書，而書店也無法收到您支付的錢。  
@@ -19,10 +19,10 @@ ms.locfileid: "61793662"
  本節將提供有關交易處理的一般資訊，以及如何使用 Microsoft .NET Framework 來撰寫交易式應用程式與資源管理員的特定資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [交易基礎概念](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
+ [交易基礎概念](transaction-fundamentals.md)  
  簡介基礎交易處理名詞與概念。  
   
- [System.Transactions 所提供的功能](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)  
+ [System.Transactions 所提供的功能](features-provided-by-system-transactions.md)  
  討論如何使用 System.Transactions 中的各項功能來撰寫自己的交易式應用程式。  
   
 ## <a name="reference"></a>參考資料  

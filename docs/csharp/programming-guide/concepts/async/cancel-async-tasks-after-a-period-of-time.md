@@ -2,12 +2,12 @@
 title: 在一段時間後取消非同步工作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: e00ff51e987275c6c84822f7095c82ed03b53176
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 110c4700d0d2afc87f9144bf258cdd4991f107f4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595753"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204342"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>在一段時間後取消非同步工作 (C#)
 
@@ -76,7 +76,7 @@ private async void startButton_Click(object sender, RoutedEventArgs e)
 
  執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。 下列輸出是範例。
 
-```
+```output
 Length of the downloaded string: 35990.
 
 Length of the downloaded string: 407399.

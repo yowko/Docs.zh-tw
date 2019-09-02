@@ -4,12 +4,12 @@ description: 了解如何使用.NET Portability Analyzer 工具來評估程式�
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433943"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107509"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -17,11 +17,11 @@ ms.locfileid: "68433943"
 
 ## <a name="common-targets"></a>常見目標
 
-* [.NET Core](../../core/index.md)：具有模組化的設計，採用並存，並且適合在跨平台的情況下使用。 並存可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。 如果您的目標，是要將應用程式移植到 .NET Core 來支援跨平台，這是建議的目標。 
-* .[NET Standard](../../standard/net-standard.md)：包含在所有 .NET 實作上提供的 .NET Standard API。 如果您的目標，是讓程式庫在所有支援 .NET 的平台上執行，這是建議的目標。  
-* [ASP.NET Core](/aspnet/core)：建置於 .NET Core 的新式 Web 架構。 如果您的目標，是要將 Web 應用程式移植到 .NET Core 來支援多平台，這是建議的目標。
-* .NET Core + [平台延伸模組](../../core/porting/windows-compat-pack.md)：包含 .NET Core API 以及 Windows 相容性套件，可提供許多 .NET Framework 的可用技術。 如需將您的應用程式從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。
-* .NET Standard + [平台延伸模組](../../core/porting/windows-compat-pack.md)：包含 .NET Standard API 以及 Windows 相容性套件，可提供許多 .NET Framework 的可用技術。 如需將您的程式庫從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。
+- [.NET Core](../../core/index.md)：具有模組化的設計，採用並存，並且適合在跨平台的情況下使用。 並存可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。 如果您的目標，是要將應用程式移植到 .NET Core 來支援跨平台，這是建議的目標。 
+- .[NET Standard](../../standard/net-standard.md)：包含在所有 .NET 實作上提供的 .NET Standard API。 如果您的目標，是讓程式庫在所有支援 .NET 的平台上執行，這是建議的目標。  
+- [ASP.NET Core](/aspnet/core)：建置於 .NET Core 的新式 Web 架構。 如果您的目標，是要將 Web 應用程式移植到 .NET Core 來支援多平台，這是建議的目標。
+- .NET Core + [平台延伸模組](../../core/porting/windows-compat-pack.md)：包含 .NET Core API 以及 Windows 相容性套件，可提供許多 .NET Framework 的可用技術。 如需將您的應用程式從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。
+- .NET Standard + [平台延伸模組](../../core/porting/windows-compat-pack.md)：包含 .NET Standard API 以及 Windows 相容性套件，可提供許多 .NET Framework 的可用技術。 如需將您的程式庫從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>如何使用 .NET 可攜性分析器
 
@@ -38,9 +38,9 @@ ms.locfileid: "68433943"
 
 您也可以使用 [ApiPort 主控台應用程式](https://aka.ms/apiportdownload)。 
 
-* 輸入下列命令分析目前的目錄︰`ApiPort.exe analyze -f .`
-* 若要分析特定的 .dll 檔案清單，請輸入下列命令︰`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-* 執行 `ApiPort.exe -?` 以取得詳細說明
+- 輸入下列命令分析目前的目錄︰`ApiPort.exe analyze -f .`
+- 若要分析特定的 .dll 檔案清單，請輸入下列命令︰`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- 執行 `ApiPort.exe -?` 以取得詳細說明
 
 建議您納入所有您擁有並想要移植的相關 exe 與 dll 檔案，並排除應用程式所依賴，但您未擁有也無法移植的檔案。 這會提供您最相關的可攜性報告。  
 

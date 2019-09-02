@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910714"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206087"
 ---
 # <a name="security-transparent-code-level-1"></a>安全性透明的程式碼, 層級1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 從 .NET Framework 4 開始, 您可以使用[層級2透明度](../../../docs/framework/misc/security-transparent-code-level-2.md)。 不過, 層級1透明度已保留, 因此您可以識別必須以先前的安全性規則執行的舊版程式碼。  
+ 透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 從 .NET Framework 4 開始, 您可以使用[層級2透明度](security-transparent-code-level-2.md)。 不過, 層級1透明度已保留, 因此您可以識別必須以先前的安全性規則執行的舊版程式碼。  
   
 > [!IMPORTANT]
 > 您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 針對 .NET Framework 4 所開發的程式碼, 請一律使用層級2透明度。  
@@ -61,7 +61,7 @@ ms.locfileid: "69910714"
 ## <a name="transparency-attributes"></a>透明度屬性  
  下表說明您可以用來標註程式碼透明度的三個屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|僅在該組件層級受允許。 將該組件中的所有類型和成員都識別為安全性透明。 該組件不能包含任何安全性關鍵程式碼。|  
 |<xref:System.Security.SecurityCriticalAttribute>|在無 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 屬性的組件層級使用時，根據預設，會將組件中的所有程式碼識別為安全性透明，但也表示該組件可能包含安全性關鍵程式碼。<br /><br /> 在類別層級使用時，會將類別或方法識別為安全性關鍵，而不是識別類別的成員。 若要將所有成員都設成安全性關鍵，請將 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 屬性設為 <xref:System.Security.SecurityCriticalScope.Everything>。<br /><br /> 在成員層級使用時，該屬性只適用於該成員。<br /><br /> 已識別為安全性關鍵的類別或成員可以執行權限提高。 **重要：** 在層級 1 透明度，從組件外部呼叫安全性關鍵類型和成員時，可以將它們視為安全性安全關鍵。 您應該使用完全信任的連結要求來保護安全性關鍵類型和成員，以避免未經授權的權限提高。|  
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全性透明的程式碼, 層級2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [安全性變更](../../../docs/framework/security/security-changes.md)
+- [安全性透明的程式碼, 層級2](security-transparent-code-level-2.md)
+- [安全性變更](../security/security-changes.md)

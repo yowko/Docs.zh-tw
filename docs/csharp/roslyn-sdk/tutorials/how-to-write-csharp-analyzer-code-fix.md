@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870554"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105763"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -18,8 +18,8 @@ ms.locfileid: "67870554"
 
 ## <a name="prerequisites"></a>必要條件
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-* [Visual Studio 2019](https://www.visualstudio.com/downloads)
+- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
 您必須透過 Visual Studio 安裝程式來安裝 **.NET Compiler Platform SDK**：
 
@@ -51,9 +51,9 @@ Console.WriteLine(x);
 
 其中涉及用以判斷變數是否可設為常數的分析，這需要進行語法分析、初始設定式運算式的常數分析，和資料流程分析，以確保一律不會寫入變數。 .NET Compiler Platform 所提供的 API 可讓您更輕鬆地執行這項分析。 第一個步驟是建立新的 C# **具有程式碼修正的分析器**專案。
 
-* 在 Visual Studio 中選擇 [檔案] > [新增] > [專案...]  ，以顯示 [新增專案] 對話方塊。
-* 在 [Visual C# > 擴充性]  下方，選擇 [具有程式碼修正的分析器 (.NET Standard)]  。
-* 將您的專案命名為 "**MakeConst**"，然後按一下 [確定]。
+- 在 Visual Studio 中選擇 [檔案] > [新增] > [專案...]  ，以顯示 [新增專案] 對話方塊。
+- 在 [Visual C# > 擴充性]  下方，選擇 [具有程式碼修正的分析器 (.NET Standard)]  。
+- 將您的專案命名為 "**MakeConst**"，然後按一下 [確定]。
 
 具有程式碼修正範本的分析器會建立三個專案：一個包含分析器和程式碼修正，第二個是單元測試專案，第三個則是 VSIX 專案。 預設啟始專案為 VSIX 專案。 按 **F5** 以啟動 VSIX 專案。 這會啟動已載入新分析器的第二個 Visual Studio 執行個體。
 
@@ -77,8 +77,8 @@ Console.WriteLine(x);
 
 範本會在 **MakeConstAnalyzer.cs** 檔案中建立初始 `DiagnosticAnalyzer` 類別，。 此初始分析器會顯示每個分析器的兩個重要屬性。
 
-* 每個診斷分析器都必須提供 `[DiagnosticAnalyzer]` 屬性，以說明它據以運作的語言。
-* 每個診斷分析器都必須衍生自 <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> 類別。
+- 每個診斷分析器都必須提供 `[DiagnosticAnalyzer]` 屬性，以說明它據以運作的語言。
+- 每個診斷分析器都必須衍生自 <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> 類別。
 
 範本也會顯示屬於任何分析器的基本功能：
 
@@ -89,9 +89,9 @@ Console.WriteLine(x);
 
 第一個步驟是更新註冊常數和 `Initialize` 方法，讓這些常數表示您的「設為常數」分析器。 大部分的字串常數都會定義在字串資源檔中。 您應遵循該作法，以方便當地語系化。 開啟 **MakeConst** 分析器專案的 **Resources.resx** 檔案。 這會顯示資源編輯器。 更新字串資源，如下所示：
 
-* 將 `AnalyzerTitle` 變更為「變數可設為常數」。
-* 將 `AnalyzerMessageFormat` 變更為「可設為常數」。
-* 將 `AnalyzerDescription` 變更為「設為常數」。
+- 將 `AnalyzerTitle` 變更為「變數可設為常數」。
+- 將 `AnalyzerMessageFormat` 變更為「可設為常數」。
+- 將 `AnalyzerDescription` 變更為「設為常數」。
 
 此外，請將 [存取修飾詞]  下拉式清單變更為 `public`。 這可以讓這些常數在單元測試中更易於使用。 完成作業後，資源編輯器應會如下圖所示：
 
@@ -329,15 +329,15 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 這項測試也會通過。 接著，為您尚未處理的狀況新增常數：
 
-* 因為已是常數，而已經是 `const` 的宣告：
+- 因為已是常數，而已經是 `const` 的宣告：
 
    [!code-csharp[already const declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
-* 因為沒有可使用的值，而沒有初始設定式的宣告：
+- 因為沒有可使用的值，而沒有初始設定式的宣告：
 
    [!code-csharp[declarations that have no initializer](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
-* 因為不可以是編譯時期常數，因此初始設定式不是常數的宣告：
+- 因為不可以是編譯時期常數，因此初始設定式不是常數的宣告：
 
    [!code-csharp[declarations where the initializer isn't const](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
@@ -364,9 +364,9 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 您需要為分析器的 `AnalyzeNode` 方法加入某些功能，以篩選出符合這些條件的程式碼。 這些全都是相關條件，因此類似的變更將會修正所有的此類條件。 對 `AnalyzeNode` 進行下列變更：
 
-* 您的語意分析檢查了單一變數宣告。 此程式碼必須位於會對在相同陳述式中宣告的所有變數進行檢查的 `foreach` 迴圈中。
-* 每個宣告的變數都必須有初始設定式。
-* 每個宣告變數的初始設定式都必須是編譯時期常數。
+- 您的語意分析檢查了單一變數宣告。 此程式碼必須位於會對在相同陳述式中宣告的所有變數進行檢查的 `foreach` 迴圈中。
+- 每個宣告的變數都必須有初始設定式。
+- 每個宣告變數的初始設定式都必須是編譯時期常數。
 
 在您的 `AnalyzeNode` 方法中，替換掉原始的語意分析：
 
@@ -487,11 +487,11 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 
 您必須在程式碼修正提供者中撰寫更多程式碼，以將 var 的關鍵字取代為正確的類型名稱。 返回 **CodeFixProvider.cs**。 您將新增的程式碼會執行下列步驟：
 
-* 檢查宣告是否為 `var` 宣告，如果是則：
-* 為推斷的類型建立新類型。
-* 確定類型宣告不是別名。 若是如此，則可以宣告 `const var`。
-* 確定 `var` 不是此程式中的類型名稱。 (若是如此，則 `const var` 合法)。
-* 簡化完整類型名稱
+- 檢查宣告是否為 `var` 宣告，如果是則：
+- 為推斷的類型建立新類型。
+- 確定類型宣告不是別名。 若是如此，則可以宣告 `const var`。
+- 確定 `var` 不是此程式中的類型名稱。 (若是如此，則 `const var` 合法)。
+- 簡化完整類型名稱
 
 程式碼看似不少。 其實並不然。 請將宣告和初始化 `newLocal` 的那一行取代為下列程式碼。 它會 `newModifiers` 初始化之後立即執行：
 
@@ -505,10 +505,10 @@ using Microsoft.CodeAnalysis.Simplification;
 
 執行測試，應該全部都會通過。 請執行您完成的分析器，這值得自傲。 按 Ctrl+F5，在已載入 Roslyn Preview 延伸模組的第二個 Visual Studio 執行個體中執行分析器專案。
 
-* 在第二個 Visual Studio 執行個體中建立新的 C# 主控台應用程式專案，並將 `int x = "abc";` 新增至 Main 方法。 由於有第一個 Bug 修正，系統應該不會針對此區域變數宣告發出警告 (雖然如預期發生了編譯器錯誤)。
-* 接著，將 `object s = "abc";` 新增至 Main 方法。 由於有第二個 Bug 修正，應該不會出現警告。
-* 最後，新增另一個使用 `var` 關鍵字的區域變數。 您會看到回報的警告，且左下方會出現建議。
-* 請將編輯器插入號移至波浪底線上方，然後按 Ctrl+， 以顯示建議的程式碼修正。 選取您的程式碼修正時，請留意 var 的關鍵字現在已可正確處理。
+- 在第二個 Visual Studio 執行個體中建立新的 C# 主控台應用程式專案，並將 `int x = "abc";` 新增至 Main 方法。 由於有第一個 Bug 修正，系統應該不會針對此區域變數宣告發出警告 (雖然如預期發生了編譯器錯誤)。
+- 接著，將 `object s = "abc";` 新增至 Main 方法。 由於有第二個 Bug 修正，應該不會出現警告。
+- 最後，新增另一個使用 `var` 關鍵字的區域變數。 您會看到回報的警告，且左下方會出現建議。
+- 請將編輯器插入號移至波浪底線上方，然後按 Ctrl+， 以顯示建議的程式碼修正。 選取您的程式碼修正時，請留意 var 的關鍵字現在已可正確處理。
 
 最後，新增下列程式碼：
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607926"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203369"
 ---
 # <a name="merging-dataset-contents"></a>合併資料集內容
 
@@ -35,7 +35,7 @@ ms.locfileid: "61607926"
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-當您將 `DataSet`、`DataTable` 或 `DataRow` 陣列傳遞給 `Merge` 方法時，可以包含選擇性參數來指定是否要保留現有 `DataSet` 的變更，以及如何處理內送資料中發現的新結構描述項目。 內送資料後續參數中的第一個參數是布林值 (Boolean) 旗標 <xref:System.Data.LoadOption.PreserveChanges>，它可指定是否要保留現有 `DataSet` 的變更。 如果 `PreserveChanges` 旗標設定為 `true`，內送值就不會覆寫現有資料列之 `Current` 資料列版本中現有的值。 如果 `PreserveChanges` 旗標設定為 `false`，內送值就會覆寫現有資料列之 `Current` 資料列版本中現有的值。 如果您沒有指定 `PreserveChanges` 旗標，它預設會設定為 `false`。 如需有關資料列版本的詳細資訊，請參閱[資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。
+當您將 `DataSet`、`DataTable` 或 `DataRow` 陣列傳遞給 `Merge` 方法時，可以包含選擇性參數來指定是否要保留現有 `DataSet` 的變更，以及如何處理內送資料中發現的新結構描述項目。 內送資料後續參數中的第一個參數是布林值 (Boolean) 旗標 <xref:System.Data.LoadOption.PreserveChanges>，它可指定是否要保留現有 `DataSet` 的變更。 如果 `PreserveChanges` 旗標設定為 `true`，內送值就不會覆寫現有資料列之 `Current` 資料列版本中現有的值。 如果 `PreserveChanges` 旗標設定為 `false`，內送值就會覆寫現有資料列之 `Current` 資料列版本中現有的值。 如果您沒有指定 `PreserveChanges` 旗標，它預設會設定為 `false`。 如需資料列版本的詳細資訊, 請參閱資料[列狀態和資料列版本](row-states-and-row-versions.md)。
 
 當 `PreserveChanges` 為 `true` 時，現有資料列的資料會保留在現有資料列的 <xref:System.Data.DataRowVersion.Current> 資料列版本中，而現有資料列之 <xref:System.Data.DataRowVersion.Original> 資料列版本的資料則會以內送資料列之 `Original` 資料列版本的資料加以覆寫。 現有資料列的 <xref:System.Data.DataRow.RowState%2A> 會設定為 <xref:System.Data.DataRowState.Modified>。 下列情況則例外：
 
@@ -69,9 +69,9 @@ ms.locfileid: "61607926"
 假設 `DataSet` 中的現有資料列是主索引鍵值為 1 的 `Unchanged` 資料列。 當它與 `Modified` 主索引鍵值為 2 而 `Original` 主索引鍵值為 1 的 `Current` 內送資料列進行合併時，現有資料列和內送資料列不會被視為相符，因為 `Original` 主索引鍵值不同。 但是，在合併完成而且檢查過條件約束之後，系統會擲回例外狀況，因為該 `Current` 主索引鍵值違反了主索引鍵資料行的唯一條件約束。
 
 > [!NOTE]
-> 當資料列插入含有自動遞增資料行 (例如識別資料行) 的資料庫資料表時，插入作業所傳回的識別資料行值可能會與 `DataSet` 中的值不符，因而導致系統附加而非合併傳回的資料列。 如需詳細資訊，請參閱 <<c0> [ 擷取識別或自動編號值](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)。
+> 當資料列插入含有自動遞增資料行 (例如識別資料行) 的資料庫資料表時，插入作業所傳回的識別資料行值可能會與 `DataSet` 中的值不符，因而導致系統附加而非合併傳回的資料列。 如需詳細資訊, 請參閱抓取[識別或自動編號值](../retrieving-identity-or-autonumber-values.md)。
 
-下列程式碼範例會合併兩個`DataSet`對成一個不同的結構描述的物件`DataSet`結合的結構描述的兩個連入`DataSet`物件。
+下列程式碼範例會將`DataSet`兩個具有不同架構的`DataSet`物件合併成一個, 其中包含兩`DataSet`個連入物件的結合架構。
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
@@ -86,9 +86,9 @@ ms.locfileid: "61607926"
 
 ## <a name="see-also"></a>另請參閱
 
-- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [DataAdapter 和 DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [擷取身分識別或自動編號值](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [DataSet、DataTable 和 DataView](index.md)
+- [資料列狀態和資料列版本](row-states-and-row-versions.md)
+- [DataAdapter 和 DataReader](../dataadapters-and-datareaders.md)
+- [在 ADO.NET 中擷取和修改資料](../retrieving-and-modifying-data.md)
+- [擷取身分識別或自動編號值](../retrieving-identity-or-autonumber-values.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

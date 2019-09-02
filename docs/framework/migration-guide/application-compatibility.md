@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623781"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106476"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的應用程式相容性
 
@@ -22,9 +22,9 @@ ms.locfileid: "64623781"
 
 每個應用程式都有特定版本的 .NET Framework 目標，可以下列方式指定：
 
-* 在 Visual Studio 中定義目標架構。
-* 在專案檔中指定目標架構。
-* 將 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 套用至原始程式碼。
+- 在 Visual Studio 中定義目標架構。
+- 在專案檔中指定目標架構。
+- 將 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 套用至原始程式碼。
 
 在比目標版本更新的版本上執行時，.NET Framework 會使用古怪的行為，模擬較舊的目標版本。 換句話說，應用程式會在較新的 Framework 版本上執行，但表現出的行為如同在較舊的版本上執行。 .NET Framework 版本間的許多相容性問題是透過這種古怪的模型而降低。 應用程式的目標 .NET Framework 版本取決於執行程式碼所在之應用程式定義域的項目組件目標版本。 該應用程式定義域載入的所有其他組件則以該 .NET Framework 版本為目標。 例如，在可執行檔的情況下，可執行檔的目標架構是該 AppDomain 中的所有組件將在其下運行的相容性模式。
 
@@ -71,8 +71,8 @@ ms.locfileid: "64623781"
 ## <a name="usage"></a>使用量
 若要開始，請選取以下的相容性變更類型：
 
-* [重定目標變更](./retargeting/index.md)
-* [執行階段變更](./runtime/index.md)
+- [重定目標變更](./retargeting/index.md)
+- [執行階段變更](./runtime/index.md)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56d1d11240934036994a14e454cf1a1d8b95226a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607890"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204532"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>對資料集執行 XPath 查詢
-同步處理之間的關聯性<xref:System.Data.DataSet>並<xref:System.Xml.XmlDataDocument>可讓您使用 XML 服務，例如 XML 路徑語言 (XPath) 查詢中，存取**XmlDataDocument** ，而且可以執行特定功能比存取更方便**資料集**直接。 比方說，而不是使用**選取 **方法<xref:System.Data.DataTable>巡覽至其他資料表中的關聯性**資料集**，您可以針對執行 XPath 查詢**XmlDataDocument** ，會與同步處理**資料集**，以取得 XML 項目清單的形式<xref:System.Xml.XmlNodeList>。 中的節點**XmlNodeList**轉換為<xref:System.Xml.XmlElement>節點，然後傳遞至**GetRowFromElement**方法**XmlDataDocument**，以傳回比對<xref:System.Data.DataRow>處於同步處理資料表的資料列參考**資料集**。  
+已同步<xref:System.Data.DataSet>處理之和<xref:System.Xml.XmlDataDocument>之間的關聯性可讓您使用 xml 服務 (例如 xml 路徑語言 (XPath) 查詢) 來存取**XmlDataDocument** , 並可更方便地執行特定功能直接存取**資料集**。 例如, 您可以在與**資料**集同步處理的<xref:System.Data.DataTable> **XmlDataDocument**上執行 XPath 查詢, 而不是使用的**Select**方法來導覽**資料集**內其他資料表的關聯性, 以取得格式為的 XML 元素清單<xref:System.Xml.XmlNodeList>。 **XmlNodeList**中的節點 (轉型為<xref:System.Xml.XmlElement>節點) 接著可以傳遞至 XmlDataDocument 的**GetRowFromElement**方法, 以將相符<xref:System.Data.DataRow>的參考傳回給已同步**處理之資料表中的資料列資料集**。  
   
- 例如，下列程式碼範例執行「孫代」XPath 查詢。 **資料集**填入三個資料表：**客戶**，**訂單**，以及**OrderDetails**。 在範例中，父子式關聯性第一次建立之間**客戶**並**訂單**資料表，和之間**訂單**和**OrderDetails**資料表。 然後返回來執行 XPath 查詢，且**XmlNodeList**的**客戶**節點的孫系**OrderDetails**節點有**ProductID**且值為 43 的節點。 此範例在本質上，使用 XPath 查詢來判斷哪些客戶訂購的產品**ProductID**為 43。  
+ 例如，下列程式碼範例執行「孫代」XPath 查詢。 **資料集會**填入三個數據表:**Customers**、 **Orders**和**OrderDetails**。 在此範例中, 會先在**Customers**和**orders**資料表之間, 以及**Orders**和**OrderDetails**資料表之間建立父子式關聯。 接著會執行 XPath 查詢以傳回**Customers**節點的**XmlNodeList** , 其中孫**OrderDetails**節點具有值為43的**ProductID**節點。 基本上, 此範例使用 XPath 查詢來判斷哪些客戶已訂購**ProductID**為43的產品。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -103,5 +103,5 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料集和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [資料集和 XmlDataDocument 同步處理](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

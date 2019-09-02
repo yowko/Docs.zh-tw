@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: acf5af755d6322f75a616005cc904d464564bc81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 962163b51507647fd975815c214891a6d692e66c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915822"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203953"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>從 XML Web Service 使用資料集
-<xref:System.Data.DataSet> 採用中斷連接設計為架構，而部分原因是為了使網際網路的資料傳輸更方便。 此**資料集**是「可序列化」, 因為它可以指定為 XML Web Service 的輸入或輸出, 而不需要任何額外的編碼, 將**資料集**的內容從 XML Web Service 串流至用戶端並返回。 **資料集會**使用 DiffGram 格式 (透過網路傳送) 隱含轉換成 xml 資料流程, 然後從 XML 資料流程重建為接收端上的**資料集**。 您可以採用這種簡單靈活的方式，以 XML Web Service 來傳輸和傳回關聯式資料。 如需 DiffGram 格式的詳細資訊, 請參閱[diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
+<xref:System.Data.DataSet> 採用中斷連接設計為架構，而部分原因是為了使網際網路的資料傳輸更方便。 此**資料集**是「可序列化」, 因為它可以指定為 XML Web Service 的輸入或輸出, 而不需要任何額外的編碼, 將**資料集**的內容從 XML Web Service 串流至用戶端並返回。 **資料集會**使用 DiffGram 格式 (透過網路傳送) 隱含轉換成 xml 資料流程, 然後從 XML 資料流程重建為接收端上的**資料集**。 您可以採用這種簡單靈活的方式，以 XML Web Service 來傳輸和傳回關聯式資料。 如需 DiffGram 格式的詳細資訊, 請參閱[diffgram](diffgrams.md)。  
   
  下列範例示範如何建立使用**資料集**的 XML Web Service 和用戶端, 以傳輸關聯式資料 (包括修改過的資料), 並將任何更新解析回原始資料來源。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "69915822"
     }  
     ```  
   
-     在典型的案例中, 會撰寫**UpdateCustomers**方法來攔截開放式平行存取違規。 為了簡化起見，這個範例並不包括這項步驟。 如需開放式平行存取的詳細資訊, 請參閱[開放式並行](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)存取。  
+     在典型的案例中, 會撰寫**UpdateCustomers**方法來攔截開放式平行存取違規。 為了簡化起見，這個範例並不包括這項步驟。 如需開放式平行存取的詳細資訊, 請參閱[開放式並行](../optimistic-concurrency.md)存取。  
   
 2. 建立 XML Web Service Proxy  
   
@@ -261,11 +261,11 @@ ms.locfileid: "69915822"
   
 ## <a name="see-also"></a>另請參閱
 
-- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
-- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [從 DataAdapter 填入 DataSet](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [使用 DataAdapter 更新資料來源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [DataAdapter 參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [ADO.NET](../index.md)
+- [DataSet、DataTable 和 DataView](index.md)
+- [DataTable](datatables.md)
+- [從 DataAdapter 填入 DataSet](../populating-a-dataset-from-a-dataadapter.md)
+- [使用 DataAdapter 更新資料來源](../updating-data-sources-with-dataadapters.md)
+- [DataAdapter 參數](../dataadapter-parameters.md)
 - [Web 服務描述語言工具 (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

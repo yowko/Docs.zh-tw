@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: a0252493ffd251b8d760927345c71e2f5ef55aaa
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 61315a04ca8d5a619a3dcaf43b15a309919d3c42
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401512"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167874"
 ---
 # <a name="for-c-reference"></a>for (C# 參考)
 
@@ -53,7 +53,7 @@ for (initializer; condition; iterator)
 
   - 使用 [new](../operators/new-operator.md) 運算子建立物件
 
-  - [await](await.md) 運算式
+  - [await](../operators/await.md) 運算式
 
 上述範例中的「初始設定式」  區段會宣告及初始化本機迴圈變數 `i`：
 
@@ -85,7 +85,7 @@ i < 5
 
 - 使用 [new](../operators/new-operator.md) 運算子建立物件
 
-- [await](await.md) 運算式
+- [await](../operators/await.md) 運算式
 
 上述範例中的「迭代器」  區段會遞增本機迴圈變數：
 

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 7763e7065e74d99ee5521ea1e4f48fa0108f235a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3bbe28423385cae0f09f301c03b2b1a59edf101d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623388"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205064"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>資料集和 XmlDataDocument 同步處理
-ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存取階層式資料，可以使用 .NET Framework 中提供的 XML 類別。 過去，這兩個資料表示一直是分開使用； 不過，.NET Framework 可讓您透過資料的關聯式和階層式表示的即時、 同步存取**資料集**物件和<xref:System.Xml.XmlDataDocument>物件，分別。  
+ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存取階層式資料，可以使用 .NET Framework 中提供的 XML 類別。 過去，這兩個資料表示一直是分開使用； 不過, .NET Framework 會分別透過**DataSet**物件和<xref:System.Xml.XmlDataDocument>物件, 啟用即時、同步存取關聯式和階層式的資料標記法。  
   
- 當**資料集**會與同步處理**XmlDataDocument**，這兩個物件正在使用單一的資料集。 這表示，如果變更**資料集**，此變更會反映在**XmlDataDocument**，反之亦然。 之間的關聯性**資料集**並**XmlDataDocument**藉由使用單一應用程式，使用單一的資料集，來存取內建服務的整個套件建立絕佳的彈性周圍**資料集**（例如 Web Form 和 Windows Form 控制項和 Visual Studio.NET 設計工具），以及 XML 服務，包括 Extensible Stylesheet Language (XSL)、 XSL 轉換 (XSLT) 和 XML 路徑的套件語言 (XPath)。 您不用替應用程式選擇要將哪一組服務當成目標，因為這兩個服務都可以使用。  
+ 當**資料集**與**XmlDataDocument**同步處理時, 這兩個物件都會使用單一資料集。 這表示, 如果對**資料集**進行變更, 變更就會反映在**XmlDataDocument**中, 反之亦然。 **資料集**和**XmlDataDocument**之間的關聯性可讓單一應用程式 (使用單一資料集) 存取以**資料集**為基礎的整個服務套件 (例如 Web form 和), 以建立極大的彈性。Windows Forms 控制項和 Visual Studio .NET 設計工具), 以及 XML 服務的套件, 包括可延伸樣式表語言 (XSL)、XSL 轉換 (XSLT) 和 XML 路徑語言 (XPath)。 您不用替應用程式選擇要將哪一組服務當成目標，因為這兩個服務都可以使用。  
   
- 有數種方式，您可以同步處理**資料集**具有**XmlDataDocument**。 您可以：  
+ 有數種方式可讓您將**資料集**與**XmlDataDocument**同步處理。 您可以：  
   
-- 填入**資料集**結構描述 （也就是關聯式結構） 和資料，然後使用新的同步處理**XmlDataDocument**。 如此便能提供現有關聯式資料的階層式檢視。 例如:   
+- 使用架構 (也就是關聯式結構) 和資料填入資料**集**, 然後將它與新的**XmlDataDocument**同步處理。 如此便能提供現有關聯式資料的階層式檢視。 例如：  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,11 +37,11 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
-- 填入**資料集**只含結構描述 (例如強型別**資料集**)，同步處理搭配**XmlDataDocument**，然後載入**XmlDataDocument**從 XML 文件。 如此能提供現有階層式資料的關聯式檢視。 資料表名稱和資料行名稱，在您**資料集**結構描述必須符合您想要與一起同步處理之 XML 項目的名稱。 這項比對是區分大小寫的。  
+- 僅以架構填入**資料集**(例如強型別**資料集**), 將它與**XmlDataDocument**同步處理, 然後從 XML 檔載入**XmlDataDocument** 。 如此能提供現有階層式資料的關聯式檢視。 DataSet 架構中的資料表名稱和**資料**行名稱, 必須與您想要同步處理的 XML 元素名稱相符。 這項比對是區分大小寫的。  
   
-     請注意，結構描述**資料集**只需要以符合您想要公開在關聯式檢視中的 XML 項目。 如此，您可能會有非常大的 XML 文件，但文件中可能會有非常小的關聯式「視窗」。 **XmlDataDocument**會保留整個 XML 文件時，即使**DataSet**只會公開它的一小部分。 (如這個詳細的範例，請參閱[將 DataSet 與 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)。)  
+     請注意,**資料集**的架構只需要符合您想要在關聯式視圖中公開的 XML 元素。 如此，您可能會有非常大的 XML 文件，但文件中可能會有非常小的關聯式「視窗」。 即使**資料集**只公開其中的一小部分, **XmlDataDocument**還是會保留整個 XML 檔。 (如需這項工作的詳細範例, 請參閱[同步處理資料集與 XmlDataDocument](synchronizing-a-dataset-with-an-xmldatadocument.md))。  
   
-     下列程式碼範例顯示建立的步驟**資料集**，並填入其結構描述，然後同步處理搭配**XmlDataDocument**。 請注意，**資料集**結構描述只需要符合的項目**XmlDataDocument**您想要使用公開 （expose）**資料集**。  
+     下列程式碼範例示範如何建立**資料集**並填入其架構, 然後將它與**XmlDataDocument**同步處理的步驟。 請注意,**資料集**架構只需要符合您想要使用**資料集**公開之**XmlDataDocument**中的元素。  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -61,11 +61,11 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
-     無法載入**XmlDataDocument**如果它與同步處理**DataSet**包含資料。 且會擲回例外狀況。  
+     如果**XmlDataDocument**與包含資料的**DataSet**同步處理, 您就無法載入它。 且會擲回例外狀況。  
   
-- 建立新**XmlDataDocument**並將它從 XML 文件，載入，然後存取 使用資料的關聯式檢視**資料集**屬性**XmlDataDocument**。 您需要設定的結構描述**資料集**您可以檢視任何資料之前**XmlDataDocument**使用**資料集**。 同樣地，資料表名稱和資料行名稱在您**資料集**結構描述必須符合您想要與一起同步處理之 XML 項目的名稱。 這項比對是區分大小寫的。  
+- 建立新的**XmlDataDocument** , 並從 XML 檔載入它, 然後使用**XmlDataDocument**的**DataSet**屬性來存取資料的關聯式視圖。 您必須先設定**資料集**的架構, 才能使用**資料集**來查看**XmlDataDocument**中的任何資料。 同樣地, DataSet 架構中的資料表名稱和**資料**行名稱, 必須與您想要與之同步處理的 XML 元素名稱相符。 這項比對是區分大小寫的。  
   
-     下列程式碼範例示範如何存取中的資料的關聯式檢視**XmlDataDocument**。  
+     下列程式碼範例顯示如何在**XmlDataDocument**中存取資料的關聯式視圖。  
   
     ```vb  
     Dim xmlDoc As XmlDataDocument = New XmlDataDocument  
@@ -85,32 +85,32 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
- 同步處理的另一個優點**XmlDataDocument**具有**DataSet**是保留的 XML 文件的精確度。 如果**資料集**使用您建立 XML 文件中會填入**ReadXml**，當資料寫回為 XML 文件使用**WriteXml**它可能大幅不同於原始的 XML 文件。 這是因為**資料集**不會維護格式，例如空白字元或階層式的資訊，例如元素的順序，將 XML 文件。 **資料集**也不包含 XML 文件中忽略，因為它們不符合的結構描述項目**Dataset**。 同步處理**XmlDataDocument**具有**資料集**可讓要保留在原始的 XML 文件格式和階層式項目結構**XmlDataDocument**，雖然**資料集**只包含資料和結構描述的資訊適用於**DataSet**。  
+ 將**XmlDataDocument**與**資料集**同步處理的另一個優點是, 會保留 XML 檔的精確度。 如果資料**集**是使用**ReadXml**從 xml 檔填入, 則在使用**WriteXml**將資料寫回為 xml 檔時, 可能會與原始 XML 檔有相當大的差異。 這是因為**資料集**不會維護 XML 檔中的格式, 例如空白字元或階層式資訊, 例如元素順序。 **DataSet**也不包含 XML 檔中已忽略的元素, 因為它們不符合**資料集**的架構。 同步處理**XmlDataDocument**與**資料集**, 可讓原始 XML 檔的格式設定和階層式元素結構在**XmlDataDocument**中維護, 而**資料集**只包含資料和適用于**資料集**的架構資訊。  
   
- 同步處理時**資料集**具有**XmlDataDocument**，結果可能會有所不同，就不會您<xref:System.Data.DataRelation>巢狀物件。 如需詳細資訊，請參閱 <<c0> [ 巢狀 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
+ 將**資料集**與**XmlDataDocument**同步處理時, 結果可能會根據您<xref:System.Data.DataRelation>的物件是否已嵌套而有所不同。 如需詳細資訊, 請參閱 <<c0>嵌套 datarelation。  
   
 ## <a name="in-this-section"></a>本節內容  
- [使用 XmlDataDocument 同步處理資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
- 示範如何同步處理的強型別**資料集**，以最少的結構描述，具有**XmlDataDocument**。  
+ [使用 XmlDataDocument 同步處理資料集](synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ 示範如何使用**XmlDataDocument**來同步處理強型別**資料集**與最少的架構。  
   
- [對資料集執行 XPath 查詢](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
- 示範的內容中執行 XPath 查詢**資料集**。  
+ [對資料集執行 XPath 查詢](performing-an-xpath-query-on-a-dataset.md)  
+ 示範對**資料集**的內容執行 XPath 查詢。  
   
- [將 XSLT 轉換套用至資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
- 示範如何將 XSLT 轉換套用至的內容**資料集**。  
+ [將 XSLT 轉換套用至資料集](applying-an-xslt-transform-to-a-dataset.md)  
+ 示範如何將 XSLT 轉換套用至**資料集**的內容。  
   
 ## <a name="related-sections"></a>相關章節  
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- 描述如何**資料集**XML 當成資料來源，包括載入和保存的內容互動**DataSet**為 XML 資料。  
+ [在 DataSet 中使用 XML](using-xml-in-a-dataset.md)  
+ 描述**資料集**如何與 xml 做為資料來源互動, 包括將**資料集**的內容載入和保存為 xml 資料。  
   
- [巢狀 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
- 討論的重要性巢狀**DataRelation**物件代表的內容時**DataSet**為 XML 資料，並說明如何建立這些關聯性。  
+ [巢狀 DataRelation](nesting-datarelations.md)  
+ 討論將**資料集**的內容表示為 XML 資料時, 嵌套**DataRelation**物件的重要性, 並描述如何建立這些關聯性。  
   
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- 描述**資料集**以及如何使用它來管理應用程式資料，以及包括關聯式資料庫和 XML 的資料來源互動。  
+ [DataSet、DataTable 和 DataView](index.md)  
+ 描述**資料集**以及如何使用它來管理應用程式資料, 以及與資料來源互動, 包括關係資料庫和 XML。  
   
  <xref:System.Xml.XmlDataDocument>  
- 包含的相關參考資訊**XmlDataDocument**類別。  
+ 包含**XmlDataDocument**類別的參考資訊。  
   
 ## <a name="see-also"></a>另請參閱
 

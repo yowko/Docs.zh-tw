@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 0c666d62c21d3e4f7b1041c1d5360ac43d2cf03f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587067"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168962"
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
@@ -21,7 +21,7 @@ ms.locfileid: "69587067"
 ## <a name="in-this-section"></a>本節內容  
 
  [使用 Async 和 Await 存取 Web](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- 說明如何使用 [async](./language-reference/keywords/async.md) 和 [await](./language-reference/keywords/await.md) 建立非同步解決方案。  
+ 說明如何使用 [async](./language-reference/keywords/async.md) 和 [await](./language-reference/operators/await.md) 建立非同步解決方案。  
   
  [以 C# 或 Visual Basic 建立 Windows 執行階段元件，然後從 JavaScript 呼叫該元件](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  示範如何建立 Windows 執行階段類型，將其封裝於 Windows 執行階段元件元件中，然後從使用 JavaScript 針對 Windows 所建置的 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式中呼叫該元件。  

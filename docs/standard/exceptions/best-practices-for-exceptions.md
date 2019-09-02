@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e12a83d3932d11baa086310ab0be23fb431459fc
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860157"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107199"
 ---
 # <a name="best-practices-for-exceptions"></a>例外狀況的最佳做法
 
@@ -82,11 +82,11 @@ ms.locfileid: "67860157"
 
 當您建立自己的例外狀況類別時，請使用至少三個種常見的建構函式：無參數建構函式、採用字串訊息的建構函式，以及採用字串訊息和內部例外狀況的建構函式。
 
-* <xref:System.Exception.%23ctor>，會使用預設值。
+- <xref:System.Exception.%23ctor>，會使用預設值。
 
-* <xref:System.Exception.%23ctor%28System.String%29>，它會接受字串訊息。
+- <xref:System.Exception.%23ctor%28System.String%29>，它會接受字串訊息。
 
-* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>，它會接受字串訊息和內部例外狀況。
+- <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>，它會接受字串訊息和內部例外狀況。
 
 如需範例，請參閱[如何：建立使用者定義例外狀況](how-to-create-user-defined-exceptions.md)。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487841"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206049"
 ---
 # <a name="security-transparent-code"></a>安全性透明的程式碼
 
@@ -23,7 +23,7 @@ ms.locfileid: "66487841"
 安全性牽涉到三個互動式的部分：沙箱、權限與強化。 沙箱是指建立隔離定義域的做法，其中將某些程式碼視為完全信任，且限制其他程式碼為沙箱授權集中的權限。 在沙箱授權集內部執行的應用程式程式碼會被視為透明的。也就是說，它無法執行任何可能會影響安全性的作業。 沙箱授權集是依照辨識項 (<xref:System.Security.Policy.Evidence> 類別) 決定的。 辨識項會識別沙箱所需的特定權限，以及可建立的沙箱種類。 強化是指讓透明程式碼只能在其授權集內部執行。
 
 > [!IMPORTANT]
-> 安全性原則是舊版 .NET Framework 中的重要項目。 從.NET Framework 4 開始，安全性原則是已過時。 安全性原則的刪除獨立於安全性透明規則。 這項變更影響的相關資訊，請參閱[程式碼存取安全性原則相容性和移轉](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)。
+> 安全性原則是舊版 .NET Framework 中的重要項目。 從 .NET Framework 4 開始, 安全性原則已經過時。 安全性原則的刪除獨立於安全性透明規則。 如需這項變更之影響的詳細資訊, 請參閱[代碼啟用安全性原則相容性和遷移](code-access-security-policy-compatibility-and-migration.md)。
 
 本主題將詳細描述透明度模型。 它包含以下各節：
 
@@ -31,7 +31,7 @@ ms.locfileid: "66487841"
 
 - [指定透明度層級](#level)
 
-- [透明度強化](#enforcement)
+- [透明度強制](#enforcement)
 
 <a name="purpose"></a>
 
@@ -59,18 +59,18 @@ ms.locfileid: "66487841"
 
 這些層級如下所示：
 
-- 層級 2 (<xref:System.Security.SecurityRuleSet.Level2>) –.NET Framework 4 的透明度規則。
+- 層級 2<xref:System.Security.SecurityRuleSet.Level2>() – .NET Framework 4 透明度規則。
 
 - 層級 1 (<xref:System.Security.SecurityRuleSet.Level1>) – .NET Framework 2.0 透明度規則。
 
 這兩個透明度層級之間的主要差異在於，層級 1 不會針對組件外部的呼叫強制執行透明度規則，而且這主要是為了相容性而使用。
 
 > [!IMPORTANT]
-> 您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 開發適用於.NET Framework 4 的程式碼，請一律使用層級 2 透明度。
+> 您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 針對 .NET Framework 4 所開發的程式碼, 請一律使用層級2透明度。
 
 ### <a name="level-2-transparency"></a>層級 2 透明度
 
-層級 2 透明度是.NET Framework 4 中引入的。 此模型的三個原則是透明程式碼、安全性安全關鍵程式碼和安全性關鍵程式碼。
+層級2透明度是在 .NET Framework 4 中引進。 此模型的三個原則是透明程式碼、安全性安全關鍵程式碼和安全性關鍵程式碼。
 
 - 不論授與給透明程式碼的權限為何 (包含完全信任)，透明程式碼只能呼叫其他透明程式碼或安全性安全關鍵程式碼。 如果此程式碼受到部分信任，就只能執行該定義域之權限集合所允許的動作。 透明程式碼無法進行下列作業：
 
@@ -114,9 +114,9 @@ ms.locfileid: "66487841"
 
 ## <a name="transparency-enforcement"></a>透明度強化
 
-透明度規則會等到計算出透明度之後才會強制執行。 此時，如果違反了透明度規則，就會擲回 <xref:System.InvalidOperationException>。 計算透明度的時間取決於多個因素，而且無法預測。 透明度的計算會盡可能延後。 在.NET Framework 4 組件層級的透明度計算就會不同於.NET Framework 2.0 更早發生。 唯一能保證的是透明度計算會在需要時發生。 這與 Just-In-Time (JIT) 編譯器如何變更進行方法之編譯的時間點很類似，也和其如何變更偵測該方法中任何錯誤的時間點很類似。 如果您的程式碼沒有任何透明度錯誤，透明度計算就會是不可見的。
+透明度規則會等到計算出透明度之後才會強制執行。 此時，如果違反了透明度規則，就會擲回 <xref:System.InvalidOperationException>。 計算透明度的時間取決於多個因素，而且無法預測。 透明度的計算會盡可能延後。 在 .NET Framework 4 中, 元件層級的透明度計算會比在 .NET Framework 2.0 中更早發生。 唯一能保證的是透明度計算會在需要時發生。 這與 Just-In-Time (JIT) 編譯器如何變更進行方法之編譯的時間點很類似，也和其如何變更偵測該方法中任何錯誤的時間點很類似。 如果您的程式碼沒有任何透明度錯誤，透明度計算就會是不可見的。
 
 ## <a name="see-also"></a>另請參閱
 
-- [安全性透明程式碼，層級 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [安全性透明的程式碼, 層級1](security-transparent-code-level-1.md)
+- [安全性透明的程式碼, 層級2](security-transparent-code-level-2.md)

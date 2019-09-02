@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539309"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104939"
 ---
 # <a name="select-the-net-core-version-to-use"></a>選取要使用的 .NET Core 版本
 
@@ -32,8 +32,8 @@ ms.locfileid: "67539309"
 
 SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `dotnet` 命令都必須選擇 SDK 版本。 根據預設，它會使用電腦上最新安裝的 SDK，即使：
 
-* 專案是以 .NET Core 執行階段的舊版為目標。
-* .NET Core SDK 的最新版本是預覽版。
+- 專案是以 .NET Core 執行階段的舊版為目標。
+- .NET Core SDK 的最新版本是預覽版。
 
 您可以利用最新的 SDK 功能和增強功能，同時以舊版 .NET Core 執行階段為目標。 您可以在不同專案上以多個 .NET Core 執行階段版本為目標，並針對所有專案使用相同的 SDK 工具。
 

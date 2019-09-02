@@ -3,24 +3,24 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 570d071172c4048adfddfd55a5e38556e7fd7c69
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195829"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105847"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
-C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實值類型補充實值類型的相同方式來補充參考類型。 您可以藉由將 `?` 附加至類型，來將變數宣告為**可為 Null 的參考類型**。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」，而其他變數「可能會遺漏值」。
+C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實值類型補充實值類型的相同方式來補充參考類型。 您可以藉由將 `?` 附加至類型，來將變數宣告為**可為 Null 的參考類型**。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」  ，而其他變數「可能會遺漏值」  。
 
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
-> * 在設計中併入可為 Null 與不可為 Null 的參考類型
-> * 在整個程式碼中啟用可為 Null 的參考類型檢查。
-> * 撰寫程式碼，以使編譯器強制執行這些設計決策。
-> * 在您自己的設計中使用可為 Null 的參考功能
+> - 在設計中併入可為 Null 與不可為 Null 的參考類型
+> - 在整個程式碼中啟用可為 Null 的參考類型檢查。
+> - 撰寫程式碼，以使編譯器強制執行這些設計決策。
+> - 在您自己的設計中使用可為 Null 的參考功能
 
 ## <a name="prerequisites"></a>必要條件
 

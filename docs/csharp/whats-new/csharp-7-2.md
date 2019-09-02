@@ -2,12 +2,12 @@
 title: C# 7.2 的新功能
 description: C# 7.2 新功能的概觀。
 ms.date: 08/16/2017
-ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347419"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105749"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 的新功能
 
@@ -20,22 +20,22 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 
 此版本的新款語言功能包括：
 
-* [撰寫安全、有效率之程式碼的技巧](#safe-efficient-code-enhancements)
+- [撰寫安全、有效率之程式碼的技巧](#safe-efficient-code-enhancements)
   - 這是語法改進功能組合，這些改進功能可讓您使用參考語意來處理實值型別。
-* [非後置具名引數](#non-trailing-named-arguments)
+- [非後置具名引數](#non-trailing-named-arguments)
   - 具名引數之後可以接著位置引數。
-* [數值常值中的前置底線](#leading-underscores-in-numeric-literals)
+- [數值常值中的前置底線](#leading-underscores-in-numeric-literals)
   - 數值常值的任何列印數字之前，現都可加上前置底線。
-* [`private protected` 存取修飾詞](#private-protected-access-modifier)
+- [`private protected` 存取修飾詞](#private-protected-access-modifier)
   - 您可利用 `private protected` 存取修飾詞，存取相同組件中的衍生類別。
-* [`ref` 條件運算式](#conditional-ref-expressions)
+- [`ref` 條件運算式](#conditional-ref-expressions)
   - 條件運算式 (`?:`) 的結果現在可以是參考。
 
 此文章的其餘部分將概述各個功能。 您將了解每項功能背後的原因。 您將了解語法。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
 
 1. 安裝 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全域工具。
 1. 複製 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存放庫。
-1. 將目前的目錄設為 *try-samples* 存放庫的 *csharp7* 子目錄。
+1. 將目前目錄設為 *try-samples* 存放庫的 *csharp7* 子目錄。
 1. 執行 `dotnet try`。
 
 ## <a name="safe-efficient-code-enhancements"></a>安全、有效率的程式碼增強功能

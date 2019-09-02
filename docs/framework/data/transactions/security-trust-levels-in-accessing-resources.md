@@ -2,12 +2,12 @@
 title: 存取資源的安全性信任層級
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948711"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205877"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>存取資源的安全性信任層級
 本主題說明如何針對 <xref:System.Transactions> 所公開的資源型別限制其存取。  
@@ -38,7 +38,7 @@ ms.locfileid: "69948711"
   
  為了啟用復原，此類型的應用程式必須具備永久取用系統資源的能力。 這是因為可復原的交易管理員必須一直記住已經認可的交易，直到它確認所有參與交易的永久性資源管理員都已收到結果告知。 因此，這類型的應用程式需要完全信任，而且不應該在未獲得此信任等級之前貿然執行。  
   
- 如需永久性登記和復原的詳細資訊, 請參閱將[資源登記為交易中的參與者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)和[執行](../../../../docs/framework/data/transactions/performing-recovery.md)復原主題。  
+ 如需永久性登記和復原的詳細資訊, 請參閱將[資源登記為交易中的參與者](enlisting-resources-as-participants-in-a-transaction.md)和[執行](performing-recovery.md)復原主題。  
   
  要擁有完全信任，必須同時具備使用 COM+ 來執行舊版 Interop 工作的應用程式。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e824fd686176d83c26ca2c042348c9423fbcc884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910745"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206111"
 ---
 # <a name="securing-wrapper-code"></a>設定包裝函式程式碼的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "69910745"
 ## <a name="link-demands-and-wrappers"></a>連結要求和包裝函式  
  我們已在安全性基礎結構中增強連結要求的特殊保護案例，但它仍然是您的程式碼中潛在弱點的來源。  
   
- 如果完全信任的程式碼呼叫由[LinkDemand](../../../docs/framework/misc/link-demands.md)保護的屬性、事件或方法, 當滿足呼叫端的**LinkDemand**許可權檢查時, 呼叫就會成功。 此外, 如果完全信任的程式碼公開採用屬性名稱的類別, 並使用反映呼叫其**get**存取子, 即使使用者程式碼沒有存取這個屬性的許可權, **get**存取子的呼叫還是會成功。 這是因為**LinkDemand**只會檢查立即呼叫端, 也就是完全受信任的程式碼。 本質上，完全受信任的程式碼是代表使用者程式碼進行有權限的呼叫，因此不需要確定使用者程式碼是否具有進行該呼叫的權限。  
+ 如果完全信任的程式碼呼叫由[LinkDemand](link-demands.md)保護的屬性、事件或方法, 當滿足呼叫端的**LinkDemand**許可權檢查時, 呼叫就會成功。 此外, 如果完全信任的程式碼公開採用屬性名稱的類別, 並使用反映呼叫其**get**存取子, 即使使用者程式碼沒有存取這個屬性的許可權, **get**存取子的呼叫還是會成功。 這是因為**LinkDemand**只會檢查立即呼叫端, 也就是完全受信任的程式碼。 本質上，完全受信任的程式碼是代表使用者程式碼進行有權限的呼叫，因此不需要確定使用者程式碼是否具有進行該呼叫的權限。  
   
  為了協助防止這類安全性漏洞, 通用語言執行平臺會在任何間接呼叫由**LinkDemand**保護的方法、函式、屬性或事件時, 將檢查延伸至完整的堆疊流覽需求。 這項保護措施會稍微降低效能，也會變更安全性檢查的語意；較快的單一層級檢查可以通過的地方，完整堆疊查核行程要求卻有可能會失敗。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "69910745"
   
 - <xref:System.Security.Permissions.SecurityAction.Demand> 指定程式碼存取安全性堆疊查核行程。 堆疊上的所有呼叫端都必須具有指定的權限或識別，才能通過。 每次呼叫都會發生**需求**, 因為堆疊可能包含不同的呼叫端。 如果您重複呼叫一個方法，則每呼叫一次就會執行這個安全性檢查一次。 **需求**是對引誘攻擊的良好保護;偵測到未經授權的程式碼, 將會偵測到它的嘗試。  
   
-- [LinkDemand](../../../docs/framework/misc/link-demands.md)會在即時 (JIT) 編譯時期進行, 並且只會檢查立即呼叫端。 這項安全性檢查不會檢查呼叫端的呼叫端。 一旦通過這項檢查，不論呼叫端可能呼叫的次數為何，都不會再增加額外的安全性負荷。 不過，這也無法防止引誘攻擊。 透過**LinkDemand**, 通過測試並可以參考您程式碼的任何程式碼, 都可以藉由允許惡意程式碼使用授權的程式碼呼叫來中斷安全性。 因此, 除非可以徹底避免所有可能的弱點, 否則請勿使用**LinkDemand** 。  
+- [LinkDemand](link-demands.md)會在即時 (JIT) 編譯時期進行, 並且只會檢查立即呼叫端。 這項安全性檢查不會檢查呼叫端的呼叫端。 一旦通過這項檢查，不論呼叫端可能呼叫的次數為何，都不會再增加額外的安全性負荷。 不過，這也無法防止引誘攻擊。 透過**LinkDemand**, 通過測試並可以參考您程式碼的任何程式碼, 都可以藉由允許惡意程式碼使用授權的程式碼呼叫來中斷安全性。 因此, 除非可以徹底避免所有可能的弱點, 否則請勿使用**LinkDemand** 。  
   
     > [!NOTE]
-    > 在 .NET Framework 4 中, 連結要求已由元件中<xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2>的屬性所取代。 <xref:System.Security.SecurityCriticalAttribute>相當於完全信任的連結要求; 不過, 它也會影響繼承規則。 如需這種變更的詳細資訊, 請參閱[安全性透明程式碼, 層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)。  
+    > 在 .NET Framework 4 中, 連結要求已由元件中<xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2>的屬性所取代。 <xref:System.Security.SecurityCriticalAttribute>相當於完全信任的連結要求; 不過, 它也會影響繼承規則。 如需這種變更的詳細資訊, 請參閱[安全性透明程式碼, 層級 2](security-transparent-code-level-2.md)。  
   
  使用**LinkDemand**時所需的額外預防措施必須個別進行設計;安全性系統有助於強制執行。 任何錯誤都可能會導致出現安全性弱點。 使用您程式碼的所有授權程式碼都必須負責執行下列作業，以實作額外的安全性：  
   

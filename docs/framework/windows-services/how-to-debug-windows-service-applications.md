@@ -9,18 +9,18 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 71b2b1d32c06afca4abd89df4f6449dacb32046c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 74f834261d464430547ba3e1113db0ea780f593e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988519"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044436"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>作法：偵錯 Windows 服務應用程式
 服務必須從服務控制管理員內容之中執行，而不是從 Visual Studio 之中執行。 因此，對服務進行偵錯不像是對其他 Visual Studio 應用程式類型進行偵錯那樣簡單直接。 若要對服務進行偵錯，您必須啟動服務，然後將偵錯工具附加至執行中的處理序。 之後就可以使用 Visual Studio 所有的標準偵錯功能，對應用程式進行偵錯。  
   
 > [!CAUTION]
->  除非您知道處理序的內容，並了解附加至處理序以及可能會刪除該處理序的後果，否則就不應該附加至處理序。 例如，如果您附加至 WinLogon 處理序，再停止偵錯，系統將會中止，因為系統沒有 WinLogon 就無法運作。  
+> 除非您知道處理序的內容，並了解附加至處理序以及可能會刪除該處理序的後果，否則就不應該附加至處理序。 例如，如果您附加至 WinLogon 處理序，再停止偵錯，系統將會中止，因為系統沒有 WinLogon 就無法運作。  
   
  您只可以將偵錯工具附加至執行中的服務。 附加程序會中斷服務的目前運作，但不會實際停止或暫停服務的處理。 也就是說，當您開始偵錯時，如果您的服務正在執行，技術上來說，正在進行偵錯的服務還是處於啟動狀態，但已暫停其處理。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "69988519"
 8. 在 [可使用的處理序]  區段中，選擇服務的處理序，然後選擇 [附加]  。  
   
     > [!TIP]
-    >  處理序的名稱和您的服務可執行檔名稱相同。  
+    > 處理序的名稱和您的服務可執行檔名稱相同。  
   
      [附加至處理序]  對話方塊隨即出現。  
   

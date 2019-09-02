@@ -4,12 +4,12 @@ description: 如何使用 ML.NET 模型建立器來自動定型機器學習服�
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: a871c3a3751a93bdf0104c873215b164616f0664
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611460"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104872"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>什麼是模型建立器且其如何運作？
 
@@ -133,11 +133,11 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 如果您的模型效能分數不如預期，您可以：
 
-* 延長定型時間。 時間較長，自動化的機器學習引擎就會嘗試更多演算法及設定。
+- 延長定型時間。 時間較長，自動化的機器學習引擎就會嘗試更多演算法及設定。
 
-* 新增更多資料。 有時資料數量不足，無法定型高品質的機器學習模型。
+- 新增更多資料。 有時資料數量不足，無法定型高品質的機器學習模型。
 
-* 平衡資料。 針對分類工作，請務必平衡所有類別的定型集。 例如，如果您有四個類別的 100 個定型範例，有 90 筆記錄使用前兩個類別 (tag1 和 tag2)，只有剩餘的 10 筆記錄使用其他兩個類別 (tag3 和 tag4)，則資料失衡可能會導致模型難以正確預測 tag3 或 tag4。
+- 平衡資料。 針對分類工作，請務必平衡所有類別的定型集。 例如，如果您有四個類別的 100 個定型範例，有 90 筆記錄使用前兩個類別 (tag1 和 tag2)，只有剩餘的 10 筆記錄使用其他兩個類別 (tag3 和 tag4)，則資料失衡可能會導致模型難以正確預測 tag3 或 tag4。
 
 ## <a name="code"></a>程式碼
 

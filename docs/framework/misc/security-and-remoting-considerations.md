@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d4d3b009e5792685ea39a3bcc2a15e082e1b8de
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910697"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206092"
 ---
 # <a name="security-and-remoting-considerations"></a>安全性和遠端處理考量
 遠端處理可讓您設定應用程式定義域、處理序或電腦之間的透明呼叫。 不過，程式碼存取安全性堆疊查核行程無法跨處理序或電腦界限 (只會在同一個處理序的不同應用程式定義域之間套用)。  
   
  所有可遠端處理的類別 (衍生自 <xref:System.MarshalByRefObject> 類別) 都必須確保安全。 程式碼應該只在可隱含信任呼叫端程式碼的封閉式環境中使用，或者遠端處理呼叫的設計方式，應該使受保護的程式碼不容易遭到惡意使用之外部項目的攻擊。  
   
- 一般來說, 您絕對不應該公開受宣告式[LinkDemand](../../../docs/framework/misc/link-demands.md)和<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>安全性檢查保護的方法、屬性或事件。 進行遠端處理時，系統不會強制執行這些檢查。 其他安全性檢查 (例如<xref:System.Security.Permissions.SecurityAction.Demand>、 [Assert](../../../docs/framework/misc/using-the-assert-method.md)等) 可在進程內的應用程式域之間執行, 但不能在跨進程或跨電腦的情況下使用。  
+ 一般來說, 您絕對不應該公開受宣告式[LinkDemand](link-demands.md)和<xref:System.Security.Permissions.SecurityAction.InheritanceDemand>安全性檢查保護的方法、屬性或事件。 進行遠端處理時，系統不會強制執行這些檢查。 其他安全性檢查 (例如<xref:System.Security.Permissions.SecurityAction.Demand>、 [Assert](using-the-assert-method.md)等) 可在進程內的應用程式域之間執行, 但不能在跨進程或跨電腦的情況下使用。  
   
 ## <a name="protected-objects"></a>受保護的物件  
  某些物件本身有安全性狀態。 這些物件不應該傳遞至不受信任的程式碼，這類程式碼可能會接著取得超出其所有權限的安全性授權。  

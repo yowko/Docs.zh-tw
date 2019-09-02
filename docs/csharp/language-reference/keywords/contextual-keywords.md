@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 1052ab7d7c6fd948f59c5956b918fbfd01899a1a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d16d8fee58f4480bc83da884caf0ff15981b09af
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608676"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168610"
 ---
 # <a name="contextual-keywords-c-reference"></a>內容關鍵字 (C# 參考)
 
@@ -20,7 +20,7 @@ ms.locfileid: "69608676"
 |-------------|-----------------|  
 |[add](./add.md)|定義用戶端程式碼訂閱事件時所叫用的自訂事件存取子。|  
 |[async](./async.md)|指出修改的方法、Lambda 運算式或匿名方法為非同步。|  
-|[await](./await.md)|除非等候的工作完成，否則會暫止非同步方法。|  
+|[await](../operators/await.md)|除非等候的工作完成，否則會暫止非同步方法。|  
 |[dynamic](./dynamic.md)|定義參考型別，以讓發生它的作業略過編譯時期類型檢查。|  
 |[get](./get.md)|定義屬性或索引子的存取子方法。|  
 |[global](../operators/namespace-alias-qualifier.md)|全域命名空間的別名，否則為未命名。|  

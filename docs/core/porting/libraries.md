@@ -4,12 +4,12 @@ description: 了解如何將程式庫專案從 .NET Framework 移植到 .NET Cor
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3e3c613f6be50ae5ff2b07052c7c1bced2047855
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660704"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105294"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>將 .NET Framework 程式庫移植到 .NET Core
 
@@ -113,11 +113,11 @@ ms.locfileid: "69660704"
 移轉程式碼後，確定一切正常運作的最佳方式，是在將程式碼移轉到 .NET Core 時測試程式碼。 若要這樣做，您必須使用能針對 .NET Core 建置並執行測試的測試架構。 目前有三個選項︰
 
 - [xUnit](https://xunit.github.io/)
-  * [快速入門](https://xunit.github.io/docs/getting-started-dotnet-core.html)
-  * [將 MSTest 專案轉換成 xUnit 的工具](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  - [快速入門](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [將 MSTest 專案轉換成 xUnit 的工具](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  * [快速入門](https://github.com/nunit/docs/wiki/Installation)
-  * [關於從 MSTest 移轉至 NUnit 的部落格文章](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  - [快速入門](https://github.com/nunit/docs/wiki/Installation)
+  - [關於從 MSTest 移轉至 NUnit 的部落格文章](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>建議的移植方法

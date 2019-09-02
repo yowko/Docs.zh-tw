@@ -4,12 +4,12 @@ description: 了解如何在 .NET 中透過 P/Invoke 呼叫原生函式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c6dcfdb9543abceb688fee2d73c242f1742ab27d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cda738a173cbe61cf49f79ceef78c533a5a879d9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582561"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106791"
 ---
 # <a name="platform-invoke-pinvoke"></a>平台叫用 (P/Invoke)
 
@@ -21,9 +21,9 @@ P/Invoke 是一種技術，可讓您從受控碼存取結構、回呼和非受�
 
 上述範例很簡單，但它顯示了從受控碼叫用非受控函式所需的項目。 現在逐步查看範例︰
 
-* 行 #1 顯示 `System.Runtime.InteropServices` 命名空間的 using 陳述式，該命名空間持有需要的所有項目。
-* 行 #7 引進 `DllImport` 屬性。 此屬性十分重要，因為它會告訴執行階段應載入 Unmanaged DLL。 傳入的字串是我們的目標函式所在的 DLL。 此外，它會指定要使用哪個[字元集](./charset.md)來對字串進行封送處理。 最後，它會指定此函式會呼叫 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)，且執行階段應該擷取錯誤碼，讓使用者可以透過 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> 擷取它。
-* 行 #8 是 P/Invoke 工作的關鍵。 它會定義與 Unmanaged 方法具有**同樣簽章**的 Managed 方法。 您可以注意到宣告具有新的關鍵字 `extern`，它會告訴執行階段這就是外部方法，而且當您叫用它時，執行階段應該能在 `DllImport` 屬性指定的 DLL 中找到此關鍵字。
+- 行 #1 顯示 `System.Runtime.InteropServices` 命名空間的 using 陳述式，該命名空間持有需要的所有項目。
+- 行 #7 引進 `DllImport` 屬性。 此屬性十分重要，因為它會告訴執行階段應載入 Unmanaged DLL。 傳入的字串是我們的目標函式所在的 DLL。 此外，它會指定要使用哪個[字元集](./charset.md)來對字串進行封送處理。 最後，它會指定此函式會呼叫 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)，且執行階段應該擷取錯誤碼，讓使用者可以透過 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> 擷取它。
+- 行 #8 是 P/Invoke 工作的關鍵。 它會定義與 Unmanaged 方法具有**同樣簽章**的 Managed 方法。 您可以注意到宣告具有新的關鍵字 `extern`，它會告訴執行階段這就是外部方法，而且當您叫用它時，執行階段應該能在 `DllImport` 屬性指定的 DLL 中找到此關鍵字。
 
 此範例的其餘部分僅示範如何叫用方法，就如同叫用任何其他 Managed 方法一樣。
 
@@ -49,10 +49,10 @@ P/Invoke 是一種技術，可讓您從受控碼存取結構、回呼和非受�
 
 現在，讓我們逐步解說範例：
 
-* 範例中的行 #9 定義與非受控碼之回呼特徵標記相符的委派。 請注意，在 Managed 程式碼中使用 `IntPtr` 時，LPARAM 和 HWND 類型的呈現方式。
-* 行 #13 及 #14 引進 user32.dll 程式庫的 `EnumWindows` 函式。
-* 行 #17 - 20 實作委派。 在這個簡單的範例中，我們只想要將控制代碼輸出至主控台。
-* 最後，在行 #24 中，呼叫外部方法並傳入委派。
+- 範例中的行 #9 定義與非受控碼之回呼特徵標記相符的委派。 請注意，在 Managed 程式碼中使用 `IntPtr` 時，LPARAM 和 HWND 類型的呈現方式。
+- 行 #13 及 #14 引進 user32.dll 程式庫的 `EnumWindows` 函式。
+- 行 #17 - 20 實作委派。 在這個簡單的範例中，我們只想要將控制代碼輸出至主控台。
+- 最後，在行 #24 中，呼叫外部方法並傳入委派。
 
 Linux 和 macOS 的範例如下所示。 針對這些作業系統，我們使用 `ftw` 函式，其可在 C 程式庫 `libc` 中找到。 此函式用來周遊目錄階層，並會將函式指標作為其參數之一。 此函式具有下列簽章：`int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`。
 

@@ -2,17 +2,17 @@
 title: 從 XML 結構描述 (XSD) 衍生資料集關聯式結構
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 98c43b6af2913b9737085d2d983b37c6da4c1724
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934473"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203786"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>從 XML 結構描述 (XSD) 衍生資料集關聯式結構
 這個章節提供如何從 XML 結構描述定義語言 (XSD) 結構描述文件來建置 `DataSet` 關聯式結構描述的概觀。 一般而言, 針對架構專案`complexType`的每個子項目, 會`DataSet`在中產生資料表。 資料表結構由複雜型別的定義來決定。 資料表會在架構中`DataSet`的最上層元素中建立。 不過, 只有`complexType`當元素在另一個`complexType`專案中嵌套時`complexType` , 才會針對最上層元素建立資料表, 在此`DataTable`情況下, `complexType` `DataSet`嵌套專案會對應至內的。  
   
- 如需有關 XSD 的詳細資訊, 請參閱全球資訊網協會 (W3C [) XML 架構第0部分:入門建議](https://www.w3.org/TR/xmlschema-0/) [, XML 架構第一部:結構建議](https://www.w3.org/TR/xmlschema-1/) [和 XML 架構第二部分:資料類型](https://www.w3.org/TR/xmlschema-2/)建議。  
+ 如需有關 XSD 的詳細資訊, 請參閱全球資訊網協會 (W3C [) XML 架構第0部分:入門建議](https://www.w3.org/TR/xmlschema-0/) [, XML 架構第一部:結構建議](https://www.w3.org/TR/xmlschema-1/) [和 XML 架構第二部分:Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/) (XML 結構描述第 2 部分：資料類型建議)。  
   
  下列範例示範 XML 架構, 其中`customers`是專案的子`MyDataSet`專案, 也就是**DataSet**元素。  
   
@@ -83,17 +83,17 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>本節內容  
- [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  描述用來在中`DataSet`建立唯一和外鍵條件約束的 XML 架構專案。  
   
- [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [從 XML 結構描述 (XSD) 產生資料集關聯](generating-dataset-relations-from-xml-schema-xsd.md)  
  描述用來在的`DataSet`資料表資料行之間建立關聯的 XML 架構元素。  
   
- [XML 結構描述條件約束和關聯性](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
+ [XML 結構描述條件約束和關聯性](xml-schema-constraints-and-relationships.md)  
  描述在中`DataSet`使用 XML 架構專案來建立條件約束時, 如何隱含建立關聯性。  
   
 ## <a name="related-sections"></a>相關章節  
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [在 DataSet 中使用 XML](using-xml-in-a-dataset.md)  
  描述如何在中`DataSet`將關聯式結構和資料載入和保存為 XML 資料。  
   
 ## <a name="see-also"></a>另請參閱

@@ -2,12 +2,12 @@
 title: 作法：攔截剖析錯誤 (C#)
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 094485b24cdccee7898bd0344aa7c100e26bf4e9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4195ff50d1b4d23cd9eb07fc27f20861d1504672
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487480"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204143"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>作法：攔截剖析錯誤 (C#)
 這個主題顯示如何偵測格式錯誤或無效的 XML。  
@@ -36,7 +36,7 @@ catch (System.Xml.XmlException e)
   
  執行此程式碼時，它會擲回例外狀況：  
   
-```  
+```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   

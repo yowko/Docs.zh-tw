@@ -4,19 +4,19 @@ description: 了解如何封裝、命名以及建立 .NET Core 版本以進行�
 author: tmds
 ms.date: 03/02/2018
 ms.custom: seodec18
-ms.openlocfilehash: b961d84053dc41e75e002c8c12419fdef99ded4b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d23147c8a38fbeea9e88c0a18e1f220e854fec1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585259"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105420"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 發佈封裝
 
 隨著 .NET Core 可在越來越多的平台上使用，了解如何封裝、命名和建立 .NET Core 版本是有用的。 如此一來，套件維護人員可以協助確保一致的體驗，無論使用者選擇在何處執行 .NET。 本文適用於符合下列項目的使用者：
 
-* 嘗試從來源建置 .NET Core。
-* 希望對可能影響產生之配置或套件的 .NET Core CLI 進行變更。
+- 嘗試從來源建置 .NET Core。
+- 希望對可能影響產生之配置或套件的 .NET Core CLI 進行變更。
 
 ## <a name="disk-layout"></a>磁碟配置
 
@@ -102,7 +102,7 @@ SDK 版本使用相同的 `[major].[minor]`，且具有獨立的 `[patch]`，其
 
 ### <a name="patch-packages"></a>修補程式套件
 
-因為套件的修補程式版本可能會造成重大變更，所以建議套件維護人員提供「修補程式套件」。 這些套件可讓您安裝不會自動升級的特定修補程式版本。 由於這些套件不會使用 (安全性) 修補程式進行升級，因此請僅在特殊情況下使用修補程式套件。
+因為套件的修補程式版本可能會造成重大變更，所以建議套件維護人員提供「修補程式套件」  。 這些套件可讓您安裝不會自動升級的特定修補程式版本。 由於這些套件不會使用 (安全性) 修補程式進行升級，因此請僅在特殊情況下使用修補程式套件。
 
 下表顯示建議的套件和**修補程式套件**：
 
@@ -119,7 +119,7 @@ SDK 版本使用相同的 `[major].[minor]`，且具有獨立的 `[patch]`，其
 | dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | host:\<執行階段版本>+                                  |
 | dotnet-host                                    | dotnet-host              | (1),(8),(9),(10) |                                                           |
 
-使用修補程式套件的替代方法，是使用套件管理員將套件「釘選」到特定版本。 若要避免影響其他應用程式/使用者，可以在容器中建置和部署這類應用程式。
+使用修補程式套件的替代方法，是使用套件管理員將套件「釘選」  到特定版本。 若要避免影響其他應用程式/使用者，可以在容器中建置和部署這類應用程式。
 
 ## <a name="building-packages"></a>建置套件
 

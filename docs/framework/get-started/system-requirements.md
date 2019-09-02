@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d89f3f4d97fe4cbe3b660b74537f8c8368b492a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: bed0084fd576ba9b9f9eeb51e9e2466938e43490
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052774"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106502"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系統需求
 
 本主題中的表格提供下列 .NET Framework 版本的硬體、作業系統和軟體需求：
 
-* .NET Framework 4.5 及其小數點發行版本 (4.5.1 和 4.5.2)。
-* .NET Framework 4.6 及其小數點發行版本 (4.6.1 和 4.6.2)。
-* .NET Framework 4.7 及其小數點發行版本 (4.7.1 和 4.7.2)。
-* .NET Framework 4.8
+- .NET Framework 4.5 及其小數點發行版本 (4.5.1 和 4.5.2)。
+- .NET Framework 4.6 及其小數點發行版本 (4.6.1 和 4.6.2)。
+- .NET Framework 4.7 及其小數點發行版本 (4.7.1 和 4.7.2)。
+- .NET Framework 4.8
 
 如需有關 .NET Framework 4.5 之前之 .NET Framework 版本的資訊，請參閱 [.NET Framework 版本和相依性](../migration-guide/versions-and-dependencies.md)。
 

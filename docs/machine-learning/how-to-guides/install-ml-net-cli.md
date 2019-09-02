@@ -3,12 +3,12 @@ title: 如何安裝 ML.NET 命令列介面 (CLI) 工具
 description: ML.NET 命令列介面 (CLI) 工具的概觀與安裝。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832925"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106903"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安裝 ML.NET 命令列介面 (CLI) 工具
 
@@ -25,7 +25,7 @@ ML.NET CLI (命令列介面) 是您可以在任何命令提示字元 (Windows、
 
 您可以使用 Visual Studio F5 或 `dotnet run` (.NET Core CLI) 執行已產生的 C# 程式碼專案。
 
-注意:如果在安裝 [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) 後，`dotnet tool` 命令無法運作，請登出 Windows，並再次登入。
+注意：如果在安裝 [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) 後，`dotnet tool` 命令無法運作，請登出 Windows，並再次登入。
 
 ## <a name="install"></a>安裝
 
@@ -106,9 +106,9 @@ dotnet tool update -g mlnet
 
 2. 將適當的填充碼指令碼新增至 shell 設定檔。 您可能必須建立 shell 設定檔。 填充碼指令碼會將完成要求，從您的 shell 轉送至 `dotnet-suggest`工具，委派給 `System.CommandLine` 型的應用程式。
 
-    * 若是 Bash，請將 [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) 的內容新增至 `~/.bash_profile`。
+    - 若是 Bash，請將 [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) 的內容新增至 `~/.bash_profile`。
 
-    * 若為 PowerShell，請將 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) 的內容新增至您的 PowerShell 設定檔。 您可在主控台中執行下列命令，找到 PowerShell 設定檔的預期路徑：
+    - 若為 PowerShell，請將 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) 的內容新增至您的 PowerShell 設定檔。 您可在主控台中執行下列命令，找到 PowerShell 設定檔的預期路徑：
 
     ```console
     echo $profile

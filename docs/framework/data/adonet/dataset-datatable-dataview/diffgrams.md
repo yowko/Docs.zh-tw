@@ -2,17 +2,17 @@
 title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 2bf736445a041ec678ab30474da51fddfba1773b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934485"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204887"
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。 <xref:System.Data.DataSet> 使用 DiffGram 格式以載入保存內容，並將內容序列化以透過網路連接傳輸。 當寫入為 diffgram 時, 它會將所有必要資訊填入 diffgram, 以正確重新建立的內容 (但不是架構<xref:System.Data.DataSet>), 包括來自**原始**和的資料行值。 <xref:System.Data.DataSet> **目前**的資料列版本、資料列錯誤資訊和資料列順序。  
   
- 從 XML Web Service 傳送和擷取 <xref:System.Data.DataSet> 時，會隱含使用 DiffGram 格式。 此外, 當您<xref:System.Data.DataSet>使用**ReadXml**方法從 xml 載入的內容, 或使用<xref:System.Data.DataSet> **WriteXml**方法在 xml 中寫入的內容時, 您可以指定將內容讀取或寫入為 DiffGram。 如需詳細資訊, 請參閱[從 Xml 載入資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)和將[資料集內容當做 xml 資料寫入](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)。  
+ 從 XML Web Service 傳送和擷取 <xref:System.Data.DataSet> 時，會隱含使用 DiffGram 格式。 此外, 當您<xref:System.Data.DataSet>使用**ReadXml**方法從 xml 載入的內容, 或使用<xref:System.Data.DataSet> **WriteXml**方法在 xml 中寫入的內容時, 您可以指定將內容讀取或寫入為 DiffGram。 如需詳細資訊, 請參閱[從 Xml 載入資料集](loading-a-dataset-from-xml.md)和將[資料集內容當做 xml 資料寫入](writing-dataset-contents-as-xml-data.md)。  
   
  雖然 DiffGram 格式在 .NET Framework 中主要是用來當做 <xref:System.Data.DataSet> 內容的序列化格式，您也可以使用 DiffGrams 修改 Microsoft SQL Server 資料庫中的資料表資料。  
   
@@ -91,7 +91,7 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
   
  <xref:System.Data.DataSet> 將其內容讀取或寫為 DiffGram 時，亦會包含其他附註。 下表描述這些額外的注釋, 這些批註定義于命名空間**urn: 架構-microsoft-com: xml-msdata**中。  
   
-|註釋|描述|  
+|註釋|說明|  
 |----------------|-----------------|  
 |**RowOrder**|保留原始資料的資料列順序，並識別特定 <xref:System.Data.DataTable> 中資料列的索引。|  
 |**隱含**|將**ColumnMapping**屬性設定為 MappingType 時, 將資料行識別為**Hidden**。 屬性會以**msdata: hidden** *[ColumnName]* = "*value*" 的格式撰寫。 例如：`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。<br /><br /> 請注意，隱藏的資料行只有在包含資料時才會寫為 DiffGram 屬性。 否則便會予以忽略。|  
@@ -133,8 +133,8 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [從 XML 載入資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [將資料集內容當作 XML 資料寫入](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [在 DataSet 中使用 XML](using-xml-in-a-dataset.md)
+- [從 XML 載入資料集](loading-a-dataset-from-xml.md)
+- [將資料集內容當作 XML 資料寫入](writing-dataset-contents-as-xml-data.md)
+- [DataSet、DataTable 和 DataView](index.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

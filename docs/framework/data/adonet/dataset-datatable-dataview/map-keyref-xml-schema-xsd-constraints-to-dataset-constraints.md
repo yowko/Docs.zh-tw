@@ -2,29 +2,29 @@
 title: 將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 611322065a4df53d1a3149ef4e1ca5592f149081
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604028"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203448"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
-**Keyref**元素可讓您建立文件內的項目之間的連結。 這與關聯式資料庫中的外部索引鍵關聯性很類似。 如果指定了結構描述**keyref**項目，項目會轉換至對應外部索引鍵條件約束的資料表中的資料行的結構描述對應程序<xref:System.Data.DataSet>。 根據預設， **keyref**項目也會產生關聯，以**ParentTable**， **ChildTable**， **ParentColumn**，以及**ChildColumn**在關聯上指定的屬性。  
+**Keyref**元素可讓您在檔內的元素之間建立連結。 這與關聯式資料庫中的外部索引鍵關聯性很類似。 如果架構指定**keyref**專案, 則在架構對應程式期間, 專案會轉換為數據表<xref:System.Data.DataSet>中資料行上對應的外鍵條件約束。 根據預設, **keyref**元素也會產生關聯性, 並在關聯上指定**ParentTable**、 **ChildTable**、 **ParentColumn**和**ChildColumn**屬性。  
   
- 下表列出**msdata**您可以在指定的屬性**keyref**項目。  
+ 下表列出您可以在**keyref**元素中指定的**msdata**屬性。  
   
-|屬性名稱|描述|  
+|屬性名稱|說明|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|如果**ConstraintOnly ="true"** 上指定**keyref**結構描述中的項目，建立條件約束，但不會建立關聯。 如果未指定此屬性 (或設為**假**)，條件約束和關聯性會建立於**資料集**。|  
-|**msdata:ConstraintName**|如果**ConstraintName**指定屬性，則會使用該值做為條件約束的名稱。 否則，請**名稱**屬性**keyref**結構描述中的項目提供中的條件約束名稱**資料集**。|  
-|**msdata:UpdateRule**|如果**UpdateRule**屬性中指定**keyref**結構描述中的項目，其值指派給**UpdateRule**中的條件約束屬性**資料集**。 否則**UpdateRule**屬性設定為**Cascade**。|  
-|**msdata:DeleteRule**|如果**DeleteRule**屬性中指定**keyref**結構描述中的項目，其值指派給**DeleteRule**中的條件約束屬性**資料集**。 否則**DeleteRule**屬性設定為**Cascade**。|  
-|**msdata:AcceptRejectRule**|如果**AcceptRejectRule**屬性中指定**keyref**結構描述中的項目，其值指派給**AcceptRejectRule** 中的條件約束屬性**資料集**。 否則**AcceptRejectRule**屬性設定為**無**。|  
+|**msdata:ConstraintOnly**|如果在架構的**keyref**元素上指定**ConstraintOnly = "true"** , 則會建立條件約束, 但不會建立關聯性。 如果未指定這個屬性 (或設定為**False**), 則會在**資料集中**建立條件約束和關聯性。|  
+|**msdata:ConstraintName**|如果已指定**ConstraintName**屬性, 則會使用其值做為條件約束的名稱。 否則, 在架構中, **keyref**元素的**name**屬性會提供**資料集**內的條件約束名稱。|  
+|**msdata:UpdateRule**|如果在架構的**keyref**專案中指定了**UpdateRule**屬性, 其值會指派給**DataSet**中的**UpdateRule**條件約束屬性。 否則, **UpdateRule**屬性會設定為**Cascade**。|  
+|**msdata:DeleteRule**|如果在架構的**keyref**專案中指定了**DeleteRule**屬性, 其值會指派給**DataSet**中的**DeleteRule**條件約束屬性。 否則, **DeleteRule**屬性會設定為**Cascade**。|  
+|**msdata:AcceptRejectRule**|如果在架構的**keyref**專案中指定了**AcceptRejectRule**屬性, 其值會指派給**DataSet**中的**AcceptRejectRule**條件約束屬性。 否則, **AcceptRejectRule**屬性會設定為**None**。|  
   
- 下列範例包含指定的結構描述**金鑰**並**keyref**之間的關聯性**OrderNumber**子項目**順序**項目和**OrderNo**子項目**OrderDetail**項目。  
+ 下列範例包含的架構, 會指定**Order**元素的**OrderNumber**子專案與**OrderDetail**的**OrderNo**子項目之間的索引**鍵**和**keyref**關聯性。元素.  
   
- 在範例中， **OrderNumber**子項目**OrderDetail**項目是指**OrderNo**的索引鍵的子項目**順序**項目。  
+ 在範例中, **OrderDetail**元素的**OrderNumber**子項目會參考**Order**元素的**OrderNo** key 子項目。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -66,16 +66,16 @@ ms.locfileid: "64604028"
 </xs:schema>  
 ```  
   
- XML 結構描述定義語言 (XSD) 結構描述對應處理會產生下列**資料集**具有兩個資料表：  
+ XML 架構定義語言 (XSD) 架構對應進程會產生具有兩個數據表的下列**資料集**:  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- 颾魤 ㄛ**資料集**定義下列條件約束：  
+ 此外,**資料集會**定義下列條件約束:  
   
-- Unique 條件約束**順序**資料表。  
+- **Order**資料表上的 unique 條件約束。  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
-- 之間的關聯性**順序**並**OrderDetail**資料表。 **巢狀**屬性設定為**False**因為兩個項目無巢狀結構描述中。  
+- **Order**和**OrderDetail**資料表之間的關聯性。 **Nested**屬性會設定為**False** , 因為這兩個元素並未嵌套在架構中。  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
-- 上的外部索引鍵條件約束**OrderDetail**資料表。  
+- **OrderDetail**資料表上的 foreign key 條件約束。  
   
     ```  
               ConstraintName: OrderNoRef  
@@ -111,6 +111,6 @@ Order(OrderNumber, EmpNumber)
   
 ## <a name="see-also"></a>另請參閱
 
-- [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [從 XML 結構描述 (XSD) 產生資料集關聯](generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

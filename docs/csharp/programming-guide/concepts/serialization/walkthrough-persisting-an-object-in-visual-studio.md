@@ -1,12 +1,12 @@
 ---
 title: 逐步解說：使用 C# 保存物件
 ms.date: 04/26/2018
-ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975819"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105928"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C\# 保存物件
 
@@ -22,14 +22,14 @@ ms.locfileid: "56975819"
 
 ## <a name="prerequisites"></a>必要條件
 
-* 若要建置並執行，請安裝 [.NET Core SDK](https://www.microsoft.com/net/core)。
+- 若要建置並執行，請安裝 [.NET Core SDK](https://www.microsoft.com/net/core)。
 
-* 如果您還沒有這麼做，請安裝您慣用的程式碼編輯器。
+- 如果您還沒有這麼做，請安裝您慣用的程式碼編輯器。
 
 > [!TIP]
 > 需要安裝程式碼編輯器嗎？ 試用 [Visual Studio](https://visualstudio.com/downloads)！
 
-* 範例需要 C# 7.3。 請參閱[選取 C# 語言版本](../../../language-reference/configure-language-version.md) 
+- 範例需要 C# 7.3。 請參閱[選取 C# 語言版本](../../../language-reference/configure-language-version.md) 
 
 您可以在 [.NET 範例 GitHub 存放庫](https://github.com/dotnet/samples/tree/master/csharp/serialization) (英文) 線上檢查範例程式程。
 

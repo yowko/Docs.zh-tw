@@ -2,12 +2,12 @@
 title: dotnet add package 命令
 description: "'dotnet add package' 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
 ms.date: 06/26/2019
-ms.openlocfilehash: 50a352be66f2b4bd4498d79f61dc01f56d4b00c5
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 124e42b1d5897802bb1698c8e22b7e76031391a2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569506"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105170"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -54,59 +54,59 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="arguments"></a>引數
 
-* **`PROJECT`**
+- **`PROJECT`**
 
   指定專案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。
 
-* **`PACKAGE_NAME`**
+- **`PACKAGE_NAME`**
 
   要新增的套件參考。
 
 ## <a name="options"></a>選項
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增套件參考。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   印出命令的簡短說明。
 
-* **`--interactive`**
+- **`--interactive`**
 
   允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 2.1 SDK 2.1.400 版起可用。
 
-* **`-n|--no-restore`**
+- **`-n|--no-restore`**
 
   新增套件參考，而不執行還原預覽和相容性檢查。
 
-* **`--package-directory <PACKAGE_DIRECTORY>`**
+- **`--package-directory <PACKAGE_DIRECTORY>`**
 
   還原套件的目錄。 Windows 上的預設套件還原位置為 `%userprofile%\.nuget\packages`，macOS 和 Linux 上則為 `~/.nuget/packages`。 如需詳細資訊，請參閱[在 NuGet 中管理全域套件、快取和暫存資料夾](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)。
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   要在還原作業期間使用的 NuGet 套件來源。
 
-* **`-v|--version <VERSION>`**
+- **`-v|--version <VERSION>`**
 
   套件的版本。 請參閱 [NuGet 套件版本控制](https://docs.microsoft.com/nuget/reference/package-versioning) \(部分機器翻譯\)。
 
 ## <a name="examples"></a>範例
 
-* 將 `Newtonsoft.Json` NuGet 套件新增至專案：
+- 將 `Newtonsoft.Json` NuGet 套件新增至專案：
 
   ```console
   dotnet add package Newtonsoft.Json
   ```
 
-* 將特定版本的套件新增至專案：
+- 將特定版本的套件新增至專案：
 
   ```console
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
-* 使用特定 NuGet 來源新增套件：
+- 使用特定 NuGet 來源新增套件：
 
   ```console
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json

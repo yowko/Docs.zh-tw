@@ -2,27 +2,27 @@
 title: 在巢狀結構描述項目之間進行隱含關聯對應
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 6fcb0b9bb7c947359c2334d3d116f5317f84af83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9ea85db98a577991e06e0239a0738a2ca5bada6
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586811"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203475"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>在巢狀結構描述項目之間進行隱含關聯對應
 XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型別。 在這樣的情況下，對應處理序會在 <xref:System.Data.DataSet> 內套用預設對應並建立下列各項：  
   
 - 為每個複雜型別 (父和子) 建立一個資料表。  
   
-- 如果沒有唯一的條件約束存在父代上，一個額外主索引鍵資料行每個資料表定義名為*TableName*_Id 所在*TableName*是父資料表的名稱。  
+- 如果父代上不存在 unique 條件約束, 則每個資料表定義會有一個額外的主鍵資料行, 名為*tablename*_Id, 其中*TableName*是父資料表的名稱。  
   
-- 識別額外的資料行的主索引鍵的父資料表上的主索引鍵條件約束 (藉由設定**IsPrimaryKey**屬性設 **，則為 True**)。 此條件約束的名稱為 Constraint\#，其中 \# 為 1、2、3 等。 例如，第一個條件約束的預設名稱是 Constraint1。  
+- 父資料表上的 primary key 條件約束, 可將其他資料行識別為主鍵 (藉由將**IsPrimaryKey**屬性設定為**True**)。 此條件約束的名稱為 Constraint\#，其中 \# 為 1、2、3 等。 例如，第一個條件約束的預設名稱是 Constraint1。  
   
-- 子資料表中的外部索引鍵條件約束將另一個資料行識別為外部索引鍵，此外部索引鍵參考至父資料表的主索引鍵。 名為條件約束*ParentTable_ChildTable*何處*ParentTable*是父資料表的名稱並*ChildTable*是子資料表的名稱。  
+- 子資料表中的外部索引鍵條件約束將另一個資料行識別為外部索引鍵，此外部索引鍵參考至父資料表的主索引鍵。 條件約束名為*ParentTable_ChildTable* , 其中*ParentTable*是父資料表的名稱, 而*ChildTable*是子資料工作表的名稱。  
   
 - 父資料表和子資料表間的資料關聯。  
   
- 下列範例示範結構描述所在**OrderDetail**是子元素**順序**。  
+ 下列範例顯示的架構, 其中**OrderDetail**是**Order**的子項目。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
 </xs:schema>  
 ```  
   
- XML 結構描述對應處理序內建立下列**資料集**:  
+ XML 架構對應進程會在**資料集中**建立下列內容:  
   
-- **順序**並**OrderDetail**資料表。  
+- **Order**和**OrderDetail**資料表。  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- Unique 條件約束**順序**資料表。 請注意， **IsPrimaryKey**屬性設定為 **，則為 True**。  
+- **Order**資料表上的 unique 條件約束。 請注意, **IsPrimaryKey**屬性設定為**True**。  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
     IsPrimaryKey: True  
     ```  
   
-- 上的外部索引鍵條件約束**OrderDetail**資料表。  
+- **OrderDetail**資料表上的 foreign key 條件約束。  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
     RelatedColumns: Order_Id   
     ```  
   
-- 之間的關聯性**順序**並**OrderDetail**資料表。 **巢狀**此關聯性的屬性設定為 **，則為 True**因為**Order**並**OrderDetail**元素的巢狀結構描述中.  
+- **Order**和**OrderDetail**資料表之間的關聯性。 此關聯性的**Nested**屬性會設定為**True** , 因為**Order**和**OrderDetail**專案會嵌套在架構中。  
   
     ```  
     ParentTable: Order  
@@ -99,6 +99,6 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
   
 ## <a name="see-also"></a>另請參閱
 
-- [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [從 XML 結構描述 (XSD) 產生資料集關聯](generating-dataset-relations-from-xml-schema-xsd.md)
+- [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

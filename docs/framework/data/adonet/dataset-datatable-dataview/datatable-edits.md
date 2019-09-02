@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 0300ceab16d9a94bd04468f7acd105e69d13e643
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a970ebda76f5bb6bdea704dabef2ee305436c613
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879836"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205010"
 ---
 # <a name="datatable-edits"></a>DataTable 編輯
-變更 <xref:System.Data.DataRow> 中的資料行值時，這些變更會立即放入資料列的目前狀態中。 <xref:System.Data.DataRowState>會設為**Modified**，以及所做的變更來接受或拒絕使用<xref:System.Data.DataRow.AcceptChanges%2A>或<xref:System.Data.DataRow.RejectChanges%2A>方法**DataRow**。 **DataRow**也會提供三種方法，您可以使用您在編輯時，暫停的資料列狀態。 這些方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
+變更 <xref:System.Data.DataRow> 中的資料行值時，這些變更會立即放入資料列的目前狀態中。 <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A>接著會將設定為 Modified, 並使用 DataRow 的或方法來接受或拒絕變更。 <xref:System.Data.DataRowState> **DataRow**也提供三種方法, 可讓您在編輯資料列時, 用來暫停該資料列的狀態。 這些方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
   
- 當您修改資料行中的值**DataRow**直接**DataRow**會管理使用的資料行值**目前**，**預設**，及**原始**資料列版本。 這些資料列版本，除了**BeginEdit**， **EndEdit**，並**CancelEdit**方法會使用第四個資料列版本：**提議**。 如需有關資料列版本的詳細資訊，請參閱[資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+ 當您直接修改**datarow**中的資料行值時, **Datarow**會使用**目前**的、**預設值**和**原始**資料列版本來管理資料行值。 除了這些資料列版本以外, **BeginEdit**、 **EndEdit**和**CancelEdit**方法還使用第四個數據列版本:**提議**。 如需資料列版本的詳細資訊, 請參閱資料[列狀態和資料列版本](row-states-and-row-versions.md)。  
   
- **提議**編輯作業一開始會先呼叫期間的資料列版本存在**BeginEdit** ，且結束利用**EndEdit**或**CancelEdit**或藉由呼叫**AcceptChanges**或是**RejectChanges**。  
+ **建議**的資料列版本存在於編輯作業期間, 此作業一開始會呼叫**BeginEdit** , 並使用**EndEdit**或**CancelEdit,** 或藉由呼叫**AcceptChanges**或**RejectChanges**來結束。  
   
- 編輯作業期間，您可以將驗證邏輯套用至個別資料行藉由評估**ProposedValue**中**ColumnChanged**事件**DataTable**。 **ColumnChanged**事件會保存**DataColumnChangeEventArgs**正在變更的資料行，並保留參考**ProposedValue**。 在您評估建議的值之後，就可以修改該值或取消編輯。 當編輯作業結束後時，資料列會移出**提議**狀態。  
+ 在編輯作業期間, 您可以藉由評估**DataTable** **ColumnChanged**事件中的**ProposedValue** , 將驗證邏輯套用至個別資料行。 **ColumnChanged**事件會保存**DataColumnChangeEventArgs** , 以保留對變更的資料行及其對**ProposedValue**的參考。 在您評估建議的值之後，就可以修改該值或取消編輯。 當編輯結束時, 資料列就會移出所**提議**的狀態。  
   
- 您可以藉由呼叫確認編輯**EndEdit**，或您可以藉由呼叫取消**CancelEdit**。 請注意，雖然**EndEdit**確認您的編輯**資料集**真正接受變更，直到**AcceptChanges**呼叫。 也請注意，如果您呼叫**AcceptChanges**已經結束編輯之前**EndEdit**或是**CancelEdit**，編輯作業會結束和**提議**同時接受的資料列值**目前**並**原始**資料列版本。 同樣地，在呼叫**RejectChanges**結束編輯，並捨棄**目前**並**提議**資料列版本。 呼叫**EndEdit**或是**CancelEdit**之後呼叫**AcceptChanges**或是**RejectChanges**沒有任何作用，因為編輯作業已完成已結束。  
+ 您可以藉由呼叫**EndEdit**來確認編輯, 或者可以藉由呼叫**CancelEdit**來取消。 請注意, 雖然**EndEdit**會確認您的編輯, 但在呼叫**AcceptChanges**之前,**資料集**實際上並不接受變更。 另請注意, 如果您在結束 edit with **EndEdit**或**CancelEdit**之前呼叫**AcceptChanges** , 就會結束編輯, 而且**目前**和**原始**資料列版本都會接受**建議**的資料列值。 以同樣的方式, 呼叫**RejectChanges**會結束編輯, 並捨棄**目前**和**建議**的資料列版本。 呼叫**AcceptChanges**或**RejectChanges**之後呼叫**EndEdit**或**CancelEdit**沒有作用, 因為編輯已經結束。  
   
- 下列範例示範如何使用**BeginEdit**具有**EndEdit**並**CancelEdit**。 此範例也會檢查**ProposedValue**中**ColumnChanged**事件，並決定是否要取消編輯。  
+ 下列範例示範如何使用**BeginEdit**搭配**EndEdit**和**CancelEdit**。 此範例也會檢查**ColumnChanged**事件中的**ProposedValue** , 並決定是否要取消編輯。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -91,6 +91,6 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataRowVersion>
-- [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [處理 DataTable 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [在 DataTable 中操作資料](manipulating-data-in-a-datatable.md)
+- [處理 DataTable 事件](handling-datatable-events.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

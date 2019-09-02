@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ee99d1b264f508882418c83da8e82759b0d95fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916299"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206131"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Form 中的使用者輸入驗證
 當使用者在您的應用程式中輸入資料時, 您可能會想要在應用程式使用資料之前先驗證其是否有效。 您可能需要某些文字欄位不是長度為零、欄位要格式化為電話號碼或其他類型的格式正確的資料, 或字串未包含任何可能用來危害資料庫安全性的不安全字元。 Windows Forms 提供數種方式, 讓您在應用程式中驗證輸入。  
@@ -85,7 +85,7 @@ ms.locfileid: "69916299"
   
 - 以程式設計<xref:System.Windows.Forms.Form.Close%2A>方式呼叫方法。  
   
- 不過, 在某些情況下, 您可能會想要讓使用者關閉表單, 而不論控制項中的值是否有效。 您可以藉由建立表單<xref:System.Windows.Forms.Form.Closing>事件的處理常式, 覆寫驗證, 並關閉仍然包含無效資料的表單。 在事件中, 將<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>屬性設定為。 `false` 這會強制關閉表單。 如需詳細資訊和範例，請參閱 <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>。  
+ 不過, 在某些情況下, 您可能會想要讓使用者關閉表單, 而不論控制項中的值是否有效。 您可以藉由建立表單<xref:System.Windows.Forms.Form.FormClosing>事件的處理常式, 覆寫驗證, 並關閉仍然包含無效資料的表單。 在事件中, 將<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>屬性設定為。 `false` 這會強制關閉表單。 如需詳細資訊和範例，請參閱 <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>。  
   
 > [!NOTE]
 > 如果您強制表單以這種方式關閉, 表單控制項中尚未儲存的任何資料都會遺失。 此外, 強制回應表單在關閉時, 不會驗證控制項的內容。 您仍然可以使用控制項驗證來鎖定控制項的焦點, 但不需要擔心與關閉表單相關聯的行為。  
@@ -93,7 +93,7 @@ ms.locfileid: "69916299"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
-- <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [MaskedTextBox 控制項](./controls/maskedtextbox-control-windows-forms.md)
 - [規則運算式範例](../../standard/base-types/regular-expression-examples.md)

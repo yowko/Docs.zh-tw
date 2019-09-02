@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3bde5b18437cc9890f660f018e81582a4d708d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f040e1e1706e1f84ced8b253ff3fb15dbcbd6e1e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910911"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206018"
 ---
 # <a name="link-demands"></a>連結要求
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -32,7 +32,7 @@ ms.locfileid: "69910911"
   
  <xref:System.Security.CodeAccessPermission.Assert%2A>、<xref:System.Security.CodeAccessPermission.Deny%2A> 和 <xref:System.Security.CodeAccessPermission.PermitOnly%2A> 堆疊查核行程修飾詞不會影響連結要求的評估。  由於連結要求不會執行堆疊查核行程，堆疊查核行程修飾詞不會影響連結要求。  
   
- 如果受連結要求保護的方法是透過[反映](../../../docs/framework/reflection-and-codedom/reflection.md)來存取, 則連結要求會檢查透過反映存取之程式碼的立即呼叫端。 使用反映來執行的方法探索和方法引動過程都是如此。 例如, 假設程式碼使用反映來<xref:System.Reflection.MethodInfo>傳回物件, 代表受連結要求保護的方法, 然後將該**MethodInfo**物件傳遞給使用物件來叫用原始方法的其他程式碼。 在此情況下, 連結要求檢查會發生兩次: 一次是針對傳回**MethodInfo**物件的程式碼, 另一次是針對叫用它的程式碼。  
+ 如果受連結要求保護的方法是透過[反映](../reflection-and-codedom/reflection.md)來存取, 則連結要求會檢查透過反映存取之程式碼的立即呼叫端。 使用反映來執行的方法探索和方法引動過程都是如此。 例如, 假設程式碼使用反映來<xref:System.Reflection.MethodInfo>傳回物件, 代表受連結要求保護的方法, 然後將該**MethodInfo**物件傳遞給使用物件來叫用原始方法的其他程式碼。 在此情況下, 連結要求檢查會發生兩次: 一次是針對傳回**MethodInfo**物件的程式碼, 另一次是針對叫用它的程式碼。  
   
 > [!NOTE]
 > 在靜態類別建構函式上執行的連結要求不會保護建構函式，因為靜態建構函式由系統所呼叫，不在應用程式的程式碼執行路徑中。 如此一來，當連結需求套用至整個類別時，它無法保護對靜態建構函式的存取權，不過它確實會保護類別的其餘部分。  
@@ -57,4 +57,4 @@ public static string ReadData()
 ## <a name="see-also"></a>另請參閱
 
 - [屬性](../../standard/attributes/index.md)
-- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)
+- [程式碼存取安全性](code-access-security.md)

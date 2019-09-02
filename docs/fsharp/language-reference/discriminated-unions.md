@@ -2,12 +2,12 @@
 title: 已區分的聯集
 description: 瞭解如何使用F#區分等位。
 ms.date: 05/16/2016
-ms.openlocfilehash: fa4f011a8d5fd6725a44e030b423e79244a18734
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3ed05fdb144d7266adc1718cdf015ab64680f3d8
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106773"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206154"
 ---
 # <a name="discriminated-unions"></a>已區分的聯集
 
@@ -87,7 +87,7 @@ let getShapeHeight shape =
 在F#區分等位中, 通常會在用來包裝單一類型的網域模型中使用。 您也可以透過模式比對, 輕鬆地將基礎值解壓縮。 您不需要在單一案例中使用 match 運算式:
 
 ```fsharp
-let ([UnionCaseName] [values]) = [UnionValue]
+let ([UnionCaseIdentifier] [values]) = [UnionValue]
 ```
 
 下列範例為其示範：

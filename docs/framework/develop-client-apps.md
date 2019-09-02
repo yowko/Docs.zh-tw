@@ -13,20 +13,20 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 68d9365e6aed247770eb250f5a2e296b710febc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8c63aa074f699fa77c25441995a2ae74b78caf8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671287"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106500"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>使用 .NET Framework 開發用戶端應用程式
 
 有數種方式能夠使用 .NET Framework 開發以 Windows 為基礎的應用程式。 您可以使用下列任一工具及架構： 
 
-* [通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows/apps)
-* [Windows Presentation Foundation (WPF)](../../docs/framework/wpf/index.md)
-* [Windows Forms](../../docs/framework/winforms/index.md)
+- [通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows/apps)
+- [Windows Presentation Foundation (WPF)](../../docs/framework/wpf/index.md)
+- [Windows Forms](../../docs/framework/winforms/index.md)
 
 本節中的主題說明如何使用 Windows Presentation Foundation 或 Windows Forms 建立以 Windows 為基礎的應用程式。 不過，您也可以使用 .NET Framework 來建立 Web 應用程式，以及可在您透過 Microsoft Store 取得的電腦或裝置上執行的用戶端應用程式。
  

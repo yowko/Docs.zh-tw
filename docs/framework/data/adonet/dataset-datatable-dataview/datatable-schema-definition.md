@@ -2,12 +2,12 @@
 title: DataTable 結構描述定義
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 20fee4316ad95c0f8716a0f374410009ea129222
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952351"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204987"
 ---
 # <a name="datatable-schema-definition"></a>DataTable 結構描述定義
 資料表的結構描述 (或結構) 是由資料行或條件約束來表示。 您可以使用 <xref:System.Data.DataTable> 物件以及 <xref:System.Data.DataColumn> 和 <xref:System.Data.ForeignKeyConstraint> 物件來定義 <xref:System.Data.UniqueConstraint> 的結構描述。 資料表的資料行可對應到資料來源中的資料行、包含運算式所得的值、自動累加其值或包含主索引鍵值。  
@@ -20,22 +20,22 @@ ms.locfileid: "69952351"
 > DataTable <xref:System.Data.DataTable.CaseSensitive%2A>的屬性不會影響這個行為。 **CaseSensitive**屬性會套用至資料表中的資料, 並影響排序、搜尋、篩選、強制執行條件約束等等, 但不會參考資料行、關聯和條件約束。  
   
 ## <a name="in-this-section"></a>本節內容  
- [將資料行新增至 DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [將資料行新增至 DataTable](adding-columns-to-a-datatable.md)  
  描述如何使用**DataColumn**物件定義資料表的資料行。  
   
- [建立運算式資料行](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [建立運算式資料行](creating-expression-columns.md)  
  說明如何使用資料行的**Expression**屬性, 根據資料列中其他欄位的值來計算值。  
   
- [建立自動遞增資料行](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [建立自動遞增資料行](creating-autoincrement-columns.md)  
  說明如何將資料行設定為自動累加數值，以確保每個資料列都有唯一的資料行值。  
   
- [定義主索引鍵](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [定義主索引鍵](defining-primary-keys.md)  
  描述如何從一或多個**DataColumn**物件指定資料表的主鍵。  
   
- [DataTable 條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [DataTable 條件約束](datatable-constraints.md)  
  說明如何在資料表中定義資料行的外部索引鍵條件約束和唯一的條件約束。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable](datatables.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

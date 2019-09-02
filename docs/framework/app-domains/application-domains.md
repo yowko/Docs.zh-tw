@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927987"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040739"
 ---
 # <a name="application-domains"></a>應用程式定義域
 
@@ -145,7 +145,7 @@ COMPLUS_LoaderOptimization = 1
  當設定為 1 時，COMPLUS_LoaderOptimization 環境旗標會強制執行階段主應用程式以稱為 SingleDomain 的非定義域中性方式載入所有組件。 除了永遠以定義域中性方式載入的 Mscorlib 之外，SingleDomain 不會以定義域中性方式載入任何組件。 這種設定稱為單一定義域，因為它通常使用於裝載程式只在處理序中執行單一應用程式的情況。  
   
 > [!CAUTION]
->  COMPLUS_LoaderOptimization 環境旗標是設計用於診斷及測試情節。 開啟旗標可能會造成速度大幅減慢，並增加記憶體使用量。  
+> COMPLUS_LoaderOptimization 環境旗標是設計用於診斷及測試情節。 開啟旗標可能會造成速度大幅減慢，並增加記憶體使用量。  
   
 ### <a name="code-example"></a>程式碼範例
 

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611451"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107148"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>搭配模型產生器使用迴歸來預測價格
 
@@ -21,12 +21,12 @@ ms.locfileid: "69611451"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
-> * 準備並了解資料
-> * 選擇案例
-> * 載入資料
-> * 將模型定型
-> * 評估模型
-> * 使用模型來進行預測
+> - 準備並了解資料
+> - 選擇案例
+> - 載入資料
+> - 將模型定型
+> - 評估模型
+> - 使用模型來進行預測
 
 > [!NOTE]
 > 模型產生器目前為預覽版。
@@ -59,13 +59,13 @@ ms.locfileid: "69611451"
 
     提供的資料集包含下列資料行：
 
-    * **vendor_id：** 計程車廠商的識別碼是一項特徵。
-    * **rate_code：** 計程車行程的費率類型是一項特徵。
-    * **passenger_count：** 行程的乘客數目是一項特徵。
-    * **trip_time_in_secs：** 行程所花費的時間長度。
-    * **trip_distance：** 行程的距離是一項特徵。
-    * **payment_type：** 付款方式 (現金或信用卡) 是一項特徵。
-    * **fare_amount：** 計程車車資總計是標籤。
+    - **vendor_id：** 計程車廠商的識別碼是一項特徵。
+    - **rate_code：** 計程車行程的費率類型是一項特徵。
+    - **passenger_count：** 行程的乘客數目是一項特徵。
+    - **trip_time_in_secs：** 行程所花費的時間長度。
+    - **trip_distance：** 行程的距離是一項特徵。
+    - **payment_type：** 付款方式 (現金或信用卡) 是一項特徵。
+    - **fare_amount：** 計程車車資總計是標籤。
 
 `label` 是您希望進行預測的資料行。 執行迴歸工作時，目標是預測數值。 在這個價格預測案例中，會預測計程車車程的成本。 因此，**fare_amount** 為標籤。 所識別 `features` 則是您提供模型來預測 `label` 的輸入。 在此案例中，其餘資料行都會用來作為特徵或輸入，來預測費用金額。
 
@@ -190,12 +190,12 @@ ms.locfileid: "69611451"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
-> * 準備並了解資料
-> * 選擇案例
-> * 載入資料
-> * 將模型定型
-> * 評估模型
-> * 使用模型來進行預測
+> - 準備並了解資料
+> - 選擇案例
+> - 載入資料
+> - 將模型定型
+> - 評估模型
+> - 使用模型來進行預測
 
 ### <a name="additional-resources"></a>其他資源
 

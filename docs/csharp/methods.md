@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025103"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168506"
 ---
 # <a name="methods"></a>方法
 
@@ -257,7 +257,7 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 
 使用非同步功能，您就可以呼叫非同步方法，而不需要使用明確回呼或手動將您的程式碼分散到多種方法或 lambda 運算式上。
 
-如果您使用 [async](language-reference/keywords/async.md) 修飾詞來標示方法，則可以在方法中使用 [await](language-reference/keywords/await.md) 運算子。 當控制項到達 async 方法的 `await` 運算式時，如果等候的工作未完成，控制會回到呼叫端，而有 `await` 關鍵字之方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。
+如果您使用 [async](language-reference/keywords/async.md) 修飾詞來標示方法，則可以在方法中使用 [await](language-reference/operators/await.md) 運算子。 當控制項到達 async 方法的 `await` 運算式時，如果等候的工作未完成，控制會回到呼叫端，而有 `await` 關鍵字之方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。
 
 > [!NOTE]
 > 非同步方法會在遇到第一個未完成的等候物件或是到達非同步方法的結尾時 (以先發生者為準)，傳回呼叫者

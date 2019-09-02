@@ -3,12 +3,12 @@ title: 轉譯運算式樹狀架構
 description: 了解如何瀏覽運算式樹狀架構中的每個節點，同時建立修改後的運算式樹狀架構複本。
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 4c14837c1d92845991d8ea9990b77eb9052757d8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b3c575876b6d53e9db366f59ad45aac714923c45
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490069"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202945"
 ---
 # <a name="translating-expression-trees"></a>轉譯運算式樹狀架構
 
@@ -21,7 +21,7 @@ ms.locfileid: "57490069"
 您為了轉譯運算式樹狀架構所建立的程式碼，就是您已看到可瀏覽樹狀中所有節點的運算式。 當您轉譯運算式樹狀架構時，您會瀏覽所有節點，並在瀏覽時建立新的樹狀。 新的樹狀可能包含原始節點的參考，或是您已置於樹狀之新節點的參考。
 
 讓我們來看實際執行情況，首先瀏覽運算式樹狀架構，然後取代一些節點來建立新的樹狀。 在此範例中，讓我們將任何常數取代為十倍大的常數。
-運算式樹狀架構的其他方面則保持不變。 我們不會讀取常數值並取代為新常數，而是將常數值取代為執行乘法運算的新節點，來進行這個取代。
+運算式樹狀架構的其他方面則保持不變。 我們不會讀取常數值並取代為新常數，而是將常數值取代為執行乘法運算的新節點，來進行這項取代。
 
 在這裡，找到常數節點之後，請建立新的乘法節點，其子系為原始常數和常數 `10`：
 
@@ -124,7 +124,7 @@ private static int Aggregate(Expression exp)
 
 在同一個運算式中執行此方法會產生下列輸出：
 
-```
+```output
 10
 Found Addition Expression
 Computing Left node
@@ -161,7 +161,7 @@ Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 
 以下是查看此運算式後的輸出：
 
-```
+```output
 Found Addition Expression
 Computing Left node
 Found Constant: 1

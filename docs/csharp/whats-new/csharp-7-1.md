@@ -2,12 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 新功能的概觀。
 ms.date: 04/09/2019
-ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796604"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105556"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -17,13 +17,13 @@ C# 7.1 也新增了[語言版本選擇](../language-reference/configure-language
 
 此版本的新款語言功能包括：
 
-* [`async``Main`方法](#async-main)
+- [`async``Main`方法](#async-main)
   - 應用程式的進入點允許使用`async`修飾詞。
-* [`default`常值運算式](#default-literal-expressions)
+- [`default`常值運算式](#default-literal-expressions)
   - 目標類型可以推斷時，可以在預設值運算式中使用預設常值運算式。
-* [推斷的元組項目名稱](#inferred-tuple-element-names)
+- [推斷的元組項目名稱](#inferred-tuple-element-names)
   - 在許多情況下，Tuple 項目的名稱均可從 Tuple 初始化推斷來加以推斷。
-* [泛型型別參數的模式比對](#pattern-matching-on-generic-type-parameters)
+- [泛型型別參數的模式比對](#pattern-matching-on-generic-type-parameters)
   - 您可以對型別為泛型型別參數的變數使用模式比對運算式。
 
 最後，編譯器有兩個選項 `-refout` 和 `-refonly`，它們控制了[參考組件產生](#reference-assembly-generation)。
@@ -87,7 +87,6 @@ Func<string, bool> whereClause = default;
 ```
 
 如需詳細資訊，請參閱[預設運算子](../language-reference/operators/default.md)一文中的[預設常值](../language-reference/operators/default.md#default-literal)一節。
-
 
 ## <a name="inferred-tuple-element-names"></a>推斷的 Tuple 元素名稱
 

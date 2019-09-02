@@ -3,12 +3,12 @@ title: 說明運算式樹狀架構
 description: 了解運算式樹狀架構，以及它們在轉譯演算法中對處理外部執行和在執行前檢查程式碼的幫助。
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613417"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104800"
 ---
 # <a name="expression-trees-explained"></a>說明運算式樹狀架構
 
@@ -33,11 +33,11 @@ var sum = 1 + 2;
 從外表來看，整個陳述式就是一個樹狀︰您可以從根節點開始，然後周遊樹狀中的每個節點，以查看構成陳述式的程式碼：
 
 - 具有指派的變數宣告陳述式 (`var sum = 1 + 2;`)
-  * 隱含變數類型宣告 (`var sum`)
+  - 隱含變數類型宣告 (`var sum`)
     - 隱含 var 關鍵字 (`var`)
     - 變數名稱宣告 (`sum`)
-  * 指派運算子 (`=`)
-  * 二元加法運算式 (`1 + 2`)
+  - 指派運算子 (`=`)
+  - 二元加法運算式 (`1 + 2`)
     - 左運算元 (`1`)
     - 加法運算子 (`+`)
     - 右運算元 (`2`)

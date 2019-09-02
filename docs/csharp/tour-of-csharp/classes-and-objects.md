@@ -3,12 +3,12 @@ title: C# 中的類別和物件 - C# 語言教學課程
 description: 第一次接觸 C#？ 請閱讀此類別、物件及繼承概觀
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971463"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105623"
 ---
 # <a name="classes-and-objects"></a>類別與物件
 
@@ -32,42 +32,42 @@ ms.locfileid: "68971463"
 
 以下提供類別所能包含之成員類型的概觀。
 
-* 常數
+- 常數
   - 與類別關聯的常數值
-* 欄位
+- 欄位
   - 類別的變數
-* 方法
+- 方法
   - 類別所能執行的計算和動作
-* 屬性
+- 屬性
   - 與讀取和寫入具名的類別特性關聯的動作
-* 索引子
+- 索引子
   - 與編製陣列之類的類別執行個體關聯的動作
-* 事件
+- 事件
   - 類別所能產生的通知
-* 運算子
+- 運算子
   - 類別所支援的轉換和運算式運算子
-* 建構函式
+- 建構函式
   - 將類別執行個體或類別本身初始化所需的動作
-* 完成項
+- 完成項
   - 在永久捨棄類別執行個體之前所要執行的動作
-* 型別
+- 型別
   - 類別所宣告的巢狀型別
 
 ## <a name="accessibility"></a>協助工具選項
 
 類別的每個成員都有關聯的存取能力，用來控制能夠存取成員的程式文字區域。 存取能力有六種可能的形式。 以下為摘要說明。
 
-* `public`
+- `public`
   - 存取不受限制
-* `protected`
+- `protected`
   - 存取僅限於此類別或此類別所衍生的類別
-* `internal`
+- `internal`
   - 存取限於目前組件 (.exe、.dll 等)
-* `protected internal`
+- `protected internal`
   - 存取限於包含類別、衍生自包含類別的類別，或同組件中的類別
-* `private`
+- `private`
   - 存取僅限於此類別
-* `private protected`
+- `private protected`
   - 存取限於包含類別或衍生自同組件中包含類型的類別
 
 ## <a name="type-parameters"></a>型別參數

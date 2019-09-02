@@ -3,12 +3,12 @@ title: 使用 .NET Compiler Platform SDK 語意模型
 description: 此概觀可讓您了解用來了解和管理程式碼語意模型的類型。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: cf34e2ab9688325f58cb54755db4142a883fca77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357484"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105661"
 ---
 # <a name="work-with-semantics"></a>使用語意
 
@@ -35,7 +35,7 @@ ms.locfileid: "33357484"
 
 與語法樹狀結構類似，編譯為不可變。 建立編譯之後，您或可能與其共用的其他人就無法變更它。 不過，您可以從現有編譯建立新的編譯，並指定這麼做的變更。 例如，您可以建立與現有編譯完全相同的編譯，差異在於它可以包含其他原始程式檔或組件參考。
 
-## <a name="symbols"></a>Symbol
+## <a name="symbols"></a>符號
 
 符號代表由原始程式碼所宣告或從組件中匯入為中繼資料的相異項目。 每個命名空間、類型、方法、屬性、欄位、事件、參數或區域變數都是以符號呈現。 
 
@@ -51,8 +51,8 @@ ms.locfileid: "33357484"
 
 語意模型代表單一原始程式檔的所有語意資訊。 您可以使用它來探索下列項目： 
 
-* 來源中特定位置所參考的符號。
-* 任何運算式的結果類型。
-* 所有診斷，也就是錯誤和警告。
-* 變數如何流入和流出來源的區域。
-* 更推測性問題的答案。
+- 來源中特定位置所參考的符號。
+- 任何運算式的結果類型。
+- 所有診斷，也就是錯誤和警告。
+- 變數如何流入和流出來源的區域。
+- 更推測性問題的答案。

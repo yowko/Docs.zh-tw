@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9f165ab5b79abbc2b5464f40a27a580d26af163a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666473"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106945"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>使用實作 IDisposable 的物件
 
 通用語言執行平台的記憶體回收行程會回收受控物件所使用的記憶體，但是使用非受控資源的類型會實作 <xref:System.IDisposable> 介面，以允許回收配置給這些非受控資源的記憶體。 實作 <xref:System.IDisposable> 的物件使用完畢時，您應呼叫物件的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作。 您可以使用下列其中一種做法：  
   
-* 使用 C# `using` 陳述式或 Visual Basic `Using` 陳述式。  
+- 使用 C# `using` 陳述式或 Visual Basic `Using` 陳述式。  
   
-* 藉由實作 `try/finally` 區塊。  
+- 藉由實作 `try/finally` 區塊。  
 
 ## <a name="the-using-statement"></a>using 陳述式
 
@@ -49,9 +49,9 @@ C# `using` 陳述式還可讓您以單一陳述式取得多項資源，其內部
 
 您可以選擇直接實作 `try/finally` 區塊，而不將 `try/finally` 區塊包裝在 `using` 陳述式中。 這可成為您的個人編碼風格，也可能基於下列其中一個原因而這樣做：  
   
-* 包含 `catch` 區塊以處理 `try` 區塊中擲回的任何例外狀況。 否則，當 `try/catch` 區塊不存在時，`using` 陳述式擲回的所有例外狀況都會是未處理，就連 `using` 區塊中擲回的任何例外狀況也一樣。  
+- 包含 `catch` 區塊以處理 `try` 區塊中擲回的任何例外狀況。 否則，當 `try/catch` 區塊不存在時，`using` 陳述式擲回的所有例外狀況都會是未處理，就連 `using` 區塊中擲回的任何例外狀況也一樣。  
   
-* 若要將實作 <xref:System.IDisposable> 且範圍對於物件宣告所在區塊並非區域的物件具現化。  
+- 若要將實作 <xref:System.IDisposable> 且範圍對於物件宣告所在區塊並非區域的物件具現化。  
   
 下列範例類似上述範例，不過它會使用 `try/catch/finally` 區塊具現化、使用和處置 <xref:System.IO.StreamReader> 物件，以及處理 <xref:System.IO.StreamReader> 建構函式和其 <xref:System.IO.StreamReader.ReadToEnd%2A> 方法擲回的所有例外狀況。 請注意，在 `finally` 中的程式碼會先確認實作 <xref:System.IDisposable> 的物件不是 `null`，再呼叫 <xref:System.IDisposable.Dispose%2A> 方法。 若未這樣做，可能導致執行階段產生 <xref:System.NullReferenceException> 例外狀況。  
   

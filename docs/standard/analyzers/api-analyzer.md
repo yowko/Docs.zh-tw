@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063341"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107376"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -23,7 +23,7 @@ ms.locfileid: "65063341"
 
 ## <a name="prerequisites"></a>必要條件
 
-* Visual Studio 2017 及更新版本，或 Visual Studio for Mac (所有版本)。
+- Visual Studio 2017 及更新版本，或 Visual Studio for Mac (所有版本)。
 
 ## <a name="discovering-deprecated-apis"></a>探索已被取代的 API
 
@@ -42,24 +42,24 @@ ms.locfileid: "65063341"
 
 ![「帶有綠色曲線的 WebClient API 及左邊有燈泡圖示的螢幕擷取畫面」](media/api-analyzer/green-squiggle.jpg)
 
-[錯誤清單] 視窗會包含警告，其中每個已被取代的 API 都會有一個唯一識別碼 ，如以下範例所示 (`DE004`)： 
+[錯誤清單]  視窗會包含警告，其中每個已被取代的 API 都會有一個唯一識別碼 ，如以下範例所示 (`DE004`)： 
 
 ![「顯示警告之識別碼和描述的 [錯誤清單] 視窗螢幕擷取畫面」](media/api-analyzer/warnings-id-and-descriptions.jpg "包含警告的 [錯誤清單] 視窗。")
 
 藉由按一下識別碼，您便可以前往含有詳細資訊的網頁，當中會說明 API 被取代的原因，並提供有關可使用之替代 API 的建議。
 
-若要隱藏任何警告，只要在已醒目標示的成員上按一下滑鼠右鍵，然後選取 [隱藏 \<診斷識別碼>] 即可。 有兩種隱藏警告的方式： 
+若要隱藏任何警告，只要在已醒目標示的成員上按一下滑鼠右鍵，然後選取 [隱藏 \<診斷識別碼>]  即可。 有兩種隱藏警告的方式： 
 
-* [本機 (在原始程式檔中)](#suppressing-warnings-locally)
-* [全域 (在隱藏項目檔中)](#suppressing-warnings-globally) - 建議使用
+- [本機 (在原始程式檔中)](#suppressing-warnings-locally)
+- [全域 (在隱藏項目檔中)](#suppressing-warnings-globally) - 建議使用
 
 ### <a name="suppressing-warnings-locally"></a>在本機隱藏警告
 
-若要在本機隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構] > [隱藏診斷識別碼 \<診斷識別碼>] > [在原始程式檔中]。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告前置處理器指示詞會新增到您所定義範圍中的原始程式碼：![「以 #pragma warning disable 括住之程式碼的螢幕擷取畫面」](media/api-analyzer/suppress-in-source.jpg)
+若要在本機隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構]   > [隱藏診斷識別碼 \<診斷識別碼>]   > [在原始程式檔中]  。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告前置處理器指示詞會新增到您所定義範圍中的原始程式碼：![「以 #pragma warning disable 括住之程式碼的螢幕擷取畫面」](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>在全域隱藏警告
 
-若要在全域隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構] > [隱藏診斷識別碼 \<診斷識別碼>] > [在隱藏項目檔中]。
+若要在全域隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構]   > [隱藏診斷識別碼 \<診斷識別碼>]   > [在隱藏項目檔中]  。
 
 ![「帶有綠色曲線的 WebClient API 及左邊有燈泡圖示的螢幕擷取畫面」](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -71,7 +71,7 @@ ms.locfileid: "65063341"
 
 ## <a name="discovering-cross-platform-issues"></a>探索跨平台問題
 
-與已被取代的 API 類似，分析器會識別所有不是跨平台的 API。 例如，<xref:System.Console.WindowWidth?displayProperty=nameWithType>可在 Windows 上運作，但無法在 Linux 和 macOS 上運作。 診斷識別碼會顯示在 [錯誤清單] 視窗中。 您可以按一下滑鼠右鍵並選取 [快速動作與重構] 來隱藏該警示。 與有兩個選項 (繼續使用已被取代的成員並隱藏警告，或完全不使用它) 的取代案例不同，在這裡，如果您僅針對特定平台來開發程式碼，就可以隱藏您不打算用來執行程式碼之所有其他平台的所有警告。 若要這樣做，您只需編輯專案檔，然後新增 `PlatformCompatIgnore` 屬性來列出所有要忽略的平台即可。 接受的值包括：`Linux`、`macOS` 及 `Windows`。
+與已被取代的 API 類似，分析器會識別所有不是跨平台的 API。 例如，<xref:System.Console.WindowWidth?displayProperty=nameWithType>可在 Windows 上運作，但無法在 Linux 和 macOS 上運作。 診斷識別碼會顯示在 [錯誤清單]  視窗中。 您可以按一下滑鼠右鍵並選取 [快速動作與重構]  來隱藏該警示。 與有兩個選項 (繼續使用已被取代的成員並隱藏警告，或完全不使用它) 的取代案例不同，在這裡，如果您僅針對特定平台來開發程式碼，就可以隱藏您不打算用來執行程式碼之所有其他平台的所有警告。 若要這樣做，您只需編輯專案檔，然後新增 `PlatformCompatIgnore` 屬性來列出所有要忽略的平台即可。 接受的值包括：`Linux`、`macOS` 及 `Windows`。
 
 ```xml
 <PropertyGroup>
@@ -95,11 +95,11 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 目前，分析器可處理下列情況：
 
-* 使用擲回 <xref:System.PlatformNotSupportedException> 的 .NET Standard API (PC001)。
-* 使用 .NET Framework 4.6.1 上未提供的.NET Standard API (PC002)。
-* 使用 UWP 中所沒有的原生 API (PC003)。
-* Delegate.BeginInvoke 及 EndInvoke API 的使用方式 (PC004)。
-* 使用標示為已被取代的 API (DEXXXX)。
+- 使用擲回 <xref:System.PlatformNotSupportedException> 的 .NET Standard API (PC001)。
+- 使用 .NET Framework 4.6.1 上未提供的.NET Standard API (PC002)。
+- 使用 UWP 中所沒有的原生 API (PC003)。
+- Delegate.BeginInvoke 及 EndInvoke API 的使用方式 (PC004)。
+- 使用標示為已被取代的 API (DEXXXX)。
 
 ## <a name="ci-machine"></a>CI 電腦
 
@@ -107,7 +107,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="configuration"></a>Configuration
 
-使用者可決定診斷的處理方式：視為警告、錯誤、建議，或將其關閉。 例如，如果您是架構設計人員，就可以決定應將相容性問題視為錯誤，讓對一些已被取代之 API 的呼叫產生警告，而其他則只產生建議。 您可以依診斷識別碼及依專案分別進行此設定。 若要這樣做，請在 [方案總管] 中，瀏覽至您專案底下的 [相依性]節點。 展開 [相依性] > [分析器] > [Microsoft.DotNet.Analyzers.Compatibility] 節點。 在診斷識別碼上按一下滑鼠右鍵，選取 [設定規則集合嚴重性]，然後挑選想要的選項。
+使用者可決定診斷的處理方式：視為警告、錯誤、建議，或將其關閉。 例如，如果您是架構設計人員，就可以決定應將相容性問題視為錯誤，讓對一些已被取代之 API 的呼叫產生警告，而其他則只產生建議。 您可以依診斷識別碼及依專案分別進行此設定。 若要這樣做，請在 [方案總管]  中，瀏覽至您專案底下的 [相依性]  節點。 展開 [相依性]   > [分析器]   > [Microsoft.DotNet.Analyzers.Compatibility]  節點。 在診斷識別碼上按一下滑鼠右鍵，選取 [設定規則集合嚴重性]  ，然後挑選想要的選項。
 
 ![「顯示診斷及含規則集合嚴重性的快顯對話方塊之方案總管的螢幕擷取畫面」](media/api-analyzer/disable-notifications.jpg)
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbf97b3bc72a12f8920e3a3cace3f7c31ed1e71a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d77683dde24eeec5de7f1e541a6cc86f3b0c6617
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910977"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205627"
 ---
 # <a name="code-access-security-basics"></a>程式碼存取安全性的基本概念
 
@@ -32,13 +32,13 @@ ms.locfileid: "69910977"
 
 - **安全類別庫**:安全類別庫會使用安全性要求, 以確保程式庫的呼叫端擁有存取程式庫所公開資源的許可權。 例如，安全類別庫可能有一個用來建立檔案的方法，要求 (demand) 其呼叫端要有權限才能建立檔案。 .NET Framework 由安全類別庫組成。 您應該要知道需要哪些權限，才能存取您的程式碼所使用的任何類別庫。 如需詳細資訊, 請參閱本主題稍後的[使用安全類別庫](#secure_library)一節。
 
-- **透明程式碼**:從 .NET Framework 4 開始, 除了識別特定許可權以外, 您還必須判斷程式碼是否應該以安全性透明的形式執行。 安全性透明程式碼無法呼叫被識別為安全性關鍵的類型或成員。 這個規則適用於完全信任的應用程式，也適用於部分信任的應用程式。 如需詳細資訊, 請參閱[安全性透明的程式碼](../../../docs/framework/misc/security-transparent-code.md)。
+- **透明程式碼**:從 .NET Framework 4 開始, 除了識別特定許可權以外, 您還必須判斷程式碼是否應該以安全性透明的形式執行。 安全性透明程式碼無法呼叫被識別為安全性關鍵的類型或成員。 這個規則適用於完全信任的應用程式，也適用於部分信任的應用程式。 如需詳細資訊, 請參閱[安全性透明的程式碼](security-transparent-code.md)。
 
 <a name="typesafe_code"></a>
 
 ## <a name="writing-verifiably-type-safe-code"></a>撰寫可驗證的類型安全程式碼
 
-Just-In-Time (JIT) 編譯會執行驗證程序來檢查程式碼，並嘗試判斷程式碼是否為類型安全。 驗證期間已證明為型別安全的程式碼稱為可*驗證的型別安全程式碼*。 因為驗證程序或編譯器的限制，程式碼可能是類型安全，但不一定是可驗證的類型安全。 並非所有語言都是類型安全，而某些語言編譯器，例如 Microsoft Visual C++，就無法產生可驗證的類型安全 Managed 程式碼。 若要判斷您使用的語言編譯器是否會產生可驗證的類型安全程式碼，請參閱編譯器的文件。 如果您使用語言編譯器, 只有在您避免特定語言結構時才會產生可驗證的型別安全程式碼, 您可能會想要使用[PEVerify 工具](../../../docs/framework/tools/peverify-exe-peverify-tool.md)來判斷您的程式碼是否為可驗證的型別安全。
+Just-In-Time (JIT) 編譯會執行驗證程序來檢查程式碼，並嘗試判斷程式碼是否為類型安全。 驗證期間已證明為型別安全的程式碼稱為可*驗證的型別安全程式碼*。 因為驗證程序或編譯器的限制，程式碼可能是類型安全，但不一定是可驗證的類型安全。 並非所有語言都是類型安全，而某些語言編譯器，例如 Microsoft Visual C++，就無法產生可驗證的類型安全 Managed 程式碼。 若要判斷您使用的語言編譯器是否會產生可驗證的類型安全程式碼，請參閱編譯器的文件。 如果您使用語言編譯器, 只有在您避免特定語言結構時才會產生可驗證的型別安全程式碼, 您可能會想要使用[PEVerify 工具](../tools/peverify-exe-peverify-tool.md)來判斷您的程式碼是否為可驗證的型別安全。
 
 非可驗證的類型安全程式碼，可以在安全性原則允許程式碼略過驗證時，嘗試執行。 不過，因為在執行階段用來隔離組件的機制中，類型安全是不可或缺的一部分，所以如果程式碼違反類型安全的規則，就無法可靠地強制執行安全性。 根據預設，非類型安全的程式碼必須源自本機電腦，才能執行。 因此，行動程式碼應該是類型安全程式碼。
 
@@ -55,7 +55,7 @@ Just-In-Time (JIT) 編譯會執行驗證程序來檢查程式碼，並嘗試判�
 宣告式安全性語法會使用[屬性](../../standard/attributes/index.md), 將安全性資訊放入程式碼的[中繼資料](../../standard/metadata-and-self-describing-components.md)中。 屬性可以放在組件、類別或成員層級，以指出您想要使用的要求 (request)、要求 (demand) 或覆寫類型。 以 Common Language Runtime 為目標的應用程式中會使用要求 (request) 來通知執行階段安全性系統有關應用程式需要或不想要之權限的資訊。 程式庫中會使用要求 (demand) 和覆寫，以協助保護資源，不讓呼叫端存取，或是覆寫預設安全性行為。
 
 > [!NOTE]
-> 在 .NET Framework 4 中, .NET Framework 安全性模型和術語的重大變更。 如需這些變更的詳細資訊, 請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。
+> 在 .NET Framework 4 中, .NET Framework 安全性模型和術語的重大變更。 如需這些變更的詳細資訊, 請參閱[安全性變更](../security/security-changes.md)。
 
 若要使用宣告式安全性呼叫，您必須初始化權限物件的狀態資料，使其表示您需要的特定權限形式。 每個內建權限都有一個被傳遞 <xref:System.Security.Permissions.SecurityAction> 列舉的屬性，以描述您想要執行之安全性作業的類型。 不過，權限也會接受其本身專用的參數。
 
@@ -105,7 +105,7 @@ public class MyClass
 
 在進行安全性呼叫之前，您必須先初始化權限物件的狀態資料，使其表示您需要的特定權限形式。 例如, 在建立<xref:System.Security.Permissions.FileIOPermission>物件時, 您可以使用此函式來初始化**FileIOPermission**物件, 使其代表不受限制存取所有檔案或無法存取檔案。 或者, 您可以使用不同的**FileIOPermission**物件, 傳遞參數來指出您想要物件表示的存取類型 (亦即, 讀取、附加或寫入), 以及您希望物件保護的檔案。
 
-命令式安全性語法除了可以用來叫用單一安全性物件，還可以用來初始化權限集合中的權限群組。 例如, 這項技術是在單一方法中以多個許可權可靠地執行[assert](../../../docs/framework/misc/using-the-assert-method.md)呼叫的唯一方法。 使用 <xref:System.Security.PermissionSet> 和 <xref:System.Security.NamedPermissionSet> 類別來建立權限群組，然後呼叫適當的方法來叫用所需的安全性呼叫。
+命令式安全性語法除了可以用來叫用單一安全性物件，還可以用來初始化權限集合中的權限群組。 例如, 這項技術是在單一方法中以多個許可權可靠地執行[assert](using-the-assert-method.md)呼叫的唯一方法。 使用 <xref:System.Security.PermissionSet> 和 <xref:System.Security.NamedPermissionSet> 類別來建立權限群組，然後呼叫適當的方法來叫用所需的安全性呼叫。
 
 您可以使用命令式語法來執行要求 (demand) 和覆寫，但不能執行要求 (request)。 如果只有在執行階段才會知道初始化權限狀態所需的資訊，您可以使用命令式語法來執行要求 (demand) 和覆寫，而不要使用宣告式語法。 例如，如果您想要確定呼叫端擁有讀取特定檔案的權限，但是在執行階段之前，都不知道該檔案的名稱，請使用命令式要求 (demand)。 當您需要在執行階段判斷某條件是否成立，以及根據測試結果，是否產生安全性要求 (demand) 時，您可能也會選擇使用命令式檢查，而不是宣告式檢查，
 
@@ -164,8 +164,8 @@ public class MyClass {
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.NamedPermissionSet>
 - <xref:System.Security.Permissions.SecurityAction>
-- [Assert](../../../docs/framework/misc/using-the-assert-method.md)
-- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)
-- [程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)
+- [Assert](using-the-assert-method.md)
+- [程式碼存取安全性](code-access-security.md)
+- [程式碼存取安全性的基本概念](code-access-security-basics.md)
 - [屬性](../../standard/attributes/index.md)
 - [中繼資料和自我描述元件](../../standard/metadata-and-self-describing-components.md)

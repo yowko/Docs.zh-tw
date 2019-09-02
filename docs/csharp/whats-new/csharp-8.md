@@ -2,12 +2,12 @@
 title: C# 8.0 的新功能 - C# 指南
 description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 5 的最新資訊。
 ms.date: 02/12/2019
-ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363891"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105504"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -16,10 +16,10 @@ ms.locfileid: "68363891"
 - [唯讀成員](#readonly-members)
 - [預設介面成員](#default-interface-members)
 - [模式比對增強功能](#more-patterns-in-more-places)：
-  * [Switch 運算式](#switch-expressions)
-  * [屬性模式](#property-patterns)
-  * [Tuple 模式](#tuple-patterns)
-  * [位置模式](#positional-patterns)
+  - [Switch 運算式](#switch-expressions)
+  - [屬性模式](#property-patterns)
+  - [Tuple 模式](#tuple-patterns)
+  - [位置模式](#positional-patterns)
 - [Using 宣告](#using-declarations)
 - [靜態區域函式](#static-local-functions)
 - [可處置的 ref struct](#disposable-ref-structs)
@@ -30,7 +30,7 @@ ms.locfileid: "68363891"
 > [!NOTE]
 > 此文章內容為 C# 8.0 預覽 5 的最新更新。
 
-此文章的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
+本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
 
 1. 安裝 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全域工具。
 1. 複製 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存放庫。

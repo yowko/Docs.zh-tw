@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 0e8548745768bc9137e8fc76f86fc9fc7982b8de
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "68616348"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106905"
 ---
 # <a name="metadata-and-markdown-template"></a>中繼資料和 Markdown 範本
 
@@ -61,12 +61,12 @@ Markdown 使用 \*、\` 和 \# 等特殊字元來設定格式。 如果要在內
 
 檔案名稱使用下列規則︰
 
-* 只包含小寫字母、數字和連字號。
-* 不使用空格或標點符號。 使用連字號來分隔檔名中的文字和數字。
-* 使用明確的動作動詞，例如 develop、buy、build、troubleshoot。 不使用 -ing 字詞。
-* 不使用短字詞，例如 a、and、the、in、or 等等。
-* 必須為 Markdown 格式且使用副檔名 .md。
-* 盡可能保持檔名簡短。 它們會是文章 URL 的一部分。
+- 只包含小寫字母、數字和連字號。
+- 不使用空格或標點符號。 使用連字號來分隔檔名中的文字和數字。
+- 使用明確的動作動詞，例如 develop、buy、build、troubleshoot。 不使用 -ing 字詞。
+- 不使用短字詞，例如 a、and、the、in、or 等等。
+- 必須為 Markdown 格式且使用副檔名 .md。
+- 盡可能保持檔名簡短。 它們會是文章 URL 的一部分。
 
 ## <a name="headings"></a>標題
 
@@ -244,22 +244,22 @@ UID 等於完整型別和成員名稱。
 [!code-<language>[<name>](<pathToFile><queryoption><queryoptionvalue>)]
 ```
 
-* `-<language>` (「選擇性」  但「建議使用」  )
-  * 所參考程式碼片段的語言。 如需支援值的清單，請參閱[支援的語言](#supported-languages)。
+- `-<language>` (「選擇性」  但「建議使用」  )
+  - 所參考程式碼片段的語言。 如需支援值的清單，請參閱[支援的語言](#supported-languages)。
 
-* `<name>` (選擇性  )
-  * 程式碼片段的名稱。 它對輸出 HTML 沒有任何影響，但您可以用它來改善 Markdown 原始程式的可讀性。
+- `<name>` (選擇性  )
+  - 程式碼片段的名稱。 它對輸出 HTML 沒有任何影響，但您可以用它來改善 Markdown 原始程式的可讀性。
 
-* `<pathToFile>` (強制  )
-  * 檔案系統中的相對路徑，表示要參考的程式碼片段檔案。
+- `<pathToFile>` (強制  )
+  - 檔案系統中的相對路徑，表示要參考的程式碼片段檔案。
 
-* `<queryoption>` 和 `<queryoptionvalue>` (選擇性  )
-  * 一起使用以指定從檔案取出程式碼的方式：
-    * `#`：`#L{startlinenumber}-L{endlinenumber}` (行範圍) 「或」  `#{tagname}` (標籤名稱)。
+- `<queryoption>` 和 `<queryoptionvalue>` (選擇性  )
+  - 一起使用以指定從檔案取出程式碼的方式：
+    - `#`：`#L{startlinenumber}-L{endlinenumber}` (行範圍) 「或」  `#{tagname}` (標籤名稱)。
     不建議使用行號，因為此功能不盡完善。 標籤名稱是參考程式碼片段的慣用方式。
-    * `range`：`?range=1,3-5` 行範圍。 這個範例包含第 1、3、4 和 5 行。
-    * `dedent`：`?dedent=8` 以數個空格將行縮排，在此案例中為 8 個空格。 這可以與 `range` 和其他查詢選項結合，以選取檔案的部分行。
-    * `outdent`：`?outdent=8` 以數個空格反轉行的縮排，在此案例中為 8 個空格。 這可以與 `range` 和其他查詢選項結合，以選取檔案的部分行。
+    - `range`：`?range=1,3-5` 行範圍。 這個範例包含第 1、3、4 和 5 行。
+    - `dedent`：`?dedent=8` 以數個空格將行縮排，在此案例中為 8 個空格。 這可以與 `range` 和其他查詢選項結合，以選取檔案的部分行。
+    - `outdent`：`?outdent=8` 以數個空格反轉行的縮排，在此案例中為 8 個空格。 這可以與 `range` 和其他查詢選項結合，以選取檔案的部分行。
 
 我們建議您盡可能使用標籤名稱選項。 標籤名稱是區域或程式碼註解的名稱，其格式如同在原始程式碼中出現的 `Snippettagname`。 下列範例示範如何參考標籤名稱 `1`：
 
@@ -448,11 +448,11 @@ docs.microsoft 為 GitHub Flavored Markdown 提供幾個額外的延伸模組。
 有適用於清單的自訂樣式。 您可以轉譯具有綠色核取記號的清單。
 
 > [!div class="checklist"]
-> * 如何建立 .NET Core 應用程式
-> * 如何新增 Microsoft.XmlSerializer.Generator 套件的參考
-> * 如何編輯 MyApp.csproj 以新增相依性
-> * 如何新增類別和 XmlSerializer
-> * 如何建置和執行應用程式
+> - 如何建立 .NET Core 應用程式
+> - 如何新增 Microsoft.XmlSerializer.Generator 套件的參考
+> - 如何編輯 MyApp.csproj 以新增相依性
+> - 如何新增類別和 XmlSerializer
+> - 如何建置和執行應用程式
 
 您可以在 [.NET Core 文件](https://docs.microsoft.com/dotnet/core/additional-tools/xml-serializer-generator)中看到核取清單的實際範例。
 

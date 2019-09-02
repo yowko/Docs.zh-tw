@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: 8403f9d9be88f34e473fd3512f5499193245d227
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9664d8e7bc221da68492140f30419ea8fb0d316
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607045"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204360"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>將資料集結構描述資訊當做 XSD 寫入
-您可以將 <xref:System.Data.DataSet> 的結構描述寫為 XML 結構描述定義語言 (XSD) 結構描述，即可以在 XML 文件中進行傳輸，而不論是否有任何相關資料。 XML 結構描述寫入檔案時，資料流<xref:System.Xml.XmlWriter>，或字串，它可用於產生強型別**資料集**。 如需有關強型別**資料集**物件，請參閱[Typed DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  
+您可以將 <xref:System.Data.DataSet> 的結構描述寫為 XML 結構描述定義語言 (XSD) 結構描述，即可以在 XML 文件中進行傳輸，而不論是否有任何相關資料。 可以將 XML 架構寫入檔案、資料流程、 <xref:System.Xml.XmlWriter>或字串, 這對於產生強型別**資料集**很有説明。 如需強型別**資料集**物件的詳細資訊, 請參閱具[類型的資料集](typed-datasets.md)。  
   
- 您可以指定如何將資料表資料行表示 XML 結構描述中使用**ColumnMapping**屬性<xref:System.Data.DataColumn>物件。 如需詳細資訊，請參閱 「 至 XML 項目、 屬性和文字的對應資料行 」 中[寫入為 XML 資料的資料集內容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)。  
+ 您可以使用<xref:System.Data.DataColumn>物件的**ColumnMapping**屬性, 指定資料表中的資料行如何以 XML 架構表示。 如需詳細資訊, 請參閱將[資料集內容撰寫為 Xml 資料](writing-dataset-contents-as-xml-data.md)中的「將資料行對應至 xml 元素、屬性和文字」。  
   
- 要寫入的結構描述**資料集**做為檔案，XML 結構描述，資料流，或**XmlWriter**，使用**WriteXmlSchema**方法**DataSet**。 **WriteXmlSchema**接受一個參數，指定產生的 XML 結構描述的目的地。 下列程式碼範例示範如何撰寫的 XML 結構描述**資料集**藉由傳遞字串，包含檔案名稱的檔案和<xref:System.IO.StreamWriter>物件。  
+ 若要將**資料集**的架構當做 XML 架構寫入檔案、資料流程或**XmlWriter**中, 請使用**DataSet**的**WriteXmlSchema**方法。 **WriteXmlSchema**會採用一個參數, 指定所產生之 XML 架構的目的地。 下列程式碼範例示範如何藉由傳遞包含檔案名和<xref:System.IO.StreamWriter>物件的字串, 將**DataSet**的 XML 架構寫入檔案。  
   
 ```vb  
 dataSet.WriteXmlSchema("Customers.xsd")  
@@ -39,7 +39,7 @@ dataSet.WriteXmlSchema(writer);
 writer.Close();  
 ```  
   
- 若要取得的結構描述**資料集**並將它撰寫為 XML 結構描述字串，請使用**GetXmlSchema**方法，如下列範例所示。  
+ 若要取得**資料集**的架構, 並將它寫入為 XML 架構字串, 請使用**GetXmlSchema**方法, 如下列範例所示。  
   
 ```vb  
 Dim schemaString As String = dataSet.GetXmlSchema()  
@@ -51,8 +51,8 @@ string schemaString = dataSet.GetXmlSchema();
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [將資料集內容當作 XML 資料寫入](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [具類型的 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
-- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [在 DataSet 中使用 XML](using-xml-in-a-dataset.md)
+- [將資料集內容當作 XML 資料寫入](writing-dataset-contents-as-xml-data.md)
+- [具類型的 DataSet](typed-datasets.md)
+- [DataSet、DataTable 和 DataView](index.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,12 +3,12 @@ title: 使用 XML 註解記錄您的程式碼
 description: 了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633728"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104777"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
@@ -32,11 +32,11 @@ XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時�
    <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
-- 如果您正在使用 Visual Studio 開發應用程式，請以滑鼠右鍵按一下專案，然後選取 [屬性]。 在屬性對話方塊中，選取 [建置] 索引標籤，然後檢查 [XML 文件檔案]。 您也可以變更編譯器寫入檔案的位置。
+- 如果您正在使用 Visual Studio 開發應用程式，請以滑鼠右鍵按一下專案，然後選取 [屬性]  。 在屬性對話方塊中，選取 [建置]  索引標籤，然後檢查 [XML 文件檔案]  。 您也可以變更編譯器寫入檔案的位置。
 
 - 如果您正在從命令列編譯 .NET Framework 應用程式，請在編譯時新增 [/doc 編譯器選項](language-reference/compiler-options/doc-compiler-option.md)。  
 
-XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 例如: 
+XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 例如:
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
@@ -212,12 +212,12 @@ Sandcastle 這類工具會支援 [`<event>`](https://ewsoftware.github.io/XMLCom
 
 有許多原因，建議您記錄程式碼。 接下來是一些最佳做法、一般使用案例，以及在 C# 程式碼中使用 XML 文件標記時應該知道的事項。
 
-* 為保持一致性，應該記錄所有公開可見的類型和其成員。 如果您必須執行它，則請執行。
-* 也可以使用 XML 註解記錄私用成員。 不過，這樣會公開您程式庫的內部 (可能是機密) 運作。
-* 類型和其成員最少應該具有 `<summary>` 標記，因為 IntelliSense 需要其內容。
-* 應該使用結尾為句號的完整句子來撰寫文件文字。
-* 完全支援部分類別，而且文件資訊將會串連為該類型的單一項目。
-* 編譯器會驗證 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>` 和 `<typeparam>` 標記的語法。
+- 為保持一致性，應該記錄所有公開可見的類型和其成員。 如果您必須執行它，則請執行。
+- 也可以使用 XML 註解記錄私用成員。 不過，這樣會公開您程式庫的內部 (可能是機密) 運作。
+- 類型和其成員最少應該具有 `<summary>` 標記，因為 IntelliSense 需要其內容。
+- 應該使用結尾為句號的完整句子來撰寫文件文字。
+- 完全支援部分類別，而且文件資訊將會串連為該類型的單一項目。
+- 編譯器會驗證 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>` 和 `<typeparam>` 標記的語法。
 - 編譯器會驗證包含程式碼其他部分的檔案路徑和參考的參數。
 
 ## <a name="see-also"></a>另請參閱

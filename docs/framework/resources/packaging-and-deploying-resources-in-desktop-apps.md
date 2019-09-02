@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135664"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105918"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>在 .NET 應用程式中封裝和部署資源
 
@@ -141,7 +141,7 @@ ms.locfileid: "67135664"
 .NET Core 資源後援處理序包含下列步驟：
 
 1. 執行階段會嘗試載入所要求文化特性的附屬組件。
-     * 檢查目前執行中組件的目錄中是否有符合所要求文化特性的子目錄。 如果它找到子目錄，則會在該子目錄內搜尋所要求文化特性的有效附屬組件並載入它。
+     - 檢查目前執行中組件的目錄中是否有符合所要求文化特性的子目錄。 如果它找到子目錄，則會在該子目錄內搜尋所要求文化特性的有效附屬組件並載入它。
 
        > [!NOTE]
        > 在具備區分大小寫之檔案系統的作業系統 (也就是 Linux 和 macOS) 上，文化特性名稱子目錄搜尋會區分大小寫。 子目錄名稱必須完全符合 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> 的大小寫 (例如 `es` 或 `es-MX`)。
@@ -149,8 +149,8 @@ ms.locfileid: "67135664"
        > [!NOTE]
        > 如果程式設計師已從 <xref:System.Runtime.Loader.AssemblyLoadContext> 衍生了自訂組件載入內容，則情況很複雜。 如果已將執行中組件載入到自訂內容，執行階段就會將附屬組件載入到自訂內容。 詳細資料不在本文的範圍內。 請參閱 <xref:System.Runtime.Loader.AssemblyLoadContext>。
 
-     * 如果找不到附屬組件，<xref:System.Runtime.Loader.AssemblyLoadContext> 就會引發 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> 事件，指出找不到附屬組件。 如果您選擇處理事件，則您的事件處理常式可以載入並傳回附屬組件的參考。
-     * 如果仍然找不到附屬組件，AssemblyLoadContext 就會導致 AppDomain 觸發 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件，指出它找不到附屬組件。 如果您選擇處理事件，則您的事件處理常式可以載入並傳回附屬組件的參考。
+     - 如果找不到附屬組件，<xref:System.Runtime.Loader.AssemblyLoadContext> 就會引發 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> 事件，指出找不到附屬組件。 如果您選擇處理事件，則您的事件處理常式可以載入並傳回附屬組件的參考。
+     - 如果仍然找不到附屬組件，AssemblyLoadContext 就會導致 AppDomain 觸發 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件，指出它找不到附屬組件。 如果您選擇處理事件，則您的事件處理常式可以載入並傳回附屬組件的參考。
 
 2. 如果找到了附屬組件，執行階段就會在其中搜尋所要求的資源。 如果在組件中找到資源，則會使用它。 如果找不到資源，會繼續搜尋。
 

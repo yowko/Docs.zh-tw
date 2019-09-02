@@ -3,12 +3,12 @@ title: 產生及使用非同步資料流
 description: 這個進階教學課程說明產生及取用非同步資料流提供更自然的方式來處理能以非同步方式產生之資料序列的案例。
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: cd1159c139f2c885eacf55b8577bea9e79bf0d7a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308545"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105858"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教學課程：使用 C# 8.0 與 .NET Core 3.0 產生及取用非同步資料流
 
@@ -17,9 +17,9 @@ C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
-> * 建立會以非同步方式產生資料元素序列的資料來源。
-> * 以非同步方式取用資料來源。
-> * 識別何時應該使用新的介面與資料來源，而非先前的同步資料來源。
+> - 建立會以非同步方式產生資料元素序列的資料來源。
+> - 以非同步方式取用資料來源。
+> - 識別何時應該使用新的介面與資料來源，而非先前的同步資料來源。
 
 ## <a name="prerequisites"></a>必要條件
 

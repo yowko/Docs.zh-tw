@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666470"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106881"
 ---
 # <a name="implementing-a-dispose-method"></a>實作 Dispose 方法
 
@@ -26,12 +26,12 @@ ms.locfileid: "69666470"
   
 處置模式有兩種：  
   
-* 將類型使用的每一種 Unmanaged 資源包裝在安全控制代碼中 (也就是在衍生自 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 的類別中)。 在這種情況下，請實作 <xref:System.IDisposable> 介面和額外的 `Dispose(Boolean)` 方法。 這是建議的做法，這種做法不需要覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。  
+- 將類型使用的每一種 Unmanaged 資源包裝在安全控制代碼中 (也就是在衍生自 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 的類別中)。 在這種情況下，請實作 <xref:System.IDisposable> 介面和額外的 `Dispose(Boolean)` 方法。 這是建議的做法，這種做法不需要覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。  
   
   > [!NOTE]
   > <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> 命名空間會提供一組衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 的類別，[使用安全控制代碼](#SafeHandles)一節將列出這些類別。 如果您找不到適合釋放 Unmanaged 資源的類別，可以實作自有的 <xref:System.Runtime.InteropServices.SafeHandle> 子類別。  
   
-* 除了實作 <xref:System.IDisposable> 介面和額外的 `Dispose(Boolean)` 方法之外，還要覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。 您必須覆寫 <xref:System.Object.Finalize%2A>，才能確保類型消費者未呼叫您的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作時，Unmanaged 資源仍會獲得處置。 如果您採用前一項所討論的建議技術，<xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 類別會自動為您完成這項作業。  
+- 除了實作 <xref:System.IDisposable> 介面和額外的 `Dispose(Boolean)` 方法之外，還要覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。 您必須覆寫 <xref:System.Object.Finalize%2A>，才能確保類型消費者未呼叫您的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作時，Unmanaged 資源仍會獲得處置。 如果您採用前一項所討論的建議技術，<xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 類別會自動為您完成這項作業。  
   
 若要確保資源永遠都能適當清除，<xref:System.IDisposable.Dispose%2A> 方法應該能夠被呼叫多次而不會擲回例外狀況。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "69666470"
 
 <xref:System.IDisposable> 介面要求實作單一無參數方法 <xref:System.IDisposable.Dispose%2A>。 不過，處置模式要求實作兩種 `Dispose` 方法：  
   
-* 公用非虛擬 (在 Visual Basic 中為 `NonInheritable`) 的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作，而且沒有任何參數。  
+- 公用非虛擬 (在 Visual Basic 中為 `NonInheritable`) 的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作，而且沒有任何參數。  
   
-* 受保護的虛擬 (Visual Basic 中為 `Overridable`) `Dispose` 方法，其簽章為：  
+- 受保護的虛擬 (Visual Basic 中為 `Overridable`) `Dispose` 方法，其簽章為：  
   
   [!code-csharp[Conceptual.Disposable#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#8)]
   [!code-vb[Conceptual.Disposable#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#8)]  
@@ -64,9 +64,9 @@ ms.locfileid: "69666470"
   
 方法的主體是由兩個程式碼區塊所構成：  
   
-* 釋放 Unmanaged 資源的區塊。 不論 `disposing` 參數的值為何，這個區塊都會執行。  
+- 釋放 Unmanaged 資源的區塊。 不論 `disposing` 參數的值為何，這個區塊都會執行。  
   
-* 釋放 Managed 資源的條件性區塊。 如果 `disposing` 的值為 `true`，這個區塊就會執行。 它所釋放的 Managed 資源可能包括：  
+- 釋放 Managed 資源的條件性區塊。 如果 `disposing` 的值為 `true`，這個區塊就會執行。 它所釋放的 Managed 資源可能包括：  
   
   **實作 <xref:System.IDisposable> 的受控物件。** 條件式區塊可以用來呼叫其 <xref:System.IDisposable.Dispose%2A> 實作。 如果您已使用安全控制代碼包裝 Unmanaged 資源，則應該在這裡呼叫 <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> 實作。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "69666470"
 > [!IMPORTANT]
 > 您應該針對實作 <xref:System.IDisposable.Dispose> 並且不是 `sealed` (在 Visual Basic 中為 `NotInheritable`) 的所有基底類別實作此模式。  
   
-* 呼叫 <xref:System.IDisposable.Dispose%2A> 方法的 `Dispose(Boolean)` 實作。  
+- 呼叫 <xref:System.IDisposable.Dispose%2A> 方法的 `Dispose(Boolean)` 實作。  
   
-* 實際釋放資源的 `Dispose(Boolean)` 方法。  
+- 實際釋放資源的 `Dispose(Boolean)` 方法。  
   
-* 衍生自包裝您的 Unmanaged 資源之 <xref:System.Runtime.InteropServices.SafeHandle> 的類別 (建議使用)，或式 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的覆寫。 <xref:System.Runtime.InteropServices.SafeHandle> 類別會提供完成項，讓您不必自行撰寫程式碼。  
+- 衍生自包裝您的 Unmanaged 資源之 <xref:System.Runtime.InteropServices.SafeHandle> 的類別 (建議使用)，或式 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的覆寫。 <xref:System.Runtime.InteropServices.SafeHandle> 類別會提供完成項，讓您不必自行撰寫程式碼。  
   
 以下一般模式將會實作使用安全控制代碼之基底類別的處置模式。  
   
@@ -107,9 +107,9 @@ ms.locfileid: "69666470"
 
 從實作 <xref:System.IDisposable> 介面的類別衍生的類別不應該實作 <xref:System.IDisposable>，因為 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基底類別實作會由其衍生類別繼承。 因此，若要實作衍生類別的處置模式，請改為提供下列項目：  
   
-* 覆寫基底類別方法及實際釋放衍生類別之資源的 `protected Dispose(Boolean)` 方法。 此方法也應呼叫基底類別的 `Dispose(Boolean)` 方法，並傳遞其處置狀態作為引數。  
+- 覆寫基底類別方法及實際釋放衍生類別之資源的 `protected Dispose(Boolean)` 方法。 此方法也應呼叫基底類別的 `Dispose(Boolean)` 方法，並傳遞其處置狀態作為引數。  
   
-* 衍生自包裝您的 Unmanaged 資源之 <xref:System.Runtime.InteropServices.SafeHandle> 的類別 (建議使用)，或式 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的覆寫。 <xref:System.Runtime.InteropServices.SafeHandle> 類別會提供完成項，讓您不必自行撰寫程式碼。 如果您提供完成項，則它應該呼叫 `Dispose(Boolean)` 多載且 *disposing* 引數為 `false`。  
+- 衍生自包裝您的 Unmanaged 資源之 <xref:System.Runtime.InteropServices.SafeHandle> 的類別 (建議使用)，或式 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的覆寫。 <xref:System.Runtime.InteropServices.SafeHandle> 類別會提供完成項，讓您不必自行撰寫程式碼。 如果您提供完成項，則它應該呼叫 `Dispose(Boolean)` 多載且 *disposing* 引數為 `false`。  
   
 以下一般模式將會實作使用安全控制代碼之衍生類別的處置模式：  
   
@@ -134,15 +134,15 @@ ms.locfileid: "69666470"
   
 衍生自 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 類別的類別會在不受干擾的情況下，藉由指派和釋放控制代碼的方式簡化物件存留期的問題。 這些類別包含重要的完成項，該完成項保證會在應用程式定義域卸載時執行。 如需使用安全控制代碼之優點的詳細資訊，請參閱<xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>。 <xref:Microsoft.Win32.SafeHandles> 命名空間中的下列衍生類別會提供安全控制代碼：  
   
-* <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>、<xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> 和 <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> 類別，適用於檔案、記憶體對應檔案和管道。  
+- <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>、<xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> 和 <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> 類別，適用於檔案、記憶體對應檔案和管道。  
   
-* <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> 類別，適用於記憶體檢視。  
+- <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> 類別，適用於記憶體檢視。  
   
-* <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>、<xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> 和 <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> 類別，適用於加密建構。  
+- <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>、<xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> 和 <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> 類別，適用於加密建構。  
   
-* <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> 類別，適用於登錄機碼。  
+- <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> 類別，適用於登錄機碼。  
   
-* <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 類別，適用於等候控制代碼。  
+- <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 類別，適用於等候控制代碼。  
   
 <a name="base"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>使用安全控制代碼實作基底類別的處置模式

@@ -3,42 +3,42 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347450"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105721"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
 C# 7.0 新增許多新功能至 C# 語言：
-* [`out` 變數](#out-variables)
+- [`out` 變數](#out-variables)
   - 您可以宣告 `out` 內嵌值作為使用它們之方法的引數。
-* [元組](#tuples)
+- [元組](#tuples)
   - 您可以建立包含多個公用欄位的輕量、未具名的類型。 編譯器和 IDE 工具了解這些類型的語意。
-* [捨棄](#discards)
+- [捨棄](#discards)
   - 捨棄是當您不在意指派的值時，於指派內使用的僅限寫入且暫時之變數。 解構 Tuple 及使用者定義型別，以及使用 `out` 參數呼叫方法時，捨棄最為實用。
-* [模式比對](#pattern-matching)
+- [模式比對](#pattern-matching)
   - 您可以建立以任意類型和這些類型成員的值為基礎的分支邏輯。
-* [`ref` 區域變數和傳回](#ref-locals-and-returns)
+- [`ref` 區域變數和傳回](#ref-locals-and-returns)
   - 方法區域變數和傳回值可以是其他儲存體的參考。
-* [區域函式](#local-functions)
+- [區域函式](#local-functions)
   - 您可以將函式巢狀放置在其他函式內，限制其範圍和可視性。
-* [更多運算式主體成員](#more-expression-bodied-members)
+- [更多運算式主體成員](#more-expression-bodied-members)
   - 可以使用運算式來撰寫的成員清單已經增長。
-* [`throw`運算式](#throw-expressions)
+- [`throw`運算式](#throw-expressions)
   - 您可以在程式碼建構中擲回例外狀況 (因為先前 `throw` 是陳述式，所以您無法這麼做)。
-* [通用的非同步傳回型別](#generalized-async-return-types)
+- [通用的非同步傳回型別](#generalized-async-return-types)
   - 使用 `async` 修飾詞宣告的方法除了 `Task` 和 `Task<T>` 之外，也能傳回其他類型。
-* [數值常值語法增強功能](#numeric-literal-syntax-improvements)
+- [數值常值語法增強功能](#numeric-literal-syntax-improvements)
   - 新的語彙基元改善了數值常數的可讀性。
 
 此文章的其餘部分將概述各個功能。 您將了解每項功能背後的原因。 您將了解語法。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
 
 1. 安裝 [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 全域工具。
 1. 複製 [dotnet/try-samples](https://github.com/dotnet/try-samples) 存放庫。
-1. 將目前的目錄設為 *try-samples* 存放庫的 *csharp7* 子目錄。
+1. 將目前目錄設為 *try-samples* 存放庫的 *csharp7* 子目錄。
 1. 執行 `dotnet try`。
 
 ## <a name="out-variables"></a>`out` 變數
@@ -51,9 +51,9 @@ C# 7.0 新增許多新功能至 C# 語言：
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* 程式碼更容易閱讀與理解。
+- 程式碼更容易閱讀與理解。
   - 您在使用之處宣告 out 變數，而不是在上方另一行。
-* 不需要指派初始值。
+- 不需要指派初始值。
   - 藉由在方法呼叫中使用所在宣告 `out` 變數，就不會在指派它之前意外使用它。
 
 ## <a name="tuples"></a>Tuple
@@ -95,10 +95,10 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 下列情況中支援捨棄：
 
-* 解構元組或使用者定義型別時。
-* 以 [out](../language-reference/keywords/out-parameter-modifier.md) 參數呼叫方法時。
-* 執行 [is](../language-reference/keywords/is.md) 及 [switch](../language-reference/keywords/switch.md) 陳述式的模式比對作業時。
-* 作為獨立識別項，當您想要將指派的值明確識別為捨棄時。
+- 解構元組或使用者定義型別時。
+- 以 [out](../language-reference/keywords/out-parameter-modifier.md) 參數呼叫方法時。
+- 執行 [is](../language-reference/keywords/is.md) 及 [switch](../language-reference/keywords/switch.md) 陳述式的模式比對作業時。
+- 作為獨立識別項，當您想要將指派的值明確識別為捨棄時。
 
 下列範例定義的 `QueryCityDataForYears` 方法，會傳回包含兩個不同年份之城市資料的 6 元組。 範例中的方法呼叫只有對方法傳回的兩個母體有效，所以會在解構元組時，將元組中剩餘的值視作捨棄處理。
 
@@ -180,15 +180,15 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 
 C# 語言具備數個規則，可防止您濫用 `ref` 區域變數並傳回︰
 
-* 您必須將 `ref` 關鍵字加入至方法特徵標記，以及某個方法中的所有 `return` 陳述式。
+- 您必須將 `ref` 關鍵字加入至方法特徵標記，以及某個方法中的所有 `return` 陳述式。
   - 如此可透過整個方法的參考，清除方法傳回。
-* `ref return` 可能會指派給值變數，或 `ref` 變數。
+- `ref return` 可能會指派給值變數，或 `ref` 變數。
   - 呼叫端會控制是否要複製傳回值。 指派傳回值時省略 `ref` 修飾詞表示呼叫端需要值的複本，而不是儲存體的參考。
-* 您無法將標準方法傳回值指派到 `ref` 區域變數。
+- 您無法將標準方法傳回值指派到 `ref` 區域變數。
   - 這可杜絕類似 `ref int i = sequence.Count();` 的陳述式
-* 您無法將 `ref` 傳回給其存留期不超過方法執行的變數。
+- 您無法將 `ref` 傳回給其存留期不超過方法執行的變數。
   - 這表示您無法將參考傳回區域變數或具有類似範圍的變數。
-* `ref` 區域變數及傳回值無法配合非同步方法使用。
+- `ref` 區域變數及傳回值無法配合非同步方法使用。
   - 當非同步方法傳回時，編譯器無法確定參考的變數是否已設定為其最終的值。
 
 新增 ref 區域變數和 ref 傳回能啟用更有效率的演算法，因為可以避免複製值，或是多次執行取值作業。

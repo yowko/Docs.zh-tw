@@ -2,12 +2,12 @@
 title: 作法：偵錯空的查詢結果集 (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 06c878a7751a14a3043b450d9242037ca91ad754
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 12d2132f1f088050fdd109d067069870b82f2661
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710135"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205313"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>作法：偵錯空的查詢結果集 (C#)
 查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。  
@@ -42,7 +42,7 @@ Console.WriteLine("End of result set");
   
  此範例會產生下列結果：  
   
-```  
+```output  
 Result set follows:  
 End of result set  
 ```  
@@ -74,7 +74,7 @@ Console.WriteLine("End of result set");
   
  此範例會產生下列結果：  
   
-```  
+```output  
 Result set follows:  
 1  
 2  

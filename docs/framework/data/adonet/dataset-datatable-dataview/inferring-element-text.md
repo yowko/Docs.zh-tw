@@ -2,15 +2,15 @@
 title: 推斷項目文字
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879628"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203536"
 ---
 # <a name="inferring-element-text"></a>推斷項目文字
-如果項目包含文字，而且沒有任何子項目，來推斷為資料表 （具有屬性的項目） 或重複的項目，例如新的資料行同名**TableName_Text**會加入項目，推斷的資料表。 項目中包含的文字會加入資料表中的資料列，並儲存在新資料行內。 **ColumnMapping**的新資料行的屬性會設定為**MappingType.SimpleContent**。  
+如果專案包含文字, 且沒有任何子專案要推斷為數據表 (例如具有屬性或重複元素的專案), 則會將名稱為**TableName_Text**的新資料行加入至為專案推斷的資料表。 項目中包含的文字會加入資料表中的資料列，並儲存在新資料行內。 新資料行的**ColumnMapping**屬性會設定為**MappingType**。  
   
  例如，請考量下列 XML。  
   
@@ -20,11 +20,11 @@ ms.locfileid: "61879628"
 </DocumentElement>  
 ```  
   
- 推斷程序會產生一個名為資料表**Element1**兩個資料行： **attr1**並**Element1_Text**。 **ColumnMapping**屬性**attr1**資料行都會設定為**MappingType.Attribute**。 **ColumnMapping**屬性**Element1_Text**資料行都會設定為**MappingType.SimpleContent**。  
+ 推斷進程會產生名為**Element1**的資料表, 其中包含兩個數據行: **attr1**和**Element1_Text**。 **Attr1**資料行的**ColumnMapping**屬性會設定為**MappingType. Attribute**。 **Element1_Text**資料行的**ColumnMapping**屬性會設定為**MappingType。**  
   
- **資料集：** DocumentElement  
+ **集中**DocumentElement  
   
- **資料表：** Element1  
+ **目錄**Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -40,11 +40,11 @@ ms.locfileid: "61879628"
 </Element1>  
 ```  
   
- 推斷程序會產生一個名為資料表**Element1**的資料行**ChildElement1**。 文字**ChildElement1**項目將會包含在資料表中的資料列。 其他文字則被忽略。 **ColumnMapping**屬性**ChildElement1**資料行都會設定為**MappingType.Element**。  
+ 推斷程式會產生名為**Element1**的資料表, 其中有一個名為**ChildElement1**的資料行。 **ChildElement1**元素的文字會包含在資料表的資料列中。 其他文字則被忽略。 **ChildElement1**資料行的**ColumnMapping**屬性會設定為**MappingType。**  
   
- **資料集：** DocumentElement  
+ **集中**DocumentElement  
   
- **資料表：** Element1  
+ **目錄**Element1  
   
 |ChildElement1|  
 |-------------------|  
@@ -52,9 +52,9 @@ ms.locfileid: "61879628"
   
 ## <a name="see-also"></a>另請參閱
 
-- [從 XML 推斷資料集關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [從 XML 載入資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [從 XML 載入資料集結構描述資訊](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [從 XML 推斷資料集關聯式結構](inferring-dataset-relational-structure-from-xml.md)
+- [從 XML 載入資料集](loading-a-dataset-from-xml.md)
+- [從 XML 載入資料集結構描述資訊](loading-dataset-schema-information-from-xml.md)
+- [在 DataSet 中使用 XML](using-xml-in-a-dataset.md)
+- [DataSet、DataTable 和 DataView](index.md)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 36c3f139564b39555370cd5d41133f39c6b271bb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 61a436efe3e3af7ce4aa50afe242838b1cd8941e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487840"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206062"
 ---
 # <a name="security-transparent-code-level-2"></a>安全性透明的程式碼，層級 2
 
@@ -22,7 +22,7 @@ ms.locfileid: "66487840"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-層級 2 透明度是.NET Framework 4 中引入的。 此模型的三個原則是透明程式碼、安全性安全關鍵程式碼和安全性關鍵程式碼。
+層級2透明度是在 .NET Framework 4 中引進。 此模型的三個原則是透明程式碼、安全性安全關鍵程式碼和安全性關鍵程式碼。
 
 - 透明程式碼，包括以完全信任執行的程式碼，只可以呼叫其他透明程式碼或安全性安全關鍵程式碼。 它只能執行定義域之部分信任權限集合 (如果存在的話) 所允許的動作。 透明程式碼無法進行下列作業：
 
@@ -44,9 +44,9 @@ ms.locfileid: "66487840"
 
 - 雖然安全性關鍵程式碼可以呼叫任何程式碼，而且受到完全信任，但是無法由透明程式碼呼叫。
 
-此主題包括下列章節：
+本主題包含下列幾節：
 
-- [使用範例和行為](#examples)
+- [使用方式範例和行為](#examples)
 
 - [覆寫模式](#override)
 
@@ -58,7 +58,7 @@ ms.locfileid: "66487840"
 
 ## <a name="usage-examples-and-behaviors"></a>使用範例和行為
 
-若要指定.NET Framework 4 的規則 （層級 2 透明度），用於組件中的下列註釋：
+若要指定 .NET Framework 4 規則 (層級2透明度), 請針對元件使用下列注釋:
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,23 +70,23 @@ ms.locfileid: "66487840"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-如果您不是組件的標註，預設會使用.NET Framework 4 的規則。 不過，建議的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>屬性，而非仰賴預設值。
+如果您沒有標注元件, 預設會使用 .NET Framework 4 規則。 不過, 建議的最佳作法是使用<xref:System.Security.SecurityRulesAttribute>屬性, 而不是根據預設值。
 
 ### <a name="assembly-wide-annotation"></a>組件範圍的註釋
 
 下列規則適用於在組件層級使用屬性：
 
-- 沒有屬性：如果您未指定任何屬性，則執行階段會解譯為安全性關鍵，但其中安全性關鍵違反繼承規則的所有程式碼 (例如，當覆寫或實作透明虛擬或介面的方法)。 在這些情況下，這些方法都是安全關鍵方法。 不指定屬性會導致 Common Language Runtime 為您決定透明度規則。
+- 無屬性:如果您未指定任何屬性, 則執行時間會將所有程式碼解釋為安全性關鍵, 但安全性關鍵違反繼承規則 (例如, 覆寫或執行透明的虛擬或介面方法時)。 在這些情況下，這些方法都是安全關鍵方法。 不指定屬性會導致 Common Language Runtime 為您決定透明度規則。
 
-- `SecurityTransparent`：所有的程式碼是透明的;整個組件不會做任何特殊權限或不安全。
+- `SecurityTransparent`：所有程式碼都是透明的;整個元件不會執行任何特殊許可權或不安全的動作。
 
 - `SecurityCritical`：這個組件中之類型所引入的所有程式碼都是關鍵的；所有其他程式碼則為透明的。 這個案例與不指定任何屬性很相似；不過，Common Language Runtime 不會自動決定透明度規則。 例如，如果您覆寫虛擬或抽象方法，或是實作介面方法，則根據預設，該方法為透明的。 您必須明確將此方法加註為 `SecurityCritical` 或 `SecuritySafeCritical`；否則，系統將在載入時擲回 <xref:System.TypeLoadException>。 當基底類別和衍生類別都位於相同的組件時，這項規則也適用。
 
-- `AllowPartiallyTrustedCallers` （僅層級 2）：所有程式碼都預設為透明的。 不過，個別的類型和成員可以有其他屬性。
+- `AllowPartiallyTrustedCallers`(僅限層級 2):所有程式碼都預設為透明的。 不過，個別的類型和成員可以有其他屬性。
 
-下表會比較組件層級行為層級 2 與層級 1。
+下表比較層級2與層級1的元件層級行為。
 
-|Assembly 屬性|階層 2|階層 1|
+|Assembly 屬性|層級 2|層級 1|
 |------------------------|-------------|-------------|
 |部分信任組件無屬性|根據預設，類型和成員為透明的，但是可能為安全性關鍵或安全性安全關鍵的。|所有類型和成員皆為透明的。|
 |無屬性|不指定屬性會導致 Common Language Runtime 為您決定透明度規則。 所有類型和成員都是安全性關鍵的，但是安全性關鍵違反繼承規則的程式碼除外。|在完全信任的組件上 (位於全域組件快取中或在 `AppDomain` 中識別為完全信任)，所有類型都是透明的，而且所有成員都是安全性安全關鍵的。|
@@ -98,12 +98,12 @@ ms.locfileid: "66487840"
 
 套用至某個類型的安全性屬性也會套用至該類型所引入的成員。 不過，這些屬性不會套用至基底類別或介面實作的虛擬或抽象覆寫。 下列規則適用於在類型和成員層級使用屬性：
 
-- `SecurityCritical`：型別或成員非常重要，且可以呼叫只能由完全信任程式碼。 在安全性關鍵類型中引入的方法是關鍵的。
+- `SecurityCritical`：類型或成員是非常重要的, 而且只能由完全信任程式碼呼叫。 在安全性關鍵類型中引入的方法是關鍵的。
 
     > [!IMPORTANT]
     > 根據預設，在基底類別或介面中引入，並且在安全性關鍵類別中覆寫或實作的虛擬和抽象方法為透明的。 它們必須識別為 `SecuritySafeCritical` 或 `SecurityCritical`。
 
-- `SecuritySafeCritical`：型別或成員是安全關鍵。 不過，此類型或成員可以從透明 (部分信任) 程式碼呼叫，而且其功能與任何其他關鍵程式碼一樣。 基於安全性，您必須稽核此程式碼。
+- `SecuritySafeCritical`：類型或成員是安全關鍵的。 不過，此類型或成員可以從透明 (部分信任) 程式碼呼叫，而且其功能與任何其他關鍵程式碼一樣。 基於安全性，您必須稽核此程式碼。
 
 [回到頁首](#top)
 
@@ -131,9 +131,9 @@ ms.locfileid: "66487840"
 
 `Transparent` < `SafeCritical` < `Critical`
 
-- 類型的規則：我們從左到右，存取變得更嚴格。 衍生類型的限制至少必須與基底類型一樣嚴格。
+- 類型的規則:從左至右, 存取權會變得更嚴格。 衍生類型的限制至少必須與基底類型一樣嚴格。
 
-- 方法的規則：基底方法衍生的方法無法變更協助工具。 就預設行為而言，沒有加上附註的所有衍生方法都是 `Transparent`。 如果覆寫方法沒有明確標註為 `SecurityCritical`，關鍵類型的衍生物會導致系統擲回例外狀況。
+- 方法的規則:衍生的方法無法變更基底方法的存取範圍。 就預設行為而言，沒有加上附註的所有衍生方法都是 `Transparent`。 如果覆寫方法沒有明確標註為 `SecurityCritical`，關鍵類型的衍生物會導致系統擲回例外狀況。
 
 下表顯示允許的類型繼承模式。
 
@@ -193,7 +193,7 @@ ms.locfileid: "66487840"
 已加入下列屬性至 <xref:System.Reflection> 命名空間來識別類型、方法或欄位是否為 `SecurityCritical`、`SecuritySafeCritical`，或 `SecurityTransparent`：<xref:System.Type.IsSecurityCritical%2A>、<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 和 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>。 您可以使用這些屬性來判斷透明度，方法是使用反映，而非檢查屬性是否存在。 透明度規則很複雜，而且檢查屬性是否存在可能不足夠。
 
 > [!NOTE]
-> A`SafeCritical`方法會傳回`true`同時<xref:System.Type.IsSecurityCritical%2A>並<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>，因為`SafeCritical`確實相當重要 （它有相同的功能與關鍵的程式碼，但它可以從透明程式碼呼叫）。
+> `SafeCritical` 方法會<xref:System.Type.IsSecurityCritical%2A>傳回和的,因為<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>確實相當重要(其功能與關鍵程式碼相同,不過可從透明程式`SafeCritical`代碼呼叫)。 `true`
 
 動態方法會繼承它們所附加之目標模組的透明度，但是不會繼承類型的透明度 (如果它們附加至類型的話)。
 
@@ -203,9 +203,9 @@ ms.locfileid: "66487840"
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
-<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 屬性預設為 `false`，因此這個屬性必須設定為 `true`，才能略過驗證。 您應該僅針對最佳化目的進行此作業。 您應該確定使用的組件中的透明程式碼是可驗證`transparent`選項[PEVerify 工具](../../../docs/framework/tools/peverify-exe-peverify-tool.md)。
+<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 屬性預設為 `false`，因此這個屬性必須設定為 `true`，才能略過驗證。 您應該僅針對最佳化目的進行此作業。 您應該使用`transparent` [PEVerify 工具](../tools/peverify-exe-peverify-tool.md)中的選項, 確保元件中的透明程式碼是可驗證的。
 
 ## <a name="see-also"></a>另請參閱
 
-- [安全性透明程式碼，層級 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [安全性變更](../../../docs/framework/security/security-changes.md)
+- [安全性透明的程式碼, 層級1](security-transparent-code-level-1.md)
+- [安全性變更](../security/security-changes.md)

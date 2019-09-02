@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666586"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169113"
 ---
 # <a name="async-in-depth"></a>深入了解非同步
 
@@ -21,8 +21,8 @@ ms.locfileid: "69666586"
 
 Task 是用來實作稱為 [Promise 並行存取模型](https://en.wikipedia.org/wiki/Futures_and_promises)的建構。  簡單地說，它們會對您「承諾」工作將於稍後完成，讓您以無障礙的 API 來協調此承諾。
 
-* `Task` 代表不會傳回值的單一作業。
-* `Task<T>` 代表會傳回類型為 `T` 之值的單一作業。
+- `Task` 代表不會傳回值的單一作業。
+- `Task<T>` 代表會傳回類型為 `T` 之值的單一作業。
 
 您必須了解 Task 是以非同步方式執行工作的抽象層，而「不是」  透過執行緒的抽象層。 根據預設，Task 會在目前的執行緒上執行，並視需要將工作委派給作業系統。 您可以選擇明確要求透過 `Task.Run` API 在個別執行緒上執行工作。
 
@@ -90,9 +90,9 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 0-1————————————————————————————————————————————————–2-3
 
-* 從點 `0` 至 `1` 所花費的時間，會用在非同步方法將控制權轉讓給其呼叫端之前的所有工作。
-* 從點 `1` 至 `2` 所花費的時間，是 I/O 上所花費的時間 (不含 CPU 成本)。
-* 最後，從點 `2` 至 `3` 所花費的時間，會用在將控制權 (可能還有值) 交回給非同步方法，然後再次執行。
+- 從點 `0` 至 `1` 所花費的時間，會用在非同步方法將控制權轉讓給其呼叫端之前的所有工作。
+- 從點 `1` 至 `2` 所花費的時間，是 I/O 上所花費的時間 (不含 CPU 成本)。
+- 最後，從點 `2` 至 `3` 所花費的時間，會用在將控制權 (可能還有值) 交回給非同步方法，然後再次執行。
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>這對伺服器案例有何意義？
 
