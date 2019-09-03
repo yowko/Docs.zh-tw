@@ -1,21 +1,21 @@
 ---
 title: 什麼是 ML.NET，它如何運作？
-description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路來使用 ML.NET。 此文章說明 ML.NET 的機器學習基本概念。
-ms.date: 07/17/2019
+description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路來使用 ML.NET。 本文說明 ML.NET 的機器學習基本概念。
+ms.date: 08/26/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331590"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104888"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
-不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路。 此文章說明 ML.NET 的機器學習基本概念。 
+不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路。 本文說明 ML.NET 的機器學習基本概念。 
 
 您可使用 ML.NET 建立的預測類型範例包括：
 
@@ -229,7 +229,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 
 ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) 物件。
 
-管線中的每個轉換都有輸入結構描述 (轉換預期在其輸入中看到的資料名稱、類型和大小) 以及輸出結構描述 (轉換在轉換後產生的資料名稱、類型和大小)。 
+管線中的每個轉換都有輸入結構描述 (轉換預期在其輸入中看到的資料名稱、類型和大小) 以及輸出結構描述 (轉換在轉換後產生的資料名稱、類型和大小)。 下列文件提供 [IDataView 介面及其型別系統](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html)的深入說明。
 
 如果管線中來自轉換之輸出結構描述不符合下一個轉換的輸入結構描述，則 ML.NET 會擲回例外狀況。
 

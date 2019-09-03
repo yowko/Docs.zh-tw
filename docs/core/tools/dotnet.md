@@ -2,12 +2,12 @@
 title: dotnet 命令
 description: 了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和其用法。
 ms.date: 06/04/2018
-ms.openlocfilehash: e1571bea1594b492427bdf5b3a7959733459c54e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 61542a3fff8bba6e2c3e55a4db5a746620d79ca1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331019"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202504"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -21,23 +21,24 @@ ms.locfileid: "68331019"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```console
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
-    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```console
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
+    [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
-dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [-v|--verbosity] [--version]
+```console
+dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 ---
@@ -59,6 +60,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--additionalprobingpath <PATH>`
 
 包含探查原則和要探查之組件的路徑。
+
+`--depsfile`
+
+*deps.json* 檔案的路徑。
+
+*deps.json* 檔案包含相依性、編譯相依性及用來解決組件衝突的版本資訊清單。 如需此檔案的詳細資訊，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
 
 `-d|--diagnostics`
 
@@ -93,6 +100,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
  如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
+`--runtimeconfig`
+
+*runtimeconfig.json* 檔案的路徑。
+
+*runtimeconfig.json* 檔案是包含執行階段組態設定的組態檔。 如需詳細資訊，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
+
 `-v|--verbosity <LEVEL>`
 
 設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 不在每項命令中支援，請參考特定命令的頁面來判斷此選項是否可用。
@@ -110,6 +123,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--additionalprobingpath <PATH>`
 
 包含探查原則和要探查之組件的路徑。
+
+`--depsfile`
+
+*deps.json* 檔案的路徑。
+
+*deps.json* 檔案包含相依性、編譯相依性及用來解決組件衝突的版本資訊清單。 如需此檔案的詳細資料，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
 
 `-d|--diagnostics`
 
@@ -131,6 +150,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
  如果設定為 `0`，將停用次要版本向前復原。 如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
+`--runtimeconfig`
+
+*runtimeconfig.json* 檔案的路徑。
+
+*runtimeconfig.json* 檔案是包含執行階段組態設定的組態檔。 如需詳細資訊，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
+
 `-v|--verbosity <LEVEL>`
 
 設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 不在每項命令中支援，請參考特定命令的頁面來判斷此選項是否可用。
@@ -144,6 +169,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--additionalprobingpath <PATH>`
 
 包含探查原則和要探查之組件的路徑。
+
+`--depsfile`
+
+*deps.json* 檔案的路徑。
+
+*deps.json* 檔案包含相依性、編譯相依性及用來解決組件衝突的版本資訊清單。 如需此檔案的詳細資料，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
 
 `-d|--diagnostics`
 
@@ -160,6 +191,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--info`
 
 會印出關於 .NET Core 安裝和電腦環境的詳細資訊，例如目前作業系統和 .NET Core 版本的認可 SHA。
+
+`--runtimeconfig`
+
+*runtimeconfig.json* 檔案的路徑。
+
+*runtimeconfig.json* 檔案是包含執行階段組態設定的組態檔。 如需詳細資料，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -355,3 +392,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 指定是否收集 .NET Core 工作使用資料，並將其傳送給 Microsoft。 設為 `true` 以選擇加入遙測功能 (可接受的值為 `true`、`1` 或 `yes`)。 否則，請設為 `false` 以選擇退出遙測功能 (可接受的值為 `false`、`0` 或 `no`)。 如果未設定，預設值為 `false`，且遙測功能會處於作用狀態。
 
 ---
+
+## <a name="see-also"></a>另請參閱
+
+- [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)

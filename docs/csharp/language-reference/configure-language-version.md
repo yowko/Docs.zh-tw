@@ -2,22 +2,24 @@
 title: C# 語言版本控制 - C# 指南
 description: 了解如何根據您的專案決定 C# 語言版本，以及您可以手動調整的不同值。
 ms.date: 07/10/2019
-ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796539"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040342"
 ---
 # <a name="c-language-versioning"></a>C# 語言版本控制
 
-C# 編譯器會根據您專案的目標架構判斷預設語言版本。 這是因為 C# 語言可能具有依賴於型別或執行階段元件的功能，而並非每個 .NET 實作都提供。 這也可確保建置專案的任何目標，您可以根據預設獲得最相容的語言版本。
+最新 C# 編譯器會根據您專案的目標 Framework 判斷預設語言版本。 這是因為 C# 語言可能具有依賴於型別或執行階段元件的功能，而並非每個 .NET 實作都提供。 這也可確保建置專案的任何目標，您可以根據預設獲得最相容的語言版本。
+
+本文中規則適用於 Visual Studio 2019 或 .NET Core 3.0 SDK 隨附的編譯器。 屬於 Visual Studio 2017 安裝或舊版 .NET Core SDK 一部分的 C# 編譯器預設會以 C# 7.0 為目標。 
 
 ## <a name="defaults"></a>預設值
 
 編譯器會根據下列規則決定預設值：
 
-|目標架構|版本|C# 語言版本預設值|
+|目標架構|version|C# 語言版本預設值|
 |----------------|-------|---------------------------|
 |.NET Core|3.x|C# 8.0|
 |.NET Core|2.x|C# 7.3|

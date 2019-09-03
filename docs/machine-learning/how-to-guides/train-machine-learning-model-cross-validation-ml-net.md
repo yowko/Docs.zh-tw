@@ -1,16 +1,16 @@
 ---
 title: 使用交叉驗證定型機器學習模型
 description: 了解如何使用交叉驗證在 ML.NET 中建置更強大的機器學習模型。 交叉驗證是一種定型和模型評估技巧，會將資料分割成幾個分割，在這些分割上定型多個演算法。
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f29103d0cf59cdec10a641b05ce359bf95c01ccd
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397651"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169064"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>使用交叉驗證定型機器學習模型
 
@@ -30,7 +30,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1120.00, 47504.98, 45129.73, 43775.84, 46792.41
 ```
 
-資料可由 `HousingData` 等類別建立模型：
+資料可由 `HousingData` 等類別建立模型，並載入至 [`IDataView`](xref:Microsoft.ML.IDataView)。
 
 ```csharp
 public class HousingData
@@ -47,8 +47,6 @@ public class HousingData
     public float CurrentPrice { get; set; }
 }
 ```
-
-將資料載入 [`IDataView`](xref:Microsoft.ML.IDataView)。
 
 ## <a name="prepare-the-data"></a>準備資料
 

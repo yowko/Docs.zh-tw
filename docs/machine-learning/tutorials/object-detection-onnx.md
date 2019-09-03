@@ -3,15 +3,15 @@ title: 教學課程：搭配 ONNX 和 ML.NET 使用深度學習偵測物件
 description: 本教學課程會示範如何使用 ML.NET 中預先定型的 ONNX 深度學習模型來偵測影像中物件。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/01/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868718"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106853"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教學課程：使用 ML.NET 中的 ONNX 來偵測物件
 
@@ -21,11 +21,11 @@ ms.locfileid: "68868718"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
-> * 了解問題
-> * 了解 ONNX 是什麼，以及它和 ML.NET 搭配運作的方式
-> * 了解模型
-> * 重複使用預先定型的模型
-> * 使用載入的模型偵測物件
+> - 了解問題
+> - 了解 ONNX 是什麼，以及它和 ML.NET 搭配運作的方式
+> - 了解模型
+> - 重複使用預先定型的模型
+> - 使用載入的模型偵測物件
 
 ## <a name="pre-requisites"></a>必要條件
 
@@ -117,7 +117,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 開啟 *Program.cs* 檔案，然後將下列額外的 `using` 陳述式新增到檔案頂端：
 
-[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L9)]
+[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
 接下來，請定義各種資產的路徑。 
 
@@ -125,7 +125,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
-1. 接著，在 `Main` 方法中，建立儲存您資產位置的欄位：
+1. 接著，在 `Main` 方法中，建立儲存您資產位置的欄位。
 
     [!code-csharp [AssetDefinition](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L17-L21)]
 
@@ -178,76 +178,6 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-### <a name="add-helper-methods"></a>新增協助程式方法
-
-在模型進行預測 (通常稱為評分) 且輸出處理完畢後，必須在影像上繪製週框方塊。 若要執行此操作，請在 *Program.cs* 內 `GetAbsolutePath` 方法的下方新增稱為 `DrawBoundingBox` 的方法。
-
-```csharp
-private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
-{
-
-}
-```
-
-首先，請先在 `DrawBoundingBox` 方法中載入影像並取得高度及寬度維度。
-
-[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
-
-接著，請建立 for-each 迴圈逐一查看模型偵測到的每個週框方塊。
-
-```csharp
-foreach (var box in filteredBoundingBoxes)
-{
-
-}
-```
-
-在 for-each 迴圈內，取得週框方塊的維度。
-
-[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
-
-因為週框方塊維度會對應到 `416 x 416` 的模型輸出，請調整週框方塊的維度，使其與影像的實際大小相符。
-
-[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
-
-接著，請定義將出現在每個週框方塊上方的文字範本。 文字會包含個別週框方塊內部物件的類別，以及其信賴度。
-
-[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
-
-為了在影像上進行繪製，請將它轉換成 [`Graphics`](xref:System.Drawing.Graphics) 物件。
-
-```csharp
-using (Graphics thumbnailGraphic = Graphics.FromImage(image))
-{
-    
-}
-```
-
-在 `using` 程式碼區塊內，調整圖形的 [`Graphics`](xref:System.Drawing.Graphics) 物件設定。
-
-[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
-
-在其下方，設定文字及週框方塊的字體和色彩選項。
-
-[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
-
-使用 [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) 方法建立並填滿週框方塊上方的矩形，以包含文字。 這可協助提高文字的對比並改善可讀性。
-
-[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
-
-接著，使用 [`DrawString`](xref:System.Drawing.Graphics.DrawString*) 和 [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) 方法在影像中繪製文字和週框方塊。
-
-[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
-
-在 for-each 迴圈的外部，新增程式碼來在 `outputDirectory` 中儲存影像。
-
-[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
-
-若要取得額外的意見反應，了解應用程式確實在執行階段期間進行預測，請在 *Program.cs* 檔案的 `DrawBoundingBox` 方法下方新增稱為 `LogDetectedObjects` 的方法，將偵測到的物件輸出到主控台。
-
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
-
-這兩種方法在模型已產生輸出，且也已經處理這些輸出時非常實用。 但首先，請先建立處理模型輸出的功能。
 
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>建立剖析器來針對模型輸出進行後續處理
 
@@ -344,7 +274,7 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
     - `CELL_HEIGHT` 是影像格線中單一儲存格的高度。
     - `channelStride` 是格線中目前儲存格的開始位置。
 
-    當模型對影像進行評分時，它會將 `416px x 416px` 輸入分成大小為 `13 x 13` 的儲存格格線。 每個儲存格都包含 `32px x 32px`。 在每個儲存格中都有 5 個週框方塊，每個週框方塊都包含了 5 個特徵 (X、Y、高度、寬度、信賴度)。 此外，每個週框方塊都包含每個類別的機率 (在此案例中為 20)。 因此，每個儲存格都包含 125 個資訊 (5 個特徵 + 20 個類別機率)。 
+    當模型進行預測 (也稱為評分) 時，它會將 `416px x 416px` 輸入影像分成大小為 `13 x 13` 的儲存格格線。 每個儲存格都包含 `32px x 32px`。 在每個儲存格中都有 5 個週框方塊，每個週框方塊都包含了 5 個特徵 (X、Y、高度、寬度、信賴度)。 此外，每個週框方塊都包含每個類別的機率 (在此案例中為 20)。 因此，每個儲存格都包含 125 個資訊 (5 個特徵 + 20 個類別機率)。 
 
 在 `channelStride` 的下方為 5 個週框方塊建立錨點清單：
 
@@ -560,7 +490,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    ML.NET 管線通常會預期資料在呼叫 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 方法時運作。 在此案例中，我們會使用與定型相似的處理過程。 但是，由於實際上不會進行定型，因此我們也可以使用空白的 [`IDataView`](xref:Microsoft.ML.IDataView)。 從空白清單為管線建立新的 [`IDataView`](xref:Microsoft.ML.IDataView)。
+    ML.NET 管線必須知道呼叫 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 方法時於其上運作所的資料結構描述。 在此案例中，我們會使用與定型相似的處理過程。 但是，由於實際上不會進行定型，因此我們也可以使用空白的 [`IDataView`](xref:Microsoft.ML.IDataView)。 從空白清單為管線建立新的 [`IDataView`](xref:Microsoft.ML.IDataView)。
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
 
@@ -608,7 +538,13 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 
 ## <a name="detect-objects"></a>偵測物件
 
-現在您已完成所有設定，是時候來偵測一些物件了。 請在您 *Program.cs* 類別的 `Main` 方法中，新增一個 try-catch 陳述式。
+現在您已完成所有設定，是時候來偵測一些物件了。 一開始請在 *Program.cs* 類別中新增計分器和剖析器的參考。
+
+[!code-csharp [ReferenceScorerParser](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L8-L9)]
+
+### <a name="score-and-parse-model-outputs"></a>對模型輸出進行評分和剖析
+
+請在您 *Program.cs* 類別的 `Main` 方法中，新增一個 try-catch 陳述式。
 
 ```csharp
 try
@@ -633,7 +569,78 @@ catch (Exception ex)
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-處理完模型輸出後，是時候在影像上繪製週框方塊了。 請建立 for 迴圈來逐一查看每個經過評分的影像。
+處理完模型輸出後，是時候在影像上繪製週框方塊了。 
+
+### <a name="visualize-predictions"></a>將預測視覺化
+
+在模型對影像進行評分且輸出處理完畢後，必須在影像上繪製週框方塊。 若要執行此操作，請在 *Program.cs* 的 `GetAbsolutePath` 方法下方新增稱為 `DrawBoundingBox` 的方法。
+
+```csharp
+private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
+{
+
+}
+```
+
+首先，請先在 `DrawBoundingBox` 方法中載入影像並取得高度及寬度維度。
+
+[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
+
+接著，請建立 for-each 迴圈逐一查看模型偵測到的每個週框方塊。
+
+```csharp
+foreach (var box in filteredBoundingBoxes)
+{
+
+}
+```
+
+在 for-each 迴圈內，取得週框方塊的維度。
+
+[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
+
+因為週框方塊維度會對應到 `416 x 416` 的模型輸出，請調整週框方塊的維度，使其與影像的實際大小相符。
+
+[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
+
+接著，請定義將出現在每個週框方塊上方的文字範本。 文字會包含個別週框方塊內部物件的類別，以及其信賴度。
+
+[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
+
+為了在影像上進行繪製，請將它轉換成 [`Graphics`](xref:System.Drawing.Graphics) 物件。
+
+```csharp
+using (Graphics thumbnailGraphic = Graphics.FromImage(image))
+{
+    
+}
+```
+
+在 `using` 程式碼區塊內，調整圖形的 [`Graphics`](xref:System.Drawing.Graphics) 物件設定。
+
+[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
+
+在其下方，設定文字及週框方塊的字體和色彩選項。
+
+[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
+
+使用 [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) 方法建立並填滿週框方塊上方的矩形，以包含文字。 這可協助提高文字的對比並改善可讀性。
+
+[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
+
+接著，使用 [`DrawString`](xref:System.Drawing.Graphics.DrawString*) 和 [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) 方法在影像中繪製文字和週框方塊。
+
+[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
+
+在 for-each 迴圈的外部，新增程式碼來在 `outputDirectory` 中儲存影像。
+
+[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
+
+若要有關應用程式確實在執行階段期間進行預測的額外意見反應，請在 *Program.cs* 檔案的 `DrawBoundingBox` 方法下方新增稱為 `LogDetectedObjects` 的方法，將偵測到的物件輸出到主控台。
+
+[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+
+現在您有 Helper 方法可從預測建立視覺化回饋，請新增 for 迴圈來逐一查看每個經過評分的影像。
 
 ```csharp
 for (var i = 0; i < images.Count(); i++)
@@ -650,7 +657,7 @@ for (var i = 0; i < images.Count(); i++)
 
 [!code-csharp [DrawBBoxes](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L52)]
 
-最後，使用 `LogDetectedObjects` 方法來新增一些記錄邏輯。
+最後，使用 `LogDetectedObjects` 方法將預測輸出至主控台。
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
 
@@ -704,11 +711,11 @@ person and its Confidence score: 0.5551759
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
-> * 了解問題
-> * 了解 ONNX 是什麼，以及它和 ML.NET 搭配運作的方式
-> * 了解模型
-> * 重複使用預先定型的模型
-> * 使用載入的模型偵測物件
+> - 了解問題
+> - 了解 ONNX 是什麼，以及它和 ML.NET 搭配運作的方式
+> - 了解模型
+> - 重複使用預先定型的模型
+> - 使用載入的模型偵測物件
 
 查看機器學習範例 GitHub 存放庫，探索更複雜的物件偵測範例。
 > [!div class="nextstepaction"]

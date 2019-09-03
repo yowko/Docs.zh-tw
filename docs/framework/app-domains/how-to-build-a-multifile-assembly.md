@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建置多檔案組件
+title: 作法：建置多檔案組件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a964e73cc41cebad33a3edc34b89ef240fbc62c8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187794"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040848"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>HOW TO：建置多檔案組件
+# <a name="how-to-build-a-multifile-assembly"></a>作法：建置多檔案組件
+
 本文說明如何建立多檔案組件，並提供說明程序中每個步驟的程式碼。
 
 > [!NOTE]
@@ -69,25 +70,21 @@ ms.locfileid: "59187794"
     >[!NOTE]
     >C# 和 Visual Basic 編譯器支援使用下列兩個不同的語法來直接建立多檔案組件。
     >
-    >- 兩種編譯 (Compilation) 建立雙檔案組件：
+    >- 兩種編譯建立雙檔案組件：[!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
     >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
-    >
-    >- 單一編譯建立雙檔案組件：
-    >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
+    >- 單一編譯建立雙檔案組件：[!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
 
 03. 使用[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 來建立輸出檔案，其中含有組件資訊清單。 這個檔案含有所有模組的參考資訊或者是部分組件的資源。
 
     在命令提示字元中輸入下列命令：
 
-    **al** \<*模組名稱*> \<*模組名稱*> … **/main:**\<*方法名稱*> **/out:**\<*檔案名稱*> **/target:**\<*組件檔案類型*>
+    **al** \<*模組名稱*> \<*模組名稱*> … **/main:** \<*方法名稱*>  **/out:** \<*檔案名稱*>  **/target:** \<*組件檔案類型*>
 
-    在這個命令中，「模組名稱」引數會指定組件中包含的所有模組名稱。 **/main:** 選項指定方法名稱，這個名稱是組件的進入點。 **/out:** 選項指定輸出檔案的名稱，其中包含組件中繼資料。 **/target:** 選項指定組件為主控台應用程式可執行檔 (.exe)、Windows 可執行檔 (.win) 或程式庫 (.lib) 檔案。
+    在這個命令中，「模組名稱」  引數會指定組件中包含的所有模組名稱。 **/main:** 選項指定方法名稱，這個名稱是組件的進入點。 **/out:** 選項指定輸出檔案的名稱，其中包含組件中繼資料。 **/target:** 選項指定組件為主控台應用程式可執行檔 (.exe)、Windows 可執行檔 (.win) 或程式庫 (.lib) 檔案。
 
     下列範例中，Al.exe 建立組件，該組件為 `myAssembly.exe` 主控台應用程式可執行檔。 該應用程式是由兩個稱為 `Client.netmodule` 和 `Stringer.netmodule` 的模組，以及僅包含組件中繼資料且稱為 `myAssembly.exe,` 的可執行檔所組成。 組件的進入點為 `Main` 類別的 `MainClientApp` 方法，位於 `Client.dll` 中。
 

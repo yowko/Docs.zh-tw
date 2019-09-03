@@ -4,12 +4,12 @@ description: 了解如何使用 .NET Core CLI 工具來建立 .NET Core 程式�
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: d22f73b33c36357b7f8018d1620b240e18d91676
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212062"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202671"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具開發程式庫
 
@@ -72,19 +72,20 @@ ms.locfileid: "57212062"
 
 如果您想要達到開發人員和專案數目上限，請使用 .NET Framework 4.0 作為基準目標。 若要將目標設為 .NET Framework，您需要從使用對應至所要支援之 .NET Framework 版本的正確目標 Framework Moniker (TFM) 開始。
 
-```
-.NET Framework 2.0   --> net20
-.NET Framework 3.0   --> net30
-.NET Framework 3.5   --> net35
-.NET Framework 4.0   --> net40
-.NET Framework 4.5   --> net45
-.NET Framework 4.5.1 --> net451
-.NET Framework 4.5.2 --> net452
-.NET Framework 4.6   --> net46
-.NET Framework 4.6.1 --> net461
-.NET Framework 4.6.2 --> net462
-.NET Framework 4.7   --> net47
-```
+| .NET Framework 版本 | TFM      |
+| ---------------------- | -------- |
+| .NET Framework 2.0     | `net20`  |
+| .NET Framework 3.0     | `net30`  |
+| .NET Framework 3.5     | `net35`  |
+| .NET Framework 4.0     | `net40`  |
+| .NET Framework 4.5     | `net45`  |
+| .NET Framework 4.5.1   | `net451` |
+| .NET Framework 4.5.2   | `net452` |
+| .NET Framework 4.6     | `net46`  |
+| .NET Framework 4.6.1   | `net461` |
+| .NET Framework 4.6.2   | `net462` |
+| .NET Framework 4.7     | `net47`  |
+| .NET Framework 4.8     | `net48`  |
 
 您接著將這個 TFM 插入專案檔的 `TargetFramework` 區段。 例如，以下是如何撰寫目標設為 .NET Framework 4.0 的程式庫：
 

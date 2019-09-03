@@ -1,16 +1,16 @@
 ---
 title: 使用 Permutation Feature Importance 說明模型預測
 description: 在 ML.NET 中使用 Permutation Feature Importance 了解模型的功能重要性
-ms.date: 05/02/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 1037a1f1c21ef2c9b9a87a070a7d2003c1e76eb4
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307376"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167648"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>使用 Permutation Feature Importance 說明模型預測
 
@@ -50,7 +50,7 @@ ms.locfileid: "67307376"
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-此範例中的資料可由 `HousingPriceData` 等類別建立模型：
+此範例中的資料可由 `HousingPriceData` 等類別建立模型，並載入至 [`IDataView`](xref:Microsoft.ML.IDataView)。
 
 ```csharp
 class HousingPriceData
@@ -96,8 +96,6 @@ class HousingPriceData
     public float Price { get; set; }
 }
 ```
-
-將資料載入 [`IDataView`](xref:Microsoft.ML.IDataView)。
 
 ## <a name="train-the-model"></a>將模型定型
 

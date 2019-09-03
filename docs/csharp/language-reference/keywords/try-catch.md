@@ -11,18 +11,16 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 28bf939cb7da760400486c52bb07649826628c1c
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8f901bd8ab5dcdcf4f5674e3f235267c9f535725
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422595"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168726"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# 參考)
 
 try-catch 陳述式包含 `try` 區塊後面接著一個或多個 `catch` 子句，指定不同例外狀況的處理常式。
-
-## <a name="remarks"></a>備註
 
 擲回例外狀況時，Common Language Runtime (CLR) 會尋找處理此例外狀況的 `catch` 陳述式。 如果目前執行的方法不包含這類 `catch` 區塊，CLR 會在呼叫堆疊上查看呼叫目前方法的方法，依此類推。 如果找不到 `catch` 區塊，則 CLR 會向使用者顯示未處理的例外狀況訊息，並停止執行程式。
 
@@ -131,15 +129,16 @@ static void Main()
 如需 catch 的詳細資訊，請參閱 [try-catch-finally](try-catch-finally.md)。
 
 ## <a name="exceptions-in-async-methods"></a>非同步方法中的例外狀況
-非同步方法會標記 [async](async.md) 修飾詞，而且通常包含一或多個 await 運算式或陳述式。 await 運算式會將 [await](await.md) 運算子套用至 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。
+
+非同步方法會標記 [async](async.md) 修飾詞，而且通常包含一或多個 await 運算式或陳述式。 await 運算式會將 [await](../operators/await.md) 運算子套用至 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。
 
 當控制項到達 `await` 方法時，方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。 如需詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)和[非同步程式中的控制流程](../../programming-guide/concepts/async/control-flow-in-async-programs.md)。
 
 套用 `await` 完成的工作可能因為傳回工作的方法中未處理的例外狀況而處於錯誤的狀態。 等候工作擲回例外狀況。 如果傳回工作的非同步程序被取消，工作也可能以取消的狀態結束。 等候已取消的工作會擲回 `OperationCanceledException`。 如需如何取消非同步處理序的詳細資訊，請參閱[微調非同步應用程式](../../programming-guide/concepts/async/fine-tuning-your-async-application.md)。
 
-若要攔截例外狀況，請在 `try` 區塊中等候工作，並在關聯的 `catch` 區塊中攔截例外狀況。 如需範例，請參閱＜範例＞一節。
+若要攔截例外狀況，請在 `try` 區塊中等候工作，並在關聯的 `catch` 區塊中攔截例外狀況。 如需範例，請參閱[非同步方法範例](#async-method-example)一節。
 
-工作可能處於錯誤狀態，因為在等候的非同步方法中發生多個例外狀況。 例如，工作可能是對 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 呼叫的結果。 當您等候這類工作時，只會攔截到其中一個例外狀況，而且您無法預測會攔截的例外狀況。 如需範例，請參閱＜範例＞一節。
+工作可能處於錯誤狀態，因為在等候的非同步方法中發生多個例外狀況。 例如，工作可能是對 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 呼叫的結果。 當您等候這類工作時，只會攔截到其中一個例外狀況，而且您無法預測會攔截的例外狀況。 如需範例，請參閱 [Task.WhenAll 範例](#taskwhenall-example)一節。
 
 ## <a name="example"></a>範例
 
@@ -147,7 +146,7 @@ static void Main()
 
 [!code-csharp[csrefKeywordsExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#2)]
 
-## <a name="example"></a>範例
+## <a name="two-catch-blocks-example"></a>兩個 catch 區塊範例
 
 在下列範例中，使用了兩個 catch 區塊，並會攔截會先出現的最特定例外狀況。
 
@@ -157,7 +156,7 @@ static void Main()
 
 [!code-csharp[csrefKeywordsExceptions#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#3)]
 
-## <a name="example"></a>範例
+## <a name="async-method-example"></a>非同步方法範例
 
 下列範例說明非同步方法的例外狀況處理。 若要擷取非同步工作擲回的例外狀況，請將 `await` 運算式放置在 `try` 區塊中，並攔截 `catch` 區塊中的例外狀況。
 
@@ -167,7 +166,7 @@ static void Main()
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 
-## <a name="example"></a>範例
+## <a name="taskwhenall-example"></a>Task.WhenAll 範例
 
 下列範例說明多項工作可能會導致多個例外狀況的例外狀況處理。 `try` 區塊會等候對 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 的呼叫傳回的工作。 當套用所有項目的三項工作都完成時，工作即完成。
 
@@ -177,7 +176,7 @@ static void Main()
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [try 陳述式](~/_csharplang/spec/statements.md#the-try-statement)一節。
 
 ## <a name="see-also"></a>另請參閱
 

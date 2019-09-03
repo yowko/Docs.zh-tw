@@ -9,12 +9,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: e8442438d06e8853e159b717b1f86fdce5c4b8f7
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: a8d18a6ae8b3f8f6cde76b1b296ac6a317ca1ed1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422153"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168571"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# 參考)
 
@@ -40,7 +40,7 @@ C# 也會包含 [using 陳述式](using-statement.md)，以透過方便使用的
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [try 陳述式](~/_csharplang/spec/statements.md#the-try-statement)一節。
 
 ## <a name="see-also"></a>另請參閱
 

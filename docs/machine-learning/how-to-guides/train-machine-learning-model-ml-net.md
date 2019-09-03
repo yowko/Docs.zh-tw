@@ -1,16 +1,16 @@
 ---
 title: 定型和評估模型
 description: 了解如何建置機器學習模型、收集計量，以及使用 ML.NET 測量效能。 機器學習模型會識別定型資料中的模式，以使用新資料進行預測。
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397634"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169039"
 ---
 # <a name="train-and-evaluate-a-model"></a>定型和評估模型
 
@@ -20,7 +20,7 @@ ms.locfileid: "67397634"
 
 機器學習模型的目標是識別定型資料中模式。 這些模式會用來使用新資料進行預測。
 
-假設下列資料模型：
+資料可由 `HousingData` 等類別建立模型。
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-將資料載入 [`IDataView`](xref:Microsoft.ML.IDataView)：
+假設下列資料已載入至 [`IDataView`](xref:Microsoft.ML.IDataView)。
 
 ```csharp
 HousingData[] housingData = new HousingData[]

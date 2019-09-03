@@ -2,15 +2,15 @@
 title: 教學課程：建置電影推薦工具 - 矩陣因式分解
 description: 本教學課程會示範如何在 .NET Core 主控台應用程式中使用 ML.NET 建置電影推薦工具。 這些步驟會使用 C# 和 Visual Studio 2019。
 author: briacht
-ms.date: 07/09/2019
+ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 82da512d437ed2c5c28601c34687494b8be4d046
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666691"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107262"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教學課程：搭配 ML.NET 使用矩陣因式分解建置電影推薦工具
 
@@ -160,7 +160,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) 會定義資料結構描述並讀入檔案中。 會接受資料路徑變數然後傳回 `IDataView`。 在此情況下，您提供 `Test` 和 `Train` 檔案的路徑，並指示文字檔案標頭 (以便其正確使用資料行名稱) 和逗號字元資料分隔符號 (預設的分隔符號是索引標籤)。
 
-將下列內容新增為 `Main()` 方法中的下兩行程式碼以呼叫 `LoadData()` 方法並傳回 `Train` 和 `Test` 資料：
+在 `Main()` 方法中新增下列程式碼以呼叫 `LoadData()` 方法並傳回 `Train` 和 `Test` 資料：
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
 

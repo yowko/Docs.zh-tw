@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f722977928604e5876e52a7329eef5c933bf2a7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634762"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046475"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 <a name="top"></a> 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
@@ -58,7 +58,7 @@ ms.locfileid: "64634762"
 |模式|說明|  
 |-------------|-----------------|  
 |`^`|開始在輸入字串的開頭比對 (如果是使用 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項來呼叫此方法，則從行首開始比對)。|  
-|`((\w+(\s?)){2,}`|比對一個或多個文字字元，後面接零，或接一個空格剛好兩次。 這是第一個擷取群組。 此運算式也定義了第二個和第三個擷取群組：第二個包含所擷取的文字，第三個則包含擷取到的空格。|  
+|`((\w+(\s?)){2,}`|比對一或多個文字字元，後面接零或接一個空格至少兩次。 這是第一個擷取群組。 此運算式也定義了第二個和第三個擷取群組：第二個包含所擷取的文字，第三個則包含擷取到的空白字元。|  
 |`,\s`|比對後面接著空白字元的逗號。|  
 |`(\w+\s\w+)`|比對一或多個文字字元，後面接空格，再接一或多個文字字元。 這是第四個擷取群組。|  
 |`,`|比對逗號。|  

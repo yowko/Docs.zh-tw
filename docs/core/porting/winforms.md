@@ -5,16 +5,16 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327161"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105220"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>作法：將 Windows Forms 傳統型應用程式移植到 .NET Core
 
-此文章說明如何將 Windows Forms 傳統型應用程式從 .NET Framework 移植到 .NET Core 3.0。 .NET Core 3.0 SDK 支源 Windows Forms 應用程式。 Windows Forms 仍然是僅限 Windows 的架構，只能在 Windows 上執行。 此範例使用 .NET Core SDK CLI 來建立和管理您的專案。
+此文章說明如何將 Windows Forms 傳統型應用程式從 .NET Framework 移植到 .NET Core 3.0。 .NET Core 3.0 SDK 支源 Windows Forms 應用程式。 Windows Forms 仍然是僅限 Windows 的架構，只能在 Windows 上執行。 本範例使用 .NET Core SDK CLI 來建立和管理您的專案。
 
 在此文章中，各種不同的名稱會用來識別用於移轉的檔案類型。 在移轉您的專案時，您的檔案會有不同的名稱，因此請在心裡將它們與下面所列的項目進行比對：
 
@@ -25,7 +25,7 @@ ms.locfileid: "59327161"
 | **MyFormsCore.csproj** | 您所建立的新 .NET Core 專案的名稱。 |
 | **MyAppCore.exe** | .NET Core Windows Forms 應用程式可執行檔。 |
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 適用於您想要執行之任何設計工具工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 
@@ -40,7 +40,7 @@ ms.locfileid: "59327161"
 >[!NOTE]
 >**Visual Studio 2017** 不支援 .NET Core 3.0 專案。 **Visual Studio 2019** 支援 .NET Core 3.0 專案，但尚不支援 .NET Core 3.0 Windows Forms 專案的視覺化設計工具。 若要使用視覺化設計工具，您的解決方案中必須具有 .NET Windows Forms 專案，該專案與 .NET Core 專案共用表單檔案。
 
-### <a name="consider"></a>考量
+### <a name="consider"></a>Consider
 
 移植 .NET Framework Windows Forms 應用程式時，您必須考量幾件事。
 
@@ -52,9 +52,9 @@ ms.locfileid: "59327161"
 
     當 .NET Core 3.0 Preview 1 發佈時，Windows Forms 在 GitHub 上會開放原始碼。 .NET Core Windows Forms 的程式碼是 .NET Framework Windows Forms 程式碼基底的分支。 很可能存在一些差異，而您的應用程式將無法移植。
 
-01. [Windows 相容性套件][compat-pack]可能有助於您移轉。
+01. [Windows 相容性套件][compat-pack]可能可以協助您進行遷移。
 
-    .NET Core 3.0 中不提供 .NET Framework 中提供的某些 API。 [Windows 相容性套件][compat-pack]新增了許多這些 API，可能有助於您的 Windows Forms 應用程式與 .NET Core 相容。
+    .NET Core 3.0 中不提供 .NET Framework 中提供的某些 API。 [Windows 相容性套件][compat-pack]新增許多這些 API，可能有助於您的 Windows Forms 應用程式與 .NET Core 相容。
 
 01. 更新專案所使用的 NuGet 套件。
 
@@ -278,7 +278,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\M
 
 ## <a name="problems-compiling"></a>編譯的問題
 
-如果您在編譯專案時遇到問題，則您可能正在使用 .NET Framework 中提供但不適用於 .NET Core 的一些僅限 Windows 的 API。 您可以嘗試將 [Windows 相容性套件][compat-pack] NuGet 套件加入您的專案。 此套件只能在 Windows 上執行，並為 .NET Core 和 .NET Standard 專案新增了大約 20,000 個 Windows API。
+如果您在編譯專案時遇到問題，則您可能正在使用 .NET Framework 中提供但不適用於 .NET Core 的一些僅限 Windows 的 API。 您可以嘗試將 [Windows 相容性套件][compat-pack] NuGet 套件新增到您的專案。 此套件只能在 Windows 上執行，並為 .NET Core 和 .NET Standard 專案新增了大約 20,000 個 Windows API。
 
 ```cli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compatibility
@@ -300,7 +300,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
  
 ## <a name="next-steps"></a>後續步驟
 
-* 深入了解 [Windows 相容性套件][compat-pack]。
-* 觀看[有關移植](https://www.youtube.com/watch?v=upVQEUc_KwU) .NET Framework Windows Form 專案到 .NET Core 的影片。
+- 深入了解 [Windows 相容性套件][compat-pack]。
+- 觀看[有關移植](https://www.youtube.com/watch?v=upVQEUc_KwU) .NET Framework Windows Form 專案到 .NET Core 的影片。
 
 [compat-pack]: windows-compat-pack.md

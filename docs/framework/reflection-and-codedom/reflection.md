@@ -1,8 +1,8 @@
 ---
-title: .NET Framework 中的反映
+title: .NET 中的反映
 ms.date: 03/30/2017
 helpviewer_keywords:
-- assemblies [.NET Framework], reflection
+- assemblies [.NET], reflection
 - EventInfo class, reflection
 - common language runtime, reflection
 - FieldInfo class, reflection
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940025"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133750"
 ---
-# <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反映
+# <a name="reflection-in-net"></a>.NET 中的反映
 <xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[組件](../app-domains/assemblies-in-the-common-language-runtime.md)和其中所定義類型的資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和[實值型別](../../csharp/language-reference/keywords/value-types.md)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
   
  [Common Language Runtime](../../standard/clr.md) 載入器會管理[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)，這會在有相同應用程式範圍的物件周圍構成定義的界限。 這個管理包含載入每個組件至適當的應用程式定義域和控制每個組件內類型階層的記憶體配置。  
@@ -62,7 +62,7 @@ ms.locfileid: "69940025"
  反映還有其他用途。 JScript 之類的語言編譯器會使用反映來建構符號表。 <xref:System.Runtime.Serialization> 命名空間中的類別會使用反映來存取資料，並決定要保存哪個欄位。 <xref:System.Runtime.Remoting> 命名空間中的類別在序列化時會間接使用反映。  
   
 ## <a name="runtime-types-in-reflection"></a>反映中的執行階段類型  
- 反映會提供類別，例如 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo>，表示類型、成員、參數和其他程式碼實體。 不過，當您使用反映時不直接搭配類別使用，則其中大部分都會是抽象的 (在 Visual Basic 中為 `MustInherit`)。 您可改用 Common Language Runtime (CLR) 所提供的類型。  
+ 反映會提供類別，例如 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo>，表示類型、成員、參數和其他程式碼實體。 不過，當您使用反映時不會直接搭配類別使用，其大部分都會是抽象的 (在 Visual Basic 中為 `MustInherit`)。 您可改用 Common Language Runtime (CLR) 所提供的類型。  
   
  例如，當您使用 C# `typeof` 運算子 (在 Visual Basic 中為 `GetType`) 來取得 <xref:System.Type> 物件時，該物件確實為 `RuntimeType`。 `RuntimeType` 衍生自 <xref:System.Type>，並提供所有抽象方法的實作。  
   

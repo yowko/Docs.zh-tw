@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: e0c8f52193639c067252878127ee95a0897b9582
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71e3781b08bca3441dbd55704bcb0f7de635097e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922448"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168639"
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
 
@@ -27,7 +27,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-如果您不熟悉非同步程式設計或不了解非同步方法如何使用 `await` 關鍵字進行可能需要長期執行的工作，而不封鎖呼叫端執行緒，請閱讀[使用 async 和 await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)中的簡介。 下列程式碼位於非同步方法中，會呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 方法： 
+如果您不熟悉非同步程式設計或不了解非同步方法如何使用 [`await` 運算子](../operators/await.md)進行可能需要長時間執行的工作，而不封鎖呼叫端執行緒，請閱讀[使用 async 和 await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)中的簡介。 下列程式碼位於非同步方法中，會呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 方法：
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -87,6 +87,6 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [await](./await.md)
+- [await](../operators/await.md)
 - [逐步解說：使用 Async 和 Await 存取 Web](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 async 和 await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)

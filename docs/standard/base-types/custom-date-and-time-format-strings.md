@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4d7cd61a771f1c9658b5bc98ec85259da1c77f9
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9a8f36016b19583a06118edc906cf60a82be32f8
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268225"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133736"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期與時間格式字串
 
 日期和時間格式字串會定義對 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值執行格式化作業後所產生的文字表示。 另外還會定義剖析作業所需日期和時間值的表示，以便成功地將字串轉換成日期和時間。 自訂格式字串是由一個或多個自訂日期和時間格式規範所組成。 任何不是[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字串都會被解譯為自訂日期和時間格式字串。
 
 > [!TIP]
-> 您可以下載[格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至日期和時間值或數值，並且顯示結果字串。
+> 您可以下載**格式化公用程式**，這個 .NET Core Windows Forms 應用程式可讓您將格式字串套用至數值或日期和時間值，並顯示結果字串。 提供 [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb) 的原始程式碼。
 
 自訂日期和時間格式字串可以與 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值搭配使用。
 
@@ -700,4 +700,5 @@ ms.locfileid: "67268225"
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
 - [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [範例：.NET Framework 4 格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+- [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
+- [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))
