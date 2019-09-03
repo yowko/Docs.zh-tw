@@ -4,58 +4,58 @@ description: 了解 Windows 相容性套件，以及如何使用它將現有的 
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717891"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202558"
 ---
-# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a><span data-ttu-id="a59bc-103">使用 Windows 相容性套件將程式碼移植到 .NET Core</span><span class="sxs-lookup"><span data-stu-id="a59bc-103">Use the Windows Compatibility Pack to port code to .NET Core</span></span>
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a><span data-ttu-id="9e0ba-103">使用 Windows 相容性套件將程式碼移植到 .NET Core</span><span class="sxs-lookup"><span data-stu-id="9e0ba-103">Use the Windows Compatibility Pack to port code to .NET Core</span></span>
 
-<span data-ttu-id="a59bc-104">將現有程式碼移植到 .NET Core 時發現的一些最常見問題，是僅在 .NET Framework 中找到的 API 和技術相依性。</span><span class="sxs-lookup"><span data-stu-id="a59bc-104">Some of the most common issues found when porting existing code to .NET Core are dependencies on APIs and technologies that are only found in the .NET Framework.</span></span> <span data-ttu-id="a59bc-105">*Windows 相容性套件*提供許多這些技術，因此建置 .NET Core 應用程式和 .NET Standard 程式庫很容易。</span><span class="sxs-lookup"><span data-stu-id="a59bc-105">The *Windows Compatibility Pack* provides many of these technologies, so it's much easier to build .NET Core applications and .NET Standard libraries.</span></span>
+<span data-ttu-id="9e0ba-104">將現有程式碼移植到 .NET Core 時發現的一些最常見問題，是僅在 .NET Framework 中找到的 API 和技術相依性。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-104">Some of the most common issues found when porting existing code to .NET Core are dependencies on APIs and technologies that are only found in the .NET Framework.</span></span> <span data-ttu-id="9e0ba-105">*Windows 相容性套件*提供許多這些技術，因此建置 .NET Core 應用程式和 .NET Standard 程式庫很容易。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-105">The *Windows Compatibility Pack* provides many of these technologies, so it's much easier to build .NET Core applications and .NET Standard libraries.</span></span>
 
-<span data-ttu-id="a59bc-106">此套件是邏輯的 [.NET Standard 2.0 延伸模組](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，可大幅增加 API 集和現有的程式碼編譯，幾乎不需要修改。</span><span class="sxs-lookup"><span data-stu-id="a59bc-106">This package is a logical [extension of .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) that significantly increases API set and existing code compiles with almost no modifications.</span></span> <span data-ttu-id="a59bc-107">但為信守 .NET Standard 的承諾 (「它是所有 .NET 實作提供的 API 集」)，這不包括無法跨所有平台的技術，例如登錄、Windows Management Instrumentation (WMI) 或反映發出 API。</span><span class="sxs-lookup"><span data-stu-id="a59bc-107">But in order to keep the promise of .NET Standard ("it is the set of APIs that all .NET implementations provide"), this didn't include technologies that can't work across all platforms, such as registry, Windows Management Instrumentation (WMI), or reflection emit APIs.</span></span>
+<span data-ttu-id="9e0ba-106">此套件是邏輯的 [.NET Standard 2.0 延伸模組](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，可大幅增加 API 集和現有的程式碼編譯，幾乎不需要修改。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-106">This package is a logical [extension of .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) that significantly increases API set and existing code compiles with almost no modifications.</span></span> <span data-ttu-id="9e0ba-107">但為信守 .NET Standard 的承諾 (「它是所有 .NET 實作提供的 API 集」)，這不包括無法跨所有平台的技術，例如登錄、Windows Management Instrumentation (WMI) 或反映發出 API。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-107">But in order to keep the promise of .NET Standard ("it is the set of APIs that all .NET implementations provide"), this didn't include technologies that can't work across all platforms, such as registry, Windows Management Instrumentation (WMI), or reflection emit APIs.</span></span>
 
-<span data-ttu-id="a59bc-108">「Windows 相容性套件」位階高於 .NET Standard，並提供存取僅限 Windows 的技術。</span><span class="sxs-lookup"><span data-stu-id="a59bc-108">The *Windows Compatibility Pack* sits on top of .NET Standard and provides access to technologies that are Windows only.</span></span> <span data-ttu-id="a59bc-109">它特別適合想要移至 .NET Core，但第一個步驟計劃停留在 Windows 的客戶。</span><span class="sxs-lookup"><span data-stu-id="a59bc-109">It's especially useful for customers that want to move to .NET Core but plan to stay on Windows as a first step.</span></span> <span data-ttu-id="a59bc-110">在這種情況下，無法使用僅限 Windows 技術只是無架構優勢的移轉障礙。</span><span class="sxs-lookup"><span data-stu-id="a59bc-110">In that scenario, not being able to use Windows-only technologies is only a migration hurdle with zero architectural benefits.</span></span>
+<span data-ttu-id="9e0ba-108">「Windows 相容性套件」  位階高於 .NET Standard，並提供存取僅限 Windows 的技術。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-108">The *Windows Compatibility Pack* sits on top of .NET Standard and provides access to technologies that are Windows only.</span></span> <span data-ttu-id="9e0ba-109">它特別適合想要移至 .NET Core，但第一個步驟計劃停留在 Windows 的客戶。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-109">It's especially useful for customers that want to move to .NET Core but plan to stay on Windows as a first step.</span></span> <span data-ttu-id="9e0ba-110">在這種情況下，無法使用僅限 Windows 技術只是無架構優勢的移轉障礙。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-110">In that scenario, not being able to use Windows-only technologies is only a migration hurdle with zero architectural benefits.</span></span>
 
-## <a name="package-contents"></a><span data-ttu-id="a59bc-111">套件內容</span><span class="sxs-lookup"><span data-stu-id="a59bc-111">Package contents</span></span>
+## <a name="package-contents"></a><span data-ttu-id="9e0ba-111">套件內容</span><span class="sxs-lookup"><span data-stu-id="9e0ba-111">Package contents</span></span>
 
-<span data-ttu-id="a59bc-112">「Windows 相容性套件」透過 NuGet 套件 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) 提供，可從以 .NET Core 或 .NET Standard 為目標的專案參考。</span><span class="sxs-lookup"><span data-stu-id="a59bc-112">The *Windows Compatibility Pack* is provided via the NuGet Package [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) and can be referenced from projects targeting .NET Core or .NET Standard.</span></span>
+<span data-ttu-id="9e0ba-112">「Windows 相容性套件」  透過 NuGet 套件 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) 提供，可從以 .NET Core 或 .NET Standard 為目標的專案參考。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-112">The *Windows Compatibility Pack* is provided via the NuGet Package [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) and can be referenced from projects targeting .NET Core or .NET Standard.</span></span>
 
-<span data-ttu-id="a59bc-113">它提供約 20,000 個 API，包括僅限 Windows 以及來自下列技術領域的跨平台 API：</span><span class="sxs-lookup"><span data-stu-id="a59bc-113">It provides about 20,000 APIs, including Windows-only as well as cross-platform APIs from the following technology areas:</span></span>
+<span data-ttu-id="9e0ba-113">它提供約 20,000 個 API，包括僅限 Windows 以及來自下列技術領域的跨平台 API：</span><span class="sxs-lookup"><span data-stu-id="9e0ba-113">It provides about 20,000 APIs, including Windows-only as well as cross-platform APIs from the following technology areas:</span></span>
 
-* <span data-ttu-id="a59bc-114">字碼頁</span><span class="sxs-lookup"><span data-stu-id="a59bc-114">Code Pages</span></span>
-* <span data-ttu-id="a59bc-115">CodeDom</span><span class="sxs-lookup"><span data-stu-id="a59bc-115">CodeDom</span></span>
-* <span data-ttu-id="a59bc-116">Configuration</span><span class="sxs-lookup"><span data-stu-id="a59bc-116">Configuration</span></span>
-* <span data-ttu-id="a59bc-117">目錄服務</span><span class="sxs-lookup"><span data-stu-id="a59bc-117">Directory Services</span></span>
-* <span data-ttu-id="a59bc-118">繪圖</span><span class="sxs-lookup"><span data-stu-id="a59bc-118">Drawing</span></span>
-* <span data-ttu-id="a59bc-119">ODBC</span><span class="sxs-lookup"><span data-stu-id="a59bc-119">ODBC</span></span>
-* <span data-ttu-id="a59bc-120">權限</span><span class="sxs-lookup"><span data-stu-id="a59bc-120">Permissions</span></span>
-* <span data-ttu-id="a59bc-121">連接埠</span><span class="sxs-lookup"><span data-stu-id="a59bc-121">Ports</span></span>
-* <span data-ttu-id="a59bc-122">Windows 存取控制清單 (ACL)</span><span class="sxs-lookup"><span data-stu-id="a59bc-122">Windows Access Control Lists (ACL)</span></span>
-* <span data-ttu-id="a59bc-123">Windows Communication Foundation (WCF)</span><span class="sxs-lookup"><span data-stu-id="a59bc-123">Windows Communication Foundation (WCF)</span></span>
-* <span data-ttu-id="a59bc-124">Windows 加密</span><span class="sxs-lookup"><span data-stu-id="a59bc-124">Windows Cryptography</span></span>
-* <span data-ttu-id="a59bc-125">Windows EventLog</span><span class="sxs-lookup"><span data-stu-id="a59bc-125">Windows EventLog</span></span>
-* <span data-ttu-id="a59bc-126">Windows Management Instrumentation (WMI)</span><span class="sxs-lookup"><span data-stu-id="a59bc-126">Windows Management Instrumentation (WMI)</span></span>
-* <span data-ttu-id="a59bc-127">Windows 效能計數器</span><span class="sxs-lookup"><span data-stu-id="a59bc-127">Windows Performance Counters</span></span>
-* <span data-ttu-id="a59bc-128">Windows 登錄</span><span class="sxs-lookup"><span data-stu-id="a59bc-128">Windows Registry</span></span>
-* <span data-ttu-id="a59bc-129">Windows 執行階段快取</span><span class="sxs-lookup"><span data-stu-id="a59bc-129">Windows Runtime Caching</span></span>
-* <span data-ttu-id="a59bc-130">Windows 服務</span><span class="sxs-lookup"><span data-stu-id="a59bc-130">Windows Services</span></span>
+* <span data-ttu-id="9e0ba-114">字碼頁</span><span class="sxs-lookup"><span data-stu-id="9e0ba-114">Code Pages</span></span>
+* <span data-ttu-id="9e0ba-115">CodeDom</span><span class="sxs-lookup"><span data-stu-id="9e0ba-115">CodeDom</span></span>
+* <span data-ttu-id="9e0ba-116">Configuration</span><span class="sxs-lookup"><span data-stu-id="9e0ba-116">Configuration</span></span>
+* <span data-ttu-id="9e0ba-117">目錄服務</span><span class="sxs-lookup"><span data-stu-id="9e0ba-117">Directory Services</span></span>
+* <span data-ttu-id="9e0ba-118">繪圖</span><span class="sxs-lookup"><span data-stu-id="9e0ba-118">Drawing</span></span>
+* <span data-ttu-id="9e0ba-119">ODBC</span><span class="sxs-lookup"><span data-stu-id="9e0ba-119">ODBC</span></span>
+* <span data-ttu-id="9e0ba-120">權限</span><span class="sxs-lookup"><span data-stu-id="9e0ba-120">Permissions</span></span>
+* <span data-ttu-id="9e0ba-121">連接埠</span><span class="sxs-lookup"><span data-stu-id="9e0ba-121">Ports</span></span>
+* <span data-ttu-id="9e0ba-122">Windows 存取控制清單 (ACL)</span><span class="sxs-lookup"><span data-stu-id="9e0ba-122">Windows Access Control Lists (ACL)</span></span>
+* <span data-ttu-id="9e0ba-123">Windows Communication Foundation (WCF)</span><span class="sxs-lookup"><span data-stu-id="9e0ba-123">Windows Communication Foundation (WCF)</span></span>
+* <span data-ttu-id="9e0ba-124">Windows 加密</span><span class="sxs-lookup"><span data-stu-id="9e0ba-124">Windows Cryptography</span></span>
+* <span data-ttu-id="9e0ba-125">Windows EventLog</span><span class="sxs-lookup"><span data-stu-id="9e0ba-125">Windows EventLog</span></span>
+* <span data-ttu-id="9e0ba-126">Windows Management Instrumentation (WMI)</span><span class="sxs-lookup"><span data-stu-id="9e0ba-126">Windows Management Instrumentation (WMI)</span></span>
+* <span data-ttu-id="9e0ba-127">Windows 效能計數器</span><span class="sxs-lookup"><span data-stu-id="9e0ba-127">Windows Performance Counters</span></span>
+* <span data-ttu-id="9e0ba-128">Windows 登錄</span><span class="sxs-lookup"><span data-stu-id="9e0ba-128">Windows Registry</span></span>
+* <span data-ttu-id="9e0ba-129">Windows 執行階段快取</span><span class="sxs-lookup"><span data-stu-id="9e0ba-129">Windows Runtime Caching</span></span>
+* <span data-ttu-id="9e0ba-130">Windows 服務</span><span class="sxs-lookup"><span data-stu-id="9e0ba-130">Windows Services</span></span>
 
-<span data-ttu-id="a59bc-131">如需詳細資訊，請參閱[相容性套件規格](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)。</span><span class="sxs-lookup"><span data-stu-id="a59bc-131">For more information, see the [spec of the compatibility pack](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).</span></span>
+<span data-ttu-id="9e0ba-131">如需詳細資訊，請參閱[相容性套件規格](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-131">For more information, see the [specification of the compatibility pack](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).</span></span>
 
-## <a name="get-started"></a><span data-ttu-id="a59bc-132">開始使用</span><span class="sxs-lookup"><span data-stu-id="a59bc-132">Get started</span></span>
+## <a name="get-started"></a><span data-ttu-id="9e0ba-132">開始使用</span><span class="sxs-lookup"><span data-stu-id="9e0ba-132">Get started</span></span>
 
-1. <span data-ttu-id="a59bc-133">移植前，請務必查看[移植程序](index.md)。</span><span class="sxs-lookup"><span data-stu-id="a59bc-133">Before porting, make sure to take a look at the [Porting Process](index.md).</span></span>
+1. <span data-ttu-id="9e0ba-133">移植前，請務必查看[移植程序](index.md)。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-133">Before porting, make sure to take a look at the [Porting Process](index.md).</span></span>
 
-2. <span data-ttu-id="a59bc-134">將現有的程式碼移植到 .NET Core 或 .NET Standard 時，請安裝 NuGet 套件 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。</span><span class="sxs-lookup"><span data-stu-id="a59bc-134">When porting existing code to .NET Core or .NET Standard, install the NuGet package [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).</span></span>
+2. <span data-ttu-id="9e0ba-134">將現有的程式碼移植到 .NET Core 或 .NET Standard 時，請安裝 NuGet 套件 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-134">When porting existing code to .NET Core or .NET Standard, install the NuGet package [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).</span></span>
 
-3. <span data-ttu-id="a59bc-135">如果您想要留在 Windows，即已完成所有準備。</span><span class="sxs-lookup"><span data-stu-id="a59bc-135">If you want to stay on Windows, you're all set.</span></span>
+3. <span data-ttu-id="9e0ba-135">如果您想要留在 Windows，即已完成所有準備。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-135">If you want to stay on Windows, you're all set.</span></span>
 
-4. <span data-ttu-id="a59bc-136">如果您想要在 Linux 或 macOS 上執行 .NET Core 應用程式或 .NET Standard 程式庫，請使用 [API 分析器](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/)尋找無法跨平台運作的 API 使用方式。</span><span class="sxs-lookup"><span data-stu-id="a59bc-136">If you want to run the .NET Core application or .NET Standard library on Linux or macOS, use the [API Analyzer](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) to find usage of APIs that won't work cross-platform.</span></span>
+4. <span data-ttu-id="9e0ba-136">如果您想要在 Linux 或 macOS 上執行 .NET Core 應用程式或 .NET Standard 程式庫，請使用 [API 分析器](../../standard/analyzers/api-analyzer.md)尋找無法跨平台運作的 API 使用方式。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-136">If you want to run the .NET Core application or .NET Standard library on Linux or macOS, use the [API Analyzer](../../standard/analyzers/api-analyzer.md) to find usage of APIs that won't work cross-platform.</span></span>
 
-5. <span data-ttu-id="a59bc-137">移除這些 API 的使用方式，以跨平台的替代方案取代，或使用平台檢查保護它們，例如：</span><span class="sxs-lookup"><span data-stu-id="a59bc-137">Either remove the usages of those APIs, replace them with cross-platform alternatives, or guard them using a platform check, like:</span></span>
+5. <span data-ttu-id="9e0ba-137">移除這些 API 的使用方式，以跨平台的替代方案取代，或使用平台檢查保護它們，例如：</span><span class="sxs-lookup"><span data-stu-id="9e0ba-137">Either remove the usages of those APIs, replace them with cross-platform alternatives, or guard them using a platform check, like:</span></span>
 
     ```csharp
     private static string GetLoggingPath()
@@ -77,4 +77,4 @@ ms.locfileid: "57717891"
     }
     ```
 
-<span data-ttu-id="a59bc-138">如需示範，請查看 [Channel 9 的 Windows 相容性套件影片](https://channel9.msdn.com/Events/Connect/2017/T123)。</span><span class="sxs-lookup"><span data-stu-id="a59bc-138">For a demo, check out the [Channel 9 video of the Windows Compatibility Pack](https://channel9.msdn.com/Events/Connect/2017/T123).</span></span>
+<span data-ttu-id="9e0ba-138">如需示範，請查看 [Channel 9 的 Windows 相容性套件影片](https://channel9.msdn.com/Events/Connect/2017/T123)。</span><span class="sxs-lookup"><span data-stu-id="9e0ba-138">For a demo, check out the [Channel 9 video of the Windows Compatibility Pack](https://channel9.msdn.com/Events/Connect/2017/T123).</span></span>
