@@ -2,22 +2,22 @@
 title: 作法：排序多個索引鍵的項目 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 4029e88ced11cdc2e95fdfd212fecb3e3b194436
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 13444214efb2d7c4bcfec712d565d114abced204
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592440"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253310"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="9bf1f-102">作法：排序多個索引鍵的項目 (C#)</span><span class="sxs-lookup"><span data-stu-id="9bf1f-102">How to: Sort Elements on Multiple Keys (C#)</span></span>
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="d2c24-102">HOW TO：排序多個索引鍵的項目 (C#)</span><span class="sxs-lookup"><span data-stu-id="d2c24-102">How to: Sort Elements on Multiple Keys (C#)</span></span>
 
-<span data-ttu-id="9bf1f-103">這個主題顯示如何在多個索引鍵上排序。</span><span class="sxs-lookup"><span data-stu-id="9bf1f-103">This topic shows how to sort on multiple keys.</span></span>
+<span data-ttu-id="d2c24-103">這個主題顯示如何在多個索引鍵上排序。</span><span class="sxs-lookup"><span data-stu-id="d2c24-103">This topic shows how to sort on multiple keys.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9bf1f-104">範例</span><span class="sxs-lookup"><span data-stu-id="9bf1f-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d2c24-104">範例</span><span class="sxs-lookup"><span data-stu-id="d2c24-104">Example</span></span>
 
-<span data-ttu-id="9bf1f-105">在這個範例中，會先按照送貨的郵遞區號，然後按照訂單日期排序結果。</span><span class="sxs-lookup"><span data-stu-id="9bf1f-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>
+<span data-ttu-id="d2c24-105">在這個範例中，會先按照送貨的郵遞區號，然後按照訂單日期排序結果。</span><span class="sxs-lookup"><span data-stu-id="d2c24-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>
 
-<span data-ttu-id="9bf1f-106">此範例使用下列 XML 文件：[XML 範例檔：客戶和訂單 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。</span><span class="sxs-lookup"><span data-stu-id="9bf1f-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>
+<span data-ttu-id="d2c24-106">此範例使用下列 XML 文件：[XML 範例檔：客戶和訂單 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。</span><span class="sxs-lookup"><span data-stu-id="d2c24-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -36,9 +36,9 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-<span data-ttu-id="9bf1f-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="9bf1f-107">This code produces the following output:</span></span>
+<span data-ttu-id="d2c24-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="d2c24-107">This code produces the following output:</span></span>
 
-```
+```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997
@@ -63,11 +63,11 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```
 
-## <a name="example"></a><span data-ttu-id="9bf1f-108">範例</span><span class="sxs-lookup"><span data-stu-id="9bf1f-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d2c24-108">範例</span><span class="sxs-lookup"><span data-stu-id="d2c24-108">Example</span></span>
 
-<span data-ttu-id="9bf1f-109">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="9bf1f-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="9bf1f-110">如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="9bf1f-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>
+<span data-ttu-id="d2c24-109">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="d2c24-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="d2c24-110">如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="d2c24-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>
 
-<span data-ttu-id="9bf1f-111">此範例使用下列 XML 文件：[XML 範例檔：命名空間中的客戶和訂單](./sample-xml-file-customers-and-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="9bf1f-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](./sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>
+<span data-ttu-id="d2c24-111">此範例使用下列 XML 文件：[XML 範例檔：命名空間中的客戶和訂單](./sample-xml-file-customers-and-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="d2c24-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](./sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");
@@ -88,9 +88,9 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-<span data-ttu-id="9bf1f-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="9bf1f-112">This code produces the following output:</span></span>
+<span data-ttu-id="d2c24-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="d2c24-112">This code produces the following output:</span></span>
 
-```
+```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997
