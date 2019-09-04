@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988418"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252980"
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
 字串是 <xref:System.String> 類型的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
@@ -29,7 +29,7 @@ ms.locfileid: "69988418"
  使用 <xref:System.String.Empty> 常數值初始化字串，以建立字串長度為零的新 <xref:System.String> 物件。 零長度字串的字串常值表示法是 ""。 使用 <xref:System.String.Empty> 值初始化字串，而非 [null](../../language-reference/keywords/null.md)，即可降低發生 <xref:System.NullReferenceException> 的機會。 使用靜態 <xref:System.String.IsNullOrEmpty%28System.String%29> 方法，先驗證字串的值，再嘗試進行存取。  
   
 ## <a name="immutability-of-string-objects"></a>字串物件的不變性  
- 字串物件為「不可變」  ：它們在建立之後將無法變更。 所有看似會修改字串的 <xref:System.String> 方法和 C# 運算子，實際上會以新的字串物件傳回結果。 在下列範例中，當 `s1` 和 `s2` 的內容串連以組成單一字串時，兩個原始字串將不會被修改。 `+=` 運算子會建立新的字串，其中包含結合的內容。 新的物件會指派給變數 `s1`，而先前指派給 `s1` 的原始物件將會被釋放以進行記憶體回收，因為已經沒有其他具有其參考的變數。  
+ 字串物件為「不可變」：它們在建立之後將無法變更。 所有看似會修改字串的 <xref:System.String> 方法和 C# 運算子，實際上會以新的字串物件傳回結果。 在下列範例中，當 `s1` 和 `s2` 的內容串連以組成單一字串時，兩個原始字串將不會被修改。 `+=` 運算子會建立新的字串，其中包含結合的內容。 新的物件會指派給變數 `s1`，而先前指派給 `s1` 的原始物件將會被釋放以進行記憶體回收，因為已經沒有其他具有其參考的變數。  
   
  [!code-csharp[csProgGuideStrings#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#2)]  
   
@@ -74,7 +74,7 @@ ms.locfileid: "69988418"
 > 在編譯時期，逐字字串會轉換為具有所有相同逸出序列的一般字串。 因此，如果您在偵錯工具監看式視窗中檢視逐字字串，您會看到由編譯器新增的逸出字元，而非來自於您原始程式碼的逐字版本。 例如，逐字字串 `@"C:\files.txt"` 會在監看式視窗中顯示為 "C:\\\files.txt"。  
   
 ## <a name="format-strings"></a>格式字串  
- 格式字串是可在執行階段動態決定其內容的字串。 格式字串是透過內嵌「插入的運算式」  或字串內大括弧內的預留位置來建立的。 大括弧 (`{...}`) 內的所有內容都會被解析為一個值並在執行階段以格式化字串形式輸出。 有兩種方式可用來建立格式字串：字串插補與複合格式設定。
+ 格式字串是可在執行階段動態決定其內容的字串。 格式字串是透過內嵌「插入的運算式」或字串內大括弧內的預留位置來建立的。 大括弧 (`{...}`) 內的所有內容都會被解析為一個值並在執行階段以格式化字串形式輸出。 有兩種方式可用來建立格式字串：字串插補與複合格式設定。
 
 ### <a name="string-interpolation"></a>字串插值
 C# 6.0 與更新版本中提供的[*插補字串*](../../language-reference/tokens/interpolated.md)可透過 `$` 特殊字元識別，而且在大括弧中包括插補運算式。 如果您是字串插補的新手，請參閱[字串插補 - C# 互動式教學課程](../../tutorials/exploration/interpolated-strings.yml)以取得快速概觀。
@@ -107,7 +107,7 @@ C# 6.0 與更新版本中提供的[*插補字串*](../../language-reference/toke
 ## <a name="null-strings-and-empty-strings"></a>Null 字串和空字串  
  空字串是 <xref:System.String?displayProperty=nameWithType> 物件的執行個體，其中包含零個字元。 空字串經常用於各種程式設計案例中，來表示空白的文字欄位。 您可以對空字串呼叫方法，因為它們是有效的 <xref:System.String?displayProperty=nameWithType> 物件。 空字串會以下列方式初始化︰  
   
-```  
+```csharp  
 string s = String.Empty;  
 ```  
   
@@ -129,7 +129,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>相關主題  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[如何：修改字串內容](../../how-to/modify-string-contents.md)|說明轉換字串及修改字串內容的技術。|  
 |[如何：比較字串](../../how-to/compare-strings.md)|示範如何執行字串的序數與文化特定比較。|  

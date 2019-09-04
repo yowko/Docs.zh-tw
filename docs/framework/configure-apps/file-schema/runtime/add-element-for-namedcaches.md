@@ -5,20 +5,21 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: fd6668a551663470a97b07ff131710dbe92a91f5
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 076d940e0c15cf48013480fef68b8fac42cf76e9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659022"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252881"
 ---
 # <a name="add-element-for-namedcaches"></a>\<新增 namedCaches > 的\<> 元素
 將專案加入至記憶體`namedCaches`快取的集合。 `namedCache`  
   
- \<system.runtime.caching>  
-\<memoryCache>  
-\<namedCaches>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> 的緩存**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namedCaches >** ](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +38,7 @@ ms.locfileid: "69659022"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |-|-|  
 |`CacheMemoryLimitMegabytes`|整數值, 指定實例<xref:System.Runtime.Caching.MemoryCache>可以成長到的最大允許大小 (以 mb 為單位)。 預設值為 0, 表示<xref:System.Runtime.Caching.MemoryCache>預設會使用類別的自動調整大小啟發學習法。|  
 |`Name`|快取的名稱。|  
@@ -49,7 +50,7 @@ ms.locfileid: "69659022"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|包含已命名<xref:System.Runtime.Caching.MemoryCache>實例的設定集合。|  
   

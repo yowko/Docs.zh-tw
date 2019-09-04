@@ -1,13 +1,13 @@
 ---
-title: 作法：撰寫 LINQ to XML 座標軸方法 (C#)
+title: HOW TO：撰寫 LINQ to XML 座標軸方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 71d9d0e9ba1f63d8badb1f10ab7ede1dbb30a19f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 74105ff9d08479a4fc702b02e6929130272b237b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592190"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253227"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>作法：撰寫 LINQ to XML 座標軸方法 (C#)
 您可以撰寫自己的座標軸方法來擷取 XML 樹狀結構中的集合。 其中一個最好的方式是，撰寫可傳回項目或屬性集合的擴充方法。 您可以根據您應用程式的需求，撰寫您的擴充方法來傳回項目或屬性的特定子集。  
@@ -280,7 +280,7 @@ class Program
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
 1999-10-20  
 /PurchaseOrders/PurchaseOrder[1]/Items/Item[2]/ShipDate  
@@ -290,4 +290,3 @@ class Program
 /PurchaseOrders/PurchaseOrder[3]/@OrderDate  
 1999-10-22  
 ```  
-  

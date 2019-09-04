@@ -2,12 +2,12 @@
 title: 作法：執行文字到 XML 的串流轉換 (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: d37ea5167576098d4ea343e49ae4ff6bac20d4ba
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 1507c628731a11e06c73f253c1a0c0f9a85a2269
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485241"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253529"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>作法：執行文字到 XML 的串流轉換 (C#)
 處理文字檔的其中一個方法是撰寫擴充方法，該方法會使用 `yield return` 建構將文字檔一次串流一行。 然後您可以撰寫利用延後的方式處理文字檔的 LINQ 查詢。 如果您接著使用 <xref:System.Xml.Linq.XStreamingElement> 串流輸出，您就可以使用最少量的記憶體建立文字檔到 XML 的轉換，而不必在乎來源文字檔的大小。  
@@ -17,7 +17,7 @@ ms.locfileid: "66485241"
 ## <a name="example"></a>範例  
  下列文字檔 People.txt 為這個範例的來源。  
   
-```  
+```text  
 #This is a comment  
 1,Tai,Yee,Writer  
 2,Nikolay,Grachev,Programmer  

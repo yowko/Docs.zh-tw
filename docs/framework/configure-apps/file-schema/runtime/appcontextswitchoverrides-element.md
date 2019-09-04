@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7fe354a929aad93ba4d4a6ea3cb43b2607be1f05
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920915"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252876"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppCoNtextSwitchOverrides > 元素
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
   
- \<configuration>  
- \<執行時間 >  
-\<AppContextSwitchOverrides>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<AppContextSwitchOverrides>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69920915"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
@@ -62,7 +62,7 @@ ms.locfileid: "69920915"
   
  .NET Framework 支援下列參數:  
   
-|交換器名稱|描述|引導|  
+|交換器名稱|說明|引導|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|控制 Windows Presentation Foundation 是否使用舊版的控制項配置演算法。 如需詳細資訊，請參閱[風險降低：WPF 版面](../../../migration-guide/mitigation-wpf-layout.md)配置。|.NET Framework 4.6|  
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|控制用於 PackageDigitalSignatureManager 封裝元件的預設演算法是否為 SHA1 或 SHA256。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|.NET Framework 4.7.1|
