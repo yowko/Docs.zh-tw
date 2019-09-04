@@ -4,12 +4,12 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 3c9169e2936742c82ba27327ac07f0aa1b4c645c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107345"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254048"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks
 
@@ -25,7 +25,7 @@ ms.locfileid: "70107345"
 
 ## <a name="prerequisites"></a>必要條件
 
-開始之前，請執行下列作業：
+開始之前, 請執行下列動作:
 
 - 下載 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)。
 - 將 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下載到您的本機電腦。 這是您稍後用來將適用於 Apache Spark 的 .NET 應用程式相依檔案複製到您 Spark 叢集背景工作節點的協助程式指令碼。
@@ -96,7 +96,7 @@ Databricks 可讓您將適用於 Apache Spark 的 .NET 應用程式部署到現�
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
    ```
 
-6. 移至 Databricks 工作區。 從左側功能表中選取 [Clusters] \(叢集\)  ，然後選取 [Create Cluster] \(建立叢集\)  。
+6. 移至您的 Databricks 工作區。 從左側功能表中選取 [Clusters] \(叢集\)，然後選取 [Create Cluster] \(建立叢集\)。
 
 7. 適當地設定叢集後，請設定**初始指令碼**並建立叢集。
 
@@ -110,20 +110,20 @@ Databricks 可讓您將適用於 Apache Spark 的 .NET 應用程式部署到現�
 
 [Set JAR](https://docs.databricks.com/user-guide/jobs.html#create-a-job) 可讓您將作業提交到現有使用中叢集。
 
-#### <a name="one-time-setup"></a>單次設定
+#### <a name="one-time-setup"></a>一次性設定
 
-1. 前往您的 Databricks 叢集，並從左側功能表中選取 [Jobs] \(作業\)  。 然後選取 [Set JAR]  。
+1. 前往您的 Databricks 叢集，並從左側功能表中選取 [Jobs] \(作業\)。 然後選取 [Set JAR]。
 
 2. 上傳適當的 `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` 檔案。
 
 3. 適當地設定參數。
 
    ```
-   Main Class: org.apache.spark.deploy.DotnetRunner
+   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
    Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
    ```
  
-4. 設定 [Cluster] \(叢集\)  以指向您在前一節中為其建立**初始指令碼**的現有叢集。
+4. 設定 [Cluster] \(叢集\) 以指向您在前一節中為其建立**初始指令碼**的現有叢集。
 
 #### <a name="publish-and-run-your-app"></a>發佈和執行您的應用程式
 
@@ -152,21 +152,21 @@ Databricks 可讓您將適用於 Apache Spark 的 .NET 應用程式部署到現�
    
    - 重新啟動您的叢集。
 
-3. 前往您位於 Databricks 工作區中的 Databricks 叢集。 在 [Jobs] \(作業\)  下方，選取作業，然後選取 [Run Now] \(立即執行\)  來執行您的作業。
+3. 前往您位於 Databricks 工作區中的 Databricks 叢集。 在 [Jobs] \(作業\) 下方，選取作業，然後選取 [Run Now] \(立即執行\) 來執行您的作業。
 
 ### <a name="use-spark-submit"></a>使用 spark-submit
 
 [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) 命令可讓您將作業提交到新的叢集。
 
-1. [建立作業](https://docs.databricks.com/user-guide/jobs.html)並選取 [Configure spark-submit] \(設定 spark-submit\)  。
+1. [建立作業](https://docs.databricks.com/user-guide/jobs.html)並選取 [Configure spark-submit] \(設定 spark-submit\)。
 
 2. 搭配下列參數設定 `spark-submit`：
 
       ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
       ```
 
-3. 前往您位於 Databricks 工作區中的 Databricks 叢集。 在 [Jobs] \(作業\)  下方，選取作業，然後選取 [Run Now] \(立即執行\)  來執行您的作業。
+3. 前往您位於 Databricks 工作區中的 Databricks 叢集。 在 [Jobs] \(作業\) 下方，選取作業，然後選取 [Run Now] \(立即執行\) 來執行您的作業。
 
 ## <a name="next-steps"></a>後續步驟
 

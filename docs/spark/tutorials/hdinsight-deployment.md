@@ -4,12 +4,12 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4769c194520790ce217d46d1d3197b20742d4f1a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
-ms.translationtype: HT
+ms.openlocfilehash: 81d1af1fd4e3329c4a289eea388edf8af57d7c4e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "69576945"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243939"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight
 
@@ -25,7 +25,7 @@ ms.locfileid: "69576945"
 
 ## <a name="prerequisites"></a>必要條件
 
-開始之前，請執行下列作業：
+開始之前, 請執行下列動作:
 
 * 下載 [Azure 儲存體總管](https://azure.microsoft.com/features/storage-explorer/)。
 * 將 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下載到您的本機電腦。 這是您稍後用來將適用於 Apache Spark 的 .NET 應用程式相依檔案複製到您 Spark 叢集背景工作節點的協助程式指令碼。
@@ -81,10 +81,10 @@ ms.locfileid: "69576945"
 
 |設定|值|
 |-------|-----|
-|指令碼類型|自訂|
+|腳本類型|自訂|
 |名稱|安裝 Microsoft.Spark.Worker|
-|Bash 指令碼 URI|您上傳 `install-worker.sh` 的目標 URI。 例如：`abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`|
-|節點類型|背景工作|
+|Bash 腳本 URI|您上傳 `install-worker.sh` 的目標 URI。 例如： `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`|
+|節點類型|工作|
 |參數|`install-worker.sh` 的參數。 例如，若您將 `install-worker.sh` 上傳到 Azure Data Lake Gen 2，它便會是 `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`。|
 
 ![指令碼動作影像](./media/hdinsight-deployment/deployment-hdi-action-script.png)
@@ -99,12 +99,12 @@ ms.locfileid: "69576945"
  
 1. `ssh` 到您叢集中的其中一個前端節點。
 
-1. 執行 `spark-submit`：
+1. 執行`spark-submit`:
 
    ```bash
    spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    --files <comma-separated list of assemblies that contain UDF definitions, if any> \
    abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar \
    abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip <your app> <app arg 1> <app arg 2> ... <app arg n>
@@ -124,7 +124,7 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 -d @- << EOF
 {
     "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar",
-    "className":"org.apache.spark.deploy.DotnetRunner",
+    "className":"org.apache.spark.deploy.dotnet.DotnetRunner",
     "files":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<udf assembly>", "abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<file>"],
     "args":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip","<your app>","<app arg 1>","<app arg 2>,"...","<app arg n>"]
 }
@@ -136,4 +136,4 @@ EOF
 在本教學課程中，您已將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight。 若要深入了解 HDInsight，請繼續前往 Azure HDInsight 文件。
 
 > [!div class="nextstepaction"]
-> [Azure HDInsight 文件](https://docs.microsoft.com/azure/hdinsight/)
+> [Azure HDInsight 檔](https://docs.microsoft.com/azure/hdinsight/)
