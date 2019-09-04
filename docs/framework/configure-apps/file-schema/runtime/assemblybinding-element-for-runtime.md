@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84ec54eeb8adee90031057dadc4549cb73527be1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 515261fe39676292ce50858f71b7da92287945d1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663906"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252805"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<執行時間 > 的\<assemblyBinding > 元素
 包含有關組件版本重新導向和組件位置的資訊。  
   
- \<configuration>  
-\<執行時間 >  
-\<assemblyBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69663906"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<dependentAssembly>](dependentassembly-element.md)|封裝組件的繫結原則和組件位置。 針對每個元件使用一個 **\<dependentAssembly >** 標記。|  
 |[\<probing>](probing-element.md)|指定載入組件時，Common Language Runtime 會搜尋的子目錄。|  

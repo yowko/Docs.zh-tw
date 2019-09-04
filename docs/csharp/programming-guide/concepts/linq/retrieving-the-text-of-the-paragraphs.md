@@ -2,12 +2,12 @@
 title: 擷取段落的文字 (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 88a7e82a7d27048ce3f901e6e9d50b8737797adb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 986145fa62722a35d23831a3818b89e63529b85f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591083"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253050"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>擷取段落的文字 (C#)
 這個範例是根據上述範例 ([擷取段落及其樣式 (C#)](./retrieving-the-paragraphs-and-their-styles.md)) 所建置。 這個新的範例會將每個段落的文字當做字串擷取。  
@@ -119,7 +119,7 @@ foreach (var p in paraWithText)
   
  這個範例會在套用至[建立來源 Office Open XML 文件 (C#)](./creating-the-source-office-open-xml-document.md) 中所述的文件時產生下列輸出。  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

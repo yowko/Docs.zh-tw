@@ -2,12 +2,12 @@
 title: 使用純虛擬函式進行重構 (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: d1c4b1fc59e52fbd72dec1ee0e73e7198a083868
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591317"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253084"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>使用純虛擬函式進行重構 (C#)
 下列範例會重構上述範例 ([使用擴充方法進行重構 (C#)](./refactoring-using-an-extension-method.md)) 來使用此範例中的純虛擬函式，而且尋找段落文字的程式碼會被移到純靜態方法 `ParagraphText`。  
@@ -156,7 +156,7 @@ class Program
   
  此範例會產生與重構前相同的輸出：  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

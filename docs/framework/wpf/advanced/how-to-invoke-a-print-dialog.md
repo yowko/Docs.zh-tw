@@ -8,23 +8,23 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: cd7b06030e0fb2bba74590ee80c07c34047c5b47
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4bad8158925fea8af529f70f92aad74e2a6bbec0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950615"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254104"
 ---
-# <a name="how-to-invoke-a-print-dialog"></a>作法：叫用 [列印] 對話方塊
+# <a name="how-to-invoke-a-print-dialog"></a>HOW TO：叫用 [列印] 對話方塊
 若要提供從您的應用程式列印的功能, 您可以直接建立並<xref:System.Windows.Controls.PrintDialog>開啟物件。  
   
 ## <a name="example"></a>範例  
- <xref:System.Windows.Controls.PrintDialog> 控制項提供 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 組態的單一進入點和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 工作提交。 控制項很容易使用, 而且可以使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]標記或程式碼來具現化。 下列範例示範如何在程式碼中具現化和開啟控制項, 以及如何從它進行列印。 它也會示範如何確保對話方塊會提供使用者設定特定頁面範圍的選項。 範例程式碼假設 C: 磁片磁碟機的根目錄中有一個檔案 FixedDocumentSequence。  
+ 控制項提供[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、設定和 XPS 工作提交的單一進入點。 <xref:System.Windows.Controls.PrintDialog> 控制項很容易使用, 而且可以使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]標記或程式碼來具現化。 下列範例示範如何在程式碼中具現化和開啟控制項, 以及如何從它進行列印。 它也會示範如何確保對話方塊會提供使用者設定特定頁面範圍的選項。 範例程式碼假設 C: 磁片磁碟機的根目錄中有一個檔案 FixedDocumentSequence。  
   
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- 對話方塊開啟之後, 使用者就可以從安裝在其電腦上的印表機中選取。 他們也可以選擇選取[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] [Microsoft XPS 檔寫入器](https://go.microsoft.com/fwlink/?LinkId=147319)來建立檔案, 而不是列印。  
+ 對話方塊開啟之後, 使用者就可以從安裝在其電腦上的印表機中選取。 他們也可以選擇選取[MICROSOFT XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)來建立 XML 檔規格 (Xps) 檔案, 而不是列印。  
   
 > [!NOTE]
 > 本主題中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]討論的<xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> 控制項不應該與WindowsForms<xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>的元件混淆。  

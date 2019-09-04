@@ -2,12 +2,12 @@
 title: 重構為純虛擬函式 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 453b128ecaea62fd58c54bfb383091f65a082370
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924200"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253104"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重構為純虛擬函式 (C#)
 
@@ -52,7 +52,7 @@ public class Program
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 StringOne-StringTwo  
 ```  
   

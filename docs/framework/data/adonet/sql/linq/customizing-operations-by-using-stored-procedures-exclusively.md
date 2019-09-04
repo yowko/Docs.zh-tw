@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-ms.openlocfilehash: 61230ffc5cd055ee64de9d519cdfb4d76c856ca3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a242ecdc774d67721aee640e75847317c1b815d6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038047"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247552"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>以獨佔模式使用預存程序來自訂作業
 在常見的案例中使用預存程序存取資料。  
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
- 您可以修改中提供的範例[自訂作業藉由使用預存程序](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)藉由包裝預存程序的方法呼叫中取代甚至是第一個查詢 （這會導致動態 SQL 執行）。  
+### <a name="description"></a>說明  
+ 您可以[使用預存程式來修改自訂作業](customizing-operations-by-using-stored-procedures.md)中提供的範例, 方法是將第一個查詢 (也就是造成動態 SQL 執行) 取代為包裝預存程式的方法呼叫。  
   
  假設 `CustomersByCity` 為下列範例中的方法。  
   
@@ -33,4 +33,4 @@ ms.locfileid: "62038047"
   
 ## <a name="see-also"></a>另請參閱
 
-- [開發人員覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+- [開發人員覆寫預設行為的責任](responsibilities-of-the-developer-in-overriding-default-behavior.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6f071f907fe38b226a5083699e758bc5fb8bffce
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923890"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252985"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 您可以使用下列其中一種方式，透過定義方法以將引數傳送給 `Main` 方法：  
@@ -28,19 +28,19 @@ ms.locfileid: "69923890"
   
  您也可以使用 <xref:System.Convert> 類別或 `Parse` 方法，將字串引數轉換為數字類型。 例如，下列陳述式將使用 <xref:System.Int64.Parse%2A> 方法，以將 `string` 轉換為 `long` 數字：  
   
-```  
+```csharp  
 long num = Int64.Parse(args[0]);  
 ```  
   
  也可能使用別名為 `Int64` 的 C# 類型 `long`：  
   
-```  
+```csharp  
 long num = long.Parse(args[0]);  
 ```  
   
  您還可以使用 `Convert` 類別方法 `ToInt64` 執行相同作業：  
   
-```  
+```csharp  
 long num = Convert.ToInt64(s);  
 ```  
   
@@ -55,7 +55,7 @@ long num = Convert.ToInt64(s);
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2. 從 [開始]  畫面或 [開始]  功能表中，開啟 Visual Studio [開發人員命令提示字元]  視窗，然後巡覽至包含剛剛建立之檔案的資料夾。  
+2. 從 [開始] 畫面或 [開始] 功能表中，開啟 Visual Studio [開發人員命令提示字元] 視窗，然後巡覽至包含剛剛建立之檔案的資料夾。  
   
 3. 輸入下列命令以編譯應用程式。  
   

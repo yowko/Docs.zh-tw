@@ -2,12 +2,12 @@
 title: C# 中的預設命名空間範圍
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 0c5f5cccda6ba6a75a8631ed095921b90b02916b
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
-ms.translationtype: HT
+ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868864"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253043"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C\# 中的預設命名空間範圍
 在 XML 樹狀結構中表示的預設命名空間不在查詢的範圍內。 如果您擁有的 XML 位於預設命名空間中，您仍然必須宣告 <xref:System.Xml.Linq.XNamespace> 變數，然後將它與區域名稱結合，讓限定名稱 (Qualified Name) 得以用於查詢中。  
@@ -45,7 +45,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>註解  
  此範例會產生下列結果：  
   
-```  
+```output  
 Result set follows:  
 End of result set  
 ```  
@@ -80,7 +80,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>註解  
  此範例會產生下列結果：  
   
-```  
+```output  
 Result set follows:  
 1  
 2  

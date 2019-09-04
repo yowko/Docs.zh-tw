@@ -1,17 +1,17 @@
 ---
 title: C# 8.0 的新功能 - C# 指南
 description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 5 的最新資訊。
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.date: 09/02/2019
+ms.openlocfilehash: 7210f2e978f307b3ecef2eff272fea0d19025de6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105504"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252894"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
-您已經可以試用許多 C# 語言的增強功能。 
+您已經可以試用許多 C# 語言的增強功能。
 
 - [唯讀成員](#readonly-members)
 - [預設介面成員](#default-interface-members)
@@ -26,6 +26,7 @@ ms.locfileid: "70105504"
 - [可為 Null 的參考類型](#nullable-reference-types)
 - [非同步資料流](#asynchronous-streams)
 - [索引和範圍](#indices-and-ranges)
+- [增強內插逐字字串](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > 此文章內容為 C# 8.0 預覽 5 的最新更新。
@@ -86,7 +87,7 @@ public readonly void Translate(int xOffset, int yOffset)
 
 ## <a name="default-interface-members"></a>預設介面成員
 
-您現在可以新增成員到介面並提供那些成員的實作。 此語言功能可讓 API 作者在較新的版本中新增方法到介面中，而不會因為該介面的現有實作造成原始程式碼或二進位檔案相容性受影響。 現有實作會「繼承」  預設實作。 此功能也會讓 C# 與以 Android 或 Swift 為目標的 API 相互操作，這些 API 支援類似的功能。 預設介面成員也會啟用類似「特徵」語言功能的案例。
+您現在可以新增成員到介面並提供那些成員的實作。 此語言功能可讓 API 作者在較新的版本中新增方法到介面中，而不會因為該介面的現有實作造成原始程式碼或二進位檔案相容性受影響。 現有實作會「繼承」預設實作。 此功能也會讓 C# 與以 Android 或 Swift 為目標的 API 相互操作，這些 API 支援類似的功能。 預設介面成員也會啟用類似「特徵」語言功能的案例。
 
 預設介面成員會影響許多案例與語言元素。 我們的第一個教學課程涵蓋[使用預設實作更新介面](../tutorials/default-interface-members-versions.md)。 其他教學課程與參考更新即將在正式發行時推出。
 
@@ -186,7 +187,7 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 ### <a name="tuple-patterns"></a>Tuple 模式
 
-某些演算法需仰賴數個輸入。 **Tuple 模式**可讓您根據以 [tuple](../tuples.md) 形式表示的多個值進行切換。  下列範例示範「剪刀、石頭、布」  遊戲的 switch 運算式：
+某些演算法需仰賴數個輸入。 **Tuple 模式**可讓您根據以 [tuple](../tuples.md) 形式表示的多個值進行切換。  下列範例示範「剪刀、石頭、布」遊戲的 switch 運算式：
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -376,7 +377,8 @@ await foreach (var number in GenerateSequence())
 
 範圍及索引可提供用來指定陣列中子範圍的簡潔語法，<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>。
 
-此語言支援仰賴兩個新的型別與兩個新的運算子。
+此語言支援依賴兩個新的類型和兩個新的運算子:
+
 - <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
 - `^` 運算子，它會指定索引相對於序列結尾。
 - <xref:System.Range?displayProperty=nameWithType> 代表序列的子範圍。
@@ -384,7 +386,7 @@ await foreach (var number in GenerateSequence())
 
 讓我們從索引的規則開始。 假設有一個陣列 `sequence`。 `0` 索引與 `sequence[0]` 相同。 `^0` 索引與 `sequence[sequence.Length]` 相同。 請注意，`sequence[^0]` 會擲回例外狀況，就樣 `sequence[sequence.Length]` 會這樣做一樣。 針對任何數字 `n`，索引 `^n` 與 `sequence.Length - n` 相同。
 
-指定範圍「開頭」  與「結尾」  的範圍。 範圍的開頭會包含在內，但範圍的結尾是獨佔的，這表示開始  包含在範圍內，但結束  不包含在範圍內。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。 
+指定範圍「開頭」與「結尾」的範圍。 範圍的開頭會包含在內，但範圍的結尾是獨佔的，這表示開始包含在範圍內，但結束不包含在範圍內。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。 
 
 讓我們來看以下幾個範例。 試想下列使用其索引從開頭或從結尾標註的陣列：
 
@@ -444,3 +446,7 @@ var text = words[phrase];
 ```
 
 您可以在[索引及範圍](../tutorials/ranges-indexes.md)上的教學課程中探索更多關於索引及範圍的資訊。
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>增強內插逐字字串
+
+內`$` `@` [插](../language-reference/tokens/interpolated.md)逐字字串`@$"..."`中的和 token 順序可以是 any:和都是有效的內插逐字字串。`$@"..."` 在較C#舊的版本`$`中, 權杖`@`必須出現在標記之前。

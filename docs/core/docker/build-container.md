@@ -4,16 +4,16 @@ description: 在此教學課程中，您將了解如何使用 Docker 來將 .NET
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
-ms.translationtype: HT
+ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331051"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253954"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教學課程：將 .NET Core 應用程式容器化
 
-此教學課程將教您如何建置包含 .NET Core 應用程式的 Docker 映像。 映像可用來為您的本機開發環境、私人雲端，或公用雲端建立容器。
+本教學課程將教您如何建置包含 .NET Core 應用程式的 Docker 映像。 映像可用來為您的本機開發環境、私人雲端，或公用雲端建立容器。
 
 您將了解：
 
@@ -23,7 +23,7 @@ ms.locfileid: "68331051"
 > * 建置 Docker 映像
 > * 建立及執行 Docker 容器
 
-您將了解 .NET Core 應用程式的 Docker 容器建置及部署工作。 「Docker 平台」  會使用「Docker 引擎」  快速建置應用程式，並將其封裝為「Docker 映像」  。 這些映像是以 *Dockerfile* 格式所撰寫，可在分層式容器中部署及執行。
+您將了解 .NET Core 應用程式的 Docker 容器建置及部署工作。 「Docker 平台」會使用「Docker 引擎」快速建置應用程式，並將其封裝為「Docker 映像」。 這些映像是以 *Dockerfile* 格式所撰寫，可在分層式容器中部署及執行。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -34,7 +34,7 @@ ms.locfileid: "68331051"
 
 * [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 
-* *Dockerfile* 和 .NET Core 範例應用程式的暫存工作資料夾。 在此教學課程中，`docker-working` 名稱會作為工作資料夾使用。
+* *Dockerfile* 和 .NET Core 範例應用程式的暫存工作資料夾。 在本教學課程中，`docker-working` 名稱會作為工作資料夾使用。
 
 ### <a name="use-sdk-version-22"></a>使用 SDK 版本 2.2
 
@@ -60,7 +60,7 @@ dotnet new console -o app -n myapp
 
 您的資料夾樹狀目錄會如下所示：
 
-```console
+```
 docker-working
 │   global.json
 │
@@ -184,7 +184,7 @@ FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 
 儲存 *Dockerfile* 檔案。 工作資料夾的目錄結構應如下所示。 部分更下層的檔案和資料夾已省略，以節省文章空間：
 
-```console
+```
 docker-working
 │   Dockerfile
 │   global.json
@@ -265,7 +265,7 @@ mcr.microsoft.com/dotnet/core/runtime   2.2                 d51bb4452469        
 0e8f3c2ca32ce773712a5cca38750f41259a4e54e04bdf0946087e230ad7066c
 ```
 
-上述的 `docker create` 命令將根據 **myimage** 映像建立容器。 該命令的輸出會顯示已建立容器的**容器識別碼** (您的映像識別碼將會不同)。 若要查看「所有」  容器的清單，請使用 `docker ps -a` 命令：
+上述的 `docker create` 命令將根據 **myimage** 映像建立容器。 該命令的輸出會顯示已建立容器的**容器識別碼** (您的映像識別碼將會不同)。 若要查看「所有」容器的清單，請使用 `docker ps -a` 命令：
 
 ```console
 > docker ps -a
@@ -347,7 +347,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 Docker 提供 `docker run` 命令來建立容器，並以單一命令執行。 使用此命令，就不需依序執行 `docker create` 及 `docker start`。 您也可以設定此命令，在容器停止時自動刪除容器。 例如，使用 `docker run -it --rm` 來執行兩個動作，首先，自動使用目前的終端機連線到容器，然後在容器完成時將其移除：
 
-```
+```console
 > docker run -it --rm myimage
 Counter: 1
 Counter: 2
@@ -359,7 +359,7 @@ Counter: 5
 
 搭配 `docker run -it`，則 <kbd>CTRL + C</kbd> 命令將會停止正在容器中執行的程序，接著停止容器。 由於已提供 `--rm` 參數，因此會在程序停止時自動刪除容器。 確認它不存在：
 
-```
+```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
 ```

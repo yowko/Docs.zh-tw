@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015602"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254166"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 登錄設定
 本主題概要說明 WPF 應用程式所使用的 Microsoft ClearType 登錄設定。  
@@ -19,7 +19,7 @@ ms.locfileid: "70015602"
 ## <a name="technology-overview"></a>技術概觀  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]將文字呈現到顯示裝置的應用程式會使用 ClearType 功能來提供增強的閱讀體驗。 ClearType 是由 Microsoft 開發的軟體技術, 可改善現有 Lcd (液晶顯示器) 的文字可讀性, 例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 ClearType 的運作方式是存取 LCD 螢幕每個圖元內的個別垂直色彩 stripe 元素。 如需 ClearType 的詳細資訊, 請參閱[Cleartype 總覽](cleartype-overview.md)。  
   
- 在各種顯示裝置上觀看時, 以 ClearType 轉譯的文字會明顯不同。 例如, 少數監視器會以藍色、綠色、紅色順序來執行彩色 stripe 元素, 而不是較常見的紅色、綠色、藍色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 順序。  
+ 在各種顯示裝置上觀看時, 以 ClearType 轉譯的文字會明顯不同。 例如, 少數監視器會以藍色、綠色、紅色順序來執行彩色 stripe 元素, 而不是較常見的紅色、綠色、藍色 (RGB) 順序。  
   
  以 ClearType 轉譯的文字在以色彩敏感度層級不同的個人觀看時, 也會明顯不同。 有些人比其他人更能感知色彩的細微差異。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "70015602"
 ## <a name="registry-settings"></a>登錄設定  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]指定用來控制 ClearType 功能的四個登錄設定:  
   
-|設定|描述|  
+|設定|說明|  
 |-------------|-----------------|  
 |ClearType 層級|描述 ClearType 色彩清晰度的層級。|  
 |色差補正層級|說明顯示裝置的像素色彩元件層級。|  
@@ -80,7 +80,7 @@ ms.locfileid: "70015602"
 ## <a name="pixel-structure"></a>像素結構  
  像素結構說明構成顯示裝置的像素類型。 像素結構定義有三種類型︰  
   
-|類型|值|描述|  
+|類型|值|說明|  
 |----------|-----------|-----------------|  
 |一般|0|顯示裝置沒有像素結構。 這表示每種色彩光源都平均分布在像素區域，此即為灰階轉譯。 這是標準顯示裝置運作的方式。 ClearType 永遠不會套用至呈現的文字。|  
 |RGB|1|顯示裝置的像素色帶組成順序如下︰紅色、綠色和藍色。 ClearType 會套用至呈現的文字。|  

@@ -2,14 +2,14 @@
 title: 作法：利用特定名稱尋找同層級的屬性 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 78795f164490dddd6bdc8dae04961c028228ab0c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 0d7842f190f7ce7869668929b69c2336d33c6183
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593523"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253729"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>作法：利用特定名稱尋找同層級的屬性 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>HOW TO：利用特定名稱尋找同層級的屬性 (XPath-LINQ to XML) (C#)
 本主題顯示如何尋找內容節點之同層級的所有屬性。 在集合中，只會傳回具有特定名稱的屬性。  
   
  XPath 運算式為：  
@@ -49,7 +49,7 @@ foreach (XAttribute el in list1)
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 Results are identical  
 id="bk101"  
 id="bk102"  

@@ -2,12 +2,12 @@
 title: 靜態編譯的查詢 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: 9f10d93e0e5add02dbfb8c8867031ce68e58c0f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 98725cece1006ba13afb64bb8ae17ae6e62c53cf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924164"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253036"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>靜態編譯的查詢 (LINQ to XML) (C#)
 相對於 <xref:System.Xml.XmlDocument> 而言，LINQ to XML 其中一個最重要的效能優勢在於，LINQ to XML 中的查詢是靜態編譯的查詢，而 XPath 查詢則必須在執行階段解譯。 由於這項功能是 LINQ to XML 內建的，所以您不需要進行額外步驟，即可運用此功能，但是在選擇這兩項技術時了解其差異會有所幫助。 本主題將說明兩者的差異。  
@@ -15,11 +15,7 @@ ms.locfileid: "69924164"
 ## <a name="statically-compiled-queries-vs-xpath"></a>靜態編譯查詢與XPath  
  下列範例將顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。  
   
- 下面是對等的 XPath 運算式：  
-  
-```  
-//Address[@Type='Shipping']  
-```  
+ 以下是對等的 XPath 運算式:`//Address[@Type='Shipping']`
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -92,4 +88,3 @@ reader.Close();
 - 它會逐一查看這些節點，並且根據運算式的評估，適當地選取結果集的節點。  
   
  這點明顯比對應 LINQ to XML 查詢所完成的工作還多。 雖然特定效能差異會因不同類型的查詢而異，不過一般而言，相較於使用 <xref:System.Xml.XmlDocument> 來評估 XPath 運算式，LINQ to XML 查詢會進行較少工作，因此具有較佳的執行效能。  
-  

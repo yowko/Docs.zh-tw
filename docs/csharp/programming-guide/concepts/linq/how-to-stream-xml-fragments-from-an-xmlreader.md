@@ -2,12 +2,12 @@
 title: 作法：從 XmlReader 串流 XML 片段 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: c27c2165af95b8b781564e14efc0668f596e3057
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: e5aeb5111931ff6a35a3b7806abc24e0fbbf9621
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592403"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253284"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>作法：從 XmlReader 串流 XML 片段 (C#)
 當您必須處理大型 XML 檔案時，可能無法將整個 XML 樹狀載入記憶體中。 這個主題顯示如何使用 <xref:System.Xml.XmlReader> 串流片段。  
@@ -75,7 +75,7 @@ static void Main(string[] args)
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 bbb  
 ccc  
 ```  

@@ -2,14 +2,14 @@
 title: 作法：排序多個索引鍵的項目 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 4029e88ced11cdc2e95fdfd212fecb3e3b194436
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 13444214efb2d7c4bcfec712d565d114abced204
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592440"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253310"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>作法：排序多個索引鍵的項目 (C#)
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a>HOW TO：排序多個索引鍵的項目 (C#)
 
 這個主題顯示如何在多個索引鍵上排序。
 
@@ -38,7 +38,7 @@ foreach (var r in sortedElements)
 
 此程式碼會產生下列輸出：
 
-```
+```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997
@@ -90,7 +90,7 @@ foreach (var r in sortedElements)
 
 此程式碼會產生下列輸出：
 
-```
+```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997

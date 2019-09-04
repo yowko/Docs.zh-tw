@@ -2,14 +2,14 @@
 title: 作法：尋找前面同層級項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: d47a2d72efd8891108999d5576da52eb2b6285b1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2af2e08fa692142d2932a427f48ba5d323d7a848
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593430"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253651"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>作法：尋找前面同層級項目 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>HOW TO：尋找前面同層級項目 (XPath-LINQ to XML) (C#)
 這個主題會比較 XPath `preceding-sibling` 座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子系 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 座標軸。  
   
  XPath 運算式為：  
@@ -45,7 +45,7 @@ foreach (XElement el in list2)
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 Results are identical  
 <CompanyName>Great Lakes Food Market</CompanyName>  
 <ContactName>Howard Snyder</ContactName>  

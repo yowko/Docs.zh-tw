@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9fac4e1a98f67c6d5d946ade1b7f2115ce0d5f8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92a72bdc99471e14f607e674104e7faa3e796975
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964869"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254141"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供廣泛的檔功能, 可讓您建立更容易存取和讀取的高精確度內容, 而不是在舊版的 Windows 中。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
@@ -63,13 +63,13 @@ ms.locfileid: "69964869"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 封裝架構是下列幾個重要技術的基礎：  
   
-- 符合 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件。  
+- 符合 XML 紙張規格 (XPS) 的 XPS 檔。  
   
 - Microsoft Office "12" Open XML 格式文件 (.docx)。  
   
 - 適用於您自己應用程式設計的自訂儲存格式。  
   
- 根據封裝 api, <xref:System.Windows.Xps.Packaging.XpsDocument>是特別設計來儲存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定的內容檔。 <xref:System.Windows.Xps.Packaging.XpsDocument>是獨立的文件，可以在檢視器 中顯示開啟<xref:System.Windows.Controls.DocumentViewer>控制項來列印多工緩衝處理，路由或輸出直接[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-相容的印表機。  
+ 根據封裝 api, <xref:System.Windows.Xps.Packaging.XpsDocument>是特別設計來儲存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定的內容檔。 是獨立的檔, 可以在檢視器中開啟、顯示<xref:System.Windows.Controls.DocumentViewer>于控制項中、路由至列印多工緩衝處理, 或直接輸出到與 XPS 相容的印表機。 <xref:System.Windows.Xps.Packaging.XpsDocument>  
   
  下列各節提供有關提供<xref:System.IO.Packaging.Package> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]之和<xref:System.Windows.Xps.Packaging.XpsDocument> api 的其他資訊。  
   
@@ -125,15 +125,15 @@ ms.locfileid: "69964869"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS 文件  
- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件是一種封裝，其中包含一或多份固定格式文件，以及進行呈現所需的所有資源和資訊。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 也是原生 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 列印多工緩衝檔案格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>會儲存在標準 ZIP 資料集中, 而且可以包含 XML 和二進位元件的組合, 例如影像和字型檔案。 [PackageRelationships](#PackageRelationships) 可用來定義完整呈現文件所需的內容和資源之間的相依性。  此<xref:System.Windows.Xps.Packaging.XpsDocument>設計提供單一、高精確度的檔解決方案, 可支援多個用途:  
+ XML 檔規格 (XPS) 檔是一種套件, 其中包含一或多個固定檔, 以及呈現所需的所有資源和資訊。  XPS 也是原生[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]列印多工緩衝處理檔案格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>會儲存在標準 ZIP 資料集中, 而且可以包含 XML 和二進位元件的組合, 例如影像和字型檔案。 [PackageRelationships](#PackageRelationships) 可用來定義完整呈現文件所需的內容和資源之間的相依性。  此<xref:System.Windows.Xps.Packaging.XpsDocument>設計提供單一、高精確度的檔解決方案, 可支援多個用途:  
   
 - 將固定格式文件內容和資源當做單一可攜式且容易散發的檔案，進行讀取、寫入及儲存。  
   
-- 使用 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檢視器應用程式顯示文件。  
+- 使用 XPS 檢視器應用程式顯示檔。  
   
 - 以 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的原生列印多工緩衝處理輸出格式來輸出文件。  
   
-- 將文件直接路由傳送至 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 相容的印表機。  
+- 將檔直接路由傳送到與 XPS 相容的印表機。  
   
 ## <a name="see-also"></a>另請參閱
 

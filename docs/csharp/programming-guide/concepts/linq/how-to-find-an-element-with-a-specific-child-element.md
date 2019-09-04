@@ -2,14 +2,14 @@
 title: 作法：尋找具有特定子項目的項目 (C#)
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 80539c7ccd21bc38967479d7b724e6f3361d24ac
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f007bddcbecc1cb938d05c7d444d29b6047749e8
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593556"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253747"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>作法：尋找具有特定子項目的項目 (C#)
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>HOW TO：尋找具有特定子項目的項目 (C#)
 本主題顯示如何利用特定的值尋找具有子項目的特定項目。  
   
 ## <a name="example"></a>範例  
@@ -29,7 +29,7 @@ foreach (XElement el in tests)
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 0002  
 0006  
 ```  
@@ -52,7 +52,7 @@ foreach (XElement el in tests)
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 0002  
 0006  
 ```  

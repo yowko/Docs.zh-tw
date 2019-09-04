@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b535ba67ab05dabd7e0a23e79692bbf69e25b55
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7ffb297cc38f20917e720b216607e9ccfc966866
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663914"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252837"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 元素
 針對預設應用程式網域，指定做為應用程式網域管理員的類型。  
   
- \<configuration>  
-\<執行時間 >  
-\<appDomainManagerType>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerType>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "69663914"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`value`|必要屬性。 指定類型的名稱, 包括命名空間, 做為進程中預設應用程式域的應用程式域管理員。|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69663914"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  

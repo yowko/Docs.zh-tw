@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b82be30c18cde361aa412ee1b631c8368c8de1b3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 1395ee64d94e33693344b678c7a949665f994079
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663934"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252828"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 元素
 針對處理序存留期間，指示執行階段收集處理序中所有應用程式網域的統計資料。  
   
- \<configuration>  
-\<執行時間 >  
-\<appDomainResourceMonitoring>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ ms.locfileid: "69663934"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  

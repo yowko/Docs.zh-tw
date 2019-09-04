@@ -2,12 +2,12 @@
 title: 作法：聯結兩個集合 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: aa774e23cfd232709f9824826f5084fe6049ef37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 82083a24da9a5356a8ff8e8430b61bb5d41f7c72
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593205"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253582"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>作法：聯結兩個集合 (LINQ to XML) (C#)
 XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如，[XML 範例檔：客戶和訂單 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML 文件包含客戶清單與訂單清單。 每個 `Customer` 項目都包含一個 `CustomerID` 屬性。 每個 `Order` 項目都包含一個 `CustomerID` 項目。 每個訂單中的 `CustomerID` 項目都會參考客戶中的 `CustomerID` 屬性。  
@@ -76,7 +76,7 @@ if (!errors)
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 Attempting to validate, custOrdDoc validated  
 <Root>  
   <Order>  

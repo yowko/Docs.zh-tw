@@ -2,12 +2,12 @@
 title: 作法：使用 XSD 進行驗證 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 47704a5aa06bb837c9d76516762330e4aa24e074
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 0e35e12efa9530fd5bbcf7a21e86ed03c1325bc4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592235"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253245"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>作法：使用 XSD 進行驗證 (LINQ to XML) (C#)
 <xref:System.Xml.Schema> 命名空間包含的擴充方法可針對 XML 結構描述定義語言 (XSD) 檔，簡化 XML 樹狀結構的驗證。 如需詳細資訊，請參閱 <xref:System.Xml.Schema.Extensions.Validate%2A> 方法的文件。  
@@ -66,7 +66,7 @@ Console.WriteLine("doc2 {0}", errors ? "did not validate" : "validated");
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 Validating doc1  
 doc1 validated  
   
@@ -111,7 +111,7 @@ Console.WriteLine("custOrdDoc {0}", errors ? "did not validate" : "validated");
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 Attempting to validate  
 custOrdDoc validated  
   

@@ -2,12 +2,12 @@
 title: 擷取段落及其樣式 (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 4accbf3325ad4db95c028249c7071cb9fedd19cd
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ec59ef0ac36f8691ca93a4c21c5379118ee0491f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591202"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253065"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>擷取段落及其樣式 (C#)
 在此範例中，我們會撰寫一個從 WordprocessingML 文件擷取段落節點的查詢。 它也可以識別每個段落的樣式。  
@@ -111,7 +111,7 @@ foreach (var p in paragraphs)
   
  這個範例會在套用至[建立來源 Office Open XML 文件 (C#)](./creating-the-source-office-open-xml-document.md) 中所述的文件時產生下列輸出。  
   
-```  
+```output  
 StyleName:Heading1  
 StyleName:Normal  
 StyleName:Normal  

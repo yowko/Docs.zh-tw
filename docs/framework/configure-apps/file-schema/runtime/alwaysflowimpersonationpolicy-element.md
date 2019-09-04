@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b42c141362d99090db922d3a6b429f05592130cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 164492eb1abc7329481f158963118b47d2c4aebc
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659020"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252867"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 元素
 指定 Windows 識別一律流經非同步點，而不論模擬的執行方式為何。  
   
- \<configuration>  
-\<執行時間 >  
-\<alwaysFlowImpersonationPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<alwaysFlowImpersonationPolicy>** \  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,13 +36,13 @@ ms.locfileid: "69659020"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`enabled`|必要屬性。<br /><br /> 指出 Windows 身分識別是否流經非同步點。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |`false`|Windows 識別不會流經非同步點, 除非模擬是透過 managed 方法 (例如) <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>來執行。 這是預設值。|  
 |`true`|無論模擬的執行方式為何, Windows 身分識別一律會流經非同步點。|  

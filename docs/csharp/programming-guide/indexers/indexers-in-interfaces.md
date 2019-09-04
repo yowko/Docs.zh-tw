@@ -6,12 +6,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: cea8d157e89597ddf4633cf7f7d3df7044db9ec7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 7f52df0283cf057c1cd6cc4fa87c0086da7e61d2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589436"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253009"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>介面中的索引子 (C# 程式設計手冊)
 索引子可以宣告於 [interface](../../language-reference/keywords/interface.md) 上。 介面索引子的存取子在下列方面與[類別](../../language-reference/keywords/class.md)索引子的存取子不同：  
@@ -35,7 +35,7 @@ ms.locfileid: "69589436"
   
  在上述範例中，您可以使用介面成員的完整名稱來使用明確介面成員實作。 例如：  
   
-```  
+```csharp  
 string ISomeInterface.this[int index]   
 {   
 }   
@@ -43,7 +43,7 @@ string ISomeInterface.this[int index]
   
  不過，類別實作具有相同索引子簽章的多個介面時，只需要完整名稱，即可避免模稜兩可。 例如，如果 `Employee` 類別實作 `ICitizen` 和 `IEmployee` 這兩個介面，而且這兩個介面都具有相同的索引子簽章，則需要明確介面成員實作。 也就是說，下列索引子宣告：  
   
-```  
+```csharp  
 string IEmployee.this[int index]   
 {   
 }   
@@ -51,7 +51,7 @@ string IEmployee.this[int index]
   
  在 `IEmployee` 介面上實作索引子，而下列宣告：  
   
-```  
+```csharp  
 string ICitizen.this[int index]
 {   
 }   

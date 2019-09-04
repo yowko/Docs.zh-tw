@@ -2,12 +2,12 @@
 title: 搭配節點進行程式設計 (C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 7229b03e1bbb4f7cd861cb946307867b87234a21
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 8c4c858cbc1fad4041c2e5ce62ca8a01dd1cfb2c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487296"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253152"
 ---
 # <a name="programming-with-nodes-c"></a>搭配節點進行程式設計 (C#)
 必須撰寫程式 (例如，XML 編輯器、轉換系統或報表寫入器) 的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 開發人員通常需要撰寫的程式可在比項目和屬性更細微的層級上作業。 他們通常需要在節點層級、管理的文字節點、處理指示與註解上作業。 這個主題提供一些關於在節點層級進行程式設計的詳細資料。  
@@ -28,7 +28,7 @@ Console.WriteLine(doc.Root.Parent == null);
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 True  
 True  
 ```  
@@ -54,7 +54,7 @@ Console.WriteLine(xmlTree.Nodes().OfType<XText>().Count());
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 1  
 1  
 2  
@@ -76,7 +76,7 @@ Console.WriteLine(">>{0}<<", textNode2);
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 >><<  
 ```  
   
@@ -116,7 +116,7 @@ foreach (XAttribute att in root.Attributes())
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
 xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True  
 AnAttribute="abc"  IsNamespaceDeclaration:False  
@@ -144,7 +144,7 @@ Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Co
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 3  
 0  
 ```  
@@ -166,7 +166,7 @@ Console.WriteLine(doc.Nodes().Count());
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <Root />  
 1  

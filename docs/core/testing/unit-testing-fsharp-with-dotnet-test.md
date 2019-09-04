@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3a9744bfebd93c5004011819b8c6e739e84b97d0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 8ef4489fffa8a0876f7f8dcfd1463965c177646a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626499"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253934"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 F# 程式庫進行單元測試
 
@@ -62,7 +62,7 @@ module MyMath =
 
 測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 已新增 xUnit 和 xUnit 執行器。 現在，將 `MathService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 

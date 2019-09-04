@@ -2,12 +2,12 @@
 title: 中繼具體化 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: 273cd68b9714287f259e763c9b7c534aac1931e6
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592127"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253154"
 ---
 # <a name="intermediate-materialization-c"></a>中繼具體化 (C#)
 如果不小心，在某些情況下，造成查詢中的集合過早具體化，可能會徹底改變應用程式的記憶體與效能設定檔。 有些標準查詢運算子會在產生單一項目前，造成其來源集合具體化。 例如，<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> 會先逐一查看其完整的來源集合，然後排序所有的項目，最後產生第一個項目。 也就是說，取得順序集合的第一個項目會高度耗費資源；之後每個項目則不會高度耗費資源。 這很合理：該查詢運算子不可能以其他方式執行。  
@@ -66,7 +66,7 @@ class Program
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 ToUpper: source >abc<  
 ToUpper: source >def<  
 ToUpper: source >ghi<  

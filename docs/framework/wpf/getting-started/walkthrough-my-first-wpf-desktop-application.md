@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d5b5b8a479efd3918dc23616aa331cc07a901ac
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972170"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254063"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說：我的第一個 WPF 傳統型應用程式
 
@@ -143,7 +143,7 @@ ms.locfileid: "68972170"
 
 1. 將設定`ExpenseIt - Home`為 ""。 <xref:System.Windows.Controls.Page.Title%2A>
 
-1. 將和`DesignHeight` `DesignWidth`元素的值設定為300圖元。
+1. `DesignWidth`將設定`DesignHeight`為350圖元, 並將設為500圖元。
 
     XAML 現在會以下列方式顯示 Visual Basic:
 
@@ -184,7 +184,7 @@ ms.locfileid: "68972170"
 
 1. 將設定`ExpenseIt - View Expense`為 ""。 <xref:System.Windows.Controls.Page.Title%2A>
 
-1. 將和`DesignHeight` `DesignWidth`元素的值設定為300圖元。
+1. `DesignWidth`將設定`DesignHeight`為350圖元, 並將設為500圖元。 
 
     *Expensereportpage.xaml*現在在 Visual Basic 中看起來會像下面這樣:
 

@@ -3,12 +3,12 @@ title: 開始使用語意分析
 description: 本教學課程概述如何使用 .NET Compiler SDK 來處理語意分析。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 188104c3430b4ca32578cd35d3e161a6eb0e0e1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611740"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252940"
 ---
 # <a name="get-started-with-semantic-analysis"></a>開始使用語意分析
 
@@ -40,7 +40,7 @@ ms.locfileid: "59611740"
 建立新的 C# **獨立程式碼分析工具**專案：
 
 * 在 Visual Studio 中，選擇 [檔案] > [新增] > [專案] 來顯示 [新增專案] 對話方塊。
-* 在 **Visual C#** > **擴充性**下，選擇 [獨立程式碼分析工具]。
+* 在 **Visual C#**  > **擴充性**下，選擇 [獨立程式碼分析工具]。
 * 將專案命名為 "**SemanticQuickStart**"，然後按一下 [確定]。
 
 您要分析先前顯示的基本 "Hello World!" 程式。
@@ -78,7 +78,7 @@ ms.locfileid: "59611740"
 
 執行程式，而且您應該會看到下列輸出：
 
-```
+```output
 System.Collections
 System.Configuration
 System.Deployment
@@ -135,7 +135,7 @@ Press any key to continue . . .
 
 建置並執行程式。 您應該會看到下列輸出：
 
-```
+```output
 Join
 Substring
 Trim

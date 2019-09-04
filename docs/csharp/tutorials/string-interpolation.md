@@ -2,13 +2,13 @@
 title: C# 中的字串插補
 description: 了解如何使用字串插補，在 C# 的結果字串中包含已格式化的運算式結果。
 author: pkulikov
-ms.date: 05/09/2018
-ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.date: 09/02/2019
+ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251021"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252931"
 ---
 # <a name="string-interpolation-in-c"></a>C\# 中的字串插補
 
@@ -26,7 +26,7 @@ ms.locfileid: "66251021"
 
 如範例所示，藉由用括號括住運算式，即可在插入字串中包含運算式：
 
-```
+```csharp
 {<interpolationExpression>}
 ```
 
@@ -36,7 +36,7 @@ ms.locfileid: "66251021"
 
 在內插補點運算式後面接著冒號 (":") 和格式字串，即可指定運算式結果類型所支援的格式字串：
 
-```
+```csharp
 {<interpolationExpression>:<formatString>}
 ```
 
@@ -50,7 +50,7 @@ ms.locfileid: "66251021"
 
 在內插補點運算式後面接著逗號 (",") 和常數運算式，即可指定已格式化之運算式結果的最小欄位寬度和對齊：
 
-```
+```csharp
 {<interpolationExpression>,<alignment>}
 ```
 
@@ -58,7 +58,7 @@ ms.locfileid: "66251021"
 
 如果您需要指定對齊和格式字串，請從對齊元件開始：
 
-```
+```csharp
 {<interpolationExpression>,<alignment>:<formatString>}
 ```
 
@@ -74,7 +74,7 @@ ms.locfileid: "66251021"
 
 插入字串支援可用於一般字串常值中所有逸出序列。 如需詳細資訊，請參閱[字串逸出序列](../programming-guide/strings/index.md#string-escape-sequences)。
 
-若要逐字解譯逸出序列，請使用[逐字](../language-reference/tokens/verbatim.md)字串常值。 逐字插入字串以 `$` 字元為開頭，後面接著 `@` 字元。
+若要逐字解譯逸出序列，請使用[逐字](../language-reference/tokens/verbatim.md)字串常值。 內插逐字字串`$`是以字元開頭, 後面接著`@`字元。 從C# 8.0 開始, 您可以依任何`$`順序`@`使用和 token: `$@"..."`和`@$"..."`都是有效的內插逐字字串。
 
 若要在結果字串中包含大括號 "{" 或 "}"，請使用兩個大括號 "{{" 或 "}}"。 如需詳細資訊，請參閱[複合格式](../../standard/base-types/composite-formatting.md)主題的[逸出大括號](../../standard/base-types/composite-formatting.md#escaping-braces)一節。
 

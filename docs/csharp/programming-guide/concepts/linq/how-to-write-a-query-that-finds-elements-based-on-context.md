@@ -2,12 +2,12 @@
 title: 作法：撰寫依內容尋找項目的查詢 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: f6fd0a9dc0f2579185f2f72997f1d406a885c636
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
-ms.translationtype: HT
+ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710032"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253208"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>作法：撰寫依內容尋找項目的查詢 (C#)
 有時候您可能必須撰寫會依其內容選取項目的查詢。 您可能想要依據前面或後面的同層級項目進行篩選。 您可能想要依據子系或祖系項目進行篩選。  
@@ -49,7 +49,7 @@ foreach (XElement e in items)
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  
@@ -92,7 +92,7 @@ foreach (XElement e in items)
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  

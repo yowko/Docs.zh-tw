@@ -9,21 +9,21 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: 815e1c26a328d986f91992a1e67e438a563ffea6
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7cce12f6fb4b957d740cd590bd84851fa16a117d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663892"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252802"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<執行時間 > 的\<assemblyIdentity > 元素
 包含元件的識別資訊。  
   
- \<configuration>  
-\<執行時間 >  
-\<assemblyBinding>  
-\<dependentAssembly>  
-\<assemblyIdentity>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyIdentity>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,7 +48,7 @@ culture="assembly culture"/>
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |`amd64`|僅適用于 AMD x86-64 架構。|  
 |`ia64`|僅限 Intel Itanium 架構。|  

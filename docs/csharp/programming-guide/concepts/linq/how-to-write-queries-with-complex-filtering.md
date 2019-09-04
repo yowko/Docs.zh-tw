@@ -1,13 +1,13 @@
 ---
-title: 作法：撰寫具有複雜篩選功能的查詢 (C#)
+title: HOW TO：撰寫具有複雜篩選功能的查詢 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 3fe62b4a3c78c61de28311adf3feec1a613ff167
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 7759a02c1b9ef0ae0c1af4bfb2600543b21cdf0f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592166"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253203"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>作法：撰寫具有複雜篩選功能的查詢 (C#)
 有時候您會想要利用複雜篩選撰寫 LINQ to XML 查詢。 例如，您可能必須尋找其子項目包含特定名稱和值的所有項目。 本主題提供利用複雜篩選撰寫查詢的範例。  
@@ -37,7 +37,7 @@ foreach (XElement el in purchaseOrders)
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 99505  
 ```  
   
@@ -65,7 +65,7 @@ foreach (XElement el in purchaseOrders)
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 99505  
 ```  
   
