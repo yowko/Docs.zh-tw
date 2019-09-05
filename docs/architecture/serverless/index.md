@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 148a79e39c047897719e4f97efd84676b1b92636
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: MT
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/05/2019
 ms.locfileid: "70222792"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>無伺服器應用程式：架構、模式和 Azure 實作
@@ -138,4 +138,4 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 本指南和相關範例會不斷改進，因此歡迎您提供意見反應！ 如果您想提出如何改進本指南意見，請使用 [GitHub 問題](https://github.com/dotnet/docs/issues)之任何頁面底部的意見反應區段。
 
 >[!div class="step-by-step"]
->[下一個](architecture-approaches.md)
+>[下一步](architecture-approaches.md)

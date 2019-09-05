@@ -1,74 +1,49 @@
-- name: ML.NET 指南
+- name: ML.NET
   href: index.yml
-- name: 總覽
+- name: 概觀
   expanded: true
   items:
-    - name: 什麼是 ML.NET 且其如何運作？
-      href: how-does-mldotnet-work.md
+    - name: API
+      items:
+        - name: ML.NET API
+          href: how-does-mldotnet-work.md
+    - name: 工具
+      items:
+        - name: ML.NET 模型建立器工具
+          href: automate-training-with-model-builder.md
+        - name: ML.NET 命令列介面
+          href: automate-training-with-cli.md
 - name: 教學課程
   items:
-    - name: 概觀
-      href: tutorials/index.md
-    - name: 分析情感 (二元分類)
-      href: tutorials/sentiment-analysis.md
-    - name: 分類支援問題 (多類別分類)
-      href: tutorials/github-issue-classification.md
-    - name: 預測價格 (迴歸)
-      href: tutorials/predict-prices.md
-    - name: 分類鳶尾花 (K-Means 叢集)
-      href: tutorials/iris-clustering.md
-    - name: 推薦的電影 (矩陣因式分解)
-      href: tutorials/movie-recommendation.md
-    - name: 影像分類 (遷移式學習)
-      href: tutorials/image-classification.md
-    - name: 產品銷售分析 (異常偵測)
-      href: tutorials/sales-anomaly-detection.md
-    - name: 偵測影像中的物件 (物件偵測)
-      href: tutorials/object-detection-onnx.md
-- name: 作法指南
-  items:
-    - name: 載入資料
-      href: how-to-guides/load-data-ml-net.md
-    - name: 準備資料
-      href: how-to-guides/prepare-data-ml-net.md
-    - name: 定型、評估和說明模型
+    - name: API
       items:
-        - name: 定型及評估模型
-          href: how-to-guides/train-machine-learning-model-ml-net.md
-        - name: 使用交叉驗證將模型定型
-          href: how-to-guides/train-machine-learning-model-cross-validation-ml-net.md
-        - name: 檢查中繼管線資料值
-          href: how-to-guides/inspect-intermediate-data-ml-net.md
-        - name: 使用 PFI 判斷模型功能重要性
-          href: how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md
-    - name: 使用已定型的模型
+        - name: 概觀
+          href: tutorials/index.md
+        - name: 分析情感 (二元分類)
+          href: tutorials/sentiment-analysis.md
+        - name: 分類支援問題 (多類別分類)
+          href: tutorials/github-issue-classification.md
+        - name: 預測價格 (迴歸)
+          href: tutorials/predict-prices.md
+        - name: 分類鳶尾花 (k-means 叢集)
+          href: tutorials/iris-clustering.md
+        - name: 推薦的電影 (矩陣因式分解)
+          href: tutorials/movie-recommendation.md
+        - name: 影像分類 (遷移式學習)
+          href: tutorials/image-classification.md
+        - name: 產品銷售分析 (異常偵測)
+          href: tutorials/sales-anomaly-detection.md
+        - name: 偵測影像中的物件 (物件偵測)
+          href: tutorials/object-detection-onnx.md
+    - name: 工具
       items:
-        - name: 儲存及載入模型
-          href: how-to-guides/save-load-machine-learning-models-ml-net.md
-        - name: 使用模型來進行預測
-          href: how-to-guides/machine-learning-model-predictions-ml-net.md
-        - name: 重新定型模型
-          href: how-to-guides/retrain-model-ml-net.md
-        - name: 將模型部署到 Azure Functions
-          href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
-        - name: 將模型部署到 Web API
-          href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Infer.NET
-      items:
-        - name: 使用 Infer.NET 進行機率性程式設計
-          href: how-to-guides/matchup-app-infer-net.md
-- name: 參考資料
+        - name: 使用模型建立器預測價格
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: 使用 ML.NET CLI 分析情感
+          href: tutorials/mlnet-cli.md
+- name: 概念
   items:
-    - name: API 參考
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
-    - name: 預覽 API 參考
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
-- name: 資源
-  href: resources/index.md
-  items:
-    - name: 詞彙
-      href: resources/glossary.md
-    - name: 工作
+    - name: ML.NET 工作 (模型類型)
       href: resources/tasks.md
     - name: 演算法
       href: how-to-choose-an-ml-net-algorithm.md
@@ -78,33 +53,65 @@
       href: resources/metrics.md
     - name: 改善模型正確性
       href: resources/improve-machine-learning-model-ml-net.md
-- name: 自動化的 ML 預覽
+- name: 作法指南
   items:
-    - name: 概觀
-      href: automl-overview.md
-    - name: 模型建立器
+    - name: API
       items:
-        - name: 什麼是模型建立器？
-          href: automate-training-with-model-builder.md
+        - name: 載入資料
+          href: how-to-guides/load-data-ml-net.md
+        - name: 準備資料
+          href: how-to-guides/prepare-data-ml-net.md
+        - name: 訓練、評估和說明模型
+          items:
+            - name: 定型及評估模型
+              href: how-to-guides/train-machine-learning-model-ml-net.md
+            - name: 使用交叉驗證來定型模型
+              href: how-to-guides/train-machine-learning-model-cross-validation-ml-net.md
+            - name: 檢查中繼管線資料值
+              href: how-to-guides/inspect-intermediate-data-ml-net.md
+            - name: 使用 PFI 判斷模型功能重要性
+              href: how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md
+        - name: 使用已定型模型
+          items:
+            - name: 儲存及載入模型
+              href: how-to-guides/save-load-machine-learning-models-ml-net.md
+            - name: 使用模型來進行預測
+              href: how-to-guides/machine-learning-model-predictions-ml-net.md
+            - name: 重新定型模型
+              href: how-to-guides/retrain-model-ml-net.md
+            - name: 將模型部署到 Azure Functions
+              href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
+            - name: 將模型部署到 Web API
+              href: how-to-guides/serve-model-web-api-ml-net.md
+    - name: 工具
+      items:
         - name: 安裝模型建立器
           href: how-to-guides/install-model-builder.md
-        - name: 使用模型建立器預測價格
-          href: tutorials/predict-prices-with-model-builder.md
-    - name: ML.NET CLI
-      items:
         - name: 安裝 CLI
           href: how-to-guides/install-ml-net-cli.md
-        - name: 自動化的機器學習
-          href: automate-training-with-cli.md
-        - name: 自動產生二元分類器
-          href: tutorials/mlnet-cli.md
-        - name: CLI 參考
-          href: reference/ml-net-cli-reference.md
-        - name: CLI 遙測
-          href: resources/ml-net-cli-telemetry.md
-    - name: 自動化的 ML API
-      items:
         - name: 使用自動化的 ML API
           href: how-to-guides/how-to-use-the-automl-api.md
-        - name: API 參考
+    - name: Infer.NET
+      items:
+        - name: 使用 Infer.NET 進行機率性程式設計
+          href: how-to-guides/matchup-app-infer-net.md
+- name: 參考資料
+  items:
+    - name: API
+      items:
+        - name: ML.NET API 參考
+          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+        - name: ML.NET API 預覽 API 參考
+          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+    - name: 工具
+      items:
+        - name: CLI 參考
+          href: reference/ml-net-cli-reference.md
+        - name: ML.NET AutoML API 參考
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
+- name: 資源
+  items:
+    - name: 字彙表
+      href: resources/glossary.md
+    - name: CLI 遙測
+      href: resources/ml-net-cli-telemetry.md
