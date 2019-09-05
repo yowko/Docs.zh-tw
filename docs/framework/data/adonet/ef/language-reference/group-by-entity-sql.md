@@ -2,15 +2,15 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: d9074b1c2ea4f8f9206c8de1e658c1aac762a74f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 641231825ca00c6accd19039ba1ec403208a077e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936098"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250900"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
-指定要放置查詢 ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 運算式所傳回物件的群組。  
+指定要放置查詢 ([SELECT](select-entity-sql.md)) 運算式所傳回物件的群組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,12 +57,12 @@ GROUP BY Q   -- BAD
 GROUP BY 1   -- BAD, a constant is not allowed  
 ```  
   
- 如需使用 GROUP BY 的範例，請參閱 [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)。  
+ 如需使用 GROUP BY 的範例，請參閱 [HAVING](having-entity-sql.md)。  
   
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 GROUP BY 運算子指定查詢傳回的物件所在的群組。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. [遵循 how to:執行可傳回 PrimitiveType 結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
+1. [遵循 how to:執行可傳回 PrimitiveType 結果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   
@@ -70,5 +70,5 @@ GROUP BY 1   -- BAD, a constant is not allowed
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [查詢運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Entity SQL 參考](entity-sql-reference.md)
+- [查詢運算式](query-expressions-entity-sql.md)

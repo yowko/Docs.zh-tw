@@ -2,12 +2,12 @@
 title: 基本資料類型
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b01a49afa99fc7ecdb7a113a5056e37d901527a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e85adb928925bf161e6e2d6ef935a20606f8eb32
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964071"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248029"
 ---
 # <a name="basic-data-types"></a>基本資料類型
 由於 LINQ to SQL 查詢會先轉譯成 Transact-SQL，然後才能在 Microsoft SQL Server 上執行。 因此，在基本資料型別方面，LINQ to SQL 所支援的許多內建功能都與 SQL Server 相同。  
@@ -24,5 +24,5 @@ ms.locfileid: "69964071"
   
 ## <a name="see-also"></a>另請參閱
 
-- [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [SQL-CLR 類型對應](sql-clr-type-mapping.md)
+- [資料類型和函式](data-types-and-functions.md)

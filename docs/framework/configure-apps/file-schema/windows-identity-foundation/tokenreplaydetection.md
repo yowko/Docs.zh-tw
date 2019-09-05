@@ -3,19 +3,20 @@ title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: 2e2159a73ca79fc362a8138eea95dbd173dafb11
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a4454042e1d97fb3cc2d6f2735104dadda6e7b5a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944289"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251763"
 ---
 # <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
 啟用權杖重新執行偵測, 並指定權杖的到期時間。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<tokenReplayDetection>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tokenReplayDetection >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,13 +37,13 @@ ms.locfileid: "69944289"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |enabled|值, 指定是否啟用權杖重新執行偵測;"true" 表示啟用權杖重新執行偵測。|  
 |expirationPeriod|<xref:System.TimeSpan> , 指定將專案視為過期並從快取中移除之前的最大時間量。  如需如何指定<xref:System.TimeSpan>值的詳細資訊, 請參閱[Timespan 值](../windows-workflow-foundation/index.md)。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   

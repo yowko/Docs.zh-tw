@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 78bafcad0a0f34c74ea58f107621ad145c1b405b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 109be8ef2bf41326fcab5896ecdc359859683345
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631537"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250676"
 ---
 # <a name="initialization-expressions"></a>初始化運算式
 初始化運算式會初始化新的物件。 大多數的初始化運算式都有支援，包括最新的 C# 3.0 和 Visual Basic 9.0 初始化運算式。 以下是可由 LINQ to Entities 查詢初始化及傳回的型別：  
@@ -48,4 +48,4 @@ ms.locfileid: "64631537"
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to Entities 查詢中的運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [LINQ to Entities 查詢中的運算式](expressions-in-linq-to-entities-queries.md)

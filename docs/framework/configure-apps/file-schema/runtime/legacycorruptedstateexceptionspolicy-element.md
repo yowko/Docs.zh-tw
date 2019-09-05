@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2715548a40579375cebbdd5fb9003738a42ff714
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 6566437d899b768cda1bab74bb1310deb7aa74db
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663658"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252508"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 元素
 指定通用語言執行時間是否允許 managed 程式碼攔截存取違規和其他損毀狀態例外狀況。  
   
- \<configuration>  
-\<執行時間 >  
-\<legacyCorruptedStateExceptionsPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "69663658"
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|應用程式將不會攔截損毀狀態例外狀況失敗, 例如存取違規。 這是預設值。|  
 |`true`|應用程式將會攔截損毀狀態例外狀況失敗, 例如存取違規。|  
@@ -48,7 +48,7 @@ ms.locfileid: "69663658"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  

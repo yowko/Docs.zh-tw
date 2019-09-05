@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663518"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252385"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy > 元素
 指定執行階段是否套用發行者原則。  
   
- \<configuration>  
-\<執行時間 >  
-\<assemblyBinding>  
-\<dependentAssembly>  
-\<publisherPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<publisherPolicy >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ ms.locfileid: "69663518"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`apply`|指定是否要套用發行者原則。|  
   
@@ -51,13 +51,16 @@ ms.locfileid: "69663518"
 |`no`|不會套用發行者原則。|  
   
 ### <a name="child-elements"></a>子元素  
- 無。  
+
+無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
+|`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|`dependentAssembly`|封裝每一個組件的繫結原則和組件位置。 針對每`<dependentAssembly>`個元件使用一個元素。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  

@@ -4,20 +4,20 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d79479d1836963fcbdaaf8d40bfc3648b88c4a3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3b783a82b1ef964de308532ef544bbfab2397400
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663405"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252229"
 ---
 # <a name="uselegacyjit-element"></a>\<useLegacyJit> 項目
 
 決定通用語言執行平台是否針對 Just-In-Time 編譯使用舊版 64 位元 JIT 編譯器。  
   
-\<configuration>  
-\<執行時間 >  
-\<useLegacyJit>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<useLegacyJit>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "69663405"
   
 ### <a name="attributes"></a>屬性  
   
-| 屬性 | 說明                                                                                   |  
+| 屬性 | 描述                                                                                   |  
 | --------- | --------------------------------------------------------------------------------------------- |  
 | `enabled` | 必要屬性。<br><br>指定執行時間是否使用舊版64位 JIT 編譯程式。 |  
   
@@ -46,11 +46,11 @@ ms.locfileid: "69663405"
   
 ### <a name="child-elements"></a>子元素
 
-None
+無
   
 ### <a name="parent-elements"></a>父元素  
   
-| 元素         | 說明                                                                                                       |  
+| 元素         | 描述                                                                                                       |  
 | --------------- | ----------------------------------------------------------------------------------------------------------------- |  
 | `configuration` | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |  
 | `runtime`       | 包含有關執行階段初始化選項的資訊。                                                        |  

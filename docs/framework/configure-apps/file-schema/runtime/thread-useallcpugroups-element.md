@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9ee6bdb7094ea2bc9e283e331c0f6ad9b68e4f9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e964f1b2861926803b0449be06cbfd9567ac74a3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663416"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252278"
 ---
 # <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups > 元素
 
 指定執行階段是否會將 Managed 執行緒分散到所有 CPU 群組。
 
-\<configuration > \
-\<執行時間 > \
-\<Thread_UseAllCpuGroups>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Thread_UseAllCpuGroups >**  
 
 ## <a name="syntax"></a>語法
 
@@ -38,7 +38,7 @@ ms.locfileid: "69663416"
 
 ## <a name="enabled-attribute"></a>啟用屬性
 
-|值|說明|
+|值|描述|
 |-----------|-----------------|
 |`false`|執行時間不會將受控執行緒分散到多個 CPU 群組。 這是預設值。|
 |`true`|如果電腦有多個 cpu 群組, 而且[ \<已啟用 GCCpuGroup >](gccpugroup-element.md)元素, 則執行時間會將受控執行緒分散到多個 cpu 群組。|
@@ -49,7 +49,7 @@ ms.locfileid: "69663416"
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|描述|
+|項目|說明|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|

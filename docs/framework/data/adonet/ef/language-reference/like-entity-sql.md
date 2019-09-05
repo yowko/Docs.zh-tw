@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 58828b812ce374a664e4d232b707f22d5ca438c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbe27f6e25c9d69f092a060fa2c3fbf0abc93318
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912276"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250505"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 判斷特定字元 `String` 是否符合指定的模式。  
@@ -39,7 +39,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
  下表所述為模式 `string` 的語法。  
   
-|萬用字元|描述|範例|  
+|萬用字元|說明|範例|  
 |------------------------|-----------------|-------------|  
 |%|任何包含零個或多個字元的 `string`。|`title like '%computer%'`尋找標題中任何位置有`"computer"`單字的所有標題。|  
 |_ (底線)|任何單一字元。|`firstname like '_ean'`尋找所有四個字母的名字, 其結尾`"ean`為 ", 例如 Dean 或小紅。|  
@@ -68,7 +68,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>範例  
  下列兩個[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢使用 LIKE 和 ESCAPE 運算子來判斷特定的字元字串是否符合指定的模式。 第一個查詢會搜尋以`Name`字元`Down_`開頭的。 這個查詢使用了 ESCAPE 選項，因為底線 (`_`) 是萬用字元。 若未指定 ESCAPE 選項, 查詢會搜尋任何`Name`以單字`Down`開頭, 後面接著底線字元以外之任何單一字元的值。 這些查詢是以 AdventureWorks Sales Model 為基礎。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. [遵循 how to:執行可傳回 PrimitiveType 結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
+1. [遵循 how to:執行可傳回 PrimitiveType 結果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   
@@ -76,4 +76,4 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL 參考](entity-sql-reference.md)

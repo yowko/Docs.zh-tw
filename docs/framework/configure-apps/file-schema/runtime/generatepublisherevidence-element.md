@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5314fe5927abf2d3855acb45c763507ab6cb3c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3dd3105e573d40ae234ba7e122f20566911124d4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920754"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252530"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > 元素
 指定執行時間是否為<xref:System.Security.Policy.Publisher>代碼啟用安全性 (CAS) 建立辨識項。  
   
- \<configuration>  
-\<執行時間 >  
-\<generatePublisherEvidence>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<generatePublisherEvidence>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "69920754"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`enabled`|必要屬性。<br /><br /> 指定執行時間是否會<xref:System.Security.Policy.Publisher>建立辨識項。|  
   

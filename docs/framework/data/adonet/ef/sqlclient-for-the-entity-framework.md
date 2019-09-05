@@ -2,12 +2,12 @@
 title: 適用於 Entity Framework 的 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: ec67637c416f2560c1f5d0a9fd0e856703820a84
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7077cf9c9b8eb8a86b01e8b38431d1b9a87a80c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954974"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248367"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>適用於 Entity Framework 的 SqlClient
 本節將描述可讓 Entity Framework 透過 Microsoft SQL Server 運作的 .NET Framework Data Provider for SQL Server (SqlClient)。  
@@ -32,23 +32,23 @@ ms.locfileid: "69954974"
 > 從 Visual Studio 2010 開始, [ADO.NET 實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))不支援 SQL Server 2000。  
   
 ## <a name="provider-namespace-name"></a>提供者命名空間名稱  
- 所有提供者都必須指定命名空間。 這個屬性會告知 Entity Framework 此提供者對特定建構 (例如型別和函式) 所使用的前置詞。 SqlClient 提供者資訊清單的命名空間是 `SqlServer`。 如需命名空間的詳細資訊, 請參閱[命名空間](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)。  
+ 所有提供者都必須指定命名空間。 這個屬性會告知 Entity Framework 此提供者對特定建構 (例如型別和函式) 所使用的前置詞。 SqlClient 提供者資訊清單的命名空間是 `SqlServer`。 如需命名空間的詳細資訊, 請參閱[命名空間](./language-reference/namespaces-entity-sql.md)。  
   
 ## <a name="types"></a>型別  
- 適用於 Entity Framework 的 SqlClient 提供者會提供概念模型類型和 SQL Server 型別之間的對應資訊。 如需詳細資訊, 請參閱[Entity FrameworkTypes 的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。  
+ 適用於 Entity Framework 的 SqlClient 提供者會提供概念模型類型和 SQL Server 型別之間的對應資訊。 如需詳細資訊, 請參閱[Entity FrameworkTypes 的 SqlClient](sqlclient-for-ef-types.md)。  
   
 ## <a name="functions"></a>Functions  
- Entity Framework 的 SqlClient 提供者會定義提供者所支援的函式清單。 如需支援的函式清單, 請參閱[SqlClient for Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)函式。  
+ Entity Framework 的 SqlClient 提供者會定義提供者所支援的函式清單。 如需支援的函式清單, 請參閱[SqlClient for Entity Framework](sqlclient-for-ef-functions.md)函式。  
   
 ## <a name="in-this-section"></a>本節內容  
- [適用於 Entity Framework 的 SqlClient 函式](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
+ [適用於 Entity Framework 的 SqlClient 函式](sqlclient-for-ef-functions.md)  
   
- [適用於 Entity Framework 的 SqlClient 類型](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
+ [適用於 Entity Framework 的 SqlClient 類型](sqlclient-for-ef-types.md)  
   
- [適用於 Entity Framework 的 SqlClient 已知問題](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
+ [適用於 Entity Framework 的 SqlClient 已知問題](known-issues-in-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
-- [語言參考](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
-- [SqlClient Provider for Entity Framework 的已知問題](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+- [Entity SQL 語言](./language-reference/entity-sql-language.md)
+- [語言參考](./language-reference/index.md)
+- [SqlClient Provider for Entity Framework 的已知問題](sqlclient-for-the-entity-framework.md)

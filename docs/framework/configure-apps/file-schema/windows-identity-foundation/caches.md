@@ -3,19 +3,20 @@ title: <caches>
 ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
-ms.openlocfilehash: 5ad75ae18772d6e7c724f2cbf40c1e3083d5c345
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 80f435b52fd7657c5cd44538028d6080beffe0b5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941970"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252153"
 ---
 # <a name="caches"></a>\<快取 >
 註冊用於會話權杖和權杖重新執行偵測的快取。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<快取 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<快取 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,18 +33,18 @@ ms.locfileid: "69941970"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- 無  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<sessionSecurityTokenCache>](sessionsecuritytokencache.md)|向服務或安全性權杖處理常式集合註冊會話權杖的快取。|  
 |[\<tokenReplayCache>](tokenreplaycache.md)|向服務或安全性權杖處理常式集合註冊權杖重新執行快取。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<identityConfiguration>](identityconfiguration.md)|指定服務層級的身分識別設定。|  
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|提供安全性權杖處理常式集合的設定。|  

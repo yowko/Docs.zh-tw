@@ -2,23 +2,23 @@
 title: 彙總函式 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: b01c7dca675e79c61b87bcc1fb30455286db3118
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c79071e73763b56c0dde906499f3eef1d296ce0c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489971"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251341"
 ---
 # <a name="aggregate-functions-entity-sql"></a>彙總函式 (Entity SQL)
 彙總是語言建構，可將集合壓縮至純量，做為群組作業的一部份。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 彙總以兩種形式出現：  
   
-- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集合函式可能會用於在運算式中的任何地方。 包括於投影和述詞中 (在集合上作用) 使用彙總函式。 集合函式是在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中指定彙總的慣用模式。  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]可以在運算式中的任何位置使用的集合函數。 包括於投影和述詞中 (在集合上作用) 使用彙總函式。 集合函式是在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中指定彙總的慣用模式。  
   
-- 查詢運算式中的群組彙總有 GROUP BY 子句。 與 TRANSACT-SQL，群組彙總接受 DISTINCT 和 ALL 做來彙總輸入的修飾詞。  
+- 查詢運算式中的群組彙總有 GROUP BY 子句。 如同在 Transact-sql 中, 群組匯總會接受 DISTINCT 和 ALL 做為匯總輸入的修飾詞。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 第一次嘗試將運算式解譯為集合函式和運算式是否在 SELECT 運算式的內容中它會將它解譯為群組彙總。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]會先嘗試將運算式解讀為集合函式, 而且如果運算式位於 SELECT 運算式的內容中, 它會將它解讀為群組匯總。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 定義特殊的彙總運算子，稱為[GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)。 此運算子可讓您取得群組輸入集的參考。 如此可允許更多進階的分組查詢，其中的 GROUP BY 子句結果可用於不是群組彙總或集合函式的地方。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]定義名為[GROUPPARTITION](grouppartition-entity-sql.md)的特殊匯總運算子。 這個運算子可讓您取得群組輸入集的參考。 如此可允許更多進階的分組查詢，其中的 GROUP BY 子句結果可用於不是群組彙總或集合函式的地方。  
   
 ## <a name="collection-functions"></a>集合函式  
  集合函式會針對集合運作，並傳回一個純量值。 例如，如果 `orders` 是所有 `orders` 的集合，您就可以使用下列運算式，計算最早出貨日期：  
@@ -44,4 +44,4 @@ ms.locfileid: "66489971"
   
 ## <a name="see-also"></a>另請參閱
 
-- [函式](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+- [函式](functions-entity-sql.md)

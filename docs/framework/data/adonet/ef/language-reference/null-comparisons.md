@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 6aa0af812d44f5c63758dd47ea4271bb2d689837
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539728"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249839"
 ---
 # <a name="null-comparisons"></a>Null 比較
-資料來源中的 `null` 值表示該值未知。 在 LINQ to Entities 查詢中，您可以檢查 null 值，讓某些計算或比較只擁有有效的或不是 null，資料的資料列上執行。 不過，CLR null 語意 (Semantics) 可能與資料來源的 null 語意不同。 大部分的資料庫都使用三值邏輯來處理 null 比較， 也就是針對 null 值的比較不會評估`true`或是`false`，其評估結果為`unknown`。 通常，這是 ANSI NULLS 的實作，可是實際情況不一定如此。  
+資料來源中的 `null` 值表示該值未知。 在 LINQ to Entities 查詢中, 您可以檢查是否有 null 值, 以便只在具有有效或非 null 資料的資料列上執行某些計算或比較。 不過，CLR null 語意 (Semantics) 可能與資料來源的 null 語意不同。 大部分的資料庫都使用三值邏輯來處理 null 比較， 也就是說, 針對 null 值的比較不會評估為`true`或`false`, 它會評估為`unknown`。 通常，這是 ANSI NULLS 的實作，可是實際情況不一定如此。  
   
- 根據預設，SQL Server 中 null 等於 null 的比較會傳回 null 值。 在下列範例中，資料列位置`ShipDate`是 null 會排除的結果集，以及 TRANSACT-SQL 陳述式會傳回 0 個資料列。  
+ 根據預設，SQL Server 中 null 等於 null 的比較會傳回 null 值。 在下列範例中, `ShipDate`是 null 的資料列會從結果集排除, 而 transact-sql 語句會傳回0個數據列。  
   
 ```  
 -- Find order details and orders with no ship date.  
@@ -33,7 +33,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#joinonnull)]  
   
 ## <a name="key-selectors"></a>索引鍵選擇器  
- A*索引鍵選取器*是用於標準查詢運算子，以從項目擷取索引鍵的函式。 在索引鍵選擇器函式中，可以將運算式與常數進行比較。 如果比較運算式與 null 常數，或比較兩個 null 常數，則會顯示 CLR null 語意。 如果比較資料來源中兩個具有 null 值的資料行，則會顯示存放區 null 語意。 索引鍵選擇器存在於許多群組和排序的標準查詢運算子 (如 <xref:System.Linq.Queryable.GroupBy%2A>)，而且是用來選取做為排序或群組依據的索引鍵。  
+ 索引*鍵選取器*是標準查詢運算子中用來從專案解壓縮索引鍵的函式。 在索引鍵選擇器函式中，可以將運算式與常數進行比較。 如果比較運算式與 null 常數，或比較兩個 null 常數，則會顯示 CLR null 語意。 如果比較資料來源中兩個具有 null 值的資料行，則會顯示存放區 null 語意。 索引鍵選擇器存在於許多群組和排序的標準查詢運算子 (如 <xref:System.Linq.Queryable.GroupBy%2A>)，而且是用來選取做為排序或群組依據的索引鍵。  
   
 ## <a name="null-property-on-a-null-object"></a>Null 物件上的 Null 屬性  
  在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中，null 物件的屬性是 null。 當您嘗試參考 CLR 中 null 物件的屬性時，將會收到 <xref:System.NullReferenceException>。 當 LINQ 查詢包含 null 物件的屬性時，可能會產生不一致的行為。  
@@ -44,8 +44,8 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>將 Null 集合傳遞至彙總函式  
- 在 LINQ to Entities，當您將傳遞一組支援`IQueryable`彙總函式，在資料庫上執行彙總的作業。 可能的記憶體中執行的查詢以及在資料庫中執行的查詢結果中的差異。 使用記憶體中查詢，如果沒有相符的項目，查詢會傳回零。 同樣的查詢在資料庫中則會傳回 `null`。 如果`null`值會傳遞至 LINQ 彙總函式，將會擲回例外狀況。 若要接受可能`null`值，轉換的類型和類型接收查詢結果為 null 類型的屬性。  
+ 在 LINQ to Entities 中, 當您將支援`IQueryable`的集合傳遞至彙總函式時, 會在資料庫中執行匯總作業。 在記憶體中執行的查詢結果和在資料庫上執行的查詢, 可能會有差異。 使用記憶體內部查詢時, 如果沒有相符專案, 則查詢會傳回零。 同樣的查詢在資料庫中則會傳回 `null`。 如果將`null`值傳遞給 LINQ 彙總函式, 則會擲回例外狀況。 若要接受`null`可能的值, 請將接收查詢結果之類型的類型和屬性轉換成可為 null 的類型。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to Entities 查詢中的運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [LINQ to Entities 查詢中的運算式](expressions-in-linq-to-entities-queries.md)

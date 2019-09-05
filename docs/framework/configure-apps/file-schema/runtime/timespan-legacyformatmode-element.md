@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f16a2bbd2470b4aec9e95ab67ccb0e736c4c6d02
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64bf667c5c9bc20db14f08f18fa6f4f84fa12a24
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920681"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252256"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 元素
 
 判斷執行時間是否會以<xref:System.TimeSpan?displayProperty=nameWithType>值來保留格式化作業的舊版行為。
 
-\<configuration > \
-\<執行時間 > \
-\<TimeSpan_LegacyFormatMode>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
 
 ## <a name="syntax"></a>語法
 
@@ -38,13 +38,13 @@ ms.locfileid: "69920681"
 
 ### <a name="attributes"></a>屬性
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |`enabled`|必要屬性。<br /><br /> 指定執行時間是否使用具有<xref:System.TimeSpan?displayProperty=nameWithType>值的舊版格式行為。|
 
 ## <a name="enabled-attribute"></a>啟用屬性
 
-|值|說明|
+|值|描述|
 |-----------|-----------------|
 |`false`|執行時間不會還原舊版格式設定行為。|
 |`true`|執行時間會還原舊版格式設定行為。|
@@ -55,7 +55,7 @@ ms.locfileid: "69920681"
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|描述|
+|項目|說明|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |`runtime`|包含有關執行階段初始化選項的資訊。|

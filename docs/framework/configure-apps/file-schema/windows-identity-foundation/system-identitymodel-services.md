@@ -3,17 +3,18 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: bef061c5c982fb0e740f889336a3b334bc19225e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e9488c0681e1a5f0fe94112a36b65ec73bf9fd09
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943663"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251814"
 ---
 # <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 使用 WS-同盟通訊協定進行驗證的設定區段。  
   
- \<system.identityModel.services>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<Microsoft.identitymodel >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,7 +33,7 @@ ms.locfileid: "69943663"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](federationconfiguration.md)|包含設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) <xref:System.IdentityModel.Services.SessionAuthenticationModule>和 (SAM) HTTP 模組的設定。|  
   

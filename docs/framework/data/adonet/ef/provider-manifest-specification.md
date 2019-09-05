@@ -2,12 +2,12 @@
 title: 提供者資訊清單規格
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422724"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248580"
 ---
 # <a name="provider-manifest-specification"></a>提供者資訊清單規格
 本節將討論資料存放區提供者如何支援資料存放區中的型別與函式。  
@@ -23,9 +23,9 @@ ms.locfileid: "67422724"
   
  提供者資訊清單必須能夠在設計階段中由工具載入，而不需要開啟資料存放區的連接。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是區分大小寫，但可能不到基礎資料存放區。 在資訊清單中定義和使用 EDM 成品 (例如，識別碼和型別名稱) 時，它們必須使用 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 區分大小寫。 如果可能區分大小寫的資料存放區項目出現在提供者資訊清單中，就必須在提供者資訊清單中保留該大小寫設定。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]區分大小寫, 但基礎資料存放區可能不是。 在資訊清單中定義和使用 EDM 成品 (例如，識別碼和型別名稱) 時，它們必須使用 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 區分大小寫。 如果可能區分大小寫的資料存放區項目出現在提供者資訊清單中，就必須在提供者資訊清單中保留該大小寫設定。  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 需要所有資料提供者的提供者資訊清單。 如果您嘗試使用沒有提供者的提供者資訊清單與[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，您會收到錯誤。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 需要所有資料提供者的提供者資訊清單。 如果您嘗試使用沒有提供者資訊清單[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的提供者, 將會收到錯誤。  
   
  下表將描述透過提供者互動引發例外狀況時，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會擲回的例外狀況種類：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67422724"
  提供者應該支援下列案例：  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>使用對稱型別對應撰寫提供者  
- 您可以撰寫的提供者[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]其中每個存放區類型會對應至單一 EDM 型別，不論對應方向為何。 若為具有非常簡單對應 (與某個 EDM 型別對應) 的提供者型別，您就可以使用對稱方案，因為型別系統很簡單或符合 EDM 型別。  
+ 您可以撰寫的提供者[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , 其中每個存放區類型都會對應至單一 EDM 類型, 不論對應方向為何。 若為具有非常簡單對應 (與某個 EDM 型別對應) 的提供者型別，您就可以使用對稱方案，因為型別系統很簡單或符合 EDM 型別。  
   
  您可以使用其網域的簡易性並產生靜態宣告式提供者資訊清單。  
   
@@ -54,21 +54,21 @@ ms.locfileid: "67422724"
   
  您可以撰寫具有兩個區段的 XML 檔案：  
   
-- 以 EDM 詞彙表示提供者類型的清單，並定義兩個方向的對應：EDM 到提供者和提供者到 EDM。  
+- 以 EDM 詞彙表示的提供者類型清單, 並定義兩個方向的對應:EDM 到提供者和提供者到 EDM。  
   
 - 提供者所支援的函式清單，其中參數和傳回型別是以 EDM 詞彙表示。  
   
 ## <a name="provider-manifest-discoverability"></a>提供者資訊清單探索能力  
  此資訊清單會由實體服務中的許多元件類型 (例如工具或查詢) 間接使用，但是更直接由中繼資料透過資料存放區中繼資料載入器運用。  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  不過，給定的提供者可能會支援不同的存放區或相同存放區的不同版本。 因此，提供者必須針對每個支援的資料存放區報告不同的資訊清單。  
   
 ### <a name="provider-manifest-token"></a>提供者資訊清單語彙基元  
  當開啟資料存放區連接時，提供者可以查詢資訊，以便傳回正確的資訊清單。 在離線案例中 (無法使用連接資訊或是無法連接至存放區)，可能就無法這樣做。 您可以使用 .ssdl 檔案中 `ProviderManifestToken` 項目的 `Schema` 屬性來識別資訊清單。 這個屬性沒有必要的格式。提供者會選擇識別資訊清單所需的最少資訊，而不必開啟存放區的連接。  
   
- 例如:  
+ 例如：  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -77,13 +77,13 @@ ms.locfileid: "67422724"
 ## <a name="provider-manifest-programming-model"></a>提供者資訊清單程式設計模型  
  提供者會衍生自 <xref:System.Data.Common.DbXmlEnabledProviderManifest>，以便讓它們以宣告方式指定其資訊清單。 下圖將說明提供者的類別階層：  
   
- ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>探索能力 API  
  存放區中繼資料載入器 (StoreItemCollection) 會使用資料存放區連接或提供者資訊清單語彙基元來載入提供者資訊清單。  
   
 #### <a name="using-a-data-store-connection"></a>使用資料存放區連接  
- 當資料存放區連接可用時，呼叫<xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType>傳回的語彙基元傳遞至<xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>方法，以傳回<xref:System.Data.Common.DbProviderManifest>。 這個方法會委派的提供者實作`GetDbProviderManifestToken`。  
+ 當有可用的資料存放區連接時<xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> , 呼叫以傳回傳遞<xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>至方法的 token, 這<xref:System.Data.Common.DbProviderManifest>會傳回。 這個方法會委派給提供者的執行`GetDbProviderManifestToken`。  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>使用提供者資訊清單語彙基元  
- 在離線案例中，系統會從 SSDL 表示中挑選語彙基元。 SSDL 可讓您指定 ProviderManifestToken (請參閱[結構描述項目 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)如需詳細資訊)。 例如，如果無法開啟連接，SSDL 就會具有指定資訊清單之相關資訊的提供者資訊清單語彙基元。  
+ 在離線案例中，系統會從 SSDL 表示中挑選語彙基元。 SSDL 可讓您指定 ProviderManifestToken (如需詳細資訊, 請參閱[Schema 元素 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) )。 例如，如果無法開啟連接，SSDL 就會具有指定資訊清單之相關資訊的提供者資訊清單語彙基元。  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -248,7 +248,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  若要在提供者資訊清單中表示這種型別資訊，每個 TypeInformation 宣告都必須針對每個型別定義許多 Facet 描述：  
   
-|屬性名稱|資料類型|必要項|Default Value|描述|  
+|屬性名稱|資料類型|必要|預設值|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |名稱|String|是|N/A|提供者特有的資料型別名稱。|  
 |PrimitiveTypeKind|PrimitiveTypeKind|是|N/A|EDM 型別名稱。|  
@@ -256,29 +256,29 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ###### <a name="function-node"></a>Function 節點  
  每個 Function 都會定義透過提供者所提供的單一函式。  
   
-|屬性名稱|資料類型|必要項|Default Value|描述|  
+|屬性名稱|資料類型|必要|預設值|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |名稱|String|是|N/A|函式的識別碼/名稱。|  
 |ReturnType|String|否|Void|函式的 EDM 傳回型別。|  
-|Aggregate|Boolean|否|False|如果此函式是彙總函式，則為 True。|  
+|Aggregate|Boolean|否|偽|如果此函式是彙總函式，則為 True。|  
 |BuiltIn|Boolean|否|True|如果此函式內建在資料存放區中，則為 True。|  
 |StoreFunctionName|String|否|\<名稱 >|資料存放區中的函式名稱。  允許重新導向函式名稱的層級。|  
-|NiladicFunction|Boolean|否|False|如果此函式不需要參數，而且會在不使用任何參數的情況下呼叫，則為 True。|  
-|ParameterType<br /><br /> 語意|ParameterSemantics|否|AllowImplicit<br /><br /> 轉換|選擇查詢管線應該如何處理參數型別替代項目：<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
+|NiladicFunction|Boolean|否|偽|如果此函式不需要參數，而且會在不使用任何參數的情況下呼叫，則為 True。|  
+|ParameterType<br /><br /> 語意|ParameterSemantics|否|AllowImplicit<br /><br /> 轉換|選擇查詢管線應該如何處理參數型別替代項目：<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
  **參數節點**  
   
  每個函式都具有一個或多個 Parameter 節點的集合。  
   
-|屬性名稱|資料類型|必要項|Default Value|描述|  
+|屬性名稱|資料類型|必要|預設值|說明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |名稱|String|是|N/A|參數的識別碼/名稱。|  
-|type|String|是|N/A|參數的 EDM 型別。|  
-|模式|參數<br /><br /> Direction|是|N/A|參數的方向：<br /><br /> -在<br />-out<br />-inout|  
+|類型|String|是|N/A|參數的 EDM 型別。|  
+|模式|參數<br /><br /> 方向|是|N/A|參數的方向：<br /><br /> -in<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 屬性  
- 每個資料存放區提供者都必須針對資訊清單中定義的資訊定義一個命名空間或命名空間群組。 這個命名空間可用於 Entity SQL 查詢中，以便解析函式和型別的名稱。 若是執行個體：Sql Server。 不過，該命名空間必須與標準命名空間 EDM 不同，後者是實體服務針對要由 Entity SQL 查詢所支援之標準函式定義的。  
+ 每個資料存放區提供者都必須針對資訊清單中定義的資訊定義一個命名空間或命名空間群組。 這個命名空間可用於 Entity SQL 查詢中，以便解析函式和型別的名稱。 若是執行個體：SqlServer. 不過，該命名空間必須與標準命名空間 EDM 不同，後者是實體服務針對要由 Entity SQL 查詢所支援之標準函式定義的。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [撰寫 Entity Framework 資料提供者](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [撰寫 Entity Framework 資料提供者](writing-an-ef-data-provider.md)

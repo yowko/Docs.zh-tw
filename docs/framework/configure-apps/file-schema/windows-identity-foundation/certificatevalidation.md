@@ -3,19 +3,20 @@ title: <certificateValidation>
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-ms.openlocfilehash: 8185153eb02c5794b0f6ac02a6837806f2073c07
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c2d1a5d36cb5616ef06eedc093dd70a68a164a81
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941912"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252127"
 ---
 # <a name="certificatevalidation"></a>\<certificateValidation>
 控制權杖處理常式用來驗證憑證的設定。 如果特定處理常式已設定自己的驗證器, 則會覆寫這些設定。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<certificateValidation>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certificateValidation >**  
   
 ## <a name="syntax"></a>語法  
   

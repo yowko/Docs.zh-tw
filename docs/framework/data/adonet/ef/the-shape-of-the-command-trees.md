@@ -2,12 +2,12 @@
 title: 命令樹的形狀
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763980"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248227"
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令樹的形狀
 
@@ -25,7 +25,7 @@ SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端�
 
 DBQueryCommandTree.Query 屬性是描述查詢邏輯之運算式樹狀架構的根。 DBQueryCommandTree.Parameters 屬性包含用於查詢的參數清單。 由 DbExpression 物件所組成的運算式。
 
-DbExpression 物件代表某些計算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會提供幾種運算式來撰寫查詢運算式，包括常數、變數、函式、建構函式，以及標準關係運算子 (如 Filter 和 Join)。 每一個 DbExpression 物件都有 ResultType 屬性，表示該運算式所產生之結果的型別。 這個型別會表示為 TypeUsage。
+DbExpression 物件代表某些計算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會提供幾種運算式來撰寫查詢運算式，包括常數、變數、函式、建構函式，以及標準關係運算子 (如 Filter 和 Join)。 每個 DbExpression 物件都有一個 ResultType 屬性, 代表該運算式所產生的結果類型。 這個型別會表示為 TypeUsage。
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>輸出查詢命令樹的形狀
 
@@ -75,9 +75,9 @@ DbExpression 物件代表某些計算。 [!INCLUDE[adonet_ef](../../../../../inc
 
 - 使用者定義函式。
 
-標準函式 (請參閱[標準函式](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)如需詳細資訊) 的一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，而且提供者應該提供根據這些規格的標準函式的實作。 存放區函式是根據對應之提供者資訊清單中的規格。 使用者定義函式是根據 SSDL 中的規格。
+標準函式 (如需詳細資訊, 請參閱[標準](./language-reference/canonical-functions.md)函式) 會[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]指定為的一部分, 而提供者應根據這些規格提供標準函式的執行。 存放區函式是根據對應之提供者資訊清單中的規格。 使用者定義函式是根據 SSDL 中的規格。
 
-此外，具有 NiladicFunction 屬性的函式沒有任何引數，而且轉譯時結尾不應該有括號。  也就是， *\<函數名稱 >* 而非 *\<functionName > （)*。
+此外，具有 NiladicFunction 屬性的函式沒有任何引數，而且轉譯時結尾不應該有括號。  也就是 *\<functionName* *\<* >, 而不是 functionName > ()。
 
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression
 
@@ -87,7 +87,7 @@ DbNewInstanceExpression 只能發生在下列兩個案例中：
 
   - 結果型別必須是資料列型別。
 
-  - 它的每一個引數都是一個運算式，可產生具有基本型別的結果。 一般來說，每一個引數都是純量運算式，例如透過 DbVariableReferenceExpression 的 PropertyExpression、函式引動過程，或是透過 DbVariableReferenceExpression 或函式引動過程之 DbPropertyExpression 的算術運算。 但是，代表純量子查詢的運算式也可以出現在 DbNewInstanceExpression 的引數清單中。 代表純量子查詢運算式是代表傳回一個資料列和具有 DbElementExpression 物件根的基本類型的一個資料行的子查詢的運算式樹狀架構
+  - 它的每一個引數都是一個運算式，可產生具有基本型別的結果。 一般來說，每一個引數都是純量運算式，例如透過 DbVariableReferenceExpression 的 PropertyExpression、函式引動過程，或是透過 DbVariableReferenceExpression 或函式引動過程之 DbPropertyExpression 的算術運算。 但是，代表純量子查詢的運算式也可以出現在 DbNewInstanceExpression 的引數清單中。 表示純量子查詢的運算式是運算式樹狀架構, 代表只傳回一個資料列, 以及一個具有 DbElementExpression 物件根之基本型別資料行的子查詢
 
 - 有了集合傳回型別，就可以定義當做引數提供之運算式的新集合。
 
@@ -105,11 +105,11 @@ DbGroupByExpression 的 Aggregates 屬性只能擁有 DbFunctionAggregate 型別
 
 #### <a name="dbscanexpression"></a>DbScanExpression
 
-輸出命令樹中使用時，DbScanExpression 會透過資料表、 檢視或存放區查詢時，由 EntitySetBase::Target 有效地表示掃描。
+在輸出命令樹中使用時, DbScanExpression 實際上代表對資料表、視圖或存放區查詢 (以 EntitySetBase:: Target 表示) 的掃描。
 
-如果中繼資料屬性"Defining Query"目標的會是不是 null，則它會代表查詢，查詢文字，會提供在存放結構定義中所指定提供者的特定語言 （或方言） 的中繼資料屬性。
+如果目標的中繼資料屬性「定義查詢」為非 null, 則它代表一個查詢, 它是以存放區架構定義中指定的提供者特定語言 (或方言) 提供給該中繼資料屬性的查詢文字。
 
-否則，目標會代表資料表或檢視表。 其結構描述前置詞不是在"Schema"中繼資料屬性中，如果不是 null，否則就是實體容器名稱。  可能是"Table"中繼資料屬性，如果不是 null，否則為實體的 Name 屬性設定基底資料表或檢視表的名稱。
+否則，目標會代表資料表或檢視表。 其架構前置詞位於 "Schema" 中繼資料屬性中 (如果不是 null), 否則為實體容器名稱。  資料表或視圖名稱是 "Table" 中繼資料屬性 (如果不是 null), 否則為實體集基底的 Name 屬性。
 
 所有的這些屬性都來自於存放結構定義檔案 (SSDL) 中對應 EntitySet 的定義。
 
@@ -119,4 +119,4 @@ DbGroupByExpression 的 Aggregates 屬性只能擁有 DbFunctionAggregate 型別
 
 ## <a name="see-also"></a>另請參閱
 
-- [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [SQL 產生](sql-generation.md)

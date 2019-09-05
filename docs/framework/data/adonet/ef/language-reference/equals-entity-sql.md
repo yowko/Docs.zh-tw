@@ -2,12 +2,12 @@
 title: = (等號) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ec87ec682e1773c001c225567a35b3cedc9c5aba
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333154"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250996"
 ---
 # <a name="-equals-entity-sql"></a>= (等號) (Entity SQL)
 比較兩個運算式是否相等。  
@@ -33,7 +33,7 @@ expression == expression
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 = 比較運算子來比較兩個運算式是否相等。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [遵循 how to:執行可傳回 StructuralType 結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -41,4 +41,4 @@ expression == expression
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL 參考](entity-sql-reference.md)

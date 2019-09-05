@@ -1,19 +1,19 @@
 ---
-title: HOW TO：將模型定義函式當作物件方法來呼叫
+title: 作法：將模型定義函式當作物件方法來呼叫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 83b7533f66c68dd25f21906394a40c956c9b88b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 787ead2c52f874af2ca1a02bf009da40cee875ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936007"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250762"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>作法：將模型定義函式當作物件方法來呼叫
-本主題描述如何呼叫模型定義函式做為 <xref:System.Data.Objects.ObjectContext> 物件上的方法，或做為自訂類別上的靜態方法。 *模型定義函式*是在概念模型中定義的函數。 本主題的程序說明如何直接呼叫這些函式，而不是從 LINQ to Entities 查詢呼叫函式。 如需在 LINQ to Entities 查詢中呼叫模型定義函式的詳細[資訊, 請參閱如何:在查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)中呼叫模型定義的函數。  
+本主題描述如何呼叫模型定義函式做為 <xref:System.Data.Objects.ObjectContext> 物件上的方法，或做為自訂類別上的靜態方法。 *模型定義函式*是在概念模型中定義的函數。 本主題的程序說明如何直接呼叫這些函式，而不是從 LINQ to Entities 查詢呼叫函式。 如需在 LINQ to Entities 查詢中呼叫模型定義函式的詳細[資訊, 請參閱如何:在查詢](how-to-call-model-defined-functions-in-queries.md)中呼叫模型定義的函數。  
   
  無論您是呼叫模型定義函式做為 <xref:System.Data.Objects.ObjectContext> 方法，或是做為自訂類別上的靜態方法，您必須先使用 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 將方法對應至模型定義函式。 不過，當您定義 <xref:System.Data.Objects.ObjectContext> 類別上的方法時，您必須使用 <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> 屬性公開 LINQ 提供者，而當您定義自訂類別上的靜態方法時，您必須使用 <xref:System.Linq.IQueryable.Provider%2A> 屬性公開 LINQ 提供者。 如需詳細資訊，請參閱下列程序後的範例。  
   
@@ -108,5 +108,5 @@ ms.locfileid: "69936007"
 ## <a name="see-also"></a>另請參閱
 
 - [.edmx 檔案總覽](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [在 LINQ to Entities 查詢中呼叫函式](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+- [LINQ to Entities 中的查詢](queries-in-linq-to-entities.md)
+- [在 LINQ to Entities 查詢中呼叫函式](calling-functions-in-linq-to-entities-queries.md)

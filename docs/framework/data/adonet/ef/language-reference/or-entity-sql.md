@@ -2,12 +2,12 @@
 title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: d089bcec56ff13ddcd5250a63aee6a00d0c3ef11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c88e041638fbe6f32717ce9c4f9c2ff6fb56d803
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760307"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249766"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 結合兩個 `Boolean` 運算式。  
@@ -30,7 +30,7 @@ boolean_expression || boolean_expression
 ## <a name="remarks"></a>備註  
  OR 是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 邏輯運算子， 它是用來結合兩個條件。 當在陳述式中使用一個以上的邏輯運算子時，OR 運算子會在 AND 運算子之後評估。 然而，您可以使用括號來變更評估的順序。  
   
- 雙分隔號 (&#124;&#124;) 具有相同的功能與 OR 運算子。  
+ 雙分隔號 (&#124;&#124;) 的功能與 OR 運算子相同。  
   
  下表顯示可能的輸入值和傳回型別。  
   
@@ -43,7 +43,7 @@ boolean_expression || boolean_expression
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 OR 運算子結合兩個 `Boolean` 運算式。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [遵循 how to:執行可傳回 StructuralType 結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -51,4 +51,4 @@ boolean_expression || boolean_expression
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL 參考](entity-sql-reference.md)

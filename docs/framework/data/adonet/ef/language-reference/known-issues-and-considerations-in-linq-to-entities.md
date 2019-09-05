@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913906"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250491"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知問題和考量
 本節提供 LINQ to Entities 查詢之已知問題的相關資訊。  
@@ -81,4 +81,4 @@ ms.locfileid: "69913906"
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ to Entities](linq-to-entities.md)
