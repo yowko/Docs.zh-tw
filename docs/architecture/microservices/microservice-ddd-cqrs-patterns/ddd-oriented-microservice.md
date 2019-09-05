@@ -4,7 +4,7 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 DDD 
 ms.date: 10/08/2018
 ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674345"
@@ -93,13 +93,13 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 
 #### <a name="additional-resources"></a>其他資源
 
-- **DevIQ。Persistence Ignorance principle** \ (持續性無知準則)
+- **DevIQ。持續性無知準則** \
   <https://deviq.com/persistence-ignorance/>
 
-- **Oren Eini。Infrastructure Ignorance** \ (基礎結構無知)
+- **Oren Eini。基礎結構無知** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **Angel Lopez。Layered Architecture In Domain-Driven Design** \ (領域導向設計中的分層架構)
+- **Angel Lopez。領域導向設計中的分層架構** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
