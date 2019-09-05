@@ -114,7 +114,7 @@ ms.locfileid: "70107071"
 
 ## <a name="the-timezoneinfo-class"></a>TimeZoneInfo 類別
 
-<xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. <xref:System.TimeZoneInfo> 類別讓您能夠處理日期和時間，讓任何日期和時間值能明確地識別單一時間點。 <xref:System.TimeZoneInfo> 類別也可延伸。 雖然這取決於提供給 Windows 系統和定義於登錄中的時區資訊，但它支援建立自訂的時區。 它也支援時區資訊的序列化和還原序列化。
+<xref:System.TimeZoneInfo> 類別代表地球的任何時區，並可讓一個時區中的任何日期和時間轉換成在另一個時區中對等的日期和時間。 <xref:System.TimeZoneInfo> 類別讓您能夠處理日期和時間，讓任何日期和時間值能明確地識別單一時間點。 <xref:System.TimeZoneInfo> 類別也可延伸。 雖然這取決於提供給 Windows 系統和定義於登錄中的時區資訊，但它支援建立自訂的時區。 它也支援時區資訊的序列化和還原序列化。
 
 在某些情況下，欲充分利用 <xref:System.TimeZoneInfo> 類別可能需要進一步的開發工作。 如果日期和時間值未與它們所屬的時區緊密結合, 則需要進一步的工作。 除非您的應用程式提供將日期和時間與相關聯時區連結的一些機制, 否則特定日期和時間值很容易就會從其時區解除關聯。 連結此資訊的一種方法是定義類別或結構，其中包含日期和時間值，以及與其相關聯的時區物件。
 
