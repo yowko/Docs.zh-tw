@@ -4,7 +4,7 @@ description: 微服務必須設計為能夠承受暫時性的網路和相依性�
 ms.date: 09/20/2018
 ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68675055"
@@ -74,7 +74,7 @@ ms.locfileid: "68675055"
 - **Splunk** 官方網站。 \
   <https://www.splunk.com/>
 
-- Windows 事件追蹤 (ETW) **EventSource Class** API
+- Windows 事件追蹤 (ETW) **EventSource Class** API \
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]

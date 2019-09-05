@@ -4,7 +4,7 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解設�
 ms.date: 10/08/2018
 ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68676445"
@@ -55,13 +55,13 @@ Anemic 領域模型只是程序樣式設計。 Anemic 實體物件不是真正�
 
 #### <a name="additional-resources"></a>其他資源
 
-- **DevIQ。Domain Entity** \ (網域實體)
+- **DevIQ。網域實體** \
   <https://deviq.com/entity/>
 
-- **Martin Fowler：The Domain Model** \ (網域模型)
+- **Martin Fowler：網域模型** \
   <https://martinfowler.com/eaaCatalog/domainModel.html>
 
-- **Martin Fowler：The Anemic Domain Model** \ (Anemic 領域模型)
+- **Martin Fowler：Anemic 領域模型** \
   <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>值物件模式
@@ -142,13 +142,13 @@ public class Order : Entity, IAggregateRoot
 - **Vaughn Vernon：Effective Aggregate Design - Part III: Gaining Insight Through Discovery (有效的彙總設計 - 第三節：透過探索取得見解**) (來源 <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
-- **Sergey Grybniak：DDD Tactical Design Patterns** \ (DDD 戰術設計模式)
+- **Sergey Grybniak：DDD 戰術設計模式** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Chris Richardson：Developing Transactional Microservices Using Aggregates** \ (使用彙總開發交易微服務)
+- **Chris Richardson：使用彙總開發交易微服務** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
-- **DevIQ。The Aggregate pattern** \ (彙總模式)
+- **DevIQ。彙總模式** \
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
