@@ -3,20 +3,21 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: da8ea128466457409334cd0b4ee3246a923f969a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 782ca3344774b8412a18e3cf13bff5f969751ea3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941923"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252148"
 ---
 # <a name="certificatereference"></a>\<certificateReference>
 指定用來在憑證存放區中尋找和驗證 x.509 憑證的設定。  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<serviceCertificate>  
-\<certificateReference>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certificateReference >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,13 +45,13 @@ ms.locfileid: "69941923"
 |屬性|描述|  
 |---------------|-----------------|  
 |storeName|X.509 憑證存儲的名稱。 預設值為 "My"。 選擇性。|  
-|storeLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值, 指定 x.509 憑證存放區的位置。 預設值為 "LocalMachine"。 選擇性。|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>值, 指定要執行的搜尋類型。 預設值為 "FindBySubjectDistinguishedName"。 選擇性。|  
+|storeLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值，指定 x.509 憑證存放區的位置。 預設值為 "LocalMachine"。 選擇性。|  
+|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>值，指定要執行的搜尋類型。 預設值為 "FindBySubjectDistinguishedName"。 選擇性。|  
 |findValue|要在 X.509 憑證存放區內搜尋的值。 選擇性。|  
 |isChainIncluded|指定是否應該使用憑證鏈來執行驗證。 預設值為 "true";驗證是使用憑證鏈來執行。 選擇性。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -59,4 +60,4 @@ ms.locfileid: "69941923"
 |[\<serviceCertificate>](servicecertificate.md)|設定用來加密和解密權杖的憑證。|  
   
 ## <a name="remarks"></a>備註  
- `<certificateReference>`元素會指定用來在憑證存放區中尋找和驗證 x.509 憑證的設定。 當它指定為專案的子`<serviceCertificate>`專案時, 它會指定用來加密和解密權杖之 x.509 憑證的位置和驗證設定。 `<certificateReference>`元素是<xref:System.ServiceModel.Configuration.CertificateReferenceElement>由類別表示。
+ `<certificateReference>`元素會指定用來在憑證存放區中尋找和驗證 x.509 憑證的設定。 當它指定為專案的子`<serviceCertificate>`專案時，它會指定用來加密和解密權杖之 x.509 憑證的位置和驗證設定。 `<certificateReference>`元素是<xref:System.ServiceModel.Configuration.CertificateReferenceElement>由類別表示。

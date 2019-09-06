@@ -2,12 +2,12 @@
 title: LIMIT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: e637218bb3db69d4b09fd734b939fd30f50ed806
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 432dfe2c8b2b87daf885be6de4da9bbeaaa37638
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961880"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250439"
 ---
 # <a name="limit-entity-sql"></a>LIMIT (Entity SQL)
 在 ORDER BY 子句中使用 LIMIT 次子句可以執行實際分頁。 LIMIT 不可單獨使用於 ORDER BY 子句之外。  
@@ -30,7 +30,7 @@ ms.locfileid: "69961880"
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 ORDER BY 運算子配合 LIMIT 來指定 SELECT 陳述式所傳回物件使用的排序順序。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. [遵循 how to:執行可傳回 StructuralType 結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
+1. [遵循 how to：執行可傳回 StructuralType 結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "69961880"
   
 ## <a name="see-also"></a>另請參閱
 
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
 - [如何：逐頁查看查詢結果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
-- [分頁](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [分頁](paging-entity-sql.md)
+- [TOP](top-entity-sql.md)

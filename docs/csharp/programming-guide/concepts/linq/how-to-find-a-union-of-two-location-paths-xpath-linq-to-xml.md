@@ -1,15 +1,15 @@
 ---
-title: 作法：尋找兩個位置路徑的集合聯集 (XPath-LINQ to XML) (C#)
+title: HOW TO：尋找兩個位置路徑的集合聯集 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: 9fc88a8784958294ba6077893a5d54110de335a0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ebb2ddc3a7ba5e08e99cecca01294e5ad3182e8b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593750"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253851"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>作法：尋找兩個位置路徑的集合聯集 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>HOW TO：尋找兩個位置路徑的集合聯集 (XPath-LINQ to XML) (C#)
 XPath 可讓您尋找兩個 XPath 位置路徑結果的等位。  
   
  XPath 運算式為：  
@@ -50,7 +50,7 @@ foreach (XElement el in list1)
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 Results are identical  
 <Category>A</Category>  
 <Price>24.50</Price>  

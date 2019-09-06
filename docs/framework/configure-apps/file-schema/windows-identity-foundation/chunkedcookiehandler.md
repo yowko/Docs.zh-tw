@@ -3,20 +3,21 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: b3b4cf0d7c2748079af7a94534622b1dbadd3ab5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6aad95033b99f1472284f838f3ede2e74ea8324c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941884"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252112"
 ---
 # <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler>
 <xref:System.IdentityModel.Services.ChunkedCookieHandler>設定。 只有當`mode` `<cookieHandler>`元素的屬性為「預設」或「區塊」時, 才會出現此元素。  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<cookieHandler>  
-\<chunkedCookieHandler>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cookieHandler >** ](cookiehandler.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<chunkedCookieHandler >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +42,7 @@ ms.locfileid: "69941884"
 |chunkSize|任何一個 HTTP cookie 的 HTTP cookie 資料大小上限 (以字元為單位)。 調整區塊大小時, 您必須小心。 網頁瀏覽器對於 cookie 大小和每個網域允許的數目有不同的限制。 例如, 原始的 Netscape 規格會約定這些限制:300 cookies 總計、每個 cookie 標頭4096個位元組 (包括中繼資料, 而不只是 cookie 值) 和每個網域20個 cookie。 預設值為2000。 必要項。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   

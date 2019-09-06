@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0e306067-5720-4782-9719-2286570a7e47
-ms.openlocfilehash: 06609ce14edeb7e9306816b8a8d58d2212b61751
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9007e4d650c79a636f908a638bb382457f6b29b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760606"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250271"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators"></a>以方法為基礎的查詢語法範例：彙總運算子
-本主題中的範例將示範如何使用<xref:System.Linq.Enumerable.Aggregate%2A>， <xref:System.Linq.Enumerable.Average%2A>， <xref:System.Linq.Enumerable.Count%2A>， <xref:System.Linq.Enumerable.LongCount%2A>， <xref:System.Linq.Enumerable.Max%2A>， <xref:System.Linq.Enumerable.Min%2A>，以及<xref:System.Linq.Enumerable.Sum%2A>方法來查詢[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)使用以方法為基礎的查詢語法。 這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
+本主題<xref:System.Linq.Enumerable.Aggregate%2A>中的範例將示範如何使用、、 <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.Count%2A>、 <xref:System.Linq.Enumerable.LongCount%2A> <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Max%2A>、、和<xref:System.Linq.Enumerable.Sum%2A>方法來查詢[AdventureWorks 銷售模型](https://archive.codeplex.com/?p=msftdbprodsamples)（使用以方法為基礎的查詢語法。 這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
   
- 本主題中的範例使用下列`using` / `Imports`陳述式：  
+ 本主題中的範例會使用下列`using` / `Imports`語句：  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="average"></a>平均  
+## <a name="average"></a>Average  
   
 ### <a name="example"></a>範例  
  下列範例會使用 <xref:System.Linq.Enumerable.Average%2A> 方法來尋找產品的平均標價。  
@@ -52,7 +52,7 @@ ms.locfileid: "61760606"
  [!code-csharp[DP L2E Examples#AverageElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#averageelements_mq)]
  [!code-vb[DP L2E Examples#AverageElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#averageelements_mq)]  
   
-## <a name="count"></a>計數  
+## <a name="count"></a>Count  
   
 ### <a name="example"></a>範例  
  下列範例會使用 <xref:System.Linq.Enumerable.Count%2A> 方法來傳回 Product 資料表中的產品數目。  
@@ -80,7 +80,7 @@ ms.locfileid: "61760606"
  [!code-csharp[DP L2E Examples#LongCountSimple](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#longcountsimple)]
  [!code-vb[DP L2E Examples#LongCountSimple](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#longcountsimple)]  
   
-## <a name="max"></a>最大  
+## <a name="max"></a>max  
   
 ### <a name="example"></a>範例  
  下列範例會使用 <xref:System.Linq.Enumerable.Max%2A> 方法來取得最大總金額。  
@@ -100,7 +100,7 @@ ms.locfileid: "61760606"
  [!code-csharp[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#maxelements_mq)]
  [!code-vb[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#maxelements_mq)]  
   
-## <a name="min"></a>最小  
+## <a name="min"></a>Min  
   
 ### <a name="example"></a>範例  
  下列範例會使用 <xref:System.Linq.Enumerable.Min%2A> 方法來取得最小總金額。  
@@ -136,4 +136,4 @@ ms.locfileid: "61760606"
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities 中的查詢](queries-in-linq-to-entities.md)

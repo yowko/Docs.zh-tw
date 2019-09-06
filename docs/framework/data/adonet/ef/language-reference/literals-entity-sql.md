@@ -2,12 +2,12 @@
 title: 常值 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 6196c1b026b49847bd06cc9cda5ea6b6af289858
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953293"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250341"
 ---
 # <a name="literals-entity-sql"></a>常值 (Entity SQL)
 本主題將描述常值 (Literal) 的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援。  
@@ -15,9 +15,9 @@ ms.locfileid: "69953293"
 ## <a name="null"></a>Null  
  Null 常值是用來代表任何型別的 null 值。 Null 常值與任何型別都相容。  
   
- 您可以透過 null 常值的轉換作業建立 null 型別。 如需詳細資訊, 請參閱[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)。  
+ 您可以透過 null 常值的轉換作業建立 null 型別。 如需詳細資訊，請參閱[CAST](cast-entity-sql.md)。  
   
- 如需可用的浮動 null 常值可以使用的規則, 請參閱[Null 常值和型別推斷](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)。  
+ 如需可用的浮動 null 常值可以使用的規則，請參閱[Null 常值和型別推斷](null-literals-and-type-inference-entity-sql.md)。  
   
 ## <a name="boolean"></a>Boolean  
  布林常值是由 `true` 和 `false` 關鍵字代表。  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  日期時間常值與地區設定 (Locale) 無關，而且它是由日期部分和時間部分所組成。 日期和時間部分都是強制的，而且沒有任何預設值。  
   
- 日期`YYYY`部分必須具有下列格式: - - `MM` `DD` `MM` , 其中是`YYYY`介於0001到9999之間的四位數年份值, 而是介於1到12之間的月份, 而是`DD`對給定月份`MM`有效的日期值。  
+ 日期`YYYY`部分必須具有下列格式： - - `MM` `DD` `MM` ，其中是`YYYY`介於0001到9999之間的四位數年份值，而是介於1到12之間的月份，而是`DD`對給定月份`MM`有效的日期值。  
   
  時間部分的格式必須是 `HH`:`MM`[:`SS`[.fffffff]]，其中 `HH`是小時值，介於 0 到 23 之間、`MM`是分鐘值，介於 0 到 59 之間、`SS`是秒鐘值，介於 0 到 59 之間，而 fffffff 則是秒鐘的小數部分，值介於 0 到 9999999 之間。 以上所有值的範圍都包含在內。 秒鐘的小數部分則為選擇性。 除非已指定秒鐘的小數部分，否則秒鐘亦為選擇性；但指定秒鐘的小數部分時，則必須有秒鐘。 如果未指定秒鐘或秒鐘的小數部分，則會使用預設值 0。  
   
@@ -67,7 +67,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- datetimeoffset 常值會依地區設定而異，而且是由日期部分、時間部分和時差部分組成。 所有日期、時間和時差部分都是必要項，而且沒有預設值。 日期部分必須是 YYYY-MM-DD 格式，其中 YYYY 是四位數字的年份，值介於 0001 到 9999 之間；MM 是月份，值介於 1 到 12 之間；而 DD 則是所指定月份中的有效日數。 時間部分必須是 HH:MM[:SS[.fffffff]] 格式，其中 HH 是小時，值介於 0 到 23 之間；MM 是分鐘，值介於 0 到 59 之間；SS 是秒鐘，值介於 0 到 59 之間；而 fffffff 則是秒鐘的小數部分，值介於 0 到 9999999 之間。 以上所有值的範圍都包含在內。 秒鐘的小數部分則為選擇性。 除非已指定秒鐘的小數部分，否則秒鐘亦為選擇性；但指定秒鐘的小數部分時，則必須有秒鐘。 如果未指定秒鐘或秒鐘的小數部分，則會使用預設值 0。 Offset 部分的格式必須是 {+&#124;-} HH: MM, 其中 HH 和 MM 的意義與時間部分相同。 不過時差的範圍必須介於 -14:00 到 + 14:00 之間  
+ datetimeoffset 常值會依地區設定而異，而且是由日期部分、時間部分和時差部分組成。 所有日期、時間和時差部分都是必要項，而且沒有預設值。 日期部分必須是 YYYY-MM-DD 格式，其中 YYYY 是四位數字的年份，值介於 0001 到 9999 之間；MM 是月份，值介於 1 到 12 之間；而 DD 則是所指定月份中的有效日數。 時間部分必須是 HH:MM[:SS[.fffffff]] 格式，其中 HH 是小時，值介於 0 到 23 之間；MM 是分鐘，值介於 0 到 59 之間；SS 是秒鐘，值介於 0 到 59 之間；而 fffffff 則是秒鐘的小數部分，值介於 0 到 9999999 之間。 以上所有值的範圍都包含在內。 秒鐘的小數部分則為選擇性。 除非已指定秒鐘的小數部分，否則秒鐘亦為選擇性；但指定秒鐘的小數部分時，則必須有秒鐘。 如果未指定秒鐘或秒鐘的小數部分，則會使用預設值 0。 Offset 部分的格式必須是 {+&#124;-} HH： MM，其中 HH 和 MM 的意義與時間部分相同。 不過時差的範圍必須介於 -14:00 到 + 14:00 之間  
   
  DATETIMEOFFSET 符號與常值裝載之間可以有任何數目的空格，但是不能有新行。  
   
@@ -92,7 +92,7 @@ X'' –- empty binary string
 ```  
   
 ## <a name="guid"></a>Guid  
- `GUID` 常值代表全域唯一的識別碼。 這是由關鍵字`GUID`所組成的序列, 後面接著十六進位數位, 格式為:8-4-4-4-12 以單引號括住。 十六進位數不區分大小寫。  
+ `GUID` 常值代表全域唯一的識別碼。 這是由關鍵字`GUID`所組成的序列，後面接著十六進位數位，格式為：8-4-4-4-12 以單引號括住。 十六進位數不區分大小寫。  
   
  GUID 符號與常值裝載之間可以有任何數目的空格，但是不能有新行。  
   
@@ -103,4 +103,4 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL 概觀](entity-sql-overview.md)

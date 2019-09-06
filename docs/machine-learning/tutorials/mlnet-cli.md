@@ -1,19 +1,19 @@
 ---
-title: 使用 ML.NET CLI 自動產生二元分類器
+title: 使用 ML.NET CLI 分析情感
 description: 從範例資料集自動產生 ML 模型和相關的 C# 程式碼
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107266"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254164"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>使用 CLI 自動產生二元分類器
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情感
 
 了解如何使用 ML.NET CLI 來自動產生 ML.NET 模型和基礎 C# 程式碼。 您將提供資料集和您要實作的機器學習工作，而 CLI 會使用 AutoML 引擎來建立模型產生和部署原始程式碼，以及二元模型。
 
@@ -32,7 +32,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 您可以在任何命令提示字元 (Windows、Mac 或 Linux) 中執行 ML.NET CLI，根據您提供的定型資料集產生高品質 ML.NET 模型和原始程式碼。
 
-## <a name="pre-requisites"></a>必要條件
+## <a name="pre-requisites"></a>先決條件
 
 - [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) 或更新版本
 - (選擇性) [Visual Studio 2017 或 2019](https://visualstudio.microsoft.com/vs/)
@@ -75,7 +75,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
     現在，您可以開始使用 CLI 來進行這個「情感分析」案例。
 
     > [!NOTE]
-    > 完成本教學課程之後，您也可以嘗試自己的資料集，但前提是這些資料集可供 ML.NET CLI 預覽功能目前支援的 ML 工作 (亦即「二元分類」、「多元分類」和「迴歸」  ) 使用。
+    > 完成本教學課程之後，您也可以嘗試自己的資料集，但前提是這些資料集可供 ML.NET CLI 預覽功能目前支援的 ML 工作 (亦即「二元分類」、「多元分類」和「迴歸」) 使用。
 
 ## <a name="run-the-mlnet-auto-train-command"></a>執行 'mlnet auto-train' 命令
 
@@ -88,7 +88,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
     此命令會執行 **`mlnet auto-train` 命令**：
     - 針對 **`binary-classification`** 類型的 **ML 工作**
     - 使用**資料集檔案`yelp_labelled.txt`** 作為定型和測試資料集 (CLI 會在內部使用交叉驗證，或將它分成兩個資料集：一個用於定型，另一個用於測試)
-    - 其中您要預測的**目標/目的資料行** (通常稱為「標籤」  ) 是**索引為 1 的資料行** (也就是第二個資料行，因為索引是以零起始)
+    - 其中您要預測的**目標/目的資料行** (通常稱為「標籤」) 是**索引為 1 的資料行** (也就是第二個資料行，因為索引是以零起始)
     - **不會使用具有資料行名稱的檔案標頭**，因為這個特定的資料集檔案沒有標頭
     - 實驗的**目標探索時間**為 **10 秒**
 
@@ -174,13 +174,13 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 - 第一行程式碼只會建立每當執行 ML.NET 程式碼時所需的 `MLContext` 物件。 
 
-- 第二行程式碼會加上註解，因為您不需要定型模型，CLI 工具已為您定型模型，並儲存到模型的序列化 .ZIP 檔案。 但如果您想要看看 CLI「如何定型模型」  ，您可以取消註解該行，並執行/偵錯用於該特定 ML 模型的定型程式碼。
+- 第二行程式碼會加上註解，因為您不需要定型模型，CLI 工具已為您定型模型，並儲存到模型的序列化 .ZIP 檔案。 但如果您想要看看 CLI「如何定型模型」，您可以取消註解該行，並執行/偵錯用於該特定 ML 模型的定型程式碼。
 
 - 在第三行程式碼中，您會提供該模型 .ZIP 檔案的路徑，使用 `mlContext.Model.Load()` API 從序列化模型 .ZIP 檔案載入模型。
 
 - 在第四行程式碼中，您會使用 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API 載入建立 `PredictionEngine` 物件。 每當您想要建立以單一範例資料為目標的預測時 (在本例中會以一段文字來預測其情感)，都需要 `PredictionEngine` 物件。
 
-- 在第五行程式碼中，您會呼叫函式 `CreateSingleDataSample()` 來建立用於預測的「單一範例資料」  。 由於 CLI 工具不知道要使用哪種範例資料類型，因此會在該函式中載入資料集的第一個資料列。 不過，在此情況下，您也可以建立自己的「硬式編碼」資料，藉由更新為實作 `CreateSingleDataSample()` 函式的更簡單程式碼，來取代該函式的目前實作：
+- 在第五行程式碼中，您會呼叫函式 `CreateSingleDataSample()` 來建立用於預測的「單一範例資料」。 由於 CLI 工具不知道要使用哪種範例資料類型，因此會在該函式中載入資料集的第一個資料列。 不過，在此情況下，您也可以建立自己的「硬式編碼」資料，藉由更新為實作 `CreateSingleDataSample()` 函式的更簡單程式碼，來取代該函式的目前實作：
 
     ```csharp
     private static ModelInput CreateSingleDataSample()
@@ -229,7 +229,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 針對第二個物件，也就是 `PredictionEngine` 物件，則沒有那麼容易。由於 `PredictionEngine` 物件不是安全執行緒，因此您無法在 ASP.NET Core 應用程式中將物件具現化為單一或靜態物件。 這篇[部落格文章](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)中將深入探討此安全執行緒和延展性問題。 
 
-不過，事情會比該部落格文章中所述更簡單。 我們為您開發了更簡單的方法，並已建立可輕鬆用於 ASP.NET Core 應用程式和服務的良好「.NET Core 整合套件」  ，只要在應用程式 DI 服務 (相依性插入服務) 中註冊它，即可從程式碼直接使用。 請查看下列教學課程和做法範例：
+不過，事情會比該部落格文章中所述更簡單。 我們為您開發了更簡單的方法，並已建立可輕鬆用於 ASP.NET Core 應用程式和服務的良好「.NET Core 整合套件」，只要在應用程式 DI 服務 (相依性插入服務) 中註冊它，即可從程式碼直接使用。 請查看下列教學課程和做法範例：
 
 - [教學課程：在可調整規模的 ASP.NET Core Web 應用程式和 WebAPI 上執行 ML.NET 模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
 - [範例：ASP.NET Core WebAPI 上可調整規模的 ML.NET 模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)

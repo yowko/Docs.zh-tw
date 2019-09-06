@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76767e7c-0607-4e1d-9ca2-a94f311f45eb
-ms.openlocfilehash: a2f2510cb334f4e22a7b0c6015a0a93b4dc11579
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b802abae9fc2c1731a623209862f61ed5ee51f9c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032783"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247878"
 ---
 # <a name="concatenate-two-sequences"></a>串連兩個序列
 使用 <xref:System.Linq.Queryable.Concat%2A> 運算子可串連兩個序列。  
@@ -33,5 +33,5 @@ ms.locfileid: "62032783"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [查詢範例](query-examples.md)
+- [標準查詢運算子轉譯](standard-query-operator-translation.md)

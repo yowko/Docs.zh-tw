@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
-ms.openlocfilehash: d75c9b9123b52b3e241bea1bbd1d302c406715e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c92f65c22fe4b4128a171c757bb9e9c0ccbc3fee
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032704"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247722"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>將類型轉換為泛型 IEnumerable
 使用 <xref:System.Linq.Enumerable.AsEnumerable%2A> 傳回型別設為泛型 `IEnumerable` 的引數。  
@@ -25,4 +25,4 @@ ms.locfileid: "62032704"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [查詢範例](query-examples.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67ead643afd34b4c3422d85e6f7876879de477ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e36e2ed96a0748a69f2bd9ee32432901f0bf0898
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927234"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252294"
 ---
-# <a name="systemruntimecaching-element-cache-settings"></a>\<> 元素 (快取設定)
+# <a name="systemruntimecaching-element-cache-settings"></a>\<> 元素（快取設定）
 
 透過組態檔中的 <xref:System.Runtime.Caching.ObjectCache> 項目，提供預設記憶體內 `memoryCache` 實作的組態。  
   
- \<configuration>  
-\<system.runtime.caching>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<> 的緩存**  
   
 ## <a name="syntax"></a>語法  
   
@@ -59,7 +59,7 @@ ms.locfileid: "69927234"
   
 ## <a name="example"></a>範例
 
-下列範例示範如何設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取， 並示範如何設定記憶體快取之 `namedCaches` 項目的執行個體。 快取的名稱會設定為預設快取專案名稱, 方法是將`name`屬性設定為 "default"。  
+下列範例示範如何設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取， 並示範如何設定記憶體快取之 `namedCaches` 項目的執行個體。 快取的名稱會設定為預設快取專案名稱，方法是將`name`屬性設定為 "default"。  
   
 `cacheMemoryLimitMegabytes` 屬性和 `physicalMemoryPercentage` 屬性都設定為零。 將這些屬性設定為零表示預設會使用 <xref:System.Runtime.Caching.MemoryCache> 自動調整啟發學習法。 快取實作應該會每隔兩分鐘即比較目前的記憶體負載與絕對和百分比型記憶體限制。  
   
@@ -80,4 +80,4 @@ ms.locfileid: "69927234"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<memoryCache > 元素 (快取設定)](memorycache-element-cache-settings.md)
+- [\<memoryCache > 元素（快取設定）](memorycache-element-cache-settings.md)

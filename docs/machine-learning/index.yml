@@ -6,20 +6,18 @@ metadata:
   title: ML.NET 文件 - 教學課程、API 參考
   meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
   ms.topic: landing-page
-  ms.date: 04/18/2019
-  ms.author: cgronlun
-  author: cjgronlund
+  ms.date: 08/15/2019
+  ms.author: nakersha
+  author: natke
 abstract:
   description: 了解如何使用 ML.NET，它是一種開放原始碼且跨平台的機器學習服務架構，可用來建置自訂機器學習服務解決方案，並整合到 .NET 應用程式。 教學課程、程式碼範例、API 參考和其他文件會示範如何進行。
 sections:
-  - title: 開始使用
-    items:
-      - type: paragraph
-        text: 若要了解如何使用 ML.NET 建置機器學習服務應用程式，請閱讀<a href="/dotnet/machine-learning/how-does-mldotnet-work">什麼是 ML.NET 以及其運作方式為何</a>？ 或是透過將 <b>Microsoft.ML</b> NuGet 套件新增到您的應用程式來開始進行。
   - title: 逐步教學課程
     items:
       - type: paragraph
         text: 了解如何使用 ML.NET 建立常見解決方案：
+      - type: paragraph
+        text: <b>使用 ML.NET API 進行開發</b>：
       - type: list
         style: unordered
         items:
@@ -30,13 +28,40 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">使用矩陣分解來建立電影推薦工具</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">使用 TensorFlow 建置自訂影像分類器</a>
           - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">使用 ONNX 偵測影像中的物件</a>
-  - title: 參考和資源
-    items:
       - type: paragraph
-        text: ML.NET API 擁有兩組套件：發行元件和預覽元件。 發行 API 包含資料處理元件、二元分類、多類別分類、迴歸、異常偵測、時間序列和預測演算法、排名、模型儲存及載入、ONNX 與 TensorFlow 模型處理，以及更多功能！ 預覽 API 包含建議工作的演算法，以及標準深度學習模型的支援。
+        text: <b>使用模型</b>產生器，這是圖形 Visual Studio 擴充功能：
       - type: list
         style: unordered
         items:
-          - html: <a href="/dotnet/api/?view=ml-dotnet">ML.NET API</a>
-          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">ML.NET 預覽 API</a>
-          - html: '<a href="https://github.com/dotnet/machinelearning-samples/blob/master/README.md">ML.NET 範例：C# 和 F#</a>'
+          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">使用模型產生器預測價格</a>
+      - type: paragraph
+        text: <b>執行 ML.NET CLI</b>：
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/tutorials/mlnet-cli">使用 ML.NET CLI 來分析情感</a>
+  - title: 範例
+    items:
+      - type: paragraph
+        text: '請參閱 GitHub 上的<a href="https://github.com/dotnet/machinelearning-samples">範例存放庫</a>， C#以F#取得和中的應用程式。'
+  - title: 參考資料
+    items:
+      - type: paragraph
+        text: <b>ML.NET API</b>
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/?view=ml-dotnet">Release ML.NET API</a>包含用於資料處理的元件、二元分類的演算法、多元分類、回歸、異常偵測、時間序列和預測、排名、模型儲存和載入、ONNX 和 TensorFlow模型處理，還有更多功能！
+          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">Preview ML.NET API</a>包含建議工作的演算法，以及標準深度學習模型的支援。
+      - type: paragraph
+        text: <b>AutoML API</b>
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/index?view=automl-dotnet">自動 ML API</a>
+      - type: paragraph
+        text: <b>ML.NET CLI 參考</b>
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/reference/ml-net-cli-reference">ML.NET CLI 命令參考</a>

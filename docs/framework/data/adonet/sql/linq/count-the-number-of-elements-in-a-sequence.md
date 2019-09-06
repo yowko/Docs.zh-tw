@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ccbe5d54-c9eb-4b14-b0ab-f628483c5f99
-ms.openlocfilehash: b39b0a1487c9f250e32b13330f2f70b7e3c7c877
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74e24aeb64b0097cba3975e76475034e6bb9544d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032919"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247696"
 ---
 # <a name="count-the-number-of-elements-in-a-sequence"></a>計算序列中的項目數目
 使用 <xref:System.Linq.Enumerable.Count%2A> 運算子計算序列中的項目數。  
@@ -33,5 +33,5 @@ ms.locfileid: "62032919"
   
 ## <a name="see-also"></a>另請參閱
 
-- [彙總查詢](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [彙總查詢](aggregate-queries.md)
+- [下載範例資料庫](downloading-sample-databases.md)

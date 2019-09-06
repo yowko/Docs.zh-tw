@@ -2,16 +2,16 @@
 title: 數學標準函式
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760632"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250312"
 ---
 # <a name="math-canonical-functions"></a>數學標準函式
 
-Entity SQL 包含下列的數學標準函式：
+Entity SQL 包含下列數學標準函式：
   
 ## <a name="absvalue"></a>Abs(value)
 
@@ -19,7 +19,7 @@ Entity SQL 包含下列的數學標準函式：
 
 **引數**
 
-`Int16`， `Int32`， `Int64`， `Byte`， `Single`， `Double`，和`Decimal`。
+`Int16`、 、、`Int64`、 、和`Decimal`。 `Int32` `Byte` `Single` `Double`
 
 **傳回值**
 
@@ -35,7 +35,7 @@ Entity SQL 包含下列的數學標準函式：
 
 **引數**
 
-A `Single`， `Double`，和`Decimal`。
+`Single` 、`Double`和。`Decimal`
 
 **傳回值**
 
@@ -52,7 +52,7 @@ A `Single`， `Double`，和`Decimal`。
 
 **引數**
 
-A `Single`， `Double`，和`Decimal`。
+`Single` 、`Double`和。`Decimal`
 
 **傳回值**
 
@@ -71,8 +71,8 @@ A `Single`， `Double`，和`Decimal`。
 
 |  |  |
 |--|--|
-|`value` | `Int32, Int64, Double`，或`Decimal`。 |
-|`exponent` | `Int64`， `Double`，或`Decimal`。 |
+|`value` | `Int32, Int64, Double`、或`Decimal`。 |
+|`exponent` | `Int64` 、`Double`或。`Decimal` |
 
 **傳回值**
 
@@ -88,7 +88,7 @@ A `Single`， `Double`，和`Decimal`。
 
 **引數**
 
-A `Single`， `Double`，和`Decimal`。
+`Single` 、`Double`和。`Decimal`
 
 **傳回值**
 
@@ -138,8 +138,8 @@ A `Single`， `Double`，和`Decimal`。
   
  如果提供 `null` 輸入，這些函式會傳回 `null`。  
   
- Microsoft SQL Client Managed Provider 中提供了對等的功能。 如需詳細資訊，請參閱 <<c0> [ 適用於 Entity Framework 函式的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。  
+ Microsoft SQL Client Managed Provider 中提供了對等的功能。 如需詳細資訊，請參閱[SqlClient for Entity Framework 函數](../sqlclient-for-ef-functions.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [標準函式](canonical-functions.md)

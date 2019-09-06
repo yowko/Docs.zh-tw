@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 876452a0a56d10f169526138cdbbbd153572f457
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3ed1e66c4aadab656455686a7a1e5028b035676a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658842"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252258"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 元素
 指定未處理的工作例外狀況是否應終止執行中的處理序。  
   
- \<configuration>  
-\<執行時間 >  
-\<ThrowUnobservedTaskExceptions>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69658842"
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|不會針對未處理的工作例外狀況終止正在執行的進程。 這是預設值。|  
 |`true`|針對未處理的工作例外狀況終止正在執行的進程。|  

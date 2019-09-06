@@ -3,17 +3,18 @@ title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 286ae88946692e6894ca3c7ee9e1348415c84ade
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a54f5ce86aee1a5e831c0b10aa1471d4a82f40a5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943591"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251798"
 ---
 # <a name="systemidentitymodel"></a>\<system.identityModel>
-提供在應用程式中啟用 Windows Identity Foundation (WIF) 選項的設定。  
+提供在應用程式中啟用 Windows Identity Foundation （WIF）選項的設定。  
   
- \<system.identityModel>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<Microsoft.identitymodel >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,10 +42,10 @@ ms.locfileid: "69943591"
 |`<configuration>`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
 ## <a name="remarks"></a>備註  
- `<system.identityModel>`將區段新增至設定檔, 將服務或應用程式設定為使用 Windows Identity Foundation (WIF)。 `<system.identityModel>`元素是<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>由類別表示。  
+ `<system.identityModel>`將區段新增至設定檔，將服務或應用程式設定為使用 Windows Identity Foundation （WIF）。 `<system.identityModel>`元素是<xref:System.IdentityModel.Configuration.SystemIdentityModelSection>由類別表示。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何將`<system.identityModel>`區段新增至設定檔。 您必須先在`<configSections>`元素下新增設定區段和命名空間宣告。 接著, 您可以將`<system.IdentityModel>`元素新增至設定檔, 以指定一或多個身分識別設定。  
+ 下列範例顯示如何將`<system.identityModel>`區段新增至設定檔。 您必須先在`<configSections>`元素下新增設定區段和命名空間宣告。 接著，您可以將`<system.IdentityModel>`元素新增至設定檔，以指定一或多個身分識別設定。  
   
 ```xml  
 <configuration>  

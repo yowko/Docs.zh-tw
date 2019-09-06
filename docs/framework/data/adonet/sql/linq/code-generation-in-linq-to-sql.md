@@ -2,37 +2,37 @@
 title: LINQ to SQL 中的程式碼產生
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 12470a8c14e0a41eb6e06fc5d4ba63c12924330b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 551322637e6e04b9be7d558c51e063fead7f84f4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939167"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247963"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的程式碼產生
-您可以使用物件關聯式設計工具或 SQLMetal 命令列工具, 產生用來表示資料庫的程式碼。 無論使用哪種工具，端對端程式碼產生都可分為三個階段：  
+您可以使用物件關聯式設計工具或 SQLMetal 命令列工具，產生用來表示資料庫的程式碼。 無論使用哪種工具，端對端程式碼產生都可分為三個階段：  
   
-1. *DBML 解壓縮*程式會從資料庫中提取架構資訊, 並將資訊重組成 XML 格式的 DBML 檔案。  
+1. *DBML 解壓縮*程式會從資料庫中提取架構資訊，並將資訊重組成 XML 格式的 DBML 檔案。  
   
 2. *Dbml 驗證*程式會掃描 dbml 檔案是否有錯誤。  
   
 3. 如果沒有發現驗證錯誤，檔案會傳遞給程式碼產生器。  
   
- 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 使用 Visual Studio 的開發人員也可以使用物件關聯式設計工具來產生程式碼。 請參閱[Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../tools/sqlmetal-exe-code-generation-tool.md)。 使用 Visual Studio 的開發人員也可以使用物件關聯式設計工具來產生程式碼。 請參閱[Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
 ## <a name="dbml-extractor"></a>DBML 擷取器  
- DBML 解壓縮程式是一[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]種元件, 它會將資料庫中繼資料當做輸入, 並產生 DBML 檔案作為輸出。  
+ DBML 解壓縮程式是一[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]種元件，它會將資料庫中繼資料當做輸入，並產生 DBML 檔案作為輸出。  
   
 ## <a name="code-generator"></a>程式碼產生器  
- 程式碼產生器是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]一種元件, 可將 DBML 檔案C#轉譯成 Visual Basic、或 XML 對應檔。  
+ 程式碼產生器是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]一種元件，可將 DBML 檔案C#轉譯成 Visual Basic、或 XML 對應檔。  
   
 ## <a name="xml-schema-definition-file"></a>XML 結構描述定義檔  
  DBML 檔案必須根據下列結構描述定義 (XSD 檔案) 進行驗證。  
   
- 這個結構描述定義檔與用來驗證外部對應檔案的結構描述定義檔不同。 如需詳細資訊, 請參閱[外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md))。  
+ 這個結構描述定義檔與用來驗證外部對應檔案的結構描述定義檔不同。 如需詳細資訊，請參閱[外部對應](external-mapping.md)）。  
   
 > [!NOTE]
-> Visual Studio 使用者也會在 [XML 架構] 對話方塊中, 將這個 XSD 檔案尋找為 "Dbmlschema.xsd"。 若要正確地使用 XSD 檔案來驗證 DBML 檔案, 請[參閱如何:驗證 DBML 和外部對應](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)檔案。  
+> Visual Studio 使用者也會在 [XML 架構] 對話方塊中，將這個 XSD 檔案尋找為 "Dbmlschema.xsd"。 若要正確地使用 XSD 檔案來驗證 DBML 檔案，請[參閱如何：驗證 DBML 和外部對應](how-to-validate-dbml-and-external-mapping-files.md)檔案。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>範例 DBML 檔案  
- 下列程式碼是從 Northwind 範例資料庫所建立 DBML 檔案的摘錄。 您可以使用 SQLMetal 搭配 **/xml**選項來產生整個檔案。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+ 下列程式碼是從 Northwind 範例資料庫所建立 DBML 檔案的摘錄。 您可以使用 SQLMetal 搭配 **/xml**選項來產生整個檔案。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -271,8 +271,8 @@ elementFormDefault="qualified" >
   
 ## <a name="see-also"></a>另請參閱
 
-- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [如何：產生物件模型做為外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
-- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [背景資訊](background-information.md)
+- [外部對應](external-mapping.md)
+- [如何：產生物件模型做為外部檔案](how-to-generate-the-object-model-as-an-external-file.md)
+- [下載範例資料庫](downloading-sample-databases.md)
+- [參考資料](reference.md)

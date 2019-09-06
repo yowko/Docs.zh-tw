@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 383339241194c56d0c3178f538f2ac08b2f1b437
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5262d2bca07525aba6db5303e730c8b358641d52
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950397"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250978"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities 查詢中的運算式
 運算式是可以評估為單一值、物件、方法或命名空間的程式碼片段。 運算式可以包含常值、方法呼叫、運算子及其運算元，或是簡單名稱。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。 運算式可以使用運算子 (後者又可能使用其他運算式當做參數) 或方法呼叫 (它的參數又可能是其他方法呼叫)。 因此，運算式可以很簡單，也可以非常複雜。  
@@ -26,16 +26,16 @@ ms.locfileid: "69950397"
 > 特定語言結構 (例如C# `unchecked`) 在 LINQ to Entities 中沒有任何意義。  
   
 ## <a name="in-this-section"></a>本節內容  
- [常數運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
+ [常數運算式](constant-expressions.md)  
   
- [比較運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-expressions.md)  
+ [比較運算式](comparison-expressions.md)  
   
- [Null 比較](../../../../../../docs/framework/data/adonet/ef/language-reference/null-comparisons.md)  
+ [Null 比較](null-comparisons.md)  
   
- [初始化運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
+ [初始化運算式](initialization-expressions.md)  
   
  [關聯性、導覽屬性和外鍵](/ef/ef6/fundamentals/relationships)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [ADO.NET Entity Framework](../index.md)
