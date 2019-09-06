@@ -2,12 +2,12 @@
 title: 將現有 .NET 應用程式現代化成雲端最佳化應用程式
 description: 使用 Azure 雲端和 Windows 容器將現有 .NET 應用程式現代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: 00385ac1e2f41d2005606fa7f943618ec253ffc2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
-ms.translationtype: HT
+ms.openlocfilehash: 92dc0cde11bb35797fe3c4e8442a2a6514a27e08
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/05/2019
-ms.locfileid: "70222812"
+ms.locfileid: "70374054"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>將現有 .NET 應用程式現代化成雲端最佳化應用程式
 
@@ -19,7 +19,7 @@ ms.locfileid: "70222812"
 
 ![定位雲端最佳化應用程式](./media/image1.png)
 
-> **圖 4-1.** 定位雲端最佳化應用程式
+**圖 4-1.** 定位雲端最佳化應用程式
 
 >[!div class="step-by-step"]
 >[上一頁](../migrate-your-relational-databases-to-azure.md)
