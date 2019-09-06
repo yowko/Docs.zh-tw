@@ -1,0 +1,24 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: .NET 應用程式架構指導
+metadata:
+  document_id: na
+  title: .NET 應用程式架構指導
+  meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
+  ms.topic: landing-page
+  ms.date: 06/12/2019
+abstract:
+  description: 了解如何使用免費的應用程式架構指導，建置可以直接在生產環境中執行的 .NET 應用程式。
+sections:
+  - title: 可用的電子書
+    items:
+      - html: <ul><li><p><a href="containerized-lifecycle/index">Microsoft 平台和工具的容器化 Docker 應用程式生命週期</a></p>
+      - html: <p>本指南是建議之端對端生命週期處理程序的簡介，您將使用這些程序來開發、驗證與使用 Visual Studio 和 Microsoft Azure 部署容器化 Docker 應用程式。</p></li></ul>
+      - html: <ul><li><p><a href="modernize-with-azure-containers/index">使用 Azure 雲端和 Windows 容器將現有 .NET 應用程式現代化</a></p>
+      - html: <p>本指南是您將現有 Web 應用程式移轉至 Azure 雲端和 Windows 容器所需之策略的簡介。 您將了解程式碼策略、資料移轉、協調器以及 CI/CD 處理程序的相關資訊。</p></li></ul>
+      - html: <ul><li><p><a href="modern-web-apps-azure/index">使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式</a></p>
+      - html: <p>本指南是建議之架構、設計與部署處理程序的簡介，您將使用這些程序來建置 ASP.NET 與 ASP.NET Core 應用程式並在 Azure 中裝載那些應用程式。</p></li></ul>
+      - html: <ul><li><p><a href="microservices/index">架構容器和微服務應用程式</a></p>
+      - html: <p>本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。</p></li></ul>
+      - html: <ul><li><p><a href="serverless/index">無伺服器應用程式：架構、模式和 Azure 實作</a></p>
+      - html: <p>這是使用 Azure 透過範例建置無伺服器應用程式的指南。 其中討論各種架構和設計方法、來自無伺服器的優點和挑戰，並提供無伺服器應用程式的情節和使用案例。</p></li></ul>
