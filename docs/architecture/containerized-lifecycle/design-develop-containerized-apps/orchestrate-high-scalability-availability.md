@@ -2,12 +2,12 @@
 title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 您必須使用協調器來部署和管理實際生產應用程式，以便處理所有容器的健康狀態、工作負載和生命週期。
 ms.date: 02/15/2019
-ms.openlocfilehash: bde9a2815d0496608b3172582481c169cab37f04
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672415"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373697"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -29,13 +29,13 @@ Docker 命令列介面 (CLI) 滿足一部主機上一個容器的管理需求，
 
 - **叢集和協調器**： 當您要跨許多 Docker 主機向外延展應用程式時 (例如大型微服務應用程式)，您必須簡化基礎平台的複雜性，並以單一叢集的形式來管理其中所有主機。 而這正是容器叢集和協調器所提供的功能。 Azure Service Fabric 和 Kubernetes 都是範例協調器。 您可以透過 Azure Kubernetes Service 在 Azure 中取得 Kubernetes。
 
-- **排程器**： 「排程」  可讓系統管理員啟動叢集中的容器，因此這些排程器也會提供使用者介面來執行此作業。 叢集排程器有下列職責：有效率地使用叢集的資源、設定使用者所提供的條件約束、跨節點或主機有效進行容器負載平衡，以及維持容錯性並保障高可用性。
+- **排程器**： 「排程」可讓系統管理員啟動叢集中的容器，因此這些排程器也會提供使用者介面來執行此作業。 叢集排程器有下列職責：有效率地使用叢集的資源、設定使用者所提供的條件約束、跨節點或主機有效進行容器負載平衡，以及維持容錯性並保障高可用性。
 
 叢集與排程器的概念密切相關，因此不同廠商所提供的產品通常會兩組功能都提供。 下一節顯示您可以針對叢集和排程器選擇的最重要平台和軟體。 Azure 這類公用雲端普遍都會提供這些協調器。
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>用於容器叢集、協調流程和排程的軟體平台
 
-| Platform | 註解 |
+| 平台 | 註解 |
 |:---:|:---|
 | **Kubernetes** <br/> ![Kubernetes 標誌](./media/kubernetes-logo.png) | [*Kubernetes*](https://kubernetes.io/) 是開放原始碼產品，可提供叢集基礎結構、容器排程到容器協調等功能。 它可讓您跨主機叢集自動化部署、規模調整及應用程式容器的作業。 <br/> <br/> *Kubernetes* 提供以容器為中心的基礎結構，讓您將應用程式容器分組為邏輯單元，以便於管理及探索。 <br/> <br/> 比起 Windows，*Kubernetes* 在 Linux 中相對成熟穩定。 |
 | **Azure Kubernetes Service (AKS)** <br/> ![Azure Kubernetes Service 標誌](./media/aks-logo.png) | [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) 是 Azure 中的受控 Kubernetes 容器協調流程服務，可簡化 Kubernetes 叢集的管理、部署和作業。 |
@@ -179,7 +179,7 @@ Service Fabric 是良好的平台範例，您可在此定義與實體實作不�
 
 如前所述，每項微服務 (邏輯繫結的內容) 都必須擁有其網域模型 (資料和邏輯)。 在無狀態微服務的案例中，資料庫會是外部的、採用如 SQL Server 的關聯式選項，或採用如 Azure Cosmos DB 或 MongoDB 的 NoSQL 選項。
 
-但是服務本身在 Service Fabric 中也可以具狀態，這表示資料位在微服務內。 這項資料可能不只存在於相同的伺服器，也存在微服務程序、記憶體內部，並保存在硬碟上，會複寫到其他節點。 圖 4-30 顯示不同的方法。
+但是服務本身在 Service Fabric 中也可以具狀態，這表示資料位在微服務內。 這項資料可能不只存在於相同的伺服器，也存在微服務程序、記憶體內部，並保存在硬碟上，會複寫到其他節點。 圖4-14 顯示不同的方法。
 
 ![在無狀態服務中，狀態 (持續性、資料庫) 會保留在微服務之外。 在具狀態服務中，狀態會保留在微服務內。](./media/stateless-vs-stateful-microservices.png)
 
@@ -189,7 +189,7 @@ Service Fabric 是良好的平台範例，您可在此定義與實體實作不�
 
 相反地，[具狀態微服務](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis)在進階案例中勝出，因為領域邏輯和資料之間沒有任何延遲。 大量的資料處理、競先搶回終點、資料庫即服務，以及其他低延遲狀況皆得益於具狀態服務，它讓本機狀態可供更快速存取。
 
-無狀態與具狀態服務是互補的。 例如，您可以在圖 4-14 的右邊圖表中看到，具狀態服務可分割成多個磁碟分割。 若要存取這些分割，您可能需要作為閘道服務的無狀態服務，它知道如何根據分割索引鍵處理每個分割。
+無狀態與具狀態服務是互補的。 例如，您可以在圖4-14 的右邊圖表中看到，具狀態服務可以分割成多個資料分割。 若要存取這些分割，您可能需要作為閘道服務的無狀態服務，它知道如何根據分割索引鍵處理每個分割。
 
 具狀態服務確實有缺點。 向外延展時會提高複雜度。本來通常由外部資料庫系統實作的工作功能，例如跨具狀態微服務和資料分割的資料複寫，必須予以處理。 不過，這是像 [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) 這類的協調器及其[具狀態可靠服務](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis)提供最多幫助的其中一個區域，方法是使用[可靠的服務 API](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) 和 [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) 簡化開發和具狀態微服務的生命週期。
 

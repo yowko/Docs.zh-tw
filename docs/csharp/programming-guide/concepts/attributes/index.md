@@ -1,12 +1,12 @@
 ---
 title: 屬性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 42a7035a9dae146ad7a303da41c83891e5e19ef8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668610"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374374"
 ---
 # <a name="attributes-c"></a>屬性 (C#)
 
@@ -57,7 +57,7 @@ ms.locfileid: "61668610"
 
 ### <a name="attribute-targets"></a>屬性目標
 
-屬性的「目標」是要套用屬性的實體。 例如，屬性可套用至類別、特定的方法或整個組件。 根據預設，屬性會套用到位於它正後方的元素。 但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。
+屬性的「目標」是要套用屬性的實體。 例如，屬性可套用至類別、特定的方法或整個組件。 根據預設，屬性會套用至其後的元素。 但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。
 
 若要明確地識別屬性目標，請使用下列語法：
 
@@ -101,8 +101,8 @@ using System.Reflection;
 
 下列清單包含一些程式碼中常見的屬性用法：
 
-- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱<xref:System.Web.Services.WebMethodAttribute>。
-- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.MarshalAsAttribute>。
+- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱 <xref:System.Web.Services.WebMethodAttribute>。
+- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
 - 描述適用於類別、方法和介面的 COM 屬性。
 - 使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 類別呼叫 Unmanaged 程式碼。
 - 針對標題、版本、描述或商標等方面來描述您的組件。
@@ -115,7 +115,7 @@ using System.Reflection;
 
 ## <a name="related-sections"></a>相關章節
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱：
 
 - [建立自訂屬性 (C#)](creating-custom-attributes.md)  
 - [使用反射存取屬性 (C#)](accessing-attributes-by-using-reflection.md)  

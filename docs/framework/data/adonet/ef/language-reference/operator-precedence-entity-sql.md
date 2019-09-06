@@ -2,15 +2,15 @@
 title: 運算子優先順序 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d8c78f410708fd1aa843ee8f14f7243a9f686c0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760346"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249788"
 ---
 # <a name="operator-precedence-entity-sql"></a>運算子優先順序 (Entity SQL)
-當[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢有多個運算子，運算子優先順序會決定作業的執行的順序。 執行的順序對於查詢結果有很大的影響。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]當查詢有多個運算子時，運算子優先順序會決定作業的執行順序。 執行的順序對於查詢結果有很大的影響。  
   
  下表顯示運算子的優先順序層級。 先評估層級較高的運算子，再評估層級較低的運算子。  
   
@@ -27,8 +27,8 @@ ms.locfileid: "61760346"
   
  當運算式中的兩個運算子有相同的運算子優先順序層級時，會依據它們在查詢中的位置，由左至右來評估它們。 例如，`x+y-z` 會判斷值為 `(x+y)-z`。  
   
- 您可以使用括號來覆寫查詢中已定義的運算子優先順序。 括號內的所有內容都會先評估得出單一結果，之後，括號外的任何運算子便可以使用這個結果。 比方說，`x+y*z`乘以`y`所`z`，然後新增`x`，但`(x+y)*z`新增`x`來`y`，然後將結果乘以`z`。  
+ 您可以使用括號來覆寫查詢中已定義的運算子優先順序。 括號內的所有內容都會先評估得出單一結果，之後，括號外的任何運算子便可以使用這個結果。 `x+y*z`例如，會將`y` `y` `x` `(x+y)*z`乘以，然後加`x`上，但會將結果加到，然後`z`將結果乘以。 `z`  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL 概觀](entity-sql-overview.md)

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
-ms.translationtype: HT
+ms.openlocfilehash: 4e4ab71cc542767460e92be1510ccc5c5e0e7ce0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69038115"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374076"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -50,9 +50,9 @@ ms.locfileid: "69038115"
 
 Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖 9-1 所示。
 
-![](./media/image9-1.png)
+![測試金字塔圖](./media/image9-1.png)
 
-圖 9-1 測試金字塔圖
+**圖 9-1**. 測試金字塔圖
 
 金字塔的不同圖層及其相對大小代表了不同類型的測試，以及您應該為應用程式撰寫的測試數量。 如您所見，建議以大型的單元測試作為基礎，由較小的整合測試層來支援，再加上一個更小的功能測試層。 理想情況下，每個圖層的測試只應能在該層中進行，而不能在較低層中充分進行。 在您嘗試決定需要在特定案例中使用哪種測試類型時，請記得測試金字塔。
 
@@ -66,15 +66,15 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 常用的方法是在 'src' 資料夾下組織應用程式專案，並在平行的 ‘tests' 資料夾下組織應用程式測試專案。 如果您覺得這樣的組織很有用，您可以在 Visual Studio 中建立相符的解決方案資料夾。
 
-![](./media/image9-2.png)
+![方案中的測試組織](./media/image9-2.png)
 
-圖 9-2 解決方案中的測試組織
+**圖 9-2**： 方案中的測試組織
 
 您可以使用您偏好的任何測試架構。 xUnit 架構運作良好，且用來寫入所有的 ASP.NET Core 和 EF Core 測試。 您可以使用圖 9-3 中的範本，或使用 dotnet new xunit 的 CLI，在 Visual Studio 中新增 xUnit 測試專案。
 
-![](./media/image9-3.png)
+![在 Visual Studio 中新增 xUnit 測試專案](./media/image9-3.png)
 
-圖 9-3 在 Visual Studio 中新增 xUnit 測試專案
+**圖 9-3**。 在 Visual Studio 中新增 xUnit 測試專案
 
 ### <a name="test-naming"></a>命名測試
 
@@ -98,7 +98,7 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 如果您遵循如上所述會產生許多小型測試類別的命名慣例，建議使用資料夾和命名空間來進一步組織測試。 圖 9-4 顯示在幾個測試專案中按資料夾組織測試的一種方法。
 
-![](./media/image9-4.png)
+![根據要測試的類別，依資料夾組織測試類別](./media/image9-4.png)
 
 **圖 9-4。** 根據正在測試的類別，按資料夾來組織測試類別。
 

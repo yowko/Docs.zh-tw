@@ -1,15 +1,15 @@
 ---
-title: '&amp;&amp; （和）(Entity SQL)'
+title: '&amp;&amp;和（Entity SQL）'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: eab05f7454f8ebc88ed29030503bfa96d0c70756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02e404b73e5a9a9c3963e2d2b58ab7592afabc13
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605733"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251320"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp; （和）(Entity SQL)
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp;和（Entity SQL）
 如果兩個運算式都是 `true` 則傳回 `true`，否則為 `false` 或 `NULL`。  
   
 ## <a name="syntax"></a>語法  
@@ -38,7 +38,7 @@ boolean_expression && boolean_expression
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會示範如何使用 AND 運算子。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [遵循 how to：執行可傳回 StructuralType 結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -46,4 +46,4 @@ boolean_expression && boolean_expression
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL 參考](entity-sql-reference.md)

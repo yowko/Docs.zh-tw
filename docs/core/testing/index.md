@@ -5,16 +5,18 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c0c74aeaf02bc6380d7627ce39f65603e94952c0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614865"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373862"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 與 .NET Standard 中的單元測試
 
 .NET Core 使單元測試的建立便得更加輕鬆。 本文會介紹單元測試，並示範它們和其他種類測試之間的差異。 接近頁面底部的連結資源，會向您示範如何將測試專案新增到解決方案。 在您設定好測試專案後，就能使用命令列或 Visual Studio 來執行單元測試。
+
+如果您要測試**ASP.NET Core**專案，請參閱[ASP.NET Core 中的整合測試](/aspnet/core/test/integration-tests#test-app-prerequisites)。
 
 .NET Core 2.0 及較新版本均支援 [.NET Standard 2.0](../../standard/net-standard.md)，而我們會使用其程式庫來示範單元測試。
 

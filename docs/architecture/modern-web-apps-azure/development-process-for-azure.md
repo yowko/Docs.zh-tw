@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 286ffdb73425794e5979cde902e21ebd90a26969
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675145"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374041"
 ---
 # <a name="development-process-for-azure"></a>Azure 開發程序
 
@@ -26,9 +26,9 @@ ms.locfileid: "68675145"
 
 不論您偏好使用完整且強大的 IDE，還是輕量型的敏捷式編輯器，Microsoft 都能支援您開發 ASP.NET Core 應用程式。
 
-**Visual Studio 2017.** 如果您使用 *Visual Studio 2017*，只要您已安裝「.NET Core 跨平台開發」  工作負載，就可以建置 ASP.NET Core 應用程式。 圖 10-1 顯示 Visual Studio 2017 設定對話方塊中的必要工作負載。
+**Visual Studio 2017.** 如果您使用 *Visual Studio 2017*，只要您已安裝「.NET Core 跨平台開發」工作負載，就可以建置 ASP.NET Core 應用程式。 圖 10-1 顯示 Visual Studio 2017 設定對話方塊中的必要工作負載。
 
-![](./media/image10-1.png)
+![在 Visual Studio 2017 中安裝 .NET Core 工作負載](./media/image10-1.png)
 
 **圖 10-1.** 安裝 Visual Studio 2017 中的 .NET Core 工作負載。
 
@@ -66,7 +66,7 @@ ms.locfileid: "68675145"
 
 請務必啟用持續整合，以便每當您小組中有人認可新的程式碼時，系統便將建置排入佇列中。 測試組建，並確認它產生 Web 部署套件作為其中一個成品。
 
-建置成功時，您的 CD 程序會將 CI 組建的結果部署至 Azure Web 應用程式。 若要設定這種情況，您需要建立及設定「發行」  ，這會部署到您的 Azure App Service。
+建置成功時，您的 CD 程序會將 CI 組建的結果部署至 Azure Web 應用程式。 若要設定這種情況，您需要建立及設定「發行」，這會部署到您的 Azure App Service。
 
 [定義 CD 發行程序](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
 

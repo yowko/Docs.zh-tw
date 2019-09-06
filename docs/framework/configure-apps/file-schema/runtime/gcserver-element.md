@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19ebad32ad8c7018b910a3d230f43031008dcdc7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa03179df1cd2595b4be428106dd3ec10b309317
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927388"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252543"
 ---
 # <a name="gcserver-element"></a>\<gcServer > 元素
 指定 Common Language Runtime 是否執行伺服器記憶體回收。  
   
- \<configuration>  
-\<執行時間 >  
-\<gcServer>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcServer>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ ms.locfileid: "69927388"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`enabled`|必要屬性。<br /><br /> 指定執行階段是否執行伺服器記憶體回收。|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "69927388"
  此項目只能用在應用程式組態檔中；如果是在或電腦組態檔中，就會忽略此項目。  
   
 > [!NOTE]
-> 在 .NET Framework 4 (含) 以前版本中，當伺服器記憶體回收啟用時，無法使用並行記憶體回收。 從 .NET Framework 4.5 開始，伺服器記憶體回收為並行。 若要使用非並行伺服器垃圾收集, 請將`<gcServer>`元素設`true`為, 並[ \<將 gcConcurrent >](gcconcurrent-element.md)專案設定為。 `false`  
+> 在 .NET Framework 4 (含) 以前版本中，當伺服器記憶體回收啟用時，無法使用並行記憶體回收。 從 .NET Framework 4.5 開始，伺服器記憶體回收為並行。 若要使用非並行伺服器垃圾收集，請將`<gcServer>`元素設`true`為，並[ \<將 gcConcurrent >](gcconcurrent-element.md)專案設定為。 `false`  
   
 ## <a name="example"></a>範例  
  下列範例會啟用伺服器記憶體回收。  

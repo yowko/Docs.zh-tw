@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105467"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373768"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -38,9 +38,9 @@ Razor 頁面的頁面模型會合併 MVC 控制器及檢視模型的責任。 �
 
 ## <a name="mapping-requests-to-responses"></a>將要求對應至回應
 
-ASP.NET Core 應用程式基本上會將傳入要求對應至傳出回應。 在低階，這會透過中介軟體來完成，而簡單的 ASP.NET Core 應用程式和微服務可能只包含自訂中介軟體。 使用 ASP.NET Core MVC 時，您可以工作地更進階一些，從「路由」  、「控制器」  和「動作」  的觀點來思考。 每個傳入要求會與應用程式的路由表進行比對，如果找到相符的路由，就會呼叫相關聯的動作方法 (屬於控制器) 來處理要求。 如果找不到相符的路由，就會呼叫錯誤處理常式 (在此情況下會傳回 NotFound 結果)。
+ASP.NET Core 應用程式基本上會將傳入要求對應至傳出回應。 在低階，這會透過中介軟體來完成，而簡單的 ASP.NET Core 應用程式和微服務可能只包含自訂中介軟體。 使用 ASP.NET Core MVC 時，您可以工作地更進階一些，從「路由」、「控制器」和「動作」的觀點來思考。 每個傳入要求會與應用程式的路由表進行比對，如果找到相符的路由，就會呼叫相關聯的動作方法 (屬於控制器) 來處理要求。 如果找不到相符的路由，就會呼叫錯誤處理常式 (在此情況下會傳回 NotFound 結果)。
 
-ASP.NET Core MVC 應用程式可以使用慣例路由、屬性路由或兩者。 慣例路由是在程式碼中定義，並使用如下列範例所示的語法來指定路由「慣例」  ：
+ASP.NET Core MVC 應用程式可以使用慣例路由、屬性路由或兩者。 慣例路由是在程式碼中定義，並使用如下列範例所示的語法來指定路由「慣例」：
 
 ```csharp
 app.UseMvc(routes =>
@@ -94,7 +94,7 @@ Razor Pages 不會使用屬性路由。 您可以為 Razor 頁面指定其他路
 
 如果您使用模型驗證，請務必檢查模型是否有效，再執行任何狀態改變命令，以確保您的應用程式不會遭到無效資料損毀。 您可以使用[篩選條件](/aspnet/core/mvc/controllers/filters)，避免需要在每個動作中新增程式碼來執行此作業。 ASP.NET Core MVC 篩選條件可讓您攔截要求群組，以便可根據目標套用一般原則和跨領域關注。 您可以將篩選條件套用至個別動作、整個控制器，或針對應用程式全域套用。
 
-對於 Web API，ASP.NET Core MVC 支援[「內容交涉」  ](/aspnet/core/mvc/models/formatting)，可讓要求指定回應的格式化方式。 根據要求中提供的標頭，傳回資料的動作會將回應格式化為 XML、JSON 或其他支援的格式。 這項功能可讓具有不同資料格式需求的多個用戶端使用相同的 API。
+對於 Web API，ASP.NET Core MVC 支援[「內容交涉」](/aspnet/core/mvc/models/formatting)，可讓要求指定回應的格式化方式。 根據要求中提供的標頭，傳回資料的動作會將回應格式化為 XML、JSON 或其他支援的格式。 這項功能可讓具有不同資料格式需求的多個用戶端使用相同的 API。
 
 Web API 專案應該考慮使用 `[ApiController]` 屬性，該屬性可以套用到個別控制器、基底控制器類別或整個組件。 這個屬性會新增自動模型驗證檢查，任何無效模型的動作都將傳回附有驗證錯誤詳細資料的 BadRequest。 該屬性也要求所有動作都要有屬性路由，而非使用慣例路由，並會針對錯誤傳回更詳細的 ProblemDetails 資訊。
 
@@ -172,13 +172,13 @@ ASP.NET Core UI 專案會負責任何 UI 層級考量，但不應該包含商務
 
 ### <a name="feature-organization"></a>功能組織
 
-根據預設，ASP.NET Core 應用程式組織其資料夾結構時會包含 Controllers 和 Views，通常也會包含 ViewModels。 支援這些伺服器端結構的用戶端程式碼通常會與 wwwroot 資料夾分開儲存。 不過，大型應用程式在使用此組織方式時可能會遇到問題，因為處理任何指定的功能通常需要在這些資料夾之間跳來跳去。 隨著每個資料夾中的檔案和子資料夾數目增加，這會變得越來越困難，而導致需要大幅捲動方案總管。 解決此問題的方法之一，是依「功能」  而不是檔案類型來組織應用程式程式碼。 此組織樣式通常稱為功能資料夾或[功能分割](https://msdn.microsoft.com/magazine/mt763233.aspx) (另請參閱：[Vertical Slices](https://deviq.com/vertical-slices/) (垂直分割))。
+根據預設，ASP.NET Core 應用程式組織其資料夾結構時會包含 Controllers 和 Views，通常也會包含 ViewModels。 支援這些伺服器端結構的用戶端程式碼通常會與 wwwroot 資料夾分開儲存。 不過，大型應用程式在使用此組織方式時可能會遇到問題，因為處理任何指定的功能通常需要在這些資料夾之間跳來跳去。 隨著每個資料夾中的檔案和子資料夾數目增加，這會變得越來越困難，而導致需要大幅捲動方案總管。 解決此問題的方法之一，是依「功能」而不是檔案類型來組織應用程式程式碼。 此組織樣式通常稱為功能資料夾或[功能分割](https://msdn.microsoft.com/magazine/mt763233.aspx) (另請參閱：[Vertical Slices](https://deviq.com/vertical-slices/) (垂直分割))。
 
 基於此目的，ASP.NET Core MVC 會支援 Areas。 使用 Areas，您可以在每個 Areas 資料夾中建立不同的 Controllers 和 Views 資料夾集 (以及任何相關聯的模型)。 圖 7-1 顯示使用 Areas 的範例資料夾結構。
 
-![](./media/image7-1.png)
+![範例區域組織](./media/image7-1.png)
 
-圖 7-1：範例 Areas 組織
+**圖 7-1**. 範例區域組織
 
 使用 Areas 時，您必須使用屬性以其所屬的區域名稱來裝飾控制器：
 
@@ -245,7 +245,7 @@ ASP.NET Core MVC 也會使用慣例來尋找檢視。 您可以使用自訂慣�
 
 ![要求處理會歷經授權篩選條件、資源篩選條件、模型繫結、動作篩選條件、動作執行和動作結果轉換、例外狀況篩選條件、結果篩選條件，以及結果執行。 在送出的過程，要求只會經過結果篩選條件和資源篩選條件的處理，然後便成為傳送至用戶端的回應。](./media/image7-2.png)
 
-圖 7-2：透過篩選條件和要求管線執行要求
+**圖 7-2**. 透過篩選準則和要求管線來執行要求。
 
 篩選通常會實作為屬性，以便您將其套用至控制器或動作 (甚至是全域)。 以此方式新增時，在動作層級指定的篩選條件會覆寫在控制器層級指定的篩選條件或建置在其上，而後者本身會覆寫全域篩選條件。 例如，\[Route\] 屬性可用來建置控制器與動作之間的路由。 同樣地，授權可在控制器層級設定，然後由個別動作覆寫，如下列範例所示：
 
@@ -334,9 +334,9 @@ ASP.NET Core Identity 是可用來支援應用程式登入功能的會員系統�
 
 如果選取 [個別使用者帳戶] 選項，ASP.NET Core Identity 會隨附於新的專案範本。 此範本包括註冊、登入、外部登入、忘記密碼和其他功能的支援。
 
-![](./media/image7-3.png)
+![選取要預先設定身分識別的個別使用者帳戶](./media/image7-3.png)
 
-圖 7-3：選取 [個別使用者帳戶] 來預先設定身分識別
+**圖 7-3**. 選取 [個別使用者帳戶]，以預先設定身分識別。
 
 身分識別是在啟動的 ConfigureServices 和 Configure 中設定：
 
@@ -369,7 +369,7 @@ public void Configure(IApplicationBuilder app)
 
 您可以從官方 ASP.NET Core 文件，深入了解如何[設定雙因素驗證](/aspnet/core/security/authentication/2fa)和[啟用外部登入提供者](/aspnet/core/security/authentication/social/)。
 
-### <a name="authorization"></a>授權
+### <a name="authorization"></a>Authorization
 
 授權的最簡單形式牽涉到限制匿名使用者的存取。 只要將 \[Authorize\] 屬性套用至特定控制器或動作，即可達成此目的。 如果角色正在使用中，您可以進一步擴充屬性，限制屬於特定角色之使用者的存取，如下所示：
 
@@ -506,9 +506,9 @@ public class Program
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>領域驅動設計 - 是否應該套用？
 
-領域驅動設計 (DDD) 是建置軟體的敏捷式方法，重點強調「商務領域」  。 它相當重視與商務領域專家的溝通和互動，這些專家會向開發人員說明真實世界系統的運作方式。 例如，如果您想要建置處理股票交易的系統，您的領域專家可能會是經驗豐富的股票交易員。 DDD 是專為處理複雜的大型商務問題所設計，通常不適用於較小、較簡單的應用程式，因為不值得投資了解領域及建立領域模型。
+領域驅動設計 (DDD) 是建置軟體的敏捷式方法，重點強調「商務領域」。 它相當重視與商務領域專家的溝通和互動，這些專家會向開發人員說明真實世界系統的運作方式。 例如，如果您想要建置處理股票交易的系統，您的領域專家可能會是經驗豐富的股票交易員。 DDD 是專為處理複雜的大型商務問題所設計，通常不適用於較小、較簡單的應用程式，因為不值得投資了解領域及建立領域模型。
 
-建置採用 DDD 方法的軟體時，您的小組 (包括非技術性專案關係人和參與者) 應該針對問題空間開發「通用語言」  。 換句話說，您應該針對要模型化的真實世界概念、對等軟體，以及為了保存概念而可能存在的任何結構 (例如資料庫資料表) 使用相同的用語。 因此，通用語言中所述的概念應該會形成「領域模型」  的基礎。
+建置採用 DDD 方法的軟體時，您的小組 (包括非技術性專案關係人和參與者) 應該針對問題空間開發「通用語言」。 換句話說，您應該針對要模型化的真實世界概念、對等軟體，以及為了保存概念而可能存在的任何結構 (例如資料庫資料表) 使用相同的用語。 因此，通用語言中所述的概念應該會形成「領域模型」的基礎。
 
 您的領域模型會包含彼此互動以代表系統行為的物件。 這些物件的分類如下：
 
@@ -563,13 +563,13 @@ ASP.NET Core 應用程式是主控台應用程式，必須在伺服器開機時�
 
 ![Kestrel 到網際網路](./media/image7-5.png)
 
-圖 7-5：裝載於 Kestrel 中反向 Proxy 伺服器後方的 ASP.NET
+**圖 7-5**。 ASP.NET 裝載于反向 proxy 伺服器後方的 Kestrel 中
 
 在另一個案例中，反向 Proxy 可能有助於使用 SSL/HTTPS 來保護多個應用程式。 在此情況下，只有反向 Proxy 需要設定 SSL。 反向 Proxy 伺服器與 Kestrel 之間的通訊可透過 HTTP 進行，如圖 7-6 所示。
 
-![](./media/image7-6.png)
+![裝載于受 HTTPS 保護之反向 proxy 伺服器後方的 ASP.NET](./media/image7-6.png)
 
-圖 7-6：裝載於受 HTTPS 保護之反向 Proxy 伺服器後方的 ASP.NET
+**圖 7-6**。 裝載于受 HTTPS 保護之反向 proxy 伺服器後方的 ASP.NET
 
 一個越來越普及的方法，是將 ASP.NET Core 應用程式裝載於 Docker 容器，該容器接著可在本機裝載或部署至 Azure 進行雲端式裝載。 Docker 容器可能會包含您的應用程式程式碼，該程式碼會在 Kestrel 上執行，並部署在反向 Proxy 伺服器後方，如上所示。
 

@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: b43400a0fdae338744c521cf7ddb2bfce79fc43c
-  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-  ms.translationtype: HT
+  ms.openlocfilehash: f6f4b95b0c9afd9f70d4eba41500fc8a26606c78
+  ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+  ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/19/2019
-  ms.locfileid: "65881030"
+  ms.lasthandoff: 09/05/2019
+  ms.locfileid: "70374319"
 items:
 - durationInMinutes: 1
   content: >
@@ -66,7 +66,7 @@ items:
   content: "例外狀況篩選條件可讓您根據一些條件來攔截例外狀況。 通常會用來建立記錄例外狀況，但絕不會處理這些例外狀況的篩選方法。 例外狀況篩選條件是布林運算式，若應該執行 `catch` 子句，則為 `true`；若 `catch` 子句不應該攔截例外狀況，則為 `false`。 在互動式視窗中嘗試下列程式碼：它會將例外狀況類型和訊息記錄至主控台。 它會傳回 `false`，表示無法處理例外狀況。 在互動式視窗中嘗試下列程式。\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        try \n        {\n            string s = null;\n            Console.WriteLine(s.Length);\n\n        } catch (Exception e) when (LogException(e))\n        {\n        }\n        Console.WriteLine(\"Exception must have been handled\");\n    }\n\n    private static bool LogException(Exception e)\n    {\n        Console.WriteLine($\"\\tIn the log routine. Caught {e.GetType()}\");\n        Console.WriteLine($\"\\tMessage: {e.Message}\");\n        return false;\n    }\n}\n```\n\n您應該會看到來自 `LogException` 方法的訊息，後面接著預設例外狀況訊息。 若要試驗，請將 `return false` 陳述式變更為 `return true`，然後再執行一次。 現在，系統會攔截到例外狀況，且程式會完成執行。\n\n除了記錄情節，例外狀況篩選條件在下列情況可能最有用：當例外狀況的屬性會決定要採取的動作時。 例如，您可以查看 <xref:System.AggregateException> 內部以了解包含哪些例外狀況，並根據特定例外狀況採取一些適當的動作。\n"
 - title: 使用 nameof
   durationInMinutes: 2
-  content: "`nameof` 運算子會傳回任何變數、類型或類型成員的名稱。 在互動式視窗中嘗試下列程式碼，以查看其運作方式：\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Console.WriteLine(nameof(System.String));\n        int j = 5;\n        Console.WriteLine(nameof(j));\n        List<string> names = new List<string>();\n        Console.WriteLine(nameof(names));\n    }\n}\n```\n\n輸出會符合變數或類型的名稱。 即使您提供的是完整類型名稱 (例如 `System.String`)，`nameof` 運算子還是會傳回不完整的名稱。 此功能在需要將參數或屬性名稱轉換成字串時最有用。 範例包括擷取擲回 <xref:System.ArgumentNullException> 或 <xref:System.ArgumentException> 的引數名稱，或是擷取實作 <xref:System.ComponentModel.INotifyPropertyChanged> 時已變更的屬性名稱。 \n"
+  content: "`nameof` 運算子會傳回任何變數、類型或類型成員的名稱。 在互動式視窗中嘗試下列程式碼，以查看其運作方式：\n\n```csharp\nusing System;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Console.WriteLine(nameof(System.String));\n        int j = 5;\n        Console.WriteLine(nameof(j));\n        List<string> names = new List<string>();\n        Console.WriteLine(nameof(names));\n    }\n}\n```\n\n輸出會符合變數或類型的名稱。 即使您提供的是完整類型名稱 (例如 `System.String`)，`nameof` 運算子還是會傳回不完整的名稱。 此功能在需要將參數或屬性名稱轉換成字串時最有用。 範例包括擷取擲回 <xref:System.ArgumentNullException> 或 <xref:System.ArgumentException> 的引數名稱，或是擷取實作 <xref:System.ComponentModel.INotifyPropertyChanged> 時已變更的屬性名稱。 \n"
 - title: 新的物件初始化語法
   durationInMinutes: 2
   content: "物件初始設定式語法現在支援初始化*索引子*以及屬性和欄位。 此新增可讓您更容易初始化字典和其他型別。 從某個字典開始。 在互動式視窗中執行下列程式碼：\n\n```csharp\nvar messages = new Dictionary<int, string>\n{\n    [404] = \"Page not Found\",\n    [302] = \"Page moved, but left a forwarding address.\",\n    [500] = \"The web server can't come out to play today.\"\n};\n\nConsole.WriteLine(messages[302]);\n```\n\n此語法可以設定索引子中的值，能用於在索引子上有可存取 set 存取子的任何型別。\n\n第二個變更可讓您更輕鬆啟用代表序列的型別初始設定式語法。 集合初始設定式可用在實作 <xref:System.Collections.IEnumerable> 並可公開存取 `Add` 方法的任何類別。 `Add` 方法也可以是擴充方法。 \n\n下例顯示此語法的一個案例。 它會建立 `Path` 類別，該類別實作 `IEnumerable<Point3D>`，並有一個方法可新增點來接受三個引數。 `Extensions` 類別會建立額外的 `Add` 方法，從它的三個元件來新增點。 此範例因受環境限制，目前不會以互動方式執行。\n\n```csharp\npublic class Path : IEnumerable<Point3D>\n{\n    private List<Point3D> points = new List<Point3D>();\n    public IEnumerator<Point3D> GetEnumerator() => points.GetEnumerator();\n    IEnumerator IEnumerable.GetEnumerator() => points.GetEnumerator();\n\n    public void Add(Point3D pt) => points.Add(pt);\n}\n\npublic static class Extensions\n{\n    public static void Add(this Path path, double x, double y, double z) => path.Add(new Point3D(x, y, z));\n}\n```\n"

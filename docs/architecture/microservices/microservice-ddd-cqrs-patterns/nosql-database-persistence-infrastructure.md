@@ -2,12 +2,12 @@
 title: 使用 NoSQL 資料庫作為持續性基礎結構
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解一般的 NoSql 資料庫用法和特定的 Azure Cosmos DB 用法，作為實作持續性選項。
 ms.date: 10/08/2018
-ms.openlocfilehash: 2ea3841aa3bdbad3b67b529e0e9820b96f0fa038
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
-ms.translationtype: HT
+ms.openlocfilehash: 7a8573f8f668a5b75f50acde57a2f4c42ce4d189
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015078"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374031"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>使用 NoSQL 資料庫作為持續性基礎結構
 
@@ -54,7 +54,8 @@ ms.locfileid: "70015078"
 
 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) 是 Microsoft 的關鍵任務應用程式的全域分散式資料庫服務。 Azure Cosmos DB 提供[現成全域散發](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)、全球[彈性調整輸送量和儲存體](https://docs.microsoft.com/azure/cosmos-db/partition-data)、第 99 個百分位數的單一位數毫秒延遲、[五個定義良好的一致性層級](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)，以及保證高可用性，全部都是透過[領先業界的 SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/) 所支援。 Azure Cosmos DB [自動編製資料索引](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf)，而不需要處理結構描述和索引管理。 它是多模型，並支援文件、鍵值、圖表和單欄式資料模型。
 
-![Azure Cosmos DB 是全域散發的保證低延遲資料庫，可以使用四個 API 通訊協定存取。 ](./media/image19.1.png)
+![Azure Cosmos DB 是全域散發的保證低延遲資料庫，可以使用四個 API 通訊協定來存取。 ](./media/image19.1.png)
+
 **圖 7-19**。 Azure Cosmos DB 全域散發
 
 當您使用 C\# 模型來實作要供 Azure Cosmos DB API 使用的彙總時，彙總可能類似與 EF Core 搭配使用的 C\# POCO 類別。 差異在於從應用程式和基礎結構層級使用它們的方式，如下列程式碼所示：
@@ -131,14 +132,16 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 Cosmos DB 資料庫支援 MongoDB API for .NET 以及原生 MongoDB 有線通訊協定。 這表示使用現有的驅動程式，針對 MongoDB 所撰寫的應用程式現在可以與 Cosmos DB 通訊，且使用 Cosmos DB 資料庫，而不是使用 MongoDB 資料庫，如圖 7-20 所示。
 
-![Cosmos DB 支援 MongoDB API for .NET 和 MongoDB 有線通訊協定，您可以輕鬆地從 MongoDb 切換至 Cosmos DB](./media/image19.2.png)
+![Cosmos DB 支援適用于 .NET 和 MongoDB 有線通訊協定的 MongoDB API，您可以輕鬆地從 MongoDb 切換至 Cosmos DB。](./media/image19.2.png)
+
 **圖 7-20**。 使用 MongoDB API 和通訊協定存取 Azure Cosmos DB
 
 這是含 Linux 容器之 Docker 環境中概念證明的極方便使用方法，因為 [MongoDB Docker 映像](https://hub.docker.com/r/_/mongo/)是支援 Docker Linux 容器和 Docker Windows 容器的多架構映像。
 
 如下圖所示，使用 MongoDB API，eShopOnContainers 可支援 MongoDB Linux 和 Windows 容器開發本機環境，但您接著只要[變更 MongoDB 連接字串以指向 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)，就可以移至可擴充的 PaaS 雲端解決方案作為 Azure Cosmos DB。
 
-![eShopOnContainers 中的位置微服務使用 MongoDB 實作，但只要變更連接字串就可以切換到 Cosmos DB。](./media/image20-bis.png)
+![EShopOnContainers 中的位置微服務是使用 MongoDB 來執行，但是只要變更連接字串，就可以切換到 Cosmos DB。](./media/image20-bis.png)
+
 **圖 7-21**。 將 MongoDB 容器用於開發環境或將 Azure Cosmos DB 用於生產環境的 eShopOnContainers
 
 生產 Azure Cosmos DB 將會以 PaaS 和可擴充服務形式執行於 Azure 的雲端。

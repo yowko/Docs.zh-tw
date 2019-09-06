@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675375"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373802"
 ---
 # <a name="common-web-application-architectures"></a>一般 Web 應用程式架構
 
@@ -28,7 +28,7 @@ ms.locfileid: "68675375"
 
 新的 ASP.NET Core 專案，不論是在 Visual Studio 或從命令列建立，一開始都是簡單的「全方位」整合型。 它包含應用程式的所有行為，包括簡報、商務和資料存取邏輯。 圖 5-1 顯示單一專案應用程式的檔案結構。
 
-![](./media/image5-1.png)
+![單一專案 ASP.NET Core 應用程式](./media/image5-1.png)
 
 **圖 5-1。** 單一專案 ASP.NET Core 應用程式。
 
@@ -36,7 +36,7 @@ ms.locfileid: "68675375"
 
 雖然簡單，但單一專案整合型解決方案有一些缺點。 隨著專案的大小和複雜度增加，檔案和資料夾的數目也會持續成長。 使用者介面 (UI) 考量 (模型、檢視、控制器) 位於不依字母順序分組在一起的多個資料夾中。 當有其他 UI 層級建構，例如 Filter 或 ModelBinder ，新增到它們自己的資料夾中時，此問題只會惡化。 商務邏輯散佈在 Models 和 Services 資料夾之間，且不會清楚指出哪些資料夾中的哪些類別應該相依於哪些其他類別。 這種在專案層級缺乏組織的情形經常會導致 [Spaghetti Code](https://deviq.com/spaghetti-code/) (非結構程式碼)。
 
-為了解決這些問題，應用程式經常演化成多專案解決方案，其中每個專案被視為位於應用程式的特定「層級」  。
+為了解決這些問題，應用程式經常演化成多專案解決方案，其中每個專案被視為位於應用程式的特定「層級」。
 
 ## <a name="what-are-layers"></a>什麼是「層級」？
 
@@ -53,13 +53,13 @@ ms.locfileid: "68675375"
 邏輯分層是改善企業軟體應用程式中的程式碼組織的常見技術，並且有數種方式可以將程式碼組織成層級。
 
 > [!NOTE]
- > 「層級」  代表應用程式中的邏輯分隔。 應用程式邏輯實際上分佈至不同伺服器或處理程序時，這些個別的實體部署目標稱為「層」  。 可能 (而且很常見) 會有 N 層應用程式部署到單一層。
+ > 「層級」代表應用程式中的邏輯分隔。 應用程式邏輯實際上分佈至不同伺服器或處理程序時，這些個別的實體部署目標稱為「層」。 可能 (而且很常見) 會有 N 層應用程式部署到單一層。
 
 ## <a name="traditional-n-layer-architecture-applications"></a>傳統的「N 層」架構應用程式
 
 將應用程式邏輯組織成為層級的最常見方式顯示在圖 5-2 中。
 
-![](./media/image5-2.png)
+![一般應用層](./media/image5-2.png)
 
 **圖 5-2.** 一般應用程式層級。
 
@@ -69,19 +69,19 @@ ms.locfileid: "68675375"
 
 圖 5-3 顯示範例解決方案，會依責任 (或層級) 將應用程式分成三個專案。
 
-![](./media/image5-3.png)
+![具有三個專案的簡單整合型應用程式](./media/image5-3.png)
 
 **圖 5-3.** 簡單的整合型應用程式，含三個專案。
 
 雖然此應用程式為了組織的目的而使用數個專案，但它仍會部署為單一單位，且其用戶端會以單一 Web 應用程式與它互動。 這樣能有非常簡單的部署程序。 圖 5-4 將示範這類應用程式可如何使用 Azure 來裝載。
 
-![](./media/image5-4.png)
+![Azure Web 應用程式的簡單部署](./media/image5-4.png)
 
 **圖 5-4.** Azure Web 應用程式的簡單部署
 
 當應用程式需求成長，可能需要更複雜且功能強大的部署解決方案。 圖 5-5 示範更複雜的部署計劃範例，它支援額外的功能。
 
-![](./media/image5-5.png)
+![將 Web 應用程式部署至 Azure App Service](./media/image5-5.png)
 
 **圖 5-5.** 將 Web 應用程式部署至 Azure App Service
 
@@ -91,7 +91,7 @@ ms.locfileid: "68675375"
 
 在 Azure 中調整 Web 應用程式最簡單的方式，是在應用程式的 App Service 方案中手動設定調整。 圖 5-6 顯示適當的 Azure 儀表板畫面，以設定多少個執行個體正在服務應用程式。
 
-![](./media/image5-6.png)
+![在 Azure 中 App Service 計畫調整](./media/image5-6.png)
 
 **圖 5-6。** 在 Azure 中調整應用程式服務方案。
 
@@ -104,7 +104,7 @@ ms.locfileid: "68675375"
 
 Clean Architecture 會將商務邏輯和應用程式模型放在應用程式的中央位置。 不讓商務邏輯相依於資料存取或其他基礎結構的關注點，而是反轉此相依性：基礎結構和實作詳細資料相依於應用程式核心。 藉由在應用程式核心定義抽象或介面，然後它們會由基礎結構層中定義的類型所實作，即可達到此目的。 視覺化這個架構的常見方式是使用一系列的同心圓，類似於洋蔥。 圖 5-7 示範這種架構的表示法。
 
-![](./media/image5-7.png)
+![Clean Architecture；洋蔥檢視](./media/image5-7.png)
 
 **圖 5-7.** Clean Architecture；洋蔥檢視
 
@@ -112,7 +112,7 @@ Clean Architecture 會將商務邏輯和應用程式模型放在應用程式的�
 
 圖 5-8 顯示更傳統的水平分層圖，更能反映出 UI 和其他層級之間的相依性。
 
-![](./media/image5-8.png)
+![Clean Architecture；水平層檢視](./media/image5-8.png)
 
 **圖 5-8.** Clean Architecture；水平層檢視
 
@@ -120,7 +120,7 @@ Clean Architecture 會將商務邏輯和應用程式模型放在應用程式的�
 
 圖 5-9 顯示遵循這些建議建置時，更詳細的 ASP.NET Core 應用程式架構。
 
-![ASPNET Core 架構](./media/image5-9.png)
+![遵循全新架構的 ASP.NET Core 架構圖](./media/image5-9.png)
 
 **圖 5-9.** 遵循 Clean Architecture 的 ASP.NET Core 架構圖表。
 
@@ -188,7 +188,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 ![](./media/image5-13.png)
 
-您可以在每個容器中包含多個元件/程式庫或內部層級，如圖 5-13 所示。 不過，遵循「容器執行一項動作並在一個處理序中執行該動作」  的容器準則時，整合型模式可能會是一項衝突。
+您可以在每個容器中包含多個元件/程式庫或內部層級，如圖 5-13 所示。 不過，遵循「容器執行一項動作並在一個處理序中執行該動作」的容器準則時，整合型模式可能會是一項衝突。
 
 如果應用程式成長而需要擴充，此方法的缺點便會浮現。 若整個應用程式都擴充，則不成問題。 不過，在大多數情況下，應用程式只需要調整幾個造成阻礙的部分，其他元件則較少使用。
 
@@ -236,7 +236,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 `eShopOnWeb` 專案是在 .NET Core 上執行。 因此，它可以在 Linux 或 Windows 容器中執行。 請注意，若是 Docker 部署，您想要針對 SQL Server 使用相同的主機類型。 Linux 容器允許較小的使用量，而且是偏好選項。
 
-您可以使用 Visual Studio 2017 或更新版本將 Docker 支援新增到現有的應用程式，方法是以滑鼠右鍵按一下 [方案總管]  中的專案，然後選擇 [新增]   > [Docker 支援]  。 這會新增所需的檔案，並修改專案以使用這些檔案。 目前的 `eShopOnWeb` 範例已有這些檔案。
+您可以使用 Visual Studio 2017 或更新版本將 Docker 支援新增到現有的應用程式，方法是以滑鼠右鍵按一下 [方案總管] 中的專案，然後選擇 [新增] > [Docker 支援]。 這會新增所需的檔案，並修改專案以使用這些檔案。 目前的 `eShopOnWeb` 範例已有這些檔案。
 
 方案層級 `docker-compose.yml` 檔案包含要建置哪些映像及要啟動哪些容器的相關資訊。 該檔案可讓您使用 `docker-compose` 命令同時啟動多個應用程式。 在這個情況下，它只會啟動 Web 專案。 您也可以使用它來設定相依性，例如個別的資料庫容器。
 
@@ -262,7 +262,7 @@ networks:
 
 `docker-compose.yml` 檔案參考了 `Web` 專案中的 `Dockerfile`。 `Dockerfile` 是用來指定將使用的基底容器，以及如何在其上設定應用程式。 `Web` 的 `Dockerfile`：
 
-```
+```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 

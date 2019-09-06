@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105456"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374001"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -76,9 +76,9 @@ services.AddDbContext<CatalogContext>(options =>
 
 EF Core 會設定記錄器，並確保其層級至少設定為「資訊」以執行查詢，如圖 8-1 所示。
 
-![](./media/image8-1.png)
+![將 EF Core 查詢記錄到主控台](./media/image8-1.png)
 
-圖 8-1 將 EF Core 查詢記錄到主控台
+**圖 8-1**： 將 EF Core 查詢記錄到主控台
 
 ### <a name="fetching-and-storing-data"></a>擷取與儲存資料
 
@@ -118,7 +118,7 @@ EF Core 支援擷取和儲存的同步與非同步的方法。 若是 Web 應用
 
 ### <a name="fetching-related-data"></a>擷取相關資料
 
-當 EF Core 擷取實體時，它會填入與資料庫中的這個實體一起儲存的所有屬性。 EF Core 不會填入相關實體清單這類導覽屬性，且可能會將其值設為 Null。 這可確保 EF Core 不會擷取超過實際所需的資料，這對 Web 應用程式來說尤其重要，因為這類應用程式必須快速處理要求，並以有效率的方式傳回回應。 若要使用「積極式載入」  來包含實體的關聯性，您可以在查詢中使用 Include 擴充方法以指定屬性，如下所示：
+當 EF Core 擷取實體時，它會填入與資料庫中的這個實體一起儲存的所有屬性。 EF Core 不會填入相關實體清單這類導覽屬性，且可能會將其值設為 Null。 這可確保 EF Core 不會擷取超過實際所需的資料，這對 Web 應用程式來說尤其重要，因為這類應用程式必須快速處理要求，並以有效率的方式傳回回應。 若要使用「積極式載入」來包含實體的關聯性，您可以在查詢中使用 Include 擴充方法以指定屬性，如下所示：
 
 ```csharp
 // .Include requires using Microsoft.EntityFrameworkCore
@@ -145,9 +145,9 @@ query = specification.IncludeStrings.Aggregate(query,
             (current, include) => current.Include(include));
 ```
 
-另一個用來載入相關資料的選項是使用「明確式載入」  。 明確式載入可讓您將其他資料載入已擷取的實體中。 由於這牽涉到資料庫的個別要求，因此不建議用於 Web 應用程式，而應該將每項要求的資料庫往返次數降至最低。
+另一個用來載入相關資料的選項是使用「明確式載入」。 明確式載入可讓您將其他資料載入已擷取的實體中。 由於這牽涉到資料庫的個別要求，因此不建議用於 Web 應用程式，而應該將每項要求的資料庫往返次數降至最低。
 
-「消極式載入」  功能會自動載入應用程式參考的相關資料。 EF Core 已在 2.1 版中新增對消極式載入的支援。 消極式載入預設不會啟用，而且需要安裝 `Microsoft.EntityFrameworkCore.Proxies`。 如同明確式載入，通常應該為 Web 應用程式停用消極式載入，因為其使用會導致在每個 Web 要求中發出額外的資料庫查詢。 不幸的是，當延遲很小且用於測試的資料集通常很小時，消極式載入所產生的額外負荷往往在開發期間不易察覺。 不過，在生產環境中，由於使用者、資料和延遲更多，額外的資料庫要求通常會導致 Web 應用程式大量使用消極式載入而效能不佳。
+「消極式載入」功能會自動載入應用程式參考的相關資料。 EF Core 已在 2.1 版中新增對消極式載入的支援。 消極式載入預設不會啟用，而且需要安裝 `Microsoft.EntityFrameworkCore.Proxies`。 如同明確式載入，通常應該為 Web 應用程式停用消極式載入，因為其使用會導致在每個 Web 要求中發出額外的資料庫查詢。 不幸的是，當延遲很小且用於測試的資料集通常很小時，消極式載入所產生的額外負荷往往在開發期間不易察覺。 不過，在生產環境中，由於使用者、資料和延遲更多，額外的資料庫要求通常會導致 Web 應用程式大量使用消極式載入而效能不佳。
 
 [避免在 Web 應用程式中消極載入實體](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
 
@@ -206,7 +206,7 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 
 ### <a name="resilient-connections"></a>具復原功能的連接
 
-有時您可能會無法使用 SQL 資料庫等外部資源。 在暫時無法使用的情況下，應用程式可以使用重試邏輯，以避免引發例外狀況。 這項技術通常稱為「連線復原能力」  。 您可以重試某項作業，並以指數方式增加等候時間，直到已達重試計數上限為止，藉此實作[使用指數輪詢重試](https://docs.microsoft.com/azure/architecture/patterns/retry)技術。 這項技術是為了因應雲端資源可能會在短時間內斷斷續續無法使用，而導致某些要求失敗的問題。
+有時您可能會無法使用 SQL 資料庫等外部資源。 在暫時無法使用的情況下，應用程式可以使用重試邏輯，以避免引發例外狀況。 這項技術通常稱為「連線復原能力」。 您可以重試某項作業，並以指數方式增加等候時間，直到已達重試計數上限為止，藉此實作[使用指數輪詢重試](https://docs.microsoft.com/azure/architecture/patterns/retry)技術。 這項技術是為了因應雲端資源可能會在短時間內斷斷續續無法使用，而導致某些要求失敗的問題。
 
 在 Azure SQL DB 中，Entity Framework Core 已提供內部資料庫恢復連接功能和重試邏輯。 如果您想要使用具復原功能的 EF Core 連線，則必須為每個 DbContext 連線啟用 Entity Framework 執行策略。
 
@@ -344,7 +344,7 @@ NoSQL 資料庫通常不會強制執行 [ACID](https://en.wikipedia.org/wiki/ACI
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 
-Azure DocumentDB 是全受控的 NoSQL 資料庫服務，可提供以雲端為基礎的無結構描述資料儲存區。 DocumentDB 是專為滿足快速及可預測的效能、高可用性、彈性調整和全域發佈需求所建置。 即使在 NoSQL 資料庫中，開發人員仍可以對 JSON 資料使用豐富且熟悉的 SQL 查詢功能。 DocumentDB 中的所有資源都會儲存為 JSON 文件。 系統會以「項目」  形式來管理資源；也就是說，資源是包含中繼資料和「摘要」  的文件，也是項目的集合。 圖 8-2 顯示不同 DocumentDB 資源之間的關聯性。
+Azure DocumentDB 是全受控的 NoSQL 資料庫服務，可提供以雲端為基礎的無結構描述資料儲存區。 DocumentDB 是專為滿足快速及可預測的效能、高可用性、彈性調整和全域發佈需求所建置。 即使在 NoSQL 資料庫中，開發人員仍可以對 JSON 資料使用豐富且熟悉的 SQL 查詢功能。 DocumentDB 中的所有資源都會儲存為 JSON 文件。 系統會以「項目」形式來管理資源；也就是說，資源是包含中繼資料和「摘要」的文件，也是項目的集合。 圖 8-2 顯示不同 DocumentDB 資源之間的關聯性。
 
 ![DocumentDB (其為 NoSQL JSON 資料庫) 資源之間的階層式關聯性](./media/image8-2.png)
 
@@ -488,7 +488,7 @@ services.AddScoped<CatalogService>();
 
 完成上述作業時，系統只會每分鐘呼叫一次資料庫以擷取目錄資料，而不會在每次要求時都呼叫。 根據網站的流量而定，這可能會大幅影響資料庫的查詢數目以及首頁 (目前相依於此服務所公開的所有三個查詢) 的平均頁面載入時間。
 
-實作快取時會引發「過時資料」  的問題 – 亦即，來源的資料已變更，但快取中仍保留過期的版本。 若要緩和這個問題，一個簡單的方式是將快取持續時間縮短，因為對忙碌的應用程式來說，延長快取資料的時間長度意義不大。 例如，假設某個頁面會進行單一資料庫查詢，且每秒要求 10 次。 如果將這個頁面快取一分鐘，則資料庫每分鐘查詢的數目可從 600 降到 1，減少了 99.8%。 如果快取持續時間設為一小時，整體可以減少 99.997%；不過，這樣一來，過時資料的可能性和存在時間都會大幅增加。
+實作快取時會引發「過時資料」的問題 – 亦即，來源的資料已變更，但快取中仍保留過期的版本。 若要緩和這個問題，一個簡單的方式是將快取持續時間縮短，因為對忙碌的應用程式來說，延長快取資料的時間長度意義不大。 例如，假設某個頁面會進行單一資料庫查詢，且每秒要求 10 次。 如果將這個頁面快取一分鐘，則資料庫每分鐘查詢的數目可從 600 降到 1，減少了 99.8%。 如果快取持續時間設為一小時，整體可以減少 99.997%；不過，這樣一來，過時資料的可能性和存在時間都會大幅增加。
 
 另一個方法是當快取項目包含的資料有所更新時，就主動移除快取項目。 只要知道索引鍵，就可以移除任何個別的項目：
 

@@ -2,14 +2,14 @@
 title: 作法：篩選選擇性項目 (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 403c331787df7eb538302df2ecc332a663e68d71
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593791"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253824"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>作法：篩選選擇性項目 (C#)
+# <a name="how-to-filter-on-an-optional-element-c"></a>HOW TO：篩選選擇性項目 (C#)
 有時候即使您不確定項目是否存在於 XML 文件中，您都會想要針對該項目進行篩選。 搜尋應該會執行，因此，如果特定的項目沒有子項目，您就不會篩選該項目來觸發 Null 參考例外狀況。 在下列範例中，`Child5` 項目沒有 `Type` 子項目，但查詢仍會正確執行。  
   
 ## <a name="example"></a>範例  
@@ -47,7 +47,7 @@ foreach(string str in cList)
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -89,7 +89,7 @@ foreach (string str in cList)
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  

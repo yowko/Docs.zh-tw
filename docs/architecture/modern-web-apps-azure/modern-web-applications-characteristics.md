@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: f4fe18d7361f7d67c29fb7dab53132237f709280
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672905"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374080"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>現代化 Web 應用程式的特性
 
@@ -24,9 +24,9 @@ ASP.NET Core 已針對現代化 Web 應用程式和雲端式裝載案例最佳�
 
 本指南包含參考應用程式 _eShopOnWeb_ 來示範一些原則與建議。 該應用程式是一個簡單的線上商店，支援瀏覽上衣、咖啡馬克杯以及其他行銷商品目錄。 參考應用程式刻意簡單化，以便於理解。
 
-**圖 2-1。** eShopOnWeb
+![eShopOnWeb](./media/image2-1.png)
 
-![](./media/image2-1.png)
+**圖 2-1。** eShopOnWeb
 
 > ### <a name="reference-application"></a>參考應用程式
 >

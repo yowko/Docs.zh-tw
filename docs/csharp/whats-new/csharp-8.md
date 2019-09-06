@@ -1,13 +1,13 @@
 ---
 title: C# 8.0 的新功能 - C# 指南
 description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 5 的最新資訊。
-ms.date: 09/02/2019
-ms.openlocfilehash: 7210f2e978f307b3ecef2eff272fea0d19025de6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.date: 09/04/2019
+ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252894"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374002"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -26,6 +26,7 @@ ms.locfileid: "70252894"
 - [可為 Null 的參考類型](#nullable-reference-types)
 - [非同步資料流](#asynchronous-streams)
 - [索引和範圍](#indices-and-ranges)
+- [非受控的結構化類型](#unmanaged-constructed-types)
 - [增強內插逐字字串](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
@@ -377,7 +378,7 @@ await foreach (var number in GenerateSequence())
 
 範圍及索引可提供用來指定陣列中子範圍的簡潔語法，<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>。
 
-此語言支援依賴兩個新的類型和兩個新的運算子:
+此語言支援依賴兩個新的類型和兩個新的運算子：
 
 - <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
 - `^` 運算子，它會指定索引相對於序列結尾。
@@ -447,6 +448,33 @@ var text = words[phrase];
 
 您可以在[索引及範圍](../tutorials/ranges-indexes.md)上的教學課程中探索更多關於索引及範圍的資訊。
 
+## <a name="unmanaged-constructed-types"></a>非受控的結構化類型
+
+在C# 7.3 和更早版本中，結構化型別（包含至少一個型別引數的型別）不能是[非受控型](../language-reference/builtin-types/unmanaged-types.md)別。 從C# 8.0 開始，如果結構化的實數值型別只包含非受控類型的欄位，則不會受管理。
+
+例如，假設有下列泛型`Coords<T>`類型的定義：
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+類型是8.0 和更新版本中C#的非受控類型。 `Coords<int>` 就像任何非受控類型一樣，您可以建立此類型變數的指標，或針對此類型的實例[配置堆疊上的記憶體區塊](../language-reference/operators/stackalloc.md)：
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+如需詳細資訊，請參閱[非受控類型](../language-reference/builtin-types/unmanaged-types.md)。
+
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>增強內插逐字字串
 
-內`$` `@` [插](../language-reference/tokens/interpolated.md)逐字字串`@$"..."`中的和 token 順序可以是 any:和都是有效的內插逐字字串。`$@"..."` 在較C#舊的版本`$`中, 權杖`@`必須出現在標記之前。
+內`$` `@` [插](../language-reference/tokens/interpolated.md)逐字字串`@$"..."`中的和 token 順序可以是 any：和都是有效的內插逐字字串。`$@"..."` 在較C#舊的版本`$`中，權杖`@`必須出現在標記之前。

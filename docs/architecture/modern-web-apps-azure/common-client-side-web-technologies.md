@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dc0618eceda4df7c5aa76aee3ac649deb9f5310
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675435"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373898"
 ---
 # <a name="common-client-side-web-technologies"></a>一般用戶端 Web 技術
 
@@ -28,9 +28,9 @@ HTML (超文字標記語言) 是用來建立網頁和 Web 應用程式的標準�
 
 CSS (階層式樣式表) 用來控制 HTML 項目的外觀和版面配置。 CSS 樣式可直接套用至 HTML 項目，在同一頁面上個別定義或在不同的檔案中定義，並由頁面所參考。 樣式串聯基於如何用於選擇指定的 HTML 項目。 比方說，樣式可能適用於整個文件，但套用於特定項目的樣式可能會將其覆寫。 同樣地，項目特定樣式會受到套用於 CSS 類別 (套用於該項目) 的樣式所覆寫，而此樣式又會受針對該項目的特定執行個體之樣式所覆寫 (透過其識別碼)。 圖 6-1
 
-**圖 6-1。** CSS 精確性規則，按順序。
+![CSS 的明確規則](./media/image6-1.png)
 
-![](./media/image6-1.png)
+**圖 6-1。** CSS 精確性規則，按順序。
 
 建議您保留樣式於各自的樣式表檔案中，並且使用基於選取範圍的串聯，來實作應用程式中一致且可重複使用的樣式。 應避免在 HTML 中放置樣式規則；並且將樣式套用於特定的單個項目 (而不是整個項目類別或套用特定 CSS 類別的項目) 應屬例外情況，而非規則。
 
