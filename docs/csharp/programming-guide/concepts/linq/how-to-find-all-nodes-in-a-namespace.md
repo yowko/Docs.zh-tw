@@ -2,12 +2,12 @@
 title: 作法：在命名空間中尋找所有節點 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 512ca398831541c30a6c0c1e305c5c6269c13ddb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593636"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253778"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>作法：在命名空間中尋找所有節點 (C#)
 您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。  
@@ -37,7 +37,7 @@ foreach (XElement el in awElements)
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  

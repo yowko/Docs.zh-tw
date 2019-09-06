@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 643e28217d41e825f0b3a3f4a4f062c30835cae8
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3f638a880aaa21bc41d2575f3609dabae158c1a0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040670"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252575"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<Gcallowverylargeobjects> > 元素
 在 64 位元平台上，啟用總大小大於 2 GB 的陣列。  
   
- \<configuration > 元素  
-\<執行時間 > 元素  
-\<Gcallowverylargeobjects> > 元素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcAllowVeryLargeObjects>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ ms.locfileid: "70040670"
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|未啟用大小總計大於 2 GB 的陣列。 這是預設值。|  
 |`true`|64位平臺上已啟用大小總計大於 2 GB 的陣列。|  

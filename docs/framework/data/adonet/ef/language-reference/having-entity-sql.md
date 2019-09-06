@@ -2,12 +2,12 @@
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 76a63140668fb1f41cf9e6f901d9a43240a1d098
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fe8a177b83932c1c7607f8444c05292c0ee29684
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936075"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250840"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 指定群組或彙總的搜尋條件。  
@@ -26,7 +26,7 @@ ms.locfileid: "69936075"
  HAVING 子句是用來在群組的結果上指定額外篩選條件。 如果查詢運算式中未指定 GROUP BY 子句，便會假設為一組隱含的單一群組。  
   
 > [!NOTE]
-> HAVING 只能搭配[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)語句使用。 未使用[GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)時, HAVING 的行為就像是 WHERE 子句。  
+> HAVING 只能搭配[SELECT](select-entity-sql.md)語句使用。 未使用[GROUP BY](group-by-entity-sql.md)時, HAVING 的行為就像是 WHERE 子句。  
   
  HAVING 子句的運作方式很類似 WHERE 字句，唯一不同的是它必須套用在 GROUP BY 運算後面。 這表示 HAVING 子句只能參考群組別名和彙總，如以下範例所述。  
   
@@ -40,7 +40,7 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 HAVING 和 GROUP BY 運算子指定群組或彙總的搜尋條件。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. [遵循 how to:執行可傳回 PrimitiveType 結果](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
+1. [遵循 how to:執行可傳回 PrimitiveType 結果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   
@@ -48,5 +48,5 @@ HAVING SUM(o.Quantity) > 1
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [查詢運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Entity SQL 參考](entity-sql-reference.md)
+- [查詢運算式](query-expressions-entity-sql.md)

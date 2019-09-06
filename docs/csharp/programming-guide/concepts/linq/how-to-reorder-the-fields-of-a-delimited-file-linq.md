@@ -2,12 +2,12 @@
 title: 作法：重新排列分隔檔的欄位 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 1507d0f743070f15b8e64d5dcfb1b9499470b123
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 31cb7b936f58653e6223501f3b03cd9472b92453
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592696"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253465"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>作法：重新排列分隔檔的欄位 (LINQ) (C#)
 逗號分隔值 (CSV) 檔案是一種文字檔，常用來儲存試算表資料或其他以資料列和資料行呈現的表格式資料。 使用 <xref:System.String.Split%2A> 方法隔開欄位後，就可以利用 LINQ 輕鬆地查詢和管理 CSV 檔案。 事實上，您可以使用此相同的方法來重新排列任何結構化文字行中的其中幾部分，而不限於 CSV 檔案。  
@@ -18,7 +18,7 @@ ms.locfileid: "69592696"
   
 1. 將下列幾行複製到名為 spreadsheet1.csv 的純文字檔。 將此檔案儲存在您的專案資料夾中。  
   
-    ```  
+    ```csv  
     Adams,Terry,120  
     Fakhouri,Fadi,116  
     Feng,Hanying,117  

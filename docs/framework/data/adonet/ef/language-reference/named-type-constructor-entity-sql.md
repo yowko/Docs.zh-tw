@@ -2,12 +2,12 @@
 title: 具名類型建構函式 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: f95f0dcb92068675b2efff0af7e97b349976bf42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7027614e5667acedb02d871a09df1ac9d799405
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760450"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250012"
 ---
 # <a name="named-type-constructor-entity-sql"></a>具名類型建構函式 (Entity SQL)
 用於建立概念模型名義型別 (例如實體類型或複雜類型) 的執行個體。  
@@ -20,7 +20,7 @@ ms.locfileid: "61760450"
   
 ## <a name="arguments"></a>引數  
  `identifier`  
- 為簡單或引號識別項的值。 如需詳細資訊，請參閱[識別碼](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
+ 為簡單或引號識別項的值。 如需詳細資訊，請參閱[識別碼](identifiers-entity-sql.md)  
   
  `expression`  
  型別的屬性，假設與它們出現在型別宣告中的順序相同。  
@@ -52,7 +52,7 @@ ms.locfileid: "61760450"
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用具名型別建構函式來建立概念模型型別的執行個體。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [遵循 how to：執行可傳回 StructuralType 結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -60,5 +60,5 @@ ms.locfileid: "61760450"
   
 ## <a name="see-also"></a>另請參閱
 
-- [建構類型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [建構類型](constructing-types-entity-sql.md)
+- [Entity SQL 參考](entity-sql-reference.md)

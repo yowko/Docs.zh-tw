@@ -2,20 +2,20 @@
 title: 彙總標準函式
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: 2738d649190b088c34272de5b3e8732d87811a59
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3f4bb84c45e503fc0018e7869f3b41ddab4581a6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489505"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251347"
 ---
 # <a name="aggregate-canonical-functions"></a>彙總標準函式
 
 彙總 (Aggregate) 是指將一連串輸入值縮減成單一值的運算式。 彙總通常會與 SELECT 運算式的 GROUP BY 子句搭配使用，而且它們的使用位置具有一些條件約束 (Constraint)。
 
-## <a name="aggregate-entity-sql-canonical-functions"></a>彙總的 Entity SQL 標準函式
+## <a name="aggregate-entity-sql-canonical-functions"></a>匯總 Entity SQL 標準函式
 
-以下是彙總的 Entity SQL 標準函式。
+以下是匯總 Entity SQL 標準函數。
 
 ### <a name="avgexpression"></a>Avg(expression)
 
@@ -23,11 +23,11 @@ ms.locfileid: "66489505"
 
 **引數**
 
-`Int32`， `Int64`， `Double`，和`Decimal`。
+`Int32`、 、`Int64`和`Decimal`。 `Double`
 
 **傳回值**
 
-型別`expression`，或`null`如果所有輸入的值為`null`值。
+的類型`expression`，或`null`如果所有輸入值都是`null`值，則為。
 
 **範例**
 
@@ -78,7 +78,7 @@ ms.locfileid: "66489505"
 
 **傳回值**
 
-型別`expression`，或`null`如果所有輸入的值為`null`值。
+的類型`expression`，或`null`如果所有輸入值都是`null`值，則為。
 
 **範例**
 
@@ -95,7 +95,7 @@ ms.locfileid: "66489505"
 
 **傳回值**
 
-型別`expression`，或`null`如果所有輸入的值為`null`值。
+的類型`expression`，或`null`如果所有輸入值都是`null`值，則為。
 
 **範例**
 
@@ -129,7 +129,7 @@ ms.locfileid: "66489505"
 
 **傳回值**
 
-A `Double`，或`null`如果所有輸入的值為`null`值。
+如果`Double`所有輸入`null`值都是`null`值，則為，否則為。
 
 **範例**
 
@@ -146,7 +146,7 @@ A `Double`，或`null`如果所有輸入的值為`null`值。
 
 **傳回值**
 
-A `Double`，或`null`如果所有輸入的值為`null`值。
+如果`Double`所有輸入`null`值都是`null`值，則為，否則為。
 
 **範例**
 
@@ -163,7 +163,7 @@ A `Double`，或`null`如果所有輸入的值為`null`值。
 
 **傳回值**
 
-A `Double`，或`null`如果所有輸入的值為`null`值。
+如果`Double`所有輸入`null`值都是`null`值，則為，否則為。
 
 **範例**
 
@@ -180,18 +180,18 @@ A `Double`，或`null`如果所有輸入的值為`null`值。
 
 **傳回值**
 
-A `Double`，或`null`如果所有輸入的值為`null`值。
+如果`Double`所有輸入`null`值都是`null`值，則為，否則為。
 
 **範例**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
 [!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
-Microsoft SQL Client Managed Provider 中提供了對等的功能。 如需詳細資訊，請參閱 <<c0> [ 適用於 Entity Framework 函式的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。
+Microsoft SQL Client Managed Provider 中提供了對等的功能。 如需詳細資訊，請參閱[SqlClient for Entity Framework 函數](../sqlclient-for-ef-functions.md)。
 
-## <a name="collection-based-aggregates"></a>以集合為基礎的彙總
+## <a name="collection-based-aggregates"></a>以集合為基礎的匯總
 
-以集合為基礎的彙總 (集合函式) 會針對集合運作並傳回一個值。 比方說如果 ORDERS 是所有訂單的集合，您可以計算最早的出貨日期，使用下列運算式：
+以集合為基礎的彙總 (集合函式) 會針對集合運作並傳回一個值。 例如，如果 ORDERS 是所有訂單的集合，您可以使用下列運算式來計算最早的出貨日期：
 
 ```sql
 min(select value o.ShipDate from LOB.Orders as o)
@@ -199,7 +199,7 @@ min(select value o.ShipDate from LOB.Orders as o)
 
 以集合為基礎之彙總內部的運算式是在目前的環境名稱解析範圍內評估。
 
-## <a name="group-based-aggregates"></a>群組為基礎的彙總
+## <a name="group-based-aggregates"></a>以群組為基礎的匯總
 
 以群組為基礎的彙總會計算 GROUP BY 子句所定義的整個群組。 系統會針對結果中的每個群組，使用每個群組中的項目當做彙總計算的輸入來計算個別的彙總。 當 group-by 子句用於 select 運算式時，只有群組運算式名稱、彙總或常數運算式可以出現在投影或 order-by 子句中。
 
@@ -210,7 +210,7 @@ select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
-可以在 SELECT 運算式中以群組為基礎的彙總，而不需要明確 group-by 子句。 在此情況下，所有項目會視為單一群組。 這是指定群組，根據常數的對等項目。 以下列運算式為例：
+在 SELECT 運算式中，可能會有以群組為基礎的匯總，但不含明確的 group by 子句。 在此情況下，會將所有元素視為單一群組。 這相當於指定以常數為基礎的群組。 以下列運算式為例：
 
 ```sql
 select avg(ol.Quantity) from LOB.OrderLines as ol
@@ -224,8 +224,8 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 以群組為基礎之彙總內部的運算式是在 WHERE 子句運算式可見的名稱解析範圍內評估。
 
-TRANSACT-SQL，如同以群組為基礎的彙總也可以指定 ALL 或 DISTINCT 修飾詞。 如果有指定 DISTINCT 修飾詞，系統就會在計算彙總之前，從彙總輸入集合中刪除重複項目。 如果指定的是 ALL 修飾詞 (或沒有指定任何修飾詞)，就不會執行重複項目刪除作業。
+如同在 Transact-sql 中，以群組為基礎的匯總也可以指定 ALL 或 DISTINCT 修飾詞。 如果有指定 DISTINCT 修飾詞，系統就會在計算彙總之前，從彙總輸入集合中刪除重複項目。 如果指定的是 ALL 修飾詞 (或沒有指定任何修飾詞)，就不會執行重複項目刪除作業。
 
 ## <a name="see-also"></a>另請參閱
 
-- [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [標準函式](canonical-functions.md)

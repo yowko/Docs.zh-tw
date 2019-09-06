@@ -3,18 +3,19 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 148b2f3e12fbfbf85b800f0ca7f5dc7dc1845d24
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988334"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252006"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 透過 WS-同盟通訊協定來<xref:System.IdentityModel.Services.SessionAuthenticationModule>使用聯合驗證時, 會設定(WSFAM)和(SAM)。<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 使用或<xref:System.Security.Claims.ClaimsAuthorizationManager> 類別<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>來提供宣告型存取控制時, 設定。 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission>  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<federationConfiguration >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +46,7 @@ ms.locfileid: "69988334"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<system.identityModel.services>](system-identitymodel-services.md)|使用 WS-同盟通訊協定進行驗證的設定區段。|  
   

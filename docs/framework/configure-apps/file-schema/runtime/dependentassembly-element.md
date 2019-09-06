@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bf1a15ff27f4390f1985a2d2730b1acfcaab2c1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3a0604161ed6e7c3ead4a2e518daebc8414689af
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663819"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252711"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly > 元素
 封裝每一個組件的繫結原則和組件位置。 針對每`dependentAssembly`個元件使用一個元素。  
   
- \<configuration>  
-\<執行時間 >  
-\<assemblyBinding>  
-\<dependentAssembly>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,13 +44,13 @@ ms.locfileid: "69663819"
 |項目|描述|  
 |-------------|-----------------|  
 |`assemblyIdentity`|包含元件的識別資訊。 此元素必須包含在每個`dependentAssembly`元素中。|  
-|`codeBase`|指定如果電腦上未安裝共用元件, 執行時間可以在何處找到。|  
+|`codeBase`|指定如果電腦上未安裝共用元件，執行時間可以在何處找到。|  
 |`bindingRedirect`|將一個組件版本重新導向至另一個版本。|  
 |`publisherPolicy`|指定執行時間是否套用此元件的發行者原則。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  

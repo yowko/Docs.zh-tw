@@ -3,19 +3,20 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: 678e5c705181c55257b1ddb853690ada60ecd17a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 017309436660991c69da569e9cc4219e842ecaa3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942464"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251868"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 指定已向端點註冊的安全性權杖處理常式集合。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<securityTokenHandlers >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +40,7 @@ ms.locfileid: "69942464"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<add>](add.md)|將安全性權杖處理常式加入至權杖處理常式集合。|  
 |[\<clear>](clear.md)|清除權杖處理常式集合中的所有安全性權杖處理常式。|  
@@ -48,7 +49,7 @@ ms.locfileid: "69942464"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<identityConfiguration>](identityconfiguration.md)|指定服務層級的身分識別設定。|  
   

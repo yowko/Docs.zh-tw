@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb4d0ed5b33170c40aacb32bebbf1b59ca659be4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920769"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252610"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > 元素
 指定是否為通用語言執行平台事件啟用 Windows 事件追蹤 (ETW)。  
   
- \<configuration > 元素  
-\<執行時間 > 元素  
-\<etwEnabled>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<etwEnabled >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,7 +32,7 @@ ms.locfileid: "69920769"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |enabled|必要屬性。<br /><br /> 指定是否應該啟用 ETW。|  
   

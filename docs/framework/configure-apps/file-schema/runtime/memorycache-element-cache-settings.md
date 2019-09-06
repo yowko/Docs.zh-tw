@@ -6,19 +6,19 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 46f430f7cf112da40aa3b25bfb280c5014612eae
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 25467fc751ad772e74ca714e6059bc5134300ed6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663611"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252490"
 ---
-# <a name="memorycache-element-cache-settings"></a>\<memoryCache > 元素 (快取設定)
+# <a name="memorycache-element-cache-settings"></a>\<memoryCache > 元素（快取設定）
 定義項目，這個項目會用來設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取。 <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> 類別定義可用來設定快取的 [memoryCache](memorycache-element-cache-settings.md) 項目。 多個 <xref:System.Runtime.Caching.MemoryCache> 類別執行個體可以用於單一應用程式。 組態檔中的每個 `memoryCache` 項目都可以包含具名 <xref:System.Runtime.Caching.MemoryCache> 執行個體的設定。  
   
- \<configuration>  
-\<system.runtime.caching>  
-\<memoryCache>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> 的緩存**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<memoryCache >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "69663611"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`CacheMemoryLimitMegabytes`|<xref:System.Runtime.Caching.MemoryCache> 物件執行個體可以成長的最大記憶體大小 (MB)。 預設值為 0，表示預設會使用 <xref:System.Runtime.Caching.MemoryCache> 類別的自動調整啟發學習法。|  
 |`Name`|快取組態的名稱。|  
@@ -47,7 +47,7 @@ ms.locfileid: "69663611"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|包含 `namedCache` 執行個體的組態設定集合。|  
   
@@ -55,7 +55,8 @@ ms.locfileid: "69663611"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|包含類型, 可讓您在內建于 .NET Framework 的應用程式中, 執行輸出快取。|  
+|[\<configuration>](../configuration-element.md)|指定通用語言執行時間和 .NET Framework 應用程式所使用之每個設定檔中的根項目。|  
+|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|包含類型，可讓您在內建于 .NET Framework 的應用程式中，執行輸出快取。|  
   
 ## <a name="remarks"></a>備註  
  <xref:System.Runtime.Caching.MemoryCache> 類別是抽象 <xref:System.Runtime.Caching.ObjectCache> 類別的具體實作。 <xref:System.Runtime.Caching.MemoryCache> 類別執行個體可以與應用程式組態檔中的組態資訊一起提供。 [memoryCache](memorycache-element-cache-settings.md) 組態區段包含 `namedCaches` 組態集合。  
@@ -71,7 +72,7 @@ ms.locfileid: "69663611"
 - <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何透過<xref:System.Runtime.Caching.MemoryCache> `name`將屬性設定為 "default", 將物件的名稱設定為預設快取物件名稱。  
+ 下列範例示範如何透過<xref:System.Runtime.Caching.MemoryCache> `name`將屬性設定為 "default"，將物件的名稱設定為預設快取物件名稱。  
   
  `cacheMemoryLimitMegabytes` 屬性和 `physicalMemoryLimitPercentage` 屬性都設定為零。 將這些屬性設定為零表示預設會使用 <xref:System.Runtime.Caching.MemoryCache> 自動調整啟發學習法。 快取實作應該會每隔兩分鐘即比較目前的記憶體負載與絕對和百分比型記憶體限制。  
   
@@ -93,5 +94,5 @@ ms.locfileid: "69663611"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Caching.MemoryCache>
-- [\<> 元素 (快取設定)](system-runtime-caching-element-cache-settings.md)
-- [\<namedCaches > 元素 (快取設定)](namedcaches-element-cache-settings.md)
+- [\<> 元素（快取設定）](system-runtime-caching-element-cache-settings.md)
+- [\<namedCaches > 元素（快取設定）](namedcaches-element-cache-settings.md)

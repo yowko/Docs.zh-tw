@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663529"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252391"
 ---
 # <a name="probing-element"></a>\<探查 > 元素
-指定載入元件時, common language runtime 要搜尋的應用程式基底子目錄。  
+指定載入元件時，common language runtime 要搜尋的應用程式基底子目錄。  
   
- \<configuration>  
-\<執行時間 >  
-\<assemblyBinding>  
-\<探查 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<探查 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +37,17 @@ ms.locfileid: "69663529"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`privatePath`|必要屬性。<br /><br /> 指定可能包含元件之應用程式基底目錄的子目錄。 以分號分隔每個子目錄。|  
   
 ### <a name="child-elements"></a>子元素  
- 無。  
+
+無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  

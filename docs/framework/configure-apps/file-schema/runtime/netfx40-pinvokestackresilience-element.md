@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf97cc1ec544c7cf640c43b1b45760fca8cffe89
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8f4dffe5428ccb7541055fa4f3f335f57deaf2ec
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663548"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252434"
 ---
 # <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 元素
 
 指定執行階段是否會在執行階段自動修復不正確的平台叫用宣告，即使這麼做會使 Managed 和 Unmanaged 程式碼之間的轉換變慢。
 
-\<configuration > \
-\<執行時間 > \
-\<NetFx40_PInvokeStackResilience>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_PInvokeStackResilience >**  
 
 ## <a name="syntax"></a>語法
 
@@ -51,7 +51,7 @@ ms.locfileid: "69663548"
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|描述|
+|項目|說明|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |`runtime`|包含有關執行階段初始化選項的資訊。|

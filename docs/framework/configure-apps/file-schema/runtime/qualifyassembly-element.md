@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4aa90a378630c9aff74923d8e8600aed15a77a5e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 581b19cf74dcb5c2d5c4a549847629503fe0b6ff
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663494"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252363"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly > 元素
 指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。  
   
- \<configuration>  
-\<執行時間 >  
-\<assemblyBinding>  
-\<qualifyAssembly>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ ms.locfileid: "69663494"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`partialName`|必要屬性。<br /><br /> 指定元件出現在程式碼中的部分名稱。|  
 |`fullName`|必要屬性。<br /><br /> 指定元件出現在全域組件快取中的完整名稱。|  
@@ -49,7 +49,7 @@ ms.locfileid: "69663494"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  

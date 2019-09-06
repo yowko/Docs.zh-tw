@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e41aed0-3be9-4f75-98de-860a85552a3c
-ms.openlocfilehash: e205a50b70a29d056af23ba64eb630b50e304ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 034cca65f92f1fd8bd64d540de0cf1470a16c9e9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613286"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249349"
 ---
-# <a name="query-expression-syntax-examples-partitioning"></a>查詢運算式語法範例：資料分割
-本主題中的範例將示範如何使用<xref:System.Linq.Enumerable.Skip%2A>並<xref:System.Linq.Enumerable.Take%2A>方法來查詢[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)透過查詢運算式語法。 這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
+# <a name="query-expression-syntax-examples-partitioning"></a>查詢運算式語法範例：分割
+本主題中的範例將示範如何使用<xref:System.Linq.Enumerable.Skip%2A>和<xref:System.Linq.Enumerable.Take%2A>方法，利用查詢運算式語法來查詢[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) 。 這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
   
- 本主題中的範例使用下列`using` / `Imports`陳述式：  
+ 本主題中的範例會使用下列`using` / `Imports`語句：  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -38,4 +38,4 @@ ms.locfileid: "61613286"
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities 中的查詢](queries-in-linq-to-entities.md)

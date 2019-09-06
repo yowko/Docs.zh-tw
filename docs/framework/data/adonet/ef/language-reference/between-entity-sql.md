@@ -2,15 +2,15 @@
 title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: eae4387bcd5cbaf381ebf7169b6bc54d60328377
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 41036e629837bd5861368df545bed9423eac5b23
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309299"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251288"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
-判斷運算式是否會產生所指定範圍內的值。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN 運算式具有相同的功能，做為 TRANSACT-SQL BETWEEN 運算式。  
+判斷運算式是否會產生所指定範圍內的值。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Between 運算式與 expression 之間的 transact-sql 具有相同的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,12 +38,12 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
  如果 `true` 是在 `expression` 和 `begin_expression` 所指定的範圍內則為 `end_expression`；否則為 `false`。 如果 `null` 為 `expression`，或者 `null` 或 `begin_expression` 為 `end_expression`，便會傳回 `null`。  
   
 ## <a name="remarks"></a>備註  
- 若要指定排除範圍，請使用大於 (>) 和小於 (<) 運算子來取代 BETWEEN。  
+ 若要指定獨佔範圍，請使用大於（>）和小於（<）運算子，而不是介於之間。  
   
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 BETWEEN 運算子來判斷運算式是否會產生所指定範圍內的值。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. [遵循 how to：執行可傳回 StructuralType 結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
@@ -51,4 +51,4 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL 參考](entity-sql-reference.md)

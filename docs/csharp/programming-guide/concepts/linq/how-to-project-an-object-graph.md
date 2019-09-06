@@ -2,12 +2,12 @@
 title: 作法：投影物件圖形 (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: dcfdd8cba95d729a1f9bda3adb4b5fd8690b724a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592985"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253487"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>作法：投影物件圖形 (C#)
 本主題說明如何從 XML 規劃或填入物件圖形。  
@@ -218,7 +218,7 @@ class Program {
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   

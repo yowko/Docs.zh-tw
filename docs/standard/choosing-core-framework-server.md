@@ -4,12 +4,12 @@ description: 本指南說明您在 .NET 中建置伺服器應用程式時應考�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 37f7a4e3d543711af9ef40e458edfa1cac076db2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107282"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254208"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -28,7 +28,7 @@ ms.locfileid: "70107282"
 - 您的應用程式目前使用 .NET Framework (建議進行擴充，而不是移轉)。
 - 您的應用程式使用不適用於 .NET Core 的協力廠商 .NET 程式庫或 NuGet 套件。
 - 您的應用程式使用不適用於 .NET Core 的 .NET 技術。
-- 您的應用程式使用不支援 .NET Core 的平台。
+- 您的應用程式使用不支援 .NET Core 的平台。 Windows、macOS 和 Linux 都支援 .NET Core。
 
 ## <a name="when-to-choose-net-core"></a>選擇 .NET Core 的時機
 

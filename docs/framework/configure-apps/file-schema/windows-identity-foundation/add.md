@@ -3,20 +3,21 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 9505970c1fd7fcdfe62d3c6ef58f5d653fab4106
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 932e8452542ace66824fba1262694c220ce88676
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941999"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252191"
 ---
 # <a name="add"></a>\<add>
 將指定的安全性權杖處理常式加入至權杖處理常式集合。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,11 +41,11 @@ ms.locfileid: "69941999"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|型別|要加入之標記處理常式的 CLR 型別名稱。 如需如何指定屬性的`type`詳細資訊, 請參閱[自訂類型參考](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)。|  
+|型別|要加入之標記處理常式的 CLR 型別名稱。 如需如何指定屬性的`type`詳細資訊，請參閱[自訂類型參考](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>提供類別<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 、類別或其中任一個類別的衍生類別的設定。|  
 |[\<sessionTokenRequirement>](sessiontokenrequirement.md)|<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>提供類別或衍生類別的設定。|  
@@ -72,12 +73,12 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
  有數個內建的安全性權杖處理常式類別提供這項功能。 這些類別包括<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>、 <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>、 <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>和。<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
   
 > [!IMPORTANT]
-> Token 處理常式集合只能包含任何指定類型的單一處理程式。 這表示, 例如, 如果您想要將衍生自<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別的處理常式加入至集合, 則必須先從集合中移除預設存在的。 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 您可以使用[ \<remove >](remove.md)專案, 從[ \<](clear.md)集合中移除單一處理程式, 或使用 clear > 元素來移除集合中的所有處理常式。  
+> Token 處理常式集合只能包含任何指定類型的單一處理程式。 這表示，例如，如果您想要將衍生自<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別的處理常式加入至集合，則必須先從集合中移除預設存在的。 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 您可以使用[ \<remove >](remove.md)專案，從[ \<](clear.md)集合中移除單一處理程式，或使用 clear > 元素來移除集合中的所有處理常式。  
   
- 在處理常式上指定的設定會覆寫在[ \<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)專案下的權杖處理常式集合中指定的對等設定, 以及在[ \<服務層級的identityConfiguration >](identityconfiguration.md)元素。  
+ 在處理常式上指定的設定會覆寫在[ \<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)專案下的權杖處理常式集合中指定的對等設定，以及在[ \<服務層級的identityConfiguration >](identityconfiguration.md)元素。  
   
 ## <a name="example"></a>範例  
- 下列 XML 顯示如何使用`<add>`和`<remove>`專案, 以自訂會話權杖處理常式取代預設會話權杖處理常式。 XML 取自`ClaimsAwareWebFarm`範例。  
+ 下列 XML 顯示如何使用`<add>`和`<remove>`專案，以自訂會話權杖處理常式取代預設會話權杖處理常式。 XML 取自`ClaimsAwareWebFarm`範例。  
   
 ```xml  
 <securityTokenHandlers>  

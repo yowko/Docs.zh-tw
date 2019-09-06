@@ -2,15 +2,15 @@
 title: SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
-ms.openlocfilehash: 108a68f74849c7fa1418775c2a37db06d9d947ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c18e88967fcba2b8414bfc171412eba908002b3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879147"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248406"
 ---
 # <a name="sql-generation"></a>SQL 產生
-當您為 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 撰寫提供者時，您必須將 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 命令樹轉譯成特定資料庫可以了解的 SQL，例如 SQL Server 的 Transact-SQL 或 Oracle 的 PL/SQL。 在本章節中，您將會學習如何為 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 提供者開發 SQL 產生元件 (適用於 SELECT 查詢)。 如需插入資訊，更新和刪除查詢，請參閱[修改 SQL 產生](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)。  
+當您為 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 撰寫提供者時，您必須將 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 命令樹轉譯成特定資料庫可以了解的 SQL，例如 SQL Server 的 Transact-SQL 或 Oracle 的 PL/SQL。 在本章節中，您將會學習如何為 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 提供者開發 SQL 產生元件 (適用於 SELECT 查詢)。 如需插入、更新和刪除查詢的詳細資訊，請參閱[修改 SQL 產生](modification-sql-generation.md)。  
   
  若要了解本章節，您應該要熟悉 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 及 ADO.NET 提供者模型。 您也應該了解命令樹和 <xref:System.Data.Common.CommandTrees.DbExpression>。  
   
@@ -20,12 +20,12 @@ ms.locfileid: "61879147"
  <xref:System.Data.Common.DbProviderServices> 類別是存取 SQL 產生層的起點，可將命令樹轉換成 <xref:System.Data.Common.DbCommand>。  
   
 ## <a name="in-this-section"></a>本節內容  
- [命令樹的形狀](../../../../../docs/framework/data/adonet/ef/the-shape-of-the-command-trees.md)  
+ [命令樹的形狀](the-shape-of-the-command-trees.md)  
   
- [從命令樹產生 SQL - 最佳做法](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
+ [從命令樹產生 SQL - 最佳做法](generating-sql-from-command-trees-best-practices.md)  
   
- [範例提供者中的 SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
+ [範例提供者中的 SQL 產生](sql-generation-in-the-sample-provider.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [撰寫 Entity Framework 資料提供者](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [撰寫 Entity Framework 資料提供者](writing-an-ef-data-provider.md)

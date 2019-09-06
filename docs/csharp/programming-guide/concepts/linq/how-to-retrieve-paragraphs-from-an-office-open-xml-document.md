@@ -1,13 +1,13 @@
 ---
-title: 作法：從 Office Open XML 文件擷取段落 (C#)
+title: HOW TO：從 Office Open XML 文件擷取段落 (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 352389467bbe3c2a5e7364b081539bad8efc3f3b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: bfac597e0c36f41216821947928babd471fd61b3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592617"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253396"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>作法：從 Office Open XML 文件擷取段落 (C#)
 本主題顯示的範例可開啟 Office Open XML 文件，並在文件中擷取所有段落的集合。  
@@ -165,7 +165,7 @@ class Program
   
  執行[建立來源 Office Open XML 文件 (C#)](./creating-the-source-office-open-xml-document.md) 中所描述的範例 Open XML 文件時，此範例會產生下列輸出：  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

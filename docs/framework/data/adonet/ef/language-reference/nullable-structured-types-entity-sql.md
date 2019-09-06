@@ -2,12 +2,12 @@
 title: 可為 Null 的結構類型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6e1669bdc62de379051df60d6650fddb0c808da4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b078ae458aba73e82957f84408b1000b216aef9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641822"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249806"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>可為 Null 的結構類型 (Entity SQL)
 結構化型別的 `null` 執行個體是不存在的執行個體。 這與現有的執行個體 (所有的屬性都有 `null` 值) 不同。  
@@ -90,4 +90,4 @@ ms.locfileid: "64641822"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL 概觀](entity-sql-overview.md)

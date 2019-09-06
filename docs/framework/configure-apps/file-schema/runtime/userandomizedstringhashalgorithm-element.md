@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91983a0910b272e621783f0fdb68242ddbd20f03
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 49b53dcd4db7e0ac1e9079e763b8ed76c1088e0e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456179"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252194"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 項目
-判斷 common language runtime 是否會計算字串的雜湊碼，在每個應用程式定義域為基準。  
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 元素
+判斷 common language runtime 是否會針對每個應用程式網域, 計算字串的雜湊碼。  
   
- \<configuration>  
-\<執行階段 >  
-\<UseRandomizedStringHashAlgorithm>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<UseRandomizedStringHashAlgorithm>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,16 +36,16 @@ ms.locfileid: "66456179"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定是否計算字串的雜湊碼，以在每個應用程式定義域為基準。|  
+|`enabled`|必要屬性。<br /><br /> 指定是否要根據每個應用程式域來計算字串的雜湊碼。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`0`|Common language runtime 不會計算字串的雜湊碼在每個應用程式網域進行;單一的演算法用來計算字串的雜湊碼。 這是預設值。|  
-|`1`|Common language runtime 計算字串的雜湊碼在每個應用程式定義域為基準。 相同的字串，在不同的應用程式定義域和不同的處理序中會有不同的雜湊碼。|  
+|`0`|通用語言執行平臺不會針對每個應用程式網域來計算字串的雜湊碼。單一演算法用來計算字串雜湊碼。 這是預設值。|  
+|`1`|通用語言執行時間會針對每個應用程式網域, 計算字串的雜湊碼。 不同應用程式域和不同進程中的相同字串會有不同的雜湊碼。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -58,26 +58,26 @@ ms.locfileid: "66456179"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 根據預設，<xref:System.StringComparer>類別和<xref:System.String.GetHashCode%2A?displayProperty=nameWithType>方法使用單一的雜湊演算法可跨應用程式定義域產生一致雜湊碼。 這相當於設定`enabled`的屬性`<UseRandomizedStringHashAlgorithm>`項目`0`。 這是.NET Framework 4 中所使用的雜湊演算法。  
+ 根據預設, <xref:System.StringComparer>類別<xref:System.String.GetHashCode%2A?displayProperty=nameWithType>和方法會使用單一雜湊演算法, 在應用程式域之間產生一致的雜湊碼。 這相當於將`enabled` `<UseRandomizedStringHashAlgorithm>`元素的屬性設定為`0`。 這是 .NET Framework 4 中使用的雜湊演算法。  
   
- <xref:System.StringComparer>類別和<xref:System.String.GetHashCode%2A?displayProperty=nameWithType>方法也可以使用不同的雜湊演算法來計算雜湊程式碼在每個應用程式定義域為基準。 如此一來，對等字串的雜湊程式碼會在應用程式定義域而有所不同。 這是選用的功能;若要充分利用它，您必須設定`enabled`的屬性`<UseRandomizedStringHashAlgorithm>`項目`1`。  
+ <xref:System.StringComparer> 類別<xref:System.String.GetHashCode%2A?displayProperty=nameWithType>和方法也可以使用不同的雜湊演算法, 根據每個應用程式域來計算雜湊碼。 因此, 對等字串的雜湊碼會在應用程式域之間有所不同。 這是可加入宣告的功能;若要利用它, 您必須將`enabled` `<UseRandomizedStringHashAlgorithm>`元素的屬性設定為`1`。  
   
- 雜湊表中的字串查閱通常是 o （1） 的作業。 不過，當發生大量碰撞，查閱可能會變成 O (n<sup>2</sup>) 作業。 您可以使用`<UseRandomizedStringHashAlgorithm>`組態項目來產生隨機的雜湊演算法，每個應用程式定義域，進而限制可能發生的衝突數目，特別是當導出的雜湊碼的索引鍵為基礎的資料輸入由使用者。  
+ 雜湊表中的字串查詢通常是 O (1) 運算。 不過, 當發生大量衝突時, 查閱可能會變成 O (n<sup>2</sup>) 運算。 您可以使用`<UseRandomizedStringHashAlgorithm>` configuration 專案來產生每個應用程式域的隨機雜湊演算法, 進而限制可能發生衝突的數目, 特別是在計算雜湊碼的索引鍵時, 會根據資料輸入由使用者。  
   
 ## <a name="example"></a>範例  
- 下列範例會定義`DisplayString`類別，其中包含私用的字串常數， `s`，其值為"This is 字串"。 它也包含`ShowStringHashCode`方法，以顯示的字串值和其雜湊程式碼，以及用來執行此方法的應用程式定義域的名稱。  
+ 下列範例會定義`DisplayString`包含私用字串`s`常數的類別, 其值為 "This is a string"。 它也包含一個`ShowStringHashCode`方法, 它會顯示字串值和其雜湊碼, 以及方法執行所在之應用程式域的名稱。  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  
   
- 當您執行範例，而不需要提供組態檔時，它會顯示類似下列的輸出。 請注意，字串的雜湊碼相同的兩個應用程式定義域中。  
+ 當您執行範例但未提供設定檔時, 它會顯示類似下列的輸出。 請注意, 字串的雜湊碼在兩個應用程式域中都相同。  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
   
- 不過，如果您將下列組態檔新增至範例的目錄，然後執行範例的相同字串的雜湊碼將會因應用程式定義域。  
+ 不過, 如果您將下列設定檔新增至範例的目錄, 然後執行範例, 則相同字串的雜湊碼將會因應用程式域而有所不同。  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -88,7 +88,7 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
 </configuration>  
 ```  
   
- 當組態檔存在時，此範例會顯示下列輸出：  
+ 當設定檔存在時, 此範例會顯示下列輸出:  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 52681a4035ef55133c6191e7eac2cab7ed36c8fb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614410"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249338"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>查詢運算式語法範例：Projection
-本主題中的範例將示範如何使用`Select`方法和`From … From …`關鍵字來查詢[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)透過查詢運算式語法。 `From … From …` 以查詢為基礎，等同於 `SelectMany` 方法。 這些範例中使用的 AdventureWorks Sales Model 是根據 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
+本主題中的範例將示範如何使用`Select`方法`From … From …`和關鍵字，利用查詢運算式語法來查詢[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) 。 `From … From …` 以查詢為基礎，等同於 `SelectMany` 方法。 這些範例中使用的 AdventureWorks Sales Model 是根據 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
   
- 本主題中的範例使用下列`using` / `Imports`陳述式：  
+ 本主題中的範例會使用下列`using` / `Imports`語句：  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="select"></a>選用版  
+## <a name="select"></a>Select  
   
 ### <a name="example"></a>範例  
  下列範例會使用 <xref:System.Linq.Enumerable.Select%2A> 方法來傳回 `Product` 資料表中的所有資料列，並顯示產品名稱。  
@@ -40,7 +40,7 @@ ms.locfileid: "61614410"
  [!code-csharp[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectanonymoustypes)]
  [!code-vb[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectanonymoustypes)]  
   
-## <a name="from--from--selectmany"></a>從... 從... (SelectMany)  
+## <a name="from--from--selectmany"></a>從。 從。 SelectMany  
   
 ### <a name="example"></a>範例  
  下列範例會使用 `From … From …` (<xref:System.Linq.Enumerable.SelectMany%2A> 方法的對等項目) 來選取 `TotalDue` 少於 500.00 的所有訂單。  
@@ -62,4 +62,4 @@ ms.locfileid: "61614410"
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities 中的查詢](queries-in-linq-to-entities.md)

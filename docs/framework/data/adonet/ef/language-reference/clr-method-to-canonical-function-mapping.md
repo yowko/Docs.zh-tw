@@ -2,16 +2,16 @@
 title: 標準函式的對應 CLR 方法
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f14ad8d9e8f919fe820447cc991b102319b38d5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605713"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251218"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>標準函式的對應 CLR 方法
 
-Entity Framework 提供一組標準函式，可實作在許多資料庫系統常見的功能，例如字串操作和數學函式。 這樣就可以讓開發人員以廣泛的資料庫系統為相標。 從某種查詢技術 (例如 LINQ to Entities) 呼叫時，這些標準函式會轉譯成所使用之提供者的正確對應存放函式。 這樣就可以利用跨資料來源的通用形式來表示函式引動過程，在不同的資料來源提供一致的查詢體驗。 如果運算元為數值型別，位元運算 AND、OR,、NOT 和 XOR 運算子也是對應到這些標準函式。 若為布林運算元，位元運算 AND、OR、NOT 和 XOR 運算子會計算這些運算元的邏輯 AND、OR、NOT 和 XOR 運算。 如需詳細資訊，請參閱 <<c0> [ 標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)。
+Entity Framework 提供一組標準函式，可實作在許多資料庫系統常見的功能，例如字串操作和數學函式。 這樣就可以讓開發人員以廣泛的資料庫系統為相標。 從某種查詢技術 (例如 LINQ to Entities) 呼叫時，這些標準函式會轉譯成所使用之提供者的正確對應存放函式。 這樣就可以利用跨資料來源的通用形式來表示函式引動過程，在不同的資料來源提供一致的查詢體驗。 如果運算元為數值型別，位元運算 AND、OR,、NOT 和 XOR 運算子也是對應到這些標準函式。 若為布林運算元，位元運算 AND、OR、NOT 和 XOR 運算子會計算這些運算元的邏輯 AND、OR、NOT 和 XOR 運算。 如需詳細資訊，請參閱[標準](canonical-functions.md)函式。
 
 就 LINQ 案例而言，針對 Entity Framework 的查詢會透過標準函式將某些 CLR 方法對應到基礎資料來源。 在 LINQ to Entities 查詢中，不是明確對應到標準函式的任何方法呼叫，將會導致擲回執行階段 <xref:System.NotSupportedException> 例外狀況 (Exception)。
 
@@ -40,17 +40,17 @@ Entity Framework 提供一組標準函式，可實作在許多資料庫系統常
 
 |System.String 方法 (執行個體)|標準函式|注意|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|如果`value`不是一個常數，則這會對應至 IndexOf (`this`， `value`) > 0|
-|Boolean EndsWith(String `value`)|`this` 像是`'` % `value`'|如果 `value` 不是一個常數，則這會對應至 Right(`this`, length(`value`)) = `value`。|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|如果`value`不是常數，則這會對應至 IndexOf （`this`， `value`） > 0|
+|Boolean EndsWith(String `value`)|`this`LIKE `'` '% `value`|如果 `value` 不是一個常數，則這會對應至 Right(`this`, length(`value`)) = `value`。|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|如果 `value` 不是一個常數，則這會對應至 IndexOf(`this`, `value`) = 1。|
 |Length|Length(`this`)||
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (子字串 (`this`、 1、 `startIndex`)，子字串 (`this`， `startIndex`  +  `count` + 1，長度 (`this`)-(`startIndex` + `count`)))|只有當 `startIndex` 是大於或等於 0 的整數時，才支援 Remove(`count`, `count`)。|
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat （substring （`this`，1， `startIndex`），substring （`this`， `startIndex` `count` `this` `count`  + + 1，Length （）-（`startIndex`）））  + |只有當 `startIndex` 是大於或等於 0 的整數時，才支援 Remove(`count`, `count`)。|
 |System.String Replace(String `oldValue`, String `newValue`)|Replace(`this`, `oldValue`, `newValue`)||
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||
-|System.String Substring(Int32 `startIndex`, Int32 `length`)|子字串 (`this`， `startIndex` + 1， `length`)||
+|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring （`this`， `startIndex` + 1， `length`）||
 |System.String ToLower()|ToLower(`this`)||
 |System.String ToUpper()|ToUpper(`this`)||
 |System.String Trim()|Trim(`this`)||
@@ -69,9 +69,9 @@ Entity Framework 提供一組標準函式，可實作在許多資料庫系統常
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> 運算子||
 |Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> = 運算子||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= 運算子||
-|布林 op_LessThan (DateTime `t1`，DateTime `t2`)|< 運算子||
+|布林值 op_LessThan （ `t1`datetime， `t2`datetime）|< 運算子||
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< = 運算子||
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal`Interval`為 DateInterval， \_<br /><br /> ByVal`DateValue`為 DateTime， \_<br /><br /> 選擇性 ByVal`FirstDayOfWeekValue`為 FirstDayOfWeek = 使用， \_<br /><br /> 選擇性 ByVal`FirstWeekOfYearValue`為 FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||如需詳細資訊，請參閱「DatePart 函式」一節。|
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval`為 DateInterval，\_<br /><br /> ByVal `DateValue`做為 DateTime，\_<br /><br /> 選擇性的`FirstDayOfWeekValue` ByVal As FirstDayOfWeek = VbSunday，\_<br /><br /> 選擇性的`FirstWeekOfYearValue` ByVal As FirstWeekOfYear = VbFirstJan1\_<br /><br /> ) As Integer||如需詳細資訊，請參閱「DatePart 函式」一節。|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||
@@ -89,8 +89,8 @@ Entity Framework 提供一組標準函式，可實作在許多資料庫系統常
 |Hour|Hour(`this`)|
 |Millisecond|Millisecond(`this`)|
 |Minute|Minute(`this`)|
-|月份|Month(`this`)|
-|Second|Second(`this`)|
+|Month|Month(`this`)|
+|第二個|Second(`this`)|
 |Year|Year(`this`)|
 
 ## <a name="systemdatetimeoffset-method-instance-mapping"></a>System.DateTimeOffset 方法 (執行個體) 對應
@@ -103,8 +103,8 @@ Entity Framework 提供一組標準函式，可實作在許多資料庫系統常
 |Hour|Hour(`this`)|對 SQL Server 2005 不支援。|
 |Millisecond|Millisecond(`this`)|對 SQL Server 2005 不支援。|
 |Minute|Minute(`this`)|對 SQL Server 2005 不支援。|
-|月份|Month(`this`)|對 SQL Server 2005 不支援。|
-|Second|Second(`this`)|對 SQL Server 2005 不支援。|
+|Month|Month(`this`)|對 SQL Server 2005 不支援。|
+|第二個|Second(`this`)|對 SQL Server 2005 不支援。|
 |Year|Year(`this`)|對 SQL Server 2005 不支援。|
 
 > [!NOTE]
@@ -203,4 +203,4 @@ Entity Framework 提供一組標準函式，可實作在許多資料庫系統常
 
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ to Entities](linq-to-entities.md)

@@ -2,12 +2,12 @@
 title: 作法：擷取項目的值 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 821c387bf1e3a2d58686465e5562fde9457127bf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a7b36ea7bb602c241593da356b87d35baee8163f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592484"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253357"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>作法：擷取項目的值 (LINQ to XML) (C#)
 本主題顯示如何取得項目的值。 以下有兩種主要的方式可達成此目標。 其中一種方式為，將 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 轉型為所需的型別。 然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。 或者，您可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 屬性。  
@@ -25,7 +25,7 @@ Console.WriteLine("Value of e:" + (string)e);
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -41,7 +41,7 @@ Console.WriteLine("Value of e:" + (int)e);
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 <Age>44</Age>  
 Value of e:44  
 ```  
@@ -61,7 +61,7 @@ Console.WriteLine("Value of e:" + e.Value);
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -131,7 +131,7 @@ Console.WriteLine("v4:{0}", v4 == null ? "element does not exist" : v4.ToString(
   
  此程式碼會產生下列輸出：  
   
-```  
+```output  
 c1:child 1 content  
 c2:2  
 c3:element does not exist  

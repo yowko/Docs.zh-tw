@@ -9,19 +9,19 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: 3cf99a4dcf64b82846729d8663e398385b7a1086
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e703b9739ea93d3c7bf08371bc264bbdcb05b716
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663457"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252333"
 ---
 # <a name="runtime-element"></a>\<執行時間 > 元素
 
 提供 common language runtime 用來設定應用程式的資訊。
 
-\<configuration > \
-\<執行時間 >
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<執行時間 >**  
 
 ## <a name="syntax"></a>語法
 
@@ -83,7 +83,7 @@ ms.locfileid: "69663457"
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|描述|
+|項目|說明|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 

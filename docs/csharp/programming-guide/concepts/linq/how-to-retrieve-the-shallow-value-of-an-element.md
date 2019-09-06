@@ -2,12 +2,12 @@
 title: 作法：擷取項目的表層值 (C#)
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 2b37cc19e2ec5149589131497b36ad381900336b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 662c20cf2b17b9f93e00f0fd3c5cf925b5274de5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592508"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253362"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>作法：擷取項目的表層值 (C#)
 本主題說明如何取得項目的表層值。 表層值僅是特定項目的值。與深層值不同的是，深層值包含了由所有子代項目連結成單一字串的值。  
@@ -72,7 +72,7 @@ class Program
   
  這個範例會產生下列輸出：  
   
-```  
+```output  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  
 Column  Name="Name"         =Customer.Name.Heading  
 Column  Name="CustomerId"   =Customer.CustomerId  

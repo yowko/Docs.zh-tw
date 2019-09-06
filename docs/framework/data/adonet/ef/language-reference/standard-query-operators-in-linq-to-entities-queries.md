@@ -2,24 +2,24 @@
 title: LINQ to Entities 查詢中的標準查詢運算子
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: f2661f1b492ff8f2ed18c7b396326562050ca45b
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 76d32db5c81d88db28194da19e722b1a80c1a870
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539449"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249139"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 查詢中的標準查詢運算子
-在查詢中，您可以指定要從資料來源擷取的資訊。 此外，查詢也可以指定該項資訊傳回之前應該如何排序、分組和成形。 LINQ 提供一組可在查詢中使用的標準查詢方法。 這些方法大多操作序列;在此情況下，序列是其類型會實作的物件<xref:System.Collections.Generic.IEnumerable%601>介面或<xref:System.Linq.IQueryable%601>介面。 標準查詢運算子的查詢功能包括篩選、投影、彙總、排序、群組、分頁等等。 某些更常用的標準查詢運算子具有專用的關鍵字語法，因此可以使用查詢運算式語法來呼叫它們。 相較於以方法為根據的同等項目，查詢運算式是一個不同且更具可讀性之表示查詢的方式。 查詢運算式子句會在編譯時期轉譯成查詢方法的呼叫。 如需標準查詢運算子具有相等的查詢運算式子句的清單，請參閱 <<c0> [ 標準查詢運算子概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))。  
+在查詢中，您可以指定要從資料來源擷取的資訊。 此外，查詢也可以指定該項資訊傳回之前應該如何排序、分組和成形。 LINQ 提供一組可在查詢中使用的標準查詢方法。 這些方法大多會在序列上運作;在此內容中，序列是一種物件，其型<xref:System.Collections.Generic.IEnumerable%601>別會實<xref:System.Linq.IQueryable%601>作為介面或介面。 標準查詢運算子的查詢功能包括篩選、投影、彙總、排序、群組、分頁等等。 某些更常用的標準查詢運算子具有專用的關鍵字語法，因此可以使用查詢運算式語法來呼叫它們。 相較於以方法為根據的同等項目，查詢運算式是一個不同且更具可讀性之表示查詢的方式。 查詢運算式子句會在編譯時期轉譯成查詢方法的呼叫。 如需具有對等查詢運算式子句的標準查詢運算子清單，請參閱[標準查詢運算子總覽](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))。  
   
- 並非所有標準查詢運算子支援 LINQ to Entities 查詢。 如需詳細資訊，請參閱 <<c0> [ 支援和不受支援的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)。 本主題提供的特定 LINQ to Entities 之標準查詢運算子的相關資訊。 如需在 LINQ to Entities 查詢的已知問題的詳細資訊，請參閱[已知問題在 LINQ to Entities 和考量](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)。  
+ LINQ to Entities 查詢中不支援所有標準查詢運算子。 如需詳細資訊，請參閱[支援和不支援的 LINQ 方法（LINQ to Entities）](supported-and-unsupported-linq-methods-linq-to-entities.md)。 本主題提供 LINQ to Entities 特有之標準查詢運算子的相關資訊。 如需 LINQ to Entities 查詢中已知問題的詳細資訊，請參閱[LINQ to Entities 中的已知問題和考慮](known-issues-and-considerations-in-linq-to-entities.md)。  
   
 ## <a name="projection-and-filtering-methods"></a>投影及篩選方法  
- *投影*是指轉換的結果集所需的格式項目。 例如，您可以從結果集中的每一個物件投影您需要的屬性子集，也可以投影屬性並針對它執行數學計算，或是從結果集投影整個物件。 投影方法為 `Select` 和 `SelectMany`。  
+ *投影*指的是將結果集的專案轉換成所需的表單。 例如，您可以從結果集中的每一個物件投影您需要的屬性子集，也可以投影屬性並針對它執行數學計算，或是從結果集投影整個物件。 投影方法為 `Select` 和 `SelectMany`。  
   
- *篩選*指的是作業的結果集限制為包含只有在符合指定的條件的元素。 篩選方法為 `Where`。  
+ *篩選*是指將結果集限制為只包含符合指定條件之元素的作業。 篩選方法為 `Where`。  
   
- LINQ to Entities，支援大多數投影和篩選方法的多載接受位置引數除外。  
+ LINQ to Entities 中支援投射和篩選方法的大部分多載，但接受位置引數的例外狀況除外。  
   
 ## <a name="join-methods"></a>聯結方法  
  在以彼此沒有可瀏覽關聯性之資料來源為目標的查詢中，聯結是一項重要的作業。 兩個資料來源的聯結是指某個資料來源中的物件與另一個資料來源中共用相同屬性 (Attribute) 或屬性 (Property) 之物件的關聯。 聯結方法為 `Join` 和 `GroupJoin`。  
@@ -29,7 +29,7 @@ ms.locfileid: "67539449"
 ## <a name="set-methods"></a>設定方法  
  LINQ 中的 Set 作業是指一種查詢作業，這種作業會讓其結果集根據相同或另一個集合中是否有同等項目存在而定。 Set 方法為 `All`、`Any`、`Concat`、`Contains`、`DefaultIfEmpty`、`Distinct`、`EqualAll`、`Except`、`Intersect` 和 `Union`。  
   
- 大多數 set 方法的多載支援 LINQ to Entities，但有一些差異，相較於 LINQ to Objects 的行為。 不過，設定使用的方法<xref:System.Collections.Generic.IEqualityComparer%601>不支援，因為比較子無法轉譯成資料來源。  
+ 在 LINQ to Entities 中，會支援 set 方法的大部分多載，不過相較于 LINQ to Objects 有一些行為上的差異。 不過，不支援使用<xref:System.Collections.Generic.IEqualityComparer%601>的 set 方法，因為比較子無法轉譯成資料來源。  
   
 ## <a name="ordering-methods"></a>排序方法  
  排序指的是根據一或多個屬性來排序結果集的項目。 藉由指定一個以上的排序準則，就可以中斷群組內的繫結。  
@@ -67,16 +67,16 @@ ms.locfileid: "67539449"
 |`Sum`|傳回 null。|傳回 null。|傳回序列中非 null 值的總和。|計算數值序列的總和。|  
   
 ## <a name="type-methods"></a>型別方法  
- Entity Framework 的內容中支援處理型別轉換和測試的兩個 LINQ 方法。 這表示唯一支援的類型會對應到適當的 Entity Framework 類型的類型。 如需這些類型的清單，請參閱 <<c0> [ 概念模型型別 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)。 型別方法為 `Convert` 和 `OfType`。  
+ Entity Framework 的內容都支援兩種處理類型轉換和測試的 LINQ 方法。 這表示唯一支援的類型是對應至適當 Entity Framework 類型的類型。 如需這些類型的清單，請參閱[概念模型類型（CSDL）](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)。 型別方法為 `Convert` 和 `OfType`。  
   
  實體類型支援 `OfType`。 概念模型基本型別支援 `Convert`。  也支援 C# `is` 和 `as` 方法。  
   
 ## <a name="paging-methods"></a>分頁方法  
- 分頁作業從序列中傳回單一項目或多個項目。 支援的分頁方法為`First`， `FirstOrDefault`， `Single`， `SingleOrDefault`， `Skip`，和`Take`。  
+ 分頁作業會從序列中傳回單一元素或多個元素。 支援的分頁方法為`First`、 `FirstOrDefault`、 `Single`、 `SingleOrDefault`、 `Skip`和。 `Take`  
   
- 不支援的一些分頁方法，因為無法將函式對應至資料來源，或缺少隱含的資料來源上的集合排序。 傳回預設值的方法限制為具有 null 預設值的概念模型基本型別及參考型別。 在空序列上執行的分頁方法將會傳回 null。  
+ 由於無法將函數對應至資料來源，或在資料來源上缺少集合的隱含排序，因此不支援許多分頁方法。 傳回預設值的方法限制為具有 null 預設值的概念模型基本型別及參考型別。 在空序列上執行的分頁方法將會傳回 null。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [支援和不支援的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
+- [支援和不支援的 LINQ 方法 (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md)
 - [標準查詢運算子概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

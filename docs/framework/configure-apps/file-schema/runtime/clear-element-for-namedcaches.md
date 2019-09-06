@@ -5,20 +5,21 @@ helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: a90970e468359714bbbb858f3f300c26b5757a4d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: bcc0e23f0c47ad3a98430e36da31d39612caa3c9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658853"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252752"
 ---
 # <a name="clear-element-for-namedcaches"></a>\<清除 namedCaches 的\<> 元素 >
 清除`namedCache` 集合`namedCaches`中記憶體快取的所有專案。  
   
- \<system.runtime.caching>  
-\<memoryCache>  
-\<namedCaches>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> 的緩存**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namedCaches >** ](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<清除 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,13 +44,13 @@ ms.locfileid: "69658853"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|包含已命名<xref:System.Runtime.Caching.MemoryCache>實例的設定集合。|  
   
 ## <a name="remarks"></a>備註  
- 元素會清除已`namedCache`命名快取集合中記憶體快取的所有專案。 `clear` 您可以使用`clear`專案, 然後`add`使用專案來加入新的命名快取專案, 以確保集合中沒有其他命名的快取。  
+ 元素會清除已`namedCache`命名快取集合中記憶體快取的所有專案。 `clear` 您可以使用`clear`專案，然後`add`使用專案來加入新的命名快取專案，以確保集合中沒有其他命名的快取。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<namedCaches > 元素 (快取設定)](namedcaches-element-cache-settings.md)
+- [\<namedCaches > 元素（快取設定）](namedcaches-element-cache-settings.md)

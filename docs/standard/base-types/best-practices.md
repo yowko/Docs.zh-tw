@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: a945c53f3206f29cf2b07fea86ba3e8e3af11645
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988830"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254218"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中規則運算式的最佳做法
 <a name="top"></a> .NET 中的規則運算式引擎是一項強大且功能完整的工具，會依據模式比對而非比較與比對常值文字的方式處理文字。 在大部分情況下，它會快速且有效率地執行模式比對。 不過，在某些情況下，規則運算式引擎速度可能變得相當慢。 而只有鮮少情況下，它甚至可能在處理相對小的輸入卻耗費數小時甚至數天時停止回應。  
@@ -96,7 +96,7 @@ ms.locfileid: "69988830"
 > 如果在方法呼叫中重複使用相同的規則運算式，或是應用程式大量使用規則運算式物件，則方法呼叫的形式 (靜態、解譯、編譯) 就會影響效能。  
   
 ### <a name="static-regular-expressions"></a>靜態規則運算式  
- 建議您使用靜態規則運算式方法來替代使用相同的規則運算式重複具現化規則運算式物件。 與規則運算式物件所使用的規則運算式模式不同的是，規則運算式引擎會在內部快取作業程式碼或是從執行個體方法呼叫中所使用模式編譯的 Microsoft intermediate language (MSIL)。  
+ 建議您使用靜態規則運算式方法來替代使用相同的規則運算式重複具現化規則運算式物件。 不同于正則運算式物件所使用的正則運算式模式，正則運算式引擎會在內部快取從靜態方法呼叫中使用之模式的作業程式碼或已編譯的 Microsoft 中繼語言（MSIL）。  
   
  例如，事件處理常式經常會呼叫另一個方法來驗證使用者輸入。 下列程式碼中會反映這種情況，其中 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Click> 事件會用來呼叫名為 `IsValidCurrency` 的方法，該方法會檢查使用者是否已輸入貨幣符號且後面至少有一個十進位數字。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "69988830"
   
  這個範例中使用的規則運算式 `\p{Sc}+\s*\d+` 會驗證輸入字串是否包含貨幣符號和至少一個十進位數字。 模式的定義方式如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\p{Sc}+`|比對 [Unicode Symbol, Currency] 分類中的一個或多個字元。|  
 |`\s*`|比對零個以上的空白字元。|  
@@ -138,7 +138,7 @@ ms.locfileid: "69988830"
   
  範例中所使用規則運算式模式 `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]` 的定義方式如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`\w+`|比對一個或多個文字字元。|  
@@ -294,7 +294,7 @@ ms.locfileid: "69988830"
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[規則運算式行為的詳細資訊](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|檢查 .NET 中規則運算式引擎的實作。 本主題將強調規則運算式的靈活度，並且說明開發人員應負責確保規則運算式引擎有效率且穩定地運作。|  
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|說明何謂回溯以及回溯如何影響規則運算式的效能，並且檢查提供回溯之替代方式的語言項目。|  

@@ -2,12 +2,12 @@
 title: 標準函式
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8949735ba4712b721460335b4579f0a268c91aea
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606084"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251281"
 ---
 # <a name="canonical-functions"></a>標準函式
 本節討論所有資料提供者都支援，而且可由所有查詢技術使用的標準函式。 標準函式無法由提供者擴允。  
@@ -20,36 +20,36 @@ ms.locfileid: "61606084"
   
  所有標準函式都必須明確指定 null 輸入行為和錯誤條件。 存放區提供者應遵守該行為，但 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 並不強制執行此行為。  
   
- LINQ 案例而言，對查詢[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]牽涉到將 CLR 方法對應至基礎資料來源中的方法。 CLR 方法會對應到標準函式，這樣一來便會正確對應一組特定的方法，而不用顧慮資料來源為何。  
+ 針對 LINQ 案例，針對的[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]查詢牽涉到將 CLR 方法對應到基礎資料來源中的方法。 CLR 方法會對應到標準函式，這樣一來便會正確對應一組特定的方法，而不用顧慮資料來源為何。  
   
 ## <a name="canonical-functions-namespace"></a>標準函式命名空間  
  標準函式的命名空間為 <xref:System.Data.Metadata.Edm>。 <xref:System.Data.Metadata.Edm> 命名空間會自動包含在所有查詢中。 但是，如果匯入了另一個命名空間，包含與標準函式同名的函式 (在 <xref:System.Data.Metadata.Edm> 命名空間中)，您就必須指定命名空間。  
   
 ## <a name="in-this-section"></a>本節內容  
- [彙總標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
+ [彙總標準函式](aggregate-canonical-functions.md)  
  討論彙總 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
- [數學標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
+ [數學標準函式](math-canonical-functions.md)  
  討論數學 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
- [字串標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
+ [字串標準函式](string-canonical-functions.md)  
  討論字串 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
- [日期和時間標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
+ [日期和時間標準函式](date-and-time-canonical-functions.md)  
  討論日期和時間 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
- [位元標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
+ [位元標準函式](bitwise-canonical-functions.md)  
  討論位元運算 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
- [空間函式](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
+ [空間函式](spatial-functions.md)  
  討論空間 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
- [其他標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
+ [其他標準函式](other-canonical-functions.md)  
  討論未分類為位元運算、日期/時間、字串、數學或彙總的函式。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [概念模型標準與 SQL Server 函式的對應](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)
-- [使用者定義函式](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+- [Entity SQL 概觀](entity-sql-overview.md)
+- [Entity SQL 參考](entity-sql-reference.md)
+- [概念模型標準與 SQL Server 函式的對應](../conceptual-model-canonical-to-sql-server-functions-mapping.md)
+- [使用者定義函式](user-defined-functions-entity-sql.md)

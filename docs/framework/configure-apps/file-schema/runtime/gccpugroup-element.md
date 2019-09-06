@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee56b23b6d5fca6d0527d509c9b6a6fc6dd82336
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9ff646f13c5619b0bfca1b61c86013a981c274e3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920775"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252567"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > 元素
 
 指定記憶體回收是否支援多個 CPU 群組。
 
-\<configuration > \
-\<執行時間 > \
-\<GCCpuGroup>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**  
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +35,7 @@ ms.locfileid: "69920775"
 
 ### <a name="attributes"></a>屬性
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |`enabled`|必要屬性。<br /><br /> 指定記憶體回收是否支援多個 CPU 群組。|
 
@@ -44,7 +44,7 @@ ms.locfileid: "69920775"
 |值|描述|
 |-----------|-----------------|
 |`false`|垃圾收集不支援多個 CPU 群組。 這是預設值。|
-|`true`|如果已啟用伺服器垃圾收集, 垃圾收集支援多個 CPU 群組。|
+|`true`|如果已啟用伺服器垃圾收集，垃圾收集支援多個 CPU 群組。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -59,10 +59,10 @@ ms.locfileid: "69920775"
 
 ## <a name="remarks"></a>備註
 
-當電腦具有多個 cpu 群組並啟用伺服器垃圾收集時 (請參閱[ \<gcServer >](gcserver-element.md)元素), 啟用此元素會延伸所有 CPU 群組的垃圾收集, 並在建立和時將所有核心納入考慮平衡堆積。
+當電腦具有多個 cpu 群組並啟用伺服器垃圾收集時（請參閱[ \<gcServer >](gcserver-element.md)元素），啟用此元素會延伸所有 CPU 群組的垃圾收集，並在建立和時將所有核心納入考慮平衡堆積。
 
 > [!NOTE]
-> 這個元素只適用于垃圾收集執行緒。 若要讓執行時間將使用者執行緒分散到所有的 CPU 群組, 您也必須啟用[ \<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)元素。
+> 這個元素只適用于垃圾收集執行緒。 若要讓執行時間將使用者執行緒分散到所有的 CPU 群組，您也必須啟用[ \<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)元素。
 
 ## <a name="example"></a>範例
 

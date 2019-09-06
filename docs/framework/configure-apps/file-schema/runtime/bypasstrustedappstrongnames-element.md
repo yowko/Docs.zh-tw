@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92873277b4b25e4c1c5981628187078ac7cb5704
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3fb198d6a19e25df4c86186d35aab3330c53121c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920894"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252772"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 項目
 指定是否要在已載入完全信任<xref:System.AppDomain>的完全信任元件上略過強式名稱驗證。  
   
- \<configuration>  
-\<執行時間 >  
-\<bypassTrustedAppStrongNames>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,14 +37,14 @@ ms.locfileid: "69920894"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定是否啟用避免為完全信任元件驗證強式名稱的略過功能。 啟用這項功能時, 在載入元件時, 不會驗證強式名稱是否正確。 預設為 `true`。|  
+|`enabled`|必要屬性。<br /><br /> 指定是否啟用避免為完全信任元件驗證強式名稱的略過功能。 啟用這項功能時，在載入元件時，不會驗證強式名稱是否正確。 預設為 `true`。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`true`|當元件載入至完全信任<xref:System.AppDomain>時, 不會驗證完全信任元件上的強式名稱簽章。 這是預設值。|  
-|`false`|當元件載入至完全信任<xref:System.AppDomain>時, 會驗證完全信任元件上的強式名稱簽章。 強式名稱簽章只會檢查簽名碼正確性;它不會與另一個強式名稱進行比較, 以符合相符項。|  
+|`true`|當元件載入至完全信任<xref:System.AppDomain>時，不會驗證完全信任元件上的強式名稱簽章。 這是預設值。|  
+|`false`|當元件載入至完全信任<xref:System.AppDomain>時，會驗證完全信任元件上的強式名稱簽章。 強式名稱簽章只會檢查簽名碼正確性;它不會與另一個強式名稱進行比較，以符合相符項。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -61,7 +61,7 @@ ms.locfileid: "69920894"
   
  略過功能適用於任何以強式名稱簽署並具有下列特性的組件：  
   
-- 完全信任而不<xref:System.Security.Policy.StrongName>含辨識項 (例如, `MyComputer`具有區域辨識項)。  
+- 完全信任而不<xref:System.Security.Policy.StrongName>含辨識項（例如， `MyComputer`具有區域辨識項）。  
   
 - 載入到完全信任的 <xref:System.AppDomain>。  
   
@@ -70,10 +70,10 @@ ms.locfileid: "69920894"
 - 不延遲簽署。  
   
 > [!NOTE]
-> 若已使用登錄機碼為電腦上的所有應用程式關閉略過功能, 此設定檔案設定就不會有任何作用。 如需詳細資訊，請參閱[如何：停用強式名稱略過功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
+> 若已使用登錄機碼為電腦上的所有應用程式關閉略過功能，此設定檔案設定就不會有任何作用。 如需詳細資訊，請參閱[如何：停用強式名稱略過功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何指定行為, 以驗證完全信任元件上的強式名稱簽章。  
+ 下列範例顯示如何指定行為，以驗證完全信任元件上的強式名稱簽章。  
   
 ```xml  
 <configuration>  
