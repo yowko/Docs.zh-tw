@@ -3,20 +3,21 @@ title: <tokenReplayCache>
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: 5747a4cfa93118dd41292904b168bbef02fec415
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f3a95fd0a39f199eaf13c7509aff22caa0e3b66
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944069"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251776"
 ---
 # <a name="tokenreplaycache"></a>\<tokenReplayCache>
 向服務或安全性權杖處理常式集合註冊權杖重新執行快取。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<快取 >  
-\<tokenReplayCache>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<快取 >** ](caches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tokenReplayCache >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +46,7 @@ ms.locfileid: "69944069"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<caches>](caches.md)|註冊服務或安全性權杖處理常式集合所使用的快取。|  
   
