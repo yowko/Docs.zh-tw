@@ -2,18 +2,18 @@
 title: 作法：使用 Descendants 方法尋找單一子系 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: 726c89b8fdd3df774de2d7ac9a824f2b3769d404
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
-ms.translationtype: HT
+ms.openlocfilehash: 29cac5a666f7e9a560c550ad20a5bb68d02ee1ea
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709958"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253802"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a><span data-ttu-id="ead86-102">作法：使用 Descendants 方法尋找單一子系 (C#)</span><span class="sxs-lookup"><span data-stu-id="ead86-102">How to: Find a Single Descendant Using the Descendants Method (C#)</span></span>
-<span data-ttu-id="ead86-103">您可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸方法快速撰寫程式碼以尋找唯一具名的單一項目。</span><span class="sxs-lookup"><span data-stu-id="ead86-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="ead86-104">當您想要利用特定名稱尋找特定子代時，這個技術特別實用。</span><span class="sxs-lookup"><span data-stu-id="ead86-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="ead86-105">您可以撰寫程式碼來導覽所需的項目，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸撰寫程式碼通常比較快也比較容易。</span><span class="sxs-lookup"><span data-stu-id="ead86-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a><span data-ttu-id="7311f-102">作法：使用 Descendants 方法尋找單一子系 (C#)</span><span class="sxs-lookup"><span data-stu-id="7311f-102">How to: Find a Single Descendant Using the Descendants Method (C#)</span></span>
+<span data-ttu-id="7311f-103">您可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸方法快速撰寫程式碼以尋找唯一具名的單一項目。</span><span class="sxs-lookup"><span data-stu-id="7311f-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="7311f-104">當您想要利用特定名稱尋找特定子代時，這個技術特別實用。</span><span class="sxs-lookup"><span data-stu-id="7311f-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="7311f-105">您可以撰寫程式碼來導覽所需的項目，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸撰寫程式碼通常比較快也比較容易。</span><span class="sxs-lookup"><span data-stu-id="7311f-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ead86-106">範例</span><span class="sxs-lookup"><span data-stu-id="ead86-106">Example</span></span>  
- <span data-ttu-id="ead86-107">此範例使用 <xref:System.Linq.Enumerable.First%2A> 標準查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="ead86-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
+## <a name="example"></a><span data-ttu-id="7311f-106">範例</span><span class="sxs-lookup"><span data-stu-id="7311f-106">Example</span></span>  
+ <span data-ttu-id="7311f-107">此範例使用 <xref:System.Linq.Enumerable.First%2A> 標準查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="7311f-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -36,14 +36,14 @@ string grandChild3 = (string)
 Console.WriteLine(grandChild3);  
 ```  
   
- <span data-ttu-id="ead86-108">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="ead86-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="7311f-108">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="7311f-108">This code produces the following output:</span></span>  
   
-```  
+```output  
 GC3 Value  
 ```  
   
-## <a name="example"></a><span data-ttu-id="ead86-109">範例</span><span class="sxs-lookup"><span data-stu-id="ead86-109">Example</span></span>  
- <span data-ttu-id="ead86-110">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="ead86-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="ead86-111">如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="ead86-111">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="7311f-109">範例</span><span class="sxs-lookup"><span data-stu-id="7311f-109">Example</span></span>  
+ <span data-ttu-id="7311f-110">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="7311f-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="7311f-111">如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="7311f-111">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<aw:Root xmlns:aw='http://www.adventure-works.com'>  
@@ -67,8 +67,8 @@ string grandChild3 = (string)
 Console.WriteLine(grandChild3);  
 ```  
   
- <span data-ttu-id="ead86-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="ead86-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="7311f-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="7311f-112">This code produces the following output:</span></span>  
   
-```  
+```output  
 GC3 Value  
 ```  

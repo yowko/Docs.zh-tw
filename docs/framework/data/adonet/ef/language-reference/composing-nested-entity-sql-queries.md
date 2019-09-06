@@ -2,18 +2,18 @@
 title: 撰寫巢狀 Entity SQL 查詢
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3aa2e53b584eece9cc5e2d26791c78ffe33f9e35
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606221"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251142"
 ---
-# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="709b7-102">撰寫巢狀 Entity SQL 查詢</span><span class="sxs-lookup"><span data-stu-id="709b7-102">Composing Nested Entity SQL Queries</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] <span data-ttu-id="709b7-103">是一個豐富的功能性語言。</span><span class="sxs-lookup"><span data-stu-id="709b7-103">is a rich functional language.</span></span> <span data-ttu-id="709b7-104">建置組塊[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是運算式。</span><span class="sxs-lookup"><span data-stu-id="709b7-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="709b7-105">與傳統 SQL，不同[!INCLUDE[esql](../../../../../../includes/esql-md.md)]並不限於表格式結果集：[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援撰寫複雜的運算式包含常值、 參數或巢狀的運算式。</span><span class="sxs-lookup"><span data-stu-id="709b7-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="709b7-106">運算式中的值可以參數化，或是某個其他運算式所組成。</span><span class="sxs-lookup"><span data-stu-id="709b7-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
+# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="671f2-102">撰寫巢狀 Entity SQL 查詢</span><span class="sxs-lookup"><span data-stu-id="671f2-102">Composing Nested Entity SQL Queries</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] <span data-ttu-id="671f2-103">是一個豐富的功能性語言。</span><span class="sxs-lookup"><span data-stu-id="671f2-103">is a rich functional language.</span></span> <span data-ttu-id="671f2-104">的建立區塊[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是運算式。</span><span class="sxs-lookup"><span data-stu-id="671f2-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="671f2-105">與傳統 SQL 不同[!INCLUDE[esql](../../../../../../includes/esql-md.md)]的是，不限於表格式結果集： [!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援撰寫可以具有常值、參數或嵌套運算式的複雜運算式。</span><span class="sxs-lookup"><span data-stu-id="671f2-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="671f2-106">運算式中的值可以參數化，或由其他運算式組成。</span><span class="sxs-lookup"><span data-stu-id="671f2-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
   
-## <a name="nested-expressions"></a><span data-ttu-id="709b7-107">巢狀運算式</span><span class="sxs-lookup"><span data-stu-id="709b7-107">Nested Expressions</span></span>  
- <span data-ttu-id="709b7-108">巢狀運算式可以放在它傳回之型別的值接受的任何地方。</span><span class="sxs-lookup"><span data-stu-id="709b7-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="709b7-109">例如: </span><span class="sxs-lookup"><span data-stu-id="709b7-109">For example:</span></span>  
+## <a name="nested-expressions"></a><span data-ttu-id="671f2-107">巢狀運算式</span><span class="sxs-lookup"><span data-stu-id="671f2-107">Nested Expressions</span></span>  
+ <span data-ttu-id="671f2-108">巢狀運算式可以放在它傳回之型別的值接受的任何地方。</span><span class="sxs-lookup"><span data-stu-id="671f2-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="671f2-109">例如：</span><span class="sxs-lookup"><span data-stu-id="671f2-109">For example:</span></span>  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- <span data-ttu-id="709b7-110">巢狀查詢可放在投影子句中。</span><span class="sxs-lookup"><span data-stu-id="709b7-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="709b7-111">例如：</span><span class="sxs-lookup"><span data-stu-id="709b7-111">For example:</span></span>  
+ <span data-ttu-id="671f2-110">巢狀查詢可放在投影子句中。</span><span class="sxs-lookup"><span data-stu-id="671f2-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="671f2-111">例如：</span><span class="sxs-lookup"><span data-stu-id="671f2-111">For example:</span></span>  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -35,7 +35,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- <span data-ttu-id="709b7-112">在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，巢狀查詢一定要括在括號中：</span><span class="sxs-lookup"><span data-stu-id="709b7-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
+ <span data-ttu-id="671f2-112">在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，巢狀查詢一定要括在括號中：</span><span class="sxs-lookup"><span data-stu-id="671f2-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
   
 ```  
 -- Pseudo-Entity SQL  
@@ -46,19 +46,19 @@ UNION ALL
 FROM … );  
 ```  
   
- <span data-ttu-id="709b7-113">下列範例示範如何適當地巢狀中的運算式[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:[如何：排序兩個查詢的聯集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="709b7-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).</span></span>  
+ <span data-ttu-id="671f2-113">下列範例示範如何在中[!INCLUDE[esql](../../../../../../includes/esql-md.md)]適當地嵌套運算式：[如何：排序兩個查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))的聯集。</span><span class="sxs-lookup"><span data-stu-id="671f2-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).</span></span>  
   
-## <a name="nested-queries-in-projection"></a><span data-ttu-id="709b7-114">投影中的巢狀查詢</span><span class="sxs-lookup"><span data-stu-id="709b7-114">Nested Queries in Projection</span></span>  
- <span data-ttu-id="709b7-115">投影子句中的巢狀查詢可能會在伺服器上轉譯成笛卡兒乘積 (Cartesian Product) 查詢。</span><span class="sxs-lookup"><span data-stu-id="709b7-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="709b7-116">在包括 SQL Server 的某些後端伺服器上，這樣可能會導致 TempDB 資料表變得相當大，因而對伺服器效能造成不良影響。</span><span class="sxs-lookup"><span data-stu-id="709b7-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
+## <a name="nested-queries-in-projection"></a><span data-ttu-id="671f2-114">投影中的巢狀查詢</span><span class="sxs-lookup"><span data-stu-id="671f2-114">Nested Queries in Projection</span></span>  
+ <span data-ttu-id="671f2-115">投影子句中的巢狀查詢可能會在伺服器上轉譯成笛卡兒乘積 (Cartesian Product) 查詢。</span><span class="sxs-lookup"><span data-stu-id="671f2-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="671f2-116">在包括 SQL Server 的某些後端伺服器上，這樣可能會導致 TempDB 資料表變得相當大，因而對伺服器效能造成不良影響。</span><span class="sxs-lookup"><span data-stu-id="671f2-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
   
- <span data-ttu-id="709b7-117">下列是這類查詢的範例：</span><span class="sxs-lookup"><span data-stu-id="709b7-117">The following is an example of such a query:</span></span>  
+ <span data-ttu-id="671f2-117">下列是這類查詢的範例：</span><span class="sxs-lookup"><span data-stu-id="671f2-117">The following is an example of such a query:</span></span>  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="ordering-nested-queries"></a><span data-ttu-id="709b7-118">排序巢狀查詢</span><span class="sxs-lookup"><span data-stu-id="709b7-118">Ordering Nested Queries</span></span>  
- <span data-ttu-id="709b7-119">在 Entity Framework 中，巢狀運算式可放在查詢中的任何地方。</span><span class="sxs-lookup"><span data-stu-id="709b7-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="709b7-120">由於 Entity SQL 在撰寫查詢方面提供很大的彈性，所以您可以撰寫包含巢狀查詢排序的查詢。</span><span class="sxs-lookup"><span data-stu-id="709b7-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="709b7-121">不過，系統不會保留巢狀查詢的順序。</span><span class="sxs-lookup"><span data-stu-id="709b7-121">However, the order of a nested query is not preserved.</span></span>  
+## <a name="ordering-nested-queries"></a><span data-ttu-id="671f2-118">排序巢狀查詢</span><span class="sxs-lookup"><span data-stu-id="671f2-118">Ordering Nested Queries</span></span>  
+ <span data-ttu-id="671f2-119">在 Entity Framework 中，巢狀運算式可放在查詢中的任何地方。</span><span class="sxs-lookup"><span data-stu-id="671f2-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="671f2-120">由於 Entity SQL 在撰寫查詢方面提供很大的彈性，所以您可以撰寫包含巢狀查詢排序的查詢。</span><span class="sxs-lookup"><span data-stu-id="671f2-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="671f2-121">不過，系統不會保留巢狀查詢的順序。</span><span class="sxs-lookup"><span data-stu-id="671f2-121">However, the order of a nested query is not preserved.</span></span>  
   
 ```  
 -- The following query will order the results by last name.  
@@ -75,6 +75,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="709b7-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="709b7-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="671f2-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="671f2-122">See also</span></span>
 
-- [<span data-ttu-id="709b7-123">Entity SQL 概觀</span><span class="sxs-lookup"><span data-stu-id="709b7-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [<span data-ttu-id="671f2-123">Entity SQL 概觀</span><span class="sxs-lookup"><span data-stu-id="671f2-123">Entity SQL Overview</span></span>](entity-sql-overview.md)

@@ -2,47 +2,47 @@
 title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 05e687f951930d92797a863410181585278b067d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d35306d1299e91ecaa55a7d2818ee1e2982793f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797757"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249203"
 ---
-# <a name="ref-entity-sql"></a><span data-ttu-id="5698e-102">REF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="5698e-102">REF (Entity SQL)</span></span>
-<span data-ttu-id="5698e-103">傳回實體執行個體的參考。</span><span class="sxs-lookup"><span data-stu-id="5698e-103">Returns a reference to an entity instance.</span></span>  
+# <a name="ref-entity-sql"></a><span data-ttu-id="f22b3-102">REF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f22b3-102">REF (Entity SQL)</span></span>
+<span data-ttu-id="f22b3-103">傳回實體執行個體的參考。</span><span class="sxs-lookup"><span data-stu-id="f22b3-103">Returns a reference to an entity instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5698e-104">語法</span><span class="sxs-lookup"><span data-stu-id="5698e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f22b3-104">語法</span><span class="sxs-lookup"><span data-stu-id="f22b3-104">Syntax</span></span>  
   
 ```  
 REF( expression )   
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="5698e-105">引數</span><span class="sxs-lookup"><span data-stu-id="5698e-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="f22b3-105">引數</span><span class="sxs-lookup"><span data-stu-id="f22b3-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="5698e-106">可產生實體類型之執行個體的任何有效運算式。</span><span class="sxs-lookup"><span data-stu-id="5698e-106">Any valid expression that yields an instance of an entity type.</span></span>  
+ <span data-ttu-id="f22b3-106">可產生實體類型之執行個體的任何有效運算式。</span><span class="sxs-lookup"><span data-stu-id="f22b3-106">Any valid expression that yields an instance of an entity type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5698e-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="5698e-107">Return Value</span></span>  
- <span data-ttu-id="5698e-108">指定之實體執行個體的參考。</span><span class="sxs-lookup"><span data-stu-id="5698e-108">A reference to the specified entity instance.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f22b3-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="f22b3-107">Return Value</span></span>  
+ <span data-ttu-id="f22b3-108">指定之實體執行個體的參考。</span><span class="sxs-lookup"><span data-stu-id="f22b3-108">A reference to the specified entity instance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5698e-109">備註</span><span class="sxs-lookup"><span data-stu-id="5698e-109">Remarks</span></span>  
- <span data-ttu-id="5698e-110">實體參考由實體索引鍵和實體集名稱所組成。</span><span class="sxs-lookup"><span data-stu-id="5698e-110">An entity reference consists of the entity key and an entity set name.</span></span> <span data-ttu-id="5698e-111">因為不同實體集可視相同實體類型而定，特定實體索引鍵可出現於多個實體集，</span><span class="sxs-lookup"><span data-stu-id="5698e-111">Because different entity sets can be based on the same entity type, a particular entity key can appear in multiple entity sets.</span></span> <span data-ttu-id="5698e-112">但實體參考一定是唯一的。</span><span class="sxs-lookup"><span data-stu-id="5698e-112">However, an entity reference is always unique.</span></span> <span data-ttu-id="5698e-113">如果輸入運算式表示持續性實體，會傳回這個實體的參考。</span><span class="sxs-lookup"><span data-stu-id="5698e-113">If the input expression represents a persisted entity, a reference to this entity will be returned.</span></span> <span data-ttu-id="5698e-114">如果輸入運算式不是持續性實體，會傳回 null 參考。</span><span class="sxs-lookup"><span data-stu-id="5698e-114">If the input expression is not a persisted entity, a null reference will be returned.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f22b3-109">備註</span><span class="sxs-lookup"><span data-stu-id="f22b3-109">Remarks</span></span>  
+ <span data-ttu-id="f22b3-110">實體參考由實體索引鍵和實體集名稱所組成。</span><span class="sxs-lookup"><span data-stu-id="f22b3-110">An entity reference consists of the entity key and an entity set name.</span></span> <span data-ttu-id="f22b3-111">因為不同實體集可視相同實體類型而定，特定實體索引鍵可出現於多個實體集，</span><span class="sxs-lookup"><span data-stu-id="f22b3-111">Because different entity sets can be based on the same entity type, a particular entity key can appear in multiple entity sets.</span></span> <span data-ttu-id="f22b3-112">但實體參考一定是唯一的。</span><span class="sxs-lookup"><span data-stu-id="f22b3-112">However, an entity reference is always unique.</span></span> <span data-ttu-id="f22b3-113">如果輸入運算式表示持續性實體，會傳回這個實體的參考。</span><span class="sxs-lookup"><span data-stu-id="f22b3-113">If the input expression represents a persisted entity, a reference to this entity will be returned.</span></span> <span data-ttu-id="f22b3-114">如果輸入運算式不是持續性實體，會傳回 null 參考。</span><span class="sxs-lookup"><span data-stu-id="f22b3-114">If the input expression is not a persisted entity, a null reference will be returned.</span></span>  
   
- <span data-ttu-id="5698e-115">如果屬性引出運算子 (.) 是用於存取實體的屬性，則會為參考自動取值 (Dereference)。</span><span class="sxs-lookup"><span data-stu-id="5698e-115">If the property extraction operator (.) is used to access a property of an entity, the reference is automatically dereferenced.</span></span>  
+ <span data-ttu-id="f22b3-115">如果屬性引出運算子 (.) 是用於存取實體的屬性，則會為參考自動取值 (Dereference)。</span><span class="sxs-lookup"><span data-stu-id="f22b3-115">If the property extraction operator (.) is used to access a property of an entity, the reference is automatically dereferenced.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5698e-116">範例</span><span class="sxs-lookup"><span data-stu-id="5698e-116">Example</span></span>  
- <span data-ttu-id="5698e-117">下列 Entity SQL 查詢會使用 REF 運算子，傳回輸入實體引數的參考。</span><span class="sxs-lookup"><span data-stu-id="5698e-117">The following Entity SQL query uses the REF operator to return the reference for an input entity argument.</span></span> <span data-ttu-id="5698e-118">相同查詢會為參考取值，因為我們使用屬性引出運算子 (.) 存取 Product 實體的屬性。</span><span class="sxs-lookup"><span data-stu-id="5698e-118">The same query dereferences the reference because we are using a property extraction operation (.) to access a property of the Product entity.</span></span> <span data-ttu-id="5698e-119">此查詢是根據 AdventureWorks Sales Model。</span><span class="sxs-lookup"><span data-stu-id="5698e-119">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="5698e-120">若要編譯及執行此查詢，請遵循以下步驟：</span><span class="sxs-lookup"><span data-stu-id="5698e-120">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="f22b3-116">範例</span><span class="sxs-lookup"><span data-stu-id="f22b3-116">Example</span></span>  
+ <span data-ttu-id="f22b3-117">下列 Entity SQL 查詢會使用 REF 運算子，傳回輸入實體引數的參考。</span><span class="sxs-lookup"><span data-stu-id="f22b3-117">The following Entity SQL query uses the REF operator to return the reference for an input entity argument.</span></span> <span data-ttu-id="f22b3-118">相同查詢會為參考取值，因為我們使用屬性引出運算子 (.) 存取 Product 實體的屬性。</span><span class="sxs-lookup"><span data-stu-id="f22b3-118">The same query dereferences the reference because we are using a property extraction operation (.) to access a property of the Product entity.</span></span> <span data-ttu-id="f22b3-119">此查詢是根據 AdventureWorks Sales Model。</span><span class="sxs-lookup"><span data-stu-id="f22b3-119">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="f22b3-120">若要編譯及執行此查詢，請遵循以下步驟：</span><span class="sxs-lookup"><span data-stu-id="f22b3-120">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="5698e-121">請依照下列中的程序[How to:執行可傳回 PrimitiveType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。</span><span class="sxs-lookup"><span data-stu-id="5698e-121">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
+1. <span data-ttu-id="f22b3-121">[遵循 how to：執行可傳回 PrimitiveType 結果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。</span><span class="sxs-lookup"><span data-stu-id="f22b3-121">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
   
-2. <span data-ttu-id="5698e-122">將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="5698e-122">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
+2. <span data-ttu-id="f22b3-122">將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="f22b3-122">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#REF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref)]  
   
-## <a name="see-also"></a><span data-ttu-id="5698e-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5698e-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f22b3-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f22b3-123">See also</span></span>
 
-- [<span data-ttu-id="5698e-124">DEREF</span><span class="sxs-lookup"><span data-stu-id="5698e-124">DEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
-- [<span data-ttu-id="5698e-125">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="5698e-125">CREATEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [<span data-ttu-id="5698e-126">KEY</span><span class="sxs-lookup"><span data-stu-id="5698e-126">KEY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
-- [<span data-ttu-id="5698e-127">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="5698e-127">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="5698e-128">型別定義</span><span class="sxs-lookup"><span data-stu-id="5698e-128">Type Definitions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+- [<span data-ttu-id="f22b3-124">DEREF</span><span class="sxs-lookup"><span data-stu-id="f22b3-124">DEREF</span></span>](deref-entity-sql.md)
+- [<span data-ttu-id="f22b3-125">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="f22b3-125">CREATEREF</span></span>](createref-entity-sql.md)
+- [<span data-ttu-id="f22b3-126">KEY</span><span class="sxs-lookup"><span data-stu-id="f22b3-126">KEY</span></span>](key-entity-sql.md)
+- [<span data-ttu-id="f22b3-127">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="f22b3-127">Entity SQL Reference</span></span>](entity-sql-reference.md)
+- [<span data-ttu-id="f22b3-128">型別定義</span><span class="sxs-lookup"><span data-stu-id="f22b3-128">Type Definitions</span></span>](type-definitions-entity-sql.md)

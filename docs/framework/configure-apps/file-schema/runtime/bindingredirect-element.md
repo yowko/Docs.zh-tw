@@ -9,23 +9,23 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 7cdea10cc6e0562f6062470240b01743aa439bde
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7d51ef5c4107fc6a40a472a660f53bb0ded59683
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658931"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252777"
 ---
-# <a name="bindingredirect-element"></a><span data-ttu-id="7dc25-102">\<bindingRedirect > 元素</span><span class="sxs-lookup"><span data-stu-id="7dc25-102">\<bindingRedirect> Element</span></span>
-<span data-ttu-id="7dc25-103">將一個組件版本重新導向至另一個版本。</span><span class="sxs-lookup"><span data-stu-id="7dc25-103">Redirects one assembly version to another.</span></span>  
+# <a name="bindingredirect-element"></a><span data-ttu-id="46ecf-102">\<bindingRedirect > 元素</span><span class="sxs-lookup"><span data-stu-id="46ecf-102">\<bindingRedirect> Element</span></span>
+<span data-ttu-id="46ecf-103">將一個組件版本重新導向至另一個版本。</span><span class="sxs-lookup"><span data-stu-id="46ecf-103">Redirects one assembly version to another.</span></span>  
   
- <span data-ttu-id="7dc25-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7dc25-104">\<configuration></span></span>  
-<span data-ttu-id="7dc25-105">\<執行時間 ></span><span class="sxs-lookup"><span data-stu-id="7dc25-105">\<runtime></span></span>  
-<span data-ttu-id="7dc25-106">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="7dc25-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="7dc25-107">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="7dc25-107">\<dependentAssembly></span></span>  
-<span data-ttu-id="7dc25-108">\<bindingRedirect></span><span class="sxs-lookup"><span data-stu-id="7dc25-108">\<bindingRedirect></span></span>  
+<span data-ttu-id="46ecf-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="46ecf-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="46ecf-105">&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)</span><span class="sxs-lookup"><span data-stu-id="46ecf-105">&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)</span></span>\
+<span data-ttu-id="46ecf-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)</span><span class="sxs-lookup"><span data-stu-id="46ecf-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)</span></span>\
+<span data-ttu-id="46ecf-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)</span><span class="sxs-lookup"><span data-stu-id="46ecf-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)</span></span>\
+<span data-ttu-id="46ecf-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bindingRedirect>**</span><span class="sxs-lookup"><span data-stu-id="46ecf-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bindingRedirect>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7dc25-109">語法</span><span class="sxs-lookup"><span data-stu-id="7dc25-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46ecf-109">語法</span><span class="sxs-lookup"><span data-stu-id="46ecf-109">Syntax</span></span>  
   
 ```xml  
    <bindingRedirect    
@@ -33,40 +33,40 @@ oldVersion="existing assembly version"
 newVersion="new assembly version"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7dc25-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="7dc25-110">Attributes and Elements</span></span>  
- <span data-ttu-id="7dc25-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="7dc25-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="46ecf-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="46ecf-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="46ecf-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="46ecf-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7dc25-112">屬性</span><span class="sxs-lookup"><span data-stu-id="7dc25-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="46ecf-112">屬性</span><span class="sxs-lookup"><span data-stu-id="46ecf-112">Attributes</span></span>  
   
-|<span data-ttu-id="7dc25-113">屬性</span><span class="sxs-lookup"><span data-stu-id="7dc25-113">Attribute</span></span>|<span data-ttu-id="7dc25-114">描述</span><span class="sxs-lookup"><span data-stu-id="7dc25-114">Description</span></span>|  
+|<span data-ttu-id="46ecf-113">屬性</span><span class="sxs-lookup"><span data-stu-id="46ecf-113">Attribute</span></span>|<span data-ttu-id="46ecf-114">說明</span><span class="sxs-lookup"><span data-stu-id="46ecf-114">Description</span></span>|  
 |---------------|-----------------|  
-|`oldVersion`|<span data-ttu-id="7dc25-115">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="7dc25-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="7dc25-116">指定原本要求的組件版本。</span><span class="sxs-lookup"><span data-stu-id="7dc25-116">Specifies the version of the assembly that was originally requested.</span></span> <span data-ttu-id="7dc25-117">元件版本號碼的格式為 [*主要. 次要. 組建. 修訂*]。</span><span class="sxs-lookup"><span data-stu-id="7dc25-117">The format of an assembly version number is *major.minor.build.revision*.</span></span> <span data-ttu-id="7dc25-118">這個版本號碼每個部分的有效值為 0 至 65535。</span><span class="sxs-lookup"><span data-stu-id="7dc25-118">Valid values for each part of this version number are 0 to 65535.</span></span><br /><br /> <span data-ttu-id="7dc25-119">您也可以使用下列格式指定版本範圍：</span><span class="sxs-lookup"><span data-stu-id="7dc25-119">You can also specify a range of versions in the following format:</span></span><br /><br /> <span data-ttu-id="7dc25-120">*n.n.n.n - n.n.n.n*</span><span class="sxs-lookup"><span data-stu-id="7dc25-120">*n.n.n.n - n.n.n.n*</span></span>|  
-|`newVersion`|<span data-ttu-id="7dc25-121">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="7dc25-121">Required attribute.</span></span><br /><br /> <span data-ttu-id="7dc25-122">以下列格式指定要使用的元件版本, 而不是原始要求的版本: *n* . n. n. n</span><span class="sxs-lookup"><span data-stu-id="7dc25-122">Specifies the version of the assembly to use instead of the originally requested version in the format: *n.n.n.n*</span></span><br /><br /> <span data-ttu-id="7dc25-123">這個值可以指定 `oldVersion` 以前的版本。</span><span class="sxs-lookup"><span data-stu-id="7dc25-123">This value can specify an earlier version than `oldVersion`.</span></span>|  
+|`oldVersion`|<span data-ttu-id="46ecf-115">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="46ecf-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="46ecf-116">指定原本要求的組件版本。</span><span class="sxs-lookup"><span data-stu-id="46ecf-116">Specifies the version of the assembly that was originally requested.</span></span> <span data-ttu-id="46ecf-117">元件版本號碼的格式為 [*主要. 次要. 組建. 修訂*]。</span><span class="sxs-lookup"><span data-stu-id="46ecf-117">The format of an assembly version number is *major.minor.build.revision*.</span></span> <span data-ttu-id="46ecf-118">這個版本號碼每個部分的有效值為 0 至 65535。</span><span class="sxs-lookup"><span data-stu-id="46ecf-118">Valid values for each part of this version number are 0 to 65535.</span></span><br /><br /> <span data-ttu-id="46ecf-119">您也可以使用下列格式指定版本範圍：</span><span class="sxs-lookup"><span data-stu-id="46ecf-119">You can also specify a range of versions in the following format:</span></span><br /><br /> <span data-ttu-id="46ecf-120">*n.n.n.n - n.n.n.n*</span><span class="sxs-lookup"><span data-stu-id="46ecf-120">*n.n.n.n - n.n.n.n*</span></span>|  
+|`newVersion`|<span data-ttu-id="46ecf-121">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="46ecf-121">Required attribute.</span></span><br /><br /> <span data-ttu-id="46ecf-122">以下列格式指定要使用的元件版本，而不是原始要求的版本： *n* . n. n. n</span><span class="sxs-lookup"><span data-stu-id="46ecf-122">Specifies the version of the assembly to use instead of the originally requested version in the format: *n.n.n.n*</span></span><br /><br /> <span data-ttu-id="46ecf-123">這個值可以指定 `oldVersion` 以前的版本。</span><span class="sxs-lookup"><span data-stu-id="46ecf-123">This value can specify an earlier version than `oldVersion`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="7dc25-124">子元素</span><span class="sxs-lookup"><span data-stu-id="7dc25-124">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="46ecf-124">子元素</span><span class="sxs-lookup"><span data-stu-id="46ecf-124">Child Elements</span></span>  
   
-|<span data-ttu-id="7dc25-125">項目</span><span class="sxs-lookup"><span data-stu-id="7dc25-125">Element</span></span>|<span data-ttu-id="7dc25-126">描述</span><span class="sxs-lookup"><span data-stu-id="7dc25-126">Description</span></span>|  
+|<span data-ttu-id="46ecf-125">項目</span><span class="sxs-lookup"><span data-stu-id="46ecf-125">Element</span></span>|<span data-ttu-id="46ecf-126">描述</span><span class="sxs-lookup"><span data-stu-id="46ecf-126">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7dc25-127">無</span><span class="sxs-lookup"><span data-stu-id="7dc25-127">None</span></span>||  
+|<span data-ttu-id="46ecf-127">無</span><span class="sxs-lookup"><span data-stu-id="46ecf-127">None</span></span>||  
   
-### <a name="parent-elements"></a><span data-ttu-id="7dc25-128">父項目</span><span class="sxs-lookup"><span data-stu-id="7dc25-128">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="46ecf-128">父項目</span><span class="sxs-lookup"><span data-stu-id="46ecf-128">Parent Elements</span></span>  
   
-|<span data-ttu-id="7dc25-129">項目</span><span class="sxs-lookup"><span data-stu-id="7dc25-129">Element</span></span>|<span data-ttu-id="7dc25-130">描述</span><span class="sxs-lookup"><span data-stu-id="7dc25-130">Description</span></span>|  
+|<span data-ttu-id="46ecf-129">項目</span><span class="sxs-lookup"><span data-stu-id="46ecf-129">Element</span></span>|<span data-ttu-id="46ecf-130">說明</span><span class="sxs-lookup"><span data-stu-id="46ecf-130">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="7dc25-131">包含有關組件版本重新導向和組件位置的資訊。</span><span class="sxs-lookup"><span data-stu-id="7dc25-131">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="7dc25-132">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="7dc25-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`dependentAssembly`|<span data-ttu-id="7dc25-133">封裝每一個組件的繫結原則和組件位置。</span><span class="sxs-lookup"><span data-stu-id="7dc25-133">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="7dc25-134">針對每個組件使用一個 dependentAssembly 項目。</span><span class="sxs-lookup"><span data-stu-id="7dc25-134">Use one dependentAssembly element for each assembly.</span></span>|  
-|`runtime`|<span data-ttu-id="7dc25-135">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="7dc25-135">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="46ecf-131">包含有關組件版本重新導向和組件位置的資訊。</span><span class="sxs-lookup"><span data-stu-id="46ecf-131">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="46ecf-132">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="46ecf-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`dependentAssembly`|<span data-ttu-id="46ecf-133">封裝每一個組件的繫結原則和組件位置。</span><span class="sxs-lookup"><span data-stu-id="46ecf-133">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="46ecf-134">針對每個組件使用一個 dependentAssembly 項目。</span><span class="sxs-lookup"><span data-stu-id="46ecf-134">Use one dependentAssembly element for each assembly.</span></span>|  
+|`runtime`|<span data-ttu-id="46ecf-135">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="46ecf-135">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7dc25-136">備註</span><span class="sxs-lookup"><span data-stu-id="7dc25-136">Remarks</span></span>  
- <span data-ttu-id="7dc25-137">當您對照強式名稱的組件建置 .NET Framework 應用程式時，即使有可用的新版本，應用程式仍會預設為在執行階段使用該組件版本。</span><span class="sxs-lookup"><span data-stu-id="7dc25-137">When you build a .NET Framework application against a strong-named assembly, the application uses that version of the assembly at run time by default, even if a new version is available.</span></span> <span data-ttu-id="7dc25-138">不過，您可以設定應用程式以較新的組件版本執行。</span><span class="sxs-lookup"><span data-stu-id="7dc25-138">However, you can configure the application to run against a newer version of the assembly.</span></span> <span data-ttu-id="7dc25-139">如需執行時間如何使用這些檔案來判斷要使用哪個元件版本的詳細資訊, 請參閱[執行時間如何找出元件](../../../deployment/how-the-runtime-locates-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="7dc25-139">For details on how the runtime uses these files to determine which assembly version to use, see [How the Runtime Locates Assemblies](../../../deployment/how-the-runtime-locates-assemblies.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="46ecf-136">備註</span><span class="sxs-lookup"><span data-stu-id="46ecf-136">Remarks</span></span>  
+ <span data-ttu-id="46ecf-137">當您對照強式名稱的組件建置 .NET Framework 應用程式時，即使有可用的新版本，應用程式仍會預設為在執行階段使用該組件版本。</span><span class="sxs-lookup"><span data-stu-id="46ecf-137">When you build a .NET Framework application against a strong-named assembly, the application uses that version of the assembly at run time by default, even if a new version is available.</span></span> <span data-ttu-id="46ecf-138">不過，您可以設定應用程式以較新的組件版本執行。</span><span class="sxs-lookup"><span data-stu-id="46ecf-138">However, you can configure the application to run against a newer version of the assembly.</span></span> <span data-ttu-id="46ecf-139">如需執行時間如何使用這些檔案來判斷要使用哪個元件版本的詳細資訊，請參閱[執行時間如何找出元件](../../../deployment/how-the-runtime-locates-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="46ecf-139">For details on how the runtime uses these files to determine which assembly version to use, see [How the Runtime Locates Assemblies](../../../deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
- <span data-ttu-id="7dc25-140">您可以在 `bindingRedirect` 項目中包含多個 `dependentAssembly` 項目，藉此重新導向多個組件版本。</span><span class="sxs-lookup"><span data-stu-id="7dc25-140">You can redirect more than one assembly version by including multiple `bindingRedirect` elements in a `dependentAssembly` element.</span></span> <span data-ttu-id="7dc25-141">您也可以將組件從較新版本重新導向至較舊版本。</span><span class="sxs-lookup"><span data-stu-id="7dc25-141">You can also redirect from a newer version to an older version of the assembly.</span></span>  
+ <span data-ttu-id="46ecf-140">您可以在 `bindingRedirect` 項目中包含多個 `dependentAssembly` 項目，藉此重新導向多個組件版本。</span><span class="sxs-lookup"><span data-stu-id="46ecf-140">You can redirect more than one assembly version by including multiple `bindingRedirect` elements in a `dependentAssembly` element.</span></span> <span data-ttu-id="46ecf-141">您也可以將組件從較新版本重新導向至較舊版本。</span><span class="sxs-lookup"><span data-stu-id="46ecf-141">You can also redirect from a newer version to an older version of the assembly.</span></span>  
   
- <span data-ttu-id="7dc25-142">在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。</span><span class="sxs-lookup"><span data-stu-id="7dc25-142">Explicit assembly binding redirection in an application configuration file requires a security permission.</span></span> <span data-ttu-id="7dc25-143">這適用於 .NET Framework 組件和協力廠商組件的重新導向。</span><span class="sxs-lookup"><span data-stu-id="7dc25-143">This applies to redirection of .NET Framework assemblies and assemblies from third parties.</span></span> <span data-ttu-id="7dc25-144">許可權是藉由<xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission>在上設定旗標來授與。</span><span class="sxs-lookup"><span data-stu-id="7dc25-144">The permission is granted by setting the <xref:System.Security.Permissions.SecurityPermissionFlag> flag on the <xref:System.Security.Permissions.SecurityPermission>.</span></span> <span data-ttu-id="7dc25-145">如需詳細資訊, 請參閱元件系結重新導向[安全性許可權](../../assembly-binding-redirection-security-permission.md)。</span><span class="sxs-lookup"><span data-stu-id="7dc25-145">For more information, see [Assembly Binding Redirection Security Permission](../../assembly-binding-redirection-security-permission.md).</span></span>  
+ <span data-ttu-id="46ecf-142">在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。</span><span class="sxs-lookup"><span data-stu-id="46ecf-142">Explicit assembly binding redirection in an application configuration file requires a security permission.</span></span> <span data-ttu-id="46ecf-143">這適用於 .NET Framework 組件和協力廠商組件的重新導向。</span><span class="sxs-lookup"><span data-stu-id="46ecf-143">This applies to redirection of .NET Framework assemblies and assemblies from third parties.</span></span> <span data-ttu-id="46ecf-144">許可權是藉由<xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission>在上設定旗標來授與。</span><span class="sxs-lookup"><span data-stu-id="46ecf-144">The permission is granted by setting the <xref:System.Security.Permissions.SecurityPermissionFlag> flag on the <xref:System.Security.Permissions.SecurityPermission>.</span></span> <span data-ttu-id="46ecf-145">如需詳細資訊，請參閱元件系結重新導向[安全性許可權](../../assembly-binding-redirection-security-permission.md)。</span><span class="sxs-lookup"><span data-stu-id="46ecf-145">For more information, see [Assembly Binding Redirection Security Permission](../../assembly-binding-redirection-security-permission.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7dc25-146">範例</span><span class="sxs-lookup"><span data-stu-id="7dc25-146">Example</span></span>  
- <span data-ttu-id="7dc25-147">下列範例將示範如何將某一個組件版本重新導向至另一個版本。</span><span class="sxs-lookup"><span data-stu-id="7dc25-147">The following example shows how to redirect one assembly version to another.</span></span>  
+## <a name="example"></a><span data-ttu-id="46ecf-146">範例</span><span class="sxs-lookup"><span data-stu-id="46ecf-146">Example</span></span>  
+ <span data-ttu-id="46ecf-147">下列範例將示範如何將某一個組件版本重新導向至另一個版本。</span><span class="sxs-lookup"><span data-stu-id="46ecf-147">The following example shows how to redirect one assembly version to another.</span></span>  
   
 ```xml  
 <configuration>  
@@ -84,8 +84,8 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7dc25-148">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7dc25-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46ecf-148">另請參閱</span><span class="sxs-lookup"><span data-stu-id="46ecf-148">See also</span></span>
 
-- [<span data-ttu-id="7dc25-149">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="7dc25-149">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="7dc25-150">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="7dc25-150">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="7dc25-151">重新導向組件版本</span><span class="sxs-lookup"><span data-stu-id="7dc25-151">Redirecting Assembly Versions</span></span>](../../redirect-assembly-versions.md)
+- [<span data-ttu-id="46ecf-149">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="46ecf-149">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="46ecf-150">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="46ecf-150">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="46ecf-151">重新導向組件版本</span><span class="sxs-lookup"><span data-stu-id="46ecf-151">Redirecting Assembly Versions</span></span>](../../redirect-assembly-versions.md)

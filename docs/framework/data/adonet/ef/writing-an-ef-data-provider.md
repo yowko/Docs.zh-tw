@@ -2,45 +2,45 @@
 title: 撰寫 Entity Framework 資料提供者
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 7841a33bf40c00ed3691a5416aae16d673bf8d1c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c5e6e2859b48db6c982862381d223a4c9deb2c5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586742"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248194"
 ---
-# <a name="writing-an-entity-framework-data-provider"></a><span data-ttu-id="37588-102">撰寫 Entity Framework 資料提供者</span><span class="sxs-lookup"><span data-stu-id="37588-102">Writing an Entity Framework Data Provider</span></span>
-<span data-ttu-id="37588-103">本節討論如何撰寫[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援 SQL Server 以外的資料來源的提供者。</span><span class="sxs-lookup"><span data-stu-id="37588-103">This section discusses how to write an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider to support a data source other than SQL Server.</span></span> <span data-ttu-id="37588-104">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包含支援 SQL Server 的提供者。</span><span class="sxs-lookup"><span data-stu-id="37588-104">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] includes a provider that supports SQL Server.</span></span>  
+# <a name="writing-an-entity-framework-data-provider"></a><span data-ttu-id="85364-102">撰寫 Entity Framework 資料提供者</span><span class="sxs-lookup"><span data-stu-id="85364-102">Writing an Entity Framework Data Provider</span></span>
+<span data-ttu-id="85364-103">本節將討論如何撰寫[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供者，以支援 SQL Server 以外的資料來源。</span><span class="sxs-lookup"><span data-stu-id="85364-103">This section discusses how to write an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider to support a data source other than SQL Server.</span></span> <span data-ttu-id="85364-104">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包含支援 SQL Server 的提供者。</span><span class="sxs-lookup"><span data-stu-id="85364-104">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] includes a provider that supports SQL Server.</span></span>  
   
-## <a name="introducing-the-entity-framework-provider-model"></a><span data-ttu-id="37588-105">Entity Framework 提供者模型簡介</span><span class="sxs-lookup"><span data-stu-id="37588-105">Introducing the Entity Framework Provider Model</span></span>  
- <span data-ttu-id="37588-106">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 與資料庫無關，而且您可以使用 ADO.NET 提供者模型來撰寫提供者，以便連接到各種不同的資料來源。</span><span class="sxs-lookup"><span data-stu-id="37588-106">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] is database independent, and you can write a provider by using the ADO.NET Provider Model to connect to a diverse set of data sources.</span></span>  
+## <a name="introducing-the-entity-framework-provider-model"></a><span data-ttu-id="85364-105">Entity Framework 提供者模型簡介</span><span class="sxs-lookup"><span data-stu-id="85364-105">Introducing the Entity Framework Provider Model</span></span>  
+ <span data-ttu-id="85364-106">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 與資料庫無關，而且您可以使用 ADO.NET 提供者模型來撰寫提供者，以便連接到各種不同的資料來源。</span><span class="sxs-lookup"><span data-stu-id="85364-106">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] is database independent, and you can write a provider by using the ADO.NET Provider Model to connect to a diverse set of data sources.</span></span>  
   
- <span data-ttu-id="37588-107">Entity Framework 資料提供者 (使用 ADO.NET 資料提供者模型所建置) 會執行下列功能：</span><span class="sxs-lookup"><span data-stu-id="37588-107">The Entity Framework data provider (built using the ADO.NET Data Provider model) performs the following functions:</span></span>  
+ <span data-ttu-id="85364-107">Entity Framework 資料提供者 (使用 ADO.NET 資料提供者模型所建置) 會執行下列功能：</span><span class="sxs-lookup"><span data-stu-id="85364-107">The Entity Framework data provider (built using the ADO.NET Data Provider model) performs the following functions:</span></span>  
   
-- <span data-ttu-id="37588-108">將實體資料模型 (EDM) 基本型別對應到提供者類型。</span><span class="sxs-lookup"><span data-stu-id="37588-108">Maps Entity Data Model (EDM) primitive types to provider types.</span></span>  
+- <span data-ttu-id="85364-108">將實體資料模型 (EDM) 基本型別對應到提供者類型。</span><span class="sxs-lookup"><span data-stu-id="85364-108">Maps Entity Data Model (EDM) primitive types to provider types.</span></span>  
   
-- <span data-ttu-id="37588-109">公開提供者特有的函式。</span><span class="sxs-lookup"><span data-stu-id="37588-109">Exposes provider-specific functions.</span></span>  
+- <span data-ttu-id="85364-109">公開提供者特有的函式。</span><span class="sxs-lookup"><span data-stu-id="85364-109">Exposes provider-specific functions.</span></span>  
   
-- <span data-ttu-id="37588-110">為給定的 DbQueryCommandTree 產生提供者特有的命令來支援 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 查詢。</span><span class="sxs-lookup"><span data-stu-id="37588-110">Generates provider-specific commands for a given DbQueryCommandTree to support [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] queries.</span></span>  
+- <span data-ttu-id="85364-110">為給定的 DbQueryCommandTree 產生提供者特有的命令來支援 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 查詢。</span><span class="sxs-lookup"><span data-stu-id="85364-110">Generates provider-specific commands for a given DbQueryCommandTree to support [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] queries.</span></span>  
   
-- <span data-ttu-id="37588-111">為給定的 DbModificationCommandTree 產生提供者特有的更新命令，以支援透過 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的更新。</span><span class="sxs-lookup"><span data-stu-id="37588-111">Generates provider-specific update commands for a given DbModificationCommandTree to support updates through the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
+- <span data-ttu-id="85364-111">為給定的 DbModificationCommandTree 產生提供者特有的更新命令，以支援透過 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的更新。</span><span class="sxs-lookup"><span data-stu-id="85364-111">Generates provider-specific update commands for a given DbModificationCommandTree to support updates through the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
   
-- <span data-ttu-id="37588-112">公開存放結構定義的對應檔案，以便支援根據資料庫產生模型。</span><span class="sxs-lookup"><span data-stu-id="37588-112">Exposes mapping files for the store schema definition, to support generation of a model based on a database.</span></span>  
+- <span data-ttu-id="85364-112">公開存放結構定義的對應檔案，以便支援根據資料庫產生模型。</span><span class="sxs-lookup"><span data-stu-id="85364-112">Exposes mapping files for the store schema definition, to support generation of a model based on a database.</span></span>  
   
-- <span data-ttu-id="37588-113">透過概念模型公開中繼資料 (如資料表和檢視表)。</span><span class="sxs-lookup"><span data-stu-id="37588-113">Exposes metadata (tables and views, for example) via a conceptual model.</span></span>  
+- <span data-ttu-id="85364-113">透過概念模型公開中繼資料 (如資料表和檢視表)。</span><span class="sxs-lookup"><span data-stu-id="85364-113">Exposes metadata (tables and views, for example) via a conceptual model.</span></span>  
   
- <span data-ttu-id="37588-114">![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")</span><span class="sxs-lookup"><span data-stu-id="37588-114">![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")</span></span>  
+ <span data-ttu-id="85364-114">![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](./media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")</span><span class="sxs-lookup"><span data-stu-id="85364-114">![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](./media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")</span></span>  
   
-## <a name="sample"></a><span data-ttu-id="37588-115">範例</span><span class="sxs-lookup"><span data-stu-id="37588-115">Sample</span></span>  
- <span data-ttu-id="37588-116">請參閱[Entity Framework 範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)如需範例的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援 SQL Server 以外的資料來源的提供者。</span><span class="sxs-lookup"><span data-stu-id="37588-116">See the [Entity Framework Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) for a sample of an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider that supports a data source other than SQL Server.</span></span>  
+## <a name="sample"></a><span data-ttu-id="85364-115">範例</span><span class="sxs-lookup"><span data-stu-id="85364-115">Sample</span></span>  
+ <span data-ttu-id="85364-116">如需支援 SQL Server 以外之[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]資料來源的提供者範例，請參閱[Entity Framework 範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)。</span><span class="sxs-lookup"><span data-stu-id="85364-116">See the [Entity Framework Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) for a sample of an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider that supports a data source other than SQL Server.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="37588-117">本節內容</span><span class="sxs-lookup"><span data-stu-id="37588-117">In This Section</span></span>  
- [<span data-ttu-id="37588-118">SQL 產生</span><span class="sxs-lookup"><span data-stu-id="37588-118">SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
+## <a name="in-this-section"></a><span data-ttu-id="85364-117">本節內容</span><span class="sxs-lookup"><span data-stu-id="85364-117">In This Section</span></span>  
+ [<span data-ttu-id="85364-118">SQL 產生</span><span class="sxs-lookup"><span data-stu-id="85364-118">SQL Generation</span></span>](sql-generation.md)  
   
- [<span data-ttu-id="37588-119">修改 SQL 產生</span><span class="sxs-lookup"><span data-stu-id="37588-119">Modification SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
+ [<span data-ttu-id="85364-119">修改 SQL 產生</span><span class="sxs-lookup"><span data-stu-id="85364-119">Modification SQL Generation</span></span>](modification-sql-generation.md)  
   
- [<span data-ttu-id="37588-120">提供者資訊清單規格</span><span class="sxs-lookup"><span data-stu-id="37588-120">Provider Manifest Specification</span></span>](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
+ [<span data-ttu-id="85364-120">提供者資訊清單規格</span><span class="sxs-lookup"><span data-stu-id="85364-120">Provider Manifest Specification</span></span>](provider-manifest-specification.md)  
   
-## <a name="see-also"></a><span data-ttu-id="37588-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37588-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85364-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="85364-121">See also</span></span>
 
-- [<span data-ttu-id="37588-122">處理資料提供者</span><span class="sxs-lookup"><span data-stu-id="37588-122">Working with Data Providers</span></span>](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [<span data-ttu-id="85364-122">處理資料提供者</span><span class="sxs-lookup"><span data-stu-id="85364-122">Working with Data Providers</span></span>](working-with-data-providers.md)
