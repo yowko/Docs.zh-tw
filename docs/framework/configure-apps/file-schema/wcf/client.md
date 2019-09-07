@@ -5,20 +5,21 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 7dce5984882e48c3e62efc44ef00b6256d9eb64e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cc8b80edb3206bb2ef3a8a1ffa34ab40af77612
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919532"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398143"
 ---
-# <a name="client"></a><span data-ttu-id="6af98-101">\<用戶端 ></span><span class="sxs-lookup"><span data-stu-id="6af98-101">\<client></span></span>
-<span data-ttu-id="6af98-102">`client` 項目會定義用戶端可連線的端點清單。</span><span class="sxs-lookup"><span data-stu-id="6af98-102">The `client` element defines a list of endpoints that a client can connect to.</span></span>  
+# <a name="client"></a><span data-ttu-id="d14d1-101">\<用戶端 ></span><span class="sxs-lookup"><span data-stu-id="d14d1-101">\<client></span></span>
+<span data-ttu-id="d14d1-102">`client` 項目會定義用戶端可連線的端點清單。</span><span class="sxs-lookup"><span data-stu-id="d14d1-102">The `client` element defines a list of endpoints that a client can connect to.</span></span>  
   
- <span data-ttu-id="6af98-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="6af98-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="6af98-104">\<用戶端 ></span><span class="sxs-lookup"><span data-stu-id="6af98-104">\<client></span></span>  
+<span data-ttu-id="d14d1-103">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="d14d1-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="d14d1-104">&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="d14d1-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="d14d1-105">&nbsp;&nbsp;&nbsp;&nbsp; **\<用戶端 >**</span><span class="sxs-lookup"><span data-stu-id="d14d1-105">&nbsp;&nbsp;&nbsp;&nbsp;**\<client>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6af98-105">語法</span><span class="sxs-lookup"><span data-stu-id="6af98-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d14d1-106">語法</span><span class="sxs-lookup"><span data-stu-id="d14d1-106">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -31,31 +32,31 @@ ms.locfileid: "69919532"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6af98-106">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="6af98-106">Attributes and Elements</span></span>  
- <span data-ttu-id="6af98-107">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="6af98-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d14d1-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="d14d1-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="d14d1-108">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="d14d1-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6af98-108">屬性</span><span class="sxs-lookup"><span data-stu-id="6af98-108">Attributes</span></span>  
- <span data-ttu-id="6af98-109">無</span><span class="sxs-lookup"><span data-stu-id="6af98-109">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d14d1-109">屬性</span><span class="sxs-lookup"><span data-stu-id="d14d1-109">Attributes</span></span>  
+ <span data-ttu-id="d14d1-110">無</span><span class="sxs-lookup"><span data-stu-id="d14d1-110">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="6af98-110">子元素</span><span class="sxs-lookup"><span data-stu-id="6af98-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d14d1-111">子元素</span><span class="sxs-lookup"><span data-stu-id="d14d1-111">Child Elements</span></span>  
   
-|<span data-ttu-id="6af98-111">項目</span><span class="sxs-lookup"><span data-stu-id="6af98-111">Element</span></span>|<span data-ttu-id="6af98-112">描述</span><span class="sxs-lookup"><span data-stu-id="6af98-112">Description</span></span>|  
+|<span data-ttu-id="d14d1-112">項目</span><span class="sxs-lookup"><span data-stu-id="d14d1-112">Element</span></span>|<span data-ttu-id="d14d1-113">說明</span><span class="sxs-lookup"><span data-stu-id="d14d1-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6af98-113">\<endpoint></span><span class="sxs-lookup"><span data-stu-id="6af98-113">\<endpoint></span></span>](endpoint-of-client.md)|<span data-ttu-id="6af98-114">包含端點項目的清單，其中的端點項目指定這個用戶端可連線的端點。</span><span class="sxs-lookup"><span data-stu-id="6af98-114">Contains a collection of endpoint elements, that specify the endpoints that this client can connect to.</span></span>|  
-|[<span data-ttu-id="6af98-115">\<metadata></span><span class="sxs-lookup"><span data-stu-id="6af98-115">\<metadata></span></span>](metadata.md)|<span data-ttu-id="6af98-116">包含處理中繼資料的設定。</span><span class="sxs-lookup"><span data-stu-id="6af98-116">Contains settings for processing metadata.</span></span>|  
+|[<span data-ttu-id="d14d1-114">\<endpoint></span><span class="sxs-lookup"><span data-stu-id="d14d1-114">\<endpoint></span></span>](endpoint-of-client.md)|<span data-ttu-id="d14d1-115">包含端點項目的清單，其中的端點項目指定這個用戶端可連線的端點。</span><span class="sxs-lookup"><span data-stu-id="d14d1-115">Contains a collection of endpoint elements, that specify the endpoints that this client can connect to.</span></span>|  
+|[<span data-ttu-id="d14d1-116">\<metadata></span><span class="sxs-lookup"><span data-stu-id="d14d1-116">\<metadata></span></span>](metadata.md)|<span data-ttu-id="d14d1-117">包含處理中繼資料的設定。</span><span class="sxs-lookup"><span data-stu-id="d14d1-117">Contains settings for processing metadata.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="6af98-117">父項目</span><span class="sxs-lookup"><span data-stu-id="6af98-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d14d1-118">父項目</span><span class="sxs-lookup"><span data-stu-id="d14d1-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="6af98-118">項目</span><span class="sxs-lookup"><span data-stu-id="6af98-118">Element</span></span>|<span data-ttu-id="6af98-119">描述</span><span class="sxs-lookup"><span data-stu-id="6af98-119">Description</span></span>|  
+|<span data-ttu-id="d14d1-119">項目</span><span class="sxs-lookup"><span data-stu-id="d14d1-119">Element</span></span>|<span data-ttu-id="d14d1-120">說明</span><span class="sxs-lookup"><span data-stu-id="d14d1-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6af98-120">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="6af98-120">\<system.serviceModel></span></span>](system-servicemodel.md)|<span data-ttu-id="6af98-121">所有 Windows Communication Foundation (WCF) 組態項目的根項目。</span><span class="sxs-lookup"><span data-stu-id="6af98-121">The root element of all Windows Communication Foundation (WCF) configuration elements.</span></span>|  
+|[<span data-ttu-id="d14d1-121">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="d14d1-121">\<system.serviceModel></span></span>](system-servicemodel.md)|<span data-ttu-id="d14d1-122">所有 Windows Communication Foundation (WCF) 組態項目的根項目。</span><span class="sxs-lookup"><span data-stu-id="d14d1-122">The root element of all Windows Communication Foundation (WCF) configuration elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6af98-122">備註</span><span class="sxs-lookup"><span data-stu-id="6af98-122">Remarks</span></span>  
- <span data-ttu-id="6af98-123">`client` 區段會定義用戶端可連線的端點清單。</span><span class="sxs-lookup"><span data-stu-id="6af98-123">The `client` section defines a list of endpoints that a client can connect to.</span></span> <span data-ttu-id="6af98-124">在用戶端區段中定義的每個端點會定義它自己的繫結、行為和合約。</span><span class="sxs-lookup"><span data-stu-id="6af98-124">Each endpoint listed in the client section defines its own binding, behavior, and contract.</span></span> <span data-ttu-id="6af98-125">它是以 `name` 和 `contract` 屬性的組合唯一識別的。</span><span class="sxs-lookup"><span data-stu-id="6af98-125">It is uniquely identified by the combination of the `name` and `contract` attributes.</span></span> <span data-ttu-id="6af98-126">用戶端程式碼指定 `name` 以連線至用戶端所實作服務的端點。</span><span class="sxs-lookup"><span data-stu-id="6af98-126">The client code specifies the `name` to connect to an endpoint for the service that the client implements.</span></span> <span data-ttu-id="6af98-127">如果省略 `name` 屬性，則端點會做為它所實作合約的預設端點。</span><span class="sxs-lookup"><span data-stu-id="6af98-127">If the `name` attribute is omitted, the endpoint acts as the default endpoint for the contract it implements.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d14d1-123">備註</span><span class="sxs-lookup"><span data-stu-id="d14d1-123">Remarks</span></span>  
+ <span data-ttu-id="d14d1-124">`client` 區段會定義用戶端可連線的端點清單。</span><span class="sxs-lookup"><span data-stu-id="d14d1-124">The `client` section defines a list of endpoints that a client can connect to.</span></span> <span data-ttu-id="d14d1-125">在用戶端區段中定義的每個端點會定義它自己的繫結、行為和合約。</span><span class="sxs-lookup"><span data-stu-id="d14d1-125">Each endpoint listed in the client section defines its own binding, behavior, and contract.</span></span> <span data-ttu-id="d14d1-126">它是以 `name` 和 `contract` 屬性的組合唯一識別的。</span><span class="sxs-lookup"><span data-stu-id="d14d1-126">It is uniquely identified by the combination of the `name` and `contract` attributes.</span></span> <span data-ttu-id="d14d1-127">用戶端程式碼指定 `name` 以連線至用戶端所實作服務的端點。</span><span class="sxs-lookup"><span data-stu-id="d14d1-127">The client code specifies the `name` to connect to an endpoint for the service that the client implements.</span></span> <span data-ttu-id="d14d1-128">如果省略 `name` 屬性，則端點會做為它所實作合約的預設端點。</span><span class="sxs-lookup"><span data-stu-id="d14d1-128">If the `name` attribute is omitted, the endpoint acts as the default endpoint for the contract it implements.</span></span>  
   
- <span data-ttu-id="6af98-128">此外，本區段也會指定處理中繼資料的設定。</span><span class="sxs-lookup"><span data-stu-id="6af98-128">In addition, this section also specifies settings for processing metadata.</span></span>  
+ <span data-ttu-id="d14d1-129">此外，本區段也會指定處理中繼資料的設定。</span><span class="sxs-lookup"><span data-stu-id="d14d1-129">In addition, this section also specifies settings for processing metadata.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6af98-129">範例</span><span class="sxs-lookup"><span data-stu-id="6af98-129">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d14d1-130">範例</span><span class="sxs-lookup"><span data-stu-id="d14d1-130">Example</span></span>  
   
 ```xml  
 <client>
@@ -72,9 +73,9 @@ ms.locfileid: "69919532"
 </client>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6af98-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6af98-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d14d1-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d14d1-131">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
-- [<span data-ttu-id="6af98-131">WCF 用戶端組態</span><span class="sxs-lookup"><span data-stu-id="6af98-131">WCF Client Configuration</span></span>](../../../wcf/feature-details/client-configuration.md)
-- [<span data-ttu-id="6af98-132">用戶端</span><span class="sxs-lookup"><span data-stu-id="6af98-132">Clients</span></span>](../../../wcf/feature-details/clients.md)
+- [<span data-ttu-id="d14d1-132">WCF 用戶端組態</span><span class="sxs-lookup"><span data-stu-id="d14d1-132">WCF Client Configuration</span></span>](../../../wcf/feature-details/client-configuration.md)
+- [<span data-ttu-id="d14d1-133">用戶端</span><span class="sxs-lookup"><span data-stu-id="d14d1-133">Clients</span></span>](../../../wcf/feature-details/clients.md)
