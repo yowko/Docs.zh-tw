@@ -2,22 +2,23 @@
 title: <transport> 的 <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: ce8b2acb7d87b094958e20ca0b6cca9fc8266a8d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ea60ccaba58bc0b3fa8f2263295bf1413d25e89
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911978"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399260"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<ws2007HttpBinding > 的\<傳輸 >
 定義 HTTP 傳輸的驗證設定。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<ws2007HttpBinding>  
-\<系結 >  
-\<安全性 >  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<傳輸 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +44,7 @@ ms.locfileid: "69911978"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |無|停用安全性。|  
 |基本|使用基本驗證。|  
@@ -54,9 +55,9 @@ ms.locfileid: "69911978"
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|無|停用安全性。|  
+|None|停用安全性。|  
 |基本|使用基本驗證。|  
 |摘要|使用摘要式驗證。|  
 |Ntlm|使用 NTLM 做為 Windows 網域的後援。|  
@@ -64,11 +65,11 @@ ms.locfileid: "69911978"
 |憑證|使用 X.509 憑證來驗證用戶端。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<security>](security-of-ws2007httpbinding.md)|表示[ \<ws2007HttpBinding >](ws2007httpbinding.md)元素的安全性功能。|  
   

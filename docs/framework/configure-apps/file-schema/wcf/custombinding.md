@@ -2,20 +2,21 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0b6f26c7b9e9d02b3ff20b53f42b09d671699ea5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1fd0a12b62c416ce71946e59e7868abc7638a274
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919382"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398118"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
 對使用者提供訊息堆疊的完整控制權。
 
-\<system.serviceModel>\
-\<bindings>\
-\<customBinding>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<customBinding >**  
 
 ## <a name="syntax"></a>語法
 
@@ -178,10 +179,10 @@ ms.locfileid: "69919382"
 
 ### <a name="attributes"></a>屬性
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |closeTimeout|<xref:System.TimeSpan> 值，指定提供用來讓關閉作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|
-|NAME|包含繫結之組態名稱的字串。 這個值是使用者定義的字串，它會充當自訂繫結的識別字串。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊, 請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|
+|NAME|包含繫結之組態名稱的字串。 這個值是使用者定義的字串，它會充當自訂繫結的識別字串。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊，請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|
 |openTimeout|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|
 |receiveTimeout|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|
 |sendTimeout|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|
@@ -230,7 +231,7 @@ ms.locfileid: "69919382"
 
 - 接下來是選擇性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>，它會提供 WS-ReliableMessaging 規格中所定義的工作階段和排序機制。 這個工作階段概念可以跨越 SOAP 和傳輸媒介。
 
-- 接下來是選擇性安全性繫結項目，它會提供類似授權、驗證 (Authentication)、保護和機密性等安全性功能。 下列安全性繫結項目是由 Windows Communication Foundation (WCF) 所提供:
+- 接下來是選擇性安全性繫結項目，它會提供類似授權、驗證 (Authentication)、保護和機密性等安全性功能。 下列安全性繫結項目是由 Windows Communication Foundation （WCF）所提供：
 
   - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 
@@ -260,7 +261,7 @@ ms.locfileid: "69919382"
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-- 最下方是必要的傳輸項目。 您可以使用自己的傳輸, 或使用 Windows Communication Foundation (WCF) 所提供的其中一個傳輸繫結項目:
+- 最下方是必要的傳輸項目。 您可以使用自己的傳輸，或使用 Windows Communication Foundation （WCF）所提供的其中一個傳輸繫結項目：
 
   - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -290,7 +291,7 @@ ms.locfileid: "69919382"
 
 此外，您也可以定義自己的繫結項目，並將其插入上述任何定義層之間。
 
-如需如何使用自訂系結來修改系統提供之系結的討論, 請[參閱如何:自訂系統提供](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)的系結。
+如需如何使用自訂系結來修改系統提供之系結的討論，請[參閱如何：自訂系統提供](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)的系結。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -2,21 +2,22 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: b11f472c0e33003e50be4b45bb49196c64ecb70d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5d78aed78a5c3a10aecac53bda02d6c640bc71ae
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919723"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400577"
 ---
 # <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding>
 將訊息編碼指定為位元組資料流，且含有指定字元編碼的選項。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<系結 >  
-\<binaryMessageEncoding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<byteStreamMessageEncoding >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +42,7 @@ ms.locfileid: "69919723"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   

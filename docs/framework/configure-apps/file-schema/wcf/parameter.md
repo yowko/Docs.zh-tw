@@ -2,22 +2,23 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: c3f2179835ad1232e115cad0decdd3d41bbdc160
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07fa410109a7bd2fa315132c4737301698bb3a93
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932839"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400117"
 ---
 # <a name="parameter"></a>\<parameter>
 指定當宣告型別為泛型型別時的泛型參數。  
   
- \<system.runtime.serialization>  
-\<dataContractSerializer>  
-\<declaredTypes > 元素  
-\<新增 declaredTypes > 的\<> 元素  
-\<knownType > 元素  
-\<參數 > 元素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> 的序列化**](system-runtime-serialization.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dataContractSerializer >** ](datacontractserializer.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<declaredTypes >** ](declaredtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<新增 >** ](add-of-declaredtypes-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<knownType >** ](knowntype.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<參數 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,7 +32,7 @@ ms.locfileid: "69932839"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |索引|當宣告型別為泛型型別時，會指定將傳回已知型別的泛型參數。|  
 |型別|字串，說明用來序列化和還原序列化的已知型別。|  
@@ -53,9 +54,9 @@ ms.locfileid: "69932839"
 |[\<knownType>](knowntype.md)|指定可由宣告型別的欄位或屬性傳回的已知型別。|  
   
 ## <a name="remarks"></a>備註  
- 如需已知類型的詳細資訊, 請參閱[資料合約已知類型](../../../wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
+ 如需已知類型的詳細資訊，請參閱[資料合約已知類型](../../../wcf/feature-details/data-contract-known-types.md)和<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
- 如需使用此元素的範例, 請參閱[ dataContractSerializer>。\< ](datacontractserializer-element.md)  
+ 如需使用此元素的範例，請參閱[ dataContractSerializer>。\< ](datacontractserializer-element.md)  
   
  此組態項目不可以同時具有這兩個屬性。 如果同時設定了這兩個屬性，就會發生 <xref:System.Configuration.ConfigurationErrorsException>。  
   

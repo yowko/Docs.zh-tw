@@ -2,23 +2,24 @@
 title: <certificate> 的 <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 72128aca1321f3adc4c99ce0e3a47489b1640e31
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2044dc6fb4ae688a0a3c7e29b3b7696df0d0d218
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919592"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398205"
 ---
 # <a name="certificate-of-peer"></a>\<對等 > \<的憑證 >
 指定對等所使用的憑證。  
   
- \<system.ServiceModel>  
-\<行為 >  
-\<serviceBehaviors>  
-\<行為 >  
-\<serviceCredentials>  
-\<對等 >  
-\<憑證 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCredentials >** ](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<對等 >** ](peer-of-servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<憑證 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,8 +38,8 @@ ms.locfileid: "69919592"
 |屬性|描述|  
 |---------------|-----------------|  
 |`findValue`|字串，其中包含要在 X.509 憑證存放區內搜尋的值。 屬性所包含的型別必須滿足指定之 `x509FindType` 的需求。 預設值是空字串。|  
-|`storeLocation`|指定 X.509 憑證存放區的位置，用戶端會使用該憑證存放區針對這個位置驗證對等的憑證。 有效值包括以下的值：<br /><br /> -LocalMachine: 指派給本機電腦的憑證存放區。<br />-CurrentUser: 指派給目前使用者的憑證存放區。<br /><br /> 預設為 LocalMachine。|  
-|`storeName`|指定要開啟之 X.509 憑證存放區的名稱。 有效值包括以下的值：<br /><br /> 通訊錄其他使用者的憑證存放區。<br />AuthRoot協力廠商憑證授權單位單位 (Ca) 的憑證存放區。<br />CertificateAuthority中繼憑證授權單位單位 (Ca) 的憑證存放區。<br />禁止已撤銷憑證的憑證存放區。<br />'個人憑證的憑證存放區。<br />路徑受信任的根憑證授權單位 (Ca) 的憑證存放區。<br />TrustedPeople直接信任之人員和資源的憑證存放區。<br />TrustedPublisher直接信任之發行者的憑證存放區。<br /><br /> 預設為 My。|  
+|`storeLocation`|指定 X.509 憑證存放區的位置，用戶端會使用該憑證存放區針對這個位置驗證對等的憑證。 有效值包括以下的值：<br /><br /> -LocalMachine：指派給本機電腦的憑證存放區。<br />-CurrentUser：指派給目前使用者的憑證存放區。<br /><br /> 預設為 LocalMachine。|  
+|`storeName`|指定要開啟之 X.509 憑證存放區的名稱。 有效值包括以下的值：<br /><br /> 通訊錄其他使用者的憑證存放區。<br />AuthRoot協力廠商憑證授權單位單位（Ca）的憑證存放區。<br />CertificateAuthority中繼憑證授權單位單位（Ca）的憑證存放區。<br />禁止已撤銷憑證的憑證存放區。<br />'個人憑證的憑證存放區。<br />路徑受信任的根憑證授權單位（Ca）的憑證存放區。<br />TrustedPeople直接信任之人員和資源的憑證存放區。<br />TrustedPublisher直接信任之發行者的憑證存放區。<br /><br /> 預設為 My。|  
 |`X509FindType`|定義要執行之 X.509 搜尋的類型。 有效值包括以下的值：<br /><br /> -FindByThumbPrint<br />-   FindBySubjectName<br />-FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />- FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> `findValue` 屬性所包含的型別必須滿足指定之 `X509FindType` 的需求。<br /><br /> 預設值為 FindBySubjectDistinguishedName。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -46,14 +47,14 @@ ms.locfileid: "69919592"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<peer>](peer-of-servicecredentials.md)|指定對等節點的目前認證。|  
   
 ## <a name="remarks"></a>備註  
  這個組態項目包含在驗證對等網狀結構中鄰接項目時所使用的 `X509Certificate2` 執行個體。  
   
- 如需對等程式設計的詳細資訊, 請參閱[對等網路](../../../wcf/feature-details/peer-to-peer-networking.md)。  
+ 如需對等程式設計的詳細資訊，請參閱[對等網路](../../../wcf/feature-details/peer-to-peer-networking.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

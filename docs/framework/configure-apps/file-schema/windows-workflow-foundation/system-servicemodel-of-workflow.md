@@ -3,15 +3,18 @@ title: < 的 System.servicemodel > 工作流程
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947358"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398605"
 ---
 # <a name="systemservicemodel-of-workflow"></a>\<工作流程的 System.servicemodel >
 這個組態區段包含所有工作流程組態項目。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<筆記本電腦.System.servicemodel >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -95,17 +98,17 @@ ms.locfileid: "69947358"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- None  
+ 無  
   
 ### <a name="child-elements"></a>子元素  
   
 |項目|說明|  
 |-------------|-----------------|  
 |[\<behaviors>](behaviors-of-workflow.md)|這個區段會定義**serviceBehaviors**集合。  集合中的每個項目都會定義服務使用的行為項目。 每個行為元素都是由其唯一的**名稱**屬性來識別。|  
-|[\<tracking>](tracking.md)|代表定義工作流程服務之追蹤設定的組態區段。<br /><br /> 如需工作流程追蹤及其設定的詳細資訊, 請參閱工作流程[追蹤和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)追蹤和設定[工作流程的追蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
+|[\<tracking>](tracking.md)|代表定義工作流程服務之追蹤設定的組態區段。<br /><br /> 如需工作流程追蹤及其設定的詳細資訊，請參閱工作流程[追蹤和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)追蹤和設定[工作流程的追蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|\<configuration>|.NET 組態檔中所有組態項目的根項目。|
+|[\<configuration>](../configuration-element.md)|.NET 組態檔中所有組態項目的根項目。|

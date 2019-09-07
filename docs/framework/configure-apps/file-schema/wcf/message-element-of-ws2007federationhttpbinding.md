@@ -2,22 +2,23 @@
 title: <message> 的 <ws2007FederationHttpBinding> 項目
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 4340727026cb151f2efe813dfa005c1c5a1908be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b1128bda6068a1fe3d8f5bb5ac29cc349f023b5b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931628"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397855"
 ---
 # <a name="message-element-of-ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding > 的\<message > 元素
 定義[ \<ws2007FederationHttpBinding >](ws2007federationhttpbinding.md)元素的訊息層級安全性設定。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<ws2007FederationHttpBinding>  
-\<系結 >  
-\<安全性 >  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007FederationHttpBinding >** ](ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-element-of-ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<訊息 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -84,7 +85,7 @@ ms.locfileid: "69931628"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`algorithmSuite`|選擇性。 設定訊息加密、簽章和金鑰包裝演算法。 這些演算法和金鑰大小是由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 類別所決定。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。<br /><br /> 請參閱下表列出的可能值。 預設值為 Basic256。|  
 |`issuedKeyType`|指定要發行的金鑰類型。 有效值包括以下的值：<br /><br /> -   SymmetricKey<br />-PublicKey<br />-   BearerKey<br /><br /> 預設為 SymmetricKey。 此屬性的型別為 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
@@ -114,7 +115,7 @@ ms.locfileid: "69931628"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](claimtyperequirements-element.md)|指定這個繫結之宣告型別的集合。 每個項目的型別為 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
 |[\<issuer>](issuer.md)|指定發行安全性權杖的端點。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  

@@ -2,18 +2,19 @@
 title: <dataContractSerializer>< 的 >。
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: 380d9ba5b8407d78b5045fd34fcdf37c0818d6f9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eb556f533af1f99049382e9a2e34465f88d563db
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919342"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398085"
 ---
 # <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer > > \<的序列化
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的組態資料。  
   
- \<system.runtime.serialization>  
-\<dataContractSerializer>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> 的序列化**](system-runtime-serialization.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<dataContractSerializer >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +50,7 @@ ms.locfileid: "69919342"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<declaredTypes>](declaredtypes.md)|包含還原序列化時，<xref:System.Runtime.Serialization.DataContractSerializer> 使用的已知型別。<br /><br /> 如需資料合約和已知類型的詳細資訊, 請參閱[資料合約已知類型](../../../wcf/feature-details/data-contract-known-types.md)。|  
+|[\<declaredTypes>](declaredtypes.md)|包含還原序列化時，<xref:System.Runtime.Serialization.DataContractSerializer> 使用的已知型別。<br /><br /> 如需資料合約和已知類型的詳細資訊，請參閱[資料合約已知類型](../../../wcf/feature-details/data-contract-known-types.md)。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -58,7 +59,7 @@ ms.locfileid: "69919342"
 |[\<system.runtime.serialization>](system-runtime-serialization.md)|代表 <xref:System.Runtime.Serialization> 命名空間區段的根項目，而且包含用來設定 <xref:System.Runtime.Serialization.DataContractSerializer> 選項的項目。|  
   
 ## <a name="remarks"></a>備註  
- 如需已知類型的詳細資訊, <xref:System.Runtime.Serialization.DataContractSerializer>請參閱和[資料合約已知類型](../../../wcf/feature-details/data-contract-known-types.md)。  
+ 如需已知類型的詳細資訊， <xref:System.Runtime.Serialization.DataContractSerializer>請參閱和[資料合約已知類型](../../../wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

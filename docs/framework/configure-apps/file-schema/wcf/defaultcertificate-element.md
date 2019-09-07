@@ -2,23 +2,24 @@
 title: <defaultCertificate> 項目
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: 93410e815a156f91db1962f05fb1aa6baca7f955
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cce236bf80fa00f01a3b5f4680d975f83fde0c16
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919269"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400421"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate > 元素
 指定服務或 STS 不透過交涉通訊協定提供憑證時要使用的 X.509 憑證。  
   
- \<system.ServiceModel>  
-\<行為 >  
-endpointBehaviors 區段  
-\<行為 >  
-\<clientCredentials>  
-\<serviceCertificate>  
-\<defaultCertificate>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultCertificate >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +35,7 @@ endpointBehaviors 區段
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |findValue|字串。 要搜尋的值。|  
 |x509FindType|列舉。 要搜尋的其中一個憑證欄位。|  
@@ -43,7 +44,7 @@ endpointBehaviors 區段
   
 ## <a name="findvalue-attribute"></a>findValue 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |String|這個值取決於要搜尋的欄位 (由 X509FindType 屬性指定)。 例如，如果搜尋指紋，則此值必須是十六進位數字字串。|  
   
@@ -55,13 +56,13 @@ endpointBehaviors 區段
   
 ## <a name="storelocation-attribute"></a>storeLocation 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |列舉|CurrentUser 或 LocalMachine。|  
   
 ## <a name="storename-attribute"></a>storeName 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |列舉|這些值包括：通訊錄、AuthRoot、CertificateAuthority、不允許、My、Root、TrustedPeople 和 TrustedPublisher。|  
   

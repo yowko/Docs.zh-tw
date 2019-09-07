@@ -2,22 +2,23 @@
 title: <transport> 的 <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 265b68e058919d1d5c5f1dbcfb1419b57be9aeab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 41f11be9b4ae8f7a7535c9766965de8575cff784
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915554"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399300"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<netTcpBinding> 的 \<transport>
 定義使用[ \<netTcpBinding >](nettcpbinding.md)設定之端點的訊息層級安全性需求類型。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netTcpBinding>  
-\<系結 >  
-\<安全性 >  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netTcpBinding >** ](nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<傳輸 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,7 +56,7 @@ ms.locfileid: "69915554"
   
 |值|描述|  
 |-----------|-----------------|  
-|None|用戶端為匿名。 這需要服務的憑證。|  
+|無|用戶端為匿名。 這需要服務的憑證。|  
 |Windows|使用 SP Negotiation (Kerberos 交涉) 指定用戶端的 Windows 驗證。|  
 |憑證|用戶端會透過憑證來驗證。 這會使用 SSL Negotiation，並需要服務的憑證。|  
   
@@ -63,7 +64,7 @@ ms.locfileid: "69915554"
   
 |值|描述|  
 |-----------|-----------------|  
-|None|無保護。|  
+|無|無保護。|  
 |Sign|訊息會經過簽署。|  
 |EncryptAndSign|-訊息會經過加密和簽署。|  
   
@@ -72,7 +73,7 @@ ms.locfileid: "69915554"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<security>](security-of-nettcpbinding.md)|指定[ \<netTcpBinding >](nettcpbinding.md)的安全性功能。|  
   

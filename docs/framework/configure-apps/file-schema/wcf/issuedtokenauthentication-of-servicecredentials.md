@@ -2,22 +2,23 @@
 title: <issuedTokenAuthentication> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: 280aa49019f68a0906307e24842a585a92c6600a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6d468a27ee05fb4dd8cf087d10e5d170783d3454
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925373"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400363"
 ---
 # <a name="issuedtokenauthentication-of-servicecredentials"></a>\<serviceCredentials > 的\<n >
 指定發行為服務認證的自訂權杖。  
   
- \<system.ServiceModel>  
-\<行為 >  
-\<serviceBehaviors>  
-\<行為 >  
-\<serviceCredentials>  
-\<issuedTokenAuthentication>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCredentials >** ](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<n >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +47,7 @@ ms.locfileid: "69925373"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`allowedAudienceUris`|取得目標 URI 的集合，<xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖會以其為目標，這樣該 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 執行個體才會將其視為有效。 如需使用這個屬性的詳細資訊，請參閱 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>。|  
 |`allowUntrustedRsaIssuers`|布林值，指定是否允許使用未受信任的 RSA 憑證簽發者。<br /><br /> 憑證是由憑證授權單位 (CA) 簽署，以確認真實性。 未受信任的簽發者，是指未指定為可信任進行簽署憑證的 CA。|  
@@ -59,20 +60,20 @@ ms.locfileid: "69925373"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |`knownCertificates`|指定 <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement> 項目的集合，這個集合會指定服務認證的受信任簽發者。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<serviceCredentials>](servicecredentials.md)|指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。|  
   
 ## <a name="remarks"></a>備註  
- 發行之權杖的情況有三個階段。 在第一個階段中, 嘗試存取服務的用戶端稱為「*安全權杖服務*」。 此安全權杖服務接著會驗證用戶端，隨後並對用戶端發出權杖，通常是安全性判斷提示標記語言 (SAML) 權杖。 用戶端接著會以權杖傳回服務。 此服務會檢查資料的權杖，使服務能夠驗證權杖，因此也能夠驗證用戶端。 若要驗證權杖，安全權杖服務所使用的憑證必須讓服務知道。  
+ 發行之權杖的情況有三個階段。 在第一個階段中，嘗試存取服務的用戶端稱為「*安全權杖服務*」。 此安全權杖服務接著會驗證用戶端，隨後並對用戶端發出權杖，通常是安全性判斷提示標記語言 (SAML) 權杖。 用戶端接著會以權杖傳回服務。 此服務會檢查資料的權杖，使服務能夠驗證權杖，因此也能夠驗證用戶端。 若要驗證權杖，安全權杖服務所使用的憑證必須讓服務知道。  
   
- 這個項目是任何此類安全權杖服務憑證的存放庫。 若要新增憑證, 請使用[ \<knownCertificates >](knowncertificates.md)。 為每個憑證插入「 [新增>,如下列範例所示。\< ](add-of-knowncertificates.md)  
+ 這個項目是任何此類安全權杖服務憑證的存放庫。 若要新增憑證，請使用[ \<knownCertificates >](knowncertificates.md)。 為每個憑證插入「 [新增>，如下列範例所示。\< ](add-of-knowncertificates.md)  
   
 ```xml  
 <issuedTokenAuthentication>
@@ -87,7 +88,7 @@ ms.locfileid: "69925373"
   
  根據預設，必須從安全權杖服務取得憑證。 這些「已知的」憑證可確保只有合法的用戶端可以存取服務。  
   
- 如需使用此設定元素的詳細資訊, [請參閱如何:在同盟服務](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)上設定認證。  
+ 如需使用此設定元素的詳細資訊， [請參閱如何：在同盟服務](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)上設定認證。  
   
 ## <a name="see-also"></a>另請參閱
 

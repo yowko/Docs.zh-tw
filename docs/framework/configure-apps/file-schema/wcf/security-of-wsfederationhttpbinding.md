@@ -2,21 +2,22 @@
 title: <security> 的 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 875ce7d548d59f32465da817e9e956217f346f60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6c07d1ca18837f66548411262b84b9a326f5ec4a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936529"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399737"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding > 的\<安全性 >
 定義[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)的安全性設定。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<wsFederatedBinding>  
-\<系結 >  
-\<安全性 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全性 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -83,13 +84,13 @@ ms.locfileid: "69936529"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |模式|選擇性。 指定套用的安全性類型。 預設值為 `Message`。 此屬性的型別為 <xref:System.ServiceModel.WSFederationHttpSecurityMode>。|  
   
 ## <a name="mode-attribute"></a>Mode 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |None|傳輸期間的 SOAP 訊息是不安全的。|  
 |訊息|完整性、機密性、伺服器驗證與用戶端驗證都可透過 SOAP 訊息安全性來提供。 根據預設，本文會經過加密與簽署。 服務必須使用憑證來設定。 用戶端驗證是以安全性權杖服務發行至用戶端的權杖為基礎。|  
@@ -103,7 +104,7 @@ ms.locfileid: "69936529"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<binding>](../../../misc/binding.md)|定義[ \<wsDualHttpBinding >](wsdualhttpbinding.md)的所有系結功能。|  
   

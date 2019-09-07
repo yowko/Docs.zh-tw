@@ -2,23 +2,22 @@
 title: <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: fe952dfe9ce51e23d1ba46975026799dfe8b5b39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4efd01a61a10603b82a6ae2d7e9a2a225d2f8860
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915267"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399077"
 ---
 # <a name="ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding>
 
-一種安全且互通的系結, 衍生自[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)並支援聯合安全性。
+一種安全且互通的系結，衍生自[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)並支援聯合安全性。
 
-```xml
-<system.ServiceModel>
-  <bindings>
-    <ws2007FederationHttpBinding>
-```
-
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ws2007FederationHttpBinding >**  
+  
 ## <a name="syntax"></a>語法
 
 ```xml
@@ -71,8 +70,8 @@ ms.locfileid: "69915267"
 |`hostNameComparisonMode`|指定用於剖析 URI 的 HTTP 主機名稱比較模式。 這個屬性的型別為 <xref:System.ServiceModel.HostNameComparisonMode>，表示比對 URI 時此主機名稱是否會用來取用服務。 預設值為 <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>，表示比對時忽略主機名稱。|
 |`maxBufferPoolSize`|此繫結的緩衝集區大小上限。 預設為 524,288 個位元組 (512 * 1024)。 Windows Communication Foundation (WCF) 的許多部分會使用緩衝區。 每次使用這些組件時建立並終結緩衝區是高度耗費資源的作業，回收緩衝區的記憶體也是如此。 有了緩衝集區，您就可以從集區取出緩衝區來使用，用完後再還給集區， 因此可以避免建立及終結緩衝區的負荷。|
 |`maxReceivedMessageSize`|在使用此繫結設定之通道上可以接收的訊息大小上限 (以位元組為單位，包括標頭)。 超出此限制之訊息的寄件者將會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。|
-|`messageEncoding`|定義用來對訊息進行編碼的編碼器。 有效值包括以下的值：<br /><br /> 文字使用文字訊息編碼器。<br />Mtom使用訊息傳輸組織機制 1.0 (MTOM) 編碼器。<br /><br /> 預設為 Text。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.WSMessageEncoding>。|
-|`name`|繫結的組態名稱。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊, 請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|
+|`messageEncoding`|定義用來對訊息進行編碼的編碼器。 有效值包括以下的值：<br /><br /> 文字使用文字訊息編碼器。<br />Mtom使用訊息傳輸組織機制1.0 （MTOM）編碼器。<br /><br /> 預設為 Text。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.WSMessageEncoding>。|
+|`name`|繫結的組態名稱。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊，請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|
 |`openTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|
 |`privacyNoticeAt`|隱私權注意事項所在的 URI。|
 |`privacyNoticeVersion`|目前隱私權注意事項的版本。|
@@ -99,7 +98,7 @@ ms.locfileid: "69915267"
 
 ## <a name="remarks"></a>備註
 
-聯合是在多個企業或信任網域上共用識別以便進行驗證和授權的能力。 它使用 WS-Trust 通訊協定從一信任網域對應身分識別表示至其他信任網域。 聯合 HTTP 繫結支援 SOAP 安全性以及混合模式安全性，但不支援獨立使用傳輸安全性。 使用這個繫結設定的服務必須使用 HTTP 傳輸。 如需詳細資訊, 請參閱[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)。
+聯合是在多個企業或信任網域上共用識別以便進行驗證和授權的能力。 它使用 WS-Trust 通訊協定從一信任網域對應身分識別表示至其他信任網域。 聯合 HTTP 繫結支援 SOAP 安全性以及混合模式安全性，但不支援獨立使用傳輸安全性。 使用這個繫結設定的服務必須使用 HTTP 傳輸。 如需詳細資訊，請參閱[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)。
 
 ## <a name="example"></a>範例
 

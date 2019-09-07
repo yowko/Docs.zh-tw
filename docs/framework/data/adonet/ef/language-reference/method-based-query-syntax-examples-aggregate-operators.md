@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0e306067-5720-4782-9719-2286570a7e47
-ms.openlocfilehash: d9007e4d650c79a636f908a638bb382457f6b29b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17d3a5e221fc5f917e9e266b3af4fb844c6fd85e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250271"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397493"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators"></a>以方法為基礎的查詢語法範例：彙總運算子
-本主題<xref:System.Linq.Enumerable.Aggregate%2A>中的範例將示範如何使用、、 <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.Count%2A>、 <xref:System.Linq.Enumerable.LongCount%2A> <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Max%2A>、、和<xref:System.Linq.Enumerable.Sum%2A>方法來查詢[AdventureWorks 銷售模型](https://archive.codeplex.com/?p=msftdbprodsamples)（使用以方法為基礎的查詢語法。 這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
+本主題<xref:System.Linq.Enumerable.Aggregate%2A>中的範例將示範如何使用、、 <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.Count%2A>、 <xref:System.Linq.Enumerable.LongCount%2A> <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Max%2A>、、和<xref:System.Linq.Enumerable.Sum%2A>方法來查詢[AdventureWorks 銷售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（使用以方法為基礎的查詢語法。 這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
   
  本主題中的範例會使用下列`using` / `Imports`語句：  
   

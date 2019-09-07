@@ -2,22 +2,23 @@
 title: <connectionPoolSettings> 的 <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 787b50296b7ed4f6fdceef244a99dffffae63c61
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f9b0fff741c32c1a3d6f9461f478e89acc18114e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919406"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398101"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<tcpTransport > 的\<connectionPoolSettings >
 指定 TCP 傳輸的其他連線集區設定。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<系結 >  
-\<tcpTransport>  
-\<connectionPoolSettings>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<tcpTransport >** ](tcptransport.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<connectionPoolSettings >**  
   
 ## <a name="syntax"></a>語法  
   

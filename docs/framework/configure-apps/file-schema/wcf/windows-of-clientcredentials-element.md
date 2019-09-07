@@ -2,22 +2,23 @@
 title: <windows> 項目的 <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: e9f0ed9879cc42ea25b83e6b626139a40a593112
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 61ca99213f0b83a5af5df0184a8c1de405366288
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940301"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399122"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<clientCredentials > 元素\<的 windows >
 指定要用於代表用戶端的 Windows 認證的設定。  
   
- \<system.ServiceModel>  
-\<行為 >  
-\<endpointBehaviors>  
-\<行為 >  
-\<clientCredentials>  
-\<windows>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<windows >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,8 +34,8 @@ ms.locfileid: "69940301"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|設定用戶端與伺服器通訊的模擬喜好設定。 用戶端選取的模擬模式不會在伺服器上強制使用。 有效值包括以下的值：<br /><br /> 發現伺服器可以取得用戶端的身分識別和許可權, 但無法模擬用戶端。<br />申請伺服器可以在本機系統上模擬用戶端的安全性內容。<br />其它伺服器可以在遠端系統上模擬用戶端的安全性內容。<br />匿名伺服器無法模擬或識別用戶端。<br />無未指派模擬層級。<br /><br /> 預設為 Identification。 此屬性的型別為 <xref:System.Security.Principal.TokenImpersonationLevel>。|  
-|`allowNtlm`|將這個屬性設定為 `true` 時，如果 Kerberos 無法使用，會允許驗證降級為 NTLM。<br /><br /> 將此屬性設定`false`為, 會使 Windows Communication Foundation (WCF) 在使用 NTLM 時能夠盡力擲回例外狀況。 請注意，將此屬性設為 `false`，不一定能夠禁止 NTLM 認證透過網路傳送。|  
+|`allowedImpersonationLevel`|設定用戶端與伺服器通訊的模擬喜好設定。 用戶端選取的模擬模式不會在伺服器上強制使用。 有效值包括以下的值：<br /><br /> 發現伺服器可以取得用戶端的身分識別和許可權，但無法模擬用戶端。<br />申請伺服器可以在本機系統上模擬用戶端的安全性內容。<br />其它伺服器可以在遠端系統上模擬用戶端的安全性內容。<br />匿名伺服器無法模擬或識別用戶端。<br />無未指派模擬層級。<br /><br /> 預設為 Identification。 此屬性的型別為 <xref:System.Security.Principal.TokenImpersonationLevel>。|  
+|`allowNtlm`|將這個屬性設定為 `true` 時，如果 Kerberos 無法使用，會允許驗證降級為 NTLM。<br /><br /> 將此屬性設定`false`為，會使 Windows Communication Foundation （WCF）在使用 NTLM 時能夠盡力擲回例外狀況。 請注意，將此屬性設為 `false`，不一定能夠禁止 NTLM 認證透過網路傳送。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  

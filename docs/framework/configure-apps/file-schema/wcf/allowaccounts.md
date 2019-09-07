@@ -2,17 +2,20 @@
 title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: c62f29c53d807cab397ff09c6163d924a71ea319
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 74b9d51b7400469c96fc9c8b36e4b0fb1d46969b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926604"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398410"
 ---
 # <a name="allowaccounts"></a>\<allowAccounts>
-包含設定專案的集合, 這些專案會指定主控 Windows Communication Foundation (WCF) 服務之進程的使用者帳戶, 並授與共享服務的連接存取權。  
+包含設定專案的集合，這些專案會指定主控 Windows Communication Foundation （WCF）服務之進程的使用者帳戶，並授與共享服務的連接存取權。  
   
- \<system.serviceModel.activation>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel. 啟用 >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<net.pipe >** ](net-pipe.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<d >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,7 +35,7 @@ ms.locfileid: "69926604"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|[\<add>](add-of-allowaccounts.md)|加入裝載 WCF 服務之進程的使用者帳戶, 並授與共享服務的連接存取權。|  
+|[\<add>](add-of-allowaccounts.md)|加入裝載 WCF 服務之進程的使用者帳戶，並授與共享服務的連接存取權。|  
   
 ### <a name="parent-elements"></a>父項目  
   

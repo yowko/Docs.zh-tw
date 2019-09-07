@@ -3,21 +3,22 @@ title: <sendMessageChannelCache>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-ms.openlocfilehash: de53eb16d53d1e37209e36f2f6bfdc4bdfd84465
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac38a43b39496bdeee59a591f7b8f5bc4dd30de0
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947550"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398689"
 ---
 # <a name="sendmessagechannelcache"></a>\<sendMessageChannelCache>
-一種服務行為, 可自訂快取共用層級、通道處理站快取的設定, 以及使用傳送訊息活動傳送訊息至服務端點的工作流程之通道快取的設定。  
+一種服務行為，可自訂快取共用層級、通道處理站快取的設定，以及使用傳送訊息活動傳送訊息至服務端點的工作流程之通道快取的設定。  
   
-\<system.ServiceModel>  
-\<行為 >  
-\<serviceBehaviors>  
-\<行為 >  
-\<sendMessageChannelCache>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<筆記本電腦.System.servicemodel >** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sendMessageChannelCache >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,9 +44,9 @@ ms.locfileid: "69947550"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
-|allowUnsafeCaching|指出是否要開啟快取功能的布林值。 如果您的工作流程服務有自訂繫結或自訂行為，快取可能會不安全，因此快取功能會依預設停用。 不過, 如果您想要開啟快取, 請將此屬性設定為**true**。|  
+|allowUnsafeCaching|指出是否要開啟快取功能的布林值。 如果您的工作流程服務有自訂繫結或自訂行為，快取可能會不安全，因此快取功能會依預設停用。 不過，如果您想要開啟快取，請將此屬性設定為**true**。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -65,10 +66,10 @@ ms.locfileid: "69947550"
   
  根據預設，在 <xref:System.ServiceModel.WorkflowServiceHost> 所裝載的工作流程中，<xref:System.ServiceModel.Activities.Send> 中的所有工作流程執行個體會共用 <xref:System.ServiceModel.WorkflowServiceHost> 傳訊活動使用的快取 (主機層級快取)。 針對並非由 <xref:System.ServiceModel.WorkflowServiceHost> 裝載的用戶端工作流程，快取只能供工作流程執行個體使用 (執行個體層級快取)。 工作流程中的傳送活動若在組態中定義了端點，快取會依預設停用。  
   
- 如需如何變更通道處理站和通道快取的預設快取共用層級和快取設定的詳細資訊, 請參閱[變更傳送活動的快取共用層級](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
+ 如需如何變更通道處理站和通道快取的預設快取共用層級和快取設定的詳細資訊，請參閱[變更傳送活動的快取共用層級](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
   
 ## <a name="example"></a>範例  
- 在裝載的工作流程服務中，您可以在應用程式組態檔中，指定處理站快取和通道快取設定。 若要執行這項操作，請加入包含處理站快取設定和通道快取的服務行為，然後將這個服務行為加入您的服務中。 下列範例會顯示設定檔案的內容, 其中包含`MyChannelCacheBehavior`具有自訂處理站快取和通道快取設定的服務行為。 此服務行為會透過`behaviorConfiguration`屬性加入至服務。  
+ 在裝載的工作流程服務中，您可以在應用程式組態檔中，指定處理站快取和通道快取設定。 若要執行這項操作，請加入包含處理站快取設定和通道快取的服務行為，然後將這個服務行為加入您的服務中。 下列範例會顯示設定檔案的內容，其中包含`MyChannelCacheBehavior`具有自訂處理站快取和通道快取設定的服務行為。 此服務行為會透過`behaviorConfiguration`屬性加入至服務。  
   
 ```xml  
 <configuration>    

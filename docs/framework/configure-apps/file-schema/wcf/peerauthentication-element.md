@@ -2,25 +2,26 @@
 title: <peerAuthentication> 項目
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 09094c00b8faa28c37e202112251fee7cb4580be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4c29c84a2cc56a890c8273e410ba31b5f3900732
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934013"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400087"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > 元素
 指定對等用戶端的驗證選項。  
   
- 如需對等程式設計的詳細資訊, 請參閱[對等網路](../../../wcf/feature-details/peer-to-peer-networking.md)。  
+ 如需對等程式設計的詳細資訊，請參閱[對等網路](../../../wcf/feature-details/peer-to-peer-networking.md)。  
   
- \<system.ServiceModel>  
-\<行為 >  
-\<endpointBehaviors>  
-\<行為 >  
-\<clientCredentials>  
-\<對等 >  
-\<PeerAuthentication>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<對等 >** ](peer-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<peerAuthentication >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +37,7 @@ ms.locfileid: "69934013"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`customCertificateValidatorType`|選擇性字串。 用來驗證自訂型別的型別和組件。 當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。|  
 |`certificateValidationMode`|選擇性列舉。 指定用來驗證認證之三個模式的其中一個。 如果設定為 `Custom`，也必須提供 `customCertificateValidator`。 預設為 `ChainTrust`。|  
@@ -45,7 +46,7 @@ ms.locfileid: "69934013"
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |String|指定型別名稱和組件以及用來尋找此型別的其他資料。 至少需要命名空間和型別名稱。 選擇性的資訊包括：組件名稱、版本號碼、文化特性和公開金鑰權杖。|  
   
@@ -53,17 +54,17 @@ ms.locfileid: "69934013"
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|下列其中一個值：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom`。 預設為 `ChainTrust`。<br /><br /> 如需詳細資訊, 請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
+|列舉|下列其中一個值：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom`。 預設為 `ChainTrust`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|下列其中一個值：`NoCheck`、`Online`、`Offline`。 預設為 `Online`。<br /><br /> 如需詳細資訊, 請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
+|列舉|下列其中一個值：`NoCheck`、`Online`、`Offline`。 預設為 `Online`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |列舉|下列其中一個值：`LocalMachine` 或 `CurrentUser`。 預設為 `CurrentUser`。 如果用戶端應用程式是在系統帳戶下執行，則憑證通常位於 `LocalMachine` 之下。 如果用戶端應用程式是在使用者帳戶下執行，則憑證通常位於 `CurrentUser`。|  
   

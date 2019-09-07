@@ -2,21 +2,22 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: e3a9ee00aab6ab48a1ba891565b63824e62b20fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb974492dee6b2a4244cedc06e3f5e40334dd02a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934220"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399975"
 ---
 # <a name="resolver"></a>\<resolver>
 指定對等解析程式，用於將對等網狀結構 ID 解析成一組對等節點位址，這組位址可表示參與網狀結構的數個節點。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netPeerBinding>  
-\<系結 >  
-\<resolver>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<解析程式 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +50,7 @@ ms.locfileid: "69934220"
 |[\<binding>](../../../misc/binding.md)|定義[ \<netPeerTcpBinding >](netpeertcpbinding.md)的所有系結功能。|  
   
 ## <a name="remarks"></a>備註  
- 對等名稱解析程式是對等通道用來尋找參與對等網狀結構之對等節點的探索服務。 您也可以使用這個解析程式將節點「註冊」到對等網狀結構，透過這樣的機制使得對等節點成為已知的，並且可從對等網狀結構中取得。 如需對等解析程式的詳細資訊, 請參閱[對等解析](../../../wcf/feature-details/peer-resolvers.md)程式。  
+ 對等名稱解析程式是對等通道用來尋找參與對等網狀結構之對等節點的探索服務。 您也可以使用這個解析程式將節點「註冊」到對等網狀結構，透過這樣的機制使得對等節點成為已知的，並且可從對等網狀結構中取得。 如需對等解析程式的詳細資訊，請參閱[對等解析](../../../wcf/feature-details/peer-resolvers.md)程式。  
   
 ## <a name="see-also"></a>另請參閱
 

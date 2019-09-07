@@ -2,19 +2,20 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4cb8488a1c633f9b7158f9bebfa617381b407a63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a315ec508b378d1a3ba0189b0867c7b6b61e34d2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933057"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398323"
 ---
 # <a name="netmsmqbinding"></a>\<netMsmqBinding>
 定義適合跨電腦通訊的佇列繫結。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netMsmqBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<netMsmqBinding >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -74,22 +75,22 @@ ms.locfileid: "69933057"
 |`maxBufferPoolSize`|指定此繫結之緩衝區集區大小上限的整數。 預設值為 8。|  
 |`maxReceivedMessageSize`|正整數，定義此繫結可以處理的訊息大小上限 (以位元組為單位，包括標頭)。 超出此限制之訊息的寄件者將會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。 這項關於訊息大小的限制是為了避免受到阻絕服務 (DoS) 攻擊。|  
 |`maxRetryCycles`|整數，指出有害訊息偵測功能使用的重試循環次數。 當訊息無法在循環的傳遞嘗試中成功傳遞，便成為有害訊息。 預設值為 3。 如需詳細資訊，請參閱 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>。|  
-|`name`|必要屬性。 包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊, 請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|  
+|`name`|必要屬性。 包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊，請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|  
 |`openTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
-|`QueueTransferProtocol`|有效的 <xref:System.ServiceModel.QueueTransferProtocol> 值，指定此繫結所使用的佇列通訊通道傳輸。 當使用 SOAP Reliable Messaging Protocol 時，MSMQ 不支援 Active Directory 定址。 因此, 當`Srmp` `useActiveDirectory`屬性設定為`Srmps` `true`時, 您不應該將此屬性設定為或。|  
+|`QueueTransferProtocol`|有效的 <xref:System.ServiceModel.QueueTransferProtocol> 值，指定此繫結所使用的佇列通訊通道傳輸。 當使用 SOAP Reliable Messaging Protocol 時，MSMQ 不支援 Active Directory 定址。 因此，當`Srmp` `useActiveDirectory`屬性設定為`Srmps` `true`時，您不應該將此屬性設定為或。|  
 |`receiveErrorHandling`|<xref:System.ServiceModel.ReceiveErrorHandling> 值，指定如何處理有害和不可分派的訊息。|  
 |`receiveRetryCount`|整數，指定佇列管理員在傳送訊息至重試佇列之前，應嘗試傳送的次數上限。|  
 |`receiveTimeout`|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:10:00。|  
 |`retryCycleDelay`|TimeSpan 值，指定嘗試傳遞無法立即傳遞之訊息時，重試循環之間的時間延遲。 該值只定義最小等待時間，因為實際的等待時間會更長。 預設值為 00:10:00。 如需詳細資訊，請參閱 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>。|  
 |`sendTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |`timeToLive`|TimeSpan 值，指定訊息在到期並置入寄不出的信件佇列之前，訊息仍保持有效的時間。 預設為 1.00:00:00。<br /><br /> 設定這個屬性可確保有時效的訊息在由接收應用程式處理之前不會變成過時。 佇列中未由接收應用程式於指定的時間間隔內使用的訊息，即稱為過期訊息。 過期訊息會傳送至特別的佇列，稱為寄不出的信件佇列。 寄不出的信件佇列的位置是使用 `DeadLetterQueue` 屬性設定，或根據保證設定為適當的預設值。|  
-|`usingActiveDirectory`|布林值，指定是否應該使用 Active Directory 來轉換佇列位址。<br /><br /> MSMQ 佇列位址可以由路徑名稱或直接格式名稱組成。 如為直接格式名稱，MSMQ 會使用 DNS、NetBIOS 或 IP 解析電腦名稱。 如為路徑名稱，MSMQ 會使用 Active Directory 解析電腦名稱。<br /><br /> 根據預設, Windows Communication Foundation (WCF) 佇列的傳輸會將訊息佇列的 URI 轉換成直接格式名稱。 藉由將 `UseActiveDirectory` 屬性設定為 true，應用程式可以指定佇列傳輸應使用 Active Directory 來解析電腦名稱，而非使用 DNS、NetBIOS 或 IP 來解析。|  
+|`usingActiveDirectory`|布林值，指定是否應該使用 Active Directory 來轉換佇列位址。<br /><br /> MSMQ 佇列位址可以由路徑名稱或直接格式名稱組成。 如為直接格式名稱，MSMQ 會使用 DNS、NetBIOS 或 IP 解析電腦名稱。 如為路徑名稱，MSMQ 會使用 Active Directory 解析電腦名稱。<br /><br /> 根據預設，Windows Communication Foundation （WCF）佇列的傳輸會將訊息佇列的 URI 轉換成直接格式名稱。 藉由將 `UseActiveDirectory` 屬性設定為 true，應用程式可以指定佇列傳輸應使用 Active Directory 來解析電腦名稱，而非使用 DNS、NetBIOS 或 IP 來解析。|  
 |`useMsmqTracing`|布林值，指定是否應追蹤由此繫結處理的訊息。 預設為 `false`。 如果啟用追蹤，每當訊息離開或到達訊息佇列電腦時，都會建立報告訊息並傳送至報告佇列。|  
 |`useSourceJournal`|布林值，指定是否要將此繫結處理之訊息的複本儲存在來源日誌。 預設為 `false`。<br /><br /> 有些佇列應用程式要記錄已離開電腦輸出佇列的訊息，這些程式可以將訊息複製到日誌佇列。 只要訊息一離開輸出佇列，而且收到目的端電腦已收到訊息的認可，訊息的複本就會保留在傳送端電腦的系統日誌佇列中。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
 |[\<security>](security-of-netmsmqbinding.md)|定義繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>。|  
@@ -101,7 +102,7 @@ ms.locfileid: "69933057"
 |[\<bindings>](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
- `netMsmqBinding` 繫結利用 Microsoft Message Queuing (MSMQ) 做為傳輸來提供對於佇列的支援，並可支援結合鬆散的應用程式、失敗隔離、負載撫平和中斷連接作業。 如需這些功能的討論, 請參閱[WCF 中的佇列](../../../wcf/feature-details/queues-in-wcf.md)。  
+ `netMsmqBinding` 繫結利用 Microsoft Message Queuing (MSMQ) 做為傳輸來提供對於佇列的支援，並可支援結合鬆散的應用程式、失敗隔離、負載撫平和中斷連接作業。 如需這些功能的討論，請參閱[WCF 中的佇列](../../../wcf/feature-details/queues-in-wcf.md)。  
   
 ## <a name="example"></a>範例  
   

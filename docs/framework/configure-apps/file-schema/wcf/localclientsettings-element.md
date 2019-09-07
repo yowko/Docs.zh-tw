@@ -2,21 +2,23 @@
 title: <localClientSettings> 項目
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: e7331105582a4a48b7edd8cd4f6a691771b0b8ff
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3ec0394943c030a8866087c98a912682a2a2112e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930803"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400313"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings > 元素
 指定此繫結之本機用戶端的安全性設定。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<系結 >  
-\<安全性 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<localClientSettings >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +43,7 @@ ms.locfileid: "69930803"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`cacheCookies`|布林值，指定是否啟用 Cookie 快取。 預設為 `false`。|  
 |`cookieRenewalThresholdPercentage`|整數，指定可更新的 Cookie 百分比上限。 這個值應介於 0 到 100 之間 (含 0 和 100)。 預設值為 90。|  

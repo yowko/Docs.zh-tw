@@ -3,17 +3,19 @@ title: 工作流程的 <behaviors>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
-ms.openlocfilehash: 7dd3b0b20c9d7accd80a85b3693e67ffc9b729e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05a15cdf5c043eb5d94b36028324310d2b7a8413
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945998"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398882"
 ---
 # <a name="behaviors-of-workflow"></a>\<工作流程 > 的行為
 此元素包含**serviceBehaviors**集合。  集合中的每個項目都會定義工作流程服務使用的行為項目。 每個行為元素都是由其唯一的**名稱**屬性來識別。  
   
- \<system.ServiceModel>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<筆記本電腦.System.servicemodel >** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<行為 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,7 +30,7 @@ ms.locfileid: "69945998"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- 無  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -38,7 +40,7 @@ ms.locfileid: "69945998"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<system.serviceModel>](../wcf/system-servicemodel.md)|所有工作流程組態項目的根項目。|  
   

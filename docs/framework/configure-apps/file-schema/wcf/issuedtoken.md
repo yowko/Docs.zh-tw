@@ -2,22 +2,23 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 68e3a0802a10b14148188a81ee24ed901caa147f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b5ab3c3ad070499d686ea74b9fd459e89f380cfa
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925386"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397968"
 ---
 # <a name="issuedtoken"></a>\<issuedToken>
 指定用來向服務驗證用戶端的自訂權杖。  
   
- \<system.ServiceModel>  
-\<行為 >  
-endpointBehaviors 區段  
-\<行為 >  
-\<clientCredentials>  
-\<issuedToken>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuedToken >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +44,7 @@ endpointBehaviors 區段
 |`issuedTokenRenewalThresholdPercentage`|選用性的整數屬性，這個屬性會指定權杖更新前，可通過的有效時間範圍 (由權杖簽發者提供) 百分比。 值為 0 到 100。 預設為 60，表示嘗試更新前有 60% 的時間通過。|  
 |`issuerChannelBehaviors`|選用性屬性，這個屬性會指定與簽發者通訊時所用的通道行為。|  
 |`localIssuerChannelBehaviors`|選用性屬性，這個屬性會指定與本機簽發者通訊時所用的通道行為。|  
-|`maxIssuedTokenCachingTime`|選用性的 Timespan 屬性，當權杖簽發者 (STS) 沒有指定時間時，指定快取發行的權杖之期間。 預設值為 "10675199.02:48: 05.4775807"。|  
+|`maxIssuedTokenCachingTime`|選用性的 Timespan 屬性，當權杖簽發者 (STS) 沒有指定時間時，指定快取發行的權杖之期間。 預設值為 "10675199.02：48： 05.4775807"。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -59,9 +60,9 @@ endpointBehaviors 區段
 |[\<clientCredentials>](clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
   
 ## <a name="remarks"></a>備註  
- 發行的權杖會在某些情況下當做自訂認證型別使用，例如在聯合案例中與安全權杖服務 (STS) 進行驗證時。 根據預設，這個權杖是 SAML 權杖。 如需詳細資訊, 請參閱[同盟和發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)。 和[同盟和發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)。  
+ 發行的權杖會在某些情況下當做自訂認證型別使用，例如在聯合案例中與安全權杖服務 (STS) 進行驗證時。 根據預設，這個權杖是 SAML 權杖。 如需詳細資訊，請參閱[同盟和發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)。 和[同盟和發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)。  
   
- 這個區段包含用以設定權杖之本機簽發者的項目，或搭配安全性權杖服務使用的行為。 如需設定用戶端使用本機簽發者的指示, 請[參閱如何:設定本機簽發者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)。  
+ 這個區段包含用以設定權杖之本機簽發者的項目，或搭配安全性權杖服務使用的行為。 如需設定用戶端使用本機簽發者的指示，請[參閱如何：設定本機簽發者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

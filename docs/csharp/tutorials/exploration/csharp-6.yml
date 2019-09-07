@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: f6f4b95b0c9afd9f70d4eba41500fc8a26606c78
-  ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+  ms.openlocfilehash: e1414c17cefd0fb31bb782a311e11dbd4cc056bb
+  ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/05/2019
-  ms.locfileid: "70374319"
+  ms.lasthandoff: 09/06/2019
+  ms.locfileid: "70394094"
 items:
 - durationInMinutes: 1
   content: >
@@ -57,7 +57,7 @@ items:
   content: "如果您在程式碼中重複使用一個類別的靜態方法，則每次包含類別名稱都會模糊您的程式碼意義。 `Person` 類別目前會匯入 `System` 命名空間，但只會使用 <xref:System.Console?displayProperty=nameWithType>。 修改 `using` 陳述式如下：\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#UsingStatic)]  \n\n`static using` 陳述式在更大型的程式中會變得更有用，這些程式會大量使用單一類別搭配許多靜態方法，例如 [`string`](xref:System.String) 類別或 <xref:System.Math?displayProperty=nameWithType> 類別。\n"
 - title: 更佳的字串格式
   durationInMinutes: 2
-  content: "C# 6 包含新的語法，可從字串和可評估的內嵌運算式撰寫字串，以產生其他字串值。 您可以變更 `ToString` 和 `AllCaps` 方法來使用此語法：\n\n[!code-csharp[StringInterpolation](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#StringInterpolation)]  \n\n您可以直接撰寫 C# 運算式，而不是在 `{` 和 `}` 之間放置引數。 您可以在 `Main` 方法中執行相同的動作。 將現有的程式碼取代為下列程式碼：\n\n[!code-csharp[InterpolationMain](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#InterpolationMain)]  \n\n這些運算式中的變數並不限於一個。 讓我們從新的範例開始，並修改以示範您可以搭配字串內插補點使用的其他運算式。 在 `Main` 方法中將下列程式碼貼入互動式視窗：\n\n[!code-csharp[Phrases](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#Phrases)]  \n\n您可以移除區域變數 `average`，並當作內插字串運算式的一部分來計算。 以下列程式碼取代最後兩行：\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average()}\");\n```\n\n執行上述範例時，您會發現，`Average` 的輸出小數位數超出您想要的位數。 字串內插補點語法支援使用稍早格式化方法時可用的所有格式字串。 您在大括弧內指定了格式字串。 在運算式之後新增 `:` 以格式化︰\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average():F2}\");\n```\n"
+  content: "C# 6 包含新的語法，可從字串和可評估的內嵌運算式撰寫字串，以產生其他字串值。 您可以變更 `ToString` 和 `AllCaps` 方法來使用此語法：\n\n[!code-csharp[StringInterpolation](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#StringInterpolation)]  \n\n您可以直接撰寫 C# 運算式，而不是在 `{` 和 `}` 之間放置引數。 您可以在 `Main` 方法中執行相同的動作。 將現有的程式碼取代為下列程式碼：\n\n[!code-csharp[InterpolationMain](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#InterpolationMain)]  \n\n這些運算式中的變數並不限於一個。 讓我們從新的範例開始，並修改以示範您可以搭配字串內插補點使用的其他運算式。 在 `Main` 方法中將下列程式碼貼入互動式視窗：\n\n[!code-csharp[Phrases](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#Phrases)]  \n這會使用 LINQ，因此您必須將下列 using 語句加入至互動式視窗的頂端：\n\n```csharp\nusing System.Linq;\n```\n\n您可以移除區域變數 `average`，並當作內插字串運算式的一部分來計算。 以下列程式碼取代最後兩行：\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average()}\");\n```\n\n執行上述範例時，您會發現，`Average` 的輸出小數位數超出您想要的位數。 字串內插補點語法支援使用稍早格式化方法時可用的所有格式字串。 您在大括弧內指定了格式字串。 在運算式之後新增 `:` 以格式化︰\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average():F2}\");\n```\n"
 - title: 快速又簡單的 Null 檢查
   durationInMinutes: 2
   content: "`?.` (Null 條件) 運算子可讓您更輕鬆地撰寫邏輯來將 `null` 值順暢地列入考量，而不需要額外的 `if` 檢查。 若要探索此功能，一開始請將下列程式碼複製到互動式視窗來嘗試執行：\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n      string s = null;\n      Console.WriteLine(s.Length);\n    }\n}\n```\n\n當您執行範例時，它會擲回 <xref:System.NullReferenceException>。 將 `.` 成員存取運算子變更為 **null 條件運算子**：\n\n```csharp\nConsole.WriteLine(s?.Length);\n``` \n\n這項變更後沒有任何輸出。 這是因為當 `s.Length` 的結果為 `int` 時，`s?.Length` 的結果為 `int?`。 在此範例中，`s?.Length` 為 `null`。 如果左運算元為 `null`，`?.` 會傳回 `null`。 如果右運算元的型別為實值型別，`?.` 運算子會針對該型別傳回可為 Null 的型別。 除了 `?.`，您還可以使用 `?[]` 進行陣列或索引子存取。 在互動式視窗中嘗試下列程式碼：\n\n ```csharp\n char? c = s?[0];\n Console.WriteLine(c.HasValue);\n ```\n\n 多個條件運算子可結合成一個運算式。 `null` 左運算元會產生 `null` 結果，讓您輕鬆地避免巢狀 if 子句來存取成員的成員。 例如，請在互動式視窗中嘗試下列程式碼：\n\n ```csharp\n string s = null;\n bool? hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext();\n Console.WriteLine(hasMore.HasValue);\n ```\n\n 使用 **Null 聯合運算子**來提供預設值，即可簡化上述範例：\n\n ```csharp\n bool hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext() ?? false;\n Console.WriteLine(hasMore);\n ```\n\n **Null 條件運算子**可協助您撰寫程式碼來清楚表達您的核心邏輯，同時順暢地測試 `null` 值。\n"

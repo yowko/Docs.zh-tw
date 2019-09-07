@@ -2,23 +2,24 @@
 title: <transport> 的 <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 384267e3d018d714f95356461eb303bc9ec0cb3e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 95cfa076f62f767af431ff5a0bcc2ca31b824e30
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934630"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399235"
 ---
 # <a name="transport-of-wshttpbinding"></a>\<wsHttpBinding > 的\<傳輸 >
 
 定義 HTTP 傳輸的驗證設定。
 
-\<system.serviceModel>\
-\<bindings>\
-\<wsHttpBinding>\
-\<系結 > \
-\<安全性 > \
-\<transport>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<傳輸 >**  
 
 ## <a name="syntax"></a>語法
 
@@ -50,7 +51,7 @@ ms.locfileid: "69934630"
 
 ### <a name="attributes"></a>屬性
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |`clientCredentialType`|指定用來對服務驗證用戶端的認證。 此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|
 |`proxyCredentialType`|指定用來對網域 Proxy 驗證用戶端的認證。 此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。|
@@ -70,7 +71,7 @@ ms.locfileid: "69934630"
 
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 屬性
 
-|值|描述|
+|值|說明|
 |-----------|-----------------|
 |`None`|停用安全性。|
 |`Basic`|使用基本驗證。|

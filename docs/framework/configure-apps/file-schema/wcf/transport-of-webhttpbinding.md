@@ -2,22 +2,23 @@
 title: <transport> 的 <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: f78add5397644dc40bfd22f10bd84aa5c5eb29e6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98cdaa86441f91552c7133d8e5694f88019a6dbf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923203"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399285"
 ---
 # <a name="transport-of-webhttpbinding"></a>\<webHttpBinding > 的\<傳輸 >
 定義服務端點 (此服務端點是設定來接收 HTTP 要求的) 之傳輸層級安全性設定。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<webHttpBinding>  
-\<系結 >  
-\<安全性 >  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webHttpBinding >** ](webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<傳輸 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +48,7 @@ ms.locfileid: "69923203"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`clientCredentialType`|指定用來對服務驗證用戶端的認證。 此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|  
 |`proxyCredentialType`|指定用來對網域 Proxy 驗證用戶端的認證。 此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
@@ -67,7 +68,7 @@ ms.locfileid: "69923203"
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`None`|停用安全性。|  
 |`Basic`|使用基本驗證。|  
@@ -80,7 +81,7 @@ ms.locfileid: "69923203"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<security>](security-of-webhttpbinding.md)|表示[ \<wsHttpBinding >](wshttpbinding.md)元素的安全性功能。|  
   

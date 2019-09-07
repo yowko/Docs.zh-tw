@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: 84de36b79ed646d73a8f2d8e00c26d8dcf6de4b7
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4ce4e28df3a09ddf718b000725afb0c9125bdd77
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249511"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397109"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>查詢運算式語法範例：篩選
-本主題中的範例將示範如何使用`Where`和`Where…Contains`方法，利用查詢運算式語法來查詢[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) 。 請注意，其中 。`Contains` 不能當做[已編譯查詢](compiled-queries-linq-to-entities.md)的一部分使用。  
+本主題中的範例將示範如何使用`Where`和`Where…Contains`方法，利用查詢運算式語法來查詢[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 。 請注意，其中 。`Contains` 不能當做[已編譯查詢](compiled-queries-linq-to-entities.md)的一部分使用。  
   
  這些範例中使用的 AdventureWorks Sales Model 是根據 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
   

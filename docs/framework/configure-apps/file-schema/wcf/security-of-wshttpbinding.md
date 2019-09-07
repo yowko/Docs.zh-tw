@@ -2,21 +2,22 @@
 title: <security> 的 <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: e627a63221d0013c89495d7ff81e02047a03df89
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7a4ef98637a7c966665fdd02ad26929bd4ba6ac
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936513"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399719"
 ---
 # <a name="security-of-wshttpbinding"></a>\<wsHttpBinding > 的\<安全性 >
 表示[ \<wsHttpBinding >](wshttpbinding.md)的安全性功能。  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<wsHttpBinding>  
-\<系結 >  
-\<安全性 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全性 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +41,7 @@ ms.locfileid: "69936513"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |模式|選擇性. 指定套用的安全性類型。 預設為 `Message`。<br />-這個屬性的類型<xref:System.ServiceModel.SecurityMode>為。|  
   
@@ -55,14 +56,14 @@ ms.locfileid: "69936513"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<transport>](transport-of-wshttpbinding.md)|定義傳輸安全性設定。 這個項目對應至 <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> 型別。|  
 |[\<message>](message-of-wshttpbinding.md)|定義訊息的安全性設定。 這個項目對應至 <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> 型別。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<wsHttpBinding>](wshttpbinding.md)|HTTP 傳輸應用程式的安全繫結。|  
   

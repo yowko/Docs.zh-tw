@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 245c843d13e70a807807f4e462dd1a5357c25665
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642408"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398526"
 ---
 # <a name="network-programming-in-the-net-framework"></a>以 .NET Framework 進行網路程式設計
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 您的網路應用程式可以建置在可外掛式通訊協定上，以便自動利用新的網際網路通訊協定，或者也可以使用 Windows Socket 介面的 Managed 實作，以便搭配使用通訊端層級上的網路。  
@@ -139,5 +139,4 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
 - [.NET Framework 的傳輸層安全性 (TLS) 最佳做法](../../../docs/framework/network-programming/tls.md)
 - [網路程式設計「如何」主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
 - [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)
-- [MSDN Code Gallery 上的 .NET 網路範例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-- [HttpClient 範例](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [HttpClient 範例](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

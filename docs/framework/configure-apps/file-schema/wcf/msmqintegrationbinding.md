@@ -4,19 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 52f488bfc77cbe6c0942c0e38c0201fa8d7d2d9c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b692d0610a975247d74798feff2411317db68dfd
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928884"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397747"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 定義繫結，此繫結可透過 MSMQ 傳遞訊息來提供查詢支援。  
   
- \<system.ServiceModel>  
-\<bindings>  
-msmqIntegrationBinding  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<msmqIntegrationBinding >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +53,7 @@ msmqIntegrationBinding
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |closeTimeout|<xref:System.TimeSpan> 值，指定提供用來讓關閉作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |customDeadLetterQueue|URI，其中包含每個應用程式寄不出的信件佇列的位置，所有已過期、無法傳輸或傳遞的訊息都會放到該佇列中。<br /><br /> 寄不出的信件佇列是傳送應用程式佇列管理員上的佇列，用於無法傳遞的過期訊息。<br /><br /> 由 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 指定的 URI 必須使用 net.msmq 配置。|  
@@ -59,12 +62,12 @@ msmqIntegrationBinding
 |exactlyOnce|布林值，這個值會指出每個訊息是否只傳遞一次。 接著會通知傳送者傳遞失敗。 `durable` 為 `false` 時，會忽略這個屬性，並傳輸訊息，但不具傳遞保證。 預設為 `true`。 如需詳細資訊，請參閱 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>。|  
 |maxReceivedMessageSize|正整數，定義此繫結可以處理的訊息大小上限 (以位元組為單位，包括標頭)。 超出此限制之訊息的寄件者將會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。 這項關於訊息大小的限制是為了避免受到阻絕服務 (DoS) 攻擊。|  
 |maxRetryCycles|整數，指出有害訊息偵測功能使用的重試循環次數。 當訊息無法在循環的傳遞嘗試中成功傳遞，便成為有害訊息。 預設值為 2。 如需詳細資訊，請參閱 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>。|  
-|NAME|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊, 請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|  
+|NAME|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊，請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|  
 |openTimeout|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |receiveErrorHandling|<xref:System.ServiceModel.ReceiveErrorHandling> 值，指定如何處理有害和不可分派的訊息。|  
 |receiveRetryCount|整數，這個整數會指定如果從應用程式佇列到應用程式的訊息傳輸失敗，佇列管理員應嘗試的立即重試次數上限。<br /><br /> 如果達到傳遞嘗試的次數上限，且應用程式未存取訊息，訊息便會傳送到重試佇列，以便日後再次傳遞。 在訊息傳回傳送佇列之前的時間長度是由 `retryCycleDelay` 控制。 如果重試循環達到 `maxRetryCycles` 值，則訊息便會傳送到有害訊息佇列，或是負認可會傳回至寄件者。|  
 |receiveTimeout|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:10:00。|  
-|receiveContextEnabled|布林值，這個值會指定接收在佇列內處理訊息的內容是否已啟用。 當此設定為`true`時, 服務可以「查看」佇列上的訊息以開始處理它, 而且如果發生錯誤且擲回例外狀況, 則會保留在佇列上。 服務也可以「鎖定」訊息, 以便在稍後的時間點重試處理。 ReceiveCoNtext 提供「完成」訊息的機制, 一旦處理之後, 就可以從佇列中移除它。訊息不會再透過網路讀取和重新寫入佇列, 而且個別訊息在處理期間不會在不同的服務實例之間跳動。|  
+|receiveContextEnabled|布林值，這個值會指定接收在佇列內處理訊息的內容是否已啟用。 當此設定為`true`時，服務可以「查看」佇列上的訊息以開始處理它，而且如果發生錯誤且擲回例外狀況，則會保留在佇列上。 服務也可以「鎖定」訊息，以便在稍後的時間點重試處理。 ReceiveCoNtext 提供「完成」訊息的機制，一旦處理之後，就可以從佇列中移除它。訊息不會再透過網路讀取和重新寫入佇列，而且個別訊息在處理期間不會在不同的服務實例之間跳動。|  
 |retryCycleDelay|TimeSpan 值，指定嘗試傳遞無法立即傳遞之訊息時，重試循環之間的時間延遲。 該值只定義最小等待時間，因為實際的等待時間會更長。 預設值為 00:30:00。 如需詳細資訊，請參閱 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>。|  
 |sendTimeout|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |serializationFormat|定義用來序列化訊息本文的格式。 此屬性的型別為 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>。|  
@@ -74,7 +77,7 @@ msmqIntegrationBinding
   
 ## <a name="serializationformat-attribute"></a>{serializationFormat} 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |Xml|XML 格式|  
 |二元|二進位格式|  
@@ -84,7 +87,7 @@ msmqIntegrationBinding
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<security>](security-of-msmqintegrationbinding.md)|定義繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>。|  
   
@@ -95,7 +98,7 @@ msmqIntegrationBinding
 |[\<bindings>](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
- 這個繫結項目可以用來啟用 Windows Communication Foundation (WCF) 應用程式, 以使用 COM、MSMQ 原生 api 或命名空間中定義的型別, 在現有的<xref:System.Messaging?displayProperty=nameWithType> MSMQ 應用程式中傳送和接收訊息。可以使用這個設定專案來指定定址佇列的方式、傳輸保證、訊息是否必須永久儲存, 以及訊息應如何受到保護和驗證。 如需詳細資訊，請參閱[如何：與 WCF 端點和訊息佇列應用程式](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)交換訊息。  
+ 這個繫結項目可以用來啟用 Windows Communication Foundation （WCF）應用程式，以使用 COM、MSMQ 原生 api 或命名空間中定義的型別，在現有的<xref:System.Messaging?displayProperty=nameWithType> MSMQ 應用程式中傳送和接收訊息。可以使用這個設定專案來指定定址佇列的方式、傳輸保證、訊息是否必須永久儲存，以及訊息應如何受到保護和驗證。 如需詳細資訊，請參閱[如何：與 WCF 端點和訊息佇列應用程式](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)交換訊息。  
   
 ## <a name="example"></a>範例  
   

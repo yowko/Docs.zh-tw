@@ -2,21 +2,22 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: c3e756f49b7054d6553eb6c3f1850f0fbce14943
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f295fe48e194611c80b78c0c23ab3e66ea1c0b64
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926121"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400503"
 ---
 # <a name="clientcredentials"></a>\<clientCredentials>
 指定用來對服務驗證用戶端的認證。  
   
- \<system.ServiceModel>  
-\<行為 >  
-\<endpointBehaviors>  
-\<行為 >  
-\<clientCredentials>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clientCredentials >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +44,7 @@ ms.locfileid: "69926121"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`supportInteractive`|布林值，指定互動式使用者是否可以在執行階段選取用戶端認證。 預設值為 `true`。|  
 |`type`|字串，指定這個組態項目的型別。|  

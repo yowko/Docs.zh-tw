@@ -2,22 +2,23 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6167a4ad56a9481a9f695b770605991a0a88d2d9
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918669"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399405"
 ---
 # <a name="transactedbatching"></a>\<transactedBatching >
 
 指定是否支援接收作業的交易批次處理。
 
-\<system.ServiceModel>\
-\<行為 > \
-\<endpointBehaviors > \
-\<行為 > \
-\<transactedBatching >
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<transactedBatching >**  
 
 ## <a name="syntax"></a>語法
 
@@ -31,7 +32,7 @@ ms.locfileid: "69918669"
 
 ### <a name="attributes"></a>屬性
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |`maxBatchSize`|整數，指定可在一個異動中批次處理的接收作業數目上限。 預設值為 0。|
 

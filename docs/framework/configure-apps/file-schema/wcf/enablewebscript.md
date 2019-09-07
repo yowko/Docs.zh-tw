@@ -2,21 +2,22 @@
 title: <enableWebScript>
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: 123f58ee3d77bf605db21fa0d9537b3196d56468
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 20c0057c80b668df97379d0168bb7c005d9927ce
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919120"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400378"
 ---
 # <a name="enablewebscript"></a>\<enableWebScript>
 這個項目可啟用端點行為，以取用 ASP.NET AJAX 網頁上的服務。  
   
- \<system.ServiceModel>  
-\<行為 >  
-\<endpointBehaviors>  
-\<行為 >  
-\<enableWebScript>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<enableWebScript >**  
   
 ## <a name="syntax"></a>語法  
   

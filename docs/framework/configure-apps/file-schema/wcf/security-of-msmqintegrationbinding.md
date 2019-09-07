@@ -2,21 +2,22 @@
 title: <security> 的 <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: 5b74c95ef2933fcf7e8d49aed89d95acbd288b80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4f10ab994429c6cbb690caef38114b8340e6839
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936701"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399858"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<msmqIntegrationBinding > 的\<安全性 >
 定義訊息佇列 (MSMQ) 整合通道的傳輸安全性設定。  
   
- \<system.ServiceModel>  
-\<bindings>  
-msmqIntegrationBinding  
-\<系結 >  
-\<安全性 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<msmqIntegrationBinding >** ](msmqintegrationbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全性 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +42,7 @@ msmqIntegrationBinding
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |模式|指定控制訊息佇列整合通道之完整性、機密性和驗證的安全性類型。 有效值包括以下的值：<br /><br /> 無這會停用安全性。<br />運送傳輸會提供保護和驗證。 這會套用在兩個佇列管理員之間的訊息安全性。 應用程式和佇列管理員之間沒有提供安全性。 現有 Msmq 應用程式在功能上相當於這個安全性模式類型。<br /><br /> 預設值為 `Transport`。 此屬性的型別為 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>。|  
   

@@ -2,24 +2,25 @@
 title: <add> 項目的 <scopedCertificates>
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 9756d37527fcf888cad930b24677ae8e6a2c8fba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b00a342108beca69a906fbf6212915768e98778f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920048"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398338"
 ---
 # <a name="add-of-scopedcertificates-element"></a>\<新增 scopedCertificates > \<元素的 >
 將 X.509 憑證加入至範圍憑證的集合。  
   
- \<system.ServiceModel>  
-\<行為 >  
-endpointBehaviors 區段  
-\<行為 >  
-\<clientCredentials>  
-\<serviceCertificate>  
-\<scopedCertificates>  
-\<新增 scopedCertificates > 的\<> 元素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<scopedCertificates >** ](scopedcertificates-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,7 +59,7 @@ endpointBehaviors 區段
   
 ## <a name="storelocation-attribute"></a>storeLocation 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |列舉|CurrentUser 或 LocalMachine。|  
   
@@ -82,7 +83,7 @@ endpointBehaviors 區段
   
  如果繫結需要服務的憑證，但是在 ScopedCertificates 中找不到服務 URL 的專屬憑證，則會使用預設的憑證。  
   
- 如需詳細資訊, 請參閱[如何:建立同盟用戶端](../../../wcf/feature-details/how-to-create-a-federated-client.md)。  
+ 如需詳細資訊，請參閱[如何：建立同盟用戶端](../../../wcf/feature-details/how-to-create-a-federated-client.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會將 X.509 憑證新增至集合。  

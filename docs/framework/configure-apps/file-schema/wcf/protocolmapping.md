@@ -2,18 +2,19 @@
 title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: e26044340bda84fe38b7e286edf833affa94b86c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be4224ef1a8b17653df8123aaf89e105a496355a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785485"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400026"
 ---
 # <a name="protocolmapping"></a>\<protocolMapping>
-表示用於定義一組預設通訊協定之間的對應傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 和 WCF 繫結組態區段。 當在執行階段建立預設端點，Windows Communication Foundation (WCF) 會查看所設定的對應，並決定哪些繫結，以使用特定基礎位址。  
+代表設定區段，用來定義傳輸通訊協定配置（例如 HTTP、net.tcp、net.pipe 等）和 WCF 系結之間的一組預設通訊協定對應。 在執行時間建立預設端點時，Windows Communication Foundation （WCF）會查看設定的對應，並決定要用於特定位址的系結。  
   
-[**\<system.serviceModel>**](system-servicemodel.md)  
-&nbsp;&nbsp;**\<protocolMapping>**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<protocolMapping >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,11 +36,11 @@ ms.locfileid: "61785485"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<filters>](filters-of-routing.md)|包含傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 與 WCF 繫結之間的預設通訊協定對應。|  
+|[\<filters>](filters-of-routing.md)|包含傳輸通訊協定配置（例如 HTTP、net.tcp、net.pipe 等）和 WCF 系結之間的預設通訊協定對應。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<system.serviceModel>](system-servicemodel.md)|所有 WCF 組態項目的根項目。|  
   

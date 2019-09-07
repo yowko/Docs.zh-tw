@@ -2,21 +2,22 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 77ed5e91f09d9e658deeb7996baaca445b4e0c90
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad87a5876381a7224341babdb076c85edcd1dd87
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937101"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399568"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 指定 Windows Communication Foundation (WCF) 服務的節流機制。  
   
- \<system.ServiceModel>  
-\<行為 >  
-\<serviceBehaviors>  
-\<行為 >  
-\<serviceThrottling>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceThrottling >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,7 +32,7 @@ ms.locfileid: "69937101"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |maxConcurrentCalls|正整數，限制同時在 <xref:System.ServiceModel.ServiceHost> 上進行處理的訊息數目。 超過限制的呼叫會進入佇列。 將這個值設定為 0 相當於設定為 Int32.MaxValue。 預設值是 16 * 處理器計數。|  
 |maxConcurrentInstances|正整數，限制同時在 <xref:System.ServiceModel.InstanceContext> 上執行的 <xref:System.ServiceModel.ServiceHost> 物件數目。 當限制之內的位置可供使用時，建立其他執行個體的要求便會進入佇列並完成。 預設值是 maxConcurrentSessions 和 MaxConcurrentCalls 的總和|  
@@ -52,7 +53,7 @@ ms.locfileid: "69937101"
  每次達到這些屬性值時，就會寫入追蹤。 第一個追蹤會寫入成為警告。  
   
 ## <a name="example"></a>範例  
- 下列組態範例指定服務將同時呼叫上限限制為 2，且將並行執行個體上限限制為 10。 如需執行此範例的詳細範例, 請參閱[節流](../../../wcf/samples/throttling.md)。  
+ 下列組態範例指定服務將同時呼叫上限限制為 2，且將並行執行個體上限限制為 10。 如需執行此範例的詳細範例，請參閱[節流](../../../wcf/samples/throttling.md)。  
   
 ```xml  
 <behaviors>

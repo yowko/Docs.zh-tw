@@ -2,21 +2,23 @@
 title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 7336c9f7d8a117f9a9bfd338e47941eeb648fa51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b95f25217c2a3558846cc7a0ef43e21aacd2ee2a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925850"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398007"
 ---
 # <a name="dispatchersynchronization"></a>\<dispatcherSynchronization>
   
 指定可讓服務以非同步方式傳送回覆的端點行為。  
   
-\<system.serviceModel>  
-\<行為 >  
-\<endpointBehaviors>  
-\<行為 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dispatcherSynchronization >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +37,7 @@ ms.locfileid: "69925850"
   
 ### <a name="attributes"></a>屬性
 
-| 屬性               | 描述       |
+| 屬性               | 說明       |
 | ----------------------- | ----------------- |
 | asynchronousSendEnabled | 布林值，指定是否啟用非同步傳送行為。 |
 | `maxPendingReceives`    | 整數，指定可在通道發行之並行接收的數目。<br /><br /> 唯有在您正確設定服務節流閥行為後，才可設定這個值。 |

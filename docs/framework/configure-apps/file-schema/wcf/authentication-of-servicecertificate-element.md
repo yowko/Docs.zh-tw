@@ -2,23 +2,24 @@
 title: <authentication> 項目的 <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: d770ba1f9a0a18c927b3a4bf6d4141286e3a380c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29170f032469b4d55b50f57ca06ce403a5aeaf2c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919987"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398232"
 ---
 # <a name="authentication-of-servicecertificate-element"></a>\<serviceCertificate > 元素\<的驗證 >
 指定用戶端 Proxy 用來驗證服務憑證的設定，而這份憑證是使用 SSL/TLS 交涉所取得。  
   
- \<system.ServiceModel>  
-\<行為 >  
-endpointBehaviors 區段  
-\<行為 >  
-\<clientCredentials>  
-\<serviceCertificate>  
-\<驗證 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCertificate >** ](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<驗證 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,15 +50,15 @@ endpointBehaviors 區段
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|列舉|下列其中一個值：None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom。<br /><br /> 如需詳細資訊, 請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
+|列舉|下列其中一個值：None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|下列其中一個值：NoCheck, 線上, 離線。<br /><br /> 如需詳細資訊, 請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
+|列舉|下列其中一個值：NoCheck，線上，離線。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 屬性  
   
@@ -77,10 +78,10 @@ endpointBehaviors 區段
 ## <a name="remarks"></a>備註  
  這個組態項目的 `certificateValidationMode` 屬性會指定用來驗證憑證的信任層級。 根據預設，層級會設為 `ChainTrust`，指定每一個憑證必須出現在鏈結頂端以受信任的憑證授權單位為結尾的憑證階層中。 這是最安全的模式。 您也可以將值設定為 `PeerOrChainTrust`，指定可接受自行發出的憑證 (對等信任)，以及信任鏈結內的憑證。 這個值會在開發及偵錯用戶端和服務時使用，因為自行發出的憑證不需要從受信任的授權單位購買。 部署用戶端時，請改用 `ChainTrust` 值。 您也可以將值設為 `Custom` 或 `None`。 若要使用 `Custom` 值，您必須同時將 `customCertificateValidator` 屬性 (Attribute) 設為可用來驗證憑證的組件與型別。 若要建立自己的自訂驗證程式，您必須繼承自抽象 X509CertificateValidator 類別。 如需詳細資訊，請參閱[如何：建立採用自訂憑證驗證](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)程式的服務。  
   
- `revocationMode` 屬性會指定檢查憑證是否已被撤銷的方法。 預設為 `online`，表示會自動檢查該憑證是否已被撤銷。 如需詳細資訊, 請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。  
+ `revocationMode` 屬性會指定檢查憑證是否已被撤銷的方法。 預設為 `online`，表示會自動檢查該憑證是否已被撤銷。 如需詳細資訊，請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會執行兩個工作。 它會先指定服務憑證, 讓用戶端在與其功能變數名稱是`www.contoso.com`透過 HTTP 通訊協定的端點進行通訊時使用。 第二，指定驗證時使用的撤銷模式和存放區位置。  
+ 下列範例會執行兩個工作。 它會先指定服務憑證，讓用戶端在與其功能變數名稱是`www.contoso.com`透過 HTTP 通訊協定的端點進行通訊時使用。 第二，指定驗證時使用的撤銷模式和存放區位置。  
   
 ```xml  
 <serviceCertificate>

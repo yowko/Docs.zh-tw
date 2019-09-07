@@ -2,17 +2,18 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: 4ec5cd19ccdc5c21a3caf426520d51442dc5ab3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b67f51e634d1294830690dad8c8cffb1fc9a6cd2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938928"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399455"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 代表 <xref:System.Runtime.Serialization> 命名空間區段的根項目，而且包含用來設定 <xref:System.Runtime.Serialization.DataContractSerializer> 選項的項目。  
-  
- system.runtime.serialization  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<> 的序列化**  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,3 +57,4 @@ ms.locfileid: "69938928"
 - <xref:System.Runtime.Serialization>
 - [使用資料合約](../../../wcf/feature-details/using-data-contracts.md)
 - [資料合約已知類型](../../../wcf/feature-details/data-contract-known-types.md)
+ 

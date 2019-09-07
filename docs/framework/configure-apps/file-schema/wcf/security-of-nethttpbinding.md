@@ -2,22 +2,23 @@
 title: <security> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: f2750036aa4d3fbe41062ad041e50ff3a4be32b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 890cee3271c410a921b3a88f78d0705ba8718252
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670556"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399849"
 ---
-# <a name="security-of-nethttpbinding"></a>\<安全性 > 的\<netHttpBinding >
+# <a name="security-of-nethttpbinding"></a>\<netHttpBinding > 的\<安全性 >
 
-定義的安全性功能[ \<basicHttpBinding >](basichttpbinding.md)。
+定義[ \<netHttpBinding >](nethttpbinding.md)的安全性功能。
 
-\<system.ServiceModel>\
-\<bindings>\
-\<netHttpBinding>\
-\<binding>\
-\<安全性 >
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<安全性 >**  
 
 ## <a name="syntax"></a>語法
 
@@ -45,11 +46,11 @@ ms.locfileid: "61670556"
 
 |值|描述|
 |-----------|-----------------|
-|None|訊息在傳輸期間並未受到保護。|
+|無|-傳輸期間不會保護訊息的安全。|
 |Transport|會使用 HTTPS 傳輸來提供安全性。 SOAP 訊息是使用 HTTPS 來保護其安全。 對用戶端驗證服務時，則是使用服務的 X.509 憑證。 用戶端會透過提供的 ClientCredentialType 來驗證。|
 |訊息|系統會使用 SOAP 訊息安全性來提供安全性。 根據預設，本文會經過加密與簽署。 對於此繫結，系統會要求將伺服器憑證提供給超出範圍的用戶端。 這個繫結唯一有效的 `ClientCredentialType` 是 `Certificate`。|
 |TransportWithMessageCredential|完整性、機密性與伺服器驗證都是經由傳輸安全性來提供。 用戶端驗證是透過 SOAP 訊息安全性的方式提供。 當使用者是透過使用者名稱/密碼進行驗證，且有現有的 HTTP 部署來保護訊息傳輸的安全時，即與此模式有關。|
-|TransportCredentialOnly|這個模式不提供訊息完整性和機密性， 但會提供 HTTP 架構的用戶端驗證。 請謹慎使用這個模式， 它應該用於提供的環境中以其他方式 （例如 IPSec) 提供傳輸安全性，且只有用戶端驗證是由 WCF 基礎結構。|
+|TransportCredentialOnly|這個模式不提供訊息完整性和機密性， 但會提供 HTTP 架構的用戶端驗證。 請謹慎使用這個模式， 它應該用於以其他方式（例如 IPSec）提供傳輸安全性，而且 WCF 基礎結構只提供用戶端驗證的環境中。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -60,9 +61,9 @@ ms.locfileid: "61670556"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|說明|
 |-------------|-----------------|
-|繫結|繫結項目[ \<basicHttpBinding >](basichttpbinding.md)。|
+|繫結|BasicHttpBinding > 的 binding 元素。 [ \< ](basichttpbinding.md)|
 
 ## <a name="remarks"></a>備註
 

@@ -2,23 +2,24 @@
 title: <transport> 的 <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 5dbc55db25c0c49d72ec2cd8dd1041a3f8705d8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b2c7716727f58abb81bf4d58b13189ac170cf7c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940638"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399294"
 ---
 # <a name="transport-of-peertransport"></a>\<peerTransport > 的\<傳輸 >
 指定使用這個繫結設定之對等所傳送安全訊息的傳輸類型。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<系結 >  
-\<peerTransport>  
-\<安全性 >  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<peerTransport >** ](peertransport.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-peertransport.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<傳輸 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +40,7 @@ ms.locfileid: "69940638"
   
 ## <a name="credentialtype-attribute"></a>credentialType 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |憑證|對等通道傳輸的驗證作業需要 X509 憑證。|  
 |密碼|對等通道傳輸的驗證作業需要正確的密碼。|  
@@ -54,7 +55,7 @@ ms.locfileid: "69940638"
 |[\<security>](security-of-peertransport.md)|定義對等傳輸的安全性設定。|  
   
 ## <a name="remarks"></a>備註  
- 只有在  [ \<安全性 >](security-of-peertransport.md)的 [模式] 屬性設定為`Transport`或`TransportWithMessageCredential`時, 才會設定此元素。  
+ 只有在  [ \<安全性 >](security-of-peertransport.md)的 [模式] 屬性設定為`Transport`或`TransportWithMessageCredential`時，才會設定此元素。  
   
 ## <a name="see-also"></a>另請參閱
 

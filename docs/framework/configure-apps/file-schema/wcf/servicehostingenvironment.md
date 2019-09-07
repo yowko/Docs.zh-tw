@@ -2,18 +2,19 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: b81c9f3c4260f415f057cd74b6f113d88f635978
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 165dbed1b78d00f8d4dd3e482b9fee8a23db60da
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936293"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399619"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 此項目定義服務裝載環境為特定傳輸產生的類型。 如果這個項目是空白的，便會使用預設的類型。 這個項目只能用於應用程式或電腦層級的組態檔。  
   
- \<system.ServiceModel>  
-\<ServiceHostingEnvironment>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceHostingEnvironment >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,9 +43,9 @@ ms.locfileid: "69936293"
   
 |屬性|說明|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|布林值，指出是否已為目前的應用程式開啟 ASP.NET 相容性模式。 預設為 `false`。<br /><br /> 當這個屬性設定為`true`時, 對 Windows Communication Foundation (WCF) 服務的要求會流經 ASP.NET HTTP 管線, 而非 HTTP 通訊協定的通訊則是禁止的。 如需詳細資訊, 請參閱[WCF 服務和 ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)。|  
-|minFreeMemoryPercentageToActivateService|整數, 指定可供系統使用的最小可用記憶體數量, 然後才能啟動 WCF 服務。 **注意**：在 WCF 服務的 web.config 檔案中指定這個屬性和部分信任, 將會在<xref:System.Security.SecurityException>服務執行時產生。|  
-|multipleSiteBindingsEnabled|布林值，這個值會指定是否啟用每個網站的多個 IIS 繫結。<br /><br /> IIS 包含網站，是包含虛擬目錄之虛擬應用程式的容器。 網站中的應用程式則可以透過一個或多個 IIS 繫結來存取。 IIS 繫結提供兩項資訊：繫結通訊協定和繫結資訊。 繫結通訊協定會定義產生通訊的配置，而繫結資訊則是用來存取網站的資訊。 繫結通訊協定的範例如 HTTP，其中繫結資訊可能會包含 IP 位址、連接埠、主機標題等。<br /><br /> IIS 支援為每個網站指定多個 IIS 繫結，讓每個配置能夠有多個基底位址。 不過, 在網站底下裝載的 Windows Communication Foundation (WCF) 服務, 只允許每個配置系結至一個 baseAddress。<br /><br /> 若要為 Windows Communication Foundation (WCF) 服務啟用每個網站的多個 IIS 系結, `true`請將此屬性設定為。 請注意，僅有 HTTP 通訊協定支援多個網站繫結。 組態檔中的端點位址必須是完整的 URI。|  
+|aspNetCompatibilityEnabled|布林值，指出是否已為目前的應用程式開啟 ASP.NET 相容性模式。 預設為 `false`。<br /><br /> 當這個屬性設定為`true`時，對 Windows Communication Foundation （WCF）服務的要求會流經 ASP.NET HTTP 管線，而非 HTTP 通訊協定的通訊則是禁止的。 如需詳細資訊，請參閱[WCF 服務和 ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)。|  
+|minFreeMemoryPercentageToActivateService|整數，指定可供系統使用的最小可用記憶體數量，然後才能啟動 WCF 服務。 **注意**：在 WCF 服務的 web.config 檔案中指定這個屬性和部分信任，將會在<xref:System.Security.SecurityException>服務執行時產生。|  
+|multipleSiteBindingsEnabled|布林值，這個值會指定是否啟用每個網站的多個 IIS 繫結。<br /><br /> IIS 包含網站，是包含虛擬目錄之虛擬應用程式的容器。 網站中的應用程式則可以透過一個或多個 IIS 繫結來存取。 IIS 繫結提供兩項資訊：繫結通訊協定和繫結資訊。 繫結通訊協定會定義產生通訊的配置，而繫結資訊則是用來存取網站的資訊。 繫結通訊協定的範例如 HTTP，其中繫結資訊可能會包含 IP 位址、連接埠、主機標題等。<br /><br /> IIS 支援為每個網站指定多個 IIS 繫結，讓每個配置能夠有多個基底位址。 不過，在網站底下裝載的 Windows Communication Foundation （WCF）服務，只允許每個配置系結至一個 baseAddress。<br /><br /> 若要為 Windows Communication Foundation （WCF）服務啟用每個網站的多個 IIS 系結， `true`請將此屬性設定為。 請注意，僅有 HTTP 通訊協定支援多個網站繫結。 組態檔中的端點位址必須是完整的 URI。|  
   
 ### <a name="child-elements"></a>子元素  
   

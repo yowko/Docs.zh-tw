@@ -2,21 +2,22 @@
 title: <serviceAuthorization> 項目
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: b73e2049afb460bf9be8b76ee272ba0547b61453
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b636b7006900ecff1be553cf32105df7cea7e800
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936408"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399697"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > 元素
 指定設定，這些設定會將存取權授權給服務作業。  
   
- \<system.ServiceModel>  
-\<行為 >  
-\<serviceBehaviors>  
-\<行為 >  
-\<serviceAuthorization>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceAuthorization >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +40,7 @@ ms.locfileid: "69936408"
 |屬性|描述|  
 |---------------|-----------------|  
 |impersonateCallerForAllOperations|布林值，指定服務中所有作業是否都模擬呼叫端。 預設為 `false`。<br /><br /> 當特定服務作業模擬呼叫端時，執行緒內容會在執行指定的服務之前切換為呼叫端內容。|  
-|principalPermissionMode|設定用於在伺服器上執行作業的原則。 包括下列值：<br /><br /> -無<br />-UseWindowsGroups<br />-   UseAspNetRoles<br />-Custom<br /><br /> 預設值為 UseWindowsGroups。 此值的型別為 <xref:System.ServiceModel.Description.PrincipalPermissionMode>。 如需使用此屬性的詳細資訊, [請參閱如何:使用 PrincipalPermissionAttribute 類別](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)來限制存取。|  
+|principalPermissionMode|設定用於在伺服器上執行作業的原則。 包括下列值：<br /><br /> -無<br />-UseWindowsGroups<br />-   UseAspNetRoles<br />-Custom<br /><br /> 預設值為 UseWindowsGroups。 此值的型別為 <xref:System.ServiceModel.Description.PrincipalPermissionMode>。 如需使用此屬性的詳細資訊， [請參閱如何：使用 PrincipalPermissionAttribute 類別](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)來限制存取。|  
 |roleProviderName|字串，指定角色提供者的名稱，它會提供 Windows Communication Foundation (WCF) 應用程式的角色資訊。 預設值是空字串。|  
 |ServiceAuthorizationManagerType|字串，其中包含服務授權管理員的型別。 如需詳細資訊，請參閱 <xref:System.ServiceModel.ServiceAuthorizationManager>。|  
   
@@ -58,7 +59,7 @@ ms.locfileid: "69936408"
 ## <a name="remarks"></a>備註  
  本章節包含會影響授權的項目、自訂的角色提供者，以及模擬。  
   
- `principalPermissionMode` 屬性會指定要在授權使用保護的方法時使用的使用者群組。 預設值為 `UseWindowsGroups`，其指定了在 Windows 群組 (例如 "Administrators" 或 "Users") 中搜尋嘗試存取資源的身分識別。 您也可以指定`UseAspNetRoles`使用\<在 system.web > 專案底下設定的自訂角色提供者, 如下列程式碼所示。  
+ `principalPermissionMode` 屬性會指定要在授權使用保護的方法時使用的使用者群組。 預設值為 `UseWindowsGroups`，其指定了在 Windows 群組 (例如 "Administrators" 或 "Users") 中搜尋嘗試存取資源的身分識別。 您也可以指定`UseAspNetRoles`使用\<在 system.web > 專案底下設定的自訂角色提供者，如下列程式碼所示。  
   
 ```xml  
 <system.web>
@@ -93,7 +94,7 @@ ms.locfileid: "69936408"
 </behaviors>
 ```  
   
- 如需使用此 configuration 元素的詳細範例, 請參閱[授權存取服務作業](../../../wcf/samples/authorizing-access-to-service-operations.md)和[授權原則](../../../wcf/samples/authorization-policy.md)。  
+ 如需使用此 configuration 元素的詳細範例，請參閱[授權存取服務作業](../../../wcf/samples/authorizing-access-to-service-operations.md)和[授權原則](../../../wcf/samples/authorization-policy.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

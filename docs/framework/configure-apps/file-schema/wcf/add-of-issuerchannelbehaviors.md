@@ -2,27 +2,29 @@
 title: <add> 的 <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 325d6b8111115384b18547bd11ccec8a4a8af711
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cf7ac2691ad1c641352a8047373ced538b19e983
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920117"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398324"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<新增 issuerChannelBehaviors > \<的 >
 
 新增與 STS 通訊時要使用的端點行為。
 
 > [!NOTE]
-> 如果任何端點行為包含[ \<clientCredentials >](clientcredentials.md)元素, 則會擲回例外狀況。
+> 如果任何端點行為包含[ \<clientCredentials >](clientcredentials.md)元素，則會擲回例外狀況。
 
-\<system.ServiceModel>\
-\<行為 > \
-endpointBehaviors 區段\<行為 > \
-\<clientCredentials > \
-\<issuedToken > \
-\<issuerChannelBehaviors > 元素 \
-\<add>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuedToken >** ](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuerChannelBehaviors >** ](issuerchannelbehaviors-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**  
 
 ## <a name="syntax"></a>語法
 
@@ -37,7 +39,7 @@ endpointBehaviors 區段\<行為 > \
 
 ### <a name="attributes"></a>屬性
 
-|屬性|描述|
+|屬性|說明|
 |---------------|-----------------|
 |issuerAddress|要與其進行通訊之安全性權杖簽發者的 URI。|
 |behaviorConfiguration|相同組態檔中定義之端點行為的名稱。|
@@ -48,13 +50,13 @@ endpointBehaviors 區段\<行為 > \
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|說明|
+|項目|描述|
 |-------------|-----------------|
-|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|包含與指定的服務權杖服務通訊時, 所要使用的 Windows Communication Foundation (WCF) 用戶端端點行為集合。|
+|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|包含與指定的服務權杖服務通訊時，所要使用的 Windows Communication Foundation （WCF）用戶端端點行為集合。|
 
 ## <a name="remarks"></a>備註
 
-`issuerAddress` 包含用戶端想要進行通訊之 Security Token Service 的 URI。 `behaviorConfiguration`指向端點行為, 應用程式會在 Windows Communication Foundation (WCF) 建立的通道中使用該行為, 從安全性權杖服務取得發行的權杖。
+`issuerAddress` 包含用戶端想要進行通訊之 Security Token Service 的 URI。 `behaviorConfiguration`指向端點行為，應用程式會在 Windows Communication Foundation （WCF）建立的通道中使用該行為，從安全性權杖服務取得發行的權杖。
 
 ## <a name="see-also"></a>另請參閱
 

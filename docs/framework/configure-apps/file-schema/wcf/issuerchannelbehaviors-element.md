@@ -2,26 +2,25 @@
 title: <issuerChannelBehaviors> 項目
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: e0e41b4f6d66cd4455c43dda7c77798553f2b58f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0e0d8d041565edd25c4b2c2802bfd2a589b4f7
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929932"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397906"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > 元素
 
-包含 Windows Communication Foundation (WCF) 用戶端端點行為 (定義于設定中) 的集合, 以便在與指定的服務權杖服務通訊時使用。 定義的行為不能包含任何[ \<clientCredentials >](clientcredentials.md)元素。
+包含 Windows Communication Foundation （WCF）用戶端端點行為（定義于設定中）的集合，以便在與指定的服務權杖服務通訊時使用。 定義的行為不能包含任何[ \<clientCredentials >](clientcredentials.md)元素。
 
-```xml
-<system.ServiceModel>
-  <behaviors>
-    <endpointBehaviors>
-      <behavior>
-        <clientCredentials>
-          <issuedToken>
-            <issuerChannelBehaviors>
-```
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuedToken >** ](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuerChannelBehaviors >**  
 
 ## <a name="syntax"></a>語法
 
@@ -42,7 +41,7 @@ ms.locfileid: "69929932"
 
 ### <a name="child-elements"></a>子元素
 
-|項目|說明|
+|項目|描述|
 |-------------|-----------------|
 |[\<add>](add-of-issuerchannelbehaviors.md)|將行為新增至集合中。|
 
@@ -54,7 +53,7 @@ ms.locfileid: "69929932"
 
 ## <a name="remarks"></a>備註
 
-當在必須使用任何行為 (包含 `<clientCredentials>` 項目之行為以外的任何行為) 與服務進行通訊時，請使用此項目。 例如, 如果必須包含[ \<dataContractSerializer >](datacontractserializer-element.md)行為元素, 則為。
+當在必須使用任何行為 (包含 `<clientCredentials>` 項目之行為以外的任何行為) 與服務進行通訊時，請使用此項目。 例如，如果必須包含[ \<dataContractSerializer >](datacontractserializer-element.md)行為元素，則為。
 
 ## <a name="see-also"></a>另請參閱
 

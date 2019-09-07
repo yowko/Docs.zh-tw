@@ -2,17 +2,21 @@
 title: <add> 的 <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 1ed0b5025ab969c45d7440f2a209426c5c87f549
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 02654b8ab198a2b161b3044c1f3aa452761a6a4c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920281"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398383"
 ---
 # <a name="add-of-allowaccounts"></a>\<新增 d > \<的 >
-為裝載 WCF 服務的進程指定使用者帳戶, 並授與共享服務的連接存取權。  
+為裝載 WCF 服務的進程指定使用者帳戶，並授與共享服務的連接存取權。  
   
- \<system.serviceModel.activation>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel. 啟用 >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<net.pipe >** ](net-pipe.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<d >** ](allowaccounts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -27,7 +31,7 @@ ms.locfileid: "69920281"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |securityIdentifier|字串，指定用於識別使用者帳戶的唯一識別碼。 預設值為 LocalSystem、Administrators、NS、LS 和 IIS_USRS。|  
   
@@ -38,7 +42,7 @@ ms.locfileid: "69920281"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<allowAccounts>](allowaccounts.md)|Configuration 專案的集合, 其中包含`securityIdentifier`屬性, 以指定裝載 WCF 服務之進程的使用者帳戶, 並授與共享服務的連接存取權。|  
+|[\<allowAccounts>](allowaccounts.md)|Configuration 專案的集合，其中包含`securityIdentifier`屬性，以指定裝載 WCF 服務之進程的使用者帳戶，並授與共享服務的連接存取權。|  
   
 ## <a name="example"></a>範例  
  下列組態範例會新增使用者帳戶的五個預設識別項到此集合中。  

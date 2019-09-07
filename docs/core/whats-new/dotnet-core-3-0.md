@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 08/21/2019
-ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.date: 09/05/2019
+ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037841"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394289"
 ---
-# <a name="whats-new-in-net-core-30-preview-8"></a>.NET Core 3.0 (Preview 8) 的新功能
+# <a name="whats-new-in-net-core-30-preview-9"></a>.NET Core 3.0 的新功能（Preview 9）
 
-本文描述 .NET Core 3.0 (到 Preview 8) 的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
+本文說明 .NET Core 3.0 （透過 preview 9）的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
 
-.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您搭配 OmniSharp 延伸模組使用[最新版的 Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) 或 Visual Studio Code。
+.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用[Visual Studio 2019 16.3 Preview 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)、 [Visual Studio for Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)或使用 **C#延伸**模組的[Visual Studio Code](https://code.visualstudio.com/) 。
 
-立即在 Windows、macOS 或 Linux 上[下載並開始使用 .NET Core 3.0 Preview 8](https://aka.ms/netcore3download)。
+立即在 Windows、macOS 或 Linux 上[下載 .Net Core 3.0 preview 9 並開始使用](https://aka.ms/netcore3download)。
 
 如需每個預覽版的詳細資訊，請參閱下列公告：
 
+- [.NET Core 3.0 Preview 9 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [.NET Core 3.0 Preview 8 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3.0 Preview 7 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3.0 Preview 6 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/) \(英文\)
@@ -35,13 +36,13 @@ ms.locfileid: "70037841"
 
 ## <a name="production-supported-preview"></a>支援生產環境的預覽
 
-Microsoft 已將 .NET Core Preview 8 視為生產環境就緒，且已提供完整支援。 從 Preview 7 開始，版本會著重於改善 .NET Core 3.0，而非新增新功能。 如需 Preview 8 中變更項目的詳細資訊，請參閱 [Preview 8 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)。
+.NET Core Preview 9 被視為 Microsoft 準備好的生產環境，並受到完整支援。 從 Preview 7 開始，版本會著重於改善 .NET Core 3.0，而非新增新功能。 如需 preview 9 中已變更之內容的詳細資訊，請參閱[preview 9 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)。
 
-如果您使用先前的預覽版本，您必須移至 Preview 8 以繼續取得「上線」支援。
+如果您使用的是先前的預覽版本，您必須移至 Preview 9，才能繼續「上線」支援。
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-Windows 的 MSI 安裝程式從 .NET Core 3.0 開始即已變更。 SDK 安裝程式現在會就地升級 SDK 功能帶版本。 功能帶是在版本號碼「修補程式」  部分以「一百」  為單位的群組中定義。 例如，**3.0._101_** 和 **3.0._201_** 便是位於兩個不同功能帶中的版本，而 **3.0._101_** 和 **3.0._199_** 則位於相同的功能帶。 此外，安裝 .NET Core SDK **3.0._101_** 時，.NET Core SDK **3.0._100_** 便會從電腦移除 (若存在的話)。 在相同電腦上安裝 .NET Core SDK **3.0._200_** 時，不會移除 .NET Core SDK **3.0._101_** 。
+Windows 的 MSI 安裝程式從 .NET Core 3.0 開始即已變更。 SDK 安裝程式現在會就地升級 SDK 功能帶版本。 功能帶是在版本號碼「修補程式」部分以「一百」為單位的群組中定義。 例如，**3.0._101_** 和 **3.0._201_** 便是位於兩個不同功能帶中的版本，而 **3.0._101_** 和 **3.0._199_** 則位於相同的功能帶。 此外，安裝 .NET Core SDK **3.0._101_** 時，.NET Core SDK **3.0._100_** 便會從電腦移除 (若存在的話)。 在相同電腦上安裝 .NET Core SDK **3.0._200_** 時，不會移除 .NET Core SDK **3.0._101_** 。
 
 如需版本設定的詳細資訊，請參閱 [.NET Core 版本設定概觀](../versions/index.md)。
 
@@ -270,7 +271,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 會新增 [新增專案]  範本，供 .NET Core 3.0 Windows Forms 和 WPF 使用。
+Visual Studio 2019 會新增 [新增專案] 範本，供 .NET Core 3.0 Windows Forms 和 WPF 使用。
 
 如需如何移植現有 .NET Framework 應用程式的詳細資訊，請參閱[移植 WPF 專案](../porting/wpf.md)和[移植 Windows Forms 專案](../porting/winforms.md)。
 
@@ -384,7 +385,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 .NET 使用者大幅倚賴 [**Json.NET**](https://www.newtonsoft.com/json) 及其他熱門的 JSON 程式庫 (這些仍持續是絕佳的選擇)。 **Json.NET** 使用 .NET 字串作為其基底資料類型，實際上就是 UTF-16。
 
-新的內建 JSON 支援是高效能、低配置，並以 `Span<byte>` 為基礎。 三個新的主要 JSON 相關類型已新增到 .NET Core 3.0 <xref:System.Text.Json?displayProperty=nameWithType> 命名空間。 這些類型「尚未」  支援簡單的 CLR 物件 (POCO) 序列化與還原序列化。
+新的內建 JSON 支援是高效能、低配置，並以 `Span<byte>` 為基礎。 三個新的主要 JSON 相關類型已新增到 .NET Core 3.0 <xref:System.Text.Json?displayProperty=nameWithType> 命名空間。 這些類型「尚未」支援簡單的 CLR 物件 (POCO) 序列化與還原序列化。
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 

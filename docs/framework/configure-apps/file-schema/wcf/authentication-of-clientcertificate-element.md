@@ -2,23 +2,24 @@
 title: <authentication> 項目的 <clientCertificate>
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 4a7fee3bd8441a9612e954160397cc56aca163d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99084f6b7afbdd8586ee706cd6ec44b349d81ff2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926517"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398259"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<clientCertificate > 元素\<的驗證 >
 指定服務所使用之用戶端憑證的驗證行為。  
   
- \<system.ServiceModel>  
-\<行為 >  
-\<serviceBehaviors>  
-\<行為 >  
-\<serviceCredentials>  
-\<clientCertificate>  
-\<驗證 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCredentials >** ](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCertificate >** ](clientcertificate-of-servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<驗證 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,13 +56,13 @@ ms.locfileid: "69926517"
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉|下列其中一個值：None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom。<br /><br /> 如需詳細資訊, 請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
+|列舉|下列其中一個值：None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 屬性  
   
 |值|說明|  
 |-----------|-----------------|  
-|列舉|下列其中一個值：NoCheck, 線上, 離線。 如需詳細資訊, 請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
+|列舉|下列其中一個值：NoCheck，線上，離線。 如需詳細資訊，請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 屬性  
   
@@ -79,7 +80,7 @@ ms.locfileid: "69926517"
 |[\<clientCertificate>](clientcertificate-of-servicecredentials.md)|定義用於向服務驗證的 X.509 憑證。|  
   
 ## <a name="remarks"></a>備註  
- `<authentication>` 項目對應至 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 類別。 它可讓您自訂驗證用戶端的方法。 您可以將 `certificateValidationMode` 屬性 (Attribute) 設定為 `None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust` 或 `Custom`。 根據預設, 層級會設定為`ChainTrust`, 這會指定每個憑證都必須在鏈頂端以*根授權*單位結尾的憑證階層中找到。 這是最安全的模式。 您也可以將值設定為 `PeerOrChainTrust`，指定可接受自行發出的憑證 (對等信任)，以及信任鏈結內的憑證。 這個值會在開發及偵錯用戶端和服務時使用，因為自行發出的憑證不需要從受信任的授權單位購買。 部署用戶端時，請改用 `ChainTrust` 值。  
+ `<authentication>` 項目對應至 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 類別。 它可讓您自訂驗證用戶端的方法。 您可以將 `certificateValidationMode` 屬性 (Attribute) 設定為 `None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust` 或 `Custom`。 根據預設，層級會設定為`ChainTrust`，這會指定每個憑證都必須在鏈頂端以*根授權*單位結尾的憑證階層中找到。 這是最安全的模式。 您也可以將值設定為 `PeerOrChainTrust`，指定可接受自行發出的憑證 (對等信任)，以及信任鏈結內的憑證。 這個值會在開發及偵錯用戶端和服務時使用，因為自行發出的憑證不需要從受信任的授權單位購買。 部署用戶端時，請改用 `ChainTrust` 值。  
   
  您也可以將值設定為 `Custom`。 設定為 `Custom` 值時，您還必須將 `customCertificateValidatorType` 屬性設定為可用來驗證憑證的組件與型別。 若要建立自己的自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。 如需詳細資訊，請參閱[如何：建立採用自訂憑證驗證](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)程式的服務。  
   

@@ -2,22 +2,23 @@
 title: <transport> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: f9f784329081f6a18560991378a4527c731f4d31
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 521aaf3913a1d30d10a674b71d4d98affcabc296
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934714"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399347"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<netHttpBinding > 的\<傳輸 >
 定義可控制 HTTP 傳輸之驗證參數的屬性。  
   
-\<system.serviceModel>  
-\<bindings>  
-\<netHttpBinding>  
-\<系結 >  
-\<安全性 >  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<傳輸 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,15 +47,15 @@ ms.locfileid: "69934714"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|clientCredentialType|-指定使用 HTTP 驗證執行用戶端驗證時, 所要使用的認證類型。  預設為 `None`。 此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|  
-|proxyCredentialType|-指定在透過 HTTP 使用 proxy 從網域內執行用戶端驗證時, 所要使用的認證類型。 這個屬性僅適用於父 `mode` 項目的 `security` 屬性是 `Transport` 或 `TransportCredentialsOnly` 時。 此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
+|clientCredentialType|-指定使用 HTTP 驗證執行用戶端驗證時，所要使用的認證類型。  預設為 `None`。 此屬性的型別為 <xref:System.ServiceModel.HttpClientCredentialType>。|  
+|proxyCredentialType|-指定在透過 HTTP 使用 proxy 從網域內執行用戶端驗證時，所要使用的認證類型。 這個屬性僅適用於父 `mode` 項目的 `security` 屬性是 `Transport` 或 `TransportCredentialsOnly` 時。 此屬性的型別為 <xref:System.ServiceModel.HttpProxyCredentialType>。|  
 |realm|字串，指定摘要式驗證或基本驗證的 HTTP 驗證配置所使用的領域。 預設值是空字串。|  
 |policyEnforcement|此列舉指定了應該強制執行 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 的時間。<br /><br /> 1.Never：絕不強制執行此原則 (延伸保護已停用)。<br />2.WhenSupported：只有當用戶端支援延伸保護時，才強制執行此原則。<br />3.Always：一律強制執行此原則。 不支援延伸保護的用戶端將無法驗證。|  
 |protectionScenario|此列舉會指定原則強制執行的保護案例。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |無|傳輸期間不會保護訊息的安全。|  
 |基本|指定基本驗證。|  
@@ -67,8 +68,8 @@ ms.locfileid: "69934714"
 |值|描述|  
 |-----------|-----------------|  
 |無|-傳輸期間不會保護訊息的安全。|  
-|基本|指定 RFC 2617-HTTP 驗證所定義的基本驗證:基本和摘要式驗證。|  
-|摘要|指定依 RFC 2617-HTTP 驗證所定義的摘要式驗證:基本和摘要式驗證。|  
+|基本|指定 RFC 2617-HTTP 驗證所定義的基本驗證：基本和摘要式驗證。|  
+|摘要|指定依 RFC 2617-HTTP 驗證所定義的摘要式驗證：基本和摘要式驗證。|  
 |Ntlm|指定可能的情況下以及 Windows 驗證失敗時的 NTLM 驗證。|  
 |Windows|指定 Windows 整合式驗證。|  
 |憑證|使用憑證執行用戶端驗證。 這個選項只有在父 `Mode` 項目的 `security` 屬性設為 Transport 時才能使用，如果該屬性設為 TransportCredentialOnly，則無法使用。|  
