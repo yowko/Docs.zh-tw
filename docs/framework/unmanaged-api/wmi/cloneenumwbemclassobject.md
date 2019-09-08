@@ -1,6 +1,6 @@
 ---
-title: CloneEnumWbemClassObject 函式 （Unmanaged API 參考）
-description: CloneEnumWbemClassObject 函式可讓列舉值的邏輯複本。
+title: CloneEnumWbemClassObject 函式（非受控 API 參考）
+description: CloneEnumWbemClassObject 函數會建立枚舉器的邏輯複本。
 ms.date: 11/06/2017
 api_name:
 - CloneEnumWbemClassObject
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab660769a49cf12b129cb7f44b8378053a231f8c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1605314f94fd82d2a2cd7be105dde9e273f607bc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761622"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798692"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 函式
 建立列舉程式的邏輯複本，並保留其在列舉中的目前位置。
@@ -45,51 +45,51 @@ HRESULT CloneEnumWbemClassObject (
 ## <a name="parameters"></a>參數
 
 `ppEnum`\
-[out]接收新指標[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)。
+脫銷接收新[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)的指標。
 
 `authLevel`\
-[in]授權層級。
+在授權層級。
 
 `impLevel`\
-[in]模擬等級。
+在模擬層級。
 
 `pCurrentEnumWbemClassObject`\
-[out]指標[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)要複製的執行個體。
+脫銷要複製之[IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)實例的指標。
 
 `strUser`\
-[in]使用者名稱。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
+在使用者名稱。 如需詳細資訊，請參閱[ConnectServerWmi](connectserverwmi.md)函數。
 
 `strPassword`\
-[in]密碼。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
+在密碼。 如需詳細資訊，請參閱[ConnectServerWmi](connectserverwmi.md)函數。
 
-`strAuthority`\ [in] 使用者的網域名稱。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
+`strAuthority`\ [in] 使用者的功能變數名稱。 如需詳細資訊，請參閱[ConnectServerWmi](connectserverwmi.md)函數。
 
 ## <a name="return-value"></a>傳回值
 
-此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
+這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | 已有一般失敗。 |
+| `WBEM_E_FAILED` | 0x80041001 | 發生一般失敗。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數無效。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 目前的處理序與 WMI 的遠端程序呼叫 (RPC) 連結失敗。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成作業。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 目前進程和 WMI 之間的遠端程序呼叫（RPC）連結失敗。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)方法。
+此函式會包裝對[IEnumWbemClassObject：： Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)方法的呼叫。
 
-這個方法會建立僅 「 盡力 」 的複本。 由於許多 CIM 物件的動態本質，就可以將新的列舉值不會列舉的物件與來源列舉值相同的組。
+這個方法只會進行「最大的工作」複製。 由於許多 CIM 物件的動態本質，新的列舉值可能不會列舉與來源列舉值相同的物件集合。
 
-如果函式呼叫失敗，您可以藉由呼叫來取得其他錯誤資訊[GetErrorInfo](geterrorinfo.md)函式。
+如果函式呼叫失敗，您可以藉由呼叫[GetErrorInfo](geterrorinfo.md)函數來取得其他錯誤資訊。
 
 ## <a name="example"></a>範例
 
-如需範例，請參閱[IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)方法。
+如需範例，請參閱[IEnumWbemClassObject：： Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)方法。
 
 ## <a name="requirements"></a>需求
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
  **標頭：** WMINet_Utils.idl
 
@@ -97,4 +97,4 @@ HRESULT CloneEnumWbemClassObject (
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

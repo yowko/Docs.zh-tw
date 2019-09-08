@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80df33e9064d9843873c67272bac7a34dbe734cc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08247c1ec5b868055e4836b3c0fb520a536374e8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751621"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798924"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 函式
 取得指出位於指定路徑的組件資訊清單是否包含強式名稱簽章的值。  
   
- 此函式已被取代。 使用[iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法改為。  
+ 這個函數已被取代。 請改用[ICLRStrongName：： StrongNameSignatureVerificationEx](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,31 +41,31 @@ BOOLEAN StrongNameSignatureVerificationEx (
   
 ## <a name="parameters"></a>參數  
  `wszFilePath`  
- [in]可攜式可執行檔 （.exe 或.dll） 檔來進行驗證的組件的路徑。  
+ 在要驗證之元件的可攜式可執行檔（.exe 或 .dll）的路徑。  
   
  `fForceVerification`  
- [in]`true`進行驗證，即使它是必要的登錄設定會覆寫，否則`false`。  
+ 在表示執行驗證，即使需要覆寫登錄設定也一樣; `false`否則為。 `true`  
   
  `pfWasVerified`  
- [out]`true`強式名稱簽章是否已驗證，否則`false`。 `pfWasVerified` 也會設定為`false`若驗證成功因登錄設定。  
+ 脫銷如果已驗證強式名稱簽章，則為`false`，否則為。 `true` `pfWasVerified`如果驗證因為登錄`false`設定而成功，也會設定為。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果驗證成功;否則， `false`。  
+ `true`如果驗證成功，則為，否則為`false`。  
   
 ## <a name="remarks"></a>備註  
- `StrongNameSignatureVerificationEx` 提供的功能類似於[StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)函式。 不過，第二個輸入參數和輸出參數`StrongNameSignatureVerificationEx`屬於類型`BOOLEAN`而不是`DWORD`。  
+ `StrongNameSignatureVerificationEx`提供的功能類似于[StrongNameSignatureVerification](strongnamesignatureverification-function.md)函數。 不過，的第二個輸入參數和輸出參數`StrongNameSignatureVerificationEx`的類型`BOOLEAN`是，而`DWORD`不是。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** StrongName.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含做為 mscoree.dll 中的資源  
+ **LIBRARY:** 包含為 mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [StrongNameSignatureVerificationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [StrongNameSignatureVerification 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameSignatureVerificationEx 方法](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [StrongNameSignatureVerification 方法](../hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)

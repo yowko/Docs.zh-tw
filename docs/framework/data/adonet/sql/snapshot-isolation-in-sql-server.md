@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 9f9dfd4f1f299817aa424716aac4408a0b77a240
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958016"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791737"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔離
 快照隔離可強化 OLTP 應用程式的並行功能。  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>瞭解快照集隔離及資料列版本控制  
- 一旦啟用快照集隔離, 就會在**tempdb**中維護每個交易的更新資料列版本。 唯一交易序號識別每筆交易，並會針對每個資料列版本記錄這些唯一的號碼。 交易使用其序號在該交易序號之前的最新資料列版本。 該異動會忽略在異動開始之後建立的較新資料列版本。  
+ 一旦啟用快照集隔離，就會在**tempdb**中維護每個交易的更新資料列版本。 唯一交易序號識別每筆交易，並會針對每個資料列版本記錄這些唯一的號碼。 交易使用其序號在該交易序號之前的最新資料列版本。 該異動會忽略在異動開始之後建立的較新資料列版本。  
   
  「快照集」這個詞彙反映了根據異動開始時資料庫的狀態，異動中所有查詢都看到資料庫的同一版本 (或快照集) 這一事實。 在快照集交易中的基礎資料列或資料頁面上沒有鎖定，這允許其他交易執行，而不會被之前未完成的交易封鎖。 修改資料的異動不會封鎖讀取資料的異動，而讀取資料的異動也不會封鎖寫入資料的異動，因為它們通常處於 SQL Server 中預設的 READ COMMITTED 隔離等級中。 這種無封鎖的行為也會大幅降低複雜異動發生死結的可能性。  
   
  快照集隔離使用開放式同步存取模型。 如果快照集異動嘗試認可對異動開始後發生變更之資料的修改，則該異動將復原並將發生錯誤。 對存取要修改之資料的 SELECT 陳述式使用 UPDLOCK 提示，可避免發生上述情況。 如需詳細資訊，請參閱《SQL Server 線上叢書》的＜鎖定提示＞。  
   
- 必須先設定 ALLOW_SNAPSHOT_ISOLATION ON 資料庫選項以啟用快照集隔離，才能在交易中使用快照集隔離。 這會啟用在暫存資料庫 (**tempdb**) 中儲存資料列版本的機制。 必須在搭配使用快照集隔離與 Transact-SQL ALTER DATABASE 陳述式的每個資料庫中啟用快照集隔離。 在這一方面，快照集隔離不同於無需設定的傳統隔離等級 READ COMMITTED、REPEATABLE READ、SERIALIZABLE 及 READ UNCOMMITTED。 下列陳述式會啟動快照集隔離，並以 SNAPSHOT 取代預設的 READ COMMITTED 行為：  
+ 必須先設定 ALLOW_SNAPSHOT_ISOLATION ON 資料庫選項以啟用快照集隔離，才能在交易中使用快照集隔離。 這會啟用在暫存資料庫（**tempdb**）中儲存資料列版本的機制。 必須在搭配使用快照集隔離與 Transact-SQL ALTER DATABASE 陳述式的每個資料庫中啟用快照集隔離。 在這一方面，快照集隔離不同於無需設定的傳統隔離等級 READ COMMITTED、REPEATABLE READ、SERIALIZABLE 及 READ UNCOMMITTED。 下列陳述式會啟動快照集隔離，並以 SNAPSHOT 取代預設的 READ COMMITTED 行為：  
   
 ```sql  
 ALTER DATABASE MyDatabase  
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 - SERIALIZABLE 是最嚴格的隔離等級，因為它會鎖定整個範圍的索引鍵，並保持鎖定直到交易完成。 它包含 REPEATABLE READ，並增加了在異動完成之前，其他異動不可在該異動已讀取的範圍內插入新資料列的限制。  
   
- 如需詳細資訊, 請參閱[交易鎖定和資料列版本設定指南](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。  
+ 如需詳細資訊，請參閱[交易鎖定和資料列版本設定指南](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。  
   
 ### <a name="snapshot-isolation-level-extensions"></a>快照隔離等級擴充  
  SQL Server 在引進 SNAPSHOT 隔離等級的同時，還引進了 SQL-92 隔離等級的擴充及 READ COMMITTED 的其他實作。 READ_COMMITTED_SNAPSHOT 隔離等級可透明化取代所有異動的 READ COMMITTED。  
@@ -59,24 +59,24 @@ SET READ_COMMITTED_SNAPSHOT ON
 - READ_COMMITTED_SNAPSHOT 資料庫選項可判斷在資料庫中啟用快照集隔離時，預設 READ COMMITTED 隔離等級的行為。 如果您未明確指定 READ_COMMITTED_SNAPSHOT ON，則 READ COMMITTED 會套用至所有隱含交易。 如此會產生與設定 READ_COMMITTED_SNAPSHOT OFF (預設值) 相同的行為。 READ_COMMITTED_SNAPSHOT OFF 生效後，資料庫引擎會使用共用鎖定來強制執行預設的隔離等級。 如果將 READ_COMMITTED_SNAPSHOT 資料庫選項設為 ON，則資料庫引擎會使用資料列版本控制及快照集隔離做為預設值，而不是使用鎖定保護資料。  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>快照集隔離及資料列版本控制的運作方式  
- 啟用快照隔離等級時, 每次更新資料列時, SQL Server 資料庫引擎會將原始資料列的複本儲存在**tempdb**中, 並將交易序號加入資料列。 以下是事件的發生順序：  
+ 啟用快照隔離等級時，每次更新資料列時，SQL Server 資料庫引擎會將原始資料列的複本儲存在**tempdb**中，並將交易序號加入資料列。 以下是事件的發生順序：  
   
 - 初始新交易，並為其指派交易序號。  
   
-- 資料庫引擎會讀取交易中的資料列, 並從其序號最接近且小於交易序號的**tempdb**抓取資料列版本。  
+- 資料庫引擎會讀取交易中的資料列，並從其序號最接近且小於交易序號的**tempdb**抓取資料列版本。  
   
 - 資料庫引擎檢查該交易序號是否不在快照集交易開始時啟用之未認可交易的序號清單中。  
   
 - 交易會從交易開始時的最新**tempdb**讀取資料列的版本。 它不會看到異動開始後插入的新資料列，因為那些序號值會高於該異動序號值。  
   
-- 目前的交易將會看到在交易開始後刪除的資料列, 因為**tempdb**中會有一個資料列版本, 其序號值較低。  
+- 目前的交易將會看到在交易開始後刪除的資料列，因為**tempdb**中會有一個資料列版本，其序號值較低。  
   
  快照集隔離的唯一影響是異動可看到異動開始時就存在的所有資料，而不會在基底資料表上接受或設定鎖定。 在發生爭用時，這可提升效能。  
   
  快照集異動通常使用開放式同步存取控制，抑制任何可防止其他異動更新資料列的鎖定。 如果快照集異動嘗試認可對異動開始後發生變更之資料列的更新，則該異動會復原並將發生錯誤。  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>在 ADO.NET 中使用快照集隔離  
- ADO.NET 中的 <xref:System.Data.SqlClient.SqlTransaction> 類別支援快照集隔離。 如果資料庫已啟用快照集隔離, 但未設定為在上進行 READ_COMMITTED_SNAPSHOT, 您必須在呼叫<xref:System.Data.SqlClient.SqlTransaction> <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>方法時, 使用**IsolationLevel**來起始。 此程式碼片段假設連接是開啟的 <xref:System.Data.SqlClient.SqlConnection> 物件。  
+ ADO.NET 中的 <xref:System.Data.SqlClient.SqlTransaction> 類別支援快照集隔離。 如果資料庫已啟用快照集隔離，但未設定為在上進行 READ_COMMITTED_SNAPSHOT，您必須在呼叫<xref:System.Data.SqlClient.SqlTransaction> <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>方法時，使用**IsolationLevel**來起始。 此程式碼片段假設連接是開啟的 <xref:System.Data.SqlClient.SqlConnection> 物件。  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  
@@ -91,17 +91,17 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>範例  
  下列範例說明不同隔離等級嘗試存取鎖定資料的行為方式，該範例不適用於實際執行的程式碼。  
   
- 程式碼會連接到 SQL Server 中的**AdventureWorks**範例資料庫, 並建立名為**TestSnapshot**的資料表, 並插入一個資料列。 該程式碼使用 ALTER DATABASE Transact-SQL 陳述式來啟用資料庫的快照集隔離，但不會設定 READ_COMMITTED_SNAPSHOT 選項，而是讓預設的 READ COMMITTED 隔離等級行為生效。 然後，程式碼執行下列動作：  
+ 程式碼會連接到 SQL Server 中的**AdventureWorks**範例資料庫，並建立名為**TestSnapshot**的資料表，並插入一個資料列。 該程式碼使用 ALTER DATABASE Transact-SQL 陳述式來啟用資料庫的快照集隔離，但不會設定 READ_COMMITTED_SNAPSHOT 選項，而是讓預設的 READ COMMITTED 隔離等級行為生效。 然後，程式碼執行下列動作：  
   
 - 它會開始但不完成 sqlTransaction1，其使用 SERIALIZABLE 隔離等級來啟動更新異動。 它的作用是鎖定資料表。  
   
-- 它會開啟第二個連接, 並使用快照隔離等級來起始第二筆交易, 以讀取**TestSnapshot**資料表中的資料。 因為已啟用快照集隔離，所以此異動可讀取 sqlTransaction1 啟動之前存在的資料。  
+- 它會開啟第二個連接，並使用快照隔離等級來起始第二筆交易，以讀取**TestSnapshot**資料表中的資料。 因為已啟用快照集隔離，所以此異動可讀取 sqlTransaction1 啟動之前存在的資料。  
   
 - 它會開啟第三個連接並初始使用 READ COMMITTED 隔離等級的交易，以嘗試讀取資料表中的資料。 在這種情況下，程式碼無法讀取資料，因為第一個交易在資料表上設定的鎖定阻止其讀取資料並發生逾時。如果使用 REPEATABLE READ 及 SERIALIZABLE 隔離等級也會導致相同的結果，因為第一個交易設定的鎖定也會阻止這些隔離等級進行讀取。  
   
 - 它會開啟第四個連接並初始使用 READ UNCOMMITTED 隔離等級的異動，其會執行對 sqlTransaction1 中未認可值的 Dirty 讀取。 若未認可第一個異動，則資料庫實際上可能從未擁有此值。  
   
-- 它會復原第一個交易, 並藉由刪除**TestSnapshot**資料表並關閉**AdventureWorks**資料庫的快照集隔離來進行清除。  
+- 它會復原第一個交易，並藉由刪除**TestSnapshot**資料表並關閉**AdventureWorks**資料庫的快照集隔離來進行清除。  
   
 > [!NOTE]
 > 下列範例在連接共用 (Connection Pooling) 關閉時會使用相同的連接字串。 如果共用連接，則重設其隔離等級並不會重設伺服器的隔離等級。 因此，使用同一共用內部連接的後續連接在啟動時的隔離等級會設定為共用連接的隔離等級。 關閉連接共用的方法之一，是明確地設定每個連接的隔離等級。  
@@ -112,19 +112,19 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>範例  
  下列範例說明修改資料時快照集隔離的行為。 該程式碼執行下列動作：  
   
-- 連接到**AdventureWorks**範例資料庫, 並啟用快照集隔離。  
+- 連接到**AdventureWorks**範例資料庫，並啟用快照集隔離。  
   
-- 建立名為**TestSnapshotUpdate**的資料表, 並插入三個數據列的範例資料。  
+- 建立名為**TestSnapshotUpdate**的資料表，並插入三個數據列的範例資料。  
   
 - 開始使用 SNAPSHOT 隔離的 sqlTransaction1 但不完成它。 在交易中選取三個資料列。  
   
-- 建立第二個**SqlConnection**至**AdventureWorks** , 並使用讀取認可隔離等級建立第二筆交易, 以更新 sqlTransaction1 中所選其中一個資料列的值。  
+- 建立第二個**SqlConnection**至**AdventureWorks** ，並使用讀取認可隔離等級建立第二筆交易，以更新 sqlTransaction1 中所選其中一個資料列的值。  
   
 - 認可 sqlTransaction2。  
   
 - 返回 sqlTransaction1 並嘗試更新 sqlTransaction1 已認可的同一資料列。 發生錯誤 3960，sqlTransaction1 自動復原。 [ **SqlException** ] 和 [ **SqlException** ] 會顯示在主控台視窗中。  
   
-- 執行清除程式碼以關閉**AdventureWorks**中的快照集隔離, 並刪除**TestSnapshotUpdate**資料表。  
+- 執行清除程式碼以關閉**AdventureWorks**中的快照集隔離，並刪除**TestSnapshotUpdate**資料表。  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  
@@ -143,6 +143,6 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>另請參閱
 
-- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 和 ADO.NET](index.md)
+- [ADO.NET 概觀](../ado-net-overview.md)
 - [交易鎖定和資料列版本設定指南](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

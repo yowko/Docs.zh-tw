@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 263dc0f9d686440aaa23e359c26db1b4d3d09b1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7421e0d0e1a1f0e1a5fbe0d0eb7d5a0ab2a48b9a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609096"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796417"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority 介面
 
@@ -31,33 +31,33 @@ ms.locfileid: "61609096"
 
 |方法|描述|
 |------------|-----------------|
-|`IIdentityAuthority::AreDefinitionsEqual`|取得值，指出兩個指定是否[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)執行個體是否相等。|
-|`IIdentityAuthority::AreReferencesEqual`|取得值，指出兩個指定是否[IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)執行個體是否相等。|
-|`IIdentityAuthority::AreTextualDefinitionsEqual`|取得值，指出兩個指定的字串定義識別表示法是否相等。|
-|`IIdentityAuthority::AreTextualReferencesEqual`|取得值，指出兩個指定的字串參考身分識別表示法是否相等。|
-|`IIdentityAuthority::CreateDefinition`|取得新的指標`IDefinitionIdentity`代表目前範圍中的程式碼物件的執行個體。|
-|`IIdentityAuthority::CreateReference`|取得新的指標`IReferenceIdentity`代表目前範圍中的程式碼物件的執行個體。|
-|`IIdentityAuthority::DefinitionToText`|取得指定的格式化的字串版本`IDefinitionIdentity`。|
-|`IIdentityAuthority::DefinitionToTextBuffer`|填滿指定的字串版本指定寬字元的緩衝區`IDefinitionIdentity`。|
-|`IIdentityAuthority::DoesDefinitionMatchReference`|取得值，指出是否指定`IDefinitionIdentity`和`IReferenceIdentity`參考相同的程式碼物件的執行個體。|
+|`IIdentityAuthority::AreDefinitionsEqual`|取得值，指出兩個指定的[IDefinitionIdentity](idefinitionidentity-interface.md)實例是否相等。|
+|`IIdentityAuthority::AreReferencesEqual`|取得值，指出兩個指定的[IReferenceIdentity](ireferenceidentity-interface.md)實例是否相等。|
+|`IIdentityAuthority::AreTextualDefinitionsEqual`|取得值，指出兩個指定的字串定義識別表示是否相等。|
+|`IIdentityAuthority::AreTextualReferencesEqual`|取得值，指出兩個指定的字串參考身分識別表示是否相等。|
+|`IIdentityAuthority::CreateDefinition`|取得新`IDefinitionIdentity`實例的指標，表示目前範圍中的程式碼物件。|
+|`IIdentityAuthority::CreateReference`|取得新`IReferenceIdentity`實例的指標，表示目前範圍中的程式碼物件。|
+|`IIdentityAuthority::DefinitionToText`|取得指定`IDefinitionIdentity`的格式化字串版本。|
+|`IIdentityAuthority::DefinitionToTextBuffer`|使用指定`IDefinitionIdentity`的字串版本，填滿指定的寬字元緩衝區。|
+|`IIdentityAuthority::DoesDefinitionMatchReference`|取得值，指出指定`IDefinitionIdentity`的和`IReferenceIdentity`實例是否參考相同的程式碼物件。|
 |`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|取得值，指出指定的字串是否參考相同的程式碼物件。|
-|`IIdentityAuthority::GenerateDefinitionKey`|取得指定之新建立的字串索引鍵的指標`IDefinitionIdentity`。|
-|`IIdentityAuthority::GenerateReferenceKey`|取得指定之新建立的字串索引鍵的指標`IReferenceIdentity`。|
-|`IIdentityAuthority::HashDefinition`|取得所指定的雜湊值`IDefinitionIdentity`。|
-|`IIdentityAuthority::HashReference`|取得所指定的雜湊值`IReferenceIdentity`。|
-|`IIdentityAuthority::ReferenceToText`|取得指定的格式化的字串版本`IReferenceIdentity`。|
-|`IIdentityAuthority::ReferenceToTextBuffer`|填滿指定的字串版本指定寬字元的緩衝區`IReferenceIdentity`。|
-|`IIdentityAuthority::TextToDefinition`|取得的介面指標`IDefinitionIdentity`產生從指定的執行個體格式化字串。|
-|`IIdentityAuthority::TextToReference`|取得的介面指標`IReferenceIdentity`產生從指定的執行個體格式化字串。|
+|`IIdentityAuthority::GenerateDefinitionKey`|取得所指定`IDefinitionIdentity`的新建立之字串索引鍵的指標。|
+|`IIdentityAuthority::GenerateReferenceKey`|取得所指定`IReferenceIdentity`的新建立之字串索引鍵的指標。|
+|`IIdentityAuthority::HashDefinition`|取得所指定`IDefinitionIdentity`的雜湊值。|
+|`IIdentityAuthority::HashReference`|取得所指定`IReferenceIdentity`的雜湊值。|
+|`IIdentityAuthority::ReferenceToText`|取得指定`IReferenceIdentity`的格式化字串版本。|
+|`IIdentityAuthority::ReferenceToTextBuffer`|使用指定`IReferenceIdentity`的字串版本，填滿指定的寬字元緩衝區。|
+|`IIdentityAuthority::TextToDefinition`|取得從指定的格式化字串`IDefinitionIdentity`產生之實例的介面指標。|
+|`IIdentityAuthority::TextToReference`|取得從指定的格式化字串`IReferenceIdentity`產生之實例的介面指標。|
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** Isolation.h
+**標頭：** 隔離。h
 
-**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [融合介面](fusion-interfaces.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec18d5d5a6574cb0e08a6c4d6eaedcbcbf6886cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e81fb7c99b9fd03a69456a84f2191770f40121d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759356"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795342"
 ---
-# <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE 結構
-表示應用程式對應用程式已安裝在全域組件快取中的組件的參考。  
+# <a name="fusion_install_reference-structure"></a>FUSION_INSTALL_REFERENCE 結構
+表示應用程式對應用程式安裝在全域組件快取中的元件所做的參考。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,20 +42,20 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
 |成員|描述|  
 |------------|-----------------|  
-|`cbSize`|結構，以位元組為單位的大小。|  
-|`dwFlags`|保留供未來擴充。 此值必須是 0 （零）。|  
-|`guidScheme`|加入參考的實體。 這個欄位可以有下列值之一：<br /><br /> -FUSION_REFCOUNT_MSI_GUID:使用 Microsoft Windows Installer 所安裝的應用程式所參考的組件。 `szIdentifier`欄位設定為`MSI`，而`szNonCanonicalData` 欄位設為`Windows Installer`。 此配置會使用 Windows 並排顯示組件。<br />-FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID:會出現在應用程式所參考的組件**新增/移除程式**介面。 `szIdentifier`欄位提供與將應用程式註冊權杖**新增/移除程式**介面。<br />-FUSION_REFCOUNT_FILEPATH_GUID:組件參考的應用程式，由檔案系統中的檔案。 `szIdentifier`欄位會提供這個檔案的路徑。<br />-FUSION_REFCOUNT_OPAQUE_STRING_GUID:應用程式只能由不透明的字串表示所參考的組件。 `szIdentifier`欄位提供不透明的字串。 當您移除此值時，全域組件快取不會檢查存在的不透明的參考。<br />-FUSION_REFCOUNT_OSINSTALL_GUID:這個值已保留。|  
-|`szIdentifier`|唯一的字串，可識別在全域組件快取中安裝組件的應用程式。 其值的值取決於`guidScheme`欄位。|  
-|`szNonCanonicalData`|只要加入參考的實體會辨識字串。 全域組件快取會儲存這個字串中，但不會使用它。|  
+|`cbSize`|結構的大小（以位元組為單位）。|  
+|`dwFlags`|保留以供未來擴充性之用。 這個值必須是0（零）。|  
+|`guidScheme`|加入參考的實體。 此欄位可以有下列其中一個值：<br /><br /> - FUSION_REFCOUNT_MSI_GUID:元件是由使用 Microsoft Windows Installer 所安裝的應用程式所參考。 欄位設定為`MSI`，且`szNonCanonicalData`欄位設定為`Windows Installer`。 `szIdentifier` 此配置用於 Windows 並存元件。<br />- FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID:元件是由出現在 [**新增/移除程式**] 介面中的應用程式所參考。 欄位提供的權杖會向「**新增/移除程式**」介面註冊應用程式。 `szIdentifier`<br />- FUSION_REFCOUNT_FILEPATH_GUID:元件是由檔案系統中的檔案所代表的應用程式所參考。 `szIdentifier`欄位提供此檔案的路徑。<br />- FUSION_REFCOUNT_OPAQUE_STRING_GUID:元件是由僅以不透明字串表示的應用程式所參考。 `szIdentifier`欄位提供此不透明字串。 當您移除此值時，全域組件快取不會檢查不透明參考是否存在。<br />- FUSION_REFCOUNT_OSINSTALL_GUID:這個值是保留的。|  
+|`szIdentifier`|唯一的字串，可識別在全域組件快取中安裝元件的應用程式。 其值取決於`guidScheme`欄位的值。|  
+|`szNonCanonicalData`|只有加入參考的實體才會瞭解的字串。 全域組件快取會儲存此字串，但不會使用它。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [全域組件快取](../../../../docs/framework/app-domains/gac.md)
+- [融合結構](fusion-structures.md)
+- [全域組件快取](../../app-domains/gac.md)

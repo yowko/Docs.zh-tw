@@ -2,18 +2,18 @@
 title: SqlClient 資料流支援
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: c5325e60e8303ab46f1c32340a20473b31bcf52e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9dc7ee573bd011bd18d6c4b8bbd2d147b1fe907f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489781"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791403"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 資料流支援
 
-資料流 （新功能 .NET Framework 4.5） 應用程式和 SQL Server 之間的支援 （文件、 影像和媒體檔案） 的伺服器上支援非結構化的資料。 SQL Server 資料庫可以儲存二進位大型物件 (Blob)，但擷取 BLOB，可以使用大量記憶體。
+SQL Server 和應用程式之間的串流支援（.NET Framework 4.5 中的新功能）支援伺服器上的非結構化資料（檔、影像和媒體檔案）。 SQL Server 資料庫可以儲存二進位大型物件（Blob），但抓取 BLOB 可能會佔用大量的記憶體。
 
-資料流支援從 SQL Server 可簡化撰寫應用程式資料流資料，而不必完全將資料載入記憶體，導致較少的記憶體溢位例外狀況。
+SQL Server 的資料流程支援可簡化撰寫串流資料的應用程式，而不需要將資料完全載入記憶體，而導致記憶體溢位例外狀況較少。
 
 尤其是在商務物件連接到 SQL Azure 以傳送、擷取及管理大型 BLOB 的情況下，資料流支援也可以讓中介層應用程式擴充得更好。
 
@@ -22,11 +22,11 @@ ms.locfileid: "66489781"
 >
 > 加入以支援資料流的成員可用於擷取查詢中的資料，以及將參數傳遞至查詢及預存程序。 資料流功能適用於基本的 OLTP 和資料移轉案例，亦適用於內部及外部資料移轉環境。
 
-## <a name="streaming-support-from-sql-server"></a>從 SQL Server 的資料流支援
+## <a name="streaming-support-from-sql-server"></a>SQL Server 的串流支援
 
-資料流支援從 SQL Server 導入了新功能<xref:System.Data.Common.DbDataReader>然後在<xref:System.Data.SqlClient.SqlDataReader>類別，以取得<xref:System.IO.Stream>， <xref:System.Xml.XmlReader>，和<xref:System.IO.TextReader>物件，並對它們做出回應。 這些類別用於從查詢中擷取資料。 如此一來，從 SQL Server 的資料流支援可解決 OLTP 案例，並套用至在公司內部和外部部署的環境。
+SQL Server 的資料流程支援在<xref:System.Data.Common.DbDataReader>和<xref:System.Data.SqlClient.SqlDataReader>類別中引進新功能，以取得<xref:System.IO.Stream>、 <xref:System.Xml.XmlReader>和<xref:System.IO.TextReader>物件並對其做出反應。 這些類別用於從查詢中擷取資料。 因此，來自 SQL Server 的串流處理支援會解決 OLTP 案例，並適用于內部部署和外部部署環境。
 
-下列成員已新增至<xref:System.Data.SqlClient.SqlDataReader>啟用串流支援從 SQL Server:
+下列成員已新增至<xref:System.Data.SqlClient.SqlDataReader> ，以啟用 SQL Server 的串流支援：
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +40,7 @@ ms.locfileid: "66489781"
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-下列成員已新增至<xref:System.Data.Common.DbDataReader>啟用串流支援從 SQL Server:
+下列成員已新增至<xref:System.Data.Common.DbDataReader> ，以啟用 SQL Server 的串流支援：
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -48,9 +48,9 @@ ms.locfileid: "66489781"
 
 3. <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
 
-## <a name="streaming-support-to-sql-server"></a>SQL server 的資料流支援
+## <a name="streaming-support-to-sql-server"></a>SQL Server 的串流支援
 
-資料流支援 SQL server 導入了新功能<xref:System.Data.SqlClient.SqlParameter>類別，以便它可以接受並回應<xref:System.Xml.XmlReader>， <xref:System.IO.Stream>，和<xref:System.IO.TextReader>物件。 <xref:System.Data.SqlClient.SqlParameter> 用於將參數傳遞給查詢和預存程序。
+SQL Server 的<xref:System.Data.SqlClient.SqlParameter>串流支援會在類別中引進新功能，讓它可以接受和<xref:System.Xml.XmlReader>回應<xref:System.IO.Stream>、 <xref:System.IO.TextReader>和物件。 <xref:System.Data.SqlClient.SqlParameter> 用於將參數傳遞給查詢和預存程序。
 
 您必須取消所有資料流作業，才能處置 <xref:System.Data.SqlClient.SqlCommand> 物件或呼叫 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>。 如果應用程式傳送 <xref:System.Threading.CancellationToken>，就不保證能取消。
 
@@ -70,15 +70,15 @@ ms.locfileid: "66489781"
 
 - **Xml**
 
-**Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>型別將接受<xref:System.Data.SqlClient.SqlParameter.Value%2A>的<xref:System.Xml.XmlReader>。
+**Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 類型會<xref:System.Xml.XmlReader>接受的。 <xref:System.Data.SqlClient.SqlParameter.Value%2A>
 
 <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> 可接受型別 <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 的值。
 
 <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 物件會被轉移到 <xref:System.Data.SqlClient.SqlParameter.Size%2A> 所定義的值。
 
-## <a name="sample----streaming-from-sql-server"></a>從 SQL Server 中串流範例-
+## <a name="sample----streaming-from-sql-server"></a>範例--從 SQL Server 串流
 
-您可以使用下列的 TRANSACT-SQL 來建立範例資料庫：
+使用下列 Transact-sql 來建立範例資料庫：
 
 ```sql
 CREATE DATABASE [Demo]
@@ -101,13 +101,13 @@ GO
 
 - 提供擷取大型檔案的非同步方法，避免封鎖使用者介面執行緒。
 
-- 從.NET Framework 4.5 中的 SQL Server 傳輸大型文字檔。
+- 從 .NET Framework 4.5 中的 SQL Server 傳輸大型文字檔。
 
-- 從.NET Framework 4.5 中的 SQL Server 傳輸大型的 XML 檔案。
+- 從 .NET Framework 4.5 中的 SQL Server 傳輸大型 XML 檔案。
 
-- 從 SQL Server 擷取資料。
+- 從 SQL Server 取出資料。
 
-- 大型檔案 (Blob) 從一個 SQL Server 資料庫傳送到另一個記憶體充足。
+- 將大型檔案（Blob）從一個 SQL Server 資料庫傳送到另一個，而不會用盡記憶體。
 
 ```csharp
 using System;
@@ -298,9 +298,9 @@ namespace StreamingFromServer {
 }
 ```
 
-## <a name="sample----streaming-to-sql-server"></a>範例--串流到 SQL Server
+## <a name="sample----streaming-to-sql-server"></a>範例--串流至 SQL Server
 
-您可以使用下列的 TRANSACT-SQL 來建立範例資料庫：
+使用下列 Transact-sql 來建立範例資料庫：
 
 ```sql
 CREATE DATABASE [Demo2]
@@ -323,17 +323,17 @@ GO
 
 範例顯示如何執行下列動作：
 
-- 在.NET Framework 4.5 中的 SQL Server 來傳輸大型 BLOB。
+- 將大型 BLOB 傳輸至 .NET Framework 4.5 中的 SQL Server。
 
-- 將大型文字檔傳輸到.NET Framework 4.5 中的 SQL Server。
+- 將大型文本檔案傳輸至 .NET Framework 4.5 中的 SQL Server。
 
 - 使用新的非同步功能傳輸大型 BLOB。
 
 - 使用新的非同步功能及 await 關鍵字傳輸大型 BLOB。
 
-- 取消傳輸大型 BLOB。
+- 正在取消傳輸大型 BLOB。
 
-- 從一部 SQL Server 串流處理到另一個使用新的非同步功能。
+- 使用新的非同步功能，從一個 SQL Server 串流至另一個。
 
 ```csharp
 using System;
@@ -455,9 +455,9 @@ namespace StreamingToServer {
 }
 ```
 
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>範例--從一部 SQL Server 串流處理到其他 SQL Server
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>範例--從一個 SQL Server 串流至另一個 SQL Server
 
-此範例示範如何以非同步方式傳送資料流到另一個，同時支援取消作業將大型 BLOB 從一個 SQL Server。
+這個範例示範如何以非同步方式將大型 BLOB 從一個 SQL Server 串流至另一個，並支援取消作業。
 
 ```csharp
 using System;
@@ -524,4 +524,4 @@ namespace StreamingFromServerToAnother {
 
 ## <a name="see-also"></a>另請參閱
 
-- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)

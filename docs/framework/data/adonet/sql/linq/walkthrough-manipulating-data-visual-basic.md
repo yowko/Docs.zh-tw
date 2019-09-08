@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 9e6039feb68d18ff5ce16b7a0532710d672c296e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a74216c53c45790b974938c7155e0b5e1043ac13
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946955"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792295"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>逐步解說：操作資料 (Visual Basic)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -25,7 +25,7 @@ ms.locfileid: "69946955"
   
 - Northwind 範例資料庫。  
   
-     如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需指示, 請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載資料庫之後，請將 northwnd.mdf 檔案複製至 c:\linqtest2 資料夾。  
+     如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需指示，請參閱[下載範例資料庫](downloading-sample-databases.md)。 下載資料庫之後，請將 northwnd.mdf 檔案複製至 c:\linqtest2 資料夾。  
   
 - 從 Northwind 資料庫產生的 Visual Basic 程式碼檔。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "69946955"
   
      **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
   
-     如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+     如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
@@ -51,32 +51,32 @@ ms.locfileid: "69946955"
 - 將這些變更送出至 Northwind 資料庫。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
- 在第一項工作中, 您會建立 Visual Studio 方案, 其中包含組建和執行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案所需的參考。  
+ 在第一項工作中，您會建立 Visual Studio 方案，其中包含組建和執行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案所需的參考。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
 1. 在 Visual Studio 的 [檔案] 功能表上，按一下 [新增專案]。  
   
-2. 在 [**新增專案**] 對話方塊的 [**專案類型**] 窗格中, 按一下 [ **Visual Basic**]。  
+2. 在 [**新增專案**] 對話方塊的 [**專案類型**] 窗格中，按一下 [ **Visual Basic**]。  
   
 3. 按一下 [範本] 窗格中的 [主控台應用程式]。  
   
-4. 在 [**名稱**] 方塊中, 輸入**LinqDataManipulationApp**。  
+4. 在 [**名稱**] 方塊中，輸入**LinqDataManipulationApp**。  
   
 5. 按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
- 本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果`System.Data.Linq`未列為專案中的參考 (按一下**方案總管**中的 [**顯示所有**檔案], 然後展開 [**參考**] 節點), 請將它加入, 如下列步驟所述。  
+ 本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果`System.Data.Linq`未列為專案中的參考（按一下**方案總管**中的 [**顯示所有**檔案]，然後展開 [**參考**] 節點），請將它加入，如下列步驟所述。  
   
 #### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq  
   
-1. 在**方案總管**中, 以滑鼠右鍵按一下 [**參考**], 然後按一下 [**加入參考**]。  
+1. 在**方案總管**中，以滑鼠右鍵按一下 [**參考**]，然後按一下 [**加入參考**]。  
   
-2. 在 [**加入參考**] 對話方塊中, 按一下 [ **.net**], 再按一下 [system.string] 元件, 然後按一下 **[確定]** 。  
+2. 在 [**加入參考**] 對話方塊中，按一下 [ **.net**]，再按一下 [system.string] 元件，然後按一下 **[確定]** 。  
   
      組件隨即加入至專案。  
   
-3. 在 [程式碼編輯器] 中, 于**Module1**上方加入下列指示詞:  
+3. 在 [程式碼編輯器] 中，于**Module1**上方加入下列指示詞：  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "69946955"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>若要將 Northwind 程式碼檔案加入至專案  
   
-1. 在 [**專案**] 功能表上, 按一下 [**加入現有專案**]。  
+1. 在 [**專案**] 功能表上，按一下 [**加入現有專案**]。  
   
-2. 在 [**加入現有專案**] 對話方塊中, 流覽至 [c:\linqtest2\northwind.vb], 然後按一下 [**新增**]。  
+2. 在 [**加入現有專案**] 對話方塊中，流覽至 [c:\linqtest2\northwind.vb]，然後按一下 [**新增**]。  
   
      northwind.vb file 隨即加入至專案。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "69946955"
   
      **主控台**視窗隨即開啟。  
   
-     在**主控台**視窗中按 enter 鍵, 或按一下 [Visual Studio] [**調試**程式] 功能表上的 [**停止**偵測], 以關閉應用程式。  
+     在**主控台**視窗中按 enter 鍵，或按一下 [Visual Studio] [**調試**程式] 功能表上的 [**停止**偵測]，以關閉應用程式。  
   
 ## <a name="creating-a-new-entity"></a>建立新的實體  
  建立新的實體十分簡單。 您可以使用 `Customer` 關鍵字，建立物件 (如 `New`)。  
@@ -129,7 +129,7 @@ ms.locfileid: "69946955"
   
      請注意，新的資料列不會出現在結果中。 新的資料尚未送出至資料庫。  
   
-3. 在**主控台**視窗中按 enter 鍵, 以停止進行調試。  
+3. 在**主控台**視窗中按 enter 鍵，以停止進行調試。  
   
 ## <a name="updating-an-entity"></a>更新實體  
  在下列步驟中，您會擷取 `Customer` 物件，並修改它的其中一個屬性。  
@@ -181,11 +181,11 @@ ms.locfileid: "69946955"
     Customer ID: RICAR  
     ```  
   
-4. 在**主控台**視窗中按 enter 鍵, 以停止進行調試。  
+4. 在**主控台**視窗中按 enter 鍵，以停止進行調試。  
   
 > [!NOTE]
 > 送出變更以加入新的客戶之後，因為您無法再原樣加入同一位客戶，所以無法再原樣執行這個方案。 若要再執行一次這個方案，請變更要加入的客戶 ID 值。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [依逐步解說學習](learning-by-walkthroughs.md)
