@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70b40095ffcfea37414b7de2a678ad8555423b12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8befdb454a564ec834532653dd44cf230fa43d79
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778553"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795211"
 ---
-# <a name="asmdisplayflags-enumeration"></a><span data-ttu-id="bc58e-102">ASM_DISPLAY_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="bc58e-102">ASM_DISPLAY_FLAGS Enumeration</span></span>
-<span data-ttu-id="bc58e-103">表示版本、 組建、 文化特性、 簽章，依此類推，會擷取顯示名稱的組件[iassemblyname:: Getdisplayname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="bc58e-103">Indicates the version, build, culture, signature, and so on, of the assembly whose display name will be retrieved by the [IAssemblyName::GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md) method.</span></span>  
+# <a name="asm_display_flags-enumeration"></a><span data-ttu-id="e40f3-102">ASM_DISPLAY_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="e40f3-102">ASM_DISPLAY_FLAGS Enumeration</span></span>
+<span data-ttu-id="e40f3-103">表示[IAssemblyName：： GetDisplayName](iassemblyname-getdisplayname-method.md)方法將抓取其顯示名稱之元件的版本、組建、文化特性、簽章等。</span><span class="sxs-lookup"><span data-stu-id="e40f3-103">Indicates the version, build, culture, signature, and so on, of the assembly whose display name will be retrieved by the [IAssemblyName::GetDisplayName](iassemblyname-getdisplayname-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc58e-104">語法</span><span class="sxs-lookup"><span data-stu-id="bc58e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e40f3-104">語法</span><span class="sxs-lookup"><span data-stu-id="e40f3-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -51,19 +51,19 @@ typedef enum {
 } ASM_DISPLAY_FLAGS;  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="bc58e-105">備註</span><span class="sxs-lookup"><span data-stu-id="bc58e-105">Remarks</span></span>  
- <span data-ttu-id="bc58e-106">`ASM_DISPLAYF_FULL` 版本所做的變更會反映出[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件。</span><span class="sxs-lookup"><span data-stu-id="bc58e-106">`ASM_DISPLAYF_FULL` reflects any changes made to the version of the [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span> <span data-ttu-id="bc58e-107">請勿假設傳回的值是不變。</span><span class="sxs-lookup"><span data-stu-id="bc58e-107">Do not assume that the returned value is immutable.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e40f3-105">備註</span><span class="sxs-lookup"><span data-stu-id="e40f3-105">Remarks</span></span>  
+ <span data-ttu-id="e40f3-106">`ASM_DISPLAYF_FULL`反映對[IAssemblyName](iassemblyname-interface.md)物件版本所做的任何變更。</span><span class="sxs-lookup"><span data-stu-id="e40f3-106">`ASM_DISPLAYF_FULL` reflects any changes made to the version of the [IAssemblyName](iassemblyname-interface.md) object.</span></span> <span data-ttu-id="e40f3-107">請不要假設傳回的值是不可變的。</span><span class="sxs-lookup"><span data-stu-id="e40f3-107">Do not assume that the returned value is immutable.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bc58e-108">需求</span><span class="sxs-lookup"><span data-stu-id="bc58e-108">Requirements</span></span>  
- <span data-ttu-id="bc58e-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bc58e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e40f3-108">需求</span><span class="sxs-lookup"><span data-stu-id="e40f3-108">Requirements</span></span>  
+ <span data-ttu-id="e40f3-109">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e40f3-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc58e-110">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="bc58e-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="e40f3-110">**標頭：** 融合。h</span><span class="sxs-lookup"><span data-stu-id="e40f3-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="bc58e-111">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="bc58e-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e40f3-111">**LIBRARY:** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="e40f3-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bc58e-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc58e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e40f3-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e40f3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc58e-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bc58e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e40f3-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e40f3-113">See also</span></span>
 
-- [<span data-ttu-id="bc58e-114">IAssemblyName 介面</span><span class="sxs-lookup"><span data-stu-id="bc58e-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="bc58e-115">融合列舉</span><span class="sxs-lookup"><span data-stu-id="bc58e-115">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="e40f3-114">IAssemblyName 介面</span><span class="sxs-lookup"><span data-stu-id="e40f3-114">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="e40f3-115">融合列舉</span><span class="sxs-lookup"><span data-stu-id="e40f3-115">Fusion Enumerations</span></span>](fusion-enumerations.md)

@@ -2,33 +2,33 @@
 title: 模型宣告函式
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: 73e716f1c42dfbbb91dc6456212de2a331d7c4ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb2fca52604bd57f25469f5621c292a27638c76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943918"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794792"
 ---
-# <a name="model-declared-function"></a><span data-ttu-id="2e450-102">模型宣告函式</span><span class="sxs-lookup"><span data-stu-id="2e450-102">model-declared function</span></span>
-<span data-ttu-id="2e450-103">模型宣告函*式*是在概念模型中宣告, 但未在該概念模型中定義的函數。</span><span class="sxs-lookup"><span data-stu-id="2e450-103">A *model-declared function* is a function that is declared in a conceptual model, but is not defined in that conceptual model.</span></span> <span data-ttu-id="2e450-104">該函式可能是在裝載或儲存環境中定義的。</span><span class="sxs-lookup"><span data-stu-id="2e450-104">The function might be defined in the hosting or storage environment.</span></span> <span data-ttu-id="2e450-105">例如，模型宣告函式可能對應到在資料庫中定義的函式，因而在概念模型中公開伺服器端的功能。</span><span class="sxs-lookup"><span data-stu-id="2e450-105">For example, a model-declared function might be mapped to a function that is defined in a database, thus exposing server-side functionality in the conceptual model.</span></span>  
+# <a name="model-declared-function"></a><span data-ttu-id="a578c-102">模型宣告函式</span><span class="sxs-lookup"><span data-stu-id="a578c-102">model-declared function</span></span>
+<span data-ttu-id="a578c-103">模型宣告函*式*是在概念模型中宣告，但未在該概念模型中定義的函數。</span><span class="sxs-lookup"><span data-stu-id="a578c-103">A *model-declared function* is a function that is declared in a conceptual model, but is not defined in that conceptual model.</span></span> <span data-ttu-id="a578c-104">該函式可能是在裝載或儲存環境中定義的。</span><span class="sxs-lookup"><span data-stu-id="a578c-104">The function might be defined in the hosting or storage environment.</span></span> <span data-ttu-id="a578c-105">例如，模型宣告函式可能對應到在資料庫中定義的函式，因而在概念模型中公開伺服器端的功能。</span><span class="sxs-lookup"><span data-stu-id="a578c-105">For example, a model-declared function might be mapped to a function that is defined in a database, thus exposing server-side functionality in the conceptual model.</span></span>  
   
- <span data-ttu-id="2e450-106">模型宣告函式的宣告包含下列資訊：</span><span class="sxs-lookup"><span data-stu-id="2e450-106">The declaration of a model-declared function contains the following information:</span></span>  
+ <span data-ttu-id="a578c-106">模型宣告函式的宣告包含下列資訊：</span><span class="sxs-lookup"><span data-stu-id="a578c-106">The declaration of a model-declared function contains the following information:</span></span>  
   
-- <span data-ttu-id="2e450-107">函式的名稱。</span><span class="sxs-lookup"><span data-stu-id="2e450-107">The name of the function.</span></span> <span data-ttu-id="2e450-108">(必要項)</span><span class="sxs-lookup"><span data-stu-id="2e450-108">(Required)</span></span>  
+- <span data-ttu-id="a578c-107">函式的名稱。</span><span class="sxs-lookup"><span data-stu-id="a578c-107">The name of the function.</span></span> <span data-ttu-id="a578c-108">(必要項)</span><span class="sxs-lookup"><span data-stu-id="a578c-108">(Required)</span></span>  
   
-- <span data-ttu-id="2e450-109">傳回值的型別。</span><span class="sxs-lookup"><span data-stu-id="2e450-109">The type of the return value.</span></span> <span data-ttu-id="2e450-110">(選擇項)</span><span class="sxs-lookup"><span data-stu-id="2e450-110">(Optional)</span></span>  
+- <span data-ttu-id="a578c-109">傳回值的型別。</span><span class="sxs-lookup"><span data-stu-id="a578c-109">The type of the return value.</span></span> <span data-ttu-id="a578c-110">(選擇項)</span><span class="sxs-lookup"><span data-stu-id="a578c-110">(Optional)</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="2e450-111">若未指定任何傳回值，則傳回型別為 void。</span><span class="sxs-lookup"><span data-stu-id="2e450-111">If no return value is specified, the return type is void.</span></span>  
+    > <span data-ttu-id="a578c-111">若未指定任何傳回值，則傳回型別為 void。</span><span class="sxs-lookup"><span data-stu-id="a578c-111">If no return value is specified, the return type is void.</span></span>  
   
-- <span data-ttu-id="2e450-112">參數資訊，包括參數名稱和型別。</span><span class="sxs-lookup"><span data-stu-id="2e450-112">Parameter information, including parameter name and type.</span></span> <span data-ttu-id="2e450-113">(選擇項)</span><span class="sxs-lookup"><span data-stu-id="2e450-113">(Optional)</span></span>  
+- <span data-ttu-id="a578c-112">參數資訊，包括參數名稱和型別。</span><span class="sxs-lookup"><span data-stu-id="a578c-112">Parameter information, including parameter name and type.</span></span> <span data-ttu-id="a578c-113">(選擇項)</span><span class="sxs-lookup"><span data-stu-id="a578c-113">(Optional)</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2e450-114">範例</span><span class="sxs-lookup"><span data-stu-id="2e450-114">Example</span></span>  
- <span data-ttu-id="2e450-115">[ADO.NET Entity Framework](./ef/index.md)會使用稱為概念結構定義語言 ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) 的特定領域語言 (DSL) 來定義概念模型。</span><span class="sxs-lookup"><span data-stu-id="2e450-115">The [ADO.NET Entity Framework](./ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) to define conceptual models.</span></span> <span data-ttu-id="2e450-116">在 CSDL 中, 模型宣告函式的其中一個實作為函數匯入 (使用[FunctionImport 元素](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl))。</span><span class="sxs-lookup"><span data-stu-id="2e450-116">In CSDL, one implementation of a model-declared function is a function import (using the [FunctionImport element](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl)).</span></span> <span data-ttu-id="2e450-117">下列 CSDL 定義具有函式匯入定義的實體容器。</span><span class="sxs-lookup"><span data-stu-id="2e450-117">The following CSDL defines an entity container with a function import definition.</span></span> <span data-ttu-id="2e450-118">請注意，由於沒有指定傳回型別，因此該函式的傳回型別為 void。</span><span class="sxs-lookup"><span data-stu-id="2e450-118">Note that the return type for the function is void since no return type is specified.</span></span>  
+## <a name="example"></a><span data-ttu-id="a578c-114">範例</span><span class="sxs-lookup"><span data-stu-id="a578c-114">Example</span></span>  
+ <span data-ttu-id="a578c-115">[ADO.NET Entity Framework](./ef/index.md)會使用稱為概念結構定義語言（[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)）的特定領域語言（DSL）來定義概念模型。</span><span class="sxs-lookup"><span data-stu-id="a578c-115">The [ADO.NET Entity Framework](./ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) to define conceptual models.</span></span> <span data-ttu-id="a578c-116">在 CSDL 中，模型宣告函式的其中一個實作為函數匯入（使用[FunctionImport 元素](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl)）。</span><span class="sxs-lookup"><span data-stu-id="a578c-116">In CSDL, one implementation of a model-declared function is a function import (using the [FunctionImport element](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl)).</span></span> <span data-ttu-id="a578c-117">下列 CSDL 定義具有函式匯入定義的實體容器。</span><span class="sxs-lookup"><span data-stu-id="a578c-117">The following CSDL defines an entity container with a function import definition.</span></span> <span data-ttu-id="a578c-118">請注意，由於沒有指定傳回型別，因此該函式的傳回型別為 void。</span><span class="sxs-lookup"><span data-stu-id="a578c-118">Note that the return type for the function is void since no return type is specified.</span></span>  
   
  [!code-xml[EDM_Example_Model#FunctionImport](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#functionimport)]  
   
-## <a name="see-also"></a><span data-ttu-id="2e450-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2e450-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a578c-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a578c-119">See also</span></span>
 
-- [<span data-ttu-id="2e450-120">實體資料模型索引鍵概念</span><span class="sxs-lookup"><span data-stu-id="2e450-120">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [<span data-ttu-id="2e450-121">實體資料模型</span><span class="sxs-lookup"><span data-stu-id="2e450-121">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [<span data-ttu-id="a578c-120">實體資料模型索引鍵概念</span><span class="sxs-lookup"><span data-stu-id="a578c-120">Entity Data Model Key Concepts</span></span>](entity-data-model-key-concepts.md)
+- [<span data-ttu-id="a578c-121">實體資料模型</span><span class="sxs-lookup"><span data-stu-id="a578c-121">Entity Data Model</span></span>](entity-data-model.md)

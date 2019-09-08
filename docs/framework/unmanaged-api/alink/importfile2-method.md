@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1193af7b7375dfd3367c12fdb0067c9c30c614f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a03fc24e5ef932d13c0d195f53c703cdd3ff45ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741746"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776933"
 ---
-# <a name="importfile2-method"></a><span data-ttu-id="44cf0-102">ImportFile2 方法</span><span class="sxs-lookup"><span data-stu-id="44cf0-102">ImportFile2 Method</span></span>
-<span data-ttu-id="44cf0-103">匯入組件和未繫結的模組。</span><span class="sxs-lookup"><span data-stu-id="44cf0-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="44cf0-104">這個方法就像是[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)，但即使正在匯入的檔案不存在磁碟上的運作方式。</span><span class="sxs-lookup"><span data-stu-id="44cf0-104">This method is like [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  
+# <a name="importfile2-method"></a><span data-ttu-id="a9bb0-102">ImportFile2 方法</span><span class="sxs-lookup"><span data-stu-id="a9bb0-102">ImportFile2 Method</span></span>
+<span data-ttu-id="a9bb0-103">匯入元件和解除系結模組。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="a9bb0-104">這個方法就像[ImportFile 方法](importfile-method.md)，但即使匯入的檔案不存在於磁片上，也會運作。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-104">This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44cf0-105">語法</span><span class="sxs-lookup"><span data-stu-id="44cf0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9bb0-105">語法</span><span class="sxs-lookup"><span data-stu-id="a9bb0-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ImportFile2(  
@@ -40,36 +40,36 @@ HRESULT ImportFile2(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="44cf0-106">參數</span><span class="sxs-lookup"><span data-stu-id="44cf0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a9bb0-106">參數</span><span class="sxs-lookup"><span data-stu-id="a9bb0-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="44cf0-107">要匯入的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="44cf0-107">Name of file to be imported.</span></span>  
+ <span data-ttu-id="a9bb0-107">要匯入之檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-107">Name of file to be imported.</span></span>  
   
  `pszTargetName`  
- <span data-ttu-id="44cf0-108">可用來重新命名檔案，因為它連結至組件的選擇性的輸出檔名稱。</span><span class="sxs-lookup"><span data-stu-id="44cf0-108">Optional output file name that can be used to rename the file as it is linked into the assembly.</span></span>  
+ <span data-ttu-id="a9bb0-108">選擇性的輸出檔案名，可以在檔案連結至元件時用來重新命名檔案。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-108">Optional output file name that can be used to rename the file as it is linked into the assembly.</span></span>  
   
  `pAssemblyScopeIn`  
- <span data-ttu-id="44cf0-109">選擇性的範圍[IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="44cf0-109">Optional scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span>  
+ <span data-ttu-id="a9bb0-109">選擇性範圍[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-109">Optional scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.</span></span>  
   
  `fSmartImport`  
- <span data-ttu-id="44cf0-110">如果為 TRUE，會使用 ImportTypes，否則匯入必須手動執行。</span><span class="sxs-lookup"><span data-stu-id="44cf0-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
+ <span data-ttu-id="a9bb0-110">若為 TRUE，則會使用 ImportTypes，否則必須手動執行匯入。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
   
  `pImportToken`  
- <span data-ttu-id="44cf0-111">接收的檔案或組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="44cf0-111">Receives the ID for the file or assembly.</span></span>  
+ <span data-ttu-id="a9bb0-111">接收檔案或元件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-111">Receives the ID for the file or assembly.</span></span>  
   
  `ppAssemblyScope`  
- <span data-ttu-id="44cf0-112">接收[IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="44cf0-112">Receives the [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="44cf0-113">如果檔案不是組件，則為 NULL。</span><span class="sxs-lookup"><span data-stu-id="44cf0-113">NULL if the file is not an assembly.</span></span>  
+ <span data-ttu-id="a9bb0-112">接收[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-112">Receives the [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="a9bb0-113">如果檔案不是元件，則為 Null。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-113">NULL if the file is not an assembly.</span></span>  
   
  `pdwCountOfScopes`  
- <span data-ttu-id="44cf0-114">會接收找到的檔案和/或匯入的範圍。</span><span class="sxs-lookup"><span data-stu-id="44cf0-114">Receives the found of files and/or scopes imported.</span></span>  
+ <span data-ttu-id="a9bb0-114">接收已匯入的檔案和/或範圍的。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-114">Receives the found of files and/or scopes imported.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="44cf0-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="44cf0-115">Return Value</span></span>  
- <span data-ttu-id="44cf0-116">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="44cf0-116">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a9bb0-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="a9bb0-115">Return Value</span></span>  
+ <span data-ttu-id="a9bb0-116">如果方法成功，則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-116">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="44cf0-117">需求</span><span class="sxs-lookup"><span data-stu-id="44cf0-117">Requirements</span></span>  
- <span data-ttu-id="44cf0-118">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="44cf0-118">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9bb0-117">需求</span><span class="sxs-lookup"><span data-stu-id="a9bb0-117">Requirements</span></span>  
+ <span data-ttu-id="a9bb0-118">需要 alink. h。</span><span class="sxs-lookup"><span data-stu-id="a9bb0-118">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44cf0-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="44cf0-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9bb0-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a9bb0-119">See also</span></span>
 
-- [<span data-ttu-id="44cf0-120">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="44cf0-120">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="44cf0-121">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="44cf0-121">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="44cf0-122">ALink API</span><span class="sxs-lookup"><span data-stu-id="44cf0-122">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="a9bb0-120">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="a9bb0-120">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="a9bb0-121">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="a9bb0-121">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="a9bb0-122">ALink API</span><span class="sxs-lookup"><span data-stu-id="a9bb0-122">ALink API</span></span>](index.md)

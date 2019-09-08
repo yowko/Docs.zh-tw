@@ -2,27 +2,27 @@
 title: HOW TO：指定資料庫名稱
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: a43a7ac541adb984eeb8bb88b7ab96db86baf26c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0daf754edf624410e0ea725acd6c266ccb7828dc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037566"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781572"
 ---
-# <a name="how-to-specify-database-names"></a><span data-ttu-id="3186c-102">HOW TO：指定資料庫名稱</span><span class="sxs-lookup"><span data-stu-id="3186c-102">How to: Specify Database Names</span></span>
-<span data-ttu-id="3186c-103">在 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Attribute) 上使用 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Property)，可在連接未提供名稱時指定資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="3186c-103">Use the <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property on a <xref:System.Data.Linq.Mapping.DatabaseAttribute> attribute to specify the name of a database when a name is not supplied by the connection.</span></span>  
+# <a name="how-to-specify-database-names"></a><span data-ttu-id="a4d1f-102">HOW TO：指定資料庫名稱</span><span class="sxs-lookup"><span data-stu-id="a4d1f-102">How to: Specify Database Names</span></span>
+<span data-ttu-id="a4d1f-103">在 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Attribute) 上使用 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Property)，可在連接未提供名稱時指定資料庫名稱。</span><span class="sxs-lookup"><span data-stu-id="a4d1f-103">Use the <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property on a <xref:System.Data.Linq.Mapping.DatabaseAttribute> attribute to specify the name of a database when a name is not supplied by the connection.</span></span>  
   
- <span data-ttu-id="3186c-104">如需程式碼範例，請參閱 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>。</span><span class="sxs-lookup"><span data-stu-id="3186c-104">For code samples, see <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.</span></span>  
+ <span data-ttu-id="a4d1f-104">如需程式碼範例，請參閱 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>。</span><span class="sxs-lookup"><span data-stu-id="a4d1f-104">For code samples, see <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.</span></span>  
   
-### <a name="to-specify-the-name-of-the-database"></a><span data-ttu-id="3186c-105">若要指定資料庫的名稱</span><span class="sxs-lookup"><span data-stu-id="3186c-105">To specify the name of the database</span></span>  
+### <a name="to-specify-the-name-of-the-database"></a><span data-ttu-id="a4d1f-105">若要指定資料庫的名稱</span><span class="sxs-lookup"><span data-stu-id="a4d1f-105">To specify the name of the database</span></span>  
   
-1. <span data-ttu-id="3186c-106">將 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Attribute) 加入至資料庫的類別宣告。</span><span class="sxs-lookup"><span data-stu-id="3186c-106">Add the <xref:System.Data.Linq.Mapping.DatabaseAttribute> attribute to the class declaration for the database.</span></span>  
+1. <span data-ttu-id="a4d1f-106">將 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Attribute) 加入至資料庫的類別宣告。</span><span class="sxs-lookup"><span data-stu-id="a4d1f-106">Add the <xref:System.Data.Linq.Mapping.DatabaseAttribute> attribute to the class declaration for the database.</span></span>  
   
-2. <span data-ttu-id="3186c-107">將 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 加入至 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="3186c-107">Add the <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property to the <xref:System.Data.Linq.Mapping.DatabaseAttribute> attribute.</span></span>  
+2. <span data-ttu-id="a4d1f-107">將 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 加入至 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="a4d1f-107">Add the <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property to the <xref:System.Data.Linq.Mapping.DatabaseAttribute> attribute.</span></span>  
   
-3. <span data-ttu-id="3186c-108">將 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 值設定為想要指定的名稱。</span><span class="sxs-lookup"><span data-stu-id="3186c-108">Set the <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property value to the name that you want to specify.</span></span>  
+3. <span data-ttu-id="a4d1f-108">將 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 值設定為想要指定的名稱。</span><span class="sxs-lookup"><span data-stu-id="a4d1f-108">Set the <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> property value to the name that you want to specify.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3186c-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3186c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4d1f-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a4d1f-109">See also</span></span>
 
-- [<span data-ttu-id="3186c-110">LINQ to SQL 物件模型</span><span class="sxs-lookup"><span data-stu-id="3186c-110">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [<span data-ttu-id="3186c-111">如何：使用程式碼編輯器自訂實體類別</span><span class="sxs-lookup"><span data-stu-id="3186c-111">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [<span data-ttu-id="a4d1f-110">LINQ to SQL 物件模型</span><span class="sxs-lookup"><span data-stu-id="a4d1f-110">The LINQ to SQL Object Model</span></span>](the-linq-to-sql-object-model.md)
+- [<span data-ttu-id="a4d1f-111">如何：使用程式碼編輯器自訂實體類別</span><span class="sxs-lookup"><span data-stu-id="a4d1f-111">How to: Customize Entity Classes by Using the Code Editor</span></span>](how-to-customize-entity-classes-by-using-the-code-editor.md)

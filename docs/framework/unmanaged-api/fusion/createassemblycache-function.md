@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffeb04ddcec290f899556bf0d8078acfb06707ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c855d6f85c3cbfa6d81a1fbce3ef5b83abb3f583
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778600"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795403"
 ---
-# <a name="createassemblycache-function"></a><span data-ttu-id="f68e2-102">CreateAssemblyCache 函式</span><span class="sxs-lookup"><span data-stu-id="f68e2-102">CreateAssemblyCache Function</span></span>
-<span data-ttu-id="f68e2-103">取得新指標[IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)表示全域組件快取執行個體。</span><span class="sxs-lookup"><span data-stu-id="f68e2-103">Gets a pointer to a new [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instance that represents the global assembly cache.</span></span>  
+# <a name="createassemblycache-function"></a><span data-ttu-id="d63ae-102">CreateAssemblyCache 函式</span><span class="sxs-lookup"><span data-stu-id="d63ae-102">CreateAssemblyCache Function</span></span>
+<span data-ttu-id="d63ae-103">取得代表全域組件快取之新[IAssemblyCache](iassemblycache-interface.md)實例的指標。</span><span class="sxs-lookup"><span data-stu-id="d63ae-103">Gets a pointer to a new [IAssemblyCache](iassemblycache-interface.md) instance that represents the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f68e2-104">語法</span><span class="sxs-lookup"><span data-stu-id="f68e2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d63ae-104">語法</span><span class="sxs-lookup"><span data-stu-id="d63ae-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateAssemblyCache (  
@@ -37,24 +37,24 @@ HRESULT CreateAssemblyCache (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f68e2-105">參數</span><span class="sxs-lookup"><span data-stu-id="f68e2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d63ae-105">參數</span><span class="sxs-lookup"><span data-stu-id="d63ae-105">Parameters</span></span>  
  `ppAsmCache`  
- <span data-ttu-id="f68e2-106">[out]傳回`IAssemblyCache`指標。</span><span class="sxs-lookup"><span data-stu-id="f68e2-106">[out] The returned `IAssemblyCache` pointer.</span></span>  
+ <span data-ttu-id="d63ae-106">脫銷傳回`IAssemblyCache`的指標。</span><span class="sxs-lookup"><span data-stu-id="d63ae-106">[out] The returned `IAssemblyCache` pointer.</span></span>  
   
  `dwReserved`  
- <span data-ttu-id="f68e2-107">[in]保留供未來擴充。</span><span class="sxs-lookup"><span data-stu-id="f68e2-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="f68e2-108">`dwReserved` 必須是 0 （零）。</span><span class="sxs-lookup"><span data-stu-id="f68e2-108">`dwReserved` must be 0 (zero).</span></span>  
+ <span data-ttu-id="d63ae-107">在保留以供未來擴充性之用。</span><span class="sxs-lookup"><span data-stu-id="d63ae-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="d63ae-108">`dwReserved`必須是0（零）。</span><span class="sxs-lookup"><span data-stu-id="d63ae-108">`dwReserved` must be 0 (zero).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f68e2-109">需求</span><span class="sxs-lookup"><span data-stu-id="f68e2-109">Requirements</span></span>  
- <span data-ttu-id="f68e2-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f68e2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d63ae-109">需求</span><span class="sxs-lookup"><span data-stu-id="d63ae-109">Requirements</span></span>  
+ <span data-ttu-id="d63ae-110">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d63ae-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f68e2-111">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="f68e2-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="d63ae-111">**標頭：** 融合。h</span><span class="sxs-lookup"><span data-stu-id="d63ae-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="f68e2-112">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="f68e2-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d63ae-112">**LIBRARY:** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d63ae-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f68e2-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f68e2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d63ae-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d63ae-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f68e2-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f68e2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d63ae-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d63ae-114">See also</span></span>
 
-- [<span data-ttu-id="f68e2-115">IAssemblyCache 介面</span><span class="sxs-lookup"><span data-stu-id="f68e2-115">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [<span data-ttu-id="f68e2-116">融合全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="f68e2-116">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [<span data-ttu-id="f68e2-117">全域組件快取</span><span class="sxs-lookup"><span data-stu-id="f68e2-117">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="d63ae-115">IAssemblyCache 介面</span><span class="sxs-lookup"><span data-stu-id="d63ae-115">IAssemblyCache Interface</span></span>](iassemblycache-interface.md)
+- [<span data-ttu-id="d63ae-116">融合全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="d63ae-116">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
+- [<span data-ttu-id="d63ae-117">全域組件快取</span><span class="sxs-lookup"><span data-stu-id="d63ae-117">Global Assembly Cache</span></span>](../../app-domains/gac.md)

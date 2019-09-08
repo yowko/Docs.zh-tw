@@ -2,24 +2,24 @@
 title: WmiGetObjectFailed
 ms.date: 03/30/2017
 ms.assetid: 676691b5-705e-4422-8dca-c6f517964116
-ms.openlocfilehash: 2110ebe5edbf7ac454a34826fe4cb7607b748217
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1141b0b5a5599dfd20ddccdbc146670b2261dd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944166"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797362"
 ---
-# <a name="wmigetobjectfailed"></a><span data-ttu-id="059c3-102">WmiGetObjectFailed</span><span class="sxs-lookup"><span data-stu-id="059c3-102">WmiGetObjectFailed</span></span>
-<span data-ttu-id="059c3-103">識別碼:120</span><span class="sxs-lookup"><span data-stu-id="059c3-103">Id: 120</span></span>  
+# <a name="wmigetobjectfailed"></a><span data-ttu-id="a3ef5-102">WmiGetObjectFailed</span><span class="sxs-lookup"><span data-stu-id="a3ef5-102">WmiGetObjectFailed</span></span>
+<span data-ttu-id="a3ef5-103">識別碼:120</span><span class="sxs-lookup"><span data-stu-id="a3ef5-103">Id: 120</span></span>  
   
- <span data-ttu-id="059c3-104">嚴重性：錯誤</span><span class="sxs-lookup"><span data-stu-id="059c3-104">Severity: Error</span></span>  
+ <span data-ttu-id="a3ef5-104">嚴重性：Error</span><span class="sxs-lookup"><span data-stu-id="a3ef5-104">Severity: Error</span></span>  
   
- <span data-ttu-id="059c3-105">類別：ServiceModel</span><span class="sxs-lookup"><span data-stu-id="059c3-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="a3ef5-105">CategoryServiceModel</span><span class="sxs-lookup"><span data-stu-id="a3ef5-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="059c3-106">描述</span><span class="sxs-lookup"><span data-stu-id="059c3-106">Description</span></span>  
- <span data-ttu-id="059c3-107">此事件表示 WMI GetObject 要求尚未處理。</span><span class="sxs-lookup"><span data-stu-id="059c3-107">This event indicates that the WMI GetObject request was not processed.</span></span> <span data-ttu-id="059c3-108">此事件會列出 WMI 物件、例外狀況、處理序名稱與處理序識別碼。</span><span class="sxs-lookup"><span data-stu-id="059c3-108">The event lists the WMI Object, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="a3ef5-106">描述</span><span class="sxs-lookup"><span data-stu-id="a3ef5-106">Description</span></span>  
+ <span data-ttu-id="a3ef5-107">此事件表示 WMI GetObject 要求尚未處理。</span><span class="sxs-lookup"><span data-stu-id="a3ef5-107">This event indicates that the WMI GetObject request was not processed.</span></span> <span data-ttu-id="a3ef5-108">此事件會列出 WMI 物件、例外狀況、處理序名稱與處理序識別碼。</span><span class="sxs-lookup"><span data-stu-id="a3ef5-108">The event lists the WMI Object, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="059c3-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="059c3-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3ef5-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a3ef5-109">See also</span></span>
 
-- [<span data-ttu-id="059c3-110">事件記錄</span><span class="sxs-lookup"><span data-stu-id="059c3-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="059c3-111">事件一般參考</span><span class="sxs-lookup"><span data-stu-id="059c3-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [<span data-ttu-id="a3ef5-110">事件記錄</span><span class="sxs-lookup"><span data-stu-id="a3ef5-110">Event Logging</span></span>](index.md)
+- [<span data-ttu-id="a3ef5-111">事件一般參考</span><span class="sxs-lookup"><span data-stu-id="a3ef5-111">Events General Reference</span></span>](events-general-reference.md)

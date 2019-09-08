@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb8fba433c5f7ef9701caf61971841672f46b425
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742032"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787460"
 ---
-# <a name="exportnestedtypeforwarder-method"></a><span data-ttu-id="e7528-102">ExportNestedTypeForwarder 方法</span><span class="sxs-lookup"><span data-stu-id="e7528-102">ExportNestedTypeForwarder Method</span></span>
-<span data-ttu-id="e7528-103">將指定的組件的型別表中的巢狀類型的類型轉送子。</span><span class="sxs-lookup"><span data-stu-id="e7528-103">Adds a type forwarder for a nested type to the type table of the given assembly.</span></span>  
+# <a name="exportnestedtypeforwarder-method"></a><span data-ttu-id="b6030-102">ExportNestedTypeForwarder 方法</span><span class="sxs-lookup"><span data-stu-id="b6030-102">ExportNestedTypeForwarder Method</span></span>
+<span data-ttu-id="b6030-103">將巢狀型別的類型轉寄站加入至指定元件的類型資料表。</span><span class="sxs-lookup"><span data-stu-id="b6030-103">Adds a type forwarder for a nested type to the type table of the given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7528-104">語法</span><span class="sxs-lookup"><span data-stu-id="e7528-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b6030-104">語法</span><span class="sxs-lookup"><span data-stu-id="b6030-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExportNestedTypeForwarder(  
@@ -40,36 +40,36 @@ HRESULT ExportNestedTypeForwarder(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e7528-105">參數</span><span class="sxs-lookup"><span data-stu-id="e7528-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b6030-105">參數</span><span class="sxs-lookup"><span data-stu-id="b6030-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="e7528-106">若要從匯出的組件識別碼。</span><span class="sxs-lookup"><span data-stu-id="e7528-106">ID of the assembly to export from.</span></span>  
+ <span data-ttu-id="b6030-106">要匯出之元件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="b6030-106">ID of the assembly to export from.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="e7528-107">語彙基元或組件檔案的檔案識別碼所定義的型別。</span><span class="sxs-lookup"><span data-stu-id="e7528-107">File token or assembly ID of file that defines the type.</span></span>  
+ <span data-ttu-id="b6030-107">定義類型之檔案的檔案標記或元件識別碼。</span><span class="sxs-lookup"><span data-stu-id="b6030-107">File token or assembly ID of file that defines the type.</span></span>  
   
  `TypeToken`  
- <span data-ttu-id="e7528-108">類型的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="e7528-108">Token for the type.</span></span>  
+ <span data-ttu-id="b6030-108">類型的 Token。</span><span class="sxs-lookup"><span data-stu-id="b6030-108">Token for the type.</span></span>  
   
  `ParentType`  
- <span data-ttu-id="e7528-109">父型別的權杖。</span><span class="sxs-lookup"><span data-stu-id="e7528-109">Token of parent type.</span></span>  
+ <span data-ttu-id="b6030-109">父類型的 Token。</span><span class="sxs-lookup"><span data-stu-id="b6030-109">Token of parent type.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="e7528-110">若要匯出的完整型別名稱。</span><span class="sxs-lookup"><span data-stu-id="e7528-110">Fully qualified type name to export.</span></span>  
+ <span data-ttu-id="b6030-110">要匯出的完整類型名稱。</span><span class="sxs-lookup"><span data-stu-id="b6030-110">Fully qualified type name to export.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="e7528-111">`ComType` 這類旗標`tdPublic`或`tdNested`。</span><span class="sxs-lookup"><span data-stu-id="e7528-111">`ComType` flags such as `tdPublic` or `tdNested`.</span></span>  
+ <span data-ttu-id="b6030-111">`ComType`旗標， `tdPublic`例如`tdNested`或。</span><span class="sxs-lookup"><span data-stu-id="b6030-111">`ComType` flags such as `tdPublic` or `tdNested`.</span></span>  
   
  `pType`  
- <span data-ttu-id="e7528-112">接收匯出類型的語彙的基元。</span><span class="sxs-lookup"><span data-stu-id="e7528-112">Receives token of export type.</span></span> <span data-ttu-id="e7528-113">這是才需要發出巢狀型別。</span><span class="sxs-lookup"><span data-stu-id="e7528-113">This is necessary only for emitting nested types.</span></span>  
+ <span data-ttu-id="b6030-112">接收匯出類型的 token。</span><span class="sxs-lookup"><span data-stu-id="b6030-112">Receives token of export type.</span></span> <span data-ttu-id="b6030-113">這只有在發出巢狀型別時才需要。</span><span class="sxs-lookup"><span data-stu-id="b6030-113">This is necessary only for emitting nested types.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e7528-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="e7528-114">Return Value</span></span>  
- <span data-ttu-id="e7528-115">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="e7528-115">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b6030-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="b6030-114">Return Value</span></span>  
+ <span data-ttu-id="b6030-115">如果方法成功，則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="b6030-115">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7528-116">需求</span><span class="sxs-lookup"><span data-stu-id="e7528-116">Requirements</span></span>  
- <span data-ttu-id="e7528-117">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="e7528-117">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b6030-116">需求</span><span class="sxs-lookup"><span data-stu-id="b6030-116">Requirements</span></span>  
+ <span data-ttu-id="b6030-117">需要 alink. h</span><span class="sxs-lookup"><span data-stu-id="b6030-117">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7528-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7528-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b6030-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b6030-118">See also</span></span>
 
-- [<span data-ttu-id="e7528-119">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="e7528-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="e7528-120">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="e7528-120">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="e7528-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="e7528-121">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="b6030-119">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="b6030-119">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="b6030-120">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="b6030-120">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="b6030-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="b6030-121">ALink API</span></span>](index.md)

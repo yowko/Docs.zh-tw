@@ -2,17 +2,17 @@
 title: 端點
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963601"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795904"
 ---
-# <a name="endpoint"></a><span data-ttu-id="c937c-102">端點</span><span class="sxs-lookup"><span data-stu-id="c937c-102">Endpoint</span></span>
-<span data-ttu-id="c937c-103">端點</span><span class="sxs-lookup"><span data-stu-id="c937c-103">Endpoint</span></span>  
+# <a name="endpoint"></a><span data-ttu-id="c726c-102">端點</span><span class="sxs-lookup"><span data-stu-id="c726c-102">Endpoint</span></span>
+<span data-ttu-id="c726c-103">端點</span><span class="sxs-lookup"><span data-stu-id="c726c-103">Endpoint</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c937c-104">語法</span><span class="sxs-lookup"><span data-stu-id="c937c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c726c-104">語法</span><span class="sxs-lookup"><span data-stu-id="c726c-104">Syntax</span></span>  
   
 ```csharp
 class Endpoint  
@@ -32,102 +32,102 @@ class Endpoint
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="c937c-105">方法</span><span class="sxs-lookup"><span data-stu-id="c937c-105">Methods</span></span>  
- <span data-ttu-id="c937c-106">Endpoint 類別定義下列方法。</span><span class="sxs-lookup"><span data-stu-id="c937c-106">The Endpoint class defines the following method.</span></span>  
+## <a name="methods"></a><span data-ttu-id="c726c-105">方法</span><span class="sxs-lookup"><span data-stu-id="c726c-105">Methods</span></span>  
+ <span data-ttu-id="c726c-106">Endpoint 類別定義下列方法。</span><span class="sxs-lookup"><span data-stu-id="c726c-106">The Endpoint class defines the following method.</span></span>  
   
-|<span data-ttu-id="c937c-107">方法</span><span class="sxs-lookup"><span data-stu-id="c937c-107">Method</span></span>|<span data-ttu-id="c937c-108">描述</span><span class="sxs-lookup"><span data-stu-id="c937c-108">Description</span></span>|  
+|<span data-ttu-id="c726c-107">方法</span><span class="sxs-lookup"><span data-stu-id="c726c-107">Method</span></span>|<span data-ttu-id="c726c-108">說明</span><span class="sxs-lookup"><span data-stu-id="c726c-108">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c937c-109">GetOperationCounterInstanceName</span><span class="sxs-lookup"><span data-stu-id="c937c-109">GetOperationCounterInstanceName</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|<span data-ttu-id="c937c-110">擷取作業效能計數器執行個體名稱</span><span class="sxs-lookup"><span data-stu-id="c937c-110">Retrieves the operation performance counter instance name</span></span>|  
+|[<span data-ttu-id="c726c-109">GetOperationCounterInstanceName</span><span class="sxs-lookup"><span data-stu-id="c726c-109">GetOperationCounterInstanceName</span></span>](getoperationcounterinstancename.md)|<span data-ttu-id="c726c-110">擷取作業效能計數器執行個體名稱</span><span class="sxs-lookup"><span data-stu-id="c726c-110">Retrieves the operation performance counter instance name</span></span>|  
   
-## <a name="properties"></a><span data-ttu-id="c937c-111">屬性</span><span class="sxs-lookup"><span data-stu-id="c937c-111">Properties</span></span>  
- <span data-ttu-id="c937c-112">Endpoint 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="c937c-112">The Endpoint class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="c726c-111">屬性</span><span class="sxs-lookup"><span data-stu-id="c726c-111">Properties</span></span>  
+ <span data-ttu-id="c726c-112">Endpoint 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="c726c-112">The Endpoint class has the following properties:</span></span>  
   
-### <a name="address"></a><span data-ttu-id="c937c-113">地址</span><span class="sxs-lookup"><span data-stu-id="c937c-113">Address</span></span>  
- <span data-ttu-id="c937c-114">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c937c-114">Data type: string</span></span>  
+### <a name="address"></a><span data-ttu-id="c726c-113">地址</span><span class="sxs-lookup"><span data-stu-id="c726c-113">Address</span></span>  
+ <span data-ttu-id="c726c-114">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c726c-114">Data type: string</span></span>  
   
- <span data-ttu-id="c937c-115">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-115">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-116">包含端點位址的 URI。</span><span class="sxs-lookup"><span data-stu-id="c937c-116">A URI that contains the address of the endpoint.</span></span>  
+ <span data-ttu-id="c726c-116">包含端點位址的 URI。</span><span class="sxs-lookup"><span data-stu-id="c726c-116">A URI that contains the address of the endpoint.</span></span>  
   
-### <a name="addressheaders"></a><span data-ttu-id="c937c-117">AddressHeaders</span><span class="sxs-lookup"><span data-stu-id="c937c-117">AddressHeaders</span></span>  
- <span data-ttu-id="c937c-118">資料型別：字串陣列</span><span class="sxs-lookup"><span data-stu-id="c937c-118">Data type: string array</span></span>  
+### <a name="addressheaders"></a><span data-ttu-id="c726c-117">AddressHeaders</span><span class="sxs-lookup"><span data-stu-id="c726c-117">AddressHeaders</span></span>  
+ <span data-ttu-id="c726c-118">資料型別：字串陣列</span><span class="sxs-lookup"><span data-stu-id="c726c-118">Data type: string array</span></span>  
   
- <span data-ttu-id="c937c-119">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-119">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-120">附加到此端點之位址標頭的集合。</span><span class="sxs-lookup"><span data-stu-id="c937c-120">The collection of address headers attached to this endpoint.</span></span>  
+ <span data-ttu-id="c726c-120">附加到此端點之位址標頭的集合。</span><span class="sxs-lookup"><span data-stu-id="c726c-120">The collection of address headers attached to this endpoint.</span></span>  
   
-### <a name="addressidentity"></a><span data-ttu-id="c937c-121">AddressIdentity</span><span class="sxs-lookup"><span data-stu-id="c937c-121">AddressIdentity</span></span>  
- <span data-ttu-id="c937c-122">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c937c-122">Data type: string</span></span>  
+### <a name="addressidentity"></a><span data-ttu-id="c726c-121">AddressIdentity</span><span class="sxs-lookup"><span data-stu-id="c726c-121">AddressIdentity</span></span>  
+ <span data-ttu-id="c726c-122">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c726c-122">Data type: string</span></span>  
   
- <span data-ttu-id="c937c-123">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-123">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-124">端點的身分識別。</span><span class="sxs-lookup"><span data-stu-id="c937c-124">The identity of the endpoint.</span></span>  
+ <span data-ttu-id="c726c-124">端點的身分識別。</span><span class="sxs-lookup"><span data-stu-id="c726c-124">The identity of the endpoint.</span></span>  
   
-### <a name="appdomainid"></a><span data-ttu-id="c937c-125">AppDomainId</span><span class="sxs-lookup"><span data-stu-id="c937c-125">AppDomainId</span></span>  
- <span data-ttu-id="c937c-126">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="c937c-126">Data type: sint32</span></span>  
+### <a name="appdomainid"></a><span data-ttu-id="c726c-125">AppDomainId</span><span class="sxs-lookup"><span data-stu-id="c726c-125">AppDomainId</span></span>  
+ <span data-ttu-id="c726c-126">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="c726c-126">Data type: sint32</span></span>  
   
- <span data-ttu-id="c937c-127">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-127">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-128">裝載端點之 appdomain 的 appdomain 識別碼。</span><span class="sxs-lookup"><span data-stu-id="c937c-128">The appdomain id of the appdomain that hosts the endpoint.</span></span>  
+ <span data-ttu-id="c726c-128">裝載端點之 appdomain 的 appdomain 識別碼。</span><span class="sxs-lookup"><span data-stu-id="c726c-128">The appdomain id of the appdomain that hosts the endpoint.</span></span>  
   
-### <a name="behaviors"></a><span data-ttu-id="c937c-129">「行為」</span><span class="sxs-lookup"><span data-stu-id="c937c-129">Behaviors</span></span>  
- <span data-ttu-id="c937c-130">資料類型：行為陣列</span><span class="sxs-lookup"><span data-stu-id="c937c-130">Data type: Behavior array</span></span>  
+### <a name="behaviors"></a><span data-ttu-id="c726c-129">「行為」</span><span class="sxs-lookup"><span data-stu-id="c726c-129">Behaviors</span></span>  
+ <span data-ttu-id="c726c-130">資料類型：行為陣列</span><span class="sxs-lookup"><span data-stu-id="c726c-130">Data type: Behavior array</span></span>  
   
- <span data-ttu-id="c937c-131">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-131">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-132">此端點實作之行為的集合。</span><span class="sxs-lookup"><span data-stu-id="c937c-132">The collection of behaviors implemented by this endpoint.</span></span>  
+ <span data-ttu-id="c726c-132">此端點實作之行為的集合。</span><span class="sxs-lookup"><span data-stu-id="c726c-132">The collection of behaviors implemented by this endpoint.</span></span>  
   
-### <a name="binding"></a><span data-ttu-id="c937c-133">繫結</span><span class="sxs-lookup"><span data-stu-id="c937c-133">Binding</span></span>  
- <span data-ttu-id="c937c-134">資料類型：繫結</span><span class="sxs-lookup"><span data-stu-id="c937c-134">Data type: Binding</span></span>  
+### <a name="binding"></a><span data-ttu-id="c726c-133">繫結</span><span class="sxs-lookup"><span data-stu-id="c726c-133">Binding</span></span>  
+ <span data-ttu-id="c726c-134">資料類型：繫結</span><span class="sxs-lookup"><span data-stu-id="c726c-134">Data type: Binding</span></span>  
   
- <span data-ttu-id="c937c-135">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-135">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-136">此端點所使用的繫結。</span><span class="sxs-lookup"><span data-stu-id="c937c-136">The binding used by this endpoint.</span></span>  
+ <span data-ttu-id="c726c-136">此端點所使用的繫結。</span><span class="sxs-lookup"><span data-stu-id="c726c-136">The binding used by this endpoint.</span></span>  
   
-### <a name="contractname"></a><span data-ttu-id="c937c-137">ContractName</span><span class="sxs-lookup"><span data-stu-id="c937c-137">ContractName</span></span>  
- <span data-ttu-id="c937c-138">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c937c-138">Data type: string</span></span>  
+### <a name="contractname"></a><span data-ttu-id="c726c-137">ContractName</span><span class="sxs-lookup"><span data-stu-id="c726c-137">ContractName</span></span>  
+ <span data-ttu-id="c726c-138">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c726c-138">Data type: string</span></span>  
   
- <span data-ttu-id="c937c-139">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-139">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-140">指定公開此端點之合約的字串。</span><span class="sxs-lookup"><span data-stu-id="c937c-140">A string that specifies which contract this endpoint is exposing.</span></span>  
+ <span data-ttu-id="c726c-140">指定公開此端點之合約的字串。</span><span class="sxs-lookup"><span data-stu-id="c726c-140">A string that specifies which contract this endpoint is exposing.</span></span>  
   
-### <a name="counterinstancename"></a><span data-ttu-id="c937c-141">CounterInstanceName</span><span class="sxs-lookup"><span data-stu-id="c937c-141">CounterInstanceName</span></span>  
- <span data-ttu-id="c937c-142">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c937c-142">Data type: string</span></span>  
+### <a name="counterinstancename"></a><span data-ttu-id="c726c-141">CounterInstanceName</span><span class="sxs-lookup"><span data-stu-id="c726c-141">CounterInstanceName</span></span>  
+ <span data-ttu-id="c726c-142">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c726c-142">Data type: string</span></span>  
   
- <span data-ttu-id="c937c-143">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-143">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-143">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-143">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-144">端點之效能計數器執行個體的名稱。</span><span class="sxs-lookup"><span data-stu-id="c937c-144">The name of the instance of performance counters of the endpoint.</span></span>  
+ <span data-ttu-id="c726c-144">端點之效能計數器執行個體的名稱。</span><span class="sxs-lookup"><span data-stu-id="c726c-144">The name of the instance of performance counters of the endpoint.</span></span>  
   
-### <a name="listenuri"></a><span data-ttu-id="c937c-145">ListenUri</span><span class="sxs-lookup"><span data-stu-id="c937c-145">ListenUri</span></span>  
- <span data-ttu-id="c937c-146">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c937c-146">Data type: string</span></span>  
+### <a name="listenuri"></a><span data-ttu-id="c726c-145">ListenUri</span><span class="sxs-lookup"><span data-stu-id="c726c-145">ListenUri</span></span>  
+ <span data-ttu-id="c726c-146">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c726c-146">Data type: string</span></span>  
   
- <span data-ttu-id="c937c-147">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-147">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-147">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-147">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-148">端點接聽的 Uri。</span><span class="sxs-lookup"><span data-stu-id="c937c-148">The Uri the endpoint listens on.</span></span>  
+ <span data-ttu-id="c726c-148">端點接聽的 Uri。</span><span class="sxs-lookup"><span data-stu-id="c726c-148">The Uri the endpoint listens on.</span></span>  
   
-### <a name="name"></a><span data-ttu-id="c937c-149">名稱</span><span class="sxs-lookup"><span data-stu-id="c937c-149">Name</span></span>  
- <span data-ttu-id="c937c-150">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c937c-150">Data type: string</span></span>  
+### <a name="name"></a><span data-ttu-id="c726c-149">名稱</span><span class="sxs-lookup"><span data-stu-id="c726c-149">Name</span></span>  
+ <span data-ttu-id="c726c-150">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c726c-150">Data type: string</span></span>  
   
- <span data-ttu-id="c937c-151">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-151">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-151">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-151">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-152">此端點的唯一名稱。</span><span class="sxs-lookup"><span data-stu-id="c937c-152">The unique name of this endpoint.</span></span>  
+ <span data-ttu-id="c726c-152">此端點的唯一名稱。</span><span class="sxs-lookup"><span data-stu-id="c726c-152">The unique name of this endpoint.</span></span>  
   
-### <a name="processid"></a><span data-ttu-id="c937c-153">ProcessId</span><span class="sxs-lookup"><span data-stu-id="c937c-153">ProcessId</span></span>  
- <span data-ttu-id="c937c-154">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="c937c-154">Data type: sint32</span></span>  
+### <a name="processid"></a><span data-ttu-id="c726c-153">ProcessId</span><span class="sxs-lookup"><span data-stu-id="c726c-153">ProcessId</span></span>  
+ <span data-ttu-id="c726c-154">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="c726c-154">Data type: sint32</span></span>  
   
- <span data-ttu-id="c937c-155">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-155">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-155">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-155">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-156">裝載端點之處理序的處理序識別碼。</span><span class="sxs-lookup"><span data-stu-id="c937c-156">The process Id of the process that hosts the endpoint.</span></span>  
+ <span data-ttu-id="c726c-156">裝載端點之處理序的處理序識別碼。</span><span class="sxs-lookup"><span data-stu-id="c726c-156">The process Id of the process that hosts the endpoint.</span></span>  
   
-### <a name="ref"></a><span data-ttu-id="c937c-157">ref</span><span class="sxs-lookup"><span data-stu-id="c937c-157">ref</span></span>  
- <span data-ttu-id="c937c-158">資料類型：合約</span><span class="sxs-lookup"><span data-stu-id="c937c-158">Data type: Contract</span></span>  
+### <a name="ref"></a><span data-ttu-id="c726c-157">ref</span><span class="sxs-lookup"><span data-stu-id="c726c-157">ref</span></span>  
+ <span data-ttu-id="c726c-158">資料類型：合約</span><span class="sxs-lookup"><span data-stu-id="c726c-158">Data type: Contract</span></span>  
   
- <span data-ttu-id="c937c-159">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c937c-159">Access type: Read-only</span></span>  
+ <span data-ttu-id="c726c-159">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c726c-159">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c937c-160">此端點公開的合約。</span><span class="sxs-lookup"><span data-stu-id="c937c-160">The contract this endpoint is exposing.</span></span>  
+ <span data-ttu-id="c726c-160">此端點公開的合約。</span><span class="sxs-lookup"><span data-stu-id="c726c-160">The contract this endpoint is exposing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c937c-161">需求</span><span class="sxs-lookup"><span data-stu-id="c937c-161">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c726c-161">需求</span><span class="sxs-lookup"><span data-stu-id="c726c-161">Requirements</span></span>  
   
-|<span data-ttu-id="c937c-162">MOF</span><span class="sxs-lookup"><span data-stu-id="c937c-162">MOF</span></span>|<span data-ttu-id="c937c-163">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="c937c-163">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="c726c-162">MOF</span><span class="sxs-lookup"><span data-stu-id="c726c-162">MOF</span></span>|<span data-ttu-id="c726c-163">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="c726c-163">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="c937c-164">命名空間</span><span class="sxs-lookup"><span data-stu-id="c937c-164">Namespace</span></span>|<span data-ttu-id="c937c-165">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="c937c-165">Defined in root\ServiceModel</span></span>|
+|<span data-ttu-id="c726c-164">命名空間</span><span class="sxs-lookup"><span data-stu-id="c726c-164">Namespace</span></span>|<span data-ttu-id="c726c-165">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="c726c-165">Defined in root\ServiceModel</span></span>|

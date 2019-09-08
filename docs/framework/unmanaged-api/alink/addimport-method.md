@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dec878c92e2e2196ab2d586a78578b7244a41a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aed70a78e2513f4d63fbf8ca8868f26efbac9ae8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742248"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787659"
 ---
-# <a name="addimport-method"></a><span data-ttu-id="437c2-102">AddImport 方法</span><span class="sxs-lookup"><span data-stu-id="437c2-102">AddImport Method</span></span>
-<span data-ttu-id="437c2-103">將組件匯入。</span><span class="sxs-lookup"><span data-stu-id="437c2-103">Adds imports to the assembly.</span></span>  
+# <a name="addimport-method"></a><span data-ttu-id="dfb81-102">AddImport 方法</span><span class="sxs-lookup"><span data-stu-id="dfb81-102">AddImport Method</span></span>
+<span data-ttu-id="dfb81-103">將匯入新增至元件。</span><span class="sxs-lookup"><span data-stu-id="dfb81-103">Adds imports to the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="437c2-104">語法</span><span class="sxs-lookup"><span data-stu-id="437c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfb81-104">語法</span><span class="sxs-lookup"><span data-stu-id="dfb81-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AddImport(  
@@ -38,27 +38,27 @@ HRESULT AddImport(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="437c2-105">參數</span><span class="sxs-lookup"><span data-stu-id="437c2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dfb81-105">參數</span><span class="sxs-lookup"><span data-stu-id="dfb81-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="437c2-106">要當做引數的組件的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="437c2-106">Unique ID of assembly to be augmented.</span></span>  
+ <span data-ttu-id="dfb81-106">要擴充之元件的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="dfb81-106">Unique ID of assembly to be augmented.</span></span>  
   
  `ImportToken`  
- <span data-ttu-id="437c2-107">唯一的識別碼，擷取自[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)，要匯入檔案。</span><span class="sxs-lookup"><span data-stu-id="437c2-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
+ <span data-ttu-id="dfb81-107">要匯入之檔案的唯一識別碼，從[ImportFile 方法](importfile-method.md)中取出。</span><span class="sxs-lookup"><span data-stu-id="dfb81-107">Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="437c2-108">COM + FileDef 加上旗標這類`ffContainsNoMetaData`和`ffWriteable`。</span><span class="sxs-lookup"><span data-stu-id="437c2-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="437c2-109">`dwFlags` 傳遞給[DefineFile 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)。</span><span class="sxs-lookup"><span data-stu-id="437c2-109">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="dfb81-108">Com + FileDef 旗標`ffContainsNoMetaData` ， `ffWriteable`例如和。</span><span class="sxs-lookup"><span data-stu-id="dfb81-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="dfb81-109">`dwFlags`會傳遞至[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。</span><span class="sxs-lookup"><span data-stu-id="dfb81-109">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="437c2-110">接收所產生的檔案識別碼的語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="437c2-110">Pointer to token that receives the ID for the resulting file.</span></span>  
+ <span data-ttu-id="dfb81-110">Token 的指標，該權杖會接收所產生檔案的識別碼。</span><span class="sxs-lookup"><span data-stu-id="dfb81-110">Pointer to token that receives the ID for the resulting file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="437c2-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="437c2-111">Return Value</span></span>  
- <span data-ttu-id="437c2-112">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="437c2-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dfb81-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="dfb81-111">Return Value</span></span>  
+ <span data-ttu-id="dfb81-112">如果方法成功，則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="dfb81-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="437c2-113">需求</span><span class="sxs-lookup"><span data-stu-id="437c2-113">Requirements</span></span>  
- <span data-ttu-id="437c2-114">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="437c2-114">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dfb81-113">需求</span><span class="sxs-lookup"><span data-stu-id="dfb81-113">Requirements</span></span>  
+ <span data-ttu-id="dfb81-114">需要 alink. h</span><span class="sxs-lookup"><span data-stu-id="dfb81-114">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="437c2-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="437c2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfb81-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dfb81-115">See also</span></span>
 
-- [<span data-ttu-id="437c2-116">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="437c2-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="437c2-117">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="437c2-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="437c2-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="437c2-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="dfb81-116">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="dfb81-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="dfb81-117">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="dfb81-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="dfb81-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="dfb81-118">ALink API</span></span>](index.md)

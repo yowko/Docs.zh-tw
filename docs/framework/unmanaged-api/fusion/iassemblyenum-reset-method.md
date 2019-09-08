@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 075f952e6d5b3e863ca720bb206f33471809d09e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 633ff0f787b33d45a247f7a3f890a58973c87479
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754090"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796637"
 ---
-# <a name="iassemblyenumreset-method"></a><span data-ttu-id="384b6-102">IAssemblyEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="384b6-102">IAssemblyEnum::Reset Method</span></span>
-<span data-ttu-id="384b6-103">重設這[IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)起始位置的物件。</span><span class="sxs-lookup"><span data-stu-id="384b6-103">Resets this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object to its starting position.</span></span>  
+# <a name="iassemblyenumreset-method"></a><span data-ttu-id="0b342-102">IAssemblyEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="0b342-102">IAssemblyEnum::Reset Method</span></span>
+<span data-ttu-id="0b342-103">將這個[IAssemblyEnum](iassemblyenum-interface.md)物件重設為其開始位置。</span><span class="sxs-lookup"><span data-stu-id="0b342-103">Resets this [IAssemblyEnum](iassemblyenum-interface.md) object to its starting position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="384b6-104">語法</span><span class="sxs-lookup"><span data-stu-id="384b6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b342-104">語法</span><span class="sxs-lookup"><span data-stu-id="0b342-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset (  
@@ -35,13 +35,13 @@ HRESULT Reset (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="384b6-105">需求</span><span class="sxs-lookup"><span data-stu-id="384b6-105">Requirements</span></span>  
- <span data-ttu-id="384b6-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="384b6-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b342-105">需求</span><span class="sxs-lookup"><span data-stu-id="0b342-105">Requirements</span></span>  
+ <span data-ttu-id="0b342-106">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0b342-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="384b6-107">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="384b6-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="0b342-107">**標頭：** 融合。h</span><span class="sxs-lookup"><span data-stu-id="0b342-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="384b6-108">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="384b6-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0b342-108">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b342-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="384b6-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="384b6-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b342-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b342-109">See also</span></span>
 
-- [<span data-ttu-id="384b6-110">IAssemblyEnum 介面</span><span class="sxs-lookup"><span data-stu-id="384b6-110">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [<span data-ttu-id="0b342-110">IAssemblyEnum 介面</span><span class="sxs-lookup"><span data-stu-id="0b342-110">IAssemblyEnum Interface</span></span>](iassemblyenum-interface.md)

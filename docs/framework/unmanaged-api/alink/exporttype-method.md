@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd1ec9caa70dd7016253ae4385b16dbfb982f956
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 455f71c5b576d1b57db591dab2a3e59f8a5eed67
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742026"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777281"
 ---
-# <a name="exporttype-method"></a><span data-ttu-id="1b08e-102">ExportType 方法</span><span class="sxs-lookup"><span data-stu-id="1b08e-102">ExportType Method</span></span>
-<span data-ttu-id="1b08e-103">指定的類型是可匯出。</span><span class="sxs-lookup"><span data-stu-id="1b08e-103">Specifies that a type is exportable.</span></span>  
+# <a name="exporttype-method"></a><span data-ttu-id="e0f42-102">ExportType 方法</span><span class="sxs-lookup"><span data-stu-id="e0f42-102">ExportType Method</span></span>
+<span data-ttu-id="e0f42-103">指定類型為可匯出。</span><span class="sxs-lookup"><span data-stu-id="e0f42-103">Specifies that a type is exportable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b08e-104">語法</span><span class="sxs-lookup"><span data-stu-id="1b08e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0f42-104">語法</span><span class="sxs-lookup"><span data-stu-id="e0f42-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExportType(  
@@ -39,33 +39,33 @@ HRESULT ExportType(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1b08e-105">參數</span><span class="sxs-lookup"><span data-stu-id="1b08e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e0f42-105">參數</span><span class="sxs-lookup"><span data-stu-id="e0f42-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="1b08e-106">若要從匯出的組件識別碼。</span><span class="sxs-lookup"><span data-stu-id="1b08e-106">ID of the assembly to export from.</span></span>  
+ <span data-ttu-id="e0f42-106">要匯出之元件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e0f42-106">ID of the assembly to export from.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="1b08e-107">語彙基元或組件檔案的檔案識別碼定義可匯出的類型。</span><span class="sxs-lookup"><span data-stu-id="1b08e-107">File token or assembly ID of file that defines the exportable type.</span></span>  
+ <span data-ttu-id="e0f42-107">檔案的檔案標記或元件識別碼，其定義可匯出的類型。</span><span class="sxs-lookup"><span data-stu-id="e0f42-107">File token or assembly ID of file that defines the exportable type.</span></span>  
   
  `TypeToken`  
- <span data-ttu-id="1b08e-108">可匯出的型別的權杖。</span><span class="sxs-lookup"><span data-stu-id="1b08e-108">Token of type to be made exportable.</span></span>  
+ <span data-ttu-id="e0f42-108">要成為可匯出之類型的 Token。</span><span class="sxs-lookup"><span data-stu-id="e0f42-108">Token of type to be made exportable.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="1b08e-109">成可匯出的完整型別名稱。</span><span class="sxs-lookup"><span data-stu-id="1b08e-109">Fully qualified type name to be made exportable.</span></span>  
+ <span data-ttu-id="e0f42-109">要成為可匯出的完整型別名稱。</span><span class="sxs-lookup"><span data-stu-id="e0f42-109">Fully qualified type name to be made exportable.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="1b08e-110">`ComType` 這類旗標`tdPublic`或`tdNested`。</span><span class="sxs-lookup"><span data-stu-id="1b08e-110">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="1b08e-111">這個參數可能會傳遞給[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。</span><span class="sxs-lookup"><span data-stu-id="1b08e-111">This parameter may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="e0f42-110">`ComType`旗標， `tdPublic`例如`tdNested`或。</span><span class="sxs-lookup"><span data-stu-id="e0f42-110">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="e0f42-111">這個參數可以傳遞至[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。</span><span class="sxs-lookup"><span data-stu-id="e0f42-111">This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
  `pType`  
- <span data-ttu-id="1b08e-112">接收匯出之類型的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="1b08e-112">Receives token for exported type.</span></span>  
+ <span data-ttu-id="e0f42-112">接收匯出類型的 token。</span><span class="sxs-lookup"><span data-stu-id="e0f42-112">Receives token for exported type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1b08e-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="1b08e-113">Return Value</span></span>  
- <span data-ttu-id="1b08e-114">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="1b08e-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e0f42-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="e0f42-113">Return Value</span></span>  
+ <span data-ttu-id="e0f42-114">如果方法成功，則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="e0f42-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b08e-115">需求</span><span class="sxs-lookup"><span data-stu-id="1b08e-115">Requirements</span></span>  
- <span data-ttu-id="1b08e-116">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="1b08e-116">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e0f42-115">需求</span><span class="sxs-lookup"><span data-stu-id="e0f42-115">Requirements</span></span>  
+ <span data-ttu-id="e0f42-116">需要 alink. h</span><span class="sxs-lookup"><span data-stu-id="e0f42-116">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b08e-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1b08e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0f42-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e0f42-117">See also</span></span>
 
-- [<span data-ttu-id="1b08e-118">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="1b08e-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="1b08e-119">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="1b08e-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="1b08e-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="1b08e-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="e0f42-118">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="e0f42-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="e0f42-119">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="e0f42-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="e0f42-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="e0f42-120">ALink API</span></span>](index.md)

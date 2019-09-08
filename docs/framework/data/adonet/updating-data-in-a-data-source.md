@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934117"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780609"
 ---
-# <a name="updating-data-in-a-data-source"></a><span data-ttu-id="042da-102">更新資料來源中的資料</span><span class="sxs-lookup"><span data-stu-id="042da-102">Updating Data in a Data Source</span></span>
-<span data-ttu-id="042da-103">會修改資料的 SQL 陳述式 (例如 INSERT、UPDATE 或 DELETE) 不會傳回資料列。</span><span class="sxs-lookup"><span data-stu-id="042da-103">SQL statements that modify data (such as INSERT, UPDATE, or DELETE) do not return rows.</span></span> <span data-ttu-id="042da-104">同樣地，許多預存程序會執行動作但不傳回資料列。</span><span class="sxs-lookup"><span data-stu-id="042da-104">Similarly, many stored procedures perform an action but do not return rows.</span></span> <span data-ttu-id="042da-105">若要執行不傳回資料列的命令，建立**命令**具有適當的 SQL 命令的物件和**連線**，包括任何必要**參數**。</span><span class="sxs-lookup"><span data-stu-id="042da-105">To execute commands that do not return rows, create a **Command** object with the appropriate SQL command and a **Connection**, including any required **Parameters**.</span></span> <span data-ttu-id="042da-106">執行命令**ExecuteNonQuery**方法**命令**物件。</span><span class="sxs-lookup"><span data-stu-id="042da-106">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="updating-data-in-a-data-source"></a><span data-ttu-id="50840-102">更新資料來源中的資料</span><span class="sxs-lookup"><span data-stu-id="50840-102">Updating Data in a Data Source</span></span>
+<span data-ttu-id="50840-103">會修改資料的 SQL 陳述式 (例如 INSERT、UPDATE 或 DELETE) 不會傳回資料列。</span><span class="sxs-lookup"><span data-stu-id="50840-103">SQL statements that modify data (such as INSERT, UPDATE, or DELETE) do not return rows.</span></span> <span data-ttu-id="50840-104">同樣地，許多預存程序會執行動作但不傳回資料列。</span><span class="sxs-lookup"><span data-stu-id="50840-104">Similarly, many stored procedures perform an action but do not return rows.</span></span> <span data-ttu-id="50840-105">若要執行不會傳回資料列的命令，請使用適當的 SQL 命令和**連接**（包括任何必要的**參數**）來建立**命令**物件。</span><span class="sxs-lookup"><span data-stu-id="50840-105">To execute commands that do not return rows, create a **Command** object with the appropriate SQL command and a **Connection**, including any required **Parameters**.</span></span> <span data-ttu-id="50840-106">使用**command**物件的**ExecuteNonQuery**方法來執行命令。</span><span class="sxs-lookup"><span data-stu-id="50840-106">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="042da-107">**ExecuteNonQuery**方法會傳回整數，表示受到陳述式或預存程序所執行的資料列數目。</span><span class="sxs-lookup"><span data-stu-id="042da-107">The **ExecuteNonQuery** method returns an integer that represents the number of rows affected by the statement or stored procedure that was executed.</span></span> <span data-ttu-id="042da-108">如果執行多個陳述式，傳回的值就是受到所有執行的陳述式影響的記錄數總和。</span><span class="sxs-lookup"><span data-stu-id="042da-108">If multiple statements are executed, the value returned is the sum of the records affected by all of the statements executed.</span></span>  
+ <span data-ttu-id="50840-107">**ExecuteNonQuery**方法會傳回一個整數，表示受執行的語句或預存程式所影響的資料列數目。</span><span class="sxs-lookup"><span data-stu-id="50840-107">The **ExecuteNonQuery** method returns an integer that represents the number of rows affected by the statement or stored procedure that was executed.</span></span> <span data-ttu-id="50840-108">如果執行多個陳述式，傳回的值就是受到所有執行的陳述式影響的記錄數總和。</span><span class="sxs-lookup"><span data-stu-id="50840-108">If multiple statements are executed, the value returned is the sum of the records affected by all of the statements executed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="042da-109">範例</span><span class="sxs-lookup"><span data-stu-id="042da-109">Example</span></span>  
- <span data-ttu-id="042da-110">下列程式碼範例會執行 INSERT 陳述式，將記錄插入資料庫，使用**ExecuteNonQuery**。</span><span class="sxs-lookup"><span data-stu-id="042da-110">The following code example executes an INSERT statement to insert a record into a database using **ExecuteNonQuery**.</span></span>  
+## <a name="example"></a><span data-ttu-id="50840-109">範例</span><span class="sxs-lookup"><span data-stu-id="50840-109">Example</span></span>  
+ <span data-ttu-id="50840-110">下列程式碼範例會使用**ExecuteNonQuery**來執行 insert 語句，將記錄插入資料庫中。</span><span class="sxs-lookup"><span data-stu-id="50840-110">The following code example executes an INSERT statement to insert a record into a database using **ExecuteNonQuery**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- <span data-ttu-id="042da-111">下列程式碼範例會執行中的範例程式碼所建立的預存程序[執行資料庫目錄作業](../../../../docs/framework/data/adonet/performing-catalog-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="042da-111">The following code example executes the stored procedure created by the sample code in [Performing Catalog Operations](../../../../docs/framework/data/adonet/performing-catalog-operations.md).</span></span> <span data-ttu-id="042da-112">沒有任何資料列會傳回預存程序，因此**ExecuteNonQuery**使用方法，但預存程序會接收輸入的參數，並傳回輸出參數和傳回值。</span><span class="sxs-lookup"><span data-stu-id="042da-112">No rows are returned by the stored procedure, so the **ExecuteNonQuery** method is used, but the stored procedure does receive an input parameter and returns an output parameter and a return value.</span></span>  
+ <span data-ttu-id="50840-111">下列程式碼範例會執行[執行目錄作業](performing-catalog-operations.md)中的範例程式碼所建立的預存程式。</span><span class="sxs-lookup"><span data-stu-id="50840-111">The following code example executes the stored procedure created by the sample code in [Performing Catalog Operations](performing-catalog-operations.md).</span></span> <span data-ttu-id="50840-112">預存程式不會傳回任何資料列，因此會使用**ExecuteNonQuery**方法，但預存程式確實會接收輸入參數，並傳回輸出參數和傳回值。</span><span class="sxs-lookup"><span data-stu-id="50840-112">No rows are returned by the stored procedure, so the **ExecuteNonQuery** method is used, but the stored procedure does receive an input parameter and returns an output parameter and a return value.</span></span>  
   
- <span data-ttu-id="042da-113">針對<xref:System.Data.OleDb.OleDbCommand>物件， **ReturnValue**參數必須加入至**參數**集合第一次。</span><span class="sxs-lookup"><span data-stu-id="042da-113">For the <xref:System.Data.OleDb.OleDbCommand> object, the **ReturnValue** parameter must be added to the **Parameters** collection first.</span></span>  
+ <span data-ttu-id="50840-113">若為物件，必須先將 ReturnValue 參數新增至 Parameters 集合。 <xref:System.Data.OleDb.OleDbCommand></span><span class="sxs-lookup"><span data-stu-id="50840-113">For the <xref:System.Data.OleDb.OleDbCommand> object, the **ReturnValue** parameter must be added to the **Parameters** collection first.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -91,9 +91,9 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="042da-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="042da-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50840-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="50840-114">See also</span></span>
 
-- [<span data-ttu-id="042da-115">使用命令修改資料</span><span class="sxs-lookup"><span data-stu-id="042da-115">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [<span data-ttu-id="042da-116">使用 DataAdapter 更新資料來源</span><span class="sxs-lookup"><span data-stu-id="042da-116">Updating Data Sources with DataAdapters</span></span>](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [<span data-ttu-id="042da-117">命令和參數</span><span class="sxs-lookup"><span data-stu-id="042da-117">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [<span data-ttu-id="042da-118">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="042da-118">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="50840-115">使用命令修改資料</span><span class="sxs-lookup"><span data-stu-id="50840-115">Using Commands to Modify Data</span></span>](using-commands-to-modify-data.md)
+- [<span data-ttu-id="50840-116">使用 DataAdapter 更新資料來源</span><span class="sxs-lookup"><span data-stu-id="50840-116">Updating Data Sources with DataAdapters</span></span>](updating-data-sources-with-dataadapters.md)
+- [<span data-ttu-id="50840-117">命令和參數</span><span class="sxs-lookup"><span data-stu-id="50840-117">Commands and Parameters</span></span>](commands-and-parameters.md)
+- [<span data-ttu-id="50840-118">ADO.NET 概觀</span><span class="sxs-lookup"><span data-stu-id="50840-118">ADO.NET Overview</span></span>](ado-net-overview.md)
