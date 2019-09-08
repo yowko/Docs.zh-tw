@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938705"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793070"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>作法：使用有參數的預存程序
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將輸出參數對應至參考參數，而且會針對實值型別 (Value Type)，將參數宣告為可為 Null。  
   
- 如需如何在傳回資料列集的查詢中使用輸入參數的範例, 請參閱[如何:傳回資料](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)列集。  
+ 如需如何在傳回資料列集的查詢中使用輸入參數的範例，請參閱[如何：傳回資料](how-to-return-rowsets.md)列集。  
   
 ## <a name="example"></a>範例  
  下列範例取用單一輸入參數 (客戶 ID)，並傳回輸出參數 (該客戶的總銷售量)。  
@@ -41,7 +41,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
   
 ## <a name="see-also"></a>另請參閱
 
-- [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [預存程序](stored-procedures.md)
+- [下載範例資料庫](downloading-sample-databases.md)
 - [使用可為 Null 的型別](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [可為 Null 的值類型](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

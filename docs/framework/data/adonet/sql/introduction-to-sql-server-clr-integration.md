@@ -2,12 +2,12 @@
 title: SQL Server CLR 整合簡介
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 380666ae9a3ebc18ef470e5ab719360f40510f41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb812a8e524148c507d26ea32e0b4263a4998153
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650601"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782272"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 整合簡介
 做為 Microsoft .NET Framework 核心的 Common Language Runtime (CLR)，提供了所有 .NET Framework 程式碼的執行環境。 CLR 中執行的程式碼稱為 Managed 程式碼。 CLR 提供程式執行所需的各種功能及服務，包括 just-in-time (JIT) 編譯、配置及管理記憶體、強制使用型別安全性、例外處理、執行緒管理及安全性。  
@@ -20,7 +20,7 @@ ms.locfileid: "64650601"
   
  **SQL Server 線上叢書**  
   
-- [Common Language Runtime (CLR) 整合概觀](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [Common Language Runtime （CLR）整合總覽](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>啟用 CLR 整合  
  預設會在 Microsoft SQL Server 中停用 Common Language Runtime (CLR) 整合功能，且為了使用 CLR 整合所實作的物件，必須啟用這個功能。 若要啟用使用 Transact-SQL 進行 CLR 整合，請使用 `clr enabled` 預存程序的 `sp_configure` 選項，如下所示：  
@@ -63,9 +63,9 @@ GO
   
  **SQL Server 線上叢書**  
   
-- [偵錯 CLR 資料庫物件](https://go.microsoft.com/fwlink/?LinkId=115236)  
+- [調試 CLR 資料庫物件](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [程式碼存取安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [程式碼存取安全性和 ADO.NET](../code-access-security.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

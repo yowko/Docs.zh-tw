@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: aaa9ac0514f3e79f101bbcd9cbab60929f91d4fd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9cbd3d52c0e751097a937fa8781171c8c2a0058f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959135"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795039"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>使用 DataView 進行篩選 (LINQ to DataSet)
-使用特定準則來篩選資料，然後透過 UI 控制項呈現資料給用戶端的功能是資料繫結的重要層面。 <xref:System.Data.DataView> 提供了許多方式來篩選資料並傳回符合特定篩選準則的資料列子集。 除了以字串為基礎的篩選功能<xref:System.Data.DataView>之外, 還提供使用[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]運算式做為篩選準則的功能。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]運算式比以字串為基礎的篩選, 允許更複雜且功能強大的篩選作業。  
+使用特定準則來篩選資料，然後透過 UI 控制項呈現資料給用戶端的功能是資料繫結的重要層面。 <xref:System.Data.DataView> 提供了許多方式來篩選資料並傳回符合特定篩選準則的資料列子集。 除了以字串為基礎的篩選功能<xref:System.Data.DataView>之外，還提供使用[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]運算式做為篩選準則的功能。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]運算式比以字串為基礎的篩選，允許更複雜且功能強大的篩選作業。  
   
  目前有兩種方式可以使用 <xref:System.Data.DataView> 來篩選資料：  
   
@@ -59,19 +59,19 @@ ms.locfileid: "69959135"
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>使用 RowFilter 屬性  
- 現有以字串為基礎的篩選功能<xref:System.Data.DataView>仍可在 LINQ to DataSet 內容中運作。 如需以字串為基礎<xref:System.Data.DataView.RowFilter%2A>之篩選的詳細資訊, 請參閱[排序和篩選資料](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  
+ 現有以字串為基礎的篩選功能<xref:System.Data.DataView>仍可在 LINQ to DataSet 內容中運作。 如需以字串為基礎<xref:System.Data.DataView.RowFilter%2A>之篩選的詳細資訊，請參閱[排序和篩選資料](./dataset-datatable-dataview/sorting-and-filtering-data.md)。  
   
  下列範例會從 Contact 資料表中建立 <xref:System.Data.DataView>，然後設定 <xref:System.Data.DataView.RowFilter%2A> 屬性，以便傳回連絡人姓氏為 "Zhu" 的資料列：  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- 從或 LINQ to DataSet 查詢建立之後<xref:System.Data.DataView.RowFilter%2A> , 您可以使用屬性, 根據資料列的資料行值來指定資料列的子集。 <xref:System.Data.DataTable> <xref:System.Data.DataView> 以字串為基礎的篩選和以運算式為基礎的篩選會互斥。 <xref:System.Data.DataView.RowFilter%2A>設定屬性將會清除從 LINQ to DataSet 查詢推斷的篩選運算式, 而且無法重設篩選運算式。  
+ 從或 LINQ to DataSet 查詢建立之後<xref:System.Data.DataView.RowFilter%2A> ，您可以使用屬性，根據資料列的資料行值來指定資料列的子集。 <xref:System.Data.DataTable> <xref:System.Data.DataView> 以字串為基礎的篩選和以運算式為基礎的篩選會互斥。 <xref:System.Data.DataView.RowFilter%2A>設定屬性將會清除從 LINQ to DataSet 查詢推斷的篩選運算式，而且無法重設篩選運算式。  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  
   
- 如果您想要傳回特定資料查詢的結果，但不要提供資料子集的動態檢視，就可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 或 <xref:System.Data.DataView> 方法，而非設定 <xref:System.Data.DataView.RowFilter%2A> 屬性。 <xref:System.Data.DataView.RowFilter%2A> 屬性最適於資料繫結應用程式，因為這種應用程式會用繫結控制項顯示篩選結果。 設定 <xref:System.Data.DataView.RowFilter%2A> 屬性會重建資料索引，因而增加應用程式的負荷並降低效能。 <xref:System.Data.DataView.Find%2A> 和 <xref:System.Data.DataView.FindRows%2A> 方法會使用目前的索引，而不需要重建索引。 如果您只要呼叫 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 一次，就應該使用現有的 <xref:System.Data.DataView>。 如果您要呼叫 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 多次，就應該建立新的 <xref:System.Data.DataView> 來重建您想要搜尋之資料行的索引，然後呼叫 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 方法。 如需和方法的<xref:System.Data.DataView.Find%2A>詳細<xref:System.Data.DataView.FindRows%2A>資訊, 請參閱[尋找資料列](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)和[DataView 效能](../../../../docs/framework/data/adonet/dataview-performance.md)。  
+ 如果您想要傳回特定資料查詢的結果，但不要提供資料子集的動態檢視，就可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 或 <xref:System.Data.DataView> 方法，而非設定 <xref:System.Data.DataView.RowFilter%2A> 屬性。 <xref:System.Data.DataView.RowFilter%2A> 屬性最適於資料繫結應用程式，因為這種應用程式會用繫結控制項顯示篩選結果。 設定 <xref:System.Data.DataView.RowFilter%2A> 屬性會重建資料索引，因而增加應用程式的負荷並降低效能。 <xref:System.Data.DataView.Find%2A> 和 <xref:System.Data.DataView.FindRows%2A> 方法會使用目前的索引，而不需要重建索引。 如果您只要呼叫 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 一次，就應該使用現有的 <xref:System.Data.DataView>。 如果您要呼叫 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 多次，就應該建立新的 <xref:System.Data.DataView> 來重建您想要搜尋之資料行的索引，然後呼叫 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 方法。 如需和方法的<xref:System.Data.DataView.Find%2A>詳細<xref:System.Data.DataView.FindRows%2A>資訊，請參閱[尋找資料列](./dataset-datatable-dataview/finding-rows.md)和[DataView 效能](dataview-performance.md)。  
   
 ## <a name="clearing-the-filter"></a>清除篩選  
  在您已經使用 <xref:System.Data.DataView> 屬性來設定篩選之後，就可以清除 <xref:System.Data.DataView.RowFilter%2A> 上的篩選。 您可以使用兩種不同的方式來清除 <xref:System.Data.DataView> 上的篩選：  
@@ -94,5 +94,5 @@ ms.locfileid: "69959135"
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料繫結和 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [使用 DataView 進行排序](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [資料繫結和 LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [使用 DataView 進行排序](sorting-with-dataview-linq-to-dataset.md)

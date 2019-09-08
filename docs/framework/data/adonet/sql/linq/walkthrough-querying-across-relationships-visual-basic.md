@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 0852622811b5efb362937b3af37f2b9d81b2d1ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3164656bb183e7773b098cab79d8fe5e0dc5de34
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626433"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792150"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>逐步解說：跨關聯性查詢 (Visual Basic)
-本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*關聯*表示在資料庫中的外部索引鍵關聯性。  
+本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]關聯來表示資料庫中的外鍵*關聯*性。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  這個逐步解說是使用 Visual Basic 開發設定所撰寫。  
   
 ## <a name="prerequisites"></a>必要條件  
- 您必須先完成[逐步解說：簡單的物件模型和查詢 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)。 本逐步解決建置於該逐步解決之上，包含存在於 c:\linqtest 中的 northwnd.mdf 檔。  
+ 您必須已完成[逐步解說：簡單的物件模型和查詢（Visual Basic](walkthrough-simple-object-model-and-query-visual-basic.md)）。 本逐步解決建置於該逐步解決之上，包含存在於 c:\linqtest 中的 northwnd.mdf 檔。  
   
 ## <a name="overview"></a>總覽  
  此逐步解說包含三項主要工作：  
@@ -49,7 +49,7 @@ ms.locfileid: "64626433"
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>建立和執行客戶-訂單關聯性的查詢  
- 您現在可以直接從 `Order` 物件存取 `Customer` 物件，反之亦然。 您不需要明確*聯結*客戶和訂單之間。  
+ 您現在可以直接從 `Order` 物件存取 `Customer` 物件，反之亦然。 您不需要在客戶和訂單之間進行明確*聯結*。  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>若要使用 Customer 物件存取 Order 物件  
   
@@ -86,11 +86,11 @@ ms.locfileid: "64626433"
   
 4. 在 [主控台] 視窗中按 Enter 鍵，以關閉應用程式。  
   
-5. 在 **檔案**功能表上，按一下**全部儲存**如果您想要儲存此應用程式。  
+5. 如果您想要儲存此應用**程式，請在 [檔案**] 功能表上按一下 [**全部儲存**]。  
   
 ## <a name="next-steps"></a>後續步驟  
- 下一個逐步解說 ([逐步解說：操作資料 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) 示範如何操作資料。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
+ 下一個逐步解說[（逐步解說：運算元據（Visual Basic）](walkthrough-manipulating-data-visual-basic.md)）示範如何運算元據。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [依逐步解說學習](learning-by-walkthroughs.md)

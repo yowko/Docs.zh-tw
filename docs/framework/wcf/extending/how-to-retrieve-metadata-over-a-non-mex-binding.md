@@ -1,20 +1,20 @@
 ---
-title: HOW TO：透過非 MEX 繫結擷取中繼資料
+title: 作法：透過非 MEX 繫結擷取中繼資料
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766775"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795580"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>HOW TO：透過非 MEX 繫結擷取中繼資料
-本主題說明如何透過非 MEX 繫結，擷取 MEX 端點的中繼資料。 在此範例中的程式碼根據[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)範例。  
+本主題說明如何透過非 MEX 繫結，擷取 MEX 端點的中繼資料。 此範例中的程式碼是以[自訂安全中繼資料端點](../samples/custom-secure-metadata-endpoint.md)範例為基礎。  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>透過非 MEX 繫結擷取中繼資料  
   
-1. 判定 MEX 端點使用的繫結。 對於 Windows Communication Foundation (WCF) 服務，您可以藉由存取服務的組態檔來判斷 MEX 繫結。 在此例中，MEX 繫結是定義於下列服務組態。  
+1. 判定 MEX 端點使用的繫結。 對於 Windows Communication Foundation （WCF）服務，您可以藉由存取服務的設定檔來判斷 MEX 系結。 在此例中，MEX 繫結是定義於下列服務組態。  
   
     ```xml  
     <services>  
@@ -121,8 +121,8 @@ ms.locfileid: "61766775"
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. 此時，您會擁有服務端點的集合。 如需有關如何匯入中繼資料的詳細資訊，請參閱[How to:中繼資料匯入服務端點](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
+5. 此時，您會擁有服務端點的集合。 如需匯入中繼資料的詳細[資訊，請參閱如何：將中繼資料匯入](../feature-details/how-to-import-metadata-into-service-endpoints.md)服務端點。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [中繼資料](../feature-details/metadata.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f97f46595f43c7576c499c6b9944f7e3509662fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0ae4ddd07a2a3d3ab9b5d024eceb43329db96915
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742013"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787503"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder 方法
-將指定的組件的型別表中的類型轉送子。  
+將類型轉寄站加入至指定元件的類型資料表。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,25 +39,25 @@ HRESULT ExportTypeForwarder(
   
 ## <a name="parameters"></a>參數  
  `tkAssemblyRef`  
- 類型轉送子所參考之組件參考。  
+ 參考型別轉寄站所參考的元件。  
   
  `pszTypename`  
- 若要匯出的完整型別名稱。  
+ 要匯出的完整類型名稱。  
   
  `dwFlags`  
- `ComType` 這類旗標`tdPublic`或`tdNested`。 這個值可能會傳遞至[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ `ComType`旗標， `tdPublic`例如`tdNested`或。 這個值可能會傳遞給[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
- 收到之匯出型別的權杖。 這是才需要發出巢狀型別。  
+ 接收匯出類型的 token。 這只有在發出巢狀型別時才需要。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 介面](ialink-interface.md)
+- [IALink2 介面](ialink2-interface.md)
+- [ALink API](index.md)

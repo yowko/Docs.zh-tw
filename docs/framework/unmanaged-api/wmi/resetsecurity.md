@@ -1,6 +1,6 @@
 ---
-title: ResetSecurity 函式 （Unmanaged API 參考）
-description: ResetSecurity 函式會指派給目前執行緒的模擬語彙基元。
+title: ResetSecurity 函式（非受控 API 參考）
+description: ResetSecurity 函數會將模擬 token 指派給目前的執行緒。
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3d87fa10dafba326147bcaa39836b631291ef1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783132"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798250"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity 函式
 將提供的模擬權杖指派給目前的執行緒。   
@@ -39,16 +39,16 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>參數
 
 `token`  
-[in]要與目前的執行緒產生關聯的模擬權杖。 其值可以是 `null`。 
+在要與目前線程產生關聯的模擬權杖。 其值可以是 `null`。 
 
 ## <a name="return-value"></a>傳回值
 
-如果此函數成功，傳回的值是`S_OK`(0)。
+如果函式成功，則傳回值為`S_OK` （0）。
 
-如果函式失敗，傳回的值就會為非零的錯誤碼。 若要取得延伸錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。
+如果函式失敗，則傳回值為非零的錯誤碼。 若要取得擴充的錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
@@ -56,4 +56,4 @@ HRESULT ResetSecurity (
   
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

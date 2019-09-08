@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 992133ff9922e36b00683f4f48db88e1c2b91c1d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767165"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795675"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>HOW TO：匯出自訂原則判斷提示
-原則判斷提示描述服務端點的功能與需求。 服務應用程式可使用服務中繼資料中的自訂原則判斷提示，與用戶端應用程式進行端點、繫結或合約自訂資訊的通訊。 若要匯出 WSDL 繫結程序端點、 作業或功能或您要溝通的需求而定的訊息主體以附加原則運算式中的判斷提示，您可以使用 Windows Communication Foundation (WCF)。  
+原則判斷提示描述服務端點的功能與需求。 服務應用程式可使用服務中繼資料中的自訂原則判斷提示，與用戶端應用程式進行端點、繫結或合約自訂資訊的通訊。 您可以使用 Windows Communication Foundation （WCF），根據您所通訊的功能或需求，在端點、作業或訊息主旨上附加于 WSDL 系結的原則運算式中匯出判斷提示。  
   
  匯出自訂原則判斷提示的方法，是實作 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 上的 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> 介面，然後直接將繫結項目插入服務端點的繫結或將繫結項目登錄於應用程式組態檔。 您的原則匯出實作應將您的自訂原則判斷提示當成 <xref:System.Xml.XmlElement?displayProperty=nameWithType> 執行個體新增至位於傳入 <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> 方法的 <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> 上之合適 <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>。  
   
  除此之外，您還必須檢查 <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> 類別的 <xref:System.ServiceModel.Description.WsdlExporter> 屬性 (Property)，並且根據指定的原則版本，以正確命名空間匯出巢狀原則運算式及原則架構屬性 (Attribute)。  
   
- 若要匯入自訂原則判斷提示，請參閱<xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>和[How to:匯入自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)。  
+ 若要匯入自訂原則<xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>判斷[提示，請參閱和如何：匯入自訂](how-to-import-custom-policy-assertions.md)原則判斷提示。  
   
 ### <a name="to-export-custom-policy-assertions"></a>若要匯出自訂原則判斷提示  
   
@@ -34,7 +34,7 @@ ms.locfileid: "61767165"
   
 1. 針對您的自訂原則判斷提示繫結項目實作 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>。  
   
-2. 將繫結元素延伸模組新增至組態檔中使用[ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)項目。  
+2. [使用\<s >](../../configure-apps/file-schema/wcf/bindingelementextensions.md)元素，將繫結項目延伸新增至設定檔。  
   
 3. 使用 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>建置自訂繫結。  
   
@@ -53,4 +53,4 @@ ms.locfileid: "61767165"
 
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [如何：匯入自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [如何：匯入自訂原則判斷提示](how-to-import-custom-policy-assertions.md)

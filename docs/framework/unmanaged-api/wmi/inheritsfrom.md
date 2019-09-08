@@ -1,6 +1,6 @@
 ---
-title: InheritsFrom 函式 （Unmanaged API 參考）
-description: InheritsFrom 函式會判斷類別或執行個體是否衍生自特定的父類別。
+title: InheritsFrom 函式（非受控 API 參考）
+description: InheritsFrom 函數會判斷類別或實例是否衍生自特定的父類別。
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c04a08c9712359453b9c5a9d136e22e1de8648a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746501"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798445"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 函式
 判斷目前類別或執行個體衍生自指定的父類別。
@@ -41,17 +41,17 @@ HRESULT InheritsFrom (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[in]未使用此參數。
+在未使用此參數。
 
 `ptr`  
-[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
+在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `wszAncestor`  
-[in]類別的名稱。 `wszAncestor` 必須指向有效`LPCWSTR`。
+在類別的名稱。 `wszAncestor`必須指向有效`LPCWSTR`的。
 
 ## <a name="return-value"></a>傳回值
 
-此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
+這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
@@ -61,10 +61,10 @@ HRESULT InheritsFrom (
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)方法。
+此函式會包裝對[IWbemClassObject：： InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom)方法的呼叫。
 
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
@@ -72,4 +72,4 @@ HRESULT InheritsFrom (
   
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

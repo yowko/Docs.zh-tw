@@ -2,15 +2,15 @@
 title: SQL Server 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f65bbf2534eb7167baacb1405a8ce6e9769c23f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878456"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794328"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 結構描述集合
-除了通用結構描述集合之外，Microsoft .NET Framework Data Provider for SQL Server 還支援其他結構描述集合。 這些結構描述集合會因您目前使用的 SQL Server 版本而稍微不同。 若要判斷支援的結構描述集合清單，請呼叫**GetSchema**方法沒有引數，或以結構描述集合名稱"MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
+除了通用結構描述集合之外，Microsoft .NET Framework Data Provider for SQL Server 還支援其他結構描述集合。 這些結構描述集合會因您目前使用的 SQL Server 版本而稍微不同。 若要判斷支援的架構集合清單，請呼叫不含引數的**GetSchema**方法，或使用架構集合名稱 "MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
   
 ## <a name="databases"></a>資料庫  
   
@@ -22,7 +22,7 @@ ms.locfileid: "61878456"
   
 ## <a name="foreign-keys"></a>外部索引鍵  
   
-|ColumnName|DataType|描述|  
+|ColumnName|DataType|說明|  
 |----------------|--------------|-----------------|  
 |CONSTRAINT_CATALOG|String|條件約束所屬的目錄。|  
 |CONSTRAINT_SCHEMA|String|包含條件約束的結構描述。|  
@@ -49,9 +49,9 @@ ms.locfileid: "61878456"
 ### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
  從 .NET Framework 3.5 版 SP1 和 SQL Server 2008 開始，下列資料行就已經加入至 Indexes 結構描述集合，以便支援新的空間類型、Filestream 和疏鬆資料行。 舊版 .NET Framework 和 SQL Server 不支援這些資料行。  
   
-|ColumnName|DataType|描述|  
+|ColumnName|DataType|說明|  
 |----------------|--------------|-----------------|  
-|type_desc|String|索引的類型將屬於下列其中一種類型：<br /><br /> -   HEAP<br />叢集<br />-非叢集<br />-   XML<br />-   SPATIAL|  
+|type_desc|String|索引的類型將屬於下列其中一種類型：<br /><br /> -堆積<br />-叢集<br />-非叢集<br />-   XML<br />-空間|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -112,7 +112,7 @@ ms.locfileid: "61878456"
   
 ## <a name="tables"></a>資料表  
   
-|ColumnName|DataType|描述|  
+|ColumnName|DataType|說明|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|資料表的目錄。|  
 |TABLE_SCHEMA|String|包含資料表的結構描述。|  
@@ -240,7 +240,7 @@ ms.locfileid: "61878456"
   
 ## <a name="userdefinedtypes"></a>UserDefinedTypes  
   
-|ColumnName|DataType|描述|  
+|ColumnName|DataType|說明|  
 |----------------|--------------|-----------------|  
 |assembly_name|String|組件檔案的名稱。|  
 |udt_name|String|組件的類別名稱。|  
@@ -257,5 +257,5 @@ ms.locfileid: "61878456"
   
 ## <a name="see-also"></a>另請參閱
 
-- [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [擷取資料庫結構描述資訊](retrieving-database-schema-information.md)
+- [ADO.NET 概觀](ado-net-overview.md)

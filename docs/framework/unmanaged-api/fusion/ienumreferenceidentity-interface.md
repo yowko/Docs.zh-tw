@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 766b17bae0c58d9872ff9c118f330ebc3220257e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697247"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796439"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity 介面
-做為集合的列舉程式`IReferenceIdentity`物件。  
+作為物件集合的`IReferenceIdentity`列舉值。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|取得新的介面指標`IEnumReferenceIdentity`，其中包含與這個相同的成員`IEnumReferenceIdentity`。|  
-|`IEnumReferenceIdentity::Next`|取得指定的數目`IReferenceIdentity`物件，從目前位置開始。|  
-|`IEnumReferenceIdentity::Reset`|將指令指標移至這個開頭`IEnumReferenceIdentity`。|  
-|`IEnumReferenceIdentity::Skip`|將指令指標向前移的指定項目數，從目前位置開始。|  
+|`IEnumReferenceIdentity::Clone`|取得新`IEnumReferenceIdentity`的介面指標，其中包含與這個`IEnumReferenceIdentity`相同的成員。|  
+|`IEnumReferenceIdentity::Next`|取得指定數目的`IReferenceIdentity`物件，從目前位置開始。|  
+|`IEnumReferenceIdentity::Reset`|將指令指標移至這個`IEnumReferenceIdentity`的開頭。|  
+|`IEnumReferenceIdentity::Skip`|從目前位置開始，將指令指標向下移動指定的專案數。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Isolation.h  
+ **標頭：** 隔離。h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IReferenceIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [融合介面](fusion-interfaces.md)
+- [IReferenceIdentity 介面](ireferenceidentity-interface.md)

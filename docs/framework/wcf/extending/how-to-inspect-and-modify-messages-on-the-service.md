@@ -1,19 +1,19 @@
 ---
-title: HOW TO：檢查及修改服務中的訊息
+title: 作法：檢查及修改服務中的訊息
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
-ms.openlocfilehash: 17ec1d974332b38bed9c00d57bdacba708d0e64f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1356983361c483170d9d7365932b788f2421bf09
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606353"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795609"
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>HOW TO：檢查及修改服務中的訊息
-您可以檢查或修改整個 Windows Communication Foundation (WCF) 用戶端的傳入或傳出訊息，藉由實作<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>並將它插入服務執行階段。 如需詳細資訊，請參閱 <<c0> [ 擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>。  
+您可以在 Windows Communication Foundation （WCF）用戶端上檢查或修改傳入或傳出訊息<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> ，方法是執行並將它插入服務執行時間。 如需詳細資訊，請參閱[擴充發送器](extending-dispatchers.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>。  
   
 ### <a name="to-inspect-or-modify-messages"></a>檢查或修改訊息  
   
@@ -21,7 +21,7 @@ ms.locfileid: "64606353"
   
 2. 根據您要輕鬆插入服務訊息偵測器的範圍，決定實作 <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>、<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType><xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>或  介面。  
   
-3. 在 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 方法之前，請先插入您的行為。 如需詳細資訊，請參閱 <<c0> [ 設定和擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+3. 在 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 方法之前，請先插入您的行為。 如需詳細資訊，請參閱[使用行為設定和擴充運行](configuring-and-extending-the-runtime-with-behaviors.md)時間。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會依序顯示：  
@@ -44,4 +44,4 @@ ms.locfileid: "64606353"
 
 - <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>
-- [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [使用行為來設定與擴充執行階段](configuring-and-extending-the-runtime-with-behaviors.md)

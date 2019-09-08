@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 219a92c0a105cc43e0c2af7d93868cac12f2e4e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 390ab4881396bbc01337d087f05b6066153bfed1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778530"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795481"
 ---
-# <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO 結構
-包含在全域組件快取中註冊組件的相關資訊。  
+# <a name="assembly_info-structure"></a>ASSEMBLY_INFO 結構
+包含在全域組件快取中註冊之元件的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,22 +40,22 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`cbAssemblyInfo`|以位元組為單位的結構大小。 此欄位保留以供未來擴充。|  
-|`dwAssemblyFlags`|旗標，表示安裝的組件的詳細資料。 支援下列值：<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED 」 值，指出已安裝的組件。 目前版本的.NET framework 一律設定`dwAssemblyFlags`為此值。<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT 」 值，指出組件是常駐承載。 目前的.NET framework 版本永遠不會設定`dwAssemblyFlags`為此值。|  
-|`uliAssemblySizeInKB`|總大小，以 kb 為單位的組件包含的檔案。|  
-|`pszCurrentAssemblyPathBuf`|資訊清單檔案會保留目前的路徑字串緩衝區的指標。 路徑必須以 null 字元結尾。|  
-|`cchBuf`|的寬字元數目，包括 null 結束字元，`pszCurrentAssemblyPathBuf`包含。|  
+|`cbAssemblyInfo`|結構的大小（以位元組為單位）。 此欄位保留供未來擴充性之用。|  
+|`dwAssemblyFlags`|旗標，指出元件的安裝詳細資料。 支援下列值：<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED 值，表示已安裝元件。 目前的 .NET Framework 版本一律會將設定`dwAssemblyFlags`為這個值。<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT 值，表示元件是裝載常駐的。 目前的 .NET Framework 版本永遠不會將`dwAssemblyFlags`設定為這個值。|  
+|`uliAssemblySizeInKB`|元件所包含之檔案的總大小（以 kb 為單位）。|  
+|`pszCurrentAssemblyPathBuf`|字串緩衝區的指標，其中包含資訊清單檔案的目前路徑。 路徑的結尾必須是 null 字元。|  
+|`cchBuf`|`pszCurrentAssemblyPathBuf`包含的寬字元數目，包括 null 結束字元。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [全域組件快取](../../../../docs/framework/app-domains/gac.md)
+- [融合結構](fusion-structures.md)
+- [全域組件快取](../../app-domains/gac.md)

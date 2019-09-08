@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92366190c769344b41923cbb25ed4b04afceaae9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1c28f32a4b24393483241bd2d7d6f550b8b65ba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778666"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796902"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 函式
-取得快取的組件，並使用指定的旗標的路徑。  
+使用指定的旗標，取得快取元件的路徑。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,22 +40,22 @@ HRESULT GetCachePath (
   
 ## <a name="parameters"></a>參數  
  `dwCacheFlags`  
- [in][ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)值，指出快取的組件的來源。  
+ 在[ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)值，表示快取元件的來源。  
   
  `pwzCachePath`  
- [out]至路徑傳回的指標。  
+ 脫銷傳回到路徑的指標。  
   
  `pcchPath`  
- [in、 out]要求最大長度`pwzCachePath`，並會在傳回時，實際長度時`pwzCachePath`。  
+ [in、out]要求的最大長度`pwzCachePath`，以及傳回時的實際`pwzCachePath`長度。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [ASM_CACHE_FLAGS 列舉](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
-- [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [ASM_CACHE_FLAGS 列舉](asm-cache-flags-enumeration.md)
+- [融合全域靜態函式](fusion-global-static-functions.md)

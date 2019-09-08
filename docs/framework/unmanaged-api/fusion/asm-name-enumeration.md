@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06d734bfd79e7752db427821a6ddc663b6e22b7d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 698fb8c8efcbe347c0e833b0dba01fffd3030de6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778531"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795503"
 ---
-# <a name="asmname-enumeration"></a>ASM_NAME 列舉
-表示版本、 組建、 文化特性、 簽章，依此類推，會擷取或設定其屬性之組件的[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)方法。  
+# <a name="asm_name-enumeration"></a>ASM_NAME 列舉
+指出元件的版本、組建、文化特性、簽章等，其屬性將由[IAssemblyName](iassemblyname-interface.md)方法抓取或設定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,15 +65,15 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [融合列舉](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName 介面](iassemblyname-interface.md)
+- [融合列舉](fusion-enumerations.md)

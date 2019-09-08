@@ -2,24 +2,24 @@
 title: SecurityNegotiationFailure
 ms.date: 03/30/2017
 ms.assetid: 2060a678-f97b-4491-acd9-6c57c732afd7
-ms.openlocfilehash: 9115fa12539150fe2f23bc9799053364d624fd46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4d753c9fcaae2990d27445e5b71ad5f3894f27f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944504"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796131"
 ---
 # <a name="securitynegotiationfailure"></a>SecurityNegotiationFailure
 識別碼:172  
   
- 嚴重性：錯誤  
+ 嚴重性：Error  
   
- 類別：SecurityAudit  
+ CategorySecurityAudit  
   
 ## <a name="description"></a>描述  
  這個事件表示安全性交涉失敗。 此事件會列出服務、動作、用戶端識別、活動識別碼和交涉。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [事件記錄](index.md)
+- [事件一般參考](events-general-reference.md)

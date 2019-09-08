@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773855"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796335"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx 函式
-取得組件的原則後顯示名稱。  
+取得元件的後置原則顯示名稱。  
   
- 此函式支援.NET Framework 基礎結構，並不是直接從您的程式碼使用。  
+ 此函式支援 .NET Framework 的基礎結構，但不適合直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,35 +43,35 @@ HRESULT PreBindAssemblyEx (
   
 ## <a name="parameters"></a>參數  
  `pAppCtx`  
- [in]識別應用程式內容。  
+ 在識別應用程式內容。  
   
  `pName`  
- [in]識別組件名稱。  
+ 在識別元件名稱。  
   
  `pAsmParent`  
- [in]識別父組件。 這個參數已忽略。  
+ 在識別父元件。 這個參數已忽略。  
   
  `pwzRuntimeVersion`  
- [in]識別執行階段版本。  
+ 在識別執行階段版本。  
   
  `ppNamePostPolicy`  
- [out]包含的原則後顯示名稱。  
+ 脫銷包含後置原則顯示名稱。  
   
  `pvReserved`  
- [in]保留供未來擴充。 `pvReserved` 必須是 null 參考。  
+ 在保留以供未來擴充性之用。 `pvReserved`必須是 null 參考。  
   
 ## <a name="remarks"></a>備註  
- `ppNamePostPolicy`函式會傳回 HRESULT FUSION_E_REF_DEF_MISMATCH 時，才設定輸出參數。 否則，它是 null。  
+ 只有`ppNamePostPolicy`在函數傳回 HRESULT FUSION_E_REF_DEF_MISMATCH 時，才會設定 output 參數。 否則，它會是 null。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [融合全域靜態函式](fusion-global-static-functions.md)

@@ -2,28 +2,28 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a52203ad62e8761897f7b2bef90f1915db9433f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771939"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783327"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
-.NET Framework Data Provider for Oracle 包含<xref:System.Data.OracleClient.OracleLob>類別，用來處理 Oracle **LOB**資料型別。  
+Oracle 的 .NET Framework Data Provider 包含用來<xref:System.Data.OracleClient.OracleLob>處理 oracle **LOB**資料類型的類別。  
   
- **OracleLob**可能是其中一種<xref:System.Data.OracleClient.OracleType>資料類型：  
+ **OracleLob**可以是下列<xref:System.Data.OracleClient.OracleType>其中一種資料類型：  
   
-|資料類型|描述|  
+|資料類型|說明|  
 |---------------|-----------------|  
-|**Blob**|Oracle **BLOB**包含二進位資料，其大小上限為 4 gb 的資料型別。 這會對應至**陣列**型別的**位元組**。|  
-|**Clob**|Oracle **CLOB**設定在伺服器上，大小上限為 4 gb 的資料類型，包含字元資料，根據預設的字元。 這會對應至**字串**。|  
-|**NClob**|Oracle **NCLOB**包含字元資料的資料類型會根據最大值 4 gb 之伺服器上的國家字元集。 這會對應至**字串**。|  
+|**Blob**|包含大小上限為 4 gb 之二進位資料的 Oracle **BLOB**資料類型。 這會對應到**Byte**類型的**陣列**。|  
+|**Clob**|Oracle **CLOB**資料類型，其中包含以伺服器上預設字元集為基礎的字元資料，大小上限為 4 gb。 這會對應到**字串**。|  
+|**NClob**|包含字元資料的 Oracle **NCLOB**資料類型，根據伺服器上的國家字元集，大小上限為 4 gb。 這會對應到**字串**。|  
   
- **OracleLob**有別<xref:System.Data.OracleClient.OracleBFile>，因為資料會儲存在的伺服器，而不是在作業系統中的實體檔案。 它也可以是讀寫物件，不同於**OracleBFile**，一律為唯讀。  
+ **OracleLob**與<xref:System.Data.OracleClient.OracleBFile>中的不同之處在于，資料會儲存在伺服器上，而不是存放在作業系統的實體檔案中。 它也可以是讀寫物件，與一律為唯讀的**OracleBFile**不同。  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>建立、擷取及寫入 LOB  
- 下列 C# 範例示範如何您可以建立 Lob 在 Oracle 資料表中，然後擷取並的形式寫入**OracleLob**物件。 此範例示範如何使用<xref:System.Data.OracleClient.OracleDataReader>物件和**OracleLob** **讀取**並**撰寫**方法。 此範例會使用 Oracle **BLOB**， **CLOB**，並**NCLOB**資料型別。  
+ 下列C#範例會示範如何在 Oracle 資料表中建立 lob，然後以**OracleLob**物件的形式來抓取和寫入它們。 此範例示範如何使用<xref:System.Data.OracleClient.OracleDataReader>物件和**OracleLob**的**Read**和**Write**方法。 此範例使用 Oracle **BLOB**、 **CLOB**和**NCLOB**資料類型。  
   
 ```csharp  
 using System;  
@@ -249,5 +249,5 @@ tx.Commit();
   
 ## <a name="see-also"></a>另請參閱
 
-- [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle 和 ADO.NET](oracle-and-adonet.md)
+- [ADO.NET 概觀](ado-net-overview.md)

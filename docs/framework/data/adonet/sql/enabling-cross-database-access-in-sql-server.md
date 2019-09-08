@@ -2,12 +2,12 @@
 title: 在 SQL Server 中啟用跨資料庫存取
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 50e2a9149074d2d29ff2e17fa2a339bd7820b984
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f69a405a562bfae3bc283f2b3166812046be868e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490089"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794191"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>在 SQL Server 中啟用跨資料庫存取
 當一個資料庫中的程序是依照另一個資料庫中的物件而定時，就會發生跨資料庫擁有權鏈結。 跨資料庫擁有權鏈結的運作方式與單一資料庫內的擁有權鏈結相同，但未中斷的擁有權鏈結需要所有的物件擁有者都對應至相同的登入帳戶。 如果來源資料庫中的來源物件以及目標資料庫中的目標物件是由相同的登入帳戶所擁有，則 SQL Server 不會檢查目標物件上的權限。  
@@ -46,15 +46,15 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
   
-|資源|描述|  
+|Resource|描述|  
 |--------------|-----------------|  
-|[使用 EXECUTE AS 擴充資料庫模擬](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))並[Cross DB Ownership Chaining 選項](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)。|文章會說明如何設定跨資料庫擁有權鏈結的 SQL Server 執行個體。|  
+|[使用 EXECUTE AS](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))和[跨資料庫擁有權連結選項](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)擴充資料庫模擬。|本文說明如何為 SQL Server 的實例設定跨資料庫擁有權鏈。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
+- [SQL Server 安全性概觀](overview-of-sql-server-security.md)
+- [在 SQL Server 中使用預存程序來管理權限](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中撰寫安全的動態 SQL](writing-secure-dynamic-sql-in-sql-server.md)
+- [在 SQL Server 中簽署預存程序](signing-stored-procedures-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

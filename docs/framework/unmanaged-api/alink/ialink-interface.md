@@ -8,75 +8,75 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7324ddb63f000f55a16c4963c808f658aa9098a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789775"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787325"
 ---
 # <a name="ialink-interface"></a>IALink 介面
-可協助建構.NET Framework 組件。 除此之外，介面包含協助您撰寫多模組組件的組件資訊清單、 簽署組件具有強式名稱，以及建立的 netmodule 中的方法。  
+有助於 .NET Framework 元件的建立。 除此之外，介面包含的方法可協助您撰寫多模組元件的組件資訊清單、以強式名稱簽署元件，以及建立 .netmodule。  
   
 ## <a name="in-this-section"></a>本節內容  
- [AddFile 方法](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+ [AddFile 方法](addfile-method.md)  
   
- [AddImport 方法](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [AddImport 方法](addimport-method.md)  
   
- [CloseAssembly 方法](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
+ [CloseAssembly 方法](closeassembly-method.md)  
   
- [CloseEnum 方法](../../../../docs/framework/unmanaged-api/alink/closeenum-method.md)  
+ [CloseEnum 方法](closeenum-method.md)  
   
- [EmbedResource 方法](../../../../docs/framework/unmanaged-api/alink/embedresource-method.md)  
+ [EmbedResource 方法](embedresource-method.md)  
   
- [EmitAssemblyCustomAttribute 方法](../../../../docs/framework/unmanaged-api/alink/emitassemblycustomattribute-method.md)  
+ [EmitAssemblyCustomAttribute 方法](emitassemblycustomattribute-method.md)  
   
- [EmitManifest 方法](../../../../docs/framework/unmanaged-api/alink/emitmanifest-method.md)  
+ [EmitManifest 方法](emitmanifest-method.md)  
   
- [EndMerge 方法](../../../../docs/framework/unmanaged-api/alink/endmerge-method.md)  
+ [EndMerge 方法](endmerge-method.md)  
   
- [EnumCustomAttributes 方法](../../../../docs/framework/unmanaged-api/alink/enumcustomattributes-method.md)  
+ [EnumCustomAttributes 方法](enumcustomattributes-method.md)  
   
- [EnumImportTypes 方法](../../../../docs/framework/unmanaged-api/alink/enumimporttypes-method.md)  
+ [EnumImportTypes 方法](enumimporttypes-method.md)  
   
- [ExportNestedType 方法](../../../../docs/framework/unmanaged-api/alink/exportnestedtype-method.md)  
+ [ExportNestedType 方法](exportnestedtype-method.md)  
   
- [ExportNestedTypeForwarder 方法](../../../../docs/framework/unmanaged-api/alink/exportnestedtypeforwarder-method.md)  
+ [ExportNestedTypeForwarder 方法](exportnestedtypeforwarder-method.md)  
   
- [ExportType 方法](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)  
+ [ExportType 方法](exporttype-method.md)  
   
- [ExportTypeForwarder 方法](../../../../docs/framework/unmanaged-api/alink/exporttypeforwarder-method.md)  
+ [ExportTypeForwarder 方法](exporttypeforwarder-method.md)  
   
- [FreeWin32ResBlob 方法](../../../../docs/framework/unmanaged-api/alink/freewin32resblob-method.md)  
+ [FreeWin32ResBlob 方法](freewin32resblob-method.md)  
   
- [GetAssemblyRefHash 方法](../../../../docs/framework/unmanaged-api/alink/getassemblyrefhash-method.md)  
+ [GetAssemblyRefHash 方法](getassemblyrefhash-method.md)  
   
- [GetResolutionScope 方法](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
+ [GetResolutionScope 方法](getresolutionscope-method.md)  
   
- [GetScope 方法](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [GetScope 方法](getscope-method.md)  
   
- [GetWin32ResBlob 方法](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
+ [GetWin32ResBlob 方法](getwin32resblob-method.md)  
   
- [ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)  
+ [ImportFile 方法](importfile-method.md)  
   
- [ImportFile2 方法](../../../../docs/framework/unmanaged-api/alink/importfile2-method.md)  
+ [ImportFile2 方法](importfile2-method.md)  
   
- [ImportTypes 方法](../../../../docs/framework/unmanaged-api/alink/importtypes-method.md)  
+ [ImportTypes 方法](importtypes-method.md)  
   
- 「 Init 方法 」  
+ "Init Method"  
   
- [LinkResource 方法](../../../../docs/framework/unmanaged-api/alink/linkresource-method.md)  
+ [LinkResource 方法](linkresource-method.md)  
   
- [PreCloseAssembly 方法](../../../../docs/framework/unmanaged-api/alink/precloseassembly-method.md)  
+ [PreCloseAssembly 方法](precloseassembly-method.md)  
   
- [SetAssemblyFile 方法](../../../../docs/framework/unmanaged-api/alink/setassemblyfile-method.md)  
+ [SetAssemblyFile 方法](setassemblyfile-method.md)  
   
- [SetAssemblyProps 方法](../../../../docs/framework/unmanaged-api/alink/setassemblyprops-method.md)  
+ [SetAssemblyProps 方法](setassemblyprops-method.md)  
   
- [SetNonAssemblyFlags 方法](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
+ [SetNonAssemblyFlags 方法](setnonassemblyflags-method.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Al.exe (組件連結器)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [ALink API](index.md)
+- [IALink2 介面](ialink2-interface.md)
+- [Al.exe (組件連結器)](../../tools/al-exe-assembly-linker.md)

@@ -1,16 +1,16 @@
 ---
-title: HOW TO：動態建立資料庫
+title: 作法：動態建立資料庫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cadf20cdadb39483f26a29619cae058eac47e50
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940079"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793654"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>作法：動態建立資料庫
 在 LINQ to SQL 中，物件模型 (Object Model) 會對應至關聯式資料庫。 對應的啟用方式是使用以屬性 (Attribute) 為基礎的對應或外部對應檔案來描述關聯式資料庫的結構。 在這兩種情況中，系統會提供足夠的關聯式資料庫相關資訊，可讓您使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法來建立新的資料庫執行個體 (Instance)。  
@@ -50,8 +50,8 @@ ms.locfileid: "69940079"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [變更和提交資料](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [以屬性為基礎的對應](attribute-based-mapping.md)
+- [外部對應](external-mapping.md)
+- [SQL-CLR 類型對應](sql-clr-type-mapping.md)
+- [背景資訊](background-information.md)
+- [變更和提交資料](making-and-submitting-data-changes.md)

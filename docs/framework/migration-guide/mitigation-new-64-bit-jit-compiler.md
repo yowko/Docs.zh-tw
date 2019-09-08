@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 07f9ae01fae5e4badbc13670ee56a2f05e303c0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968527"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779359"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>風險降低：新的 64 位元 JIT 編譯器
 從 .NET Framework 4.6 開始，執行階段包含新的 64 位元 JIT 編譯器，用於 Just-In-Time 編譯。 這項變更不會影響使用 32 位元 JIT 編譯器的編譯。  
@@ -52,7 +52,7 @@ ms.locfileid: "69968527"
 ## <a name="mitigation-of-other-issues"></a>降低其他問題的風險  
  如果舊版和新版 64 位元 JIT 編譯器編譯的程式碼之間有任何差異，或是使用新版 64 位元 JIT 編譯器編譯的應用程式偵錯版本和發行版本之間有任何差異，您可以使用舊版 64 位元 JIT 編譯器搭配下列方式來編譯應用程式：  
   
-- 若以每一應用程式為基礎，您可以將 [\<useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) 項目新增至應用程式的組態檔。 下列程式碼會停止以新版 64 位元 JIT 編譯器進行編譯，改用舊版 64 位元 JIT 編譯器。  
+- 若以每一應用程式為基礎，您可以將 [\<useLegacyJIT>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) 項目新增至應用程式的組態檔。 下列程式碼會停止以新版 64 位元 JIT 編譯器進行編譯，改用舊版 64 位元 JIT 編譯器。  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -71,5 +71,5 @@ ms.locfileid: "69968527"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-- [\<useLegacyJit> 項目](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [執行階段變更](runtime-changes-in-the-net-framework-4-6.md)
+- [\<useLegacyJit> 項目](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

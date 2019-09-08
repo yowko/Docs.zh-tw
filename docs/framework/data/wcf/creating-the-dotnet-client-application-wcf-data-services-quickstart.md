@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9995a509bf997298d991a1f66cfdf3cae6cd0395
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583596"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790961"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>建立 .NET Framework 用戶端應用程式 (WCF 資料服務快速入門)
 
-這是在 WCF Data Services 快速入門的最後一項工作。 在這個工作中，您會新增至方案的主控台應用程式，請將參考加入[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]饋送到這個新的用戶端應用程式，以及存取 OData 摘要的用戶端應用程式，利用已產生的用戶端資料服務類別和用戶端程式庫.
+這是 WCF Data Services 快速入門的最後一項工作。 在這項工作中，您會在方案中加入主控台應用程式、在這個新[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]的用戶端應用程式中加入摘要的參考，並使用產生的用戶端資料服務類別和用戶端程式庫，從用戶端應用程式存取 OData 饋送.
 
 > [!NOTE]
-> 不需要 .NET Framework 架構的用戶端應用程式也可存取資料摘要。 資料服務可以存取任何取用 OData 摘要的應用程式元件。 如需詳細資訊，請參閱 <<c0> [ 用戶端應用程式中使用的資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)。
+> 不需要 .NET Framework 架構的用戶端應用程式也可存取資料摘要。 任何取用 OData 摘要的應用程式元件都可存取資料服務。 如需詳細資訊，請參閱[在用戶端應用程式中使用資料服務](using-a-data-service-in-a-client-application-wcf-data-services.md)。
 
 ## <a name="to-create-the-client-application-by-using-visual-studio"></a>若要使用 Visual Studio 建立用戶端應用程式
 
-1. 中**方案總管**，以滑鼠右鍵按一下方案，按一下**新增**，然後按一下 **新專案**。
+1. 在**方案總管**中，以滑鼠右鍵按一下方案，然後按一下 [**加入**]，再按一下 [**新增專案**]。
 
-2. 在左窗格中，選取**已安裝**> [**Visual C#** 或是**Visual Basic**] > **Windows Desktop**，然後選取  **WPF 應用程式**範本。
+2. 在左窗格中，選取 [**已安裝**] > [**視覺C#效果**] 或 [ **Visual Basic**] > **Windows 桌面**]，然後選取 [ **WPF 應用程式** 範本。
 
-3. 請輸入`NorthwindClient`做為專案名稱，然後按一下 **[確定]**。
+3. 針對`NorthwindClient` [專案名稱] 輸入，然後按一下 **[確定]** 。
 
 4. 開啟 MainWindow.xaml 檔案，並以下列程式碼取代 XAML 程式碼：
 
@@ -33,21 +33,21 @@ ms.locfileid: "65583596"
 
 ## <a name="to-add-a-data-service-reference-to-the-project"></a>若要將資料服務參考加入至專案
 
-1. 在 **方案總管 中**，以滑鼠右鍵按一下 NorthwindClient 專案，按一下 **新增** > **服務參考**，然後按一下 **探索**.
+1. 在**方案總管**中，以滑鼠右鍵按一下 NorthwindClient 專案，按一下 [**加入** > **服務參考**]，然後按一下 [**探索**]。
 
      這會顯示您在第一個工作中建立的 Northwind 資料服務。
 
-2. 在 **命名空間**文字方塊中，輸入`Northwind`，然後按一下**確定**。
+2. 在 [**命名空間**] 文字方塊中`Northwind`，輸入，然後按一下 **[確定]** 。
 
      這會將新的程式碼檔案加入至專案中，此專案包含的資料類別可用來存取做為物件的資料服務資源，並與之進行互動。 在命名空間 `NorthwindClient.Northwind` 中建立資料類別。
 
 ## <a name="to-access-data-service-data-in-the-wpf-application"></a>在 WPF 應用程式中存取資料服務的資料
 
-1. 在**方案總管**下方**NorthwindClient**，以滑鼠右鍵按一下專案，然後按一下**加入參考**。
+1. 在 [ **NorthwindClient**] 下的**方案總管**中，以滑鼠右鍵按一下專案，然後按一下 [**加入參考**]。
 
-2. 在 [**加入參考**] 對話方塊中，按一下 **.NET**索引標籤上，選取 System.Data.Services.Client.dll 組件，然後按一下 **[確定]**。
+2. 在 [**加入參考**] 對話方塊中，按一下 [ **.net** ] 索引標籤，選取 [system.web] 元件，然後按一下 **[確定]** 。
 
-3. 在**方案總管**下方**NorthwindClient**，開啟 MainWindow.xaml 檔案的字碼頁，並新增下列`using`陳述式 (`Imports` Visual Basic 中)。
+3. 在 [ **NorthwindClient**] 下的`using` **方案總管**中，開啟 mainwindow.xaml 檔案的字碼頁，並加入下列語句（`Imports`在 Visual Basic 中）。
 
     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]
@@ -67,13 +67,13 @@ ms.locfileid: "65583596"
 
 ## <a name="to-build-and-run-the-northwindclient-application"></a>建置和執行 NorthwindClient 應用程式
 
-1. 在 **方案總管**，以滑鼠右鍵按一下 NorthwindClient 專案，然後選取**設定為啟始專案**。
+1. 在**方案總管**中，以滑鼠右鍵按一下 NorthwindClient 專案，然後選取 [**設定為啟始專案**]。
 
-2. 按下**F5**啟動應用程式。
+2. 按**F5**啟動應用程式。
 
      如此會建置方案，並啟動用戶端應用程式。 從服務要求資料，並顯示在主控台中。
 
-3. 編輯中的值**Quantity**資料行的資料格，然後按一下**儲存**。
+3. 在資料格的 [**數量**] 資料行中編輯值，然後按一下 [**儲存**]。
 
      資料服務的變更會被儲存。
 
@@ -82,11 +82,11 @@ ms.locfileid: "65583596"
 
 ## <a name="next-steps"></a>後續步驟
 
-您已成功建立存取的範例 Northwind OData 摘要的用戶端應用程式。 您也已經完成的 WCF Data Services 快速入門 ！
+您已成功建立存取範例 Northwind OData 摘要的用戶端應用程式。 您也已完成 WCF Data Services 快速入門！
 
-如需摘要從.NET Framework 應用程式存取 OData 的詳細資訊，請參閱[WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)。
+如需從 .NET Framework 應用程式存取 OData 摘要的詳細資訊，請參閱[WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [快速入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
-- [資源](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+- [快速入門](getting-started-with-wcf-data-services.md)
+- [資源](wcf-data-services-resources.md)

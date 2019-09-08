@@ -1,6 +1,6 @@
 ---
-title: QualifierSet_EndEnumeration 函式 （Unmanaged API 參考）
-description: QualifierSet_EndEnumeration 函式會終止列舉型別。
+title: QualifierSet_EndEnumeration 函式（非受控 API 參考）
+description: QualifierSet_EndEnumeration 函數會終止列舉。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_EndEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782587"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798327"
 ---
-# <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 函式
-結束藉由呼叫開始列舉[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函式。  
+# <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration 函式
+透過呼叫[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函式，終止開始的列舉。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -40,14 +40,14 @@ HRESULT QualifierSet_EndEnumeration (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[in]未使用此參數。
+在未使用此參數。
 
 `ptr`   
-[in]指標[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)執行個體。
+在[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)實例的指標。
 
 ## <a name="return-value"></a>傳回值
 
-此函數所傳回的下列值定義在*WbemCli.h*標頭檔，或者您可以定義它做為常數中程式碼：
+這個函式所傳回的下列值是在*WbemCli*標頭檔中定義的，您也可以在程式碼中將它定義為常數：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
@@ -55,13 +55,13 @@ HRESULT QualifierSet_EndEnumeration (
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration)方法。
+此函式會包裝對[IWbemQualifierSet：： EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration)方法的呼叫。
 
-這個呼叫是建議，但並非必要。 它會立即釋放與列舉相關聯的資源。
+建議使用此呼叫，但不是必要的。 它會立即釋放與列舉相關聯的資源。
 
 ## <a name="requirements"></a>需求  
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
 **標頭：** WMINet_Utils.idl  
   
@@ -69,4 +69,4 @@ HRESULT QualifierSet_EndEnumeration (
   
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

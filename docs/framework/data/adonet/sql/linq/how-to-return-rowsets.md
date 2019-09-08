@@ -1,21 +1,21 @@
 ---
-title: HOW TO：傳回資料列集
+title: 作法：傳回資料列集
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903977"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781604"
 ---
 # <a name="how-to-return-rowsets"></a>HOW TO：傳回資料列集
 這個範例會從資料庫傳回資料列集 (Rowset)，並且包含用以篩選結果的輸入參數。  
   
- 當您執行傳回資料列集的預存程序時，您會使用*結果*類別，以儲存從預存程序傳回。 如需詳細資訊，請參閱 <<c0> [ 分析的 LINQ to SQL 原始程式碼](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)。  
+ 當您執行會傳回資料列集的預存程式時，您會使用*結果*類別來儲存預存程式的傳回。 如需詳細資訊，請參閱[分析 LINQ to SQL 原始碼](analyzing-linq-to-sql-source-code.md)。  
   
 ## <a name="example"></a>範例  
  下列範例表示一個預存程序，該程序會傳回客戶資料列並使用輸入參數，以便只傳回將 "London" 列為客戶所在城市的那些資料列。 此範例假設了一個可列舉的 `CustomersByCityResult` 類別。  
@@ -38,5 +38,5 @@ END
   
 ## <a name="see-also"></a>另請參閱
 
-- [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [預存程序](stored-procedures.md)
+- [下載範例資料庫](downloading-sample-databases.md)

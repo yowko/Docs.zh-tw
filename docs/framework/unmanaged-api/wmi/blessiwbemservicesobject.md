@@ -1,6 +1,6 @@
 ---
-title: BlessIWbemServicesObject 函式 （Unmanaged API 參考）
-description: BlessIWbemServicesObject 函式表示的使用者認證是否允許 IWbemServices 物件的存取權
+title: BlessIWbemServicesObject 函式（非受控 API 參考）
+description: BlessIWbemServicesObject 函數會指出使用者認證是否允許存取 IWbemServices 物件
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServicesObject
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7f24606e3b021b0df5bdbaab795e4f672f724fa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94c6f47e67cf22f189719a8a9f56e830ee90227c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761709"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798721"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 函式
-表示使用者認證是否允許指定的存取[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)物件。 
+指出使用者認證是否允許存取指定的[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)物件。 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -44,38 +44,38 @@ HRESULT BlessIWbemServicesObject (
 ## <a name="parameters"></a>參數
 
 `pIWbemServices`\
-[in]WMI 服務物件的指標。
+在WMI 服務物件的指標。
 
 `strUser`\
-[in]使用者名稱。
+在使用者名稱。
 
 `strPassword`\
-[in]與相關聯的密碼`strUser`。
+在與`strUser`相關聯的密碼。
 
 `strAuthority`\
-[in]使用者的網域名稱。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
+在使用者的功能變數名稱。 如需詳細資訊，請參閱[ConnectServerWmi](connectserverwmi.md)函數。
 
 `impLevel`\
-[in]模擬等級。
+在模擬層級。
 
 `authnLevel`\
-[in]授權層級。
+在授權層級。
 
 ## <a name="return-value"></a>傳回值
 
-此函式所傳回的下列值中定義*WinError.h*標頭檔，或者您可以將其定義為常數中程式碼：
+這個函式所傳回的下列值會定義在*winerror.h*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | 一或多個引數均為無效。 |
+| `E_INVALIDARG` | 0x80070057 | 一或多個引數無效。 |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` 為 `null`。 | 
 | `E_FAIL` | 0x80000008 | 發生未指定的錯誤。 |
-| `E_OUTOFMEMORY` | 0x80000002 | 沒有足夠的記憶體可供執行作業。 | 
+| `E_OUTOFMEMORY` | 0x80000002 | 記憶體不足，無法執行操作。 | 
 | `S_OK` | 0 | 函式呼叫成功。 | 
 
 ## <a name="requirements"></a>需求
 
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
  **標頭：** WMINet_Utils.idl
 
@@ -83,4 +83,4 @@ HRESULT BlessIWbemServicesObject (
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

@@ -1,6 +1,6 @@
 ---
-title: GetDemultiplexedStub 函式 （Unmanaged API 參考）
-description: GetDemultiplexedStub 函式會建立物件轉寄站接收器，以協助用戶端接收 Windows 管理中的非同步呼叫。
+title: GetDemultiplexedStub 函式（非受控 API 參考）
+description: GetDemultiplexedStub 函式會建立物件轉寄站接收，以協助用戶端接收來自 Windows 管理的非同步呼叫。
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b519ea4062682a56b5b4e277de22b14799f65d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2d3885a4a9e54950909053ba18de5b1891e7edf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783222"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798605"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 函式
 建立物件轉寄站接收以協助用戶端從 Windows Management 接收非同步呼叫。
@@ -41,22 +41,22 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>參數
 
 `pObject`  
-[in]用戶端的程序中實作的指標[IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)。
+在[IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)的用戶端同進程執行的指標。
 
 `isLocal`  
-[in]指出事件是否位於本機的旗標 (`true`)，否則`false`。
+在指出事件是否為本機（`true`）的旗標， `false`否則為。
 
 `ppObject`  
-[out]若要協助用戶端接收非同步呼叫，從 Windows 管理物件轉寄站接收。
+脫銷物件轉寄站接收，可協助用戶端接收來自 Windows 管理的非同步呼叫。
 
 ## <a name="return-value"></a>傳回值
 
-如果此函數成功，傳回的值是`S_OK`(0)。
+如果函式成功，則傳回值為`S_OK` （0）。
 
-如果函式失敗，傳回的值就會為非零的錯誤碼。 若要取得延伸錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。
+如果函式失敗，則傳回值為非零的錯誤碼。 若要取得擴充的錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。
     
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
@@ -64,4 +64,4 @@ HRESULT GetDemultiplexedStub (
   
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

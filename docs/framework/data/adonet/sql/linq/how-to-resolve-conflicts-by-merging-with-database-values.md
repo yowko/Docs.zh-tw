@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: ccd2e37457e686bc5faed6d8979c2b266d05c829
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18a7eceeec63d9caadefab8d98942f10d82c99ca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943443"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793359"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>作法：藉由與資料庫值合併來解決衝突
-若要先協調預期和實際資料庫值之間的差異再重新送出變更，可以使用 <xref:System.Data.Linq.RefreshMode.KeepChanges> 來合併資料庫值與目前用戶端成員值。 如需詳細資訊, [請參閱開放式平行存取:總覽](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
+若要先協調預期和實際資料庫值之間的差異再重新送出變更，可以使用 <xref:System.Data.Linq.RefreshMode.KeepChanges> 來合併資料庫值與目前用戶端成員值。 如需詳細資訊， [請參閱開放式平行存取：總覽](optimistic-concurrency-overview.md)。  
   
 > [!NOTE]
 > 在所有情況下，擷取資料庫中更新過的資料會先重新整理用戶端上的資料錄。 這個動作可確保下一次嘗試更新時，不會在相同的並行存取檢查時失敗。  
@@ -42,6 +42,6 @@ ms.locfileid: "69943443"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：藉由覆寫資料庫值來解決衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
-- [如何：藉由保留資料庫值來解決衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
-- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [如何：藉由覆寫資料庫值來解決衝突](how-to-resolve-conflicts-by-overwriting-database-values.md)
+- [如何：藉由保留資料庫值來解決衝突](how-to-resolve-conflicts-by-retaining-database-values.md)
+- [如何：管理變更衝突](how-to-manage-change-conflicts.md)

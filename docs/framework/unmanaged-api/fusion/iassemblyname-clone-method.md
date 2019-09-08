@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bf67506fca161a64dd5d4ee915031c155c49241
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c71616d261f145574d580b68793ec91bb4ea3f42
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754038"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796650"
 ---
 # <a name="iassemblynameclone-method"></a>IAssemblyName::Clone 方法
-建立這個的淺層複製[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件。  
+建立這個[IAssemblyName](iassemblyname-interface.md)物件的淺層複本。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,15 +37,15 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>參數  
  `pName`  
- [out]這個傳回的複本`IAssemblyName`物件。  
+ 脫銷這個`IAssemblyName`物件的傳回復本。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName 介面](iassemblyname-interface.md)

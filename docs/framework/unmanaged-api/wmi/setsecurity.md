@@ -1,6 +1,6 @@
 ---
-title: SetSecurity 函式 （Unmanaged API 參考）
-description: SetSecurity 函式會擷取目前執行緒的模擬語彙基元。
+title: SetSecurity 函式（非受控 API 參考）
+description: SetSecurity 函數會抓取目前線程的模擬 token。
 ms.date: 11/06/2017
 api_name:
 - SetSecurity
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb71263201c86a93ca0bfbd783f2b8512055e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94c76213acb66116105d181e9961a33976047ee7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783110"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798245"
 ---
 # <a name="setsecurity-function"></a>SetSecurity 函式
 
@@ -41,20 +41,20 @@ HRESULT SetSecurity (
 ## <a name="parameters"></a>參數
 
 `pNeedToReset`\
-[out]此函式傳回時，包含指標`boolean`，指出是否應藉由呼叫重設語彙基元[ResetSecurity](resetsecurity.md)函式。
+脫銷當函式傳回時，會包含的指標`boolean` ，指出是否應該藉由呼叫[ResetSecurity](resetsecurity.md)函式來重設權杖。
 
 `token`\
-[out]此函式傳回時，包含目前執行緒相關聯的模擬語彙基元的控制代碼的指標。 其值可以是`null`是否與目前執行緒相關聯的語彙基元。 
+脫銷當函式傳回時，會包含與目前線程相關聯之模擬標記的控制碼指標。 如果沒有與目前`null`執行緒相關聯的 token，其值可以是。 
 
 ## <a name="return-value"></a>傳回值
 
-如果此函數成功，傳回的值是`S_OK`(0)。
+如果函式成功，則傳回值為`S_OK` （0）。
 
-如果函式失敗，傳回的值就會為非零的錯誤碼。 若要取得延伸錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。
+如果函式失敗，則傳回值為非零的錯誤碼。 若要取得擴充的錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。
 
 ## <a name="requirements"></a>需求
 
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
  **標頭：** WMINet_Utils.idl
 
@@ -62,4 +62,4 @@ HRESULT SetSecurity (
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 016e2efae68c02c8c5a10ab74419599bc41be3a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90a70eaa2b5aeb8ef1f1659d7912b9ae5abc4eca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959382"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794233"
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
 SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些新資料型別包括日期和時間的個別型別，以及具有較大範圍、精確度和時區感知的擴充資料型別。 從 .NET Framework 3.5 版 Service Pack (SP) 1 開始，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 就會針對 SQL Server 2008 Database Engine 的所有新功能提供完整支援。 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能使用這些新功能搭配 SqlClient。  
@@ -31,7 +31,7 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
 |`date`|`date` 資料型別的範圍從 01 年 1 月 1 日到 9999 年 12 月 31 日，精確度為 1 日。 預設值為 1900 年 1 月 1 日。 儲存大小是 3 個位元組。|  
 |`time`|`time` 資料型別只會根據 24 小時制來儲存時間值。 `time` 資料型別的範圍從 00:00:00.0000000 到 23:59:59.9999999，精確度為 100 奈秒。 預設值是 00:00:00.0000000 (午夜)。 `time` 資料型別支援使用者定義的小數點後第二位的精確度，儲存大小則從 3 到 6 位元組不等，依指定的精確度而定。|  
 |`datetime2`|`datetime2` 資料型別將 `date` 和 `time` 資料型別的範圍及精確度組合成單一的資料型別。<br /><br /> 預設值及字串常值格式與 `date` 和 `time` 資料型別中定義的相同。|  
-|`datetimeoffset`|`datetimeoffset` 資料型別具有 `datetime2` 的所有功能，且具有額外的時區位移 (Offset)。 時區位移會以 [+&#124;-] HH: MM 表示。 HH 是代表時區位移中時數的 2 位數，範圍介於 00 至 14 之間。 MM 是代表時區位移中額外分鐘數的 2 位數，範圍介於 00 至 59 之間。 時間格式可支援到 100 奈秒。 強制的 + 或 - 號則代表在取得當地時間時，是在 UTC (世界標準時間或格林威治標準時間) 中加入或減去時區位移數。|  
+|`datetimeoffset`|`datetimeoffset` 資料型別具有 `datetime2` 的所有功能，且具有額外的時區位移 (Offset)。 時區位移會以 [+&#124;-] HH： MM 表示。 HH 是代表時區位移中時數的 2 位數，範圍介於 00 至 14 之間。 MM 是代表時區位移中額外分鐘數的 2 位數，範圍介於 00 至 59 之間。 時間格式可支援到 100 奈秒。 強制的 + 或 - 號則代表在取得當地時間時，是在 UTC (世界標準時間或格林威治標準時間) 中加入或減去時區位移數。|  
   
 > [!NOTE]
 > 如需使用 `Type System Version` 關鍵字的詳細資訊，請參閱 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
@@ -41,12 +41,12 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
   
  Transact-SQL SET LANGUAGE 陳述式 (Statement) 會隱含地設定可決定日期部分順序的 DATEFORMAT。 您可以在連接時使用 SET DATEFORMAT Transact-SQL 陳述式，按照 MDY、DMY、YMD、YDM、MYD 或 DYM 順序排序日期部分，藉以讓日期值意義明確。  
   
- 如果您沒有針對連接指定任何 DATEFORMAT，SQL Server 就會使用與連接相關聯的預設語言。 例如，日期字串 '01/02/03' 在語言設定為美式英文的伺服器上會解譯成 MDY (2003 年 1 月 2 日)，而在語言設定為英式英文的伺服器上則會解譯成 DMY (2003 年 2 月 1 日)。 年份是使用 SQL Server 的截止年份規則決定的，而且此規則會定義指派世紀值的截止日期。 如需詳細資訊, 請參閱 SQL Server 線上叢書中的[兩位數年份截止選項](https://go.microsoft.com/fwlink/?LinkId=120473)。  
+ 如果您沒有針對連接指定任何 DATEFORMAT，SQL Server 就會使用與連接相關聯的預設語言。 例如，日期字串 '01/02/03' 在語言設定為美式英文的伺服器上會解譯成 MDY (2003 年 1 月 2 日)，而在語言設定為英式英文的伺服器上則會解譯成 DMY (2003 年 2 月 1 日)。 年份是使用 SQL Server 的截止年份規則決定的，而且此規則會定義指派世紀值的截止日期。 如需詳細資訊，請參閱 SQL Server 線上叢書中的[兩位數年份截止選項](https://go.microsoft.com/fwlink/?LinkId=120473)。  
   
 > [!NOTE]
 > 從字串格式轉換成 `date`、`time`、`datetime2` 或 `datetimeoffset` 時，不支援 YDM 日期格式。  
   
- 如需 SQL Server 如何解讀日期和時間資料的詳細資訊, 請參閱《 SQL Server 2008 線上叢書》中的[使用日期和時間資料](https://go.microsoft.com/fwlink/?LinkID=98361)。  
+ 如需 SQL Server 如何解讀日期和時間資料的詳細資訊，請參閱《 SQL Server 2008 線上叢書》中的[使用日期和時間資料](https://go.microsoft.com/fwlink/?LinkID=98361)。  
   
 ## <a name="datetime-data-types-and-parameters"></a>日期/時間資料型別和參數  
  <xref:System.Data.SqlDbType> 中已加入下列的列舉型別以支援新的日期及時間資料型別。  
@@ -86,9 +86,9 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
 ### <a name="sqlparameter-properties"></a>SqlParameter 屬性  
  下表將說明與日期和時間資料型別相關的 `SqlParameter` 屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|取得或設定值是否可為 Null。 將 Null 參數值傳送至伺服器時，必須指定 <xref:System.DBNull>，而不是 `null` (在 Visual Basic 中為 `Nothing`)。 如需資料庫 null 值的詳細資訊，請參閱 [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)。|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|取得或設定值是否可為 Null。 將 Null 參數值傳送至伺服器時，必須指定 <xref:System.DBNull>，而不是 `null` (在 Visual Basic 中為 `Nothing`)。 如需資料庫 null 值的詳細資訊，請參閱 [Handling Null Values](handling-null-values.md)。|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|取得或設定用於表示此值的最大位數。 若為日期和時間資料型別，則會忽略這項設定。|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|取得或設定要針對`Time`、 `DateTime2`和`DateTimeOffset`解析值之時間部分的小數位數。 預設值為 0，表示從此值推斷實際的小數點位數並傳送至伺服器。|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|若為日期和時間資料型別，則會忽略。|  
@@ -101,7 +101,7 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
 ### <a name="creating-parameters"></a>建立參數  
  您可以使用 <xref:System.Data.SqlClient.SqlParameter> 物件的建構函式 (Constructor)，或將它加入至 <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合 (透過呼叫 `Add` 的 <xref:System.Data.SqlClient.SqlParameterCollection> 方法)，藉以建立此物件。 `Add` 方法會將建構函式引數或現有的參數物件當做輸入。  
   
- 本主題的下列章節會提供如何指定 date 和 time 參數的範例。 如需使用參數的其他範例, 請參閱設定[參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)和[DataAdapter 參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)。  
+ 本主題的下列章節會提供如何指定 date 和 time 參數的範例。 如需使用參數的其他範例，請參閱設定[參數和參數資料類型](../configuring-parameters-and-parameter-data-types.md)和[DataAdapter 參數](../dataadapter-parameters.md)。  
   
 ### <a name="date-example"></a>Date 範例  
  下列程式碼片段將示範如何指定 `date` 參數。  
@@ -197,7 +197,7 @@ command.Parameters.AddWithValue( _
 ## <a name="retrieving-date-and-time-data"></a>擷取日期和時間資料  
  下表說明用於擷取 SQL Server 2008 日期和時間值的方法。  
   
-|SqlClient 方法|說明|  
+|SqlClient 方法|描述|  
 |----------------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|擷取指定的資料行值做為 <xref:System.DateTime> 結構。|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|擷取指定的資料行值做為 <xref:System.DateTimeOffset> 結構。|  
@@ -241,7 +241,7 @@ command.Parameters.AddWithValue( _
   
 ## <a name="see-also"></a>另請參閱
 
-- [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 資料類型對應](../sql-server-data-type-mappings.md)
+- [設定參數和參數資料類型](../configuring-parameters-and-parameter-data-types.md)
+- [SQL Server 資料類型和 ADO.NET](sql-server-data-types.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

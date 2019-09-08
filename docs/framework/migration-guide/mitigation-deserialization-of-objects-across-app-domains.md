@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd0cbd4c688815139d83a742bb75c54eebbe55b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: d172503cee4e3880f493c68d5789e17c64a82a12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648467"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790007"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>風險降低：在應用程式定義域之間將物件還原序列化
 在某些情況下，當應用程式使用具有不同應用程式基底的兩個或多個應用程式定義域時，嘗試在跨應用程式定義域的邏輯呼叫內容中將物件還原序列化，將會擲回例外狀況。  
@@ -50,4 +50,4 @@ ms.locfileid: "64648467"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+- [執行階段變更](runtime-changes-in-the-net-framework-4-5-1.md)

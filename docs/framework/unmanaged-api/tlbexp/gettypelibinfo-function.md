@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7da0986269189ba5c2dfa0f10d509bf51deb446d
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d8ea7df9396e9199d04ad5609daa9d2b01761f36
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040197"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798888"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 函式
-藉由檢查[TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr)結構, 傳回指定之類型程式庫的相關資訊。  
+藉由檢查[TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr)結構，傳回指定之類型程式庫的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,21 +50,21 @@ HRESULT GetTypeLibInfo(
  脫銷類型程式庫的當地語系化識別碼。  
   
  `pTypeLibPlatform`  
- 脫銷[SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind)旗標, 可識別類型程式庫的目標作業系統。 常見的值為 SYS_WIN32 和 SYS_WIN64。  
+ 脫銷[SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind)旗標，可識別類型程式庫的目標作業系統。 常見的值為 SYS_WIN32 和 SYS_WIN64。  
   
  `pTypeLibMajorVer`  
- 脫銷類型程式庫的主要版本號碼。 例如, 針對版本*x. y*, 主要版本號碼為*x*。  
+ 脫銷類型程式庫的主要版本號碼。 例如，針對版本*x. y*，主要版本號碼為*x*。  
   
  `pTypeLibMinorVer`  
- 脫銷類型程式庫的次要版本號碼。 例如, 針對版本*x. y*, 次要版本號碼為*y*。  
+ 脫銷類型程式庫的次要版本號碼。 例如，針對版本*x. y*，次要版本號碼為*y*。  
   
 ## <a name="remarks"></a>備註  
- 此`GetTypeLibInfo`函式是由[tlbexp.exe (類型程式庫匯出工具)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)所呼叫。 此工具會產生類型程式庫, 以描述 common language runtime (CLR) 元件中的類型。  
+ 此`GetTypeLibInfo`函式是由[tlbexp.exe （類型程式庫匯出工具）](../../tools/tlbexp-exe-type-library-exporter.md)所呼叫。 此工具會產生類型程式庫，以描述 common language runtime （CLR）元件中的類型。  
   
- 如果有任何參數為 null, 函數`HRESULT`會傳回的。 `E_POINTER` 否則，它會傳回 `S_OK`。  
+ 如果有任何參數為 null，函數`HRESULT`會傳回的。 `E_POINTER` 否則，它會傳回 `S_OK`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** TlbRef。h  
   
@@ -74,5 +74,5 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="see-also"></a>另請參閱
 
-- [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Tlbexp Helper 函式](index.md)
 - [LoadTypeLibEx 函式](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec288d5ac2f6466860362be82c619c89204e8f31
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033510"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781415"
 ---
 # <a name="local-method-calls"></a>區域方法呼叫
-區域方法呼叫就是在物件模型 (Object Model) 內執行的呼叫。 遠端方法呼叫則是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 轉譯為 SQL 並傳輸給資料庫引擎進行執行的呼叫。 需要區域方法呼叫時[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]無法轉譯成 SQL 呼叫。 否則會擲回 <xref:System.InvalidOperationException>。  
+區域方法呼叫就是在物件模型 (Object Model) 內執行的呼叫。 遠端方法呼叫則是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 轉譯為 SQL 並傳輸給資料庫引擎進行執行的呼叫。 當無法將呼叫轉譯為[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL 時，需要區域方法呼叫。 否則會擲回 <xref:System.InvalidOperationException>。  
   
 ## <a name="example-1"></a>範例 1  
  在下列範例中，`Order` 類別會對應至 Northwind 範例資料庫中的 Orders 資料表。 本機執行個體方法已加入至這個類別中。  
@@ -28,4 +28,4 @@ ms.locfileid: "62033510"
   
 ## <a name="see-also"></a>另請參閱
 
-- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [背景資訊](background-information.md)

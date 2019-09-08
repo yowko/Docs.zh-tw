@@ -1,6 +1,6 @@
 ---
-title: DeleteMethod 函式 （Unmanaged API 參考）
-description: DeleteMethod 函式會從 CIM 類別定義中刪除指定的方法。
+title: DeleteMethod 函式（非受控 API 參考）
+description: DeleteMethod 函數會從 CIM 類別定義中刪除指定的方法。
 ms.date: 11/06/2017
 api_name:
 - DeleteMethod
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 291d5d0461da8d130d41f9a0eca67ea3be42b4bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4db81c4c7e123eed82b3092912b8d871edb54618
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746819"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798654"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod 函式
 從 CIM 類別定義中刪除指定的方法。
@@ -41,32 +41,32 @@ HRESULT Delete (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[in]未使用此參數。
+在未使用此參數。
 
 `ptr`  
-[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
+在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `wszName`  
-[in]要移除類別資料表中的方法名稱。 `wszName` 必須是有效的指標`LPCWSTR`。
+在要從類別資料表中移除之方法的名稱。 `wszName`必須是有效`LPCWSTR`的指標。
 
 ## <a name="return-value"></a>傳回值
 
-此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
+這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
 |常數  |值  |說明  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體來完成此作業。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 記憶體不足，無法完成操作。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod)方法。
+此函式會包裝對[IWbemClassObject：:D eletemethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod)方法的呼叫。
 
-不支援方法刪除[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 執行個體的指標。
+指向 CIM 實例的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指標不支援方法刪除。
 
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
@@ -74,4 +74,4 @@ HRESULT Delete (
   
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

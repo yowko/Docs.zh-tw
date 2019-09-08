@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 908ac7c441dbb7f6c70b9fafc701d403fc153222
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: b97436ca2f81fea139689c7c2c2348718827b90f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251079"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70778858"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>風險降低：ZipArchiveEntry.FullName 路徑分隔符號
 從以 .NET Framework 4.6.1 為目標的應用程式開始，<xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> 屬性中使用的路徑分隔符號，已從舊版 .NET Framework 中使用的反斜線 ("\\") 變更為正斜線 ("/")。   呼叫 <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType> 方法的其中一個多載會建立 <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> 物件。  
@@ -28,7 +28,7 @@ ms.locfileid: "66251079"
  對於 Windows 作業系統上由 .NET Framework <xref:System.IO> 命名空間中的 API 解壓縮的 .ZIP 檔案而言，此變更的影響應該很小，因為這些 API 可以將斜線 ("/") 或反斜線 ("\\") 當做路徑分隔符號字元順利地處理。  
   
 ## <a name="mitigation"></a>緩和  
- 如果不需要此行為，您可以在應用程式組態檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段加入一個組態設定以選擇退出。 下圖顯示 `<runtime>` 區段及選擇退出參數。  
+ 如果不需要此行為，您可以在應用程式組態檔的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 區段加入一個組態設定以選擇退出。 下圖顯示 `<runtime>` 區段及選擇退出參數。  
   
 ```xml  
 <runtime>  
@@ -36,7 +36,7 @@ ms.locfileid: "66251079"
 </runtime>  
 ```  
   
- 此外，以舊版 .NET Framework 為目標但在 .NET Framework 4.6.1 和更新版本下執行的應用程式，可以藉由將組態設定新增到應用程式設定檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段，以選擇加入這項行為。 下圖顯示 `<runtime>` 區段及選擇加入參數。  
+ 此外，以舊版 .NET Framework 為目標但在 .NET Framework 4.6.1 和更新版本下執行的應用程式，可以藉由將組態設定新增到應用程式設定檔的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 區段，以選擇加入這項行為。 下圖顯示 `<runtime>` 區段及選擇加入參數。  
   
 ```xml  
 <runtime>  
@@ -46,5 +46,5 @@ ms.locfileid: "66251079"
   
 ## <a name="see-also"></a>另請參閱
 
-- [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
-- [4.6.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
+- [重定目標變更](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [4.6.1 中的應用程式相容性](application-compatibility-in-the-net-framework-4-6-1.md)

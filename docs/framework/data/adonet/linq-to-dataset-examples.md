@@ -2,57 +2,57 @@
 title: LINQ to DataSet 範例
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 484b4fcf39ef70fd0ec23c86b320d7f57f4f3eb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68d4ed74713858a643c6db40b6982ba2775dbfa5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645938"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783763"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet 範例
-本節提供 LINQ to DataSet 使用標準查詢運算子的程式設計範例。 <xref:System.Data.DataSet>這些範例中使用由使用擴展`FillDataSet`方法中指定[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或是[標準查詢運算子概觀 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。</c0>  
+本節提供使用標準查詢運算子 LINQ to DataSet 程式設計範例。 在<xref:System.Data.DataSet>這些範例中使用的會`FillDataSet`使用方法填入，這是在將[資料載入資料集](loading-data-into-a-dataset.md)中所指定。 如需詳細資訊，請參閱[標準查詢運算子C#總覽（）](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或[標準查詢運算子總覽（Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [查詢運算式範例](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
+ [查詢運算式範例](query-expression-examples-linq-to-dataset.md)  
  包含下列範例：  
   
-- [投影](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
+- [投影](query-expression-syntax-examples-projection-linq-to-dataset.md)  
   
-- [限制](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
+- [限制](query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
-- [資料分割](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
+- [資料分割](query-expression-syntax-examples-partitioning.md)  
   
-- [排序](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+- [排序](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
-- [項目運算子](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
+- [項目運算子](query-expression-syntax-examples-element-operators.md)  
   
-- [彙總運算子](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+- [彙總運算子](query-expression-syntax-examples-aggregate-operators.md)  
   
-- [聯結運算子](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
+- [聯結運算子](query-expression-syntax-examples-join-operators.md)  
   
- [以方法為基礎的查詢範例](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ [以方法為基礎的查詢範例](method-based-query-examples-linq-to-dataset.md)  
  包含下列範例：  
   
-- [投影](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
+- [投影](method-based-query-syntax-examples-projection.md)  
   
-- [資料分割](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
+- [資料分割](method-based-query-syntax-examples-partitioning-linq.md)  
   
-- [排序](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+- [排序](method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
-- [集合運算子](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+- [集合運算子](method-based-query-syntax-examples-set-operators.md)  
   
-- [轉換運算子](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
+- [轉換運算子](method-based-query-syntax-examples-conversion-operators.md)  
   
-- [項目運算子](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
+- [項目運算子](method-based-query-syntax-examples-element-operators.md)  
   
-- [彙總運算子](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+- [彙總運算子](method-based-query-syntax-examples-aggregate-operators.md)  
   
-- [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
+- [Join](method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
- [資料集專屬運算子範例](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
+ [資料集專屬運算子範例](dataset-specific-operator-examples-linq-to-dataset.md)  
  包含一些示範如何使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法和 <xref:System.Data.DataRowComparer> 類別 (Class) 的範例。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [將資料載入至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [程式設計手冊](programming-guide-linq-to-dataset.md)
+- [將資料載入至資料集](loading-data-into-a-dataset.md)

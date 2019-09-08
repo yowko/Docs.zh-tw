@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bd705ef549de3a8018efe731ef8735ef7b6b915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929909a7f2c4fa1799c8fed94787b8f853c7eac2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697234"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796515"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId 介面
-代表目前範圍中定義應用程式的程式碼的唯一識別碼。  
+表示在目前範圍中定義應用程式之程式碼的唯一識別碼。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|`IDefinitionAppId::get_Codebase`|取得格式化的字串，表示在此程式碼`IDefinitionAppId`物件。|  
-|`IDefinitionAppId::put_Codebase`|設定這個程式碼`IDefinitionAppId`至指定的物件格式化的字串值。|  
-|`IDefinitionAppId::EnumAppPath`|取得的介面指標[IEnumDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md)物件，包含目前的應用程式路徑中的組件。|  
-|`IDefinitionAppId::SetAppPath`|設定組件參考所指定的值是目前範圍中的應用程式路徑[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)物件。|  
-|`IDefinitionAppId::get_SubscriptionId`|此訂用帳戶取得的 token 識別碼的字串表示的指標`IDefinitionAppId`物件。|  
-|`IDefinitionAppId::put_SubscriptionId`|此設定訂用帳戶的語彙基元識別碼`IDefinitionAppId`物件到指定的字串值。|  
+|`IDefinitionAppId::get_Codebase`|取得格式字串，表示這個`IDefinitionAppId`物件中的程式碼。|  
+|`IDefinitionAppId::put_Codebase`|將這個`IDefinitionAppId`物件的程式碼設定為指定的格式化字串值。|  
+|`IDefinitionAppId::EnumAppPath`|取得[IEnumDefinitionIdentity](ienumdefinitionidentity-interface.md)物件的介面指標，其中包含目前應用程式路徑中的元件。|  
+|`IDefinitionAppId::SetAppPath`|將目前範圍中元件的應用程式路徑，設定為指定之[IDefinitionIdentity](idefinitionidentity-interface.md)物件所參考的值。|  
+|`IDefinitionAppId::get_SubscriptionId`|取得此`IDefinitionAppId`物件之訂閱的 token 識別碼之字串表示的指標。|  
+|`IDefinitionAppId::put_SubscriptionId`|將此`IDefinitionAppId`物件之訂閱的 token 識別碼設定為指定的字串值。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Isolation.h  
+ **標頭：** 隔離。h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [融合介面](fusion-interfaces.md)

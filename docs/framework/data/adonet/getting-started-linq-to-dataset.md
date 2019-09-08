@@ -2,28 +2,28 @@
 title: 使用者入門 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
-ms.openlocfilehash: e52624ca4f81924222065cc3fb355f177eb17193
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 7ad81e6187351c5c1d5b98766ce69db4755e7a90
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504458"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795025"
 ---
 # <a name="getting-started-linq-to-dataset"></a>使用者入門 (LINQ to DataSet)
-本節提供使用 LINQ 進行程式設計的簡介資訊到資料集。  
+本節提供使用 LINQ to DataSet 進行程式設計的簡介資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [LINQ to DataSet 概觀](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- 資料集提供 LINQ 的概念性概觀。  
+ [LINQ to DataSet 概觀](linq-to-dataset-overview.md)  
+ 提供 LINQ to DataSet 的概念總覽。  
   
- [將資料載入至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [將資料載入至資料集](loading-data-into-a-dataset.md)  
  提供填入 <xref:System.Data.DataSet> 的範例。 這則範例會使用 <xref:System.Data.Common.DataAdapter> 來擷取資料庫的資料。  
   
- [下載範例資料庫](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  
- 提供有關下載 AdventureWorks 範例資料庫中，會在整個資料集的區段以 LINQ 範例的資訊。  
+ [下載範例資料庫](downloading-sample-databases-linq-to-dataset.md)  
+ 提供有關下載 AdventureWorks 範例資料庫的資訊，在整個 LINQ to DataSet 一節的範例中都會用到。  
   
- [如何：在 Visual Studio 中建立 LINQ to DataSet 專案](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
- 提供在 Visual Studio 中建立 LINQ to DataSet 專案的相關資訊。  
+ [如何：在 Visual Studio 中建立 LINQ to DataSet 專案](how-to-create-a-linq-to-dataset-project-in-vs.md)  
+ 提供有關在 Visual Studio 中建立 LINQ to DataSet 專案的資訊。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Data.DataRowComparer>  
@@ -34,6 +34,6 @@ ms.locfileid: "67504458"
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ 和 ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)
+- [LINQ 和 ADO.NET](linq-and-ado-net.md)
 - [Language-Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
 - [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  

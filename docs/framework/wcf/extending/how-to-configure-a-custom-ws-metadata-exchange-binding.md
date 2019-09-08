@@ -1,19 +1,19 @@
 ---
-title: HOW TO：設定自訂 WS-Metadata Exchange 繫結
+title: 作法：設定自訂 WS-Metadata Exchange 繫結
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3582ba3c434bb763889faebcc27407f67af7b1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991220"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795661"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>HOW TO：設定自訂 WS-Metadata Exchange 繫結
-本主題說明如何設定自訂的 WS-Metadata Exchange 繫結。 Windows Communication Foundation (WCF) 包含四個系統定義的中繼資料繫結，但您可以發行中繼資料使用任何您想要的繫結。 這個主題會告訴您如何使用 `wsHttpBinding` 發行中繼資料。 這個繫結會提供讓您以安全的方法公開中繼資料的選項。 這篇文章中的程式碼根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>作法：設定自訂 WS-Metadata Exchange 繫結
+本主題說明如何設定自訂的 WS-Metadata Exchange 繫結。 Windows Communication Foundation （WCF）包含四個系統定義的中繼資料系結，但您可以使用您想要的任何系結來發行中繼資料。 這個主題會告訴您如何使用 `wsHttpBinding` 發行中繼資料。 這個繫結會提供讓您以安全的方法公開中繼資料的選項。 本文中的程式碼是以[消費者入門](../samples/getting-started-sample.md)為基礎。  
   
 ### <a name="using-a-configuration-file"></a>使用組態檔  
   
@@ -115,8 +115,8 @@ ms.locfileid: "61991220"
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料發行行為](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
-- [擷取中繼資料](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
-- [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
-- [發行中繼資料端點](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+- [中繼資料發行行為](../samples/metadata-publishing-behavior.md)
+- [擷取中繼資料](../samples/retrieve-metadata.md)
+- [中繼資料](../feature-details/metadata.md)
+- [發行中繼資料](../feature-details/publishing-metadata.md)
+- [發行中繼資料端點](../publishing-metadata-endpoints.md)

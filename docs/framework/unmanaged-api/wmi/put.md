@@ -1,6 +1,6 @@
 ---
-title: Put 函式 （Unmanaged API 參考）
-description: Put 函式會將新的值指派給具名屬性。
+title: Put 函數（非受控 API 參考）
+description: Put 函式會將新值指派給已命名的屬性。
 ms.date: 11/06/2017
 api_name:
 - Put
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fba929e5a1a1e4c2b69e15bf6c855211e25a67a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa629c2d07fb25db035cd80aba3c74413070e6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636616"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798393"
 ---
 # <a name="put-function"></a>Put 函式
 
@@ -45,62 +45,62 @@ HRESULT Put (
 ## <a name="parameters"></a>參數
 
 `vFunc`\
-[in]未使用此參數。
+在未使用此參數。
 
 `ptr`\
-[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
+在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `wszName`\
-[in]屬性的名稱。 這個參數不可以是 `null`。
+在屬性的名稱。 這個參數不可以是 `null`。
 
 `lFlags`\
-[in] 保留。 這個參數必須是 0。
+[in] 保留。 這個參數必須是0。
 
 `pVal`\
-[in]有效的指標`VARIANT`會變成新的屬性值。 如果`pVal`是`null`或指向`VARIANT`型別的`VT_NULL`，屬性設定為`null`。
+在有效`VARIANT`的指標，它會成為新的屬性值。 如果`pVal` `VARIANT`為`null` ，或指向`null`類型`VT_NULL`的，則屬性會設定為。
 
 `vtType`\
-[in]型別`VARIANT`所指向`pVal`。 請參閱[備註](#remarks)節的詳細資訊。
+在所`VARIANT` 指向`pVal`的類型。 如需詳細資訊，請參閱[備註](#remarks)一節。
 
 ## <a name="return-value"></a>傳回值
 
-此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
+這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | 已有一般失敗。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 找不到有效的一或多個參數。 |
-|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | 無法辨識的屬性型別。 建立類別執行個體，如果類別已存在時，會傳回此值。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | 執行個體：指出`pVal`指向`VARIANT`屬性的型別不正確。 <br/> 如需類別定義：屬性中已存在的父類別，新的 COM 型別是從舊的 COM 型別不同。 |
+|`WBEM_E_FAILED` | 0x80041001 | 發生一般失敗。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一或多個參數無效。 |
+|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | 無法辨識屬性類型。 建立類別實例時，如果類別已經存在，就會傳回這個值。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成作業。 |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | 針對實例：`pVal`表示指向`VARIANT`屬性的不正確類型的。 <br/> 針對類別定義：屬性已經存在於父類別中，而新的 COM 類型與舊的 COM 類型不同。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。 |
 
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。
+此函式會包裝對[IWbemClassObject：:P](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)的工作方法的呼叫。
 
-此函式一律覆寫一個新的目前屬性值。 如果[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向類別定義，`Put`建立或更新的屬性值。 當[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 的執行個體，`Put`更新屬性值;`Put`無法建立屬性的值。
+此函式一律會以新的屬性值覆寫。 如果[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向類別定義， `Put`則會建立或更新屬性值。 當[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 實例時， `Put`只會更新屬性值。`Put`無法建立屬性值。
 
-`__CLASS`系統屬性時，只可寫入類別在建立期間，它可能不能空白。 所有其他的系統屬性是唯讀的。
+只有在類別建立期間，系統屬性可能不會保留空白時，才可寫入。`__CLASS` 所有其他的系統屬性都是唯讀的。
 
-使用者無法建立屬性，其開頭或結尾底線 ("_") 的名稱。 這被保留給系統的類別和屬性。
+使用者無法以底線（"_"）來建立名稱開頭或結尾的屬性。 這會保留給系統類別和屬性。
 
-如果設定的屬性`Put`函式父類別中，屬性的預設值已變更，除非屬性型別不符的父類別型別。 如果屬性不存在，而且它不是類型不符，則會建立屬性。
+如果函式所設定`Put`的屬性存在於父類別中，除非屬性類型與父類別類型不相符，否則屬性的預設值會變更。 如果屬性不存在，而且不是類型不符，則會建立屬性。
 
-使用`vtType`只有在 CIM 類別定義中建立新的屬性時的參數和`pVal`是`null`或指向`VARIANT`型別的`VT_NULL`。 在此情況下，`vType`參數指定之屬性的 CIM 型別。 在每個其他情況下，`vtType`必須是 0。 `vtType` 如果基礎的物件執行個體，則也必須是 0 (即使`Val`是`null`) 因為屬性的型別固定的無法變更。
+`VARIANT` `pVal` `null`只有在 CIM 類別定義中建立新屬性，且為或指向類型`VT_NULL`的時，才使用參數。`vtType` 在此情況下， `vType`參數會指定屬性的 CIM 類型。 在其他所有情況下`vtType` ，必須是0。 `vtType`如果基礎物件是實例（即使`Val`是`null`），則也必須是0，因為屬性的類型是固定的，而且無法變更。
 
 ## <a name="example"></a>範例
 
-如需範例，請參閱[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。
+如需範例，請參閱[IWbemClassObject：:P](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)的工作方法。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** WMINet_Utils.idl
 
-**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

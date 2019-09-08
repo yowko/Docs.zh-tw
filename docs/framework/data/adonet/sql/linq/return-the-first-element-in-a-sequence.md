@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ccdc3777-b2c2-44e3-a627-abef8d79a555
-ms.openlocfilehash: 39cf9270b08fce64590fef418bb428c5a781b0e9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9faeed754942d7b176872484ac776c1df592bbd8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963802"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792717"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>傳回序列的第一個項目
 使用 <xref:System.Linq.Enumerable.First%2A> 運算子傳回序列中的第一個項目。 使用 <xref:System.Linq.Enumerable.First%2A> 的查詢會立即執行。  
@@ -38,5 +38,5 @@ ms.locfileid: "69963802"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [查詢範例](query-examples.md)
+- [下載範例資料庫](downloading-sample-databases.md)

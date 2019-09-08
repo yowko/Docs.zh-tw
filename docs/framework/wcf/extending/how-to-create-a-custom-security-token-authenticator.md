@@ -1,5 +1,5 @@
 ---
-title: 如何： 建立自訂安全性權杖驗證器
+title: How to：建立自訂安全性權杖驗證器
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: 096cfc0f19189ba3173a8c5decd483542a18dbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8e964b1124bb19faa79b0dc5e4ecebd83a56acf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767178"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797060"
 ---
-# <a name="how-to-create-a-custom-security-token-authenticator"></a>如何： 建立自訂安全性權杖驗證器
+# <a name="how-to-create-a-custom-security-token-authenticator"></a>How to：建立自訂安全性權杖驗證器
 本主題會示範如何建立自訂安全性權杖驗證器，以及如何將其與自訂的安全性權杖管理員整合。 安全性權杖驗證器會驗證傳入訊息所提供之安全性權杖的內容。 如果驗證成功，驗證器便會傳回在進行評估時會傳回一組宣告之 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 執行個體的集合。  
   
- 若要使用的自訂安全性權杖驗證器的 Windows Communication Foundation (WCF) 中，您必須先建立自訂認證和安全性權杖管理員實作。 如需建立自訂認證和安全性權杖管理員的詳細資訊，請參閱[逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。
+ 若要在 Windows Communication Foundation （WCF）中使用自訂安全性權杖驗證器，您必須先建立自訂認證和安全性權杖管理員的執行。 如需建立自訂認證和安全性權杖管理員的詳細資訊， [請參閱逐步解說：建立自訂用戶端和](walkthrough-creating-custom-client-and-service-credentials.md)服務認證。
   
 ## <a name="procedures"></a>程序  
   
@@ -32,7 +32,7 @@ ms.locfileid: "61767178"
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- 上述程式碼會透過 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 方法傳回授權原則的集合。 WCF 不會提供這個介面的公用實作。 下列程序會示範如何根據您的需求來完成這項工作。  
+ 上述程式碼會透過 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 方法傳回授權原則的集合。 WCF 不會提供這個介面的公用實作為。 下列程序會示範如何根據您的需求來完成這項工作。  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>建立自訂授權原則  
   
@@ -42,12 +42,12 @@ ms.locfileid: "61767178"
   
 3. 實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> 唯讀屬性。 這個屬性需要傳回從權杖取得之宣告集的簽發者。 這個簽發者應該會對應至權杖的簽發者，或是負責驗證該權杖內容的授權單位。 下列範例會使用從上述程序所建立自訂安全性權杖驗證器傳遞到這個類別的簽發者宣告。 自訂安全性權杖驗證器會使用系統提供的宣告集 (由 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 屬性傳回) 來表示使用者名稱權杖的簽發者。  
   
-4. 實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法。 這個方法會用以傳入安全性權杖內容為基礎的宣告，填入 (Populate) <xref:System.IdentityModel.Policy.EvaluationContext> 類別的執行個體 (當做引數傳入)。 此方法會在完成評估時傳回 `true`。 當實作依賴對評估內容提供其他資訊之授權原則的存在，而需要的資訊尚未存在於評估內容時，這個方法便會傳回 `false`。 在此情況下，WCF 會在評估所有其他內送訊息產生，如果至少一個授權原則，這些修改評估內容的授權原則之後，再次呼叫方法。  
+4. 實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法。 這個方法會用以傳入安全性權杖內容為基礎的宣告，填入 (Populate) <xref:System.IdentityModel.Policy.EvaluationContext> 類別的執行個體 (當做引數傳入)。 此方法會在完成評估時傳回 `true`。 當實作依賴對評估內容提供其他資訊之授權原則的存在，而需要的資訊尚未存在於評估內容時，這個方法便會傳回 `false`。 在此情況下，如果至少有一個授權原則修改了評估內容，則 WCF 會在評估針對傳入訊息所產生的所有其他授權原則之後，再次呼叫方法。  
   
      [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
      [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
 
- [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)說明如何建立自訂認證和自訂安全性權杖管理員。 為了使用在此建立的自訂安全性權杖驗證器，安全性權杖管理員的實作會經過修改，以便從 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 方法傳回自訂驗證器。 若有傳入適當的安全性權杖需求，此方法便會傳回驗證器。  
+ [逐步解說：建立自訂用戶端和](walkthrough-creating-custom-client-and-service-credentials.md)服務認證說明如何建立自訂認證和自訂安全性權杖管理員。 為了使用在此建立的自訂安全性權杖驗證器，安全性權杖管理員的實作會經過修改，以便從 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 方法傳回自訂驗證器。 若有傳入適當的安全性權杖需求，此方法便會傳回驗證器。  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>將自訂安全性權杖驗證器與自訂安全性權杖管理員整合  
   
@@ -64,5 +64,5 @@ ms.locfileid: "61767178"
 - <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.IdentityModel.Tokens.UserNameSecurityToken>
-- [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [逐步解說：建立自訂用戶端和服務認證](walkthrough-creating-custom-client-and-service-credentials.md)
+- [如何：建立自訂安全性權杖提供者](how-to-create-a-custom-security-token-provider.md)

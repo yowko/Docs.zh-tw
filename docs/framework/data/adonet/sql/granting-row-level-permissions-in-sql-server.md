@@ -2,12 +2,12 @@
 title: 在 SQL Server 中授與資料列層級權限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df5fcb4a6c73e12bec2ab17501fdfb02cf672324
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033900"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782361"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授與資料列層級權限
 
@@ -64,9 +64,9 @@ ms.locfileid: "62033900"
 ## <a name="see-also"></a>另請參閱
 
 - [資料列層級安全性](/sql/relational-databases/security/row-level-security)
-- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
+- [SQL Server 安全性概觀](overview-of-sql-server-security.md)
+- [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中使用預存程序來管理權限](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中撰寫安全的動態 SQL](writing-secure-dynamic-sql-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

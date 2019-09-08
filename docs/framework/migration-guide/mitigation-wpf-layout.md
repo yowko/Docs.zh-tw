@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c261a025548b2d22f6df3051dbcdb637723d4324
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: d266ad33110d2bda8f7911d89981c372624c3f36
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599462"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779062"
 ---
 # <a name="mitigation-wpf-layout"></a>風險降低：WPF 配置
 WPF 控制項的版面配置可能略有不同。  
@@ -40,4 +40,4 @@ WPF 控制項的版面配置可能略有不同。
   
 ## <a name="see-also"></a>另請參閱
 
-- [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [重定目標變更](retargeting-changes-in-the-net-framework-4-6.md)

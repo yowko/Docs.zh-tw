@@ -1,6 +1,6 @@
 ---
-title: GetMethodQualifierSet 函式 （Unmanaged API 參考）
-description: GetMethodQualifierSet 函式會擷取方法的限定詞集。
+title: GetMethodQualifierSet 函式（非受控 API 參考）
+description: GetMethodQualifierSet 函數會抓取方法的限定詞集合。
 ms.date: 11/06/2017
 api_name:
 - GetMethodQualifierSet
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 329dcf66c5178a16d0f278c258f6f80f5a1b3e8d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 86a7788736c3c12cfcfd405de88dfadfb14c1eca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636744"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798524"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 函式
 
@@ -43,43 +43,43 @@ HRESULT GetMethodQualifierSet (
 ## <a name="parameters"></a>參數
 
 `vFunc`\
-[in]未使用此參數。
+在未使用此參數。
 
 `ptr`\
-[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
+在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `wszMethod`\
-[in]方法名稱。 `wszMethod` 必須指向有效`LPCWSTR`。
+在方法名稱。 `wszMethod`必須指向有效`LPCWSTR`的。
 
 `ppQualSet`\
-[out]接收的介面指標，可讓您存取方法的限定詞。 `ppQualSet` 不可以是 `null`。 如果錯誤時，不會傳回新的物件，而指標會設定為指向`null`。
+脫銷接收介面指標，允許存取方法的限定詞。 `ppQualSet` 不可以是 `null`。 如果發生錯誤，則不會傳回新的物件，並將指標設定為指向`null`。
 
 ## <a name="return-value"></a>傳回值
 
-此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
+這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
-|常數  |值  |描述  |
+|常數  |值  |說明  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數是`null`。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數為`null`。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset)方法。
+此函式會包裝對[IWbemClassObject：： GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset)方法的呼叫。
 
-只有當目前的物件是 CIM 類別定義時，才支援此函式的呼叫。 方法操作不適用於[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 執行個體的指標。
+只有當目前的物件是 CIM 類別定義時，才支援呼叫這個函式。 指向 CIM 實例的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指標無法使用方法操作。
 
-因為每一種方法可能有它自己的限定詞[IWbemQualifierSet 指標](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)可讓呼叫端新增、 編輯或刪除這些限定詞。
+因為每個方法都有自己的限定詞，所以[IWbemQualifierSet 指標](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)可讓呼叫者加入、編輯或刪除這些限定詞。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** WMINet_Utils.idl
 
-**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 21fa2f9e1dc2f255fe94f2420ba90a809ab5b05e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945083"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792670"
 ---
 # <a name="sort-elements-in-a-sequence"></a>在序列中排序項目
 使用 <xref:System.Linq.Enumerable.OrderBy%2A> 運算子，可以根據一個或多個索引鍵來排序序列。  
   
 > [!NOTE]
-> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]的設計是為了支援以簡單的基本型別 (例如`string`、 `int`等等) 排序。 但不支援複雜多重值類別 (如匿名型別) 的排序， 也不支援 `byte` 資料型別。  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]的設計是為了支援以簡單的基本型別（例如`string`、 `int`等等）排序。 但不支援複雜多重值類別 (如匿名型別) 的排序， 也不支援 `byte` 資料型別。  
   
 ## <a name="example"></a>範例  
  下列範例會根據雇用日期來排序 `Employees`。  
@@ -43,7 +43,7 @@ ms.locfileid: "69945083"
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>範例  
- 下列範例會將中的`EmployeeID 1`訂單`ShipCountry`排序, 然後從最高到最低的運費。  
+ 下列範例會將中的`EmployeeID 1`訂單`ShipCountry`排序，然後從最高到最低的運費。  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  
@@ -90,5 +90,5 @@ ms.locfileid: "69945083"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [查詢範例](query-examples.md)
+- [下載範例資料庫](downloading-sample-databases.md)

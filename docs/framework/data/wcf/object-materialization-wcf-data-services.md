@@ -5,20 +5,20 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: d45d472a2996c0b501af70a0a2a6d2d669dedb4d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043538"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790386"
 ---
 # <a name="object-materialization-wcf-data-services"></a>物件具體化 (WCF 資料服務)
 
-當您使用 [**加入服務參考**] 對話方塊[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]在以 .NET Framework 為基礎的用戶端應用程式中取用摘要時, 就會針對摘要所公開的資料模型中的每個實體類型產生對應的資料類別。 如需詳細資訊, 請參閱[產生資料服務用戶端程式庫](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。 查詢所傳回之實體資料會具體化為其中一個產生之用戶端資料服務類別的執行個體。 如需追蹤物件之合併選項和識別解析的相關資訊, 請參閱[管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。
+當您使用 [**加入服務參考**] 對話方塊[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]在以 .NET Framework 為基礎的用戶端應用程式中取用摘要時，就會針對摘要所公開的資料模型中的每個實體類型產生對應的資料類別。 如需詳細資訊，請參閱[產生資料服務用戶端程式庫](generating-the-data-service-client-library-wcf-data-services.md)。 查詢所傳回之實體資料會具體化為其中一個產生之用戶端資料服務類別的執行個體。 如需追蹤物件之合併選項和識別解析的相關資訊，請參閱[管理資料服務內容](managing-the-data-service-context-wcf-data-services.md)。
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 還能讓您定義自己的用戶端資料服務類別，而不必使用工具產生的資料類別。 這可讓您使用自己的資料類別，也就是「單純的 CLR 物件」(POCO) 資料類別。 使用這些類型的自訂資料類別時, 您應該使用<xref:System.Data.Services.Common.DataServiceKeyAttribute>或<xref:System.Data.Services.Common.DataServiceEntityAttribute>來建立資料類別的屬性, 並確保用戶端上的型別名稱符合資料服務之資料模型中的型別名稱。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 還能讓您定義自己的用戶端資料服務類別，而不必使用工具產生的資料類別。 這可讓您使用自己的資料類別，也就是「單純的 CLR 物件」(POCO) 資料類別。 使用這些類型的自訂資料類別時，您應該使用<xref:System.Data.Services.Common.DataServiceKeyAttribute>或<xref:System.Data.Services.Common.DataServiceEntityAttribute>來建立資料類別的屬性，並確保用戶端上的型別名稱符合資料服務之資料模型中的型別名稱。
 
-當程式庫收到查詢回應訊息之後, 它會將從[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要傳回的資料具體化成查詢類型之用戶端資料服務類別的實例。 具體化這些物件的一般程序如下所示：
+當程式庫收到查詢回應訊息之後，它會將從[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要傳回的資料具體化成查詢類型之用戶端資料服務類別的實例。 具體化這些物件的一般程序如下所示：
 
 1. 用戶端程式庫會從回應訊息摘要中的 `entry` 項目讀取序列化的型別，並嘗試利用下列其中一種方式建立正確型別的新執行個體：
 
@@ -38,10 +38,10 @@ ms.locfileid: "70043538"
 
     - 複雜屬性會設定為新的複雜類型執行個體，其會與回應中的複雜類型屬性一起設定。
 
-    - 導覽屬性會傳回相關實體的集合，它們會設定為新的或現有之 <xref:System.Collections.Generic.ICollection%601> 的執行個體，其中 `T` 指相關實體的類型。 除非已將相關物件載入 <xref:System.Data.Services.Client.DataServiceContext>，否則這是一個空的集合。 如需詳細資訊, 請參閱[載入延](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)後的內容。
+    - 導覽屬性會傳回相關實體的集合，它們會設定為新的或現有之 <xref:System.Collections.Generic.ICollection%601> 的執行個體，其中 `T` 指相關實體的類型。 除非已將相關物件載入 <xref:System.Data.Services.Client.DataServiceContext>，否則這是一個空的集合。 如需詳細資訊，請參閱[載入延](loading-deferred-content-wcf-data-services.md)後的內容。
 
       > [!NOTE]
-      > 當產生之用戶端資料類別支援資料繫結時，導覽屬性會傳回 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體來代替。 如需詳細資訊, 請參閱[將資料系結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。
+      > 當產生之用戶端資料類別支援資料繫結時，導覽屬性會傳回 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體來代替。 如需詳細資訊，請參閱[將資料系結至控制項](binding-data-to-controls-wcf-data-services.md)。
 
 4. 便會引發 <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> 事件。
 
@@ -49,5 +49,5 @@ ms.locfileid: "70043538"
 
 ## <a name="see-also"></a>另請參閱
 
-- [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [查詢投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [查詢資料服務](querying-the-data-service-wcf-data-services.md)
+- [查詢投影](query-projections-wcf-data-services.md)

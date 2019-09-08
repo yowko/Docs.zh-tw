@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed26df6580aeaf2936bd50c9f1855a08ac68b90b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb53014a28fb291b8463535addfb61e62d32d7d6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778432"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795363"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject 函式
-取得的介面指標[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)執行個體，表示具有指定名稱的組件的唯一識別。  
+取得[IAssemblyName](iassemblyname-interface.md)實例的介面指標，表示具有指定名稱之元件的唯一識別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,27 +41,27 @@ HRESULT CreateAssemblyNameObject (
   
 ## <a name="parameters"></a>參數  
  `ppAssemblyNameObj`  
- [out]傳回`IAssemblyName`。  
+ 脫銷傳回`IAssemblyName`的。  
   
  `szAssemblyName`  
- [in]要建立新的組件名稱`IAssemblyName`執行個體。  
+ 在要建立新`IAssemblyName`實例之元件的名稱。  
   
  `dwFlags`  
- [in]要傳遞給物件建構函式的旗標。  
+ 在要傳遞至物件的函式的旗標。  
   
  `pvReserved`  
- [in]保留供未來擴充。 `pvReserved` 必須是 null 參考。  
+ 在保留以供未來擴充性之用。 `pvReserved`必須是 null 參考。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IAssemblyName 介面](iassemblyname-interface.md)
+- [融合全域靜態函式](fusion-global-static-functions.md)

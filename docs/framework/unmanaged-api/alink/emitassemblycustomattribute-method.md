@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfcc2db3f1f0d8646f903fedb1eb06b39928d00
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742128"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777449"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute 方法
-呼叫以設定組件層級的自訂屬性。  
+呼叫以設定元件層級的自訂屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,34 +43,34 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 組件的識別碼。  
+ 元件的識別碼。  
   
  `FileToken`  
- 定義屬性的檔案。 可以是 NULL，如果`AssemblyID`不會指出未繫結的 netmodule。  
+ 定義屬性的檔案。 如果未指出未`AssemblyID`系結的 .netmodule，則可以是 Null。  
   
  `tkType`  
- 自訂屬性型別。  
+ 自訂屬性的類型。  
   
  `pCustomValue`  
- 自訂值的資料。  
+ 自訂值資料。  
   
  `cbCustomValue`  
- 自訂數值資料的長度。  
+ 自訂值資料的長度。  
   
  `bSecurity`  
- 如果簽章的組件與相關的自訂屬性，則為 TRUE。  
+ 如果自訂屬性與元件簽署有關，則為 TRUE。  
   
  `bAllowMulti`  
- 如果多個屬性，就會發出，則為 TRUE。  
+ 如果要發出多個屬性，則為 TRUE。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 介面](ialink-interface.md)
+- [IALink2 介面](ialink2-interface.md)
+- [ALink API](index.md)

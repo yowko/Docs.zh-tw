@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 8029633c-b6e4-4665-a7c2-89607c3247ef
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42f5685a9a976be7a3a73badf286f77216e43106
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 357a2ca0ffc733adb14a21624cbe28fb754c8240
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741239"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776723"
 ---
 # <a name="certfreeauthenticodesignerinfo-function"></a>CertFreeAuthenticodeSignerInfo 函式
-釋出配置給資源[AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)結構。  
+釋放配置給[AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md)結構的資源。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,11 +29,11 @@ HRESULT CertFreeAuthenticodeSignerInfo (
   
 ## <a name="parameters"></a>參數  
  `pSignerInfo`  
- [in, out] 所要發行的簽署人資訊。 請參閱[AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)結構。  
+ [in, out] 所要發行的簽署人資訊。 請參閱[AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md)結構。  
   
 ## <a name="return-value"></a>傳回值  
  如果函式成功，會傳回 `S_OK`。 否則會傳回錯誤碼。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [Authenticode](index.md)

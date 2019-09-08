@@ -1,5 +1,5 @@
 ---
-title: 作法：比較宣告
+title: HOW TO：比較宣告
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: e2d3d33900dd894eea77420aac444ebde0df9a43
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68970769"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797093"
 ---
-# <a name="how-to-compare-claims"></a>HOW TO：比較宣告
+# <a name="how-to-compare-claims"></a>作法：比較宣告
 
-Windows Communication Foundation (WCF) 中的識別模型基礎結構是用來執行授權檢查。 因此，比較授權內容中的宣告與執行所要求動作或存取所要求資源所需要的宣告，屬於常見的工作。 本主題將描述如何比較宣告，包括內建和自訂的宣告類型。 如需身分識別模型基礎結構的詳細資訊, 請參閱[使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。
+Windows Communication Foundation （WCF）中的識別模型基礎結構是用來執行授權檢查。 因此，比較授權內容中的宣告與執行所要求動作或存取所要求資源所需要的宣告，屬於常見的工作。 本主題將描述如何比較宣告，包括內建和自訂的宣告類型。 如需身分識別模型基礎結構的詳細資訊，請參閱[使用身分識別模型來管理宣告與授權](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)。
 
 宣告比較需要將宣告中的三個部分 (類型、權限和資源) 與其他宣告的相同部分進行比較，以便判斷兩種宣告是否相等。 請參閱下列範例。
 
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) 中的識別模型基礎結構是用來�
 [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
 [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]
 
-方法中`example\someone` someone@example.com的比較程式碼會傳回,假設將相同的網域使用者識別為""。`true` <xref:System.IdentityModel.Claims.Claim.Equals%2A>
+方法中`example\someone` someone@example.com的比較程式碼會傳回，假設將相同的網域使用者識別為""。`true` <xref:System.IdentityModel.Claims.Claim.Equals%2A>
 
 自訂的宣告類型也可以使用 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 方法來進行比較。 不過，在宣告的 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 屬性所傳回的類型不同於原始類型的情況下，根據 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 方法，只有在 `true` 屬性傳回的值相等時，`Resource` 才會傳回 <xref:System.IdentityModel.Claims.Claim.Equals%2A>。 在某些不適當的情況下，`Resource` 屬性傳回的自訂類型應該覆寫 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法，以便執行任何必要的自訂處理。
 
@@ -74,5 +74,5 @@ Windows Communication Foundation (WCF) 中的識別模型基礎結構是用來�
 
 ## <a name="see-also"></a>另請參閱
 
-- [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [如何：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [使用身分識別模型來管理宣告與授權](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [如何：建立自訂宣告](how-to-create-a-custom-claim.md)

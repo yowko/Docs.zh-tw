@@ -2,12 +2,12 @@
 title: 了解狀態變更
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f72d113c7160bdb6c4c5680669243323a30a4c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963077"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796949"
 ---
 # <a name="understanding-state-changes"></a>了解狀態變更
 本主題說明通道具有的狀態和轉換、用來建構通道狀態的型別，以及如何實作。  
@@ -24,16 +24,16 @@ ms.locfileid: "69963077"
 ## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>ICommunicationObject、CommunicationObject、狀態和狀態轉換  
  <xref:System.ServiceModel.ICommunicationObject> 一開始處於 Created 狀態，在這個狀態下可設定各種屬性。 一旦在 Opened 狀態下，物件就不能用於傳送和接收訊息，它的屬性也會被視為不變的。 一旦在 Closing 狀態下，物件就無法再處理新的傳送或接收要求，但是直到 Close 逾時之前現有的要求仍有機會完成。  如果發生無法修復的錯誤，物件會轉換為 Faulted 狀態，在這個狀態下，可檢查物件取得錯誤相關資訊，最後關閉物件。 在 Closed 狀態下，物件本質上已經達到狀態機器結尾。 一旦物件從某個狀態轉換為下一個狀態，就不會回到上一個狀態。  
   
- 下圖說明 <xref:System.ServiceModel.ICommunicationObject> 狀態和狀態轉換。 藉由呼叫下列三種方法的其中一種, 可能會導致狀態轉換:[中止]、[開啟] 或 [關閉]。 此外，藉由呼叫其他實作特定的方法，也可以造成狀態轉換。 當開啟通訊物件的時候或之後發生錯誤，則會轉換為 Faulted 狀態。  
+ 下圖說明 <xref:System.ServiceModel.ICommunicationObject> 狀態和狀態轉換。 藉由呼叫下列三種方法的其中一種，可能會導致狀態轉換：[中止]、[開啟] 或 [關閉]。 此外，藉由呼叫其他實作特定的方法，也可以造成狀態轉換。 當開啟通訊物件的時候或之後發生錯誤，則會轉換為 Faulted 狀態。  
   
  每個 <xref:System.ServiceModel.ICommunicationObject> 一開始都處於 Created 狀態。 在這個狀態下，應用程式可以設定物件屬性。 一旦物件處於 Created 以外的狀態，就會被視為不變的。  
   
- ![通道狀態轉換](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![通道狀態轉換](./media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 [圖 1] ICommunicationObject 狀態機器。  
   
- Windows Communication Foundation (WCF) 提供名為<xref:System.ServiceModel.Channels.CommunicationObject> <xref:System.ServiceModel.ICommunicationObject>的抽象基類, 該類別會執行和通道狀態機器。 下圖是 <xref:System.ServiceModel.Channels.CommunicationObject> 特定的狀態修訂圖。 除了 <xref:System.ServiceModel.ICommunicationObject> 狀態機器之外，它還說明了叫用其他 <xref:System.ServiceModel.Channels.CommunicationObject> 方法的時機。  
+ Windows Communication Foundation （WCF）提供名為<xref:System.ServiceModel.Channels.CommunicationObject> <xref:System.ServiceModel.ICommunicationObject>的抽象基類，該類別會執行和通道狀態機器。 下圖是 <xref:System.ServiceModel.Channels.CommunicationObject> 特定的狀態修訂圖。 除了 <xref:System.ServiceModel.ICommunicationObject> 狀態機器之外，它還說明了叫用其他 <xref:System.ServiceModel.Channels.CommunicationObject> 方法的時機。  
   
- ![狀態變更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![狀態變更](./media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 圖 2。 CommunicationObject 狀態機器的 CommunicationObject 實作，包括呼叫事件和受保護的方法。  
   
 ### <a name="icommunicationobject-events"></a>ICommunicationObject 事件  
@@ -64,7 +64,7 @@ ms.locfileid: "69963077"
   
  <xref:System.ServiceModel.Channels.CommunicationObject> 提供了三個都會將物件置於 Created 狀態的建構函式。 這些建構函式定義為：  
   
- 第一個函式是一個無參數的函式, 可委派給接受物件的函式多載:  
+ 第一個函式是一個無參數的函式，可委派給接受物件的函式多載：  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
@@ -82,7 +82,7 @@ ms.locfileid: "69963077"
   
  預處理已建立狀態。  
   
- 後置條件:狀態為 [已開啟] 或 [錯誤]。 可能會擲回例外狀況。  
+ 後置條件：狀態為 [已開啟] 或 [錯誤]。 可能會擲回例外狀況。  
   
  Open() 方法會嘗試開啟通訊物件，並將狀態設定為 Opened。 如果發生錯誤，則會將狀態設定為 Faulted。  
   
@@ -90,28 +90,28 @@ ms.locfileid: "69963077"
   
  然後，將狀態設定為 Opening，並依序呼叫 OnOpening() (這會引發 Opening 事件)、OnOpen() 和 OnOpened()。 OnOpened() 會將狀態設定為 Opened，並且引發 Opened 事件。 如果任何這些呼叫擲回例外狀況，則 Open() 會呼叫 Fault()，並且將例外狀況反昇。 下圖詳細說明 Open 處理序。  
   
- ![狀態變更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![狀態變更](./media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 覆寫 OnOpen 方法以實作自訂開啟邏輯，例如開啟內部通訊物件。  
   
  Close 方法  
   
  預處理無。  
   
- 後置條件:狀態為 [已關閉]。 可能會擲回例外狀況。  
+ 後置條件：狀態為 [已關閉]。 可能會擲回例外狀況。  
   
  在任何狀態下，都可以呼叫 Close() 方法。 這個方法會嘗試依正常程序關閉物件。 如果發生錯誤，則會終止物件。 如果目前狀態為 Closing 或 Closed，這個方法不會有任何作用。 否則，會將狀態設定為 Closing。 如果原始狀態為 Created、Opening 或 Faulted，則會呼叫 Abort() (請參閱下圖)。 如果原始狀態為 Opened，則會依序呼叫 OnClosing() (這會引發 Closing 事件)、OnClose() 和 OnClosed()。 如果任何這些呼叫擲回例外狀況，則 Close() 會呼叫 Abort()，並且將例外狀況反昇。 OnClosed() 會將狀態設定為 Closed，並且引發 Closed 事件。 下圖詳細說明 Close 處理序。  
   
- ![狀態變更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
+ ![狀態變更](./media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
 覆寫 OnClose 方法以實作自訂關閉邏輯，例如關閉內部通訊物件。 因為 OnClose() 接受逾時參數，而且不是做為 Abort() 的一部分呼叫，所有長時間封鎖 (例如等待另一端回應) 的依正常程序關閉邏輯都應該在 OnClose() 之中實作。  
   
  Abort  
   
  預處理無。  
-後置條件:狀態為 [已關閉]。 可能會擲回例外狀況。  
+後置條件：狀態為 [已關閉]。 可能會擲回例外狀況。  
   
  如果目前狀態為 Closed，或者物件已經終止 (例如，可能藉由在另一個執行緒上執行 Abort())，則 Abort() 方法不會有任何作用。 否則，方法會將狀態設定為 Closing，並且依序呼叫 OnClosing() (這會引發 Closing 事件)、OnAbort() 和 OnClosed() (不會呼叫 OnClose，因為物件正在終止，而未關閉)。 OnClosed() 會將狀態設定為 Closed，並且引發 Closed 事件。 如果任何這些呼叫擲回例外狀況，則會將例外狀況重新擲回至 Abort 的呼叫者。 OnClosing()、OnClosed() 和 OnAbort() 實作不應封鎖 (例如，於輸入/輸出時)。 下圖詳細說明 Abort 處理序。  
   
- ![狀態變更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
+ ![狀態變更](./media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
 覆寫 OnAbort 方法以實作自訂終止邏輯，例如終止內部通訊物件。  
   
  Fault  
@@ -120,7 +120,7 @@ ms.locfileid: "69963077"
   
  預處理無。  
   
- 後置條件:狀態為 [錯誤]。 可能會擲回例外狀況。  
+ 後置條件：狀態為 [錯誤]。 可能會擲回例外狀況。  
   
  如果目前狀態為 Faulted 或 Closed，Fault() 方法不會有任何作用。 否則，會將狀態設定為 Faulted 並呼叫 OnFaulted()，而引發 Faulted 事件。 如果 OnFaulted 擲回例外狀況，則會重新擲回例外狀況。  
   

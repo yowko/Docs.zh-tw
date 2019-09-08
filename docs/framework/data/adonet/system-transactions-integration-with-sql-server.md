@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 25b443d8234909a4d8525c2ce2b4e70c3baa337b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 075eea42c65a822fc46ca14f820599567c35d231
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965224"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791360"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 與 SQL Server 整合
-.NET Framework 版本2.0 引進了可透過<xref:System.Transactions>命名空間存取的交易架構。 此架構會以在 .NET Framework 中完全整合的方式來公開交易, 包括 ADO.NET。  
+.NET Framework 版本2.0 引進了可透過<xref:System.Transactions>命名空間存取的交易架構。 此架構會以在 .NET Framework 中完全整合的方式來公開交易，包括 ADO.NET。  
   
- 除了可程式性增強功能之外<xref:System.Transactions> , 當您使用交易時, 和 ADO.NET 可以共同合作以協調優化。 可提升的交易是可視需要自動提升為完全分散式交易的輕量型 (本機) 交易。  
+ 除了可程式性增強功能之外<xref:System.Transactions> ，當您使用交易時，和 ADO.NET 可以共同合作以協調優化。 可提升的交易是可視需要自動提升為完全分散式交易的輕量型 (本機) 交易。  
   
- 從 ADO.NET 2.0 開始, <xref:System.Data.SqlClient>當您使用 SQL Server 時, 支援可提升交易。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 可提升交易是自動的, 而且不需要開發人員介入。  
+ 從 ADO.NET 2.0 開始， <xref:System.Data.SqlClient>當您使用 SQL Server 時，支援可提升交易。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 可提升交易是自動的，而且不需要開發人員介入。  
   
- 只有當您使用 .NET Framework Data Provider 搭配 SQL Server 的 SQL Server (`SqlClient`) 時, 才可提升交易。  
+ 只有當您使用 .NET Framework Data Provider 搭配 SQL Server 的 SQL Server （`SqlClient`）時，才可提升交易。  
   
 ## <a name="creating-promotable-transactions"></a>建立可提升交易  
- SQL Server 的 .NET Framework 提供者提供可提升交易的支援, 這會透過 .NET Framework <xref:System.Transactions>命名空間中的類別來處理。 可提升交易藉由直到需要時才建立分散式交易的方式，來最佳化分散式交易。 如果只需要一個資源管理員，則不會發生分散式交易。  
+ SQL Server 的 .NET Framework 提供者提供可提升交易的支援，這會透過 .NET Framework <xref:System.Transactions>命名空間中的類別來處理。 可提升交易藉由直到需要時才建立分散式交易的方式，來最佳化分散式交易。 如果只需要一個資源管理員，則不會發生分散式交易。  
   
 > [!NOTE]
 > 在部分信任案例中，當某筆交易提升至分散式交易時， <xref:System.Transactions.DistributedTransactionPermission> 就是必要項目。  
   
 ## <a name="promotable-transaction-scenarios"></a>可提升交易案例  
- 分散式交易通常要耗用大量的系統資源，並由「Microsoft 分散式交易協調器 (MS DTC)」進行管理，其整合了交易中會存取的所有資源管理者。 可提升交易是<xref:System.Transactions>交易的特殊形式, 可有效地將工作委派給簡單的 SQL Server 交易。 <xref:System.Transactions>、 <xref:System.Data.SqlClient>和 SQL Server 會協調處理交易時所涉及的工作, 並視需要將它升級為完整的分散式交易。  
+ 分散式交易通常要耗用大量的系統資源，並由「Microsoft 分散式交易協調器 (MS DTC)」進行管理，其整合了交易中會存取的所有資源管理者。 可提升交易是<xref:System.Transactions>交易的特殊形式，可有效地將工作委派給簡單的 SQL Server 交易。 <xref:System.Transactions>、 <xref:System.Data.SqlClient>和 SQL Server 會協調處理交易時所涉及的工作，並視需要將它升級為完整的分散式交易。  
   
  使用可提升交易的好處是：當以作用中的 <xref:System.Transactions.TransactionScope> 交易開啟連接，且未開啟其他連接時，會將交易認可為輕量型交易，不會產生完全分散式交易的額外負擔。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "69965224"
   
  下表說明可能出現的值。  
   
-|關鍵字|說明|  
+|關鍵字|描述|  
 |-------------|-----------------|  
 |Implicit Unbind|預設值。 結束時，連接會與交易中斷連結，並切換回自動認可模式。|  
 |Explicit Unbind|連接會維持附加至交易的狀態，直到交易關閉為止。 如果相關聯的交易並非使用中或與 <xref:System.Transactions.Transaction.Current%2A>不符，連接將會失敗。|  
@@ -230,5 +230,5 @@ End Function
   
 ## <a name="see-also"></a>另請參閱
 
-- [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [異動和並行存取](transactions-and-concurrency.md)
+- [ADO.NET 概觀](ado-net-overview.md)

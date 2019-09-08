@@ -2,24 +2,24 @@
 title: ThumbPrintNotFound
 ms.date: 03/30/2017
 ms.assetid: 0e901d43-5359-4f06-a564-6e5821253ece
-ms.openlocfilehash: 97b1106cb5618ca4278f273127da26296b91d858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd729c1ef050aeafa51b5a4c58f2d3d8a26fb7c2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944426"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796083"
 ---
 # <a name="thumbprintnotfound"></a>ThumbPrintNotFound
 識別碼:152  
   
- 嚴重性：錯誤  
+ 嚴重性：Error  
   
- 類別：TransactionBridge  
+ CategoryTransactionBridge  
   
 ## <a name="description"></a>描述  
  這個事件表示找不到具有該特定指紋的身分識別憑證。 此事件會列出處理序名稱和處理序識別碼。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [事件記錄](index.md)
+- [事件一般參考](events-general-reference.md)

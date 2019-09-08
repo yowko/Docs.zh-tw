@@ -2,22 +2,22 @@
 title: 選擇訊息交換模式
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7dcbea30b53142ed68db9ac138f8c7a665ca1729
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951866"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797299"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>選擇訊息交換模式
-撰寫自訂傳輸的第一個步驟, 是決定您要開發的通道需要哪些*訊息交換模式*(或 mep)。 本主題會說明可用的選項，並討論各種需求。 這是[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)中所述的通道開發工作清單中的第一個工作。  
+撰寫自訂傳輸的第一個步驟，是決定您要開發的通道需要哪些*訊息交換模式*（或 mep）。 本主題會說明可用的選項，並討論各種需求。 這是[開發通道](developing-channels.md)中所述的通道開發工作清單中的第一個工作。  
   
 ## <a name="six-message-exchange-patterns"></a>六種訊息交換模式  
  您可以從三個 MEP 中選擇：  
   
 - 資料包 (<xref:System.ServiceModel.Channels.IInputChannel> 和 <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
-     使用資料包 MEP 時, 用戶端會使用火災來傳送訊息,*而*不會發出交換。 射後不理交換是一種需要以超出範圍之外的方式確認傳遞成功的交換。 訊息可能會在傳輸時遺失而永遠無法抵達服務。 即使傳送作業在用戶端已成功完成，也無法保證遠端端點已接收到該訊息。 資料包是訊息的基本建置組塊，您可以在資料包的最上層建立自己的通訊協定，其中包括可靠的通訊協定和安全的通訊協定。 用戶端資料包通道會實作 <xref:System.ServiceModel.Channels.IOutputChannel> 介面，服務資料包通道則會實作 <xref:System.ServiceModel.Channels.IInputChannel> 介面。  
+     使用資料包 MEP 時，用戶端會使用火災來傳送訊息，*而*不會發出交換。 射後不理交換是一種需要以超出範圍之外的方式確認傳遞成功的交換。 訊息可能會在傳輸時遺失而永遠無法抵達服務。 即使傳送作業在用戶端已成功完成，也無法保證遠端端點已接收到該訊息。 資料包是訊息的基本建置組塊，您可以在資料包的最上層建立自己的通訊協定，其中包括可靠的通訊協定和安全的通訊協定。 用戶端資料包通道會實作 <xref:System.ServiceModel.Channels.IOutputChannel> 介面，服務資料包通道則會實作 <xref:System.ServiceModel.Channels.IInputChannel> 介面。  
   
 - 要求-回應 (<xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
@@ -27,7 +27,7 @@ ms.locfileid: "69951866"
   
      雙工 MEP 會允許用戶端傳送任意數目的訊息，並以任何順序接收這些訊息。 雙工 MEP 就像是電話交談，談話中說出的每個字都是一則訊息。 由於兩端都可以透過此種 MEP 來傳送和接收訊息，所以由用戶端和服務通道所實作的介面會是 <xref:System.ServiceModel.Channels.IDuplexChannel>。  
   
- ![選擇訊息交換模式](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![選擇訊息交換模式](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 三個基本訊息交換模式。 從上到下：資料包、要求-回應及雙工。  
   
  這些 Mep 中的每一個也可以支援*會話*。 工作階段 (以及 <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 型別的 <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> 實作) 會使在通道中傳送與接收的所有訊息相互關聯。 要求-回應模式是獨立的兩個訊息工作階段，因為要求與回覆是相互關聯的。 相較之下，支援工作階段的要求-回應模式，則表示在通道上的所有要求/回應組合都與彼此相互關聯。 這樣您就可以從總計六個的 MEP 中進行選擇：  
@@ -52,7 +52,7 @@ ms.locfileid: "69951866"
   
  在通道物件模型中，每個邏輯工作階段都會顯示為工作階段通道的執行個體。 因此，由用戶端建立並由服務接受的每個新工作階段，都會對應到每一端上的新工作階段通道。 下圖的最上方顯示出無工作階段通道的結構，而下方則顯示工作階段通道的結構。  
   
- ![選擇訊息交換模式](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![選擇訊息交換模式](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
   
  用戶端會建立新的工作階段通道並傳送訊息。 在服務端上，通道接聽程式會接收此訊息，並偵測到該訊息屬於新的工作階段，因此它會建立新的工作階段通道，並會將其交給應用程式 (以回應在通道接聽程式上呼叫 AcceptChannel 的應用程式)。 接著，應用程式便會接收此訊息，以及所有透過該相同工作階段通道傳送的後續訊息。  
   
@@ -94,4 +94,4 @@ ms.locfileid: "69951866"
   
 ## <a name="see-also"></a>另請參閱
 
-- [通道模型概觀](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+- [通道模型概觀](channel-model-overview.md)

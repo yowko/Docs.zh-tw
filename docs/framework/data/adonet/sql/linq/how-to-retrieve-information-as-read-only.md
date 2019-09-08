@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: b98c5e6ea49695015eb566ca2176b23c5260017a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 399bf44ef5536a9adebf1cad590439741df998f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928705"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793310"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>作法：以唯讀形式擷取資訊
 不想要變更資料時，可以搜尋唯讀結果以增加查詢效能。  
@@ -28,6 +28,6 @@ ms.locfileid: "69928705"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [查詢資料庫](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
-- [延後與立即載入的比較](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)
+- [查詢概念](query-concepts.md)
+- [查詢資料庫](querying-the-database.md)
+- [延後與立即載入的比較](deferred-versus-immediate-loading.md)
