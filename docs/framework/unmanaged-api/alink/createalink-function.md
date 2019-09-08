@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 993848711f41c9e03b969a3c611982a5c8bc860d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 24f7e2d5a547b78ceb4808feaf581c6f49807cf7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742214"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787625"
 ---
-# <a name="createalink-function"></a><span data-ttu-id="1db40-102">CreateALink 函式</span><span class="sxs-lookup"><span data-stu-id="1db40-102">CreateALink Function</span></span>
-<span data-ttu-id="1db40-103">建立組件連結器的執行個體，並將指標設定為指定的介面。</span><span class="sxs-lookup"><span data-stu-id="1db40-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  
+# <a name="createalink-function"></a><span data-ttu-id="6c350-102">CreateALink 函式</span><span class="sxs-lookup"><span data-stu-id="6c350-102">CreateALink Function</span></span>
+<span data-ttu-id="6c350-103">建立元件連結器的實例，並設定指定介面的指標。</span><span class="sxs-lookup"><span data-stu-id="6c350-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1db40-104">語法</span><span class="sxs-lookup"><span data-stu-id="1db40-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6c350-104">語法</span><span class="sxs-lookup"><span data-stu-id="6c350-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateALink (  
@@ -36,16 +36,16 @@ HRESULT CreateALink (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1db40-105">參數</span><span class="sxs-lookup"><span data-stu-id="1db40-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6c350-105">參數</span><span class="sxs-lookup"><span data-stu-id="6c350-105">Parameters</span></span>  
   
-|<span data-ttu-id="1db40-106">參數</span><span class="sxs-lookup"><span data-stu-id="1db40-106">Parameter</span></span>|<span data-ttu-id="1db40-107">描述</span><span class="sxs-lookup"><span data-stu-id="1db40-107">Description</span></span>|  
+|<span data-ttu-id="6c350-106">參數</span><span class="sxs-lookup"><span data-stu-id="6c350-106">Parameter</span></span>|<span data-ttu-id="6c350-107">說明</span><span class="sxs-lookup"><span data-stu-id="6c350-107">Description</span></span>|  
 |---------------|-----------------|  
-|`riid`|<span data-ttu-id="1db40-108">其中一個組件連結器介面的實體名稱。</span><span class="sxs-lookup"><span data-stu-id="1db40-108">The physical name of one of the Assembly Linker interfaces.</span></span>|  
-|`ppInterface`|<span data-ttu-id="1db40-109">成功完成時包含位置的指標`riid`介面。</span><span class="sxs-lookup"><span data-stu-id="1db40-109">The location that on successful completion contains a pointer to the `riid` interface.</span></span>|  
+|`riid`|<span data-ttu-id="6c350-108">其中一個元件連結器介面的機構名稱。</span><span class="sxs-lookup"><span data-stu-id="6c350-108">The physical name of one of the Assembly Linker interfaces.</span></span>|  
+|`ppInterface`|<span data-ttu-id="6c350-109">成功完成時的位置包含`riid`介面的指標。</span><span class="sxs-lookup"><span data-stu-id="6c350-109">The location that on successful completion contains a pointer to the `riid` interface.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1db40-110">需求</span><span class="sxs-lookup"><span data-stu-id="1db40-110">Requirements</span></span>  
- <span data-ttu-id="1db40-111">**程式庫**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="1db40-111">**Library**: alink.dll</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c350-110">需求</span><span class="sxs-lookup"><span data-stu-id="6c350-110">Requirements</span></span>  
+ <span data-ttu-id="6c350-111">連結**庫**： alink .dll</span><span class="sxs-lookup"><span data-stu-id="6c350-111">**Library**: alink.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1db40-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1db40-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c350-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6c350-112">See also</span></span>
 
-- [<span data-ttu-id="1db40-113">Al.exe (組件連結器)</span><span class="sxs-lookup"><span data-stu-id="1db40-113">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [<span data-ttu-id="6c350-113">Al.exe (組件連結器)</span><span class="sxs-lookup"><span data-stu-id="6c350-113">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)
