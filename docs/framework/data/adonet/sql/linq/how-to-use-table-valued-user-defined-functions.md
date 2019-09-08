@@ -1,18 +1,18 @@
 ---
-title: HOW TO：使用資料表值使用者定義函式
+title: 作法：使用資料表值使用者定義函式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: eedc2e9b997e91ed9fe0038f260aa475d23a0627
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31797ae7d0fe23227cc4af733fbceac5d474f779
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033588"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781452"
 ---
-# <a name="how-to-use-table-valued-user-defined-functions"></a>HOW TO：使用資料表值使用者定義函式
+# <a name="how-to-use-table-valued-user-defined-functions"></a>作法：使用資料表值使用者定義函式
 資料表值函式會傳回單一資料列集 (Rowset)，而不像預存程序 (Stored Procedure) 會傳回多個結果圖案。 因為資料表值函式的傳回型別為 `Table`，所以在可使用資料表的 SQL 中，您可以在任意處使用資料表值函式。 您也可以如同處理資料表一樣來處理資料表值函式。  
   
 ## <a name="example"></a>範例  
@@ -49,4 +49,4 @@ AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用者定義函式](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+- [使用者定義函式](user-defined-functions.md)

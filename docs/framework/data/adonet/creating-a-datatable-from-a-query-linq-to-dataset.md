@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 88abd0e5b7f56702c7a7009842253d3ca552d01f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 4b95ec5a3e83fa5553a154ed64704312726153cf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504211"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785638"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>從查詢建立 DataTable (LINQ to DataSet)
 資料繫結 (Data Binding) 是 <xref:System.Data.DataTable> 物件的常見用法。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會採用查詢的結果並將資料複製到 <xref:System.Data.DataTable> 中，然後此物件便可用於資料繫結。 執行了資料作業之後，新的 <xref:System.Data.DataTable> 就會合併回來源 <xref:System.Data.DataTable> 中。  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會使用下列程序，從查詢中建立 <xref:System.Data.DataTable>：  
   
-1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會從來源資料表 (實作 <xref:System.Data.DataTable> 介面的 <xref:System.Data.DataTable> 物件) 中複製 (Clone) <xref:System.Linq.IQueryable%601>。 <xref:System.Collections.IEnumerable>來源通常源自 LINQ to DataSet 運算式或方法查詢。  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會從來源資料表 (實作 <xref:System.Data.DataTable> 介面的 <xref:System.Data.DataTable> 物件) 中複製 (Clone) <xref:System.Linq.IQueryable%601>。 <xref:System.Collections.IEnumerable>來源通常源自于 LINQ to DataSet 運算式或方法查詢。  
   
 2. 複製的 <xref:System.Data.DataTable> 結構描述是根據來源資料表中第一個列舉 <xref:System.Data.DataRow> 物件的資料行所建立，而且複製之資料表的名稱就是來源資料表的名稱並附加上 "query" 一字。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "67504211"
   
  當 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法在來源資料表的資料列中遇到 Null 參考或可為 Null 的實值型別 (Value Type) 時，它會將此值取代成 <xref:System.DBNull.Value>。 如此一來，傳回之 <xref:System.Data.DataTable> 中的 Null 值都會經過正確處理。  
   
- 注意:<xref:System.Data.DataTableExtensions.CopyToDataTable%2A>方法接受做為輸入的查詢，可以從多個傳回資料列<xref:System.Data.DataTable>或<xref:System.Data.DataSet>物件。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會將資料 (但不包含屬性) 從來源 <xref:System.Data.DataTable> 或 <xref:System.Data.DataSet> 物件複製到傳回的 <xref:System.Data.DataTable>。 您必須針對傳回的 <xref:System.Data.DataTable> 明確設定屬性，例如 <xref:System.Data.DataTable.Locale%2A> 和 <xref:System.Data.DataTable.TableName%2A>。  
+ 注意:方法會接受可從多個<xref:System.Data.DataTable>或<xref:System.Data.DataSet>物件傳回資料列的查詢做為輸入。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會將資料 (但不包含屬性) 從來源 <xref:System.Data.DataTable> 或 <xref:System.Data.DataSet> 物件複製到傳回的 <xref:System.Data.DataTable>。 您必須針對傳回的 <xref:System.Data.DataTable> 明確設定屬性，例如 <xref:System.Data.DataTable.Locale%2A> 和 <xref:System.Data.DataTable.TableName%2A>。  
   
  下列範例將在 SalesOrderHeader 資料表中查詢是否有 2001 年 8 月 8 日之後的訂單，然後使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法，從該查詢中建立 <xref:System.Data.DataTable>。 接著，<xref:System.Data.DataTable> 便繫結至 <xref:System.Windows.Forms.BindingSource>，而它會當做 <xref:System.Windows.Forms.DataGridView> 的 Proxy。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67504211"
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
 ## <a name="creating-a-custom-copytodatatablet-method"></a>建立自訂 CopyToDataTable\<T > 方法  
- 現有的 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法只能在通用參數 <xref:System.Collections.Generic.IEnumerable%601> 為 `T` 型別的<xref:System.Data.DataRow> 來源上運作。 雖然這樣非常有用，但是資料表卻無法從一序列的純量型別、傳回匿名型別的查詢或執行資料表聯結的查詢建立。 如需如何實作兩個自訂的範例`CopyToDataTable`方法從一序列的純量或匿名型別載入資料表，請參閱[How to:實作 CopyToDataTable\<T > 其中泛型型別 T 不是 DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s。  
+ 現有的 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法只能在通用參數 <xref:System.Collections.Generic.IEnumerable%601> 為 `T` 型別的<xref:System.Data.DataRow> 來源上運作。 雖然這樣非常有用，但是資料表卻無法從一序列的純量型別、傳回匿名型別的查詢或執行資料表聯結的查詢建立。 如需如何執行從純量或匿名`CopyToDataTable`類型的序列載入資料表的兩個自訂方法的範例，請[參閱如何：在泛型\<型別 T 不是 DataRow](implement-copytodatatable-where-type-not-a-datarow.md)s 的情況下，執行 CopyToDataTable T >。  
   
  本節的範例都使用以下自訂型別：  
   
@@ -76,6 +76,6 @@ ms.locfileid: "67504211"
   
 ## <a name="see-also"></a>另請參閱
 
-- [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [泛型 Field 和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
-- [LINQ to DataSet 範例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [程式設計手冊](programming-guide-linq-to-dataset.md)
+- [泛型 Field 和 SetField 方法](generic-field-and-setfield-methods-linq-to-dataset.md)
+- [LINQ to DataSet 範例](linq-to-dataset-examples.md)

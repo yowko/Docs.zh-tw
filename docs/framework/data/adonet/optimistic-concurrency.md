@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929233"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794675"
 ---
 # <a name="optimistic-concurrency"></a>開放式並行存取
 在多使用者環境中，更新資料庫中的資料時，有兩種模型可供使用：開放式並行存取和封閉式並行存取。 <xref:System.Data.DataSet> 物件的設計是要鼓勵使用者在進行長時間的活動 (如遠端處理資料以及與資料進行互動) 時，採用開放式同步存取。  
@@ -42,7 +42,7 @@ ms.locfileid: "69929233"
   
  在下午 1:01 時，User2 讀取同一資料列。  
   
- 在下午 1:03, 人員會將**FirstName**從 "Bob" 變更為 "Robert", 並更新資料庫。  
+ 在下午1:03，人員會將**FirstName**從 "Bob" 變更為 "Robert"，並更新資料庫。  
   
 |資料行名稱|原始值|目前值|資料庫中的值|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "69929233"
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- 若要在更新**Table1**中的資料列時測試開放式平行存取違規, 您會發出下列 UPDATE 語句:  
+ 若要在更新**Table1**中的資料列時測試開放式平行存取違規，您會發出下列 UPDATE 語句：  
   
 ```  
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  使用開放式同步存取模型時，您也可以選擇套用較寬鬆的準則。 例如，在 WHERE 子句中僅使用主索引鍵資料行時，不論另一個資料行在上次查詢後是否曾更新，都會覆寫資料。 您也可以只在特定資料行套用 WHERE 子句，以覆寫資料 (除非特定欄位在上次查詢後已經更新)。  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated 事件  
- <xref:System.Data.Common.DataAdapter>物件的**RowUpdated**事件可以與先前所述的技術搭配使用, 以提供通知給您的應用程式開放式平行存取違規。 **RowUpdated**會在每次嘗試從**資料集**更新**修改過**的資料列之後發生。 如此可讓您加入特殊處理程式碼，包括發生例外狀況時的處理、加入自訂錯誤資訊、加入重試邏輯等等。 物件會傳回 RecordsAffected 屬性, 其中包含資料表中修改過的資料列之特定 update 命令所影響的資料列數目。 <xref:System.Data.Common.RowUpdatedEventArgs> 藉由將 update 命令設定為測試開放式平行存取, **RecordsAffected**屬性會在發生開放式平行存取違規時傳回0的值, 因為未更新任何記錄。 若發生這種情況，就會發生例外狀況。 **RowUpdated**事件可讓您處理這種情況, 並藉由設定適當的**RowUpdatedEventArgs**來避免例外狀況, 例如**即. 發生**。 如需**RowUpdated**事件的詳細資訊, 請參閱[處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
+ <xref:System.Data.Common.DataAdapter>物件的**RowUpdated**事件可以與先前所述的技術搭配使用，以提供通知給您的應用程式開放式平行存取違規。 **RowUpdated**會在每次嘗試從**資料集**更新**修改過**的資料列之後發生。 如此可讓您加入特殊處理程式碼，包括發生例外狀況時的處理、加入自訂錯誤資訊、加入重試邏輯等等。 物件會傳回 RecordsAffected 屬性，其中包含資料表中修改過的資料列之特定 update 命令所影響的資料列數目。 <xref:System.Data.Common.RowUpdatedEventArgs> 藉由將 update 命令設定為測試開放式平行存取， **RecordsAffected**屬性會在發生開放式平行存取違規時傳回0的值，因為未更新任何記錄。 若發生這種情況，就會發生例外狀況。 **RowUpdated**事件可讓您處理這種情況，並藉由設定適當的**RowUpdatedEventArgs**來避免例外狀況，例如**即. 發生**。 如需**RowUpdated**事件的詳細資訊，請參閱[處理 DataAdapter 事件](handling-dataadapter-events.md)。  
   
- (選擇性) 您可以在呼叫**update**之前, 將**ContinueUpdateOnError**設定為**true**, 然後在**更新**完成時回應儲存于特定資料列之**RowError**屬性中的錯誤資訊。 如需詳細資訊, 請參閱資料[列錯誤資訊](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)。  
+ （選擇性）您可以在呼叫**update**之前，將**ContinueUpdateOnError**設定為**true**，然後在**更新**完成時回應儲存于特定資料列之**RowError**屬性中的錯誤資訊。 如需詳細資訊，請參閱資料[列錯誤資訊](./dataset-datatable-dataview/row-error-information.md)。  
   
 ## <a name="optimistic-concurrency-example"></a>開放式同步存取範例  
- 以下是一個簡單的範例, 它會設定**DataAdapter**的**UpdateCommand**以測試開放式平行存取, 然後使用**RowUpdated**事件來測試開放式平行存取違規。 遇到開放式同步存取違規時, 應用程式會設定已發出更新之資料列的**RowError** , 以反映開放式平行存取違規。  
+ 以下是一個簡單的範例，它會設定**DataAdapter**的**UpdateCommand**以測試開放式平行存取，然後使用**RowUpdated**事件來測試開放式平行存取違規。 遇到開放式同步存取違規時，應用程式會設定已發出更新之資料列的**RowError** ，以反映開放式平行存取違規。  
   
- 請注意, 傳遞給 UPDATE 命令之 WHERE 子句的參數值會對應到其各自資料行的**原始**值。  
+ 請注意，傳遞給 UPDATE 命令之 WHERE 子句的參數值會對應到其各自資料行的**原始**值。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -208,8 +208,8 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [使用 DataAdapter 更新資料來源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [資料列錯誤資訊](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
-- [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)
+- [使用 DataAdapter 更新資料來源](updating-data-sources-with-dataadapters.md)
+- [資料列錯誤資訊](./dataset-datatable-dataview/row-error-information.md)
+- [異動和並行存取](transactions-and-concurrency.md)
+- [ADO.NET 概觀](ado-net-overview.md)

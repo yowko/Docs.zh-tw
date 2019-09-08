@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40953d03904e3268770c8a1b6e212873ec66d2dd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761843"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796534"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty 方法
 設定指定的屬性識別碼所參考之屬性的值。  
@@ -39,21 +39,21 @@ HRESULT SetProperty (
   
 ## <a name="parameters"></a>參數  
  `PropertyId`  
- [in]將設定其值之屬性的唯一識別碼。  
+ 在將設定其值之屬性的唯一識別碼。  
   
  `pvProperty`  
- [in]要用來設定所參考之屬性的值`PropertyId`。  
+ 在要設定參考`PropertyId`之屬性的值。  
   
  `cbProperty`  
- [in]大小，以位元組為單位的`pvProperty`。  
+ 在的大小（以位元組為單位`pvProperty`）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName 介面](iassemblyname-interface.md)

@@ -2,12 +2,12 @@
 title: 逐步解說：跨關聯性查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946949"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780996"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>逐步解說：跨關聯性查詢 (C#)
 本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]關聯來表示資料庫中的外鍵*關聯*性。  
@@ -17,7 +17,7 @@ ms.locfileid: "69946949"
  本逐步解說的內容是依據 Visual C# 開發設定所撰寫的。  
   
 ## <a name="prerequisites"></a>必要條件  
- 您必須已完成[逐步解說:簡單的物件模型和查詢C#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md))。 此逐步解說建立於該逐步解說之上，其中包含出現在 c:\linqtest5 中的 northwnd.mdf 檔。  
+ 您必須已完成[逐步解說：簡單的物件模型和查詢C#（](walkthrough-simple-object-model-and-query-csharp.md)）。 此逐步解說建立於該逐步解說之上，其中包含出現在 c:\linqtest5 中的 northwnd.mdf 檔。  
   
 ## <a name="overview"></a>總覽  
  此逐步解說包含三項主要工作：  
@@ -86,8 +86,8 @@ ms.locfileid: "69946949"
 4. 在主控台視窗中按 Enter 鍵，以停止偵錯。  
   
 ## <a name="next-steps"></a>後續步驟  
- 下一個逐步解說[(逐步解說:運算元據 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 示範如何運算元據。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
+ 下一個逐步解說[（逐步解說：運算元據（C#）](walkthrough-manipulating-data-csharp.md)）示範如何運算元據。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [依逐步解說學習](learning-by-walkthroughs.md)

@@ -1,6 +1,6 @@
 ---
-title: Initialize 函式 （Unmanaged API 參考）
-description: Initialize 函式會執行 WMI 初始化。
+title: Initialize 函式（非受控 API 參考）
+description: Initialize 函數會執行 WMI 初始化。
 ms.date: 11/06/2017
 api_name:
 - Initialize
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c71b2b6d6f102d19d30d480ee9bafcac3c204be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bc3688b30180bdcde0a87027955a789de749f90
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049293"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798436"
 ---
 # <a name="initialize-function"></a>Initialize 函式
 
@@ -41,20 +41,20 @@ HRESULT Initialize(
 
 `bAllowIManagementObjectQI`
 
-[in]`true`來表示允許 WMI 物件上的呼叫 QueryInterface;`false`否則。
+在`true`表示允許呼叫 WMI 物件上的 QueryInterface;`false`否則為。
 
 ## <a name="return-value"></a>傳回值
 
-此函數永遠會傳回`S_OK`(0)。
+函數一律`S_OK`會傳回（0）。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** WMINet_Utils.def
 
-**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

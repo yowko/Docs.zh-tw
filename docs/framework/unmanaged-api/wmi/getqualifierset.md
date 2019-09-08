@@ -1,6 +1,6 @@
 ---
-title: GetQualifierSet 函式 （Unmanaged API 參考）
-description: GetQualifierSet 函式會擷取為類別或執行個體設定的限定詞。
+title: GetQualifierSet 函式（非受控 API 參考）
+description: GetQualifierSet 函數會抓取類別或實例的限定詞集合。
 ms.date: 11/06/2017
 api_name:
 - GetQualifierSet
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e392d3afcd81e6eace7a674788a2a957da28842c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 845d5ea93a06859840c87c65b415ead0f846d538
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746468"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798458"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 函式
 擷取類別執行個體或類別定義的限定詞集合。
@@ -41,34 +41,34 @@ HRESULT GetQualifierSet (
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-[in]未使用此參數。
+在未使用此參數。
 
 `ptr`  
-[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
+在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `ppQualSet`  
-[out]接收的介面指標，可讓您存取類別物件的限定詞。 `ppQualSet` 不可以是 `null`。 如果發生錯誤，不會傳回新的物件，而且指標將處於未修改。 
+脫銷接收介面指標，允許存取 class 物件的限定詞。 `ppQualSet` 不可以是 `null`。 如果發生錯誤，則不會傳回新的物件，且會將指標保留為未修改。 
 
 ## <a name="return-value"></a>傳回值
 
-此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
+這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
-|常數  |值  |描述  |
+|常數  |值  |說明  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | 已有一般失敗。 |
+|`WBEM_E_FAILED` | 0x80041001 | 發生一般失敗。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數是`null`。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成作業。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數為`null`。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset)方法。 
+此函式會包裝對[IWbemClassObject：： GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset)方法的呼叫。 
 
-[IWbemQualifierSet 指標](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)可讓呼叫端新增、 編輯或刪除這些限定詞。 這類新增、 編輯或刪除的限定詞適用於整個執行個體或類別定義。
+[IWbemQualifierSet 指標](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)可讓呼叫者加入、編輯或刪除這些限定詞。 這類新增、編輯或刪除的限定詞適用于整個實例或類別定義。
 
 ## <a name="requirements"></a>需求  
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
@@ -76,4 +76,4 @@ HRESULT GetQualifierSet (
   
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

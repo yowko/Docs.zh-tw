@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741880"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777221"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken 方法
-擷取指定的金鑰檔或金鑰容器的公用金鑰語彙基元。  
+抓取指定的 keyfile 或金鑰容器的公開金鑰 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,25 +39,25 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>參數  
  `pszKeyFile`  
- 金鑰的檔名。  
+ 金鑰的檔案名。  
   
  `pszKeyContainer`  
  金鑰容器的名稱。  
   
  `pvPublicKeyToken`  
- 語彙基元儲存所在的位址。  
+ 要儲存金鑰 token 的位址。  
   
  `pcbPublicKeyToken`  
- 指定的大小，以位元組為單位所指定的緩衝區`pvPublicKeyToken`。 傳回時，包含實際使用的位元組數目。  
+ 指定所指示`pvPublicKeyToken`的緩衝區大小（以位元組為單位）。 傳回時，包含實際使用的位元組數目。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h。  
+ 需要 alink. h。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 介面](ialink2-interface.md)
+- [IALink 介面](ialink-interface.md)
+- [ALink API](index.md)

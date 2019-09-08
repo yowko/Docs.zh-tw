@@ -1,69 +1,69 @@
 ---
-title: 取得範例 SQL Server 資料庫的 ADO.NET 程式碼範例
-description: 下載 ADO.NET 文件，以及 SQL Server 和管理工具的程式碼範例中所使用的 SQL Server 範例資料庫
+title: 取得 ADO.NET 程式碼範例的範例 SQL Server 資料庫
+description: 下載 ADO.NET 檔中程式碼範例所使用的範例 SQL Server 資料庫，以及 SQL Server 和管理工具
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 5580f06f3d28ed6d70f75b619498ac8de7bc3326
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60566041ff4f99e96c9aee052dbcc17b5e5da9e5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037930"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794037"
 ---
-# <a name="get-the-sample-databases-for-adonet-code-samples"></a>取得範例資料庫的 ADO.NET 程式碼範例
+# <a name="get-the-sample-databases-for-adonet-code-samples"></a>取得 ADO.NET 程式碼範例的範例資料庫
 
-許多範例和逐步解說中的[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件使用的 SQL Server 範例資料庫和 SQL Server Express。 您可以從 Microsoft 下載這些免費的產品。
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]檔中的一些範例和逐步解說會使用範例 SQL Server 資料庫和 SQL Server Express。 您可以從 Microsoft 免費下載這些產品。
 
-## <a name="get-the-northwind-sample-database-for-sql-server"></a>取得 SQL Server 的 Northwind 範例資料庫
+## <a name="get-the-northwind-sample-database-for-sql-server"></a>取得適用于 SQL Server 的 Northwind 範例資料庫
 
-下載指令碼`instnwnd.sql`從下列的 GitHub 存放庫，來建立和載入適用於 SQL Server 的 Northwind 範例資料庫：
+從下列 GitHub `instnwnd.sql`存放庫下載腳本，以建立和載入 SQL Server 的 Northwind 範例資料庫：
 
-[Microsoft SQL server 的 Northwind 和 pubs 範例資料庫](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
+[適用于 Microsoft SQL Server 的 Northwind 和 pubs 範例資料庫](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
 
-您可以使用 Northwind 資料庫之前，您必須執行已下載`instnwnd.sql`重新建立 SQL Server 執行個體上的資料庫所使用的指令碼檔案[SQL Server Management Studio](#get_ssms)或類似的工具。 請遵循存放庫中的讀我檔案中的指示。
+在您可以使用 Northwind 資料庫之前，您必須先執行下載`instnwnd.sql`的腳本檔案，使用[SQL Server Management Studio](#get_ssms)或類似的工具，在 SQL Server 的實例上重新建立資料庫。 遵循存放庫中的讀我檔案中的指示。
 
 > [!TIP]
-> 如果您想為 Microsoft Access Northwind 資料庫，請參閱[安裝 Microsoft Access Northwind 範例資料庫](#northwind_access)。
+> 如果您要尋找適用于 Microsoft Access 的 Northwind 資料庫，請參閱[安裝適用于 Microsoft access 的 northwind 範例資料庫](#northwind_access)。
 
-## <a name="northwind_access"></a> 取得 Microsoft Access Northwind 範例資料庫
+## <a name="northwind_access"></a>取得適用于 Microsoft Access 的 Northwind 範例資料庫
 
-Microsoft Download Center 上，不可以使用 Microsoft access Northwind 範例資料庫。 若要安裝在 Access 中的直接從 Northwind，執行下列動作：
+Microsoft 下載中心不提供適用于 Microsoft Access 的 Northwind 範例資料庫。 若要直接從存取中安裝 Northwind，請執行下列動作：
 
 1. 開啟 [存取]。
 
-1. Enter **Northwind**中**搜尋線上範本**方塊，然後按**Enter**。
+1. 在 [**搜尋線上範本**] 方塊中輸入**Northwind** ，然後選取**Enter**。
 
-1. 在 [結果] 畫面中，選取**Northwind**。 新的視窗會開啟 Northwind 資料庫的描述。
+1. 在 [結果] 畫面上，選取 [ **Northwind**]。 新視窗隨即開啟，其中含有 Northwind 資料庫的描述。
 
-1. 在新視窗中，在**檔案名**文字中，提供檔案名稱，為您的 Northwind 資料庫的副本。
+1. 在新視窗的 [**檔案名**] 文字方塊中，為您的 Northwind 資料庫複本提供檔案名。
 
-1. 選取 [建立]。 存取下載 Northwind 資料庫，並準備此檔案。
+1. 選取 [建立]。 Access 會下載 Northwind 資料庫，並準備檔案。
 
-1. 完成此程序時，資料庫便會開啟 歡迎使用畫面。
+1. 當此程式完成時，資料庫就會開啟並顯示 [歡迎使用] 畫面。
 
-## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>取得 SQL Server 的 AdventureWorks 範例資料庫
+## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>取得適用于 SQL Server 的 AdventureWorks 範例資料庫
 
-適用於 SQL Server，從下列 GitHub 儲存機制下載 AdventureWorks 範例資料庫：
+從下列 GitHub 存放庫下載適用于 SQL Server 的 AdventureWorks 範例資料庫：
 
 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 
-下載其中一個資料庫備份之後 (\*.bak) 檔案，使用 SQL Server Management Studio (SSMS) 將備份還原到 SQL Server 的執行個體。 請參閱[取得 SQL Server Management Studio](#get_ssms)。
+在您下載其中一個資料庫備份（\*.bak）檔案之後，請使用 SQL Server Management Studio （SSMS）將備份還原到 SQL Server 的實例。 請參閱[取得 SQL Server Management Studio](#get_ssms)。
 
-## <a name="get_ssms"></a> 取得 SQL Server Management Studio
-如果您想要檢視或修改的資料庫，您已下載，您可以使用 SQL Server Management Studio (SSMS)。 下載 SSMS，從下列頁面：
+## <a name="get_ssms"></a>取得 SQL Server Management Studio
+如果您想要查看或修改已下載的資料庫，您可以使用 SQL Server Management Studio （SSMS）。 從下列頁面下載 SSMS：
 
-[下載 SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) 
+[下載 SQL Server Management Studio （SSMS）](/sql/ssms/download-sql-server-management-studio-ssms) 
 
-您也可以檢視和管理 Visual Studio 整合式的開發環境 (IDE) 中的資料庫。 在[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，連接到資料庫**SQL Server 物件總管**，或建立的資料庫中的資料連接**伺服器總管**。 開啟這些檔案總管 窗格，從**檢視**功能表。
+您也可以在 Visual Studio 整合式開發環境（IDE）中查看和管理資料庫。 在[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)中，從**SQL Server 物件總管**連接到資料庫，或在**伺服器總管**中建立資料庫的資料連線。 從 [ **View** ] 功能表開啟這些 [瀏覽器] 窗格。
 
-## <a name="get_sql"></a> Get SQL Server Express
+## <a name="get_sql"></a>取得 SQL Server Express
 
-SQL Server Express 是免費的入門級的 SQL Server 版本，您可以重新發佈的應用程式。 下載 SQL Server Express 從下列頁面：
+SQL Server Express 是免費的入門版的 SQL Server，可讓您隨著應用程式轉散發。 從下列頁面下載 SQL Server Express：
   
-[SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
+[SQL Server Express 版本](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-如果您使用[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，SQL Server Express LocalDB 納入的 Visual Studio 中，免費的 Community edition，以及專業和更高版本。  
+如果您使用的是[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)，SQL Server Express LocalDB 會包含在免費的 Visual Studio 的社區版本中，以及 Professional 和更高版本中。  
 
 ## <a name="see-also"></a>另請參閱
 
-- [快速入門](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [快速入門](getting-started.md)

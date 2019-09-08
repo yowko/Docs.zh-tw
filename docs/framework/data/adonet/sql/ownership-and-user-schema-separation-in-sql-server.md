@@ -2,18 +2,18 @@
 title: SQL Server 中的擁有權和使用者結構描述分離
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 520772acc5edd812f64c61cc7fdda9db3441c87c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f0aa0a67bfbc64124fe2510915d0945341aeb49e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961095"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791943"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的擁有權和使用者結構描述分離
 SQL Server 安全性的核心概念是物件的擁有者具有不可撤銷的物件管理權限。 您無法移除物件擁有者的權限，而使用者只要擁有資料庫中的物件，就無法將其從資料庫卸除。  
   
 ## <a name="user-schema-separation"></a>使用者結構描述分隔  
- 使用者結構描述分隔可讓資料庫物件權限的管理更有彈性。 「*架構*」 (schema) 是資料庫物件的命名容器, 可讓您將物件分組成不同的命名空間。 例如，AdventureWorks 範例資料庫包含 Production、Sales 和 HumanResources 的結構描述。  
+ 使用者結構描述分隔可讓資料庫物件權限的管理更有彈性。 「*架構*」（schema）是資料庫物件的命名容器，可讓您將物件分組成不同的命名空間。 例如，AdventureWorks 範例資料庫包含 Production、Sales 和 HumanResources 的結構描述。  
   
  參考物件的四部分命名語法會指定結構描述名稱。  
   
@@ -59,9 +59,9 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
+- [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中進行驗證](authentication-in-sql-server.md)
+- [SQL Server 中的伺服器和資料庫角色](server-and-database-roles-in-sql-server.md)
+- [SQL Server 中的授權和權限](authorization-and-permissions-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

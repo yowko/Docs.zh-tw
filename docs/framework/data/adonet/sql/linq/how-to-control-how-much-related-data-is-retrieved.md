@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 342583cdbf6a1501f1bc70c6a9be5d7009c390eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2112600dfcef65b1c85445b03806ce8e9cab6a27
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940258"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782061"
 ---
-# <a name="how-to-control-how-much-related-data-is-retrieved"></a>作法：控制擷取的相關資料多寡
+# <a name="how-to-control-how-much-related-data-is-retrieved"></a>HOW TO：控制擷取的相關資料多寡
 使用 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 方法可指定與您主要目標有關、應該同時擷取的資料。 例如，如果您預先得知需要客戶訂單的相關資訊，則可以使用 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>，以確保在擷取客戶資訊的同時也會擷取訂單資訊。 這種方法只要存取一次資料庫，就可以同時取得兩個資訊集。  
   
 > [!NOTE]
@@ -26,4 +26,4 @@ ms.locfileid: "69940258"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢資料庫](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [查詢資料庫](querying-the-database.md)

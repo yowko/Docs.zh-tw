@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2c5c3bbbcf3cf4b87a5f68006c1625666d13926
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e471ee99af57ef980850c0a5d3e4f5f2973967ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753894"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796599"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName 方法
-取得所參考的組件的簡單且未加密名稱[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件。  
+取得這個[IAssemblyName](iassemblyname-interface.md)物件所參考的簡單、未加密的元件名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,18 +38,18 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>參數  
  `lpcwBuffer`  
- [in、 out]大小`pwzName`寬字元，包括 null 結束字元。  
+ [in、out]`pwzName`以寬字元為單位的大小，包括 null 結束字元字元。  
   
  `pwzName`  
- [out]緩衝區來保留參考組件的名稱。  
+ 脫銷保存參考元件名稱的緩衝區。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName 介面](iassemblyname-interface.md)

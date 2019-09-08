@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27caa9916b5adab2b2049a8f66ac34fed40e4d7f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e3e9da3db71d3e24b2a60ff032a631680055b88
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778571"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795282"
 ---
-# <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS 列舉
-指出所表示的組件的來源[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)在全域組件快取中。  
+# <a name="asm_cache_flags-enumeration"></a>ASM_CACHE_FLAGS 列舉
+指出全域組件快取中[IAssemblyCacheItem](iassemblycacheitem-interface.md)所代表之元件的來源。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,25 +40,25 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|使用 Ngen.exe 列舉先行編譯的組件快取。|  
+|`ASM_CACHE_ZAP`|使用 Ngen.exe 列舉先行編譯元件的快取。|  
 |`ASM_CACHE_GAC`|列舉全域組件快取。|  
-|`ASM_CACHE_DOWNLOAD`|列舉，具有視需求下載，或者已陰影複製組件。|  
-|`ASM_CACHE_ROOT`|指出[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)函式應傳回至全域組件快取的 common language runtime (CLR) 2.0 版的路徑。 呼叫內容中，才有意義[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)。|  
-|`ASM_CACHE_ROOT_EX`|指出[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)函式應傳回至全域組件快取路徑 clr 第 4 版。 呼叫內容中，才有意義[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)。|  
+|`ASM_CACHE_DOWNLOAD`|列舉已視需要下載或已陰影複製的元件。|  
+|`ASM_CACHE_ROOT`|表示[GetCachePath](getcachepath-function.md)函數應該傳回 common language RUNTIME （CLR）2.0 版的全域組件快取的路徑。 只有在呼叫[GetCachePath](getcachepath-function.md)的內容中才有意義。|  
+|`ASM_CACHE_ROOT_EX`|表示[GetCachePath](getcachepath-function.md)函數應該傳回 CLR 第4版的全域組件快取的路徑。 只有在呼叫[GetCachePath](getcachepath-function.md)的內容中才有意義。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [GetCachePath 函式](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)
-- [IAssemblyCacheItem 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
-- [融合列舉](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [GetCachePath 函式](getcachepath-function.md)
+- [IAssemblyCacheItem 介面](iassemblycacheitem-interface.md)
+- [融合列舉](fusion-enumerations.md)

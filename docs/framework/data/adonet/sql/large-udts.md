@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33f4263c747ac2590234493ec7cb9e6048ed2b96
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909874"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794021"
 ---
 # <a name="large-udts"></a>大型 UDT
 使用者定義型別 (UDT) 可透過在 SQL Server 資料庫中儲存 Common Language Runtime (CLR) 物件，讓開發人員擴充伺服器的純量型別 (Scalar Type) 系統。 UDT 可以包含多個項目而且可以具有行為，這點與單一 SQL Server 系統資料型別所組成的傳統別名資料型別不同。  
@@ -27,7 +27,7 @@ ms.locfileid: "69909874"
 1. [CLR 使用者定義類型](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>使用 GetSchema 來擷取 UDT 結構描述  
- <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:System.Data.SqlClient.SqlConnection> 方法會在 <xref:System.Data.DataTable> 中傳回資料庫結構描述資訊。 如需詳細資訊, 請參閱[SQL Server 架構集合](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)。  
+ <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:System.Data.SqlClient.SqlConnection> 方法會在 <xref:System.Data.DataTable> 中傳回資料庫結構描述資訊。 如需詳細資訊，請參閱[SQL Server 架構集合](../sql-server-schema-collections.md)。  
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT 的 GetSchemaTable 資料行值  
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 <xref:System.Data.SqlClient.SqlDataReader> 方法會傳回描述資料行中繼資料的 <xref:System.Data.DataTable>。 下表將針對 SQL Server 2005 與 SQL Server 2008 之間的大型 UDT 描述資料行中繼資料的差異。  
@@ -133,8 +133,8 @@ End Using
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [擷取資料庫結構描述資訊](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [SQL Server 二進位和大量數值資料](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定參數和參數資料類型](../configuring-parameters-and-parameter-data-types.md)
+- [擷取資料庫結構描述資訊](../retrieving-database-schema-information.md)
+- [SQL Server 資料類型對應](../sql-server-data-type-mappings.md)
+- [SQL Server 二進位和大量數值資料](sql-server-binary-and-large-value-data.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

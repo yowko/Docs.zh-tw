@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 4a1174dd1cd6ea785c118c61428ba73d1347316c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663870"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797232"
 ---
 # <a name="custom-bindings"></a>自訂繫結
 
-當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。 所有繫結都是根據已排序的繫結項目組所建構。 自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。 例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。 如需實用範例，請參閱[自訂繫結範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))。 如需詳細資訊，請參閱 < [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。
+當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。 所有繫結都是根據已排序的繫結項目組所建構。 自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。 例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。 如需實用範例，請參閱[自訂](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))系結範例。 如需詳細資訊，請參閱[ \<customBinding >](../../configure-apps/file-schema/wcf/custombinding.md)。
 
 ## <a name="construction-of-a-custom-binding"></a>建構自訂繫結
 
@@ -44,7 +44,7 @@ ms.locfileid: "67663870"
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-最下方是必要的傳輸項目。 您可以使用自己的傳輸或其中一個 Windows Communication Foundation (WCF) 提供下列傳輸繫結項目：
+最下方是必要的傳輸項目。 您可以使用自己的傳輸或下列其中一個傳輸繫結項目，Windows Communication Foundation （WCF）提供：
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -76,9 +76,9 @@ ms.locfileid: "67663870"
 
 ## <a name="see-also"></a>另請參閱
 
-- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [使用繫結設定服務與用戶端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [如何：自訂系統提供的繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
-- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [自訂繫結](../../../../docs/framework/wcf/samples/custom-binding.md)
+- [建立端點概觀](../endpoint-creation-overview.md)
+- [使用繫結設定服務與用戶端](../using-bindings-to-configure-services-and-clients.md)
+- [系統提供的繫結](../system-provided-bindings.md)
+- [如何：自訂系統提供的系結](how-to-customize-a-system-provided-binding.md)
+- [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)
+- [自訂繫結](../samples/custom-binding.md)

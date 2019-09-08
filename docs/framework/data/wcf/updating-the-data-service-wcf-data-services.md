@@ -8,26 +8,26 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: f65e3775c260eedc1d76f209d5cb76524d61b939
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5cf7a6e563069e35a4ac0fe729a616dc1c56bdb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953219"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779739"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新資料服務 (WCF 資料服務)
-當您使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫來[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]取用摘要時, 此程式庫會將摘要中的專案轉譯成用戶端資料服務類別的實例。 這些資料服務類別會使用 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 來追蹤。 用戶端會追蹤您使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法所報告之實體的變更。 這些方法會讓用戶端追蹤所新增及刪除的實體，以及您對屬性值所做的變更或是您對實體執行個體之間的關聯性所做的變更。 當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，這些追蹤的變更會當做 REST 型作業傳回資料服務。  
+當您使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫來[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]取用摘要時，此程式庫會將摘要中的專案轉譯成用戶端資料服務類別的實例。 這些資料服務類別會使用 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 來追蹤。 用戶端會追蹤您使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法所報告之實體的變更。 這些方法會讓用戶端追蹤所新增及刪除的實體，以及您對屬性值所做的變更或是您對實體執行個體之間的關聯性所做的變更。 當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，這些追蹤的變更會當做 REST 型作業傳回資料服務。  
   
 > [!NOTE]
-> 當您使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的執行個體將資料繫結至控制項時，對繫結控制項內的資料所做的變更會自動提報給 <xref:System.Data.Services.Client.DataServiceContext>。 如需詳細資訊, 請參閱[將資料系結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。  
+> 當您使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的執行個體將資料繫結至控制項時，對繫結控制項內的資料所做的變更會自動提報給 <xref:System.Data.Services.Client.DataServiceContext>。 如需詳細資訊，請參閱[將資料系結至控制項](binding-data-to-controls-wcf-data-services.md)。  
   
 ## <a name="adding-modifying-and-changing-entities"></a>加入、修改和變更實體  
- 當您使用 Visual Studio 中的 [**加入服務參考**] 對話方塊來加入摘要的[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]參考時, 產生的用戶端資料服務類別每一個都有一個靜態*Create*方法, 針對每一個不可為 null 的實體屬性採用一個參數. 您可以使用這個方法建立實體類型類別的執行個體，如下列範例所示：  
+ 當您使用 Visual Studio 中的 [**加入服務參考**] 對話方塊來加入摘要的[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]參考時，產生的用戶端資料服務類別每一個都有一個靜態*Create*方法，針對每一個不可為 null 的實體屬性採用一個參數. 您可以使用這個方法建立實體類型類別的執行個體，如下列範例所示：  
   
  [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
  [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
- 若要加入實體實例, 請在 [**加入服務參考**] 對話方塊所<xref:System.Data.Services.Client.DataServiceContext>產生的類別上呼叫適當的*AddTo*方法, 如下列範例所示:  
+ 若要加入實體實例，請在 [**加入服務參考**] 對話方塊所<xref:System.Data.Services.Client.DataServiceContext>產生的類別上呼叫適當的*AddTo*方法，如下列範例所示：  
   
  [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
  [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
@@ -44,7 +44,7 @@ ms.locfileid: "69953219"
  [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
  [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
- 如需詳細資訊，請參閱[如何：新增、修改和刪除實體](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱[如何：新增、修改和刪除實體](how-to-add-modify-and-delete-entities-wcf-data-services.md)。  
   
 ## <a name="attaching-entities"></a>附加實體  
  用戶端程式庫可讓您不需事先執行查詢就可以儲存您對實體所做的更新，然後將實體載入 <xref:System.Data.Services.Client.DataServiceContext>。 使用 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> 方法，將現有的物件附加至 <xref:System.Data.Services.Client.DataServiceContext> 中的特定實體集。 然後您就可以修改物件，並將變更儲存至資料服務。 在下列範例中，有一個已變更的自訂物件已附加至內容，然後在呼叫 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 之前，先呼叫 <xref:System.Data.Services.Client.EntityStates.Modified>，將附加的物件標示為 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>。  
@@ -62,12 +62,12 @@ ms.locfileid: "69953219"
   
 - 當您附加與 eTag 值一起收到的實體物件時，會使用已採用 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> 參數的 `etag` 方法多載。 當儲存已附加之物件的變更時，這個 eTag 值可用來檢查並行存取。  
   
- 如需詳細資訊，請參閱[如何：將現有的實體附加至 DataServiceCoNtext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)。  
+ 如需詳細資訊，請參閱[如何：將現有的實體附加至 DataServiceCoNtext](attach-an-existing-entity-to-dc-wcf-data.md)。  
   
 ## <a name="creating-and-modifying-relationship-links"></a>建立和修改關聯性連結  
- <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>當您使用方法或**加入服務參考**對話方塊所產生之<xref:System.Data.Services.Client.DataServiceContext>類別的適當*AddTo*方法來加入新實體時, 新實體與相關實體之間的任何關聯性都會是未自動定義。  
+ <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>當您使用方法或**加入服務參考**對話方塊所產生之<xref:System.Data.Services.Client.DataServiceContext>類別的適當*AddTo*方法來加入新實體時，新實體與相關實體之間的任何關聯性都會是未自動定義。  
   
- 您可以建立和變更實體執行個體之間的關聯性，而且可以讓用戶端程式庫在資料服務中反映這些變更。 實體之間的關聯性會定義為模型中的關聯，而且 <xref:System.Data.Services.Client.DataServiceContext> 會追蹤每一個關聯性，如同內容中的連結物件。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]在<xref:System.Data.Services.Client.DataServiceContext>類別上提供下列方法, 以建立、修改和刪除這些連結:  
+ 您可以建立和變更實體執行個體之間的關聯性，而且可以讓用戶端程式庫在資料服務中反映這些變更。 實體之間的關聯性會定義為模型中的關聯，而且 <xref:System.Data.Services.Client.DataServiceContext> 會追蹤每一個關聯性，如同內容中的連結物件。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]在<xref:System.Data.Services.Client.DataServiceContext>類別上提供下列方法，以建立、修改和刪除這些連結：  
   
 |方法|描述|  
 |------------|-----------------|  
@@ -88,16 +88,16 @@ ms.locfileid: "69953219"
  [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
  [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
- 如需詳細資訊，請參閱[如何：定義實體關聯](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)性。  
+ 如需詳細資訊，請參閱[如何：定義實體關聯](how-to-define-entity-relationships-wcf-data-services.md)性。  
   
 ## <a name="saving-changes"></a>儲存變更  
- 變更會在 <xref:System.Data.Services.Client.DataServiceContext> 執行個體中追蹤，但是不會立即傳送至伺服器。 在針對指定的活動完成所需的變更之後，請呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>，將所有變更提交至資料服務。 如需詳細資訊, 請參閱[管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。 您也可以透過 <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 方法，非同步地儲存變更。 如需詳細資訊, 請參閱[非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  
+ 變更會在 <xref:System.Data.Services.Client.DataServiceContext> 執行個體中追蹤，但是不會立即傳送至伺服器。 在針對指定的活動完成所需的變更之後，請呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>，將所有變更提交至資料服務。 如需詳細資訊，請參閱[管理資料服務內容](managing-the-data-service-context-wcf-data-services.md)。 您也可以透過 <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 方法，非同步地儲存變更。 如需詳細資訊，請參閱[非同步作業](asynchronous-operations-wcf-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
-- [批次處理作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
-- [物件具體化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
-- [管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)
+- [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
+- [查詢資料服務](querying-the-data-service-wcf-data-services.md)
+- [非同步作業](asynchronous-operations-wcf-data-services.md)
+- [批次處理作業](batching-operations-wcf-data-services.md)
+- [物件具體化](object-materialization-wcf-data-services.md)
+- [管理資料服務內容](managing-the-data-service-context-wcf-data-services.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 993848711f41c9e03b969a3c611982a5c8bc860d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 24f7e2d5a547b78ceb4808feaf581c6f49807cf7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742214"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787625"
 ---
 # <a name="createalink-function"></a>CreateALink 函式
-建立組件連結器的執行個體，並將指標設定為指定的介面。  
+建立元件連結器的實例，並設定指定介面的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,14 +38,14 @@ HRESULT CreateALink (
   
 ## <a name="parameters"></a>參數  
   
-|參數|描述|  
+|參數|說明|  
 |---------------|-----------------|  
-|`riid`|其中一個組件連結器介面的實體名稱。|  
-|`ppInterface`|成功完成時包含位置的指標`riid`介面。|  
+|`riid`|其中一個元件連結器介面的機構名稱。|  
+|`ppInterface`|成功完成時的位置包含`riid`介面的指標。|  
   
 ## <a name="requirements"></a>需求  
- **程式庫**: alink.dll  
+ 連結**庫**： alink .dll  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Al.exe (組件連結器)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (組件連結器)](../../tools/al-exe-assembly-linker.md)

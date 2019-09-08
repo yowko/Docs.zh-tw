@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: f8400b214bc9ba3a28eeec05f6171953b42bc6f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c023f7610576c017c91fdb919322acdf9003767a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938750"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781648"
 ---
-# <a name="how-to-store-and-reuse-queries"></a>作法：儲存和重複使用查詢
+# <a name="how-to-store-and-reuse-queries"></a>HOW TO：儲存和重複使用查詢
 當您的應用程式會多次執行結構類似的查詢時，您藉由編譯查詢一次並使用不同的參數加以執行數次，通常可以提高效能。 例如，應用程式可能必須擷取位於特定城市的所有客戶，該城市是使用者於執行階段在表單中指定。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援使用編譯的*查詢*來實現此目的。  
   
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "69938750"
  [!code-vb[DLinqQuerying#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#7)]  
   
 ## <a name="example"></a>範例  
- 您目前無法儲存 (在靜態變數中) 傳回*匿名型*別的查詢, 因為型別沒有名稱可提供做為泛型引數。 下列範例顯示如何藉由建立可表示結果的型別並以它做為泛型引數，來解決這個問題。  
+ 您目前無法儲存（在靜態變數中）傳回*匿名型*別的查詢，因為型別沒有名稱可提供做為泛型引數。 下列範例顯示如何藉由建立可表示結果的型別並以它做為泛型引數，來解決這個問題。  
   
  [!code-csharp[DLinqQuerying#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#8)]
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
@@ -36,5 +36,5 @@ ms.locfileid: "69938750"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Data.Linq.CompiledQuery>
-- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [查詢資料庫](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [查詢概念](query-concepts.md)
+- [查詢資料庫](querying-the-database.md)
