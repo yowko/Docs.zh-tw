@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-ms.openlocfilehash: 0c949f0d1ed43b66f72afc4059014c92293f3d75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3622e21978377aed42958e2dc96ef9aa5a872d00
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651658"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782910"
 ---
-# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="e87ab-102">OracleDataReader 中的 REF CURSOR 參數</span><span class="sxs-lookup"><span data-stu-id="e87ab-102">REF CURSOR Parameters in an OracleDataReader</span></span>
-<span data-ttu-id="e87ab-103">此 Microsoft Visual Basic 範例執行可傳回 REF CURSOR 參數的 PL/SQL 預存程序，並以 <xref:System.Data.OracleClient.OracleDataReader> 讀取該值。</span><span class="sxs-lookup"><span data-stu-id="e87ab-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="f2829-102">OracleDataReader 中的 REF CURSOR 參數</span><span class="sxs-lookup"><span data-stu-id="f2829-102">REF CURSOR Parameters in an OracleDataReader</span></span>
+<span data-ttu-id="f2829-103">此 Microsoft Visual Basic 範例執行可傳回 REF CURSOR 參數的 PL/SQL 預存程序，並以 <xref:System.Data.OracleClient.OracleDataReader> 讀取該值。</span><span class="sxs-lookup"><span data-stu-id="f2829-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -43,7 +43,7 @@ Private Sub Button1_Click(ByVal sender As Object, _
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e87ab-104">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e87ab-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2829-104">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f2829-104">See also</span></span>
 
-- [<span data-ttu-id="e87ab-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="e87ab-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [<span data-ttu-id="e87ab-106">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="e87ab-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="f2829-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="f2829-105">Oracle REF CURSORs</span></span>](oracle-ref-cursors.md)
+- [<span data-ttu-id="f2829-106">ADO.NET 概觀</span><span class="sxs-lookup"><span data-stu-id="f2829-106">ADO.NET Overview</span></span>](ado-net-overview.md)

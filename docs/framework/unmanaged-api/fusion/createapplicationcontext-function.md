@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9853f974230ee755a33bc46ca6ba3e086051b236
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25364330dafdf858c4b41e9a05731c37e97fbb57
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778474"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795440"
 ---
-# <a name="createapplicationcontext-function"></a><span data-ttu-id="2da11-102">CreateApplicationContext 函式</span><span class="sxs-lookup"><span data-stu-id="2da11-102">CreateApplicationContext Function</span></span>
-<span data-ttu-id="2da11-103">此函式支援.NET Framework 基礎結構，並不是直接從您的程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="2da11-103">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="createapplicationcontext-function"></a><span data-ttu-id="bb32c-102">CreateApplicationContext 函式</span><span class="sxs-lookup"><span data-stu-id="bb32c-102">CreateApplicationContext Function</span></span>
+<span data-ttu-id="bb32c-103">此函式支援 .NET Framework 的基礎結構，但不適合直接從您的程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="bb32c-103">This function supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2da11-104">語法</span><span class="sxs-lookup"><span data-stu-id="2da11-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb32c-104">語法</span><span class="sxs-lookup"><span data-stu-id="bb32c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateApplicationContext (  
@@ -35,24 +35,24 @@ HRESULT CreateApplicationContext (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2da11-105">參數</span><span class="sxs-lookup"><span data-stu-id="2da11-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bb32c-105">參數</span><span class="sxs-lookup"><span data-stu-id="bb32c-105">Parameters</span></span>  
  `pName`  
- <span data-ttu-id="2da11-106">[in]好記的名稱指標。</span><span class="sxs-lookup"><span data-stu-id="2da11-106">[in] A pointer to a friendly name.</span></span>  
+ <span data-ttu-id="bb32c-106">在易記名稱的指標。</span><span class="sxs-lookup"><span data-stu-id="bb32c-106">[in] A pointer to a friendly name.</span></span>  
   
  `ppCtx`  
- <span data-ttu-id="2da11-107">[out]應用程式內容的指標。</span><span class="sxs-lookup"><span data-stu-id="2da11-107">[out] A pointer to an application context.</span></span>  
+ <span data-ttu-id="bb32c-107">脫銷應用程式內容的指標。</span><span class="sxs-lookup"><span data-stu-id="bb32c-107">[out] A pointer to an application context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2da11-108">需求</span><span class="sxs-lookup"><span data-stu-id="2da11-108">Requirements</span></span>  
- <span data-ttu-id="2da11-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2da11-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb32c-108">需求</span><span class="sxs-lookup"><span data-stu-id="bb32c-108">Requirements</span></span>  
+ <span data-ttu-id="bb32c-109">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bb32c-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2da11-110">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="2da11-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="bb32c-110">**標頭：** 融合。h</span><span class="sxs-lookup"><span data-stu-id="bb32c-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="2da11-111">**LIBRARY:** 包含為 Fusion.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="2da11-111">**Library:** Included as a resource in Fusion.dll</span></span>  
+ <span data-ttu-id="bb32c-111">**LIBRARY:** 納入為融合 .dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="bb32c-111">**Library:** Included as a resource in Fusion.dll</span></span>  
   
- <span data-ttu-id="2da11-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2da11-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bb32c-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb32c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2da11-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2da11-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb32c-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bb32c-113">See also</span></span>
 
-- [<span data-ttu-id="2da11-114">IAssemblyCache 介面</span><span class="sxs-lookup"><span data-stu-id="2da11-114">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [<span data-ttu-id="2da11-115">融合全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="2da11-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [<span data-ttu-id="2da11-116">全域組件快取</span><span class="sxs-lookup"><span data-stu-id="2da11-116">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="bb32c-114">IAssemblyCache 介面</span><span class="sxs-lookup"><span data-stu-id="bb32c-114">IAssemblyCache Interface</span></span>](iassemblycache-interface.md)
+- [<span data-ttu-id="bb32c-115">融合全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="bb32c-115">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
+- [<span data-ttu-id="bb32c-116">全域組件快取</span><span class="sxs-lookup"><span data-stu-id="bb32c-116">Global Assembly Cache</span></span>](../../app-domains/gac.md)

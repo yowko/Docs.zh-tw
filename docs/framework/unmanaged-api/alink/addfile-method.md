@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ff6bde5009e834bfca156fe4d3ad16da53ded85
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742379"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787682"
 ---
-# <a name="addfile-method"></a><span data-ttu-id="4c496-102">AddFile 方法</span><span class="sxs-lookup"><span data-stu-id="4c496-102">AddFile Method</span></span>
-<span data-ttu-id="4c496-103">將檔案加入至組件。</span><span class="sxs-lookup"><span data-stu-id="4c496-103">Adds files to the assembly.</span></span> <span data-ttu-id="4c496-104">也可以用來建立未繫結的模組。</span><span class="sxs-lookup"><span data-stu-id="4c496-104">Can also be used to create unbound modules.</span></span>  
+# <a name="addfile-method"></a><span data-ttu-id="22ffc-102">AddFile 方法</span><span class="sxs-lookup"><span data-stu-id="22ffc-102">AddFile Method</span></span>
+<span data-ttu-id="22ffc-103">將檔案加入至元件。</span><span class="sxs-lookup"><span data-stu-id="22ffc-103">Adds files to the assembly.</span></span> <span data-ttu-id="22ffc-104">也可以用來建立未系結的模組。</span><span class="sxs-lookup"><span data-stu-id="22ffc-104">Can also be used to create unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c496-105">語法</span><span class="sxs-lookup"><span data-stu-id="4c496-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22ffc-105">語法</span><span class="sxs-lookup"><span data-stu-id="22ffc-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT AddFile(  
@@ -39,30 +39,30 @@ HRESULT AddFile(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4c496-106">參數</span><span class="sxs-lookup"><span data-stu-id="4c496-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="22ffc-106">參數</span><span class="sxs-lookup"><span data-stu-id="22ffc-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="4c496-107">要當做引數的組件的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="4c496-107">Unique ID of the assembly to be augmented.</span></span>  
+ <span data-ttu-id="22ffc-107">要擴充之元件的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="22ffc-107">Unique ID of the assembly to be augmented.</span></span>  
   
  `pszFilename`  
- <span data-ttu-id="4c496-108">要加入檔案的完整的名稱。</span><span class="sxs-lookup"><span data-stu-id="4c496-108">Fully qualified name of file to be added.</span></span>  
+ <span data-ttu-id="22ffc-108">要新增之檔案的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="22ffc-108">Fully qualified name of file to be added.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="4c496-109">COM + FileDef 加上旗標這類`ffContainsNoMetaData`和`ffWriteable`。</span><span class="sxs-lookup"><span data-stu-id="4c496-109">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="4c496-110">`dwFlags` 傳遞給[DefineFile 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)。</span><span class="sxs-lookup"><span data-stu-id="4c496-110">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="22ffc-109">Com + FileDef 旗標`ffContainsNoMetaData` ， `ffWriteable`例如和。</span><span class="sxs-lookup"><span data-stu-id="22ffc-109">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="22ffc-110">`dwFlags`會傳遞至[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。</span><span class="sxs-lookup"><span data-stu-id="22ffc-110">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="4c496-111">[IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)來發出中繼資料，如有必要的介面。</span><span class="sxs-lookup"><span data-stu-id="4c496-111">[IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.</span></span>  
+ <span data-ttu-id="22ffc-111">[IMetaDataEmit 介面](../metadata/imetadataemit-interface.md)介面，可用來發出中繼資料（如有必要）。</span><span class="sxs-lookup"><span data-stu-id="22ffc-111">[IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="4c496-112">若要加入的檔案的唯一識別碼的儲存位置的指標。</span><span class="sxs-lookup"><span data-stu-id="4c496-112">Pointer to where the unique ID of the added file will be stored.</span></span>  
+ <span data-ttu-id="22ffc-112">要儲存所新增檔案之唯一識別碼的位置指標。</span><span class="sxs-lookup"><span data-stu-id="22ffc-112">Pointer to where the unique ID of the added file will be stored.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4c496-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="4c496-113">Return Value</span></span>  
- <span data-ttu-id="4c496-114">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="4c496-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="22ffc-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="22ffc-113">Return Value</span></span>  
+ <span data-ttu-id="22ffc-114">如果方法成功，則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="22ffc-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4c496-115">需求</span><span class="sxs-lookup"><span data-stu-id="4c496-115">Requirements</span></span>  
- <span data-ttu-id="4c496-116">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="4c496-116">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="22ffc-115">需求</span><span class="sxs-lookup"><span data-stu-id="22ffc-115">Requirements</span></span>  
+ <span data-ttu-id="22ffc-116">需要 alink. h。</span><span class="sxs-lookup"><span data-stu-id="22ffc-116">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c496-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4c496-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22ffc-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="22ffc-117">See also</span></span>
 
-- [<span data-ttu-id="4c496-118">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="4c496-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="4c496-119">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="4c496-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="4c496-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="4c496-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="22ffc-118">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="22ffc-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="22ffc-119">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="22ffc-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="22ffc-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="22ffc-120">ALink API</span></span>](index.md)

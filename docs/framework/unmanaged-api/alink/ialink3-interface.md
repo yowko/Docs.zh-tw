@@ -8,26 +8,26 @@ helpviewer_keywords:
 ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4989fd403e78558b415ba29e31e6a3a4e5bbe59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753656"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787279"
 ---
-# <a name="ialink3-interface"></a><span data-ttu-id="1213e-102">IALink3 介面</span><span class="sxs-lookup"><span data-stu-id="1213e-102">IALink3 Interface</span></span>
-<span data-ttu-id="1213e-103">提供單一方法`SetManifestFile`，可讓您指定或重設連結器會使用當它建立的組件資訊清單檔案。</span><span class="sxs-lookup"><span data-stu-id="1213e-103">Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.</span></span>  
+# <a name="ialink3-interface"></a><span data-ttu-id="19a12-102">IALink3 介面</span><span class="sxs-lookup"><span data-stu-id="19a12-102">IALink3 Interface</span></span>
+<span data-ttu-id="19a12-103">提供單一方法， `SetManifestFile`可讓您指定或重設連結器在建立元件時將使用的資訊清單檔。</span><span class="sxs-lookup"><span data-stu-id="19a12-103">Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1213e-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="1213e-104">In This Section</span></span>  
- [<span data-ttu-id="1213e-105">SetManifestFile 方法</span><span class="sxs-lookup"><span data-stu-id="1213e-105">SetManifestFile Method</span></span>](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
- <span data-ttu-id="1213e-106">可讓您指定或重設連結器建立組件時，會使用資訊清單檔案。</span><span class="sxs-lookup"><span data-stu-id="1213e-106">Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="19a12-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="19a12-104">In This Section</span></span>  
+ [<span data-ttu-id="19a12-105">SetManifestFile 方法</span><span class="sxs-lookup"><span data-stu-id="19a12-105">SetManifestFile Method</span></span>](setmanifestfile-method.md)  
+ <span data-ttu-id="19a12-106">可讓您指定或重設連結器在建立元件時將使用的資訊清單檔。</span><span class="sxs-lookup"><span data-stu-id="19a12-106">Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="1213e-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="1213e-107">Related Sections</span></span>  
- [<span data-ttu-id="1213e-108">ALink API</span><span class="sxs-lookup"><span data-stu-id="1213e-108">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)  
- <span data-ttu-id="1213e-109">支援建立 .NET Framework 組件和未繫結的模組。</span><span class="sxs-lookup"><span data-stu-id="1213e-109">Supports creating .NET Framework assemblies and unbound modules.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="19a12-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="19a12-107">Related Sections</span></span>  
+ [<span data-ttu-id="19a12-108">ALink API</span><span class="sxs-lookup"><span data-stu-id="19a12-108">ALink API</span></span>](index.md)  
+ <span data-ttu-id="19a12-109">支援建立 .NET Framework 組件和未繫結的模組。</span><span class="sxs-lookup"><span data-stu-id="19a12-109">Supports creating .NET Framework assemblies and unbound modules.</span></span>  
   
- [<span data-ttu-id="1213e-110">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="1213e-110">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- <span data-ttu-id="1213e-111">可協助建構.NET Framework 組件。</span><span class="sxs-lookup"><span data-stu-id="1213e-111">Helps in constructing .NET Framework assemblies.</span></span>  
+ [<span data-ttu-id="19a12-110">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="19a12-110">IALink Interface</span></span>](ialink-interface.md)  
+ <span data-ttu-id="19a12-111">有助於 .NET Framework 元件的建立。</span><span class="sxs-lookup"><span data-stu-id="19a12-111">Helps in constructing .NET Framework assemblies.</span></span>  
   
- [<span data-ttu-id="1213e-112">Al.exe (組件連結器)</span><span class="sxs-lookup"><span data-stu-id="1213e-112">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)  
- <span data-ttu-id="1213e-113">產生包含組件資訊清單，從一或多個屬於模組的檔案或資源檔。</span><span class="sxs-lookup"><span data-stu-id="1213e-113">Generates a file that has an assembly manifest from one or more files that are either modules or resource files.</span></span>
+ [<span data-ttu-id="19a12-112">Al.exe (組件連結器)</span><span class="sxs-lookup"><span data-stu-id="19a12-112">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)  
+ <span data-ttu-id="19a12-113">從一個或多個模組或資源檔的檔案產生具有組件資訊清單的檔案。</span><span class="sxs-lookup"><span data-stu-id="19a12-113">Generates a file that has an assembly manifest from one or more files that are either modules or resource files.</span></span>
