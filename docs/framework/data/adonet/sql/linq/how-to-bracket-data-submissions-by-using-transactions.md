@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用異動括住提交的資料
+title: 作法：使用異動括住提交的資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 94044a31-de90-479b-935a-8159b4ae5c5a
-ms.openlocfilehash: 3e58c6f2849ed9714b3356662dae313ab9d11696
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a4c5ba7c4938b48fe489e43ff4a3ff806bd8916
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037858"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793813"
 ---
-# <a name="how-to-bracket-data-submissions-by-using-transactions"></a>HOW TO：使用異動括住提交的資料
-您可以使用 <xref:System.Transactions.TransactionScope> 來括住資料庫提交。 如需詳細資訊，請參閱 <<c0> [ 交易支援](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)。  
+# <a name="how-to-bracket-data-submissions-by-using-transactions"></a>作法：使用異動括住提交的資料
+您可以使用 <xref:System.Transactions.TransactionScope> 來括住資料庫提交。 如需詳細資訊，請參閱[交易支援](transaction-support.md)。  
   
 ## <a name="example"></a>範例  
  下列程式碼會將資料庫提交封入 <xref:System.Transactions.TransactionScope> 中。  
@@ -23,6 +23,6 @@ ms.locfileid: "62037858"
   
 ## <a name="see-also"></a>另請參閱
 
-- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [變更和提交資料](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
-- [異動支援](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)
+- [下載範例資料庫](downloading-sample-databases.md)
+- [變更和提交資料](making-and-submitting-data-changes.md)
+- [異動支援](transaction-support.md)

@@ -2,164 +2,164 @@
 title: WMI 類別參考
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 226e4dedecd152f3a3d4143280529c7823339932
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915652"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795882"
 ---
 # <a name="wmi-class-reference"></a>WMI 類別參考
-此區段會列出所有的 Windows Communication Foundation (WCF) WMI 提供者所公開的 WMI 類別。  
+本節列出由 Windows Communication Foundation （WCF） WMI 提供者公開的所有 WMI 類別。  
   
 ## <a name="accessing-wmi-instances"></a>存取 WMI 執行個體  
- WMI 物件參考中列出的所有類別都無法直接產生，除了 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint。 如果要存取其他執行個體，您可以存取先前所述最上層類別的屬性。 例如，您可以在其中存取 TransportBindingElement 執行個體從執行個體]-> [的端點繫結]-> [BindingElements。  
+ WMI 物件參考中列出的所有類別都無法直接產生，除了 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint。 如果要存取其他執行個體，您可以存取先前所述最上層類別的屬性。 例如，您可以從端點實例存取 TransportBindingElement 實例-> Binding-> BindingElements。  
   
 ## <a name="in-this-section"></a>本節內容  
- [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
+ [ActivityTransfer](activitytransfer.md)  
   
- [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)  
+ [AppDomainInfo](appdomaininfo.md)  
   
- [AspNetCompatibilityRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/aspnetcompatibilityrequirementsattribute.md)  
+ [AspNetCompatibilityRequirementsAttribute](aspnetcompatibilityrequirementsattribute.md)  
   
- [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
+ [AsymmetricSecurityBindingElement](asymmetricsecuritybindingelement.md)  
   
- 「 行為類別 」  
+ 「行為類別」  
   
- [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
+ [BinaryMessageEncodingBindingElement](binarymessageencodingbindingelement.md)  
   
- [Binding](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
+ [Binding](binding.md)  
   
- [BindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
+ [BindingElement](bindingelement.md)  
   
- [CallbackBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/callbackbehavior.md)  
+ [CallbackBehavior](callbackbehavior.md)  
   
- [Channel 類別](../../../../../docs/framework/wcf/diagnostics/wmi/channel-class.md)  
+ [Channel 類別](channel-class.md)  
   
- [ChannelPoolSettings](../../../../../docs/framework/wcf/diagnostics/wmi/channelpoolsettings.md)  
+ [ChannelPoolSettings](channelpoolsettings.md)  
   
- [ClientCredentials](../../../../../docs/framework/wcf/diagnostics/wmi/clientcredentials.md)  
+ [ClientCredentials](clientcredentials.md)  
   
- [ClientViaBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)  
+ [ClientViaBehavior](clientviabehavior.md)  
   
- [CompositeDuplexBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/compositeduplexbindingelement.md)  
+ [CompositeDuplexBindingElement](compositeduplexbindingelement.md)  
   
- [ConnectionOrientedTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/connectionorientedtransportbindingelement.md)  
+ [ConnectionOrientedTransportBindingElement](connectionorientedtransportbindingelement.md)  
   
- [Contract](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
+ [Contract](contract.md)  
   
- [CustomBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/custombindingelement.md)  
+ [CustomBindingElement](custombindingelement.md)  
   
- [DeliveryRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
+ [DeliveryRequirementsAttribute](deliveryrequirementsattribute.md)  
   
- [Endpoint](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
+ [端點](endpoint.md)  
   
- [HttpsTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/httpstransportbindingelement.md)  
+ [HttpsTransportBindingElement](httpstransportbindingelement.md)  
   
- [HttpTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/httptransportbindingelement.md)  
+ [HttpTransportBindingElement](httptransportbindingelement.md)  
   
- [LocalServiceSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/localservicesecuritysettings.md)  
+ [LocalServiceSecuritySettings](localservicesecuritysettings.md)  
   
- [MatchAllEndpointBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/matchallendpointbehavior.md)  
+ [MatchAllEndpointBehavior](matchallendpointbehavior.md)  
   
- [MessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
+ [MessageEncodingBindingElement](messageencodingbindingelement.md)  
   
- [MsmqBindingElementBase](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
+ [MsmqBindingElementBase](msmqbindingelementbase.md)  
   
- [MsmqIntegrationBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqintegrationbindingelement.md)  
+ [MsmqIntegrationBindingElement](msmqintegrationbindingelement.md)  
   
- [MsmqTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqtransportbindingelement.md)  
+ [MsmqTransportBindingElement](msmqtransportbindingelement.md)  
   
- [MtomMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/mtommessageencodingbindingelement.md)  
+ [MtomMessageEncodingBindingElement](mtommessageencodingbindingelement.md)  
   
- [MustUnderstandBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/mustunderstandbehavior.md)  
+ [MustUnderstandBehavior](mustunderstandbehavior.md)  
   
- [NamedPipeConnectionPoolSettings](../../../../../docs/framework/wcf/diagnostics/wmi/namedpipeconnectionpoolsettings.md)  
+ [NamedPipeConnectionPoolSettings](namedpipeconnectionpoolsettings.md)  
   
- [NamedPipeTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/namedpipetransportbindingelement.md)  
+ [NamedPipeTransportBindingElement](namedpipetransportbindingelement.md)  
   
- [OneWayBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
+ [OneWayBindingElement](onewaybindingelement.md)  
   
- 「 作業類別 」  
+ 「Operation 類別」  
   
- [OperationBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
+ [OperationBehaviorAttribute](operationbehaviorattribute.md)  
   
- [PeerCustomResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peercustomresolverbindingelement.md)  
+ [PeerCustomResolverBindingElement](peercustomresolverbindingelement.md)  
   
- [PeerResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peerresolverbindingelement.md)  
+ [PeerResolverBindingElement](peerresolverbindingelement.md)  
   
- [PeerSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/peersecuritysettings.md)  
+ [PeerSecuritySettings](peersecuritysettings.md)  
   
- [PeerTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportbindingelement.md)  
+ [PeerTransportBindingElement](peertransportbindingelement.md)  
   
- [PeerTransportSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportsecuritysettings.md)  
+ [PeerTransportSecuritySettings](peertransportsecuritysettings.md)  
   
- [PnrpPeerResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/pnrppeerresolverbindingelement.md)  
+ [PnrpPeerResolverBindingElement](pnrppeerresolverbindingelement.md)  
   
- [PrivacyNoticeBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/privacynoticebindingelement.md)  
+ [PrivacyNoticeBindingElement](privacynoticebindingelement.md)  
   
- [ReliableSessionBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/reliablesessionbindingelement.md)  
+ [ReliableSessionBindingElement](reliablesessionbindingelement.md)  
   
- [SecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
+ [SecurityBindingElement](securitybindingelement.md)  
   
- [Service](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
+ [Service](service.md)  
   
- [ServiceAppDomain](../../../../../docs/framework/wcf/diagnostics/wmi/serviceappdomain.md)  
+ [ServiceAppDomain](serviceappdomain.md)  
   
- [ServiceAuthorizationBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/serviceauthorizationbehavior.md)  
+ [ServiceAuthorizationBehavior](serviceauthorizationbehavior.md)  
   
- [ServiceBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/servicebehaviorattribute.md)  
+ [ServiceBehaviorAttribute](servicebehaviorattribute.md)  
   
- [ServiceCredentials](../../../../../docs/framework/wcf/diagnostics/wmi/servicecredentials.md)  
+ [ServiceCredentials](servicecredentials.md)  
   
- [ServiceDebugBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicedebugbehavior.md)  
+ [ServiceDebugBehavior](servicedebugbehavior.md)  
   
- [ServiceMetadataBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicemetadatabehavior.md)  
+ [ServiceMetadataBehavior](servicemetadatabehavior.md)  
   
- [ServiceSecurityAuditBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicesecurityauditbehavior.md)  
+ [ServiceSecurityAuditBehavior](servicesecurityauditbehavior.md)  
   
- [ServiceThrottlingBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicethrottlingbehavior.md)  
+ [ServiceThrottlingBehavior](servicethrottlingbehavior.md)  
   
- [ServiceTimeoutsBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicetimeoutsbehavior.md)  
+ [ServiceTimeoutsBehavior](servicetimeoutsbehavior.md)  
   
- [ServiceToEndpointAssociation](../../../../../docs/framework/wcf/diagnostics/wmi/servicetoendpointassociation.md)  
+ [ServiceToEndpointAssociation](servicetoendpointassociation.md)  
   
- [SslStreamSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/sslstreamsecuritybindingelement.md)  
+ [SslStreamSecurityBindingElement](sslstreamsecuritybindingelement.md)  
   
- [SymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)  
+ [SymmetricSecurityBindingElement](symmetricsecuritybindingelement.md)  
   
- [SynchronousReceiveBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/synchronousreceivebehavior.md)  
+ [SynchronousReceiveBehavior](synchronousreceivebehavior.md)  
   
- [TcpConnectionPoolSettings](../../../../../docs/framework/wcf/diagnostics/wmi/tcpconnectionpoolsettings.md)  
+ [TcpConnectionPoolSettings](tcpconnectionpoolsettings.md)  
   
- [TcpTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/tcptransportbindingelement.md)  
+ [TcpTransportBindingElement](tcptransportbindingelement.md)  
   
- [TextMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/textmessageencodingbindingelement.md)  
+ [TextMessageEncodingBindingElement](textmessageencodingbindingelement.md)  
   
- [TraceListener](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistener.md)  
+ [TraceListener](tracelistener.md)  
   
- [TraceListenerArgument](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistenerargument.md)  
+ [TraceListenerArgument](tracelistenerargument.md)  
   
- [TransactedBatchingBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/transactedbatchingbehavior.md)  
+ [TransactedBatchingBehavior](transactedbatchingbehavior.md)  
   
- [TransactionFlowAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/transactionflowattribute.md)  
+ [TransactionFlowAttribute](transactionflowattribute.md)  
   
- [TransactionFlowBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/transactionflowbindingelement.md)  
+ [TransactionFlowBindingElement](transactionflowbindingelement.md)  
   
- [TransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/transportbindingelement.md)  
+ [TransportBindingElement](transportbindingelement.md)  
   
- [TransportSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/transportsecuritybindingelement.md)  
+ [TransportSecurityBindingElement](transportsecuritybindingelement.md)  
   
- [UseManagedPresentationBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/usemanagedpresentationbindingelement.md)  
+ [UseManagedPresentationBindingElement](usemanagedpresentationbindingelement.md)  
   
- [WindowsStreamSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/windowsstreamsecuritybindingelement.md)  
+ [WindowsStreamSecurityBindingElement](windowsstreamsecuritybindingelement.md)  
   
- [WSAT_TraceEvent](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceevent.md)  
+ [WSAT_TraceEvent](wsat-traceevent.md)  
   
- [WSAT_TraceProvider](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceprovider.md)  
+ [WSAT_TraceProvider](wsat-traceprovider.md)  
   
- [WSAT_TraceRecord](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-tracerecord.md)  
+ [WSAT_TraceRecord](wsat-tracerecord.md)  
   
- [XmlDictionaryReaderQuotas](../../../../../docs/framework/wcf/diagnostics/wmi/xmldictionaryreaderquotas.md)  
+ [XmlDictionaryReaderQuotas](xmldictionaryreaderquotas.md)  
   
- [XmlSerializerOperationBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/xmlserializeroperationbehavior.md)
+ [XmlSerializerOperationBehavior](xmlserializeroperationbehavior.md)

@@ -17,16 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98273307003485202d8c12d5c27fda04ff5a0ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5af7dc4e1694b66fc4a5ce37e515c71e9fa3db49
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629885"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796738"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream 方法
 
-建立具有指定的名稱和格式的資料流。
+建立具有指定之名稱和格式的資料流程。
 
 ## <a name="syntax"></a>語法
 
@@ -44,30 +44,30 @@ HRESULT CreateStream (
 ## <a name="parameters"></a>參數
 
 `dwFlags`\
-[in]支援下列值： 旗標。
+在在融合 .idl 中定義的旗標。
 
 `pszStreamName`\
-[in]若要建立資料流的名稱。
+在要建立之資料流程的名稱。
 
 `dwFormat`\
-[in]若要串流處理檔案的格式。
+在要進行資料流程處理之檔案的格式。
 
 `dwFormatFlags`\
-[in]支援下列值： 格式特有的旗標。
+在在融合 .idl 中定義的格式特定旗標。
 
 `ppIStream`\
-[out]傳回的位址指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)執行個體。
+脫銷傳回之[IStream](/windows/desktop/api/objidl/nn-objidl-istream)實例位址的指標。
 
 `puliMaxSize`\
-[in，選用]所參考的資料流的大小上限`ppIStream`。
+[in，optional]所參考`ppIStream`之資料流程的大小上限。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** Fusion.h
+**標頭：** 融合。h
 
-**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e91069c25ebe6c2a22927391734e5030a908e4ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: f572f683511fe90951f841c80eae448a9cb6054b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663923"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785085"
 ---
 # <a name="local-functions-c-programming-guide"></a>區域函式 (C# 程式設計手冊)
 
-從 C# 7.0 開始，C# 支援「區域函式」。 區域函式是另一個成員中巢狀型別的私用方法。 它們只可以從其包含成員呼叫。 區域函式可以宣告於下列項目中，以及從下列項目呼叫：
+從 C# 7.0 開始，C# 支援*區域函式*。 區域函式是另一個成員中巢狀型別的私用方法。 它們只可以從其包含成員呼叫。 區域函式可以宣告於下列項目中，以及從下列項目呼叫：
 
 - 方法，特別是迭代器方法和非同步方法
 - 建構函式
@@ -31,7 +31,7 @@ ms.locfileid: "54663923"
 > [!NOTE]
 > 在某些情況下，您可以使用 Lambda 運算式來實作區域函式也支援的功能。 如需比較，請參閱[區域函式與 Lambda 運算式的比較](../../local-functions-vs-lambdas.md)。
 
-區域函式讓程式碼的意圖更為清楚。 讀取您程式碼的任何人都可以知道無法呼叫這個方法，但包含的方法除外。 對於 Team 專案，它們也可讓另一個開發人員無法從類別或結構的其他位置錯誤地直接呼叫方法。
+區域函式讓程式碼的意圖更為清楚。 讀取您程式碼的任何人都可以看到方法無法呼叫，但包含方法除外。 對於 Team 專案，它們也可讓另一個開發人員無法從類別或結構的其他位置錯誤地直接呼叫方法。
  
 ## <a name="local-function-syntax"></a>區域函式語法
 

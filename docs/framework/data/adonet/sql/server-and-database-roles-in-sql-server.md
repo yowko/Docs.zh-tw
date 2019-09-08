@@ -2,12 +2,12 @@
 title: SQL Server 中的伺服器和資料庫角色
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961086"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791787"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的伺服器和資料庫角色
 所有的 SQL Server 版本都會使用角色架構的安全性，讓您可以將權限指派給角色或使用者群組，而不是個別的使用者。 固定伺服器角色和固定資料庫角色都指派有固定的權限組。  
@@ -18,7 +18,7 @@ ms.locfileid: "69961086"
 > [!IMPORTANT]
 > `sysadmin` 固定伺服器角色涵蓋所有其他的角色，而且範圍不受限制。 除非高度信任主體的安全性，否則請勿將主體新增到此角色中。 `sysadmin` 角色成員對於所有的伺服器資料庫和資源都具有不可撤銷的管理權限。  
   
- 當您要將使用者新增到固定伺服器角色時，請嚴加篩選。 例如，`bulkadmin` 角色可讓使用者加任何本機檔案的內容插入至資料表，因而可能危及資料完整性。 如需固定伺服器角色和許可權的完整清單, 請參閱 SQL Server 線上叢書。  
+ 當您要將使用者新增到固定伺服器角色時，請嚴加篩選。 例如，`bulkadmin` 角色可讓使用者加任何本機檔案的內容插入至資料表，因而可能危及資料完整性。 如需固定伺服器角色和許可權的完整清單，請參閱 SQL Server 線上叢書。  
   
 ## <a name="fixed-database-roles"></a>固定資料庫角色  
  固定資料庫角色擁有預先定義的權限集合，其目的是讓您可以輕鬆地管理權限群組。 `db_owner` 角色的成員可以在資料庫上執行所有組態和維護活動。  
@@ -42,7 +42,7 @@ ms.locfileid: "69961086"
  `dbo` (也稱為資料庫擁有者) 是使用者帳戶，擁有可在資料庫中執行所有活動的隱含權限。 `sysadmin` 固定伺服器角色的成員會自動對應至 `dbo`。  
   
 > [!NOTE]
-> `dbo`也是架構的名稱, 如 SQL Server 中的[擁有權和使用者架構分離中](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)所述。  
+> `dbo`也是架構的名稱，如 SQL Server 中的[擁有權和使用者架構分離中](ownership-and-user-schema-separation-in-sql-server.md)所述。  
   
  `dbo` 使用者帳戶經常會與 `db_owner` 固定資料庫角色混淆。 `db_owner` 的範圍是一個資料庫，而 `sysadmin` 的範圍是整個伺服器。 `db_owner` 角色中的成員資格不會授與 `dbo` 使用權限。  
   
@@ -56,16 +56,16 @@ ms.locfileid: "69961086"
   
  如需有關 SQL Server 登入、使用者和角色的詳細資訊，請參閱下列資源。  
   
-|Resource|描述|  
+|Resource|說明|  
 |--------------|-----------------|  
 |[具有資料庫引擎許可權的消費者入門](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
 |[原理](/sql/relational-databases/security/authentication-access/principals-database-engine)|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [SQL Server 中的擁有權和使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
+- [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中進行驗證](authentication-in-sql-server.md)
+- [SQL Server 中的擁有權和使用者結構描述分離](ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server 中的授權和權限](authorization-and-permissions-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

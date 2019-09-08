@@ -2,12 +2,12 @@
 title: Oracle 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb91a90ae7323283556954caa401646a2063a37e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878471"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783290"
 ---
 # <a name="oracle-schema-collections"></a>Oracle 結構描述集合
 
@@ -23,7 +23,7 @@ ms.locfileid: "61878471"
 
 - 序列
 
-- Synonyms
+- 同義字
 
 - 資料表
 
@@ -31,9 +31,9 @@ ms.locfileid: "61878471"
 
 - 檢視
 
-- 函式
+- Functions
 
-- 封裝
+- Packages
 
 - PackageBodies
 
@@ -56,7 +56,7 @@ ms.locfileid: "61878471"
 |OWNER|String|資料表、檢視表或叢集的擁有人。|
 |TABLE_NAME|String|資料表、檢視表或叢集名稱。|
 |COLUMN_NAME|String|資料行名稱。|
-|識別碼|Decimal|所建立之資料行的序號。|
+|id|Decimal|所建立之資料行的序號。|
 |資料型別|String|資料行的資料型別。|
 |LENGTH|Decimal|資料行的長度 (以位元組為單位)。|
 |PRECISION|Decimal|若為 NUMBER 資料型別，則是十進位精確度；若為 FLOAT 資料型別，則是二進位精確度；若為所有其他資料型別，則是 NULL。|
@@ -102,13 +102,13 @@ ms.locfileid: "61878471"
 |LAST_ANALYZED|DateTime|最近分析此索引的日期。|
 |DEGREE|String|掃描索引之每個執行個體的執行緒數目。|
 |INSTANCES|String|要在其上掃描索引的執行個體數目。|
-|PARTITIONED|String|此索引是否已分割 ([是]&#124;否)。|
+|PARTITIONED|String|是否分割此索引（是&#124; NO）。|
 |TEMPORARY|String|索引是否在暫存資料表上。|
-|GENERATED|String|索引的名稱是否是系統產生 (Y&#124;N)。|
-|SECONDARY|String|索引是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y&#124;N)。|
+|GENERATED|String|索引的名稱是否為系統產生（Y&#124;N）。|
+|SECONDARY|String|索引是否為由 Oracle9i 資料磁帶的之 odciindexcreate 方法所建立的次要物件（Y&#124;N）。|
 |BUFFER_POOL|String|要用於索引區塊之預設緩衝集區的名稱。|
 |USER_STATS|String|統計資料是否為使用者直接輸入的。|
-|DURATION|String|表示暫存資料表的持續期間：1) SYS$ SESSION： 資料列會保留期間的工作階段中，2) SYS$ TRANSACTION: COMMIT，3)，則為 Null 永久資料表後刪除資料列。|
+|DURATION|String|表示暫存資料表的持續期間：1） SYS $ SESSION：在會話期間保留資料列，2） SYS $ TRANSACTION：在認可後刪除資料列，3） Null 表示永久資料表。|
 |PCT_DIRECT_ACCESS|Decimal|若為依索引進行組織之資料表上的次要索引，此為以 VALID 猜測的資料列百分比|
 |ITYP_OWNER|String|若為網域索引，此為索引型別的擁有人。|
 |ITYP_NAME|String|若為網域索引，此為索引型別的名稱。|
@@ -116,7 +116,7 @@ ms.locfileid: "61878471"
 |GLOBAL_STATS|String|若為分割的索引，表示統計資料是藉由整體分析索引收集的 (YES)，或者是藉由估計基礎索引分割區及子分割區而取得的 (NO)。|
 |DOMIDX_STATUS|String|反映網域索引的狀態。 NULL：指定的索引不是網域索引。 VALID：索引是有效的網域索引。 IDXTYP_INVLD：此網域索引的索引型別無效。|
 |DOMIDX_OPSTATUS|String|反映網域索引上執行的作業狀態：NULL：指定的索引不是網域索引。 VALID：作業執行完畢，未發生錯誤。 FAILED：作業失敗，發生錯誤。|
-|FUNCIDX_STATUS|String|表示功能型索引的狀態：NULL： 這不是功能型索引，ENABLED： 啟用功能型索引，停用： 函式為基礎的索引已停用。|
+|FUNCIDX_STATUS|String|表示功能型索引的狀態：Null：這不是以函式為基礎的索引，已啟用：以函式為基礎的索引已啟用，已停用：已停用以函數為基礎的索引。|
 |JOIN_INDEX|String|表示這是否為聯結索引。|
 
 ## <a name="indexcolumns"></a>IndexColumns
@@ -146,8 +146,8 @@ ms.locfileid: "61878471"
 |TIMESTAMP|String|物件規格的時間戳記 (字元資料)。|
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|
-|GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124; N).|
-|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124; N)。|
+|GENERATED|String|是否已產生此物件系統的名稱？ （Y &#124; N）。|
+|SECONDARY|String|這是否為由 Oracle9i 資料磁帶的之 odciindexcreate 方法所建立的次要物件（Y &#124; N）。|
 |CREATED|DateTime|建立物件的日期。|
 
 ## <a name="sequences"></a>序列
@@ -164,7 +164,7 @@ ms.locfileid: "61878471"
 |CACHE_SIZE|Decimal|要快取的序號數目。|
 |LAST_NUMBER|Decimal|寫入磁碟的最後序號。 若序列使用快取，則寫入磁碟的號碼是置於序列快取的最後號碼。 此號碼可能大於所使用的最後序號。|
 
-## <a name="synonyms"></a>Synonyms
+## <a name="synonyms"></a>同義字
 
 |ColumnName|DataType|描述|
 |----------------|--------------|-----------------|
@@ -176,23 +176,23 @@ ms.locfileid: "61878471"
 
 ## <a name="tables"></a>資料表
 
-|ColumnName|DataType|描述|
+|ColumnName|DataType|說明|
 |----------------|--------------|-----------------|
 |OWNER|String|資料表的擁有人。|
 |TABLE_NAME|String|資料表名稱。|
-|TYPE|String|資料表型別。|
+|類型|String|資料表型別。|
 
 ## <a name="users"></a>使用者
 
 |ColumnName|DataType|描述|
 |----------------|--------------|-----------------|
-|NAME|String|使用者名稱。|
-|識別碼|Decimal|使用者的識別碼。|
+|名稱|String|使用者名稱。|
+|id|Decimal|使用者的識別碼。|
 |CREATEDATE|DateTime|使用者建立日期。|
 
 ## <a name="views"></a>檢視
 
-|ColumnName|DataType|描述|
+|ColumnName|DataType|說明|
 |----------------|--------------|-----------------|
 |OWNER|String|檢視表的擁有人。|
 |VIEW_NAME|String|檢視表名稱。|
@@ -206,7 +206,7 @@ ms.locfileid: "61878471"
 |VIEW_TYPE|String|檢視表的型別 (如果檢視表是具型別檢視表)。|
 |SUPERVIEW_NAME|String|超級檢視表的名稱。|
 
-## <a name="functions"></a>函式
+## <a name="functions"></a>Functions
 
 |ColumnName|DataType|描述|
 |----------------|--------------|-----------------|
@@ -221,10 +221,10 @@ ms.locfileid: "61878471"
 |TIMESTAMP|String|物件規格的時間戳記 (字元資料)|
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|
-|GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124; N).|
-|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124; N)。|
+|GENERATED|String|是否已產生此物件系統的名稱？ （Y &#124; N）。|
+|SECONDARY|String|這是否為由 Oracle9i 資料磁帶的之 odciindexcreate 方法所建立的次要物件（Y &#124; N）。|
 
-## <a name="packages"></a>封裝
+## <a name="packages"></a>Packages
 
 |ColumnName|DataType|描述|
 |----------------|--------------|-----------------|
@@ -237,13 +237,13 @@ ms.locfileid: "61878471"
 |TIMESTAMP|String|物件規格的時間戳記 (字元資料)。|
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|
-|GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124; N).|
-|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124; N)。|
+|GENERATED|String|是否已產生此物件系統的名稱？ （Y &#124; N）。|
+|SECONDARY|String|這是否為由 Oracle9i 資料磁帶的之 odciindexcreate 方法所建立的次要物件（Y &#124; N）。|
 |CREATED|DateTime|建立物件的日期。|
 
 ## <a name="packagebodies"></a>PackageBodies
 
-|ColumnName|DataType|描述|
+|ColumnName|DataType|說明|
 |----------------|--------------|-----------------|
 |OWNER|String|物件的擁有人。|
 |OBJECT_NAME|String|物件名稱。|
@@ -254,13 +254,13 @@ ms.locfileid: "61878471"
 |TIMESTAMP|String|物件規格的時間戳記 (字元資料)。|
 |狀態|String|物件的狀態 (VALID、INVALID 或 N/A)。|
 |TEMPORARY|String|物件是否為暫存的 (目前的工作階段僅能看到置於此物件本身的資料)。|
-|GENERATED|String|是否已產生此物件系統的名稱？ (Y &#124; N).|
-|SECONDARY|String|這是否為 Oracle9i Data Cartridge 之 ODCIIndexCreate 方法所建立的次要物件 (Y &#124; N)。|
+|GENERATED|String|是否已產生此物件系統的名稱？ （Y &#124; N）。|
+|SECONDARY|String|這是否為由 Oracle9i 資料磁帶的之 odciindexcreate 方法所建立的次要物件（Y &#124; N）。|
 |CREATED|DateTime|建立物件的日期。|
 
 ## <a name="arguments"></a>引數
 
-|ColumnName|DataType|描述|
+|ColumnName|DataType|說明|
 |----------------|--------------|-----------------|
 |OWNER|String|物件的擁有人名稱。|
 |PACKAGE_NAME|String|封裝名稱。|
@@ -278,7 +278,7 @@ ms.locfileid: "61878471"
 
 ## <a name="uniquekeys"></a>UniqueKeys
 
-|ColumnName|DataType|描述|
+|ColumnName|DataType|說明|
 |----------------|--------------|-----------------|
 |OWNER|String|條件約束定義的擁有人。|
 |CONSTRAINT_NAME|String|條件約束定義的名稱。|
@@ -382,4 +382,4 @@ ms.locfileid: "61878471"
 
 ## <a name="see-also"></a>另請參閱
 
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概觀](ado-net-overview.md)

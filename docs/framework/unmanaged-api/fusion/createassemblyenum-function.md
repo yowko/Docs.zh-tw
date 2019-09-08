@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c56b0168df6e4aee69b5d3e5fbbe027ca2c8974a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1db72c44b53b5abff9aee35094abc1e0e577fad4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778451"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795382"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum 函式
-取得指標[IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)可以列舉具有指定之組件中的物件的執行個體[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)。  
+取得[IAssemblyEnum](iassemblyenum-interface.md)實例的指標，這個實例可以使用指定的[IAssemblyName](iassemblyname-interface.md)來列舉元件中的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,34 +42,34 @@ HRESULT CreateAssemblyEnum (
   
 ## <a name="parameters"></a>參數  
  `pEnum`  
- [out]包含要求的記憶體位置指標`IAssemblyEnum`指標。  
+ 脫銷包含所要求`IAssemblyEnum`指標之記憶體位置的指標。  
   
  `pUnkReserved`  
- [in]保留供未來擴充。 `pUnkReserved` 必須是 null 參考。  
+ 在保留以供未來擴充性之用。 `pUnkReserved`必須是 null 參考。  
   
  `pName`  
- [in]`IAssemblyName`所要求組件。 這個名稱用來篩選列舉型別。 它可以是 null，以列舉在全域組件快取中的所有組件。  
+ 在所`IAssemblyName`要求之元件的。 這個名稱是用來篩選列舉型別。 它可以是 null，以列舉全域組件快取中的所有元件。  
   
  `dwFlags`  
- [in]修改列舉值的行為的旗標。 這個參數會包含只從一個位元[ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)列舉型別。  
+ 在用來修改列舉值行為的旗標。 此參數只包含[ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)列舉中的一個位。  
   
  `pvReserved`  
- [in]保留供未來擴充。 `pvReserved` 必須是 null 參考。  
+ 在保留以供未來擴充性之用。 `pvReserved`必須是 null 參考。  
   
 ## <a name="remarks"></a>備註  
- `dwFlags`參數會包含只從一個位元`ASM_CACHE_FLAGS`列舉型別。  
+ 參數只包含`ASM_CACHE_FLAGS`列舉中的一個位。 `dwFlags`  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyEnum 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
-- [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IAssemblyEnum 介面](iassemblyenum-interface.md)
+- [IAssemblyName 介面](iassemblyname-interface.md)
+- [融合全域靜態函式](fusion-global-static-functions.md)

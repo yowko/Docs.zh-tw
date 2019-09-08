@@ -2,15 +2,15 @@
 title: 推斷項目文字
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3fdd110a14ddfd6065ed552171a8d76ef64e2fb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203536"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784535"
 ---
 # <a name="inferring-element-text"></a>推斷項目文字
-如果專案包含文字, 且沒有任何子專案要推斷為數據表 (例如具有屬性或重複元素的專案), 則會將名稱為**TableName_Text**的新資料行加入至為專案推斷的資料表。 項目中包含的文字會加入資料表中的資料列，並儲存在新資料行內。 新資料行的**ColumnMapping**屬性會設定為**MappingType**。  
+如果專案包含文字，且沒有任何子專案要推斷為數據表（例如具有屬性或重複元素的專案），則會將名稱為**TableName_Text**的新資料行加入至為專案推斷的資料表。 項目中包含的文字會加入資料表中的資料列，並儲存在新資料行內。 新資料行的**ColumnMapping**屬性會設定為**MappingType**。  
   
  例如，請考量下列 XML。  
   
@@ -20,7 +20,7 @@ ms.locfileid: "70203536"
 </DocumentElement>  
 ```  
   
- 推斷進程會產生名為**Element1**的資料表, 其中包含兩個數據行: **attr1**和**Element1_Text**。 **Attr1**資料行的**ColumnMapping**屬性會設定為**MappingType. Attribute**。 **Element1_Text**資料行的**ColumnMapping**屬性會設定為**MappingType。**  
+ 推斷進程會產生名為**Element1**的資料表，其中包含兩個數據行： **attr1**和**Element1_Text**。 **Attr1**資料行的**ColumnMapping**屬性會設定為**MappingType. Attribute**。 **Element1_Text**資料行的**ColumnMapping**屬性會設定為**MappingType。**  
   
  **集中**DocumentElement  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70203536"
 </Element1>  
 ```  
   
- 推斷程式會產生名為**Element1**的資料表, 其中有一個名為**ChildElement1**的資料行。 **ChildElement1**元素的文字會包含在資料表的資料列中。 其他文字則被忽略。 **ChildElement1**資料行的**ColumnMapping**屬性會設定為**MappingType。**  
+ 推斷程式會產生名為**Element1**的資料表，其中有一個名為**ChildElement1**的資料行。 **ChildElement1**元素的文字會包含在資料表的資料列中。 其他文字則被忽略。 **ChildElement1**資料行的**ColumnMapping**屬性會設定為**MappingType。**  
   
  **集中**DocumentElement  
   
@@ -57,4 +57,4 @@ ms.locfileid: "70203536"
 - [從 XML 載入資料集結構描述資訊](loading-dataset-schema-information-from-xml.md)
 - [在 DataSet 中使用 XML](using-xml-in-a-dataset.md)
 - [DataSet、DataTable 和 DataView](index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概觀](../ado-net-overview.md)

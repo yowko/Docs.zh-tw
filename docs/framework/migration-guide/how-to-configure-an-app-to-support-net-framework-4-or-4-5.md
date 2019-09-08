@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 186297c050d81eca130b751c46303083ff025f22
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636115"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779489"
 ---
-# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>作法：設定應用程式以支援 .NET Framework 4 或更新版本
+# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>HOW TO：設定應用程式以支援 .NET Framework 4 或更新版本
 
 所有裝載通用語言執行平台 (CLR) 的應用程式都必須啟動或「啟用」CLR，才能執行 Managed 程式碼。 通常，.NET Framework 應用程式會在本身建置所在的 CLR 版本上執行，但是您可以使用應用程式組態檔 (有時稱為 app.config 檔案) 變更桌面應用程式的這個行為。 不過，您無法使用應用程式組態檔變更 Windows 市集應用程式或 Windows Phone 應用程式的預設啟用行為。 本文說明如何讓您的傳統型應用程式在另一個 .NET Framework 版本上執行，且提供如何鎖定 4 或更新版本作為目標。
 
@@ -22,7 +22,7 @@ ms.locfileid: "65636115"
 
 - 組態檔。
 
-     如果應用程式組態檔包含指定一個或多個 .NET Framework 版本的 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 項目，而且使用者的電腦上有其中一個版本，則應用程式會在該版本上執行。 組態檔會依 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 項目列出的順序讀取這些項目，並且使用使用者電腦上所列的第一個 .NET Framework 版本。 (針對 1.0 版使用 [\<requiredRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md))。
+     如果應用程式組態檔包含指定一個或多個 .NET Framework 版本的 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 項目，而且使用者的電腦上有其中一個版本，則應用程式會在該版本上執行。 組態檔會依 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 項目列出的順序讀取這些項目，並且使用使用者電腦上所列的第一個 .NET Framework 版本。 (針對 1.0 版使用 [\<requiredRuntime> 元素](../configure-apps/file-schema/startup/requiredruntime-element.md))。
 
 - 編譯的版本。
 
@@ -30,7 +30,7 @@ ms.locfileid: "65636115"
 
 - 安裝的最新版本。
 
-     如果沒有建置應用程式所在的 .NET Framework 版本，而且組態檔並未在 [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)中指定版本，則應用程式會嘗試以使用者電腦中存在的最新 .NET Framework 版本執行。
+     如果沒有建置應用程式所在的 .NET Framework 版本，而且組態檔並未在 [\<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)中指定版本，則應用程式會嘗試以使用者電腦中存在的最新 .NET Framework 版本執行。
 
      不過，.NET Framework 1.0、1.1、2.0、3.0 和 3.5 應用程式不會自動在 .NET Framework 4 (含) 以後版本上執行，而且在某些情況下，使用者可能會收到錯誤以及安裝 .NET Framework 3.5 的提示。 因為不同版本的 Windows 系統包含不同版本的 .NET Framework，因此啟用行為也會取決於使用者的作業系統。 如果您的應用程式同時支援 .NET Framework 3.5 和 4 (含) 以後版本，建議您在組態檔中使用多個項目指出這種情況，避免發生 .NET Framework 初始化錯誤。 如需詳細資訊，請參閱[版本和相依性](versions-and-dependencies.md)。
 
@@ -47,7 +47,7 @@ ms.locfileid: "65636115"
 
      若要加入組態檔，請在 Visual Studio 功能表列上選擇 [專案]、[加入新項目]。 從左窗格選擇 [一般]，然後選擇 [組態檔]。 將組態檔命名為*應用程式名稱*.exe.config。這些功能表選項不適用於 Windows 市集應用程式或 Windows Phone 應用程式專案，因為您無法變更這些平台的啟用原則。
 
-2. 將 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素加入至應用程式組態檔，如下所示：
+2. 將 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素加入至應用程式組態檔，如下所示：
 
     ```xml
     <configuration>
@@ -67,19 +67,19 @@ ms.locfileid: "65636115"
 
     - .NET Framework 4 和更新版本："v4.0"
 
-     您可以加入多個 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素並且依偏好列出，以便指定支援多種版本的 .NET Framework。
+     您可以加入多個 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素並且依偏好列出，以便指定支援多種版本的 .NET Framework。
 
  下表將示範電腦上安裝的應用程式組態檔設定和 .NET Framework 版本如何決定用來執行 .NET Framework 3.5 應用程式的版本。 這些範例為 .NET Framework 3.5 應用程式專屬，不過您可以使用類似的邏輯鎖定使用舊版 .NET Framework 建置的應用程式。 請注意，.NET Framework 2.0 版本號碼 (v2.0.50727) 是在應用程式組態檔中用來指定 .NET Framework 3.5。
 
 |App.config 檔案設定|在安裝 3.5 版的電腦上|在安裝 3.5 版和第 4 版或更新版本的電腦上|在安裝第 4 版或更新版本的電腦上|
 |-|-|-|-|
-|無|在 3.5 上執行|在 3.5 上執行|顯示錯誤訊息，提示使用者安裝正確的版本*|
+|None|在 3.5 上執行|在 3.5 上執行|顯示錯誤訊息，提示使用者安裝正確的版本*|
 |`<supportedRuntime version="v2.0.50727"/>`|在 3.5 上執行|在 3.5 上執行|顯示錯誤訊息，提示使用者安裝正確的版本*|
 |`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|在 3.5 上執行|在 3.5 上執行|在第 4 版或更新版本上執行|
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|在 3.5 上執行|在第 4 版或更新版本上執行|在第 4 版或更新版本上執行|
 |`<supportedRuntime version="v4.0"/>`|顯示錯誤訊息，提示使用者安裝正確的版本*|在第 4 版或更新版本上執行|在第 4 版或更新版本上執行|
 
- \* 如需這個錯誤訊息及避免出現這個錯誤訊息的詳細資訊，請參閱 [.NET Framework 初始化錯誤：管理使用者體驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)。
+ \* 如需這個錯誤訊息及避免出現這個錯誤訊息的詳細資訊，請參閱 [.NET Framework 初始化錯誤：管理使用者體驗](../deployment/initialization-errors-managing-the-user-experience.md)。
 
 ## <a name="see-also"></a>另請參閱
 

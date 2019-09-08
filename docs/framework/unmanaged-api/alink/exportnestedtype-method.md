@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfaedad48291ac09f6959bc7b314ae0d9da76e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 570e48788a11045882ef546bf6bc22315c2a02b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742052"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777272"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 方法
-指定巢狀型別為可匯出。 [ExportType 方法](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)也可以匯出巢狀類型，但這個方法會比較快。  
+將巢狀型別指定為可匯出。 [ExportType 方法](exporttype-method.md)也可以匯出巢狀型別，但是這個方法更快。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,34 +43,34 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 若要從匯出的組件識別碼。  
+ 要匯出之元件的識別碼。  
   
  `FileToken`  
- 檔案的語彙基元或組件的檔案，定義成可匯出的型別。  
+ 檔案的檔案標記或檔案元件，定義要成為可匯出的類型。  
   
  `TypeToken`  
- 可匯出型別的型別語彙基元。  
+ 要成為可匯出之類型的類型 token。  
   
  `ParentType`  
- 父型別的權杖。  
+ 父類型的 Token。  
   
  `pszTypename`  
- 若要匯出的完整型別名稱。  
+ 要匯出的完整類型名稱。  
   
  `dwFlags`  
- `ComType` 這類旗標`tdPublic`或`tdNested`。 這個值可能會傳遞至[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ `ComType`旗標， `tdPublic`例如`tdNested`或。 這個值可能會傳遞給[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
- 接收匯出之類型的語彙基元。  
+ 接收匯出類型的 token。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 介面](ialink-interface.md)
+- [IALink2 介面](ialink2-interface.md)
+- [ALink API](index.md)

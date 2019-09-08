@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: a25186f6283f01ef56b1c684c4a43b9a60fb6d64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a21d5bbffdb1a78d3062929a1ca384a750af59a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619673"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781164"
 ---
 # <a name="remote-vs-local-execution"></a>遠端與本機執行的比較
 您可以決定執行查詢的方式為遠端 (也就是，資料庫引擎對資料庫執行查詢) 或本機 ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 對本機快取執行查詢)。  
@@ -42,11 +42,11 @@ ms.locfileid: "64619673"
  [!code-vb[DLinqQueryConcepts#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#8)]  
   
 ## <a name="comparison"></a>邏輯比對  
- 這兩個功能可提供強大的選項組合：遠端執行適用於大型集合，而本機執行則適用於小型集合或需要完整集合之處。 您可以透過 <xref:System.Linq.IQueryable> 實作遠端執行，而本機執行則是根據記憶體中 <xref:System.Collections.Generic.IEnumerable%601> 集合來實作。 若要強制使用本機執行 (亦即<xref:System.Collections.Generic.IEnumerable%601>)，請參閱 <<c2> [ 類型轉換為泛型 IEnumerable](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)。  
+ 這兩個功能可提供強大的選項組合：遠端執行適用於大型集合，而本機執行則適用於小型集合或需要完整集合之處。 您可以透過 <xref:System.Linq.IQueryable> 實作遠端執行，而本機執行則是根據記憶體中 <xref:System.Collections.Generic.IEnumerable%601> 集合來實作。 若要強制本機執行（也就<xref:System.Collections.Generic.IEnumerable%601>是），請參閱[將類型轉換為泛型 IEnumerable](convert-a-type-to-a-generic-ienumerable.md)。  
   
 ### <a name="queries-against-unordered-sets"></a>對未排序集合進行查詢  
- 請注意本機集合，實作之間重要的差異<xref:System.Collections.Generic.List%601>並提供對執行遠端查詢的集合*未排序集合*關聯式資料庫中。 <xref:System.Collections.Generic.List%601> 方法 (如使用索引值的方法) 需要清單語意 (Semantics)，而這一般無法透過對未排序集合的遠端查詢來取得。 因此，這類方法會隱含地載入 <xref:System.Data.Linq.EntitySet%601>，以允許進行本機執行。  
+ 請注意，本機集合<xref:System.Collections.Generic.List%601>所執行的的重要差異，以及針對關係資料庫中的未*排序集合*提供遠端查詢的集合。 <xref:System.Collections.Generic.List%601> 方法 (如使用索引值的方法) 需要清單語意 (Semantics)，而這一般無法透過對未排序集合的遠端查詢來取得。 因此，這類方法會隱含地載入 <xref:System.Data.Linq.EntitySet%601>，以允許進行本機執行。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [查詢概念](query-concepts.md)

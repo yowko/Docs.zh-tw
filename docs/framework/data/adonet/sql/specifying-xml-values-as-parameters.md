@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8e57bfe23a80bf3913cd7fb8b96527870259e77a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964727"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780869"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>將 XML 值指定為參數
-如果查詢需要的參數值為 XML 字串, 則開發人員可以使用**SqlXml**資料類型的實例來提供該值。 其實沒有任何訣竅;SQL Server 中的 XML 資料行接受參數值的方式與其他資料類型完全相同。  
+如果查詢需要的參數值為 XML 字串，則開發人員可以使用**SqlXml**資料類型的實例來提供該值。 其實沒有任何訣竅;SQL Server 中的 XML 資料行接受參數值的方式與其他資料類型完全相同。  
   
 ## <a name="example"></a>範例  
- 下列主控台應用程式會在**AdventureWorks**資料庫中建立新的資料表。 新的資料表包含名為**SalesID**的資料行, 以及名為**SalesInfo**的 XML 資料行。  
+ 下列主控台應用程式會在**AdventureWorks**資料庫中建立新的資料表。 新的資料表包含名為**SalesID**的資料行，以及名為**SalesInfo**的 XML 資料行。  
   
 > [!NOTE]
-> 當您安裝 SQL Server 時, 預設不會安裝**AdventureWorks**範例資料庫。 您可以藉由執行 SQL Server 安裝程式來安裝它。  
+> 當您安裝 SQL Server 時，預設不會安裝**AdventureWorks**範例資料庫。 您可以藉由執行 SQL Server 安裝程式來安裝它。  
   
  該範例準備了 <xref:System.Data.SqlClient.SqlCommand> 物件，以在新資料表中插入資料列。 已儲存的檔案會提供**SalesInfo**資料行所需的 XML 資料。  
   
@@ -162,5 +162,5 @@ class Class1
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [SQL Server 中的 XML 資料](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 中的 XML 資料](xml-data-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

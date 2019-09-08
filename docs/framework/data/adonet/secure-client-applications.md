@@ -2,12 +2,12 @@
 title: 保護用戶端應用程式的安全
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 1312ddc079bdf8f08aebe8eb27e4bab9bf914fa8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 15d2b2199344644392be0e9a530c046a77db8523
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963160"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794379"
 ---
 # <a name="secure-client-applications"></a>保護用戶端應用程式的安全
 應用程式通常含有許多部分，而這所有的部分都必須受到保護，以免產生漏洞而造成資料遺失，或因其他原因而危及系統。 建立安全的使用者介面可以避免許多問題，因為可以在攻擊者存取資料或系統資源之前就加以防堵。  
@@ -24,7 +24,7 @@ ms.locfileid: "69963160"
  [驗證 ASP.NET Web Pages 中的使用者輸入](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  使用 ASP.NET 驗證控制項來驗證使用者輸入的概觀。  
   
- [Windows Forms 中的使用者輸入](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Windows Forms 中的使用者輸入](../../winforms/user-input-in-windows-forms.md)  
  針對在 Windows Forms 應用程式中驗證滑鼠及鍵盤輸入而提供連結及資訊。  
   
  [.NET Framework 規則運算式](../../../standard/base-types/regular-expressions.md)  
@@ -33,10 +33,10 @@ ms.locfileid: "69963160"
 ## <a name="windows-applications"></a>Windows 應用程式  
  以往通常會以完整的使用權限來執行 Windows 應用程式。 .NET Framework 提供的基礎結構可藉由程式碼存取安全性 (CAS)，限制在 Windows 應用程式中執行的程式碼。 不過，單靠 CAS 並不足以保護應用程式。  
   
- [Windows Forms 安全性](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Windows Forms 安全性](../../winforms/windows-forms-security.md)  
  討論如何保護 Windows Forms 應用程式並提供相關主題的連結。  
   
- [Windows Forms 和 Unmanaged 應用程式](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms 和 Unmanaged 應用程式](../../winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  說明如何在 Windows Forms 應用程式中與 Unmanaged 應用程式互動。  
   
  [Windows Forms 的 ClickOnce 部署](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -59,16 +59,16 @@ ms.locfileid: "69963160"
 ## <a name="remoting"></a>遠端處理  
  .NET 遠端處理可讓您輕鬆建置四處分散的應用程式，不論應用程式元件全都集中在同一台電腦或散佈在全世界各個角落。 您可以建置用戶端應用程式，讓它們使用相同電腦 (或其網路上可連接的任何其他電腦) 上其他處理序中的物件。 也可以使用 .NET 遠端處理，與同一處理序中的其他應用程式定義域通訊。  
   
-|Resource|說明|  
+|Resource|描述|  
 |--------------|-----------------|  
 |[設定遠端應用程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|討論如何設定遠端處理應用程式以避免常見問題。|  
 |[遠端處理中的安全性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|說明驗證和加密，以及與遠端處理相關的其他安全性主題。|  
-|[安全性和遠端處理考慮](../../../../docs/framework/misc/security-and-remoting-considerations.md)|說明受保護的物件和跨應用程式定義域的安全性問題。|  
+|[安全性和遠端處理考慮](../../misc/security-and-remoting-considerations.md)|說明受保護的物件和跨應用程式定義域的安全性問題。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [設定 ADO.NET 應用程式的安全性](securing-ado-net-applications.md)
 - [資料存取策略的建議](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [設定應用程式的安全性](/visualstudio/ide/securing-applications)
-- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保護連線資訊](protecting-connection-information.md)
+- [ADO.NET 概觀](ado-net-overview.md)

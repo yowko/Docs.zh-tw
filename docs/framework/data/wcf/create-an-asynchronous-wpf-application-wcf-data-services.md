@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立非同步 Windows Presentation Framework 應用程式 (WCF Data Services)
+title: 作法：建立異步 Windows Presentation Framework 應用程式（WCF Data Services）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
-ms.openlocfilehash: c5dc4e34711cdb128eb012633bad104d0060be71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 820cb4aa39b49d63cf1acc31e6eb5aa56fd1ba03
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765843"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790987"
 ---
-# <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>HOW TO：建立非同步 Windows Presentation Framework 應用程式 (WCF Data Services)
-使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 時，您可以將從資料服務取得的資料繫結至 Windows Presentation Framework (WPF) 應用程式的 UI 項目。 如需詳細資訊，請參閱 <<c0> [ 將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。您也可以執行資料服務的作業，以非同步方式，可讓應用程式繼續在等候資料服務要求的回應時回應。 若要透過非同步方式存取資料服務，則需要 Silverlight 應用程式。 如需詳細資訊，請參閱 <<c0> [ 非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  
+# <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>作法：建立異步 Windows Presentation Framework 應用程式（WCF Data Services）
+使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 時，您可以將從資料服務取得的資料繫結至 Windows Presentation Framework (WPF) 應用程式的 UI 項目。 如需詳細資訊，請參閱[將資料系結至控制項](binding-data-to-controls-wcf-data-services.md)。您也可以使用非同步方式對資料服務執行作業，讓應用程式在等候資料服務要求的回應時繼續回應。 若要透過非同步方式存取資料服務，則需要 Silverlight 應用程式。 如需詳細資訊，請參閱[非同步作業](asynchronous-operations-wcf-data-services.md)。  
   
- 本主題說明如何透過非同步方式存取資料服務，並且將結果繫結至 WPF 應用程式的項目。 本主題的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成建立這項服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
+ 本主題說明如何透過非同步方式存取資料服務，並且將結果繫結至 WPF 應用程式的項目。 本主題的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時，會建立此服務和用戶端資料類別。  
   
 ## <a name="example"></a>範例  
  下列 XAML 定義 WPF 應用程式的視窗。  
@@ -32,4 +32,4 @@ ms.locfileid: "61765843"
   
 ## <a name="see-also"></a>另請參閱
 
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)

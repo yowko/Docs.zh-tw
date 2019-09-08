@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dd96b10b5ee2880e0f9ee18048ec8ba2ee0b5ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20e2bff4257df64f761fd8fff880643d4e786748
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779055"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796453"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>IInstallReferenceEnum::GetNextInstallReferenceItem 方法
-取得下一個指標[IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)中所包含的物件[IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)物件。  
+取得包含在這個[IInstallReferenceEnum](iinstallreferenceenum-interface.md)物件中的下一個[IInstallReferenceItem](iinstallreferenceitem-interface.md)物件的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,22 +39,22 @@ HRESULT GetNextInstallReferenceItem (
   
 ## <a name="parameters"></a>參數  
  `ppRefItem`  
- [out]傳回`IInstallReferenceItem`指標。  
+ 脫銷傳回`IInstallReferenceItem`的指標。  
   
  `dwFlags`  
- [in]保留供未來擴充。 `dwFlags` 必須是 0 （零）。  
+ 在保留以供未來擴充性之用。 `dwFlags`必須是0（零）。  
   
  `pvReserved`  
- [in]保留供未來擴充。 `pvReserved` 必須是 null 參考。  
+ 在保留以供未來擴充性之用。 `pvReserved`必須是 null 參考。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IInstallReferenceItem 介面](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [IInstallReferenceEnum 介面](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+- [IInstallReferenceItem 介面](iinstallreferenceitem-interface.md)
+- [IInstallReferenceEnum 介面](iinstallreferenceenum-interface.md)

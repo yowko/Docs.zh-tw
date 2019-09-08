@@ -2,12 +2,12 @@
 title: 在資料集中使用 XML
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: ba68f0fbe84a9877596ddfefd56f71a5889cf8de
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ca04f524685e080be6af12a4df6eda585a908683
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203149"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784249"
 ---
 # <a name="using-xml-in-a-dataset"></a>在資料集中使用 XML
 透過 ADO.NET，您可以從 XML 資料流或文件填滿 <xref:System.Data.DataSet>。 您可以使用 XML 資料流或文件，為 <xref:System.Data.DataSet> 提供資料、結構描述資訊或同時提供這兩者。 由 XML 資料流或文件提供的資訊，可與 <xref:System.Data.DataSet> 中的現有資料或結構描述資訊結合。  
@@ -49,4 +49,4 @@ ms.locfileid: "70203149"
 ## <a name="see-also"></a>另請參閱
 
 - [DataSet、DataTable 和 DataView](index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概觀](../ado-net-overview.md)

@@ -1,6 +1,6 @@
 ---
-title: VerifyClientKey 函式 （Unmanaged API 參考）
-description: VerifyClientKey 函式可確保用戶端金鑰具有正確的安全性。
+title: VerifyClientKey 函式（非受控 API 參考）
+description: VerifyClientKey 函數可確保用戶端金鑰具有正確的安全性。
 ms.date: 11/06/2017
 api_name:
 - VerifyClientKey
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4b51fe4510f4172227d9afd049eb6815790a165
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b674e959ab93cf76b84e2af41e875a50b7d115f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783093"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798185"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey 函式
 確定用戶端金鑰有正確的安全性。  
@@ -36,12 +36,12 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>傳回值
 
-如果此函數成功，傳回的值是`ERROR_SUCCESS`(0)。
+如果函式成功，則傳回值為`ERROR_SUCCESS` （0）。
 
-如果函式失敗，傳回值是中定義的非零的錯誤代碼*WinError.h*。
+如果函式失敗，則傳回值為*winerror.h*中定義的非零錯誤碼。
 
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.def  
   
@@ -49,4 +49,4 @@ LONG VerifyClientKey();
   
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

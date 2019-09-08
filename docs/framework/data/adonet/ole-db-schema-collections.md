@@ -2,18 +2,18 @@
 title: OLE DB 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 6c3441e86d4c5267418cf8002ba17d539c464d5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d5718c12100ebea49a6b6fab29a3790918c6ad3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645903"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783444"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 結構描述集合
 本節將討論 Microsoft SQL Server、Oracle 和 Microsoft Jet 之 OLE DB 提供者的結構描述集合支援。  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB 提供者  
- Microsoft SQL Server OLE DB 驅動程式支援下列特定結構描述集合除了通用結構描述集合：  
+ 除了通用架構集合之外，Microsoft SQL Server OLE DB 驅動程式還支援下列特定的架構集合：  
   
 - 資料表  
   
@@ -134,7 +134,7 @@ ms.locfileid: "64645903"
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
-|TYPE|Int32|  
+|類型|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
@@ -277,7 +277,7 @@ ms.locfileid: "64645903"
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
-|TYPE|Int32|  
+|類型|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
@@ -394,7 +394,7 @@ ms.locfileid: "64645903"
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
-|TYPE|Int32|  
+|類型|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
@@ -413,4 +413,4 @@ ms.locfileid: "64645903"
   
 ## <a name="see-also"></a>另請參閱
 
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概觀](ado-net-overview.md)

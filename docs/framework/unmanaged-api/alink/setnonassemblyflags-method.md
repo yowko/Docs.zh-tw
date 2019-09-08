@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27ad89f1910bc7bb08a23c9fdb0d50828fb8b5e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e8a22e958740b69ba0e09bf062bf4d86075c3ff1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741445"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777018"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags 方法
-設定不是組件特定的旗標。  
+設定不是元件特有的旗標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,13 +39,13 @@ HRESULT SetNonAssemblyFlags(
  ALink 旗標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 介面](ialink-interface.md)
+- [IALink2 介面](ialink2-interface.md)
+- [ALink API](index.md)

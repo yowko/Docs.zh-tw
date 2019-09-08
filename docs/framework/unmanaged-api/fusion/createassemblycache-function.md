@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffeb04ddcec290f899556bf0d8078acfb06707ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c855d6f85c3cbfa6d81a1fbce3ef5b83abb3f583
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778600"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795403"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache 函式
-取得新指標[IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)表示全域組件快取執行個體。  
+取得代表全域組件快取之新[IAssemblyCache](iassemblycache-interface.md)實例的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,22 +39,22 @@ HRESULT CreateAssemblyCache (
   
 ## <a name="parameters"></a>參數  
  `ppAsmCache`  
- [out]傳回`IAssemblyCache`指標。  
+ 脫銷傳回`IAssemblyCache`的指標。  
   
  `dwReserved`  
- [in]保留供未來擴充。 `dwReserved` 必須是 0 （零）。  
+ 在保留以供未來擴充性之用。 `dwReserved`必須是0（零）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyCache 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [全域組件快取](../../../../docs/framework/app-domains/gac.md)
+- [IAssemblyCache 介面](iassemblycache-interface.md)
+- [融合全域靜態函式](fusion-global-static-functions.md)
+- [全域組件快取](../../app-domains/gac.md)

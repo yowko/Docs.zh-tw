@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
-ms.openlocfilehash: fc6fafa474805c2644bb2deabdceed192776ac76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de7109e0fed0eb7c1975ad7360a7588ef9b294ef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938759"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793151"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>作法：指定用於測試並行衝突的成員
-將三個列舉的其中一個[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]套用至屬性<xref:System.Data.Linq.Mapping.ColumnAttribute>上的<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>屬性, 以指定要在偵測開放式平行存取衝突的更新檢查中包含哪些成員。  
+將三個列舉的其中一個[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]套用至屬性<xref:System.Data.Linq.Mapping.ColumnAttribute>上的<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>屬性，以指定要在偵測開放式平行存取衝突的更新檢查中包含哪些成員。  
   
- <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 屬性 (在設計階段對應) 是與 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的執行階段並行存取功能搭配使用。 如需詳細資訊, [請參閱開放式平行存取:總覽](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
+ <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 屬性 (在設計階段對應) 是與 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的執行階段並行存取功能搭配使用。 如需詳細資訊， [請參閱開放式平行存取：總覽](optimistic-concurrency-overview.md)。  
   
 > [!NOTE]
 > 只要未將成員指定為 `IsVersion=true`，原始成員值就會與目前資料庫狀態進行比較。 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>。  
@@ -48,5 +48,5 @@ ms.locfileid: "69938759"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [變更和提交資料](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [如何：管理變更衝突](how-to-manage-change-conflicts.md)
+- [變更和提交資料](making-and-submitting-data-changes.md)

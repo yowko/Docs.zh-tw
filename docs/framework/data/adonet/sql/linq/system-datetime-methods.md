@@ -2,12 +2,12 @@
 title: System.DateTime 方法
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: 85af6f252362b811356d68a3ae220df2bb813882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876768"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792414"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime 方法
 下列 LINQ to SQL 支援的方法、運算子和屬性都可用於 LINQ to SQL 查詢中。 不支援某種方法、運算子或屬性時，就表示 LINQ to SQL 無法轉譯該成員，以便在 SQL Server 上執行。 雖然您可以在程式碼中使用這些成員，但是必須在查詢轉譯成 Transact-SQL 之前或從資料庫中擷取結果之後，評估這些成員。  
@@ -66,7 +66,7 @@ ms.locfileid: "61876768"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [查詢概念](query-concepts.md)
+- [建立物件模型](creating-the-object-model.md)
+- [SQL-CLR 類型對應](sql-clr-type-mapping.md)
+- [資料類型和函式](data-types-and-functions.md)

@@ -2,24 +2,24 @@
 title: FailedToCreateMessageLoggingTraceSource
 ms.date: 03/30/2017
 ms.assetid: 75e91aad-6d83-4e5e-8c70-fed1625e522f
-ms.openlocfilehash: e50c881bf10e05508408814c28c8570745b672fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44654b22bc83fcf681cee19a728993ba72efdb4b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774981"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797963"
 ---
 # <a name="failedtocreatemessageloggingtracesource"></a>FailedToCreateMessageLoggingTraceSource
 識別碼:115  
   
- 嚴重性：錯誤  
+ 嚴重性：Error  
   
- 類別：ServiceModel  
+ CategoryServiceModel  
   
 ## <a name="description"></a>描述  
  這個事件表示訊息記錄無法建立追蹤來源。 此事件會列出例外狀況、處理序名稱和處理序識別碼。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [事件記錄](index.md)
+- [事件一般參考](events-general-reference.md)

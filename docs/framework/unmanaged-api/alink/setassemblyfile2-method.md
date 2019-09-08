@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d96881ce35dca1ee7a196507ef8d81a565eed82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aba11ccd61b65d2a779b39db8e0e082cf4d4015b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741510"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787225"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 方法
-設定的名稱和新的組件的選項。 當您產生未繫結的模組時，請勿呼叫這個方法。  
+設定新元件的名稱和選項。 當您產生未系結的模組時，請勿呼叫此方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,25 +39,25 @@ HRESULT SetAssemblyFile2(
   
 ## <a name="parameters"></a>參數  
  `pszFilename`  
- 資訊清單檔案的名稱。  
+ 資訊清單檔的名稱。  
   
  `pEmitter`  
- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)介面，此檔案。  
+ 此檔案的[IMetaDataEmit2 介面](../metadata/imetadataemit2-interface.md)介面。  
   
  `afFlags`  
- 所表示的選項[AssemblyFlags 列舉](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)。  
+ [AssemblyFlags 列舉](../metadata/assemblyflags-enumeration.md)所表示的選項。  
   
  `pAssemblyID`  
- 接收所建構的組件的唯一識別碼。  
+ 接收所結構化元件的唯一識別碼。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h。  
+ 需要 alink. h。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 介面](ialink2-interface.md)
+- [IALink 介面](ialink-interface.md)
+- [ALink API](index.md)

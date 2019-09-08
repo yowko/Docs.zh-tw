@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825bb945e0d8662a4dadc9d688de6a677165df4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741479"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787203"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 方法
-可讓您指定或重設時它會建立組件連結器所使用之資訊清單檔案。  
+可讓您指定或重設連結器在建立元件時所使用的資訊清單檔。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +37,20 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>參數  
  `pszFile`  
   
- Win32 資源的 blob 內容會放入資訊清單檔案的名稱。  
+ 資訊清單檔案的名稱，其內容會放入 Win32 資源 blob 中。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="remarks"></a>備註  
- 呼叫這個方法之前先詢問 Win32ResBlob。 值`pszFile`參數是其內容會讀取並放入識別碼的 RT_MANIFEST 的 Win32 資源資訊清單檔案的名稱。 當呼叫時使用的參數是 NULL，則會清除任何先前讀取的資訊清單。 這可讓一個連結器的狀態重設為初始設定時。  
+ 在要求 Win32ResBlob 之前，請先呼叫此程式。 `pszFile`參數的值是資訊清單檔案的名稱，其內容會讀取並放在識別碼為 RT_MANIFEST 的 Win32 資源中。 使用 Null 的參數呼叫時，會清除任何先前讀取的資訊清單。 如此一來，就可以將連結器的狀態重設為初始化時間的狀態。  
   
 ## <a name="requirements"></a>需求  
- 需要 aLink.h  
+ 需要 aLink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink3 介面](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (組件連結器)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [IALink3 介面](ialink3-interface.md)
+- [ALink API](index.md)
+- [IALink 介面](ialink-interface.md)
+- [Al.exe (組件連結器)](../../tools/al-exe-assembly-linker.md)

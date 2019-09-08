@@ -2,17 +2,17 @@
 title: SQL Server 資料類型和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 642fe0d541aca01d6ffb2d9279c4d0fa91eadb63
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876794"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780844"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 資料類型和 ADO.NET
 SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可能會導致資料遺失。 為了保留資料完整性，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 針對使用 SQL Server 資料提供了具型別的存取子方法。 您可以使用 <xref:System.Data.SqlDbType> 類別 (Class) 中的列舉型別 (Enumeration) 來指定 <xref:System.Data.SqlClient.SqlParameter> 資料型別。  
   
- 如需詳細資訊和描述 SQL Server 和.NET Framework 資料型別之間的資料類型對應的資料表，請參閱[SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)。  
+ 如需詳細資訊和描述 SQL Server 和 .NET Framework 資料類型之間之資料類型對應的資料表，請參閱[SQL Server 資料類型](../sql-server-data-type-mappings.md)對應。  
   
  SQL Server 2008 導入了一些設計成符合商務需求的新資料型別，以便使用日期和時間、結構化、半結構化和非結構化資料。 這些資料型別列於《SQL Server 2008 線上叢書》中。  
   
@@ -20,25 +20,25 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可�
   
  **SQL Server 線上叢書**  
   
-1. [資料類型 (Database Engine)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [資料類型（資料庫引擎）](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>本節內容  
- [SqlTypes 和資料集](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
+ [SqlTypes 和資料集](sqltypes-and-the-dataset.md)  
  說明針對 `SqlTypes` 中的 `DataSet` 所提供的型別支援。  
   
- [處理 Null 值](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
+ [處理 Null 值](handling-null-values.md)  
  示範如何使用 Null 值和三種值的邏輯。  
   
- [比較 GUID 和 uniqueidentifier 值](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
+ [比較 GUID 和 uniqueidentifier 值](comparing-guid-and-uniqueidentifier-values.md)  
  示範如何在 SQL Server 和 .NET Framework 中使用 GUID 和 uniqueidentifier 值。  
   
- [日期和時間資料](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
+ [日期和時間資料](date-and-time-data.md)  
  說明如何使用 SQL Server 2008 所導入的新日期和時間資料型別。  
   
- [大型 UDT](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
+ [大型 UDT](large-udts.md)  
  示範如何從 SQL Server 2008 所導入的大數值 UDT 中擷取資料。  
   
- [SQL Server 中的 XML 資料](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [SQL Server 中的 XML 資料](xml-data-in-sql-server.md)  
  說明如何使用從 SQL Server 擷取的 XML 資料。  
   
 ## <a name="reference"></a>參考資料  
@@ -56,8 +56,8 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可�
   
 ## <a name="see-also"></a>另請參閱
 
-- [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [資料表值參數](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)
-- [SQL Server 二進位和大量數值資料](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 資料類型對應](../sql-server-data-type-mappings.md)
+- [設定參數和參數資料類型](../configuring-parameters-and-parameter-data-types.md)
+- [資料表值參數](table-valued-parameters.md)
+- [SQL Server 二進位和大量數值資料](sql-server-binary-and-large-value-data.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

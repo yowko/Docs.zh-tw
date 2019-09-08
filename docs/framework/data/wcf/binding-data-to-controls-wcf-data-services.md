@@ -9,23 +9,23 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: e5448d837d6234198fb1f3652918776675a4a1cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3607b7e985bfaa081c003c1a7c59a26578156eb7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965831"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780492"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>將資料繫結至控制項 (WCF 資料服務)
-有了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以將類似 `ComboBox` 和 `ListView` 的控制項繫結至 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體。 這個集合 (繼承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別) 包含 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 摘要中的資料。 此類別表示動態資料集合會在加入或移除項目時提供通知。 當您使用的實例<xref:System.Data.Services.Client.DataServiceCollection%601>進行資料系結時[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , 用戶端程式庫會處理這些事件, 以確保所<xref:System.Data.Services.Client.DataServiceContext>追蹤的物件會與系結 UI 專案中的資料保持同步。  
+有了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以將類似 `ComboBox` 和 `ListView` 的控制項繫結至 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體。 這個集合 (繼承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別) 包含 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 摘要中的資料。 此類別表示動態資料集合會在加入或移除項目時提供通知。 當您使用的實例<xref:System.Data.Services.Client.DataServiceCollection%601>進行資料系結時[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ，用戶端程式庫會處理這些事件，以確保所<xref:System.Data.Services.Client.DataServiceContext>追蹤的物件會與系結 UI 專案中的資料保持同步。  
   
  在集合中加入或移除物件時，<xref:System.Data.Services.Client.DataServiceCollection%601> 類別會 (間接) 實作 <xref:System.Collections.Specialized.INotifyCollectionChanged> 介面以警示內容。 與 <xref:System.Data.Services.Client.DataServiceCollection%601> 搭配使用的資料服務類型物件也必須實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以便在繫結集合中的物件屬性發生變更時警示 <xref:System.Data.Services.Client.DataServiceCollection%601>。  
   
 > [!NOTE]
-> 當您使用 [**加入服務參考**] 對話方塊或[DataSvcUtil](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) `/dataservicecollection`工具搭配選項來產生用戶端資料服務類別時, 產生的資料類別會執行<xref:System.ComponentModel.INotifyPropertyChanged>介面。 如需詳細資訊，請參閱[如何：手動產生用戶端資料服務](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)類別。  
+> 當您使用 [**加入服務參考**] 對話方塊或[DataSvcUtil](wcf-data-service-client-utility-datasvcutil-exe.md) `/dataservicecollection`工具搭配選項來產生用戶端資料服務類別時，產生的資料類別會執行<xref:System.ComponentModel.INotifyPropertyChanged>介面。 如需詳細資訊，請參閱[如何：手動產生用戶端資料服務](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)類別。  
   
 ## <a name="creating-the-binding-collection"></a>建立繫結集合  
- 以提供的 <xref:System.Data.Services.Client.DataServiceCollection%601> 執行個體及選擇性的 <xref:System.Data.Services.Client.DataServiceContext> 或 LINQ 查詢 (執行此查詢時會傳回 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體) 呼叫其中一個類別建構函式方法，建立一個新的 <xref:System.Collections.Generic.IEnumerable%601> 類別執行個體。 這<xref:System.Collections.Generic.IEnumerable%601>會提供系結集合的物件來源, 此系結是[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]從摘要具體化而來。 如需詳細資訊, 請參閱[物件具體化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)。 根據預設，<xref:System.Data.Services.Client.DataServiceContext>會自動追蹤對插入於集合中的繫結物件和項目所進行的變更。 如果您需要手動追蹤這些變更, 請呼叫其中一個採用`trackingMode`參數的方法, 並指定的<xref:System.Data.Services.Client.TrackingMode.None>值。  
+ 以提供的 <xref:System.Data.Services.Client.DataServiceCollection%601> 執行個體及選擇性的 <xref:System.Data.Services.Client.DataServiceContext> 或 LINQ 查詢 (執行此查詢時會傳回 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體) 呼叫其中一個類別建構函式方法，建立一個新的 <xref:System.Collections.Generic.IEnumerable%601> 類別執行個體。 這<xref:System.Collections.Generic.IEnumerable%601>會提供系結集合的物件來源，此系結是[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]從摘要具體化而來。 如需詳細資訊，請參閱[物件具體化](object-materialization-wcf-data-services.md)。 根據預設，<xref:System.Data.Services.Client.DataServiceContext>會自動追蹤對插入於集合中的繫結物件和項目所進行的變更。 如果您需要手動追蹤這些變更，請呼叫其中一個採用`trackingMode`參數的方法，並指定的<xref:System.Data.Services.Client.TrackingMode.None>值。  
   
  下列範例示範如何根據所提供的 <xref:System.Data.Services.Client.DataServiceCollection%601> 以及傳回所有客戶與相關訂單的 <xref:System.Data.Services.Client.DataServiceContext> 建立 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "69965831"
  [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders2.vb#customersorders2binding)]  
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>繫結資料至 Windows Presentation Foundation 項目  
- 由於 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別繼承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別，因此您可以在 Windows Presentation Foundation (WPF) 應用程式中將物件繫結至項目或控制項，就像使用 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別進行繫結一樣。 如需詳細資訊, 請參閱資料系結[(Windows Presentation Foundation)](../../../../docs/framework/wpf/data/data-binding-wpf.md)。 繫結資料服務資料至 WPF 控制項的其中一個方法是將項目的 `DataContext` 屬性設定為包含查詢結果之 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體。 在這種情況下，您可以使用 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 屬性來設定控制項的物件來源。 使用 <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> 屬性來指定要顯示繫結物件的哪一個屬性。 如果您要將項目繫結程序至導覽屬性所傳回的相關物件，請在為 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 屬性定義的繫結程序中加入路徑。 這個路徑是相對於父控制項 <xref:System.Windows.FrameworkElement.DataContext%2A> 屬性所設定根物件的位置。 下列範例會設定 <xref:System.Windows.FrameworkElement.DataContext%2A> 項目的 <xref:System.Windows.Controls.StackPanel> 屬性，將父控制項繫結至客戶物件的 <xref:System.Data.Services.Client.DataServiceCollection%601>：  
+ 由於 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別繼承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別，因此您可以在 Windows Presentation Foundation (WPF) 應用程式中將物件繫結至項目或控制項，就像使用 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別進行繫結一樣。 如需詳細資訊，請參閱資料系結[（Windows Presentation Foundation）](../../wpf/data/data-binding-wpf.md)。 繫結資料服務資料至 WPF 控制項的其中一個方法是將項目的 `DataContext` 屬性設定為包含查詢結果之 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體。 在這種情況下，您可以使用 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 屬性來設定控制項的物件來源。 使用 <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> 屬性來指定要顯示繫結物件的哪一個屬性。 如果您要將項目繫結程序至導覽屬性所傳回的相關物件，請在為 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 屬性定義的繫結程序中加入路徑。 這個路徑是相對於父控制項 <xref:System.Windows.FrameworkElement.DataContext%2A> 屬性所設定根物件的位置。 下列範例會設定 <xref:System.Windows.FrameworkElement.DataContext%2A> 項目的 <xref:System.Windows.Controls.StackPanel> 屬性，將父控制項繫結至客戶物件的 <xref:System.Data.Services.Client.DataServiceCollection%601>：  
   
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
@@ -45,9 +45,9 @@ ms.locfileid: "69965831"
   
  [!code-xaml[Astoria Northwind Client#MasterDetailXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml#masterdetailxaml)]  
   
- 如需詳細資訊，請參閱[如何：將資料系結至](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)Windows Presentation Foundation 元素。  
+ 如需詳細資訊，請參閱[如何：將資料系結至](bind-data-to-wpf-elements-wcf-data-services.md)Windows Presentation Foundation 元素。  
   
- 實體加入一對多或多對多關聯性時，關聯性的導覽屬性會傳回相關物件集合。 當您使用 [**加入服務參考**] 對話方塊或 DataSvcUtil 工具來產生用戶端資料服務類別時, 導覽屬性會傳回的<xref:System.Data.Services.Client.DataServiceCollection%601>實例。 這樣可讓您將相關物件繫結至控制項，同時支援一般的 WPF 繫結案例，例如相關實體的主版詳細資料繫結模式。 在前述的 XAML 範例中，XAML 程式碼會將主版 <xref:System.Data.Services.Client.DataServiceCollection%601> 繫結至根資料項目。 接著會將訂單 <xref:System.Windows.Controls.DataGrid> 繫結至從所選 Customers 物件傳回的 Orders <xref:System.Data.Services.Client.DataServiceCollection%601>，然後再繫結至 <xref:System.Windows.Window> 的根項目。  
+ 實體加入一對多或多對多關聯性時，關聯性的導覽屬性會傳回相關物件集合。 當您使用 [**加入服務參考**] 對話方塊或 DataSvcUtil 工具來產生用戶端資料服務類別時，導覽屬性會傳回的<xref:System.Data.Services.Client.DataServiceCollection%601>實例。 這樣可讓您將相關物件繫結至控制項，同時支援一般的 WPF 繫結案例，例如相關實體的主版詳細資料繫結模式。 在前述的 XAML 範例中，XAML 程式碼會將主版 <xref:System.Data.Services.Client.DataServiceCollection%601> 繫結至根資料項目。 接著會將訂單 <xref:System.Windows.Controls.DataGrid> 繫結至從所選 Customers 物件傳回的 Orders <xref:System.Data.Services.Client.DataServiceCollection%601>，然後再繫結至 <xref:System.Windows.Window> 的根項目。  
   
 ## <a name="binding-data-to-windows-forms-controls"></a>將資料繫結至 Windows Form 控制項  
  若要將物件繫結至 Windows Form 控制項，請將控制項的 `DataSource` 屬性設定為包含查詢結果之 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體。  
@@ -60,15 +60,15 @@ ms.locfileid: "69965831"
  [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabindingspecific)]
  [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabindingspecific)]  
   
- 當您使用 [**加入服務參考**] 對話方塊來產生用戶端資料服務類別時, 也會建立以產生<xref:System.Data.Services.Client.DataServiceContext>的為基礎的專案資料來源。 使用此資料來源, 您可以從 [**資料來源**] 視窗將專案拖曳至設計工具, 以建立 UI 專案或控制項, 以顯示來自資料服務的資料。 這些項目會成為繫結至資料來源之應用程式 UI 中的項目。 如需詳細資訊，請參閱[如何：使用專案資料來源](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)系結資料。  
+ 當您使用 [**加入服務參考**] 對話方塊來產生用戶端資料服務類別時，也會建立以產生<xref:System.Data.Services.Client.DataServiceContext>的為基礎的專案資料來源。 使用此資料來源，您可以從 [**資料來源**] 視窗將專案拖曳至設計工具，以建立 UI 專案或控制項，以顯示來自資料服務的資料。 這些項目會成為繫結至資料來源之應用程式 UI 中的項目。 如需詳細資訊，請參閱[如何：使用專案資料來源](how-to-bind-data-using-a-project-data-source-wcf-data-services.md)系結資料。  
   
 ## <a name="binding-paged-data"></a>繫結分頁資料  
- 您可以設定資料服務來限制單一回應訊息中傳回的查詢資料量。 如需詳細資訊, 請參閱設定[資料服務](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。 當資料服務分頁回應資料時，每個回應都會包含一個連結以傳回下一頁結果。 如需詳細資訊, 請參閱[載入延](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)後的內容。 在這個情況下，您必須傳遞從 <xref:System.Data.Services.Client.DataServiceCollection%601.Load%2A> 屬性取得的 URI，在  <xref:System.Data.Services.Client.DataServiceCollection%601> 呼叫 <xref:System.Data.Services.Client.DataServiceQueryContinuation.NextLinkUri%2A> 方法，以明確地載入頁面，如下列範例所示：  
+ 您可以設定資料服務來限制單一回應訊息中傳回的查詢資料量。 如需詳細資訊，請參閱設定[資料服務](configuring-the-data-service-wcf-data-services.md)。 當資料服務分頁回應資料時，每個回應都會包含一個連結以傳回下一頁結果。 如需詳細資訊，請參閱[載入延](loading-deferred-content-wcf-data-services.md)後的內容。 在這個情況下，您必須傳遞從 <xref:System.Data.Services.Client.DataServiceCollection%601.Load%2A> 屬性取得的 URI，在  <xref:System.Data.Services.Client.DataServiceCollection%601> 呼叫 <xref:System.Data.Services.Client.DataServiceQueryContinuation.NextLinkUri%2A> 方法，以明確地載入頁面，如下列範例所示：  
   
  [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
  [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
   
- 相關物件會以類似的方式載入。 如需詳細資訊，請參閱[如何：將資料系結至](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)Windows Presentation Foundation 元素。  
+ 相關物件會以類似的方式載入。 如需詳細資訊，請參閱[如何：將資料系結至](bind-data-to-wpf-elements-wcf-data-services.md)Windows Presentation Foundation 元素。  
   
 ## <a name="customizing-data-binding-behaviors"></a>自訂資料繫結行為  
  <xref:System.Data.Services.Client.DataServiceCollection%601> 類別可讓您攔截變更集合時所引發的事件，例如加入或移除物件，以及變更集合中物件的屬性時所引發的事件。 您可以修改資料繫結事件以覆寫預設的行為，包括下列條件約束：  
@@ -94,12 +94,12 @@ ms.locfileid: "69965831"
  [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml.vb#customersordersdeleterelated)]
  [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom2.xaml.vb#customersordersdeleterelated)]  
   
- 如需詳細資訊，請參閱[如何：自訂資料系](../../../../docs/framework/data/wcf/how-to-customize-data-binding-behaviors-wcf-data-services.md)結行為。  
+ 如需詳細資訊，請參閱[如何：自訂資料系](how-to-customize-data-binding-behaviors-wcf-data-services.md)結行為。  
   
  使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 方法移除 <xref:System.Collections.ObjectModel.Collection%601.Remove%2A> 中的物件時，預設行為是在 <xref:System.Data.Services.Client.DataServiceContext> 中將該物件也標記為已刪除。 若要變更此行為，您可以將委派指定為發生 `entityCollectionChanged` 事件時呼叫之 <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> 參數中的方法。  
   
 ## <a name="data-binding-with-custom-client-data-classes"></a>使用自訂用戶端資料類別資料繫結  
- 若要將物件載入至 <xref:System.Data.Services.Client.DataServiceCollection%601>，物件本身必須實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 當您使用 [**加入服務參考**] 對話方塊或[DataSvcUtil](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)工具來執行此介面時, 所產生的資料服務用戶端類別。 如果您自行提供用戶端資料類別，則必須使用另一種集合類型進行資料繫結。 物件變更時，您必須在資料繫結控制項中處理事件，以呼叫 <xref:System.Data.Services.Client.DataServiceContext> 類別的下列方法：  
+ 若要將物件載入至 <xref:System.Data.Services.Client.DataServiceCollection%601>，物件本身必須實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 當您使用 [**加入服務參考**] 對話方塊或[DataSvcUtil](wcf-data-service-client-utility-datasvcutil-exe.md)工具來執行此介面時，所產生的資料服務用戶端類別。 如果您自行提供用戶端資料類別，則必須使用另一種集合類型進行資料繫結。 物件變更時，您必須在資料繫結控制項中處理事件，以呼叫 <xref:System.Data.Services.Client.DataServiceContext> 類別的下列方法：  
   
 - <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>：將新的物件加入至集合中時。  
   
@@ -111,9 +111,9 @@ ms.locfileid: "69965831"
   
 - <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>：將物件加入至相關物件集合中時。  
   
- 如需詳細資訊, 請參閱[更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱[更新資料服務](updating-the-data-service-wcf-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：手動產生用戶端資料服務類別](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
-- [如何：加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+- [如何：手動產生用戶端資料服務類別](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
+- [如何：加入資料服務參考](how-to-add-a-data-service-reference-wcf-data-services.md)

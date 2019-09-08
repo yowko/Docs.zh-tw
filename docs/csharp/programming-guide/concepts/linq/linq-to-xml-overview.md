@@ -2,12 +2,12 @@
 title: LINQ to XML 概觀 (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 46a2c0282da01000f3f524614a7a4cf851b7f4e1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 313abae6e8a82414ead90d5a4fdab7406492784f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591903"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785243"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 概觀 (C#)
 
@@ -31,7 +31,7 @@ XML 已被廣泛採用為格式化許多內容之資料的方式。 例如，您
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 最重要的優點為其與 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 的整合能力。 這種整合可讓您在記憶體中 XML 文件上撰寫查詢以擷取項目和屬性的集合。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的查詢功能相當於 (雖然語法上不同) XPath 和 Xquery 的功能。 整合 C# 中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 時，可提供更強的型別、編譯時間檢查功能，以及改善的偵錯工具支援。
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的另一項優點是將查詢結果當做 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 物件建構函式參數的功能，可提供建立 XML 樹狀結構的強大方法。 此方法稱為「功能建構」  ，可讓開發人員輕鬆將 XML 樹狀結構從某種圖形轉換為另一種圖形。
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的另一項優點是將查詢結果當做 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 物件建構函式參數的功能，可提供建立 XML 樹狀結構的強大方法。 此方法稱為「功能建構」，可讓開發人員輕鬆將 XML 樹狀結構從某種圖形轉換為另一種圖形。
 
 例如，您可能有一個典型的 XML 訂購單，如以下連結所述：[XML 範例檔：典型訂購單 (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。 您可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行下列查詢，以便在採購訂單中取得每個項目的零件編號屬行值：
 
@@ -41,7 +41,7 @@ var filename = "PurchaseOrder.xml";
 var currentDirectory = Directory.GetCurrentDirectory();
 var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
 
-XElement purchaseOrder = XElement.Load($"{purchaseOrderFilepath}");
+XElement purchaseOrder = XElement.Load(purchaseOrderFilepath);
 
 IEnumerable<string> partNos =  from item in purchaseOrder.Descendants("Item")
                                select (string) item.Attribute("PartNumber");
@@ -61,7 +61,7 @@ var filename = "PurchaseOrder.xml";
 var currentDirectory = Directory.GetCurrentDirectory();
 var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
 
-XElement purchaseOrder = XElement.Load($"{purchaseOrderFilepath}");
+XElement purchaseOrder = XElement.Load(purchaseOrderFilepath);
 
 IEnumerable<XElement> pricesByPartNos =  from item in purchaseOrder.Descendants("Item")
                                  where (int) item.Element("Quantity") * (decimal) item.Element("USPrice") > 100

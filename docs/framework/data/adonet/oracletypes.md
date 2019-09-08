@@ -2,12 +2,12 @@
 title: OracleType
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 2f3820a0a61241643894533cc431ecc88b58fcef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9caf30111fc8f856af69571d507c243efa549343
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938881"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783272"
 ---
 # <a name="oracletypes"></a>OracleType
 Oracle 的 .NET Framework 資料提供者包括數個可讓您使用 Oracle 資料型別的結構。 這些結構包括 <xref:System.Data.OracleClient.OracleNumber> 及 <xref:System.Data.OracleClient.OracleString>。  
@@ -52,7 +52,7 @@ public void Setup(string connectionString)
 ```  
   
 ## <a name="retrieving-data-from-the-oracle-table"></a>從 Oracle 資料表擷取資料  
- 這個範例會使用**OracleDataReader**來存取資料, 並使用數個**OracleType**結構來顯示資料。  
+ 這個範例會使用**OracleDataReader**來存取資料，並使用數個**OracleType**結構來顯示資料。  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -117,5 +117,5 @@ public void ReadOracleTypesExample(string connectionString)
   
 ## <a name="see-also"></a>另請參閱
 
-- [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle 和 ADO.NET](oracle-and-adonet.md)
+- [ADO.NET 概觀](ado-net-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：判斷安裝的 .NET Framework 安全性更新與 Hotfix
+title: 作法：判斷安裝的 .NET Framework 安全性更新與 Hotfix
 description: 了解如何判斷電腦上所安裝的 .NET Framework 安全性更新與 Hotfix。
 ms.date: 11/27/2017
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604180"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790061"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>HOW TO：判斷安裝的 .NET Framework 安全性更新與 Hotfix
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>作法：判斷安裝的 .NET Framework 安全性更新與 Hotfix
 
 本文說明如何找出安裝在電腦上的 .NET Framework 安全性更新與 Hotfix。
 
@@ -37,7 +37,7 @@ ms.locfileid: "54604180"
 
      已安裝的更新會列於子機碼下，這些子機碼可識別套用更新的 .NET Framework 版本。 每個更新都是透過知識庫 (KB) 號碼加以識別。
 
-在登錄編輯程式中，.NET Framework 版本和每一版已安裝的更新會儲存在不同的子機碼中。 如需偵測已安裝版本號碼的資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
+在登錄編輯程式中，.NET Framework 版本和每一版已安裝的更新會儲存在不同的子機碼中。 如需偵測已安裝版本號碼的資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>在程式碼中查詢登錄來尋找已安裝的更新
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>另請參閱
 
-- [如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
-- [安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)
-- [版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [如何：判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)
+- [安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)
+- [版本和相依性](versions-and-dependencies.md)

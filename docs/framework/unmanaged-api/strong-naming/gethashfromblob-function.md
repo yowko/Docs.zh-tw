@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba049723710b378a90d17c67735a05e8a09d05d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636854"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799225"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob 函式
 
 使用指定的雜湊演算法取得位於指定記憶體位址之組件的雜湊。
 
-此函式已被取代。 使用[iclrstrongname:: Gethashfromblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)方法改為。
+這個函數已被取代。 請改用[ICLRStrongName：： GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md)方法。
 
 ## <a name="syntax"></a>語法
 
@@ -45,32 +45,32 @@ HRESULT GetHashFromBlob (
 ## <a name="parameters"></a>參數
 
 `pbBlob`\
-[in]要雜湊的記憶體區塊的位址指標。
+在要雜湊的記憶體區塊位址的指標。
 
 `cchBlob`\
-[in]記憶體區塊的長度，以位元組為單位。
+在記憶體區塊的長度（以位元組為單位）。
 
 `piHashAlg`\
-[in、 out]常數，指定的雜湊演算法。 使用零的預設演算法。
+[in、out]指定雜湊演算法的常數。 預設演算法使用零。
 
 `pbHash`\
-[out]傳回的雜湊緩衝區。
+脫銷傳回的雜湊緩衝區。
 
 `cchHash`\
-[in]要求的最大大小的`pbHash`。
+在要求的大小`pbHash`上限。
 
 `pchHash`\
-[out]大小，以位元組為單位傳回`pbHash`。
+脫銷傳回`pbHash`之的大小（以位元組為單位）。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** StrongName.h
+**標頭：** Stackexchange.redis.strongname。h
 
-**LIBRARY:** 包含做為 MsCorEE.dll 中的資源
+**LIBRARY:** 包含為 Mscoree.dll 中的資源
 
-**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 

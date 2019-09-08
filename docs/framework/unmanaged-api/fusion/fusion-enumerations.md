@@ -8,38 +8,38 @@ helpviewer_keywords:
 ms.assetid: 5817b4bc-b0ba-4b2f-a11c-a03dd8cb8f84
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffee9084bd07882079b2d44de25391f2491a1520
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7670e19d764518cc8d88f702f169610b72642a9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936457"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795326"
 ---
 # <a name="fusion-enumerations"></a>融合列舉
-本章節描述融合 API 使用的 unmanaged 的列舉。  
+本節說明融合 API 所使用的非受控列舉。  
   
 ## <a name="in-this-section"></a>本節內容  
- [ASM_CACHE_FLAGS 列舉](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)  
- 指出所表示之組件的來源[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)在全域組件快取中。  
+ [ASM_CACHE_FLAGS 列舉](asm-cache-flags-enumeration.md)  
+ 指出全域組件快取中[IAssemblyCacheItem](iassemblycacheitem-interface.md)所代表之元件的來源。  
   
- [ASM_CMP_FLAGS 列舉](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md)  
- 表示版本、 組建、 文化特性、 簽章，依此類推，所要比較的兩個組件的[iassemblyname:: Isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)方法。  
+ [ASM_CMP_FLAGS 列舉](asm-cmp-flags-enumeration.md)  
+ 指出要由[IAssemblyName：： IsEqual](iassemblyname-isequal-method.md)方法比較的兩個元件版本、組建、文化特性、簽章等。  
   
- [ASM_DISPLAY_FLAGS 列舉](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md)  
- 表示版本、 組建、 文化特性、 簽章，依此類推，會擷取顯示名稱的組件[iassemblyname:: Getdisplayname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)方法。  
+ [ASM_DISPLAY_FLAGS 列舉](asm-display-flags-enumeration.md)  
+ 表示[IAssemblyName：： GetDisplayName](iassemblyname-getdisplayname-method.md)方法將抓取其顯示名稱之元件的版本、組建、文化特性、簽章等。  
   
- [ASM_NAME 列舉](../../../../docs/framework/unmanaged-api/fusion/asm-name-enumeration.md)  
- 表示版本、 組建、 文化特性、 簽章，依此類推，會擷取或設定其屬性之組件的[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)方法。  
+ [ASM_NAME 列舉](asm-name-enumeration.md)  
+ 指出元件的版本、組建、文化特性、簽章等，其屬性將由[IAssemblyName](iassemblyname-interface.md)方法抓取或設定。  
   
- [AssemblyComparisonResult 列舉](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)  
- 表示之兩個組件身分識別，對等，由[CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)函式。  
+ [AssemblyComparisonResult 列舉](assemblycomparisonresult-enumeration.md)  
+ 表示由[CompareAssemblyIdentity](compareassemblyidentity-function.md)函式決定的兩個元件識別是否相等。  
   
- [CREATE_ASM_NAME_OBJ_FLAGS 列舉](../../../../docs/framework/unmanaged-api/fusion/create-asm-name-obj-flags-enumeration.md)  
- 指定的屬性`IAssemblyName`物件會藉由在建構時[CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)函式。  
+ [CREATE_ASM_NAME_OBJ_FLAGS 列舉](create-asm-name-obj-flags-enumeration.md)  
+ 指定物件由[CreateAssemblyNameObject](createassemblynameobject-function.md)函`IAssemblyName`式所建立時的屬性。  
   
 ## <a name="related-sections"></a>相關章節  
- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [融合介面](fusion-interfaces.md)  
   
- [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [融合全域靜態函式](fusion-global-static-functions.md)  
   
- [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+ [融合結構](fusion-structures.md)

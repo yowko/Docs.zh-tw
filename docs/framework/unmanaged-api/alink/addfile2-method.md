@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de85d264d709da747fab636f40c99bc0d0752251
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3a6892dbed172c0be3b036014d393657dbc8593
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742362"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777515"
 ---
 # <a name="addfile2-method"></a>AddFile2 方法
-將檔案加入至組件。 也可以用來建立未繫結的模組。  
+將檔案加入至元件。 也可以用來建立未系結的模組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,28 +41,28 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 檔案會加入組件的識別碼。  
+ 要加入檔案之元件的識別碼。  
   
  `pszFilename`  
- 要加入之檔案的名稱。  
+ 要加入的檔案名。  
   
  `dwFlags`  
- COM +`FileDef`這類旗標`ffContainsNoMetaData`和`ffWriteable`。 `dwFlags` 傳遞給[DefineFile 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)。  
+ Com `FileDef` + 旗標`ffContainsNoMetaData` ， `ffWriteable`例如和。 `dwFlags`會傳遞至[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
   
  `pEmitter`  
- 介面[IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)介面。  
+ 介面至[IMetaDataEmit2 介面](../metadata/imetadataemit2-interface.md)介面。  
   
  `pFileToken`  
- 接收要加入之檔案的 ID。  
+ 接收要加入之檔案的識別碼。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h。  
+ 需要 alink. h。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 介面](ialink2-interface.md)
+- [IALink 介面](ialink-interface.md)
+- [ALink API](index.md)

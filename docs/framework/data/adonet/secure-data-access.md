@@ -2,12 +2,12 @@
 title: 安全存取資料
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963146"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782770"
 ---
 # <a name="secure-data-access"></a>安全存取資料
 若要撰寫安全的 ADO.NET 程式碼，您必須了解基礎資料存放區或資料庫中可用的安全性機制。 您也需要考量您的應用程式所可能包含的其他功能或元件的安全性隱含。  
@@ -21,23 +21,23 @@ ms.locfileid: "69963146"
   
  如需詳細資訊，請參閱下列資源。  
   
-|Resource|描述|  
+|Resource|說明|  
 |--------------|-----------------|  
-|[保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)|描述保護連接資訊的安全性最佳作法和技術，例如使用受保護的組態來加密連接字串。|  
+|[保護連線資訊](protecting-connection-information.md)|描述保護連接資訊的安全性最佳作法和技術，例如使用受保護的組態來加密連接字串。|  
 |[資料存取策略的建議](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|提供存取資料及執行資料庫作業的建議。|  
-|[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)|說明如何在執行階段從使用者輸入建立連接字串。|  
-|[SQL Server 安全性概觀](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|說明 SQL Server 安全性架構。|  
+|[連接字串產生器](connection-string-builders.md)|說明如何在執行階段從使用者輸入建立連接字串。|  
+|[SQL Server 安全性概觀](./sql/overview-of-sql-server-security.md)|說明 SQL Server 安全性架構。|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>參數型命令和 SQL 插入  
  使用參數型命令 (Parameterized Command) 有助於防衛 SQL 插入式攻擊，在此類攻擊中，攻擊者會將命令「插入」至 SQL 陳述式而危及伺服器的安全。 參數型命令可確保自外部來源所接收的值僅會以值的形式傳遞，而不會當做 Transact-SQL 陳述式，藉此防衛 SQL 插入式攻擊。 因此，已插入值的 Transact-SQL 命令不會在資料來源執行， 而是將其做為參數值單獨評估。 除了安全性優點外，參數型命令也提供方便的方法，可您安排以 Transact-SQL 陳述式傳遞的值或傳遞到預存程序 (Stored Procedure) 的值。  
   
  如需有關使用參數型命令的詳細資訊，請參閱下列資源。  
   
-|Resource|說明|  
+|Resource|描述|  
 |--------------|-----------------|  
-|[DataAdapter 參數](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|說明如何將參數搭配 `DataAdapter` 使用。|  
-|[使用預存程序修改資料](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|說明如何指定參數並取得傳回值。|  
-|[在 SQL Server 中使用預存程序來管理權限](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|說明如何使用 SQL Server 預存程序以封裝資料存取。|  
+|[DataAdapter 參數](dataadapter-parameters.md)|說明如何將參數搭配 `DataAdapter` 使用。|  
+|[使用預存程序修改資料](modifying-data-with-stored-procedures.md)|說明如何指定參數並取得傳回值。|  
+|[在 SQL Server 中使用預存程序來管理權限](./sql/managing-permissions-with-stored-procedures-in-sql-server.md)|說明如何使用 SQL Server 預存程序以封裝資料存取。|  
   
 ## <a name="script-exploits"></a>指令碼攻擊  
  指令碼攻擊是另一種形式的插入，此種攻擊會使用插入至網頁的惡意字元。 瀏覽器並不會驗證插入的字元，而會將其當做網頁的一部分來處理。  
@@ -63,7 +63,7 @@ ms.locfileid: "69963146"
   
  如需有關保護 Access 和 Excel 資料的詳細資訊，請參閱下列資源。  
   
-|Resource|描述|  
+|Resource|說明|  
 |--------------|-----------------|  
 |[Access 2007 的安全性考慮和指引](https://go.microsoft.com/fwlink/?LinkId=98354)|說明 Access 2007 的安全性技巧，例如加密檔案、管理密碼、將資料庫轉換為新的 ACCDB 和 ACCDE 格式，以及使用其他的安全性選項。|  
 |[瞭解存取安全性中工作組資訊檔案的角色](https://support.microsoft.com/kb/305542)|說明 Access 2003 安全性中的工作群組資訊檔的角色和關係。|  
@@ -82,16 +82,16 @@ ms.locfileid: "69963146"
   
  如需詳細資訊，請參閱下列資源。  
   
-|Resource|描述|  
+|Resource|說明|  
 |--------------|-----------------|  
-|[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)|包含說明如何將 COM 元件公開至 .NET Framework 以及如何將 .NET Framework 元件公開至 COM 的主題。|
+|[與 Unmanaged 程式碼互通](../../interop/index.md)|包含說明如何將 COM 元件公開至 .NET Framework 以及如何將 .NET Framework 元件公開至 COM 的主題。|
 |[進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|包含主要 Interop 組件 (Assembly)、執行緒和自訂封送處理 (Marshaling) 等進階主題。|
 
 ## <a name="see-also"></a>另請參閱
 
-- [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [設定 ADO.NET 應用程式的安全性](securing-ado-net-applications.md)
+- [SQL Server 安全性](./sql/sql-server-security.md)
 - [資料存取策略的建議](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保護連線資訊](protecting-connection-information.md)
+- [連接字串產生器](connection-string-builders.md)
+- [ADO.NET 概觀](ado-net-overview.md)

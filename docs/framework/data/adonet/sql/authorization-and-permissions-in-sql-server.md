@@ -2,12 +2,12 @@
 title: SQL Server 中的授權和權限
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 66bf347543641808cc463d8035223fcf59b08231
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918104"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782594"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server 中的授權和權限
 當您建立資料庫物件時，必須明確地授與權限，讓使用者能夠存取這些物件。 每個安全性實體物件都具有可利用權限陳述式來授與主體的權限。  
@@ -60,9 +60,9 @@ ms.locfileid: "69918104"
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [SQL Server 中的擁有權和使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
+- [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中進行驗證](authentication-in-sql-server.md)
+- [SQL Server 中的伺服器和資料庫角色](server-and-database-roles-in-sql-server.md)
+- [SQL Server 中的擁有權和使用者結構描述分離](ownership-and-user-schema-separation-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

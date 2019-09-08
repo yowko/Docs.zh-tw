@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd1ec9caa70dd7016253ae4385b16dbfb982f956
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 455f71c5b576d1b57db591dab2a3e59f8a5eed67
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742026"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777281"
 ---
 # <a name="exporttype-method"></a>ExportType 方法
-指定的類型是可匯出。  
+指定類型為可匯出。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,31 +41,31 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 若要從匯出的組件識別碼。  
+ 要匯出之元件的識別碼。  
   
  `FileToken`  
- 語彙基元或組件檔案的檔案識別碼定義可匯出的類型。  
+ 檔案的檔案標記或元件識別碼，其定義可匯出的類型。  
   
  `TypeToken`  
- 可匯出的型別的權杖。  
+ 要成為可匯出之類型的 Token。  
   
  `pszTypename`  
- 成可匯出的完整型別名稱。  
+ 要成為可匯出的完整型別名稱。  
   
  `dwFlags`  
- `ComType` 這類旗標`tdPublic`或`tdNested`。 這個參數可能會傳遞給[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ `ComType`旗標， `tdPublic`例如`tdNested`或。 這個參數可以傳遞至[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
- 接收匯出之類型的語彙基元。  
+ 接收匯出類型的 token。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 介面](ialink-interface.md)
+- [IALink2 介面](ialink2-interface.md)
+- [ALink API](index.md)

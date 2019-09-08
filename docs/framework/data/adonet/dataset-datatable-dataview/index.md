@@ -2,12 +2,12 @@
 title: DataSet、DataTable 和 DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 4b5e81f415685d6ee3529c7e4f9d389e8017427e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1744f6c6d8ea3c28a8dab30c0d201ae1dacc7ee3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203643"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786190"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable 和 DataView
 ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論內含資料來源為何，都可提供一致的關聯式程式設計模型。 <xref:System.Data.DataSet> 表示一組完整的資料，包括內含、排序和約束資料的資料表，以及資料表間的關聯性。  
@@ -81,4 +81,4 @@ ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論
 ## <a name="see-also"></a>另請參閱
 
 - [ADO.NET](../index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概觀](../ado-net-overview.md)

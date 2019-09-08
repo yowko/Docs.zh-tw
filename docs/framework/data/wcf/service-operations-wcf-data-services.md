@@ -8,16 +8,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 2a043e71e15de8ffbd4a0e7296545b7af35a3e3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916639"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779768"
 ---
 # <a name="service-operations-wcf-data-services"></a>服務作業 (WCF 資料服務)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以讓您定義資料服務上的服務作業，以公開伺服器上的方法。 如同其他資料服務資源，服務作業依 URI 定址。 服務作業可讓您公開資料服務中的業務邏輯，例如實作驗證邏輯、套用以角色為基礎的安全性，或公開特殊的查詢功能。 服務作業是加入至資料服務類別的方法，衍生自 <xref:System.Data.Services.DataService%601>。 如同所有其他資料服務資源，您可以將參數提供給服務作業方法。 例如，下列服務作業 URI (根據[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)資料服務) 會將值傳遞`London`到`city`參數：
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以讓您定義資料服務上的服務作業，以公開伺服器上的方法。 如同其他資料服務資源，服務作業依 URI 定址。 服務作業可讓您公開資料服務中的業務邏輯，例如實作驗證邏輯、套用以角色為基礎的安全性，或公開特殊的查詢功能。 服務作業是加入至資料服務類別的方法，衍生自 <xref:System.Data.Services.DataService%601>。 如同所有其他資料服務資源，您可以將參數提供給服務作業方法。 例如，下列服務作業 URI （以[快速入門](quickstart-wcf-data-services.md)資料服務為基礎）會將值`London`傳遞給`city`參數：
 
 ```
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
@@ -28,9 +28,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
 [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-您可以使用 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601>，直接存取資料服務所使用的資料來源。 如需詳細資訊，請參閱[如何：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。
+您可以使用 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601>，直接存取資料服務所使用的資料來源。 如需詳細資訊，請參閱[如何：定義服務](how-to-define-a-service-operation-wcf-data-services.md)作業。
 
-如需如何從.NET Framework 用戶端應用程式呼叫服務作業的資訊，請參閱[呼叫服務作業](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)。
+如需如何從 .NET Framework 用戶端應用程式呼叫服務作業的詳細資訊，請參閱[呼叫服務作業](calling-service-operations-wcf-data-services.md)。
 
 ## <a name="service-operation-requirements"></a>服務作業需求
 
@@ -100,7 +100,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 > [!NOTE]
 > 如果服務作業具有已透過現制存取基礎實體集隱藏的傳回型別，則用戶端應用程式就無法使用服務作業。
 
-如需詳細資訊，請參閱[如何：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。
+如需詳細資訊，請參閱[如何：定義服務](how-to-define-a-service-operation-wcf-data-services.md)作業。
 
 ## <a name="raising-exceptions"></a>引發例外狀況
 
@@ -111,4 +111,4 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 
 ## <a name="see-also"></a>另請參閱
 
-- [攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+- [攔截器](interceptors-wcf-data-services.md)

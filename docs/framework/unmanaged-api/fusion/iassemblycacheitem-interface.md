@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697975"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796715"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem 介面
-表示在全域組件快取中的單一組件。  
+代表全域組件快取中的單一元件。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[AbortItem 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|允許在全域組件快取中的組件，在發行之前執行清除作業。|  
-|[Commit 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|認可記憶體的快取的組件參考。|  
-|[CreateStream 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|建立具有指定的名稱和格式的資料流。|  
+|[AbortItem 方法](iassemblycacheitem-abortitem-method.md)|允許全域組件快取中的元件在釋放之前執行清除作業。|  
+|[Commit 方法](iassemblycacheitem-commit-method.md)|認可記憶體的快取元件參考。|  
+|[CreateStream 方法](iassemblycacheitem-createstream-method.md)|建立具有指定之名稱和格式的資料流程。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [全域組件快取](../../../../docs/framework/app-domains/gac.md)
-- [IAssemblyCache 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [融合介面](fusion-interfaces.md)
+- [全域組件快取](../../app-domains/gac.md)
+- [IAssemblyCache 介面](iassemblycache-interface.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 026115adc01e7dcdac3012255f0378cff6348f89
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f984d44d0a8acb85562a58653dfd2882053a0ce
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780694"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799282"
 ---
 # <a name="gethashfromassemblyfile-function"></a>GetHashFromAssemblyFile 函式
 使用指定的雜湊演算法取得所指定組件檔案的雜湊。  
   
- 此函式已被取代。 使用[iclrstrongname:: Gethashfromassemblyfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)方法改為。  
+ 這個函數已被取代。 請改用[ICLRStrongName：： GetHashFromAssemblyFile](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,31 +42,31 @@ HRESULT GetHashFromAssemblyFile (
   
 ## <a name="parameters"></a>參數  
  `szFilePath`  
- [in]要雜湊檔案的路徑。  
+ 在要雜湊之檔案的路徑。  
   
  `piHashAlg`  
- [in、 out]常數，指定的雜湊演算法。 使用預設雜湊演算法的零。  
+ [in、out]指定雜湊演算法的常數。 預設雜湊演算法使用零。  
   
  `pbHash`  
- [out]傳回的雜湊緩衝區。  
+ 脫銷傳回的雜湊緩衝區。  
   
  `cchHash`  
- [in]要求的最大大小的`pbHash`。  
+ 在要求的大小`pbHash`上限。  
   
  `pchHash`  
- [out]傳回大小，以位元組為單位， `pbHash`。  
+ 脫銷傳回的大小（以位元組為單位`pbHash`）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** StrongName.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [GetHashFromAssemblyFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [GetHashFromAssemblyFileW 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromAssemblyFile 方法](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [GetHashFromAssemblyFileW 方法](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)

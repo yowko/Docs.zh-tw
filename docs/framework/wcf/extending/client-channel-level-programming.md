@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f24c558b1d5303b2417416beb14555539f498ea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923262"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797266"
 ---
 # <a name="client-channel-level-programming"></a>用戶端通道層級的程式設計
-本主題描述如何撰寫 Windows Communication Foundation (WCF) 用戶端應用程式，而不需使用<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>類別和其相關聯的物件模型。  
+本主題描述如何撰寫 Windows Communication Foundation （WCF）用戶端應用程式，而不<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>使用類別及其相關聯的物件模型。  
   
 ## <a name="sending-messages"></a>傳送訊息  
  以下為準備傳送訊息及接收和處理回覆所需的步驟：  
@@ -29,7 +29,7 @@ ms.locfileid: "61923262"
 5. 關閉所有通道物件。  
   
 #### <a name="creating-a-binding"></a>建立繫結。  
- 接收案例類似 (請參閱[服務通道層級程式設計](../../../../docs/framework/wcf/extending/service-channel-level-programming.md))，以建立繫結傳送的訊息啟動。 這個範例會建立新的 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>，並將 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 加入至其 Elements 集合。  
+ 類似于接收案例（請參閱[服務通道層級的程式設計](service-channel-level-programming.md)），傳送訊息會藉由建立系結開始。 這個範例會建立新的 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>，並將 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 加入至其 Elements 集合。  
   
 #### <a name="building-a-channelfactory"></a>建置 ChannelFactory  
  這次我們不會建立 <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType>，而是藉由在型別參數為 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 的繫結上呼叫 <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> 的方式建立 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>。 通道接聽項是由等候傳入訊息的一端使用，而通道處理站是由初始化通訊以建立通道的一端使用。 就如同通道接聽項，通道處理站也必須先開啟才能使用。  

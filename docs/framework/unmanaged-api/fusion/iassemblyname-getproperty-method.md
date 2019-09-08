@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 351d540d226f46f180b46323e83eb1bcc71da4f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744533"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796596"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty 方法
 取得指定的屬性識別碼所參考之屬性的指標。  
@@ -39,21 +39,21 @@ HRESULT GetProperty (
   
 ## <a name="parameters"></a>參數  
  `PropertyId`  
- [in]要求屬性的唯一識別項。  
+ 在所要求之屬性的唯一識別碼。  
   
  `pvProperty`  
- [out]傳回的屬性的資料。  
+ 脫銷傳回的屬性資料。  
   
  `pcbProperty`  
- [in、 out]大小，以位元組為單位的`pvProperty`。  
+ [in、out]的大小（以位元組為單位`pvProperty`）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName 介面](iassemblyname-interface.md)

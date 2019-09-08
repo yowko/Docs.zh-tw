@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b1c704113c8e05e493cdb3ef24f6376ab54b1cb
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251118"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779341"
 ---
 # <a name="mitigation-path-normalization"></a>風險降低：路徑正規化
 從以 .NET Framework 4.6.2 為目標的應用程式開始，.NET Framework 中的路徑正規化已有所變更。  
@@ -45,7 +45,7 @@ ms.locfileid: "66251118"
 此變更不會影響以 .NET Framework 4.6.1 和舊版為目標但執行於 .NET Framework 4.6.2 或更新版本下的應用程式。  
   
 ## <a name="mitigation"></a>緩和  
- 以 .NET Framework 4.6.2 或更新版本為目標的應用程式，可透過在應用程式組態檔的[\<執行階段>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段中新增下列內容來選擇退出此變更，並使用舊版行為：  
+ 以 .NET Framework 4.6.2 或更新版本為目標的應用程式，可透過在應用程式組態檔的[\<執行階段>](../configure-apps/file-schema/runtime/runtime-element.md) 區段中新增下列內容來選擇退出此變更，並使用舊版行為：  
   
 ```xml  
 <runtime>  
@@ -53,7 +53,7 @@ ms.locfileid: "66251118"
 </runtime>  
 ```  
   
-以 .NET Framework 4.6.1 或更早版本為目標，但在 .NET Framework 4.6.2 或更新版本上執行的應用程式，可以藉由在應用程式組態檔的[\<執行階段>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段新增下行，就能啟用路徑正規化的變更：  
+以 .NET Framework 4.6.1 或更早版本為目標，但在 .NET Framework 4.6.2 或更新版本上執行的應用程式，可以藉由在應用程式組態檔的[\<執行階段>](../configure-apps/file-schema/runtime/runtime-element.md) 區段新增下行，就能啟用路徑正規化的變更：  
   
 ```xml  
 <runtime>  
@@ -63,4 +63,4 @@ ms.locfileid: "66251118"
   
 ## <a name="see-also"></a>另請參閱
 
-- [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+- [重定目標變更](retargeting-changes-in-the-net-framework-4-6-2.md)

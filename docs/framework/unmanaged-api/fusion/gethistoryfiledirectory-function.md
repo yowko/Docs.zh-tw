@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10eead2772a2bbd8abaf7b9c090a091687725972
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778649"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796857"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 函式
-擷取應用程式記錄目錄的路徑。  
+抓取應用程式歷程記錄目錄的路徑。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,33 +37,33 @@ HRESULT GetHistoryFileDirectory (
   
 ## <a name="parameters"></a>參數  
  `wzDir`  
- [out]緩衝區的緩衝區來保存應用程式記錄目錄的路徑。  
+ 脫銷保存應用程式歷程記錄目錄路徑的緩衝區。  
   
  `pdwSize`  
- [in、 out]緩衝區的長度。  
+ [in、out]緩衝區的長度。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回標準 COM 錯誤碼，定義在 WinError.h 檔案中，除了下列的值。  
+ 除了下列值之外，這個方法會傳回 Winerror.h 檔案中定義的標準 COM 錯誤碼。  
   
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_INVALIDARG|`wzDir` 或`pdwSize`是 null 或版本字串不正確。|  
+|E_INVALIDARG|`wzDir`或`pdwSize`為 null，或版本字串不正確。|  
   
 ## <a name="remarks"></a>備註  
- 成功完成時，`pdwSize`引數設定為路徑字串的長度。  
+ 成功完成時， `pdwSize`引數會設定為路徑字串的長度。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **LIBRARY:** Fusion.dll 和 Mscorwks.dll。 使用而不是 Mscorwks.dll 的 Fusion.dll，以確保您設為目標的.NET framework 的正確版本。  
+ **LIBRARY:** 融合 .dll 和 Mscorwks.dll。 請使用 [Mscorwks.dll]，而不是 []，以確保您以正確的 .NET Framework 版本為目標。  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [CreateHistoryReader 函式](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [NukeDownloadedCache 函式](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
-- [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [CreateHistoryReader 函式](createhistoryreader-function.md)
+- [NukeDownloadedCache 函式](nukedownloadedcache-function.md)
+- [融合全域靜態函式](fusion-global-static-functions.md)

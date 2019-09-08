@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 075f952e6d5b3e863ca720bb206f33471809d09e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 633ff0f787b33d45a247f7a3f890a58973c87479
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754090"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796637"
 ---
 # <a name="iassemblyenumreset-method"></a>IAssemblyEnum::Reset 方法
-重設這[IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)起始位置的物件。  
+將這個[IAssemblyEnum](iassemblyenum-interface.md)物件重設為其開始位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,12 +36,12 @@ HRESULT Reset (
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyEnum 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [IAssemblyEnum 介面](iassemblyenum-interface.md)

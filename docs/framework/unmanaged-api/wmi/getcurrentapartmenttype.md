@@ -1,5 +1,5 @@
 ---
-title: GetCurrentApartmentType 函式 (非受控 API 參考)
+title: GetCurrentApartmentType 函式（非受控 API 參考）
 description: GetCurrentApartmentType 函數會抓取呼叫者執行所在的公寓類型。
 ms.date: 11/06/2017
 api_name:
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68eb4ba653098d847022da45e610cb4fa5496a8c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ff64be47802a46979818ab54cc3efb4112dd05e0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037970"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798622"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 函式
 擷取呼叫者在其中執行之 Apartment 的型別。   
@@ -47,7 +47,7 @@ HRESULT GetCurrentApartmentType (
 在[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)實例的指標。
 
 `aptType`  
-脫銷[APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype)列舉值的指標, 指出呼叫端的單元。
+脫銷[APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype)列舉值的指標，指出呼叫端的單元。
 
 ## <a name="return-value"></a>傳回值
 
@@ -58,10 +58,10 @@ HRESULT GetCurrentApartmentType (
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝對[IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法的呼叫。
+此函式會包裝對[IComThreadingInfo：： GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法的呼叫。
 
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
@@ -69,4 +69,4 @@ HRESULT GetCurrentApartmentType (
   
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 (非受控 API 參考)](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

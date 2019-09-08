@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: e13c4df87909629a45830e3b7950551434ed5ab1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6fa4207531e86cbde8657d0c47596f22c886f89
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946579"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791878"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server 的提供者統計資料
 從 .NET Framework 2.0 版開始，.NET Framework Data Provider for SQL Server 便支援執行階段統計資料。 建立有效的連接物件後，您必須藉由將 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 屬性設為 `True`，以啟用統計資料。 統計資料啟用後，透過 <xref:System.Collections.IDictionary> 物件的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法擷取 <xref:System.Data.SqlClient.SqlConnection> 參考，可以將它們做為「某時間的快照集」進行檢閱。 您可使用一組名稱/值配對字典項目的形式透過清單列舉。 這些名稱/值配對沒有排列順序。 您可以隨時呼叫 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 方法，以重設計數器。 如果尚未啟用統計資料蒐集，則不會產生例外狀況。 此外，如果呼叫 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 時未先呼叫 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，則擷取的值會是每個項目的初始值。 如果啟用統計資料，並執行應用程式一段時間，然後停用統計資料，則擷取的值會反映到停用統計資料時所收集的值。 蒐集的所有統計資料值都是以每個連接為基礎。  
   
 ## <a name="statistical-values-available"></a>可用的統計值  
- Microsoft SQL Server 提供者目前有 18 個不同的可用項目。 您可以透過所傳回之<xref:System.Collections.IDictionary> <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>介面參考的**Count**屬性來存取可用的專案數。 提供者統計資料的所有計數器都會使用 common language runtime <xref:System.Int64>類型 (**long** in C#和 Visual Basic), 這是64位寬。 Int64 資料類型的最大值, 如 int64 所定義 **。** Int32.maxvalue 欄位是 ((2 ^ 63)-1))。 計數器的值達到此最大值時，則不應再將其視為精確值。 這表示**int64。** Int32.maxvalue-1 ((2 ^ 63)-2) 實際上是任何統計資料最有效的值。  
+ Microsoft SQL Server 提供者目前有 18 個不同的可用項目。 您可以透過所傳回之<xref:System.Collections.IDictionary> <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>介面參考的**Count**屬性來存取可用的專案數。 提供者統計資料的所有計數器都會使用 common language runtime <xref:System.Int64>類型（**long** in C#和 Visual Basic），這是64位寬。 **Int64 資料類型**的最大值，如 int64 所定義 **。Int32.maxvalue 欄位是**（（2 ^ 63）-1））。 計數器的值達到此最大值時，則不應再將其視為精確值。 這表示**int64。Int32.maxvalue-1**（（2 ^ 63）-2）實際上是任何統計資料最有效的值。  
   
 > [!NOTE]
 > 因為傳回之統計資料的數目、名稱及順序將來可能會變更，所以會使用字典來傳回提供者統計資料。 應用程式不應依賴在字典中發現的特定值，而應檢查該值是否存在，並相應地進行分支。  
@@ -340,5 +340,5 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>另請參閱
 
-- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 和 ADO.NET](index.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

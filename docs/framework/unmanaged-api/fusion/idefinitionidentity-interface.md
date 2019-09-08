@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ff23330f307c10eac134048de39a6e19a67c75b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c595bfdcca84ee43a53e2ea913cc978ae0953e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697533"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796532"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity 介面
-代表目前範圍中定義應用程式的程式碼的唯一的簽章。  
+表示在目前範圍中定義應用程式之程式碼的唯一簽章。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
-|`IDefinitionIdentity::Clone`|取得新的介面指標`IDefinitionIdentity`物件，等於這個`IDefinitionIdentity`，但不包括指定的屬性變更。|  
-|`IDefinitionIdentity::EnumAttributes`|取得的介面指標[IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)物件，其中包含與此相關聯的屬性`IDefinitionIdentity`。|  
-|`IDefinitionIdentity::GetAttribute`|在指定的命名空間中取得具有指定名稱之屬性的值。|  
-|`IDefinitionIdentity::SetAttribute`|設定指定的值指定的命名空間中具有指定的名稱的屬性。|  
+|`IDefinitionIdentity::Clone`|取得與這個`IDefinitionIdentity` `IDefinitionIdentity`相同的新物件介面指標，但指定的屬性變更除外。|  
+|`IDefinitionIdentity::EnumAttributes`|取得[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)物件的介面指標，其中包含與這個`IDefinitionIdentity`相關聯的屬性。|  
+|`IDefinitionIdentity::GetAttribute`|取得指定的命名空間中具有指定名稱之屬性的值。|  
+|`IDefinitionIdentity::SetAttribute`|將指定的命名空間中具有指定之名稱的屬性設定為指定的值。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Isolation.h  
+ **標頭：** 隔離。h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [融合介面](fusion-interfaces.md)

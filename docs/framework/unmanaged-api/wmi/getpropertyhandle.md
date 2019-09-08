@@ -1,5 +1,5 @@
 ---
-title: GetPropertyHandle 函式 (非受控 API 參考)
+title: GetPropertyHandle 函式（非受控 API 參考）
 description: GetPropertyHandle 函數會傳回可識別屬性的唯一控制碼。
 ms.date: 11/06/2017
 api_name:
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038253"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798551"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函式
 
@@ -50,19 +50,19 @@ HRESULT GetPropertyHandle (
 在[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)實例的指標。
 
 `wszPropertyName`\
-在以 null 終止的 UTF16 編碼字元字串, 其中包含屬性名稱。
+在以 null 終止的 UTF16 編碼字元字串，其中包含屬性名稱。
 
 `pType`\
-脫銷[`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)列舉成員的指標, 表示屬性的 CIM 類型。
+脫銷[`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)列舉成員的指標，表示屬性的 CIM 類型。
 
 `pHandle`\
 脫銷包含屬性控制碼之整數的指標。
 
 ## <a name="return-value"></a>傳回值
 
-這個函式所傳回的下列值會定義在*WbemCli*標頭檔中, 您也可以在程式碼中將它們定義為常數:
+這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
-|常數  |值  |描述  |
+|常數  |值  |說明  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的屬性名稱。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數無效。 |
@@ -71,15 +71,15 @@ HRESULT GetPropertyHandle (
 
 ## <a name="remarks"></a>備註
 
-此函式會包裝對[IWbemClassObject:: GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法的呼叫。
+此函式會包裝對[IWbemClassObject：： GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle)方法的呼叫。
 
-使用[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法來讀取或寫入屬性值時, 您可以使用此控制碼來識別屬性。
+使用[IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)方法來讀取或寫入屬性值時，您可以使用此控制碼來識別屬性。
 
 可以針對`CIM_OBJECT`和`CIM_ARRAY`以外的所有資料類型的屬性來抓取控制碼。 傳回的控制碼可在類別的所有實例之間工作。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** WMINet_Utils.idl
 
@@ -87,4 +87,4 @@ HRESULT GetPropertyHandle (
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 (非受控 API 參考)](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

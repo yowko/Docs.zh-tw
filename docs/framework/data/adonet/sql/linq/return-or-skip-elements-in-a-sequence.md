@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963866"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792762"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>傳回或略過序列中的項目
 使用 <xref:System.Linq.Queryable.Take%2A> 運算子傳回序列中指定數目的項目，然後略過其餘的項目。  
@@ -18,7 +18,7 @@ ms.locfileid: "69963866"
  使用 <xref:System.Linq.Queryable.Skip%2A> 運算子略過序列中指定數目的項目，然後傳回其餘的項目。  
   
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊, 請參閱[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)中的「略過並採取 SQL Server 2000 中的例外狀況」專案。  
+> <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱[疑難排解](troubleshooting.md)中的「略過並採取 SQL Server 2000 中的例外狀況」專案。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]會使用子查詢搭配 SQL `NOT EXISTS`子句來轉譯。<xref:System.Linq.Queryable.Skip%2A> 這項轉譯具有下列限制：  
   
@@ -49,9 +49,9 @@ ms.locfileid: "69963866"
  由於在 SQL 中排序的限制，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試將 <xref:System.Linq.Queryable.Take%2A> 或 <xref:System.Linq.Queryable.Skip%2A> 運算子的引數排序移至運算子的結果。  
   
 > [!NOTE]
-> SQL Server 2000 和 SQL Server 2005 的轉譯不同。 如果您打算搭配任何<xref:System.Linq.Queryable.Skip%2A>複雜度的查詢來使用, 請使用 SQL Server 2005。  
+> SQL Server 2000 和 SQL Server 2005 的轉譯不同。 如果您打算搭配任何<xref:System.Linq.Queryable.Skip%2A>複雜度的查詢來使用，請使用 SQL Server 2005。  
   
- 請考慮下列[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server 2000 的查詢:  
+ 請考慮下列[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server 2000 的查詢：  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
@@ -80,5 +80,5 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [查詢範例](query-examples.md)
+- [標準查詢運算子轉譯](standard-query-operator-translation.md)

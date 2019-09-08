@@ -2,12 +2,12 @@
 title: 在 SQL Server 中撰寫安全的動態 SQL
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 9b0c903c04c82c9a0f61197642645c5ba93ba099
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c02455ba8798df1de1d52f6b4db3426d41b95daf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645928"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791416"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中撰寫安全的動態 SQL
 「SQL 插入」(SQL Injection) 是指惡意的使用者用來輸入 Transact-SQL 陳述式 (而非有效輸入) 的流程。 如果該輸入未經驗證而直接傳遞至伺服器，而且應用程式不慎執行了插入的程式碼，則攻擊就可能會危及或損毀資料。  
@@ -46,9 +46,9 @@ ms.locfileid: "64645928"
   
  SQL Server 提供兩種方法，可使用執行動態 SQL 的預存程序和使用者定義函式，來授與資料存取權給使用者。  
   
-- 使用模擬搭配 Transact-SQL EXECUTE AS 子句，如[在 SQL Server 中使用模擬來自訂權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)中所述。  
+- 使用模擬搭配 Transact-SQL EXECUTE AS 子句，如[在 SQL Server 中使用模擬來自訂權限](customizing-permissions-with-impersonation-in-sql-server.md)中所述。  
   
-- 使用憑證簽署預存程序，如[在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)中所述。  
+- 使用憑證簽署預存程序，如[在 SQL Server 中簽署預存程序](signing-stored-procedures-in-sql-server.md)中所述。  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  EXECUTE AS 子句會將呼叫端的權限取代成 EXECUTE AS 子句中指定之使用者的權限。 巢狀預存程序或觸發程序 (Trigger) 會在 Proxy 使用者的安全性內容底下執行。 這樣會中斷仰賴列層級安全性或需要稽核的應用程式。 傳回使用者識別的某些函式會傳回 EXECUTE AS 子句中指定的使用者，而非原始呼叫端。 只有在執行此程序之後，或發出 REVERT 陳述式時，執行內容才會還原成原始呼叫端。  
@@ -62,16 +62,16 @@ ms.locfileid: "64645928"
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
   
-|資源|描述|  
+|Resource|說明|  
 |--------------|-----------------|  
 |《SQL Server 線上叢書》中的[預存程序](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)和 [SQL 插入](/sql/relational-databases/security/sql-injection)|說明如何建立預存程序以及「SQL 插入」運作方式的主題。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中使用模擬來自訂權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
+- [SQL Server 安全性概觀](overview-of-sql-server-security.md)
+- [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中使用預存程序來管理權限](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中簽署預存程序](signing-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中使用模擬來自訂權限](customizing-permissions-with-impersonation-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

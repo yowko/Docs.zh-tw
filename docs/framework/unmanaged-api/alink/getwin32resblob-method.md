@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741793"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777363"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 方法
-擷取 Win32 資源的 blob。 設定組件選項之後呼叫這個方法。  
+抓取 Win32 資源 blob。 設定元件選項之後，請呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,31 +41,31 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 組件的識別碼。  
+ 元件的識別碼。  
   
  `FileToken`  
- 用來擷取建構的 Win32 版本資源時所要使用的檔名語彙基元檔案  
+ 用來抓取要在建立 Win32 版本資源時使用之檔案名的檔案標記  
   
  `fDll`  
- 如果檔案是 DLL，false EXE，則為 TRUE。  
+ 如果檔案是 DLL，則為 TRUE，如果是 EXE，則為 false。  
   
  `pszIconFile`  
- 若要將資源的 blob 插入的選擇性圖示。  
+ 要插入資源 blob 的選擇性圖示。  
   
  `ppResBlob`  
- 收到資源的 blob。  
+ 接收資源 blob。  
   
  `pcbResBlob`  
  接收 blob 的大小。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 介面](ialink-interface.md)
+- [IALink2 介面](ialink2-interface.md)
+- [ALink API](index.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51e8c83d0949f68a41f6a4e10396adbc4f3c9c1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5db205993bc1a0665dc0003948ce805813251f48
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741886"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787459"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 方法
-擷取中繼資料 （而不是由 ALink 指派的權杖） 中所使用的實際 FileDef 語彙基元。  
+抓取中繼資料中使用的實際 FileDef token （而不是由 ALink 指派的 token）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,22 +38,22 @@ HRESULT GetFileDef(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 組件的識別碼。  
+ 元件的識別碼。  
   
  `TargetFile`  
- 語彙基元的加入的檔案從 AddFile 方法或 AddImport 方法擷取。  
+ 從 AddFile 方法或 AddImport 方法抓取之已加入檔案的 Token。  
   
  `pScope`  
- 接收 FileDef 語彙基元。  
+ 接收 FileDef token。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 介面](ialink2-interface.md)
+- [IALink 介面](ialink-interface.md)
+- [ALink API](index.md)

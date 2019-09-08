@@ -2,18 +2,18 @@
 title: 逐步解說：簡單的物件模型和查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946916"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792138"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>逐步解說：簡單的物件模型和查詢 (C#)
 
 這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。 接著，您會建立簡單查詢，以便列出位於倫敦的客戶。
 
-這個逐步解說的設計是以程式碼為導向，以協助說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。 一般來說, 您會使用物件關聯式設計工具來建立物件模型。
+這個逐步解說的設計是以程式碼為導向，以協助說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 概念。 一般來說，您會使用物件關聯式設計工具來建立物件模型。
 
 [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]
 
@@ -23,7 +23,7 @@ ms.locfileid: "69946916"
 
 - 本逐步解說會使用專用資料夾 ("c:\linqtest5") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。
 
-- 這個逐步解說需要使用 Northwind 範例資料庫。 如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需指示, 請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載此資料庫之後，請將檔案複製到 c:\linqtest5 資料夾。
+- 這個逐步解說需要使用 Northwind 範例資料庫。 如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需指示，請參閱[下載範例資料庫](downloading-sample-databases.md)。 下載此資料庫之後，請將檔案複製到 c:\linqtest5 資料夾。
 
 ## <a name="overview"></a>總覽
 
@@ -43,35 +43,35 @@ ms.locfileid: "69946916"
 
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案
 
-在第一項工作中, 您會建立 Visual Studio 方案, 其中包含組建和執行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案所需的參考。
+在第一項工作中，您會建立 Visual Studio 方案，其中包含組建和執行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案所需的參考。
 
 ### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案
 
-1. 在 [Visual Studio檔案] 功能表上, 指向 [**新增**], 然後按一下 [**專案**]。
+1. 在 **[Visual Studio 檔案**] 功能表上，指向 [**新增**]，然後按一下 [**專案**]。
 
-2. 在 [**新增專案**] 對話方塊的 [**專案類型**] 窗格中, 按一下 [  **C#視覺效果**]。
+2. 在 [**新增專案**] 對話方塊的 [**專案類型**] 窗格中，按一下 [  **C#視覺效果**]。
 
 3. 按一下 [範本] 窗格中的 [主控台應用程式]。
 
-4. 在 [**名稱**] 方塊中, 輸入**LinqConsoleApp**。
+4. 在 [**名稱**] 方塊中，輸入**LinqConsoleApp**。
 
-5. 在 [**位置**] 方塊中, 確認您要儲存專案檔案的位置。
+5. 在 [**位置**] 方塊中，確認您要儲存專案檔案的位置。
 
 6. 按一下 [確定]。
 
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞
 
-本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果您的專案中未將 System.web 列為參考 (展開**方案總管**中的 [**參考**] 節點), 請將它加入, 如下列步驟所述。
+本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果您的專案中未將 System.web 列為參考（展開**方案總管**中的 [**參考**] 節點），請將它加入，如下列步驟所述。
 
 ### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq
 
-1. 在**方案總管**中, 以滑鼠右鍵按一下 [**參考**], 然後按一下 [**加入參考**]。
+1. 在**方案總管**中，以滑鼠右鍵按一下 [**參考**]，然後按一下 [**加入參考**]。
 
-2. 在 [**加入參考**] 對話方塊中, 按一下 [ **.net**], 再按一下 [system.string] 元件, 然後按一下 **[確定]** 。
+2. 在 [**加入參考**] 對話方塊中，按一下 [ **.net**]，再按一下 [system.string] 元件，然後按一下 **[確定]** 。
 
      組件隨即加入至專案。
 
-3. 在**Program.cs**頂端新增下列指示詞:
+3. 在**Program.cs**頂端新增下列指示詞：
 
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]
 
@@ -140,7 +140,7 @@ ms.locfileid: "69946916"
 2. 按 F5，進行應用程式偵錯。
 
     > [!NOTE]
-    > 如果您的應用程式產生執行階段錯誤, 請參閱[學習逐步](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)解說的疑難排解一節。
+    > 如果您的應用程式產生執行階段錯誤，請參閱[學習逐步](learning-by-walkthroughs.md)解說的疑難排解一節。
 
      主控台視窗中的查詢結果應如下所示：
 
@@ -160,10 +160,10 @@ ms.locfileid: "69946916"
 
 ## <a name="next-steps"></a>後續步驟
 
-[逐步解說:跨關聯性查詢C#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) ) 主題會繼續本逐步解說結束的位置。 跨關聯性查詢逐步解說會[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]示範如何在資料表之間查詢,類似于關係資料庫中的聯結。
+[逐步解說：跨關聯性查詢C#（](walkthrough-querying-across-relationships-csharp.md) ）主題會繼續本逐步解說結束的位置。 跨關聯性查詢逐步解說會[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]示範如何在資料表之間查詢，*類似于關係資料庫中的*聯結。
 
 如果您想執行＜跨關聯性查詢＞逐步解說，請務必儲存您剛在本逐步解說完成的方案，這是必要的條件。
 
 ## <a name="see-also"></a>另請參閱
 
-- [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [依逐步解說學習](learning-by-walkthroughs.md)

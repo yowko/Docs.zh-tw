@@ -2,12 +2,12 @@
 title: dotnet-add reference 命令
 description: dotnet add reference 命令提供方便的選項，以新增專案對專案參考。
 ms.date: 06/26/2019
-ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: 867596058aad8f9c38918e6d6657709d0d0699b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422009"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784042"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -27,7 +27,7 @@ ms.locfileid: "67422009"
 
 ## <a name="description"></a>說明
 
-`dotnet add reference` 命令提供方便的選項，將專案參考新增至專案。 執行命令之後，系統就會將 [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) 元素新增至專案檔。
+`dotnet add reference` 命令提供方便的選項，將專案參考新增至專案。 執行命令之後， `<ProjectReference>`元素會加入至專案檔。
 
 ```xml
 <ItemGroup>

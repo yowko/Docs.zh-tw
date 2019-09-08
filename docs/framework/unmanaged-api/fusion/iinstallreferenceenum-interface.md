@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5781254b508887f2e76f6ca0eca6a2830ada172b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774011"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796416"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum 介面
-表示參考的組件安裝在全域組件快取的列舉值。  
+代表安裝在全域組件快取中參考元件的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,18 +40,18 @@ interface IInstallReferenceEnum : IUnknown {
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem 方法](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|取得下一個指標`IInstallReferenceItem`包含在此`IInstallReferenceEnum`。|  
+|[GetNextInstallReferenceItem 方法](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|取得這個`IInstallReferenceItem` `IInstallReferenceEnum`中所包含下一個的指標。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IInstallReferenceItem 介面](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [融合介面](fusion-interfaces.md)
+- [IInstallReferenceItem 介面](iinstallreferenceitem-interface.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878217"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783251"
 ---
 # <a name="performing-catalog-operations"></a>執行資料庫目錄作業
-若要執行的命令來修改資料庫或目錄，例如 CREATE TABLE 或 CREATE PROCEDURE 陳述式中，建立**命令**物件使用適當的 SQL 陳述式並**連線**物件。 執行命令**ExecuteNonQuery**方法**命令**物件。  
+若要執行命令來修改資料庫或目錄，例如 CREATE TABLE 或 CREATE PROCEDURE 語句，請使用適當的 SQL 語句和**連接**物件來建立**命令**物件。 使用**command**物件的**ExecuteNonQuery**方法來執行命令。  
   
  下列程式碼範例會在 Microsoft SQL Server 資料庫中建立預存程序。  
   
@@ -47,6 +47,6 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用命令修改資料](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [使用命令修改資料](using-commands-to-modify-data.md)
+- [命令和參數](commands-and-parameters.md)
+- [ADO.NET 概觀](ado-net-overview.md)

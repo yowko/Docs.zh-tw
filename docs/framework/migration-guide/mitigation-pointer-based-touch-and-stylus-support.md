@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: HT
+ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379894"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779234"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>風險降低：以指標為基礎的觸控及手寫筆支援
 
@@ -40,7 +40,7 @@ ms.locfileid: "66379894"
 
       這可能會導致應用程式停止回應，直到偵測到滑鼠輸入為止。 開發人員應改為從滑鼠事件起始拖放動作。
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>選擇加入 WM_POINTER 式觸控/手寫筆支援
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>選擇加入 WM_POINTER 式觸控/手寫筆支援
 
 想要啟用此堆疊的開發人員可以將以下內容加入至他們應用程式的 app.config 檔案︰
 
@@ -56,4 +56,4 @@ ms.locfileid: "66379894"
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 4.7 中的重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [.NET Framework 4.7 中的重定目標變更](retargeting-changes-in-the-net-framework-4-7.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 5dd2bfa0884eac6864630bf393e232cf45bd1c99
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f8cb573d051970414f3962057f6329683eea5bd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938203"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782402"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>啟用 Multiple Active Result Sets
 Multiple Active Result Set (MARS) 是與 SQL Server 搭配使用的功能，它允許在單一連接中執行多個批次作業。 啟用 MARS 以與 SQL Server 搭配使用時，使用的每個命令物件都會在連接中加入工作階段。  
@@ -62,13 +62,13 @@ string connectionString = "Data Source=MSSQL1;" +
  SELECT 陳述式內的 WAITFOR 陳述式在等待期間，即產生第一個資料列之前，不會產生異動。 這表示在 WAITFOR 陳述式等待期間，無法在同一連接內執行其他批次作業。  
   
 ### <a name="mars-session-cache"></a>MARS 工作階段快取  
- 開啟啟用 MARS 的連接時，會建立邏輯工作階段，如此會增加額外負荷。 為了將額外負荷降至最低並提升效能, **SqlClient**會快取連接內的 MARS 會話。 快取包含最多 10 個 MARS 工作階段。 使用者不可調整此值。 如果達到工作階段限制，則會建立新的工作階段而不會產生錯誤。 其中包含的快取及工作階段是以每個連接為基礎的，不可跨連接共用。 釋放工作階段時，會將其傳回集區，直至達到集區上限為止。 如果快取集區已滿，則工作階段會關閉。 MARS 工作階段不會過期。 只會在處置連接物件時清除它們。 MARS 工作階段快取不會預先載入。 應用程式需要更多工作階段時會將其載入。  
+ 開啟啟用 MARS 的連接時，會建立邏輯工作階段，如此會增加額外負荷。 為了將額外負荷降至最低並提升效能， **SqlClient**會快取連接內的 MARS 會話。 快取包含最多 10 個 MARS 工作階段。 使用者不可調整此值。 如果達到工作階段限制，則會建立新的工作階段而不會產生錯誤。 其中包含的快取及工作階段是以每個連接為基礎的，不可跨連接共用。 釋放工作階段時，會將其傳回集區，直至達到集區上限為止。 如果快取集區已滿，則工作階段會關閉。 MARS 工作階段不會過期。 只會在處置連接物件時清除它們。 MARS 工作階段快取不會預先載入。 應用程式需要更多工作階段時會將其載入。  
   
 ### <a name="thread-safety"></a>執行緒安全  
  MARS 作業不是安全執行緒。  
   
 ### <a name="connection-pooling"></a>連接共用  
- 啟用 MARS 的連接共用方式與其他連接一樣。 如果應用程式開啟兩個連接，一個啟用 MARS，另一個停用 MARS，則兩個連接會位於不同的集區中。 如需詳細資訊，請參閱 [SQL Server 連共用ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 啟用 MARS 的連接共用方式與其他連接一樣。 如果應用程式開啟兩個連接，一個啟用 MARS，另一個停用 MARS，則兩個連接會位於不同的集區中。 如需詳細資訊，請參閱 [SQL Server 連共用ADO.NET)](../sql-server-connection-pooling.md)。  
   
 ### <a name="sql-server-batch-execution-environment"></a>SQL Server 批次執行環境  
  連接開啟時，會定義預設的環境。 然後會將此環境複製到邏輯 MARS 工作階段。  
@@ -81,7 +81,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
 - 資料庫內容 (目前資料庫)  
   
-- 執行狀態變數 (@ERROR例如, @、@@ROWCOUNT、@@FETCH_STATUS @@IDENTITY)  
+- 執行狀態變數（@ERROR例如，@、@@ROWCOUNT、@@FETCH_STATUS @@IDENTITY）  
   
 - 最上層暫存資料表  
   
@@ -90,11 +90,11 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="parallel-execution"></a>平行執行  
  MARS 未設計為在應用程式內移除對多重連接的所有需求。 如果應用程式確實需要針對伺服器平行執行命令，則應使用多重連接。  
   
- 例如，請考量下列案例。 建立兩個命令物件，一個用於處理結果集，另一個用於更新資料，它們透過 MARS 共用通用連接。 在此案例中為`Transaction`。`Commit` 當第一個命令物件上已讀取所有結果時, 更新會失敗, 並產生下列例外狀況:  
+ 例如，請考量下列案例。 建立兩個命令物件，一個用於處理結果集，另一個用於更新資料，它們透過 MARS 共用通用連接。 在此案例中為`Transaction`。`Commit` 當第一個命令物件上已讀取所有結果時，更新會失敗，並產生下列例外狀況：  
   
  訊息：交易內容正由另一個工作階段所使用。  
   
- 來源: .NET SqlClient Data Provider  
+ 來源： .NET SqlClient Data Provider  
   
  預期：(null)  
   
@@ -113,5 +113,5 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>另請參閱
 
-- [Multiple Active Result Set (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Multiple Active Result Set (MARS)](multiple-active-result-sets-mars.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

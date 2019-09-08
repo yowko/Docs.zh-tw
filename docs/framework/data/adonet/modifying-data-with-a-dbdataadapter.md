@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: ec4f0527b73a506b3c98675f77f8f49a1eeb1e1f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cd1f5faa0efe141dc064f0150b94807b90e7e2b8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934460"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794828"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>使用 DbDataAdapter 修改資料
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> 物件的 <xref:System.Data.Common.DbProviderFactory> 方法可提供 <xref:System.Data.Common.DbDataAdapter> 物件，而它是建立 Factory 時指定之基礎資料提供者的強型別 (Strongly Typed) 物件。 然後，您可以使用 <xref:System.Data.Common.DbCommandBuilder> 來建立命令，以便針對資料來源插入、更新和刪除 <xref:System.Data.DataSet> 的資料。  
@@ -44,7 +44,7 @@ ms.locfileid: "69934460"
   
 ## <a name="see-also"></a>另請參閱
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [取得 DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- [DbConnection、DbCommand 和 DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DbProviderFactories](dbproviderfactories.md)
+- [取得 DbProviderFactory](obtaining-a-dbproviderfactory.md)
+- [DbConnection、DbCommand 和 DbException](dbconnection-dbcommand-and-dbexception.md)
+- [ADO.NET 概觀](ado-net-overview.md)

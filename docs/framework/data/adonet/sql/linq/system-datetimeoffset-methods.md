@@ -2,12 +2,12 @@
 title: System.DateTimeOffset 方法
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
-ms.openlocfilehash: a638a4fcc156727f734ff480a18b9997bc9d2e34
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2e29cf02d4f7e8004782264bf940bb1faf393269
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959091"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781556"
 ---
 # <a name="systemdatetimeoffset-methods"></a>System.DateTimeOffset 方法
 一旦在物件模型 (Object Model) 或外部對應檔案中對應之後，LINQ to SQL 就可讓您從 LINQ to SQL 查詢內部呼叫大部分 <xref:System.DateTimeOffset?displayProperty=nameWithType> 方法、運算子和屬性。  
@@ -28,6 +28,6 @@ ms.locfileid: "69959091"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+- [查詢概念](query-concepts.md)
+- [建立物件模型](creating-the-object-model.md)
+- [SQL-CLR 類型對應](sql-clr-type-mapping.md)

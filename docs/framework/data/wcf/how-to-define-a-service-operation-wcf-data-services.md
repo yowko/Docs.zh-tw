@@ -1,5 +1,5 @@
 ---
-title: HOW TO：定義服務作業 (WCF Data Services)
+title: 作法：定義服務作業（WCF Data Services）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: dbd14ba9ed24fb3f18946e817f61f8cbf2e9b1b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3154fadeda400440f68a184b430b7ff15a02203d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936548"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780082"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>HOW TO：定義服務作業 (WCF Data Services)
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>作法：定義服務作業（WCF Data Services）
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將伺服器上定義的方法公開為服務作業。 服務作業可讓資料服務，以提供存取權，透過伺服器上定義之方法的 URI。 若要定義服務作業，將套用 [`WebGet]`或`[WebInvoke]`屬性加入方法。 若要支援查詢運算子，服務作業必須傳回<xref:System.Linq.IQueryable%601>執行個體。 服務作業可以透過 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 上的 <xref:System.Data.Services.DataService%601> 屬性存取基礎資料資源。 如需詳細資訊，請參閱 <<c0> [ 服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將伺服器上定義的方法公開為服務作業。 服務作業可讓資料服務透過 URI 提供對伺服器上定義之方法的存取權。 若要定義服務作業，請將 [`WebGet]`或`[WebInvoke]`屬性套用至方法。 若要支援查詢運算子，服務作業必須<xref:System.Linq.IQueryable%601>傳回實例。 服務作業可以透過 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 上的 <xref:System.Data.Services.DataService%601> 屬性存取基礎資料資源。 如需詳細資訊，請參閱[服務作業](service-operations-wcf-data-services.md)。
 
-本主題的範例定義名為 `GetOrdersByCity` 的服務作業，此服務作業會針對 <xref:System.Linq.IQueryable%601> 執行個體傳回篩選過的 `Orders`，以及相關的 `Order_Details` 物件。 此範例存取的 <xref:System.Data.Objects.ObjectContext> 執行個體為 Northwind 範例資料服務的資料來源。 當您完成時，此服務會建立[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。
+本主題的範例定義名為 `GetOrdersByCity` 的服務作業，此服務作業會針對 <xref:System.Linq.IQueryable%601> 執行個體傳回篩選過的 `Orders`，以及相關的 `Order_Details` 物件。 此範例存取的 <xref:System.Data.Objects.ObjectContext> 執行個體為 Northwind 範例資料服務的資料來源。 此服務會在您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時建立。
 
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>在 Northwind 資料服務中定義服務作業
 
@@ -57,4 +57,4 @@ ms.locfileid: "61936548"
 
 ## <a name="see-also"></a>另請參閱
 
-- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [定義 WCF Data Services](defining-wcf-data-services.md)

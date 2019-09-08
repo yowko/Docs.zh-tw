@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d09c344e-3548-4944-a3ed-051880e3f5b8
-ms.openlocfilehash: 3458ebf8f5708496eef6246fa55cf528e8a32bc4
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 944d0b2efe1e74f901a493d1c3202d0f180d599d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380063"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792699"
 ---
 # <a name="return-the-set-intersection-of-two-sequences"></a>傳回兩個序列的集合交集
 使用 <xref:System.Linq.Queryable.Intersect%2A> 運算子可傳回兩個序列的集合交集。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用<xref:System.Linq.Queryable.Intersect%2A>兩者都傳回一連串的所有國家/地區`Customers`和`Employees`live。  
+ 這個範例會<xref:System.Linq.Queryable.Intersect%2A>使用傳回所有國家/地區的序列，其中同時`Customers`包含和`Employees` live。  
   
  [!code-csharp[DLinqQueryExamples#42](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#42)]
  [!code-vb[DLinqQueryExamples#42](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#42)]  
@@ -25,5 +25,5 @@ ms.locfileid: "66380063"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [查詢範例](query-examples.md)
+- [標準查詢運算子轉譯](standard-query-operator-translation.md)

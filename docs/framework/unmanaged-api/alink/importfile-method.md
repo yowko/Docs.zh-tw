@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d76e9b4e18b46d0b546d6c66fa572c35cb9fcefe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7fee7a91de99e2db69609cbc7c73e22d85d045f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741777"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777068"
 ---
 # <a name="importfile-method"></a>ImportFile 方法
-匯入組件和未繫結的模組。  
+匯入元件和解除系結模組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,31 +41,31 @@ HRESULT ImportFile(
   
 ## <a name="parameters"></a>參數  
  `pszFilename`  
- 要匯入檔案的完整的名稱。  
+ 要匯入之檔案的完整名稱。  
   
  `pszTargetName`  
- 可用來重新命名檔案，因為它連結至組件的選擇性的輸出檔名稱。  
+ 選擇性的輸出檔案名，可以在檔案連結至元件時用來重新命名檔案。  
   
  `fSmartImport`  
- 如果為 TRUE，會使用 ImportTypes，否則匯入必須手動執行。  
+ 若為 TRUE，則會使用 ImportTypes，否則必須手動執行匯入。  
   
  `pImportToken`  
- K 唯一檔案識別碼的儲存位置的指標。 檔案可以是組件或檔案。  
+ 標記的指標，其中將儲存唯一的檔案識別碼。 檔案可以是元件或檔案。  
   
  `ppAssemblyScope`  
- 接收指標[IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)。 如果檔案不是組件時，就可以是 NULL。  
+ 接收[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)的指標。 如果檔案不是元件，則可以是 Null。  
   
  `pdwCountOfScopes`  
- 檔案和/或已匯入的範圍數目的指標。  
+ 已匯入之檔案和/或範圍計數的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 介面](ialink-interface.md)
+- [IALink2 介面](ialink2-interface.md)
+- [ALink API](index.md)

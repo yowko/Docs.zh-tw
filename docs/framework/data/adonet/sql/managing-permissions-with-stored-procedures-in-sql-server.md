@@ -2,12 +2,12 @@
 title: 使用預存程序管理 SQL Server 中的權限
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 1a057ed88c792dfdeb89227d6cf1957f74b6d7a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623417"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780947"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>使用預存程序管理 SQL Server 中的權限
 為資料庫建立多重防線的方法之一，就是使用預存程序 (Stored Procedure) 或使用者定義的函式來實作所有資料存取。 您可以撤銷或拒絕基礎物件 (例如資料表) 的所有權限，然後在預存程序上授與 EXECUTE 權限。 如此即可有效地在資料和資料庫物件周圍建立安全性防線。  
@@ -52,17 +52,17 @@ ms.locfileid: "64623417"
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
   
-|資源|描述|  
+|Resource|描述|  
 |--------------|-----------------|  
 |《SQL Server 線上叢書》中的[預存程序](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)和 [SQL 插入](https://go.microsoft.com/fwlink/?LinkId=98234)|說明如何建立預存程序以及「SQL 插入」運作方式的主題。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中使用模擬來自訂權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [使用預存程序修改資料](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
+- [SQL Server 安全性概觀](overview-of-sql-server-security.md)
+- [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中撰寫安全的動態 SQL](writing-secure-dynamic-sql-in-sql-server.md)
+- [在 SQL Server 中簽署預存程序](signing-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中使用模擬來自訂權限](customizing-permissions-with-impersonation-in-sql-server.md)
+- [使用預存程序修改資料](../modifying-data-with-stored-procedures.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36f9475a978ddf7253833e6c3372049d24502f95
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
-ms.translationtype: HT
+ms.openlocfilehash: d7f53a2e8684029c0d1329d29a88bd1788e62d43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300577"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789674"
 ---
 # <a name="mitigation-xml-schema-validation"></a>風險降低：XML 結構描述驗證
 在 .NET Framework 4.6 中，如果使用複合索引鍵且其中一個索引鍵是空的，則 XSD 結構描述驗證會偵測出唯一條件約束違規。  
@@ -39,4 +39,4 @@ ms.locfileid: "66300577"
   
 ## <a name="see-also"></a>另請參閱
 
-- [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [重定目標變更](retargeting-changes-in-the-net-framework-4-6.md)

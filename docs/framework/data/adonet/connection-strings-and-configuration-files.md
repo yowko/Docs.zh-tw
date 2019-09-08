@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a98239886d6745bbb6e13e71a12764008460cdd7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949454"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785669"
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串和組態檔
-在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 編譯到應用程式原始程式碼中的未加密連接字串，可使用 [Ildasm.exe (IL 反組譯工具)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 工具進行檢視。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。  
+在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 編譯到應用程式原始程式碼中的未加密連接字串，可使用 [Ildasm.exe (IL 反組譯工具)](../../tools/ildasm-exe-il-disassembler.md) 工具進行檢視。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。  
   
 ## <a name="working-with-application-configuration-files"></a>使用應用程式組態檔  
  應用程式組態檔包含特定應用程式專屬的設定。 例如，ASP.NET 應用程式可能擁有一或多個 **web.config** 檔案，Windows 應用程式則可能具有選擇性的 **app.config** 檔案。 組態檔會共用通用的項目，但組態檔的名稱及位置則會根據應用程式的主機而不同。  
@@ -36,7 +36,7 @@ ms.locfileid: "69949454"
 ```  
   
 > [!NOTE]
-> 您可將部分連接字串儲存在組態檔中，然後在執行階段使用 <xref:System.Data.Common.DbConnectionStringBuilder> 類別 (Class) 加以完成。 在您無法預先知道連接字串的項目，或者不想將機密資訊儲存在組態檔中時，這種方法很有用。 如需詳細資訊，請參閱[連接字串建置器](../../../../docs/framework/data/adonet/connection-string-builders.md)。  
+> 您可將部分連接字串儲存在組態檔中，然後在執行階段使用 <xref:System.Data.Common.DbConnectionStringBuilder> 類別 (Class) 加以完成。 在您無法預先知道連接字串的項目，或者不想將機密資訊儲存在組態檔中時，這種方法很有用。 如需詳細資訊，請參閱[連接字串建置器](connection-string-builders.md)。  
   
 ### <a name="using-external-configuration-files"></a>使用外部組態檔  
  外部組態檔是包含組態檔片段 (由單一區段組成) 的個別檔案。 外部組態檔接著會由主組態檔來參考。 將 **connectionStrings** 區段儲存在實際分開的檔案中，對於在部署應用程式之後可能會編輯連接字串的情況很有用。 例如，標準的 ASP.NET 行為是在組態檔修改時重新啟動應用程式網域，而這可能導致狀態資訊遺失。 然而，修改外部組態檔並不會造成應用程式重新啟動。 外部組態檔並不僅限於 ASP.NET 才有，Windows 應用程式也可加以利用； 此外，也可以透過檔案存取安全性和權限，限制對外部組態檔的存取權。 執行階段的外部組態檔使用是透明的，而且不需要任何特殊的程式碼。  
@@ -81,7 +81,7 @@ ms.locfileid: "69949454"
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|連接字串。 對應至 **connectionString** 屬性。|  
   
 ### <a name="example-listing-all-connection-strings"></a>範例：列出所有連接字串  
- 這個範例會逐一查看<xref:System.Configuration.ConnectionStringSettingsCollection> , 並在<xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>主控台<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>視窗中<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType>顯示、和屬性。  
+ 這個範例會逐一查看<xref:System.Configuration.ConnectionStringSettingsCollection> ，並在<xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>主控台<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>視窗中<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType>顯示、和屬性。  
   
 > [!NOTE]
 > System.Configuration.dll 並未包含在所有專案類型中，您可能需要設定其參考，才能使用該組態類別。 特定應用程式組態檔的名稱和位置會根據應用程式類型及裝載處理序而不同。  
@@ -167,13 +167,13 @@ ms.locfileid: "69949454"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- 如需保護 ASP.NET 應用程式的詳細資訊, 請參閱[保護 ASP.NET 網站](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))。  
+ 如需保護 ASP.NET 應用程式的詳細資訊，請參閱[保護 ASP.NET 網站](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [連接字串產生器](connection-string-builders.md)
+- [保護連線資訊](protecting-connection-information.md)
 - [使用組態類別](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [設定應用程式](../../../../docs/framework/configure-apps/index.md)
+- [設定應用程式](../../configure-apps/index.md)
 - [ASP.NET 網站管理](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概觀](ado-net-overview.md)

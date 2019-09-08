@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: 009da2579a6fe15cea3913ae5844fc886da2586c
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 515a8477b3a9c72934e0ad11d7b1bf599e8b16a2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910735"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793510"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>HOW TO：將資料行表示為類別成員
-使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute>欄位或屬性相關聯的資料庫資料行的屬性。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用屬性，即可將欄位或屬性與資料庫<xref:System.Data.Linq.Mapping.ColumnAttribute>資料行產生關聯。  
   
 ### <a name="to-map-a-field-or-property-to-a-database-column"></a>若要將欄位或屬性 (Property) 對應至資料庫資料行  
   
@@ -29,5 +29,5 @@ ms.locfileid: "64910735"
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [如何：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [LINQ to SQL 物件模型](the-linq-to-sql-object-model.md)
+- [如何：使用程式碼編輯器自訂實體類別](how-to-customize-entity-classes-by-using-the-code-editor.md)

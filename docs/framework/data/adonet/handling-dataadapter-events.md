@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: a63e65289a51a7647270a978cec11ef6bc201e45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962749"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783806"
 ---
 # <a name="handling-dataadapter-events"></a>處理 DataAdapter 的事件
 ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可讓您用來回應資料來源中的資料變更。 下表說明 `DataAdapter` 事件。  
@@ -39,7 +39,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可
   
  您也可以使用 `ContinueUpdateOnError` 屬性來處理更新資料列的錯誤。 如果 `DataAdapter.ContinueUpdateOnError` 為 `true`，則當資料列的更新造成擲回例外狀況時，會將例外狀況的文字放入特定資料列的 `RowError` 資訊中，並繼續作業，而不擲回例外狀況。 這樣一來，您就可以在完成 `Update` 後才回應錯誤，而 `RowUpdated` 事件則是讓您在發生錯誤時立即回應該錯誤。  
   
- 下列程式碼範例顯示如何加入和移除事件處理常式。 `RowUpdating` 事件處理常式將所有的刪除記錄和時間戳記寫入記錄檔。 `ContinueUpdateOnError` `DataSet` `RowError` `true`  = 事件處理常式會將錯誤資訊加入至中資料列的屬性, 並隱藏例外狀況, 並繼續處理 (鏡像的行為)。 `RowUpdated`  
+ 下列程式碼範例顯示如何加入和移除事件處理常式。 `RowUpdating` 事件處理常式將所有的刪除記錄和時間戳記寫入記錄檔。 `ContinueUpdateOnError` `DataSet` `RowError` `true`  = 事件處理常式會將錯誤資訊加入至中資料列的屬性，並隱藏例外狀況，並繼續處理（鏡像的行為）。 `RowUpdated`  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -188,8 +188,8 @@ protected static void FillError(object sender, FillErrorEventArgs args)
   
 ## <a name="see-also"></a>另請參閱
 
-- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [處理 DataSet 的事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [處理 DataTable 事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [DataAdapter 和 DataReader](dataadapters-and-datareaders.md)
+- [處理 DataSet 的事件](./dataset-datatable-dataview/handling-dataset-events.md)
+- [處理 DataTable 事件](./dataset-datatable-dataview/handling-datatable-events.md)
 - [事件](../../../standard/events/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概觀](ado-net-overview.md)

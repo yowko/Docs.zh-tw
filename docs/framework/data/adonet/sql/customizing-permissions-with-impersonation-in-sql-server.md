@@ -2,12 +2,12 @@
 title: 在 SQL Server 中使用模擬來自訂權限
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 52e11bd983a8c9155d90659834df03dea6449a8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961123"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782479"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模擬來自訂權限
 許多應用程式會使用預存程序 (Stored Procedure) 來存取資料，並仰賴擁有權鏈結來限制基底資料表的存取。 您可以授與預存程序的 EXECUTE 權限，並撤銷或拒絕基底資料表的權限。 如果預存程序和資料表具有相同的擁有者，SQL Server 就不會檢查呼叫端的權限。 不過，如果物件具有不同的擁有者或在動態 SQL 的情況中，擁有權鏈結便沒有作用。  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>使用 EXECUTE AS 搭配 REVERT  
  您可以使用 Transact-SQL REVERT 陳述式來還原成原始執行內容。  
   
- 選擇性子句 (不含 REVERT COOKIE = @variableName) 可讓您在@variableName變數包含正確的值時, 將執行內容切換回呼叫端。 這樣可讓您在使用連接共用 (Connection Pooling) 的環境中，將執行內容切換回呼叫端。 因為的值@variableName只有 EXECUTE AS 語句的呼叫者知道, 所以呼叫端可以保證叫用應用程式的使用者無法變更執行內容。 關閉連接時，它就會傳回集區。 如需 ADO.NET 中連接共用的詳細資訊, 請參閱[SQL Server 連接共用 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 選擇性子句（不含 REVERT COOKIE = @variableName）可讓您在@variableName變數包含正確的值時，將執行內容切換回呼叫端。 這樣可讓您在使用連接共用 (Connection Pooling) 的環境中，將執行內容切換回呼叫端。 因為的值@variableName只有 EXECUTE AS 語句的呼叫者知道，所以呼叫端可以保證叫用應用程式的使用者無法變更執行內容。 關閉連接時，它就會傳回集區。 如需 ADO.NET 中連接共用的詳細資訊，請參閱[SQL Server 連接共用（ADO.NET）](../sql-server-connection-pooling.md)。  
   
 ### <a name="specifying-the-execution-context"></a>指定執行內容  
  除了指定使用者以外，您也可以使用 EXECUTE AS 搭配下列任何關鍵字。  
@@ -67,11 +67,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [使用預存程序修改資料](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
+- [SQL Server 安全性概觀](overview-of-sql-server-security.md)
+- [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
+- [在 SQL Server 中使用預存程序來管理權限](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [在 SQL Server 中撰寫安全的動態 SQL](writing-secure-dynamic-sql-in-sql-server.md)
+- [在 SQL Server 中簽署預存程序](signing-stored-procedures-in-sql-server.md)
+- [使用預存程序修改資料](../modifying-data-with-stored-procedures.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

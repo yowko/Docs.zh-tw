@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: 4eb96eaf409fd34e9b10a469ed31fbbe18ebac5e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9250ca09fb5e28655e39f8d91d991fdb3bffcdbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046003"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795742"
 ---
 # <a name="extending-dispatchers"></a>擴充發送器
 發送器負責從基礎通道提取傳入訊息，將訊息轉譯成應用程式程式碼中的方法叫用，然後將結果傳回給呼叫者。 發送器擴充可讓您修改這個處理。  您可以實作可檢查或修改訊息或參數之內容的訊息或參數偵測器。  您可以變更訊息路由傳送到作業的方式，或提供其他特定功能。
 
-本主題描述如何在 Windows Communication Foundation ( <xref:System.ServiceModel.Dispatcher.DispatchRuntime> WCF <xref:System.ServiceModel.Dispatcher.DispatchOperation> ) 服務應用程式中使用和類別, 以修改發送器的預設執行行為, 或攔截或修改訊息、參數或傳回從通道層傳送或抓取之前或之後的值。 如需對等用戶端執行時間訊息處理的詳細資訊, 請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 若要瞭解<xref:System.ServiceModel.IExtensibleObject%601>類型在不同執行時間自訂物件之間存取共用狀態時所扮演的角色, 請參閱可延伸[物件](../../../../docs/framework/wcf/extending/extensible-objects.md)。
+本主題描述如何在 Windows Communication Foundation （ <xref:System.ServiceModel.Dispatcher.DispatchRuntime> WCF <xref:System.ServiceModel.Dispatcher.DispatchOperation> ）服務應用程式中使用和類別，以修改發送器的預設執行行為，或攔截或修改訊息、參數或傳回從通道層傳送或抓取之前或之後的值。 如需對等用戶端執行時間訊息處理的詳細資訊，請參閱[擴充用戶端](extending-clients.md)。 若要瞭解<xref:System.ServiceModel.IExtensibleObject%601>類型在不同執行時間自訂物件之間存取共用狀態時所扮演的角色，請參閱可延伸[物件](extensible-objects.md)。
 
 ## <a name="dispatchers"></a>發送器
 
-服務模型層會在開發人員的程式設計模型與一般稱為通道層的基礎訊息交換之間執行轉換。 在 WCF 中, 通道和端點發送器<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> ( <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>分別為和) 是負責接受新通道、接收訊息、作業分派和調用, 以及回應處理的服務元件。 發送器物件是指接收物件，但是雙工服務中的回呼合約實作也會公開其發送器物件，以進行檢查、修改或擴充。
+服務模型層會在開發人員的程式設計模型與一般稱為通道層的基礎訊息交換之間執行轉換。 在 WCF 中，通道和端點發送器<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> （ <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>分別為和）是負責接受新通道、接收訊息、作業分派和調用，以及回應處理的服務元件。 發送器物件是指接收物件，但是雙工服務中的回呼合約實作也會公開其發送器物件，以進行檢查、修改或擴充。
 
 通道發送器和隨附的 <xref:System.ServiceModel.Channels.IChannelListener> 會從基礎通道中提取訊息，並將訊息傳遞至個別的端點發送器。 每個端點發送器都有一個 <xref:System.ServiceModel.Dispatcher.DispatchRuntime>，可將訊息傳送至適當的 <xref:System.ServiceModel.Dispatcher.DispatchOperation> (負責呼叫可實作作業的方法)。 過程中需要各種選擇性及必要的延伸類別。 本主題說明這些部分如何互相配合，以及如何修改屬性並插入您自己的程式碼以擴充基礎功能。
 
-發送器屬性與修改的自訂物件可透過服務、端點、合約，或作業行為物件來插入。 本主題未說明這些行為的用法。 如需用來插入發送器修改之類型的詳細資訊, 請參閱[使用行為設定和擴充運行](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)時間。
+發送器屬性與修改的自訂物件可透過服務、端點、合約，或作業行為物件來插入。 本主題未說明這些行為的用法。 如需用來插入發送器修改之類型的詳細資訊，請參閱[使用行為設定和擴充運行](configuring-and-extending-the-runtime-with-behaviors.md)時間。
 
 下圖提供服務中架構項目的高階檢視。
 
-![分派執行時間架構](../../../../docs/framework/wcf/extending/media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
+![分派執行時間架構](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
 
 ### <a name="channel-dispatchers"></a>通道發送器
 
@@ -44,30 +44,30 @@ ms.locfileid: "70046003"
 
 發送器會因為下列某些原因而需要擴充：
 
-- 自訂訊息驗證。 使用者可以強制訊息對特定結構描述有效， 實作訊息攔截器介面即可達到這個目的。 如需範例, 請參閱[訊息](../../../../docs/framework/wcf/samples/message-inspectors.md)偵測器。
+- 自訂訊息驗證。 使用者可以強制訊息對特定結構描述有效， 實作訊息攔截器介面即可達到這個目的。 如需範例，請參閱[訊息](../samples/message-inspectors.md)偵測器。
 
 - 自訂訊息記錄。 使用者可以檢查和記錄某個流經端點的應用程式訊息集合， 使用訊息攔截器介面也可以完成這個動作。
 
 - 自訂訊息轉換。 使用者可以將特定轉換套用至執行階段中的訊息 (例如用來進行版本控制)， 使用訊息攔截器介面同樣可以完成這個動作。
 
-- 自訂資料模型。 根據預設, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>使用者可以擁有不受 WCF 支援的資料序列化模型 (也就是、、和原始訊息)。 實作訊息格式器介面即可達到這個目的。 如需範例, 請參閱作業[格式器和作業選取器](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)。
+- 自訂資料模型。 根據預設， <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>使用者可以擁有不受 WCF 支援的資料序列化模型（也就是、、和原始訊息）。 實作訊息格式器介面即可達到這個目的。 如需範例，請參閱作業[格式器和作業選取器](../samples/operation-formatter-and-operation-selector.md)。
 
 - 自訂參數驗證。 使用者可以強制型別參數都是有效的參數 (相對於 XML)， 使用參數偵測器介面即可達到這個目的。
 
-- 自訂作業分派。 使用者可以針對動作以外的項目 (例如主體項目或自訂訊息屬性) 實作分派， 使用 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 介面即可達到這個目的。 如需範例, 請參閱作業[格式器和作業選取器](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)。
+- 自訂作業分派。 使用者可以針對動作以外的項目 (例如主體項目或自訂訊息屬性) 實作分派， 使用 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 介面即可達到這個目的。 如需範例，請參閱作業[格式器和作業選取器](../samples/operation-formatter-and-operation-selector.md)。
 
-- 物件共用。 使用者可以共用執行個體，而不為每個呼叫分配一個新的執行個體， 使用執行個體提供者介面即可實作這個動作。 如需範例, 請參閱[Pooling](../../../../docs/framework/wcf/samples/pooling.md)。
+- 物件共用。 使用者可以共用執行個體，而不為每個呼叫分配一個新的執行個體， 使用執行個體提供者介面即可實作這個動作。 如需範例，請參閱[Pooling](../samples/pooling.md)。
 
 - 執行個體租用。 使用者可以實作執行個體存留期的租用模式，方法與實作 .NET Framework 遠端處理的租用模式類似。 使用執行個體內容存留期介面即可達到這個目的。
 
 - 自訂錯誤處理。 使用者可以控制如何同時處理本機錯誤，以及如何將錯誤傳回用戶端。 使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面即可實作這個動作。
 
-- 自訂授權行為。 使用者可以擴充「合約」或「作業」執行階段片段，並根據訊息中存在的權杖新增安全性檢查，以實作自訂存取控制。 使用訊息攔截器或參數攔截器介面即可達到這個目的。 如需範例, 請參閱[安全性](../../../../docs/framework/wcf/samples/security-extensibility.md)擴充性。
+- 自訂授權行為。 使用者可以擴充「合約」或「作業」執行階段片段，並根據訊息中存在的權杖新增安全性檢查，以實作自訂存取控制。 使用訊息攔截器或參數攔截器介面即可達到這個目的。 如需範例，請參閱[安全性](../samples/security-extensibility.md)擴充性。
 
   > [!CAUTION]
-  > 由於改變安全性屬性可能會危害 WCF 應用程式的安全性, 因此強烈建議您在部署之前, 先仔細進行與安全性相關的修改, 並徹底測試。
+  > 由於改變安全性屬性可能會危害 WCF 應用程式的安全性，因此強烈建議您在部署之前，先仔細進行與安全性相關的修改，並徹底測試。
 
-- 自訂 WCF 執行階段驗證器。 您可以安裝自訂驗證程式, 以檢查服務、合約和系結, 以強制執行與 WCF 應用程式相關的企業層級原則。 (例如, 請參閱[如何:鎖定企業](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)中的端點。)
+- 自訂 WCF 執行階段驗證器。 您可以安裝自訂驗證程式，以檢查服務、合約和系結，以強制執行與 WCF 應用程式相關的企業層級原則。 （例如，請參閱[如何：鎖定企業](how-to-lock-down-endpoints-in-the-enterprise.md)中的端點。）
 
 ### <a name="using-the-dispatchruntime-class"></a>使用 DispatchRuntime 類別
 
@@ -137,6 +137,6 @@ ms.locfileid: "70046003"
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [如何：檢查及修改服務上的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [如何：檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [如何：鎖定企業中的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [如何：檢查及修改服務上的訊息](how-to-inspect-and-modify-messages-on-the-service.md)
+- [如何：檢查或修改參數](how-to-inspect-or-modify-parameters.md)
+- [如何：鎖定企業中的端點](how-to-lock-down-endpoints-in-the-enterprise.md)

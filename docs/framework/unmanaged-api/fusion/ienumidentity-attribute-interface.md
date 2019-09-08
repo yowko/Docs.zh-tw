@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d725228f2a7359d415673fdcb90d0cabae1a40be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbb3ac150ebfe9fe3698427d8bb2bfb3e3347c07
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697338"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796461"
 ---
-# <a name="ienumidentityattribute-interface"></a>IEnumIDENTITY_ATTRIBUTE 介面
-可做為目前範圍中的程式碼物件的屬性的列舉值。  
+# <a name="ienumidentity_attribute-interface"></a>IEnumIDENTITY_ATTRIBUTE 介面
+作為目前範圍中程式碼物件屬性的列舉值。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|取得新的介面指標`IEnumIDENTITY_ATTRIBUTE`，其中包含與這個相同的成員`IEnumIDENTITY_ATTRIBUTE`。|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|這個項目中所包含的資料寫入`IEnumIDENTITY_ATTRIBUTE`指定的資料緩衝區。|  
-|`IEnumIDENTITY_ATTRIBUTE::Next`|取得指定的屬性數目，從目前位置開始。|  
-|`IEnumIDENTITY_ATTRIBUTE::Reset`|將指令指標移至這個開頭`IEnumIDENTITY_ATTRIBUTE`。|  
-|`IEnumIDENTITY_ATTRIBUTE::Skip`|將指令指標向前移的指定項目數，從目前位置開始。|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|取得新`IEnumIDENTITY_ATTRIBUTE`的介面指標，其中包含與這個`IEnumIDENTITY_ATTRIBUTE`相同的成員。|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|將此`IEnumIDENTITY_ATTRIBUTE`專案中包含的資料寫入指定的資料緩衝區。|  
+|`IEnumIDENTITY_ATTRIBUTE::Next`|取得指定數目的屬性，從目前位置開始。|  
+|`IEnumIDENTITY_ATTRIBUTE::Reset`|將指令指標移至這個`IEnumIDENTITY_ATTRIBUTE`的開頭。|  
+|`IEnumIDENTITY_ATTRIBUTE::Skip`|從目前位置開始，將指令指標向下移動指定的專案數。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Isolation.h  
+ **標頭：** 隔離。h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [融合介面](fusion-interfaces.md)

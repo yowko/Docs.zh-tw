@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49ea7fbe9f491028a85fae543d126fd9d4f2d940
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741902"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777202"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 方法
-擷取指定的組件的雜湊 blob。  
+抓取指定元件的雜湊 blob。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,22 +38,22 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>參數  
  `FileToken`  
- 要雜湊會參考的組件識別碼。  
+ 雜湊將參考的元件識別碼。  
   
  `ppvHash`  
- 接收所產生的雜湊 blob。  
+ 接收產生的雜湊 blob。  
   
  `pcbHash`  
- 接收大小，以位元組為單位的雜湊 blob。  
+ 接收雜湊 blob 的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 介面](ialink-interface.md)
+- [IALink2 介面](ialink2-interface.md)
+- [ALink API](index.md)

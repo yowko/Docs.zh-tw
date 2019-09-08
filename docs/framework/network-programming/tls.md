@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: HT
+ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038466"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777505"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -66,7 +66,9 @@ ms.locfileid: "69038466"
 
 ### <a name="for-http-networking"></a>針對 HTTP 網路功能
 
-<xref:System.Net.ServicePointManager>，在使用 .NET Framework 4.7 及更新版本的情況下，預設會讓 OS 選擇最佳的安全性通訊協定和版本。 若要在可能的情況下取得最佳的預設 OS 選擇，請不要為 <xref:System.Net.ServicePointManager.SecurityProtocol> 屬性設定值。 否則請將其設定為 <xref:System.Net.SecurityProtocolType.SystemDefault>。
+<xref:System.Net.ServicePointManager>使用 .NET Framework 4.7 和更新版本時，將會使用 OS 中設定的預設安全性通訊協定。 若要取得預設的 OS 選擇，可能的話，請不要設定<xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType>屬性的值，這會預設為。 <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>
+
+因為此<xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>設定<xref:System.Net.ServicePointManager>會導致使用作業系統所設定的預設安全性通訊協定，所以您的應用程式可能會根據其執行所在的 OS 以不同的方式執行。 例如，Windows 7 SP1 使用 TLS 1.0，而 Windows 8 和 Windows 10 使用 TLS 1.2。
 
 本文剩下的內容，與針對 HTTP 網路功能將 .NET Framework 4.7 或更新版本設為目標無關。
 
@@ -239,7 +241,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="the-sch_use_strong_crypto-flag"></a>The SCH_USE_STRONG_CRYPTO 旗標
 
-啟用 `SCH_USE_STRONG_CRYPTO` 旗標時 (預設會由 `AppContext` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱:
+啟用 `SCH_USE_STRONG_CRYPTO` 旗標時 (預設會由 `AppContext` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱：
 
 - [安全通道](/windows/desktop/SecAuthN/secure-channel) \(英文\)
 - [SCHANNEL_CRED 結構](/windows/win32/api/schannel/ns-schannel-schannel_cred) \(英文\)

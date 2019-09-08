@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 59c6732dacf225097e22957ebe6536308a2798d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 316ccb19ca9e384be97a83e992af46934702aa0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938440"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780684"
 ---
 # <a name="table-valued-parameters"></a>資料表值參數
 資料表值參數提供封送處理的簡易方式，可將用戶端應用程式的多個資料列封送處理到 SQL Server，而不需多次來回存取或使用特殊的伺服器端邏輯來處理資料。 您可以使用資料表值參數，在用戶端應用程式中封裝資料列，以及在單一參數型命令 (Parameterized Command) 中，將資料傳送至伺服器。 內送資料列會儲存在資料表變數中，然後您可以使用 Transact-SQL 來操作此變數。  
@@ -24,11 +24,11 @@ ms.locfileid: "69938440"
   
 |Resource|說明|  
 |--------------|-----------------|  
-|SQL Server 線上叢書中的[資料表值參數 (資料庫引擎)](https://go.microsoft.com/fwlink/?LinkId=98363)|說明如何建立及使用資料表值參數。|  
+|SQL Server 線上叢書中的[資料表值參數（資料庫引擎）](https://go.microsoft.com/fwlink/?LinkId=98363)|說明如何建立及使用資料表值參數。|  
 |SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkId=98364)|說明用於宣告資料表值參數的使用者定義資料表型別。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在舊版 SQL Server 中傳遞多個資料列  
- 在將資料表值參數引進 SQL Server 2008 之前, 將多個資料列傳遞至預存程式或參數化 SQL 命令的選項受到限制。 若要將多個資料列傳遞至伺服器，開發人員可能會從下列選項中選擇：  
+ 在將資料表值參數引進 SQL Server 2008 之前，將多個資料列傳遞至預存程式或參數化 SQL 命令的選項受到限制。 若要將多個資料列傳遞至伺服器，開發人員可能會從下列選項中選擇：  
   
 - 使用一連串個別的參數來代表多個資料行和資料列中的值。 使用這個方法可傳遞的資料量會受到允許的參數數目所限制。 SQL Server 程序最多可以有 2100 個參數。 伺服器端邏輯必須將這些個別的值組合成資料表變數或暫存資料表，以便進行處理。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "69938440"
 - 使用 `bcp` 公用程式或 <xref:System.Data.SqlClient.SqlBulkCopy> 物件，將許多資料列載入資料表中。 雖然這項技術非常有效率，不過除非資料會載入暫存資料表或資料表變數中，否則它不支援伺服器端處理。  
   
 ## <a name="creating-table-valued-parameter-types"></a>建立資料表值參數型別  
- 資料表值參數是以使用 Transact-SQL CREATE TYPE 陳述式所定義的強型別 (Strongly Typed) 資料表結構為基礎。 您必須先在 SQL Server 中建立資料表型別並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊, 請參閱 SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
+ 資料表值參數是以使用 Transact-SQL CREATE TYPE 陳述式所定義的強型別 (Strongly Typed) 資料表結構為基礎。 您必須先在 SQL Server 中建立資料表型別並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱 SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
   
  下列陳述式會建立名為 CategoryTableType 的資料表型別，其中包含 CategoryID 和 CategoryName 資料行：  
   
@@ -88,7 +88,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="configuring-a-sqlparameter-example"></a>設定 SqlParameter 範例  
  <xref:System.Data.SqlClient>支援從<xref:System.Data.DataTable>、 <xref:System.Data.Common.DbDataReader>或<xref:System.Collections.Generic.IEnumerable%601>物件填入資料表值參數。 \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> 您必須使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 屬性來指定資料表值參數的型別名稱。 `TypeName` 必須與之前在伺服器上所建立之相容型別的名稱相符。 下列程式碼片段示範如何設定 <xref:System.Data.SqlClient.SqlParameter> 以插入資料。  
  
-在下列範例中, `addedCategories`變數<xref:System.Data.DataTable>包含。 若要查看變數的填入方式, 請參閱下一節將[資料表值參數傳遞至預存程式](#passing)中的範例。
+在下列範例中， `addedCategories`變數<xref:System.Data.DataTable>包含。 若要查看變數的填入方式，請參閱下一節將[資料表值參數傳遞至預存程式](#passing)中的範例。
 
 ```csharp  
 // Configure the command and parameter.  
@@ -274,8 +274,8 @@ insertCommand.ExecuteNonQuery()
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [命令和參數](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapter 參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定參數和參數資料類型](../configuring-parameters-and-parameter-data-types.md)
+- [命令和參數](../commands-and-parameters.md)
+- [DataAdapter 參數](../dataadapter-parameters.md)
+- [ADO.NET 中的 SQL Server 資料作業](sql-server-data-operations.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

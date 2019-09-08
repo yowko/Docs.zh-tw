@@ -8,40 +8,40 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 21501ec9d0af4c785dd86946fa34c1041bb34b9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 35e7cc666307d589f21c128734df10430a1a8588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043891"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779629"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>使用二進位資料 (WCF 資料服務)
 
-用戶端程式庫可讓您使用下列其中一種方式[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , 從摘要中取出和更新二進位資料: [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]
+用戶端程式庫可讓您使用下列其中一種方式[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ，從摘要中取出和更新二進位資料： [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]
 
 - 當做實體的基本型別屬性。 如果要處理可以輕鬆載入記憶體的小型二進位資料物件，建議使用這個方法。 在此情況下，二進位屬性是資料模型所公開的實體屬性，而資料服務會將二進位資料序列化成為回應訊息中的 base-64 二進位編碼 XML。
 
 - 當做個別的二進位資源資料流。 如果要存取及變更可能代表相片、影片或是其他任何類型之二進位編碼資料的二進位大型物件 (BLOB) 資料，建議使用這個方法。
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用中[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]定義的 HTTP 來執行二進位資料的資料流程處理。 在此機制中, 二進位資料會被視為與實體 (稱為媒體連結專案) 不同的媒體資源。 如需詳細資訊, 請參閱[串流處理提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用中[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]定義的 HTTP 來執行二進位資料的資料流程處理。 在此機制中，二進位資料會被視為與實體（稱為媒體連結專案）不同的媒體資源。 如需詳細資訊，請參閱[串流處理提供者](streaming-provider-wcf-data-services.md)。
 
 > [!TIP]
-> 如需如何建立可從[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]儲存相片之服務下載二進位影像檔的 Windows Presentation Foundation (WPF) 用戶端應用程式的逐步範例, 請參閱文章[資料服務串流提供者系列-部分2:從用戶端](https://go.microsoft.com/fwlink/?LinkId=201637)存取媒體資源串流。 若要下載 blog 文章中精選的串流相片資料服務範例程式碼, 請參閱 MSDN 程式碼庫中的[串流處理相片資料服務範例](https://go.microsoft.com/fwlink/?LinkId=198988)。
+> 如需如何建立可從[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]儲存相片之服務下載二進位影像檔的 Windows Presentation Foundation （WPF）用戶端應用程式的逐步範例，請參閱文章[資料服務串流提供者系列-部分2：從用戶端](https://go.microsoft.com/fwlink/?LinkId=201637)存取媒體資源串流。 若要下載 blog 文章中精選的串流相片資料服務範例程式碼，請參閱 MSDN 程式碼庫中的[串流處理相片資料服務範例](https://go.microsoft.com/fwlink/?LinkId=198988)。
 
 ## <a name="entity-metadata"></a>實體中繼資料
 
-在資料服務中繼資料中，套用到屬於媒體連結項目之實體類型的 `HasStream` 屬性會指出擁有相關媒體資源資料流的實體。 在下列範例中, `PhotoInfo`實體是具有相關媒體資源的媒體連結專案, 以`HasStream`屬性工作表示。
+在資料服務中繼資料中，套用到屬於媒體連結項目之實體類型的 `HasStream` 屬性會指出擁有相關媒體資源資料流的實體。 在下列範例中， `PhotoInfo`實體是具有相關媒體資源的媒體連結專案，以`HasStream`屬性工作表示。
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-本主題的其餘範例會示範如何存取及變更媒體資源資料流。 如需如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫在 .NET Framework 用戶端應用程式中取用媒體資源串流的完整範例, 請參閱[從用戶端存取媒體資源串流](https://go.microsoft.com/fwlink/?LinkID=201637)文章。
+本主題的其餘範例會示範如何存取及變更媒體資源資料流。 如需如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫在 .NET Framework 用戶端應用程式中取用媒體資源串流的完整範例，請參閱[從用戶端存取媒體資源串流](https://go.microsoft.com/fwlink/?LinkID=201637)文章。
 
 ## <a name="accessing-the-binary-resource-stream"></a>存取二進位資源資料流
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫提供從 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 架構資料服務存取二進位資源資料流的方法。 下載媒體資源時，您可以使用媒體資源的 URI，或者您可以取得包含媒體資源資料本身的二進位資料流。 您也可以上載媒體資源資料做為二進位資料流。
 
 > [!TIP]
-> 如需如何建立可從[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]儲存相片之服務下載二進位影像檔的 Windows Presentation Foundation (WPF) 用戶端應用程式的逐步範例, 請參閱文章[資料服務串流提供者系列-部分2:從用戶端](https://go.microsoft.com/fwlink/?LinkId=201637)存取媒體資源串流。 若要下載 blog 文章中精選的串流相片資料服務範例程式碼, 請參閱 MSDN 程式碼庫中的[串流處理相片資料服務範例](https://go.microsoft.com/fwlink/?LinkId=198988)。
+> 如需如何建立可從[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]儲存相片之服務下載二進位影像檔的 Windows Presentation Foundation （WPF）用戶端應用程式的逐步範例，請參閱文章[資料服務串流提供者系列-部分2：從用戶端](https://go.microsoft.com/fwlink/?LinkId=201637)存取媒體資源串流。 若要下載 blog 文章中精選的串流相片資料服務範例程式碼，請參閱 MSDN 程式碼庫中的[串流處理相片資料服務範例](https://go.microsoft.com/fwlink/?LinkId=198988)。
 
 ### <a name="getting-the-uri-of-the-binary-stream"></a>取得二進位資料流的 URI
 
@@ -74,5 +74,5 @@ ms.locfileid: "70043891"
 
 ## <a name="see-also"></a>另請參閱
 
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
+- [將資料繫結至控制項](binding-data-to-controls-wcf-data-services.md)

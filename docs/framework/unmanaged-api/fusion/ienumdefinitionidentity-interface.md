@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bbd8476b7778de6d0023f3a8522a44be6626884
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751523"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796481"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity 介面
-做為集合的列舉值`IDefinitionIdentity`物件。  
+作為`IDefinitionIdentity`物件集合的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,19 +55,19 @@ IEnumDefinitionIdentity : IUnknown {
   
 |方法|描述|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|取得新的介面指標`IEnumDefinitionIdentity`物件，其中包含與這個相同的成員`IEnumDefinitionIdentity`。|  
-|`IEnumDefinitionIdentity::Next`|取得指定的數目`IDefinitionIdentity`物件，從目前位置開始。|  
-|`IEnumDefinitionIdentity::Reset`|將指令指標移至這個開頭`IEnumDefinitionIdentity`。|  
-|`IEnumDefinitionIdentity::Skip`|將指令指標向前移的指定項目數，從目前位置開始。|  
+|`IEnumDefinitionIdentity::Clone`|取得新`IEnumDefinitionIdentity`物件的介面指標，其中包含與這個`IEnumDefinitionIdentity`相同的成員。|  
+|`IEnumDefinitionIdentity::Next`|取得指定數目的`IDefinitionIdentity`物件，從目前位置開始。|  
+|`IEnumDefinitionIdentity::Reset`|將指令指標移至這個`IEnumDefinitionIdentity`的開頭。|  
+|`IEnumDefinitionIdentity::Skip`|從目前位置開始，將指令指標向下移動指定的專案數。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Isolation.h  
+ **標頭：** 隔離。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IDefinitionIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [融合介面](fusion-interfaces.md)
+- [IDefinitionIdentity 介面](idefinitionidentity-interface.md)

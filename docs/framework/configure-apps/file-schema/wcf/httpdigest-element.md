@@ -2,12 +2,12 @@
 title: <httpDigest> 項目
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: f392ebf4eeb6a008952fd4d5ef4e301e57f6eb31
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
-ms.translationtype: HT
+ms.openlocfilehash: 121df39c7e4ce4de5c1f0ef87921f6269d7cc1c0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397997"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785822"
 ---
 # <a name="httpdigest-element"></a>\<HTTPDigest > 元素
 指定對服務驗證用戶端時，所使用的摘要式類型認證。  
@@ -23,7 +23,7 @@ ms.locfileid: "70397997"
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<digest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />
+<httpDigest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -40,7 +40,7 @@ ms.locfileid: "70397997"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
   

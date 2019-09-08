@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa5d5ee469d41cca46ea05fa4111ce3abff808d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3eac353252f5a97402cbd883895b3e397c39edd6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771912"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799176"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle 函式
 使用指定的雜湊演算法產生以指定檔案控制代碼指定之檔案的雜湊。  
   
- 此函式已被取代。 使用[iclrstrongname:: Gethashfromhandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)方法改為。  
+ 這個函數已被取代。 請改用[ICLRStrongName：： GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,30 +42,30 @@ HRESULT GetHashFromHandle (
   
 ## <a name="parameters"></a>參數  
  `hFile`  
- [in]要雜湊的檔案控制代碼。  
+ 在要雜湊之檔案的控制碼。  
   
  `piHashAlg`  
- [in、 out]常數，指定的雜湊演算法。 使用零的預設演算法。  
+ [in、out]指定雜湊演算法的常數。 預設演算法使用零。  
   
  `pbHash`  
- [out]傳回的雜湊緩衝區。  
+ 脫銷傳回的雜湊緩衝區。  
   
  `cchHash`  
- [in]要求的最大大小的`pbHash`。  
+ 在要求的大小`pbHash`上限。  
   
  `pchHash`  
- [out]大小，以位元組為單位傳回`pbHash`。  
+ 脫銷傳回`pbHash`之的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** StrongName.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromHandle 方法](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)

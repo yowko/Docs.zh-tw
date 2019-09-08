@@ -4,12 +4,12 @@ description: 本指南說明您在 .NET 中建置伺服器應用程式時應考�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 37f7a4e3d543711af9ef40e458edfa1cac076db2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254208"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799261"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -108,6 +108,6 @@ ms.locfileid: "70254208"
 - [目標架構](frameworks.md)
 - [.NET Core 指南](../core/index.md)
 - [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)
-- [.NET 和 Docker 簡介](../core/docker/intro-net-docker.md)
+- [.NET 和 Docker 簡介](../core/docker/introduction.md)
 - [.NET 偵錯概觀](components.md)
 - [.NET 微服務：容器化 .NET 應用程式的架構](../architecture/microservices/index.md)

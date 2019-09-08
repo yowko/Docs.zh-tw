@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b01c7cea477182c7590664ae9e850e99a89c4bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9395fcc6d896114c25770edbc17761323285099f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773954"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796402"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference 方法
-取得指標[FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)所表示的結構[IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)物件。  
+取得這個[IInstallReferenceItem](iinstallreferenceitem-interface.md)物件所表示之[FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)結構的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,22 +39,22 @@ HRESULT GetReference (
   
 ## <a name="parameters"></a>參數  
  `ppRefData`  
- [out]傳回`FUSION_INSTALL_REFERENCE`指標。  
+ 脫銷傳回`FUSION_INSTALL_REFERENCE`的指標。  
   
  `dwFlags`  
- [in]保留供未來擴充。 `dwFlags` 必須是 0 （零）。  
+ 在保留以供未來擴充性之用。 `dwFlags`必須是0（零）。  
   
  `pvReserved`  
- [in]保留供未來擴充。 `pvReserved` 必須是 null 參考。  
+ 在保留以供未來擴充性之用。 `pvReserved`必須是 null 參考。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IInstallReferenceItem 介面](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [FUSION_INSTALL_REFERENCE 結構](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [IInstallReferenceItem 介面](iinstallreferenceitem-interface.md)
+- [FUSION_INSTALL_REFERENCE 結構](fusion-install-reference-structure.md)

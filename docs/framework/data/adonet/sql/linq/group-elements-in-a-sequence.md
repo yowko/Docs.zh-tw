@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 50887acefdd5d0feaf9d0885e9ee842f44f0ef65
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc490b579e841a0e9b3724fe0e8789cc9411683d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915057"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782187"
 ---
 # <a name="group-elements-in-a-sequence"></a>在序列中群組項目
 <xref:System.Linq.Enumerable.GroupBy%2A> 運算子會分組序列中的項目。 下列範例使用 Northwind 資料庫。  
   
 > [!NOTE]
-> <xref:System.Linq.Enumerable.GroupBy%2A> 查詢中的 Null 資料行值有時會擲回 <xref:System.InvalidOperationException>。 如需詳細資訊, 請參閱[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)的「GroupBy InvalidOperationException」一節。  
+> <xref:System.Linq.Enumerable.GroupBy%2A> 查詢中的 Null 資料行值有時會擲回 <xref:System.InvalidOperationException>。 如需詳細資訊，請參閱[疑難排解](troubleshooting.md)的「GroupBy InvalidOperationException」一節。  
   
 ## <a name="example"></a>範例  
  下列範例會根據 `Products` 來分割 `CategoryID`。  
@@ -74,5 +74,5 @@ ms.locfileid: "69915057"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [查詢範例](query-examples.md)
+- [下載範例資料庫](downloading-sample-databases.md)

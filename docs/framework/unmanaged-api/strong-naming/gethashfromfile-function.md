@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c663bc2db780c89ca666702534a75525ae189b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e79c1d89d767832022d487681e0515e5e92a7f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771965"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799224"
 ---
 # <a name="gethashfromfile-function"></a>GetHashFromFile 函式
 產生指定檔案內容的雜湊。  
   
- 此函式已被取代。 使用[iclrstrongname:: Gethashfromfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)方法改為。  
+ 這個函數已被取代。 請改用[ICLRStrongName：： GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,34 +42,34 @@ HRESULT GetHashFromFile (
   
 ## <a name="parameters"></a>參數  
  `szFilePath`  
- [in]要雜湊之檔案的名稱。  
+ 在要雜湊的檔案名。  
   
  `piHashAlg`  
- [in、 out]要產生的雜湊時所使用的演算法。 有效的演算法為 Win32 CryptoAPI 所定義。 如果`piHashAlg`設為 0，CALG_SHA-1 會使用預設演算法。  
+ [in、out]產生雜湊時要使用的演算法。 有效的演算法是由 Win32 CryptoAPI 所定義。 如果`piHashAlg`設定為0，則會使用預設演算法 CALG_SHA-1。  
   
  `pbHash`  
- [out]位元組陣列，包含產生的雜湊。  
+ 脫銷包含所產生之雜湊的位元組陣列。  
   
  `cchHash`  
- [in]緩衝區的大小上限，`pbHash`指向。  
+ 在`pbHash`指向的緩衝區大小上限。  
   
  `pchHash`  
- [out]大小，以位元組為單位傳回`pbHash`。  
+ 脫銷傳回`pbHash`之的大小（以位元組為單位）。  
   
 ## <a name="remarks"></a>備註  
- 此函式是相同[GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)，不同之處在於其檔案名稱規格的 ANSI，而非 Unicode。  
+ 此函式與[GetHashFromFileW](gethashfromfilew-function.md)相同，不同之處在于檔案名規格是 ANSI，而不是 Unicode。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** StrongName.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [GetHashFromFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
-- [GetHashFromFileW 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromFile 方法](../hosting/iclrstrongname-gethashfromfile-method.md)
+- [GetHashFromFileW 方法](../hosting/iclrstrongname-gethashfromfilew-method.md)
+- [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)

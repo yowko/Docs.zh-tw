@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d288f4ccf91567224546df1a3309a411590a5a12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 141e6e303933c46a85adf08339856f8964b21f4e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779036"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796690"
 ---
 # <a name="iassemblyenumclone-method"></a>IAssemblyEnum::Clone 方法
-建立這個的淺層複製[IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)物件。  
+建立這個[IAssemblyEnum](iassemblyenum-interface.md)物件的淺層複本。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,15 +37,15 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>參數  
  `ppEnum`  
- [out]複製指標。  
+ 脫銷複製的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyEnum 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [IAssemblyEnum 介面](iassemblyenum-interface.md)

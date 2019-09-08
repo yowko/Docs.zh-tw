@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: 839642c4fea45f4f37c5dc351d71417d46d07093
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3719188064388b00c756dd037d4a475ca6debd13
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877665"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782416"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 偵測變更
 
@@ -18,7 +18,7 @@ ms.locfileid: "61877665"
 
 ## <a name="security-considerations"></a>安全性考量
 
-相依性基礎結構會仰賴呼叫 <xref:System.Data.SqlClient.SqlConnection> 時所開啟的 <xref:System.Data.SqlClient.SqlDependency.Start%2A>，以便接收指定命令之基礎資料已經變更的通知。 讓用戶端啟始呼叫 `SqlDependency.Start` 的功能是透過使用 <xref:System.Data.SqlClient.SqlClientPermission> 和程式碼存取安全性屬性來控制的。 如需詳細資訊，請參閱 <<c0> [ 啟用查詢通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)並[程式碼存取安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。
+相依性基礎結構會仰賴呼叫 <xref:System.Data.SqlClient.SqlConnection> 時所開啟的 <xref:System.Data.SqlClient.SqlDependency.Start%2A>，以便接收指定命令之基礎資料已經變更的通知。 讓用戶端啟始呼叫 `SqlDependency.Start` 的功能是透過使用 <xref:System.Data.SqlClient.SqlClientPermission> 和程式碼存取安全性屬性來控制的。 如需詳細資訊，請參閱[啟用查詢通知](enabling-query-notifications.md)和[代碼啟用安全性和 ADO.NET](../code-access-security.md)。
 
 ### <a name="example"></a>範例
 
@@ -127,5 +127,5 @@ void Termination()
 
 ## <a name="see-also"></a>另請參閱
 
-- [SQL Server 中的查詢通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 中的查詢通知](query-notifications-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

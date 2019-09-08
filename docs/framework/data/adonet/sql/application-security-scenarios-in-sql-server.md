@@ -2,12 +2,12 @@
 title: SQL Server 中的應用程式安全性案例
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf844f35a3504af52cdb6bf745862ad5098dfc5f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877886"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782700"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的應用程式安全性案例
 並不只有一種正確方式可以建立安全的 SQL Server 用戶端應用程式。 每個應用程式的需求、部署環境及使用者對象都有其獨特性。 初次部署時還相當安全的應用程式，隨著時間流逝，也可能變得不再那麼安全。 要精確預測未來可能發生什麼威脅是不可能的事。  
@@ -20,7 +20,7 @@ ms.locfileid: "61877886"
 ### <a name="sql-injection"></a>SQL 插入  
  「SQL 插入」(SQL Injection) 是指惡意的使用者用來輸入 Transact-SQL 陳述式 (而非有效輸入) 的流程。 如果該輸入未經驗證而直接傳遞至伺服器，而且應用程式不慎而執行了插入的程式碼，則攻擊就可能會危及或損毀資料。 您可以藉由使用預存程序 (Stored Procedure) 和參數化命令、避免動態 SQL 以及限制所有使用者的權限，來防堵 SQL Server 插入式攻擊。  
   
-### <a name="elevation-of-privilege"></a>權限提高  
+### <a name="elevation-of-privilege"></a>提高權限  
  權限提高攻擊會發生在使用者能夠取得受信任帳戶 (例如擁有者或系統管理員) 的權限時。 請務必在最小權限的帳戶下執行，並只指派必要的權限。 請避免使用系統管理員或擁有者帳戶執行程式碼。 如此就算攻擊成功，也可限制造成的傷害。 在執行需要其他權限的工作時，請只在工作期間才使用程序簽章或模擬。 您可以使用憑證來簽署預存程序，或使用模擬來暫時指派權限。  
   
 ### <a name="probing-and-intelligent-observation"></a>探查和智慧型觀測  
@@ -35,30 +35,30 @@ ms.locfileid: "61877886"
  即使在使用「Windows 驗證」時，也請務必為 `sa` 帳戶指派強式密碼。  
   
 ## <a name="in-this-section"></a>本節內容  
- [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中使用預存程序來管理權限](managing-permissions-with-stored-procedures-in-sql-server.md)  
  說明如何使用預存程序 (Stored Procedure) 管理權限並控制資料存取。 使用預存程序是許多安全性威脅的有效回應方式。  
   
- [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [在 SQL Server 中撰寫安全的動態 SQL](writing-secure-dynamic-sql-in-sql-server.md)  
  說明使用預存程序撰寫安全動態 SQL 的技巧。  
   
- [在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中簽署預存程序](signing-stored-procedures-in-sql-server.md)  
  說明如何使用憑證簽署預存程序，讓使用者可以使用不能直接存取的資料。 如此預存程序就可以執行呼叫端並無直接執行權限的作業。  
   
- [在 SQL Server 中使用模擬來自訂權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [在 SQL Server 中使用模擬來自訂權限](customizing-permissions-with-impersonation-in-sql-server.md)  
  說明如何使用 EXECUTE AS 子句模擬其他使用者。 模擬會將執行內容從呼叫端切換到指定的使用者。  
   
- [在 SQL Server 中授與資料列層級權限](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
+ [在 SQL Server 中授與資料列層級權限](granting-row-level-permissions-in-sql-server.md)  
  說明如何實作資料列層級權限以限制資料存取。  
   
- [在 SQL Server 中建立應用程式角色](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
+ [在 SQL Server 中建立應用程式角色](creating-application-roles-in-sql-server.md)  
  說明應用程式角色的功能。  
   
- [在 SQL Server 中啟用跨資料庫存取](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [在 SQL Server 中啟用跨資料庫存取](enabling-cross-database-access-in-sql-server.md)  
  說明如何在不危及安全性的前提下啟用跨資料庫存取。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 安全性](sql-server-security.md)
+- [SQL Server 安全性概觀](overview-of-sql-server-security.md)
+- [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

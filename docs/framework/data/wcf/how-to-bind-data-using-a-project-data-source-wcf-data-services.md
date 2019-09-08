@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用專案資料來源 (WCF Data Services) 的資料繫結
+title: 作法：使用專案資料來源系結資料（WCF Data Services）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 69a0ec657f0a8cec34048776a4767cec23d091d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85d5974f43349d91d56a1ab41b314521a6ee7348
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645642"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780173"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>HOW TO：使用專案資料來源 (WCF Data Services) 的資料繫結
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>作法：使用專案資料來源系結資料（WCF Data Services）
 
-您可以建立 WCF Data Services 用戶端應用程式中產生的資料物件為基礎的資料來源。 當您使用，會在將資料服務的參考時**加入服務參考** 對話方塊中，以及產生的用戶端資料類別，會建立一個專案資料來源。 每一個實體集都會建立一個資料來源，並由資料服務公開。 您可以建立這些資料來源項目，從顯示的服務資料的表單**Zdroje dat**拖曳至設計工具 視窗。 這些項目會成為繫結至資料來源的控制項。 在執行期間，此資料來源繫結至的執行個體<xref:System.Data.Services.Client.DataServiceCollection%601>類別，其中會填入資料服務查詢所傳回的物件。 如需詳細資訊，請參閱 <<c0> [ 將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。
+您可以根據 WCF Data Services 用戶端應用程式中產生的資料物件來建立資料來源。 當您使用 [**加入服務參考**] 對話方塊來加入資料服務的參考時，會建立專案資料來源以及產生的用戶端資料類別。 每一個實體集都會建立一個資料來源，並由資料服務公開。 您可以從 [**資料來源**] 視窗將這些資料來源專案拖曳至設計工具，以建立顯示服務資料的表單。 這些項目會成為繫結至資料來源的控制項。 在執行期間，這個資料來源會系結至<xref:System.Data.Services.Client.DataServiceCollection%601>類別的實例，其中填入了查詢傳回給資料服務的物件。 如需詳細資訊，請參閱[將資料系結至控制項](binding-data-to-controls-wcf-data-services.md)。
 
- 本主題的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成建立這項服務和用戶端資料類別[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。
+ 本主題的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時，會建立此服務和用戶端資料類別。
 
-## <a name="use-a-project-data-source-in-a-wpf-window"></a>使用 WPF 視窗中的專案資料來源
+## <a name="use-a-project-data-source-in-a-wpf-window"></a>在 WPF 視窗中使用專案資料來源
 
-1. 在 Visual Studio 中，在 WPF 專案中，加入 Northwind 資料服務的參考。 如需詳細資訊，請參閱[如何：加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。
+1. 在 Visual Studio 的 WPF 專案中，加入 Northwind 資料服務的參考。 如需詳細資訊，請參閱[如何：加入資料服務參考](how-to-add-a-data-service-reference-wcf-data-services.md)。
 
-2. 在 [**資料來源**] 視窗中，展開`Customers`中的節點**NorthwindEntities**專案資料來源。
+2. 在 **資料來源** 視窗中， `Customers`展開  **northwindentities**  專案資料來源中的節點。
 
-3. 按一下  **CustomerID**項目中，選取**ComboBox**從清單中，並將拖曳**CustomerID**項目從**客戶**節點設計工具。
+3. 按一下 [ **customerid** ] 專案，從清單中選取 [ **ComboBox** ]，然後將 [ **CustomerID** ] 專案從 [ **Customers** ] 節點拖曳至設計工具。
 
      這會在視窗的 XAML 檔案中，建立下列物件項目：
 
@@ -37,7 +37,7 @@ ms.locfileid: "64645642"
 
     - <xref:System.Windows.Controls.Label>。
 
-4. 拖曳**訂單**加入設計工具中的導覽屬性。
+4. 將 [ **Orders** ] 導覽屬性拖曳至設計工具。
 
      這會在視窗的 XAML 檔案中，建立下列其他物件項目：
 
@@ -45,7 +45,7 @@ ms.locfileid: "64645642"
 
     - 資料繫結 <xref:System.Windows.Controls.DataGrid> 控制項，名為 `ordersDataGrid`。
 
-5. （選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。
+5. 選擇性將 [ **Customers** ] 節點中的其他專案拖曳至設計工具。
 
 6. 開啟表單的字碼頁並加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：
 
@@ -59,11 +59,11 @@ ms.locfileid: "64645642"
 8. 在設計工具中選取視窗。
 
     > [!NOTE]
-    > 請確定您選取的是視窗本身，而不是選擇視窗的內容。 如果選取的視窗，則**名稱**頂端附近的文字方塊**屬性**視窗應該包含視窗的名稱。
+    > 請確定您選取的是視窗本身，而不是選擇視窗的內容。 如果已選取視窗，則靠近 [**屬性**] 視窗頂端的 [**名稱**] 文字方塊應包含視窗的名稱。
 
-9. 在 [**屬性**視窗中，選取**事件**] 按鈕。
+9. 在 [**屬性**] 視窗中，選取 [**事件**] 按鈕。
 
-10. 尋找**Loaded**事件，並再按兩下這個事件旁的下拉式清單。
+10. 尋找 [已**載入**] 事件，然後按兩下這個事件旁的下拉式清單。
 
      Visual Studio 會開啟視窗的程式碼後置檔案，然後產生 <xref:System.Windows.FrameworkElement.Loaded> 事件處理常式。
 
@@ -74,11 +74,11 @@ ms.locfileid: "64645642"
 
 12. 這個程式碼會根據 LINQ 查詢執行傳回 <xref:System.Data.Services.Client.DataServiceCollection%601> 物件的 `Customers`，以及 Northwind 資料服務的相關 <xref:System.Collections.Generic.IEnumerable%601> 物件，建立 `Customers` 型別的 `Orders`，然後繫結至 `customersViewSource`。
 
-## <a name="use-a-project-data-source-in-a-windows-form"></a>使用 Windows 表單中的專案資料來源
+## <a name="use-a-project-data-source-in-a-windows-form"></a>在 Windows form 中使用專案資料來源
 
-1. 在 [**資料來源**] 視窗中，展開**客戶**節點中的**NorthwindEntities**專案資料來源。
+1. 在 **資料來源** 視窗中，展開  **northwindentities**  專案資料來源中的  **Customers**  節點。
 
-2. 按一下  **CustomerID**項目中，選取**ComboBox**從清單中，並將拖曳**CustomerID**項目從**客戶**節點設計工具。
+2. 按一下 [ **customerid** ] 專案，從清單中選取 [ **ComboBox** ]，然後將 [ **CustomerID** ] 專案從 [ **Customers** ] 節點拖曳至設計工具。
 
      這會在表單上建立下列控制項：
 
@@ -90,11 +90,11 @@ ms.locfileid: "64645642"
 
     - <xref:System.Windows.Forms.Label>。
 
-3. 拖曳**訂單**導覽屬性到表單。
+3. 將 [ **Orders** ] 導覽屬性拖曳至表單。
 
 4. 這會建立 `ordersBindingSource` 控制項，且控制項的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性設為 `customersBindingSource` 和 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性設為 `Customers`。 表單上也會建立 `ordersDataGridView` 資料繫結控制項，並伴隨著標示適當的標籤控制項。
 
-5. （選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。
+5. 選擇性將 [ **Customers** ] 節點中的其他專案拖曳至設計工具。
 
 6. 開啟表單的字碼頁並加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：
 
@@ -119,5 +119,5 @@ ms.locfileid: "64645642"
 
 ## <a name="see-also"></a>另請參閱
 
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [如何：將資料繫結至 Windows Presentation Foundation 項目](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
+- [如何：將資料系結至 Windows Presentation Foundation 元素](bind-data-to-wpf-elements-wcf-data-services.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6c2e741df594e265fdef51a602a9a4927733b7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2bfb43002b79fd3e499272b87756bdc3ab0b589
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741871"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787335"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope 方法
-擷取指定型別的範圍。  
+抓取給定類型的範圍。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,25 +39,25 @@ HRESULT GetResolutionScope(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 組件的識別碼。  
+ 元件的識別碼。  
   
  `FileToken`  
  需要參考的檔案。  
   
  `TargetFile`  
- 語彙基元的檔案該型別定義中，通常使用的擷取[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
+ 類型定義于中的檔案 Token，通常會使用[ImportFile 方法](importfile-method.md)來抓取。  
   
  `pScope`  
- 接收的組件或模組參考。  
+ 接收元件或模組參考。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h。  
+ 需要 alink. h。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 介面](ialink-interface.md)
+- [IALink2 介面](ialink2-interface.md)
+- [ALink API](index.md)

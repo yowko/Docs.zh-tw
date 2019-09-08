@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106476"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790120"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的應用程式相容性
 
@@ -76,6 +76,6 @@ ms.locfileid: "70106476"
 
 ## <a name="see-also"></a>另請參閱
 
-- [版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-- [新功能](../../../docs/framework/whats-new/index.md)
-- [類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)
+- [版本和相依性](versions-and-dependencies.md)
+- [新功能](../whats-new/index.md)
+- [類別庫中已淘汰的功能](../whats-new/whats-obsolete.md)

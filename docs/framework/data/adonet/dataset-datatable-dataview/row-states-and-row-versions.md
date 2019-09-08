@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 24d0d44f5964708164f89b0d9fa6c4c1aac7da0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 70596d6acb62fa01092e5e55dd3b6c84eb162b5d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204513"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784337"
 ---
 # <a name="row-states-and-row-versions"></a>資料列狀態和資料列版本
 ADO.NET 使用資料列狀態和版本來管理資料表中的資料列。 資料列狀態表示資料列的狀態；修改資料列時，資料列版本會維護存放在資料列中的值，包括目前值、原始值和預設值。 例如，修改資料列中的資料行後，資料列的狀態為 `Modified`，並有兩個資料列版本：`Current` (包含目前的資料列值) 和 `Original` (包含修改資料行之前的資料列值)。  
@@ -99,4 +99,4 @@ foreach (DataRow delRow in delRows)
 - [在 DataTable 中操作資料](manipulating-data-in-a-datatable.md)
 - [DataSet、DataTable 和 DataView](index.md)
 - [DataAdapter 和 DataReader](../dataadapters-and-datareaders.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概觀](../ado-net-overview.md)

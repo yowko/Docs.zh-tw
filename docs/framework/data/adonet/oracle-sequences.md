@@ -2,12 +2,12 @@
 title: Oracle 序列
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 4ba7b750d48613b80eca0ef3c7c2da127977498d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 772aeda94215ccc8e1eff0e1145ed0399791197d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632335"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794593"
 ---
 # <a name="oracle-sequences"></a>Oracle 序列
 .NET Framework Data Provider for Oracle 藉由使用 <xref:System.Data.OracleClient.OracleDataAdapter>，支援在執行插入後擷取伺服器所產生的「Oracle 序列」索引鍵值。  
@@ -20,7 +20,7 @@ ms.locfileid: "64632335"
   
  當您在 Oracle 資料庫中建立序列時，可以定義其初始值及值之間的遞增值。 也可以在提交新資料列之前，查詢新值的序列。 這表示您的程式碼可在您將新資料列的索引鍵值插入資料庫之前先加以辨識。  
   
- 如需使用 SQL Server 和 ADO.NET 建立自動遞增資料行的詳細資訊，請參閱[擷取識別或自動編號值](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)並[建立自動遞增資料行](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)。  
+ 如需使用 SQL Server 和 ADO.NET 建立自動遞增值資料行的詳細資訊，請參閱抓取[識別或自動編號值](retrieving-identity-or-autonumber-values.md)和[建立自動](./dataset-datatable-dataview/creating-autoincrement-columns.md)遞增資料行。  
   
 ## <a name="example"></a>範例  
  下列的 C# 範例示範如何從 Oracle 資料庫擷取新的序列值。 此範例會參考用來提交新資料列的 INSERT INTO 查詢中的序列，然後傳回使用 Oracle10g 所引進的 RETURNING 子句產生的序列值。 此範例使用 ADO.NET 的自動遞增功能來產生「預留位置」主索引鍵值，在 <xref:System.Data.DataTable> 中加入暫止的新資料列序列。 請注意，ADO.NET 為新資料列所產生的遞增值只是「預留位置」， 這表示資料庫可能會從 ADO.NET 所產生的值產生不同的值。  
@@ -100,5 +100,5 @@ public void OracleSequence(String connectionString)
   
 ## <a name="see-also"></a>另請參閱
 
-- [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle 和 ADO.NET](oracle-and-adonet.md)
+- [ADO.NET 概觀](ado-net-overview.md)

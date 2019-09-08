@@ -2,12 +2,12 @@
 title: 端點
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963601"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795904"
 ---
 # <a name="endpoint"></a>端點
 端點  
@@ -35,9 +35,9 @@ class Endpoint
 ## <a name="methods"></a>方法  
  Endpoint 類別定義下列方法。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
-|[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|擷取作業效能計數器執行個體名稱|  
+|[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|擷取作業效能計數器執行個體名稱|  
   
 ## <a name="properties"></a>屬性  
  Endpoint 類別具有下列屬性：  

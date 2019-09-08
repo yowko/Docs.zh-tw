@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70b40095ffcfea37414b7de2a678ad8555423b12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8befdb454a564ec834532653dd44cf230fa43d79
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778553"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795211"
 ---
-# <a name="asmdisplayflags-enumeration"></a>ASM_DISPLAY_FLAGS 列舉
-表示版本、 組建、 文化特性、 簽章，依此類推，會擷取顯示名稱的組件[iassemblyname:: Getdisplayname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)方法。  
+# <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS 列舉
+表示[IAssemblyName：： GetDisplayName](iassemblyname-getdisplayname-method.md)方法將抓取其顯示名稱之元件的版本、組建、文化特性、簽章等。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,18 +52,18 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>備註  
- `ASM_DISPLAYF_FULL` 版本所做的變更會反映出[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件。 請勿假設傳回的值是不變。  
+ `ASM_DISPLAYF_FULL`反映對[IAssemblyName](iassemblyname-interface.md)物件版本所做的任何變更。 請不要假設傳回的值是不可變的。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [融合列舉](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName 介面](iassemblyname-interface.md)
+- [融合列舉](fusion-enumerations.md)

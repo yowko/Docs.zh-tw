@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c434595414fd5bdabeae96d959aaa6be6d84af2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38f48f2d95829d2c8111065e5f4ede4e43a16d63
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753971"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796660"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>IAssemblyName::GetDisplayName 方法
-取得人類可讀名稱所參考的組件[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件。  
+取得這個[IAssemblyName](iassemblyname-interface.md)物件所參考之元件的人類可讀名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,22 +39,22 @@ HRESULT GetDisplayName (
   
 ## <a name="parameters"></a>參數  
  `szDisplayName`  
- [out]包含參考的組件名稱的字串緩衝區。  
+ 脫銷包含所參考元件名稱的字串緩衝區。  
   
  `pccDisplayName`  
- [in、 out]大小`szDisplayName`寬字元，包括 null 結束字元。  
+ [in、out]`szDisplayName`以寬字元為單位的大小，包括 null 結束字元字元。  
   
  `dwDisplayFlags`  
- [in]位元組合[ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md)影響的功能值`szDisplayName`。  
+ 在[ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md)值的位元組合，會影響的功能`szDisplayName`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [融合列舉](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName 介面](iassemblyname-interface.md)
+- [融合列舉](fusion-enumerations.md)

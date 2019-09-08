@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: ef771d924d9b508c29061f75a45808b5f81abb53
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d14b15f72bd196d8b3a61f22c614516e17d2e95b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963828"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781236"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>從識別快取擷取物件
 本主題描述 LINQ to SQL 查詢的類型，這些查詢可從 <xref:System.Data.Linq.DataContext> 所管理的識別快取傳回物件。  
@@ -20,7 +20,7 @@ ms.locfileid: "69963828"
  一般而言，為了讓 LINQ to SQL 查詢從識別快取傳回物件，此查詢必須以物件的主索引鍵為基礎，而且必須傳回單一物件。 特別是，此查詢必須採用下列其中一種一般格式。  
   
 > [!NOTE]
-> 預先編譯的查詢不會從識別快取傳回物件。 如需預先編譯查詢的詳細資訊, 請<xref:System.Data.Linq.CompiledQuery>參閱[和如何:儲存和重複使用](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)查詢。  
+> 預先編譯的查詢不會從識別快取傳回物件。 如需預先編譯查詢的詳細資訊，請<xref:System.Data.Linq.CompiledQuery>參閱[和如何：儲存和重複使用](how-to-store-and-reuse-queries.md)查詢。  
   
  若要從識別快取擷取物件，查詢必須採用下列其中一種一般格式：  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69963828"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
-- [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [查詢概念](query-concepts.md)
+- [物件身分識別](object-identity.md)
+- [背景資訊](background-information.md)
+- [物件身分識別](object-identity.md)

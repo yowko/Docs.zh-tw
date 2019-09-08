@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee30d4f32e05fab27ae70052b28d3d152594cf90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778423"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795373"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 函式
-建立記錄讀取器指定的檔案。  
+為指定的檔案建立記錄讀取器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,26 +37,26 @@ HRESULT CreateHistoryReader (
   
 ## <a name="parameters"></a>參數  
  `wzFilePath`  
- [in]檔案路徑。  
+ 在檔案路徑。  
   
  `ppHistoryReader`  
- [out]成功完成時，包含歷程記錄讀取器的指標。  
+ 脫銷成功完成時，會包含記錄讀取器的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 中所定義 WinError.h，除了下表中所述的值，這個方法會傳回標準 COM 錯誤碼。  
+ 除了下表所述的值之外，這個方法會傳回 Winerror.h 中定義的標準 COM 錯誤碼。  
   
-|傳回碼|說明|  
+|傳回碼|描述|  
 |-----------------|-----------------|  
-|S_OK|表示已成功完成的方法。|  
-|E_INVALIDARG|指出`wzFilePath`或`ppHistoryReader`設為 null 參考。|  
+|S_OK|表示方法已順利完成。|  
+|E_INVALIDARG|`wzFilePath`指出或`ppHistoryReader`設定為 null 參考。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **LIBRARY:** Fusion.dll  
+ **LIBRARY:** 融合 .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [融合全域靜態函式](fusion-global-static-functions.md)

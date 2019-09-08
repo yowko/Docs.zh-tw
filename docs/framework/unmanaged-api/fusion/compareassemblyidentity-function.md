@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55d4e936c8b732e4cc4a60df8c11b37c86c4a415
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b52d3af38bd09ce5864c25d27e148dbd7f4639b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778488"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795453"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 函式
-比較兩個組件身分識別，以判斷它們是否相等。  
+比較兩個元件識別，以判斷它們是否相等。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,49 +42,49 @@ STDAPI CompareAssemblyIdentity (
   
 ## <a name="parameters"></a>參數  
  `pwzAssemblyIdentity1`  
- [in]文字中比較的第一個組件識別。  
+ 在比較中第一個元件的文字識別。  
   
  `fUnified1`  
- [in]布林值的旗標，指出使用者指定的統一`pwzAssemblyIdentity1`。  
+ 在布林值旗標，表示的使用者指定的`pwzAssemblyIdentity1`統一。  
   
  `pwzAssemblyIdentity2`  
- [in]文字中比較的第二個組件識別。  
+ 在比較中第二個元件的文字識別。  
   
  `fUnified2`  
- [in]布林值的旗標，指出使用者指定的統一`pwzAssemblyIdentity2`。  
+ 在布林值旗標，表示的使用者指定的`pwzAssemblyIdentity2`統一。  
   
  `pfEquivalent`  
- [out]布林值旗標，指出兩個組件是否相等。  
+ 脫銷指出兩個元件是否相等的布林值旗標。  
   
  `pResult`  
- [out][AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)包含比較的詳細的資訊的列舉型別。  
+ 脫銷包含比較之詳細資訊的[AssemblyComparisonResult](assemblycomparisonresult-enumeration.md)列舉。  
   
 ## <a name="return-value"></a>傳回值  
- `pfEquivalent` 傳回布林值，指出兩個組件是否相等。 `pResult` 傳回的其中一個`AssemblyComparisonResult`值，以提供值的詳細的原因`pfEquivalent`。  
+ `pfEquivalent`傳回布林值，指出兩個元件是否相等。 `pResult`傳回其中一個`AssemblyComparisonResult`值，以提供更詳細的`pfEquivalent`值原因。  
   
 ## <a name="remarks"></a>備註  
- `CompareAssemblyIdentity` 檢查是否`pwzAssemblyIdentity1`和`pwzAssemblyIdentity2`相等。 `pfEquivalent` 設定為`true`下有一或多個下列條件：  
+ `CompareAssemblyIdentity``pwzAssemblyIdentity1`檢查和`pwzAssemblyIdentity2`是否相等。 `pfEquivalent`在下列一個`true`或多個情況下，會設為：  
   
-- 兩個組件身分識別是相等的。 針對強式名稱組件，對應項會需要的組件名稱、 版本、 公開金鑰語彙基元和文化特性相同。 針對簡單名稱的組件，相等的條件比對的組件名稱和文化特性。  
+- 這兩個元件身分識別是相等的。 若為強式名稱元件，則對等需要元件名稱、版本、公開金鑰標記和文化特性都相同。 對於簡單命名的元件而言，對等的必須符合元件名稱和文化特性。  
   
-- 這兩個組件身分識別，請參閱.NET Framework 執行的組件。 這種狀況傳回`true`即使組件版本號碼不相符。  
+- 這兩個元件識別都會參考在 .NET Framework 上執行的元件。 `true`即使元件版本號碼不相符，這個條件也會傳回。  
   
-- 兩個組件不是 managed 組件，但`fUnified1`或是`fUnified2`已設為`true`。  
+- 這兩個元件不是 managed 元件， `fUnified1`而`fUnified2`是或已`true`設定為。  
   
- `fUnified`旗標表示強式名稱組件的版本號碼的所有版本號碼都都視為相等的強式名稱組件。 比方說，如果值`pwzAssemblyIndentity1`是"MyAssembly，版本 version=3.0.0.0，culture = neutral，publicKeyToken =...」，和值`fUnified1`是`true`，這表示，應該是 MyAssembly 從 0.0.0.0 到 3.0.0.0 版開始的所有版本視為對等項目。 在此情況下，如果`pwzAssemblyIndentity2`相同的組件是指`pwzAssemblyIndentity1`，不同之處在於它有較低的版本號碼，`pfEquivalent`設定為`true`。 如果`pwzAssemblyIdentity2`更高的版本號碼，是指`pfEquivalent`設為`true`才的值`fUnified2`是`true`。  
+ `fUnified`旗標指出，最高至強式名稱元件版本號碼的所有版本號碼，都視為與強式名稱元件相等。 例如，如果的值`pwzAssemblyIndentity1`為 "MyAssembly，version = 3.0.0.0，culture = 中性，publicKeyToken = ..."，且的`fUnified1`值為`true`，則表示從0.0.0.0 到3.0.0.0 的所有 MyAssembly 版本都應該是視為對等。 在這種情況下， `pwzAssemblyIndentity2`如果參考與相同的`pwzAssemblyIndentity1`元件，但其版本號碼較低， `pfEquivalent`則會設定為`true`。 如果`pwzAssemblyIdentity2`參考較高的版本號碼， `pfEquivalent`只有在的`true`值`fUnified2`為時`true`，才會設定為。  
   
- `pResult`參數包含相等或不相等的兩個組件視為原因的特定資訊。 如需詳細資訊，請參閱 < [AssemblyComparisonResult 列舉](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)。  
+ `pResult`參數包含為何將兩個元件視為相等或不相等的特定資訊。 如需詳細資訊，請參閱[AssemblyComparisonResult 列舉](assemblycomparisonresult-enumeration.md)。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [AssemblyComparisonResult 列舉](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)
+- [融合全域靜態函式](fusion-global-static-functions.md)
+- [AssemblyComparisonResult 列舉](assemblycomparisonresult-enumeration.md)

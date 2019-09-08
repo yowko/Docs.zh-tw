@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8736da6c8db876b3dadb3b906a586633be176cf6
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 3d8ab96c758b946684af78bfa21822fdaf96530a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038317"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786966"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 函式
 驗證 Authenticode XrML 授權的有效性。  
@@ -53,20 +53,20 @@ HRESULT CertVerifyAuthenticodeLicense (
 - AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
- [out] 接收簽署者的資訊。 若授權未經簽署，`dwError` 會設為 TRUST_E_NOSIGNATURE。 呼叫者必須負責在使用[CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)函式之後, 使用該函數釋放資源。  
+ [out] 接收簽署者的資訊。 若授權未經簽署，`dwError` 會設為 TRUST_E_NOSIGNATURE。 呼叫者必須負責在使用[CertFreeAuthenticodeSignerInfo](certfreeauthenticodesignerinfo-function.md)函式之後，使用該函數釋放資源。  
   
- 請參閱[AXL_AUTHENTICODE_SIGNER_INFO 結構](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)。  
+ 請參閱[AXL_AUTHENTICODE_SIGNER_INFO 結構](axl-authenticode-signer-info-structure.md)。  
   
  `pTimestamperInfo`  
- [out] 接收時間戳記設定者的資訊 (如有提供)。 若授權未設定時間戳記，`dwError` 會設為 TRUST_E_NOSIGNATURE。 呼叫者必須負責在使用[CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md)函式之後, 使用該函數釋放資源。  
+ [out] 接收時間戳記設定者的資訊 (如有提供)。 若授權未設定時間戳記，`dwError` 會設為 TRUST_E_NOSIGNATURE。 呼叫者必須負責在使用[CertFreeAuthenticodeTimestamperInfo](certfreeauthenticodetimestamperinfo-function.md)函式之後，使用該函數釋放資源。  
   
- 請參閱[AXL_AUTHENTICODE_TIMESTAMPER_INFO 結構](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)。  
+ 請參閱[AXL_AUTHENTICODE_TIMESTAMPER_INFO 結構](axl-authenticode-timestamper-info-structure.md)。  
   
 ## <a name="return-value"></a>傳回值  
  若成功，會傳回 `S_OK`。 否則會傳回錯誤碼。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
-- [GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Authenticode](index.md)
+- [GetHashFromHandle 方法](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)

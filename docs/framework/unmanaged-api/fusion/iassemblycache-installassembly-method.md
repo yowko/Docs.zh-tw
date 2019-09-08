@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd420f0f166b0b17e5fbaf08d6bedd6651188b1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95c65e73c118b5358ac0a92dd0a1ca5545558e73
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778750"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796798"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly 方法
-指定的組件安裝在全域組件快取中。  
+在全域組件快取中安裝指定的元件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,25 +39,25 @@ HRESULT InstallAssembly (
   
 ## <a name="parameters"></a>參數  
  `dwFlags`  
- [in]支援下列值： 旗標。 支援下列值：  
+ 在在融合 .idl 中定義的旗標。 支援下列值：  
   
-- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH （0x00000001）  
   
-- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
+- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH （0x00000002）  
   
  `pszManifestFilePath`  
- [in]若要安裝組件資訊清單的路徑。  
+ 在要安裝之元件的資訊清單路徑。  
   
  `pRefData`  
- [in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)包含安裝的資料結構。  
+ 在包含安裝資料的[FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)結構。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyCache 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache 介面](iassemblycache-interface.md)

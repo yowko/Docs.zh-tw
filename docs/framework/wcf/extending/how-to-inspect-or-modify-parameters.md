@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: 5a15de504a27180c19d3450f7e4ddd490999b916
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4a673f97f06e8d489d9acc85d84e1ecea4656e4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651108"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795593"
 ---
-# <a name="how-to-inspect-or-modify-parameters"></a>HOW TO：檢查或修改參數
-您可以檢查或修改傳入或傳出訊息上的 Windows Communication Foundation (WCF) 用戶端物件或 WCF 服務的單一作業的實作<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>介面，並將其插入至用戶端或服務執行階段。 一般來說，作業行為是用於新增單一作業的參數偵測器；其他行為可用於提供範圍更大之執行階段的簡易存取。 如需詳細資訊，請參閱 <<c0> [ 擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)並[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
+# <a name="how-to-inspect-or-modify-parameters"></a>作法：檢查或修改參數
+您可以藉由執行<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>介面並將它插入用戶端或服務執行時間中，檢查或修改 Windows Communication Foundation （WCF）用戶端物件或 WCF 服務上單一作業的傳入或傳出訊息。 一般來說，作業行為是用於新增單一作業的參數偵測器；其他行為可用於提供範圍更大之執行階段的簡易存取。 如需詳細資訊，請參閱[擴充用戶端](extending-clients.md)和[擴充發送器](extending-dispatchers.md)。  
   
 ### <a name="inspecting-or-modifying-parameters"></a>檢查或修改參數  
   
@@ -21,7 +21,7 @@ ms.locfileid: "64651108"
   
 2. 請實作 <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>、<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>、<xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> (視所需要的範圍而定)，將您的參數偵測器新增至 <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A?displayProperty=nameWithType> 屬性。  
   
-3. 在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法之前，請先插入您的行為。 如需詳細資訊，請參閱 <<c0> [ 設定和擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+3. 在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法之前，請先插入您的行為。 如需詳細資訊，請參閱[使用行為設定和擴充運行](configuring-and-extending-the-runtime-with-behaviors.md)時間。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會依序顯示：  
@@ -42,4 +42,4 @@ ms.locfileid: "64651108"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [使用行為來設定與擴充執行階段](configuring-and-extending-the-runtime-with-behaviors.md)

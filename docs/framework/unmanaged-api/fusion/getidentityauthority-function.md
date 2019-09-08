@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5e8dd4a9dbf301b0910eda220513e9a3ffdc1cb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f29246bdb929c8eaf1ebce726164d5cd2269b9f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778647"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796868"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority 函式
-取得指標[IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)管理程式碼物件的索引鍵的執行個體。  
+取得[IIdentityAuthority](iidentityauthority-interface.md)實例的指標，它會管理程式碼物件的索引鍵。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +37,16 @@ HRESULT GetIdentityAuthority (
   
 ## <a name="parameters"></a>參數  
  `ppIIdentityAuthority`  
- [out]傳回`IIdentityAuthority`指標。  
+ 脫銷傳回`IIdentityAuthority`的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Isolation.h  
+ **標頭：** 隔離。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IIdentityAuthority 介面](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)
-- [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IIdentityAuthority 介面](iidentityauthority-interface.md)
+- [融合全域靜態函式](fusion-global-static-functions.md)

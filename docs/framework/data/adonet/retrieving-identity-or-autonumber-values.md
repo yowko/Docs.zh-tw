@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-ms.openlocfilehash: ef4831af0b7bafed7d40bd86d2684c73d84a0f93
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1387dad1f588770384422bf579ed547271b30c0a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634165"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794545"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>擷取識別或自動編號值
 
@@ -23,19 +23,19 @@ ms.locfileid: "65634165"
 某些 Database Engine (例如 Microsoft Access Jet Database Engine) 不支援輸出參數而且無法在單一批次中處理多個陳述式。 使用 Jet Database Engine 時，您可以透過在 `RowUpdated` 之 `DataAdapter` 事件的事件處理常式中執行個別的 SELECT 命令，擷取針對插入資料列所產生的新 AutoNumber 值。
 
 > [!NOTE]
-> 使用自動遞增值的替代方式是使用 <xref:System.Guid.NewGuid%2A> 的 <xref:System.Guid> 方法，在用戶端電腦上產生插入每個新資料列時可複製到伺服器的 GUID (全域唯一識別項)。 `NewGuid` 方法會產生 16 個位元組的二進位值，而此值是使用盡可能確保沒有任何值會重複的演算法所建立的。 在 SQL Server 資料庫中，GUID 會儲存在 SQL Server 可以使用 Transact-SQL `uniqueidentifier` 函式來自動產生的 `NEWID()` 資料行中。 使用 GUID 當做主索引鍵可能會對效能造成不良影響。 SQL Server 可讓您`NEWSEQUENTIALID()`函式，這會產生循序 GUID 不保證是全域唯一，但是可更有效率地進行索引。
+> 使用自動遞增值的替代方式是使用 <xref:System.Guid.NewGuid%2A> 的 <xref:System.Guid> 方法，在用戶端電腦上產生插入每個新資料列時可複製到伺服器的 GUID (全域唯一識別項)。 `NewGuid` 方法會產生 16 個位元組的二進位值，而此值是使用盡可能確保沒有任何值會重複的演算法所建立的。 在 SQL Server 資料庫中，GUID 會儲存在 SQL Server 可以使用 Transact-SQL `uniqueidentifier` 函式來自動產生的 `NEWID()` 資料行中。 使用 GUID 當做主索引鍵可能會對效能造成不良影響。 SQL Server 提供函式的`NEWSEQUENTIALID()`支援，此函式會產生不保證是全域唯一，但可以更有效率地編制索引的連續 GUID。
 
 ## <a name="retrieving-sql-server-identity-column-values"></a>擷取 SQL Server Identity 資料行值
 
 使用 Microsoft SQL Server 時，您可以建立含有輸出參數的預存程序，以便傳回插入資料列的識別值。 下表將描述 SQL Server 中三個可用來擷取識別資料行值的 Transact-SQL 函式。
 
-|功能|描述|
+|函數|說明|
 |--------------|-----------------|
 |SCOPE_IDENTITY|傳回目前執行範圍內的最後一個識別值。 建議您針對大部分案例使用 SCOPE_IDENTITY。|
-|@@IDENTITY|包含目前工作階段 (Session) 中於任何資料表內產生的最後一個識別值。 @@IDENTITY可能會受到觸發程序和可能不會傳回您預期的識別值。|
+|@@IDENTITY|包含目前工作階段 (Session) 中於任何資料表內產生的最後一個識別值。 @@IDENTITY可能會受到觸發程式的影響，而且可能不會傳回您預期的識別值。|
 |IDENT_CURRENT|傳回在任何工作階段和任何範圍中針對特定資料表所產生的最後一個識別值。|
 
- 下列的預存程序示範如何插入資料列**分類**資料表，並使用輸出參數來傳回 TRANSACT-SQL scope_identity （） 函式所產生的新識別值。
+ 下列預存程式示範**如何在 category 資料表中**插入資料列，並使用 output 參數來傳回 transact-sql SCOPE_IDENTITY （）函數所產生的新識別值。
 
 ```sql
 CREATE PROCEDURE dbo.InsertCategory
@@ -46,7 +46,7 @@ INSERT INTO Categories (CategoryName) VALUES(@CategoryName)
 SET @Identity = SCOPE_IDENTITY()
 ```
 
-然後，您可以將此預存程序指定為 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 物件之 <xref:System.Data.SqlClient.SqlDataAdapter> 的來源。 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 的 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 屬性必須設定為 <xref:System.Data.CommandType.StoredProcedure>。 識別輸出的擷取方式是建立 <xref:System.Data.SqlClient.SqlParameter> 為 <xref:System.Data.ParameterDirection> 的 <xref:System.Data.ParameterDirection.Output>。 當`InsertCommand`是處理，自動遞增的識別值會傳回並放置在**CategoryID**目前的資料列，如果您將設定資料行<xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A>屬性的插入命令`UpdateRowSource.OutputParameters`或`UpdateRowSource.Both`.
+然後，您可以將此預存程序指定為 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 物件之 <xref:System.Data.SqlClient.SqlDataAdapter> 的來源。 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 的 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 屬性必須設定為 <xref:System.Data.CommandType.StoredProcedure>。 識別輸出的擷取方式是建立 <xref:System.Data.SqlClient.SqlParameter> 為 <xref:System.Data.ParameterDirection> 的 <xref:System.Data.ParameterDirection.Output>。 `UpdateRowSource.Both` <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> `UpdateRowSource.OutputParameters`當處理時，如果您將 insert 命令的屬性設定為或，則會傳回自動遞增的識別值，並將其放在目前資料列的 [類別識別碼] 資料行中。 `InsertCommand`
 
 如果您的插入命令執行了同時包含 INSERT 陳述式和 SELECT 陳述式而且傳回新識別值的批次，您就可以將插入命令的 `UpdatedRowSource` 屬性設定為 `UpdateRowSource.FirstReturnedRecord`，藉以擷取新的值。
 
@@ -55,7 +55,7 @@ SET @Identity = SCOPE_IDENTITY()
 
 ## <a name="merging-new-identity-values"></a>合併新的識別值
 
-常見的案例是呼叫 `GetChanges` 的 `DataTable` 方法來建立僅包含變更資料列的複本，以及在呼叫 `Update` 的 `DataAdapter` 方法時使用新的複本。 當您必須將變更的資料列封送處理至執行更新的個別元件時，這種做法特別有用。 更新之後，該複本可以包含新的識別值，而這些值之後必須合併回原始的 `DataTable` 中。 新的識別值可能會與 `DataTable` 中的原始值不同。 若要完成合併的原始值**AutoIncrement**複本中的資料行必須保留，才能找出並更新現有的資料列，在原始`DataTable`，而非附加包含新的資料列新的識別值。 不過，根據預設，這些原始值在呼叫 `Update` 的 `DataAdapter` 方法之後都會遺失，因為系統會針對每個更新的 `AcceptChanges` 隱含地呼叫 `DataRow`。
+常見的案例是呼叫 `GetChanges` 的 `DataTable` 方法來建立僅包含變更資料列的複本，以及在呼叫 `Update` 的 `DataAdapter` 方法時使用新的複本。 當您必須將變更的資料列封送處理至執行更新的個別元件時，這種做法特別有用。 更新之後，該複本可以包含新的識別值，而這些值之後必須合併回原始的 `DataTable` 中。 新的識別值可能會與 `DataTable` 中的原始值不同。 若要完成合併，您必須保留複本中的**自動遞增**資料行的原始值，才能找出並更新原始`DataTable`中的現有資料列，而不是附加包含新識別值的新資料列. 不過，根據預設，這些原始值在呼叫 `Update` 的 `DataAdapter` 方法之後都會遺失，因為系統會針對每個更新的 `AcceptChanges` 隱含地呼叫 `DataRow`。
 
 目前有兩種方式可以在 `DataColumn` 更新期間保留 `DataRow` 中 `DataAdapter` 的原始值。
 
@@ -99,11 +99,11 @@ WHERE ShipperID = SCOPE_IDENTITY();
 
 ## <a name="retrieving-microsoft-access-autonumber-values"></a>擷取 Microsoft Access Autonumber 值
 
-本節包含一則說明如何從 Jet 4.0 資料庫中擷取 `Autonumber` 值的範例。 Jet Database Engine 不支援在單一批次中執行多個陳述式或使用輸出參數，因此您無法使用其中的任何技巧來傳回指派給已插入資料列的新 `Autonumber` 值。 不過，您可以在其中加入程式碼`RowUpdated`事件處理常式執行個別的 SELECT @@IDENTITY陳述式來擷取新`Autonumber`值。
+本節包含一則說明如何從 Jet 4.0 資料庫中擷取 `Autonumber` 值的範例。 Jet Database Engine 不支援在單一批次中執行多個陳述式或使用輸出參數，因此您無法使用其中的任何技巧來傳回指派給已插入資料列的新 `Autonumber` 值。 不過，您可以將程式碼加入`RowUpdated`至事件處理常式，以便執行個別@IDENTITY的 SELECT @ 語句來`Autonumber`抓取新的值。
 
 ### <a name="example"></a>範例
 
-這則範例會在呼叫 `MissingSchemaAction.AddWithKey` 來填入 `DataTable` 之前，使用正確的結構描述來設定 <xref:System.Data.OleDb.OleDbDataAdapter>，而非使用 `DataTable` 來加入結構描述資訊。 在此情況下， **CategoryID**資料行設定為遞減指派從零，藉由設定每個插入資料列的值<xref:System.Data.DataColumn.AutoIncrement%2A>要`true`，<xref:System.Data.DataColumn.AutoIncrementSeed%2A>設為 0，及<xref:System.Data.DataColumn.AutoIncrementStep%2A>為-1。 接著，程式碼會加入兩個新的資料列，然後使用 `GetChanges`，將已變更的資料列加入至傳遞給 `DataTable` 方法的新 `Update`。
+這則範例會在呼叫 `MissingSchemaAction.AddWithKey` 來填入 `DataTable` 之前，使用正確的結構描述來設定 <xref:System.Data.OleDb.OleDbDataAdapter>，而非使用 `DataTable` 來加入結構描述資訊。 在此情況下，[**類別**2] 資料行會設定為從零開始，將指定的每個插入<xref:System.Data.DataColumn.AutoIncrement%2A>的資料列（藉由<xref:System.Data.DataColumn.AutoIncrementStep%2A>將設為`true`、 <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 0 和-1）減去指派的值。 接著，程式碼會加入兩個新的資料列，然後使用 `GetChanges`，將已變更的資料列加入至傳遞給 `DataTable` 方法的新 `Update`。
 
 [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
 [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]
@@ -354,7 +354,7 @@ GO
 後面接著程式碼清單：
 
 > [!TIP]
-> 這個程式碼清單參考 Access 資料庫檔案 MySchool.mdb。 您可以從 （作為完整的 C# 或 Visual Basic 範例專案的一部分） 下載 MySchool.mdb [code.msdn.microsoft.com](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece)。
+> 這個程式碼清單參考 Access 資料庫檔案 MySchool.mdb。 您可以從C# [code.msdn.microsoft.com](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece)下載 myschool.mdb （做為完整或 Visual Basic 範例專案的一部分）。
 
 ```csharp
 using System;
@@ -538,10 +538,10 @@ class Program {
 
 ## <a name="see-also"></a>另請參閱
 
-- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [資料列狀態和資料列版本](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [AcceptChanges 和 RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [合併 DataSet 內容](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
-- [使用 DataAdapter 更新資料來源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)
+- [DataAdapter 和 DataReader](dataadapters-and-datareaders.md)
+- [資料列狀態和資料列版本](./dataset-datatable-dataview/row-states-and-row-versions.md)
+- [AcceptChanges 和 RejectChanges](./dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [合併 DataSet 內容](./dataset-datatable-dataview/merging-dataset-contents.md)
+- [使用 DataAdapter 更新資料來源](updating-data-sources-with-dataadapters.md)
+- [ADO.NET 概觀](ado-net-overview.md)

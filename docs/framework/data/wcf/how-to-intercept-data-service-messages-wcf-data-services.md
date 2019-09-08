@@ -1,5 +1,5 @@
 ---
-title: HOW TO：攔截資料服務訊息 (WCF Data Services)
+title: 作法：攔截資料服務訊息（WCF Data Services）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: ad0673f72b1a81d6bcfaf0704ccd698eda7bb20c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cecfdd74779e3ab1c908957afac3c9fccf79f383
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936509"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780031"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>HOW TO：攔截資料服務訊息 (WCF Data Services)
-使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以攔截要求訊息，因此您可以將自訂邏輯加入至作業。 若要攔截訊息中,，您可以使用特別屬性化的方法中的資料服務。 如需詳細資訊，請參閱 <<c0> [ 攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)。  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>HOW TO：攔截資料服務訊息（WCF Data Services）
+使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以攔截要求訊息，因此您可以將自訂邏輯加入至作業。 若要攔截訊息，請在資料服務中使用特別的屬性化方法。 如需詳細資訊，請參閱[攔截](interceptors-wcf-data-services.md)器。  
   
- 本主題中的範例使用 Northwind 範例資料服務。 當您完成時，此服務會建立[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
+ 本主題中的範例使用 Northwind 範例資料服務。 此服務會在您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時建立。  
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>定義 Orders 實體集的查詢攔截器  
   
@@ -57,5 +57,5 @@ ms.locfileid: "61936509"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
-- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [如何：定義服務作業](how-to-define-a-service-operation-wcf-data-services.md)
+- [定義 WCF Data Services](defining-wcf-data-services.md)

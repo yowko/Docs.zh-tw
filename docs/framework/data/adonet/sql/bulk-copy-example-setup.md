@@ -2,19 +2,19 @@
 title: 大量複製範例設定
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 2a7c0ddef42ff56306a42288c6960987ce7f714a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac09ed85315aee7c6b29952916088ebe6e301eb9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918083"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794427"
 ---
 # <a name="bulk-copy-example-setup"></a>大量複製範例設定
 <xref:System.Data.SqlClient.SqlBulkCopy> 類別可用於僅將資料寫入 SQL Server 資料表。 本主題所顯示的程式碼範例會使用 SQL Server 範例資料庫**AdventureWorks**。 為了避免變更現有資料表的程式碼範例，請將資料寫入您必須先建立的資料表中。  
   
- **BulkCopyDemoMatchingColumns**和**BulkCopyDemoDifferentColumns**資料表都是以**AdventureWorks** **生產產品**資料表為基礎。 在使用這些資料表的程式碼範例中, 會將資料從**Products**資料表加入至這些範例資料表的其中一個。 當範例示範如何將資料行從來源資料對應至目的地資料表時, 會使用**BulkCopyDemoDifferentColumns**資料表。**BulkCopyDemoMatchingColumns**用於大部分的其他範例。  
+ **BulkCopyDemoMatchingColumns**和**BulkCopyDemoDifferentColumns**資料表都是以**AdventureWorks** **生產產品**資料表為基礎。 在使用這些資料表的程式碼範例中，會將資料從**Products**資料表加入至這些範例資料表的其中一個。 當範例示範如何將資料行從來源資料對應至目的地資料表時，會使用**BulkCopyDemoDifferentColumns**資料表。**BulkCopyDemoMatchingColumns**用於大部分的其他範例。  
   
- 幾個程式碼範例會示範如何使用一個 <xref:System.Data.SqlClient.SqlBulkCopy> 類別來寫入多個資料表。 在這些範例中, 會使用**BulkCopyDemoOrderHeader**和**BulkCopyDemoOrderDetail**資料表做為目的地資料表。 這些資料表是以**AdventureWorks**中的**SalesOrderHeader**和**SalesOrderDetail**資料表為基礎。  
+ 幾個程式碼範例會示範如何使用一個 <xref:System.Data.SqlClient.SqlBulkCopy> 類別來寫入多個資料表。 在這些範例中，會使用**BulkCopyDemoOrderHeader**和**BulkCopyDemoOrderDetail**資料表做為目的地資料表。 這些資料表是以**AdventureWorks**中的**SalesOrderHeader**和**SalesOrderDetail**資料表為基礎。  
   
 > [!NOTE]
 > 提供的**SqlBulkCopy**程式碼範例僅示範使用**SqlBulkCopy**的語法。 如果來源及目的地資料表位於相同的 SQL Server 執行個體中，則使用 Transact-SQL `INSERT … SELECT` 陳述式來複製資料會更方便且快速。  
@@ -83,5 +83,5 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 SQL Server 中執行大量複製作業](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 SQL Server 中執行大量複製作業](bulk-copy-operations-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

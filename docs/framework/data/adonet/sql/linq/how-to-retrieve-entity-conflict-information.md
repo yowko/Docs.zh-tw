@@ -1,19 +1,19 @@
 ---
-title: HOW TO：擷取實體衝突資訊
+title: 作法：擷取實體衝突資訊
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9a02b608-e7bb-4041-a452-a7fed26fd008
-ms.openlocfilehash: 825ba2a32e7c75e922ca08386b9f6efede7b2693
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 766ede90b14f07e2799c2715daf62aaeeeaa83f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904068"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782245"
 ---
-# <a name="how-to-retrieve-entity-conflict-information"></a>HOW TO：擷取實體衝突資訊
-您可以使用 <xref:System.Data.Linq.ObjectChangeConflict> 類別的物件，提供有關 <xref:System.Data.Linq.ChangeConflictException> 例外狀況所揭露的衝突資訊。 如需詳細資訊，請參閱[開放式並行存取：概觀](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
+# <a name="how-to-retrieve-entity-conflict-information"></a>作法：擷取實體衝突資訊
+您可以使用 <xref:System.Data.Linq.ObjectChangeConflict> 類別的物件，提供有關 <xref:System.Data.Linq.ChangeConflictException> 例外狀況所揭露的衝突資訊。 如需詳細資訊， [請參閱開放式平行存取：總覽](optimistic-concurrency-overview.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會逐一查看累積衝突的清單。  
@@ -23,4 +23,4 @@ ms.locfileid: "61904068"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [如何：管理變更衝突](how-to-manage-change-conflicts.md)

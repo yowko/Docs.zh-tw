@@ -2,12 +2,12 @@
 title: ODBC 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0240e99d2420b0956d3c144f837b39e094bb78a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772043"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794724"
 ---
 # <a name="odbc-schema-collections"></a>ODBC 結構描述集合
 
@@ -15,7 +15,7 @@ ms.locfileid: "61772043"
 
 ## <a name="microsoft-sql-server-odbc-driver"></a>Microsoft SQL Server ODBC 驅動程式
 
-Microsoft SQL Server ODBC 驅動程式支援下列特定結構描述集合除了通用結構描述集合：
+除了通用架構集合之外，Microsoft SQL Server ODBC 驅動程式還支援下列特定的架構集合：
 
 - 資料表
 
@@ -51,7 +51,7 @@ Microsoft SQL Server ODBC 驅動程式支援下列特定結構描述集合除了
 |NON_UNIQUE|Int16|
 |INDEX_QUALIFIER|String|
 |INDEX_NAME|String|
-|TYPE|Int16|
+|類型|Int16|
 |ORDINAL_POSITION|Int16|
 |COLUMN_NAME|String|
 |ASC_OR_DESC|String|
@@ -156,7 +156,7 @@ Microsoft SQL Server ODBC 驅動程式支援下列特定結構描述集合除了
 
 ## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC 驅動程式
 
-Microsoft SQL Server Oracle ODBC 驅動程式支援下列特定結構描述集合除了通用結構描述集合：
+除了通用架構集合之外，Microsoft SQL Server Oracle ODBC 驅動程式還支援下列特定的架構集合：
 
 - 資料表
 
@@ -338,4 +338,4 @@ Microsoft SQL Server Oracle ODBC 驅動程式支援下列特定結構描述集�
 
 ## <a name="see-also"></a>另請參閱
 
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概觀](ado-net-overview.md)

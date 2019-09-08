@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6f495500b087b9e24936acd414f1aff463d7f64
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 021fa1668247bc59a4412d2b5f4bac3f5ee8cc6b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781066"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799108"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 函式
 取得由其中一強式名稱函式所引發的最後一個錯誤代碼。  
   
- 此函式已被取代。  
+ 這個函數已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,16 +39,16 @@ HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 最後一個設定 COM 錯誤碼的其中一個強式名稱的函式。  
+ 其中一個強式名稱函數所設定的最後一個 COM 錯誤碼。  
   
 ## <a name="remarks"></a>備註  
- 大部分的強式名稱的方法會傳回簡單`true`或`false`成功完成的指示。 使用`StrongNameErrorInfo`函式來擷取指定強式名稱的函式所產生的最後一個錯誤的 HRESULT。  
+ 大部分的強式名稱方法會傳回成功完成`true`的`false`簡單或指示。 `StrongNameErrorInfo`使用函式來抓取 HRESULT，以指定強式名稱函數所產生的最後一個錯誤。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** StrongName.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

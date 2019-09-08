@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dec878c92e2e2196ab2d586a78578b7244a41a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aed70a78e2513f4d63fbf8ca8868f26efbac9ae8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742248"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787659"
 ---
 # <a name="addimport-method"></a>AddImport 方法
-將組件匯入。  
+將匯入新增至元件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,25 +40,25 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 要當做引數的組件的唯一識別碼。  
+ 要擴充之元件的唯一識別碼。  
   
  `ImportToken`  
- 唯一的識別碼，擷取自[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)，要匯入檔案。  
+ 要匯入之檔案的唯一識別碼，從[ImportFile 方法](importfile-method.md)中取出。  
   
  `dwFlags`  
- COM + FileDef 加上旗標這類`ffContainsNoMetaData`和`ffWriteable`。 `dwFlags` 傳遞給[DefineFile 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)。  
+ Com + FileDef 旗標`ffContainsNoMetaData` ， `ffWriteable`例如和。 `dwFlags`會傳遞至[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
   
  `pFileToken`  
- 接收所產生的檔案識別碼的語彙基元指標。  
+ Token 的指標，該權杖會接收所產生檔案的識別碼。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink 介面](ialink-interface.md)
+- [IALink2 介面](ialink2-interface.md)
+- [ALink API](index.md)

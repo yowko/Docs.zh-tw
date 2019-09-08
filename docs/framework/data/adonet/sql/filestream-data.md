@@ -2,12 +2,12 @@
 title: FILESTREAM 資料
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 87bed5dd345c240cc00b2c36aa976ec53fe63b93
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490072"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794091"
 ---
 # <a name="filestream-data"></a>FILESTREAM 資料
 
@@ -20,11 +20,11 @@ FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二�
 
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM 的 SqlClient 支援
 
-.NET Framework Data Provider for SQL Server <xref:System.Data.SqlClient>、 讀取和寫入 FILESTREAM 資料使用的支援<xref:System.Data.SqlTypes.SqlFileStream>類別中定義<xref:System.Data.SqlTypes>命名空間。 `SqlFileStream` 繼承自 <xref:System.IO.Stream> 類別，可提供讀取和寫入資料流的方法。 讀取資料流會將資料從資料流傳送至資料結構中，例如位元組的陣列。 寫入則會將資料從資料結構傳送至資料流中。
+SQL Server <xref:System.Data.SqlClient>的 .NET Framework Data Provider 支援使用<xref:System.Data.SqlTypes>命名空間中定義的<xref:System.Data.SqlTypes.SqlFileStream>類別來讀取和寫入 FILESTREAM 資料。 `SqlFileStream` 繼承自 <xref:System.IO.Stream> 類別，可提供讀取和寫入資料流的方法。 讀取資料流會將資料從資料流傳送至資料結構中，例如位元組的陣列。 寫入則會將資料從資料結構傳送至資料流中。
 
 ### <a name="creating-the-sql-server-table"></a>建立 SQL Server 資料表
 
-下列 Transact-SQL 陳述式會建立名為 employees 的資料表並插入一個資料列。 一旦您啟用了 FILESTREAM 儲存體之後，就可以使用這份資料表搭配後面的程式碼範例。 SQL Server 線上叢書 》 中的資源連結位於本主題的結尾。
+下列 Transact-SQL 陳述式會建立名為 employees 的資料表並插入一個資料列。 一旦您啟用了 FILESTREAM 儲存體之後，就可以使用這份資料表搭配後面的程式碼範例。 SQL Server 線上叢書中資源的連結位於本主題的結尾。
 
 ```sql
 CREATE TABLE employees
@@ -40,7 +40,7 @@ Values(1, 0x00, default)
 GO
 ```
 
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>範例：讀取、 覆寫和插入 FILESTREAM 資料
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>範例：讀取、覆寫和插入 FILESTREAM 資料
 
 下列範例將示範如何從 FILESTREAM 中讀取資料。 這段程式碼會取得檔案的邏輯路徑，並將 `FileAccess` 設定為 `Read` 而且將 `FileOptions` 設定為 `SequentialScan`。 然後，程式碼會將位元組從 SqlFileStream 讀入緩衝區中。 接著，這些位元組會寫入主控台視窗。
 
@@ -171,22 +171,22 @@ namespace FileStreamTest
 }
 ```
 
-如需其他範例，請參閱[如何儲存和擷取至檔案資料流資料行的二進位資料](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。
+如需其他範例，請參閱[如何將二進位資料儲存和提取到檔案資料流程資料行](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。
 
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server 線上叢書中的資源
 
-FILESTREAM 的完整文件位於 SQL Server 線上叢書 》 中的下列各節。
+FILESTREAM 的完整檔位於 SQL Server 線上叢書的下列各節中。
 
 |主題|描述|
 |-----------|-----------------|
-|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|描述使用 FILESTREAM 儲存體的時機，以及它如何整合 SQL Server Database Engine 與 NTFS 檔案系統。|
-|[建立 FILESTREAM 資料的用戶端應用程式](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|描述使用 FILESTREAM 資料的 Windows API 函式。|
+|[FILESTREAM （SQL Server）](/sql/relational-databases/blob/filestream-sql-server)|描述使用 FILESTREAM 儲存體的時機，以及它如何整合 SQL Server Database Engine 與 NTFS 檔案系統。|
+|[建立 FILESTREAM 資料的用戶端應用程式](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|說明用來處理 FILESTREAM 資料的 Windows API 函式。|
 |[FILESTREAM 和其他 SQL Server 功能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|針對使用 FILESTREAM 資料搭配其他 SQL Server 功能提供相關的考量、指導方針和限制。|
 
 ## <a name="see-also"></a>另請參閱
 
-- [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [程式碼存取安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [SQL Server 二進位和大量數值資料](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET 概觀](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [SQL Server 資料類型和 ADO.NET](sql-server-data-types.md)
+- [在 ADO.NET 中擷取和修改資料](../retrieving-and-modifying-data.md)
+- [程式碼存取安全性和 ADO.NET](../code-access-security.md)
+- [SQL Server 二進位和大量數值資料](sql-server-binary-and-large-value-data.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

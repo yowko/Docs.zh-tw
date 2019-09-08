@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: d62d55771e4fda74d336163b3f53b3f50cfb1e39
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a1249718d1e1e1e64fd6fa6ee9ee8157545b5e0b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205286"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786640"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>將 DataTable 加入至資料集
 ADO.NET 可讓您建立 <xref:System.Data.DataTable> 物件，並將它們加入現有的 <xref:System.Data.DataSet>。 您可以使用 <xref:System.Data.DataTable> 和 <xref:System.Data.DataTable.PrimaryKey%2A> 屬性，為 <xref:System.Data.DataColumn.Unique%2A> 設定條件約束 (Constraint) 資訊。  
@@ -22,9 +22,9 @@ ADO.NET 可讓您建立 <xref:System.Data.DataTable> 物件，並將它們加入
  [!code-vb[DataWorks Data.DataTableAdd#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableAdd/VB/source.vb#1)]  
   
 ## <a name="case-sensitivity"></a>區分大小寫  
- <xref:System.Data.DataSet> 中可能有兩個或兩個以上具有相同名稱，但不同大小寫的資料表或關聯。 在這種情況下，按照資料表和關聯名稱進行參考時是區分大小寫的。 例如, <xref:System.Data.DataSet>如果**資料集**包含資料表**Table1**和**table1**, 您會依名稱參考**Table1**做為**資料集。資料表 ["table1"]** 和**table1**做為**資料集。資料表 ["table1"]** 。 嘗試將其中一個資料表當做**資料集來參考。資料表 ["TABLE1"]** 將會產生例外狀況。  
+ <xref:System.Data.DataSet> 中可能有兩個或兩個以上具有相同名稱，但不同大小寫的資料表或關聯。 在這種情況下，按照資料表和關聯名稱進行參考時是區分大小寫的。 例如， <xref:System.Data.DataSet>如果**資料集**包含資料表**Table1**和**table1**，您會依名稱參考**Table1**做為**資料集。資料表 ["table1"]** 和**table1**做為**資料集。資料表 ["table1"]** 。 嘗試將其中一個資料表當做**資料集來參考。資料表 ["TABLE1"]** 將會產生例外狀況。  
   
- 如果只有一個具有特定名稱的資料表或關聯，則不適用區分大小寫規則。 例如, 如果<xref:System.Data.DataSet>只有**Table1**, 您可以使用資料集來參考它 **。資料表 ["Table1"]** 。  
+ 如果只有一個具有特定名稱的資料表或關聯，則不適用區分大小寫規則。 例如，如果<xref:System.Data.DataSet>只有**Table1**，您可以使用資料集來參考它 **。資料表 ["Table1"]** 。  
   
 > [!NOTE]
 > <xref:System.Data.DataSet.CaseSensitive%2A> 的 <xref:System.Data.DataSet> 屬性不會影響這項行為。 <xref:System.Data.DataSet.CaseSensitive%2A> 屬性會套用至 <xref:System.Data.DataSet> 內的資料，並影響排序、搜尋、篩選、強制執行條件約束等方面。  
@@ -35,4 +35,4 @@ ADO.NET 可讓您建立 <xref:System.Data.DataTable> 物件，並將它們加入
 ## <a name="see-also"></a>另請參閱
 
 - [DataSet、DataTable 和 DataView](index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 概觀](../ado-net-overview.md)

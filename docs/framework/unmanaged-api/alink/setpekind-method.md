@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fc581904351443f4368a68a653fd39b3548999a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a48dbd38d357b668c2794ae6305ceb9cad3dcf4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741424"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787187"
 ---
 # <a name="setpekind-method"></a>SetPEKind 方法
-決定可攜式執行檔的類型，特定電腦或機器無關。  
+決定可移植的可執行檔案類型，可能是電腦特定或電腦中立。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,26 +39,26 @@ HRESULT SetPEKind(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 組件的識別碼。  
+ 元件的識別碼。  
   
  `FileToken`  
- PE 型別為其設定的檔的語彙基元。 可以是 NULL，如果`AssemblyID`不會指出未繫結的 netmodule。  
+ 要設定 PE 類型的檔案標記。 如果未指出未`AssemblyID`系結的 .netmodule，則可以是 Null。  
   
  `dwPEKind`  
- PE 所指定的型別[CorPEKind 列舉](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)。  
+ PE 的類型，如[CorPEKind 列舉](../metadata/corpekind-enumeration.md)所表示。  
   
  `dwMachine`  
- 目標電腦架構，NT 標頭中所示。  
+ 如 NT 標頭所示的目的電腦架構。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h。  
+ 需要 alink. h。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [GetPEKind 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [GetPEKind 方法](../metadata/imetadataimport2-getpekind-method.md)
+- [IALink2 介面](ialink2-interface.md)
+- [IALink 介面](ialink-interface.md)
+- [ALink API](index.md)

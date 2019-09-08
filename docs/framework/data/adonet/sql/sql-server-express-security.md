@@ -2,12 +2,12 @@
 title: SQL Server Express 安全性
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55f1d141e50ed7afd851d7330cfaf2e3b6380f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876781"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791697"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
 Microsoft SQL Server Express Edition (SQL Server Express) 是以 Microsoft SQL Server 為基礎，可支援大部分資料庫引擎的功能。 其設計方式是在預設情況下關閉非必要的功能和網路連接。 這樣做可減少受到惡意使用者攻擊的表面區域。  
@@ -32,11 +32,11 @@ Microsoft SQL Server Express Edition (SQL Server Express) 是以 Microsoft SQL S
 |||  
 |-|-|  
 |[Microsoft SQL Server 2005 Express Edition 線上叢書](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition 的完整文件。|  
-|[非系統管理員的使用者執行個體](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))中 SQL Server 線上叢書|說明如何建立和部署使用者執行個體。|  
-|[SQL Server Express 使用者執行個體](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|說明 ADO.NET 應用程式中的使用者執行個體功能。 提供有關如何啟用使用者執行個體、使用 <xref:System.Data.SqlClient.SqlConnection> 來連接至使用者執行個體、使用者執行個體存留期 (Lifetime) 和使用者執行個體案例的資訊。|  
+|SQL Server 線上叢書中[非系統管理員的使用者實例](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))|說明如何建立和部署使用者執行個體。|  
+|[SQL Server Express 使用者執行個體](sql-server-express-user-instances.md)|說明 ADO.NET 應用程式中的使用者執行個體功能。 提供有關如何啟用使用者執行個體、使用 <xref:System.Data.SqlClient.SqlConnection> 來連接至使用者執行個體、使用者執行個體存留期 (Lifetime) 和使用者執行個體案例的資訊。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [SQL Server Express 使用者執行個體](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 安全性](sql-server-security.md)
+- [SQL Server Express 使用者執行個體](sql-server-express-user-instances.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

@@ -1,19 +1,19 @@
 ---
-title: HOW TO：將資料表表示為類別
+title: 作法：將資料表表示為類別
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
-ms.openlocfilehash: ff943fbc7ae137128d6c635fd2366ad14cf70d15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1169def4e0180b1d14103d4a968ff3ed56f63d0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620024"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781755"
 ---
-# <a name="how-to-represent-tables-as-classes"></a>HOW TO：將資料表表示為類別
-使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.TableAttribute>屬性來指定資料庫資料表相關聯的實體類別的類別。  
+# <a name="how-to-represent-tables-as-classes"></a>作法：將資料表表示為類別
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用屬性來指定類別，做為與資料庫資料表相關<xref:System.Data.Linq.Mapping.TableAttribute>聯的實體類別。  
   
 ### <a name="to-map-a-class-to-a-database-table"></a>若要將類別對應至資料庫資料表  
   
@@ -29,5 +29,5 @@ ms.locfileid: "64620024"
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [如何：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [LINQ to SQL 物件模型](the-linq-to-sql-object-model.md)
+- [如何：使用程式碼編輯器自訂實體類別](how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c0abc63610f3f1ed6e8a556c44ee15edc1ea20b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f08c4a97b8cbc61a735bb9c1e6a31a698e7eefc1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741836"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787355"
 ---
 # <a name="getscope2-method"></a>GetScope2 方法
 取得匯入範圍。  
@@ -39,25 +39,25 @@ HRESULT GetScope2(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 目標組件的識別碼。  
+ 目標群組件的識別碼。  
   
  `FileToken`  
- 要從中匯入的檔案識別碼。  
+ 要匯入之檔案的識別碼。  
   
  `dwScope`  
- 若要匯入的以零為起始範圍。  
+ 要匯入之以零為基底的範圍。  
   
  `ppImportScope`  
- 接收指標[IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)指定範圍的介面。  
+ 接收指定範圍之[IMetaDataImport2 介面](../metadata/imetadataimport2-interface.md)介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則會傳回 S_OK。  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink.h。  
+ 需要 alink. h。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 介面](ialink2-interface.md)
+- [IALink 介面](ialink-interface.md)
+- [ALink API](index.md)

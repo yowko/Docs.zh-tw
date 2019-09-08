@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: 8ed62d0193639b434d66c446e3b9d0c184577a80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e958c96e304962dace72e90b9266b57943f01ac9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949554"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785743"
 ---
 # <a name="connection-events"></a>Connection 的事件
-所有的 .NET Framework 資料提供者都有**連接**物件, 其中包含兩個事件, 可讓您用來從資料來源取出參考用訊息, 或判斷**連接**的狀態是否已變更。 下表描述**連接**物件的事件。  
+所有的 .NET Framework 資料提供者都有**連接**物件，其中包含兩個事件，可讓您用來從資料來源取出參考用訊息，或判斷**連接**的狀態是否已變更。 下表描述**連接**物件的事件。  
   
 |Event - 事件|說明|  
 |-----------|-----------------|  
@@ -21,9 +21,9 @@ ms.locfileid: "69949554"
 |**StateChange**|當**連接**的狀態變更時發生。|  
   
 ## <a name="working-with-the-infomessage-event"></a>使用 InfoMessage 事件  
- 您可以使用 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 物件的 <xref:System.Data.SqlClient.SqlConnection> 事件，從 SQL Server 資料來源擷取警告和資訊訊息。 如果資料來源傳回嚴重性層級 11 到 16 的錯誤，則可能會擲回例外狀況。 不過，您可以使用 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 事件，從與錯誤無關的資料來源取得訊息。 以 Microsoft SQL Server 為例，任何嚴重性為 10 或以下的錯誤都視為資訊訊息，而且可以使用 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 事件進行擷取。 如需詳細資訊, 請參閱[資料庫引擎錯誤嚴重性](/sql/relational-databases/errors-events/database-engine-error-severities)一文。
+ 您可以使用 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 物件的 <xref:System.Data.SqlClient.SqlConnection> 事件，從 SQL Server 資料來源擷取警告和資訊訊息。 如果資料來源傳回嚴重性層級 11 到 16 的錯誤，則可能會擲回例外狀況。 不過，您可以使用 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 事件，從與錯誤無關的資料來源取得訊息。 以 Microsoft SQL Server 為例，任何嚴重性為 10 或以下的錯誤都視為資訊訊息，而且可以使用 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 事件進行擷取。 如需詳細資訊，請參閱[資料庫引擎錯誤嚴重性](/sql/relational-databases/errors-events/database-engine-error-severities)一文。
   
- 事件會在其<xref:System.Data.SqlClient.SqlInfoMessageEventArgs> Errors 屬性中接收物件, 其中包含來自資料來源的訊息集合。 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 您可以查詢此集合中的**錯誤**物件, 以取得錯誤號碼和郵件內文, 以及錯誤的來源。 SQL Server 的 .NET Framework 資料提供者也包含訊息來源處的資料庫、預存程序和行號等詳細資訊。  
+ 事件會在其<xref:System.Data.SqlClient.SqlInfoMessageEventArgs> Errors 屬性中接收物件，其中包含來自資料來源的訊息集合。 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 您可以查詢此集合中的**錯誤**物件，以取得錯誤號碼和郵件內文，以及錯誤的來源。 SQL Server 的 .NET Framework 資料提供者也包含訊息來源處的資料庫、預存程序和行號等詳細資訊。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會顯示如何加入 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 事件的事件處理常式。  
@@ -66,7 +66,7 @@ protected static void OnInfoMessage(
 ```  
   
 ## <a name="handling-errors-as-infomessages"></a>將錯誤視為 InfoMessage 處理  
- 只有在資訊訊息及警告訊息是從伺服器傳回時，才會正常地引發 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 事件。 不過, 當實際的錯誤發生時, 就會停止執行起始伺服器作業的**ExecuteNonQuery**或**ExecuteReader**方法, 並擲回例外狀況。  
+ 只有在資訊訊息及警告訊息是從伺服器傳回時，才會正常地引發 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 事件。 不過，當實際的錯誤發生時，就會停止執行起始伺服器作業的**ExecuteNonQuery**或**ExecuteReader**方法，並擲回例外狀況。  
   
  若要繼續處理命令中的其餘陳述式，而不理會伺服器產生的任何錯誤，請將 <xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A> 的 <xref:System.Data.SqlClient.SqlConnection> 屬性設定為 `true`。 這麼做會使得連接引發錯誤的 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> 事件，而非擲回例外狀況並中斷處理。 用戶端應用程式接下來處理這個事件並回應錯誤狀況。  
   
@@ -74,9 +74,9 @@ protected static void OnInfoMessage(
 > 必須將嚴重性層級 17 或以上的錯誤 (造成伺服器停止處理命令) 當做例外狀況處理。 在此情況下會擲回例外狀況，而不理會<xref:System.Data.SqlClient.SqlConnection.InfoMessage> 事件中如何處理錯誤。  
   
 ## <a name="working-with-the-statechange-event"></a>使用 StateChange 事件  
- 當**連接**的狀態變更時, 就會發生**StateChange**事件。 **StateChange**事件<xref:System.Data.StateChangeEventArgs>接收到, 可讓您使用**OriginalState**和**CurrentState**屬性來判斷**連接**狀態的變更。 **OriginalState**屬性是<xref:System.Data.ConnectionState>列舉, 表示**連接**變更之前的狀態。 **CurrentState**是<xref:System.Data.ConnectionState>列舉, 指出**連接**變更後的狀態。  
+ 當**連接**的狀態變更時，就會發生**StateChange**事件。 **StateChange**事件<xref:System.Data.StateChangeEventArgs>接收到，可讓您使用**OriginalState**和**CurrentState**屬性來判斷**連接**狀態的變更。 **OriginalState**屬性是<xref:System.Data.ConnectionState>列舉，表示**連接**變更之前的狀態。 **CurrentState**是<xref:System.Data.ConnectionState>列舉，指出**連接**變更後的狀態。  
   
- 下列程式碼範例會在**連接**狀態變更時, 使用**StateChange**事件將訊息寫入主控台。  
+ 下列程式碼範例會在**連接**狀態變更時，使用**StateChange**事件將訊息寫入主控台。  
   
 ```vb  
 ' Assumes connection represents a SqlConnection object.  
@@ -107,5 +107,5 @@ protected static void OnStateChange(object sender,
   
 ## <a name="see-also"></a>另請參閱
 
-- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [連接至資料來源](connecting-to-a-data-source.md)
+- [ADO.NET 概觀](ado-net-overview.md)

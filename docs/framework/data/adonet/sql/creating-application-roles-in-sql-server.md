@@ -2,12 +2,12 @@
 title: 在 SQL Server 中建立應用程式角色
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961171"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794283"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中建立應用程式角色
 應用程式角色可以用於將權限指派給應用程式，而不是資料庫角色或使用者。 使用者可以連接到資料庫、啟動應用程式角色，並採用授與應用程式的權限。 授與應用程式角色的權限在連接期間內都會維持有效。  
@@ -47,9 +47,9 @@ ms.locfileid: "69961171"
   
  您可能要考慮以下的替代方案。  
   
-- 藉由 EXECUTE AS 陳述式 (使用 NO REVERT 和 WITH COOKIE 子句) 使用內容切換。 您可以在資料庫中建立不與登入對應的使用者帳戶， 然後再將權限指派給這個帳戶。 以無登入的使用者來使用 EXECUTE AS 比較安全，因為這種方式是以權限為基礎，而不是以密碼為基礎。 如需詳細資訊, 請參閱[在 SQL Server 中使用模擬自訂許可權](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
+- 藉由 EXECUTE AS 陳述式 (使用 NO REVERT 和 WITH COOKIE 子句) 使用內容切換。 您可以在資料庫中建立不與登入對應的使用者帳戶， 然後再將權限指派給這個帳戶。 以無登入的使用者來使用 EXECUTE AS 比較安全，因為這種方式是以權限為基礎，而不是以密碼為基礎。 如需詳細資訊，請參閱[在 SQL Server 中使用模擬自訂許可權](customizing-permissions-with-impersonation-in-sql-server.md)。  
   
-- 使用憑證來簽署預存程序，且僅授與執行程序的權限。 如需詳細資訊, 請參閱[在 SQL Server 中簽署預存程式](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
+- 使用憑證來簽署預存程序，且僅授與執行程序的權限。 如需詳細資訊，請參閱[在 SQL Server 中簽署預存程式](signing-stored-procedures-in-sql-server.md)。  
   
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
@@ -60,7 +60,7 @@ ms.locfileid: "69961171"
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
+- [SQL Server 安全性概觀](overview-of-sql-server-security.md)
+- [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md)

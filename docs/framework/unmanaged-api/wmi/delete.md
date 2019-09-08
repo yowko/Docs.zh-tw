@@ -1,6 +1,6 @@
 ---
-title: 刪除函式 （Unmanaged API 參考）
-description: 刪除函式會從 CIM 類別定義中刪除指定的屬性和所有其限定詞。
+title: Delete 函式（非受控 API 參考）
+description: Delete 函式會從 CIM 類別定義中刪除指定的屬性及其所有限定詞。
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 965143eadd6e2dde498d5ee73e4f9e8bfded8a6e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636726"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798677"
 ---
 # <a name="delete-function"></a>Delete 函式
 
-刪除指定的屬性和其限定詞的所有從 CIM 類別定義。
+從 CIM 類別定義中刪除指定的屬性及其所有限定詞。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -42,17 +42,17 @@ HRESULT Delete (
 ## <a name="parameters"></a>參數
 
 `vFunc`\
-[in]未使用此參數。
+在未使用此參數。
 
 `ptr`\
-[in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
+在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `wszName`\
-[in]要刪除之屬性的名稱。 `wszName` 必須是有效的指標`LPCWSTR`。
+在要刪除的屬性名稱。 `wszName`必須是有效`LPCWSTR`的指標。
 
 ## <a name="return-value"></a>傳回值
 
-此函式所傳回的下列值中定義*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
+這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
@@ -60,24 +60,24 @@ HRESULT Delete (
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | 無法刪除屬性。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` 無效。 |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | 指定的屬性不存在。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體來完成此作業。 |
-| `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | 屬性被繼承自基底類別。 |
-| `WBEM_E_SYSTEM_PROPERTY` | | 系統屬性的屬性。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 記憶體不足，無法完成操作。 |
+| `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | 屬性繼承自基類。 |
+| `WBEM_E_SYSTEM_PROPERTY` | | 屬性是系統屬性。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | 函式會刪除目前的類別覆寫預設值。 已重新啟動此父類別中屬性的預設值。 |
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | 函式已刪除目前類別的覆寫預設值。 父類別中這個屬性的預設值已重新開機。 |
 
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete)方法。
+此函式會包裝對[IWbemClassObject：:D 刪除](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete)方法的呼叫。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** WMINet_Utils.idl
 
-**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 和效能計數器（非受控 API 參考）](index.md)

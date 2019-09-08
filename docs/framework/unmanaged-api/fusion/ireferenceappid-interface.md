@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25733e459423500352595d6be0eee26ef75ca7e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 522ed80f161f114af25e1fa7ad041c8238073d6f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789675"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796376"
 ---
 # <a name="ireferenceappid-interface"></a>IReferenceAppId 介面
-代表目前範圍中的應用程式的唯一識別碼的參考。  
+代表目前範圍中應用程式的唯一識別碼參考。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|`IReferenceAppId::get_CodeBase`|取得指標所參考的應用程式的程式碼識別項的字串表示`IReferenceAppId`。|  
-|`IReferenceAppId::put_CodeBase`|設定應用程式所參考的程式碼識別碼`IReferenceAppId`。|  
-|`IReferenceAppId::EnumAppPath`|取得的介面指標`IEnumReferenceIdentity`執行個體，包含`IReferenceIdentity`執行個體，表示這個成員`IReferenceAppId`。|  
-|`IReferenceAppId::get_SubscriptionId`|此訂用帳戶取得的 token 識別碼的字串表示的指標`IReferenceAppId`。|  
-|`IReferenceAppId::put_SubscriptionId`|此設定訂用帳戶的語彙基元識別碼`IReferenceAppId`設為指定的字串值。|  
+|`IReferenceAppId::get_CodeBase`|取得這個`IReferenceAppId`所參考應用程式之代碼識別碼的字串表示的指標。|  
+|`IReferenceAppId::put_CodeBase`|設定這個`IReferenceAppId`所參考之應用程式的代碼識別碼。|  
+|`IReferenceAppId::EnumAppPath`|取得`IEnumReferenceIdentity`實例的介面指標， `IReferenceIdentity`其中包含表示這個`IReferenceAppId`之成員的實例。|  
+|`IReferenceAppId::get_SubscriptionId`|取得這個`IReferenceAppId`之訂閱的 token 識別碼之字串表示的指標。|  
+|`IReferenceAppId::put_SubscriptionId`|將這個`IReferenceAppId`的訂閱的 token 識別碼設定為指定的字串值。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Isolation.h  
+ **標頭：** 隔離。h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IEnumReferenceIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)
-- [IReferenceIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [融合介面](fusion-interfaces.md)
+- [IEnumReferenceIdentity 介面](ienumreferenceidentity-interface.md)
+- [IReferenceIdentity 介面](ireferenceidentity-interface.md)

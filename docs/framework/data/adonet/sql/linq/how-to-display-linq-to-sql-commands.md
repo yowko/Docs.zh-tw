@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: d71eaf834ebf36d462f8581f0074b2f6a90bae17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f562dfd8f13c107249e697b77de7538df56fe2f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903119"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781955"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a>HOW TO：顯示 LINQ to SQL 命令
+# <a name="how-to-display-linq-to-sql-commands"></a>作法：顯示 LINQ to SQL 命令
 使用 <xref:System.Data.Linq.DataContext.GetCommand%2A>，可以顯示 SQL 命令和其他資訊。  
   
 ## <a name="example"></a>範例  
@@ -50,4 +50,4 @@ Connection: System.Data.SqlClient.SqlConnection
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [偵錯支援](debugging-support.md)
