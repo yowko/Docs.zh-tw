@@ -1,19 +1,19 @@
 ---
-title: 作法：藉由保留資料庫值來解決衝突
+title: HOW TO：藉由保留資料庫值來解決衝突
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: 828f0a21ca1ea4155f31dfbc87b01dc8c4b81e40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e42f48a188741c3ddff44f6444fa351192c8175f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928730"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793344"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>作法：藉由保留資料庫值來解決衝突
-若要先協調預期和實際資料庫值之間的差異再重新送出變更，可以使用 <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> 將找到的值保留在資料庫中。 這樣會覆寫物件模型 (Object Model) 中的目前值。 如需詳細資訊, [請參閱開放式平行存取:總覽](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
+若要先協調預期和實際資料庫值之間的差異再重新送出變更，可以使用 <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> 將找到的值保留在資料庫中。 這樣會覆寫物件模型 (Object Model) 中的目前值。 如需詳細資訊， [請參閱開放式平行存取：總覽](optimistic-concurrency-overview.md)。  
   
 > [!NOTE]
 > 在所有情況下，擷取資料庫中更新過的資料會先重新整理用戶端上的資料錄。 這個動作可確保下一次嘗試更新時，不會在相同的並行存取檢查時失敗。  
@@ -42,4 +42,4 @@ ms.locfileid: "69928730"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [如何：管理變更衝突](how-to-manage-change-conflicts.md)
