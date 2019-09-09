@@ -1,15 +1,15 @@
 ---
-title: 使用委派 (Visual Basic) 中的變異數
+title: 在委派中使用變異數（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 19eb3070c1b8359a4eb050e7cf2f16622f66ebe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787253"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169073"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>使用委派 (Visual Basic) 中的變異數
+# <a name="using-variance-in-delegates-visual-basic"></a>在委派中使用變異數（Visual Basic）
 
 當您將方法指派給委派時，「共變數」和「反變數」可讓您彈性地比對委派類型和方法簽章。 共變數允許某個方法的傳回型別與定義於委派中的傳回型別相比，其衍生程度較大。 反變數允許某個方法的參數類型與委派類型中的參數類型相比，其衍生程度較小。
 
@@ -48,7 +48,21 @@ End Class
 
 ### <a name="description"></a>描述
 
-此範例示範如何搭配其參數類型為委派簽章參數類型之基底類型的方法使用委派。 透過反變數，您可以使用一個事件處理常式，而不是不同的處理常式。 例如，您可以建立一個事件處理常式，該事件處理常式接受 `EventArgs` 輸入參數，並使用它來搭配將 `MouseEventArgs` 類型作為參數傳送的 `Button.MouseClick` 事件，以及搭配傳送 `KeyEventArgs` 參數的 `TextBox.KeyDown` 事件。
+此範例示範如何搭配其參數類型為委派簽章參數類型的基底類型方法來使用委派。 透過反變數，您可以使用一個事件處理常式，而不是不同的處理常式。 下列範例會使用兩個委派：
+
+- <xref:System.Windows.Forms.KeyEventHandler> 委派會定義 [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) 事件的簽章。 其簽章為：
+
+   ```vb
+   Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
+   ```
+
+- <xref:System.Windows.Forms.MouseEventHandler> 委派會定義 [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) 事件的簽章。 其簽章為：
+
+   ```vb
+   Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
+   ```
+
+此範例以 <xref:System.EventArgs> 參數定義事件處理常式，然後使用它來處理 `Button.KeyDown` 和 `Button.MouseClick` 事件。 由於 <xref:System.EventArgs> 同時是 <xref:System.Windows.Forms.KeyEventArgs> 和 <xref:System.Windows.Forms.MouseEventArgs> 的基底類型，因此可以這麼做。
 
 ### <a name="code"></a>程式碼
 

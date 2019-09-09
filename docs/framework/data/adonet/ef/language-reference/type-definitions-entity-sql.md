@@ -2,18 +2,18 @@
 title: 類型定義 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641401"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248955"
 ---
 # <a name="type-definitions-entity-sql"></a>類型定義 (Entity SQL)
 型別定義用於 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 內嵌函式中的宣告陳述式。  
   
 ## <a name="remarks"></a>備註  
- 內嵌函式的宣告陳述式組成[函式](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)關鍵字後面接著表示函式名稱 (例如"MyAvg")，後面接著括號 （適用於中的參數定義清單的識別項例如"dues collection （decimal)。  
+ 內嵌函式的宣告語句包含函[式關鍵字，](function-entity-sql.md)後面接著代表函式名稱的識別碼（例如 "MyAvg"），後面接著以括弧括住的參數定義清單（例如，「有費用的集合」（）。Decimal）」）。  
   
  參數定義清單包括零或多個參數定義。 每個參數定義包括一個識別項 (函式參數的名稱，例如 "dues")，後面接型別定義 (例如 "Collection(Decimal)")。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "64641401"
   
 - 關鍵字 `COLLECTION` 後面接以括號括住的其他型別定義 (例如 "Collection(AdventureWorks.Order)")。  
   
-- 關鍵字 ROW 後面接以括號括住的屬性定義清單 (例如 "Row(x AdventureWorks.Order)")。 屬性定義都有一種格式如"`identifier type_definition`， `identifier type_definition`，..."。  
+- 關鍵字 ROW 後面接以括號括住的屬性定義清單 (例如 "Row(x AdventureWorks.Order)")。 屬性定義的格式如 "`identifier type_definition`， `identifier type_definition`，..."。  
   
 - 關鍵字 REF 後面接以括號括住的識別項型別 (例如 "Ref(AdventureWorks.Order)")。 REF 型別定義運算子需要實體類型做為引數。 您不能指定基本型別做為引數。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "64641401"
   
  型別定義的選項是：  
   
-- `IdentifierName supported_type`或  
+- `IdentifierName supported_type`、或  
   
 - `IdentifierName` COLLECTION(`type_definition`)，或  
   
@@ -88,5 +88,5 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
   
 ## <a name="see-also"></a>另請參閱
 
-- [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL 概觀](entity-sql-overview.md)
+- [Entity SQL 參考](entity-sql-reference.md)

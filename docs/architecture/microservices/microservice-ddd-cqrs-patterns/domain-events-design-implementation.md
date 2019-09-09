@@ -4,7 +4,7 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 深入了�
 ms.date: 10/08/2018
 ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674255"
@@ -347,34 +347,34 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 - **Greg Young。What is a Domain Event?** (什麼是領域事件？) \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
-- **Jan Stenberg：Domain Events and Eventual Consistency** \ (領域事件與最終一致性)
+- **Jan Stenberg：Domain Events and Eventual Consistency** (領域事件與最終一致性) \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
-- **Jimmy Bogard：A better domain events pattern** \ (更佳的領域事件模式)
+- **Jimmy Bogard：A better domain events pattern** (更佳的領域事件模式) \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon：Effective Aggregate Design Part II:Making Aggregates Work Together** \ (有效彙總設計第二部分：讓彙總搭配運作)
+- **Vaughn Vernon：Effective Aggregate Design Part II:Making Aggregates Work Together** (有效彙總設計第二部分：讓彙總搭配運作) \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard：Strengthening your domain:Domain Events** \ (加強您的領域：領域事件)
+- **Jimmy Bogard：Strengthening your domain:Domain Events** (加強您的領域：領域事件) \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
-- **Tony Truong：Domain Events Pattern Example** \ (領域事件模式範例)
+- **Tony Truong：Domain Events Pattern Example** (領域事件模式範例) \
   <https://www.tonytruong.net/domain-events-pattern-example/>
 
-- **Udi Dahan.How to create fully encapsulated Domain Models** \ (如何建立完整封裝式領域模型)
+- **Udi Dahan.How to create fully encapsulated Domain Models** (如何建立完整封裝式領域模型) \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
-- **Udi Dahan.Domain Events – Take 2** \ (領域事件 - 第 2 步)
+- **Udi Dahan.Domain Events – Take 2** (領域事件 - 第 2 步) \
   <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
-- **Udi Dahan.Domain Events – Salvation** \ (領域事件 - 解答)
+- **Udi Dahan.Domain Events – Salvation** (領域事件 - 解答) \
   <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan Kronquist：Don't publish Domain Events, return them!** (別發佈領域事件，傳回它們！) \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
-- **Cesar de la Torre：Domain Events vs.Integration Events in DDD and microservices architectures** \ (DDD 與微服務架構中的整合事件)
+- **Cesar de la Torre：Domain Events vs.Integration Events in DDD and microservices architectures** (DDD 與微服務架構中的整合事件) \
   <https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
