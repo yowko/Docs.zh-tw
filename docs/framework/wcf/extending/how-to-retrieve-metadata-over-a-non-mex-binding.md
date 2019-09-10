@@ -2,14 +2,14 @@
 title: 作法：透過非 MEX 繫結擷取中繼資料
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3721657eb72663450261b4bc8627b250b1a4a14e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795580"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856039"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>HOW TO：透過非 MEX 繫結擷取中繼資料
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>作法：透過非 MEX 繫結擷取中繼資料
 本主題說明如何透過非 MEX 繫結，擷取 MEX 端點的中繼資料。 此範例中的程式碼是以[自訂安全中繼資料端點](../samples/custom-secure-metadata-endpoint.md)範例為基礎。  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>透過非 MEX 繫結擷取中繼資料  
@@ -85,7 +85,7 @@ ms.locfileid: "70795580"
   
 3. 建立 `MetadataExchangeClient` 並呼叫 `GetMetadata`。 這有兩種做法：您可以在組態中指定自訂繫結，或是在程式碼中指定自訂繫結，如下列範例所示。  
   
-    ```  
+    ```csharp
     // The custom binding is specified in configuration.  
     EndpointAddress mexAddress = new EndpointAddress("http://localhost:8000/ServiceModelSamples/Service/mex");  
   
@@ -116,7 +116,7 @@ ms.locfileid: "70795580"
   
 4. 建立 `WsdlImporter` 並呼叫 `ImportAllEndpoints`，如下列程式碼所示。  
   
-    ```  
+    ```csharp
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  

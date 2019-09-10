@@ -2,12 +2,12 @@
 title: 效能考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 99969d7991f613bd8049aac81669583372e0f2c6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: eb46b183ec1e930dfe5c4a1eea237024033c357d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248523"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854609"
 ---
 # <a name="performance-considerations-entity-framework"></a>效能考量 (Entity Framework)
 本主題說明 ADO.NET Entity Framework 的效能特性，並提供一些考量因素以協助提升 Entity Framework 應用程式的效能。  
@@ -18,7 +18,7 @@ ms.locfileid: "70248523"
 |運算|相對成本|頻率|註解|  
 |---------------|-------------------|---------------|--------------|  
 |載入中繼資料|一般|在每個應用程式定義域中執行一次。|Entity Framework 使用的模型和對應中繼資料會載入至 <xref:System.Data.Metadata.Edm.MetadataWorkspace>。 這個中繼資料會在全域中作快取，並在相同的應用程式定義域中，提供給其他 <xref:System.Data.Objects.ObjectContext> 執行個體使用。|  
-|開啟資料庫連接|適中<sup>1</sup>|需要時。|由於開啟資料庫的連接會耗用寶貴的資源，因此只[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]會在需要時開啟和關閉資料庫連接。 您也可以明確開啟連接。 如需詳細資訊，請參閱[管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。|  
+|開啟資料庫連接|適中<sup>1</sup>|需要時。|因為開啟資料庫的連接會耗用寶貴的資源，所以 Entity Framework 只會在需要時開啟和關閉資料庫連接。 您也可以明確開啟連接。 如需詳細資訊，請參閱[管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。|  
 |產生檢視|高|在每個應用程式定義域中執行一次。 (可以預先產生。)|在 Entity Framework 可以針對概念模型執行查詢，或儲存變更至資料來源之前，Entity Framework 必須產生本地查詢檢視集，才能存取資料庫。 由於產生這些檢視的成本很高，您可以預先產生檢視，在設計階段就把這些檢視加入至專案。 如需詳細資訊，請參閱[如何：預先產生視圖以改善查詢效能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。|  
 |準備查詢|中等<sup>2</sup>|針對每個唯一查詢執行一次。|包括組成查詢命令、根據模型和對應的中繼資料產生命令樹，以及定義傳回資料的形式等成本。 由於現在會快取 Entity SQL 查詢命令和 LINQ 查詢，因此後續執行相同查詢時可減少些許時間。 之後執行時您仍可以使用已編譯的 LINQ 查詢減少這種成本，且已編譯查詢可能比自動快取的 LINQ 查詢更有效率。 如需詳細資訊，請參閱[編譯的查詢（LINQ to Entities）](./language-reference/compiled-queries-linq-to-entities.md)。 如需 LINQ 查詢執行的一般資訊，請參閱[LINQ to Entities](./language-reference/linq-to-entities.md)。 **注意：** 不會自動快取將 `Enumerable.Contains` 運算子套用至記憶體中集合的 LINQ to Entities 查詢。 此外也不允許在已編譯的 LINQ 查詢中參數化記憶體中的集合。|  
 |執行查詢|低<sup>2</sup>|針對每個查詢執行一次。|使用 ADO.NET 資料提供者，針對資料來源執行命令的成本。 由於大部分的資料來源都會對查詢計畫作快取，後續執行相同查詢命令可能會減少些許時間。|  
@@ -116,7 +116,7 @@ ms.locfileid: "70248523"
   
 - 包含針對 SQL Server 2000 資料庫或其他資料來源之作業的明確異動，永遠會將明確異動提升至 DTC。  
   
-- 當連接是由 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 管理時，會執行包含針對 SQL Server 2005 之作業的明確異動。 發生這種情況，是因為每當單一異動內的連接關閉又重新開啟時，SQL Server 2005 會提升至 DTC，這是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的預設行為。 使用 SQL Server 2008 就不會發生 DTC 提升。 若要在使用 SQL Server 2005 時防止這個問題發生，您必須明確開啟和關閉交易內的連接。 如需詳細資訊，請參閱[管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
+- 當連接由 Entity Framework 管理時，具有 SQL Server 2005 作業的明確交易。 發生這種情況的原因是，每當在單一交易內關閉並重新開啟連接（這是 Entity Framework 的預設行為）時，SQL Server 2005 就會升級為 DTC。 使用 SQL Server 2008 就不會發生 DTC 提升。 若要在使用 SQL Server 2005 時防止這個問題發生，您必須明確開啟和關閉交易內的連接。 如需詳細資訊，請參閱[管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
  當一個或多個作業在 <xref:System.Transactions> 交易內執行時，會使用明確交易。 如需詳細資訊，請參閱[管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "70248523"
  在大多數的情況下，您應該在 <xref:System.Data.Objects.ObjectContext> 陳述式 (Visual Basic 中的 `using`) 中，建立 `Using…End Using` 執行個體。 確保當程式碼存在陳述式區塊時，與內容物件關聯的資源會自動公開，這麼做可以提高效能。 不過，當控制項繫結至由物件內容管理的物件時，只要繫結是必要且為手動公開的，則應維護 <xref:System.Data.Objects.ObjectContext> 執行個體。 如需詳細資訊，請參閱[管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 #### <a name="consider-opening-the-database-connection-manually"></a>考慮手動開啟資料庫連接  
- 當您的應用程式執行一系列的物件查詢<xref:System.Data.Objects.ObjectContext.SaveChanges%2A> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ，或是經常呼叫以將建立、更新和刪除作業保存到資料來源時，必須持續開啟並關閉與資料來源的連接。 在這些情況下，請考慮在這些連接開始時，手動開啟連接，然後當作業完成時，關閉或處置連接。 如需詳細資訊，請參閱[管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
+ 當您的應用程式執行一系列的物件查詢， <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>或是經常呼叫以保存資料來源的建立、更新和刪除作業時，Entity Framework 必須持續開啟並關閉與資料來源的連接。 在這些情況下，請考慮在這些連接開始時，手動開啟連接，然後當作業完成時，關閉或處置連接。 如需詳細資訊，請參閱[管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 ## <a name="performance-data"></a>效能資料  
  Entity Framework 的部分效能資料會在下列[ADO.NET 小組 blog](https://go.microsoft.com/fwlink/?LinkId=91905)的文章中發佈：  

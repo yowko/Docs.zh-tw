@@ -3,12 +3,12 @@ title: 使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程�
 description: 了解如何使用 Infer.NET 進行概率程式設計，以 TrueSkill 的簡化版本為基礎，建立遊戲配對清單應用程式。
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
-ms.translationtype: HT
+ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211428"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855781"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式
 
@@ -22,7 +22,7 @@ ms.locfileid: "65211428"
 
 - 本機開發環境設定
 
-  本操作指南需要您具備可用於開發的電腦。 .NET [只要 10 分鐘立即上手](https://www.microsoft.com/net/core) \(英文\) 教學課程中有關於在 Mac、PC 或 Linux 上設定本機開發環境的指示。
+  本操作指南需要您具備可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 MacOS、Windows 或 Linux 上設定本機開發環境的指示。
 
 ## <a name="create-your-app"></a>建立應用程式
 

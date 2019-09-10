@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 55eda4ce2fd109715076f81d53e93a80d40cbfa3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313654"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851572"
 ---
 # <a name="create-resource-files-for-net-apps"></a>建立 .NET 應用程式的資源檔
 
@@ -74,7 +74,7 @@ HelpMenuName=Help
 
  文字檔中允許空字串 (即其值為 <xref:System.String.Empty?displayProperty=nameWithType> 的資源)。 例如：
 
-```
+```text
 EmptyString=
 ```
 
@@ -131,7 +131,7 @@ vbc greeting.vb -resource:GreetingResources.resources
 
  如果您使用 C#，而且原始程式碼檔案命名為 Greeting.cs，則下列命令會建立包含內嵌 .resources 檔案的可執行檔：
 
- ```console
+```console
 csc greeting.cs -resource:GreetingResources.resources
 ```
 

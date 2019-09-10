@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d51149c01b4c8018609ca9313cc4eea2afbb5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f32924c8c104f37fdb98a2a9ff104b6f6c19e478
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946565"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853842"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在 Managed 程式碼中建立原型
 本主題描述如何存取 Unmanaged 函式，並介紹數個以 Managed 程式碼來註解方法定義的屬性欄位。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
@@ -89,7 +89,7 @@ extern "C" int MessageBox(
   
  下表列出一組平台叫用的完整屬性欄位。 在每個欄位裡，資料表包含預設值以及連結，關於如何使用這些欄位來定義 Unmanaged DLL 函式的詳細資訊。  
   
-|欄位|說明|  
+|欄位|描述|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|啟用或停用自動調整對應。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|指定用來傳遞方法引數的呼叫慣例。 預設值是 `WinAPI` ，它對應至適用於 32 位元 Intel 平台的 `__stdcall` 。|  
@@ -103,7 +103,7 @@ extern "C" int MessageBox(
  如需詳細參考資訊，請參閱 <xref:System.Runtime.InteropServices.DllImportAttribute>。  
   
 ## <a name="platform-invoke-security-considerations"></a>平台叫用安全性考量  
- <xref:System.Security.Permissions.SecurityAction> 列舉的 `Assert`、`Deny` 和 `PermitOnly` 成員稱為「堆疊查核修飾詞」  。 如果這些成員被做為平台叫用宣告式和 COM 介面定義語言 (IDL) 陳述式的宣告式屬性，就會忽略這些成員。  
+ <xref:System.Security.Permissions.SecurityAction> 列舉的 `Assert`、`Deny` 和 `PermitOnly` 成員稱為「堆疊查核修飾詞」。 如果這些成員被做為平台叫用宣告式和 COM 介面定義語言 (IDL) 陳述式的宣告式屬性，就會忽略這些成員。  
   
 ### <a name="platform-invoke-examples"></a>平台叫用範例  
  本節中的平台叫用範例將說明如何使用具有堆疊查核行程修飾詞的  `RegistryPermission` 屬性。  
@@ -189,7 +189,7 @@ class PInvokeScenario
   
  下列 COM Interop 介面宣告忽略 `Assert` 、 `Deny` 和 `PermitOnly` 修飾詞，類似於先前章節中的平台叫用範例。  
   
-```  
+```csharp
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IAssertStubsItf  
 {  
@@ -220,7 +220,7 @@ interface IAssertStubsItf
   
  此外，如下列範例所示，在 COM Interop 介面宣告的情況下，不接受 `Demand` 修飾詞。  
   
-```  
+```csharp  
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IDemandStubsItf  
 {  

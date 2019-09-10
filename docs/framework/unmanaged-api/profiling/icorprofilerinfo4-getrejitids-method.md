@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 805ceb60d2ac122df2382656b95b7bf5e7509bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049475"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855948"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs 方法
-傳回識別 JIT 重新編譯的所有版本指定的函式仍配置的識別碼陣列。 這包括已後續還原，但尚未釋放 （比方說，當應用程式定義域，其中包含已還原的函式是仍在使用中） 的函式的 JIT 重新編譯版本。  
+傳回識別碼的陣列，識別仍然配置的指定函式的所有 JIT 重新編譯版本。 這包括 JIT 重新編譯的函式版本，這些函數之後已還原但尚未釋放（例如，當包含已還原函式的應用程式域仍在使用中時）。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
 HRESULT GetReJITIDs (  
      [in]  FunctionID          functionId,  
      [in]  ULONG               cReJitIds,  
@@ -39,28 +39,28 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in]`FunctionID`函式執行個體，要列舉的版本。  
+ 在`FunctionID`要列舉版本之函式實例的。  
   
  `cReJitIds`  
- [in]在中所配置的 JIT 重新編譯識別碼數目`reJitIds`陣列。  
+ 在在`reJitIds`陣列中配置的 JIT 重新編譯識別碼數目。  
   
  `pcReJitIds`  
- [out]JIT 重新編譯識別碼實際數目。  
+ 脫銷JIT 重新編譯識別碼的實際數目。  
   
  `reJitIds`  
- [out]呼叫端配置的陣列會包含指定的函式的 JIT 重新編譯識別碼。  
+ 脫銷呼叫端配置的陣列，其中將包含所指定函式的 JIT 重新編譯識別碼。  
   
 ## <a name="remarks"></a>備註  
- `GetReJITIDs` 列舉指定的函式執行個體的作用中 JIT 重新編譯識別碼。 它會遵循相同的使用方式模式與其他`ICorProfilerInfo`接受呼叫端配置緩衝區的函式。  
+ `GetReJITIDs`列舉指定函式實例之使用中 JIT 重新編譯的識別碼。 它會遵循與其他`ICorProfilerInfo`接受呼叫者配置緩衝區的函式相同的使用模式。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** Corprof.idl .idl，Corprof.idl。h  
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

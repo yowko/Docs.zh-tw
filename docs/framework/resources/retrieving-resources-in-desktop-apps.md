@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f2bfb1078478aea5dffab66ba5f8c7d553262968
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941462"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851582"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>擷取桌面應用程式中的資源
 當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的 [從 .resources 檔擷取資源](#from_file) 一節中所述。  若要擷取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中的資源，請參閱 Windows 開發人員中心的 [建立和擷取 Windows 市集應用程式中的資源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 。  
@@ -43,19 +43,19 @@ ms.locfileid: "69941462"
 ### <a name="retrieving-string-data-an-example"></a>擷取字串資料：範例  
  下列範例會呼叫 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 方法來擷取目前 UI 文化特性的字串資源。 其中包含英文 (美國) 文化特性的中性字串資源，以及法文 (法國) 和俄文 (俄羅斯) 文化特性的當地語系化資源。 下列英文 (美國) 資源是在名為 Strings.txt 的檔案中：  
   
-```  
+```text
 TimeHeader=The current time is  
 ```  
   
  法文 (法國) 資源是在名為 Strings.fr-FR.txt 的檔案中：  
   
-```  
+```text
 TimeHeader=L'heure actuelle est  
 ```  
   
  俄文 (俄羅斯) 資源是在名為 Strings.ru-RU-txt 的檔案中：  
   
-```  
+```text
 TimeHeader=Текущее время —  
 ```  
   
@@ -66,7 +66,7 @@ TimeHeader=Текущее время —
   
  下列批次 (.bat) 檔案會編譯此範例，並在適當的目錄中產生附屬組件。 然後提供適用於 C# 語言和編譯器的命令。 若為 Visual Basic，請將 `csc` 變更為 `vbc`，並將 `GetString.cs` 變更為 `GetString.vb`。  
   
-```  
+```console
 resgen strings.txt  
 csc GetString.cs -resource:strings.resources  
   
@@ -96,7 +96,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  您可以使用下列批次檔來建立 C# 範例。 若是 Visual Basic，請將 `csc` 變更為 `vbc`，並將原始程式碼檔案的副檔名從 `.cs` 變更為 `.vb`。  
   
-```  
+```console
 csc CreateResources.cs  
 CreateResources  
   
@@ -122,7 +122,7 @@ csc GetStream.cs -resource:AppResources.resources
   
  您可以建立必要的資源檔和組件，並藉由執行下列批次檔來執行應用程式。 您必須使用 `/r` 選項將 UIElements.dll 的參考提供給 Resgen.exe，使其可以存取有關 `PersonTable` 結構的資訊。 如果使用 C#，請將 `vbc` 編譯器名稱取代成 `csc`，並將 `.vb` 副檔名取代成 `.cs`。  
   
-```  
+```console
 vbc -t:library UIElements.vb  
 vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
@@ -166,21 +166,21 @@ GetObject.exe
 ### <a name="an-example"></a>範例  
  下列範例說明資源管理員如何直接從 .resources 檔擷取資源。 此範例是由英文 (美國)、法文 (法國) 和俄文 (俄羅斯) 文化特性的三個文字資源檔所組成。 英文 (美國) 是此範例的預設文化特性。 其資源會儲存在以下名為 Strings.txt 的檔案中：  
   
-```  
+```text
 Greeting=Hello  
 Prompt=What is your name?  
 ```  
   
  法文 (法國) 文化特性的資源會儲存在以下名為 Strings.fr-FR.txt 的檔案中：  
   
-```  
+```text 
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
   
  俄文 (俄羅斯) 文化特性的資源會儲存在以下名為 Strings.ru-RU.txt 的檔案中：  
   
-```  
+```text
 Greeting=Здравствуйте  
 Prompt=Как вас зовут?  
 ```  
@@ -192,7 +192,7 @@ Prompt=Как вас зовут?
   
  您可以執行下列批次檔來編譯 C# 版的範例。 如果使用 Visual Basic，請將 `csc` 取代成 `vbc`，並將 `.cs` 副檔名取代成 `.vb`。  
   
-```  
+```console
 Md Resources  
 Resgen Strings.txt Resources\Strings.resources  
 Resgen Strings.fr-FR.txt Resources\Strings.fr-FR.resources  

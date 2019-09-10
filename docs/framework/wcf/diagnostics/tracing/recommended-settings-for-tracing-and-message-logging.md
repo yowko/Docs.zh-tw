@@ -2,18 +2,18 @@
 title: 追蹤與訊息記錄的建議設定
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: fa6dc74a26f6a76591a15c549a892f31a65c521e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e671762edb2d1ca71ce14cb6ef66c64e02bc297
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779726"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856091"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>追蹤與訊息記錄的建議設定
 本主題將說明不同作業環境中，建議的追蹤和訊息記錄設定。  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>實際執行環境的建議設定  
- 如果您使用 WCF 追蹤來源，請將實際執行環境的 `switchValue` 設為 Warning。 如果您使用 WCF `System.ServiceModel` 追蹤來源，請將 `switchValue` 屬性設為 `Warning` 以及將 `propagateActivity` 屬性設為 `true`。 如果您使用的是使用者定義的追蹤來源，請將 `switchValue` 屬性設為 `Warning, ActivityTracing`。 這可以使用手動[組態編輯器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。 如果您無法預測對效能的衝擊，則可在之前提到的所有案例中，將 `switchValue` 屬性設為 `Information`，如此就會產生相當大量的追蹤資料。 以下範例將示範這些建議的設定。  
+ 如果您使用 WCF 追蹤來源，請將實際執行環境的 `switchValue` 設為 Warning。 如果您使用 WCF `System.ServiceModel` 追蹤來源，請將 `switchValue` 屬性設為 `Warning` 以及將 `propagateActivity` 屬性設為 `true`。 如果您使用的是使用者定義的追蹤來源，請將 `switchValue` 屬性設為 `Warning, ActivityTracing`。 這可以使用設定[編輯器工具（svcconfigeditor.exe）](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)手動完成。 如果您無法預測對效能的衝擊，則可在之前提到的所有案例中，將 `switchValue` 屬性設為 `Information`，如此就會產生相當大量的追蹤資料。 以下範例將示範這些建議的設定。  
   
 ```xml  
 <configuration>  
@@ -97,18 +97,18 @@ ms.locfileid: "61779726"
 ```  
   
 ## <a name="using-wmi-to-modify-settings"></a>使用 WMI 修改設定  
- 您可以使用 WMI 在執行階段變更組態設定 (藉由啟用組態中的 `wmiProviderEnabled` 屬性，如之前的組態範例中所示範)。 例如，您可以在 CIM Studio 中使用 WMI，將執行階段的追蹤來源層級從 Warning 變更為 Information。 您應注意的是，以此方式執行即時偵錯的效能成本可能會相當高。 如需使用 WMI 的詳細資訊，請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)主題。  
+ 您可以使用 WMI 在執行階段變更組態設定 (藉由啟用組態中的 `wmiProviderEnabled` 屬性，如之前的組態範例中所示範)。 例如，您可以在 CIM Studio 中使用 WMI，將執行階段的追蹤來源層級從 Warning 變更為 Information。 您應注意的是，以此方式執行即時偵錯的效能成本可能會相當高。 如需使用 WMI 的詳細資訊，請參閱[使用 Windows Management Instrumentation 診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)主題。  
   
 ## <a name="enable-correlated-events-in-aspnet-tracing"></a>啟用 ASP.NET 追蹤中的相互關聯事件  
- ASP.NET 事件不會設定相互關聯 ID (ActivityID)，除非 ASP.NET 事件追蹤開啟。 若要正確看到相互關聯的事件，您必須開啟 ASP.NET 事件追蹤命令主控台中使用下列命令，其中可以叫用方法是前往**開始**，**執行**並輸入**cmd**,  
+ ASP.NET 事件不會設定相互關聯 ID (ActivityID)，除非 ASP.NET 事件追蹤開啟。 若要正確查看相互關聯事件，您必須在命令主控台中使用下列命令來開啟 ASP.NET 事件追蹤，方法是前往 [**開始**]、[**執行**]，然後輸入**cmd**，  
   
-```  
+```console  
 logman start mytrace -pf logman.providers -o test.etl –ets  
 ```  
   
  若要關閉 ASP.NET 事件追蹤，請使用下列命令，  
   
-```  
+```console
 logman stop mytrace -ets  
 ```  
   

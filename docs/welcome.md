@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/06/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8407bedc6b7b9e5e3263b37747050eba82eea653
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "68952241"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855474"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -68,4 +68,4 @@ ms.locfileid: "68952241"
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
-您可以加入已活躍於 [.NET 社群 (英文)](https://www.microsoft.com/net/community) 的其他人，了解最新消息或尋求協助。
+您可以加入已活躍於 [.NET 社群 (英文)](https://dotnet.microsoft.com/platform/community) 的其他人，了解最新消息或尋求協助。

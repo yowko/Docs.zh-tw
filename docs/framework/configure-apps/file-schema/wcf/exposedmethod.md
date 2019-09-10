@@ -2,20 +2,22 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 032139b714aa11079c7ee8610c332e404b3981ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46f2872fb289c2793c356ea179deb3ce52e6d65e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919005"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855304"
 ---
 # <a name="exposedmethod"></a>\<exposedMethod >
 表示 COM+ 方法，這個方法會在 COM+ 元件上的介面公開為 Web 服務時公開。  
   
- \<system.ServiceModel>  
-\<comContracts>  
-\<comContract>  
-\<方法 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContract >** ](comcontract.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<exposedMethods >** ](exposedmethods.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<exposedMethod >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +36,7 @@ ms.locfileid: "69919005"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |NAME|包含 COM+ 方法的字串，這個方法會在 COM+ 元件上的介面公開為 Web 服務時公開。|  
   
@@ -54,7 +56,7 @@ ms.locfileid: "69919005"
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- 當您同時執行 ComSvcConfig 時, 它會產生下列服務合約, 並將先前所述的方法列示為[ \<exposedMethod >](exposedmethod.md)元素。  
+ 當您同時執行 ComSvcConfig 時，它會產生下列服務合約，並將先前所述的方法列示為[ \<exposedMethod >](exposedmethod.md)元素。  
   
 ```xml  
 <comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
@@ -66,7 +68,7 @@ ms.locfileid: "69919005"
 </comContract>
 ```  
   
- 在服務初始化期間, 執行時間會藉由反映並僅新增[ \<exposedMethod >](exposedmethod.md)專案清單中包含的方法, 嘗試產生服務合約。 這時會針對每個未包含在服務合約中的介面方法加以追蹤。  
+ 在服務初始化期間，執行時間會藉由反映並僅新增[ \<exposedMethod >](exposedmethod.md)專案清單中包含的方法，嘗試產生服務合約。 這時會針對每個未包含在服務合約中的介面方法加以追蹤。  
   
 ## <a name="see-also"></a>另請參閱
 

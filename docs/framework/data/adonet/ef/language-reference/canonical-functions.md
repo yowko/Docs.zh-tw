@@ -2,12 +2,12 @@
 title: 標準函式
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 8949735ba4712b721460335b4579f0a268c91aea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f8ca9e2027e82db89e91287fda02d2014d53f325
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251281"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854507"
 ---
 # <a name="canonical-functions"></a>標準函式
 本節討論所有資料提供者都支援，而且可由所有查詢技術使用的標準函式。 標準函式無法由提供者擴允。  
@@ -18,9 +18,9 @@ ms.locfileid: "70251281"
   
  在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢中使用標準函式時，會在資料來源中呼叫適當的函式。  
   
- 所有標準函式都必須明確指定 null 輸入行為和錯誤條件。 存放區提供者應遵守該行為，但 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 並不強制執行此行為。  
+ 所有標準函式都必須明確指定 null 輸入行為和錯誤條件。 存放區提供者應符合該行為，但 Entity Framework 不會強制執行此行為。  
   
- 針對 LINQ 案例，針對的[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]查詢牽涉到將 CLR 方法對應到基礎資料來源中的方法。 CLR 方法會對應到標準函式，這樣一來便會正確對應一組特定的方法，而不用顧慮資料來源為何。  
+ 針對 LINQ 案例，針對 Entity Framework 的查詢牽涉到將 CLR 方法對應到基礎資料來源中的方法。 CLR 方法會對應到標準函式，這樣一來便會正確對應一組特定的方法，而不用顧慮資料來源為何。  
   
 ## <a name="canonical-functions-namespace"></a>標準函式命名空間  
  標準函式的命名空間為 <xref:System.Data.Metadata.Edm>。 <xref:System.Data.Metadata.Edm> 命名空間會自動包含在所有查詢中。 但是，如果匯入了另一個命名空間，包含與標準函式同名的函式 (在 <xref:System.Data.Metadata.Edm> 命名空間中)，您就必須指定命名空間。  

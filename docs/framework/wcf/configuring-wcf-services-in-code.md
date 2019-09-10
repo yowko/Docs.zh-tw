@@ -2,15 +2,15 @@
 title: 在程式碼中設定 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 699549305ce8ca17480285e33570c01d00c7cb97
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d2ef7b2095bf7f238a25f2db0e5d3cf47e885550
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948434"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855638"
 ---
 # <a name="configuring-wcf-services-in-code"></a>在程式碼中設定 WCF 服務
-Windows Communication Foundation (WCF) 可讓開發人員使用設定檔或程式碼來設定服務。  當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 WCF 也可以讓您在程式碼中設定服務。 在舊版的 WCF (4.0 和更早版本) 中, 您可以輕鬆地在自我裝載案例中設定<xref:System.ServiceModel.ServiceHost>程式碼中的服務, 此類別可讓您在呼叫 ServiceHost 之前設定端點和行為。 但是在 Web 裝載案例中，您就無法直接存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從 .NET 4.5 開始, WCF 提供更簡單的方式, 在程式碼中設定自我裝載和 web 裝載的服務。  
+Windows Communication Foundation （WCF）可讓開發人員使用設定檔或程式碼來設定服務。  當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 WCF 也可以讓您在程式碼中設定服務。 在舊版的 WCF （4.0 和更早版本）中，您可以輕鬆地在自我裝載案例中設定<xref:System.ServiceModel.ServiceHost>程式碼中的服務，此類別可讓您在呼叫 ServiceHost 之前設定端點和行為。 但是在 Web 裝載案例中，您就無法直接存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從 .NET 4.5 開始，WCF 提供更簡單的方式，在程式碼中設定自我裝載和 web 裝載的服務。  
   
 ## <a name="the-configure-method"></a>Configure 方法  
  只需定義名為 `Configure` 的公用靜態方法，並在您的服務實作類別中包含下列簽章：  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) 可讓開發人員使用設定檔或程�
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Configure 方法接受可讓開發人員加入端點和行為的 <xref:System.ServiceModel.ServiceConfiguration> 執行個體。 在開啟服務主機之前, WCF 會呼叫這個方法。 一旦定義之後，將會忽略 app.config 或 web.config 檔案中指定的任何服務組態設定。  
+ Configure 方法接受可讓開發人員加入端點和行為的 <xref:System.ServiceModel.ServiceConfiguration> 執行個體。 在開啟服務主機之前，WCF 會呼叫這個方法。 一旦定義之後，將會忽略 app.config 或 web.config 檔案中指定的任何服務組態設定。  
   
  下列程式碼片段說明如何定義 `Configure` 方法，以及加入服務端點、端點行為和服務行為：  
   
@@ -77,9 +77,9 @@ public class Service1 : IService1
 }   
 ```  
   
- 只有在未<xref:System.ServiceModel.ServiceConfiguration>以程式`protocolMappings`設計方式將應用程式端點新增至時, 才會使用 [< >] 區段中的設定。您可以選擇性地從預設應用程式佈建檔載入服務設定, 方法<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>是呼叫, 然後變更設定。 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 類別也允許您從集中式組態載入組態。 下列程式碼說明如何實作此作業：  
+ 只有在未<xref:System.ServiceModel.ServiceConfiguration>以程式`protocolMappings`設計方式將應用程式端點新增至時，才會使用 [< >] 區段中的設定。您可以選擇性地從預設應用程式佈建檔載入服務設定，方法<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>是呼叫，然後變更設定。 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 類別也允許您從集中式組態載入組態。 下列程式碼說明如何實作此作業：  
   
-```  
+```csharp
 public class Service1 : IService1   
 {   
     public void DoWork();   
@@ -91,7 +91,7 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> 請注意<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> , 會`host`忽略`service` <`system.serviceModel`> 之 < > 標記內的 < > 設定。 在概念上`host`, < > 是關於主機設定, 而不是服務設定, 它會在 Configure 方法執行之前載入。  
+> 請注意<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ，會`host`忽略`service` <`system.serviceModel`> 之 < > 標記內的 < > 設定。 在概念上`host`，< > 是關於主機設定，而不是服務設定，它會在 Configure 方法執行之前載入。  
   
 ## <a name="see-also"></a>另請參閱
 

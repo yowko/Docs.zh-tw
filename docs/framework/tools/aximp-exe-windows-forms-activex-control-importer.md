@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c8c3c293e28788143cd1bed07acc941d448700f2
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915426"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851476"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Form ActiveX 控制項匯入工具)
 ActiveX 控制項匯入工具可以將 ActiveX 控制項在 COM 類型程式庫中的類型定義，轉換成 Windows Form 控制項。  
@@ -30,7 +30,7 @@ ActiveX 控制項匯入工具可以將 ActiveX 控制項在 COM 類型程式庫�
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
@@ -70,12 +70,12 @@ aximp [options]{file.dll | file.ocx}
   
  當您在 shdocvw.dll 上執行 Aximp.exe 時，必定會在執行這個工具的目錄中建立另一個名為 shdocvw.dll 的檔案。 如果這個產生的檔案是置於 Documents and Settings 目錄中，它將會對 Microsoft Internet Explorer 和 Windows 檔案總管造成問題。 當電腦重新開機時，Windows 會在搜尋 system32 目錄之前，先在 Documents and Settings 目錄中尋找 shdocvw.dll 的複本。 它會使用在 Documents and Settings 目錄中找到的複本，並嘗試載入 Managed 包裝函式。 Internet Explorer 和 Windows 檔案總管將無法正常運作，因為它們必須依賴位於 system32 目錄中之 shdocvw.dll 版本中的轉譯引擎。 如果發生這種問題，請刪除 Documents and Settings 目錄中的 shdocvw.dll 複本，然後重新啟動電腦。  
   
- 使用 Aximp.exe 搭配 shdocvw.dll 來建立用於應用程式開發的 .NET 組件時，可能也會導致問題。 在這種情況下，您的應用程式將會載入 shdocvw.dll 的系統版本和產生的版本，而且系統版本具有優先權。 在這個情況下，當您試圖將 Web 網頁載入到 WebBrowser ActiveX 控制項內部時，系統會以 [開啟/儲存] 對話方塊提示使用者。 當使用者按一下 [開啟]  時，將會在 Internet Explorer 中開啟網頁。 這種情形只會在使用執行 Internet Explorer 第 6 版 (含) 以前版本的電腦上發生。 若要避免這個問題，請使用受控 <xref:System.Windows.Forms.WebBrowser> 控制項或使用 Visual Studio 來產生受控 shdocvw.dll，如以下連結所述：[如何：將參考新增至類型程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)。  
+ 使用 Aximp.exe 搭配 shdocvw.dll 來建立用於應用程式開發的 .NET 組件時，可能也會導致問題。 在這種情況下，您的應用程式將會載入 shdocvw.dll 的系統版本和產生的版本，而且系統版本具有優先權。 在這個情況下，當您試圖將 Web 網頁載入到 WebBrowser ActiveX 控制項內部時，系統會以 [開啟/儲存] 對話方塊提示使用者。 當使用者按一下 [開啟] 時，將會在 Internet Explorer 中開啟網頁。 這種情形只會在使用執行 Internet Explorer 第 6 版 (含) 以前版本的電腦上發生。 若要避免這個問題，請使用受控 <xref:System.Windows.Forms.WebBrowser> 控制項或使用 Visual Studio 來產生受控 shdocvw.dll，如以下連結所述：[如何：將參考新增至類型程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)。  
   
 ## <a name="example"></a>範例  
  下列命令會產生 Media Player 控制項 `msdxm.ocx` 的 MediaPlayer.dll 和 AxMediaPlayer.dll。  
   
-```  
+```console 
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   

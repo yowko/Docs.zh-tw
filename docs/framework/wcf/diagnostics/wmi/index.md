@@ -2,12 +2,12 @@
 title: 使用 Windows Management Instrumentation 進行診斷
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0b67f06b9a99d7e9001c8415d0e94adef8436a3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795910"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855812"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 進行診斷
 Windows Communication Foundation （WCF）會透過 WCF Windows Management Instrumentation （WMI）提供者，在執行時間公開服務的檢查資料。  
@@ -143,7 +143,7 @@ Windows Communication Foundation （WCF）會透過 WCF Windows Management Instr
 ### <a name="granting-access-to-arbitrary-users-or-groups"></a>授與任意使用者或群組存取權  
  本節中的範例會將 WMI 提供者註冊權限授與所有本機使用者。 如果您要授與非內建使用者或群組存取權，必須取得該使用者或群組的安全性識別碼 (SID)。 目前沒有簡易的方法可以取得任意使用者的 SID。 一個方法是以所要的使用者身分登入，然後發出下列 Shell 命令。  
   
-```  
+```console
 Whoami /user  
 ```  
   

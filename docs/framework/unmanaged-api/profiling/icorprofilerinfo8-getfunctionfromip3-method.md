@@ -11,14 +11,14 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7b0d8033a5ea3b98623b9be384788ef7fc15bf04
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: df9ecc9bc355c12f993763820eb5065ba8bcc36b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665626"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855911"
 ---
-# <a name="icorprofilerinfo8getfunctionfromip3-method"></a>ICorProfilerInfo8:: GetFunctionFromIP3 方法
+# <a name="icorprofilerinfo8getfunctionfromip3-method"></a>ICorProfilerInfo8：： GetFunctionFromIP3 方法
 
 將 managed 程式碼指令指標對應至 FunctionID。 這個方法適用于動態和非動態方法。
 
@@ -43,17 +43,17 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
 
 ## <a name="remarks"></a>備註
 
-這個方法適用于動態和非動態方法。 它是[GetFunctionFromIP2](icorprofilerinfo4-getfunctionfromip2-method.md)的超集合, 僅適用于具有中繼資料的函式。
+這個方法適用于動態和非動態方法。 它是[GetFunctionFromIP2](icorprofilerinfo4-getfunctionfromip2-method.md)的超集合，僅適用于具有中繼資料的函式。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**標頭：** Corprof.idl .idl, Corprof.idl。h
+**標頭：** Corprof.idl .idl，Corprof.idl。h
 
 **LIBRARY:** CorGuids.lib
 
-**.NET Framework 版本:** [!包含[net_current_v472plus](../../../../includes/net-current-v472plus.md)
+**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 

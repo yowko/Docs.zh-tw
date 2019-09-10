@@ -2,26 +2,26 @@
 title: 追蹤類型摘要
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 44446b58510e58758934a5eb964efc8643854879
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647180"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856006"
 ---
 # <a name="trace-type-summary"></a>追蹤類型摘要
-[來源層級](https://go.microsoft.com/fwlink/?LinkID=94943)定義不同的追蹤層級：嚴重、 錯誤、 警告、 資訊和詳細資訊，並提供描述`ActivityTracing`旗標，它的輸出會切換追蹤界限與活動傳輸事件。  
+[來源層級](https://go.microsoft.com/fwlink/?LinkID=94943)會定義各種不同的追蹤層級：[重大]、[錯誤]、[警告]、[資訊] 和 [ `ActivityTracing`詳細資料]，以及提供旗標的描述，以切換追蹤界限與活動傳輸事件的輸出。  
   
- 您也可以檢閱[TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169)可以從發出的追蹤類型<xref:System.Diagnostics>。  
+ 您也可以參閱[TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) ，以取得可從<xref:System.Diagnostics>發出的追蹤類型。  
   
  下表列出最重要的幾個。  
   
 |追蹤類型|描述|  
 |----------------|-----------------|  
-|Critical|嚴重錯誤或應用程式損毀。|  
-|錯誤|可修復錯誤。|  
-|警告|告知性訊息。|  
-|資訊|非嚴重問題。|  
+|重大|嚴重錯誤或應用程式損毀。|  
+|Error|可修復錯誤。|  
+|警告|參考資訊。|  
+|內容|非嚴重問題。|  
 |詳細資訊|偵錯追蹤。|  
 |啟動|開始邏輯處理單位。|  
 |暫止|暫停邏輯處理單位。|  
@@ -47,12 +47,8 @@ ms.locfileid: "64647180"
   
  下列是定義全域範圍內理想活動的規則運算式：  
   
-```  
-R+   
-```  
+`R+`  
   
  其中 R 表示本機範圍內活動的規則運算式。 這會轉譯為：  
   
-```  
-[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+  
-```
+`[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+`

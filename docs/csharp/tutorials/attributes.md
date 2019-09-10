@@ -4,12 +4,12 @@ description: 了解 C# 中屬性的運作方式。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: HT
+ms.openlocfilehash: 0037e8b2c5f50d1b8d0a950743f6eeb9145df414
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481227"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851008"
 ---
 # <a name="using-attributes-in-c"></a>在 C\# 中使用屬性
 
@@ -20,7 +20,7 @@ ms.locfileid: "59481227"
 在本教學課程中，將介紹如何將屬性加入您的程式碼、如何建立及使用您自己的屬性，以及如何使用一些內建到 .NET Core 的屬性。
 
 ## <a name="prerequisites"></a>必要條件
-您必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。
+您必須設定電腦以執行 .NET Core。 您可以在[.Net Core 下載](https://dotnet.microsoft.com/download)頁面上找到安裝指示。
 您可以在 Windows、Ubuntu Linux、macOS 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
 ## <a name="create-the-application"></a>建立應用程式
@@ -74,7 +74,7 @@ ms.locfileid: "59481227"
 
 [!code-csharp[Invalid attempt to use the attribute constructor](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
 
-上述程式碼會造成編譯器錯誤，例如： `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
+上述程式碼會造成編譯器錯誤，例如：`Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
 
 ## <a name="how-to-restrict-attribute-usage"></a>如何限制屬性使用方式
 
@@ -100,7 +100,7 @@ ms.locfileid: "59481227"
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
 
-如果您嘗試將上述屬性放在類別或結構以外的項目中，就會發生如下的編譯器錯誤： `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
+如果您嘗試將上述屬性放在類別或結構以外的項目中，就會發生如下的編譯器錯誤：`Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
@@ -114,7 +114,7 @@ ms.locfileid: "59481227"
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
-該程式碼會印出類似以下的內容： `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
+該程式碼會印出類似以下的內容：`The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
 
 一旦您擁有 `TypeInfo` 物件 (或 `MemberInfo`、`FieldInfo` 等)，就可以使用 `GetCustomAttributes` 方法。 這會傳回 `Attribute` 物件的集合。
 您也可以使用 `GetCustomAttribute` 並指定一個「屬性」型別。
@@ -134,12 +134,12 @@ ms.locfileid: "59481227"
 
 以下是幾個值得注意的屬性，內建於 .NET Core 基底類別庫中︰
 
-* `[Obsolete]`。 此屬性使用於上述範例中，且存在於 `System` 命名空間。 提供有關變更的程式碼基底的宣告式文件會很有用。 訊息可以字串的形式提供，使用另一個布林值參數可以從編譯器警告提升至編譯器錯誤。
+* `[Obsolete]`. 此屬性使用於上述範例中，且存在於 `System` 命名空間。 提供有關變更的程式碼基底的宣告式文件會很有用。 訊息可以字串的形式提供，使用另一個布林值參數可以從編譯器警告提升至編譯器錯誤。
 
-* `[Conditional]`。 此屬性位於 `System.Diagnostics` 命名空間。 這個屬性可以套用至方法 (或屬性類別)。 您必須傳遞字串給建構函式。
+* `[Conditional]`. 此屬性位於 `System.Diagnostics` 命名空間。 這個屬性可以套用至方法 (或屬性類別)。 您必須傳遞字串給建構函式。
 如果該字串不符合 `#define` 指示詞，C# 編譯器會移除對該方法的任何呼叫 (但非方法本身)。 這通常用於偵錯 (診斷) 用途。
 
-* `[CallerMemberName]`。 這個屬性可以用於參數，並存在 `System.Runtime.CompilerServices` 命名空間中。 這個屬性可用來插入呼叫另一個方法之方法的名稱。 在各種 UI 架構中實作 INotifyPropertyChanged 時，這通常做為消除 'magic strings' 的方法。 範例如下：
+* `[CallerMemberName]`. 這個屬性可以用於參數，並存在 `System.Runtime.CompilerServices` 命名空間中。 這個屬性可用來插入呼叫另一個方法之方法的名稱。 在各種 UI 架構中實作 INotifyPropertyChanged 時，這通常做為消除 'magic strings' 的方法。 範例如下：
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 

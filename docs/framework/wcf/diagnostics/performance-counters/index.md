@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 4368bd57718f52816d4efad39932bcc0959b67a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9bddcbd907e37d9bdf757b1999946c99e10440c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951307"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855637"
 ---
 # <a name="wcf-performance-counters"></a>WCF 效能計數器
-Windows Communication Foundation (WCF) 包含一組大量效能計數器, 可協助您測量應用程式的效能。  
+Windows Communication Foundation （WCF）包含一組大量效能計數器，可協助您測量應用程式的效能。  
   
 ## <a name="enabling-performance-counters"></a>啟用效能計數器  
- 您可以透過 WCF 服務的 app.config 設定檔來啟用 WCF 服務的效能計數器, 如下所示:  
+ 您可以透過 WCF 服務的 app.config 設定檔來啟用 WCF 服務的效能計數器，如下所示：  
   
 ```xml  
 <configuration>  
@@ -27,19 +27,19 @@ Windows Communication Foundation (WCF) 包含一組大量效能計數器, 可協
   
  `performanceCounters` 屬性可設為啟用特定類型的效能計數器。 有效值為  
   
-- 這所有類別計數器 (ServiceModelService、ServiceModelEndpoint 和 ServiceModelOperation) 都會啟用。  
+- 這所有類別計數器（ServiceModelService、ServiceModelEndpoint 和 ServiceModelOperation）都會啟用。  
   
 - ServiceOnly僅啟用 ServiceModelService 類別計數器。 這是預設值。  
   
 - 停止System.servicemodel * 效能計數器已停用。  
   
- 如果您想要啟用所有 WCF 應用程式的效能計數器, 可以將設定放在 Machine.config 檔案中。  如需針對電腦上的效能計數器設定足夠記憶體的詳細資訊, 請參閱下面的**增加效能計數器的記憶體大小**一節。  
+ 如果您想要啟用所有 WCF 應用程式的效能計數器，可以將設定放在 Machine.config 檔案中。  如需針對電腦上的效能計數器設定足夠記憶體的詳細資訊，請參閱下面的**增加效能計數器的記憶體大小**一節。  
   
- 如果您使用 WCF 擴充點 (例如自訂作業啟動程式), 您也應該發出自己的效能計數器。 這是因為如果您執行擴充性點, WCF 可能不會再于預設路徑中發出標準效能計數器資料。 如果您沒有實作手動效能計數器支援，可能無法看見預期的效能計數器資料。  
+ 如果您使用 WCF 擴充點（例如自訂作業啟動程式），您也應該發出自己的效能計數器。 這是因為如果您執行擴充性點，WCF 可能不會再于預設路徑中發出標準效能計數器資料。 如果您沒有實作手動效能計數器支援，可能無法看見預期的效能計數器資料。  
   
  您也可以在程式碼中啟用效能計數器，如下所示：  
   
-```  
+```csharp
 using System.Configuration;  
 using System.ServiceModel.Configuration;  
 using System.ServiceModel.Diagnostics;  
@@ -51,7 +51,7 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>檢視效能資料  
- 若要檢視效能計數器所擷取的資料，您可以使用隨附於 Windows 的效能監視器 (Perfmon.exe)。 若要啟動此工具, 您可以前往 [**開始**], 然後按一下`perfmon.exe` [**執行**], 並在對話方塊中輸入。  
+ 若要檢視效能計數器所擷取的資料，您可以使用隨附於 Windows 的效能監視器 (Perfmon.exe)。 若要啟動此工具，您可以前往 [**開始**]，然後按一下`perfmon.exe` [**執行**]，並在對話方塊中輸入。  
   
 > [!NOTE]
 > 效能計數器執行個體可能會在端點發送器處理完成最後一個訊息之前釋出。 如此可能導致少數訊息的效能資料未能予以擷取  
@@ -59,7 +59,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>為效能計數器增加記憶體大小  
  WCF 會針對其效能計數器類別使用不同的共用記憶體。  
   
- 根據預設，不同的共用記憶體會設為全域效能計數器記憶體的四分之一。 預設的全域效能計數器記憶體為 524,288 個位元組。 因此, 這三個 WCF 效能計數器類別的預設大小大約為每個128KB。 視電腦上 WCF 應用程式的執行時間特性而定, 效能計數器記憶體可能已用盡。 發生這種情況時, WCF 會將錯誤寫入應用程式事件記錄檔。 錯誤的內容指出未載入效能計數器, 且專案包含例外狀況 "InvalidOperationException:自訂計數器檔案視圖記憶體不足。」 如果已啟用錯誤層級的追蹤，則同樣會追蹤這個錯誤。 如果效能計數器記憶體已用盡, 繼續執行您的 WCF 應用程式並啟用效能計數器, 可能會導致效能降低。 如果您是電腦的系統管理員，則應為電腦設定配置足夠的記憶體，支援可隨時存在的效能計數器數目上限。  
+ 根據預設，不同的共用記憶體會設為全域效能計數器記憶體的四分之一。 預設的全域效能計數器記憶體為 524,288 個位元組。 因此，這三個 WCF 效能計數器類別的預設大小大約為每個128KB。 視電腦上 WCF 應用程式的執行時間特性而定，效能計數器記憶體可能已用盡。 發生這種情況時，WCF 會將錯誤寫入應用程式事件記錄檔。 錯誤的內容指出未載入效能計數器，且專案包含例外狀況 "InvalidOperationException：自訂計數器檔案視圖記憶體不足。」 如果已啟用錯誤層級的追蹤，則同樣會追蹤這個錯誤。 如果效能計數器記憶體已用盡，繼續執行您的 WCF 應用程式並啟用效能計數器，可能會導致效能降低。 如果您是電腦的系統管理員，則應為電腦設定配置足夠的記憶體，支援可隨時存在的效能計數器數目上限。  
   
  您可以在登錄中變更 WCF 類別目錄的效能計數器記憶體數量。 若要執行這項操作，您必須將名為 `FileMappingSize` 的新 DWORD 值加入下列三個位置，並且將它設為所需的值 (以位元組為單位)。 重新啟動您的電腦，讓這些變更生效。  
   
@@ -72,7 +72,7 @@ config.Save();
  處置掉大量物件 (例如 ServiceHost)，但在等待進行記憶體回收時，`PrivateBytes` 效能計數器將登錄相當大的數目。 若要解決這個問題，您可以加入自己的應用程式專屬計數器，或是使用 `performanceCounters` 屬性，僅啟用服務層級的計數器。  
   
 ## <a name="types-of-performance-counters"></a>效能計數器類型  
- 效能計數器的範圍限於三個不同層級:服務、端點和作業。  
+ 效能計數器的範圍限於三個不同層級：服務、端點和作業。  
   
  您可以使用 WMI 擷取效能計數器執行個體的名稱。 例如，套用至物件的  
   
@@ -82,14 +82,12 @@ config.Save();
   
 - 您可以透過 WMI[端點](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)實例的 "GetOperationCounterInstanceName" 方法來取得作業計數器實例名稱。  
   
- 如需 WMI 的詳細資訊, 請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ 如需 WMI 的詳細資訊，請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
 ### <a name="service-performance-counters"></a>服務效能計數器  
  服務效能計數器會測量整體的服務行為，而且可用於診斷整個服務的效能。 以效能監視器進行檢視時，可以在 `ServiceModelService 4.0.0.0` 效能物件下找到它們。 執行個體會使用以下模式來命名：  
   
-```  
-ServiceName@ServiceBaseAddress  
-```  
+`ServiceName@ServiceBaseAddress`
   
  服務範圍中之計數器是從端點集合中的計數器彙總而來的。  
   
@@ -98,9 +96,7 @@ ServiceName@ServiceBaseAddress
 ### <a name="endpoint-performance-counters"></a>端點效能計數器  
  您以端點效能計數器查看的資料，反映了端點接受訊息的方式。 使用效能監視器進行檢視時，可以在 `ServiceModelEndpoint 4.0.0.0` 效能物件下找到它們。 執行個體會使用以下模式來命名：  
   
-```  
-(ServiceName).(ContractName)@(endpoint listener address)  
-```  
+`(ServiceName).(ContractName)@(endpoint listener address)`
   
  這些資料與針對個別作業所收集的資料類似，但是只會彙總端點之間的資料。  
   
@@ -112,9 +108,7 @@ ServiceName@ServiceBaseAddress
 ### <a name="operation-performance-counters"></a>作業效能計數器  
  當使用效能監視器進行檢視時，您可以在 `ServiceModelOperation 4.0.0.0` 效能物件中找到作業效能計數器。 每個作業都有個別的執行個體。 也就是，如果指定的合約有 10 個作業，就會有 10 個作業計數器執行個體與該合約產生關聯。 物件執行個體會使用以下模式來命名：  
   
-```  
-(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)  
-```  
+`(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)`
   
  這個計數器能夠讓您測量呼叫的使用狀況，以及作業的執行效能。  
   
@@ -124,7 +118,7 @@ ServiceName@ServiceBaseAddress
 > 如果您的合約上有重複的作業名稱，則這兩個作業只能取得一個計數器執行個體。  
   
 ## <a name="programming-the-wcf-performance-counters"></a>WCF 效能計數器程式設計  
- 有數個檔案會安裝在 SDK 安裝資料夾中, 讓您能夠以程式設計方式存取 WCF 效能計數器。 這些檔案如下所列。  
+ 有數個檔案會安裝在 SDK 安裝資料夾中，讓您能夠以程式設計方式存取 WCF 效能計數器。 這些檔案如下所列。  
   
 - _ServiceModelEndpointPerfCounters.vrg  
   
@@ -136,7 +130,7 @@ ServiceName@ServiceBaseAddress
   
 - _TransactionBridgePerfCounters.vrg  
   
- 如需如何以程式設計方式存取計數器的詳細資訊, 請參閱[效能計數器程式設計架構](https://go.microsoft.com/fwlink/?LinkId=95179)。  
+ 如需如何以程式設計方式存取計數器的詳細資訊，請參閱[效能計數器程式設計架構](https://go.microsoft.com/fwlink/?LinkId=95179)。  
   
 ## <a name="see-also"></a>另請參閱
 

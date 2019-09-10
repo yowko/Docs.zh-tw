@@ -2,19 +2,20 @@
 title: <endpoint> 的 <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 2bf59972ff2f75995e94a3c1934e88944d65fcc7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f1ffbc1e8efac70523d7f631c8cf9ba9a1622bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919103"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855313"
 ---
 # <a name="endpoint-of-client"></a>\<用戶端 > \<的端點 >
 指定通道端點的合約、繫結和位址屬性，用戶端會使用該通道端點連線至伺服器上的服務端點。  
   
- \<system.ServiceModel>  
-\<用戶端 >  
-\<端點 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<用戶端 >** ](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<端點 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,7 +49,7 @@ ms.locfileid: "69919103"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<headers>](headers.md)|位址標頭的集合。|  
 |[\<identity>](identity.md)|身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。|  
