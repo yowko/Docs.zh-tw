@@ -2,12 +2,12 @@
 title: .NET 微服務。 容器化 .NET 應用程式的架構
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是模組化的獨立可部署服務。 適用於 Linux 與 Windows 的 Docker 容器，可統合服務及其相依性到單一個單位，簡化部署及測試，然後即可於隔離的環境中執行。
 ms.date: 01/07/2019
-ms.openlocfilehash: 55520153e0b926a97d0384f0b50b4c929f452f19
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70296838"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848873"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
@@ -21,7 +21,7 @@ ms.locfileid: "70296838"
 
 ## <a name="action-links"></a>動作連結
 
-- 以您選擇的格式下載這本電子書：| [PDF](https://aka.ms/microservicesebook) | [MOBI](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-epub) |
+- 以您選擇的格式下載這本電子書：| [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - 複製/派生 [GitHub 上的 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 參考應用程式
  
@@ -45,7 +45,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 研讀本指南之後，您的下一個步驟是了解 Microsoft Azure 上可實際執行的微服務。
 
-## <a name="version"></a>版本
+## <a name="version"></a>Version
 
 本指南已經過修訂，涵蓋了 **.NET Core 2.2** 版，加上許多和 .NET Core 2.2 同時期， 同一波科技「浪潮」相關的更新 (亦即 Azure 加上其他第三方技術)。 這也是同步將書籍版本更新為 **2.2** 版的原因。 
 

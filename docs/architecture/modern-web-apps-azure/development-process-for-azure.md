@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374041"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849584"
 ---
 # <a name="development-process-for-azure"></a>Azure 開發程序
 
@@ -36,7 +36,7 @@ ms.locfileid: "70374041"
 
 **Visual Studio Code 和 dotnet CLI** (適用於 Mac、Linux 和 Windows 的跨平台工具)。 如果您偏好使用支援任何開發語言之輕量型且跨平台的編輯器，您可以使用 Microsoft Visual Studio Code 和 dotnet CLI。 這些產品提供簡單但強大的體驗，可簡化開發人員工作流程。 此外，Visual Studio Code 支援 C\# 及 Web 程式開發的延伸模組，並在編輯器中提供 Intellisense 和捷徑工作。
 
-[下載 .NET Core SDK](https://www.microsoft.com/net/download/core)
+[下載 .NET Core SDK](https://dotnet.microsoft.com/download)
 
 [下載 Visual Studio Code](https://code.visualstudio.com/download)
 

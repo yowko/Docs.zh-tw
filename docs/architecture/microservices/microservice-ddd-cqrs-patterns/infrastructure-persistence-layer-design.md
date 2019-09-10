@@ -4,7 +4,7 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索基�
 ms.date: 10/08/2018
 ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674115"
@@ -108,13 +108,13 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ### <a name="repository-pattern"></a>存放庫模式
 
-- **The Repository pattern** \ (存放庫模式)
+- **The Repository pattern** \ (存放庫模式)\
   <https://deviq.com/repository-pattern/>
 
-- **Edward Hieatt 和 Rob Mee：Repository pattern.** (存放庫模式)。 \
+- **Edward Hieatt 和 Rob Mee：Repository pattern.** (存放庫模式)。\ \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
-- **The Repository pattern** \ (存放庫模式)
+- **The Repository pattern** \ (存放庫模式)\
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
 - **Eric Evans：網域驅動設計：解決軟體核心的複雜度。** (書籍，包括存放庫模式的討論) \
@@ -122,7 +122,7 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ### <a name="unit-of-work-pattern"></a>工作單位模式
 
-- **Martin Fowler：Unit of Work pattern (工作單位模式)。** \
+- **Martin Fowler：Unit of Work pattern (工作單位模式)。** \ \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
 - **在 ASP.NET MVC 應用程式中實作存放庫與工作單位模式** \
