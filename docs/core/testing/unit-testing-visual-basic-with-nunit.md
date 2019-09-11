@@ -4,12 +4,12 @@ description: 使用 NUnit 逐步建置 Visual Basic 解決方案範例的互動�
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: c48b2777b451598a0f3ccbb383d702d0069ff6ff
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 1682cf7cb351951d3bea9a64d963cd6a8995c083
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373809"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849674"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>使用 dotnet test 與 NUnit 為 Visual Basic .NET Core 程式庫進行單元測試
 
@@ -19,7 +19,7 @@ ms.locfileid: "70373809"
 
 ## <a name="prerequisites"></a>必要條件
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更新版本。
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 - 您選擇的文字編輯器或程式碼編輯器。
 
 ## <a name="creating-the-source-project"></a>建立來源專案

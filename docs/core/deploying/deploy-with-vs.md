@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd12d2d8c210bb85e3f45b8c8246a3d19f1a7095
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 9379f02c29f11606d0ef34323b16c1531927b0c8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698020"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849078"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -89,7 +89,7 @@ ms.locfileid: "54698020"
 
 1. 新增應用程式的原始程式碼。
 
-   在您的編輯器中開啟 *Program.cs* 或檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
+   在您的編輯器中開啟*Program.cs*或*Program .vb*檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -216,7 +216,7 @@ ms.locfileid: "54698020"
 
 重複這些步驟來定義其他應用程式目標平台。
 
-您已完成設定您的設定檔，並已準備好發行應用程式。 若要這樣做：
+您已完成設定您的設定檔，並已準備好發行應用程式。 請這樣做：
 
    1. 如果 [發行] 視窗目前未開啟，請以滑鼠右鍵按一下 [方案總管] 中的專案 (而非解決方案)，然後選取 [發行]。
 

@@ -3,12 +3,12 @@ title: 關於 .NET Core
 description: 了解 .NET Core。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: ea9253bacf2bcee63430cd45f2a9ed412ce629e7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421878"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849136"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -20,7 +20,7 @@ ms.locfileid: "67421878"
 - **彈性部署：** 可以包含在應用程式內或並行安裝 (針對所有使用者或所有系統進行安裝)。 可搭配 [Docker 容器](docker/index.md)使用。
 - **相容：** .NET Core 可透過 [.NET Standard](../standard/net-standard.md) 與 .NET Framework、Xamarin 及 Mono 相容。
 - **開放原始碼：** .NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
-- **受 Microsoft 支援：** .NET Core 根據 [.NET Core 支援](https://www.microsoft.com/net/core/support/)受 Microsoft 支援。
+- **受 Microsoft 支援：** .NET Core 根據 [.NET Core 支援](https://dotnet.microsoft.com/platform/support/policy)受 Microsoft 支援。
 
 ## <a name="languages"></a>語言
 
@@ -57,9 +57,9 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 這些元件的散發方式如下：
 
-- [.NET Core 執行階段](https://www.microsoft.com/net/download/dotnet-core/2.1) -- 包括 .NET Core 執行階段及架構程式庫。
-- [ASP.NET Core 執行階段](https://www.microsoft.com/net/download/dotnet-core/2.1) -- 包括 ASP.NET Core 和 .NET Core 執行階段及架構程式庫。
-- [.NET Core SDK](https://www.microsoft.com/net/download/dotnet-core/2.1) -- 包括 .NET CLI 工具、ASP.NET Core 執行階段、.NET Core 執行階段和架構。
+- [.NET Core 執行階段](https://dotnet.microsoft.com/download) -- 包括 .NET Core 執行階段及架構程式庫。
+- [ASP.NET Core 執行階段](https://dotnet.microsoft.com/download) -- 包括 ASP.NET Core 和 .NET Core 執行階段及架構程式庫。
+- [.NET Core SDK](https://dotnet.microsoft.com/download) -- 包括 .NET CLI 工具、ASP.NET Core 執行階段、.NET Core 執行階段和架構。
 
 ### <a name="open-source"></a>開啟原始檔
 

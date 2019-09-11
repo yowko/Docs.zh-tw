@@ -2,12 +2,12 @@
 title: 可為 Null 的參考型別
 description: 本文提供可為 Null 參考型別的概觀，這種型別是在 C# 8 中新增的功能。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。
 ms.date: 02/19/2019
-ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
-ms.translationtype: HT
+ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195926"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851074"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
@@ -56,20 +56,18 @@ name!.Length;
 
 ## <a name="nullable-contexts"></a>可為 Null 內容
 
-可為 Null 內容可讓您對編譯器解譯參考型別變數的方式進行細部控制。 任何指定來源行的**可為 Null 註釋內容**都是 `enabled` 或 `disabled`。 您可以將 C# 8 之前的編譯器想成是將您所有程式碼編譯在一個 `disabled` 可為 Null 內容中：任何參考型別都可能為 Null。 **可為 Null 警告內容** 可設為 `enabled`、`disabled` 或 `safeonly`。 可為 Null 警告內容會指定編譯器使用其流程分析所產生的警告。
+可為 Null 內容可讓您對編譯器解譯參考型別變數的方式進行細部控制。 任何指定來源行的**可為 Null 註釋內容**都是 `enabled` 或 `disabled`。 您可以將 C# 8 之前的編譯器想成是將您所有程式碼編譯在一個 `disabled` 可為 Null 內容中：任何參考型別都可能為 Null。 可**為 null 警告內容**可以設定為`enabled`或`disabled`。 可為 Null 警告內容會指定編譯器使用其流程分析所產生的警告。
 
 可為 Null 註釋內容和可為 Null 警告內容都可在您的 `csproj` 檔案中使用 `Nullable` 項目來為專案設定。 此項目會設定編譯器解譯型別可 NULL 性的方式及所產生警告。 有效的設定如下：
 
 - `enable`：可為 Null 註釋內容為**啟用**。 可為 Null 警告內容為**啟用**。
   - 參考型別變數 (例如 `string`) 不可為 Null。  啟用所有可 NULL 性警告。
-- `disable`：可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**停用**。
-  - 參考型別變數為遺忘式，與先前版本的 C# 相似。 停用所有可 NULL 性警告。
-- `safeonly`：可為 Null 註釋內容為**啟用**。 可為 Null 警告內容為**僅限安全**。
-  - 參考型別變數不可為 Null。 啟用所有安全可 NULL 性警告。
 - `warnings`：可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**啟用**。
   - 參考型別變數為遺忘式。 啟用所有可 NULL 性警告。
-- `safeonlywarnings`：可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**僅限安全**。
-  - 參考型別變數為遺忘式。 啟用所有安全可 NULL 性警告。
+- `annotations`：可為 Null 註釋內容為**啟用**。 可為 Null 警告內容為**停用**。
+  - 參考型別變數為遺忘式。 啟用所有可 NULL 性警告。
+- `disable`：可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**停用**。
+  - 參考型別變數為遺忘式，與先前版本的 C# 相似。 停用所有可 NULL 性警告。
 
 > [!IMPORTANT]
 > `Nullable` 元素先前稱為 `NullableContextOptions`。 重新命名是在 Visual Studio 2019，16.2-p1 中發生的。 .NET Core SDK 3.0.100-preview5-011568 沒有此變更。 若您使用 .NET Core CLI，您將必須使用 `NullableContextOptions`，直到下一個預覽版推出。
@@ -78,21 +76,12 @@ name!.Length;
 
 - `#nullable enable`：將可為 Null 註釋內容及可為 Null 警告內容設為**啟用**。
 - `#nullable disable`：將可為 Null 註釋內容及可為 Null 警告內容設為**停用**。
-- `#nullable safeonly`：將可為 Null 註釋內容設為**啟用**，將警告內容設為**僅限安全**。
 - `#nullable restore`：將可為 Null 註釋內容和可為 Null 警告內容還原至專案設定。
 - `#pragma warning disable nullable`：將可為 Null 警告內容設為**停用**。
 - `#pragma warning enable nullable`：將可為 Null 警告內容設為**啟用**。
 - `#pragma warning restore nullable`：將可為 Null 警告內容還原至專案設定。
-- `#pragma warning safeonly nullable`：將可為 Null 警告內容設為**僅限安全**。
 
 預設的可為 Null 註釋及警告內容為 `disabled`。 該決策表示您現有的程式碼會編譯且不會進行任何變更，也不會產生任何新的警告。
-
-`enabled` 和 `safeonly` 差異點在於可為 Null 警告內容是將可為 Null 參考指派給不可為 Null 參考時的警告。 下列指派會在一個 `enabled` 警告內容中產生警告，但不會在 `safeonly` 警告內容中產生警告。 但是，第二行 (對 `s` 進行取值 (Dereference)) 會在一個 `safeonly` 內容中產生警告：
-
-```csharp
-string s = null; // warning when nullable warning context is enabled.
-var txt = s.ToString(); // warning when nullable warnings context is safeonly, or enabled.
-```
 
 ### <a name="nullable-annotation-context"></a>可為 Null 註釋內容
 
@@ -121,7 +110,7 @@ var txt = s.ToString(); // warning when nullable warnings context is safeonly, o
 1. 變數已確定指派為並非 Null 的值。
 1. 變數或運算式已在取值 (Dereference) 之前針對 Null 進行檢查。
 
-當可為 Null 警告內容是 `enabled` 或 `safeonly` 時，編譯器會在您對處於**可能為 Null** 狀態的變數或運算式進行取值 (Dereference) 時產生警告。 此外，當可為 Null 註釋內容是 `enabled`，且**可能為 Null** 的變數或運算式指派給不可為 Null 的參考型別時，也會產生警告。
+每當您在可為 null 的警告內容為時，如果您在**可能是 null**的狀態中取值`enabled`變數或運算式，編譯器就會產生警告。 此外，當可為 Null 註釋內容是 `enabled`，且**可能為 Null** 的變數或運算式指派給不可為 Null 的參考型別時，也會產生警告。
 
 ## <a name="learn-more"></a>進一步了解
 

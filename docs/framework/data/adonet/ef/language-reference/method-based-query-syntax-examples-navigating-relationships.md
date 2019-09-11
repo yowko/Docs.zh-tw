@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: c749a7bb1575ee52418f0953ff8216bf4221b674
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0060f14319bb0dfbed597e59dfe44666c4cfbe84
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250140"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854452"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>以方法為基礎的查詢語法範例：巡覽關聯性
-[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中的導覽屬性是用來尋找位於關聯兩端之實體的捷徑屬性。 導覽屬性可讓使用者在不同實體之間巡覽，或是透過關聯集從某個實體巡覽至相關的實體。 本主題提供以方法為基礎的查詢語法範例，說明如何透過 LINQ to Entities 查詢中的導覽屬性來導覽關聯性。  
+Entity Framework 中的導覽屬性是用來尋找位於關聯兩端之實體的快捷方式屬性。 導覽屬性可讓使用者在不同實體之間巡覽，或是透過關聯集從某個實體巡覽至相關的實體。 本主題提供以方法為基礎的查詢語法範例，說明如何透過 LINQ to Entities 查詢中的導覽屬性來導覽關聯性。  
   
  這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
   

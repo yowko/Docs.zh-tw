@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 70d63f460ad2e67fe60cd8d5130e8ff22889d8be
-  ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
-  ms.translationtype: HT
+  ms.openlocfilehash: eb4b1571b4d00d90034148f7b595f4499859ce4b
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/24/2019
-  ms.locfileid: "66195943"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850954"
 items:
 - durationInMinutes: 2
   content: >
@@ -125,7 +125,7 @@ items:
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - content: >-
-    您已完成字串內插補點互動式教學課程。 您可以按一下以下的 **C# 中的集合**連結來啟動下一個互動式教學課程，或者您可以瀏覽 [.NET 網站](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「繼續學習」步驟會帶您回到這些教學課程。
+    您已完成字串內插補點互動式教學課程。 您可以按一下以下的 **C# 中的集合**連結來啟動下一個互動式教學課程，或者您可以瀏覽 [.NET 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
 
 
     如需詳細資訊，請參閱[字串內插補點](../../language-reference/tokens/interpolated.md)。

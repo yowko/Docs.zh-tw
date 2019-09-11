@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 320d059e82bfb58e827432fe5f4ec3eb3857510e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041407"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851254"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (組件繫結記錄檔檢視器)
 
@@ -29,7 +29,7 @@ ms.locfileid: "70041407"
 
 在命令提示字元下輸入下列命令：
 
-```
+```console
 fuslogvw
 ```
 
@@ -37,9 +37,9 @@ fuslogvw
 
 ### <a name="to-change-the-log-location-view"></a>若要變更記錄檔位置檢視
 
-1. 選取 [預設值]  選項按鈕，可檢視所有應用程式類型的繫結失敗。 根據預設，記錄項目會存放在 wininet 快取中磁碟上的每個使用者目錄中。
+1. 選取 [預設值] 選項按鈕，可檢視所有應用程式類型的繫結失敗。 根據預設，記錄項目會存放在 wininet 快取中磁碟上的每個使用者目錄中。
 
-2. 選取 [自訂]  選項按鈕，可檢視您指定之自訂目錄中的繫結失敗。 您必須透過將 [記錄檔設定]  對話方塊中的自訂記錄檔路徑設為有效的目錄名稱，指定要讓執行階段存放記錄檔的自訂位置。 這個目錄應該是乾淨的，只包含執行階段產生的檔案。 如果它包含會產生失敗記錄的可執行檔，則失敗將不會記錄下來，因為工具會嘗試使用與該可執行檔相同的名稱建立目錄。 此外，嘗試從記錄檔位置執行可執行檔將會失敗。
+2. 選取 [自訂] 選項按鈕，可檢視您指定之自訂目錄中的繫結失敗。 您必須透過將 [記錄檔設定] 對話方塊中的自訂記錄檔路徑設為有效的目錄名稱，指定要讓執行階段存放記錄檔的自訂位置。 這個目錄應該是乾淨的，只包含執行階段產生的檔案。 如果它包含會產生失敗記錄的可執行檔，則失敗將不會記錄下來，因為工具會嘗試使用與該可執行檔相同的名稱建立目錄。 此外，嘗試從記錄檔位置執行可執行檔將會失敗。
 
     > [!NOTE]
     > 預設繫結位置要比自訂繫結位置更合適。 執行階段會將預設繫結位置存放到 wininet 快取中，因此會自動將它清除。如果您指定自訂繫結位置，則必須負責將它清除。
@@ -48,7 +48,7 @@ fuslogvw
 
 1. 在檢視器中選取所需項目的應用程式名稱。
 
-2. 按一下 [檢視記錄檔]  按鈕。 或者，您也可以按兩下選取的項目。
+2. 按一下 [檢視記錄檔] 按鈕。 或者，您也可以按兩下選取的項目。
 
     工具便會顯示有關所選取繫結失敗的下列詳細資料：
 
@@ -66,7 +66,7 @@ fuslogvw
 
 以下範例記錄項目將顯示失敗之組件繫結的詳細資訊。
 
-```
+```output
 *** Assembly Binder Log Entry  (3/5/2007 @ 12:54:20 PM) ***
 
 The operation failed.
@@ -102,23 +102,23 @@ LOG: All probing URLs attempted and failed.
 
 1. 在檢視器中選取項目。
 
-2. 按一下 [刪除項目]  按鈕。
+2. 按一下 [刪除項目] 按鈕。
 
 ### <a name="to-delete-all-entries-from-the-log"></a>若要從記錄檔刪除所有項目
 
-- 按一下 [全部刪除]  按鈕。
+- 按一下 [全部刪除] 按鈕。
 
 ### <a name="to-refresh-the-user-interface"></a>若要重新整理使用者介面
 
-- 按一下 [重新整理]  按鈕。 檢視器在執行時不會自動偵測新的記錄項目。 您必須使用 [重新整理]  按鈕才能顯示新項目。
+- 按一下 [重新整理] 按鈕。 檢視器在執行時不會自動偵測新的記錄項目。 您必須使用 [重新整理] 按鈕才能顯示新項目。
 
 ### <a name="to-change-the-log-settings"></a>若要變更記錄檔設定
 
-- 按一下 [設定]  按鈕，開啟 [記錄檔設定]  對話方塊。
+- 按一下 [設定] 按鈕，開啟 [記錄檔設定] 對話方塊。
 
 ### <a name="to-view-the-about-dialog"></a>若要檢視關於對話方塊
 
-- 按一下 [關於]  按鈕。
+- 按一下 [關於] 按鈕。
 
 ## <a name="binding-logs-for-native-images"></a>原生映像的繫結記錄檔
 
@@ -126,11 +126,11 @@ LOG: All probing URLs attempted and failed.
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>若要記錄原生映像的組件繫結
 
-- 在 [記錄檔分類]  群組中，選取 [原生映像]  選項按鈕。
+- 在 [記錄檔分類] 群組中，選取 [原生映像] 選項按鈕。
 
 下列記錄將顯示建立應用程式的原生影像時，不存在的相依性所造成的失敗。 如果執行階段的相依性與 Ngen.exe 執行時的相依性不同，則不允許繫結至原生映像。
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:22:07 PM) ***
 
 The operation failed.
@@ -154,7 +154,7 @@ LOG: Bind to native image assembly did not succeed. Use IL image.
 
 下列記錄檔顯示的原生映像繫結失敗，是由於應用程式執行時電腦上的安全性設定，與原生映像建立時的安全性設定不同所致。
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:29:09 PM) ***
 
 The operation failed.
@@ -184,27 +184,27 @@ Discarding native image.
 
 ## <a name="the-log-settings-dialog"></a>[記錄檔設定] 對話方塊
 
-您可以使用 [記錄檔設定]  對話方塊執行下列動作。
+您可以使用 [記錄檔設定] 對話方塊執行下列動作。
 
 #### <a name="to-disable-logging"></a>若要停用記錄
 
-- 選取 [停用記錄]  選項按鈕。  請注意，這個選項預設為選取狀態。
+- 選取 [停用記錄] 選項按鈕。  請注意，這個選項預設為選取狀態。
 
 #### <a name="to-log-assembly-binds-in-exceptions"></a>若要記錄例外狀況中的組件繫結
 
-- 選取 [在例外狀況文字中記錄]  選項按鈕。 例外狀況文字中只會記錄最簡要的融合記錄資訊。 若要檢視完整資訊，請使用其中一項其他設定。
+- 選取 [在例外狀況文字中記錄] 選項按鈕。 例外狀況文字中只會記錄最簡要的融合記錄資訊。 若要檢視完整資訊，請使用其中一項其他設定。
 
   請參閱有關以定義域中性方式載入之組件的＜重要事項＞。
 
 #### <a name="to-log-assembly-bind-failures"></a>若要記錄組件繫結失敗
 
-- 選取 [在磁碟中記錄失敗的繫結]  選項按鈕。
+- 選取 [在磁碟中記錄失敗的繫結] 選項按鈕。
 
   請參閱有關以定義域中性方式載入之組件的＜重要事項＞。
 
 #### <a name="to-log-all-assembly-binds"></a>若要記錄所有組件繫結
 
-- 選取 [在磁碟中記錄所有繫結]  選項按鈕。
+- 選取 [在磁碟中記錄所有繫結] 選項按鈕。
 
   請參閱有關以定義域中性方式載入之組件的＜重要事項＞。
 
@@ -213,9 +213,9 @@ Discarding native image.
 
 #### <a name="to-enable-a-custom-log-path"></a>若要啟用自訂記錄檔路徑
 
-1. 選取 [啟用自訂的記錄檔路徑]  選項按鈕。
+1. 選取 [啟用自訂的記錄檔路徑] 選項按鈕。
 
-2. 在 [自訂的記錄檔路徑]  文字方塊中輸入路徑。
+2. 在 [自訂的記錄檔路徑] 文字方塊中輸入路徑。
 
 > [!NOTE]
 > [組件繫結記錄檔檢視器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 快取來儲存其繫結記錄檔。 由於 IE 快取偶爾會損毀，因此[組件繫結記錄檔檢視器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 有時可能會停止在檢視視窗內顯示新的繫結記錄檔。 這種損毀導致 .NET 繫結基礎結構 (融合) 無法寫入繫結記錄檔或從繫結記錄檔讀取 (如果您使用自訂的記錄檔路徑，就不會發生這個問題)。若要修復損毀並讓融合再次顯示繫結記錄檔，請從 IE 的 [網際網路選項] 對話方塊中刪除網際網路暫存檔 (Temporary Internet Files)，以便清除 IE 快取。
@@ -226,7 +226,7 @@ Discarding native image.
 
 1. 啟用自訂的記錄檔路徑，如上述程序所述。 根據預設，在 Windows 應用程式容器中執行的應用程式對硬碟的存取權會受到限制。 您指定的目錄將可以對應用程式容器中的所有應用程式進行讀取/寫入。
 
-2. 選取 [啟用擬真記錄]  核取方塊。
+2. 選取 [啟用擬真記錄] 核取方塊。
 
     > [!NOTE]
     > 只有在 Windows 8 (含) 以後版本中才會啟用這個方塊。

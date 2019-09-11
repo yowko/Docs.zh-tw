@@ -4,18 +4,18 @@ description: 此教學課程示範如何使用 C# 字串插補功能，在較大
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397811"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850921"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字串插補來建構格式化的字串
 
 此教學課程將教您如何使用 C# [字串插補](../../language-reference/tokens/interpolated.md)，在單一結果字串中插入值。 您將會撰寫 C# 程式碼，並查看程式碼編譯和執行的結果。 此教學課程包含一系列的課程，示範如何將值插入至字串，並以不同的方式設定那些值的格式。
 
-此教學課程要求您必須有可用於開發的電腦。 .NET 主題[只要 10 分鐘立即上手](https://www.microsoft.com/net/core) \(英文\) 中有關於在 Mac、PC 或 Linux 上設定本機開發環境的指示。 您也可以在瀏覽器中完成此教學課程的[互動式版本](interpolated-strings.yml)。
+此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 MAC、PC 或 Linux 上設定本機開發環境的指示。 您也可以在瀏覽器中完成此教學課程的[互動式版本](interpolated-strings.yml)。
 
 ## <a name="create-an-interpolated-string"></a>建立插入字串
 
@@ -34,13 +34,13 @@ var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串運算式」  。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」  )。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。
+在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串運算式」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。
 
 這個簡單範例包含每個插入字串都必須要有的兩個項目：
 
 - 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在 `$` 字元後面插入空格、儲存檔案，然後在主控台視窗中鍵入 `dotnet run` 以重新執行程式。 C# 編譯器會顯示錯誤訊息「錯誤 CS1056:未預期的字元 '$'」。)
 
-- 一或多個「插入運算式」  。 插入運算式是以左右大括弧 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。
+- 一或多個「插入運算式」。 插入運算式是以左右大括弧 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。
 
 嘗試更多包含一些其他資料類型的字串插補範例。
 
@@ -99,7 +99,7 @@ public class Program
 
 ## <a name="control-the-formatting-of-interpolation-expressions"></a>控制插入運算式的格式
 
-在上節中，已將兩個格式不佳的字串插入至結果字串。 其中一個是只有日期才適合的日期和時間值。 第二個是未指出其貨幣單位的價格。 這兩個問題都很容易解決。 字串插補可讓您指定「格式字串」  ，以控制特定類型的格式。 修改前一個範例中的 `Console.WriteLine` 呼叫，使其包含日期和價格運算式的格式字串，如下行所示：
+在上節中，已將兩個格式不佳的字串插入至結果字串。 其中一個是只有日期才適合的日期和時間值。 第二個是未指出其貨幣單位的價格。 這兩個問題都很容易解決。 字串插補可讓您指定「格式字串」，以控制特定類型的格式。 修改前一個範例中的 `Console.WriteLine` 呼叫，使其包含日期和價格運算式的格式字串，如下行所示：
 
 ```csharp
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
@@ -141,7 +141,7 @@ public class Example
 }
 ```
 
-作者名稱會靠左對齊，而他們所撰寫的標題會靠右對齊。 在插入運算式後面加上逗號 (",")，並指定「最小」  欄位寬度，即可指定對齊方式。 如果指定的值是正數，則欄位會靠右對齊。 如果它是負數，則欄位會靠左對齊。
+作者名稱會靠左對齊，而他們所撰寫的標題會靠右對齊。 在插入運算式後面加上逗號 (",")，並指定「最小」欄位寬度，即可指定對齊方式。 如果指定的值是正數，則欄位會靠右對齊。 如果它是負數，則欄位會靠左對齊。
 
 嘗試移除 `{"Author",-25}` 和 `{title.Key,-25}` 程式碼中的負號，然後重新執行此範例，如下列程式碼所執行：
 

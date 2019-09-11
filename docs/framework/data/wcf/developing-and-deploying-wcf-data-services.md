@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 578c480940d70fa84edf18d572992e755c8efed5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780326"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854075"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發和部署 WCF Data Services
 
@@ -121,7 +121,7 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
 部署資料服務時，應該考慮下列事項：
 
-- 當您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者存取 SQL Server 資料庫的資料服務時，可能也需要使用資料服務部署傳播資料結構、資料或兩者。 Visual Studio 可以自動建立腳本（.sql 檔案）在目的地資料庫中執行此動作，而且這些腳本可以包含在 ASP.NET 應用程式的 Web 部署套件中。 如需詳細資訊，請參閱[如何：使用 Web 應用程式專案](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))部署資料庫。 對於 ASP.NET 網站，您可以使用 Visual Studio 中的 [**資料庫發行] Wizard**來執行此動作。 如需詳細資訊，請參閱[發行 SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
+- 當您部署使用 Entity Framework 提供者來存取 SQL Server 資料庫的資料服務時，您可能也需要使用資料服務部署來傳播資料結構、資料或兩者。 Visual Studio 可以自動建立腳本（.sql 檔案）在目的地資料庫中執行此動作，而且這些腳本可以包含在 ASP.NET 應用程式的 Web 部署套件中。 如需詳細資訊，請參閱[如何：使用 Web 應用程式專案](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))部署資料庫。 對於 ASP.NET 網站，您可以使用 Visual Studio 中的 [**資料庫發行] Wizard**來執行此動作。 如需詳細資訊，請參閱[發行 SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
 
 - 由於 WCF Data Services 包含基本的 WCF 執行，因此您可以使用 Windows Server AppFabric 監視部署至在 Windows Server 上執行之 IIS 的資料服務。 如需使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱[使用 Windows Server appfabric 的文章追蹤 WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=202005)。
 

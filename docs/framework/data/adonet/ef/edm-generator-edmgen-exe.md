@@ -2,26 +2,26 @@
 title: EDM 產生器 (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251620"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854715"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 產生器 (EdmGen.exe)
 
-EdmGen.exe 是用於處理 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 模型和對應檔案的命令列工具。 您可以使用 EdmGen.exe 工具執行下列動作：
+Edmgen.exe 是一種命令列工具，可用來處理 Entity Framework 模型和對應檔。 您可以使用 EdmGen.exe 工具執行下列動作：
 
-- 使用資料來源特定的 .NET Framework 資料提供者連接至資料來源，並產生 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使用的概念模型 (.csdl)、儲存體模型 (.ssdl) 和對應 (.msl) 檔案。 如需詳細資訊，請參閱[如何：使用 Edmgen.exe 來產生模型和對應](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)檔。
+- 使用資料來源特定的 .NET Framework Data Provider 來連接到資料來源，並產生 Entity Framework 所使用的概念模型（csdl）、儲存模型（ssdl）和對應（msl）檔案。 如需詳細資訊，請參閱[如何：使用 Edmgen.exe 來產生模型和對應](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)檔。
 
 - 驗證現有模型。 如需詳細資訊，請參閱[如何：使用 Edmgen.exe 來驗證模型和對應](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)檔。
 
 - 產生 C# 或 Visual Basic 程式碼檔案，其中包含從概念模型 (.csdl) 檔案產生的物件類別 (Class)。 如需詳細資訊，請參閱[如何：使用 Edmgen.exe 來產生物件層程式碼](how-to-use-edmgen-exe-to-generate-object-layer-code.md)。
 
-- 產生 C# 或 Visual Basic 程式碼檔案，其中包含為現有模型預先產生的檢視表。 如需詳細資訊[, 請看:預先產生視圖以改善查詢效能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。
+- 產生 C# 或 Visual Basic 程式碼檔案，其中包含為現有模型預先產生的檢視表。 如需詳細資訊[，請看：預先產生視圖以改善查詢效能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。
 
-Edmgen.exe 工具會安裝在 .NET Framework 目錄中。 在許多情況下，這是位於 C:\windows\Microsoft.NET\Framework\v4.0。 若為 64 位元系統，則是位於 C:\windows\Microsoft.NET\Framework64\v4.0。 您也可以從 Visual Studio 命令提示字元存取 Edmgen.exe 工具 (按一下 **開始**, 指向 **所有程式**, 指向  **Microsoft Visual Studio 2010**, 指向  **Visual Studio Tools**, 然後按一下  **Visual Studio 2010命令提示**字元)。
+Edmgen.exe 工具會安裝在 .NET Framework 目錄中。 在許多情況下，這是位於 C:\windows\Microsoft.NET\Framework\v4.0。 若為 64 位元系統，則是位於 C:\windows\Microsoft.NET\Framework64\v4.0。 您也可以從 Visual Studio 命令提示字元存取 Edmgen.exe 工具（按一下 **開始**，指向 **所有程式**，指向  **Microsoft Visual Studio 2010**，指向  **Visual Studio Tools**，然後按一下  **Visual Studio 2010命令提示**字元）。
 
 ## <a name="syntax"></a>語法
 
@@ -33,7 +33,7 @@ EdmGen /mode:choice [options]
 
 使用 EdmGen.exe 工具時，必須指定下列其中一個模式。
 
-|模式|描述|
+|模式|說明|
 |----------|-----------------|
 |`/mode:ValidateArtifacts`|驗證 .csdl、.ssdl 和 .msl 檔案，並顯示任何錯誤或警告。<br /><br /> 這個選項至少需要 `/inssdl`、`/incsdl` 兩個引數其中之一。 如果指定 `/inmsl`，則也要有 `/inssdl` 和 `/incsdl` 引數。|
 |`/mode:FullGeneration`|使用 `/connectionstring` 選項中指定的資料庫連接資訊，並產生 .csdl、.ssdl、.msl、物件層和檢視表檔案。<br /><br /> 這個選項需要 `/connectionstring` 引數以及 `/project` 引數或是 `/outssdl`、`/outcsdl`、`/outmsdl`、`/outobjectlayer`、`/outviews`、`/namespace` 及 `/entitycontainer` 其中一個引數。|
@@ -60,7 +60,7 @@ EdmGen /mode:choice [options]
 |`/language:`[VB&#124;CSharp]|指定所產生之原始程式碼檔案的語言。 預設語言為 C#。|
 |`/namespace:`\<string>|指定要使用的模型命名空間。 執行 `/mode:FullGeneration` 或 `/mode:FromSSDLGeneration` 時會在 .csdl 檔案中設定命名空間。 執行 `/mode:EntityClassGeneration` 時不會使用命名空間。|
 |`/entitycontainer:`\<string>|指定要套用到產生的模型和對應檔案中 `<EntityContainer>` 項目的名稱。|
-|`/pl[uralize]`|將英語的單數和複數規則套用到概念模型中的 `Entity`、`EntitySet` 和 `NavigationProperty` 名稱。 這個選項會執行下列動作：<br /><br /> -將所有`EntityType`名稱單數。<br />-將所有`EntitySet`名稱設為複數。<br />-對於最`NavigationProperty`多隻傳回一個實體的每個, 請將名稱變成單數。<br />-若每`NavigationProperty`個傳回一個以上的實體, 請將名稱設為複數。|
+|`/pl[uralize]`|將英語的單數和複數規則套用到概念模型中的 `Entity`、`EntitySet` 和 `NavigationProperty` 名稱。 這個選項會執行下列動作：<br /><br /> -將所有`EntityType`名稱單數。<br />-將所有`EntitySet`名稱設為複數。<br />-對於最`NavigationProperty`多隻傳回一個實體的每個，請將名稱變成單數。<br />-若每`NavigationProperty`個傳回一個以上的實體，請將名稱設為複數。|
 |`/SuppressForeignKeyProperties or /nofk`|防止外部索引鍵資料行公開為概念模型中實體類型上的純量屬性。|
 |`/help` 或 `?`|顯示工具的命令語法和選項。|
 |`/nologo`|隱藏著作權訊息。|

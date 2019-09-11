@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
-  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-  ms.translationtype: HT
+  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/19/2019
-  ms.locfileid: "65880567"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850737"
 items:
 - durationInMinutes: 1
   content: >
@@ -227,7 +227,7 @@ items:
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - content: >-
-    您已經完成清單互動式教學課程。 那是對於 C# 互動式教學課程的最終簡介。 您可以瀏覽 [.NET 網站](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「繼續學習」步驟會帶您回到這些教學課程，以便在您的機器上建置專案。
+    您已經完成清單互動式教學課程。 那是對於 C# 互動式教學課程的最終簡介。 您可以瀏覽 [.NET 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
 
 
     您可以在下列文章中深入了解 [.NET 集合](../../../standard/collections/index.md)：

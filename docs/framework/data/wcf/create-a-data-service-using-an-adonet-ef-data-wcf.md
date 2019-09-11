@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: ae4176fd986f870523e44a11eee48850e2dddd7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791085"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854117"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>HOW TO：使用 ADO.NET Entity Framework 資料來源建立資料服務（WCF Data Services）
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>作法：使用 ADO.NET Entity Framework 資料來源建立資料服務（WCF Data Services）
 
-WCF Data Services 會將實體資料公開為數據服務。 當資料來源為關係資料庫時，[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] ADO.NET 會提供此實體資料。 本主題說明如何在以現有資料庫[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]為基礎的 Visual Studio Web 應用程式中建立以為基礎的資料模型，並使用此資料模型來建立新的資料服務。
+WCF Data Services 會將實體資料公開為數據服務。 當資料來源為關係資料庫時，NETEntity 架構會提供此實體資料。 本主題示範如何在以現有資料庫為基礎的 Visual Studio Web 應用程式中建立 Entity Framework 架構資料模型，並使用此資料模型建立新的資料服務。
 
-也提供命令列工具，可在 Visual Studio 專案之外[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]產生模型。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 如需詳細資訊，請參閱[如何：使用 Edmgen.exe 來產生模型和對應](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)檔。
+Entity Framework 也提供命令列工具，可在 Visual Studio 專案以外產生 Entity Framework 模型。 如需詳細資訊，請參閱[如何：使用 Edmgen.exe 來產生模型和對應](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)檔。
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>若要將以現有資料庫為基礎的 Entity Framework 模型加入至現有的 Web 應用程式
 
@@ -45,7 +45,7 @@ WCF Data Services 會將實體資料公開為數據服務。 當資料來源為�
 
 9. 按一下 **[完成**] 以完成嚮導。
 
-     這樣會根據特定資料庫建立預設資料模型。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 可讓您自訂資料模型。 如需詳細資訊，請參閱[實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))工作。
+     這樣會根據特定資料庫建立預設資料模型。 Entity Framework 可讓您自訂資料模型。 如需詳細資訊，請參閱[實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))工作。
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>若要使用新的資料模型建立資料服務
 

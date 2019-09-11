@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948591"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851379"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (憑證管理員工具)
 憑證管理員工具 (Certmgr.exe) 可以管理憑證、憑證信任清單 (CTL) 和憑證撤銷清單 (CRL)。  
@@ -38,7 +38,7 @@ ms.locfileid: "69948591"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
       certmgr [/add | /del | /put] [options]  
 [/s[/r registryLocation]] [sourceStorename]  
 [/s[/r registryLocation]] [destinationStorename]  
@@ -46,12 +46,12 @@ ms.locfileid: "69948591"
   
 ## <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |*sourceStorename*|憑證存放區，包含現有的憑證、CTL，或是要新增、刪除、儲存或顯示的 CRL。 這可以是存放區檔或系統存放區。|  
 |*destinationStorename*|輸出憑證存放區或檔案。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/add**|將憑證、CTL 和 CRL 加入憑證存放區。|  
 |**/all**|與 **/add** 一起使用時會加入所有項目。 與 **/del** 一起使用時會刪除所有項目。未與 **/add** 或 **/del** 選項一起使用時，會顯示所有項目。 **/all** 選項無法與 **/put** 一起使用。|  
@@ -97,43 +97,43 @@ ms.locfileid: "69948591"
 ## <a name="examples"></a>範例  
  下列命令會顯示叫做 `my` 且具有詳細資訊輸出的預設系統存放區。  
   
-```  
+```console  
 certmgr /v /s my  
 ```  
   
  下列命令會將 `myFile.ext` 檔案中的所有憑證加入到名為 `newFile.ext` 的新檔案中。  
   
-```  
+```console  
 certmgr /add /all /c myFile.ext newFile.ext  
 ```  
   
  下列命令會將 `testcert.cer` 檔案中的憑證加入至 `my` 系統存放區。  
   
-```  
+```console  
 certmgr /add /c testcert.cer /s my  
 ```  
   
  下列命令會將 `TrustedCert.cer` 檔案中的憑證加入至根憑證存放區。  
   
-```  
+```console  
 certmgr /c /add TrustedCert.cer /s root  
 ```  
   
  下列命令會將 `myCert` 系統存放區中通用名稱為 `my` 的憑證儲存到名為 `newCert.cer` 的檔案。  
   
-```  
+```console  
 certmgr /add /c /n myCert /s my newCert.cer  
 ```  
   
  下列命令會刪除 `my` 系統存放區中的所有 CTL，並將產生的存放區儲存到名為 `newStore.str` 的檔案。  
   
-```  
+```console  
 certmgr /del /all /ctl /s my newStore.str  
 ```  
   
  下列命令會將 `my` 系統存放區中的憑證儲存在 `newFile` 檔案。 系統會提示您輸入來自 `my` 的憑證號碼，以便放置在 `newFile` 中。  
   
-```  
+```console  
 certmgr /put /c /s my newFile  
 ```  
   

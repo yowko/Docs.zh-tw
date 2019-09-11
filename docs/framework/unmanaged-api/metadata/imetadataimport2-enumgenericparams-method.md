@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7edd2eeafcce6a22c3256d0684a9c4f961b34002
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39e3e71185051435afcf03d51ec62742c080b02a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049891"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855707"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams 方法
-陣列的泛型參數指定的 TypeDef 或 MethodDef 相關聯的語彙基元的列舉值取得語彙基元。  
+取得與指定的 TypeDef 或 MethodDef token 相關聯之泛型參數標記陣列的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
 HRESULT EnumGenericParams (  
    [in, out] HCORENUM     *phEnum,   
    [in]  mdToken          tk,  
@@ -41,35 +41,35 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。  
+ [in、out]列舉值的指標。  
   
  `tk`  
- [in]TypeDef 或 MethodDef 語彙基元，其泛型參數為列舉。  
+ 在要列舉其泛型參數的 TypeDef 或 MethodDef token。  
   
  `rGenericParams`  
- [out]若要列舉的泛型參數的陣列。  
+ 脫銷要列舉的泛型參數陣列。  
   
  `cMax`  
- [in]將放在權杖的要求的數目上限`rGenericParams`。  
+ 在要放置在中`rGenericParams`的要求最大權杖數目。  
   
  `pcGenericParams`  
- [out]語彙基元傳回的數字放在`rGenericParams`。  
+ 脫銷所傳回的權杖`rGenericParams`數目。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` 已成功傳回。|  
-|`S_FALSE`|`phEnum` 有沒有成員項目。 在此情況下，`pcGenericParams`設為 0 （零）。|  
+|`S_OK`|`EnumGenericParams`已成功傳回。|  
+|`S_FALSE`|`phEnum`沒有成員元素。 在此情況下`pcGenericParams` ，會設為0（零）。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **標頭：** Cor。h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 Mscoree.dll 中的資源使用  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

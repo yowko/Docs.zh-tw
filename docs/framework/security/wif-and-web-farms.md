@@ -3,12 +3,12 @@ title: WIF 和 Web 伺服陣列
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967194"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851517"
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 伺服陣列
 當您使用 Windows Identity Foundation (WIF) 來保護部署於 Web 伺服陣列中的信賴憑證者 (RP) 應用程式的資源時，必須採取特定的步驟，以確保 WIF 可以處理伺服陣列中不同電腦上所執行之 RP 應用程式執行個體的權杖。 這項處理包含驗證工作階段權杖簽章、加密和解密工作階段權杖、快取工作階段權杖，以及偵測重新執行的安全性權杖。  
@@ -64,7 +64,7 @@ ms.locfileid: "69967194"
 ## <a name="the-wcf-caching-service"></a>WCF 快取服務  
  下列介面定義了 WCF 快取服務與信賴憑證者應用程式用來與其進行通訊的 WCF 用戶端之間的協定。 基本上，它會公開 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 類別的方法作為服務作業。  
   
-```  
+```csharp
 [ServiceContract()]  
 public interface ISessionSecurityTokenCacheService  
 {  
@@ -90,7 +90,7 @@ public interface ISessionSecurityTokenCacheService
   
  下列程式碼示範 WCF 快取服務的實作。 在此範例中，將使用 WIF 所實作的記憶體內部工作階段權杖快取 (預設值)。 或者，您可以實作資料庫支援的持久快取。 `ISessionSecurityTokenCacheService` 定義了上述介面。 在此範例中，為求簡潔起見，不會顯示實作介面所需的全部方法。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.IdentityModel.Configuration;  
@@ -150,7 +150,7 @@ namespace WcfSessionSecurityTokenCacheService
   
  此類別會覆寫 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> 方法，以便從 `<sessionSecurityTokenCache>` 元素的自訂 `<cacheServiceAddress>` 子元素取得服務端點。 它會使用此端點來初始化可用來與服務通訊的 `ISessionSecurityTokenCacheService` 通道。  在此範例中，為求簡潔起見，不會顯示實作 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 類別所需的全部方法。  
   
-```  
+```csharp
 using System;  
 using System.Configuration;  
 using System.IdentityModel.Configuration;  

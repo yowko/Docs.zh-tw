@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 38ec0986ef3e673ad2d624d33dc33d882f7e412c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0e5792fa4f31c4f40047016252100b1de23fd075
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780428"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854205"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>設定資料服務 (WCF 資料服務)
-有[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]了，您就可以建立公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要的資料服務。 這些摘要中的資料可以來自各種不同的資料來源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]會使用資料提供者，將此資料[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]公開為摘要。 這些提供者包含 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱[資料服務提供者](data-services-providers-wcf-data-services.md)。  
+有[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]了，您就可以建立公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要的資料服務。 這些摘要中的資料可以來自各種不同的資料來源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]會使用資料提供者，將此資料[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]公開為摘要。 這些提供者包含 Entity Framework 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱[資料服務提供者](data-services-providers-wcf-data-services.md)。  
   
  在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中，資料服務是繼承自 <xref:System.Data.Services.DataService%601> 類別的一種類別，其中資料服務的類型即為資料模型的實體容器。 此實體容器具有一個或多個可傳回 <xref:System.Linq.IQueryable%601> (用於存取資料模型中的資料集) 的屬性。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "70780428"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|不支援|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|不支援|不支援|  
   
- <sup>1</sup>在此範例中`Address` ，表示`Customers`實體的複雜型別屬性，其具有名為`StreetAddress`的屬性。 Northwind 資料服務所使用的模型不會明確定義這個複雜類型。 當您使用[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供者來定義資料模型時，您可以使用實體資料模型工具來定義這類複雜類型。 如需詳細資訊，請參閱[如何：建立和修改複雜類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))。  
+ <sup>1</sup>在此範例中`Address` ，表示`Customers`實體的複雜型別屬性，其具有名為`StreetAddress`的屬性。 Northwind 資料服務所使用的模型不會明確定義這個複雜類型。 當此資料模型是使用 Entity Framework 提供者所定義時，您可以使用實體資料模型工具來定義這類複雜類型。 如需詳細資訊，請參閱[如何：建立和修改複雜類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))。  
   
  <sup>2</sup>當傳回二進位大型物件（BLOB）的屬性定義為屬於媒體連結專案之實體的媒體資源（在此案例中為`Customers`）時，支援此 URI。 如需詳細資訊，請參閱[串流處理提供者](streaming-provider-wcf-data-services.md)。  
   

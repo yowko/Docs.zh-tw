@@ -1,28 +1,29 @@
 ---
-title: <state>在 WCF 中,<workflowInstanceQuery>
+title: <state>在 WCF 中，<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 99387a8f60e96beb2ec7706d9abf4bb6ae84b868
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 80f7532f3c51680a2e34713b526dc43822db61b9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938214"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854959"
 ---
 # <a name="state-of-wcf-workflowinstancequery"></a>\<WCF、 \<workflowInstanceQuery > 的狀態 >
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
   
- 如需追蹤設定檔查詢的詳細資訊, 請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)  
+ 如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel>  
-\<追蹤 >  
-\<設定檔 >  
-\<trackingProfile>  
-\<工作流程 >  
-\<workflowInstanceQueries>  
-\<workflowInstanceQuery>  
-\<狀態 >  
-\<狀態 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<追蹤 >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<設定檔 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<工作流程 >** ](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowInstanceQueries >** ](workflowinstancequeries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowInstanceQuery >** ](workflowinstancequery-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<狀態 >** ](states-of-wcf-workflowinstancequery.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<狀態 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +51,7 @@ ms.locfileid: "69938214"
   
 ### <a name="attributes"></a>屬性
 
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`name`|字串，可指定建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態。|  
   
@@ -60,7 +61,7 @@ ms.locfileid: "69938214"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |[\<states>](states-of-wcf-workflowinstancequery.md)|建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。|  
   
@@ -68,7 +69,7 @@ ms.locfileid: "69938214"
 
 按照此集合中的狀態篩選傳回的記錄。  
   
-下表說明可能的狀態值:
+下表說明可能的狀態值：
   
 |State|描述|  
 |-----------|-----------------|  

@@ -4,12 +4,12 @@ description: 此文章說明 .NET Core SDK 與 Runtime 如何進行版本設定 
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 4674cd8750f5a5e628945c1712ac579d88385b94
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104963"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849292"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 版本設定概觀
 
@@ -82,11 +82,11 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>預覽版本
 
-預覽版本將 `-preview[number]-([build]|"final")` 附加至版本。 例如，`2.0.0-preview1-final`。
+預覽版本將 `-preview[number]-([build]|"final")` 附加至版本。 例如： `2.0.0-preview1-final` 。
 
 ### <a name="servicing-versions"></a>服務版本
 
-版本發行之後，版本分支通常會停止產生每日組建，改為開始產生服務組建。 服務版本會將 `-servicing-[number]` 附加至版本。 例如，`2.0.1-servicing-006924`。
+版本發行之後，版本分支通常會停止產生每日組建，改為開始產生服務組建。 服務版本會將 `-servicing-[number]` 附加至版本。 例如： `2.0.1-servicing-006924` 。
 
 ## <a name="relationship-to-net-standard-versions"></a>與 .NET Standard 版本的關聯性
 
@@ -108,6 +108,6 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 - [目標架構](../../standard/frameworks.md)
 - [.NET Core 發佈封裝](../build/distribution-packaging.md)
-- [.NET Core 支援週期資料表](https://www.microsoft.com/net/core/support)
+- [.NET Core 支援週期資料表](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (.NET Core 2+ 版本繫結)
 - [.NET Core 的 Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)

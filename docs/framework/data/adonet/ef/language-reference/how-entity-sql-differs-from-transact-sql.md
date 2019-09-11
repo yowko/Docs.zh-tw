@@ -2,12 +2,12 @@
 title: Entity SQL 與 Transact-SQL 的相異之處
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 1a4bf8267ee5f036effc5f7bc91c28d1485b7612
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250853"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854468"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 與 Transact-SQL 的相異之處
 本主題描述和 transact-sql 之間[!INCLUDE[esql](../../../../../../includes/esql-md.md)]的差異。  
@@ -189,7 +189,7 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 尚未提供分析函式的支援。  
   
  內建函式，運算子  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援 Transact-sql 內建函數和運算子的子集。 主要存放區提供者可能會支援這些運算子和函式。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]會使用在提供者資訊清單中宣告的存放區特有函式。 此外， [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]可讓您宣告內建和使用者定義的現有存放區函式，以[!INCLUDE[esql](../../../../../../includes/esql-md.md)]供使用。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援 Transact-sql 內建函數和運算子的子集。 主要存放區提供者可能會支援這些運算子和函式。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]會使用在提供者資訊清單中宣告的存放區特有函式。 此外，Entity Framework 可讓您宣告內建和使用者定義的現有存放區函式，以[!INCLUDE[esql](../../../../../../includes/esql-md.md)]供使用。  
   
  提示  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不提供查詢提示的機制。  

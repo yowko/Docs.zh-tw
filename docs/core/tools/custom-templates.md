@@ -3,16 +3,16 @@ title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d513965a60416392fb8acd15c9f89c8af0ec7876
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660582"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849852"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
-[.NET Core SDK](https://www.microsoft.com/net/download/core) \(英文\) 具有許多已經安裝並可供您使用的範本。 [`dotnet new` 命令](dotnet-new.md)不僅是使用範本的方式，也是安裝及解除安裝範本的方式。 從 .NET Core 2.0 開始，您可以建立任何專案類型的自訂範本，例如應用程式、服務、工具或類別庫。 您甚至可以建立會輸出一或多個獨立檔案的範本，例如組態檔。
+[.NET Core SDK](https://dotnet.microsoft.com/download) \(英文\) 具有許多已經安裝並可供您使用的範本。 [`dotnet new` 命令](dotnet-new.md)不僅是使用範本的方式，也是安裝及解除安裝範本的方式。 從 .NET Core 2.0 開始，您可以建立任何專案類型的自訂範本，例如應用程式、服務、工具或類別庫。 您甚至可以建立會輸出一或多個獨立檔案的範本，例如組態檔。
 
 您可以直接參考 NuGet *.nupkg* 檔案，或指定包含範本的檔案系統目錄，來從任何 NuGet 摘要上的 NuGet 套件安裝自訂的範本。 範本引擎提供可讓您取代值、包含與排除檔案，以及在範本被使用時執行自訂處理作業的功能。
 
@@ -22,13 +22,13 @@ ms.locfileid: "69660582"
 
 ### <a name="net-default-templates"></a>.NET 預設範本
 
-當您安裝 [.NET Core SDK](https://www.microsoft.com/net/download/core) 時，您會收到十多個用於建立專案和檔案的內建範本，包括主控台應用程式、類別庫、單元測試專案，ASP.NET Core 應用程式 (包括 [Angular](https://angular.io/) 和 [React](https://facebook.github.io/react/) 專案) 和組態檔。 若要列出內建範本，請執行搭配 `-l|--list` 選項執行 `dotnet new` 命令：
+當您安裝 [.NET Core SDK](https://dotnet.microsoft.com/download) 時，您會收到十多個用於建立專案和檔案的內建範本，包括主控台應用程式、類別庫、單元測試專案，ASP.NET Core 應用程式 (包括 [Angular](https://angular.io/) 和 [React](https://facebook.github.io/react/) 專案) 和組態檔。 若要列出內建範本，請執行搭配 `-l|--list` 選項執行 `dotnet new` 命令：
 
 ```console
 dotnet new --list
 ```
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>組態
 
 範本是由下列部分組成：
 
@@ -37,7 +37,7 @@ dotnet new --list
 
 ### <a name="source-files-and-folders"></a>來源檔案和資料夾
 
-來源檔案和資料夾包含您想要範本引擎在 `dotnet new <TEMPLATE>` 命令被執行時使用的任何檔案和資料夾。 範本引擎的設計是將「可執行專案」  用為原始程式碼以產生專案。 這有幾項優點：
+來源檔案和資料夾包含您想要範本引擎在 `dotnet new <TEMPLATE>` 命令被執行時使用的任何檔案和資料夾。 範本引擎的設計是將「可執行專案」用為原始程式碼以產生專案。 這有幾項優點：
 
 - 範本引擎不需要您將特殊權杖插入專案的原始程式碼。
 - 程式碼檔案不是特殊的檔案，也不使用範本引擎以任何方式修改。 因此，通常在處理專案時使用的工具也用來處理範本內容。
@@ -56,7 +56,7 @@ dotnet new --list
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |
-| `classifications` | array(string) | 搜尋範本時，使用者可能用來尋找範本的零或多個範本特性。 當它出現在使用 `dotnet new -l|--list` 命令產生的範本清單中時，分類也會出現在「標記」  資料行中。 |
+| `classifications` | array(string) | 搜尋範本時，使用者可能用來尋找範本的零或多個範本特性。 當它出現在使用 `dotnet new -l|--list` 命令產生的範本清單中時，分類也會出現在「標記」資料行中。 |
 | `identity`        | 字串        | 此範本的唯一名稱。 |
 | `name`            | 字串        | 使用者應該會看到的範本名稱。 |
 | `shortName`       | 字串        | 適用於選取要套用至環境之範本的預設速記名稱；此環境中的範本名稱是由使用者指定，而不是透過 GUI 選取。 例如，從命令提示字元以 CLI 命令使用範本時，簡短名稱很有用。 |

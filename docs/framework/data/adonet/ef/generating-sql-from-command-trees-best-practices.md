@@ -2,12 +2,12 @@
 title: 從命令樹產生 SQL - 最佳作法
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251579"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855010"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>從命令樹產生 SQL - 最佳作法
 
@@ -125,7 +125,7 @@ ON b.y = d.z
 
 ## <a name="join-alias-flattening"></a>聯結別名扁平化
 
-與輸出命令樹中任何其他關聯運算式不同的是，DbJoinExpression 所輸出的結果型別是包含兩個資料行的資料列，而且其中每一個資料行都會對應至其中一個輸入。 建立 DbPropertyExpression 以存取源自于聯結的純量屬性時, 它會超過另一個 DbPropertyExpression。
+與輸出命令樹中任何其他關聯運算式不同的是，DbJoinExpression 所輸出的結果型別是包含兩個資料行的資料列，而且其中每一個資料行都會對應至其中一個輸入。 建立 DbPropertyExpression 以存取源自于聯結的純量屬性時，它會超過另一個 DbPropertyExpression。
 
 範例包括範例 2 中的 "a.b.y" 以及範例 3 中的 "b.c.y"。 不過，在對應的 SQL 陳述式中，這些項目都會當做 "b.y" 參考。 這種重新指定別名的作業稱為聯結別名扁平化。
 
@@ -137,15 +137,15 @@ ON b.y = d.z
 
 ## <a name="avoid-select-"></a>避免使用 SELECT *
 
-請勿使用 `SELECT *`，從基底資料表中選取。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式中的儲存體模型可能只包含資料庫資料表中的資料行子集。 在此情況下，`SELECT *` 可能會產生錯誤的結果。 因此，您應該改用參與運算式之結果型別中的資料行名稱來指定所有參與的資料行。
+請勿使用 `SELECT *`，從基底資料表中選取。 Entity Framework 應用程式中的儲存體模型只能包含資料庫資料表中的資料行子集。 在此情況下，`SELECT *` 可能會產生錯誤的結果。 因此，您應該改用參與運算式之結果型別中的資料行名稱來指定所有參與的資料行。
 
 ## <a name="reuse-of-expressions"></a>重複使用運算式
 
-您可以在 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 所傳遞的查詢命令樹中重複使用運算式。 請勿假設每個運算式都只會出現在查詢命令樹中一次。
+運算式可以在 Entity Framework 所傳遞的查詢命令樹中重複使用。 請勿假設每個運算式都只會出現在查詢命令樹中一次。
 
 ## <a name="mapping-primitive-types"></a>對應基本型別
 
-將概念 (EDM) 型別對應至提供者型別時，您應該對應至最廣泛的型別 (Int32)，以便容納所有可能的值。 此外, 請避免對應至無法用於許多作業的型別, 例如 BLOB 型別 ( `ntext`如 SQL Server 中的)。
+將概念 (EDM) 型別對應至提供者型別時，您應該對應至最廣泛的型別 (Int32)，以便容納所有可能的值。 此外，請避免對應至無法用於許多作業的型別，例如 BLOB 型別（ `ntext`如 SQL Server 中的）。
 
 ## <a name="see-also"></a>另請參閱
 

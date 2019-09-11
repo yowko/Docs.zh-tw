@@ -2,19 +2,21 @@
 title: <endpoint> 項目
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 71ddb3b860870ee8feeeb36c3f64fa7bfebb0f10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925818"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855388"
 ---
 # <a name="endpoint-element"></a>\<端點 > 元素
 指定服務端點的繫結、合約和位址屬性，以用於公開服務。  
   
- \<system.ServiceModel>  
-\<service>  
-\<端點 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<服務 >** ](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<服務 >** ](service.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<端點 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +41,7 @@ ms.locfileid: "69925818"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |位址|包含端點位址的字串。 位址可以指定為絕對或相對位址。 如果提供相對位址，主機必須為繫結中使用的傳輸配置提供適當的基底位址。 如果沒有設定位址，會將基底位址假設為該端點的位址。<br /><br /> 預設值是空字串。|  
 |behaviorConfiguration|字串，其中包含端點中所使用行為的名稱。|  

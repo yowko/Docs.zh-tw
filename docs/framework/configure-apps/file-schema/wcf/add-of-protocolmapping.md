@@ -2,19 +2,20 @@
 title: <add> 的 <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: df69b5f8a79489b722c1074f118b9c6f6e8e363d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6197d01665d49a7c97ac9e44251abf15faf80a8f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926662"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850374"
 ---
 # <a name="add-of-protocolmapping"></a>\<新增 protocolMapping > \<的 >
-代表傳輸通訊協定配置 (例如 HTTP、net.tcp、net.pipe 等) 和 Windows Communication Foundation (WCF) 系結之間的預設通訊協定對應。 在執行時間建立預設端點時, WCF 會查看設定的對應, 並決定要用於特定位址的系結。  
+代表傳輸通訊協定配置（例如 HTTP、net.tcp、net.pipe 等）和 Windows Communication Foundation （WCF）系結之間的預設通訊協定對應。 在執行時間建立預設端點時，WCF 會查看設定的對應，並決定要用於特定位址的系結。  
   
- \<system.serviceModel>  
-\<protocolMapping>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<protocolMapping >** ](protocolmapping.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +45,7 @@ ms.locfileid: "69926662"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<protocolMapping>](protocolmapping.md)|代表設定區段, 用於定義傳輸通訊協定配置 (例如 HTTP、net.tcp、net.pipe 等) 和 Windows Communication Foundation (WCF) 系結之間的預設通訊協定對應。|  
+|[\<protocolMapping>](protocolmapping.md)|代表設定區段，用於定義傳輸通訊協定配置（例如 HTTP、net.tcp、net.pipe 等）和 Windows Communication Foundation （WCF）系結之間的預設通訊協定對應。|  
   
 ## <a name="example"></a>範例  
  下列組態範例示範 machine.config 檔案中的預設通訊協定對應。 您可以透過修改 machine.config 檔案，在電腦層級覆寫這個預設對應。 或者，如果您只想在應用程式範圍內覆寫該預設對應，也可以覆寫應用程式組態檔中的這個區段，並且變更個別通訊協定配置的對應。  

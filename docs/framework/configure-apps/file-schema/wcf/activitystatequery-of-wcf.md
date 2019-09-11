@@ -2,24 +2,27 @@
 title: <activityStateQuery>WCF 的
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: ce7505896b9c5bb605bb0f67d735cb324f4fd493
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 233bd3a2fa161222977902cc1053f964e8171173
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926903"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850480"
 ---
 # <a name="activitystatequery-of-wcf"></a>\<WCF 的 activityStateQuery >
 
-代表查詢，可用來追蹤活動的生命週期之變更，這些活動將構成工作流程執行個體。 例如, 您可能想要追蹤在工作流程實例中完成「傳送電子郵件」活動的每次。 追蹤參與者必須要具備這個查詢，才能訂閱活動狀態記錄物件。 可供訂閱的狀態可於 ActivityStates 中指定。  
+代表查詢，可用來追蹤活動的生命週期之變更，這些活動將構成工作流程執行個體。 例如，您可能想要追蹤在工作流程實例中完成「傳送電子郵件」活動的每次。 追蹤參與者必須要具備這個查詢，才能訂閱活動狀態記錄物件。 可供訂閱的狀態可於 ActivityStates 中指定。  
   
-如需追蹤設定檔查詢的詳細資訊, 請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)。
+如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)。
 
-\<system.serviceModel> \<tracking>  
-\<profiles> \<trackingProfile>  
-\<工作流程 >  
-\<activityStateQueries>  
-\<activityStateQuery>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<追蹤 >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<設定檔 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<工作流程 >** ](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Q s >** ](activitystatequeries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<activityStateQuery >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +56,7 @@ ms.locfileid: "69926903"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |activityName|字串，這個字串會指定活動的名稱，以篩選 <xref:System.Activities.Tracking.ActivityStateRecord> 執行個體。|  
   
@@ -73,7 +76,7 @@ ms.locfileid: "69926903"
   
 ## <a name="remarks"></a>備註
 
-ActivityStateQuery 的一項獨特功能，就是可在追蹤工作流程的執行時擷取資料。 它可在存取追蹤記錄後期執行時，提供額外的內容。 您可以使用[ \<引數 >](../windows-workflow-foundation/arguments.md)、 [ \<狀態 >](../windows-workflow-foundation/states.md)和[ \<狀態 >](../windows-workflow-foundation/states.md)元素, 從工作流程中的任何活動中解壓縮任何變數或引數。下列範例顯示活動狀態查詢, 它會在發出活動的`Closed`追蹤記錄時, 解壓縮變數和引數。 只能使用 ActivityStateRecord 來解壓縮變數和引數, 因此會使用[ \<activityStateQuery >](../windows-workflow-foundation/activitystatequery.md)在追蹤設定檔內訂閱。  
+ActivityStateQuery 的一項獨特功能，就是可在追蹤工作流程的執行時擷取資料。 它可在存取追蹤記錄後期執行時，提供額外的內容。 您可以使用[ \<引數 >](../windows-workflow-foundation/arguments.md)、 [ \<狀態 >](../windows-workflow-foundation/states.md)和[ \<狀態 >](../windows-workflow-foundation/states.md)元素，從工作流程中的任何活動中解壓縮任何變數或引數。下列範例顯示活動狀態查詢，它會在發出活動的`Closed`追蹤記錄時，解壓縮變數和引數。 只能使用 ActivityStateRecord 來解壓縮變數和引數，因此會使用[ \<activityStateQuery >](../windows-workflow-foundation/activitystatequery.md)在追蹤設定檔內訂閱。  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">

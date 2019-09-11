@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 179170c0cafc67027012d2306281eb2cd1d967a4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170652"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854017"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
@@ -158,7 +158,7 @@ InstallAware 可以從單一來源來建立 Windows 應用程式 (APPX)、Window
 
 3. 在 [ **名稱** ] 方塊中輸入您的專案名稱，然後選擇 [ **確定**]。
 
-4. 如果您初次建立安裝程式和部署專案，請選擇 [移至 InstallShield]  或 [啟用 InstallShield 限量版]  ，以下載您 Microsoft Visual Studio 版本的 InstallShield 限量版。 重新啟動 Visual Studio。
+4. 如果您初次建立安裝程式和部署專案，請選擇 [移至 InstallShield] 或 [啟用 InstallShield 限量版]，以下載您 Microsoft Visual Studio 版本的 InstallShield 限量版。 重新啟動 Visual Studio。
 
 5. 移至 [ **專案助理** ] 精靈，並選擇 [ **應用程式檔案** ] 以加入 [專案輸出]。 您可以使用這個精靈設定其他專案屬性。
 
@@ -200,31 +200,23 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 若要以無訊息模式鏈結 .NET Framework 安裝程序並且讓 .NET Framework 安裝程式提供 UI，請將下列命令加入至您的安裝程式：
 
-```
-<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>
-```
+`<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>`
 
 例如，如果您的可執行程式為 Contoso.exe，而您想要以無訊息模式安裝 .NET Framework 4.5 離線可轉散發套件，請使用下列命令：
 
-```
-dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
-```
+`dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
 您可以使用其他命令列選項自訂安裝。 例如：
 
 - 若要提供一種方法讓使用者關閉執行中的 .NET Framework 應用程式，以減少系統重新啟動的次數，可設定被動模式並使用 `/showrmui` 選項，如下所示：
 
-    ```
-    dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso
-    ```
+    `dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso`
 
      這個命令可讓重新啟動管理員顯示訊息方塊，讓使用者有機會先關閉 .NET Framework 應用程式再安裝 .NET Framework。
 
 - 如果您要使用 Web 安裝程式，則可以使用 `/LCID` 選項指定語言套件。 例如，若要將 .NET Framework 4.5 Web 安裝程式鏈結至 Contoso 安裝程式，並且安裝日文語言套件，請將下列命令加入至您的應用程式安裝程序：
 
-    ```
-    dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041
-    ```
+    `dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041`
 
      如果您省略 `/LCID` 選項，安裝程式將會安裝符合使用者 MUI 設定的語言套件。
 
@@ -246,7 +238,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 - [偵測](#detect_net) 使用者電腦上是否已安裝正確的 .NET Framework 版本。
 
     > [!IMPORTANT]
-    > 在判斷是否已安裝正確版本的 .NET Framework 時，您應該檢查是否已安裝目標版本「或」  更新的版本，而不是是否已安裝您的目標版本。 換句話說，您應該評估從登錄擷取的版本機碼是否大於或等於您的目標版本的版本機碼，而「不是」  它是否等於目標版本的版本機碼。
+    > 在判斷是否已安裝正確版本的 .NET Framework 時，您應該檢查是否已安裝目標版本「或」 更新的版本，而不是是否已安裝您的目標版本。 換句話說，您應該評估從登錄擷取的版本機碼是否大於或等於您的目標版本的版本機碼，而「不是」 它是否等於目標版本的版本機碼。
 
 - [偵測](#detecting-the-language-packs) 使用者電腦上是否已安裝語言套件。
 
@@ -269,7 +261,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
-|版本|Release DWORD 的值|
+|Version|Release DWORD 的值|
 |-------------|--------------------------------|
 |安裝在 Windows 10 2019 年 5 月更新上的 .NET Framework 4.8|528040|
 |安裝在 Windows 10 2019 年 5 月更新以外的所有 OS 版本上的 .NET Framework 4.8|528049|
@@ -294,13 +286,13 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 您可以測試是否安裝特定的語言套件，方法是檢查登錄中 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* 資料夾內名為 `Release` 的 DWORD 值。 (請注意，"NET Framework Setup" 不是以句號開頭。)*LCID* 可指定地區設定識別碼，請參閱[支援的語言](#supported-languages)，以取得這些項目的清單。
 
-例如，若要檢查是否安裝了完整的日文語言套件 (LCID=1041)，請檢查登錄中的下列值：
+例如，若要偵測是否已安裝完整的日文語言套件（LCID = 1041），請從登錄中取出下列已命名的值：
 
-```
-Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041
-Name: Release
-Type: DWORD
-```
+| | |
+|-|-|
+| Key | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| 名稱 | 版本 |
+| 類型 | DWORD |
 
 若要判斷是否已針對 .NET Framework 從 4.5 到 4.7.2 的特定版本安裝語言套件的最終發行版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 中所述。
 
@@ -337,9 +329,7 @@ Type: DWORD
 
 若要隨 .NET Framework 離線安裝程式安裝語言套件，您必須將它鏈結至您的應用程式安裝。 例如，若要同時部署 .NET Framework 4.5.1 離線安裝程式與日文語言套件，請使用下列命令：
 
-```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
-```
+`NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>`
 
 如果您使用 Web 安裝程式，則不需要鏈結語言套件，安裝程式將會安裝符合使用者 MUI 設定的語言套件。 如果您要安裝不同的語言，可以使用 `/LCID` 選項指定語言套件。
 
@@ -380,7 +370,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 
 ## <a name="uninstalling-the-net-framework"></a>解除安裝 .NET Framework
 
-從 [!INCLUDE[win8](../../../includes/win8-md.md)] 開始，您可以使用 [控制台] 中的 [開啟或關閉 Windows 功能]  ，將 .NET Framework 4.5 或其小數點版本解除安裝。 在舊版 Windows 中，您可以使用 [控制台] 中的 [新增或移除程式]  ，將 .NET Framework 4.5 或其小數點版本解除安裝。
+從 [!INCLUDE[win8](../../../includes/win8-md.md)] 開始，您可以使用 [控制台] 中的 [開啟或關閉 Windows 功能]，將 .NET Framework 4.5 或其小數點版本解除安裝。 在舊版 Windows 中，您可以使用 [控制台] 中的 [新增或移除程式]，將 .NET Framework 4.5 或其小數點版本解除安裝。
 
 > [!IMPORTANT]
 > 針對 Windows 7 和舊版作業系統，解除安裝 .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2, 或 4.8 不會還原 .NET Framework 4.5 檔案，而解除安裝 .NET Framework 4.5 不會還原 .NET Framework 4 檔案。 如果您想要還原為舊版，則必須重新安裝舊版及其所有更新。
@@ -423,7 +413,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 |1032|希臘文|el|
 |1035|芬蘭文|fi|
 |1036|法文 – 法國|fr|
-|1037|希伯來文|he|
+|1037|Hebrew|he|
 |1038|匈牙利文|hu|
 |1040|義大利文 – 義大利|it|
 |1041|日文|ja|

@@ -2,12 +2,12 @@
 title: dotnet-install 指令碼
 description: 了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI 工具和共用執行階段。
 ms.date: 01/16/2019
-ms.openlocfilehash: ed1a3341e678b405ae4aca35e3b49ada89eb069a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253903"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849571"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -55,7 +55,7 @@ macOS/Linux：
   - 代表特定版本的 X.Y 格式兩段式版本 (例如 `2.0` 或 `1.0`)。
   - 分支名稱。 例如 `release/2.0.0`、`release/2.0.0-preview2` 或 `master` (適用於夜間版本)。
 
-  預設值為 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://www.microsoft.com/net/platform/support-policy#dotnet-core) \(英文\) 頁面。
+  預設值為 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。
 
 - **`-Version <VERSION>`**
 

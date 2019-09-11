@@ -3,12 +3,12 @@ title: WIF 組態結構描述慣例
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: 39ed32bb7e926f275e996b09e746c879c6d3fe9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e13915121884ecb4a0e54344e02d29650f54c6f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909320"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851487"
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF 組態結構描述慣例
 本主題討論 Windows Identity Foundation (WIF) 組態主題中所使用的慣例，並描述 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 和 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 區段中所使用的一些常見功能和屬性。  
@@ -21,9 +21,7 @@ ms.locfileid: "61909320"
 ## <a name="timespan-values"></a>TimeSpan 值  
  如果 <xref:System.TimeSpan> 作為屬性的類型，請檢閱 <xref:System.TimeSpan.Parse%28System.String%29> 方法以查看允許的格式。 此格式符合以下規格。  
   
-```  
-[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]  
-```  
+`[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]`  
   
  例如，"30"、"30.00:00"、"30.00:00:00" 全都表示 30 天；"00:05"、"00:05:00"、"0.00:05:00.00" 全都表示 5 分鐘。  
   

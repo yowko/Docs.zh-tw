@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 33574eeac5b1f7aa2067b1974f3f2e68fb22e8ff
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 686d1b31478121a8b2c907d99672a5fcc3438a71
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577170"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849037"
 ---
 # <a name="exposing-net-core-components-to-com"></a>將 .NET 核心元件公開給 COM
 
@@ -25,7 +25,7 @@ ms.locfileid: "69577170"
 
 ## <a name="prerequisites"></a>必要條件
 
-- 安裝 [.NET Core 3.0 Preview 7 SDK](https://www.microsoft.com/net/core) 或更新版本。
+- 安裝 [.NET Core 3.0 Preview 7 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 
 ## <a name="create-the-library"></a>建立程式庫
 
@@ -35,10 +35,10 @@ ms.locfileid: "69577170"
 2. 開啟 `Class1.cs`。
 3. 將 `using System.Runtime.InteropServices;` 新增到檔案的頂端。
 4. 建立名為 `IServer` 的介面。 例如：[!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
-5. 使用您要實作之 COM 介面的介面 GUID，將 `[Guid("<IID>")]` 屬性新增到介面。 例如，`[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`。 請注意，因為對 COM 而言，此 GUID 是此介面的唯一識別碼，所以其必須是唯一的。 在 Visual Studio 中，您可以前往 [工具] > [建立 GUID] 開啟建立 GUID 工具，以產生 GUID。
+5. 使用您要實作之 COM 介面的介面 GUID，將 `[Guid("<IID>")]` 屬性新增到介面。 例如： `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]` 。 請注意，因為對 COM 而言，此 GUID 是此介面的唯一識別碼，所以其必須是唯一的。 在 Visual Studio 中，您可以前往 [工具] > [建立 GUID] 開啟建立 GUID 工具，以產生 GUID。
 6. 將 `[InterfaceType]` 屬性新增到介面，並指定您介面應實作的基底 COM 介面。
 7. 建立名為 `Server` 且實作 `IServer` 的類別。
-8. 使用您要實作之 COM 類別的識別碼 GUID，將 `[Guid("<CLSID>")]` 屬性新增到類別。 例如，`[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`。 一如介面 GUID，因為對 COM 而言，此 GUID 是此介面唯一的識別碼，所以其必須是唯一的。
+8. 使用您要實作之 COM 類別的識別碼 GUID，將 `[Guid("<CLSID>")]` 屬性新增到類別。 例如： `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]` 。 一如介面 GUID，因為對 COM 而言，此 GUID 是此介面唯一的識別碼，所以其必須是唯一的。
 9. 將 `[ComVisible(true)]` 屬性新增到介面和類別。
 
 > [!IMPORTANT]

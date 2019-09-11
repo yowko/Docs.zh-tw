@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463809"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850995"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
@@ -18,7 +18,7 @@ ms.locfileid: "58463809"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程假設您已安裝 .NET Core。 如需安裝指示，請參閱 [.NET Core 安裝指南](https://www.microsoft.com/net/core) \(英文\)。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
+本教學課程假設您已安裝 .NET Core SDK。 請造訪[.Net Core 下載](https://dotnet.microsoft.com/download)頁面下載。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
 
 ## <a name="running-the-examples"></a>執行範例
 
@@ -144,8 +144,8 @@ public struct ValueStructure : ValueType // Generates CS0527.
 | ------------- | ----------------------------------------------------------------------------- |
 | Class - 類別         | <xref:System.Object>                                                          |
 | struct        | <xref:System.ValueType>、 <xref:System.Object>                                 |
-| enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
-| Delegate - 委派      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
+| enum          | <xref:System.Enum>、<xref:System.ValueType>、<xref:System.Object>             |
+| Delegate - 委派      | <xref:System.MulticastDelegate>、<xref:System.Delegate>、<xref:System.Object> |
 
 ## <a name="inheritance-and-an-is-a-relationship"></a>繼承和「是」關聯性
 

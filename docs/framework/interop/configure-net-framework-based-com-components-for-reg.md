@@ -1,5 +1,5 @@
 ---
-title: 作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
+title: HOW TO：設定 .NET Framework 架構 COM 元件進行免註冊啟用
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625442"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853848"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
@@ -105,7 +105,7 @@ ms.locfileid: "64625442"
   
 4. 識別組件中的每個類別。 使用 `<clrClass>` 項目，唯一識別 Managed 組件中的每個類別。 項目 (即 `<assembly>` 項目的子項目) 具有下表所述的屬性。  
   
-    |屬性|說明|必要|  
+    |屬性|描述|必要|  
     |---------------|-----------------|--------------|  
     |`clsid`|指定要啟用之類別的識別碼。|是|  
     |`description`|通知使用者有關元件的字串。 空字串為預設值。|否|  
@@ -166,11 +166,9 @@ ms.locfileid: "64625442"
   
 3. 重新編譯組件的原始程式檔，然後使用 **/win32res** 選項來指定資源檔：  
   
-    ```  
-    /win32res:myresource.res  
-    ```  
+    `/win32res:myresource.res`  
   
-     同樣地，`myresource.res` 是包含內嵌資源之資源檔的名稱。  
+     同樣地`myresource.res` ，是包含內嵌資源的資源檔名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

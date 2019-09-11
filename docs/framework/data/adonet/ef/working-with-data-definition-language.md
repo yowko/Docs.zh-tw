@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: c2812e261278af7763bc6b2e1a493b97cb35e3ab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83d6fc1294f6aa37389db9e517b02866ef000b50
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911627"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854232"
 ---
 # <a name="working-with-data-definition-language"></a>使用資料定義語言
-從 .NET Framework 第4版開始, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援資料定義語言 (DDL)。 這可讓您根據連接字串和儲存體 (SSDL) 模型的中繼資料，建立或刪除資料庫執行個體。  
+從 .NET Framework 第4版開始，Entity Framework 支援資料定義語言（DDL）。 這可讓您根據連接字串和儲存體 (SSDL) 模型的中繼資料，建立或刪除資料庫執行個體。  
   
  <xref:System.Data.Objects.ObjectContext> 的下列方法會使用連接字串和 SSDL 內容來達成下列目的：建立或刪除資料庫、檢查資料庫是否存在，以及檢視產生的 DDL 指令碼：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69911627"
   
 2. 將現有的模型加入至應用程式。  
   
-    1. 新增名為`SchoolModel`的空模型。 若要建立空的模型, 請[參閱 how to:建立新的 .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))檔案主題。  
+    1. 新增名為`SchoolModel`的空模型。 若要建立空的模型，請[參閱 how to：建立新的 .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))檔案主題。  
   
      SchoolModel.edmx 檔案就會加入至您的專案。  
   

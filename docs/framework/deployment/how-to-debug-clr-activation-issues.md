@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e552f7014c21e2ead61b83ca9909655def6333b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
-ms.translationtype: HT
+ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221072"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854011"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>如何對 CLR 啟用問題進行偵錯
 
@@ -35,19 +35,19 @@ CLR 啟動記錄檔不應該與[assembly binding logs組件繫結記錄檔](../.
 
 - 將 `COMPLUS_CLRLoadLogDir` 環境變數設為字串，代表現有目錄的完整路徑，這是您要儲存 CLR 啟動記錄的目錄。
 
-     環境變數的設定方式會決定其範圍︰
+    環境變數的設定方式會決定其範圍︰
 
-    - 如果設定在系統層級，就會為該電腦上的所有 .NET Framework 應用程式啟用啟動記錄，直到移除環境變數為止。
+  - 如果設定在系統層級，就會為該電腦上的所有 .NET Framework 應用程式啟用啟動記錄，直到移除環境變數為止。
 
-    - 如果設定在使用者層級，就只為目前的使用者帳戶啟用啟動記錄。 環境變數移除之前，會一直記錄。
+  - 如果設定在使用者層級，就只為目前的使用者帳戶啟用啟動記錄。 環境變數移除之前，會一直記錄。
 
-    - 如果載入 CLR 之前，從處理序中設定它，就會啟用啟動記錄直到處理序終止為止。
+  - 如果載入 CLR 之前，從處理序中設定它，就會啟用啟動記錄直到處理序終止為止。
 
-    - 如果執行應用程式之前，在命令提示字元中設定它，就會啟用從該命令提示字元執行的所有應用程式的啟動記錄。
+  - 如果執行應用程式之前，在命令提示字元中設定它，就會啟用從該命令提示字元執行的所有應用程式的啟動記錄。
 
-     例如，您要先啟動記錄儲存在處理序層級範圍的 c:\clrloadlogs 目錄中，開啟 [命令提示字元] 視窗並鍵入下列命令，才能執行應用程式︰
+    例如，您要先啟動記錄儲存在處理序層級範圍的 c:\clrloadlogs 目錄中，開啟 [命令提示字元] 視窗並鍵入下列命令，才能執行應用程式︰
 
-    ```
+    ```console
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs
     ```
 
@@ -65,56 +65,56 @@ CLR 啟動記錄檔會提供大量有關 CLR 啟動的資料和裝載 API 的 CL
 
 在下例的啟動記錄中，最有用的資訊會在記錄後反白顯示及描述。
 
-```
-532,205950.367,CLR Loading log for C:\Tests\myapp.exe 
-532,205950.367,Log started at 4:26:12 PM on 10/6/2011 
-532,205950.367,----------------------------------- 
-532,205950.382,FunctionCall: _CorExeMain 
-532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593} 
-532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891} 
-532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0 
-532,205950.382,Input values for ComputeVersionString follow this line 
-532,205950.382,----------------------------------- 
-532,205950.382,Default Application Name: C:\Tests\myapp.exe 
-532,205950.382,IsLegacyBind is: 0 
-532,205950.382,IsCapped is 0 
-532,205950.382,SkuCheckFlags are 0 
-532,205950.382,ShouldEmulateExeLaunch is 0 
-532,205950.382,LegacyBindRequired is 0 
-532,205950.382,----------------------------------- 
-532,205950.382,Parsing config file: C:\Tests\myapp.exe 
-532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727 
-532,205950.382,ERROR: Version v2.0.50727 is not present on the machine. 
-532,205950.398,SEM_FAILCRITICALERRORS is set to 0 
-532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3 
-532,205950.398,FunctionCall: RealDllMain. Reason: 0 
+```output
+532,205950.367,CLR Loading log for C:\Tests\myapp.exe
+532,205950.367,Log started at 4:26:12 PM on 10/6/2011
+532,205950.367,-----------------------------------
+532,205950.382,FunctionCall: _CorExeMain
+532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593}
+532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891}
+532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
+532,205950.382,Input values for ComputeVersionString follow this line
+532,205950.382,-----------------------------------
+532,205950.382,Default Application Name: C:\Tests\myapp.exe
+532,205950.382,IsLegacyBind is: 0
+532,205950.382,IsCapped is 0
+532,205950.382,SkuCheckFlags are 0
+532,205950.382,ShouldEmulateExeLaunch is 0
+532,205950.382,LegacyBindRequired is 0
+532,205950.382,-----------------------------------
+532,205950.382,Parsing config file: C:\Tests\myapp.exe
+532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
+532,205950.382,ERROR: Version v2.0.50727 is not present on the machine.
+532,205950.398,SEM_FAILCRITICALERRORS is set to 0
+532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
+532,205950.398,FunctionCall: RealDllMain. Reason: 0
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0
 ```
 
 - **CLR 載入記錄**提供可執行檔路徑，啟動載入 Managed 程式碼的處理序。 請注意，這可能是原生的主機。
 
-    ```
+    ```output
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe
     ```
 
 - **已安裝的執行階段**是安裝在電腦上用來啟動要求的一組備選 CLR 版本。
 
-    ```
+    ```output
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
 - **以版本建置**是建置二進位檔所用的 CLR 版本，二進位檔會提供給類似 [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 的方法。
 
-    ```
+    ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **功能隨選安裝**指的是在 Windows 8 上啟用 .NET Framework 3.5。 如需此案例的詳細資訊，請參閱 [.NET Framework 初始化錯誤：管理使用者體驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)。
+- **功能隨選安裝**指的是在 Windows 8 上啟用 .NET Framework 3.5。 請[參閱 .NET Framework 初始化錯誤：如需此案例](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)的詳細資訊，請管理使用者體驗。
 
-    ```
+    ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 

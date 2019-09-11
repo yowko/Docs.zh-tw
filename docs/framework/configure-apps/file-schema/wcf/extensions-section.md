@@ -2,17 +2,19 @@
 title: <extensions> 區段
 ms.date: 03/30/2017
 ms.assetid: 53a59fb6-dede-47ec-9384-b3c2e8f0c1fa
-ms.openlocfilehash: 4c8b5fe6eef1863ee3f02cb761a3aac61406e446
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 35621acaf96a80ffa3ffe4a3c6605143c48995a5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918961"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855364"
 ---
 # <a name="extensions-section"></a>\<> 的延伸模組區段
 這個組態區段包含延伸的集合，可讓使用者建立使用者定義的繫結、行為和其他方面的延伸。  
   
-\<system.ServiceModel>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<延伸模組 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,6 +50,6 @@ ms.locfileid: "69918961"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |system.ServiceModel|所有 WCF 組態項目的根項目。|

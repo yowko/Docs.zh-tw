@@ -4,12 +4,12 @@ description: 支援的 Linux 版本和 .NET Core 的相依性，以在 Linux 電
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 0bd3287535ba2c398f6577890d1d39f42a806364
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: ad1ab42bcf66e32a45351ae2b6156251c9d0dc1f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612221"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849053"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
 
@@ -27,7 +27,7 @@ ms.locfileid: "59612221"
 
 .NET Core 2.x 將 Linux 視為單一作業系統。 針對支援的 Linux 發行版本，會有單一的 Linux 組建 (按晶片架構)。 
 
-如需下載連結和詳細資訊，請參閱 [.NET Core 2.2 下載](https://www.microsoft.com/net/download/dotnet-core/2.2)或 [.NET Core 2.1 下載](https://www.microsoft.com/net/download/dotnet-core/2.1)。
+如需下載連結和詳細資訊，請參閱 [.NET Core 2.2 下載](https://dotnet.microsoft.com/download/dotnet-core/2.2)或 [.NET Core 2.1 下載](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
 
 下列 Linux 發行版本/版本支援 .NET core 2.x：
 
@@ -46,7 +46,7 @@ ms.locfileid: "59612221"
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-如需下載連結和詳細資訊，請參閱 [.NET Core 1.1 下載](https://www.microsoft.com/net/download/dotnet-core/1.1)或 [.NET Core 1.0 下載](https://www.microsoft.com/net/download/dotnet-core/1.0)。
+如需下載連結和詳細資訊，請參閱 [.NET Core 1.1 下載](https://dotnet.microsoft.com/download/dotnet-core/1.1)或 [.NET Core 1.0 下載](https://dotnet.microsoft.com/download/dotnet-core/1.0)。
 
 下列 Linux 64 位元 (`x86_64` or `amd64`) 發行版本/版本支援NET Core 1.x：
 
@@ -69,7 +69,7 @@ ms.locfileid: "59612221"
 
 下列 Linux 發行版本/版本支援 .NET Core 3.0 Preview 1。 
 
-作業系統                            | 版本               | 架構  
+作業系統                            | Version               | 架構  
 ------------------------------|-----------------------|----------------
 Red Hat Enterprise Linux      | 6                     | X64
 Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64

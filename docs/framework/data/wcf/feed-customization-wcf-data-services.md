@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17d54210d7abc16fe91fa94f39a8f85eac866088
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790860"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854194"
 ---
 # <a name="feed-customization-wcf-data-services"></a>自訂摘要 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]會使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]將資料公開為摘要。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]支援資料摘要的 Atom 和 JavaScript 物件標記法（JSON）格式。 當您使用 Atom 摘要時， [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]會提供標準的方法，將資料（例如實體和關聯性）序列化為 XML 格式，以包含在 HTTP 訊息的主體中。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]定義實體和 Atom 元素中所包含之資料之間的預設實體屬性對應。 如需詳細資訊， [請參閱 OData：Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
@@ -31,7 +31,7 @@ ms.locfileid: "70790860"
 > 當您定義自訂摘要時，您必須確保所有已定義自訂對應的實體屬性都包含在投影中。 若投影中未包含對應的實體屬性，則可能會發生資料遺失。 如需詳細資訊，請參閱[查詢投影](query-projections-wcf-data-services.md)。  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>使用 Entity Framework 提供者自訂摘要  
- 搭配 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者使用的資料模型在 .edmx 檔案中以 XML 表示。 在這種情況下，定義自訂摘要的屬性會新增至 `EntityType` 和`Property` 項目，表示資料模型中的實體類型和屬性。 這些摘要自訂屬性未定義于[MC-CSDL\]中\[：概念結構定義檔案格式](https://go.microsoft.com/fwlink/?LinkId=159072)，這是[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供者用來定義資料模型的格式。 因此，您必須在特定的結構描述命名空間中宣告摘要自訂屬性，定義為 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`。 下列 XML 片段會顯示套用至 `Property` 實體類型之 `Products` 項目的摘要自訂屬性，定義 `ProductName`、`ReorderLevel` 和 `UnitsInStock` 屬性。  
+ 搭配 Entity Framework 提供者使用的資料模型在 .edmx 檔案中以 XML 表示。 在這種情況下，定義自訂摘要的屬性會新增至 `EntityType` 和`Property` 項目，表示資料模型中的實體類型和屬性。 這些摘要自訂屬性未定義于[MC-CSDL\]中\[：概念結構定義檔案格式](https://go.microsoft.com/fwlink/?LinkId=159072)，這是 Entity Framework 提供者用來定義資料模型的格式。 因此，您必須在特定的結構描述命名空間中宣告摘要自訂屬性，定義為 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`。 下列 XML 片段會顯示套用至 `Property` 實體類型之 `Products` 項目的摘要自訂屬性，定義 `ProductName`、`ReorderLevel` 和 `UnitsInStock` 屬性。  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

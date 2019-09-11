@@ -2,19 +2,20 @@
 title: <endToEndTracing>
 ms.date: 03/30/2017
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
-ms.openlocfilehash: 6b23728451a051f21ad3863b9a29e6290c3c837a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1a274f15800c6a132994a2437943c83982de9de0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919006"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855291"
 ---
 # <a name="endtoendtracing"></a>\<endToEndTracing>
 組態檔項目，此項目可讓您啟用與停用執行服務應用程式期間不同層面的端對端追蹤。  
   
- \<system.ServiceModel>  
-\<診斷 >  
-\<endToEndTracing>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<診斷 >** ](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<endToEndTracing >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +34,7 @@ ms.locfileid: "69919006"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`activityTracing`|布林值，指定是否啟用活動追蹤。|  
 |`messageFlowTracing`|布林值，指定是否啟用訊息流程追蹤。|  

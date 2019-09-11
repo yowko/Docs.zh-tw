@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 74d10b0fb27a4acf477fc66451a5cf6fc1f4317c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 252d5f6655336669ba516393e17eb3d070611ea6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631698"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849244"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程式產生器
 
@@ -29,7 +29,7 @@ ms.locfileid: "65631698"
 
 完成本教學課程：
 
-* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更新版本
+* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本
 * 您慣用的程式碼編輯器。
 
 > [!TIP]

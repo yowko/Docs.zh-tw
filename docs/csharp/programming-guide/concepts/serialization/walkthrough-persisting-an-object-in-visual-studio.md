@@ -1,12 +1,12 @@
 ---
 title: 逐步解說：使用 C# 保存物件
 ms.date: 04/26/2018
-ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105928"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851036"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C\# 保存物件
 
@@ -22,7 +22,7 @@ ms.locfileid: "70105928"
 
 ## <a name="prerequisites"></a>必要條件
 
-- 若要建置並執行，請安裝 [.NET Core SDK](https://www.microsoft.com/net/core)。
+- 若要建置並執行，請安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 
 - 如果您還沒有這麼做，請安裝您慣用的程式碼編輯器。
 

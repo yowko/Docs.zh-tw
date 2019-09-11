@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb7d574fdb9bd6bd9465cffaf0fda5069b2c0ee
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250491"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854380"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知問題和考量
 本節提供 LINQ to Entities 查詢之已知問題的相關資訊。  
@@ -35,14 +35,14 @@ ms.locfileid: "70250491"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>排序資訊遺失  
- 將資料行投射到匿名型別, 會導致在某些查詢中, 針對設定為相容性層級為 "80" 的 SQL Server 2005 資料庫而遺失的順序資訊。  如果 order-by 清單中的資料行名稱與 selector 中的資料行名稱相符，就會發生這種情況，如以下範例所示：  
+ 將資料行投射到匿名型別，會導致在某些查詢中，針對設定為相容性層級為 "80" 的 SQL Server 2005 資料庫而遺失的順序資訊。  如果 order-by 清單中的資料行名稱與 selector 中的資料行名稱相符，就會發生這種情況，如以下範例所示：  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>不支援不帶正負號的整數  
- 不支援在 LINQ to Entities 查詢中指定不帶正負號的整數類型[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] , 因為不支援不帶正負號的整數。 如果您指定不帶正負號的<xref:System.ArgumentException>整數, 查詢運算式轉譯期間將會擲回例外狀況, 如下列範例所示。 此範例會查詢 ID 為 48000 的訂單。  
+ 不支援在 LINQ to Entities 查詢中指定不帶正負號的整數類型，因為 Entity Framework 不支援不帶正負號的整數。 如果您指定不帶正負號的<xref:System.ArgumentException>整數，查詢運算式轉譯期間將會擲回例外狀況，如下列範例所示。 此範例會查詢 ID 為 48000 的訂單。  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

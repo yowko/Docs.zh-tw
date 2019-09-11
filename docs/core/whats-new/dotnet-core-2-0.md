@@ -4,12 +4,12 @@ description: 了解 .NET Core 所提供的新功能。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626367"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849943"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新功能
 
@@ -132,7 +132,7 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 如果已安裝 .NET Core 2.0 SDK，您可以將 .NET Core 1.x 專案的目標重定至 .NET Core 2.0，並將 .NET Standard 1.x 程式庫的目標重定至 .NET Standard 2.0。
 
-若要在 Visual Studio 中重定專案的目標，請開啟專案屬性對話方塊的 [應用程式]  索引標籤，並將 [目標 Framework]  的值變更為 [.NET Core 2.0]  或 [.NET Standard 2.0]  。 另一個變更它的方法，則是以滑鼠右鍵按一下專案並選取 [編輯 \*.csproj 檔案]  選項。 如需詳細資訊，請參閱本主題稍早的[工具](#tooling)小節。
+若要在 Visual Studio 中重定專案的目標，請開啟專案屬性對話方塊的 [應用程式] 索引標籤，並將 [目標 Framework] 的值變更為 [.NET Core 2.0] 或 [.NET Standard 2.0]。 另一個變更它的方法，則是以滑鼠右鍵按一下專案並選取 [編輯 \*.csproj 檔案] 選項。 如需詳細資訊，請參閱本主題稍早的[工具](#tooling)小節。
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core 的即時單元測試支援
 
@@ -154,7 +154,7 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 ### <a name="net-application-architecture"></a>.NET 應用程式架構
 
-[.NET 應用程式架構](https://www.microsoft.com/net/learn/architecture)可讓您存取一系列針對使用 .NET 進行建置提供指引、最佳做法和範例應用程式的電子書：
+[.NET 應用程式架構](https://dotnet.microsoft.com/learn/dotnet/architecture-guides)可讓您存取一系列針對使用 .NET 進行建置提供指引、最佳做法和範例應用程式的電子書：
 
 - [微服務和 Docker 容器](../../architecture/microservices/index.md)
 - [使用 ASP.NET 的 Web 應用程式](../../architecture/modern-web-apps-azure/index.md)

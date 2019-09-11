@@ -4,12 +4,12 @@ description: 了解如何使用 .NET Core CLI 工具來建立 .NET Core 程式�
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: d22f73b33c36357b7f8018d1620b240e18d91676
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202671"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849487"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具開發程式庫
 
@@ -17,7 +17,7 @@ ms.locfileid: "70202671"
 
 ## <a name="prerequisites"></a>必要條件
 
-您需要在電腦上安裝 [.NET Core SDK 和 CLI](https://www.microsoft.com/net/core)。
+您需要在電腦上安裝 [.NET Core SDK 和 CLI](https://dotnet.microsoft.com/download)。
 
 針對這份文件中處理 .NET Framework 版本的一節，您需要在 Windows 電腦上安裝 [.NET Framework](https://dotnet.microsoft.com)。
 

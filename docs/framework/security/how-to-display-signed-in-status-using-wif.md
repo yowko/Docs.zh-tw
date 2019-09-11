@@ -3,12 +3,12 @@ title: 如何：使用 WIF 顯示登入的狀態
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: e44dc80260e46b81ac723ada32085390a18a153a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d2500c6ded485fca76715425b9a52258e07be08d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945706"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851550"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>如何：使用 WIF 顯示登入的狀態
 ## <a name="applies-to"></a>適用於  
@@ -99,7 +99,7 @@ ms.locfileid: "69945706"
   
 2. 使用下列標記取代 **Default.aspx** 檔案中的現有標記：  
   
-    ```  
+    ```aspx-csharp  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
   
     <!DOCTYPE html>  
@@ -153,4 +153,4 @@ ms.locfileid: "69945706"
   
 1. 在 Visual Studio 中，按 **F5** 鍵開始對應用程式進行偵錯。 如果沒有發現任何錯誤，則會開啟新的瀏覽器視窗。  
   
-2. 您可能會注意到瀏覽器以無訊息模式將您的要求重新導向至 STS，然後開啟 Default.aspx 網頁。 如果已正確設定 WIF, 您應該會看到網站顯示下列文字:「**您已登入**」。
+2. 您可能會注意到瀏覽器以無訊息模式將您的要求重新導向至 STS，然後開啟 Default.aspx 網頁。 如果已正確設定 WIF，您應該會看到網站顯示下列文字：「**您已登入**」。

@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
-  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-  ms.translationtype: HT
+  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/05/2019
-  ms.locfileid: "57370315"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850792"
 items:
 - durationInMinutes: 1
   content: >
@@ -296,7 +296,7 @@ items:
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - content: >-
-    您已經完成 "Hello C#" 的 C# 教學課程簡介。 您可以按一下下方 **C# 中的數字**來開始下一項互動式教學課程，或是前往 [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) 下載 .NET Core SDK 在您的電腦上建立專案，並繼續編碼。 「繼續學習」步驟會帶您回到這些教學課程。
+    您已經完成 "Hello C#" 的 C# 教學課程簡介。 您可以按一下下方 **C# 中的數字**來開始下一項互動式教學課程，或是前往 [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) 下載 .NET Core SDK 在您的電腦上建立專案，並繼續編碼。 「後續步驟」一節會帶您回到這些教學課程。
 
 
     如需進一步閱讀有關 `string` 類型的資訊：

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c627b128430342c25396d01f23f2eea7956d5e3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 2f4fc74a270cc171efa166bf54ac52a1b7acfdc5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933746"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851321"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR 版本工具)
 CLR 版本工具 (Clrver.exe) 會報告電腦上已安裝的所有通用語言執行平台 (CLR) 版本。  
@@ -23,13 +23,13 @@ CLR 版本工具 (Clrver.exe) 會報告電腦上已安裝的所有通用語言�
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 clrver [option]  
 ```  
   
 ## <a name="options"></a>選項  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`-all`|顯示電腦上所有正在使用 CLR 的處理序。|  
 |*pid*|顯示具有指定處理序 ID (PID) 的處理序所使用的 CLR 版本。|  

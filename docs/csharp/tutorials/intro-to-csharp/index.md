@@ -3,12 +3,12 @@ title: C# 簡介 - 互動式教學課程
 description: 在您的瀏覽器中學習 C#，並開始使用您自己的開發環境
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
-ms.translationtype: HT
+ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015013"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850775"
 ---
 # <a name="introduction-to-c"></a>C\# 簡介
 
@@ -45,4 +45,4 @@ ms.locfileid: "70015013"
 這個最後的教學課程只能在您的電腦上執行，並使用您自己的本機開發環境與 .NET Core。
 您會建置一個主控台應用程式，並了解 C# 語言的基本物件導向功能。
 
-此教學課程假設您已經完成線上簡介教學課程，並已安裝 [.NET Core SDK](https://www.microsoft.com/net/download) 與 [Visual Studio Code](https://code.visualstudio.com/)。
+此教學課程假設您已經完成線上簡介教學課程，並已安裝 [.NET Core SDK](https://dotnet.microsoft.com/download) 與 [Visual Studio Code](https://code.visualstudio.com/)。

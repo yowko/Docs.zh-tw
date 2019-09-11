@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: c510aec8411fb0650b8caa4c3926181aa8071a66
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202819"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849617"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -177,7 +177,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在還原作業期間使用的 NuGet 套件來源。 如此會覆寫 *nuget.config* 檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
+指定要在還原作業期間使用的 NuGet 套件來源。 這會覆寫*nuget.exe*檔案中指定的所有來源， <packageSource>並有效地讀取*nuget .config*檔案，就像專案不存在一樣。 多次指定這個選項，即可提供多個來源。
 
 `--verbosity <LEVEL>`
 

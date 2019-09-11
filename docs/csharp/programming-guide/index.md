@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: f41129b33b717efad5f1b1f59e40f95169e31bf8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f9ac3a6c1e96a1ba4cd78be46a1fd3ad7ee5e4ed
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589487"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850968"
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
   
- 本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是程式設計或 C# 的新手，建議先瀏覽 [C# 簡介教學課程](../tutorials/intro-to-csharp/index.md)或 [C# 使用者入門](https://www.microsoft.com/net/tutorials/csharp/getting-started)互動式教學課程，這些內容不需要事先具備程式設計知識。  
+ 本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是使用程式設計或的C#新手，您可能會想要造訪[ C#教學課程簡介](../tutorials/intro-to-csharp/index.md)或[瀏覽器中的 .net 教學](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)課程，其中不需要任何預先設計的知識。  
   
  如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../language-reference/index.md)。 如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](../language-reference/language-specification/index.md)。  
   

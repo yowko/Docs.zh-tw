@@ -3,12 +3,12 @@ title: 在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 description: 了解如何使用 `dotnet-svcutil.xmlserializer` NuGet 套件預先產生 .NET Core 專案的序列化組件。
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 375a5ad5660658431c0d327e55513024823a6eee
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632191"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848962"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 
@@ -16,7 +16,7 @@ ms.locfileid: "65632191"
 
 ## <a name="prerequisites"></a>必要條件
 
-* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更新版本
+* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本
 * 您慣用的程式碼編輯器
 
 您可以使用命令 `dotnet --info` 來檢查已安裝的 .NET Core SDK 和執行階段版本。

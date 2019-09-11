@@ -4,22 +4,22 @@ description: 尋找資源以了解如何在 Windows、Linux 和 macOS 上建置 
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: 5c45364cfe725d47cbb6108cd9d6ec9f981cef25
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802305"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849118"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
 本文提供 .NET Core 使用者入門的相關資訊。 .NET Core 可以安裝在 Windows、Linux 和 macOS 上。 您可以在慣用的文字編輯器中撰寫程式碼，然後產生跨平台的程式庫和應用程式。 
 
-如果您不確定 .NET Core 為何，或不確定它與其他 .NET 技術的關聯，請從 [What is .NET](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet) (什麼是 .NET) 概觀開始。 簡單來說，.NET Core 是 .NET 的開放原始碼跨平台實作。
+如果您不確定 .NET Core 為何，或不確定它與其他 .NET 技術的關聯，請從 [What is .NET](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) (什麼是 .NET) 概觀開始。 簡單來說，.NET Core 是 .NET 的開放原始碼跨平台實作。
 
 ## <a name="create-an-application"></a>建立應用程式
 
-首先，在您的電腦上下載並安裝 [.NET Core SDK](https://www.microsoft.com/net/download/)。
+首先，在您的電腦上下載並安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 
 接下來，開啟終端機，例如 **PowerShell**、**命令提示字元**或 **bash**。 鍵入下列 `dotnet` 命令以建立並執行 C# 應用程式。
 

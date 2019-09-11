@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef10ba566842db26ed8c29643535c41aaca9806
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: HT
+ms.openlocfilehash: 4228da6efe22091c86de95d846c14f504d51457f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378665"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851283"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags 轉換工具)
 CorFlags 轉換工具可讓您設定可攜式執行映像標頭的 CorFlags 區段。  
@@ -24,17 +24,17 @@ CorFlags 轉換工具可讓您設定可攜式執行映像標頭的 CorFlags 區�
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 CorFlags.exe assembly [options]  
 ```  
   
 ## <a name="parameters"></a>參數  
   
-|必要參數|說明|  
+|必要參數|描述|  
 |------------------------|-----------------|  
 |`assembly`|要設定其 CorFlags 的組件名稱。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/32BIT[REQ]+**|設定 32BITREQUIRED 旗標。|  
 |**/32BIT[REQ]-**|清除 32BITREQUIRED 旗標。|  

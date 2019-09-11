@@ -2,18 +2,18 @@
 title: 修改 SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248579"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854286"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 產生
 
 本節將討論如何為您的 (SQL:1999 相容資料庫) 提供者開發修改 SQL 產生模組。 這個模組負責將修改命令樹轉譯為適當的 SQL INSERT、UPDATE 或 DELETE 陳述式。
 
-如需 select 語句之 SQL 產生的詳細資訊, 請參閱[Sql 世代](sql-generation.md)。
+如需 select 語句之 SQL 產生的詳細資訊，請參閱[Sql 世代](sql-generation.md)。
 
 ## <a name="overview-of-modification-command-trees"></a>修改命令樹概觀
 
@@ -27,11 +27,11 @@ DbModificationCommandTree 是修改 DML 作業 (插入、更新或刪除作業) 
 
 - DbDeleteCommandTree
 
-由所[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]產生的 DbModificationCommandTree 及其實現, 一律代表單一資料列作業。 這一節會描述 .NET Framework 3.5 版中的這些型別以及其條件約束。
+Entity Framework 所產生的 DbModificationCommandTree 及其實現，一律代表單一資料列作業。 這一節會描述 .NET Framework 3.5 版中的這些型別以及其條件約束。
 
 ![圖表](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
-DbModificationCommandTree 有一個目標屬性，此屬性代表針對修改作業設定的目標。 定義輸入集的目標運算式屬性一定是 DbScanExpression。  DbScanExpression 可以代表資料表或視圖, 或如果其目標的中繼資料屬性「定義查詢」為非 null, 則會使用查詢定義的一組資料。
+DbModificationCommandTree 有一個目標屬性，此屬性代表針對修改作業設定的目標。 定義輸入集的目標運算式屬性一定是 DbScanExpression。  DbScanExpression 可以代表資料表或視圖，或如果其目標的中繼資料屬性「定義查詢」為非 null，則會使用查詢定義的一組資料。
 
 只有當集合是使用模型中的定義查詢所定義，但是未針對對應的修改作業提供任何功能時，代表查詢的 DbScanExpression 才能當做修改目標聯繫提供者。 提供者可能無法支援這種案例 (例如 SqlClient 就無法支援)。
 
@@ -74,11 +74,11 @@ Value 會指定用來更新屬性的新值。 它的型別會是 DbConstantExpre
 
 Predicate 會指定用來判斷所應該更新或刪除之目標集合成員的述詞。 它是從下列 DbExpressions 子集所建置的運算式樹狀架構：
 
-- 類型等於的 DbComparisonExpression, 右邊的子系是下面限制的 DbPropertyExpression, 而左邊的子系是 DbConstantExpression。
+- 類型等於的 DbComparisonExpression，右邊的子系是下面限制的 DbPropertyExpression，而左邊的子系是 DbConstantExpression。
 
 - DbConstantExpression
 
-- 透過 DbPropertyExpression 的 DbIsNullExpression, 如下所限制
+- 透過 DbPropertyExpression 的 DbIsNullExpression，如下所限制
 
 - 透過 DbVariableReferenceExpression 的 DbPropertyExpression，代表對應之 DbModificationCommandTree 的目標參考。
 
@@ -90,11 +90,11 @@ Predicate 會指定用來判斷所應該更新或刪除之目標集合成員的�
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>範例提供者中的修改 SQL 產生
 
-[Entity Framework 範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)會示範支援[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的 ADO.NET 資料提供者元件。 它會以 SQL Server 2005 資料庫為目標，並且實作成 System.Data.SqlClient ADO.NET 2.0 資料提供者上層的包裝函式。
+[Entity Framework 範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)會示範支援 Entity Framework 的 ADO.NET 資料提供者元件。 它會以 SQL Server 2005 資料庫為目標，並且實作成 System.Data.SqlClient ADO.NET 2.0 資料提供者上層的包裝函式。
 
 範例提供者的修改 SQL 產生模組 (位於 SQL Generation\DmlSqlGenerator.cs 檔案中) 會採用 DbModificationCommandTree 輸入，並產生單一修改 SQL 陳述式，後面可能接著 select 陳述式來傳回讀取器 (如果 DbModificationCommandTree 有指定)。 請注意，產生之命令的形狀會受到目標 SQL Server 資料庫所影響。
 
-### <a name="helper-classes-expressiontranslator"></a>Helper 類別:ExpressionTranslator
+### <a name="helper-classes-expressiontranslator"></a>Helper 類別：ExpressionTranslator
 
 ExpressionTranslator 會當做 DbExpression 型別之所有修改命令樹屬性的常用輕量型轉譯程式。 它只支援修改命令樹屬性所限制之運算式型別的轉譯，而且會根據特定的條件約束來建置。
 
@@ -116,7 +116,7 @@ ExpressionTranslator 會當做 DbExpression 型別之所有修改命令樹屬性
 
 如果範例提供者中有提供 DbInsertCommandTree，產生的插入命令會遵循底下的其中一個插入範本。
 
-第一個範本有一個命令可在提供 SetClauses 清單中的值時執行插入，也有一個 SELECT 陳述式，可在 Returning 屬性不是 null 時，傳回 Returning 屬性中針對插入的資料列所指定的屬性。 如果插入資料列\@ , 則述詞元素 "@ROWCOUNT > 0" 為 true。 只有當 Scope_identity 是存放區產生&#124;的索引鍵時, 述詞元素 "KeyMemberI = keyValueI scope_identity ()" 才會採用 "keyMemberI = keyMemberI ()" 圖形, 因為 scope_identity () 會傳回插入至身分識別的最後一個識別值 (儲存區產生的) 資料行。
+第一個範本有一個命令可在提供 SetClauses 清單中的值時執行插入，也有一個 SELECT 陳述式，可在 Returning 屬性不是 null 時，傳回 Returning 屬性中針對插入的資料列所指定的屬性。 如果插入資料列\@ ，則述詞元素 "@ROWCOUNT > 0" 為 true。 只有當 Scope_identity 是存放區產生&#124;的索引鍵時，述詞元素 "KeyMemberI = keyValueI scope_identity （）" 才會採用 "keyMemberI = keyMemberI （）" 圖形，因為 scope_identity （）會傳回插入至身分識別的最後一個識別值（儲存區產生的）資料行。
 
 ```sql
 -- first insert Template
@@ -212,7 +212,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-只有在未指定 set 子句的情況之下,@i set 子句才會有假的 set 子句 ("= 0")。 這是為了確保任何存放區計算的資料行都會重新計算。
+只有在未指定 set 子句的情況之下，@i set 子句才會有假的 set 子句（"= 0"）。 這是為了確保任何存放區計算的資料行都會重新計算。
 
 只有當 Returning 屬性不是 null 時，才會產生 select 陳述式來傳回 Returning 屬性中指定的屬性。
 

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: a680a4b58927d915e887eea43a72983a5b349682
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: c42a34bc13ff9fb5d8eb5a85b461360915e2c68f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105053"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849333"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列開始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -21,7 +21,7 @@ ms.locfileid: "70105053"
 
 ## <a name="prerequisites"></a>必要條件
 
-- [.NET Core SDK 2.1](https://www.microsoft.com/net/download/core)。
+- [.NET Core SDK 2.1](https://dotnet.microsoft.com/download)或更新版本。
 - 您選擇的文字編輯器或程式碼編輯器。
 
 ## <a name="hello-console-app"></a>嗨，主控台應用程式！
@@ -60,7 +60,7 @@ dotnet run
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   `dotnet new` 會隱含地呼叫 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 呼叫 [NuGet](https://www.nuget.org/) (.NET 套件管理員)，以還原相依性的樹狀結構。 NuGet 會分析 Hello.csproj  檔案、下載檔案中所述的相依性 (或從您電腦上的快取抓取)，並寫入 obj/project.assets.json  檔案，該檔案是編譯及執行範例的必要項目。
+   `dotnet new` 會隱含地呼叫 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 呼叫 [NuGet](https://www.nuget.org/) (.NET 套件管理員)，以還原相依性的樹狀結構。 NuGet 會分析 Hello.csproj 檔案、下載檔案中所述的相依性 (或從您電腦上的快取抓取)，並寫入 obj/project.assets.json 檔案，該檔案是編譯及執行範例的必要項目。
 
    > [!IMPORTANT]
    > 如果您使用 .NET Core 1.x 版本的 SDK，則必須在呼叫 `dotnet new` 之後自行呼叫 `dotnet restore`。
@@ -154,7 +154,7 @@ dotnet run
    377
    ```
 
-## <a name="publish-your-app"></a>發佈您的應用程式
+## <a name="publish-your-app"></a>發行您的應用程式
 
 一旦您準備好散發您的應用程式，請使用 [`dotnet publish`](../tools/dotnet-publish.md) 命令在 _bin\\debug\\netcoreapp2.1\\publish\\_ 中產生 _publish_ 資料夾 (針對非 Windows 系統，請使用 `/`)。 您可以將 _publish_  資料夾的內容散發到其他平台，只要那些平台已安裝 dotnet 執行階段。
 

@@ -2,18 +2,20 @@
 title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: aa4cd8f4d7dcfa438ede71c394f1d0b0ac6faa50
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: decaaa1cea5345ff971b16cbb20a85dd803a52d5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926556"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850292"
 ---
 # <a name="announcementendpoint"></a>\<announcementEndpoint>
-這個組態項目會定義具有固定公告合約的標準端點。 服務可以選擇性地公告其可用性，方法是分別在開啟與關閉該服務時傳送線上及離線公告訊息。 Windows Communication Foundation (WCF) 服務會在[ \<serviceDiscovery >](servicediscovery.md)元素中指定公告端點, 並使用 AnnouncementClient 來執行公告。 想要接聽來自其他服務之公告的用戶端實際上是作為 WCF 服務;因此, 您必須在 [ [ \<服務 >](services.md) ] 區段中設定該用戶端的宣告端點。  
+這個組態項目會定義具有固定公告合約的標準端點。 服務可以選擇性地公告其可用性，方法是分別在開啟與關閉該服務時傳送線上及離線公告訊息。 Windows Communication Foundation （WCF）服務會在[ \<serviceDiscovery >](servicediscovery.md)元素中指定公告端點，並使用 AnnouncementClient 來執行公告。 想要接聽來自其他服務之公告的用戶端實際上是作為 WCF 服務;因此，您必須在 [ [ \<服務 >](services.md) ] 區段中設定該用戶端的宣告端點。  
   
-\<system.ServiceModel>  
-\<standardEndpoints>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<announcementEndpoint >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +47,7 @@ ms.locfileid: "69926556"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
 |[\<standardEndpoints>](standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
   

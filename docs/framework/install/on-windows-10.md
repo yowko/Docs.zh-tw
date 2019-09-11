@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 0de48e14f11d3763ee239b28b40bdb809dbeb433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106549"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853935"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>在 Windows 10 和 Windows Server 2016 以及更新版本上安裝 .NET Framework
 
@@ -72,7 +72,7 @@ ms.locfileid: "70106549"
 
 - 4.x 版的 .NET Framework 可用於執行專為 .NET Framework 4.0 及其小數點版本所建置的應用程式。 例如，.NET Framework 4.7 可用於執行專為 .NET Framework 4.0 到 4.7 所建置的應用程式。 最新版本 (.NET Framework 4.8) 可用於執行使用所有 .NET Framework 4.0 以上版本來建置的應用程式。
 
-如需所有所有可下載之 .NET Framework 版本的清單，請參閱 [.NET 下載](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)頁面。
+如需所有所有可下載之 .NET Framework 版本的清單，請參閱 [.NET 下載](https://dotnet.microsoft.com/download)頁面。
 
 ## <a name="help"></a>說明
 
@@ -80,6 +80,6 @@ ms.locfileid: "70106549"
 
 ## <a name="see-also"></a>另請參閱
 
-- [NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) (.NET 下載)
+- [NET Downloads](https://dotnet.microsoft.com/download) (.NET 下載)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)
 - [安裝適用於開發人員的 .NET Framework](guide-for-developers.md)
