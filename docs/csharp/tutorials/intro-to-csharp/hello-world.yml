@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="d7145-101">Hello World - C# 互動式 C# 教學課程簡介</span><span class="sxs-lookup"><span data-stu-id="d7145-101">Hello World - Introduction to C# interactive C# tutorial</span></span>
+title: <span data-ttu-id="94f09-101">Hello World - C# 互動式 C# 教學課程簡介</span><span class="sxs-lookup"><span data-stu-id="94f09-101">Hello World - Introduction to C# interactive C# tutorial</span></span>
 metadata:
   title: Hello World - C# 互動式 C# 教學課程簡介
   description: 在本教學課程中，您將使用瀏覽器以互動方式學習 C#。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。
@@ -7,24 +7,24 @@ metadata:
   level: Beginner
   ms.date: 08/24/2018
   nextTutorialHref: numbers-in-csharp.yml
-  nextTutorialTitle: <span data-ttu-id="d7145-105">C# 中的數字</span><span class="sxs-lookup"><span data-stu-id="d7145-105">Numbers in C#</span></span>
+  nextTutorialTitle: <span data-ttu-id="94f09-105">C# 中的數字</span><span class="sxs-lookup"><span data-stu-id="94f09-105">Numbers in C#</span></span>
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
-  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-  ms.translationtype: HT
+  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/05/2019
-  ms.locfileid: "57370315"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850792"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="d7145-106">本教學課程會以互動方式讓您使用瀏覽器撰寫 C#，並查看編譯及執行程式碼的結果，藉此了解 C#。</span><span class="sxs-lookup"><span data-stu-id="d7145-106">This tutorial teaches you C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="d7145-107">它包含開頭為 "Hello World" 程式的一系列課程。</span><span class="sxs-lookup"><span data-stu-id="d7145-107">It contains a series of lessons that begin with a "Hello World" program.</span></span> <span data-ttu-id="d7145-108">這些課程會教導您 C# 語言的基本概念。</span><span class="sxs-lookup"><span data-stu-id="d7145-108">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="d7145-109">執行您的第一個 C# 程式</span><span class="sxs-lookup"><span data-stu-id="d7145-109">Run your first C# program</span></span>
+    <span data-ttu-id="94f09-106">本教學課程會以互動方式讓您使用瀏覽器撰寫 C#，並查看編譯及執行程式碼的結果，藉此了解 C#。</span><span class="sxs-lookup"><span data-stu-id="94f09-106">This tutorial teaches you C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="94f09-107">它包含開頭為 "Hello World" 程式的一系列課程。</span><span class="sxs-lookup"><span data-stu-id="94f09-107">It contains a series of lessons that begin with a "Hello World" program.</span></span> <span data-ttu-id="94f09-108">這些課程會教導您 C# 語言的基本概念。</span><span class="sxs-lookup"><span data-stu-id="94f09-108">These lessons teach you the fundamentals of the C# language.</span></span>
+- title: <span data-ttu-id="94f09-109">執行您的第一個 C# 程式</span><span class="sxs-lookup"><span data-stu-id="94f09-109">Run your first C# program</span></span>
   durationInMinutes: 2
   content: >
-    <span data-ttu-id="d7145-110">在互動式視窗中執行下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="d7145-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="d7145-111">若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：</span><span class="sxs-lookup"><span data-stu-id="d7145-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    <span data-ttu-id="94f09-110">在互動式視窗中執行下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="94f09-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="94f09-111">若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：</span><span class="sxs-lookup"><span data-stu-id="94f09-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
 
 
     ```csharp
@@ -34,29 +34,29 @@ items:
     ```
 
 
-    <span data-ttu-id="d7145-112">恭喜您！</span><span class="sxs-lookup"><span data-stu-id="d7145-112">Congratulations!</span></span> <span data-ttu-id="d7145-113">您已執行您的第一個 C# 程式。</span><span class="sxs-lookup"><span data-stu-id="d7145-113">You've run your first C# program.</span></span> <span data-ttu-id="d7145-114">這是一個會列印 "Hello World!" 訊息的簡單程式。</span><span class="sxs-lookup"><span data-stu-id="d7145-114">It's a simple program that prints the message "Hello World!".</span></span> <span data-ttu-id="d7145-115">它會使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法來列印該訊息。</span><span class="sxs-lookup"><span data-stu-id="d7145-115">It used the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to print that message.</span></span> <span data-ttu-id="d7145-116">`Console` 是代表主控台視窗的型別。</span><span class="sxs-lookup"><span data-stu-id="d7145-116">`Console` is a type that represents the console window.</span></span> <span data-ttu-id="d7145-117">`WriteLine` 是 `Console` 型別的方法，會將文字行列印至文字主控台。</span><span class="sxs-lookup"><span data-stu-id="d7145-117">`WriteLine` is a method of the `Console` type that prints a line of text to that text console.</span></span>
+    <span data-ttu-id="94f09-112">恭喜您！</span><span class="sxs-lookup"><span data-stu-id="94f09-112">Congratulations!</span></span> <span data-ttu-id="94f09-113">您已執行您的第一個 C# 程式。</span><span class="sxs-lookup"><span data-stu-id="94f09-113">You've run your first C# program.</span></span> <span data-ttu-id="94f09-114">這是一個會列印 "Hello World!" 訊息的簡單程式。</span><span class="sxs-lookup"><span data-stu-id="94f09-114">It's a simple program that prints the message "Hello World!".</span></span> <span data-ttu-id="94f09-115">它會使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法來列印該訊息。</span><span class="sxs-lookup"><span data-stu-id="94f09-115">It used the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to print that message.</span></span> <span data-ttu-id="94f09-116">`Console` 是代表主控台視窗的型別。</span><span class="sxs-lookup"><span data-stu-id="94f09-116">`Console` is a type that represents the console window.</span></span> <span data-ttu-id="94f09-117">`WriteLine` 是 `Console` 型別的方法，會將文字行列印至文字主控台。</span><span class="sxs-lookup"><span data-stu-id="94f09-117">`WriteLine` is a method of the `Console` type that prints a line of text to that text console.</span></span>
 
 
-    <span data-ttu-id="d7145-118">讓我們繼續探索。</span><span class="sxs-lookup"><span data-stu-id="d7145-118">Let's move on and explore more.</span></span> <span data-ttu-id="d7145-119">本課程的其餘部分會探索使用 `string` 型別，它代表 C# 中的文字。</span><span class="sxs-lookup"><span data-stu-id="d7145-119">The rest of this lesson explores working with the `string` type, which represents text in C#.</span></span> <span data-ttu-id="d7145-120">就像 `Console` 型別，`string` 型別也具有方法。</span><span class="sxs-lookup"><span data-stu-id="d7145-120">Like the `Console` type, the `string` type has methods.</span></span> <span data-ttu-id="d7145-121">`string` 方法可以處理文字。</span><span class="sxs-lookup"><span data-stu-id="d7145-121">The `string` methods work with text.</span></span>
+    <span data-ttu-id="94f09-118">讓我們繼續探索。</span><span class="sxs-lookup"><span data-stu-id="94f09-118">Let's move on and explore more.</span></span> <span data-ttu-id="94f09-119">本課程的其餘部分會探索使用 `string` 型別，它代表 C# 中的文字。</span><span class="sxs-lookup"><span data-stu-id="94f09-119">The rest of this lesson explores working with the `string` type, which represents text in C#.</span></span> <span data-ttu-id="94f09-120">就像 `Console` 型別，`string` 型別也具有方法。</span><span class="sxs-lookup"><span data-stu-id="94f09-120">Like the `Console` type, the `string` type has methods.</span></span> <span data-ttu-id="94f09-121">`string` 方法可以處理文字。</span><span class="sxs-lookup"><span data-stu-id="94f09-121">The `string` methods work with text.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="d7145-122">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="d7145-122">This online coding experience is in preview mode.</span></span> <span data-ttu-id="d7145-123">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="d7145-123">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="d7145-124">宣告和使用變數</span><span class="sxs-lookup"><span data-stu-id="d7145-124">Declare and use variables</span></span>
+    > <span data-ttu-id="94f09-122">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="94f09-122">This online coding experience is in preview mode.</span></span> <span data-ttu-id="94f09-123">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="94f09-123">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="94f09-124">宣告和使用變數</span><span class="sxs-lookup"><span data-stu-id="94f09-124">Declare and use variables</span></span>
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="d7145-125">您的第一個程式會在螢幕上列印 `string` "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="d7145-125">Your first program printed the `string` "Hello World!"</span></span> <span data-ttu-id="d7145-126">。</span><span class="sxs-lookup"><span data-stu-id="d7145-126">on the screen.</span></span>
+    <span data-ttu-id="94f09-125">您的第一個程式會在螢幕上列印 `string` "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="94f09-125">Your first program printed the `string` "Hello World!"</span></span> <span data-ttu-id="94f09-126">。</span><span class="sxs-lookup"><span data-stu-id="94f09-126">on the screen.</span></span>
 
 
     > [!TIP]
 
-    > <span data-ttu-id="d7145-127">在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。</span><span class="sxs-lookup"><span data-stu-id="d7145-127">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="d7145-128">**編譯器**會找出那些錯誤並回報給您。</span><span class="sxs-lookup"><span data-stu-id="d7145-128">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="d7145-129">當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。</span><span class="sxs-lookup"><span data-stu-id="d7145-129">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > <span data-ttu-id="94f09-127">在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。</span><span class="sxs-lookup"><span data-stu-id="94f09-127">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="94f09-128">**編譯器**會找出那些錯誤並回報給您。</span><span class="sxs-lookup"><span data-stu-id="94f09-128">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="94f09-129">當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。</span><span class="sxs-lookup"><span data-stu-id="94f09-129">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
 
-    > <span data-ttu-id="d7145-130">該練習將有助於您了解 C# 程式碼的結構。</span><span class="sxs-lookup"><span data-stu-id="d7145-130">That exercise will help you learn the structure of C# code.</span></span>
+    > <span data-ttu-id="94f09-130">該練習將有助於您了解 C# 程式碼的結構。</span><span class="sxs-lookup"><span data-stu-id="94f09-130">That exercise will help you learn the structure of C# code.</span></span>
 
 
-    <span data-ttu-id="d7145-131">您的第一個程式僅能列印一則訊息。</span><span class="sxs-lookup"><span data-stu-id="d7145-131">Your first program is limited to printing one message.</span></span> <span data-ttu-id="d7145-132">您可以使用**變數**來撰寫更有用的程式。</span><span class="sxs-lookup"><span data-stu-id="d7145-132">You can write more useful programs by using **variables**.</span></span> <span data-ttu-id="d7145-133">**變數**是一種符號，可以使用不同的值來執行相同的程式碼。</span><span class="sxs-lookup"><span data-stu-id="d7145-133">A **variable** is a symbol you can use to run the same code with different values.</span></span> <span data-ttu-id="d7145-134">讓我們來試試看吧！</span><span class="sxs-lookup"><span data-stu-id="d7145-134">Let's try it!</span></span> <span data-ttu-id="d7145-135">使用下列程式碼取代您在互動式視窗中所撰寫的程式碼：</span><span class="sxs-lookup"><span data-stu-id="d7145-135">Replace the code you've written in the interactive window with the following code:</span></span>
+    <span data-ttu-id="94f09-131">您的第一個程式僅能列印一則訊息。</span><span class="sxs-lookup"><span data-stu-id="94f09-131">Your first program is limited to printing one message.</span></span> <span data-ttu-id="94f09-132">您可以使用**變數**來撰寫更有用的程式。</span><span class="sxs-lookup"><span data-stu-id="94f09-132">You can write more useful programs by using **variables**.</span></span> <span data-ttu-id="94f09-133">**變數**是一種符號，可以使用不同的值來執行相同的程式碼。</span><span class="sxs-lookup"><span data-stu-id="94f09-133">A **variable** is a symbol you can use to run the same code with different values.</span></span> <span data-ttu-id="94f09-134">讓我們來試試看吧！</span><span class="sxs-lookup"><span data-stu-id="94f09-134">Let's try it!</span></span> <span data-ttu-id="94f09-135">使用下列程式碼取代您在互動式視窗中所撰寫的程式碼：</span><span class="sxs-lookup"><span data-stu-id="94f09-135">Replace the code you've written in the interactive window with the following code:</span></span>
 
 
     ```csharp
@@ -68,10 +68,10 @@ items:
     ```
 
 
-    <span data-ttu-id="d7145-136">第一行會宣告一個變數 `aFriend`，並為其指派一個值 "Bill"。</span><span class="sxs-lookup"><span data-stu-id="d7145-136">The first line declares a variable, `aFriend` and assigns it a value, "Bill".</span></span> <span data-ttu-id="d7145-137">第二行會列印出名稱。</span><span class="sxs-lookup"><span data-stu-id="d7145-137">The second line prints out the name.</span></span>
+    <span data-ttu-id="94f09-136">第一行會宣告一個變數 `aFriend`，並為其指派一個值 "Bill"。</span><span class="sxs-lookup"><span data-stu-id="94f09-136">The first line declares a variable, `aFriend` and assigns it a value, "Bill".</span></span> <span data-ttu-id="94f09-137">第二行會列印出名稱。</span><span class="sxs-lookup"><span data-stu-id="94f09-137">The second line prints out the name.</span></span>
 
 
-    <span data-ttu-id="d7145-138">您可以將不同的值指派給任何您宣告的變數。</span><span class="sxs-lookup"><span data-stu-id="d7145-138">You can assign different values to any variable you declare.</span></span> <span data-ttu-id="d7145-139">您可以將名稱變更為您的任何一位朋友。</span><span class="sxs-lookup"><span data-stu-id="d7145-139">You can change the name to one of your friends.</span></span> <span data-ttu-id="d7145-140">在互動式視窗中，在您已新增的程式碼之後加入這兩行：</span><span class="sxs-lookup"><span data-stu-id="d7145-140">Add these two lines in the interactive window following the code you've already added:</span></span>
+    <span data-ttu-id="94f09-138">您可以將不同的值指派給任何您宣告的變數。</span><span class="sxs-lookup"><span data-stu-id="94f09-138">You can assign different values to any variable you declare.</span></span> <span data-ttu-id="94f09-139">您可以將名稱變更為您的任何一位朋友。</span><span class="sxs-lookup"><span data-stu-id="94f09-139">You can change the name to one of your friends.</span></span> <span data-ttu-id="94f09-140">在互動式視窗中，在您已新增的程式碼之後加入這兩行：</span><span class="sxs-lookup"><span data-stu-id="94f09-140">Add these two lines in the interactive window following the code you've already added:</span></span>
 
 
     ```csharp
@@ -83,10 +83,10 @@ items:
     ```
 
 
-    <span data-ttu-id="d7145-141">請注意，同一行程式碼會根據儲存在 `aFriend` 變數中的值，列印兩個不同的訊息。</span><span class="sxs-lookup"><span data-stu-id="d7145-141">Notice that the same line of code prints two different messages, based on the value stored in the `aFriend` variable.</span></span>
+    <span data-ttu-id="94f09-141">請注意，同一行程式碼會根據儲存在 `aFriend` 變數中的值，列印兩個不同的訊息。</span><span class="sxs-lookup"><span data-stu-id="94f09-141">Notice that the same line of code prints two different messages, based on the value stored in the `aFriend` variable.</span></span>
 
 
-    <span data-ttu-id="d7145-142">您可能也注意到，最後兩個訊息中遺漏 "Hello" 這個字。</span><span class="sxs-lookup"><span data-stu-id="d7145-142">You may have also noticed that the word "Hello" was missing in the last two messages.</span></span> <span data-ttu-id="d7145-143">讓我們來修正。</span><span class="sxs-lookup"><span data-stu-id="d7145-143">Let's fix that now.</span></span>  <span data-ttu-id="d7145-144">將列印訊息的程式碼行修改為下列內容：</span><span class="sxs-lookup"><span data-stu-id="d7145-144">Modify the lines that print the message to the following:</span></span>
+    <span data-ttu-id="94f09-142">您可能也注意到，最後兩個訊息中遺漏 "Hello" 這個字。</span><span class="sxs-lookup"><span data-stu-id="94f09-142">You may have also noticed that the word "Hello" was missing in the last two messages.</span></span> <span data-ttu-id="94f09-143">讓我們來修正。</span><span class="sxs-lookup"><span data-stu-id="94f09-143">Let's fix that now.</span></span>  <span data-ttu-id="94f09-144">將列印訊息的程式碼行修改為下列內容：</span><span class="sxs-lookup"><span data-stu-id="94f09-144">Modify the lines that print the message to the following:</span></span>
 
 
     ```csharp
@@ -96,18 +96,18 @@ items:
     ```
 
 
-    <span data-ttu-id="d7145-145">再次按一下 [執行] 來查看結果。</span><span class="sxs-lookup"><span data-stu-id="d7145-145">Click **Run** again to see the results.</span></span>
+    <span data-ttu-id="94f09-145">再次按一下 [執行] 來查看結果。</span><span class="sxs-lookup"><span data-stu-id="94f09-145">Click **Run** again to see the results.</span></span>
 
 
-    <span data-ttu-id="d7145-146">您已使用 `+` 從**變數**和**常數**字串建置字串。</span><span class="sxs-lookup"><span data-stu-id="d7145-146">You've been using `+` to build strings from **variables** and **constant** strings.</span></span> <span data-ttu-id="d7145-147">有更好的方法。</span><span class="sxs-lookup"><span data-stu-id="d7145-147">There's a better way.</span></span>
+    <span data-ttu-id="94f09-146">您已使用 `+` 從**變數**和**常數**字串建置字串。</span><span class="sxs-lookup"><span data-stu-id="94f09-146">You've been using `+` to build strings from **variables** and **constant** strings.</span></span> <span data-ttu-id="94f09-147">有更好的方法。</span><span class="sxs-lookup"><span data-stu-id="94f09-147">There's a better way.</span></span>
 
-    <span data-ttu-id="d7145-148">您可以在 `{` 與 `}` 字元之間放置變數，告訴 C# 以變數的值來取代該文字。</span><span class="sxs-lookup"><span data-stu-id="d7145-148">You can place a variable between `{` and `}` characters to tell C# to replace that text with the value of the variable.</span></span>
-
-
-    <span data-ttu-id="d7145-149">這就叫做[字串插補](../../language-reference/tokens/interpolated.md)。</span><span class="sxs-lookup"><span data-stu-id="d7145-149">This is called [String interpolation](../../language-reference/tokens/interpolated.md).</span></span>
+    <span data-ttu-id="94f09-148">您可以在 `{` 與 `}` 字元之間放置變數，告訴 C# 以變數的值來取代該文字。</span><span class="sxs-lookup"><span data-stu-id="94f09-148">You can place a variable between `{` and `}` characters to tell C# to replace that text with the value of the variable.</span></span>
 
 
-    <span data-ttu-id="d7145-150">如果在字串的左引號前新增 `$`，即可接著將以大括號括住的變數 (如 `aFriend`) 包含在字串內。</span><span class="sxs-lookup"><span data-stu-id="d7145-150">If you add a `$` before the opening quote of the string, you can then include variables, like `aFriend`, inside the string between curly braces.</span></span> <span data-ttu-id="d7145-151">試試看：</span><span class="sxs-lookup"><span data-stu-id="d7145-151">Give it a try:</span></span>
+    <span data-ttu-id="94f09-149">這就叫做[字串插補](../../language-reference/tokens/interpolated.md)。</span><span class="sxs-lookup"><span data-stu-id="94f09-149">This is called [String interpolation](../../language-reference/tokens/interpolated.md).</span></span>
+
+
+    <span data-ttu-id="94f09-150">如果在字串的左引號前新增 `$`，即可接著將以大括號括住的變數 (如 `aFriend`) 包含在字串內。</span><span class="sxs-lookup"><span data-stu-id="94f09-150">If you add a `$` before the opening quote of the string, you can then include variables, like `aFriend`, inside the string between curly braces.</span></span> <span data-ttu-id="94f09-151">試試看：</span><span class="sxs-lookup"><span data-stu-id="94f09-151">Give it a try:</span></span>
 
 
 
@@ -118,19 +118,19 @@ items:
     ```
 
 
-    <span data-ttu-id="d7145-152">再次按一下 [執行] 來查看結果。</span><span class="sxs-lookup"><span data-stu-id="d7145-152">Click **Run** again to see the results.</span></span> <span data-ttu-id="d7145-153">訊息應該是 "Hello Maira"，而非 "Hello {aFriend}"。</span><span class="sxs-lookup"><span data-stu-id="d7145-153">Instead of "Hello {aFriend}", the message should be "Hello Maira".</span></span>
+    <span data-ttu-id="94f09-152">再次按一下 [執行] 來查看結果。</span><span class="sxs-lookup"><span data-stu-id="94f09-152">Click **Run** again to see the results.</span></span> <span data-ttu-id="94f09-153">訊息應該是 "Hello Maira"，而非 "Hello {aFriend}"。</span><span class="sxs-lookup"><span data-stu-id="94f09-153">Instead of "Hello {aFriend}", the message should be "Hello Maira".</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="d7145-154">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="d7145-154">This online coding experience is in preview mode.</span></span> <span data-ttu-id="d7145-155">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="d7145-155">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="d7145-156">處理字串</span><span class="sxs-lookup"><span data-stu-id="d7145-156">Work with strings</span></span>
+    > <span data-ttu-id="94f09-154">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="94f09-154">This online coding experience is in preview mode.</span></span> <span data-ttu-id="94f09-155">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="94f09-155">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="94f09-156">處理字串</span><span class="sxs-lookup"><span data-stu-id="94f09-156">Work with strings</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="d7145-157">您上次的編輯是字串處理功能的初探。</span><span class="sxs-lookup"><span data-stu-id="d7145-157">Your last edit was our first look at what you can do with strings.</span></span> <span data-ttu-id="d7145-158">讓我們來探索更多內容。</span><span class="sxs-lookup"><span data-stu-id="d7145-158">Let's explore more.</span></span>
+    <span data-ttu-id="94f09-157">您上次的編輯是字串處理功能的初探。</span><span class="sxs-lookup"><span data-stu-id="94f09-157">Your last edit was our first look at what you can do with strings.</span></span> <span data-ttu-id="94f09-158">讓我們來探索更多內容。</span><span class="sxs-lookup"><span data-stu-id="94f09-158">Let's explore more.</span></span>
 
 
-    <span data-ttu-id="d7145-159">大括號之間的變數並不限於一個。</span><span class="sxs-lookup"><span data-stu-id="d7145-159">You're not limited to a single variable between the curly braces.</span></span> <span data-ttu-id="d7145-160">試試這個：</span><span class="sxs-lookup"><span data-stu-id="d7145-160">Try this:</span></span>
+    <span data-ttu-id="94f09-159">大括號之間的變數並不限於一個。</span><span class="sxs-lookup"><span data-stu-id="94f09-159">You're not limited to a single variable between the curly braces.</span></span> <span data-ttu-id="94f09-160">試試這個：</span><span class="sxs-lookup"><span data-stu-id="94f09-160">Try this:</span></span>
 
 
     ```csharp
@@ -144,7 +144,7 @@ items:
     ```
 
 
-    <span data-ttu-id="d7145-161">當您探索更多字串，您會發現字串不只是字母的集合。</span><span class="sxs-lookup"><span data-stu-id="d7145-161">As you explore more with strings, you'll find that strings are more than a collection of letters.</span></span> <span data-ttu-id="d7145-162">您可以使用 `Length` 來找到字串的長度。</span><span class="sxs-lookup"><span data-stu-id="d7145-162">You can find the length of a string using `Length`.</span></span> <span data-ttu-id="d7145-163">`Length` 是字串的**屬性**，會傳回該字串的字元數。</span><span class="sxs-lookup"><span data-stu-id="d7145-163">`Length` is a **property** of a string and it returns the number of characters in that string.</span></span> <span data-ttu-id="d7145-164">在互動式視窗底端加入下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="d7145-164">Add the following code at the bottom of the interactive window:</span></span>
+    <span data-ttu-id="94f09-161">當您探索更多字串，您會發現字串不只是字母的集合。</span><span class="sxs-lookup"><span data-stu-id="94f09-161">As you explore more with strings, you'll find that strings are more than a collection of letters.</span></span> <span data-ttu-id="94f09-162">您可以使用 `Length` 來找到字串的長度。</span><span class="sxs-lookup"><span data-stu-id="94f09-162">You can find the length of a string using `Length`.</span></span> <span data-ttu-id="94f09-163">`Length` 是字串的**屬性**，會傳回該字串的字元數。</span><span class="sxs-lookup"><span data-stu-id="94f09-163">`Length` is a **property** of a string and it returns the number of characters in that string.</span></span> <span data-ttu-id="94f09-164">在互動式視窗底端加入下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="94f09-164">Add the following code at the bottom of the interactive window:</span></span>
 
 
     ```csharp
@@ -158,21 +158,21 @@ items:
 
     > [!TIP]
 
-    > <span data-ttu-id="d7145-165">這是您自行探索的好時機。</span><span class="sxs-lookup"><span data-stu-id="d7145-165">This is a good time to explore on your own.</span></span> <span data-ttu-id="d7145-166">您已學到 `Console.WriteLine()` 將文字寫至螢幕。</span><span class="sxs-lookup"><span data-stu-id="d7145-166">You've learned that `Console.WriteLine()` writes text to the screen.</span></span> <span data-ttu-id="d7145-167">您已學到如何宣告變數，以及將字串串連在一起。</span><span class="sxs-lookup"><span data-stu-id="d7145-167">You've learned how to declare variables and concatenate strings together.</span></span> <span data-ttu-id="d7145-168">在互動式視窗中實驗。</span><span class="sxs-lookup"><span data-stu-id="d7145-168">Experiment in the interactive window.</span></span> <span data-ttu-id="d7145-169">視窗具有稱為 **IntelliSense** 的功能，這個功能會提供可執行的動作建議給您。</span><span class="sxs-lookup"><span data-stu-id="d7145-169">The window has a feature called **IntelliSense** that makes suggestions for what you can do.</span></span> <span data-ttu-id="d7145-170">在 `firstFriend` 中的 `d` 後面輸入 `.`。</span><span class="sxs-lookup"><span data-stu-id="d7145-170">Type a `.` after the `d` in `firstFriend`.</span></span> <span data-ttu-id="d7145-171">您會看到您可以使用的屬性和方法建議清單。</span><span class="sxs-lookup"><span data-stu-id="d7145-171">You'll see a list of suggestions for properties and methods you can use.</span></span>
+    > <span data-ttu-id="94f09-165">這是您自行探索的好時機。</span><span class="sxs-lookup"><span data-stu-id="94f09-165">This is a good time to explore on your own.</span></span> <span data-ttu-id="94f09-166">您已學到 `Console.WriteLine()` 將文字寫至螢幕。</span><span class="sxs-lookup"><span data-stu-id="94f09-166">You've learned that `Console.WriteLine()` writes text to the screen.</span></span> <span data-ttu-id="94f09-167">您已學到如何宣告變數，以及將字串串連在一起。</span><span class="sxs-lookup"><span data-stu-id="94f09-167">You've learned how to declare variables and concatenate strings together.</span></span> <span data-ttu-id="94f09-168">在互動式視窗中實驗。</span><span class="sxs-lookup"><span data-stu-id="94f09-168">Experiment in the interactive window.</span></span> <span data-ttu-id="94f09-169">視窗具有稱為 **IntelliSense** 的功能，這個功能會提供可執行的動作建議給您。</span><span class="sxs-lookup"><span data-stu-id="94f09-169">The window has a feature called **IntelliSense** that makes suggestions for what you can do.</span></span> <span data-ttu-id="94f09-170">在 `firstFriend` 中的 `d` 後面輸入 `.`。</span><span class="sxs-lookup"><span data-stu-id="94f09-170">Type a `.` after the `d` in `firstFriend`.</span></span> <span data-ttu-id="94f09-171">您會看到您可以使用的屬性和方法建議清單。</span><span class="sxs-lookup"><span data-stu-id="94f09-171">You'll see a list of suggestions for properties and methods you can use.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="d7145-172">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="d7145-172">This online coding experience is in preview mode.</span></span> <span data-ttu-id="d7145-173">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="d7145-173">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="d7145-174">使用字串完成更多工作</span><span class="sxs-lookup"><span data-stu-id="d7145-174">Do more with strings</span></span>
+    > <span data-ttu-id="94f09-172">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="94f09-172">This online coding experience is in preview mode.</span></span> <span data-ttu-id="94f09-173">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="94f09-173">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="94f09-174">使用字串完成更多工作</span><span class="sxs-lookup"><span data-stu-id="94f09-174">Do more with strings</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="d7145-175">您一直在使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> **方法**來列印訊息。</span><span class="sxs-lookup"><span data-stu-id="d7145-175">You've been using a **method**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, to print messages.</span></span> <span data-ttu-id="d7145-176">**方法**是實作某些動作的程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="d7145-176">A **method** is a block of code that implements some action.</span></span> <span data-ttu-id="d7145-177">它具有名稱，以便於您可以存取。</span><span class="sxs-lookup"><span data-stu-id="d7145-177">It has a name, so you can access it.</span></span>
+    <span data-ttu-id="94f09-175">您一直在使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> **方法**來列印訊息。</span><span class="sxs-lookup"><span data-stu-id="94f09-175">You've been using a **method**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, to print messages.</span></span> <span data-ttu-id="94f09-176">**方法**是實作某些動作的程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="94f09-176">A **method** is a block of code that implements some action.</span></span> <span data-ttu-id="94f09-177">它具有名稱，以便於您可以存取。</span><span class="sxs-lookup"><span data-stu-id="94f09-177">It has a name, so you can access it.</span></span>
 
 
-    <span data-ttu-id="d7145-178">假設您的字串有您不想要顯示的開頭或尾端空格。</span><span class="sxs-lookup"><span data-stu-id="d7145-178">Suppose your strings have leading or trailing spaces that you don't want to display.</span></span> <span data-ttu-id="d7145-179">您想要**修剪**字串的空格。</span><span class="sxs-lookup"><span data-stu-id="d7145-179">You want to **trim** the spaces from the strings.</span></span>
+    <span data-ttu-id="94f09-178">假設您的字串有您不想要顯示的開頭或尾端空格。</span><span class="sxs-lookup"><span data-stu-id="94f09-178">Suppose your strings have leading or trailing spaces that you don't want to display.</span></span> <span data-ttu-id="94f09-179">您想要**修剪**字串的空格。</span><span class="sxs-lookup"><span data-stu-id="94f09-179">You want to **trim** the spaces from the strings.</span></span>
 
-    <span data-ttu-id="d7145-180"><xref:System.String.Trim%2A> 方法以及相關的 <xref:System.String.TrimStart%2A> 和 <xref:System.String.TrimEnd%2A> 方法會執行這項工作。</span><span class="sxs-lookup"><span data-stu-id="d7145-180">The <xref:System.String.Trim%2A> method and related methods <xref:System.String.TrimStart%2A> and <xref:System.String.TrimEnd%2A> do that work.</span></span> <span data-ttu-id="d7145-181">您只要使用這些方法就可以移除前置和尾端空格。</span><span class="sxs-lookup"><span data-stu-id="d7145-181">You can just use those methods to remove leading and trailing spaces.</span></span> <span data-ttu-id="d7145-182">試試下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="d7145-182">Try the following code:</span></span>
+    <span data-ttu-id="94f09-180"><xref:System.String.Trim%2A> 方法以及相關的 <xref:System.String.TrimStart%2A> 和 <xref:System.String.TrimEnd%2A> 方法會執行這項工作。</span><span class="sxs-lookup"><span data-stu-id="94f09-180">The <xref:System.String.Trim%2A> method and related methods <xref:System.String.TrimStart%2A> and <xref:System.String.TrimEnd%2A> do that work.</span></span> <span data-ttu-id="94f09-181">您只要使用這些方法就可以移除前置和尾端空格。</span><span class="sxs-lookup"><span data-stu-id="94f09-181">You can just use those methods to remove leading and trailing spaces.</span></span> <span data-ttu-id="94f09-182">試試下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="94f09-182">Try the following code:</span></span>
 
 
     ```csharp
@@ -199,10 +199,10 @@ items:
     ```
 
 
-    <span data-ttu-id="d7145-183">此範例強調了處理字串的幾個重要概念。</span><span class="sxs-lookup"><span data-stu-id="d7145-183">This sample reinforces a couple of important concepts for working with strings.</span></span> <span data-ttu-id="d7145-184">操作字串的方法會傳回新字串物件，而不是就地修改。</span><span class="sxs-lookup"><span data-stu-id="d7145-184">The methods that manipulate strings return new string objects rather than making modifications in place.</span></span> <span data-ttu-id="d7145-185">您可以看到，每次呼叫 `Trim` 方法時都會傳回新字串，但不會變更原始訊息。</span><span class="sxs-lookup"><span data-stu-id="d7145-185">You can see that each call to any of the `Trim` methods returns a new string but doesn't change the original message.</span></span>
+    <span data-ttu-id="94f09-183">此範例強調了處理字串的幾個重要概念。</span><span class="sxs-lookup"><span data-stu-id="94f09-183">This sample reinforces a couple of important concepts for working with strings.</span></span> <span data-ttu-id="94f09-184">操作字串的方法會傳回新字串物件，而不是就地修改。</span><span class="sxs-lookup"><span data-stu-id="94f09-184">The methods that manipulate strings return new string objects rather than making modifications in place.</span></span> <span data-ttu-id="94f09-185">您可以看到，每次呼叫 `Trim` 方法時都會傳回新字串，但不會變更原始訊息。</span><span class="sxs-lookup"><span data-stu-id="94f09-185">You can see that each call to any of the `Trim` methods returns a new string but doesn't change the original message.</span></span>
 
 
-    <span data-ttu-id="d7145-186">還有其他方法可以用來處理字串。</span><span class="sxs-lookup"><span data-stu-id="d7145-186">There are other methods available to work with a string.</span></span> <span data-ttu-id="d7145-187">例如，您以前在編輯器或文字處理器中應該用過搜尋和取代命令。</span><span class="sxs-lookup"><span data-stu-id="d7145-187">For example, you've probably used a search and replace command in an editor or word processor before.</span></span> <span data-ttu-id="d7145-188"><xref:System.String.Replace%2A> 方法會在字串中執行類似的操作。</span><span class="sxs-lookup"><span data-stu-id="d7145-188">The <xref:System.String.Replace%2A> method does something similar in a string.</span></span> <span data-ttu-id="d7145-189">它會搜尋子字串，並以不同的文字來取代。</span><span class="sxs-lookup"><span data-stu-id="d7145-189">It searches for a substring and replaces it with different text.</span></span> <span data-ttu-id="d7145-190"><xref:System.String.Replace%2A> 方法會接受兩個**參數**。</span><span class="sxs-lookup"><span data-stu-id="d7145-190">The <xref:System.String.Replace%2A> method takes two **parameters**.</span></span> <span data-ttu-id="d7145-191">參數就是括號之間的字串。</span><span class="sxs-lookup"><span data-stu-id="d7145-191">These are the strings between the parentheses.</span></span> <span data-ttu-id="d7145-192">第一個字串是要搜尋的文字。</span><span class="sxs-lookup"><span data-stu-id="d7145-192">The first string is the text to search for.</span></span> <span data-ttu-id="d7145-193">第二個字串是用來取代的文字。</span><span class="sxs-lookup"><span data-stu-id="d7145-193">The second string is the text to replace it with.</span></span> <span data-ttu-id="d7145-194">試試看吧。</span><span class="sxs-lookup"><span data-stu-id="d7145-194">Try it for yourself.</span></span> <span data-ttu-id="d7145-195">新增下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="d7145-195">Add this code.</span></span> <span data-ttu-id="d7145-196">輸入該程式碼，當您開始在 `sayHello` 變數後面輸入 `.Re` 時會看到提示：</span><span class="sxs-lookup"><span data-stu-id="d7145-196">Type it in to see the hints as you start typing `.Re` after the `sayHello` variable:</span></span>
+    <span data-ttu-id="94f09-186">還有其他方法可以用來處理字串。</span><span class="sxs-lookup"><span data-stu-id="94f09-186">There are other methods available to work with a string.</span></span> <span data-ttu-id="94f09-187">例如，您以前在編輯器或文字處理器中應該用過搜尋和取代命令。</span><span class="sxs-lookup"><span data-stu-id="94f09-187">For example, you've probably used a search and replace command in an editor or word processor before.</span></span> <span data-ttu-id="94f09-188"><xref:System.String.Replace%2A> 方法會在字串中執行類似的操作。</span><span class="sxs-lookup"><span data-stu-id="94f09-188">The <xref:System.String.Replace%2A> method does something similar in a string.</span></span> <span data-ttu-id="94f09-189">它會搜尋子字串，並以不同的文字來取代。</span><span class="sxs-lookup"><span data-stu-id="94f09-189">It searches for a substring and replaces it with different text.</span></span> <span data-ttu-id="94f09-190"><xref:System.String.Replace%2A> 方法會接受兩個**參數**。</span><span class="sxs-lookup"><span data-stu-id="94f09-190">The <xref:System.String.Replace%2A> method takes two **parameters**.</span></span> <span data-ttu-id="94f09-191">參數就是括號之間的字串。</span><span class="sxs-lookup"><span data-stu-id="94f09-191">These are the strings between the parentheses.</span></span> <span data-ttu-id="94f09-192">第一個字串是要搜尋的文字。</span><span class="sxs-lookup"><span data-stu-id="94f09-192">The first string is the text to search for.</span></span> <span data-ttu-id="94f09-193">第二個字串是用來取代的文字。</span><span class="sxs-lookup"><span data-stu-id="94f09-193">The second string is the text to replace it with.</span></span> <span data-ttu-id="94f09-194">試試看吧。</span><span class="sxs-lookup"><span data-stu-id="94f09-194">Try it for yourself.</span></span> <span data-ttu-id="94f09-195">新增下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="94f09-195">Add this code.</span></span> <span data-ttu-id="94f09-196">輸入該程式碼，當您開始在 `sayHello` 變數後面輸入 `.Re` 時會看到提示：</span><span class="sxs-lookup"><span data-stu-id="94f09-196">Type it in to see the hints as you start typing `.Re` after the `sayHello` variable:</span></span>
 
 
     ```csharp
@@ -218,7 +218,7 @@ items:
     ```
 
 
-    <span data-ttu-id="d7145-197">另外兩個有用的方法可以使字串全部大寫或全部小寫。</span><span class="sxs-lookup"><span data-stu-id="d7145-197">Two other useful methods make a string ALL CAPS or all lower case.</span></span> <span data-ttu-id="d7145-198">試試下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="d7145-198">Try the following code.</span></span> <span data-ttu-id="d7145-199">輸入該程式碼，當您開始輸入 `To` 時會看到 **IntelliSense** 如何提供提示：</span><span class="sxs-lookup"><span data-stu-id="d7145-199">Type it in to see how **IntelliSense** provides hints as you start to type `To`:</span></span>
+    <span data-ttu-id="94f09-197">另外兩個有用的方法可以使字串全部大寫或全部小寫。</span><span class="sxs-lookup"><span data-stu-id="94f09-197">Two other useful methods make a string ALL CAPS or all lower case.</span></span> <span data-ttu-id="94f09-198">試試下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="94f09-198">Try the following code.</span></span> <span data-ttu-id="94f09-199">輸入該程式碼，當您開始輸入 `To` 時會看到 **IntelliSense** 如何提供提示：</span><span class="sxs-lookup"><span data-stu-id="94f09-199">Type it in to see how **IntelliSense** provides hints as you start to type `To`:</span></span>
 
 
     ```csharp
@@ -232,11 +232,11 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="d7145-200">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="d7145-200">This online coding experience is in preview mode.</span></span> <span data-ttu-id="d7145-201">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="d7145-201">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="d7145-202">搜尋字串</span><span class="sxs-lookup"><span data-stu-id="d7145-202">Search strings</span></span>
+    > <span data-ttu-id="94f09-200">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="94f09-200">This online coding experience is in preview mode.</span></span> <span data-ttu-id="94f09-201">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="94f09-201">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="94f09-202">搜尋字串</span><span class="sxs-lookup"><span data-stu-id="94f09-202">Search strings</span></span>
   durationInMinutes: 10
   content: >
-    <span data-ttu-id="d7145-203">搜尋和取代作業的另一部分就是在字串中尋找文字。</span><span class="sxs-lookup"><span data-stu-id="d7145-203">The other part of a *search and replace* operation is to find text in a string.</span></span> <span data-ttu-id="d7145-204">您可以使用 <xref:System.String.Contains%2A> 方法進行搜尋。</span><span class="sxs-lookup"><span data-stu-id="d7145-204">You can use the  <xref:System.String.Contains%2A> method for searching.</span></span> <span data-ttu-id="d7145-205">它會告訴您字串是否包含某個子字串。</span><span class="sxs-lookup"><span data-stu-id="d7145-205">It tells you if a string contains a substring inside it.</span></span> <span data-ttu-id="d7145-206">請嘗試下列程式碼來探索 <xref:System.String.Contains%2A>：</span><span class="sxs-lookup"><span data-stu-id="d7145-206">Try the following code to explore <xref:System.String.Contains%2A>:</span></span>
+    <span data-ttu-id="94f09-203">搜尋和取代作業的另一部分就是在字串中尋找文字。</span><span class="sxs-lookup"><span data-stu-id="94f09-203">The other part of a *search and replace* operation is to find text in a string.</span></span> <span data-ttu-id="94f09-204">您可以使用 <xref:System.String.Contains%2A> 方法進行搜尋。</span><span class="sxs-lookup"><span data-stu-id="94f09-204">You can use the  <xref:System.String.Contains%2A> method for searching.</span></span> <span data-ttu-id="94f09-205">它會告訴您字串是否包含某個子字串。</span><span class="sxs-lookup"><span data-stu-id="94f09-205">It tells you if a string contains a substring inside it.</span></span> <span data-ttu-id="94f09-206">請嘗試下列程式碼來探索 <xref:System.String.Contains%2A>：</span><span class="sxs-lookup"><span data-stu-id="94f09-206">Try the following code to explore <xref:System.String.Contains%2A>:</span></span>
 
 
     ```csharp
@@ -250,30 +250,30 @@ items:
     ```
 
 
-    <span data-ttu-id="d7145-207"><xref:System.String.Contains%2A> 方法會傳回一個**布林**值，告訴您是否已找到您要搜尋的字串。</span><span class="sxs-lookup"><span data-stu-id="d7145-207">The <xref:System.String.Contains%2A> method returns a **boolean** value which tells you if the string you were searching for was found.</span></span> <span data-ttu-id="d7145-208">**布林值**會儲存 `true` 或 `false` 值。</span><span class="sxs-lookup"><span data-stu-id="d7145-208">A **boolean** stores either a `true` or a `false` value.</span></span> <span data-ttu-id="d7145-209">您將在稍後的課程中深入了解**布林值**。</span><span class="sxs-lookup"><span data-stu-id="d7145-209">You'll learn more about **boolean** values in a later lesson.</span></span>
+    <span data-ttu-id="94f09-207"><xref:System.String.Contains%2A> 方法會傳回一個**布林**值，告訴您是否已找到您要搜尋的字串。</span><span class="sxs-lookup"><span data-stu-id="94f09-207">The <xref:System.String.Contains%2A> method returns a **boolean** value which tells you if the string you were searching for was found.</span></span> <span data-ttu-id="94f09-208">**布林值**會儲存 `true` 或 `false` 值。</span><span class="sxs-lookup"><span data-stu-id="94f09-208">A **boolean** stores either a `true` or a `false` value.</span></span> <span data-ttu-id="94f09-209">您將在稍後的課程中深入了解**布林值**。</span><span class="sxs-lookup"><span data-stu-id="94f09-209">You'll learn more about **boolean** values in a later lesson.</span></span>
 
 
-    <span data-ttu-id="d7145-210">***挑戰***</span><span class="sxs-lookup"><span data-stu-id="d7145-210">***Challenge***</span></span>
+    <span data-ttu-id="94f09-210">***挑戰***</span><span class="sxs-lookup"><span data-stu-id="94f09-210">***Challenge***</span></span>
 
 
-    <span data-ttu-id="d7145-211">還有兩個類似的 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A> 方法，也可以搜尋字串中的子字串。</span><span class="sxs-lookup"><span data-stu-id="d7145-211">There are two similar methods, <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> that also search for sub-strings in a string.</span></span> <span data-ttu-id="d7145-212">這兩個方法會在字串的開頭或結尾尋找子字串。</span><span class="sxs-lookup"><span data-stu-id="d7145-212">These find a substring at the beginning or the end of the string.</span></span> <span data-ttu-id="d7145-213">嘗試修改先前的範例，以使用 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A>，而不是 <xref:System.String.Contains%2A>。</span><span class="sxs-lookup"><span data-stu-id="d7145-213">Try to modify the previous sample to use <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> instead of <xref:System.String.Contains%2A>.</span></span> <span data-ttu-id="d7145-214">在字串的開頭搜尋 "You" 或 "goodbye"。</span><span class="sxs-lookup"><span data-stu-id="d7145-214">Search for "You" or "goodbye" at the beginning of a string.</span></span> <span data-ttu-id="d7145-215">在字串的結尾搜尋 "You" 或 "goodbye"。</span><span class="sxs-lookup"><span data-stu-id="d7145-215">Search for "hello" or "goodbye" at the end of a string.</span></span>
-
-
-    > [!NOTE]
-
-    > <span data-ttu-id="d7145-216">當您測試字串結尾的文字時，請注意標點符號。</span><span class="sxs-lookup"><span data-stu-id="d7145-216">Watch your punctuation when you test for the text at the end of the string.</span></span> <span data-ttu-id="d7145-217">如果字串是以句號結尾，則檢查的字串也必須以句號結尾。</span><span class="sxs-lookup"><span data-stu-id="d7145-217">If the string ends with a period, you must check for a string that ends with a period.</span></span>
-
-
-    <span data-ttu-id="d7145-218">如果開頭為 "You" 且結尾為 "hello"，則應該會取得 `true`，如果開頭或結尾為 "goodbye"，則為 false。</span><span class="sxs-lookup"><span data-stu-id="d7145-218">You should get `true` for starting with "You" and ending with "hello" and false for starting with or ending with "goodbye".</span></span>
+    <span data-ttu-id="94f09-211">還有兩個類似的 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A> 方法，也可以搜尋字串中的子字串。</span><span class="sxs-lookup"><span data-stu-id="94f09-211">There are two similar methods, <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> that also search for sub-strings in a string.</span></span> <span data-ttu-id="94f09-212">這兩個方法會在字串的開頭或結尾尋找子字串。</span><span class="sxs-lookup"><span data-stu-id="94f09-212">These find a substring at the beginning or the end of the string.</span></span> <span data-ttu-id="94f09-213">嘗試修改先前的範例，以使用 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A>，而不是 <xref:System.String.Contains%2A>。</span><span class="sxs-lookup"><span data-stu-id="94f09-213">Try to modify the previous sample to use <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> instead of <xref:System.String.Contains%2A>.</span></span> <span data-ttu-id="94f09-214">在字串的開頭搜尋 "You" 或 "goodbye"。</span><span class="sxs-lookup"><span data-stu-id="94f09-214">Search for "You" or "goodbye" at the beginning of a string.</span></span> <span data-ttu-id="94f09-215">在字串的結尾搜尋 "You" 或 "goodbye"。</span><span class="sxs-lookup"><span data-stu-id="94f09-215">Search for "hello" or "goodbye" at the end of a string.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="d7145-219">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="d7145-219">This online coding experience is in preview mode.</span></span> <span data-ttu-id="d7145-220">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="d7145-220">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="d7145-221">完成挑戰</span><span class="sxs-lookup"><span data-stu-id="d7145-221">Complete challenge</span></span>
+    > <span data-ttu-id="94f09-216">當您測試字串結尾的文字時，請注意標點符號。</span><span class="sxs-lookup"><span data-stu-id="94f09-216">Watch your punctuation when you test for the text at the end of the string.</span></span> <span data-ttu-id="94f09-217">如果字串是以句號結尾，則檢查的字串也必須以句號結尾。</span><span class="sxs-lookup"><span data-stu-id="94f09-217">If the string ends with a period, you must check for a string that ends with a period.</span></span>
+
+
+    <span data-ttu-id="94f09-218">如果開頭為 "You" 且結尾為 "hello"，則應該會取得 `true`，如果開頭或結尾為 "goodbye"，則為 false。</span><span class="sxs-lookup"><span data-stu-id="94f09-218">You should get `true` for starting with "You" and ending with "hello" and false for starting with or ending with "goodbye".</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="94f09-219">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="94f09-219">This online coding experience is in preview mode.</span></span> <span data-ttu-id="94f09-220">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="94f09-220">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="94f09-221">完成挑戰</span><span class="sxs-lookup"><span data-stu-id="94f09-221">Complete challenge</span></span>
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="d7145-222">您是否有得到與下列程式碼類似的內容？</span><span class="sxs-lookup"><span data-stu-id="d7145-222">Did you come up with something like this?</span></span>
+    <span data-ttu-id="94f09-222">您是否有得到與下列程式碼類似的內容？</span><span class="sxs-lookup"><span data-stu-id="94f09-222">Did you come up with something like this?</span></span>
 
 
     ```csharp
@@ -294,13 +294,13 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="d7145-223">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="d7145-223">This online coding experience is in preview mode.</span></span> <span data-ttu-id="d7145-224">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="d7145-224">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > <span data-ttu-id="94f09-223">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="94f09-223">This online coding experience is in preview mode.</span></span> <span data-ttu-id="94f09-224">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="94f09-224">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
 - content: >-
-    <span data-ttu-id="d7145-225">您已經完成 "Hello C#" 的 C# 教學課程簡介。</span><span class="sxs-lookup"><span data-stu-id="d7145-225">You've completed the "Hello C#" introduction to C# tutorial.</span></span> <span data-ttu-id="d7145-226">您可以按一下下方 **C# 中的數字**來開始下一項互動式教學課程，或是前往 [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) 下載 .NET Core SDK 在您的電腦上建立專案，並繼續編碼。</span><span class="sxs-lookup"><span data-stu-id="d7145-226">You can click the **Numbers in C#** link below to start the next interactive tutorial, or you can visit the [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="d7145-227">「繼續學習」步驟會帶您回到這些教學課程。</span><span class="sxs-lookup"><span data-stu-id="d7145-227">The "Keep Learning" step brings you back to these tutorials.</span></span>
+    <span data-ttu-id="94f09-225">您已經完成 "Hello C#" 的 C# 教學課程簡介。</span><span class="sxs-lookup"><span data-stu-id="94f09-225">You've completed the "Hello C#" introduction to C# tutorial.</span></span> <span data-ttu-id="94f09-226">您可以按一下下方 **C# 中的數字**來開始下一項互動式教學課程，或是前往 [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) 下載 .NET Core SDK 在您的電腦上建立專案，並繼續編碼。</span><span class="sxs-lookup"><span data-stu-id="94f09-226">You can click the **Numbers in C#** link below to start the next interactive tutorial, or you can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="94f09-227">「後續步驟」一節會帶您回到這些教學課程。</span><span class="sxs-lookup"><span data-stu-id="94f09-227">The "Next steps" section brings you back to these tutorials.</span></span>
 
 
-    <span data-ttu-id="d7145-228">如需進一步閱讀有關 `string` 類型的資訊：</span><span class="sxs-lookup"><span data-stu-id="d7145-228">For further reading on the `string` type:</span></span>
+    <span data-ttu-id="94f09-228">如需進一步閱讀有關 `string` 類型的資訊：</span><span class="sxs-lookup"><span data-stu-id="94f09-228">For further reading on the `string` type:</span></span>
 
-    - <span data-ttu-id="d7145-229">[C# 程式設計指南](../../programming-guide/index.md)的[字串](../../programming-guide/strings/index.md)主題。</span><span class="sxs-lookup"><span data-stu-id="d7145-229">[C# Programming Guide](../../programming-guide/index.md) topic on [strings](../../programming-guide/strings/index.md).</span></span>
+    - <span data-ttu-id="94f09-229">[C# 程式設計指南](../../programming-guide/index.md)的[字串](../../programming-guide/strings/index.md)主題。</span><span class="sxs-lookup"><span data-stu-id="94f09-229">[C# Programming Guide](../../programming-guide/index.md) topic on [strings](../../programming-guide/strings/index.md).</span></span>
 
-    - <span data-ttu-id="d7145-230">[使用字串的做法提示](../../how-to/index.md#working-with-strings)。</span><span class="sxs-lookup"><span data-stu-id="d7145-230">[How to tips on working with strings](../../how-to/index.md#working-with-strings).</span></span>
+    - <span data-ttu-id="94f09-230">[使用字串的做法提示](../../how-to/index.md#working-with-strings)。</span><span class="sxs-lookup"><span data-stu-id="94f09-230">[How to tips on working with strings](../../how-to/index.md#working-with-strings).</span></span>
