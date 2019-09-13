@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104888"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929404"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
@@ -82,6 +82,7 @@ ms.locfileid: "70104888"
 ## <a name="code-workflow"></a>程式碼工作流程
 
 下圖代表應用程式程式碼結構，以及模型開發的反覆程序：
+
 - 收集定型資料，並將其載入 **IDataView** 物件
 - 指定擷取特性的作業管線並套用機器學習演算法
 - 對管線呼叫 **Fit()** 以定型模型
@@ -171,7 +172,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 ||多元分類|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||異常偵測|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||群集|<xref:Microsoft.ML.ClusteringCatalog>||
-||預測|<xref:Microsoft.ML.ForecastingCatalog>||
+||針對|<xref:Microsoft.ML.ForecastingCatalog>||
 ||排名|<xref:Microsoft.ML.RankingCatalog>||
 ||回復|<xref:Microsoft.ML.RegressionCatalog>||
 ||建議|<xref:Microsoft.ML.RecommendationCatalog>|新增 `Microsoft.ML.Recommender` NuGet 套件|
@@ -237,13 +238,13 @@ ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) �
 
    ![具有房價預測資料的 ML.NET 資料檢視範例](./media/ml-net-dataview.png)
 
-所有 ML.NET 演算法都在尋找向量的輸入資料行。 根據預設，此向量資料行稱為**特性**。 這就是為什麼我們要在房價範例中，把 [大小]  資料行串連到稱為 [特性]  的新資料行。
+所有 ML.NET 演算法都在尋找向量的輸入資料行。 根據預設，此向量資料行稱為**特性**。 這就是為什麼我們要在房價範例中，把 [大小] 資料行串連到稱為 [特性]的新資料行。
 
  ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-所有演算法也都會在執行預測之後，建立新的資料行。 這些新資料行的固定名稱取決於機器學習演算法類型。 若為迴歸工作，其中一個新資料行稱為 [分數]  。 這就是為什麼我們要使用這個名稱作為價格資料的屬性。
+所有演算法也都會在執行預測之後，建立新的資料行。 這些新資料行的固定名稱取決於機器學習演算法類型。 若為迴歸工作，其中一個新資料行稱為 [分數]。 這就是為什麼我們要使用這個名稱作為價格資料的屬性。
 
 ```csharp
     public class Prediction

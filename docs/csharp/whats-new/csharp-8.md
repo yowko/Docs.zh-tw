@@ -1,13 +1,13 @@
 ---
 title: C# 8.0 的新功能 - C# 指南
 description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 5 的最新資訊。
-ms.date: 09/04/2019
-ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 09/10/2019
+ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374002"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926518"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -26,6 +26,7 @@ ms.locfileid: "70374002"
 - [可為 Null 的參考類型](#nullable-reference-types)
 - [非同步資料流](#asynchronous-streams)
 - [索引和範圍](#indices-and-ranges)
+- [Null 聯合指派](#null-coalescing-assignment)
 - [非受控的結構化類型](#unmanaged-constructed-types)
 - [增強內插逐字字串](#enhancement-of-interpolated-verbatim-strings)
 
@@ -447,6 +448,24 @@ var text = words[phrase];
 ```
 
 您可以在[索引及範圍](../tutorials/ranges-indexes.md)上的教學課程中探索更多關於索引及範圍的資訊。
+
+## <a name="null-coalescing-assignment"></a>Null 聯合指派
+
+C#8.0 引進了 null 聯合指派運算子`??=`。 只有當左運算元`??=`評估為`null`時，您才可以使用運算子，將其右運算元的值指派給其左邊的運算元。
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(' ', numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+如需詳細資訊，請參閱[？？和？= 運算子](../language-reference/operators/null-coalescing-operator.md)一文。
 
 ## <a name="unmanaged-constructed-types"></a>非受控的結構化類型
 

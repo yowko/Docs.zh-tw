@@ -4,12 +4,12 @@ description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的�
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
-ms.translationtype: HT
+ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710530"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929259"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
@@ -48,6 +48,7 @@ ms.locfileid: "68710530"
 ## <a name="data"></a>資料
 
 資料是所有機器學習應用程式的中心。 在 ML.NET 中，資料是由 <xref:Microsoft.ML.IDataView> 物件表示。 資料檢視物件：
+
 - 由資料行和資料列組成
 - 延遲評估，即作業呼叫它時，它們只載入資料
 - 包含定義每個資料行類型、格式和長度的結構描述
@@ -78,9 +79,9 @@ ML.NET 中實作 <xref:Microsoft.ML.IEstimator%601> 介面的類別。
 
 ## <a name="hyperparameter"></a>超參數
 
-機器學習演算法的參數。 範例包括決策樹系中要學習的樹數目，或梯度下降演算法中的步階大小。 「超參數」  的值是在將模型定型之前設定的，並且會控管尋找預測函式之參數 (例如決策樹中的比較點或線性迴歸模型中的加權) 的程序。 如需詳細資訊，請參閱維基百科上的[超參數](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) \(英文\) 一文。
+機器學習演算法的參數。 範例包括決策樹系中要學習的樹數目，或梯度下降演算法中的步階大小。 「超參數」的值是在將模型定型之前設定的，並且會控管尋找預測函式之參數 (例如決策樹中的比較點或線性迴歸模型中的加權) 的程序。 如需詳細資訊，請參閱維基百科上的[超參數](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) \(英文\) 一文。
 
-## <a name="label"></a>標籤
+## <a name="label"></a>ThisAddIn
 
 要使用機器學習模型來預測的元素。 例如，狗的品種或未來的股價。
 
@@ -153,7 +154,7 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 
 在[迴歸](#regression)中，此評估計量是誤差平方值之平均值的平方根。
 
-## <a name="scoring"></a>評分
+## <a name="scoring"></a>計分
 
 評分是將新資料套用至定型機器學習模型並產生預測的流程。 評分也稱為推斷。 根據模型的類型而定，分數可能是原始值、機率或類別。
 

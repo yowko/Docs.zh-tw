@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c4100bb3bafdfe141dc746a64ebd8172ebe3bce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 71d7bb4cc85b0388e18cc7304dfa8c7951eab629
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648582"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894159"
 ---
 # <a name="msgbox-sample"></a>MsgBox 範例
 此範例示範如何以傳值方式將字串類型傳遞為 In 參數，以及何時使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 和 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> 欄位。  
@@ -25,7 +25,7 @@ ms.locfileid: "64648582"
   
 - 從 User32.dll 匯出的 **MessageBox**。  
   
-    ```  
+    ```cpp
     int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,   
        UINT uType);  
     ```  

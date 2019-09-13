@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 906007902c6b66d88da0d3145625e56f2a7e2b55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 6b3f7363ec5f8c954dd55a9500dcf8f2e302424f
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592524"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894898"
 ---
-# <a name="how-to-create-a-class-using-codedom"></a>作法：使用 CodeDOM 建立類別
+# <a name="how-to-create-a-class-using-codedom"></a>HOW TO：使用 CodeDOM 建立類別
 下列程序示範如何建立及編譯 CodeDOM 圖表，其可產生包含兩個欄位、三種屬性、一種方法、一個建構函式和一個進入點的類別。  
   
 1. 建立主控台應用程式，使用 CodeDOM 程式碼產生類別的原始程式碼。  
@@ -107,7 +107,7 @@ ms.locfileid: "64592524"
   
  編譯並執行後，產生的原始程式碼會產生下列輸出。  
   
-```  
+```output
 The object:  
  width = 5.3,  
  height = 6.9,  

@@ -1,14 +1,16 @@
 ---
 title: 從檔案和其他來源載入資料
 description: 此操作說明教學會示範如何將資料載入 ML.NET 以進行處理和定型。 資料原先是儲存在檔案或其他資料來源中，例如資料庫、JSON、XML 或記憶體內部集合。
-ms.date: 08/01/2019
+ms.date: 09/11/2019
+author: luisquintanilla
+ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
-ms.translationtype: HT
+ms.openlocfilehash: 419b32f2a460ca153d28206524a38c7c9fa86173
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733380"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929388"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>從檔案和其他來源載入資料
 
@@ -52,6 +54,7 @@ public class HousingData
 > [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) 只有在從檔案載入資料時才需要。
 
 將資料行作為以下項目載入： 
+
 - 個別資料行，像是 `HousingData` 類別中的 `Size` 和 `CurrentPrices`。
 - 以類似 `HousingData` 類別中 `HistoricalPrices` 的向量形式，一次載入多個資料行。
 
@@ -102,13 +105,65 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
+## <a name="load-data-from-a-relational-database"></a>從關係資料庫載入資料
+
+> [!NOTE]
+> DatabaseLoader 目前為預覽狀態。 它可以藉由參考[SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet[套件的方式](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview)來使用。 
+
+ML.NET 支援從支援[`System.Data`](xref:System.Data)的各種關係資料庫載入資料，其中包括 SQL Server、Azure SQL Database、Oracle、SQLite、于 postgresql、進度、IBM DB2 及其他許多。
+
+假設資料庫具有名為`House`的資料表和下列架構：
+
+```SQL
+CREATE TABLE [House] (
+    [HouseId] int NOT NULL IDENTITY,
+    [Size] real NOT NULL,
+    [Price] real NOT NULL
+    CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
+);
+```
+
+資料可由 `HouseData` 等類別建立模型。
+
+```csharp
+public class HouseData
+{
+    public float Size { get; set; }
+
+    public float Price { get; set; }
+}
+```
+
+然後，在您的應用程式內建立`DatabaseLoader`。
+
+```csharp
+MLContext mlContext = new MLContext();
+
+DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
+```
+
+定義您的連接字串，以及要在資料庫上執行的 SQL 命令，並建立`DatabaseSource`實例。 這個範例會使用具有檔案路徑的 LocalDB SQL Server 資料庫。 不過，DatabaseLoader 會針對內部部署和雲端中的資料庫支援任何其他有效的連接字串。  
+
+```csharp
+string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
+
+string sqlCommand = "SELECT Size,Price FROM House";
+
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+```
+
+最後，使用`Load`方法將資料載入[`IDataView`](xref:Microsoft.ML.IDataView)中。
+
+```csharp
+IDataView data = loader.Load(dbSource);
+```
+
 ## <a name="load-data-from-other-sources"></a>從其他來源載入資料
 
 除了載入儲存在檔案中的資料，ML.NET 支援從其他來源載入資料，其中包含但不限於：
 
 - 記憶體內集合
 - JSON/XML
-- 資料庫
 
 請注意，當使用串流來源時，ML.NET 預期輸入的形式為記憶體內部集合。 因此，當使用像是 JSON/XML 等來源時，請務必將資料格式化成記憶體內部集合。
 

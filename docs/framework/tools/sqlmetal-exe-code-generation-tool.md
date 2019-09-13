@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: f435c93f68feb564aaca0f52842e567aa688ac64
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0d12196acab5a50f7dd6fc78e6dccc098cf3e2de
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938000"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894615"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
 SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 元件產生程式碼及對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
@@ -34,7 +34,7 @@ SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../..
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 sqlmetal [options] [<input file>]  
 ```  
   
@@ -43,7 +43,7 @@ sqlmetal [options] [<input file>]
   
  **連接選項**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/server:** *\<名稱>*|指定資料庫伺服器名稱。|  
 |**/database:** *\<名稱>*|指定伺服器上的資料庫目錄。|  
@@ -54,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **擷取選項**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/views**|擷取資料庫檢視。|  
 |**/functions**|擷取資料庫函式。|  
@@ -70,7 +70,7 @@ sqlmetal [options] [<input file>]
   
  **其他**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/language:** *\<語言>*|指定原始程式碼語言。<br /><br /> 有效的 *\<語言>* ：vb、csharp。<br /><br /> 預設值：衍生自程式碼檔案名稱的副檔名。|  
 |**/namespace:** *\<名稱>*|指定所產生程式碼的命名空間。 預設值：沒有命名空間。|  

@@ -2,12 +2,12 @@
 title: 在非同步工作完成時進行處理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 35b4e42d7da5b8bc9069083ffc47d990bcb637a8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 464e6be108eef86a023a0bad225d2ad12bfb2c3e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595589"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926750"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>啟動多項非同步工作並在它們完成時進行處理 (C#)
 
@@ -27,11 +27,11 @@ ms.locfileid: "69595589"
 
 1. 從 ZIP 檔案中解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2. 在功能表列上選擇 [檔案]   >  [開啟]   > [專案/解決方案]  。
+2. 在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
 
-3. 在 [開啟專案]  對話方塊中，開啟您已下載的範例程式碼所在的資料夾，然後開啟 AsyncFineTuningCS 的解決方案 (.sln) 檔案。
+3. 在 [開啟專案] 對話方塊中，開啟您已下載的範例程式碼所在的資料夾，然後開啟 AsyncFineTuningCS 的解決方案 (.sln) 檔案。
 
-4. 在方案總管  中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]  。
+4. 在方案總管中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
 5. 選擇 **F5** 鍵以執行程式 (或按 **Ctrl**+**F5** 鍵以執行程式而不進行偵錯)。
 
@@ -41,7 +41,7 @@ ms.locfileid: "69595589"
 
 此範例會新增至在[當其中一項工作完成時，取消剩餘的非同步工作 (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md) 中開發的程式碼，並使用相同的 UI。
 
-若要自行逐步建置範例，請遵循[下載範例](./cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example)一節中的指示，但將 [CancelAfterOneTask]  設定為啟始專案。 將本主題中的變更新增至該專案中的 `AccessTheWebAsync` 方法。 變更會標上星號。
+若要自行逐步建置範例，請遵循[下載範例](./cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example)一節中的指示，但將 [CancelAfterOneTask] 設定為啟始專案。 將本主題中的變更新增至該專案中的 `AccessTheWebAsync` 方法。 變更會標上星號。
 
 **CancelAfterOneTask** 專案已經包含一個查詢，這個查詢在執行時，會建立一組工作。 下列程式碼中的每個 `ProcessURLAsync` 呼叫都會傳回 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>：
 
@@ -81,7 +81,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 執行程式數次，確認所下載的長度不一定會以相同的順序出現。
 
 > [!CAUTION]
-> 您可以如這個範例所述在迴圈中使用 `WhenAny`，以解決牽涉到少量工作的問題。 不過，如果您有大量的工作要處理，其他方法會更有效率。 如需詳細資訊和範例，請參閱 [Processing tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/) (在工作完成時加以處理)。
+> 您可以如這個範例所述在迴圈中使用 `WhenAny`，以解決牽涉到少量工作的問題。 不過，如果您有大量的工作要處理，其他方法會更有效率。 如需詳細資訊和範例，請參閱 [Processing tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/) (在工作完成時加以處理)。
 
 ## <a name="complete-example"></a>完整範例
 

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373898"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926492"
 ---
 # <a name="common-client-side-web-technologies"></a>一般用戶端 Web 技術
 
@@ -141,6 +141,7 @@ React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒�
 JavaScript 架構持續以驚人的速度改良。 使用上面列出的考量，來協助減輕選擇架構時，可能造成日後後悔對其依賴的風險。 如果您特別注重風險，請考慮提供商業支援及/或 由大型企業開發的架構。
 
 > ### <a name="references--client-web-technologies"></a>參考資料 – 用戶端 Web 技術
+>
 > - **HTML 和 CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
 > - **Sass vs.LESS**  

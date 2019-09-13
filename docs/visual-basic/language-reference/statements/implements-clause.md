@@ -17,28 +17,29 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd20f21a989c327dcfcf27d5638d500b6e4b6da
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637756"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929322"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 子句 (Visual Basic)
-表示類別或結構成員會提供介面中定義之成員的實作。  
+表示類別或結構成員正為介面中定義的成員提供執行。  
   
 ## <a name="remarks"></a>備註  
-`Implements`關鍵字不相同[Implements 陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。 您使用`Implements`陳述式來指定類別或結構實作一或多個介面，而且您所使用之每個成員然後`Implements`關鍵字來指定哪些介面的成員實作。
+關鍵字與[Implements 語句不同。](../../../visual-basic/language-reference/statements/implements-statement.md) `Implements` 您可以使用`Implements`語句來指定類別或結構會執行一或多個介面，然後針對每個成員`Implements`使用關鍵字來指定它所要執行的介面和成員。
 
-如果類別或結構實作介面時，它必須包含`Implements`陳述式之後立即[Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)或是[Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)，而且它必須實作的所有成員由介面定義。
+如果類別或結構實作為介面，它必須在`Implements` [class 語句](../../../visual-basic/language-reference/statements/class-statement.md)或[structure 語句](../../../visual-basic/language-reference/statements/structure-statement.md)之後加入語句，而且它必須執行介面所定義的所有成員。
 
 ## <a name="reimplementation"></a>重新實作  
-在衍生類別中，您可以重新實作的基底類別已實作介面成員。 這是覆寫基底類別成員，在下列方面不同：
+在衍生類別中，您可以重新執行基類已實作為的介面成員。 這與覆寫基類成員的方式不同，如下所示：
 
-- 基底類別成員不一定要[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)必須重新實作。
-- 您可以重新實作的成員使用不同的名稱。
+- 基類成員不需要是可覆[寫](../../../visual-basic/language-reference/modifiers/overridable.md)的根據重新實作。
+- 您可以使用不同的名稱來重新實現成員。
 
-`Implements`關鍵字可以用在下列情況：
+`Implements`關鍵字可用於下列內容：
+
 - [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)

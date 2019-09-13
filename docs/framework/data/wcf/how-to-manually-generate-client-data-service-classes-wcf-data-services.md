@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 106f1cedb33c0c1b333df0b9f2b8c2a70d458a0d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f8d99213a1ef98c48855ba9f561f87a800768c89
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790421"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894293"
 ---
-# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>HOW TO：手動產生用戶端資料服務類別（WCF Data Services）
+# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>作法：手動產生用戶端資料服務類別（WCF Data Services）
 WCF Data Services 與 Visual Studio 整合，可讓您在使用 [**加入服務參考**] 對話方塊，將參考加入至 Visual Studio 專案中的資料服務時，自動產生用戶端資料服務類別。 如需詳細資訊，請參閱[如何：加入資料服務參考](how-to-add-a-data-service-reference-wcf-data-services.md)。 您也可以使用程式碼產生工具 `DataSvcUtil.exe`，手動產生同樣的用戶端資料服務類別。 此工具隨附于 WCF Data Services，會從資料服務定義產生 .NET Framework 類別。 同時，這項工具也可根據概念模型 (.csdl) 檔案，以及在 Visual Studio 專案中代表 Entity Framework 模型的 .edmx 檔案產生資料服務類別。
 
  本主題的範例會根據 Northwind 範例資料服務建立用戶端資料服務類別。 此服務會在您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時建立。 本主題中的某些範例需要 Northwind 模型的概念模型檔案。 如需詳細資訊，請參閱[如何：使用 Edmgen.exe 來產生模型和對應](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)檔。 本主題中的某些範例需要 Northwind 模型的 .edmx 檔。 如需詳細資訊，請參閱[.edmx 檔案總覽](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。
@@ -43,7 +43,7 @@ WCF Data Services 與 Visual Studio 整合，可讓您在使用 [**加入服務�
 
 - 在命令提示字元中，執行下列命令但不含分行符號：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -54,7 +54,7 @@ WCF Data Services 與 Visual Studio 整合，可讓您在使用 [**加入服務�
 
 - 在命令提示字元中，執行下列命令但不含分行符號：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -65,7 +65,7 @@ WCF Data Services 與 Visual Studio 整合，可讓您在使用 [**加入服務�
 
 - 在命令提示字元中，執行下列命令但不含分行符號：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
     ```
 
@@ -73,7 +73,7 @@ WCF Data Services 與 Visual Studio 整合，可讓您在使用 [**加入服務�
 
 - 在命令提示字元中，執行下列命令但不含分行符號：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
     ```
 
@@ -81,7 +81,7 @@ WCF Data Services 與 Visual Studio 整合，可讓您在使用 [**加入服務�
 
 - 在命令提示字元中，執行下列命令但不含分行符號：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
     ```
 
@@ -89,7 +89,7 @@ WCF Data Services 與 Visual Studio 整合，可讓您在使用 [**加入服務�
 
 - 在命令提示字元中，執行下列命令但不含分行符號：
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb
     ```
 

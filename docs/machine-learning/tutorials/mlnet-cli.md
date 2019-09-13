@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 6dbd69c8424227f85d8bf3cdcaf6cf9dbf7e1f4c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f3688b4492d3eb629f86a9d463b9127429260033
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856015"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929113"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情感
 
@@ -19,6 +19,7 @@ ms.locfileid: "70856015"
 
 在本教學課程中，您將執行下列步驟：
 > [!div class="checklist"]
+>
 > - 為所選機器學習工作準備資料
 > - 從 CLI 執行 'mlnet auto-train' 命令
 > - 檢閱品質計量結果
@@ -259,6 +260,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > - 為所選 ML 工作 (要解決的問題) 準備資料
 > - 在 CLI 工具中執行 'mlnet auto-train' 命令
 > - 檢閱品質計量結果

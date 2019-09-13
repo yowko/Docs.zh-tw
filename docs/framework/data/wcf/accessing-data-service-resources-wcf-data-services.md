@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: eff8d682004bf437a9b5470a4eb91c9bd52bfad5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 048cbb8708aa705fe6b03491ddfa9c107a21cda1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791330"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894357"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>存取資料服務資源 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)][!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]支援將資料公開為摘要，其中包含可由 uri 定址的資源。 這些資源會根據[實體資料模型](../adonet/entity-data-model.md)的實體關聯性慣例來表示。 在此模型中，實體代表資料運算單位 (這些資料在應用程式定義域中為資料型別)，例如客戶、訂單、項目及產品。 使用具像狀態傳輸 (REST) 的語意即可存取及變更實體資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。  
@@ -21,44 +21,44 @@ ms.locfileid: "70791330"
 ## <a name="addressing-resources"></a>設定資源存取位址  
  在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 中，您會使用 URI 來定址資料模型所公開的任何資料。 例如，下列 URI 會傳回 Customers 實體集的摘要，其中包含 Customer 實體類型之所有實例的專案：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers  
+```http
+https://services.odata.org/Northwind/Northwind.svc/Customers  
 ```  
   
  實體還包含稱為實體索引鍵的特殊屬性。 實體索引鍵用於以唯一方式識別實體集中的單一實體。 這樣可以讓您定址實體集中某個實體型別的特殊執行個體。 例如，下列 URI 會傳回 Customer 實體類型之特定執行個體的項目，此執行個體的索引鍵值為 `ALFKI`：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
 ```  
   
  您也可以個別定址實體執行個體的基本和複雜屬性。 例如，下列 URI 會傳回 XML 項目，其中包含特定 Customer 的 `ContactName` 屬性值：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
 ```  
   
  當您在之前的 URI 中包含 `$value` 端點時，回應訊息中只會傳回基本屬性的值。 下列範例只會傳回 "Maria Anders" 字串而沒有 XML 項目：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
 ```  
   
  資料模型中會以關聯性定義實體之間的關係。 這些關聯可讓您定址相關實體，其方式是使用實體執行個體的導覽屬性。 導覽屬性可在多對一關聯性中傳回單一相關實體，或是在一對多關聯性中傳回一組相關實體。 例如，下列 URI 會傳回一個摘要，它是與特定 Customer 相關之所有 Order 的集合：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
 ```  
   
  關聯性 (通常是雙向關聯性) 是由一對導覽屬性來表示。 下列 URI 會傳回特定 Order 實體所屬之 Customer 實體的參考，與之前範例所示的關聯性相反：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]也可讓您根據查詢運算式的結果來定址資源。 這可讓您根據評估的運算式來篩選資源集。 例如，下列 URI 會篩選資源，只傳回自 1997 年 9 月 22 日後配送且屬於指定 Customer 的 Orders。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
 ```  
   
  如需詳細資訊， [請參閱 OData：URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)。  
@@ -66,8 +66,8 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
 ## <a name="system-query-options"></a>系統查詢選項  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]定義一組系統查詢選項，您可以用來針對資源執行傳統查詢作業，例如篩選、排序和分頁。 例如，下列 URI 會傳回所有`Order`實體以及相關`Order_Detail`實體的集合， `100`其中的郵遞區號結尾不是：  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
 ```  
   
  傳回之摘要中的項目也會依據訂單之 ShipCity 屬性的值來排序。  
@@ -87,8 +87,8 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 ## <a name="addressing-relationships"></a>定址關聯性  
  除了定址實體集和實體實例之外， [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]也可讓您處理代表實體之間關係的關聯。 必須具備此功能，您才能夠建立或變更兩個實體執行個體之間的關聯性，例如，在 Northwind 範例資料庫中的承運者與指定訂單相關。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]`$link`支援運算子，以明確定址實體之間的關聯。 例如，在 HTTP PUT 要求訊息中，指定以下 URI 將特定訂單的承運者變更為新承運者。  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
+```http 
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
 ```  
   
  如需詳細資訊， [請參閱 OData：定址專案](https://go.microsoft.com/fwlink/?LinkId=187351)之間的連結。  

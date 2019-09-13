@@ -4,12 +4,12 @@ description: 本教學課程示範如何建立 .NET Core 主控台應用程式�
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: f89174204c13b907db5a41ed374e1a31c61dcf11
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107170"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929019"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教學課程：在 ML.NET 中使用二元分類來分析網站評論的情感
 
@@ -17,6 +17,7 @@ ms.locfileid: "70107170"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > - 建立主控台應用程式
 > - 準備資料
 > - 載入資料
@@ -39,9 +40,9 @@ ms.locfileid: "70107170"
 
 2. 在專案中建立一個名為 *Data* 的目錄以儲存資料集檔案。
 
-3. 安裝「Microsoft.ML NuGet 套件」  ：
+3. 安裝「Microsoft.ML NuGet 套件」：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為套件來源，然後選取 [瀏覽]  索引標籤。搜尋 **Microsoft.ML**，選取您想要的套件，然後選取 [安裝]  按鈕。 同意您所選套件的授權條款，以繼續進行安裝。 對 **Microsoft.ML.FastTree** NuGet 套件執行相同的動作。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為套件來源，然後選取 [瀏覽] 索引標籤。搜尋 **Microsoft.ML**，選取您想要的套件，然後選取 [安裝] 按鈕。 同意您所選套件的授權條款，以繼續進行安裝。 對 **Microsoft.ML.FastTree** NuGet 套件執行相同的動作。
 
 ## <a name="prepare-your-data"></a>準備您的資料
 
@@ -52,7 +53,7 @@ ms.locfileid: "70107170"
 
 2. 將 `yelp_labelled.txt` 檔案複製到您所建立的 *Data* 目錄。
 
-3. 在 [方案總管] 中，以滑鼠右鍵按一下 `yelp_labeled.txt` 檔案，並選取 [內容]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
+3. 在 [方案總管] 中，以滑鼠右鍵按一下 `yelp_labeled.txt` 檔案，並選取 [內容]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
@@ -71,9 +72,9 @@ ms.locfileid: "70107170"
 
 4. 接下來，為輸入資料和預測建立類別。 將新類別新增至專案：
 
-    - 在 [方案總管]  中，於專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增項目]  。
+    - 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
 
-    - 在 [新增項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *SentimentData.cs*。 接著，選取 [新增]  按鈕。
+    - 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *SentimentData.cs*。 接著，選取 [新增] 按鈕。
 
 5. *SentimentData.cs* 檔案隨即在程式碼編輯器中開啟。 將以下 `using` 陳述式新增至 *SentimentData.cs* 頂端：
 
@@ -383,6 +384,7 @@ Press any key to continue . . .
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > - 建立主控台應用程式
 > - 準備資料
 > - 載入資料

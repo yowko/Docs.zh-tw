@@ -4,12 +4,12 @@ description: 探索如何在 Windows 上使用 .NET Core 執行適用於 Apache 
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7ce7d7aec6c15385d3d797d5a548519eea33b764
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "69577005"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928492"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>教學課程：開始使用適用於 Apache Spark 的 .NET
 
@@ -18,6 +18,7 @@ ms.locfileid: "69577005"
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
+>
 > * 為適用於 Apache Spark 的 .NET 準備您的 Windows 環境
 > * 下載 **Microsoft.Spark.Worker**
 > * 建置及執行適用於 Apache Spark 的 .NET 簡單應用程式
@@ -44,7 +45,7 @@ ms.locfileid: "69577005"
 
 4. 安裝 [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)。
     * 下載 [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip)。
-    * 解壓縮到本機目錄。 例如，`c:\bin\apache-maven-3.6.0\`。
+    * 解壓縮到本機目錄。 例如： `c:\bin\apache-maven-3.6.0\` 。
     * 將 Apache Maven 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 若解壓縮到 `c:\bin\apache-maven-3.6.0\`，就應將 `c:\bin\apache-maven-3.6.0\bin` 新增到您的 PATH 之中。
     * 使用 PowerShell 命令 `mvn -version` 驗證安裝。
 
@@ -56,8 +57,8 @@ ms.locfileid: "69577005"
 
 6. 設定 [WinUtils](https://github.com/steveloughran/winutils)。
     * 從 [WinUtils 存放庫](https://github.com/steveloughran/winutils)下載 **winutils.exe** 二進位檔。 選取用以編譯 Spark 的 Hadoop 版本。 例如，您可以為 **Spark 2.3.2**使用 **hadoop-2.7.1**。 Hadoop 版本會標註在您 Spark 安裝資料夾名稱的結尾。
-    * 將 **winutils.exe** 二進位檔儲存到您選擇的目錄。 例如，`c:\hadoop\bin`。
-    * 設定 `HADOOP_HOME` 以反映 **winutils.exe** 的目錄 (不含 `bin`)。 例如，`c:\hadoop`。
+    * 將 **winutils.exe** 二進位檔儲存到您選擇的目錄。 例如： `c:\hadoop\bin` 。
+    * 設定 `HADOOP_HOME` 以反映 **winutils.exe** 的目錄 (不含 `bin`)。 例如： `c:\hadoop` 。
     * 設定 PATH 環境變數，將 `%HADOOP_HOME%\bin` 加入其中。
 
 再次確認您可以從命令列執行 `dotnet`、`java`、`mvn` 和 `spark-shell`，然後前往下一節。
@@ -66,7 +67,7 @@ ms.locfileid: "69577005"
 
 1. 從適用於 Apache Spark 的 .NET GitHub 版本頁面，將發行的 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) 下載到您的本機電腦。 例如，您可以將其下載到 `c:\bin\Microsoft.Spark.Worker\` 路徑。
 
-2. 建立名為 `DotnetWorkerPath` 的[新環境變數](https://www.java.com/en/download/help/path.xml)，並將其設為 **Microsoft.Spark.Worker** 的下載目錄，然後加以解壓縮。 例如，`c:\bin\Microsoft.Spark.Worker`。
+2. 建立名為 `DotnetWorkerPath` 的[新環境變數](https://www.java.com/en/download/help/path.xml)，並將其設為 **Microsoft.Spark.Worker** 的下載目錄，然後加以解壓縮。 例如： `c:\bin\Microsoft.Spark.Worker` 。
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>複製適用於 Apache Spark 的 .NET GitHub 存放庫
 
@@ -78,11 +79,11 @@ git clone https://github.com/dotnet/spark.git c:\github\dotnet-spark
 
 ## <a name="write-a-net-for-apache-spark-app"></a>撰寫適用於 Apache Spark 的 .NET 應用程式
 
-1. 開啟 **Visual Studio**，然後巡覽至 [檔案] > [建立新專案] > [主控台應用程式 (.NET Core)]  。 將應用程式命名為 **HelloSpark**。
+1. 開啟 **Visual Studio**，然後巡覽至 [檔案] > [建立新專案] > [主控台應用程式 (.NET Core)]。 將應用程式命名為 **HelloSpark**。
 
 2. 安裝 [Microsoft.Spark NuGet 套件](https://www.nuget.org/profiles/spark)。 如需安裝 NuGet 套件的詳細資訊，請參閱[安裝 NuGet 套件的不同方式](https://docs.microsoft.com/nuget/consume-packages/ways-to-install-a-package)。
 
-3. 在 [方案總管]  中開啟 **Program.cs**，然後撰寫下列 C# 程式碼：
+3. 在 [方案總管] 中開啟 **Program.cs**，然後撰寫下列 C# 程式碼：
 
    ```csharp
      var spark = SparkSession.Builder().GetOrCreate();
@@ -124,6 +125,7 @@ git clone https://github.com/dotnet/spark.git c:\github\dotnet-spark
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > * 為適用於 Apache Spark 的 .NET 準備您的 Windows 環境
 > * 下載 **Microsoft.Spark.Worker**
 > * 建置及執行適用於 Apache Spark 的 .NET 簡單應用程式

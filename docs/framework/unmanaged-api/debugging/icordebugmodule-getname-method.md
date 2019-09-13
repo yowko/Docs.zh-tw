@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39467c067e50f2d553b35a41b0f783e0fc82156
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7f62385031967c164915fd31735a6d962f557fa
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988012"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894982"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName 方法
-取得模組的檔案名稱。  
+取得模組的檔案名。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
 HRESULT GetName(  
     [in] ULONG32 cchName,  
     [out] ULONG32 *pcchName,  
@@ -42,13 +42,13 @@ HRESULT GetName(
  [in] `szName` 陣列的大小。  
   
  `pcchName`  
- [in]傳回名稱的長度指標。  
+ 在傳回之名稱長度的指標。  
   
  `szName`  
- [out]陣列，其中會儲存傳回的名稱。  
+ 脫銷儲存傳回名稱的陣列。  
   
 ## <a name="remarks"></a>備註  
- `GetName`方法會傳回 S_OK HRESULT，如果模組的檔案名稱符合磁碟上的名稱。 `GetName` 如果名稱是製作，例如動態或記憶體中的模組，會傳回 S_FALSE HRESULT。  
+ 如果`GetName`模組的檔案名與磁片上的名稱相符，此方法會傳回 S_OK HRESULT。 `GetName`如果已製作名稱，則會傳回 S_FALSE HRESULT，例如針對動態或記憶體中的模組。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -57,6 +57,6 @@ HRESULT GetName(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

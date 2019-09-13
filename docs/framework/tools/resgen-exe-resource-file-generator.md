@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b018672fbc9e669f6010871a150dd9b060babd88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 34cb8b0cebc64bf7244c522066700c94d33986a9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958000"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894800"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (資源檔產生器)
 資源檔產生器 (Resgen.exe) 可以將文字檔 (.txt 或 .restext) 及 XML 架構資源格式檔 (.resx)，轉換成通用語言執行平台二進位檔 (.resources)，這種檔案可以嵌入至執行階段二進位可執行檔或附屬組件 (請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md))。  
@@ -43,13 +43,13 @@ ms.locfileid: "69958000"
   
  若要取得 Resgen.exe 的說明，您可以使用下列未指定選項的命令，以顯示 Resgen.exe 的命令語法和選項：  
   
-```  
+```console  
 resgen  
 ```  
   
  您也可以使用 `/?` 參數：  
   
-```  
+```console  
 resgen /?  
 ```  
   
@@ -61,11 +61,11 @@ resgen /?
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 resgen  [/define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
 ```  
   
-```  
+```console  
 resgen filename.extension [outputDirectory]  
 ```  
   
@@ -75,7 +75,7 @@ resgen filename.extension [outputDirectory]
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|從 .NET Framework 4.5 開始，支援文字資源檔 (.txt 或 .restext) 的條件式編譯。 如果 *symbol* 對應至在 `#ifdef` 建構內輸入文字檔中的符號，關聯字串資源會包含在 .resources 檔案中。 如果輸入文字檔包含有不是 `#if !` 參數所定義之符號的 `/define` 陳述式，關聯的字串資源會包含在資源檔中。<br /><br /> 使用非文字檔案則會忽略 `/define`。 符號會區分大小寫。<br /><br /> 如需這個選項的詳細資訊，請參閱本主題稍後的[條件式編譯資源](#Conditional)。|  
 |`useSourcePath`|具體指明輸入檔的目前目錄是用來解析相對檔案路徑。|  
-|`/compile`|可讓您指定在單一大量作業中，將多個 .resx 或文字檔轉換成多個 .resources 檔案。 如果您不指定這個選項，則只能指定一個輸入檔引數。 輸出檔案的名稱為 <檔案名稱>  .resources。<br /><br /> 這個選項無法與 `/str:` 選項搭配使用。<br /><br /> 如需這個選項的詳細資訊，請參閱本主題稍後的[編譯或轉換多個檔案](#Multiple)。|  
+|`/compile`|可讓您指定在單一大量作業中，將多個 .resx 或文字檔轉換成多個 .resources 檔案。 如果您不指定這個選項，則只能指定一個輸入檔引數。 輸出檔案的名稱為 <檔案名稱>.resources。<br /><br /> 這個選項無法與 `/str:` 選項搭配使用。<br /><br /> 如需這個選項的詳細資訊，請參閱本主題稍後的[編譯或轉換多個檔案](#Multiple)。|  
 |`/r:` `assembly`|從指定的組件參考中繼資料。 在轉換 .resx 檔時，以及讓 Resgen.exe 序列化或還原序列化物件資源時使用。 它類似 C# 和 Visual Basic 編譯器的 `/reference:` 或 `/r:` 選項。|  
 |`filename.extension`|指定要轉換的輸入檔名稱。 如果您使用的是這個資料表前的命令列語法中的第一個、較長者，`extension` 必須是下列其中一項：<br /><br /> .txt 或 .restext<br /> 要轉換成 .resources 或 .resx 檔的文字檔。 文字檔只能包含字串資源。 如需檔案格式的詳細資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)的＜文字檔中的資源＞一節。<br /><br /> .resx<br /> 要轉換成 .resources 或文字檔 (.txt 或 .restext) 的 XML 架構資源檔。<br /><br /> .resources<br /> 要轉換成 .resx 或文字檔 (.txt 或 .restext) 的二進位資源檔。<br /><br /> 如果您使用的是這個資料表前的命令列語法中的第二個、較短者，`extension` 必須為下列其中一項：<br /><br /> .exe 或 .dll。<br /> 字串資源要擷取至 .resw 檔以利開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的 .NET Framework 組件 (可執行檔或程式庫)。|  
 |`outputFilename.extension`|指定要建立之資源檔的名稱和類型。<br /><br /> 從 .txt、.restext 或 .resx 檔案轉換至 .resource 檔時，這是選擇性的引數。 如果沒有指定 `outputFilename`，Resgen.exe 會將 .resources 副檔名附加至輸入 `filename` 中，並且將檔案寫入包含 `filename,extension` 的目錄中。<br /><br /> 從 .resources 檔轉換時，`outputFilename.extension` 是強制的引數。 在將 .resources 檔轉換成 XML 架構資源檔時指定檔案名稱及 .resx 副檔名。 將 .resources 檔案轉換成文字檔時，指定檔案名稱及 .txt 或 .restext 副檔名。 當 .resources 檔只包含字串值時，您應將 .resources 檔轉換成 .txt 檔。|  
@@ -134,7 +134,7 @@ resgen filename.extension [outputDirectory]
   
  編譯資源檔的語法是：  
   
-```  
+```console  
 resgen inputFilename [outputFilename]   
 ```  
   
@@ -150,19 +150,19 @@ resgen inputFilename [outputFilename]
   
  下列命令會讀取 Resources.txt 中的名稱/值組，並且寫入名為 Resources.resources 的二進位 .resources 檔。 由於並未明確指定輸出檔名，因此預設會接收與輸入檔相同的名稱。  
   
-```  
+```console  
 resgen Resources.txt   
 ```  
   
  下列命令會讀取 Resources.restext 中的名稱/值組，並且寫入名為 StringResources.resources 的二進位 .resources 檔。  
   
-```  
+```console  
 resgen Resources.restext StringResources.resources  
 ```  
   
  下列命令會讀取 XML 架構檔案且名稱為 Resources.resx 的輸入檔，並寫入命名為 Resources.resources 的二進位 .resources 檔案。  
   
-```  
+```console  
 resgen Resources.resx Resources.resources  
 ```  
   
@@ -184,19 +184,19 @@ resgen Resources.resx Resources.resources
   
  下列命令會讀取名為 Resources.resources 的二進位 .resources 檔案，並寫入名為 Resources.resx 的 XML 架構輸出檔案。  
   
-```  
+```console  
 resgen Resources.resources Resources.resx  
 ```  
   
  下列命令會讀取命名為 StringResources.txt 的文字架構資源檔，並寫入名為 LibraryResources.resx 的 XML 架構資源檔。 除了包含字串資源之外，.resx 檔也可以用來儲存非字串資源。  
   
-```  
+```console  
 resgen StringResources.txt LibraryResources.resx  
 ```  
   
  下列兩個命令會讀取名稱為 Resources.resx 的 XML 架構資源檔案，並寫入名為 Resources.txt 和 Resources.restext 的文字檔。 請注意，如果 .resx 檔內含任何嵌入的物件，就無法正確的轉換成文字檔。  
   
-```  
+```console  
 resgen Resources.resx Resources.txt  
 resgen Resources.resx Resources.restext  
 ```  
@@ -205,13 +205,13 @@ resgen Resources.resx Resources.restext
 ### <a name="compiling-or-converting-multiple-files"></a>編譯或轉換多個檔案  
  您可以使用 `/compile` 參數將一個資源檔清單透過單一作業轉換格式。 其語法為：  
   
-```  
+```console  
 resgen /compile filename.extension [filename.extension...]  
 ```  
   
  下列命令會將三個檔案：StringResources.txt、TableResources.resw 和 ImageResources.resw，編譯成不同檔名的 .resources 檔案，分別為 StringResources.resources、TableResources.resources 和 ImageResources.resources。  
   
-```  
+```console  
 resgen /compile StringResources.txt TableResources.resx ImageResources.resx  
 ```  
   
@@ -224,7 +224,7 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
  從組件產生 .resw 檔案的語法是：  
   
-```  
+```console  
 resgen filename.extension  [outputDirectory]  
 ```  
   
@@ -238,7 +238,7 @@ resgen filename.extension  [outputDirectory]
   
  下列命令會在 Win8Resources 目錄中為每個內嵌在 MyApp.exe 的 .resources 檔建立 .resw 檔案：  
   
-```  
+```console  
 resgen MyApp.exe Win8Resources  
 ```  
   
@@ -250,7 +250,7 @@ resgen MyApp.exe Win8Resources
   
  例如，下列名為 UIResources.rext 的檔案包含名為 `AppTitle` 的字串資源，根據是否定義符號，可以接受三個值之一：`PRODUCTION`、`CONSULT` 或 `RETAIL`。  
   
-```  
+```text
 #ifdef PRODUCTION  
 AppTitle=My Software Company Project Manager   
 #endif  
@@ -265,7 +265,7 @@ FileMenuName=File
   
  檔案接下來可以藉由下列命令編譯成二進位的 .resources 檔案：  
   
-```  
+```console  
 resgen /define:CONSULT UIResources.restext  
 ```  
   
@@ -277,7 +277,7 @@ resgen /define:CONSULT UIResources.restext
   
  建立強類型資源的語法是：  
   
-```  
+```console  
 resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filename]]] [/publicClass]  
 ```  
   
@@ -325,7 +325,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  例如，下列命令會將名為 StringResources.txt 編譯為 StringResources.resources，並且在一個名為 StringResources.vb 的 Visual Basic 原始程式碼中產生名為 `StringResources` 的類別，可用於存取資源管理員。  
   
-```  
+```console  
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   

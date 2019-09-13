@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 316ccb19ca9e384be97a83e992af46934702aa0c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6c01453556a71925c322e9f9aef8065cbddb3540
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780684"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894386"
 ---
 # <a name="table-valued-parameters"></a>資料表值參數
 資料表值參數提供封送處理的簡易方式，可將用戶端應用程式的多個資料列封送處理到 SQL Server，而不需多次來回存取或使用特殊的伺服器端邏輯來處理資料。 您可以使用資料表值參數，在用戶端應用程式中封裝資料列，以及在單一參數型命令 (Parameterized Command) 中，將資料傳送至伺服器。 內送資料列會儲存在資料表變數中，然後您可以使用 Transact-SQL 來操作此變數。  
@@ -24,11 +24,11 @@ ms.locfileid: "70780684"
   
 |Resource|說明|  
 |--------------|-----------------|  
-|SQL Server 線上叢書中的[資料表值參數（資料庫引擎）](https://go.microsoft.com/fwlink/?LinkId=98363)|說明如何建立及使用資料表值參數。|  
+|SQL Server 線上叢書中的[資料表值參數 (資料庫引擎)](https://go.microsoft.com/fwlink/?LinkId=98363)|說明如何建立及使用資料表值參數。|  
 |SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkId=98364)|說明用於宣告資料表值參數的使用者定義資料表型別。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在舊版 SQL Server 中傳遞多個資料列  
- 在將資料表值參數引進 SQL Server 2008 之前，將多個資料列傳遞至預存程式或參數化 SQL 命令的選項受到限制。 若要將多個資料列傳遞至伺服器，開發人員可能會從下列選項中選擇：  
+ 在將資料表值參數引進 SQL Server 2008 之前, 將多個資料列傳遞至預存程式或參數化 SQL 命令的選項受到限制。 若要將多個資料列傳遞至伺服器，開發人員可能會從下列選項中選擇：  
   
 - 使用一連串個別的參數來代表多個資料行和資料列中的值。 使用這個方法可傳遞的資料量會受到允許的參數數目所限制。 SQL Server 程序最多可以有 2100 個參數。 伺服器端邏輯必須將這些個別的值組合成資料表變數或暫存資料表，以便進行處理。  
   
@@ -39,18 +39,18 @@ ms.locfileid: "70780684"
 - 使用 `bcp` 公用程式或 <xref:System.Data.SqlClient.SqlBulkCopy> 物件，將許多資料列載入資料表中。 雖然這項技術非常有效率，不過除非資料會載入暫存資料表或資料表變數中，否則它不支援伺服器端處理。  
   
 ## <a name="creating-table-valued-parameter-types"></a>建立資料表值參數型別  
- 資料表值參數是以使用 Transact-SQL CREATE TYPE 陳述式所定義的強型別 (Strongly Typed) 資料表結構為基礎。 您必須先在 SQL Server 中建立資料表型別並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱 SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
+ 資料表值參數是以使用 Transact-SQL CREATE TYPE 陳述式所定義的強型別 (Strongly Typed) 資料表結構為基礎。 您必須先在 SQL Server 中建立資料表型別並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊, 請參閱 SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
   
  下列陳述式會建立名為 CategoryTableType 的資料表型別，其中包含 CategoryID 和 CategoryName 資料行：  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  建立資料表型別之後，您就可以根據該型別來宣告資料表值參數。 下列 Transact-SQL 片段將示範如何在預存程序定義中宣告資料表值參數。 請注意，READONLY 關鍵字是宣告資料表值參數的必要項目。  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -60,7 +60,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  下列 Transact-SQL UPDATE 陳述式會示範如何將資料表值參數聯結至 Categories 資料表，藉以運用此參數。 當您在 FROM 子句中使用資料表值參數搭配 JOIN 時，也必須設定其別名，如下面所示，其中資料表值參數的別名設定為 "ec"：  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -69,7 +69,7 @@ UPDATE dbo.Categories
   
  這個 Transact-SQL 範例將示範如何從資料表值參數中選取資料列，以便在單一集合式作業中執行 INSERT。  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  

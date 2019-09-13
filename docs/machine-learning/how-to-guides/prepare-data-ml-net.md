@@ -3,20 +3,20 @@ title: 準備資料以建置模型
 description: 了解如何在 ML.NET 中使用轉換來操縱及準備資料，以進行額外的處理或模型建置。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/25/2019
+ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397711"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929364"
 ---
 # <a name="prepare-data-for-building-a-model"></a>準備資料以建置模型
 
 了解如何使用 ML.NET 準備資料，以進行額外的處理或建置模型。
 
-資料通常都是未經處理且疏鬆的。 此外，ML.NET 機器學習服務演算法預期輸入或特徵為單一的數字向量。 因此，資料準備的其中一個目標就是將資料轉換成 ML.NET 演算法所預期格式。 
+資料通常都是未經處理且疏鬆的。 ML.NET 機器學習演算法會預期輸入或特徵會在單一數值向量中。 同樣地，要預測的值（標籤）（特別是當它的類別資料）必須經過編碼。 因此，資料準備的其中一個目標就是將資料轉換成 ML.NET 演算法所預期格式。 
 
 ## <a name="filter-data"></a>篩選資料
 
@@ -294,7 +294,7 @@ var textEstimator = mlContext.Transforms.Text.NormalizeText("Description")
 
 **原始文字：This is a good product**
 
-|資料轉換 | 說明 | 結果
+|資料轉換 | 描述 | 結果
 |--|--|--|
 |1.NormalizeText | 根據預設，將所有字母轉換成小寫 | this is a good product
 |2.TokenizeWords | 將字串分割成個別的字組 | ["this","is","a","good","product"]

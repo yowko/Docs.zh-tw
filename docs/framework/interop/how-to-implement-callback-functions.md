@@ -1,5 +1,5 @@
 ---
-title: HOW TO：實作回呼函式
+title: 作法：實作回呼函式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331321"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894192"
 ---
 # <a name="how-to-implement-callback-functions"></a>HOW TO：實作回呼函式
 下列程序及範例示範 Managed 應用程式 (使用平台叫用) 如何將每個視窗的控制碼值列印到本機電腦上。 具體而言，程序和範例會使用 **EnumWindows** 函式以逐步執行視窗的清單，並使用 Managed 回呼函式 (具名回呼) 以列印視窗控制代碼的值。  
@@ -24,9 +24,9 @@ ms.locfileid: "59331321"
   
 1. 進一步進行實作前，請先查看 **EnumWindows** 函式的簽章。 **EnumWindows** 具有下列簽章：  
   
-    ```  
-    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
-    ```  
+    ```cpp
+    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)
+    ```
   
      此函式需要進行回呼的一個線索在於 **lpEnumFunc** 引數。 **lp** (長度指標) 前置詞與 **Func** 後置詞的結合出現在引數名稱中的情況相當普遍，其會將指標帶到回呼函式。 如需 Win32 函式的相關文件，請參閱 Microsoft Platform SDK。  
   

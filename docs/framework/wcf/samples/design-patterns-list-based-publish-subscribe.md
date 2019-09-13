@@ -2,15 +2,15 @@
 title: 設計模式：以清單為基礎的發行訂閱
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3dbdab152e05487f9dcc9fa00ed0c653d68ab65e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045568"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928832"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
-這個範例說明實作為 Windows Communication Foundation (WCF) 程式之以清單為基礎的發行訂閱模式。  
+這個範例說明實作為 Windows Communication Foundation （WCF）程式之以清單為基礎的發行訂閱模式。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -23,7 +23,7 @@ ms.locfileid: "70045568"
   
  服務會使用雙工通訊。 `ISampleContract` 服務合約會和 `ISampleClientCallback` 回呼合約配成一組。 服務會實作用戶端用來加入或離開訂閱者清單的訂閱與取消訂閱服務作業。 服務還會實作 `PublishPriceChange` 服務作業，資料來源程式將呼叫此作業以提供新資訊給服務。 用戶端程式會實作 `PriceChange` 服務作業，服務將呼叫此作業以通知所有訂閱者關於價格的變更。  
   
-```  
+```csharp  
 // Create a service contract and define the service operations.  
 // NOTE: The service operations must be declared explicitly.  
 [ServiceContract(SessionMode=SessionMode.Required,  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  服務會使用 .NET Framework 事件做為告知所有訂閱者新資訊的機制。 當用戶端呼叫訂閱以加入服務時，它會提供事件處理常式。 當用戶端離開時，則會從事件取消訂閱其事件處理常式。 當資料來源呼叫服務以報告價格變更時，服務會引發事件。 這會呼叫服務的每個執行個體 (每個已訂閱的用戶端各一個)，而促使其事件處理常式開始執行。 每個事件處理常式都會透過各自的回呼函式，傳遞資訊至其用戶端。  
   
-```  
+```csharp  
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -118,13 +118,13 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1. 輸入下列位址, 測試您是否可以使用瀏覽器存取服務: `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。  
+1. 輸入下列位址，測試您是否可以使用瀏覽器存取服務： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。  
   
 2. 從語言特定資料夾下的\\\client\bin 執行 Client .exe。 用戶端活動會顯示在用戶端主控台視窗上。 啟動數個用戶端。  
   
 3. 從語言特定資料夾下的\\\datasource\bin 執行 Datasource .exe。 資料來源活動會顯示在主控台視窗上。 一旦資料來源將資訊傳送至服務，服務就必須將它傳遞給每個用戶端。  
   
-4. 如果用戶端、資料來源和服務程式無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端、資料來源和服務程式無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   

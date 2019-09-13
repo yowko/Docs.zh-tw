@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374521"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929096"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教學課程：使用 ML.NET 中的 ONNX 來偵測物件
 
@@ -21,6 +21,7 @@ ms.locfileid: "70374521"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > - 了解問題
 > - 了解 ONNX 是什麼，以及它和 ML.NET 搭配運作的方式
 > - 了解模型
@@ -710,6 +711,7 @@ person and its Confidence score: 0.5551759
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > - 了解問題
 > - 了解 ONNX 是什麼，以及它和 ML.NET 搭配運作的方式
 > - 了解模型

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 00df193671255e7b40f5c4b86ee952a3e20e3a40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 09f77a60255accc3e4b1c4fa5ea3d7526444e4cb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177563"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894733"
 ---
 # <a name="interpreting-network-tracing"></a>解譯網路追蹤
 啟用網路追蹤時，您可以使用追蹤來擷取應用程式對各種 <xref:System.Net> 類別成員的呼叫。 這些呼叫的輸出可能類似下列範例。  
   
-```  
+```output
 [588]   (4357)   Entering Socket#33574638::Send()  
-[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
+[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61
 ```  
   
  在上述範例中，[588] 是目前執行緒的唯一識別碼。 (4357) 和 (4387) 時間戳記表示自應用程式啟動後所經歷的毫秒數。 時間戳記後面的資料會顯示應用程式進入和結束 **Socket.Send** 方法。 執行 **Send** 方法之物件的唯一識別碼是 33574638。 方法結束追蹤包含傳回值 (上例中為 61)。  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f9d045b4d784357896a628135d68365cc29937
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851236"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926881"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (全域組件快取工具)
 
@@ -42,13 +42,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 
 ## <a name="parameters"></a>參數
 
-|引數|描述|
+|引數|說明|
 |--------------|-----------------|
 |*assemblyName*|組件的名稱。 您可以提供如 `myAssembly` 的部分指定組件名稱，或如 `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5` 的完整指定組件名稱。|
 |*assemblyPath*|含有組件資訊清單 (Assembly Manifest) 的檔案名稱。|
 |*assemblyListFile*|列出要安裝或解除安裝之組件的 ANSI 文字檔路徑。 若要使用文字檔安裝組件，請在檔案的個別行上指定每個組件的路徑。 這個工具會解譯相對路徑 (相對於 *assemblyListFile* 的位置)。 若要使用文字檔來解除安裝組件，請在檔案的個別行上為每個組件指定完整的組件名稱。 請參閱本主題稍後的 *assemblyListFile* 內容範例。|
 
-|選項|描述|
+|選項|說明|
 |------------|-----------------|
 |**/cdl**|刪除下載快取的內容。|
 |**/f**|請使用 **/** 或 **/il** 選項指定這個選項，以強制進行組件的重新安裝。 如果具有相同名稱的組件已存在於全域組件快取中，則這個工具會覆寫它。|
@@ -103,6 +103,7 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 > ```
 >
 > 這是因為 Gacutil.exe 在內部建構的路徑超過 MAX_PATH 個字元，其中包含下列元素：
+>
 > - GAC 根目錄 - 34 個字元 (即 `C:\Windows\Microsoft.NET\assembly\`)
 > - 架構 - 7 或 9 個字元 (即 `GAC_32\`、`GAC_64\`、`GAC_MSIL`)
 > - AssemblyName - 最多 91 個字元，根據其他元素的大小而定 (例如 `System.Xml.Linq\`)

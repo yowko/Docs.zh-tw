@@ -4,12 +4,12 @@ description: 了解在 .NET 中與原生元件建立介面的最佳做法。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063094"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923773"
 ---
 # <a name="native-interoperability-best-practices"></a>原生互通性最佳做法
 
@@ -67,6 +67,7 @@ ms.locfileid: "65063094"
 > 針對 `[Out]` 字串，CLR 預設會使用 `CoTaskMemFree` 來釋放字串，或是針對標示為 `UnmanagedType.BSTR` 的字串使用 `SysStringFree`。  
 **對於有輸出字串緩衝區的 API**：  
 > 傳入的字元計數必須包含 Null。 如果傳回值小於呼叫接收的傳入字元計數，則該值是「不含」尾端 Null 的字元數目。 否則，該計數為緩衝區「包含」Null 字元所需的大小。  
+>
 > - 傳入 5，取得 4：該字串為 4 個字元與一個尾端 Null。
 > - 傳入 6，取得 5：該字串為 5 個字元長，需要 6 個字元的緩衝區以保存 Null。  
 > [字串的 Windows 資料類型](/windows/desktop/Intl/windows-data-types-for-strings)
@@ -123,7 +124,7 @@ public struct UnicodeCharStruct
 
 **✔️ 請這樣做** 盡可能讓您的結構是 Blittable 的。
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱：
 
 - [Blittable 和非 Blittable 類型](../../framework/interop/blittable-and-non-blittable-types.md)  
 - [類型封送處理](type-marshaling.md)
