@@ -4,12 +4,12 @@ description: 瞭解 .NET Core 中 AssemblyLoadCoNtext 之用途和行為的重�
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 61ad19a281d829814de8321913af7dabfc916f6d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 429f8145e4462cfa93bf286fd35b39f58f9afa64
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849227"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926374"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>瞭解 System.web AssemblyLoadCoNtext
 
@@ -94,6 +94,7 @@ Object of type 'IsolatedType' cannot be converted to type 'IsolatedType'.
 ### <a name="debugging-type-conversion-issues"></a>調試型別轉換問題
 
 假設有一對不相符的類型，也請務必知道：
+
 - 每種類型的<xref:System.Type.Assembly?displayProperty=nameWithType>
 - 每個型<xref:System.Runtime.Loader.AssemblyLoadContext>別都可以透過函式取得<xref:System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)?displayProperty=nameWithType> 。
 

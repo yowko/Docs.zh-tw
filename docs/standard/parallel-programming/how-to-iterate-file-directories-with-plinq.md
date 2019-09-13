@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f80f1903c4187a8da93d42ec6de363d097bcc37
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: 5da70cdca16c83b33e525aea588c02c696702ac7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988171"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929161"
 ---
-# <a name="how-to-iterate-file-directories-with-plinq"></a>作法：使用 PLINQ 逐一查看檔案目錄
+# <a name="how-to-iterate-file-directories-with-plinq"></a>HOW TO：使用 PLINQ 逐一查看檔案目錄
 此範例示範兩個簡單的方式來平行處理檔案目錄的作業。 第一個查詢使用 <xref:System.IO.Directory.GetFiles%2A> 方法來填入目錄和所有子目錄中的檔案名稱陣列。 這個方法在整個陣列填入之前不會傳回，因此在作業開始時可能會延遲。 不過，在填入陣列之後，PLINQ 可以平行方式非常快速地處理它。  
   
  第二個查詢使用靜態 <xref:System.IO.Directory.EnumerateDirectories%2A> 和 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，會立即開始傳回結果。 逐一查看大型的目錄樹狀時，這種方法的執行速度更快，然而相較於第一個範例，處理時間可能取決於許多因素。  
@@ -34,7 +34,7 @@ ms.locfileid: "69988171"
   
  使用 <xref:System.IO.Directory.GetFiles%2A> 時，請確定您有足夠的權限可以存取樹狀中的所有目錄。 否則將會擲回例外狀況，而且不會傳回任何結果。 在 PLINQ 查詢中使用 <xref:System.IO.Directory.EnumerateDirectories%2A> 時，要以可讓您繼續逐一查看的正常方式處理 I/O 例外狀況會有困難。 如果程式碼必須處理 I/O 或未經授權的存取例外狀況，您應該考慮[如何：使用平行類別逐一查看檔案目錄](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md)中描述的方法。  
   
- 如果 I/O 延遲會造成問題，例如在網路上處理檔案 I/O，請考慮使用 [TPL 和傳統 .NET Framework 非同步程式設計](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)和這篇[部落格文章](https://blogs.msdn.microsoft.com/pfxteam/2009/08/04/parallel-extensions-and-io/)中所述的其中一項非同步 I/O 技術。  
+ 如果 I/O 延遲會造成問題，例如在網路上處理檔案 I/O，請考慮使用 [TPL 和傳統 .NET Framework 非同步程式設計](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)和這篇[部落格文章](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/)中所述的其中一項非同步 I/O 技術。  
   
 ## <a name="see-also"></a>另請參閱
 

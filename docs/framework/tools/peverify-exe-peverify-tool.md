@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93820120e91d80a3215673982348fd17f2fdb5d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ac0b45db0e9aebae830155cbe2469514c392921d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957976"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894826"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify 工具)
 PEVerify 工具可以協助像是編譯器撰寫者、指令碼引擎開發人員等產生 Microsoft Intermediate Language (MSIL) 的開發人員，判斷其 MSIL 程式碼和相關聯的中繼資料是否符合類型安全需求。 只有在避免使用某些語言建構時，某些編譯器才會產生可驗證的類型安全程式碼。 如果您是使用這類編譯器的開發人員，可能會想要驗證您並未損及程式碼的類型安全。 在這種情況下，您可以在檔案上執行 PEVerify 工具來檢查 MSIL 和中繼資料。  
@@ -28,7 +28,7 @@ PEVerify 工具可以協助像是編譯器撰寫者、指令碼引擎開發人�
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 peverify filename [options]  
 ```  
   
@@ -38,7 +38,7 @@ peverify filename [options]
 |--------------|-----------------|  
 |*filename*|要檢查其 MSIL 和中繼資料的可攜式執行檔 (PE)。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|發生 *maxErrorCount* 錯誤之後中止驗證。<br /><br /> .NET Framework 2.0 (含) 以後版本不支援此參數。|  
 |**/clock**|以毫秒為單位測量並報告下列驗證時間：<br /><br /> **MD Val. cycle**<br /> 中繼資料驗證週期<br /><br /> **MD Val. pure**<br /> 單純中繼資料驗證<br /><br /> **IL Ver. cycle**<br /> Microsoft Intermediate Language (MSIL) 驗證週期<br /><br /> **IL Ver pure**<br /> 單純 MSIL 驗證<br /><br /> **MD Val. cycle** 和 **IL Ver. cycle** 時間包括了執行必要的啟始和關閉程序所需的時間。 **MD Val. pure** 和 **IL Ver pure** 時間則是反映純粹執行驗證所需的時間。|  
@@ -68,25 +68,25 @@ peverify filename [options]
 ## <a name="examples"></a>範例  
  下列命令會對 `myAssembly.exe` 組件中實作的方法，執行中繼資料驗證檢查和 MSIL 類型安全驗證檢查。  
   
-```  
+```console  
 peverify myAssembly.exe /md /il  
 ```  
   
  成功完成上述要求之後，Peverify.exe 會顯示下列訊息。  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 ```  
   
  下列命令會對 `myAssembly.exe` 組件中實作的方法，執行中繼資料驗證檢查和 MSIL 類型安全驗證檢查。 工具會顯示執行這些檢查所需的時間。  
   
-```  
+```console  
 peverify myAssembly.exe /md /il /clock  
 ```  
   
  成功完成上述要求之後，Peverify.exe 會顯示下列訊息。  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 Timing: Total run     320 msec  
         MD Val.cycle  40 msec  
@@ -97,25 +97,25 @@ Timing: Total run     320 msec
   
  下列命令會對 `myAssembly.exe` 組件中實作的方法，執行中繼資料驗證檢查和 MSIL 類型安全驗證檢查。 不過，Peverify.exe 會在達到最大錯誤計數 100 時停止。 工具也會忽略指定的錯誤碼。  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore=0x12345678,0xABCD1234  
 ```  
   
  下列命令會產生與上面的前一個範例相同的結果，但是會指定回應檔 `ignoreErrors.rsp` 中要忽略的錯誤碼。  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp  
 ```  
   
  回應檔可包含逗號分隔的錯誤碼清單。  
   
-```  
+```text
 0x12345678, 0xABCD1234  
 ```  
   
  或者，回應檔可以透過每行一個錯誤碼的方式格式化。  
   
-```  
+```text
 0x12345678  
 0xABCD1234  
 ```  

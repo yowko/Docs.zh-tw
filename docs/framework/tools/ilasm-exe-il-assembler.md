@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933658"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894695"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL 組譯工具)
 
@@ -40,7 +40,7 @@ ilasm [options] filename [[options]filename...]
 | -------- | ----------- |
 |`filename`|.il 原始程式檔的名稱。 這個檔案由中繼資料宣告指示詞和符號 IL 指令組成。 您可以提供多個來源檔案引數來使用 *Ilasm.exe* 產生單一 PE 檔。 **注意：** 確定 .il 原始程式檔中程式碼的最後一行具有尾端空白或行結尾字元。|
 
-| 選項 | 說明 |
+| 選項 | 描述 |
 | ------ | ----------- |
 |**/32bitpreferred**|建立一個 32 位元慣用的映像 (PE32)。|
 |**/alignment:** `integer`|將 FileAlignment 設定為 NT Optional 標頭中 `integer` 指定的值。 如果在檔案中指定了 .alignment IL 指示詞，這個選項會覆寫它。|
@@ -110,7 +110,7 @@ IL 組譯工具可以表示所有現有的中繼資料和以執行階段為目�
 
 從 .NET Framework 4.5 開始，您可以使用類似下列的程式碼來附加自訂屬性至介面實作：
 
-```
+```il
 .class interface public abstract auto ansi IMyInterface
 {
   .method public hidebysig newslot abstract virtual
@@ -130,7 +130,7 @@ IL 組譯工具可以表示所有現有的中繼資料和以執行階段為目�
 
 從 .NET Framework 4.5 開始，您可以指定選擇性封送處理 BLOB (二進位大型物件) 使用其未經處理的二進位表示，如下列程式碼所示：
 
-```
+```il
 .method public hidebysig abstract virtual
         instance void
         marshal({ 38 01 02 FF })
@@ -175,7 +175,7 @@ public class Hello
 
 下列 IL 程式碼範例會對應至之前的 C# 程式碼範例。 您可以使用 IL 組譯工具，將這個程式碼編譯為組件。 IL 和 C# 這兩個程式碼範例都將 "Hello World!" 顯示 到主控台。
 
-```
+```il
 // Metadata version: v2.0.50215
 .assembly extern mscorlib
 {

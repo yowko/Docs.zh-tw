@@ -9,16 +9,16 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 71e3781b08bca3441dbd55704bcb0f7de635097e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: ab9c1be484d9cc77324e3105124a1b1f2257251d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168639"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925353"
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
 
-使用 `async` 修飾詞可將方法、[Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../operators/delegate-operator.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」  。 下例定義名為 `ExampleMethodAsync` 的非同步方法：
+使用 `async` 修飾詞可將方法、[Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../operators/delegate-operator.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」。 下例定義名為 `ExampleMethodAsync` 的非同步方法：
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -58,6 +58,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 - 為 System.Net.Http 新增 `using` 指示詞。  
   
 將程式碼執行為 Windows 市集應用程式：  
+
 - 將此程式碼貼入 MainPage.xaml.cs 的 `MainPage` 類別。  
 - 為 System.Net.Http 和 System.Threading.Tasks 新增 using 指示詞。  
   

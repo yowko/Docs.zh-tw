@@ -2,12 +2,12 @@
 title: 將現有 .NET 應用程式部署為 Windows 容器
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |將現有的 .NET 應用程式部署為 Windows 容器
 ms.date: 04/29/2018
-ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374025"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926466"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>將現有 .NET 應用程式部署為 Windows 容器
 
@@ -143,6 +143,7 @@ Docker 容器（為了簡單起見，*容器*）可以在 Linux 和 Windows 上�
 **圖 4-7.5。** Azure 中的容器生態系統
 
 從 Azure 中的容器生態系統，下列產品支援被視為基礎結構的容器：
+
 - **Azure 容器執行個體 (ACI)**
 - **Azure 虛擬機器**（有容器的支援）
 - **Azure 虛擬機器擴展集**（有容器的支援）

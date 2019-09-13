@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dc05294ae762b4f896bb7f514df102c1f948fe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 3c531a08e4555a8a076d81835bcceffa53e3ad7d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623401"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894823"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
@@ -33,7 +33,7 @@ ms.locfileid: "64623401"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
 [/reconfig] [/componly] [/appname:applicationName]  
 [/nologo] [/quiet]assemblyFile.dll   
@@ -41,14 +41,14 @@ ms.locfileid: "64623401"
   
 ## <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|來源組件檔。 這個組件必須以強式名稱簽署。 如需詳細資訊，請參閱[以強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
-|**/appdir:<路徑>** |指定應用程式的根目錄。|  
-|**/appname:<應用程式名稱>** |指定要尋找或建立之 COM+ 應用程式的名稱。|  
+|**/appdir:<路徑>**|指定應用程式的根目錄。|  
+|**/appname:<應用程式名稱>**|指定要尋找或建立之 COM+ 應用程式的名稱。|  
 |**/c**|建立目標應用程式。|  
 |**/componly**|只設定元件，忽略方法和介面。|  
 |**/exapp**|指定需要現有應用程式的工具。|  
@@ -59,7 +59,7 @@ ms.locfileid: "64623401"
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/parname:** *name*|指定要尋找或建立之 COM+ 應用程式的名稱或 ID。|  
 |**/reconfig**|重新設定現有的目標應用程式。 這是預設值。|  
-|**/tlb:<型別程式庫檔案>** |指定要安裝的類型程式庫檔案。|  
+|**/tlb:<型別程式庫檔案>**|指定要安裝的類型程式庫檔案。|  
 |**/u**|解除安裝目標應用程式。|  
 |**/quiet**|指定安靜模式，隱藏標誌或成功訊息顯示。|  
 |**/?**|顯示工具的命令語法和選項。|  
@@ -76,13 +76,13 @@ ms.locfileid: "64623401"
 ## <a name="examples"></a>範例  
  下列命令會將 `myTest.dll` 中包含的所有公用類別加入 `myTargetApp` (現有的 COM+ 應用程式)，並產生 `myTest.tlb` 類型程式庫。  
   
-```  
+```console  
 regsvcs /appname:myTargetApp myTest.dll  
 ```  
   
  下列命令會將 `myTest.dll` 中包含的所有公用類別加入 `myTargetApp` (現有的 COM+ 應用程式)，並產生 `newTest.tlb` 類型程式庫。  
   
-```  
+```console  
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   

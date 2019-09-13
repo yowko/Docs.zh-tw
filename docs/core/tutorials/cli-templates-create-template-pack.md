@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: df8c33856195ba7feacd32203e4a885997b50ad2
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
-ms.translationtype: HT
+ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870627"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926085"
 ---
 # <a name="tutorial-create-a-template-pack"></a>教學課程：建立範本套件
 
@@ -19,7 +19,8 @@ ms.locfileid: "67870627"
 在這部分的系列文章中，您將了解如何：
 
 > [!div class="checklist"]
-> * 建立 _.csproj* 專案以建置範本套件
+>
+> * \*建立 .csproj 專案以建立範本套件
 > * 設定專案檔以用於封裝
 > * 從 NuGet 套件檔案安裝範本
 > * 依套件識別碼將範本解除安裝

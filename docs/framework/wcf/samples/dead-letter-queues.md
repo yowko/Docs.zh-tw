@@ -2,12 +2,12 @@
 title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 489de5d8147edd58d90be01975ddbc9927e29902
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8fea29fc420ea6bb922c93ea08e0e23d5bb941d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045631"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928670"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
 這個範例示範如何處理已傳遞失敗的訊息。 它是以交易式[MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結範例為基礎。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
@@ -169,7 +169,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 寄不出的信件佇列中的訊息是針對處理訊息之服務所發出的訊息。 因此, 當寄不出的信件訊息服務從佇列讀取訊息時, Windows Communication Foundation (WCF) 通道層會尋找端點不相符, 而且不會分派訊息。 在本例中，訊息是針對訂單處理服務發出的，但是會由寄不出的信件訊息服務接收。 為了接收針對不同端點發出的訊息，在 `ServiceBehavior` 中會指定用來比對所有位址的位址篩選條件。 若要順利處理從寄不出的信件佇列中讀取的訊息，就必須這麼做。
+ 寄不出的信件佇列中的訊息是針對處理訊息之服務所發出的訊息。 因此，當寄不出的信件訊息服務從佇列讀取訊息時，Windows Communication Foundation （WCF）通道層會尋找端點不相符，而且不會分派訊息。 在本例中，訊息是針對訂單處理服務發出的，但是會由寄不出的信件訊息服務接收。 為了接收針對不同端點發出的訊息，在 `ServiceBehavior` 中會指定用來比對所有位址的位址篩選條件。 若要順利處理從寄不出的信件佇列中讀取的訊息，就必須這麼做。
 
  在這個範例中，如果失敗的原因是訊息逾時，寄不出的信件訊息服務將會重新傳送訊息。對於其他所有原因，則顯示傳遞失敗，如下列範例程式碼所示：
 
@@ -272,7 +272,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
 
  執行用戶端時，用戶端會顯示訊息：
 
-```
+```console
 Press <ENTER> to terminate client.
 ```
 
@@ -280,7 +280,7 @@ Press <ENTER> to terminate client.
 
  此時，請執行寄不出的信件服務，它會讀取訊息並顯示錯誤碼，然後將訊息重新傳回到服務。
 
-```
+```console
 The dead letter service is ready.
 Press <ENTER> to terminate service.
 
@@ -295,7 +295,7 @@ Purchase order resent
 
  服務會啟動，然後讀取重送的訊息，再加以處理。
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -318,7 +318,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     2. 展開 [**功能**] 索引標籤。
 
-    3. 以滑鼠右鍵按一下 [**私人訊息佇列**], 然後選取 [**新增**]、[**私用佇列**]。
+    3. 以滑鼠右鍵按一下 [**私人訊息佇列**]，然後選取 [**新增**]、[**私用佇列**]。
 
     4. 選取 [**交易**式] 方塊。
 
@@ -326,7 +326,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-4. 若要在單一或跨電腦設定中執行此範例, 請適當地變更佇列名稱, 並以電腦的完整名稱取代 localhost, 並遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+4. 若要在單一或跨電腦設定中執行此範例，請適當地變更佇列名稱，並以電腦的完整名稱取代 localhost，並遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>若要在加入至工作群組的電腦上執行範例
 
@@ -350,7 +350,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > 將 `security mode` 設定為 `None`，相當於將 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全性設定為 `None`。
 
 ## <a name="comments"></a>註解
- 根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您在不屬於網域的電腦上執行此範例, 則會收到下列錯誤:「使用者的內部訊息佇列憑證不存在」。
+ 根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您在不屬於網域的電腦上執行此範例，則會收到下列錯誤：「使用者的內部訊息佇列憑證不存在」。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

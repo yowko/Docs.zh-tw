@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169039"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929339"
 ---
 # <a name="train-and-evaluate-a-model"></a>定型和評估模型
 
@@ -175,6 +175,7 @@ double rSquared = trainedModelMetrics.RSquared;
 ```
 
 在先前的程式碼範例中：  
+
 1. 測試資料集已使用先前定義的資料準備轉換進行預先處理。 
 2. 定型後的機器學習模型會用來針對測試資料進行預測。
 3. 在 `Evaluate` 方法中，測試資料集 `CurrentPrice` 資料行中的值會和新輸出預測的 `Score` 資料行比較，計算迴歸模型的計量，其中一個的決定係數儲存在 `rSquared` 變數中。

@@ -3,12 +3,12 @@ title: 使用索引和範圍探索資料範圍
 description: 此進階教學課程將教導您使用索引和範圍探索資料，以檢查連續資料集的配量。
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105780"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926644"
 ---
 # <a name="indices-and-ranges"></a>索引和範圍
 
@@ -17,6 +17,7 @@ ms.locfileid: "70105780"
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
+>
 > - 使用序列中範圍的語法。
 > - 了解每個序列開始和結束的設計決策。
 > - 了解 <xref:System.Index> 和 <xref:System.Range> 類型的案例。
@@ -24,6 +25,7 @@ ms.locfileid: "70105780"
 ## <a name="language-support-for-indices-and-ranges"></a>索引和範圍的語言支援
 
 此語言支援仰賴兩個新的型別與兩個新的運算子。
+
 - <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
 - `^` 運算子，它會指定索引相對於序列結尾。
 - <xref:System.Range?displayProperty=nameWithType> 代表序列的子範圍。
@@ -51,7 +53,7 @@ string[] words = new string[]
 
 [!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
 
-指定範圍「開頭」  與「結尾」  的範圍。 範圍具有排除性，這表示「結尾」  不包含在範圍內。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。 
+指定範圍「開頭」與「結尾」的範圍。 範圍具有排除性，這表示「結尾」不包含在範圍內。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。 
 
 下列程式碼會建立具有 "quick"、"brown" 和 "fox" 字組的子範圍。 其會包含 `words[1]` 到 `words[3]`。 項目 `words[4]` 不在範圍內。 將下列程式碼新增至相同的方法。 複製並貼在互動式視窗的底部。
 

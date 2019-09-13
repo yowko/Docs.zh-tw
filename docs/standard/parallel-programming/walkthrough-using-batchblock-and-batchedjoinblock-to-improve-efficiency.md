@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d704702e74b5f7d4a315bd14a467296245f90257
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 32255c988397853c4b38e4ab723c7261a8999899
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046492"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929208"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率
 
@@ -31,7 +31,7 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
 2. 確定您電腦上有可用的 Northwind 資料庫複本 (Northwind.sdf)。 這個檔案通常位於資料夾：%Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\。
 
     > [!IMPORTANT]
-    > 在某些 Windows 版本中，如果 Visual Studio 是以非系統管理員模式執行，就無法連線到 Northwind.sdf。 若要連線到 Northwind.sdf，請使用 [以系統管理員身分執行]  模式來啟動 Visual Studio 或 Visual Studio 開發人員命令提示字元。
+    > 在某些 Windows 版本中，如果 Visual Studio 是以非系統管理員模式執行，就無法連線到 Northwind.sdf。 若要連線到 Northwind.sdf，請使用 [以系統管理員身分執行] 模式來啟動 Visual Studio 或 Visual Studio 開發人員命令提示字元。
 
 本逐步解說包含下列各節：
 
@@ -53,7 +53,6 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
 
 ## <a name="creating-the-console-application"></a>建立主控台應用程式
 
-<a name="consoleApp"></a>
 1. 在 Visual Studio 中，建立 Visual C# 或 Visual Basic **主控台應用程式**專案。 在本文件中，專案命名為 `DataflowBatchDatabase`。
 
 2. 在您的專案中，加入 System.Data.SqlServerCe.dll 的參考，和 System.Threading.Tasks.Dataflow.dll 的參考。

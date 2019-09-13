@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169139"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929015"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用以工作為基礎的非同步模式
 
@@ -727,7 +727,7 @@ public class AsyncCache<TKey, TValue>
 }
 ```
 
- [AsyncCache\<TKey,TValue>](https://blogs.msdn.microsoft.com/pfxteam/2010/04/23/parallelextensionsextras-tour-12-asynccache/) 類別可接受採用 `TKey` 並傳回 <xref:System.Threading.Tasks.Task%601> 的函式作為對其建構函式的委派。  先前從快取中存取的任何值會儲存在內部字典中，`AsyncCache` 會確保每個索引鍵只產生一個工作，即使並行存取快取也一樣。
+ [AsyncCache\<TKey,TValue>](https://devblogs.microsoft.com/pfxteam/parallelextensionsextras-tour-12-asynccache/) 類別可接受採用 `TKey` 並傳回 <xref:System.Threading.Tasks.Task%601> 的函式作為對其建構函式的委派。  先前從快取中存取的任何值會儲存在內部字典中，`AsyncCache` 會確保每個索引鍵只產生一個工作，即使並行存取快取也一樣。
 
  例如，您可以為下載的網頁建置快取︰
 
@@ -833,7 +833,7 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> .NET Framework 4.5 有提供 <xref:System.Threading.Tasks.Dataflow> 命名空間，可透過 **NuGet** 取得。 若要安裝包含 <xref:System.Threading.Tasks.Dataflow> 命名空間的組件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]  ，然後在線上搜尋 Microsoft.Tpl.Dataflow 套件。
+> .NET Framework 4.5 有提供 <xref:System.Threading.Tasks.Dataflow> 命名空間，可透過 **NuGet** 取得。 若要安裝包含 <xref:System.Threading.Tasks.Dataflow> 命名空間的組件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]，然後在線上搜尋 Microsoft.Tpl.Dataflow 套件。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: 安全性透明的程式碼, 層級1
+title: 安全性透明的程式碼，層級1
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: efd3954b63a6683e04bd9143ca3523cdbace506d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206087"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894534"
 ---
-# <a name="security-transparent-code-level-1"></a>安全性透明的程式碼, 層級1
+# <a name="security-transparent-code-level-1"></a>安全性透明的程式碼，層級1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 從 .NET Framework 4 開始, 您可以使用[層級2透明度](security-transparent-code-level-2.md)。 不過, 層級1透明度已保留, 因此您可以識別必須以先前的安全性規則執行的舊版程式碼。  
+ 透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 從 .NET Framework 4 開始，您可以使用[層級2透明度](security-transparent-code-level-2.md)。 不過，層級1透明度已保留，因此您可以識別必須以先前的安全性規則執行的舊版程式碼。  
   
 > [!IMPORTANT]
-> 您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 針對 .NET Framework 4 所開發的程式碼, 請一律使用層級2透明度。  
+> 您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 針對 .NET Framework 4 所開發的程式碼，請一律使用層級2透明度。  
   
  本主題包含下列幾節：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "70206087"
 ## <a name="transparency-attributes"></a>透明度屬性  
  下表說明您可以用來標註程式碼透明度的三個屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|僅在該組件層級受允許。 將該組件中的所有類型和成員都識別為安全性透明。 該組件不能包含任何安全性關鍵程式碼。|  
 |<xref:System.Security.SecurityCriticalAttribute>|在無 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 屬性的組件層級使用時，根據預設，會將組件中的所有程式碼識別為安全性透明，但也表示該組件可能包含安全性關鍵程式碼。<br /><br /> 在類別層級使用時，會將類別或方法識別為安全性關鍵，而不是識別類別的成員。 若要將所有成員都設成安全性關鍵，請將 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 屬性設為 <xref:System.Security.SecurityCriticalScope.Everything>。<br /><br /> 在成員層級使用時，該屬性只適用於該成員。<br /><br /> 已識別為安全性關鍵的類別或成員可以執行權限提高。 **重要：** 在層級 1 透明度，從組件外部呼叫安全性關鍵類型和成員時，可以將它們視為安全性安全關鍵。 您應該使用完全信任的連結要求來保護安全性關鍵類型和成員，以避免未經授權的權限提高。|  
@@ -84,27 +84,27 @@ ms.locfileid: "70206087"
 ## <a name="security-transparency-examples"></a>安全性透明度範例  
  若要使用 .NET Framework 2.0 透明度規則 (層級 1 透明度)，請使用下列組件註釋：  
   
-```  
+```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
  如果您要使整個組件透明，來表示該組件不含任何關鍵程式碼，而且在任何情況下都不提高權限，則可以使用下列屬性將透明度明確地加入該組件：  
   
-```  
+```csharp  
 [assembly: SecurityTransparent]  
 ```  
   
  如果您要混合相同組件中的關鍵及透明程式碼，則可以使用 <xref:System.Security.SecurityCriticalAttribute> 屬性標記該組件，表示該組件可以包含關鍵程式碼，如下所示：  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
 ```  
   
  如果您要執行安全性關鍵動作，則必須以另一個 <xref:System.Security.SecurityCriticalAttribute> 屬性明確地標記將執行關鍵動作的程式碼，如下列程式碼範例所示：  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
-Public class A  
+public class A  
 {  
     [SecurityCritical]  
     private void Critical()  
@@ -119,7 +119,7 @@ Public class A
     }  
 }  
 public class B  
-{      
+{
     internal string SomeOtherProperty  
     {  
         get { /* transparent */ }  
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全性透明的程式碼, 層級2](security-transparent-code-level-2.md)
+- [安全性透明的程式碼，層級2](security-transparent-code-level-2.md)
 - [安全性變更](../security/security-changes.md)

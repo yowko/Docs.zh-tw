@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
-ms.translationtype: HT
+ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469720"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894176"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送處理類別、結構和等位
 在 .NET Framework 中，類別和結構相類似。 兩者都可以有欄位、屬性和事件。 也可以有靜態和非靜態方法。 一個值得注意的差異在於結構是實值類型，而類別是參考類型。  
   
  下表列出類別、結構和等位的封送處理選項，並描述其用法，以及提供對應平台的叫用範例連結。  
   
-|類型|說明|範例|  
+|類型|描述|範例|  
 |----------|-----------------|------------|  
 |傳值呼叫|做為 In/Out 參數，如 Managed 案例，會傳遞具有整數成員的類別。|SysTime 範例|  
 |結構傳值。|傳遞結構做為 In 參數。|結構範例|  
@@ -52,25 +52,25 @@ ms.locfileid: "65469720"
   
 - 從 PinvokeLib.dll 匯出的 **TestStructInStruct**。  
   
-    ```  
+    ```cpp  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
 - 從 PinvokeLib.dll 匯出的 **TestStructInStruct3**。  
   
-    ```  
+    ```cpp  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
 - 從 PinvokeLib.dll 匯出的 **TestArrayInStruct**。  
   
-    ```  
+    ```cpp  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是自訂的非受控程式庫，其中包含先前所列出函式和四個結構的實作：**MYPERSON**、**MYPERSON2**、**MYPERSON3** 和 **MYARRAYSTRUCT**。 這些結構包含下列項目：  
   
-```  
+```cpp  
 typedef struct _MYPERSON  
 {  
    char* first;   
@@ -135,13 +135,13 @@ typedef struct _MYARRAYSTRUCT
   
 - 從 Kernel32.dll 匯出 **FindFirstFile**。  
   
-    ```  
+    ```cpp
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
     ```  
   
  傳遞至函式的原始結構包含下列項目：  
   
-```  
+```cpp
 typedef struct _WIN32_FIND_DATA   
 {  
   DWORD    dwFileAttributes;   
@@ -178,13 +178,13 @@ typedef struct _WIN32_FIND_DATA
   
 - 從 PinvokeLib.dll 匯出的 **TestUnion**。  
   
-    ```  
+    ```cpp
     void TestUnion(MYUNION u, int type);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是自訂的 Unmanaged 程式庫，其中包含先前所列出函式以及 **MYUNION** 和 **MYUNION2** 這兩個等位的實作。 此等位包含下列項目：  
   
-```  
+```cpp
 union MYUNION  
 {  
     int number;  
@@ -221,13 +221,13 @@ union MYUNION2
   
 - 從 Kernel32.dll 匯出 **GetSystemTime**。  
   
-    ```  
+    ```cpp
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
     ```  
   
  傳遞至函式的原始結構包含下列項目：  
   
-```  
+```cpp
 typedef struct _SYSTEMTIME {   
     WORD wYear;   
     WORD wMonth;   
@@ -256,7 +256,7 @@ typedef struct _SYSTEMTIME {
   
  這個範例使用定義在 [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 中的包裝函式和平台叫用，這些也在原始程式檔中提供。 它會使用 `TestOutArrayOfStructs` 函式和 `MYSTRSTRUCT2` 結構。 此結構包含下列項目：  
   
-```  
+```cpp
 typedef struct _MYSTRSTRUCT2  
 {  
    char* buffer;  

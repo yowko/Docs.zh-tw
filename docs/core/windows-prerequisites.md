@@ -3,12 +3,12 @@ title: Windows 上 .NET Core 的必要條件
 description: 了解在 Windows 電腦上開發及執行 .NET Core 應用程式時，您需要哪些相依性。
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
-ms.translationtype: HT
+ms.openlocfilehash: 82d336bc4efb34d336d5078952683c1673c3fa8a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331068"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926042"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
@@ -65,7 +65,7 @@ ms.locfileid: "68331068"
 
 若要在 Visual Studio 2017 中開發使用 .NET Core 2.2 SDK 的 .NET Core 應用程式：
 
- 1. [下載並安裝 Visual Studio 2017 15.9.0 版本或更新版本](/visualstudio/install/install-visual-studio)，選取 [.NET Core 跨平台開發]  工作負載 (在 [其他工具組]  區段)。
+ 1. [下載並安裝 Visual Studio 2017 15.9.0 版本或更新版本](/visualstudio/install/install-visual-studio)，選取 [.NET Core 跨平台開發] 工作負載 (在 [其他工具組] 區段)。
 
 ![已選取 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 安裝螢幕擷取畫面](./media/windows-prerequisites/vs-2017-workloads.jpg)
 
@@ -79,7 +79,7 @@ ms.locfileid: "68331068"
  1. 如果您希望專案使用最新的 .NET Core 執行階段，請使用下列指示將現有或新的 .NET Core 專案目標重新設定為 .NET Core 2.2：
 
     * 在 [ **專案** ] 功能表上，選擇 [ **屬性**]。
-    * 在 [目標 Framework]  選取功能表中，將值設為 **.NET Core 2.2**。
+    * 在 [目標 Framework] 選取功能表中，將值設為 **.NET Core 2.2**。
 
 ![螢幕擷取畫面：選取 ".NET Core 2.2" 目標 Framework 功能表項目的 Visual Studio 2017 應用程式專案屬性](./media/windows-prerequisites/targeting-dotnet-core.jpg)
 
@@ -91,14 +91,15 @@ ms.locfileid: "68331068"
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-若要使用 Visual Studio 開發 .NET Core 1.x 應用程式，請[下載並安裝 Visual Studio 2017](/visualstudio/install/install-visual-studio)，選取 [.NET Core 跨平台開發]  工作負載 (在 [其他工具組]  區段)。
+若要使用 Visual Studio 開發 .NET Core 1.x 應用程式，請[下載並安裝 Visual Studio 2017](/visualstudio/install/install-visual-studio)，選取 [.NET Core 跨平台開發] 工作負載 (在 [其他工具組] 區段)。
 
 ![已選取 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 安裝螢幕擷取畫面](./media/windows-prerequisites/vs-workloads.jpg)
 
 > [!IMPORTANT]
 > 有可能使用 Visual Studio 2015 開發 .NET Core 1.x，但不建議為下列原因而如此做：
-  > * .NET Core 工具是預覽版本，不受支援。
-  > * 專案是以 project.json 為基礎，已被取代。
+>
+> * .NET Core 工具是預覽版本，不受支援。
+> * 專案是以 project.json 為基礎，已被取代。
 >
 > 如需專案格式變更的詳細資訊，請參閱[變更的高階概觀](./tools/cli-msbuild-architecture.md)。
 
@@ -110,7 +111,7 @@ ms.locfileid: "68331068"
 > 確認 Visual Studio 版本：
 >
 > * 在 **[說明]** 功能表上，選擇 **[關於 Microsoft Visual Studio]** 。
-> * 在 [關於 Microsoft Visual Studio]  對話方塊中，確認版本號碼。
+> * 在 [關於 Microsoft Visual Studio] 對話方塊中，確認版本號碼。
 >   * 針對 .NET Core 3.0 Preview 3 應用程式，需要 Visual Studio 2019 16.0 版或更新版本。
 >   * 若為 .NET Core 2.2 應用程式，需要 Visual Studio 2017 15.9 版或更新版本。
 >   * 若為 .NET Core 2.1 應用程式，需要 Visual Studio 2017 15.7 版或更新版本。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b652fae47a321ca41e1f518e9077cd68f24c91c9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199995"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894853"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework 命令列偵錯工具)
 .NET Framework 命令列偵錯工具可以協助工具廠商和應用程式開發人員尋找並修復以 .NET Framework 通用語言執行平台為目標之程式的 Bug。 這個工具使用執行階段偵錯 API 來提供偵錯服務。 目前您只能使用 MDbg.exe 偵錯 Managed 程式碼；不支援偵錯 Unmanaged 程式碼。  
@@ -23,7 +23,7 @@ ms.locfileid: "59199995"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 MDbg [ProgramName[arguments]] [options]  
 ```  
   
@@ -34,7 +34,7 @@ MDbg [ProgramName[arguments]] [options]
   
  MDbg.exe 命令會區分大小寫。  
   
-|命令|說明|  
+|命令|描述|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*number*]|切換至另一個已偵錯的處理序，或列印可使用的處理序。 這些數字不是實際的處理序 ID (PID)，而是從 0 開始建立索引的清單。|  
 |**a**[**ttach**] [*pid*]|附加至處理序，或列印可使用的處理序。|  
@@ -61,13 +61,13 @@ MDbg [ProgramName[arguments]] [options]
 |**log** [*eventType*]|設定或顯示要記錄的事件。|  
 |**mo**[**de**] [*option on/off*]|設定不同的偵錯工具選項。 使用 `mode` 而不指定選項，以取得偵錯模式清單及其目前設定。|  
 |**mon**[**itorInfo**] *monitorReference*|顯示物件監視器鎖定資訊。|  
-|**newo**[**bj**] *typeName* [*arguments...*]|建立 *typeName* 類型的新物件。|  
+|**newo**[**bj**] *typeName* [*arguments...* ]|建立 *typeName* 類型的新物件。|  
 |**n**[**ext**]|執行程式碼，然後移至下一行 (即使下一行包含許多函式呼叫，也要下移)。|  
 |**Opendump** *pathToDumpFile*|開啟指定的傾印檔案進行偵錯。|  
 |**o**[**ut**]|移至目前函式的尾端。|  
 |**pa**[**th**] [*pathName*]|如果二進位檔中的位置無法使用，則搜尋原始程式檔的指定路徑。|  
 |**p**[**rint**] [*var*] &#124; [`-d`]|列印範圍中的所有變數 (**print**)、列印指定的變數 (**print** *var*)，或列印偵錯工具變數 (**print**`-d`)。|  
-|**printe**[**xception**] [*-r*]|列印目前執行緒上的最後一個例外狀況。 使用 `–r` (遞迴) 選項來周遊例外狀況物件上的 `InnerException` 屬性，以取得整個例外狀況鏈結的相關資訊。|  
+|**printe**[**xception**] [ *-r*]|列印目前執行緒上的最後一個例外狀況。 使用 `–r` (遞迴) 選項來周遊例外狀況物件上的 `InnerException` 屬性，以取得整個例外狀況鏈結的相關資訊。|  
 |**pro**[**cessenum**]|顯示使用中處理序。|  
 |**q**[**uit**] [*exitcode*]|終止 MDbg.exe Shell，並選擇性指定處理序結束代碼。|  
 |**re**[**sume**] [`*` &#124; [`~`]*threadNumber*]|繼續目前的執行緒，或由 *threadNumber* 參數指定的執行緒。<br /><br /> 如果 *threadNumber* 參數指定為 `*`，或是如果執行緒編號以 `~` 開頭，則將此命令套用至所有執行緒，只有由 *threadNumber* 指定的執行緒除外。<br /><br /> 繼續非暫止的執行緒沒有任何效用。|  
@@ -81,16 +81,16 @@ MDbg [ProgramName[arguments]] [options]
 |**t**[**hread**] [*newThread*] [-*nick nickname*`]`|不帶參數的執行緒命令會顯示目前處理序中的所有 Managed 執行緒。 執行緒通常是以其執行緒編號識別，但是如果執行緒有指定的暱稱，則改為顯示暱稱。 您可以使用 `-nick` 參數指派暱稱給執行緒。<br /><br /> -   **thread** `-nick` *threadName* 會指派暱稱給目前執行中的執行緒。<br /><br /> 暱稱不可為編號。 如果目前的執行緒已經指定暱稱，就會以新的暱稱取代舊的暱稱。 如果新暱稱是空字串 ("")，則刪除目前執行緒的暱稱，而不指定任何新暱稱給執行緒。|  
 |**u**[**p**]|將現用堆疊框架往上移。|  
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|列印由控制代碼追蹤的變數。 控制代碼可以用名稱或位址加以指定。|  
-|**when**|顯示目前使用中的 `when` 陳述式。<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]]：刪除數字指定的 `when` 陳述式，若指定 `all` 則刪除所有 `when` 陳述式。<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ]：*stopReason* 參數可以是下列其中一個：<br /><br /> `StepComplete`、`ProcessExited`、`ThreadCreated`、`BreakpointHit`、`ModuleLoaded`、`ClassLoaded`、`AssemblyLoaded`、`AssemblyUnloaded`、`ControlCTrapped`、`ExceptionThrown`、`UnhandledExceptionThrown`、`AsyncStop`、`AttachComplete`、`UserBreak`、`EvalComplete`、`EvalException`、`RemapOpportunityReached`、`NativeStop`。<br /><br /> *specific_condition* 可以是下列其中一個：<br /><br /> -   *number*：對於 `ThreadCreated` 和 `BreakpointHit`，只有在由執行緒 ID/中斷點編號，以相同的值停止時，才會觸發動作。<br />-   [`!`]*name*：針對 `ModuleLoaded`、`ClassLoaded`、`AssemblyLoaded`、`AssemblyUnloaded`、`ExceptionThrown` 和 `UnhandledExceptionThrown`，只在名稱與 *stopReason* 的名稱相符時，才會觸發動作。<br /><br /> *specific_condition* 對其他 *stopReason* 的值必須是空白。|  
+|**when**|顯示目前使用中的 `when` 陳述式。<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]]：刪除數字指定的 `when` 陳述式，若指定 `all` 則刪除所有 `when` 陳述式。<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ]：*stopReason* 參數可以是下列其中一個：<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition* 可以是下列其中一個：<br /><br /> -   *number*：對於 `ThreadCreated` 和 `BreakpointHit`，只有在由執行緒 ID/中斷點編號，以相同的值停止時，才會觸發動作。<br />-   [`!`]*name*：針對 `ModuleLoaded`、`ClassLoaded`、`AssemblyLoaded`、`AssemblyUnloaded`、`ExceptionThrown` 和 `UnhandledExceptionThrown`，只在名稱與 *stopReason* 的名稱相符時，才會觸發動作。<br /><br /> *specific_condition* 對其他 *stopReason* 的值必須是空白。|  
 |**w**[**here**] [`-v`] [`-c` *depth*] [*threadID*]|顯示有關堆疊框架的偵錯資訊。<br /><br /> -   `-v` 選項提供有關各個所顯示堆疊框架的詳細資訊。<br />-   指定 `depth` 的數字，限制所顯示的框架數目。 使用 **all** 命令，顯示所有框架。 預設值為 100。<br />-   如果指定 *threadID* 參數，您可以控制與堆疊相關聯的執行緒。 預設只有目前的執行緒。 使用 **all** 命令，取得所有執行緒。|  
-|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|顯示與模組 `pattern` 相符的函式。<br /><br /> 如果指定 *numSymbols*，則輸出僅限在指定的數目以內。 如果未指定 *pattern* 的 `!` (指示規則運算式)，則顯示所有功能。 如果未提供 *module*，則顯示所有載入的模組。 符號 (*~#*) 可透過使用 **break** 命令，用來設定中斷點。|  
+|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|顯示與模組 `pattern` 相符的函式。<br /><br /> 如果指定 *numSymbols*，則輸出僅限在指定的數目以內。 如果未指定 *pattern* 的 `!` (指示規則運算式)，則顯示所有功能。 如果未提供 *module*，則顯示所有載入的模組。 符號 ( *~#* ) 可透過使用 **break** 命令，用來設定中斷點。|  
   
 ## <a name="remarks"></a>備註  
  使用編譯器專用旗標編譯要偵錯的應用程式，會讓編譯器產生偵錯符號。 如需這些旗標的詳細資訊，請參閱編譯器的文件。 您可以偵錯最佳化的應用程式，但是有些偵錯資訊將會遺失。 例如，許多區域變數將不可見，而原始程式行也會不準確。  
   
  編譯應用程式之後，請在命令提示字元鍵入 **mdbg** 來啟動偵錯工作階段，如下列範例所示。  
   
-```  
+```console  
 C:\Program Files\Microsoft Visual Studio 8\VC>mdbg  
 MDbg (Managed debugger) v2.0.50727.42 (RTM.050727-4200) started.  
 Copyright (C) Microsoft Corporation. All rights reserved.  

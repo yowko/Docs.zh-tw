@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937992"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894758"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)
 類型程式庫匯出工具可以產生類型程式庫，這個類型程式庫描述定義在通用語言執行平台組件中的類型。  
@@ -26,17 +26,17 @@ ms.locfileid: "69937992"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
 ## <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |*assemblyName*|要匯出類型程式庫的組件。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/asmpath:** *目錄*|指定要搜尋組件的位置。 如果使用這個選項，則必須明確指定要搜尋參考組件的位置，包括目前的目錄在內。<br /><br /> 當您使用 **asmpath** 選項時，型別程式庫匯出工具不會在全域組件快取 (GAC) 中尋找組件。|  
 |**/help**|顯示工具的命令語法和選項。|  
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  如果您使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性來指定 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> 或 `VT_UNKOWN` 的 `VT_DISPATCH` 值，則 Tlbexp.exe 會忽略所有後續使用的 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> 欄位。 例如，假設有以下的簽章：  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  會產生下列類型程式庫：  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>範例  
  下列命令會產生一個和 `myTest.dll` 中組件同名的類型程式庫。  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  下列命令會以 `clipper.tlb` 名稱產生類型程式庫。  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  先使用 Tlbimp.exe 匯入 `myLib.tlb` 類型程式庫，然後將它儲存為 `myLib.dll`。  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  下列命令會使用 C# 編譯器來編譯 `Sample.dll,`，它會參考上一個範例中所建立的 `myLib.dll`。  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  下列命令會產生參考 `Sample.dll` 之類型程式庫的 `myLib.dll`。  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   

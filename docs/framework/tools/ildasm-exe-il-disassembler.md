@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912496"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894875"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 反組譯工具)
 
@@ -28,7 +28,7 @@ IL 反組譯工具是 IL 組譯工具 (*Ilasm.exe*) 的附屬工具。 *Ildasm.e
 
 ## <a name="syntax"></a>語法
 
-```
+```console
 ildasm [options] [PEfilename] [options]
 ```
 
@@ -46,7 +46,7 @@ ildasm [options] [PEfilename] [options]
 
 下列其他選項可用於 *.exe*、 *.dll* 和 *.winmd* 檔案。
 
-| 選項 | 說明 |
+| 選項 | 描述 |
 | ------ | ----------- |
 |**/bytes**|顯示十六進位格式的實際位元組做為指令註解。|
 |**/caverbal**|以動詞化格式產生自訂屬性 BLOB。 預設為二進位格式。|
@@ -89,7 +89,7 @@ ildasm [options] [PEfilename] [options]
 |**/objectfile**=`filename`|顯示所指定程式庫中單一物件檔案的中繼資料。|
 
 > [!NOTE]
-> *Ildasm.exe* 的所有選項都不區分大小寫，並以前三個字母來辨識。 例如， **/quo** 相當於 **/quoteallnames**。 指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如， **/output:** <檔案名稱>  相當於 **/output=** <檔案名稱>  。
+> *Ildasm.exe* 的所有選項都不區分大小寫，並以前三個字母來辨識。 例如， **/quo** 相當於 **/quoteallnames**。 指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如， **/output:** <檔案名稱> 相當於 **/output=** <檔案名稱>。
 
 ## <a name="remarks"></a>備註
 
@@ -100,7 +100,7 @@ ildasm [options] [PEfilename] [options]
 > [!NOTE]
 > 目前您無法將這項技術用於包含內嵌機器碼的 PE 檔 (例如，由 Visual C++ 所產生的 PE 檔)。  
 
-您可以使用 IL 反組譯工具中的預設 GUI，檢視階層樹狀檢視中任何現有 PE 檔的中繼資料和反組譯碼。 若要使用 GUI，請在命令列鍵入 **ildasm**，但不提供 *PEfilename* 引數或任何選項。 您可以從 [檔案]  功能表巡覽至要載入 *Ildasm.exe* 中的 PE 檔。 若要儲存針對所選取 PE 顯示的中繼資料和反組譯程式碼，請選取 [檔案]  功能表中的 [傾印]  命令。 若只要儲存階層樹狀檢閱，請從 [檔案]  功能表中選取 [傾印樹狀檢視]  命令。 如需將檔案載入 *Ildasm.exe* 及解譯輸出的詳細指南，請參閱位於 Windows SDK 隨附 [Samples] 資料夾中的 *Ildasm.exe* 教學課程。
+您可以使用 IL 反組譯工具中的預設 GUI，檢視階層樹狀檢視中任何現有 PE 檔的中繼資料和反組譯碼。 若要使用 GUI，請在命令列鍵入 **ildasm**，但不提供 *PEfilename* 引數或任何選項。 您可以從 [檔案] 功能表巡覽至要載入 *Ildasm.exe* 中的 PE 檔。 若要儲存針對所選取 PE 顯示的中繼資料和反組譯程式碼，請選取 [檔案] 功能表中的 [傾印] 命令。 若只要儲存階層樹狀檢閱，請從 [檔案] 功能表中選取 [傾印樹狀檢視] 命令。 如需將檔案載入 *Ildasm.exe* 及解譯輸出的詳細指南，請參閱位於 Windows SDK 隨附 [Samples] 資料夾中的 *Ildasm.exe* 教學課程。
 
 如果您將包含內嵌資源的 *PEfilename* 引數提供給 *Ildasm.exe*，這個工具就會產生多個輸出檔案：包含 IL 程式碼的文字檔；每個內嵌的 Managed 資源還會各有一個使用來自中繼資料的資源名稱所產生的 .resources 檔案。 如果 Unmanaged 資源內嵌於 *PEfilename*， **/output** 選項就會使用為 IL 指定的檔案名稱來產生 .res 檔案。
 
@@ -117,14 +117,14 @@ ildasm [options] [PEfilename] [options]
 public void Test([MarshalAs((short)70)] int test) { }
 ```
 
-```
+```il
 // IL from Ildasm.exe output
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
 從 .NET Framework 4.5 開始，*Ildasm.exe* 會顯示套用至介面實作的屬性，如 *Ildasm.exe* 輸出的下列摘要所示：
 
-```
+```il
 .class public auto ansi beforefieldinit MyClass
   extends [mscorlib]System.Object
   implements IMyInterface

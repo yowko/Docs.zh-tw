@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
-ms.translationtype: HT
+ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796853"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895279"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 
@@ -270,7 +270,7 @@ Managed 物件的使用者無法處置此物件所使用的原生資源。 若�
 
 ## <a name="background-workstation-garbage-collection"></a>背景工作站記憶體回收
 
-在背景記憶體回收中，當層代 2 的回收正在進行時，會視需要回收暫時層代 (0 和 1)。 背景記憶體回收沒有任何設定。它會自動與並行記憶體回收一起啟用。 背景記憶體回收是並行記憶體回收的取代項目。 與並行記憶體回收一樣，背景記憶體回收會針對專屬執行緒執行，而且僅適用於層代 2 回收。
+背景垃圾收集會取代從 .NET Framework 4 開始的並行工作站垃圾收集，它會取代從 .NET Framework 4.5 開始的並行伺服器垃圾收集。  在背景記憶體回收中，當層代 2 的回收正在進行時，會視需要回收暫時層代 (0 和 1)。 它是在專用的執行緒上執行，而且只適用于層代2回收。 預設會自動啟用背景垃圾收集，並且可以使用 .NET Framework 應用程式中的[ \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)設定設定來啟用或停用。 
 
 > [!NOTE]
 > 只有 .NET Framework 4 和更新版本才能使用背景記憶體回收。 而 .NET Framework 4 只支援將上述功能用於工作站記憶體回收。 從 .NET Framework 4.5 開始，背景記憶體回收可供工作站和伺服器記憶體回收使用。

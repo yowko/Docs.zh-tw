@@ -1,16 +1,17 @@
 ---
-title: HOW TO：使用相同類型的多個安全性權杖
+title: 作法：使用相同類型的多個安全性權杖
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: 1b383c6ccd96d1b3d7b091b2d7c67bb166da51df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 84009eacca113fcd83a0e4908c7d6eb0c82db7d5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589428"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928753"
 ---
-# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>HOW TO：使用相同類型的多個安全性權杖
-- 在.NET Framework 3.0 中，用戶端訊息只會包含任何指定類型的一個權杖。 現在，用戶端訊息可以包含某個類型的多個權杖。 本主題說明如何在用戶端訊息中包含相同類型的多個權杖。  
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>作法：使用相同類型的多個安全性權杖
+
+- 在 .NET Framework 3.0 中，用戶端訊息只會包含任何指定類型的一個 token。 現在，用戶端訊息可以包含某個類型的多個權杖。 本主題說明如何在用戶端訊息中包含相同類型的多個權杖。  
   
 - 請注意，設定服務時，服務絕對不可以只包含一個支援權杖。  
   

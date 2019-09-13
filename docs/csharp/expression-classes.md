@@ -3,12 +3,12 @@ title: 支援運算式樹狀架構的架構類型
 description: 了解支援運算式樹狀架構的架構類型、建立運算式樹狀架構，以及使用運算式樹狀架構 API 的技術。
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d11a13000019faf2ab5c35d41d48fa199e901d1c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198461"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925974"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>支援運算式樹狀架構的架構類型
 
@@ -58,6 +58,7 @@ var addition = Expression.Add(one, two);
 
 ## <a name="navigating-the-apis"></a>巡覽 API
 有可對應幾乎所有 C# 語言語法項目的運算式節點類型。 每個類型都有針對該語言項目類型的特定方法。 您一次要記得很多東西。 我在這裡用的技巧是使用運算式樹狀架構，而不是嘗試記下一切︰
+
 1. 查看 `ExpressionType` 列舉的成員來判斷您應該檢查的可能節點。 當您要周遊並了解運算式樹狀架構時，這真的很有幫助。
 2. 查看 `Expression` 類別的靜態成員來建立運算式。 這些方法可以從其一組子節點建置任何運算式類型。
 3. 查看 `ExpressionVisitor` 類別來建立修改的運算式樹狀架構。

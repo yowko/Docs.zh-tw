@@ -4,12 +4,12 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3c9169e2936742c82ba27327ac07f0aa1b4c645c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: db374a47140392577872f6635eb7275682a7a547
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254048"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928546"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks
 
@@ -18,6 +18,7 @@ ms.locfileid: "70254048"
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
+>
 > - 準備 Microsoft.Spark.Worker
 > - 發佈您的 Spark .NET 應用程式
 > - 將您的應用程式部署到 Databricks
@@ -25,7 +26,7 @@ ms.locfileid: "70254048"
 
 ## <a name="prerequisites"></a>必要條件
 
-開始之前, 請執行下列動作:
+開始之前，請執行下列動作：
 
 - 下載 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)。
 - 將 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下載到您的本機電腦。 這是您稍後用來將適用於 Apache Spark 的 .NET 應用程式相依檔案複製到您 Spark 叢集背景工作節點的協助程式指令碼。

@@ -2,12 +2,12 @@
 title: 領域事件： 設計和實作
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 深入了解領域事件，這是用來在彙總之間建立通訊的重要概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 46341bbc3ee3e5713707cc6a18b678d51102b64d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674255"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926552"
 ---
 # <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
@@ -136,7 +136,7 @@ Udi Dahan 原本建議使用靜態類別來管理及引發事件 (如數篇相�
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>引發和分派事件的延後方法
 
-您最好將領域事件新增至集合，然後在認可交易 (如同 EF 中的 SaveChanges)「之前」  或「之後」   分派這些領域事件，而不是直接分派至領域事件處理常式 (Jimmy Bogard 在 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (更佳的領域事件模式) 的這篇文章中說明此方法)。
+您最好將領域事件新增至集合，然後在認可交易 (如同 EF 中的 SaveChanges)「之前」或「之後」分派這些領域事件，而不是直接分派至領域事件處理常式 (Jimmy Bogard 在 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (更佳的領域事件模式) 的這篇文章中說明此方法)。
 
 請務必決定在認可交易之前或之後傳送領域事件，因為這會決定您將副作用加入作為相同交易的一部分，還是加入不同的交易。 在後者的情況下，您需要處理多個彙總之間的最終一致性。 下一節將討論這個主題。
 
@@ -226,7 +226,7 @@ Vaughn Vernon 在 [Effective Aggregate DesignPart II:Making Aggregates Work Toge
 
 > 一般而言，我希望領域事件的副作用出現在相同的邏輯交易內，但不一定要在引發領域事件的相同範圍內 \[...\]在我們認可交易之前，我們會將事件分派至其各自的處理常式。
 
-如果您在認可原始交易「之前」  分派領域事件，這是因為您想要將這些事件的副作用包含在相同的交易中。 例如，如果 EF DbContext SaveChanges 方法失敗，交易將會復原所有變更，包括相關領域事件處理常式所實作之任何副作用作業的結果。 這是因為 DbContext 存留期範圍預設會定義為 "scoped"。 因此，DbContext 物件會在相同範圍或物件圖形內要具現化的多個儲存機制物件之間共用。 開發 Web API 或 MVC 應用程式時，這會與 HttpRequest 範圍一致。
+如果您在認可原始交易「之前」分派領域事件，這是因為您想要將這些事件的副作用包含在相同的交易中。 例如，如果 EF DbContext SaveChanges 方法失敗，交易將會復原所有變更，包括相關領域事件處理常式所實作之任何副作用作業的結果。 這是因為 DbContext 存留期範圍預設會定義為 "scoped"。 因此，DbContext 物件會在相同範圍或物件圖形內要具現化的多個儲存機制物件之間共用。 開發 Web API 或 MVC 應用程式時，這會與 HttpRequest 範圍一致。
 
 實際上，這兩種方法 (單一不可部分完成交易和最終一致性) 都正確。 它其實取決於您的領域或商務需求，以及領域專家給您的建議。 它也取決於您需要的服務延展性 (交易越細緻，對資料庫鎖定的影響越低)。 此外，它取決您願意對程式碼的投資，因為最終一致性需要更複雜的程式碼，才能偵測彙總之間可能不一致性的情況，並需要實作補償動作。 請考慮下列情況，如果您將變更認可至原始彙總，之後當分派事件時發生問題，而且事件處理常式無法認可其副作用，則彙總之間會有不一致的情況。
 
@@ -375,7 +375,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
 - **Cesar de la Torre：Domain Events vs.Integration Events in DDD and microservices architectures** (DDD 與微服務架構中的整合事件) \
-  <https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
+  <https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
 >[上一頁](client-side-validation.md)

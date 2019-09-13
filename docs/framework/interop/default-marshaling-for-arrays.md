@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 269d3b9ae5eec4412540b9b659cb287b3d26a482
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 96300808ba3024a138678494200b10ef722c6fd9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946697"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894228"
 ---
 # <a name="default-marshaling-for-arrays"></a>陣列的預設封送處理
 在包含整個 Managed 程式碼的應用程式中，Common Language Runtime 會將陣列類型傳遞為 In/Out 參數。 相較之下，Interop 封送處理器預設會將陣列傳遞為 In 參數。  
@@ -55,7 +55,7 @@ ms.locfileid: "69946697"
   
  **Unmanaged 簽章**  
   
-```  
+```cpp
 HRESULT New1([in] SAFEARRAY( int ) ar);  
 HRESULT New2([in] SAFEARRAY( DATE ) ar);  
 HRESULT New3([in, out] SAFEARRAY( BSTR ) *ar);  
@@ -95,7 +95,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
   
  **Unmanaged 簽章**  
   
-```  
+```cpp
 HRESULT New1(int ar[10]);  
 HRESULT New2(double ar[10][20]);  
 HRESULT New3(LPWStr ar[10]);  
@@ -124,7 +124,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
   
  **Unmanaged 簽章**  
   
-```  
+```cpp
 HRESULT New1(int ar[]);  
 HRESULT New2(int ArSize, [size_is(ArSize)] double ar[]);  
 HRESULT New3(int ElemCnt, [length_is(ElemCnt)] LPStr ar[]);  
@@ -188,7 +188,7 @@ void New3(ref String ar);
 |**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 在簽章中，提供類型、順位和界限。 在執行階段，一律會知道大小。|  
 |**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 在執行階段，一律可辨識類型、順位、界限和大小。|  
   
- 與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串]  欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  
+ 與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串] 欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
  將包含 **ELEMENT_TYPE_SZARRAY** 參數 (一維陣列) 的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 相同的轉換規則會套用至陣列項目類型。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如：  
@@ -207,8 +207,8 @@ void New(String[] ar );
   
 #### <a name="unmanaged-signature"></a>Unmanaged 簽章  
   
-```  
-HRESULT New([in] SAFEARRAY( long ) ar);   
+```cpp
+HRESULT New([in] SAFEARRAY( long ) ar);
 HRESULT New([in] SAFEARRAY( BSTR ) ar);  
 ```  
   
@@ -240,9 +240,9 @@ void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=
   
 #### <a name="unmanaged-signature"></a>Unmanaged 簽章  
   
-```  
-HRESULT New(long ar[]);   
-HRESULT New(BSTR ar[]);   
+```cpp
+HRESULT New(long ar[]);
+HRESULT New(BSTR ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
@@ -265,8 +265,8 @@ void New( String [,] ar );
   
 #### <a name="unmanaged-signature"></a>Unmanaged 簽章  
   
-```  
-HRESULT New([in] SAFEARRAY( long ) ar);   
+```cpp
+HRESULT New([in] SAFEARRAY( long ) ar);
 HRESULT New([in] SAFEARRAY( BSTR ) ar);  
 ```  
   
@@ -294,8 +294,8 @@ void New([MarshalAs(UnmanagedType.LPARRAY,
   
 #### <a name="unmanaged-signature"></a>Unmanaged 簽章  
   
-```  
-HRESULT New(long ar[]);   
+```cpp
+HRESULT New(long ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
@@ -328,8 +328,8 @@ void New2( [MarshalAs(UnmanagedType.Safe array)] System.Array ar );
   
 #### <a name="unmanaged-signature"></a>Unmanaged 簽章  
   
-```  
-HRESULT New([in] _Array *ar);   
+```cpp
+HRESULT New([in] _Array *ar);
 HRESULT New([in] SAFEARRAY(VARIANT) ar);  
 ```  
   
@@ -338,7 +338,7 @@ HRESULT New([in] SAFEARRAY(VARIANT) ar);
   
 #### <a name="unmanaged-representation"></a>Unmanaged 呈現  
   
-```  
+```cpp
 struct MyStruct {  
     short s1[128];  
 }  

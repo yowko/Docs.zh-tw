@@ -1,5 +1,5 @@
 ---
-title: HOW TO：進行對 Windows Form 控制項的安全執行緒呼叫
+title: 作法：對 Windows Forms 控制項進行安全線程呼叫
 ms.date: 02/19/2019
 dev_langs:
 - csharp
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78ad7b16d5220972a61848c0c80cd884afa842d9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913792"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928622"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>HOW TO：進行對 Windows Form 控制項的安全執行緒呼叫
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>作法：對 Windows Forms 控制項進行安全線程呼叫
 
-多執行緒可以改善效能的 Windows Forms 應用程式，但存取 Windows Form 控制項不是原本就是執行緒安全。 多執行緒可以公開您的程式碼非常嚴重且複雜的錯誤。 管理控制項的兩個或多個執行緒可以強制控制項進入不一致的狀態，並會導致競爭情況、 死結和凍結或停止回應。 如果您實作多執行緒在您的應用程式，務必以安全執行緒方式呼叫跨執行緒的控制項。 如需詳細資訊，請參閱 < [Managed 執行緒最佳做法](../../../standard/threading/managed-threading-best-practices.md)。 
+多執行緒可以改善 Windows Forms 應用程式的效能，但 Windows Forms 控制項的存取原本就不是安全線程。 多執行緒可以將您的程式碼公開給非常嚴重且複雜的 bug。 操控控制項的兩個或多個執行緒可以強制控制項進入不一致的狀態，並導致競爭情況、鎖死、凍結或停止回應。 如果您在應用程式中執行多執行緒處理，請務必以執行緒安全的方式呼叫跨執行緒控制項。 如需詳細資訊，請參閱[Managed 執行緒最佳做法](../../../standard/threading/managed-threading-best-practices.md)。 
 
-有兩種方式可安全地從未建立該控制項的執行緒中呼叫的 Windows Form 控制項。 您可以使用<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法來呼叫在主執行緒，也就會呼叫控制項中建立的委派。 或者，您可以實作<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>，這會使用事件驅動的模型來分隔結果報告在背景執行緒完成工作。 
+有兩種方式可以從未建立該控制項的執行緒安全地呼叫 Windows Forms 控制項。 您可以使用<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法來呼叫在主執行緒中建立的委派，然後再呼叫該控制項。 或者，您可以執行<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>，它會使用事件驅動模型來分隔背景執行緒中完成的工作，使其無法報告結果。 
 
 ## <a name="unsafe-cross-thread-calls"></a>不安全的跨執行緒呼叫
 
-它並不安全呼叫控制項，直接從未建立的執行緒。 下列程式碼片段會示範不安全的對<xref:System.Windows.Forms.TextBox?displayProperty=nameWithType>控制項。 `Button1_Click`事件處理常式建立新`WriteTextUnsafe`設定的主執行緒的執行緒<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>直接屬性。 
+不安全的方式是直接從未建立的執行緒呼叫控制項。 下列程式碼片段說明對<xref:System.Windows.Forms.TextBox?displayProperty=nameWithType>控制項的不安全呼叫。 事件處理常式會建立新`WriteTextUnsafe`的執行緒，它會直接設定主<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>執行緒的屬性。 `Button1_Click` 
 
 ```csharp
 private void Button1_Click(object sender, EventArgs e)
@@ -55,36 +55,37 @@ Private Sub WriteTextUnsafe()
 End Sub
 ```
 
-Visual Studio 偵錯工具偵測到這些不安全的執行緒呼叫，藉由引發<xref:System.InvalidOperationException>訊息：**跨執行緒作業無效。控制 「 」 從其所建立的執行緒以外的執行緒存取。** <xref:System.InvalidOperationException>永遠不安全的跨執行緒呼叫 Visual Studio 偵錯時，就會發生，而且可能會發生在應用程式執行階段。 您應該修正問題，但您可以設定連線，停用例外狀況<xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A?displayProperty=nameWithType>屬性設`false`。
+Visual Studio 偵錯工具會藉由引發<xref:System.InvalidOperationException>與訊息， **跨執行緒作業無效來偵測這些不安全的執行緒呼叫。控制項 "" 是從建立它的執行緒以外的執行緒存取。** 在<xref:System.InvalidOperationException> Visual Studio 的調試期間，一律會發生不安全的跨執行緒呼叫，而且可能會在應用程式執行時間發生。 您應該修正此問題，但您可以藉由將<xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A?displayProperty=nameWithType>屬性設定為來`false`停用例外狀況。
 
 ## <a name="safe-cross-thread-calls"></a>安全的跨執行緒呼叫 
 
-下列程式碼範例示範兩種方式可安全地從未建立的執行緒中呼叫的 Windows Form 控制項： 
-1. <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法，從主執行緒呼叫控制項呼叫委派。 
-2. A<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>元件，可提供的事件驅動模型。 
+下列程式碼範例示範兩種安全地從未建立的執行緒呼叫 Windows Forms 控制項的方式： 
 
-在這兩個範例中，以模擬一秒背景執行緒會休眠工作在該執行緒中完成。 
+1. <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法，它會從主執行緒呼叫委派以呼叫控制項。 
+2. <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>元件，提供事件驅動模型。 
 
-您可以建置並執行這些範例做為.NET Framework 應用程式，從C#或 Visual Basic 命令列。 如需詳細資訊，請參閱 <<c0> [ 使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或是[從命令列 (Visual Basic) 建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。 
+在這兩個範例中，背景執行緒會進入睡眠狀態一秒，以模擬在該執行緒中完成的工作。 
 
-從.NET Core 3.0 開始，您可以也建立並執行範例當做 Windows.NET Core 應用程式從資料夾具有.NET Core 的 Windows Forms *\<資料夾名稱 >.csproj*專案檔。 
+您可以從C#或 Visual Basic 命令列，將這些範例建立並執行為 .NET Framework 應用程式。 如需詳細資訊，請參閱[使用 ngen.exe 建立命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[從命令列建立（Visual Basic）](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。 
 
-## <a name="example-use-the-invoke-method-with-a-delegate"></a>範例：使用委派的叫用方法
+從 .net core 3.0 開始，您也可以從具有 .net core Windows Forms  *\<資料夾名稱 > .csproj*專案檔的資料夾中，建立並執行範例做為 Windows .net core 應用程式。 
 
-下列範例示範以確保安全執行緒呼叫至 Windows Form 控制項的模式。 它會查詢<xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName>屬性，它會比較控制項的建立執行緒 ID，以呼叫的執行緒 id。 如果執行緒識別碼都相同，則會呼叫控制項直接。 如果執行緒識別碼不同，它會呼叫<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=nameWithType>從主執行緒，讓控制項實際呼叫的委派的方法。
+## <a name="example-use-the-invoke-method-with-a-delegate"></a>範例：搭配使用 Invoke 方法與委派
 
-`SafeCallDelegate`可讓設定<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.TextBox.Text%2A>屬性。 `WriteTextSafe`方法查詢<xref:System.Windows.Forms.Control.InvokeRequired%2A>。 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>會傳回`true`，`WriteTextSafe`傳遞`SafeCallDelegate`到<xref:System.Windows.Forms.Control.Invoke%2A>進行控制項實際呼叫的方法。 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>會傳回`false`，`WriteTextSafe`設定<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>直接。 `Button1_Click`事件處理常式會建立新的執行緒，並執行`WriteTextSafe`方法。 
+下列範例示範的模式可確保對 Windows Forms 控制項的安全線程呼叫。 它會查詢<xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName>屬性，其會將控制項的建立執行緒識別碼與呼叫執行緒識別碼進行比較。 如果執行緒識別碼相同，它會直接呼叫控制項。 如果執行緒識別碼不同，則會使用主執行緒<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=nameWithType>的委派來呼叫方法，這會對控制項進行實際的呼叫。
+
+可讓您<xref:System.Windows.Forms.TextBox>設定控制項的<xref:System.Windows.Forms.TextBox.Text%2A>屬性。 `SafeCallDelegate` `WriteTextSafe`方法查詢<xref:System.Windows.Forms.Control.InvokeRequired%2A>。 <xref:System.Windows.Forms.Control.InvokeRequired%2A> `SafeCallDelegate` 如果傳回<xref:System.Windows.Forms.Control.Invoke%2A> ，則`WriteTextSafe`會將傳遞至方法，以對控制項進行實際的呼叫。 `true` 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>傳回 ，`WriteTextSafe`則會<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>直接設定。 `false` 事件處理常式會建立新的執行緒，並`WriteTextSafe`執行方法。 `Button1_Click` 
 
  [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>範例：使用 BackgroundWorker 事件處理常式
 
-輕鬆地實作多執行緒是使用<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>元件，可使用事件驅動的模型。 背景執行緒會執行<xref:System.ComponentModel.BackgroundWorker.DoWork?displayProperty=nameWithType>事件，不會與主執行緒互動。 主要執行緒會執行<xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType>事件處理常式，可以呼叫主執行緒的控制項。
+執行多執行緒的簡單方法是<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>使用元件，其使用事件驅動模型。 背景執行緒會執行<xref:System.ComponentModel.BackgroundWorker.DoWork?displayProperty=nameWithType>事件，這不會與主執行緒互動。 主要執行緒會執行<xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType>事件處理常式，以呼叫主執行緒的控制項。
 
-若要使用時，進行安全執行緒呼叫<xref:System.ComponentModel.BackgroundWorker>、 在背景執行緒執行工作，建立一個方法，並繫結至<xref:System.ComponentModel.BackgroundWorker.DoWork>事件。 在主執行緒報告的背景工作，結果中建立另一個方法，並繫結至<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>或<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件。 若要啟動背景執行緒，請呼叫<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A?displayProperty=nameWithType>。 
+若要使用<xref:System.ComponentModel.BackgroundWorker>進行安全線程呼叫，請在背景執行緒中建立方法來執行工作，並將它系結<xref:System.ComponentModel.BackgroundWorker.DoWork>至事件。 在主執行緒中建立另一個方法，以報告背景工作的結果，並將它系結<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>至<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>或事件。 若要啟動背景執行緒，請<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A?displayProperty=nameWithType>呼叫。 
 
-此範例會使用<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>若要設定的事件處理常式<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.TextBox.Text%2A>屬性。 使用範例<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件，請參閱<xref:System.ComponentModel.BackgroundWorker>。 
+這個範例會使用<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件處理常式來<xref:System.Windows.Forms.TextBox>設定控制項的<xref:System.Windows.Forms.TextBox.Text%2A>屬性。 如需使用<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件的範例，請<xref:System.ComponentModel.BackgroundWorker>參閱。 
 
  [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
@@ -92,6 +93,6 @@ Visual Studio 偵錯工具偵測到這些不安全的執行緒呼叫，藉由引
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [如何：在背景執行作業](how-to-run-an-operation-in-the-background.md)
-- [如何：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [開發以.NET Framework 的自訂 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
+- [如何：在背景中執行作業](how-to-run-an-operation-in-the-background.md)
+- [如何：執行使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [使用 .NET Framework 開發自訂 Windows Forms 控制項](developing-custom-windows-forms-controls.md)

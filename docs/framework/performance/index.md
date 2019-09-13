@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce16365f8aa9975a6ccb26415a6d091f65e1eef2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943849"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927090"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 效能
 如果您想建立高效能的應用程式，您應該以設計應用程式之其他任何功能的相同方式，來設計及規劃效能。 您可以使用 Microsoft 提供的工具來測量應用程式的效能，並在必要時改進記憶體使用量、程式碼輸送量和回應性。 本主題列出 Microsoft 提供的效能分析工具，並提供涵蓋應用程式開發之特定區域效能的其他主題連結。  
@@ -30,11 +30,11 @@ ms.locfileid: "69943849"
 ### <a name="performance-tools"></a>效能工具  
  以下是您可以搭配 .NET Framework 應用程式使用的一些效能工具。  
   
-|工具|說明|  
+|工具|描述|  
 |----------|-----------------|  
 |Visual Studio 效能分析|用來分析要部署至執行 Windows 作業系統的電腦之 .NET Framework 應用程式的 CPU 使用率。<br /><br /> 當您開啟專案之後，可從 Visual Studio 的 [偵錯] 功能表中取得這項工具。 如需詳細資訊，請參閱 [效能總管](/visualstudio/profiling/performance-explorer)。 **注意：** 以 Windows Phone 為目標時，請使用 Windows Phone 應用程式分析 (請參閱下一列)。|  
-|Windows Phone 應用程式分析|用來分析您的 Windows Phone 應用程式中的 CPU 和記憶體、網路資料傳輸速率、應用程式回應性和耗電量。<br /><br /> 當您安裝 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) 之後，可針對 Windows Phone 專案，從 Visual Studio 的 [偵錯] 功能表中取得這項工具。 如需詳細資訊, 請參閱[Windows Phone 8 的應用程式分析](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105))。|  
-|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|用來識別 CPU 和記憶體相關的效能問題。 這項工具使用 Windows 事件追蹤 (ETW) 和 CLR 程式碼分析應用程式開發介面，提供進階的記憶體和 CPU 調查，以及有關記憶體回收和 JIT 編譯的資訊。 如需如何使用 PerfView 的詳細資訊，請參閱應用程式中隨附的教學課程和說明檔、[Channel 9 影片教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)和[部落格文章](https://blogs.msdn.com/b/vancem/archive/tags/perfview/)。<br /><br /> 若是記憶體特定問題，請參閱 [Using PerfView for Memory Investigations](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots) (使用 PerfView 進行記憶體調查)。|  
+|Windows Phone 應用程式分析|用來分析您的 Windows Phone 應用程式中的 CPU 和記憶體、網路資料傳輸速率、應用程式回應性和耗電量。<br /><br /> 當您安裝 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) 之後，可針對 Windows Phone 專案，從 Visual Studio 的 [偵錯] 功能表中取得這項工具。 如需詳細資訊，請參閱[Windows Phone 8 的應用程式分析](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105))。|  
+|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|用來識別 CPU 和記憶體相關的效能問題。 這項工具使用 Windows 事件追蹤 (ETW) 和 CLR 程式碼分析應用程式開發介面，提供進階的記憶體和 CPU 調查，以及有關記憶體回收和 JIT 編譯的資訊。 如需如何使用 PerfView 的詳細資訊，請參閱應用程式中隨附的教學課程和說明檔、[Channel 9 影片教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)和[部落格文章](https://blogs.msdn.microsoft.com/vancem/tag/perfview/)。<br /><br /> 若是記憶體特定問題，請參閱 [Using PerfView for Memory Investigations](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots) (使用 PerfView 進行記憶體調查)。|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|當多個應用程式在相同電腦上執行時，用來判斷整個系統效能，例如應用程式的記憶體和儲存體使用。 您可以從下載中心取得屬於 [!INCLUDE[win8](../../../includes/win8-md.md)] 的 Windows 評定及部署套件 (ADK) 一部分的這項工具。 如需詳細資訊，請參閱 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)。|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows 事件追蹤 (ETW)  
@@ -52,7 +52,7 @@ ms.locfileid: "69943849"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[.NET Framework 應用程式中的快取](../../../docs/framework/performance/caching-in-net-framework-applications.md)|描述用於提升應用程式效能的快取資料技術。|  
 |[延遲初始設定](../../../docs/framework/performance/lazy-initialization.md)|描述如何視需要初始化物件以提升效能，特別是在應用程式啟動時。|  

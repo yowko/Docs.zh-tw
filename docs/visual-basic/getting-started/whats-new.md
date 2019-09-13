@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666869"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895267"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -21,9 +21,12 @@ ms.locfileid: "69666869"
 
 ## <a name="current-version"></a>目前版本
 
-Visual Basic 15.8 / Visual Studio 2017 版本 15.8 有關新功能，請參閱 [Visual Basic 15.8](#visual-basic-158)
+Visual Basic 16.0/Visual Studio 2019 版本16。0  
+如需新功能，請參閱[Visual Basic 16.0](#visual-basic-160)
 
 ## <a name="previous-versions"></a>舊版本
+
+Visual Basic 15.8 / Visual Studio 2017 版本 15.8 有關新功能，請參閱 [Visual Basic 15.8](#visual-basic-158)
 
 Visual Basic 15.5 / Visual Studio 2017 版本 15.5 有關新功能，請參閱 [Visual Basic 15.5](#visual-basic-155)
 
@@ -46,6 +49,21 @@ Visual Basic / Visual Studio 2005 `My` 類型和協助程式類型 (應用程式
 Visual Basic / Visual Studio .NET 2003 位元移位運算子、迴圈變數宣告
 
 Visual Basic / Visual Studio .NET 2002 第一版的 Visual Basic .NET
+
+## <a name="visual-basic-160"></a>Visual Basic 16。0
+Visual Basic 16.0 著重于為 .NET Core 提供 Visual Basic 執行時間（microsoft）的更多功能，而且是著重于 .NET Core Visual Basic 的第一個版本。 Visual Basic 執行時間的許多部分都取決於 WinForms，而這些會在較新版本的 Visual Basic 中新增。 
+
+**語句中的多個位置允許的批註**在 Visual Basic 15.8 和更早版本中，只允許在空白行、語句結尾，或在允許隱含行接續的語句中的特定位置使用批註。 從 Visual Basic 16.0 開始，在明確的行接續之後，以及在行首加上底線的空格後面的語句內，也允許批註。
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 

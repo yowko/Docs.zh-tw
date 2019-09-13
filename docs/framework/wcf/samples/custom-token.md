@@ -2,12 +2,12 @@
 title: 自訂權杖
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c3c6cfd9d1742f7e839d7b40220792ba455d7673
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b073375325d2989a23624303f2c40b8f61a29d02
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855517"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928660"
 ---
 # <a name="custom-token"></a>自訂權杖
 
@@ -557,7 +557,7 @@ string GetCallerCreditCardNumber()
 
      憑證會儲存在 `LocalMachine` 存放區位置下的 My (Personal) 存放區中。 憑證會儲存在 IIS 裝載服務的 LocalMachine 存放區中。 對於自我裝載的服務，您應該以 CurrentUser 取代字串 LocalMachine，將批次檔改為在 CurrentUser 存放區的位置上儲存用戶端憑證。
 
-    ```
+    ```bat
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -571,7 +571,7 @@ string GetCallerCreditCardNumber()
 
      Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。
 
-    ```
+    ```bat
     echo ************
     echo copying server cert to client's TrustedPeople store
     echo ************
@@ -580,7 +580,7 @@ string GetCallerCreditCardNumber()
 
 - 若要啟用從 IIS 裝載服務對憑證私密金鑰進行的存取，就必須將私密金鑰的適當權限授與用於執行 IIS 裝載處理序的使用者帳戶。 Setup.bat 指令碼中的最後幾個步驟將會完成這個部分。
 
-    ```
+    ```bat
     echo ************
     echo setting privileges on server certificates
     echo ************

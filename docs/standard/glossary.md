@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106916"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929072"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -40,7 +40,7 @@ ms.locfileid: "70106916"
 
 可以包含可由應用程式或其他組件呼叫之 API 集合的 *.dll*/ *.exe* 檔案。
 
-一個組件可以包含介面、類別、結構、列舉和委派等類型。 專案的 *bin* 資料夾中的組件有時稱為「二進位檔」  。 另請參閱[程式庫](#library)。
+一個組件可以包含介面、類別、結構、列舉和委派等類型。 專案的 *bin* 資料夾中的組件有時稱為「二進位檔」。 另請參閱[程式庫](#library)。
 
 ## <a name="clr"></a>CLR
 
@@ -85,6 +85,7 @@ Common Language Runtime。
 一般而言，一組功能齊全的 API 可加快開發和部署以特定技術為基礎的應用程式。 ASP.NET Core 和 Windows Forms 即為此一般意義的應用程式架構範例。 另請參閱[程式庫](#library)。
 
 「架構」一字在下列詞彙中有更特定的技術意義：
+
 - [.NET Framework](#net-framework)
 - [目標 Framework](#target-framework)
 - [TFM (目標 Framework Moniker)](#tfm)

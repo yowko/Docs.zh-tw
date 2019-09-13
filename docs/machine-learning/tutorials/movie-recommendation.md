@@ -5,12 +5,12 @@ author: briacht
 ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 4f80ebad0a280040e9f3329dc7b647bd53a48fa0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107262"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929488"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教學課程：搭配 ML.NET 使用矩陣因式分解建置電影推薦工具
 
@@ -18,6 +18,7 @@ ms.locfileid: "70107262"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > * 選取機器學習演算法
 > * 準備及載入您的資料
 > * 建置及定型模型
@@ -47,15 +48,15 @@ ms.locfileid: "70107262"
 
 ### <a name="create-a-project"></a>建立專案
 
-1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]   >  [新增]   >  [專案]  。 在 [新增專案]  對話方塊中，選取 [Visual C#]  節點，然後選取 [.NET Core]  節點。 然後選取 [主控台應用程式 (.NET Core)]  專案範本。 在 [名稱]  文字方塊中，鍵入 "MovieRecommender"，然後選取 [確定]  按鈕。
+1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "MovieRecommender"，然後選取 [確定] 按鈕。
 
 2. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集：
 
-    在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選取 [新增]   > [新增資料夾]  。 輸入 "Data"，然後按 Enter。
+    在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新增資料夾]。 輸入 "Data"，然後按 Enter。
 
 3. 安裝 **Microsoft.ML** 和 **Microsoft.ML.Recommender** NuGet 套件：
 
-    在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽]  索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝]  按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受]  對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。 為 **Microsoft.ML.Recommender** 重複這些步驟。
+    在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 為 **Microsoft.ML.Recommender** 重複這些步驟。
 
 4. 在您的 *Program.cs* 檔案最上方新增下列 `using` 陳述式：
 
@@ -70,7 +71,7 @@ ms.locfileid: "70107262"
 
      請務必將 \*.csv 檔案儲存至 *Data* 資料夾，或儲存在其他位置之後將 \*.csv 檔案移至 *Data* 資料夾。
 
-2. 在 [方案總管] 中，於每個 \*.csv 檔案上按一下滑鼠右鍵，然後選取 [屬性]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
+2. 在 [方案總管] 中，於每個 \*.csv 檔案上按一下滑鼠右鍵，然後選取 [屬性]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
    ![在 VS 中有更新版本時複製](./media/movie-recommendation/copytoout.gif)
 
@@ -95,7 +96,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 
 您希望預測電影評等，因此評等資料行是 `Label`。 其他三個資料行 `userId`、`movieId` 和 `timestamp` 都是 `Features`，用來預測 `Label`。
 
-| 功能      | 標籤         |
+| 功能      | ThisAddIn         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
@@ -105,7 +106,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 
 在此情況下，您應該排除 `timestamp` 資料行為 `Feature`，因為時間戳記並不會實際影響使用者對特定影片的評分方式，因此無法提供更精確的預測：
 
-| 功能      | 標籤         |
+| 功能      | ThisAddIn         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
@@ -114,9 +115,9 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 
 將新類別新增至專案：
 
-1. 在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]  。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]。
 
-2. 在 [新增項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *MovieRatingData.cs*。 接著，選取 [新增]  按鈕。
+2. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *MovieRatingData.cs*。 接著，選取 [新增] 按鈕。
 
 *MovieRatingData.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 `using` 陳述式新增至 *MovieRatingData.cs* 的最上方：
 
@@ -198,7 +199,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 由於 `userId` 和 `movieId` 代表使用者與電影標題，而非真正的值，所以您會使用 [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 方法來將每個 `userId` 和每個 `movieId` 轉換成數值索引鍵類型 `Feature` 資料行 (推薦演算法所接受的格式)，並將其新增為新的資料集資料行：
 
-| userId | movieId | 標籤 | userIdEncoded | movieIdEncoded |
+| userId | movieId | ThisAddIn | userIdEncoded | movieIdEncoded |
 | ------------- |:-------------:| -----:|-----:|-----:|
 | 1 | 1 | 4 | userKey1 | movieKey1 |
 | 1 | 3 | 4 | userKey1 | movieKey2 |
@@ -449,7 +450,7 @@ var options = new MatrixFactorizationTrainer.Options
 
 具備共同篩選的矩陣分解演算法，僅為執行電影推薦的其中一種方法。 在許多情況下，您可能會沒有可用的評等資料，並只有使用者的電影觀看記錄。 而在其他情況下，您擁有的資料可能不只是使用者評等資料。
 
-| 演算法       | 情節           | 範例  |
+| 演算法       | 狀況           | 範例  |
 | ------------- |:-------------:| -----:|
 | 單一類別矩陣分解 | 當您只需要 userId 和 movieId 時，請使用此選項。 此推薦類型乃根據共同採購案例或經常同時購買的產品，也就是會根據客戶自己的採購訂單記錄向客戶推薦一組產品。 | [> 現在就試試看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
 | 欄位感知分解機器 | 當您所擁有的功能多於 userId、productId 和評等 (如產品描述或產品價格) 時，請使用此選項來進行推薦。 此方法也會使用共同作業篩選方法。 | [> 現在就試試看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
@@ -467,6 +468,7 @@ var options = new MatrixFactorizationTrainer.Options
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
+>
 > * 選取機器學習演算法
 > * 準備及載入您的資料
 > * 建置及定型模型

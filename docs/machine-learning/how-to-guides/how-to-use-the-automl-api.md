@@ -3,12 +3,12 @@ title: 如何使用 ML.NET 自動化的 ML API
 description: ML.NET 自動化的 ML API 會自動化模型建置程序，並產生隨時可供部署的模型。 了解您可用來設定自動化機器學習工作的選項。
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
-ms.translationtype: HT
+ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960422"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929401"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自動化的機器學習 API
 
@@ -26,13 +26,14 @@ ms.locfileid: "65960422"
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.AutoML;
-    ...
+    // ...
     MLContext mlContext = new MLContext();
     IDataView trainDataView = mlContext.Data.LoadFromTextFile<SentimentIssue>("my-data-file.csv", hasHeader: true);
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>選取機器學習工作類型
 建立實驗之前，請先決定您想要解決的機器學習問題種類。 自動化的機器學習支援下列 ML 工作：
+
 * 二元分類
 * 多元分類
 * 回復
@@ -104,6 +105,7 @@ using Microsoft.ML.AutoML;
     ```
 
 依 ML 工作支援的定型器清單位在對應連結中，如下所示：
+
 * [支援的二元分類演算法](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [支援的多元分類演算法](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [支援的迴歸演算法](xref:Microsoft.ML.AutoML.RegressionTrainer)
@@ -210,6 +212,7 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 下列是每項 ML 工作的所有可用計量：
+
 * [二元分類計量](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [多元分類計量](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
 * [迴歸計量](xref:Microsoft.ML.AutoML.RegressionMetric)

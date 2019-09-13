@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: ff60bb5de403970f432e938cba81ca4e99476e8a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660572"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925979"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中取用 .NET Standard 程式庫
 
@@ -28,9 +28,10 @@ ms.locfileid: "69660572"
 就像您將單元測試包含在與類別庫相同的方案中一樣，您也可以將應用程式包含在該方案中。 例如，您可以在提示使用者輸入字串並回報其第一個字元是否為大寫的主控台應用程式中，使用您的類別庫：
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-1. 開啟您[在 Visual Studio 2017 中使用 .NET Core 組置 C# 類別庫](./library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 方案。 在方案總管  中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]   >  [新增專案]  。
 
-1. 在 [新增專案]  對話方塊中，展開 [Visual C#]  節點，選取後面跟著 [主控台應用程式 (.NET Core)]  專案範本的 [.NET Core]  節點。 在 **[名稱]** 文字方塊中，輸入 "ShowCase"，然後選取 **[確定]** 按鈕。
+1. 開啟您[在 Visual Studio 2017 中使用 .NET Core 組置 C# 類別庫](./library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 方案。 在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]  >  [新增專案]。
+
+1. 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "ShowCase"，然後選取 **[確定]** 按鈕。
 
    ![Visual Studio [新增專案] 對話方塊 - C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
@@ -38,7 +39,7 @@ ms.locfileid: "69660572"
 
    ![Visual Studio 專案的設定啟始專案操作功能表 - C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. 一開始，您的專案並無法存取類別庫。 若要讓它在您的類別庫中呼叫方法，您可以建立類別庫的參考。 在方案總管  中，以滑鼠右鍵按一下 `ShowCase` 專案的 [相依性]  節點，然後選取 [新增參考]  。
+1. 一開始，您的專案並無法存取類別庫。 若要讓它在您的類別庫中呼叫方法，您可以建立類別庫的參考。 在方案總管 中，以滑鼠右鍵按一下 `ShowCase` 專案的 [相依性] 節點，然後選取 [新增參考]。
 
    ![Visual Studio 專案的 [新增參考] 操作功能表 - C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
@@ -54,13 +55,15 @@ ms.locfileid: "69660572"
 
    此程式會提示使用者輸入字串。 它會指出該字串開頭是否為大寫字元。 如果使用者沒有輸入字串就按 Enter 鍵，應用程式就會終止且主控台視窗會關閉。
 
-1. 必要時，變更工具列以編譯 `ShowCase` 專案的 [偵錯]  版本。 選取 **ShowCase** 按鈕上的綠色箭號，以編譯並執行程式。
+1. 必要時，變更工具列以編譯 `ShowCase` 專案的 [偵錯] 版本。 選取 **ShowCase** 按鈕上的綠色箭號，以編譯並執行程式。
 
    ![顯示 [偵錯] 按鈕的 Visual Studio 專案工具列 - C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
-1. 開啟您[在 Visual Studio 2017 中使用 .NET Core 建置類別庫](vb-library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 解決方案。 在方案總管  中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]   >  [新增專案]  。
 
-1. 在 [新增專案]  對話方塊中，展開 [Visual Basic]  節點，選取後面跟著 [主控台應用程式 (.NET Core)]  專案範本的 [.NET Core]  節點。 在 **[名稱]** 文字方塊中，輸入 "ShowCase"，然後選取 **[確定]** 按鈕。
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
+1. 開啟您[在 Visual Studio 2017 中使用 .NET Core 建置類別庫](vb-library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 解決方案。 在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]  >  [新增專案]。
+
+1. 在 [新增專案] 對話方塊中，展開 [Visual Basic] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "ShowCase"，然後選取 **[確定]** 按鈕。
 
    ![Visual Studio [新增專案] 對話方塊 - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
@@ -68,7 +71,7 @@ ms.locfileid: "69660572"
 
    ![Visual Studio 專案的設定啟始專案操作功能表 - Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. 一開始，您的專案並無法存取類別庫。 若要讓它在您的類別庫中呼叫方法，您可以建立類別庫的參考。 在方案總管  中，以滑鼠右鍵按一下 `ShowCase` 專案的 [相依性]  節點，然後選取 [新增參考]  。
+1. 一開始，您的專案並無法存取類別庫。 若要讓它在您的類別庫中呼叫方法，您可以建立類別庫的參考。 在方案總管 中，以滑鼠右鍵按一下 `ShowCase` 專案的 [相依性] 節點，然後選取 [新增參考]。
 
    ![Visual Studio 專案的 [新增參考] 操作功能表 - Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
@@ -84,9 +87,10 @@ ms.locfileid: "69660572"
 
    此程式會提示使用者輸入字串。 它會指出該字串開頭是否為大寫字元。 如果使用者沒有輸入字串就按 Enter 鍵，應用程式就會終止且主控台視窗會關閉。
 
-1. 必要時，變更工具列以編譯 `ShowCase` 專案的 [偵錯]  版本。 選取 **ShowCase** 按鈕上的綠色箭號，以編譯並執行程式。
+1. 必要時，變更工具列以編譯 `ShowCase` 專案的 [偵錯] 版本。 選取 **ShowCase** 按鈕上的綠色箭號，以編譯並執行程式。
 
    ![工具列上的 [偵錯] - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 ---
 
 您可以遵循[使用 Visual Studio 2017 針對 Hello World 應用程式進行偵錯](debugging-with-visual-studio.md)和[使用 Visual Studio 2017 發行 Hello World 應用程式](publishing-with-visual-studio.md)中的步驟操作，對使用此類別庫的應用程式進行偵錯並加以發行。
@@ -95,7 +99,7 @@ ms.locfileid: "69660572"
 
 您可以藉由 NuGet 套件的形式發行類別庫，讓您的類別庫可供廣泛使用。 Visual Studio 不支援建立 NuGet 套件。 若要建立該套件，您需使用 [`dotnet` 命令列公用程式](../tools/dotnet.md)：
 
-1. 開啟主控台視窗。 例如，在 Windows 工作列的 [請隨意提出問題]  文字方塊中，輸入`Command Prompt` (或 `cmd` 簡稱)，然後選取 [命令提示字元]  桌面應用程式，或按 Enter 鍵 (如果已在搜尋結果中選取該應用程式) 來開啟主控台視窗。
+1. 開啟主控台視窗。 例如，在 Windows 工作列的 [請隨意提出問題] 文字方塊中，輸入`Command Prompt` (或 `cmd` 簡稱)，然後選取 [命令提示字元] 桌面應用程式，或按 Enter 鍵 (如果已在搜尋結果中選取該應用程式) 來開啟主控台視窗。
 
 1. 瀏覽至您類別庫的專案目錄。 除非您已重新設定一般檔案位置，否則該位置會是 *Documents\Visual Studio 2017\Projects\ClassLibraryProjects\StringLibrary* 目錄。 此目錄包含您的原始程式碼和專案檔 *StringLibrary.csproj*。
 

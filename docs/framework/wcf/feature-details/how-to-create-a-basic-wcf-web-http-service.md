@@ -1,20 +1,20 @@
 ---
-title: 作法：建立基本 WCF Web HTTP 服務
+title: HOW TO：建立基本 WCF Web HTTP 服務
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636519"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895186"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>作法：建立基本 WCF Web HTTP 服務
 
-Windows Communication Foundation (WCF) 可讓您建立公開 Web 端點的服務。 Web 端點會透過 XML 或 JSON 來傳送資料，而且不使用任何 SOAP 封套。 本主題示範如何公開這類端點。
+Windows Communication Foundation （WCF）可讓您建立公開 Web 端點的服務。 Web 端點會透過 XML 或 JSON 來傳送資料，而且不使用任何 SOAP 封套。 本主題示範如何公開這類端點。
 
 > [!NOTE]
 > 保護 Web 端點的唯一方式，就是透過 HTTPS 運用傳輸安全性來加以公開。 使用訊息安全性時，安全性資訊通常會放在 SOAP 標頭中，而傳送至非 SOAP 端點的訊息不包含任何 SOAP 封套，也就沒地方可以放置安全性資訊，因此您必須仰賴傳輸安全性。
@@ -49,13 +49,13 @@ Windows Communication Foundation (WCF) 可讓您建立公開 Web 端點的服務
     > [!NOTE]
     > 如果您沒有加入端點，<xref:System.ServiceModel.Web.WebServiceHost> 會自動建立預設端點。 <xref:System.ServiceModel.Web.WebServiceHost> 也會加入 <xref:System.ServiceModel.Description.WebHttpBehavior>，並停用 HTTP 說明網頁和 Web 服務描述語言 (WSDL) 的 GET 功能，使中繼資料端點不會干擾預設 HTTP 端點。
     >
-    >  如果新增包含 "" 的 URL 非 SOAP 端點，會在嘗試呼叫端點上的作業時導致未預期的行為。 這是端點的 URI 等同於說明頁面 （頁面會顯示當您瀏覽至 WCF 服務的基底位址） 的 URI 接聽。
+    >  如果新增包含 "" 的 URL 非 SOAP 端點，會在嘗試呼叫端點上的作業時導致未預期的行為。 這種情況的原因是端點的接聽 URI 與 [說明] 頁面（當您流覽至 WCF 服務的基底位址時所顯示的頁面）的 URI 相同。
 
      您可以執行下列其中一項動作來預防發生這種情況：
 
     - 一律為非 SOAP 端點指定非空白的 URI。
 
-    - 關閉說明頁面。 這可以透過下列程式碼來完成：
+    - 關閉說明頁面。 這可以使用下列程式碼來完成：
 
      [!code-csharp[htBasicService#4](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#4)]
      [!code-vb[htBasicService#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#4)]
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) 可讓您建立公開 Web 端點的服務
 
      此範例示範如何使用主控台應用程式來裝載 Web 樣式服務。 您也可以透過 IIS 裝載這類服務。 若要這麼做，請在 .svc 檔案中指定 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 類別，如下列程式碼所示。
 
-    ```
+    ```text
     <%ServiceHost
         language=c#
         Debug="true"
@@ -77,7 +77,7 @@ Windows Communication Foundation (WCF) 可讓您建立公開 Web 端點的服務
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>若要在 Internet Explorer 中呼叫對應至 GET 的服務作業
 
-1. 開啟 Internet Explorer 並輸入"`http://localhost:8000/EchoWithGet?s=Hello, world!`"按 ENTER 鍵。 URL 包含服務的基底位址 (`http://localhost:8000/`)，端點的相對位址 ("")，後面跟著以連字號分隔的具名參數清單的服務作業呼叫 ("EchoWithGet") 和問號 (&)。
+1. 開啟 Internet Explorer 並輸入 "`http://localhost:8000/EchoWithGet?s=Hello, world!`"，然後按 enter。 URL 包含服務的基底位址（`http://localhost:8000/`）、端點的相對位址（""）、要呼叫的服務作業（"EchoWithGet"），以及後面接著以連字號（&）分隔之具名引數清單的問號。
 
 ## <a name="to-call-service-operations-in-code"></a>若要透過程式碼呼叫服務作業
 

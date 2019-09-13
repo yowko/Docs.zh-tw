@@ -3,12 +3,12 @@ title: 在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 description: 語法視覺化檢視提供了視覺化工具來瀏覽 .NET 編譯器平台 SDK 為程式碼產生的模型。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
-ms.translationtype: HT
+ms.openlocfilehash: 55a1aa555a82d286a0e8e4359e814dfe2cc301c8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307197"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926789"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 
@@ -44,6 +44,7 @@ ms.locfileid: "54307197"
 樹狀目錄中的每個項目也會顯示自己的「範圍」。 **範圍**是文字檔案中該節點的索引 (起始和結束位置)。  在上述 C# 範例中，選取的 "UsingKeyword [0..5)" 語彙基元具有五個字元寬 [0..5) 的「範圍」。 "[..)" 標記法表示起始索引是範圍的一部分，但結束索引不是。
 
 有兩種方式可瀏覽樹狀結構：
+
 * 展開，或按一下樹狀結構中的項目。 視覺化檢視會在程式碼編輯器中自動選取對應至此項目範圍的文字。
 * 在程式碼編輯器中，按一下或選取文字。 在上述 VB 範例中，如果您在程式碼編輯器中選取包含 "Module Module1" 的行，視覺化檢視會自動瀏覽至樹狀結構中的對應 ModuleStatement 節點。 
 

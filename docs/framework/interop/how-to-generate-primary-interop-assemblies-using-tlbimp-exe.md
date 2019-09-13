@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67b9b48587802b43e90a7f35ab8cbb3b2ee025b0
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: 5d88da9a043aa2ed75b25f1c59fa991b97576d52
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567258"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894210"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>作法：使用 Tlbimp.exe 產生主要 Interop 組件
 
@@ -37,7 +37,7 @@ ms.locfileid: "69567258"
 
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>使用 Tlbimp.exe 產生主要 Interop 組件
 
-1. 在命令提示中，輸入：
+1. 在命令提示字元中，輸入：
 
     **tlbimp** *tlbfile*  **/primary /keyfile:** *filename* **/out:** *assemblyname*
 
@@ -53,19 +53,19 @@ ms.locfileid: "69567258"
 
 下列範例會匯入 COM 類型程式庫  `LibUtil.tlb`，並使用金鑰檔案 `CompanyA.snk` 將組件 `LibUtil.dll` 簽署為強式名稱。 藉由略過特定命名空間名稱，此範例會產生預設的命名空間 `LibUtil`。
 
-```
+```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /out:LibUtil.dll
 ```
 
 如需更具描述性的名稱 (使用 *VendorName*.*LibraryName* 命名指導方針)，下列範例會覆寫預設組件檔案名稱和命名空間名稱。
 
-```
+```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /out:CompanyA.LibUtil.dll
 ```
 
 下列範例會匯入 `MyLib.tlb`，它參考 `CompanyA.LibUtil.dll` 並使用金鑰檔案 `CompanyB.snk` 將組件 `CompanyB.MyLib.dll` 簽署為強式名稱。 命名空間 `CompanyB.MyLib` 會覆寫預設命名空間名稱。
 
-```
+```console
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll
 ```
 

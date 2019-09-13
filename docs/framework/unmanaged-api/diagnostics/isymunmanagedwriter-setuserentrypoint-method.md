@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d14d542a8c1d8adeaf56dc1564e8e10121cd4064
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11dc050e2fe16a64db4ac95bb1386e2d90535e81
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650722"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895033"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint 方法
-指定的使用者定義的方法，此模組的進入點。 例如，此進入點可能是使用者的主要方法，而不是在 main 之前編譯器所產生的虛設常式。  
+指定使用者定義的方法，這是此模組的進入點。 例如，這個進入點可能是使用者的 main 方法，而不是編譯器在 main 之前產生的 stub。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetUserEntryPoint(  
     [in] mdMethodDef entryMethod);  
 ```  
   
 ## <a name="parameters"></a>參數  
  `entryMethod`  
- [in]是使用者的項目方法的中繼資料語彙基元點。  
+ 在使用者進入點之方法的元資料標記。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

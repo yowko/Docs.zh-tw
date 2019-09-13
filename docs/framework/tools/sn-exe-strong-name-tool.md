@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 643f0644bdeb2d3bdf6a08b482d0494affd92209
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938011"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894634"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (強式名稱工具)
 強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
@@ -36,7 +36,7 @@ ms.locfileid: "69938011"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
@@ -70,7 +70,7 @@ sn [-quiet][option [parameter(s)]]
 |**-vf**  *assembly*|驗證 *assembly.* 中的強式名稱。 與 **-v** 選項不同的是，即使使用 **-Vr** 選項停用 **-vf**，它還是會強制執行驗證。|  
 |**-Vk**  *regfile.reg* *assembly* [*userlist*] [*infile*]|建立註冊項目 (.reg) 檔案，您可以使用該檔案註冊要略過驗證的指定組件。 適用於 **-Vr** 選項的組件命名規則同樣適用於 **–Vk**。 如需 *userlist* 和 *infile* 選項的詳細資訊，請參閱 **–Vr** 選項。|  
 |**-Vl**|列出這部電腦上強式名稱驗證的目前設定。|  
-|**-Vr**  *assembly* [*userlist*] [*infile*]|註冊要略過驗證的 *assembly*。 或者，您可以指定要套用略過驗證的逗號分隔使用者名稱清單。 如果指定 *infile*，驗證會保持啟用狀態，不過 *infile* 中的公開金鑰會在驗證作業中使用。 您可以採用 *\*, strongname* 格式指定 *assembly*，以便註冊所有具有指定強式名稱的組件。 *strongname* 請指定十六位數的字串，表示公開金鑰的語彙基元形式。 若要顯示公開金鑰語彙基元，請參閱 **-t** 和 **-T** 選項。 **注意：** 此選項僅供開發期間使用。 將組件加入至略過驗證清單會使安全性變弱。 具有惡意的組件可能使用加入至略過驗證清單之組件的完全指定組件名稱 (組件名稱、版本、文化特性和公開金鑰語彙基元)，以偽裝其識別 (Identity)。 這會使具有惡意的組件也略過驗證。|  
+|**-Vr**  *assembly* [*userlist*] [*infile*]|註冊要略過驗證的 *assembly*。 或者，您可以指定要套用略過驗證的逗號分隔使用者名稱清單。 如果指定 *infile*，驗證會保持啟用狀態，不過 *infile* 中的公開金鑰會在驗證作業中使用。 您可以採用 *\*, strongname* 格式指定 *assembly*，以便註冊所有具有指定強式名稱的組件。 *strongname* 請指定十六位數的字串，表示公開金鑰的語彙基元形式。 若要顯示公開金鑰語彙基元，請參閱 **-t** 和 **-T** 選項。 **注意**：此選項僅供開發期間使用。 將組件加入至略過驗證清單會使安全性變弱。 具有惡意的組件可能使用加入至略過驗證清單之組件的完全指定組件名稱 (組件名稱、版本、文化特性和公開金鑰語彙基元)，以偽裝其識別 (Identity)。 這會使具有惡意的組件也略過驗證。|  
 |||  
 |**-Vu**  *assembly*|移除要略過驗證之 *assembly* 的註冊。 適用於 **-Vr** 的組件命名規則同樣適用於 **-Vu**。|  
 |**-Vx**|移除所有略過驗證的項目。|  
@@ -90,37 +90,37 @@ sn [-quiet][option [parameter(s)]]
 ## <a name="examples"></a>範例  
  下列命令會建立新的隨機金鑰組，並將它存放到 `keyPair.snk` 中。  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  下列命令會將金鑰儲存在強式名稱 CSP 中 `keyPair.snk` 容器的 `MyContainer` 中。  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  下列命令會從 `keyPair.snk` 擷取公開金鑰，並將它存放到 `publicKey.snk` 中。  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  下列命令會顯示 `publicKey.snk` 中所包含之公開金鑰和公開金鑰的語彙基元。  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  下列命令會驗證組件 `MyAsm.dll`。  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  下列命令會從預設的 CSP 刪除 `MyContainer`。  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   

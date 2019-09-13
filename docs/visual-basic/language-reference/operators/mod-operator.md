@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: dc1e866836bb7420ffe17210b5be7a5e1d4048d0
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 08e3eec08ba099e6f5c7796a459c55de09afa917
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374495"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929325"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 運算子（Visual Basic）
 
@@ -84,6 +84,7 @@ End Module
 ## <a name="attempted-division-by-zero"></a>嘗試除數為零
 
 如果`number2`評估為零，則`Mod`運算子的行為取決於運算元的資料類型：
+
 - 如果<xref:System.DivideByZeroException> `BC30542 Division by zero occurred while evaluating this expression` `number2`無法在編譯時期判斷，則整數除法會擲回例外狀況，如果在編譯時期評估為零，則會產生編譯時期錯誤。 `number2`
 - 浮點除法<xref:System.Double.NaN?displayProperty=nameWithType>會傳回。
 

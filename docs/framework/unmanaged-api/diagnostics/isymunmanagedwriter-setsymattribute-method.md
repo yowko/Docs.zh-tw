@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650767"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894473"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute 方法
-定義自訂屬性，根據其名稱。 這些屬性會保存在符號存放區，不同於中繼資料的自訂屬性。  
+根據名稱定義自訂屬性。 這些屬性會保留在符號存放區中，不同于中繼資料自訂屬性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT SetSymAttribute(  
     [in] mdToken parent,  
     [in] const WCHAR *name,  
@@ -39,22 +39,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>參數  
  `parent`  
- [in]中繼資料語彙基元，為其定義的屬性。  
+ 在要定義屬性的元資料標記。  
   
  `name`  
- [in]指標`WCHAR`，其中包含屬性名稱。  
+ 在的指標`WCHAR` ，其中包含屬性名稱。  
   
  `cData`  
- [in]A`ULONG32`表示的大小`data`陣列。  
+ 在，指出`data`陣列的大小。 `ULONG32`  
   
  `data`  
- [in]屬性值。  
+ 在屬性值。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648600"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894175"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送處理不同類型的陣列
 陣列是 Managed 程式碼中的參考類型，它包含一或多個相同類型的項目。 雖然陣列是參考類型，它們會做為 In 參數傳遞至 Unmanaged 函式。 此行為與 Managed 陣列傳遞至 Managed 物件的方式 (做為 In/Out 參數) 不一致。 如需詳細資訊，請參閱 [複製和固定](copying-and-pinning.md)。  
   
  下表列出陣列的封送處理選項，並說明其用法。  
   
-|陣列|說明|  
+|陣列|描述|  
 |-----------|-----------------|  
 |傳值方式的整數。|將整數的陣列做為 In 參數傳遞。|  
 |傳址方式的整數。|將整數的陣列做為 In/Out 參數傳遞。|  
@@ -52,43 +52,43 @@ ms.locfileid: "64648600"
   
 - 從 PinvokeLib.dll 匯出的**TestArrayOfInts** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
 - 從 PinvokeLib.dll 匯出的**TestRefArrayOfInts** 。  
   
-    ```  
+    ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
 - 從 PinvokeLib.dll 匯出的**TestMatrixOfInts** 。  
   
-    ```  
+    ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
 - 從 PinvokeLib.dll 匯出的**TestArrayOfStrings** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
 - 從 PinvokeLib.dll 匯出的**TestArrayOfStructs** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
 - 從 PinvokeLib.dll 匯出的**TestArrayOfStructs2** 。  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是自訂的 Unmanaged 程式庫，包含先前所列出函式和 2 個結構變數的實作： **MYPOINT** 和 **MYPERSON**。 這些結構包含下列項目：  
   
-```  
+```cpp
 typedef struct _MYPOINT  
 {  
    int x;   

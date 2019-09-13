@@ -2,12 +2,12 @@
 title: 部署已裝載網際網路資訊服務的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: b02c69e00aacafd928c59f06e0e7c050a2ca6509
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856130"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895105"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署已裝載網際網路資訊服務的 WCF 服務
 
@@ -49,9 +49,7 @@ ms.locfileid: "70856130"
 
 裝載于 IIS 的 WCF 服務會在 IIS 應用程式內以特殊內容檔案（.svc 檔案）表示。 這個模型與 IIS 應用程式將 ASMX 頁面表示為 .asmx 檔案的方式很類似。 .Svc 檔案包含 wcf 特定的處理指示詞（[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)），可讓 wcf 裝載基礎結構啟動託管服務，以回應傳入訊息。 以下是 .svc 檔案最常見的語法：
 
-```svc
-<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>
-```
+`<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
 它是由[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指示詞和單一屬性`Service`所組成。 `Service` 屬性值就是服務實作的 Common Language Runtime (CLR) 型別名稱。 基本上，使用此指示詞與使用下列程式碼來建立服務主機是一樣的：
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將組件安裝到全域組件快取
+title: 作法：將組件安裝到全域組件快取
 ms.date: 02/05/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,16 +11,17 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 233a7803cb59f9bfeac15d293dc3fb5a0db449c9
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: HT
+ms.openlocfilehash: 8e2d051cda9861da1af2caa65160b6e753b24bd1
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903767"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926506"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>HOW TO：將組件安裝到全域組件快取
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>作法：將組件安裝到全域組件快取
 
 全域組件快取 (GAC) 會儲存數個應用程式共用的組件。 使用下列其中一個元件，將組件安裝到[全域組件快取](gac.md)： 
+
 - [Windows Installer](#windows-installer)
 - [全域組件快取工具](#global-assembly-cache-tool)
 

@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: d99d4bd646f0cfee31486a030f97801e9adfa8b8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849883"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925727"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -99,6 +99,7 @@ dotnet tool install -g dotnetsay
 > 此向前復原行為不適用於預覽版本。 根據預設，也不會套用至主要版本，但可透過以下設定進行變更。
 
 您可以透過變更無候選版共用架構的向前復原設定，來修改此行為。 可用的設定為：
+
 - `0` - 停用次要版本向前復原行為。 使用此設定，為 .NET Core 2.0.0 建置的應用程式會向前復原為 .NET Core 2.0.1，而不是 .NET Core 2.2.0 或 .NET Core 3.0.0。
 - `1` - 啟用次要版本向前復原行為。 這是設定的預設值。 使用此設定，為 .NET Core 2.0.0 建置的應用程式會依安裝的版本向前復原為 .NET Core 2.0.1 或 NET Core 2.2.0，但不會是 .NET Core 3.0.0。
 - `2` - 啟用次要與主要版本的向前復原行為。 若已設定，那麼即使是其他主要版本也會列入考量，因此為 .NET Core 2.0.0 建置的應用程式會向前復原為 .NET Core 3.0.0。

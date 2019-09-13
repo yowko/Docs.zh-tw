@@ -8,18 +8,18 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779768"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894278"
 ---
 # <a name="service-operations-wcf-data-services"></a>服務作業 (WCF 資料服務)
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以讓您定義資料服務上的服務作業，以公開伺服器上的方法。 如同其他資料服務資源，服務作業依 URI 定址。 服務作業可讓您公開資料服務中的業務邏輯，例如實作驗證邏輯、套用以角色為基礎的安全性，或公開特殊的查詢功能。 服務作業是加入至資料服務類別的方法，衍生自 <xref:System.Data.Services.DataService%601>。 如同所有其他資料服務資源，您可以將參數提供給服務作業方法。 例如，下列服務作業 URI （以[快速入門](quickstart-wcf-data-services.md)資料服務為基礎）會將值`London`傳遞給`city`參數：
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 ```
 
@@ -70,7 +70,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 
 您可以將方法的名稱放入 URI 的第一個路徑區段中，以定址服務作業。 例如，下列 URI 會存取傳回 `GetOrdersByState` 物件之 <xref:System.Linq.IQueryable%601> 集合的 `Orders` 作業。
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true
 ```
 
@@ -86,7 +86,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
 
 此外，您可以將其他路徑區段或查詢選項加入至 URI，端視服務作業的傳回類型而定。 例如，下列 URI 會存取傳回 `GetOrdersByCity` 物件之 <xref:System.Linq.IQueryable%601> 集合的 `Orders` 作業 (以 `RequiredDate` 遞減方式排序) 以及相關的 `Order_Details` 物件：
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc
 ```
 

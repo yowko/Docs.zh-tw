@@ -7,32 +7,34 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: fa9aa3612a8dc72623fc4ea4b1ea337ac773fa26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c280933c81ef54ba58181e3005e30775b9b8e42
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928839"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928891"
 ---
 # <a name="tutorial-use-a-windows-communication-foundation-client"></a>教學課程：使用 Windows Communication Foundation 用戶端
 
-本教學課程說明建立基本的 Windows Communication Foundation (WCF) 應用程式所需的五個工作的最後一個。 如需教學課程的概觀，請參閱[教學課程：開始使用 Windows Communication Foundation 應用程式](getting-started-tutorial.md)。
+本教學課程說明建立基本 Windows Communication Foundation （WCF）應用程式所需的五個工作中的最後一個。 如需教學課程的總覽，請[參閱教學課程：Windows Communication Foundation 應用程式](getting-started-tutorial.md)入門。
 
-您已建立並設定 Windows Communication Foundation (WCF) proxy 之後，您會建立用戶端執行個體，並編譯用戶端應用程式。 您再使用它來與 WCF 服務進行通訊。 
+建立並設定 Windows Communication Foundation （WCF） proxy 之後，您可以建立用戶端實例並編譯用戶端應用程式。 接著，您可以使用它來與 WCF 服務進行通訊。 
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
-> - 加入程式碼使用 WCF 用戶端。
+>
+> - 加入程式碼以使用 WCF 用戶端。
 > - 測試 WCF 用戶端。
 
-## <a name="add-code-to-use-the-wcf-client"></a>加入程式碼來使用 WCF 用戶端
+## <a name="add-code-to-use-the-wcf-client"></a>加入程式碼以使用 WCF 用戶端
 
-用戶端程式碼會執行下列步驟：
-- 具現化 WCF 用戶端。
+用戶端程式代碼會執行下列步驟：
+
+- 將 WCF 用戶端具現化。
 - 從產生的 Proxy 呼叫服務作業。
-- 完成作業呼叫之後，請關閉用戶端。
+- 完成作業呼叫之後關閉用戶端。
 
-開啟**Program.cs**或是**Module1.vb**從檔案**GettingStartedClient**專案，並以下列程式碼取代其程式碼：
+從**GettingStartedClient**專案開啟**Program.cs**或**Module1**檔案，並將其程式碼取代為下列程式碼：
 
 ```csharp
 using System;
@@ -133,27 +135,27 @@ Module Module1
 End Module
 ```
 
-請注意`using`(視覺效果C#) 或`Imports`（適用於 Visual Basic) 陳述式匯入`GettingStartedClient.ServiceReference1`。 此陳述式匯入 Visual Studio 產生的程式碼**加入服務參考**函式。 程式碼會具現化 WCF proxy，並呼叫每個計算機服務所公開的服務作業。 然後，它會關閉 proxy 並結束程式。
+請注意C# `Imports` `GettingStartedClient.ServiceReference1`（適用于 Visual）或（適用于 Visual Basic）語句（匯入）。 `using` 此語句會匯入 Visual Studio 以**加入服務參考**函數產生的程式碼。 程式碼會具現化 WCF proxy，並呼叫計算機服務所公開的每個服務作業。 接著，它會關閉 proxy 並結束程式。
 
 ## <a name="test-the-wcf-client"></a>測試 WCF 用戶端
 
-### <a name="test-the-application-from-visual-studio"></a>測試應用程式從 Visual Studio
+### <a name="test-the-application-from-visual-studio"></a>從 Visual Studio 測試應用程式
 
-1. 儲存並建置方案。
+1. 儲存並建立解決方案。
 
-2. 選取  **GettingStartedLib**資料夾，然後再選取**設定為啟始專案**從捷徑功能表。
+2. 選取 [ **GettingStartedLib** ] 資料夾，然後從快捷方式功能表選取 [**設定為啟始專案**]。
 
-3. 從**啟始專案**，選取**GettingStartedLib**從下拉式清單中，然後選取**執行**，或按**F5**。
+3. 從 [**啟始專案**] 中，從下拉式清單中選取 [ **GettingStartedLib** ]，然後選取 [**執行**] 或按**F5**。
 
-### <a name="test-the-application-from-a-command-prompt"></a>測試應用程式，從命令提示字元
+### <a name="test-the-application-from-a-command-prompt"></a>從命令提示字元測試應用程式
 
-1. 開啟命令提示字元，身為管理員，，然後瀏覽至您的 Visual Studio 方案目錄。 
+1. 以系統管理員身分開啟命令提示字元，然後流覽至您的 Visual Studio 方案目錄。 
 
-2. 若要啟動服務：請輸入*GettingStartedHost\bin\Debug\GettingStartedHost.exe*。
+2. 若要啟動服務：輸入*GettingStartedHost\bin\Debug\GettingStartedHost.exe*。
 
-3. 若要啟動用戶端：開啟另一個命令提示字元，瀏覽至您的 Visual Studio 方案目錄，然後輸入*GettingStartedClient\bin\Debug\GettingStartedClient.exe*。
+3. 若要啟動用戶端：開啟另一個命令提示字元，流覽至您的 Visual Studio 方案目錄，然後輸入*GettingStartedClient\bin\Debug\GettingStartedClient.exe*。
 
-   *GettingStartedHost.exe*產生下列輸出：
+   *GettingStartedHost*會產生下列輸出：
 
    ```text
    The service is ready.
@@ -169,7 +171,7 @@ End Module
    Return: 3.14285714285714
    ```
 
-   *GettingStartedClient.exe*產生下列輸出：
+   *GettingStartedClient*會產生下列輸出：
 
    ```text
    Add(100,15.99) = 115.99
@@ -182,14 +184,15 @@ End Module
 
 ## <a name="next-steps"></a>後續步驟
 
-您現在已在 WCF 快速入門教學課程中完成所有工作。 在本教學課程中，您將了解如何：
+您現在已完成 WCF 開始使用教學課程中的所有工作。 在本教學課程中，您將了解如何：
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
-> - 加入程式碼使用 WCF 用戶端。
+>
+> - 加入程式碼以使用 WCF 用戶端。
 > - 測試 WCF 用戶端。
 
-如果您有問題或錯誤中的任何步驟，請依照下列修正它們的疑難排解文件中的步驟。
+如果您在任何步驟中遇到問題或錯誤，請遵循疑難排解文章中的步驟來修正它們。
 
 > [!div class="nextstepaction"]
-> [疑難排解 Get 開始使用 WCF 的教學課程](troubleshooting-the-getting-started-tutorial.md)
+> [開始使用 WCF 教學課程的疑難排解](troubleshooting-the-getting-started-tutorial.md)

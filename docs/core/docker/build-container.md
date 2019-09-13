@@ -4,12 +4,12 @@ description: 在此教學課程中，您將了解如何使用 Docker 來將 .NET
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253954"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926309"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教學課程：將 .NET Core 應用程式容器化
 
@@ -18,6 +18,7 @@ ms.locfileid: "70253954"
 您將了解：
 
 > [!div class="checklist"]
+>
 > * 建立及發佈簡單的 .NET Core 應用程式
 > * 建立及設定適用於 .NET Core 的 Dockerfile
 > * 建置 Docker 映像

@@ -2,22 +2,22 @@
 title: 永久性發行權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 70c7237329d1ae5f6ecde2231a66bca53e220634
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: aa1180458b118132a632ea5d798db81283fffdab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045011"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928826"
 ---
 # <a name="durable-issued-token-provider"></a>永久性發行權杖提供者
 這個範例示範如何實作自訂用戶端發行的權杖提供者。  
   
 ## <a name="discussion"></a>討論  
- Windows Communication Foundation (WCF) 中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附了 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：  
+ Windows Communication Foundation （WCF）中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附了 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：  
   
 - 如果您有內建權杖提供者無法使用的認證存放區。  
   
-- 如果您想要提供自己的自訂機制, 以便在使用者將詳細資料提供給 WCF 用戶端使用認證時, 從該點轉換認證。  
+- 如果您想要提供自己的自訂機制，以便在使用者將詳細資料提供給 WCF 用戶端使用認證時，從該點轉換認證。  
   
 - 如果您要建置自訂權杖。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "70045011"
   
 - 如何使用自訂權杖提供者設定用戶端。  
   
-- 如何快取發行的權杖, 並將其提供給 WCF 用戶端。  
+- 如何快取發行的權杖，並將其提供給 WCF 用戶端。  
   
 - 用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。  
   
@@ -110,9 +110,9 @@ ms.locfileid: "70045011"
  安全性權杖服務會使用標準 wsHttpBinding 來公開單一端點。 「安全性權杖服務」會對用戶端要求權杖做出回應，假設用戶端驗證是使用 Windows 帳戶，會再發行包含用戶端之使用者名稱的權杖，當做發行之權杖中的宣告。 在建立權杖的過程中，「安全性權杖服務」會使用與 CN=STS 憑證關聯的私密金鑰來簽署權杖。 此外，它還會建立對稱金鑰，並使用與 CN=localhost 憑證關聯的公開金鑰進行加密。 在將權杖傳回至用戶端時，「安全性權杖服務」也會傳回對稱金鑰。 用戶端會向計算機服務出示發行權杖，然後使用對稱金鑰簽署訊息來證明它知道這把金鑰。  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>自訂用戶端認證和權杖提供者  
- 下列步驟示範如何開發自訂權杖提供者, 以快取已發行的權杖並將它與 WCF: security 整合。  
+ 下列步驟示範如何開發自訂權杖提供者，以快取已發行的權杖並將它與 WCF： security 整合。  
   
-#### <a name="to-develop-a-custom-token-provider"></a>若要開發自訂權杖提供者  
+### <a name="to-develop-a-custom-token-provider"></a>若要開發自訂權杖提供者  
   
 1. 撰寫自訂權杖提供者。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "70045011"
   
      為了執行這個工作，自訂權杖提供者會衍生 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別並覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法。 這個方法會嘗試從快取中取得權杖，如果快取中找不到權杖，就從基礎提供者擷取權杖，然後再快取該權杖。 在這兩種情況下，方法都會傳回 `SecurityToken`。  
   
-    ```  
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
     {  
       GenericXmlSecurityToken token;  
@@ -137,7 +137,7 @@ ms.locfileid: "70045011"
   
      此 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 會用來建立特定 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> (以 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 方法傳遞至該管理員) 的 `CreateSecurityTokenProvider`。 安全性權杖管理員也會用來建立權杖驗證器與權杖序列化程式，但是這些不在本範例的討論範圍。 在這個範例中，自訂安全性權杖管理員繼承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別，並且會覆寫 `CreateSecurityTokenProvider` 方法，以便在傳遞的權杖需求表示要求發行的權杖時傳回自訂權杖提供者。  
   
-    ```  
+    ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -154,7 +154,7 @@ ms.locfileid: "70045011"
         {  
           return new DurableIssuedSecurityTokenProvider ((IssuedSecurityTokenProvider)base.CreateSecurityTokenProvider( tokenRequirement), this.cache);  
         }  
-        Else  
+        else  
         {  
           return base.CreateSecurityTokenProvider(tokenRequirement);  
         }  
@@ -166,7 +166,7 @@ ms.locfileid: "70045011"
   
      用戶端認證類別會用來代表針對用戶端 Proxy 設定的認證，並且建立用來取得權杖驗證器、權杖提供者及權杖序列化程式的安全性權杖管理員。  
   
-    ```  
+    ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -182,11 +182,11 @@ ms.locfileid: "70045011"
   
       public IssuedTokenCache IssuedTokenCache  
       {  
-        Get  
+        get  
         {  
           return this.cache;  
         }  
-        Set  
+        set  
         {  
           this.cache = value;  
         }  
@@ -206,18 +206,18 @@ ms.locfileid: "70045011"
   
 4. 實作權杖快取。 範例實作會使用抽象基底類別，而指定之權杖快取的消費者則透過此基底類別與快取進行互動。  
   
-    ```  
+    ```csharp
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
       public abstract bool TryGetToken(EndpointAddress target, EndpointAddress issuer, out GenericXmlSecurityToken cachedToken);  
     }  
-    Configure the client to use the custom client credential.  
+    // Configure the client to use the custom client credential.  
     ```  
   
      為了讓用戶端使用自訂用戶端認證，範例會刪除預設用戶端認證類別並提供新的用戶端認證類別。  
   
-    ```  
+    ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  
@@ -231,17 +231,17 @@ ms.locfileid: "70045011"
 ## <a name="the-setupcmd-batch-file"></a>Setup.cmd 批次檔  
  本範例中所包含的 Setup.cmd 批次檔可讓您使用相關的憑證設定伺服器和安全性權杖服務，以執行自我裝載應用程式。 批次檔會在 CurrentUser/TrustedPeople 憑證存放區中建立兩份憑證。 第一份憑證的主體名稱為 CN=STS，而且由「安全性權杖服務」用來簽署發行給用戶端的安全性權杖。 第二份憑證的主體名稱為 CN=localhost，而且由「安全性權杖服務」用於加密服務可以解密的密碼。  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
+### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
 1. 執行 Setup.cmd 檔以建立所需的憑證。  
   
-2. 若要建立方案, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。 確認已建置方案中的所有專案 (Shared、RSTRSTR、Service、SecurityTokenService 和 Client)。  
+2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。 確認已建置方案中的所有專案 (Shared、RSTRSTR、Service、SecurityTokenService 和 Client)。  
   
 3. 確定 Service.exe 和 SecurityTokenService.exe 都以系統管理員權限執行中。  
   
 4. 執行 Client.exe。  
   
-#### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
+### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 1. 當您完成執行範例後，請執行範例資料夾中的 Cleanup.cmd。  
   

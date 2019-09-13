@@ -4,12 +4,12 @@ description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1f04ccfa56c399a4dba003ec0de8a87f888ef848
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 528d46f64c424dd0f58e57891c605ac5ab474240
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849325"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925927"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -44,6 +44,7 @@ dotnet/samples GitHub 存放庫中提供下列示範教學課程所述步驟的[
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>步驟 1 - 載入 HostFxr 並取得匯出的裝載函式
 
 `nethost` 程式庫會提供用來找出 `hostfxr` 程式庫的 `get_hostfxr_path` 函式。 `hostfxr` 程式庫會公開用來裝載 .NET Core 執行階段的函式。 函式的完整清單可在 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) \(英文\) 和[原生裝載設計文件](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md) \(英文\) 中找到。 範例和本教課程會使用下列項目：
+
 * `hostfxr_initialize_for_runtime_config`：使用指定的執行階段設定初始化主機內容並針對 .NET Core 執行階段的初始化進行準備。
 * `hostfxr_get_runtime_delegate`：取得執行階段功能的委派。
 * `hostfxr_close`：關閉主機內容。

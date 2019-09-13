@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650696"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894449"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 方法
 定義單一全域變數。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -42,28 +42,28 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>參數  
  `name`  
- [in]全域變數的名稱。  
+ 在全域變數名稱。  
   
  `attributes`  
- [in]全域變數的屬性。  
+ 在全域變數屬性。  
   
  `sigToken`  
- [in]簽章的中繼資料語彙基元。  
+ 在簽章的元資料標記。  
   
  `addrKind`  
- [in]位址類型。  
+ 在網址類別型。  
   
  `addr1`  
- [in]參數規格的第一個位址。  
+ 在參數規格的第一個位址。  
   
  `addr2`  
- [in]參數規格的第二個位址。  
+ 在參數規格的第二個位址。  
   
  `addr3`  
- [in]參數規格的第三個位址。  
+ 在參數規格的第三個位址。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym.idl  

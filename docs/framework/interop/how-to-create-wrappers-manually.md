@@ -1,17 +1,17 @@
 ---
-title: 作法：手動建立包裝函式
+title: HOW TO：手動建立包裝函式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f834eb52476e9b04ed6aaf294deed88213961045
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: 5db0ec9050c74b27d3ee25a99dcf8e2319835ffb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304242"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894226"
 ---
 # <a name="how-to-create-wrappers-manually"></a>作法：手動建立包裝函式
 若您決定在 Managed 原始程式碼中手動宣告 COM 類型，現有的介面定義語言 (IDL) 檔或類型程式庫，將會是最佳的啟動位置。 沒有 IDL 檔案或無法產生類型程式庫檔案時，可建立 Managed 宣告並將所產生的組件匯出至類型程式庫，進而模擬 COM類型。  
@@ -39,7 +39,7 @@ ms.locfileid: "59304242"
   
  **IDL 或型別程式庫檔案**  
   
-```  
+```cpp
  [  
 object,  
 uuid(40A8C65D-2448-447A-B786-64682CBEF133),  
@@ -62,7 +62,7 @@ coclass SATest
  };  
 ```  
   
- **受控原始程式碼中的包裝函式**  
+ **Managed 原始程式碼中的包裝函式**  
   
 ```csharp  
 using System;  
@@ -103,7 +103,7 @@ namespace SAServer
 
 - [自訂執行階段可呼叫包裝函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [COM 資料類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
-- [作法：編輯 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
+- [如何：編輯 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
 - [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (類型程式庫匯入工具)](../tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (類型程式庫匯出工具)](../tools/tlbexp-exe-type-library-exporter.md)

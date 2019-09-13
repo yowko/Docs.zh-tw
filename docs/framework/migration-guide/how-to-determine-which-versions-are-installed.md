@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ead6db2c3df3662c4d689bd6ac2466c99b02a15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968256"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928426"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>作法：判斷安裝的 .NET Framework 版本
 
@@ -32,6 +32,7 @@ ms.locfileid: "69968256"
 > 每一個新的 .NET Framework 版本都會保留舊版的功能並增加新的功能。 您可同時在一部電腦上載入多個版本的 .NET Framework，這表示您可以安裝 .NET Framework，卻不必解除安裝舊版。 一般而言，您不應該解除安裝舊版的 .NET Framework，因為您使用的應用程式可能依賴某個特定版本，而若移除該版本則應用程式可能會中斷。
 >
 > .NET Framework 版本和 CLR 版本之間有差異：
+>
 > - .NET Framework 版本是以構成 .NET Framework Class Library 的組件集為基礎。 例如，.NET Framework 版本包含 4.5、4.6.1 和 4.7.2。
 >- CLR 版本是以 .NET Framework 應用程式執行所在的執行階段為基礎。 單一的 CLR 版本通常會支援多個 .NET Framework 版本。 例如，CLR 4.0.30319.*xxxxx* 版支援 .NET Framework 4 到 4.5.2 版，其中 *xxxxx* 會小於 42000，而 CLR 4.0.30319.42000 版支援從 .NET Framework 4.6 起的 .NET Framework 版本。
 >
@@ -60,14 +61,14 @@ ms.locfileid: "69968256"
 
 ### <a name="find-net-framework-versions-45-and-later-in-the-registry"></a>在登錄中尋找 .NET Framework 4.5 和更新版本
 
-1. 從 [開始]  功能表上，選擇 [執行]  ，輸入 *regedit*，然後選取 [確定]  。
+1. 從 [開始] 功能表上，選擇 [執行]，輸入 *regedit*，然後選取 [確定]。
 
      您必須具有系統管理認證才能執行 regedit。
 
 2. 在 [登錄編輯程式] 中，開啟下列子機碼：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**。 如果 **Full** 子機碼不存在，即表示未安裝 .NET Framework 4.5 或更新版本。
 
     > [!NOTE]
-    > 登錄中的 **NET Framework Setup** 資料夾「不是」  以英文句號開頭。
+    > 登錄中的 **NET Framework Setup** 資料夾「不是」以英文句號開頭。
 
 3. 檢查是否有名為 **Release** 的 DWORD 項目。 若有，則表示已安裝 .NET Framework 4.5 或更新版本。 其值為對應至 .NET Framework 特定版本的版本機碼。 例如，下圖中 **Release** 項目的值是 *378389*，也就是 .NET Framework 4.5 的版本機碼。
 
@@ -94,11 +95,11 @@ ms.locfileid: "69968256"
 
 您可以依照下列方式使用這些值：
 
-- 若要判斷特定版本 Windows 作業系統上是否安裝特定版本的 .NET Framework，請測試表格中所列 **Release** DWORD 值是否「等於」  表格中所列的值。 例如，若要判斷 Windows 10 系統上是否有 .NET Framework 4.6，請測試「等於」  393295 的 **Release** 值。
+- 若要判斷特定版本 Windows 作業系統上是否安裝特定版本的 .NET Framework，請測試表格中所列 **Release** DWORD 值是否「等於」表格中所列的值。 例如，若要判斷 Windows 10 系統上是否有 .NET Framework 4.6，請測試「等於」393295 的 **Release** 值。
 
-- 若要判斷 .NET Framework 最低版本是否存在，請使用該版本較小的 **RELEASE**DWORD 值。 例如，如果您的應用程式是執行.NET Framework 4.6 或更新版本，請測試「大於或等於」  393295 的 **RELEASE** DWORD 值。 對於只列出每一 .NET Framework 版本最小 **RELEASE** DWORD 值的資料表，請參閱 [.NET Framework 4.5 與更新版本的最小 Release DWORD 值](minimum-release-dword.md).
+- 若要判斷 .NET Framework 最低版本是否存在，請使用該版本較小的 **RELEASE**DWORD 值。 例如，如果您的應用程式是執行.NET Framework 4.6 或更新版本，請測試「大於或等於」393295 的 **RELEASE** DWORD 值。 對於只列出每一 .NET Framework 版本最小 **RELEASE** DWORD 值的資料表，請參閱 [.NET Framework 4.5 與更新版本的最小 Release DWORD 值](minimum-release-dword.md).
 
-- 若要測試多個版本，請從測試「大於或等於」  最新版 .NET Framework 的較小 DWORD 值開始，然後將值與每一後續較早版本的較小 DWORD 值進行比較。 例如，如果應用程式需要 .NET Framework 4.7 或更新版本，而且您想要判斷現有 .NET Framework 的特定版本，請從測試「大於或等於」  461808 (.NET Framework 4.7.2 的較小 DWORD 值) 的 **RELEASE** DWORD 值開始。 然後將 **RELEASE** DWORD 值與每一更新版本 .NET Framework 的較小值進行比較。 對於只列出每一 .NET Framework 版本最小 **RELEASE** DWORD 值的資料表，請參閱 [.NET Framework 4.5 與更新版本的最小 Release DWORD 值](minimum-release-dword.md).
+- 若要測試多個版本，請從測試「大於或等於」最新版 .NET Framework 的較小 DWORD 值開始，然後將值與每一後續較早版本的較小 DWORD 值進行比較。 例如，如果應用程式需要 .NET Framework 4.7 或更新版本，而且您想要判斷現有 .NET Framework 的特定版本，請從測試「大於或等於」461808 (.NET Framework 4.7.2 的較小 DWORD 值) 的 **RELEASE** DWORD 值開始。 然後將 **RELEASE** DWORD 值與每一更新版本 .NET Framework 的較小值進行比較。 對於只列出每一 .NET Framework 版本最小 **RELEASE** DWORD 值的資料表，請參閱 [.NET Framework 4.5 與更新版本的最小 Release DWORD 值](minimum-release-dword.md).
 
 <a name="net_d"></a>
 
@@ -117,7 +118,7 @@ ms.locfileid: "69968256"
 
 此範例遵循版本檢查的建議做法：
 
-- 它會檢查 **Release** 項目值是否「大於或等於」  已知版本機碼的值。
+- 它會檢查 **Release** 項目值是否「大於或等於」已知版本機碼的值。
 
 - 它會從最新版本依序檢查到最舊版本。
 
@@ -147,7 +148,7 @@ ms.locfileid: "69968256"
 
 ### <a name="find-net-framework-versions-182114-in-the-registry"></a>在登錄中尋找 .NET Framework 1&#8211;4 版
 
-1. 從 [開始]  功能表上，選擇 [執行]  ，輸入 *regedit*，然後選取 [確定]  。
+1. 從 [開始] 功能表上，選擇 [執行]，輸入 *regedit*，然後選取 [確定]。
 
     您必須具有系統管理認證才能執行 regedit。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b47abc2adb7b515e4d1d76da58c150703a8693d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f3777627caec7fc0d383804f71d9b7d3f09756fd
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957444"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894128"
 ---
 # <a name="composition-analysis-tool-mefx"></a>撰寫分析工具 (Mefx)
 撰寫分析工具 (Mefx) 是命令列應用程式，可分析包含 Managed Extensibility Framework (MEF) 組件的程式庫 (.dll) 和應用程式檔案 (.exe)。 Mefx 的主要目的在於提供開發人員診斷其 MEF 應用程式中複合錯誤的方式，而不必將累贅的追蹤程式碼加入應用程式本身。 它還有助於了解協力廠商所提供程式庫的組件。 本主題說明如何使用 Mefx 及提供其語法的參考。  
@@ -26,13 +26,13 @@ ms.locfileid: "69957444"
 ## <a name="basic-syntax"></a>基本語法  
  Mefx 是依照下列格式從命令列叫用：  
   
-```  
+```console
 mefx [files and directories] [action] [options]  
 ```  
   
  第一個引數集會指定要從中載入組件進行分析的檔案和目錄。 使用 `/file:` 參數指定檔案，並使用 `/directory:` 參數指定目錄。 您可以指定多個檔案或目錄，如下列範例所示：  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]  
 ```  
   
@@ -45,7 +45,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
 ## <a name="listing-available-parts"></a>列出可用的組件  
  使用 `/parts` 動作列出所載入檔案中宣告的所有組件。 結果會產生簡單的組件名稱清單。  
   
-```  
+```console
 mefx /file:MyAddIn.dll /parts  
 MyAddIn.AddIn  
 MyAddIn.MemberPart  
@@ -53,7 +53,7 @@ MyAddIn.MemberPart
   
  如需組件的詳細資訊，請使用 `/verbose` 選項。 這樣將會輸出所有可用組件的詳細資訊。 若要取得單一組件的詳細資訊，請使用 `/type` 動作，而非 `/parts`。  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose  
 [Part] MyAddIn.MemberPart from: AssemblyCatalog (Assembly=" MyAddIn, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")  
   [Export] MyAddIn.MemberPart (ContractName=" MyAddIn.MemberPart")  
@@ -63,7 +63,7 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
 ## <a name="listing-imports-and-exports"></a>列出匯入和匯出  
  `/imports` 和 `/exports` 動作將分別列出所有匯入的組件和所有匯出的組件。 您也可以使用 `/importers` 或 `/exporters` 動作，列出匯入或匯出特定類型的組件。  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /importers:MyAddin.MemberPart  
 MyAddin.AddIn  
 ```  
@@ -76,13 +76,13 @@ MyAddin.AddIn
   
  您可以使用 `/verbose` 選項搭配 `/rejected` 動作，列印遭拒絕組件的詳細資訊。 在下列範例中， `ClassLibrary1` DLL 包含 `AddIn` 組件，該組件會匯入 `MemberPart` 和 `ChainOne` 組件。 `ChainOne` 會匯入 `ChainTwo`，但是 `ChainTwo` 不存在。 這表示， `ChainOne` 遭拒，而這種情況會造成 `AddIn` 遭拒。  
   
-```  
+```console  
 mefx /file:ClassLibrary1.dll /rejected /verbose  
 ```  
   
  下面顯示前一個命令的完整輸出：  
   
-```  
+```output
 [Part] ClassLibrary1.AddIn from: AssemblyCatalog (Assembly="ClassLibrary1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")  
   [Export] ClassLibrary1.AddIn (ContractName="ClassLibrary1.AddIn")  
   [Import] ClassLibrary1.AddIn.memberPart (ContractName="ClassLibrary1.MemberPart")  
@@ -122,7 +122,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
   
  以名為 test.txt 且其中包含 "ClassLibrary1.ChainOne" 文字的檔案為例。 如果您對上述範例執行 `/rejected` 動作與 `/whitelist` 選項，它將會產生下列輸出：  
   
-```  
+```console
 mefx /file:ClassLibrary1.dll /rejected /whitelist:test.txt  
 [Unexpected] ClassLibrary1.AddIn  
 ClassLibrary1.ChainOne  

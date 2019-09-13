@@ -4,12 +4,12 @@ description: Microsoft WCF dotnet-svcutil 工具的概觀，此工具可新增 .
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 5e361ce85bec696fe5d76c4f43a444c543a9012d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 723855401f3a81edbd34c77481e4ff12db7dcdaf
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063298"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926440"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>適用於 .NET Core 的 WCF dotnet-svcutil 工具
 
@@ -25,10 +25,12 @@ Windows Communication Foundation (WCF) **dotnet-svcutil** 工具是一種 .NET C
 ## <a name="prerequisites"></a>必要條件
 
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 * [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本
 * 您慣用的程式碼編輯器
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 * [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 或更新版本
 * 您慣用的程式碼編輯器
 
@@ -175,6 +177,6 @@ dotnet svcutil --help
 
 * 如需已更新的版本資訊，請參閱[版本資訊](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) (包含已知問題)。
 
-## <a name="information"></a>資訊
+## <a name="information"></a>內容
 
 * [dotnet-svcutil NuGet 套件](https://nuget.org/packages/dotnet-svcutil) \(英文\)

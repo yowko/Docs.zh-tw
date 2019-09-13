@@ -5,18 +5,19 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 252d5f6655336669ba516393e17eb3d070611ea6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849244"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926604"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程式產生器
 
 本教學課程教導您如何在 C#.NET Core 應用程式中使用 Microsoft XML 序列化程式產生器。 您會在本教學課程中了解︰
 
 > [!div class="checklist"]
+>
 > * 如何建立 .NET Core 應用程式
 > * 如何新增 Microsoft.XmlSerializer.Generator 套件的參考
 > * 如何編輯 MyApp.csproj 以新增相依性
@@ -120,6 +121,7 @@ dotnet run
 
 恭喜您！ 您已：
 > [!div class="checklist"]
+>
 > * 建立 .NET Core 應用程式。
 > * 新增 Microsoft.XmlSerializer.Generator 套件的參考。
 > * 編輯 MyApp.csproj 以新增相依性。

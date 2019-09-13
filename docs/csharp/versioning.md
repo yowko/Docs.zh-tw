@@ -3,12 +3,12 @@ title: C# 版本控制 - C# 手冊
 description: 了解 C# 和 .NET 的版本控制運作方式
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: HT
+ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965666"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926587"
 ---
 # <a name="versioning-in-c"></a>C\# 中的版本控制
 
@@ -38,12 +38,12 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 以下是嘗試維持與舊版文件庫的相容性時要考慮的一些事項︰
 
-* 虛擬方法：當您在新版本中將虛擬方法變成非虛擬，表示必須更新覆寫該方法的專案。 這是一個極重大的變更，強烈建議您不要這麼做。
+* 虛擬方法：當您在新版本中將虛擬方法變成非虛擬，表示必須更新覆寫該方法的專案。 這是一項極重大的變更，強烈建議您不要這麼做。
 * 方法簽章：更新方法行為時也會要求您變更其簽章，您應該改建立多載，讓呼叫該方法的程式碼仍然可以運作。
 您可以一直使用舊的方法簽章呼叫新方法簽章，讓實作保持一致。
-* [Obsolete 屬性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)：您可以在程式碼中使用這個屬性，指定未來版本中要淘汰及可能移除的類別或類別成員。
-這可確保使用您文件庫的開發人員在面對重大變更時有更完善的準備。
+* [Obsolete 屬性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)：您可以在程式碼中使用這個屬性，指定未來版本中要淘汰及可能移除的類別或類別成員。 這可確保使用您文件庫的開發人員在面對重大變更時有更完善的準備。
 * 選擇性方法引數：當您將先前的選擇性方法引數變為強制，或是變更其預設值後，所有不提供這些引數的程式碼都需要更新。
+
 > [!NOTE]
 > 將強制引數變成選擇性應該沒什麼效果，特別是如果它不變更方法行為時。
 
@@ -111,3 +111,4 @@ Derived Method One: Derived Method One
 `override` 修飾詞會在編譯期間評估，如果編譯器找不到要覆寫的虛擬成員，它會擲回錯誤。
 
 您對前述技巧的掌握以及使用時機的了解，需要一段時間才能讓您輕鬆轉換版本。
+ 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a439e02046e04d8628415237d6717a74b9922371
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e8b1db291fbaf19ae9086fe1e2b76a475d198e19
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910938"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894556"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>作法：在沙箱中執行部分信任的程式碼
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,7 +57,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      或者，您可以使用現有的具名使用權限集合，例如網際網路。  
   
-    ```  
+    ```csharp
     Evidence ev = new Evidence();  
     ev.AddHostEvidence(new Zone(SecurityZone.Internet));  
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  

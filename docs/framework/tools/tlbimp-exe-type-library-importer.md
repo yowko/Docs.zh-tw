@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9c34b237655eb49b6a44c366586b3cabb5a684f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e8d9f7acfcd8dfc4d0653916138ecb05665eb420
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937983"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894583"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (類型程式庫匯入工具)
 類型程式庫匯入工具會將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的對等定義。 Tlbimp.exe 的輸出是二進位檔案 (組件)，它包含原始類型程式庫中所定義類型的執行階段中繼資料。 您可以使用像是 [Ildasm.exe](ildasm-exe-il-disassembler.md) 這類工具來檢查這個檔案。  
@@ -28,7 +28,7 @@ ms.locfileid: "69937983"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 tlbimp tlbFile [options]  
 ```  
   
@@ -38,11 +38,11 @@ tlbimp tlbFile [options]
 |--------------|-----------------|  
 |*tlbFile*|任何包含 COM 類型程式庫之檔案的名稱。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|指定要產生之組件的版本號碼。 以 *major.minor.build.revision* 格式指定 *versionnumber*。|  
 |**/company:** `companyinformation`|將公司資訊加入至輸出組件。|  
-|**/copyright:** `copyrightinformation`|將著作權資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性]  對話方塊中進行檢視。|  
+|**/copyright:** `copyrightinformation`|將著作權資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
 |**/delaysign**|指定由 Tlbimp.exe 使用延遲簽署以強式名稱簽署產生的組件。 您必須指定這個選項來配合 **/keycontainer:** 、 **/keyfile:** 或 **/publickey:** 選項。 如需延遲簽署程序的詳細資訊，請參閱[延遲簽署組件](../app-domains/delay-sign-assembly.md)。|  
 |**/help**|顯示工具的命令語法和選項。|  
 |**/keycontainer:** *containername*|使用 *containername* 所指定之金鑰容器中的公開/私密金鑰組，以強式名稱簽署產生的組件。|  
@@ -53,8 +53,8 @@ tlbimp tlbFile [options]
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/out:** *filename*|指定要在其中寫入中繼資料定義的輸出檔、組件及命名空間名稱。 如果類型程式庫指定可明確控制組件命名空間的介面定義語言 (IDL) 自訂屬性，則 **/out** 選項不會影響組件的命名空間。 如果未指定這個選項，Tlbimp.exe 會將中繼資料寫入與輸入檔所定義之實際類型程式庫同名的檔案中，並指派 .dll 做為其副檔名。 如果輸出檔與輸入檔同名，則工具將會產生錯誤以防止覆寫類型程式庫。|  
 |**/primary**|為指定的類型程式庫產生主要 Interop 組件。 組件中會加入資訊，指出類型程式庫的發行者產生該組件。 藉由指定主要 Interop 組件，就可以區別發行者的組件與使用 Tlbimp.exe 從類型程式庫建立的任何其他組件。 如果您是類型程式庫的發行者，而且您要使用 Tlbimp.exe 匯入該類型程式庫，則應該只使用 **/primary** 選項。 請注意，您必須以[強式名稱](../app-domains/strong-named-assemblies.md)簽署主要 Interop 組件。 如需詳細資訊，請參閱[主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。|  
-|**/product:** `productinformation`|將產品資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性]  對話方塊中進行檢視。|  
-|**/productversion:** `productversioninformation`|將產品版本資訊加入至輸出組件。 沒有格式限制。 這項資訊可以在組件的 [檔案屬性]  對話方塊中進行檢視。|  
+|**/product:** `productinformation`|將產品資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
+|**/productversion:** `productversioninformation`|將產品版本資訊加入至輸出組件。 沒有格式限制。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
 |**/publickey:** *filename*|指定包含公開金鑰的檔案，用來簽署產生的組件。 如果您指定 **/keyfile:** 或 **/keycontainer:** 選項而不是 **/publickey:** ，Tlbimp.exe 將會從 **/keyfile:** 或 **/keycontainer:** 提供的公開/私密金鑰組產生公開金鑰。 **/publickey:** 選項支援測試金鑰和延遲簽署情節。 檔案會採用 Sn.exe 產生的格式。 如需詳細資訊，請參閱[強式名稱工具 (Sn.exe)](sn-exe-strong-name-tool.md) 中 Sn.exe 的 **-p** 選項。|  
 |**/reference:** *filename*|指定組件檔案，用來解析在目前類型程式庫外定義之類型的參考。 如果您未指定 **/reference** 選項，Tlbimp.exe 會自動以遞迴方式匯入所匯入之類型程式庫參考的任何外部類型程式庫。 如果您指定 **/reference** 選項，則工具在匯入其他類型程式庫之前，會先嘗試解析所參考組件中的外部類型。|  
 |**/silence:** `warningnumber`|隱藏顯示指定的警告。 此選項無法搭配 **/silent** 使用。|  
@@ -63,7 +63,7 @@ tlbimp tlbFile [options]
 |**/strictref:nopia**|與 **/strictref** 相同，但是會忽略 PIA。|  
 |**/sysarray**|指定由這個工具匯入 COM 樣式的 SafeArray 作為 Managed <xref:System.Array> 類型。|  
 |**/tlbreference:** *filename*|指定用來解析類型程式庫參考的類型程式庫檔案，而不需要查閱登錄。<br /><br /> 請注意，這個選項將不會載入某些較舊的類型程式庫格式。  但是，您仍然可以透過登錄或目前的目錄，以隱含方式載入較舊的類型程式庫格式。|  
-|**/trademark:** `trademarkinformation`|將商標資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性]  對話方塊中進行檢視。|  
+|**/trademark:** `trademarkinformation`|將商標資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
 |**/transform:** *transformname*|依照 *transformname* 參數所指定，轉換中繼資料。<br /><br /> 為 *transformname* 參數指定 **dispret**，以便將分配介面 (Dispinterface) 上方法的 [out, retval] 參數轉換為傳回值。<br /><br /> 如需有關這個選項的詳細資訊，請參閱本主題後段的範例。|  
 |**/unsafe**|不經過 .NET Framework 安全性檢查即產生介面。 呼叫以這種方式公開的方法可能會造成安全性風險。 除非您很清楚公開這類程式碼的風險，否則不應該使用這個選項。|  
 |**/verbose**|指定詳細資訊模式，顯示有關匯入之類型程式庫的其他資訊。|  
@@ -87,31 +87,31 @@ tlbimp tlbFile [options]
 ## <a name="examples"></a>範例  
  下列命令會產生與 `myTest.tlb` 中所找到的類型程式庫同名且副檔名為 .dll 的組件。  
   
-```  
+```console  
 tlbimp myTest.tlb   
 ```  
   
  下列命令會產生名稱為 `myTest.dll` 的組件。  
   
-```  
+```console  
 tlbimp  myTest.tlb  /out:myTest.dll  
 ```  
   
  下列命令會產生與 `MyModule.dll\1` 所指定類型程式庫同名且副檔名為 .dll 的組件。 `MyModule.dll\1` 必須位於目前的目錄中。  
   
-```  
+```console  
 tlbimp MyModule.dll\1  
 ```  
   
  下列命令會針對 `myTestLib.dll` 類型程式庫產生名稱為 `TestLib.dll` 的組件。 **/transform:dispret** 選項會將類型程式庫中分配介面上之方法的所有 [out, retval] 參數，轉換為 Managed 程式庫中的傳回值。  
   
-```  
+```console  
 tlbimp TestLib.dll /transform:dispret /out:myTestLib.dll  
 ```  
   
  前一個範例中的 `TestLib.dll` 類型程式庫包括名為 `SomeMethod` 的分配介面方法，該方法會傳回 void 並具有 [out, retval] 參數。 以下程式碼是 `SomeMethod` 中 `TestLib.dll` 的輸入類型程式庫方法簽章。  
   
-```  
+```cpp  
 void SomeMethod([out, retval] VARIANT_BOOL*);  
 ```  
   

@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: da5e72b96fec35404e7e9ae7930f3430143487d2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769459"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929300"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Analyzer
 
@@ -23,6 +23,7 @@ ms.locfileid: "59769459"
 .NET Security Analyzer 在您想要執行它們的每個專案上，都必須安裝為 NuGet 套件。 只有一位開發人員必須將它們新增至專案。 分析器套件是一種專案相依性，而且會在具有已更新方案之後，於每位開發人員的電腦上執行。
 
 [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet 套件提供 .NET Framework Analyzer。 此套件只提供 .NET Framework 特有的分析器，包含安全性分析器。 在大部分情況下，您會想要有 [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 套件。 FxCopAnalyzers 彙總套件包含 Framework.Analyzers 套件中所含的所有架構分析器以及下列分析器：
+
 - [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers) \(英文\)：提供一般指導方針和 .NET Standard API 指導方針
 - [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers)\(英文\) ：提供 .NET Core API 專屬的分析器。
 - [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers) \(英文\)：提供包含為程式碼之文字的指導方針，包含註解。

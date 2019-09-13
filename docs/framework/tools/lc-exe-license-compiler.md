@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 753312005cd60b5be6bf5504fa9b7f14bd6367fe
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298964"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894674"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (授權編譯器)
 授權編譯器可以讀取包含授權資訊的文字檔，並產生可內嵌於通用語言執行平台可執行檔的二進位檔案做為資源。  
@@ -32,13 +32,13 @@ ms.locfileid: "59298964"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console
       lc /target:  
-      targetPE /complist:filename [/outdir:path]  
+targetPE /complist:filename [/outdir:path]  
 /i:modules [/nologo] [/v]  
 ```  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/complist:** filename|指定要包含在 .licenses 檔案中含有授權元件清單的檔案名稱。 使用元件的完整名稱與每行只有一個元件方式參考每個元件。<br /><br /> 命令列使用者可以為專案中的每個表單指定個別的檔案。 Lc.exe 接受多個輸入檔並產生單一 .licenses 檔案。|  
 |**/h**[**elp**]|顯示工具的命令語法和選項。|  
@@ -54,32 +54,32 @@ ms.locfileid: "59298964"
   
 1. 如果您要使用名為 `HostApp.exe` 之應用程式中 `Samples.DLL` 所包含的授權控制項 `MyCompany.Samples.LicControl1`，可以建立包含下列程式碼的 `HostAppLic.txt`。  
   
-    ```  
+    ```text
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
 2. 使用下列命令建立這個稱為 `HostApp.exe.licenses` 的 .licenses 檔案。  
   
-    ```  
+    ```console  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
 3. 建置包含 .licenses 檔案當做資源的 `HostApp.exe`。 如果您正在建置 C# 應用程式，可以使用下列命令來建置應用程式。  
   
-    ```  
+    ```console
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
     ```  
   
  下列命令會從由 `myApp.licenses`、`hostapplic.txt` 和 `hostapplic2.txt` 所指定的授權元件清單編譯 `hostapplic3.txt`。 `modulesList` 引數是指定包含授權元件的模組。  
   
-```  
+```console  
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
 ## <a name="response-file-example"></a>回應檔範例  
  下列清單顯示回應檔 `response.rsp` 的範例。 如需回應檔的詳細資訊，請參閱[回應檔](/visualstudio/msbuild/msbuild-response-files)。  
   
-```  
+```text  
 /target:hostapp.exe  
 /complist:hostapplic.txt   
 /i:WFCPrj.dll   
@@ -88,7 +88,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
   
  下列命令列使用 `response.rsp` 檔。  
   
-```  
+```console  
 lc @response.rsp  
 ```  
   

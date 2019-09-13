@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e210f14c74efe214be06a1cb901a144dd92af5e0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168870"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894787"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
@@ -23,7 +23,7 @@ ms.locfileid: "70168870"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 signtool [command] [options] [file_name | ...]  
 ```  
   
@@ -37,7 +37,7 @@ signtool [command] [options] [file_name | ...]
   
  簽署工具支援下列命令。 每個命令都會搭配一組獨特選項使用，這些選項列於個別區段中。  
   
-|命令|說明|  
+|命令|描述|  
 |-------------|-----------------|  
 |`catdb`|在目錄資料庫中加入或移除目錄檔。 目錄資料庫可以用來自動查閱目錄檔，並且是由 GUID 所識別。 如需 `catdb` 命令支援選項的清單，請參閱 [catdb 命令選項](../../../docs/framework/tools/signtool-exe.md#catdb)。|  
 |`sign`|數位簽署檔案。 數位簽章可以防止檔案遭到篡改，而且可讓使用者根據簽署憑證確認簽署者。 如需 `sign` 命令支援選項的清單，請參閱 [sign 命令選項](../../../docs/framework/tools/signtool-exe.md#sign)。|  
@@ -46,7 +46,7 @@ signtool [command] [options] [file_name | ...]
   
  下列選項適用於所有簽署工具命令。  
   
-|Global 選項|說明|  
+|Global 選項|描述|  
 |-------------------|-----------------|  
 |**/q**|如果命令成功執行則不顯示任何輸出，如果命令失敗則顯示最少的輸出。|  
 |**/v**|不論命令執行成功或失敗，都顯示詳細資訊輸出，並顯示警告訊息。|  
@@ -56,7 +56,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="catdb-command-options"></a>catdb 命令選項  
  下表列出可以搭配 `catdb` 命令使用的選項。  
   
-|Catdb 選項|說明|  
+|Catdb 選項|描述|  
 |------------------|-----------------|  
 |`/d`|指示預設目錄資料庫已經更新。 如果未使用 `/d` 和 `/g` 選項，簽署工具就會更新系統元件和驅動程式資料庫。|  
 |`/g` *GUID*|指定由全域唯一識別項 *GUID* 所識別的目錄資料庫已更新。|  
@@ -67,7 +67,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="sign-command-options"></a>Sign 命令選項  
  下表列出可以搭配 `sign` 命令使用的選項。  
   
-|Sign 命令選項|說明|  
+|Sign 命令選項|描述|  
 |-------------------------|-----------------|  
 |`/a`|自動選取最佳的簽署憑證。 簽署工具會找到滿足所有指定條件的所有有效憑證，並且選取有效時間最長的一個。 如果沒有這個選項，簽署工具只需要找出一個有效的簽署憑證。|  
 |`/ac`  *file*|從 *file* 將其他憑證加入至簽章區塊。|  
@@ -116,7 +116,7 @@ signtool [command] [options] [file_name | ...]
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>驗證命令選項  
   
-|Verify 選項|說明|  
+|Verify 選項|描述|  
 |-------------------|-----------------|  
 |`/a`|指定所有方法都可以用來驗證檔案。 首先會搜尋目錄資料庫，判斷檔案是否已在目錄中簽署。 如果檔案未在任何目錄中簽署，簽署工具便會嘗試驗證檔案的內嵌簽署。 驗證不一定已在目錄中簽署的檔案時，建議您採用這個選項。 這些檔案的範例包括 Windows 檔案或驅動程式。|  
 |`/ad`|使用預設目錄資料庫尋找目錄。|  
@@ -142,7 +142,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="return-value"></a>傳回值  
  簽署工具終止時會傳回下列其中一個結束代碼。  
   
-|結束代碼|說明|  
+|結束代碼|描述|  
 |---------------|-----------------|  
 |0|執行成功。|  
 |1|執行失敗。|  
@@ -151,61 +151,61 @@ signtool [command] [options] [file_name | ...]
 ## <a name="examples"></a>範例  
  下列命令會將目錄檔 MyCatalogFileName.cat 加入至系統元件和驅動程式資料庫。 如有必要防止取代名為 `/u` 的現有目錄檔案，`MyCatalogFileName.cat` 選項會產生一個唯一的名稱。  
   
-```  
+```console  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
  下列命令會使用最佳憑證自動簽署檔案。  
   
-```  
+```console  
 signtool sign /a MyFile.exe  
 ```  
   
  下列命令使用儲存在受密碼保護之 PFX 檔中的憑證存放區，對檔案進行數位簽署。  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
  下列命令會對檔案進行數位簽署和時間戳記。 用於簽署檔案的憑證存放在 PFX 檔中。  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  下列命令會使用位於主旨名稱為 `My` 之 `My Company Certificate` 存放區中的憑證來簽署檔案。  
   
-```  
+```console  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
  下列命令會簽署 ActiveX 控制項，並在提示使用者安裝該控制項時，提供由 Internet Explorer 顯示的資訊。  
   
-```  
+```console  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
  下列命令會為已數位簽署的檔案加上時間戳記。  
   
-```  
+```console  
 signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  下列命令會確認檔案是否已簽署。  
   
-```  
+```console  
 signtool verify MyFile.exe  
 ```  
   
  下列命令會驗證可能已在目錄中簽署的系統檔。  
   
-```  
+```console  
 signtool verify /a SystemFile.dll  
 ```  
   
  下列命令會驗證已在名為 `MyCatalog.cat` 之目錄中簽署的系統檔。  
   
-```  
+```console  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   

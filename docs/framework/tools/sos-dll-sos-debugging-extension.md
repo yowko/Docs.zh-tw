@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
-ms.translationtype: HT
+ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690163"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894625"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS 偵錯擴充功能)
 
@@ -21,7 +21,7 @@ SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (
 
 ## <a name="syntax"></a>語法
 
-```shell
+```console
 ![command] [options]
 ```
 
@@ -104,7 +104,7 @@ SOS 偵錯延伸模組讓您能夠檢視在 CLR 內執行之程式碼的相關�
 
 若要將 SOS 偵錯擴充功能載入至 WinDbg.exe 偵錯工具，請在此工具中執行下列命令：
 
-```
+```console
 .loadby sos clr
 ```
 
@@ -114,7 +114,7 @@ WinDbg.exe 和 Visual Studio 都會使用對應於目前使用中之 Mscorwks.dl
 
 若要載入特定的 SOS.dll 版本，請在 Windows 偵錯工具中輸入下列命令：
 
-```
+```console
 .load <full path to sos.dll>
 ```
 
@@ -122,85 +122,85 @@ WinDbg.exe 和 Visual Studio 都會使用對應於目前使用中之 Mscorwks.dl
 
 下列命令會顯示在位址 `00ad28d0` 之陣列的內容。  顯示會從第二個元素開始，然後連續顯示五個元素。
 
-```
+```console
 !dumparray -start 2 -length 5 -detail 00ad28d0
 ```
 
 下列命令會顯示在位址 `1ca248` 之組件的內容。
 
-```
+```console
 !dumpassembly 1ca248
 ```
 
 下列命令會顯示記憶體回收行程堆積的相關資訊。
 
-```
+```console
 !dumpheap
 ```
 
 下列命令會將記憶體中壓力記錄檔的內容，寫入目前目錄中名為 StressLog.txt 的預設檔案。
 
-```
+```console
 !DumpLog
 ```
 
 下列命令會顯示在位址 `MethodDesc` 的 `902f40` 結構。
 
-```
+```console
 !dumpmd 902f40
 ```
 
 下列命令會顯示在位址 `1caa50` 之模組的相關資訊。
 
-```
+```console
 !dumpmodule 1caa50
 ```
 
 下列命令會顯示在位址 `a79d40` 之物件的相關資訊。
 
-```
+```console
 !DumpObj a79d40
 ```
 
 下列命令會使用在位址 `00a79d9c` 的方法資料表，來顯示在位址 `0090320c` 之實值類別的欄位。
 
-```
+```console
 !DumpVC 0090320c 00a79d9c
 ```
 
 下列命令會顯示記憶體回收行程所使用的處理序記憶體。
 
-```
+```console
 !eeheap -gc
 ```
 
 下列命令會顯示已排程為最終處理的所有物件。
 
-```
+```console
 !finalizequeue
 ```
 
 下列命令會判斷在位址 `00a79d98`之物件的應用程式定義域。
 
-```
+```console
 !findappdomain 00a79d98
 ```
 
 下列命令會顯示目前處理序中的所有記憶體回收行程控制代碼。
 
-```
+```console
 !gcinfo 5b68dbb8
 ```
 
 下列命令會顯示 `MethodTable` 模組中，`EEClass` 類別之 `Main` 方法的 `MainClass` 和 `unittest.exe` 結構。
 
-```
+```console
 !name2ee unittest.exe MainClass.Main
 ```
 
 下列命令會顯示 `02000003` 模組中，在位址 `unittest.exe` 之中繼資料語彙基元的相關資訊。
 
-```
+```console
 !token2ee unittest.exe 02000003
 ```
 

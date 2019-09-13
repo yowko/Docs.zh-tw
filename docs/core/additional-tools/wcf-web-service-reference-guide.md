@@ -4,12 +4,12 @@ description: 新增 .NET Core 和 ASP.NET Core 專案功能的 Microsoft WCF Web
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 806f6e90aedc669c3a56ce1cde64311bdd4af32c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750501"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926465"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
@@ -26,9 +26,10 @@ ms.locfileid: "64750501"
 
 > [!NOTE]
 > **WCF Web Service Reference** 選項適用於使用下列專案範本建立的專案：
-> * **Visual C#** > **.NET Core**
-> * **Visual C#** > **.NET Standard**
-> * **Visual C#** > **Web** > **ASP.NET Core Web 應用程式**
+>
+> * **Visual C#**  >  **.NET Core**
+> * **Visual C#**  >  **.NET Standard**
+> * **Visual C#**  > **Web** > **ASP.NET Core Web 應用程式**
 
 使用 **ASP.NET Core Web 應用程式** 專案範本作為範例，本文會引導您完成將 WCF 服務參考新增至專案：
 

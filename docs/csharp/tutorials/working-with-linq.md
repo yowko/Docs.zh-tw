@@ -3,12 +3,12 @@ title: 處理 LINQ
 description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785862"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926609"
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -339,6 +339,7 @@ public static void Main(string[] args)
 ## <a name="conclusion"></a>結論
 
 在此專案中，您已涵蓋：
+
 - 使用 LINQ 查詢來將資料彙總到有意義的序列
 - 撰寫擴充方法，將自己的自訂功能新增到 LINQ 查詢
 - 在程式碼中尋找 LINQ 查詢可能遇到效能問題 (例如降低速度) 的區域
@@ -347,6 +348,7 @@ public static void Main(string[] args)
 除了 LINQ，您還了解到魔術師使用撲克牌的技巧。 魔術師之所以使用完美洗牌，是因為他們可以控制每張牌在牌堆中的動向。 既然您已經知道，就不要為其他人破壞了它！
 
 如需有關 LINQ 的詳細資訊，請參閱：
+
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
   - [LINQ 簡介](../programming-guide/concepts/linq/index.md)
   - [基本 LINQ 查詢作業 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

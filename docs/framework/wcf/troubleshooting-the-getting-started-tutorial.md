@@ -1,27 +1,28 @@
 ---
-title: 疑難排解 Get 開始使用 Windows Communication Foundation 教學課程
+title: Windows Communication Foundation 教學課程入門疑難排解
 ms.date: 01/25/2019
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 8089e0fee262d07be591069982b1aacfbeae2521
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10a2f8f718d802a7aab067b882f0d5cf3dc28dca
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791465"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928571"
 ---
-# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>疑難排解 Get 開始使用 Windows Communication Foundation 教學課程
+# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Windows Communication Foundation 教學課程入門疑難排解
 
-本文提供解決方案的最常見的問題和錯誤，當您遵循的步驟中，您可能會面臨[教學課程：開始使用 Windows Communication Foundation 應用程式](getting-started-tutorial.md)。 
+本文提供您在遵循[教學課程中的步驟時可能面臨的最常見問題和錯誤的解決方案：Windows Communication Foundation 應用程式](getting-started-tutorial.md)入門。 
   
 ## <a name="common-problems"></a>常見問題
 
-**我找不到我的硬碟機上的專案檔。**
+**我在硬碟上找不到專案檔。**
 
- Visual Studio 會儲存在專案檔*C:\Users\\&lt;使用者名稱&gt;\source\repos*。  
+ Visual Studio 會將專案檔儲存在 *\\C:\Users&gt; &lt;使用者名稱 \source\repos*中。  
 
-**我找不到*App.config*所產生的檔案*Svcutil.exe*。**
+**我找不到*Svcutil* *產生的 app.config*檔案。**
 
- 在 Visual Studio 中，**加入現有項目**視窗只有預設會顯示具有下列副檔名的檔案： 
+ 在 Visual Studio 中，[**加入現有專案**] 視窗預設只會顯示具有下列副檔名的檔案： 
+
 - *.cs* 
 - *.resx* 
 - *.settings*
@@ -34,54 +35,55 @@ ms.locfileid: "61791465"
 
 ### <a name="compile-the-service-application"></a>編譯服務應用程式 
 
-**錯誤 BC30420 'GettingStartedHost.Module1' 中找不到 ' Sub Main'。**
+**在 ' GettingStartedHost ' 中找不到錯誤 BC30420 ' Sub Main '。**
 
-進入點是不正確的 Visual Basic 應用程式。 進行下列變更：
+Visual Basic 應用程式的進入點不正確。 進行下列變更：
 
-   1. 在 [**方案總管**視窗中，選取**GettingStartedHost**資料夾，然後再選取**屬性**從捷徑功能表。
-    a. 在 [ **GettingStartedHost** ] 視窗中，如**啟始物件**，選取**Service.Program** （或特定應用程式的進入點） 從清單。 
-    b. 從主功能表中，選取**檔案** > **全部儲存**。
+   1. 在 [**方案總管**] 視窗中，選取 [ **GettingStartedHost** ] 資料夾，然後從快捷方式功能表選取 [**屬性**]。
+    a. 在 [ **GettingStartedHost** ] 視窗中，針對 [**啟始物件**]，從清單中選取 [**服務**] （或特定應用程式的進入點）。 
+    b. 從主功能表中 **，選取** > [檔案] [**全部儲存**]。
 
 ### <a name="run-the-service-application"></a>執行服務應用程式 
 
-**HTTP 無法登錄 URL ' http:\// +: 8000/GettingStarted/CalculatorService '。您的處理程序沒有足夠的存取權可存取此命名空間。** 
+**Http 無法註冊 URL ' HTTP：\//+： 8000/GettingStarted/CalculatorService '。您的處理程序沒有足夠的存取權可存取此命名空間。** 
 
- 適當的存取，如啟動裝載 Windows Communication Foundation (WCF) 服務，以系統管理權限的處理序：
-- Visual studio:選取 [Visual Studio 方案中的**開始**] 功能表，然後選取**詳細** > **系統管理員身分執行**從捷徑功能表。
-- 主控台視窗：選取**命令提示字元**中**開始**功能表，然後再選取**詳細** > **系統管理員執行身分**從快顯功能表。
-- Windows 檔案總管：選取的可執行檔，然後選取**系統管理員身分執行**從捷徑功能表。
+ 如需適當的存取權，請使用系統管理許可權啟動主控 Windows Communication Foundation （WCF）服務的進程：
+
+- 針對 Visual Studio：在 [**開始**] 功能表中選取 [Visual Studio] 程式，然後從快捷方式功能表選取 [**更多** > **以系統管理員身分執行**]。
+- 主控台視窗：在 [**開始**] 功能表中選取 [**命令提示**字元]，然後從快捷方式功能表選取 [**更多** > 以**系統管理員身分執行**]。
+- 若為 Windows Explorer：選取可執行檔，然後從快捷方式功能表選取 [**以系統管理員身分執行**]。
 
 ### <a name="compile-the-client-application"></a>編譯用戶端應用程式
 
-**'CalculatorClient'，不會包含定義 '\<方法名稱 >' 並不到擴充方法'\<方法名稱 >' 接受型別找不到 'CalculatorClient' 的第一個引數 (是否遺漏 using 指示詞或組件參考？）**  
+**' CalculatorClient ' 未包含 '\<method name > ' 的定義，而且找不到擴充\<方法的方法名稱 > ' 接受 ' CalculatorClient ' 類型的第一個引數（您是否遺漏 using 指示詞或元件參考？）**  
 
-只有在您使用標示的方法`ServiceOperationAttribute`公開公開屬性。 如果您省略`ServiceOperationAttribute`屬性中的方法從`ICalculator`介面，您在編譯期間收到此錯誤訊息。  
+只有使用`ServiceOperationAttribute`屬性標記的方法才會公開。 如果您從`ICalculator`介面`ServiceOperationAttribute`中的方法省略屬性，在編譯期間就會收到這個錯誤訊息。  
 
-**找不到 'CalculatorClient' 的類型或命名空間名稱 (您是否遺漏 using 指示詞或組件參考？)**
+**找不到類型或命名空間名稱 ' CalculatorClient ' （您是否遺漏 using 指示詞或元件參考？）**
 
- 您會收到這個錯誤，如果您未新增*generatedProxy.cs* (或*generatedProxy.vb*) 檔案，以用戶端專案，當您產生以*Svcutil.exe*工具.  
+ 如果您在使用*Svcutil*來產生用戶端專案時，未將*GeneratedProxy.cs* （或*generatedProxy*）檔案新增至該檔案，就會收到這個錯誤。  
 
 ### <a name="run-the-client-application"></a>執行用戶端應用程式
 
-**未處理的例外狀況：System.ServiceModel.EndpointNotFoundException:無法連接到 ' http:\//localhost:8000/GettingStarted/CalculatorService '。TCP 錯誤碼 10061:沒有連接，因為目標電腦主動拒絕連線。**
+**未處理的例外狀況：System.ServiceModel.EndpointNotFoundException:無法連接到 ' HTTP：\//localhost： 8000/GettingStarted/CalculatorService '。TCP 錯誤碼10061：無法連線，因為目的電腦主動拒絕該連接。**
 
-如果您不需要第一個啟動的服務執行用戶端應用程式，就會發生此錯誤。 首先，執行主應用程式啟動服務，然後再執行 [用戶端應用程式。
+如果您在未先啟動服務的情況下執行用戶端應用程式，就會發生這個錯誤。 首先，執行主應用程式以啟動服務，然後執行用戶端應用程式。
 
-### <a name="use-the-svcutilexe-tool"></a>使用 Svcutil.exe 工具
+### <a name="use-the-svcutilexe-tool"></a>使用 Svcutil 工具
    
-**'Svcutil' 不視為內部或外部命令、 可執行程式或批次檔。**
+**' Svcutil ' 未辨識為內部或外部命令、可運作的程式或批次檔。**
 
- *Svcutil.exe*必須位於系統路徑中。 最簡單的解決方案是使用 Visual Studio 命令提示字元。 從**開始**功能表上，選取**Visual Studio\<版本 >** 目錄，然後選取**VS 開發人員命令提示字元\<版本 >**. 這個命令提示字元設定的系統路徑設為正確的位置，隨附於 Visual Studio 的所有工具。  
+ *Svcutil*必須位於系統路徑中。 最簡單的解決方案是使用 Visual Studio 命令提示字元。 從 [**開始**] 功能表中，**選取\<Visual Studio 版本 >** 目錄，然後選取 [**開發人員命令提示字元\<以取得 VS 版本 >** ]。 此命令提示字元會將系統路徑設為 Visual Studio 中隨附之所有工具的正確位置。  
   
 ### <a name="run-the-service-and-client-applications"></a>執行服務和用戶端應用程式
 
-**System.ServiceModel.Security.SecurityNegotiationException:與 SOAP 安全性交涉 'http:\//localhost:8000/GettingStarted/CalculatorService' 的目標 'http:\//localhost:8000/GettingStarted/CalculatorService' 失敗**  
+**System.ServiceModel.Security.SecurityNegotiationException:目標 ' HTTP：\/ \//localhost： 8000/GettingStarted/CalculatorService ' 的 SOAP 安全性協調與 ' HTTP：/localhost： 8000/GettingStarted/CalculatorService ' 失敗**  
 
-沒有網路連線能力的已加入網域的電腦上，就會發生此錯誤。 將電腦連線到網路，或關閉 [服務和用戶端的安全性。 
+如果加入網域的電腦沒有網路連線，就會發生此錯誤。 將您的電腦連線到網路，或關閉服務和用戶端的安全性。 
 
 若要關閉安全性：
 
-- 對於服務，取代建立的程式碼`WSHttpBinding`為下列程式碼：  
+- 針對服務，請將建立的`WSHttpBinding`程式碼取代為下列程式碼：  
   
     ```csharp
     // Step 3: Add a service endpoint.
@@ -95,6 +97,6 @@ ms.locfileid: "61791465"
     ```  
 
 ## <a name="see-also"></a>另請參閱  
- [開始使用 WCF 應用程式](getting-started-tutorial.md)  
+ [WCF 應用程式入門](getting-started-tutorial.md)  
  [WCF 疑難排解快速入門](wcf-troubleshooting-quickstart.md)  
- [疑難排解安裝問題](troubleshooting-setup-issues.md)
+ [疑難排解安裝程式問題](troubleshooting-setup-issues.md)

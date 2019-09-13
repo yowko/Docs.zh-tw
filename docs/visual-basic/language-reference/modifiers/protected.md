@@ -10,35 +10,36 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 86758c68f0f3bfe214a695f656d3924eadd27e31
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a80e504cc8e88dfc8968f70fee2c17991b28aff5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642692"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929462"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
-成員存取修飾詞，指定一或多個宣告的程式設計項目都可以存取只會從自己的類別或從衍生類別中。  
+成員存取修飾詞，指定一或多個宣告的程式設計項目，只能從其本身的類別或衍生類別中存取。  
   
 ## <a name="remarks"></a>備註  
- 有時在類別中宣告的程式設計項目包含敏感性資料或受限制的程式碼，以及您想要限制存取的項目。 不過，如果是繼承的類別，而且您預期的衍生類別階層架構，它可能需要針對這些衍生的類別，以存取資料或程式碼。 在此情況下，您想要存取的基底類別和所有衍生類別的項目。 若要限制存取的項目，以這種方式，您可以將它與宣告`Protected`。  
+ 有時候，在類別中宣告的程式設計專案包含敏感性資料或受限制的程式碼，而您想要限制對專案的存取。 不過，如果類別是可繼承的，而且您預期衍生類別的階層，則這些衍生類別可能需要存取資料或程式碼。 在這種情況下，您會想要從基類和所有衍生類別來存取元素。 若要以這種方式限制對專案的存取，您可以使用`Protected`來宣告該元素。  
 
 > [!NOTE]
-> `Protected`存取修飾詞可以結合兩個其他修飾詞：
-> - [Protected Friend](protected-friend.md)修飾詞讓從該類別中，從衍生的類別，以及從相同的組件中定義類別中存取類別成員。 
-> - [Private Protected](private-protected.md)修飾詞可讓類別成員可存取由衍生的型別，但只在其包含的組件。
+> `Protected`存取修飾詞可以與兩個其他修改者結合：
+>
+> - [受保護的 Friend](protected-friend.md)修飾詞可讓類別成員從該類別、衍生類別，以及定義類別的相同元件中存取。 
+> - [私用保護](private-protected.md)的修飾詞可讓衍生類型存取類別成員，但只能在其包含的元件內使用。
   
 ## <a name="rules"></a>規則  
   
-- **宣告內容。** 您可以使用`Protected`只能在類別層級。 這表示的宣告內容`Protected`項目必須是類別，，而且不能是原始程式檔、 命名空間、 介面、 模組、 結構或程序。  
+- **宣告內容。** 您只能在`Protected`類別層級使用。 這表示`Protected`元素的宣告內容必須是類別，而且不能是原始程式檔、命名空間、介面、模組、結構或程式。  
 
 ## <a name="behavior"></a>行為  
   
-- **存取層級。** 在類別中的所有程式碼可以存取其項目。 在任何衍生自基底類別的類別中的程式碼可以存取所有`Protected`基底類別的項目。 這是衍生的所有層代，則為 true。 這表示的類別可以存取`Protected`基底類別的基底類別等的項目。  
+- **存取層級。** 類別中的所有程式碼都可以存取其元素。 任何衍生自基類的類別中的程式碼，都可以存取`Protected`基類的所有元素。 這適用于所有的衍生層代。 這表示，類別可以存取`Protected`基類基類的元素，依此類推。  
   
-     受保護的存取不是超集或 friend 存取權限的子集。  
+     受保護的存取不是 friend 存取的超集合或子集。  
   
-- **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+- **存取修飾詞。** 指定存取層級的關鍵字稱為*存取*修飾詞。 如需存取修飾詞的比較，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Protected` 修飾詞可用於以下內容：  
   
@@ -73,7 +74,7 @@ ms.locfileid: "64642692"
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

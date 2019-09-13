@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910607"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894497"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>範例：針對動態程式設計進行疑難排解
 > [!NOTE]
@@ -17,7 +17,7 @@ ms.locfileid: "69910607"
   
  並非使用 .NET Native 工具鏈開發之應用程式中的所有中繼資料查閱失敗都會導致例外狀況。  有些中繼資料查閱失敗會在應用程式中以無法預期的方式顯露出來。  下列範例顯示因為參考 null 物件而造成的存取違規：  
   
-```  
+```output
 Access violation - code c0000005 (first chance)  
 App!$3_App::Core::Util::NavigationArgs.Setup  
 App!$3_App::Core::Util::NavigationArgs..ctor  
@@ -38,9 +38,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="what-was-the-app-doing"></a>應用程式做了什麼？  
  要注意的第一件事，就是位於堆疊基底的 `async` 關鍵字裝置。  判斷應用程式在 `async` 方法中真正做了什麼可能會有問題，因為堆疊已失去原始呼叫的內容，而且已經在不同的執行緒上執行 `async` 程式碼。 不過，我們可以推算應用程式是在嘗試載入其第一個分頁。  在 `NavigationArgs.Setup` 的實作中，下列程式碼造成了存取違規：  
   
-```  
-AppViewModel.Current.LayoutVM.PageMap  
-```  
+`AppViewModel.Current.LayoutVM.PageMap`  
   
  在這個範例中，`AppViewModel.Current` 上的 `LayoutVM` 屬性為 **null**。  因為缺少某些中繼資料，而造成細微的行為差異，並導致解除初始化屬性，而不是依照應用程式預期來設定屬性。  在應該已初始化 `LayoutVM` 的程式碼中設定中斷點，也許可以釐清這個情況。  不過，請注意，`LayoutVM` 的類型是 `App.Core.ViewModels.Layout.LayoutApplicationVM`。  目前為止，rd.xml 檔案中唯一存在的中繼資料指示詞是：  
   
@@ -52,7 +50,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  在此情況下，為 `App.Core.ViewModels` 加入執行階段指示詞就解決了問題。 根本原因是對 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 方法進行的 API 呼叫傳回 **null**，而應用程式靜靜忽略這個問題，直到發生當機。  
   
- 在動態程式設計中, 使用 .NET Native 下的反映 api 時, 最好是使用<xref:System.Type.GetType%2A?displayProperty=nameWithType>會在失敗時擲回例外狀況的多載。  
+ 在動態程式設計中，使用 .NET Native 下的反映 api 時，最好是使用<xref:System.Type.GetType%2A?displayProperty=nameWithType>會在失敗時擲回例外狀況的多載。  
   
 ## <a name="is-this-an-isolated-case"></a>這是個案嗎？  
  使用 `App.Core.ViewModels` 時，可能也會發生其他問題。  您必須決定是否值得識別並修正每個遺失中繼資料的例外狀況，還是要節省時間，並為較大類別的類型加入指示詞。  在這裡，如果輸出二進位檔產生的結果大小增加並不是問題，則為 `dynamic` 加入 `App.Core.ViewModels` 中繼資料可能是最佳方法。  
@@ -63,4 +61,4 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="see-also"></a>另請參閱
 
 - [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [例如：在系結資料時處理例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [範例：在系結資料時處理例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

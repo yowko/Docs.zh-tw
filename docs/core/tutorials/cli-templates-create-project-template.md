@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 31a6189c0126d6dff000bb84978c1527dbe4e2ae
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
-ms.translationtype: HT
+ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870617"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926140"
 ---
 # <a name="tutorial-create-a-project-template"></a>教學課程：建立專案範本
 
@@ -19,6 +19,7 @@ ms.locfileid: "67870617"
 在這部分的系列文章中，您將了解如何：
 
 > [!div class="checklist"]
+>
 > * 建立專案範本的資源
 > * 建立範本設定資料夾和檔案
 > * 從檔案路徑安裝範本
@@ -130,7 +131,7 @@ working
 
 此設定檔會包含您範本的所有設定。 您可以看見基本設定 (例如 `name` 和 `shortName`)，但還有設定為 `project` 的 `tags/type` 值。 這會將您的範本指定為專案範本。 您可以建立的範本類型本身並無限制。 `item` 和 `project` 值是 .NET Core 建議的常用名稱，它們可以讓使用者輕鬆篩選其想要尋找的範本類型。
 
-`classifications` 項目代表您執行 `dotnet new` 並取得範本清單時所會看見的 [標籤]  欄。 使用者也可以根據分類標籤搜尋。 不要將 JSON 檔案中的 `tags` 屬性與 `classifications` 標籤清單混淆在一起。 它們是不同的東西，但不幸地具有類似的名稱。 *template.json* 檔案的完整結構描述位於 [JSON 結構描述存放區](http://json.schemastore.org/template)。 如需 *template.json* 檔案的詳細資訊，請參閱 [dotnet 範本化 Wiki](https://github.com/dotnet/templating/wiki) \(英文\)。
+`classifications` 項目代表您執行 `dotnet new` 並取得範本清單時所會看見的 [標籤] 欄。 使用者也可以根據分類標籤搜尋。 不要將 JSON 檔案中的 `tags` 屬性與 `classifications` 標籤清單混淆在一起。 它們是不同的東西，但不幸地具有類似的名稱。 *template.json* 檔案的完整結構描述位於 [JSON 結構描述存放區](http://json.schemastore.org/template)。 如需 *template.json* 檔案的詳細資訊，請參閱 [dotnet 範本化 Wiki](https://github.com/dotnet/templating/wiki) \(英文\)。
 
 您已經具備有效的 _.template.config/template.json_ 檔案，現在您的範本已經準備好並可供安裝。 在您安裝範本之前，請確定您已將不想要包含在範本中的所有額外檔案資料夾和檔案刪除，例如 _bin_ 或 _obj_ 資料夾。 在您的終端機中，瀏覽至 _consoleasync_ 資料夾，並執行 `dotnet new -i .\` 以安裝位於目前資料夾中的範本。 如果您是使用 Linux 或 MacOS 作業系統，請使用正斜線：`dotnet new -i ./`。
 

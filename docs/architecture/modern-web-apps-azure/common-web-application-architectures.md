@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373802"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926674"
 ---
 # <a name="common-web-application-architectures"></a>一般 Web 應用程式架構
 
@@ -292,16 +292,17 @@ ENTRYPOINT ["dotnet", "Web.dll"]
 如果您想要使用 Visual Studio 將 Docker 支援新增到應用程式，請確認這樣做時，Docker Desktop 正在執行。 如果 Docker Desktop 在您啟動精靈時並未執行，精靈將無法正確執行。 此外，精靈會檢查您目前的容器選擇，以新增正確的 Docker 支援。 如果您想要新增 Windows 容器的支援，您需要在有執行中 Docker 並已設定 Windows 容器的同時執行精靈。 如果您想要新增 Linux 容器的支援，請在有執行中 Docker 並已設定 Linux 容器的同時執行精靈。
 
 ### <a name="references--common-web-architectures"></a>參考資料 - 一般 Web 架構
-> - **Clean Architecture**  
->   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **Onion Architecture**  
->   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **存放庫模式**  
->   <https://deviq.com/repository-pattern/>
-> - **Clean Architecture 解決方案範例**  
->   <https://github.com/ardalis/cleanarchitecture>
-> - **架構微服務電子書**  
->   <https://aka.ms/MicroservicesEbook>
+
+- **Clean Architecture**  
+  <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
+- **Onion Architecture**  
+  <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+- **存放庫模式**  
+  <https://deviq.com/repository-pattern/>
+- **Clean Architecture 解決方案範例**  
+  <https://github.com/ardalis/cleanarchitecture>
+- **架構微服務電子書**  
+  <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 >[上一頁](architectural-principles.md)

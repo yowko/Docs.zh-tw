@@ -4,12 +4,12 @@ description: 了解如何建置產品銷售資料的異常偵測應用程式。 
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 4228a68ad43416c6e32684441593d92dfdbfd808
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
-ms.translationtype: HT
+ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733286"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929047"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售中的異常
 
@@ -17,6 +17,7 @@ ms.locfileid: "68733286"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > * 載入資料
 > * 建立用於尖峰異常偵測的轉換
 > * 使用轉換偵測尖峰異常
@@ -41,9 +42,9 @@ ms.locfileid: "68733286"
 
 2. 在您專案中建立名為 *Data* 的目錄以儲存資料集檔案。
 
-3. 安裝「Microsoft.ML NuGet 套件」  ：
+3. 安裝「Microsoft.ML NuGet 套件」：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取 **v1.0.0** 套件，然後選取 [安裝]  按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受]  對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。 為 **Microsoft.ML.TimeSeries v0.12.0** 重複這些步驟。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取 **v1.0.0** 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 為 **Microsoft.ML.TimeSeries v0.12.0** 重複這些步驟。
 
 4. 在您的 *Program.cs* 檔案最上方新增下列 `using` 陳述式：
 
@@ -57,11 +58,11 @@ ms.locfileid: "68733286"
 
      請務必將 \*.csv 檔案儲存至 *Data* 資料夾，或儲存在其他位置之後將 \*.csv 檔案移至 *Data* 資料夾。
 
-2. 在 [方案總管] 中，以滑鼠右鍵按一下 \*.csv 檔案，並選取 [內容]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
+2. 在 [方案總管] 中，以滑鼠右鍵按一下 \*.csv 檔案，並選取 [內容]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
 下表是 \*.csv 檔案的資料預覽：
 
-|月份  |ProductSales |
+|Month  |ProductSales |
 |-------|-------------|
 |1 月 1 日  |    271      |
 |1 月 2 日  |    150.9    |
@@ -75,9 +76,9 @@ ms.locfileid: "68733286"
 
 將新類別新增至專案：
 
-1. 在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]  。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]。
 
-2. 在 [新增項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *ProductSalesData.cs*。 接著，選取 [新增]  按鈕。
+2. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *ProductSalesData.cs*。 接著，選取 [新增] 按鈕。
 
    隨即在程式碼編輯器中開啟 *ProductSalesData.cs* 檔案。
 
@@ -372,6 +373,7 @@ Alert   Score   P-Value Martingale value
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > * 載入資料
 > * 定型尖峰異常偵測的模型
 > * 使用定型的模型偵測尖峰異常

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d172503cee4e3880f493c68d5789e17c64a82a12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: de2456a1365a1fb48b3e9f126e090b8da77728cc
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790007"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894112"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>風險降低：在應用程式定義域之間將物件還原序列化
 在某些情況下，當應用程式使用具有不同應用程式基底的兩個或多個應用程式定義域時，嘗試在跨應用程式定義域的邏輯呼叫內容中將物件還原序列化，將會擲回例外狀況。  
@@ -44,9 +44,9 @@ ms.locfileid: "70790007"
   
 2. 找出應用程式中沒有任何物件加入至邏輯呼叫內容的位置，並且加入下列程式碼：  
   
-    ```  
+    ```csharp
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
-    ```  
+    ```
   
 ## <a name="see-also"></a>另請參閱
 

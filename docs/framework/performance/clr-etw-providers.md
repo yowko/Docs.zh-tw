@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003736"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894705"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供者
 Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取消提供者。  
   
  執行階段提供者會根據啟用哪些關鍵字 (事件的類別) 來引發事件。 例如，您可以啟用 `LoaderKeyword` 關鍵字來收集載入器事件。  
   
- 事件追蹤的 Windows (ETW) 事件記錄到.etl 副檔名，可以稍後進行後置處理所需的逗號分隔值 (.csv) 檔案中的檔案。 如需如何將 .etl 檔案轉換成 .csv 檔案的資訊，請參閱[控制 .NET Framework 記錄](../../../docs/framework/performance/controlling-logging.md)。  
+ Windows 事件追蹤（ETW）事件會記錄到具有 .etl 副檔名的檔案中，稍後可以視需要以逗號分隔值（.csv）檔案進行後續處理。 如需如何將 .etl 檔案轉換成 .csv 檔案的資訊，請參閱[控制 .NET Framework 記錄](../../../docs/framework/performance/controlling-logging.md)。  
   
 ## <a name="the-runtime-provider"></a>執行階段提供者  
  執行階段提供者是主要 CLR ETW 提供者。  
@@ -60,7 +60,7 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
 1. 使用 CLR 執行階段提供者開啟 ETW 記錄：  
   
-    ```  
+    ```console
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
     ```  
   
@@ -68,7 +68,7 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
 2. 若要在處理序繼續執行時停止分析，請啟動取消提供者來擷取 `DCEnd` 事件：  
   
-    ```  
+    ```console
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
     ```  
   
@@ -76,14 +76,14 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
 3. 關閉所有 ETW 分析：  
   
-    ```  
+    ```console
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
 4. 合併設定檔以建立一個記錄檔：  
   
-    ```  
+    ```console
     xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   

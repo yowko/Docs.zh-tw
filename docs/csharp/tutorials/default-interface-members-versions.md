@@ -3,12 +3,12 @@ title: 在 C# 中使用預設介面成員安全地更新介面
 description: 本進階教學課程探討如何安全地將新功能新增至現有的介面定義，而不會中斷實作該介面的所有類別和結構。
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252910"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926708"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>教學課程：在 C# 8.0 中使用預設介面成員更新介面
 
@@ -17,6 +17,7 @@ ms.locfileid: "70252910"
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
+>
 > * 新增附實作的方法來安全地擴充介面。
 > * 建立參數化實作以提高彈性。
 > * 讓實作者提供覆寫形式的更特定實作。
@@ -47,7 +48,7 @@ ms.locfileid: "70252910"
 
 小組同意最有可能的預設實作，就是客戶的忠誠度折扣。
 
-升級應該提供設定兩個屬性的功能：必須符合折扣資格的訂單數目，以及折扣百分比。 因此非常適合使用預設介面成員。 您可以將方法加入至`ICustomer`介面, 並提供最可能的執行。 所有現有及任何新的實作都可使用預設實作，或提供自己的實作。
+升級應該提供設定兩個屬性的功能：必須符合折扣資格的訂單數目，以及折扣百分比。 因此非常適合使用預設介面成員。 您可以將方法加入至`ICustomer`介面，並提供最可能的執行。 所有現有及任何新的實作都可使用預設實作，或提供自己的實作。
 
 首先，將新方法新增至實作：
 

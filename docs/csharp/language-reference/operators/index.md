@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 0f7e99aaa171160a813b14dc818846052766551e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 403a79671128ffe95b45c2e18507bb804281d2c5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168600"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925052"
 ---
 # <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
@@ -56,7 +56,7 @@ Console.WriteLine(a); //  output: 8
 | [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | 條件式 OR |
 | [x ?? y](null-coalescing-operator.md) | Null 聯合運算子 |
 | [c ? t : f](conditional-operator.md) | 條件運算子 |
-| [x = y](assignment-operator.md)、[x += y](arithmetic-operators.md#compound-assignment)、[x -= y](arithmetic-operators.md#compound-assignment)、[x *= y](arithmetic-operators.md#compound-assignment)、[x /= y](arithmetic-operators.md#compound-assignment)、[x %= y](arithmetic-operators.md#compound-assignment)、[x &= y](boolean-logical-operators.md#compound-assignment)、[x &#124;= y](boolean-logical-operators.md#compound-assignment)、[x ^= y](boolean-logical-operators.md#compound-assignment)、[x <<= y](bitwise-and-shift-operators.md#compound-assignment)、[x >>= y](bitwise-and-shift-operators.md#compound-assignment)、[=>](lambda-operator.md) | 指派和 Lambda 宣告 |
+| [x = y](assignment-operator.md)， [x + = y](arithmetic-operators.md#compound-assignment)， [x-= y](arithmetic-operators.md#compound-assignment)， [x * = y](arithmetic-operators.md#compound-assignment)， [x/= y](arithmetic-operators.md#compound-assignment)， [x% = y](arithmetic-operators.md#compound-assignment)， [x & = y](boolean-logical-operators.md#compound-assignment)， [x &#124;= y](boolean-logical-operators.md#compound-assignment)， [x ^ = y](boolean-logical-operators.md#compound-assignment)， [x < < = y](bitwise-and-shift-operators.md#compound-assignment)， [x > > = y](bitwise-and-shift-operators.md#compound-assignment)， [x？？= y](null-coalescing-operator.md)，[=>](lambda-operator.md) | 指派和 Lambda 宣告 |
 
 ## <a name="operator-associativity"></a>運算子關聯性
 

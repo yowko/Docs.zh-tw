@@ -4,16 +4,17 @@ description: 探索 ML.NET 中支援的特徵工程元件。
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
-ms.translationtype: HT
+ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671878"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929247"
 ---
 # <a name="data-transformations"></a>資料轉換
 
 資料轉換用來：
+
 - 準備資料以進行模型定型
 - 以 TensorFlow 或 ONNX 格式套用匯入的模型
 - 在資料傳遞過模型之後進行後續處理

@@ -2,18 +2,18 @@
 title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 185e2cfc84a4134eec8eea1433f0cef43845aa2a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b91d52912c1625c036b3e08e47fbc985b193ebc2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592158"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926726"
 ---
 # <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
 Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。 傳統上，針對資料的查詢是以簡單字串表示，而不會在編譯期間進行型別檢查，或提供 IntelliSense 支援。 此外，您還必須了解每種資料來源類型的不同查詢語言：SQL 資料庫、XML 文件、各種 Web 服務等。 透過 LINQ，查詢會是第一級語言建構，和類別、方法及事件相同。 您可以使用語言關鍵字和熟悉的運算子，針對強型別的物件集合撰寫查詢。  LINQ 技術系列會針對物件 (LINQ to Object)、關聯式資料庫 (LINQ to SQL) 與 XML (LINQ to XML)，提供一致的查詢體驗。  
 
-對於撰寫查詢的開發人員來說，LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」  撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。 您可以使用相同的基本查詢運算式模式，來查詢並轉換 SQL 資料庫、ADO .NET 資料集、XML 文件及資料流，以及 .NET 集合中的資料。
+對於撰寫查詢的開發人員來說，LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。 您可以使用相同的基本查詢運算式模式，來查詢並轉換 SQL 資料庫、ADO .NET 資料集、XML 文件及資料流，以及 .NET 集合中的資料。
 
 您可以使用 C# 針對下列項目撰寫 LINQ 查詢：SQL Server 資料庫、XML 文件、ADO.NET 資料集，以及支援 <xref:System.Collections.IEnumerable> 或泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面的任何物件集合。 也有協力廠商針對許多 Web 服務和其他資料庫實作提供 LINQ 支援。  
 
@@ -46,6 +46,7 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
 ## <a name="next-steps"></a>後續步驟
 
 若要深入了解 LINQ 的詳細資料，請先參閱[查詢運算式基本概念](../../../linq/query-expression-basics.md)以熟悉基本概念，然後閱讀您感興趣的 LINQ 技術文件：   
+
 - XML 文件：[LINQ to XML](linq-to-xml.md)  
   
 - ADO.NET Entity Framework：[LINQ 至實體](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
@@ -59,3 +60,4 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
 ## <a name="see-also"></a>另請參閱
 
 - [Language-Integrated Query (LINQ) (C#)](./index.md)
+ 

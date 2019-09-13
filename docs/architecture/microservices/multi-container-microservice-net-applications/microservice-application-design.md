@@ -2,12 +2,12 @@
 title: 設計微服務導向應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解微服務導向應用程式的優點和缺點，讓您能夠採取明智的決策。
 ms.date: 10/02/2018
-ms.openlocfilehash: dfb1619bab68814bd14224e5b50a75d99525a802
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675965"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926531"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>設計微服務導向應用程式
 
@@ -158,7 +158,7 @@ ms.locfileid: "68675965"
 
 - [傳統 N 分層](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10))。
 
-- [領域導向設計 N 分層](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
+- [領域導向設計 N 分層](https://devblogs.microsoft.com/cesardelatorre/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
 - [乾淨架構](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (可搭配 [eShopOnWeb](https://aka.ms/WebAppArchitecture) 使用)
 

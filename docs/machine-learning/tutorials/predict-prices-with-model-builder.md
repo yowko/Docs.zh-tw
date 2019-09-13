@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: bc1dacdad436cc5384bca4bbce224acc18d69201
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107148"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929436"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>搭配模型產生器使用迴歸來預測價格
 
@@ -21,6 +21,7 @@ ms.locfileid: "70107148"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > - 準備並了解資料
 > - 選擇案例
 > - 載入資料
@@ -31,7 +32,7 @@ ms.locfileid: "70107148"
 > [!NOTE]
 > 模型產生器目前為預覽版。
 
-## <a name="pre-requisites"></a>必要條件
+## <a name="pre-requisites"></a>先決條件
 
 如需必要條件和安裝指示清單，請瀏覽[模型產生器安裝指南](../how-to-guides/install-model-builder.md)。
 
@@ -47,11 +48,11 @@ ms.locfileid: "70107148"
 
     若要下載該資料集，請瀏覽至 [taxi-fare-train.csv 下載連結](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv)。
 
-    當頁面載入時，以滑鼠右鍵按一下頁面上的任何位置，然後選取 [另存新檔]  。
+    當頁面載入時，以滑鼠右鍵按一下頁面上的任何位置，然後選取 [另存新檔]。
 
-    然後使用 [另存新檔]  對話方塊，將檔案儲存於您在上一步所建立的 [Data]  資料夾中。
+    然後使用 [另存新檔] 對話方塊，將檔案儲存於您在上一步所建立的 [Data] 資料夾中。
 
-1. 在 [方案總管]  中，以滑鼠右鍵按一下 *taxi-fare-train.csv* 檔案，然後選取 [屬性]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下 *taxi-fare-train.csv* 檔案，然後選取 [屬性]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
 `taxi-fare-train.csv` 資料集中的每個資料列都包含計程車車程的詳細資料。
 
@@ -73,16 +74,16 @@ ms.locfileid: "70107148"
 
 若要定型您的模型，您需要從模型產生器所提供的可用機器學習服務案例清單中選取。 在此案例中，案例為 `Price Prediction`。
 
-1. 在 [方案總管]  中，以滑鼠右鍵按一下 *TaxiFarePrediction* 專案，然後選取 [新增]   > [機器學習服務]  。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下 *TaxiFarePrediction* 專案，然後選取 [新增] > [機器學習服務]。
 1. 在模型產生器工具的案例步驟中，請選取 *Price Prediction* 案例。
 
 ## <a name="load-the-data"></a>載入資料
 
 模型建立器接受來自兩個來源的資料：SQL Server 資料庫或 CSV 或 TSV 格式的本機檔案。
 
-1. 在模型產生器工具的資料步驟中，從資料來源下拉式清單中選取 [檔案]  。
-1. 選取 [選取檔案]  文字方塊旁邊的按鈕，然後使用 [檔案總管] 進行瀏覽，並選取 *Data* 目錄中的 *taxi-fare-test.csv*
-1. 在 [要預測的標籤或資料行]  下拉式清單中選擇 *fare_amount*，然後巡覽至模型產生器工具的定型步驟。
+1. 在模型產生器工具的資料步驟中，從資料來源下拉式清單中選取 [檔案]。
+1. 選取 [選取檔案] 文字方塊旁邊的按鈕，然後使用 [檔案總管] 進行瀏覽，並選取 *Data* 目錄中的 *taxi-fare-test.csv*
+1. 在 [要預測的標籤或資料行] 下拉式清單中選擇 *fare_amount*，然後巡覽至模型產生器工具的定型步驟。
 
 ## <a name="train-the-model"></a>將模型定型
 
@@ -98,8 +99,8 @@ ms.locfileid: "70107148"
 500 - 1 GB    | 數值和文字   | 60 分鐘
 1 GB+         | 數值和文字   | 3 小時以上
 
-1. 因為定型資料檔案超過 10 MB，所以請使用 600 秒 (10 分鐘) 作為 [定型時間 (秒)]  的值。
-2. 選取 [開始定型]  。
+1. 因為定型資料檔案超過 10 MB，所以請使用 600 秒 (10 分鐘) 作為 [定型時間 (秒)] 的值。
+2. 選取 [開始定型]。
 
 在整個定型程序期間，進度資料會顯示在定型步驟的 `Progress` 區段中。
 
@@ -112,7 +113,7 @@ ms.locfileid: "70107148"
 
 ## <a name="evaluate-the-model"></a>評估模型
 
-定型步驟之結果將會是具備最佳效能的單一模型。 在模型產生器工具的評估步驟中，輸出區段將會在 [最佳模型]  項目中包含執行效能最佳模型所使用的演算法，並在 [最佳模型品質 (RSquared)]  中包含計量。 此外，還會具備一個摘要表，其中包含前五個模型及其計量。
+定型步驟之結果將會是具備最佳效能的單一模型。 在模型產生器工具的評估步驟中，輸出區段將會在 [最佳模型] 項目中包含執行效能最佳模型所使用的演算法，並在 [最佳模型品質 (RSquared)] 中包含計量。 此外，還會具備一個摘要表，其中包含前五個模型及其計量。
 
 若您不滿意您的正確性計量，可嘗試及改善模型正確性的一些簡單方法為增加定型模型的時間，或是使用更多資料。 如果您覺得滿意，請瀏覽至程式碼步驟。
 
@@ -123,8 +124,8 @@ ms.locfileid: "70107148"
 - TaxiFarePredictionML.ConsoleApp：包含模型定型及使用程式碼的 .NET Core 主控台應用程式。
 - TaxiFarePredictionML.Model：.NET Standard 類別庫，包含定義輸入及輸出模型資料結構描述的資料模型，以及定型期間執行效能最佳模型的保存版本。
 
-1. 在模型建立器工具的程式碼步驟中，選取 [新增專案]  來將自動產生的專案新增到解決方案。
-1. 以滑鼠右鍵按一下 *TaxiFarePrediction* 專案。 然後，選取 [新增] > [參考]  。 選擇 [專案] > [方案]  節點，並從清單選取 *TaxiFarePredictionML.Model* 專案，然後選取 [確定]。
+1. 在模型建立器工具的程式碼步驟中，選取 [新增專案] 來將自動產生的專案新增到解決方案。
+1. 以滑鼠右鍵按一下 *TaxiFarePrediction* 專案。 然後，選取 [新增] > [參考]。 選擇 [專案] > [方案] 節點，並從清單選取 *TaxiFarePredictionML.Model* 專案，然後選取 [確定]。
 1. 開啟 *TaxiFarePrediction* 專案中的 *Program.cs* 檔案。
 1. 新增下列 using 陳述式，以參考 *Microsoft.ML* NuGet 套件與 *TaxiFarePredictionML.Model* 專案：
 
@@ -190,6 +191,7 @@ ms.locfileid: "70107148"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > - 準備並了解資料
 > - 選擇案例
 > - 載入資料

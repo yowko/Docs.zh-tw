@@ -9,12 +9,12 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 457de16337fd2a37dad9042c770680ba5ad27a0d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5df070bb2cfef42d60247cad39f2a2f76963bae8
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624598"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894738"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>作法：自訂以時間為基礎的快取原則
 在建立以時間為基礎的快取原則時，您可以藉由指定最長使用期限、最短有效期限、最長過時或快取同步處理日期的值來自訂快取行為。 <xref:System.Net.Cache.HttpRequestCachePolicy> 物件所提供的建構函式可讓您指定這些值的有效組合。  
@@ -45,7 +45,7 @@ ms.locfileid: "64624598"
   
  其輸出如下所示：  
   
-```  
+```output
 When: 1/14/2004 8:07:30 AM  
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM  
 ```  
@@ -74,11 +74,13 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
   
  對於下列引動過程：  
   
-```  
+```csharp
 CreateMinFreshPolicy(new TimeSpan(1,0,0));  
 ```  
+
+ 輸出為：
   
-```  
+```output
 Level:Default MinFresh:3600  
 ```  
   
@@ -106,11 +108,13 @@ Level:Default MinFresh:3600
   
  對於下列引動過程：  
   
-```  
+```csharp
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
 ```  
+
+輸出為：
   
-```  
+```output
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   

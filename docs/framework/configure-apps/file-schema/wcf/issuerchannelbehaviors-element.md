@@ -2,25 +2,34 @@
 title: <issuerChannelBehaviors> 項目
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 2c0e0d8d041565edd25c4b2c2802bfd2a589b4f7
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+no-loc:
+- <system.serviceModel>
+- <behaviors>
+- <endpointBehaviors>
+- <behavior>
+- <clientCredentials>
+- <issuedToken>
+- <issuerChannelBehaviors>
+- <dataContractSerializer>
+ms.openlocfilehash: cbbfb9d3b5af47a360aa82cf837cd6749f61b641
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397906"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893153"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > 元素
 
 包含 Windows Communication Foundation （WCF）用戶端端點行為（定義于設定中）的集合，以便在與指定的服務權杖服務通訊時使用。 定義的行為不能包含任何[ \<clientCredentials >](clientcredentials.md)元素。
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuedToken >** ](issuedtoken.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuerChannelBehaviors >**  
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;[\<System.servicemodel >](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<行為 >](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<endpointBehaviors >](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<行為 >](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials >](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<issuedToken >](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<issuerChannelBehaviors >
 
 ## <a name="syntax"></a>語法
 
@@ -31,9 +40,9 @@ ms.locfileid: "70397906"
 </issuerChannelBehaviors>
 ```
 
-## <a name="attributes-and-elements"></a>屬性和項目
+## <a name="attributes-and-elements"></a>屬性和元素
 
-下列各節描述屬性、子項目和父項目。
+下列章節說明屬性、子元素和父元素。
 
 ### <a name="attributes"></a>屬性
 
@@ -41,13 +50,13 @@ ms.locfileid: "70397906"
 
 ### <a name="child-elements"></a>子元素
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |[\<add>](add-of-issuerchannelbehaviors.md)|將行為新增至集合中。|
 
-### <a name="parent-elements"></a>父項目
+### <a name="parent-elements"></a>父元素
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |[\<issuedToken>](issuedtoken.md)|指定用來向服務驗證用戶端的自訂權杖。|
 

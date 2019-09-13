@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939486"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895057"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables 方法
-傳回在此命名空間內的全域範圍中定義的所有變數。  
+傳回在此命名空間內全域範圍中定義的所有變數。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
 HRESULT GetVariables(  
     [in]  ULONG32  cVars,  
     [out] ULONG32  *pcVars,  
@@ -39,19 +39,19 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>參數  
  `cVars`  
- [in]A`ULONG32`表示的大小`pVars`陣列。  
+ 在，指出`pVars`陣列的大小。 `ULONG32`  
   
  `pcVars`  
- [out]指標`ULONG32`接收包含命名空間所需的緩衝區大小。  
+ 脫銷的指標`ULONG32` ，接收包含命名空間所需的緩衝區大小。  
   
  `pVars`  
- [out]包含命名空間緩衝區的指標。  
+ 脫銷包含命名空間之緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ 如果方法成功，則為 S_OK;否則，E_FAIL 或其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 

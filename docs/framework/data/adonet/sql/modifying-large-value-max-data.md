@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0f029c81dd6ba5cd5202e6e59f33edd7cf8c0b90
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792048"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894436"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大量數值 (max) 資料
 大型物件 (LOB) 資料型別是指資料列大小上限超過 8 KB 的資料型別。 SQL Server 可提供 `max`、`varchar` 和 `nvarchar` 資料型別的 `varbinary` 規範，允許儲存最大達 2^32 位元組的值。 資料表資料行及 Transact-SQL 變數可指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料型別。 在 ADO.NET 中，`max` 資料型別可透過 `DataReader` 來擷取，也可指定為輸入及輸出參數值，並且不需要任何特殊處理。 對於大型 `varchar` 資料型別，可透過遞增方式擷取及更新資料。  
@@ -41,7 +41,7 @@ ms.locfileid: "70792048"
   
  下列範例會將相片插入 AdventureWorks 範例資料庫中的 ProductPhoto 資料表。 當您使用`BULK OPENROWSET`提供者時，即使不將值插入每個資料行，也必須提供已命名的資料行清單。 在此情況下，將主索引鍵定義為識別欄位，也可從資料行清單省略。 請注意，您還必須提供關聯名稱，將其置於 `OPENROWSET` 陳述式的結尾處 (此情況中為 ThumbnailPhoto)。 這會與要載入檔案之 `ProductPhoto` 資料表中的資料行關聯。  
   
-```  
+```sql  
 INSERT Production.ProductPhoto (  
     ThumbnailPhoto,   
     ThumbnailPhotoFilePath,   
@@ -78,7 +78,7 @@ FROM OPENROWSET
 ## <a name="example"></a>範例  
  此 Transact-SQL 範例會更新 DocumentSummary 中的部分值，其為 AdventureWorks 資料庫中 Document 資料表內的 `nvarchar(max)` 資料行。 藉由指定取代單字、現有資料中要取代之單字的開始位置 (位移)，以及要取代的字元數 (長度)，將 components 這個字取代為 features 這個字。 該範例會將 SELECT 陳述式併入到 UPDATE 陳述式之前與之後來比較結果。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 --View the existing value.  
@@ -230,7 +230,7 @@ while (reader.Read())
 ## <a name="using-large-value-type-parameters"></a>使用大型值型別參數  
  大型值型別可用於 <xref:System.Data.SqlClient.SqlParameter> 物件，其使用方式與在 <xref:System.Data.SqlClient.SqlParameter> 物件中使用小型值型別相同。 您可以將大數數值型別抓取<xref:System.Data.SqlClient.SqlParameter>為值，如下列範例所示。 該程式碼假設下列 GetDocumentSummary 預存程序存在於 AdventureWorks 範例資料庫中。 預存程式會接受名為@DocumentID的輸入參數，並傳回@DocumentSummary輸出參數中 DocumentSummary 資料行的內容。  
   
-```  
+```sql
 CREATE PROCEDURE GetDocumentSummary   
 (  
     @DocumentID int,  

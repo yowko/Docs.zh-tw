@@ -4,12 +4,12 @@ description: 使用來源連結改善 .NET 程式庫偵錯的最佳做法建議�
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9d3e2b0b3aedbab150072bf6eebff4acb5f8a0b7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
-ms.translationtype: HT
+ms.openlocfilehash: 7530c984ce4bbe9e40362bd550bec57ac585a550
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211678"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928981"
 ---
 # <a name="source-link"></a>來源連結
 
@@ -31,6 +31,7 @@ ms.locfileid: "65211678"
 
 > [!TIP]
 > 您可以將偵錯工具屬性新增至您的類型，進一步加強開發人員的偵錯體驗。
+>
 > * <xref:System.Diagnostics.DebuggerDisplayAttribute> 可以自訂類別或欄位在偵錯工具變數視窗中顯示的方式。
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> 指示偵錯工具逐步執行程式碼，而不要進入程式碼。
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> 控制成員是否要顯示在偵錯工具變數視窗中。

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753962"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929144"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系統上的大型物件堆積
 
@@ -132,7 +132,7 @@ ms.locfileid: "64753962"
 
 2. 已排除您所知未找到任何項目能夠說明所看到效能問題的其他區域。
 
-如需記憶體和 CPU 基本概念的詳細資訊，請參閱部落格 [Understand the problem before you try to find a solution](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/) (了解問題，再嘗試找出解決方案)。
+如需記憶體和 CPU 基本概念的詳細資訊，請參閱部落格 [Understand the problem before you try to find a solution](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/) (了解問題，再嘗試找出解決方案)。
 
 您可以使用下列工具來收集 LOH 效能的相關資料：
 
@@ -168,13 +168,13 @@ ms.locfileid: "64753962"
 
 記憶體回收行程提供一組豐富的 ETW 事件，可協助您了解堆積正在執行的作業和原因。 下列部落格文章顯示如何收集和了解使用 ETW 的 GC 事件：
 
-- [GC ETW Events - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/) (GC ETW 事件 - 1)
+- [GC ETW Events - 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/) (GC ETW 事件 - 1)
 
-- [GC ETW Events - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/) (GC ETW 事件 - 2)
+- [GC ETW Events - 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/) (GC ETW 事件 - 2)
 
-- [GC ETW Events - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/) (GC ETW 事件 - 3)
+- [GC ETW Events - 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/) (GC ETW 事件 - 3)
 
-- [GC ETW Events - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/) (GC ETW 事件 - 4)
+- [GC ETW Events - 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/) (GC ETW 事件 - 4)
 
 若要識別暫存 LOH 配置所造成的過多層代 2 GC，請查看 GC 的 [Trigger Reason] \(觸發原因\) 資料行。 對於只配置暫存大型物件的簡單測試，您可以使用下列 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) 命令列收集 ETW 事件的相關資訊：
 

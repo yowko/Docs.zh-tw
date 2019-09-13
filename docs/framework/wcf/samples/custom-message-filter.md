@@ -2,15 +2,15 @@
 title: 自訂訊息篩選條件
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 0b8336fe4d83f45369af31fe34b58696145d08c0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 30405800cd219f56fcc08b8e8d22f4fe0b907e32
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039915"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928695"
 ---
 # <a name="custom-message-filter"></a>自訂訊息篩選條件
-這個範例會示範如何取代 Windows Communication Foundation (WCF) 用來將訊息分派至端點的訊息篩選器。  
+這個範例會示範如何取代 Windows Communication Foundation （WCF）用來將訊息分派至端點的訊息篩選器。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -19,17 +19,20 @@ ms.locfileid: "70039915"
   
  服務的每個端點都有單一 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>。 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 同時擁有 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> 和 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>。 這兩個篩選條件的聯集便是該端點使用的訊息篩選條件。  
   
- 根據預設，端點的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> 會比對定址位址為符合服務端點之 <xref:System.ServiceModel.EndpointAddress> 的任何訊息。 根據預設, 端點<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>的會檢查內送訊息的動作, 並比對任何具有動作的訊息, 其對應至服務端點合約作業的其中一個動作 (僅限`IsInitiating` = `true`動作會被視為)。 因此，根據預設，只有在訊息的 To 標頭為端點的 <xref:System.ServiceModel.EndpointAddress>，而且訊息的動作符合其中一個端點作業動作時，端點的篩選條件才會相符。  
+ 根據預設，端點的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> 會比對定址位址為符合服務端點之 <xref:System.ServiceModel.EndpointAddress> 的任何訊息。 根據預設，端點<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>的會檢查內送訊息的動作，並比對任何具有動作的訊息，其對應至服務端點合約作業的其中一個動作（僅限`IsInitiating` = `true`動作會被視為）。 因此，根據預設，只有在訊息的 To 標頭為端點的 <xref:System.ServiceModel.EndpointAddress>，而且訊息的動作符合其中一個端點作業動作時，端點的篩選條件才會相符。  
   
  這些篩選條件可以使用行為加以變更。 在此範例中，服務會建立可取代 <xref:System.ServiceModel.Description.IEndpointBehavior> 上之 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> 和 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> 的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>：  
   
-```  
-class FilteringEndpointBehavior : IEndpointBehavior …  
+```csharp
+class FilteringEndpointBehavior : IEndpointBehavior
+{
+    //...
+}
 ```  
   
  定義兩組位址篩選條件：  
   
-```  
+```csharp  
 // Matches any message whose To address contains the letter 'e'  
 class MatchEAddressFilter : MessageFilter …  
 // Matches any message whose To address does not contain the letter 'e'  
@@ -38,13 +41,13 @@ class MatchNoEAddressFilter : MessageFilter
   
  `FilteringEndpointBehavior` 已設定可設定狀態，並且允許兩種不同的變化。  
   
-```  
+```csharp  
 public class FilteringEndpointBehaviorExtension : BehaviorExtensionElement  
 ```  
   
  變化 1 只會比對包含 'e' 的位址 (但可以是任何動作)，而變化 2 只比對缺少 'e' 的位址：  
   
-```  
+```csharp  
 if (Variation == 1)  
     return new FilteringEndpointBehavior(  
         new MatchEAddressFilter(), new MatchAllMessageFilter());  
@@ -89,7 +92,7 @@ else
   
  用戶端應用程式的實作是很直接的工作；它會建立服務 URI 的兩個通道 (藉由將該值當作第二個 (`via`) 參數傳遞至 <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29>)，然後在每個通道傳送單一訊息，但是每個通道使用不同的端點位址。 因此，來自用戶端的傳出訊息會具有不同的 To 目的地，而伺服器會個別回應，如用戶端輸出所示：  
   
-```  
+```console  
 Sending message to urn:e...  
 Exception: The message with To 'urn:e' cannot be processed at the receiver, due to an AddressFilter mismatch at the EndpointDispatcher.  Check that the sender and receiver's EndpointAddresses agree.  
   
@@ -119,18 +122,18 @@ Hello
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 若要建立方案, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
+1. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
   
-2. 若要在單一電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+2. 若要在單一電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
-3. 若要在跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示, 並變更 Client.cs 中的下面這一行。  
+3. 若要在跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示，並變更 Client.cs 中的下面這一行。  
   
-    ```  
+    ```csharp  
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  
     ```  
   
      以伺服器名稱取代 localhost。  
   
-    ```  
+    ```csharp  
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  
     ```  

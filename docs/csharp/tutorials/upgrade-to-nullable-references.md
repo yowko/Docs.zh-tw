@@ -3,20 +3,21 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 0c95065e6c380fab6ba33432a32b3297e78027a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105767"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926634"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 Null 的參考型別遷移現有程式碼
 
-C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實值類型補充實值類型的相同方式來補充參考類型。 您可以藉由將 `?` 附加至類型，來將變數宣告為**可為 Null 的參考類型**。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」  ，而其他變數「可能會遺漏值」  。 任何參考型別的現有變數都會解譯成不可為 Null 的參考型別。 
+C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實值類型補充實值類型的相同方式來補充參考類型。 您可以藉由將 `?` 附加至類型，來將變數宣告為**可為 Null 的參考類型**。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」，而其他變數「可能會遺漏值」。 任何參考型別的現有變數都會解譯成不可為 Null 的參考型別。 
 
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
+>
 > - 在您使用程式碼時啟用 Null 參考檢查。
 > - 診斷並修正與 Null 值相關的不同警告。
 > - 管理啟用可為 Null 內容及停用可為 Null 內容之間的介面。
@@ -84,7 +85,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-先前的程式碼區塊中此時又發生了一些事情。 此應用程式使用 [AutoMapper](https://automapper.org/) NuGet 套件來從 `ISyndicationItem` 建構新的項目。 您發現新的故事項目已經建構完成，而屬性也已在單一陳述式中設定。 這表示 `NewsStoryViewModel` 的設計指出這些屬性永遠都不應該具備 `null` 值。 這些屬性應為**不可為 Null 參考型別**。 這種方式最能表達原始的設計意圖。 事實上，任何 `NewsStoryViewModel`「都會」  使用非 Null 值正確具現化。 這可讓下列的初始化程式碼成為有效修正：
+先前的程式碼區塊中此時又發生了一些事情。 此應用程式使用 [AutoMapper](https://automapper.org/) NuGet 套件來從 `ISyndicationItem` 建構新的項目。 您發現新的故事項目已經建構完成，而屬性也已在單一陳述式中設定。 這表示 `NewsStoryViewModel` 的設計指出這些屬性永遠都不應該具備 `null` 值。 這些屬性應為**不可為 Null 參考型別**。 這種方式最能表達原始的設計意圖。 事實上，任何 `NewsStoryViewModel`「都會」使用非 Null 值正確具現化。 這可讓下列的初始化程式碼成為有效修正：
 
 ```csharp
 public class NewsStoryViewModel
@@ -115,7 +116,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
 
-將 `#nullable enable` 新增到類別宣告之前，並將 `#nullable restore` 指示詞新增到該宣告之後。 您會收到一個警告，告知您 `RequestId` 並未初始化。 藉由查看類別，您應判斷該 `RequestId` 屬性在某些情況下應為 Null。 `ShowRequestId` 屬性的存在指出可能遺失值。 因為 `null` 是有效的，請在 `string` 型別上新增 `?` 來指出 `RequestId` 屬性是「可為 Null 的參考型別」  。 最終類別看起來會和下列範例相似：
+將 `#nullable enable` 新增到類別宣告之前，並將 `#nullable restore` 指示詞新增到該宣告之後。 您會收到一個警告，告知您 `RequestId` 並未初始化。 藉由查看類別，您應判斷該 `RequestId` 屬性在某些情況下應為 Null。 `ShowRequestId` 屬性的存在指出可能遺失值。 因為 `null` 是有效的，請在 `string` 型別上新增 `?` 來指出 `RequestId` 屬性是「可為 Null 的參考型別」。 最終類別看起來會和下列範例相似：
 
 [!code-csharp[FinishedErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
 

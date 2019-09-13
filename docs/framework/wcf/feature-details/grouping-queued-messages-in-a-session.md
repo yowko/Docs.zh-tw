@@ -7,44 +7,44 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 995697e618ff5d56a719efc5d69b97583733d980
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855916"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892733"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>在工作階段中群組佇列訊息
-Windows Communication Foundation (WCF) 提供可讓您將一組一起進行處理的相關訊息的單一接收應用程式的工作階段。 本身是工作階段一部分的訊息，也必須是屬於相同的異動。 由於所有訊息都屬於相同的異動，所以如果有任何一個訊息無法進行處理，就會回復整個工作階段。 工作階段對於寄不出的信件佇列與有害佇列，會採取類似行為。 針對工作階段在佇列繫結上設定的存留時間 (TTL) 屬性會完整地套用到工作階段。 如果工作階段中只有部分訊息在 TTL 到期之前傳送出去，則整個工作階段將置於寄不出的信件佇列中。 同樣地，當工作階段中的訊息無法從應用程式佇列傳送到應用程式的話，則整個工作階段將置於有害佇列 (如果有的話)。  
+Windows Communication Foundation （WCF）會提供一個會話，讓您將一組相關的訊息群組在一起，以供單一接收應用程式處理。 本身是工作階段一部分的訊息，也必須是屬於相同的異動。 由於所有訊息都屬於相同的異動，所以如果有任何一個訊息無法進行處理，就會回復整個工作階段。 工作階段對於寄不出的信件佇列與有害佇列，會採取類似行為。 針對工作階段在佇列繫結上設定的存留時間 (TTL) 屬性會完整地套用到工作階段。 如果工作階段中只有部分訊息在 TTL 到期之前傳送出去，則整個工作階段將置於寄不出的信件佇列中。 同樣地，當工作階段中的訊息無法從應用程式佇列傳送到應用程式的話，則整個工作階段將置於有害佇列 (如果有的話)。  
   
 ## <a name="message-grouping-example"></a>訊息群組範例  
- 實作訂單處理應用程式做為 WCF 服務時，會發現群組訊息很有幫助的其中一個範例。 例如，用戶端將訂單提交給包含一些項目的應用程式。 接著，用戶端針對每個項目向服務進行呼叫，以便分別傳送每個訊息。 情況可能變成：伺服器 A 收到第一個項目，而伺服器 B 則收到第二個項目。 每次新增一個項目時，負責處理該項目的伺服器就必須找到適當的順序，並將該項目附加上去，如此一來就會變得很沒效率。 就算只有一部伺服器在處理所有要求，效率仍舊可能不彰，因為伺服器必須追蹤目前正在處理的所有訂單，並判斷新增的項目歸屬哪個訂單。 將單一訂單上的所有要求加以群組可大幅簡化此類應用程式的實作。 用戶端應用程式將單一訂單的所有項目傳送到工作階段，這樣一來，當服務處理訂單時，就會立即處理整個工作階段。 \  
+ 其中一個範例是，群組訊息很有用，就是將訂單處理應用程式實作為 WCF 服務時。 例如，用戶端將訂單提交給包含一些項目的應用程式。 接著，用戶端針對每個項目向服務進行呼叫，以便分別傳送每個訊息。 情況可能變成：伺服器 A 收到第一個項目，而伺服器 B 則收到第二個項目。 每次新增一個項目時，負責處理該項目的伺服器就必須找到適當的順序，並將該項目附加上去，如此一來就會變得很沒效率。 就算只有一部伺服器在處理所有要求，效率仍舊可能不彰，因為伺服器必須追蹤目前正在處理的所有訂單，並判斷新增的項目歸屬哪個訂單。 將單一訂單上的所有要求加以群組可大幅簡化此類應用程式的實作。 用戶端應用程式將單一訂單的所有項目傳送到工作階段，這樣一來，當服務處理訂單時，就會立即處理整個工作階段。 \  
   
 ## <a name="procedures"></a>程序  
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>若要設定服務合約使用工作階段  
   
-1. 定義需要工作階段的服務合約。 若要這麼做，請使用 <xref:System.ServiceModel.OperationContractAttribute> 屬性並指定：  
+1. 定義需要工作階段的服務合約。 使用<xref:System.ServiceModel.ServiceContractAttribute>屬性來執行此動作，方法是指定：  
   
-    ```  
+    ```csharp
     SessionMode=SessionMode.Required  
     ```  
   
-2. 將合約中的作業標示為單向，因為這些方法無法傳回任何東西。 若要這麼做，請使用 <xref:System.ServiceModel.OperationContractAttribute> 屬性並指定：  
+2. 將合約中的作業標示為單向，因為這些方法無法傳回任何東西。 這是使用<xref:System.ServiceModel.OperationContractAttribute>屬性來完成，方法是指定：  
   
-    ```  
+    ```csharp  
     [OperationContract(IsOneWay = true)]  
     ```  
   
-3. 實作服務合約並指定 `InstanceContextMode` 的 `PerSession`。 這樣只會針對每個工作階段產生服務一次。  
+3. 實作服務合約並指定 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode> 的 <xref:System.ServiceModel.InstanceContextMode.PerSession?displayProperty=nameWithType>。 這樣只會針對每個工作階段產生服務一次。  
   
-    ```  
+    ```csharp  
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4. 每個服務作業都需要一筆異動。 請使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性來加以指定。 完成異動的作業應該同時將 `TransactionAutoComplete` 設為 `true`。  
+4. 每個服務作業都需要一筆異動。 請使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性來加以指定。 完成異動的作業應該同時將 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete> 設為 `true`。  
   
-    ```  
+    ```csharp  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) 提供可讓您將一組一起進行處�
   
 1. 建立異動範圍以寫入異動式佇列。  
   
-2. 建立使用 WCF 用戶端[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具。  
+2. 使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具來建立 WCF 用戶端。  
   
 3. 下訂單。  
   
@@ -70,8 +70,8 @@ Windows Communication Foundation (WCF) 提供可讓您將一組一起進行處�
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
- 下列範例提供 `IProcessOrder` 服務以及使用此服務之用戶端的程式碼。 它會顯示 WCF 如何使用佇列的工作階段提供的群組行為。  
+### <a name="description"></a>說明  
+ 下列範例提供 `IProcessOrder` 服務以及使用此服務之用戶端的程式碼。 它會顯示 WCF 如何使用佇列會話來提供群組行為。  
   
 ### <a name="code-for-the-service"></a>服務的程式碼  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]

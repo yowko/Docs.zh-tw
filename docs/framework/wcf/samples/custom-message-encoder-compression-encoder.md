@@ -2,16 +2,16 @@
 title: 自訂訊息編碼器：壓縮編碼器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 84afb060e98a5936b24c5446ff543fd627864102
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4fc6cd4b28d35971e5e2da2559d258055adf9252
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971991"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928740"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自訂訊息編碼器：壓縮編碼器
 
-這個範例會示範如何使用 Windows Communication Foundation (WCF) 平臺來執行自訂編碼器。
+這個範例會示範如何使用 Windows Communication Foundation （WCF）平臺來執行自訂編碼器。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
@@ -27,9 +27,9 @@ ms.locfileid: "68971991"
 這個範例中包括用戶端主控台程式 (.exe)、自我裝載的服務主控台程式 (.exe) 和壓縮訊息編碼器程式庫 (.dll)。 服務會實作定義要求-回覆通訊模式的合約。 合約是由 `ISampleServer` 介面所定義，而該介面會公開基本字串回應作業 (`Echo` 和 `BigEcho`)。 用戶端會對指定的作業提出同步要求，而服務則會透過重複訊息回覆至用戶端。 主控台視窗上可同時看見用戶端和服務活動。 此範例的目的為顯示如何撰寫自訂編碼器，並示範在網路上壓縮訊息的影響。 您可以將檢測新增至壓縮訊息編碼器，以計算訊息大小、處理時間或同時計算這兩者。
 
 > [!NOTE]
-> 在 .NET Framework 4 中, 如果伺服器正在傳送壓縮的回應 (使用 GZip 或 Deflate 之類的演算法建立), 就會在 WCF 用戶端上啟用自動解壓縮。 如果服務在 Internet Information Server (IIS) 中是以 Web 裝載的，則可以為服務將 IIS 設定為傳送壓縮回應。 如果需要同時在用戶端和服務上執行壓縮和解壓縮，或者如果服務是自我裝載的，則可以使用此範例。
+> 在 .NET Framework 4 中，如果伺服器正在傳送壓縮的回應（使用 GZip 或 Deflate 之類的演算法建立），就會在 WCF 用戶端上啟用自動解壓縮。 如果服務在 Internet Information Server (IIS) 中是以 Web 裝載的，則可以為服務將 IIS 設定為傳送壓縮回應。 如果需要同時在用戶端和服務上執行壓縮和解壓縮，或者如果服務是自我裝載的，則可以使用此範例。
 
-此範例示範如何建立自訂訊息編碼器, 並將其整合到 WCF 應用程式中。 將同時使用用戶端和服務來部署程式庫 GZipEncoder.dll。 這個範例也會顯示壓縮訊息所造成的影響。 GZipEncoder.dll 中的程式碼會示範下列各項：
+此範例示範如何建立自訂訊息編碼器，並將其整合到 WCF 應用程式中。 將同時使用用戶端和服務來部署程式庫 GZipEncoder.dll。 這個範例也會顯示壓縮訊息所造成的影響。 GZipEncoder.dll 中的程式碼會示範下列各項：
 
 - 建置自訂編碼器和編碼器處理站。
 
@@ -59,13 +59,13 @@ ms.locfileid: "68971991"
 
 5. 編碼器層會實作為類別處理站。 只需要對自訂編碼器對大眾公開編碼器累別處理站。 建立 <xref:System.ServiceModel.ServiceHost> 或 <xref:System.ServiceModel.ChannelFactory%601> 物件時，繫結項目會傳回處理站物件。 您可以在緩衝處理或資料流處理模式中操作訊息編碼器。 這個範例會同時示範緩衝處理模式和資料流處理模式。
 
-在每個模式中，抽象 `ReadMessage` 類別上會伴隨 `WriteMessage` 和 `MessageEncoder` 方法。 主要的編碼工作都會透過這些方法進行。 此範例會包裝現有的文字和二進位訊息編碼器。 這樣可讓範例將訊息之網路表示的讀取和撰寫委派給內部編碼器，並讓壓縮編碼器可壓縮或解壓縮結果。 因為訊息編碼沒有管線, 所以這是在 WCF 中使用多個編碼器的唯一模型。 一旦解壓縮訊息，產生的訊息就會傳遞至堆疊上層，以供通道堆疊處理。 在壓縮期間，產生的已壓縮訊息會直接寫入提供的資料流。
+在每個模式中，抽象 `ReadMessage` 類別上會伴隨 `WriteMessage` 和 `MessageEncoder` 方法。 主要的編碼工作都會透過這些方法進行。 此範例會包裝現有的文字和二進位訊息編碼器。 這樣可讓範例將訊息之網路表示的讀取和撰寫委派給內部編碼器，並讓壓縮編碼器可壓縮或解壓縮結果。 因為訊息編碼沒有管線，所以這是在 WCF 中使用多個編碼器的唯一模型。 一旦解壓縮訊息，產生的訊息就會傳遞至堆疊上層，以供通道堆疊處理。 在壓縮期間，產生的已壓縮訊息會直接寫入提供的資料流。
 
 這個範例會使用 Helper 方法 (`CompressBuffer` 和 `DecompressBuffer`)，將緩衝區轉換為資料流以使用 `GZipStream` 類別。
 
 緩衝處理的 `ReadMessage` 和 `WriteMessage` 類別則會使用 `BufferManager` 類別。 您只能透過編碼器處理站來存取編碼器。 抽象 `MessageEncoderFactory` 類別會提供名稱為 `Encoder` 的屬性以讓您存取目前的編碼器，並提供名稱為 `CreateSessionEncoder` 的方法，讓您可建立支援工作階段的編碼器。 您可以在通道支援工作階段的案例中，依序且可靠地使用這類編碼器。 此案例在資料寫入至網路的每個工作階段中，都能達到最佳的效果。 如果不需要這樣做，則不應該多載基底方法。 `Encoder` 屬性提供的機制可讓您存取無工作階段的編碼器，並讓 `CreateSessionEncoder` 方法的預設實作可傳回屬性的值。 由於範例會包裝現有的編碼器以提供壓縮功能，`MessageEncoderFactory` 實作便會接受表示內部編碼器處理站的 `MessageEncoderFactory`。
 
-現在已定義編碼器和編碼器處理站, 它們可以搭配 WCF 用戶端和服務使用。 不過，您必須將這些編碼器新增至通道堆疊。 您可以從 <xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.ChannelFactory%601> 類別衍生類別，並覆寫 `OnInitialize` 方法以手動新增此編碼器處理站。 您也可以透過自訂繫結項目來公開編碼器處理站。
+現在已定義編碼器和編碼器處理站，它們可以搭配 WCF 用戶端和服務使用。 不過，您必須將這些編碼器新增至通道堆疊。 您可以從 <xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.ChannelFactory%601> 類別衍生類別，並覆寫 `OnInitialize` 方法以手動新增此編碼器處理站。 您也可以透過自訂繫結項目來公開編碼器處理站。
 
 若要建立新的自訂繫結項目，請從 <xref:System.ServiceModel.Channels.BindingElement> 類別衍生類別。 會有幾種類型的繫結項目。 若要確定自訂繫結項目已辨識為訊息編碼繫結項目，您也必須實作 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 會公開方法以建立新的訊息編碼器處理站 (`CreateMessageEncoderFactory`)，您會實作此訊息編碼器處理站以傳回相符之訊息編碼器處理站的執行個體。 此外，<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 具有可指出定址版本的屬性。 由於這個範例會包裝現有的編碼器，範例實作也會包裝現有的編碼器繫結項目，並採用內部編碼器繫結項目做為建構函式的參數，並經由屬性來公開此建構函式。 下列範例程式碼會顯示 `GZipMessageEncodingBindingElement` 類別的實作。
 
@@ -224,7 +224,7 @@ binding.Namespace = "http://tempuri.org/bindings";
 
 雖然這樣做對大多數使用者案例來說已足夠，但在 Web 裝載服務的情況下，支援檔案組態仍然相當重要。 若要支援 Web 裝載的案例，您必須開發自訂組態處理常式，讓自訂繫結項目可在檔案中進行設定。
 
-您可以在設定系統上建立繫結項目的設定處理常式。 繫結項目的組態處理常式必須衍生自 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 類別。 會<xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType>通知設定系統要為此區段建立的繫結項目類型。 `BindingElement` 中可以設定的所有項目，都應該公開為 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 衍生類別中的屬性。 如果<xref:System.Configuration.ConfigurationPropertyAttribute>遺漏屬性, 則有助於將設定元素屬性對應至屬性, 並設定預設值。 載入來自組態的值並將這些值套用至屬性時，就會呼叫 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> 方法，而這個方法會將屬性轉換為繫結項目的具象執行個體。 方法是用來將<xref:System.ServiceModel.Configuration.BindingElementExtensionElement>衍生類別上的屬性轉換成要在新建立的繫結項目上設定的值。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType>
+您可以在設定系統上建立繫結項目的設定處理常式。 繫結項目的組態處理常式必須衍生自 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 類別。 會<xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType>通知設定系統要為此區段建立的繫結項目類型。 `BindingElement` 中可以設定的所有項目，都應該公開為 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 衍生類別中的屬性。 如果<xref:System.Configuration.ConfigurationPropertyAttribute>遺漏屬性，則有助於將設定元素屬性對應至屬性，並設定預設值。 載入來自組態的值並將這些值套用至屬性時，就會呼叫 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> 方法，而這個方法會將屬性轉換為繫結項目的具象執行個體。 方法是用來將<xref:System.ServiceModel.Configuration.BindingElementExtensionElement>衍生類別上的屬性轉換成要在新建立的繫結項目上設定的值。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType>
 
 下列範例程式碼會顯示 `GZipMessageEncodingElement` 實作。
 
@@ -295,7 +295,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />
 ```
 
-若要使用此設定處理常式, 必須在[ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素內註冊, 如下列範例設定所示。
+若要使用此設定處理常式，必須在[ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素內註冊，如下列範例設定所示。
 
 ```xml
 <extensions>
@@ -312,7 +312,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 
 當您執行伺服器時，作業要求和回應會顯示在主控台視窗中。 在每一個視窗中按 ENTER 鍵，關閉伺服器。
 
-```
+```console
 Press Enter key to Exit.
 
         Server Echo(string input) called:
@@ -324,7 +324,7 @@ Press Enter key to Exit.
 
 當您執行用戶端時，作業要求和回應會顯示在主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
-```
+```console
 Calling Echo(string):
 Server responds: Simple hello Simple hello
 
@@ -336,15 +336,15 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 使用下列命令安裝 ASP.NET 4.0:
+1. 使用下列命令安裝 ASP.NET 4.0：
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
 2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-3. 若要建立方案, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
+3. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
 
 4. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 

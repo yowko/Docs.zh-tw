@@ -4,12 +4,12 @@ description: 了解如何使用傳輸學習和 ML.NET 重新定型影像分類 T
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804762"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929244"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>教學課程：運用傳輸學習與 ML.NET 重新定型 TensorFlow 影像分類器
 
@@ -19,6 +19,7 @@ ms.locfileid: "67804762"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > * 了解問題
 > * 重複使用並調整預先定型的模型
 > * 分類影像
@@ -73,7 +74,7 @@ ms.locfileid: "67804762"
 > * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" 攝影者：[Jonik](https://commons.wikimedia.org/wiki/User:Jonik) \(英文\) - 自行拍攝，CC BY-SA 2.0， https://commons.wikimedia.org/w/index.php?curid=48166 \(英文\)。
 > * "193px-Broodrooster.jpg" 攝影者：[M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) \(英文\) - 自行創作，CC BY-SA 3.0， https://commons.wikimedia.org/w/index.php?curid=27403 \(英文\)
 
-遷移學習包含幾個策略，例如「重新對所有層級進行定型」  和「倒數第二個層級」  。 本教學課程將會說明並示範使用「倒數第二個層級策略」  的方式。 「倒數第二個層級策略」  會重複使用已預先定型來解決某個特定問題的模型。 該策略接著會將模型的最終層級重新定型，來使它能解決新的問題。 重複使用預先定型的模型作為新模型的一部分，能為您省下大量的時間和資源。
+遷移學習包含幾個策略，例如「重新對所有層級進行定型」和「倒數第二個層級」。 本教學課程將會說明並示範使用「倒數第二個層級策略」的方式。 「倒數第二個層級策略」會重複使用已預先定型來解決某個特定問題的模型。 該策略接著會將模型的最終層級重新定型，來使它能解決新的問題。 重複使用預先定型的模型作為新模型的一部分，能為您省下大量的時間和資源。
 
 您的影像分類模型會重複使用 [Inception model](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)，這是一個以 `ImageNet` 資料集進行定型的熱門影像辨識模型，其中 TensorFlow 模型會嘗試將影像分類為一千個類別中的其中一個類別，例如「雨傘」、「球衣」和「洗碗機」。
 
@@ -126,9 +127,9 @@ toaster2.png    appliance
 
 1. 建立稱為 "TransferLearningTF" 的 **.NET Core 主控台應用程式**。
 
-2. 安裝「Microsoft.ML NuGet 套件」  ：
+2. 安裝「Microsoft.ML NuGet 套件」：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 [nuget.org] 作為 [套件來源]，選取 [瀏覽] 索引標籤，搜尋 **Microsoft.ML**。 按一下 [版本]  下拉式清單，選取清單中的 [1.0.0]  套件，然後選取 [安裝]  按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受]  對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。 針對 **Microsoft.ML.ImageAnalytics v1.0.0** 和 **Microsoft.ML.TensorFlow v0.12.0** 重複這些步驟。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 [nuget.org] 作為 [套件來源]，選取 [瀏覽] 索引標籤，搜尋 **Microsoft.ML**。 按一下 [版本] 下拉式清單，選取清單中的 [1.0.0] 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 針對 **Microsoft.ML.ImageAnalytics v1.0.0** 和 **Microsoft.ML.TensorFlow v0.12.0** 重複這些步驟。
 
 ### <a name="prepare-your-data"></a>準備您的資料
 
@@ -142,7 +143,7 @@ toaster2.png    appliance
 
    ![Inception 目錄內容](./media/image-classification/inception-files.png)
 
-5. 在 [方案總管] 中，以滑鼠右鍵按一下資產目錄及子目錄中的每個檔案，然後選取 [內容]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
+5. 在 [方案總管] 中，以滑鼠右鍵按一下資產目錄及子目錄中的每個檔案，然後選取 [內容]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
@@ -170,9 +171,9 @@ toaster2.png    appliance
 
 為輸入資料和預測建立一些類別。 將新類別新增至專案：
 
-1. 在 [方案總管]  中，於專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增項目]  。
+1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
 
-1. 在 [加入新項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *ImageData.cs*。 接著，選取 [新增]  按鈕。
+1. 在 [加入新項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *ImageData.cs*。 接著，選取 [新增] 按鈕。
 
     *ImageData.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 `using` 陳述式新增至 *ImageData.cs* 最上方：
 
@@ -189,9 +190,9 @@ toaster2.png    appliance
 
 將新類別新增至 `ImagePrediction` 的專案：
 
-1. 在 [方案總管]  中，於專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增項目]  。
+1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
 
-1. 在 [加入新項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *ImagePrediction.cs*。 接著，選取 [新增]  按鈕。
+1. 在 [加入新項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *ImagePrediction.cs*。 接著，選取 [新增] 按鈕。
 
     *ImagePrediction.cs* 檔案隨即在程式碼編輯器中開啟。 移除 *ImagePrediction.cs* 頂端的 `System.Collections.Generic` 和 `System.Text` `using` 陳述式：
 
@@ -304,7 +305,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 機器學習演算法能了解[特徵化](../resources/glossary.md#feature)的資料，且在處理深度神經網路時，您必須將影像調整為網路所預期的格式。 該格式為[數值向量](../resources/glossary.md#numerical-feature-vector)。
 
-在定型和評估之後，搭配 [標籤]  資料行值進行預測。 由於您是使用預先定型的模型，請使用 [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 方法將藍為對應至新的模型。 此方法會將 `Label` 轉換為數值索引鍵類型 (`LabelTokey`) 的資料行，並將它新增為新的資料集資料行：請為此 `estimator` 命名，因為您也會為它新增定型器。 新增下列程式碼：
+在定型和評估之後，搭配 [標籤] 資料行值進行預測。 由於您是使用預先定型的模型，請使用 [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 方法將藍為對應至新的模型。 此方法會將 `Label` 轉換為數值索引鍵類型 (`LabelTokey`) 的資料行，並將它新增為新的資料集資料行：請為此 `estimator` 命名，因為您也會為它新增定型器。 新增下列程式碼：
 
 [!code-csharp[MapValueToKey1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey1)]
 
@@ -480,6 +481,7 @@ Press any key to close this window . . .
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > * 了解問題
 > * 重複使用並調整預先定型的模型
 > * 搭配已載入的模型分類影像

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 21a0a02516a1fbe24378235b910df0a602900a21
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc0e8a5e7d254fc4b34566d2252869a2da4af3db
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790374"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894290"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>查詢資料服務 (WCF 資料服務)
 
@@ -56,7 +56,7 @@ ms.locfileid: "70790374"
 
 此 LINQ 查詢會轉譯成下列查詢 URI，並針對以 Northwind 為基礎的[快速入門](quickstart-wcf-data-services.md)資料服務來執行：
 
-```
+```http
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30
 ```
 

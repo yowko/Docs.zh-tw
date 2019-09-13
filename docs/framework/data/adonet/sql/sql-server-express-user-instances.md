@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fabd9b94b8c0a3f0e0db220e84d6c2eca3537c50
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780841"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894413"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
 Microsoft SQL Server Express Edition (SQL Server Express) 支援使用者執行個體功能，只有在使用 .NET Framework Data Provider for SQL Server (`SqlClient`) 時才提供此功能。 使用者執行個體是 SQL Server Express Database Engine 的獨立執行個體，由父執行個體所產生。 不是系統管理員的使用者可以透過使用者執行個體，從本機電腦附加及連接至 SQL Server Express 資料庫。 每個執行個體都會依照「每個使用者一個執行個體」的基礎，在個別使用者的安全性內容下執行。  
@@ -26,9 +26,9 @@ Microsoft SQL Server Express Edition (SQL Server Express) 支援使用者執行�
 ## <a name="enabling-user-instances"></a>啟用使用者執行個體  
  若要產生使用者執行個體，必須有執行中的 SQL Server Express 父執行個體。 安裝 SQL Server Express 時，預設會啟用使用者實例，而且在父實例上執行**sp_configure**系統預存程式的系統管理員可以明確啟用或停用它們。  
   
-```  
+```sql  
 -- Enable user instances.  
-sp_configure 'user instances enabled','1'   
+sp_configure 'user instances enabled','1'
   
 -- Disable user instances.  
 sp_configure 'user instances enabled','0'  
@@ -51,7 +51,7 @@ sp_configure 'user instances enabled','0'
   
 - 包含在垂直線符號中的 `|DataDirectory|` 替代字串參考到開啟連接之應用程式的資料目錄，且提供相關路徑，指出 .mdf 和 .ldf 資料庫以及記錄檔的位置。 如果想要在其他位置尋找這些檔案，則必須提供檔案的完整路徑。  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;AttachDBFilename=|DataDirectory|\InstanceDB.mdf;  
 Initial Catalog=InstanceDB;  
@@ -65,7 +65,7 @@ Initial Catalog=InstanceDB;
   
  `DataDirectory` 所指向的實體位置，是根據應用程式的類型而定。 在這個範例中，要附加的 Northwind.mdf 檔案是位於應用程式的 \app_data 資料夾中。  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;  
 AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;  

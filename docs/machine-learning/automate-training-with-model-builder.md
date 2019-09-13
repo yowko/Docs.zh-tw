@@ -4,12 +4,12 @@ description: 如何使用 ML.NET 模型建立器來自動定型機器學習服�
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104872"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929474"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>什麼是模型建立器且其如何運作？
 
@@ -29,6 +29,7 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 您可以在模型建立器中放入許多不同的案例，以產生應用程式的機器學習模型。
 
 案例是您想要使用資料進行的預測類型描述。 例如：
+
 - 根據歷史銷售資料預測未來的產品銷售量
 - 根據客戶評論將人氣分類為正面或負面
 - 偵測銀行交易是否為詐騙
@@ -41,6 +42,7 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 在預測數字的案例中，機器學習模型類型稱為`regression`。
 
 在預測類別的案例中，模型類型為 `classification`。 分類有兩種類型：
+
 - 其中只有 2 個類別：`binary classification`。
 - 其中有三個或多個類別：`multiclass classification`。
 
@@ -89,10 +91,12 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 ### <a name="choose-the-output-to-predict-label"></a>選擇要預測的輸出 (標籤)
 
 資料集是定型範例資料列和屬性資料行的資料表。 每個資料列都有：
+
 - **標籤** (您想要預測的屬性)
 - **特性** (作為輸入用來預測標籤的屬性)。
 
 針對房價預測案例，可能的特性為：
+
 - 房屋的坪數
 - 房間和衛浴數量
 - 郵遞區號
@@ -105,15 +109,15 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 如果您還沒有自己的資料，請嘗試下列資料集之一：
 
-|情節|模型類型|資料|標籤|功能|
+|狀況|模型類型|資料|ThisAddIn|功能|
 |-|-|-|-|-|
-|價格預測|迴歸|[計程車費用資料](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|費用|行車時間、距離|
-|異常偵測|二進位分類|[產品銷售資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|產品銷售|月份|
-|情感分析|二進位分類|[網站留言資料](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|標籤 (負面人氣時為 0，正面人氣時為 1)|留言、年度|
-|詐騙偵測|二進位分類|[信用卡資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|類別 (詐騙時為 1，否則為 0)|數量、V1-V28 (匿名特性)|
-|文字分類|多元分類|[GitHub 問題資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|區域圖|標題、描述|
+|價格預測|公式|[計程車費用資料](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|費用|行車時間、距離|
+|異常偵測|二元分類|[產品銷售資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|產品銷售|Month|
+|情感分析|二元分類|[網站留言資料](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|標籤 (負面人氣時為 0，正面人氣時為 1)|留言、年度|
+|詐騙偵測|二元分類|[信用卡資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|類別 (詐騙時為 1，否則為 0)|數量、V1-V28 (匿名特性)|
+|文字分類|多元分類|[GitHub 問題資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|區域|標題、描述|
 
-## <a name="train"></a>定型
+## <a name="train"></a>指導
 
 一旦選取案例、資料和標籤，模型建立器就會定型模型。
 

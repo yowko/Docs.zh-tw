@@ -4,12 +4,12 @@ description: 協助開發人員建立高品質 .NET 程式庫的最佳做法建�
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: 85d76c8b2bd0f030e3fbc1987e6ff51d6da44e76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644378"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928955"
 ---
 # <a name="open-source-library-guidance"></a>開放原始碼程式庫指導
 
@@ -18,6 +18,7 @@ ms.locfileid: "65644378"
 高品質開放原始碼 .NET 程式庫的各個層面：
 
 > [!div class="checklist"]
+>
 > * **包山包海** - 致力於支援多種平台、程式設計語言與應用程式的優質 .NET 程式庫。
 > * **穩定可靠** - 優質的 .NET 程式庫可在 .NET 生態環境中共存，能在使用多種程式庫建置而成的應用程式中執行。
 > * **具備演進能力** - .NET 程式庫應該要隨著時間改善與演進，同時支援現有的使用者。
@@ -48,4 +49,4 @@ ms.locfileid: "65644378"
 **❌ 禁止**發行程式庫的強式名稱和非強式名稱版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 >[!div class="step-by-step"]
->[下一步](get-started.md)
+>[下一個](get-started.md)

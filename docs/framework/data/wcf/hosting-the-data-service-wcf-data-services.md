@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: ea60ac132fdd94d4e3a3676891964070b7150857
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780266"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894324"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>裝載資料服務 (WCF 資料服務)
 藉由使用 WCF Data Services，您可以建立將資料公開為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要的服務。 這個資料服務會定義為繼承自 <xref:System.Data.Services.DataService%601> 的類別。 這個類別會提供處理要求訊息、針對資料來源執行更新，以及產生 OData 所需的回應訊息所需的功能。 不過，資料服務無法系結至網路通訊端並在其中接聽傳入的 HTTP 要求。 對於這個必要的功能而言，資料服務會依賴裝載的元件。
@@ -40,7 +40,7 @@ ms.locfileid: "70780266"
 
 當您使用 Visual Studio 2015 中的 [**加入新專案**] 對話方塊來定義 ASP.NET 應用程式中的資料服務時，此工具會在專案中產生兩個新的檔案。 第一個檔案的副檔名為 `.svc`，而且它會指示 WCF 執行階段如何具現化資料服務。 以下是當您完成[快速入門](quickstart-wcf-data-services.md)時所建立之 Northwind 範例資料服務的此檔案範例：
 
-```
+```aspx-csharp
 <%@ ServiceHost Language="C#"
     Factory="System.Data.Services.DataServiceHostFactory,
             System.Data.Services, Version=4.0.0.0,

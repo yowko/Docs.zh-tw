@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915468"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894890"
 ---
 # <a name="dynamically-loading-and-using-types"></a>動態載入和使用類型
 反映會提供語言編譯器所使用的基礎結構，以實作隱含晚期繫結。 繫結是尋找對應至唯一指定的類型宣告 (也就是實作) 的程序。 當此程序發生在執行階段，而不是在編譯時期時，它稱為晚期繫結。 Visual Basic 可讓您在程式碼內使用隱含晚期繫結；Visual Basic 編譯器會呼叫 Helper 方法，它會使用反映來取得物件類型。 傳遞至 helper 方法的引數會導致在執行階段叫用適當的方法。 這些引數是在其上叫用方法的執行個體 (物件)、被叫用方法的名稱 (字串)，以及傳遞給被叫用方法的引數 (物件陣列)。  
   
  在下列範例中，Visual Basic 編譯器會隱含地使用反映，對一個在編譯階段不知道其類型的物件呼叫方法。 **HelloWorld** 類別具有 **PrintHello** 方法，它會列印出 "Hello World" 並串連傳遞給 **PrintHello** 方法的部分文字。 在此範例中呼叫的 **PrintHello** 方法實際上是 <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>；Visual Basic 程式碼允許叫用 **PrintHello** 方法，就彷彿已在編譯階段知道物件 (helloObj) 的類型 (早期繫結)，而不是執行階段知道 (晚期繫結)。  
   
-```  
-Imports System  
+```vb
 Module Hello  
     Sub Main()  
         ' Sets up the variable.  
