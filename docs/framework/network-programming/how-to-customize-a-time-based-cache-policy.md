@@ -9,19 +9,19 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 457de16337fd2a37dad9042c770680ba5ad27a0d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5df070bb2cfef42d60247cad39f2a2f76963bae8
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624598"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894738"
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a><span data-ttu-id="e94ba-102">作法：自訂以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="e94ba-102">How to: Customize a Time-Based Cache Policy</span></span>
-<span data-ttu-id="e94ba-103">在建立以時間為基礎的快取原則時，您可以藉由指定最長使用期限、最短有效期限、最長過時或快取同步處理日期的值來自訂快取行為。</span><span class="sxs-lookup"><span data-stu-id="e94ba-103">When creating a time-based cache policy, you can customize caching behavior by specifying values for maximum age, minimum freshness, maximum staleness, or cache synchronization date.</span></span> <span data-ttu-id="e94ba-104"><xref:System.Net.Cache.HttpRequestCachePolicy> 物件所提供的建構函式可讓您指定這些值的有效組合。</span><span class="sxs-lookup"><span data-stu-id="e94ba-104">The <xref:System.Net.Cache.HttpRequestCachePolicy> object provides several constructors that allow you to specify valid combinations of these values.</span></span>  
+# <a name="how-to-customize-a-time-based-cache-policy"></a><span data-ttu-id="90c9f-102">作法：自訂以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="90c9f-102">How to: Customize a Time-Based Cache Policy</span></span>
+<span data-ttu-id="90c9f-103">在建立以時間為基礎的快取原則時，您可以藉由指定最長使用期限、最短有效期限、最長過時或快取同步處理日期的值來自訂快取行為。</span><span class="sxs-lookup"><span data-stu-id="90c9f-103">When creating a time-based cache policy, you can customize caching behavior by specifying values for maximum age, minimum freshness, maximum staleness, or cache synchronization date.</span></span> <span data-ttu-id="90c9f-104"><xref:System.Net.Cache.HttpRequestCachePolicy> 物件所提供的建構函式可讓您指定這些值的有效組合。</span><span class="sxs-lookup"><span data-stu-id="90c9f-104">The <xref:System.Net.Cache.HttpRequestCachePolicy> object provides several constructors that allow you to specify valid combinations of these values.</span></span>  
   
-### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a><span data-ttu-id="e94ba-105">建立使用快取同步處理日期之以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="e94ba-105">To create a time-based cache policy that uses a cache synchronization date</span></span>  
+### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a><span data-ttu-id="90c9f-105">建立使用快取同步處理日期之以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="90c9f-105">To create a time-based cache policy that uses a cache synchronization date</span></span>  
   
-- <span data-ttu-id="e94ba-106">藉由將 <xref:System.DateTime> 物件傳遞給 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式，建立使用快取同步處理日期之以時間為基礎的快取原則。</span><span class="sxs-lookup"><span data-stu-id="e94ba-106">Create a time-based cache policy that uses a cache synchronization date by passing a <xref:System.DateTime> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
+- <span data-ttu-id="90c9f-106">藉由將 <xref:System.DateTime> 物件傳遞給 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式，建立使用快取同步處理日期之以時間為基礎的快取原則。</span><span class="sxs-lookup"><span data-stu-id="90c9f-106">Create a time-based cache policy that uses a cache synchronization date by passing a <xref:System.DateTime> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)  
@@ -43,16 +43,16 @@ ms.locfileid: "64624598"
     End Function  
     ```  
   
- <span data-ttu-id="e94ba-107">其輸出如下所示：</span><span class="sxs-lookup"><span data-stu-id="e94ba-107">The output is similar to the following:</span></span>  
+ <span data-ttu-id="90c9f-107">其輸出如下所示：</span><span class="sxs-lookup"><span data-stu-id="90c9f-107">The output is similar to the following:</span></span>  
   
-```  
+```output
 When: 1/14/2004 8:07:30 AM  
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM  
 ```  
   
-### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a><span data-ttu-id="e94ba-108">建立依據最短有效期限之以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="e94ba-108">To create a time-based cache policy that is based on minimum freshness</span></span>  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a><span data-ttu-id="90c9f-108">建立依據最短有效期限之以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="90c9f-108">To create a time-based cache policy that is based on minimum freshness</span></span>  
   
-- <span data-ttu-id="e94ba-109">藉由將 <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> 指定為 `cacheAgeControl` 參數值並將 <xref:System.TimeSpan> 物件傳遞給 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式，建立依據最短有效期限之以時間為基礎的快取原則。</span><span class="sxs-lookup"><span data-stu-id="e94ba-109">Create a time-based cache policy that is based on minimum freshness by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> as the `cacheAgeControl` parameter value and passing a <xref:System.TimeSpan> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
+- <span data-ttu-id="90c9f-109">藉由將 <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> 指定為 `cacheAgeControl` 參數值並將 <xref:System.TimeSpan> 物件傳遞給 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式，建立依據最短有效期限之以時間為基礎的快取原則。</span><span class="sxs-lookup"><span data-stu-id="90c9f-109">Create a time-based cache policy that is based on minimum freshness by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> as the `cacheAgeControl` parameter value and passing a <xref:System.TimeSpan> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)  
@@ -72,19 +72,21 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
     End Function  
     ```  
   
- <span data-ttu-id="e94ba-110">對於下列引動過程：</span><span class="sxs-lookup"><span data-stu-id="e94ba-110">For the following invocation:</span></span>  
+ <span data-ttu-id="90c9f-110">對於下列引動過程：</span><span class="sxs-lookup"><span data-stu-id="90c9f-110">For the following invocation:</span></span>  
   
-```  
+```csharp
 CreateMinFreshPolicy(new TimeSpan(1,0,0));  
 ```  
+
+ <span data-ttu-id="90c9f-111">輸出為：</span><span class="sxs-lookup"><span data-stu-id="90c9f-111">The output is:</span></span>
   
-```  
+```output
 Level:Default MinFresh:3600  
 ```  
   
-### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a><span data-ttu-id="e94ba-111">建立依據最短有效期限和最長使用期限之以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="e94ba-111">To create a time-based cache policy that is based on minimum freshness and maximum age</span></span>  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a><span data-ttu-id="90c9f-112">建立依據最短有效期限和最長使用期限之以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="90c9f-112">To create a time-based cache policy that is based on minimum freshness and maximum age</span></span>  
   
-- <span data-ttu-id="e94ba-112">藉由將 <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> 指定為 `cacheAgeControl` 參數值並將兩個 <xref:System.TimeSpan> 物件傳遞給 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式 ( 一個用來指定資源的最長使用期限，另一個用來指定從快取傳回的物件所允許的最短有效期限)，建立依據最短有效期限和最長使用期限之以時間為基礎的快取原則。</span><span class="sxs-lookup"><span data-stu-id="e94ba-112">Create a time-based cache policy that is based on minimum freshness and maximum age by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> as the `cacheAgeControl` parameter value and passing two <xref:System.TimeSpan> objects to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor, one to specify the maximum age for resources and a second to specify the minimum freshness permitted for an object returned from the cache.</span></span>  
+- <span data-ttu-id="90c9f-113">藉由將 <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> 指定為 `cacheAgeControl` 參數值並將兩個 <xref:System.TimeSpan> 物件傳遞給 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式 ( 一個用來指定資源的最長使用期限，另一個用來指定從快取傳回的物件所允許的最短有效期限)，建立依據最短有效期限和最長使用期限之以時間為基礎的快取原則。</span><span class="sxs-lookup"><span data-stu-id="90c9f-113">Create a time-based cache policy that is based on minimum freshness and maximum age by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> as the `cacheAgeControl` parameter value and passing two <xref:System.TimeSpan> objects to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor, one to specify the maximum age for resources and a second to specify the minimum freshness permitted for an object returned from the cache.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)  
@@ -104,20 +106,22 @@ Level:Default MinFresh:3600
     End Function  
     ```  
   
- <span data-ttu-id="e94ba-113">對於下列引動過程：</span><span class="sxs-lookup"><span data-stu-id="e94ba-113">For the following invocation:</span></span>  
+ <span data-ttu-id="90c9f-114">對於下列引動過程：</span><span class="sxs-lookup"><span data-stu-id="90c9f-114">For the following invocation:</span></span>  
   
-```  
+```csharp
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
 ```  
+
+<span data-ttu-id="90c9f-115">輸出為：</span><span class="sxs-lookup"><span data-stu-id="90c9f-115">The output is:</span></span>
   
-```  
+```output
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e94ba-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e94ba-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90c9f-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="90c9f-116">See also</span></span>
 
-- [<span data-ttu-id="e94ba-115">網路應用程式的快取管理</span><span class="sxs-lookup"><span data-stu-id="e94ba-115">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [<span data-ttu-id="e94ba-116">快取原則</span><span class="sxs-lookup"><span data-stu-id="e94ba-116">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)
-- [<span data-ttu-id="e94ba-117">以位置為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="e94ba-117">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [<span data-ttu-id="e94ba-118">以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="e94ba-118">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [<span data-ttu-id="e94ba-119">\<requestCaching> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="e94ba-119">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [<span data-ttu-id="90c9f-117">網路應用程式的快取管理</span><span class="sxs-lookup"><span data-stu-id="90c9f-117">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [<span data-ttu-id="90c9f-118">快取原則</span><span class="sxs-lookup"><span data-stu-id="90c9f-118">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)
+- [<span data-ttu-id="90c9f-119">以位置為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="90c9f-119">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [<span data-ttu-id="90c9f-120">以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="90c9f-120">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [<span data-ttu-id="90c9f-121">\<requestCaching> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="90c9f-121">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
