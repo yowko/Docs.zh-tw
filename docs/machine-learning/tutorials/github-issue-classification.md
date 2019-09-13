@@ -4,12 +4,12 @@ description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitH
 ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
-ms.translationtype: HT
+ms.openlocfilehash: 1eb56465bb56906df25c3a094126f2496bef684e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710297"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929228"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教學課程：搭配 ML .NET 使用多類別分類來分類支援問題
 
@@ -17,6 +17,7 @@ ms.locfileid: "68710297"
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > * 準備您的資料
 > * 轉換資料
 > * 將模型定型
@@ -37,25 +38,25 @@ ms.locfileid: "68710297"
 
 ### <a name="create-a-project"></a>建立專案
 
-1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]   >  [新增]   >  [專案]  。 在 [新增專案]  對話方塊中，選取 [Visual C#]  節點，然後選取 [.NET Core]  節點。 然後選取 [主控台應用程式 (.NET Core)]  專案範本。 在 [名稱]  文字方塊中，鍵入 "GitHubIssueClassification"，然後選取 [確定]  按鈕。
+1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "GitHubIssueClassification"，然後選取 [確定] 按鈕。
 
 2. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集檔案：
 
-    在 [方案總管]  中，於您的專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增資料夾]  。 輸入 "Data"，然後按 Enter。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [新增] > [新增資料夾]。 輸入 "Data"，然後按 Enter。
 
 3. 在您的專案中建立名為 *Models* 的目錄，以儲存您的模型：
 
-    在 [方案總管]  中，於您的專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增資料夾]  。 鍵入 "Models"，然後按 ENTER。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [新增] > [新增資料夾]。 鍵入 "Models"，然後按 ENTER。
 
-4. 安裝「Microsoft.ML NuGet 套件」  ：
+4. 安裝「Microsoft.ML NuGet 套件」：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為套件來源、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、在清單中選取 **v 1.0.0** 套件，然後選取 [安裝]  按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受]  對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為套件來源、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、在清單中選取 **v 1.0.0** 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
 
 ### <a name="prepare-your-data"></a>準備您的資料
 
 1. 下載 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 資料集，並將它們儲存至先前建立的 *Data* 資料夾。 第一個資料集會將機器學習模型定型，第二個資料集則可用來評估您模型的準確率。
 
-2. 在 [方案總管] 中，於每個 \*.tsv 檔案上按一下滑鼠右鍵，然後選取 [屬性]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
+2. 在 [方案總管] 中，於每個 \*.tsv 檔案上按一下滑鼠右鍵，然後選取 [屬性]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
@@ -78,9 +79,9 @@ ms.locfileid: "68710297"
 
 為輸入資料和預測建立一些類別。 將新類別新增至專案：
 
-1. 在 [方案總管]  中，於專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增項目]  。
+1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
 
-1. 在 [新增項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *GitHubIssueData.cs*。 接著，選取 [新增]  按鈕。
+1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *GitHubIssueData.cs*。 接著，選取 [新增] 按鈕。
 
     *GitHubIssueData.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 `using` 陳述式新增至 *GitHubIssueData.cs* 最上方：
 
@@ -372,6 +373,7 @@ private static void PredictIssue()
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
+>
 > * 準備您的資料
 > * 轉換資料
 > * 將模型定型

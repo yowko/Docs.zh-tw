@@ -3,12 +3,12 @@ title: ML.NET CLI 工具中的 auto-train 命令
 description: ML.NET CLI 工具中的 auto-train 命令概觀、範例和參考。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397667"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929206"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI 中的 'auto-train' 命令
 
@@ -187,7 +187,7 @@ CLI 使用 ML.NET AutoML 引擎 (NuGet 套件) 以智慧方式來搜尋最佳品
 
 透過這個引數，您可以藉由使用資料集標頭中所設定的資料行名稱，來指定特定目標/目的資料行 (您想要預測的變數)。
 
-這個引數只能用於受監督的 ML 工作，例如「分類問題」  。 不能用於不受監督的 ML 工作，例如「叢集」  。
+這個引數只能用於受監督的 ML 工作，例如「分類問題」。 不能用於不受監督的 ML 工作，例如「叢集」。
 
 ----------------------------------------------------------
 
@@ -197,7 +197,7 @@ CLI 使用 ML.NET AutoML 引擎 (NuGet 套件) 以智慧方式來搜尋最佳品
 
 *注意：* 如果使用者同時使用 `--label-column-name`，則會使用 `--label-column-name`。
 
-這個引數只能用於受監督的 ML 工作，例如「分類問題」  。 不能用於不受監督的 ML 工作，例如「叢集」  。
+這個引數只能用於受監督的 ML 工作，例如「分類問題」。 不能用於不受監督的 ML 工作，例如「叢集」。
 
 ----------------------------------------------------------
 
@@ -217,6 +217,7 @@ CLI 使用 ML.NET AutoML 引擎 (NuGet 套件) 以智慧方式來搜尋最佳品
 
 指定資料集檔案是否有標頭資料列。
 可能的值為：
+
 - `true`
 - `false`
 

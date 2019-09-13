@@ -189,11 +189,7 @@
         - name: .NET Core 2.0 的新功能
           href: core/whats-new/dotnet-core-2-0.md
     - name: 應用程式相容性
-      items:
-        - name: 評估中斷性變更
-          href: core/compatibility/index.md
-        - name: 中斷性變更類別
-          href: core/compatibility/categories.md
+      href: core/compatibility/
     - name: 教學課程
       href: core/tutorials/index.md
       items:

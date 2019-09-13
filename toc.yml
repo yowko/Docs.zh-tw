@@ -109,6 +109,9 @@
             - name: 工具
               tocHref: /dotnet/core/tools/
               topicHref: /dotnet/core/tools/index
+            - name: 相容性
+              tocHref: /dotnet/core/compatibility/
+              topicHref: /dotnet/core/compatibility/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index
