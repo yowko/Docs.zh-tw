@@ -4,7 +4,7 @@
   href: configure-language-version.md
 - name: 'C# 關鍵字'
   items:
-    - name: 總覽
+    - name: 概觀
       href: keywords/index.md
     - name: 內建類型
       items:
@@ -154,7 +154,7 @@
               href: keywords/try-catch-finally.md
         - name: Checked 與 Unchecked
           items:
-            - name: 總覽
+            - name: 概觀
               href: keywords/checked-and-unchecked.md
             - name: checked
               href: keywords/checked.md
@@ -274,7 +274,7 @@
           href: keywords/in.md
 - name: 'C# 運算子'
   items:
-    - name: 總覽
+    - name: 概觀
       href: operators/index.md
     - name: 算術運算子
       href: operators/arithmetic-operators.md
@@ -315,9 +315,9 @@
     - name: '?: 運算子'
       href: operators/conditional-operator.md
       displayName: 'conditional, ternary, ref'
-    - name: '?? 運算子'
+    - name: '?? 與 ??= 運算子'
       href: operators/null-coalescing-operator.md
-      displayName: null-coalescing
+      displayName: 'null-coalescing, assignment'
     - name: => 運算子
       href: operators/lambda-operator.md
       displayName: lambda
@@ -347,7 +347,7 @@
       href: operators/operator-overloading.md
 - name: 'C# 特殊字元'
   items:
-    - name: 總覽
+    - name: 概觀
       href: tokens/index.md
     - name: $ -- 字串插補
       href: tokens/interpolated.md
@@ -355,7 +355,7 @@
       href: tokens/verbatim.md
 - name: 'C# 前置處理器指示詞'
   items:
-    - name: 總覽
+    - name: 概觀
       href: preprocessor-directives/index.md
     - name: '#if'
       href: preprocessor-directives/preprocessor-if.md
@@ -387,7 +387,7 @@
       href: preprocessor-directives/preprocessor-pragma-checksum.md
 - name: 'C# 編譯器選項'
   items:
-    - name: 總覽
+    - name: 概觀
       href: compiler-options/index.md
     - name: 使用 csc.exe 建置命令列
       href: compiler-options/command-line-building-with-csc-exe.md
@@ -555,7 +555,7 @@
       href: ../../../_csharplang/spec/unsafe-code.md
     - name: 文件註解
       href: ../../../_csharplang/spec/documentation-comments.md
-- name: 'C# 7.0 語言提案'
+- name: 'C# 7.0 規格提案'
   items:
     - name: 模式比對
       href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
@@ -569,7 +569,7 @@
       href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
     - name: 數字分隔符號
       href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-- name: 'C# 7.1 語言提案'
+- name: 'C# 7.1 規格提案'
   items:
     - name: Async main 方法
       href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
@@ -579,7 +579,7 @@
       href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
     - name: 使用泛型進行模式比對
       href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-- name: 'C# 7.2 語言提案'
+- name: 'C# 7.2 規格提案'
   items:
     - name: 唯讀參考
       href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
@@ -593,7 +593,7 @@
       href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
     - name: 前置數字分隔符號
       href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-- name: 'C# 7.3 語言提案'
+- name: 'C# 7.3 規格提案'
   items:
     - name: 非受控的泛型型別條件約束
       href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
@@ -613,14 +613,16 @@
       href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
     - name: 改進的多載候選項目
       href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-- name: 'C# 8.0 語言提案'
+- name: 'C# 8.0 規格提案'
   items:
-    - name: Null 參考型別 - 提案
+    - name: 可為 Null 的參考型別 - 提案
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
     - name: 可為 Null 的參考型別 - 規格
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
     - name: 遞迴模式比對
       href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+    - name: 預設介面成員
+      href: ../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
     - name: 非同步資料流
       href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
     - name: 範圍
@@ -629,3 +631,5 @@
       href: ../../../_csharplang/proposals/csharp-8.0/using.md
     - name: Null 聯合指派
       href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
+    - name: 唯讀執行個體成員
+      href: ../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
