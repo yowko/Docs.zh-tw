@@ -5,13 +5,13 @@ hide_bc: true
 title: .NET 文件
 description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
-ms.date: 12/04/2018
-ms.openlocfilehash: c2a70c2d297b1ec2ef797e9d6084339f32c59c48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.date: 09/04/2019
+ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799298"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928949"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -80,8 +80,8 @@ ms.locfileid: "70799298"
                 <a data-default="true" href="#docs">文件</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">開始使用</a>
-                        <ul id="getstarted" class="cardsF">
+                        <a href="#dotnetguides">.NET 指南</a>
+                        <ul id="dotnetguides" class="cardsF">
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -94,6 +94,7 @@ ms.locfileid: "70799298"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/standard/">.NET 指南</a></h3>
                                                 <p><a href="/dotnet/standard/get-started">開始使用</a></p>
+                                                <p><a href="https://docs.microsoft.com/learn/browse/?roles=developer&products=dotnet">實作學習模組</a></p>
                                                 <p><a href="/dotnet/standard/tour">.NET 教學課程</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET 架構概念</a></p>
                                             </div>
@@ -263,6 +264,68 @@ ms.locfileid: "70799298"
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">參與 .NET 文件和範例的建立及編輯</a></p>
                                 </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#getstarted">開始使用</a>
+                        <ul id="getstarted" class="cardsC">
+                            <li>
+                                <a href="/dotnet/csharp/tutorials/intro-to-csharp/hello-world">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-csharp.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>C# 簡介</h3>
+                                                    <p>快速互動式開始。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/core/get-started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-dotnet-core.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>建置您的第一個 .NET Core 應用程式</h3>
+                                                    <p>了解如何建置您的第一個 .NET Core 主控台應用程式。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>建置您的第一個 Web 應用程式</h3>
+                                                    <p>了解如何建置您的第一個 ASP.NET Core Web 應用程式。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
