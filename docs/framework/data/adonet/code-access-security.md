@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786865"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971826"
 ---
 # <a name="code-access-security-and-adonet"></a>程式碼存取安全性和 ADO.NET
 .NET Framework 會提供以角色為基礎的安全性和程式碼存取安全性 (CAS)，而這兩種安全性都是使用 Common Language Runtime (CLR) 所提供的通用基礎結構所實作的。 在 Unmanaged 程式碼的作用範圍內，大多數應用程式都是以使用者或主體的權限執行。 因此，當擁有更高權限的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。  
@@ -50,12 +50,12 @@ ms.locfileid: "70786865"
  根據您所建立的應用程式類型，您也應該考慮在資料庫中實作以角色為基礎的權限。 如需 SQL Server 中以角色為基礎之安全性的詳細資訊，請參閱[SQL Server 安全性](./sql/sql-server-security.md)。  
   
 ## <a name="assemblies"></a>組件  
- 組件會構成 .NET Framework 應用程式之部署、版本控制、重複使用、啟動範圍和安全性權限的基本單位。 組件會提供針對一起運作而建立而且構成邏輯功能單位之類型和資源的組合。 對 CLR 而言，類型不會存在組件內容外部。 如需建立和部署元件的詳細資訊，請參閱[使用元件進行程式設計](../../app-domains/programming-with-assemblies.md)。  
+ 組件會構成 .NET Framework 應用程式之部署、版本控制、重複使用、啟動範圍和安全性權限的基本單位。 組件會提供針對一起運作而建立而且構成邏輯功能單位之類型和資源的組合。 對 CLR 而言，類型不會存在組件內容外部。 如需建立和部署元件的詳細資訊，請參閱[使用元件進行程式設計](../../../standard/assembly/program.md)。  
   
 ### <a name="strong-naming-assemblies"></a>強式命名組件  
  強式名稱 (Strong Name) 或數位簽章包含組件的識別，其中包括簡單文字名稱、版本號碼和文化特性資訊 (如果有提供的話)，以及公開金鑰 (Public Key) 和數位簽章。 數位簽章是從使用對應之私密金鑰的組件檔中產生的。 組件檔包含組件資訊清單 (Assembly Manifest)，其中包含組成組件之所有檔案的名稱和雜湊。  
   
- 強式命名組件可提供應用程式或元件唯一的識別，讓其他軟體用來明確參考該應用程式或元件。 強式命名可保護組件，讓內含惡意程式碼的組件無法假冒該組件。 此外，強式命名還能確保不同元件版本之間的版本一致性。 您必須強式命名將部署到全域組件快取 (GAC) 的組件。 如需詳細資訊，請參閱[建立和使用強式名稱的組件](../../app-domains/create-and-use-strong-named-assemblies.md)。  
+ 強式命名組件可提供應用程式或元件唯一的識別，讓其他軟體用來明確參考該應用程式或元件。 強式命名可保護組件，讓內含惡意程式碼的組件無法假冒該組件。 此外，強式命名還能確保不同元件版本之間的版本一致性。 您必須強式命名將部署到全域組件快取 (GAC) 的組件。 如需詳細資訊，請參閱[建立和使用強式名稱的組件](../../../standard/assembly/create-use-strong-named.md)。  
   
 ## <a name="partial-trust-in-adonet-20"></a>ADO.NET 2.0 中的部分信任  
  在 ADO.NET 2.0 中，.NET Framework Data Provider for SQL Server、.NET Framework Data Provider for OLE DB、.NET Framework Data Provider for ODBC 和 .NET Framework Data Provider for Oracle 現在都可以在部分信任的環境中執行。 在舊版的 .NET Framework 中，只有 <xref:System.Data.SqlClient> 才能在低於完全信任的應用程式中使用。  

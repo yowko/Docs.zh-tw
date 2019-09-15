@@ -1,5 +1,5 @@
 ---
-title: 作法：建立 COM 包裝函式
+title: HOW TO：建立 COM 包裝函式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946466"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971827"
 ---
 # <a name="how-to-create-com-wrappers"></a>作法：建立 COM 包裝函式
 
@@ -30,13 +30,13 @@ ms.locfileid: "69946466"
 
 1. 開啟 Managed 應用程式的專案。
 
-2. 在 [專案]  功能表上，按一下 [顯示所有檔案]  。
+2. 在 [專案] 功能表上，按一下 [顯示所有檔案]。
 
-3. 在 [專案]  功能表上，按一下 [新增參考]  。
+3. 在 [專案] 功能表上，按一下 [新增參考]。
 
-4. 在 [新增參考] 對話方塊中，按一下 [COM]  索引標籤，選取您要使用的元件，然後按一下 [確定]  。
+4. 在 [新增參考] 對話方塊中，按一下 [COM] 索引標籤，選取您要使用的元件，然後按一下 [確定]。
 
-     在方案總管  中，請注意，會將 COM 元件新增至專案中的 [參考] 資料夾。
+     在方案總管中，請注意，會將 COM 元件新增至專案中的 [參考] 資料夾。
 
 現在，您可以撰寫程式碼以存取 COM 物件。 您可以從宣告物件開始，例如使用 Visual Basic `Imports` 陳述式或 C# `Using` 陳述式。
 
@@ -55,15 +55,15 @@ ms.locfileid: "69946466"
   
 1. 針對您要在機器碼中執行的 Managed 類別，建立類別庫專案。 類別必須有無參數建構函式。  
   
-     確認您在 AssemblyInfo 檔案中擁有組件的完整四部分版本號碼。 這個號碼對於在 Windows 登錄中維護版本控制是必要的。 如需版本號碼的詳細資訊，請參閱[組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。  
+     確認您在 AssemblyInfo 檔案中擁有組件的完整四部分版本號碼。 這個號碼對於在 Windows 登錄中維護版本控制是必要的。 如需版本號碼的詳細資訊，請參閱[組件版本控制](../../standard/assembly/versioning.md)。  
   
-2. 在 [專案]  功能表上，按一下 [屬性]  。  
+2. 在 [專案] 功能表上，按一下 [屬性]。  
   
-3. 按一下 [編譯]  索引標籤。  
+3. 按一下 [編譯] 索引標籤。  
   
-4. 選取 [註冊 COM Interop]  核取方塊。  
+4. 選取 [註冊 COM Interop] 核取方塊。  
   
- 當您建置專案時，組件會自動註冊 COM Interop。 如果您是在 Visual Studio 2005 中建置原生應用程式，即可在 [專案]  功能表上按一下 [新增參考]  以使用組件。  
+ 當您建置專案時，組件會自動註冊 COM Interop。 如果您是在 Visual Studio 2005 中建置原生應用程式，即可在 [專案] 功能表上按一下 [新增參考] 以使用組件。  
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>使用 .NET Framework 工具建立 COM 可呼叫包裝函式  
   

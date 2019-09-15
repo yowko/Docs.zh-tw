@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0faf4d77b1ea2881ba8e029d544f2e42cf552349
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044406"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989680"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>HOW TO：建立流程圖工作流程
+# <a name="how-to-create-a-flowchart-workflow"></a>作法：建立流程圖工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步說明如何建立使用內建活動（例如<xref:System.Activities.Statements.Flowchart>活動）的工作流程，以及先前[如何執行的自訂活動：建立活動](how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
   
 > [!NOTE]
@@ -118,15 +118,15 @@ ms.locfileid: "70044406"
   
 9. 按一下第二個 [ **FlowDecision** ] 活動加以選取。 在 [**屬性] 視窗**的 [**條件**] 屬性值方塊中，輸入下列運算式。  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 10. 從 [**工具箱**] 的 [**基本**] 區段拖放兩個 [ **WriteLine** ] 活動，使其在兩個**FlowDecision**活動的正下方。 將底部**FlowDecision**活動的**真正**動作連線到最左邊的 [ **writeline** ] 活動，並將 [ **False** ] 動作連接至最右邊的 [ **writeline** ] 活動。  
   
 11. 按一下最左邊的 [ **WriteLine** ] 活動加以選取，然後在 [**屬性] 視窗**的 [**文字**] 屬性值方塊中輸入下列運算式。  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
@@ -134,7 +134,7 @@ ms.locfileid: "70044406"
   
 13. 按一下最右邊的 [ **WriteLine** ] 活動加以選取，然後在 [**屬性] 視窗**的 [**文字**] 屬性值方塊中輸入下列運算式。  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

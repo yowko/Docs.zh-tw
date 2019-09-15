@@ -2,12 +2,12 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
-ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 13239b5235138cc6994841bbb81f8f12e661e337
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397541"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969849"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -57,7 +57,7 @@ ms.locfileid: "67397541"
 
 這些針對 ASP.NET Core 中繼套件的參考，具有和大部分的一般 NuGet 套件些微不同的行為。 使用這些中繼套件之應用程式的[架構相依部署](../deploying/index.md#framework-dependent-deployments-fdd)會自動利用 ASP.NET Core 共用架構的優點。 當您使用中繼套件時，系統**不會**搭配應用程式部署來自所參考之 ASP.NET Core NuGet 套件的任何資產；ASP.NET Core 共用架構會包含這些資產。 共用架構中的資產會針對目標平台最佳化，以改善應用程式啟動時間。 如需共用架構的詳細資訊，請參閱 [.NET Core 發佈封裝](../build/distribution-packaging.md)。
 
-如果「已指定」  某個版本，系統會將它視為 ASP.NET Core 共用架構適用於架構相依部署的「最小」  版本，以及獨立式部署的「確切」  版本。 這可能會導致下列結果：
+如果「已指定」某個版本，系統會將它視為 ASP.NET Core 共用架構適用於架構相依部署的「最小」版本，以及獨立式部署的「確切」版本。 這可能會導致下列結果：
 
 * 如果安裝在伺服器上的 ASP.NET Core 版本小於 PackageReference 上所指定的版本，.NET Core 處理序將無法啟動。 針對中繼套件的更新通常會在於裝載環境 (例如 Azure) 中推出之前，先在 NuGet.org 上提供使用。 將 PackageReference 上的版本更新為 ASP.NET Core 的版本，可能會導致已部署的應用程式發生失敗。
 * 如果應用程式是以[獨立式部署](../deploying/index.md#self-contained-deployments-scd)的形式部署，該應用程式可能不會包含針對 .NET Core 的最新安全性更新。 沒有指定版本時，獨立式部署中的 SDK 可以自動包含最新版本的 ASP.NET Core。
@@ -95,7 +95,7 @@ ms.locfileid: "67397541"
 
 這項變更不會修改其他包含項目的主要機制。 不過，如果您想要指定某些檔案由應用程式發行，您仍然可以使用 *csproj* 中已知的機制來執行這項作業 (例如 `<Content>` 項目)。
 
-`<EnableDefaultCompileItems>` 只會停用 `Compile` GLOB，而不會影響隱含 `None` GLOB 這類其他 GLOB，後者也會套用至 \*.cs 項目。 因此，方案總管  會繼續將 \*.cs 項目顯示為包含為 `None` 項目之專案的一部分。 透過類似的方式，您可以將 `<EnableDefaultNoneItems>` 設為 False 以停用隱含 `None` GLOB，如下所示：
+`<EnableDefaultCompileItems>` 只會停用 `Compile` GLOB，而不會影響隱含 `None` GLOB 這類其他 GLOB，後者也會套用至 \*.cs 項目。 因此，方案總管會繼續將 \*.cs 項目顯示為包含為 `None` 項目之專案的一部分。 透過類似的方式，您可以將 `<EnableDefaultNoneItems>` 設為 False 以停用隱含 `None` GLOB，如下所示：
 
 ```xml
 <PropertyGroup>
@@ -143,7 +143,7 @@ ms.locfileid: "67397541"
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>Version
 
 必要的 `Version` 屬性會指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
@@ -179,7 +179,7 @@ ms.locfileid: "67397541"
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>Version
 
 `Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
@@ -250,7 +250,7 @@ RID 允許發行獨立部署。
 
 UI 顯示中的套件詳細描述。
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 組件的完整描述。 如果未指定 `PackageDescription`，則此屬性也會用來作為套件的描述。
 
@@ -264,7 +264,7 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-[SPDX 授權識別碼](https://spdx.org/licenses/) \(英文\) 或運算式。 例如，`Apache-2.0`。
+[SPDX 授權識別碼](https://spdx.org/licenses/) \(英文\) 或運算式。 例如： `Apache-2.0` 。
 
 此處有 [SPDX 授權識別碼](https://spdx.org/licenses/)的完整清單。 在使用授權類型運算式時，NuGet.org 只接受 OSI 或 FSF 核准的授權。
 
@@ -389,7 +389,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ## <a name="assemblyinfo-properties"></a>AssemblyInfo 屬性
 
-[組件屬性](../../framework/app-domains/set-assembly-attributes.md)，通常存在於 AssemblyInfo  檔案，現在會自動從屬性產生。
+[組件屬性](../../standard/assembly/set-attributes.md)，通常存在於 AssemblyInfo 檔案，現在會自動從屬性產生。
 
 ### <a name="properties-per-attribute"></a>每個屬性 (Attribute) 的屬性 (Property)
 

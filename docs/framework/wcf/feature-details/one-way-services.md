@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: b29585eabcc2549876f4b50e6b6e55a7f8ef2eee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d567674baa92ad096b10a1199fa3f04f05939df5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621324"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991164"
 ---
 # <a name="one-way-services"></a>單向服務
 服務作業的預設行為是要求-回覆模式。 在要求-回覆模式中，用戶端也都會等候回覆訊息，即使該服務作業已透過程式碼表示為 `void` 方法也是如此。 在單向作業中，只會傳輸一則訊息。 接收者不會傳送回覆訊息，傳送者也不會期待回覆訊息。  
@@ -20,13 +20,13 @@ ms.locfileid: "64621324"
   
 - 當用戶端必須呼叫作業，而且不受作業層級之作業結果影響時。  
   
-- 當使用 <xref:System.ServiceModel.NetMsmqBinding> 或 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 類別時。 (如需有關此案例的詳細資訊，請參閱 < [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)  
+- 當使用 <xref:System.ServiceModel.NetMsmqBinding> 或 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 類別時。 （如需此案例的詳細資訊，請參閱[WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)）。  
   
  當作業為單向時，就不存在將錯誤資訊帶回到用戶端的回應訊息。 錯誤狀況的偵測方式，可以是透過使用基礎繫結的功能 (例如可靠工作階段)，或是設計使用兩個單向作業的雙工服務合約來進行，而前述的雙工服務會包含一個會從用戶端到服務來呼叫服務作業的單向合約，另一個介於服務與用戶端之間的單向合約，則可讓服務使用用戶端所實作的回呼來將錯誤傳回給用戶端。  
   
  若要建立單向服務合約，請定義您的服務合約，將 <xref:System.ServiceModel.OperationContractAttribute> 類別套用到每個作業，並將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性設定為 `true`，如下列範例程式碼所示。  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOneWayCalculator  
 {  
@@ -41,10 +41,10 @@ public interface IOneWayCalculator
 }  
 ```  
   
- 如需完整範例，請參閱 <<c0> [ 單向](../../../../docs/framework/wcf/samples/one-way.md)範例。  
+ 如需完整範例，請參閱[單向](../../../../docs/framework/wcf/samples/one-way.md)範例。  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>用戶端封鎖使用單向作業  
- 請務必了解，雖然有些單向應用程式會傳回為輸出資料寫入到網路，數種案例中的繫結或服務的實作可能會導致在 WCF 用戶端封鎖使用單向作業。 在 WCF 用戶端應用程式，直到輸出的資料已寫入的網路連線，不會傳回 WCF 用戶端物件。 包括單向作業的所有訊息交換模式都是如此；這表示在將資料寫入至傳輸時所發生的任何問題，都會導致用戶端無法傳回。 根據不同的問題，此結果可能會是在傳送訊息至服務時發生例外狀況或延遲。  
+ 請務必瞭解，雖然某些單向應用程式會在輸出資料寫入至網路連線時立即傳回，但在數種情況下，系結或服務的執行可能會導致 WCF 用戶端封鎖使用單向作業。 在 WCF 用戶端應用程式中，除非輸出資料已寫入網路連接，否則 WCF 用戶端物件不會傳回。 包括單向作業的所有訊息交換模式都是如此；這表示在將資料寫入至傳輸時所發生的任何問題，都會導致用戶端無法傳回。 根據不同的問題，此結果可能會是在傳送訊息至服務時發生例外狀況或延遲。  
   
  例如，如果傳輸找不到該端點，便會擲回 <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> 例外狀況而不會發生什麼延遲。 然而，服務也可能因為某些原因而無法從線上讀取資料，進而導致用戶端傳輸傳送作業無法傳回。 在這些情況下，如果超過用戶端傳輸繫結上的 <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> 期限，便會擲回 <xref:System.TimeoutException?displayProperty=nameWithType>，但是必須等到已經超過逾時期限才會發生這種情況。 另外一種可能情形，則是出現在服務位置上的訊息多到服務無法將其處理成通過特定點。 在此情況下，單向用戶端會進行封鎖，直到服務能夠處理訊息，或是擲回例外狀況為止。  
   

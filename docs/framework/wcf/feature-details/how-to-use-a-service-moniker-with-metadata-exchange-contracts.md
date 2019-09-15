@@ -2,26 +2,26 @@
 title: HOW TO：使用服務 Moniker 搭配中繼資料交換合約
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-ms.openlocfilehash: 00aa1bbde95c0636391f213f830fc67b2dedf459
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e114bc2c046ba7145a91121ce23c82912680a048
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968796"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968954"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>HOW TO：使用服務 Moniker 搭配中繼資料交換合約
-在開發一些新的 WCF 服務之後, 您可能會決定要能夠從腳本或 Visual Basic 6.0 應用程式呼叫這些服務。 其中一個方法是產生 WCF 用戶端元件、向 COM 註冊元件、在 GAC 中安裝元件, 然後從您的 Visual Basic 程式碼參考 COM 類型。 當您散發應用程式時, 也必須散發 WCF 用戶端元件。 然後使用者必須向 COM 註冊 WCF 用戶端組件，並將它放在 GAC 中。 WCF COM Interop 也可讓您在不依賴 WCF 用戶端元件的情況下, 進行相同的服務呼叫。 WCF 標記可讓您藉由指定服務標記用來解壓縮類型的中繼資料交換 (Mex) 端點 URI, 從任何 COM 相容語言 (Visual Basic、VBScript、Visual Basic for Applications (VBA) 等等) 呼叫任何 WCF 服務。服務的相關資訊。 本主題描述如何使用指定 Mex 端點的 WCF 標記來呼叫消費者入門 WCF 範例。  
+在開發一些新的 WCF 服務之後，您可能會決定要能夠從腳本或 Visual Basic 6.0 應用程式呼叫這些服務。 其中一個方法是產生 WCF 用戶端元件、向 COM 註冊元件、在 GAC 中安裝元件，然後從您的 Visual Basic 程式碼參考 COM 類型。 當您散發應用程式時，也必須散發 WCF 用戶端元件。 然後使用者必須向 COM 註冊 WCF 用戶端組件，並將它放在 GAC 中。 WCF COM Interop 也可讓您在不依賴 WCF 用戶端元件的情況下，進行相同的服務呼叫。 WCF 標記可讓您藉由指定服務標記用來解壓縮類型的中繼資料交換（Mex）端點 URI，從任何 COM 相容語言（Visual Basic、VBScript、Visual Basic for Applications （VBA）等等）呼叫任何 WCF 服務。服務的相關資訊。 本主題描述如何使用指定 Mex 端點的 WCF 標記來呼叫消費者入門 WCF 範例。  
   
 > [!NOTE]
 > WCF 用戶端元件所定義的類型實際上不會具現化。 此組件僅用於中繼資料。  
   
 ### <a name="using-the-service-moniker-with-a-mex-address"></a>使用含有 Mex 位址的服務 Moniker  
   
-1. 建立消費者入門範例, 並使用 Internet Explorer 流覽至其 URL (http://localhost/ServiceModelSamples/Service.svc) 以確保服務正常運作。  
+1. 建立消費者入門範例，並使用 Internet Explorer 流覽至其 URL （ http://localhost/ServiceModelSamples/Service.svc) 以確保服務正常運作。  
   
 2. 建立 Visual Basic 指令碼或含有下列程式碼的 Visual Basic 應用程式：  
   
-    ```  
+    ```vb
     monString = "service:mexaddress=http://localhost/ServiceModelSamples/Service.svc/MEX"  
     monString = monString + ", address=http://localhost/ServiceModelSamples/Service.svc"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  

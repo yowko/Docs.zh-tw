@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: ff60bb5de403970f432e938cba81ca4e99476e8a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 31a9183f541afa5365862b1e89704354cf7bd527
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925979"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969302"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中取用 .NET Standard 程式庫
 
@@ -26,6 +26,8 @@ ms.locfileid: "70925979"
 ## <a name="including-a-library-as-a-project-in-a-solution"></a>將類別庫以專案形式包含在方案中
 
 就像您將單元測試包含在與類別庫相同的方案中一樣，您也可以將應用程式包含在該方案中。 例如，您可以在提示使用者輸入字串並回報其第一個字元是否為大寫的主控台應用程式中，使用您的類別庫：
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 

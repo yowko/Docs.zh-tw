@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 05/29/2018
-ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
-ms.translationtype: HT
+ms.openlocfilehash: 49926b35b418e93237a159758903c535ec6c4006
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410359"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988558"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -18,6 +18,8 @@ ms.locfileid: "67410359"
 `dotnet test` - 用來執行單元測試的 .NET 測試驅動程式。
 
 ## <a name="synopsis"></a>概要
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -48,7 +50,7 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet test` 命令是用來在指定的專案中執行單元測試。 `dotnet test` 命令會啟動為專案指定的測試執行器主控台應用程式。 測試執行器會執行針對單元測試架構 (例如 MSTest、NUnit 或 xUnit) 定義的測試，並報告每項測試成功還是失敗。 如果所有測試都成功，則測試執行器會傳回 0 作為結束代碼；如果有任何測試失敗，則會傳回 1。 測試執行器和單元測試程式庫會封裝為 NuGet 套件，並還原為專案的一般相依性。
 
@@ -264,7 +266,7 @@ dotnet test [-h|--help]
 
 在目前目錄中的專案中執行測試，並以 trx 格式產生測試結果檔案：
 
-`dotnet test --logger:trx`
+`dotnet test --logger trx`
 
 ## <a name="filter-option-details"></a>篩選選項詳細資料
 
@@ -281,7 +283,7 @@ dotnet test [-h|--help]
 
 `<operator>` 描述屬性和值之間的關聯性：
 
-| 運算子 | 功能        |
+| 運算子 | 函數        |
 | :------: | --------------- |
 | `=`      | 完全相符     |
 | `!=`     | 不完全相符 |
@@ -293,7 +295,7 @@ dotnet test [-h|--help]
 
 運算式可以使用條件運算子聯結：
 
-| 運算子            | 功能 |
+| 運算子            | 函數 |
 | ------------------- | -------- |
 | <code>&#124;</code> | OR       |
 | `&`                 | AND      |

@@ -2,12 +2,12 @@
 title: dotnet run 命令
 description: dotnet run 命令提供方便的選項，以透過原始程式碼來執行應用程式。
 ms.date: 05/29/2018
-ms.openlocfilehash: 0a6c1303bc12c256dd0a8923f9468620835ddabc
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: b21987ef9ee4dd7d8fdb93d0853b7faa93001688
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202802"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969755"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202802"
 `dotnet run` - 執行原始程式碼，而不需要有任何明確的編譯或啟動命令。
 
 ## <a name="synopsis"></a>概要
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -44,7 +46,7 @@ dotnet run [-h|--help]
 
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet run` 命令提供方便的選項，以使用一個命令透過原始程式碼來執行應用程式。 可用於在命令列中快速進行反覆開發。 此命令仰賴 [`dotnet build`](dotnet-build.md) 命令來建置程式碼。 建置的任何需求 (例如必須先還原專案) 也同樣適用於 `dotnet run`。
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988167"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969066"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>封裝 COM 的 .NET Framework 組件
 
@@ -45,7 +45,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 
   發行者所簽署的強式名稱組件可以安裝到全域組件快取。 未簽署的組件必須安裝在使用者電腦上，當成私用組件。
 
-  如需詳細資訊，請參閱[組件安全性考量](../app-domains/assembly-security-considerations.md)。
+  如需詳細資訊，請參閱[組件安全性考量](../../standard/assembly/security-considerations.md)。
 
 - 型別程式庫包含
 
@@ -96,7 +96,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 - [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)
 - [限定互通的 .NET 類型](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [類別介面簡介](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [組件安全性考量](../app-domains/assembly-security-considerations.md)
+- [組件安全性考量](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (類型程式庫匯出工具)](../tools/tlbexp-exe-type-library-exporter.md)
 - [向 COM 註冊組件](registering-assemblies-with-com.md)
 - [如何：將型別程式庫當作 Win32 資源內嵌在應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

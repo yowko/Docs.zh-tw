@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 419b32f2a460ca153d28206524a38c7c9fa86173
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929388"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991368"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>從檔案和其他來源載入資料
 
@@ -33,7 +33,7 @@ public class HousingData
 {
     [LoadColumn(0)]
     public float Size { get; set; }
- 
+
     [LoadColumn(1, 3)]
     [VectorType(3)]
     public float[] HistoricalPrices { get; set; }
@@ -53,7 +53,7 @@ public class HousingData
 > [!IMPORTANT]
 > [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) 只有在從檔案載入資料時才需要。
 
-將資料行作為以下項目載入： 
+將資料行作為以下項目載入：
 
 - 個別資料行，像是 `HousingData` 類別中的 `Size` 和 `CurrentPrices`。
 - 以類似 `HousingData` 類別中 `HistoricalPrices` 的向量形式，一次載入多個資料行。
@@ -108,7 +108,7 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 ## <a name="load-data-from-a-relational-database"></a>從關係資料庫載入資料
 
 > [!NOTE]
-> DatabaseLoader 目前為預覽狀態。 它可以藉由參考[SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet[套件的方式](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview)來使用。 
+> DatabaseLoader 目前為預覽狀態。 它可以藉由參考[SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet[套件的方式](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview)來使用。
 
 ML.NET 支援從支援[`System.Data`](xref:System.Data)的各種關係資料庫載入資料，其中包括 SQL Server、Azure SQL Database、Oracle、SQLite、于 postgresql、進度、IBM DB2 及其他許多。
 
@@ -142,7 +142,7 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-定義您的連接字串，以及要在資料庫上執行的 SQL 命令，並建立`DatabaseSource`實例。 這個範例會使用具有檔案路徑的 LocalDB SQL Server 資料庫。 不過，DatabaseLoader 會針對內部部署和雲端中的資料庫支援任何其他有效的連接字串。  
+定義您的連接字串，以及要在資料庫上執行的 SQL 命令，並建立`DatabaseSource`實例。 這個範例會使用具有檔案路徑的 LocalDB SQL Server 資料庫。 不過，DatabaseLoader 會針對內部部署和雲端中的資料庫支援任何其他有效的連接字串。
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
@@ -196,7 +196,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 請使用 [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 方法將記憶體內部集合載入 [`IDataView`](xref:Microsoft.ML.IDataView)：
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 假設它載入的 [`IEnumerable`](xref:System.Collections.IEnumerable) 是安全執行緒。 
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 假設它載入的 [`IEnumerable`](xref:System.Collections.IEnumerable) 是安全執行緒。
 
 ```csharp
 // Create MLContext

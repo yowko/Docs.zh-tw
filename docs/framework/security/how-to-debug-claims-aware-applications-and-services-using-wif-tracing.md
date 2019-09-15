@@ -3,12 +3,12 @@ title: 如何：使用 WIF 追蹤對宣告感知應用程式和服務進行偵�
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: effd670a4d0e12f0bca10301fabc361c73e03328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 604ebf5ad71197f6614ffa45b6d7c181d474e1aa
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625883"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990472"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>如何：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯
 ## <a name="applies-to"></a>適用於  
@@ -76,7 +76,7 @@ ms.locfileid: "64625883"
     </system.diagnostics>  
     ```  
   
-3. 上述組態會指示 WIF 產生詳細追蹤事件，並將其記錄在 *WIFTrace.e2e* 檔案中。 如需值的完整清單**switchValue**切換，請參閱下列主題中的追蹤層級 」 表格：[設定追蹤](../wcf/diagnostics/tracing/configuring-tracing.md)。  
+3. 上述組態會指示 WIF 產生詳細追蹤事件，並將其記錄在 *WIFTrace.e2e* 檔案中。 如需**switchValue**參數值的完整清單，請參閱下列主題中的追蹤層級資料表：[正在設定追蹤](../wcf/diagnostics/tracing/configuring-tracing.md)。  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>步驟 2 – 使用追蹤檢視器工具來分析 WIF 追蹤檔案  
  在此步驟中，您要使用追蹤檢視器工具 (SvcTraceViewer.exe) 來分析 WIF 追蹤記錄檔。  
@@ -87,11 +87,11 @@ ms.locfileid: "64625883"
   
 2. 執行追蹤檢視器工具 (SvcTraceViewer.exe)。 它通常會在安裝路徑的 **Bin** 資料夾中。  
   
-3. 開啟 WIF 追蹤記錄檔，例如，藉由選取 WIFTrace.e2e**檔案**，**開啟...** 在功能表選項，或使用**Ctrl + O**捷徑。 追蹤記錄檔會在追蹤檢視器工具中開啟。  
+3. 選取 [檔案]、[**開啟 ...** **]，以**開啟 WIF 追蹤記錄檔，例如 wiftrace.e2e). e2e 功能表中的選項，或使用**Ctrl + O**快捷方式。 追蹤記錄檔會在追蹤檢視器工具中開啟。  
   
 4. 檢閱 [活動] 索引標籤中的項目。每個項目都應該會包含活動號碼、所記錄的追蹤數目、活動的持續時間，以及其開始和結束時間戳記。  
   
-5. 按一下 [活動] 索引標籤。您應該會在此工具的主要區域中，看到詳細的追蹤項目。 使用**層級**來篩選特定層級的追蹤，例如功能表上的下拉式清單：**所有**，**警告**，**錯誤**，**資訊**，依此類推。  
+5. 按一下 [活動] 索引標籤。您應該會在此工具的主要區域中，看到詳細的追蹤項目。 使用功能表上的 [**層級**] 下拉式清單來篩選特定層級的追蹤，例如：**所有**、**警告**、**錯誤**、**資訊**等等。  
   
 6. 按一下特定追蹤項目，以檢閱工具下方區域中的詳細資料。 您可以選擇對應的索引標籤，使用 [格式化] 和 [XML] 來檢視詳細資料。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "64625883"
   
 |**錯誤識別碼**|**錯誤訊息**|**修正錯誤所需的動作**|  
 |-|-|-|  
-|ID4175|IssuerNameRegistry 無法辨識安全性權杖的簽發者。  若要接受來自這個簽發者的安全性權杖，請設定 IssuerNameRegistry，以傳回此簽發者的有效名稱。|造成此錯誤的原因，可能是您從 MMC 嵌入式管理單元複製指紋，並將其貼到 *Web.config* 檔案中。 具體而言，您可以在從憑證屬性視窗複製時，在文字字串中取得額外的不可列印字元。 這個額外的字元導致指紋比對會失敗。正確複製指紋的程序，請參閱[宣告為基礎的單一登-在適用於 Web 和 Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29)。|  
+|ID4175|IssuerNameRegistry 無法辨識安全性權杖的簽發者。  若要接受來自這個簽發者的安全性權杖，請設定 IssuerNameRegistry，以傳回此簽發者的有效名稱。|造成此錯誤的原因，可能是您從 MMC 嵌入式管理單元複製指紋，並將其貼到 *Web.config* 檔案中。 具體而言，您可以在從憑證屬性視窗複製時，在文字字串中取得額外的不可列印字元。 這個額外的字元會導致憑證指紋比對失敗。 正確複製指紋的程式可在[Web 的宣告式單一登入和 Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29)中找到。|  
   
 ## <a name="related-items"></a>相關項目:  
   

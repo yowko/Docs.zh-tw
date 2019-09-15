@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9674e4d3f465cd3bad55a32d0a13136e6cff974d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7f83c67354e96e1da3a30ab2e30fffe026c4646b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946371"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971355"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
@@ -37,7 +37,7 @@ al sources options
 
 您可以指定一個或多個下列 `sources`。
 
-| 原始程式檔 | 說明 |
+| Source | 說明 |
 | ------ | ----------- |
 |`file`[,`target`]|將 `file` (模組) 的內容複製到 `target` 所指定的檔案名稱中。 複製完成後，*Al.exe* 會將 `target` 編譯成組件。|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|將 `file` 所指定的資源嵌入包含組件資訊清單的映像中，*Al.exe* 會將 `file` 的內容複製到可攜式執行檔 (PE) 映像中。<br /><br /> `name` 參數是資源的內部識別項。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由[資源檔產生器 (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
@@ -45,7 +45,7 @@ al sources options
 
 您可以指定下列 `options`，但是必須指定 **/out**。
 
-| 選項 | 說明 |
+| 選項 | 描述 |
 | ------ | ----------- |
 |**/algid:** `id`|指定雜湊多檔案組件中所有檔案的演算法，但包含組件資訊清單的檔案除外。 預設演算法為 CALG_SHA1。 如需其他演算法，請參閱 Platform SDK 文件中的 ALG_ID。 對於第一版 .NET Framework，只有 CALG_SHA1 和 CALG_MD5 有效。<br /><br /> 雜湊值儲存在組件資訊清單的檔案表中。 在安裝和載入期間，系統會根據雜湊來檢查組件的檔案。<br /><br /> 您也可以在任何模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>)。|
 |**/base[address]:** `addr`|指定在執行期間將 DLL 載入使用者電腦上的目標位址。 如果您指定 DLL 的基底位址，而不是讓作業系統重新找出處理序空間中的 DLL，應用程式載入的速度會更快。|
@@ -54,10 +54,10 @@ al sources options
 |**/config[uration]:** `text`|為組件中的 [組態] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如果文字為空字串，Win32 Configuration 資源會顯示為單一空格。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyConfigurationAttribute>)。|
 |**/copy[right]:** `text`|為組件中的 [著作權] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/copyright** 顯示為 Win32 Copyright 資源。<br /><br /> 如果文字為空字串，Win32 Copyright 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/copyright** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyCopyrightAttribute>)。|
 |**/c[ulture]:** `text`|指定與組件相關聯的文化特性字串。 文化特性的有效值為標題＜Tags for the Identification of Languages＞的＜Internet Requests for Comments (RFC) 1766＞文件中定義的值。<br /><br /> 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 沒有預設的文化特性字串。 這個字串可使用反映進行檢視。<br /><br /> 如需有效 `text` 字串的詳細資訊，請參閱 <xref:System.Globalization.CultureInfo>。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyCultureAttribute>)。|
-|**/delay[sign][+&#124;-]**|指定將要完整簽署還是部分簽署組件。 如果需要完整簽署的組件，請使用 **/delaysign-** 。 如果只想在組件中包含公開金鑰，請使用 **/delaysign+** 。<br /><br /> 當您要求完整簽署的組件時，*Al.exe* 會雜湊包含資訊清單 (組件中繼資料) 的檔案，並使用私密金鑰簽署該雜湊。 所產生的數位簽章會儲存在包含資訊清單的檔案中。 當組件延遲簽署時，*Al.exe* 不會計算和儲存該簽章，只會在檔案中保留空間，以便之後再新增該簽章。<br /><br /> 預設值為 **/delaysign-** 。<br /><br /> **/delaysign** 選項必須搭配 **/keyfile** 或 **/keyname** 才有作用。<br /><br /> 例如，使用 **/delaysign+** 時，可讓測試人員將組件放入全域快取中。 測試過後，您就可以將私密金鑰包含在組件內，藉此完整簽署組件。<br /><br /> 注意：在使用 [*Gacutil.exe* (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 將延遲簽署的組件放入全域快取之前，請先使用 [*Sn.exe* (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 註冊這個組件，以略過驗證。 例如，`Sn.exe –Vr delaySignedAssembly`。 這種方式僅適用於開發工作。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
+|**/delay[sign][+&#124;-]**|指定將要完整簽署還是部分簽署組件。 如果需要完整簽署的組件，請使用 **/delaysign-** 。 如果只想在組件中包含公開金鑰，請使用 **/delaysign+** 。<br /><br /> 當您要求完整簽署的組件時，*Al.exe* 會雜湊包含資訊清單 (組件中繼資料) 的檔案，並使用私密金鑰簽署該雜湊。 所產生的數位簽章會儲存在包含資訊清單的檔案中。 當組件延遲簽署時，*Al.exe* 不會計算和儲存該簽章，只會在檔案中保留空間，以便之後再新增該簽章。<br /><br /> 預設值為 **/delaysign-** 。<br /><br /> **/delaysign** 選項必須搭配 **/keyfile** 或 **/keyname** 才有作用。<br /><br /> 例如，使用 **/delaysign+** 時，可讓測試人員將組件放入全域快取中。 測試過後，您就可以將私密金鑰包含在組件內，藉此完整簽署組件。<br /><br /> 注意:在使用 [*Gacutil.exe* (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 將延遲簽署的組件放入全域快取之前，請先使用 [*Sn.exe* (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 註冊這個組件，以略過驗證。 例如： `Sn.exe –Vr delaySignedAssembly` 。 這種方式僅適用於開發工作。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
 |**/descr[iption]:** `text`|為組件中的 [<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/description** 顯示為 Win32 **Comments** 資源。<br /><br /> 如果文字為空字串，Win32 **Comments** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/description** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>)。|
 |**/e[vidence]:** `file`|使用 Security.Evidence 的資源名稱將 `file` 嵌入組件中。<br /><br /> Security.Evidence 無法用於一般資源。|
-|**/fileversion:** `version`|為組件中的 [檔案版本]  欄位指定字串。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，系統會將 **/fileversion** 作為 Win32 **File Version** 資源。 如不指定 **/fileversion**，系統會在 Win32 **File Version** 資源中填入 Win32 **Assembly Version** 資源。<br /><br /> 如果指定 **/win32res**，則 **/fileversion** 不會影響 Win32 資源。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中指定這個選項做為自訂屬性 (AssemblyFileVersionAttribute)。|
+|**/fileversion:** `version`|為組件中的 [檔案版本] 欄位指定字串。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，系統會將 **/fileversion** 作為 Win32 **File Version** 資源。 如不指定 **/fileversion**，系統會在 Win32 **File Version** 資源中填入 Win32 **Assembly Version** 資源。<br /><br /> 如果指定 **/win32res**，則 **/fileversion** 不會影響 Win32 資源。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中指定這個選項做為自訂屬性 (AssemblyFileVersionAttribute)。|
 |**/flags:** `flags`|為組件中的 [`Flags`] 欄位指定值。 `flags` 的可能值如下：<br /><br /> 0x0000<br /> 組件可並存相容。<br /><br /> 0x0010<br /> 如果組件在相同的應用程式定義域中執行時，就無法與其他版本一起執行。<br /><br /> 0x0020<br /> 如果組件在相同的處理序中執行，就無法與其他版本一起執行。<br /><br /> 0x0030<br /> 如果組件與其他版本位於同一部電腦上，就無法與其他版本一起執行。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyFlagsAttribute>)。|
 |**/fullpaths**|讓 *Al.exe* 使用錯誤訊息中所報告之任何檔案的絕對路徑。|
 |**/help**|顯示工具的命令語法和選項。|
@@ -67,12 +67,12 @@ al sources options
 |**/nologo**|隱藏叫用 *Al.exe* 時命令列中顯示的橫幅或標誌。|
 |**/out:** `filename`|指定 *Al.exe* 所產生檔案的名稱。 這是必要選項。|
 |**/platform:** `text`|限制可以執行這個程式碼的平台，這個平台必須下列其中之一：x86、Itanium、x64、anycpu (預設值) 或 anycpu32bitpreferred。|
-|**/prod[uct]:** `text`|為組件中的 [產品]  欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管就會將 **/product** 顯示為 Win32 **Product Name** 資源。<br /><br /> 如果文字為空字串，Win32 **Product Name** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/product** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyProductAttribute>)。|
-|**/productv[ersion]:** `text`|為組件中的 [產品版本]  欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，系統就會將 **/productversion** 作為 Win32 **Product Version** 資源。 如不指定 **/productversion**，系統會在 Win32 **Product Version** 資源中填入 Win32 **File Version** 資源。<br /><br /> 如果指定 **/win32res**， **/productversion** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyInformationalVersionAttribute>)。|
+|**/prod[uct]:** `text`|為組件中的 [產品] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管就會將 **/product** 顯示為 Win32 **Product Name** 資源。<br /><br /> 如果文字為空字串，Win32 **Product Name** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/product** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyProductAttribute>)。|
+|**/productv[ersion]:** `text`|為組件中的 [產品版本] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，系統就會將 **/productversion** 作為 Win32 **Product Version** 資源。 如不指定 **/productversion**，系統會在 Win32 **Product Version** 資源中填入 Win32 **File Version** 資源。<br /><br /> 如果指定 **/win32res**， **/productversion** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyInformationalVersionAttribute>)。|
 |**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|指定輸出檔的檔案格式：`lib[rary]` (程式碼程式庫)、`exe` (主控台應用程式) 或 `win[exe]` (Windows 應用程式)。 預設為 `lib[rary]`。|
 |**/template:** `filename`|指定要從其中繼承所有組件中繼資料的組件 `filename`，但不包括 [文化特性] 欄位。<br /><br /> 使用 **/template** 建立的組件會是附屬組件。|
-|**/title:** `text`|為組件中的 [標題]  欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/title** 顯示為 Win32 **Description** 資源，而殼層將使用此資源作為應用程式的易記名稱。 如果檔案類型具有多個支援應用程式，則該檔案類型之捷徑功能表的 [開啟方式]  子功能表中也會顯示此項目。<br /><br /> 如果文字為空字串，Win32 **Description** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/title** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyTitleAttribute>)。|
-|**/trade[mark]:** `text`|為組件中的 [商標]  欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/trademark** 顯示為 Win32 **Trademark** 資源。<br /><br /> 如果文字為空字串，Win32 **Trademark** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/trademark** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyTrademarkAttribute>)。|
+|**/title:** `text`|為組件中的 [標題] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/title** 顯示為 Win32 **Description** 資源，而殼層將使用此資源作為應用程式的易記名稱。 如果檔案類型具有多個支援應用程式，則該檔案類型之捷徑功能表的 [開啟方式] 子功能表中也會顯示此項目。<br /><br /> 如果文字為空字串，Win32 **Description** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/title** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyTitleAttribute>)。|
+|**/trade[mark]:** `text`|為組件中的 [商標] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/trademark** 顯示為 Win32 **Trademark** 資源。<br /><br /> 如果文字為空字串，Win32 **Trademark** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/trademark** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyTrademarkAttribute>)。|
 |**/v[ersion]:** `version`|指定這個組件的版本資訊。 版本字串的格式為 `major`.`minor`.`build`.`revision`。預設值為 0。<br /><br /> 如果指定 **/version**，則必須同時指定 `major`。 如果您指定 `major` 和 `minor`，則可以指定星號 (\*) 代表 `build`。 這樣一來，`build` 就相當於自當地時間 2000 年 1 月 1 日起算的天數，而 `revision` 則等於自當地時間當天午夜起算的秒數除以 2。<br /><br /> 如果您指定 `major`、`minor` 和 `build`，則可以指定星號代表 `revision`。 這樣一來，`revision` 就等於自當地時間當天午夜起算的秒數除以 2。<br /><br /> 簡單來說，有效的版本字串如下：<br /><br /> X<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> 其中 X 是指任何不帶正負號的簡短常數，但 65535 除外 (0-65534)。<br /><br /> 如不指定 **/win32res**，系統會將 **/version** 作為 Win32 **Assembly Version** 資源。<br /><br /> 如不指定 **/win32res**、 **/productversion** 和 **/fileversion**，系統會將 **/version** 作為 Win32 **Assembly Version**、File Version 和 **Product Version** 資源。<br /><br /> 如果指定 **/win32res**， **/version** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyVersionAttribute>)。|
 |**/win32icon:** `filename`|將 .ico 檔案插入組件中。 .ico 檔案會讓輸出檔在檔案總管中以所要的外觀顯示。|
 |**/win32res:** `filename`|將 Win32 資源 (.res 檔案) 插入輸出檔中。 您可以使用資源編譯器建立 Win32 資源檔。 資源編譯器是在編譯 Visual C++ 程式時叫用，而 .res 檔案則是從 .rc 檔案建立。|
@@ -89,7 +89,7 @@ al sources options
 
 下表列出 *Al.exe* 所產生的錯誤。
 
-| 錯誤 | 說明 |
+| Error | 說明 |
 | ----- | ----------- |
 |al1001|編譯器內部錯誤<br /><br /> 請嘗試判斷 *Al.exe* 失敗的原因是否為無法剖析未預期的語法。 然後，請連絡 Microsoft 產品支援服務。|
 |al1002|記憶體不足<br /><br /> *Al.exe* 因記憶體不足而停止。 請增加可用記憶體的數量。|
@@ -178,5 +178,5 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 - [工具](../../../docs/framework/tools/index.md)
 - [*Sn.exe* (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [*Gacutil.exe* (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [使用組件設計程式](../../standard/assembly/program.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

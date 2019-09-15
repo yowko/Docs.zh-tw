@@ -2,12 +2,12 @@
 title: 如何：動態更新
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 3c651bc4ff23b2534e81f190fc8b63771c7587d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911145"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972082"
 ---
 # <a name="how-to-dynamic-update"></a>如何：動態更新
 本主題概要說明建立和動態更新路由組態所需的基本步驟。 在此範例中，初始路由組態是從組態檔取得，並且會將所有訊息路由傳送至 regularCalc 計算機服務。不過，該組態接著會以程式設計的方式更新，以變更 roundingCalc 服務的目的端點。  
@@ -165,7 +165,7 @@ ms.locfileid: "69911145"
 ## <a name="example"></a>範例  
  以下是此範例中所使用主控台應用程式的完整清單。  
   
-```  
+```csharp
 //-----------------------------------------------------------------  
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.  
 //-----------------------------------------------------------------  

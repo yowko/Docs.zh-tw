@@ -2,12 +2,12 @@
 title: 通道處理站
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: cd56c47223f0c98e48bd92376c9bbe9db6d2202e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9b754531059e367a8102a96cfb50b6147da84978
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045724"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990087"
 ---
 # <a name="channel-factory"></a>通道處理站
 
@@ -16,7 +16,7 @@ ms.locfileid: "70045724"
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
 
-此範例使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立服務端點的通道。 一般而言, 若要建立服務端點的通道, 您可以使用[System.servicemodel 中繼資料公用程式工具 (Svcutil)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端類型, 並建立所產生類型的實例。 您也可以使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立通道，如此範例所示。 下列範例程式碼所建立的服務, 與[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)中的服務相同。
+此範例使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立服務端點的通道。 一般而言，若要建立服務端點的通道，您可以使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端類型，並建立所產生類型的實例。 您也可以使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立通道，如此範例所示。 下列範例程式碼所建立的服務，與[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)中的服務相同。
 
 ```csharp
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
@@ -48,7 +48,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 
 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按 ENTER 鍵，關閉用戶端應用程式。
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25

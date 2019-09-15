@@ -1,13 +1,13 @@
 ---
-title: HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務
+title: 作法：建立會透過 WebSockets 進行通訊的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 5190cdad08087b73eb247dfc236ae7b6f470af69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 706c2886bda9497835d98eeeb594e68c2191d8d8
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626914"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969996"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務
 WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫結，透過 WebSockets 進行通訊。  當 <xref:System.ServiceModel.NetHttpBinding> 判斷服務合約定義了回呼合約時，就會使用 WebSockets。 本主題說明如何實作會使用 <xref:System.ServiceModel.NetHttpBinding> 透過 WebSockets 進行通訊的 WCF 服務和用戶端。  
@@ -40,7 +40,7 @@ WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫
   
 3. 實作服務合約。  
   
-    ```  
+    ```csharp
     public class StockQuoteService : IStockQuoteService  
         {  
             public async Task StartSendingQuotes()  
@@ -191,7 +191,7 @@ namespace Server
 }  
 ```  
   
-```  
+```csharp
 // StockQuoteService.svc.cs  
 using System;  
 using System.Collections.Generic;  
@@ -257,7 +257,7 @@ namespace Server
 </configuration>  
 ```  
   
-```  
+```
 <!-- StockQuoteService.svc -->  
 <%@ ServiceHost Language="C#" Debug="true" Service="Server.StockQuoteService" CodeBehind="StockQuoteService.svc.cs" %>  
 ```  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8875ed10c4cb144995b602287f904d3c98dcdb39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c6c5337fedd13cb18b8e5eeadec48a2e4695a543
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948769"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969345"
 ---
 # <a name="types-of-isolation"></a>隔離的類型
 對隔離儲存區的存取永遠限制於建立該隔離儲存區的使用者。 為實作這種類型的隔離，通用語言執行階段會使用作業系統可辨識的相同使用者身分識別概念，這是與開啟儲存區時，與程式碼執行所在處理序相關聯的身分識別。 此身分識別是一個經過驗證的使用者身分識別，但是模擬可能會造成目前使用者的身分識別動態變更。  
@@ -34,7 +34,7 @@ ms.locfileid: "69948769"
   
 - 網域身分識別代表應用程式的辨識項，若是 Web 應用程式，則可能是完整 URL。 針對殼層裝載的程式碼，網域身分識別可能會以應用程式目錄路徑為基礎。 例如，如果可執行檔從路徑 C:\Office\MyApp.exe 執行，網域身分識別將為 C:\Office\MyApp.exe。  
   
-- 組件身分識別是組件的辨識項。 這可能是來自密碼編譯數位簽章，它可以是組件的[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)、組件的軟體發行者或其 URL 識別。 如果組件同時具有強式名稱和軟體發行者身分識別，則會使用軟體發行者身分識別。 如果組件來自網際網路，且未經過簽署，則會使用 URL 識別。 如需有關組件和強式名稱的詳細資訊，請參閱[使用組件進行設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)。  
+- 組件身分識別是組件的辨識項。 這可能是來自密碼編譯數位簽章，它可以是組件的[強式名稱](../assembly/strong-named.md)、組件的軟體發行者或其 URL 識別。 如果組件同時具有強式名稱和軟體發行者身分識別，則會使用軟體發行者身分識別。 如果組件來自網際網路，且未經過簽署，則會使用 URL 識別。 如需有關組件和強式名稱的詳細資訊，請參閱[使用組件進行設計程式](../assembly/program.md)。  
   
 - 漫遊存放區會與具有漫遊使用者設定檔的使用者一起移動。 檔案會寫入網路目錄，且會下載到使用者登入的任何電腦。 如需有關漫遊使用者設定檔的詳細資訊，請參閱 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>。  
   

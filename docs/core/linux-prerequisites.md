@@ -4,12 +4,12 @@ description: 支援的 Linux 版本和 .NET Core 的相依性，以在 Linux 電
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: ad1ab42bcf66e32a45351ae2b6156251c9d0dc1f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849053"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969872"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
 
@@ -22,6 +22,8 @@ ms.locfileid: "70849053"
 > 實際執行伺服器/生產環境不需要 .NET Core SDK 套件。 僅需要.NET Core 執行階段套件，即可將應用程式部署到生產環境。 .NET Core 執行階段將應用程式作為獨立部署的一部分進行部署，不過，針對架構相依的部署應用程式必須單獨加以部署。 如需架構相依部署類型和獨立部署類型的詳細資訊，請參閱 [.NET Core 應用程式部署](./deploying/index.md)。 另請參閱[獨立式 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)以了解特定指導方針。
 
 ## <a name="supported-linux-versions"></a>支援的 Linux 版本
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 

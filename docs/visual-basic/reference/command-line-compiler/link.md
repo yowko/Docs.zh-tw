@@ -1,5 +1,5 @@
 ---
-title: -link (Visual Basic)
+title: -link （Visual Basic）
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: fbce22755b3732896a226c00bbf8e068dc1f098e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7d68e55972336e304286e967d445f3589219b9a2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929403"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972311"
 ---
-# <a name="-link-visual-basic"></a>-link (Visual Basic)
+# <a name="-link-visual-basic"></a>-link （Visual Basic）
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +36,7 @@ ms.locfileid: "69929403"
 |`fileList`|必要項。 以逗號分隔的組件檔案名稱清單。 如果檔案名稱包含空格，請用引號括住名稱。|  
   
 ## <a name="remarks"></a>備註  
- `-link` 選項可讓您部署具有內嵌類型資訊的應用程式。 應用程式接著可以使用執行階段組件中實作內嵌類型資訊的類型，而不需要參考執行階段組件。 如果執行階段組件有許多發行版本，包含內嵌類型資訊的應用程式不需要重新編譯，就可以搭配各種版本使用。 如需範例，請參閱[逐步解說：從 Managed 組件內嵌類型](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)。  
+ `-link` 選項可讓您部署具有內嵌類型資訊的應用程式。 應用程式接著可以使用執行階段組件中實作內嵌類型資訊的類型，而不需要參考執行階段組件。 如果執行階段組件有許多發行版本，包含內嵌類型資訊的應用程式不需要重新編譯，就可以搭配各種版本使用。 如需範例，請參閱[逐步解說：從 Managed 組件內嵌類型](../../../standard/assembly/embed-types-visual-studio.md)。  
   
  如果您正在使用 COM Interop，使用 `-link` 選項會特別有用。 您可以內嵌 COM 類型，如此一來您的應用程式就不會再要求目標電腦上必須有主要 Interop 組件 (PIA)。 `-link` 選項會指示編譯器將所參考 Interop 組件的 COM 類型資訊嵌入編譯產生的程式碼。 COM 類型是由 CLSID (GUID) 值來識別。 因此，應用程式可以在已安裝含相同 CLSID 值之相同 COM 類型的目標電腦上執行。 自動化 Microsoft Office 的應用程式即為一個很好的例子。 由於 Office 等應用程式通常會在不同版本間保持相同的 CLSID 值，因此只要目標電腦上已安裝 .NET Framework 4 或更新版本，且應用程式使用包含在所參考 COM 類型中的方法、屬性或事件，應用程式就可以使用這些參考的 COM 類型。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "69929403"
   
 - 所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
   
- 請使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)來指定您的一或多個元件參考所在的目錄。  
+ 請使用[-libpath](libpath.md)來指定您的一或多個元件參考所在的目錄。  
   
- 如同[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項, `-link`編譯器選項會使用會參考常用 .NET Framework 元件的 Vbc 回應檔。 如果您不想要編譯器使用 Vbc .rsp 檔案, 請使用[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)編譯器選項。  
+ 如同[/reference](reference.md)編譯器選項， `-link`編譯器選項會使用會參考常用 .NET Framework 元件的 Vbc 回應檔。 如果您不想要編譯器使用 Vbc .rsp 檔案，請使用[-noconfig](noconfig.md)編譯器選項。  
   
  `-link` 的簡短形式為 `-l`。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "69929403"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>範例  
- `OfficeApp.vb`下列命令列會從`COMData1.dll`編譯原始程式檔和參考元件, `COMData2.dll`並產生`OfficeApp.exe`。  
+ `OfficeApp.vb`下列命令列會從`COMData1.dll`編譯原始程式檔和參考元件， `COMData2.dll`並產生`OfficeApp.exe`。  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -87,10 +87,10 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [逐步解說：從受控組件內嵌類型](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)
-- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 命令列編譯器](index.md)
+- [逐步解說：從受控組件內嵌類型](../../../standard/assembly/embed-types-visual-studio.md)
+- [-reference （Visual Basic）](reference.md)
+- [-noconfig](noconfig.md)
+- [-libpath](libpath.md)
+- [編譯命令列範例](sample-compilation-command-lines.md)
 - [COM Interop 簡介](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

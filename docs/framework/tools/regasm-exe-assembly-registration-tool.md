@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44ab00322419b99aeac51da0d836c60264da5194
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 5e80e044fe01172c587ef029186035a64cdf0b42
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894658"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971216"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (組件登錄工具)
 
@@ -38,7 +38,7 @@ regasm assemblyFile [options]
 
 |選項|描述|
 |------------|-----------------|
-|**/codebase**|在登錄中建立一個程式碼基底項目。 程式碼基底項目會指定未安裝於全域組件快取中之組件的檔案路徑。 如果您將接著安裝要在全域組件快取中註冊的組件，則不應該指定這個選項。 您使用 **/codebase** 選項指定的 *assemblyFile* 引數必須是[強式名稱組件](../../../docs/framework/app-domains/strong-named-assemblies.md)。|
+|**/codebase**|在登錄中建立一個程式碼基底項目。 程式碼基底項目會指定未安裝於全域組件快取中之組件的檔案路徑。 如果您將接著安裝要在全域組件快取中註冊的組件，則不應該指定這個選項。 您使用 **/codebase** 選項指定的 *assemblyFile* 引數必須是[強式名稱組件](../../standard/assembly/strong-named.md)。|
 |**/registered**|指定這個工具只會參考已註冊的類型程式庫。|
 |**/asmpath:directory**|指定包含組件參考的目錄。 必須與 **/regfile** 選項一起使用。|
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|

@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 567316e98e161a7645db6bf55a03c3c006999fa9
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 1e0e1fbf6ab5f595773a072242440e30865fed16
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893279"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969761"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -18,6 +18,8 @@ ms.locfileid: "70893279"
 `dotnet restore` - 還原專案的相依性和工具。
 
 ## <a name="synopsis"></a>概要
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -37,7 +39,7 @@ dotnet restore [-h|--help]
 
 ---
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet restore` 命令會使用 NuGet 來還原相依性以及專案檔中指定的專案特定工具。 預設會平行執行相依性和工具的還原。
 

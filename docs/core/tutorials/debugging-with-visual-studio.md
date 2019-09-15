@@ -3,12 +3,12 @@ title: 使用 Visual Studio 2017 針對您的 Hello World .NET Core 應用程式
 description: 了解如何使用 Visual Studio 2017 對以 C# 或 Visual Basic 撰寫的 Hello World 應用程式進行偵錯。
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f318c163db6cfdd6de5aa99edebfeeb4bb470a02
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7239ca52c0b90c4cfacd68581f569b9ac7d70eae
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926158"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969383"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>使用 Visual Studio 2017 針對您的 C# 或 Visual Basic .NET Core Hello World 應用程式進行偵錯
 
@@ -25,6 +25,8 @@ ms.locfileid: "70926158"
 ## <a name="setting-a-breakpoint"></a>設定中斷點
 
 請在 [偵錯] 模式下執行程式並嘗試幾個偵錯功能：
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 

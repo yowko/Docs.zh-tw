@@ -3,12 +3,12 @@ title: 在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 description: 語法視覺化檢視提供了視覺化工具來瀏覽 .NET 編譯器平台 SDK 為程式碼產生的模型。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 55a1aa555a82d286a0e8e4359e814dfe2cc301c8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926789"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972020"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 
@@ -29,6 +29,8 @@ ms.locfileid: "70926789"
 將此工具視窗停駐在 Visual Studio 內方便的位置，例如左側。 視覺化檢視會顯示目前程式碼檔案的相關資訊。
 
 使用 [檔案] > [新增專案] 命令建立新專案。 您可以建立 VB 或 C# 專案。 當 Visual Studio 開啟這個專案的主要程式碼檔案時，視覺化檢視會顯示其語法樹狀目錄。 您可以在這個 Visual Studio 執行個體中開啟任何現有的 C# / VB 檔案，而視覺化檢視會顯示該檔案的語法樹狀目錄。 如果您在 Visual Studio 內開啟了多個程式碼檔案，視覺化檢視會顯示目前使用中程式碼檔案 (具有鍵盤焦點的程式碼檔案) 的語法樹狀目錄。
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![視覺化 C# 語法樹狀目錄](media/syntax-visualizer/visualize-csharp.png)

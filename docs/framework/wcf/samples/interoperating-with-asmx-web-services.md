@@ -2,15 +2,15 @@
 title: 與 ASMX Web 服務交互操作
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: d4b59347a7ae8561637be436fa0c56096ecac3f0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2ef4e34de76c046ba21dd7a3c50ea6ba782d459e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039569"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989805"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>與 ASMX Web 服務交互操作
-這個範例會示範如何整合 Windows Communication Foundation (WCF) 用戶端應用程式與現有的 .ASMX Web 服務。  
+這個範例會示範如何整合 Windows Communication Foundation （WCF）用戶端應用程式與現有的 .ASMX Web 服務。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -46,11 +46,11 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- 如已設定, 服務可由同一部`http://localhost/servicemodelsamples/service.asmx`電腦上的用戶端存取。 若要讓遠端電腦上的用戶端存取服務，就必須指定完整的網域名稱，而不是 localhost。  
+ 如已設定，服務可由同一部`http://localhost/servicemodelsamples/service.asmx`電腦上的用戶端存取。 若要讓遠端電腦上的用戶端存取服務，就必須指定完整的網域名稱，而不是 localhost。  
   
- 通訊是透過[System.servicemodel 中繼資料公用程式工具 (Svcutil)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的用戶端來完成。 用戶端會包含在 generatedClient.cs 檔案中。 ASMX 服務必須可供使用才能產生 Proxy 程式碼，因為它可用於擷取更新的中繼資料。 請從用戶端目錄中的命令提示字元執行下列命令，以產生具有型別的 Proxy。  
+ 通訊是透過[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的用戶端來完成。 用戶端會包含在 generatedClient.cs 檔案中。 ASMX 服務必須可供使用才能產生 Proxy 程式碼，因為它可用於擷取更新的中繼資料。 請從用戶端目錄中的命令提示字元執行下列命令，以產生具有型別的 Proxy。  
   
-```  
+```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
@@ -105,7 +105,7 @@ Console.ReadLine();
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

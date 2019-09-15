@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921578"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972029"
 ---
 # <a name="global-assembly-cache"></a>全域組件快取
 每部安裝通用語言執行平台的電腦都有稱為「全域組件快取」的全電腦程式碼快取。 全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。  
@@ -44,6 +44,6 @@ ms.locfileid: "69921578"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [.NET 中的組件](../../standard/assembly/index.md)
 - [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
-- [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [強式名稱的組件](../../standard/assembly/strong-named.md)

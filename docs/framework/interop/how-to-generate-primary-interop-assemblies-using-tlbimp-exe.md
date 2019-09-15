@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d88da9a043aa2ed75b25f1c59fa991b97576d52
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894210"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971784"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>作法：使用 Tlbimp.exe 產生主要 Interop 組件
 
@@ -33,7 +33,7 @@ ms.locfileid: "70894210"
 
 - 使用與 Common Language Specification (CLS) 相容的語言，例如 C#，在原始程式碼中手動建立主要 Interop 組件。 無法使用類型程式庫時，這個方法就很有用。
 
-您必須使用密碼編譯金鑰組將組件簽署為強式名稱。 如需詳細資料，請參閱[建立金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)。
+您必須使用密碼編譯金鑰組將組件簽署為強式名稱。 如需詳細資料，請參閱[建立金鑰組](../../standard/assembly/create-public-private-key-pair.md)。
 
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>使用 Tlbimp.exe 產生主要 Interop 組件
 

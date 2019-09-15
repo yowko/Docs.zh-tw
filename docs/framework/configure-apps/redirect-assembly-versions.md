@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c9670b00ea4a6b552469b7f33e924b8ab128d9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948031"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971565"
 ---
 # <a name="redirecting-assembly-versions"></a>重新導向組件版本
 
@@ -23,7 +23,7 @@ ms.locfileid: "69948031"
 ## <a name="assembly-unification-and-default-binding"></a>組件統一和預設繫結
  .NET Framework 組件的繫結有時會透過名為 *「組件統一」* (assembly unification) 的處理序進行重新導向。 .NET Framework 包含某個版本的通用語言執行平台，以及大約二十多個組成類型程式庫的 .NET Framework 組件。 執行階段將這些 .NET Framework 組件視為單一單位。 根據預設，應用程式啟動時，任何類型參考只要位於執行階段所執行的程式碼中，都會導向至 .NET Framework 組件；且該組建將與載入處理序的執行階段具有相同的版本號碼。 與此模型同時發生的重新導向，皆為執行階段的預設行為。
 
- 例如, 如果您的應用程式參考了 system.string 命名空間中的類型, 而且是使用 .NET Framework 4.5 建立的, 它就會包含執行階段版本4.5 隨附之 system.string 元件的靜態參考。 如果您要將點的繫結參考重新導向至隨附於 .NET Framework 4 的 System.XML 組件，可以將重新導向資訊放在應用程式設定檔中。 統一的 .NET Framework 組件之設定檔中的繫結重新導向會取消統一該組件。
+ 例如，如果您的應用程式參考了 system.string 命名空間中的類型，而且是使用 .NET Framework 4.5 建立的，它就會包含執行階段版本4.5 隨附之 system.string 元件的靜態參考。 如果您要將點的繫結參考重新導向至隨附於 .NET Framework 4 的 System.XML 組件，可以將重新導向資訊放在應用程式設定檔中。 統一的 .NET Framework 組件之設定檔中的繫結重新導向會取消統一該組件。
 
  此外，如果有多個可用版本，您可能會想要以手動方式將協力廠商組件的組件繫結重新導向。
 
@@ -55,9 +55,9 @@ ms.locfileid: "69948031"
 
 ### <a name="relying-on-automatic-binding-redirection"></a>依賴自動繫結重新導向
 
-當您在以 .NET Framework 4.5.1 或更新版本為目標的 Visual Studio 中建立桌面應用程式時, 應用程式會使用自動系結重新導向。 這表示如果兩個元件參考了同一個強式名稱組件的不同版本，則執行階段會自動將繫結重新導向加入較新版組件的輸出應用程式設定檔 (app.config)。 此重新導向會覆寫可能執行的組件統一。 來源 app.config 檔案則不會加以修改。 例如，假設您的應用程式直接參考頻外 .NET Framework 元件，但使用以相同元件較舊版本為目標的協力廠商程式庫。 當您編譯應用程式時，輸出應用程式設定檔已修改為包含較新版元件的繫結重新導向。 如果您建立的是 Web 應用程式，則會收到有關繫結衝突的建置警告，從而提供您選項將必要的繫結重新導向加入來源 Web 設定檔中。
+當您在以 .NET Framework 4.5.1 或更新版本為目標的 Visual Studio 中建立桌面應用程式時，應用程式會使用自動系結重新導向。 這表示如果兩個元件參考了同一個強式名稱組件的不同版本，則執行階段會自動將繫結重新導向加入較新版組件的輸出應用程式設定檔 (app.config)。 此重新導向會覆寫可能執行的組件統一。 來源 app.config 檔案則不會加以修改。 例如，假設您的應用程式直接參考頻外 .NET Framework 元件，但使用以相同元件較舊版本為目標的協力廠商程式庫。 當您編譯應用程式時，輸出應用程式設定檔已修改為包含較新版元件的繫結重新導向。 如果您建立的是 Web 應用程式，則會收到有關繫結衝突的建置警告，從而提供您選項將必要的繫結重新導向加入來源 Web 設定檔中。
 
-如果您以手動方式將系結重新導向加入至來源 app.config 檔案, 在編譯時期, Visual Studio 會嘗試根據您新增的系結重新導向來整合元件。 例如，假設您為組件插入下列繫結重新導向：
+如果您以手動方式將系結重新導向加入至來源 app.config 檔案，在編譯時期，Visual Studio 會嘗試根據您新增的系結重新導向來整合元件。 例如，假設您為組件插入下列繫結重新導向：
 
 `<bindingRedirect oldVersion="3.0.0.0" newVersion="2.0.0.0" />`
 
@@ -65,11 +65,11 @@ ms.locfileid: "69948031"
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-如果您的應用程式是以較舊版本的 .NET Framework 為目標, 您可以啟用自動系結重新導向。 您可以覆寫此預設行為, 方法是在 app.config 檔案中提供任何元件的系結重新導向資訊, 或關閉系結重新導向功能。 如需如何開啟或關閉此功能的相關資訊, 請[參閱如何:啟用和停用自動繫結重新導向](how-to-enable-and-disable-automatic-binding-redirection.md)。
+如果您的應用程式是以較舊版本的 .NET Framework 為目標，您可以啟用自動系結重新導向。 您可以覆寫此預設行為，方法是在 app.config 檔案中提供任何元件的系結重新導向資訊，或關閉系結重新導向功能。 如需如何開啟或關閉此功能的相關資訊，請[參閱如何：啟用和停用自動繫結重新導向](how-to-enable-and-disable-automatic-binding-redirection.md)。
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>略過發行者原則
- 您可以在必要時覆寫應用程式設定檔中的發行者原則。 例如，宣告與舊版相容的新版組件仍可能中斷應用程式。 如果您想要略過發行者原則, 請將[ \<publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md)元素新增至應用程式佈建檔中的[ \<dependentAssembly >](./file-schema/runtime/dependentassembly-element.md)專案, 並將 [套用屬性] 設定為 [**否**],覆寫任何先前的**yes**設定。
+ 您可以在必要時覆寫應用程式設定檔中的發行者原則。 例如，宣告與舊版相容的新版組件仍可能中斷應用程式。 如果您想要略過發行者原則，請將[ \<publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md)元素新增至應用程式佈建檔中的[ \<dependentAssembly >](./file-schema/runtime/dependentassembly-element.md)專案，並**將 [套用**屬性] 設定為 [**否**]，覆寫任何先前的**yes**設定。
 
  `<publisherPolicy apply="no" />`
 
@@ -81,11 +81,11 @@ ms.locfileid: "69948031"
 
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>指定設定檔中的組件繫結
- 無論繫結重新導向位於應用程式設定檔、電腦設定檔或發行者原則檔，您都可以使用相同的 XML 格式加以指定。 若要將一個元件版本重新導向至另一個, 請使用[ \<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md)元素。 **oldVersion** 屬性可指定單一或一個範圍的組件版本。 `newVersion` 屬性應指定單一版本。  例如， `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` 可指定執行階段使用 2.0.0.0 版，而非指定介於 1.1.0.0 和 1.2.0.0 之間的組件版本。
+ 無論繫結重新導向位於應用程式設定檔、電腦設定檔或發行者原則檔，您都可以使用相同的 XML 格式加以指定。 若要將一個元件版本重新導向至另一個，請使用[ \<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md)元素。 **oldVersion** 屬性可指定單一或一個範圍的組件版本。 `newVersion` 屬性應指定單一版本。  例如， `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` 可指定執行階段使用 2.0.0.0 版，而非指定介於 1.1.0.0 和 1.2.0.0 之間的組件版本。
 
  下列程式碼範例示範多種繫結重新導向情節。 此範例為一個範圍的 `myAssembly`版本指定重新導向，並為 `mySecondAssembly`指定單一繫結重新導向。 範例同時指定發行者原則檔不會覆寫 `myThirdAssembly`的繫結重新導向。
 
- 若要系結元件, 您必須在[ \<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md)標籤中, 以**xmlns**屬性指定字串 "urn: 架構-microsoft-com: asm. v1"。
+ 若要系結元件，您必須在[ \<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md)標籤中，以**xmlns**屬性指定字串 "urn：架構-microsoft-com： asm. v1"。
 
 ```xml
 <configuration>
@@ -119,7 +119,7 @@ ms.locfileid: "69948031"
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>將組件繫結限制在特定版本
- 您可以使用應用程式佈建檔中[ \<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md)元素上的**appliesTo**屬性, 將元件系結參考重新導向至特定版本的 .NET Framework。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它適用於哪一個版本。 如果未指定 **appliesTo** 屬性，則 [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) 項目會套用至所有的 .NET Framework 版本。
+ 您可以使用應用程式佈建檔中[ \<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md)元素上的**appliesTo**屬性，將元件系結參考重新導向至特定版本的 .NET Framework。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它適用於哪一個版本。 如果未指定 **appliesTo** 屬性，則 [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) 項目會套用至所有的 .NET Framework 版本。
 
  例如，若要將 .NET Framework 3.5 組件的組件繫結重新導向，您會將下列 XML 程式碼加入您的應用程式設定檔中。
 
@@ -157,8 +157,8 @@ ms.locfileid: "69948031"
 - [如何：啟用和停用自動繫結重新導向](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > 元素](./file-schema/runtime/bindingredirect-element.md)
 - [組件繫結重新導向安全性使用權限](assembly-binding-redirection-security-permission.md)
-- [Common Language Runtime 中的組件](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [使用組件設計程式](../app-domains/programming-with-assemblies.md)
+- [.NET 中的組件](../../standard/assembly/index.md)
+- [使用組件設計程式](../../standard/assembly/program.md)
 - [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)
 - [設定應用程式](index.md)
 - [執行階段設定結構描述](./file-schema/runtime/index.md)

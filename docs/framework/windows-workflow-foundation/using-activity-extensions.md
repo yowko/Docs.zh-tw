@@ -2,29 +2,29 @@
 title: 使用活動延伸模組
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 551ce24db8c0adc8225ac94a1d05f998a26873a9
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669507"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988626"
 ---
 # <a name="using-activity-extensions"></a>使用活動延伸模組
 活動可以與工作流程應用程式延伸模組互動，好讓主機提供未明確在工作流程中模組化的其他功能。  本主題將說明如何建立及使用延伸模組來計算此活動所執行的次數。
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>若要使用活動延伸模組來計算執行次數
 
-1. 開啟 Visual Studio 2010。 選取 **新**，**專案**。 底下**Visual C#** 節點中，選取**工作流程**。  選取 **工作流程主控台應用程式**從範本清單。 將專案命名為 `Extensions`。 按一下 [確定] 建立專案。
+1. 開啟 Visual Studio 2010。 選取 [**新增**]、[**專案**]。 在 [**視覺C#效果**] 節點底下，選取 [**工作流程**]。  從範本清單中選取 [**工作流程主控台應用程式**]。 將專案命名為 `Extensions`。 按一下 \[確定\] 來建立專案。
 
-2. 新增`using`陳述式中的 Program.cs 檔案**System.Collections.Generic**命名空間。
+2. 在 Program.cs 檔案中，為**system.web**命名空間新增語句。`using`
 
-    ```
+    ```csharp
     using System.Collections.Generic;
     ```
 
-3. 在 Program.cs 檔案中，建立新的類別，名為**ExecutionCountExtension**。 下列程式碼會建立追蹤的執行個體識別碼的工作流程延伸模組時其**註冊**呼叫方法。
+3. 在 Program.cs 檔案中，建立名為**ExecutionCountExtension**的新類別。 下列程式碼會建立工作流程延伸模組，以便在呼叫其**Register**方法時追蹤實例識別碼。
 
-    ```
+    ```csharp
     // This extension collects a list of workflow Ids
     public class ExecutionCountExtension
     {
@@ -56,9 +56,9 @@ ms.locfileid: "61669507"
     }
     ```
 
-4. 建立一個活動來取用**ExecutionCountExtension**。 下列程式碼定義一個活動，擷取**ExecutionCountExtension**物件的執行階段，並呼叫其**註冊**活動執行時的方法。
+4. 建立使用**ExecutionCountExtension**的活動。 下列程式碼定義的活動會從執行時間抓取**ExecutionCountExtension**物件，並在活動執行時呼叫其**Register**方法。
 
-    ```
+    ```csharp
     // Activity that consumes an extension provided by the host. If the extension is available
     // in the context, it will invoke (in this case, registers the Id of the executing workflow)
     public class MyActivity: CodeActivity
@@ -75,9 +75,9 @@ ms.locfileid: "61669507"
     }
     ```
 
-5. 實作中的活動**Main** program.cs 檔案的方法。 下列程式碼包含的方法可產生兩個不同的工作流程、執行每一個工作流程數次，並顯示延伸模組中所包含的結果資料。
+5. 在 program.cs 檔案的**Main**方法中，執行活動。 下列程式碼包含的方法可產生兩個不同的工作流程、執行每一個工作流程數次，並顯示延伸模組中所包含的結果資料。
 
-    ```
+    ```csharp
     class Program
     {
         // Creates a workflow that uses the activity that consumes the extension

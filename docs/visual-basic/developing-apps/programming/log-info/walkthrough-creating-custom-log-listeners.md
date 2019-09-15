@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a4bd64d4c8232f9b6448baf98ee73ee497ccd5ca
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965266"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972102"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>逐步解說：建立自訂的記錄檔接聽程式 (Visual Basic)
 本逐步解說示範如何建立自訂記錄檔接聽程式，並將它設定為接聽 `My.Application.Log` 物件的輸出。  
@@ -33,25 +33,25 @@ ms.locfileid: "69965266"
   
  為了確保 `My.Application.Log` 使用記錄檔接聽程式，您應該建立強式名稱的組件以包含記錄檔接聽程式。  
   
- 下一個程序提供一些簡單的步驟，以建立強式名稱的記錄檔接聽程式組件。 如需詳細資訊，請參閱[建立和使用強式名稱的組件](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)。  
+ 下一個程序提供一些簡單的步驟，以建立強式名稱的記錄檔接聽程式組件。 如需詳細資訊，請參閱[建立和使用強式名稱的組件](../../../../standard/assembly/create-use-strong-named.md)。  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>若要建立強式名稱的記錄檔接聽程式組件  
   
 1. 在 **方案總管**中選取專案。 在 [ **專案** ] 功能表上，選擇 [ **屬性**]。   
   
-2. 按一下 [簽署]索引標籤。   
+2. 按一下 [簽署]索引標籤。  
   
-3. 選取 [簽署組件]方塊。   
+3. 選取 [簽署組件]方塊。  
   
-4. 在 [選擇強式名稱金鑰檔]下拉式清單中，選取 [\<新增…>]。    
+4. 在 [選擇強式名稱金鑰檔]下拉式清單中，選取 [\<新增…>]。  
   
-     隨即開啟 [建立強式名稱金鑰]對話方塊。   
+     隨即開啟 [建立強式名稱金鑰]對話方塊。  
   
-5. 在 [金鑰檔案名稱]方塊中，提供金鑰檔名稱。   
+5. 在 [金鑰檔案名稱]方塊中，提供金鑰檔名稱。  
   
-6. 將密碼輸入 [輸入密碼] 和 [確認密碼] 方塊。    
+6. 將密碼輸入 [輸入密碼] 和 [確認密碼] 方塊。  
   
-7. 按一下 [確定]。   
+7. 按一下 [確定]。  
   
 8. 重建應用程式。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "69965266"
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>若要將接聽程式新增至 My.Application.Log  
   
-1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。    
+1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。  
   
      -或-  
   
@@ -82,9 +82,9 @@ ms.locfileid: "69965266"
   
     1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔]  。  
+    2. 在 [加入新項目] 對話方塊中，選擇 [應用程式組態檔]。  
   
-    3. 按一下 [加入]  。  
+    3. 按一下 [新增]。  
   
 2. 在 `<listeners>` 區段下，具有 `<source>` 屬性 "DefaultSource" 的 `name` 區段中找出 `<sources>` 區段。 `<sources>` 區段位於最上層 `<system.diagnostics>` 區段中的 `<configuration>` 區段內。  
   

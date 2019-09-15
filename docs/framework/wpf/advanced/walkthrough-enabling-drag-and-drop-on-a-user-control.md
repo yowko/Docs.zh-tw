@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 80fd55be9230729cb8336be91c1d8fb4f7f3f080
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 172e49c2c255db4d24d2180f919b1305326b5e82
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364259"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991801"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>逐步解說：在使用者控制項上啟用拖放功能
 
@@ -51,7 +51,7 @@ ms.locfileid: "68364259"
 ## <a name="add-a-new-user-control-to-the-project"></a>將新的使用者控制項加入至專案
  在本節中，您會將新的使用者控制項新增至專案。
 
-1. 在 [專案] 功能表上，選取 [新增使用者控制項]  。
+1. 在 [專案] 功能表上，選取 [新增使用者控制項]。
 
 2. 在 [**加入新專案**] 對話方塊中, 將名稱變更`Circle.xaml`為, 然後按一下 [**新增**]。
 
@@ -80,7 +80,7 @@ ms.locfileid: "68364259"
 
 2. 將下列 XAML 加入至開頭<xref:System.Windows.Window>標記, 以建立目前應用程式的 XML 命名空間參考。
 
-    ```
+    ```xaml
     xmlns:local="clr-namespace:DragDropExample"
     ```
 
@@ -311,9 +311,9 @@ ms.locfileid: "68364259"
 
     - 檢查是否<xref:System.Windows.UIElement.Drop>已處理事件。 比方說, 如果在處理<xref:System.Windows.UIElement.Drop>事件的另一個圓圈上放置圓形, 您不想要包含圓形的面板也可以處理它。
 
-    - 如果未處理  事件,則會檢查是否按下Ctrl<xref:System.Windows.UIElement.Drop>鍵。
+    - 如果未處理 事件,則會檢查是否按下Ctrl<xref:System.Windows.UIElement.Drop>鍵。
 
-    - 如果在  <xref:System.Windows.UIElement.Drop>發生時按下 Ctrl 鍵, 則會建立 Circle 控制項的複本, 並<xref:System.Windows.Controls.Panel.Children%2A>將它加入至的集合<xref:System.Windows.Controls.StackPanel>。
+    - 如果在 <xref:System.Windows.UIElement.Drop>發生時按下 Ctrl 鍵, 則會建立 Circle 控制項的複本, 並<xref:System.Windows.Controls.Panel.Children%2A>將它加入至的集合<xref:System.Windows.Controls.StackPanel>。
 
     - 如果未按下**Ctrl**鍵, 則會將圓形從<xref:System.Windows.Controls.Panel.Children%2A>其<xref:System.Windows.Controls.Panel.Children%2A>父面板集合移至其所放置的面板集合。
 

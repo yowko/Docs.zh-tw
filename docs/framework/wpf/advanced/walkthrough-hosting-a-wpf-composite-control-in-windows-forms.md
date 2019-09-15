@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: bff89f1d81b16c8c66d73901ef951626f6d2cb9e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a062095885e6c1fc8816a78847968b1c250eabf8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400617"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991454"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Forms 中裝載 WPF 複合控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過, 當您對程式[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]代碼進行大量的投資時, 使用來擴充現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式會更有效率, 而不是從頭重寫。 常見的案例是當您想要在 Windows Forms 應用程式中內嵌一[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]或多個在中執行的控制項。 如需自訂 WPF 控制項的詳細資訊, 請參閱[控制項自訂](../controls/control-customization.md)。  
@@ -116,7 +116,7 @@ ms.locfileid: "68400617"
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>程式碼後置檔案的基本結構  
  程式碼後置檔案是由單一命名空間`MyControls`所組成, 其中包含兩個類別: `MyControlEventArgs` `MyControl1`和。  
   
-```  
+```csharp  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -259,7 +259,7 @@ namespace MyControls
     |groupBox5|radioStyleOriginal|一般|  
     |groupBox5|radioStyleItalic|斜體|  
     |groupBox6|radioWeightOriginal|原始|  
-    |groupBox6|radioWeightBold|粗體|  
+    |groupBox6|radioWeightBold|Bold|  
   
 6. 將下列<xref:System.Windows.Forms.Label?displayProperty=nameWithType>控制項加入至最後一個<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 這些控制項會顯示[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項所傳回的資料。  
   
@@ -305,7 +305,7 @@ namespace MyControls
 ### <a name="handling-onbuttonclick"></a>處理 OnButtonClick  
  當`OnButtonClick`使用者按一下 [**確定]** 或 [**取消**] 按鈕時, 就會發生此事件。  
   
- 事件處理常式會檢查事件引數`IsOK`的欄位, 以判斷按一下哪一個按鈕。 資料變數會對應至稍<xref:System.Windows.Forms.Label>早所討論的控制項。  `lbl` 如果使用者按一下 [**確定]** 按鈕, 則會將控制項<xref:System.Windows.Controls.TextBox>控制項的資料指派給對應<xref:System.Windows.Forms.Label>的控制項。 如果使用者按一下 [**取消**], <xref:System.Windows.Forms.Label.Text%2A>則值會設定為預設字串。  
+ 事件處理常式會檢查事件引數`IsOK`的欄位, 以判斷按一下哪一個按鈕。 資料變數會對應至稍<xref:System.Windows.Forms.Label>早所討論的控制項。 `lbl` 如果使用者按一下 [**確定]** 按鈕, 則會將控制項<xref:System.Windows.Controls.TextBox>控制項的資料指派給對應<xref:System.Windows.Forms.Label>的控制項。 如果使用者按一下 [**取消**], <xref:System.Windows.Forms.Label.Text%2A>則值會設定為預設字串。  
   
  將下列按鈕 click 事件處理常式程式碼加入`Form1`至類別。  
   

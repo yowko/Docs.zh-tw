@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 3531ff9f42289a3ad3b029f090f2dd4987e5886c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fc7a5021f9f8d9e6badcd3e13266fb8f4bfe7a4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947910"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991751"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 可讓 PresentationHost.exe 探索主應用程式有興趣的未經處理輸入裝置 (人性化介面裝置)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `ppEnum`  
   
- [out]指標[IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)列舉未經處理輸入的裝置。  
+ 脫銷列舉原始輸入裝置之[IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)的指標。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  HRESULT:  
   
- S_OK- [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)將只供 PresentationHost.exe 若傳回 S_OK。  
+ S_OK-只有在傳回 S_OK 時，Presentationhost.exe 才會使用[IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) 。  
   
  E_NOTIMPL  
   

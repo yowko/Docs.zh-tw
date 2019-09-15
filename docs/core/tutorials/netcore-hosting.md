@@ -4,12 +4,12 @@ description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 528d46f64c424dd0f58e57891c605ac5ab474240
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ec63e1b87c4161dcd0dd3ab37aadbef53d4b3219
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925927"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970864"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -135,7 +135,7 @@ CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 
 ### <a name="step-5---run-managed-code"></a>步驟 5 - 執行受控碼！
 
-執行階段啟動後，主機便可以呼叫受控碼。 這可透過幾種不同的方式來完成。 連結至這個教學課程之範例程式碼使用 `coreclr_create_delegate` 函式來建立靜態受控方法的委派。 此 API 會採用[組件名稱](../../framework/app-domains/assembly-names.md)、命名空間限定的類型名稱和方法名稱作為輸入，並傳回可用來叫用方法的委派。
+執行階段啟動後，主機便可以呼叫受控碼。 這可透過幾種不同的方式來完成。 連結至這個教學課程之範例程式碼使用 `coreclr_create_delegate` 函式來建立靜態受控方法的委派。 此 API 會採用[組件名稱](../../standard/assembly/names.md)、命名空間限定的類型名稱和方法名稱作為輸入，並傳回可用來叫用方法的委派。
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -231,7 +231,7 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-如果 `ExecuteAssembly` 不符合您的主機需求，另一個選擇是使用 `CreateDelegate` 建立靜態 Managed 方法的函式指標。 雖然此做法要求主機必須知道所呼叫的方法簽章 (以便建立函式指標類型)，但允許主機彈性地叫用組件進入點以外的程式碼。 第二個參數中提供的組件名稱為要載入之程式庫的[完整受控組件名稱](../../framework/app-domains/assembly-names.md)。
+如果 `ExecuteAssembly` 不符合您的主機需求，另一個選擇是使用 `CreateDelegate` 建立靜態 Managed 方法的函式指標。 雖然此做法要求主機必須知道所呼叫的方法簽章 (以便建立函式指標類型)，但允許主機彈性地叫用組件進入點以外的程式碼。 第二個參數中提供的組件名稱為要載入之程式庫的[完整受控組件名稱](../../standard/assembly/names.md)。
 
 ```C++
 void *pfnDelegate = NULL;

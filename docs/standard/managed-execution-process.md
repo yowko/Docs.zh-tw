@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593447"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969022"
 ---
 # <a name="managed-execution-process"></a>Managed 執行程序
 <a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：  
@@ -113,8 +113,8 @@ ms.locfileid: "65593447"
 - [語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)
 - [中繼資料和自我描述元件](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL 組譯工具)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [安全性](../../docs/standard/security/index.md)
+- [Security](../../docs/standard/security/index.md)
 - [與 Unmanaged 程式碼互通](../../docs/framework/interop/index.md)
 - [部署](../../docs/framework/deployment/net-framework-applications.md)
-- [Common Language Runtime 中的組件](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [.NET 中的組件](assembly/index.md)
 - [應用程式定義域](../../docs/framework/app-domains/application-domains.md)

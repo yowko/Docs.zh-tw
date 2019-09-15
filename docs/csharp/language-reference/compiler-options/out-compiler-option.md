@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602603"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970372"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# 編譯器選項)
 **-out** 選項指定輸出檔案的名稱。  
@@ -45,13 +45,13 @@ ms.locfileid: "69602603"
   
  任何在編譯過程中產生的模組，都會變成與編譯中同時產生的任何組件建立關聯的檔案。 請使用 [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) 來檢視組件資訊清單，以查看關聯的檔案。  
   
- 必須有 -out 編譯器選項，才能讓 exe 成為 Friend 組件的目標。 如需詳細資訊，請參閱 [Friend 組件](../../../standard/assembly/friend-assemblies.md)。  
+ 必須有 -out 編譯器選項，才能讓 exe 成為 Friend 組件的目標。 如需詳細資訊，請參閱 [Friend 組件](../../../standard/assembly/friend.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]  頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2. 按一下 [應用程式]  屬性頁。  
+2. 按一下 [應用程式] 屬性頁。  
   
 3. 修改**組件名稱**屬性。  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>另請參閱
 
 - [C# 編譯器選項](./index.md)
-- [Friend 組件](../../../standard/assembly/friend-assemblies.md)
+- [Friend 組件](../../../standard/assembly/friend.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

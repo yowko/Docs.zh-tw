@@ -2,12 +2,12 @@
 title: 自訂繫結可靠工作階段
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: a68acc29629a47c2c4a3263f04ec4f6e32a7173c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b2679ad4c6e8595a7b6d6bc9818880da56781e38
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040056"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989999"
 ---
 # <a name="custom-binding-reliable-session"></a>自訂繫結可靠工作階段
 
@@ -29,7 +29,7 @@ ms.locfileid: "70040056"
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
 
-繫結項目的順序對於定義自訂系結很重要, 因為每個都代表通道堆疊中的一層 (請參閱[自訂](../../../../docs/framework/wcf/extending/custom-bindings.md)系結)。
+繫結項目的順序對於定義自訂系結很重要，因為每個都代表通道堆疊中的一層（請參閱[自訂](../../../../docs/framework/wcf/extending/custom-bindings.md)系結）。
 
 範例的服務組態會如下列程式碼範例所示加以定義。
 
@@ -92,7 +92,7 @@ ms.locfileid: "70040056"
 
 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -103,9 +103,9 @@ Press <ENTER> to terminate client.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 使用下列命令安裝 ASP.NET 4.0:
+1. 使用下列命令安裝 ASP.NET 4.0：
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -116,7 +116,7 @@ Press <ENTER> to terminate client.
 4. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
     > [!IMPORTANT]
-    > 在跨電腦設定中執行用戶端時, 請務必將`address` [ \<端點 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)專案的屬性和`clientBaseAddress` [ \<compositeDuplex 的屬性中的 "localhost" 取代為](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)以適當電腦的名稱 >, 如下列範例所示。
+    > 在跨電腦設定中執行用戶端時，請務必將`address` [ \<端點 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)專案的屬性和`clientBaseAddress` [ \<compositeDuplex 的屬性中的 "localhost" 取代為](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)以適當電腦的名稱 >，如下列範例所示。
 
     ```xml
     <endpoint name = ""

@@ -2,15 +2,15 @@
 title: 作法：指定通道安全性認證
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 3d6131a7488d9932118a988095791dd06fd46c49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933453"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972450"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>HOW TO：指定通道安全性認證
-Windows Communication Foundation (WCF) 服務的標記可讓 COM 應用程式呼叫 WCF 服務。 大部分的 WCF 服務都需要用戶端指定認證以進行驗證和授權。 從 WCF 用戶端呼叫 WCF 服務時, 您可以在受控碼或應用程式佈建檔中指定這些認證。 從 COM 應用程式呼叫 WCF 服務時, 您可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
+# <a name="how-to-specify-channel-security-credentials"></a>作法：指定通道安全性認證
+Windows Communication Foundation （WCF）服務的標記可讓 COM 應用程式呼叫 WCF 服務。 大部分的 WCF 服務都需要用戶端指定認證以進行驗證和授權。 從 WCF 用戶端呼叫 WCF 服務時，您可以在受控碼或應用程式佈建檔中指定這些認證。 從 COM 應用程式呼叫 WCF 服務時，您可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
   
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是以 IDispatch 為基礎的介面，因此您無法在 Visual Studio 環境中使用 IntelliSense 功能。  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) 服務的標記可讓 COM 應用程式呼
   
 4. 將`bindingNamespace="http://Microsoft.ServiceModel.Samples"`加入至服務的 app.config 中的端點標記。  
   
-5. 建置「訊息安全性範例」並執行 Service.exe。 使用 Internet Explorer 並流覽至服務的 URI (http://localhost:8000/ServiceModelSamples/Service) 以確保服務正常運作。  
+5. 建置「訊息安全性範例」並執行 Service.exe。 使用 Internet Explorer 並流覽至服務的 URI （ http://localhost:8000/ServiceModelSamples/Service) 以確保服務正常運作。  
   
 6. 開啟 Visual Basic 6.0，並建立新的標準 .exe 檔案。 將按鈕加入至表單中，然後按兩下這個按鈕，將下列程式碼加入至 Click 處理常式：  
   
-    ```  
+    ```vb  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
         monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
         monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) 服務的標記可讓 COM 應用程式呼
   
      Visual Basic 應用程式將會顯示含有呼叫 Add(3, 4) 之結果的訊息方塊。 您也可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 或 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> 替代 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> 來設定用戶端憑證：  
   
-    ```  
+    ```vb  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
     ```  
   
@@ -70,7 +70,7 @@ Windows Communication Foundation (WCF) 服務的標記可讓 COM 應用程式呼
 
 3. 開啟 Visual Basic 6.0，並建立新的標準 .exe 檔案。 將按鈕加入至表單中，然後按兩下這個按鈕，將下列程式碼加入至 Click 處理常式：  
   
-    ```  
+    ```vb
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
     monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -95,7 +95,7 @@ Windows Communication Foundation (WCF) 服務的標記可讓 COM 應用程式呼
 
 2. 開啟 Visual Basic 6.0，並建立新的標準 .exe 檔案。 將按鈕加入至表單中，然後按兩下這個按鈕，將下列程式碼加入至 Click 處理常式：  
   
-    ```  
+    ```vb
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
     monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -115,11 +115,11 @@ Windows Communication Foundation (WCF) 服務的標記可讓 COM 應用程式呼
   
 ### <a name="to-specify-an-issue-token"></a>指定發行權杖  
   
-1. 發行權杖僅適用於使用聯合安全性的應用程式。 如需聯合安全性的詳細資訊, 請參閱[同盟和發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)和[同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+1. 發行權杖僅適用於使用聯合安全性的應用程式。 如需聯合安全性的詳細資訊，請參閱[同盟和發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)和[同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
      下列 Visual Basic 程式碼範例示範如何呼叫 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> 方法：  
   
-    ```  
+    ```vb
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
         monString = monString + ", address=http://localhost:8000/SomeService/Service"  
         monString = monString + ", contract=ICalculator, contractNamespace=http://SomeService.Samples"  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 0630639433aed4c8dfddbf0144e9802ed3f4ee73
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 073660fa732c04cdc987af5617b894a277ebcc0f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606444"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970119"
 ---
 # <a name="-target-c-compiler-options"></a>-target (C# 編譯器選項)
 您可以使用四種形式之一來指定 **-target** 編譯器選項︰  
@@ -37,7 +37,7 @@ ms.locfileid: "69606444"
  [-target:winmdobj](./target-winmdobj-compiler-option.md)  
  建立中繼 .winmdobj 檔案。  
   
- 除非您指定 **-target:module**，否則 **-target** 會將 .NET Framework 組件資訊清單放入輸出檔案中。 如需詳細資訊，請參閱 [Common Language Runtime 中的組件](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)和 [Common Attributes](../../programming-guide/concepts/attributes/common-attributes.md) (常見屬性)。  
+ 除非您指定 **-target:module**，否則 **-target** 會將 .NET Framework 組件資訊清單放入輸出檔案中。 如需詳細資訊，請參閱[.net 中的元件](../../../standard/assembly/index.md)和[通用屬性](../../programming-guide/concepts/attributes/common-attributes.md)。  
   
  編譯時，組件資訊清單會放在第一個 .exe 輸出檔，如果沒有 .exe 輸出檔，則會放在第一個 DLL 中。 例如，在下列命令列中，資訊清單會放在 `1.exe` 中：  
   

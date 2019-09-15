@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2bfb1078478aea5dffab66ba5f8c7d553262968
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851582"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971175"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>擷取桌面應用程式中的資源
 當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的 [從 .resources 檔擷取資源](#from_file) 一節中所述。  若要擷取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中的資源，請參閱 Windows 開發人員中心的 [建立和擷取 Windows 市集應用程式中的資源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 。  
@@ -142,7 +142,7 @@ GetObject.exe
   
  若要啟用完整的組件版本控制支援，建議您在 [全域組件快取](../../../docs/framework/app-domains/gac.md) 中部署強式名稱的組件，並在應用程式目錄中部署沒有強式名稱的組件。 如果您想要在應用程式目錄中部署強式名稱的組件，當您更新組件時，將無法遞增附屬組件的版本號碼。 相反地，您必須執行就地更新，以更新的程式碼取代現有程式碼，並維持相同的版本號碼。 例如，如果您想要更新 1.0.0.0 版的附屬組件，而且該組件已完整指定組件名稱 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a"，請覆寫成使用完整指定之相同組件名稱 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" 編譯的已更新 myApp.resources.dll。 請注意，在附屬組件檔上使用就地更新，會讓應用程式很難正確判斷附屬組件的版本。  
   
- 如需組件版本控制的詳細資訊，請參閱 [組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md) 和 [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
+ 如需組件版本控制的詳細資訊，請參閱 [組件版本控制](../../standard/assembly/versioning.md) 和 [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>從 .resources 檔擷取資源  

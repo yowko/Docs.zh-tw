@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37dda10a3dcbcb0968674e04292c5dc1a79be66f
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
-ms.translationtype: HT
+ms.openlocfilehash: 85841491ace5b8959c3517f407c14069b34733a7
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69013008"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969092"
 ---
 # <a name="compiling-an-interop-project"></a>編譯 Interop 專案
 
@@ -30,7 +30,7 @@ ms.locfileid: "69013008"
 
  [在 Managed 程式碼中使用 COM 類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))會更詳細討論這兩種技術之間的差異。
 
- 如需使用 Visual Studio 內嵌 Interop 類型的示範，請參閱 [逐步解說：在 Visual Studio 中內嵌來自受控組件的類型 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)，以及[逐步解說：在 Visual Studio 中內嵌來自受控組件的類型 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)。
+ 如需使用 Visual Studio 內嵌 Interop 類型的示範，請參閱 [逐步解說：在 Visual Studio](../../standard/assembly/embed-types-visual-studio.md)中，從 Managed 元件內嵌類型。
 
  若要參考具有命令列編譯器的 Interop 組件，以及在可執行檔中內嵌類型資訊，請使用 [/link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md) 或 [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 編譯器參數，並指定 Interop 組件的名稱。
 
@@ -44,6 +44,5 @@ ms.locfileid: "69013008"
 - [將 COM 元件公開給 .NET Framework](exposing-com-components.md)
 - [語言獨立性以及與語言無關的元件](../../standard/language-independence-and-language-independent-components.md)
 - [在受控程式碼中使用 COM 類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [逐步解說：在 Visual Studio 中內嵌來自受控組件的類型 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [逐步解說：在 Visual Studio 中內嵌來自組件的類型 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [逐步解說：在 Visual Studio 中，從 Managed 元件內嵌類型](../../standard/assembly/embed-types-visual-studio.md)
 - [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)

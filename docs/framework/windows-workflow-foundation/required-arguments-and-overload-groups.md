@@ -2,12 +2,12 @@
 title: 必要引數與多載群組
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 5249cbb127064ffa5023074481a47decad279128
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964907"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989302"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必要引數與多載群組
 您可以設定活動，讓繫結活動所需的某些引數有效，以便用於執行。 `RequiredArgument` 屬性用於指出活動的特定引數是必要的，而 `OverloadGroup` 屬性則用於群組必要引數的分類。 透過使用屬性，活動作者可以提供簡單或複雜的活動驗證組態。  
@@ -63,11 +63,11 @@ public sealed class Add : CodeActivity<int>
   
  **未提供必要活動引數 ' Operand1 ' 的值。**  
 > [!NOTE]
-> 如需檢查和處理驗證錯誤和警告的詳細資訊, 請參閱叫用[活動驗證](invoking-activity-validation.md)。  
+> 如需檢查和處理驗證錯誤和警告的詳細資訊，請參閱叫用[活動驗證](invoking-activity-validation.md)。  
   
 ## <a name="using-overload-groups"></a>使用多載群組
 
-多載群組提供方法，指出活動中哪些引數組合是有效的。 引數會使用 <xref:System.Activities.OverloadGroupAttribute> 群組在一起。 每個群組都會獲得指定<xref:System.Activities.OverloadGroupAttribute>的名稱。 只有在多載群組中的一組引數系結時, 活動才有效。 在下列範例中，會定義 `CreateLocation` 類別。  
+多載群組提供方法，指出活動中哪些引數組合是有效的。 引數會使用 <xref:System.Activities.OverloadGroupAttribute> 群組在一起。 每個群組都會獲得指定<xref:System.Activities.OverloadGroupAttribute>的名稱。 只有在多載群組中的一組引數系結時，活動才有效。 在下列範例中，會定義 `CreateLocation` 類別。  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -106,10 +106,10 @@ class CreateLocation: Activity
   
  這個活動的目的是要指定美國的地點。 若要完成這項作業，活動的使用者可以使用三個引數群組的其中之一來指定地點。 為指定有效的引數組合，會定義三個多載群組。 `G1` 包含 `Latitude` 和 `Longitude` 引數。 `G2` 包含 `Street`、`City` 和 `State`。 `G3` 包含 `Street` 和 `Zip`。 `Name` 也是必要引數，但不是多載群組的一部分。 若要使這個活動有效，`Name` 必須與來自同一個多載群組的所有引數繫結在一起。  
   
- 在下列範例中, 取自「[資料庫存取活動](./samples/database-access-activities.md)」範例, 有兩個多載群組`ConnectionString` : `ConfigFileSectionName`和。 若要讓此活動有效，必須繫結 `ProviderName` 和 `ConnectionString` 引數，或是繫結 `ConfigName` 引數，但不能同時使用這兩種方式。  
+ 在下列範例中，取自「[資料庫存取活動](./samples/database-access-activities.md)」範例，有兩個多載群組`ConnectionString` ： `ConfigFileSectionName`和。 若要讓此活動有效，必須繫結 `ProviderName` 和 `ConnectionString` 引數，或是繫結 `ConfigName` 引數，但不能同時使用這兩種方式。  
   
-```  
-Public class DbUpdate: AsyncCodeActivity  
+```csharp  
+public class DbUpdate: AsyncCodeActivity  
 {  
     [RequiredArgument]  
     [OverloadGroup("ConnectionString")]  

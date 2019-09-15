@@ -1,21 +1,21 @@
 ---
-title: HOW TO：與 WCF 端點交換佇列訊息
+title: 作法：與 WCF 端點交換佇列訊息
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: dd59e7689fbca68d3e7b0b0008973e471d092fe0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09b21c9483b4f2716409b560dbbb478fe5a6badd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778335"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972228"
 ---
-# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>HOW TO：與 WCF 端點交換佇列訊息
-佇列會確保用戶端和 Windows Communication Foundation (WCF) 服務，之間可能發生可靠的傳訊即使服務目前無法在通訊時。 下列程序示範如何確保實作 WCF 服務時，長期用戶端與服務間通訊使用標準佇列繫結。  
+# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>作法：與 WCF 端點交換佇列訊息
+佇列可確保用戶端與 Windows Communication Foundation （WCF）服務之間的可靠訊息可能發生，即使在通訊時無法使用服務也一樣。 下列程式示範如何在執行 WCF 服務時，使用標準佇列系結來確保用戶端與服務之間的持久通訊。  
   
- 本節說明如何使用<xref:System.ServiceModel.NetMsmqBinding>WCF 用戶端與 WCF 服務之間的佇列通訊。  
+ 本節說明如何在 wcf 客戶<xref:System.ServiceModel.NetMsmqBinding>端和 wcf 服務之間使用進行佇列通訊。  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>若要在 WCF 服務中使用佇列  
   
@@ -24,7 +24,7 @@ ms.locfileid: "61778335"
      [!code-csharp[S_Msmq_Transacted#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#1)]
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
   
-2. 當服務合約通過使用者定義型別，您必須為這些型別定義資料合約。 下列程式碼示範兩份資料合約：`PurchaseOrder` 和 `PurchaseOrderLineItem`。 這兩個型別定義了傳送至服務的資料  (請注意，定義這類資料合約的類別也定義許多方法。 這些方法不被視為資料合約的部分。 只有以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性宣告的成員才屬於資料合約的部分)。  
+2. 當服務合約通過使用者定義型別，您必須為這些型別定義資料合約。 下列程式碼示範兩份資料合約：`PurchaseOrder` 和 `PurchaseOrderLineItem`。 這兩個型別定義了傳送至服務的資料 (請注意，定義這類資料合約的類別也定義許多方法。 這些方法不被視為資料合約的部分。 只有以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性宣告的成員才屬於資料合約的部分)。  
   
      [!code-csharp[S_Msmq_Transacted#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#2)]
      [!code-vb[S_Msmq_Transacted#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#2)]  
@@ -41,7 +41,7 @@ ms.locfileid: "61778335"
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5. 在組態中定義 <xref:System.ServiceModel.Description.ServiceEndpoint>，以指定服務位址，並使用標準 <xref:System.ServiceModel.NetMsmqBinding> 繫結。 如需使用 WCF 組態的詳細資訊，請參閱 <<c0> [ 設定的 WCF 服務](../configuring-services.md)。  
+5. 在組態中定義 <xref:System.ServiceModel.Description.ServiceEndpoint>，以指定服務位址，並使用標準 <xref:System.ServiceModel.NetMsmqBinding> 繫結。 如需使用 WCF 設定的詳細資訊，請參閱設定[wcf 服務](../configuring-services.md)。  
 
 6. 使用從佇列讀取訊息並加以處理的 `OrderProcessing` 建立 <xref:System.ServiceModel.ServiceHost> 服務的主機。 開啟服務主機來提供服務。 顯示一則訊息，指示使用者按任意鍵終止服務。 呼叫 `ReadLine` 以等待按鍵動作，隨後關閉服務。  
   
@@ -50,15 +50,15 @@ ms.locfileid: "61778335"
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>若要建立佇列服務的用戶端  
   
-1. 下列範例示範如何執行裝載應用程式，並使用 Svcutil.exe 工具來建立 WCF 用戶端。  
+1. 下列範例顯示如何執行裝載應用程式，並使用 Svcutil 來建立 WCF 用戶端。  
   
-    ```  
+    ```console
     svcutil http://localhost:8000/ServiceModelSamples/service  
     ```  
   
 2. 在組態中定義 <xref:System.ServiceModel.Description.ServiceEndpoint>，藉以指定位址並使用標準 <xref:System.ServiceModel.NetMsmqBinding> 繫結，如下列範例所示。  
 
-3. 建立異動範圍以寫入異動式佇列，也就是呼叫`SubmitPurchaseOrder`作業並關閉 WCF 用戶端，如下列範例所示。  
+3. 建立交易範圍以寫入至事務佇列、呼叫`SubmitPurchaseOrder`作業並關閉 WCF 用戶端，如下列範例所示。  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
@@ -80,7 +80,7 @@ ms.locfileid: "61778335"
 - <xref:System.ServiceModel.NetMsmqBinding>
 - [異動 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
 - [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [如何：Exchange 與 WCF 端點的訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: b249137117f970a14284beb6439e501a3004eee1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f5418da63b2bc5fc9b20f5c262890b7a06ce5dd
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051971"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989915"
 ---
 # <a name="getting-started-sample"></a>使用者入門範例
 
-使用者入門範例會示範如何實作一般服務與一般用戶端使用 Windows Communication Foundation (WCF)。 這個範例是所有其他基本技術範例的基礎。
+消費者入門範例示範如何使用 Windows Communication Foundation （WCF）來執行一般服務和一般用戶端。 這個範例是所有其他基本技術範例的基礎。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -26,18 +26,18 @@ ms.locfileid: "62051971"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
 
 此服務會描述其在服務合約中 (即服務公開為中繼資料的服務合約) 所執行的作業。 此服務也包含會實作這些作業的程式碼。
 
-用戶端包含服務合約的定義，以及用來存取服務的 Proxy 類別。 從服務中繼資料會使用產生的 proxy 程式碼[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。
+用戶端包含服務合約的定義，以及用來存取服務的 Proxy 類別。 使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，從服務中繼資料產生 proxy 程式碼。
 
 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，服務會裝載在 Windows Activation Service (WAS) 中。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)][!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和 上，服務會由網際網路資訊服務 (IIS) 與 ASP.NET 加以裝載。 使用 IIS 或 WAS 裝載服務，便可以讓服務在第一次存取時就自動啟動。
 
 > [!NOTE]
-> 如果您想要開始使用範例裝載的主控台應用程式，而不是 IIS 中的服務，請參閱 <<c0> [ 自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例。
+> 如果您想要開始使用在主控台應用程式（而不是 IIS）中裝載服務的範例，請參閱[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例。
 
 服務與用戶端會在組態檔設定中指定存取詳細資訊，而這些設定可提供部署期間的彈性。 其中包含指定位址、繫結與合約的端點定義。 繫結會指定如何存取服務的傳輸與安全性詳細資訊。
 
@@ -174,11 +174,11 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
-使用指定的合約類型使用用戶端類別所產生的用戶端通訊[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 這個產生的用戶端會包含在 generatedClient.cs 或 generatedClient.vb 檔中。 這個公用程式會擷取指定服務的中繼資料，然後產生用戶端應用程式透過指定合約型別來進行通訊的用戶端。 裝載的服務必須可用來產生用戶端程式碼，因為該服務將被用來擷取更新的中繼資料。
+用戶端會使用由[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的用戶端類別，透過指定的合約型別進行通訊。 這個產生的用戶端會包含在 generatedClient.cs 或 generatedClient.vb 檔中。 這個公用程式會擷取指定服務的中繼資料，然後產生用戶端應用程式透過指定合約型別來進行通訊的用戶端。 裝載的服務必須可用來產生用戶端程式碼，因為該服務將被用來擷取更新的中繼資料。
 
  從用戶端目錄中的 SDK 命令提示字元執行下列命令，以產生具型別的 Proxy：
 
-```
+```console
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs
 ```
 
@@ -264,7 +264,7 @@ client.Close();
 
 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
-```
+```output
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -273,17 +273,17 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-使用者入門範例會示範建立服務與用戶端的標準方式。 另[基本](../../../../docs/framework/wcf/samples/basic-sample.md)建置此範例來示範特定產品功能。
+使用者入門範例會示範建立服務與用戶端的標準方式。 此範例上的另一個[基本](../../../../docs/framework/wcf/samples/basic-sample.md)組建，示範特定的產品功能。
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
 ## <a name="see-also"></a>另請參閱
 
-- [如何：裝載 WCF 服務中的受管理的應用程式](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [如何：裝載在 IIS 中的 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [如何：在受控應用程式中裝載 WCF 服務](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [如何：在 IIS 中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

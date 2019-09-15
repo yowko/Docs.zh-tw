@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 66dd61210e36210f5444eb05355612eeb75c155a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bca07bf776f20443c4ccd2af69fc8c0b4eec5a88
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790234"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991107"
 ---
 # <a name="wcf-data-services-overview"></a>WCF 資料服務概觀
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]可讓您使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]來建立和取用 Web 或內部網路的資料服務。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]可讓您將資料公開為可由 Uri 定址的資源。 這可讓您使用具像狀態傳輸 (REST) 的語意存取及變更資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。 本主題提供 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 所定義的模式和作法概觀以及 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 所提供的功能，以便在 .NET Framework 應用程式中充分利用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。  
@@ -18,9 +18,9 @@ ms.locfileid: "70790234"
 ## <a name="address-data-as-resources"></a>將資料定址為資源  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會將資料公開為可由 URI 定址的資源。 資源路徑會根據實體資料模型的實體-關聯性慣例來建構。 在此模型中，實體代表應用程式域中的營運單位，例如客戶、訂單、專案及產品。 如需詳細資訊，請參閱[實體資料模型](../adonet/entity-data-model.md)。  
   
- 在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 中，您將實體資源定址為包含實體型別執行個體的實體集。 例如，URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders`會傳回`Northwind`資料服務中，與`CustomerID`客戶相關的所有訂單，其值為`ALFKI.`  
+ 在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 中，您將實體資源定址為包含實體型別執行個體的實體集。 例如，URI <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders>會傳回`Northwind`資料服務中，與`CustomerID`客戶相關的所有訂單，其值為`ALFKI.`  
   
- 查詢運算式可讓您針對資源執行傳統查詢運算，例如篩選、排序和分頁。 例如，URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` 會篩選資源，只傳回運費超過 $50 美元的訂單。 如需詳細資訊，請參閱[存取資料服務資源](accessing-data-service-resources-wcf-data-services.md)。  
+ 查詢運算式可讓您針對資源執行傳統查詢運算，例如篩選、排序和分頁。 例如，URI <https://services.odata.org/Northwind/Northwind.svc/Customers( ' ALFKI '）/Orders？ $filter = 運費 gt 50 > 會篩選資源，只傳回運費成本超過 $50 的訂單。 如需詳細資訊，請參閱[存取資料服務資源](accessing-data-service-resources-wcf-data-services.md)。  
   
 ## <a name="interoperable-data-access"></a>可互通的資料存取  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]建基於標準網際網路通訊協定，讓資料服務與不使用 .NET Framework 的應用程式互通。 因為您可以使用標準 Uri 來處理資料，所以您的應用程式可以使用具像狀態傳輸（REST）的語義來存取和變更資料，特別是 GET、PUT、POST 和 DELETE 的標準 HTTP 動詞命令。 這樣能讓您從任何用戶端存取這些服務 (這些用戶端需可剖析及存取透過標準 HTTP 通訊協定傳輸的資料)。  

@@ -3,15 +3,15 @@ title: 搭配模型產生器使用迴歸來預測價格
 description: 本教學課程會特別示範如何使用 ML.NET 模型產生器來建置迴歸模型以預測紐約市的計程車費用。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 07/15/2019
+ms.date: 09/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bc1dacdad436cc5384bca4bbce224acc18d69201
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929436"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991354"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>搭配模型產生器使用迴歸來預測價格
 
@@ -89,17 +89,9 @@ ms.locfileid: "70929436"
 
 在本教學課程中用來定型價格預測模型的機器學習服務工作是迴歸。 在模型定型程序的期間，模型產生器會使用不同迴歸演算法及設定來定型不同模型以尋找可最佳執行您資料集的模型。
 
-定型模型所需要的時間會與資料量成比例。 請使用此圖表作為指導，為 `Time to train (seconds)` 欄位選取適當的值：
+定型模型所需要的時間會與資料量成比例。 「模型產生器」會根據您的資料來源大小，自動選取要定型的預設值 **（秒）** 。
 
-*資料集大小  | 資料集型別       | Avg.定型時間*
-------------- | ------------------ | --------------
-0 - 10 MB     | 數值和文字   | 10 秒
-10 - 100 MB   | 數值和文字   | 10 分鐘
-100 - 500 MB  | 數值和文字   | 30 分鐘
-500 - 1 GB    | 數值和文字   | 60 分鐘
-1 GB+         | 數值和文字   | 3 小時以上
-
-1. 因為定型資料檔案超過 10 MB，所以請使用 600 秒 (10 分鐘) 作為 [定型時間 (秒)] 的值。
+1. 除非您想要定型較長的時間，否則請保留預設值 [針對*時間進行定型（秒）* ]。
 2. 選取 [開始定型]。
 
 在整個定型程序期間，進度資料會顯示在定型步驟的 `Progress` 區段中。

@@ -2,16 +2,16 @@
 title: 區塊處理通道
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: b59f5c42f5a0f81f666bc5d22924f14c678a60e1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6bd7f1f31426c2d355b42f04ad770aac60183838
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045705"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990119"
 ---
 # <a name="chunking-channel"></a>區塊處理通道
 
-使用 Windows Communication Foundation (WCF) 傳送大型訊息時, 通常會希望限制用來緩衝這些訊息的記憶體數量。 一個可能的方案為以資料流處理訊息本文 (假設本文中有大量資料)。 然而，有些通訊協定需要緩衝處理整個訊息。 例如，可靠的傳訊和安全性。 另一個可能的方案為將較大訊息分成較小的訊息 (稱為區塊 (Chunk))，一次以單一區塊傳送這些區塊，然後在接收端重新構成較大訊息。 應用程式本身便可執行此區塊處理和取消區塊處理，或可以使用自訂通道來進行此作業。 區塊處理通道範例會顯示如何使用自訂通訊協定或層次通道，以便區塊處理和取消區塊處理任意較大訊息。
+使用 Windows Communication Foundation （WCF）傳送大型訊息時，通常會希望限制用來緩衝這些訊息的記憶體數量。 一個可能的方案為以資料流處理訊息本文 (假設本文中有大量資料)。 然而，有些通訊協定需要緩衝處理整個訊息。 例如，可靠的傳訊和安全性。 另一個可能的方案為將較大訊息分成較小的訊息 (稱為區塊 (Chunk))，一次以單一區塊傳送這些區塊，然後在接收端重新構成較大訊息。 應用程式本身便可執行此區塊處理和取消區塊處理，或可以使用自訂通道來進行此作業。 區塊處理通道範例會顯示如何使用自訂通訊協定或層次通道，以便區塊處理和取消區塊處理任意較大訊息。
 
 區塊處理應該只能在要傳送的整個訊息已建構完成之後運用。 區塊處理通道應該只能是安全性通道和可靠工作階段通道下的一層。
 
@@ -256,7 +256,7 @@ interface ITestService
 
 - 傳遞至傳送作業的逾時會當做整個傳送作業的逾時，而這包括傳送所有區塊。
 
-- 已選擇自訂 <xref:System.Xml.XmlDictionaryWriter> 設計，可避免緩衝處理整個原始訊息本文。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 取得本文上的 `message.GetReaderAtBodyContents`，將會緩衝處理整個本文。 相反地, 我們有一個<xref:System.Xml.XmlDictionaryWriter>傳遞至`message.WriteBodyContents`的自訂。 當訊息呼叫寫入器上的 WriteBase64 時，寫入器會將區塊封裝至訊息，然後使用內部通道傳送這些訊息。 傳送區塊之前，會封鎖 WriteBase64。
+- 已選擇自訂 <xref:System.Xml.XmlDictionaryWriter> 設計，可避免緩衝處理整個原始訊息本文。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 取得本文上的 `message.GetReaderAtBodyContents`，將會緩衝處理整個本文。 相反地，我們有一個<xref:System.Xml.XmlDictionaryWriter>傳遞至`message.WriteBodyContents`的自訂。 當訊息呼叫寫入器上的 WriteBase64 時，寫入器會將區塊封裝至訊息，然後使用內部通道傳送這些訊息。 傳送區塊之前，會封鎖 WriteBase64。
 
 ## <a name="implementing-the-receive-operation"></a>實作接收作業
 
@@ -282,7 +282,7 @@ interface ITestService
 
 ### <a name="onclose"></a>OnClose
 
-`OnClose` 會先將 `stopReceive` 設定為 `true`，以將擱置的 `ReceiveChunkLoop` 標示為停止。 然後<xref:System.Threading.ManualResetEvent>, 它會等候`receiveStopped` , 這會在停止`ReceiveChunkLoop`時設定。 假設在指定的逾時內停止 `ReceiveChunkLoop`，`OnClose` 會利用剩下的逾時呼叫 `innerChannel.Close`。
+`OnClose` 會先將 `stopReceive` 設定為 `true`，以將擱置的 `ReceiveChunkLoop` 標示為停止。 然後<xref:System.Threading.ManualResetEvent>，它會等候`receiveStopped` ，這會在停止`ReceiveChunkLoop`時設定。 假設在指定的逾時內停止 `ReceiveChunkLoop`，`OnClose` 會利用剩下的逾時呼叫 `innerChannel.Close`。
 
 ### <a name="onabort"></a>OnAbort
 
@@ -306,9 +306,9 @@ interface ITestService
 
 ## <a name="implementing-binding-element-and-binding"></a>實作繫結項目和繫結
 
-`ChunkingBindingElement` 會負責建立 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 \<會檢查t>\<和`CanBuildChannelFactory` `IDuplexSessionChannel` t > 的 t 是否為類型 (區塊處理通道唯一支援的通道), 而且系結中的其他繫結項目是否支援此項`CanBuildChannelListener` `ChunkingBindingElement`通道類型。
+`ChunkingBindingElement` 會負責建立 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 \<會檢查t>\<和`CanBuildChannelFactory` `IDuplexSessionChannel` t > 的 t 是否為類型（區塊處理通道唯一支援的通道），而且系結中的其他繫結項目是否支援此項`CanBuildChannelListener` `ChunkingBindingElement`通道類型。
 
-`BuildChannelFactory`\<T > 會先檢查是否可以建立要求的通道類型, 然後取得要區塊的訊息動作清單。 如需詳細資訊，請參閱下列章節。 接著會建立新的 `ChunkingChannelFactory`，並傳遞內部通道處理站 (從 `context.BuildInnerChannelFactory<IDuplexSessionChannel>` 傳回)、訊息動作清單和要緩衝處理的區塊數上限。 從 `MaxBufferedChunks` 屬性取得的區塊數上限會由 `ChunkingBindingElement` 公開。
+`BuildChannelFactory`\<T > 會先檢查是否可以建立要求的通道類型，然後取得要區塊的訊息動作清單。 如需詳細資訊，請參閱下列章節。 接著會建立新的 `ChunkingChannelFactory`，並傳遞內部通道處理站 (從 `context.BuildInnerChannelFactory<IDuplexSessionChannel>` 傳回)、訊息動作清單和要緩衝處理的區塊數上限。 從 `MaxBufferedChunks` 屬性取得的區塊數上限會由 `ChunkingBindingElement` 公開。
 
 `BuildChannelListener<T>` 擁有可建立 `ChunkingChannelListener` 並傳遞至內部通道接聽程式的相似實作。
 
@@ -320,7 +320,7 @@ interface ITestService
 
 區塊處理通道只會區塊處理透過 `ChunkingBehavior` 屬性識別的訊息。 `ChunkingBehavior` 類別會實作 `IOperationBehavior`，並可透過呼叫 `AddBindingParameter` 方法來實作。 在此方法中，`ChunkingBehavior` 會檢查其 `AppliesTo` 屬性的值 (`InMessage`、`OutMessage` 或這兩者)，以判斷應該區塊處理的訊息。 接著會取得每個訊息的動作 (從 `OperationDescription` 上的訊息集合)，並將該動作新增至 `ChunkingBindingParameter` 執行個體中所含的字串集合。 接著會將此 `ChunkingBindingParameter` 新增至提供的 `BindingParameterCollection`。
 
-當繫結項目建置通道處理站或通道接聽程式時，此 `BindingParameterCollection` 會從 `BindingContext` 內部傳遞至繫結中的每個繫結項目。 `ChunkingBindingElement`的`ChunkingBindingParameter`執行, 並`BuildChannelListener<T>`從中提取此。`BindingContext’` `BindingParameterCollection` `BuildChannelFactory<T>` `ChunkingBindingParameter` 中內含的動作集合接著會傳遞至 `ChunkingChannelFactory` 或 `ChunkingChannelListener`，後者接著會將動作集合傳遞至 `ChunkingDuplexSessionChannel`。
+當繫結項目建置通道處理站或通道接聽程式時，此 `BindingParameterCollection` 會從 `BindingContext` 內部傳遞至繫結中的每個繫結項目。 `ChunkingBindingElement`的`ChunkingBindingParameter`執行，並`BuildChannelListener<T>`從中提取此。`BindingContext’` `BindingParameterCollection` `BuildChannelFactory<T>` `ChunkingBindingParameter` 中內含的動作集合接著會傳遞至 `ChunkingChannelFactory` 或 `ChunkingChannelListener`，後者接著會將動作集合傳遞至 `ChunkingDuplexSessionChannel`。
 
 ## <a name="running-the-sample"></a>執行範例
 
@@ -328,13 +328,13 @@ interface ITestService
 
 1. 使用下列命令安裝 ASP.NET 4.0。
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
 2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-3. 若要建立方案, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
+3. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
 
 4. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
@@ -344,7 +344,7 @@ interface ITestService
 
 用戶端：
 
-```
+```console
 Press enter when service is available
 
  > Sent chunk 1 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10
@@ -371,7 +371,7 @@ Press enter when service is available
 
 伺服器：
 
-```
+```console
 Service started, press enter to exit
  < Received chunk 1 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10
  < Received chunk 2 of message 867c1fd1-d39e-4be1-bc7b-32066d7ced10

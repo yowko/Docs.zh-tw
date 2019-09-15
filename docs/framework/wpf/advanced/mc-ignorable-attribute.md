@@ -9,19 +9,19 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: b68909d94ad8cc5bba75b2c520db82c5ccf1b922
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a72b2886c63a80a4887aa16fc6a952fa837a800f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206184"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991437"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 屬性
 指定[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]可以忽略標記檔案中所遇到的命名空間前置詞。 屬性支援自訂命名空間對應[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和版本設定的標記相容性。 `mc:Ignorable`  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>XAML 屬性使用方式 (單一前置詞)  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix="ignorableUri"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -32,7 +32,7 @@ ms.locfileid: "70206184"
   
 ## <a name="xaml-attribute-usage-two-prefixes"></a>XAML 屬性使用方式 (兩個首碼)  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix1="ignorableUri"  
   xmlns:ignorablePrefix2="ignorableUri2"  

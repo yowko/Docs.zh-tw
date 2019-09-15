@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364242"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991811"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全建構函式模式
 一般而言，類別建構函式不應該呼叫回呼 (例如，虛擬方法或委派)，因為建構函式可以當成衍生類別之建構函式的基底初始化來呼叫。 進入虛擬項目，可能是在任何指定物件的未完成初始化狀態中完成的。 不過，屬性系統本身會在內部呼叫並公開回呼，以做為相依性屬性系統的一部分。 簡單來說, 使用<xref:System.Windows.DependencyObject.SetValue%2A> call 設定相依性屬性值的作業, 可能會在判斷中的某處包含回呼。 基於這個理由，在建構函式的主體內設定相依性屬性值時應特別小心，如果您的類型是用來做為基底類別，這可能就會發生問題。 有一種特定模式可讓<xref:System.Windows.DependencyObject>您執行可避免相依性屬性狀態的特定問題, 以及本文所述的固有回呼。  
@@ -35,7 +35,7 @@ ms.locfileid: "68364242"
   
  下列範例程式碼 (和後續範例) 是違反這項規則的虛擬 C# 範例，並將說明問題：  
   
-```  
+```csharp  
 public class MyClass : DependencyObject  
 {  
     public MyClass() {}  
@@ -71,7 +71,7 @@ public class MyClass : DependencyObject
 #### <a name="parameterless-constructors-calling-base-initialization"></a>呼叫基底初始化的無參數函式  
  實作這些呼叫基底預設值的建構函式：  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass() : base() {  
         // ALL class initialization, including initial defaults for   
@@ -83,7 +83,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>非預設 (便捷) 建構函式，不符合任何基底簽章  
  如果這些函式在初始化中使用參數來設定相依性屬性, 請先呼叫您自己的類別無參數的函式來進行初始化, 然後使用參數來設定相依性屬性。 這些可能是您的類別所定義的相依性屬性或繼承自基底類別的相依性屬性，但在這任一種情況下，請使用下列模式：  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  

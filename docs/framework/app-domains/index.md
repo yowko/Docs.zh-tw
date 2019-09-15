@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b4f0c2ad1290a7f9cf8d0c43c504a3e0a9628b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675347"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971930"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>使用應用程式定義域和組件設計程式
 Microsoft Internet Explorer、ASP.NET 和 Windows 殼層這類主機會在執行 .NET Framework 應用程式時將通用語言執行平台載入至處理序、在該處理序中建立[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)，然後在該應用程式定義域中載入並執行使用者程式碼。 在大部分情況下，您不必操心如何建立應用程式定義域並載入組件，因為執行階段主機會執行這些工作。  
@@ -28,14 +28,14 @@ Microsoft Internet Explorer、ASP.NET 和 Windows 殼層這類主機會在執行
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)  
  提供建立、設定及使用應用程式定義域的範例。  
   
- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [使用組件設計程式](../../standard/assembly/program.md)  
  描述如何建立和簽署組件，以及如何設定組件屬性。  
   
 ## <a name="related-sections"></a>相關章節  
  [發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  描述如何建立動態組件。  
   
- [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [.NET 中的組件](../../standard/assembly/index.md)  
  提供組件的概觀。  
   
  [應用程式定義域](../../../docs/framework/app-domains/application-domains.md)  

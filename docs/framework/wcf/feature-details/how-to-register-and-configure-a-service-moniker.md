@@ -1,31 +1,31 @@
 ---
-title: 作法：註冊和設定服務 Moniker
+title: HOW TO：註冊和設定服務 Moniker
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: d14facf435d575b9db5129b732938658c921f97f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934311"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972150"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>作法：註冊和設定服務 Moniker
-在具有具型別合約的 COM 應用程式中使用 Windows Communication Foundation (WCF) 服務標記之前, 您必須使用 COM 註冊必要的屬性化型別, 並以必要的系結設定 COM 應用程式和名字標記配置.  
+在具有具型別合約的 COM 應用程式中使用 Windows Communication Foundation （WCF）服務標記之前，您必須使用 COM 註冊必要的屬性化型別，並以必要的系結設定 COM 應用程式和名字標記配置.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>使用 COM 註冊必要的屬性化型別  
   
-1. 使用[System.servicemodel 中繼資料公用程式工具 (Svcutil)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具, 從 WCF 服務抓取中繼資料合約。 這會產生 WCF 用戶端元件和用戶端應用程式設定檔的原始程式碼。  
+1. 使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具，從 WCF 服務抓取中繼資料合約。 這會產生 WCF 用戶端元件和用戶端應用程式設定檔的原始程式碼。  
   
 2. 請確定組件中的型別已標示為 `ComVisible`。 若要這樣做，請在 Visual Studio 專案中將下列屬性新增至 AssemblyInfo.cs 檔。  
   
-    ```  
+    ```csharp
     [assembly: ComVisible(true)]  
     ```  
   
-3. 將 managed WCF 用戶端編譯為強式名稱的元件。 這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。 如需詳細資訊, 請參閱《 .NET 開發人員手冊》中的[使用強式名稱簽署元件](https://go.microsoft.com/fwlink/?LinkId=94874)。  
+3. 將 managed WCF 用戶端編譯為強式名稱的元件。 這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。 如需詳細資訊，請參閱《 .NET 開發人員手冊》中的[使用強式名稱簽署元件](https://go.microsoft.com/fwlink/?LinkId=94874)。  
   
 4. 使用組件註冊 (Regasm.exe) 工具並搭配 `/tlb` 選項，以使用 COM 註冊組件中的型別。  
   
@@ -36,14 +36,12 @@ ms.locfileid: "69934311"
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>使用必要的繫結組態設定 COM 應用程式和 Moniker  
   
-- 在用戶端應用程式的設定檔中, 將「配置」[中繼資料公用程式工具 (Svcutil)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的系結定義放在產生的用戶端應用程式設定檔中。 例如，若是名稱為 CallCenterClient.exe 的 Visual Basic 6.0 可執行檔，應該將組態放置在與可執行檔相同之目錄內的 CallCenterConfig.exe.config 檔案中。 用戶端應用程式現在就可使用 Moniker。 請注意, 如果使用 WCF 所提供的其中一個標準系結類型, 則不需要系結設定。  
+- 在用戶端應用程式的設定檔中，將「配置」[中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的系結定義放在產生的用戶端應用程式設定檔中。 例如，若是名稱為 CallCenterClient.exe 的 Visual Basic 6.0 可執行檔，應該將組態放置在與可執行檔相同之目錄內的 CallCenterConfig.exe.config 檔案中。 用戶端應用程式現在就可使用 Moniker。 請注意，如果使用 WCF 所提供的其中一個標準系結類型，則不需要系結設定。  
   
      接著會註冊下列型別。  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
-  
-    ...  
   
     [ServiceContract]   
     public interface IMathService   
@@ -57,19 +55,19 @@ ms.locfileid: "69934311"
   
      已使用 `wsHttpBinding` 繫結公開應用程式。 針對提供的型別和應用程式組態，將會使用下列範例 Moniker 字串。  
   
-    ```  
+    ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
     ```  
   
      `or`  
   
-    ```  
+    ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
     ```  
   
      在將參考新增至包含 `IMathService` 型別的組件之後，您就可以從 Visual Basic 6.0 應用程式中使用這些 Moniker 字串，如下列範例程式碼所示。  
   
-    ```  
+    ```vb  
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -87,11 +85,11 @@ ms.locfileid: "69934311"
     > 您可以在 C#、C++ 或其他 .NET 語言應用程式中使用類似的程式碼。  
   
     > [!NOTE]
-    > :如果標記的格式不正確或服務無法使用, 則呼叫`GetObject`會傳回「不正確語法」錯誤。 如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
+    > :如果標記的格式不正確或服務無法使用，則呼叫`GetObject`會傳回「不正確語法」錯誤。 如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
   
      雖然本主題著重於從 VB 6.0 程式碼中使用服務 Moniker，但您也可以使用其他語言中的服務 Moniker。 從 C++ 程式碼中使用 Moniker 時，應該以 "no_namespace named_guids raw_interfaces_only" 這個名稱匯入 Svcutil.exe 產生的組件，如下列程式碼所示。  
   
-    ```  
+    ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   

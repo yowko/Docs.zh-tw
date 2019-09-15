@@ -1,28 +1,21 @@
 ---
 title: dotnet migrate 命令
 description: dotnet migrate 命令會移轉專案及其所有相依性。
-ms.date: 06/26/2019
-ms.openlocfilehash: 86f11592e774da12b010886aaa1e30cee063fea6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.date: 08/08/2019
+ms.openlocfilehash: 790c607070ff348ca7cfe30137268de18dcb0293
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202529"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990422"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**本主題適用於：✓** .NET Core 1.x SDK 和更新版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文適用于：✓** .net CORE 1.x sdk **✓** .net core 2.x sdk
 
 ## <a name="name"></a>名稱
 
 `dotnet migrate` - 將 Preview 2 .NET Core 專案移轉至 .NET Core SDK 型專案。
-
-> [!NOTE]
-> 在下一個預覽版本中，`dotnet migrate` 會從 .NET Core 3.0 SDK 中移除。
 
 ## <a name="synopsis"></a>概要
 
@@ -31,7 +24,7 @@ dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--r
 dotnet migrate [-h|--help]
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet migrate` 命令會將有效的 Preview 2 *project.json* 型專案移轉至有效的 .NET Core SDK 型 *csproj* 專案。
 
@@ -49,6 +42,8 @@ dotnet migrate [-h|--help]
 根據預設，移轉作業會將移轉程序的狀態輸出到標準輸出 (STDOUT)。 如果使用 `--report-file <REPORT_FILE>` 選項，則輸出會儲存到指定的檔案。
 
 `dotnet migrate` 命令只支援有效的 Preview 2 *project.json* 型專案。 這表示您無法使用它將 DNX 或 Preview 1 *project.json* 型專案直接移轉到 MSBuild/csproj 專案。 您必須先手動將專案移轉到 Preview 2 *project.json* 型專案，然後再使用 `dotnet migrate` 命令移轉該專案。
+
+從`dotnet migrate` .net Core 3.0 SDK 開始，不再提供此命令。
 
 ## <a name="arguments"></a>引數
 

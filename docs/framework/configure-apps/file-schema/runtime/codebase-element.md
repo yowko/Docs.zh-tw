@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: bd170b817c5ccc337711f8f79968653c29f3eda4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252749"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971879"
 ---
 # <a name="codebase-element"></a>\<程式碼基底 > 元素
 
@@ -40,14 +40,14 @@ ms.locfileid: "70252749"
 
 ### <a name="attributes"></a>屬性
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |`href`|必要屬性。<br /><br /> 指定執行時間可以找到元件之指定版本的 URL。|
 |`version`|必要屬性。<br /><br /> 指定程式碼基底適用的元件版本。 元件版本號碼的格式為 [*主要. 次要. 組建. 修訂*]。|
 
 ## <a name="version-attribute"></a>version 屬性
 
-|值|描述|
+|值|說明|
 |-----------|-----------------|
 |版本號碼的每個部分的有效值為0到65535。|不適用。|
 
@@ -94,7 +94,7 @@ ms.locfileid: "70252749"
 
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
+- [執行時間設定架構](index.md)
 - [組態檔結構描述](../index.md)
-- [指定組件的位置](../../specify-assembly-location.md)
+- [指定元件的位置](../../../../standard/assembly/location.md)
 - [執行階段如何找出組件](../../../deployment/how-the-runtime-locates-assemblies.md)

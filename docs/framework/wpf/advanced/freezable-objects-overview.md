@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 854565e28e646ef57658e2bfdb7326d8453448d2
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 05cd3c27430146f575c23011f53995aa07aaf99e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856079"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991488"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 物件概觀
 
@@ -100,13 +100,13 @@ ms.locfileid: "70856079"
 
 若要使用`Freeze`屬性，您必須對應至展示選項命名空間： `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`。 `PresentationOptions`是對應此命名空間的建議前置詞：
 
-```
+```xaml
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
 ```
 
 由於並非所有的 XAML 讀取器都會辨識此屬性，因此建議您使用[mc：可忽略的屬性](mc-ignorable-attribute.md)，將`Presentation:Freeze`屬性標記為可忽略：
 
-```
+```xaml
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="PresentationOptions"
 ```

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 2f651b68d845e062ad950bb626e30c755d6d9df6
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f1147bf090af23c2f27bac14ab895657ccee60e3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169157"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991551"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹在為全球市場撰寫[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式時, 您應該注意的問題。 全球化程式設計項目會在 .net <xref:System.Globalization>的命名空間中定義。
@@ -39,7 +39,7 @@ ms.locfileid: "70169157"
 ### <a name="encoding"></a>編碼
  支援[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的編碼為 ASCII、 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] utf-16 和 utf-8。 編碼語句位於[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔的開頭。 如果沒有任何編碼屬性，而且沒有位元組順序，則剖析器預設為 UTF-8。 UTF-8 和 UTF-16 是慣用的編碼。 不支援 UTF-7。 下列範例示範如何在檔案中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]指定 utf-8 編碼。
 
-```
+```xaml
 ?xml encoding="UTF-8"?
 ```
 
@@ -51,7 +51,7 @@ ms.locfileid: "70169157"
 
  下列[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]範例會`fr-CA`使用 language 屬性來指定加拿大法文。
 
-```xml
+```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
 ```
 
@@ -123,7 +123,7 @@ ms.locfileid: "70169157"
 
 - 僧伽羅文
 
- 所有的書寫系統引擎都支援 OpenType 字型。 OpenType 字型可以包含 OpenType 版面配置資料表, 讓字型建立者能夠設計更好的國際和高階印刷樣式。 OpenType 字型版面配置表包含圖像替換、圖像定位、對齊和基準定位的相關資訊, 可讓文字處理應用程式改善文字版面配置。
+ 所有的書寫系統引擎都支援 OpenType 字型。 OpenType 字型可以包含 OpenType 版面配置資料表，讓字型建立者能夠設計更好的國際和高階印刷樣式。 OpenType 字型版面配置表包含圖像替換、圖像定位、對齊和基準定位的相關資訊，可讓文字處理應用程式改善文字版面配置。
 
  OpenType 字型可讓您使用[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]編碼來處理大型圖像集。 這類編碼促進廣泛的國際支援以及各種印刷樣式字符。
 
@@ -143,7 +143,7 @@ ms.locfileid: "70169157"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>多語系使用者介面
- 多語系使用者介面 (MUI) 是 Microsoft 的支援, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可將一種語言切換成另一種語言。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式會使用元件模型來支援 MUI。 一個應用程式包含語言中性的組件以及語言相關的附屬資源組件。 進入點是主要組件中的 Managed .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]資源載入器會利用[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的資源管理員來支援資源查閱和回退。 多語言附屬組件使用相同的主要組件。 載入的資源元件取決於<xref:System.Globalization.CultureInfo.CurrentUICulture%2A>目前線程的。
+ 多語系使用者介面（MUI）是 Microsoft 的支援， [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可將一種語言切換成另一種語言。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式會使用元件模型來支援 MUI。 一個應用程式包含語言中性的組件以及語言相關的附屬資源組件。 進入點是主要組件中的 Managed .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]資源載入器會利用[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的資源管理員來支援資源查閱和回退。 多語言附屬組件使用相同的主要組件。 載入的資源元件取決於<xref:System.Globalization.CultureInfo.CurrentUICulture%2A>目前線程的。
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>可當地語系化的使用者介面
@@ -173,7 +173,7 @@ ms.locfileid: "70169157"
 
  此問題的解決方案是設定中性的語言後援屬性。 應用程式開發人員可以選擇性地從主要組件中移除資源，指定可在附屬組件中找到的資源對應至特定的文化特性。 若要控制這個進程, <xref:System.Resources.NeutralResourcesLanguageAttribute>請使用。 類別的函式有兩個簽章, 一個<xref:System.Resources.UltimateResourceFallbackLocation>採用參數來<xref:System.Resources.ResourceManager>指定應該將回溯資源解壓縮的位置: 主要元件或附屬元件。 <xref:System.Resources.NeutralResourcesLanguageAttribute> 下列範例顯示如何使用這個屬性。 對於最終的回溯位置, 程式碼會導致<xref:System.Resources.ResourceManager>在目前執行之元件的目錄 "de" 子目錄中尋找資源。
 
-```
+```csharp
 [assembly: NeutralResourcesLanguageAttribute(
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```

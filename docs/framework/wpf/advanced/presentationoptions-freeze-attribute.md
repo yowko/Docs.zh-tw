@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3e0cee293a9585b972b0145da953976ed94b74c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772836"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991432"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze 屬性
-設定組<xref:System.Windows.Freezable.IsFrozen%2A>狀態`true`上包含<xref:System.Windows.Freezable>項目。 預設行為<xref:System.Windows.Freezable>而不需要`PresentationOptions:Freeze`指定的屬性是<xref:System.Windows.Freezable.IsFrozen%2A>是`false`在載入時間和在一般的相依<xref:System.Windows.Freezable>在執行階段的行為。  
+將狀態設定為`true`包含<xref:System.Windows.Freezable>專案上的。 <xref:System.Windows.Freezable.IsFrozen%2A> 未指定<xref:System.Windows.Freezable> `PresentationOptions:Freeze` 屬性之<xref:System.Windows.Freezable.IsFrozen%2A>的預設行為是<xref:System.Windows.Freezable>在載入時，並取決於執行時間的一般行為。 `false`  
   
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage  
   
-```  
+```xaml  
 <object  
   xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -31,15 +31,15 @@ ms.locfileid: "61772836"
   
 |||  
 |-|-|  
-|`PresentationOptions`|XML 命名空間前置詞，它可以是任何有效的前置詞字串，根據 XML 1.0 規格。 前置詞`PresentationOptions`用做為識別用途，此文件中。|  
-|`freezableElement`|具現化任何項目衍生的類別<xref:System.Windows.Freezable>。|  
+|`PresentationOptions`|XML 命名空間前置詞，可以是任何有效的前置字串，依據 XML 1.0 規格。 在本`PresentationOptions`檔中，此前置詞是用於識別用途。|  
+|`freezableElement`|具現化之<xref:System.Windows.Freezable>任何衍生類別的元素。|  
   
 ## <a name="remarks"></a>備註  
- `Freeze`屬性是唯一的屬性或其他程式設計項目定義在`http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`XML 命名空間。 `Freeze`屬性存在這個特殊的命名空間中，好讓它可以為忽略，使用指定特別[mc: Ignorable 屬性](mc-ignorable-attribute.md)做為根項目宣告的一部分。 原因，`Freeze`必須是能夠忽略因為不是所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器實作都能 freeze<xref:System.Windows.Freezable>在載入時，這項功能不屬於[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]規格。  
+ 屬性是`http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` XML 命名空間中定義的唯一屬性或其他程式設計項目。 `Freeze` 屬性會特別存在於這個特殊的命名空間中，以便將其指定為可忽略，並使用[mc：可忽略的屬性](mc-ignorable-attribute.md)做為根項目宣告的一部分。 `Freeze` `Freeze`必須能夠忽略的原因是因為並非所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器的執行<xref:System.Windows.Freezable>都能夠在載入時凍結，這項[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]功能不是規格的一部分。  
   
- 處理能力`Freeze`屬性特別是內建[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器處理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]編譯的應用程式。 任何類別中，不支援的屬性和屬性語法不是可延伸或修改。 如果您要實作您自己[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]您可以選擇平行的凍結行為的處理器[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器在處理時`Freeze`屬性<xref:System.Windows.Freezable>在載入時間的項目。  
+ 處理`Freeze`屬性的能力，特別是內建[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]于處理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]已編譯應用程式的處理器。 任何類別都不支援屬性，而且屬性語法不可延伸或可修改。 如果您要執行[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]自己的處理器，您可以在載入時，選擇平行處理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] `Freeze`專案的屬性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] （attribute <xref:System.Windows.Freezable> ）。  
   
- 任何值`Freeze`以外的其他屬性`true`（不區分大小寫） 會產生載入時間錯誤。 (指定`Freeze`屬性為`false`不是錯誤，但這已經預設值，因此將設定為`false`不執行任何動作)。  
+ 除了`true` （不區分`Freeze`大小寫）以外的任何屬性值，都會產生載入時間錯誤。 （將`Freeze`屬性指定為`false`不是錯誤，但已是預設值，因此設定為`false`不執行任何動作）。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 28a06139275f63571d9528d075946d97a19c9f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912886"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972194"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
 .NET Framework 透過組態檔賦予開發人員和系統管理員對於應用程式執行方式的控制和彈性。 組態檔是可以按需要變更的 XML 檔。 系統管員能夠控制應用程式可以存取哪些受保護的資源、應用程式將使用之組件的版本為何，以及遠端應用程式和物件要位於何處。 開發人員則可以將設定值置於組態檔，排除每當設定值變更時重新編譯應用程式的需要。 本章節說明可以設定些什麼以及設定應用程式會很有用處的原因。  
@@ -76,7 +76,7 @@ ms.locfileid: "69912886"
   
 - ASP.NET 裝載的應用程式。  
   
-     如需 ASP.NET 設定檔的詳細資訊, 請參閱[ASP.NET Configuration Settings](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))。
+     如需 ASP.NET 設定檔的詳細資訊，請參閱[ASP.NET Configuration Settings](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))。
   
 - Internet Explorer 裝載的應用程式。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "69912886"
  安全組態檔包含程式碼群組階層架構和與原則層級相關聯的使用權限集合的資訊。 強烈建議您使用[程式碼存取安全性原則工具 (Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) 修改安全性原則，確保原則變更不會造成安全性組態檔損毀。  
   
 > [!NOTE]
-> 從 .NET Framework 4 開始, 只有在安全性原則已變更時, 才會顯示安全性設定檔。  
+> 從 .NET Framework 4 開始，只有在安全性原則已變更時，才會顯示安全性設定檔。  
   
  安全性組態檔位於下列位置：  
   
@@ -127,4 +127,4 @@ ms.locfileid: "69912886"
 - [ASP.NET 網站管理](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [安全性原則管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (程式碼存取安全性原則工具)](../tools/caspol-exe-code-access-security-policy-tool.md)
-- [Common Language Runtime 中的組件](../app-domains/assemblies-in-the-common-language-runtime.md)
+- [.NET 中的組件](../../standard/assembly/index.md)

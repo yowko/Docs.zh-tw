@@ -1,13 +1,13 @@
 ---
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
-ms.date: 04/24/2019
-ms.openlocfilehash: 6e577defb9f5c7795ee40efa18da30daee1b52c0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.date: 08/08/2019
+ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168065"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988529"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -25,12 +25,12 @@ ms.locfileid: "70168065"
 
 ```console
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
-    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+    [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔將專案程式碼包含在副檔名為 *.dll* 的中繼語言 (IL) 檔案中，以及副檔名為 *.pdb* 且用於偵錯的符號檔。 產生相依性 JSON 檔案 ( *.deps.json*)，其中會列出應用程式的相依性。 產生 *.runtimeconfig.json* 檔案，其中會指定應用程式的共用執行階段及其版本。
 
@@ -94,13 +94,13 @@ dotnet build [-h|--help]
 
   針對累加建置，將建置標示為不安全。 此旗標會關閉累加編譯，並強制全新重建專案的相依性關係圖。
 
-* **`--no-logo`**
-
-  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
-
 * **`--no-restore`**
 
   建置期間不會執行隱含還原。 自 .NET Core 2.0 SDK 起提供使用。
+
+* **`--nologo`**
+
+  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

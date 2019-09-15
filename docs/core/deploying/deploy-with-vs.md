@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9379f02c29f11606d0ef34323b16c1531927b0c8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0a886c77204697268adf4ee7bc4b62184b056112
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849078"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969958"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -109,6 +109,8 @@ ms.locfileid: "70849078"
    如果您啟用了不因全球化而異的模式，請務必測試您的應用程式是否適合缺少不區分文化特性的資料。
 
 完成偵錯之後，您即可以發行獨立式部署：
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 和更早版本](#tab/vs156)
 

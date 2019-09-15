@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1157d93585a564f83bf3809ba2fc3a26949fb711
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 74327e10e57c2f63519a3336ab2a600ad2b0a6b8
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206122"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971048"
 ---
 # <a name="securing-method-access"></a>設定方法存取的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -40,7 +40,7 @@ ms.locfileid: "70206122"
   
 - 需要覆寫指定方法的衍生類別以具有指定身分識別或權限。  
   
- 下列範例示範如何以要求呼叫端使用特定強勢名稱，來協助保護限制存取的公用類別。 這個範例會使用<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>具有強式名稱**要求**的。 如需如何使用強式名稱簽署元件的工作型資訊，請參閱[建立和使用強式名稱的元件](../app-domains/create-and-use-strong-named-assemblies.md)。  
+ 下列範例示範如何以要求呼叫端使用特定強勢名稱，來協助保護限制存取的公用類別。 這個範例會使用<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>具有強式名稱**要求**的。 如需如何使用強式名稱簽署元件的工作型資訊，請參閱[建立和使用強式名稱的元件](../../standard/assembly/create-use-strong-named.md)。  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  

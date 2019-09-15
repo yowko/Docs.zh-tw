@@ -2,12 +2,12 @@
 title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 您必須使用協調器來部署和管理實際生產應用程式，以便處理所有容器的健康狀態、工作負載和生命週期。
 ms.date: 02/15/2019
-ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373697"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990489"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -15,7 +15,7 @@ ms.locfileid: "70373697"
 
 圖 4-6 說明由多個微服務 (容器) 所組成應用程式叢集中的部署。
 
-![叢集中組合的 Docker 應用程式：您可以為每個服務執行個體各使用一個容器。 Docker 容器是「部署的單位」，而容器是 Docker 的執行個體。一部主機可處理多個容器](./media/image6.png)
+![叢集中組合的 Docker 應用程式：您可以為每個服務執行個體各使用一個容器。 Docker 容器是「部署單位」，而容器是 Docker 的實例。 主機會處理許多容器](./media/image6.png)
 
 **圖 4-6**： 容器叢集
 

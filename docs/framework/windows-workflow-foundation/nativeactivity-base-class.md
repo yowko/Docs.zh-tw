@@ -2,12 +2,12 @@
 title: NativeActivity 基底類別
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637506"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989555"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 基底類別
 
@@ -34,13 +34,13 @@ ms.locfileid: "65637506"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>若要建立繼承自 NativeActivity 的自訂活動
 
-1. OpenVisual Studio 2010.
+1. OpenVisual Studio 2010。
 
-2. 選取 **檔案**，**新**，然後**專案**。 選取  **Workflow 4.0**下方**Visual C#** 中**專案類型**視窗中，然後選取**v2010**節點。 選取 **活動程式庫**中**範本**視窗。 將新專案命名為 HelloActivity。
+2. 選取 **[** 檔案]、[**新增**] 和 [**專案**]。 在 **專案類型** 視窗中，選取 **視覺效果C#**   底下的  **Workflow 4.0** ，然後選取  **v2010**  節點 在 [**範本**] 視窗中選取 [**活動程式庫**]。 將新專案命名為 HelloActivity。
 
-3. 以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1.xaml，然後選取**刪除**。
+3. 以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1，然後選取 [**刪除**]。
 
-4. 以滑鼠右鍵按一下 HelloActivity 專案並選取**新增**，然後**類別**。 將新類別命名為 HelloActivity.cs。
+4. 以滑鼠右鍵按一下 HelloActivity 專案，然後依序選取 [**新增**] 和 [**類別**]。 將新類別命名為 HelloActivity.cs。
 
 5. 在 HelloActivity.cs 檔案中加入下列 `using` 指示詞。
 
@@ -68,7 +68,7 @@ ms.locfileid: "65637506"
 
 9. 使用 <xref:System.Activities.NativeActivityContext> 物件排程書籤。 如需如何建立、排程和繼續書籤的詳細資訊，請參閱 <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>。
 
-    ```
+    ```csharp
     protected override void Execute(NativeActivityContext context)
         {
             // Create a Bookmark and wait for it to be resumed.

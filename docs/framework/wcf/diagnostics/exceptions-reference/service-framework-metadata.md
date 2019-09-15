@@ -2,12 +2,12 @@
 title: 服務架構中繼資料
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-ms.openlocfilehash: f65f53ff99202275876fb6e3c431bc49ae2bd38b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3e73df54b3389b2c9f27001953be147b27eb6f8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780792"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991207"
 ---
 # <a name="service-framework-metadata"></a>服務架構中繼資料
 此主題會列出服務架構中繼資料產生的所有例外狀況。  
@@ -18,7 +18,7 @@ ms.locfileid: "61780792"
 |-------------------|---------------------|  
 |AsyncEndCalledOnWrongChannel|在錯誤的通道上呼叫非同步 End。|  
 |AsyncEndCalledWithAnIAsyncResult|透過不同的 Begin 方法，使用 IAsyncResult 來呼叫非同步 End。|  
-|AttemptedToGetContractTypeForButThatTypeIs1|嘗試取得指定之項目的合約類型。此類型不是 ServiceContract 而且並未繼承 ServiceContract。|  
+|AttemptedToGetContractTypeForButThatTypeIs1|嘗試取得指定之的合約型別。 此類型不是 ServiceContract，而且不會繼承 ServiceContract。|  
 |CannotHaveTwoOperationsWithTheSameName3|在同一份合約中，不可有兩個同名的作業。 指定之類型中的指定方法違反此規則。 藉由變更方法名稱或使用 OperationContractAttribute 的 Name 屬性，變更其中一項作業的名稱。|  
 |CannotInheritTwoOperationsWithTheSameName3|無法繼承同名的兩個不同作業。 來自指定之合約的指定作業違反此規則。 藉由變更方法名稱或使用 OperationContractAttribute 的 Name 屬性，變更其中一項作業的名稱。|  
 |CantCreateChannelWithManualAddressing|無法為需要要求/回覆的合約與需要手動定址的繫結建立通道，但是僅支援雙工通訊。|  

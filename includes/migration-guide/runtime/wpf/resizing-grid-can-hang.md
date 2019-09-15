@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 2e870b8d7b8ed986863632f947223946a6604f89
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: eff7e7cfc8fa0b4bc8ee3a64a7c60ee21d51f466
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802536"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70997571"
 ---
 ### <a name="resizing-a-grid-can-hang"></a>調整方格大小可能會當機
 
 |   |   |
 |---|---|
-|詳細資料|在下列情況下，<code>T:System.Windows.Controls.Grid</code> 配置期間可能會發生無限迴圈：<ul><li>資料列定義包含兩個 *-row，這兩個都會宣告 MinHeigh 和 MaxHeight。</li><li>*-row 的內容不會超過對應的 MaxHeight</li><li>第一個 MinHeight (加上任何其他固定或自動的資料列) 超過方格的可用高度</li><li>應用程式將目標設為 .NET Framework 4.7，或藉由設定 <code>Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace=false</code> 選擇新增 4.7 配置演算法</li></ul>有兩個以上的資料列時或在類似的資料行案例中也會發生此迴圈。此問題已在 .NET Framework 4.7.1 中修正。|
+|詳細資料|在下列情況下，<code>T:System.Windows.Controls.Grid</code> 配置期間可能會發生無限迴圈：<ul><li>資料列定義包含兩個 *-row，這兩個都會宣告 MinHeigh 和 MaxHeight。</li><li>*-row 的內容不會超過對應的 MaxHeight</li><li>第一個 MinHeight (加上任何其他固定或自動的資料列) 超過方格的可用高度</li><li>應用程式將目標設為 .NET Framework 4.7，或藉由設定 <code>Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace=false</code> 選擇新增 4.7 配置演算法</li></ul>迴圈也會發生在兩個以上的資料列，或資料行的類似案例中。 此問題已在 .NET Framework 4.7.1 中修正。|
 |建議|升級至 .NET Framework 4.7.1。  或者，如果您不需要 4.7 配置演算法，可以使用下列組態設定：<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|範圍|Edge|
-|版本|4.7|
+|`Scope`|Edge|
+|Version|4.7|
 |類型|執行階段|
-

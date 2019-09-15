@@ -2,22 +2,22 @@
 title: 作法：在 WAS 中裝載 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: cdab0876b65c190cd5d46f82218eb9fbb8234298
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: b6d3ace054260de1ca649fbf4bd54156bbea24ce
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988194"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972213"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>作法：在 WAS 中裝載 WCF 服務
-本主題概述建立 Windows 進程啟用服務 (也稱為 WAS) 主控的 Windows Communication Foundation (WCF) 服務所需的基本步驟。 WAS 是新的處理序啟用服務，其為一般化的 Internet Information Services (IIS) 功能，與非 HTTP 傳輸通訊協定搭配使用。 WCF 使用接聽程式介面卡介面, 來傳達透過 WCF 支援的非 HTTP 通訊協定 (例如 TCP、具名管道和訊息佇列) 接收的啟用要求。  
+本主題概述建立 Windows 進程啟用服務（也稱為 WAS）主控的 Windows Communication Foundation （WCF）服務所需的基本步驟。 WAS 是新的處理序啟用服務，其為一般化的 Internet Information Services (IIS) 功能，與非 HTTP 傳輸通訊協定搭配使用。 WCF 使用接聽程式介面卡介面，來傳達透過 WCF 支援的非 HTTP 通訊協定（例如 TCP、具名管道和訊息佇列）接收的啟用要求。  
   
- 這個裝載選項要求 WAS 啟用元件必須正確安裝與設定，但不要求將任何裝載程式碼撰寫為應用程式的一部分。 如需安裝和設定 WAS 的詳細資訊, [請參閱如何:安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
+ 這個裝載選項要求 WAS 啟用元件必須正確安裝與設定，但不要求將任何裝載程式碼撰寫為應用程式的一部分。 如需安裝和設定 WAS 的詳細資訊， [請參閱如何：安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
   
 > [!WARNING]
 > 如果 Web 伺服器的要求處理管線設定為「傳統」模式，就不支援 WAS 啟動。 若要使用 WAS 啟動，Web 伺服器的要求處理管線就必須設定為「整合」模式。  
   
- 在 WAS 中裝載 WCF 服務時, 會以一般方式來使用標準系結。 但是，當透過 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 來設定 WAS 裝載的服務時，就必須滿足下列限制。 當不同的端點使用同一個傳輸，繫結設定必須符合下列七項屬性：  
+ 在 WAS 中裝載 WCF 服務時，會以一般方式來使用標準系結。 但是，當透過 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 來設定 WAS 裝載的服務時，就必須滿足下列限制。 當不同的端點使用同一個傳輸，繫結設定必須符合下列七項屬性：  
   
 - ConnectionBufferSize  
   
@@ -35,7 +35,7 @@ ms.locfileid: "69988194"
   
  否則，先初始化的端點一律直接決定這些屬性的值，而稍後新增的端點則會在這些屬性值未符合上述設定值時擲回 <xref:System.ServiceModel.ServiceActivationException>。  
   
- 如需此範例的來源複本, 請參閱[TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)。  
+ 如需此範例的來源複本，請參閱[TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)。  
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>若要建立 WAS 裝載的基本服務  
   
@@ -66,18 +66,18 @@ ms.locfileid: "69988194"
   
 4. 建立包含下列程式碼的 Service.svc 檔案。  
   
-    ```  
-    <%@ServiceHost language=c# Service="CalculatorService" %>   
-    ```  
+   ```
+   <%@ServiceHost language=c# Service="CalculatorService" %>
+   ```
   
 5. 將 Service.svc 檔放入您的 IIS 虛擬目錄中。  
   
 ### <a name="to-create-a-client-to-use-the-service"></a>若要建立用戶端來使用服務  
   
-1. 從命令列使用[System.servicemodel 中繼資料公用程式工具 (Svcutil)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , 以從服務中繼資料產生程式碼。  
+1. 從命令列使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ，以從服務中繼資料產生程式碼。  
   
-    ```  
-    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
+    ```console
+    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
     ```  
   
 2. 所產生的用戶端會包含 `ICalculator` 介面，其中定義了用戶端實作所必須滿足的服務合約。  

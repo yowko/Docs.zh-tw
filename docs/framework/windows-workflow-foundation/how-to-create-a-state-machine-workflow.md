@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e93f84f0bacf7ac205294c12c55afcab8d7319b7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044392"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989817"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>作法：建立狀態機器工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步說明如何建立使用內建活動（例如<xref:System.Activities.Statements.StateMachine>活動）的工作流程，以及先前[如何執行的自訂活動：建立活動](how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
@@ -157,21 +157,21 @@ ms.locfileid: "70044392"
   
 23. 在 [ **If** ] 活動的 [ **Condition** ] 屬性值方塊中輸入下列運算式。  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 24. 將兩個 [ **WriteLine** ] 活動從 [**工具箱**] 的 [**基本**] 區段拖放到 [ **if** ] 活動的 [ **Then** ] 區段，其中一個是在 [ **Else** ] 區段中。  
   
 25. 按一下 [ **Then** ] 區段中的 [ **WriteLine** ] 活動加以選取，然後在 [ **Text** ] 屬性值方塊中輸入下列運算式。  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
 26. 按一下 [ **Else** ] 區段中的 [ **WriteLine** ] 活動加以選取，然後在 [ **Text** ] 屬性值方塊中輸入下列運算式。  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

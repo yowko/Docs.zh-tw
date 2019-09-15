@@ -1,15 +1,15 @@
 ---
-title: 反映 (Visual Basic)
+title: 反映（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 8a784f3b8647a74e21299e84e04eb7bda60b9cb6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d1206d84dec4202a7dad8f03c3d88c8a97ff5ba
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627465"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972124"
 ---
-# <a name="reflection-visual-basic"></a>反映 (Visual Basic)
+# <a name="reflection-visual-basic"></a>反映（Visual Basic）
 反映提供的物件 (類型為 <xref:System.Type>) 可描述組件、模組和類型。 您可以使用反映來動態建立類型的執行個體、將類型繫結至現有的物件，或從現有的物件取得類型，並叫用其方法或存取其欄位及屬性。 如果您在程式碼中使用屬性，則反映可讓您存取它們。 如需詳細資訊，請參閱[屬性](../../../standard/attributes/index.md)。  
   
  以下簡單反映範例使用 `Object` 基底類別的所有類型所繼承的靜態方法 `GetType` 來取得變數的類型︰  
@@ -64,4 +64,4 @@ System.Console.WriteLine(info)
 ## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 程式設計手冊](../../../visual-basic/programming-guide/index.md)
-- [Common Language Runtime 中的組件](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [.NET 中的組件](../../../standard/assembly/index.md)

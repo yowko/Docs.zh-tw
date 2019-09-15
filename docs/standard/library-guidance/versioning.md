@@ -4,12 +4,12 @@ description: .NET 程式庫版本控制的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
-ms.translationtype: HT
+ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204739"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969012"
 ---
 # <a name="versioning"></a>版本控制
 
@@ -53,7 +53,7 @@ NuGet 套件識別碼與 NuGet 套件版本結合，可用來識別 NuGet 中的
 
 Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。 例如，`Libary1, Version=1.0.0.0` 編譯時參考了 `Newtonsoft.Json, Version=11.0.0.0`。 .NET Framework 將只會載入該確切版本 `11.0.0.0`。 若要在執行階段載入不同的版本，必須將繫結重新導向新增至 .NET 應用程式的設定檔中。
 
-強式命名與組件版本相結合，可啟用[嚴格的組件版本載入](../../framework/app-domains/assembly-versioning.md)。 雖然為程式庫進行強式命名有很多好處，但它通常會導致無法找到組件的執行階段例外狀況，而且[要求修復 `app.config`/`web.config` 中的繫結重新導向](../../framework/configure-apps/redirect-assembly-versions.md)。 .NET Core 組件載入已經放寬，.NET Core CLR 將在更高版本的執行階段自動載入組件。
+強式命名與組件版本相結合，可啟用[嚴格的組件版本載入](../assembly/versioning.md)。 雖然為程式庫進行強式命名有很多好處，但它通常會導致無法找到組件的執行階段例外狀況，而且[要求修復 `app.config`/`web.config` 中的繫結重新導向](../../framework/configure-apps/redirect-assembly-versions.md)。 .NET Core 組件載入已經放寬，.NET Core CLR 將在更高版本的執行階段自動載入組件。
 
 **✔️ 考慮**只在 AssemblyVersion 中包括主要版本。
 

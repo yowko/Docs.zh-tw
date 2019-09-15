@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d9f7acfcd8dfc4d0653916138ecb05665eb420
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 048c2cd3d6b90dda951128a29a212928ee67c5a5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894583"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971760"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (類型程式庫匯入工具)
 類型程式庫匯入工具會將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的對等定義。 Tlbimp.exe 的輸出是二進位檔案 (組件)，它包含原始類型程式庫中所定義類型的執行階段中繼資料。 您可以使用像是 [Ildasm.exe](ildasm-exe-il-disassembler.md) 這類工具來檢查這個檔案。  
@@ -43,7 +43,7 @@ tlbimp tlbFile [options]
 |**/asmversion:** *versionnumber*|指定要產生之組件的版本號碼。 以 *major.minor.build.revision* 格式指定 *versionnumber*。|  
 |**/company:** `companyinformation`|將公司資訊加入至輸出組件。|  
 |**/copyright:** `copyrightinformation`|將著作權資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
-|**/delaysign**|指定由 Tlbimp.exe 使用延遲簽署以強式名稱簽署產生的組件。 您必須指定這個選項來配合 **/keycontainer:** 、 **/keyfile:** 或 **/publickey:** 選項。 如需延遲簽署程序的詳細資訊，請參閱[延遲簽署組件](../app-domains/delay-sign-assembly.md)。|  
+|**/delaysign**|指定由 Tlbimp.exe 使用延遲簽署以強式名稱簽署產生的組件。 您必須指定這個選項來配合 **/keycontainer:** 、 **/keyfile:** 或 **/publickey:** 選項。 如需延遲簽署程序的詳細資訊，請參閱[延遲簽署組件](../../standard/assembly/delay-sign.md)。|  
 |**/help**|顯示工具的命令語法和選項。|  
 |**/keycontainer:** *containername*|使用 *containername* 所指定之金鑰容器中的公開/私密金鑰組，以強式名稱簽署產生的組件。|  
 |**/keyfile:** *filename*|使用 *filename* 中發行者的正式公開/私密金鑰組，以強式名稱簽署產生的組件。|  
@@ -52,7 +52,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|防止 Tlbimp.exe 將成員加入至類別。 這樣做可避免可能發生的 <xref:System.TypeLoadException>。|  
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/out:** *filename*|指定要在其中寫入中繼資料定義的輸出檔、組件及命名空間名稱。 如果類型程式庫指定可明確控制組件命名空間的介面定義語言 (IDL) 自訂屬性，則 **/out** 選項不會影響組件的命名空間。 如果未指定這個選項，Tlbimp.exe 會將中繼資料寫入與輸入檔所定義之實際類型程式庫同名的檔案中，並指派 .dll 做為其副檔名。 如果輸出檔與輸入檔同名，則工具將會產生錯誤以防止覆寫類型程式庫。|  
-|**/primary**|為指定的類型程式庫產生主要 Interop 組件。 組件中會加入資訊，指出類型程式庫的發行者產生該組件。 藉由指定主要 Interop 組件，就可以區別發行者的組件與使用 Tlbimp.exe 從類型程式庫建立的任何其他組件。 如果您是類型程式庫的發行者，而且您要使用 Tlbimp.exe 匯入該類型程式庫，則應該只使用 **/primary** 選項。 請注意，您必須以[強式名稱](../app-domains/strong-named-assemblies.md)簽署主要 Interop 組件。 如需詳細資訊，請參閱[主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。|  
+|**/primary**|為指定的類型程式庫產生主要 Interop 組件。 組件中會加入資訊，指出類型程式庫的發行者產生該組件。 藉由指定主要 Interop 組件，就可以區別發行者的組件與使用 Tlbimp.exe 從類型程式庫建立的任何其他組件。 如果您是類型程式庫的發行者，而且您要使用 Tlbimp.exe 匯入該類型程式庫，則應該只使用 **/primary** 選項。 請注意，您必須以[強式名稱](../../standard/assembly/strong-named.md)簽署主要 Interop 組件。 如需詳細資訊，請參閱[主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。|  
 |**/product:** `productinformation`|將產品資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
 |**/productversion:** `productversioninformation`|將產品版本資訊加入至輸出組件。 沒有格式限制。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
 |**/publickey:** *filename*|指定包含公開金鑰的檔案，用來簽署產生的組件。 如果您指定 **/keyfile:** 或 **/keycontainer:** 選項而不是 **/publickey:** ，Tlbimp.exe 將會從 **/keyfile:** 或 **/keycontainer:** 提供的公開/私密金鑰組產生公開金鑰。 **/publickey:** 選項支援測試金鑰和延遲簽署情節。 檔案會採用 Sn.exe 產生的格式。 如需詳細資訊，請參閱[強式名稱工具 (Sn.exe)](sn-exe-strong-name-tool.md) 中 Sn.exe 的 **-p** 選項。|  
@@ -76,7 +76,7 @@ tlbimp tlbFile [options]
 ## <a name="remarks"></a>備註  
  Tlbimp.exe 會一次執行整個類型程式庫的轉換。 您無法使用這個工具針對單一類型程式庫中定義的類型子集產生類型資訊。  
   
- 將[強式名稱](../app-domains/strong-named-assemblies.md)指派給組件的功能通常十分實用，甚至是必要的。 因此，Tlbimp.exe 包含了提供產生以強式名稱命名之組件所需資訊的選項。 **/keyfile:** 和 **/keycontainer:** 這兩個選項都會以強式名稱簽署組件。 所以邏輯上來說，一次只需要提供其中一個選項。  
+ 將[強式名稱](../../standard/assembly/strong-named.md)指派給組件的功能通常十分實用，甚至是必要的。 因此，Tlbimp.exe 包含了提供產生以強式名稱命名之組件所需資訊的選項。 **/keyfile:** 和 **/keycontainer:** 這兩個選項都會以強式名稱簽署組件。 所以邏輯上來說，一次只需要提供其中一個選項。  
   
  您可以多次使用 **/reference** 選項指定多個參考組件。
  
@@ -135,6 +135,6 @@ void SomeMethod(out bool x);
 - [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Ildasm.exe (IL 反組譯工具)](ildasm-exe-il-disassembler.md)
 - [Sn.exe (強式名稱工具)](sn-exe-strong-name-tool.md)
-- [強式名稱的組件](../app-domains/strong-named-assemblies.md)
+- [強式名稱的組件](../../standard/assembly/strong-named.md)
 - [將型別程式庫匯入 Interop 組件的屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
 - [命令提示字元](developer-command-prompt-for-vs.md)

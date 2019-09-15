@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 01fa0cf9811e72333b091858e2f78a80dda1d9ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911014"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969108"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework 並存執行
 並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。 在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。  
@@ -35,7 +35,7 @@ ms.locfileid: "69911014"
   
 - 強式名稱的組件。  
   
-     並存執行使用強式名稱的組件，將類型資訊繫結至組件的特定版本。 這可防止應用程式或元件繫結至組件的無效版本。 強式名稱的組件也允許多個版本的檔案存在同一台電腦上，並供應用程式使用。 如需詳細資訊，請參閱[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)。  
+     並存執行使用強式名稱的組件，將類型資訊繫結至組件的特定版本。 這可防止應用程式或元件繫結至組件的無效版本。 強式名稱的組件也允許多個版本的檔案存在同一台電腦上，並供應用程式使用。 如需詳細資訊，請參閱[強式名稱的組件](../../standard/assembly/strong-named.md)。  
   
 - 版本感知程式碼儲存區。  
   
@@ -116,7 +116,7 @@ publicKeyToken=...,
 |[如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|說明如何將應用程式繫結至組件的特定版本。|  
 |[設定組件繫結重新導向](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|說明如何將組件繫結參考重新導向至 .NET Framework 組件的特定版本。|  
 |[同處理序並存執行](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|討論如何使用同處理序並存執行階段主機啟用，在單一處理序中執行多個版本的 CLR。|  
-|[Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|提供組件的概觀。|  
+|[.NET 中的組件](../../standard/assembly/index.md)|提供組件的概觀。|  
 |[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)|提供應用程式定義域的概觀。|  
   
 ## <a name="reference"></a>參考資料  

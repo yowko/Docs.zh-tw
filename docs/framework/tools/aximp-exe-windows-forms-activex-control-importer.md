@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8c3c293e28788143cd1bed07acc941d448700f2
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851476"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970600"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Form ActiveX 控制項匯入工具)
 ActiveX 控制項匯入工具可以將 ActiveX 控制項在 COM 類型程式庫中的類型定義，轉換成 Windows Form 控制項。  
@@ -36,13 +36,13 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>備註  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |*file*|原始程式檔的名稱，包含要轉換的 ActiveX 控制項。 檔案引數必須有 .dll 或 .ocx 副檔名。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
-|`/delaysign`|指定 Aximp.exe 使用延遲簽署來簽署產生的控制項。 您必須使用 `/keycontainer:`、`/keyfile:` 或 `/publickey:` 選項來指定此選項。 如需延遲簽署程序的詳細資訊，請參閱[延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)。|  
+|`/delaysign`|指定 Aximp.exe 使用延遲簽署來簽署產生的控制項。 您必須使用 `/keycontainer:`、`/keyfile:` 或 `/publickey:` 選項來指定此選項。 如需延遲簽署程序的詳細資訊，請參閱[延遲簽署組件](../../standard/assembly/delay-sign.md)。|  
 |`/help`|顯示工具的命令語法和選項。|  
 |`/keycontainer:` *containerName*|使用 *containerName* 所指定之金鑰容器中的公開/私密金鑰組，以強式名稱簽署產生的控制項。|  
 |`/keyfile:` *filename*|使用 *filename* 中找到的發行者正式公開/私密金鑰組，以強式名稱簽署產生的控制項。|  

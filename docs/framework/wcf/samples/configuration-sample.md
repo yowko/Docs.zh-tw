@@ -2,18 +2,18 @@
 title: 組態範例
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040097"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990073"
 ---
 # <a name="configuration-sample"></a>組態範例
 此範例示範如何使用組態檔讓服務變成可搜尋的。  
   
 > [!NOTE]
-> 這個範例會在組態中實作探索。 如需在程式碼中執行探索的範例, 請參閱[基本](../../../../docs/framework/wcf/samples/basic-sample.md)。  
+> 這個範例會在組態中實作探索。 如需在程式碼中執行探索的範例，請參閱[基本](../../../../docs/framework/wcf/samples/basic-sample.md)。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
@@ -67,9 +67,7 @@ ms.locfileid: "70040097"
   
  此組態檔並不僅止於這些修改額外行為的簡單步驟而已。 您可以使用特定的端點控制與探索相關的資訊。 亦即，使用者可以控制是否能夠探索端點，而且使用者也可以使用 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> 和自訂 XML 中繼資料標示該端點。 若要這樣做，使用者必須將 `behaviorConfiguration` 屬性加入至應用程式端點。 在此情況下，下列屬性會加入至應用程式端點。  
   
-```  
-behaviorConfiguration="endpointBehaviorConfiguration"  
-```  
+`behaviorConfiguration="endpointBehaviorConfiguration"`  
   
  現在，您可以透過行為組態項目控制與探索相關的屬性。 在此情況下，有兩個範圍會加入至應用程式端點。  
   
@@ -87,7 +85,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
         </endpointBehaviors>  
 ```  
   
- 如需有關範圍的詳細資訊, 請參閱[探索尋找和尋找準則](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。  
+ 如需有關範圍的詳細資訊，請參閱[探索尋找和尋找準則](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。  
   
  您也可以控制探索端點的特定詳細資料。 這是透過 <xref:System.ServiceModel.Configuration.StandardEndpointsSection> 達成。 在此範例中，所使用的通訊協定版本會經過修改，而且會加入 `maxResponseDelay` 屬性，如下列程式碼範例所示。  
   
@@ -261,7 +259,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1. 這個範例使用 HTTP 端點, 若要執行此範例, 必須新增適當的 URL Acl, 請參閱設定[HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)以取得詳細資料。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 這個範例使用 HTTP 端點，若要執行此範例，必須新增適當的 URL Acl，請參閱設定[HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)以取得詳細資料。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. 建置方案。  
   

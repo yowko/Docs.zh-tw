@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 643f0644bdeb2d3bdf6a08b482d0494affd92209
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894634"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971852"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (強式名稱工具)
-強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
+強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../standard/assembly/strong-named.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
   
 > [!WARNING]
 > 請勿依賴強式名稱提供安全性。 強式名稱僅提供唯一識別。
 
- 如需強式命名和強式名稱組件的詳細資訊，請參閱[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)和[如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。  
+ 如需強式命名和強式名稱組件的詳細資訊，請參閱[強式名稱的組件](../../standard/assembly/strong-named.md)和[如何：使用強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)。  
   
  強式名稱工具會隨 Visual Studio 自動安裝。 若要啟動這項工具，請使用開發人員命令提示字元 (或 Windows 7 中的 Visual Studio 命令提示字元)。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
 
@@ -42,7 +42,7 @@ sn [-quiet][option [parameter(s)]]
   
 ## <a name="parameters"></a>參數  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**-a** *identityKeyPairFile* *signaturePublicKeyFile*|產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 資料，將識別金鑰從檔案移轉到簽章金鑰。|  
 |**-ac** *identityPublicKeyFile* *identityKeyPairContainer* *signaturePublicKeyFile*|產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 資料，將識別金鑰從金鑰容器移轉到簽章金鑰。|  
@@ -128,5 +128,5 @@ sn -d MyContainer
 
 - [工具](../../../docs/framework/tools/index.md)
 - [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [強式名稱的組件](../../standard/assembly/strong-named.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

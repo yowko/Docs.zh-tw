@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 0bd692ce0527b498b7514a57442817b86f6c2208
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e98b1254710ebac2305fd7dd5d39a146d749ff44
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045736"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990141"
 ---
 # <a name="basicbinding"></a>BasicBinding
 
@@ -29,7 +29,7 @@ ms.locfileid: "70045736"
 
 這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。
 
-若要使用包含預設行為的基本繫結，則只需要繫結區段名稱。 如果您要設定基本繫結，並變更其部分設定，則必須定義繫結組態。 端點必須使用 < `bindingConfiguration` `endpoint`> 元素的屬性, 依名稱參考系結設定, 如下列範例程式碼所示。
+若要使用包含預設行為的基本繫結，則只需要繫結區段名稱。 如果您要設定基本繫結，並變更其部分設定，則必須定義繫結組態。 端點必須使用 < `bindingConfiguration` `endpoint`> 元素的屬性，依名稱參考系結設定，如下列範例程式碼所示。
 
 ```xml
 <services>
@@ -73,7 +73,7 @@ ms.locfileid: "70045736"
 
 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -86,7 +86,7 @@ Press <ENTER> to terminate client.
 
 1. 使用下列命令安裝 ASP.NET 4.0。
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 

@@ -1,13 +1,13 @@
 ---
-title: HOW TO：將執行個體資料屬性還原序列化
+title: 作法：將執行個體資料屬性還原序列化
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: a53c8ceea2a2bf9840b92dc7119e681902da893e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e037d5f8d0b221aa0eb8fdc6eceabf6efb2dc387
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619685"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989627"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>HOW TO：將執行個體資料屬性還原序列化
 有時候，使用者或工作流程管理員可能會想要手動檢查持續工作流程執行個體的狀態。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供公開下列四個資料行的執行個體資料表檢視：  
@@ -20,15 +20,15 @@ ms.locfileid: "64619685"
   
 - WriteOnlyComplexDataProperties  
   
- 基本資料屬性是指其.NET Framework 型別會被視為 「 通用 」 （例如 Int32 和 String），而複雜資料屬性是指所有其他類型的屬性。 稍後在這個程式碼範例中可找到完整的基本類型列舉。  
+ 基本資料屬性會參考其 .NET Framework 類型視為「通用」（例如，Int32 和 String）的屬性，而複雜的資料屬性則是指所有其他類型。 稍後在這個程式碼範例中可找到完整的基本類型列舉。  
   
  讀/寫屬性是指在執行個體載入時傳回至工作流程執行階段的屬性。 WriteOnly 屬性寫入至資料庫，絕不再次讀取。  
   
- 這個範例提供可讓使用者還原序列化基本資料屬性的程式碼。 根據從 ReadWritePrimitiveDataProperties 或 WriteOnlyPrimitiveDataProperties 資料行讀取的位元組陣列，此程式碼都將會將二進位大型物件 (BLOB) 轉換成<xref:System.Collections.Generic.Dictionary%602>型別的\<XName，物件 > 其中每個索引鍵值配對表示屬性名稱和其對應的值。  
+ 這個範例提供可讓使用者還原序列化基本資料屬性的程式碼。 指定從 ReadWritePrimitiveDataProperties 或 WriteOnlyPrimitiveDataProperties 資料行讀取的位元組陣列時，此程式碼會將二進位大型物件（BLOB）轉換成<xref:System.Collections.Generic.Dictionary%602>類型\<XName，物件 >，其中每個索引鍵值配對代表屬性名稱及其對應的值。  
   
  這個範例不示範如何還原序列化複雜資料屬性，因為目前不支援此作業。  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

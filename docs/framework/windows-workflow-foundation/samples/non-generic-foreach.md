@@ -2,12 +2,12 @@
 title: 非泛型 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038067"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989030"
 ---
 # <a name="non-generic-foreach"></a>非泛型 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的工具箱中隨附一組控制流程活動，包括允許逐一查看 <xref:System.Activities.Statements.ForEach%601> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。  
@@ -24,7 +24,7 @@ ms.locfileid: "70038067"
 ## <a name="class-definition"></a>類別定義  
  下列程式碼範例示範非泛型 `ForEach` 活動的定義。  
   
-```  
+```csharp  
 [ContentProperty("Body")]  
 public class ForEach : NativeActivity  
 {  
@@ -47,7 +47,7 @@ public class ForEach : NativeActivity
 ## <a name="example-of-using-foreach"></a>使用 ForEach 的範例  
  下列程式碼示範如何在應用程式中使用 ForEach 活動。  
   
-```  
+```csharp  
 string[] names = { "bill", "steve", "ray" };  
   
 DelegateInArgument<object> iterationVariable = new DelegateInArgument<object>() { Name = "iterationVariable" };  
@@ -72,9 +72,9 @@ Activity sampleUsage =
 |Values 為 `null`。|未提供必要活動引數 'Values' 的值。|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach 設計工具  
- 此範例的活動設計工具在外觀上與針對內建 <xref:System.Activities.Statements.ForEach%601> 活動所提供的設計工具類似。 設計工具會出現在 [**範例**]、[**非泛型活動**] 分類的 [工具箱] 中。 設計工具會在 [工具箱] 中命名為**ForEachWithBodyFactory** , 因為活動<xref:System.Activities.Presentation.IActivityTemplateFactory>會在 [工具箱] 中公開, 這會建立已<xref:System.Activities.ActivityAction>正確設定的活動。  
+ 此範例的活動設計工具在外觀上與針對內建 <xref:System.Activities.Statements.ForEach%601> 活動所提供的設計工具類似。 設計工具會出現在 [**範例**]、[**非泛型活動**] 分類的 [工具箱] 中。 設計工具會在 [工具箱] 中命名為**ForEachWithBodyFactory** ，因為活動<xref:System.Activities.Presentation.IActivityTemplateFactory>會在 [工具箱] 中公開，這會建立已<xref:System.Activities.ActivityAction>正確設定的活動。  
   
-```  
+```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
 {  
     public Activity Create(DependencyObject target)  

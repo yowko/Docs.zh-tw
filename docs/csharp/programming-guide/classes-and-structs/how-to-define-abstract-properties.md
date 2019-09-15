@@ -1,17 +1,17 @@
 ---
-title: 作法：定義抽象屬性 - C# 程式設計手冊
+title: HOW TO：定義抽象屬性 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: fae526f5dcd452fbc381ee86c892b72e61956f0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596862"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970891"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>作法：定義抽象屬性 (C# 程式設計手冊)
 下例示範如何定義[抽象](../../language-reference/keywords/abstract.md)屬性。 抽象屬性宣告不提供屬性存取子實作 -- 它會宣告類別支援屬性，但保留衍生類別的存取子實作。 下例示範如何實作繼承自基底類別的抽象屬性。  
@@ -59,4 +59,3 @@ ms.locfileid: "69596862"
 - [類別和結構](./index.md)
 - [抽象和密封類別以及類別成員](./abstract-and-sealed-classes-and-class-members.md)
 - [屬性](./properties.md)
-- [如何：使用命令列建立和使用組件](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

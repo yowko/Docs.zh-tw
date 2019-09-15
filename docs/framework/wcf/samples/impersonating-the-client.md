@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 61befdcaf1381120dba6f72ba592dade09d0490a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968333"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989829"
 ---
 # <a name="impersonating-the-client"></a>模擬用戶端
 此模擬範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫者存取系統資源。  
@@ -102,10 +102,10 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  當您執行範例時，作業要求和回應會顯示在服務與用戶端主控台視窗中。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。  
   
 > [!NOTE]
-> 服務必須使用系統管理帳戶執行，或是它執行的帳戶必須被授與註冊權限 `http://localhost:8000/ServiceModelSamples` 向 HTTP 層的 URI。 您可以使用[HTTPcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010)來設定[命名空間保留](https://go.microsoft.com/fwlink/?LinkId=95012)區, 以授與這類許可權。  
+> 服務必須使用系統管理帳戶執行，或是它執行的帳戶必須被授與註冊權限 `http://localhost:8000/ServiceModelSamples` 向 HTTP 層的 URI。 您可以使用[HTTPcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010)來設定[命名空間保留](https://go.microsoft.com/fwlink/?LinkId=95012)區，以授與這類許可權。  
   
 > [!NOTE]
-> 在執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 的電腦上，只有在 Host.exe 應用程式擁有「模擬」權限的情況下才支援模擬 (根據預設，只有系統管理員具有此權限)。若要將此許可權新增至服務執行身分的帳戶, 請移至 [系統**管理工具**], 開啟 [**本機安全性原則**], 開啟 [**本機原則**], 按一下 [**使用者權限指派**], 然後選取 [**之後模擬用戶端]驗證**, 然後按兩下 [**屬性**] 以新增使用者或群組。  
+> 在執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 的電腦上，只有在 Host.exe 應用程式擁有「模擬」權限的情況下才支援模擬 (根據預設，只有系統管理員具有此權限)。若要將此許可權新增至服務執行身分的帳戶，請移至 [系統**管理工具**]，開啟 [**本機安全性原則**]，開啟 [**本機原則**]，按一下 [**使用者權限指派**]，然後選取 [**之後模擬用戶端]驗證**，然後按兩下 [**屬性**] 以新增使用者或群組。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
@@ -117,7 +117,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 4. 若要示範此服務模擬呼叫者，請使用與執行服務之帳戶不同的帳戶執行用戶端。 若要這麼做，請在命令提示字元輸入：  
   
-    ```  
+    ```console  
     runas /user:<machine-name>\<user-name> client.exe  
     ```  
   

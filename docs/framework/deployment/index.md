@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910963"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971593"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和應用程式
 
@@ -118,7 +118,7 @@ ms.locfileid: "69910963"
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>封裝和散發 .NET Framework 應用程式
 
-文件的其他章節將說明 .NET Framework 的一些封裝和部署資訊。 那些小節針對下列內容提供相關資訊：稱為[組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)的自我描述單位 (不需要登錄項目)、[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md) (能確保名稱唯一性並防止名稱冒用)，以及[組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md) (能處理許多與 DLL 衝突相關的問題)。 下列章節提供封裝和散發 .NET Framework 應用程式的相關資訊。
+文件的其他章節將說明 .NET Framework 的一些封裝和部署資訊。 那些小節針對下列內容提供相關資訊：稱為[組件](../../standard/assembly/index.md)的自我描述單位 (不需要登錄項目)、[強式名稱的組件](../../standard/assembly/strong-named.md) (能確保名稱唯一性並防止名稱冒用)，以及[組件版本控制](../../standard/assembly/versioning.md) (能處理許多與 DLL 衝突相關的問題)。 下列章節提供封裝和散發 .NET Framework 應用程式的相關資訊。
 
 ### <a name="packaging"></a>封裝
 

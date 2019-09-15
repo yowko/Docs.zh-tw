@@ -3,12 +3,12 @@ title: .NET Core 命令列介面 (Command-Line Interface, CLI) 工具
 description: .NET Core 命令列介面 (CLI) 工具與功能概觀。
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 20a083f3e7496521243bebd6585a48c8a562c548
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105038"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969885"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 
@@ -26,6 +26,8 @@ ms.locfileid: "70105038"
 ## <a name="cli-commands"></a>CLI 命令
 
 預設會安裝下列命令：
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 

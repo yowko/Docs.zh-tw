@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
-ms.translationtype: HT
+ms.openlocfilehash: 374a97eea7f6432833ebbcf40736ea6c7a6d4039
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133750"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970955"
 ---
 # <a name="reflection-in-net"></a>.NET 中的反映
-<xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[組件](../app-domains/assemblies-in-the-common-language-runtime.md)和其中所定義類型的資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和[實值型別](../../csharp/language-reference/keywords/value-types.md)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
+<xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[組件](../../standard/assembly/index.md)和其中所定義類型的資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和[實值型別](../../csharp/language-reference/keywords/value-types.md)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
   
  [Common Language Runtime](../../standard/clr.md) 載入器會管理[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)，這會在有相同應用程式範圍的物件周圍構成定義的界限。 這個管理包含載入每個組件至適當的應用程式定義域和控制每個組件內類型階層的記憶體配置。  
   
- [組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)包含模組、模組包含類型，而類型包含成員。 反映提供封裝組件、模組和類型的物件。 您可以使用反映來動態建立類型的執行個體、繫結類型至現有的物件，或從現有的物件取得類型。 然後，您可以叫用類型的方法或存取其欄位和屬性。 反映的一般用法包含下列幾項：  
+ [組件](../../../docs/framework/app-domains/index.md)包含模組、模組包含類型，而類型包含成員。 反映提供封裝組件、模組和類型的物件。 您可以使用反映來動態建立類型的執行個體、繫結類型至現有的物件，或從現有的物件取得類型。 然後，您可以叫用類型的方法或存取其欄位和屬性。 反映的一般用法包含下列幾項：  
   
 - 使用 <xref:System.Reflection.Assembly> 來定義和載入組件，載入列在組件資訊清單中的模組，然後從這個組件中尋找類型並建立它的執行個體。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "70133750"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|描述 <xref:System.Type> 類別，並提供程式碼範例說明如何搭配幾個反映類別來使用 <xref:System.Type>，以取得建構函式、方法、欄位、屬性和事件的相關資訊。|  
 |[反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|說明反映如何處理泛型類型和泛型方法的型別參數和型別引數。|  

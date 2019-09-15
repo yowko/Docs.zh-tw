@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c531a08e4555a8a076d81835bcceffa53e3ad7d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: dccf1b841d048ae460b89fd97da833aadb988422
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894823"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971806"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
@@ -41,9 +41,9 @@ ms.locfileid: "70894823"
   
 ## <a name="parameters"></a>參數  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
-|*assemblyFile.dll*|來源組件檔。 這個組件必須以強式名稱簽署。 如需詳細資訊，請參閱[以強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。|  
+|*assemblyFile.dll*|來源組件檔。 這個組件必須以強式名稱簽署。 如需詳細資訊，請參閱[以強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)。|  
   
 |選項|描述|  
 |------------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "70894823"
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  
- Regsvcs.exe 需要由 *assemblyFile.dll* 所指定的來源組件檔。 這個組件必須使用強式名稱簽署。 如需強式名稱簽署的詳細資訊，請參閱[以強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。 目標應用程式和類型程式庫檔案的名稱是選擇項。 如果 *applicationName* 引數已經不存在，則可以從來源組件檔中產生，並且將會由 Regsvcs.exe 建立。 *typelibraryfile* 引數可以指定型別程式庫名稱。 如果您沒有指定類型程式庫名稱，Regsvcs.exe 會使用組件名稱做為預設值。  
+ Regsvcs.exe 需要由 *assemblyFile.dll* 所指定的來源組件檔。 這個組件必須使用強式名稱簽署。 如需強式名稱簽署的詳細資訊，請參閱[以強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)。 目標應用程式和類型程式庫檔案的名稱是選擇項。 如果 *applicationName* 引數已經不存在，則可以從來源組件檔中產生，並且將會由 Regsvcs.exe 建立。 *typelibraryfile* 引數可以指定型別程式庫名稱。 如果您沒有指定類型程式庫名稱，Regsvcs.exe 會使用組件名稱做為預設值。  
   
  當 Regsvcs.exe 註冊元件的方法時，它會受制於這些方法上的[要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100))和[連結要求](../../../docs/framework/misc/link-demands.md)。 因為這個工具是在完全信任的環境中執行，所以大部分的使用權限需求都會成功。 不過，Regsvcs.exe 無法註冊方法受到 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的需求或連結要求保護的元件。  
   
@@ -89,5 +89,5 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ## <a name="see-also"></a>另請參閱
 
 - [工具](../../../docs/framework/tools/index.md)
-- [如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [如何：使用強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

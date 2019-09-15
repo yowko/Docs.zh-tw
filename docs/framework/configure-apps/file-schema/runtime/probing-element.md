@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ae789e99a1306102c67f2252760e215989132406
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252391"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971619"
 ---
 # <a name="probing-element"></a>\<探查 > 元素
 指定載入元件時，common language runtime 要搜尋的應用程式基底子目錄。  
@@ -47,7 +47,7 @@ ms.locfileid: "70252391"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
@@ -68,7 +68,7 @@ ms.locfileid: "70252391"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
+- [執行時間設定架構](index.md)
 - [組態檔結構描述](../index.md)
-- [指定組件的位置](../../specify-assembly-location.md)
+- [指定元件的位置](../../../../standard/assembly/location.md)
 - [執行階段如何找出組件](../../../deployment/how-the-runtime-locates-assemblies.md)

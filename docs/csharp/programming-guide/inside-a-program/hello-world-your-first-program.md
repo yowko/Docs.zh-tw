@@ -1,7 +1,7 @@
 ---
-title: Hello World -- 您的第一個程式 - C# 程式設計手冊
+title: Hello World--在 Windows 或 Mac 上使用 Visual Studio 的第一個C#程式-程式設計指南
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 09/12/2019
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
@@ -9,135 +9,123 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 0807e46d36a4cf031bc44ae0dc4efab79dd51d03
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589382"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991334"
 ---
-# <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一個程式 (C# 程式設計手冊)
+# <a name="hello-world----your-first-program"></a>Hello World--您的第一個程式
 
-下列程序會建立 C# 版本的傳統 "Hello World!" 程式。 此程式會顯示字串 `Hello World!`
-
-如需更多的介紹性概念範例，請參閱 [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。
+在本文中，您將使用 Visual Studio 來建立傳統的「Hello World！」 程式。 Visual Studio 是一種專業整合式開發環境（IDE），具有專為 .NET 開發所設計的許多功能。 您只會使用 Visual Studio 中的幾項功能來建立此程式。 若要深入瞭解 Visual Studio，請參閱[使用 Visual C#和 Visual Basic 消費者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-and-run-a-console-application"></a>建立並執行主控台應用程式
+## <a name="create-a-new-application"></a>建立新的應用程式
 
-1. 啟動 Visual Studio。
+<!-- markdownlint-disable MD025 -->
 
-2. 在功能表列上，選擇 [檔案]  、[新增]  、[專案]  。
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-     [ **新增專案** ] 對話方塊隨即開啟。
+啟動 Visual Studio。 您會在 Windows 上看到下列影像：
 
-3. 依序展開 [已安裝]  、[範本]  和 [Visual C#]  ，然後選擇 [主控台應用程式]  。
+![Visual Studio Windows 上的歡迎畫面](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
 
-4. 在 [名稱]  文字方塊中指定專案名稱，然後選擇 [確定]  按鈕。
+選取影像右下角的 [**建立新專案**]。 Visual Studio 會顯示 [**新增專案**] 對話方塊：
 
-     新的專案隨即會出現在方案總管  中。
+![在 Windows 上 Visual Studio 新增專案畫面](./media/hello-world-your-first-program/visual-studio-windows-new-project.png)
 
-5. 如果 [程式碼編輯器]  中未開啟 Program.cs，請在方案總管  中開啟 **Program.cs** 的捷徑功能表，然後選擇 [檢視程式碼]  。
+> [!NOTE]
+> 如果這是您第一次啟動 Visual Studio，[**最近使用的專案範本**] 清單會是空的。
 
-6. 以下列程式碼取代 Program.cs 的內容。
+在 [新增專案] 對話方塊中，選擇 [主控台應用程式（.NET Core）]，然後按 **[下一步]** 。 為您的專案命名，例如 "HelloWorld"，然後按 [**建立**]。
 
-     [!code-csharp[csProgGuide#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#21)]
+Visual Studio 會開啟您的專案。 它已經是基本的「Hello World！」 為例。 按`Ctrl`  + 以執行您的專案。`F5` Visual Studio 會建立您的專案，並將原始程式碼轉換成可執行檔。 然後，它會啟動執行新應用程式的命令視窗。 您應該會在視窗中看到下列文字：
 
-7. 選擇 F5 鍵以執行專案。 包含 `Hello World!` 一行的命令提示字元視窗隨即出現
+```console
+Hello World!
 
-接下來，會檢查此程式的重要部分。
+C:\Program Files\dotnet\dotnet.exe (process 11964) exited with code 0.
+Press any key to close this window . . .
+```
 
-## <a name="comments"></a>註解
+按下任意鍵即可關閉視窗。
 
-第一行包含註解。 字元 `//` 會將該行的其餘部分轉換成註解。
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
- [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
+啟動 Visual Studio for Mac。 您會在 Mac 上看到下列影像：
+
+![Visual Studio Mac 上的歡迎使用畫面](./media/hello-world-your-first-program/visual-studio-mac-start-screen.png)
+
+> [!NOTE]
+> 如果這是您第一次啟動 Visual Studio for Mac，[**最近使用的專案**] 清單會是空的。
+
+選取影像右上角的 [**新增**]。 Visual Studio for Mac 會顯示 [**新增專案**] 對話方塊：
+
+![在 Mac 上 Visual Studio 新增專案 畫面](./media/hello-world-your-first-program/visual-studio-mac-new-project.png)
+
+在 [新增專案] 對話方塊中，選擇 [.NET Core] 和 [主控台應用程式]，然後按 **[下一步]** 。 您必須選取目標 framework。 預設值是正常的，因此請按 [下一步]。 為您的專案命名，例如 "HelloWorld"，然後按 [**建立**]。 您可以使用預設的專案位置。 請勿將這個專案加入至原始檔控制。
+
+Visual Studio for Mac 會開啟您的專案。 它已經是基本的「Hello World！」 為例。 按`Ctrl` 以執行 + 您的專案。 +  `Fn` `F5` Visual Studio for Mac 會建立您的專案，並將原始程式碼轉換成可執行檔。 然後，它會啟動執行新應用程式的命令視窗。 您應該會在視窗中看到下列文字：
+
+```console
+Hello World!
+
+Press any key to close this window . . .
+```
+
+按下鍵以結束會話。
+
+---
+
+## <a name="elements-of-a-c-program"></a>C#程式的元素
+
+讓我們來檢查這個程式的重要部分。 第一行包含註解。 字元 `//` 會將該行的其餘部分轉換成註解。
+
+[!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
 您也可以用 `/*` 和 `*/` 字元括住它，註解文字區塊。 這在下列範例中顯示。
 
- [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
-
-## <a name="main-method"></a>Main 方法
+[!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
 C# 主控台應用程式必須包含 `Main` 方法，控制項在此開始和結束。 `Main` 方法是您建立物件和執行其他方法的所在。
 
 `Main` 方法是位於類別或結構內的[靜態](../../language-reference/keywords/static.md)方法。 在上一個 "Hello World!" 範例中，它位於名為 `Hello` 的類別中。 您可以下列方式之一宣告 `Main` 方法：
 
-- 它會傳回 `void`。
+- 它會傳回 `void`。 這表示您的程式不會傳回值。
 
-     [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
+[!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
-- 它也可以傳回整數。
+- 它也可以傳回整數。 整數是應用程式的結束**代碼**。
 
-     [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
+[!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
 - 使用任一傳回型別，它可以接受引數。
 
-     [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
+[!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-     -或-
+-或-
 
-     [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
+[!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
-`Main` 方法的參數 `args`，是包含用來叫用程式的命令列引數的 `string` 陣列。 不像在 C++ 中，陣列不包含可執行檔 (exe) 的檔案名稱。
+`Main` 方法的參數 `args`，是包含用來叫用程式的命令列引數的 `string` 陣列。
 
-如需如何使用命令列引數的詳細資訊，請參閱 [Main() 和命令列引數](../main-and-command-args/index.md)和[如何：使用命令列建立和使用組件](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。
-
-在 `Main` 方法的結尾呼叫 <xref:System.Console.ReadKey%2A>，可讓您在按下 F5 以於偵錯模式中執行程式時，防止主控台視窗在您有機會讀取輸出之前關閉。
+如需如何使用命令列引數的詳細資訊，請參閱[Main （）和命令列引數](../main-and-command-args/index.md)中的範例。
 
 ## <a name="input-and-output"></a>輸入和輸出
 
 C# 程式通常會使用 .NET Framework 執行階段程式庫所提供的輸入/輸出服務。 陳述式 `System.Console.WriteLine("Hello World!");` 使用 <xref:System.Console.WriteLine%2A> 方法。 這是執行階段程式庫中 <xref:System.Console> 類別的其中一個輸出方法。 它會在標準輸出資料流中顯示其字串參數，後面接著新行。 其他 <xref:System.Console> 方法可供不同的輸入和輸出作業使用。 如果您在程式開始處包含 `using System;` 指示詞，就可以直接使用 <xref:System> 類別和方法，而不必完整限定它們。 例如，您可以呼叫 `Console.WriteLine` 而不用呼叫 `System.Console.WriteLine`：
 
- [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
+[!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
- [!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
+[!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
 如需輸入/輸出方法的詳細資訊，請參閱 <xref:System.IO>。
-
-## <a name="command-line-compilation-and-execution"></a>命令列編譯和執行
-
-您可以編譯 "Hello World!" 程式，使用命令列而不是使用 Visual Studio 整合式開發環境 (IDE)。
-
-### <a name="to-compile-and-run-from-a-command-prompt"></a>從命令提示字元編譯與執行
-
-1. 將前面程序的程式碼貼入任何文字編輯器，再將檔案儲存為文字檔案。 將檔案命名為 `Hello.cs`。 C# 原始程式碼檔使用延伸模組 `.cs`。
-
-2. 執行下列步驟之一來開啟命令提示字元視窗︰
-
-    - 在 Windows 10 的 [開始]  功能表中搜尋 `Developer Command Prompt`，然後點選或選擇 [VS 2017 開發人員命令提示字元]  。
-
-         [開發人員命令提示字元] 視窗隨即出現。
-
-    - 開啟 Windows 7 的 [開始]  功能表，展開最新版 Visual Studio 的資料夾，開啟 **Visual Studio Tools** 的捷徑功能表，然後選擇 [VS 2017 開發人員命令提示字元]  。
-
-         [開發人員命令提示字元] 視窗隨即出現。
-
-    - 從標準的命令提示字元視窗啟用命令列組建。
-
-         請參閱[如何：為 Visual Studio 命令列設定環境變數](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
-
-3. 在命令提示字元視窗中，巡覽至包含 `Hello.cs` 檔案的資料夾。
-
-4. 輸入下列命令以編譯 `Hello.cs`。
-
-     `csc Hello.cs`
-
-     如果您的程式沒有任何編譯錯誤，則會建立名為 `Hello.exe` 的可執行檔。
-
-5. 在命令提示字元視窗中輸入下列命令，執行程式：
-
-     `Hello`
-
- 如需 C# 編譯器及其選項的詳細資訊，請參閱[C# 編譯器選項](../../language-reference/compiler-options/index.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [C# 程式內部](./index.md)
-- [字串](../strings/index.md)
 - [範例與教學課程](../../../samples-and-tutorials/index.md)
-- [C# 參考](../../language-reference/index.md)
 - [Main() 和命令列引數](../main-and-command-args/index.md)
 - [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

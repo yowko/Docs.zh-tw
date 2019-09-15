@@ -2,12 +2,12 @@
 title: 工作流程執行屬性
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913602"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988591"
 ---
 # <a name="workflow-execution-properties"></a>工作流程執行屬性
 CLR 會透過執行緒區域儲存區 (TLS) 維護每個執行緒的執行內容。 這個執行內容會管理眾所周知的執行緒屬性，例如執行緒識別、環境異動和目前的權限集，以及使用者定義的執行緒屬性，例如具名位置。  
@@ -147,7 +147,7 @@ WorkflowInvoker.Invoke(wf);
   
  叫用工作流程時，會將下列輸出寫入至主控台視窗。  
   
-```  
+```console  
 Start blue text.  
 Start red text.  
 Start default text.  

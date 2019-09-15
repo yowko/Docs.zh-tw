@@ -2,12 +2,12 @@
 title: 預期的例外狀況
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 963606f4cfd34acb1c4400324cdbb318e3186103
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a874b291202cb8c3c8752c13b357679c7fd5a556
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039703"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989969"
 ---
 # <a name="expected-exceptions"></a>預期的例外狀況
 此範例示範如何在使用型別用戶端時，攔截預期的例外狀況。 這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
@@ -17,9 +17,9 @@ ms.locfileid: "70039703"
   
  此範例示範正確的程式必須處理的兩個預期例外狀況類型之捕捉與處理方式：`TimeoutException` 和 `CommunicationException`。  
   
- 從 Windows Communication Foundation (WCF) 用戶端上的通訊方法所擲回的例外狀況可能是預期的或非預期的。 未預期的例外狀況包含 `OutOfMemoryException` 之類的災難性失敗，以及像 `ArgumentNullException` 或 `InvalidOperationException` 之類的程式設計錯誤。 通常沒有任何實用的方式可以處理未預期的錯誤, 因此在呼叫 WCF 用戶端通訊方法時, 通常不應該攔截它們。  
+ 從 Windows Communication Foundation （WCF）用戶端上的通訊方法所擲回的例外狀況可能是預期的或非預期的。 未預期的例外狀況包含 `OutOfMemoryException` 之類的災難性失敗，以及像 `ArgumentNullException` 或 `InvalidOperationException` 之類的程式設計錯誤。 通常沒有任何實用的方式可以處理未預期的錯誤，因此在呼叫 WCF 用戶端通訊方法時，通常不應該攔截它們。  
   
- WCF 用戶端上通訊方法的預期例外狀況`TimeoutException`包括`CommunicationException`、和的`CommunicationException`任何衍生類別。 這表示通訊期間發生問題, 可透過中止 WCF 用戶端並回報通訊失敗來安全地處理。 因為外部因素可能導致在任何應用程式中發生這些錯誤，正確的應用程式必須捕捉這些例外狀況，並在發生時加以復原。  
+ WCF 用戶端上通訊方法的預期例外狀況`TimeoutException`包括`CommunicationException`、和的`CommunicationException`任何衍生類別。 這表示通訊期間發生問題，可透過中止 WCF 用戶端並回報通訊失敗來安全地處理。 因為外部因素可能導致在任何應用程式中發生這些錯誤，正確的應用程式必須捕捉這些例外狀況，並在發生時加以復原。  
   
  用戶端可以擲回的 `CommunicationException` 衍生類別有好幾種。 在某些情況中，應用程式也會捕捉當中的一些狀況以進行特殊處理，但同時讓其他狀況當成 `CommunicationException` 來處理。 首先您可以捕捉比較特別的例外狀況類型，然後在稍後的 catch 子句中捕捉 `CommunicationException` 來做同樣的處理。  
   
@@ -54,7 +54,7 @@ catch (CommunicationException exception)
   
  用戶端處理序會執行兩個案例，每一個都會嘗試呼叫 `Add` 並接著呼叫 `Divide`。 第一個案例會在呼叫 `Divide` 之前，先中止用戶端以便模擬網路問題。 第二個案例會將逾時值設為過短導致方法無法完成，以造成逾時情況。 從用戶端處理序產生的預期輸出如下：  
   
-```  
+```output
 Add(100,15.99) = 115.99  
 Simulated network problem occurs...  
 Got System.ServiceModel.CommunicationObjectAbortedException  

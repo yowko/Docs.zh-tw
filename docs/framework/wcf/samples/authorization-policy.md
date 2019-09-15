@@ -2,16 +2,16 @@
 title: 授權原則
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: f148af25f85731c4ff15727b328f3f905356fe6e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9b73eea1f51454dd82ba577c4d4d5fd5a1c0efd4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637462"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990194"
 ---
 # <a name="authorization-policy"></a>授權原則
 
-此範例示範如何實作自訂宣告授權原則以及關聯的自訂服務授權管理員。 當服務對服務作業執行宣告架構的存取檢查，以及在執行存取檢查前便授予呼叫者特定權限時，這個方法就會很有用處。 此範例同時說明新增宣告的處理序，以及對最後宣告集的存取檢查處理序。 用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。 根據預設，使用 `wsHttpBinding` 繫結時，會使用用戶端所提供的使用者名稱和密碼來登入有效的 Windows NT 帳戶。 此範例示範如何使用自訂 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 來驗證用戶端。 此外，此範例會說明用戶端如何使用 X.509 憑證來向服務進行驗證。 此範例說明 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 和 <xref:System.ServiceModel.ServiceAuthorizationManager> 的實作 (此實作會針對特定使用者將存取權限授予特定的服務方法)。 此樣本根據[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)，但會示範如何執行宣告轉換之前<xref:System.ServiceModel.ServiceAuthorizationManager>所呼叫。
+此範例示範如何實作自訂宣告授權原則以及關聯的自訂服務授權管理員。 當服務對服務作業執行宣告架構的存取檢查，以及在執行存取檢查前便授予呼叫者特定權限時，這個方法就會很有用處。 此範例同時說明新增宣告的處理序，以及對最後宣告集的存取檢查處理序。 用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。 根據預設，使用 `wsHttpBinding` 繫結時，會使用用戶端所提供的使用者名稱和密碼來登入有效的 Windows NT 帳戶。 此範例示範如何使用自訂 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 來驗證用戶端。 此外，此範例會說明用戶端如何使用 X.509 憑證來向服務進行驗證。 此範例說明 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 和 <xref:System.ServiceModel.ServiceAuthorizationManager> 的實作 (此實作會針對特定使用者將存取權限授予特定的服務方法)。 這個範例是以[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)為基礎，但是會示範如何在呼叫之前<xref:System.ServiceModel.ServiceAuthorizationManager>執行宣告轉換。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -30,7 +30,7 @@ ms.locfileid: "65637462"
 
 - 如何實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>。
 
-服務會公開兩個端點，以便與使用組態檔 App.config 定義的服務進行通訊。每個端點是由位址、繫結及合約所組成。 其中一個繫結使用標準 `wsHttpBinding` 繫結 (使用 WS-Security 和用戶端使用者名稱驗證) 來設定。 另一個繫結使用標準 `wsHttpBinding` 繫結 (使用 WS-Security 和用戶端憑證驗證) 來設定。 [\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)指定要用於服務驗證的使用者認證。 伺服器憑證必須包含相同的值，如`SubjectName`屬性設為`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。
+服務會公開兩個端點，以便與使用組態檔 App.config 定義的服務進行通訊。每個端點是由位址、繫結及合約所組成。 其中一個繫結使用標準 `wsHttpBinding` 繫結 (使用 WS-Security 和用戶端使用者名稱驗證) 來設定。 另一個繫結使用標準 `wsHttpBinding` 繫結 (使用 WS-Security 和用戶端憑證驗證) 來設定。 [ \<> 的行為](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)會指定要將使用者認證用於服務驗證。 伺服器憑證必須包含`SubjectName`屬性的相同值，做為[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)中的`findValue`屬性。
 
 ```xml
 <system.serviceModel>
@@ -117,7 +117,7 @@ ms.locfileid: "65637462"
 </system.serviceModel>
 ```
 
-每個用戶端的端點組態是由組態名稱、服務端點的絕對位址、繫結和合約所組成。 用戶端繫結已設定適當的安全性模式，指定在此情況下在[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)並`clientCredentialType`中所指定[\<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).
+每個用戶端的端點組態是由組態名稱、服務端點的絕對位址、繫結和合約所組成。 用戶端系結會設定為使用適當的安全性模式，如此案例中的[ \<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)和`clientCredentialType` [ \<訊息 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)中所指定。
 
 ```xml
 <system.serviceModel>
@@ -261,14 +261,14 @@ public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
 }
 ```
 
-一旦驗證程式在服務程式碼中實作，服務主機就必須收到要使用的驗證程式執行個體的相關通知。 這是使用下列程式碼：
+一旦驗證程式在服務程式碼中實作，服務主機就必須收到要使用的驗證程式執行個體的相關通知。 這會使用下列程式碼來完成：
 
 ```csharp
 Servicehost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
 serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = new MyCustomUserNamePasswordValidatorProvider();
 ```
 
-或者，您可以在組態中相同的動作：
+或者，您也可以在設定中執行相同的動作：
 
 ```xml
 <behavior ...>
@@ -282,9 +282,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>
 ```
 
-Windows Communication Foundation (WCF) 提供豐富的宣告式模型來執行存取檢查。 <xref:System.ServiceModel.ServiceAuthorizationManager> 物件會被用來執行存取檢查並判斷與用戶端相關的宣告是否能夠滿足存取服務方法所需的必要需求。
+Windows Communication Foundation （WCF）提供以宣告為基礎的豐富模型，以執行存取檢查。 <xref:System.ServiceModel.ServiceAuthorizationManager> 物件會被用來執行存取檢查並判斷與用戶端相關的宣告是否能夠滿足存取服務方法所需的必要需求。
 
-針對示範目的，此範例會示範如何實作<xref:System.ServiceModel.ServiceAuthorizationManager>可實<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>宣告的型別為基礎的方法，以允許使用者的存取方法`http://example.com/claims/allowedoperation`其值會是此作業之動作 URI允許呼叫。
+基於示範的目的，這個範例會示範的執行<xref:System.ServiceModel.ServiceAuthorizationManager> <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>方法，以允許使用者根據型`http://example.com/claims/allowedoperation`別的宣告來存取方法，其值是作業的動作 URI允許呼叫。
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -401,7 +401,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
     下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。 %SERVER_NAME% 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 預設值為 localhost。
 
-    ```
+    ```bat
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -415,7 +415,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
     Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
@@ -425,7 +425,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
     憑證會儲存在 CurrentUser 存放區位置下的 My (Personal) 存放區中。
 
-    ```
+    ```bat
     echo ************
     echo making client cert
     echo ************
@@ -436,13 +436,13 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
     Setup.bat 批次檔中的下列程式行會將用戶端憑證複製到受信任人的存放區。 這是必要步驟，因為伺服器系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將用戶端憑證填入伺服器憑證存放區的步驟。
 
-    ```
+    ```console
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
 ### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例
 
-1. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+1. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
 
 2. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。
 
@@ -451,60 +451,60 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 
-1. 開啟系統管理員權限適用於 Visual Studio 開發人員命令提示字元並執行*Setup.bat*從範例安裝資料夾。 這會安裝執行範例所需的所有憑證。
+1. 以系統管理員許可權開啟 Visual Studio 的開發人員命令提示字元，然後從範例安裝資料夾中執行*安裝程式 .bat* 。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
-    > Setup.bat 批次檔被設計來執行適用於 Visual Studio 從開發人員命令提示字元。 Visual Studio 指向包含所需的可執行檔的目錄路徑環境變數設定在 「 開發人員命令提示字元*Setup.bat*指令碼。
+    > 安裝 .bat 批次檔是設計用來從 Visual Studio 的開發人員命令提示字元執行。 在開發人員命令提示字元中設定的 PATH 環境變數會 Visual Studio 指向包含*安裝程式*所需之可執行檔的目錄。
 
-1. 從啟動 Service.exe *service\bin*。
+1. 從*service\bin*啟動 setup.exe。
 
 1. 從啟動 Client.exe *\client\bin* 。 用戶端活動會顯示在用戶端主控台應用程式上。
 
-如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
+如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例
 
 1. 在服務電腦上建立目錄。
 
-2. 從服務程式檔複製 *\service\bin*到服務電腦上的目錄。 同時將 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 檔複製到服務電腦上。
+2. 將服務程式檔案從 *\service\bin*複製到服務電腦上的目錄。 同時將 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 檔複製到服務電腦上。
 
 3. 在用戶端電腦上為用戶端二進位碼檔案建立一個目錄。
 
 4. 將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。
 
-5. 在伺服器上，執行`setup.bat service`中開發人員命令提示字元使用系統管理員權限開啟的 Visual Studio。
+5. 在伺服器上，于`setup.bat service`開發人員命令提示字元中執行，Visual Studio 以系統管理員許可權開啟的。
 
-    執行`setup.bat`具有`service`引數建立電腦的完整的網域名稱服務憑證，並將服務憑證匯出至名為的檔案*Service.cer*。
+    使用引數執行時，會建立具有電腦完整功能變數名稱的服務憑證，並將服務憑證匯出至名為 .cer 的檔案。 `setup.bat` `service`
 
-6. 編輯*Service.exe.config*以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 這是完整的網域名稱相同電腦。 也會變更**computername**中\<服務 > /\<baseAddresses > 項目服務電腦的完整名稱從 localhost。
+6. 編輯*setup.exe*以反映新的憑證名稱（在`findValue` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的屬性中），這與電腦的完整功能變數名稱相同。 同時將\<服務中的**computername** >/\<baseAddresses > 元素從 localhost 變更為服務電腦的完整名稱。
 
-7. 複製*Service.cer*檔案從服務目錄至用戶端目錄用戶端電腦上的。
+7. 將*service .cer*檔案從服務目錄複寫到用戶端電腦上的用戶端目錄。
 
-8. 在用戶端，執行`setup.bat client`中開發人員命令提示字元使用系統管理員權限開啟的 Visual Studio。
+8. 在用戶端上， `setup.bat client`于使用系統管理員許可權開啟 Visual Studio 的開發人員命令提示字元中執行。
 
-    執行`setup.bat`具有`client`引數會建立名為用戶端憑證**test1** ，並將用戶端憑證匯出為名為檔案*Client.cer*。
+    使用引數執行會建立名為**test1**的用戶端憑證，並將用戶端憑證匯出至名為*client .cer*的檔案。 `client` `setup.bat`
 
-9. 在  *Client.exe.config*檔案在用戶端電腦上，變更端點位址值以符合您的服務的新位址。 執行這項操作來取代**localhost**伺服器的完整的網域名稱。
+9. 在用戶端電腦上的*machine.config*檔案中，變更端點的位址值以符合服務的新位址。 若要這麼做，請以伺服器的完整功能變數名稱取代**localhost** 。
 
 10. 從用戶端目錄將 Client.cer 檔案複製到伺服器上的服務目錄中。
 
-11. 在用戶端，執行*ImportServiceCert.bat*中開發人員命令提示字元使用系統管理員權限開啟的 Visual Studio。
+11. 在用戶端上，于開發人員命令提示字元中執行*importservicecert.bat* ，以 Visual Studio 以系統管理員許可權開啟的。
 
-    這會在將服務憑證從 Service.cer 檔案匯入**CurrentUser-TrustedPeople**儲存。
+    這樣會將服務 .cer 檔案中的服務憑證匯入**CurrentUser-TrustedPeople**存放區。
 
-12. 在伺服器上，執行*ImportClientCert.bat*中開發人員命令提示字元使用系統管理員權限開啟的 Visual Studio。
+12. 在伺服器上，于開發人員命令提示字元中執行*importclientcert.bat* ，以 Visual Studio 以系統管理員許可權開啟的。
 
-    這會從 Client.cer 檔案匯入的用戶端憑證**LocalMachine-TrustedPeople**儲存。
+    這會從用戶端 .cer 檔案將用戶端憑證匯入至**LocalMachine-TrustedPeople**存放區。
 
 13. 在伺服器電腦上，從命令提示字元視窗啟動 Service.exe。
 
 14. 在用戶端電腦上，從命令提示字元視窗啟動 Client.exe。
 
-    如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
+    如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
-### <a name="clean-up-after-the-sample"></a>在此範例之後進行清除
+### <a name="clean-up-after-the-sample"></a>在範例之後清除
 
-若要清除在此範例之後，執行*Cleanup.bat*當您完成執行範例中的 [samples] 資料夾中。 這樣會從憑證存放區中移除伺服器與用戶端憑證。
+若要在範例之後進行清除，請在完成執行範例後，在 samples 資料夾中執行*清除。* 這樣會從憑證存放區中移除伺服器與用戶端憑證。
 
 > [!NOTE]
-> 跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行 WCF 範例，在電腦之間使用的憑證，請務必清除的服務憑證已安裝在 CurrentUser-TrustedPeople 存放。 若要這樣做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+> 跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 WCF 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。

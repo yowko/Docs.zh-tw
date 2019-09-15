@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7be86a71ae4b3f873395c48750cc22c74d7ff983
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853987"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969114"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
 
@@ -25,7 +25,7 @@ ms.locfileid: "70853987"
 在嘗試找出組件，並解析組件參考時，Common Language Runtime 會執行數個步驟。 以下各節將會說明每個步驟。 在說明執行階段如何找出組件時，常會使用詞彙探查；它會依據其名稱和文化特性，參考用來尋找組件的啟發學習法集合。
 
 > [!NOTE]
-> 您可以使用 Windows SDK 中隨附的[組件繫結記錄檢視器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 來檢視記錄檔中的繫結資訊。
+> 您可以使用 Windows SDK 中隨附的[組件繫結記錄檢視器 (Fuslogvw.exe)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) 來檢視記錄檔中的繫結資訊。
 
 ## <a name="initiating-the-bind"></a>初始化繫結
 
@@ -35,7 +35,7 @@ ms.locfileid: "70853987"
 
 您也可以只提供組件的部分資訊給呼叫方法 (例如只指定組件名稱)，以對組件進行動態參考。 在此情況下，只會搜尋組件的應用程式目錄，而不會進行任何其他檢查。 您可以使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>等各種方法來載入組件，以進行部分參考。
 
-最後，您可使用 <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 等方法建立動態參考，並且只提供部分資訊；然後使用應用程式組態檔中的 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素授與參考資格。 這個項目可讓您在應用程式組態檔中，而不是在您的程式碼中，提供完整的參考資訊 (名稱、版本、文化特性和 (適用的話) 公開金鑰語彙基元)。 如果您想要完整限定參考外部應用程式目錄中的組件，或者如果您想要參考全域組件快取中的組件，但又想要在組態檔中 (而不是在您的程式碼中) 指定完整參考的方便性，您就會使用這項技術。
+最後，您可使用 <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 等方法建立動態參考，並且只提供部分資訊；然後使用應用程式組態檔中的 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素授與參考資格。 這個項目可讓您在應用程式組態檔中，而不是在您的程式碼中，提供完整的參考資訊 (名稱、版本、文化特性和 (適用的話) 公開金鑰語彙基元)。 如果您想要完整限定參考外部應用程式目錄中的組件，或者如果您想要參考全域組件快取中的組件，但又想要在組態檔中 (而不是在您的程式碼中) 指定完整參考的方便性，您就會使用這項技術。
 
 > [!NOTE]
 > 這種類型的部分參考不應該用於數個應用程式之間共用的組件。 因為組態設定是依各應用程式來套用，而且依各組件，所以使用這種部分參考的共用組件，會要求使用共用組件的每個應用程式，在其組態檔中都要有合格的資訊。
@@ -74,10 +74,10 @@ ms.locfileid: "70853987"
 
 - 電腦組態檔。
 
-這些檔案遵循相同的語法，並提供繫結重新導向、程式碼位置，以及特定組件的繫結模式等資訊。 每個組態檔都可以包含重新導向繫結處理序的 [\<assemblyBinding> 項目](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。 [\<assemblyBinding> 項目](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)的子項目包括 [\<dependentAssembly> 項目](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)。 [\<dependentAssembly> 項目](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)的子項目包括 [\<assemblyIdentity> 項目](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment)、[\<bindingRedirect> 項目](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) 和 [\<codeBase> 項目](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)。
+這些檔案遵循相同的語法，並提供繫結重新導向、程式碼位置，以及特定組件的繫結模式等資訊。 每個組態檔都可以包含重新導向繫結處理序的 [\<assemblyBinding> 項目](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。 [\<assemblyBinding> 項目](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)的子項目包括 [\<dependentAssembly> 項目](../configure-apps/file-schema/runtime/dependentassembly-element.md)。 [\<dependentAssembly> 項目](../configure-apps/file-schema/runtime/dependentassembly-element.md)的子項目包括 [\<assemblyIdentity> 項目](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment)、[\<bindingRedirect> 項目](../configure-apps/file-schema/runtime/bindingredirect-element.md) 和 [\<codeBase> 項目](../configure-apps/file-schema/runtime/codebase-element.md)。
 
 > [!NOTE]
-> 您可以在這三個組態檔中找到組態資訊；並非所有組態檔中的所有項目都有效。 例如，繫結模式和私用路徑資訊只能在應用程式組態檔中。 如需每個檔案內含資訊的完整清單，請參閱 [使用組態檔設定應用程式](../../../docs/framework/configure-apps/index.md)。
+> 您可以在這三個組態檔中找到組態資訊；並非所有組態檔中的所有項目都有效。 例如，繫結模式和私用路徑資訊只能在應用程式組態檔中。 如需每個檔案內含資訊的完整清單，請參閱 [使用組態檔設定應用程式](../configure-apps/index.md)。
 
 ### <a name="application-configuration-file"></a>應用程式組態檔
 
@@ -120,7 +120,7 @@ ms.locfileid: "70853987"
 </configuration>
 ```
 
-若要建立組件，您可以使用[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 工具來搭配如下命令：
+若要建立組件，您可以使用[組件連結器 (Al.exe)](../tools/al-exe-assembly-linker.md) 工具來搭配如下命令：
 
 ```console
 Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v:3.0.0.0
@@ -136,25 +136,21 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 當共用元件更新時，就會使用發行者原則檔，而且使用該元件的所有應用程式，都應該收取共用元件的新版本。 除非應用程式組態檔強制執行安全模式，否則發行者原則檔中的設定會覆寫應用程式組態檔中的設定。
 
 #### <a name="safe-mode"></a>安全模式
-
 發行者原則檔通常會做為 Service Pack 或程式更新的一部分明確安裝。 如果升級後的共用元件有任何問題，您可以使用安全模式來忽略發行者原則檔中的覆寫。 **\<publisherPolicy apply="yes**&#124;**no"/>** 項目決定安全模式，只能夠在應用程式組態檔中找到。 它會指定是否應該將發行者原則組態資訊從繫結程序中移除。
 
-您可以針對整個應用程式或選取的組件來設定安全模式。 亦即，您可以針對構成應用程式的所有組件，關閉此原則，或是針對某些組件開啟此原則，但其他組件不開啟此原則。 若要選擇性地將發行者原則套用至構成應用程式的組件，請設定 **\<publisherPolicy apply\=no/>** ，並使用 \<**dependentAssembly**> 項目指定要受影響的組件。 若要將發行者原則套用至構成應用程式的所有組件，請將 **\<publisherPolicy apply\=no/>** 設定為沒有相依組件項目。 如需組態的詳細資訊，請參閱 [使用組態檔設定應用程式](../../../docs/framework/configure-apps/index.md)。
+您可以針對整個應用程式或選取的組件來設定安全模式。 亦即，您可以針對構成應用程式的所有組件，關閉此原則，或是針對某些組件開啟此原則，但其他組件不開啟此原則。 若要選擇性地將發行者原則套用至構成應用程式的組件，請設定 **\<publisherPolicy apply\=no/>** ，並使用 \<**dependentAssembly**> 項目指定要受影響的組件。 若要將發行者原則套用至構成應用程式的所有組件，請將 **\<publisherPolicy apply\=no/>** 設定為沒有相依組件項目。 如需組態的詳細資訊，請參閱 [使用組態檔設定應用程式](../configure-apps/index.md)。
 
 ### <a name="machine-configuration-file"></a>電腦組態檔
+第三，執行階段會檢查電腦組態檔。 此檔案名為 Machine.config，位在本機電腦上，執行階段安裝所在之根目錄的 Config 子目錄中。 系統管理員可以使用這個檔案來指定電腦本機的組件繫結限制。 電腦組態檔中的設定優先順序高於所有其他組態設定；不過，這不表示所有組態設定都應該放在這個檔案中。 系統管理員原則檔決定的版本為最終版本，不能覆寫。 在 Machine.config 檔案中指定覆寫會影響所有應用程式。 如需組態檔的詳細資訊，請參閱 [使用組態檔設定應用程式](../configure-apps/index.md)。
 
-第三，執行階段會檢查電腦組態檔。 此檔案名為 Machine.config，位在本機電腦上，執行階段安裝所在之根目錄的 Config 子目錄中。 系統管理員可以使用這個檔案來指定電腦本機的組件繫結限制。 電腦組態檔中的設定優先順序高於所有其他組態設定；不過，這不表示所有組態設定都應該放在這個檔案中。 系統管理員原則檔決定的版本為最終版本，不能覆寫。 在 Machine.config 檔案中指定覆寫會影響所有應用程式。 如需組態檔的詳細資訊，請參閱 [使用組態檔設定應用程式](../../../docs/framework/configure-apps/index.md)。
-
-<a name="step2"></a>
-
+<a name="step2"></a> 
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>步驟 2：檢查先前參考的組件
-
-如果先前的呼叫中也有要求現在所要求的組件，Common Language Runtime 會使用已載入的組件。 在為構成應用程式的組件命名時，這可能會有分歧。 如需有關為組件命名的詳細資訊，請參閱 [組件名稱](../../../docs/framework/app-domains/assembly-names.md)。
+如果先前的呼叫中也有要求現在所要求的組件，Common Language Runtime 會使用已載入的組件。 在為構成應用程式的組件命名時，這可能會有分歧。 如需有關為組件命名的詳細資訊，請參閱 [組件名稱](../../standard/assembly/names.md)。
 
 如果先前要求組件失敗，後續要求該組件會立即失敗，而不會嘗試載入組件。 從 .NET Framework 2.0 版開始，會快取組件繫結失敗，而所快取的資訊會用來判斷是否要嘗試載入組件。
 
 > [!NOTE]
-> 若要還原至 .NET framework 1.0 和 1.1 版的行為 (不會快取繫結失敗)，請將 [\<disableCachingBindingFailures> 項目](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)包含在組態檔中。
+> 若要還原至 .NET framework 1.0 和 1.1 版的行為 (不會快取繫結失敗)，請將 [\<disableCachingBindingFailures> 項目](../configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)包含在組態檔中。
 
 <a name="step3"></a>
 
@@ -168,25 +164,25 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 使用呼叫組件參考和組態檔中的資訊來判斷正確的組件版本之後，以及在其簽入全域組件快取 (僅適用於強式名稱組件) 之後，Common Language Runtime 會嘗試尋找組件。 尋找組件的程序包含下列步驟：
 
-1. 如果在應用程式組態檔中找到 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目，執行階段會檢查指定的位置。 如果找到相符項目，則會使用該組件，而不會進行探查。 如果在那裡沒有找到該組件，則繫結要求會失敗。
+1. 如果在應用程式組態檔中找到 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目，執行階段會檢查指定的位置。 如果找到相符項目，則會使用該組件，而不會進行探查。 如果在那裡沒有找到該組件，則繫結要求會失敗。
 
 2. 然後執行階段會使用本節稍後指定的規則來探查參考的組件。
 
 > [!NOTE]
-> 如果目錄中有多個不同版本的組件，而且要參考特定版本的組件，就必須使用 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目，而不能使用 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性。 如果使用 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目，只要執行階段找到符合所參考之簡單組件名稱的組件 (無論是否確實相符)，就會停止探查。 如果是正確的相符項目，就會使用該組件。 如果不是正確的相符項目，就會停止探查，且繫結失敗。
+> 如果目錄中有多個不同版本的組件，而且要參考特定版本的組件，就必須使用 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目，而不能使用 [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性。 如果使用 [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) 項目，只要執行階段找到符合所參考之簡單組件名稱的組件 (無論是否確實相符)，就會停止探查。 如果是正確的相符項目，就會使用該組件。 如果不是正確的相符項目，就會停止探查，且繫結失敗。
 
 ### <a name="locating-the-assembly-through-codebases"></a>透過程式碼基底找出組件
 
-您可以使用組態檔中的 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目提供程式碼基底資訊。 在執行階段嘗試探查參考的組件之前，一定會先檢查此程式碼基底。 如果含有最終版本重新導向的發行者原則檔也包含 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目，該 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目就是所使用的項目。 例如，如果您的應用程式組態檔指定 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目，而覆寫應用程式資訊的發行者原則檔也指定 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目，則會使用發行者原則檔中的 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目。
+您可以使用組態檔中的 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目提供程式碼基底資訊。 在執行階段嘗試探查參考的組件之前，一定會先檢查此程式碼基底。 如果含有最終版本重新導向的發行者原則檔也包含 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目，該 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目就是所使用的項目。 例如，如果您的應用程式組態檔指定 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目，而覆寫應用程式資訊的發行者原則檔也指定 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目，則會使用發行者原則檔中的 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目。
 
-如果在 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目指定的位置中沒有找到符合的組件，繫結要求將失敗，並且不會採取進一步的步驟。 如果執行階段判斷有組件符合呼叫組件的準則，就會使用該組件。 載入由特定 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目所指定的檔案時，執行階段會進行檢查，以確定名稱、版本、文化特性和公開金鑰與呼叫組件的參考相符。
+如果在 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目指定的位置中沒有找到符合的組件，繫結要求將失敗，並且不會採取進一步的步驟。 如果執行階段判斷有組件符合呼叫組件的準則，就會使用該組件。 載入由特定 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目所指定的檔案時，執行階段會進行檢查，以確定名稱、版本、文化特性和公開金鑰與呼叫組件的參考相符。
 
 > [!NOTE]
-> 應用程式根目錄之外的參考組件必須具有強式名稱，並且必須安裝於全域組件快取中，或者使用 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目指定。
+> 應用程式根目錄之外的參考組件必須具有強式名稱，並且必須安裝於全域組件快取中，或者使用 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目指定。
 
 ### <a name="locating-the-assembly-through-probing"></a>透過探查找出組件
 
-如果應用程式組態檔中沒有 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目，則執行階段會使用四個準則來探查組件：
+如果應用程式組態檔中沒有 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 項目，則執行階段會使用四個準則來探查組件：
 
 - 應用程式基底，這是執行應用程式所在的根位置。
 
@@ -194,7 +190,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 - 名稱，這是所參考之組件的名稱。
 
-- [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性，這是根位置下使用者定義的子目錄清單。 您可以使用應用程式定義域的 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 屬性，將這個位置指定在應用程式組態檔和 Managed 程式碼中。 如果指定在 Managed 程式碼中，會先探查 Managed 程式碼 `privatePath` ，後面接著應用程式組態檔中指定的路徑。
+- [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性，這是根位置下使用者定義的子目錄清單。 您可以使用應用程式定義域的 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 屬性，將這個位置指定在應用程式組態檔和 Managed 程式碼中。 如果指定在 Managed 程式碼中，會先探查 Managed 程式碼 `privatePath` ，後面接著應用程式組態檔中指定的路徑。
 
 #### <a name="probing-the-application-base-and-culture-directories"></a>探查應用程式基底和文化特性目錄
 
@@ -212,7 +208,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 #### <a name="probing-with-the-privatepath-attribute"></a>使用 privatePath 屬性進行探查
 
-除了文化特性子目錄以及為參考組件所命名的子目錄以外，執行階段也會探查使用 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性指定的目錄。 使用 `privatePath` 屬性來指定的目錄，必須是應用程式根目錄的子目錄。 所探查的目錄會因為文化特性資訊是否包含在參考的組件要求中而有所不同。
+除了文化特性子目錄以及為參考組件所命名的子目錄以外，執行階段也會探查使用 [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性指定的目錄。 使用 `privatePath` 屬性來指定的目錄，必須是應用程式根目錄的子目錄。 所探查的目錄會因為文化特性資訊是否包含在參考的組件要求中而有所不同。
 
 執行階段只要一找到符合所參考之簡單組件名稱的組件 (無論是否確實相符)，就會停止探查。 如果是正確的相符項目，就會使用該組件。 如果不是正確的相符項目，就會停止探查，且繫結失敗。
 
@@ -236,7 +232,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 - 應用程式根目錄：`http://www.code.microsoft.com`
 
-- 組態檔中的 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目指定：bin
+- 組態檔中的 [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) 項目指定：bin
 
 - 文化特性：de
 
@@ -270,5 +266,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 ## <a name="see-also"></a>另請參閱
 
-- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
-- [部署](../../../docs/framework/deployment/index.md)
+- [組件載入的最佳做法](best-practices-for-assembly-loading.md)
+- [部署](index.md)

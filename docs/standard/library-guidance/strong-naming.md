@@ -4,16 +4,16 @@ description: .NET 程式庫強式命名的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 79e44e89a94c1948ff29b9a8161f852c3a7c8cbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640787"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968975"
 ---
 # <a name="strong-naming"></a>強式命名
 
-強式命名是指使用金鑰對組件進行簽名，進而產生[強式名稱組件](../../framework/app-domains/strong-named-assemblies.md)。 當組件具有強式名稱時，它會根據名稱與組件版本號碼建立唯一身分識別，而且它可以協助防止組件衝突。
+強式命名是指使用金鑰對組件進行簽名，進而產生[強式名稱組件](../assembly/strong-named.md)。 當組件具有強式名稱時，它會根據名稱與組件版本號碼建立唯一身分識別，而且它可以協助防止組件衝突。
 
 強式命名的缺點是，一旦組件具有強式名稱，Windows 上的 .NET Framework 就會啟用嚴格的組件載入。 強式名稱組件參考必須與組件參考的版本完全符合，以強制開發人員在使用組件時[設定繫結重新導向](../../framework/configure-apps/redirect-assembly-versions.md)：
 
