@@ -1,24 +1,6 @@
 - name: 程式設計概念
   href: index.md
   items:
-    - name: 組件
-      items:
-        - name: Friend 組件
-          items:
-            - name: 作法：建立未簽署的 Friend 組件
-              href: assemblies-gac/how-to-create-unsigned-friend-assemblies.md
-            - name: 作法：建立簽署的 Friend 組件
-              href: assemblies-gac/how-to-create-signed-friend-assemblies.md
-        - name: 作法：使用命令列建立和使用組件
-          href: assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
-        - name: 作法：判斷檔案是否為組件
-          href: assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
-        - name: 作法：載入和卸載組件
-          href: assemblies-gac/how-to-load-and-unload-assemblies.md
-        - name: 作法：與其他應用程式共用組件
-          href: assemblies-gac/how-to-share-an-assembly-with-other-applications.md
-        - name: 逐步解說：在 Visual Studio 中內嵌來自受控組件的類型
-          href: assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md
     - name: 使用 async 和 await 進行非同步程式設計
       href: async/
     - name: 屬性
