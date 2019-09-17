@@ -11,7 +11,7 @@ author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 0c4177faca86fab9934f1cae57f02f8e42a2ae0e
 ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/22/2019
 ms.locfileid: "69943371"
