@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 630e0c20309b6e791991b64ef8d423ff927b70fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7e1965917e8a1c5ae07cf119df3664b969a979be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767909"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969243"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 函式
-可讓主機以指定的 common language runtime (CLR) 版本載入處理序。  
+讓主機將指定版本的 common language runtime （CLR）載入進程中。  
   
- 此函式已被取代，在.NET Framework 4。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,39 +45,39 @@ HRESULT CorBindToRuntimeHost (
   
 ## <a name="parameters"></a>參數  
  `pwszVersion`  
- [in]字串，描述您想要載入的 clr 版本。  
+ 在描述您要載入之 CLR 版本的字串。  
   
- 在.NET Framework 的版本號碼是由以句點分隔的四個部分所組成： *major.minor.build.revision*。 將字串傳遞為`pwszVersion`不可使用字元"v"後面接著的版本號碼 (例如，"v1.0.1529 」) 的前三個部分。  
+ .NET Framework 中的版本號碼包含四個以句點分隔的部分： [主要]. [*次要. 組建. 修訂*]。 傳遞為`pwszVersion`的字串必須以字元 "v" 開頭，後面接著版本號碼的前三個部分（例如 "v 1.0.1529"）。  
   
- 某些版本的 CLR 會以指定與舊版的 clr 相容的原則陳述式安裝。 根據預設，啟動填充碼會評估`pwszVersion`針對原則陳述式並載入最新版本的執行階段，是與所要求的版本相容。 主機可以強制填充碼略過原則評估，並載入指定的確切版本`pwszVersion`藉由傳遞值的 STARTUP_LOADER_SAFEMODE`startupFlags`參數。  
+ 某些 CLR 版本會與原則語句一起安裝，以指定與舊版 CLR 的相容性。 根據預設，啟動填充碼會`pwszVersion`針對原則語句評估，並載入與所要求版本相容的最新執行階段版本。 主機可以強制填充碼略過原則評估，並藉`pwszVersion`由傳遞`startupFlags`參數的 STARTUP_LOADER_SAFEMODE 值來載入所指定的確切版本。  
   
- 如果`pwszVersion`是`null,`方法不會載入任何版本的 CLR。 相反地，它會傳回 CLR_E_SHIM_RUNTIMELOAD，表示它無法載入執行階段。  
+ 如果`pwszVersion` 是`null,` ，則方法不會載入任何版本的 CLR。 相反地，它會傳回 CLR_E_SHIM_RUNTIMELOAD，這表示它無法載入執行時間。  
   
  `pwszBuildFlavor`  
- [in]字串，指定是否要載入的伺服器或工作站組建的 clr。 有效值為 `svr` 和 `wks`。 伺服器組建已最佳化，可利用多個處理器的記憶體回收，以及工作站建置適用於單一處理器電腦上執行的用戶端應用程式。  
+ 在字串，指定是否要載入伺服器或 CLR 的工作站組建。 有效值為 `svr` 和 `wks`。 伺服器組建已優化，可利用多個處理器進行垃圾收集，而且工作站組建已針對在單處理器機器上執行的用戶端應用程式優化。  
   
- 如果`pwszBuildFlavor`設為 null，工作站組建已載入。 單一處理器電腦上執行時，會一律載入工作站組建，即使`pwszBuildFlavor`設為`svr`。 不過，如果`pwszBuildFlavor`設為`svr`以及指定並行記憶體回收 (請參閱說明，`startupFlags`參數)，會載入伺服器組建。  
+ 如果`pwszBuildFlavor`設定為 null，則會載入工作站組建。 在單處理器機器上執行時，一律會載入工作站組建，即使設定為`pwszBuildFlavor` `svr`也一樣。 不過，如果`pwszBuildFlavor`設定為`svr` ，且指定了並行垃圾收集（ `startupFlags`請參閱參數的描述），則會載入伺服器組建。  
   
 > [!NOTE]
->  執行 WOW64 的應用程式中不支援並行記憶體回收 x86 實作 Intel Itanium 架構 （先前稱為 IA-64） 的 64 位元系統上的模擬器。 如需在 64 位元 Windows 系統上使用 WOW64 的詳細資訊，請參閱[執行的 32 位元應用程式](/windows/desktop/WinProg64/running-32-bit-applications)。  
+> 在執行 Intel Itanium 架構（先前稱為 IA-64）的64位系統上執行 WOW64 x86 模擬器的應用程式不支援並行垃圾收集。 如需在64位 Windows 系統上使用 WOW64 的詳細資訊，請參閱執行[32 位應用程式](/windows/desktop/WinProg64/running-32-bit-applications)。  
   
  `pwszHostConfigFile`  
- [in]指定要載入的 clr 版本的主機組態檔的名稱。 如果檔案名稱不包含完整的路徑，則會假設檔案是與正在進行呼叫之可執行檔相同的目錄中。  
+ 在主機設定檔的名稱，指定要載入的 CLR 版本。 如果檔案名不包含完整路徑，則會假設檔案與進行呼叫的可執行檔位於相同的目錄中。  
   
  `pReserved`  
- [in]保留供未來擴充。  
+ 在保留以供未來擴充性之用。  
   
  `startupFlags`  
- [in]一組控制並行記憶體回收、 定義域中性程式碼和行為的旗標`pwszVersion`參數。 如果沒有旗標設定，則預設會為單一網域。 如需支援的值，請參閱[STARTUP_FLAGS 列舉](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)。  
+ 在一組旗標，可控制並行垃圾收集、網域中性程式碼，以及`pwszVersion`參數的行為。 如果未設定旗標，則預設值為單一網域。 如需支援值的清單，請參閱[STARTUP_FLAGS 列舉](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)。  
   
  `rclsid`  
- [in]`CLSID`的實作的 coclass [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 在Coclass 的，其會執行 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 或 [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) 介面。`CLSID` 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
- [in]`IID`您所要求的介面。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
+ 在您所要求之介面的。 `IID` 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
   
  `ppv`  
- [out]已載入的執行階段版本介面指標。  
+ 脫銷載入的執行階段版本的介面指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

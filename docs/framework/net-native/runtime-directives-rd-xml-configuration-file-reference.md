@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
-ms.translationtype: MT
+ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052444"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988285"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>執行階段指示詞 (rd.xml) 組態檔參考
 
@@ -17,19 +17,19 @@ ms.locfileid: "66052444"
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
-<Application>
-  <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
-  <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
-  <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
-  <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
+  <Application>
+    <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
+    <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
+    <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
+    <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
 
-  <Namespace Name="System.Collections.ObjectModel" >
-    <TypeInstantiation Name="ObservableCollection"
-          Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
-    <TypeInstantiation Name="ReadOnlyObservableCollection"
-          Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
-  </Namespace>
-</Application>
+    <Namespace Name="System.Collections.ObjectModel" >
+      <TypeInstantiation Name="ObservableCollection"
+            Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
+      <TypeInstantiation Name="ReadOnlyObservableCollection"
+            Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
+    </Namespace>
+  </Application>
 </Directives>
 ```
 
@@ -41,27 +41,27 @@ ms.locfileid: "66052444"
 
 如需參考資訊，請從下列結構中選擇項目，或參閱[執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)。 在下列階層中，省略符號標記了遞迴結構。 方括號中的資訊指出該元素是選用或必要元素，以及如果使用該元素，可允許多少執行個體 (一個或多個)。
 
-[指示詞](../../../docs/framework/net-native/directives-element-net-native.md)[1:1][應用程式](../../../docs/framework/net-native/application-element-net-native.md)[0:1][組件](../../../docs/framework/net-native/assembly-element-net-native.md)[0: m][命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0: m]。 。 。
-[型別](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。 。 。
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) （建構的泛型型別） [0: m]。 。 。
-[命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0: m][命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0: m]。 。 。
-[型別](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。 。 。
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) （建構的泛型型別） [0: m]。 。 。
-[型別](../../../docs/framework/net-native/type-element-net-native.md)[0: m] [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) （包含類型的子類別） [O:1][類型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。 。 。
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) （建構的泛型型別） [0: m]。 。 。
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) （包含類型是屬性） [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m][方法](../../../docs/framework/net-native/method-element-net-native.md)[0: m][參數](../../../docs/framework/net-native/parameter-element-net-native.md)[0: m] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: m] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) （建構的泛型方法） [0: m][屬性](../../../docs/framework/net-native/property-element-net-native.md)[0: m][欄位](../../../docs/framework/net-native/field-element-net-native.md)[0: m][事件](../../../docs/framework/net-native/event-element-net-native.md)[0: m] [Typeinstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) （建構的泛型型別） [0: m][類型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。 。 。
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) （建構的泛型型別） [0: m]。 。 。
-[方法](../../../docs/framework/net-native/method-element-net-native.md)[0: m][參數](../../../docs/framework/net-native/parameter-element-net-native.md)[0: m] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: m] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (建構的泛型方法） [0: m][屬性](../../../docs/framework/net-native/property-element-net-native.md)[0: m][欄位](../../../docs/framework/net-native/field-element-net-native.md)[0: m][事件](../../../docs/framework/net-native/event-element-net-native.md)[0: m][文件庫](../../../docs/framework/net-native/library-element-net-native.md)[0: m] [組件](../../../docs/framework/net-native/assembly-element-net-native.md)[0: m][命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0: m]。 。 。
-[型別](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。 。 。
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) （建構的泛型型別） [0: m]。 。 。
-[命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0: m][命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0: m]。 。 。
-[型別](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。 。 。
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) （建構的泛型型別） [0: m]。 。 。
-[型別](../../../docs/framework/net-native/type-element-net-native.md)[0: m] [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) （包含類型的子類別） [O:1][類型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。 。 。
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) （建構的泛型型別） [0: m]。 。 。
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) （包含類型是屬性） [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m][方法](../../../docs/framework/net-native/method-element-net-native.md)[0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) （建構的泛型方法） [0: m][屬性](../../../docs/framework/net-native/property-element-net-native.md)[0: m][欄位](../../../docs/framework/net-native/field-element-net-native.md)[0: m][事件](../../../docs/framework/net-native/event-element-net-native.md)[0: m] [Typeinstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) （建構的泛型型別） [0:M][型別](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。 。 。
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) （建構的泛型型別） [0: m]。 。 。
-[方法](../../../docs/framework/net-native/method-element-net-native.md)[0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) （建構的泛型方法） [0: m][屬性](../../../docs/framework/net-native/property-element-net-native.md)[0: m][欄位](../../../docs/framework/net-native/field-element-net-native.md)[0: m][事件](../../../docs/framework/net-native/event-element-net-native.md)[0: m]
+[指示詞](../../../docs/framework/net-native/directives-element-net-native.md)[1:1][應用程式](../../../docs/framework/net-native/application-element-net-native.md)[0:1][元件](../../../docs/framework/net-native/assembly-element-net-native.md)[0： M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0： m]。 . .
+[類型](../../../docs/framework/net-native/type-element-net-native.md)[0： M]。 . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)（結構化的泛型型別）[0： M]。 . .
+[命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0： M][命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0： M]。 . .
+[類型](../../../docs/framework/net-native/type-element-net-native.md)[0： M]。 . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)（結構化的泛型型別）[0： M]。 . .
+[類型](../../../docs/framework/net-native/type-element-net-native.md)[0： M][子類型](../../../docs/framework/net-native/subtypes-element-net-native.md)（包含類型的子類別）O：1[類型](../../../docs/framework/net-native/type-element-net-native.md)[0： M]。 . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)（結構化的泛型型別）[0： M]。 . .
+[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)（包含類型是屬性）O：1[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md)[0： M][方法](../../../docs/framework/net-native/method-element-net-native.md)[0： M][參數](../../../docs/framework/net-native/parameter-element-net-native.md)[0： M][TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md)[0： M][GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md)[0： M][MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)（已結構化的泛型方法）[0： M][屬性](../../../docs/framework/net-native/property-element-net-native.md)[0： M][欄位](../../../docs/framework/net-native/field-element-net-native.md)[0： M][事件](../../../docs/framework/net-native/event-element-net-native.md)[0： M][TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)（結構化的泛型型別）[0： M][類型](../../../docs/framework/net-native/type-element-net-native.md)[0： M]。 . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)（結構化的泛型型別）[0： M]。 . .
+[方法](../../../docs/framework/net-native/method-element-net-native.md)[0： M][參數](../../../docs/framework/net-native/parameter-element-net-native.md)[0： M][TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md)[0： M][GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md)[0： M][MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)（已結構化的泛型方法）[0： M][屬性](../../../docs/framework/net-native/property-element-net-native.md)[0： M][欄位](../../../docs/framework/net-native/field-element-net-native.md)[0： M][事件](../../../docs/framework/net-native/event-element-net-native.md)[0： M]連結[庫](../../../docs/framework/net-native/library-element-net-native.md)[0： M][元件](../../../docs/framework/net-native/assembly-element-net-native.md)[0： M][命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0： M]。 . .
+[類型](../../../docs/framework/net-native/type-element-net-native.md)[0： M]。 . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)（結構化的泛型型別）[0： M]。 . .
+[命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0： M][命名空間](../../../docs/framework/net-native/namespace-element-net-native.md)[0： M]。 . .
+[類型](../../../docs/framework/net-native/type-element-net-native.md)[0： M]。 . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)（結構化的泛型型別）[0： M]。 . .
+[類型](../../../docs/framework/net-native/type-element-net-native.md)[0： M][子類型](../../../docs/framework/net-native/subtypes-element-net-native.md)（包含類型的子類別）O：1[類型](../../../docs/framework/net-native/type-element-net-native.md)[0： M]。 . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)（結構化的泛型型別）[0： M]。 . .
+[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)（包含類型是屬性）O：1[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md)[0： M][方法](../../../docs/framework/net-native/method-element-net-native.md)[0： M][MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)（已結構化的泛型方法）[0： M][屬性](../../../docs/framework/net-native/property-element-net-native.md)[0： M][欄位](../../../docs/framework/net-native/field-element-net-native.md)[0： M][事件](../../../docs/framework/net-native/event-element-net-native.md)[0： M][TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)（結構化的泛型型別）[0： M][類型](../../../docs/framework/net-native/type-element-net-native.md)[0： M]。 . .
+[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)（結構化的泛型型別）[0： M]。 . .
+[方法](../../../docs/framework/net-native/method-element-net-native.md)[0： M][MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)（已結構化的泛型方法）[0： M][屬性](../../../docs/framework/net-native/property-element-net-native.md)[0： M][欄位](../../../docs/framework/net-native/field-element-net-native.md)[0： M][事件](../../../docs/framework/net-native/event-element-net-native.md)[0： M]
 
 [Application](../../../docs/framework/net-native/application-element-net-native.md) 項目可以沒有任何屬性，或者可以有[執行階段指示詞和原則](#Directives)一節中所描述的原則屬性。
 
@@ -403,9 +403,9 @@ ms.locfileid: "66052444"
 
 - 欄位的類型會標示 `Serialize` 原則。
 
-#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer、 DataContractSerializer 和 DataContractJsonSerializer 原則的效果
+#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer、DataContractSerializer 和 DataContractJsonSerializer 原則的效果
 
-不同於`Serialize`原則，主要用於反映型序列化程式，這<xref:System.Xml.Serialization.XmlSerializer>， <xref:System.Runtime.Serialization.DataContractSerializer>，和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>原則用來啟用.NET Native 工具鏈已知的序列化程式的一組。 這些序列化程式不是使用反映來實作，但是可以用類似可反映式類型的方法，來判斷可以在執行階段序列化的類型集。
+不同于用於反映型<xref:System.Xml.Serialization.XmlSerializer>序列化程式的<xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> `Serialize`原則，、和原則是用來啟用一組 .NET Native 工具鏈已知的序列化程式。 這些序列化程式不是使用反映來實作，但是可以用類似可反映式類型的方法，來判斷可以在執行階段序列化的類型集。
 
 將這些原則的其中之一套用至類型，可讓該類型以相符的序列化程式來進行序列化。 此外，序列化引擎可以用靜態方式判斷為需要序列化的任何類型，也都可以序列化。
 

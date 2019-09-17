@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12daac766a09c297bfa129f69342ebad20977e7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d5b3d1d39b5d4c5b7d4db073b3ffaf1c6b88373
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780142"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799095"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob 函式
 使用位於所指定位址之可執行檔的二進位表示法填滿指定的緩衝區。  
   
- 此函式已被取代。 使用[iclrstrongname:: Strongnamegetblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)方法改為。  
+ 這個函數已被取代。 請改用[ICLRStrongName：： StrongNameGetBLob](../hosting/iclrstrongname-strongnamegetblob-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,31 +40,31 @@ BOOLEAN StrongNameGetBlob (
   
 ## <a name="parameters"></a>參數  
  `wszFilePath`  
- [in]可執行檔載入有效的路徑。  
+ 在要載入之可執行檔的有效路徑。  
   
  `pbBlob`  
- [in]在其中載入可執行檔的緩衝區。  
+ 在要載入可執行檔的緩衝區。  
   
  `pcbBlob`  
- [in、 out]所要求大小上限，以位元組為單位， `pbBlob`。 傳回時，實際的大小，以位元組為單位的`pbBlob`。  
+ [in、out]要求的大小上限（以位元組為單位`pbBlob`）。 傳回時，為的實際大小（以位元組為`pbBlob`單位）。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果成功地完成;否則， `false`。  
+ `true`成功完成時;否則為`false`。  
   
 ## <a name="remarks"></a>備註  
- 如果`StrongNameGetBlob`函式未順利完成，請呼叫[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函式來擷取最後一個產生的錯誤。  
+ 如果函式未順利完成，請呼叫 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函式，以取出最後產生的錯誤。`StrongNameGetBlob`  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** StrongName.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [StrongNameGetBlob 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [StrongNameGetBlobFromImage 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameGetBlob 方法](../hosting/iclrstrongname-strongnamegetblob-method.md)
+- [StrongNameGetBlobFromImage 方法](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)

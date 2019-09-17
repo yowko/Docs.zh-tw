@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751587"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796499"
 ---
-# <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 結構
-包含組件中的單一屬性的相關資訊和葀佹`DWORD`s。 每個`DWORD`是所產生的字元緩衝區位移`CurrentIntoBuffer`方法[IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)介面  
+# <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 結構
+包含元件中單一屬性的相關資訊，並由三個`DWORD`組成。 每`DWORD`個都是[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)介面的方法所`CurrentIntoBuffer`產生之字元緩衝區的位移  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,20 +42,20 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |成員|描述|  
 |------------|-----------------|  
-|`ofsNamespace`|第一個字元緩衝區位移。 屬性的命名空間，但一系列的 null 字元，不會遵循這個位移。 因此，它不會使用。|  
-|`ofsName`|第二個字元的緩衝區位移。 這個位置標記屬性的名稱開頭。|  
-|`ofsValue`|第三個字元的緩衝區位移。 這個位置標記的屬性值的開頭。|  
+|`ofsNamespace`|字元緩衝區的第一個位移。 這個位移後面不接屬性的命名空間，而是一系列的 null 字元。 因此，不會使用它。|  
+|`ofsName`|字元緩衝區的第二個位移。 這個位置會標示屬性名稱的開頭。|  
+|`ofsValue`|字元緩衝區中的第三個位移。 這個位置會標示屬性值的開頭。|  
   
 ## <a name="sample"></a>範例  
- 下列範例說明幾個基本步驟，最終導致填入`IDENTITY_ATTRIBUTE_BLOB`結構：  
+ 下列範例說明數個基本步驟，最後會產生一個已填入`IDENTITY_ATTRIBUTE_BLOB`的結構：  
   
-1. 取得[IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)組件。  
+1. 取得元件的[IReferenceIdentity](ireferenceidentity-interface.md) 。  
   
-2. 呼叫`IReferenceIdentity::EnumAttributes`方法，並取得[IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)。  
+2. 呼叫`IReferenceIdentity::EnumAttributes`方法，並取得 [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。  
   
-3. 建立字元的緩衝區，並將它轉換為`IDENTITY_ATTRIBUTE_BLOB`結構。  
+3. 建立字元緩衝區，並將它轉換成`IDENTITY_ATTRIBUTE_BLOB`結構。  
   
-4. 呼叫`CurrentIntoBuffer`方法的`IEnumIDENTITY_ATTRIBUTE`介面。 這個方法會複製屬性`Namespace`， `Name`，和`Value`字元緩衝區中。 這些字串的三個位移的可用在`IDENTITY_ATTRIBUTE_BLOB`結構。  
+4. 呼叫介面`IEnumIDENTITY_ATTRIBUTE`的方法。 `CurrentIntoBuffer` 這個方法會將屬性`Namespace`、 `Name`和`Value`複製到字元緩衝區。 這些字串的三個位移會在`IDENTITY_ATTRIBUTE_BLOB`結構中變成可用。  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -222,7 +222,7 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>若要執行範例  
- C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+ C：\\> EnumAssemblyAttributes .exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>範例輸出  
  文化特性 = 中性  
@@ -233,18 +233,18 @@ Exit:
   
  PublicKeyToken = b77a5c561934e089  
   
- 版本 = 2.0.0.0  
+ Version = 2.0.0。0  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Isolation.h  
+ **標頭：** 隔離。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IReferenceIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [IEnumIDENTITY_ATTRIBUTE 介面](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [IDENTITY_ATTRIBUTE 結構](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
-- [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [IReferenceIdentity 介面](ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE 介面](ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE 結構](identity-attribute-structure.md)
+- [融合結構](fusion-structures.md)

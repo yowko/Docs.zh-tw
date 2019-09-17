@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1fc128d15c56981f4bc6122e38e0514d006e29e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 926bdcee3a3c3974c8546f3a6dfe98f0b62c93c8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768616"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796565"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual 方法
-判斷指定[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件是否等於這個`IAssemblyName`，根據指定的比較旗標。  
+根據指定的比較旗標，判斷指定的`IAssemblyName`[IAssemblyName](iassemblyname-interface.md) 物件是否等於這個。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,19 +38,19 @@ HRESULT IsEqual (
   
 ## <a name="parameters"></a>參數  
  `pName`  
- [in]`IAssemblyName`物件所要比較這`IAssemblyName`。  
+ 在要`IAssemblyName`與之`IAssemblyName`比較的物件。  
   
  `dwCmpFlags`  
- [in]位元組合[ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md)影響比較的值。  
+ 在影響比較之[ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md)值的位元組合。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Fusion.h  
+ **標頭：** 融合。h  
   
- **NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.Net Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [融合列舉](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName 介面](iassemblyname-interface.md)
+- [融合列舉](fusion-enumerations.md)

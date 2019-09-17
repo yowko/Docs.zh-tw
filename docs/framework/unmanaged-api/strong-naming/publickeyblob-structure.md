@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75ba3fd634b108c996e848f48000ffcd0600b00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e66196e2bd2cb326ca3f5badc67bcf8d81e5fc3c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774579"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799169"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 結構
-以二進位格式，表示公用/私密金鑰組的公開金鑰。  
+代表公開/私密金鑰組的公開金鑰（二進位格式）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,26 +39,26 @@ typedef struct {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
-|`SigAlgId`|簽章演算法的識別項 (型別`ALG_ID`、 WinCrypt.h 中所定義) 的公開金鑰。|  
-|`HashAlgId`|雜湊演算法的識別項 (型別`ALG_ID`、 WinCrypt.h 中所定義) 的公開金鑰。|  
-|`cbPublicKey`|以位元組為單位的金鑰長度。|  
-|`PublicKey`|可變長度位元組陣列，其中包含的索引鍵值在 CryptoAPI 所傳回的格式。|  
+|`SigAlgId`|公開金鑰的簽章演算法識別碼（類型`ALG_ID`為，如 WinCrypt 中所定義）。|  
+|`HashAlgId`|公開金鑰的雜湊演算法識別碼（類型`ALG_ID`為，如 WinCrypt 中所定義）。|  
+|`cbPublicKey`|金鑰的長度（以位元組為單位）。|  
+|`PublicKey`|可變長度的位元組陣列，其中包含 CryptoAPI 所傳回之格式的索引鍵值。|  
   
 ## <a name="remarks"></a>備註  
- `PublicKeyBlob`結構由[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)， [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)，和其他的強式名稱函式，來代表公開/私密金鑰組的公開金鑰。  
+ [StrongNameGetPublicKey](strongnamegetpublickey-function.md) `PublicKeyBlob`、[StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)和其他強式名稱函式會使用此結構來代表公開/私密金鑰組的公開金鑰。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** StrongName.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [StrongNameGetPublicKey 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
-- [StrongNameSignatureGeneration 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
+- [StrongNameGetPublicKey 函式](strongnamegetpublickey-function.md)
+- [StrongNameSignatureGeneration 函式](strongnamesignaturegeneration-function.md)

@@ -2,35 +2,35 @@
 title: 執行個體初始化
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: e5dd48ce53fc45e9a970ff5b123860f057fb5759
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca135aca8f84ddf79ec7447e7fa7814f61984419
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648333"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989836"
 ---
 # <a name="instancing-initialization"></a>執行個體初始化
-這個範例會延續[Pooling](../../../../docs/framework/wcf/samples/pooling.md)範例藉由定義介面， `IObjectControl`，其中藉由啟動和停用自訂物件的初始化。 用戶端會叫用將物件傳回集區的方法，以及不將物件傳回集區的方法。  
+這個範例會藉由定義介面來擴充[共用](../../../../docs/framework/wcf/samples/pooling.md)樣本，`IObjectControl`，這會藉由啟用和停用來自訂物件的初始化。 用戶端會叫用將物件傳回集區的方法，以及不將物件傳回集區的方法。  
   
 > [!NOTE]
->  此範例的安裝程序與建置指示位於本主題的結尾。  
+> 此範例的安裝程序與建置指示位於本主題的結尾。  
   
 ## <a name="extensibility-points"></a>擴充點  
- 建立 Windows Communication Foundation (WCF) 擴充功能的第一個步驟是決定要使用的擴充性點。 在 WCF 中，詞彙*EndpointDispatcher*指負責將傳入訊息轉換成使用者的服務上的方法引動過程，以及將來自該方法的傳回值轉換為傳出訊息的執行階段元件. WCF 服務會建立每個端點 EndpointDispatcher。  
+ 建立 Windows Communication Foundation （WCF）延伸模組的第一個步驟是決定要使用的擴充點。 在 WCF 中， *EndpointDispatcher*一詞指的是執行時間元件，負責將傳入訊息轉換成使用者服務上的方法調用，以及將該方法的傳回值轉換成外寄訊息。 WCF 服務會為每個端點建立 EndpointDispatcher。  
   
  EndpointDispatcher 會使用 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 類別，為端點範圍 (針對服務已接收或傳送的所有訊息) 提供擴充性。 這個類別可讓您自訂各種屬性，以控制 EndpointDispatcher 的行為。 此範例著重於 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 屬性，這個屬性會指向提供服務類別之執行個體的物件。  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- 在 WCF 中，EndpointDispatcher 會建立服務類別的執行個體所使用的執行個體提供者可實作<xref:System.ServiceModel.Dispatcher.IInstanceProvider>介面。 這個介面只有兩個方法：  
+ 在 WCF 中，EndpointDispatcher 會<xref:System.ServiceModel.Dispatcher.IInstanceProvider>使用執行介面的執行個體提供者，建立服務類別的實例。 這個介面只有兩個方法：  
   
-- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>：當訊息抵達時，發送器會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>方法用來建立服務類別，來處理訊息的執行個體。 呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>，則會建立服務類別的執行個體來處理送達的每個訊息，這表示只要訊息一送達就會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>。  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>：當訊息抵達時，發送器會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>方法來建立服務類別的實例來處理訊息。 呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>，則會建立服務類別的執行個體來處理送達的每個訊息，這表示只要訊息一送達就會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>。  
   
-- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>：當服務執行個體完成處理訊息時，endpointdispatcher 就會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>方法。 如同 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法，呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>：當服務實例完成訊息的處理時，EndpointDispatcher 會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>方法。 如同 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法，呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。  
   
 ## <a name="the-object-pool"></a>物件集區  
  `ObjectPoolInstanceProvider` 類別包含物件集區 (Object Pool) 的實作。 這個類別會實作 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 介面，以便與服務模型層互動。 當 EndpointDispatcher 呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法而不是建立新執行個體時，自訂實作會在記憶體中集區尋找現有的物件。 如果找到了，就會將物件傳回。 否則，`ObjectPoolInstanceProvider` 會檢查 `ActiveObjectsCount` 屬性 (從集區傳回的物件數目) 是否已達到集區的大小上限。 如果未達到，則會建立新執行個體並傳回至呼叫者，接著 `ActiveObjectsCount` 就會遞增。 否則，物件建立要求會在預先設定的期間內加入佇列。 下列範例程式碼會示範 `GetObjectFromThePool` 實作。  
   
-```  
+```csharp  
 private object GetObjectFromThePool()  
 {  
     bool didNotTimeout =   
@@ -74,7 +74,7 @@ ResourceHelper.GetString("ExObjectCreationTimeout"));
   
  自訂 `ReleaseInstance` 實作會將釋放的執行個體新增回集區，並遞減 `ActiveObjectsCount` 值。 EndpointDispatcher 可以從不同的執行緒來呼叫這些方法，因此便需要在 `ObjectPoolInstanceProvider` 類別中同步存取類別層級的成員。  
   
-```  
+```csharp  
 public void ReleaseInstance(InstanceContext instanceContext, object instance)  
 {  
     lock (poolLock)  
@@ -125,9 +125,9 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
 }  
 ```  
   
- `ReleaseInstance`方法會提供*清除初始化*功能。 集區通常會在集區的存留期中保留最低限度數目的物件。 不過，可能有些時段會出現過度使用的情形，因而需要在集區中建立其他物件以達到組態中指定的上限。 最後當集區的活動變少時，這些多餘的物件可能會變成額外的負荷。 因此，當 `activeObjectsCount` 成為零時，閒置計時器就會啟動，以觸發並執行清除循環。  
+ 方法會提供*清除初始化*功能。 `ReleaseInstance` 集區通常會在集區的存留期中保留最低限度數目的物件。 不過，可能有些時段會出現過度使用的情形，因而需要在集區中建立其他物件以達到組態中指定的上限。 最後當集區的活動變少時，這些多餘的物件可能會變成額外的負荷。 因此，當 `activeObjectsCount` 成為零時，閒置計時器就會啟動，以觸發並執行清除循環。  
   
-```  
+```csharp  
 if (activeObjectsCount == 0)  
 {  
     idleTimer.Start();   
@@ -138,11 +138,11 @@ if (activeObjectsCount == 0)
   
 - 服務行為：這些行為允許自訂整個服務執行階段。  
   
-- 端點行為：這些行為允許自訂特定服務端點，包括 EndpointDispatcher。  
+- 端點行為：這些可讓您自訂特定的服務端點，包括 EndpointDispatcher。  
   
-- 合約行為：這些行為允許自訂<xref:System.ServiceModel.Dispatcher.ClientRuntime>或<xref:System.ServiceModel.Dispatcher.DispatchRuntime>分別為類別在用戶端或服務。  
+- 合約行為：這些可讓您分別在客戶<xref:System.ServiceModel.Dispatcher.ClientRuntime>端<xref:System.ServiceModel.Dispatcher.DispatchRuntime>或服務上自訂或類別。  
   
-- 作業行為：這些行為允許自訂<xref:System.ServiceModel.Dispatcher.ClientOperation>或<xref:System.ServiceModel.Dispatcher.DispatchOperation>分別為類別在用戶端或服務。  
+- 作業行為：這些可讓您分別在客戶<xref:System.ServiceModel.Dispatcher.ClientOperation>端<xref:System.ServiceModel.Dispatcher.DispatchOperation>或服務上自訂或類別。  
   
  若要做為物件共用延伸項目的用途，可以建立端點行為或服務行為。 這個範例採用服務行為，服務行為可以將物件共用能力套用至服務的每個端點。 服務行為是藉由實作 <xref:System.ServiceModel.Description.IServiceBehavior> 介面來建立。 有一些方法可以讓 ServiceModel 察覺自訂行為：  
   
@@ -154,15 +154,15 @@ if (activeObjectsCount == 0)
   
  這個範例會使用自訂屬性。 建構 <xref:System.ServiceModel.ServiceHost> 時，會檢查服務型別定義中使用的屬性，並將可用的行為加入至服務描述的行為集合。  
   
- <xref:System.ServiceModel.Description.IServiceBehavior>介面有三個方法： <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,`和<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 WCF 會呼叫這些方法時<xref:System.ServiceModel.ServiceHost>正在初始化。 首先會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>，這個方法允許檢查服務有無不一致之處。 接著會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>，這個方法只有在非常進階的狀況中才需要使用。 最後會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>，這個方法負責設定執行階段。 下列參數會傳遞至 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>：  
+ <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` 介面有`,`三個方法： <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>和。<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> <xref:System.ServiceModel.Description.IServiceBehavior> 當初始化時<xref:System.ServiceModel.ServiceHost> ，WCF 會呼叫這些方法。 首先會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>，這個方法允許檢查服務有無不一致之處。 接著會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>，這個方法只有在非常進階的狀況中才需要使用。 最後會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>，這個方法負責設定執行階段。 下列參數會傳遞至 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>：  
   
-- `Description`：這個參數提供整個服務的服務描述。 可以用來檢查有關服務端點、合約、繫結程序以及與服務相關聯之其他資料的描述資料。  
+- `Description`：這個參數會提供整個服務的服務描述。 可以用來檢查有關服務端點、合約、繫結程序以及與服務相關聯之其他資料的描述資料。  
   
-- `ServiceHostBase`：這個參數提供<xref:System.ServiceModel.ServiceHostBase>，目前正在初始化。  
+- `ServiceHostBase`：這個參數會提供<xref:System.ServiceModel.ServiceHostBase>目前正在初始化的。  
   
  在自訂 <xref:System.ServiceModel.Description.IServiceBehavior> 實作中，會為 `ObjectPoolInstanceProvider` 產生新的執行個體，並將新執行個體指派至附加到 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 之每個 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 中的 <xref:System.ServiceModel.ServiceHostBase> 屬性。  
   
-```  
+```csharp  
 public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBase serviceHostBase)  
 {  
     if (enabled)  
@@ -190,9 +190,9 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  除了 <xref:System.ServiceModel.Description.IServiceBehavior> 實作之外，`ObjectPoolingAttribute` 類別還有數個可以使用屬性引數來自訂物件集區的成員。 這些成員包括 `MaxSize`、`MinSize`、`Enabled` 和 `CreationTimeout`，可用來比對 .NET Enterprise Services 提供的物件共用功能集。  
   
- 將物件共用行為現在可以新增至 WCF 服務使用新建立的自訂服務實作加上附註`ObjectPooling`屬性。  
+ 藉由使用新建立的自訂`ObjectPooling`屬性來標注服務執行，現在可以將物件共用行為新增至 WCF 服務。  
   
-```  
+```csharp  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      
 public class PoolService : IPoolService  
 {  
@@ -205,9 +205,9 @@ public class PoolService : IPoolService
   
  物件集區會在從集區傳回物件之前，呼叫 `Activate` 方法。 當物件傳回集區時，會呼叫 `Deactivate`。 <xref:System.EnterpriseServices.ServicedComponent> 基底類別也有名為 `boolean` 的 `CanBePooled` 屬性，可以用來通知集區是否能進一步共用物件。  
   
- 為了模擬此功能，範例會宣告具有上述成員的公用介面 (`IObjectControl`)。 接著，服務類別會實作這個介面，以提供內容特定的初始化。 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 實作必須經過修改，才能符合這些需求。 現在，每當您取得的物件呼叫`GetInstance`方法，您必須檢查物件是否實作`IObjectControl.`若是如此，您必須呼叫`Activate`方法適當地。  
+ 為了模擬此功能，範例會宣告具有上述成員的公用介面 (`IObjectControl`)。 接著，服務類別會實作這個介面，以提供內容特定的初始化。 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 實作必須經過修改，才能符合這些需求。 現在，每次您藉由呼叫`GetInstance`方法來取得物件時，您必須檢查`IObjectControl.`物件是否執行`Activate` ，如果有的話，您必須適當地呼叫方法。  
   
-```  
+```csharp  
 if (obj is IObjectControl)  
 {  
     ((IObjectControl)obj).Activate();  
@@ -216,7 +216,7 @@ if (obj is IObjectControl)
   
  將物件傳回集區時，必須先檢查 `CanBePooled` 屬性，才能將物件新增回集區。  
   
-```  
+```csharp  
 if (instance is IObjectControl)  
 {  
     IObjectControl objectControl = (IObjectControl)instance;  
@@ -230,7 +230,7 @@ if (instance is IObjectControl)
   
  由於服務開發人員可以決定是否可以共用物件，在特定時間內，集區中的物件計數可能會低於大小下限。 因此，您必須檢查物件計數是否曾經低於最低層級，並且在清除程序中執行必要的初始化。  
   
-```  
+```csharp  
 // Remove the surplus objects.  
 if (pool.Count > minPoolSize)  
 {  
@@ -250,17 +250,17 @@ else if (pool.Count < minPoolSize)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
   
-3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  

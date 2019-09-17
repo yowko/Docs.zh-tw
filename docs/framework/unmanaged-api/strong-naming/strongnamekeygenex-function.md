@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2ed9ba4b580b8f64fc05dbb429742442a36acf5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f9ab908866402bd7a883114466f32921321a5ee6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757459"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799007"
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx 函式
-會產生新公用/私密金鑰組以指定的金鑰大小，用於強式名稱。  
+產生具有指定金鑰大小的新公開/私密金鑰組，以供強式名稱使用。  
   
- 此函式已被取代。 使用[iclrstrongname:: Strongnamekeygenex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)方法改為。  
+ 這個函數已被取代。 請改用[ICLRStrongName：： StrongNameKeyGenEx](../hosting/iclrstrongname-strongnamekeygenex-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,45 +42,45 @@ BOOLEAN StrongNameKeyGenEx (
   
 ## <a name="parameters"></a>參數  
  `wszKeyContainer`  
- [in]要求的金鑰容器名稱。 `wszKeyContainer` 必須是空字串，或為 null 來產生暫存名稱。  
+ 在要求的金鑰容器名稱。 `wszKeyContainer`必須是非空白字串，否則為 null，以產生暫存名稱。  
   
  `dwFlags`  
- [in]指定是否要保留已註冊的金鑰。 支援下列值：  
+ 在指定是否要保留註冊的金鑰。 支援下列值：  
   
-- 0x00000000-時使用`wszKeyContainer`以產生暫時的金鑰容器名稱為 null。  
+- 0x00000000-在為`wszKeyContainer` null 時使用，以產生暫存金鑰容器名稱。  
   
-- 0x00000001 (`SN_LEAVE_KEY`)-指定應該向左註冊金鑰。  
+- 0x00000001 （`SN_LEAVE_KEY`）-指定應將金鑰保留為已註冊。  
   
  `dwKeySize`  
- [in]要求的大小，以位元的金鑰。  
+ 在要求的金鑰大小（以位為單位）。  
   
  `ppbKeyBlob`  
- [out]傳回的 public/private 金鑰組。  
+ 脫銷傳回的公開/私密金鑰組。  
   
  `pcbKeyBlob`  
- [out]大小，以位元組為單位的`ppbKeyBlob`。  
+ 脫銷的大小（以位元組為單位`ppbKeyBlob`）。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果成功地完成;否則， `false`。  
+ `true`成功完成時;否則為`false`。  
   
 ## <a name="remarks"></a>備註  
- .NET framework 1.0 和 1.1 版需要`dwKeySize`簽署組件以強式名稱; 1024 位元的 2.0 版新增 2048年位元金鑰的支援。  
+ .NET Framework 版本1.0 和1.1 需要`dwKeySize` 1024 位以強式名稱簽署元件; 版本2.0 新增了支援的2048位金鑰。  
   
- 擷取索引鍵之後，您應該呼叫[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函式來釋放配置的記憶體。  
+ 在取得金鑰之後，您應該呼叫[StrongNameFreeBuffer](strongnamefreebuffer-function.md)函式以釋放已配置的記憶體。  
   
- 如果`StrongNameKeyGenEx`函式未順利完成，請呼叫[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函式來擷取最後一個產生的錯誤。  
+ 如果函式未順利完成，請呼叫 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函式，以取出最後產生的錯誤。`StrongNameKeyGenEx`  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** StrongName.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [StrongNameKeyGenEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
-- [StrongNameKeyGen 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameKeyGenEx 方法](../hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [StrongNameKeyGen 方法](../hosting/iclrstrongname-strongnamekeygen-method.md)
+- [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)

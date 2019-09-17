@@ -10,21 +10,21 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 76976f1599ecbbaf7405d7941f66aa2c5f955565
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2547c0aa2f3a14080868c2760fa8999eb99d3d16
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598959"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046321"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>攔截手寫筆的輸入
-<xref:System.Windows.Input.StylusPlugIns>架構提供一個機制，透過實作的低階控制<xref:System.Windows.Input.Stylus>輸入和建立數位筆墨<xref:System.Windows.Ink.Stroke>物件。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>類別會提供您實作自訂行為，並將它套用到來自手寫筆裝置，以獲得最佳的效能資料的資料流的機制。  
+此<xref:System.Windows.Input.StylusPlugIns>架構提供一種機制，可讓您對<xref:System.Windows.Input.Stylus>輸入和數位筆跡<xref:System.Windows.Ink.Stroke>物件的建立執行低層級的控制。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>類別提供一種機制，可讓您執行自訂行為，並將其套用至來自手寫筆裝置的資料流程，以獲得最佳效能。  
   
  本主題包含下列子章節：  
   
 - [架構](#Architecture)  
   
-- [實作的手寫筆外掛程式](#ImplementingStylusPlugins)  
+- [執行手寫筆外掛程式](#ImplementingStylusPlugins)  
   
 - [將外掛程式新增至 InkCanvas](#AddingYourPluginToAnInkCanvas)  
   
@@ -32,20 +32,20 @@ ms.locfileid: "64598959"
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>架構  
- <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>是的進化[StylusInput](https://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409)所述的 Api[存取和操作手寫筆輸入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)中[Microsoft Windows XP Tablet PC Edition 軟體Development Kit 1.7](https://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409)。  
+ <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 是 [StylusInput](https://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) api 的演進，在[Microsoft Windows XP Tablet PC Edition 軟體發展工具組 1.7](https://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409)中[是存取和操作手寫筆輸入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)中所述。  
   
- 每個<xref:System.Windows.UIElement>已經<xref:System.Windows.UIElement.StylusPlugIns%2A>屬於屬性<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>。 您可以加入<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>的項目<xref:System.Windows.UIElement.StylusPlugIns%2A>屬性來操作<xref:System.Windows.Input.StylusPoint>資料，因為它會產生。 <xref:System.Windows.Input.StylusPoint> 資料包含所有所支援的屬性系統潀糔蠮，包括<xref:System.Windows.Input.StylusPoint.X%2A>並<xref:System.Windows.Input.StylusPoint.Y%2A>點的資料，以及<xref:System.Windows.Input.StylusPoint.PressureFactor%2A>資料。  
+ 每<xref:System.Windows.UIElement>個都<xref:System.Windows.UIElement.StylusPlugIns%2A>有一個<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>屬性，其為。 您可以將加入<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>至專案的<xref:System.Windows.UIElement.StylusPlugIns%2A>屬性，以在<xref:System.Windows.Input.StylusPoint>產生資料時操作它。 <xref:System.Windows.Input.StylusPoint>資料是由系統數位板支援的所有屬性所組成，包括<xref:System.Windows.Input.StylusPoint.X%2A>和<xref:System.Windows.Input.StylusPoint.Y%2A>點<xref:System.Windows.Input.StylusPoint.PressureFactor%2A>資料，以及資料。  
   
- 您<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>物件會直接插入到資料來源的資料流<xref:System.Windows.Input.Stylus>當您新增的裝置<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>到<xref:System.Windows.UIElement.StylusPlugIns%2A>屬性。 在其中加入外掛程式的順序<xref:System.Windows.UIElement.StylusPlugIns%2A>集合會指定將接收的順序<xref:System.Windows.Input.StylusPoint>資料。 比方說，如果您加入篩選外掛程式，將限制為特定區域中，輸入，然後新增 會辨識手勢，正在寫入的外掛程式，可辨識的筆勢的外掛程式將會收到篩選<xref:System.Windows.Input.StylusPoint>資料。  
+ 當<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> <xref:System.Windows.Input.Stylus> 您將<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>加入至屬性時，會將您的物件直接插入至來自裝置的資料串流。<xref:System.Windows.UIElement.StylusPlugIns%2A> 外掛程式新增至<xref:System.Windows.UIElement.StylusPlugIns%2A>集合的順序會決定它們接收<xref:System.Windows.Input.StylusPoint>資料的順序。 例如，如果您加入的篩選外掛程式會將輸入限制在特定區域，然後加入可辨識書寫筆勢的外掛程式，則可辨識手勢的外掛程式將會接收篩選<xref:System.Windows.Input.StylusPoint>的資料。  
   
 <a name="ImplementingStylusPlugins"></a>   
-## <a name="implementing-stylus-plug-ins"></a>實作的手寫筆外掛程式  
- 若要實作的外掛程式，衍生的類別<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>。 這個類別是套用的 i/o 資料流，因為它是來自<xref:System.Windows.Input.Stylus>。 在這個類別中，您可以修改的值<xref:System.Windows.Input.StylusPoint>資料。  
+## <a name="implementing-stylus-plug-ins"></a>執行手寫筆外掛程式  
+ 若要執行外掛程式，請從<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>衍生類別。 此類別會套用至從<xref:System.Windows.Input.Stylus>傳入的資料流程。 在此類別中，您可以修改<xref:System.Windows.Input.StylusPoint>資料的值。  
   
 > [!CAUTION]
->  如果<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>會擲回，或造成例外狀況時，應用程式即將關閉。 您應該徹底測試使用的控制項<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>而且只能使用控制項，如果您確定<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>不會擲回例外狀況。  
+> <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>如果擲回或造成例外狀況，應用程式將會關閉。 您應該徹底測試使用的<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>控制項，而且只有在您<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>確定不會擲回例外狀況時，才會使用控制項。  
   
- 下列範例示範外掛程式，將手寫筆輸入限制藉由修改<xref:System.Windows.Input.StylusPoint.X%2A>並<xref:System.Windows.Input.StylusPoint.Y%2A>中的值<xref:System.Windows.Input.StylusPoint>資料，因為它是來自<xref:System.Windows.Input.Stylus>裝置。  
+ 下列範例示範外掛程式，它會<xref:System.Windows.Input.StylusPoint.X%2A>在從<xref:System.Windows.Input.Stylus>裝置傳入的<xref:System.Windows.Input.StylusPoint>資料中修改和<xref:System.Windows.Input.StylusPoint.Y%2A>值，以限制手寫筆輸入。  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -54,23 +54,23 @@ ms.locfileid: "64598959"
   
 <a name="AddingYourPluginToAnInkCanvas"></a>   
 ## <a name="adding-your-plug-in-to-an-inkcanvas"></a>將外掛程式新增至 InkCanvas  
- 若要使用您的自訂外掛程式的最簡單方式是實作衍生自 InkCanvas 類別，並將它加入<xref:System.Windows.UIElement.StylusPlugIns%2A>屬性。  
+ 使用自訂外掛程式最簡單的方式，就是執行衍生自 InkCanvas 的類別，並將它加入至<xref:System.Windows.UIElement.StylusPlugIns%2A>屬性。  
   
- 下列範例示範自訂<xref:System.Windows.Controls.InkCanvas>篩選筆墨。  
+ 下列範例示範篩選筆墨的<xref:System.Windows.Controls.InkCanvas>自訂。  
   
  [!code-csharp[AdvancedInkTopicsSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
- 如果您新增`FilterInkCanvas`到您的應用程式並執行它，您會注意到使用者完成以筆劃後筆墨，不限於之前的區域。 這是因為<xref:System.Windows.Controls.InkCanvas>已<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>屬性，亦即<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>且已經隸屬<xref:System.Windows.UIElement.StylusPlugIns%2A>集合。 自訂<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>新增至您<xref:System.Windows.UIElement.StylusPlugIns%2A>集合接收<xref:System.Windows.Input.StylusPoint>後的資料<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>接收資料。 如此一來，<xref:System.Windows.Input.StylusPoint>資料將不會篩選直到使用者拿起畫筆筆觸的結束之後。 若要篩選使用者將它繪製筆墨，您必須插入`FilterPlugin`之前<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。  
+ 如果您將新增`FilterInkCanvas`至您的應用程式並加以執行，您會注意到，在使用者完成筆劃之前，筆跡不會限制為區域。 這<xref:System.Windows.Controls.InkCanvas>是因為<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>具有<xref:System.Windows.UIElement.StylusPlugIns%2A>屬性，這是，而且已經是集合的成員。<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 您新增<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> <xref:System.Windows.Input.StylusPoint>至集合的自訂會在收到資料<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>之後接收資料。 <xref:System.Windows.UIElement.StylusPlugIns%2A> 因此，在使用者提起<xref:System.Windows.Input.StylusPoint>畫筆以結束筆劃之前，將不會篩選資料。 若要在使用者繪製時篩選筆墨，您必須在`FilterPlugin` <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>之前插入。  
   
- 下列 C# 程式碼示範了自訂<xref:System.Windows.Controls.InkCanvas>，篩選它是繪製的筆墨。  
+ 下列C#程式碼示範的自<xref:System.Windows.Controls.InkCanvas>定義會篩選繪製的筆墨。  
   
  [!code-csharp[AdvancedInkTopicsSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
 ## <a name="conclusion"></a>結論  
- 藉由衍生您自己<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>類別和插入到<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>集合，即可大幅提高您的數位筆跡的行為。 您可以存取<xref:System.Windows.Input.StylusPoint>做為它產生的資料，讓您有機會自訂<xref:System.Windows.Input.Stylus>輸入。 因為您有這類低層級的存取權<xref:System.Windows.Input.StylusPoint>資料，您可以為您的應用程式實作筆跡收集和呈現以獲得最佳效能。  
+ 藉由衍生您<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>自己的類別，並<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>將其插入集合中，您可以大幅增強數位筆跡的行為。 您可以存取產生的<xref:System.Windows.Input.StylusPoint>資料，讓您有機會<xref:System.Windows.Input.Stylus>自訂輸入。 因為您有這類資料的<xref:System.Windows.Input.StylusPoint>低層級存取權，所以您可以使用應用程式的最佳效能來執行筆墨集合和呈現。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [筆跡進階處理](advanced-ink-handling.md)
-- [存取和管理手寫筆輸入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+- [存取和操作手寫筆輸入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

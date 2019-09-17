@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b076c39ccf40ca5b613cab94ecc75716158d97a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b99b29a85f498a6bfa0363a446bf589876bff9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780117"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799094"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage 函式
 取得位於所指定記憶體位置之組件影像的二進位表示法。  
   
- 此函式已被取代。 使用[iclrstrongname:: Strongnamegetblobfromimage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)方法改為。  
+ 這個函數已被取代。 請改用[ICLRStrongName：： StrongNameGetBlobFromImage](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,34 +41,34 @@ BOOLEAN StrongNameGetBlobFromImage (
   
 ## <a name="parameters"></a>參數  
  `pbBase`  
- [in]對應的組件資訊清單的記憶體位址。  
+ 在對應的組件資訊清單的記憶體位址。  
   
  `dwLength`  
- [in]大小 （位元組），在映像的`pbBase`。  
+ 在影像的大小（以位元組為單位） `pbBase`。  
   
  `pbBlob`  
- [in]包含影像的二進位表示法的緩衝區。  
+ 在包含影像之二進位表示的緩衝區。  
   
  `pcbBlob`  
- [in、 out]所要求大小上限，以位元組為單位， `pbBlob`。 傳回時，實際的大小，以位元組為單位的`pbBlob`。  
+ [in、out]要求的大小上限（以位元組為單位`pbBlob`）。 傳回時，為的實際大小（以位元組為`pbBlob`單位）。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果成功地完成;否則， `false`。  
+ `true`成功完成時;否則為`false`。  
   
 ## <a name="remarks"></a>備註  
- 如果`StrongNameGetBlobFromImage`函式未順利完成，請呼叫[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函式來擷取最後一個產生的錯誤。  
+ 如果函式未順利完成，請呼叫 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函式，以取出最後產生的錯誤。`StrongNameGetBlobFromImage`  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** StrongName.h  
+ **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [StrongNameGetBlobFromImage 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
-- [StrongNameGetBlob 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameGetBlobFromImage 方法](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [StrongNameGetBlob 方法](../hosting/iclrstrongname-strongnamegetblob-method.md)
+- [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)
