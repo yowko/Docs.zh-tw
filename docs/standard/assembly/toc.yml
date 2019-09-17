@@ -1,11 +1,66 @@
 - name: .NET 中的組件
   href: index.md
   items:
-    - name: Friend 組件
-      items:
-        - name: 概觀
-          href: friend-assemblies.md
-    - name: .NET 組件檔格式
+    - name: 組件內容
+      href: contents.md
+    - name: 資訊清單
+      href: manifest.md
+    - name: 強式名稱組件
+      href: strong-named.md
+    - name: 組件安全性考量
+      href: security-considerations.md
+    - name: 組件版本控制
+      href: versioning.md
+    - name: 組件和並存執行
+      href: side-by-side-execution.md
+    - name: 組件檔格式
       href: file-format.md
-    - name: 如何使用 .NET Core 中的組件卸載功能及對其進行偵錯
-      href: unloadability-howto.md
+    - name: 作法：使用 .NET Core 中的組件卸載功能及為其偵錯
+      href: unloadability.md
+    - name: 解析組件負載
+      href: resolve-loads.md
+    - name: 具有組件的程式
+      href: program.md
+      items:
+        - name: 建立組件
+          href: create.md
+        - name: 組件名稱
+          href: names.md
+        - name: 作法：尋找組件的完整名稱
+          href: find-fully-qualified-name.md
+        - name: 組件位置
+          href: location.md
+        - name: 設定組件屬性
+          href: set-attributes.md
+        - name: 建立和使用強式名稱的組件
+          href: create-use-strong-named.md
+          items:
+            - name: 作法：建立公開/私密金鑰組
+              href: create-public-private-key-pair.md
+            - name: 作法：使用強式名稱簽署組件
+              href: sign-strong-name.md
+            - name: 增強的強式命名
+              href: enhanced-strong-naming.md
+            - name: 作法：參考強式命名的組件
+              href: reference-strong-named.md
+            - name: 作法：停用強式名稱略過功能
+              href: disable-strong-name-bypass-feature.md
+        - name: 延遲簽署組件
+          href: delay-sign.md
+        - name: 作法：檢視組件內容
+          href: view-contents.md
+        - name: Common Language Runtime 中的類型轉送
+          href: type-forwarding.md
+        - name: Friend 組件
+          href: friend.md
+          items:
+            - name: 作法：建立未簽署的 Friend 組件
+              href: create-unsigned-friend.md
+            - name: 作法：建立已簽署的 Friend 組件
+              href: create-signed-friend.md
+        - name: 作法：判斷檔案是否為組件
+          href: identify.md
+        - name: 作法：載入和卸載組件
+          href: load-unload.md
+        - name: 逐步解說：在 Visual Studio 中內嵌來自受控組件的類型
+          href: embed-types-visual-studio.md
