@@ -6,7 +6,7 @@ metadata:
   title: ML.NET 文件 - 教學課程、API 參考
   meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
   ms.topic: landing-page
-  ms.date: 08/15/2019
+  ms.date: 09/16/2019
   ms.author: nakersha
   author: natke
 abstract:
@@ -28,12 +28,14 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">使用矩陣分解來建立電影推薦工具</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">使用 TensorFlow 建置自訂影像分類器</a>
           - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">使用 ONNX 偵測影像中的物件</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/text-classification-tf">使用 TensorFlow 分類電影評論的情感</a>
       - type: paragraph
         text: <b>使用模型</b>產生器，這是圖形 Visual Studio 擴充功能：
       - type: list
         style: unordered
         items:
           - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">使用模型產生器預測價格</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis-model-builder">建立 Razor Pages web 應用程式來分析情感</a>
       - type: paragraph
         text: <b>執行 ML.NET CLI</b>：
       - type: list

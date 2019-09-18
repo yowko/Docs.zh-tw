@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98ddbdb9-66b1-4080-92ad-51f5c447fcf8
-ms.openlocfilehash: 5c9a81fc61a2272056ba34fa387fdafee6203824
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 05b6f6c3f0f1fc1b36b60e8b0dae50de2826aba4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079496"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048256"
 ---
-# <a name="how-to-register-a-custom-protocol-using-webrequest"></a><span data-ttu-id="e868e-102">HOW TO：使用 WebRequest 註冊自訂通訊協定</span><span class="sxs-lookup"><span data-stu-id="e868e-102">How to: Register a Custom Protocol Using WebRequest</span></span>
-<span data-ttu-id="e868e-103">這個範例示範如何註冊在其他位置定義的通訊協定特定類別。</span><span class="sxs-lookup"><span data-stu-id="e868e-103">This example shows how to register a protocol specific class that is defined elsewhere.</span></span> <span data-ttu-id="e868e-104">在此範例中，`CustomWebRequestCreator` 是使用者實作的物件，其可實作 `CustomWebRequest` 物件傳回的 **Create**方法。</span><span class="sxs-lookup"><span data-stu-id="e868e-104">In this example, `CustomWebRequestCreator` is the user-implemented object that implements the **Create** method that returns the `CustomWebRequest` object.</span></span> <span data-ttu-id="e868e-105">此程式碼範例假設您已撰寫實作自訂通訊協定的 `CustomWebRequest` 程式碼。</span><span class="sxs-lookup"><span data-stu-id="e868e-105">The code example assumes that you have written the `CustomWebRequest` code that implements the custom protocol.</span></span>  
+# <a name="how-to-register-a-custom-protocol-using-webrequest"></a><span data-ttu-id="df819-102">HOW TO：使用 WebRequest 註冊自訂通訊協定</span><span class="sxs-lookup"><span data-stu-id="df819-102">How to: Register a Custom Protocol Using WebRequest</span></span>
+<span data-ttu-id="df819-103">這個範例示範如何註冊在其他位置定義的通訊協定特定類別。</span><span class="sxs-lookup"><span data-stu-id="df819-103">This example shows how to register a protocol specific class that is defined elsewhere.</span></span> <span data-ttu-id="df819-104">在此範例中，`CustomWebRequestCreator` 是使用者實作的物件，其可實作 `CustomWebRequest` 物件傳回的 **Create**方法。</span><span class="sxs-lookup"><span data-stu-id="df819-104">In this example, `CustomWebRequestCreator` is the user-implemented object that implements the **Create** method that returns the `CustomWebRequest` object.</span></span> <span data-ttu-id="df819-105">此程式碼範例假設您已撰寫實作自訂通訊協定的 `CustomWebRequest` 程式碼。</span><span class="sxs-lookup"><span data-stu-id="df819-105">The code example assumes that you have written the `CustomWebRequest` code that implements the custom protocol.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e868e-106">範例</span><span class="sxs-lookup"><span data-stu-id="e868e-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="df819-106">範例</span><span class="sxs-lookup"><span data-stu-id="df819-106">Example</span></span>  
   
 ```csharp  
 WebRequest.RegisterPrefix("custom", new CustomWebRequestCreator());  
@@ -27,11 +27,11 @@ WebRequest.RegisterPrefix("custom", New CustomWebRequestCreator())
 Dim req As WebRequest = WebRequest.Create("custom://customHost.contoso.com/")  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e868e-107">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="e868e-107">Compiling the Code</span></span>  
- <span data-ttu-id="e868e-108">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="e868e-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="df819-107">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="df819-107">Compiling the Code</span></span>  
+ <span data-ttu-id="df819-108">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="df819-108">This example requires:</span></span>  
   
- <span data-ttu-id="e868e-109">對 <xref:System.Net> 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="e868e-109">References to the <xref:System.Net> namespace.</span></span>  
+ <span data-ttu-id="df819-109">對 <xref:System.Net> 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="df819-109">References to the <xref:System.Net> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e868e-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e868e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df819-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="df819-110">See also</span></span>
 
-- [<span data-ttu-id="e868e-111">可插式通訊協定程式設計</span><span class="sxs-lookup"><span data-stu-id="e868e-111">Programming Pluggable Protocols</span></span>](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [<span data-ttu-id="df819-111">可插式通訊協定程式設計</span><span class="sxs-lookup"><span data-stu-id="df819-111">Programming Pluggable Protocols</span></span>](programming-pluggable-protocols.md)

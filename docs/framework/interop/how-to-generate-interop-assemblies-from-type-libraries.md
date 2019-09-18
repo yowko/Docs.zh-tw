@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從型別程式庫產生 Interop 組件
+title: 作法：從型別程式庫產生 Interop 組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -10,38 +10,38 @@ helpviewer_keywords:
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a3ee82a9091f0caeee010ec79632ce703efb589
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: fcdff732afce90f725f4730f0054296e389ada1b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338835"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051792"
 ---
-# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a><span data-ttu-id="62e9b-102">HOW TO：從型別程式庫產生 Interop 組件</span><span class="sxs-lookup"><span data-stu-id="62e9b-102">How to: Generate Interop Assemblies from Type Libraries</span></span>
-<span data-ttu-id="62e9b-103">[型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 是一種命令列工具，可將 COM 類型程式庫中包含的 Coclass 和介面轉換為中繼資料。</span><span class="sxs-lookup"><span data-stu-id="62e9b-103">The [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) is a command-line tool that converts the coclasses and interfaces contained in a COM type library to metadata.</span></span> <span data-ttu-id="62e9b-104">這個工具會自動為類型資訊建立 Interop 組件和命名空間。</span><span class="sxs-lookup"><span data-stu-id="62e9b-104">This tool creates an interop assembly and namespace for the type information automatically.</span></span> <span data-ttu-id="62e9b-105">當類別的中繼資料可供使用之後，Managed 用戶端就可以建立 COM 類型的執行個體並呼叫其方法，就如同它是 .NET 執行個體一樣。</span><span class="sxs-lookup"><span data-stu-id="62e9b-105">After the metadata of a class is available, managed clients can create instances of the COM type and call its methods, just as if it were a .NET instance.</span></span> <span data-ttu-id="62e9b-106">Tlbimp.exe 會一次將整個型別程式庫轉換為中繼資料，而且不能為型別程式庫中定義的類型子集產生類型資訊。</span><span class="sxs-lookup"><span data-stu-id="62e9b-106">Tlbimp.exe converts an entire type library to metadata at once and cannot generate type information for a subset of the types defined in a type library.</span></span>  
+# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a><span data-ttu-id="77be0-102">作法：從型別程式庫產生 Interop 組件</span><span class="sxs-lookup"><span data-stu-id="77be0-102">How to: Generate Interop Assemblies from Type Libraries</span></span>
+<span data-ttu-id="77be0-103">[型別程式庫匯入工具 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 是一種命令列工具，可將 COM 類型程式庫中包含的 Coclass 和介面轉換為中繼資料。</span><span class="sxs-lookup"><span data-stu-id="77be0-103">The [Type Library Importer (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) is a command-line tool that converts the coclasses and interfaces contained in a COM type library to metadata.</span></span> <span data-ttu-id="77be0-104">這個工具會自動為類型資訊建立 Interop 組件和命名空間。</span><span class="sxs-lookup"><span data-stu-id="77be0-104">This tool creates an interop assembly and namespace for the type information automatically.</span></span> <span data-ttu-id="77be0-105">當類別的中繼資料可供使用之後，Managed 用戶端就可以建立 COM 類型的執行個體並呼叫其方法，就如同它是 .NET 執行個體一樣。</span><span class="sxs-lookup"><span data-stu-id="77be0-105">After the metadata of a class is available, managed clients can create instances of the COM type and call its methods, just as if it were a .NET instance.</span></span> <span data-ttu-id="77be0-106">Tlbimp.exe 會一次將整個型別程式庫轉換為中繼資料，而且不能為型別程式庫中定義的類型子集產生類型資訊。</span><span class="sxs-lookup"><span data-stu-id="77be0-106">Tlbimp.exe converts an entire type library to metadata at once and cannot generate type information for a subset of the types defined in a type library.</span></span>  
   
-### <a name="to-generate-an-interop-assembly-from-a-type-library"></a><span data-ttu-id="62e9b-107">從型別程式庫產生 Interop 組件</span><span class="sxs-lookup"><span data-stu-id="62e9b-107">To generate an interop assembly from a type library</span></span>  
+### <a name="to-generate-an-interop-assembly-from-a-type-library"></a><span data-ttu-id="77be0-107">從型別程式庫產生 Interop 組件</span><span class="sxs-lookup"><span data-stu-id="77be0-107">To generate an interop assembly from a type library</span></span>  
   
-1. <span data-ttu-id="62e9b-108">請使用以下命令：</span><span class="sxs-lookup"><span data-stu-id="62e9b-108">Use the following command:</span></span>  
+1. <span data-ttu-id="77be0-108">請使用以下命令：</span><span class="sxs-lookup"><span data-stu-id="77be0-108">Use the following command:</span></span>  
   
-     <span data-ttu-id="62e9b-109">**tlbimp** \<*type-library-file*></span><span class="sxs-lookup"><span data-stu-id="62e9b-109">**tlbimp** \<*type-library-file*></span></span>  
+     <span data-ttu-id="77be0-109">**tlbimp** \<*type-library-file*></span><span class="sxs-lookup"><span data-stu-id="77be0-109">**tlbimp** \<*type-library-file*></span></span>  
   
-     <span data-ttu-id="62e9b-110">新增 **/out:** 參數會產生已變更名稱的 Interop 組件，例如 LOANLib.dll。</span><span class="sxs-lookup"><span data-stu-id="62e9b-110">Adding the **/out:** switch produces an interop assembly with an altered name, such as LOANLib.dll.</span></span> <span data-ttu-id="62e9b-111">變更 Interop 組件的名稱有助於與原始 COM DLL 區別，且可避免因為具有重複名稱而產生的問題。</span><span class="sxs-lookup"><span data-stu-id="62e9b-111">Altering the interop assembly name can help distinguish it from the original COM DLL and prevent problems that can occur from having duplicate names.</span></span>  
+     <span data-ttu-id="77be0-110">新增 **/out:** 參數會產生已變更名稱的 Interop 組件，例如 LOANLib.dll。</span><span class="sxs-lookup"><span data-stu-id="77be0-110">Adding the **/out:** switch produces an interop assembly with an altered name, such as LOANLib.dll.</span></span> <span data-ttu-id="77be0-111">變更 Interop 組件的名稱有助於與原始 COM DLL 區別，且可避免因為具有重複名稱而產生的問題。</span><span class="sxs-lookup"><span data-stu-id="77be0-111">Altering the interop assembly name can help distinguish it from the original COM DLL and prevent problems that can occur from having duplicate names.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="62e9b-112">範例</span><span class="sxs-lookup"><span data-stu-id="62e9b-112">Example</span></span>  
- <span data-ttu-id="62e9b-113">下列命令會在 `Loanlib` 命名空間中產生 Loanlib.dll 組件。</span><span class="sxs-lookup"><span data-stu-id="62e9b-113">The following command produces the Loanlib.dll assembly in the `Loanlib` namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="77be0-112">範例</span><span class="sxs-lookup"><span data-stu-id="77be0-112">Example</span></span>  
+ <span data-ttu-id="77be0-113">下列命令會在 `Loanlib` 命名空間中產生 Loanlib.dll 組件。</span><span class="sxs-lookup"><span data-stu-id="77be0-113">The following command produces the Loanlib.dll assembly in the `Loanlib` namespace.</span></span>  
   
 ```  
 tlbimp Loanlib.tlb  
 ```  
   
- <span data-ttu-id="62e9b-114">下列命令會產生已變更名稱 (LOANLib.dll) 的 Interop 組件。</span><span class="sxs-lookup"><span data-stu-id="62e9b-114">The following command produces an interop assembly with an altered name (LOANLib.dll).</span></span>  
+ <span data-ttu-id="77be0-114">下列命令會產生已變更名稱 (LOANLib.dll) 的 Interop 組件。</span><span class="sxs-lookup"><span data-stu-id="77be0-114">The following command produces an interop assembly with an altered name (LOANLib.dll).</span></span>  
   
 ```  
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="62e9b-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62e9b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="77be0-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="77be0-115">See also</span></span>
 
-- [<span data-ttu-id="62e9b-116">匯入類型程式庫做為組件</span><span class="sxs-lookup"><span data-stu-id="62e9b-116">Importing a Type Library as an Assembly</span></span>](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
-- [<span data-ttu-id="62e9b-117">將 COM 元件公開給 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="62e9b-117">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)
+- [<span data-ttu-id="77be0-116">匯入類型程式庫做為組件</span><span class="sxs-lookup"><span data-stu-id="77be0-116">Importing a Type Library as an Assembly</span></span>](importing-a-type-library-as-an-assembly.md)
+- [<span data-ttu-id="77be0-117">將 COM 元件公開給 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="77be0-117">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)

@@ -12,27 +12,27 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: d9bd2ee7dab36172cba68532e50cfcd14fd884db
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649539"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049053"
 ---
-# <a name="accessing-the-internet-through-a-proxy"></a><span data-ttu-id="eb767-102">透過 Proxy 存取網際網路</span><span class="sxs-lookup"><span data-stu-id="eb767-102">Accessing the Internet Through a Proxy</span></span>
-<span data-ttu-id="eb767-103">如果您的網站使用 Proxy 來提供網際網路存取，則您必須設定 Proxy 執行個體，使您的應用程式能夠與 Web Proxy 進行通訊。</span><span class="sxs-lookup"><span data-stu-id="eb767-103">If your site uses a proxy to provide access to the Internet, you must configure a proxy instance to enable your application to communicate with the Web proxy.</span></span>  
+# <a name="accessing-the-internet-through-a-proxy"></a><span data-ttu-id="36389-102">透過 Proxy 存取網際網路</span><span class="sxs-lookup"><span data-stu-id="36389-102">Accessing the Internet Through a Proxy</span></span>
+<span data-ttu-id="36389-103">如果您的網站使用 Proxy 來提供網際網路存取，則您必須設定 Proxy 執行個體，使您的應用程式能夠與 Web Proxy 進行通訊。</span><span class="sxs-lookup"><span data-stu-id="36389-103">If your site uses a proxy to provide access to the Internet, you must configure a proxy instance to enable your application to communicate with the Web proxy.</span></span>  
   
- <span data-ttu-id="eb767-104">本節包括下列主題：</span><span class="sxs-lookup"><span data-stu-id="eb767-104">This section includes the following topics:</span></span>  
+ <span data-ttu-id="36389-104">本節包括下列主題：</span><span class="sxs-lookup"><span data-stu-id="36389-104">This section includes the following topics:</span></span>  
   
-- [<span data-ttu-id="eb767-105">Proxy 組態</span><span class="sxs-lookup"><span data-stu-id="eb767-105">Proxy Configuration</span></span>](../../../docs/framework/network-programming/proxy-configuration.md)  
+- [<span data-ttu-id="36389-105">Proxy 組態</span><span class="sxs-lookup"><span data-stu-id="36389-105">Proxy Configuration</span></span>](proxy-configuration.md)  
   
-- [<span data-ttu-id="eb767-106">自動 Proxy 偵測</span><span class="sxs-lookup"><span data-stu-id="eb767-106">Automatic Proxy Detection</span></span>](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
+- [<span data-ttu-id="36389-106">自動 Proxy 偵測</span><span class="sxs-lookup"><span data-stu-id="36389-106">Automatic Proxy Detection</span></span>](automatic-proxy-detection.md)  
   
-- [<span data-ttu-id="eb767-107">如何：啟用 WebRequest 以使用 Proxy 與網際網路通訊</span><span class="sxs-lookup"><span data-stu-id="eb767-107">How to: Enable a WebRequest to Use a Proxy to Communicate With the Internet</span></span>](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [<span data-ttu-id="36389-107">如何：啟用 WebRequest 以使用 Proxy 與網際網路通訊</span><span class="sxs-lookup"><span data-stu-id="36389-107">How to: Enable a WebRequest to Use a Proxy to Communicate With the Internet</span></span>](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
-- [<span data-ttu-id="eb767-108">如何：覆寫全域 Proxy 的選取範圍</span><span class="sxs-lookup"><span data-stu-id="eb767-108">How to: Override a Global Proxy Selection</span></span>](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+- [<span data-ttu-id="36389-108">如何：覆寫全域 Proxy 的選取範圍</span><span class="sxs-lookup"><span data-stu-id="36389-108">How to: Override a Global Proxy Selection</span></span>](how-to-override-a-global-proxy-selection.md)  
   
-## <a name="see-also"></a><span data-ttu-id="eb767-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eb767-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="36389-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="36389-109">See also</span></span>
 
-- [<span data-ttu-id="eb767-110">使用應用程式通訊協定</span><span class="sxs-lookup"><span data-stu-id="eb767-110">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)
-- [<span data-ttu-id="eb767-111">以 .NET Framework 進行網路程式設計</span><span class="sxs-lookup"><span data-stu-id="eb767-111">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)
+- [<span data-ttu-id="36389-110">使用應用程式通訊協定</span><span class="sxs-lookup"><span data-stu-id="36389-110">Using Application Protocols</span></span>](using-application-protocols.md)
+- [<span data-ttu-id="36389-111">以 .NET Framework 進行網路程式設計</span><span class="sxs-lookup"><span data-stu-id="36389-111">Network Programming in the .NET Framework</span></span>](index.md)
