@@ -15,12 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: cffad6b4677a880bd63f5ae0232c639f7a262c59
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136041"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047248"
 ---
 # <a name="sockets"></a>通訊端
 <xref:System.Net.Sockets> 命名空間包含 Windows Sockets 介面的 Managed 實作。 <xref:System.Net> 命名空間中的所有其他網路存取類別都建立在此通訊端實作之上。  
@@ -31,6 +31,6 @@ ms.locfileid: "59136041"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [如何：建立通訊端](how-to-create-a-socket.md)
 
-- [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)
+- [使用應用程式通訊協定](using-application-protocols.md)

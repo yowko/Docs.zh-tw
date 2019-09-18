@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-ms.openlocfilehash: da333fcd5f76359400e44511820ad9aa34e83bd7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 371d52a09445f735efb41b02780c65579207724f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911479"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042120"
 ---
 # <a name="ui-automation-fundamentals"></a>UI 自動化基礎觀念
 > [!NOTE]
@@ -20,14 +20,14 @@ ms.locfileid: "69911479"
  本章節包含[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API 的高層級概覽。  
   
 ## <a name="in-this-section"></a>本節內容  
- [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [UI 自動化和 Microsoft Active Accessibility](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
- [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI 自動化屬性概觀](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [UI 自動化事件概觀](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [UI 自動化安全性概觀](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [使用 UI 自動化進行自動化測試](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+ [UI 自動化概觀](ui-automation-overview.md)  
+ [UI 自動化和 Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
+ [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)  
+ [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)  
+ [UI 自動化屬性概觀](ui-automation-properties-overview.md)  
+ [UI 自動化事件概觀](ui-automation-events-overview.md)  
+ [UI 自動化安全性概觀](ui-automation-security-overview.md)  
+ [使用 UI 自動化進行自動化測試](using-ui-automation-for-automated-testing.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Automation>  

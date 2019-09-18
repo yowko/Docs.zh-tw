@@ -11,15 +11,15 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 5b4936a54627e6016cabc41954d1a18ae82cdf90
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: 150198c2bda220e4b37981e461e19b8e4e30e483
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422466"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048126"
 ---
-# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>作法：為應用程式設定以位置為基礎的快取原則
-以位置為基礎的快取原則，可讓應用程式明確地定義根據所要求資源位置的快取行為。 本主題將示範如何以程式設計方式設定快取原則。 如需使用組態檔為應用程式設定原則的詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>HOW TO：為應用程式設定以位置為基礎的快取原則
+以位置為基礎的快取原則，可讓應用程式明確地定義根據所要求資源位置的快取行為。 本主題將示範如何以程式設計方式設定快取原則。 如需使用組態檔為應用程式設定原則的詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>為應用程式設定以位置為基礎的快取原則  
   
@@ -155,8 +155,8 @@ ms.locfileid: "67422466"
   
 ## <a name="see-also"></a>另請參閱
 
-- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [快取原則](../../../docs/framework/network-programming/cache-policy.md)
-- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [網路應用程式的快取管理](cache-management-for-network-applications.md)
+- [快取原則](cache-policy.md)
+- [以位置為基礎的快取原則](location-based-cache-policies.md)
+- [以時間為基礎的快取原則](time-based-cache-policies.md)
+- [\<requestCaching> 項目 (網路設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

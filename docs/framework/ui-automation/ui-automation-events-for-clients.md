@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f4ce2d996d5a1a6ecd149118b7499650882a732f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044098"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042285"
 ---
 # <a name="ui-automation-events-for-clients"></a>用戶端的 UI 自動化事件
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70044098"
 > [!NOTE]
 > 請勿假設所有可能的事件都由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供者引發。 例如，並非所有的屬性變更都會導致 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項的標準 Proxy 提供者引發事件。  
   
- 如需更廣泛的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]事件檢視, 請參閱[UI 自動化事件總覽](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+ 如需更廣泛的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]事件檢視，請參閱[UI 自動化事件總覽](ui-automation-events-overview.md)。  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>訂閱事件  
@@ -44,22 +44,22 @@ ms.locfileid: "70044098"
 > 若要處理視窗關閉事件，將傳遞給事件處理常式的引數類型轉型為 <xref:System.Windows.Automation.WindowClosedEventArgs>。 由於視窗的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 項目已不再有效，您不能使用 `sender` 參數來擷取資訊，請改用 <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>。  
   
 > [!CAUTION]
-> 如果您的應用程式可能會接收來自本身的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 事件，請勿使用您應用程式的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 執行緒來訂閱或取消訂閱事件。 這樣可能會導致無法預期的行為。 如需詳細資訊，請參閱 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
+> 如果您的應用程式可能會接收來自本身的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 事件，請勿使用您應用程式的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 執行緒來訂閱或取消訂閱事件。 這樣可能會導致無法預期的行為。 如需詳細資訊，請參閱 [UI Automation Threading Issues](ui-automation-threading-issues.md)。  
   
  關閉時或當應用程式不再對 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件感興趣時，使用者介面自動化用戶端應該呼叫下列方法之一。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|移除註冊使用 <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A> 註冊的事件處理常式。|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|移除註冊使用 <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A> 註冊的事件處理常式。|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|移除註冊使用 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 註冊的事件處理常式。|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|移除註冊所有已註冊的事件處理常式。|  
   
- 如需範例程式碼, 請參閱[訂閱使用者介面自動化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)。  
+ 如需範例程式碼，請參閱[訂閱使用者介面自動化事件](subscribe-to-ui-automation-events.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [訂閱 UI 自動化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
-- [UI 自動化事件概觀](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [UI 自動化屬性概觀](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+- [訂閱 UI 自動化事件](subscribe-to-ui-automation-events.md)
+- [UI 自動化事件概觀](ui-automation-events-overview.md)
+- [UI 自動化屬性概觀](ui-automation-properties-overview.md)
 - [TrackFocus 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

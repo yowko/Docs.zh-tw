@@ -3,27 +3,27 @@ title: 使用 WIF 進行宣告式授權
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 9d20f8fbce916a038fc8224492a4077e1978ed8c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ebf4c28bd2a46c21535b596af22d1fa420d20e71
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422363"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045495"
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 進行宣告式授權
 在信賴憑證者應用程式中，授權會判斷哪些是已驗證的識別可以存取的資源，以及可以針對這些資源執行哪些作業。 不適當或弱式授權會導致資訊洩露以及資料遭竄改。 本主題概述可使用 Windows Identity Foundation (WIF) 和 Security Token Service (STS) (例如 Microsoft Azure Access Control Service (ACS)) 為宣告感知 ASP.NET Web 應用程式和服務實作授權的方式。  
   
 ## <a name="overview"></a>總覽  
- 從第一版 .NET Framework 開始，就提供了彈性的授權實作機制。 這項機制是以 **IPrincipal** 和 **IIdentity** 這兩個簡單的介面為基礎。 **IIdentity** 的具體實作表示已驗證的使用者。 例如，**WindowsIdentity** 實作表示經過 Active Directory 驗證的使用者，而 **GenericIdentity** 則表示身分識別經過自訂驗證程序驗證後的使用者。 **IPrincipal** 的具體實作可協助使用角色並根據角色存放區來檢查權限。 例如，**WindowsPrincipal** 會檢查 **WindowsIdentity** 是否擁有 Active Directory 中各群組的成員資格。 這項檢查是透過呼叫 **IPrincipal** 介面的 **IsInRole** 方法來執行。 根據角色來檢查存取權限的做法稱為角色型存取控制 (RBAC)。 如需詳細資訊，請參閱[角色型存取控制](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_1)。  宣告可用來攜帶角色相關資訊，以支援熟悉且以角色為基礎的授權機制。  
+ 從第一版 .NET Framework 開始，就提供了彈性的授權實作機制。 這項機制是以 **IPrincipal** 和 **IIdentity** 這兩個簡單的介面為基礎。 **IIdentity** 的具體實作表示已驗證的使用者。 例如，**WindowsIdentity** 實作表示經過 Active Directory 驗證的使用者，而 **GenericIdentity** 則表示身分識別經過自訂驗證程序驗證後的使用者。 **IPrincipal** 的具體實作可協助使用角色並根據角色存放區來檢查權限。 例如，**WindowsPrincipal** 會檢查 **WindowsIdentity** 是否擁有 Active Directory 中各群組的成員資格。 這項檢查是透過呼叫 **IPrincipal** 介面的 **IsInRole** 方法來執行。 根據角色來檢查存取權限的做法稱為角色型存取控制 (RBAC)。 如需詳細資訊，請參閱[角色型存取控制](claims-based-authorization-using-wif.md#BKMK_1)。  宣告可用來攜帶角色相關資訊，以支援熟悉且以角色為基礎的授權機制。  
   
- 此外，宣告也可以用來進行角色背後更複雜的授權決策。 宣告可以根據幾乎使用者的任何資訊：年齡、郵遞區號、鞋子尺寸等等。根據任意宣告的存取控制機制稱為宣告式授權。 如需詳細資訊，請參閱[宣告式授權](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_2)。  
+ 此外，宣告也可以用來進行角色背後更複雜的授權決策。 宣告可以根據幾乎使用者的任何資訊：年齡、郵遞區號、鞋子尺寸等等。根據任意宣告的存取控制機制稱為宣告式授權。 如需詳細資訊，請參閱[宣告式授權](claims-based-authorization-using-wif.md#BKMK_2)。  
   
 <a name="BKMK_1"></a>   
 ## <a name="role-based-access-control"></a>角色型存取控制  
  RBAC 是一種授權方式，應用程式會根據使用者角色來管理和落實使用者權限。 如果使用者有執行動作所需的角色，應用程式就會授與存取權限，否則會拒絕存取。  
   
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole 方法  
- 若要在宣告感知應用程式中實作 RBAC 這種方式，使用**isinrole （)** 方法中的**IPrincipal**介面，就如同在非宣告感知應用程式。 **IsInRole()** 方法的使用方式有下列幾種：  
+ 若要在宣告感知應用程式中執行 RBAC 方法，請在**IPrincipal**介面中使用**IsInRole （）** 方法，就如同在非宣告感知應用程式中所做的一樣。 **IsInRole()** 方法的使用方式有下列幾種：  
   
 - 明確呼叫 **IPrincipal.IsInRole("Administrator")** 。 如果使用這種方式，結果會是布林值。 因此，您可以在條件陳述式中使用。 使用時，它可以位於程式碼中的任意位置。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67422363"
   
 - **在權杖發行期間**。 使用者通過驗證之後，身分識別提供者 STS 或同盟提供者 (例如 Microsoft Azure Access Control Service (ACS)) 就會發行角色宣告。  
   
-- **使用 ClaimsAuthenticationManager 將任意宣告轉換為宣告角色類型**。 ClaimsAuthenticationManager 是隨附於 WIF 的元件， 可允許使用者在啟動應用程式時攔截要求，並且檢查權杖以及利用新增、變更或移除宣告來轉換權杖。 如需如何使用 ClaimsAuthenticationManager 轉換宣告的詳細資訊，請參閱[How To:實作角色型存取控制 (RBAC)，在宣告感知 ASP.NET 應用程式中使用 WIF 與 ACS](https://go.microsoft.com/fwlink/?LinkID=247445)。  
+- **使用 ClaimsAuthenticationManager 將任意宣告轉換為宣告角色類型**。 ClaimsAuthenticationManager 是隨附於 WIF 的元件， 可允許使用者在啟動應用程式時攔截要求，並且檢查權杖以及利用新增、變更或移除宣告來轉換權杖。 如需如何使用 ClaimsAuthenticationManager 來轉換宣告的詳細資訊，請[參閱如何：使用 WIF 和 ACS](https://go.microsoft.com/fwlink/?LinkID=247445)在宣告感知 ASP.NET 應用程式中，執行以角色為基礎的存取控制（RBAC）。  
   
 - **使用 samlSecurityTokenRequirement 組態區段將任意宣告對應至角色類型**：這是一種宣告式做法，可以僅使用組態來轉換宣告，不必撰寫任何程式碼。  
   
@@ -60,4 +60,4 @@ ms.locfileid: "67422363"
   
 5. 如果結果為 true 則授與存取權限，如果為 false 則拒絕存取。 例如，規則可能是使用者必須年滿 21 歲，並且住在華盛頓州。  
   
- 如果您希望利用外部的決策邏輯來處理應用程式中的宣告式授權，<xref:System.Security.Claims.ClaimsAuthorizationManager> 就很有用。 ClaimsAuthorizationManager 是隨附於 .NET 4.5 的 WIF 元件， 可讓您擷取傳入要求並實作您選擇的邏輯，根據傳入宣告制定授權決策。 如果必須變更授權邏輯，這就變得很重要。 在這種情況下，使用 ClaimsAuthorizationManager 既不會影響應用程式的完整性，還可以降低變更結果導致應用程式錯誤的可能性。 若要深入了解如何使用 ClaimsAuthorizationManager 實作宣告型存取控制，請參閱[How To:實作宣告授權在宣告感知 ASP.NET 應用程式中使用 WIF 與 ACS](https://go.microsoft.com/fwlink/?LinkID=247446)。
+ 如果您希望利用外部的決策邏輯來處理應用程式中的宣告式授權，<xref:System.Security.Claims.ClaimsAuthorizationManager> 就很有用。 ClaimsAuthorizationManager 是隨附於 .NET 4.5 的 WIF 元件， 可讓您擷取傳入要求並實作您選擇的邏輯，根據傳入宣告制定授權決策。 如果必須變更授權邏輯，這就變得很重要。 在這種情況下，使用 ClaimsAuthorizationManager 既不會影響應用程式的完整性，還可以降低變更結果導致應用程式錯誤的可能性。 若要深入瞭解如何使用 ClaimsAuthorizationManager 來執行以宣告為基礎的存取控制， [請參閱如何：使用 WIF 和 ACS](https://go.microsoft.com/fwlink/?LinkID=247446)在宣告感知 ASP.NET 應用程式中執行宣告授權。

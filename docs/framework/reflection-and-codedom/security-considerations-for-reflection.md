@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956702"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045892"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 
@@ -61,7 +61,7 @@ ms.locfileid: "69956702"
 
 從命令列執行的應用程式程式碼會以完全信任來執行。 只要不是標示為透明，就可以使用反映來存取安全性關鍵成員。 以部分信任來執行相同的程式碼時 (例如，在沙箱化應用程式定義域中)，組件的信任層級可決定它是否能夠存取安全性關鍵程式碼：如果組件有強式名稱，並安裝在全域組件快取中，則其為受信任的組件，可以呼叫安全性關鍵成員。 如果不受信任，則會變成透明 (即使它不是標示為透明)，而且不能存取安全性關鍵成員。
 
-如需 .NET Framework 4 的安全模型詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。
+如需 .NET Framework 4 的安全模型詳細資訊，請參閱[安全性變更](../security/security-changes.md)。
 
 ## <a name="reflection-and-transparency"></a>反映和透明度
 
@@ -69,7 +69,7 @@ ms.locfileid: "69956702"
 
 |安全性層級|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|Critical|`true`|`false`|`false`|
+|重大|`true`|`false`|`false`|
 |安全關鍵|`true`|`true`|`false`|
 |透明|`false`|`false`|`true`|
 
@@ -117,9 +117,9 @@ ms.locfileid: "69956702"
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [安全性變更](../../../docs/framework/security/security-changes.md)
-- [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)
-- [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [安全性變更](../security/security-changes.md)
+- [程式碼存取安全性](../misc/code-access-security.md)
+- [反映發出中的安全性問題](security-issues-in-reflection-emit.md)
+- [檢視類型資訊](viewing-type-information.md)
 - [套用屬性](../../standard/attributes/applying-attributes.md)
-- [存取自訂屬性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+- [存取自訂屬性](accessing-custom-attributes.md)

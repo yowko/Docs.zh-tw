@@ -10,25 +10,25 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de7df6ae2d6463d05d1680c288dd202edc639b09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949124"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051948"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
 .NET 是在 Windows 上執行之許多應用程式不可或缺的一部分，提供應用程式執行所需的常見功能。 對開發人員而言，.NET Framework 提供全方位且一致的程式撰寫模型，可建置具有令人視覺震撼之使用者體驗及順暢且安全之通訊的應用程式。
 
 > [!NOTE]
-> 本主題適用於希望在其本身的系統上安裝 .NET Framework，或希望將 .NET Framework 與其應用程式一併安裝的開發人員  。 若使用者  希望安裝 .NET Framework，請參閱討論在特定作業系統上安裝 .NET Framework 的其他主題，例如[在 Windows 10 和 Windows Server 2016 上安裝 .NET Framework](on-windows-10.md)。
+> 本主題適用於希望在其本身的系統上安裝 .NET Framework，或希望將 .NET Framework 與其應用程式一併安裝的開發人員。 若使用者希望安裝 .NET Framework，請參閱討論在特定作業系統上安裝 .NET Framework 的其他主題，例如[在 Windows 10 和 Windows Server 2016 上安裝 .NET Framework](on-windows-10.md)。
 
 本文提供在電腦上安裝所有版本 .NET Framework (從 .NET Framework 4.5 到 .NET Framework 4.8) 的連結。 如果您是開發人員，也可以使用這些連結下載 .NET Framework 並隨應用程式轉散發。 如需隨應用程式部署 .NET Framework 版本的相關資訊，請參閱 [.NET Framework 開發人員部署指南](../deployment/deployment-guide-for-developers.md)。
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-如需 .NET Framework 版本以及如何判斷電腦上已安裝哪些版本的詳細資訊，請參閱[版本與相依關係](../migration-guide/versions-and-dependencies.md)和[作法：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
+如需 .NET Framework 版本以及如何判斷電腦上已安裝哪些版本的詳細資訊，請參閱[版本與相依關係](../migration-guide/versions-and-dependencies.md)和[作法：判斷安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 > [!NOTE]
 > 如需 .NET Framework 3.5 的資訊，請參閱 [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)。
@@ -66,7 +66,7 @@ ms.locfileid: "69949124"
 
 ### <a name="to-install-the-net-framework-developer-pack-or-targeting-pack"></a>安裝 .NET Framework 開發人員套件或目標套件
 
-「目標套件」  可讓您的應用程式在 Visual Studio 和其他開發環境中開發時，以特定版本的 .NET Framework 為目標。 「開發人員套件」  包含特定版本的 .NET Framework 和其隨附的 SDK，以及對應的目標套件。
+「目標套件」可讓您的應用程式在 Visual Studio 和其他開發環境中開發時，以特定版本的 .NET Framework 為目標。 「開發人員套件」包含特定版本的 .NET Framework 和其隨附的 SDK，以及對應的目標套件。
 
 .NET Framework 4.5.1 或 4.5.2 的開發人員套件、.NET Framework 4.6 的目標套件以及 .NET Framework 4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 的開發人員套件，提供特定 .NET Framework 版本的參考組件、語言套件以及 IntelliSense 檔案，供用於 Visual Studio 這類的整合式開發環境。  若是使用 Visual Studio，開發人員套件或目標套件也會將已安裝的 .NET Framework 版本加入您在建立新專案時所選擇的目標。  選擇下列其中一項：
 
@@ -88,13 +88,13 @@ ms.locfileid: "69949124"
 
 - [.NET Framework 4.5.1 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=324213)，可在 Visual Studio 2012 或其他 IDE 上安裝 4.5.1 版。
 
-從開發人員套件下載頁面選擇 [下載]  。 接下來選擇 [執行]  或 [儲存]  ，然後在出現提示時遵循指示進行。 您也可以安裝 .NET Framework 特定版本的開發人員套件或目標套件，方法是從 Visual Studio 安裝程式的 [.NET 桌面開發]  工作負載中的選用元件選取它，如下圖所示。
+從開發人員套件下載頁面選擇 [下載]。 接下來選擇 [執行] 或 [儲存]，然後在出現提示時遵循指示進行。 您也可以安裝 .NET Framework 特定版本的開發人員套件或目標套件，方法是從 Visual Studio 安裝程式的 [.NET 桌面開發] 工作負載中的選用元件選取它，如下圖所示。
 
    ![Visual Studio 安裝程式與 .NET 桌面開發工作負載](./media/visual-studio-installer.jpg)
 
 當您以 .NET Framework 的特定版本為目標時，您的應用程式會使用該版本開發人員套件隨附的參考組件來建立。 在執行階段，會從全域組件快取解析組件，且不會使用參考組件。
 
-從 Visual Studio 或從命令列使用 MSBuild 建置應用程式時，MSBuild 可能會顯示錯誤 MSB3644：「找不到架構 <架構版本>  的參考組件。」 若要解決錯誤，請下載該版本 .NET Framework 的開發人員套件或目標套件。
+從 Visual Studio 或從命令列使用 MSBuild 建置應用程式時，MSBuild 可能會顯示錯誤 MSB3644：「找不到架構 <架構版本> 的參考組件。」 若要解決錯誤，請下載該版本 .NET Framework 的開發人員套件或目標套件。
 
 ### <a name="to-install-or-download-the-net-framework-redistributable"></a>安裝或下載 .NET Framework 可轉散發套件
 
@@ -134,15 +134,15 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 1. 選取下載頁面的語言。 這個選項不會下載 .NET Framework 的當地語系化資源，只會影響下載頁面上顯示的文字。
 
-1. 選擇 [下載]  。
+1. 選擇 [下載]。
 
-1. 如果出現提示，請選取符合您系統架構的下載，然後選擇 [下一步]  。
+1. 如果出現提示，請選取符合您系統架構的下載，然後選擇 [下一步]。
 
-1. 出現下載提示時，請執行下列「其中一個」  動作：
+1. 出現下載提示時，請執行下列「其中一個」動作：
 
-   - 如果您要在電腦上安裝 .NET Framework，請選擇 [執行]  ，然後依照螢幕上的提示執行。
+   - 如果您要在電腦上安裝 .NET Framework，請選擇 [執行]，然後依照螢幕上的提示執行。
 
-   - 如果您要下載轉散發的 .NET Framework，請選擇 [儲存]  ，然後依照螢幕上的提示執行。
+   - 如果您要下載轉散發的 .NET Framework，請選擇 [儲存]，然後依照螢幕上的提示執行。
 
 1. 如果您要下載其他語言的資源，請依照下一節中的指示安裝一個或多個語言套件。
 
@@ -192,7 +192,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 2. 在語言清單中，選擇您要下載的語言，並等候幾秒，讓頁面以該語言重新載入。
 
-3. 選擇 [下載]  。
+3. 選擇 [下載]。
 
 下表列出支援的語言。
 
@@ -227,7 +227,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 - 如果您還不熟悉 .NET Framework，請參閱[概觀](../get-started/overview.md)中有關重要概念和元件的簡介。
 
-- 如需了解 .NET Framework 4.5 和所有更新版本中的新功能與增強功能，請參閱[新功能](../../../docs/framework/whats-new/index.md)。
+- 如需了解 .NET Framework 4.5 和所有更新版本中的新功能與增強功能，請參閱[新功能](../whats-new/index.md)。
 
 - 如需隨應用程式部署 .NET Framework 的詳細資訊，請參閱[開發人員部署手冊](../deployment/deployment-guide-for-developers.md)。
 

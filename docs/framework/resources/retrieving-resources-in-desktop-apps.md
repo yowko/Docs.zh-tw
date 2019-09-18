@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f4c44bdb4be4c90c20cd6bdb56db6cd3380535c7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971175"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045620"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>擷取桌面應用程式中的資源
 當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的 [從 .resources 檔擷取資源](#from_file) 一節中所述。  若要擷取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中的資源，請參閱 Windows 開發人員中心的 [建立和擷取 Windows 市集應用程式中的資源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 。  
@@ -38,7 +38,7 @@ ms.locfileid: "70971175"
   
 - 具有兩個參數的多載︰一個包含資源名稱的字串，以及一個代表所擷取資源之文化特性的 <xref:System.Globalization.CultureInfo> 物件。 如果找不到為該文化特性設定的資源，資源管理員會使用後援規則來擷取適當的資源。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法。  
   
- 資源管理員使用資源後援處理序，來控制應用程式如何擷取文化特性專屬資源。 如需詳細資訊，請參閱 [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)中的＜Resource Fallback Process＞一節。 如需具現化 <xref:System.Resources.ResourceManager> 物件的資訊，請參閱 <xref:System.Resources.ResourceManager> 類別主題中的＜Instantiating a ResourceManager Object＞(具現化 ResourceManager 物件) 一節。  
+ 資源管理員使用資源後援處理序，來控制應用程式如何擷取文化特性專屬資源。 如需詳細資訊，請參閱 [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)中的＜Resource Fallback Process＞一節。 如需具現化 <xref:System.Resources.ResourceManager> 物件的資訊，請參閱 <xref:System.Resources.ResourceManager> 類別主題中的＜Instantiating a ResourceManager Object＞(具現化 ResourceManager 物件) 一節。  
   
 ### <a name="retrieving-string-data-an-example"></a>擷取字串資料：範例  
  下列範例會呼叫 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 方法來擷取目前 UI 文化特性的字串資源。 其中包含英文 (美國) 文化特性的中性字串資源，以及法文 (法國) 和俄文 (俄羅斯) 文化特性的當地語系化資源。 下列英文 (美國) 資源是在名為 Strings.txt 的檔案中：  
@@ -138,11 +138,11 @@ GetObject.exe
   
  <xref:System.Resources.SatelliteContractVersionAttribute> 屬性為主要組件提供了版本控制支援。 在應用程式的主要組件上指定這個屬性可讓您更新並重新部署主要組件，而不更新其附屬組件。 更新主要組件之後，主要組件的版本號碼會遞增，但附屬合約版本號碼則保持不變。 當資源管理員擷取要求的資源時，它會載入此屬性指定的附屬組件版本。  
   
- 發行者原則組件提供附屬組件的版本控制支援。 您可以更新並重新部署附屬組件，而不更新主要組件。 更新附屬組件之後，其版本號碼會遞增，並隨附於發行者原則組件。 在發行者原則組件中，指定您的新附屬組件與其舊版相容。 資源管理員會使用 <xref:System.Resources.SatelliteContractVersionAttribute> 屬性來判斷附屬組件的版本，但組件載入器會繫結至發行者原則所指定的附屬組件版本。 如需發行者原則組件的詳細資訊，請參閱 [Creating a Publisher Policy File](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)(建立發行者原則檔)。  
+ 發行者原則組件提供附屬組件的版本控制支援。 您可以更新並重新部署附屬組件，而不更新主要組件。 更新附屬組件之後，其版本號碼會遞增，並隨附於發行者原則組件。 在發行者原則組件中，指定您的新附屬組件與其舊版相容。 資源管理員會使用 <xref:System.Resources.SatelliteContractVersionAttribute> 屬性來判斷附屬組件的版本，但組件載入器會繫結至發行者原則所指定的附屬組件版本。 如需發行者原則組件的詳細資訊，請參閱 [Creating a Publisher Policy File](../configure-apps/how-to-create-a-publisher-policy.md)(建立發行者原則檔)。  
   
- 若要啟用完整的組件版本控制支援，建議您在 [全域組件快取](../../../docs/framework/app-domains/gac.md) 中部署強式名稱的組件，並在應用程式目錄中部署沒有強式名稱的組件。 如果您想要在應用程式目錄中部署強式名稱的組件，當您更新組件時，將無法遞增附屬組件的版本號碼。 相反地，您必須執行就地更新，以更新的程式碼取代現有程式碼，並維持相同的版本號碼。 例如，如果您想要更新 1.0.0.0 版的附屬組件，而且該組件已完整指定組件名稱 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a"，請覆寫成使用完整指定之相同組件名稱 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" 編譯的已更新 myApp.resources.dll。 請注意，在附屬組件檔上使用就地更新，會讓應用程式很難正確判斷附屬組件的版本。  
+ 若要啟用完整的組件版本控制支援，建議您在 [全域組件快取](../app-domains/gac.md) 中部署強式名稱的組件，並在應用程式目錄中部署沒有強式名稱的組件。 如果您想要在應用程式目錄中部署強式名稱的組件，當您更新組件時，將無法遞增附屬組件的版本號碼。 相反地，您必須執行就地更新，以更新的程式碼取代現有程式碼，並維持相同的版本號碼。 例如，如果您想要更新 1.0.0.0 版的附屬組件，而且該組件已完整指定組件名稱 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a"，請覆寫成使用完整指定之相同組件名稱 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" 編譯的已更新 myApp.resources.dll。 請注意，在附屬組件檔上使用就地更新，會讓應用程式很難正確判斷附屬組件的版本。  
   
- 如需組件版本控制的詳細資訊，請參閱 [組件版本控制](../../standard/assembly/versioning.md) 和 [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
+ 如需組件版本控制的詳細資訊，請參閱 [組件版本控制](../../standard/assembly/versioning.md) 和 [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)。  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>從 .resources 檔擷取資源  
@@ -204,7 +204,7 @@ csc Example.cs
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Resources.ResourceManager>
-- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
-- [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [桌面應用程式中的資源](index.md)
+- [封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)
+- [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)
 - [建立和擷取 Windows 市集應用程式中的資源](https://go.microsoft.com/fwlink/p/?LinkID=241674)

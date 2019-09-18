@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1a2ac0c7fb5f89c7d6b9daba8da7b37d1135acb6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972029"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053175"
 ---
 # <a name="global-assembly-cache"></a>全域組件快取
 每部安裝通用語言執行平台的電腦都有稱為「全域組件快取」的全電腦程式碼快取。 全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。  
@@ -31,7 +31,7 @@ ms.locfileid: "70972029"
   
 - 使用設計來使用全域組件快取的安裝程式。 這是將組件安裝到全域組件快取慣用的選項。  
   
-- 使用稱為[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 的開發人員工具，它是由 Windows SDK 所提供。  
+- 使用稱為[全域組件快取工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 的開發人員工具，它是由 Windows SDK 所提供。  
   
     > [!NOTE]
     > 在部署案例中，請使用 Windows Installer 將組件安裝到全域組件快取中。 您應該只在開發案例中使用全域組件快取工具，因為它不提供組件參考計數和在使用 Windows 安裝程式時提供的其他功能。  
@@ -45,5 +45,5 @@ ms.locfileid: "70972029"
 ## <a name="see-also"></a>另請參閱
 
 - [.NET 中的組件](../../standard/assembly/index.md)
-- [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [使用組件和全域組件快取](working-with-assemblies-and-the-gac.md)
 - [強式名稱的組件](../../standard/assembly/strong-named.md)

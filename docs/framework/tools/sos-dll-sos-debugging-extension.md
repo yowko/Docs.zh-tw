@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9a8d41228c46de0f18b5a92def0591d6373d3d69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894625"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044088"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS 偵錯擴充功能)
 
@@ -27,7 +27,7 @@ SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (
 
 ## <a name="commands"></a>命令
 
-|命令|說明|
+|命令|描述|
 |-------------|-----------------|
 |**AnalyzeOOM** (**ao**)|顯示在記憶體回收堆積的配置要求上，最後發生的記憶體不足 (OOM) 資訊。 (在伺服器記憶體回收中，它會顯示每個記憶體回收堆積上的 OOM (如果存在))。|
 |**BPMD** [ **-nofuturemodule**] [\<*module name*> \<*method name*>] [ **-md** <`MethodDesc`>] **-list** **-clear** \<*pending breakpoint number*>  **-clearall**|在所指定模組中的指定方法上建立中斷點。<br /><br /> 如果指定的模組和方法尚未載入，這個命令便會在建立中斷點之前，等待已載入模組和已完成 Just-in-Time (JIT) 編譯的通知。<br /><br /> 您可以使用 **-list**、 **-clear** 和 **-clearall** 選項來管理暫止中斷點的清單：<br /><br /> **-list** 選項會產生所有暫止中斷點的清單。 如果暫止中斷點具有非零的模組 ID，就是該特殊載入模組中函式的特定中斷點。 如果暫止中斷點具有零模組 ID，該中斷點就會套用至尚未載入的模組。<br /><br /> 使用 **-clear** 或 **-clearall** 選項可從清單中移除暫止中斷點。|
@@ -74,7 +74,7 @@ SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (
 |**IP2MD** \<*Code address*>|顯示在已進行 JIT 編譯之程式碼中之指定位址的 `MethodDesc` 結構。|
 |`ListNearObj` (`lno`) *\<obj_address>*|顯示在指定的位址之前與之後的物件。 此命令會在記憶體回收堆積中，尋找看來像是 Managed 物件之有效開頭的位址 (根據有效方法資料表)，以及引數位址的後接物件。|
 |**MinidumpMode** [**0**] [**1**]|防止在使用小型傾印時執行不安全的命令。<br /><br /> 傳遞 **0** 便可停用這項功能，而傳遞 **1** 便可啟用這項功能。 根據預設，**MinidumpMode** 值會設定為 **0**。<br /><br /> 以 **.dump /m** 命令或 **.dump** 命令建立的小型傾印，都具有有限的 CLR 特定資料，並只允許您正確執行 SOS 命令的子集。 有些命令可能會因未預期的錯誤而失敗，原因是沒有對應或是只有部分對應到必要的記憶體區域。 這個選項可防止您對小型傾印執行不安全的命令。|
-|**Name2EE** \<*module name*> \<*type or method name*><br /><br /> -或-<br /><br /> **Name2EE** \<*module name*> **!** \<*type or method name*>|顯示所指定模組中之指定類型或方法的 `MethodTable` 結構和 `EEClass` 結構。<br /><br /> 指定的模組必須載入到處理序。<br /><br /> 若要取得適當的類型名稱，請使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 瀏覽該模組。 您也可以將 `*` 當做模組名稱參數傳遞，以便搜尋所有已載入的 Managed 模組。 *module name* 參數也可以是模組的偵錯工具名稱，例如 `mscorlib` 或 `image00400000`。<br /><br /> 這個命令支援 <`module`>`!`<`type`> 的 Windows 偵錯工具語法。 這個類型必須具有完整名稱。|
+|**Name2EE** \<*module name*> \<*type or method name*><br /><br /> -或-<br /><br /> **Name2EE** \<*module name*> **!** \<*type or method name*>|顯示所指定模組中之指定類型或方法的 `MethodTable` 結構和 `EEClass` 結構。<br /><br /> 指定的模組必須載入到處理序。<br /><br /> 若要取得適當的類型名稱，請使用 [Ildasm.exe (IL 反組譯工具)](ildasm-exe-il-disassembler.md) 瀏覽該模組。 您也可以將 `*` 當做模組名稱參數傳遞，以便搜尋所有已載入的 Managed 模組。 *module name* 參數也可以是模組的偵錯工具名稱，例如 `mscorlib` 或 `image00400000`。<br /><br /> 這個命令支援 <`module`>`!`<`type`> 的 Windows 偵錯工具語法。 這個類型必須具有完整名稱。|
 |**ObjSize** [\<*Object address*>] &#124; [ **-aggregate**] [ **-stat**]|顯示所指定物件的大小。 如果未指定任何參數，**ObjSize** 命令會顯示在 Managed 執行緒上找到之所有物件的大小，並會顯示處理序中的所有記憶體回收行程控制代碼，以及這些控制代碼所指向之任何物件的總大小。 **ObjSize** 命令會包括父代和其他所有子物件的大小。<br /><br /> **-aggregate** 選項可搭配使用 **-stat** 引數，以取得依然為根目錄之類型的詳細檢視。 藉由使用 **!dumpheap -stat** 和 **!objsize -aggregate -stat**，您可以判斷哪些物件不再是根目錄，以及診斷各種記憶體問題。|
 |**PrintException** [ **-nested**] [ **-lines**] [\<*Exception object address*>]<br /><br /> -或-<br /><br /> **PE** [ **-nested**] [\<*Exception object address*>]|顯示並格式化在所指定位址且衍生自 <xref:System.Exception> 類別之任何物件的欄位。 如果您未指定位址，**PrintException** 命令便會顯示目前執行緒上最近一次擲回的例外狀況。<br /><br /> **-nested** 選項會顯示巢狀例外狀況物件的詳細資料。<br /><br /> **-lines** 選項會顯示來源資訊 (如果存在)。<br /><br /> 您可以使用這個命令來格式化和檢視 `_stackTrace` 欄位，此欄位屬於二進位陣列。|
 |**ProcInfo** [ **-env**] [ **-time**] [ **-mem**]|顯示處理序的環境變數、核心 CPU 時間，以及記憶體使用統計資料。|
@@ -206,5 +206,5 @@ WinDbg.exe 和 Visual Studio 都會使用對應於目前使用中之 Mscorwks.dl
 
 ## <a name="see-also"></a>另請參閱
 
-- [工具](../../../docs/framework/tools/index.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](index.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

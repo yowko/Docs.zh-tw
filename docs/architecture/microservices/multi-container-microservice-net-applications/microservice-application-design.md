@@ -2,12 +2,12 @@
 title: 設計微服務導向應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解微服務導向應用程式的優點和缺點，讓您能夠採取明智的決策。
 ms.date: 10/02/2018
-ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926531"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039820"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>設計微服務導向應用程式
 
@@ -89,8 +89,8 @@ ms.locfileid: "70926531"
 
 ### <a name="additional-resources"></a>其他資源
 
-- **eShopOnContainers GitHub 存放庫：參考應用程式的原始程式碼**\
-    <https://aka.ms/eShopOnContainers/>
+- **eShopOnContainers GitHub 存放庫：參考應用程式的原始程式碼** \
+  <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>微服務架構解決方案的優點
 
@@ -118,7 +118,7 @@ ms.locfileid: "70926531"
 
 這類微服務架構解決方案也有一些缺點：
 
-**分散式應用程式**。 散發應用程式會增加開發人員設計和建置服務時的複雜度。 例如，開發人員必須使用 HTTP 或 AMPQ 等通訊協定來實作服務間的通訊，這會增加測試和例外狀況處理的複雜度， 也會增加系統的延遲。
+**分散式應用程式**。 散發應用程式會增加開發人員設計和建置服務時的複雜度。 例如，開發人員必須使用 HTTP 或 AMPQ 等通訊協定來執行服務間通訊，這會增加測試和例外狀況處理的複雜性。 也會增加系統的延遲。
 
 **部署複雜度**。 應用程式若有數十種微服務類型並需要高延展性 (必須能夠針對每個服務建立許多執行個體，並在許多主機之間平衡這些服務)，則表示 IT 作業和管理的部署複雜度很高。 如果您未使用微服務導向基礎結構 (例如協調器和排程器)，額外的複雜性可能需要遠比商務應用程式本身更多的開發工作。
 

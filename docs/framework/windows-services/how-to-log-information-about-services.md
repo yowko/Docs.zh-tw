@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: 1ffc698910fe722fe761c62b87b059068d5f243f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 3c974d5a98f8056e45899b109878e5a28ab2938e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935526"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053612"
 ---
 # <a name="how-to-log-information-about-services"></a>作法：記錄關於服務的資訊
 根據預設，所有的 Windows 服務專案都能與應用程式事件記錄檔互動，並在其中寫入資訊和例外狀況。 您使用 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性來表示在您的應用程式中是否要這項功能。 根據預設，會為您以 Windows 服務專案範本建立任何服務開啟記錄。 您可以使用靜態形式的 <xref:System.Diagnostics.EventLog> 類別將服務資訊寫入記錄檔，而不需要建立 <xref:System.Diagnostics.EventLog> 元件的執行個體或手動註冊來源。  
@@ -71,4 +71,4 @@ ms.locfileid: "69935526"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)

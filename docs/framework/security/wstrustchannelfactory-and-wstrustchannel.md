@@ -3,12 +3,12 @@ title: WSTrustChannelFactory 和 WSTrustChannel
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633177"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044908"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果您已熟悉 Windows Communication Foundation (WCF)，則應該知道 WCF 已是同盟感知用戶端。 若以 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結設定 WCF 用戶端，您就可以啟用對服務的同盟驗證。
@@ -25,7 +25,7 @@ ms.locfileid: "65633177"
 
 - 單獨使用 WIF 從 STS 取得權杖，然後讓 WCF 用戶端使用此權杖進行驗證。 如需詳細資訊，請參閱 [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) 範例。
 
- 第一個案例都簡單易懂的：現有的 WCF 用戶端將繼續使用 WIF 信賴憑證者的合作對象和 Sts。 本主題將討論其餘兩種情節。
+ 第一個案例是一目了然的：現有的 WCF 用戶端將繼續與 WIF 信賴憑證者和 Sts 搭配使用。 本主題將討論其餘兩種情節。
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>使用 ActAs / OnBehalfOf 增強現有的 WCF 用戶端
 在典型的身分識別委派情節中，用戶端會呼叫中層服務，而中層服務接著會呼叫後端服務。 中層服務會作為用戶端或以用戶端的身分執行。
@@ -33,7 +33,7 @@ ms.locfileid: "65633177"
 > [!TIP]
 > ActAs 和 OnBehalfOf 之間有何不同？
 >
-> 從 Ws-trust 通訊協定的觀點而言：
+> 從 WS-TRUST 通訊協定的觀點來看：
 >
 > 1. ActAs RST 元素指出要求者需要包含有關兩個不同實體之宣告的權杖，這兩個實體是：要求者，以及 ActAs 元素中的權杖所代表的外部實體。
 > 2. OnBehalfOf RST 元素指出要求者需要只包含有關一個實體之宣告的權杖：OnBehalfOf 元素中的權杖所代表的外部實體。
@@ -81,7 +81,7 @@ SecurityToken token = channel.Issue(rst, out rstr);
 
 請注意，<xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 方法上的 `out` 參數允許存取 RSTR，以便進行用戶端檢查。
 
-到目前為止，您只了解如何取得權杖。 從 <xref:System.ServiceModel.Security.WSTrustChannel> 物件傳回的權杖是 `GenericXmlSecurityToken`，其中包含對信賴憑證者進行驗證所需的全部資訊。 下列程式碼範例示範如何使用這個權杖。
+到目前為止，您只瞭解如何取得權杖。 從 <xref:System.ServiceModel.Security.WSTrustChannel> 物件傳回的權杖是 `GenericXmlSecurityToken`，其中包含對信賴憑證者進行驗證所需的全部資訊。 下列程式碼範例示範如何使用這個權杖。
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token );
@@ -102,4 +102,4 @@ serviceChannel.Hello("Hi!");
 
 ## <a name="see-also"></a>另請參閱
 
-- [WIF 功能](../../../docs/framework/security/wif-features.md)
+- [WIF 功能](wif-features.md)

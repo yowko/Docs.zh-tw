@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1d13c4c3e27b5af5b3c3e84995cae3df94a307d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971593"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052070"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和應用程式
 
@@ -38,39 +38,39 @@ ms.locfileid: "70971593"
 
   - 安裝模式：
 
-    - [無訊息安裝](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_custom)
+    - [無訊息安裝](deployment-guide-for-developers.md#chaining_custom)
 
-    - [顯示 UI](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_default)
+    - [顯示 UI](deployment-guide-for-developers.md#chaining_default)
 
-  - [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)
+  - [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](reducing-system-restarts.md)
 
   - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - 在用戶端應用程式上部署 .NET Framework (適用於開發人員)：
 
-  - 在安裝和部署專案中[使用 InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment)
+  - 在安裝和部署專案中[使用 InstallShield](deployment-guide-for-developers.md#installshield-deployment)
 
-  - [使用 Visual Studio ClickOnce 應用程式](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)
+  - [使用 Visual Studio ClickOnce 應用程式](deployment-guide-for-developers.md#clickonce-deployment)
 
-  - [建立 WiX 安裝套件](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)
+  - [建立 WiX 安裝套件](deployment-guide-for-developers.md#wix)
 
-  - [使用自訂安裝程式](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining)
+  - [使用自訂安裝程式](deployment-guide-for-developers.md#chaining)
 
-  - 適用於開發人員的[其他資訊](../../../docs/framework/deployment/deployment-guide-for-developers.md)
+  - 適用於開發人員的[其他資訊](deployment-guide-for-developers.md)
 
 - 部署 .NET Framework (適用於 OEM 和系統管理員)：
 
   - [Windows 評定及部署套件 (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
 
-  - [系統管理員手冊](../../../docs/framework/deployment/guide-for-administrators.md)
+  - [系統管理員手冊](guide-for-administrators.md)
 
 **服務**
 
 - 如需一般資訊，請參閱 [.NET Framework 部落格 (英文)](https://go.microsoft.com/fwlink/p/?LinkId=254977)
 
-- [偵測版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [偵測版本](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
-- [偵測 Service Pack 和更新](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
+- [偵測 Service Pack 和更新](../migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
 
 ## <a name="features-that-simplify-deployment"></a>簡化部署的功能
 
@@ -154,25 +154,25 @@ ms.locfileid: "70971593"
 
 ### <a name="installation-location"></a>安裝位置
 
-若要決定應用程式的組件應該部署在哪裡，使執行階段能夠找到它們，請參閱[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。
+若要決定應用程式的組件應該部署在哪裡，使執行階段能夠找到它們，請參閱[執行階段如何找出組件](how-the-runtime-locates-assemblies.md)。
 
-安全性考量也可能影響您部署應用程式的方式。 在對 Managed 程式碼授與安全性權限時，依據的是程式碼的位置。 如果將應用程式或元件部署到信任度極低的位置 (例如網際網路)，應用程式或元件所能執行的工作則會受限。 如需部署和安全性考量的詳細資訊，請參閱[程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)。
+安全性考量也可能影響您部署應用程式的方式。 在對 Managed 程式碼授與安全性權限時，依據的是程式碼的位置。 如果將應用程式或元件部署到信任度極低的位置 (例如網際網路)，應用程式或元件所能執行的工作則會受限。 如需部署和安全性考量的詳細資訊，請參閱[程式碼存取安全性的基本概念](../misc/code-access-security-basics.md)。
 
 ## <a name="related-topics"></a>相關主題
 
 |標題|說明|
 |-----------|-----------------|
-|[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述 Common Language Runtime 如何決定要用哪個組件來實現繫結要求。|
-|[組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型識別的問題。|
-|[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|
-|[系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)|說明系統管理員如何使用 System Center Configuration Manager (SCCM)，在整個網路上部署 .NET Framework 及其系統相依性。|
-|[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)|說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。|
+|[執行階段如何找出組件](how-the-runtime-locates-assemblies.md)|描述 Common Language Runtime 如何決定要用哪個組件來實現繫結要求。|
+|[組件載入的最佳做法](best-practices-for-assembly-loading.md)|討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型識別的問題。|
+|[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|
+|[系統管理員部署手冊](guide-for-administrators.md)|說明系統管理員如何使用 System Center Configuration Manager (SCCM)，在整個網路上部署 .NET Framework 及其系統相依性。|
+|[開發人員部署手冊](deployment-guide-for-developers.md)|說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。|
 |[部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)|討論 Visual Studio 中的部署選項，包括使用 ClickOnce 和 Windows Installer 技術發行應用程式的指示。|
 |[發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)|描述如何封裝 Windows Forms 應用程式，並使用 ClickOnce 將它部署到網路上的用戶端電腦。|
-|[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|描述 .NET Framework 用來封裝及部署資源的中樞和輪輻模型；內容涵蓋資源命名慣例、後援程序和封裝替代方式。|
-|[部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)|描述如何交付及安裝 Interop 應用程式，這類應用程式通常包含 .NET Framework 用戶端組件、代表各種不同 COM 類型程式庫的一或多個 Interop 組件，以及一或多個已註冊的 COM 元件。|
-|[如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|描述如何以無訊息模式啟動並追蹤 .NET Framework 安裝程序，並同時顯示您自己的安裝進度檢視。|
+|[封裝和部署資源](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|描述 .NET Framework 用來封裝及部署資源的中樞和輪輻模型；內容涵蓋資源命名慣例、後援程序和封裝替代方式。|
+|[部署 Interop 應用程式](../interop/deploying-an-interop-application.md)|描述如何交付及安裝 Interop 應用程式，這類應用程式通常包含 .NET Framework 用戶端組件、代表各種不同 COM 類型程式庫的一或多個 Interop 組件，以及一或多個已註冊的 COM 元件。|
+|[如何：取得 .NET Framework 4.5 安裝程式的進度](how-to-get-progress-from-the-dotnet-installer.md)|描述如何以無訊息模式啟動並追蹤 .NET Framework 安裝程序，並同時顯示您自己的安裝進度檢視。|
 
 ## <a name="see-also"></a>另請參閱
 
-- [開發指南](../../../docs/framework/development-guide.md)
+- [開發指南](../development-guide.md)

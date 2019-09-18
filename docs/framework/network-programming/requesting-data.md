@@ -17,12 +17,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228506"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047320"
 ---
 # <a name="requesting-data"></a>要求資料
 開發在現今網際網路分散式作業環境中執行的應用程式，需要從所有類型的資源中擷取資料的有效且易用的方法。 可插式通訊協定可讓您開發應用程式，而應用程式使用單一介面來擷取多個網際網路通訊協定中的資料。  
@@ -54,6 +54,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>另請參閱
 
-- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
-- [如何：要求網頁並擷取結果當作資料流](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [如何：擷取符合 WebRequest 的通訊協定特定 WebResponse](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [以 .NET Framework 進行網路程式設計](index.md)
+- [如何：要求網頁並擷取結果當作資料流](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [如何：擷取符合 WebRequest 的通訊協定特定 WebResponse](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 029243f9f8b02275c0f0a6ec1a74a9a2ca198d9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 9a1ad701e1e8f4ee9966ebd56922c29e2bae7a03
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044118"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048906"
 ---
 # <a name="basic-and-digest-authentication"></a>基本和摘要式驗證
 基本和摘要式驗證的 <xref:System.Net> 實作符合 RFC2617 – HTTP 驗證：基本和摘要式驗證 (可在[全球資訊網協會](https://www.w3.org)的網站上取得)。  
@@ -48,5 +48,5 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
   
 ## <a name="see-also"></a>另請參閱
 
-- [NTLM 與 Kerberos 驗證](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
-- [網際網路驗證](../../../docs/framework/network-programming/internet-authentication.md)
+- [NTLM 與 Kerberos 驗證](ntlm-and-kerberos-authentication.md)
+- [網際網路驗證](internet-authentication.md)

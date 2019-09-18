@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5dce6895ed9962cf20808417c50569db48de6d9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963303"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042349"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自動化控制項模式概觀
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "69963303"
   
 - 屬性和事件提供控制項模式功能以及控制項狀態的相關資訊。  
   
- 控制項模式[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]與與元件物件模型 (COM) 物件相關聯的 as 介面。 在 COM 中, 您可以查詢物件來詢問它支援哪些介面, 然後使用這些介面來存取功能。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，使用者介面自動化用戶端可以詢問控制項支援何種控制項模式，然後透過支援的控制項模式所公開的屬性、方法、事件和結構與其互動。 例如，對於多行編輯方塊，使用者介面自動化提供者可實作 <xref:System.Windows.Automation.Provider.IScrollProvider>。 當用戶端知道 <xref:System.Windows.Automation.AutomationElement> 支援 <xref:System.Windows.Automation.ScrollPattern> 控制項模式時，它便可以使用該控制項模式所公開的屬性、方法和事件來操作控制項，或存取此控制項的相關資訊。  
+ 控制項模式[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]與與元件物件模型（COM）物件相關聯的 as 介面。 在 COM 中，您可以查詢物件來詢問它支援哪些介面，然後使用這些介面來存取功能。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，使用者介面自動化用戶端可以詢問控制項支援何種控制項模式，然後透過支援的控制項模式所公開的屬性、方法、事件和結構與其互動。 例如，對於多行編輯方塊，使用者介面自動化提供者可實作 <xref:System.Windows.Automation.Provider.IScrollProvider>。 當用戶端知道 <xref:System.Windows.Automation.AutomationElement> 支援 <xref:System.Windows.Automation.ScrollPattern> 控制項模式時，它便可以使用該控制項模式所公開的屬性、方法和事件來操作控制項，或存取此控制項的相關資訊。  
   
 <a name="uiautomation_control_pattern_client_provider"></a>   
 ## <a name="ui-automation-providers-and-clients"></a>使用者介面自動化提供者和用戶端  
@@ -51,7 +51,7 @@ ms.locfileid: "69963303"
 ## <a name="control-pattern-classes-and-interfaces"></a>控制項模式類別和介面  
  下表描述 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制模式。 這個表格也列出使用者介面自動化用戶端用來存取控制模式的類別，以及使用者介面自動化提供者用來實作這些類別的介面。  
   
-|控制項模式類別|提供者介面|描述|  
+|控制項模式類別|提供者介面|說明|  
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|用於可停駐在停駐容器中的控制項。 例如工具列或工具板。|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|用於可展開或摺疊的控制項。 例如，應用程式中的功能表項目，像是 [檔案] 功能表。|  
@@ -70,12 +70,12 @@ ms.locfileid: "69963303"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|用於可切換狀態的控制項。 例如，核取方塊及可勾選的功能表項目。|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|用於可以調整大小、移動和旋轉的控制項。 轉換控制項模式通常使用於設計工具、表單、圖形編輯器，以及繪圖應用程式。|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|允許用戶端對不支援範圍值的控制項，取得或設定一個值。 例如日期時間選擇器。|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公開視窗 ( [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 作業系統的基本概念) 的特定資訊。 Windows 控制項的範例包括最上層應用程式視窗 ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]等等)、多重文件介面 (MDI) 子視窗和對話方塊。|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公開視窗 ( [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 作業系統的基本概念) 的特定資訊。 Windows 控制項的範例包括最上層應用程式視窗（[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]等等）、多重文件介面（MDI）子視窗和對話方塊。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 自動化用戶端的控制項模式對應](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)
-- [用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [用戶端的 UI 自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [UI 自動化用戶端的控制項模式對應](control-pattern-mapping-for-ui-automation-clients.md)
+- [UI 自動化概觀](ui-automation-overview.md)
+- [用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)
+- [用戶端的 UI 自動化事件](ui-automation-events-for-clients.md)

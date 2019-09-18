@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a224093b47241d951b463a7f3e0be389bba2806
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043731"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046053"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>作法：使用反映發出定義泛型方法
 
@@ -27,7 +27,7 @@ ms.locfileid: "70043731"
 第三個程序示範如何叫用泛型方法。
 
 > [!IMPORTANT]
-> 方法不是只因為屬於泛型型別並使用該類型的類型參數，而成為泛型。 方法只有在有自己的類型參數清單時，才會是泛型。 泛型方法可以出現在非泛型型別中，如本例所示。 如需泛型型別的非泛型方法範例，請參閱[如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。
+> 方法不是只因為屬於泛型型別並使用該類型的類型參數，而成為泛型。 方法只有在有自己的類型參數清單時，才會是泛型。 泛型方法可以出現在非泛型型別中，如本例所示。 如需泛型型別的非泛型方法範例，請參閱[如何：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)。
 
 ### <a name="to-define-a-generic-method"></a>定義泛型方法
 
@@ -36,7 +36,7 @@ ms.locfileid: "70043731"
     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]
 
-2. 定義動態組件和動態模組，以包含泛型方法所屬的類型。 在此情況下，組件僅有一個模組，名為 `DemoMethodBuilder1`，而且模組名稱是組件名稱加上副檔名。 在本例中，組件儲存到磁碟並執行，因此指定了 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>。 您可以使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 檢查 DemoMethodBuilder1.dll，並比較它和 Microsoft 中繼語言 (MSIL) 在步驟 1 中顯示的方法。
+2. 定義動態組件和動態模組，以包含泛型方法所屬的類型。 在此情況下，組件僅有一個模組，名為 `DemoMethodBuilder1`，而且模組名稱是組件名稱加上副檔名。 在本例中，組件儲存到磁碟並執行，因此指定了 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>。 您可以使用 [Ildasm.exe (IL 反組譯工具)](../tools/ildasm-exe-il-disassembler.md) 檢查 DemoMethodBuilder1.dll，並比較它和 Microsoft 中繼語言 (MSIL) 在步驟 1 中顯示的方法。
 
     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]
@@ -156,7 +156,7 @@ ms.locfileid: "70043731"
 
 方法具有一個型式參數，這是一個 `TInput` 陣列。 此方法會傳回 `TOutput` 的執行個體，包含該輸入陣列的所有項目。 `TOutput` 可以是任何實作 <xref:System.Collections.Generic.ICollection%601> 泛型介面的泛型集合類型。
 
-執行程式碼時，動態組件會儲存為 DemoGenericMethod1.dll，以及可以使用檢查[Ildasm.exe （IL 反組譯工具）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)。
+執行程式碼時，動態組件會儲存為 DemoGenericMethod1.dll，以及可以使用檢查[Ildasm.exe （IL 反組譯工具）](../tools/ildasm-exe-il-disassembler.md)。
 
 > [!NOTE]
 > 若要瞭解如何發出程式碼的好方法是撰寫執行的工作，您嘗試發出，並可用於檢查編譯器所產生的 MSIL 反組譯工具的 Visual Basic、 C# 或 Visual c + + 程式。
@@ -169,4 +169,4 @@ ms.locfileid: "70043731"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [如何：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)

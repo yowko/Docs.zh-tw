@@ -3,17 +3,17 @@ title: WIF 和 Web 伺服陣列
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 32d2875ebe0a46b9f9b1856ed70a30114793e492
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851517"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045245"
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 伺服陣列
 當您使用 Windows Identity Foundation (WIF) 來保護部署於 Web 伺服陣列中的信賴憑證者 (RP) 應用程式的資源時，必須採取特定的步驟，以確保 WIF 可以處理伺服陣列中不同電腦上所執行之 RP 應用程式執行個體的權杖。 這項處理包含驗證工作階段權杖簽章、加密和解密工作階段權杖、快取工作階段權杖，以及偵測重新執行的安全性權杖。  
   
- 在典型情況下，當 WIF 用來保護 RP 應用程式的資源 (不論 RP 是在單一電腦上執行，還是在 Web 伺服陣列中執行)，將根據從安全性權杖服務 (STS) 取得的安全性權杖建立與用戶端的工作階段。 這是為了避免強制用戶端必須在 STS 針對每個使用 WIF 保護的應用程式資源進行驗證。 如需 WIF 如何處理工作階段的詳細資訊，請參閱 [WIF 工作階段管理](../../../docs/framework/security/wif-session-management.md)。  
+ 在典型情況下，當 WIF 用來保護 RP 應用程式的資源 (不論 RP 是在單一電腦上執行，還是在 Web 伺服陣列中執行)，將根據從安全性權杖服務 (STS) 取得的安全性權杖建立與用戶端的工作階段。 這是為了避免強制用戶端必須在 STS 針對每個使用 WIF 保護的應用程式資源進行驗證。 如需 WIF 如何處理工作階段的詳細資訊，請參閱 [WIF 工作階段管理](wif-session-management.md)。  
   
  使用預設值時，WIF 會執行下列作業：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70851517"
     </securityTokenHandlers>  
     ```  
   
-- 衍生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 並實作分散式快取，也就是可從伺服陣列中所有可能執行 RP 的電腦上存取的快取。 設定 RP 以使用分散式快取，做法為在組態檔中指定 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素。 您可以覆寫衍生類別中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 方法，來實作所需之 `<sessionSecurityTokenCache>` 元素的子元素。  
+- 衍生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 並實作分散式快取，也就是可從伺服陣列中所有可能執行 RP 的電腦上存取的快取。 設定 RP 以使用分散式快取，做法為在組態檔中指定 [\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素。 您可以覆寫衍生類別中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 方法，來實作所需之 `<sessionSecurityTokenCache>` 元素的子元素。  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ ms.locfileid: "70851517"
   
      實作分散式快取的方法之一，是為您的自訂快取提供 WCF 前端。 如需實作 WCF 快取服務的詳細資訊，請參閱 [WCF 快取服務](#BKMK_TheWCFCachingService)。 如需實作 RP 應用程式可用來呼叫快取服務之 WCF 用戶端的詳細資訊，請參閱 [WCF 快取用戶端](#BKMK_TheWCFClient)。  
   
-- 如果您的應用程式偵測到重新執行的權杖，您必須針對權杖重新執行快取遵循類似的分散式快取策略，做法是衍生自 <xref:System.IdentityModel.Tokens.TokenReplayCache>，並指向 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 組態元素中的權杖重新執行快取服務。  
+- 如果您的應用程式偵測到重新執行的權杖，您必須針對權杖重新執行快取遵循類似的分散式快取策略，做法是衍生自 <xref:System.IdentityModel.Tokens.TokenReplayCache>，並指向 [\<tokenReplayCache>](../configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 組態元素中的權杖重新執行快取服務。  
   
 > [!IMPORTANT]
 > 本主題中的所有範例 XML 和程式碼都是從[ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)範例中取得。  
@@ -137,7 +137,7 @@ namespace WcfSessionSecurityTokenCacheService
   
 <a name="BKMK_TheWCFClient"></a>   
 ## <a name="the-wcf-caching-client"></a>WCF 快取用戶端  
- 本節說明衍生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>，且委派呼叫至快取服務之類別的實作。 您可設定 RP 應用程式，透過 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素來使用這個類別，如下列 XML 所示：  
+ 本節說明衍生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>，且委派呼叫至快取服務之類別的實作。 您可設定 RP 應用程式，透過 [\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素來使用這個類別，如下列 XML 所示：  
   
 ```xml  
 <caches>  
@@ -255,4 +255,4 @@ namespace CacheLibrary
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [WIF 工作階段管理](../../../docs/framework/security/wif-session-management.md)
+- [WIF 工作階段管理](wif-session-management.md)

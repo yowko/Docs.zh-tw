@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170595"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048004"
 ---
 # <a name="http"></a>HTTP
 .NET Framework 可透過 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.HttpWebResponse> 類別，對於佔據所有網際網路流量絕大部分的 HTTP 通訊協定提供全面的支援。 這些類別衍生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，每當靜態方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 碰到以 "http" 或 "https" 開頭的 URI 時，預設會傳回這些類別。 在大部分情況下，**WebRequest** 和 **WebResponse** 類別提供了提出要求所需的一切功能，但是如果您需要存取以屬性方式公開的 HTTP 特定功能，則可以將這些類別轉型為 **HttpWebRequest** 或 **HttpWebResponse**。  
@@ -33,6 +33,6 @@ ms.locfileid: "59170595"
   
 ## <a name="see-also"></a>另請參閱
 
-- [透過 Proxy 存取網際網路](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)
-- [如何：存取 HTTP 特定屬性](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [透過 Proxy 存取網際網路](accessing-the-internet-through-a-proxy.md)
+- [使用應用程式通訊協定](using-application-protocols.md)
+- [如何：存取 HTTP 特定屬性](how-to-access-http-specific-properties.md)

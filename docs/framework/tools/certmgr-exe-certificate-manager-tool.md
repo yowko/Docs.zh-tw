@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851379"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044815"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (憑證管理員工具)
 憑證管理員工具 (Certmgr.exe) 可以管理憑證、憑證信任清單 (CTL) 和憑證撤銷清單 (CRL)。  
   
- 憑證管理員會隨 Visual Studio 自動安裝。 若要啟動工具，請使用[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 憑證管理員會隨 Visual Studio 自動安裝。 若要啟動工具，請使用[命令提示字元](developer-command-prompt-for-vs.md)。  
   
 > [!NOTE]
 > 憑證管理工具 (Certmgr.exe) 是一個命令列公用程式，而憑證 (Certmgr.msc) 則是 Microsoft Management Console (MMC) 嵌入式管理單元。 因為 Certmgr.msc 通常會位於 Windows 系統目錄中，以在命令列中輸入 `certmgr` 可能會載入憑證 MMC 嵌入式管理單元，即使您已開啟 Visual Studio 開發人員命令提示字元也一樣。 發生這種情況是因為嵌入式管理單元的路徑在 PATH 環境變數中位於憑證管理員工具的路徑之前。 如果您遇到此問題，可以透過指定可執行檔的路徑來執行 Certmgr.exe 指令。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
- 如需 X.509 憑證的概觀，請參閱[使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 如需 X.509 憑證的概觀，請參閱[使用憑證](../wcf/feature-details/working-with-certificates.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "70851379"
  [!code-csharp[Tools.CertMgr#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tools.certmgr/cs/storenames1.cs#1)]
  [!code-vb[Tools.CertMgr#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tools.certmgr/vb/storenames1.vb#1)]  
   
- 如需憑證的詳細資訊，請參閱[使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 如需憑證的詳細資訊，請參閱[使用憑證](../wcf/feature-details/working-with-certificates.md)。  
   
 ## <a name="examples"></a>範例  
  下列命令會顯示叫做 `my` 且具有詳細資訊輸出的預設系統存放區。  
@@ -139,6 +139,6 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>另請參閱
 
-- [工具](../../../docs/framework/tools/index.md)
+- [工具](index.md)
 - [Makecert.exe (憑證建立工具)](/windows/desktop/SecCrypto/makecert)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

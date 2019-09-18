@@ -8,12 +8,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation within applications
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
-ms.openlocfilehash: ef3d03bee412b97ed88ec76e81ad2fd19a9595eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a60253e62f814e9e3ea7ed4c5720e98e470d7f79
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968952"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043597"
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>在用戶端應用程式中實作 UI 自動化提供者
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "69968952"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化提供者概觀](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [註冊用戶端提供者組件](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
-- [建立用戶端 UI 自動化提供者](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [用戶端 UI 自動化提供者實作](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)
+- [UI 自動化提供者概觀](ui-automation-providers-overview.md)
+- [註冊用戶端提供者組件](register-a-client-side-provider-assembly.md)
+- [建立用戶端 UI 自動化提供者](create-a-client-side-ui-automation-provider.md)
+- [用戶端 UI 自動化提供者實作](client-side-ui-automation-provider-implementation.md)

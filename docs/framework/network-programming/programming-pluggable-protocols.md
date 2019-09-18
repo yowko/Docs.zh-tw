@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072337"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047393"
 ---
 # <a name="programming-pluggable-protocols"></a>可插式通訊協定程式設計
 抽象 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別提供可插式通訊協定的基底。 透過從 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 衍生通訊協定特定類別，應用程式可以要求來自網際網路資源的資料，並讀取回應，而不需要指定所要使用的通訊協定。  
@@ -33,7 +33,7 @@ ms.locfileid: "59072337"
   
 ## <a name="see-also"></a>另請參閱
 
-- [衍生自 WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
-- [衍生自 WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
-- [如何：轉換 WebRequest 類型以存取通訊協定特定屬性](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [衍生自 WebRequest](deriving-from-webrequest.md)
+- [衍生自 WebResponse](deriving-from-webresponse.md)
+- [以 .NET Framework 進行網路程式設計](index.md)
+- [如何：轉換 WebRequest 類型以存取通訊協定特定屬性](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

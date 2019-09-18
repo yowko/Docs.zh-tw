@@ -2,12 +2,12 @@
 title: IPv6 自動設定
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2c7f77bbdebe093b5e3bc706653ed203082d9c3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647330"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047813"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 自動設定
 IPv6 的一個重要目標是支援節點隨插即用。 亦即，節點應該可能插入 IPv6 網路，並且可以自動設定，不需要人為介入。  
@@ -26,5 +26,5 @@ IPv6 的一個重要目標是支援節點隨插即用。 亦即，節點應該�
   
 ## <a name="see-also"></a>另請參閱
 
-- [網際網路通訊協定第 6 版](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [通訊端](../../../docs/framework/network-programming/sockets.md)
+- [網際網路通訊協定第 6 版](internet-protocol-version-6.md)
+- [通訊端](sockets.md)

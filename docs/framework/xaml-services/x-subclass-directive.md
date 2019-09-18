@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6f02998a7648693bd731d6b2afdfd4499abaa04
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938862"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053903"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 指示詞
-修改 XAML 標記編譯行為時`x:Class`也會提供。 而不是建立部分類別為基礎`x:Class`，提供`x:Class`會建立為中繼類別，並提供衍生的類別然後是根據預期`x:Class`。  
+當同時提供時`x:Class` ，修改 XAML 標記編譯行為。 除了建立以為基礎`x:Class`的部分類別，提供`x:Class`的會建立為中繼類別，然後您所提供的衍生類別`x:Class`應該會以為基礎。  
   
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage  
   
-```  
+```xaml  
 <object x:Class="namespace.classname" x:Subclass="subclassNamespace.subclassName">  
    ...  
 </object>  
@@ -32,29 +32,29 @@ ms.locfileid: "61938862"
   
 |||  
 |-|-|  
-|`namespace`|選擇性。 指定 CLR 命名空間包含`classname`。 如果`namespace`指定，則句點 （.） 分隔`namespace`和`classname`。|  
-|`classname`|必要項。 指定的連接已載入的 XAML 和您程式碼後置的 XAML 的部分類別的 CLR 名稱。 請參閱＜備註＞。|  
-|`subclassNamespace`|選擇性。 可能會不同於`namespace`如果每個命名空間可以解析其他。 指定 CLR 命名空間包含`subclassName`。 如果`subclassName`指定，則句點 （.） 分隔`subclassNamespace`和`subclassName`。|  
-|`subclassName`|必要項。 指定的子類別的 CLR 名稱。|  
+|`namespace`|選擇性。 指定包含`classname`的 CLR 命名空間。 如果`namespace`指定了, 則句點 (.) 會`namespace`分隔`classname`和。|  
+|`classname`|必要項。 指定部分類別的 CLR 名稱, 此元件會連接已載入的 XAML 和該 XAML 的程式碼後置。 請參閱＜備註＞。|  
+|`subclassNamespace`|選擇性。 如果每個命名`namespace`空間都可以解析另一個，則可以與不同。 指定包含`subclassName`的 CLR 命名空間。 如果`subclassName`指定了, 則句點 (.) 會`subclassNamespace`分隔`subclassName`和。|  
+|`subclassName`|必要項。 指定子類別的 CLR 名稱。|  
   
 ## <a name="dependencies"></a>相依性  
- [X:class 指示詞](x-class-directive.md)也必須提供相同的物件，而且該物件必須是 XAML 生產的根項目。  
+ 您也必須在相同的物件上提供[x：Class](x-class-directive.md)指示詞，而且該物件必須是 XAML 生產的根項目。  
   
 ## <a name="remarks"></a>備註  
- `x:Subclass` 使用方式，主要是用於不支援部分類別宣告的語言。  
+ `x:Subclass`使用方式主要適用于不支援部分類別宣告的語言。  
   
- 做為類別`x:Subclass`不能是巢狀的類別，和`x:Subclass`"Dependencies"區段中所述，必須指向根的物件。  
+ 當做使用`x:Subclass`的類別不可以是嵌套類別，而且`x:Subclass`必須參考根物件，如「相依性」一節中所述。  
   
- 否則，概念的意義`x:Subclass`未定義的.NET Framework XAML 服務實作。 這是因為.NET Framework XAML 服務的行為不會指定由哪一個 XAML 標記和備份程式碼連線的整體程式設計模型。 實作的進一步概念的相關`x:Class`和`x:Subclass`所使用的程式設計模型或應用程式模型來定義如何連接 XAML 標記，編譯過的標記，並以 CLR 為基礎的程式碼後置的特定架構執行。 每個架構可能會有自己的建置動作可讓某些行為或必須包含在建置環境的特定元件。 在架構中，建置動作也有所不同，根據特定的 CLR 語言用於程式碼後置。  
+ 否則，的概念意義`x:Subclass`會由 .NET Framework XAML 服務執行而未定義。 這是因為 .NET Framework XAML 服務行為並不會指定用來連接 XAML 標記和支援程式碼的整體程式設計模型。 與`x:Class` 和`x:Subclass`相關的進一步概念的執行，是由使用程式設計模型或應用程式模型的特定架構，來定義如何連接 XAML 標記、編譯的標記和 CLR 程式碼後置。 每個架構可能會有自己的組建動作，以啟用某些行為，或必須包含在組建環境中的特定元件。 在架構中，組建動作也會根據程式碼後置所使用的特定 CLR 語言而有所不同。  
   
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
- `x:Subclass` 可以在頁面根或在<xref:System.Windows.Application>在應用程式定義中，已有根`x:Class`。 宣告`x:Subclass`以外的頁面或應用程式的根，或未指定任何項目上`x:Class`存在，會造成編譯時期錯誤。  
+ `x:Subclass`可以在頁面根目錄或應用程式定義中<xref:System.Windows.Application>的根目錄上，也就是已經有`x:Class`的。 在頁面或應用程式根目錄以外的任何專案上宣告，或指定不`x:Class`存在的專案，會導致編譯時期錯誤。 `x:Subclass`  
   
- 建立衍生類別可正確`x:Subclass`案例是相當複雜。 您可能需要檢查的中繼檔 （.g 標記編譯，其名稱中包含的.xaml 檔案名稱所產生您專案的 obj 資料夾中的資料檔案）。 這些中繼檔案可協助您判斷在編譯的應用程式中加入部分類別中的某些程式設計建構的原點。  
+ 建立可針對`x:Subclass`案例正常運作的衍生類別，相當複雜。 您可能需要檢查中繼檔案（在專案的 [obj] 資料夾中，透過標記編譯產生的. g 檔案，其中包含包含 .xaml 檔案名的名稱）。 這些中繼檔案可協助您判斷已編譯應用程式的聯結部分類別中，特定程式設計結構的來源。  
   
- 在衍生類別中的事件處理常式必須是`internal override`(`Friend Overrides` Microsoft Visual Basic 中) 若要在編譯期間建立中繼類別中覆寫處理常式的虛設常式。 否則，衍生的類別實作隱藏 （陰影） 的中繼類別實作，而且中繼類別處理常式不會叫用。  
+ 衍生類別中的事件處理常式必須`internal override`是`Friend Overrides` （在 Microsoft Visual Basic 中），才能覆寫在編譯期間，在中繼類別中建立之處理常式的 stub。 否則，衍生的類別會隱藏（陰影）中繼類別的執行，而且不會叫用中繼類別處理常式。  
   
- 當您定義這兩`x:Class`並`x:Subclass`，您不需要提供任何實作類別所參考的`x:Class`。 您只需要為它命名，以透過`x:Class`屬性，讓編譯器有一些類別，它會建立在中繼檔 （編譯器不會選取預設的名稱在此情況下） 中的指引。 您可以賦予`x:Class`類別的實作; 不過，這不是使用這兩個的典型案例`x:Class`和`x:Subclass`。  
+ 當您同時`x:Class`定義和`x:Subclass`時，您不需要為所參考的`x:Class`類別提供任何實作為。 您只需要透過`x:Class`屬性指定名稱，編譯器就會針對它在中繼檔案中建立的類別提供一些指引（在此案例中，編譯器不會選取預設名稱）。 您可以為`x:Class`類別提供一個實作為，不過，這不是`x:Class`使用和`x:Subclass`的一般案例。  
   
 ## <a name="see-also"></a>另請參閱
 

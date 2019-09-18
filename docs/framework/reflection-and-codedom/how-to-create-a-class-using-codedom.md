@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 CodeDOM 建立類別
+title: HOW TO：使用 CodeDOM 建立類別
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3f7363ec5f8c954dd55a9500dcf8f2e302424f
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c932587c13532e14c956f3ebd058ae41d30519dc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894898"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046049"
 ---
-# <a name="how-to-create-a-class-using-codedom"></a>HOW TO：使用 CodeDOM 建立類別
+# <a name="how-to-create-a-class-using-codedom"></a>作法：使用 CodeDOM 建立類別
 下列程序示範如何建立及編譯 CodeDOM 圖表，其可產生包含兩個欄位、三種屬性、一種方法、一個建構函式和一個進入點的類別。  
   
 1. 建立主控台應用程式，使用 CodeDOM 程式碼產生類別的原始程式碼。  
@@ -120,5 +120,5 @@ The object:
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用 CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
-- [從 CodeDOM 圖表產生和編譯原始程式碼](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+- [使用 CodeDOM](using-the-codedom.md)
+- [從 CodeDOM 圖表產生和編譯原始程式碼](generating-and-compiling-source-code-from-a-codedom-graph.md)

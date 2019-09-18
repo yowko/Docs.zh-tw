@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2cdaa312c037714a34e25e62ad318c9bc745ea7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 739f0efdb50f8eba4875a42d5173f741b6ee94b3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953183"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051893"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 和非 Blittable 類型
-大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。 這些類型稱為「Blittable 類型」  ，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。  
+大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。 這些類型稱為「Blittable 類型」，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。  
   
  從平台叫用呼叫傳回的結構必須是 Blittable 類型。 平台叫用不支援非 Blittable 結構作為傳回類型。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "69953183"
   
  物件參考不是 Blittable。 這包含自行 Blittable 之物件參考的陣列。 例如，您可以定義 Blittable 結構，但無法定義包含這些結構參考之陣列的 Blittable 類型。  
   
- 進行最佳化時，在封送處理期間，會[釘選](../../../docs/framework/interop/copying-and-pinning.md) Blittable 類型以及只包含 Blittable 成員之類別的陣列，而不是複製。 呼叫者和被呼叫者位於相同的 Apartment 時，可以將這些類型封送處理為 In/Out 參數。 不過，會將這些類型實際封送處理為 In 參數；而且，如果您想要將引數封送處理為 In/Out 參數，則您必須套用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性。  
+ 進行最佳化時，在封送處理期間，會[釘選](copying-and-pinning.md) Blittable 類型以及只包含 Blittable 成員之類別的陣列，而不是複製。 呼叫者和被呼叫者位於相同的 Apartment 時，可以將這些類型封送處理為 In/Out 參數。 不過，會將這些類型實際封送處理為 In 參數；而且，如果您想要將引數封送處理為 In/Out 參數，則您必須套用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性。  
   
  部分 Managed 資料類型需要 Unmanaged 環境中有不同的呈現。 這些非 Blittable 資料類型必須轉換成可封送處理的形式。 例如，Managed 字串是非 Blittable 類型，因為它們必須先轉換成字串物件，才能進行封送處理。  
   
@@ -61,18 +61,18 @@ ms.locfileid: "69953183"
   
 |非 Blittable 類型|說明|  
 |-------------------------|-----------------|  
-|[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
+|[System.Array](default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
 |[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|轉換成 `true` 為 1 或 -1 的 1、2 或 4 位元組值。|  
 |[System.Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|轉換成 Unicode 或 ANSI 字元。|  
 |[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|轉換成類別介面。|  
-|[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|轉換成變異值或介面。|  
-|[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
-|[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|轉換成 Null 參考中的字串終止，或轉換成 BSTR。|  
+|[System.Object](default-marshaling-for-objects.md)|轉換成變異值或介面。|  
+|[System.Mdarray](default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
+|[System.String](default-marshaling-for-strings.md)|轉換成 Null 參考中的字串終止，或轉換成 BSTR。|  
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|轉換成具有固定記憶體配置的結構。|  
-|[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
+|[System.Szarray](default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
   
  COM Interop 只能支援類別和物件類型。 如需 Visual Basic、C# 和 C++ 中的對應類型，請參閱[類別庫概觀](../../standard/class-library-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)
+- [預設的封送處理行為](default-marshaling-behavior.md)

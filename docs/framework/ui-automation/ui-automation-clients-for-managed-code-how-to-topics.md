@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 8c3107ce2ee20b3369a2ba462775ec7c8a1d3f6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935119"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042539"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Managed 程式碼的 UI 自動化用戶端 HOW TO 主題
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "69935119"
  本節提供在用戶端應用程式中執行[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]之功能的詳細資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [根據屬性條件尋找 UI 自動化項目](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [使用 TreeWalker 導覽 UI 自動化項目](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [尋找清單項目的 UI 自動化項目](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [取得 UI 自動化項目屬性](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [訂閱 UI 自動化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [註冊用戶端提供者組件](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [使用 AutomationID 屬性](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [根據屬性條件尋找 UI 自動化項目](find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [使用 TreeWalker 導覽 UI 自動化項目](navigate-among-ui-automation-elements-with-treewalker.md)  
+ [尋找清單項目的 UI 自動化項目](find-a-ui-automation-element-for-a-list-item.md)  
+ [取得 UI 自動化項目屬性](get-ui-automation-element-properties.md)  
+ [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)  
+ [訂閱 UI 自動化事件](subscribe-to-ui-automation-events.md)  
+ [註冊用戶端提供者組件](register-a-client-side-provider-assembly.md)  
+ [使用 AutomationID 屬性](use-the-automationid-property.md)

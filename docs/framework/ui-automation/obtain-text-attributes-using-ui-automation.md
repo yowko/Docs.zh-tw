@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, getting text attributes
 - text attributes, getting
 ms.assetid: fdefc6c3-b836-4cfe-8dec-1484bfdc5551
-ms.openlocfilehash: 559f0ee3bf1da1b33ff73b116c67ed2849cbe782
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9bb2b2260c4638fea941e2f26b503c1cfe3d9ba7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966400"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042926"
 ---
 # <a name="obtain-text-attributes-using-ui-automation"></a>使用 UI 自動化取得文字屬性
 > [!NOTE]
@@ -36,9 +36,9 @@ ms.locfileid: "69966400"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化 TextPattern 概觀](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [使用 UI 自動化將內容新增至文字方塊](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [使用 UI 自動化尋找和反白顯示文字](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
-- [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [使用 UI 自動化取得混合文字屬性詳細資料](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)
+- [UI 自動化 TextPattern 概觀](ui-automation-textpattern-overview.md)
+- [使用 UI 自動化將內容新增至文字方塊](add-content-to-a-text-box-using-ui-automation.md)
+- [使用 UI 自動化尋找和反白顯示文字](find-and-highlight-text-using-ui-automation.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [使用 UI 自動化取得混合文字屬性詳細資料](obtain-mixed-text-attribute-details-using-ui-automation.md)

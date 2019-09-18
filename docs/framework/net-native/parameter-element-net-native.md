@@ -1,17 +1,17 @@
 ---
-title: <Parameter> 項目 (.NET Native)
+title: <Parameter>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9a462e75df535504d0e98c22c34c11ff7af7d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867052"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049352"
 ---
-# <a name="parameter-element-net-native"></a>\<參數 > 項目 (.NET Native)
+# <a name="parameter-element-net-native"></a>\<參數 > 元素（.NET Native）
 將反映原則套用至傳遞給方法的引數類型。  
   
 ## <a name="syntax"></a>語法  
@@ -57,9 +57,9 @@ ms.locfileid: "61867052"
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -68,14 +68,14 @@ ms.locfileid: "61867052"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
+|[\<Method>](method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
   
 ## <a name="remarks"></a>備註  
- `<Parameter>` 項目是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 項目的子項，用來將原則套用至特定的方法參數。 特定的方法參數是依名稱指定，而不是依類型。 必須存在至少一個表示原則類型的屬性，例如 `Activate` 或 `Dynamic`。  
+ `<Parameter>` 項目是 [\<Method>](method-element-net-native.md) 項目的子項，用來將原則套用至特定的方法參數。 特定的方法參數是依名稱指定，而不是依類型。 必須存在至少一個表示原則類型的屬性，例如 `Activate` 或 `Dynamic`。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
-- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Method> 項目](method-element-net-native.md)
+- [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞原則設定](runtime-directive-policy-settings.md)
+- [執行階段指示詞項目](runtime-directive-elements.md)

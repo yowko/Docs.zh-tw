@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d4e274ad7b64820e74347908c08c7726e96bbe8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953968"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053862"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>適用於類型轉換子和標記延伸的服務內容
 在撰寫類型來支援使用類型轉換子和標記延伸時，通常必須先知道會在標記或周圍物件圖形結構中的何處使用類型轉換子和標記延伸。 要有這些資訊，才能正確地具現化所提供的物件，或是在物件圖形中建立對現有物件的物件參考。 使用 .NET Framework XAML 服務時，可能需要的內容會以一系列服務介面的形式公開。 類型轉換子或標記延伸支援程式碼可以使用從 <xref:System.Xaml.XamlObjectWriter> 或相關類型傳來的可用服務提供者內容，來查詢服務。 XAML 結構描述內容可透過這類服務直接提供。 本主題說明如何透過值轉換器實作存取服務內容，並列出通常可用的服務及其角色。  
@@ -22,7 +22,7 @@ ms.locfileid: "61953968"
 ## <a name="services-for-a-markup-extension"></a>標記延伸適用的服務  
  <xref:System.Windows.Markup.MarkupExtension> 只有一種虛擬方法，那就是 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>。 輸入 `serviceProvider` 參數是在 XAML 處理器呼叫標記延伸時，用以向實作表示服務的方式。 下列虛擬程式碼示範標記延伸實作如何在其 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>中查詢服務：  
   
-```  
+```csharp  
 public override object ProvideValue(IServiceProvider serviceProvider)  
 {  
 ...  
@@ -46,7 +46,7 @@ public override object ProvideValue(IServiceProvider serviceProvider)
   
  下列虛擬程式碼示範用於 XAML 的類型轉換子實作如何在其中一個覆寫 (在本例中為 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>) 中查詢服務：  
   
-```  
+```csharp  
 public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,  
   CultureInfo cultureInfo,  
   object source)  
@@ -75,7 +75,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iserviceprovider"></a>IServiceProvider  
  **T:System.Xaml.IDestinationTypeProvider**中查詢服務： <xref:System.IServiceProvider>  
   
- **與：**.NET Framework 中服務基礎結構的基本作業，以便讓您可以呼叫<xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>。  
+ **適用于：** .NET Framework 中服務型基礎結構的基本作業，讓您可以呼叫<xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>。  
   
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **T:System.Xaml.IDestinationTypeProvider**中查詢服務： <xref:System.ComponentModel.ITypeDescriptorContext>  
@@ -92,7 +92,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Windows.Markup> 命名空間、System.Xaml 組件  
   
- **與：** 載入路徑情節，以及與 XAML 結構描述內容的互動  
+ **適用于：** 載入路徑情節，以及與 XAML 架構內容的互動  
   
  **服務 API：**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
@@ -103,7 +103,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Windows.Markup> 命名空間、System.Xaml 組件  
   
- **與：** 載入路徑和儲存路徑處理是一種 Uri 的成員值或`x:Uri`值。  
+ **適用于：** 成員值（uri 或`x:Uri`值）的載入路徑和儲存路徑處理。  
   
  **服務 API：**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
   
@@ -114,7 +114,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Xaml> 命名空間、System.Xaml 組件  
   
- **與：** 載入路徑處理和類型查閱的延後或最佳化。  
+ **適用于：** 載入路徑處理和類型查閱的延期或優化。  
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>、其他 3 項。  
   
@@ -125,7 +125,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Xaml> 命名空間、System.Xaml 組件  
   
- **與：** 載入路徑，以及任何必須將 XAML 類型解析成支援類型的作業。  
+ **適用于：** 載入路徑，以及任何必須將 XAML 類型解析成支援類型的作業。  
   
  **服務 API：**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
@@ -136,7 +136,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Xaml> 命名空間、System.Xaml 組件  
   
- **與：** 載入路徑。  
+ **適用于：** 載入路徑。  
   
  **服務 API：**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A>  
   
@@ -147,9 +147,9 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Xaml> 命名空間、System.Xaml 組件  
   
- **與：** 載入路徑、 儲存路徑。  
+ **適用于：** 載入路徑、儲存路徑。  
   
- **服務 API:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A>適用於載入路徑<xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A>針對儲存路徑。  
+ **服務 API：** 針對 [載入路徑<xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> ]，針對 [儲存路徑]。 <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A>  
   
  <xref:System.Xaml.IXamlNamespaceResolver> 是一項服務，可根據 XAML 命名空間的前置詞，傳回 XAML 命名空間在起始 XAML 標記中的識別項 / URI。  
   
@@ -158,7 +158,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Windows.Markup> 命名空間、System.Xaml 組件  
   
- **與：** 載入路徑和儲存路徑。  
+ **適用于：** 載入路徑和儲存路徑。  
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>、 <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>。  
   
@@ -169,7 +169,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Xaml> 命名空間、System.Xaml 組件  
   
- **與：** 載入路徑物件圖形定義，並解決所識別的物件`x:Name`， `x:Reference`，或架構特定技術。  
+ **適用于：** 載入路徑物件圖形定義，並解析由、 `x:Name` `x:Reference`或架構特定技術所識別的物件。  
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>；其他適用於進階情節 (例如處理向前參考) 的 API。  
   
@@ -180,11 +180,11 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **T:System.Xaml.IDestinationTypeProvider**  <xref:System.Xaml> 命名空間、System.Xaml 組件  
   
- **與：** 載入路徑解析間接 CLR 類型資訊。  
+ **適用于：** 間接 CLR 類型資訊的載入路徑解析。  
   
  **服務 API：** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
   
- 如需詳細資訊，請參閱<xref:System.Xaml.IDestinationTypeProvider>。  
+ 如需詳細資訊，請參閱 <xref:System.Xaml.IDestinationTypeProvider>。  
   
 ## <a name="see-also"></a>另請參閱
 

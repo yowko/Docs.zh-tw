@@ -2,12 +2,12 @@
 title: 部署已裝載網際網路資訊服務的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895105"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053306"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署已裝載網際網路資訊服務的 WCF 服務
 
@@ -29,7 +29,7 @@ ms.locfileid: "70895105"
 
 必須安裝 WCF、IIS 和 ASP.NET，IIS 裝載的 WCF 服務才能正常運作。 安裝 WCF （做為 .NET Framework 的一部分）、ASP.NET 和 IIS 的程式會根據您的作業系統而有所不同。 如需安裝 WCF 和 .NET Framework 的詳細資訊，請參閱[安裝適用于開發人員的 .NET Framework](../../install/guide-for-developers.md)。 若要在 Windows 10 上安裝 IIS，請開啟 [**控制台**] 中的 [**程式和功能**]，然後選取 [**開啟或關閉 Windows 功能**]。 在 [ **Windows 功能**] 中，選取**Internet Information Services** ，然後選擇 **[確定]** 。
 
-![已反白顯示 IIS 的 Windows 功能](media/windows-features-iis.png)
+![已反白顯示 IIS 的 Windows 功能](./media/windows-features-iis.png)
 
 如需在其他作業系統上安裝 IIS 的指示，請參閱在[Windows Vista 和 windows 7 上安裝 iis](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7)和[在 Windows Server 2012 R2 上安裝 iis 8.5](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2)。
 

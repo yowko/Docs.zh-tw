@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: e0214e454754ac09f1271770f6975c00180a4584
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ed358947fc1dc1d29010a1a31c6c6603567f8734
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964243"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041450"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>List 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "69964243"
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
- 下表說明與清單控制項相關的兩種 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構檢視，並說明每種檢視所包含的內容。 控制項檢視只包含屬於控制項的項目，內容檢視則會從樹狀結構移除多餘的資訊。 例如，用來設定下拉式方塊標籤的文字控制項將公開為 `ComboBox NameProperty`。 由於文字控制項已在控制項檢視中透過這種方式公開，就無須公開兩次，因此會從內容檢視移除。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+ 下表說明與清單控制項相關的兩種 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構檢視，並說明每種檢視所包含的內容。 控制項檢視只包含屬於控制項的項目，內容檢視則會從樹狀結構移除多餘的資訊。 例如，用來設定下拉式方塊標籤的文字控制項將公開為 `ComboBox NameProperty`。 由於文字控制項已在控制項檢視中透過這種方式公開，就無須公開兩次，因此會從內容檢視移除。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
 |包含對應控制項的項目。|從樹狀結構移除多餘資訊，使輔助技術得以處理對使用者有意義的最小資訊集。|  
-|清單<br /><br /> -DataItem (0 個以上)<br />-用來 (0 個以上)<br />-Group (0 個以上)<br />-捲軸 (0、1或 2)|清單<br /><br /> -DataItem (0 個以上)<br />-用來 (0 個以上)<br />-Group (0 個以上)|  
+|清單<br /><br /> -DataItem （0個以上）<br />-用來（0個以上）<br />-Group （0個以上）<br />-捲軸（0、1或2）|清單<br /><br /> -DataItem （0個以上）<br />-用來（0個以上）<br />-Group （0個以上）|  
   
  針對實作清單控制項類型的控制項 (例如清單控制項)，其控制項檢視包含：  
   
-- 清單控制項中的零個或多個專案 (專案可以根據清單專案或資料項目控制項類型)。
+- 清單控制項中的零個或多個專案（專案可以根據清單專案或資料項目控制項類型）。
   
 - 清單控制項內的零個或多個群組控制項。
   
@@ -42,7 +42,7 @@ ms.locfileid: "69964243"
   
 針對實作清單控制項類型的控制項 (例如清單控制項)，其內容檢視包含：  
   
-- 清單控制項中的零個或多個專案 (專案可以根據清單專案或資料項目控制項類型)。
+- 清單控制項中的零個或多個專案（專案可以根據清單專案或資料項目控制項類型）。
   
 - 清單控制項中的零個或多個群組。
 
@@ -52,13 +52,13 @@ ms.locfileid: "69964243"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與清單控制項特別有關。 如需[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性的詳細資訊, 請參閱[用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與清單控制項特別有關。 如需[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性的詳細資訊, 請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果清單控制項有可按的點 (可以按一下讓清單取得焦點的點)，則該點必須透過此屬性公開。<br /><br /> 如果`IsOffScreen`屬性的值為 true, <xref:System.Windows.Automation.NoClickablePointException>則會引發。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果清單控制項有可按的點 (可以按一下讓清單取得焦點的點)，則該點必須透過此屬性公開。<br /><br /> 如果`IsOffScreen`屬性的值為 true， <xref:System.Windows.Automation.NoClickablePointException>則會引發。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|清單控制項的 Name 屬性值應傳遞要求使用者選取的選項類別。 此屬性通常會從靜態文字標籤取得其名稱。 如果沒有靜態文字標籤，應用程式開發人員就必須公開 Name 屬性的值。<br /><br /> 清單控制項唯一不需要此屬性的情況是，當控制項用於其他控制項的樹狀子目錄時。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|請參閱備註。|如果有靜態文字標籤，那麼這個屬性必須公開該控制項的參考。|  
@@ -71,7 +71,7 @@ ms.locfileid: "69964243"
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>必要的使用者介面自動化控制項模式和屬性  
- 下表列出清單控制項支援所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+ 下表列出清單控制項支援所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
 |控制項模式/模式屬性|支援/值|注意|  
 |---------------------------------------|--------------------|-----------|  
@@ -85,27 +85,27 @@ ms.locfileid: "69964243"
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
- 下表列出所有清單控制項支援所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+ 下表列出所有清單控制項支援所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援/值|注意|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|視情況而定|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|視情況而定|None|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|視情況而定|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|視情況而定|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|無|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|無|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要|無|  
 |<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> 屬性變更事件。|視情況而定|無|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 屬性變更事件。|視情況而定|無|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 屬性變更事件。|視情況而定|無|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 屬性變更事件。|視情況而定|None|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 屬性變更事件。|視情況而定|無|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 屬性變更事件。|視情況而定|無|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 屬性變更事件。|視情況而定|無|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 屬性變更事件。|視情況而定|無|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 屬性變更事件。|視情況而定|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|無|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|無|  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Automation.ControlType.List>
-- [UI 自動化控制項類型概觀](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI 自動化控制項類型概觀](ui-automation-control-types-overview.md)
+- [UI 自動化概觀](ui-automation-overview.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 2b7b54ab569a3f03363b2f30bf595c2087b9fe70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 11c17c6893800fce8bbff8f49b3a207c161bcdfa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963945"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047639"
 ---
 # <a name="managing-connections"></a>管理連接
 使用 HTTP 連線至資料資源的應用程式可以使用 .NET Framework 的 <xref:System.Net.ServicePoint> 和 <xref:System.Net.ServicePointManager> 類別管理網際網路連線，以及協助它們達到最佳規模和效能。  
@@ -66,5 +66,5 @@ sp.ConnectionLimit = newLimit
   
 ## <a name="see-also"></a>另請參閱
 
-- [連線群組](../../../docs/framework/network-programming/connection-grouping.md)
-- [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)
+- [連線群組](connection-grouping.md)
+- [使用應用程式通訊協定](using-application-protocols.md)

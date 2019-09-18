@@ -1,5 +1,5 @@
 ---
-title: 作法：指定服務的資訊安全內容
+title: HOW TO：指定服務的資訊安全內容
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 88dc9c40a2b8ff0ac9bba26c991ba2a4ac2dcb43
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952428"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053586"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>作法：指定服務的資訊安全內容
 根據預設，服務會在與登入使用者不同的安全性內容中執行。 服務會在稱為 `LocalSystem` 的預設系統帳戶內容中執行，授與他們與使用者不同的系統資源存取權限。 您可以變更此行為，以指定服務應在其中執行的不同使用者帳戶。  
@@ -35,17 +35,17 @@ ms.locfileid: "69952428"
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>指定服務的安全性內容  
   
-1. 建立服務之後，為其加入必要的安裝程式。 如需詳細資訊，請參閱[如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+1. 建立服務之後，為其加入必要的安裝程式。 如需詳細資訊，請參閱[如何：將安裝程式新增至服務應用程式](how-to-add-installers-to-your-service-application.md)。  
   
 2. 在設計工具中，存取 `ProjectInstaller` 類別，然後按一下所要使用服務的服務處理序安裝程式。  
   
     > [!NOTE]
     > 針對每個服務應用程式，`ProjectInstaller` 類別中至少有兩個安裝元件：一個用於安裝專案中所有服務的處理序，以及一個適用於應用程式所包含每個服務的安裝程式。 在此執行個體中，您想要選取 <xref:System.ServiceProcess.ServiceProcessInstaller>。  
   
-3. 在 [屬性]  視窗中，將 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 屬性設定為適當的值。  
+3. 在 [屬性] 視窗中，將 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 屬性設定為適當的值。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
+- [如何：將安裝程式新增至服務應用程式](how-to-add-installers-to-your-service-application.md)
+- [如何：建立 Windows 服務](how-to-create-windows-services.md)

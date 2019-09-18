@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6805385ec21deb8748354647ab0f09b3a51353fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1e214266b66f390fecffe802270a4181a6d7a7f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754410"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052687"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>HOW TO：使用 TraceSource 和含有追蹤接聽項的篩選條件
-.NET Framework 2.0 版的其中一個新功能是增強型追蹤系統。 基本的前提不變：追蹤訊息透過接聽項的參數來傳送，將資料報告給關聯的輸出媒體。 2.0 版的主要不同之處是可以透過 <xref:System.Diagnostics.TraceSource> 類別的執行個體來起始追蹤。 <xref:System.Diagnostics.TraceSource> 類別預期作為增強型追蹤系統，並可用來取代較舊之 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 追蹤類別的靜態方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 類別仍然存在，但建議的做法是使用 <xref:System.Diagnostics.TraceSource> 類別進行追蹤。  
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>作法：使用 TraceSource 和含有追蹤接聽項的篩選條件
+.NET Framework 2.0 版的其中一個新功能是增強型追蹤系統。 基本的前提不變：追蹤訊息透過接聽項的參數來傳送，將資料報告給關聯的輸出媒體。 2\.0 版的主要不同之處是可以透過 <xref:System.Diagnostics.TraceSource> 類別的執行個體來起始追蹤。 <xref:System.Diagnostics.TraceSource> 類別預期作為增強型追蹤系統，並可用來取代較舊之 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 追蹤類別的靜態方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 類別仍然存在，但建議的做法是使用 <xref:System.Diagnostics.TraceSource> 類別進行追蹤。  
   
- 本主題描述如何將 <xref:System.Diagnostics.TraceSource> 與應用程式組態檔搭配使用。  雖然可以在不使用組態檔的情況下利用 <xref:System.Diagnostics.TraceSource> 來進行追蹤，但不建議這麼做。 如需不使用組態檔的追蹤資訊，請參閱[How to:建立和初始化追蹤來源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)。  
+ 本主題描述如何將 <xref:System.Diagnostics.TraceSource> 與應用程式組態檔搭配使用。  雖然可以在不使用組態檔的情況下利用 <xref:System.Diagnostics.TraceSource> 來進行追蹤，但不建議這麼做。 如需不使用設定檔進行追蹤的相關[資訊，請參閱如何：建立並初始化追蹤來源](how-to-create-and-initialize-trace-sources.md)。  
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>建立和初始化追蹤來源  
   
@@ -169,5 +169,5 @@ ms.locfileid: "61754410"
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [如何：建立和初始化追蹤來源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [如何：建立和初始化追蹤來源](how-to-create-and-initialize-trace-sources.md)
+- [追蹤接聽項](trace-listeners.md)

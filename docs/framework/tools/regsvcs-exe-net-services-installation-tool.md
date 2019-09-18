@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dccf1b841d048ae460b89fd97da833aadb988422
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 032f43aa16dbca0f4ab0477d586e7568230b7381
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971806"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044258"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
@@ -27,7 +27,7 @@ ms.locfileid: "70971806"
   
 - 設定您以程式設計方式加入至類別的服務。  
   
- 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70971806"
 ## <a name="remarks"></a>備註  
  Regsvcs.exe 需要由 *assemblyFile.dll* 所指定的來源組件檔。 這個組件必須使用強式名稱簽署。 如需強式名稱簽署的詳細資訊，請參閱[以強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)。 目標應用程式和類型程式庫檔案的名稱是選擇項。 如果 *applicationName* 引數已經不存在，則可以從來源組件檔中產生，並且將會由 Regsvcs.exe 建立。 *typelibraryfile* 引數可以指定型別程式庫名稱。 如果您沒有指定類型程式庫名稱，Regsvcs.exe 會使用組件名稱做為預設值。  
   
- 當 Regsvcs.exe 註冊元件的方法時，它會受制於這些方法上的[要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100))和[連結要求](../../../docs/framework/misc/link-demands.md)。 因為這個工具是在完全信任的環境中執行，所以大部分的使用權限需求都會成功。 不過，Regsvcs.exe 無法註冊方法受到 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的需求或連結要求保護的元件。  
+ 當 Regsvcs.exe 註冊元件的方法時，它會受制於這些方法上的[要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100))和[連結要求](../misc/link-demands.md)。 因為這個工具是在完全信任的環境中執行，所以大部分的使用權限需求都會成功。 不過，Regsvcs.exe 無法註冊方法受到 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的需求或連結要求保護的元件。  
   
  您必須擁有本機電腦上的系統管理員權限，才能使用 Regsvcs.exe。  
   
@@ -88,6 +88,6 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
   
 ## <a name="see-also"></a>另請參閱
 
-- [工具](../../../docs/framework/tools/index.md)
+- [工具](index.md)
 - [如何：使用強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

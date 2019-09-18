@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 549030b7e5f7544f593e5aa481a6dc85d5a85329
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943811"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046403"
 ---
 # <a name="lazy-initialization"></a>延遲初始設定
 物件的「延遲初始設定」表示物件一直延遲到第一次使用才建立。 (在本主題中，「延遲初始設定」和「延遲具現化」二詞為同義字。)延遲初始設定主要是用來改善效能，避免不必要的計算，並減少程式記憶體需求。 以下為最常見的案例：  
@@ -62,7 +62,7 @@ ms.locfileid: "69943811"
  根據預設，<xref:System.Lazy%601> 物件是安全執行緒。 也就是說，如果建構函式不指定執行緒安全的種類，它建立的 <xref:System.Lazy%601> 物件就會是安全執行緒。 在多執行緒案例中，第一個存取安全執行緒 <xref:System.Lazy%601> 物件的 <xref:System.Lazy%601.Value%2A> 屬性的執行緒，會將它初始化以在所有的執行緒上進行所有的後續存取，且所有執行緒都共用相同的資料。 因此，哪個執行緒初始化物件不重要，只要是良性的競爭條件即可。  
   
 > [!NOTE]
-> 您可以使用快取例外狀況，擴充錯誤條件的一致性。 如需詳細資訊，請參閱下一節[延遲物件的例外狀況](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects)。  
+> 您可以使用快取例外狀況，擴充錯誤條件的一致性。 如需詳細資訊，請參閱下一節[延遲物件的例外狀況](lazy-initialization.md#ExceptionsInLazyObjects)。  
   
  下列範例示範，相同的 `Lazy<int>` 執行個體在三個不同的執行緒有相同的值。  
   
@@ -157,4 +157,4 @@ ms.locfileid: "69943811"
 - [Managed 執行緒處理的基本概念](../../standard/threading/managed-threading-basics.md)
 - [執行緒和執行緒處理](../../standard/threading/threads-and-threading.md)
 - [工作平行程式庫 (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [如何：執行物件的延遲初始化](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [如何：執行物件的延遲初始化](how-to-perform-lazy-initialization-of-objects.md)

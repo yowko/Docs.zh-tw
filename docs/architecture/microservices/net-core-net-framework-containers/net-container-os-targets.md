@@ -2,12 +2,12 @@
 title: 針對 .NET 容器要設為目標的作業系統
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 .NET 容器要設為目標的作業系統
 ms.date: 01/07/2019
-ms.openlocfilehash: 6f160aeba5257722490788271e6f89359342cc0d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 7380889374e69ca4d3c981a401af703c19263de5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675755"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039681"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>針對 .NET 容器要設為目標的作業系統
 
@@ -27,33 +27,12 @@ ms.locfileid: "68675755"
 
 當您將映像名稱新增至您的 Dockerfile 檔案時，您可以根據使用的標籤選取作業系統及版本，如下列範例中所示：
 
-<table>
-<thead>
-<tr class="header">
-<th>Image</th>
-<th>註解</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mcr.microsoft.com/dotnet/core/runtime:2.2</td>
-<td>.NET Core 2.2 多重架構：支援 Linux 和 Windows Nano Server，視 Docker 主機而定。</td>
-</tr>
-<tr class="odd">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2</td>
-<td><p>ASP.NET Core 2.2 多重架構：支援 Linux 和 Windows Nano Server，視 Docker 主機而定。</p>
-<p>aspnetcore 映像有幾項針對 ASP.NET Core 所做的最佳化。</p></td>
-</tr>
-<tr class="even">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine</td>
-<td>.NET Core 2.2 執行階段 - 僅限於 Linux Alpine 發行版本上</td>
-</tr>
-<tr class="odd">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803</td>
-<td>.NET Core 2.2 執行階段 - 僅限於 Windows Nano Server (Windows Server 1803 版) 上</td>
-</tr>
-</tbody>
-</table>
+| Image | 註解 |
+|-------|----------|
+| mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2.2 多重架構：支援 Linux 和 Windows Nano Server，視 Docker 主機而定。 |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2.2 多重架構：支援 Linux 和 Windows Nano Server，視 Docker 主機而定。 <br/> aspnetcore 映像有幾項針對 ASP.NET Core 所做的最佳化。 |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | .NET Core 2.2 執行階段 - 僅限於 Linux Alpine 發行版本上 |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | .NET Core 2.2 執行階段 - 僅限於 Windows Nano Server (Windows Server 1803 版) 上 |
 
 > [!div class="step-by-step"]
 > [上一頁](container-framework-choice-factors.md)

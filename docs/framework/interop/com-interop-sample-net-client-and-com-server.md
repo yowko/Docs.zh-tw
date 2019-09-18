@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddbb7581ab254b428af621bc4412f60aa70bfb08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 3e4205c09d8f43a03b5c8b2e1be5029a543c158b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134520"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051857"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM Interop 範例：.NET 用戶端與 COM 伺服器
 此範例示範建置來存取 [COM 伺服器](#cpconcominteropsamplenetclientcomserveranchor2)的 [.NET 用戶端](#cpconcominteropsamplenetclientcomserveranchor1)如何建立 COM coclass 的執行個體，以及呼叫類別成員來執行貸款計算。  
@@ -301,4 +301,4 @@ static double Round(double value, short digits)
   
 ## <a name="see-also"></a>另請參閱
 
-- [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [將 COM 元件公開給 .NET Framework](exposing-com-components.md)

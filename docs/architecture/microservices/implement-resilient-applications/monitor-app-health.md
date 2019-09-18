@@ -2,12 +2,12 @@
 title: 健康狀態監視
 description: 瀏覽實作健康情況監視的其中一種方式。
 ms.date: 01/07/2019
-ms.openlocfilehash: b03506972166eec1864de840c1abda05bc3e5277
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 3b81537ca8e0c5cc7ce15ab64ab3235b699dc7a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674495"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040070"
 ---
 # <a name="health-monitoring"></a>健康狀態監視
 
@@ -257,7 +257,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 比方說，大部分協調器可以使用健康狀態檢查來管理零停機部署。 只有當服務/容器的狀態變更為健康狀態良好時，協調器才會開始將流量路由到服務/容器的執行個體。
 
-當協調器執行應用程式升級時，健康狀態監視尤為重要。 某些協調器 (例如 Azure Service Fabric) 會分階段升級服務 — 例如，它們可能會為每個應用程式升級進行五分之一的叢集介面更新。 在相同時間升級的一組節點即為一個「升級網域」  。 每個升級網域都已升級並可供使用者使用之後，該升級網域還必須通過健康狀態檢查，部署才會移到下一個升級網域。
+當協調器執行應用程式升級時，健康狀態監視尤為重要。 某些協調器 (例如 Azure Service Fabric) 會分階段升級服務 — 例如，它們可能會為每個應用程式升級進行五分之一的叢集介面更新。 在相同時間升級的一組節點即為一個「升級網域」。 每個升級網域都已升級並可供使用者使用之後，該升級網域還必須通過健康狀態檢查，部署才會移到下一個升級網域。
 
 服務健康狀態的另一個重點是服務的報告計量。 這是 Service Fabric 等協調器的一項健康狀態模型進階功能。 使用協調器時，計量非常重要，因為其可用來平衡資源使用狀況。 計量也是系統健康狀態的指標。 比方說，您的應用程式可能有許多微服務，而每個執行個體都會報告每秒要求數 (RPS) 計量。 如果某一個服務比其他服務使用更多資源 (記憶體、處理器等)，協調器可以在叢集中移動服務執行個體，以嘗試維護平均的資源使用率。
 
@@ -279,7 +279,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 - **Service Fabric 健康情況監視簡介** \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
-- **Azure 監視器**
+- **Azure 監視器**  
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]

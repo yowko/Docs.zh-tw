@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28e9aab575876d425112c08b59b9cfc44a8c09a7
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: HT
+ms.openlocfilehash: ce022e92e8b6770c42800a04a349eff751bdb708
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379941"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052068"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化錯誤：管理使用者體驗
 
 Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應用程式碼的 CLR 版本。 在某些情況下，啟用系統可能找不到要載入的 CLR 版本。 應用程式需要無效或未安裝在指定電腦上的 CLR 版本時，通常會發生這種情況。 如果找不到要求的版本，CLR 啟用系統會從已呼叫的函式或介面傳回 HRESULT 錯誤碼，而且可能會向執行應用程式的使用者顯示錯誤訊息。 本文提供 HRESULT 代碼清單，並說明如何防止顯示錯誤訊息。
 
-CLR 提供記錄基礎結構來協助您對 CLR 啟用問題進行偵錯，如以下連結所述：[如何：對 CLR 啟用問題進行偵錯](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)。 此基礎結構不應該與[組件繫結記錄](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)混淆，兩者完全不同。
+CLR 提供記錄基礎結構來協助您對 CLR 啟用問題進行偵錯，如以下連結所述：[如何：對 CLR 啟用問題進行偵錯](how-to-debug-clr-activation-issues.md)。 此基礎結構不應該與[組件繫結記錄](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)混淆，兩者完全不同。
 
 ## <a name="clr-activation-hresult-codes"></a>CLR 啟用 HRESULT 代碼
 
@@ -39,7 +39,7 @@ CLR 啟用 API 會傳回 HRESULT 代碼，以向主機報告啟用作業的結�
 
 ## <a name="ui-for-initialization-errors"></a>初始化錯誤的 UI
 
-如果 CLR 啟用系統無法載入應用程式所需執行階段的正確版本，則會向使用者顯示錯誤訊息，通知他們的電腦未正確設定成執行應用程式，並提供機會來修正這個狀況。 在此情況下，通常會顯示下列錯誤訊息。 使用者可以選擇 [是]  前往 Microsoft 網站，以在其中下載應用程式的正確 .NET Framework 版本。
+如果 CLR 啟用系統無法載入應用程式所需執行階段的正確版本，則會向使用者顯示錯誤訊息，通知他們的電腦未正確設定成執行應用程式，並提供機會來修正這個狀況。 在此情況下，通常會顯示下列錯誤訊息。 使用者可以選擇 [是] 前往 Microsoft 網站，以在其中下載應用程式的正確 .NET Framework 版本。
 
 ![[.NET Framework 初始化錯誤] 對話方塊](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "初始化錯誤的一般錯誤訊息")
 
@@ -49,23 +49,23 @@ CLR 啟用 API 會傳回 HRESULT 代碼，以向主機報告啟用作業的結�
 
 若要解決基礎問題，並提供最佳使用者體驗 (錯誤訊息較少)，建議使用下列各項：
 
-- .NET Framework 3.5 (和更早版本) 應用程式：設定應用程式以支援 .NET Framework 4 或更新版本 (請參閱[指示](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md))。
+- .NET Framework 3.5 (和更早版本) 應用程式：設定應用程式以支援 .NET Framework 4 或更新版本 (請參閱[指示](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md))。
 
-- .NET Framework 4 應用程式：在應用程式安裝期間安裝 .NET Framework 4 可轉散發套件。 請參閱[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)。
+- .NET Framework 4 應用程式：在應用程式安裝期間安裝 .NET Framework 4 可轉散發套件。 請參閱[開發人員部署手冊](deployment-guide-for-developers.md)。
 
 ## <a name="controlling-the-error-message"></a>控制錯誤訊息
 
 顯示可溝通找不到所要求 .NET Framework 版本的錯誤訊息，可以檢視為使用者的有用服務或較不惱人。 在任一情況下，您都可以將旗標傳遞給啟用 API 來控制此 UI。
 
-[ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 方法會接受 [METAHOST_POLICY_FLAGS](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 列舉成員作為輸入。 如果找不到所要求的 CLR 版本，您可以包括 METAHOST_POLICY_SHOW_ERROR_DIALOG 旗標來要求錯誤訊息。 根據預設，不會顯示錯誤訊息 ([ICLRMetaHost::GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) 方法不接受這個旗標，並且不提供任何其他方式來顯示錯誤訊息)。
+[ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 方法會接受 [METAHOST_POLICY_FLAGS](../unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 列舉成員作為輸入。 如果找不到所要求的 CLR 版本，您可以包括 METAHOST_POLICY_SHOW_ERROR_DIALOG 旗標來要求錯誤訊息。 根據預設，不會顯示錯誤訊息 ([ICLRMetaHost::GetRuntime](../unmanaged-api/hosting/iclrmetahost-getruntime-method.md) 方法不接受這個旗標，並且不提供任何其他方式來顯示錯誤訊息)。
 
 Windows 提供了 [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242) 函式，可讓您用來宣告是否要顯示處理序內執行的程式碼所造成的錯誤訊息。 您可以指定 SEM_FAILCRITICALERRORS 旗標，以防止顯示錯誤訊息。
 
 不過，在某些情況下，務必覆寫應用程式處理序所設定的 SEM_FAILCRITICALERRORS 設定。 例如，如果您的原生 COM 元件裝載 CLR，並裝載在設定 SEM_FAILCRITICALERRORS 的處理序中，則根據在該特定應用程式處理序中顯示錯誤訊息的影響，您可能會想要覆寫旗標。 在此情況下，您可以使用下列其中一個旗標來覆寫 SEM_FAILCRITICALERRORS：
 
-- 搭配使用 METAHOST_POLICY_IGNORE_ERROR_MODE 與 [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 方法。
+- 搭配使用 METAHOST_POLICY_IGNORE_ERROR_MODE 與 [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 方法。
 
-- 搭配使用 RUNTIME_INFO_IGNORE_ERROR_MODE 與 [GetRequestedRuntimeInfo](../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md) 函式。
+- 搭配使用 RUNTIME_INFO_IGNORE_ERROR_MODE 與 [GetRequestedRuntimeInfo](../unmanaged-api/hosting/getrequestedruntimeinfo-function.md) 函式。
 
 ## <a name="ui-policy-for-clr-provided-hosts"></a>CLR 所提供主機的 UI 原則
 
@@ -80,20 +80,20 @@ CLR 會針對各種情況包括一組主機，而且這些主機只要在載入�
 
 ## <a name="windows-8-behavior-and-ui"></a>Windows 8 行為和 UI
 
-CLR 啟用系統在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上提供的行為和 UI 與其他 Windows 作業系統版本相同，但載入 CLR 2.0 時發生問題時除外。 [!INCLUDE[win8](../../../includes/win8-md.md)] 包含使用 CLR 4.5 的 .NET Framework 4.5。 不過，[!INCLUDE[win8](../../../includes/win8-md.md)] 不會包括全都使用 CLR 2.0 的 .NET Framework 2.0、3.0 或 3.5。 因此，相依於 CLR 2.0 的應用程式預設不會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上執行。 相反地，它們會顯示下列對話方塊，讓使用者可以安裝 .NET Framework 3.5。 使用者也可以在控制台中啟用 .NET Framework 3.5。 [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md) 文章討論這兩個選項。
+CLR 啟用系統在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上提供的行為和 UI 與其他 Windows 作業系統版本相同，但載入 CLR 2.0 時發生問題時除外。 [!INCLUDE[win8](../../../includes/win8-md.md)] 包含使用 CLR 4.5 的 .NET Framework 4.5。 不過，[!INCLUDE[win8](../../../includes/win8-md.md)] 不會包括全都使用 CLR 2.0 的 .NET Framework 2.0、3.0 或 3.5。 因此，相依於 CLR 2.0 的應用程式預設不會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上執行。 相反地，它們會顯示下列對話方塊，讓使用者可以安裝 .NET Framework 3.5。 使用者也可以在控制台中啟用 .NET Framework 3.5。 [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../install/dotnet-35-windows-10.md) 文章討論這兩個選項。
 
 ![在 Windows 8 安裝 3.5 時顯示的對話方塊](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "視需要提示安裝 .NET Framework 3.5")
 
 > [!NOTE]
 > .NET Framework 4.5 會取代使用者電腦上的 .NET Framework 4 (CLR 4)。 因此，.NET Framework 4 應用程式會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上平順地執行，而不會顯示此對話方塊。
 
-安裝 .NET Framework 3.5 時，使用者可以在其 [!INCLUDE[win8](../../../includes/win8-md.md)] 電腦上執行相依於 .NET Framework 2.0、3.0 或 3.5 的應用程式。 他們也可以執行 .NET Framework 1.0 和 1.1 應用程式，但前提是這些應用程式未明確地設定成只在 .NET Framework 1.0 或 1.1 上執行。 請參閱[從 .NET Framework 1.1 移轉](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)。
+安裝 .NET Framework 3.5 時，使用者可以在其 [!INCLUDE[win8](../../../includes/win8-md.md)] 電腦上執行相依於 .NET Framework 2.0、3.0 或 3.5 的應用程式。 他們也可以執行 .NET Framework 1.0 和 1.1 應用程式，但前提是這些應用程式未明確地設定成只在 .NET Framework 1.0 或 1.1 上執行。 請參閱[從 .NET Framework 1.1 移轉](../migration-guide/migrating-from-the-net-framework-1-1.md)。
 
-從 .NET Framework 4.5 開始，已改善 CLR 啟用記錄，其中包含初始化錯誤訊息顯示時間和原因的記錄項目。 如需詳細資訊，請參閱[如何：對 CLR 啟用問題進行偵錯](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)。
+從 .NET Framework 4.5 開始，已改善 CLR 啟用記錄，其中包含初始化錯誤訊息顯示時間和原因的記錄項目。 如需詳細資訊，請參閱[如何：對 CLR 啟用問題進行偵錯](how-to-debug-clr-activation-issues.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [如何：設定應用程式以支援 .NET Framework 4 或更新版本](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [如何：對 CLR 啟用問題進行偵錯](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)
-- [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md)
+- [開發人員部署手冊](deployment-guide-for-developers.md)
+- [如何：設定應用程式以支援 .NET Framework 4 或更新版本](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：對 CLR 啟用問題進行偵錯](how-to-debug-clr-activation-issues.md)
+- [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../install/dotnet-35-windows-10.md)

@@ -2,12 +2,12 @@
 title: 對等共同作業
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 7cf92f6bf3c269e584cb8b3cdcf910be5b89fd7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623167"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047388"
 ---
 # <a name="peer-to-peer-collaboration"></a>對等共同作業
 
@@ -42,4 +42,4 @@ ms.locfileid: "64623167"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.PeerToPeer.Collaboration>
-- [關於 System.Net.PeerToPeer.Collaboration 命名空間](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+- [關於 System.Net.PeerToPeer.Collaboration 命名空間](about-the-system-net-peertopeer-collaboration-namespace.md)

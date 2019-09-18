@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911590"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044369"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 
@@ -59,7 +59,7 @@ Ngen.exe 在 .NET Framework 2.0 版中的變更：
 > [!NOTE]
 > 您可以在[原生映像產生器 (Ngen.exe) 舊版語法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))中找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 語法。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -77,7 +77,7 @@ ngen /? | /help
 
 下表顯示每個 `action` 的語法。 如需 `action` 個別部分的描述，請參閱[引數](#ArgumentTable)、[優先權層級](#PriorityTable)、[情節](#ScenarioTable)，以及[組態](#ConfigTable)表格。 [選項](#OptionTable)表格則描述 `options` 和說明參數。
 
-|動作|說明|
+|動作|描述|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|產生組件的原生映像及其相依性，並在原生映像快取中安裝映像。<br /><br /> 如果已指定 `/queue`，原生映像服務的動作就會排入佇列。 預設優先權為 3。 請參閱[優先權層級](#PriorityTable)表格。|
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|從原生映像快取中刪除組件的原生映像和其相依性。<br /><br /> 若要解除安裝單一映像和其相依性，請使用安裝影像時所用的相同命令列引數。 **注意：** 從 .NET Framework 4 開始，不再支援 `uninstall` * 動作。|
@@ -90,9 +90,9 @@ ngen /? | /help
 
 ## <a name="arguments"></a>引數
 
-|引數|說明|
+|引數|描述|
 |--------------|-----------------|
-|`assemblyName`|組件的完整顯示名稱。 例如，`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`。 **注意：** 您可以提供組件的部分名稱 (例如 `myAssembly`) 以進行 `display` 和 `uninstall` 動作。 <br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|
+|`assemblyName`|組件的完整顯示名稱。 例如： `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` 。 **注意：** 您可以提供組件的部分名稱 (例如 `myAssembly`) 以進行 `display` 和 `uninstall` 動作。 <br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|
 |`assemblyPath`|組件的明確路徑。 您可以指定完整或相對路徑。<br /><br /> 如果指定檔案名稱但沒有指定路徑，則組件必須位於目前的目錄中。<br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|
 
 <a name="PriorityTable"></a>
@@ -109,7 +109,7 @@ ngen /? | /help
 
 ## <a name="scenarios"></a>案例
 
-|情節|說明|
+|情節|描述|
 |--------------|-----------------|
 |`/Debug`|產生可以在偵錯工具下使用的原生映像。|
 |`/Profile`|產生可以在分析工具下使用的原生映像。|
@@ -128,7 +128,7 @@ ngen /? | /help
 
 ## <a name="options"></a>選項
 
-|選項|說明|
+|選項|描述|
 |------------|-----------------|
 |`/nologo`|隱藏 Microsoft 程式啟始資訊的顯示。|
 |`/silent`|隱藏成功訊息的顯示。|
@@ -392,7 +392,7 @@ Ngen.exe 會在產生原生映像時記錄這項資訊。 當您執行組件時�
 
      變更電腦安全性原則，以限制先前對組件允許的使用權限，會使該組件先前已編譯的原生映像變成無效。
 
-     如需 Common Language Runtime 如何管理程式碼存取安全性，以及如何使用權限的詳細資訊，請參閱[程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)。
+     如需 Common Language Runtime 如何管理程式碼存取安全性，以及如何使用權限的詳細資訊，請參閱[程式碼存取安全性](../misc/code-access-security.md)。
 
 <a name="Troubleshooting"></a>
 
@@ -404,13 +404,13 @@ Ngen.exe 會在產生原生映像時記錄這項資訊。 當您執行組件時�
 
 ### <a name="assembly-binding-log-viewer"></a>組件繫結記錄檔檢視器
 
-若要確認您的應用程式正在使用原生映像，可以使用 [Fuslogvw.exe (組件繫結記錄檔檢視器)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)。 在繫結記錄檔檢視器視窗的 [記錄檔類別]  方塊中，選取 [原生映像]  。 Fuslogvw.exe 會提供為何會拒絕原生映像的詳細資訊。
+若要確認您的應用程式正在使用原生映像，可以使用 [Fuslogvw.exe (組件繫結記錄檔檢視器)](fuslogvw-exe-assembly-binding-log-viewer.md)。 在繫結記錄檔檢視器視窗的 [記錄檔類別] 方塊中，選取 [原生映像]。 Fuslogvw.exe 會提供為何會拒絕原生映像的詳細資訊。
 
 <a name="MDA"></a>
 
 ### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>JITCompilationStart Managed 偵錯助理
 
-您可以使用 [jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) Managed 偵錯助理 (MDA)，判斷 JIT 編譯器開始編譯函式的時間。
+您可以使用 [jitCompilationStart](../debug-trace-profile/jitcompilationstart-mda.md) Managed 偵錯助理 (MDA)，判斷 JIT 編譯器開始編譯函式的時間。
 
 <a name="OptOut"></a>
 
@@ -562,7 +562,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 
 ## <a name="native-image-task"></a>原生映像工作
 
-原生映像工作是產生及維護原生映像的 Windows 工作。 原生映像工作會自動為受支援的案例產生及回收原生映像。 它也可以讓安裝程式使用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)，在延後的時間建立及更新原生映像。
+原生映像工作是產生及維護原生映像的 Windows 工作。 原生映像工作會自動為受支援的案例產生及回收原生映像。 它也可以讓安裝程式使用 [Ngen.exe (原生映像產生器)](ngen-exe-native-image-generator.md)，在延後的時間建立及更新原生映像。
 
 針對電腦上支援的每個 CPU 架構，會各註冊一次原生映像工作，以允許針對以各架構為目標的應用程式進行編譯：
 
@@ -639,7 +639,7 @@ ngen executeQueuedItems
 
 ## <a name="see-also"></a>另請參閱
 
-- [工具](../../../docs/framework/tools/index.md)
+- [工具](index.md)
 - [Managed 執行程序](../../standard/managed-execution-process.md)
-- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

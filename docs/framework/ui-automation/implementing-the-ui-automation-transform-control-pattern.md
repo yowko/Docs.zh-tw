@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: f561f67aed1d024a73d78da26e86110e4cddab2f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbcb7b274144281d88d8fb36b9cb55043658a6a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932013"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043101"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>實作 UI 自動化 Transform 控制項模式
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69932013"
   
  本主題簡介實作 <xref:System.Windows.Automation.Provider.ITransformProvider>的方針和慣例，包括屬性、方法和事件的相關資訊。 其他參考的連結列於主題的結尾。  
   
- <xref:System.Windows.Automation.TransformPattern> 控制項模式用來支援可在二維空間內移動、調整大小或旋轉的控制項。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
+ <xref:System.Windows.Automation.TransformPattern> 控制項模式用來支援可在二維空間內移動、調整大小或旋轉的控制項。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
@@ -42,9 +42,9 @@ ms.locfileid: "69932013"
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|屬性|None|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|無|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|無|  
   
  此控制項模式沒有任何相關聯的事件。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "69932013"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
+- [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
+- [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)

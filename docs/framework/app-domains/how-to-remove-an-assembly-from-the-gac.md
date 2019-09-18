@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13c9aa7275ad792f8ace33519438f0a1dcc6b251
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5aa88cbc73415695a1545704a2ad8cab535f011e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971609"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053136"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>作法：從全域組件快取移除組件
 
 從全域組件快取 (GAC) 移除組件的方式有兩種：
 
-- 使用[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)。 若要解除安裝開發和測試期間放在 GAC 中的組件，可使用這個選項。
+- 使用[全域組件快取工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)。 若要解除安裝開發和測試期間放在 GAC 中的組件，可使用這個選項。
 
 - 使用 [Windows Installer](/windows/desktop/Msi/windows-installer-portal)。 若要解除安裝測試安裝套件時及針對生產系統所使用的組件，則應該使用這個選項。
 
@@ -54,6 +54,6 @@ gacutil -u hello
 
 ## <a name="see-also"></a>另請參閱
 
-- [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [使用組件和全域組件快取](working-with-assemblies-and-the-gac.md)
 - [如何：在全域組件快取中安裝單一組件](install-assembly-into-gac.md)
-- [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md)

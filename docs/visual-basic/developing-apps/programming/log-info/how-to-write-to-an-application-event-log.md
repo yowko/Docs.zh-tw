@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: c3c7d350132ee6c891633141fc5c4b280989e77f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: HT
+ms.openlocfilehash: 385a85d956a0de727e3c061ec447a3d53ad6c159
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366500"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054138"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>作法：寫入應用程式事件記錄檔 (Visual Basic)
 
@@ -20,9 +20,9 @@ ms.locfileid: "57366500"
 
 您無法寫入至安全性記錄檔。 要寫入至系統記錄檔，您必須是 LocalSystem 或 Administrator 帳戶的成員。
 
-若要檢視事件記錄檔，您可以使用 [伺服器總管]  或 [Windows 事件檢視器] 。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
+若要檢視事件記錄檔，您可以使用 [伺服器總管] 或 [Windows 事件檢視器]。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
 
-### <a name="to-add-and-configure-the-event-log-listener"></a>加入及設定事件記錄檔接聽程式
+## <a name="to-add-and-configure-the-event-log-listener"></a>加入及設定事件記錄檔接聽程式
 
 1. 在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。
 
@@ -32,9 +32,9 @@ ms.locfileid: "57366500"
 
     1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。
 
-    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。
+    2. 在 [加入新項目] 對話方塊中，選擇 [應用程式組態檔]。
 
-    3. 按一下 [加入] 。
+    3. 按一下 [加入]。
 
 2. 在應用程式組態檔中找出 `<listeners>` 區段。
 
@@ -61,11 +61,11 @@ ms.locfileid: "57366500"
     > [!NOTE]
     > 一般而言，應用程式僅將錯誤寫入至事件記錄檔。 如需篩選記錄檔輸出的資訊，請參閱[逐步解說：篩選 My.Application.Log 輸出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。
 
-### <a name="to-write-event-information-to-the-event-log"></a>將事件資訊寫入至事件記錄檔
+## <a name="to-write-event-information-to-the-event-log"></a>將事件資訊寫入至事件記錄檔
 
-- 使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法，將資訊寫入事件記錄檔。 如需詳細資訊，請參閱[如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。
+使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法，將資訊寫入事件記錄檔。 如需詳細資訊，請參閱[如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。
 
-    設定組件的事件記錄檔接聽程式之後，接聽程式會接收從該組件寫入的所有訊息 `My.Application.Log` 。
+設定組件的事件記錄檔接聽程式之後，接聽程式會接收從該組件寫入的所有訊息 `My.Application.Log` 。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec97861a9d748767199da3e1fb7f53361c3a48ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 867157b329218b79c8cc1255b2158bbe83666531
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966128"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045358"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Unmanaged 程式碼的安全編碼指南
 某些程式庫程式碼需要呼叫 Unmanaged 程式碼 (例如原生程式碼 API，像是 Win32)。 由於這表示要越過 Managed 程式碼的安全性範疇，所以充分的警告是必要的。 若您的程式碼是安全性中性的，則您的程式碼以及它所呼叫的任何程式碼，都必須具備 Unmanaged 程式碼權限 (指定了具有<xref:System.Security.Permissions.SecurityPermission> 旗標的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> )。  
   
- 不過對於您的呼叫端而言，擁有這類強大的權限並不合理。 在這種情況下，您信任的程式碼可做為中間人，類似 Managed 包裝函式或程式庫程式碼，如設定包裝函式程式碼的安全性 [Safe.GetTimeOfDay](../../../docs/framework/misc/securing-wrapper-code.md)所述。 如果基礎 Unmanaged 程式碼功能是完全安全的，則可以直接公開；否則，適當的權限檢查 (要求) 在第一次是必要的。  
+ 不過對於您的呼叫端而言，擁有這類強大的權限並不合理。 在這種情況下，您信任的程式碼可做為中間人，類似 Managed 包裝函式或程式庫程式碼，如設定包裝函式程式碼的安全性 [Safe.GetTimeOfDay](../misc/securing-wrapper-code.md)所述。 如果基礎 Unmanaged 程式碼功能是完全安全的，則可以直接公開；否則，適當的權限檢查 (要求) 在第一次是必要的。  
   
  當您的程式碼呼叫 Unmanaged 程式碼，但您不想要求呼叫端擁有存取 Unmanaged 程式碼的權限時，則必須判斷提示該權限。 判斷提示會封鎖您框架上的堆疊查核行程。 您必須非常小心，不要在此處理序中建立安全性漏洞。 通常，這表示您必須要求呼叫端的適當權限，然後使用 Unmanaged 程式碼執行只有該權限所允許的動作。 在某些情況下 (例如取得一天中的時間之函式)，Unmanaged 程式碼可以直接公開給呼叫端，而不需任何安全性檢查。 在任何情況下，判斷提示的任何程式碼都必須確保安全。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: f52dfce66b6d62a8eb7bf75b626feacfb9172c29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 555b0661bf68a7461f87bf2895e47284a03c41a6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191857"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048962"
 ---
 # <a name="asynchronous-server-socket-example"></a>非同步伺服器通訊端範例
 下列範例程式會建立從用戶端接收連線要求的伺服器。 伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，不會暫停執行伺服器應用程式。 應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。 用戶端的字串必須包含字串 "\<EOF>" 來表示訊息結束。  
@@ -291,6 +291,6 @@ public class AsynchronousSocketListener {
   
 ## <a name="see-also"></a>另請參閱
 
-- [非同步用戶端通訊端範例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-- [使用非同步伺服器通訊端](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [通訊端程式碼範例](../../../docs/framework/network-programming/socket-code-examples.md)
+- [非同步用戶端通訊端範例](asynchronous-client-socket-example.md)
+- [使用非同步伺服器通訊端](using-an-asynchronous-server-socket.md)
+- [通訊端程式碼範例](socket-code-examples.md)

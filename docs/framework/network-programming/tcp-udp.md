@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172545"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047104"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 應用程式可以使用「傳輸控制通訊協定 (TCP)」和「使用者資料包通訊協定 (UDP)」服務，搭配 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 類別。 這些通訊協定類別建立在 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 類別之上，並負責傳送資料的細節。  
@@ -34,9 +34,9 @@ ms.locfileid: "59172545"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用 TCP 服務](../../../docs/framework/network-programming/using-tcp-services.md)
-- [使用 UDP 服務](../../../docs/framework/network-programming/using-udp-services.md)
-- [在網路上使用資料流](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [使用非同步伺服器通訊端](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [使用非同步用戶端通訊端](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)
+- [使用 TCP 服務](using-tcp-services.md)
+- [使用 UDP 服務](using-udp-services.md)
+- [在網路上使用資料流](using-streams-on-the-network.md)
+- [使用非同步伺服器通訊端](using-an-asynchronous-server-socket.md)
+- [使用非同步用戶端通訊端](using-an-asynchronous-client-socket.md)
+- [使用應用程式通訊協定](using-application-protocols.md)

@@ -3,12 +3,12 @@ title: WIF 程式碼範例索引
 ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
-ms.openlocfilehash: b1c875f6c49a3097a75f88b1c25555fd7e891b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e90c5f8681706aa0d52c74e6caff08edbf283da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909398"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045164"
 ---
 # <a name="wif-code-sample-index"></a>WIF 程式碼範例索引
 
@@ -24,7 +24,7 @@ Windows Identity Foundation 4.5 的程式碼範例如下：
 
 - [ClaimsAwareFormsAuthentication](https://go.microsoft.com/fwlink/?LinkID=248409) - 這個非常簡單的範例示範在 .NET 4.5 中，不論您驗證使用者的方式為何，都能取得主體中的宣告。
 
-- [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410)-此範例示範如何使用 ClaimsAuthorizationManager 類別和 ClaimsAuthorizationModule 來套用您自己的授權原則。
+- [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410)-此範例示範如何使用您的 ClaimsAuthorizationManager 類別和 ClaimsAuthorizationModule 來套用您自己的授權原則。
 
 - [FederationMetadata](https://go.microsoft.com/fwlink/?LinkID=248411) – 此範例示範中繼資料文件的動態產生 (在自訂的 STS 上) 和動態使用 (在信賴憑證者應用程式上)。
 
@@ -32,4 +32,4 @@ Windows Identity Foundation 4.5 的程式碼範例如下：
 
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+- [Windows Identity Foundation](index.md)

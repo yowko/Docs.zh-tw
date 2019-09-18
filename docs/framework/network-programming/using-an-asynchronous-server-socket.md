@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 58c9e0846e09774d8c97089016086ecddd2d17ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 11ed53a4e51ba6993fd4e240116b0e1de910a01e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938405"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047039"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>使用非同步伺服器通訊端
 非同步伺服器通訊端會使用 .NET Framework 非同步程式設計模型來處理網路服務要求。 <xref:System.Net.Sockets.Socket> 類別會遵循標準 .NET Framework 非同步命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法對應於非同步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
@@ -270,7 +270,7 @@ public static void ReadCallback(IAsyncResult ar)
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [非同步伺服器通訊端範例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
+- [使用同步伺服器通訊端](using-a-synchronous-server-socket.md)
+- [非同步伺服器通訊端範例](asynchronous-server-socket-example.md)
 - [執行緒處理](../../standard/threading/index.md)
-- [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [透過通訊端接聽](listening-with-sockets.md)

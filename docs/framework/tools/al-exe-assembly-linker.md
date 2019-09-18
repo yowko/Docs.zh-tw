@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f83c67354e96e1da3a30ab2e30fffe026c4646b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 7fdb364769be6d8c7c53ca05a7d7cb967678123a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971355"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044896"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
@@ -23,7 +23,7 @@ ms.locfileid: "70971355"
 > [!NOTE]
 > 從 Visual Studio 2008 開始，C# 和 Visual Basic 編譯器都會自動將 Win32 資訊清單嵌入組件中。 如需詳細資訊，請參閱 [/win32manifest (C# 編譯器選項)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -37,10 +37,10 @@ al sources options
 
 您可以指定一個或多個下列 `sources`。
 
-| Source | 說明 |
+| Source | 描述 |
 | ------ | ----------- |
 |`file`[,`target`]|將 `file` (模組) 的內容複製到 `target` 所指定的檔案名稱中。 複製完成後，*Al.exe* 會將 `target` 編譯成組件。|
-|**/embed[resource]:** `file`[,`name`[,`private`]]|將 `file` 所指定的資源嵌入包含組件資訊清單的映像中，*Al.exe* 會將 `file` 的內容複製到可攜式執行檔 (PE) 映像中。<br /><br /> `name` 參數是資源的內部識別項。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由[資源檔產生器 (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
+|**/embed[resource]:** `file`[,`name`[,`private`]]|將 `file` 所指定的資源嵌入包含組件資訊清單的映像中，*Al.exe* 會將 `file` 的內容複製到可攜式執行檔 (PE) 映像中。<br /><br /> `name` 參數是資源的內部識別項。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由[資源檔產生器 (*Resgen.exe*)](resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
 |**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|將資源檔連結至組件。 `file` 所指定的資源會變成組件的一部分，但是不會複製檔案。 `file` 參數可以是任何檔案格式。 例如，您可以指定原生 DLL 做為 `file` 參數。 這樣就會產生組件的原生 DLL 部分，以便安裝到全域組件快取中，並從組件的 Managed 程式碼存取。 您也可以利用 **/linkresource** 編譯器選項，進行上述作業。 如需詳細資訊，請參閱 [/linkresource (C# 編譯器選項)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)。<br /><br /> `name` 參數是資源的內部識別項。 `target` 參數會指定 *Al.exe* 要在其中複製 `file` 的路徑和檔案名稱 *。* 複製完成後，*Al.exe* 會將 `target` 編譯成組件。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由資源檔產生器 (*Resgen.exe*) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 類別中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
 
 您可以指定下列 `options`，但是必須指定 **/out**。
@@ -54,14 +54,14 @@ al sources options
 |**/config[uration]:** `text`|為組件中的 [組態] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如果文字為空字串，Win32 Configuration 資源會顯示為單一空格。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyConfigurationAttribute>)。|
 |**/copy[right]:** `text`|為組件中的 [著作權] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/copyright** 顯示為 Win32 Copyright 資源。<br /><br /> 如果文字為空字串，Win32 Copyright 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/copyright** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyCopyrightAttribute>)。|
 |**/c[ulture]:** `text`|指定與組件相關聯的文化特性字串。 文化特性的有效值為標題＜Tags for the Identification of Languages＞的＜Internet Requests for Comments (RFC) 1766＞文件中定義的值。<br /><br /> 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 沒有預設的文化特性字串。 這個字串可使用反映進行檢視。<br /><br /> 如需有效 `text` 字串的詳細資訊，請參閱 <xref:System.Globalization.CultureInfo>。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyCultureAttribute>)。|
-|**/delay[sign][+&#124;-]**|指定將要完整簽署還是部分簽署組件。 如果需要完整簽署的組件，請使用 **/delaysign-** 。 如果只想在組件中包含公開金鑰，請使用 **/delaysign+** 。<br /><br /> 當您要求完整簽署的組件時，*Al.exe* 會雜湊包含資訊清單 (組件中繼資料) 的檔案，並使用私密金鑰簽署該雜湊。 所產生的數位簽章會儲存在包含資訊清單的檔案中。 當組件延遲簽署時，*Al.exe* 不會計算和儲存該簽章，只會在檔案中保留空間，以便之後再新增該簽章。<br /><br /> 預設值為 **/delaysign-** 。<br /><br /> **/delaysign** 選項必須搭配 **/keyfile** 或 **/keyname** 才有作用。<br /><br /> 例如，使用 **/delaysign+** 時，可讓測試人員將組件放入全域快取中。 測試過後，您就可以將私密金鑰包含在組件內，藉此完整簽署組件。<br /><br /> 注意:在使用 [*Gacutil.exe* (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 將延遲簽署的組件放入全域快取之前，請先使用 [*Sn.exe* (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 註冊這個組件，以略過驗證。 例如： `Sn.exe –Vr delaySignedAssembly` 。 這種方式僅適用於開發工作。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
+|**/delay[sign][+&#124;-]**|指定將要完整簽署還是部分簽署組件。 如果需要完整簽署的組件，請使用 **/delaysign-** 。 如果只想在組件中包含公開金鑰，請使用 **/delaysign+** 。<br /><br /> 當您要求完整簽署的組件時，*Al.exe* 會雜湊包含資訊清單 (組件中繼資料) 的檔案，並使用私密金鑰簽署該雜湊。 所產生的數位簽章會儲存在包含資訊清單的檔案中。 當組件延遲簽署時，*Al.exe* 不會計算和儲存該簽章，只會在檔案中保留空間，以便之後再新增該簽章。<br /><br /> 預設值為 **/delaysign-** 。<br /><br /> **/delaysign** 選項必須搭配 **/keyfile** 或 **/keyname** 才有作用。<br /><br /> 例如，使用 **/delaysign+** 時，可讓測試人員將組件放入全域快取中。 測試過後，您就可以將私密金鑰包含在組件內，藉此完整簽署組件。<br /><br /> 注意:在使用 [*Gacutil.exe* (全域組件快取工具)](gacutil-exe-gac-tool.md) 將延遲簽署的組件放入全域快取之前，請先使用 [*Sn.exe* (強式名稱工具)](sn-exe-strong-name-tool.md) 註冊這個組件，以略過驗證。 例如： `Sn.exe –Vr delaySignedAssembly` 。 這種方式僅適用於開發工作。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
 |**/descr[iption]:** `text`|為組件中的 [<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/description** 顯示為 Win32 **Comments** 資源。<br /><br /> 如果文字為空字串，Win32 **Comments** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/description** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>)。|
 |**/e[vidence]:** `file`|使用 Security.Evidence 的資源名稱將 `file` 嵌入組件中。<br /><br /> Security.Evidence 無法用於一般資源。|
 |**/fileversion:** `version`|為組件中的 [檔案版本] 欄位指定字串。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，系統會將 **/fileversion** 作為 Win32 **File Version** 資源。 如不指定 **/fileversion**，系統會在 Win32 **File Version** 資源中填入 Win32 **Assembly Version** 資源。<br /><br /> 如果指定 **/win32res**，則 **/fileversion** 不會影響 Win32 資源。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中指定這個選項做為自訂屬性 (AssemblyFileVersionAttribute)。|
 |**/flags:** `flags`|為組件中的 [`Flags`] 欄位指定值。 `flags` 的可能值如下：<br /><br /> 0x0000<br /> 組件可並存相容。<br /><br /> 0x0010<br /> 如果組件在相同的應用程式定義域中執行時，就無法與其他版本一起執行。<br /><br /> 0x0020<br /> 如果組件在相同的處理序中執行，就無法與其他版本一起執行。<br /><br /> 0x0030<br /> 如果組件與其他版本位於同一部電腦上，就無法與其他版本一起執行。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyFlagsAttribute>)。|
 |**/fullpaths**|讓 *Al.exe* 使用錯誤訊息中所報告之任何檔案的絕對路徑。|
 |**/help**|顯示工具的命令語法和選項。|
-|**/keyf[ile]:** `filename`|指定包含金鑰組或只有公開金鑰的檔案 (`filename`)，用以簽署組件。 編譯器會將公開金鑰插入組件資訊清單中，然後使用私密金鑰簽署最終組件。 如需如何產生金鑰檔案以及將金鑰組安裝在金鑰容器中的資訊，請參閱[強式名稱工具 (*Sn.exe*)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)。<br /><br /> 如果您使用延遲簽署，這個檔案通常會包含公開金鑰，但不會包含私密金鑰。<br /><br /> (金鑰組的) 公開金鑰資訊會出現在組件的 [.publickey] 欄位中。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyKeyFileAttribute>)。<br /><br /> 如果在相同編譯中同時指定 **/keyfile** 和 **/keyname** (藉由命令列選項或是自訂屬性指定)，*Al.exe* 會先嘗試使用 **/keyname** 指定的容器。 如果這個動作成功，那麼組件就會使用金鑰容器中的資訊進行簽署。 如果 *Al.exe* 找不到金鑰容器，則會嘗試使用 **/keyfile** 指定的檔案。 如果這個動作成功，系統就會使用金鑰檔中的資訊簽署組件，並將金鑰資訊安裝在金鑰容器中 (類似於 [*Sn.exe*](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 中的 -i 選項)，這樣在下次編譯時， **/keyname** 選項就會是有效的。|
+|**/keyf[ile]:** `filename`|指定包含金鑰組或只有公開金鑰的檔案 (`filename`)，用以簽署組件。 編譯器會將公開金鑰插入組件資訊清單中，然後使用私密金鑰簽署最終組件。 如需如何產生金鑰檔案以及將金鑰組安裝在金鑰容器中的資訊，請參閱[強式名稱工具 (*Sn.exe*)](sn-exe-strong-name-tool.md)。<br /><br /> 如果您使用延遲簽署，這個檔案通常會包含公開金鑰，但不會包含私密金鑰。<br /><br /> (金鑰組的) 公開金鑰資訊會出現在組件的 [.publickey] 欄位中。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyKeyFileAttribute>)。<br /><br /> 如果在相同編譯中同時指定 **/keyfile** 和 **/keyname** (藉由命令列選項或是自訂屬性指定)，*Al.exe* 會先嘗試使用 **/keyname** 指定的容器。 如果這個動作成功，那麼組件就會使用金鑰容器中的資訊進行簽署。 如果 *Al.exe* 找不到金鑰容器，則會嘗試使用 **/keyfile** 指定的檔案。 如果這個動作成功，系統就會使用金鑰檔中的資訊簽署組件，並將金鑰資訊安裝在金鑰容器中 (類似於 [*Sn.exe*](sn-exe-strong-name-tool.md) 中的 -i 選項)，這樣在下次編譯時， **/keyname** 選項就會是有效的。|
 |**/keyn[ame]:** `text`|指定保留金鑰組的容器。 這樣會藉由將公開金鑰插入組件資訊清單中的方式簽署組件 (為它指定強式名稱)。 *Al.exe* 接著會使用私密金鑰簽署最終組件。<br /><br /> 請使用 *Sn.exe* 產生金鑰組。<br /><br /> 金鑰資訊會出現在組件的 [.publickey] 欄位中。<br /><br /> 如果有內嵌空格，請將 `text` 置於雙引號 (" ") 內。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyKeyNameAttribute>)。|
 |**/main:** `method`|指定將模組轉換成可執行檔時，用來做為進入點之方法的完整名稱 (`class`.`method`)。|
 |**/nologo**|隱藏叫用 *Al.exe* 時命令列中顯示的橫幅或標誌。|
@@ -83,13 +83,13 @@ al sources options
 
 所有 Visual Studio 編譯器都會產生組件。 但是，如果您有一或多個模組 (不具資訊清單的中繼資料)，就可以使用 *Al.exe* 在另一個檔案中建立包含資料清單的組件。
 
-若要在快取中安裝組件、從快取中移除組件，或是列出快取的內容，請使用[全域組件快取工具 (*Gacutil.exe*)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)。
+若要在快取中安裝組件、從快取中移除組件，或是列出快取的內容，請使用[全域組件快取工具 (*Gacutil.exe*)](gacutil-exe-gac-tool.md)。
 
 ## <a name="errors-and-warnings"></a>錯誤和警告
 
 下表列出 *Al.exe* 所產生的錯誤。
 
-| Error | 說明 |
+| Error | 描述 |
 | ----- | ----------- |
 |al1001|編譯器內部錯誤<br /><br /> 請嘗試判斷 *Al.exe* 失敗的原因是否為無法剖析未預期的語法。 然後，請連絡 Microsoft 產品支援服務。|
 |al1002|記憶體不足<br /><br /> *Al.exe* 因記憶體不足而停止。 請增加可用記憶體的數量。|
@@ -116,8 +116,8 @@ al sources options
 |al1023|嵌入資源 'file' 時發生錯誤 — 原因<br /><br /> 作業系統因指定原因而無法將資源檔嵌入組件中。|
 |al1025|ComType 記錄 'record' 指向無效的檔案記錄 'record'<br /><br /> 輸入模組中的中繼資料無效。 產生模組的工具必須固定。|
 |al1026|指定的版本 'version' 無效<br /><br /> 如需有效的格式，請參閱 **/version** 選項的資訊。|
-|al1028|金鑰檔 'file' 遺漏簽署所需的私密金鑰<br /><br /> 傳遞至 **/keyfile** 選項的金鑰檔只包含公開金鑰。 請使用[強式名稱工具 (*Sn.exe*)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)，以產生同時包含公開金鑰和私密金鑰的檔案，如下列命令所示。<br /><br /> `sn -k keypair.snk.`|
-|al1029|金鑰容器名稱 'container' 不存在<br /><br /> 傳遞至 **/keyname** 選項的值不是有效的容器。 請使用[強式名稱工具 (*Sn.exe*)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 建立容器。|
+|al1028|金鑰檔 'file' 遺漏簽署所需的私密金鑰<br /><br /> 傳遞至 **/keyfile** 選項的金鑰檔只包含公開金鑰。 請使用[強式名稱工具 (*Sn.exe*)](sn-exe-strong-name-tool.md)，以產生同時包含公開金鑰和私密金鑰的檔案，如下列命令所示。<br /><br /> `sn -k keypair.snk.`|
+|al1029|金鑰容器名稱 'container' 不存在<br /><br /> 傳遞至 **/keyname** 選項的值不是有效的容器。 請使用[強式名稱工具 (*Sn.exe*)](sn-exe-strong-name-tool.md) 建立容器。|
 |al1030|未妥善安裝密碼編譯服務或缺乏適當的金鑰提供者<br /><br /> 您可能必須重新安裝作業系統，或安裝用來建立金鑰的特定密碼編譯公用程式。|
 |al1031|讀取圖示 'file' 時發生錯誤 — 原因<br /><br /> *Al.exe* 因指定的原因而無法讀取傳遞至 **/win32icon** 選項的檔案|
 |al1032|產生 'file' 的資源時發生錯誤 — 原因<br /><br /> *Al.exe* 因磁碟空間不足或某些其他錯誤而無法建立檔案。 當您指定 **/win32icon** 選項 (以產生 .ico 檔) 或未指定 **/win32res** 選項 (以產生包含資源資訊的檔案) 時，便會發生這個錯誤。<br /><br /> 如果您無法解決檔案產生的相關問題，請使用 **/win32res**，以指定可包含版本或點陣圖 (圖示) 資訊的檔案。|
@@ -127,7 +127,7 @@ al sources options
 |al1036|可執行應用程式必須有進入點<br /><br /> 使用 **/target:exe** 或 **/target:win** 選項時，也必須指定 **/main** 選項。|
 |al1037|找不到進入點方法 'main'<br /><br /> *Al.exe* 在 **/main** 選項所指定的位置找不到 `Main` 方法。|
 |al1039|全域組件快取管理員初始化失敗 — 原因<br /><br /> 重新安裝 Visual Studio 或 Windows SDK。|
-|al1040|無法將組件安裝至快取 — 原因<br /><br /> 只有簽署的組件才能安裝至快取。 如需詳細資訊，請參閱[全域組件快取](../../../docs/framework/app-domains/gac.md)。|
+|al1040|無法將組件安裝至快取 — 原因<br /><br /> 只有簽署的組件才能安裝至快取。 如需詳細資訊，請參閱[全域組件快取](../app-domains/gac.md)。|
 |al1041|'method': 因為簽章或可見度不正確，或者其為泛型，所以無法成為進入點<br /><br /> 已使用 **/main** 選項指定方法，但是該方法不是靜態、未傳回 `int` 或 `void`、為泛型，或具有無效的引數。|
 |al1042|'exe'：無法為 EXE 新增模組<br /><br /> 已將不含組件的 *.exe* 檔指定為 *Al.exe* 的輸入檔。 *Al.exe* 只能將不含組件的 *.dll* 檔案當作輸入檔。|
 |al1043|資訊清單檔名 'name' 不可與任何模組相同<br /><br /> 使用 **/out** 選項指定的名稱不能與指定為 *Al.exe* 輸入的任何一個檔案名稱相同。|
@@ -142,7 +142,7 @@ al sources options
 |al1052|檔案 'filename' 不是組件<br /><br /> 使用 **/template** 指定的檔案必須包含組件中繼資料。 這個錯誤表示 **/template** 指定的檔案先前並未包含組件。|
 |al1053|版本 'version' (指定給 'option') 不是使用一般的 'major.minor.build.revision' 格式<br /><br /> *Al.exe* 偵測到使用 **/fileversion** 或 **/productversion** 選項指定的版本資訊格式錯誤。|
 |al1054|版本 'version' (指定給 'option') 不是使用一般的 'major.minor.build.revision' 格式<br /><br /> *Al.exe* 偵測到使用 <xref:System.Resources.SatelliteContractVersionAttribute> 指定的版本資訊格式錯誤。|
-|al1055|參考的組件 'filename' 沒有強式名稱<br /><br /> 當您建置包含強式名稱的組件，但是卻參考不含強式名稱的組件時，便會發生這個錯誤。 若要修正這個錯誤，您必須使用強式名稱重新產生組件，或者使用 *Sn.exe* 將強式名稱附加到組件 (請參閱 [*sn.exe*](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 的文件)。<br /><br /> 透過包裝函式組件使用 COM 物件時，通常會發生這個錯誤，例如透過 Visual Studio IDE 在 C# 專案的 COM 模組中加入參考時。 若要避免發生這個錯誤，您可以在 [包裝函式組件金鑰檔/名稱] 專案屬性中指定 COM 包裝函式組件的強式名稱金鑰檔。<br /><br /> 如果要透過 tlbimp 建立包裝函式組件，請參閱 [tlbimp](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 文件，以取得如何將強式名稱指派給包裝函式組件的相關資訊。<br /><br /> 如果組件有強式名稱，便可將它安裝在全域組件快取中。 因此，參考的組件也需要進入全域組件快取中。 只有包含強式名稱的組件才能進入全域組件快取中。|
+|al1055|參考的組件 'filename' 沒有強式名稱<br /><br /> 當您建置包含強式名稱的組件，但是卻參考不含強式名稱的組件時，便會發生這個錯誤。 若要修正這個錯誤，您必須使用強式名稱重新產生組件，或者使用 *Sn.exe* 將強式名稱附加到組件 (請參閱 [*sn.exe*](sn-exe-strong-name-tool.md) 的文件)。<br /><br /> 透過包裝函式組件使用 COM 物件時，通常會發生這個錯誤，例如透過 Visual Studio IDE 在 C# 專案的 COM 模組中加入參考時。 若要避免發生這個錯誤，您可以在 [包裝函式組件金鑰檔/名稱] 專案屬性中指定 COM 包裝函式組件的強式名稱金鑰檔。<br /><br /> 如果要透過 tlbimp 建立包裝函式組件，請參閱 [tlbimp](tlbimp-exe-type-library-importer.md) 文件，以取得如何將強式名稱指派給包裝函式組件的相關資訊。<br /><br /> 如果組件有強式名稱，便可將它安裝在全域組件快取中。 因此，參考的組件也需要進入全域組件快取中。 只有包含強式名稱的組件才能進入全域組件快取中。|
 |al1056|參考的組件 'filename' 是當地語系化的附屬組件<br /><br /> 在建立目前的組件時參考到使用 <xref:System.Reflection.AssemblyCultureAttribute> 屬性建立的組件。 <xref:System.Reflection.AssemblyCultureAttribute> 屬性表示檔案是當地語系化的附屬組件，不適合參考附屬組件。 您可能應該改為參考主要父組件。|
 |al1057|可執行檔無法被當地語系化，文化特性需保持空白<br /><br /> 組件是使用 **/target:exe** 建立的，但指定的卻是 **/culture**。 *.exe* 中的組件在 [文化特性] 欄位中不能包含資訊。|
 |al1058|'file' 是組件，而且無法加入為模組<br /><br /> 在 C++ 編譯中，已將包含組件的檔案傳遞至 **/assemblymodule** (連結器選項)。|
@@ -175,8 +175,8 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 
 ## <a name="see-also"></a>另請參閱
 
-- [工具](../../../docs/framework/tools/index.md)
-- [*Sn.exe* (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
-- [*Gacutil.exe* (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [工具](index.md)
+- [*Sn.exe* (強式名稱工具)](sn-exe-strong-name-tool.md)
+- [*Gacutil.exe* (全域組件快取工具)](gacutil-exe-gac-tool.md)
 - [使用組件設計程式](../../standard/assembly/program.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

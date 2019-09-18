@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85d554337d11c3f79d8f70048246e978e185645e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f1926d2699357163dbb8685b7ea875e369ca29b7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894929"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046652"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>工作平行程式庫和 PLINQ 中的 ETW 事件
 
@@ -116,6 +116,6 @@ EVENT_DESCRIPTOR.Id = 1
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 中的 ETW 事件](../../../docs/framework/performance/etw-events.md)
+- [.NET Framework 中的 ETW 事件](etw-events.md)
 - [工作平行程式庫 (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
 - [平行 LINQ (PLINQ)](../../standard/parallel-programming/parallel-linq-plinq.md)

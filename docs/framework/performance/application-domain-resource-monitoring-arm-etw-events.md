@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac396e1a5b83f33068266553024c37ef436c150d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e4002ae248022a9e4380c79174109494b5e4ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616639"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046774"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>應用程式定義域資源監視 (ARM) ETW 事件
 <a name="top"></a> 這些事件可提供有關應用程式網域狀態的詳細診斷資訊。 您可以使用這些事件或使用應用程式網域資源監視 (ARM) 功能，取得相同的資訊。  
@@ -33,7 +33,7 @@ ms.locfileid: "64616639"
 ## <a name="threadcreated-event"></a>ThreadCreated 事件  
  此事件在取消提供者之下也會引發為 `ThreadDC` (在 `AppDomainResourceManagementRundownKeyword` 關鍵字之下)。 此為在這類取消提供者之下引發的唯一事件  
   
- 下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。  
+ 下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
 |引發事件的關鍵字|層級|  
 |-----------------------------------|-----------|  
@@ -125,7 +125,7 @@ ms.locfileid: "64616639"
   
  下表說明事件資料。  
   
-|欄位名稱|資料類型|描述|  
+|欄位名稱|資料類型|說明|  
 |----------------|---------------|-----------------|  
 |ThreadID|win:UInt64|執行緒識別碼。|  
 |AppDomainID|win:UInt64|應用程式網域識別項。|  
@@ -158,4 +158,4 @@ ms.locfileid: "64616639"
   
 ## <a name="see-also"></a>另請參閱
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 1b3e39deca8b483413d2a2c42dbacbf821b3e42e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0edde8e716d5ce3b1444e994234def5835341475
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942365"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047118"
 ---
 # <a name="time-based-cache-policies"></a>以時間為基礎的快取原則
-以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 設定以時間為基礎的快取原則時，您可以使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間基礎原則，或建立自訂的時間基礎原則。 為使用超文字傳輸通訊協定 (HTTP) 取得的資源，使用以時間為基礎的預設原則時，確切的快取行為是由快取回應中包含的標頭，以及 RFC 2616 的 13 與 14 一節中所指定的行為來，RFC 2616 可在[網際網路工程任務推動小組 (IETF)](https://www.ietf.org/) 網站取得。 如需程式碼範例來示範如何為 HTTP 資源設定以時間為基礎的預設原則，請參閱[如何：為應用程式設定以時間為基礎的預設快取原則](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
+以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 設定以時間為基礎的快取原則時，您可以使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間基礎原則，或建立自訂的時間基礎原則。 為使用超文字傳輸通訊協定 (HTTP) 取得的資源，使用以時間為基礎的預設原則時，確切的快取行為是由快取回應中包含的標頭，以及 RFC 2616 的 13 與 14 一節中所指定的行為來，RFC 2616 可在[網際網路工程任務推動小組 (IETF)](https://www.ietf.org/) 網站取得。 如需程式碼範例來示範如何為 HTTP 資源設定以時間為基礎的預設原則，請參閱[如何：為應用程式設定以時間為基礎的預設快取原則](how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](configuring-caching-in-network-applications.md)。  
   
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>判斷快取項目有效期限的準則  
  若要自訂以時間為基礎的快取原則，您可以指定要使用下列一或多個準則來判斷快取項目的有效期限：  
@@ -57,14 +57,14 @@ ms.locfileid: "69942365"
   
  下列主題提供結合以時間為基礎之快取原則準則的影響資訊：  
   
-- [快取原則互動 — 最長使用期限和最長過時](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+- [快取原則互動 — 最長使用期限和最長過時](cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
-- [快取原則互動 - 最長使用期限和最小有效期限](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+- [快取原則互動 - 最長使用期限和最小有效期限](cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [快取原則](../../../docs/framework/network-programming/cache-policy.md)
-- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [網路應用程式的快取管理](cache-management-for-network-applications.md)
+- [快取原則](cache-policy.md)
+- [以位置為基礎的快取原則](location-based-cache-policies.md)
+- [設定網路應用程式的快取功能](configuring-caching-in-network-applications.md)
+- [\<requestCaching> 項目 (網路設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

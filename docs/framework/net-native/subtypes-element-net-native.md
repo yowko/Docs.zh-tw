@@ -1,17 +1,17 @@
 ---
-title: <Subtypes> 項目 (.NET Native)
+title: <Subtypes>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af1acc02b18c5b97ef66ccae9b70c1f5327bff4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866845"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049131"
 ---
-# <a name="subtypes-element-net-native"></a>\<子類型 > 項目 (.NET Native)
+# <a name="subtypes-element-net-native"></a>\<子類型 > 元素（.NET Native）
 將執行階段原則套用至從包含類型繼承的所有類別。  
   
 ## <a name="syntax"></a>語法  
@@ -49,9 +49,9 @@ ms.locfileid: "61866845"
   
 ## <a name="all-attributes"></a>所有屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -60,7 +60,7 @@ ms.locfileid: "61866845"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  `<Subtypes>` 元素將原則套用至其包含類型的所有子類型。 當您想將不同的原則套用至衍生類型及其基底類別時，可使用這個元素。  
@@ -91,7 +91,7 @@ ms.locfileid: "61866845"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<型別 > 項目](../../../docs/framework/net-native/type-element-net-native.md)
-- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<輸入 > 元素](type-element-net-native.md)
+- [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞項目](runtime-directive-elements.md)
+- [執行階段指示詞原則設定](runtime-directive-policy-settings.md)

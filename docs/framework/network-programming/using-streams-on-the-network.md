@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 9f7d6bfcaa0d1cc4eb6c83cb53120bec695fe85e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: aa3fc56dc461d4fe22e2ff391f3561d8834128d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583469"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046882"
 ---
 # <a name="using-streams-on-the-network"></a>在網路上使用資料流
 網路資源在 .NET Framework 中是以資料流的形式呈現。 因為對資料流沒有任何特殊待遇，.NET Framework 提供下列功能：  
@@ -104,5 +104,5 @@ sr.Close()
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：使用 WebRequest 類別要求資料](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-- [要求資料](../../../docs/framework/network-programming/requesting-data.md)
+- [如何：使用 WebRequest 類別要求資料](how-to-request-data-using-the-webrequest-class.md)
+- [要求資料](requesting-data.md)

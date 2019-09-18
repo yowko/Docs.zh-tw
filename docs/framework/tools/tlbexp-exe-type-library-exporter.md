@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894758"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044000"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)
 類型程式庫匯出工具可以產生類型程式庫，這個類型程式庫描述定義在通用語言執行平台組件中的類型。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -64,11 +64,11 @@ tlbexp assemblyName [options]
   
  全部組件會一次同時轉換。 您無法使用 Tlbexp.exe 來為組件中所定義的類型子集產生類型資訊。  
   
- 您無法使用 Tlbexp.exe 從已經使用[型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 匯入的組件中產生型別程式庫。 反之，您應該參考使用 Tlbimp.exe 匯入的原始類型程式庫。 您可以從參考使用 Tlbimp.exe 匯入之組件的組件匯出類型程式庫。 請參閱下列範例區段。  
+ 您無法使用 Tlbexp.exe 從已經使用[型別程式庫匯入工具 (Tlbimp.exe)](tlbimp-exe-type-library-importer.md) 匯入的組件中產生型別程式庫。 反之，您應該參考使用 Tlbimp.exe 匯入的原始類型程式庫。 您可以從參考使用 Tlbimp.exe 匯入之組件的組件匯出類型程式庫。 請參閱下列範例區段。  
   
  Tlbexp.exe 會將產生的類型程式庫放置在目前的工作目錄或指定給輸出檔的目錄。 單一組件可能導致產生多個類型程式庫。  
   
- Tlbexp.exe 會產生類型程式庫但是不會註冊它。 這和[組件註冊工具 (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 形成對比，組件註冊工具會產生並註冊型別程式庫。 若要產生並以 COM 註冊類型程式庫，請使用 Regasm.exe。  
+ Tlbexp.exe 會產生類型程式庫但是不會註冊它。 這和[組件註冊工具 (Regasm.exe)](regasm-exe-assembly-registration-tool.md) 形成對比，組件註冊工具會產生並註冊型別程式庫。 若要產生並以 COM 註冊類型程式庫，請使用 Regasm.exe。  
   
  如果您未指定 `/win32` 或 `/win64` 選項當中的任一項，Tlbexp.exe 會產生與執行編譯的電腦類型 (32 位元或 64 位元電腦) 相對應之 32 位元或 64 位元的類型程式庫。 為了交互編譯，您可以在 32 位元電腦上使用 `/win64` 選項以產生 64 位元的類型程式庫，或在 64 位元電腦上使用 `/win32` 選項以產生 32 位元的類型程式庫。 在 32 位元的類型程式庫中，<xref:System.Runtime.InteropServices.ComTypes.SYSKIND> 值會設定為 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>。 在 64 位元的型別程式庫中，<xref:System.Runtime.InteropServices.ComTypes.SYSKIND> 值會設定為 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>。 所有資料類型的轉換資料 (例如，類似 `IntPtr` 和 `UIntPtr` 指標大小的資料類型) 都會適當地加以轉換。  
   
@@ -132,8 +132,8 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [工具](../../../docs/framework/tools/index.md)
-- [Regasm.exe (組件登錄工具)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [工具](index.md)
+- [Regasm.exe (組件登錄工具)](regasm-exe-assembly-registration-tool.md)
 - [組件至型別程式庫轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Tlbimp.exe (類型程式庫匯入工具)](tlbimp-exe-type-library-importer.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

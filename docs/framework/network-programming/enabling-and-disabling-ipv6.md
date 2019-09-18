@@ -2,12 +2,12 @@
 title: 啟用和停用 IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083682"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048569"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>啟用和停用 IPv6
 若要使用 IPv6 通訊協定，請確定您執行的作業系統版本支援 IPv6，並確認已正確設定作業系統和網路類別。  
@@ -15,7 +15,7 @@ ms.locfileid: "59083682"
 ## <a name="configuration-steps"></a>設定步驟  
  下表列出各種組態  
   
-|作業系統是否啟用 IPv6？|網路類別是否啟用 IPv6？|說明|  
+|作業系統是否啟用 IPv6？|網路類別是否啟用 IPv6？|描述|  
 |-------------------------------------|---------------------------------------|-----------------|  
 |否|否|可以剖析 IPv6 位址。|  
 |否|是|可以剖析 IPv6 位址。|  
@@ -24,7 +24,7 @@ ms.locfileid: "59083682"
   
  請注意，若要在 System.Net 命名空間中啟用所有類別的 IPv6 支援，您必須修改電腦組態檔或應用程式的組態檔。 應用程式組態檔的優先順序高於電腦組態檔。  
   
- 如需如何修改電腦組態檔 *machine.config* 以啟用 IPv6 支援的範例，請參閱[如何：修改電腦組態檔以啟用 IPv6 支援](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。 此外，確定作業系統已啟用 IPv6 支援。  
+ 如需如何修改電腦組態檔 *machine.config* 以啟用 IPv6 支援的範例，請參閱[如何：修改電腦組態檔以啟用 IPv6 支援](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。 此外，確定作業系統已啟用 IPv6 支援。  
   
  .NET Framework 在組態檔中設定的組態參數，如下所示：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "59083682"
   
 ## <a name="see-also"></a>另請參閱
 
-- [網際網路通訊協定第 6 版](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [通訊端](../../../docs/framework/network-programming/sockets.md)
-- [網路設定結構描述](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<ipv6> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [網際網路通訊協定第 6 版](internet-protocol-version-6.md)
+- [通訊端](sockets.md)
+- [網路設定結構描述](../configure-apps/file-schema/network/index.md)
+- [\<ipv6> 項目 (網路設定)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

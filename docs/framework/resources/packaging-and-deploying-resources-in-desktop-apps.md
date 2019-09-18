@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851606"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045572"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>在 .NET 應用程式中封裝和部署資源
 
@@ -58,7 +58,7 @@ ms.locfileid: "70851606"
 當您封裝應用程式的資源時，必須使用 Common Language Runtime 所預期的資源命名慣例來命名它們。 執行階段會依文化特性名稱識別資源。 每個文化特性都會獲指定唯一名稱，此名稱通常是下列項目的組合：與語言建立關聯的兩個字母小寫文化特性名稱以及與國家或地區建立關聯的兩個字母大寫子文化特性名稱 (必要時)。 子文化特性名稱遵循文化特性名稱，以破折號 (-) 分隔。 範例包括 ja-JP (代表在日本日文)、en-US (美式英文)、de-DE (德國德文)，或 de-AT (奧地利德文)。 請參閱 [Windows 支援的語言/地區名稱清單](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的 [語言標記] 資料行。 文化名稱遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定義的標準。
 
 > [!NOTE]
-> 如需建立資源檔的資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)和[建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。
+> 如需建立資源檔的資訊，請參閱[建立資源檔](creating-resource-files-for-desktop-apps.md)和[建立附屬組件](creating-satellite-assemblies-for-desktop-apps.md)。
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
@@ -73,9 +73,9 @@ ms.locfileid: "70851606"
 .NET Framework 資源後援處理序包含下列步驟：
 
 > [!TIP]
-> 您可以使用 [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 組態項目最佳化資源後援處理序，以及執行階段探查資源組件的處理序。 如需詳細資訊，請參閱[最佳化資源後援處理序](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一節。
+> 您可以使用 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 組態項目最佳化資源後援處理序，以及執行階段探查資源組件的處理序。 如需詳細資訊，請參閱[最佳化資源後援處理序](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一節。
 
-1. 執行階段會先檢查[全域組件快取](../../../docs/framework/app-domains/gac.md)是否有符合應用程式之所要求文化特性的組件。
+1. 執行階段會先檢查[全域組件快取](../app-domains/gac.md)是否有符合應用程式之所要求文化特性的組件。
 
      全域組件快取可以儲存多個應用程式所共用的資源組件。 這可讓您不需要在所建立之每個應用程式的目錄結構中包括特定資源集。 如果執行階段找到組件的參考，則會搜尋所要求資源的組件。 如果在組件中找到項目，則會使用所要求的資源。 如果找不到項目，會繼續搜尋。
 
@@ -112,13 +112,13 @@ ms.locfileid: "70851606"
 
 在下列情況中，您可以最佳化執行階段用來搜尋附屬組件中資源的程序。
 
-- 附屬組件會部署在與程式碼組件相同的位置中。 如果程式碼組件安裝在[全域組件快取](../../../docs/framework/app-domains/gac.md)中，則也會將附屬組件安裝在全域組件快取中。 如果程式碼組件安裝在目錄中，則附屬組件會安裝在該目錄的文化特性特定資料夾中。
+- 附屬組件會部署在與程式碼組件相同的位置中。 如果程式碼組件安裝在[全域組件快取](../app-domains/gac.md)中，則也會將附屬組件安裝在全域組件快取中。 如果程式碼組件安裝在目錄中，則附屬組件會安裝在該目錄的文化特性特定資料夾中。
 
 - 不會隨選安裝附屬組件。
 
 - 應用程式碼不會處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。
 
-如下列範例所示，您將藉由在應用程式組態檔中加入 [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 項目並且將其 `enabled` 屬性設定為 `true` 的方式，最佳化附屬組件的探查工作。
+如下列範例所示，您將藉由在應用程式組態檔中加入 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 項目並且將其 `enabled` 屬性設定為 `true` 的方式，最佳化附屬組件的探查工作。
 
 ```xml
 <configuration>
@@ -128,7 +128,7 @@ ms.locfileid: "70851606"
 </configuration>
 ```
 
-附屬組件的最佳化探查是選擇性功能。 也就是說，執行階段會遵循[資源後援處理序](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)中說明的步驟，除非應用程式組態檔中已有 [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 項目，而且其 `enabled` 屬性已設定為 `true`。 如果是這種情況，附屬組件的探查程序修改如下：
+附屬組件的最佳化探查是選擇性功能。 也就是說，執行階段會遵循[資源後援處理序](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)中說明的步驟，除非應用程式組態檔中已有 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 項目，而且其 `enabled` 屬性已設定為 `true`。 如果是這種情況，附屬組件的探查程序修改如下：
 
 - 執行階段使用父程式碼組件的位置來探查附屬組件。 如果父組件安裝在全域組件快取中，則執行階段會在快取中探查，而不是在應用程式目錄中探查。 如果父組件安裝在應用程式目錄中，則執行階段會在應用程式目錄中探查，而不是在全域組件快取中探查。
 
@@ -186,7 +186,7 @@ Greeting=Bon jour!
 Greeting=Добрый день
 ```
 
-從命令列執行[資源檔產生器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，以將這兩個檔案編譯成 .resources 檔案。 法文語言資源的命令為：
+從命令列執行[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)，以將這兩個檔案編譯成 .resources 檔案。 法文語言資源的命令為：
 
 **resgen.exe resources.fr.txt**
 
@@ -194,7 +194,7 @@ Greeting=Добрый день
 
 **resgen.exe resources.ru.txt**
 
-從法文語言資源的命令列執行[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 以將 .resources 檔案內嵌到動態連結程式庫，如下所示：
+從法文語言資源的命令列執行[組件連結器 (Al.exe)](../tools/al-exe-assembly-linker.md) 以將 .resources 檔案內嵌到動態連結程式庫，如下所示：
 
 **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**
 
@@ -233,7 +233,7 @@ Bon jour!
 
 ## <a name="see-also"></a>另請參閱
 
-- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
-- [全域組件快取](../../../docs/framework/app-domains/gac.md)
-- [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [桌面應用程式中的資源](index.md)
+- [全域組件快取](../app-domains/gac.md)
+- [建立資源檔](creating-resource-files-for-desktop-apps.md)
+- [建立附屬組件](creating-satellite-assemblies-for-desktop-apps.md)

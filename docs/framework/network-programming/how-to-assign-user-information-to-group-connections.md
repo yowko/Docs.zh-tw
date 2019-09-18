@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: 8e104de891d72e709ae20055737540516109da68
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296962"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048418"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>作法：將使用者資訊指派給群組連線
 
@@ -32,7 +32,7 @@ ms.locfileid: "59296962"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2. 建立特定 URL 的要求。 例如，下列程式碼會建立以下 URL 的要求： `http://www.contoso.com.`  
+2. 建立特定 URL 的要求。 例如，下列程式碼會建立 URL `http://www.contoso.com.` 的要求  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -109,5 +109,5 @@ MyWebResponse.Close()
   
 ## <a name="see-also"></a>另請參閱
 
-- [管理連接](../../../docs/framework/network-programming/managing-connections.md)
-- [連接群組](../../../docs/framework/network-programming/connection-grouping.md)
+- [管理連線](managing-connections.md)
+- [連線群組](connection-grouping.md)

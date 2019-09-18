@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: d5dc690cfe460be79251d60850319e5232379f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935447"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053494"
 ---
 # <a name="service-application-programming-architecture"></a>服務應用程式的程式設計架構
 Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 類別的類別為基礎。 您會覆寫來自這個類別的方法，並定義適用於它們的功能以決定服務的行為方式。  
@@ -57,7 +57,7 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    > 這些範例會使用 <xref:System.ServiceProcess.ServiceBase> 類型的陣列，應用程式所包含的每個服務均可加入到此陣列，接著可一起執行所有服務。 不過，如果您只建立單一服務，則可以選擇不使用陣列，而只宣告繼承自 <xref:System.ServiceProcess.ServiceBase> 的新物件，然後加以執行。 如需範例，請參閱[如何：以程式設計方式撰寫服務](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
+    > 這些範例會使用 <xref:System.ServiceProcess.ServiceBase> 類型的陣列，應用程式所包含的每個服務均可加入到此陣列，接著可一起執行所有服務。 不過，如果您只建立單一服務，則可以選擇不使用陣列，而只宣告繼承自 <xref:System.ServiceProcess.ServiceBase> 的新物件，然後加以執行。 如需範例，請參閱[如何：以程式設計方式撰寫服務](how-to-write-services-programmatically.md)。  
   
 - <xref:System.ServiceProcess.ServiceBase> 類別上的一系列屬性。 這些屬性會決定可在您的服務上呼叫哪些方法。 例如，將 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 屬性設定為 `true` 時，可以呼叫服務上的 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法。 將 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 屬性設定為 `true` 時，可以呼叫 <xref:System.ServiceProcess.ServiceBase.OnPause%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法。 當您將這其中一個屬性設定為 `true` 時，接著應該覆寫並定義適用於相關聯方法的處理。  
   
@@ -68,5 +68,5 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
+- [如何：建立 Windows 服務](how-to-create-windows-services.md)

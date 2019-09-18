@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044137"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042880"
 ---
 # <a name="obtaining-ui-automation-elements"></a>取得 UI 自動化項目
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "70044137"
  本主題描述取得 <xref:System.Windows.Automation.AutomationElement> 項目之 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 物件的各種方式。  
   
 > [!CAUTION]
-> 如果用戶端應用程式可能會嘗試尋找本身使用者介面中的項目，您就必須在個別執行緒上進行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 呼叫。 如需詳細資訊，請參閱 [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)。  
+> 如果用戶端應用程式可能會嘗試尋找本身使用者介面中的項目，您就必須在個別執行緒上進行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 呼叫。 如需詳細資訊，請參閱 [UI Automation Threading Issues](ui-automation-threading-issues.md)。  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>根項目  
@@ -85,7 +85,7 @@ ms.locfileid: "70044137"
 ### <a name="from-an-event"></a>從事件擷取  
  當您的應用程式收到 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件時，傳遞至事件處理常式的來源物件是 <xref:System.Windows.Automation.AutomationElement>。 例如，如果您已訂閱焦點變更事件，則傳遞給 <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> 的來源是接收此焦點的項目。  
   
- 如需詳細資訊，請參閱 [Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)。  
+ 如需詳細資訊，請參閱 [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md)。  
   
 ### <a name="from-a-point"></a>從點擷取  
  如果您有螢幕座標 (例如滑鼠指標位置)，您就可以使用靜態 <xref:System.Windows.Automation.AutomationElement> 方法來擷取 <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> 。  
@@ -98,6 +98,6 @@ ms.locfileid: "70044137"
   
 ## <a name="see-also"></a>另請參閱
 
-- [根據屬性條件尋找 UI 自動化項目](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [使用 TreeWalker 導覽 UI 自動化項目](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [根據屬性條件尋找 UI 自動化項目](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [使用 TreeWalker 導覽 UI 自動化項目](navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)

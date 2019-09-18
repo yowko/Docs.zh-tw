@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e658b2c86eecdbc45a9adde8d28cfb890dd591b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a5417f330040c2b6ce08a53920f9a92117624a80
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956652"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045764"
 ---
 # <a name="viewing-type-information"></a>檢視類型資訊
 <xref:System.Type?displayProperty=nameWithType> 類別是反映的核心。 Common Language Runtime 會在反映提出要求時，建立載入類型的**類型**。 您可以使用**類型**物件的方法、欄位、屬性和巢狀類別，找出有關該類型的所有資訊。  
@@ -26,7 +26,7 @@ ms.locfileid: "69956652"
  使用 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>，從尚未載入、但以類型名稱或您想要的類型名稱傳遞的組件中，取得**類型**物件。 使用<xref:System.Type.GetType%2A?displayProperty=nameWithType>取得**類型**已載入的組件的物件。 使用 <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> 取得模組**類型**物件。  
   
 > [!NOTE]
-> 如果您想要檢查和操作泛型型別和方法，請參閱[反映和泛用型別](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)提供的其他資訊，以及[如何：使用反映檢查和具現化泛型型別](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)。  
+> 如果您想要檢查和操作泛型型別和方法，請參閱[反映和泛用型別](reflection-and-generic-types.md)提供的其他資訊，以及[如何：使用反映檢查和具現化泛型型別](how-to-examine-and-instantiate-generic-types-with-reflection.md)。  
   
  下例示範為組件取得 <xref:System.Reflection.Assembly> 物件和模組的必要語法。  
   
@@ -90,4 +90,4 @@ ms.locfileid: "69956652"
 - <xref:System.Reflection.FieldInfo>
 - <xref:System.Reflection.EventInfo>
 - <xref:System.Reflection.ParameterInfo>
-- [反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [反映和泛用類型](reflection-and-generic-types.md)

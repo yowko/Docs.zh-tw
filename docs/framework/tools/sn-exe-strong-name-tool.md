@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 262ee168dabafcdc0b284f1ae5528843975a7e9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971852"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044156"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (強式名稱工具)
 強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../standard/assembly/strong-named.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
@@ -27,7 +27,7 @@ ms.locfileid: "70971852"
 
  如需強式命名和強式名稱組件的詳細資訊，請參閱[強式名稱的組件](../../standard/assembly/strong-named.md)和[如何：使用強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)。  
   
- 強式名稱工具會隨 Visual Studio 自動安裝。 若要啟動這項工具，請使用開發人員命令提示字元 (或 Windows 7 中的 Visual Studio 命令提示字元)。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 強式名稱工具會隨 Visual Studio 自動安裝。 若要啟動這項工具，請使用開發人員命令提示字元 (或 Windows 7 中的 Visual Studio 命令提示字元)。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
 
 > [!NOTE]
 > 在 64 位元電腦上，請使用 Visual Studio 開發人員命令提示字元執行 Sn.exe 的 32 位元版本，且使用 Visual Studio x64 Win64 命令提示字元執行 64 位元版本。 
@@ -42,7 +42,7 @@ sn [-quiet][option [parameter(s)]]
   
 ## <a name="parameters"></a>參數  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**-a** *identityKeyPairFile* *signaturePublicKeyFile*|產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 資料，將識別金鑰從檔案移轉到簽章金鑰。|  
 |**-ac** *identityPublicKeyFile* *identityKeyPairContainer* *signaturePublicKeyFile*|產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 資料，將識別金鑰從金鑰容器移轉到簽章金鑰。|  
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |**-k** [*keysize*] *outfile*|產生指定大小的新 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 金鑰，並將它寫入指定的檔案中。  公開和私密金鑰都會寫入檔案中。<br /><br /> 如果您未指定金鑰大小，在已安裝 Microsoft 增強型密碼編譯提供者的情況下，預設會產生 1,024 位元的金鑰，否則會產生 512 位元的金鑰。<br /><br /> 如果已安裝 Microsoft 增強型密碼編譯提供者，則 *keysize* 參數可支援的金鑰長度為從 384 位元至 16,384 位元，並以 8 位元為增量單位。  如果您安裝的是 Microsoft 基底密碼編譯提供者，則該參數可支援的金鑰長度是從 384 位元到 512 位元，並以 8 位元為增量單位。|  
 |**-m** [**y** *&#124;* **n**]|指定金鑰容器是電腦專屬或使用者專屬。 如果您指定 *y*，表示金鑰容器為電腦專屬。 如果您指定 *n*，表示金鑰容器是使用者專屬。<br /><br /> 如果 y 和 n 都沒有指定，則此選項會顯示目前設定。|  
 |**-o**  *infile* [*outfile*]|從 *infile* 擷取公開金鑰，然後存放到 .csv 檔案中。 公開金鑰的每一個位元組會以逗號分隔。 此格式對於將金鑰參考硬式編碼為原始程式碼中的初始化陣列而言很實用。 如果您未指定 *outfile*，此選項會將輸出放置到 [剪貼簿]。 **注意：** 此選項不會驗證輸入是否只是公開金鑰。 如果 `infile` 包含具有私密金鑰的金鑰組，則也會擷取該私密金鑰。|  
-|**-p** *infile outfile* [*hashalg*]|選擇性地使用 *hashalg* 指定的 RSA 演算法從 *infile* 中的金鑰組擷取公開金鑰，並將它儲存在 *outfile* 中。 您可以使用[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 的 **/delaysign+** 和 **/keyfile** 選項，將這個公開金鑰用於延遲簽署組件。 延遲簽署組件時，在編譯時期只會設定公開金鑰，而檔案中會為簽章保留空間，以便稍後知道私密金鑰時再加入簽章。|  
+|**-p** *infile outfile* [*hashalg*]|選擇性地使用 *hashalg* 指定的 RSA 演算法從 *infile* 中的金鑰組擷取公開金鑰，並將它儲存在 *outfile* 中。 您可以使用[組件連結器 (Al.exe)](al-exe-assembly-linker.md) 的 **/delaysign+** 和 **/keyfile** 選項，將這個公開金鑰用於延遲簽署組件。 延遲簽署組件時，在編譯時期只會設定公開金鑰，而檔案中會為簽章保留空間，以便稍後知道私密金鑰時再加入簽章。|  
 |**-pc**  *container* *outfile* [*hashalg*]|從 *container* 中的金鑰組擷取公開金鑰，並且將它儲存在 *outfile* 中。 如果您使用 *hashalg* 選項，則會使用 RSA 演算法擷取公開金鑰。|  
 |**-Pb** [**y** *&#124;* **n**]|指定是否強制執行強式名稱略過原則。 如果指定 *y*，則將完全信任組件載入至完全信任的 <xref:System.AppDomain> 時，就不會驗證其強式名稱。 如果指定 *n*，就會驗證強式名稱的正確性，但不是針對特定的強式名稱進行驗證。 <xref:System.Security.Permissions.StrongNameIdentityPermission> 對於完全信任組件沒有任何影響。 您必須自行檢查強式名稱是否相符。<br /><br /> 如果 `y` 和 `n` 都沒有指定，則此選項會顯示目前設定。 預設為 `y`。 **注意：** 在 64 位元電腦上，您必須在 Sn.exe 的 32 位元和 64 位元執行個體中設定此參數。|  
 |**-q**[**uiet**]|指定無訊息模式，不顯示成功訊息。|  
@@ -126,7 +126,7 @@ sn -d MyContainer
   
 ## <a name="see-also"></a>另請參閱
 
-- [工具](../../../docs/framework/tools/index.md)
-- [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [工具](index.md)
+- [Al.exe (組件連結器)](al-exe-assembly-linker.md)
 - [強式名稱的組件](../../standard/assembly/strong-named.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

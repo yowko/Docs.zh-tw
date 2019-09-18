@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb7223d2356ebec54ddd64dee514f1c8785e2d17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 06883646982aa6bd642dc4fce7881a289dad5901
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921574"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053196"
 ---
 # <a name="how-to-configure-an-application-domain"></a>作法：設定應用程式定義域
 您可以使用 <xref:System.AppDomainSetup> 類別向 Common Language Runtime 提供新應用程式定義域的設定資訊。 建立您自己的應用程式定義域時，最重要的屬性是 <xref:System.AppDomainSetup.ApplicationBase%2A>。 其他 **AppDomainSetup** 屬性主要是執行階段主機用來設定特定的應用程式定義域。  
@@ -36,4 +36,4 @@ ms.locfileid: "69921574"
 ## <a name="see-also"></a>另請參閱
 
 - [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)
-- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
+- [使用應用程式定義域](use.md)

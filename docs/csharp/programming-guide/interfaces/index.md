@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589187"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053270"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 
@@ -27,7 +27,7 @@ ms.locfileid: "69589187"
 
 任何實作 <xref:System.IEquatable%601> 介面的類別或結構，必須包含 <xref:System.IEquatable%601.Equals%2A> 方法的定義，該方法符合介面指定的簽章。 如此一來，您可以倚賴實作 `IEquatable<T>` 的類別，以包含 `Equals` 方法，類別的執行個體可以使用該方法判斷它是否等於相同類別的另一個執行個體。  
   
-`IEquatable<T>` 的定義不提供 `Equals` 的實作。 介面只會定義簽章。 如此一來，在 C# 中的介面類似於抽象類別，其中的所有方法都是抽象的。 不過，類別或結構可以實作多個介面，但類別只會繼承單一類別抽象或不繼承。
+`IEquatable<T>` 的定義不提供 `Equals` 的實作。 類別或結構可以執行多個介面，但類別只能繼承自單一類別。
   
 如需抽象類別的詳細資訊，請參閱[抽象和密封類別以及類別成員](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "69589187"
   
 ## <a name="featured-book-chapter"></a>精選書籍章節
 
-[了解 C# 3.0：掌握 C# 3.0 的基本概念](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的[介面](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
+[了解 C# 3.0：掌握 C# 3.0 的基本概念中的介面
 
 ## <a name="see-also"></a>另請參閱
 

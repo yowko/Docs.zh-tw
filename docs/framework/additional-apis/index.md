@@ -10,18 +10,18 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aed6f32bbd3ffdc9446e9d17be2d90c62444ee1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675360"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053249"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他類別庫和 API
 
-.NET Framework 一直不斷進化。 若要改善跨平台開發，並及早引入新功能，會發行 out-of-band (OOB) 的新功能。 本主題列出有提供文件的 OOB 專案。  
+.NET Framework 不斷進化。 為了改善跨平臺開發並及早引進新功能，新功能會以頻外（OOB）發行。 本主題列出有提供文件的 OOB 專案。  
   
-除此之外，某些程式庫會以 .NET Framework 的特定平台或實作為目標。 比方說，<xref:System.Text.CodePagesEncodingProvider>類別會使用.NET Framework 開發的 UWP 應用程式提供字碼頁編碼方式。 本主題也會列出這些程式庫。  
+除此之外，某些程式庫會以 .NET Framework 的特定平台或實作為目標。 例如， <xref:System.Text.CodePagesEncodingProvider>類別會讓使用 .NET Framework 開發的 UWP 應用程式可以使用字碼頁編碼。 本主題也會列出這些程式庫。  
   
 ## <a name="oob-projects"></a>OOB 專案
   
@@ -36,7 +36,7 @@ ms.locfileid: "61675360"
   
 | 專案 | 描述 |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | 擴充<xref:System.Text.EncodingProvider>類別，以使用於通用 Windows 平台為目標的應用程式的字碼頁編碼方式。 |  
+| <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider>擴充類別，讓以通用 Windows 平臺為目標的應用程式可以使用字碼頁編碼。 |  
   
 ## <a name="private-apis"></a>私人 API  
 
@@ -44,22 +44,22 @@ ms.locfileid: "61675360"
   
 | API 名稱 |
 | -------- |
-| [System.Net.Connection 類別](../../../docs/framework/additional-apis/connection.md) |
-| [System.Net.Connection.m\_WriteList 欄位](../../../docs/framework/additional-apis/m_writelist.md) |
-| [System.Net.ConnectionGroup 類別](../../../docs/framework/additional-apis/connectiongroup.md) |
-| [System.Net.ConnectionGroup.m\_ConnectionList 欄位](../../../docs/framework/additional-apis/m_connectionlist.md) |
-| [System.Net.CoreResponseData 類別](../../../docs/framework/additional-apis/coreresponsedata.md) |
-| [System.Net.CoreResponseData.m\_ResponseHeaders 欄位](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
-| [System.Net.CoreResponseData.m\_StatusCode 欄位](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
-| [System.Net.HttpWebRequest。\_AutoRedirects 欄位](../../../docs/framework/additional-apis/_autoredirects.md) |
-| [System.Net.HttpWebRequest。\_CoreResponse 欄位](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
-| [System.Net.HttpWebRequest。\_HttpResponse 欄位](../../../docs/framework/additional-apis/_httpresponse.md) |
-| [System.Net.ServicePoint.m\_ConnectionGroupList 欄位](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
-| [System.Net.ServicePointManager.s\_ServicePointTable 欄位](../../../docs/framework/additional-apis/s_servicepointtable.md) |
-| [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes 欄位](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
-| [System.Windows.Forms.Design.DataMemberFieldEditor 類別](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |
-| [System.Windows.Forms.Design.DataMemberListEditor 類別](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |
+| [系統 .Net. Connection 類別](connection.md) |
+| [[System .net. Connection.\_m WriteList] 欄位](m_writelist.md) |
+| [ConnectionGroup 類別](connectiongroup.md) |
+| [[System .net. ConnectionGroup.\_m ConnectionList] 欄位](m_connectionlist.md) |
+| [CoreResponseData 類別](coreresponsedata.md) |
+| [[System .net. CoreResponseData.\_m ResponseHeaders] 欄位](coreresponsedata_m_responseheaders.md) |
+| [[System .net. CoreResponseData\_] StatusCode 欄位](coreresponsedata_m_statuscode.md) |
+| [系統 .Net. HttpWebRequest。\_AutoRedirects 欄位](_autoredirects.md) |
+| [系統 .Net. HttpWebRequest。\_CoreResponse 欄位](httpwebrequest__coreresponse.md) |
+| [系統 .Net. HttpWebRequest。\_HttpResponse 欄位](_httpresponse.md) |
+| [[System .net. ServicePoint.\_m ConnectionGroupList] 欄位](m_connectiongrouplist.md) |
+| [[System .net. ServicePointManager.\_s ServicePointTable] 欄位](s_servicepointtable.md) |
+| [VisualDiagnostics. s\_isDebuggerCheckDisabledForTestPurposes 欄位](s-isdebuggercheckdisabledfortestpurposes-field.md) |
+| [System.web. DataMemberFieldEditor 類別](datamemberfieldeditor-class.md) |
+| [System.web. DataMemberListEditor 類別](datamemberlisteditor-class.md) |
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+- [.NET Framework 和不定期發行](../get-started/the-net-framework-and-out-of-band-releases.md)

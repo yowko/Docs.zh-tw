@@ -1,19 +1,21 @@
 ---
 title: .NET Portability Analyzer - .NET
 description: 了解如何使用.NET Portability Analyzer 工具來評估程式碼移植到不同 .NET 實作之間的可行性，包括 .NET Core、.NET Standard、UWP 和 Xamarin。
-ms.date: 07/18/2019
+ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107509"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053994"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
-要讓您的程式庫支援多平台？ 想要查看需要多少工作，才能讓您的應用程式相容於其他 .NET 實作和設定檔 (包括 .NET Core、.NET Standard、UWP 和適用於 iOS、Android 和 Mac 的 Xamarin) 嗎？ [.NET Portability Analyzer](https://github.com/microsoft/dotnet-apiport) 是一項工具，其藉由分析組件來提供您有關程式在跨 .NET 實作上之彈性的詳細報表。 可攜性分析器會作為 [Visual Studio 延伸模組](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)提供，可分析每個專案的組件，並可作為 [ApiPort 主控台應用程式](https://aka.ms/apiportdownload)，按指定的檔案或目錄去分析組件。
+要讓您的程式庫支援多平台？ 想要查看需要多少工作，才能讓您的 .NET Framework 應用程式在 .NET Core 上執行？  [.Net 可攜性分析器](https://github.com/microsoft/dotnet-apiport)是一項工具，為您提供遺失的 .net api 的詳細報告，讓您的應用程式或程式庫能夠在指定的目標 .net 平臺上進行移植，方法是分析元件。 可攜性分析器會作為 [Visual Studio 延伸模組](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)提供，可分析每個專案的組件，並可作為 [ApiPort 主控台應用程式](https://aka.ms/apiportdownload)，按指定的檔案或目錄去分析組件。
+
+將專案轉換成目標平臺（例如 .net Core）之後，您可以使用以 Roslyn 為基礎的 [API 分析器工具][https://docs.microsoft.com/en-us/dotnet/standard/analyzers/api-analyzer](api-analyzer.md) （以識別引發 PlatformNotSupportedException 的 api 和一些其他相容性問題。
 
 ## <a name="common-targets"></a>常見目標
 
@@ -32,7 +34,7 @@ ms.locfileid: "70107509"
 您也可以使用 ApiPort 主控台應用程式，可從 [ApiPort 存放庫](https://aka.ms/apiportdownload)下載。 您可以使用 `listTargets` 命令選項來顯示可用的目標清單，然後指定 `-t` 或 `--target` 命令選項來挑選目標平台。 
 
 ### <a name="analyze-portability"></a>分析可攜性
-若要在 Visual Studio 中分析整個專案，在 [方案總管]  中以滑鼠右鍵按一下您的專案，然後選取 [分析組件可攜性]  。 否則，請移至 [分析]  功能表，然後選取 [Analyze Assembly Portability] (分析組件可攜性)  。 從這裡選取專案的可執行檔或 DLL。
+若要在 Visual Studio 中分析整個專案，在 [方案總管] 中以滑鼠右鍵按一下您的專案，然後選取 [分析組件可攜性]。 否則，請移至 [分析] 功能表，然後選取 [Analyze Assembly Portability] (分析組件可攜性)。 從這裡選取專案的可執行檔或 DLL。
 
 ![[方案總管] 中的可攜性分析器](./media/portability-analyzer/portability-solution-explorer.png)
 
@@ -58,7 +60,7 @@ ms.locfileid: "70107509"
 
 ![可攜性詳細資料](./media/portability-analyzer/portabilitydetails.png)
 
-報表的詳細資料區段，會列出其中一個目標平台缺少的 API。 
+報表的 [**詳細資料**] 區段會列出任何選取的**目標平臺**中遺失的 api。 
 
 - 目標類型：類型缺少目標平台的 API 
 - 目標成員：目標平台缺少方法 

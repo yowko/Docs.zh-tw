@@ -1,5 +1,5 @@
 ---
-title: HOW TO：呼叫 Windows 函式採用不帶正負號的類型 (Visual Basic)
+title: HOW TO：呼叫採用不帶正負號類型的 Windows 函式（Visual Basic）
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d1a679242f89c17e58a837ac2d356e1594972fb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97075fb6149ed8c0ce06318d0e5bb6f01b841f30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022359"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053319"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>HOW TO：呼叫 Windows 函式採用不帶正負號的類型 (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>HOW TO：呼叫採用不帶正負號類型的 Windows 函式（Visual Basic）
 
-如果您要使用類別、 模組或結構，具有不帶正負號的整數類型的成員，您可以存取這些成員與 Visual Basic。
+如果您使用的類別、模組或結構具有不帶正負號整數類型的成員，您可以使用 Visual Basic 來存取這些成員。
 
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>若要呼叫 Windows 函式採用不帶正負號的類型
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>呼叫採用不帶正負號類型的 Windows 函式
 
-1. 使用[Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)向 Visual Basic 的程式庫保存函式、 其名稱是該程式庫中，其呼叫的順序為何，以及如何呼叫它時，將字串轉換。
+1. 使用[Declare 語句](../../../visual-basic/language-reference/statements/declare-statement.md)來告訴 Visual Basic 哪一個程式庫包含函式、它在該程式庫中的名稱、其呼叫順序為何，以及如何在呼叫它時轉換字串。
 
-2. 在 `Declare`陳述式中，使用`UInteger`， `ULong`， `UShort`，或`Byte`視需要針對每個參數具有不帶正負號的類型。
+2. `Byte` `UShort` `ULong` `UInteger`在語句中，針對具有不帶正負號類型的每個參數，使用、、或。 `Declare`
 
-3. 若要尋找的名稱和值的常數，它會使用呼叫 Windows 函式，請參閱文件。 其中許多 WinUser.h 檔案中定義。
+3. 請參閱您所呼叫之 Windows 函式的檔，以尋找其所使用之常數的名稱和值。 其中有許多都是在 WinUser 檔案中定義。
 
-4. 宣告在程式碼中必要的常數。 許多 Windows 常數是 32 位元不帶正負號的值，以及您應該將這些宣告`As UInteger`。
+4. 在您的程式碼中宣告必要的常數。 許多 Windows 常數都是32位不帶正負號的值，您`As UInteger`應該將它們宣告為。
 
-5. 以一般方式呼叫函式。 下列範例會呼叫 Windows 函式`MessageBox`，後者會採用不帶正負號的整數引數。
+5. 以正常方式呼叫函式。 下列範例會呼叫 Windows `MessageBox`函式，它會採用不帶正負號的整數引數。
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ ms.locfileid: "62022359"
     End Class
     ```
 
-     您可以測試此函式`messageThroughWindows`為下列程式碼。
+     您可以使用下列程式`messageThroughWindows`代碼來測試函數。
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,13 +70,13 @@ ms.locfileid: "62022359"
     ```
 
     > [!CAUTION]
-    > `UInteger`， `ULong`， `UShort`，以及`SByte`資料類型不屬於[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準，所以符合 CLS 標準的程式碼無法使用的元件，會使用它們。
+    > `UInteger`、 、和`UShort`資料類型不是[語言獨立性和與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)（CLS）的一部分，因此符合 CLS 標準的程式碼無法取用使用它們的元件。 `SByte` `ULong`
 
     > [!IMPORTANT]
-    > 呼叫 unmanaged 程式碼，例如 Windows 應用程式開發介面 (API)，公開您的程式碼有潛在的安全性風險。
+    > 呼叫非受控碼（例如 Windows 應用程式開發介面（API））會讓您的程式碼暴露于潛在的安全性風險下。
 
     > [!IMPORTANT]
-    > 呼叫 Windows API 需要 unmanaged 程式碼的權限，這可能會影響在部分信任情況下執行。 如需詳細資訊，請參閱 <<c0> <xref:System.Security.Permissions.SecurityPermission> 並[程式碼存取權限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))。
+    > 呼叫 Windows API 需要未受管理的程式碼許可權，這可能會影響在部分信任情況下的執行。 如需詳細資訊， <xref:System.Security.Permissions.SecurityPermission>請參閱和程式[代碼存取權限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))。
 
 ## <a name="see-also"></a>另請參閱
 

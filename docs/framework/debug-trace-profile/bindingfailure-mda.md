@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875078"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052948"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
@@ -46,7 +46,7 @@ ms.locfileid: "61875078"
 
 - 使用 `bindingFailure` MDA 所提供的資料，來判斷原因：
 
-  - 執行 [Fuslogvw.exe (組件繫結記錄檔檢視器)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)，以讀取組件繫結器所產生的錯誤記錄檔。
+  - 執行 [Fuslogvw.exe (組件繫結記錄檔檢視器)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)，以讀取組件繫結器所產生的錯誤記錄檔。
 
   - 判斷組件是否位於要求的位置。 如果是 <xref:System.Reflection.Assembly.LoadFrom%2A> 和 <xref:System.Reflection.Assembly.LoadFile%2A> 方法，則可以輕鬆地判斷所要求的位置。 如果是使用組件身分識別繫結的 <xref:System.Reflection.Assembly.Load%2A> 方法，則您必須尋找符合應用程式定義域之 <xref:System.AppDomain.BaseDirectory%2A> 屬性探查路徑和全域組件快取中該身分識別的組件。
 
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>另請參閱
 
-- [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)

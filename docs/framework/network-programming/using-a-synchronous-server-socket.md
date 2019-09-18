@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 43e1d54d4e74b49fdf1a8997d1cc89492c9412bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117244"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047026"
 ---
 # <a name="using-a-synchronous-server-socket"></a>使用同步伺服器通訊端
 同步伺服器通訊端會暫停應用程式執行，直到在通訊端上收到連線要求為止。 同步伺服器通訊端不適用於大量使用網路以進行作業的應用程式，但它們可能適合簡單網路應用程式。  
@@ -77,6 +77,6 @@ handler.Close();
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用非同步伺服器通訊端](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [同步伺服器通訊端範例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [使用非同步伺服器通訊端](using-an-asynchronous-server-socket.md)
+- [同步伺服器通訊端範例](synchronous-server-socket-example.md)
+- [透過通訊端接聽](listening-with-sockets.md)

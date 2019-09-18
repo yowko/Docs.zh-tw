@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80c9fe6de0fca86497ffe84cd8dadf0eb8cef6c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 719ea15de135d8bbeb7bb88ea3d5b5874e30b5d6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108949"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053109"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>從應用程式定義域擷取安裝資訊
 每個應用程式定義域的執行個體都包含這兩個屬性及 <xref:System.AppDomainSetup> 資訊。 您可以從使用 <xref:System.AppDomain?displayProperty=nameWithType> 類別的應用程式定義域擷取安裝資訊。 這個類別提供數個成員，它們會擷取應用程式定義域的組態資訊。  
@@ -39,4 +39,4 @@ ms.locfileid: "59108949"
 ## <a name="see-also"></a>另請參閱
 
 - [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)
-- [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
+- [使用應用程式定義域](use.md)

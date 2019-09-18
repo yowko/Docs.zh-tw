@@ -2,12 +2,12 @@
 title: dotnet pack 命令
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
 ms.date: 08/08/2019
-ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c230fa201fce02ab537afc4e14468788d32b8c8a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990415"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039485"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -63,117 +63,117 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 ## <a name="options"></a>選項
 
-* **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration {Debug|Release}`**
 
   定義組建組態。 預設值為 `Debug`。
 
-* **`--force`**
+- **`--force`**
 
   即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。 自 .NET Core 2.0 SDK 起可用的選項。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   印出命令的簡短說明。
 
-* **`--include-source`**
+- **`--include-source`**
 
   除了輸出目錄中的一般 NuGet 套件外，還包含 debug 符號 NuGet 套件。 來源檔案會包含在符號封裝`src`內的資料夾中。
 
-* **`--include-symbols`**
+- **`--include-symbols`**
 
   除了輸出目錄中的一般 NuGet 套件外，還包含 debug 符號 NuGet 套件。
 
-* **`--interactive`**
+- **`--interactive`**
 
   允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供使用。
 
-* **`--no-build`**
+- **`--no-build`**
 
   不會在封裝前建置專案。 選項也會隱含設定 `--no-restore` 旗標。
 
-* **`--no-dependencies`**
+- **`--no-dependencies`**
 
   忽略專案對專案參考，並且只還原根專案。 自 .NET Core 2.0 SDK 起可用的選項。
 
-* **`--no-restore`**
+- **`--no-restore`**
 
   執行命令時，不會執行隱含還原。 自 .NET Core 2.0 SDK 起可用的選項。
 
-* **`--nologo`**
+- **`--nologo`**
 
   不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
 
-* **`-o|--output <OUTPUT_DIRECTORY>`**
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
   將已建置的套件放置在指定的目錄中。
 
-* **`--runtime <RUNTIME_IDENTIFIER>`**
+- **`--runtime <RUNTIME_IDENTIFIER>`**
 
   指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 自 .NET Core 2.0 SDK 起可用的選項。
 
-* **`-s|--serviceable`**
+- **`-s|--serviceable`**
 
   在套件中設定可提供服務的旗標。 如需詳細資訊，請參閱 [.NET 部落格︰.NET 4.5.1 支援適用於 .NET NuGet 程式庫的 Microsoft 安全性更新 (英文)](https://aka.ms/nupkgservicing)。
 
-* **`--version-suffix <VERSION_SUFFIX>`**
+- **`--version-suffix <VERSION_SUFFIX>`**
 
   在專案中定義 `$(VersionSuffix)` MSBuild 屬性的值。
 
-* **`-v|--verbosity <LEVEL>`**
+- **`-v|--verbosity <LEVEL>`**
 
   設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
 ## <a name="examples"></a>範例
 
-* 封裝目前目錄中的專案：
+- 封裝目前目錄中的專案：
 
   ```console
   dotnet pack
   ```
 
-* 封裝 `app1` 專案：
+- 封裝 `app1` 專案：
 
   ```console
   dotnet pack ~/projects/app1/project.csproj
   ```
 
-* 封裝目前目錄中的專案，並將產生的套件放置到 `nupkgs` 資料夾中：
+- 封裝目前目錄中的專案，並將產生的套件放置到 `nupkgs` 資料夾中：
 
   ```console
   dotnet pack --output nupkgs
   ```
 
-* 將目前目錄中的專案封裝到 `nupkgs` 資料夾，並略過建置步驟︰
+- 將目前目錄中的專案封裝到 `nupkgs` 資料夾，並略過建置步驟︰
 
   ```console
   dotnet pack --no-build --output nupkgs
   ```
 
-* 在 *.csproj* 檔案中將專案的版本尾碼設定為 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`，封裝目前的專案並使用指定尾碼更新產生的套件版本︰
+- 在 *.csproj* 檔案中將專案的版本尾碼設定為 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`，封裝目前的專案並使用指定尾碼更新產生的套件版本︰
 
   ```console
   dotnet pack --version-suffix "ci-1234"
   ```
 
-* 使用 `PackageVersion` MSBuild 屬性將封裝版本設定為 `2.1.0`：
+- 使用 `PackageVersion` MSBuild 屬性將封裝版本設定為 `2.1.0`：
 
   ```console
   dotnet pack -p:PackageVersion=2.1.0
   ```
 
-* 將專案針對特定[目標 Framework](../../standard/frameworks.md) 進行封裝：
+- 將專案針對特定[目標 Framework](../../standard/frameworks.md) 進行封裝：
 
   ```console
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-* 封裝專案，並使用特定的執行階段 (Windows 10) 進行還原作業 (.NET Core SDK 2.0 及更新版本)：
+- 封裝專案，並使用特定的執行階段 (Windows 10) 進行還原作業 (.NET Core SDK 2.0 及更新版本)：
 
   ```console
   dotnet pack --runtime win10-x64
   ```
 
-* 使用 [.nuspec 檔案](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)來封裝專案：
+- 使用 [.nuspec 檔案](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)來封裝專案：
 
   ```console
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget

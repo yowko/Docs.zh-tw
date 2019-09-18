@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894567"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043897"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows 資源當地語系化編輯器)
 
-Windows 資源當地語系化編輯器 (Winres.exe) 是一項視覺化配置工具，可以幫助當地語系化專家將表單所使用的 Windows Form 使用者介面 (UI) 資源當地語系化。 做為 Winres.exe 輸入內容的 .resx 或 .resources 檔案，可以利用視覺化設計環境 (例如 Microsoft Visual Studio) 建立。 如需在 .NET Framework 應用程式中部署資源的資訊，請參閱[桌面應用程式中的資源](../../../docs/framework/resources/index.md)。
+Windows 資源當地語系化編輯器 (Winres.exe) 是一項視覺化配置工具，可以幫助當地語系化專家將表單所使用的 Windows Form 使用者介面 (UI) 資源當地語系化。 做為 Winres.exe 輸入內容的 .resx 或 .resources 檔案，可以利用視覺化設計環境 (例如 Microsoft Visual Studio) 建立。 如需在 .NET Framework 應用程式中部署資源的資訊，請參閱[桌面應用程式中的資源](../resources/index.md)。
 
-Winres.exe 隨 Visual Studio 一起安裝。 若要執行此工具，請使用 Visual Studio 的開發人員命令提示字元。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+Winres.exe 隨 Visual Studio 一起安裝。 若要執行此工具，請使用 Visual Studio 的開發人員命令提示字元。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -55,7 +55,7 @@ Windows Form 專案中表單的 UI 項目狀態通常儲存在資源檔內，它
 
 另請參閱[階層式組織當地語系化的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))或[階層式組織當地語系化的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))。
 
-Winres.exe 無法將 .resx 檔案轉換成對應的 .resources 檔案，請改用 Resgen.exe 工具。 如需 Resgen.exe 的詳細資訊，請參閱 [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)。
+Winres.exe 無法將 .resx 檔案轉換成對應的 .resources 檔案，請改用 Resgen.exe 工具。 如需 Resgen.exe 的詳細資訊，請參閱 [Resgen.exe (資源檔產生器)](resgen-exe-resource-file-generator.md)。
 
 Winres.exe 是圖形應用程式，只需從資源檔即可重新建立設計階段版本的 Windows Form 表單，不需要存取原始程式碼。 Winres.exe 可裝載 Visual Studio 的 **Windows Form 表單設計工具**和 [屬性] 視窗。 這些功能可以對內含 Windows Form 表單的 .resources 或 .resx 檔案進行視覺化編輯。 當地語系化人員通常會使用 Winres.exe 來編輯控制項標籤，並調整控制項的位置和大小，以納入目標文化特性的標籤。
 
@@ -76,7 +76,7 @@ Visual Studio 的優點就是您可以用它來開發應用程式，並且將應
 > [!NOTE]
 > Winres.exe 無法用來編輯預設資源檔。 Winres.exe 會將所有變更過的屬性解譯為已當地語系化的屬性，並將這些屬性儲存到目標文化特性資源檔中。
 
-最後，最終版本的文化特性資源檔即可用來建立應用程式的當地語系化版本。 如需詳細資訊，請參閱[桌面應用程式中的資源](../../../docs/framework/resources/index.md)。
+最後，最終版本的文化特性資源檔即可用來建立應用程式的當地語系化版本。 如需詳細資訊，請參閱[桌面應用程式中的資源](../resources/index.md)。
 
 Winres.exe 具有以下的特性和功能：
 
@@ -127,7 +127,7 @@ Winres.exe 具有以下的特性和功能：
     ```
 
     > [!NOTE]
-    > 如果您要編輯之資源的所屬表單是繼承的表單，則包含繼承之表單的組件和包含衍生表單的組件都必須在全域組件快取 (GAC) 中註冊，或是必須與 WinRes.exe 位於相同的目錄中。 如需將 .NET Framework 元件安裝到 GAC 的詳細資訊，請參閱[全域組件快取](../../../docs/framework/app-domains/gac.md)。
+    > 如果您要編輯之資源的所屬表單是繼承的表單，則包含繼承之表單的組件和包含衍生表單的組件都必須在全域組件快取 (GAC) 中註冊，或是必須與 WinRes.exe 位於相同的目錄中。 如需將 .NET Framework 元件安裝到 GAC 的詳細資訊，請參閱[全域組件快取](../app-domains/gac.md)。
 
 3. 選取表單上的控制項，並且變更這些控制項的 <xref:System.Windows.Forms.Control.Text%2A> 和其他屬性，以反映當地語系化的文化特性及其語言。 視需要移動或調整控制項大小，以容納當地語系化的文字。
 
@@ -135,7 +135,7 @@ Winres.exe 具有以下的特性和功能：
 
 5. 選取適當的文化特性和檔案模式，然後按一下 [確定]。
 
-   工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 <xref:System.Globalization.CultureInfo> 類別。
+   工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 <xref:System.Globalization.CultureInfo> 類別。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -144,6 +144,6 @@ Winres.exe 具有以下的特性和功能：
 - <xref:System.Resources.ResourceManager>
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
-- [工具](../../../docs/framework/tools/index.md)
-- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
+- [工具](index.md)
+- [桌面應用程式中的資源](../resources/index.md)
 - [全球化和當地語系化](../../standard/globalization-localization/index.md)

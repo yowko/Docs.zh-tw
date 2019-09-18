@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614133"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052213"
 ---
 # <a name="best-practices-for-assembly-loading"></a>組件載入的最佳作法
 本文討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型身分識別的問題。 本文討論下列建議：  
@@ -44,7 +44,7 @@ ms.locfileid: "64614133"
   
 - 載入來源內容包含從載入器未搜尋的位置中載入的組件。 例如，增益集可能安裝在不在應用程式路徑下的目錄。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> 和 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 是依路徑載入之方法的範例。  
   
-- 僅限反映的內容包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法所載入的組件。 無法執行此內容中的程式碼，因此此處不予討論。 如需詳細資訊，請參閱[如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+- 僅限反映的內容包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法所載入的組件。 無法執行此內容中的程式碼，因此此處不予討論。 如需詳細資訊，請參閱[如何：將組件載入僅限反映的內容](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
 - 如果您已使用反映發出來產生暫時性動態組件，則組件不會在任何內容中。 此外，使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法所載入的大部分組件在載入時都沒有內容，而且從位元組陣列載入的組件在載入時沒有內容，除非它們在套件原則之後所建立的身分識別位於全域組件快取中。  
   

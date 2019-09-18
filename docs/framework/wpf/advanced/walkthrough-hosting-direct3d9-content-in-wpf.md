@@ -5,72 +5,77 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: cff14f03a75717c657785cb8fe5a1de2077faf86
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2c31c044aa50a74255a61da1675037ab3d09f615
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605400"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053456"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>逐步解說：將 Direct3D9 內容裝載在 WPF 中
-本逐步解說示範如何裝載 Windows Presentation Foundation (WPF) 應用程式中的 Direct3D9 內容。  
-  
- 在這個逐步解說中，您將執行下列工作：  
-  
-- 建立 WPF 專案來裝載 Direct3D9 內容。  
-  
-- 匯入 Direct3D9 內容。  
-  
-- 使用顯示 Direct3D9 內容<xref:System.Windows.Interop.D3DImage>類別。  
-  
- 當您完成時，您會知道如何裝載在 WPF 應用程式中的 Direct3D9 內容。  
-  
-## <a name="prerequisites"></a>必要條件  
- 您需要下列元件才能完成此逐步解說：  
-  
-- Visual Studio。  
-  
-- DirectX 9 或更新版本的 SDK。  
-  
-- 包含與 WPF 相容的格式中的 Direct3D9 內容的 DLL。 如需詳細資訊，請參閱 < [WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)和[逐步解說：建立裝載在 WPF 中的 Direct3D9 內容](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
-  
-## <a name="creating-the-wpf-project"></a>建立 WPF 專案  
- 第一個步驟是建立 WPF 應用程式的專案。  
-  
-#### <a name="to-create-the-wpf-project"></a>若要建立 WPF 專案  
-  
-- 新的 WPF 應用程式專案中 Visual C# 建立名為`D3DHost`。 如需詳細資訊，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
-  
-     在中開啟 MainWindow.xaml [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
-  
-## <a name="importing-the-direct3d9-content"></a>匯入 Direct3D9 內容  
- 您使用匯入 Direct3D9 內容從 unmanaged DLL`DllImport`屬性。  
-  
-#### <a name="to-import-direct3d9-content"></a>若要匯入 Direct3D9 內容  
-  
-1. 在程式碼編輯器中開啟 MainWindow.xaml.cs。  
-  
-2. 下列程式碼取代自動產生的程式碼。  
-  
-     [!code-csharp[System.Windows.Interop.D3DImage#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]  
-  
-## <a name="hosting-the-direct3d9-content"></a>裝載 Direct3D9 內容  
- 最後，使用<xref:System.Windows.Interop.D3DImage>類別，以裝載 Direct3D9 內容。  
-  
-#### <a name="to-host-the-direct3d9-content"></a>若要裝載 Direct3D9 內容  
-  
-1. 在 MainWindow.xaml 中，自動產生的 XAML 取代為下列 XAML。  
-  
-     [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
-  
-2. 建置專案。  
-  
-3. 複製包含 bin/Debug 資料夾的 Direct3D9 內容的 DLL。  
-  
-4. 按 F5 執行專案。  
-  
-     Direct3D9 內容會出現在 WPF 應用程式中。  
-  
+
+本逐步解說說明如何在 Windows Presentation Foundation （WPF）應用程式中裝載 Direct3D9 內容。
+
+在這個逐步解說中，您將執行下列工作：
+
+- 建立 WPF 專案來裝載 Direct3D9 內容。
+
+- 匯入 Direct3D9 內容。
+
+- 使用<xref:System.Windows.Interop.D3DImage>類別顯示 Direct3D9 內容。
+
+ 當您完成時，您會知道如何在 WPF 應用程式中裝載 Direct3D9 內容。
+
+## <a name="prerequisites"></a>必要條件
+
+您需要下列元件才能完成此逐步解說：
+
+- Visual Studio。
+
+- DirectX SDK 9 或更新版本。
+
+- 包含 WPF 相容格式之 Direct3D9 內容的 DLL。 如需詳細資訊，請參閱[WPF 和 Direct3D9 交互操作](wpf-and-direct3d9-interoperation.md)性和[逐步解說：建立在 WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)中裝載的 Direct3D9 內容。
+
+## <a name="creating-the-wpf-project"></a>建立 WPF 專案
+
+第一個步驟是建立 WPF 應用程式的專案。
+
+### <a name="to-create-the-wpf-project"></a>若要建立 WPF 專案
+
+在 Visual C#中建立名為`D3DHost`的新 WPF 應用程式專案。 如需詳細資訊，請參閱[逐步解說：我的第一個 WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)桌面應用程式。
+
+Mainwindow.xaml 會在中[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]開啟。
+
+## <a name="importing-the-direct3d9-content"></a>匯入 Direct3D9 內容
+
+您可以使用`DllImport`屬性，從非受控 DLL 匯入 Direct3D9 的內容。
+
+### <a name="to-import-direct3d9-content"></a>匯入 Direct3D9 內容
+
+1. 在程式碼編輯器中開啟 MainWindow.xaml.cs。
+
+2. 使用下列程式碼取代自動產生的程式碼。
+
+    [!code-csharp[System.Windows.Interop.D3DImage#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]
+
+## <a name="hosting-the-direct3d9-content"></a>裝載 Direct3D9 內容
+
+最後，使用<xref:System.Windows.Interop.D3DImage>類別來裝載 Direct3D9 內容。
+
+### <a name="to-host-the-direct3d9-content"></a>裝載 Direct3D9 內容
+
+1. 在 Mainwindow.xaml 中，以下列 XAML 取代自動產生的 XAML。
+
+    [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]
+
+2. 建置專案。
+
+3. 將包含 Direct3D9 內容的 DLL 複製到 bin/Debug 資料夾。
+
+4. 按 F5 執行專案。
+
+    Direct3D9 內容會出現在 WPF 應用程式中。
+
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Interop.D3DImage>

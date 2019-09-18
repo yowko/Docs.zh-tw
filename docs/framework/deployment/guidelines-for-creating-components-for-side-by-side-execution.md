@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 7d0cbe66870fc75da02ad56da73de86d4837c0c8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614100"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052145"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>建立並存執行元件的方針
 請遵循這些一般方針建立為並存執行而設計的 Managed 應用程式或元件：  
@@ -60,9 +60,9 @@ ms.locfileid: "64614100"
   
  組件版本可供執行階段用於組件繫結。 執行階段會將兩個具有不同版本號碼的相同組件視為兩個不同的組件。  
   
- 當只有檔案版本號碼是新的時，[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 可讓您替換組件。 除非組件版本號碼比較高，否則安裝程式通常不會在組件上執行覆寫安裝。  
+ 當只有檔案版本號碼是新的時，[全域組件快取工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 可讓您替換組件。 除非組件版本號碼比較高，否則安裝程式通常不會在組件上執行覆寫安裝。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [並存執行](../../../docs/framework/deployment/side-by-side-execution.md)
-- [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [並存執行](side-by-side-execution.md)
+- [如何：啟用和停用自動繫結重新導向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

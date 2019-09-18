@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b550f504ecbc05e6790652ee1432da3a26ceacb6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915580"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046117"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
 
-「動態語言執行階段」  (DLR) 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。 DLR 可讓您輕鬆地開發動態語言以便在 .NET Framework 上執行，以及將動態功能新增至靜態類型語言。
+「動態語言執行階段」(DLR) 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。 DLR 可讓您輕鬆地開發動態語言以便在 .NET Framework 上執行，以及將動態功能新增至靜態類型語言。
 
 動態語言可以在執行階段識別物件的類型，而在靜態類型語言，例如 C# 和 Visual Basic 中 (當您使用 `Option Explicit On` 時)，您必須在設計階段指定物件類型。 動態語言的範例包括 Lisp、Smalltalk、JavaScript、PHP、Ruby、Python、ColdFusion、Lua、Cobra 和 Groovy。
 
@@ -76,13 +76,13 @@ DLR 也可協助您建立支援動態作業的程式庫。 比方說，如果您
 ## <a name="dlr-architecture"></a>DLR 架構
  下圖顯示動態語言執行階段的架構。
 
- ![Dynamic Language Runtime 架構概觀](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview") DLR 架構
+ ![Dynamic Language Runtime 架構概觀](./media/dlr-archoverview.png "DLR_ArchOverview") DLR 架構
 
  DLR 新增一組服務給 CLR，以便更妥善支援動態語言。 這些服務包括下列各項：
 
 - 運算式樹狀架構。 DLR 使用運算式樹狀架構來代表語言語意。 基於此目的，DLR 有擴充的 LINQ 運算式樹狀架構，包含控制流程、指派及其他語言模型節點。 如需詳細資訊，請參閱 [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) (運算式樹狀架構 (C#)) 或 [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md) (運算式樹狀架構 (Visual Basic))。
 
-- 呼叫站台快取。 「動態呼叫站台」  是程式碼中您用來對動態物件執行像是 `a + b` 或 `a.b()` 等作業的地方。 DLR 會快取 `a` 和 `b` 的特性 (通常是這些物件的類型) 和作業的相關資訊。 如果先前已執行此類作業，DLR 會從快取擷取所有必要資訊以便快速分派。
+- 呼叫站台快取。 「動態呼叫站台」是程式碼中您用來對動態物件執行像是 `a + b` 或 `a.b()` 等作業的地方。 DLR 會快取 `a` 和 `b` 的特性 (通常是這些物件的類型) 和作業的相關資訊。 如果先前已執行此類作業，DLR 會從快取擷取所有必要資訊以便快速分派。
 
 - 動態物件互通性。 DLR 提供一組類別和介面，代表動態物件和作業，而且可以由語言實作者和動態程式庫的作者所使用。 這些類別和介面包括 <xref:System.Dynamic.IDynamicMetaObjectProvider>、<xref:System.Dynamic.DynamicMetaObject>、<xref:System.Dynamic.DynamicObject> 和 <xref:System.Dynamic.ExpandoObject>。
 

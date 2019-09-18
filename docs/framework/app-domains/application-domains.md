@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040739"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053225"
 ---
 # <a name="application-domains"></a>應用程式定義域
 
@@ -64,7 +64,7 @@ ms.locfileid: "70040739"
   
 - 如果組件不是以定義域中性方式載入，則在載入該組件的每一個應用程式定義域中，都必須是 JIT 編譯的。 然而，只要卸載所有載入該組件的應用程式定義域，即可從處理序中卸載組件。  
   
- 執行階段主機會判斷將執行階段載入處理序時，是否要以定義域中性方式載入組件。 針對 Managed 應用程式，會將 <xref:System.LoaderOptimizationAttribute> 屬性 (Attribute) 套用到處理序的進入點方法，並從關聯的 <xref:System.LoaderOptimization> 列舉型別 (Enumeration) 中指定值。 針對裝載 Common Language Runtime 的 Unmanaged 應用程式，指定您在呼叫 [CorBindToRuntimeEx 函式](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)方法時的適當旗標。  
+ 執行階段主機會判斷將執行階段載入處理序時，是否要以定義域中性方式載入組件。 針對 Managed 應用程式，會將 <xref:System.LoaderOptimizationAttribute> 屬性 (Attribute) 套用到處理序的進入點方法，並從關聯的 <xref:System.LoaderOptimization> 列舉型別 (Enumeration) 中指定值。 針對裝載 Common Language Runtime 的 Unmanaged 應用程式，指定您在呼叫 [CorBindToRuntimeEx 函式](../unmanaged-api/hosting/corbindtoruntimeex-function.md)方法時的適當旗標。  
   
  載入定義域中性組件的選項有三種：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "70040739"
   
  對於使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 類別 (Class) 的 <xref:System.Reflection.Assembly> 方法將載入內容載入的組件，以及使用指定位元組陣列之 <xref:System.Reflection.Assembly.Load%2A> 方法的多載而自影像載入組件，都無法共用 JIT 編譯程式碼。  
   
- 已經使用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 編譯成機器碼的組件，如果在第一次載入處理序時，是以定義域中性方式載入的，就可以在應用程式定義域之間共用。  
+ 已經使用 [Ngen.exe (原生映像產生器)](../tools/ngen-exe-native-image-generator.md) 編譯成機器碼的組件，如果在第一次載入處理序時，是以定義域中性方式載入的，就可以在應用程式定義域之間共用。  
   
  針對包含應用程式進入點的組件，只有在能夠共用組件的所有相依性項目時，才能共用其 JIT 編譯程式碼。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "70040739"
   
  <xref:System.AppDomain> 是應用程式定義域的程式設計介面。 這個類別包括了一些方法，可用來建立及卸載定義域、建立定義域中的型別執行個體，以及註冊各種告知 (例如，應用程式定義域的卸載)。 下表列出常用的 <xref:System.AppDomain> 方法。  
   
-|AppDomain 方法|說明|  
+|AppDomain 方法|描述|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|建立新的應用程式定義域。 建議您要使用指定 <xref:System.AppDomainSetup> 物件的這個方法多載。 這是設定新定義域之屬性的慣用方法，例如，應用程式基底或應用程式的根目錄；定義域組態檔的位置；以及 Common Language Runtime 要用來將組件載入定義域的搜尋路徑等屬性。|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> 和 <xref:System.AppDomain.ExecuteAssemblyByName%2A>|執行應用程式定義域中的組件。 這是執行個體方法，所以可用來在另一個您擁有參考的應用程式定義域中執行程式碼。|  

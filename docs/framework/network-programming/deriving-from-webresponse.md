@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: bd06928b08eb085ef13371687fb1e5b92c6c1d86
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226041"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048585"
 ---
 # <a name="deriving-from-webresponse"></a>衍生自 WebResponse
 <xref:System.Net.WebResponse> 類別是抽象的基底類別，提供基本的方法和屬性以建立有特定通訊協定回應，符合 .NET Framework 插入式通訊協定模型的處理常式。 使用 <xref:System.Net.WebRequest> 類別向資源要求資料的應用程式，會收到 **WebResponse** 的回應。 通訊協定特定的 **WebResponse** 子代必須實作 **WebResponse** 類別的抽象成員。  
@@ -43,5 +43,5 @@ ms.locfileid: "59226041"
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
-- [可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [衍生自 WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [可插式通訊協定程式設計](programming-pluggable-protocols.md)
+- [衍生自 WebRequest](deriving-from-webrequest.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
-ms.translationtype: HT
+ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "61792999"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045821"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完整的類型名稱
 
@@ -149,7 +149,7 @@ AssemblyProperty
 |**PublicKey**|完整公開金鑰|十六進位格式的完整公開金鑰字串值。 指定 null 參考 (Visual Basic 為**Nothing**) 以明確指出私用組件。|
 |**PublicKeyToken**|公開金鑰語彙基元 (完整公開金鑰的 8 位元組雜湊)|十六進位格式的公開金鑰語彙基元字串值。 指定 null 參考 (Visual Basic 為 **Nothing**) 以明確指出私用組件。|
 |**文化特性**|組件文化特性|RFC-1766 格式的組件文化特性，或「中性的」語言無關 (非附屬) 組件。|
-|**自訂**|自訂二進位大型物件 (BLOB)。 目前只用於[原生映像產生器 (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 產生的組件。|自訂原生映像產生器工具所用的字串用於通知組件快取安裝中的組件是原生映像，因此要安裝在原生映像快取中。 也稱為 zap 字串。|
+|**自訂**|自訂二進位大型物件 (BLOB)。 目前只用於[原生映像產生器 (Ngen)](../tools/ngen-exe-native-image-generator.md) 產生的組件。|自訂原生映像產生器工具所用的字串用於通知組件快取安裝中的組件是原生映像，因此要安裝在原生映像快取中。 也稱為 zap 字串。|
 
 下例示範的 **AssemblyName**，僅以預設文化特性命名組件。
 
@@ -224,4 +224,4 @@ SimpleTypeSpec & 代表 Managed 指標或參考。 例如，若要取得類型 M
 - <xref:System.Type.FullName%2A?displayProperty=nameWithType>
 - <xref:System.Type.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
-- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [檢視類型資訊](viewing-type-information.md)

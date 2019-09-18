@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties, returned by UI Automation providers
 - UI Automation, providers returning properties
 ms.assetid: 5eba950e-b9e1-48eb-ab8e-b69db76bf589
-ms.openlocfilehash: 7a637f759c952751c0472c51afa42a2c67c58624
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5d073af121eae04a973667739c68a90d6dae9f2d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969112"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042739"
 ---
 # <a name="return-properties-from-a-ui-automation-provider"></a>從 UI 自動化提供者傳回屬性
 > [!NOTE]
@@ -30,5 +30,5 @@ ms.locfileid: "69969112"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化提供者概觀](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [UI 自動化提供者概觀](ui-automation-providers-overview.md)
+- [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)

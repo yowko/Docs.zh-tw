@@ -13,17 +13,17 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-ms.openlocfilehash: a127776544830e299118aefadf1735a856c095dd
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: f9af668a30920daa4634e402ab1922946b014051
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398509"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046999"
 ---
 # <a name="using-application-protocols"></a>使用應用程式通訊協定
-.NET Framework 支援常用的網際網路應用程式通訊協定。 本節包含有關使用 [HTTP](../../../docs/framework/network-programming/http.md)、"TCP"和 "UDP" 通訊協定的資訊，以及有關使用 [Windows Sockets](../../../docs/framework/network-programming/sockets.md) 介面以實作自訂通訊協定的資訊。  
+.NET Framework 支援常用的網際網路應用程式通訊協定。 本節包含有關使用 [HTTP](http.md)、"TCP"和 "UDP" 通訊協定的資訊，以及有關使用 [Windows Sockets](sockets.md) 介面以實作自訂通訊協定的資訊。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
-- [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)
+- [以 .NET Framework 進行網路程式設計](index.md)
+- [網路程式設計範例](network-programming-samples.md)

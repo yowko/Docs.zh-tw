@@ -9,12 +9,12 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: ef8669e9e78f65451ffb250283a1f14c89d61270
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 70c4f26e3b4fc1c3dcb4c34e8858525b7f1660c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219742"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047191"
 ---
 # <a name="synchronous-client-socket-example"></a>同步用戶端通訊端範例
 下列範例程式會建立連線到伺服器的用戶端。 伺服器已內建非同步通訊端，因此在伺服器傳回回應之前，會暫停執行用戶端應用程式。 應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。  
@@ -137,6 +137,6 @@ public class SynchronousSocketClient {
   
 ## <a name="see-also"></a>另請參閱
 
-- [同步伺服器通訊端範例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [使用同步用戶端通訊端](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [通訊端程式碼範例](../../../docs/framework/network-programming/socket-code-examples.md)
+- [同步伺服器通訊端範例](synchronous-server-socket-example.md)
+- [使用同步用戶端通訊端](using-a-synchronous-client-socket.md)
+- [通訊端程式碼範例](socket-code-examples.md)

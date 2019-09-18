@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624285"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046192"
 ---
 # <a name="thread-pool-etw-events"></a>執行緒集區 ETW 事件
 <a name="top"></a> 這些事件會收集背景工作和 I/O 執行緒的資訊。  
@@ -28,7 +28,7 @@ ms.locfileid: "64624285"
  這些事件與執行階段的背景工作執行緒集區有關，可提供執行緒事件 (例如建立或停止執行緒) 的通知。 背景工作執行緒集區會使用適應性演算法來進行並行存取控制項，其中執行緒的數目是根據測量的輸送量計算而得。 背景工作執行緒集區事件可用以了解應用程式如何使用執行緒集區，以及特定工作負載可能對並行存取控制項所造成的影響。  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart 與 ThreadPoolWorkerThreadStop  
- 下表顯示這些事件的關鍵字與層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。  
+ 下表顯示這些事件的關鍵字與層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
 |引發事件的關鍵字|層級|  
 |-----------------------------------|-----------|  
@@ -63,7 +63,7 @@ ms.locfileid: "64624285"
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event - 事件|事件 ID|說明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|表示單一範例的資訊集合。亦即，具有特定並行層級之輸送量的瞬間量。|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "64624285"
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event - 事件|事件 ID|說明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|當執行緒插入 (攀登) 演算法判斷具有並行層級時，記錄控制中的變更。|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "64624285"
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event - 事件|事件 ID|說明|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|收集執行緒集區的資料。|  
   
@@ -131,7 +131,7 @@ ms.locfileid: "64624285"
 ## <a name="io-thread-events"></a>I/O 執行緒事件  
  會針對非同步 I/O 執行緒集區 (完成連接埠) 中的執行緒發生這些執行緒集區事件。  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
+### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -152,7 +152,7 @@ ms.locfileid: "64624285"
 |NumRetired|win:UInt64|已淘汰之背景工作執行緒的數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
+### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -167,13 +167,13 @@ ms.locfileid: "64624285"
   
  下表說明事件資料。  
   
-|欄位名稱|資料類型|描述|  
+|欄位名稱|資料類型|說明|  
 |----------------|---------------|-----------------|  
 |Count|win:UInt64|執行緒集區中剩餘的 I/O 執行緒數目。|  
 |NumRetired|win:UInt64|已淘汰的 I/O 執行緒數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
+### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -209,7 +209,7 @@ ms.locfileid: "64624285"
   
  下表說明事件資料。  
   
-|欄位名稱|資料類型|描述|  
+|欄位名稱|資料類型|說明|  
 |----------------|---------------|-----------------|  
 |Count|win:UInt64|執行緒集區中剩餘的 I/O 執行緒數目。|  
 |NumRetired|win:UInt64|已淘汰的 I/O 執行緒數目。|  
@@ -217,4 +217,4 @@ ms.locfileid: "64624285"
   
 ## <a name="see-also"></a>另請參閱
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)

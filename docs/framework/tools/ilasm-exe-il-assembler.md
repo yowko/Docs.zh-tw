@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894695"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044627"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL 組譯工具)
 
 IL Assembler 可從中繼語言 (IL) 中產生可攜式執行檔 (PE) (如需 IL 的詳細資訊，請參閱 [Managed 執行程序](../../standard/managed-execution-process.md))。您可以執行產生的可執行檔 (包含 IL 和所需的中繼資料)，來判斷 IL 是否如預期般地執行。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -92,7 +92,7 @@ IL 組譯工具可以表示所有現有的中繼資料和以執行階段為目�
 > [!NOTE]
 > 如果 .il 原始程式檔中程式碼的最後一行沒有尾端空白字元或行結尾字元，編譯就可能會失敗。
 
-您可以將 *Ilasm.exe* 和其附屬工具 [*Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 結合使用。 *Ildasm.exe* 使用包含 IL 程式碼的 PE 檔，建立適合作為 *Ilasm.exe* 輸入的文字檔。 這非常有用，例如在不支援所有執行階段中繼資料屬性的程式語言中編譯程式碼時。 編譯完程式碼並透過 *Ildasm.exe* 執行輸出後，可以手動編輯產生的 IL 文字檔來新增遺漏的屬性。 然後可以透過 *Ilasm.exe* 執行這個文字檔來產生最終的可執行檔。
+您可以將 *Ilasm.exe* 和其附屬工具 [*Ildasm.exe*](ildasm-exe-il-disassembler.md) 結合使用。 *Ildasm.exe* 使用包含 IL 程式碼的 PE 檔，建立適合作為 *Ilasm.exe* 輸入的文字檔。 這非常有用，例如在不支援所有執行階段中繼資料屬性的程式語言中編譯程式碼時。 編譯完程式碼並透過 *Ildasm.exe* 執行輸出後，可以手動編輯產生的 IL 文字檔來新增遺漏的屬性。 然後可以透過 *Ilasm.exe* 執行這個文字檔來產生最終的可執行檔。
 
 您也可以使用這項技術來由不同編譯器所原始產生的數個 PE 檔中產生單一 PE 檔。
 
@@ -159,7 +159,7 @@ ilasm myTestFile /dll
 ilasm myTestFile /dll /output:myNewTestFile.dll
 ```
 
-下列程式碼範例會顯示極為簡單的應用程式，將 "Hello World!" 顯示 到主控台。 您可以編譯此程式碼，然後使用 [*Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 工具來產生 IL 檔案。
+下列程式碼範例會顯示極為簡單的應用程式，將 "Hello World!" 顯示 到主控台。 您可以編譯此程式碼，然後使用 [*Ildasm.exe*](ildasm-exe-il-disassembler.md) 工具來產生 IL 檔案。
 
 ```csharp
 using System;
@@ -229,7 +229,7 @@ public class Hello
 
 ## <a name="see-also"></a>另請參閱
 
-- [工具](../../../docs/framework/tools/index.md)
-- [*Ildasm.exe* (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [工具](index.md)
+- [*Ildasm.exe* (IL 反組譯工具)](ildasm-exe-il-disassembler.md)
 - [Managed 執行程序](../../standard/managed-execution-process.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

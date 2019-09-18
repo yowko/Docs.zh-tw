@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e58c7b3ce134139950de54d98b590ec2e6b0f3de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927090"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046459"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 效能
 如果您想建立高效能的應用程式，您應該以設計應用程式之其他任何功能的相同方式，來設計及規劃效能。 您可以使用 Microsoft 提供的工具來測量應用程式的效能，並在必要時改進記憶體使用量、程式碼輸送量和回應性。 本主題列出 Microsoft 提供的效能分析工具，並提供涵蓋應用程式開發之特定區域效能的其他主題連結。  
@@ -38,14 +38,14 @@ ms.locfileid: "70927090"
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|當多個應用程式在相同電腦上執行時，用來判斷整個系統效能，例如應用程式的記憶體和儲存體使用。 您可以從下載中心取得屬於 [!INCLUDE[win8](../../../includes/win8-md.md)] 的 Windows 評定及部署套件 (ADK) 一部分的這項工具。 如需詳細資訊，請參閱 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)。|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows 事件追蹤 (ETW)  
- ETW 是一項技術，可讓您取得有關執行中程式碼的診斷資訊，對於之前所提到的許多效能工具而言，是不可或缺的一項技術。 ETW 會在 .NET Framework 應用程式和 Windows 引發特定事件時建立記錄檔。 透過 ETW，您可以動態啟用和停用記錄，讓您在生產環境中執行詳細追蹤，而不需要重新啟動應用程式。 .NET Framework 提供對 ETW 事件的支援，而許多程式碼分析和效能工具會使用 ETW 來產生效能資料。 這些工具通常會啟用和停用 ETW 事件，因此熟悉這些事件會很有幫助。 您可以使用特定 ETW 事件收集有關您的應用程式特定元件的效能資訊。 如需 .NET Framework 中 ETW 支援的詳細資訊，請參閱[通用語言執行平台中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)和[工作平行程式庫和 PLINQ 中的 ETW 事件](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)。  
+ ETW 是一項技術，可讓您取得有關執行中程式碼的診斷資訊，對於之前所提到的許多效能工具而言，是不可或缺的一項技術。 ETW 會在 .NET Framework 應用程式和 Windows 引發特定事件時建立記錄檔。 透過 ETW，您可以動態啟用和停用記錄，讓您在生產環境中執行詳細追蹤，而不需要重新啟動應用程式。 .NET Framework 提供對 ETW 事件的支援，而許多程式碼分析和效能工具會使用 ETW 來產生效能資料。 這些工具通常會啟用和停用 ETW 事件，因此熟悉這些事件會很有幫助。 您可以使用特定 ETW 事件收集有關您的應用程式特定元件的效能資訊。 如需 .NET Framework 中 ETW 支援的詳細資訊，請參閱[通用語言執行平台中的 ETW 事件](etw-events-in-the-common-language-runtime.md)和[工作平行程式庫和 PLINQ 中的 ETW 事件](etw-events-in-task-parallel-library-and-plinq.md)。  
   
 ## <a name="performance-by-app-type"></a>依應用程式類型的效能  
  每一種類型的 .NET Framework 應用程式都有自己用於評估效能的最佳做法、考量和工具。 下表連結至特定 .NET Framework 應用程式類型的效能主題。  
   
 |應用程式類型|請參閱|  
 |--------------|---------|  
-|所有平台的 .NET 應用程式|[記憶體回收和效能](../../standard/garbage-collection/performance.md)<br /><br /> [效能秘訣](../../../docs/framework/performance/performance-tips.md)|  
+|所有平台的 .NET 應用程式|[記憶體回收和效能](../../standard/garbage-collection/performance.md)<br /><br /> [效能秘訣](performance-tips.md)|  
 |以 C++、C# 和 Visual Basic 撰寫的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式|[使用 C++、C# 及 Visual Basic 的 Windows 市集應用程式的效能最佳做法](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[WPF 效能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[ASP.NET 效能概觀](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
@@ -54,7 +54,7 @@ ms.locfileid: "70927090"
   
 |標題|說明|  
 |-----------|-----------------|  
-|[.NET Framework 應用程式中的快取](../../../docs/framework/performance/caching-in-net-framework-applications.md)|描述用於提升應用程式效能的快取資料技術。|  
-|[延遲初始設定](../../../docs/framework/performance/lazy-initialization.md)|描述如何視需要初始化物件以提升效能，特別是在應用程式啟動時。|  
-|[可靠性](../../../docs/framework/performance/reliability.md)|提供有關防止伺服器環境中發生非同步例外狀況的資訊。|  
-|[撰寫大型且可回應的 .NET Framework 應用程式](../../../docs/framework/performance/writing-large-responsive-apps.md)|提供從以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器蒐集的效能提示，包含數個 C# 編譯器的實際範例。|
+|[.NET Framework 應用程式中的快取](caching-in-net-framework-applications.md)|描述用於提升應用程式效能的快取資料技術。|  
+|[延遲初始設定](lazy-initialization.md)|描述如何視需要初始化物件以提升效能，特別是在應用程式啟動時。|  
+|[可靠性](reliability.md)|提供有關防止伺服器環境中發生非同步例外狀況的資訊。|  
+|[撰寫大型且可回應的 .NET Framework 應用程式](writing-large-responsive-apps.md)|提供從以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器蒐集的效能提示，包含數個 C# 編譯器的實際範例。|

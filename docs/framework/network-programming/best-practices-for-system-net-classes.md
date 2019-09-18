@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 57d0c3640c65d425ded63f53e32416053c3eb926
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: c7324dcbc27c95c7d799592700d46c195e7d952b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624670"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048886"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 類別的最佳作法
 下列建議將協助您善加利用 <xref:System.Net> 中所含的類別：  
@@ -34,4 +34,4 @@ ms.locfileid: "64624670"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
+- [以 .NET Framework 進行網路程式設計](index.md)

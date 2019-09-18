@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623051"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047363"
 ---
 # <a name="proxy-configuration"></a>Proxy 組態
 Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回要求的資源，或將要求轉送至資源所在的伺服器。 Proxy 可透過減少傳送至遠端伺服器的要求數目，來提升網路效能。 Proxy 也可用來限制對資源的存取。  
@@ -24,7 +24,7 @@ Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回�
 ## <a name="adaptive-proxies"></a>調適型 Proxy  
  .NET Framework 提供兩種 Proxy：調適型和靜態。 調適型 Proxy 會在網路設定變更時調整其設定。 例如，如果膝上型電腦使用者啟動撥接網路連線，調適型 Proxy 會認可這項變更、探索及執行其新的組態指令碼，然後適當地調整其設定。  
   
- 調適型 Proxy 是由組態指令碼所設定 (請參閱[自動 Proxy 偵測](../../../docs/framework/network-programming/automatic-proxy-detection.md))。 這個指令碼會產生一組應用程式通訊協定，並為每個通訊協定產生一個 Proxy。  
+ 調適型 Proxy 是由組態指令碼所設定 (請參閱[自動 Proxy 偵測](automatic-proxy-detection.md))。 這個指令碼會產生一組應用程式通訊協定，並為每個通訊協定產生一個 Proxy。  
   
  網路環境的變更可能會要求系統使用一組新的 Proxy。 如果網路連線中斷或已初始化新的網路連線，系統必須在新環境中找出組態指令碼的適當來源，並執行新的指令碼。  
   
@@ -53,7 +53,7 @@ Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回�
   
  下表顯示靜態 Proxy 的組態選項。  
   
-|屬性 (Attribute)、屬性 (Property) 或組態檔設定|說明|  
+|屬性 (Attribute)、屬性 (Property) 或組態檔設定|描述|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` 或 <xref:System.Net.WebProxy.Address>|所要使用的 Proxy 位址。|  
 |`bypassonlocal` 或 <xref:System.Net.WebProxy.BypassProxyOnLocal>|控制本機位址是否要略過 Proxy。|  
@@ -79,4 +79,4 @@ Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回�
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
-- [自動 Proxy 偵測](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+- [自動 Proxy 偵測](automatic-proxy-detection.md)

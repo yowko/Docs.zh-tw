@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
-ms.translationtype: HT
+ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545317"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053476"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>教學課程：建立 Windows 服務應用程式
 
@@ -24,20 +24,20 @@ ms.locfileid: "69545317"
 
 首先，請建立專案並設定服務正常運作所需的值。
 
-1. 從 Visual Studio 的 [檔案]  功能表中，選取 [新增]   > [專案]  (或按 **Ctrl**+**Shift**+**N**)，開啟 [新增專案]  視窗。
+1. 從 Visual Studio 的 [檔案] 功能表中，選取 [新增] > [專案] (或按 **Ctrl**+**Shift**+**N**)，開啟 [新增專案] 視窗。
 
-2. 巡覽至 [Windows 服務] (.NET Framework)  專案範本，並加以選取。 若要尋找它，請展開 [已安裝]  和 [Visual C#]  或 [Visual Basic]  ，然後選取 [Windows Desktop]  。 或者，在右上方的搜尋方塊中輸入 *Windows Service*，然後按 **Enter**。
+2. 巡覽至 [Windows 服務] (.NET Framework) 專案範本，並加以選取。 若要尋找它，請展開 [已安裝] 和 [Visual C#] 或 [Visual Basic]，然後選取 [Windows Desktop]。 或者，在右上方的搜尋方塊中輸入 *Windows Service*，然後按 **Enter**。
 
-   ![Visual Studio 新增專案對話方塊中的 Windows 服務範本](media/new-project-dialog.png)
+   ![Visual Studio 新增專案對話方塊中的 Windows 服務範本](./media/new-project-dialog.png)
 
    > [!NOTE]
    > 如未看到 **Windows Service** 範本，您可能需要安裝 **.NET 桌面開發**工作負載：
    >
-   > 在 [新增專案]  對話方塊中，選取左下角的 [開啟 Visual Studio 安裝程式]  。 選取 **.NET 桌面開發**工作負載，然後選取 [修改]  。
+   > 在 [新增專案] 對話方塊中，選取左下角的 [開啟 Visual Studio 安裝程式]。 選取 **.NET 桌面開發**工作負載，然後選取 [修改]。
 
-3. 針對 [名稱]  輸入 *MyNewService*，然後選取 [確定]  。
+3. 針對 [名稱] 輸入 *MyNewService*，然後選取 [確定]。
 
-   [設計]  索引標籤隨即出現 (**Service1.cs [Design]** 或 **Service1.vb [Design]** )。
+   [設計] 索引標籤隨即出現 (**Service1.cs [Design]** 或 **Service1.vb [Design]** )。
 
    專案範本會包含繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 且名為 `Service1` 的元件類別。 其中包含大部分的基本服務程式碼，例如啟動服務的程式碼。
 
@@ -45,19 +45,19 @@ ms.locfileid: "69545317"
 
 將服務 **Service1** 重新命名為 **MyNewService**。
 
-1. 在 [方案總管]  中，選取 **Service1.cs** 或 **Service1.vb**，然後從捷徑功能表選擇 [重新命名]  。 將檔案重新命名為 **MyNewService.cs** 或 **MyNewService.vb**，然後按 **Enter**
+1. 在 [方案總管] 中，選取 **Service1.cs** 或 **Service1.vb**，然後從捷徑功能表選擇 [重新命名]。 將檔案重新命名為 **MyNewService.cs** 或 **MyNewService.vb**，然後按 **Enter**
 
     快顯視窗隨即出現，詢問您是否要重新命名程式碼項目 *Service1* 的所有參考。
 
-2. 在快顯視窗中，選取 [是]  。
+2. 在快顯視窗中，選取 [是]。
 
-    ![重新命名提示](media/windows-service-rename.png "Windows 服務重新命名提示")
+    ![重新命名提示](./media/windows-service-rename.png "Windows 服務重新命名提示")
 
-3. 在 [設計]  索引標籤中，從捷徑功能表選取 [屬性]  。 從 [屬性]  視窗中，將 **ServiceName** 值變更為 *MyNewService*。
+3. 在 [設計] 索引標籤中，從捷徑功能表選取 [屬性]。 從 [屬性] 視窗中，將 **ServiceName** 值變更為 *MyNewService*。
 
-    ![服務屬性](media/windows-service-properties.png "Windows 服務屬性")
+    ![服務屬性](./media/windows-service-properties.png "Windows 服務屬性")
 
-4. 從 [檔案]  功能表中選取 [全部儲存]  。
+4. 從 [檔案] 功能表中選取 [全部儲存]。
 
 ## <a name="add-features-to-the-service"></a>在服務中新增功能
 
@@ -65,11 +65,11 @@ ms.locfileid: "69545317"
 
 ### <a name="add-custom-event-log-functionality"></a>新增自訂事件記錄功能
 
-1. 在 [方案總管]  中，從 **MyNewService.cs** 或 **MyNewService.vb** 的捷徑功能表選擇 [檢視表設計師]  。
+1. 在 [方案總管] 中，從 **MyNewService.cs** 或 **MyNewService.vb** 的捷徑功能表選擇 [檢視表設計師]。
 
-2. 在 [工具箱]  中，展開 [元件]  ，然後將 [事件記錄檔]  元件拖曳至 [Service1.cs [Design]]  或 [Service1.vb [Design]]  索引標籤。
+2. 在 [工具箱] 中，展開 [元件]，然後將 [事件記錄檔] 元件拖曳至 [Service1.cs [Design]] 或 [Service1.vb [Design]] 索引標籤。
 
-3. 在 [方案總管]  中，從 **MyNewService.cs** 或 **MyNewService.vb** 的捷徑功能表選擇 [檢視程式碼]  。
+3. 在 [方案總管] 中，從 **MyNewService.cs** 或 **MyNewService.vb** 的捷徑功能表選擇 [檢視程式碼]。
 
 4. 定義自訂的事件記錄檔。 針對C#，編輯現有的 `MyNewService()` 建構函式；針對 Visual Basic，新增 `New()` 建構函式：
 
@@ -86,7 +86,7 @@ ms.locfileid: "69545317"
     Imports System.Diagnostics
     ```
 
-6. 從 [檔案]  功能表中選取 [全部儲存]  。
+6. 從 [檔案] 功能表中選取 [全部儲存]。
 
 ### <a name="define-what-occurs-when-the-service-starts"></a>定義服務啟動時所執行的動作
 
@@ -326,33 +326,33 @@ ms.locfileid: "69545317"
 
 您必須先安裝 Windows 服務向服務控制管理員登錄，才能執行此服務。 將安裝程式新增至專案，以處理登錄詳細資料。
 
-1. 在 [方案總管]  中，從 **MyNewService.cs** 或 **MyNewService.vb** 的捷徑功能表選擇 [檢視表設計師]  。
+1. 在 [方案總管] 中，從 **MyNewService.cs** 或 **MyNewService.vb** 的捷徑功能表選擇 [檢視表設計師]。
 
-2. 在 [設計]  檢視中，選取背景區域，然後從捷徑功能表選擇 [新增安裝程式]  。
+2. 在 [設計] 檢視中，選取背景區域，然後從捷徑功能表選擇 [新增安裝程式]。
 
      根據預設，Visual Studio 會將名為 `ProjectInstaller` 的元件類別新增至您的專案，此類別包含兩個安裝程式。 這些安裝程式適用於您的服務及該服務的相關聯流程。
 
-3. 在 **ProjectInstaller** 的 [設計]  檢視中，針對 Visual C# 專案選取 [serviceInstaller1]  ，或針對 Visual Basic 專案選取 [ServiceInstaller1]  ，然後從捷徑功能表選擇 [屬性]  。
+3. 在 **ProjectInstaller** 的 [設計] 檢視中，針對 Visual C# 專案選取 [serviceInstaller1]，或針對 Visual Basic 專案選取 [ServiceInstaller1]，然後從捷徑功能表選擇 [屬性]。
 
-4. 在 [屬性]  視窗中，驗證 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 屬性已設為 **MyNewService**。
+4. 在 [屬性] 視窗中，驗證 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 屬性已設為 **MyNewService**。
 
-5. 將文字新增至 <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 屬性，例如「範例服務」  。
+5. 將文字新增至 <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 屬性，例如「範例服務」。
 
-     此文字會出現在 [服務]  視窗的 [描述]  欄中，向使用者說明服務。
+     此文字會出現在 [服務] 視窗的 [描述] 欄中，向使用者說明服務。
 
-    ![[服務] 視窗中的服務描述。](media/windows-service-description.png "服務描述")
+    ![[服務] 視窗中的服務描述。](./media/windows-service-description.png "服務描述")
 
-6. 將文字新增至 <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 屬性。 例如，「MyNewService 顯示名稱」  。
+6. 將文字新增至 <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 屬性。 例如，「MyNewService 顯示名稱」。
 
-     此文字會出現在 [服務]  視窗的 [顯示名稱]  欄中。 這個名稱可以和系統使用的 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 屬性名稱不同 (例如，您用於 `net start` 命令來啟動服務的名稱)。
+     此文字會出現在 [服務] 視窗的 [顯示名稱] 欄中。 這個名稱可以和系統使用的 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 屬性名稱不同 (例如，您用於 `net start` 命令來啟動服務的名稱)。
 
 7. 從下拉式清單中將 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 屬性設為 <xref:System.ServiceProcess.ServiceStartMode.Automatic>。
 
-8. 完成後，[屬性]  視窗看起來應該如下圖：
+8. 完成後，[屬性] 視窗看起來應該如下圖：
 
-     ![Windows 服務的安裝程式屬性](media/windows-service-installer-properties.png "Windows 服務安裝程式屬性")
+     ![Windows 服務的安裝程式屬性](./media/windows-service-installer-properties.png "Windows 服務安裝程式屬性")
 
-9. 在 **ProjectInstaller** 的 [設計]  檢視中，針對 Visual C# 專案選擇 **serviceProcessInstaller1**，或針對 Visual Basic 專案選擇 **ServiceProcessInstaller1**，然後從捷徑功能表選擇 [屬性]  。 從下拉式清單中將 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 屬性設為 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>。
+9. 在 **ProjectInstaller** 的 [設計] 檢視中，針對 Visual C# 專案選擇 **serviceProcessInstaller1**，或針對 Visual Basic 專案選擇 **ServiceProcessInstaller1**，然後從捷徑功能表選擇 [屬性]。 從下拉式清單中將 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 屬性設為 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>。
 
      此設定會安裝服務，並使用本機系統帳戶來加以執行。
 
@@ -372,7 +372,7 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 ### <a name="to-add-startup-parameters"></a>新增啟動參數
 
-1. 選取 **Program.cs** 或 **MyNewService.Designer.vb**，然後從捷徑功能表選擇 [檢視程式碼]  。 在 `Main` 方法中，變更程式碼以新增輸入參數，並將它傳遞至服務建構函式：
+1. 選取 **Program.cs** 或 **MyNewService.Designer.vb**，然後從捷徑功能表選擇 [檢視程式碼]。 在 `Main` 方法中，變更程式碼以新增輸入參數，並將它傳遞至服務建構函式：
 
    [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
    [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
@@ -458,21 +458,21 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 ## <a name="build-the-service"></a>建置服務
 
-1. 在 [方案總管]  中，從 **MyNewService** 專案的捷徑功能表選擇 [屬性]  。
+1. 在 [方案總管] 中，從 **MyNewService** 專案的捷徑功能表選擇 [屬性]。
 
    專案的屬性頁面隨即出現。
 
-2. 在 [應用程式]  索引標籤的 [啟始物件]  清單中，針對 Visual Basic 專案選擇 **MyNewService.Program** 或 **Sub Main**。
+2. 在 [應用程式] 索引標籤的 [啟始物件] 清單中，針對 Visual Basic 專案選擇 **MyNewService.Program** 或 **Sub Main**。
 
-3. 若要建置專案，請在 [方案總管]  中，從專案的捷徑功能表選擇 [建置]  (或按 **Ctrl**+**Shift**+**B**)。
+3. 若要建置專案，請在 [方案總管] 中，從專案的捷徑功能表選擇 [建置] (或按 **Ctrl**+**Shift**+**B**)。
 
 ## <a name="install-the-service"></a>安裝服務
 
 建置 Windows 服務之後，您就可以安裝它了。 若要安裝 Windows 服務，您必須有安裝所在電腦的系統管理員認證。
 
-1. 以系統管理認證開啟 [Visual Studio 的開發人員命令提示字元](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs)。 從 Windows 的 [開始]  功能表選取 [Visual Studio] 資料夾的 [VS 2017 開發人員命令提示字元]  ，然後從捷徑功能表選取 [更多]   > [以系統管理員身分執行]  。
+1. 以系統管理認證開啟 [Visual Studio 的開發人員命令提示字元](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs)。 從 Windows 的 [開始] 功能表選取 [Visual Studio] 資料夾的 [VS 2017 開發人員命令提示字元]，然後從捷徑功能表選取 [更多] > [以系統管理員身分執行]。
 
-2. 在 [Visual Studio 開發人員命令提示字元]  視窗中，巡覽至包含專案輸出的資料夾 (預設為專案的 *\bin\Debug* 子目錄)。
+2. 在 [Visual Studio 開發人員命令提示字元] 視窗中，巡覽至包含專案輸出的資料夾 (預設為專案的 *\bin\Debug* 子目錄)。
 
 3. 輸入下列命令：
 
@@ -493,30 +493,30 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 ## <a name="start-and-run-the-service"></a>啟動並執行服務
 
-1. 在 Windows 中，開啟 [服務]  桌面應用程式。 按 **Windows**+**R** 開啟 [執行]  方塊，輸入 *services.msc*，然後按 **Enter** 或選取 [確定]  。
+1. 在 Windows 中，開啟 [服務] 桌面應用程式。 按 **Windows**+**R** 開啟 [執行] 方塊，輸入 *services.msc*，然後按 **Enter** 或選取 [確定]。
 
-     您應該會看到您的服務列在 [服務]  中，並以您為其設定的顯示名稱按字母順序顯示。
+     您應該會看到您的服務列在 [服務] 中，並以您為其設定的顯示名稱按字母順序顯示。
 
-     ![在 [服務] 視窗中的 MyNewService。](media/windowsservices-serviceswindow.PNG)
+     ![在 [服務] 視窗中的 MyNewService。](./media/windowsservices-serviceswindow.PNG)
 
-2. 若要啟動服務，請從服務的捷徑功能表選擇 [啟動]  。
+2. 若要啟動服務，請從服務的捷徑功能表選擇 [啟動]。
 
-3. 若要停止服務，請從服務的捷徑功能表選擇 [停止]  。
+3. 若要停止服務，請從服務的捷徑功能表選擇 [停止]。
 
 4. (選擇性) 在命令列中，使用 **net start &lt;服務名稱&gt;** 和 **net stop &lt;服務名稱&gt;** 命令來啟動和停止您的服務。
 
 ### <a name="verify-the-event-log-output-of-your-service"></a>確認服務的事件記錄輸出
 
-1. 在 Windows 中，開啟**事件檢視器**桌面應用程式。 在 Windows 搜尋列中輸入*事件檢視器*，然後從搜尋結果選取 [事件檢視器]  。
+1. 在 Windows 中，開啟**事件檢視器**桌面應用程式。 在 Windows 搜尋列中輸入*事件檢視器*，然後從搜尋結果選取 [事件檢視器]。
 
    > [!TIP]
-   > 在 Visual Studio 中，您可以從 [檢視]  功能表開啟 [伺服器總管]  (或按 **Ctrl**+**Alt**+**S**)，然後展開本機電腦的 [事件記錄檔]  節點來存取事件記錄。
+   > 在 Visual Studio 中，您可以從 [檢視] 功能表開啟 [伺服器總管] (或按 **Ctrl**+**Alt**+**S**)，然後展開本機電腦的 [事件記錄檔] 節點來存取事件記錄。
 
-2. 在 [事件檢視器]  中，展開 [應用程式及服務記錄]  。
+2. 在 [事件檢視器] 中，展開 [應用程式及服務記錄]。
 
 3. 找到並展開 **MyNewLog** 的清單 (如果遵循新增命令列引數的程序，則為 **MyLogFile1**)。 您應該會看到服務所執行兩個動作 (啟動和停止) 的項目。
 
-     ![使用事件檢視器查看事件記錄項目](media/windows-service-event-viewer.png)
+     ![使用事件檢視器查看事件記錄項目](./media/windows-service-event-viewer.png)
 
 ## <a name="clean-up-resources"></a>清除資源
 
@@ -524,7 +524,7 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 1. 以系統管理認證開啟 **Visual Studio 的開發人員命令提示字元**。
 
-2. 在 [Visual Studio 開發人員命令提示字元]  視窗中，巡覽至包含專案輸出的資料夾。
+2. 在 [Visual Studio 開發人員命令提示字元] 視窗中，巡覽至包含專案輸出的資料夾。
 
 3. 輸入下列命令：
 

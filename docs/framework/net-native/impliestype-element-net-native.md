@@ -1,17 +1,17 @@
 ---
-title: <ImpliesType> 項目 (.NET Native)
+title: <ImpliesType>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1cd2177707edfd29dc393e2bcfd6bbacb749b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616681"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049668"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType > 項目 (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType > 元素（.NET Native）
 如果原則已套用至包含類型或方法，則會將該原則套用至類型。  
   
 ## <a name="syntax"></a>語法  
@@ -51,7 +51,7 @@ ms.locfileid: "64616681"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*type_name*|類型名稱。 如果這個 `<ImpliesType>` 項目所表示的類型位在與其包含 `<Type>` 項目相同的命名空間中，則 *type_name* 可以包含該類型的名稱，而不包含其命名空間。 否則，*type_name* 必須包含完整的類型名稱。|  
   
@@ -59,18 +59,18 @@ ms.locfileid: "64616681"
   
 |值|描述|  
 |-----------|-----------------|  
-|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將反映原則套用至方法。|  
+|[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
+|[\<Method>](method-element-net-native.md)|將反映原則套用至方法。|  
   
 ## <a name="remarks"></a>備註  
  `<ImpliesType>` 元素的主要目的是要供程式庫使用。 它可以解決下列情況：  
@@ -99,7 +99,7 @@ ms.locfileid: "64616681"
 </Type>  
 ```  
   
- `<ImpliesType>` 元素也會出現在 `<Method>` 元素中，因為在某些情況下，具現化泛型方法表示要反映在類型具現化上。 例如，想像一下泛型方法`IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`給定程式庫將以動態方式存取，以及相關聯<xref:System.Collections.Generic.List%601>和<xref:System.Array>型別。 這可以表示成：  
+ `<ImpliesType>` 元素也會出現在 `<Method>` 元素中，因為在某些情況下，具現化泛型方法表示要反映在類型具現化上。 例如，假設指定的程式庫`IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`將會隨著相關聯<xref:System.Collections.Generic.List%601>的和<xref:System.Array>類型動態存取的泛型方法。 這可以表示成：  
   
 ```xml  
 <Type Name="MyType">  
@@ -112,6 +112,6 @@ ms.locfileid: "64616681"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞項目](runtime-directive-elements.md)
+- [執行階段指示詞原則設定](runtime-directive-policy-settings.md)

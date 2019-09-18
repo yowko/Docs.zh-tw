@@ -1,17 +1,17 @@
 ---
-title: <TypeParameter> 項目 (.NET Native)
+title: <TypeParameter>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b03c87c70fa1bfcd331f468d369632f4164300bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0de00b9313b60b3a527dd0380ae90d82731a8c02
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982458"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049054"
 ---
-# <a name="typeparameter-element-net-native"></a>\<TypeParameter > 項目 (.NET Native)
+# <a name="typeparameter-element-net-native"></a>\<TypeParameter > 元素（.NET Native）
 將原則套用至傳遞給某個方法之類型引數所代表的類型。  
   
 ## <a name="syntax"></a>語法  
@@ -59,7 +59,7 @@ ms.locfileid: "61982458"
   
 |值|描述|  
 |-----------|-----------------|  
-|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -68,10 +68,10 @@ ms.locfileid: "61982458"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
+|[\<Method>](method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
   
 ## <a name="remarks"></a>備註  
- `<TypeParameter>` 元素與 [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md) 元素類似，不同之處在於您只能將它套用至 <xref:System.Type> 類型的參數。 這個項目會將原則套用至 `Name` 屬性所指定的類型引數在執行階段所代表的任何類型。  
+ `<TypeParameter>` 元素與 [\<Parameter>](parameter-element-net-native.md) 元素類似，不同之處在於您只能將它套用至 <xref:System.Type> 類型的參數。 這個項目會將原則套用至 `Name` 屬性所指定的類型引數在執行階段所代表的任何類型。  
   
  例如，NewtonSoft JSON 序列化程式包含靜態 `JsonConvert.DeserializeObject(String value, Type type)` 方法。 下列反映指示詞：  
   
@@ -96,7 +96,7 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
-- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Method> 項目](method-element-net-native.md)
+- [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞原則設定](runtime-directive-policy-settings.md)
+- [執行階段指示詞項目](runtime-directive-elements.md)

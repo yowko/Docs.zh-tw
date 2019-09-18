@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5657e55856845404c5f8f063bd69d51614a234c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 752a6a5f9608aa260f192ee3e9e0709b7a10e27e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614275"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052278"
 ---
 # <a name="trace-listeners"></a>追蹤接聽項
 使用 **Trace**、**Debug** 和 <xref:System.Diagnostics.TraceSource> 時，您必須具有收集和記錄所傳送訊息的機制。 追蹤訊息由「接聽程式」負責接收。 接聽項的用途是收集、儲存和傳送追蹤訊息。 接聽項會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  
@@ -40,7 +40,7 @@ ms.locfileid: "64614275"
   
 - <xref:System.Diagnostics.XmlWriterTraceListener> 會將追蹤或偵錯輸出當成 XML 編碼資料導向至 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。  
   
- 如果您要 <xref:System.Diagnostics.DefaultTraceListener> 以外的接聽程式接收 **Debug**、**Trace** 和 <xref:System.Diagnostics.TraceSource> 輸出，則您必須將該接聽程式新增到 `Listeners` 集合。 如需詳細資訊，請參閱[如何：建立和初始化追蹤接聽項](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)和[How to:含有追蹤接聽項中使用 TraceSource 和篩選條件](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)。 **Listeners** 集合中的任何接聽程式都會自追蹤輸出方法取得相同的訊息。 例如，假設您設定兩個接聽項：**TextWriterTraceListener** 和 **EventLogTraceListener**。 則每個接聽項都會收到相同的訊息。 **TextWriterTraceListener** 會將其輸出導向至資料流，而 **EventLogTraceListener** 則會將其輸出導向至事件記錄檔。  
+ 如果您要 <xref:System.Diagnostics.DefaultTraceListener> 以外的接聽程式接收 **Debug**、**Trace** 和 <xref:System.Diagnostics.TraceSource> 輸出，則您必須將該接聽程式新增到 `Listeners` 集合。 如需詳細資訊，請參閱[如何：建立和初始化追蹤](how-to-create-and-initialize-trace-listeners.md)接聽項，以及[如何：使用 TraceSource 和篩選搭配追蹤](how-to-use-tracesource-and-filters-with-trace-listeners.md)接聽項。 **Listeners** 集合中的任何接聽程式都會自追蹤輸出方法取得相同的訊息。 例如，假設您設定兩個接聽項：**TextWriterTraceListener** 和 **EventLogTraceListener**。 則每個接聽項都會收到相同的訊息。 **TextWriterTraceListener** 會將其輸出導向至資料流，而 **EventLogTraceListener** 則會將其輸出導向至事件記錄檔。  
   
  下列範例顯示如何將輸出傳送至 **Listeners** 集合。  
   
@@ -82,5 +82,5 @@ System.Diagnostics.Trace.Listeners.Add(
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TraceListener>
-- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md)
+- [追蹤參數](trace-switches.md)

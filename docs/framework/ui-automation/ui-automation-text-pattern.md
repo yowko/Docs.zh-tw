@@ -8,28 +8,28 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: 27d5bcee34bcbfa101f381a569428a64a45da0b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7985e6cf3eaa810a893b0b5183a1c141a041768
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954099"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040505"
 ---
 # <a name="ui-automation-text-pattern"></a>UI 自動化的文字模式
 > [!NOTE]
 > 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
   
- 本主題包含的總覽和使用說明主題, 可協助您開始進行中[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]的文字元素程式設計。  
+ 本主題包含的總覽和使用說明主題，可協助您開始進行中[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]的文字元素程式設計。  
   
 ## <a name="in-this-section"></a>本節內容  
- [UI 自動化 TextPattern 概觀](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [TextPattern 和 Embedded 物件概觀](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [HOW-TO 主題](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [UI 自動化 TextPattern 概觀](ui-automation-textpattern-overview.md)  
+ [TextPattern 和 Embedded 物件概觀](textpattern-and-embedded-objects-overview.md)  
+ [HOW-TO 主題](ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用者介面自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [使用者介面自動化控制項模式](ui-automation-control-patterns.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)

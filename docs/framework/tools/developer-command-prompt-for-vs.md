@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877045"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044732"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 的開發人員命令提示字元
 
@@ -28,7 +28,7 @@ Visual Studio 的開發人員命令提示字元可讓您更輕鬆地使用 .NET 
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>搜尋您電腦上的命令提示字元
 
-根據您已安裝的 Visual Studio 及任何其他 SDK 版本，您可能會有多個命令提示字元。 例如，Visual Studio 64 位元版本提供 32 位元和 64 位元的命令提示字元  (大多數工具的 32 位元和 64 位元版本完全相同；然而，少數工具會分別變更 32 位元和 64 位元的環境)。如果下列步驟沒有作用，您可以嘗試[以手動方式尋找您電腦上的檔案](#manually-locate-the-files-on-your-machine)或[從 Visual Studio 內部執行命令提示字元](#run-the-command-prompt-from-inside-visual-studio)。
+根據您已安裝的 Visual Studio 及任何其他 SDK 版本，您可能會有多個命令提示字元。 例如，Visual Studio 64 位元版本提供 32 位元和 64 位元的命令提示字元 (大多數工具的 32 位元和 64 位元版本完全相同；然而，少數工具會分別變更 32 位元和 64 位元的環境)。如果下列步驟沒有作用，您可以嘗試[以手動方式尋找您電腦上的檔案](#manually-locate-the-files-on-your-machine)或[從 Visual Studio 內部執行命令提示字元](#run-the-command-prompt-from-inside-visual-studio)。
 
 ### <a name="in-windows-10"></a>在 Windows 10
 
@@ -84,13 +84,13 @@ Visual Studio 的開發人員命令提示字元可讓您更輕鬆地使用 .NET 
 
 7. 選擇 [初始目錄] 欄位的值，例如 [專案目錄]。
 
-8. 選擇 [確定]  按鈕。
+8. 選擇 [確定] 按鈕。
 
    這會新增功能表項目，而且您可以從 [工具] 功能表存取命令提示字元。
 
-   ![Visual Studio 中的命令提示字元功能表項目](media/command-prompt-vs-menu.png)
+   ![Visual Studio 中的命令提示字元功能表項目](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>另請參閱
 
-- [工具](../../../docs/framework/tools/index.md)
+- [工具](index.md)
 - [管理外部工具](/visualstudio/ide/managing-external-tools)

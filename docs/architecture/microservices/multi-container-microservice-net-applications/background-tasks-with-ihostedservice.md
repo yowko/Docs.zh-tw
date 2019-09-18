@@ -2,18 +2,18 @@
 title: 在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解在微服務 .NET Core 使用 IHostedService 和 BackgroundService 實作背景工作的新選項。
 ms.date: 01/07/2019
-ms.openlocfilehash: b3dca8db6568e6e8429645d6b433886d1d289b95
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: HT
+ms.openlocfilehash: ff263212536233bef85e9517442b4d7ed9eff115
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038130"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039878"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 
 在微服務應用程式或任何類型的應用程式中，背景工作和已排定工作最後是您可能需要實作的工作。 使用微服務架構的差異在於您可以實作單一微服務程序/容器來裝載這些背景工作，讓您可以視需要進行相應減少/相應增加，或者甚至可以確定它執行該微服務程序/容器的單一執行個體。
 
-從一般觀點而言，在 .NET Core 中，我們將這些類型的工作稱為「託管服務」  ，因為它們是您在主機/應用程式/微服務內裝載的服務/邏輯。 請注意，在此情況下，託管服務就只是具有背景工作邏輯的類別。
+從一般觀點而言，在 .NET Core 中，我們將這些類型的工作稱為「託管服務」，因為它們是您在主機/應用程式/微服務內裝載的服務/邏輯。 請注意，在此情況下，託管服務就只是具有背景工作邏輯的類別。
 
 自 .NET Core 2.0 開始，此架構提供名為 <xref:Microsoft.Extensions.Hosting.IHostedService> 的新介面，協助您輕鬆地實作託管服務。 基本概念是您可以註冊多個背景工作 (託管服務)，以在 WebHost 或主機執行時於背景中執行，如圖 6-26 所示。
 
@@ -236,16 +236,16 @@ WebHost.CreateDefaultBuilder(args)
 
 `IHostedService` 介面提供一種便利方式可在 ASP.NET Core Web 應用程式 (於 .NET Core 2.0 中) 或任何程序/主機 (使用 `IHost` 在 .NET Core 2.1 中啟動) 中啟動背景工作。 它的主要優點是，在主機本身正在關機時，您可以依正常程序取消清除背景工作的程式碼。
 
-#### <a name="additional-resources"></a>其他資源
+## <a name="additional-resources"></a>其他資源
 
-- **在 ASP.NET Core/Standard 2.0 中建置已排定工作** <br/>
-    <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **在 ASP.NET Core/Standard 2.0 中建置已排定工作**  
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **在 ASP.NET Core 2.0 中實作 IHostedService** <br/>
-    <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **在 ASP.NET Core 2.0 中實作 IHostedService**  
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **使用 ASP.NET Core 2.1 的 GenericHost 樣本** <br/>
-    <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
+- **使用 ASP.NET Core 2.1 的 GenericHost 樣本**  
+  <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[上一頁](test-aspnet-core-services-web-apps.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917966"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051993"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 的概觀
 
@@ -33,7 +33,7 @@ ms.locfileid: "69917966"
 - 根據業界標準建構所有通訊，確保以 .NET Framework 為基礎的程式碼能與任何其他程式碼整合。
 
 > [!NOTE]
-> 如需適用於使用者和開發人員的 .NET Framework 一般簡介，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。
+> 如需適用於使用者和開發人員的 .NET Framework 一般簡介，請參閱[使用者入門](index.md)。
 
 .NET Framework 是由 Common Language Runtime (CLR) 和 .NET Framework 類別庫所組成。 Common Language Runtime 是 .NET Framework 的基礎。 請將執行階段視為在執行階段管理程式碼的代理程式，可提供記憶體管理、執行緒管理和遠端作業等核心服務，並同時強制執行嚴格的型別安全及其他形式的程式碼精確度，以提升安全性和穩定性。 事實上，程式碼管理的概念是此執行階段的基本原則。 針對執行階段所開發的程式碼稱為 Managed 程式碼，而不針對執行階段所開發的程式碼稱為 Unmanaged 程式碼。 類別庫是範圍廣泛、物件導向、可重複使用類型的集合，您可用它來開發應用程式，範圍從傳統命令列或圖形使用者介面 (GUI) 應用程式到以 ASP.NET 所提供最新創新方式為基礎的應用程式，例如 Web Form 和 XML Web Service，都包括在內。
 
@@ -77,15 +77,15 @@ Runtime 是為增強效能所設計的。 雖然 Common Language Runtime 提供�
 
 - 主控台應用程式。 請參閱[建置主控台應用程式](../../standard/building-console-apps.md)。
 
-- Windows GUI 應用程式 (Windows Forms)。 請參閱 [Windows Forms](../../../docs/framework/winforms/index.md)。
+- Windows GUI 應用程式 (Windows Forms)。 請參閱 [Windows Forms](../winforms/index.md)。
 
-- Windows Presentation Foundation (WPF) 應用程式。 請參閱 [Windows Presentation Foundation](../../../docs/framework/wpf/index.md)。
+- Windows Presentation Foundation (WPF) 應用程式。 請參閱 [Windows Presentation Foundation](../wpf/index.md)。
 
-- ASP.NET 應用程式。 請參閱[使用 ASP.NET 的 Web 應用程式](../../../docs/framework/develop-web-apps-with-aspnet.md)。
+- ASP.NET 應用程式。 請參閱[使用 ASP.NET 的 Web 應用程式](../develop-web-apps-with-aspnet.md)。
 
-- Windows 服務 請參閱 [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)。
+- Windows 服務 請參閱 [Windows 服務應用程式簡介](../windows-services/introduction-to-windows-service-applications.md)。
 
-- 使用 Windows Communication Foundation (WCF) 的服務導向應用程式。 請參閱[使用 WCF 以服務為導向的應用程式](../../../docs/framework/wcf/index.md)。
+- 使用 Windows Communication Foundation (WCF) 的服務導向應用程式。 請參閱[使用 WCF 以服務為導向的應用程式](../wcf/index.md)。
 
 - 使用 Windows Workflow Foundation (WF) 啟用工作流程的應用程式。 請參閱 [Windows Workflow Foundation](../windows-workflow-foundation/index.md)。
 
@@ -93,9 +93,9 @@ Windows Forms 類別是一組完整且可重複使用的類型，可大幅簡化
 
 ## <a name="see-also"></a>另請參閱
 
-- [系統需求](../../../docs/framework/get-started/system-requirements.md)
-- [安裝指南 (英文)](../../../docs/framework/install/index.md)
-- [開發指南](../../../docs/framework/development-guide.md)
-- [工具](../../../docs/framework/tools/index.md)
+- [系統需求](system-requirements.md)
+- [安裝指南 (英文)](../install/index.md)
+- [開發指南](../development-guide.md)
+- [工具](../tools/index.md)
 - [.NET 範例與教學課程](../../samples-and-tutorials/index.md)
 - [.NET Framework 類別庫](https://go.microsoft.com/fwlink/?LinkID=227195)

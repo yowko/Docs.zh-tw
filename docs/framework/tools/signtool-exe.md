@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894787"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044199"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -29,7 +29,7 @@ signtool [command] [options] [file_name | ...]
   
 ## <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |`command`|四個命令之一 (`catdb`、`sign`、`Timestamp` 或 `Verify`)，指定要對檔案執行的操作。 如需每個命令的描述，請參閱下一個表格。|  
 |`options`|修改命令的選項。 除了全域 `/q` 和 `/v` 選項外，每個命令支援一組唯一的選項。|  
@@ -39,10 +39,10 @@ signtool [command] [options] [file_name | ...]
   
 |命令|描述|  
 |-------------|-----------------|  
-|`catdb`|在目錄資料庫中加入或移除目錄檔。 目錄資料庫可以用來自動查閱目錄檔，並且是由 GUID 所識別。 如需 `catdb` 命令支援選項的清單，請參閱 [catdb 命令選項](../../../docs/framework/tools/signtool-exe.md#catdb)。|  
-|`sign`|數位簽署檔案。 數位簽章可以防止檔案遭到篡改，而且可讓使用者根據簽署憑證確認簽署者。 如需 `sign` 命令支援選項的清單，請參閱 [sign 命令選項](../../../docs/framework/tools/signtool-exe.md#sign)。|  
-|`Timestamp`|為檔案加上時間戳記。 如需 `TimeStamp` 命令支援選項的清單，請參閱 [TimeStamp 命令選項](../../../docs/framework/tools/signtool-exe.md#TimeStamp)。|  
-|`Verify`|藉由判斷簽署憑證是否由受信任的授權單位所發佈、簽署憑證是否已撤銷，以及簽署憑證是否為特定原則的有效憑證，來驗證檔案的數位簽章。 如需 `Verify` 命令支援選項的清單，請參閱 [Verify 命令選項](../../../docs/framework/tools/signtool-exe.md#Verify)。|  
+|`catdb`|在目錄資料庫中加入或移除目錄檔。 目錄資料庫可以用來自動查閱目錄檔，並且是由 GUID 所識別。 如需 `catdb` 命令支援選項的清單，請參閱 [catdb 命令選項](signtool-exe.md#catdb)。|  
+|`sign`|數位簽署檔案。 數位簽章可以防止檔案遭到篡改，而且可讓使用者根據簽署憑證確認簽署者。 如需 `sign` 命令支援選項的清單，請參閱 [sign 命令選項](signtool-exe.md#sign)。|  
+|`Timestamp`|為檔案加上時間戳記。 如需 `TimeStamp` 命令支援選項的清單，請參閱 [TimeStamp 命令選項](signtool-exe.md#TimeStamp)。|  
+|`Verify`|藉由判斷簽署憑證是否由受信任的授權單位所發佈、簽署憑證是否已撤銷，以及簽署憑證是否為特定原則的有效憑證，來驗證檔案的數位簽章。 如需 `Verify` 命令支援選項的清單，請參閱 [Verify 命令選項](signtool-exe.md#Verify)。|  
   
  下列選項適用於所有簽署工具命令。  
   
@@ -103,7 +103,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="timestamp-command-options"></a>TimeStamp 命令選項  
  下表列出可以搭配 `TimeStamp` 命令使用的選項。  
   
-|TimeStamp 選項|說明|  
+|TimeStamp 選項|描述|  
 |----------------------|-----------------|  
 |`/p7`|為 PKCS #7 檔案加上時間戳記。|  
 |`/t`  *URL*|指定時間戳記伺服器的 URL。 要加上時間戳記的檔案必須先經過簽署。 必須有 `/t` 或 `/tr` 任一選項。|  
@@ -211,5 +211,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
   
 ## <a name="see-also"></a>另請參閱
 
-- [工具](../../../docs/framework/tools/index.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](index.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

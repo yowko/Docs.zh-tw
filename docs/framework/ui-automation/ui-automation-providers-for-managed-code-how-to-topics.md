@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-ms.openlocfilehash: ac9b20d1fd3356941b75df686b2556b3c3c4f179
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d5f2651c6a74a7f9ac275a55a4e37baebf653305
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914419"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042076"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Managed 程式碼的 UI 自動化提供者 HOW TO 主題
 > [!NOTE]
@@ -22,10 +22,10 @@ ms.locfileid: "69914419"
  本節包含的程式碼範例示範如何撰寫[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]專案提供者的[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]工作。  
   
 ## <a name="in-this-section"></a>本節內容  
- [公開伺服器端 UI 自動化提供者](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [從 UI 自動化提供者傳回屬性](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [UI 自動化提供者引發事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [在 UI 自動化片段提供者中啟用導覽](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [建立用戶端 UI 自動化提供者](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [在用戶端應用程式中實作 UI 自動化提供者](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+ [公開伺服器端 UI 自動化提供者](expose-a-server-side-ui-automation-provider.md)  
+ [從 UI 自動化提供者傳回屬性](return-properties-from-a-ui-automation-provider.md)  
+ [UI 自動化提供者引發事件](raise-events-from-a-ui-automation-provider.md)  
+ [在 UI 自動化片段提供者中啟用導覽](enable-navigation-in-a-ui-automation-fragment-provider.md)  
+ [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)  
+ [建立用戶端 UI 自動化提供者](create-a-client-side-ui-automation-provider.md)  
+ [在用戶端應用程式中實作 UI 自動化提供者](implement-ui-automation-providers-in-a-client-application.md)

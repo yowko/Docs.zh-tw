@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: 6a77b81cab34b1824b23b1e3e050ecf034ab7700
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 699644b98fbf818c71553775f4dff8dfb0726977
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932163"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043434"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>實作 UI 自動化 MultipleView 控制項模式
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "69932163"
   
  <xref:System.Windows.Automation.MultipleViewPattern> 控制項模式可用來支援控制項，這種控制項提供相同一組資訊或子控制項的多種不同表示，而且能夠在這些表示之間切換。  
   
- 可以顯示多個視圖的控制項範例包括 [清單] 視圖 (可以將其內容顯示為縮圖、磚、圖示或詳細資料[!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] )、圖表 (圓形圖、折線圖、橫條圖、具有公式的單元[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]格值)、檔 (一般、Web 版面配置、列印版面配置、閱讀版面配置、大綱)、Microsoft Outlook 行事曆 (年、月、周、日[!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] ) 和外觀。 支援哪些檢視會由控制項的開發人員決定，而且是每個控制項所特有。  
+ 可以顯示多個視圖的控制項範例包括 [清單] 視圖（可以將其內容顯示為縮圖、磚、圖示或詳細資料[!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] ）、圖表（圓形圖、折線圖、橫條圖、具有公式的單元[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]格值）、檔（一般、Web 版面配置、列印版面配置、閱讀版面配置、大綱）、Microsoft Outlook 行事曆（年、月、周、日[!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] ）和外觀。 支援哪些檢視會由控制項的開發人員決定，而且是每個控制項所特有。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
@@ -42,9 +42,9 @@ ms.locfileid: "69932163"
 |必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|方法|None|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|方法|無|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|方法|無|  
   
  這個控制項模式沒有相關事件。  
   
@@ -58,8 +58,8 @@ ms.locfileid: "69932163"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
+- [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
+- [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)

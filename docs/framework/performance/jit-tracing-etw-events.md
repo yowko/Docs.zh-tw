@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07d84506a7c07bde09b3b46ea608b1874842c3ac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616393"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046419"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 追蹤 ETW 事件
 <a name="top"></a> 這些事件會收集 just-in-time (JIT) 內嵌和 JIT tail 呼叫成功或失敗的相關資訊。  
@@ -27,7 +27,7 @@ ms.locfileid: "64616393"
 ## <a name="jit-inlining-events"></a>JIT 內嵌事件  
   
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 事件  
- 下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。  
+ 下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
 |引發事件的關鍵字|層級|  
 |-----------------------------------|-----------|  
@@ -151,4 +151,4 @@ ms.locfileid: "64616393"
   
 ## <a name="see-also"></a>另請參閱
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)

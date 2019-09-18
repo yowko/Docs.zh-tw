@@ -10,22 +10,23 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f45f40cd66c63e660b9091c726533dcfe8db086
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 0331e0ad30743d5f0bba125e8e61e636e1c2a5be
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971591"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053030"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用組件和全域組件快取
+
 如果您想要在數個應用程式之間共用組件，可以將它安裝到全域組件快取。 每部安裝 Common Language Runtime 的電腦都有這個全機器程式碼快取。 全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。 組件必須有強式名稱，才能安裝在全域組件快取中。  
   
 > [!NOTE]
 > 放在全域組件快取中的組件必須具有相同的組件名稱和檔案名稱 (不包括副檔名)。 例如，組件名稱為 myAssembly 之組件的檔案名稱必須有 myAssembly.exe 或 myAssembly.dll。  
   
- 您應該只有在必要時才將組件安裝到全域組件快取，來共用組件。 一般來說，除非明確需要共用組件，否則會將組件相依性保留為私用，並且在應用程式目錄中尋找組件。 此外，您不需要將組件安裝到全域組件快取，它們即可供 COM Interop 或 Unmanaged 程式碼使用。  
+您應該只有在必要時才將組件安裝到全域組件快取，來共用組件。 一般來說，除非明確需要共用組件，否則會將組件相依性保留為私用，並且在應用程式目錄中尋找組件。 此外，您不需要將組件安裝到全域組件快取，它們即可供 COM Interop 或 Unmanaged 程式碼使用。  
   
- 您有數個原因想要將組件安裝到全域組件快取中：  
+您有數個原因想要將組件安裝到全域組件快取中：  
   
 - 共用位置。  
   
@@ -46,30 +47,31 @@ ms.locfileid: "70971591"
  請注意，有些情況下您明確不想要將組件安裝到全域組件快取中。 如果您將構成應用程式的其中一個組件放入全域組件快取中，則可以使用 XCOPY 複製應用程式目錄，以不再複寫或安裝應用程式。 在此情況下，您也必須將組件移至全域組件快取。  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何：在全域組件快取中安裝單一組件](install-assembly-into-gac.md)  
- 描述將組件安裝到全域組件快取中的方式。  
+[如何：在全域組件快取中安裝單一組件](install-assembly-into-gac.md)  
+描述將組件安裝到全域組件快取中的方式。  
   
- [如何：檢視全域組件快取的內容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
- 說明如何使用 [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 來檢視全域組件快取的內容。  
+[如何：檢視全域組件快取的內容](how-to-view-the-contents-of-the-gac.md)  
+說明如何使用 [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md) 來檢視全域組件快取的內容。  
   
- [如何：從全域組件快取移除組件](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
- 說明如何使用 [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 來移除全域組件快取中的組件。  
+[如何：從全域組件快取移除組件](how-to-remove-an-assembly-from-the-gac.md)  
+說明如何使用 [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md) 來移除全域組件快取中的組件。  
   
- [使用 Serviced 元件和全域組件快取](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
- 說明 Serviced 元件 (Managed COM+ 元件) 為何應該放在全域組件快取中。  
+[使用 Serviced 元件和全域組件快取](use-serviced-components-with-the-gac.md)  
+說明 Serviced 元件 (Managed COM+ 元件) 為何應該放在全域組件快取中。  
   
 ## <a name="related-sections"></a>相關章節  
- [建立組件](../../standard/assembly/create.md)  
- 提供建立組件的概觀。  
+
+[建立組件](../../standard/assembly/create.md)  
+提供建立組件的概觀。  
   
- [全域組件快取](../../../docs/framework/app-domains/gac.md)  
- 描述全域組件快取。  
+[全域組件快取](gac.md)  
+描述全域組件快取。  
   
- [如何：檢視組件內容](../../standard/assembly/view-contents.md)  
- 說明如何使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢視組件中的 Microsoft 中繼語言 (MSIL) 資訊。  
+[如何：檢視組件內容](../../standard/assembly/view-contents.md)  
+說明如何使用 [Ildasm.exe (IL 反組譯工具)](../tools/ildasm-exe-il-disassembler.md) 來檢視組件中的 Microsoft 中繼語言 (MSIL) 資訊。  
   
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- 描述 Common Language Runtime 如何找出和載入構成應用程式的組件。  
+[執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)  
+描述 Common Language Runtime 如何找出和載入構成應用程式的組件。  
   
- [使用組件設計程式](../../standard/assembly/program.md)  
- 描述組件，即 Managed 應用程式的建置組塊。
+[使用組件設計程式](../../standard/assembly/program.md)  
+描述組件，即 Managed 應用程式的建置組塊。

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 09f77a60255accc3e4b1c4fa5ea3d7526444e4cb
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: fd617e152b1e86cc71dd8e3cc8a01f1d2f52c30a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894733"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047896"
 ---
 # <a name="interpreting-network-tracing"></a>解譯網路追蹤
 啟用網路追蹤時，您可以使用追蹤來擷取應用程式對各種 <xref:System.Net> 類別成員的呼叫。 這些呼叫的輸出可能類似下列範例。  
@@ -26,7 +26,7 @@ ms.locfileid: "70894733"
   
  在上述範例中，[588] 是目前執行緒的唯一識別碼。 (4357) 和 (4387) 時間戳記表示自應用程式啟動後所經歷的毫秒數。 時間戳記後面的資料會顯示應用程式進入和結束 **Socket.Send** 方法。 執行 **Send** 方法之物件的唯一識別碼是 33574638。 方法結束追蹤包含傳回值 (上例中為 61)。  
   
- 網路追蹤可以擷取您的應用程式使用應用程式層級通訊協定，例如超文字傳輸通訊協定 (HTTP)，所傳送或接收的網路流量。 此資料可以擷取成文字或十六進位資料。 當您指定 **includehex** 作為 **tracemode** 屬性的值時，可以使用十六進位資料。 (如需此屬性的詳細資訊，請參閱[如何：設定網路追蹤](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)。)下列範例追蹤是使用 **includehex** 所產生。  
+ 網路追蹤可以擷取您的應用程式使用應用程式層級通訊協定，例如超文字傳輸通訊協定 (HTTP)，所傳送或接收的網路流量。 此資料可以擷取成文字或十六進位資料。 當您指定 **includehex** 作為 **tracemode** 屬性的值時，可以使用十六進位資料。 (如需此屬性的詳細資訊，請參閱[如何：設定網路追蹤](how-to-configure-network-tracing.md)。)下列範例追蹤是使用 **includehex** 所產生。  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -46,6 +46,6 @@ ms.locfileid: "70894733"
   
 ## <a name="see-also"></a>另請參閱
 
-- [啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [如何：設定網路追蹤](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
-- [以 .NET Framework 進行網路追蹤](../../../docs/framework/network-programming/network-tracing.md)
+- [啟用網路追蹤](enabling-network-tracing.md)
+- [如何：設定網路追蹤](how-to-configure-network-tracing.md)
+- [以 .NET Framework 進行網路追蹤](network-tracing.md)

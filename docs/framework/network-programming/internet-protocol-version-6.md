@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 0851ad42cd5ce2dd6b49ad7656479d5237fd5874
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647350"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047883"
 ---
 # <a name="internet-protocol-version-6"></a>網際網路通訊協定第 6 版
 網際網路通訊協定第 6 版 (IPv6) 是網際網路網路層級的新標準通訊協定套件。 IPv6 旨在解決網際網路通訊協定當前版本 (稱為 IPv4) 有關位址耗竭、安全性、自動組態和擴充性等等的許多問題。 IPv6 展開網際網路的功能，以啟用新種類的應用程式，包括點對點與行動應用程式。 以下是目前 IPv4 通訊協定的主要問題：  
@@ -42,7 +42,7 @@ ms.locfileid: "64647350"
   
 - 內建的驗證和機密性。  
   
- 如需詳細資訊，請參閱 [IPv6 定址](../../../docs/framework/network-programming/ipv6-addressing.md)、[IPv6 路由](../../../docs/framework/network-programming/ipv6-routing.md)、[IPv6 自動組態](../../../docs/framework/network-programming/ipv6-auto-configuration.md)、[啟用和停用 IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) 以及[如何：修改電腦組態檔以啟用 IPv6 支援](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。  
+ 如需詳細資訊，請參閱 [IPv6 定址](ipv6-addressing.md)、[IPv6 路由](ipv6-routing.md)、[IPv6 自動組態](ipv6-auto-configuration.md)、[啟用和停用 IPv6](enabling-and-disabling-ipv6.md) 以及[如何：修改電腦組態檔以啟用 IPv6 支援](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。  
   
 ## <a name="references"></a>參考  
  以下是您可在[網際網路工程任務推動小組 (IETF)](https://www.ietf.org/) 網站中找到的精選 RFC 文件：  
@@ -60,5 +60,5 @@ ms.locfileid: "64647350"
 ## <a name="see-also"></a>另請參閱
 
 - [IPv6 通訊端範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
-- [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)
-- [通訊端](../../../docs/framework/network-programming/sockets.md)
+- [網路程式設計範例](network-programming-samples.md)
+- [通訊端](sockets.md)

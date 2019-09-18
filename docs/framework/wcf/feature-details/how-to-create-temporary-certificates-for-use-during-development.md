@@ -1,37 +1,37 @@
 ---
-title: HOW TO：建立開發時要使用的暫時憑證
+title: 作法：建立開發時要使用的暫時憑證
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 4223ee8c8790ad4d0ae2275b347c4f974eeb4158
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: e2df35959f9821c65d694079aefa0ae6ba01897f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877964"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053299"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>作法：建立開發時要使用的暫時憑證
 
-開發安全的服務或使用 Windows Communication Foundation (WCF) 用戶端時，通常必須提供要用做為認證的 X.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題逐步解說的步驟來建立這兩個憑證，使用 Powershell [New-selfsignedcertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet。
+使用 Windows Communication Foundation （WCF）開發安全服務或用戶端時，通常必須提供 x.509 憑證，以做為認證使用。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題將逐步引導您使用 Powershell [New-SelfSignedCertificate）](/powershell/module/pkiclient/new-selfsignedcertificate) Cmdlet 來建立這兩個憑證。
 
 > [!IMPORTANT]
-> 僅供測試用途提供 New-selfsignedcertificate cmdlet 會產生憑證。 當部署服務或用戶端時，請確定使用由憑證授權單位所提供的適當憑證。 這可能是您組織中的 Windows Server 憑證伺服器，或第三方。
+> SelfSignedCertificate Cmdlet 所產生的憑證僅供測試之用。 當部署服務或用戶端時，請確定使用由憑證授權單位所提供的適當憑證。 這可能是來自您組織中的 Windows Server 憑證伺服器或協力廠商。
 >
-> 根據預設， [New-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 會建立自我簽署的憑證，以及這些憑證是不安全。 將自我簽署的憑證放在受信任的根憑證授權單位存放區可讓您建立更能夠模擬您的部署環境的開發環境。
+> 根據預設， [SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)指令程式會建立自我簽署的憑證，而且這些憑證不安全。 將自我簽署憑證放在「受信任的根憑證授權單位」存放區，可讓您建立更能更密切模擬部署環境的開發環境。
 
- 如需有關建立及使用憑證的詳細資訊，請參閱 < [Working with Certificates](working-with-certificates.md)。 如需使用憑證做為認證的詳細資訊，請參閱[Securing Services and Clients](securing-services-and-clients.md)。 如需有關使用 Microsoft Authenticode 技術的教學課程，請參閱 [Authenticode 概觀與教學課程 (英文)](https://go.microsoft.com/fwlink/?LinkId=88919)。
+ 如需建立和使用憑證的詳細資訊，請參閱[使用憑證](working-with-certificates.md)。 如需使用憑證做為認證的詳細資訊，請參閱[保護服務和用戶端](securing-services-and-clients.md)。 如需有關使用 Microsoft Authenticode 技術的教學課程，請參閱 [Authenticode 概觀與教學課程 (英文)](https://go.microsoft.com/fwlink/?LinkId=88919)。
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>建立自我簽署根授權憑證及匯出私密金鑰
 
-下列命令會建立自我簽署的憑證的主體名稱為"RootCA 「 目前使用者個人存放區中。
+下列命令會在目前使用者的個人存放區中，建立主體名稱為 "Rootca.cer" 的自我簽署憑證。
 
 ```powershell
-$rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2") -KeyUsage CertSign,DigitalSignature
+$rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
-我們需要將憑證匯出為 PFX 檔案，使其可以匯入到需要在稍後步驟中的位置。 當使用私密金鑰匯出憑證，才能保護它需要的密碼。 我們將儲存的密碼`SecureString`並用[Export-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet 來將憑證匯出為 PFX 檔案相關聯的私密金鑰。 我們也將公開金鑰的憑證儲存到使用 CRT 檔案[匯出憑證](/powershell/module/pkiclient/export-certificate)cmdlet。
+我們需要將憑證匯出到 PFX 檔案，以便將它匯入到稍後步驟所需的位置。 以私密金鑰匯出憑證時，需要密碼才能保護它。 我們會將密碼儲存在`SecureString`中，並使用[get-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) Cmdlet，將具有相關私密金鑰的憑證匯出至 PFX 檔案。 我們也會使用[Export-certificate](/powershell/module/pkiclient/export-certificate) Cmdlet，將公開憑證只儲存到 CRT 檔案中。
 
 ```powershell
 [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
@@ -42,13 +42,13 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>建立由根授權憑證簽署的新憑證
 
-下列命令會建立所簽署的憑證`RootCA`主體名稱為"SignedByRootCA 」 使用的簽發者的私密金鑰。
+下列命令會使用簽發者的私密金鑰， `RootCA`建立由主體名稱為 "SignedByRootCA" 之所簽署的憑證。
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
 ```
 
-同樣地，我們將儲存的簽署的憑證與私用的索引鍵到 PFX 檔案，並只將 CRT 檔案的公用金鑰。
+同樣地，我們會將已簽署的憑證連同私密金鑰儲存到 PFX 檔案中，而只將公開金鑰儲存到 CRT 檔案中。
 
 ```powershell
 [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
@@ -62,7 +62,7 @@ Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>在受信任的根憑證授權單位中安裝自我簽署憑證
 
-1. 請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)。
+1. 請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理](how-to-view-certificates-with-the-mmc-snap-in.md)單元來查看憑證。
 
 2. 開啟資料夾以儲存憑證，可以是 [ **本機電腦** ] 或 [ **目前使用者**]。
 
@@ -70,9 +70,9 @@ Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 4. 用滑鼠右鍵依序按一下 [ **憑證** ] 資料夾、[ **所有工作**] 和 [ **匯入**]。
 
-5. 請遵循螢幕上的精靈指示 RootCA.pfx 匯入存放區。
+5. 依照畫面上的 wizard 指示，將 Rootca.cer 匯入存放區。
 
-## <a name="using-certificates-with-wcf"></a>使用憑證與 WCF
+## <a name="using-certificates-with-wcf"></a>搭配 WCF 使用憑證
 
 設定暫時憑證之後，您可以用它來開發可將憑證指定為用戶端認證類型的 WCF 方案。 例如，下列 XML 組態會指定訊息安全性，而且將憑證指定為用戶端認證類型。
 
@@ -92,7 +92,7 @@ Export-Certificate -Cert $testCertPath -FilePath testcert.crt
     </bindings>
     ```
 
-2. 在用戶端的組態檔，請使用下列 XML 來指定憑證位於使用者的存放區，並且可搜尋在 SubjectName 欄位中的值"CohoWinery"。
+2. 在用戶端的設定檔中，使用下列 XML 來指定在使用者的存放區中找到該憑證，並藉由搜尋 SubjectName 欄位中的值 "CohoWinery" 來找到該憑證。
 
     ```xml
     <behaviors>
@@ -115,5 +115,5 @@ Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ## <a name="see-also"></a>另請參閱
 
 - [使用憑證](working-with-certificates.md)
-- [如何：使用 MMC 嵌入式管理單元檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [如何：使用 MMC 嵌入式管理單元來查看憑證](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [保護服務和用戶端的安全](securing-services-and-clients.md)

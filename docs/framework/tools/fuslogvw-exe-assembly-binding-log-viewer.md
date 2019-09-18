@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851254"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044685"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (組件繫結記錄檔檢視器)
 
@@ -25,7 +25,7 @@ ms.locfileid: "70851254"
 > [!IMPORTANT]
 > 您必須以系統管理員權限執行 fuslogvw.exe。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請透過系統管理員認證使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請透過系統管理員認證使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -60,7 +60,7 @@ fuslogvw
 
     - 已套用之任何應用程式、發行者或系統管理員版本原則的描述。
 
-    - 在[全域組件快取](../../../docs/framework/app-domains/gac.md)中是否找到組件。
+    - 在[全域組件快取](../app-domains/gac.md)中是否找到組件。
 
     - 所有探查 URL 的清單。
 
@@ -122,7 +122,7 @@ LOG: All probing URLs attempted and failed.
 
 ## <a name="binding-logs-for-native-images"></a>原生映像的繫結記錄檔
 
-根據預設，Fuslogvw.exe 會記錄正常的組件繫結要求。 或者，您可以記錄使用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 所建立之原生映像的組件繫結。
+根據預設，Fuslogvw.exe 會記錄正常的組件繫結要求。 或者，您可以記錄使用 [Ngen.exe (原生映像產生器)](ngen-exe-native-image-generator.md) 所建立之原生映像的組件繫結。
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>若要記錄原生映像的組件繫結
 
@@ -218,7 +218,7 @@ Discarding native image.
 2. 在 [自訂的記錄檔路徑] 文字方塊中輸入路徑。
 
 > [!NOTE]
-> [組件繫結記錄檔檢視器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 快取來儲存其繫結記錄檔。 由於 IE 快取偶爾會損毀，因此[組件繫結記錄檔檢視器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 有時可能會停止在檢視視窗內顯示新的繫結記錄檔。 這種損毀導致 .NET 繫結基礎結構 (融合) 無法寫入繫結記錄檔或從繫結記錄檔讀取 (如果您使用自訂的記錄檔路徑，就不會發生這個問題)。若要修復損毀並讓融合再次顯示繫結記錄檔，請從 IE 的 [網際網路選項] 對話方塊中刪除網際網路暫存檔 (Temporary Internet Files)，以便清除 IE 快取。
+> [組件繫結記錄檔檢視器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 快取來儲存其繫結記錄檔。 由於 IE 快取偶爾會損毀，因此[組件繫結記錄檔檢視器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 有時可能會停止在檢視視窗內顯示新的繫結記錄檔。 這種損毀導致 .NET 繫結基礎結構 (融合) 無法寫入繫結記錄檔或從繫結記錄檔讀取 (如果您使用自訂的記錄檔路徑，就不會發生這個問題)。若要修復損毀並讓融合再次顯示繫結記錄檔，請從 IE 的 [網際網路選項] 對話方塊中刪除網際網路暫存檔 (Temporary Internet Files)，以便清除 IE 快取。
 >
 > 如果 Unmanaged 應用程式藉由實作 `IHostAssemblyManager` 和 `IHostAssemblyStore` 介面裝載 Common Language Runtime，則無法將記錄項目儲存在 wininet 快取中。  若要檢視實作這些介面之自訂主機的記錄項目，則必須指定替代的記錄檔路徑。
 
@@ -234,7 +234,7 @@ Discarding native image.
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.TypeLoadException>
-- [工具](../../../docs/framework/tools/index.md)
-- [全域組件快取](../../../docs/framework/app-domains/gac.md)
-- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](index.md)
+- [全域組件快取](../app-domains/gac.md)
+- [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

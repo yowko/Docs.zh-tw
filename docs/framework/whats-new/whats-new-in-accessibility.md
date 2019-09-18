@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952829"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053729"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
 
@@ -24,7 +24,7 @@ ms.locfileid: "69952829"
 
 如果您的應用程式是以 .NET Framework 4.7 或較早版本為目標，但是在 .NET Framework 4.7.1 或更新版本上執行，您可以將其設定為選擇加入協助工具功能。 如果您的應用程式是以 .NET Framework 4.7.1 或更新版本為目標，您也可以將其設定為使用舊版的功能 (且不利用協助工具功能)。 包含協助工具功能的每個 .NET Framework 版本都有版本特定的協助工具參數，您可以新增到應用程式組態檔 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>` ](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目。 以下是支援的參數：
 
-|版本|參數|
+|Version|參數|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -169,7 +169,7 @@ if (raiseMethod != null) {
 
 下圖顯示當使用者以鍵盤選取按鈕時的工具提示。
 
-![當使用者以鍵盤巡覽至按鈕時的工具提示](media/tooltip.png)
+![當使用者以鍵盤巡覽至按鈕時的工具提示](./media/tooltip.png)
 
 <a name="wpf48" />
 
@@ -189,7 +189,7 @@ if (raiseMethod != null) {
 
 若要使用這個屬性，只要將它新增至您的 XAML 程式碼，並使用適當的筆刷或繫結即可。 產生的文字選取範圍看起來像這樣：
 
-![當使用者以鍵盤巡覽至按鈕時的工具提示](media/selectiontextbrush-property.png)
+![當使用者以鍵盤巡覽至按鈕時的工具提示](./media/selectiontextbrush-property.png)
 
 您可以結合 `SelectionBrush` 和 `SelectionTextBrush` 屬性的用法，視需要產生任何背景和前景色彩的組合。
 
@@ -482,11 +482,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   之前： 
 
-  ![協助工具改善之前的聚焦 Expander 控制項](media/expander-before.png)
+  ![協助工具改善之前的聚焦 Expander 控制項](./media/expander-before.png)
 
   之後： 
 
-  ![協助工具改善之後的聚焦 Expander 控制項](media/expander-after.png)
+  ![協助工具改善之後的聚焦 Expander 控制項](./media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項
 
@@ -494,11 +494,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   之前： 
 
-  ![協助工具改善之前的聚焦高對比選項按鈕](media/radio-button-before.png)
+  ![協助工具改善之前的聚焦高對比選項按鈕](./media/radio-button-before.png)
 
   之後： 
 
-  ![協助工具改善之後的聚焦高對比選項按鈕](media/radio-button-after.png)
+  ![協助工具改善之後的聚焦高對比選項按鈕](./media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 控制項
 
@@ -506,31 +506,31 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   之前： 
 
-  ![協助工具改善之前的 ComboBox 已停用框線和文字](media/combo-disabled-before.png)
+  ![協助工具改善之前的 ComboBox 已停用框線和文字](./media/combo-disabled-before.png)
 
   之後：   
 
-  ![協助工具改善之後的 ComboBox 已停用框線和文字](media/combo-disabled-after.png)
+  ![協助工具改善之後的 ComboBox 已停用框線和文字](./media/combo-disabled-after.png)
 
   此外，已停用和聚焦按鈕會使用正確的佈景主題色彩。
 
   之前：
 
-  ![協助工具改善之前的按鈕佈景主題色彩](media/button-themes-before.png) 
+  ![協助工具改善之前的按鈕佈景主題色彩](./media/button-themes-before.png) 
 
   之後： 
 
-  ![協助工具改善之後的按鈕佈景主題色彩](media/button-themes-after.png) 
+  ![協助工具改善之後的按鈕佈景主題色彩](./media/button-themes-after.png) 
 
   最後，在 .NET Framework 4.7 和舊版本中將 <xref:System.Windows.Controls.ComboBox> 控制項的樣式設定為 `Toolbar.ComboBoxStyleKey` 會導致無法看到下拉式箭號。 從 .NET Framework 4.7.1 開始已修正此問題。 例如：
 
   之前： 
 
-  ![協助工具改善之前的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
+  ![協助工具改善之前的 Toolbar.ComboBoxStyleKey](./media/comboboxstylekey-before.png) 
 
   之後： 
 
-  ![協助工具改善之後的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
+  ![協助工具改善之後的 Toolbar.ComboBoxStyleKey](./media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> 控制項
 
@@ -538,21 +538,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   之前： 
 
-  ![協助工具改善之前的排序指標箭號](media/sort-indicator-before.png) 
+  ![協助工具改善之前的排序指標箭號](./media/sort-indicator-before.png) 
 
   之後：   
 
-  ![協助工具改善之後的排序指標箭號](media/sort-indicator-after.png) 
+  ![協助工具改善之後的排序指標箭號](./media/sort-indicator-after.png) 
 
   此外，在 .NET Framework 4.7 和舊版本的高對比模式中，預設連結樣式會在滑鼠移至上方時變更為不正確的色彩。 從 .NET Framework 4.7.1 開始已解決此問題。 同樣地，從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 核取方塊資料行會使用鍵盤焦點回饋的預期色彩。
 
   之前： 
 
-  ![協助工具改善之前的 DataGrid 預設連結樣式](media/default-link-style-before.png) 
+  ![協助工具改善之前的 DataGrid 預設連結樣式](./media/default-link-style-before.png) 
 
   之後：    
 
-  ![協助工具改善之後的 DataGrid 預設連結樣式](media/default-link-style-after.png) 
+  ![協助工具改善之後的 DataGrid 預設連結樣式](./media/default-link-style-after.png) 
 
 如需 .NET Framework 4.7.1 中的 WPF 協助工具改善詳細資訊；請參閱 [WPF 的協助工具改善](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
@@ -583,11 +583,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   之前：
 
-  ![協助工具改善之前的已停用文字](media/wf-disabled-before.png) 
+  ![協助工具改善之前的已停用文字](./media/wf-disabled-before.png) 
 
   之後：
 
-  ![協助工具改善之後的已停用文字](media/wf-disabled-after.png) 
+  ![協助工具改善之後的已停用文字](./media/wf-disabled-after.png) 
 
 - 執行緒例外狀況對話方塊中的高對比改善。
 
@@ -630,11 +630,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 從 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 開始，ASP.NET 改善 ASP.NET Web 控制項搭配 Visual Studio 協助工具技術的方式。 變更包括下列項目：
 
-- 在控制項中，實作遺漏 UI 協助工具模式的變更，例如在 [詳細資料檢視精靈]  的 [新增欄位]  對話方塊或 [ListView 精靈]  的 [設定 ListView]  對話方塊。
+- 在控制項中，實作遺漏 UI 協助工具模式的變更，例如在 [詳細資料檢視精靈] 的 [新增欄位] 對話方塊或 [ListView 精靈] 的 [設定 ListView] 對話方塊。
 
 - 改善高對比模式顯示的變更，例如**資料頁面巡覽區欄位編輯器**。
 
-- 改善控制項鍵盤瀏覽體驗的變更，例如 DataPager 控制項 [編輯頁面巡覽區欄位精靈]  的 [欄位]  對話方塊、[設定 ObjectContext]  對話方塊，或 [設定資料來源精靈]  的 [設定資料選取項目]  對話方塊。
+- 改善控制項鍵盤瀏覽體驗的變更，例如 DataPager 控制項 [編輯頁面巡覽區欄位精靈] 的 [欄位] 對話方塊、[設定 ObjectContext] 對話方塊，或 [設定資料來源精靈] 的 [設定資料選取項目] 對話方塊。
 
 <a name="tools471"></a>
 
@@ -662,9 +662,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   - 可透過鍵盤存取警告圖示。
 
-  - 可透過鍵盤存取 [屬性]  視窗中的 [其他屬性]  按鈕。
+  - 可透過鍵盤存取 [屬性] 視窗中的 [其他屬性] 按鈕。
 
-  - 鍵盤使用者可以存取工作流程設計工具之 [引數]  和 [變數]  窗格中的標頭項目。
+  - 鍵盤使用者可以存取工作流程設計工具之 [引數] 和 [變數] 窗格中的標頭項目。
 
 - 在以下這類情況發生時，已改善具有焦點之項目的可見性：
 

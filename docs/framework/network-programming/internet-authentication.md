@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295454"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047911"
 ---
 # <a name="internet-authentication"></a>網際網路驗證
 <xref:System.Net> 類別支援各種不同的用戶端驗證機制，包括標準的網際網路驗證方法 (基本、摘要式、交涉式、NTLM 和 Kerberos 驗證) 以及您可以建立的自訂方法。  
@@ -41,6 +41,6 @@ ms.locfileid: "59295454"
   
 ## <a name="see-also"></a>另請參閱
 
-- [基本和摘要式驗證](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [NTLM 與 Kerberos 驗證](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
-- [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [基本和摘要式驗證](basic-and-digest-authentication.md)
+- [NTLM 與 Kerberos 驗證](ntlm-and-kerberos-authentication.md)
+- [網路程式設計的安全性](security-in-network-programming.md)

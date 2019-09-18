@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-ms.openlocfilehash: 74cb739d381c0b1422d9277be8c3c338a46f8fba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: b3d24a958ec93084d03d2ad2e0eb6d9d2507e155
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647424"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048181"
 ---
 # <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>作法：要求網頁並擷取結果當作資料流
 這個範例示範如何要求網頁並擷取資料流中的結果。  
@@ -38,4 +38,4 @@ response.Close()
   
 ## <a name="see-also"></a>另請參閱
 
-- [要求資料](../../../docs/framework/network-programming/requesting-data.md)
+- [要求資料](requesting-data.md)

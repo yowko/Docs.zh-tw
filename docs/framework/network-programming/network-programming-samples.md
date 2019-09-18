@@ -2,12 +2,12 @@
 title: 網路程式設計範例
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 6d66a5ce0835a52dd1b8c331d94bc58ce17622c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1c3dc630f8675084d434431fbe227cf373c54b62
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204545"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047598"
 ---
 # <a name="network-programming-samples"></a>網路程式設計範例
 本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。 
@@ -34,7 +34,7 @@ ms.locfileid: "59204545"
  [NetStat 工具技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ks32hs88(v=vs.85))  
  示範 NCLNetStat 網路資訊工具。  
   
- [網路資訊技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/2xatedhd(v=vs.85))  
+ [Network Information Technology Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/2xatedhd(v=vs.85)) (網路資訊技術範例)  
  示範如何監視和顯示網路資訊。  
   
  [Ping 用戶端技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/5253acs7(v=vs.85))  
@@ -59,5 +59,5 @@ ms.locfileid: "59204545"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
-- [網路程式設計 HOW TO 主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [以 .NET Framework 進行網路程式設計](index.md)
+- [網路程式設計「如何」主題](network-programming-how-to-topics.md)

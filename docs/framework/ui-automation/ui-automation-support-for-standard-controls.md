@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: d83713a81e7675a68482890c2401f1a0a6803abc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cbf31c8a1cdf6e853e56445d22f4a7513bd1859
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914223"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042001"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>標準控制項的 UI 自動化支援
 > [!NOTE]
@@ -96,7 +96,7 @@ ms.locfileid: "69914223"
 ## <a name="windows-forms-controls"></a>Windows Form 控制項  
  Windows Forms 控制項會透過 uiautomationclientsideproviders.dll [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]中的用戶端提供者公開至。 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
   
- 一般來說, [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支援通用控制項的 managed 包裝函式 Windows Forms 控制項。 支援的控制項如下。  
+ 一般來說， [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支援通用控制項的 managed 包裝函式 Windows Forms 控制項。 支援的控制項如下。  
   
 |類別名稱|  
 |----------------|  
@@ -169,4 +169,4 @@ ms.locfileid: "69914223"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化控制項類型](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+- [UI 自動化控制項類型](ui-automation-control-types.md)

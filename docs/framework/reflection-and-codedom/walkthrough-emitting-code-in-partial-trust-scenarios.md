@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf244271010a7eb47a6c7b283a84c405108d803
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 002434cf51b221a456c8752b5b1388912f875a28
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041470"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045759"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任情節中發出程式碼
 
@@ -35,13 +35,13 @@ ms.locfileid: "70041470"
 - [設定簡單沙箱以測試部分信任程式碼](#Setting_up)。
 
   > [!IMPORTANT]
-  > 這是實驗部分信任程式碼的簡單方法。 若要執行實際來自未受信任位置的程式碼，請參閱[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。
+  > 這是實驗部分信任程式碼的簡單方法。 若要執行實際來自未受信任位置的程式碼，請參閱[如何：在沙箱中執行部分信任的程式碼](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。
 
 - [在部分信任的應用程式定義域中執行程式碼](#Running_code)。
 
 - [使用匿名裝載的動態方法，發出並執行部分信任的程式碼](#Using_methods)。
 
-如需在部分信任案例中發出程式碼的詳細資訊，請參閱[反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)。
+如需在部分信任案例中發出程式碼的詳細資訊，請參閱[反映發出中的安全性問題](security-issues-in-reflection-emit.md)。
 
 如需這些程序所示範程式碼的完整清單，請參閱本逐步解說結尾的[範例](#Example)一節。
 
@@ -71,7 +71,7 @@ ms.locfileid: "70041470"
 2. 建立 <xref:System.AppDomainSetup> 物件來初始化具有應用程式路徑的應用程式定義域。
 
     > [!IMPORTANT]
-    > 為簡單起見，此程式碼範例會使用目前的資料夾。 若要執行實際來自網際網路的程式碼，未受信任的程式碼請使用另外的資料夾，依[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。
+    > 為簡單起見，此程式碼範例會使用目前的資料夾。 若要執行實際來自網際網路的程式碼，未受信任的程式碼請使用另外的資料夾，依[如何：在沙箱中執行部分信任的程式碼](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]
@@ -225,5 +225,5 @@ ms.locfileid: "70041470"
 
 ## <a name="see-also"></a>另請參閱
 
-- [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [反映發出中的安全性問題](security-issues-in-reflection-emit.md)
+- [如何：在沙箱中執行部分信任的程式碼](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

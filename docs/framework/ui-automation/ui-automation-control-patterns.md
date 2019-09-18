@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: d4b4817c9b5cd59486c0ce5288d7860933405664
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75ce2d997efbc465c8a98bce1d42296b37f84f64
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941284"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042322"
 ---
 # <a name="ui-automation-control-patterns"></a>UI 自動化控制項模式
 > [!NOTE]
@@ -21,21 +21,21 @@ ms.locfileid: "69941284"
  本節提供如何使用[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]控制項模式的詳細資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [實作 UI 自動化 Dock 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  
- [實作 UI 自動化 ExpandCollapse 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)  
- [實作 UI 自動化 Grid 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
- [實作 UI 自動化 GridItem 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
- [實作 UI 自動化 Invoke 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-invoke-control-pattern.md)  
- [實作 UI 自動化 MultipleView 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-multipleview-control-pattern.md)  
- [實作 UI 自動化 RangeValue 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-rangevalue-control-pattern.md)  
- [實作 UI 自動化 Scroll 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-scroll-control-pattern.md)  
- [實作 UI 自動化 ScrollItem 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-scrollitem-control-pattern.md)  
- [實作 UI 自動化 Selection 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)  
- [實作 UI 自動化 SelectionItem 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)  
- [實作 UI 自動化 Table 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)  
- [實作 UI 自動化 TableItem 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)  
- [實作 UI 自動化 Toggle 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)  
- [實作 UI 自動化 Transform 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-transform-control-pattern.md)  
- [實作 UI 自動化 Value 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-value-control-pattern.md)  
- [實作 UI 自動化 Window 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-window-control-pattern.md)  
- [HOW-TO 主題](../../../docs/framework/ui-automation/ui-automation-control-patterns-how-to-topics.md)
+ [實作 UI 自動化 Dock 控制項模式](implementing-the-ui-automation-dock-control-pattern.md)  
+ [實作 UI 自動化 ExpandCollapse 控制項模式](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
+ [實作 UI 自動化 Grid 控制項模式](implementing-the-ui-automation-grid-control-pattern.md)  
+ [實作 UI 自動化 GridItem 控制項模式](implementing-the-ui-automation-griditem-control-pattern.md)  
+ [實作 UI 自動化 Invoke 控制項模式](implementing-the-ui-automation-invoke-control-pattern.md)  
+ [實作 UI 自動化 MultipleView 控制項模式](implementing-the-ui-automation-multipleview-control-pattern.md)  
+ [實作 UI 自動化 RangeValue 控制項模式](implementing-the-ui-automation-rangevalue-control-pattern.md)  
+ [實作 UI 自動化 Scroll 控制項模式](implementing-the-ui-automation-scroll-control-pattern.md)  
+ [實作 UI 自動化 ScrollItem 控制項模式](implementing-the-ui-automation-scrollitem-control-pattern.md)  
+ [實作 UI 自動化 Selection 控制項模式](implementing-the-ui-automation-selection-control-pattern.md)  
+ [實作 UI 自動化 SelectionItem 控制項模式](implementing-the-ui-automation-selectionitem-control-pattern.md)  
+ [實作 UI 自動化 Table 控制項模式](implementing-the-ui-automation-table-control-pattern.md)  
+ [實作 UI 自動化 TableItem 控制項模式](implementing-the-ui-automation-tableitem-control-pattern.md)  
+ [實作 UI 自動化 Toggle 控制項模式](implementing-the-ui-automation-toggle-control-pattern.md)  
+ [實作 UI 自動化 Transform 控制項模式](implementing-the-ui-automation-transform-control-pattern.md)  
+ [實作 UI 自動化 Value 控制項模式](implementing-the-ui-automation-value-control-pattern.md)  
+ [實作 UI 自動化 Window 控制項模式](implementing-the-ui-automation-window-control-pattern.md)  
+ [HOW-TO 主題](ui-automation-control-patterns-how-to-topics.md)

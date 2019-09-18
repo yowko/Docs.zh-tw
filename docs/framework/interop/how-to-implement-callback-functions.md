@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6eba8202f0284b7b1054585039f12da9364ca1e9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894192"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051758"
 ---
 # <a name="how-to-implement-callback-functions"></a>HOW TO：實作回呼函式
 下列程序及範例示範 Managed 應用程式 (使用平台叫用) 如何將每個視窗的控制碼值列印到本機電腦上。 具體而言，程序和範例會使用 **EnumWindows** 函式以逐步執行視窗的清單，並使用 Managed 回呼函式 (具名回呼) 以列印視窗控制代碼的值。  
@@ -38,7 +38,7 @@ ms.locfileid: "70894192"
   
 4. 請確定記憶體回收行程不會在回撥函式完成其工作前，回收該委派。 當您將委派以參數 (或結構中的欄位) 方式傳遞時，其將在呼叫期間保持為未回收。 因此，在以下列舉範例中，回撥函式在呼叫傳回前即會完成該工作，且不需要 Managed 呼叫端進行額外的動作。  
   
-     但是，如果呼叫傳回後仍然可以叫用回撥函式，則 Managed 呼叫端必須採取步驟，以確保在回撥函式結束前，委派仍保持未回收。 如需避免記憶體回收的詳細資訊，請參閱含有平台叫用的 [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)。  
+     但是，如果呼叫傳回後仍然可以叫用回撥函式，則 Managed 呼叫端必須採取步驟，以確保在回撥函式結束前，委派仍保持未回收。 如需避免記憶體回收的詳細資訊，請參閱含有平台叫用的 [Interop 封送處理](interop-marshaling.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -131,5 +131,5 @@ int main()
   
 ## <a name="see-also"></a>另請參閱
 
-- [回呼函式](../../../docs/framework/interop/callback-functions.md)
-- [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)
+- [回呼函式](callback-functions.md)
+- [呼叫 DLL 函式](calling-a-dll-function.md)

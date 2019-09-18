@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
-ms.translationtype: HT
+ms.openlocfilehash: 25aa7b7c88047a95af3cd1d8f99d96771f252ef4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457281"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052207"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile 是 .NET Framework 的子集，隨附於 .NET Framework 4 (含) 以前版本，並已針對用戶端應用程式最佳化。 .NET Framework 是 Windows、Windows Phone 和 Microsoft Azure 的開發平台，並提供 Managed 應用程式執行環境和 .NET Framework 類別庫。 .NET Framework 4 (含) 以前版本提供了兩種部署選項：完整 .NET Framework 和 Client Profile。 Client Profile 提供比完整 .NET Framework 更快速的部署方式，產生的應用程式安裝套件也更小。  
@@ -25,7 +25,7 @@ ms.locfileid: "66457281"
   
  不過，如果您是以 .NET Framework 4 或 3.5 為目標，而且想要進一步了解 Client Profile 以及使用時機，請參閱 .NET Framework 4 文件中的 [.NET Framework Client Profile](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)。  
   
- 當您安裝 .NET Framework 4.5 時，.NET Framework 4 Client Profile 會更新為 .NET Framework 的完整版。 如需安裝 .NET Framework 4.5 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
+ 當您安裝 .NET Framework 4.5 時，.NET Framework 4 Client Profile 會更新為 .NET Framework 的完整版。 如需安裝 .NET Framework 4.5 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

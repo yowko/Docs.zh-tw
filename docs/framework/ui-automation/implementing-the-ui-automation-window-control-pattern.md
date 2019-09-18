@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 0ff8a5002c82b274a95f7e1ae83bb23707d6cb39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad2f84fbde512bb99b213bf3b97f2190091d8576
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968211"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042995"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>實作 UI 自動化 Window 控制項模式
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69968211"
   
  本主題簡介實作 <xref:System.Windows.Automation.Provider.IWindowProvider>的方針和慣例，包括 <xref:System.Windows.Automation.WindowPattern> 屬性、方法和事件的相關資訊。 其他參考的連結列於主題的結尾。  
   
- <xref:System.Windows.Automation.WindowPattern>控制項模式是用來支援在傳統圖形化使用者介面 (GUI) 內提供基本以視窗為基礎之功能的控制項。 必須實作為此控制項模式的控制項範例包括最上層應用程式視窗、多重文件介面 (MDI) 子視窗、可調整大小的分割窗格控制項、強制回應對話方塊和氣球說明視窗。  
+ <xref:System.Windows.Automation.WindowPattern>控制項模式是用來支援在傳統圖形化使用者介面（GUI）內提供基本以視窗為基礎之功能的控制項。 必須實作為此控制項模式的控制項範例包括最上層應用程式視窗、多重文件介面（MDI）子視窗、可調整大小的分割窗格控制項、強制回應對話方塊和氣球說明視窗。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
@@ -42,16 +42,16 @@ ms.locfileid: "69968211"
 |必要成員|成員類型|注意|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|屬性|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|無|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event - 事件|無|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event - 事件|無|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event - 事件|None|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Event - 事件|不保證是 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
@@ -65,8 +65,8 @@ ms.locfileid: "69968211"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
+- [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
+- [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)

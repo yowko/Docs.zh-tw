@@ -5,22 +5,22 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: 13a22cd15da3d4cf7eb26359c692389d27d377c0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422348"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044513"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (資訊清單產生和編輯工具)
 
 「資訊清單產生和編輯工具」(*Mage.exe*) 是命令列工具，可支援建立和編輯應用程式與部署資訊清單。 由於 *Mage.exe* 是命令列工具，因此可以從批次指令碼及其他 Windows 應用程式 (包括 ASP.NET 應用程式) 中執行。
 
-您也可以使用 *MageUI.exe* 這個圖形應用程式來取代 *Mage.exe*。 如需詳細資訊，請參閱 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
+您也可以使用 *MageUI.exe* 這個圖形應用程式來取代 *Mage.exe*。 如需詳細資訊，請參閱 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行工具，請使用 Visual Studio 的開發人員命令提示字元。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行工具，請使用 Visual Studio 的開發人員命令提示字元。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
-有兩個版本的 *Mage.exe* 和 *MageUI.exe* 隨附於 Visual Studio。 若要查看版本資訊，請執行 *MageUI.exe*，並依序選取 [說明]  和 [關於]  。 本文件描述 4.0.x.x 版本的 *Mage.exe* 和 *MageUI.exe*。
+有兩個版本的 *Mage.exe* 和 *MageUI.exe* 隨附於 Visual Studio。 若要查看版本資訊，請執行 *MageUI.exe*，並依序選取 [說明] 和 [關於]。 本文件描述 4.0.x.x 版本的 *Mage.exe* 和 *MageUI.exe*。
 
 ## <a name="syntax"></a>語法
 
@@ -32,7 +32,7 @@ Mage [commands] [commandOptions]
 
 下表顯示 *Mage.exe* 所支援的命令。 如需這些命令所支援選項的詳細資訊，請參閱[新增和更新命令選項](#new-and-update-command-options)和 [Sign 命令選項](#sign-command-options)。
 
-|命令|說明|
+|命令|描述|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|清除所有僅供線上使用之應用程式的已下載應用程式快取。|
 |**-n, -New** *fileType [newOptions]*|建立指定類型的新檔案。 有效的類型如下：<br /><br /> -   `Deployment`：建立新的部署資訊清單。<br />-   `Application`：建立新的應用程式資訊清單。<br /><br /> 如果這個命令沒有指定額外的參數，就會以適當的預設標記和屬性值，建立適當類型的檔案。<br /><br /> 使用 **-ToFile** 選項 (見下表) 可以指定新檔案的檔案名稱和路徑。<br /><br /> 使用 **-FromDirectory** 選項 (見下表) 可以建立應用程式資訊清單，並在此資訊清單的 \<相依性> 區段中新增應用程式的所有組件。|
@@ -59,7 +59,7 @@ Mage [commands] [commandOptions]
 |**-i, -Install** `willInstall`|true|部署資訊清單。|指出 ClickOnce 應用程式是否要安裝到本機電腦上，或者它是否要從 Web 執行安裝。 應用程式在安裝後會出現在 Windows [ **開始** ] 功能表中。 有效值為 "true" (或 "t") 和 "false" (或 "f")。<br /><br /> 如果您指定 **-MinVersion** 選項，但使用者擁有的版本低於所安裝的 **-MinVersion** ，這時會強制應用程式進行安裝，不管您傳遞至 **-Install**的值為何。<br /><br /> 這個選項無法與 **-BrowserHosted** 選項搭配使用。 嘗試在相同的資訊清單同時指定這兩個選項會導致錯誤。|
 |**-kc, -KeyContainer** `name`||所有檔案類型。|指定包含私密金鑰名稱的金鑰容器。 這個選項需要 **CryptoProvider** 選項。<br/><br/>從 .NET Framework 4.7 開始提供此選項。|
 |**-mv, -MinVersion**  `[version]`|列於 ClickOnce 部署資訊清單中，由 **-Version** 旗標指定的版本。|部署資訊清單。|使用者可以執行的應用程式最小版本。 這個旗標可讓應用程式的具名版本成為必要的更新項目。 如果您發行的產品版本具有重大變更的更新或嚴重的安全性問題，即可使用這個旗標，指定必須安裝這個更新項目，且使用者不可再繼續執行舊版。<br /><br /> `version` 的語意與 **-Version** 旗標的引數相同。|
-|**-n, -Name** `nameString`|部署|所有檔案類型。|用來識別應用程式的名稱。 ClickOnce 會使用這個名稱來識別 [開始]  功能表 (如果應用程式是設定為自行安裝) 和 [使用權限提高] 對話方塊中的應用程式。 **注意：** 如果您要更新現有的資訊清單，但未使用此選項來指定發行者名稱，*Mage.exe* 會更新含電腦上定義之組織名稱的資訊清單。 若要使用不同的名稱，請務必使用這個選項，並指定所需的發行者名稱。|
+|**-n, -Name** `nameString`|部署|所有檔案類型。|用來識別應用程式的名稱。 ClickOnce 會使用這個名稱來識別 [開始] 功能表 (如果應用程式是設定為自行安裝) 和 [使用權限提高] 對話方塊中的應用程式。 **注意：** 如果您要更新現有的資訊清單，但未使用此選項來指定發行者名稱，*Mage.exe* 會更新含電腦上定義之組織名稱的資訊清單。 若要使用不同的名稱，請務必使用這個選項，並指定所需的發行者名稱。|
 |**-pwd, -Password** `passwd`||所有檔案類型。|以數位憑證替資訊清單簽章時所使用的密碼。 必須與 **-CertFile** 選項搭配使用。|
 |**-p, Processor** `processorValue`|Msil|應用程式資訊清單。<br /><br /> 部署資訊清單。|這項散發所要執行的微處理器架構。 如果您正準備進行一或數個安裝，且其組件已針對特定微處理器先行編譯過，則需要這個值。 有效值包括 `msil`、 `x86`、 `ia64`和 `amd64`。 `msil` 為 Microsoft 中繼語言，這表示您的所有組件都與平台無關，而且當您的應用程式首次執行時，通用語言執行平台 (CLR) 會對它們進行 Just-In-Time 編譯。|
 |**-pu,** **-ProviderURL** `url`||部署資訊清單。|指定 URL，讓 ClickOnce 從該處檢查是否有應用程式更新。|
@@ -68,7 +68,7 @@ Mage [commands] [commandOptions]
 |**-ti, -TimestampUri** `uri`||應用程式資訊清單。<br /><br /> 部署資訊清單。|數位時間戳記服務的 URL。 在資訊清單加上時間戳記之後，若數位憑證在您部署應用程式的下一個版本之前到期，就無須重新簽署資訊清單。 如需詳細資訊，請參閱 [Windows 根憑證程式成員](https://go.microsoft.com/fwlink/?LinkId=159000)。|
 |**-t, -ToFile** `filePath`|-   新增：<br />-   部署：deploy.application<br />-   應用程式：application.exe.manifest<br />-   更新：<br />-   輸入檔。|所有檔案類型。|指定已建立或已修改之檔案的輸出路徑。<br /><br /> 如果使用 **-New** 時未提供 **-ToFile**，就會將輸出寫入目前的工作目錄。 如果使用 **-Update** 時未提供 **-ToFile**，*Mage.exe* 就會將檔案寫回輸入檔。|
 |**-tr, -TrustLevel** `level`|以應用程式 URL 所在區域為基礎。|應用程式資訊清單。|要授與用戶端電腦上應用程式的信任層級。 可用的值包括 "Internet"、"Intranet" 和 "FullTrust"。|
-|**-um, -UseManifestForTrust** `willUseForTrust`|False|應用程式資訊清單。|指定當應用程式在用戶端上執行時，是否會使用應用程式資訊清單的數位簽章進行信任決策。 指定 "true" 或 "t" 表示信任決策會使用應用程式資訊清單。 指定 "false" 或 "f" 則表示會使用部署資訊清單的簽章。|
+|**-um, -UseManifestForTrust** `willUseForTrust`|偽|應用程式資訊清單。|指定當應用程式在用戶端上執行時，是否會使用應用程式資訊清單的數位簽章進行信任決策。 指定 "true" 或 "t" 表示信任決策會使用應用程式資訊清單。 指定 "false" 或 "f" 則表示會使用部署資訊清單的簽章。|
 |**-v, -Version** `versionNumber`|1.0.0.0|應用程式資訊清單。<br /><br /> 部署資訊清單。|部署的版本。 引數必須是格式為 "*N.N.N.N*" 的有效版本字串，其中 "*N*" 是不帶正負號的 32 位元整數。|
 |**-wpf, -WPFBrowserApp**  `isWPFApp`|False|應用程式資訊清單。<br /><br /> 部署資訊清單。|只有在應用程式是裝載在 Internet Explorer 內的 Windows Presentation Foundation (WPF) 應用程式，且不是獨立的可執行檔時，才使用這個旗標。 有效值為 "true" (或 "t") 和 "false" (或 "f")。<br /><br /> 若為應用程式資訊清單，會在應用程式資訊清單的 `hostInBrowser` 項目底下插入 `entryPoint` 屬性。<br /><br /> 若為部署資訊清單，會將 `install` 項目上的 `deployment` 屬性設為 false，並將部署資訊清單儲存成副檔名為 .xbap 的檔案。 這個引數與 **-Install** 引數一起指定時會產生錯誤，因為瀏覽器裝載的應用程式不能是已安裝的離線應用程式。|
 
@@ -107,7 +107,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  應用程式資訊清單的 **-TrustLevel** 選項，描述了要在用戶端電腦上執行應用程式時所需的使用權限集合。 根據預設，應用程式的信任層級是依據其 URL 所在的「 *區域* 」(Zone) 來指派。 透過公司網路所部署的應用程式，通常都位於內部網路區域，而透過網際網路所部署的應用程式，則位於網際網路區域。 這兩個安全性區域對應用程式存取本機資源的能力都有限制，其中內部網路區域的使用權限稍微大於網際網路區域。 FullTrust 區域授與應用程式完整的存取權限，可以存取電腦的本機資源。 如果使用 **-TrustLevel** 選項將應用程式放在這個區域，則 CLR 的「信任管理員」元件將會提示使用者決定是否要授與這個較高層次的信任。 如果您透過公司網路來部署應用程式，即可使用「受信任的應用程式部署」來提高應用程式的信任層次，而不需要提示使用者做決定。
 
- 應用程式資訊清單同時也支援自訂信任的區段。 這可以協助應用程式遵守「要求最少使用權限」的安全性原則，因為您可以將資訊清單設定成只要求執行應用程式所需的特定使用權限。 *Mage.exe* 不直接支援新增自訂信任區段。 您可以使用文字編輯器、XML 剖析器或圖形工具 *MageUI.exe* 來新增一個區段。 如需如何使用 *MageUI.exe* 新增自訂信任區段的詳細資訊，請參閱 [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
+ 應用程式資訊清單同時也支援自訂信任的區段。 這可以協助應用程式遵守「要求最少使用權限」的安全性原則，因為您可以將資訊清單設定成只要求執行應用程式所需的特定使用權限。 *Mage.exe* 不直接支援新增自訂信任區段。 您可以使用文字編輯器、XML 剖析器或圖形工具 *MageUI.exe* 來新增一個區段。 如需如何使用 *MageUI.exe* 新增自訂信任區段的詳細資訊，請參閱 [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
 
 Visual Studio 2017 包含 *Mage.exe* 的 4.6.1 版。 使用此版本的 *Mage.exe* 建立的資訊清單以 .NET Framework 4 為目標。 若要以舊版的 .NET Framework 為目標，請使用舊版的 *Mage.exe*。
 
@@ -117,27 +117,27 @@ Visual Studio 2017 包含 *Mage.exe* 的 4.6.1 版。 使用此版本的 *Mage.e
 
 |資訊清單版本|運算|Mage v2.0|Mage v4.0|
 |----------------------|---------------|---------------|---------------|
-|以 .NET Framework 2.0 或 3.x 為目標之應用程式的資訊清單|開啟|確定|確定|
-||關閉|確定|確定|
-||儲存|確定|確定|
-||重新簽署|確定|確定|
-||新增|確定|不支援|
-||更新 (請參閱下方)|確定|確定|
-|以 .NET Framework 第 4 版為目標之應用程式的資訊清單|開啟|確定|確定|
-||關閉|確定|確定|
-||儲存|確定|確定|
-||重新簽署|確定|確定|
-||新增|不支援|確定|
-||更新 (請參閱下方)|不支援|確定|
+|以 .NET Framework 2.0 或 3.x 為目標之應用程式的資訊清單|開啟|[確定]|[確定]|
+||關閉|[確定]|[確定]|
+||儲存|[確定]|[確定]|
+||重新簽署|[確定]|[確定]|
+||新增|[確定]|不支援|
+||更新 (請參閱下方)|確定|[確定]|
+|以 .NET Framework 第 4 版為目標之應用程式的資訊清單|開啟|[確定]|[確定]|
+||關閉|[確定]|[確定]|
+||儲存|[確定]|[確定]|
+||重新簽署|[確定]|[確定]|
+||新的|不支援|[確定]|
+||更新 (請參閱下方)|不支援|[確定]|
 
 |資訊清單版本|更新作業詳細資料|Mage v2.0|Mage v4.0|
 |----------------------|------------------------------|---------------|---------------|
-|以 .NET Framework 2.0 或 3.x 為目標之應用程式的資訊清單|修改組件|確定|確定|
-||加入組件|確定|確定|
-||移除組件|確定|確定|
-|以 .NET Framework 第 4 版為目標之應用程式的資訊清單|修改組件|不支援|確定|
-||加入組件|不支援|確定|
-||移除組件|不支援|確定|
+|以 .NET Framework 2.0 或 3.x 為目標之應用程式的資訊清單|修改組件|[確定]|[確定]|
+||加入組件|[確定]|[確定]|
+||移除組件|[確定]|[確定]|
+|以 .NET Framework 第 4 版為目標之應用程式的資訊清單|修改組件|不支援|[確定]|
+||加入組件|不支援|[確定]|
+||移除組件|不支援|[確定]|
 
  Mage.exe 會建立以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]為目標的新資訊清單。 以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標的 ClickOnce 應用程式可以在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 和完整版的 .NET Framework 4 上執行。 如果您的應用程式以完整版的 .NET Framework 4 為目標，而且無法在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 上執行，請使用文字編輯器移除用戶端 `<framework>` 元素，並且重新簽署資訊清單。
 
@@ -222,5 +222,5 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)
-- [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

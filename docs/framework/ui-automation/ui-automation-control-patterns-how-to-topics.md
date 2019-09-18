@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: fea9bf959a0537ead01f27bbeb43874d0e5408df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5d75eddd5314067a364bc8e76108ee7794bcfda
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953090"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042371"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI 自動化控制項模式 HOW TO 主題
 > [!NOTE]
@@ -21,8 +21,8 @@ ms.locfileid: "69953090"
  本章節包含實作控制項模式的詳細資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [使用 UI 自動化公開資料表的內容](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [取得支援的 UI 自動化控制項模式](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [使用 UI 自動化取得核取方塊的切換狀態](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [使用 UI 自動化叫用控制項](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [Move a UI Automation Element](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+ [使用 UI 自動化公開資料表的內容](expose-the-content-of-a-table-using-ui-automation.md)  
+ [取得支援的 UI 自動化控制項模式](get-supported-ui-automation-control-patterns.md)  
+ [使用 UI 自動化取得核取方塊的切換狀態](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [使用 UI 自動化叫用控制項](invoke-a-control-using-ui-automation.md)  
+ [Move a UI Automation Element](move-a-ui-automation-element.md)

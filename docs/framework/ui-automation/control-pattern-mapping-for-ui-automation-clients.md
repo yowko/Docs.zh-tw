@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 64c3dccac61ceb2934904c5d03fc96d961976d6b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cfd8e5dbe34df7b947646c714a360cf56b0435a4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932618"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043865"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自動化用戶端的控制項模式對應
 > [!NOTE]
@@ -34,43 +34,43 @@ ms.locfileid: "69932618"
   
 |控制項類型|支援|有條件支援。|不支援|  
 |------------------|---------------|-------------------------|-------------------|  
-|按鈕|None|叫用、切換、展開摺疊|None|  
+|按鈕|無|叫用、切換、展開摺疊|無|  
 |行事曆|方格、表格|選取、捲軸|值|  
-|核取方塊|Toggle|無|None|  
+|核取方塊|Toggle|None|無|  
 |下拉式方塊|展開摺疊|選取、值|Scroll|  
 |資料格|Grid|捲軸、選取、表格|無|  
-|Data Item|Selection Item|展開摺疊、方格項目、捲軸項目、表格、切換、值|無|  
-|文件|文字|捲軸、值|無|  
-|編輯|無|文字、範圍值、值|無|  
+|Data Item|Selection Item|展開摺疊、方格項目、捲軸項目、表格、切換、值|None|  
+|文件|文字|捲軸、值|None|  
+|編輯|None|文字、範圍值、值|無|  
 |群組|None|展開摺疊|無|  
-|頁首|無|資料轉換|None|  
-|標題項目|None|轉換、叫用|無|  
+|頁首|無|資料轉換|無|  
+|標題項目|無|轉換、叫用|無|  
 |超連結|叫用|值|None|  
-|Image|None|方格項目、表格項目|叫用、選取項目|  
-|清單|無|方格、多重檢視、捲軸、選取|資料表|  
+|Image|無|方格項目、表格項目|叫用、選取項目|  
+|清單|None|方格、多重檢視、捲軸、選取|資料表|  
 |清單項目|Selection Item|展開摺疊、方格項目、叫用、捲軸項目 、切換、值|無|  
 |功能表|無|None|無|  
 |功能表列|無|展開摺疊、停駐、轉換|無|  
-|功能表項目|None|展開摺疊、叫用、選取項目、切換|無|  
+|功能表項目|無|展開摺疊、叫用、選取項目、切換|None|  
 |窗格|無|停駐 捲軸、轉換|視窗|  
-|進度列|None|範圍值、值|None|  
-|選項按鈕|Selection Item|None|Toggle|  
+|進度列|無|範圍值、值|無|  
+|選項按鈕|Selection Item|無|Toggle|  
 |Scroll Bar|無|Range Value|Scroll|  
-|Separator|None|None|無|  
+|Separator|無|None|None|  
 |滑桿|無|範圍值、選取、值|無|  
-|Spinner|None|範圍值、選取、值|無|  
+|Spinner|None|範圍值、選取、值|None|  
 |Split Button|叫用、展開摺疊|None|無|  
-|狀態列|無|Grid|無|  
+|狀態列|None|Grid|無|  
 |索引標籤|選取|Scroll|None|  
 |索引標籤項目|Selection Item|無|叫用|  
-|資料表|方格、方格項目、表格、表格項目|None|無|  
+|資料表|方格、方格項目、表格、表格項目|無|無|  
 |文字|無|方格項目、表格項目、文字|值|  
-|Thumb|資料轉換|None|無|  
-|標題列|None|None|無|  
+|Thumb|資料轉換|無|None|  
+|標題列|無|None|無|  
 |工具列|無|停駐、展開摺疊、轉換|無|  
-|工具提示|無|文字、視窗|無|  
+|工具提示|無|文字、視窗|None|  
 |樹狀結構|無|捲軸、選取|無|  
-|樹狀目錄項目|展開摺疊|叫用、捲軸項目、選取項目、切換|無|  
+|樹狀目錄項目|展開摺疊|叫用、捲軸項目、選取項目、切換|None|  
 |視窗|轉換、視窗|停駐|無|  
   
 > [!NOTE]
@@ -78,4 +78,4 @@ ms.locfileid: "69932618"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI 自動化概觀](ui-automation-overview.md)

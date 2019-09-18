@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e96160b0751e0377b429e63c1be6c6761c406096
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664027"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054059"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 
 <a name="top"></a> 本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。
 
-此主題包括下列章節：
+本主題包含下列幾節：
 
 - [效能分析工具](#performance_analysis_tools)
 
@@ -125,7 +125,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 ### <a name="issue-the-process-uses-too-much-memory"></a>問題：處理序使用太多記憶體
 
-常見的假設是 Windows 工作管理員 [效能]  索引標籤上的記憶體使用量顯示可以指出使用太多記憶體的時刻。 不過，該顯示與工作集有關；它不提供虛擬記憶體使用量的相關資訊。
+常見的假設是 Windows 工作管理員 [效能] 索引標籤上的記憶體使用量顯示可以指出使用太多記憶體的時刻。 不過，該顯示與工作集有關；它不提供虛擬記憶體使用量的相關資訊。
 
 如果您判斷問題是 Managed 堆積所導致，您必須在一段時間內測量 Managed 堆積，以判斷任何模式。
 
@@ -249,7 +249,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="GenBreak"></a>
 
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>在記憶體回收結尾處設定中斷點
+#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>在記憶體回收結尾處設定中斷點
 
 - 在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令：
 
@@ -301,7 +301,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="IsGC"></a>
 
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>判斷問題是否由於記憶體回收所造成
+### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>判斷問題是否由於記憶體回收所造成
 
 - 檢查下列兩個記憶體效能計數器：
 
@@ -313,7 +313,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="OOMIsManaged"></a>
 
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>判斷記憶體不足例外狀況是否為 Managed
+### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>判斷記憶體不足例外狀況是否為 Managed
 
 1. 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入列印例外狀況 (**pe**) 命令：
 
@@ -347,7 +347,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="GetVM"></a>
 
-##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>判斷可以保留多少虛擬記憶體
+### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>判斷可以保留多少虛擬記憶體
 
 - 在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令，取得最大的可用區域：
 
@@ -381,17 +381,17 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="Physical"></a>
 
-##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>判斷是否有足夠的實體記憶體
+### <a name="to-determine-whether-there-is-enough-physical-memory"></a>判斷是否有足夠的實體記憶體
 
 1. 啟動 Windows 工作管理員。
 
-2. 在 [效能]  索引標籤上，查看已認可的值。 (在 Windows 7 中，查看 [系統群組]  中的 [認可 (KB)]  。)
+2. 在 [效能] 索引標籤上，查看已認可的值。 (在 Windows 7 中，查看 [系統群組] 中的 [認可 (KB)]。)
 
-    如果 [總計]  很接近 [限制]  ，則您的實體記憶體不足。
+    如果 [總計] 很接近 [限制]，則您的實體記憶體不足。
 
 <a name="ManagedHeapCommit"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>判斷 Managed 堆積正在認可的記憶體數量
+### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>判斷 Managed 堆積正在認可的記憶體數量
 
 - 使用 `# Total committed bytes` 記憶體效能計數器，以取得 Managed 堆積正在認可的位元組數目。 記憶體回收行程會視需要認可區段上的區塊 (chunk)，而不是同時全部認可。
 
@@ -400,7 +400,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="ManagedHeapReserve"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>判斷 Managed 堆積保留的記憶體數量
+### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>判斷 Managed 堆積保留的記憶體數量
 
 - 使用 `# Total reserved bytes` 記憶體效能計數器。
 
@@ -449,7 +449,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="ExamineGen2"></a>
 
-##### <a name="to-determine-large-objects-in-generation-2"></a>判斷層代 2 的大型物件
+### <a name="to-determine-large-objects-in-generation-2"></a>判斷層代 2 的大型物件
 
 - 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：
 
@@ -489,7 +489,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="ObjRef"></a>
 
-##### <a name="to-determine-references-to-objects"></a>判斷物件的參考
+### <a name="to-determine-references-to-objects"></a>判斷物件的參考
 
 - 在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令，列出物件的參考：
 
@@ -523,7 +523,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="Induce"></a>
 
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>判斷是否已執行完成項
+### <a name="to-determine-whether-a-finalizer-has-been-run"></a>判斷是否已執行完成項
 
 - 執行測試程式，其中包含下列程式碼：
 
@@ -537,7 +537,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="Finalize"></a>
 
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>判斷是否有等候完成的物件
+### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>判斷是否有等候完成的物件
 
 1. 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：
 
@@ -562,7 +562,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="Fragmented"></a>
 
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>判斷 Managed 堆積中的可用空間數量
+### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>判斷 Managed 堆積中的可用空間數量
 
 - 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：
 
@@ -639,7 +639,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="Pinned"></a>
 
-##### <a name="to-determine-the-number-of-pinned-objects"></a>判斷被固定的物件數目
+### <a name="to-determine-the-number-of-pinned-objects"></a>判斷被固定的物件數目
 
 - 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：
 
@@ -655,7 +655,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="TimeInGC"></a>
 
-##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>判斷記憶體回收的時間長度
+### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>判斷記憶體回收的時間長度
 
 - 檢查 `% Time in GC` 記憶體效能計數器。
 
@@ -743,7 +743,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="Triggered"></a>
 
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a>判斷觸發記憶體回收的原因
+### <a name="to-determine-what-triggered-a-garbage-collection"></a>判斷觸發記憶體回收的原因
 
 - 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令以顯示所有執行緒及其呼叫堆疊：
 
@@ -822,7 +822,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="HighCPU"></a>
 
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>判斷高 CPU 使用量是否由於記憶體回收所造成
+### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>判斷高 CPU 使用量是否由於記憶體回收所造成
 
 - 相互關聯 `% Time in GC` 記憶體效能計數器值與處理序時間。
 

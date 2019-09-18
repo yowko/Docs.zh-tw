@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 866ec425fd66ee8b3b62263180ac7e6d776108f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894497"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049795"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>範例：針對動態程式設計進行疑難排解
 > [!NOTE]
@@ -33,7 +33,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 [snip]  
 ```  
   
- 讓我們試著使用[使用者入門](../../../docs/framework/net-native/getting-started-with-net-native.md)的＜手動解析遺失的中繼資料＞一節中描述的三步驟方法，針對這個例外狀況進行疑難排解。  
+ 讓我們試著使用[使用者入門](getting-started-with-net-native.md)的＜手動解析遺失的中繼資料＞一節中描述的三步驟方法，針對這個例外狀況進行疑難排解。  
   
 ## <a name="what-was-the-app-doing"></a>應用程式做了什麼？  
  要注意的第一件事，就是位於堆疊基底的 `async` 關鍵字裝置。  判斷應用程式在 `async` 方法中真正做了什麼可能會有問題，因為堆疊已失去原始呼叫的內容，而且已經在不同的執行緒上執行 `async` 程式碼。 不過，我們可以推算應用程式是在嘗試載入其第一個分頁。  在 `NavigationArgs.Setup` 的實作中，下列程式碼造成了存取違規：  
@@ -56,9 +56,9 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
  使用 `App.Core.ViewModels` 時，可能也會發生其他問題。  您必須決定是否值得識別並修正每個遺失中繼資料的例外狀況，還是要節省時間，並為較大類別的類型加入指示詞。  在這裡，如果輸出二進位檔產生的結果大小增加並不是問題，則為 `dynamic` 加入 `App.Core.ViewModels` 中繼資料可能是最佳方法。  
   
 ## <a name="could-the-code-be-rewritten"></a>可以改寫程式碼嗎？  
- 如果應用程式使用 `typeof(LayoutApplicationVM)`，而不是 `Type.GetType("LayoutApplicationVM")`，則工具鏈可能保留了 `browse` 中繼資料。  不過，它還是不會建立 `invoke` 中繼資料，如此一來，在具現化類型時，就會導致 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外狀況。 若要避免這個例外狀況，您還是必須為命名空間或是指定 `dynamic` 原則的類型加入執行階段指示詞。 如需執行階段指示詞的相關資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
+ 如果應用程式使用 `typeof(LayoutApplicationVM)`，而不是 `Type.GetType("LayoutApplicationVM")`，則工具鏈可能保留了 `browse` 中繼資料。  不過，它還是不會建立 `invoke` 中繼資料，如此一來，在具現化類型時，就會導致 [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外狀況。 若要避免這個例外狀況，您還是必須為命名空間或是指定 `dynamic` 原則的類型加入執行階段指示詞。 如需執行階段指示詞的相關資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [範例：在系結資料時處理例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [快速入門](getting-started-with-net-native.md)
+- [範例：在系結資料時處理例外狀況](example-handling-exceptions-when-binding-data.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 4a88cf077c061746f9bc9f4aa0122d2f09b6fbd7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133793"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042267"
 ---
 # <a name="ui-automation-overview"></a>UI 自動化概觀
 > [!NOTE]
@@ -26,17 +26,17 @@ ms.locfileid: "70133793"
   
  撰寫使用者介面自動化用戶端應用程式時，可以保證應用程式可在多個架構上運作。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心可以降低組成 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]各種元件之架構的任何差異。 例如， `Content` 按鈕的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 屬性、 `Caption` 按鈕的 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 屬性以及 HTML 影像的 `ALT` 屬性，都會對應至 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>檢視中的單一屬性 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。  
   
-使用者介面自動化會在執行 .NET Framework 的支援 Windows 作業系統上提供完整的功能 (請參閱從 .NET Core 3.0 開始, [.NET Framework 系統需求](../get-started/system-requirements.md)或 .net core 版本。  
+使用者介面自動化會在執行 .NET Framework 的支援 Windows 作業系統上提供完整的功能（請參閱從 .NET Core 3.0 開始， [.NET Framework 系統需求](../get-started/system-requirements.md)或 .net core 版本。  
   
- 使用者介面自動化提供者會透過內建的橋接服務, 提供 Microsoft Active Accessibility 用戶端應用程式的一些支援。  
+ 使用者介面自動化提供者會透過內建的橋接服務，提供 Microsoft Active Accessibility 用戶端應用程式的一些支援。  
   
 <a name="Providers_and_Clients"></a>   
 ## <a name="providers-and-clients"></a>提供者和用戶端  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 具有四個主要元件，如下表所示。  
   
-|元件|說明|  
+|元件|描述|  
 |---------------|-----------------|  
-|提供者 API (Uiautomationprovider.dll .dll 和 UIAutomationTypes)|一組由使用者介面自動化提供者實作的介面定義，提供 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目之相關資訊，以及對程式設計輸入做出回應的物件。|  
+|提供者 API （Uiautomationprovider.dll .dll 和 UIAutomationTypes）|一組由使用者介面自動化提供者實作的介面定義，提供 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目之相關資訊，以及對程式設計輸入做出回應的物件。|  
 |用戶端 API (UIAutomationClient.dll 和 UIAutomationTypes.dll)|一組 Managed 程式碼，可讓使用者介面自動化用戶端應用程式取得 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的相關資訊，並將輸入傳送至控制項。|  
 |UiAutomationCore.dll|基礎程式碼 (有時稱為 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心) 會處理提供者和用戶端之間的通訊。|  
 |UIAutomationClientsideProviders.dll|一組適用於標準舊版控制項的使用者介面自動化提供者。 ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控制項具有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的原生支援。)這個支援將會自動可供用戶端應用程式使用。|  
@@ -45,12 +45,12 @@ ms.locfileid: "70133793"
   
 |區段|主題|適用對象|  
 |-------------|--------------------|--------------|  
-|[使用者介面自動化基本](../../../docs/framework/ui-automation/index.md)概念(本節)|概念概觀淺論。|全部。|  
-|[Managed 程式碼的使用者介面自動化提供者](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|協助您使用提供者 API 的概觀及操作說明主題。|控制項開發人員。|  
-|[Managed 程式碼的使用者介面自動化用戶端](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|協助您使用用戶端 API 的概觀及操作說明主題。|用戶端應用程式開發人員。|  
-|[使用者介面自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|提供者應如何實作控制項模式，以及哪些功能可供用戶端使用的相關資訊。|全部。|  
-|[使用者介面自動化文字模式](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|提供者應如何實作文字控制項模式，以及哪些功能可供用戶端使用的相關資訊。|全部。|  
-|[UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)|不同控制項類型支援之屬性和控制項模式的相關資訊。|全部。|  
+|[使用者介面自動化基本](index.md)概念（本節）|概念概觀淺論。|全部。|  
+|[Managed 程式碼的使用者介面自動化提供者](ui-automation-providers-for-managed-code.md)|協助您使用提供者 API 的概觀及操作說明主題。|控制項開發人員。|  
+|[Managed 程式碼的使用者介面自動化用戶端](ui-automation-clients-for-managed-code.md)|協助您使用用戶端 API 的概觀及操作說明主題。|用戶端應用程式開發人員。|  
+|[使用者介面自動化控制項模式](ui-automation-control-patterns.md)|提供者應如何實作控制項模式，以及哪些功能可供用戶端使用的相關資訊。|全部。|  
+|[使用者介面自動化文字模式](ui-automation-text-pattern.md)|提供者應如何實作文字控制項模式，以及哪些功能可供用戶端使用的相關資訊。|全部。|  
+|[UI Automation Control Types](ui-automation-control-types.md)|不同控制項類型支援之屬性和控制項模式的相關資訊。|全部。|  
   
  下表會列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間、包含這些命名空間的 DLL 以及命名空間的適用對象。  
   
@@ -70,14 +70,14 @@ ms.locfileid: "70133793"
  此外，項目還會公開控制項模式，用以提供其控制項類型專用的屬性。 控制項模式也會公開方法，讓用戶端取得項目的進一步資訊及提供輸入。  
   
 > [!NOTE]
-> 控制項類型和控制項模式之間並不存在一對一的對應關係。 控制項模式可由多個控制項類型所支援，且控制項可支援多個控制項模式，每個控制項都會公開其行為的不同層面。 例如，下拉式方塊擁有至少兩個控制項模式：其中一個代表展開和折疊的能力，另一個則代表選取機制。 如需特定資訊，請參閱 [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)。  
+> 控制項類型和控制項模式之間並不存在一對一的對應關係。 控制項模式可由多個控制項類型所支援，且控制項可支援多個控制項模式，每個控制項都會公開其行為的不同層面。 例如，下拉式方塊擁有至少兩個控制項模式：其中一個代表展開和折疊的能力，另一個則代表選取機制。 如需特定資訊，請參閱 [UI Automation Control Types](ui-automation-control-types.md)。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 也可以透過事件，將資訊提供給用戶端應用程式。 與 [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]不同的是， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件並不是以廣播機制為基礎。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 用戶端會註冊特定事件通知，且可以要求將特定的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性和控制項模式資訊傳遞至所屬的事件處理常式。 此外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件也包含引發事件之項目的參考。 提供者可以選擇引發事件來改善效能，取決於是否有任何用戶端接聽。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI 自動化屬性概觀](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
-- [UI 自動化事件概觀](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [UI 自動化安全性概觀](../../../docs/framework/ui-automation/ui-automation-security-overview.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
+- [UI 自動化屬性概觀](ui-automation-properties-overview.md)
+- [UI 自動化事件概觀](ui-automation-events-overview.md)
+- [UI 自動化安全性概觀](ui-automation-security-overview.md)

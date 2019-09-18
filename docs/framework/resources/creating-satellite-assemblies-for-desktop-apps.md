@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29739625d29db6dc7c3876007f1e733b15f5c026
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970983"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045692"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>建立桌面應用程式的附屬組件
 
@@ -54,7 +54,7 @@ ms.locfileid: "70970983"
 
 - 附屬組件文化特性的資訊必須包括在組件的中繼資料內。 若要將文化特性名稱儲存在附屬組件的中繼資料內，請在使用[組件連結器](../tools/al-exe-assembly-linker.md)將資源內嵌在附屬組件時指定 `/culture` 選項。
 
-下圖顯示未在[全域組件快取](../../framework/app-domains/gac.md)中安裝之應用程式的範例目錄結構和位置需求。 副檔名為 .txt 和 .resources 的項目將不會隨附最終應用程式。 這些是用來建立最終附屬資源組件的中繼資源檔。 在此範例中，您可以將 .resx 檔案取代為 .txt 檔案。 如需詳細資訊，請參閱[封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)。
+下圖顯示未在[全域組件快取](../app-domains/gac.md)中安裝之應用程式的範例目錄結構和位置需求。 副檔名為 .txt 和 .resources 的項目將不會隨附最終應用程式。 這些是用來建立最終附屬資源組件的中繼資源檔。 在此範例中，您可以將 .resx 檔案取代為 .txt 檔案。 如需詳細資訊，請參閱[封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)。
 
 下圖顯示附屬組件目錄：
 
@@ -95,8 +95,8 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 2. 若要指出英文 (en) 是應用程式的預設文化特性，請將下列 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 屬性新增至應用程式的 AssemblyInfo 檔案或將編譯為應用程式主要組件的主要原始程式碼檔案。
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+    [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. 將其他文化特性 (en-US、fr-FR 和 ru-RU) 的支援新增至應用程式，如下所示：  
   
@@ -150,17 +150,19 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
  您接著可以執行此範例。 它會隨機讓其中一個支援的文化特性成為目前文化特性，並顯示當地語系化的問候語。
   
 <a name="SN"></a>   
+
 ## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>在全域組件快取中安裝附屬組件  
- 您可以將組件安裝在全域組件快取中，而不是在本機應用程式子目錄中安裝組件。 如果您有供多個應用程式使用的類別庫和類別庫資源組件，則這特別有用。
+您可以將組件安裝在全域組件快取中，而不是在本機應用程式子目錄中安裝組件。 如果您有供多個應用程式使用的類別庫和類別庫資源組件，則這特別有用。
   
- 在全域組件快取中安裝組件時，需要組件具有強式名稱。 強式名稱組件會使用有效的公開/私密金鑰組進行簽署。 它們包含執行階段用來判斷要用來滿足繫結要求之組件的版本資訊。 如需強式名稱和版本控制的詳細資訊，請參閱[組件版本控制](../../standard/assembly/versioning.md)。 如需強式名稱的詳細資訊，請參閱[強式名稱的組件](../../standard/assembly/strong-named.md)。
+在全域組件快取中安裝組件時，需要組件具有強式名稱。 強式名稱組件會使用有效的公開/私密金鑰組進行簽署。 它們包含執行階段用來判斷要用來滿足繫結要求之組件的版本資訊。 如需強式名稱和版本控制的詳細資訊，請參閱[組件版本控制](../../standard/assembly/versioning.md)。 如需強式名稱的詳細資訊，請參閱[強式名稱的組件](../../standard/assembly/strong-named.md)。
   
- 當您開發應用程式時，可能無法存取最終公開/私密金鑰組。 若要在全域組件快取中安裝附屬組件，並確認它的運作正常，您可以使用稱為延遲簽署的技術。 當您延遲簽署組件時，請在建置時間於檔案中保留強式名稱簽章的空間。 有最終公開/私密金鑰組可用時，會將實際簽署延遲到稍後。 如需延遲簽署的詳細資訊，請參閱[延遲簽署組件](../../standard/assembly/delay-sign.md)。
+當您開發應用程式時，可能無法存取最終公開/私密金鑰組。 若要在全域組件快取中安裝附屬組件，並確認它的運作正常，您可以使用稱為延遲簽署的技術。 當您延遲簽署組件時，請在建置時間於檔案中保留強式名稱簽章的空間。 有最終公開/私密金鑰組可用時，會將實際簽署延遲到稍後。 如需延遲簽署的詳細資訊，請參閱[延遲簽署組件](../../standard/assembly/delay-sign.md)。
   
 ### <a name="obtaining-the-public-key"></a>取得公開金鑰  
- 若要延遲簽署組件，您必須具有公開金鑰的存取權。 您可以從公司中進行最後簽署的組織中取得實際公開金鑰，或使用[強式名稱工具 (Sn.exe)](../tools/sn-exe-strong-name-tool.md) 建立公開金鑰。
+
+若要延遲簽署組件，您必須具有公開金鑰的存取權。 您可以從公司中進行最後簽署的組織中取得實際公開金鑰，或使用[強式名稱工具 (Sn.exe)](../tools/sn-exe-strong-name-tool.md) 建立公開金鑰。
   
- 下列 Sn.exe 命令會建立測試公開/私密金鑰組。 **–k** 選項會指定 Sn.exe 應該建立新的金鑰組，並將它儲存在名為 TestKeyPair.snk 的檔案中。
+下列 Sn.exe 命令會建立測試公開/私密金鑰組。 **–k** 選項會指定 Sn.exe 應該建立新的金鑰組，並將它儲存在名為 TestKeyPair.snk 的檔案中。
   
 ```console
 sn –k TestKeyPair.snk
@@ -196,7 +198,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>在全域組件快取中安裝附屬組件
 
-執行階段在資源後援程序中搜尋資源時，會先尋找[全域組件快取](../../framework/app-domains/gac.md) (如需詳細資訊，請參閱[封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)主題的＜資源後援程序＞一節)。只要附屬組件是使用強式名稱進行簽署，就可以使用[全域組件快取工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 將它安裝在全域組件快取中。
+執行階段在資源後援程序中搜尋資源時，會先尋找[全域組件快取](../app-domains/gac.md) (如需詳細資訊，請參閱[封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)主題的＜資源後援程序＞一節)。只要附屬組件是使用強式名稱進行簽署，就可以使用[全域組件快取工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 將它安裝在全域組件快取中。
 
 下列 Gacutil.exe 命令會在全域組件快取中安裝 StringLibrary.resources.dll：
 

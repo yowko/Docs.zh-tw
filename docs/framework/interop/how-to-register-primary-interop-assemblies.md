@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946680"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051732"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>作法：登錄主要 Interop 組件
 
@@ -24,7 +24,7 @@ ms.locfileid: "69946680"
 
  即使您不打算公開協力廠商 COM 類型，使用主要 Interop 組件也可以簡化與 COM 元件的互通工作。 不過，此策略不會針對廠商可能對主要 Interop 組件中定義之類型的變更進行隔離。 當您的應用程式需要這類隔離時，請產生您自己的 Interop 組件，而不要使用主要 Interop 組件。
 
- 您必須先在開發電腦上註冊所有取得的主要 Interop 組件，才能使用 Visual Studio 來加以參考。 Visual Studio 會在您第一次從 COM 類型程式庫參考類型時，尋找並使用主要 Interop 組件。 如果 Visual Studio 找不到與類型程式庫相關聯的主要 Interop 組件，它會提示您取得該組件，或是提供您建立 Interop 組件的方式。 同樣地，[型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 也會使用登錄來找出主要 Interop 組件。
+ 您必須先在開發電腦上註冊所有取得的主要 Interop 組件，才能使用 Visual Studio 來加以參考。 Visual Studio 會在您第一次從 COM 類型程式庫參考類型時，尋找並使用主要 Interop 組件。 如果 Visual Studio 找不到與類型程式庫相關聯的主要 Interop 組件，它會提示您取得該組件，或是提供您建立 Interop 組件的方式。 同樣地，[型別程式庫匯入工具 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 也會使用登錄來找出主要 Interop 組件。
 
  雖然除非您打算使用 Visual Studio，否則並不需要註冊主要 Interop 組件，但註冊有兩個優點：
 
@@ -32,11 +32,11 @@ ms.locfileid: "69946680"
 
 - 如果未來某些時候，您會使用 Visual Studio 來參考具有未註冊主要 Interop 組件的類型，就可以避免不小心產生及使用新的 Interop 組件。
 
-使用[組件註冊工具 (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 來註冊主要 Interop 組件。
+使用[組件註冊工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 來註冊主要 Interop 組件。
 
 ## <a name="to-register-a-primary-interop-assembly"></a>註冊主要 Interop 組件
 
-1. 在命令提示中，輸入：
+1. 在命令提示字元中，輸入：
 
      **regasm** *assemblyname*
 

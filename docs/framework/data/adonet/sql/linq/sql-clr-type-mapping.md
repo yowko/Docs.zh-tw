@@ -2,12 +2,12 @@
 title: SQL-CLR 類型對應
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6710c58a430c35dae41a1a381335019fd3e75192
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792530"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053032"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 類型對應
 在 LINQ to SQL 中，關聯式資料庫的資料模型會對應至以您選擇之程式語言表示的物件模型 (Object Model)。 執行應用程式時，LINQ to SQL 會將物件模型中的 Language Integrated Query (LINQ) 轉譯成 SQL，並將這些查詢傳送至資料庫進行執行。 當資料庫傳回結果時，LINQ to SQL 會將結果轉譯回您可以在自己的程式語言中處理的物件。  
@@ -44,7 +44,7 @@ ms.locfileid: "70792530"
 ## <a name="type-mapping-run-time-behavior-matrix"></a>型別對應的執行階段行為對照表  
  下圖顯示從資料庫中擷取資料或將資料儲存至資料庫時，特定型別對應的預期執行階段行為。 除了序列化 (Serialization) 以外，LINQ to SQL 不支援此對照表中未指定之任何 CLR 或 SQL Server 資料型別之間的對應。 如需序列化支援的詳細資訊，請參閱[二進位序列化](#BinarySerialization)。  
  
-![SQL Server 至 SQL CLR 資料類型對應表](media/sql-clr-type-mapping.png)
+![SQL Server 至 SQL CLR 資料類型對應表](./media/sql-clr-type-mapping.png)
 
 > [!NOTE]
 > 在資料庫之間來回轉譯時，某些型別對應可能會造成溢位或資料遺失的例外狀況 (Exception)。  

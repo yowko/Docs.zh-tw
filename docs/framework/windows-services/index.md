@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 32aa2c1c4cd31e4591c9fa30c05ebe61058f94c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008703"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053547"
 ---
 # <a name="develop-windows-service-apps"></a>開發 Windows 服務應用程式
 
@@ -27,19 +27,19 @@ ms.locfileid: "62008703"
 
 ## <a name="in-this-section"></a>本節內容
 
-[Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+[Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
 
 提供 Windows 服務應用程式、服務存留期，以及服務應用程式與其他常見專案類型有何不同的概觀。
 
-[逐步解說：在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[逐步解說：在元件設計工具中建立 Windows 服務應用程式](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 提供在 Visual Basic 和 Visual C# 中建立服務的範例。
 
-[服務應用程式的程式設計架構](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+[服務應用程式的程式設計架構](service-application-programming-architecture.md)
 
 說明服務程式設計中所使用的語言元素。
 
-[如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[如何：建立 Windows 服務](how-to-create-windows-services.md)
 
 描述使用 Windows 服務專案範本來建立和設定 Windows 服務的程序。
 

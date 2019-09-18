@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce93ea321c0441208e223efc22cf1f50e98b827c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044125"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049431"
 ---
 # <a name="net-native-and-compilation"></a>.NET 原生和編譯
 
 以 .NET Framework 為目標的 Windows 8.1 應用程式及 Windows 桌面應用程式，會以特定的程式設計語言撰寫，並會編譯成中繼語言 (IL)。 在執行階段，Just-In-Time (JIT) 編譯器在第一次執行方法之前，才會負責編譯 IL 為本機電腦的原生程式碼。 相較之下，.NET 原生工具鏈會在編譯時期轉換原始碼為原生程式碼。 本主題比較 .NET 原生與其他適用於 .NET Framework 應用程式的編譯技術，並提供 .NET 原生如何產生原生程式碼的實用概觀，可協助您了解為什麼在以 .NET 原生編譯的程式碼中發生的例外狀況不會發生在 JIT 編譯程式碼中。
 
-## <a name="net-native-generating-native-binaries"></a>.NET Native:產生原生二進位檔
+## <a name="net-native-generating-native-binaries"></a>.NET Native：產生原生二進位檔
 
 目標為 .NET Framework 且不使用 .NET 原生工具鏈編譯的應用程式，可由您的應用程式組件組成，其中包含下列項目：
 
@@ -82,7 +82,7 @@ ms.locfileid: "70044125"
 
 - COM Interop。
 
-如果在執行階段沒有必要的中繼資料或實作程式碼，則 .NET Native 執行階段會擲回例外狀況。 您可以防止這些例外狀況發生，並確認 .NET Native 工具鏈中包含必要的中繼資料和實作程式碼，這可藉由使用[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)達成，此為指定程式項目的 XML 檔案，其中繼資料或實作程式碼必須是在執行階段可用的，且指派執行階段原則給程式項目。 以下是加入由 .NET 原生工具鏈所編譯的 Windows 市集專案之預設執行階段指示詞檔案：
+如果在執行階段沒有必要的中繼資料或實作程式碼，則 .NET Native 執行階段會擲回例外狀況。 您可以防止這些例外狀況發生，並確認 .NET Native 工具鏈中包含必要的中繼資料和實作程式碼，這可藉由使用[執行階段指示詞檔案](runtime-directives-rd-xml-configuration-file-reference.md)達成，此為指定程式項目的 XML 檔案，其中繼資料或實作程式碼必須是在執行階段可用的，且指派執行階段原則給程式項目。 以下是加入由 .NET 原生工具鏈所編譯的 Windows 市集專案之預設執行階段指示詞檔案：
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -96,7 +96,7 @@ ms.locfileid: "70044125"
 
 ## <a name="net-native-and-ngen"></a>.NET 原生和 NGEN
 
-[原生映像產生器](../../../docs/framework/tools/ngen-exe-native-image-generator.md) (NGEN) 會將組件編譯成機器碼，並在本機電腦的原生映像快取中安裝它們。 不過，儘管 NGEN 如同 .NET 原生會產生機器碼，仍有幾個不同於 .NET 原生的顯著區別：
+[原生映像產生器](../tools/ngen-exe-native-image-generator.md) (NGEN) 會將組件編譯成機器碼，並在本機電腦的原生映像快取中安裝它們。 不過，儘管 NGEN 如同 .NET 原生會產生機器碼，仍有幾個不同於 .NET 原生的顯著區別：
 
 - 如果沒有原生映像能用於特定的方法，NGEN 會轉而使用 JIT 編譯的程式碼。 這表示在 NGEN 需要轉而使用 JIT 編譯的情況下，原生映像必須繼續包含中繼資料和 IL。 相反地，.NET 原生只會產生原生映像，並不會轉而產生 JIT 編譯。 如此一來，您只需保留一些反映、序列化和 Interop 案例所需的中繼資料。
 
@@ -107,6 +107,6 @@ ms.locfileid: "70044125"
 ## <a name="see-also"></a>另請參閱
 
 - [中繼資料和自我描述元件](../../standard/metadata-and-self-describing-components.md)
-- [內部 .NET Native (Channel 9 影片)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [.NET Native 一般疑難排解](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [內部 .NET Native （Channel 9 影片）](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [反映和 .NET Native](reflection-and-net-native.md)
+- [.NET Native 一般疑難排解](net-native-general-troubleshooting.md)

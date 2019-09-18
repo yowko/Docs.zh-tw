@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 5fd17f9ca9d83ab3b226ce9fc0a4aebca4f9352a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044162"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042770"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>伺服器端 UI 自動化提供者實作
 
@@ -20,7 +20,7 @@ ms.locfileid: "70044162"
 
 本節描述如何為自訂控制項實作伺服器端使用者介面自動化提供者。
 
-Windows Presentation Foundation (WPF) 專案和非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]元素的執行 (例如針對所[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]設計的專案) 基本上不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過衍生自 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的類別提供 <xref:System.Windows.Automation.Peers.AutomationPeer>的支援。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過提供者介面的實作提供支援。
+Windows Presentation Foundation （WPF）專案和非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]元素的執行（例如針對所[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]設計的專案）基本上不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過衍生自 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的類別提供 <xref:System.Windows.Automation.Peers.AutomationPeer>的支援。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過提供者介面的實作提供支援。
 
 <a name="Security_Considerations"></a>
 
@@ -34,7 +34,7 @@ Windows Presentation Foundation (WPF) 專案和非[!INCLUDE[TLA2#tla_wpf](../../
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>依 Windows Presentation Foundation 項目的提供者實作
 
-如需本主題的詳細資訊，請參閱 [WPF 自訂控制項的 UI 自動化](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)。
+如需本主題的詳細資訊，請參閱 [WPF 自訂控制項的 UI 自動化](../wpf/controls/ui-automation-of-a-wpf-custom-control.md)。
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -121,7 +121,7 @@ Windows Presentation Foundation (WPF) 專案和非[!INCLUDE[TLA2#tla_wpf](../../
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 通常由主機提供者所提供。 例如，如果自訂控制項衍生自 <xref:System.Windows.Forms.Control>，則名稱衍生自控制項的 `Text` 屬性。
 
-如需範例程式碼，請參閱 [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)。
+如需範例程式碼，請參閱 [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md)。
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -129,7 +129,7 @@ Windows Presentation Foundation (WPF) 專案和非[!INCLUDE[TLA2#tla_wpf](../../
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者應該引發事件，將 UI 狀態中的變更通知用戶端應用程式。 下列方法會用於引發事件。
 
-|方法|說明|
+|方法|描述|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|引發各種事件，包括由控制項模式觸發的事件。|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性變更後，即會引發事件。|
@@ -139,7 +139,7 @@ Windows Presentation Foundation (WPF) 專案和非[!INCLUDE[TLA2#tla_wpf](../../
 
 若要最佳化效能，提供者可以選擇性地引發事件，或如果沒有註冊任何用戶端應用程式來接收事件，則完全不引發任何事件。 下列方法會用於最佳化。
 
-|方法|描述|
+|方法|說明|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|這個靜態屬性會指定是否有任何用戶端應用程式已訂閱 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|提供者在片段根上實作此介面，可讓提供者在用戶端針對片段上的事件註冊和取消註冊事件處理常式時接到通知。|
@@ -191,9 +191,9 @@ rebar 控制項就是這種情況的好範例。 Rebar 包含群組列，其中�
 
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化提供者概觀](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [公開伺服器端 UI 自動化提供者](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [從 UI 自動化提供者傳回屬性](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [UI 自動化提供者引發事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [在 UI 自動化片段提供者中啟用導覽](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [UI 自動化提供者概觀](ui-automation-providers-overview.md)
+- [公開伺服器端 UI 自動化提供者](expose-a-server-side-ui-automation-provider.md)
+- [從 UI 自動化提供者傳回屬性](return-properties-from-a-ui-automation-provider.md)
+- [UI 自動化提供者引發事件](raise-events-from-a-ui-automation-provider.md)
+- [在 UI 自動化片段提供者中啟用導覽](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: ca46eb01ee8a18e83cecbc26b2e9bf82778c210b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 450a3f3a4969287181aa031ab581b85447bfde56
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954078"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040431"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>UI 自動化文字模式 HOW-TO 主題
 > [!NOTE]
@@ -22,9 +22,9 @@ ms.locfileid: "69954078"
  本節包含的主題說明如何使用 UI 自動化文字模式。  
   
 ## <a name="in-this-section"></a>本節內容  
- [使用 UI 自動化將內容新增至文字方塊](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [使用 UI 自動化尋找和反白顯示文字](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [使用 UI 自動化取得文字屬性](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [使用 UI 自動化取得混合文字屬性詳細資料](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [使用 UI 自動化周遊文字](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [使用 UI 自動化存取內嵌物件](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [使用 UI 自動化將內容新增至文字方塊](add-content-to-a-text-box-using-ui-automation.md)  
+ [使用 UI 自動化尋找和反白顯示文字](find-and-highlight-text-using-ui-automation.md)  
+ [使用 UI 自動化取得文字屬性](obtain-text-attributes-using-ui-automation.md)  
+ [使用 UI 自動化取得混合文字屬性詳細資料](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [使用 UI 自動化周遊文字](traverse-text-using-ui-automation.md)  
+ [使用 UI 自動化存取內嵌物件](access-embedded-objects-using-ui-automation.md)

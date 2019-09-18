@@ -2,12 +2,12 @@
 title: PNRP 雲端
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623035"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047364"
 ---
 # <a name="pnrp-clouds"></a>PNRP 雲端
 PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「雲端」這個詞相當於「對等網格」和「點對點圖形」。  
@@ -34,4 +34,4 @@ PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.PeerToPeer.Cloud>
-- [對等名稱解析通訊協定](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+- [對等名稱解析通訊協定](peer-name-resolution-protocol.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6065e06fa4fb51cd0cd746a1619f8a611f2fc30b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 410c8bdb63b56a78dbfa64c21344fdcd6a6656c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064073"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051603"
 ---
 # <a name="specifying-an-entry-point"></a>指定進入點
 進入點可識別函式在 DLL 中的位置。 在 Managed 專案中，目標函式的原始名稱或序數進入點可跨越交互操作界限識別該函式。 此外，您可以將進入點對應到不同的名稱，有效地重新命名函式。  
@@ -43,7 +43,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- 您可以將 **MessageBox** 進入點取代為 **MsgBox**，方法是在您的定義中包含 **Alias** 關鍵字，如下列範例所示。 在這兩個範例中，**Auto** 關鍵字讓您不需要指定進入點的字元集版本。 如需選取字元集的詳細資訊，請參閱[指定字元集](../../../docs/framework/interop/specifying-a-character-set.md)。  
+ 您可以將 **MessageBox** 進入點取代為 **MsgBox**，方法是在您的定義中包含 **Alias** 關鍵字，如下列範例所示。 在這兩個範例中，**Auto** 關鍵字讓您不需要指定進入點的字元集版本。 如需選取字元集的詳細資訊，請參閱[指定字元集](specifying-a-character-set.md)。  
   
 ```vb
 Friend Class NativeMethods
@@ -93,6 +93,6 @@ extern "C" int MsgBox(
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)
-- [使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md)
+- [平台叫用範例](platform-invoke-examples.md)
+- [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)

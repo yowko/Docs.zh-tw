@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發工作流程
 description: 了解開發 Docker 應用程式的工作流程詳細資料。 一開始會逐步了解一些用以最佳化 Dockerfile 的詳細資料，最後將取得使用 Visual Studio 時可用的簡化工作流程。
 ms.date: 01/07/2019
-ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 36caff247d031b8808ab953ec884b7ce292858eb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674815"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040267"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -23,7 +23,7 @@ ms.locfileid: "68674815"
 
 ## <a name="workflow-for-developing-docker-container-based-applications"></a>開發 Docker 容器型應用程式的工作流程
 
-本節描述 Docker 容器型應用程式的「內部迴圈」  開發工作流程。 內部迴圈工作流程表示不考慮更廣泛的 DevOps 工作流程 (最多可包含生產環境部署)，只著重於在開發人員電腦上完成的開發工作。 設定環境的初始步驟不包含在內，因為這些步驟只執行一次。
+本節描述 Docker 容器型應用程式的「內部迴圈」開發工作流程。 內部迴圈工作流程表示不考慮更廣泛的 DevOps 工作流程 (最多可包含生產環境部署)，只著重於在開發人員電腦上完成的開發工作。 設定環境的初始步驟不包含在內，因為這些步驟只執行一次。
 
 應用程式是由您自己的服務加上額外的程式庫 (相依性) 所組成。 以下是組建 Docker 應用程式時通常會採用的基本步驟，如圖 5-1 所示。
 
@@ -51,11 +51,11 @@ ms.locfileid: "68674815"
 
 [Get started with Docker CE for Windows](https://docs.docker.com/docker-for-windows/) (開始使用 Docker CE for Windows)
 
-此外，您還需要安裝了 [.NET Core 跨平台開發]  工作負載的 Visual Studio 2017 15.7 版或更新版本，如圖 5-2 所示。
+此外，您還需要安裝了 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 15.7 版或更新版本，如圖 5-2 所示。
 
 ![在 Visual Studio 安裝期間選取 [.NET Core 跨平台開發] 工作負載。](./media/image3.png)
 
-**圖 5-2**。 在 Visual Studio 2017 安裝期間選取 [.NET Core 跨平台開發]  工作負載
+**圖 5-2**。 在 Visual Studio 2017 安裝期間選取 [.NET Core 跨平台開發] 工作負載
 
 您甚至可以在於您的應用程式中啟用 Docker，並在 Docker 中部署與測試之前，只使用 .NET 開始撰寫應用程式的程式碼 (如果您打算使用容器通常會使用 .NET Core)。 不過，建議您盡快開始使用 Docker，因為它會成為實際環境，可以盡快發現任何問題。 我們鼓勵您這麼做，是因為 Visual Studio 和 Docker 合作很容易，您幾乎感覺不到它，最佳範例是從 Visual Studio 偵錯多容器應用程式時。
 
@@ -75,13 +75,13 @@ ms.locfileid: "68674815"
 
 Dockerfile 放在您應用程式或服務的根資料夾中。 它包含告訴 Docker 如何設定及執行容器中應用程式或服務的命令。 您可以使用程式碼手動建立 Dockerfile，將它與您的 .NET 相依性一起新增至您的專案。
 
-使用 Visual Studio 及其適用於 Docker 的工具，這項工作只需要按幾下滑鼠即可。 當您在 Visual Studio 2017 中建立新專案時，有一個選項名為 [Enable Container (Docker) Support] \(啟用容器 (Docker) 支援\)  ，如圖 5-3 所示。
+使用 Visual Studio 及其適用於 Docker 的工具，這項工作只需要按幾下滑鼠即可。 當您在 Visual Studio 2017 中建立新專案時，有一個選項名為 [Enable Container (Docker) Support] \(啟用容器 (Docker) 支援\)，如圖 5-3 所示。
 
 ![在 Visual Studio 2017 中建立新 ASP.NET Core 專案時的 [Enable Docker Support] \(啟用 Docker 支援\) 核取方塊](./media/image5.png)
 
 **圖 5-3**。 在 Visual Studio 2017 中建立新的 ASP.NET Core 專案時啟用 Docker 支援
 
-您也可以在現有的 ASP.NET Core Web 應用程式專案上啟用 Docker 支援，方法是以滑鼠右鍵按一下 [方案總管]  中的專案，然後選取 [新增]   > [Docker 支援]  ，如圖 5-4 所示。
+您也可以在現有的 ASP.NET Core Web 應用程式專案上啟用 Docker 支援，方法是以滑鼠右鍵按一下 [方案總管] 中的專案，然後選取 [新增] > [Docker 支援]，如圖 5-4 所示。
 
 ![在 Visual Studio 中新增 Docker 支援功能表選項](./media/image6.png)
 
@@ -89,7 +89,7 @@ Dockerfile 放在您應用程式或服務的根資料夾中。 它包含告訴 D
 
 這個動作會將具有所需組態的 *Dockerfile* 新增至專案，且只能在 ASP.NET Core 專案上使用。
 
-同樣地，Visual Studio 也可以使用 [新增] > [容器協調器支援]  選項，為整個方案新增 docker-compose.yml 檔案。 在步驟 4 中，我們將更詳細探索這個選項。
+同樣地，Visual Studio 也可以使用 [新增] > [容器協調器支援] 選項，為整個方案新增 docker-compose.yml 檔案。 在步驟 4 中，我們將更詳細探索這個選項。
 
 ### <a name="using-an-existing-official-net-docker-image"></a>使用現有的官方 .NET Docker 映像
 
@@ -204,28 +204,37 @@ Dockerfile 類似於批次指令碼。 類似於必須從命令列設定電腦�
 
 以下逐行詳細說明：
 
-<!-- markdownlint-disable MD029-->
-1. 以僅限執行階段的「小型」基底映像開始一個階段，並將它稱為**基底**以供參考。
-2. 在映像中建立 **/app** 目錄。
-3. 公開連接埠 **80**。
-<!-- skip -->
-5. 以用於建置/發佈的「大型」映像開始一個新階段，並將它稱為**建置**以供參考。
-6. 在映像中建立目錄 **/src**。
-7. 最多 16 行，複製參考專案 **.csproj** 檔案，以便稍後能夠還原套件。
-<!-- skip -->
-17. 還原 **Catalog.API** 專案和參考專案的套件。
-18. 將**方案所有樹狀目錄** ( **.dockerignore** 檔案中所包含的檔案/目錄除外) 複製到映像的 **/src** 目錄。
-19. 將目前的資料夾變更為 **Catalog.API** 專案。
-20. 建置專案 (及其他專案相依性) 並輸出至映像的 **/app** 目錄。
-<!-- skip -->
-22. 從建置繼續開始一個新階段，並將它稱為**發佈**以供參考。
-23. 發佈專案 (及相依性) 並輸出至映像的 **/app** 目錄。
-<!-- skip -->
-25. 從**基底**繼續開始一個新階段，並將它稱為**最終**
-26. 將目前的目錄變更為 **/app**
-27. 將 **/app** 目錄從**發佈**階段複製到目前的目錄
-28. 定義啟動容器時要執行的命令。
-<!-- markdownlint-enable MD029-->
+- **行 #1：** 以僅限執行階段的「小型」基底映像開始一個階段，並將它稱為**基底**以供參考。
+
+- **行 #2：** 在映射中建立 **/app**目錄。
+
+- **行 #3：** 公開連接埠 **80**。
+
+- **行 #5：** 開始新的階段，其中包含「大型」映射以供建立/發行。 呼叫它**組建**以供參考。
+
+- **行 #6：** 在映像中建立目錄 **/src**。
+
+- **行 #7：** 最多第16行，複製參考**的 .csproj**專案檔，以便之後能夠還原封裝。
+
+- **行 #17：** 還原 **Catalog.API** 專案和參考專案的套件。
+
+- **行 #18：** 將**解決方案的所有目錄樹狀結構**（包含在 **.dockerignore**檔案中的檔案/目錄除外）複製到映射中的 **/src**目錄。
+
+- **行 #19：** 將目前的資料夾變更為**Catalog. API**專案。
+
+- **行 #20：** 建立專案（以及其他專案相依性）並輸出至映射中的 **/app**目錄。
+
+- **行 #22：** 開始新的階段，從組建繼續進行。 呼叫它來**發行**以供參考。
+
+- **行 #23：** 發佈專案（和相依性）並輸出至映射中的 **/app**目錄。
+
+- **行 #25：** 開始新的階段繼續進行**基底**，並將其命名為**最終**。
+
+- **行 #26：** 將目前的目錄變更為 **/app**。
+
+- **行 #27：** 將 **/app**目錄從階段**發行**複製到目前的目錄。
+
+- **行 #28：** 定義啟動容器時要執行的命令。
 
 現在讓我們來探索一些可改善整體程序效能的最佳化，以 eShopOnContainers 為例，則表示在 Linux 容器中建置完整方案需要約 22 分鐘或更多的時間。
 
@@ -239,9 +248,9 @@ COPY . .
 
 則每個服務都會相同，它會複製整個方案並建立較大的圖層，但：
 
-1) 複製程序只會在第一次執行 (以及因檔案變更而重建時執行)，並針對所有其他服務使用快取
+1. 複製程序只會在第一次執行 (以及因檔案變更而重建時執行)，並針對所有其他服務使用快取
 
-2) 由於較大的映像出現在中間階段，因此不會影響最終映像大小。
+2. 由於較大的映像出現在中間階段，因此不會影響最終映像大小。
 
 下一個重要的最佳化涉及第 17 行所執行的 `restore` 命令，這也會因 eShopOnContainers 的每個服務而異。 如果您將該行變更為：
 

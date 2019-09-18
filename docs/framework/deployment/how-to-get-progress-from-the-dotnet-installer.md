@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853969"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052092"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>HOW TO：取得 .NET Framework 4.5 安裝程式的進度
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>作法：取得 .NET Framework 4.5 安裝程式的進度
 
 .NET Framework 4.5 是可轉散發的執行階段。 如果您要開發這個 .NET Framework 版本的應用程式，可以在應用程式安裝程式中納入 (鏈結) .NET Framework 4.5 安裝程式作為必要條件。 若要呈現自訂或整合的安裝體驗，您可能要以無訊息模式啟動 .NET Framework 4.5 安裝程式並追蹤其進度，同時顯示應用程式的安裝進度。 若要啟用無訊息追蹤，.NET Framework 4.5 安裝程式 (您可加以監看) 會使用記憶體對應 I/O (MMIO) 區段定義通訊協定，以便與您的安裝程式 (監控程式或 Chainer) 進行通訊。 此通訊協定會定義一種方式讓 Chainer 獲得進度資訊、取得詳細結果、回應訊息，以及取消 .NET Framework 4.5 安裝程式。
 
@@ -50,7 +50,7 @@ ms.locfileid: "70853969"
 
 ## <a name="chainer-sample"></a>Chainer 範例
 
-Chainer 範例會以無訊息模式啟動並追蹤 .NET Framework 4.5 安裝程式，同時顯示進度。 此範例類似為 .NET Framework 4 提供的 Chainer 範例。 但另外，它可以處理關閉 .NET Framework 4 應用程式的訊息方塊，避免系統重新啟動。 如需此訊息方塊的資訊，請參閱[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)。 您可以使用此範例配合 .NET Framework 4 安裝程式，在該案例中不會傳送訊息。
+Chainer 範例會以無訊息模式啟動並追蹤 .NET Framework 4.5 安裝程式，同時顯示進度。 此範例類似為 .NET Framework 4 提供的 Chainer 範例。 但另外，它可以處理關閉 .NET Framework 4 應用程式的訊息方塊，避免系統重新啟動。 如需此訊息方塊的資訊，請參閱[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](reducing-system-restarts.md)。 您可以使用此範例配合 .NET Framework 4 安裝程式，在該案例中不會傳送訊息。
 
 > [!WARNING]
 > 您必須以系統管理員身分執行此範例。
@@ -311,5 +311,5 @@ Chainer 範例會以無訊息模式啟動並追蹤 .NET Framework 4.5 安裝程�
 
 ## <a name="see-also"></a>另請參閱
 
-- [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [部署](../../../docs/framework/deployment/index.md)
+- [開發人員部署手冊](deployment-guide-for-developers.md)
+- [部署](index.md)

@@ -3,12 +3,12 @@ title: 建置第一個宣告感知 ASP.NET Web 應用程式
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 900ee49b4bf51eeb6e3b0c0cf6879cc12a0cb071
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422398"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045583"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>建置第一個宣告感知 ASP.NET Web 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -19,7 +19,7 @@ ms.locfileid: "67422398"
   
  本主題概述使用 WIF 建置宣告感知 ASP.NET Web 應用程式的案例。 在一個宣告感知應用程式案例中，通常會有三個參與者：應用程式本身、使用者和 Security Token Service (STS)。 下列圖將說明這個案例：  
   
- ![此圖表顯示 WIF 基本 Web 應用程式元件。](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
+ ![顯示 WIF 基本 Web 應用程式元件的圖表。](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1. 宣告感知應用程式使用 WIF 識別未驗證的要求，並將它們重新導向至 STS。  
   
@@ -33,20 +33,20 @@ ms.locfileid: "67422398"
   
  STS 服務會在驗證成功後發行權杖。 Microsoft 提供兩項業界標準 STS：  
   
-- [Active Directory Federation Services (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Active Directory 同盟服務（AD FS）2。0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure 存取控制服務 (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Windows Azure 存取控制服務（ACS）](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- AD FS 2.0 是 Windows Server R2 的一部分，可以當做供內部部署案例使用的 STS； ACS 則是當做 Microsoft Azure 平台的一部分而提供的雲端服務。 此外，基於測試或教育目的，您也可以使用其他 STS 建立專屬宣告感知應用程式。 例如，您可以使用屬於本機開發 STS [Identity and Access Tool for Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849)這就是線上免費提供。  
+ AD FS 2.0 是 Windows Server R2 的一部分，可以當做供內部部署案例使用的 STS； ACS 則是當做 Microsoft Azure 平台的一部分而提供的雲端服務。 此外，基於測試或教育目的，您也可以使用其他 STS 建立專屬宣告感知應用程式。 例如，您可以使用屬於身分[識別和存取工具](https://go.microsoft.com/fwlink/?LinkID=245849)的本機開發 STS，以取得可在線上免費使用的 Visual Studio。  
   
  若要使用 WIF 建立您的第一個宣告感知 ASP.NET 應用程式，請遵循下列其中一項指示執行：  
   
-- [如何：建置宣告感知 ASP.NET MVC Web 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+- [如何：使用 WIF 建立宣告感知 ASP.NET MVC Web 應用程式](how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
-- [如何：建置宣告感知 ASP.NET Web Form 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [如何：使用 WIF 建立宣告感知 ASP.NET Web Forms 應用程式](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
-- [如何：建置宣告感知 ASP.NET 應用程式使用表單型驗證](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [如何：使用以表單為基礎的驗證，建立宣告感知 ASP.NET 應用程式](claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [開始使用 WIF](../../../docs/framework/security/getting-started-with-wif.md)
+- [開始使用 WIF](getting-started-with-wif.md)

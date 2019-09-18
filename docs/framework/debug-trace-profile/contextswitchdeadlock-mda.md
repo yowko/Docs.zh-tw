@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660316"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052918"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -48,7 +48,7 @@ ms.locfileid: "64660316"
 若要判斷是否錯誤地啟用 MDA，請停用所有中斷點、重新啟動應用程式，並且讓它不間斷地執行。 如果未啟用 MDA，則可能初始啟用時發生錯誤。 若是如此，請停用 MDA，以避免阻礙偵錯工作階段。
 
 > [!NOTE]
-> 此 MDA 會在預設設定適用於 Visual Studio。 如需有關如何停用 Mda 的資訊，請參閱 < [Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)。
+> 此 MDA 位於 Visual Studio 的預設集合中。 如需如何停用 Mda 的詳細資訊，請參閱[診斷 Managed 偵錯工具的錯誤](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)。
 
 ## <a name="resolution"></a>解決方式
 
@@ -75,5 +75,5 @@ ms.locfileid: "64660316"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)
+- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop 封送處理](../interop/interop-marshaling.md)

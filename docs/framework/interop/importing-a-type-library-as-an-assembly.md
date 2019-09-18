@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8826b73c02c4d4c54458f08581c0c35238201f6
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: db9571a2d07bcdf9830ef93cd07a5dae912f4677
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662391"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051713"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>匯入類型程式庫做為組件
 
@@ -36,7 +36,7 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
 
 當您使用僅限設計階段的 Interop 組件時，可以內嵌 COM 元件作者所發佈之主要 Interop 組件的類型資訊。 不過，您不必與應用程式一起部署主要 Interop 組件。
 
-使用僅限設計階段 Interop 組件會減少應用程式的大小，因為大部分的應用程式不會使用 COM 元件的所有功能。 編譯器在內嵌類型資訊時非常有效；如果應用程式只使用 COM 介面的部分方法，則編譯器不會內嵌未使用的方法。 當具有內嵌類型資訊的應用程式與其他此類應用程式互動，或與使用主要 Interop 組件的應用程式互動時，通用語言執行平台會使用類型相等規則，來判斷兩個類型是否使用相同的名稱表示相同的 COM 類型。 您不需要知道這些規則，就可使用 COM 物件。 不過，如果對這些規則感興趣，請參閱[類型相等和內嵌 Interop 類型](../../../docs/framework/interop/type-equivalence-and-embedded-interop-types.md)。
+使用僅限設計階段 Interop 組件會減少應用程式的大小，因為大部分的應用程式不會使用 COM 元件的所有功能。 編譯器在內嵌類型資訊時非常有效；如果應用程式只使用 COM 介面的部分方法，則編譯器不會內嵌未使用的方法。 當具有內嵌類型資訊的應用程式與其他此類應用程式互動，或與使用主要 Interop 組件的應用程式互動時，通用語言執行平台會使用類型相等規則，來判斷兩個類型是否使用相同的名稱表示相同的 COM 類型。 您不需要知道這些規則，就可使用 COM 物件。 不過，如果對這些規則感興趣，請參閱[類型相等和內嵌 Interop 類型](type-equivalence-and-embedded-interop-types.md)。
 
 ## <a name="generating-metadata"></a>產生中繼資料
 
@@ -46,11 +46,11 @@ COM 類型程式庫可以是單獨的檔案，副檔名為 .tlb (例如 Loanlib.
 
 - Visual Studio
 
-  Visual Studio 會自動將型別程式庫中的 COM 類型轉換為組件中的中繼資料。 如需相關指示，請參閱[如何：將參考新增至類型程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)。
+  Visual Studio 會自動將型別程式庫中的 COM 類型轉換為組件中的中繼資料。 如需相關指示，請參閱[如何：將參考新增至類型程式庫](how-to-add-references-to-type-libraries.md)。
 
-- [型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [型別程式庫匯入工具 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)
 
-  型別程式庫匯入工具提供命令列選項，可以調整產生的 Interop 檔案的中繼資料、從現有型別程式庫匯入型別，以及產生 Interop 組件和命名空間。 如需相關指示，請參閱[如何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)。
+  型別程式庫匯入工具提供命令列選項，可以調整產生的 Interop 檔案的中繼資料、從現有型別程式庫匯入型別，以及產生 Interop 組件和命名空間。 如需相關指示，請參閱[如何：從型別程式庫產生 Interop 組件](how-to-generate-interop-assemblies-from-type-libraries.md)。
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> 類別
 
@@ -75,12 +75,12 @@ COM 類型程式庫可以是單獨的檔案，副檔名為 .tlb (例如 Loanlib.
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [將 COM 元件公開給 .NET Framework](exposing-com-components.md)
 - [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (類型程式庫匯入工具)](../tools/tlbimp-exe-type-library-importer.md)
 - [自訂標準包裝函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [在受控程式碼中使用 COM 類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [編譯 Interop 專案](../../../docs/framework/interop/compiling-an-interop-project.md)
-- [部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)
-- [如何：將參考新增至型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
-- [如何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [編譯 Interop 專案](compiling-an-interop-project.md)
+- [部署 Interop 應用程式](deploying-an-interop-application.md)
+- [如何：將參考新增至型別程式庫](how-to-add-references-to-type-libraries.md)
+- [如何：從型別程式庫產生 Interop 組件](how-to-generate-interop-assemblies-from-type-libraries.md)

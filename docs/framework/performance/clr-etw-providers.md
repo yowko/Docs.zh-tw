@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894705"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046729"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供者
 Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取消提供者。  
   
  執行階段提供者會根據啟用哪些關鍵字 (事件的類別) 來引發事件。 例如，您可以啟用 `LoaderKeyword` 關鍵字來收集載入器事件。  
   
- Windows 事件追蹤（ETW）事件會記錄到具有 .etl 副檔名的檔案中，稍後可以視需要以逗號分隔值（.csv）檔案進行後續處理。 如需如何將 .etl 檔案轉換成 .csv 檔案的資訊，請參閱[控制 .NET Framework 記錄](../../../docs/framework/performance/controlling-logging.md)。  
+ Windows 事件追蹤（ETW）事件會記錄到具有 .etl 副檔名的檔案中，稍後可以視需要以逗號分隔值（.csv）檔案進行後續處理。 如需如何將 .etl 檔案轉換成 .csv 檔案的資訊，請參閱[控制 .NET Framework 記錄](controlling-logging.md)。  
   
 ## <a name="the-runtime-provider"></a>執行階段提供者  
  執行階段提供者是主要 CLR ETW 提供者。  
   
  CLR 執行階段提供者 GUID 是 e13c0d23-ccbc-4e12-931b-d9cc2eee27e4。  
   
- 如需如何使用常用工具來記錄和檢視 CLR ETW 事件的範例，請參閱[控制 .NET Framework 記錄](../../../docs/framework/performance/controlling-logging.md)。  
+ 如需如何使用常用工具來記錄和檢視 CLR ETW 事件的範例，請參閱[控制 .NET Framework 記錄](controlling-logging.md)。  
   
- 除了使用 `LoaderKeyword` 這類關鍵字之外，您可能還需要啟用關鍵字來記錄可能太頻繁引發的事件。 `StartEnumerationKeyword` 和 `EndEnumerationKeyword` 關鍵字會啟用這些事件，[CLR ETW 關鍵字和層級](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)中會有摘要說明。  
+ 除了使用 `LoaderKeyword` 這類關鍵字之外，您可能還需要啟用關鍵字來記錄可能太頻繁引發的事件。 `StartEnumerationKeyword` 和 `EndEnumerationKeyword` 關鍵字會啟用這些事件，[CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)中會有摘要說明。  
   
 ## <a name="the-rundown-provider"></a>取消提供者  
  針對某些特殊用途，必須開啟取消提供者。 不過，對大部分的使用者而言，執行階段提供者應該就已足夠。  
@@ -93,4 +93,4 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
 ## <a name="see-also"></a>另請參閱
 
-- [Common Language Runtime 中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Common Language Runtime 中的 ETW 事件](etw-events-in-the-common-language-runtime.md)

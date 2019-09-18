@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, creating client-side provider
 - client-side UI Automation provider, creating
 ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
-ms.openlocfilehash: f9f7258c272ada867b406c5615c5d2d52e1d98a6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 483090b38f58481c992ebabaf26e6cbcf9c6cae8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937918"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043830"
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>建立用戶端 UI 自動化提供者
 > [!NOTE]
@@ -22,12 +22,12 @@ ms.locfileid: "69937918"
  本主題包含範例程式碼，說明如何實作用戶端的使用者介面自動化提供者。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例可以內建在動態連結程式庫 (DLL) 中, 以在主控台視窗中執行非常簡單的用戶端提供者。 這個程式碼並沒有任何實際用途，只是用來示範設定提供者組件的基本步驟 (這個組件可由使用者介面自動化用戶端應用程式註冊)。  
+ 下列程式碼範例可以內建在動態連結程式庫（DLL）中，以在主控台視窗中執行非常簡單的用戶端提供者。 這個程式碼並沒有任何實際用途，只是用來示範設定提供者組件的基本步驟 (這個組件可由使用者介面自動化用戶端應用程式註冊)。  
   
  [!code-csharp[UIAClientSideProvider_snip#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/CSProviderProgram.cs#101)]
  [!code-vb[UIAClientSideProvider_snip#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csproviderprogram.vb#101)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化提供者概觀](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [註冊用戶端提供者組件](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
+- [UI 自動化提供者概觀](ui-automation-providers-overview.md)
+- [註冊用戶端提供者組件](register-a-client-side-provider-assembly.md)

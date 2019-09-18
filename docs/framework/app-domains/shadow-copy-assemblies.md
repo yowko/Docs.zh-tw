@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e38f70ded85e8db36068c19fdd1708511817db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040726"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053078"
 ---
 # <a name="shadow-copying-assemblies"></a>陰影複製組件
 
@@ -76,7 +76,7 @@ Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸�
 
 從 .NET Framework 4 開始，預設啟動行為會直接比較應用程式目錄中每個組件的檔案日期和時間，以及陰影複製目錄中複本的檔案日期和時間。 如果已更新組件，便會使用和舊版 .NET Framework 相同的程序複製組件；否則會載入陰影複製目錄中的複本。
 
-對於組件不常變更，且變更通常發生在組件一小部分的應用程式而言，會產生最大的效能改進。 如果應用程式中大部分的組件經常變更，則新的預設行為可能會導致效能變差。 您可以藉由將 [\<shadowCopyVerifyByTimestamp> 項目](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) (並設定 `enabled="false"`) 新增至組態檔，還原舊版 .NET Framework 的啟動行為。
+對於組件不常變更，且變更通常發生在組件一小部分的應用程式而言，會產生最大的效能改進。 如果應用程式中大部分的組件經常變更，則新的預設行為可能會導致效能變差。 您可以藉由將 [\<shadowCopyVerifyByTimestamp> 項目](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) (並設定 `enabled="false"`) 新增至組態檔，還原舊版 .NET Framework 的啟動行為。
 
 <a name="ObsoleteMethods"></a>
 
@@ -90,4 +90,4 @@ Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸�
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<shadowCopyVerifyByTimestamp> 項目](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp> 項目](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
