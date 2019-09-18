@@ -1,6 +1,6 @@
 - name: ML.NET
   href: index.yml
-- name: 概觀
+- name: 總覽
   expanded: true
   items:
     - name: API
@@ -17,7 +17,7 @@
   items:
     - name: API
       items:
-        - name: 概觀
+        - name: 總覽
           href: tutorials/index.md
         - name: 分析情感 (二元分類)
           href: tutorials/sentiment-analysis.md
@@ -35,12 +35,16 @@
           href: tutorials/sales-anomaly-detection.md
         - name: 偵測影像中的物件 (物件偵測)
           href: tutorials/object-detection-onnx.md
+        - name: 使用 TensorFlow 將情感分類 (文字分類)
+          href: tutorials/text-classification-tf.md
     - name: 工具
       items:
         - name: 使用模型建立器預測價格
           href: tutorials/predict-prices-with-model-builder.md
         - name: 使用 ML.NET CLI 分析情感
           href: tutorials/mlnet-cli.md
+        - name: 使用 Model Builder 及 Razor Pages 分析情感
+          href: tutorials/sentiment-analysis-model-builder.md
 - name: 概念
   items:
     - name: ML.NET 工作 (模型類型)
