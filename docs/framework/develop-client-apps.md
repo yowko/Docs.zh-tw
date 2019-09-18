@@ -13,32 +13,32 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: b8c63aa074f699fa77c25441995a2ae74b78caf8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: b9d9efb62e0c6bc0925662bc9424065922a1534c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106500"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051991"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>使用 .NET Framework 開發用戶端應用程式
 
 有數種方式能夠使用 .NET Framework 開發以 Windows 為基礎的應用程式。 您可以使用下列任一工具及架構： 
 
 - [通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows/apps)
-- [Windows Presentation Foundation (WPF)](../../docs/framework/wpf/index.md)
-- [Windows Forms](../../docs/framework/winforms/index.md)
+- [Windows Presentation Foundation (WPF)](./wpf/index.md)
+- [Windows Forms](./winforms/index.md)
 
 本節中的主題說明如何使用 Windows Presentation Foundation 或 Windows Forms 建立以 Windows 為基礎的應用程式。 不過，您也可以使用 .NET Framework 來建立 Web 應用程式，以及可在您透過 Microsoft Store 取得的電腦或裝置上執行的用戶端應用程式。
  
 ## <a name="in-this-section"></a>本節內容
 
-[Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
+[Windows Presentation Foundation](./wpf/index.md)  
 提供使用 WPF 開發應用程式的相關資訊。
 
-[Windows Forms](../../docs/framework/winforms/index.md)  
+[Windows Forms](./winforms/index.md)  
 提供使用 Windows Form 開發應用程式的相關資訊。
 
-[常見的用戶端技術](../../docs/framework/common-client-technologies/index.md)  
+[常見的用戶端技術](./common-client-technologies/index.md)  
 提供可在開發用戶端應用程式時使用之其他技術的相關資訊。
 
 ## <a name="related-sections"></a>相關章節
@@ -52,7 +52,7 @@ ms.locfileid: "70106500"
 [適用於 Windows Phone Silverlight 的 .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))  
 列出可用於建置 Windows Phone Silverlight 應用程式的 .NET Framework API。
   
-[進行多平台開發](../../docs/standard/cross-platform/index.md)  
+[進行多平台開發](../standard/cross-platform/index.md)  
 描述您可以針對多種用戶端應用程式類型使用 .NET Framework 的不同方法。
 
 [開始使用 ASP.NET 網站](https://www.asp.net/get-started/websites)  
@@ -60,7 +60,7 @@ ms.locfileid: "70106500"
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Standard](../../docs/standard/net-standard.md)
-- [概觀](../../docs/framework/get-started/overview.md)
-- [開發指南](../../docs/framework/development-guide.md)
-- [Windows 服務應用程式](../../docs/framework/windows-services/index.md)
+- [.NET Standard](../standard/net-standard.md)
+- [概觀](./get-started/overview.md)
+- [開發指南](./development-guide.md)
+- [Windows 服務應用程式](./windows-services/index.md)

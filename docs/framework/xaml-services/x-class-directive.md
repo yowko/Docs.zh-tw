@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 563802be655e0cb66c9a2735a64da9d7723c2a43
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e04085db0fa5a4c4170846dc4ac10d0131032a7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401518"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053807"
 ---
 # <a name="xclass-directive"></a>x:Class 指示詞
 設定 XAML 標記編譯以聯結標記和程式碼後置之間的部分類別。 程式碼部分類別是以 Common Language Specification (CLS) 語言在不同的程式碼檔案中定義, 而標記部分類別通常是在 XAML 編譯期間由程式碼產生所建立。  
   
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage  
   
-```  
+```xaml  
 <object x:Class="namespace.classname"...>  
   ...  
 </object>  

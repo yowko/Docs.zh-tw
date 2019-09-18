@@ -9,14 +9,14 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 5df070bb2cfef42d60247cad39f2a2f76963bae8
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c28c6daf9b873a19291b1636112eae6546412be2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894738"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048321"
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a>作法：自訂以時間為基礎的快取原則
+# <a name="how-to-customize-a-time-based-cache-policy"></a>HOW TO：自訂以時間為基礎的快取原則
 在建立以時間為基礎的快取原則時，您可以藉由指定最長使用期限、最短有效期限、最長過時或快取同步處理日期的值來自訂快取行為。 <xref:System.Net.Cache.HttpRequestCachePolicy> 物件所提供的建構函式可讓您指定這些值的有效組合。  
   
 ### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>建立使用快取同步處理日期之以時間為基礎的快取原則  
@@ -120,8 +120,8 @@ Level:Default MaxAge:36000 MinFresh:18000
   
 ## <a name="see-also"></a>另請參閱
 
-- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [快取原則](../../../docs/framework/network-programming/cache-policy.md)
-- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [網路應用程式的快取管理](cache-management-for-network-applications.md)
+- [快取原則](cache-policy.md)
+- [以位置為基礎的快取原則](location-based-cache-policies.md)
+- [以時間為基礎的快取原則](time-based-cache-policies.md)
+- [\<requestCaching> 項目 (網路設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

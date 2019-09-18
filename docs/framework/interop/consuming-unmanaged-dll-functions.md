@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946837"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051836"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
 平台叫用服務，可讓受控碼呼叫實作在動態連結程式庫 (DLL) 中的非受控函式，如 Windows API 中的函式。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
@@ -29,15 +29,15 @@ ms.locfileid: "69946837"
   
 #### <a name="to-consume-exported-dll-functions"></a>使用匯出的 DLL 函式  
   
-1. [識別 DLL 中的函式](../../../docs/framework/interop/identifying-functions-in-dlls.md)。  
+1. [識別 DLL 中的函式](identifying-functions-in-dlls.md)。  
   
      至少，您必須指定函式的名稱以及包含該函式之 DLL 的名稱。  
   
-2. [建立類別以包裝 DLL 函式](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)。  
+2. [建立類別以包裝 DLL 函式](creating-a-class-to-hold-dll-functions.md)。  
   
      您可以使用現有的類別、為每個 Unmanaged 函式建立個別的類別、或建立一個類別，其中包含一組相關的 Unmanaged 函式。  
   
-3. [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] 搭配使用**宣告**陳述式與**函式**和 **Lib** 關鍵字。 在某些罕見的情況下，您可以搭配使用 **DllImportAttribute** 與**共用函式**關鍵字。 關於這種情況本節會於稍後加以說明。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "69946837"
   
      [C#] 使用 **DllImportAttribute** 來識別 DLL 和函式。 以**外部 "C"** 來標記包裝函式方法或函式。  
   
-4. [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)。  
+4. [呼叫 DLL 函式](calling-a-dll-function.md)。  
   
-     在您的 Managed 類別上呼叫方法，如同您呼叫任何其他 Managed 方法。 [傳遞結構](../../../docs/framework/interop/passing-structures.md)和[實作回呼函式](../../../docs/framework/interop/callback-functions.md)為特殊案例。  
+     在您的 Managed 類別上呼叫方法，如同您呼叫任何其他 Managed 方法。 [傳遞結構](passing-structures.md)和[實作回呼函式](callback-functions.md)為特殊案例。  
   
- 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
+ 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>進一步了解平台叫用  
  平台叫用依賴中繼資料來找出被匯出的函式，並在執行階段封送處理其引數。 下圖顯示這個程序。  
@@ -73,6 +73,6 @@ ms.locfileid: "69946837"
 
 ## <a name="see-also"></a>另請參閱
 
-- [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)
-- [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)
+- [與 Unmanaged 程式碼互通](index.md)
+- [平台叫用範例](platform-invoke-examples.md)
+- [Interop 封送處理](interop-marshaling.md)

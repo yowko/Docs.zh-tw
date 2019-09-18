@@ -7,29 +7,29 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 29ff388685c67d06d7c5866a46954d5ade72acb1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817939"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053368"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>裝載支援 API 的原生 WPF 瀏覽器
-在網頁瀏覽器中裝載應用程式是由從WPF主機註冊的活動文檔伺服器(也稱為DocObject)所促成。[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Internet Explorer 可以直接啟用並與使用中的檔整合。 若要在 Mozilla 瀏覽器中裝載 xbap 和鬆散的[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] XAML 檔, 提供了 NPAPI 外掛程式, 可提供與 Internet Explorer [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]相同的主控環境給使用中的檔案伺服器。 不過, 在其他瀏覽器和獨立應用程式中裝載 Xbap 和 XAML 檔最簡單的方式, 是透過 Internet Explorer 網頁瀏覽器控制項。 網頁瀏覽器控制項提供複雜的活動文檔伺服器裝載環境, 但它可讓自己的主機自訂和擴充該環境, 並直接與目前的活動文檔物件通訊。  
+在網頁瀏覽器中裝載應用程式是由從WPF主機註冊的活動文檔伺服器（也稱為DocObject）所促成。[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Internet Explorer 可以直接啟用並與使用中的檔整合。 若要在 Mozilla 瀏覽器中裝載 xbap 和鬆散的[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] XAML 檔，提供了 NPAPI 外掛程式，可提供與 Internet Explorer [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]相同的主控環境給使用中的檔案伺服器。 不過，在其他瀏覽器和獨立應用程式中裝載 Xbap 和 XAML 檔最簡單的方式，是透過 Internet Explorer 網頁瀏覽器控制項。 網頁瀏覽器控制項提供複雜的活動文檔伺服器裝載環境，但它可讓自己的主機自訂和擴充該環境，並直接與目前的活動文檔物件通訊。  
   
- 活動文檔伺服器會執行數個常見的裝載介面，包括 [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049)、[IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050)、[IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051)、[IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045)、[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)。[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 在 Web 瀏覽器控制項中裝載時, 這些介面可以是從[IWebBrowser2::D 檔頁尾](https://go.microsoft.com/fwlink/?LinkId=162048)屬性所傳回之物件的查詢。  
+ 活動文檔伺服器會執行數個常見的裝載介面，包括 [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049)、[IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050)、[IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051)、[IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045)、[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)。[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 在 Web 瀏覽器控制項中裝載時，這些介面可以是從[IWebBrowser2：:D 檔頁尾](https://go.microsoft.com/fwlink/?LinkId=162048)屬性所傳回之物件的查詢。  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- WPF 活動文檔伺服器的[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)的執行, 支援標準 OLE 命令群組的多種導覽相關和瀏覽器特定命令 (使用 null 命令群組 GUID)。 此外, 它也會辨識名為 CGID_PresentationHost 的自訂命令群組。 目前, 此群組中只有一個已定義的命令。  
+ WPF 活動文檔伺服器的[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)的執行，支援標準 OLE 命令群組的多種導覽相關和瀏覽器特定命令（使用 null 命令群組 GUID）。 此外，它也會辨識名為 CGID_PresentationHost 的自訂命令群組。 目前，此群組中只有一個已定義的命令。  
   
-```  
+```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
 enum PresentationHostCommands {   
    PHCMDID_TABINTO = 1   
 };  
 ```  
   
- PHCMDID_TABINTO 指示 Presentationhost.exe 根據 Shift 鍵的狀態, 將焦點切換到其內容中的第一個或最後一個可設定的元素。  
+ PHCMDID_TABINTO 指示 Presentationhost.exe 根據 Shift 鍵的狀態，將焦點切換到其內容中的第一個或最後一個可設定的元素。  
   
 ## <a name="in-this-section"></a>本節內容  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  

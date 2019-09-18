@@ -3,12 +3,12 @@ title: WIF API 參考
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 17a1da0a3b0ea6567fd805e7273f793ace35ae69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fd7f34e619626ddca63074a89ec7253fd818ab55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958350"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045142"
 ---
 # <a name="wif-api-reference"></a>WIF API 參考
 Windows Identity Foundation (WIF) 類別會分成下列組件：`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。 本主題提供 WIF 命名空間的連結，以及每個命名空間所包含類別的簡短說明。  
@@ -20,7 +20,7 @@ Windows Identity Foundation (WIF) 類別會分成下列組件：`mscorlib` (msco
  包含的類別代表 Cookie 轉換、安全性權杖服務，以及特定的 XML 字典讀取器。  
   
  <xref:System.IdentityModel.Configuration?displayProperty=nameWithType>  
- 包含的類別可為使用 Windows Identity Foundation (WIF) 建置的應用程式和服務提供組態。 此命名空間中的類別代表 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素下的設定。  
+ 包含的類別可為使用 Windows Identity Foundation (WIF) 建置的應用程式和服務提供組態。 此命名空間中的類別代表 [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 元素下的設定。  
   
  <xref:System.IdentityModel.Metadata?displayProperty=nameWithType>  
  包含的類別代表同盟中繼資料文件中的元素。  
@@ -29,10 +29,10 @@ Windows Identity Foundation (WIF) 類別會分成下列組件：`mscorlib` (msco
  包含的類別代表 WS-Trust 成品。  
   
  <xref:System.IdentityModel.Services?displayProperty=nameWithType>  
- 包含的類別用於被動 (WS-同盟) 情節。 也包含一些代表 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下設定的類別。 此元素下的設定可用來設定應用程式的 WS-同盟。 `System.IdentityModel.Services.Configuration` 命名空間包含大部分用來設定 WS-同盟的類別。  
+ 包含的類別用於被動 (WS-同盟) 情節。 也包含一些代表 [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下設定的類別。 此元素下的設定可用來設定應用程式的 WS-同盟。 `System.IdentityModel.Services.Configuration` 命名空間包含大部分用來設定 WS-同盟的類別。  
   
  <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>  
- 包含的類別可為使用 WS-同盟通訊協定的 WIF 應用程式提供組態。 此命名空間中的類別代表 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下的設定。 `System.IdentityModel.Services` 命名空間也包含一些用來設定 WS-同盟的類別。  
+ 包含的類別可為使用 WS-同盟通訊協定的 WIF 應用程式提供組態。 此命名空間中的類別代表 [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下的設定。 `System.IdentityModel.Services` 命名空間也包含一些用來設定 WS-同盟的類別。  
   
  <xref:System.IdentityModel.Services.Tokens?displayProperty=nameWithType>  
  包含適用於 Web 伺服陣列情節的特定安全性權杖處理常式。  
@@ -48,5 +48,5 @@ Windows Identity Foundation (WIF) 類別會分成下列組件：`mscorlib` (msco
   
 ## <a name="see-also"></a>另請參閱
 
-- [WIF 組態參考](../../../docs/framework/security/wif-configuration-reference.md)
-- [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [WIF 組態參考](wif-configuration-reference.md)
+- [WIF 3.5 和 WIF 4.5 之間的命名空間對應](namespace-mapping-between-wif-3-5-and-wif-4-5.md)

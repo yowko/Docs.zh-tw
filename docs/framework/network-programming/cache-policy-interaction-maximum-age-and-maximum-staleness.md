@@ -9,12 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: 3819882fe4a93016b25c10daa198a24fe7b0e951
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624676"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048833"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>快取原則互動 — 最長使用期限和最長過時
 為了協助確保將最新內容傳回給用戶端應用程式，用戶端快取原則與伺服器重新驗證需求的互動一律會導致最保守的快取原則。 本主題中的所有範例都會說明在 1 月 1 日快取並在 1 月 4 日到期之資源的快取原則。  
@@ -37,9 +37,9 @@ ms.locfileid: "64624676"
   
 ## <a name="see-also"></a>另請參閱
 
-- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [快取原則](../../../docs/framework/network-programming/cache-policy.md)
-- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [快取原則互動 - 最長使用期限和最小有效期限](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
+- [網路應用程式的快取管理](cache-management-for-network-applications.md)
+- [快取原則](cache-policy.md)
+- [以位置為基礎的快取原則](location-based-cache-policies.md)
+- [以時間為基礎的快取原則](time-based-cache-policies.md)
+- [設定網路應用程式的快取功能](configuring-caching-in-network-applications.md)
+- [快取原則互動 - 最長使用期限和最小有效期限](cache-policy-interaction-maximum-age-and-minimum-freshness.md)

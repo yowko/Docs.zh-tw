@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2229dca07a3a723babe5bf202ce5ddc0c77a7374
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854017"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052196"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
@@ -53,15 +53,15 @@ ms.locfileid: "70854017"
 
 - 您必須具有系統管理員權限才能安裝 .NET Framework 4.5 及其小數點版本。
 
-- .NET Framework 4.5 隨附於 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 中，因此在這些作業系統上不需要隨您的應用程式再次部署它。 同樣地，.NET Framework 4.5.1 會隨附於 [!INCLUDE[win81](../../../includes/win81-md.md)] 和 Windows Server 2012 R2 中。 所有作業系統中都不包含 .NET Framework 4.5.2。 .NET Framework 4.6 隨附於 Windows 10 中，.NET Framework 4.6.1 隨附於 Windows 10 年 11 月更新中，而 .NET Framework 4.6.2 則隨附於 Windows 10 年度更新版中。  .NET Framework 4.7 隨附於 Windows 10 Creators Update 中，.NET Framework 4.7.1 隨附於 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 則隨附於 Windows 10 2018 年 10 月更新與 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 已隨附於 Windows 10 2019 年 5 月更新中。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。
+- .NET Framework 4.5 隨附於 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 中，因此在這些作業系統上不需要隨您的應用程式再次部署它。 同樣地，.NET Framework 4.5.1 會隨附於 [!INCLUDE[win81](../../../includes/win81-md.md)] 和 Windows Server 2012 R2 中。 所有作業系統中都不包含 .NET Framework 4.5.2。 .NET Framework 4.6 隨附於 Windows 10 中，.NET Framework 4.6.1 隨附於 Windows 10 年 11 月更新中，而 .NET Framework 4.6.2 則隨附於 Windows 10 年度更新版中。  .NET Framework 4.7 隨附於 Windows 10 Creators Update 中，.NET Framework 4.7.1 隨附於 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 則隨附於 Windows 10 2018 年 10 月更新與 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 已隨附於 Windows 10 2019 年 5 月更新中。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../get-started/system-requirements.md)。
 
-- 從 .NET Framework 4.5 開始，您的使用者可以在安裝過程中檢視執行中的 .NET Framework 應用程式清單，並輕鬆地將它們關閉。 這有助於避免系統因安裝 .NET Framework 而重新啟動。 請參閱 [減少系統重新啟動](../../../docs/framework/deployment/reducing-system-restarts.md)。
+- 從 .NET Framework 4.5 開始，您的使用者可以在安裝過程中檢視執行中的 .NET Framework 應用程式清單，並輕鬆地將它們關閉。 這有助於避免系統因安裝 .NET Framework 而重新啟動。 請參閱 [減少系統重新啟動](reducing-system-restarts.md)。
 
 - 解除安裝 .NET Framework 4.5 或其小數點版本的其中一個，也會移除已存在的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 (請參閱 [安裝 .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)))。
 
 - .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為 2012 年 8 月 16 日的 .NET Framework 4.5 可轉散發套件，我們建議您使用 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)最新的可轉散發套件進行更新。 如需這個問題的詳細資訊，請參閱 [Microsoft 安全性摘要報告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
 
-如需系統管理員如何在網路上部署 .NET Framework 及其系統相依性的詳細資訊，請參閱[系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)。
+如需系統管理員如何在網路上部署 .NET Framework 及其系統相依性的詳細資訊，請參閱[系統管理員部署手冊](guide-for-administrators.md)。
 
 ## <a name="deployment-options-for-your-app"></a>應用程式的部署選項
 
@@ -233,7 +233,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 如果您有自訂安裝套件，您可能想要以無訊息模式啟動並追蹤 .NET Framework 安裝程式，同時顯示您自己的安裝進度檢視。 如果您想要這樣做，請確定您的程式碼涵蓋下列內容：
 
-- 檢查 [.NET Framework 的硬體和軟體需求](../../../docs/framework/get-started/system-requirements.md)。
+- 檢查 [.NET Framework 的硬體和軟體需求](../get-started/system-requirements.md)。
 
 - [偵測](#detect_net) 使用者電腦上是否已安裝正確的 .NET Framework 版本。
 
@@ -242,7 +242,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 - [偵測](#detecting-the-language-packs) 使用者電腦上是否已安裝語言套件。
 
-- 如果您想要控制部署，請以無訊息模式啟動並追蹤 .NET Framework 安裝程序 (請參閱[如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md))。
+- 如果您想要控制部署，請以無訊息模式啟動並追蹤 .NET Framework 安裝程序 (請參閱[如何：取得 .NET Framework 4.5 安裝程式的進度](how-to-get-progress-from-the-dotnet-installer.md))。
 
 - 如果您要部署離線安裝程式，請 [分別鏈結語言套件](#chain_langpack)。
 
@@ -431,9 +431,9 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 ## <a name="see-also"></a>另請參閱
 
-- [系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)
-- [系統需求](../../../docs/framework/get-started/system-requirements.md)
-- [安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)
-- [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
-- [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)
-- [如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [系統管理員部署手冊](guide-for-administrators.md)
+- [系統需求](../get-started/system-requirements.md)
+- [安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)
+- [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](reducing-system-restarts.md)
+- [如何：取得 .NET Framework 4.5 安裝程式的進度](how-to-get-progress-from-the-dotnet-installer.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8cdc700ecc8195da1b5e0975f00a4dc6785d330
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 35bf61ffd2a85221cdf33a0304765d94770c1eab
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973289"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053982"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>作法：停用強式名稱略過功能
 從 .NET Framework 3.5 版 Service Pack 1 (SP1) 開始，當組件載入到完全信任的 <xref:System.AppDomain> 物件 (例如適用於 `MyComputer` 區域的預設 <xref:System.AppDomain>) 時，不會驗證強式名稱簽章。 這是指強式名稱略過功能。 在完全信任環境中，不論簽章為何，已簽署、完全信任的組件要求 <xref:System.Security.Permissions.StrongNameIdentityPermission> 一律會成功。 唯一的限制是組件必須是完全受信任的，因為它的區域是完全信任的。 因為強式名稱不是這些情況下的決定因素，所以不需要進行驗證。 略過強式名稱簽章驗證可大幅提升效能。  
@@ -36,7 +36,7 @@ ms.locfileid: "70973289"
   
 1. 開啟或建立應用程式組態檔。  
   
-     如需此檔案的詳細資訊，請參閱[設定應用](../../framework/configure-apps/index.md)程式中的應用程式佈建檔一節。  
+    如需此檔案的詳細資訊，請參閱[設定應用](../../framework/configure-apps/index.md)程式中的應用程式佈建檔一節。  
   
 2. 新增下列項目：  
   

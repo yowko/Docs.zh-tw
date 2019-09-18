@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立 COM 包裝函式
+title: 作法：建立 COM 包裝函式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971827"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051798"
 ---
 # <a name="how-to-create-com-wrappers"></a>作法：建立 COM 包裝函式
 
@@ -45,7 +45,7 @@ ms.locfileid: "70971827"
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>使用 .NET Framework 工具建立執行階段可呼叫包裝函式  
   
-- 執行 [Tlbimp.exe (型別程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 工具。  
+- 執行 [Tlbimp.exe (型別程式庫匯入工具)](../tools/tlbimp-exe-type-library-importer.md) 工具。  
   
  這項工具所建立的組件，包含原始型別程式庫中所定義之類型的執行階段中繼資料。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "70971827"
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>使用 .NET Framework 工具建立 COM 可呼叫包裝函式  
   
-執行 [Regasm.exe (組件註冊工具)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 工具。  
+執行 [Regasm.exe (組件註冊工具)](../tools/regasm-exe-assembly-registration-tool.md) 工具。  
   
 這項工具會讀取組件中繼資料，並將需要的項目新增至登錄。 因此，COM 用戶端便能明確地建立 .NET Framework 類別。 您可以使用與原生 COM 類別相同的方式來使用組件。  
   
-您可以對位於任何目錄中的組件執行 Regasm.exe，然後執行 [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 將它移到全域組件快取中。 移動組件並不會使位置登錄項目無效，因為只要在其他位置找不到組件，就一律會對全域組件快取進行檢查。  
+您可以對位於任何目錄中的組件執行 Regasm.exe，然後執行 [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md) 將它移到全域組件快取中。 移動組件並不會使位置登錄項目無效，因為只要在其他位置找不到組件，就一律會對全域組件快取進行檢查。  
   
 ## <a name="see-also"></a>另請參閱
 
