@@ -10,32 +10,32 @@ helpviewer_keywords:
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35560b966d5fba60ac35b2eb1e559e196fc868f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea7f48ab61c16cb0430717074f1b1feab4827763
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754530"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052598"
 ---
-# <a name="invalidiunknown-mda"></a><span data-ttu-id="d9983-102">invalidIUnknown MDA</span><span class="sxs-lookup"><span data-stu-id="d9983-102">invalidIUnknown MDA</span></span>
-<span data-ttu-id="d9983-103">當無效的 `IUnknown` 指標從原生程式碼傳遞至 Managed 程式碼時，會啟動 `invalidIUnknown` Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="d9983-103">The `invalidIUnknown` managed debugging assistant (MDA) is activated when an invalid `IUnknown` pointer is passed to managed code from native code.</span></span> <span data-ttu-id="d9983-104">查詢 `IUnknown` 介面時，`IUnknown` 無法成功傳回。</span><span class="sxs-lookup"><span data-stu-id="d9983-104">The `IUnknown` fails to return success when queried for the `IUnknown` interface.</span></span>  
+# <a name="invalidiunknown-mda"></a><span data-ttu-id="2d89b-102">invalidIUnknown MDA</span><span class="sxs-lookup"><span data-stu-id="2d89b-102">invalidIUnknown MDA</span></span>
+<span data-ttu-id="2d89b-103">當無效的 `IUnknown` 指標從原生程式碼傳遞至 Managed 程式碼時，會啟動 `invalidIUnknown` Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="2d89b-103">The `invalidIUnknown` managed debugging assistant (MDA) is activated when an invalid `IUnknown` pointer is passed to managed code from native code.</span></span> <span data-ttu-id="2d89b-104">查詢 `IUnknown` 介面時，`IUnknown` 無法成功傳回。</span><span class="sxs-lookup"><span data-stu-id="2d89b-104">The `IUnknown` fails to return success when queried for the `IUnknown` interface.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="d9983-105">徵兆</span><span class="sxs-lookup"><span data-stu-id="d9983-105">Symptoms</span></span>  
- <span data-ttu-id="d9983-106">引數封送處理期間，在封送處理 COM 介面指標時，發生未預期的錯誤。</span><span class="sxs-lookup"><span data-stu-id="d9983-106">An unexpected error occurs when marshaling a COM interface pointer during argument marshaling.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="2d89b-105">徵兆</span><span class="sxs-lookup"><span data-stu-id="2d89b-105">Symptoms</span></span>  
+ <span data-ttu-id="2d89b-106">引數封送處理期間，在封送處理 COM 介面指標時，發生未預期的錯誤。</span><span class="sxs-lookup"><span data-stu-id="2d89b-106">An unexpected error occurs when marshaling a COM interface pointer during argument marshaling.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="d9983-107">原因</span><span class="sxs-lookup"><span data-stu-id="d9983-107">Cause</span></span>  
- <span data-ttu-id="d9983-108">對於傳遞至 CLR 的 COM 介面進行了不正確的 `QueryInterface` 實作。</span><span class="sxs-lookup"><span data-stu-id="d9983-108">An incorrect `QueryInterface` implementation on the COM interface passed to the CLR.</span></span>  
+## <a name="cause"></a><span data-ttu-id="2d89b-107">原因</span><span class="sxs-lookup"><span data-stu-id="2d89b-107">Cause</span></span>  
+ <span data-ttu-id="2d89b-108">對於傳遞至 CLR 的 COM 介面進行了不正確的 `QueryInterface` 實作。</span><span class="sxs-lookup"><span data-stu-id="2d89b-108">An incorrect `QueryInterface` implementation on the COM interface passed to the CLR.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="d9983-109">解決方式</span><span class="sxs-lookup"><span data-stu-id="d9983-109">Resolution</span></span>  
- <span data-ttu-id="d9983-110">更正 `QueryInterface` 實作。</span><span class="sxs-lookup"><span data-stu-id="d9983-110">Correct the `QueryInterface` implementation.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="2d89b-109">解決方式</span><span class="sxs-lookup"><span data-stu-id="2d89b-109">Resolution</span></span>  
+ <span data-ttu-id="2d89b-110">更正 `QueryInterface` 實作。</span><span class="sxs-lookup"><span data-stu-id="2d89b-110">Correct the `QueryInterface` implementation.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="d9983-111">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="d9983-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="d9983-112">此 MDA 對 CLR 沒有影響。</span><span class="sxs-lookup"><span data-stu-id="d9983-112">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="2d89b-111">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="2d89b-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="2d89b-112">此 MDA 對 CLR 沒有影響。</span><span class="sxs-lookup"><span data-stu-id="2d89b-112">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="d9983-113">Output</span><span class="sxs-lookup"><span data-stu-id="d9983-113">Output</span></span>  
- <span data-ttu-id="d9983-114">錯誤的描述。</span><span class="sxs-lookup"><span data-stu-id="d9983-114">The description of the error.</span></span>  
+## <a name="output"></a><span data-ttu-id="2d89b-113">Output</span><span class="sxs-lookup"><span data-stu-id="2d89b-113">Output</span></span>  
+ <span data-ttu-id="2d89b-114">錯誤的描述。</span><span class="sxs-lookup"><span data-stu-id="2d89b-114">The description of the error.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="d9983-115">組態</span><span class="sxs-lookup"><span data-stu-id="d9983-115">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="2d89b-115">組態</span><span class="sxs-lookup"><span data-stu-id="2d89b-115">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -45,8 +45,8 @@ ms.locfileid: "61754530"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d9983-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d9983-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d89b-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2d89b-116">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="d9983-117">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="d9983-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="d9983-118">Interop 封送處理</span><span class="sxs-lookup"><span data-stu-id="d9983-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="2d89b-117">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="2d89b-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="2d89b-118">Interop 封送處理</span><span class="sxs-lookup"><span data-stu-id="2d89b-118">Interop Marshaling</span></span>](../interop/interop-marshaling.md)

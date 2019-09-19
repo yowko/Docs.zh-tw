@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7fe0b33bbd77143da6d2f4a26b170e4d7afe1fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0883849eee12922601e50c2337bb0048d77cab68
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874103"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052369"
 ---
-# <a name="pinvokelog-mda"></a><span data-ttu-id="ee356-102">pInvokeLog MDA</span><span class="sxs-lookup"><span data-stu-id="ee356-102">pInvokeLog MDA</span></span>
-<span data-ttu-id="ee356-103">針對執行期間所使用的每個唯一平台叫用簽章，啟用 `pInvokeLog` Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="ee356-103">The `pInvokeLog` managed debugging assistant (MDA) is activated for each unique platform invoke signature used during execution.</span></span>  
+# <a name="pinvokelog-mda"></a><span data-ttu-id="9368e-102">pInvokeLog MDA</span><span class="sxs-lookup"><span data-stu-id="9368e-102">pInvokeLog MDA</span></span>
+<span data-ttu-id="9368e-103">針對執行期間所使用的每個唯一平台叫用簽章，啟用 `pInvokeLog` Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="9368e-103">The `pInvokeLog` managed debugging assistant (MDA) is activated for each unique platform invoke signature used during execution.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="ee356-104">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="ee356-104">Effect on the Runtime</span></span>  
- <span data-ttu-id="ee356-105">此 MDA 對 CLR 沒有影響。</span><span class="sxs-lookup"><span data-stu-id="ee356-105">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="9368e-104">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="9368e-104">Effect on the Runtime</span></span>  
+ <span data-ttu-id="9368e-105">此 MDA 對 CLR 沒有影響。</span><span class="sxs-lookup"><span data-stu-id="9368e-105">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="ee356-106">Output</span><span class="sxs-lookup"><span data-stu-id="ee356-106">Output</span></span>  
- <span data-ttu-id="ee356-107">指出在執行期間使用平台叫用簽章的訊息。</span><span class="sxs-lookup"><span data-stu-id="ee356-107">A message indicating the platform invoke signature used during execution.</span></span>  
+## <a name="output"></a><span data-ttu-id="9368e-106">Output</span><span class="sxs-lookup"><span data-stu-id="9368e-106">Output</span></span>  
+ <span data-ttu-id="9368e-107">指出在執行期間使用平台叫用簽章的訊息。</span><span class="sxs-lookup"><span data-stu-id="9368e-107">A message indicating the platform invoke signature used during execution.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="ee356-108">組態</span><span class="sxs-lookup"><span data-stu-id="ee356-108">Configuration</span></span>  
- <span data-ttu-id="ee356-109">每個 match 項目都會篩選要對其進行平台叫用呼叫的 .dll 檔案。</span><span class="sxs-lookup"><span data-stu-id="ee356-109">Each match element filters the .dll files to which platform invoke calls are made.</span></span>  
+## <a name="configuration"></a><span data-ttu-id="9368e-108">組態</span><span class="sxs-lookup"><span data-stu-id="9368e-108">Configuration</span></span>  
+ <span data-ttu-id="9368e-109">每個 match 項目都會篩選要對其進行平台叫用呼叫的 .dll 檔案。</span><span class="sxs-lookup"><span data-stu-id="9368e-109">Each match element filters the .dll files to which platform invoke calls are made.</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -43,7 +43,7 @@ ms.locfileid: "61874103"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ee356-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ee356-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9368e-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9368e-110">See also</span></span>
 
-- [<span data-ttu-id="ee356-111">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="ee356-111">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="ee356-112">使用 Unmanaged DLL 函式</span><span class="sxs-lookup"><span data-stu-id="ee356-112">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [<span data-ttu-id="9368e-111">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="9368e-111">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="9368e-112">使用 Unmanaged DLL 函式</span><span class="sxs-lookup"><span data-stu-id="9368e-112">Consuming Unmanaged DLL Functions</span></span>](../interop/consuming-unmanaged-dll-functions.md)
