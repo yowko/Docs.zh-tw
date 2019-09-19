@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0664a68d258380fd9e4824b80f0d7a244cb61e85
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894786"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044011"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows 執行階段中繼資料匯出工具)
 Windows 執行階段中繼資料匯出工具 (Winmdexp.exe) 會將 .NET Framework 模組轉換為包含 Windows 執行階段中繼資料的檔案。 雖然 .NET Framework 組件和 Windows 執行階段中繼資料檔案使用相同的實體格式，但是中繼資料資料表的內容有些差異，也就是說，.NET Framework 組件不會自動作為 Windows 執行階段元件使用。 將 .NET Framework 模組轉換為 Windows 執行階段元件的程序稱為「匯出」。 在 .NET Framework 4.5 和 .NET Framework 4.5.1 中，產生的 Windows 中繼資料 (.winmd) 檔案同時包含中繼資料和實作。  
   
  當您使用 [Windows 執行階段元件] 範本時 (在 Visual Studio 2013 或 Visual Studio 2012 中位於 C# 和 Visual Basic 的 [Windows 市集] 底下)，編譯器目標是 .winmdobj 檔案，而後續建置步驟會呼叫 Winmdexp.exe 將 .winmdobj 檔案匯出到 .winmd 檔案。 這是建置 Windows 執行階段元件的建議方式。 如果您想要更充分掌控建置流程，超越 Visual Studio 所提供的範圍，請直接使用 Winmdexp.exe。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -54,5 +54,5 @@ winmdexp [options] winmdmodule
 
 - [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [在 C++ 和 Visual Basic 中建立 Windows 執行階段元件](https://go.microsoft.com/fwlink/p/?LinkID=238313)
-- [Winmdexp.exe 錯誤訊息](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
+- [Winmdexp.exe 錯誤訊息](winmdexp-exe-error-messages.md)
 - [建置、部署及組態工具 (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))
