@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949249"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046379"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 
@@ -36,7 +36,7 @@ CLR 方法事件會進一步細分為下列：
 
 ## <a name="clr-method-events"></a>方法事件
 
-下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。
+下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。
 
 |引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
@@ -47,7 +47,7 @@ CLR 方法事件會進一步細分為下列：
 
 下表說明事件資訊。
 
-|Event - 事件|事件 ID|描述|
+|Event - 事件|事件 ID|說明|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|在 Just-In-Time 載入 (JIT 載入) 方法或 NGEN 映像載入時引發。 動態和泛型的方法並不會使用這個版本的方法載入。 JIT Helper 永遠不會使用這個版本。|
 |`MethodUnLoad_V1`|137|在模組已卸載或應用程式定義域損毀時引發。 動態方法永遠不會使用這個版本的方法卸載。|
@@ -63,7 +63,7 @@ CLR 方法事件會進一步細分為下列：
 |MethodStartAddress|win:UInt64|方法的起始位址。|
 |MethodSize|win:UInt32|方法的大小。|
 |MethodToken|win:UInt32|0 代表動態方法和 JIT Helper。|
-|MethodFlags|win:UInt32|0x1:動態方法。<br /><br /> 0x2:泛型方法。<br /><br /> 0x4:JIT 編譯的程式碼方法 （否則為 NGEN 原生映像程式碼）。<br /><br /> 0x8:Helper 方法。|
+|MethodFlags|win:UInt32|0x1動態方法。<br /><br /> 0x2泛型方法。<br /><br /> 0x4JIT 編譯的程式碼方法（否則為 NGEN 原生映射程式碼）。<br /><br /> 0x8Helper 方法。|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|
 
 [回到頁首](#top)
@@ -130,7 +130,7 @@ CLR 方法事件會進一步細分為下列：
 |MethodStartAddress|win:UInt64|起始位址：|
 |MethodSize|win:UInt32|方法的長度。|
 |MethodToken|win:UInt32|0 代表動態方法和 JIT Helper。|
-|MethodFlags|win:UInt32|0x1:動態方法。<br /><br /> 0x2:泛型方法。<br /><br /> 0x4:JIT 編譯方法 （否則由 NGen.exe 產生）<br /><br /> 0x8:Helper 方法。|
+|MethodFlags|win:UInt32|0x1動態方法。<br /><br /> 0x2泛型方法。<br /><br /> 0x4JIT 編譯的方法（否則由 Ngen.exe 產生）<br /><br /> 0x8Helper 方法。|
 |MethodNameSpace|win:UnicodeString|與方法相關聯的完整命名空間名稱。|
 |MethodName|win:UnicodeString|與方法相關聯的完整類別名稱。|
 |MethodSignature|win:UnicodeString|方法的簽章 (以逗號分隔的類型名稱清單)。|
@@ -153,7 +153,7 @@ CLR 方法事件會進一步細分為下列：
 
 下表說明事件資訊。
 
-|Event - 事件|事件 ID|描述|
+|Event - 事件|事件 ID|說明|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|當某個方法正在進行 JIT 編譯時引發。|
 
@@ -172,4 +172,4 @@ CLR 方法事件會進一步細分為下列：
 
 ## <a name="see-also"></a>另請參閱
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)
