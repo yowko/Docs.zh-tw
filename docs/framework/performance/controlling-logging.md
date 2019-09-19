@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1648af8c3dc407581714e8e863fe4972d6ffadbc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 45df41e10dc81bc6011e5329723bca55925825f9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894931"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046678"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 記錄
 
@@ -85,7 +85,7 @@ Provider                                 GUID
 
 ## <a name="viewing-clr-etw-events"></a>檢視 CLR ETW 事件
 
-您可以使用下列命令來檢視 CLR ETW 事件。 如需這些事件的描述，請參閱 [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)。
+您可以使用下列命令來檢視 CLR ETW 事件。 如需這些事件的描述，請參閱 [CLR ETW 事件](clr-etw-events.md)。
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>若要使用 Tracerpt 來檢視 CLR ETW 事件
 
@@ -114,4 +114,4 @@ Provider                                 GUID
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 效能工具組](/windows-hardware/test/wpt/)
-- [Common Language Runtime 中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Common Language Runtime 中的 ETW 事件](etw-events-in-the-common-language-runtime.md)

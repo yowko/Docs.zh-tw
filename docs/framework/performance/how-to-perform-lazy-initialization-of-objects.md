@@ -1,5 +1,5 @@
 ---
-title: HOW TO：執行物件的延遲初始設定
+title: 作法：執行物件的延遲初始設定
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fba47c0ff6425a375715dcd4c08d62e0f7f598c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722987"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046471"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a>HOW TO：執行物件的延遲初始設定
-<xref:System.Lazy%601?displayProperty=nameWithType> 類別可簡化執行物件延遲初始化和具現化的工作。 以延遲方式初始化物件時，您可以避免必須在永不需要這些物件時完全建立它們，也可以延後其初始化作業，直到第一次存取這些物件為止。 如需詳細資訊，請參閱[延遲初始化](../../../docs/framework/performance/lazy-initialization.md)。  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>作法：執行物件的延遲初始設定
+<xref:System.Lazy%601?displayProperty=nameWithType> 類別可簡化執行物件延遲初始化和具現化的工作。 以延遲方式初始化物件時，您可以避免必須在永不需要這些物件時完全建立它們，也可以延後其初始化作業，直到第一次存取這些物件為止。 如需詳細資訊，請參閱[延遲初始化](lazy-initialization.md)。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用 <xref:System.Lazy%601> 來初始化值。 假設可能不需要延遲變數，這取決於某個將 `someCondition` 變數設定為 true 或 false 的其他程式碼。  
@@ -79,4 +79,4 @@ End Sub
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [延遲初始設定](../../../docs/framework/performance/lazy-initialization.md)
+- [延遲初始設定](lazy-initialization.md)

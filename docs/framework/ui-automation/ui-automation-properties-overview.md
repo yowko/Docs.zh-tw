@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: d7069769d381a1806f28d538319a49e0cc9cce60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59d65601a37c9aba63708748a82fd5e85261b75b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914504"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042149"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 自動化屬性概觀
 > [!NOTE]
@@ -20,9 +20,9 @@ ms.locfileid: "69914504"
   
  本節提供 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 屬性的概觀說明。 下列各主題提供更詳細的資訊：  
   
-- [用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+- [用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)  
   
-- [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+- [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>屬性識別項  
@@ -55,7 +55,7 @@ ms.locfileid: "69914504"
 ## <a name="properties-by-category"></a>按類別分類屬性  
  下表會將在和<xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers>中找到其識別碼的屬性分類。 所有控制項都有這些屬性。 大部分動態屬性都與控制項模式相關，除了少數幾個在提供者應用程式的存留期可能是靜態的。  
   
- [屬性存取] 資料行中，除了 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 及 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>以外，還列出每個屬性的任何其他存取子。 如需取得用戶端應用程式屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ [屬性存取] 資料行中，除了 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 及 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>以外，還列出每個屬性的任何其他存取子。 如需取得用戶端應用程式屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
 > [!NOTE]
 > 如需每一個屬性的特定資訊，請按一下 [屬性存取] 資料行中的連結。  
@@ -161,9 +161,9 @@ ms.locfileid: "69914504"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化用戶端中的快取](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [根據屬性條件尋找 UI 自動化項目](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [從 UI 自動化提供者傳回屬性](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [UI 自動化提供者引發事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [UI 自動化用戶端中的快取](caching-in-ui-automation-clients.md)
+- [用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)
+- [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)
+- [根據屬性條件尋找 UI 自動化項目](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [從 UI 自動化提供者傳回屬性](return-properties-from-a-ui-automation-provider.md)
+- [UI 自動化提供者引發事件](raise-events-from-a-ui-automation-provider.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: c3c80fb48635199f45acb1e72bf756bbc65d2e14
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 582f5f2d6d82613736ed795eebe5129284cdac6e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780419"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052988"
 ---
 # <a name="create-the-data-service"></a>建立資料服務
 
@@ -68,7 +68,7 @@ ms.locfileid: "70780419"
 
 2. 在 [**加入新專案**] 對話方塊中，從 [ **Web** ] 類別選取 [ **WCF 資料服務**專案] 範本。
 
-   ![Visual Studio 2015 中的 WCF 資料服務專案範本](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 中的 WCF 資料服務專案範本](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF 資料服務**範本可在 Visual Studio 2015 中取得，但 Visual Studio 2017 則不提供。

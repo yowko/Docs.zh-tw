@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: 7dd799b32d51c7e24e6717561aab549e7e7f1fbe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adb1d10e659254b5fa326e7c598107d768aa2685
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954000"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040399"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 自動化樹狀目錄概觀
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "69954000"
   
  輔助技術產品和測試指令碼會瀏覽 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構，蒐集 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 和其項目的相關資訊。  
   
- 樹狀結構內有一個根項目 (<xref:System.Windows.Automation.AutomationElement.RootElement%2A>), 代表目前的桌面, 而其子項目代表應用程式視窗。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 這些子項目每個都可以包含代表 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的項目，例如功能表、按鈕、工具列和清單方塊。 接著這些項目可以包含例如清單項目的項目。  
+ 樹狀結構內有一個根項目（<xref:System.Windows.Automation.AutomationElement.RootElement%2A>），代表目前的桌面，而其子項目代表應用程式視窗。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 這些子項目每個都可以包含代表 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的項目，例如功能表、按鈕、工具列和清單方塊。 接著這些項目可以包含例如清單項目的項目。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構不是固定的結構，且很少完全看到它，因為它可能包含數千個項目。 其中的部分會在需要時建置，且它可能隨著加入、移動或移除項目而發生變更。  
   
@@ -57,4 +57,4 @@ ms.locfileid: "69954000"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Automation.AutomationElement>
-- [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI 自動化概觀](ui-automation-overview.md)

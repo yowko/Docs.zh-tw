@@ -1,17 +1,19 @@
 ---
 title: 如何序列化 JSON-.NET
-ms.date: 09/02/2019
+author: tdykstra
+ms.author: tdykstra
+ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 5c499e7a0abcbf141b6fc68f6eb9ec8983c0a7cf
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: HT
+ms.openlocfilehash: 8ccd7afe4abb928e7723aa740507774012fc85d1
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054353"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083102"
 ---
 # <a name="how-to-serialize-json-in-net"></a>如何在 .NET 中序列化 JSON
 
@@ -33,14 +35,18 @@ using System.Text.Json.Serialization;
 
 ## <a name="how-to-write-net-objects-to-json-serialize"></a>如何將 .NET 物件寫入 JSON （序列化）
 
-若要將 JSON 寫入字串，請使用泛型型別參數或泛型型別推斷呼叫[JsonSerializer。序列化](xref:System.Text.Json.JsonSerializer.Serialize*)：
+若要將 JSON 寫入字串，請呼叫<xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>方法。 下列範例會使用具有泛型型別參數的多載：
 
 ```csharp
+WeatherForecast weatherForecast;
+//...
 string json = JsonSerializer.Serialize<WeatherForecast>(weatherForecast);
 ```
 
+您可以省略泛型型別參數，並改為使用泛型型別推斷：
+
 ```csharp
-WeatherForecast weatherForecast = ... ;
+WeatherForecast weatherForecast;
 //...
 string json = JsonSerializer.Serialize(weatherForecast);
 ```
@@ -117,7 +123,7 @@ public class Temperature
 
 ### <a name="serialize-to-utf-8"></a>序列化為 UTF-8
 
-呼叫[JsonSerializer. SerializeToUtf8Bytes](xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes*)：
+若要序列化為 utf-8，請呼叫<xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType>方法：
 
 ```csharp
 byte[] utf8Json = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherForecast);
@@ -127,14 +133,14 @@ byte[] utf8Json = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherFo
 
 序列化為 UTF-8 的速度比使用以字串為基礎的方法快大約 5-10%。 差別在於，位元組（UTF-8）不需要轉換成字串（UTF-16）。
 
-## <a name="default-serialization-behavior"></a>預設序列化行為
+## <a name="serialization-behavior"></a>序列化行為
 
-* 所有公用屬性都會序列化。 您可以[指定要排除的屬性](#exclude-properties)。
+* 預設會序列化所有公用屬性。 您可以[指定要排除的屬性](#exclude-properties)。
 * [預設編碼器](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default)會將非 ascii 字元、ASCII 範圍內的 HTML 敏感字元，以及必須根據[JSON 規格](https://tools.ietf.org/html/rfc8259#section-7)來進行轉義的字元進行轉義。
-* JSON 為縮減。 您可以選擇性地[列印 JSON](#serialize-to-formatted-json)。
-* JSON 名稱的大小寫符合 .NET 名稱。 您可以[自訂 JSON 名稱大小寫](#customize-json-names)。
-* 偵測到[迴圈參考](https://github.com/dotnet/corefx/issues/38579)，並擲回例外狀況。
-* 欄位已排除。
+* 根據預設，JSON 是縮減。 您可以[整齊列印 JSON](#serialize-to-formatted-json)。
+* 根據預設，JSON 名稱的大小寫會符合 .NET 名稱。 您可以[自訂 JSON 名稱大小寫](#customize-json-names)。
+* 偵測到迴圈參考，並擲回例外狀況。 如需詳細資訊，請參閱 GitHub 上 dotnet/corefx 存放庫中[迴圈參考的問題](https://github.com/dotnet/corefx/issues/38579)。
+* 目前已排除欄位。
 
 支援的類型包括：
 
@@ -142,14 +148,14 @@ byte[] utf8Json = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherFo
 * 使用者定義的[簡單 CLR 物件（poco）](https://stackoverflow.com/questions/250001/poco-definition)。
 * 一維和不規則陣列（`ArrayName[][]`）。
 * `Dictionary<string,TValue>`其中`TValue`是`object` 、`JsonElement`或 POCO。
-* 下列命名空間中的[集合類型](https://github.com/dotnet/corefx/issues/36643)：
+* 下列命名空間中的集合。 如需詳細資訊，請參閱 GitHub 上的 dotnet/corefx 存放庫中的[集合支援問題](https://github.com/dotnet/corefx/issues/36643)。
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
 
 ## <a name="how-to-read-json-into-net-objects-deserialize"></a>如何將 JSON 讀入 .NET 物件（還原序列化）
 
-若要從字串還原序列化，請呼叫[JsonSerializer。](xref:System.Text.Json.JsonSerializer.Deserialize*)還原序列化：
+若要從字串還原序列化，請<xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>呼叫方法，如下列範例所示：
 
 ```csharp
 string json = ... ;
@@ -163,36 +169,36 @@ var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json);
 
 ### <a name="deserialize-from-utf-8"></a>從 UTF-8 還原序列化
 
-呼叫[JsonSerializer](xref:System.Text.Json.JsonSerializer.Deserialize*) `Utf8JsonReader`或使用或的`ReadOnlySpan<byte>`還原序列化多載：
+若要從 utf-8 還原序列化，請呼叫<xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> `Utf8JsonReader`接受或的`ReadOnlySpan<byte>`多載，如下列範例所示：
 
 ```csharp
-byte[] utf8Json = ... ;
-
+byte[] utf8Json;
+//...
 var readOnlySpan = new ReadOnlySpan<byte>(utf8Json);
 weatherForecast = JsonSerializer.Deserialize<WeatherForecastMin>(readOnlySpan);
 ```
 
 ```csharp
-byte[] utf8Json = ... ;
-
+byte[] utf8Json;
+//...
 var utf8Reader = new Utf8JsonReader(utf8Json);
 weatherForecast = JsonSerializer.Deserialize<WeatherForecastMin>(ref utf8Reader);
 ```
 
-## <a name="default-deserialization-behavior"></a>預設還原序列化行為
+## <a name="deserialization-behavior"></a>還原序列化行為
 
-* 屬性名稱比對會區分大小寫。 您可以選擇性地指定不區分[大小寫](#case-insensitive-property-matching)。
+* 根據預設，屬性名稱比對會區分大小寫。 您可以[指定不區分大小寫](#case-insensitive-property-matching)。
 * 如果 JSON 包含唯讀屬性的值，則會忽略此值，而且不會擲回任何例外狀況。
 * 不支援在沒有無參數的函式的情況下還原序列化成參考型別。
-* 不支援還原序列化為[不可變的物件](https://github.com/dotnet/corefx/issues/38569)或[唯讀屬性](https://github.com/dotnet/corefx/issues/38163)。
-* 列舉是以數位的形式支援。
+* 不支援還原序列化為不可變的物件或唯讀屬性。 如需詳細資訊，請參閱 github 上的 dotnet/corefx 存放庫中的[不可變物件支援](https://github.com/dotnet/corefx/issues/38569)和[唯讀屬性支援問題](https://github.com/dotnet/corefx/issues/38163)的問題。
+* 根據預設，列舉會當做數位來支援。
 * 欄位不受支援。
-* JSON 中的批註或尾端逗號會擲回例外狀況。 您可以[允許批註和尾端的逗號](#allow-comments-and-trailing-commas)。
+* 根據預設，JSON 中的批註或尾端逗號會擲回例外狀況。 如有需要，您可以[允許留言和尾端逗號](#allow-comments-and-trailing-commas)。
 * [預設的最大深度](xref:System.Text.Json.JsonReaderOptions.MaxDepth)為64。
 
 ## <a name="serialize-to-formatted-json"></a>序列化為格式化 JSON
 
-設定<xref:System.Text.Json.JsonSerializerOptions.WriteIndented>為 true：
+若要以整齊的格式列印 JSON 輸出<xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> ， `true`請將設定為：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -223,7 +229,7 @@ class WeatherForecast
 
 ## <a name="allow-comments-and-trailing-commas"></a>允許批註和尾端逗號
 
-將<xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling>設定`JsonCommentHandling.Skip`為，並<xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas>將設定為 true：
+根據預設，在 JSON 中不允許批註和尾端逗號。 若要允許 JSON 中的批註，請<xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType>將屬性`JsonCommentHandling.Skip`設定為。 若要允許尾端逗號，請將<xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType>屬性設定`true`為。 下列範例顯示如何允許兩者：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -246,14 +252,14 @@ var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json);
 
 ## <a name="customize-json-names"></a>自訂 JSON 名稱
 
-本節說明如何：
+根據預設，JSON 輸出中的屬性名稱和字典索引鍵是不變的，包括大小寫。 本節說明如何：
 
 * 自訂個別屬性名稱
 * 將所有屬性名稱轉換成 camel 大小寫
 * 執行自訂屬性命名原則
 * 將字典索引鍵轉換成 camel 大小寫
 
-不支援自動[將列舉轉換為 camel 案例](https://github.com/dotnet/corefx/issues/37725)。
+目前不支援自動將列舉轉換為 camel 案例。 如需詳細資訊，請參閱 GitHub 上的 dotnet/corefx 存放庫中的[列舉 camel 案例支援問題](https://github.com/dotnet/corefx/issues/37725)。
 
 ### <a name="customize-individual-property-names"></a>自訂個別屬性名稱
 
@@ -288,7 +294,7 @@ class WeatherForecast
 
 ### <a name="use-camel-case-for-all-json-property-names"></a>所有 JSON 屬性名稱都使用 camel 大小寫
 
-設定<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy>為`JsonNamingPolicy.CamelCase`：
+若要對所有 JSON 屬性名稱使用 camel 大小寫<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> ， `JsonNamingPolicy.CamelCase`請將設定為，如下列範例所示：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -327,7 +333,7 @@ Camel 案例屬性命名原則：
 
 ### <a name="use-a-custom-json-property-naming-policy"></a>使用自訂 JSON 屬性命名原則
 
-衍生自<xref:System.Text.Json.JsonNamingPolicy> ，並<xref:System.Text.Json.JsonNamingPolicy.ConvertName*>覆寫：
+若要使用自訂 JSON 屬性命名原則，請建立衍生自<xref:System.Text.Json.JsonNamingPolicy>的類別，並覆<xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A>寫方法，如下列範例所示：
 
 ```csharp
 class UpperCaseNamingPolicy : JsonNamingPolicy
@@ -339,7 +345,7 @@ class UpperCaseNamingPolicy : JsonNamingPolicy
 }
 ```
 
-將<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy>設定為您命名原則類別的實例：
+然後將<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType>屬性設定為您命名原則類別的實例：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -378,7 +384,7 @@ JSON 屬性命名原則：
 
 ### <a name="camel-case-dictionary-keys"></a>Camel 大小寫字典索引鍵
 
-如果要序列化之物件的屬性屬於型`Dictionary<string,Tvalue>`別，則`string`可以將索引鍵轉換成 camel 大小寫。 若要這麼做， <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy>請`JsonNamingPolicy.CamelCase`將設定為：
+如果要序列化之物件的屬性屬於型`Dictionary<string,TValue>`別，則`string`可以將索引鍵轉換成 camel 大小寫。 若要這麼做， <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy>請`JsonNamingPolicy.CamelCase`將設定為，如下列範例所示：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -413,7 +419,7 @@ Camel 案例命名原則僅適用于序列化。
 
 ## <a name="exclude-properties"></a>排除屬性
 
-本節說明如何排除：
+預設會序列化所有公用屬性。 如果您不想讓某些部分出現在 JSON 輸出中，您有數個選項。 本節說明如何排除：
 
 * 個別屬性
 * 所有唯讀屬性
@@ -421,7 +427,7 @@ Camel 案例命名原則僅適用于序列化。
 
 ### <a name="exclude-individual-properties"></a>排除個別屬性
 
-使用[[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute)屬性。
+若要忽略個別屬性，請使用[[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute)屬性。
 
 以下是要序列化和 JSON 輸出的範例型別：
 
@@ -446,7 +452,7 @@ class WeatherForecast
 
 ### <a name="exclude-all-read-only-properties"></a>排除所有唯讀屬性
 
-設定<xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties>為 true：
+若要排除所有唯讀屬性，請將設定<xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType>為`true`，如下列範例所示：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -480,7 +486,7 @@ class WeatherForecast
 
 ### <a name="exclude-all-null-value-properties"></a>排除所有 null 值屬性
 
-設定<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues>為 true：
+若要排除所有 null 值屬性，請<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues>將屬性`true`設定為，如下列範例所示：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -505,11 +511,11 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 }
 ```
 
-此設定適用于序列化和還原序列化。 在還原序列化期間，JSON 中的 null 值只有在有效的情況下才會被忽略。 [不可為 null 的實數值型別的 Null 值會造成例外](https://github.com/dotnet/corefx/issues/40922)狀況。
+此設定適用于序列化和還原序列化。 在還原序列化期間，JSON 中的 null 值只有在有效的情況下才會被忽略。 不可為 null 的實數值型別的 Null 值會造成例外狀況。 如需詳細資訊，請參閱 GitHub 上 dotnet/corefx 存放庫中[不可為 null 的實數值型別問題](https://github.com/dotnet/corefx/issues/40922)。
 
 ## <a name="case-insensitive-property-matching"></a>不區分大小寫的屬性比對
 
-根據預設，還原序列化會在 JSON 與目標物件屬性之間尋找區分大小寫的屬性名稱是否相符。 若要變更該行為， <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive>請將設定為 true：
+根據預設，還原序列化會在 JSON 與目標物件屬性之間尋找區分大小寫的屬性名稱是否相符。 若要變更該行為，請<xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType>將`true`設定為：
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -581,7 +587,7 @@ json = JsonSerializer.Serialize(weatherForecast);
 
 若要序列化衍生類型的屬性，請使用下列其中一種方法：
 
-* `Serialize`呼叫的多載，可讓您在執行時間指定類型：
+* <xref:System.Text.Json.JsonSerializer.Serialize%2A>呼叫的多載，可讓您在執行時間指定類型：
 
   ```csharp
   json = JsonSerializer.Serialize(weatherForecast, weatherForecast.GetType());
@@ -712,7 +718,12 @@ using (var stream = new MemoryStream())
 下列範例顯示如何直接使用<xref:System.Text.Json.Utf8JsonReader>類別。 此程式`jsonUtf8`代碼假設變數是包含有效 JSON 的位元組陣列，並以 utf-8 編碼。
 
 ```csharp
-Utf8JsonReader reader = new Utf8JsonReader(jsonUtf8, isFinalBlock: true, state: default);
+var options = new JsonReaderOptions
+{
+    AllowTrailingCommas = true,
+    CommentHandling = JsonCommentHandling.Skip
+};
+Utf8JsonReader reader = new Utf8JsonReader(jsonUtf8, options);
 
 while (reader.Read())
 {

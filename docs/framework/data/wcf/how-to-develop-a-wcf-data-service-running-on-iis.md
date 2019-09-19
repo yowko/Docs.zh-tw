@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: d03a0ae3bc84106d72803b22050a7c75a037be12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780106"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052979"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>作法：開發在 IIS 上執行的 WCF 資料服務
 
@@ -148,7 +148,7 @@ ms.locfileid: "70780106"
 
 2. 在 [**加入新專案**] 對話方塊中，選取 [ **WCF 資料服務**]。
 
-   ![Visual Studio 2015 中的 WCF 資料服務專案範本](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 中的 WCF 資料服務專案範本](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF 資料服務**範本可在 Visual Studio 2015 中取得，但 Visual Studio 2017 則不提供。

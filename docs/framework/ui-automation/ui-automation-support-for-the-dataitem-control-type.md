@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: 7ba338a2eeb222dc8c807bc3a2bb4d1baf7de39d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63d957eaaff7503aa8ba4dde9d836aea28f419ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912014"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041808"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>DataItem 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -24,16 +24,16 @@ ms.locfileid: "69912014"
  下列章節會定義 DataItem 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有資料項目控制項。  
   
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
- 下表描述與資料項目控制項相關之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+ 下表描述與資料項目控制項相關之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 內容檢視|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataItem<br /><br /> -變化 (0 或更多; 可以在階層中結構化)|DataItem<br /><br /> -變化 (0 或更多; 可以在階層中結構化)|  
+|DataItem<br /><br /> -變化（0或更多; 可以在階層中結構化）|DataItem<br /><br /> -變化（0或更多; 可以在階層中結構化）|  
   
  資料格中資料項目 (Item) 的項目 (Element) 可裝載各種不同的物件，包括另一層資料項目，或是特定資料格項目 (Element) 如文字、影像或編輯控制項。 如果資料項目 (Item) 的項目 (Element) 具備特定物件角色，則該項目 (Element) 應公開為特定控制項類型；例如，資料格中可選資料項目 (Item) 的 ListItem 控制項類型。  
   
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出屬性，其值或定義與資料項目控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 下表列出屬性，其值或定義與資料項目控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
 |屬性|值|注意|  
 |--------------|-----------|-----------|  
@@ -51,7 +51,7 @@ ms.locfileid: "69912014"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|資料項目控制項一律會包含主要文字項目，這是最富語意的識別項，可讓使用者聯想該項目。|  
   
 ## <a name="required-ui-automation-control-patterns"></a>必要的使用者介面自動化控制項模式  
- 下表列出所有資料項目控制項必須支援的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+ 下表列出所有資料項目控制項必須支援的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
 |控制項模式|支援|注意|  
 |---------------------|-------------|-----------|  
@@ -69,14 +69,14 @@ ms.locfileid: "69912014"
  在資料項目的 `SetFocus` 自動化項目上呼叫 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 時， [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] 會將焦點成功傳回資料項目樹狀子目錄中並設為 Edit。  
   
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
- 下表列出所有資料項目控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+ 下表列出所有資料項目控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|無|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 屬性變更事件。|必要|無|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|無|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|視情況而定|無|  
@@ -90,18 +90,18 @@ ms.locfileid: "69912014"
 ## <a name="dataitem-control-type-example"></a>DataItem 控制項類型範例  
  下圖顯示在清單檢視控制項中的 DataItem 控制項類型，且包含對資料行中豐富資訊的支援。  
   
- ![有兩個數據項的清單視圖控制項圖形](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![有兩個數據項的清單視圖控制項圖形](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  與資料項目控制項相關之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視顯示如下。 每個自動化項目的控制項模式顯示在括號中。 Group "Contoso" 也是資料格主控制項資料格的一部分。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 內容檢視|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-Group "Contoso" (資料表、方格)<br />-DataItem "帳戶應收帳款 .doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-影像「應收帳款 .doc」<br />-編輯 "Name" (TableItem, GridItem, Value "Accounts 賬款")<br />-編輯「修改日期」 (TableItem, GridItem, 值 "8/25/2006 3:29 PM")<br />-Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-DataItem "帳戶應付帳款" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|-Group "Contoso" (資料表、方格)<br />-DataItem "帳戶應收帳款 .doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-影像「應收帳款 .doc」<br />-編輯 "Name" (TableItem, GridItem, Value "Accounts 賬款")<br />-編輯「修改日期」 (TableItem, GridItem, 值 "8/25/2006 3:29 PM")<br />-Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-DataItem "帳戶應付帳款" (TableItem, GridItem, SelectionItem, Invoke)<br />-   …|  
+|-Group "Contoso" （資料表、方格）<br />-DataItem "帳戶應收帳款 .doc" （TableItem，GridItem，SelectionItem，Invoke）<br />-影像「應收帳款 .doc」<br />-編輯 "Name" （TableItem，GridItem，Value "Accounts 賬款"）<br />-編輯「修改日期」（TableItem，GridItem，值 "8/25/2006 3:29 PM"）<br />-Edit "Size" （GridItem，TableItem，Value "11.0 KB）<br />-DataItem "帳戶應付帳款" （TableItem，GridItem，SelectionItem，Invoke）<br />-   ...|-Group "Contoso" （資料表、方格）<br />-DataItem "帳戶應收帳款 .doc" （TableItem，GridItem，SelectionItem，Invoke）<br />-影像「應收帳款 .doc」<br />-編輯 "Name" （TableItem，GridItem，Value "Accounts 賬款"）<br />-編輯「修改日期」（TableItem，GridItem，值 "8/25/2006 3:29 PM"）<br />-Edit "Size" （GridItem，TableItem，Value "11.0 KB）<br />-DataItem "帳戶應付帳款" （TableItem，GridItem，SelectionItem，Invoke）<br />-   …|  
   
  如果資料格表示可選取項目的清單，則對應的使用者介面項目可使用 ListItem 控制項類型公開，而不是 DataItem 控制項類型。 在前述範例中，Group ("Contoso") 下的 DataItem 項目 ("Accounts Receivable.doc" 和 "Accounts Payable.doc") 可藉由公開為 ListItem 控制項類型的方式獲得改善，因為該類型已支援 SelectionItem 控制項模式。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Automation.ControlType.DataItem>
-- [UI 自動化控制項類型概觀](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI 自動化控制項類型概觀](ui-automation-control-types-overview.md)
+- [UI 自動化概觀](ui-automation-overview.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-ms.openlocfilehash: d3fecb9fe78ca54f68d3c5a97dae5d5dd9fbb28d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d5b07617617ac28e4f7f72bc23a96b45a85dff75
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075414"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047984"
 ---
 # <a name="httplistener"></a>HttpListener
 <xref:System.Net.HttpListener> 類別提供以程式設計方式控制的 HTTP 通訊協定接聽程式。 此接聽程式可在 <xref:System.Net.HttpListener> 物件的存留期內作用，並且在您的應用程式中執行。  
@@ -26,4 +26,4 @@ ms.locfileid: "59075414"
 - [網際網路資訊中的安全性增強功能](https://go.microsoft.com/fwlink/?LinkID=178286)
 - [HttpListener ASPX 主機應用程式範例](https://go.microsoft.com/fwlink/?LinkID=179560)
 - [HttpListener 技術範例](https://go.microsoft.com/fwlink/?LinkID=179558)
-- [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)
+- [網路程式設計範例](network-programming-samples.md)

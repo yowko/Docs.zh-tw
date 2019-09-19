@@ -4,70 +4,70 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 062f13ad92f37bb7ae29ed34dcf88f99f98e7612
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052404"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049263"
 ---
 # <a name="runtime-directive-elements"></a>執行階段指示詞項目
-執行階段指示詞 (rd.xml) 檔案格式支援下列執行階段指示詞元素。 如需階層表示法，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
+執行階段指示詞 (rd.xml) 檔案格式支援下列執行階段指示詞元素。 如需階層表示法，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)。  
   
- [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)  
- 將執行階段反映原則套用至應用程式使用的所有類型，並做為整個應用程式的類型和類型成員的容器，這些類型和類型成員的中繼資料可在執行階段用於反映。 這是 [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) 項目的子項。  
+ [\<Application>](application-element-net-native.md)  
+ 將執行階段反映原則套用至應用程式使用的所有類型，並做為整個應用程式的類型和類型成員的容器，這些類型和類型成員的中繼資料可在執行階段用於反映。 這是 [\<Directives>](directives-element-net-native.md) 項目的子項。  
   
- [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)  
- 將執行階段原則套用至組件中的所有類型。 這是 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 和 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 項目的子項。  
+ [\<Assembly>](assembly-element-net-native.md)  
+ 將執行階段原則套用至組件中的所有類型。 這是 [\<Application>](application-element-net-native.md) 和 [\<Library>](library-element-net-native.md) 項目的子項。  
   
- [\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
- 如果其包含 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 指示詞是屬性，則會將執行階段原則套用至套用該屬性的程式碼項目。  
+ [\<AttributeImplies>](attributeimplies-element-net-native.md)  
+ 如果其包含 [\<Type>](type-element-net-native.md) 指示詞是屬性，則會將執行階段原則套用至套用該屬性的程式碼項目。  
   
- [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)  
- 針對.NET 原生的每個執行階段指示詞檔案中的根項目。 其子項目是 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 和 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)。  
+ [\<Directives>](directives-element-net-native.md)  
+ .NET Native 的每個執行時間指示詞檔案中的根項目。 其子項目是 [\<Application>](application-element-net-native.md) 和 [\<Library>](library-element-net-native.md)。  
   
- [\<Event>](../../../docs/framework/net-native/event-element-net-native.md)  
- 將執行階段原則套用至事件。 這是 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 和 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目的子項。  
+ [\<Event>](event-element-net-native.md)  
+ 將執行階段原則套用至事件。 這是 [\<Type>](type-element-net-native.md) 和 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目的子項。  
   
- [\<Field>](../../../docs/framework/net-native/field-element-net-native.md)  
- 將執行階段原則套用至欄位。 這是 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 和 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目的子項。  
+ [\<Field>](field-element-net-native.md)  
+ 將執行階段原則套用至欄位。 這是 [\<Type>](type-element-net-native.md) 和 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目的子項。  
   
- [\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)  
+ [\<GenericParameter>](genericparameter-element-net-native.md)  
  將執行階段原則套用至泛型類型或方法的參數類型。  
   
- [\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)  
+ [\<ImpliesType>](impliestype-element-net-native.md)  
  如果執行階段原則已套用至包含類型或方法，則會將該原則套用至類型。  
   
- [\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)  
- 將執行階段原則套用至組件中的所有類型。 這是 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 和 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 項目的子項。  
+ [\<程式庫>](library-element-net-native.md)  
+ 將執行階段原則套用至組件中的所有類型。 這是 [\<Application>](application-element-net-native.md) 和 [\<Library>](library-element-net-native.md) 項目的子項。  
   
- [\<Method>](../../../docs/framework/net-native/method-element-net-native.md)  
- 將執行階段原則套用至方法。 這是 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 和 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目的子項。  
+ [\<Method>](method-element-net-native.md)  
+ 將執行階段原則套用至方法。 這是 [\<Type>](type-element-net-native.md) 和 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目的子項。  
   
- [\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)  
- 將執行階段原則套用至建構的泛型方法。 這是 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 和 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目的子項。  
+ [\<MethodInstantiation>](methodinstantiation-element-net-native.md)  
+ 將執行階段原則套用至建構的泛型方法。 這是 [\<Type>](type-element-net-native.md) 和 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目的子項。  
   
- [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)  
+ [\<Namespace>](namespace-element-net-native.md)  
  將執行階段原則套用至命名空間中的所有類型。  
   
- [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)  
+ [\<Parameter>](parameter-element-net-native.md)  
  將執行階段原則套用至傳遞給方法的引數類型。  
   
- [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)  
- 將執行階段原則套用至屬性。 這是 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 和 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目的子項。  
+ [\<Property>](property-element-net-native.md)  
+ 將執行階段原則套用至屬性。 這是 [\<Type>](type-element-net-native.md) 和 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目的子項。  
   
- [\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)  
+ [\<Subtypes>](subtypes-element-net-native.md)  
  將執行階段原則套用至從包含類型繼承的所有類別。  
   
- [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)  
+ [\<Type>](type-element-net-native.md)  
  將執行階段原則套用至類型。  
   
- [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)  
+ [\<TypeInstantiation>](typeinstantiation-element-net-native.md)  
  將執行階段原則套用至建構的泛型類型。  
   
- [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
+ [\<TypeParameter>](typeparameter-element-net-native.md)  
  將執行階段原則套用至傳遞給方法之 <xref:System.Type> 引數所表示的類型。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [rd.xml 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [rd.xml 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

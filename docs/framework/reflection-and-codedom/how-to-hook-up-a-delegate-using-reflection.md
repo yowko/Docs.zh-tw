@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 937dca59be8b83526ebf6cd4c369532b1a8b9afe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935717"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045985"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>作法：使用反映連結委派
 當您使用反映來載入和執行組件時，無法使用 C# `+=` 運算子或 Visual Basic [AddHandler 陳述式](../../visual-basic/language-reference/statements/addhandler-statement.md)這類語言功能來連結事件。 下列程序示範如何透過反映取得所有必要類型以將現有方法連結至事件，以及如何使用反映發出建立動態方法並將它連結至事件。  
@@ -80,7 +80,7 @@ ms.locfileid: "69935717"
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. 產生方法主體。 這個方法會載入字串、呼叫接受字串之 <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> 方法的多載、從堆疊取出傳回值 (因為處理常式沒有傳回型別) 並傳回。 若要深入了解如何發出動態方法，請參閱[如何：定義和執行動態方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)。  
+2. 產生方法主體。 這個方法會載入字串、呼叫接受字串之 <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> 方法的多載、從堆疊取出傳回值 (因為處理常式沒有傳回型別) 並傳回。 若要深入了解如何發出動態方法，請參閱[如何：定義和執行動態方法](how-to-define-and-execute-dynamic-methods.md)。  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
@@ -111,5 +111,5 @@ ms.locfileid: "69935717"
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
-- [如何：定義和執行動態方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
-- [反映](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [如何：定義和執行動態方法](how-to-define-and-execute-dynamic-methods.md)
+- [反映](reflection.md)

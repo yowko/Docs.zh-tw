@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16ef27b7d1a36121976cbb026f81984a8b84d1fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b796d79fc6acf7d54aac7c69d376e587144d14d1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614328"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052254"
 ---
 # <a name="trace-switches"></a>追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。 它們是存在於您的程式碼中的物件，並可透過 .config 檔案在外部設定。 .NET Framework 中提供三種類型的追蹤參數： <xref:System.Diagnostics.BooleanSwitch> 類別、 <xref:System.Diagnostics.TraceSwitch> 類別和 <xref:System.Diagnostics.SourceSwitch> 類別。 <xref:System.Diagnostics.BooleanSwitch> 類別是做為切換參數，可啟用或停用各種追蹤陳述式。 <xref:System.Diagnostics.TraceSwitch> 和 <xref:System.Diagnostics.SourceSwitch> 類別可讓您針對特定追蹤層級啟用追蹤參數，以顯示針對該層級及其下所有層級指定的 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.TraceSource> 訊息。 如果您停用此參數，就不會顯示追蹤訊息。 所有這些類別都是衍生自抽象 (**MustInherit**) 類別 **Switch**，如同任何使用者開發的參數。  
   
- 追蹤參數對於篩選資訊很有用。 比方說，您可能想要查看資料存取模組中的每個追蹤訊息，但只查看應用程式其餘部分的錯誤訊息。 在此情況下，您會對資料存取模組使用一個追蹤參數，對應用程式的其餘部分使用一個參數。 使用 .config 檔案將參數設為適當的設定，即可控制您所接收的追蹤訊息類型。 如需詳細資訊，請參閱[如何：建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
+ 追蹤參數對於篩選資訊很有用。 比方說，您可能想要查看資料存取模組中的每個追蹤訊息，但只查看應用程式其餘部分的錯誤訊息。 在此情況下，您會對資料存取模組使用一個追蹤參數，對應用程式的其餘部分使用一個參數。 使用 .config 檔案將參數設為適當的設定，即可控制您所接收的追蹤訊息類型。 如需詳細資訊，請參閱[如何：建立、初始化和設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)。  
   
  一般而言，執行已部署的應用程式時，會停用其參數，這樣使用者就不需要觀察應用程式執行時，出現在螢幕上或塞滿記錄檔的許多無關的追蹤訊息。 如果在應用程式執行期間發生問題，您可以停止應用程式、啟用參數，並重新啟動應用程式。 然後就會顯示追蹤訊息。  
   
@@ -49,8 +49,8 @@ ms.locfileid: "64614328"
   
 |列舉值|整數值|顯示的訊息類型 (或寫入至指定的輸出目標)|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Off|0|None|  
-|錯誤|1|只有錯誤訊息|  
+|Off|0|無|  
+|Error|1|只有錯誤訊息|  
 |警告|2|警告訊息和錯誤訊息|  
 |資訊|3|告知性訊息、警告訊息和錯誤訊息|  
 |詳細資訊|4|詳細資訊訊息、告知性訊息、警告訊息和錯誤訊息|  
@@ -85,6 +85,6 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
   
 ## <a name="see-also"></a>另請參閱
 
-- [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [追蹤接聽項](trace-listeners.md)
+- [如何：將追蹤語句新增至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)
+- [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md)

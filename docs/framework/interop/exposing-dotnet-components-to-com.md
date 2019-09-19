@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205811"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051810"
 ---
 # <a name="exposing-net-components-to-com"></a>將 .NET 元件公開給 COM
 
@@ -27,7 +27,7 @@ ms.locfileid: "70205811"
 
      Managed 程式碼中的自訂屬性，可以加強元件的互通性。
 
-- [封裝 COM 的組件](../../../docs/framework/interop/packaging-an-assembly-for-com.md)。
+- [封裝 COM 的組件](packaging-an-assembly-for-com.md)。
 
      COM 開發人員可能會要求您彙總參考及部署組件的相關步驟。
 
@@ -35,11 +35,11 @@ ms.locfileid: "70205811"
 
 ## <a name="to-consume-a-managed-type-from-com"></a>從 COM 取用 Managed 類型
 
-1. [向 COM 登錄組件](../../../docs/framework/interop/registering-assemblies-with-com.md)。
+1. [向 COM 登錄組件](registering-assemblies-with-com.md)。
 
      組件 (與型別程式庫) 中的類型必須在設計階段登錄。 如果安裝程式不登錄組件，請指示 COM 開發人員使用 Regasm.exe。
 
-2. [參考 COM 的 .NET 類型](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。
+2. [參考 COM 的 .NET 類型](how-to-reference-net-types-from-com.md)。
 
      COM 開發人員可以使用目前所用的相同工具和技術，參考組件中的類型。
 
@@ -53,5 +53,5 @@ ms.locfileid: "70205811"
 
 ## <a name="see-also"></a>另請參閱
 
-- [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)
-- [COM Interop 範例：COM 用戶端與 .NET 伺服器](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [與 Unmanaged 程式碼互通](index.md)
+- [COM Interop 範例：COM 用戶端與 .NET 伺服器](com-interop-sample-com-client-and-net-server.md)

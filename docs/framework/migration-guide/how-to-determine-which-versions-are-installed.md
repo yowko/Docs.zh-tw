@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928426"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051597"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>作法：判斷安裝的 .NET Framework 版本
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>HOW TO：判斷安裝的 .NET Framework 版本
 
 使用者可以在電腦上[安裝](https://docs.microsoft.com/dotnet/framework/install)及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。
 
@@ -72,7 +72,7 @@ ms.locfileid: "70928426"
 
 3. 檢查是否有名為 **Release** 的 DWORD 項目。 若有，則表示已安裝 .NET Framework 4.5 或更新版本。 其值為對應至 .NET Framework 特定版本的版本機碼。 例如，下圖中 **Release** 項目的值是 *378389*，也就是 .NET Framework 4.5 的版本機碼。
 
-     ![.NET Framework 4.5 的登錄項目](media/clr-installdir.png ".NET Framework 4.5 的登錄項目")
+     ![.NET Framework 4.5 的登錄項目](./media/clr-installdir.png ".NET Framework 4.5 的登錄項目")
 
 下表列出 .NET Framework 4.5 及更新版本個別作業系統上 **Release** DWORD 的值。
 
@@ -163,7 +163,7 @@ ms.locfileid: "70928426"
 
     下圖顯示 .NET Framework 3.5 的子機碼及其 **Version** 項目。
 
-    ![.NET Framework 3.5 的登錄項目。](media/net-4-and-earlier.png ".NET framework 3.5 和舊版")
+    ![.NET Framework 3.5 的登錄項目。](./media/net-4-and-earlier.png ".NET framework 3.5 和舊版")
 
 <a name="net_c"></a>
 

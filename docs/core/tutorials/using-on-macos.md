@@ -1,17 +1,16 @@
 ---
-title: 開始在 macOS 上使用 .NET Core
+title: 教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
-author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 022afd99c6d36d7a60ac40f3f27ba073c5470bd2
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849355"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082804"
 ---
-# <a name="get-started-with-net-core-on-macos"></a>開始在 macOS 上使用 .NET Core
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 
 本文件提供建立適用於 macOS 之 .NET Core 方案的步驟及工作流程。 了解如何建立專案、建立單元測試、使用偵錯工具，以及透過 [NuGet](https://www.nuget.org/) 納入協力廠商程式庫。
 
@@ -32,13 +31,13 @@ ms.locfileid: "70849355"
 
 啟動 Visual Studio Code。 按下 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (倒引號字元)，或從功能表中選取 [檢視] > [整合式終端機]，以使用 Visual Studio Code 開啟內嵌終端機。 如果您想要在 Visual Studio Code 外部工作，則仍然可以使用總管 [在命令提示字元中開啟] 命令 (Mac 或 Linux 上的 [在終端機中開啟]) 來開啟外部殼層。
 
-請從建立方案檔開始，而方案檔是作為一或多個 .NET Core 專案的容器。 在終端機中，建立 *golden* 資料夾，然後開啟該資料夾。 這個資料夾是您方案的根資料夾。 執行 [`dotnet new`](../tools/dotnet-new.md) 命令，建立新方案 *golden.sln*：
+請從建立方案檔開始，而方案檔是作為一或多個 .NET Core 專案的容器。 在終端機中，執行[`dotnet new`](../tools/dotnet-new.md)命令以在名為*黃金*的新資料夾內建立新的方案 *。*
 
 ```console
-dotnet new sln
+dotnet new sln -o golden
 ```
 
-從 *golden* 資料夾中，執行下列命令來建立程式庫專案，這樣會在 *library* 資料夾中產生 library.csproj 及 Class1.cs 這兩個檔案：
+流覽至新的 *[黃金*] 資料夾，然後執行下列命令來建立程式庫專案，這會在*library*資料夾中產生兩個檔案，即連結*庫 .csproj*和*Class1.cs*：
 
 ```console
 dotnet new classlib -o library

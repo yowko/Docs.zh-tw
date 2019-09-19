@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 4d7020b6bc5049101ec08329d53d966771e38035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 22e7c670f93293bd37edcb181c8130cdbe9ceb26
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168892"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047054"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>使用非同步用戶端通訊端
 非同步用戶端通訊端等待網路作業完成時，不會暫停應用程式。 相反地，它會使用標準 .NET Framework 非同步程式設計模型，在一個執行緒上處理網路連線，同時應用程式繼續在原始執行緒上執行。 非同步通訊端適用於大量使用網路的應用程式，或是無法等候網路作業完成再繼續進行的應用程式。  
@@ -287,6 +287,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用同步用戶端通訊端](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)
-- [非同步用戶端通訊端範例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+- [使用同步用戶端通訊端](using-a-synchronous-client-socket.md)
+- [透過通訊端接聽](listening-with-sockets.md)
+- [非同步用戶端通訊端範例](asynchronous-client-socket-example.md)

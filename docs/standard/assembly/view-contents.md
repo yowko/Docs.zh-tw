@@ -1,5 +1,5 @@
 ---
-title: HOW TO：視圖元件內容
+title: 作法：檢視組件內容
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -16,14 +16,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 8f27afafde0b83dfe886d218f3148d8ff07b30cb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973023"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053950"
 ---
-# <a name="how-to-view-assembly-contents"></a>作法：視圖元件內容
+# <a name="how-to-view-assembly-contents"></a>作法：檢視組件內容
+
 您可以使用 [Ildasm.exe (IL 反組譯工具)](../../framework/tools/ildasm-exe-il-disassembler.md) 來檢視檔案中的 Microsoft 中繼語言 (MSIL) 資訊。 如果所檢查的檔案是組件，這項資訊可以包括組件的屬性，以及其他模組和組件的參考。 這項資訊可能有助於判斷檔案是組件還是組件的一部分，以及檔案是否有其他模組或組件的參考。  
   
 若要使用*Ildasm*顯示元件的內容，請在命令提示字元中輸入**Ildasm** \<*元件名稱*>。 例如，下列命令會反組譯*Hello .exe*元件。  
@@ -35,6 +36,7 @@ ildasm Hello.exe
 若要查看組件資訊清單資訊，請按兩下 [MSIL 解譯器] 視窗中的**資訊清單**圖示。  
   
 ## <a name="example"></a>範例  
+
 下列範例會從基本的「Hello World」程式開始。 編譯器之後，請使用*Ildasm*來拆解 *.exe*元件，並查看組件資訊清單。  
 
 ```cpp

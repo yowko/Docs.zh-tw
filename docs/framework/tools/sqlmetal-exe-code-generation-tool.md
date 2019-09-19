@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 0d12196acab5a50f7dd6fc78e6dccc098cf3e2de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894615"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044083"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
 SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 元件產生程式碼及對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
@@ -30,7 +30,7 @@ SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../..
 > [!NOTE]
 > 使用 Visual Studio 的開發人員也可以使用物件關聯式設計工具來產生實體類別。 命令列方法會針對大型資料庫做適當調整。 由於 SqlMetal 是命令列工具，因此您可以在建置處理序中使用它。  
   
- 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。在命令提示字元中，鍵入下列命令：  
+ 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。在命令提示字元中，鍵入下列命令：  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ sqlmetal [options] [<input file>]
   
  **連接選項**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/server:** *\<名稱>*|指定資料庫伺服器名稱。|  
 |**/database:** *\<名稱>*|指定伺服器上的資料庫目錄。|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **輸出選項**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|以 .dbml 傳送輸出。 無法搭配 **/map** 選項使用。|  
 |**/code** *[:file]*|以原始程式碼傳送輸出。 無法搭配 **/dbml** 選項使用。|  
@@ -77,11 +77,11 @@ sqlmetal [options] [<input file>]
 |**/context:** *\<類型>*|指定資料庫內容類別的名稱。 預設值：衍生自資料庫名稱。|  
 |**/entitybase:** *\<類型>*|指定所產生程式碼中實體類別的基底類別。 預設值：實體沒有基底類別。|  
 |**/pluralize**|自動複數化或單數化類別和成員名稱。<br /><br /> 這個選項功能僅適用於美國英文版本。|  
-|**/serialization:** *\<選項>*|產生可序列化的類別。<br /><br /> 有效的 *\<選項 >* ：無、單向。 預設值：無。<br /><br /> 如需詳細資訊，請參閱[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
+|**/serialization:** *\<選項>*|產生可序列化的類別。<br /><br /> 有效的 *\<選項 >* ：無、單向。 預設值：無。<br /><br /> 如需詳細資訊，請參閱[序列化](../data/adonet/sql/linq/serialization.md)。|  
   
  **輸入檔案**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**\<輸入檔>**|指定 SQL Server Express .mdf 檔、SQL Server Compact 3.5 .sdf 檔或 .dbml 中繼檔。|  
   
@@ -134,6 +134,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：以 Visual Basic 或 C# 產生物件模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
-- [LINQ to SQL 中的程式碼產生](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [外部對應](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [如何：以 Visual Basic 或 C# 產生物件模型](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [LINQ to SQL 中的程式碼產生](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [外部對應](../data/adonet/sql/linq/external-mapping.md)

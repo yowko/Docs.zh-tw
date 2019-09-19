@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fdff7aa92e4c1c357c83b625a6daadbf0a8d556b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941740"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049521"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
 
-.NET Native 在 Windows Store 或開發人員的電腦上提供應用程式的靜態編譯。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有差異, .NET Native 會嘗試維持與適用于[Windows Store 應用程式的 .net](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)的相容性。 在大部分的情況下, 適用于 Windows Store 應用程式的 .NET 的專案也會使用 .NET Native。  不過，在某些情況下，您可能會遇到行為上的變更。 本檔討論適用于 Windows Store 應用程式的標準 .NET 與下列領域的 .NET Native 之間的差異:
+.NET Native 在 Windows Store 或開發人員的電腦上提供應用程式的靜態編譯。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有差異, .NET Native 會嘗試維持與適用于[Windows Store 應用程式的 .net](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)的相容性。 在大部分的情況下, 適用于 Windows Store 應用程式的 .NET 的專案也會使用 .NET Native。  不過，在某些情況下，您可能會遇到行為上的變更。 本檔討論適用于 Windows Store 應用程式的標準 .NET 與下列領域的 .NET Native 之間的差異:
 
 - [一般執行階段的差異](#Runtime)
 
@@ -67,7 +67,7 @@ ms.locfileid: "69941740"
 - 由於編譯器無法判斷具現化，所以必須以執行階段指示詞來指定您想要反映的泛型類型。 這不只是因為所有的程式碼必須包含在內，也因為反映在泛型類型上會形成無限循環 (例如，在泛型類型上叫用泛型方法時)。
 
 > [!NOTE]
-> 執行階段指示詞中定義在執行階段指示詞 (.rd.xml) 檔案中。 如需使用此檔案的一般資訊，請參閱[使用者入門](../../../docs/framework/net-native/getting-started-with-net-native.md)。 如需執行階段指示詞的詳細資訊，請參閱 [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。
+> 執行階段指示詞中定義在執行階段指示詞 (.rd.xml) 檔案中。 如需使用此檔案的一般資訊，請參閱[使用者入門](getting-started-with-net-native.md)。 如需執行階段指示詞的詳細資訊，請參閱 [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)。
 
 .NET Native 也包含程式碼剖析工具, 可協助開發人員判斷預設集合以外的哪些類型應該支援反映。
 
@@ -665,7 +665,7 @@ ms.locfileid: "69941740"
 
 ## <a name="see-also"></a>另請參閱
 
-- [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [快速入門](getting-started-with-net-native.md)
+- [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [適用于 Windows Store 應用程式的 .NET 總覽](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
 - [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

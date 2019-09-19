@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911106"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052108"
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
 從 .NET Framework 4 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
@@ -60,7 +60,7 @@ ms.locfileid: "69911106"
   
      已安裝的 .NET Framework 版本：舊版 .NET Framework 和 .NET Framework 4。  
   
-     處理方式：在應用程式目錄的[應用程式組態檔](../../../docs/framework/configure-apps/index.md)中，使用 [\<startup> 項目](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)和 [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)，其設定方式如下：  
+     處理方式：在應用程式目錄的[應用程式組態檔](../configure-apps/index.md)中，使用 [\<startup> 項目](../configure-apps/file-schema/startup/startup-element.md)和 [\<supportedRuntime> 項目](../configure-apps/file-schema/startup/supportedruntime-element.md)，其設定方式如下：  
   
     ```xml  
     <configuration>  
@@ -88,7 +88,7 @@ ms.locfileid: "69911106"
 ## <a name="example"></a>範例  
  下列範例示範執行 Managed COM 元件的 Unmanaged COM 主機，方法是使用編譯元件使用的 .NET Framework 版本。  
   
- 若要執行下列範例，請編譯並註冊下列使用 .NET Framework 3.5 的受控 COM 元件。 若要註冊元件，請在 [專案]  功能表上按一下 [屬性]  ，再按一下 [組建]  索引標籤，然後選取 [註冊 COM Interop]  核取方塊。  
+ 若要執行下列範例，請編譯並註冊下列使用 .NET Framework 3.5 的受控 COM 元件。 若要註冊元件，請在 [專案] 功能表上按一下 [屬性]，再按一下 [組建] 索引標籤，然後選取 [註冊 COM Interop] 核取方塊。  
   
 ```csharp
 using System;  
@@ -175,5 +175,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<startup> 項目](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<startup> 項目](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime> 項目](../configure-apps/file-schema/startup/supportedruntime-element.md)

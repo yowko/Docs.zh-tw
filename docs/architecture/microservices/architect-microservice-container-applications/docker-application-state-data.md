@@ -2,12 +2,12 @@
 title: Docker 應用程式中的狀態和資料
 description: Docker 應用程式中的狀態和資料管理。 微服務執行個體可消耗，但資料無法消耗；如何使用微服務處理它。
 ms.date: 09/20/2018
-ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673125"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039585"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 應用程式中的狀態和資料
 
@@ -31,7 +31,7 @@ ms.locfileid: "68673125"
 
 從 Docker 容器：
 
-> Docker 提供一項功能，稱為「重疊檔案系統」  。 這會實作寫入時複製工作，將已更新的資訊儲存至容器的根檔案系統。 該資訊是容器所依據之原始映像以外的資訊。 如果從系統中刪除容器，這些變更將會遺失。 因此，雖然有可能將容器的狀態儲存在其本機存放區，但以此為中心來設計系統會與容器設計的前提 (預設為無狀態) 衝突。
+> Docker 提供一項功能，稱為「重疊檔案系統」。 這會實作寫入時複製工作，將已更新的資訊儲存至容器的根檔案系統。 該資訊是容器所依據之原始映像以外的資訊。 如果從系統中刪除容器，這些變更將會遺失。 因此，雖然有可能將容器的狀態儲存在其本機存放區，但以此為中心來設計系統會與容器設計的前提 (預設為無狀態) 衝突。
 >
 > 但是，先前引進的 Docker 磁碟區現在是處理本機資料 Docker 的慣用方式。 若您需要容器內儲存體的詳細資訊，請查看 [Docker storage drivers ](https://docs.docker.com/storage/storagedriver/select-storage-driver/) (Docker 儲存體驅動程式) 與 [About storage drivers](https://docs.docker.com/storage/storagedriver/) (關於儲存體驅動程式)。
 
@@ -47,7 +47,7 @@ ms.locfileid: "68673125"
 
 如圖 4-5 所示，一般 Docker 磁碟區可儲存在容器本身之外，但必須在主機伺服器或 VM 的實體界限內。 不過，Docker 容器無法從一部主機伺服器或 VM 存取另一部主機伺服器或 VM 的磁碟區。 換句話說，使用這些磁碟區，將無法管理在不同 Docker 主機上執行容器間所共用的資料，雖然仍可透過支援遠端主機的磁碟區驅動程式來達到此目的。
 
-![磁碟區可以在容器間共用，但僅限位於相同的主機，除非您使用支援遠端主機的遠端驅動程式。 ](./media/image5.png)
+![磁碟區可以在容器間共用，但僅限位於相同的主機，除非您使用支援遠端主機的遠端驅動程式。](./media/image5.png)
 
 **圖 4-5**： 容器式應用程式的磁碟區和外部資料來源
 

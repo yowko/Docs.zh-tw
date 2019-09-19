@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ecdfd708217f260b0c02383159fab88948029c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874207"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052359"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
-`PInvokeStackImbalance` Managed 偵錯助理 (MDA) 會啟動，當 CLR 偵測到的平台叫用呼叫之後的堆疊深度不符合預期的堆疊深度，指定在指定的呼叫慣例<xref:System.Runtime.InteropServices.DllImportAttribute>屬性，宣告 managed 簽章中的參數。
+當 CLR 偵測到平台叫用呼叫之後的堆疊深度不符合預期的堆疊深度時，就會啟動<xref:System.Runtime.InteropServices.DllImportAttribute> managed偵錯工具（MDA），前提是屬性中指定的呼叫慣例和`PInvokeStackImbalance`managed 簽章中的參數宣告。
 
 `PInvokeStackImbalance` MDA 只會在 32 位元 x86 平台上實作。
 
 > [!NOTE]
-> `PInvokeStackImbalance`預設會停用 MDA。 在 Visual Studio 2017 中， `PInvokeStackImbalance` MDA 會出現在**Managed 偵錯助理**清單中**例外狀況設定**對話方塊中 (這會顯示當您選取**偵錯** >  **Windows** > **例外狀況設定**)。 不過，選取或清除**中斷時擲回**核取方塊不會啟用或停用 MDA，而只會控制在啟動 MDA 時，Visual Studio 是否會發生例外狀況。
+> 預設會停用MDA。`PInvokeStackImbalance` 在 Visual Studio 2017 中， `PInvokeStackImbalance` MDA 會出現在 [**例外狀況設定**] 對話方塊的 [**受管理的調試助理**] 清單中（當您選取 [ **Debug**  >  **Windows**  >  **] 時，會顯示此方塊）例外狀況設定**）。 不過，選取或清除 [擲回**時中斷**] 核取方塊並不會啟用或停用 MDA。它只會控制 Visual Studio 在啟動 MDA 時是否擲回例外狀況。
 
 ## <a name="symptoms"></a>徵兆
 
@@ -48,7 +48,7 @@ ms.locfileid: "61874207"
 
 MDA 訊息會提供使堆疊失去平衡之平台叫用方法呼叫的名稱。 `SampleMethod` 方法之平台叫用呼叫的範例訊息為：
 
-**呼叫 PInvoke 函式 'SampleMethod' 有不對稱的堆疊。這可能是因為 managed 的 PInvoke 簽章與未受管理的目標簽章不相符。請檢查的呼叫慣例和 PInvoke 簽章的參數相符的目標 unmanaged 簽章。**
+**對 PInvoke 函數 ' Sampleobject.samplemethod ' 的呼叫具有不對稱的堆疊。這很可能是因為受控 PInvoke 簽章與非受控目標籤章不相符。檢查 PInvoke 簽章的呼叫慣例和參數是否符合目標非受控簽章。**
 
 ## <a name="configuration"></a>組態
 
@@ -63,5 +63,5 @@ MDA 訊息會提供使堆疊失去平衡之平台叫用方法呼叫的名稱。 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)
+- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop 封送處理](../interop/interop-marshaling.md)

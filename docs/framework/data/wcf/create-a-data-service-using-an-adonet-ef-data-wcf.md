@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8c597738d656b32e7b4c75246027b726f425c6ef
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854117"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053010"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>作法：使用 ADO.NET Entity Framework 資料來源建立資料服務（WCF Data Services）
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>HOW TO：使用 ADO.NET Entity Framework 資料來源建立資料服務（WCF Data Services）
 
 WCF Data Services 會將實體資料公開為數據服務。 當資料來源為關係資料庫時，NETEntity 架構會提供此實體資料。 本主題示範如何在以現有資料庫為基礎的 Visual Studio Web 應用程式中建立 Entity Framework 架構資料模型，並使用此資料模型建立新的資料服務。
 
@@ -57,7 +57,7 @@ Entity Framework 也提供命令列工具，可在 Visual Studio 專案以外產
 
 4. 在 [**加入新專案**] 對話方塊中，選取 [ **Web** ] 類別中的 [ **WCF 資料服務**] 範本。
 
-   ![Visual Studio 2015 中的 WCF 資料服務專案範本](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 中的 WCF 資料服務專案範本](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF 資料服務**範本可在 Visual Studio 2015 中取得，但 Visual Studio 2017 則不提供。

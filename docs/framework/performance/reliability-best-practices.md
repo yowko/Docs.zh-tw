@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935733"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046248"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳作法
 
@@ -91,7 +91,7 @@ Managed 執行緒不一定是 SQL 中的 Win32 執行緒；它們可能是 Fiber
 
 請注意，<xref:System.Runtime.InteropServices.SafeHandle> 不是 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的取代項目。  仍然可能具有資源爭用和效能優點，可明確地處置作業系統資源。  您只需要了解，明確處置資源的 `finally` 區塊可能未執行，無法完成。
 
-<xref:System.Runtime.InteropServices.SafeHandle> 可讓您實作自己的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法，以執行控制代碼釋放工作，例如將狀態傳遞至作業系統控制代碼釋放常式，或釋放迴圈中的一組控制代碼。  CLR 保證會執行此方法。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 實作作者必須負責確保在所有情況下釋放控制代碼。 無法這麼做會導致控制代碼流失，這通常會造成與控制代碼建立關聯之原生資源的流失。 因此，請務必建構 <xref:System.Runtime.InteropServices.SafeHandle> 衍生類別，這樣 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 實作就不需要配置任何可能無法在叫用期間使用的資源。 請注意，允許呼叫在 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 實作內失敗的方法，前提是您的程式碼可以處理這類失敗，並且完成合約來釋放原生控制代碼。 為了進行偵錯，如果發生導致無法釋放資源的重大錯誤，則 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 的 <xref:System.Boolean> 傳回值可能設定為 `false`。 這麼做會啟用 [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA (啟用時)，協助識別問題。 它不會透過任何其他方法影響執行階段；將不會針對相同的資源再次呼叫<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>，因此控制代碼將流失。
+<xref:System.Runtime.InteropServices.SafeHandle> 可讓您實作自己的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法，以執行控制代碼釋放工作，例如將狀態傳遞至作業系統控制代碼釋放常式，或釋放迴圈中的一組控制代碼。  CLR 保證會執行此方法。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 實作作者必須負責確保在所有情況下釋放控制代碼。 無法這麼做會導致控制代碼流失，這通常會造成與控制代碼建立關聯之原生資源的流失。 因此，請務必建構 <xref:System.Runtime.InteropServices.SafeHandle> 衍生類別，這樣 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 實作就不需要配置任何可能無法在叫用期間使用的資源。 請注意，允許呼叫在 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 實作內失敗的方法，前提是您的程式碼可以處理這類失敗，並且完成合約來釋放原生控制代碼。 為了進行偵錯，如果發生導致無法釋放資源的重大錯誤，則 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 的 <xref:System.Boolean> 傳回值可能設定為 `false`。 這麼做會啟用 [releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md) MDA (啟用時)，協助識別問題。 它不會透過任何其他方法影響執行階段；將不會針對相同的資源再次呼叫<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>，因此控制代碼將流失。
 
 在特定內容中，不適合使用 <xref:System.Runtime.InteropServices.SafeHandle>。  因為 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法可以在 <xref:System.GC> 完成項執行緒上執行，所以任何需要在特定執行緒上釋放的控制代碼不應該包裝在 <xref:System.Runtime.InteropServices.SafeHandle> 中。
 
@@ -241,7 +241,7 @@ HPA 只會影響裝載 Common Language Runtime 以及實作主機保護的 Unman
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>不要透過 Unmanaged 程式碼無限期封鎖
 
-因為 CLR 無法中止執行緒，所以使用 Unmanaged 程式碼進行封鎖可能會導致拒絕服務攻擊，而不是使用 Managed 程式碼進行封鎖。  已封鎖的執行緒會防止 CLR 卸載 <xref:System.AppDomain>，至少不執行一些非常不安全的作業。  使用 Windows 同步處理原始物件進行封鎖, 是我們無法允許的一個明確範例。  如果可能的話, 應該`ReadFile`避免在對通訊端的呼叫中封鎖, 在理想的情況下, Windows API 應該提供一種機制, 讓這類作業的運作時間。
+因為 CLR 無法中止執行緒，所以使用 Unmanaged 程式碼進行封鎖可能會導致拒絕服務攻擊，而不是使用 Managed 程式碼進行封鎖。  已封鎖的執行緒會防止 CLR 卸載 <xref:System.AppDomain>，至少不執行一些非常不安全的作業。  使用 Windows 同步處理原始物件進行封鎖，是我們無法允許的一個明確範例。  如果可能的話，應該`ReadFile`避免在對通訊端的呼叫中封鎖，在理想的情況下，Windows API 應該提供一種機制，讓這類作業的運作時間。
 
 在理想情況下，所有呼叫原生的方法都應該使用具有合理有限逾時的 Win32 呼叫。  如果允許使用者指定逾時，則在沒有某種特定安全性權限時，不應該允許使用者指定無限逾時。  準則是，如果方法將封鎖超過 ~10 秒，則需要使用支援逾時的版本，或需要額外的 CLR 支援。
 
@@ -277,7 +277,7 @@ Unmanaged 記憶體可能會流失，就像作業系統控制代碼一樣。 可
 
 #### <a name="code-analysis-rule"></a>程式碼分析規則
 
-檢閱所有使用 Managed 程式碼並擷取所有物件或擷取所有例外狀況的 catch 區塊。  在C#中, 這表示會`catch`同時`catch(Exception)` {}標記和{}。  請考慮將例外狀況類型設為極為特別，或檢閱程式碼，確保它在擷取到非預期的例外狀況類型時不會以錯誤的方式操作。
+檢閱所有使用 Managed 程式碼並擷取所有物件或擷取所有例外狀況的 catch 區塊。  在C#中，這表示會`catch`同時`catch(Exception)` {}標記和{}。  請考慮將例外狀況類型設為極為特別，或檢閱程式碼，確保它在擷取到非預期的例外狀況類型時不會以錯誤的方式操作。
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假設 Managed 執行緒是 Win32 執行緒 - 它是 Fiber
 
@@ -316,4 +316,4 @@ CER 是前面緊接 <xref:System.Runtime.CompilerServices.RuntimeHelpers.Prepare
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [SQL Server 程式設計和主機保護屬性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+- [SQL Server 程式設計和主機保護屬性](sql-server-programming-and-host-protection-attributes.md)

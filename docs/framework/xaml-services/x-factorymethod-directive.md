@@ -6,27 +6,27 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: 8fff4d62e07bdfd4ecc27d2692c391251afdd6d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 586965dd4094e81fd830a09b64604cf33f195630
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971830"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053782"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 指示詞
-指定的 XAML 處理器應該用來解決它的支援型別之後初始化物件的建構函式以外的方法。  
+指定 XAML 處理器在解析其支援型別之後，要用來初始化物件的函式以外的方法。  
   
-## <a name="xaml-attribute-usage-no-xarguments"></a>XAML 屬性使用方式，不使用 x： 引數  
+## <a name="xaml-attribute-usage-no-xarguments"></a>XAML 屬性使用方式，無 x:Arguments  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodname"...>  
   ...  
 </object>  
 ```  
   
-## <a name="xaml-attribute-usage-xarguments-as-elements"></a>XAML 屬性使用方式，為元素的 x： 引數  
+## <a name="xaml-attribute-usage-xarguments-as-elements"></a>XAML 屬性使用方式，x:Arguments 為元素  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodname"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
@@ -38,23 +38,23 @@ ms.locfileid: "61971830"
   
 |||  
 |-|-|  
-|`methodname`|XAML 處理器呼叫來初始化為指定的執行個體方法的字串方法名稱`object`。 請參閱＜備註＞。|  
-|`oneOrMoreObjectElements`|一或多個物件項目指定 factory 方法參數的物件。 順序很重要;它表示在其中的引數應該傳遞至 factory 方法的順序。|  
+|`methodname`|XAML 處理器呼叫來初始化指定為`object`之實例的方法的字串方法名稱。 請參閱＜備註＞。|  
+|`oneOrMoreObjectElements`|指定 factory 方法參數之物件的一或多個物件元素。 順序很重要;它表示引數傳遞至 factory 方法的順序。|  
   
 ## <a name="remarks"></a>備註  
- 如果`methodname`是執行個體方法，它不限定。  
+ 如果`methodname`是實例方法，則不能是限定的。  
   
- 支援靜態方法，做為 factory 方法。 如果`methodname`是一種靜態方法，`methodname`依現狀*typeName*。*methodName*組合，其中*typeName*名稱定義的靜態 factory 方法的類別。 *typeName*可以是如果參考類型中對應的 xmlns 前置詞限定。 *typeName*可以是類型不同於`typeof(object)`。  
+ 可支援靜態方法做為 factory 方法。 如果`methodname`是靜態方法， `methodname`則會以*typeName*的形式提供。*方法*名稱組合，其中*typeName*會將定義靜態 factory 方法的類別命名為。 如果在對應的 xmlns 中參考型別，則*typeName*可以是前置詞限定的。 *typeName*可以是與`typeof(object)`不同的類型。  
   
- Factory 方法必須宣告的公用方法之類型的備份相關的物件項目。  
+ Factory 方法必須是可支援相關物件元素之類型的已宣告公用方法。  
   
- Factory 方法必須傳回指派給相關的物件執行個體。 Factory 方法永遠不會傳回 null。  
+ Factory 方法必須傳回可指派給相關物件的實例。 Factory 方法絕對不應傳回 null。  
   
- `x:Arguments` 最符合的 factory 方法的簽章的原則上運作。 比對參數計數會先評估。 如果有多個可能的相符項目參數計數，則取決於評估且最佳的相符項目，也會是參數型別。 如果在這個階段之後仍有模稜兩可，XAML 處理器行為是評估的未定義。  
+ `x:Arguments`會針對 factory 方法的簽章，操作最符合的原則。 比對會先評估參數計數。 如果有一個以上的參數計數可能相符，則會評估參數類型，並決定最符合的值。 如果在這個評估階段之後仍有不明確的情況，XAML 處理器行為會是未定義的。  
   
- `x:FactoryMethod`項目使用方式不是屬性項目用法的一般意義，因為指示詞的標記不會參考包含物件項目類型。 預期的項目使用方式是較不常見比屬性使用方式。 `x:Arguments` 可以使用 （屬性或項目使用方式），連同`x:FactoryMethod`項目使用方式，但這中未特意顯示使用方式區段。  
+ `x:FactoryMethod`由於指示詞標記不會參考包含物件專案的類型，因此專案使用方式不是一般意義中的屬性元素用法。 預期元素的使用方式不如屬性使用方式一般。 `x:Arguments`（屬性或專案使用方式）可與`x:FactoryMethod`專案使用方法一起使用，但不會特別顯示在 [使用方式] 區段中。  
   
- `x:FactoryMethod` 當項目必須位於任何其他的屬性元素之前，前面必須加上任何`x:Arguments`也提供做為項目，而且前面必須加上任何內容/內部文字/初始化文字。  
+ `x:FactoryMethod`當專案必須在任何其他屬性專案之前，必須在任何`x:Arguments`也提供作為元素的前面，而且必須在任何內容/內部文字/初始化文字之前。  
   
 ## <a name="see-also"></a>另請參閱
 

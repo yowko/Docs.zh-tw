@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cb310dc6d786c3c7711f4c194c6623324c777dd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: HT
+ms.openlocfilehash: d3167abd0c263a0a27573778d6f243bc824306a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412392"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051692"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>使用平台叫用封送處理資料
 
@@ -25,7 +25,7 @@ ms.locfileid: "58412392"
 
 - 將 Unmanaged 資料類型替代為 Managed 資料類型。
 
-您可以使用 Unmanaged 函式所提供的文件，以選擇性欄位套用屬性，並且將 Unmanaged 資料類型替代為 Managed 資料類型，來建構對等的 Managed 原型。 如需如何套用 <xref:System.Runtime.InteropServices.DllImportAttribute> 的指示，請參閱[使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)。
+您可以使用 Unmanaged 函式所提供的文件，以選擇性欄位套用屬性，並且將 Unmanaged 資料類型替代為 Managed 資料類型，來建構對等的 Managed 原型。 如需如何套用 <xref:System.Runtime.InteropServices.DllImportAttribute> 的指示，請參閱[使用 Unmanaged DLL 函式](consuming-unmanaged-dll-functions.md)。
 
 本節提供範例，示範如何建立 Managed 函式原型，供傳遞引數至函式和接收 Unmanaged 程式庫所匯出函式的傳回值。 此範例也會示範使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性和 <xref:System.Runtime.InteropServices.Marshal> 類別來明確封送處理資料的時機。
 

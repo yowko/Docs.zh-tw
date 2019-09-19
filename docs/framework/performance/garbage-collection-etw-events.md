@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5e10a1dc1ad3230213a20b850741a6ec0468294
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ec90d022a0c72782f413a84b6fbd2c1b8d663a73
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616429"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046500"
 ---
 # <a name="garbage-collection-etw-events"></a>記憶體回收 ETW 事件
 <a name="top"></a> 這些事件收集到記憶體回收的相關資訊。 它們協助診斷和偵錯，包括判斷執行多少次記憶體回收、在記憶體回收期間釋放了多少記憶體，以及其他事項。  
@@ -49,8 +49,8 @@ ms.locfileid: "64616429"
 - [GCTerminateConcurrentThread_V1 事件](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
-## <a name="gcstartv1-event"></a>GCStart_V1 事件  
- 下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。  
+## <a name="gcstart_v1-event"></a>GCStart_V1 事件  
+ 下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
 |引發事件的關鍵字|層級|  
 |-----------------------------------|-----------|  
@@ -75,7 +75,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcend_v1_event"></a>   
-## <a name="gcendv1-event"></a>GCEnd_V1 事件  
+## <a name="gcend_v1-event"></a>GCEnd_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -99,7 +99,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcheapstats_v1_event"></a>   
-## <a name="gcheapstatsv1-event"></a>GCHeapStats_V1 事件  
+## <a name="gcheapstats_v1-event"></a>GCHeapStats_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -134,7 +134,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gccreatesegment_v1_event"></a>   
-## <a name="gccreatesegmentv1-event"></a>GCCreateSegment_V1 事件  
+## <a name="gccreatesegment_v1-event"></a>GCCreateSegment_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -161,7 +161,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcfreesegment_v1_event"></a>   
-## <a name="gcfreesegmentv1-event"></a>GCCreateSegment_V1 事件  
+## <a name="gcfreesegment_v1-event"></a>GCCreateSegment_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -184,7 +184,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcrestarteebegin_v1_event"></a>   
-## <a name="gcrestarteebeginv1-event"></a>GCRestartEEBegin_V1 事件  
+## <a name="gcrestarteebegin_v1-event"></a>GCRestartEEBegin_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -202,7 +202,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcrestarteeend_v1_event"></a>   
-## <a name="gcrestarteeendv1-event"></a>GCRestartEEEnd_V1 事件  
+## <a name="gcrestarteeend_v1-event"></a>GCRestartEEEnd_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -220,7 +220,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcsuspendee_v1_event"></a>   
-## <a name="gcsuspendeev1-event"></a>GCSuspendEE_V1 事件  
+## <a name="gcsuspendee_v1-event"></a>GCSuspendEE_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -244,7 +244,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcsuspendeeend_v1_event"></a>   
-## <a name="gcsuspendeeendv1-event"></a>GCSuspendEEEnd_V1 事件  
+## <a name="gcsuspendeeend_v1-event"></a>GCSuspendEEEnd_V1 事件  
  下表說明關鍵字和層級：  
   
 |引發事件的關鍵字|層級|  
@@ -262,7 +262,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcallocationtick_v2_event"></a>   
-## <a name="gcallocationtickv2-event"></a>GCAllocationTick_V2 事件  
+## <a name="gcallocationtick_v2-event"></a>GCAllocationTick_V2 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -277,7 +277,7 @@ ms.locfileid: "64616429"
   
  下表說明事件資料。  
   
-|欄位名稱|資料類型|描述|  
+|欄位名稱|資料類型|說明|  
 |----------------|---------------|-----------------|  
 |AllocationAmount|win:UInt32|配置大小 (位元組)。 正確的配置長度值小於 ULONG (4,294,967,295 位元組)。 如果配置較大，則此欄位會包含已截斷的值。 使用 `AllocationAmount64` 以進行非常大的配置。|  
 |AllocationKind|win:UInt32|0x0 - 小型物件配置 (配置於小型物件堆積中)。<br /><br /> 0x1 - 大型物件配置 (配置於大型物件堆積中)。|  
@@ -290,7 +290,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcfinalizersbegin_v1_event"></a>   
-## <a name="gcfinalizersbeginv1-event"></a>GCFinalizersBegin_V1 事件  
+## <a name="gcfinalizersbegin_v1-event"></a>GCFinalizersBegin_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -308,7 +308,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcfinalizersend_v1_event"></a>   
-## <a name="gcfinalizersendv1-event"></a>GCFinalizersEnd_V1 事件  
+## <a name="gcfinalizersend_v1-event"></a>GCFinalizersEnd_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -331,7 +331,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gccreateconcurrentthread_v1_event"></a>   
-## <a name="gccreateconcurrentthreadv1-event"></a>GCCreateConcurrentThread_V1 事件  
+## <a name="gccreateconcurrentthread_v1-event"></a>GCCreateConcurrentThread_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -350,7 +350,7 @@ ms.locfileid: "64616429"
  [回到頁首](#top)  
   
 <a name="gcterminateconcurrentthread_v1_event"></a>   
-## <a name="gcterminateconcurrentthreadv1-event"></a>GCTerminateConcurrentThread_V1 事件  
+## <a name="gcterminateconcurrentthread_v1-event"></a>GCTerminateConcurrentThread_V1 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
@@ -368,4 +368,4 @@ ms.locfileid: "64616429"
   
 ## <a name="see-also"></a>另請參閱
 
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW 事件](clr-etw-events.md)

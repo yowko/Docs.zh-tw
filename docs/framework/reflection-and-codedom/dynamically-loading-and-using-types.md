@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894890"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046098"
 ---
 # <a name="dynamically-loading-and-using-types"></a>動態載入和使用類型
 反映會提供語言編譯器所使用的基礎結構，以實作隱含晚期繫結。 繫結是尋找對應至唯一指定的類型宣告 (也就是實作) 的程序。 當此程序發生在執行階段，而不是在編譯時期時，它稱為晚期繫結。 Visual Basic 可讓您在程式碼內使用隱含晚期繫結；Visual Basic 編譯器會呼叫 Helper 方法，它會使用反映來取得物件類型。 傳遞至 helper 方法的引數會導致在執行階段叫用適當的方法。 這些引數是在其上叫用方法的執行個體 (物件)、被叫用方法的名稱 (字串)，以及傳遞給被叫用方法的引數 (物件陣列)。  
@@ -102,5 +102,5 @@ End Module
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
-- [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [檢視類型資訊](viewing-type-information.md)
 - [.NET Framework 中的型別轉換](../../standard/base-types/type-conversion.md)

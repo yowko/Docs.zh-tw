@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 255a4ab3d6d6e3fc133e809ce360b25d6f82c8d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: bb478f0742e85cadd9509de823abb0d486170d37
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940073"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048503"
 ---
 # <a name="handling-errors"></a>處理錯誤
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別會擲回兩個系統例外狀況 (例如 <xref:System.ArgumentException>) 和 Web 特定例外狀況 (這些是 <xref:System.Net.WebRequest.GetResponse%2A> 方法所擲回的 <xref:System.Net.WebException>)。  
@@ -45,7 +45,7 @@ ms.locfileid: "69940073"
   
  下表描述 **Status** 屬性的可能值。  
   
-|狀態|說明|  
+|狀態|描述|  
 |------------|-----------------|  
 |ConnectFailure|無法在傳輸層級連絡遠端服務。|  
 |ConnectionClosed|連線過早關閉。|  
@@ -170,4 +170,4 @@ End Try
 ## <a name="see-also"></a>另請參閱
 
 - [例外狀況處理基本概念](../../standard/exceptions/exception-handling-fundamentals.md)
-- [要求資料](../../../docs/framework/network-programming/requesting-data.md)
+- [要求資料](requesting-data.md)

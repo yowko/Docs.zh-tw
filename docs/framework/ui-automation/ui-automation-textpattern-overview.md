@@ -6,19 +6,19 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: c7b30a854667a122ff30ec4a8e4855902489087f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: defabb90c8aed19fda663d9b360545fc399acaec
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660787"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040526"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 自動化 TextPattern 概觀
 
 > [!NOTE]
-> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。
 
-本概觀說明如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 來公開 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支援平台中，文字控制項的文字內容，包括格式和樣式屬性。 這些控制項包括但不限於 Microsoft.NET Framework<xref:System.Windows.Controls.TextBox>並<xref:System.Windows.Controls.RichTextBox>，以及其[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]對等項目。
+本概觀說明如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 來公開 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支援平台中，文字控制項的文字內容，包括格式和樣式屬性。 這些控制項包括（但不限於） Microsoft .NET Framework <xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.RichTextBox>其[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]對等專案。
 
 若要公開控制項的文字內容，您可以使用 <xref:System.Windows.Automation.TextPattern> 控制項模式，它會將文字容器的內容表示成文字資料流。 接著， <xref:System.Windows.Automation.TextPattern> 會需要 <xref:System.Windows.Automation.Text.TextPatternRange> 類別的支援來公開格式和樣式屬性。 <xref:System.Windows.Automation.Text.TextPatternRange> 可支援 <xref:System.Windows.Automation.TextPattern> ，其方法是使用 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 和 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 端點的集合，來表示文字容器中的連續或多個非連續文字範圍。 <xref:System.Windows.Automation.Text.TextPatternRange> 可支援選取、比較、擷取和周遊之類的功能。
 
@@ -48,7 +48,7 @@ ms.locfileid: "67660787"
 獨立的文字控制項可以用來當做標籤或表單上的靜態文字。 文字控制項也可以包含在 <xref:System.Windows.Automation.ControlType.ListItem>、 <xref:System.Windows.Automation.ControlType.TreeItem> 或 <xref:System.Windows.Automation.ControlType.DataItem>的結構內。
 
 > [!NOTE]
-> 文字控制項可能不會出現在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中 (請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md))。 這是因為文字控制項通常是透過另一個控制項的名稱屬性來顯示。 比方說，用來標示編輯控制項的文字，會透過編輯控制項的名稱屬性來顯示。 因為編輯控制項是在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀目錄的內容檢視中，所以文字項目本身不需要在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的那個檢視中。 內容檢視中唯一出現的文字是非多餘資訊的文字。 這可以讓任何輔助技術只在其使用者需要的資訊項目上快速篩選。
+> 文字控制項可能不會出現在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中 (請參閱 [UI Automation Tree Overview](ui-automation-tree-overview.md))。 這是因為文字控制項通常是透過另一個控制項的名稱屬性來顯示。 比方說，用來標示編輯控制項的文字，會透過編輯控制項的名稱屬性來顯示。 因為編輯控制項是在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀目錄的內容檢視中，所以文字項目本身不需要在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的那個檢視中。 內容檢視中唯一出現的文字是非多餘資訊的文字。 這可以讓任何輔助技術只在其使用者需要的資訊項目上快速篩選。
 
 ### <a name="edit"></a>編輯
 
@@ -96,7 +96,7 @@ ms.locfileid: "67660787"
 
 ## <a name="security"></a>安全性
 
-[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]架構的設計將安全性納入考量 (請參閱 < [UI 自動化安全性概觀](../../../docs/framework/ui-automation/ui-automation-security-overview.md))。 不過，本概觀中所描述的 TextPattern 類別，需要一些特定的安全性考量。
+架構[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的設計是以安全性為考慮（請參閱[UI 自動化安全性總覽](ui-automation-security-overview.md)）。 不過，本概觀中所描述的 TextPattern 類別，需要一些特定的安全性考量。
 
 - [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 文字提供者提供唯讀介面，而且不提供變更控制項中現有文字的能力。
 
@@ -122,19 +122,19 @@ ms.locfileid: "67660787"
 
 ## <a name="textpattern-terminology"></a>TextPattern 術語
 
-**屬性**\
+**特性**\
 文字範圍的格式化特性 (例如， <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> 或 <xref:System.Windows.Automation.TextPattern.FontNameAttribute>)。
 
-**變質範圍**\
-變質範圍是空白或零個字元的文字範圍。 就 TextPattern 控制項模式的目的而言，文字插入點 (或系統游標) 會被視為變質範圍。 如果沒有選取文字， <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 會在文字插入點傳回變質範圍，而 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 會傳回變質範圍，做為其起始端點。 當文字提供者找不到符合指定條件的任何文字範圍時，<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 和 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 可能會傳回變質範圍。 這個變質範圍可以用來當做文字提供者內的開始端點。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> 並<xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A>會傳回 null 參考 (`Nothing`在 Microsoft Visual Basic.NET) 以避免與探索到的範圍與變質範圍混淆。
+**退化範圍**\
+變質範圍是空白或零個字元的文字範圍。 就 TextPattern 控制項模式的目的而言，文字插入點 (或系統游標) 會被視為變質範圍。 如果沒有選取文字， <xref:System.Windows.Automation.TextPattern.GetSelection%2A> 會在文字插入點傳回變質範圍，而 <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> 會傳回變質範圍，做為其起始端點。 當文字提供者找不到符合指定條件的任何文字範圍時，<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 和 <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> 可能會傳回變質範圍。 這個變質範圍可以用來當做文字提供者內的開始端點。 <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A>和<xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A>會傳回 null 參考（`Nothing`在 Microsoft Visual Basic .net 中），以避免與已探索的範圍與退化範圍混淆。
 
-**內嵌的物件**\
-[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文字模型中有兩種類型的內嵌物件 。 其中包含以文字為基礎的內容項目 (例如超連結或資料表)，以及控制項目 (例如影像和按鈕)。 如需詳細資訊，請參閱 [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)。
+**Embedded 物件**\
+[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文字模型中有兩種類型的內嵌物件 。 其中包含以文字為基礎的內容項目 (例如超連結或資料表)，以及控制項目 (例如影像和按鈕)。 如需詳細資訊，請參閱 [Access Embedded Objects Using UI Automation](access-embedded-objects-using-ui-automation.md)。
 
-**端點**\
+**左端**\
 文字容器內之文字範圍的絕對 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 或 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 點。
 
-![TextPatternRangeEndpoints&#40;的開頭與結尾&#41;。](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")下圖說明一組的開始和結束點。
+![TextPatternRangeEndpoints &#40;開始和結束&#41;。](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")下圖說明一組起點和終點。
 
 **TextRange**\
 表示包含所有相關聯屬性和功能的文字容器中的一段文字，有開始和結束點。
@@ -144,10 +144,10 @@ ms.locfileid: "67660787"
 
 ## <a name="see-also"></a>另請參閱
 
-- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
-- [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [UI 自動化用戶端的控制項模式對應](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
+- [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)
+- [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
+- [UI 自動化用戶端的控制項模式對應](control-pattern-mapping-for-ui-automation-clients.md)
 - [Text Services Framework (TSF)](/windows/desktop/api/_tsf/)

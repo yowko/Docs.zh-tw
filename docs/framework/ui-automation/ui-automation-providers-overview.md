@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8db2e6cbd1f0c0dd61ecb8e147133b8c608ea8f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914383"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042034"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自動化提供者概觀
 > [!NOTE]
@@ -27,9 +27,9 @@ ms.locfileid: "69914383"
  使用者介面自動化提供者分為兩類：用戶端提供者和伺服器端提供者。  
   
 ### <a name="client-side-providers"></a>用戶端提供者  
- 用戶端提供者由使用者介面自動化用戶端實作，以便與不支援或不完全支援 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的應用程式通訊。 用戶端提供者通常會藉由傳送和接收 Windows 訊息, 跨進程界限與伺服器通訊。  
+ 用戶端提供者由使用者介面自動化用戶端實作，以便與不支援或不完全支援 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的應用程式通訊。 用戶端提供者通常會藉由傳送和接收 Windows 訊息，跨進程界限與伺服器通訊。  
   
- 由於、Windows Forms 或[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]應用程式中的控制項的使用者介面自動化提供者是做為作業系統的一部分提供, 因此用戶端應用程式很少需要執行自己的提供者, 而且此總覽不會涵蓋它們進一步.  
+ 由於、Windows Forms 或[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]應用程式中的控制項的使用者介面自動化提供者是做為作業系統的一部分提供，因此用戶端應用程式很少需要執行自己的提供者，而且此總覽不會涵蓋它們進一步.  
   
 ### <a name="server-side-providers"></a>伺服器端提供者  
  伺服器端提供者是由自訂控制項或是以[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、Windows Forms 或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]以外的 UI 架構為基礎的應用程式所執行。  
@@ -46,7 +46,7 @@ ms.locfileid: "69914383"
 ### <a name="navigation"></a>巡覽  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目是以 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的形式公開至用戶端。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 會在項目之間巡覽以建構樹狀結構。 巡覽功能是由每個項目的提供者啟用，每個提供者各指向父代、同層級和子系。  
   
- 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構用戶端檢視的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+ 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構用戶端檢視的詳細資訊，請參閱 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 ### <a name="views"></a>檢視  
  用戶端可在三個主要檢視中檢視 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構，如下表所示。  
@@ -57,7 +57,7 @@ ms.locfileid: "69914383"
 |控制項檢視|包含做為控制項的項目。|  
 |內容檢視|包含擁有內容的項目。|  
   
- 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構用戶端檢視的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+ 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構用戶端檢視的詳細資訊，請參閱 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
  提供者實作負責將項目定義為內容項目或控制項項目。 控制項不一定是內容項目，但所有的內容項目都會是控制項項目。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69914383"
   
  [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 容器控制項 (例如清單方塊和樹狀結構檢視) 都會被視為架構，因為他們都包含自己的程式碼，以呈現子項目並在其上執行點擊測試。 相對地， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 清單方塊就不是架構，因為呈現和點擊測試是由其中包含的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 視窗所處理。  
   
- 應用程式中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同架構組成。 例如, HWND 應用程式視窗可能包含動態 HTML (DHTML), 而後者又包含一個元件, 例如 HWND 中的下拉式方塊。  
+ 應用程式中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同架構組成。 例如，HWND 應用程式視窗可能包含動態 HTML （DHTML），而後者又包含一個元件，例如 HWND 中的下拉式方塊。  
   
 ### <a name="fragments"></a>Fragments  
  片段是來自特定架構之項目的完整子樹狀結構。 子樹狀結構之根目錄節點的項目稱為片段根目錄。 片段根目錄沒有父代，但會裝載於某些其他架構內，通常是 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 視窗 (HWND)。  
@@ -78,4 +78,4 @@ ms.locfileid: "69914383"
   
 ## <a name="see-also"></a>另請參閱
 
-- [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)

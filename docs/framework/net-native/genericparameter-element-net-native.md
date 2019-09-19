@@ -1,17 +1,17 @@
 ---
-title: <GenericParameter> 項目 (.NET Native)
+title: <GenericParameter>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2898d804f7a351045b2fbce42042f9fd322ebb0a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868598"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049751"
 ---
-# <a name="genericparameter-element-net-native"></a>\<GenericParameter > 項目 (.NET Native)
+# <a name="genericparameter-element-net-native"></a>\<GenericParameter > 元素（.NET Native）
 將原則套用到泛型類型或方法的參數類型。  
   
 ## <a name="syntax"></a>語法  
@@ -59,20 +59,20 @@ ms.locfileid: "61868598"
   
 |值|描述|  
 |-----------|-----------------|  
-|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將執行階段反映原則套用至特定類型，例如類別或結構。|  
+|[\<Method>](method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
+|[\<Type>](type-element-net-native.md)|將執行階段反映原則套用至特定類型，例如類別或結構。|  
   
 ## <a name="remarks"></a>備註  
- `<GenericParameter>` 項目是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 或 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 項目的子項，可用來將原則套用至特定泛型型別參數 (在泛型型別或方法簽章中，以其名稱來指定)。  
+ `<GenericParameter>` 項目是 [\<Method>](method-element-net-native.md) 或 [\<Type>](type-element-net-native.md) 項目的子項，可用來將原則套用至特定泛型型別參數 (在泛型型別或方法簽章中，以其名稱來指定)。  
   
  `<GenericParameter>` 元素與序列化程式搭配使用時最有用。 下列範例使用 `<GenericParameter>` 項目，將原則套用至 NewtonSoft JSON 序列化程式之 [JsonConvert.DeserializeObject\<T>(String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) 方法多載呼叫中的類型 `T`。  
   
@@ -88,8 +88,8 @@ ms.locfileid: "61868598"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
-- [\<型別 > 項目](../../../docs/framework/net-native/type-element-net-native.md)
-- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Method> 項目](method-element-net-native.md)
+- [\<輸入 > 元素](type-element-net-native.md)
+- [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞原則設定](runtime-directive-policy-settings.md)
+- [執行階段指示詞項目](runtime-directive-elements.md)

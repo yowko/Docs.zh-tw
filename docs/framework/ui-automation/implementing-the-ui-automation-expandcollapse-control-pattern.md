@@ -6,21 +6,21 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: 9477dfa4ab487d1d5d7aec0220f0655b742ec551
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 232bceba8286c2566a7df03b9001a5c43b348b20
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660866"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043451"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>實作 UI 自動化 ExpandCollapse 控制項模式
 
 > [!NOTE]
-> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。
+> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。
 
 本主題簡介實作 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>的方針和慣例，包括屬性、方法和事件的相關資訊。 其他參考的連結會在概觀的結尾列出。
 
-<xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式可支援控制項以視覺化方式展開來顯示更多內容和摺疊以隱藏內容。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。
+<xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式可支援控制項以視覺化方式展開來顯示更多內容和摺疊以隱藏內容。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。
 
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
@@ -56,8 +56,8 @@ ms.locfileid: "67660866"
 |必要成員|成員類型|注意|
 |----------------------|-----------------|-----------|
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|屬性|None|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|方法|None|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|方法|None|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|方法|無|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|方法|無|
 |<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Event - 事件|此控制項沒有相關聯的事件；使用這個泛型委派。|
 
 <a name="Exceptions"></a>
@@ -72,9 +72,9 @@ ms.locfileid: "67660866"
 
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [使用 TreeWalker 導覽 UI 自動化項目](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
+- [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [使用 TreeWalker 導覽 UI 自動化項目](navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
+- [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)

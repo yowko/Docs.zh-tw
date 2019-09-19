@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9781e7ef8edde182a13779a01e042cb44c92881
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912525"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045990"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>作法：使用反映發出定義泛型型別
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>HOW TO：使用反映發出定義泛型型別
 本主題示範如何建立具有兩個型別參數的簡單泛型類型、如何將類別條件約束、介面條件約束及特殊條件約束套用至型別參數，以及如何建立成員，以使用類別的型別參數作為參數類型及傳回類型。  
   
 > [!IMPORTANT]
-> 方法不是只因為屬於泛型型別並使用該類型的型別參數，而成為泛型。 方法只有在有自己的型別參數清單時，才會是泛型。 泛型型別上的大部分方法不是泛型，如本例所示。 如需發出泛型方法的範例，請參閱[如何：使用反映發出定義泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
+> 方法不是只因為屬於泛型型別並使用該類型的型別參數，而成為泛型。 方法只有在有自己的型別參數清單時，才會是泛型。 泛型型別上的大部分方法不是泛型，如本例所示。 如需發出泛型方法的範例，請參閱[如何：使用反映發出定義泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)。  
   
 ### <a name="to-define-a-generic-type"></a>定義泛型型別  
   
@@ -121,7 +121,7 @@ ms.locfileid: "69912525"
   
  程式包含兩種方法，一種會列出泛型型別的相關資訊，一種會列出型別參數的特殊條件約束。 這些方法用來顯示已完成之 `Sample` 類別的相關資訊。  
   
- 程式會在磁碟儲存已完成的模組 `GenericEmitExample1.dll`，因此您可以用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 開啟它，並檢查 MSIL 是否有 `Sample` 類別。  
+ 程式會在磁碟儲存已完成的模組 `GenericEmitExample1.dll`，因此您可以用 [Ildasm.exe (IL 反組譯工具)](../tools/ildasm-exe-il-disassembler.md) 開啟它，並檢查 MSIL 是否有 `Sample` 類別。  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af558e6712d58e208bf05cdb7a0f847ec4517f0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eafbd5b1dfa8eeee386cdcf49652aeeee9d635a8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614302"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052386"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的效能計數器
-本主題提供一份您可以在中找到的效能計數器[Windows 效能監視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)。  
+本主題提供您可以在[Windows 效能監視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)中找到的效能計數器清單。  
   
 - [例外狀況效能計數器](#exception)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "64614302"
 |效能計數器|描述|  
 |-------------------------|-----------------|  
 |**# of Exceps Thrown**|顯示自應用程式啟動後擲回例外狀況的總數。 這包含 .NET 例外狀況和轉換成 .NET 例外狀況的 Unmanaged 例外狀況。 例如，從 Unmanaged 程式碼傳回的 HRESULT 會轉換成在 Managed 程式碼中的例外狀況。<br /><br /> 此計數器包含已處理和未處理的例外狀況。 重新擲回的例外狀況會再計算一次。|  
-|**# of Exceps Thrown / Sec**|顯示每秒擲回的例外狀況數目。 這包含 .NET 例外狀況和轉換成 .NET 例外狀況的 Unmanaged 例外狀況。 例如，從 Unmanaged 程式碼傳回的 HRESULT 會轉換成在 Managed 程式碼中的例外狀況。<br /><br /> 此計數器包含已處理和未處理的例外狀況。 它不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。 此計數器是潛在的效能問題的指標，如果是大型 (> 100 個為單位) 擲回的例外狀況數。|  
+|**# of Exceps Thrown / Sec**|顯示每秒擲回的例外狀況數目。 這包含 .NET 例外狀況和轉換成 .NET 例外狀況的 Unmanaged 例外狀況。 例如，從 Unmanaged 程式碼傳回的 HRESULT 會轉換成在 Managed 程式碼中的例外狀況。<br /><br /> 此計數器包含已處理和未處理的例外狀況。 它不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。 如果擲回大量（> 100）例外狀況，此計數器就是潛在效能問題的指標。|  
 |**# of Filters / Sec**|顯示每秒所執行的 .NET 例外狀況篩選數目。 不論例外狀況是否已處理，都會評估例外狀況篩選。<br /><br /> 這個計數器不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。|  
 |**# of Finallys / Sec**|顯示每秒執行的 Finally 區塊數目。 不論 Try 區塊如何結束，都保證會執行 Finally 區塊。  只有例外狀況的 Finally 區塊會被列入計算；該計數器不會把正常程式碼路徑上的 Finally 區塊列入計算。<br /><br /> 這個計數器不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。|  
 |**Throw to Catch Depth / Sec**|顯示從擲回例外狀況的框架周遊到處理例外狀況的框架之每秒堆疊框架數目。 當進入例外狀況處理常式時，此計數器會重設為零，因此巢狀例外狀況會顯示處理常式至處理常式的堆疊深度。<br /><br /> 這個計數器不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。|  
@@ -50,7 +50,7 @@ ms.locfileid: "64614302"
 ## <a name="interop-performance-counters"></a>Interop 效能計數器  
  效能主控台 .NET CLR Interop 分類包含計數器，此計數器提供應用程式與 COM 元件、COM + 服務以及外部類型程式庫互動的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|描述|  
+|效能計數器|說明|  
 |-------------------------|-----------------|  
 |**# of CCWs**|顯示目前的 COM 可呼叫包裝函式 (CCW) 數目。 CCW 是被 Unmanaged 的 COM 用戶端所參考的 Managed 物件之 Proxy。 這個計數器表示被 Unmanaged 的 COM 程式碼所參考的 Managed 物件數目。|  
 |**# of marshaling**|顯示自應用程式啟動後，已從 Managed 程式碼封送處理引數和傳回值至 Unmanaged 程式碼的總次數，反之亦然。 如果虛設常式是內嵌的，則不會遞增此計數器。 (虛設常式負責封送處理引數和傳回值)。 如果封送處理額外負荷很小，則虛設常式通常是內嵌的。|  
@@ -75,7 +75,7 @@ ms.locfileid: "64614302"
 ## <a name="loading-performance-counters"></a>載入效能計數器  
  效能主控台 .NET CLR 載入分類包含計數器，此計數器提供已載入組件、類別和應用程式定義域的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|描述|  
+|效能計數器|說明|  
 |-------------------------|-----------------|  
 |**% Time Loading**|保留供未來使用。|  
 |**Assembly Search Length**|保留供未來使用。|  
@@ -217,7 +217,7 @@ ms.locfileid: "64614302"
   
  網路效能計數器可以使用 <xref:System.Diagnostics.PerformanceCounter> 和在 <xref:System.Diagnostics> 命名空間中的相關類別存取及管理。 網路效能計數器也可以使用 Windows 效能監視器主控台檢視。  
   
- 需要在組態檔中啟用，才能使用網路效能計數器。 藉由組態檔中的單一設定可啟用或停用所有網路效能計數器。 不能啟用或停用個別的網路效能計數器。 如需詳細資訊，請參閱 [\<performanceCounter> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)。  
+ 需要在組態檔中啟用，才能使用網路效能計數器。 藉由組態檔中的單一設定可啟用或停用所有網路效能計數器。 不能啟用或停用個別的網路效能計數器。 如需詳細資訊，請參閱 [\<performanceCounter> 項目 (網路設定)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md)。  
   
  如果已啟用網路計數器，這會建立並更新每個 AppDomain 和全域效能計數器。 如果停用，應用程式不會提供任何網路效能計數器資料。  
   
@@ -237,7 +237,7 @@ for (int i = 0; i < Array.Length; i++)
   
 - 「.NET CLR 網路 4.0.0.0」 - 上述所有通訊端計數器再加上 .NET Framework 第 4 版及更新版本所支援的新效能計數器。 這些新的計數器會提供 <xref:System.Net.HttpWebRequest> 物件的效能資訊 。  
   
- 如需存取和管理應用程式中效能計數器的詳細資訊，請參閱[效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)。  
+ 如需存取和管理應用程式中效能計數器的詳細資訊，請參閱[效能計數器](performance-counters.md)。  
   
 <a name="security"></a>   
 ## <a name="security-performance-counters"></a>安全性效能計數器  
@@ -253,5 +253,5 @@ for (int i = 0; i < Array.Length; i++)
   
 ## <a name="see-also"></a>另請參閱
 
-- [效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)
-- [執行階段分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [效能計數器](performance-counters.md)
+- [執行階段分析](runtime-profiling.md)

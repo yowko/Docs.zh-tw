@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 3f373c3947b45443ca4031ecdc3d5e40608ec84c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911545"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042167"
 ---
 # <a name="ui-automation-events-overview"></a>UI 自動化事件概觀
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "69911545"
 ## <a name="types-of-events"></a>事件類型  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件可分類如下。  
   
-|Event - 事件|描述|  
+|Event - 事件|說明|  
 |-----------|-----------------|  
 |屬性變更|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目或控制項模式上的屬性變更時引發。 例如，如果用戶端需要監視應用程式的核取方塊控制項，則它可以註冊，以接聽 <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> 屬性上的屬性變更事件。 當選取或取消選取核取方塊控制項時，提供者會引發事件，而且用戶端可視需要採取動作。|  
 |項目動作|[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 中的變更是由於使用者或程式設計活動而產生時引發；例如，當按一下按鈕或透過 <xref:System.Windows.Automation.InvokePattern>叫用按鈕時。|  
@@ -66,7 +66,7 @@ ms.locfileid: "69911545"
 ## <a name="ui-automation-event-arguments"></a>UI 自動化事件引數  
  下列類別會封裝事件引數。  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|包含非同步載入內容的相關資訊，包括已完成的載入百分比。|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|包含不需要額外資料之簡單事件的相關資訊。|  
@@ -79,10 +79,10 @@ ms.locfileid: "69911545"
   
  用來識別事件 <xref:System.Windows.Automation.AutomationEvent> 的物件是提供者從 <xref:System.Windows.Automation.AutomationElementIdentifiers> 中的欄位，以及控制模式識別碼類別 (例如 <xref:System.Windows.Automation.DockPatternIdentifiers>) 所取得。 對等欄位是用戶端應用程式從 <xref:System.Windows.Automation.AutomationElement> 中的欄位，以及控制模式類別 (例如 <xref:System.Windows.Automation.DockPattern>) 所取得。  
   
- 如需事件識別碼的清單，請參閱 [UI Automation Events for Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)。  
+ 如需事件識別碼的清單，請參閱 [UI Automation Events for Clients](ui-automation-events-for-clients.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [用戶端的 UI 自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [訂閱 UI 自動化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [用戶端的 UI 自動化事件](ui-automation-events-for-clients.md)
+- [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)
+- [訂閱 UI 自動化事件](subscribe-to-ui-automation-events.md)

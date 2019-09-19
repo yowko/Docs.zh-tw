@@ -1,5 +1,5 @@
 ---
-title: '{} 逸出序列-標記延伸'
+title: '{}Escape 序列-標記延伸'
 ms.date: 03/30/2017
 f1_keywords:
 - '{}'
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0646c62a1342eb160d1967e86ac286429013f3c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855603"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053867"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} 逸出序列/標記延伸
-提供屬性值的 XAML 逸出序列。 逸出序列可解譯為常值屬性中讓後續的值。  
+提供屬性值的 XAML 逸出序列。 Escape 序列允許將屬性中的後續值視為常值。  
   
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage  
   
-```xml  
+```xaml  
 <object property="{} literalValue" .../>  
 ```  
   
 ## <a name="xaml-property-element-usage"></a>XAML 屬性項目用法  
   
-```  
+```xaml  
 <object>  
   <object.property>  
     {} literalValue  
@@ -41,20 +41,20 @@ ms.locfileid: "61855603"
   
 |||  
 |-|-|  
-|*literalValue*|常值字串後面的逸出序列。 這個字串通常包含開啟或關閉括號 （{或}）。|  
+|*literalValue*|在 escape 序列之後的常值字串。 這個字串通常包含左或右大括弧（{或}）。|  
   
 ## <a name="remarks"></a>備註  
- 逸出序列 ({}) 使用，因此左大括號 （{}） 可用來當做在 XAML 中的常值字元。  
+ 使用 escape 序列（{}），以便在 XAML 中使用左大括弧（{）做為常值字元。  
   
- XAML 讀取器通常會使用左大括號 （{}） 來代表標記延伸模組的進入點; 不過，他們第一次檢查以判斷它是否右大括號 （}） 的下一個字元。 只有當兩個括號中 ({}) 相鄰的是，您可以將它們視為逸出序列。  
+ XAML 讀取器通常會使用左括弧（{）來表示標記延伸的進入點; 不過，它們會先檢查下一個字元，以判斷它是否為右大括弧（}）。 只有當兩個大括弧{}（）相鄰時，它們是否視為逸出序列。  
   
- 如果遇到逸出序列時，XAML 讀取器應該處理字串的其餘部分，做為字串。 不過，如果逸出序列套用至具有型別轉換子的成員，此字串可能進行類型轉換時由 XAML 寫入器，它會解譯。  
+ 如果遇到 escape 序列，XAML 讀取器應該將字串的其餘部分當做字串處理。 不過，如果將 escape 序列套用至具有類型轉換器的成員，則當 XAML 寫入器解讀該字串時，可能會經歷類型轉換。  
   
- 逸出序列不是標記延伸，並不支援的類別。 不過，它是 （包括自訂的 XAML 讀取器） 的 XAML 讀取器應該採用的慣例。  
+ Escape 序列不是標記延伸，而且不受類別支援。 不過，這是 XAML 讀取器（包括自訂 XAML 讀取器）應遵守的慣例。  
   
- 引號 （"） 不能以這種方式逸出序列。 如果您需要設定為非屬性的屬性值的引號，使用屬性元素語法和屬性項目內的字串放在引號或使用 XML 字元實體。 內容屬性中，引號可以是完整的內容。  
+ 不能以這種方式將引號（"）當做 escape 序列使用。 如果您需要將引號設定為 noncontent 屬性的屬性值，請使用屬性專案語法，並將引號放在 property 專案中做為字串，或使用 XML 字元實體。 若為 content 屬性，引號可以是整個內容。  
   
- 逸出序列 ({}) 時，經常必須指定 XML 型別，其中必須包含命名空間限定詞位置中的 XAML 標記延伸模組可能會出現。 這可以包括開頭的 XAML 屬性值，然後在 標記延伸，等號 （=） 的後面。 下列範例會出現在 XAML 屬性值的開頭的 XML 命名空間的逸出序列。  
+ 指定必須在 XAML{}標記延伸可能出現之位置中包含命名空間限定詞的 XML 類型時，通常需要使用 escape 序列（）。 這包括 XAML 屬性值的開頭，以及在標記延伸中，緊接在等號（=）之後。 下列範例顯示在 XAML 屬性值開頭出現之 XML 命名空間的逸出序列。  
   
  [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
