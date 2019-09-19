@@ -2,7 +2,7 @@
   items:
     - name: 評估中斷性變更
       href: index.md
-    - name: 重大變更
-      href: breaking-changes.md
     - name: 中斷性變更類別
       href: categories.md
+    - name: 重大變更
+      href: breaking-changes.md
