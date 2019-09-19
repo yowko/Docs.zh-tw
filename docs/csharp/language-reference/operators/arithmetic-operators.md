@@ -29,7 +29,7 @@ helpviewer_keywords:
 - '- operator [C#]'
 ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
 ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/19/2019
 ms.locfileid: "69608363"

@@ -4,7 +4,7 @@
   href: configure-language-version.md
 - name: 'C# 關鍵字'
   items:
-    - name: 概觀
+    - name: 總覽
       href: keywords/index.md
     - name: 內建類型
       items:
@@ -154,7 +154,7 @@
               href: keywords/try-catch-finally.md
         - name: Checked 與 Unchecked
           items:
-            - name: 概觀
+            - name: 總覽
               href: keywords/checked-and-unchecked.md
             - name: checked
               href: keywords/checked.md
@@ -274,7 +274,7 @@
           href: keywords/in.md
 - name: 'C# 運算子'
   items:
-    - name: 概觀
+    - name: 總覽
       href: operators/index.md
     - name: 算術運算子
       href: operators/arithmetic-operators.md
@@ -293,7 +293,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: 成員存取運算子
       href: operators/member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
     - name: 型別測試和轉換運算子
       href: operators/type-testing-and-cast.md
       displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
@@ -347,7 +347,7 @@
       href: operators/operator-overloading.md
 - name: 'C# 特殊字元'
   items:
-    - name: 概觀
+    - name: 總覽
       href: tokens/index.md
     - name: $ -- 字串插補
       href: tokens/interpolated.md
@@ -355,7 +355,7 @@
       href: tokens/verbatim.md
 - name: 'C# 前置處理器指示詞'
   items:
-    - name: 概觀
+    - name: 總覽
       href: preprocessor-directives/index.md
     - name: '#if'
       href: preprocessor-directives/preprocessor-if.md
@@ -387,7 +387,7 @@
       href: preprocessor-directives/preprocessor-pragma-checksum.md
 - name: 'C# 編譯器選項'
   items:
-    - name: 概觀
+    - name: 總覽
       href: compiler-options/index.md
     - name: 使用 csc.exe 建置命令列
       href: compiler-options/command-line-building-with-csc-exe.md

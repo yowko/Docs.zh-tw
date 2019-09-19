@@ -26,7 +26,7 @@ ms.locfileid: "70929404"
 |異常偵測|偵測詐騙的銀行交易 |
 |建議|根據線上購物者之前的購買記錄，建議他們可能想要購買的產品|
 
-## <a name="hello-mlnet-world"></a>Hello ML.NET World
+## <a name="hello-mlnet-world"></a>ML.NET 的概要
 
 下列程式碼片段中程式碼會示範最簡單的 ML.NET 應用程式。 此範例會建構線性迴歸模型，使用房子大小及價格資料來預測房價。 在實際的應用程式中，您的資料和模型會更複雜。
 
@@ -174,7 +174,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 ||群集|<xref:Microsoft.ML.ClusteringCatalog>||
 ||針對|<xref:Microsoft.ML.ForecastingCatalog>||
 ||排名|<xref:Microsoft.ML.RankingCatalog>||
-||回復|<xref:Microsoft.ML.RegressionCatalog>||
+||迴歸|<xref:Microsoft.ML.RegressionCatalog>||
 ||建議|<xref:Microsoft.ML.RecommendationCatalog>|新增 `Microsoft.ML.Recommender` NuGet 套件|
 ||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|新增 `Microsoft.ML.TimeSeries` NuGet 套件|
 |模型使用方式 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
@@ -278,4 +278,4 @@ DataView 物件的重要屬性是它們都**延遲**評估。 資料檢視只會
 
 或者您可以在[操作指南](./how-to-guides/index.md)中深入了解特定的主題。
 
-如果您很急切，您可以直接深入 [API 參考文件](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)！
+如果您非常希望了解，您可以直接參閱 [API 參考文件](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)！
