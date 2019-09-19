@@ -4,12 +4,12 @@ description: 尋找資源以了解如何在 Windows、Linux 和 macOS 上建置 
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 3c530c71d1cfa9d0c4cf09f38519970f6ef8da51
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5846b3c62a4a44b0d6bcdfbaaa00e12e5a157ab0
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969902"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116539"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -23,7 +23,7 @@ ms.locfileid: "70969902"
 
 接下來，開啟終端機，例如 **PowerShell**、**命令提示字元**或 **bash**。 鍵入下列 `dotnet` 命令以建立並執行 C# 應用程式。
 
-```console
+```dotnetcli
 dotnet new console --output sample1
 dotnet run --project sample1
 ```

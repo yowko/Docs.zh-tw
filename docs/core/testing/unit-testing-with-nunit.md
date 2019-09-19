@@ -4,12 +4,12 @@ description: 使用 dotnet test 與 NUnit 逐步建置解決方案範例的互�
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4d378e68143192e2f56fb411ae6ee709af753750
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 20f81981458b7e805a917202edce671ced69d89a
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849658"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117314"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>利用 NUnit 與 .NET Core 進行 C# 單元測試
 
@@ -26,7 +26,7 @@ ms.locfileid: "70849658"
 
 開啟 Shell 視窗。 建立名稱為 *unit-testing-using-nunit* 的目錄來放置解決方案。 在此新目錄中，執行下列命令以針對類別庫與測試專案建立新方案檔：
 
-```console
+```dotnetcli
 dotnet new sln
 ```
  
@@ -40,7 +40,7 @@ dotnet new sln
 
 將 *PrimeService* 設為目前的目錄，然後執行下列命令以建立來源專案：
 
-```console
+```dotnetcli
 dotnet new classlib
 ```
 
@@ -63,7 +63,7 @@ namespace Prime.Services
 
 將目錄變更回 *unit-testing-using-nunit* 目錄。 執行下列命令，將類別庫專案新增至方案：
 
-```console
+```dotnetcli
 dotnet sln add PrimeService/PrimeService.csproj
 ```
 
@@ -82,7 +82,7 @@ dotnet sln add PrimeService/PrimeService.csproj
 
 將 *PrimeService.Tests* 目錄設為目前的目錄，然後使用下列命令建立新的專案：
 
-```console
+```dotnetcli
 dotnet new nunit
 ```
 
@@ -92,7 +92,7 @@ dotnet new nunit
 
 測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new`，新增了 Microsoft 測試 SDK、NUnit 測試架構以及 NUnit 測試配接器。 現在，將 `PrimeService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -113,7 +113,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 在 *unit-testing-using-nunit* 目錄中執行下列命令：
 
-```console
+```dotnetcli
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 

@@ -2,12 +2,12 @@
 title: dotnet list package 命令
 description: "'dotnet list package' 命令提供一個便利選項，可列出適用於專案或解決方案的套件參考。"
 ms.date: 06/26/2019
-ms.openlocfilehash: 48eef0ccc6acf2bbd6c1acf748870882d2480ce5
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168026"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117723"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -19,13 +19,13 @@ ms.locfileid: "70168026"
 
 ## <a name="synopsis"></a>概要
 
-```console
+```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
    [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet list package` 命令提供一個便利選項，可列出適用於特定專案或解決方案的所有 NuGet 套件參考。 您需要先建置專案，才能具備處理此命令所需的資產。 下列範例會針對 [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 專案顯示 `dotnet list package` 命令的輸出：
 
@@ -121,18 +121,18 @@ Project 'HelloPlugin' has the following package references
 
 * 列出特定專案的套件參考：
 
-  ```console
+  ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
 * 列出有較新版本可供使用 (包括發行前版本) 的套件參考：
 
-  ```console
+  ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
 * 列出適用於特定目標 Framework 的套件參考：
 
-  ```console
+  ```dotnetcli
   dotnet list package --framework netcoreapp3.0
   ```

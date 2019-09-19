@@ -3,12 +3,12 @@ title: 教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core �
 description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 022afd99c6d36d7a60ac40f3f27ba073c5470bd2
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082804"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117369"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 
@@ -33,19 +33,19 @@ ms.locfileid: "71082804"
 
 請從建立方案檔開始，而方案檔是作為一或多個 .NET Core 專案的容器。 在終端機中，執行[`dotnet new`](../tools/dotnet-new.md)命令以在名為*黃金*的新資料夾內建立新的方案 *。*
 
-```console
+```dotnetcli
 dotnet new sln -o golden
 ```
 
 流覽至新的 *[黃金*] 資料夾，然後執行下列命令來建立程式庫專案，這會在*library*資料夾中產生兩個檔案，即連結*庫 .csproj*和*Class1.cs*：
 
-```console
+```dotnetcli
 dotnet new classlib -o library
 ```
 
 執行 [`dotnet sln`](../tools/dotnet-sln.md) 命令，將新建立的 *library.csproj* 專案新增至方案：
 
-```console
+```dotnetcli
 dotnet sln add library/library.csproj
 ```
 
@@ -63,7 +63,7 @@ dotnet sln add library/library.csproj
 
 我們的程式庫方法會序列化及還原序列化 JSON 格式的物件。 若要支援 JSON 序列化及還原序列化，請新增 `Newtonsoft.Json` NuGet 套件的參考。 `dotnet add` 命令會新增項目至專案。 若要新增 NuGet 套件的參考，請使用 [`dotnet add package`](../tools/dotnet-add-package.md) 命令，並指定套件的名稱：
 
-```console
+```dotnetcli
 dotnet add library package Newtonsoft.Json
 ```
 
@@ -77,7 +77,7 @@ dotnet add library package Newtonsoft.Json
 
 執行 [`dotnet restore`](../tools/dotnet-restore.md) ([請參閱注意事項](#dotnet-restore-note))，以還原相依性，並在其中有三個檔案的 *library* 內建立 *obj* 資料夾，包含 *project.assets.json* 檔案：
 
-```console
+```dotnetcli
 dotnet restore
 ```
 
@@ -100,7 +100,7 @@ namespace Library
 
 使用 [`dotnet build`](../tools/dotnet-build.md) 命令建置程式庫。 這會在 *golden/library/bin/Debug/netstandard1.4* 底下產生 *library.dll* 檔案：
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -108,19 +108,19 @@ dotnet build
 
 建置程式庫的測試專案。 從 *golden* 資料夾中，建立新的測試專案︰
 
-```console
+```dotnetcli
 dotnet new xunit -o test-library
 ```
 
 將測試專案新增至方案：
 
-```console
+```dotnetcli
 dotnet sln add test-library/test-library.csproj
 ```
 
 新增上一節中所建立之程式碼的專案參考，讓編譯器可以尋找及使用程式庫專案。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```console
+```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
@@ -154,7 +154,7 @@ namespace TestApp
 
 從 *golden* 資料夾中，執行下列命令：
 
-```console
+```dotnetcli
 dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
@@ -163,7 +163,7 @@ dotnet test test-library/test-library.csproj
 
 編輯 *UnitTest1.cs* 檔案，並將判斷提示從 `Assert.NotEqual` 變更為 `Assert.Equal`。 從 *golden* 資料夾中執行下列命令，以重新執行測試，而這次測試會通過：
 
-```console
+```dotnetcli
 dotnet test test-library/test-library.csproj
 ```
 
@@ -173,19 +173,19 @@ dotnet test test-library/test-library.csproj
 
 從 *golden* 資料夾中，建立新的主控台應用程式︰
 
-```console
+```dotnetcli
 dotnet new console -o app
 ```
 
 將主控台應用程式專案新增至方案：
 
-```console
+```dotnetcli
 dotnet sln add app/app.csproj
 ```
 
 執行 `dotnet add reference` 命令，建立與程式庫的相依性︰
 
-```console
+```dotnetcli
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
@@ -204,7 +204,7 @@ using Library;
 
 執行下列 `dotnet run` 命令來執行可執行檔，而 `dotnet run` 的 `-p` 選項指定主要應用程式的專案。 應用程式會產生 "The answer is 42" 字串。
 
-```console
+```dotnetcli
 dotnet run -p app/app.csproj
 ```
 

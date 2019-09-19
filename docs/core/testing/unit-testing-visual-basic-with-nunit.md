@@ -4,12 +4,12 @@ description: 使用 NUnit 逐步建置 Visual Basic 解決方案範例的互動�
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1682cf7cb351951d3bea9a64d963cd6a8995c083
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 97902bbfb035d3403d3e7236a0c67fa60d7d9d94
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849674"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117345"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>使用 dotnet test 與 NUnit 為 Visual Basic .NET Core 程式庫進行單元測試
 
@@ -26,7 +26,7 @@ ms.locfileid: "70849674"
 
 開啟 Shell 視窗。 建立名稱為 *unit-testing-vb-nunit* 的目錄來放置方案。 在此新目錄中，執行下列命令以針對類別庫與測試專案建立新方案檔：
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 
@@ -40,7 +40,7 @@ dotnet new sln
 
 將 *PrimeService* 設為目前的目錄，然後執行下列命令以建立來源專案：
 
-```console
+```dotnetcli
 dotnet new classlib -lang VB
 ```
 
@@ -60,7 +60,7 @@ End Namespace
 
 將目錄變更回 *unit-testing-vb-using-mstest* 目錄。 執行下列命令，將類別庫專案新增至方案：
 
-```console
+```dotnetcli
 dotnet sln add .\PrimeService\PrimeService.vbproj
 ```
 
@@ -79,7 +79,7 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
 
 將 *PrimeService.Tests* 目錄設為目前的目錄，然後使用下列命令建立新的專案：
 
-```console
+```dotnetcli
 dotnet new nunit -lang VB
 ```
 
@@ -89,7 +89,7 @@ dotnet new nunit -lang VB
 
 測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 新增了 NUnit 與 NUnit 測試配接器。 現在，將 `PrimeService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -110,7 +110,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 在 *unit-testing-vb-nunit* 目錄中執行下列命令：
 
-```console
+```dotnetcli
 dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 ```
 

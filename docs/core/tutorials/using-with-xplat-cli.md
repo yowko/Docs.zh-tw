@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: c42a34bc13ff9fb5d8eb5a85b461360915e2c68f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849333"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117354"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列開始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -30,7 +30,7 @@ ms.locfileid: "70849333"
 
 開啟命令提示字元，並建立名為 *Hello* 的資料夾。 巡覽至您已建立的資料夾，並鍵入下列內容：
 
-```console
+```dotnetcli
 dotnet new console
 dotnet run
 ```

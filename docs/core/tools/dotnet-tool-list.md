@@ -2,12 +2,12 @@
 title: dotnet tool list 命令
 description: dotnet tool list 命令會列出您電腦中指定的 .NET Core 通用工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: d3ff7fc90faf6ede3f7de0d5af5112c77ca140db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 6d35b1dce0c6d57edb0c6dd5f9711f093bc804aa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712907"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117564"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -19,13 +19,13 @@ ms.locfileid: "54712907"
 
 ## <a name="synopsis"></a>概要
 
-```console
+```dotnetcli
 dotnet tool list <-g|--global>
 dotnet tool list <--tool-path>
 dotnet tool list <-h|--help>
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet tool list` 命令可讓您列出電腦上所有使用者 (目前的使用者設定檔)，或指定路徑中安裝的所有 .NET Core 通用工具。 此命令會列出套件名稱、安裝的版本和通用工具命令。 若要使用這個 list 命令，您必須使用 `--global` 選項指定您要查看所有使用者範圍工具，或使用 `--tool-path` 選項指定自訂路徑。
 

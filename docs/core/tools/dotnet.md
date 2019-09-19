@@ -2,12 +2,12 @@
 title: dotnet 命令
 description: 了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和其用法。
 ms.date: 06/04/2018
-ms.openlocfilehash: 801320bf7f3527ac70f1d5b9fe3d0ce537e50e93
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969785"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117508"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -23,14 +23,14 @@ ms.locfileid: "70969785"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```console
+```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
     [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```console
+```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
     [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
     [--runtimeconfig] [-v|--verbosity] [--version]
@@ -38,7 +38,7 @@ dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--de
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
     [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
@@ -217,7 +217,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-| 命令                                       | 函數                                                            |
+| 命令                                       | 功能                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | 建置 .NET Core 應用程式。                                     |
 | [dotnet build-server](dotnet-build-server.md) | 與組建所啟動的伺服器互動。                          |
@@ -236,7 +236,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-| 命令                             | 函數                                                            |
+| 命令                             | 功能                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | 建置 .NET Core 應用程式。                                     |
 | [dotnet clean](dotnet-clean.md)     | 清除組建輸出。                                              |
@@ -254,7 +254,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-| 命令                             | 函數                                                            |
+| 命令                             | 功能                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | 建置 .NET Core 應用程式。                                     |
 | [dotnet clean](dotnet-clean.md)     | 清除組建輸出。                                              |
@@ -272,7 +272,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="project-references"></a>專案參考
 
-命令 | 函數
+命令 | 功能
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | 新增專案參考。
 [dotnet list reference](dotnet-list-reference.md) | 列出專案參考。
@@ -280,14 +280,14 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="nuget-packages"></a>NuGet 套件
 
-命令 | 函數
+命令 | 功能
 --- | ---
 [dotnet add package](dotnet-add-package.md) | 新增 NuGet 套件。
 [dotnet remove package](dotnet-remove-package.md) | 移除 NuGet 套件。
 
 ### <a name="nuget-commands"></a>NuGet 命令
 
-命令 | 函數
+命令 | 功能
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | 從伺服器刪除或取消列出套件。
 [dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
@@ -297,7 +297,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 [.NET Core 通用工具](global-tools.md)將從 .NET Core SDK 2.1.300 開始提供使用：
 
-命令 | 函數
+命令 | 功能
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | 在您的電腦上安裝通用工具。
 [dotnet tool list](dotnet-tool-list.md) | 列出在您電腦上的預設目錄或在指定路徑中目前已安裝的所有通用工具。
@@ -308,7 +308,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 從 .NET Core SDK 2.1.300 開始，先前僅能透過 `DotnetCliToolReference` 於個別專案上使用的數個工具，現在皆已做為 .NET Core SDK 的一部分提供。 這些工具列於下列資料表中：
 
-| 工具                                              | 函數                                                     |
+| 工具                                              | 功能                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
 | dev-certs                                         | 建立及管理開發憑證。                |
 | [ef](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core 命令列工具。                    |

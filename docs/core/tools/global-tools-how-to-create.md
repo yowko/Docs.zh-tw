@@ -4,12 +4,12 @@ description: 描述如何建立通用工具。 通用工具是透過 .NET Core C
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202762"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117440"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>使用 .NET Core CLI 建立 .NET Core 通用工具
 
@@ -23,7 +23,7 @@ ms.locfileid: "70202762"
 
 我們的範例工具是會產生 ASCII Bot 並列印訊息的主控台應用程式。 首先，建立新的 .NET Core 主控台應用程式。
 
-```console
+```dotnetcli
 dotnet new console -o botsay
 ```
 
@@ -117,7 +117,7 @@ static void ShowBot(string message)
 
 執行專案，並查看輸出結果。 請嘗試這些命令列變化，以查看不同的結果：
 
-```csharp
+```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
 dotnet run -- hello from the bot
@@ -158,7 +158,7 @@ dotnet run -- hello from the bot
 
 接下來，為您的應用程式建立 NuGet 套件。
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -166,7 +166,7 @@ dotnet pack
 
 既然您已經有了套件，請從該套件安裝工具：
 
-```console
+```dotnetcli
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
@@ -188,6 +188,6 @@ Tool 'botsay' (version '1.0.0') was successfully installed.
 
 一旦您完成工具的實驗，可以使用下列命令來將它移除：
 
-```console
+```dotnetcli
 dotnet tool uninstall -g botsay
 ```

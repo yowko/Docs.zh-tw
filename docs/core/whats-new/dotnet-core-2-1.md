@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925727"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116220"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -25,7 +25,7 @@ ms.locfileid: "70925727"
 - [JIT 編譯改進功能](#jit-compiler-improvements)
 - [API 變更](#api-changes)
 
-## <a name="tooling"></a>工具
+## <a name="tooling"></a>Tooling
 
 隨附於 .NET Core 2.1 的工具 .NET Core 2.1 SDK (2.1.300 版) 包含下列變更與增強功能：
 
@@ -39,7 +39,7 @@ ms.locfileid: "70925727"
 
 - 使用長時間執行的 SDK 組建伺服器，這些是跨越個別 `dotnet build` 引動過程的處理序。 它們消除了每次執行 `dotnet build` 時，需要以 JIT 編譯大型程式碼區塊的需求。 組建伺服器處理序可使用下列命令自動終止：
 
-   ```console
+   ```dotnetcli
    dotnet buildserver shutdown
    ```
 
@@ -49,7 +49,7 @@ ms.locfileid: "70925727"
 
 - `dotnet watch` 提供檔案系統監看員，能先等候檔案變更再執行一組指定的命令。 例如，下列命令會自動重建目前的專案，並在其中的檔案發生變更時產生詳細資訊輸出：
 
-   ```console
+   ```dotnetcli
    dotnet watch -- --verbose build
    ```
 
@@ -71,7 +71,7 @@ ms.locfileid: "70925727"
 
 若要安裝通用工具，您需使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如：
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -116,7 +116,7 @@ dotnet tool install -g dotnetsay
 
 - 在使用 [.NET Core CLI 工具](../tools/index.md)時，將以下選項新增至 .NET Core 命令 (例如 `run`)，並使用所需的值：
 
-   ```console
+   ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
 

@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: cf313f8197280bdbb943c12ef0c7a29284ec01a5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 1a5320f47b880c2d84132d70e1d0be19d6de486b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849771"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116206"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 與 NUnit 為 .NET Core 中的 F# 程式庫進行單元測試
 
@@ -29,7 +29,7 @@ ms.locfileid: "70849771"
 開啟 Shell 視窗。 建立名為 *unit-testing-with-fsharp* 的目錄來放置方案。
 在此新目錄中，執行下列命令以針對類別庫與測試專案建立新方案檔：
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 
@@ -43,7 +43,7 @@ dotnet new sln
 
 將 *MathService* 設為目前的目錄，然後執行下列命令以建立來源專案：
 
-```console
+```dotnetcli
 dotnet new classlib -lang F#
 ```
 
@@ -56,7 +56,7 @@ module MyMath =
 
 將目錄變更回 *unit-testing-with-fsharp* 目錄。 執行下列命令，將類別庫專案新增至方案：
 
-```console
+```dotnetcli
 dotnet sln add .\MathService\MathService.fsproj
 ```
 
@@ -75,7 +75,7 @@ dotnet sln add .\MathService\MathService.fsproj
 
 將 *MathService.Tests* 目錄設為目前的目錄，然後使用下列命令建立新的專案：
 
-```console
+```dotnetcli
 dotnet new nunit -lang F#
 ```
 
@@ -91,7 +91,7 @@ dotnet new nunit -lang F#
 
 測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 新增了 NUnit 與 NUnit 測試配接器。 現在，將 `MathService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
-```console
+```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -112,7 +112,7 @@ dotnet add reference ../MathService/MathService.fsproj
 
 在 *unit-testing-with-fsharp* 目錄中執行下列命令：
 
-```console
+```dotnetcli
 dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 ```
 

@@ -1,19 +1,19 @@
 ---
-title: 搭配模型產生器使用迴歸來預測價格
+title: 教學課程：搭配模型產生器使用迴歸來預測價格
 description: 本教學課程會特別示範如何使用 ML.NET 模型產生器來建置迴歸模型以預測紐約市的計程車費用。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/12/2019
+ms.date: 09/18/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: bb344a7f01e8ffe0e40578c6fb2f28bebd2eb807
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991354"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117957"
 ---
-# <a name="predict-prices-using-regression-with-model-builder"></a>搭配模型產生器使用迴歸來預測價格
+# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教學課程：搭配模型產生器使用迴歸來預測價格
 
 了解如何使用 ML.NET 模型建立器建置迴歸模型來預測價格。  在本教學課程中您所開發 .NET 主控台應用程式會根據紐約的歷史計程車費用資料來預測計程車費用。
 
@@ -32,7 +32,7 @@ ms.locfileid: "70991354"
 > [!NOTE]
 > 模型產生器目前為預覽版。
 
-## <a name="pre-requisites"></a>先決條件
+## <a name="pre-requisites"></a>必要條件
 
 如需必要條件和安裝指示清單，請瀏覽[模型產生器安裝指南](../how-to-guides/install-model-builder.md)。
 

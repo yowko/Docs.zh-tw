@@ -4,12 +4,12 @@ description: 了解如何使用 .NET Core 所使用的執行階段套件存放�
 author: bleroy
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2f37e0de4b6fcb1b2047470b0a9df3753fe87d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 8a8d2d3298f144347c36c640700a1e578dc14715
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697981"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116548"
 ---
 # <a name="runtime-package-store"></a>執行階段套件存放區
 
@@ -64,13 +64,13 @@ ms.locfileid: "54697981"
 
 執行 `dotnet store` 加上套件存放區資訊清單、執行階段和架構，佈建執行階段套件存放區：
 
-```console
+```dotnetcli
 dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
 ```
 
 **範例**
 
-```console
+```dotnetcli
 dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
@@ -94,13 +94,13 @@ dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcorea
 
 如果磁碟上有目標資訊清單檔案，您可在使用 [`dotnet publish`](../tools/dotnet-publish.md) 命令發佈應用程式時，指定檔案的路徑：
 
-```console
+```dotnetcli
 dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
 ```
 
 **範例**
 
-```console
+```dotnetcli
 dotnet publish --manifest manifest.xml
 ```
 
@@ -128,7 +128,7 @@ ASP.NET Core 隱含存放區只適用於 ASP.NET Core 2.0。 強烈建議應用�
 
 安裝 .NET Core SDK 時，執行階段套件存放區會安裝在主機上。 其他的安裝程式可能會提供執行階段套件存放區，包括 .NET Core SDK 的 Zip/tarball 安裝、`apt-get`、Red Hat Yum、.NET Core Windows Server 裝載組合，以及手動的執行階段套件存放區安裝。
 
-部署[與 Framework 相依的部署 (FDD)](index.md#framework-dependent-deployments-fdd) 應用程式時，請確定目標環境已安裝 .NET Core SDK。 如果應用程式部署到不包含 ASP.NET Core 的環境，您可以像下例一樣在專案檔指定設為 `false` 的 **\<PublishWithAspNetCoreTargetManifest>**，從隱含的存放區選擇：
+部署[與 Framework 相依的部署 (FDD)](index.md#framework-dependent-deployments-fdd) 應用程式時，請確定目標環境已安裝 .NET Core SDK。 如果應用程式部署到不包含 ASP.NET Core 的環境，您可以像下例一樣在專案檔指定設為 `false` 的 **\<PublishWithAspNetCoreTargetManifest>** ，從隱含的存放區選擇：
 
 ```xml
 <PropertyGroup>

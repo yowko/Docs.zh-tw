@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 7927cd65de31ba6e835aabdbbd89e410d10d2822
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: ba68425fe37c5b939da22edad38bb03afd2b9068
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104793"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117327"
 ---
 # <a name="get-started-with-c"></a>開始使用 C\#
 
@@ -27,7 +27,7 @@ ms.locfileid: "70104793"
 
 - [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio 2017 (最新版的 Visual Studio) 可讓您從適用於 Windows 的整合式開發環境中，針對應用程式撰寫程式碼，並進行編譯、執行、偵錯、程式碼剖析及發行。
+   Visual Studio 2019，可讓您從適用于 Windows 或 Mac 的整合式開發環境，撰寫、編譯、執行、進行程式碼剖析、分析和發行應用程式。
 
    此主題可讓您建立並執行簡單的 Hello World 應用程式，然後修改它以執行稍微更具互動性的 Hello World 應用程式。 當您完成建置並執行應用程式之後，您也可以學習如何[為應用程式偵錯](../../core/tutorials/debugging-with-visual-studio.md)，以及如何[發行應用程式](../../core/tutorials/publishing-with-visual-studio.md)，讓它可在任何 .NET Core 支援的平台上執行。
 

@@ -3,12 +3,12 @@ title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849852"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117806"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -24,11 +24,11 @@ ms.locfileid: "70849852"
 
 當您安裝 [.NET Core SDK](https://dotnet.microsoft.com/download) 時，您會收到十多個用於建立專案和檔案的內建範本，包括主控台應用程式、類別庫、單元測試專案，ASP.NET Core 應用程式 (包括 [Angular](https://angular.io/) 和 [React](https://facebook.github.io/react/) 專案) 和組態檔。 若要列出內建範本，請執行搭配 `-l|--list` 選項執行 `dotnet new` 命令：
 
-```console
+```dotnetcli
 dotnet new --list
 ```
 
-## <a name="configuration"></a>組態
+## <a name="configuration"></a>Configuration
 
 範本是由下列部分組成：
 
@@ -52,7 +52,7 @@ dotnet new --list
 
 *template.json* 檔案放在範本根目錄的 *.template.config* 資料夾中。 檔案向範本引擎提供組態資訊。 最小的組態需要下表顯示的成員，這即足以建立具有功能的範本。
 
-| 成員            | 類型          | 說明 |
+| 成員            | 類型          | 描述 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |
@@ -170,7 +170,7 @@ project_folder
 
 使用 NuGet 套件識別碼來安裝範本套件。
 
-```console
+```dotnetcli
 dotnet new -i <NUGET_PACKAGE_ID>
 ```
 
@@ -178,7 +178,7 @@ dotnet new -i <NUGET_PACKAGE_ID>
 
 提供 *.nupkg* NuGet 套件檔案的路徑。
 
-```console
+```dotnetcli
 dotnet new -i <PATH_TO_NUPKG_FILE>
 ```
 
@@ -186,7 +186,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 可以從範本資料夾 (例如上述範例中的 *mytemplate1* 資料夾) 安裝範本。 指定 *.template.config* 資料夾的資料夾路徑。 範本資料夾的路徑並不需要是絕對路徑。 不過，若要將從某個資料夾安裝的範本解除安裝，便需要絕對路徑。
 
-```console
+```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -194,7 +194,7 @@ dotnet new -i <FILE_SYSTEM_DIRECTORY>
 
 沒有任何其他參數的解除安裝命令，將會列出所有已安裝的範本。
 
-```console
+```dotnetcli
 dotnet new -u
 ```
 
@@ -230,13 +230,13 @@ Currently installed items:
 
 如果套件是由 NuGet 摘要或直接由 *.nupkg* 檔案安裝，請提供識別碼。
 
-```console
+```dotnetcli
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
 如果套件是透過指定 *.template.config* 資料夾路徑的方式安裝，請使用該**絕對**路徑來將套件解除安裝。 您可以在由 `dotnet new -u` 命令所提供的輸出中查看範本的絕對路徑。 如需詳細資訊，請參閱上面的[取得已安裝範本的清單](#get-a-list-of-installed-templates)小節。
 
-```console
+```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -244,7 +244,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 
 在安裝範本之後，如同處理任何其他預先安裝的範本一樣，執行 `dotnet new <TEMPLATE>` 命令使用範本。 您也可以指定 `dotnet new` 命令的[選項](dotnet-new.md#options)，包括您在範本設定中設定的範本特定選項。 直接將範本的簡短名稱提供給命令：
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE>
 ```
 

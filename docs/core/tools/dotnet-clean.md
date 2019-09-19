@@ -2,12 +2,12 @@
 title: dotnet clean 命令
 description: dotnet clean 命令會清除目前的目錄。
 ms.date: 06/26/2019
-ms.openlocfilehash: 113bc076b9f14a471c631801fe4a7cb1e044a411
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168051"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117740"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -23,13 +23,13 @@ ms.locfileid: "70168051"
 
 ## <a name="synopsis"></a>概要
 
-```console
+```dotnetcli
 dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet clean` 命令會清除前一個組建的輸出。 它會實作為 [MSBuild 目標](/visualstudio/msbuild/msbuild-targets)，因此命令在執行的時候會評估專案。 只會清除在建置期間建立的輸出。 中繼 (*obj*) 和最後輸出 (*bin*) 這兩個資料夾都會清除。
 
@@ -77,12 +77,12 @@ dotnet clean [-h|--help]
 
 * 清除專案的預設組建︰
 
-  ```console
+  ```dotnetcli
   dotnet clean
   ```
 
 * 清除使用發行組態來建置的專案︰
 
-  ```console
+  ```dotnetcli
   dotnet clean --configuration Release
   ```

@@ -4,12 +4,12 @@ description: 在此教學課程中，您將了解如何使用 Docker 來將 .NET
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926309"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116561"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教學課程：將 .NET Core 應用程式容器化
 
@@ -55,7 +55,7 @@ ms.locfileid: "70926309"
 
 您需要 Docker 容器將執行的 .NET Core 應用程式。 開啟您的終端機，建立工作資料夾 (如果沒有)，並進入該資料夾。 在工作資料夾中執行下列命令，在名為 app 的子目錄中建立新專案：
 
-```console
+```dotnetcli
 dotnet new console -o app -n myapp
 ```
 
@@ -146,7 +146,7 @@ Counter: 4
 
 從工作資料夾中，進入含有範例原始程式碼的 **app** 資料夾，然後執行下列命令：
 
-```console
+```dotnetcli
 dotnet publish -c Release
 ```
 

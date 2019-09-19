@@ -4,12 +4,12 @@ description: 說明何為 .NET Core 通用工具以及它們可用之 .NET Core 
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202585"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117450"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 通用工具概觀
 
@@ -49,7 +49,7 @@ ms.locfileid: "70202585"
 
 若要安裝通用工具，您可以使用 [dotnet tool install](dotnet-tool-install.md) .NET Core CLI 命令。 下列範例會示範如何在預設位置安裝通用工具：
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -57,7 +57,7 @@ dotnet tool install -g dotnetsay
 
 如果您要嘗試安裝發行前版本或特定版本的工具，可以使用下列格式指定版本號碼：
 
-```console
+```dotnetcli
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
@@ -94,7 +94,7 @@ dotnetsay
 
 如果工具作者想要工具顯示在 `dotnet` 提示的內容中，他們可能會以稱為 `dotnet <command>` 的方式進行撰寫，例如：
 
-```console
+```dotnetcli
 dotnet doc
 ```
 
@@ -120,7 +120,7 @@ dotnet <command> --help
 
 另一個可能發生的問題是：使用目前安裝的 .NET Core 執行階段，可能無法執行較早預覽期間所建立的通用工具。 您可以使用下列命令，查看您的電腦上安裝了哪些執行階段：
 
-```console
+```dotnetcli
 dotnet --list-runtimes
 ```
 
@@ -141,24 +141,24 @@ dotnet --list-runtimes
 
 若要查看哪些命令適用於通用工具：
 
-```console
+```dotnetcli
 dotnet tool --help
 ```
 
 更新通用工具需要解除安裝再使用最新的穩定版本重新安裝。 若要更新通用工具，請使用 [dotnet tool update](dotnet-tool-update.md) 命令：
 
-```console
+```dotnetcli
 dotnet tool update -g <packagename>
 ```
 
 使用 [dotnet tool uninstall](dotnet-tool-uninstall.md) 移除通用工具：
 
-```console
+```dotnetcli
 dotnet tool uninstall -g <packagename>
 ```
 
 若要顯示電腦上目前已安裝的所有通用工具，以及它們的版本和命令，請使用 [dotnet tool list](dotnet-tool-list.md) 命令：
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```

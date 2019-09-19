@@ -2,12 +2,12 @@
 title: 使用命令列F#工具開始使用
 description: '了解如何在 F # 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 建置簡單的多專案方案'
 ms.date: 03/26/2018
-ms.openlocfilehash: 1376b6b5384f380c06a96cdc568ad108de8a6e5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f9177e653273e5a2191407c4fb22343ded11fece
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855831"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117919"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>開始使用 F # 和.NET Core CLI
 
@@ -23,7 +23,7 @@ ms.locfileid: "70855831"
 
 開啟命令提示字元/終端機，並使用[dotnet new](../../core/tools/dotnet-new.md)命令來建立名`FSNetCore`為的新方案檔：
 
-```console
+```dotnetcli
 dotnet new sln -o FSNetCore
 ```
 
@@ -40,7 +40,7 @@ FSNetCore
 
 使用命令，在 src 資料夾中建立名為 library 的類別庫專案。 `dotnet new`
 
-```console
+```dotnetcli
 dotnet new classlib -lang F# -o src/Library
 ```
 
@@ -68,13 +68,13 @@ let getJsonNetJson value =
 
 將 Newtonsoft NuGet 套件新增至程式庫專案。
 
-```console
+```dotnetcli
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
 使用 dotnet [sln add](../../core/tools/dotnet-sln.md)命令`FSNetCore`將專案新增至方案：`Library`
 
-```console
+```dotnetcli
 dotnet sln add src/Library/Library.fsproj
 ```
 
@@ -84,7 +84,7 @@ dotnet sln add src/Library/Library.fsproj
 
 使用命令，在 src 資料夾中建立名為 App 的主控台應用程式。 `dotnet new`
 
-```console
+```dotnetcli
 dotnet new console -lang F# -o src/App
 ```
 
@@ -121,13 +121,13 @@ let main argv =
 
 使用 dotnet 的`Library` [[加入參考](../../core/tools/dotnet-add-reference.md)]，將參考加入至專案。
 
-```console
+```dotnetcli
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
 `FSNetCore` `App` 使用`dotnet sln add`命令將專案新增至方案：
 
-```console
+```dotnetcli
 dotnet sln add src/App/App.fsproj
 ```
 

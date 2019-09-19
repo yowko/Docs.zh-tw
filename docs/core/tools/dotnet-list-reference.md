@@ -2,12 +2,12 @@
 title: dotnet list reference 命令
 description: dotnet list reference 命令提供方便的選項，以列出專案對專案參考。
 ms.date: 06/26/2019
-ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: b4b82ca1e7aeb2b73d9f99aff1c97452b2166770
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421835"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117680"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
@@ -25,7 +25,7 @@ ms.locfileid: "67421835"
 
 `dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet list reference` 命令提供一個列出指定專案或解決方案之專案參考的便利選項。
 
@@ -45,12 +45,12 @@ ms.locfileid: "67421835"
 
 * 列出指定專案的專案參考：
 
-  ```console
+  ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
 * 列出目前目錄中專案的專案參考：
 
-  ```console
+  ```dotnetcli
   dotnet list reference
   ```

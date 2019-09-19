@@ -1,12 +1,14 @@
 ---
 title: 成員存取運算子 - C# 參考
 description: 了解可用於存取類型成員的 C# 運算子。
-ms.date: 05/09/2019
+ms.date: 09/18/2019
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
 - '[]_CSharpKeyword'
 - ()_CSharpKeyword
+- ^_CSharpKeyword
+- .._CSharpKeyword
 helpviewer_keywords:
 - member access operators [C#]
 - member access operator [C#]
@@ -25,12 +27,17 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+- ^ operator [C#]
+- index from end operator [C#]
+- hat operator [C#]
+- .. operator [C#]
+- range operator [C#]
+ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924633"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116137"
 ---
 # <a name="member-access-operators-c-reference"></a>成員存取運算子 (C# 參考)
 
@@ -40,6 +47,8 @@ ms.locfileid: "69924633"
 - [`[]` (陣列項目或索引子存取)](#indexer-operator-)：可存取陣列項目或類型索引子
 - [`?.` 和 `?[]` (Null 條件運算子)](#null-conditional-operators--and-)：只有在運算元為非 Null 時，才可執行成員或項目存取作業
 - [`()` (引動流程)](#invocation-operator-)：可呼叫存取的方法或叫用委派
+- [（從 end 開始的索引）：表示元素位置是從序列結尾`^` ](#index-from-end-operator-)
+- （範圍）：指定可用於取得序列元素範圍的索引範圍[ `..` ](#range-operator-)
 
 ## <a name="member-access-operator-"></a>成員存取運算子 .
 
@@ -49,7 +58,7 @@ ms.locfileid: "69924633"
 
   [!code-csharp[nested namespaces](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
 
-- 使用 `.` 來形成「限定名稱」  以存取命名空間內的類型，如下列程式碼所示：
+- 使用 `.` 來形成「限定名稱」以存取命名空間內的類型，如下列程式碼所示：
 
   [!code-csharp[qualified name](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
 
@@ -149,9 +158,37 @@ if (handler != null)
 
 [Cast 運算式](type-testing-and-cast.md#cast-operator-) \(其能執行明確類型轉換\) 也會使用括號。
 
+## <a name="index-from-end-operator-"></a>來自 end 運算子 ^ 的索引
+
+在 8.0 C#和更新版本中提供`^` ，運算子表示從序列結尾處的元素位置。 針對長度`length`的序列， `^n`會指向具有從序列開頭位移`length - n`的元素。 例如， `^1`指向序列的最後一個專案，並`^length`指向序列的第一個元素。
+
+[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
+
+如上述範例所示，expression `^e` <xref:System.Index?displayProperty=nameWithType>的類型為。 在 expression `^e`中，的`e`結果必須可以隱含地轉換`int`為。
+
+您也可以搭配使用`^`運算子與[範圍運算子](#range-operator-)來建立索引的範圍。 如需詳細資訊，請參閱[索引和範圍](../../tutorials/ranges-indexes.md)。
+
+## <a name="range-operator-"></a>範圍運算子.。
+
+在 8.0 C#和更新版本中提供`..` ，運算子會將索引範圍的開始和結束指定為其運算元。 左側運算元是範圍的*內含*開頭。 右運算元是範圍的*獨佔*結束。 其中一個運算元可以是從序列開頭或結尾的索引，如下列範例所示：
+
+[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+
+如上述範例所示，expression `a..b` <xref:System.Range?displayProperty=nameWithType>的類型為。 在 expression `a..b`中， `a`和`b`的結果必須可以隱含地轉換`int`為<xref:System.Index>或。
+
+您可以省略`..`運算子的任何運算元，以取得開放式結束範圍：
+
+- `a..`相當於`a..^0`
+- `..b`相當於`0..b`
+- `..`相當於`0..^0`
+
+[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+
+如需詳細資訊，請參閱[索引和範圍](../../tutorials/ranges-indexes.md)。
+
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-`.` 和 `()` 運算子無法多載。 `[]` 運算子也會視為不可多載的運算子。 請使用[索引子](../../programming-guide/indexers/index.md)以支援使用使用者定義型別編製索引。
+`.` 、`^`、和運算子`..`無法多載。 `()` `[]` 運算子也會視為不可多載的運算子。 請使用[索引子](../../programming-guide/indexers/index.md)以支援使用使用者定義型別編製索引。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

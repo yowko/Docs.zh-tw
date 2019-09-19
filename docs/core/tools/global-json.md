@@ -3,12 +3,12 @@ title: global.json 概觀
 description: 了解如何使用 global.json 檔案來設定執行.NET Core CLI 命令時的 NET Core SDK 版本。
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: 3c3793011560cd7428e47bd3340d0a935247760f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2c1fec102993b61e1eb699e8d3508b773302f569
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849593"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117425"
 ---
 # <a name="globaljson-overview"></a>global.json 概觀
 
@@ -28,7 +28,7 @@ ms.locfileid: "70849593"
 
 指定要選取 .NET Core SDK 的相關資訊。
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>version
 
 類型：String
 
@@ -53,7 +53,7 @@ ms.locfileid: "70849593"
 
 最好知道哪一個版本可供使用，以便在 *global.json* 檔案中設定一個。 您可以在[下載 .Net Core](https://dotnet.microsoft.com/download/dotnet-core)頁面上找到支援的可用 sdk 完整清單。 從 .NET Core 2.1 SDK 開始，您可以執行下列命令來確認電腦上已經安裝的 SDK 版本：
 
-```console
+```dotnetcli
 dotnet --list-sdks
 ```
 
@@ -61,7 +61,7 @@ dotnet --list-sdks
 
 執行 [dotnet new](dotnet-new.md) 命令，可在目前的目錄中建立新的 *global.json* 檔案，與下面的範例類似：
 
-```console
+```dotnetcli
 dotnet new globaljson --sdk-version 2.2.100
 ```
 

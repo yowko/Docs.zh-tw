@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/05/2019
-ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.date: 09/17/2019
+ms.openlocfilehash: 08ad77fbad7ad468e45fe629041ded82544792f2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394289"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116111"
 ---
-# <a name="whats-new-in-net-core-30-preview-9"></a>.NET Core 3.0 的新功能（Preview 9）
+# <a name="whats-new-in-net-core-30-release-candidate-1"></a>.NET Core 3.0 的新功能（候選版1）
 
-本文說明 .NET Core 3.0 （透過 preview 9）的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
+本文說明 .NET Core 3.0 到候選版1（RC1）的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
 
-.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用[Visual Studio 2019 16.3 Preview 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)、 [Visual Studio for Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)或使用 **C#延伸**模組的[Visual Studio Code](https://code.visualstudio.com/) 。
+.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用[Visual Studio 2019 16.3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)、 [Visual Studio for Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)或使用 **C#延伸**模組的[Visual Studio Code](https://code.visualstudio.com/) 。
 
-立即在 Windows、macOS 或 Linux 上[下載 .Net Core 3.0 preview 9 並開始使用](https://aka.ms/netcore3download)。
+立即在 Windows、macOS 或 Linux 上[下載並開始使用 .Net Core 3.0 RC1](https://aka.ms/netcore3download) 。
 
 如需每個預覽版的詳細資訊，請參閱下列公告：
 
+- [.NET Core 3.0 RC1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
 - [.NET Core 3.0 Preview 9 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [.NET Core 3.0 Preview 8 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3.0 Preview 7 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
@@ -36,9 +37,9 @@ ms.locfileid: "70394289"
 
 ## <a name="production-supported-preview"></a>支援生產環境的預覽
 
-.NET Core Preview 9 被視為 Microsoft 準備好的生產環境，並受到完整支援。 從 Preview 7 開始，版本會著重於改善 .NET Core 3.0，而非新增新功能。 如需 preview 9 中已變更之內容的詳細資訊，請參閱[preview 9 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)。
+.NET Core RC1 會被視為 Microsoft 準備好的生產環境，並受到完整支援。 從 Preview 7 開始，版本會著重於改善 .NET Core 3.0，而非新增新功能。 如需 RC1 中已變更內容的詳細資訊，請參閱[RC1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)。
 
-如果您使用的是先前的預覽版本，您必須移至 Preview 9，才能繼續「上線」支援。
+如果您使用的是先前的預覽版本，您必須移至 RC1，才能繼續「上線」支援。
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -125,7 +126,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 -或-
 
-```console
+```dotnetcli
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
 
@@ -147,7 +148,7 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 </PropertyGroup>
 ```
 
-```console
+```dotnetcli
 dotnet publish -r <rid> -c Release
 ```
 
@@ -197,7 +198,7 @@ R2R 二進位檔會透過減少 Just-In-Time (JIT) 編譯器在應用程式載�
 
 01. 發佈自封式應用程式。 例如，此命令會針對 64 位元版本的 Windows 建立自封式應用程式：
 
-    ```console
+    ```dotnetcli
     dotnet publish -c Release -r win-x64 --self-contained true
     ```
 
@@ -266,7 +267,7 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 
 您可以使用下列 `dotnet` 命令來建立新的 WPF 或 Windows Forms 應用程式：
 
-```console
+```dotnetcli
 dotnet new wpf
 dotnet new winforms
 ```

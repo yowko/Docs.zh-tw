@@ -5,18 +5,18 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 9ac03053bc762d0176e087545871ca8a145cd41e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 93b2e1a433b5d5b9694257d4d12e47d9107f4cd7
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168286"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117028"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>使用 dotnet vstest 測試已發行的輸出
 
 您可以使用 `dotnet vstest` 命令在已經發行的輸出上執行測試。 此作法適用於 xUnit、MSTest 和 NUnit 測試。 只需找到已發行輸出之一部分的 DLL 檔，並執行：
 
-```console
+```dotnetcli
 dotnet vstest <MyPublishedTests>.dll
 ```
 
@@ -26,7 +26,7 @@ dotnet vstest <MyPublishedTests>.dll
 
 下列命令示範如何在已發行的 DLL 上執行測試。
 
-```console
+```dotnetcli
 dotnet new mstest -o MyProject.Tests
 cd MyProject.Tests
 dotnet publish -o out

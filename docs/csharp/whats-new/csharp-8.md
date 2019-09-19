@@ -2,12 +2,12 @@
 title: C# 8.0 的新功能 - C# 指南
 description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 5 的最新資訊。
 ms.date: 09/10/2019
-ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926518"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117816"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -377,7 +377,7 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="indices-and-ranges"></a>索引和範圍
 
-範圍及索引可提供用來指定陣列中子範圍的簡潔語法，<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>。
+範圍和索引會提供簡潔的語法，以指定陣列、[字串](../language-reference/builtin-types/reference-types.md#the-string-type)、 <xref:System.Span%601>或<xref:System.ReadOnlySpan%601>中的子範圍。
 
 此語言支援依賴兩個新的類型和兩個新的運算子：
 

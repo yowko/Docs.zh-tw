@@ -3,12 +3,12 @@ title: 在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 description: 了解如何使用 `dotnet-svcutil.xmlserializer` NuGet 套件預先產生 .NET Core 專案的序列化組件。
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f1eebeb70206ce883a8e4e4bbd5216ae0ba5507c
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848962"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117276"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 
@@ -39,7 +39,7 @@ ms.locfileid: "70848962"
 
 2. 建立以 .NET Core 2.1 或更新版本為目標的 .NET Core 主控台應用程式作為 WCF 用戶端應用程式。 例如，使用下列命令建立名為 'MyWCFClient' 的應用程式：
 
-    ```console
+    ```dotnetcli
     dotnet new console --name MyWCFClient
     ```
 
@@ -51,7 +51,7 @@ ms.locfileid: "70848962"
 
 3. 執行下列命令，新增對 `System.ServiceModel.Http` 的套件參考：
 
-    ```console
+    ```dotnetcli
     dotnet add package System.ServiceModel.Http
     ```
 
@@ -84,7 +84,7 @@ ms.locfileid: "70848962"
 
 5. 執行下列命令，新增對 `dotnet-svcutil.xmlserializer` 套件的參考：
   
-    ```console
+    ```dotnetcli
     dotnet add package dotnet-svcutil.xmlserializer
     ```
 

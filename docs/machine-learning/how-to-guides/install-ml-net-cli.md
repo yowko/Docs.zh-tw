@@ -3,12 +3,12 @@ title: 如何安裝 ML.NET 命令列介面 (CLI) 工具
 description: ML.NET 命令列介面 (CLI) 工具的概觀與安裝。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106903"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117996"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安裝 ML.NET 命令列介面 (CLI) 工具
 
@@ -33,7 +33,7 @@ ML.NET CLI 的安裝就像任何其他 dotnet 通用工具。 您會使用 `dotn
 
 下列範例示範如何在 NuGet 摘要位置中安裝 ML.NET CLI：
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet
 ```
 
@@ -58,13 +58,13 @@ mlnet
 
 如果您要嘗試安裝發行前版本或特定版本的工具，可以使用下列格式指定[架構](../../standard/frameworks.md)：
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 您也可以鍵入下列命令，檢查套件是否正確安裝：
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```
 
@@ -72,7 +72,7 @@ dotnet tool list -g
 
 鍵入下列命令，從本機電腦解除安裝套件：
 
-```console
+```dotnetcli
 dotnet tool uninstall mlnet -g
 ```
 
@@ -80,7 +80,7 @@ dotnet tool uninstall mlnet -g
 
 鍵入下列命令，從本機電腦更新套件：
 
-```console
+```dotnetcli
 dotnet tool update -g mlnet
 ```
 
@@ -100,7 +100,7 @@ dotnet tool update -g mlnet
 
 1. 執行下列命令以安裝 `dotnet-suggest` 通用工具：
 
-    ```console
+    ```dotnetcli
     dotnet tool install dotnet-suggest -g
     ```
 

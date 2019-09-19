@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 9885f666e68b795b9b6aba9cf31f9750e30fd170
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
-ms.translationtype: HT
+ms.openlocfilehash: 1528e578a978de38998b3f3f4b7beb72ff7422d4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512275"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117061"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>作法：將 WPF 傳統型應用程式移植到 .NET Core
 
@@ -18,7 +18,7 @@ ms.locfileid: "68512275"
 
 在此文章中，各種不同的名稱會用來識別用於移轉的檔案類型。 在移轉您的專案時，您的檔案會有不同的名稱，因此請在心裡將它們與下面所列的項目進行比對：
 
-| 檔案 | 說明 |
+| 檔案 | 描述 |
 | ---- | ----------- |
 | **MyApps.sln** | 方案檔的名稱。 |
 | **MyWPF.csproj** | 要移植的 .NET Framework WPF 專案的名稱。 |
@@ -94,7 +94,7 @@ SolutionFolder
 
 如果您不想以手動方式建立專案檔案，則您可以使用 Visual Studio 或 .NET Core SDK 產生專案。 但是，您必須刪除專案範本所產生的所有其他檔案，專案檔除外。 若要使用 SDK，請從 **SolutionFolder** 目錄執行下列命令：
 
-```cli
+```dotnetcli
 dotnet new wpf -o MyWPFAppCore -n MyWPFCore
 ```
 
@@ -111,7 +111,7 @@ SolutionFolder
 
 您需要使用 Visual Studio 或 **SolutionFolder** 目錄中的 .NET Core CLI，將 **MyWPFCore.csproj** 專案新增到 **MyApps.sln**：
 
-```cli
+```dotnetcli
 dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 ```
 
@@ -187,7 +187,7 @@ dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 
 很可能您的 .NET Framework WPF 應用程式有一個 **packages.config** 檔案，其中包含您的專案所參考的 NuGet 套件的清單。 您可以查看這份清單以判斷要新增至 .NET Core 專案的 NuGet 套件。 例如，如果 .NET Framework 專案參考 `MahApps.Metro` NuGet 封裝，則使用 Visual Studio 將其新增至專案。 您也可以使用 .NET Core CLI，從 **SolutionFolder** 目錄新增封裝參考：
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0262
 ```
 
@@ -203,7 +203,7 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0
 
 如果您在編譯專案時遇到問題，則您可能正在使用 .NET Framework 中提供但不適用於 .NET Core 的一些僅限 Windows 的 API。 您可以嘗試將 [Windows 相容性套件][compat-pack] NuGet 套件新增到您的專案。 此套件只能在 Windows 上執行，並為 .NET Core 和 .NET Standard 專案新增了大約 20,000 個 Windows API。
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibility
 ```
 

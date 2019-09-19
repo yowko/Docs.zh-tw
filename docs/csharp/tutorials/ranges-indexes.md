@@ -3,16 +3,16 @@ title: 使用索引和範圍探索資料範圍
 description: 此進階教學課程將教導您使用索引和範圍探索資料，以檢查連續資料集的配量。
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926644"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117835"
 ---
 # <a name="indices-and-ranges"></a>索引和範圍
 
-範圍和索引提供簡潔的語法，以存取 <xref:System.Array>、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 的單一項目或範圍。 這些功能提供更簡潔且清楚的語法來存取序列中單一項目或項目範圍。
+範圍和索引提供簡潔的<xref:System.Array>語法，用於存取、 <xref:System.String>、 <xref:System.Span%601>或<xref:System.ReadOnlySpan%601>中的單一專案或範圍。 這些功能提供更簡潔且清楚的語法來存取序列中單一項目或項目範圍。
 
 在本教學課程中，您將了解如何：
 
@@ -24,12 +24,12 @@ ms.locfileid: "70926644"
 
 ## <a name="language-support-for-indices-and-ranges"></a>索引和範圍的語言支援
 
-此語言支援仰賴兩個新的型別與兩個新的運算子。
+此語言支援依賴兩個新的類型和兩個新的運算子：
 
 - <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
-- `^` 運算子，它會指定索引相對於序列結尾。
+- End 運算子`^`的索引，指定索引相對於序列結尾。
 - <xref:System.Range?displayProperty=nameWithType> 代表序列的子範圍。
-- Range 運算子 (`..`)，它會指定範圍的開頭與結尾作為其運算子。
+- 範圍運算子`..`，指定範圍的開始和結束作為其運算元。
 
 讓我們從索引的規則開始。 假設有一個陣列 `sequence`。 `0` 索引與 `sequence[0]` 相同。 `^0` 索引與 `sequence[sequence.Length]` 相同。 請注意，`sequence[^0]` 會擲回例外狀況，就樣 `sequence[sequence.Length]` 會這樣做一樣。 針對任何數字 `n`，索引 `^n` 與 `sequence[sequence.Length - n]` 相同。
 

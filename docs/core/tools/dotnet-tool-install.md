@@ -2,12 +2,12 @@
 title: dotnet tool install 命令
 description: dotnet tool install 命令會在您的電腦上安裝指定的 .NET Core 通用工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 1348eb1165c77376a885fdcbf094bd17b2aa3514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: d6f691117e93a39c9837b282dca19e452515c80a
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563700"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117472"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -19,13 +19,13 @@ ms.locfileid: "54563700"
 
 ## <a name="synopsis"></a>概要
 
-```console
+```dotnetcli
 dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <-h|--help>
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet tool install` 命令可讓您在電腦上安裝 .NET Core 通用工具。 若要使用此命令，您必須使用 `--global` 選項指定您要使用者範圍安裝，或使用 `--tool-path` 選項指定安裝工具的路徑。
 

@@ -1,16 +1,16 @@
 ---
 title: 使用定型的模型預測
 description: 了解使用定型的模型預測
-ms.date: 06/20/2019
+ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
-ms.translationtype: HT
+ms.openlocfilehash: 33e0cb74342ca3e82ff5f108453d63e022d63d20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307390"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118011"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>使用定型的模型預測
 
@@ -43,14 +43,12 @@ public class HousingData
 因為用於此範例的演算法是線性迴歸演算法，所以輸出資料行預設名稱是 `Score`，由 `PredictedPrice` 屬性的 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 屬性所定義。
 
 ```csharp
-class HousingPrediction : HousingData
+class HousingPrediction
 {
     [ColumnName("Score")]
     public float PredictedPrice { get; set; }
 }
 ```
-
-繼承自 `HousingData` 的 `HousingPrediction` 資料模型，讓視覺化原始輸入資料以及模型產生的輸出變得容易。  
 
 ## <a name="set-up-a-prediction-pipeline"></a>設定預測管線
 
@@ -90,7 +88,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 如果您存取 `prediction` 物件的 `Score` 屬性，您應該取得類似 `150079` 的值。
 
-## <a name="batch-prediction"></a>批次預測
+## <a name="multiple-predictions"></a>多個預測
 
 指定下列資料，將它載入 [`IDataView`](xref:Microsoft.ML.IDataView)。 在此案例中，[`IDataView`](xref:Microsoft.ML.IDataView) 的名稱為 `inputData`。 因為 `CurrentPrice` 是您想要使用新資料嘗試預測的目標或標籤，所以假設它目前沒有任何值。
 
