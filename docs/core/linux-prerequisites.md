@@ -4,12 +4,12 @@ description: 支援的 Linux 版本和 .NET Core 的相依性，以在 Linux 電
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969872"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116590"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
 
@@ -71,7 +71,7 @@ ms.locfileid: "70969872"
 
 下列 Linux 發行版本/版本支援 .NET Core 3.0 Preview 1。 
 
-作業系統                            | Version               | 架構  
+作業系統                            | 版本               | 架構  
 ------------------------------|-----------------------|----------------
 Red Hat Enterprise Linux      | 6                     | X64
 Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
@@ -150,7 +150,7 @@ Linux 上有兩個安裝程式套件選擇：
 
 指令碼預設為安裝最新的 "LTS" 版本，也就是目前的 .NET Core 1.1。 若要安裝 .NET Core 2.1，請使用下列參數執行指令碼：
 
-```console
+```bash
 ./dotnet-install.sh -c Current
 ```
 
