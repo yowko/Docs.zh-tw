@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2697950a371d66f2e57731e0ff01ed531a07955e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0e2289b3c12c7c83a39f1ad8d5a1365349ca6442
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946403"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151801"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>做為回呼方法，委派封送處理
 此範例示範如何將委派傳遞至需要函式指標的 Unmanaged 函式。 委派是可保留方法參考的類別，並且相當於型別安全函式指標或回呼函式。
@@ -40,7 +40,7 @@ Callback 範例會使用下列 Unmanaged 函式和其原始函式宣告，如下
 
 [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是自訂的 Unmanaged 程式庫，其中包含先前所列出函式的實作。
 
-在此範例中，`LibWrap` 類別包含 `TestCallBack` 和 `TestCallBack2` 方法的 Managed 原型。 這兩種方法都會將委派當成參數傳遞給回呼函式。 委派的簽章必須符合它所參考之方法的簽章。 例如，`FPtr` 和 `FPtr2` 委派的簽章與 `DoSomething` 和 `DoSomething2` 方法相同。
+在此範例中，`NativeMethods` 類別包含 `TestCallBack` 和 `TestCallBack2` 方法的 Managed 原型。 這兩種方法都會將委派當成參數傳遞給回呼函式。 委派的簽章必須符合它所參考之方法的簽章。 例如，`FPtr` 和 `FPtr2` 委派的簽章與 `DoSomething` 和 `DoSomething2` 方法相同。
 
 ## <a name="declaring-prototypes"></a>宣告原型
 [!code-cpp[Conceptual.Interop.Marshaling#37](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/callback.cpp#37)]

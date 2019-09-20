@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8cbc904b56237d3c875566ee1276c121dae70c4c
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894175"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151749"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送處理不同類型的陣列
 陣列是 Managed 程式碼中的參考類型，它包含一或多個相同類型的項目。 雖然陣列是參考類型，它們會做為 In 參數傳遞至 Unmanaged 函式。 此行為與 Managed 陣列傳遞至 Managed 物件的方式 (做為 In/Out 參數) 不一致。 如需詳細資訊，請參閱 [複製和固定](copying-and-pinning.md)。  
@@ -104,7 +104,7 @@ typedef struct _MYPERSON
   
  在此範例中， `MyPoint` 和 `MyPerson` 結構包含內嵌類型。 已設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。  
   
- `LibWrap` 類別包含一組 `App` 類別所呼叫的方法。 如需傳遞陣列的特定詳細資訊，請參閱下面範例中的註解。 陣列是參考類型，它預設是做為 In 參數傳遞。 呼叫端若要接收結果， **InAttribute** 和 **OutAttribute** 必須明確地套用至包含陣列的引數。  
+ `NativeMethods` 類別包含一組 `App` 類別所呼叫的方法。 如需傳遞陣列的特定詳細資訊，請參閱下面範例中的註解。 陣列是參考類型，它預設是做為 In 參數傳遞。 呼叫端若要接收結果， **InAttribute** 和 **OutAttribute** 必須明確地套用至包含陣列的引數。  
   
 ### <a name="declaring-prototypes"></a>宣告原型  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]

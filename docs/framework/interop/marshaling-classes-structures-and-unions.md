@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894176"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151755"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送處理類別、結構和等位
 在 .NET Framework 中，類別和結構相類似。 兩者都可以有欄位、屬性和事件。 也可以有靜態和非靜態方法。 一個值得注意的差異在於結構是實值類型，而類別是參考類型。  
@@ -108,7 +108,7 @@ typedef struct _MYARRAYSTRUCT
   
  對於本範例的所有結構，套用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。  
   
- `LibWrap` 類別包含 `TestStructInStruct`、`TestStructInStruct3` 及 `TestArrayInStruct` 方法的 Managed 原型，這些方法由 `App` 類別所呼叫。 每一個原型會宣告單一參數，如下所示：  
+ `NativeMethods` 類別包含 `TestStructInStruct`、`TestStructInStruct3` 及 `TestArrayInStruct` 方法的 Managed 原型，這些方法由 `App` 類別所呼叫。 每一個原型會宣告單一參數，如下所示：  
   
 - `TestStructInStruct` 宣告一個參考給 `MyPerson2` 類型做為它的參數。  
   
@@ -159,7 +159,7 @@ typedef struct _WIN32_FIND_DATA
   
  在此範例中， `FindData` 類別包含原始結構的每個項目所對應的資料成員和內嵌結構。 為了取代 2 個原始字元緩衝區，類別會替代字串。 **MarshalAsAttribute** 會將 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉設定為 **ByValTStr**，這用來識別出現在 Unmanaged 結構中內嵌固定長度的字元陣列。  
   
- `LibWrap` 類別包含 `FindFirstFile` 方法的 Managed 原型，會傳遞 `FindData` 類別做為參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。  
+ `NativeMethods` 類別包含 `FindFirstFile` 方法的 Managed 原型，會傳遞 `FindData` 類別做為參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。  
   
 ### <a name="declaring-prototypes"></a>宣告原型  
  [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
@@ -202,7 +202,7 @@ union MYUNION2
   
  `MyUnion2_1` 和 `MyUnion2_2` 分別包含實值類型 (整數) 和字串。 在 Managed 程式碼中，實值類型及參考類型不允許重疊。 此範例會使用方法多載化來讓呼叫端在呼叫相同 Unmanaged 函式時使用這兩種類型。 `MyUnion2_1` 配置則是明確的，且具有精確位移值。 相反地，`MyUnion2_2` 具有循序配置，因為對參考類型不允許明確的配置。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性會將 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉設定為 **ByValTStr**，這用來識別出現在該等位的 Unmanaged 表示中內嵌固定長度的字元陣列。  
   
- `LibWrap` 類別包含 `TestUnion` 和 `TestUnion2` 方法的原型。 `TestUnion2` 被多載，以宣告 `MyUnion2_1` 或 `MyUnion2_2` 做為參數。  
+ `NativeMethods` 類別包含 `TestUnion` 和 `TestUnion2` 方法的原型。 `TestUnion2` 被多載，以宣告 `MyUnion2_1` 或 `MyUnion2_2` 做為參數。  
   
 ### <a name="declaring-prototypes"></a>宣告原型  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  在此範例中，`SystemTime` 類別包含表示為類別成員原始結構的項目。 已設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。  
   
- `LibWrap` 類別包含 `GetSystemTime` 方法的 Managed 原型，根據預設會傳遞 `SystemTime` 類別做為 In/Out 參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。 若要讓呼叫端接收結果，則必須明確地套用這些[方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))。 `App` 類別建立 `SystemTime` 類別的新執行個體，並存取其資料欄位。  
+ `NativeMethods` 類別包含 `GetSystemTime` 方法的 Managed 原型，根據預設會傳遞 `SystemTime` 類別做為 In/Out 參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。 若要讓呼叫端接收結果，則必須明確地套用這些[方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))。 `App` 類別建立 `SystemTime` 類別的新執行個體，並存取其資料欄位。  
   
 ### <a name="code-samples"></a>程式碼範例  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -266,7 +266,7 @@ typedef struct _MYSTRSTRUCT2
   
  `MyStruct` 類別包含 ANSI 字元的字串物件。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 欄位指定 ANSI 格式。 `MyUnsafeStruct` 為包含 <xref:System.IntPtr> 類型的結構，而非字串。  
   
- `LibWrap` 類別包含 `TestOutArrayOfStructs` 多載原型方法。 如果方法宣告指標做為參數，此類別會以 `unsafe` 關鍵字標記。 因為 Visual Basic 不能使用不安全的程式碼，所以多載的方法、Unsafe 修飾詞和 `MyUnsafeStruct` 結構是不必要的。  
+ `NativeMethods` 類別包含 `TestOutArrayOfStructs` 多載原型方法。 如果方法宣告指標做為參數，此類別會以 `unsafe` 關鍵字標記。 因為 Visual Basic 不能使用不安全的程式碼，所以多載的方法、Unsafe 修飾詞和 `MyUnsafeStruct` 結構是不必要的。  
   
  `App` 類別會實作 `UsingMarshaling` 方法，該方法會執行所有用來傳遞陣列的必要工作。 該陣列以 `out` (在 Visual Basic 中為`ByRef`) 關鍵字標記，表示該資料從被呼叫端傳遞至呼叫端。 此實作會使用下列 <xref:System.Runtime.InteropServices.Marshal> 類別方法：  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602760"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151768"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>依字母順序列出 C# 編譯器選項
 
@@ -29,7 +29,7 @@ ms.locfileid: "69602760"
 |.[-baseaddress](baseaddress-compiler-option.md)|指定要建置程式庫的基底位址。|
 |[-bugreport](bugreport-compiler-option.md)|建立「錯誤報告」檔案。 如果這個檔案與 -errorreport:prompt 或 -errorreport:send 搭配使用，就會與任何損毀資訊一併傳送。|
 |[-checked](checked-compiler-option.md)|會導致編譯器產生溢位檢查。|
-|-checksumalgorithm:\<alg>|針對儲存在 PDB 中的來源檔案總和檢查碼，指定計算所用的演算法。  支援的值為：SHA1 (預設) 或 SHA256。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。 |
+|-checksumalgorithm:\<alg>|針對儲存在 PDB 中的來源檔案總和檢查碼，指定計算所用的演算法。  支援的值為：SHA256 （預設值）或 SHA1。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。 |
 |[-codepage](codepage-compiler-option.md)|指定開啟原始程式檔時所要使用的字碼頁。|
 |[-debug](debug-compiler-option.md)|發出偵錯資訊。|
 |[-define](define-compiler-option.md)|定義條件式編譯符號。|
