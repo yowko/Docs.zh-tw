@@ -8,16 +8,16 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: 00064b774145e7267fe26b31ef3bba4d5271a5c3
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306062"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181516"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>使用 CLI 發佈 .NET Core 應用程式
 
-此文章示範如何從命令列發佈 .NET Core 應用程式。 .NET Core 提供三種發佈應用程式的方式。 Framework 相依部署會產生跨平台的 .dll 檔案，以使用本機安裝的 .NET Core 執行階段。 Framework 相依可執行檔會產生平台特定的可執行檔，來使用本機安裝的 .NET Core 執行階段。 獨立式可執行檔則會產生平台特定的可執行檔，並包含 .NET Core 執行階段的本機複本。
+本文示範如何從命令列發佈 .NET Core 應用程式。 .NET Core 提供三種發佈應用程式的方式。 Framework 相依部署會產生跨平台的 .dll 檔案，以使用本機安裝的 .NET Core 執行階段。 Framework 相依可執行檔會產生平台特定的可執行檔，來使用本機安裝的 .NET Core 執行階段。 獨立式可執行檔則會產生平台特定的可執行檔，並包含 .NET Core 執行階段的本機複本。
 
 如需這些發佈模式的概觀，請參閱 [.NET Core 應用程式部署](index.md)。
 
@@ -59,7 +59,7 @@ ms.locfileid: "59306062"
 
 ## <a name="sample-app"></a>範例應用程式
 
-您也可以使用下列應用程式來瀏覽發佈命令。 在終端機中執行下列命令即可建立此應用程式：
+您可以使用下列應用程式來流覽發佈命令。 在終端機中執行下列命令即可建立此應用程式：
 
 ```dotnetcli
 mkdir apptest1
@@ -108,7 +108,7 @@ End Module
 
 ## <a name="framework-dependent-deployment"></a>與 Framework 相依的部署
 
-針對 .NET Core SDK 2.x CLI，Framework 相依部署 (FDD) 是基本 `dotnet publish` 命令的預設模式。
+若為 .NET Core SDK 2.x CLI，Framework 相依部署 (FDD) 是基本 `dotnet publish` 命令的預設模式。
 
 當您將應用程式發佈為 FDD 時，就會在 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` 資料夾中建立 `<PROJECT-NAME>.dll` 檔案。 若要執行您的應用程式，請巡覽至輸出資料夾，並使用 `dotnet <PROJECT-NAME>.dll` 命令。
 
@@ -118,7 +118,7 @@ End Module
 
 ## <a name="framework-dependent-executable"></a>Framework 相依可執行檔
 
-針對 .NET Core SDK 3.x CLI，Framework 相依可執行檔 (FDE) 是基本 `dotnet publish` 命令的預設模式。 只要您想要以目前的作業系統為目標，就不需要指定任何其他參數。
+針對 .NET Core SDK 3.x CLI，與 framework 相依的可執行檔（FDE）是基本`dotnet publish`命令的預設模式。 只要您想要以目前的作業系統為目標，就不需要指定任何其他參數。
 
 在此模式中，將會建立平台特定可執行檔主機來裝載您的跨平台應用程式。 此模式類似於 FDD，因為 FDD 需要 `dotnet` 命令形式的主機。 主機可執行檔的檔名因平台而異，且其名稱類似於 `<PROJECT-FILE>.exe`。 您可以直接執行這個可執行檔，而不是呼叫 `dotnet <PROJECT-FILE>.dll` (這仍然是可接受的應用程式執行方式)。
 
@@ -128,12 +128,11 @@ End Module
 
 您必須 (當您以目前平台為目標時，.NET Core 3.x 除外) 使用下列參數搭配 `dotnet publish` 命令來發佈 FDE：
 
-- `-r <RID>`
-  此參數會使用識別碼 (RID) 來指定目標平台。 如需執行階段識別碼清單，請參閱[執行階段識別碼 (RID) 目錄](../rid-catalog.md)。
+- `-r <RID>` 此參數會使用識別碼 (RID) 來指定目標平台。 如需執行階段識別碼清單，請參閱[執行階段識別碼 (RID) 目錄](../rid-catalog.md)。
 
 - `--self-contained false` 此參數會指示 .NET Core SDK 將可執行檔建立為 FDE。
 
-每當您使用 `-r` 參數時，輸出資料夾路徑就會變更為： `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
+只要您使用 `-r` 參數，輸出資料夾路徑就會變更為： `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
 如果您使用[範例應用程式](#sample-app)，請執行 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`。 此命令會建立下列可執行檔： `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
@@ -142,14 +141,13 @@ End Module
 
 ## <a name="self-contained-deployment"></a>自封式部署
 
-當您發佈獨立式部署 (SCD) 時，.NET Core SDK 會建立平台特定的可執行檔。 發佈 SCD 包含執行應用程式所需的所有 .NET Core 檔案，但它不包含 [ 的原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。 在執行應用程式之前，系統上必須具有這些相依性。
+當您發佈獨立式部署 (SCD) 時，.NET Core SDK 會建立平台特定的可執行檔。 發佈 SCD 包含執行應用程式所需的所有 .NET Core 檔案，但不包含[.Net Core 的原生](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)相依性。 在執行應用程式之前，系統上必須具有這些相依性。
 
 發佈 SCD 會建立一個應用程式，該應用程式不會向前復原到最新可用的 .NET Core 安全性修補程式。 如需編譯時期版本繫結的詳細資訊，請參閱[選取要使用的 .NET Core 版本](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)。
 
 您必須使用下列參數搭配 `dotnet publish` 命令來發佈 SCD：
 
-- `-r <RID>`
-  此參數會使用識別碼 (RID) 來指定目標平台。 如需執行階段識別碼清單，請參閱[執行階段識別碼 (RID) 目錄](../rid-catalog.md)。
+- `-r <RID>` 此參數會使用識別碼 (RID) 來指定目標平台。 如需執行階段識別碼清單，請參閱[執行階段識別碼 (RID) 目錄](../rid-catalog.md)。
 
 - `--self-contained true` 此參數會指示 .NET Core SDK 將可執行檔建立為 SCD。
 

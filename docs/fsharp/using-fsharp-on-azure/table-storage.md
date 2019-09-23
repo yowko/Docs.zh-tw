@@ -3,12 +3,12 @@ title: 使用 F# 開始使用 Azure 資料表儲存體
 description: 使用 Azure 資料表儲存體或 Azure Cosmos DB，將結構化資料儲存在雲端。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928996"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182609"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和使用 F 的 Azure Cosmos DB 資料表 API\#
 
@@ -192,7 +192,7 @@ Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫，而且需要高
 既然您已瞭解資料表儲存體的基本概念，請遵循下列連結以瞭解更複雜的儲存工作和 Azure Cosmos DB 的資料表 API。
 
 - [Azure Cosmos DB 資料表 API 簡介](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [適用于 .NET 的儲存體用戶端程式庫參考](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [適用于 .NET 的儲存體用戶端程式庫參考](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Azure 儲存體型別提供者](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure 儲存體小組的 Blog](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [設定連接字串](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

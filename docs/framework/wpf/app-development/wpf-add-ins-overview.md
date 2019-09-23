@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401704"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182541"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 
@@ -27,7 +27,7 @@ ms.locfileid: "68401704"
 
 ## <a name="prerequisites"></a>必要條件
 
-必須熟悉 .NET Framework 增益集模型。 如需詳細資訊，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
+必須熟悉 .NET Framework 增益集模型。 如需詳細資訊，請參閱[增益集和擴充性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
 
 <a name="AddInsOverview"></a>
 
@@ -61,12 +61,12 @@ ms.locfileid: "68401704"
 
 - **存留期管理**:以乾淨且可預測的方式載入和卸載應用程式域和進程 (請參閱[應用程式域](../../app-domains/application-domains.md))。
 
-- **版本控制**:確保在建立新版本時, 主應用程式和增益集仍然可以進行通訊。
+- **版本控制**：確保在建立新版本時, 主應用程式和增益集仍然可以進行通訊。
 
 最後，開發強固的增益集模型是重要的工作。 基於這個理由, .NET Framework 會提供基礎結構來建立增益集模型。
 
 > [!NOTE]
-> 如需增益集的詳細資訊，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
+> 如需增益集的詳細資訊，請參閱[增益集和擴充性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
@@ -127,7 +127,7 @@ WPF UI 類型無法遠端處理。 為了解決這個問題, WPF 擴充了 .NET 
 
 若要讓增益集將 UI 傳回給主應用程式, 則需要下列各項:
 
-1. 必須建立主應用程式、增益集和管線, 如 .NET Framework[增益集和](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))擴充性檔中所述。
+1. 必須建立主應用程式、增益集和管線, 如 .NET Framework[增益集和](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))擴充性檔中所述。
 
 2. 合約必須<xref:System.AddIn.Contract.IContract>實作為, 而若要傳回 UI, 合約必須宣告具有型<xref:System.AddIn.Contract.INativeHandleContract>別傳回值的方法。
 
@@ -147,7 +147,7 @@ WPF UI 類型無法遠端處理。 為了解決這個問題, WPF 擴充了 .NET 
 
 當增益集是 UI 時, 需要下列各項:
 
-1. 必須建立主應用程式、增益集和管線, 如 .NET Framework[增益集和](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))擴充性檔中所述。
+1. 必須建立主應用程式、增益集和管線, 如 .NET Framework[增益集和](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))擴充性檔中所述。
 
 2. 增益集的合約介面必須執行<xref:System.AddIn.Contract.INativeHandleContract>。
 
@@ -282,9 +282,9 @@ WPF UI 類型無法遠端處理。 為了解決這個問題, WPF 擴充了 .NET 
 
 - 增益集 UI 無法旋轉、縮放、扭曲, 或以其他方式受到轉換影響 (請參閱[轉換總覽](../graphics-multimedia/transforms-overview.md))。
 
-- 從<xref:System.Drawing>命名空間的繪製作業所轉譯之增益集使用者介面內的內容可以包含 Alpha 混合。 不過, 增益集 UI 和包含它的主應用程式 UI 都必須是 100% 不透明;換句話說, 兩者的`Opacity`屬性都必須設定為1。
+- 從<xref:System.Drawing>命名空間的繪製作業所轉譯之增益集使用者介面內的內容可以包含 Alpha 混合。 不過，增益集 UI 和包含它的主應用程式 UI 都必須是 100% 不透明;換句話說，兩者的`Opacity`屬性都必須設定為1。
 
-- 如果主<xref:System.Windows.Window.AllowsTransparency%2A>應用程式中包含增益集 UI 之視窗的屬性設為`true`, 則不會隱藏增益集。 即使增益集 UI 是 100% 不透明 (也就是`Opacity`屬性的值為 1), 也是如此。
+- 如果主<xref:System.Windows.Window.AllowsTransparency%2A>應用程式中包含增益集 UI 之視窗的屬性設為`true`, 則不會隱藏增益集。 即使增益集 UI 是 100% 不透明（也就是`Opacity`屬性的值為1），也是如此。
 
 - 增益集 UI 必須出現在同一個最上層視窗中的其他 WPF 元素之上。
 
@@ -311,7 +311,7 @@ WPF UI 類型無法遠端處理。 為了解決這個問題, WPF 擴充了 .NET 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.LoaderOptimizationAttribute>
-- [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [增益集和擴充性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [應用程式定義域](../../app-domains/application-domains.md)
 - [.NET Framework 遠端處理總覽](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [使物件可遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))

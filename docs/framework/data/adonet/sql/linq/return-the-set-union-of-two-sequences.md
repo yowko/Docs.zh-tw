@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: 1b981d3002cf4a23897ce98927aebe96086f8a4a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 058856243b2a8daaecd653a9b5999013de5407a8
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781227"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182520"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>傳回兩個序列的集合聯集
 使用 <xref:System.Linq.Queryable.Union%2A> 運算子傳回兩個序列的集合聯集。  
@@ -21,7 +21,7 @@ ms.locfileid: "70781227"
  [!code-csharp[DLinqQueryExamples#43](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#43)]
  [!code-vb[DLinqQueryExamples#43](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#43)]  
   
- 在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]中[，會`UNION ALL`](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017)將多重集的運算子定義為多重集的未排序串連（實際上是SQL中的子句結果）。<xref:System.Linq.Queryable.Union%2A>
+ 在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]中[，會`UNION ALL`](/sql/t-sql/language-elements/set-operators-union-transact-sql)將多重集的運算子定義為多重集的未排序串連（實際上是SQL中的子句結果）。<xref:System.Linq.Queryable.Union%2A>
 
 如需詳細資訊和範例， <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>請參閱。
   

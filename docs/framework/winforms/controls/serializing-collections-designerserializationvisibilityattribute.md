@@ -14,18 +14,18 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373678"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182623"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>逐步解說：序列化標準類型的集合
 
 您的自訂控制項有時會將集合公開為屬性。 本逐步解說示範如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>類別，控制如何在設計階段序列化集合。 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>將值套用至集合屬性，可確保將會序列化屬性。
 
-若要將此主題中的程式碼複製為單一清單，請參閱[如何：使用 Designerserializationvisibilityattribute 序列化](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))序列化標準類型的集合。
+若要將此主題中的程式碼複製為單一清單，請參閱[如何：使用 Designerserializationvisibilityattribute 序列化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))序列化標準類型的集合。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -129,11 +129,11 @@ ms.locfileid: "70373678"
 
 一旦您知道如何序列化標準類型的集合，請考慮將自訂控制項更深入地整合到設計階段環境中。 下列主題說明如何增強自訂控制項的設計階段整合：
 
-- [設計階段架構](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [設計階段架構](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Windows Forms 控制項中的屬性](attributes-in-windows-forms-controls.md)
 
-- [設計工具序列化總覽](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [設計工具序列化總覽](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
 - [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](creating-a-wf-control-design-time-features.md)
 

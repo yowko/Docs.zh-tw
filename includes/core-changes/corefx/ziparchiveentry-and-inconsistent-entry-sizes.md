@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 748e7f484227b6a60a2309bde185079b30fe19de
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 604a67d1bea219b8eee2e7ac21040666083664ee
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117244"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182012"
 ---
 ### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>Ziparchiveentry 中不再處理具有不一致專案大小的封存
 
@@ -24,7 +24,7 @@ Zip 封存會列出中央目錄和本機標頭中的壓縮大小和未壓縮大�
 
 #### <a name="recommended-action"></a>建議的動作
 
-重新封裝任何會出現這些問題的 zip 封存。
+重新封裝任何展示這些問題的 zip 封存。
 
 #### <a name="category"></a>分類
 

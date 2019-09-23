@@ -1,13 +1,13 @@
 ---
 title: C# 8.0 的新功能 - C# 指南
 description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 5 的最新資訊。
-ms.date: 09/10/2019
-ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 09/20/2019
+ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117816"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182407"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -28,6 +28,7 @@ ms.locfileid: "71117816"
 - [索引和範圍](#indices-and-ranges)
 - [Null 聯合指派](#null-coalescing-assignment)
 - [非受控的結構化類型](#unmanaged-constructed-types)
+- [在嵌套運算式中 stackalloc](#stackalloc-in-nested-expressions)
 - [增強內插逐字字串](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
@@ -493,6 +494,16 @@ Span<Coords<int>> coordinates = stackalloc[]
 ```
 
 如需詳細資訊，請參閱[非受控類型](../language-reference/builtin-types/unmanaged-types.md)。
+
+## <a name="stackalloc-in-nested-expressions"></a>在嵌套運算式中 stackalloc
+
+從C# 8.0 開始，如果[stackalloc](../language-reference/operators/stackalloc.md)運算式的<xref:System.Span%601?displayProperty=nameWithType>結果是或<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>型別，您可以在其他運算式中使用`stackalloc`運算式：
+
+```csharp
+Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+Console.WriteLine(ind);  // output: 1
+```
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>增強內插逐字字串
 

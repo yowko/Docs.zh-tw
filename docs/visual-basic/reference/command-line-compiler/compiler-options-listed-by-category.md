@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331551"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182562"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>依分類列出的 Visual Basic 編譯器選項
 提供 Visual Basic 的命令列編譯器, 做為從 Visual Studio 整合式開發環境 (IDE) 中編譯器的替代方案。 以下是依功能類別排序的 Visual Basic 命令列編譯器選項清單。  
@@ -72,7 +72,7 @@ ms.locfileid: "68331551"
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|將警告提升為錯誤。|  
 |`-ruleset:<file>`|指定停用特定診斷的規則集檔案。|  
   
-## <a name="help"></a>Help  
+## <a name="help"></a>說明  
   
 |選項|用途|  
 |---|---|  
@@ -129,4 +129,4 @@ ms.locfileid: "68331551"
 ## <a name="see-also"></a>另請參閱
 
 - [依字母順序列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [管理專案及解決方案屬性](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [管理專案及解決方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

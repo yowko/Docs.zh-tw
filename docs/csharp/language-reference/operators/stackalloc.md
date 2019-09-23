@@ -1,17 +1,17 @@
 ---
 title: stackalloc 運算子 - C# 參考
 ms.custom: seodec18
-ms.date: 06/10/2019
+ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
-ms.translationtype: HT
+ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433833"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182426"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 運算子 (C# 參考)
 
@@ -31,6 +31,10 @@ ms.locfileid: "68433833"
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
+  從C# 8.0 開始，只要允許`stackalloc` <xref:System.Span%601>或<xref:System.ReadOnlySpan%601>變數，您就可以在其他運算式內使用運算式，如下列範例所示：
+
+  [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
+
   > [!NOTE]
   > 我們建議盡可能使用 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 類型來處理堆疊配置的記憶體。
 
@@ -39,6 +43,8 @@ ms.locfileid: "68433833"
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
   如先前的範例所示，您在使用指標類型時必須使用 `unsafe` 內容。
+
+  在指標類型的情況下，您只能使用`stackalloc`區域變數宣告中的運算式來初始化變數。
 
 新配置記憶體的內容尚未被定義。 從 C# 7.3 開始，您可以使用陣列初始設定式語法來定義新配置記憶體的內容。 下列範例示範進行該操作的數種方法：
 

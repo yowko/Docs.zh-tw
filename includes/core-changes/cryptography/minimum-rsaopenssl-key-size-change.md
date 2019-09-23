@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 07ab65de16b72bd0844a39e4b35235c5f043f3ec
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e3bda3cf6319d8c988b6c897b78869f517f9616a
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117245"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181965"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>RSAOpenSsl 金鑰產生的大小下限已增加
 
@@ -12,11 +12,11 @@ ms.locfileid: "71117245"
 
 #### <a name="change-description"></a>變更描述
 
-從 .net Core 3.0 開始，從 < 系統的 rsa 實例上的`LegalKeySizes`屬性所報告的最小合法金鑰大小。 RSAOpenSsl. Create% 2a？ displayProperty = namewithtype> >，< system.object。23ctor% 2A？ displayProperty = Namewithtype> >，而 < 系統. RSACryptoServicePlatform.% 23ctor% 2A？ displayProperty = Namewithtype> > on Linux 已從384增加至512。
+從 .net Core 3.0 `LegalKeySizes`開始，Linux 上<xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>、 <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType>和<xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType>的 RSA 實例上的屬性所報告的最低合法金鑰大小，從384增加到512。
 
 因此，在 .net Core 2.2 和更早版本中，方法呼叫（例如`RSA.Create(384)` ）會成功。 在 .net Core 3.0 和更新版本中，方法呼叫`RSA.Create(384)`會擲回例外狀況，指出大小太小。
 
-已進行此變更，因為 OpenSSL 會在 Linux 上執行密碼編譯作業，並在版本1.0.2 和1.1.0 之間產生最小值。  .NET Core 3.0 傾向于將 OpenSSL 1.1. x 新增至 1.0. x，並產生最小的回報版本，以反映這項較高的相依性限制。
+此變更的原因是，OpenSSL 會在 Linux 上執行密碼編譯作業，並在版本1.0.2 和1.1.0 之間產生最小值。 .NET Core 3.0 傾向于將 OpenSSL 1.1. x 新增至 1.0. x，並產生最小的回報版本，以反映這項較高的相依性限制。
 
 #### <a name="version-introduced"></a>引進的版本
 

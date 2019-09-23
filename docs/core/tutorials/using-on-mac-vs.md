@@ -4,12 +4,12 @@ description: 本主題會逐步引導您使用 Visual Studio for Mac 和 .NET Co
 author: mairaw
 ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: ff508bbe8d72a88ea32adfbed984d4e9e8b8e7ca
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77e676c327b62369e7ddb9444bf8f246d3c5c2e8
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925831"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182493"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
 
@@ -25,7 +25,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 請參閱 [Mac 上 .NET Core 的先決條件](../macos-prerequisites.md)主題。
 
-請查看 [.NET Core 支援](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019)指南以確定您使用的是支援的 .NET Core 版本。
+請參閱[.Net Core 支援](/visualstudio/mac/net-core-support)文章，以確保您使用的是支援的 .net Core 版本。
 
 ## <a name="get-started"></a>開始使用
 

@@ -4,12 +4,12 @@ description: 本文描述如何為適用於 PowerShell、Bash 和 zsh 的 .NET C
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 0f29ba2ef1d419339a0e2dc44f67c93b326eb40d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202496"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182465"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>如何為 .NET Core CLI 啟用 TAB 鍵自動完成
 
@@ -44,7 +44,7 @@ pack
 
 ## <a name="powershell"></a>PowerShell
 
-若要將 tab 鍵自動完成新增至 .NET Core CLI 的 **PowerShell**，請建立設定檔或編輯儲存在變數 `$PROFILE` 中的設定檔。 如需詳細資訊，請參閱[如何建立設定檔](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#how-to-create-a-profile)和[設定檔與執行原則](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#profiles-and-execution-policy)。 
+若要將 tab 鍵自動完成新增至 .NET Core CLI 的 **PowerShell**，請建立設定檔或編輯儲存在變數 `$PROFILE` 中的設定檔。 如需詳細資訊，請參閱[如何建立設定檔](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile)和[設定檔與執行原則](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy)。 
 
 將下列程式碼新增至您的設定檔：
 

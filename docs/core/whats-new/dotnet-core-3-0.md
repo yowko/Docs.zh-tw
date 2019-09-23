@@ -7,18 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/17/2019
-ms.openlocfilehash: 08ad77fbad7ad468e45fe629041ded82544792f2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 45d5117f264a24c2658debad9a111d4d4b9b9a8e
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116111"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182452"
 ---
 # <a name="whats-new-in-net-core-30-release-candidate-1"></a>.NET Core 3.0 的新功能（候選版1）
 
 本文說明 .NET Core 3.0 到候選版1（RC1）的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
 
-.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用[Visual Studio 2019 16.3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)、 [Visual Studio for Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)或使用 **C#延伸**模組的[Visual Studio Code](https://code.visualstudio.com/) 。
+.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用[Visual Studio 2019 16.3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)、 [Visual Studio for Mac 8.3](/visualstudio/mac/install-preview)或使用 **C#延伸**模組的[Visual Studio Code](https://code.visualstudio.com/) 。
 
 立即在 Windows、macOS 或 Linux 上[下載並開始使用 .Net Core 3.0 RC1](https://aka.ms/netcore3download) 。
 
