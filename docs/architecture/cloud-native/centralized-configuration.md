@@ -1,0 +1,31 @@
+---
+title: 集中式設定
+description: 使用 Azure Key Vault 的集中式設定可以讓您更輕鬆地管理雲端原生應用程式。
+ms.date: 06/30/2019
+ms.openlocfilehash: f4f495591550abccf2c64ef24cbe7620b039d8ca
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71183515"
+---
+# <a name="centralized-configuration"></a><span data-ttu-id="64d78-103">集中式設定</span><span class="sxs-lookup"><span data-stu-id="64d78-103">Centralized configuration</span></span>
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+
+<span data-ttu-id="64d78-104">雲端原生應用程式牽涉到比傳統單一實例整合型應用程式更多的執行中服務。</span><span class="sxs-lookup"><span data-stu-id="64d78-104">Cloud-native applications involve many more running services than traditional single-instance monolithic apps.</span></span> <span data-ttu-id="64d78-105">管理數十個相互依存服務的設定，可能是一項挑戰，這也是為什麼集中式設定存放區通常會針對分散式應用程式執行的原因。</span><span class="sxs-lookup"><span data-stu-id="64d78-105">Managing configuration settings for dozens of interdependent services can be challenging, which is why centralized configuration stores are often implemented for distributed applications.</span></span>
+
+<span data-ttu-id="64d78-106">如[第1章](introduction.md)所述，十二個要素的應用程式建議需要在程式碼與設定之間進行嚴格的分隔。</span><span class="sxs-lookup"><span data-stu-id="64d78-106">As discussed in [Chapter 1](introduction.md), the Twelve-Factor App recommendations require strict separation between code and configuration.</span></span> <span data-ttu-id="64d78-107">這表示在程式碼中將設定的常數或常值儲存為違規。</span><span class="sxs-lookup"><span data-stu-id="64d78-107">This means storing configuration settings as constants or literal values in code is a violation.</span></span> <span data-ttu-id="64d78-108">這項建議存在的原因是，相同的程式碼應該在多個環境中使用，包括開發、測試、預備和生產。</span><span class="sxs-lookup"><span data-stu-id="64d78-108">This recommendation exists because the same code should be used across multiple environments, including development, testing, staging, and production.</span></span> <span data-ttu-id="64d78-109">不過，這兩個環境之間的設定值可能會有所不同。</span><span class="sxs-lookup"><span data-stu-id="64d78-109">However, configuration values are likely to vary between each of these environments.</span></span> <span data-ttu-id="64d78-110">因此，設定值應該儲存在環境本身，或環境應該將認證儲存至集中式設定存放區。</span><span class="sxs-lookup"><span data-stu-id="64d78-110">So, configuration values should be stored in the environment itself, or the environment should store the credentials to a centralized configuration store.</span></span>
+
+<span data-ttu-id="64d78-111">EShopOnContainers 應用程式包含每個微服務的本機應用程式佈建檔案。</span><span class="sxs-lookup"><span data-stu-id="64d78-111">The eShopOnContainers application includes local application settings files with each microservice.</span></span> <span data-ttu-id="64d78-112">這些檔案會簽入原始檔控制，但不包含生產秘密，例如連接字串或 API 金鑰。</span><span class="sxs-lookup"><span data-stu-id="64d78-112">These files are checked into source control but don't include production secrets such as connection strings or API keys.</span></span> <span data-ttu-id="64d78-113">在生產環境中，個別的設定可能會以每個服務的環境變數來覆寫。</span><span class="sxs-lookup"><span data-stu-id="64d78-113">In production, individual settings may be overwritten with per-service environment variables.</span></span> <span data-ttu-id="64d78-114">這是託管應用程式的常見作法，但不提供中央設定存放區。</span><span class="sxs-lookup"><span data-stu-id="64d78-114">This is a common practice for hosted applications, but doesn't provide a central configuration store.</span></span> <span data-ttu-id="64d78-115">為了支援集中式的設定管理，每個微服務都包含一個設定，可在使用本機設定或 Azure Key Vault 設定之間切換。</span><span class="sxs-lookup"><span data-stu-id="64d78-115">To support centralized management of configuration settings, each microservice includes a setting to toggle between its use of local settings or Azure Key Vault settings.</span></span>
+
+## <a name="azure-key-vault"></a><span data-ttu-id="64d78-116">Azure Key Vault</span><span class="sxs-lookup"><span data-stu-id="64d78-116">Azure Key Vault</span></span>
+
+<span data-ttu-id="64d78-117">Azure Key Vault 提供權杖、密碼、憑證、API 金鑰和其他機密秘密的安全儲存體。</span><span class="sxs-lookup"><span data-stu-id="64d78-117">Azure Key Vault provides secure storage of tokens, passwords, certificates, API keys, and other sensitive secrets.</span></span> <span data-ttu-id="64d78-118">存取 Key Vault 需要適當的呼叫端驗證和授權，在 eShopOnContainers 微服務中，這表示使用 ClientId/ClientSecret 組合。</span><span class="sxs-lookup"><span data-stu-id="64d78-118">Access to Key Vault requires proper caller authentication and authorization, which in the case of the eShopOnContainers microservices means the use of a ClientId/ClientSecret combination.</span></span> <span data-ttu-id="64d78-119">請不要將這些認證簽入原始檔控制，而是在應用程式的環境中設定。</span><span class="sxs-lookup"><span data-stu-id="64d78-119">Don't check in these credentials into source control, but instead set in the application's environment.</span></span> <span data-ttu-id="64d78-120">您可以使用[Key Vault FlexVolume](https://github.com/Azure/kubernetes-keyvault-flexvol)，直接存取 AKS 的 Key Vault。</span><span class="sxs-lookup"><span data-stu-id="64d78-120">Direct access to Key Vault from AKS can be achieved using [Key Vault FlexVolume](https://github.com/Azure/kubernetes-keyvault-flexvol).</span></span>
+
+<span data-ttu-id="64d78-121">藉由集中式設定，套用至整個應用程式的設定（例如集中式記錄端點），可以一次，並供分散式應用程式的每個部分使用。</span><span class="sxs-lookup"><span data-stu-id="64d78-121">With centralized configuration, settings that apply to the entire application, such as the centralized logging endpoint, can be set once and used by every part of the distributed application.</span></span> <span data-ttu-id="64d78-122">雖然微服務應該彼此獨立，但通常還是會有一些共用的相依性，其設定詳細資料可以從集中式設定存放區受益。</span><span class="sxs-lookup"><span data-stu-id="64d78-122">Although microservices should be independent of one another, there will typically still be some shared dependencies whose configuration details can benefit from a centralized configuration store.</span></span>
+
+>[!div class="step-by-step"]
+><span data-ttu-id="64d78-123">[上一頁](deploy-eshoponcontainers-azure.md)
+>[下一頁](scale-applications.md)</span><span class="sxs-lookup"><span data-stu-id="64d78-123">[Previous](deploy-eshoponcontainers-azure.md)
+[Next](scale-applications.md)</span></span> <!-- Next Chapter -->
