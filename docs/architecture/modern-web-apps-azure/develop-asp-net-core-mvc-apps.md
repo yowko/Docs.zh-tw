@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373768"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181947"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -109,7 +109,7 @@ Web API 專案應該考慮使用 `[ApiController]` 屬性，該屬性可以套�
 > - **篩選條件**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **ApiController 屬性**
- > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
+ > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>使用相依性
 
@@ -369,7 +369,7 @@ public void Configure(IApplicationBuilder app)
 
 您可以從官方 ASP.NET Core 文件，深入了解如何[設定雙因素驗證](/aspnet/core/security/authentication/2fa)和[啟用外部登入提供者](/aspnet/core/security/authentication/social/)。
 
-### <a name="authorization"></a>Authorization
+### <a name="authorization"></a>授權
 
 授權的最簡單形式牽涉到限制匿名使用者的存取。 只要將 \[Authorize\] 屬性套用至特定控制器或動作，即可達成此目的。 如果角色正在使用中，您可以進一步擴充屬性，限制屬於特定角色之使用者的存取，如下所示：
 

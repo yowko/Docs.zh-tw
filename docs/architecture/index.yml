@@ -12,13 +12,19 @@ abstract:
 sections:
   - title: 可用的電子書
     items:
-      - html: <ul><li><p><a href="containerized-lifecycle/index">Microsoft 平台和工具的容器化 Docker 應用程式生命週期</a></p>
+      - html: <ul><li><p><a href="containerized-lifecycle/index">使用 Microsoft 平臺和工具的容器化 Docker 應用程式生命週期</a></p>
       - html: <p>本指南是建議之端對端生命週期處理程序的簡介，您將使用這些程序來開發、驗證與使用 Visual Studio 和 Microsoft Azure 部署容器化 Docker 應用程式。</p></li></ul>
-      - html: <ul><li><p><a href="modernize-with-azure-containers/index">使用 Azure 雲端和 Windows 容器將現有 .NET 應用程式現代化</a></p>
+      - html: <ul><li><p><a href="modernize-with-azure-containers/index">使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化</a></p>
       - html: <p>本指南是您將現有 Web 應用程式移轉至 Azure 雲端和 Windows 容器所需之策略的簡介。 您將了解程式碼策略、資料移轉、協調器以及 CI/CD 處理程序的相關資訊。</p></li></ul>
       - html: <ul><li><p><a href="modern-web-apps-azure/index">使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式</a></p>
       - html: <p>本指南是建議之架構、設計與部署處理程序的簡介，您將使用這些程序來建置 ASP.NET 與 ASP.NET Core 應用程式並在 Azure 中裝載那些應用程式。</p></li></ul>
-      - html: <ul><li><p><a href="microservices/index">架構容器和微服務應用程式</a></p>
+      - html: <ul><li><p><a href="microservices/index">架構容器和以微服務為基礎的應用程式</a></p>
       - html: <p>本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。</p></li></ul>
+      - html: <ul><li><p><a href="cloud-native/index">架構適用于 Azure 的雲端原生 .NET 應用程式</a></p>
+      - html: <p>本指南定義了什麼是雲端原生，引進了使用雲端原生原則建立的範例應用程式，並涵蓋大部分雲端原生應用程式的常見主題。</p></li></ul>
       - html: <ul><li><p><a href="serverless/index">無伺服器應用程式：架構、模式和 Azure 實作</a></p>
       - html: <p>這是使用 Azure 透過範例建置無伺服器應用程式的指南。 其中討論各種架構和設計方法、來自無伺服器的優點和挑戰，並提供無伺服器應用程式的情節和使用案例。</p></li></ul>
+      - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">適用于 ASP.NET Web Forms 開發人員的 Blazor</a></p>
+      - html: <p>ASP.NET Web Forms 開發人員的 Blazor 簡介。 瞭解如何以簡單且熟悉的方式，使用 Blazor 和 .NET Core 以 .NET 建立完整堆疊的 web 應用程式。</p></li></ul>
+      - html: <ul><li><p><a href="grpc-for-wcf-developers/index">WCF 開發人員的 ASP.NET Core gRPC</a></p>
+      - html: <p>本指南說明 gRPC 是什麼，將每個概念與 WCF 的同等功能產生關聯，並提供將現有 WCF 應用程式遷移至 gRPC 的指引。</p></li></ul>

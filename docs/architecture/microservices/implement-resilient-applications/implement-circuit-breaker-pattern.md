@@ -2,12 +2,12 @@
 title: 實作斷路器模式
 description: 了解如何實作斷路器模式作為 Http 重試的互補系統。
 ms.date: 10/16/2018
-ms.openlocfilehash: f40a8eec50a4293e4dfb4df647ce3f69f6dc361b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674635"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181936"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>實作斷路器模式
 
@@ -55,7 +55,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-在上述程式碼範例中，斷路器原則設定為在重試 Http 要求時，若連續五次失敗，則會中斷或開啟網路。 發生此情況時，網路會中斷 30 秒：在這段期間，斷路器會立即使呼叫失敗，而不是實際發出。  原則會自動將[相關的例外狀況和 HTTP 狀態碼](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解釋為錯誤。  
+在上述程式碼範例中，斷路器原則設定為在重試 Http 要求時，若連續五次失敗，則會中斷或開啟網路。 發生此情況時，網路會中斷 30 秒：在這段期間，斷路器會立即使呼叫失敗，而不是實際發出。  原則會自動將[相關的例外狀況和 HTTP 狀態碼](/aspnet/core/fundamentals/http-requests#handle-transient-faults)解釋為錯誤。  
 
 如果您部署在與執行 HTTP 呼叫的用戶端應用程式或服務不同之環境中的特定資源發生問題，也應該使用斷路器將要求重新導向至後援基礎結構。 這樣一來，如果資料中心的中斷只會影響您的後端微服務，但不會影響您的用戶端應用程式，用戶端應用程式就可以重新導向至後援服務。 Polly 正在規劃新的原則來自動化此[容錯移轉原則](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)案例。 
 
