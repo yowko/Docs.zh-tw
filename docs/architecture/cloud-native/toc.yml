@@ -1,0 +1,93 @@
+- name: 建構適用於 Azure 的雲端原生 .NET 應用程式
+  href: index.md
+  items:
+    - name: 雲端原生應用程式簡介
+      href: introduction.md
+      items:
+        - name: 雲端原生的定義
+          href: definition.md
+        - name: 適用於雲端原生的候選應用程式
+          href: candidate-apps.md
+    - name: eShopOnContainers 參考應用程式的簡介
+      href: introduce-eshoponcontainers-reference-app.md
+      items:
+        - name: 將 eShopOnContainers 對應至 Azure 服務
+          href: map-eshoponcontainers-azure-services.md
+        - name: 將 eShopOnContainers 部署至 Azure
+          href: deploy-eshoponcontainers-azure.md
+        - name: 集中式設定
+          href: centralized-configuration.md
+    - name: 調整雲端原生 .NET 應用程式的規模
+      href: scale-applications.md
+      items:
+        - name: 利用容器和協調器
+          href: leverage-containers-orchestrators.md
+        - name: 利用無伺服器函式
+          href: leverage-serverless-functions.md
+        - name: 結合容器和無伺服器方法
+          href: combine-containers-serverless-approaches.md
+        - name: 在 Azure 中部署容器
+          href: deploy-containers-azure.md
+        - name: 調整容器和無伺服器應用程式的規模
+          href: scale-containers-serverless.md
+        - name: 其他部署選項
+          href: other-deployment-options.md
+    - name: 雲端原生通訊模式
+      href: communication-patterns.md
+      items:
+        - name: 前端用戶端通訊
+          href: front-end-communication.md
+        - name: 服務對服務通訊
+          href: service-to-service-communication.md
+        - name: REST 和 gRPC
+          href: rest-grpc.md
+        - name: 服務網格通訊基礎結構
+          href: service-mesh-communication-infrastructure.md
+    - name: 分散式資料
+      href: distributed-data.md
+      items:
+        - name: 雲端原生資料模式
+          href: data-patterns.md
+        - name: Azure 中的資料儲存體
+          href: azure-data-storage.md
+    - name: 雲端原生復原
+      href: resiliency.md
+      items:
+        - name: 應用程式復原模式
+          href: application-resiliency-patterns.md
+        - name: Azure 的雲端基礎結構復原
+          href: infrastructure-resiliency-azure.md
+        - name: 具有復原性的通訊
+          href: resilient-communications.md
+    - name: 監視與健康狀態
+      href: monitoring-health.md
+      items:
+        - name: 可檢視性模式
+          href: observability-patterns.md
+        - name: 使用彈性堆疊記錄
+          href: logging-with-elastic-stack.md
+        - name: 在 Azure Kubernetes Service 中監視
+          href: monitoring-azure-kubernetes.md
+        - name: Azure 監視器
+          href: azure-monitor.md
+    - name: 身分識別
+      href: identity.md
+      items:
+        - name: 雲端原生應用程式中的驗證與授權
+          href: authentication-authorization.md
+        - name: Azure Active Directory
+          href: azure-active-directory.md
+        - name: 身分識別伺服器
+          href: identity-server.md
+    - name: 安全性
+      href: security.md
+      items:
+        - name: 適用於雲端原生應用程式的 Azure 安全性
+          href: azure-security.md
+    - name: 雲端原生 DevOps
+      href: devops.md
+      items:
+        - name: 基礎結構即程式碼
+          href: infrastructure-as-code.md
+        - name: 雲端原生應用程式套件組合
+          href: application-bundles.md

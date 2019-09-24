@@ -3,9 +3,11 @@
 - name: 電子書
   expanded: true
   items:
-    - name: 使用 ASP.NET Core 及 Microsoft Azure 架構現代化的 Web 應用程式
+    - name: 使用 ASP.NET Core 和 Microsoft Azure 來架構現代化 Web 應用程式
       href: modern-web-apps-azure/
-    - name: 使用 Azure 雲端及 Windows 容器將現有的 .NET 應用程式轉換成現代化的應用程式
+    - name: 建構適用於 Azure 的雲端原生 .NET 應用程式
+      href: cloud-native/
+    - name: 使用 Azure 雲端及 Windows 容器將現有 .NET 應用程式現代化
       href: modernize-with-azure-containers/
     - name: Microsoft 平台與工具上已容器化的 Docker 應用程式生命週期
       href: containerized-lifecycle/
@@ -13,3 +15,7 @@
       href: microservices/
     - name: 無伺服器應用程式：架構、模式和 Azure 實作
       href: serverless/
+    - name: 適用於 ASP.NET Web Forms 的 Blazor 開發人員
+      href: blazor-for-web-forms-developers/
+    - name: 適用於 WCF 開發人員的 ASP.NET Core gRPC
+      href: grpc-for-wcf-developers/
