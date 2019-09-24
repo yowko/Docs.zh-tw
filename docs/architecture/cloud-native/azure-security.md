@@ -2,12 +2,12 @@
 title: 適用于雲端原生應用程式的 Azure 安全性
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |適用于雲端原生應用程式的 Azure 安全性
 ms.date: 06/30/2019
-ms.openlocfilehash: 79e1ec9bd91285041791e36275b03f128f2fe136
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1eb371e5c8497d769265791ae28fd2b3fcfd7387
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183606"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214130"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>適用于雲端原生應用程式的 Azure 安全性
 
@@ -265,8 +265,8 @@ Cosmos DB 是 Microsoft 在 Azure 中提供的最新資料庫。 它是從頭開
 
 ## <a name="keeping-secure"></a>保持安全
 
-Azure 擁有發行高度安全產品所需的所有工具。 不過，連鎖的鏈只會與最弱的連結一樣強。 如果部署在 Azure 之上的應用程式不是以適當的安全性思維和良好的安全性審核來開發，則它們會變成鏈中的弱式連結。 有許多絕佳的靜態分析工具、加密程式庫和安全性作法，可以用來確保安裝在 Azure 上的軟體與 Azure 本身一樣安全。 WhiteSource（[靜態分析工具](https://www.whitesourcesoftware.com/)、[加密程式庫](https://www.libressl.org/)和[安全性作法](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/)、LibreSSL （ https://www.libressl.org/) 以及[紅色與Blue-Microsoft Azure](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/)的內部安全性滲透測試，分別是其中的範例。 
+Azure 擁有發行高度安全產品所需的所有工具。 不過，連鎖的鏈只會與最弱的連結一樣強。 如果部署在 Azure 之上的應用程式不是以適當的安全性思維和良好的安全性審核來開發，則它們會變成鏈中的弱式連結。 有許多絕佳的靜態分析工具、加密程式庫和安全性作法，可以用來確保安裝在 Azure 上的軟體與 Azure 本身一樣安全。 [靜態分析工具](https://www.whitesourcesoftware.com/)、[加密程式庫](https://www.libressl.org/)和[安全性實務](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/)、 [LibreSSL](https://www.libressl.org/)和[Red 與Blue-Microsoft Azure](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/)的內部安全性滲透測試，分別是其中的範例。 
 
 >[!div class="step-by-step"]
 >[上一頁](security.md)
->[下一頁](devops.md) <!-- Next Chapter -->
+>[下一頁](devops.md)

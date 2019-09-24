@@ -3,12 +3,12 @@ title: 架構適用于 Azure 的雲端原生 .NET 應用程式
 description: 建立雲端原生應用程式的指南，利用 Azure 的容器、微服務和無伺服器功能。
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: ce9898366d0327dd619b36cdf1487229d9cda7f5
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67e235b051702308d2455b2501bfb59a4317635b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183039"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214161"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>架構適用于 Azure 的雲端原生 .NET 應用程式
 
@@ -40,7 +40,7 @@ Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 
-作者:
+製作
 
 > **Steve "ardalis" Smith** - 軟體架構設計人員和講師 - [Ardalis.com](https://ardalis.com)
 >
@@ -70,7 +70,7 @@ Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
 - 通訊模式
 - 調整和擴充性
 - 應用程式復原
-- 監視和健全狀況
+- 監視與健康狀態
 - 身分識別與安全性
 - DevOps
 

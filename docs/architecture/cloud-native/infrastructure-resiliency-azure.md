@@ -2,12 +2,12 @@
 title: Azure 平臺復原
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |使用 Azure 的雲端基礎結構復原
 ms.date: 06/30/2019
-ms.openlocfilehash: 5d8ddc65ccdf4bb305be62e5caca30eab49f87e2
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 7f148588be97fa6bf8a055f5f5bed8e23908277f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182976"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214204"
 ---
 # <a name="azure-platform-resiliency"></a>Azure 平臺復原
 
@@ -68,7 +68,7 @@ ms.locfileid: "71182976"
 
 - *利用平臺自動調整功能。* 盡可能使用內建的自動調整功能，而不是自訂或協力廠商機制。 可能的話，請使用排程的調整規則，以確保資源在沒有啟動延遲的情況下可供使用，但會視需要將回應自動調整新增至規則，以因應非預期的變更。 如需詳細資訊，請參閱自動調整[指引](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)。
 
- - *積極擴充。* 最後一種作法是積極地相應增加，讓您可以快速地滿足流量的立即尖峰，而不會失去業務。 然後，謹慎地相應減少（也就是移除不必要的資源），以避免系統穩定。 執行此作業的簡單方法是設定「冷卻」期間，也就是在調整作業之間等待的時間，這是新增資源的五分鐘，最長可達15分鐘的移除實例。
+- *積極擴充。* 最後一種作法是積極地相應增加，讓您可以快速地滿足流量的立即尖峰，而不會失去業務。 然後，謹慎地相應減少（也就是移除不必要的資源），以避免系統穩定。 執行此作業的簡單方法是設定「冷卻」期間，也就是在調整作業之間等待的時間，這是新增資源的五分鐘，最長可達15分鐘的移除實例。
 
 ## <a name="built-in-retry-in-services"></a>服務中的內建重試
 

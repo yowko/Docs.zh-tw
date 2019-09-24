@@ -2,12 +2,12 @@
 title: Docker 應用程式的內部迴圈開發工作流程
 description: 了解用於開發 Docker 應用程式的「內部迴圈」工作流程。
 ms.date: 02/15/2019
-ms.openlocfilehash: ce573546f61b98c2f93e998203497fa949e9efe8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673975"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214363"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
@@ -47,8 +47,7 @@ Docker 映像的容器或執行個體將包含這些元件：
 
 使用適用於 Mac 和 Windows 的最新版本 Docker，開發 Docker 應用程式比以往更加容易，且設定非常簡單。
 
-> [!INFORMATION]
->
+> [!TIP]
 > 如需設定適用於 Windows 之 Docker 的指示，請瀏覽 <https://docs.docker.com/docker-for-windows/>。
 >
 >如需設定適用於 Mac 之 Docker 的指示，請瀏覽 <https://docs.docker.com/docker-for-mac/>。
@@ -57,8 +56,7 @@ Docker 映像的容器或執行個體將包含這些元件：
 
 Microsoft 提供 Visual Studio Code，也就是 Mac、Windows 和 Linux 支援的輕量型程式碼編輯器，可為 IntelliSense 提供[多種語言的支援](https://code.visualstudio.com/docs/languages/overview) (JavaScript、.NET、Go、Java、Ruby、Python 和大部分現代程式語言)、[偵錯](https://code.visualstudio.com/Docs/editor/debugging)、[與 Git 整合](https://code.visualstudio.com/Docs/editor/versioncontrol)及[延伸模組支援](https://code.visualstudio.com/docs/extensions/overview)。 此編輯器是 Mac 和 Linux 開發人員的絕佳選擇。 在 Windows 中，您也可以使用完整的 Visual Studio 應用程式。
 
-> [!INFORMATION]
->
+> [!TIP]
 > 如需安裝適用於 Windows、Mac 或 Linux 之 Visual Studio Code 的指示，請瀏覽 <https://code.visualstudio.com/docs/setup/setup-overview/>。
 >
 > 如需設定適用於 Mac 之 Docker 的指示，請瀏覽 <https://docs.docker.com/docker-for-mac/>。
@@ -94,7 +92,6 @@ Microsoft 提供 Visual Studio Code，也就是 Mac、Windows 和 Linux 支援�
 `DockerFile` 通常放在應用程式或服務的根資料夾中，並包含必要的命令，以讓 Docker 知道如何設定並執行該應用程式或服務。 您可以建立您的 `DockerFile`，並將其與您的程式碼 (node.js、.NET Core 等) 一起新增至專案中；如果您還不熟悉環境，請查看下列提示。
 
 > [!TIP]
->
 > 您可以使用 Docker 延伸模組來引導您使用與 Docker 容器相關的 `Dockerfile` 和 `docker-compose.yml` 檔案。 最後，您可能會在沒有此工具的情況下撰寫這類檔案，但使用 Docker 延伸模組是不錯的起點，可加速您的學習曲線。
 
 在圖 4-24 中，您可以看到如何使用適用於 VS Code 的 Docker 延伸模組來新增 docker-compose 檔案。
@@ -133,8 +130,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 您可在 Dockerfile 中指定其他的組態設定，視您使用的語言和架構而定。 例如，`ENTRYPOINT` 行中有 `["dotnet", "MySingleContainerWebApp.dll"]` 會指示 Docker 執行 .NET Core 應用程式。 如果您使用 SDK 和 .NET Core CLI (`dotnet CLI`) 建置及執行 .NET 應用程式，此設定會有所不同。 此處的重點，是 ENTRYPOINT 行與其他設定會視您選擇的應用程式語言和平台而定。
 
-> [!INFORMATION]
->
+> [!TIP]
 > 如需如何建置 .NET Core 應用程式之 Docker 映像的詳細資訊，請瀏覽 <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
 >
 > 若要深入了解如何建置您自己的映像，請瀏覽 <https://docs.docker.com/engine/tutorials/dockerimages/>。
@@ -154,7 +150,6 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 針對每個包含您應用程式的自訂服務，您需要建立相關映像。 如果您的應用程式組成為單一的服務或 Web 應用程式，則您只需要單一映像。
 
 > [!NOTE]
->
 > 考慮「外部迴圈 DevOps 工作流程」時，每當您將原始程式碼推送至 Git 存放庫 (持續整合)，映像會透過自動建置程序建立，因此映像將於原始程式碼的全域環境中建立。
 >
 > 但在我們考慮進入該外部迴圈路由之前，我們需要確保 Docker 應用程式實際上正常運作，使其不會將可能無法正常運作的程式碼推送至原始檔控制系統 (Git 等)。
@@ -212,7 +207,7 @@ Redis 服務會使用從 Docker Hub 登錄提取的[最新公用 redis 映像](h
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>步驟 5：建置並執行您的 Docker 應用程式
 
-如果您的應用程式只有單一容器，您只需要將其部署至您的 Docker 主機 (VM 或實體伺服器) 來執行。 不過，如果您的應用程式由多個服務組成，您也需要「撰寫」  該應用程式。 讓我們看看不同的選項。
+如果您的應用程式只有單一容器，您只需要將其部署至您的 Docker 主機 (VM 或實體伺服器) 來執行。 不過，如果您的應用程式由多個服務組成，您也需要「撰寫」該應用程式。 讓我們看看不同的選項。
 
 ***選項 A：執行單一容器或服務***
 

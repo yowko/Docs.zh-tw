@@ -2,12 +2,12 @@
 title: 雲端原生應用程式的 IdentityServer
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 69084ad19a353b2152b67957ee944f6ce36ce370
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6217f6093d8dc9df6ab058ebdbf99197752aee0c
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183074"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214019"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>雲端原生應用程式的 IdentityServer
 
@@ -47,7 +47,7 @@ IdentityServer4 是開放原始碼且可免費使用。 您可以使用 NuGet �
 
 ## <a name="configuration"></a>設定
 
-IdentityServer 支援不同種類的通訊協定和社交驗證提供者，可設定為每個自訂安裝的一部分。 這通常會在`Startup` `ConfigureServices`方法中的 ASP.NET Core 應用程式類別中完成。 設定牽涉到指定支援的通訊協定，以及將使用的伺服器和端點的路徑。 [圖 8-X] 顯示從 IdentityServer4 快速入門 UI 專案取得的範例設定：
+IdentityServer 支援不同種類的通訊協定和社交驗證提供者，可設定為每個自訂安裝的一部分。 這通常會在`Startup` `ConfigureServices`方法中的 ASP.NET Core 應用程式類別中完成。 設定牽涉到指定支援的通訊協定，以及將使用的伺服器和端點的路徑。 圖8-2 顯示從 IdentityServer4 快速入門 UI 專案取得的範例設定：
 
 ```csharp
 public class Startup
@@ -90,7 +90,7 @@ public class Startup
 }
 ```
 
-**圖 8-X**。 正在設定 IdentityServer。
+**圖 8-2**： 正在設定 IdentityServer。
 
 IdentityServer 也會裝載公用示範網站，可用來測試各種通訊協定和設定。 它位於[https://demo.identityserver.io/](https://demo.identityserver.io/) ，並包含如何根據提供的`client_id` 來設定其行為的資訊。
 
@@ -106,4 +106,4 @@ IdentityServer 也會裝載公用示範網站，可用來測試各種通訊協�
 
 >[!div class="step-by-step"]
 >[上一頁](azure-active-directory.md)
->[下一頁](security.md) <!-- Next Chapter -->
+>[下一頁](security.md)

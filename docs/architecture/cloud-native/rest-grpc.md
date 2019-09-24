@@ -3,12 +3,12 @@ title: REST 和 gRPC
 description: 瞭解 gRPC、其在雲端原生應用程式中的角色，以及它與 HTTP REST 的差異
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 020b29fc13c72d7e42e5b555fe81e2836c907d6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d888069168aee1fcfb13354f4b6f9ae2c8d1f233
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184817"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214542"
 ---
 # <a name="rest-and-grpc"></a>REST 和 gRPC
 
@@ -74,4 +74,3 @@ gRPC 適用于下列案例：
 >[!div class="step-by-step"]
 >[上一頁](service-to-service-communication.md)
 >[下一頁](service-mesh-communication-infrastructure.md)
-

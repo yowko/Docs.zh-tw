@@ -2,12 +2,12 @@
 title: 其他容器部署選項
 description: 使用 Azure 的其他容器部署選項
 ms.date: 06/30/2019
-ms.openlocfilehash: 892514417cb8650c28b7491315f767758278ad6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1fcb57eedec8c9f5574fffcf409b316332032062
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184880"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214452"
 ---
 # <a name="other-container-deployment-options"></a>其他容器部署選項
 
@@ -48,4 +48,4 @@ Azure 容器實例提供最快速且最簡單的方式，讓您在 Azure 中執�
 
 >[!div class="step-by-step"]
 >[上一頁](scale-containers-serverless.md)
->[下一頁](communication-patterns.md) <!-- Next Chapter -->
+>[下一頁](communication-patterns.md)

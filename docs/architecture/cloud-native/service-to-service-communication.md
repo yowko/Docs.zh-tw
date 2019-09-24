@@ -3,12 +3,12 @@ title: 服務對服務通訊
 description: 瞭解後端雲端原生微服務如何與其他後端微服務通訊。
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 7a69678fd38a69c3c2d7e91d4aea019c39141cb6
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: e9f27309fd6b03830ab3098d0fb08a7ecf5c0eaa
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184670"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214395"
 ---
 # <a name="service-to-service-communication"></a>服務對服務通訊
 
@@ -60,7 +60,7 @@ ms.locfileid: "71184670"
 
 ### <a name="service-aggregator-pattern"></a>服務匯總工具模式
 
-排除微服務對 micrservice 結合的另一個選項是匯總程式[微服務](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/)，如圖4-10 中的紫色所示。 
+排除微服務對微服務結合的另一個選項是匯總程式[微服務](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/)，如圖4-10 中的紫色所示。 
 
 ![匯總工具服務](./media/aggregator-service.png)
 
@@ -232,4 +232,4 @@ Azure 服務匯流排和事件方格針對公開單一獨立事件的應用程�
 
 >[!div class="step-by-step"]
 >[上一頁](front-end-communication.md)
->[下一頁](rest-grpc.md) <!-- Next Chapter -->
+>[下一頁](rest-grpc.md)
