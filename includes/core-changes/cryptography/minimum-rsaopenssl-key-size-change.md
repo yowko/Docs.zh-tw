@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e3bda3cf6319d8c988b6c897b78869f517f9616a
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 2fb980c8b75e25ba347c56ccc1c90f2959e83e21
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181965"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216351"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>RSAOpenSsl 金鑰產生的大小下限已增加
 
@@ -47,6 +47,5 @@ ms.locfileid: "71181965"
 - `Overload:System.Security.Cryptography.RSA.Create`
 - `Overload:System.Security.Cryptography.RSAOpenSsl.#ctor`
 - `Overload:System.Security.Cryptography.RSACryptoServiceProvider.#ctor`
-
 
 -->

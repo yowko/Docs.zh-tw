@@ -1,15 +1,15 @@
 ---
 title: F# Interactive (fsi.exe) 參考
-description: 了解如何F#Interactive (fsi.exe) 用來執行F#程式碼以互動方式在主控台上或執行F#指令碼。
+description: 瞭解如何F#使用互動式（fsi.exe）在主控台上以互動F#方式執行程式碼，或執行F#腳本。
 ms.date: 05/16/2016
-ms.openlocfilehash: 297532315269cf75bf1cbb52a4e01d58cb97c99f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4e6ea1e42be180e88349acc9da7d5ef19a8ddedd
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641592"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214253"
 ---
-# <a name="interactive-programming-with-f"></a>F # 互動式程式設計\#
+# <a name="interactive-programming-with-f"></a>使用 F 進行互動式程式設計\#
 
 > [!NOTE]
 > 本文目前僅描述 Windows 的體驗。  將會加以重新撰寫。
@@ -19,19 +19,19 @@ ms.locfileid: "65641592"
 
 F# Interactive (fsi.exe) 在主控台中，以互動方式用於執行 F# 程式碼，或執行 F# 指令碼。 換句話說，F# Interactive 會執行 F# 語言的 REPL (讀取、評估、列印迴圈)。
 
-若要從主控台執行 F# Interactive，請執行 fsi.exe。  您會找到 fsi.exe 中：
+若要從主控台執行 F# Interactive，請執行 fsi.exe。  您會在中找到 fsi.exe：
 
 ```console
 C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-何處`sku`可能`Community`， `Professional`，或`Enterprise`。
+其中`sku`可以`Community`是、 `Professional`或。`Enterprise`
 
 如需可用命令列選項的資訊，請參閱 [F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)。
 
 若要透過 Visual Studio 執行 F# Interactive，您可以按一下標示為 **F# Interactive** 的合適工具列按鈕，或使用按鍵 **Ctrl+Alt+F**。 如此會開啟互動式視窗，也就是執行 F# Interactive 工作階段的工具視窗。 您也可以選取要在互動式視窗中執行的部分程式碼，然後點擊按鍵組合 **ALT+ENTER**。 F# Interactive 會隨即在標示為 **F# Interactive** 的工具視窗中啟動。 當您使用這個按鍵組合時，請確定編輯器視窗具有焦點。
 
-不論是使用主控台還是否 Visual Studio，命令提示字元都會出現，表示解譯器在等待您輸入。 您可以如同在程式碼檔案中一樣輸入程式碼。 若要編譯並執行程式碼，請輸入兩個分號 (**;;**) 以終止一或數行的輸入。
+不論是使用主控台還是否 Visual Studio，命令提示字元都會出現，表示解譯器在等待您輸入。 您可以如同在程式碼檔案中一樣輸入程式碼。 若要編譯並執行程式碼，請輸入兩個分號 ( **;;** ) 以終止一或數行的輸入。
 
 F# Interactive 會嘗試編譯程式碼，如果成功的話，它會執行程式碼，並列印它所編譯的類型與值的簽章。 如果發生錯誤，解譯器就會列印錯誤訊息。
 
@@ -39,11 +39,11 @@ F# Interactive 會嘗試編譯程式碼，如果成功的話，它會執行程�
 
 在 Visual Studio 中執行 F# Interactive 時，會與專案分開執行，因此，舉例來說，除非您將函式的程式碼複製到 [互動] 視窗，否則無法使用在 F# Interactive 中專案內所定義的建構。
 
-若您開啟了參考某些程式庫的專案，則可以透過方案總管參考 F# Interactive 中的這些程式庫。 若要參考 F# Interactive 中的程式庫，請展開 [參考] 節點，開啟程式庫的捷徑功能表，然後選擇 [傳送至 F# Interactive]。
+若您開啟了參考某些程式庫的專案，則可以透過方案總管參考 F# Interactive 中的這些程式庫。 若要參考 F# Interactive 中的程式庫，請展開 [參考]節點，開啟程式庫的捷徑功能表，然後選擇 [傳送至 F# Interactive]。
 
-您可以調整設定來控制 F# Interactive 命令列引數 (選項)。 在 [工具] 功能表上，選取 [選項...]，然後展開 [F# 工具]。 您只能變更 F# Interactive 選項和 [64 位元 F# Interactive] 這兩項設定，而且只有在 64 位元電腦上執行 F# Interactive 時才相關。 這項設定會判斷您要執行專用的 64 位元版 fsi.exe 或 fsianycpu.exe，它會使用電腦架構判斷要以 32 位元或 64 位元處理序執行。
+您可以調整設定來控制 F# Interactive 命令列引數 (選項)。 在 [工具] 功能表上，選取 [選項...]，然後展開 [F# 工具]。 您只能變更 F# Interactive 選項和 [64 位元 F# Interactive]這兩項設定，而且只有在 64 位元電腦上執行 F# Interactive 時才相關。 這項設定會判斷您要執行專用的 64 位元版 fsi.exe 或 fsianycpu.exe，它會使用電腦架構判斷要以 32 位元或 64 位元處理序執行。
 
-## <a name="scripting-with-f"></a>使用 f # 指令碼\#
+## <a name="scripting-with-f"></a>使用 F 撰寫腳本\#
 指令碼使用副檔名 **.fsx** 或 **.fsscript**。 您只要執行 **fsi.exe**，並指定 F# 原始程式碼的指令碼檔名，F# Interactive 就會即時讀取程式碼並執行程式碼，而不是編譯原始程式碼，然後稍後再執行已編譯的組件。
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Interactive、指令碼與編譯環境之間的差異
@@ -86,7 +86,7 @@ printfn "%A" (MyAssembly.myFunction 10 40)
 
 其輸出如下：
 
-```
+```console
 Command line arguments: 
 file1.fsx
 test
@@ -97,5 +97,5 @@ test
 
 |標題|描述|
 |-----|-----------|
-|[F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)|描述命令列語法和選項F#Interactive fsi.exe。|
+|[F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)|說明互動式 fsi.exe 的F#命令列語法和選項。|
 |[F# Interactive 程式庫參考](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|說明在 F# Interactive 中執行程式碼時，所提供的程式庫功能。|

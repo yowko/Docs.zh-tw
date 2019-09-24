@@ -1,15 +1,15 @@
 ---
-title: 重大變更，版本2.2 至 3.0-.NET Core
+title: 密碼編譯的重大變更，版本2.2 至 3.0-.NET Core
 description: 列出 .NET Core、ASP.NET Core 和 EF Core 版本2.2 到3.0 版的重大變更。
 ms.date: 09/10/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e488e04c06972399bb2b20f349c216098b6dd41d
+ms.openlocfilehash: 44caf042404d44ec4c5cb7b7e25883d8460efeb5
 ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216337"
+ms.locfileid: "71217063"
 ---
 # <a name="breaking-changes-for-migration-from-version-22-to-30"></a>從2.2 版遷移至3.0 的突破性變更
 
@@ -65,10 +65,6 @@ ms.locfileid: "71216337"
 ## <a name="visual-basic"></a>Visual Basic
 
 [!INCLUDE[vbNewLine is obsolete](~/includes/core-changes/visualbasic/vbnewline-is-obsolete.md)]
-
-## <a name="aspnet-core"></a>ASP.NET Core
-
-[ASP.NET Core 重大變更宣告（在 GitHub 上）](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)
 
 ## <a name="entity-framework-core"></a>Entity Framework Core
 

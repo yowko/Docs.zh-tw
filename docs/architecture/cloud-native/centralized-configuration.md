@@ -2,12 +2,12 @@
 title: 集中式設定
 description: 使用 Azure Key Vault 的集中式設定可以讓您更輕鬆地管理雲端原生應用程式。
 ms.date: 06/30/2019
-ms.openlocfilehash: f4f495591550abccf2c64ef24cbe7620b039d8ca
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4c516b6773d913acd71ff06742302e9766a141e2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183515"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214004"
 ---
 # <a name="centralized-configuration"></a>集中式設定
 
@@ -27,4 +27,4 @@ Azure Key Vault 提供權杖、密碼、憑證、API 金鑰和其他機密秘密
 
 >[!div class="step-by-step"]
 >[上一頁](deploy-eshoponcontainers-azure.md)
->[下一頁](scale-applications.md) <!-- Next Chapter -->
+>[下一頁](scale-applications.md)

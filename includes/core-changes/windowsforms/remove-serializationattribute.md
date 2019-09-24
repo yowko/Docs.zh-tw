@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e9d76d5907e7d700fc57117ccb43f8c430c615b0
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181765"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71217042"
 ---
 ### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>已從某些 Windows Forms 類型中移除 SerializableAttribute
 
@@ -28,7 +28,7 @@ ms.locfileid: "71181765"
 
 在過去，這個序列化機制已經有嚴重的維護和安全性考慮。 維護`SerializableAttribute`類型表示這些類型必須經過測試，才能進行版本對版本的序列化變更，以及可能的架構對架構序列化變更。 這會讓您更難演變這些類型，而且維護成本可能會很高。 這些類型沒有已知的二進位序列化案例，可將移除屬性的影響降至最低。
 
-如需詳細資訊，請參閱<https://docs.microsoft.com/en-us/dotnet/standard/serialization/binary-serialization>。
+如需詳細資訊，請參閱[二進位序列化](~/docs/standard/serialization/binary-serialization.md)。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -46,7 +46,7 @@ Windows Forms
 
 - None
 
-<!-- 
+<!--
 
 ### Affected APIs
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ba543414d4f84362c9b9b876395815e837efbd3f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d61e4da187b3ede5e49fa80903d6e4c3b40578b9
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181756"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216300"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>MyServices 命名空間中的類型無法使用
 
@@ -16,7 +16,7 @@ ms.locfileid: "71181756"
 
 #### <a name="details"></a>詳細資料
 
-<xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName>命名空間中的類型可在某些 .net Core 3.0 Preview 版本中取得。 從 .NET Core 3.0 Preview 9 開始就不再提供這些功能。
+<xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName>命名空間中的類型可在某些 .net Core 3.0 預覽版本中使用。 從 .NET Core 3.0 Preview 9 開始就不再提供這些功能。
 
 已移除類型，以避免不必要的元件相依性或後續版本中的重大變更。
  

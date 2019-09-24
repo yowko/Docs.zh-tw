@@ -1,17 +1,17 @@
 ---
-title: C# 8.0 的新功能 - C# 指南
-description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 5 的最新資訊。
+title: C# 8.0 的新功能- C#指南
+description: 大致了解 C# 8.0 中可用的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 95331c8dd8e8b5e0d5af242752565d8e93120937
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182407"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216488"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
-您已經可以試用許多 C# 語言的增強功能。
+C#8.0 新增下列功能和增強的C#語言：
 
 - [唯讀成員](#readonly-members)
 - [預設介面成員](#default-interface-members)
@@ -30,9 +30,6 @@ ms.locfileid: "71182407"
 - [非受控的結構化類型](#unmanaged-constructed-types)
 - [在嵌套運算式中 stackalloc](#stackalloc-in-nested-expressions)
 - [增強內插逐字字串](#enhancement-of-interpolated-verbatim-strings)
-
-> [!NOTE]
-> 此文章內容為 C# 8.0 預覽 5 的最新更新。
 
 本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
 

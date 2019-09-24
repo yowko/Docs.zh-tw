@@ -3,15 +3,16 @@ title: .NET Standard
 description: 了解 .NET Standard、其版本及支援的 .NET 實作。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/30/2019
+ms.date: 09/23/2019
 ms.technology: dotnet-standard
+ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: f479bbec504a965fde08af6d000d4be75ca85f8d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 026224ca2941e7694fc1b80939e6d283d75db32e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205598"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214447"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -45,7 +46,7 @@ ms.locfileid: "70205598"
 - 版本越新，可供您使用的 API 就越多。
 - 版本越舊，可實作它的平台就越多。
 
-一般而言，建議您儘可能以「最舊的」  .NET Standard 版本為目標。 因此，在您找到可作為目標的最新 .NET Standard 版本之後，請依照下列步驟操作：
+一般而言，建議您儘可能以「最舊的」.NET Standard 版本為目標。 因此，在您找到可作為目標的最新 .NET Standard 版本之後，請依照下列步驟操作：
 
 1. 以次舊的 .NET Standard 版本為目標並建置您的專案。
 2. 如果您的專案建置成功，便重複步驟 1。 否則，請將目標重新設定為次新版本，這會是您應該使用的版本。

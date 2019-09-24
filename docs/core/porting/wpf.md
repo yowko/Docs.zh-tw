@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 1528e578a978de38998b3f3f4b7beb72ff7422d4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4ff3ca9610e7fa9355931ca2013def1157fab8b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117061"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216193"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>作法：將 WPF 傳統型應用程式移植到 .NET Core
 
@@ -52,7 +52,7 @@ ms.locfileid: "71117061"
 
 01. 您正在使用不同版本的 WPF。
 
-    當 .NET Core 3.0 Preview 1 發佈時，WPF 在 GitHub 上會開放原始碼。 .NET Core WPF 的程式碼是 .NET Framework WPF 程式碼基底的分支。 很可能存在一些差異，而您的應用程式將無法移植。
+    當 .NET Core 3.0 Preview 1 發行時，WPF 會在 GitHub 上進入開放原始碼。 .NET Core WPF 的程式碼是 .NET Framework WPF 程式碼基底的分支。 很可能存在一些差異，而您的應用程式將無法移植。
 
 01. [Windows 相容性套件][compat-pack]可能可以協助您進行遷移。
 

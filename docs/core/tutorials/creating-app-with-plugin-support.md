@@ -4,12 +4,12 @@ description: 了解如何建立支援外掛程式的 .NET Core 應用程式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849440"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216252"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>建立具有外掛程式的 .NET Core 應用程式
 
@@ -22,15 +22,29 @@ ms.locfileid: "70849440"
 
 ## <a name="prerequisites"></a>必要條件
 
-- 安裝 [.NET Core 3.0 Preview 2 SDK](https://dotnet.microsoft.com/download) 或更新版本。
+- 安裝[.Net Core 3.0](https://dotnet.microsoft.com/download)或更新版本。
 
 ## <a name="create-the-application"></a>建立應用程式
 
 第一個步驟是建立應用程式：
 
-1. 建立新的資料夾，並在該資料夾中執行 `dotnet new console -o AppWithPlugin`。 
-2. 為了讓專案建置更容易，請建立 Visual Studio 方案檔。 在相同的資料夾中執行 `dotnet new sln`。 
-3. 執行 `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` 以將應用程式專案新增至方案。
+1. 建立新的資料夾，然後在該資料夾中執行下列命令：
+
+    ```dotnetcli
+    dotnet new console -o AppWithPlugin
+    ```
+
+2. 若要更輕鬆地建立專案，請使用建立 Visual Studio 的方案檔。 在相同的資料夾中執行下列命令：
+
+    ```dotnetcli
+    dotnet new sln
+    ```
+
+3. 執行下列命令，將應用程式專案新增至方案：
+
+    ```dotnetcli
+    dotnet sln add AppWithPlugin/AppWithPlugin.csproj
+    ```
 
 現在，我們可以填入應用程式的基本架構。 以下列程式碼取代 *AppWithPlugin/Program.cs* 檔案中的程式碼：
 
@@ -203,8 +217,18 @@ static Assembly LoadPlugin(string relativePath)
 
 回到根資料夾，執行下列動作：
 
-1. 執行 `dotnet new classlib -o HelloPlugin` 以建立名為 `HelloPlugin` 的新類別庫專案。
-2. 執行 `dotnet sln add HelloPlugin/HelloPlugin.csproj` 以將專案新增至 `AppWithPlugin` 方案。 
+1. 執行下列命令，以建立名為`HelloPlugin`的新類別庫專案：
+    
+    ```dotnetcli
+    dotnet new classlib -o HelloPlugin
+    ```
+
+2. 執行下列命令，將專案新增至`AppWithPlugin`方案：
+
+    ```dotnetcli
+    dotnet sln add HelloPlugin/HelloPlugin.csproj
+    ```
+
 3. 使用下列內容，以名為 *HelloCommand.cs* 的檔案取代名為 *HelloPlugin/Class1.cs* 的檔案：
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]

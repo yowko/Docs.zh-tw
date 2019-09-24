@@ -1,5 +1,5 @@
 ---
-title: 將 .NET 核心元件公開給 COM
+title: 將 .NET Core 元件公開給 COM
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 686d1b31478121a8b2c907d99672a5fcc3438a71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849037"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216235"
 ---
-# <a name="exposing-net-core-components-to-com"></a>將 .NET 核心元件公開給 COM
+# <a name="exposing-net-core-components-to-com"></a>將 .NET Core 元件公開給 COM
 
 在 .NET Core 中，相較於 .NET Framework，向 COM 公開您 .NET 物件的流程已大幅簡化。 下列流程將逐步解說如何向 COM 公開類別。 本教學課程會示範如何：
 
@@ -25,20 +25,28 @@ ms.locfileid: "70849037"
 
 ## <a name="prerequisites"></a>必要條件
 
-- 安裝 [.NET Core 3.0 Preview 7 SDK](https://dotnet.microsoft.com/download) 或更新版本。
+- 安裝[.Net Core 3.0 SDK](https://dotnet.microsoft.com/download)或更新版本。
 
 ## <a name="create-the-library"></a>建立程式庫
 
 第一步是建立程式庫。
 
-1. 建立新的資料夾，並在該資料夾中執行 `dotnet new classlib`。
+1. 建立新的資料夾，然後在該資料夾中執行下列命令：
+    
+    ```dotnetcli
+    dotnet new classlib
+    ```
+
 2. 開啟 `Class1.cs`。
 3. 將 `using System.Runtime.InteropServices;` 新增到檔案的頂端。
-4. 建立名為 `IServer` 的介面。 例如：[!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
-5. 使用您要實作之 COM 介面的介面 GUID，將 `[Guid("<IID>")]` 屬性新增到介面。 例如： `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]` 。 請注意，因為對 COM 而言，此 GUID 是此介面的唯一識別碼，所以其必須是唯一的。 在 Visual Studio 中，您可以前往 [工具] > [建立 GUID] 開啟建立 GUID 工具，以產生 GUID。
+4. 建立名為 `IServer` 的介面。 例如：
+
+   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+
+5. 使用您要實作之 COM 介面的介面 GUID，將 `[Guid("<IID>")]` 屬性新增到介面。 例如，`[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`。 請注意，因為對 COM 而言，此 GUID 是此介面的唯一識別碼，所以其必須是唯一的。 在 Visual Studio 中，您可以前往 [工具] > [建立 GUID] 開啟建立 GUID 工具，以產生 GUID。
 6. 將 `[InterfaceType]` 屬性新增到介面，並指定您介面應實作的基底 COM 介面。
 7. 建立名為 `Server` 且實作 `IServer` 的類別。
-8. 使用您要實作之 COM 類別的識別碼 GUID，將 `[Guid("<CLSID>")]` 屬性新增到類別。 例如： `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]` 。 一如介面 GUID，因為對 COM 而言，此 GUID 是此介面唯一的識別碼，所以其必須是唯一的。
+8. 使用您要實作之 COM 類別的識別碼 GUID，將 `[Guid("<CLSID>")]` 屬性新增到類別。 例如，`[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`。 一如介面 GUID，因為對 COM 而言，此 GUID 是此介面唯一的識別碼，所以其必須是唯一的。
 9. 將 `[ComVisible(true)]` 屬性新增到介面和類別。
 
 > [!IMPORTANT]
@@ -66,7 +74,7 @@ ms.locfileid: "70849037"
 
 GitHub 上的 dotnet/samples 存放庫提供功能完整的 [COM 伺服器範例](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)。
 
-## <a name="additional-notes"></a>其他注意事項
+## <a name="additional-notes"></a>其他備註
 
 不同於 .NET Framework，.NET Core 不支援從 .NET Core 組件產生 COM 型別程式庫 (TLB)。 您必須手動撰寫 IDL 檔案，或為您介面的原生宣告撰寫 C++ 標頭。
 

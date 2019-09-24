@@ -2,12 +2,12 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
-ms.openlocfilehash: 13239b5235138cc6994841bbb81f8f12e661e337
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969849"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216198"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -125,13 +125,13 @@ ms.locfileid: "70969849"
 
 ### <a name="sdk-attribute"></a>Sdk 屬性
 
-*.csproj* 檔案的根 `<Project>` 元素有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](/visualstudio/msbuild/msbuild-tasks)和[目標](/visualstudio/msbuild/msbuild-targets)。 使用.NET Core 3.0 Preview 時，隨附 .NET Core 工具的三個主要 SDK 和其他兩個 SDK：
+*.csproj* 檔案的根 `<Project>` 元素有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](/visualstudio/msbuild/msbuild-tasks)和[目標](/visualstudio/msbuild/msbuild-targets)。 下列 Sdk 適用于 .NET Core：
 
 1. 識別碼為 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. 識別碼為 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
 3. 識別碼為 `Microsoft.NET.Sdk.Razor` 的 .NET Core Razor 類別庫 SDK
-4. .NET Core 的背景工作服務識別碼為 `Microsoft.NET.Sdk.Worker` (.NET Core 3.0 Preview)
-5. .NET Core WinForms 和 WPF 的識別碼為 `Microsoft.NET.Sdk.WindowsDesktop` (.NET Core 3.0 Preview)
+4. 識別碼為的`Microsoft.NET.Sdk.Worker` .net core 背景工作角色服務（自 .net core 3.0 起）
+5. 具有識別碼的`Microsoft.NET.Sdk.WindowsDesktop` .net Core WinForms 和 WPF （自 .net core 3.0 起）
 
 您必須在 `<Project>` 項目中將 `Sdk` 屬性設定為上述其中一個識別碼，才能使用 .NET Core 工具並建置您的程式碼。
 
@@ -143,7 +143,7 @@ ms.locfileid: "70969849"
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a>Version
+#### <a name="version"></a>版本
 
 必要的 `Version` 屬性會指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
@@ -179,7 +179,7 @@ ms.locfileid: "70969849"
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a>Version
+#### <a name="version"></a>版本
 
 `Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
@@ -264,7 +264,7 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-[SPDX 授權識別碼](https://spdx.org/licenses/) \(英文\) 或運算式。 例如： `Apache-2.0` 。
+[SPDX 授權識別碼](https://spdx.org/licenses/) \(英文\) 或運算式。 例如，`Apache-2.0`。
 
 此處有 [SPDX 授權識別碼](https://spdx.org/licenses/)的完整清單。 在使用授權類型運算式時，NuGet.org 只接受 OSI 或 FSF 核准的授權。
 

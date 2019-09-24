@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5bed2d1d4eda4a4c577f05f614a71aa9180998a7
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 2a751acc129ebd1c917b87f8083ffef72c7d8c17
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182050"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216334"
 ---
 ### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>報告版本的 Api 現在會報告產品，而不是檔案版本
 
@@ -12,7 +12,7 @@ ms.locfileid: "71182050"
 
 #### <a name="change-description"></a>變更描述
 
-在 .net core 2.2 和舊版中，.net core 元件<xref:System.Environment.Version?displayProperty=nameWithType>（ <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType>例如、和）的 [檔案屬性] 對話方塊等方法會反映檔案版本。 從 .NET Core 3.0 開始，它們會反映產品版本。 
+在 .net core 2.2 和舊版中，.net core 元件<xref:System.Environment.Version?displayProperty=nameWithType>（ <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType>例如、和）的 [檔案屬性] 對話方塊等方法會反映檔案版本。 從 .NET Core 3.0 開始，它們會反映產品版本。
 
 下圖說明 .NET Core 2.2 （左側）和 .NET Core 3.0 （位於右邊）的*system.webserver*元件版本資訊差異，如**Windows Explorer** [檔案屬性] 對話方塊所顯示。
 
@@ -35,12 +35,11 @@ CoreFx
 - <xref:System.Environment.Version?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType>
 
-<!-- 
+<!--
 
 ### Affected APIs
 
 - `P:System.Environment.Version`
 - `P:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription`
-
 
 -->

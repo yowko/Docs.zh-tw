@@ -3,12 +3,12 @@ title: 在 C# 中使用預設介面成員安全地更新介面
 description: 本進階教學課程探討如何安全地將新功能新增至現有的介面定義，而不會中斷實作該介面的所有類別和結構。
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 271c737e17cc2b93424108e7e1d434fd1c7198be
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926708"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216573"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>教學課程：在 C# 8.0 中使用預設介面成員更新介面
 
@@ -24,7 +24,7 @@ ms.locfileid: "70926708"
 
 ## <a name="prerequisites"></a>必要條件
 
-您需要設定電腦執行 .NET Core，包括 C# 8.0 Preview 編譯器。 從 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或最新的 [.NET Core 3.0 Preview SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 開始，可以使用 C# 8.0 Preview 編譯器。 從 .NET Core 3.0 Preview 4 開始，可以使用預設介面成員。
+您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8.0 編譯器。
 
 ## <a name="scenario-overview"></a>情節概觀
 

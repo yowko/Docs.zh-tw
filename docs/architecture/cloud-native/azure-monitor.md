@@ -2,12 +2,12 @@
 title: Azure 監視器
 description: 使用 Azure 監視器來取得系統的可見度。
 ms.date: 09/23/2019
-ms.openlocfilehash: 89c27ffc3ba13194baf7b05e75920bf33dc6c5f3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 20048792e95ef1f6e75551cdd0d3571f972f6c14
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183571"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214100"
 ---
 # <a name="azure-monitor"></a>Azure 監視器 
 
@@ -77,4 +77,4 @@ Azure 監視器會自動利用機器學習服務來瞭解已部署應用程式�
 
 >[!div class="step-by-step"]
 >[上一頁](monitoring-azure-kubernetes.md)
->[下一頁](identity.md) <!-- Next Chapter -->
+>[下一頁](identity.md)

@@ -1,17 +1,17 @@
 ---
 title: 目標 Framework
 description: 了解 .NET Core 應用程式和程式庫的目標 Framework。
-author: richlander
+author: mairaw
 ms.author: mairaw
-ms.date: 04/02/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 20b13bb590a63a807c1894bf08051053f90c0fc4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666513"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216675"
 ---
 # <a name="target-frameworks"></a>目標 Framework
 
@@ -23,7 +23,7 @@ ms.locfileid: "69666513"
 
 針對某些目標 Framework (例如 .NET Framework)，API 是由該架構安裝在系統上的組件所定義，而且可能包含應用程式架構 API (例如 ASP.NET)。
 
-針對以套件為基礎的目標 Framework (例如 .NET Standard 和 .NET Core)，API 是由包含在應用程式或程式庫中的套件所定義。 「中繼套件」  是 NuGet 套件，本身沒有任何內容，而是一份相依性 (其他專案) 清單。 以 NuGet 套件為基礎的目標 Framework 會隱含指定一個中繼套件，該套件會參考組成架構的所有套件。
+針對以套件為基礎的目標 Framework (例如 .NET Standard 和 .NET Core)，API 是由包含在應用程式或程式庫中的套件所定義。 「中繼套件」是 NuGet 套件，本身沒有任何內容，而是一份相依性 (其他專案) 清單。 以 NuGet 套件為基礎的目標 Framework 會隱含指定一個中繼套件，該套件會參考組成架構的所有套件。
 
 ## <a name="latest-target-framework-versions"></a>最新目標 Framework 版本
 
@@ -31,8 +31,8 @@ ms.locfileid: "69666513"
 
 | 目標 Framework      | Latest <br/> 穩定版本 | Target Framework Moniker (TFM) | 已實作 <br/> .NET Standard 版本 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.0                         | netstandard2.0                 | N/A                                     |
-| .NET Core             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
+| .NET Standard         | 2.1                         | netstandard 2。1                 | N/A                                     |
+| .NET Core             | 3.0                         | netcoreapp 3。0                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>支援的目標 Framework 版本
@@ -41,8 +41,8 @@ ms.locfileid: "69666513"
 
 | 目標 Framework           | TFM |
 | -------------------------- | --- |
-| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard 2。1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp 3。0 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows 市集              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -52,14 +52,14 @@ ms.locfileid: "69666513"
 
 ## <a name="how-to-specify-target-frameworks"></a>如何指定目標 Framework
 
-目標 Framework 會在專案檔中指定。 指定單一目標 Framework 時，請使用 **TargetFramework** 項目。 下列主控台應用程式專案檔會示範如何將目標設為 .NET Core 2.2：
+目標 Framework 會在專案檔中指定。 指定單一目標 Framework 時，請使用 **TargetFramework** 項目。 下列主控台應用程式專案檔案示範如何以 .NET Core 3.0 為目標：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -112,7 +112,7 @@ public class MyClass
 
 .NET Core 目標 Framework 之前置處理器符號的完整清單如下：
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../includes/preprocessor-symbols.md)]
 
 ## <a name="deprecated-target-frameworks"></a>已被取代的目標 Framework
 

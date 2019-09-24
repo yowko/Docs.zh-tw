@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0a886c77204697268adf4ee7bc4b62184b056112
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969958"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216247"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -26,7 +26,7 @@ ms.locfileid: "70969958"
 - 自封式部署
 - 有協力廠商相依性的自封式部署
 
-如需使用 Visual Studio 來開發 .NET Core 應用程式的資訊，請參閱 [Windows 上 .NET Core 的必要條件](../windows-prerequisites.md#prerequisites-with-visual-studio-2017)。
+如需使用 Visual Studio 來開發 .NET Core 應用程式的資訊，請參閱 [Windows 上 .NET Core 的必要條件](../windows-prerequisites.md#prerequisites-to-develop-net-core-apps-with-visual-studio)。
 
 ## <a name="framework-dependent-deployment"></a>與 Framework 相依的部署
 
@@ -218,7 +218,7 @@ ms.locfileid: "70969958"
 
 重複這些步驟來定義其他應用程式目標平台。
 
-您已完成設定您的設定檔，並已準備好發行應用程式。 請這樣做：
+您已完成設定您的設定檔，並已準備好發行應用程式。 若要這樣做：
 
    1. 如果 [發行] 視窗目前未開啟，請以滑鼠右鍵按一下 [方案總管] 中的專案 (而非解決方案)，然後選取 [發行]。
 

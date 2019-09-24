@@ -1,17 +1,17 @@
 ---
 title: 原始碼程式行、檔案與路徑識別項
-description: 瞭解如何使用內F#建的識別碼值, 讓您存取程式碼中的原始程式列號、目錄和檔案名。
+description: 瞭解如何使用內F#建的識別碼值，讓您存取程式碼中的原始程式列號、目錄和檔案名。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ff36210edc75370f8baf9ee7be057f3ac0c3979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f22c3dfb3cb106fbe45883ffd7de01feac30db00
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627111"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216754"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>原始碼程式行、檔案與路徑識別項
 
-識別碼`__LINE__` `__SOURCE_DIRECTORY__`和是內建值,可讓您存取程式碼中的原始程式列號、目錄和檔案名。`__SOURCE_FILE__`
+識別碼`__LINE__` `__SOURCE_DIRECTORY__`和是內建值，可讓您存取程式碼中的原始程式列號、目錄和檔案名。`__SOURCE_FILE__`
 
 ## <a name="syntax"></a>語法
 
@@ -29,11 +29,11 @@ __SOURCE_FILE__
 
 |預先定義的識別碼|描述|
 |---------------------|-----------|
-|`__LINE__`|評估為目前的行號, 並`#line`考慮指示詞。|
-|`__SOURCE_DIRECTORY__`|評估為來原始目錄的目前完整路徑, 並考慮`#line`指示詞。|
-|`__SOURCE_FILE__`|評估為目前的來原始檔案名, 不含其路徑, 考慮`#line`指示詞。|
+|`__LINE__`|評估為目前的行號，並`#line`考慮指示詞。|
+|`__SOURCE_DIRECTORY__`|評估為來原始目錄的目前完整路徑，並考慮`#line`指示詞。|
+|`__SOURCE_FILE__`|評估為目前的來原始檔案名，不含其路徑，考慮`#line`指示詞。|
 
-如需指示詞的`#line`詳細資訊, 請參閱[編譯器](compiler-directives.md)指示詞。
+如需指示詞的`#line`詳細資訊，請參閱[編譯器](compiler-directives.md)指示詞。
 
 ## <a name="example"></a>範例
 
@@ -43,7 +43,7 @@ __SOURCE_FILE__
 
 輸出：
 
-```
+```console
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
 Source File: Program.fs

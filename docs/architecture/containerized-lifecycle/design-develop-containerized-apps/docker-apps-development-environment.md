@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發環境
 description: 了解可支援 Docker 開發生命週期的最重要開發工具選項。
 ms.date: 02/15/2019
-ms.openlocfilehash: 0f71ffa5e6870f45908e4def6577120a17ec744c
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672425"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214299"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 應用程式的開發環境
 
@@ -20,7 +20,6 @@ ms.locfileid: "68672425"
 如果您偏好使用支援任何開發語言的輕量型、跨平台編輯器，您可以使用 Visual Studio Code 和 Docker CLI。 這些產品提供簡單但強大的體驗，這對簡化開發人員工作流程來說非常重要。 藉由安裝「適用於 Mac 的 Docker」或「適用於 Windows 的 Docker」(開發環境)，Docker 開發人員可以使用單一 Docker CLI 來建置 Windows 或 Linux (執行階段環境) 的應用程式。 此外，Visual Studio Code 支援 Docker 的延伸模組 (內含適用於 Dockerfile 的 IntelliSense)，以及可從編輯器執行 Docker 命令的捷徑工作。
 
 > [!NOTE]
->
 > 若要下載 Visual Studio Code，請前往 <https://code.visualstudio.com/download>。
 >
 > 若要下載適用於 Mac 和 Windows 的 Docker，請前往 <https://www.docker.com/products/docker>。

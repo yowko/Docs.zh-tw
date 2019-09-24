@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 101740e828589d7d210527e3db82a1c949a6e0fd
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 377f22409558c21d1c57f6214c13572dedf9e419
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117120"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71217070"
 ---
 ### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>JsonEncodedText 方法有額外的 JavaScriptEncoder 引數
 
-從 .net Core 3.0 Preview 8 開始， <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>方法包含選擇性<xref:System.Text.Encodings.Web.JavaScriptEncoder>的引數。 
+從 .net Core 3.0 Preview 8 開始， <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>方法包含選擇性<xref:System.Text.Encodings.Web.JavaScriptEncoder>的引數。
 
 #### <a name="details"></a>詳細資料
 
@@ -62,7 +62,7 @@ CoreFx
 
 <!--
 
-### Affected APIs 
+### Affected APIs
 
 - `M:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan{System.Byte},System.Text.Encodings.Web.JavaScriptEncoder)`
 - `M:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan{System.Char},System.Text.Encodings.Web.JavaScriptEncoder)`

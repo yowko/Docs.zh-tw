@@ -1,17 +1,17 @@
 ---
 title: 明確欄位：Val 關鍵字
-description: 瞭解F# ' val ' 關鍵字, 這是用來宣告位置以儲存類別或結構型別中的值, 而不需要初始化型別。
+description: 瞭解F# ' val ' 關鍵字，這是用來宣告位置以儲存類別或結構型別中的值，而不需要初始化型別。
 ms.date: 05/16/2016
-ms.openlocfilehash: 13e0ba2875e8accfd1c0da0e1c6fef4973309f9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fe339e33dae27ae226022a68dd8247d1ab1994b3
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627529"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216474"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>明確欄位：Val 關鍵字
 
-`val` 關鍵字用來宣告位置以儲存類別中或結構類型中的值，但不初始化。 以這種方式宣告的儲存位置稱為「*明確欄位*」。 `val` 關鍵字的另一種用法是搭配 `member` 關鍵字來宣告自動實作的屬性。 如需自動執行之屬性的詳細資訊, 請參閱[屬性](properties.md)。
+`val` 關鍵字用來宣告位置以儲存類別中或結構類型中的值，但不初始化。 以這種方式宣告的儲存位置稱為「*明確欄位*」。 `val` 關鍵字的另一種用法是搭配 `member` 關鍵字來宣告自動實作的屬性。 如需自動執行之屬性的詳細資訊，請參閱[屬性](properties.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -48,7 +48,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 其輸出如下：
 
-```
+```console
 11 12 abc
 30 def
 ```
@@ -65,11 +65,11 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 輸出為 `11 xyz`。
 
-請**注意**, 如果您要使用不含`mutable` `mutable`關鍵字的欄位來初始化結構, 您的指派將會在一份結構複本上執行, 而在指派後將會立即捨棄。 因此, 您的結構不會變更。
+請**注意**，如果您要使用不含`mutable` `mutable`關鍵字的欄位來初始化結構，您的指派將會在一份結構複本上執行，而在指派後將會立即捨棄。 因此，您的結構不會變更。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
-平常不適合使用明確欄位。 一般而言，可能的話，應該在類別中使用 `let` 繫結，而不是明確欄位。 在某些互通性案例中，例如您需要定義結構供平台叫用呼叫原生 API，或在 COM interop 案例中，明確欄位很有用。 如需詳細資訊, 請參閱[外部函數](../functions/external-functions.md)。 另一種情況是您使用 F# 程式碼產生器來產生沒有主要建構函式的類別，這時也可能需要明確欄位。 對於執行緒靜態變數或類似的建構，明確欄位也很有用。 如需詳細資訊，請參閱 `System.ThreadStaticAttribute`。
+平常不適合使用明確欄位。 一般而言，可能的話，應該在類別中使用 `let` 繫結，而不是明確欄位。 在某些互通性案例中，例如您需要定義結構供平台叫用呼叫原生 API，或在 COM interop 案例中，明確欄位很有用。 如需詳細資訊，請參閱[外部函數](../functions/external-functions.md)。 另一種情況是您使用 F# 程式碼產生器來產生沒有主要建構函式的類別，這時也可能需要明確欄位。 對於執行緒靜態變數或類似的建構，明確欄位也很有用。 如需詳細資訊，請參閱`System.ThreadStaticAttribute`。
 
 當關鍵字 `member val` 一起出現在類型定義中時，這是自動實作屬性的定義。 如需詳細資訊，請參閱 [屬性](properties.md)。
 

@@ -2,12 +2,12 @@
 title: 可為 Null 的參考型別
 description: 本文提供可為 Null 參考型別的概觀，這種型別是在 C# 8 中新增的功能。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。
 ms.date: 02/19/2019
-ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7ca3ebc413fbe335f79d415249b952132c38f552
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851074"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214408"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
@@ -83,7 +83,7 @@ name!.Length;
 
 預設的可為 Null 註釋及警告內容為 `disabled`。 該決策表示您現有的程式碼會編譯且不會進行任何變更，也不會產生任何新的警告。
 
-### <a name="nullable-annotation-context"></a>可為 Null 註釋內容
+## <a name="nullable-annotation-context"></a>可為 Null 註釋內容
 
 編譯器會在停用的可為 Null 註釋內容中使用下列規則：
 

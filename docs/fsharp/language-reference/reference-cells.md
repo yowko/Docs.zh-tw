@@ -1,17 +1,17 @@
 ---
 title: 參考儲存格
-description: 瞭解參考F#儲存格如何為儲存位置, 讓您使用參考語義建立可變值。
+description: 瞭解參考F#儲存格如何為儲存位置，讓您使用參考語義建立可變值。
 ms.date: 05/16/2016
-ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bca7797b272c0e7d5bf54df07041dc08e33709a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627245"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216777"
 ---
 # <a name="reference-cells"></a>參考儲存格
 
-*參考儲存格*是儲存位置, 可讓您使用參考語義建立可變值。
+*參考儲存格*是儲存位置，可讓您使用參考語義建立可變值。
 
 ## <a name="syntax"></a>語法
 
@@ -54,7 +54,7 @@ let ref x = { contents = x }
 |--------------------------|-----------|----|----------|
 |`!` (取值運算子)|傳回基礎值。|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=` (指派運算子)|變更基礎值。|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref`操作|將值封裝至新的參考儲存格。|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`ref` (運算子)|將值封裝至新的參考儲存格。|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value`property|取得或設定基礎值。|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (記錄欄位)|取得或設定基礎值。|`'a`|`let ref x = { contents = x }`|
 
@@ -66,7 +66,7 @@ let ref x = { contents = x }
 
 輸出如下。
 
-```
+```console
 10
 10
 11
@@ -75,9 +75,9 @@ let ref x = { contents = x }
 
 `contents` 欄位是針對與其他 ML 版本相容而提供，而且會在編譯期間產生警告。 若要停用這個警告，請使用 `--mlcompatibility` 編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。
 
-C#程式設計人員應該`ref`知道C#在中的不是相同`ref`的F#東西。 中F#的對等結構是[byref](byrefs.md), 這是與參考儲存格不同的概念。
+C#程式設計人員應該`ref`知道C#在中的不是相同`ref`的F#東西。 中F#的對等結構是[byref](byrefs.md)，這是與參考儲存格不同的概念。
 
-如果已關閉`mutable`, 則標示為的`'a ref`值可能會自動升級為, 請參閱[values](./values/index.md)。
+如果已關閉`mutable`，則標示為的`'a ref`值可能會自動升級為，請參閱[values](./values/index.md)。
 
 ## <a name="see-also"></a>另請參閱
 

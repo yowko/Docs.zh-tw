@@ -2,12 +2,12 @@
 title: 教學課程：建立型別提供者
 description: 藉由檢查數個簡單F#的類型提供F#者來說明基本概念，以瞭解如何在3.0 中建立您自己的類型提供者。
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991871"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214265"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教學課程：建立型別提供者
 
@@ -152,13 +152,13 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 
 若要使用 print 語句來進行這項提供者的偵錯工具，請建立會向提供者公開問題的腳本，然後使用下列程式碼：
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 若要使用 Visual Studio 來調試此提供者，請使用系統管理認證開啟 Visual Studio 的開發人員命令提示字元，然後執行下列命令：
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -899,7 +899,7 @@ let function1 () =
 
 以下是使用 ildasm 所產生之程式碼反向組譯的影像：
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ IL_0017:  ret
 
 **連接通訊協定的提供者**一般來說，資料和服務連線通訊協定（例如 OData 或 SQL 連接）的大部分提供者 dll 的名稱，都應該`TypeProvider`以`TypeProviders`或結尾。 例如，使用類似下列字串的 DLL 名稱：
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 請確定您提供的類型是對應命名空間的成員，並指出您所執行的連接通訊協定：
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1098,7 +1096,7 @@ type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/"
 
 所有提供的類型都應該可從非嵌套的類型連線。 在呼叫`TypeProviderForNamespaces`函式或`AddNamespace`呼叫時，會提供非嵌套的類型。 例如，如果提供者提供類型`StaticClass.P : T`，您必須確定 T 是非嵌套的類型，或在其底下嵌套。
 
-例如，某些提供者具有包含這些`DataTypes` `T1, T2, T3, ...`類型的靜態類別，例如。 否則，錯誤會指出已找到元件 A 中類型 T 的參考，但在該元件中找不到類型。 如果出現此錯誤，請確認您的所有子類型都可以從提供者類型中取得。 注意:這些`T1, T2, T3...`類型稱為 *「即時」類型。* 請記得將它們放在可存取的命名空間或父類型中。
+例如，某些提供者具有包含這些`DataTypes` `T1, T2, T3, ...`類型的靜態類別，例如。 否則，錯誤會指出已找到元件 A 中類型 T 的參考，但在該元件中找不到類型。 如果出現此錯誤，請確認您的所有子類型都可以從提供者類型中取得。 注意：這些`T1, T2, T3...`類型稱為 *「即時」類型。* 請記得將它們放在可存取的命名空間或父類型中。
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>型別提供者機制的限制
 
@@ -1128,8 +1126,8 @@ type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/"
 
 您通常可以在測試腳本檔案（例如 run.fsx）上使用 fsc，輕鬆地對型別提供者進行最簡單的偵錯工具。 您可以從命令提示字元啟動偵錯工具。
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   您可以使用列印到 stdout 記錄。

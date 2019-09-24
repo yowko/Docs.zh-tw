@@ -3,14 +3,14 @@ title: 歡迎使用 .NET
 description: 開始使用 .NET 系列的技術。
 author: mairaw
 ms.author: mairaw
-ms.date: 05/06/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0b4a2380bf2ddb59c181a07d7f8a006d6252d11f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855474"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216847"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -29,10 +29,10 @@ ms.locfileid: "70855474"
 
 此外，也請追蹤最新的 .NET 活動：
 
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
-- [Microsoft Build 2018](https://channel9.msdn.com/Events/Build/2018)
+- [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
-
+- [Microsoft Connect()](https://www.microsoft.com/connectevent)
+- 
 如需新增至 .NET 實作的最新功能與支援語言的相關資訊，請參閱以下文章：
 
 - [.NET Core 的新功能](core/whats-new/index.md)
@@ -52,8 +52,15 @@ ms.locfileid: "70855474"
 - [Visual Basic 指南](visual-basic/index.md)
 - [ML.NET 指南](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)
+- [.NET 應用程式架構](architecture/index.yml)
 
 此外，您可以瀏覽 [.NET API 參考](/dotnet/api)。
+
+## <a name="videos"></a>視訊
+
+探索 web、行動裝置、桌上型電腦、 C#機器學習服務、容器/Docker、資料存取等的影片：
+
+[.NET 101 影片系列](https://dotnet.microsoft.com/learn/videos)
 
 ## <a name="open-source"></a>開啟原始檔
 
