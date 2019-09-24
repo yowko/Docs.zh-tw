@@ -1,0 +1,31 @@
+- name: 適用於 ASP.NET Web Forms 的 Blazor 開發人員電子書
+  href: index.md
+  items:
+    - name: 簡介
+      href: introduction.md
+    - name: 架構比較
+      href: architecture-comparison.md
+    - name: 裝載模型
+      href: hosting-models.md
+    - name: 專案結構
+      href: project-structure.md
+    - name: 啟動
+      href: app-startup.md
+    - name: 元件
+      href: components.md
+    - name: 頁面、路由和版面配置
+      href: pages-routing-layouts.md
+    - name: 狀態管理
+      href: state-management.md
+    - name: 表單和驗證
+      href: forms-validation.md
+    - name: 處理資料
+      href: data.md
+    - name: 中介軟體
+      href: middleware.md
+    - name: 設定
+      href: config.md
+    - name: 安全性
+      href: security-authentication-authorization.md
+    - name: 移轉
+      href: migration.md

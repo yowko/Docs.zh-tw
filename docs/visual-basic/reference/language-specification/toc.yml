@@ -25,6 +25,8 @@
       href: ../../../../_vblang/spec/expressions.md
     - name: 文件註解
       href: ../../../../_vblang/spec/documentation-comments.md
+    - name: 多載解析
+      href: ../../../../_vblang/spec/overload-resolution.md
     - name: 文法
       items:
         - name: vb.html
