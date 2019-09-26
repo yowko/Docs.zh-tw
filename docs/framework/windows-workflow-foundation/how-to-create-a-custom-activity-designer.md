@@ -1,59 +1,59 @@
 ---
-title: 作法：建立自訂活動設計工具
+title: HOW TO：建立自訂活動設計工具
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 3c326508744f2aa2b34f5ee574cc9ec1e2863cf6
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170672"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306350"
 ---
-# <a name="how-to-create-a-custom-activity-designer"></a><span data-ttu-id="96d1a-102">HOW TO：建立自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="96d1a-102">How to: Create a Custom Activity Designer</span></span>
+# <a name="how-to-create-a-custom-activity-designer"></a><span data-ttu-id="c644b-102">HOW TO：建立自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="c644b-102">How to: Create a Custom Activity Designer</span></span>
 
-<span data-ttu-id="96d1a-103">通常實作自訂活動設計工具的方式，是讓其相關聯活動能夠透過其他活動組合，這些活動的設計工具能夠隨著活動放到設計介面上。</span><span class="sxs-lookup"><span data-stu-id="96d1a-103">Custom activity designers are typically implemented so that their associated activities are composable with other activities whose designers can be dropped on to the design surface with them.</span></span> <span data-ttu-id="96d1a-104">這項功能需要自訂活動設計工具提供的 「 卸除區 」 可以放置任意活動以及方法來管理設計介面上的項目所產生的集合。</span><span class="sxs-lookup"><span data-stu-id="96d1a-104">This functionality requires that a custom activity designer provide a "drop zone" where an arbitrary activity can be placed and also the means to manage the resulting collection of elements on the design surface.</span></span> <span data-ttu-id="96d1a-105">本主題說明如何建立包含這種卸除區的自訂活動設計工具，以及如何建立能夠提供管理設計工具項目集合所需之編輯功能的自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="96d1a-105">This topic describes how to create a custom activity designer that contains such a drop zone and how to create a custom activity designer that provides that editing functionality needed to manage the collection of designer elements.</span></span>
+<span data-ttu-id="c644b-103">通常實作自訂活動設計工具的方式，是讓其相關聯活動能夠透過其他活動組合，這些活動的設計工具能夠隨著活動放到設計介面上。</span><span class="sxs-lookup"><span data-stu-id="c644b-103">Custom activity designers are typically implemented so that their associated activities are composable with other activities whose designers can be dropped on to the design surface with them.</span></span> <span data-ttu-id="c644b-104">這項功能需要自訂活動設計工具提供可放置任意活動的「卸載區」，以及在設計介面上管理專案所產生之集合的方法。</span><span class="sxs-lookup"><span data-stu-id="c644b-104">This functionality requires that a custom activity designer provide a "drop zone" where an arbitrary activity can be placed and also the means to manage the resulting collection of elements on the design surface.</span></span> <span data-ttu-id="c644b-105">本主題說明如何建立包含這種卸除區的自訂活動設計工具，以及如何建立能夠提供管理設計工具項目集合所需之編輯功能的自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="c644b-105">This topic describes how to create a custom activity designer that contains such a drop zone and how to create a custom activity designer that provides that editing functionality needed to manage the collection of designer elements.</span></span>
 
-<span data-ttu-id="96d1a-106">自訂活動設計工具通常繼承自 <xref:System.Activities.Presentation.ActivityDesigner>，它是任何沒有特定設計工具之活動的預設基底活動設計工具型別。</span><span class="sxs-lookup"><span data-stu-id="96d1a-106">Custom activity designers typically inherit from <xref:System.Activities.Presentation.ActivityDesigner> which is the default base activity designer type for any activities without a specific designer.</span></span> <span data-ttu-id="96d1a-107">這個型別提供與屬性方格互動及設定管理色彩和圖示等基本層面等的設計階段經驗。</span><span class="sxs-lookup"><span data-stu-id="96d1a-107">This type provides the design-time experience of interacting with the property grid and configuring basic aspects such as managing colors and icons.</span></span>
+<span data-ttu-id="c644b-106">自訂活動設計工具通常繼承自 <xref:System.Activities.Presentation.ActivityDesigner>，它是任何沒有特定設計工具之活動的預設基底活動設計工具型別。</span><span class="sxs-lookup"><span data-stu-id="c644b-106">Custom activity designers typically inherit from <xref:System.Activities.Presentation.ActivityDesigner> which is the default base activity designer type for any activities without a specific designer.</span></span> <span data-ttu-id="c644b-107">這個型別提供與屬性方格互動及設定管理色彩和圖示等基本層面等的設計階段經驗。</span><span class="sxs-lookup"><span data-stu-id="c644b-107">This type provides the design-time experience of interacting with the property grid and configuring basic aspects such as managing colors and icons.</span></span>
 
-<span data-ttu-id="96d1a-108"><xref:System.Activities.Presentation.ActivityDesigner> 會使用兩項 Helper 控制項 (<xref:System.Activities.Presentation.WorkflowItemPresenter> 和 <xref:System.Activities.Presentation.WorkflowItemsPresenter>) 來簡化自訂活動設計工具的開發。</span><span class="sxs-lookup"><span data-stu-id="96d1a-108"><xref:System.Activities.Presentation.ActivityDesigner> uses two helper controls, <xref:System.Activities.Presentation.WorkflowItemPresenter> and <xref:System.Activities.Presentation.WorkflowItemsPresenter> to make it easier to develop custom activity designers.</span></span> <span data-ttu-id="96d1a-109">這些 Helper 能夠處理拖放子項目、刪除、選取及加入子項目之類的常見功能。</span><span class="sxs-lookup"><span data-stu-id="96d1a-109">They handle common functionality like dragging and dropping of child elements, deletion, selection, and addition of those child elements.</span></span> <span data-ttu-id="96d1a-110"><xref:System.Activities.Presentation.WorkflowItemPresenter>允許單一子 UI 項目內，提供 「 卸除區 」，而<xref:System.Activities.Presentation.WorkflowItemsPresenter>可支援多個 UI 項目，包括額外的功能，例如排序、 移動、 刪除和加入子項目。</span><span class="sxs-lookup"><span data-stu-id="96d1a-110">The <xref:System.Activities.Presentation.WorkflowItemPresenter> allows a single child UI element inside, providing the "drop zone", it while the <xref:System.Activities.Presentation.WorkflowItemsPresenter> can provide support multiple UI elements, including additional functionality like the ordering, moving, deleting, and adding of child elements.</span></span>
+<span data-ttu-id="c644b-108"><xref:System.Activities.Presentation.ActivityDesigner> 會使用兩項 Helper 控制項 (<xref:System.Activities.Presentation.WorkflowItemPresenter> 和 <xref:System.Activities.Presentation.WorkflowItemsPresenter>) 來簡化自訂活動設計工具的開發。</span><span class="sxs-lookup"><span data-stu-id="c644b-108"><xref:System.Activities.Presentation.ActivityDesigner> uses two helper controls, <xref:System.Activities.Presentation.WorkflowItemPresenter> and <xref:System.Activities.Presentation.WorkflowItemsPresenter> to make it easier to develop custom activity designers.</span></span> <span data-ttu-id="c644b-109">這些 Helper 能夠處理拖放子項目、刪除、選取及加入子項目之類的常見功能。</span><span class="sxs-lookup"><span data-stu-id="c644b-109">They handle common functionality like dragging and dropping of child elements, deletion, selection, and addition of those child elements.</span></span> <span data-ttu-id="c644b-110">允許內的單一子 UI 專案（提供「卸載區」）， <xref:System.Activities.Presentation.WorkflowItemsPresenter>而可提供支援多個 UI 元素，包括排序、移動、刪除和加入子專案等其他功能。 <xref:System.Activities.Presentation.WorkflowItemPresenter></span><span class="sxs-lookup"><span data-stu-id="c644b-110">The <xref:System.Activities.Presentation.WorkflowItemPresenter> allows a single child UI element inside, providing the "drop zone", it while the <xref:System.Activities.Presentation.WorkflowItemsPresenter> can provide support multiple UI elements, including additional functionality like the ordering, moving, deleting, and adding of child elements.</span></span>
 
-<span data-ttu-id="96d1a-111">劇本所需的自訂活動設計工具的實作中反白顯示的其他重要的部分是有關在其中將視覺化編輯繫結使用 WPF 資料繫結到我們要編輯設計工具中的記憶體內儲存的執行個體的方式。</span><span class="sxs-lookup"><span data-stu-id="96d1a-111">The other key part of the story that needs highlighting in the implementation of a custom activity designer concerns the way in which the visual edits are bound using WPF data binding to the instance stored in memory of what we are editing in the designer.</span></span> <span data-ttu-id="96d1a-112">這項操作可透過模型項目樹狀完成，該樹狀也負責進行變更通知，以及追蹤如狀態變更這類事件。</span><span class="sxs-lookup"><span data-stu-id="96d1a-112">This is accomplished by the Model Item tree, which is also responsible for enabling change notification and the tracking of events like changes in states.</span></span>
+<span data-ttu-id="c644b-111">在自訂活動設計工具的執行中，需要反白顯示的另一個重要部分，就是使用 WPF 資料系結，將視覺編輯系結至儲存在設計工具中所編輯之記憶體的實例。</span><span class="sxs-lookup"><span data-stu-id="c644b-111">The other key part of the story that needs highlighting in the implementation of a custom activity designer concerns the way in which the visual edits are bound using WPF data binding to the instance stored in memory of what we are editing in the designer.</span></span> <span data-ttu-id="c644b-112">這項操作可透過模型項目樹狀完成，該樹狀也負責進行變更通知，以及追蹤如狀態變更這類事件。</span><span class="sxs-lookup"><span data-stu-id="c644b-112">This is accomplished by the Model Item tree, which is also responsible for enabling change notification and the tracking of events like changes in states.</span></span>
 
-<span data-ttu-id="96d1a-113">本主題將說明兩種程序。</span><span class="sxs-lookup"><span data-stu-id="96d1a-113">This topic outlines two procedures.</span></span>
+<span data-ttu-id="c644b-113">本主題將說明兩種程序。</span><span class="sxs-lookup"><span data-stu-id="c644b-113">This topic outlines two procedures.</span></span>
 
-1. <span data-ttu-id="96d1a-114">第一種程序描述如何使用提供接收其他活動之卸除區的 <xref:System.Activities.Presentation.WorkflowItemPresenter> 建立自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="96d1a-114">The first procedure describes how to create a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter> that provides the drop zone that receives other activities.</span></span> <span data-ttu-id="96d1a-115">此程序為基礎[自訂複合設計工具-工作流程項目展示器](./samples/custom-composite-designers-workflow-item-presenter.md)範例。</span><span class="sxs-lookup"><span data-stu-id="96d1a-115">This procedure is based on the [Custom Composite Designers - Workflow Item Presenter](./samples/custom-composite-designers-workflow-item-presenter.md) sample.</span></span>
+1. <span data-ttu-id="c644b-114">第一種程序描述如何使用提供接收其他活動之卸除區的 <xref:System.Activities.Presentation.WorkflowItemPresenter> 建立自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="c644b-114">The first procedure describes how to create a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter> that provides the drop zone that receives other activities.</span></span> <span data-ttu-id="c644b-115">此程式是以[自訂複合設計工具-工作流程專案展示者](./samples/custom-composite-designers-workflow-item-presenter.md)範例為基礎。</span><span class="sxs-lookup"><span data-stu-id="c644b-115">This procedure is based on the [Custom Composite Designers - Workflow Item Presenter](./samples/custom-composite-designers-workflow-item-presenter.md) sample.</span></span>
 
-2. <span data-ttu-id="96d1a-116">第二種程序描述如何使用提供編輯所包含項目集合時需要之功能的 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 建立自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="96d1a-116">The second procedure describes how to create a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter> that provides the functionality needed to edit of a collection of contained elements.</span></span> <span data-ttu-id="96d1a-117">此程序為基礎[自訂複合設計工具-工作流程項目展示器](./samples/custom-composite-designers-workflow-items-presenter.md)範例。</span><span class="sxs-lookup"><span data-stu-id="96d1a-117">This procedure is based on the [Custom Composite Designers - Workflow Items Presenter](./samples/custom-composite-designers-workflow-items-presenter.md) sample.</span></span>
+2. <span data-ttu-id="c644b-116">第二種程序描述如何使用提供編輯所包含項目集合時需要之功能的 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 建立自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="c644b-116">The second procedure describes how to create a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter> that provides the functionality needed to edit of a collection of contained elements.</span></span> <span data-ttu-id="c644b-117">此程式是以[自訂複合設計工具-工作流程專案展示者](./samples/custom-composite-designers-workflow-items-presenter.md)範例為基礎。</span><span class="sxs-lookup"><span data-stu-id="c644b-117">This procedure is based on the [Custom Composite Designers - Workflow Items Presenter](./samples/custom-composite-designers-workflow-items-presenter.md) sample.</span></span>
 
-## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a><span data-ttu-id="96d1a-118">若要使用 WorkflowItemPresenter 建立含有卸除區的自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="96d1a-118">To create a custom activity designer with a drop zone using WorkflowItemPresenter</span></span>
+## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a><span data-ttu-id="c644b-118">若要使用 WorkflowItemPresenter 建立含有卸除區的自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="c644b-118">To create a custom activity designer with a drop zone using WorkflowItemPresenter</span></span>
 
-1. <span data-ttu-id="96d1a-119">啟動 Visual Studio 2010。</span><span class="sxs-lookup"><span data-stu-id="96d1a-119">Start Visual Studio 2010.</span></span>
+1. <span data-ttu-id="c644b-119">啟動 Visual Studio 2010。</span><span class="sxs-lookup"><span data-stu-id="c644b-119">Start Visual Studio 2010.</span></span>
 
-2. <span data-ttu-id="96d1a-120">在 **檔案**功能表上，指向**新增**，然後選取 **專案...** .</span><span class="sxs-lookup"><span data-stu-id="96d1a-120">On the **File** menu, point to **New**, and then select **Project…**.</span></span>
+2. <span data-ttu-id="c644b-120">**在 [檔案**] 功能表上，指向 [**新增**]，然後選取 [**專案**]。</span><span class="sxs-lookup"><span data-stu-id="c644b-120">On the **File** menu, point to **New**, and then select **Project…**.</span></span>
 
-     <span data-ttu-id="96d1a-121">[ **新增專案** ] 對話方塊隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="96d1a-121">The **New Project** dialog box opens.</span></span>
+     <span data-ttu-id="c644b-121">[ **新增專案** ] 對話方塊隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="c644b-121">The **New Project** dialog box opens.</span></span>
 
-3. <span data-ttu-id="96d1a-122">在 **已安裝的範本**窗格中，選取**Windows**從您慣用的語言的類別。</span><span class="sxs-lookup"><span data-stu-id="96d1a-122">In the **Installed Templates** pane, select **Windows** from your preferred language category.</span></span>
+3. <span data-ttu-id="c644b-122">在 [**已安裝的範本**] 窗格中，從您慣用的語言類別中選取 [ **Windows** ]。</span><span class="sxs-lookup"><span data-stu-id="c644b-122">In the **Installed Templates** pane, select **Windows** from your preferred language category.</span></span>
 
-4. <span data-ttu-id="96d1a-123">在 **範本**窗格中，選取**WPF 應用程式**。</span><span class="sxs-lookup"><span data-stu-id="96d1a-123">In the **Templates** pane, select **WPF Application**.</span></span>
+4. <span data-ttu-id="c644b-123">在 [**範本**] 窗格中，選取 [ **WPF 應用程式**]。</span><span class="sxs-lookup"><span data-stu-id="c644b-123">In the **Templates** pane, select **WPF Application**.</span></span>
 
-5. <span data-ttu-id="96d1a-124">在 **名稱**方塊中，輸入`UsingWorkflowItemPresenter`。</span><span class="sxs-lookup"><span data-stu-id="96d1a-124">In the **Name** box, enter `UsingWorkflowItemPresenter`.</span></span>
+5. <span data-ttu-id="c644b-124">在 [**名稱**] 方塊中`UsingWorkflowItemPresenter`，輸入。</span><span class="sxs-lookup"><span data-stu-id="c644b-124">In the **Name** box, enter `UsingWorkflowItemPresenter`.</span></span>
 
-6. <span data-ttu-id="96d1a-125">在 **位置**方塊中，輸入您要儲存您的專案，或按一下 的目錄**瀏覽**來巡覽找到它。</span><span class="sxs-lookup"><span data-stu-id="96d1a-125">In the **Location** box, enter the directory in which you want to save your project, or click **Browse** to navigate to it.</span></span>
+6. <span data-ttu-id="c644b-125">在 [**位置**] 方塊中，輸入您要儲存專案的目錄，或按一下 **[流覽]** 以流覽至它。</span><span class="sxs-lookup"><span data-stu-id="c644b-125">In the **Location** box, enter the directory in which you want to save your project, or click **Browse** to navigate to it.</span></span>
 
-7. <span data-ttu-id="96d1a-126">在 **解決方案**方塊中，接受預設值。</span><span class="sxs-lookup"><span data-stu-id="96d1a-126">In the **Solution** box, accept the default value.</span></span>
+7. <span data-ttu-id="c644b-126">在 [**方案**] 方塊中，接受預設值。</span><span class="sxs-lookup"><span data-stu-id="c644b-126">In the **Solution** box, accept the default value.</span></span>
 
-8. <span data-ttu-id="96d1a-127">按一下 [確定]  。</span><span class="sxs-lookup"><span data-stu-id="96d1a-127">Click **OK**.</span></span>
+8. <span data-ttu-id="c644b-127">按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="c644b-127">Click **OK**.</span></span>
 
-9. <span data-ttu-id="96d1a-128">以滑鼠右鍵按一下 [MainWindows.xaml 檔案中的**方案總管**，選取**刪除**並確認 **[確定]** 中**Microsoft Visual Studio**] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="96d1a-128">Right-click the MainWindows.xaml file in the **Solution Explorer**, select **Delete** and confirm **OK** in the **Microsoft Visual Studio** dialogue box.</span></span>
+9. <span data-ttu-id="c644b-128">以滑鼠右鍵按一下**方案總管**中的*mainwindows.xaml* ，在 [ **Microsoft Visual Studio** ] 對話方塊中選取 [**刪除**]，然後確認 **[確定]** 。</span><span class="sxs-lookup"><span data-stu-id="c644b-128">Right-click the *MainWindows.xaml* file in the **Solution Explorer**, select **Delete** and confirm **OK** in the **Microsoft Visual Studio** dialog box.</span></span>
 
-10. <span data-ttu-id="96d1a-129">以滑鼠右鍵按一下 UsingWorkflowItemPresenter 專案中的**方案總管**，選取**新增**，然後**新項目...**</span><span class="sxs-lookup"><span data-stu-id="96d1a-129">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="96d1a-130">若要啟動**加入新項目** 對話方塊中，然後選取**WPF**從類別目錄**已安裝的範本**左側的區段。</span><span class="sxs-lookup"><span data-stu-id="96d1a-130">to bring up the **Add New Item** dialogue and select the **WPF** category from the **Installed Templates** section on the left.</span></span>
+10. <span data-ttu-id="c644b-129">以滑鼠右鍵按一下**方案總管**中的 UsingWorkflowItemPresenter 專案，然後依序選取 [**加入**] 和 [**新增專案**]。</span><span class="sxs-lookup"><span data-stu-id="c644b-129">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="c644b-130">以顯示 [**新增專案**] 對話方塊，然後從左側的 [**已安裝的範本**] 區段中選取 [ **WPF** ] 分類。</span><span class="sxs-lookup"><span data-stu-id="c644b-130">to bring up the **Add New Item** dialog and select the **WPF** category from the **Installed Templates** section on the left.</span></span>
 
-11. <span data-ttu-id="96d1a-131">選取**視窗 (WPF)** 範本，其命名`RehostingWFDesigner`，然後按一下**新增**。</span><span class="sxs-lookup"><span data-stu-id="96d1a-131">Select the  **Window (WPF)** template, name it `RehostingWFDesigner`, and click **Add**.</span></span>
+11. <span data-ttu-id="c644b-131">選取**視窗（WPF）** 範本，將它`RehostingWFDesigner`命名為，然後按一下 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="c644b-131">Select the  **Window (WPF)** template, name it `RehostingWFDesigner`, and click **Add**.</span></span>
 
-12. <span data-ttu-id="96d1a-132">開啟 RehostingWFDesigner.xaml 檔案，將下面的程式碼貼入其中，以定義應用程式的 UI。</span><span class="sxs-lookup"><span data-stu-id="96d1a-132">Open the RehostingWFDesigner.xaml file and paste the following code into it to define the UI for the application.</span></span>
+12. <span data-ttu-id="c644b-132">開啟*rehostingwfdesigner.xaml* ，並將下列程式碼貼入其中，以定義應用程式的 UI：</span><span class="sxs-lookup"><span data-stu-id="c644b-132">Open the *RehostingWFDesigner.xaml* file and paste the following code into it to define the UI for the application:</span></span>
 
-    ```xml
+    ```xaml
     <Window x:Class=" UsingWorkflowItemPresenter.RehostingWFDesigner"
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -104,7 +104,7 @@ ms.locfileid: "67170672"
     </Window>
     ```
 
-13. <span data-ttu-id="96d1a-133">若要關聯活動設計工具與活動型別，您必須在中繼資料存放區中註冊該活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="96d1a-133">To associate an activity designer with an activity type, you must register that activity designer with the metadata store.</span></span> <span data-ttu-id="96d1a-134">若要執行這項操作，請將 `RegisterMetadata` 方法加入至 `RehostingWFDesigner` 類別。</span><span class="sxs-lookup"><span data-stu-id="96d1a-134">To do this, add the `RegisterMetadata` method to the `RehostingWFDesigner` class.</span></span> <span data-ttu-id="96d1a-135">在 `RegisterMetadata` 方法的範圍內，建立 <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> 物件，然後呼叫 <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> 方法以便加入屬性。</span><span class="sxs-lookup"><span data-stu-id="96d1a-135">Within the scope of the  `RegisterMetadata` method, create an <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> object and call the <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> method to add the attributes to it.</span></span> <span data-ttu-id="96d1a-136">呼叫 <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> 方法，將 <xref:System.Activities.Presentation.Metadata.AttributeTable> 加入至中繼資料存放區。</span><span class="sxs-lookup"><span data-stu-id="96d1a-136">Call the <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> method to add the <xref:System.Activities.Presentation.Metadata.AttributeTable> to the metadata store.</span></span> <span data-ttu-id="96d1a-137">下列程式碼包含設計工具的重新裝載邏輯。</span><span class="sxs-lookup"><span data-stu-id="96d1a-137">The following code contains the rehosting logic for the designer.</span></span> <span data-ttu-id="96d1a-138">它會註冊中繼資料，將 `SimpleNativeActivity` 放入工具箱，然後建立工作流程。</span><span class="sxs-lookup"><span data-stu-id="96d1a-138">It registers the metadata, puts the `SimpleNativeActivity` into the toolbox, and creates the workflow.</span></span> <span data-ttu-id="96d1a-139">將這個程式碼放入 RehostingWFDesigner.xaml.cs 檔案中。</span><span class="sxs-lookup"><span data-stu-id="96d1a-139">Put this code into the RehostingWFDesigner.xaml.cs file.</span></span>
+13. <span data-ttu-id="c644b-133">若要關聯活動設計工具與活動型別，您必須在中繼資料存放區中註冊該活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="c644b-133">To associate an activity designer with an activity type, you must register that activity designer with the metadata store.</span></span> <span data-ttu-id="c644b-134">若要執行這項操作，請將 `RegisterMetadata` 方法加入至 `RehostingWFDesigner` 類別。</span><span class="sxs-lookup"><span data-stu-id="c644b-134">To do this, add the `RegisterMetadata` method to the `RehostingWFDesigner` class.</span></span> <span data-ttu-id="c644b-135">在 `RegisterMetadata` 方法的範圍內，建立 <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> 物件，然後呼叫 <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> 方法以便加入屬性。</span><span class="sxs-lookup"><span data-stu-id="c644b-135">Within the scope of the  `RegisterMetadata` method, create an <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> object and call the <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> method to add the attributes to it.</span></span> <span data-ttu-id="c644b-136">呼叫 <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> 方法，將 <xref:System.Activities.Presentation.Metadata.AttributeTable> 加入至中繼資料存放區。</span><span class="sxs-lookup"><span data-stu-id="c644b-136">Call the <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> method to add the <xref:System.Activities.Presentation.Metadata.AttributeTable> to the metadata store.</span></span> <span data-ttu-id="c644b-137">下列程式碼包含設計工具的重新裝載邏輯。</span><span class="sxs-lookup"><span data-stu-id="c644b-137">The following code contains the rehosting logic for the designer.</span></span> <span data-ttu-id="c644b-138">它會註冊中繼資料，將 `SimpleNativeActivity` 放入工具箱，然後建立工作流程。</span><span class="sxs-lookup"><span data-stu-id="c644b-138">It registers the metadata, puts the `SimpleNativeActivity` into the toolbox, and creates the workflow.</span></span> <span data-ttu-id="c644b-139">將此程式碼放入*RehostingWFDesigner.xaml.cs*檔案中。</span><span class="sxs-lookup"><span data-stu-id="c644b-139">Put this code into the *RehostingWFDesigner.xaml.cs* file.</span></span>
 
     ```csharp
     using System;
@@ -129,15 +129,15 @@ ms.locfileid: "67170672"
             protected override void OnInitialized(EventArgs e)
             {
                 base.OnInitialized(e);
-                // register metadata
+                // Register metadata.
                 (new DesignerMetadata()).Register();
                 RegisterCustomMetadata();
-                // add custom activity to toolbox
+                // Add custom activity to toolbox.
                 Toolbox.Categories.Add(new ToolboxCategory("Custom activities"));
                 Toolbox.Categories[1].Add(new ToolboxItemWrapper(typeof(SimpleNativeActivity)));
 
-                // create the workflow designer
-                WorkflowDesigner wd = new WorkflowDesigner();
+                // Create the workflow designer.
+                var wd = new WorkflowDesigner();
                 wd.Load(new Sequence());
                 DesignerBorder.Child = wd.View;
                 PropertyBorder.Child = wd.PropertyInspectorView;
@@ -146,7 +146,7 @@ ms.locfileid: "67170672"
 
             void RegisterCustomMetadata()
             {
-                AttributeTableBuilder builder = new AttributeTableBuilder();
+                var builder = new AttributeTableBuilder();
                 builder.AddCustomAttributes(typeof(SimpleNativeActivity), new DesignerAttribute(typeof(SimpleNativeDesigner)));
                 MetadataStore.AddAttributeTable(builder.CreateTable());
             }
@@ -154,30 +154,30 @@ ms.locfileid: "67170672"
     }
     ```
 
-14. <span data-ttu-id="96d1a-140">以滑鼠右鍵按一下方案總管 中的 參考 目錄，然後選取**加入參考...**</span><span class="sxs-lookup"><span data-stu-id="96d1a-140">Right-click the References directory in Solution Explorer and select **Add Reference …**</span></span> <span data-ttu-id="96d1a-141">若要啟動**加入參考** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="96d1a-141">to bring up the **Add Reference** dialogue.</span></span>
+14. <span data-ttu-id="c644b-140">以滑鼠右鍵按一下方案總管中的 [參考] 目錄，然後選取 [**新增參考 ...** ]。</span><span class="sxs-lookup"><span data-stu-id="c644b-140">Right-click the References directory in Solution Explorer and select **Add Reference …**</span></span> <span data-ttu-id="c644b-141">以顯示 [**加入參考**] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="c644b-141">to bring up the **Add Reference** dialog.</span></span>
 
-15. <span data-ttu-id="96d1a-142">按一下  **.NET**索引標籤上，尋找名為組件**System.Activities.Core.Presentation**、 選取它，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="96d1a-142">Click the **.NET** tab, locate the assembly named **System.Activities.Core.Presentation**, select it and click **OK**.</span></span>
+15. <span data-ttu-id="c644b-142">按一下 [ **.net** ] 索引標籤，找出名為 [System.string **. Presentation**] 的元件，選取它並按一下 **[確定]** 。</span><span class="sxs-lookup"><span data-stu-id="c644b-142">Click the **.NET** tab, locate the assembly named **System.Activities.Core.Presentation**, select it and click **OK**.</span></span>
 
-16. <span data-ttu-id="96d1a-143">使用相同的程序將參考加入至下列組件：</span><span class="sxs-lookup"><span data-stu-id="96d1a-143">Using the same procedure, add references to the following assemblies:</span></span>
+16. <span data-ttu-id="c644b-143">使用相同的程序將參考加入至下列組件：</span><span class="sxs-lookup"><span data-stu-id="c644b-143">Using the same procedure, add references to the following assemblies:</span></span>
 
-    1. <span data-ttu-id="96d1a-144">System.Data.DataSetExtensions.dll</span><span class="sxs-lookup"><span data-stu-id="96d1a-144">System.Data.DataSetExtensions.dll</span></span>
+    1. <span data-ttu-id="c644b-144">System.Data.DataSetExtensions.dll</span><span class="sxs-lookup"><span data-stu-id="c644b-144">System.Data.DataSetExtensions.dll</span></span>
 
-    2. <span data-ttu-id="96d1a-145">System.Activities.Presentation.dll</span><span class="sxs-lookup"><span data-stu-id="96d1a-145">System.Activities.Presentation.dll</span></span>
+    2. <span data-ttu-id="c644b-145">System.Activities.Presentation.dll</span><span class="sxs-lookup"><span data-stu-id="c644b-145">System.Activities.Presentation.dll</span></span>
 
-    3. <span data-ttu-id="96d1a-146">System.ServiceModel.Activities.dll</span><span class="sxs-lookup"><span data-stu-id="96d1a-146">System.ServiceModel.Activities.dll</span></span>
+    3. <span data-ttu-id="c644b-146">System.ServiceModel.Activities.dll</span><span class="sxs-lookup"><span data-stu-id="c644b-146">System.ServiceModel.Activities.dll</span></span>
 
-17. <span data-ttu-id="96d1a-147">開啟 App.xaml 檔案，並將 StartUpUri 的值變更為"RehostingWFDesigner.xaml"。</span><span class="sxs-lookup"><span data-stu-id="96d1a-147">Open the App.xaml file and change the value of the StartUpUri to "RehostingWFDesigner.xaml".</span></span>
+17. <span data-ttu-id="c644b-147">開啟*app.xaml*檔案，然後將 StartUpUri 的值變更為 "rehostingwfdesigner.xaml"。</span><span class="sxs-lookup"><span data-stu-id="c644b-147">Open the *App.xaml* file and change the value of the StartUpUri to "RehostingWFDesigner.xaml".</span></span>
 
-18. <span data-ttu-id="96d1a-148">以滑鼠右鍵按一下 UsingWorkflowItemPresenter 專案中的**方案總管**，選取**新增**，然後**新項目...**</span><span class="sxs-lookup"><span data-stu-id="96d1a-148">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="96d1a-149">若要啟動**加入新項目** 對話方塊中，然後選取**工作流程**類別目錄表單**已安裝的範本**左側的區段。</span><span class="sxs-lookup"><span data-stu-id="96d1a-149">to bring up the **Add New Item** dialogue and select the **Workflow** category form the **Installed Templates** section on the left.</span></span>
+18. <span data-ttu-id="c644b-148">以滑鼠右鍵按一下**方案總管**中的 UsingWorkflowItemPresenter 專案，然後依序選取 [**加入**] 和 [**新增專案**]。</span><span class="sxs-lookup"><span data-stu-id="c644b-148">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="c644b-149">若要顯示 [**新增專案**] 對話方塊，並選取左側的 [**已安裝的範本**] 區段中的 [**工作流程**] 類別。</span><span class="sxs-lookup"><span data-stu-id="c644b-149">to bring up the **Add New Item** dialog and select the **Workflow** category form the **Installed Templates** section on the left.</span></span>
 
-19. <span data-ttu-id="96d1a-150">選取**活動設計工具**範本，其命名`SimpleNativeDesigner`，然後按一下**新增**。</span><span class="sxs-lookup"><span data-stu-id="96d1a-150">Select the **Activity Designer** template, name it `SimpleNativeDesigner`, and click **Add**.</span></span>
+19. <span data-ttu-id="c644b-150">選取 [**活動設計**工具] 範本， `SimpleNativeDesigner`將它命名為，然後按一下 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="c644b-150">Select the **Activity Designer** template, name it `SimpleNativeDesigner`, and click **Add**.</span></span>
 
-20. <span data-ttu-id="96d1a-151">開啟 [SimpleNativeDesigner.xaml] 檔案，並將下列程式碼貼入其中。</span><span class="sxs-lookup"><span data-stu-id="96d1a-151">Open the SimpleNativeDesigner.xaml file and paste the following code into it.</span></span> <span data-ttu-id="96d1a-152">請注意，這個程式碼會使用 <xref:System.Activities.Presentation.ActivityDesigner> 做為根項目，並且示範如何使用繫結將 <xref:System.Activities.Presentation.WorkflowItemPresenter> 整合至設計工具中，以便在複合活動設計工具中顯示子型別。</span><span class="sxs-lookup"><span data-stu-id="96d1a-152">Note this code uses <xref:System.Activities.Presentation.ActivityDesigner> as your root element and shows how binding is used to integrate <xref:System.Activities.Presentation.WorkflowItemPresenter> into your designer so a child type can be displayed in your composite activity designer.</span></span>
+20. <span data-ttu-id="c644b-151">開啟*SimpleNativeDesigner* ，並將下列程式碼貼入其中。</span><span class="sxs-lookup"><span data-stu-id="c644b-151">Open the *SimpleNativeDesigner.xaml* file and paste the following code into it.</span></span> <span data-ttu-id="c644b-152">請注意，這個程式碼會使用 <xref:System.Activities.Presentation.ActivityDesigner> 做為根項目，並且示範如何使用繫結將 <xref:System.Activities.Presentation.WorkflowItemPresenter> 整合至設計工具中，以便在複合活動設計工具中顯示子型別。</span><span class="sxs-lookup"><span data-stu-id="c644b-152">Note this code uses <xref:System.Activities.Presentation.ActivityDesigner> as your root element and shows how binding is used to integrate <xref:System.Activities.Presentation.WorkflowItemPresenter> into your designer so a child type can be displayed in your composite activity designer.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="96d1a-153"><xref:System.Activities.Presentation.ActivityDesigner> 的結構描述允許只將一個子項目加入自訂活動設計工具定義中，不過，這個項目可以是 `StackPanel`、`Grid`，也可以是其他複合 UI 項目。</span><span class="sxs-lookup"><span data-stu-id="96d1a-153">The schema for <xref:System.Activities.Presentation.ActivityDesigner> allows the addition of only one child element to your custom activity designer definition; however, this element could be a `StackPanel`, `Grid`, or some other composite UI element.</span></span>
+    > <span data-ttu-id="c644b-153"><xref:System.Activities.Presentation.ActivityDesigner> 的結構描述允許只將一個子項目加入自訂活動設計工具定義中，不過，這個項目可以是 `StackPanel`、`Grid`，也可以是其他複合 UI 項目。</span><span class="sxs-lookup"><span data-stu-id="c644b-153">The schema for <xref:System.Activities.Presentation.ActivityDesigner> allows the addition of only one child element to your custom activity designer definition; however, this element could be a `StackPanel`, `Grid`, or some other composite UI element.</span></span>
 
-    ```xml
+    ```xaml
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemPresenter.SimpleNativeDesigner"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -211,11 +211,11 @@ ms.locfileid: "67170672"
     </sap:ActivityDesigner>
     ```
 
-21. <span data-ttu-id="96d1a-154">以滑鼠右鍵按一下 UsingWorkflowItemPresenter 專案中的**方案總管**，選取**新增**，然後**新項目...**</span><span class="sxs-lookup"><span data-stu-id="96d1a-154">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="96d1a-155">若要啟動**加入新項目** 對話方塊中，然後選取**工作流程**類別目錄表單**已安裝的範本**左側的區段。</span><span class="sxs-lookup"><span data-stu-id="96d1a-155">to bring up the **Add New Item** dialogue and select the **Workflow** category form the **Installed Templates** section on the left.</span></span>
+21. <span data-ttu-id="c644b-154">以滑鼠右鍵按一下**方案總管**中的 UsingWorkflowItemPresenter 專案，然後依序選取 [**加入**] 和 [**新增專案**]。</span><span class="sxs-lookup"><span data-stu-id="c644b-154">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="c644b-155">若要顯示 [**新增專案**] 對話方塊，並選取左側的 [**已安裝的範本**] 區段中的 [**工作流程**] 類別。</span><span class="sxs-lookup"><span data-stu-id="c644b-155">to bring up the **Add New Item** dialog and select the **Workflow** category form the **Installed Templates** section on the left.</span></span>
 
-22. <span data-ttu-id="96d1a-156">選取**程式碼活動**範本，其命名`SimpleNativeActivity`，然後按一下**新增**。</span><span class="sxs-lookup"><span data-stu-id="96d1a-156">Select the  **Code Activity** template, name it `SimpleNativeActivity`, and click **Add**.</span></span>
+22. <span data-ttu-id="c644b-156">選取 [ **Code] 活動**範本，將`SimpleNativeActivity`它命名為，然後按一下 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="c644b-156">Select the  **Code Activity** template, name it `SimpleNativeActivity`, and click **Add**.</span></span>
 
-23. <span data-ttu-id="96d1a-157">將下列程式碼輸入 SimpleNativeActivity.cs 檔案中，以實作 `SimpleNativeActivity` 類別。</span><span class="sxs-lookup"><span data-stu-id="96d1a-157">Implement the `SimpleNativeActivity` class by entering the following code into the SimpleNativeActivity.cs file.</span></span>
+23. <span data-ttu-id="c644b-157">在*SimpleNativeActivity.cs*檔案中輸入下列程式碼，以執行類別：`SimpleNativeActivity`</span><span class="sxs-lookup"><span data-stu-id="c644b-157">Implement the `SimpleNativeActivity` class by entering the following code into the *SimpleNativeActivity.cs* file:</span></span>
 
     ```csharp
     using System.Activities;
@@ -244,17 +244,17 @@ ms.locfileid: "67170672"
     }
     ```
 
-24. <span data-ttu-id="96d1a-158">選取 **建置方案**從**建置**功能表。</span><span class="sxs-lookup"><span data-stu-id="96d1a-158">Select **Build Solution** from the **Build** menu.</span></span>
+24. <span data-ttu-id="c644b-158">從 [**建立**] 功能表中選取 [**建立方案**]。</span><span class="sxs-lookup"><span data-stu-id="c644b-158">Select **Build Solution** from the **Build** menu.</span></span>
 
-25. <span data-ttu-id="96d1a-159">選取 **啟動但不偵錯**從**偵錯**功能表開啟重新裝載的自訂設計視窗中。</span><span class="sxs-lookup"><span data-stu-id="96d1a-159">Select **Start Without Debugging** from the **Debug** menu to open the rehosted custom design window.</span></span>
+25. <span data-ttu-id="c644b-159">從 [**調試**] 功能表中選取 [**啟動但不進行調試**]，以開啟 [重新裝載自訂設計] 視窗。</span><span class="sxs-lookup"><span data-stu-id="c644b-159">Select **Start Without Debugging** from the **Debug** menu to open the rehosted custom design window.</span></span>
 
-### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a><span data-ttu-id="96d1a-160">若要使用 WorkflowItemsPresenter 建立自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="96d1a-160">To create a custom activity designer using WorkflowItemsPresenter</span></span>
+### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a><span data-ttu-id="c644b-160">若要使用 WorkflowItemsPresenter 建立自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="c644b-160">To create a custom activity designer using WorkflowItemsPresenter</span></span>
 
-1. <span data-ttu-id="96d1a-161">第二個自訂活動設計工具的程序會稍微修改，其中第一個第一種是將第二個應用程式命名 parallels `UsingWorkflowItemsPresenter`。</span><span class="sxs-lookup"><span data-stu-id="96d1a-161">The procedure for the second custom activity designer is the parallels the first with a few modifications, the first of which is to name the second application `UsingWorkflowItemsPresenter`.</span></span> <span data-ttu-id="96d1a-162">此外，這個應用程式不會定義新的自訂活動。</span><span class="sxs-lookup"><span data-stu-id="96d1a-162">Also this application does not define a new custom activity.</span></span>
+1. <span data-ttu-id="c644b-161">第二個自訂活動設計工具的程式是第一個只有一些修改，第一個則是為第二個應用程式`UsingWorkflowItemsPresenter`命名。</span><span class="sxs-lookup"><span data-stu-id="c644b-161">The procedure for the second custom activity designer is the parallels the first with a few modifications, the first of which is to name the second application `UsingWorkflowItemsPresenter`.</span></span> <span data-ttu-id="c644b-162">此外，這個應用程式不會定義新的自訂活動。</span><span class="sxs-lookup"><span data-stu-id="c644b-162">Also this application does not define a new custom activity.</span></span>
 
-2. <span data-ttu-id="96d1a-163">主要的差異包含在 CustomParallelDesigner.xaml 和 RehostingWFDesigner.xaml.cs 檔案中。</span><span class="sxs-lookup"><span data-stu-id="96d1a-163">Key differences are contained in the CustomParallelDesigner.xaml and RehostingWFDesigner.xaml.cs files.</span></span> <span data-ttu-id="96d1a-164">以下是從 CustomParallelDesigner.xaml 檔案中定義 UI 的程式碼。</span><span class="sxs-lookup"><span data-stu-id="96d1a-164">Here is the code from the CustomParallelDesigner.xaml file that defines the UI.</span></span>
+2. <span data-ttu-id="c644b-163">主要差異包含在*CustomParallelDesigner*和*RehostingWFDesigner.xaml.cs*檔案中。</span><span class="sxs-lookup"><span data-stu-id="c644b-163">Key differences are contained in the *CustomParallelDesigner.xaml* and *RehostingWFDesigner.xaml.cs* files.</span></span> <span data-ttu-id="c644b-164">以下是*CustomParallelDesigner*檔案中定義 UI 的程式碼：</span><span class="sxs-lookup"><span data-stu-id="c644b-164">Here is the code from the *CustomParallelDesigner.xaml* file that defines the UI:</span></span>
 
-    ```xml
+    ```xaml
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemsPresenter.CustomParallelDesigner"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -298,7 +298,7 @@ ms.locfileid: "67170672"
     </sap:ActivityDesigner>
     ```
 
-3. <span data-ttu-id="96d1a-165">以下為 RehostingWFDesigner.xaml.cs 檔案中提供重新裝載邏輯的程式碼。</span><span class="sxs-lookup"><span data-stu-id="96d1a-165">Here is the code from the RehostingWFDesigner.xaml.cs file that provides the rehosting logic.</span></span>
+3. <span data-ttu-id="c644b-165">以下是*RehostingWFDesigner.xaml.cs*檔案中提供重新裝載邏輯的程式碼：</span><span class="sxs-lookup"><span data-stu-id="c644b-165">Here is the code from the *RehostingWFDesigner.xaml.cs* file that provides the rehosting logic:</span></span>
 
     ```csharp
     using System;
@@ -321,12 +321,12 @@ ms.locfileid: "67170672"
             protected override void OnInitialized(EventArgs e)
             {
                 base.OnInitialized(e);
-                // register metadata
+                // Register metadata.
                 (new DesignerMetadata()).Register();
                 RegisterCustomMetadata();
 
-                // create the workflow designer
-                WorkflowDesigner wd = new WorkflowDesigner();
+                // Create the workflow designer.
+                var wd = new WorkflowDesigner();
                 wd.Load(new Sequence());
                 DesignerBorder.Child = wd.View;
                 PropertyBorder.Child = wd.PropertyInspectorView;
@@ -335,7 +335,7 @@ ms.locfileid: "67170672"
 
             void RegisterCustomMetadata()
             {
-                AttributeTableBuilder builder = new AttributeTableBuilder();
+                var builder = new AttributeTableBuilder();
                 builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));
                 MetadataStore.AddAttributeTable(builder.CreateTable());
             }
@@ -343,11 +343,11 @@ ms.locfileid: "67170672"
     }
     ```
 
-## <a name="see-also"></a><span data-ttu-id="96d1a-166">另請參閱</span><span class="sxs-lookup"><span data-stu-id="96d1a-166">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c644b-166">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c644b-166">See also</span></span>
 
 - <xref:System.Activities.Presentation.ActivityDesigner>
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [<span data-ttu-id="96d1a-167">自訂工作流程設計體驗</span><span class="sxs-lookup"><span data-stu-id="96d1a-167">Customizing the Workflow Design Experience</span></span>](customizing-the-workflow-design-experience.md)
+- [<span data-ttu-id="c644b-167">自訂工作流程設計體驗</span><span class="sxs-lookup"><span data-stu-id="c644b-167">Customizing the Workflow Design Experience</span></span>](customizing-the-workflow-design-experience.md)

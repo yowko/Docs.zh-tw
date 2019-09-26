@@ -5,330 +5,318 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
+dev_langs:
+- csharp
+- vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957185"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306332"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a><span data-ttu-id="a162f-102">逐步解說：建立 Windows 架構的協助工具應用程式</span><span class="sxs-lookup"><span data-stu-id="a162f-102">Walkthrough: Creating an Accessible Windows-based Application</span></span>
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a><span data-ttu-id="e56ed-102">逐步解說：建立 Windows 架構的協助工具應用程式</span><span class="sxs-lookup"><span data-stu-id="e56ed-102">Walkthrough: Creating an Accessible Windows-based Application</span></span>
 
-<span data-ttu-id="a162f-103">建立協助工具應用程式具有重要的商業含意，</span><span class="sxs-lookup"><span data-stu-id="a162f-103">Creating an accessible application has important business implications.</span></span> <span data-ttu-id="a162f-104">許多政府對於市售軟體訂定有協助工具法規，</span><span class="sxs-lookup"><span data-stu-id="a162f-104">Many governments have accessibility regulations for software purchase.</span></span> <span data-ttu-id="a162f-105">而擁有「Windows 憑證」標誌就表示符合有關協助工具的要求。</span><span class="sxs-lookup"><span data-stu-id="a162f-105">The Certified for Windows logo includes accessibility requirements.</span></span> <span data-ttu-id="a162f-106">據估計光是美國便有約三千萬居民受到軟體協助工具的影響，而其中大部分是潛在客戶。</span><span class="sxs-lookup"><span data-stu-id="a162f-106">An estimated 30 million residents of the U.S. alone, many of them potential customers, are affected by the accessibility of software.</span></span>
+<span data-ttu-id="e56ed-103">建立協助工具應用程式具有重要的商業含意，</span><span class="sxs-lookup"><span data-stu-id="e56ed-103">Creating an accessible application has important business implications.</span></span> <span data-ttu-id="e56ed-104">許多政府對於市售軟體訂定有協助工具法規，</span><span class="sxs-lookup"><span data-stu-id="e56ed-104">Many governments have accessibility regulations for software purchase.</span></span> <span data-ttu-id="e56ed-105">而擁有「Windows 憑證」標誌就表示符合有關協助工具的要求。</span><span class="sxs-lookup"><span data-stu-id="e56ed-105">The Certified for Windows logo includes accessibility requirements.</span></span> <span data-ttu-id="e56ed-106">據估計光是美國便有約三千萬居民受到軟體協助工具的影響，而其中大部分是潛在客戶。</span><span class="sxs-lookup"><span data-stu-id="e56ed-106">An estimated 30 million residents of the U.S. alone, many of them potential customers, are affected by the accessibility of software.</span></span>
 
-<span data-ttu-id="a162f-107">本逐步解說將提出「Windows 憑證」標誌的五項協助工具需求。</span><span class="sxs-lookup"><span data-stu-id="a162f-107">This walkthrough will address the five accessibility requirements for the Certified for Windows logo.</span></span> <span data-ttu-id="a162f-108">根據這些需求，協助工具應用程式將會：</span><span class="sxs-lookup"><span data-stu-id="a162f-108">According to these requirements, an accessible application will:</span></span>
+<span data-ttu-id="e56ed-107">本逐步解說將提出「Windows 憑證」標誌的五項協助工具需求。</span><span class="sxs-lookup"><span data-stu-id="e56ed-107">This walkthrough will address the five accessibility requirements for the Certified for Windows logo.</span></span> <span data-ttu-id="e56ed-108">根據這些需求，協助工具應用程式將會：</span><span class="sxs-lookup"><span data-stu-id="e56ed-108">According to these requirements, an accessible application will:</span></span>
 
-- <span data-ttu-id="a162f-109">支援 [控制台] 的大小、色彩、字型和輸入設定。</span><span class="sxs-lookup"><span data-stu-id="a162f-109">Support Control Panel size, color, font, and input settings.</span></span> <span data-ttu-id="a162f-110">當使用者變更 [控制台] 的設定時，功能表列、標題列、框線和狀態列的大小也會隨著調整。</span><span class="sxs-lookup"><span data-stu-id="a162f-110">The menu bar, title bar, borders, and status bar will all resize themselves when the user changes the control panel settings.</span></span> <span data-ttu-id="a162f-111">不需要在這個應用程式中對控制項或程式碼進行其他變更。</span><span class="sxs-lookup"><span data-stu-id="a162f-111">No additional changes to the controls or code are required in this application.</span></span>
+- <span data-ttu-id="e56ed-109">支援 [控制台] 的大小、色彩、字型和輸入設定。</span><span class="sxs-lookup"><span data-stu-id="e56ed-109">Support Control Panel size, color, font, and input settings.</span></span> <span data-ttu-id="e56ed-110">當使用者變更 [控制台] 的設定時，功能表列、標題列、框線和狀態列的大小也會隨著調整。</span><span class="sxs-lookup"><span data-stu-id="e56ed-110">The menu bar, title bar, borders, and status bar will all resize themselves when the user changes the control panel settings.</span></span> <span data-ttu-id="e56ed-111">不需要在這個應用程式中對控制項或程式碼進行其他變更。</span><span class="sxs-lookup"><span data-stu-id="e56ed-111">No additional changes to the controls or code are required in this application.</span></span>
 
-- <span data-ttu-id="a162f-112">支援高對比模式。</span><span class="sxs-lookup"><span data-stu-id="a162f-112">Support High Contrast mode.</span></span>
+- <span data-ttu-id="e56ed-112">支援高對比模式。</span><span class="sxs-lookup"><span data-stu-id="e56ed-112">Support High Contrast mode.</span></span>
 
-- <span data-ttu-id="a162f-113">提供具備輔助說明的所有功能鍵盤存取。</span><span class="sxs-lookup"><span data-stu-id="a162f-113">Provide documented keyboard access to all features.</span></span>
+- <span data-ttu-id="e56ed-113">提供具備輔助說明的所有功能鍵盤存取。</span><span class="sxs-lookup"><span data-stu-id="e56ed-113">Provide documented keyboard access to all features.</span></span>
 
-- <span data-ttu-id="a162f-114">以視覺呈現和程式設計方式顯示鍵盤焦點的位置。</span><span class="sxs-lookup"><span data-stu-id="a162f-114">Expose location of the keyboard focus visually and programmatically.</span></span>
+- <span data-ttu-id="e56ed-114">以視覺呈現和程式設計方式顯示鍵盤焦點的位置。</span><span class="sxs-lookup"><span data-stu-id="e56ed-114">Expose location of the keyboard focus visually and programmatically.</span></span>
 
-- <span data-ttu-id="a162f-115">避免只以音效傳達重要資訊。</span><span class="sxs-lookup"><span data-stu-id="a162f-115">Avoid conveying important information by sound alone.</span></span>
+- <span data-ttu-id="e56ed-115">避免只以音效傳達重要資訊。</span><span class="sxs-lookup"><span data-stu-id="e56ed-115">Avoid conveying important information by sound alone.</span></span>
 
-<span data-ttu-id="a162f-116">如需詳細資訊，請參閱[設計可及性應用程式的資源](/visualstudio/ide/reference/resources-for-designing-accessible-applications)。</span><span class="sxs-lookup"><span data-stu-id="a162f-116">For more information, see [Resources for Designing Accessible Applications](/visualstudio/ide/reference/resources-for-designing-accessible-applications).</span></span>
+<span data-ttu-id="e56ed-116">如需詳細資訊，請參閱[設計可及性應用程式的資源](/visualstudio/ide/reference/resources-for-designing-accessible-applications)。</span><span class="sxs-lookup"><span data-stu-id="e56ed-116">For more information, see [Resources for Designing Accessible Applications](/visualstudio/ide/reference/resources-for-designing-accessible-applications).</span></span>
 
-<span data-ttu-id="a162f-117">如需支援各種鍵盤配置的資訊，請參閱[開發世界性的應用程式的最佳做法](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)。</span><span class="sxs-lookup"><span data-stu-id="a162f-117">For information on supporting varying keyboard layouts, see [Best Practices for Developing World-Ready Applications](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).</span></span>
+<span data-ttu-id="e56ed-117">如需支援各種鍵盤配置的資訊，請參閱[開發世界性的應用程式的最佳做法](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)。</span><span class="sxs-lookup"><span data-stu-id="e56ed-117">For information on supporting varying keyboard layouts, see [Best Practices for Developing World-Ready Applications](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).</span></span>
 
-## <a name="creating-the-project"></a><span data-ttu-id="a162f-118">建立專案</span><span class="sxs-lookup"><span data-stu-id="a162f-118">Creating the Project</span></span>
+## <a name="creating-the-project"></a><span data-ttu-id="e56ed-118">建立專案</span><span class="sxs-lookup"><span data-stu-id="e56ed-118">Creating the Project</span></span>
 
-<span data-ttu-id="a162f-119">本逐步解說會建立一個接受披薩訂單的應用程式使用者介面，</span><span class="sxs-lookup"><span data-stu-id="a162f-119">This walkthrough creates the user interface for an application that takes pizza orders.</span></span> <span data-ttu-id="a162f-120">其中包含輸入顧客名稱的 <xref:System.Windows.Forms.TextBox>、選取披薩尺寸的 <xref:System.Windows.Forms.RadioButton> 群組、選取配料的 <xref:System.Windows.Forms.CheckedListBox>、兩個標示為 [訂購] 和 [取消] 的 Button 控制項，以及一個含有結束命令的功能表。</span><span class="sxs-lookup"><span data-stu-id="a162f-120">It consists of a <xref:System.Windows.Forms.TextBox> for the customer's name, a <xref:System.Windows.Forms.RadioButton> group to select the pizza size, a <xref:System.Windows.Forms.CheckedListBox> for selecting the toppings, two Button controls labeled Order and Cancel, and a Menu with an Exit command.</span></span>
+<span data-ttu-id="e56ed-119">本逐步解說會建立一個接受披薩訂單的應用程式使用者介面，</span><span class="sxs-lookup"><span data-stu-id="e56ed-119">This walkthrough creates the user interface for an application that takes pizza orders.</span></span> <span data-ttu-id="e56ed-120">其中包含輸入顧客名稱的 <xref:System.Windows.Forms.TextBox>、選取披薩尺寸的 <xref:System.Windows.Forms.RadioButton> 群組、選取配料的 <xref:System.Windows.Forms.CheckedListBox>、兩個標示為 [訂購] 和 [取消] 的 Button 控制項，以及一個含有結束命令的功能表。</span><span class="sxs-lookup"><span data-stu-id="e56ed-120">It consists of a <xref:System.Windows.Forms.TextBox> for the customer's name, a <xref:System.Windows.Forms.RadioButton> group to select the pizza size, a <xref:System.Windows.Forms.CheckedListBox> for selecting the toppings, two Button controls labeled Order and Cancel, and a Menu with an Exit command.</span></span>
 
-<span data-ttu-id="a162f-121">使用者會輸入顧客名稱、披薩尺寸和想要的配料。</span><span class="sxs-lookup"><span data-stu-id="a162f-121">The user enters the customer's name, the size of the pizza, and the toppings desired.</span></span> <span data-ttu-id="a162f-122">當使用者按一下 [訂購] 按鈕時，訊息方塊中會顯示訂單摘要及其費用，然後會清除控制項並準備接受下一筆訂單。</span><span class="sxs-lookup"><span data-stu-id="a162f-122">When the user clicks the Order button, a summary of the order and its cost are displayed in a message box and the controls are cleared and ready for the next order.</span></span> <span data-ttu-id="a162f-123">當使用者按一下 [取消] 按鈕時，會清除控制項並準備接受下一筆訂單。</span><span class="sxs-lookup"><span data-stu-id="a162f-123">When the user clicks the Cancel button, the controls are cleared and ready for the next order.</span></span> <span data-ttu-id="a162f-124">當使用者按一下 [結束] 功能表項目時，程式會關閉。</span><span class="sxs-lookup"><span data-stu-id="a162f-124">When the user clicks the Exit menu item, the program closes.</span></span>
+<span data-ttu-id="e56ed-121">使用者會輸入顧客名稱、披薩尺寸和想要的配料。</span><span class="sxs-lookup"><span data-stu-id="e56ed-121">The user enters the customer's name, the size of the pizza, and the toppings desired.</span></span> <span data-ttu-id="e56ed-122">當使用者按一下 [訂購] 按鈕時，訊息方塊中會顯示訂單摘要及其費用，然後會清除控制項並準備接受下一筆訂單。</span><span class="sxs-lookup"><span data-stu-id="e56ed-122">When the user clicks the Order button, a summary of the order and its cost are displayed in a message box and the controls are cleared and ready for the next order.</span></span> <span data-ttu-id="e56ed-123">當使用者按一下 [取消] 按鈕時，會清除控制項並準備接受下一筆訂單。</span><span class="sxs-lookup"><span data-stu-id="e56ed-123">When the user clicks the Cancel button, the controls are cleared and ready for the next order.</span></span> <span data-ttu-id="e56ed-124">當使用者按一下 [結束] 功能表項目時，程式會關閉。</span><span class="sxs-lookup"><span data-stu-id="e56ed-124">When the user clicks the Exit menu item, the program closes.</span></span>
 
-<span data-ttu-id="a162f-125">本逐步解說的重點不在於零售訂單系統的程式碼，而是在於使用者介面的協助工具。</span><span class="sxs-lookup"><span data-stu-id="a162f-125">The emphasis of this walkthrough is not the code for a retail order system, but the accessibility of the user interface.</span></span> <span data-ttu-id="a162f-126">本逐步解說示範數個常用控制項的協助工具功能，這些控制項包括按鈕、選項按鈕、文字方塊和標籤。</span><span class="sxs-lookup"><span data-stu-id="a162f-126">The walkthrough demonstrates the accessibility features of several frequently used controls, including buttons, radio buttons, text boxes, and labels.</span></span>
+<span data-ttu-id="e56ed-125">本逐步解說的重點不在於零售訂單系統的程式碼，而是在於使用者介面的協助工具。</span><span class="sxs-lookup"><span data-stu-id="e56ed-125">The emphasis of this walkthrough is not the code for a retail order system, but the accessibility of the user interface.</span></span> <span data-ttu-id="e56ed-126">本逐步解說示範數個常用控制項的協助工具功能，這些控制項包括按鈕、選項按鈕、文字方塊和標籤。</span><span class="sxs-lookup"><span data-stu-id="e56ed-126">The walkthrough demonstrates the accessibility features of several frequently used controls, including buttons, radio buttons, text boxes, and labels.</span></span>
 
-#### <a name="to-begin-making-the-application"></a><span data-ttu-id="a162f-127">開始建立應用程式</span><span class="sxs-lookup"><span data-stu-id="a162f-127">To begin making the application</span></span>
+#### <a name="to-begin-making-the-application"></a><span data-ttu-id="e56ed-127">開始建立應用程式</span><span class="sxs-lookup"><span data-stu-id="e56ed-127">To begin making the application</span></span>
 
-- <span data-ttu-id="a162f-128">在 Visual Basic 或視覺效果C#中建立新的 Windows 應用程式。</span><span class="sxs-lookup"><span data-stu-id="a162f-128">Create a new Windows Application in Visual Basic or Visual C#.</span></span> <span data-ttu-id="a162f-129">將專案命名為 **PizzaOrder**</span><span class="sxs-lookup"><span data-stu-id="a162f-129">Name the project **PizzaOrder**.</span></span> <span data-ttu-id="a162f-130">(如需詳細資訊，請參閱[建立新的方案和專案](/visualstudio/ide/creating-solutions-and-projects))。</span><span class="sxs-lookup"><span data-stu-id="a162f-130">(For details see [Creating New Solutions and Projects](/visualstudio/ide/creating-solutions-and-projects).)</span></span>
+- <span data-ttu-id="e56ed-128">在 Visual Basic 或視覺效果C#中建立新的 Windows 應用程式。</span><span class="sxs-lookup"><span data-stu-id="e56ed-128">Create a new Windows Application in Visual Basic or Visual C#.</span></span> <span data-ttu-id="e56ed-129">將專案命名為 **PizzaOrder**</span><span class="sxs-lookup"><span data-stu-id="e56ed-129">Name the project **PizzaOrder**.</span></span> <span data-ttu-id="e56ed-130">(如需詳細資訊，請參閱[建立新的方案和專案](/visualstudio/ide/creating-solutions-and-projects))。</span><span class="sxs-lookup"><span data-stu-id="e56ed-130">(For details see [Creating New Solutions and Projects](/visualstudio/ide/creating-solutions-and-projects).)</span></span>
 
-## <a name="adding-the-controls-to-the-form"></a><span data-ttu-id="a162f-131">將控制項加入表單</span><span class="sxs-lookup"><span data-stu-id="a162f-131">Adding the Controls to the Form</span></span>
+## <a name="adding-the-controls-to-the-form"></a><span data-ttu-id="e56ed-131">將控制項加入表單</span><span class="sxs-lookup"><span data-stu-id="e56ed-131">Adding the Controls to the Form</span></span>
 
-<span data-ttu-id="a162f-132">將控制項加入表單時，請注意下列建立協助工具應用程式的方針：</span><span class="sxs-lookup"><span data-stu-id="a162f-132">When adding the controls to a form, keep in mind the following guidelines to make an accessible application:</span></span>
+<span data-ttu-id="e56ed-132">將控制項加入表單時，請注意下列建立協助工具應用程式的方針：</span><span class="sxs-lookup"><span data-stu-id="e56ed-132">When adding the controls to a form, keep in mind the following guidelines to make an accessible application:</span></span>
 
-- <span data-ttu-id="a162f-133">設定 <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 和 <xref:System.Windows.Forms.Control.AccessibleName%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="a162f-133">Set the <xref:System.Windows.Forms.Control.AccessibleDescription%2A> and <xref:System.Windows.Forms.Control.AccessibleName%2A> properties.</span></span> <span data-ttu-id="a162f-134">在這個範例中，<xref:System.Windows.Forms.Control.AccessibleRole%2A> 的預設值便已足夠。</span><span class="sxs-lookup"><span data-stu-id="a162f-134">In this example, the Default setting for the <xref:System.Windows.Forms.Control.AccessibleRole%2A> is sufficient.</span></span> <span data-ttu-id="a162f-135">如需協助工具屬性的詳細資訊，請參閱[提供 Windows Forms 上控制項的協助工具資訊](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)。</span><span class="sxs-lookup"><span data-stu-id="a162f-135">For more information on the accessibility properties, see [Providing Accessibility Information for Controls on a Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).</span></span>
+- <span data-ttu-id="e56ed-133">設定 <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 和 <xref:System.Windows.Forms.Control.AccessibleName%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="e56ed-133">Set the <xref:System.Windows.Forms.Control.AccessibleDescription%2A> and <xref:System.Windows.Forms.Control.AccessibleName%2A> properties.</span></span> <span data-ttu-id="e56ed-134">在這個範例中，<xref:System.Windows.Forms.Control.AccessibleRole%2A> 的預設值便已足夠。</span><span class="sxs-lookup"><span data-stu-id="e56ed-134">In this example, the Default setting for the <xref:System.Windows.Forms.Control.AccessibleRole%2A> is sufficient.</span></span> <span data-ttu-id="e56ed-135">如需協助工具屬性的詳細資訊，請參閱[提供 Windows Forms 上控制項的協助工具資訊](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)。</span><span class="sxs-lookup"><span data-stu-id="e56ed-135">For more information on the accessibility properties, see [Providing Accessibility Information for Controls on a Windows Form](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).</span></span>
 
-- <span data-ttu-id="a162f-136">將字型大小設定為 10 或更大的點數。</span><span class="sxs-lookup"><span data-stu-id="a162f-136">Set the font size to 10 points or larger.</span></span>
+- <span data-ttu-id="e56ed-136">將字型大小設定為 10 或更大的點數。</span><span class="sxs-lookup"><span data-stu-id="e56ed-136">Set the font size to 10 points or larger.</span></span>
 
   > [!NOTE]
-  > <span data-ttu-id="a162f-137">如果您一開始將表單的字型大小設定為 10，之後加入表單之所有控制項的字型大小都將是 10。</span><span class="sxs-lookup"><span data-stu-id="a162f-137">If you set the font size of the form to 10 when you start, then all controls subsequently added to the form will have a font size of 10.</span></span>
+  > <span data-ttu-id="e56ed-137">如果您一開始將表單的字型大小設定為 10，之後加入表單之所有控制項的字型大小都將是 10。</span><span class="sxs-lookup"><span data-stu-id="e56ed-137">If you set the font size of the form to 10 when you start, then all controls subsequently added to the form will have a font size of 10.</span></span>
 
-- <span data-ttu-id="a162f-138">確定任何描述 TextBox 控制項的 Label 控制項都是依定位順序，緊接著位於 TextBox 控制項之前。</span><span class="sxs-lookup"><span data-stu-id="a162f-138">Make sure any Label control that describes a TextBox control immediately precedes the TextBox control in the tab order.</span></span>
+- <span data-ttu-id="e56ed-138">確定任何描述 TextBox 控制項的 Label 控制項都是依定位順序，緊接著位於 TextBox 控制項之前。</span><span class="sxs-lookup"><span data-stu-id="e56ed-138">Make sure any Label control that describes a TextBox control immediately precedes the TextBox control in the tab order.</span></span>
 
-- <span data-ttu-id="a162f-139">使用 "&" 字元, 將存取金鑰新增至使用者可能想<xref:System.Windows.Forms.Control.Text%2A>要流覽的任何控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="a162f-139">Add an access key, using the "&" character, to the <xref:System.Windows.Forms.Control.Text%2A> property of any control the user may want to navigate to.</span></span>
+- <span data-ttu-id="e56ed-139">使用 "&" 字元，將存取金鑰新增至使用者可能想<xref:System.Windows.Forms.Control.Text%2A>要流覽的任何控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="e56ed-139">Add an access key, using the "&" character, to the <xref:System.Windows.Forms.Control.Text%2A> property of any control the user may want to navigate to.</span></span>
 
-- <span data-ttu-id="a162f-140">使用 "&" 字元, 將存取金鑰加入至<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要流覽之控制項前面的標籤屬性。</span><span class="sxs-lookup"><span data-stu-id="a162f-140">Add an access key, using the "&" character, to the <xref:System.Windows.Forms.Control.Text%2A> property of the label that precedes a control that the user may want to navigate to.</span></span> <span data-ttu-id="a162f-141">將標籤的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 屬性設定為 `true`如此一來，當使用者按下便捷鍵時，焦點便會設定為定位順序的下一個控制項。</span><span class="sxs-lookup"><span data-stu-id="a162f-141">Set the labels' <xref:System.Windows.Forms.Label.UseMnemonic%2A> property to `true`, so that the focus is set to the next control in the tab order when the user presses the access key.</span></span>
+- <span data-ttu-id="e56ed-140">使用 "&" 字元，將存取金鑰加入至<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要流覽之控制項前面的標籤屬性。</span><span class="sxs-lookup"><span data-stu-id="e56ed-140">Add an access key, using the "&" character, to the <xref:System.Windows.Forms.Control.Text%2A> property of the label that precedes a control that the user may want to navigate to.</span></span> <span data-ttu-id="e56ed-141">將標籤的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 屬性設定為 `true`如此一來，當使用者按下便捷鍵時，焦點便會設定為定位順序的下一個控制項。</span><span class="sxs-lookup"><span data-stu-id="e56ed-141">Set the labels' <xref:System.Windows.Forms.Label.UseMnemonic%2A> property to `true`, so that the focus is set to the next control in the tab order when the user presses the access key.</span></span>
 
-- <span data-ttu-id="a162f-142">將便捷鍵加入所有功能表項目。</span><span class="sxs-lookup"><span data-stu-id="a162f-142">Add access keys to all menu items.</span></span>
+- <span data-ttu-id="e56ed-142">將便捷鍵加入所有功能表項目。</span><span class="sxs-lookup"><span data-stu-id="e56ed-142">Add access keys to all menu items.</span></span>
 
-#### <a name="to-make-your-windows-application-accessible"></a><span data-ttu-id="a162f-143">讓 Windows 應用程式具備協助功能</span><span class="sxs-lookup"><span data-stu-id="a162f-143">To make your Windows Application accessible</span></span>
+#### <a name="to-make-your-windows-application-accessible"></a><span data-ttu-id="e56ed-143">讓 Windows 應用程式具備協助功能</span><span class="sxs-lookup"><span data-stu-id="e56ed-143">To make your Windows Application accessible</span></span>
 
-- <span data-ttu-id="a162f-144">如下所述將控制項加入表單並設定屬性。</span><span class="sxs-lookup"><span data-stu-id="a162f-144">Add the controls to the form and set the properties as described below.</span></span> <span data-ttu-id="a162f-145">如需如何在表單上排列控制項的模型，請參閱表格下方的圖片。</span><span class="sxs-lookup"><span data-stu-id="a162f-145">See the picture at the end of the table for a model of how to arrange the controls on the form.</span></span>
+- <span data-ttu-id="e56ed-144">如下所述將控制項加入表單並設定屬性。</span><span class="sxs-lookup"><span data-stu-id="e56ed-144">Add the controls to the form and set the properties as described below.</span></span> <span data-ttu-id="e56ed-145">如需如何在表單上排列控制項的模型，請參閱表格下方的圖片。</span><span class="sxs-lookup"><span data-stu-id="e56ed-145">See the picture at the end of the table for a model of how to arrange the controls on the form.</span></span>
 
-   |<span data-ttu-id="a162f-146">Object</span><span class="sxs-lookup"><span data-stu-id="a162f-146">Object</span></span>|<span data-ttu-id="a162f-147">屬性</span><span class="sxs-lookup"><span data-stu-id="a162f-147">Property</span></span>|<span data-ttu-id="a162f-148">值</span><span class="sxs-lookup"><span data-stu-id="a162f-148">Value</span></span>|
+   |<span data-ttu-id="e56ed-146">Object</span><span class="sxs-lookup"><span data-stu-id="e56ed-146">Object</span></span>|<span data-ttu-id="e56ed-147">屬性</span><span class="sxs-lookup"><span data-stu-id="e56ed-147">Property</span></span>|<span data-ttu-id="e56ed-148">值</span><span class="sxs-lookup"><span data-stu-id="e56ed-148">Value</span></span>|
    |------------|--------------|-----------|
-   |<span data-ttu-id="a162f-149">Form1</span><span class="sxs-lookup"><span data-stu-id="a162f-149">Form1</span></span>|<span data-ttu-id="a162f-150">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-150">AccessibleDescription</span></span>|<span data-ttu-id="a162f-151">訂購表單</span><span class="sxs-lookup"><span data-stu-id="a162f-151">Order form</span></span>|
-   ||<span data-ttu-id="a162f-152">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-152">AccessibleName</span></span>|<span data-ttu-id="a162f-153">訂購表單</span><span class="sxs-lookup"><span data-stu-id="a162f-153">Order form</span></span>|
-   ||<span data-ttu-id="a162f-154">字型大小</span><span class="sxs-lookup"><span data-stu-id="a162f-154">Font Size</span></span>|<span data-ttu-id="a162f-155">10</span><span class="sxs-lookup"><span data-stu-id="a162f-155">10</span></span>|
-   ||<span data-ttu-id="a162f-156">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-156">Text</span></span>|<span data-ttu-id="a162f-157">比薩訂購表單</span><span class="sxs-lookup"><span data-stu-id="a162f-157">Pizza Order Form</span></span>|
-   |<span data-ttu-id="a162f-158">PictureBox</span><span class="sxs-lookup"><span data-stu-id="a162f-158">PictureBox</span></span>|<span data-ttu-id="a162f-159">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-159">Name</span></span>|<span data-ttu-id="a162f-160">標誌</span><span class="sxs-lookup"><span data-stu-id="a162f-160">logo</span></span>|
-   ||<span data-ttu-id="a162f-161">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-161">AccessibleDescription</span></span>|<span data-ttu-id="a162f-162">一片披薩</span><span class="sxs-lookup"><span data-stu-id="a162f-162">A slice of pizza</span></span>|
-   ||<span data-ttu-id="a162f-163">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-163">AccessibleName</span></span>|<span data-ttu-id="a162f-164">公司標誌</span><span class="sxs-lookup"><span data-stu-id="a162f-164">Company logo</span></span>|
-   ||<span data-ttu-id="a162f-165">Image</span><span class="sxs-lookup"><span data-stu-id="a162f-165">Image</span></span>|<span data-ttu-id="a162f-166">任何圖示或點陣圖</span><span class="sxs-lookup"><span data-stu-id="a162f-166">Any icon or bitmap</span></span>|
-   |<span data-ttu-id="a162f-167">ThisAddIn</span><span class="sxs-lookup"><span data-stu-id="a162f-167">Label</span></span>|<span data-ttu-id="a162f-168">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-168">Name</span></span>|<span data-ttu-id="a162f-169">companyLabel</span><span class="sxs-lookup"><span data-stu-id="a162f-169">companyLabel</span></span>|
-   ||<span data-ttu-id="a162f-170">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-170">Text</span></span>|<span data-ttu-id="a162f-171">好吃披薩</span><span class="sxs-lookup"><span data-stu-id="a162f-171">Good Pizza</span></span>|
-   ||<span data-ttu-id="a162f-172">TabIndex</span><span class="sxs-lookup"><span data-stu-id="a162f-172">TabIndex</span></span>|<span data-ttu-id="a162f-173">1</span><span class="sxs-lookup"><span data-stu-id="a162f-173">1</span></span>|
-   ||<span data-ttu-id="a162f-174">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-174">AccessibleDescription</span></span>|<span data-ttu-id="a162f-175">公司名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-175">Company name</span></span>|
-   ||<span data-ttu-id="a162f-176">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-176">AccessibleName</span></span>|<span data-ttu-id="a162f-177">公司名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-177">Company name</span></span>|
-   ||<span data-ttu-id="a162f-178">Backcolor</span><span class="sxs-lookup"><span data-stu-id="a162f-178">Backcolor</span></span>|<span data-ttu-id="a162f-179">藍色</span><span class="sxs-lookup"><span data-stu-id="a162f-179">Blue</span></span>|
-   ||<span data-ttu-id="a162f-180">Forecolor</span><span class="sxs-lookup"><span data-stu-id="a162f-180">Forecolor</span></span>|<span data-ttu-id="a162f-181">黃色</span><span class="sxs-lookup"><span data-stu-id="a162f-181">Yellow</span></span>|
-   ||<span data-ttu-id="a162f-182">Font size</span><span class="sxs-lookup"><span data-stu-id="a162f-182">Font size</span></span>|<span data-ttu-id="a162f-183">18</span><span class="sxs-lookup"><span data-stu-id="a162f-183">18</span></span>|
-   |<span data-ttu-id="a162f-184">ThisAddIn</span><span class="sxs-lookup"><span data-stu-id="a162f-184">Label</span></span>|<span data-ttu-id="a162f-185">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-185">Name</span></span>|<span data-ttu-id="a162f-186">customerLabel</span><span class="sxs-lookup"><span data-stu-id="a162f-186">customerLabel</span></span>|
-   ||<span data-ttu-id="a162f-187">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-187">Text</span></span>|<span data-ttu-id="a162f-188">名稱(&N)</span><span class="sxs-lookup"><span data-stu-id="a162f-188">&Name</span></span>|
-   ||<span data-ttu-id="a162f-189">TabIndex</span><span class="sxs-lookup"><span data-stu-id="a162f-189">TabIndex</span></span>|<span data-ttu-id="a162f-190">2</span><span class="sxs-lookup"><span data-stu-id="a162f-190">2</span></span>|
-   ||<span data-ttu-id="a162f-191">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-191">AccessibleDescription</span></span>|<span data-ttu-id="a162f-192">顧客名稱標籤</span><span class="sxs-lookup"><span data-stu-id="a162f-192">Customer name label</span></span>|
-   ||<span data-ttu-id="a162f-193">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-193">AccessibleName</span></span>|<span data-ttu-id="a162f-194">顧客名稱標籤</span><span class="sxs-lookup"><span data-stu-id="a162f-194">Customer name label</span></span>|
-   ||<span data-ttu-id="a162f-195">UseMnemonic</span><span class="sxs-lookup"><span data-stu-id="a162f-195">UseMnemonic</span></span>|<span data-ttu-id="a162f-196">True</span><span class="sxs-lookup"><span data-stu-id="a162f-196">True</span></span>|
-   |<span data-ttu-id="a162f-197">TextBox</span><span class="sxs-lookup"><span data-stu-id="a162f-197">TextBox</span></span>|<span data-ttu-id="a162f-198">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-198">Name</span></span>|<span data-ttu-id="a162f-199">customerName</span><span class="sxs-lookup"><span data-stu-id="a162f-199">customerName</span></span>|
-   ||<span data-ttu-id="a162f-200">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-200">Text</span></span>|<span data-ttu-id="a162f-201">(無)</span><span class="sxs-lookup"><span data-stu-id="a162f-201">(none)</span></span>|
-   ||<span data-ttu-id="a162f-202">TabIndex</span><span class="sxs-lookup"><span data-stu-id="a162f-202">TabIndex</span></span>|<span data-ttu-id="a162f-203">3</span><span class="sxs-lookup"><span data-stu-id="a162f-203">3</span></span>|
-   ||<span data-ttu-id="a162f-204">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-204">AccessibleDescription</span></span>|<span data-ttu-id="a162f-205">顧客名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-205">Customer name</span></span>|
-   ||<span data-ttu-id="a162f-206">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-206">AccessibleName</span></span>|<span data-ttu-id="a162f-207">顧客名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-207">Customer name</span></span>|
-   |<span data-ttu-id="a162f-208">GroupBox</span><span class="sxs-lookup"><span data-stu-id="a162f-208">GroupBox</span></span>|<span data-ttu-id="a162f-209">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-209">Name</span></span>|<span data-ttu-id="a162f-210">sizeOptions</span><span class="sxs-lookup"><span data-stu-id="a162f-210">sizeOptions</span></span>|
-   ||<span data-ttu-id="a162f-211">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-211">AccessibleDescription</span></span>|<span data-ttu-id="a162f-212">披薩尺寸選擇</span><span class="sxs-lookup"><span data-stu-id="a162f-212">Pizza size options</span></span>|
-   ||<span data-ttu-id="a162f-213">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-213">AccessibleName</span></span>|<span data-ttu-id="a162f-214">披薩尺寸選擇</span><span class="sxs-lookup"><span data-stu-id="a162f-214">Pizza size options</span></span>|
-   ||<span data-ttu-id="a162f-215">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-215">Text</span></span>|<span data-ttu-id="a162f-216">披薩尺寸</span><span class="sxs-lookup"><span data-stu-id="a162f-216">Pizza size</span></span>|
-   ||<span data-ttu-id="a162f-217">TabIndex</span><span class="sxs-lookup"><span data-stu-id="a162f-217">TabIndex</span></span>|<span data-ttu-id="a162f-218">4</span><span class="sxs-lookup"><span data-stu-id="a162f-218">4</span></span>|
-   |<span data-ttu-id="a162f-219">RadioButton</span><span class="sxs-lookup"><span data-stu-id="a162f-219">RadioButton</span></span>|<span data-ttu-id="a162f-220">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-220">Name</span></span>|<span data-ttu-id="a162f-221">smallPizza</span><span class="sxs-lookup"><span data-stu-id="a162f-221">smallPizza</span></span>|
-   ||<span data-ttu-id="a162f-222">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-222">Text</span></span>|<span data-ttu-id="a162f-223">小披薩美金 $6.00 元(&S)</span><span class="sxs-lookup"><span data-stu-id="a162f-223">&Small $6.00</span></span>|
-   ||<span data-ttu-id="a162f-224">已核取</span><span class="sxs-lookup"><span data-stu-id="a162f-224">Checked</span></span>|<span data-ttu-id="a162f-225">True</span><span class="sxs-lookup"><span data-stu-id="a162f-225">True</span></span>|
-   ||<span data-ttu-id="a162f-226">TabIndex</span><span class="sxs-lookup"><span data-stu-id="a162f-226">TabIndex</span></span>|<span data-ttu-id="a162f-227">0</span><span class="sxs-lookup"><span data-stu-id="a162f-227">0</span></span>|
-   ||<span data-ttu-id="a162f-228">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-228">AccessibleDescription</span></span>|<span data-ttu-id="a162f-229">小披薩</span><span class="sxs-lookup"><span data-stu-id="a162f-229">Small pizza</span></span>|
-   ||<span data-ttu-id="a162f-230">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-230">AccessibleName</span></span>|<span data-ttu-id="a162f-231">小披薩</span><span class="sxs-lookup"><span data-stu-id="a162f-231">Small pizza</span></span>|
-   |<span data-ttu-id="a162f-232">RadioButton</span><span class="sxs-lookup"><span data-stu-id="a162f-232">RadioButton</span></span>|<span data-ttu-id="a162f-233">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-233">Name</span></span>|<span data-ttu-id="a162f-234">largePizza</span><span class="sxs-lookup"><span data-stu-id="a162f-234">largePizza</span></span>|
-   ||<span data-ttu-id="a162f-235">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-235">Text</span></span>|<span data-ttu-id="a162f-236">大批薩美金 $10.00 元(&L)</span><span class="sxs-lookup"><span data-stu-id="a162f-236">&Large $10.00</span></span>|
-   ||<span data-ttu-id="a162f-237">TabIndex</span><span class="sxs-lookup"><span data-stu-id="a162f-237">TabIndex</span></span>|<span data-ttu-id="a162f-238">1</span><span class="sxs-lookup"><span data-stu-id="a162f-238">1</span></span>|
-   ||<span data-ttu-id="a162f-239">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-239">AccessibleDescription</span></span>|<span data-ttu-id="a162f-240">大批薩</span><span class="sxs-lookup"><span data-stu-id="a162f-240">Large pizza</span></span>|
-   ||<span data-ttu-id="a162f-241">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-241">AccessibleName</span></span>|<span data-ttu-id="a162f-242">大批薩</span><span class="sxs-lookup"><span data-stu-id="a162f-242">Large pizza</span></span>|
-   |<span data-ttu-id="a162f-243">ThisAddIn</span><span class="sxs-lookup"><span data-stu-id="a162f-243">Label</span></span>|<span data-ttu-id="a162f-244">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-244">Name</span></span>|<span data-ttu-id="a162f-245">toppingsLabel</span><span class="sxs-lookup"><span data-stu-id="a162f-245">toppingsLabel</span></span>|
-   ||<span data-ttu-id="a162f-246">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-246">Text</span></span>|<span data-ttu-id="a162f-247">配料 (每份美金 $0.75 元)(&T)</span><span class="sxs-lookup"><span data-stu-id="a162f-247">&Toppings ($0.75 each)</span></span>|
-   ||<span data-ttu-id="a162f-248">TabIndex</span><span class="sxs-lookup"><span data-stu-id="a162f-248">TabIndex</span></span>|<span data-ttu-id="a162f-249">5</span><span class="sxs-lookup"><span data-stu-id="a162f-249">5</span></span>|
-   ||<span data-ttu-id="a162f-250">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-250">AccessibleDescription</span></span>|<span data-ttu-id="a162f-251">配料標籤</span><span class="sxs-lookup"><span data-stu-id="a162f-251">Toppings label</span></span>|
-   ||<span data-ttu-id="a162f-252">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-252">AccessibleName</span></span>|<span data-ttu-id="a162f-253">配料標籤</span><span class="sxs-lookup"><span data-stu-id="a162f-253">Toppings label</span></span>|
-   ||<span data-ttu-id="a162f-254">UseMnemonic</span><span class="sxs-lookup"><span data-stu-id="a162f-254">UseMnemonic</span></span>|<span data-ttu-id="a162f-255">True</span><span class="sxs-lookup"><span data-stu-id="a162f-255">True</span></span>|
-   |<span data-ttu-id="a162f-256">CheckedListBox</span><span class="sxs-lookup"><span data-stu-id="a162f-256">CheckedListBox</span></span>|<span data-ttu-id="a162f-257">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-257">Name</span></span>|<span data-ttu-id="a162f-258">配料</span><span class="sxs-lookup"><span data-stu-id="a162f-258">toppings</span></span>|
-   ||<span data-ttu-id="a162f-259">TabIndex</span><span class="sxs-lookup"><span data-stu-id="a162f-259">TabIndex</span></span>|<span data-ttu-id="a162f-260">6</span><span class="sxs-lookup"><span data-stu-id="a162f-260">6</span></span>|
-   ||<span data-ttu-id="a162f-261">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-261">AccessibleDescription</span></span>|<span data-ttu-id="a162f-262">可供選擇的配料</span><span class="sxs-lookup"><span data-stu-id="a162f-262">Available toppings</span></span>|
-   ||<span data-ttu-id="a162f-263">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-263">AccessibleName</span></span>|<span data-ttu-id="a162f-264">可供選擇的配料</span><span class="sxs-lookup"><span data-stu-id="a162f-264">Available toppings</span></span>|
-   ||<span data-ttu-id="a162f-265">項目</span><span class="sxs-lookup"><span data-stu-id="a162f-265">Items</span></span>|<span data-ttu-id="a162f-266">辣肉腸、臘腸、蘑菇</span><span class="sxs-lookup"><span data-stu-id="a162f-266">Pepperoni, Sausage, Mushrooms</span></span>|
-   |<span data-ttu-id="a162f-267">按鈕</span><span class="sxs-lookup"><span data-stu-id="a162f-267">Button</span></span>|<span data-ttu-id="a162f-268">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-268">Name</span></span>|<span data-ttu-id="a162f-269">順序</span><span class="sxs-lookup"><span data-stu-id="a162f-269">order</span></span>|
-   ||<span data-ttu-id="a162f-270">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-270">Text</span></span>|<span data-ttu-id="a162f-271">順序(&O)</span><span class="sxs-lookup"><span data-stu-id="a162f-271">&Order</span></span>|
-   ||<span data-ttu-id="a162f-272">TabIndex</span><span class="sxs-lookup"><span data-stu-id="a162f-272">TabIndex</span></span>|<span data-ttu-id="a162f-273">7</span><span class="sxs-lookup"><span data-stu-id="a162f-273">7</span></span>|
-   ||<span data-ttu-id="a162f-274">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-274">AccessibleDescription</span></span>|<span data-ttu-id="a162f-275">合計訂單</span><span class="sxs-lookup"><span data-stu-id="a162f-275">Total the order</span></span>|
-   ||<span data-ttu-id="a162f-276">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-276">AccessibleName</span></span>|<span data-ttu-id="a162f-277">訂單總計</span><span class="sxs-lookup"><span data-stu-id="a162f-277">Total order</span></span>|
-   |<span data-ttu-id="a162f-278">按鈕</span><span class="sxs-lookup"><span data-stu-id="a162f-278">Button</span></span>|<span data-ttu-id="a162f-279">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-279">Name</span></span>|<span data-ttu-id="a162f-280">cancel</span><span class="sxs-lookup"><span data-stu-id="a162f-280">cancel</span></span>|
-   ||<span data-ttu-id="a162f-281">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-281">Text</span></span>|<span data-ttu-id="a162f-282">取消(&C)</span><span class="sxs-lookup"><span data-stu-id="a162f-282">&Cancel</span></span>|
-   ||<span data-ttu-id="a162f-283">TabIndex</span><span class="sxs-lookup"><span data-stu-id="a162f-283">TabIndex</span></span>|<span data-ttu-id="a162f-284">8</span><span class="sxs-lookup"><span data-stu-id="a162f-284">8</span></span>|
-   ||<span data-ttu-id="a162f-285">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="a162f-285">AccessibleDescription</span></span>|<span data-ttu-id="a162f-286">取消訂單</span><span class="sxs-lookup"><span data-stu-id="a162f-286">Cancel the order</span></span>|
-   ||<span data-ttu-id="a162f-287">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="a162f-287">AccessibleName</span></span>|<span data-ttu-id="a162f-288">取消訂單</span><span class="sxs-lookup"><span data-stu-id="a162f-288">Cancel order</span></span>|
-   |<span data-ttu-id="a162f-289">MainMenu</span><span class="sxs-lookup"><span data-stu-id="a162f-289">MainMenu</span></span>|<span data-ttu-id="a162f-290">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-290">Name</span></span>|<span data-ttu-id="a162f-291">theMainMenu</span><span class="sxs-lookup"><span data-stu-id="a162f-291">theMainMenu</span></span>|
-   |<span data-ttu-id="a162f-292">MenuItem</span><span class="sxs-lookup"><span data-stu-id="a162f-292">MenuItem</span></span>|<span data-ttu-id="a162f-293">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-293">Name</span></span>|<span data-ttu-id="a162f-294">fileCommands</span><span class="sxs-lookup"><span data-stu-id="a162f-294">fileCommands</span></span>|
-   ||<span data-ttu-id="a162f-295">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-295">Text</span></span>|<span data-ttu-id="a162f-296">檔案(&F)</span><span class="sxs-lookup"><span data-stu-id="a162f-296">&File</span></span>|
-   |<span data-ttu-id="a162f-297">MenuItem</span><span class="sxs-lookup"><span data-stu-id="a162f-297">MenuItem</span></span>|<span data-ttu-id="a162f-298">名稱</span><span class="sxs-lookup"><span data-stu-id="a162f-298">Name</span></span>|<span data-ttu-id="a162f-299">exitApp</span><span class="sxs-lookup"><span data-stu-id="a162f-299">exitApp</span></span>|
-   ||<span data-ttu-id="a162f-300">文字</span><span class="sxs-lookup"><span data-stu-id="a162f-300">Text</span></span>|<span data-ttu-id="a162f-301">結束(&X)</span><span class="sxs-lookup"><span data-stu-id="a162f-301">E&xit</span></span>|
+   |<span data-ttu-id="e56ed-149">Form1</span><span class="sxs-lookup"><span data-stu-id="e56ed-149">Form1</span></span>|<span data-ttu-id="e56ed-150">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-150">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-151">訂購表單</span><span class="sxs-lookup"><span data-stu-id="e56ed-151">Order form</span></span>|
+   ||<span data-ttu-id="e56ed-152">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-152">AccessibleName</span></span>|<span data-ttu-id="e56ed-153">訂購表單</span><span class="sxs-lookup"><span data-stu-id="e56ed-153">Order form</span></span>|
+   ||<span data-ttu-id="e56ed-154">字型大小</span><span class="sxs-lookup"><span data-stu-id="e56ed-154">Font Size</span></span>|<span data-ttu-id="e56ed-155">10</span><span class="sxs-lookup"><span data-stu-id="e56ed-155">10</span></span>|
+   ||<span data-ttu-id="e56ed-156">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-156">Text</span></span>|<span data-ttu-id="e56ed-157">比薩訂購表單</span><span class="sxs-lookup"><span data-stu-id="e56ed-157">Pizza Order Form</span></span>|
+   |<span data-ttu-id="e56ed-158">PictureBox</span><span class="sxs-lookup"><span data-stu-id="e56ed-158">PictureBox</span></span>|<span data-ttu-id="e56ed-159">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-159">Name</span></span>|<span data-ttu-id="e56ed-160">標誌</span><span class="sxs-lookup"><span data-stu-id="e56ed-160">logo</span></span>|
+   ||<span data-ttu-id="e56ed-161">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-161">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-162">一片披薩</span><span class="sxs-lookup"><span data-stu-id="e56ed-162">A slice of pizza</span></span>|
+   ||<span data-ttu-id="e56ed-163">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-163">AccessibleName</span></span>|<span data-ttu-id="e56ed-164">公司標誌</span><span class="sxs-lookup"><span data-stu-id="e56ed-164">Company logo</span></span>|
+   ||<span data-ttu-id="e56ed-165">Image</span><span class="sxs-lookup"><span data-stu-id="e56ed-165">Image</span></span>|<span data-ttu-id="e56ed-166">任何圖示或點陣圖</span><span class="sxs-lookup"><span data-stu-id="e56ed-166">Any icon or bitmap</span></span>|
+   |<span data-ttu-id="e56ed-167">ThisAddIn</span><span class="sxs-lookup"><span data-stu-id="e56ed-167">Label</span></span>|<span data-ttu-id="e56ed-168">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-168">Name</span></span>|<span data-ttu-id="e56ed-169">companyLabel</span><span class="sxs-lookup"><span data-stu-id="e56ed-169">companyLabel</span></span>|
+   ||<span data-ttu-id="e56ed-170">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-170">Text</span></span>|<span data-ttu-id="e56ed-171">好吃披薩</span><span class="sxs-lookup"><span data-stu-id="e56ed-171">Good Pizza</span></span>|
+   ||<span data-ttu-id="e56ed-172">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e56ed-172">TabIndex</span></span>|<span data-ttu-id="e56ed-173">1</span><span class="sxs-lookup"><span data-stu-id="e56ed-173">1</span></span>|
+   ||<span data-ttu-id="e56ed-174">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-174">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-175">公司名稱</span><span class="sxs-lookup"><span data-stu-id="e56ed-175">Company name</span></span>|
+   ||<span data-ttu-id="e56ed-176">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-176">AccessibleName</span></span>|<span data-ttu-id="e56ed-177">公司名稱</span><span class="sxs-lookup"><span data-stu-id="e56ed-177">Company name</span></span>|
+   ||<span data-ttu-id="e56ed-178">Backcolor</span><span class="sxs-lookup"><span data-stu-id="e56ed-178">Backcolor</span></span>|<span data-ttu-id="e56ed-179">藍色</span><span class="sxs-lookup"><span data-stu-id="e56ed-179">Blue</span></span>|
+   ||<span data-ttu-id="e56ed-180">Forecolor</span><span class="sxs-lookup"><span data-stu-id="e56ed-180">Forecolor</span></span>|<span data-ttu-id="e56ed-181">黃色</span><span class="sxs-lookup"><span data-stu-id="e56ed-181">Yellow</span></span>|
+   ||<span data-ttu-id="e56ed-182">Font size</span><span class="sxs-lookup"><span data-stu-id="e56ed-182">Font size</span></span>|<span data-ttu-id="e56ed-183">18</span><span class="sxs-lookup"><span data-stu-id="e56ed-183">18</span></span>|
+   |<span data-ttu-id="e56ed-184">ThisAddIn</span><span class="sxs-lookup"><span data-stu-id="e56ed-184">Label</span></span>|<span data-ttu-id="e56ed-185">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-185">Name</span></span>|<span data-ttu-id="e56ed-186">customerLabel</span><span class="sxs-lookup"><span data-stu-id="e56ed-186">customerLabel</span></span>|
+   ||<span data-ttu-id="e56ed-187">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-187">Text</span></span>|<span data-ttu-id="e56ed-188">名稱(&N)</span><span class="sxs-lookup"><span data-stu-id="e56ed-188">&Name</span></span>|
+   ||<span data-ttu-id="e56ed-189">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e56ed-189">TabIndex</span></span>|<span data-ttu-id="e56ed-190">2</span><span class="sxs-lookup"><span data-stu-id="e56ed-190">2</span></span>|
+   ||<span data-ttu-id="e56ed-191">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-191">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-192">顧客名稱標籤</span><span class="sxs-lookup"><span data-stu-id="e56ed-192">Customer name label</span></span>|
+   ||<span data-ttu-id="e56ed-193">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-193">AccessibleName</span></span>|<span data-ttu-id="e56ed-194">顧客名稱標籤</span><span class="sxs-lookup"><span data-stu-id="e56ed-194">Customer name label</span></span>|
+   ||<span data-ttu-id="e56ed-195">UseMnemonic</span><span class="sxs-lookup"><span data-stu-id="e56ed-195">UseMnemonic</span></span>|<span data-ttu-id="e56ed-196">True</span><span class="sxs-lookup"><span data-stu-id="e56ed-196">True</span></span>|
+   |<span data-ttu-id="e56ed-197">TextBox</span><span class="sxs-lookup"><span data-stu-id="e56ed-197">TextBox</span></span>|<span data-ttu-id="e56ed-198">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-198">Name</span></span>|<span data-ttu-id="e56ed-199">customerName</span><span class="sxs-lookup"><span data-stu-id="e56ed-199">customerName</span></span>|
+   ||<span data-ttu-id="e56ed-200">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-200">Text</span></span>|<span data-ttu-id="e56ed-201">(無)</span><span class="sxs-lookup"><span data-stu-id="e56ed-201">(none)</span></span>|
+   ||<span data-ttu-id="e56ed-202">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e56ed-202">TabIndex</span></span>|<span data-ttu-id="e56ed-203">3</span><span class="sxs-lookup"><span data-stu-id="e56ed-203">3</span></span>|
+   ||<span data-ttu-id="e56ed-204">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-204">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-205">顧客名稱</span><span class="sxs-lookup"><span data-stu-id="e56ed-205">Customer name</span></span>|
+   ||<span data-ttu-id="e56ed-206">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-206">AccessibleName</span></span>|<span data-ttu-id="e56ed-207">顧客名稱</span><span class="sxs-lookup"><span data-stu-id="e56ed-207">Customer name</span></span>|
+   |<span data-ttu-id="e56ed-208">GroupBox</span><span class="sxs-lookup"><span data-stu-id="e56ed-208">GroupBox</span></span>|<span data-ttu-id="e56ed-209">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-209">Name</span></span>|<span data-ttu-id="e56ed-210">sizeOptions</span><span class="sxs-lookup"><span data-stu-id="e56ed-210">sizeOptions</span></span>|
+   ||<span data-ttu-id="e56ed-211">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-211">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-212">披薩尺寸選擇</span><span class="sxs-lookup"><span data-stu-id="e56ed-212">Pizza size options</span></span>|
+   ||<span data-ttu-id="e56ed-213">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-213">AccessibleName</span></span>|<span data-ttu-id="e56ed-214">披薩尺寸選擇</span><span class="sxs-lookup"><span data-stu-id="e56ed-214">Pizza size options</span></span>|
+   ||<span data-ttu-id="e56ed-215">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-215">Text</span></span>|<span data-ttu-id="e56ed-216">披薩尺寸</span><span class="sxs-lookup"><span data-stu-id="e56ed-216">Pizza size</span></span>|
+   ||<span data-ttu-id="e56ed-217">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e56ed-217">TabIndex</span></span>|<span data-ttu-id="e56ed-218">4</span><span class="sxs-lookup"><span data-stu-id="e56ed-218">4</span></span>|
+   |<span data-ttu-id="e56ed-219">RadioButton</span><span class="sxs-lookup"><span data-stu-id="e56ed-219">RadioButton</span></span>|<span data-ttu-id="e56ed-220">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-220">Name</span></span>|<span data-ttu-id="e56ed-221">smallPizza</span><span class="sxs-lookup"><span data-stu-id="e56ed-221">smallPizza</span></span>|
+   ||<span data-ttu-id="e56ed-222">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-222">Text</span></span>|<span data-ttu-id="e56ed-223">小披薩美金 $6.00 元(&S)</span><span class="sxs-lookup"><span data-stu-id="e56ed-223">&Small $6.00</span></span>|
+   ||<span data-ttu-id="e56ed-224">已核取</span><span class="sxs-lookup"><span data-stu-id="e56ed-224">Checked</span></span>|<span data-ttu-id="e56ed-225">True</span><span class="sxs-lookup"><span data-stu-id="e56ed-225">True</span></span>|
+   ||<span data-ttu-id="e56ed-226">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e56ed-226">TabIndex</span></span>|<span data-ttu-id="e56ed-227">0</span><span class="sxs-lookup"><span data-stu-id="e56ed-227">0</span></span>|
+   ||<span data-ttu-id="e56ed-228">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-228">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-229">小披薩</span><span class="sxs-lookup"><span data-stu-id="e56ed-229">Small pizza</span></span>|
+   ||<span data-ttu-id="e56ed-230">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-230">AccessibleName</span></span>|<span data-ttu-id="e56ed-231">小披薩</span><span class="sxs-lookup"><span data-stu-id="e56ed-231">Small pizza</span></span>|
+   |<span data-ttu-id="e56ed-232">RadioButton</span><span class="sxs-lookup"><span data-stu-id="e56ed-232">RadioButton</span></span>|<span data-ttu-id="e56ed-233">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-233">Name</span></span>|<span data-ttu-id="e56ed-234">largePizza</span><span class="sxs-lookup"><span data-stu-id="e56ed-234">largePizza</span></span>|
+   ||<span data-ttu-id="e56ed-235">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-235">Text</span></span>|<span data-ttu-id="e56ed-236">大批薩美金 $10.00 元(&L)</span><span class="sxs-lookup"><span data-stu-id="e56ed-236">&Large $10.00</span></span>|
+   ||<span data-ttu-id="e56ed-237">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e56ed-237">TabIndex</span></span>|<span data-ttu-id="e56ed-238">1</span><span class="sxs-lookup"><span data-stu-id="e56ed-238">1</span></span>|
+   ||<span data-ttu-id="e56ed-239">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-239">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-240">大批薩</span><span class="sxs-lookup"><span data-stu-id="e56ed-240">Large pizza</span></span>|
+   ||<span data-ttu-id="e56ed-241">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-241">AccessibleName</span></span>|<span data-ttu-id="e56ed-242">大批薩</span><span class="sxs-lookup"><span data-stu-id="e56ed-242">Large pizza</span></span>|
+   |<span data-ttu-id="e56ed-243">ThisAddIn</span><span class="sxs-lookup"><span data-stu-id="e56ed-243">Label</span></span>|<span data-ttu-id="e56ed-244">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-244">Name</span></span>|<span data-ttu-id="e56ed-245">toppingsLabel</span><span class="sxs-lookup"><span data-stu-id="e56ed-245">toppingsLabel</span></span>|
+   ||<span data-ttu-id="e56ed-246">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-246">Text</span></span>|<span data-ttu-id="e56ed-247">配料 (每份美金 $0.75 元)(&T)</span><span class="sxs-lookup"><span data-stu-id="e56ed-247">&Toppings ($0.75 each)</span></span>|
+   ||<span data-ttu-id="e56ed-248">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e56ed-248">TabIndex</span></span>|<span data-ttu-id="e56ed-249">5</span><span class="sxs-lookup"><span data-stu-id="e56ed-249">5</span></span>|
+   ||<span data-ttu-id="e56ed-250">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-250">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-251">配料標籤</span><span class="sxs-lookup"><span data-stu-id="e56ed-251">Toppings label</span></span>|
+   ||<span data-ttu-id="e56ed-252">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-252">AccessibleName</span></span>|<span data-ttu-id="e56ed-253">配料標籤</span><span class="sxs-lookup"><span data-stu-id="e56ed-253">Toppings label</span></span>|
+   ||<span data-ttu-id="e56ed-254">UseMnemonic</span><span class="sxs-lookup"><span data-stu-id="e56ed-254">UseMnemonic</span></span>|<span data-ttu-id="e56ed-255">True</span><span class="sxs-lookup"><span data-stu-id="e56ed-255">True</span></span>|
+   |<span data-ttu-id="e56ed-256">CheckedListBox</span><span class="sxs-lookup"><span data-stu-id="e56ed-256">CheckedListBox</span></span>|<span data-ttu-id="e56ed-257">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-257">Name</span></span>|<span data-ttu-id="e56ed-258">配料</span><span class="sxs-lookup"><span data-stu-id="e56ed-258">toppings</span></span>|
+   ||<span data-ttu-id="e56ed-259">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e56ed-259">TabIndex</span></span>|<span data-ttu-id="e56ed-260">6</span><span class="sxs-lookup"><span data-stu-id="e56ed-260">6</span></span>|
+   ||<span data-ttu-id="e56ed-261">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-261">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-262">可供選擇的配料</span><span class="sxs-lookup"><span data-stu-id="e56ed-262">Available toppings</span></span>|
+   ||<span data-ttu-id="e56ed-263">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-263">AccessibleName</span></span>|<span data-ttu-id="e56ed-264">可供選擇的配料</span><span class="sxs-lookup"><span data-stu-id="e56ed-264">Available toppings</span></span>|
+   ||<span data-ttu-id="e56ed-265">項目</span><span class="sxs-lookup"><span data-stu-id="e56ed-265">Items</span></span>|<span data-ttu-id="e56ed-266">辣肉腸、臘腸、蘑菇</span><span class="sxs-lookup"><span data-stu-id="e56ed-266">Pepperoni, Sausage, Mushrooms</span></span>|
+   |<span data-ttu-id="e56ed-267">按鈕</span><span class="sxs-lookup"><span data-stu-id="e56ed-267">Button</span></span>|<span data-ttu-id="e56ed-268">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-268">Name</span></span>|<span data-ttu-id="e56ed-269">順序</span><span class="sxs-lookup"><span data-stu-id="e56ed-269">order</span></span>|
+   ||<span data-ttu-id="e56ed-270">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-270">Text</span></span>|<span data-ttu-id="e56ed-271">順序(&O)</span><span class="sxs-lookup"><span data-stu-id="e56ed-271">&Order</span></span>|
+   ||<span data-ttu-id="e56ed-272">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e56ed-272">TabIndex</span></span>|<span data-ttu-id="e56ed-273">7</span><span class="sxs-lookup"><span data-stu-id="e56ed-273">7</span></span>|
+   ||<span data-ttu-id="e56ed-274">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-274">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-275">合計訂單</span><span class="sxs-lookup"><span data-stu-id="e56ed-275">Total the order</span></span>|
+   ||<span data-ttu-id="e56ed-276">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-276">AccessibleName</span></span>|<span data-ttu-id="e56ed-277">訂單總計</span><span class="sxs-lookup"><span data-stu-id="e56ed-277">Total order</span></span>|
+   |<span data-ttu-id="e56ed-278">按鈕</span><span class="sxs-lookup"><span data-stu-id="e56ed-278">Button</span></span>|<span data-ttu-id="e56ed-279">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-279">Name</span></span>|<span data-ttu-id="e56ed-280">cancel</span><span class="sxs-lookup"><span data-stu-id="e56ed-280">cancel</span></span>|
+   ||<span data-ttu-id="e56ed-281">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-281">Text</span></span>|<span data-ttu-id="e56ed-282">取消(&C)</span><span class="sxs-lookup"><span data-stu-id="e56ed-282">&Cancel</span></span>|
+   ||<span data-ttu-id="e56ed-283">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e56ed-283">TabIndex</span></span>|<span data-ttu-id="e56ed-284">8</span><span class="sxs-lookup"><span data-stu-id="e56ed-284">8</span></span>|
+   ||<span data-ttu-id="e56ed-285">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e56ed-285">AccessibleDescription</span></span>|<span data-ttu-id="e56ed-286">取消訂單</span><span class="sxs-lookup"><span data-stu-id="e56ed-286">Cancel the order</span></span>|
+   ||<span data-ttu-id="e56ed-287">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e56ed-287">AccessibleName</span></span>|<span data-ttu-id="e56ed-288">取消訂單</span><span class="sxs-lookup"><span data-stu-id="e56ed-288">Cancel order</span></span>|
+   |<span data-ttu-id="e56ed-289">MainMenu</span><span class="sxs-lookup"><span data-stu-id="e56ed-289">MainMenu</span></span>|<span data-ttu-id="e56ed-290">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-290">Name</span></span>|<span data-ttu-id="e56ed-291">theMainMenu</span><span class="sxs-lookup"><span data-stu-id="e56ed-291">theMainMenu</span></span>|
+   |<span data-ttu-id="e56ed-292">MenuItem</span><span class="sxs-lookup"><span data-stu-id="e56ed-292">MenuItem</span></span>|<span data-ttu-id="e56ed-293">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-293">Name</span></span>|<span data-ttu-id="e56ed-294">fileCommands</span><span class="sxs-lookup"><span data-stu-id="e56ed-294">fileCommands</span></span>|
+   ||<span data-ttu-id="e56ed-295">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-295">Text</span></span>|<span data-ttu-id="e56ed-296">檔案(&F)</span><span class="sxs-lookup"><span data-stu-id="e56ed-296">&File</span></span>|
+   |<span data-ttu-id="e56ed-297">MenuItem</span><span class="sxs-lookup"><span data-stu-id="e56ed-297">MenuItem</span></span>|<span data-ttu-id="e56ed-298">Name</span><span class="sxs-lookup"><span data-stu-id="e56ed-298">Name</span></span>|<span data-ttu-id="e56ed-299">exitApp</span><span class="sxs-lookup"><span data-stu-id="e56ed-299">exitApp</span></span>|
+   ||<span data-ttu-id="e56ed-300">文字</span><span class="sxs-lookup"><span data-stu-id="e56ed-300">Text</span></span>|<span data-ttu-id="e56ed-301">結束(&X)</span><span class="sxs-lookup"><span data-stu-id="e56ed-301">E&xit</span></span>|
 
-   <span data-ttu-id="a162f-302">您的表單看起來會像下圖:</span><span class="sxs-lookup"><span data-stu-id="a162f-302">Your form will look something like the following image:</span></span>
+   <span data-ttu-id="e56ed-302">您的表單看起來會像下圖：</span><span class="sxs-lookup"><span data-stu-id="e56ed-302">Your form will look something like the following image:</span></span>
 
    ![[比薩訂單] 表單的 [名稱] 文字方塊和 [大小] 和 [配料] 選項。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
-## <a name="supporting-high-contrast-mode"></a><span data-ttu-id="a162f-304">支援高對比模式</span><span class="sxs-lookup"><span data-stu-id="a162f-304">Supporting High Contrast Mode</span></span>
+## <a name="supporting-high-contrast-mode"></a><span data-ttu-id="e56ed-304">支援高對比模式</span><span class="sxs-lookup"><span data-stu-id="e56ed-304">Supporting High Contrast Mode</span></span>
 
-<span data-ttu-id="a162f-305">高對比模式是 Windows 系統的一項設定，使用對比色彩和字型大小以提升可讀性，對於視覺受損的使用者很有幫助。</span><span class="sxs-lookup"><span data-stu-id="a162f-305">High Contrast mode is a Windows system setting that improves readability by using contrasting colors and font sizes that are beneficial for visually impaired users.</span></span> <span data-ttu-id="a162f-306">提供<xref:System.Windows.Forms.SystemInformation.HighContrast%2A>屬性來判斷是否已設定高對比模式。</span><span class="sxs-lookup"><span data-stu-id="a162f-306">The <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> property is provided to determine whether the High Contrast mode is set.</span></span>
+<span data-ttu-id="e56ed-305">高對比模式是 Windows 系統的一項設定，使用對比色彩和字型大小以提升可讀性，對於視覺受損的使用者很有幫助。</span><span class="sxs-lookup"><span data-stu-id="e56ed-305">High Contrast mode is a Windows system setting that improves readability by using contrasting colors and font sizes that are beneficial for visually impaired users.</span></span> <span data-ttu-id="e56ed-306">提供<xref:System.Windows.Forms.SystemInformation.HighContrast%2A>屬性來判斷是否已設定高對比模式。</span><span class="sxs-lookup"><span data-stu-id="e56ed-306">The <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> property is provided to determine whether the High Contrast mode is set.</span></span>
 
-<span data-ttu-id="a162f-307">如果 SystemInformation.HighContrast 為 `true`，應用程式應該：</span><span class="sxs-lookup"><span data-stu-id="a162f-307">If SystemInformation.HighContrast is `true`, the application should:</span></span>
+<span data-ttu-id="e56ed-307">如果 SystemInformation.HighContrast 為 `true`，應用程式應該：</span><span class="sxs-lookup"><span data-stu-id="e56ed-307">If SystemInformation.HighContrast is `true`, the application should:</span></span>
 
-- <span data-ttu-id="a162f-308">使用系統色彩配置來顯示所有使用者介面項目。</span><span class="sxs-lookup"><span data-stu-id="a162f-308">Display all user interface elements using the system color scheme</span></span>
+- <span data-ttu-id="e56ed-308">使用系統色彩配置來顯示所有使用者介面項目。</span><span class="sxs-lookup"><span data-stu-id="e56ed-308">Display all user interface elements using the system color scheme</span></span>
 
-- <span data-ttu-id="a162f-309">藉由視覺提示或音效來傳達原本由色彩傳達的任何資訊。</span><span class="sxs-lookup"><span data-stu-id="a162f-309">Convey by visual cues or sound any information that is conveyed through color.</span></span> <span data-ttu-id="a162f-310">例如，如果使用紅色字型醒目提示特定清單項目，您也可以將粗體套用至字型，讓使用者透過非色彩提示得知該項目已醒目提示。</span><span class="sxs-lookup"><span data-stu-id="a162f-310">For example, if particular list items are highlighted by using a red font, you could also add bold to the font, so that the user has a non-color cue that the items are highlighted.</span></span>
+- <span data-ttu-id="e56ed-309">藉由視覺提示或音效來傳達原本由色彩傳達的任何資訊。</span><span class="sxs-lookup"><span data-stu-id="e56ed-309">Convey by visual cues or sound any information that is conveyed through color.</span></span> <span data-ttu-id="e56ed-310">例如，如果使用紅色字型醒目提示特定清單項目，您也可以將粗體套用至字型，讓使用者透過非色彩提示得知該項目已醒目提示。</span><span class="sxs-lookup"><span data-stu-id="e56ed-310">For example, if particular list items are highlighted by using a red font, you could also add bold to the font, so that the user has a non-color cue that the items are highlighted.</span></span>
 
-- <span data-ttu-id="a162f-311">省略文字後的任何影像或圖樣。</span><span class="sxs-lookup"><span data-stu-id="a162f-311">Omit any images or patterns behind text</span></span>
+- <span data-ttu-id="e56ed-311">省略文字後的任何影像或圖樣。</span><span class="sxs-lookup"><span data-stu-id="e56ed-311">Omit any images or patterns behind text</span></span>
 
-<span data-ttu-id="a162f-312">當應用程式啟動並回應 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 系統事件時，應該會檢查 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的設定。</span><span class="sxs-lookup"><span data-stu-id="a162f-312">The application should check the setting of <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> when the application starts and respond to the system event <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.</span></span> <span data-ttu-id="a162f-313">只要 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的值變更，便會引發 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。</span><span class="sxs-lookup"><span data-stu-id="a162f-313">The <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> event is raised whenever the value of <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> changes.</span></span>
+<span data-ttu-id="e56ed-312">當應用程式啟動並回應 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 系統事件時，應該會檢查 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的設定。</span><span class="sxs-lookup"><span data-stu-id="e56ed-312">The application should check the setting of <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> when the application starts and respond to the system event <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.</span></span> <span data-ttu-id="e56ed-313">只要 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的值變更，便會引發 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。</span><span class="sxs-lookup"><span data-stu-id="e56ed-313">The <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> event is raised whenever the value of <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> changes.</span></span>
 
-<span data-ttu-id="a162f-314">在應用程式中，唯一不使用色彩系統設定的項目是 `lblCompanyName`。</span><span class="sxs-lookup"><span data-stu-id="a162f-314">In our application, the only element that is not using the system settings for color is `lblCompanyName`.</span></span> <span data-ttu-id="a162f-315"><xref:System.Drawing.SystemColors>類別是用來將標籤的色彩設定變更為使用者選取的系統色彩。</span><span class="sxs-lookup"><span data-stu-id="a162f-315">The <xref:System.Drawing.SystemColors> class is used to change the color settings of the label to the user-selected system colors.</span></span>
+<span data-ttu-id="e56ed-314">在應用程式中，唯一不使用色彩系統設定的項目是 `lblCompanyName`。</span><span class="sxs-lookup"><span data-stu-id="e56ed-314">In our application, the only element that is not using the system settings for color is `lblCompanyName`.</span></span> <span data-ttu-id="e56ed-315"><xref:System.Drawing.SystemColors>類別是用來將標籤的色彩設定變更為使用者選取的系統色彩。</span><span class="sxs-lookup"><span data-stu-id="e56ed-315">The <xref:System.Drawing.SystemColors> class is used to change the color settings of the label to the user-selected system colors.</span></span>
 
-#### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a><span data-ttu-id="a162f-316">有效啟用高對比模式</span><span class="sxs-lookup"><span data-stu-id="a162f-316">To enable High Contrast mode in an effective way</span></span>
+#### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a><span data-ttu-id="e56ed-316">有效啟用高對比模式</span><span class="sxs-lookup"><span data-stu-id="e56ed-316">To enable High Contrast mode in an effective way</span></span>
 
-1. <span data-ttu-id="a162f-317">建立一個方法，將標籤的色彩設定為系統色彩。</span><span class="sxs-lookup"><span data-stu-id="a162f-317">Create a method to set the colors of the label to the system colors.</span></span>
+1. <span data-ttu-id="e56ed-317">建立一個方法，將標籤的色彩設定為系統色彩。</span><span class="sxs-lookup"><span data-stu-id="e56ed-317">Create a method to set the colors of the label to the system colors.</span></span>
 
     ```vb
-    ' Visual Basic
     Private Sub SetColorScheme()
-       If SystemInformation.HighContrast Then
-          companyLabel.BackColor = SystemColors.Window
-          companyLabel.ForeColor = SystemColors.WindowText
-       Else
-          companyLabel.BackColor = Color.Blue
-          companyLabel.ForeColor = Color.Yellow
-       End If
+        If SystemInformation.HighContrast Then
+            companyLabel.BackColor = SystemColors.Window
+            companyLabel.ForeColor = SystemColors.WindowText
+        Else
+            companyLabel.BackColor = Color.Blue
+            companyLabel.ForeColor = Color.Yellow
+        End If
     End Sub
     ```
 
     ```csharp
-    // C#
     private void SetColorScheme()
     {
-       if (SystemInformation.HighContrast)
-       {
-          companyLabel.BackColor = SystemColors.Window;
-          companyLabel.ForeColor = SystemColors.WindowText;
-       }
-       else
-       {
-          companyLabel.BackColor = Color.Blue;
-          companyLabel.ForeColor = Color.Yellow;
-       }
+        if (SystemInformation.HighContrast)
+        {
+            companyLabel.BackColor = SystemColors.Window;
+            companyLabel.ForeColor = SystemColors.WindowText;
+        }
+        else
+        {
+            companyLabel.BackColor = Color.Blue;
+            companyLabel.ForeColor = Color.Yellow;
+        }
     }
     ```
 
-2. <span data-ttu-id="a162f-318">在表單建構函式 (Visual Basic 中為 `Public Sub New()`，Visual C# 中為 `public class Form1`) 中呼叫 `SetColorScheme` 程序。</span><span class="sxs-lookup"><span data-stu-id="a162f-318">Call the `SetColorScheme` procedure in the form constructor (`Public Sub New()` in Visual Basic and `public class Form1` in Visual C#).</span></span> <span data-ttu-id="a162f-319">若要存取 Visual Basic 中的建構函式，您必須展開標示為 [Windows Forms 設計工具產生的程式碼] 的區域。</span><span class="sxs-lookup"><span data-stu-id="a162f-319">To access the constructor in Visual Basic, you will need to expand the region labeled **Windows Form Designer generated code**.</span></span>
+2. <span data-ttu-id="e56ed-318">在表單建構函式 (Visual Basic 中為 `Public Sub New()`，Visual C# 中為 `public Form1()`) 中呼叫 `SetColorScheme` 程序。</span><span class="sxs-lookup"><span data-stu-id="e56ed-318">Call the `SetColorScheme` procedure in the form constructor (`Public Sub New()` in Visual Basic and `public Form1()` in Visual C#).</span></span> <span data-ttu-id="e56ed-319">若要存取 Visual Basic 中的建構函式，您必須展開標示為 [Windows Forms 設計工具產生的程式碼] 的區域。</span><span class="sxs-lookup"><span data-stu-id="e56ed-319">To access the constructor in Visual Basic, you will need to expand the region labeled **Windows Form Designer generated code**.</span></span>
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
+        InitializeComponent();
+        SetColorScheme();
     }
     ```
 
-3. <span data-ttu-id="a162f-320">使用適當的簽章建立事件程序，以回應 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。</span><span class="sxs-lookup"><span data-stu-id="a162f-320">Create an event procedure, with the appropriate signature, to respond to the <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> event.</span></span>
+3. <span data-ttu-id="e56ed-320">使用適當的簽章建立事件程序，以回應 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。</span><span class="sxs-lookup"><span data-stu-id="e56ed-320">Create an event procedure, with the appropriate signature, to respond to the <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> event.</span></span>
 
     ```vb
-    ' Visual Basic
-    Protected Sub UserPreferenceChanged(ByVal sender As Object, _
-    ByVal e As Microsoft.Win32.UserPreferenceChangedEventArgs)
-       SetColorScheme()
+    Protected Sub UserPreferenceChanged(sender As Object, _
+    e As Microsoft.Win32.UserPreferenceChangedEventArgs)
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public void UserPreferenceChanged(object sender,
     Microsoft.Win32.UserPreferenceChangedEventArgs e)
     {
-       SetColorScheme();
+        SetColorScheme();
     }
     ```
 
-4. <span data-ttu-id="a162f-321">呼叫 `InitializeComponents` 之後，在表單建構函式中新增程式碼，將事件程序與系統事件連結。</span><span class="sxs-lookup"><span data-stu-id="a162f-321">Add code to the form constructor, after the call to `InitializeComponents`, to hook up the event procedure to the system event.</span></span> <span data-ttu-id="a162f-322">這個方法會呼叫 `SetColorScheme` 程序。</span><span class="sxs-lookup"><span data-stu-id="a162f-322">This method calls the `SetColorScheme` procedure.</span></span>
+4. <span data-ttu-id="e56ed-321">呼叫 `InitializeComponents` 之後，在表單建構函式中新增程式碼，將事件程序與系統事件連結。</span><span class="sxs-lookup"><span data-stu-id="e56ed-321">Add code to the form constructor, after the call to `InitializeComponents`, to hook up the event procedure to the system event.</span></span> <span data-ttu-id="e56ed-322">這個方法會呼叫 `SetColorScheme` 程序。</span><span class="sxs-lookup"><span data-stu-id="e56ed-322">This method calls the `SetColorScheme` procedure.</span></span>
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
-       AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
+        AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          += new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
+        InitializeComponent();
+        SetColorScheme();
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           += new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
     }
     ```
 
-5. <span data-ttu-id="a162f-323">先將程式碼加入表單的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，再呼叫基底類別的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，以便在應用程式關閉時釋放事件。</span><span class="sxs-lookup"><span data-stu-id="a162f-323">Add code to the form <xref:System.Windows.Forms.Control.Dispose%2A> method, before the call to the <xref:System.Windows.Forms.Control.Dispose%2A> method of the base class, to release the event when the application closes.</span></span> <span data-ttu-id="a162f-324">若要存取 Visual Basic 中的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，您必須展開標示為 [Windows Form 設計工具產生的程式碼] 的區域。</span><span class="sxs-lookup"><span data-stu-id="a162f-324">To access the <xref:System.Windows.Forms.Control.Dispose%2A> method in Visual Basic, you will need to expand the region labeled Windows Form Designer generated code.</span></span>
+5. <span data-ttu-id="e56ed-323">先將程式碼加入表單的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，再呼叫基底類別的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，以便在應用程式關閉時釋放事件。</span><span class="sxs-lookup"><span data-stu-id="e56ed-323">Add code to the form <xref:System.Windows.Forms.Control.Dispose%2A> method, before the call to the <xref:System.Windows.Forms.Control.Dispose%2A> method of the base class, to release the event when the application closes.</span></span> <span data-ttu-id="e56ed-324">若要存取 Visual Basic 中的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，您必須展開標示為 [Windows Form 設計工具產生的程式碼] 的區域。</span><span class="sxs-lookup"><span data-stu-id="e56ed-324">To access the <xref:System.Windows.Forms.Control.Dispose%2A> method in Visual Basic, you will need to expand the region labeled Windows Form Designer generated code.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="a162f-325">系統事件程式碼會執行獨立於主應用程式的執行緒。</span><span class="sxs-lookup"><span data-stu-id="a162f-325">The system event code runs a thread separate from the main application.</span></span> <span data-ttu-id="a162f-326">如果您沒有釋放該事件，即使關閉程式之後，連結至該事件的程式碼仍會繼續執行。</span><span class="sxs-lookup"><span data-stu-id="a162f-326">If you do not release the event, the code that you hook up to the event will run even after the program is closed.</span></span>
+    > <span data-ttu-id="e56ed-325">系統事件程式碼會執行獨立於主應用程式的執行緒。</span><span class="sxs-lookup"><span data-stu-id="e56ed-325">The system event code runs a thread separate from the main application.</span></span> <span data-ttu-id="e56ed-326">如果您沒有釋放該事件，即使關閉程式之後，連結至該事件的程式碼仍會繼續執行。</span><span class="sxs-lookup"><span data-stu-id="e56ed-326">If you do not release the event, the code that you hook up to the event will run even after the program is closed.</span></span>
 
     ```vb
-    ' Visual Basic
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
-       If disposing Then
-          If Not (components Is Nothing) Then
-             components.Dispose()
-          End If
-       End If
-       RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
-       MyBase.Dispose(disposing)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
+        MyBase.Dispose(disposing)
     End Sub
     ```
 
     ```csharp
-    // C#
-    protected override void Dispose( bool disposing )
+    protected override void Dispose(bool disposing)
     {
-       if( disposing )
-       {
-          if (components != null)
-          {
-             components.Dispose();
-          }
-       }
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
-       base.Dispose( disposing );
+        if(disposing && components != null)
+        {
+            components.Dispose();
+        }
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
+        base.Dispose( disposing );
     }
     ```
 
-6. <span data-ttu-id="a162f-327">按 F5 執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="a162f-327">Press F5 to run the application.</span></span>
+6. <span data-ttu-id="e56ed-327">按 F5 執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="e56ed-327">Press F5 to run the application.</span></span>
 
-## <a name="conveying-important-information-by-means-other-than-sound"></a><span data-ttu-id="a162f-328">透過音效以外的其他方式傳達重要資訊</span><span class="sxs-lookup"><span data-stu-id="a162f-328">Conveying Important Information by Means Other Than Sound</span></span>
+## <a name="conveying-important-information-by-means-other-than-sound"></a><span data-ttu-id="e56ed-328">透過音效以外的其他方式傳達重要資訊</span><span class="sxs-lookup"><span data-stu-id="e56ed-328">Conveying Important Information by Means Other Than Sound</span></span>
 
-<span data-ttu-id="a162f-329">在這個應用程式中，資訊不只以音效傳達。</span><span class="sxs-lookup"><span data-stu-id="a162f-329">In this application, no information is conveyed by sound alone.</span></span> <span data-ttu-id="a162f-330">如果您在應用程式中使用音效，應該也可以使用其他方式來提供資訊。</span><span class="sxs-lookup"><span data-stu-id="a162f-330">If you use sound in your application, then you should supply the information by some other means as well.</span></span>
+<span data-ttu-id="e56ed-329">在這個應用程式中，資訊不只以音效傳達。</span><span class="sxs-lookup"><span data-stu-id="e56ed-329">In this application, no information is conveyed by sound alone.</span></span> <span data-ttu-id="e56ed-330">如果您在應用程式中使用音效，應該也可以使用其他方式來提供資訊。</span><span class="sxs-lookup"><span data-stu-id="e56ed-330">If you use sound in your application, then you should supply the information by some other means as well.</span></span>
 
-#### <a name="to-supply-information-by-some-other-means-than-sound"></a><span data-ttu-id="a162f-331">透過音效以外的其他方式提供資訊</span><span class="sxs-lookup"><span data-stu-id="a162f-331">To supply information by some other means than sound</span></span>
+#### <a name="to-supply-information-by-some-other-means-than-sound"></a><span data-ttu-id="e56ed-331">透過音效以外的其他方式提供資訊</span><span class="sxs-lookup"><span data-stu-id="e56ed-331">To supply information by some other means than sound</span></span>
 
-1. <span data-ttu-id="a162f-332">使用 Windows 應用程式開發介面函式 FlashWindow 讓標題列閃爍。</span><span class="sxs-lookup"><span data-stu-id="a162f-332">Make the title bar flash by using the Windows API function FlashWindow.</span></span> <span data-ttu-id="a162f-333">如需如何呼叫 Windows API 函式的範例, 請[參閱逐步解說:呼叫 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。</span><span class="sxs-lookup"><span data-stu-id="a162f-333">For an example of how to call Windows API functions, see [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).</span></span>
-
-    > [!NOTE]
-    > <span data-ttu-id="a162f-334">使用者可以啟動 Windows 聲音感測服務，當系統音效透過電腦內建喇叭播放時，同時能使視窗閃爍。</span><span class="sxs-lookup"><span data-stu-id="a162f-334">The user may have the Windows SoundSentry service enabled, which will also cause the window to flash when the system sounds are played through the computer's built-in speaker.</span></span>
-
-2. <span data-ttu-id="a162f-335">在非強制回應視窗中顯示重要資訊，讓使用者可以有所回應。</span><span class="sxs-lookup"><span data-stu-id="a162f-335">Display the important information in a non-modal window so that the user may respond to it.</span></span>
-
-3. <span data-ttu-id="a162f-336">顯示取得鍵盤焦點的訊息方塊，</span><span class="sxs-lookup"><span data-stu-id="a162f-336">Display a message box that acquires the keyboard focus.</span></span> <span data-ttu-id="a162f-337">但是如果使用者可能會輸入資料，則應避免使用這個方法。</span><span class="sxs-lookup"><span data-stu-id="a162f-337">Avoid this method when the user may be typing.</span></span>
-
-4. <span data-ttu-id="a162f-338">在工作列的狀態通知區域中顯示狀態標記。</span><span class="sxs-lookup"><span data-stu-id="a162f-338">Display a status indicator in the status notification area of the taskbar.</span></span> <span data-ttu-id="a162f-339">如需詳細資訊，請參閱[如何：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。</span><span class="sxs-lookup"><span data-stu-id="a162f-339">For details, see [Adding Application Icons to the TaskBar with the Windows Forms NotifyIcon Component](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).</span></span>
-
-## <a name="testing-the-application"></a><span data-ttu-id="a162f-340">測試應用程式</span><span class="sxs-lookup"><span data-stu-id="a162f-340">Testing the Application</span></span>
-
-<span data-ttu-id="a162f-341">在部署應用程式之前，您應該測試已實作的協助工具功能。</span><span class="sxs-lookup"><span data-stu-id="a162f-341">Before deploying the application, you should test the accessibility features that you have implemented.</span></span>
-
-#### <a name="to-test-accessibility-features"></a><span data-ttu-id="a162f-342">測試協助工具功能</span><span class="sxs-lookup"><span data-stu-id="a162f-342">To test accessibility features</span></span>
-
-1. <span data-ttu-id="a162f-343">若要測試鍵盤存取，請拔除滑鼠，然後只利用鍵盤逐一測試使用者介面中的每一項功能。</span><span class="sxs-lookup"><span data-stu-id="a162f-343">To test keyboard access, unplug the mouse and navigate the user interface for each feature using only the keyboard.</span></span> <span data-ttu-id="a162f-344">請確定所有工作都可以只使用鍵盤執行。</span><span class="sxs-lookup"><span data-stu-id="a162f-344">Ensure that all tasks may be performed using the keyboard only.</span></span>
-
-2. <span data-ttu-id="a162f-345">若要測試是否支援高對比，請在 [控制台] 中選擇協助工具選項圖示。</span><span class="sxs-lookup"><span data-stu-id="a162f-345">To test support of High Contrast, choose the Accessibility Options icon in Control Panel.</span></span> <span data-ttu-id="a162f-346">按一下 [顯示] 索引標籤，然後選取 [使用高對比] 核取方塊。</span><span class="sxs-lookup"><span data-stu-id="a162f-346">Click the Display tab and select the Use High Contrast check box.</span></span> <span data-ttu-id="a162f-347">巡覽所有使用者介面項目，確保色彩和字型變更均已正確反映。</span><span class="sxs-lookup"><span data-stu-id="a162f-347">Navigate through all user interface elements to ensure that the color and font changes are reflected.</span></span> <span data-ttu-id="a162f-348">同時確保已省略文字後的影像或圖樣。</span><span class="sxs-lookup"><span data-stu-id="a162f-348">Also, ensure that images or patterns drawn behind text are omitted.</span></span>
+1. <span data-ttu-id="e56ed-332">使用 Windows 應用程式開發介面函式 FlashWindow 讓標題列閃爍。</span><span class="sxs-lookup"><span data-stu-id="e56ed-332">Make the title bar flash by using the Windows API function FlashWindow.</span></span> <span data-ttu-id="e56ed-333">如需如何呼叫 Windows API 函式的範例，請[參閱逐步解說：呼叫 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。</span><span class="sxs-lookup"><span data-stu-id="e56ed-333">For an example of how to call Windows API functions, see [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="a162f-349">Windows NT 4 的 [控制台] 中並沒有協助工具選項圖示。</span><span class="sxs-lookup"><span data-stu-id="a162f-349">Windows NT 4 does not have an Accessibility Options icon in Control Panel.</span></span> <span data-ttu-id="a162f-350">因此，這個變更 SystemInformation.HighContrast 設定的程序不適用於 Windows NT 4。</span><span class="sxs-lookup"><span data-stu-id="a162f-350">Thus, this procedure for changing the SystemInformation.HighContrast setting does not work in Windows NT 4.</span></span>
+    > <span data-ttu-id="e56ed-334">使用者可以啟動 Windows 聲音感測服務，當系統音效透過電腦內建喇叭播放時，同時能使視窗閃爍。</span><span class="sxs-lookup"><span data-stu-id="e56ed-334">The user may have the Windows SoundSentry service enabled, which will also cause the window to flash when the system sounds are played through the computer's built-in speaker.</span></span>
 
-3. <span data-ttu-id="a162f-351">另外還有其他工具可以測試應用程式的協助工具。</span><span class="sxs-lookup"><span data-stu-id="a162f-351">Other tools are readily available for testing the accessibility of an application.</span></span>
+2. <span data-ttu-id="e56ed-335">在非強制回應視窗中顯示重要資訊，讓使用者可以有所回應。</span><span class="sxs-lookup"><span data-stu-id="e56ed-335">Display the important information in a non-modal window so that the user may respond to it.</span></span>
 
-4. <span data-ttu-id="a162f-352">若要測試鍵盤焦點的顯示，請執行放大鏡</span><span class="sxs-lookup"><span data-stu-id="a162f-352">To test exposing the keyboard focus, run Magnifier.</span></span> <span data-ttu-id="a162f-353">(若要開啟 [放大鏡]，請按一下 [開始] 功能表，然後依序指向 [程式集]、[附屬應用程式] 和 [協助工具]，然後按一下 [放大鏡])。</span><span class="sxs-lookup"><span data-stu-id="a162f-353">(To open it, click the **Start** menu, point to **Programs**, point to **Accessories**, point to **Accessibility**, and then click **Magnifier**).</span></span> <span data-ttu-id="a162f-354">同時使用鍵盤 Tab 鍵和滑鼠來巡覽使用者介面。</span><span class="sxs-lookup"><span data-stu-id="a162f-354">Navigate the user interface using both keyboard tabbing and the mouse.</span></span> <span data-ttu-id="a162f-355">確保 [放大鏡] 正確追蹤所有巡覽。</span><span class="sxs-lookup"><span data-stu-id="a162f-355">Ensure that all navigation is tracked properly in **Magnifier**.</span></span>
+3. <span data-ttu-id="e56ed-336">顯示取得鍵盤焦點的訊息方塊，</span><span class="sxs-lookup"><span data-stu-id="e56ed-336">Display a message box that acquires the keyboard focus.</span></span> <span data-ttu-id="e56ed-337">但是如果使用者可能會輸入資料，則應避免使用這個方法。</span><span class="sxs-lookup"><span data-stu-id="e56ed-337">Avoid this method when the user may be typing.</span></span>
 
-5. <span data-ttu-id="a162f-356">若要測試螢幕項目的顯示，請執行 [檢查]，然後同時使用滑鼠和 TAB 鍵跳到每個項目。</span><span class="sxs-lookup"><span data-stu-id="a162f-356">To test exposing screen elements, run Inspect, and use both the mouse and the TAB key to reach each element.</span></span> <span data-ttu-id="a162f-357">針對 UI 中的每個物件，確保 [檢查] 視窗的 [名稱]、[狀態]、[角色]、[位置] 和 [值] 欄位所顯示的資訊，對使用者都是有意義的。</span><span class="sxs-lookup"><span data-stu-id="a162f-357">Ensure that the information presented in the Name, State, Role, Location, and Value fields of the Inspect window is meaningful to the user for each object in the UI.</span></span>
+4. <span data-ttu-id="e56ed-338">在工作列的狀態通知區域中顯示狀態標記。</span><span class="sxs-lookup"><span data-stu-id="e56ed-338">Display a status indicator in the status notification area of the taskbar.</span></span> <span data-ttu-id="e56ed-339">如需詳細資訊，請參閱[如何：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。</span><span class="sxs-lookup"><span data-stu-id="e56ed-339">For details, see [Adding Application Icons to the TaskBar with the Windows Forms NotifyIcon Component](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).</span></span>
+
+## <a name="testing-the-application"></a><span data-ttu-id="e56ed-340">測試應用程式</span><span class="sxs-lookup"><span data-stu-id="e56ed-340">Testing the Application</span></span>
+
+<span data-ttu-id="e56ed-341">在部署應用程式之前，您應該測試已實作的協助工具功能。</span><span class="sxs-lookup"><span data-stu-id="e56ed-341">Before deploying the application, you should test the accessibility features that you have implemented.</span></span>
+
+#### <a name="to-test-accessibility-features"></a><span data-ttu-id="e56ed-342">測試協助工具功能</span><span class="sxs-lookup"><span data-stu-id="e56ed-342">To test accessibility features</span></span>
+
+1. <span data-ttu-id="e56ed-343">若要測試鍵盤存取，請拔除滑鼠，然後只利用鍵盤逐一測試使用者介面中的每一項功能。</span><span class="sxs-lookup"><span data-stu-id="e56ed-343">To test keyboard access, unplug the mouse and navigate the user interface for each feature using only the keyboard.</span></span> <span data-ttu-id="e56ed-344">請確定所有工作都可以只使用鍵盤執行。</span><span class="sxs-lookup"><span data-stu-id="e56ed-344">Ensure that all tasks may be performed using the keyboard only.</span></span>
+
+2. <span data-ttu-id="e56ed-345">若要測試是否支援高對比，請在 [控制台] 中選擇協助工具選項圖示。</span><span class="sxs-lookup"><span data-stu-id="e56ed-345">To test support of High Contrast, choose the Accessibility Options icon in Control Panel.</span></span> <span data-ttu-id="e56ed-346">按一下 [顯示] 索引標籤，然後選取 [使用高對比] 核取方塊。</span><span class="sxs-lookup"><span data-stu-id="e56ed-346">Click the Display tab and select the Use High Contrast check box.</span></span> <span data-ttu-id="e56ed-347">巡覽所有使用者介面項目，確保色彩和字型變更均已正確反映。</span><span class="sxs-lookup"><span data-stu-id="e56ed-347">Navigate through all user interface elements to ensure that the color and font changes are reflected.</span></span> <span data-ttu-id="e56ed-348">同時確保已省略文字後的影像或圖樣。</span><span class="sxs-lookup"><span data-stu-id="e56ed-348">Also, ensure that images or patterns drawn behind text are omitted.</span></span>
+
+    > [!NOTE]
+    > <span data-ttu-id="e56ed-349">Windows NT 4 的 [控制台] 中並沒有協助工具選項圖示。</span><span class="sxs-lookup"><span data-stu-id="e56ed-349">Windows NT 4 does not have an Accessibility Options icon in Control Panel.</span></span> <span data-ttu-id="e56ed-350">因此，這個變更 SystemInformation.HighContrast 設定的程序不適用於 Windows NT 4。</span><span class="sxs-lookup"><span data-stu-id="e56ed-350">Thus, this procedure for changing the SystemInformation.HighContrast setting does not work in Windows NT 4.</span></span>
+
+3. <span data-ttu-id="e56ed-351">另外還有其他工具可以測試應用程式的協助工具。</span><span class="sxs-lookup"><span data-stu-id="e56ed-351">Other tools are readily available for testing the accessibility of an application.</span></span>
+
+4. <span data-ttu-id="e56ed-352">若要測試鍵盤焦點的顯示，請執行放大鏡</span><span class="sxs-lookup"><span data-stu-id="e56ed-352">To test exposing the keyboard focus, run Magnifier.</span></span> <span data-ttu-id="e56ed-353">(若要開啟 [放大鏡]，請按一下 [開始] 功能表，然後依序指向 [程式集]、[附屬應用程式] 和 [協助工具]，然後按一下 [放大鏡])。</span><span class="sxs-lookup"><span data-stu-id="e56ed-353">(To open it, click the **Start** menu, point to **Programs**, point to **Accessories**, point to **Accessibility**, and then click **Magnifier**).</span></span> <span data-ttu-id="e56ed-354">同時使用鍵盤 Tab 鍵和滑鼠來巡覽使用者介面。</span><span class="sxs-lookup"><span data-stu-id="e56ed-354">Navigate the user interface using both keyboard tabbing and the mouse.</span></span> <span data-ttu-id="e56ed-355">確保 [放大鏡] 正確追蹤所有巡覽。</span><span class="sxs-lookup"><span data-stu-id="e56ed-355">Ensure that all navigation is tracked properly in **Magnifier**.</span></span>
+
+5. <span data-ttu-id="e56ed-356">若要測試螢幕項目的顯示，請執行 [檢查]，然後同時使用滑鼠和 TAB 鍵跳到每個項目。</span><span class="sxs-lookup"><span data-stu-id="e56ed-356">To test exposing screen elements, run Inspect, and use both the mouse and the TAB key to reach each element.</span></span> <span data-ttu-id="e56ed-357">針對 UI 中的每個物件，確保 [檢查] 視窗的 [名稱]、[狀態]、[角色]、[位置] 和 [值] 欄位所顯示的資訊，對使用者都是有意義的。</span><span class="sxs-lookup"><span data-stu-id="e56ed-357">Ensure that the information presented in the Name, State, Role, Location, and Value fields of the Inspect window is meaningful to the user for each object in the UI.</span></span>
