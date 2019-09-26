@@ -4,17 +4,17 @@ description: 列出 .NET CoreFx （基類庫）中的重大變更。
 ms.date: 09/20/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7940da342bae6a745b6729ad00c42dbde27a96c8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 3838bcd7c127860a8307fe31bd85ed5addffb59e
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217133"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71272705"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx 重大變更
 
 > [!IMPORTANT]
-> 本文的結構如下。 這不是 .NET Core 重大變更的完整清單。 如需 .NET Core 重大變更的詳細資訊，您可以在 GitHub 上的 dotnet/檔存放庫中檢查個別的[重大變更問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。 
+> 本文的結構如下。 這不是 .NET Core 重大變更的完整清單。 如需 .NET Core 重大變更的詳細資訊，您可以在 GitHub 上的 dotnet/檔存放庫中檢查個別的[重大變更問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。
 
 以下是 .NET Core 版本的 CoreFx 重大變更清單。 CoreFx 提供 .NET Core 所使用的基本和其他一般類型。
 
@@ -65,4 +65,3 @@ ms.locfileid: "71217133"
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-

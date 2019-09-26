@@ -11,13 +11,13 @@ helpviewer_keywords:
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
 ms.openlocfilehash: 3ae45c9a9e33a3cb53ada6e1e5430ae0f9e6c198
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "71263297"
 ---
-# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>HOW TO：將命令連結到沒有命令支援的控制項
+# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>作法：將命令連結到沒有命令支援的控制項
 下列範例示範如何將 <xref:System.Windows.Input.RoutedCommand> 與沒有命令內建支援的 <xref:System.Windows.Controls.Control> 連結。  如需將命令連結至多個來源的完整範例，請參閱[建立自訂的 RoutedCommand 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)範例。  
   
 ## <a name="example"></a>範例  

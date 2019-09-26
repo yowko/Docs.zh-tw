@@ -2,12 +2,12 @@
 title: 可為 Null 的參考型別
 description: 本文提供可為 Null 參考型別的概觀，這種型別是在 C# 8 中新增的功能。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。
 ms.date: 02/19/2019
-ms.openlocfilehash: 7ca3ebc413fbe335f79d415249b952132c38f552
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 80018aaa409e7b4c188362482705de33ac5afd85
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214408"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71272784"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
@@ -35,7 +35,7 @@ string? name;
 
 任何沒有在型別名稱附加 `?` 的變數都是**不可為 Null 參考型別**。 這包含您啟用此功能時現有程式碼中所有的參考型別變數。
 
-編譯器會使用靜態分析來判斷可為 Null 參考是否已知並非為 Null。 若您在可為 Null 參考可能為 Null 時對其進行取值 (Dereference)，編譯器會警告您。 您可以在變數名稱後使用 **Null 容許運算子** (`!`) 來覆寫此行為。 例如，若您知道 `name` 變數並非為 Null，但編譯器卻發出警告，您可以撰寫下列程式碼來覆寫編譯器的分析：
+編譯器會使用靜態分析來判斷可為 Null 參考是否已知並非為 Null。 若您在可為 Null 參考可能為 Null 時對其進行取值 (Dereference)，編譯器會警告您。 您可以使用**容許運算子** `!`後面的變數名稱來覆寫此行為。 例如，若您知道 `name` 變數並非為 Null，但編譯器卻發出警告，您可以撰寫下列程式碼來覆寫編譯器的分析：
 
 ```csharp
 name!.Length;
@@ -58,7 +58,7 @@ name!.Length;
 
 可為 Null 內容可讓您對編譯器解譯參考型別變數的方式進行細部控制。 任何指定來源行的**可為 Null 註釋內容**都是 `enabled` 或 `disabled`。 您可以將 C# 8 之前的編譯器想成是將您所有程式碼編譯在一個 `disabled` 可為 Null 內容中：任何參考型別都可能為 Null。 可**為 null 警告內容**可以設定為`enabled`或`disabled`。 可為 Null 警告內容會指定編譯器使用其流程分析所產生的警告。
 
-可為 Null 註釋內容和可為 Null 警告內容都可在您的 `csproj` 檔案中使用 `Nullable` 項目來為專案設定。 此項目會設定編譯器解譯型別可 NULL 性的方式及所產生警告。 有效的設定如下：
+您可以使用`Nullable` *.csproj*檔案中的元素，為專案設定可為 null 注釋內容和可為 null 警告內容。 此項目會設定編譯器解譯型別可 NULL 性的方式及所產生警告。 有效的設定如下：
 
 - `enable`：可為 Null 註釋內容為**啟用**。 可為 Null 警告內容為**啟用**。
   - 參考型別變數 (例如 `string`) 不可為 Null。  啟用所有可 NULL 性警告。
@@ -68,9 +68,6 @@ name!.Length;
   - 參考型別變數為遺忘式。 啟用所有可 NULL 性警告。
 - `disable`：可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**停用**。
   - 參考型別變數為遺忘式，與先前版本的 C# 相似。 停用所有可 NULL 性警告。
-
-> [!IMPORTANT]
-> `Nullable` 元素先前稱為 `NullableContextOptions`。 重新命名是在 Visual Studio 2019，16.2-p1 中發生的。 .NET Core SDK 3.0.100-preview5-011568 沒有此變更。 若您使用 .NET Core CLI，您將必須使用 `NullableContextOptions`，直到下一個預覽版推出。
 
 您也可以使用指示詞，在您專案中的任何位置設定相同內容：
 
@@ -101,7 +98,7 @@ name!.Length;
 - 任何可為 Null 參考型別 (在變數宣告中的型別後方標註 `?`) 都可為 Null。 靜態分析會在對其進行取值 (Dereference) 時判斷該值是否已知並非為 Null。 若否，則編譯器會警告您。
 - 您可以使用 Null 容許運算子來宣告可為 Null 參考並非為 Null。
 
-在啟用的可為 Null 註釋內容中，`?` 字元會附加至宣告**可為 Null 參考型別**的參考型別。 **Null 容許運算子** (`!`) 可附加至運算式，來宣告運算式並非為 Null。
+在啟用的可為 Null 註釋內容中，`?` 字元會附加至宣告**可為 Null 參考型別**的參考型別。 **Null 容許運算子** `!`可以附加至運算式，以宣告運算式不是 null。
 
 ## <a name="nullable-warning-context"></a>可為 Null 警告內容
 

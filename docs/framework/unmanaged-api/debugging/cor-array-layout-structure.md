@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740817"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274209"
 ---
-# <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT 結構
+# <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT 結構
 提供記憶體中陣列物件配置的相關資訊。  
   
 ## <a name="syntax"></a>語法  
@@ -43,24 +43,24 @@ typedef struct COR_ARRAY_LAYOUT {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`componentID`|陣列包含的物件類型的識別項。|  
-|`componentType`|CorElementType 列舉值，指出元件是否記憶體回收參考、 實值類別或基本型別。|  
-|`firstElementOffset`|要在陣列中的第一個元素的位移。|  
-|`elementSize`|每個項目的大小。|  
-|`countOffset`|要在陣列中的項目數的位移。|  
-|`rankSize`|陣序規範，以位元組為單位的大小。|  
-|`numRanks`|陣列中的排列次序的數目。|  
-|`rankOffset`|陣序規範的開始位移。|  
+|`componentID`|陣列所包含之物件類型的識別碼。|  
+|`componentType`|指出元件是否為垃圾收集參考、實值類別或基本類型的 CorElementType 列舉值。|  
+|`firstElementOffset`|陣列中第一個元素的位移。|  
+|`elementSize`|每個元素的大小。|  
+|`countOffset`|陣列中元素數目的位移。|  
+|`rankSize`|順位的大小（以位元組為單位）。|  
+|`numRanks`|陣列中的次序數目。|  
+|`rankOffset`|排名開始的位移。|  
   
 ## <a name="remarks"></a>備註  
- `rankSize`欄位多維陣列中指定的陣序規範的大小。 它是精確的單一維度的陣列。  
+ `rankSize`欄位會指定多維度陣列中的次序大小。 一維陣列也是正確的。  
   
- 值`numRanks`為 1 的一維陣列並`N`多維陣列的`N`維度。  
+ 針對一維`numRanks`陣列和`N` `N`維度的多維陣列，的值是1。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -70,5 +70,5 @@ typedef struct COR_ARRAY_LAYOUT {
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)

@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1f0a36d186c6d9788d43b075bf9d67c36ed1acb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffbe571ebc3d14c12e57b1f805d77e56e97d12e1
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740563"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274177"
 ---
-# <a name="corversion-structure"></a>COR_VERSION 結構
+# <a name="cor_version-structure"></a>COR_VERSION 結構
 儲存通用語言執行平台的標準四部分版本號碼。  
   
 ## <a name="syntax"></a>語法  
@@ -47,10 +47,10 @@ typedef struct _COR_VERSION {
 |`dwSubBuild`|子組建編號。|  
   
 ## <a name="remarks"></a>備註  
- 如果版本號碼是 1.0.3705.288，1 是主要版本號碼、 0 是次要版本號碼、 3705 是組建編號，和 288 為子組建編號。  
+ 如果版本號碼是1.0.3705.288，1是主要版本號碼，0是次要版本號碼，3705是組建編號，288則是子組建編號。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl  
   
@@ -60,5 +60,5 @@ typedef struct _COR_VERSION {
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)

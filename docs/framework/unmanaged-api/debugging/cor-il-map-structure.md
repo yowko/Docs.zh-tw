@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74f515626f5001cbea1a25e8268338c588524bde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740542"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274043"
 ---
-# <a name="corilmap-structure"></a>COR_IL_MAP 結構
+# <a name="cor_il_map-structure"></a>COR_IL_MAP 結構
 指定函式相關位移中的變更。  
   
 ## <a name="syntax"></a>語法  
@@ -40,51 +40,51 @@ typedef struct _COR_IL_MAP {
   
 |成員|描述|  
 |------------|-----------------|  
-|`oldOffset`|舊 Microsoft intermediate language (MSIL) 位移相對於函式的開頭。|  
-|`newOffset`|新的 MSIL 位移相對於函式的開頭。|  
-|`fAccurate`|`true` 如果對應已知為正確;否則， `false`。|  
+|`oldOffset`|相對於函數開頭的舊 Microsoft 中繼語言（MSIL）位移。|  
+|`newOffset`|相對於函數開頭的新 MSIL 位移。|  
+|`fAccurate`|`true`如果已知對應是正確的，則為，否則為`false`。|  
   
 ## <a name="remarks"></a>備註  
- 對應的格式如下所示：偵錯工具會假設`oldOffset`指原始、 未修改 MSIL 程式碼中的 MSIL 位移。 `newOffset`參數會參考新的已檢測的程式碼中對應的 MSIL 位移。  
+ 對應的格式如下所示：偵錯工具會假設， `oldOffset`這是指原始、未修改的 msil 程式碼內的 MSIL 位移。 `newOffset`參數會參考新檢測的程式碼內對應的 MSIL 位移。  
   
- 逐步執行才能正常運作，應該符合下列需求：  
+ 若要讓逐步執行正常運作，應符合下列需求：  
   
-- 此對應應該以遞增順序排序。  
+- 對應應該以遞增順序排序。  
   
-- 已檢測的 MSIL 程式碼應該不會重新排列。  
+- 不應將已檢測的 MSIL 程式碼重新排序。  
   
-- 原始的 MSIL 程式碼應該不會移除。  
+- 不應該移除原始的 MSIL 程式碼。  
   
-- 對應應該包含對應用程式資料庫 (PDB) 檔案中的所有序列點的項目。  
+- 對應應該包含專案，以對應程式資料庫（PDB）檔案中的所有序列點。  
   
- 對應不會插補遺漏的項目。 下列範例會顯示對應和它的結果。  
+ 對應不會插補遺漏的專案。 下列範例會顯示地圖和其結果。  
   
- 對應：  
+ 地圖  
   
-- 0 的舊位移、 0 的新位移  
+- 0個舊位移，0個新位移  
   
-- 5 的舊位移、 10 個新的位移  
+- 5個舊位移，10個新位移  
   
-- 9 的舊位移、 20 的新位移  
+- 9個舊的位移，20個新的位移  
   
- 結果：  
+ 更  
   
-- 0、 1、 2、 3 或 4 的舊位移會對應至新的位移為 0。  
+- 舊的位移為0、1、2、3或4，將會對應至新的位移0。  
   
-- 5、 6、 7 或 8 的舊位移會對應至 10 的新位移。  
+- 舊的位移5、6、7或8會對應到新的位移10。  
   
-- 9 或更新版本的舊位移會對應至新的位移 20。  
+- 舊的位移9或更高版本會對應到新的位移20。  
   
-- 0、 1、 2、 3、 4、 5、 6、 7、 8 或 9 新位移會對應至舊的位移 0。  
+- 新的位移為0、1、2、3、4、5、6、7、8或9，將會對應到舊的位移0。  
   
-- 新的位移，10、 11、 12、 13、 14、 15、 16、 17、 18 或 19 的會對應至舊位移 5。  
+- 10、11、12、13、14、15、16、17、18或19的新位移會對應到舊的位移5。  
   
-- 20 或更高版本的新位移會對應至舊位移 9。  
+- 新的位移20或以上會對應到舊的位移9。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorProf.idl  
+ **標頭：** Cordebug.h .idl，Corprof.idl .idl  
   
  **LIBRARY:** CorGuids.lib  
   
@@ -92,5 +92,5 @@ typedef struct _COR_IL_MAP {
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)

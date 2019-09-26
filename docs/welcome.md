@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0b4a2380bf2ddb59c181a07d7f8a006d6252d11f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: bc525aeefe2c247c610886fae6ae7d79cb9e6517
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216847"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274326"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -32,7 +32,7 @@ ms.locfileid: "71216847"
 - [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
 - [Microsoft Connect()](https://www.microsoft.com/connectevent)
-- 
+
 如需新增至 .NET 實作的最新功能與支援語言的相關資訊，請參閱以下文章：
 
 - [.NET Core 的新功能](core/whats-new/index.md)

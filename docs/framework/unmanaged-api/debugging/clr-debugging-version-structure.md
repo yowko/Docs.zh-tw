@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e71a1538e42061c6cb949b22bb63fe6b17a0dfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4528ccd77fed2ea2a9b2d08243ffa1535bfad1ae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741117"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274080"
 ---
-# <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION 結構
+# <a name="clr_debugging_version-structure"></a>CLR_DEBUGGING_VERSION 結構
 定義用來偵錯之工具通用語言執行平台 (CLR) 的產品版本。  
   
 ## <a name="syntax"></a>語法  
@@ -50,10 +50,10 @@ typedef struct _CLR_DEBUGGING_VERSION
 |`wRevision`|修訂編號。|  
   
 ## <a name="remarks"></a>備註  
- `CLR_DEBUGGING_VERSION`結構不過是 COR_VERSION 結構相同，則`CLR_DEBUGGING_VERSION`結構提供額外的結構版本 欄位 (`wStructVersion`)。 目前，此欄位必須設定為零。  
+ 結構與 COR_VERSION 結構相同，不過`CLR_DEBUGGING_VERSION` ，結構會提供其他結構版本欄位（`wStructVersion`）。 `CLR_DEBUGGING_VERSION` 目前，此欄位必須設定為零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl  
   
@@ -63,5 +63,5 @@ typedef struct _CLR_DEBUGGING_VERSION
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)

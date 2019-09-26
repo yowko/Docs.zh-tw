@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 238e59978bd084379fe6c0576107d674812bce8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: babb1ace1385c241b782691f22bfb4fbb689e310
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740792"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274068"
 ---
-# <a name="cordebugiltonativemap-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 結構
+# <a name="cor_debug_il_to_native_map-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 結構
 包含用來將 Microsoft 中繼語言 (MSIL) 程式碼對應至機器碼的位移。  
   
 ## <a name="syntax"></a>語法  
@@ -41,13 +41,13 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 |成員|描述|  
 |------------|-----------------|  
 |`ilOffset`|MSIL 程式碼的位移。|  
-|`nativeStartOffset`|原生程式碼開頭的位移。|  
-|`nativeEndOffset`|原生程式碼結尾的位移。|  
+|`nativeStartOffset`|機器碼開頭的位移。|  
+|`nativeEndOffset`|機器碼結尾的位移。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl CorDebug.idl  
+ **標頭：** Corprof.idl .idl，Cordebug.h .idl  
   
  **LIBRARY:** CorGuids.lib  
   
@@ -55,7 +55,7 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
   
 ## <a name="see-also"></a>另請參閱
 
-- [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [GetILToNativeMapping 方法](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [GetILToNativeMapping 方法](icordebugcode-getiltonativemapping-method.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)

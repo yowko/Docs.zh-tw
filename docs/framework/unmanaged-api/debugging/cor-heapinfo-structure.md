@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740663"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274184"
 ---
-# <a name="corheapinfo-structure"></a>COR_HEAPINFO 結構
+# <a name="cor_heapinfo-structure"></a>COR_HEAPINFO 結構
 提供記憶體回收堆積的一般相關資訊，包括其是否可以列舉。  
   
 ## <a name="syntax"></a>語法  
@@ -42,19 +42,19 @@ typedef struct _COR_HEAPINFO {
   
 |成員|描述|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true` 如果記憶體回收結構都有效，而且可以列舉堆積;，否則， `false`。|  
-|`pointerSize`|大小，以位元組為單位的目標架構上的指標。|  
-|`numHeaps`|處理序堆積中的邏輯回收數目。|  
-|`concurrent`|`TRUE` 如果同時啟用 （背景） 記憶體回收;否則， `FALSE`。|  
-|`gcType`|成員[CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md)列舉，指出是否在工作站或伺服器上執行記憶體回收行程。|  
+|`areGCStructuresValid`|`true`如果垃圾收集結構有效，而且可以列舉堆積，則為，否則為`false`。|  
+|`pointerSize`|目標架構上指標的大小（以位元組為單位）。|  
+|`numHeaps`|進程中的邏輯垃圾收集堆積數目。|  
+|`concurrent`|`TRUE`如果已啟用並行（背景）垃圾收集，則為，否則為`FALSE`。|  
+|`gcType`|[CorDebugGCType](cordebuggctype-enumeration.md)列舉的成員，表示垃圾收集行程是否在工作站或伺服器上執行。|  
   
 ## <a name="remarks"></a>備註  
- 執行個體`COR_HEAPINFO`結構由呼叫[ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)方法。  
+ 藉由呼叫`COR_HEAPINFO` [ICorDebugProcess5：： GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md)方法來傳回結構的實例。  
   
- 之前列舉在記憶體回收堆積上的物件，您必須一律檢查`areGCStructuresValid`欄位，以確保在堆積中的可列舉的狀態。 如需詳細資訊，請參閱 < [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)方法。  
+ 列舉垃圾收集堆積上的物件之前，您必須務必檢查`areGCStructuresValid`欄位，以確保堆積處於可列舉的狀態。 如需詳細資訊，請參閱[ICorDebugProcess5：： GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -64,5 +64,5 @@ typedef struct _COR_HEAPINFO {
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)

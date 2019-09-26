@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 426420175a7d05f39859b9e217a888a8c01b6d63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d76fa4b2352da18b5ef0e547ebc4e2e99d980b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740519"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273988"
 ---
-# <a name="cortypeid-structure"></a>COR_TYPEID 結構
+# <a name="cor_typeid-structure"></a>COR_TYPEID 結構
 包含類型識別項。  
   
 ## <a name="syntax"></a>語法  
@@ -37,18 +37,18 @@ typedef struct COR_TYPEID{
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`token1`|第一個語彙基元。|  
-|`token2`|第二個語彙基元。|  
+|`token1`|第一個 token。|  
+|`token2`|第二個 token。|  
   
 ## <a name="remarks"></a>備註  
- `COR_TYPEID`結構由偵錯的方法，可提供資訊以進行記憶體回收的物件數目。 它接著會傳遞做為引數其他偵錯的方法，提供關於該項目的其他資訊。 例如，透過列舉[ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)物件，您可以擷取個別[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)代表 managed 堆積上的個別物件的物件。 您可以傳遞`COR_TYPEID`值從`COR_HEAPOBJECT.type`欄位設為[ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)方法來擷取 ICorDebugType 物件，提供物件的型別資訊。  
+ `COR_TYPEID`結構會由數個偵錯工具傳回，這些方法會提供要進行垃圾收集之物件的相關資訊。 然後，可以將它當做引數傳遞給其他的偵錯工具方法，以提供該專案的其他相關資訊。 例如，藉由列舉[ICorDebugHeapEnum](icordebugheapenum-interface.md)物件，您可以在 managed 堆積上，抓取代表個別物件的個別[COR_HEAPOBJECT](cor-heapobject-structure.md)物件。 接著，您可以將`COR_TYPEID` `COR_HEAPOBJECT.type`欄位中的值傳遞給[ICorDebugProcess5：： GetTypeForTypeID](icordebugprocess5-gettypefortypeid-method.md)方法，以抓取提供物件之型別資訊的 ICorDebugType 物件。  
   
- A`COR_TYPEID`物件是不透明。 其個別的欄位不應該存取或操作。 其唯一用途是做為識別項提供做為`out`中方法呼叫，並可中，參數會傳遞至其他方法，以提供其他資訊。  
+ `COR_TYPEID`物件應為不透明。 其個別欄位不應存取或操作。 其唯一用途就是當做方法呼叫中的`out`參數提供的識別碼，然後可以傳遞給其他方法來提供其他資訊。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -58,5 +58,5 @@ typedef struct COR_TYPEID{
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)

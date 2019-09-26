@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5787f9f143e99ab30879ddcf8168b0e840b2fb4e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 67b85917be590bdba7ed3f10972ad39b731dbcdd
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740979"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274236"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>CLRDataEnumMemoryFlags 列舉
-指出哪些記憶體區域呼叫[iclrdataenummemoryregions:: Enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)方法應該包含。  
+指出[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)方法的呼叫應包含的記憶體區域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,13 +40,13 @@ typedef enum CLRDataEnumMemoryFlags {
   
 |成員|描述|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|小型傾印，也就是疏鬆的記憶體傾印。|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|小型傾印，也就是稀疏記憶體傾印。|  
 |`CLRDATA_ENUM_MEM_HEAP`|完整的堆積傾印。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** ClrData.idl, ClrData.h  
+ **標頭：** ClrData .idl，ClrData。h  
   
  **LIBRARY:** CorGuids.lib  
   
@@ -54,4 +54,4 @@ typedef enum CLRDataEnumMemoryFlags {
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [偵錯列舉](debugging-enumerations.md)

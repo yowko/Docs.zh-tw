@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef142ed5284262fd758ff13af8207b2290938e77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 292f6953fad0d65b368642543af107c73ec42ab5
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741156"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274105"
 ---
-# <a name="clrdebuggingprocessflags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS 列舉
-提供值，可供[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。  
+# <a name="clr_debugging_process_flags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS 列舉
+提供[ICLRDebugging：： OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md)方法所使用的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,18 +40,18 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 |成員|描述|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|此執行階段發生的非 catch up managed 偵錯工具事件時傳送。 請參閱 < 備註 > 一節追補和非 catch 向上事件之間的差異。|  
-|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|管理已暫止的事件是<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>要求。|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|這個執行時間有一個要傳送的非 catch managed 偵錯工具事件。 請參閱備註一節，以瞭解追趕和非 catch 事件之間的區別。|  
+|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|暫止的 managed 事件是<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>要求。|  
   
 ## <a name="remarks"></a>備註  
- 更新事件包含程序、 應用程式定義域、 組件、 模組和偵錯工具帶到目前的狀態之後它已附加至處理序, 的執行緒建立通知。 非 catch 總事件，由`CLR_DEBUGGING_MANAGED_EVENT_PENDING`旗標，包括所有其他偵錯工具事件，例如例外狀況和 managed 偵錯助理 (MDA) 通知。  
+ 捕捉事件包括進程、應用程式域、元件、模組，以及執行緒建立通知，可讓偵錯工具在附加至進程之後回到目前狀態。 非捕捉事件（由`CLR_DEBUGGING_MANAGED_EVENT_PENDING`旗標指示）包含所有其他偵錯工具事件，例如例外狀況和 managed 偵錯工具（MDA）通知。  
   
- `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`旗標可讓執行階段終止的例外狀況和附加 managed 偵錯工具，可取消的要求之間不同。  
+ `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`旗標可讓執行時間區別終止的例外狀況和要求，以附加可取消的 managed 偵錯工具。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Metahost.idl Metahost.h  
+ **標頭：** Metahost .idl，Metahost。h  
   
  **LIBRARY:** CorGuids.lib  
   
@@ -59,5 +59,5 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯列舉](debugging-enumerations.md)
+- [偵錯](index.md)

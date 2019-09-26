@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 412e2bb7da7b5b3396342df169d56d2724ddb466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eab5fc13b74d8af4f0baaa3953c5c73ea255bfe6
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740557"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274026"
 ---
-# <a name="corpubenumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 列舉
+# <a name="cor_pub_enumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 列舉
 識別所要列舉的類型。  
   
 ## <a name="syntax"></a>語法  
@@ -38,15 +38,15 @@ typedef enum {
   
 |成員名稱|描述|  
 |-----------------|-----------------|  
-|`COR_PUB_MANAGEDONLY`|受管理的程序。|  
+|`COR_PUB_MANAGEDONLY`|Managed 進程。|  
   
 ## <a name="remarks"></a>備註  
- 目前版本的 unmanaged 偵錯 API 列舉只受管理的程序。  
+ 目前版本的非受控偵錯工具開發介面只會列舉受管理的進程。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** CorPub.idl CorPub.h  
+ **標頭：** CorPub .idl，CorPub。h  
   
  **LIBRARY:** CorGuids.lib  
   
@@ -54,4 +54,4 @@ typedef enum {
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [偵錯列舉](debugging-enumerations.md)

@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 31e0ef6d1eaf06caf7f258a38e8a9a79c0d50a07
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 9b8d28f7f5508b4ba7c46306b5e78aa3d53d95e0
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202668"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71263335"
 ---
-| .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] <br /> 預覽 |
+| .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
 | .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 | 3.0 |
 | .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup>  | 不適用<sup>3</sup> |
@@ -25,7 +25,7 @@ ms.locfileid: "70202668"
 
 - 資料行代表 .NET Standard 版本。 每個標題儲存格都是一個文件連結，該文件說明在該 .NET Standard 版本中新增了哪些 API。
 - 資料列代表不同的 .NET 實作。
-- 每個資料格中的版本號碼分別表示以該 .NET Standard 版本為目標所需的「最低」  實作版本。
+- 每個資料格中的版本號碼分別表示以該 .NET Standard 版本為目標所需的「最低」實作版本。
 - 若為互動式資料表，請參閱 [.NET Standard 版本](https://dotnet.microsoft.com/platform/dotnet-standard#versions)。
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md

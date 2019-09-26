@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2efe159eaa8b49d4d3825e9737593d0a12fc4d4c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740730"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274064"
 ---
-# <a name="corfield-structure"></a>COR_FIELD 結構
+# <a name="cor_field-structure"></a>COR_FIELD 結構
 提供物件中欄位的相關資訊。  
   
 ## <a name="syntax"></a>語法  
@@ -41,15 +41,15 @@ typedef struct COR_FIELD{
   
 |成員|描述|  
 |------------|-----------------|  
-|`token`|`mdFieldDef`權杖，可用來取得欄位資訊。|  
-|`offset`|在物件中的欄位資料的位元組位移。|  
-|`id`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)可識別此欄位的型別值。|  
-|`fieldType`|CorElementType 列舉值，指出欄位的型別。|  
+|`token`|可以用來取得欄位資訊的token。`mdFieldDef`|  
+|`offset`|物件中欄位資料的位移（以位元組為單位）。|  
+|`id`|識別此欄位類型的[COR_TYPEID](cor-typeid-structure.md)值。|  
+|`fieldType`|表示欄位類型的 CorElementType 列舉值。|  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -59,5 +59,5 @@ typedef struct COR_FIELD{
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)

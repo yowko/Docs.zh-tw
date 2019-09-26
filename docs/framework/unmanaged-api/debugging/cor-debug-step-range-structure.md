@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740777"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274197"
 ---
-# <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE 結構
+# <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE 結構
 包含程式碼範圍的位移資訊。  
   
- 此結構由[icordebugstepper:: Steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)方法。  
+ 這個結構是由[ICorDebugStepper：： StepRange](icordebugstepper-steprange-method.md)方法所使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,10 +42,10 @@ typedef struct {
 |成員|描述|  
 |------------|-----------------|  
 |`startOffset`|範圍開頭的位移。|  
-|`endOffset`|範圍的結束位移。|  
+|`endOffset`|範圍結尾的位移。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl  
   
@@ -55,6 +55,6 @@ typedef struct {
   
 ## <a name="see-also"></a>另請參閱
 
-- [StepRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [StepRange 方法](icordebugstepper-steprange-method.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)

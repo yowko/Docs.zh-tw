@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740820"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274148"
 ---
-# <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION 結構
-包含目前執行緒框架中正在作用的函式相關資訊。 此結構由[ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)方法。  
+# <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION 結構
+包含目前執行緒框架中正在作用的函式相關資訊。 這個結構是由[ICorDebugThread2：： GetActiveFunctions](icordebugthread2-getactivefunctions-method.md)方法所使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,16 +40,16 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`pAppDomain`|應用程式網域的擁有者指標`ilOffset`欄位。|  
-|`pModule`|指標的模組擁有者`ilOffset`欄位。|  
-|`pFunction`|指標的函式擁有者`ilOffset`欄位。|  
-|`ilOffset`|Microsoft intermediate language (MSIL) 位移的框架。|  
-|`flags`|保留供未來擴充。|  
+|`pAppDomain`|`ilOffset`欄位之應用程式域擁有者的指標。|  
+|`pModule`|`ilOffset`欄位之模組擁有者的指標。|  
+|`pFunction`|`ilOffset`欄位之函數擁有者的指標。|  
+|`ilOffset`|框架的 Microsoft 中繼語言（MSIL）位移。|  
+|`flags`|保留以供未來擴充性之用。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl  
   
@@ -59,5 +59,5 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)

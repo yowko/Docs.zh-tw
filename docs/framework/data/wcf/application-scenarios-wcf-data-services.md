@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: eaf92bea30b80a47d0f623e38eed7768bccdbb6a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9e70e2fff0bee22bcb7d7668f33302f7e7013117
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928496"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273142"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>應用程式案例 (WCF 資料服務)
 
@@ -18,7 +18,7 @@ ms.locfileid: "70928496"
 
 將資料庫中的關聯式資料公開為[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。
 
-- [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [快速入門](quickstart-wcf-data-services.md)
 
 - [將資料當作服務公開](exposing-your-data-as-a-service-wcf-data-services.md)
 
@@ -26,7 +26,7 @@ ms.locfileid: "70928496"
 
 將任意 CLR 資料類別公開為 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。
 
-- [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+- [將資料當作服務公開](exposing-your-data-as-a-service-wcf-data-services.md)
 
 - [如何：使用反映提供者建立資料服務](create-a-data-service-using-rp-wcf-data-services.md)
 
@@ -34,7 +34,7 @@ ms.locfileid: "70928496"
 
 在以 .NET Framework 為基礎的用戶端應用程式中，取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。
 
-- [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [快速入門](quickstart-wcf-data-services.md)
 
 - [在用戶端應用程式中使用資料服務](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -50,7 +50,7 @@ ms.locfileid: "70928496"
 
 在以 AJAX 為基礎的用戶端應用程式中，取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。
 
-- [在用戶端應用程式中使用資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+- [在用戶端應用程式中使用資料服務](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
 - [ODataURI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)
 
@@ -58,7 +58,7 @@ ms.locfileid: "70928496"
 
 建立端對端資料解決方案，以使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]在用戶端和伺服器之間傳輸資料。
 
-- [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [快速入門](quickstart-wcf-data-services.md)
 
 - [在用戶端應用程式中使用資料服務](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -66,7 +66,7 @@ ms.locfileid: "70928496"
 
 建立以 .NET Framework 為基礎的用戶端應用程式，該應用程式會以非同步方式取用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要，避免用戶端出現延遲問題。
 
-- [如何：執行非同步資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
+- [如何：執行非同步資料服務查詢](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
 
 - [非同步作業](asynchronous-operations-wcf-data-services.md)
 
@@ -74,13 +74,13 @@ ms.locfileid: "70928496"
 
 以資料流程的形式[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]存取和變更的二進位大型物件，公開和取用摘要。
 
-- [資料流提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)
+- [資料流提供者](streaming-provider-wcf-data-services.md)
 
 - [使用二進位資料](working-with-binary-data-wcf-data-services.md)
 
 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]將摘要系結至 Windows Presentation Framework （WPF）應用程式中的控制項。
 
-- [將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [將資料繫結至控制項](binding-data-to-controls-wcf-data-services.md)
 
 - [如何：將資料系結至 Windows Presentation Foundation 元素](bind-data-to-wpf-elements-wcf-data-services.md)
 
@@ -88,13 +88,13 @@ ms.locfileid: "70928496"
 
 攔截傳入資料服務的內送訊息，針對查詢來執行資料驗證與以角色為基礎的篩選。
 
-- [如何：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)
+- [如何：攔截資料服務訊息](how-to-intercept-data-service-messages-wcf-data-services.md)
 
 - [攔截器](interceptors-wcf-data-services.md)
 
 在資料服務建立端點以啟用自訂服務行為。
 
-- [如何：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [如何：定義服務作業](how-to-define-a-service-operation-wcf-data-services.md)
 
 - [服務作業](service-operations-wcf-data-services.md)
 

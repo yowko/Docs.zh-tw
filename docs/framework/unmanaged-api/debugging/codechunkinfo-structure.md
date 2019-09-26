@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36afee8af3de046683c55215a677a529b0837c77
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740878"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274260"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo 結構
 
@@ -40,14 +40,14 @@ typedef struct _CodeChunkInfo {
   
 |成員|描述|  
 |------------|-----------------|  
-|`startAddr`|A`CORDB_ADDRESS`值，指定區塊的開始位址。|  
-|`length`|以位元組為單位的區塊大小。|  
+|`startAddr`|`CORDB_ADDRESS`值，指定區塊的起始位址。|  
+|`length`|區塊的大小（以位元組為單位）。|  
   
 ## <a name="remarks"></a>備註  
- 單一的程式碼區塊是物件的屬於程式碼，例如函式的原生程式碼的區域。  
+ 程式碼的單一區塊是機器碼的區域，而機器碼是程式碼物件的一部分，例如函式。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl  
   
@@ -57,6 +57,6 @@ typedef struct _CodeChunkInfo {
   
 ## <a name="see-also"></a>另請參閱
 
-- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [GetCodeChunks 方法](icordebugcode2-getcodechunks-method.md)
+- [偵錯結構](debugging-structures.md)
+- [偵錯](index.md)
