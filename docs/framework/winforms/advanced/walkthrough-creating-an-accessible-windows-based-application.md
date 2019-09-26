@@ -5,13 +5,16 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
+dev_langs:
+- csharp
+- vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957185"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306332"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立 Windows 架構的協助工具應用程式
 
@@ -58,9 +61,9 @@ ms.locfileid: "69957185"
 
 - 確定任何描述 TextBox 控制項的 Label 控制項都是依定位順序，緊接著位於 TextBox 控制項之前。
 
-- 使用 "&" 字元, 將存取金鑰新增至使用者可能想<xref:System.Windows.Forms.Control.Text%2A>要流覽的任何控制項的屬性。
+- 使用 "&" 字元，將存取金鑰新增至使用者可能想<xref:System.Windows.Forms.Control.Text%2A>要流覽的任何控制項的屬性。
 
-- 使用 "&" 字元, 將存取金鑰加入至<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要流覽之控制項前面的標籤屬性。 將標籤的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 屬性設定為 `true`如此一來，當使用者按下便捷鍵時，焦點便會設定為定位順序的下一個控制項。
+- 使用 "&" 字元，將存取金鑰加入至<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要流覽之控制項前面的標籤屬性。 將標籤的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 屬性設定為 `true`如此一來，當使用者按下便捷鍵時，焦點便會設定為定位順序的下一個控制項。
 
 - 將便捷鍵加入所有功能表項目。
 
@@ -74,11 +77,11 @@ ms.locfileid: "69957185"
    ||AccessibleName|訂購表單|
    ||字型大小|10|
    ||文字|比薩訂購表單|
-   |PictureBox|名稱|標誌|
+   |PictureBox|Name|標誌|
    ||AccessibleDescription|一片披薩|
    ||AccessibleName|公司標誌|
    ||Image|任何圖示或點陣圖|
-   |ThisAddIn|名稱|companyLabel|
+   |ThisAddIn|Name|companyLabel|
    ||文字|好吃披薩|
    ||TabIndex|1|
    ||AccessibleDescription|公司名稱|
@@ -86,61 +89,61 @@ ms.locfileid: "69957185"
    ||Backcolor|藍色|
    ||Forecolor|黃色|
    ||Font size|18|
-   |ThisAddIn|名稱|customerLabel|
+   |ThisAddIn|Name|customerLabel|
    ||文字|名稱(&N)|
    ||TabIndex|2|
    ||AccessibleDescription|顧客名稱標籤|
    ||AccessibleName|顧客名稱標籤|
    ||UseMnemonic|True|
-   |TextBox|名稱|customerName|
+   |TextBox|Name|customerName|
    ||文字|(無)|
    ||TabIndex|3|
    ||AccessibleDescription|顧客名稱|
    ||AccessibleName|顧客名稱|
-   |GroupBox|名稱|sizeOptions|
+   |GroupBox|Name|sizeOptions|
    ||AccessibleDescription|披薩尺寸選擇|
    ||AccessibleName|披薩尺寸選擇|
    ||文字|披薩尺寸|
    ||TabIndex|4|
-   |RadioButton|名稱|smallPizza|
+   |RadioButton|Name|smallPizza|
    ||文字|小披薩美金 $6.00 元(&S)|
    ||已核取|True|
    ||TabIndex|0|
    ||AccessibleDescription|小披薩|
    ||AccessibleName|小披薩|
-   |RadioButton|名稱|largePizza|
+   |RadioButton|Name|largePizza|
    ||文字|大批薩美金 $10.00 元(&L)|
    ||TabIndex|1|
    ||AccessibleDescription|大批薩|
    ||AccessibleName|大批薩|
-   |ThisAddIn|名稱|toppingsLabel|
+   |ThisAddIn|Name|toppingsLabel|
    ||文字|配料 (每份美金 $0.75 元)(&T)|
    ||TabIndex|5|
    ||AccessibleDescription|配料標籤|
    ||AccessibleName|配料標籤|
    ||UseMnemonic|True|
-   |CheckedListBox|名稱|配料|
+   |CheckedListBox|Name|配料|
    ||TabIndex|6|
    ||AccessibleDescription|可供選擇的配料|
    ||AccessibleName|可供選擇的配料|
    ||項目|辣肉腸、臘腸、蘑菇|
-   |按鈕|名稱|順序|
+   |按鈕|Name|順序|
    ||文字|順序(&O)|
    ||TabIndex|7|
    ||AccessibleDescription|合計訂單|
    ||AccessibleName|訂單總計|
-   |按鈕|名稱|cancel|
+   |按鈕|Name|cancel|
    ||文字|取消(&C)|
    ||TabIndex|8|
    ||AccessibleDescription|取消訂單|
    ||AccessibleName|取消訂單|
-   |MainMenu|名稱|theMainMenu|
-   |MenuItem|名稱|fileCommands|
+   |MainMenu|Name|theMainMenu|
+   |MenuItem|Name|fileCommands|
    ||文字|檔案(&F)|
-   |MenuItem|名稱|exitApp|
+   |MenuItem|Name|exitApp|
    ||文字|結束(&X)|
 
-   您的表單看起來會像下圖:
+   您的表單看起來會像下圖：
 
    ![[比薩訂單] 表單的 [名稱] 文字方塊和 [大小] 和 [配料] 選項。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
@@ -165,96 +168,88 @@ ms.locfileid: "69957185"
 1. 建立一個方法，將標籤的色彩設定為系統色彩。
 
     ```vb
-    ' Visual Basic
     Private Sub SetColorScheme()
-       If SystemInformation.HighContrast Then
-          companyLabel.BackColor = SystemColors.Window
-          companyLabel.ForeColor = SystemColors.WindowText
-       Else
-          companyLabel.BackColor = Color.Blue
-          companyLabel.ForeColor = Color.Yellow
-       End If
+        If SystemInformation.HighContrast Then
+            companyLabel.BackColor = SystemColors.Window
+            companyLabel.ForeColor = SystemColors.WindowText
+        Else
+            companyLabel.BackColor = Color.Blue
+            companyLabel.ForeColor = Color.Yellow
+        End If
     End Sub
     ```
 
     ```csharp
-    // C#
     private void SetColorScheme()
     {
-       if (SystemInformation.HighContrast)
-       {
-          companyLabel.BackColor = SystemColors.Window;
-          companyLabel.ForeColor = SystemColors.WindowText;
-       }
-       else
-       {
-          companyLabel.BackColor = Color.Blue;
-          companyLabel.ForeColor = Color.Yellow;
-       }
+        if (SystemInformation.HighContrast)
+        {
+            companyLabel.BackColor = SystemColors.Window;
+            companyLabel.ForeColor = SystemColors.WindowText;
+        }
+        else
+        {
+            companyLabel.BackColor = Color.Blue;
+            companyLabel.ForeColor = Color.Yellow;
+        }
     }
     ```
 
-2. 在表單建構函式 (Visual Basic 中為 `Public Sub New()`，Visual C# 中為 `public class Form1`) 中呼叫 `SetColorScheme` 程序。 若要存取 Visual Basic 中的建構函式，您必須展開標示為 [Windows Forms 設計工具產生的程式碼] 的區域。
+2. 在表單建構函式 (Visual Basic 中為 `Public Sub New()`，Visual C# 中為 `public Form1()`) 中呼叫 `SetColorScheme` 程序。 若要存取 Visual Basic 中的建構函式，您必須展開標示為 [Windows Forms 設計工具產生的程式碼] 的區域。
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
+        InitializeComponent();
+        SetColorScheme();
     }
     ```
 
 3. 使用適當的簽章建立事件程序，以回應 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。
 
     ```vb
-    ' Visual Basic
-    Protected Sub UserPreferenceChanged(ByVal sender As Object, _
-    ByVal e As Microsoft.Win32.UserPreferenceChangedEventArgs)
-       SetColorScheme()
+    Protected Sub UserPreferenceChanged(sender As Object, _
+    e As Microsoft.Win32.UserPreferenceChangedEventArgs)
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public void UserPreferenceChanged(object sender,
     Microsoft.Win32.UserPreferenceChangedEventArgs e)
     {
-       SetColorScheme();
+        SetColorScheme();
     }
     ```
 
 4. 呼叫 `InitializeComponents` 之後，在表單建構函式中新增程式碼，將事件程序與系統事件連結。 這個方法會呼叫 `SetColorScheme` 程序。
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
-       AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
+        AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          += new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
+        InitializeComponent();
+        SetColorScheme();
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           += new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
     }
     ```
 
@@ -264,34 +259,27 @@ ms.locfileid: "69957185"
     > 系統事件程式碼會執行獨立於主應用程式的執行緒。 如果您沒有釋放該事件，即使關閉程式之後，連結至該事件的程式碼仍會繼續執行。
 
     ```vb
-    ' Visual Basic
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
-       If disposing Then
-          If Not (components Is Nothing) Then
-             components.Dispose()
-          End If
-       End If
-       RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
-       MyBase.Dispose(disposing)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
+        MyBase.Dispose(disposing)
     End Sub
     ```
 
     ```csharp
-    // C#
-    protected override void Dispose( bool disposing )
+    protected override void Dispose(bool disposing)
     {
-       if( disposing )
-       {
-          if (components != null)
-          {
-             components.Dispose();
-          }
-       }
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
-       base.Dispose( disposing );
+        if(disposing && components != null)
+        {
+            components.Dispose();
+        }
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
+        base.Dispose( disposing );
     }
     ```
 
@@ -303,7 +291,7 @@ ms.locfileid: "69957185"
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>透過音效以外的其他方式提供資訊
 
-1. 使用 Windows 應用程式開發介面函式 FlashWindow 讓標題列閃爍。 如需如何呼叫 Windows API 函式的範例, 請[參閱逐步解說:呼叫 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
+1. 使用 Windows 應用程式開發介面函式 FlashWindow 讓標題列閃爍。 如需如何呼叫 Windows API 函式的範例，請[參閱逐步解說：呼叫 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
 
     > [!NOTE]
     > 使用者可以啟動 Windows 聲音感測服務，當系統音效透過電腦內建喇叭播放時，同時能使視窗閃爍。

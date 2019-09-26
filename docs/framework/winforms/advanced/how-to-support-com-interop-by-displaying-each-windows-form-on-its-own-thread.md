@@ -1,9 +1,8 @@
 ---
-title: 作法：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
+title: HOW TO：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
 ms.date: 03/30/2017
 dev_langs:
-- CSharp
-- VB
+- vb
 helpviewer_keywords:
 - COM interop [Windows Forms], Windows Forms
 - COM [Windows Forms]
@@ -11,24 +10,24 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: 90bbd7df45424f8513598e9d7439d8ae6bf6f52c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 41af4d81995a0a4eac912ecce7dc70cf04f012cd
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040301"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306382"
 ---
-# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>作法：藉由在自己的執行緒上顯示每個 Windows Form 來支援 COM Interop
+# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>HOW TO：藉由在自己的執行緒上顯示每個 Windows Form 來支援 COM Interop
 
-您可以藉由在 .NET Framework 訊息迴圈上顯示您的表單來解決 COM 互通性問題, 您<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>可以使用方法來建立。
+您可以藉由在 .NET Framework 訊息迴圈上顯示您的表單來解決 COM 互通性問題，您<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>可以使用方法來建立。
 
 若要讓 Windows Form 在 COM 用戶端應用程式正確運作，您必須在 Windows Form 訊息迴圈上執行表單。 若要執行此工作，請使用下列的其中一個方法：
 
-- 使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法，以顯示 Windows Form。 如需詳細資訊，請參閱[如何：使用 ShowDialog 方法](com-interop-by-displaying-a-windows-form-shadow.md)來顯示 Windows Form, 以支援 COM Interop。
+- 使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法，以顯示 Windows Form。 如需詳細資訊，請參閱[如何：使用 ShowDialog 方法](com-interop-by-displaying-a-windows-form-shadow.md)來顯示 Windows Form，以支援 COM Interop。
 
 - 在個別執行緒上顯示每個 Windows Form。
 
-在 Visual Studio 中, 這項功能有廣泛的支援。
+在 Visual Studio 中，這項功能有廣泛的支援。
 
 另請[參閱逐步解說:在自己的執行緒](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100))上顯示每個 Windows FORM 以支援 COM Interop。
 
@@ -36,7 +35,7 @@ ms.locfileid: "69040301"
 
 下列程式碼範例示範如何在個別的執行緒上顯示表單，並呼叫 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法在該執行緒上啟動 Windows Form 訊息幫浦。 若要使用此方法，您必須使用 <xref:System.Windows.Forms.Control.Invoke%2A> 方法封送處理任何呼叫至來自 Unmanaged 應用程式的表單。
 
-此方法需要表單的每個執行個體使用它自己的訊息迴圈在自己的執行緒上執行。 在每個執行緒中，您不能執行一個以上的訊息迴圈。 因此，您無法變更用戶端應用程式的訊息迴圈。 不過, 您可以修改 .NET Framework 元件來啟動新的執行緒, 以使用自己的訊息迴圈。
+此方法需要表單的每個執行個體使用它自己的訊息迴圈在自己的執行緒上執行。 在每個執行緒中，您不能執行一個以上的訊息迴圈。 因此，您無法變更用戶端應用程式的訊息迴圈。 不過，您可以修改 .NET Framework 元件來啟動新的執行緒，以使用自己的訊息迴圈。
 
 [!code-vb[System.Windows.Forms.ComInterop#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/COMForm.vb#1)]
 
