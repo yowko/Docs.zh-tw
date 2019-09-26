@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2efe159eaa8b49d4d3825e9737593d0a12fc4d4c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740730"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274064"
 ---
-# <a name="corfield-structure"></a><span data-ttu-id="14429-102">COR_FIELD 結構</span><span class="sxs-lookup"><span data-stu-id="14429-102">COR_FIELD Structure</span></span>
-<span data-ttu-id="14429-103">提供物件中欄位的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="14429-103">Provides information about a field in an object.</span></span>  
+# <a name="cor_field-structure"></a><span data-ttu-id="f39e8-102">COR_FIELD 結構</span><span class="sxs-lookup"><span data-stu-id="f39e8-102">COR_FIELD Structure</span></span>
+<span data-ttu-id="f39e8-103">提供物件中欄位的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="f39e8-103">Provides information about a field in an object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="14429-104">語法</span><span class="sxs-lookup"><span data-stu-id="14429-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f39e8-104">語法</span><span class="sxs-lookup"><span data-stu-id="f39e8-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct COR_FIELD{  
@@ -37,27 +37,27 @@ typedef struct COR_FIELD{
 } COR_FIELD;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="14429-105">成員</span><span class="sxs-lookup"><span data-stu-id="14429-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f39e8-105">成員</span><span class="sxs-lookup"><span data-stu-id="f39e8-105">Members</span></span>  
   
-|<span data-ttu-id="14429-106">成員</span><span class="sxs-lookup"><span data-stu-id="14429-106">Member</span></span>|<span data-ttu-id="14429-107">描述</span><span class="sxs-lookup"><span data-stu-id="14429-107">Description</span></span>|  
+|<span data-ttu-id="f39e8-106">成員</span><span class="sxs-lookup"><span data-stu-id="f39e8-106">Member</span></span>|<span data-ttu-id="f39e8-107">描述</span><span class="sxs-lookup"><span data-stu-id="f39e8-107">Description</span></span>|  
 |------------|-----------------|  
-|`token`|<span data-ttu-id="14429-108">`mdFieldDef`權杖，可用來取得欄位資訊。</span><span class="sxs-lookup"><span data-stu-id="14429-108">An `mdFieldDef` token that can be used to get field information.</span></span>|  
-|`offset`|<span data-ttu-id="14429-109">在物件中的欄位資料的位元組位移。</span><span class="sxs-lookup"><span data-stu-id="14429-109">The offset, in bytes, to the field data in the object.</span></span>|  
-|`id`|<span data-ttu-id="14429-110">A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)可識別此欄位的型別值。</span><span class="sxs-lookup"><span data-stu-id="14429-110">A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) value that identifies the type of this field.</span></span>|  
-|`fieldType`|<span data-ttu-id="14429-111">CorElementType 列舉值，指出欄位的型別。</span><span class="sxs-lookup"><span data-stu-id="14429-111">A CorElementType enumeration value that indicates the type of the field.</span></span>|  
+|`token`|<span data-ttu-id="f39e8-108">可以用來取得欄位資訊的token。`mdFieldDef`</span><span class="sxs-lookup"><span data-stu-id="f39e8-108">An `mdFieldDef` token that can be used to get field information.</span></span>|  
+|`offset`|<span data-ttu-id="f39e8-109">物件中欄位資料的位移（以位元組為單位）。</span><span class="sxs-lookup"><span data-stu-id="f39e8-109">The offset, in bytes, to the field data in the object.</span></span>|  
+|`id`|<span data-ttu-id="f39e8-110">識別此欄位類型的[COR_TYPEID](cor-typeid-structure.md)值。</span><span class="sxs-lookup"><span data-stu-id="f39e8-110">A [COR_TYPEID](cor-typeid-structure.md) value that identifies the type of this field.</span></span>|  
+|`fieldType`|<span data-ttu-id="f39e8-111">表示欄位類型的 CorElementType 列舉值。</span><span class="sxs-lookup"><span data-stu-id="f39e8-111">A CorElementType enumeration value that indicates the type of the field.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="14429-112">備註</span><span class="sxs-lookup"><span data-stu-id="14429-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f39e8-112">備註</span><span class="sxs-lookup"><span data-stu-id="f39e8-112">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="14429-113">需求</span><span class="sxs-lookup"><span data-stu-id="14429-113">Requirements</span></span>  
- <span data-ttu-id="14429-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="14429-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f39e8-113">需求</span><span class="sxs-lookup"><span data-stu-id="f39e8-113">Requirements</span></span>  
+ <span data-ttu-id="f39e8-114">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f39e8-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="14429-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="14429-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f39e8-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f39e8-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="14429-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="14429-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f39e8-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f39e8-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="14429-117">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14429-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="f39e8-117">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f39e8-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14429-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="14429-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f39e8-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f39e8-118">See also</span></span>
 
-- [<span data-ttu-id="14429-119">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="14429-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="14429-120">偵錯</span><span class="sxs-lookup"><span data-stu-id="14429-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="f39e8-119">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="f39e8-119">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="f39e8-120">偵錯</span><span class="sxs-lookup"><span data-stu-id="f39e8-120">Debugging</span></span>](index.md)

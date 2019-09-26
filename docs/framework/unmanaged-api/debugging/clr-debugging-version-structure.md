@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e71a1538e42061c6cb949b22bb63fe6b17a0dfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4528ccd77fed2ea2a9b2d08243ffa1535bfad1ae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741117"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274080"
 ---
-# <a name="clrdebuggingversion-structure"></a><span data-ttu-id="4bcf7-102">CLR_DEBUGGING_VERSION 結構</span><span class="sxs-lookup"><span data-stu-id="4bcf7-102">CLR_DEBUGGING_VERSION Structure</span></span>
-<span data-ttu-id="4bcf7-103">定義用來偵錯之工具通用語言執行平台 (CLR) 的產品版本。</span><span class="sxs-lookup"><span data-stu-id="4bcf7-103">Defines the product version of the common language runtime (CLR) for debugging purposes.</span></span>  
+# <a name="clr_debugging_version-structure"></a><span data-ttu-id="ce383-102">CLR_DEBUGGING_VERSION 結構</span><span class="sxs-lookup"><span data-stu-id="ce383-102">CLR_DEBUGGING_VERSION Structure</span></span>
+<span data-ttu-id="ce383-103">定義用來偵錯之工具通用語言執行平台 (CLR) 的產品版本。</span><span class="sxs-lookup"><span data-stu-id="ce383-103">Defines the product version of the common language runtime (CLR) for debugging purposes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4bcf7-104">語法</span><span class="sxs-lookup"><span data-stu-id="4bcf7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce383-104">語法</span><span class="sxs-lookup"><span data-stu-id="ce383-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _CLR_DEBUGGING_VERSION  
@@ -39,29 +39,29 @@ typedef struct _CLR_DEBUGGING_VERSION
 } CLR_DEBUGGING_VERSION;
 ```  
   
-## <a name="members"></a><span data-ttu-id="4bcf7-105">成員</span><span class="sxs-lookup"><span data-stu-id="4bcf7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ce383-105">成員</span><span class="sxs-lookup"><span data-stu-id="ce383-105">Members</span></span>  
   
-|<span data-ttu-id="4bcf7-106">成員</span><span class="sxs-lookup"><span data-stu-id="4bcf7-106">Member</span></span>|<span data-ttu-id="4bcf7-107">描述</span><span class="sxs-lookup"><span data-stu-id="4bcf7-107">Description</span></span>|  
+|<span data-ttu-id="ce383-106">成員</span><span class="sxs-lookup"><span data-stu-id="ce383-106">Member</span></span>|<span data-ttu-id="ce383-107">描述</span><span class="sxs-lookup"><span data-stu-id="ce383-107">Description</span></span>|  
 |------------|-----------------|  
-|`wStructVersion`|<span data-ttu-id="4bcf7-108">結構版本號碼</span><span class="sxs-lookup"><span data-stu-id="4bcf7-108">The structure version number</span></span>|  
-|`wMajor`|<span data-ttu-id="4bcf7-109">主要版本號碼。</span><span class="sxs-lookup"><span data-stu-id="4bcf7-109">The major version number.</span></span>|  
-|`wMinor`|<span data-ttu-id="4bcf7-110">次要版本號碼。</span><span class="sxs-lookup"><span data-stu-id="4bcf7-110">The minor version number.</span></span>|  
-|`wBuild`|<span data-ttu-id="4bcf7-111">組建編號。</span><span class="sxs-lookup"><span data-stu-id="4bcf7-111">The build number.</span></span>|  
-|`wRevision`|<span data-ttu-id="4bcf7-112">修訂編號。</span><span class="sxs-lookup"><span data-stu-id="4bcf7-112">The revision number.</span></span>|  
+|`wStructVersion`|<span data-ttu-id="ce383-108">結構版本號碼</span><span class="sxs-lookup"><span data-stu-id="ce383-108">The structure version number</span></span>|  
+|`wMajor`|<span data-ttu-id="ce383-109">主要版本號碼。</span><span class="sxs-lookup"><span data-stu-id="ce383-109">The major version number.</span></span>|  
+|`wMinor`|<span data-ttu-id="ce383-110">次要版本號碼。</span><span class="sxs-lookup"><span data-stu-id="ce383-110">The minor version number.</span></span>|  
+|`wBuild`|<span data-ttu-id="ce383-111">組建編號。</span><span class="sxs-lookup"><span data-stu-id="ce383-111">The build number.</span></span>|  
+|`wRevision`|<span data-ttu-id="ce383-112">修訂編號。</span><span class="sxs-lookup"><span data-stu-id="ce383-112">The revision number.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4bcf7-113">備註</span><span class="sxs-lookup"><span data-stu-id="4bcf7-113">Remarks</span></span>  
- <span data-ttu-id="4bcf7-114">`CLR_DEBUGGING_VERSION`結構不過是 COR_VERSION 結構相同，則`CLR_DEBUGGING_VERSION`結構提供額外的結構版本 欄位 (`wStructVersion`)。</span><span class="sxs-lookup"><span data-stu-id="4bcf7-114">The `CLR_DEBUGGING_VERSION` structure is the same as the COR_VERSION structure, however, the `CLR_DEBUGGING_VERSION` structure provides an additional structure version field (`wStructVersion`).</span></span> <span data-ttu-id="4bcf7-115">目前，此欄位必須設定為零。</span><span class="sxs-lookup"><span data-stu-id="4bcf7-115">Currently, this field must be set to zero.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ce383-113">備註</span><span class="sxs-lookup"><span data-stu-id="ce383-113">Remarks</span></span>  
+ <span data-ttu-id="ce383-114">結構與 COR_VERSION 結構相同，不過`CLR_DEBUGGING_VERSION` ，結構會提供其他結構版本欄位（`wStructVersion`）。 `CLR_DEBUGGING_VERSION`</span><span class="sxs-lookup"><span data-stu-id="ce383-114">The `CLR_DEBUGGING_VERSION` structure is the same as the COR_VERSION structure, however, the `CLR_DEBUGGING_VERSION` structure provides an additional structure version field (`wStructVersion`).</span></span> <span data-ttu-id="ce383-115">目前，此欄位必須設定為零。</span><span class="sxs-lookup"><span data-stu-id="ce383-115">Currently, this field must be set to zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4bcf7-116">需求</span><span class="sxs-lookup"><span data-stu-id="4bcf7-116">Requirements</span></span>  
- <span data-ttu-id="4bcf7-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4bcf7-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce383-116">需求</span><span class="sxs-lookup"><span data-stu-id="ce383-116">Requirements</span></span>  
+ <span data-ttu-id="ce383-117">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ce383-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4bcf7-118">**標頭：** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="4bcf7-118">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="ce383-118">**標頭：** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="ce383-118">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="4bcf7-119">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4bcf7-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ce383-119">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce383-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4bcf7-120">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4bcf7-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="ce383-120">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce383-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4bcf7-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4bcf7-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce383-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ce383-121">See also</span></span>
 
-- [<span data-ttu-id="4bcf7-122">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="4bcf7-122">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="4bcf7-123">偵錯</span><span class="sxs-lookup"><span data-stu-id="4bcf7-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="ce383-122">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="ce383-122">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="ce383-123">偵錯</span><span class="sxs-lookup"><span data-stu-id="ce383-123">Debugging</span></span>](index.md)
