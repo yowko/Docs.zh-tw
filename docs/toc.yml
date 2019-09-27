@@ -532,6 +532,8 @@
       href: framework/tools/
     - name: 其他類別庫和 API
       href: framework/additional-apis/
+- name: .NET 桌面指南 - WPF
+  href: desktop-wpf/
 - name: 'C# 指南'
   href: csharp/index.md
   items:
@@ -1111,7 +1113,7 @@
           href: visual-basic/programming-guide/program-structure/conditional-compilation.md
         - name: 作法：程式碼中的 Break 及 Combine 陳述式
           href: visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
-        - name: 作法：摺疊及隱藏程式碼區段
+        - name: HOW TO：摺疊及隱藏程式碼區段
           href: visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
         - name: 作法：Label 陳述式
           href: visual-basic/programming-guide/program-structure/how-to-label-statements.md
@@ -1153,12 +1155,12 @@
             - name: 複合資料類型
               href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
               items:
-                - name: 作法：在變數中存放多個值
+                - name: HOW TO：在變數中存放多個值
                   href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
             - name: 泛型型別
               href: visual-basic/programming-guide/language-features/data-types/generic-types.md
               items:
-                - name: 作法：定義可以為不同資料類型提供相同功能的類別
+                - name: HOW TO：定義可以為不同資料類型提供相同功能的類別
                   href: visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
                 - name: 作法：使用泛型類別
                   href: visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md
@@ -1240,7 +1242,7 @@
           href: visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md
         - name: 逐步解說：呼叫 Windows API
           href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
-        - name: 作法：呼叫 Windows API
+        - name: HOW TO：呼叫 Windows API
           href: visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md
         - name: 作法：呼叫不帶正負號的類型的 Windows 函式
           href: visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
@@ -2297,7 +2299,7 @@
             - name: 從命令列建置
               href: visual-basic/reference/command-line-compiler/building-from-the-command-line.md
               items:
-                - name: 作法：叫用命令列編譯器
+                - name: HOW TO：叫用命令列編譯器
                   href: visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md
                 - name: 編譯命令列的範例
                   href: visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md
