@@ -23,7 +23,7 @@ ms.locfileid: "70039972"
  發送器會先開啟通道接聽項，然後接受單一回覆通道。 它會利用通道，開始以無限迴圈傳送訊息 (要求)。 針對每個要求，它都會建立一個回覆訊息，並將其傳回用戶端。  
   
 ## <a name="creating-a-response-message"></a>建立回應訊息  
- 訊息處理是以 `MyServiceManager` 類型實作。 在 `HandleRequest` 方法中，會先檢查訊息的 `Action` 標頭，以查看是否支援要求。 定義了預先定義的 http://tempuri.org/HelloWorld/Hello SOAP 動作 "", 以提供訊息篩選。 這類似于 WCF 執行<xref:System.ServiceModel.ServiceHost>中的服務合約概念。  
+ 訊息處理是以 `MyServiceManager` 類型實作。 在 `HandleRequest` 方法中，會先檢查訊息的 `Action` 標頭，以查看是否支援要求。 定義了預先定義的"http://tempuri.org/HelloWorld/Hello"SOAP 動作, 以提供訊息篩選。 這類似于 WCF 執行<xref:System.ServiceModel.ServiceHost>中的服務合約概念。  
   
  若是正確的 SOAP 動作案例，此範例會擷取要求的訊息資料，並針對要求產生類似於 <xref:System.ServiceModel.ServiceHost> 案例中看到的對應回應。  
   

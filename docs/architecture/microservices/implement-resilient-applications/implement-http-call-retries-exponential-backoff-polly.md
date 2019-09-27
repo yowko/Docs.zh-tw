@@ -2,12 +2,12 @@
 title: 使用 Polly 以指數輪詢實作 HTTP 呼叫重試
 description: 了解如何使用 Polly 和 HttpClientFactory 處理 HTTP 失敗。
 ms.date: 01/07/2019
-ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: de1dad44b1ddc7b04438fb380f240d3be33bbb83
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674565"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331983"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>使用 HttpClientFactory 和 Polly 原則以指數輪詢實作 HTTP 呼叫重試
 
@@ -50,8 +50,6 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 ```
 
 透過 Polly，您可以定義重試原則，其中包含重試次數、指數輪詢組態，以及發生 HTTP 例外狀況時所要採取的動作，例如記錄錯誤。 在本例中，會設定原則，以便使用指數重試嘗試六次，一開始每隔兩秒。 
-
-因此，它會嘗試六次，而且每次重試的間隔秒數會是指數，一開始每隔兩秒。
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>將 Jitter 策略新增至重試原則
 

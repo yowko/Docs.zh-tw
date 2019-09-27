@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | AS
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 7cfb9ada4f963aa392a41cfb9f1b2df22f542d41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675465"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331993"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Web Core 應用程式的 Azure 裝載建議
 
@@ -124,9 +124,9 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
 
 您的應用程式需求應指定其架構。 有許多不同的 Azure 服務可供選擇。 選擇正確的服務是一項重要決策。 Microsoft 提供參考架構資源庫，以協助識別針對常見案例最佳化的常見架構。 您可以尋找緊密對應至應用程式需求的參考架構，或至少提供一個起點。
 
-圖 11-2 顯示參考架構範例。 此圖描述針對市場行銷進行最佳化的 Sitecore 內容管理系統網站之建議的架構方法。
+圖11-1 顯示範例參考架構。 此圖描述針對市場行銷進行最佳化的 Sitecore 內容管理系統網站之建議的架構方法。
 
-![](./media/image11-2.png)
+![圖11-1](./media/image11-2.png)
 
 **圖 11-1。** Sitecore 行銷網站參考架構。
 

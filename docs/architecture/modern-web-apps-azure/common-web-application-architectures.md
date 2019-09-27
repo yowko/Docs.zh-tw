@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926674"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332000"
 ---
 # <a name="common-web-application-architectures"></a>一般 Web 應用程式架構
 
@@ -186,7 +186,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 為了管理此模型，您會部署單一容器來代表應用程式。 若要調整，只要透過前端負載平衡器新增額外的複本即可。 由於是在單一容器或 VM 中管理單一部署，因此很簡單。
 
-![](./media/image5-13.png)
+![圖5-13](./media/image5-13.png)
 
 您可以在每個容器中包含多個元件/程式庫或內部層級，如圖 5-13 所示。 不過，遵循「容器執行一項動作並在一個處理序中執行該動作」的容器準則時，整合型模式可能會是一項衝突。
 
@@ -198,7 +198,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 整合型方法很常見，許多組織也正在使用這個架構方法進行開發。 許多有足夠好的結果，但其他則只是達到限制。 許多組織使用此模型來設計其應用程式，因為工具和基礎結構很難建置服務導向架構 (SOA)，而且在應用程式成長之前也看不到此需求。 如果您發現您達到整合型方法的限制，下個邏輯步驟可能是分解應用程式，以便讓它能更充分利用容器和微服務。
 
-![](./media/image5-14.png)
+![圖5-14](./media/image5-14.png)
 
 您可以針對每個執行個體使用專用 VM，在 Microsoft Azure 中部署整合型應用程式。 您可以使用 [Azure 虛擬機器擴展集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)輕鬆地調整 VM。 [Azure App Service](https://azure.microsoft.com/services/app-service/) 可以執行整合型應用程式並輕鬆地調整執行個體，而不必管理 VM。 Azure App Service 也可以執行 Docker 容器的單一執行個體，以簡化部署。 使用 Docker 時，您可以部署單一 VM 作為 Docker 主機，並執行多個執行個體。 使用 Azure 平衡器，如圖 5-14 中所示，您可以管理調整。
 
