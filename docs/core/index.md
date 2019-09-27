@@ -27,7 +27,7 @@ ms.locfileid: "71216214"
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
-最新版本是 .NET Core 3.0。 新功能包括 Windows Presentation Foundation （WPF）和 Windows Forms 的 Windows 桌面支援、使用 Blazor C#的完整堆疊 網頁程式開發、SignalR 和 Azure SignalR Service 的新增強功能C# 、新的C#語言功能（含8）還有更多。 如需 .NET Core 3.0 中新功能的完整清單，請參閱[.Net core 3.0 的新功能](./whats-new/dotnet-core-3-0.md)。
+最新版本是 .NET Core 3.0。新功能包括具有 Windows Presentation Foundation (WPF) 與 Windows Forms 的 Windows 桌面支援、使用 Blazor 的完整堆疊 C# Web 開發、SignalR 與 Azure SignalR Service 的新增強功能、C# 8 的新 C# 語言功能等。如需 .NET Core 3.0 中新功能的完整清單，請參閱 [.Net Core 3.0 的新功能](./whats-new/dotnet-core-3-0.md)。
 
 ## <a name="create-your-first-application"></a>建立您的第一個應用程式
 
