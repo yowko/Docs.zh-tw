@@ -5,18 +5,18 @@ metadata:
   title: 適用于 Apache Spark 檔的 .NET
   description: 瞭解如何在您撰寫 .NET 程式碼的任何地方，使用 .NET for Apache Spark 來處理資料的批次、即時串流、機器學習和臨機操作 Apache Spark 查詢。
   services: service
-  ms.service: dotnet-spark
+  ms.prod: dotnet-spark
   ms.topic: landing-page
   ms.collection: collection
   author: mamccrea
   ms.author: mamccrea
   ms.date: 09/11/2019
-  ms.openlocfilehash: 9836e97aa2a958792fe95c8a1241d284ef860c45
-  ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+  ms.openlocfilehash: bce56c20e30df1f6eb6d6be5edb7ea766a783d83
+  ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/12/2019
-  ms.locfileid: "70928506"
+  ms.lasthandoff: 09/27/2019
+  ms.locfileid: "71332568"
 landingContent:
 - title: 關於 Apache Spark 的 .NET
   linkLists:
