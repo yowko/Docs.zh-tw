@@ -2,12 +2,12 @@
 title: C# 7.2 的新功能
 description: C# 7.2 新功能的概觀。
 ms.date: 08/16/2017
-ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: d559f07c501b2a79472d01e2815b50cd8f0f57a5
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105749"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332312"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 的新功能
 
@@ -57,13 +57,13 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 
 C# 7.0 中的數字分隔符號之實作支援，並不允許將 `_` 作為常值的第一個字元。 十六進位與二進位數值常值現在可以使用 `_` 開頭。
 
-例如：
+例如:
 
 ```csharp
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="_private-protected_-access-modifier"></a>_private protected_ 存取修飾詞
+## <a name="private-protected-access-modifier"></a>*private protected* 存取修飾詞
 
 新的複合存取修飾詞：`private protected` 指出可藉由包含類別或在相同組件中宣告的衍生類別來存取成員。 `protected internal` 允許衍生類別或相同組件中的類別進行存取，而 `private protected` 則限制在相同組件中宣告的衍生類型進行存取。
 

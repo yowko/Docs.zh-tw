@@ -50,7 +50,7 @@ End Select
 |`expressionlist`|語句中的`Case`必要項。 表示之符合值的`testexpression`運算式子句清單。 多個運算式子句會以逗號分隔。 每個子句都可以採用下列其中一種形式:<br /><br /> -   *expression1* `To` *expression2*<br />-   [ `Is` ] *comparisonoperator* *expression*<br />-   *運算式*<br /><br /> 使用關鍵字來指定的相符`testexpression`值範圍的界限。 `To` 的值`expression1`必須小於或等於的`expression2`值。<br /><br /> `<` `<>` `<=`使用關鍵字搭配`>=`比較`=`運算子 (、、 `testexpression`、 、或)來指定的比對值限制。`>` `Is` 如果未提供關鍵字,則會在comparisonoperator之前自動`Is`插入。<br /><br /> 僅`expression`指定的表單會被視為`Is`表單的特殊案例, 其中*comparisonoperator*是等號 (`=`)。 這個表單會評估`testexpression`為 =  `expression`。<br /><br /> 中`expressionlist`的運算式可以是任何資料類型, 前提是它們會隱含地轉換成的`testexpression`類型, 而適當`comparisonoperator`的適用于搭配使用的兩個類型。|  
 |`statements`|選擇性。 如果符合中`Case` `testexpression` 的任何`expressionlist`子句, 則在之後執行的一個或多個語句。|  
 |`elsestatements`|選擇性。 如果`Case Else` 不`testexpression` 符合任何`Case`語句之中的任何子句, 則會在執行之後的一或多個語句。`expressionlist`|  
-|`End Select`|結束的定義`Select`.。。`Case`結構。|  
+|`End Select`|結束的定義`Select`...`Case`結構。|  
   
 ## <a name="remarks"></a>備註  
  如果`testexpression`符合 any `Case` `End Select` `Case` `Case Else` `Case`子句, 則語句後面的語句會執行到下一個、或語句。 `expressionlist` 控制項接著會傳遞至後面`End Select`的語句。 如果`testexpression` 符合一個以上`Case`子句中的子句,則只會執行第一個相符專案之後的語句。`expressionlist`  
