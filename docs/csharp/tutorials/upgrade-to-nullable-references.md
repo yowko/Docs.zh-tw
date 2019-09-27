@@ -3,12 +3,12 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 616c9fdbe62d8147fb74fefc878f9277c2a1156b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214279"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332324"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 Null 的參考型別遷移現有程式碼
 
@@ -52,9 +52,6 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 ```xml
 <Nullable>enable</Nullable>
 ```
-
-> [!IMPORTANT]
-> `Nullable` 元素先前稱為 `NullableContextOptions`。 重新命名是在 Visual Studio 2019，16.2-p1 中發生的。 .NET Core SDK 3.0.100-preview5-011568 沒有此變更。 若您使用 .NET Core CLI，您將必須使用 `NullableContextOptions`，直到下一個預覽版推出。
 
 執行測試建置，並注意警告清單。 在這個小型應用程式中，編譯器產生五個警告，因此您很有可能會將可為 Null 註釋內容維持在啟用狀態，並開始修正整個專案的警告。
 

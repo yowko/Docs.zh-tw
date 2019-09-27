@@ -4,12 +4,12 @@ description: 說明何為 .NET Core 通用工具以及它們可用之 .NET Core 
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117450"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332013"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 通用工具概觀
 
@@ -70,7 +70,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 通用工具可以安裝在預設目錄或特定位置中。 預設目錄如下：
 
-| 作業系統          | 路徑                          |
+| OS          | `Path`                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -107,31 +107,6 @@ dotnet doc
 dotnet <command> --help
 ```
 
-### <a name="what-could-go-wrong"></a>可能會發生什麼問題
-
-通用工具是[與架構相依的應用程式](../deploying/index.md#framework-dependent-deployments-fdd)，這表示它們會依賴電腦上安裝的 .NET Core 執行階段。 如果找不到預期的執行階段，則會遵循一般的 .NET Core 執行階段向前復原規則，例如：
-
-* 應用程式會向前復原到指定的主要和次要版本的最高修補程式版本。
-* 如果沒有與符合的主要和次要版本號碼相符的執行階段，則會使用下一個較高的次要版本。
-* 預覽版本的執行階段之間或預覽版本和發行版本之間，不會進行向前復原。 因此，使用預覽版本所建立的通用工具必須重建、由作者重新發行，以及重新安裝。
-* 在 .NET Core 2.1 Preview 1 中建立的通用工具可能會發生其他問題。 如需詳細資訊，請參閱 [.NET Core 2.1 Preview 2 的已知問題](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md)。
-
-如果應用程式找不到適當的執行階段，則無法執行，並且會報告錯誤。
-
-另一個可能發生的問題是：使用目前安裝的 .NET Core 執行階段，可能無法執行較早預覽期間所建立的通用工具。 您可以使用下列命令，查看您的電腦上安裝了哪些執行階段：
-
-```dotnetcli
-dotnet --list-runtimes
-```
-
-請連絡通用工具的作者，確認他們是否可以重新編譯其工具套件，並以更新的版本號碼重新發行至 NuGet。 一旦他們更新 NuGet 上的套件之後，您就可以更新您的複本。
-
-.NET Core CLI 會在第一次使用時，嘗試將預設位置新增至 PATH 環境變數。 不過，有幾種情況可能不會將位置自動新增至 PATH，例如：
-
-* 如果您已設定 `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 環境變數。
-* 在 macOS 上，如果您已使用 *.tar.gz* 檔案 (而非 *.pkg*) 安裝 .NET Core SDK。
-* 在 Linux 上，您需要編輯殼層環境檔案來設定 PATH。
-
 ## <a name="other-cli-commands"></a>其他 CLI 命令
 
 .NET Core SDK 包含其他支援 .NET Core 通用工具的命令。 請使用任何 `dotnet tool` 命令搭配下列其中一個選項：
@@ -162,3 +137,7 @@ dotnet tool uninstall -g <packagename>
 ```dotnetcli
 dotnet tool list -g
 ```
+
+## <a name="see-also"></a>另請參閱
+
+* [針對 .NET Core 工具使用問題進行疑難排解](troubleshoot-usage-issues.md)

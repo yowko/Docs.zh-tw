@@ -2,12 +2,12 @@
 title: 可為 Null 的參考型別
 description: 本文提供可為 Null 參考型別的概觀，這種型別是在 C# 8 中新增的功能。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。
 ms.date: 02/19/2019
-ms.openlocfilehash: 80018aaa409e7b4c188362482705de33ac5afd85
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71272784"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332366"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
@@ -60,23 +60,26 @@ name!.Length;
 
 您可以使用`Nullable` *.csproj*檔案中的元素，為專案設定可為 null 注釋內容和可為 null 警告內容。 此項目會設定編譯器解譯型別可 NULL 性的方式及所產生警告。 有效的設定如下：
 
-- `enable`：可為 Null 註釋內容為**啟用**。 可為 Null 警告內容為**啟用**。
+- `enable`:可為 Null 註釋內容為**啟用**。 可為 Null 警告內容為**啟用**。
   - 參考型別變數 (例如 `string`) 不可為 Null。  啟用所有可 NULL 性警告。
-- `warnings`：可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**啟用**。
+- `warnings`:可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**啟用**。
   - 參考型別變數為遺忘式。 啟用所有可 NULL 性警告。
-- `annotations`：可為 Null 註釋內容為**啟用**。 可為 Null 警告內容為**停用**。
+- `annotations`:可為 Null 註釋內容為**啟用**。 可為 Null 警告內容為**停用**。
   - 參考型別變數為遺忘式。 啟用所有可 NULL 性警告。
-- `disable`：可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**停用**。
+- `disable`:可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**停用**。
   - 參考型別變數為遺忘式，與先前版本的 C# 相似。 停用所有可 NULL 性警告。
 
 您也可以使用指示詞，在您專案中的任何位置設定相同內容：
 
-- `#nullable enable`：將可為 Null 註釋內容及可為 Null 警告內容設為**啟用**。
-- `#nullable disable`：將可為 Null 註釋內容及可為 Null 警告內容設為**停用**。
-- `#nullable restore`：將可為 Null 註釋內容和可為 Null 警告內容還原至專案設定。
-- `#pragma warning disable nullable`：將可為 Null 警告內容設為**停用**。
-- `#pragma warning enable nullable`：將可為 Null 警告內容設為**啟用**。
-- `#pragma warning restore nullable`：將可為 Null 警告內容還原至專案設定。
+- `#nullable enable`:將可為 Null 註釋內容及可為 Null 警告內容設為**啟用**。
+- `#nullable disable`:將可為 Null 註釋內容及可為 Null 警告內容設為**停用**。
+- `#nullable restore`:將可為 Null 註釋內容和可為 Null 警告內容還原至專案設定。
+- `#nullable disable warnings`:將可為 Null 警告內容設為**停用**。
+- `#nullable enable warnings`:將可為 Null 警告內容設為**啟用**。
+- `#nullable restore warnings`:將可為 Null 警告內容還原至專案設定。
+- `#nullable disable annotations`:將可為 null 注釋內容設定為**停用**。
+- `#nullable enable annotations`:將可為 null 注釋內容設定為 [**已啟用**]。
+- `#nullable restore annotations`:將批註警告內容還原至專案設定。
 
 預設的可為 Null 註釋及警告內容為 `disabled`。 該決策表示您現有的程式碼會編譯且不會進行任何變更，也不會產生任何新的警告。
 

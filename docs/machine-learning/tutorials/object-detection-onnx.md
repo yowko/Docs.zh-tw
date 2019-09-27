@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4856608e2c944c3a0fee65a328076bf1581f3d2a
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929096"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332629"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教學課程：使用 ML.NET 中的 ONNX 來偵測物件
 
@@ -45,7 +45,7 @@ ms.locfileid: "70929096"
 
 物件偵測是一種電腦視覺問題。 雖然與影像分類密切相關，但物件偵測會更仔細的執行影像分類。 物件偵測會尋找影像中實體的位置「並」進行分類。 當影像包含不同類型的多個物件時，請使用物件偵測。
 
-![](./media/object-detection-onnx/img-classification-obj-detection.PNG)
+![並排顯示狗在左側的影像分類，而狗的物件分類會顯示在右側。](./media/object-detection-onnx/img-classification-obj-detection.PNG)
 
 物件偵測的一些使用案例包括：
 
@@ -66,7 +66,7 @@ ms.locfileid: "70929096"
 
 物件偵測是一種影像處理工作。 因此，大多數定型並用來解決此問題的深度學習模型都是 CNN。 本教學課程中所使用的模型是 Tiny YOLOv2 模型，它是一種以下文件中所述 YOLOv2 模型的壓縮版本：["YOLO9000:Better, Faster, Stronger" by Redmon and Fadhari](https://arxiv.org/pdf/1612.08242.pdf) (YOLO9000：更好、更快、更強，作者：Redmon 及 Fadhari)。 Tiny YOLOv2 是使用 Pascal VOC 資料集所定型，由 15 個層組成，可預測 20 種不同的物件類別。 因為 Tiny YOLOv2 是一種原始 YOLOv2 模型的壓縮版本，所以它在速度和正確性間進行了取捨。 組成模型的不同層可使用如 Netron 等工具進行視覺化。 檢查模型之後，您可以觀察到所有組成神經網路層之間的連線對應，其中每個層將包含層名稱及個別輸入/輸出的維度。 用來描述模型輸入和輸出的資料結構則稱為 Tensor。 您可以把 Tensor 想成是將資料儲存在 N 個維度中的容器。 以 Tiny YOLOv2 為例，輸入層的名稱為 `image`，且它會預期維度為 `3 x 416 x 416` 的 Tensor。 輸出層的名稱則為 `grid`，它會產生維度為 `125 x 13 x 13` 的輸出 Tensor。
 
-![](./media/object-detection-onnx/netron-model-map.png)
+![將輸入層分割成隱藏層，然後輸出層](./media/object-detection-onnx/netron-model-map.png)
 
 YOLO 模型接受 `3(RGB) x 416px x 416px` 的影像。 模型會接受此輸入，並透過不同的層傳遞它來產生輸出。 輸出會將輸入影像分成 `13 x 13` 的格線，格線中的每個儲存格都由 `125` 個值組成。
 
@@ -74,11 +74,11 @@ YOLO 模型接受 `3(RGB) x 416px x 416px` 的影像。 模型會接受此輸入
 
 Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 ONNX 支援架構間的互通性。 這表示您可以在其中一個熱門的機器學習架構 (例如 PyTorch) 中定型模型、將它轉換成 ONNX 格式，然後在 ML.NET 等不同的架構中取用 ONNX 模型。 若要深入了解，請前往 [ONNX 網站](https://onnx.ai/)。
 
-![](./media/object-detection-onnx/onnx-frameworks.png)
+![ONNX 支援的格式匯入 ONNX，然後由其他 ONNX 支援的格式使用](./media/object-detection-onnx/onnx-frameworks.png)
 
 預先定型的 Tiny YOLOv2 模型是以 ONNX 格式儲存，它是一種層的序列化表示和從這些層中所學習到模式。 在 ML.NET 中，與 ONNX 的互通性是透過 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 和 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 套件來達成。 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 套件包含一系列的轉換，這些轉換會接受影像，並將影像編碼成可用來作為輸入以進行預測或定型管線的數值。 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 套件會利用 ONNX 執行階段載入 ONNX 模型，並用它來根據所提供的輸入進行預測。
 
-![](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![ONNX 檔案到 ONNX 執行時間的資料流程，最後到C#應用程式](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>設定 .NET Core 專案
 
@@ -183,7 +183,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 模型會將影像分成 `13 x 13` 的格線，其中每個格線儲存格都是 `32px x 32px`。 每個格線儲存格都包含 5 個可能的物件週框方塊。 週框方塊包含 25 個項目：
 
-![](./media/object-detection-onnx/model-output-description.png)
+![左側的方格範例和右邊的周框方塊範例](./media/object-detection-onnx/model-output-description.png)
 
 - `x` 週框方塊中心的 X 位置，相對於與其建立關聯的格線儲存格。
 - `y` 週框方塊中心的 Y 位置，相對於與其建立關聯的格線儲存格。
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 若要查看包含週框方塊的影像，請巡覽至 `assets/images/output/` 目錄。 以下是其中一個經處理影像的範例。
 
-![](./media/object-detection-onnx/image3.jpg)
+![Dinning 室的範例已處理影像](./media/object-detection-onnx/image3.jpg)
 
 恭喜您！ 您已透過在 ML.NET 中重複使用已預先定型的 `ONNX` 模型，成功建置出可用來偵測物件的機器學習模型。
 

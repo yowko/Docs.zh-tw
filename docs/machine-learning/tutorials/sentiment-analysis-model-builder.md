@@ -1,17 +1,17 @@
 ---
 title: 教學課程：分析情感-二進位分類
 description: 本教學課程會示範如何建立 Razor Pages 應用程式，以將情感從網站批註中分類，並採取適當的動作。 二元情感分類器會在 Visual Studio 中使用模型產生器。
-ms.date: 09/13/2019
+ms.date: 09/26/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 375440d98fd728cc89c1ac620614067edbd3adf8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216873"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332572"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教學課程：在 web 應用程式中使用 ML.NET 模型產生器來分析網站批註的情感
 
@@ -36,7 +36,7 @@ ms.locfileid: "71216873"
 
 您可以在[dotnet/machinelearning 範例](https://github.com/dotnet/machinelearning-samples)存放庫中找到本教學課程的原始程式碼。
 
-## <a name="pre-requisites"></a>必要條件
+## <a name="pre-requisites"></a>先決條件
 
 如需必要條件和安裝指示清單，請瀏覽[模型產生器安裝指南](../how-to-guides/install-model-builder.md)。
 
@@ -66,7 +66,7 @@ ms.locfileid: "71216873"
 
 ## <a name="choose-a-scenario"></a>選擇案例
 
-![](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Visual Studio 中的模型產生器 wizard](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
 若要定型您的模型，您需要從模型產生器所提供的可用機器學習服務案例清單中選取。
 
@@ -79,7 +79,8 @@ ms.locfileid: "71216873"
 
 1. 在模型產生器工具的資料步驟中，從資料來源下拉式清單中選取 [檔案]。
 1. 選取 [**選取**檔案] 文字方塊旁的按鈕，然後使用 [檔案瀏覽器] 流覽並選取 [*維琪百科-detox-250-line-data.tsv* ] 檔案。
-1. 選擇**要預測的標籤或資料行**中的 [**情感**] 下拉式清單
+1. 在 [**要預測的資料行（標籤）** ] 下拉式清單中選擇 [**情感**]。
+1. 保留 [**輸入資料行（功能）** ] 下拉式清單的預設值。
 1. 選取 [**定型**] 連結，以移至模型產生器工具中的下一個步驟。
 
 ## <a name="train-the-model"></a>將模型定型
@@ -117,23 +118,13 @@ ms.locfileid: "71216873"
     下列專案應該會出現在**方案總管**中：
 
     - *SentimentRazorML. consoleapp.exe*：包含模型定型和預測程式碼的 .NET Core 主控台應用程式。
-    - *SentimentRazorML。模型*：.NET Standard 類別庫，包含定義輸入及輸出模型資料結構描述的資料模型，以及定型期間執行效能最佳模型的保存版本。
+    - *SentimentRazorML。模型*：.NET Standard 類別庫，其中包含定義輸入和輸出模型資料之架構的資料模型，以及定型期間所儲存的最佳執行模型版本。
 
     在本教學課程中，只會使用*SentimentRazorML 模型*專案，因為會在*SentimentRazor* web 應用程式中，而不是在主控台中進行預測。 雖然*SentimentRazorML*不會用於計分，但它可以用來在稍後使用新資料重新定型模型。 不過，重新定型已超出本教學課程的範圍。
 
-1. 若要在 Razor Pages 應用程式內使用定型的模型，請加入*SentimentRazorML*專案的參考。
-
-    1. 以滑鼠右鍵按一下 [ **SentimentRazor**專案]。
-    1. 選取 [**新增 > 參考**]。
-    1. 選擇 **專案 > 方案** 節點，並從清單中選取  **SentimentRazorML**  專案。
-    1. 選取 [確定]。
-
 ### <a name="configure-the-predictionengine-pool"></a>設定 PredictionEngine 集區
 
-若要進行單一預測，請使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 若要在您[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)的應用程式中使用，您必須在需要時建立它。 在此情況下，要考慮的最佳做法是相依性插入。
-
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 為了改善效能及執行緒安全性，請使用 `PredictionEnginePool` 服務，該服務會建立 `PredictionEngine` 物件的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 以供應用程式使用。 閱讀下列部落格文章來深入了解[建立及使用 ASP.NET Core 中的 `PredictionEngine` 物件集區](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)。
+若要進行單一預測，您必須建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 此外，您必須在應用程式內需要的任何地方建立它的實例。 當您的應用程式成長時，此進程可能會變得難以管理。 為了改善效能和執行緒安全性，請使用相依性插入和 `PredictionEnginePool` 服務的組合，這會建立[@no__t 4](xref:Microsoft.ML.PredictionEngine%602)物件的[@no__t 2](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。
 
 1. 安裝*Microsoft.Extensions.ML* NuGet 套件：
 
@@ -250,7 +241,7 @@ ms.locfileid: "71216873"
 
 當應用程式啟動時，進入「模型產生器」*是很酷的！* 在文字區域中。 所顯示的預測情感應該*不會有毒*。
 
-![](./media/sentiment-analysis-model-builder/web-app.png)
+![使用預測的情感視窗執行視窗](./media/sentiment-analysis-model-builder/web-app.png)
 
 如果您稍後需要參考模型產生器的專案，您可以在`C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`目錄中找到它們。
 

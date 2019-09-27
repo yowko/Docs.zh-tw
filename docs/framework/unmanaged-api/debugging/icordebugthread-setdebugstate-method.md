@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66f60b2342b6ff64f1329cbe57032291d5139384
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 15e18888e307a14c4396966afc0a623e1acba104
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770597"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332816"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState 方法
-設定描述這個 ICorDebugThread 偵錯狀態的旗標。  
+設定描述此 ICorDebugThread 之偵錯工具狀態的旗標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,10 +37,10 @@ HRESULT SetDebugState (
   
 ## <a name="parameters"></a>參數  
  `state`  
- [in]CorDebugThreadState 列舉值，指定這個執行緒的偵錯狀態的位元組合。  
+ 在CorDebugThreadState 列舉值的位元組合，指定此執行緒的偵錯工具狀態。  
   
 ## <a name="remarks"></a>備註  
- `SetDebugState` 設定執行緒的目前偵錯狀態。 （如果此程序繼續執行，不實際的目前狀態 「 目前的偵錯狀態 」 表示偵錯狀態）。此設定的一般值為 THREAD_RUNNING。 偵錯工具可能會影響偵錯執行緒的狀態。 偵錯狀態執行最後的持續發生，因此如果您想要保留的執行緒，透過多個 THREAD_SUSPENDed 會繼續，您可以設定一次，並之後不需要擔心它。 暫停執行緒，並繼續處理序可能會導致死結，但它通常是不可能。 這是內建的品質的執行緒和處理序，而且是依據設計。 偵錯工具以非同步方式可以中斷和繼續執行緒，以破除死結。 如果執行緒的使用者狀態包含 USER_UNSAFE_POINT，執行緒可能會封鎖在記憶體回收 (GC)。 這表示暫止的執行緒具有較高機率的而導致死結。 這可能不會影響偵錯事件已排入佇列。 因此在偵錯工具應該清空整個事件佇列 (藉由呼叫[icordebugcontroller:: Hasqueuedcallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) 暫停或繼續執行緒之前。 否則，它可能認為已暫止的執行緒上取得事件。  
+ `SetDebugState` 會設定執行緒目前的「調試」狀態。 （如果進程要繼續，則為「目前的偵錯工具狀態」，而非實際的目前狀態）。此的一般值為 THREAD_RUN。 只有偵錯工具才會影響執行緒的「偵測」狀態。 Debug 狀態最後會繼續進行，因此如果您想要讓執行緒 THREAD_SUSPENDed 多次，您可以將它設定一次，之後就不需要擔心。 暫停執行緒並繼續處理可能會導致鎖死，不過通常不太可能發生。 這是執行緒和進程的內建品質，而且是依設計的。 偵錯工具可以非同步方式中斷並繼續執行緒，以中斷鎖死。 如果執行緒的使用者狀態包含 USER_UNSAFE_POINT，則執行緒可能會封鎖垃圾收集（GC）。 這表示暫停的執行緒有更高的機率導致鎖死。 這可能不會影響已排入佇列的 debug 事件。 因此，偵錯工具應該在暫停或繼續執行緒之前，清空整個事件佇列（藉由呼叫[ICorDebugController：： HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)）。 否則，它可能會線上程上取得其認為已暫停的事件。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

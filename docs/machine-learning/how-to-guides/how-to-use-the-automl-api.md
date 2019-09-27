@@ -3,12 +3,12 @@ title: 如何使用 ML.NET 自動化的 ML API
 description: ML.NET 自動化的 ML API 會自動化模型建置程序，並產生隨時可供部署的模型。 了解您可用來設定自動化機器學習工作的選項。
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929401"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332724"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自動化的機器學習 API
 
@@ -126,6 +126,9 @@ using Microsoft.ML.AutoML;
 |PositiveRecall
 
 ## <a name="data-pre-processing-and-featurization"></a>資料前置處理與特徵化
+
+> [!NOTE]
+> [功能] 資料行僅支援[`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)、 [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single)和[`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string)的類型。
 
 根據預設，資料予以前置處理，並為您自動執行下列步驟：
 

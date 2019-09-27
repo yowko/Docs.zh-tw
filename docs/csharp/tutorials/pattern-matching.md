@@ -3,12 +3,12 @@ title: 使用模式比對功能來擴充資料類型
 description: 此進階教學課程示範如何使用模式比對技術，以個別建立的資料和演算法來建立功能。
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 9266bb1e998fba77c27e17e498b72f4a5925dd7a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216544"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332357"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教學課程：使用模式比對功能來擴充資料類型
 
@@ -240,6 +240,9 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
+    
+    { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+    null    => throw new ArgumentNullException(nameof(vehicle))
 };
 ```
 
@@ -294,7 +297,7 @@ public decimal CalculateToll(object vehicle) =>
 
 下表顯示輸入值和尖峰時段計費乘數的組合：
 
-| Day        | 時間         | 方向 | 溢價 |
+| Day        | Time         | Direction | 溢價 |
 | ---------- | ------------ | --------- |--------:|
 | 工作日    | 早上尖峰時段 | 進入   | x 2.00  |
 | 工作日    | 早上尖峰時段 | 離開  | x 1.00  |

@@ -3,12 +3,12 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: ea8059061dccc85060b4f6244ff0d7be9b7708b8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6b127cce66f2f9ced3cee29336b39e2976e03619
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214409"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332348"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
@@ -43,12 +43,6 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 <LangVersion>8.0</LangVersion>
 <Nullable>enable</Nullable>
 ```
-
-> [!IMPORTANT]
-> `Nullable` 元素先前稱為 `NullableContextOptions`。 重新命名是在 Visual Studio 2019，16.2-p1 中發生的。 .NET Core SDK 3.0.100-preview5-011568 沒有此變更。 若您使用 .NET Core CLI，您將必須使用 `NullableContextOptions`，直到下一個預覽版推出。
-
-> [!NOTE]
-> 當 C# 8 發行時 (並非處於預覽模式時)，新的專案範本會新增 `Nullable` 項目。 在那之前，您必須手動新增它。
 
 ### <a name="design-the-types-for-the-application"></a>設計適用於應用程式的類型
 

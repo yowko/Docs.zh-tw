@@ -1,16 +1,16 @@
 ---
 title: 在 ASP.NET Core Web API 中部署模型
 description: 使用 ASP.NET Core Web API 在網際網路上提供 ML.NET 情感分析機器學習模型
-ms.date: 08/20/2019
+ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1173315bbc88797ce0c6d0fcc9597896f14889ac
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182545"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332695"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
@@ -103,9 +103,9 @@ ms.locfileid: "71182545"
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>登錄 PredictionEnginePool 以在應用程式中使用
 
-若要進行單一預測，請使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 為了在您的應用程式中使用 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)，您必須在需要的時候建立它。 在此情況下，要考慮的最佳做法是相依性插入。
+若要進行單一預測，您必須建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 此外，您必須在應用程式內需要的任何地方建立它的實例。 當您的應用程式成長時，此進程可能會變得難以管理。 為了改善效能和執行緒安全性，請使用相依性插入和 `PredictionEnginePool` 服務的組合，這會建立[@no__t 4](xref:Microsoft.ML.PredictionEngine%602)物件的[@no__t 2](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。
 
-若您想要深入了解 [ASP.NET Core 中的相依性插入](/aspnet/core/fundamentals/dependency-injection)，下列連結提供詳細資訊。
+如果您想要深入瞭解[ASP.NET Core 中的](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)相依性插入，下列連結提供詳細資訊。
 
 1. 開啟 *Startup.cs* 類別，並將下列 using 陳述式新增至檔案頂端：
 
@@ -126,14 +126,19 @@ ms.locfileid: "71182545"
     {
         services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-            .FromFile("MLModels/sentiment_model.zip");
+            .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
     }
     ```
 
-概括而言，此程式碼會在應用程式要求時自動初始化物件和服務，不必手動執行。
+概括而言，此程式碼會自動初始化物件和服務，以供稍後在應用程式要求時使用，而不需要手動執行。 
 
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 為了改善效能及執行緒安全性，請使用 `PredictionEnginePool` 服務，該服務會建立 `PredictionEngine` 物件的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 以供應用程式使用。 閱讀下列部落格文章來深入了解[建立及使用 ASP.NET Core 中的 `PredictionEngine` 物件集區](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)。  
+機器學習模型不是靜態的。 當有新的定型資料可供使用時，就會重新訓練並重新部署模型。 將模型的最新版本取得至應用程式的方法之一，就是重新部署整個應用程式。 不過，這會引進應用程式停機時間。 @No__t-0 服務提供一種機制，可重載已更新的模型，而不需要讓應用程式關閉。 
+
+將 `watchForChanges` 參數設定為 `true`，而 `PredictionEnginePool` 啟動一個[`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) ，接聽檔案系統變更通知，並在檔案變更時引發事件。 這會提示 `PredictionEnginePool` 會自動重載模型。
+
+此模型是由 `modelName` 參數所識別，因此，每個應用程式可以在變更時重載一個以上的模型。 
+
+或者，當您使用遠端儲存的模型時，可以使用 `FromUri` 方法。 @No__t-0 會輪詢遠端位置以進行變更，而不是監看檔案已變更的事件。 輪詢間隔預設為5分鐘。 您可以根據應用程式的需求來增加或減少輪詢間隔。
 
 ## <a name="create-predict-controller"></a>建立預測控制器
 
@@ -170,7 +175,7 @@ ms.locfileid: "71182545"
                 return BadRequest();
             }
 
-            SentimentPrediction prediction = _predictionEnginePool.Predict(input);
+            SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: input);
 
             string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
 
@@ -179,7 +184,7 @@ ms.locfileid: "71182545"
     }
     ```
 
-此程式碼會透過將預測服務傳遞至控制器的建構函式 (透過相依性插入取得) 來指派 `PredictionEnginePool`。 然後，`Predict` 控制器的 `Post` 方法會使用 `PredictionEnginePool` 來進行預測，並將結果傳回使用者 (若成功的話)。
+此程式碼會透過將預測服務傳遞至控制器的建構函式 (透過相依性插入取得) 來指派 `PredictionEnginePool`。 然後，`Predict` 控制器的 @no__t 1 方法會使用 `PredictionEnginePool`，利用在 `Startup` 類別中註冊的 `SentimentAnalysisModel` 進行預測，並在成功時將結果傳回給使用者。
 
 ## <a name="test-web-api-locally"></a>在本機測試 Web API
 
