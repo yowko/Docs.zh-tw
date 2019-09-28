@@ -2,18 +2,18 @@
 title: 官方 .NET Docker 映像
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 官方 .NET Docker 映像
 ms.date: 01/07/2019
-ms.openlocfilehash: 749485bfe07e0245493da67af915805f644a1897
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 43b2f47912e38e99926d7f06c3cda72f17d0e3fc
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039641"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353877"
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
 官方 .NET Docker 映像是 Microsoft 建立及最佳化的 .NET Docker 映像。 [它們在 Docker Hub 上的 Microsoft 存放庫中公開提供](https://hub.docker.com/u/microsoft/)。 每個存放庫可以包含多個映像，視 .NET 版本及作業系統與版本而定 (Linux Debian、Linux Alpine、Windows Nano Server、Windows Server Core 等等)。
 
-自 .NET Core 2.1 起，所有 .NET Core 映射（包括 for ASP.NET Core 都可在 Docker Hub 的 .NET Core 映射存放庫中<https://hub.docker.com/\_/microsoft-dotnet-core/>取得）：。
+自 .NET Core 2.1 起，所有 .NET Core 映射（包括 for ASP.NET Core 都可在 Docker Hub 的 .NET Core 映射存放庫中<https://hub.docker.com/_/microsoft-dotnet-core/>取得）：。
 
 大部分的映像存放庫會提供大量的標籤，不僅協助您選取特定的架構版本，還協助您選擇作業系統 (Linux 發行版本或 Windows 版本)。
 
