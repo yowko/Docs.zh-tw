@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a0d21ab8af3669575a451644deb2b3572fdb7651
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054059"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71354023"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 
@@ -321,7 +321,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
     如果例外狀況為 Managed，<xref:System.OutOfMemoryException> 會顯示為例外狀況類型，如下列範例所示。
 
-    ```
+    ```console
     Exception object: 39594518
     Exception type: System.OutOfMemoryException
     Message: <none>
@@ -335,7 +335,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
     堆疊具有例外狀況呼叫的執行緒會以 `RaiseTheException` 引數表示。 這是 Managed 例外狀況物件。
 
-    ```
+    ```console
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0
     ```
 
@@ -355,7 +355,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   最大可用區域會顯示在下列輸出中。
 
-  ```
+  ```console
   Largest free region: Base 54000000 - Size 0003A980
   ```
 
@@ -369,7 +369,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   最大可用區域是 MAXIMUM 資料行中的最大值，如下列輸出所示。
 
-  ```
+  ```console
   TYPE        MINIMUM   MAXIMUM     AVERAGE   BLK COUNT   TOTAL
   ~~~~        ~~~~~~~   ~~~~~~~     ~~~~~~~   ~~~~~~~~~~  ~~~~
   Free:
@@ -415,7 +415,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   結果如下所示。
 
-  ```
+  ```console
   Number of GC Heaps: 2
   ------------------------------
   Heap 0 (002db550)
@@ -457,9 +457,9 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   如果 Managed 堆積很大，**dumpheap** 可能需要一些時間才能完成。
 
-  您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。 例如：
+  您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。 例如:
 
-  ```
+  ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo
   00155f80      533     15216804      Free
   7a747c78   791070     15821400 System.Collections.Specialized.ListDictionary+DictionaryNode
@@ -479,7 +479,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   結果的範例如下。
 
-  ```
+  ```console
   Address  MT           Size  Gen
   1875d2c0 790fa3e0      152    2 System.String HighlightNullStyle_Blotter_PendingOrder-11_Blotter_PendingOrder-11
   …
@@ -503,7 +503,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   在堆疊上找到的根可能是誤判。 如需詳細資訊，請參閱 `!help gcroot` 命令。
 
-  ```
+  ```console
   ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->
   19010b78(DemoApp.FormDemoApp)->
   19011158(System.Windows.Forms.PropertyStore)->
@@ -551,7 +551,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
     這個命令會提供如下所示的輸出。
 
-    ```
+    ```console
        OSID     Special thread type
     2    cd0    DbgHelper
     3    c18    Finalizer
@@ -570,7 +570,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   此命令會顯示 Managed 堆積中所有可用物件的大小總計，如下列範例所示。
 
-  ```
+  ```console
   total 230 objects
   Statistics:
         MT    Count    TotalSize Class Name
@@ -584,7 +584,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   這個命令會顯示與下列類似的輸出。 最後一行顯示暫時區段。
 
-  ```
+  ```console
   Heap 0 (0015ad08)
   generation 0 starts at 0x49521f8c
   generation 1 starts at 0x494d7f64
@@ -604,7 +604,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   結果如下所示。 層代 0 大約 9 MB。
 
-  ```
+  ```console
   Evaluate expression: 9321848 = 008e3d78
   ```
 
@@ -614,7 +614,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   結果如下所示。
 
-  ```
+  ```console
   ------------------------------
   Heap 0
   total 409 objects
@@ -647,7 +647,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   顯示的統計資料包括固定控制代碼數目，如下列範例所示。
 
-  ```
+  ```console
   GC Handle Statistics:
   Strong Handles:      29
   Pinned Handles:      10
@@ -665,7 +665,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   下列資料顯示四個兩秒的取樣間隔，也就是 8 秒的研究。 `Gen0`、`Gen1` 和 `Gen2` 資料行會顯示在該層代的間隔期間發生的記憶體回收數目。
 
-  ```
+  ```console
   Interval    Gen0    Gen1    Gen2    % Time in GC
           1       9       3       1              10
           2      10       3       1               1
@@ -677,7 +677,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   在此範例中，有 5 個週期。
 
-  ```
+  ```console
   Interval    Gen0    Gen1    Gen2     % Time in GC
           1       9       3       1                3
           2      10       3       1                1
@@ -692,7 +692,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   例如，下列資料顯示在非並行記憶體回收期間發生的事件序列。
 
-  ```
+  ```console
   Timestamp    Event name
   513052        GCSuspendEEBegin_V1
   513078        GCSuspendEEEnd
@@ -711,7 +711,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   下列輸出提供背景記憶體回收的範例，並包含處理序、執行緒和事件欄位。 (並非所有資料皆會顯示)。
 
-  ```
+  ```console
   timestamp(us)    event name            process    thread    event field
   42504385        GCSuspendEEBegin_V1    Test.exe    4372             1
   42504648        GCSuspendEEEnd         Test.exe    4372
@@ -751,7 +751,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   這個命令會顯示與下列類似的輸出。
 
-  ```
+  ```console
   0012f3b0 79ff0bf8 mscorwks!WKS::GCHeap::GarbageCollect
   0012f454 30002894 mscorwks!GCInterface::CollectGeneration+0xa4
   0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48
@@ -761,7 +761,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   如果記憶體回收的起因是記憶體配置，則堆疊會如下所示：
 
-  ```
+  ```console
   0012f230 7a07c551 mscorwks!WKS::GCHeap::GarbageCollectGeneration
   0012f2b8 7a07cba8 mscorwks!WKS::gc_heap::try_allocate_more_space+0x1a1
   0012f2d4 7a07cefb mscorwks!WKS::gc_heap::allocate_more_space+0x18
@@ -781,7 +781,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   範例輸出 (經過刪減以顯示使用最大空間的物件)：
 
-  ```
+  ```console
   79124228    31857      9862328 System.Object[]
   035f0384    25668     11601936 Toolkit.TlkPosition
   00155f80    21248     12256296      Free
@@ -803,7 +803,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   範例輸出 (經過刪減以顯示使用最大空間的物件)：
 
-  ```
+  ```console
   79124228    26648      9314256 System.Object[]
   035f0384    25668     11601936 Toolkit.TlkPosition
   79103b6c   296770     13057880 System.Threading.ReaderWriterLock

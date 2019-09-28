@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 12b7f69d7cbcac4a0270dcecfeb0c2cb8eb77fe2
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: 34157b19e342d4e10ac652aaf46c7186c4a19358
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421998"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353432"
 ---
 # <a name="null-c-reference"></a>null (C# 參考)
 
-`null` 關鍵字是表示 Null 參考的常值，不參考任何物件的值。 `null` 是參考型別變數的預設值。 一般的實值型別不可為 Null。 不過，C# 2.0 引入了可為 Null 的實值型別。 請參閱[可為 Null 的型別](../../programming-guide/nullable-types/index.md)。
+`null` 關鍵字是表示 Null 參考的常值，不參考任何物件的值。 `null` 是參考型別變數的預設值。 一般實數值型別不能是 null，但可為 null 的實[數值型別](../../programming-guide/nullable-types/index.md)除外。
 
 下例會示範 Null 關鍵字的一些行為︰
 
@@ -30,7 +30,6 @@ ms.locfileid: "66421998"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../language-reference/index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [預設值表](default-values-table.md)
-- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [無（Visual Basic）](../../../visual-basic/language-reference/nothing.md)

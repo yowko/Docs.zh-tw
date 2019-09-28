@@ -1,15 +1,15 @@
 ---
-title: AttributeUsage (Visual Basic)
+title: AttributeUsage （Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 1841171f2f3fc26ba9244c72c69960b765d39807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c3d175aede5d8066198592ffac601c0bd97620
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789112"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351822"
 ---
-# <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
+# <a name="attributeusage-visual-basic"></a>AttributeUsage （Visual Basic）
 決定如何使用自訂屬性類別。 `AttributeUsage` 是一個屬性，可套用至自訂屬性定義來控制如何套用新屬性。 明確套用時，預設設定看起來會像這樣︰  
   
 ```vb  
@@ -64,7 +64,7 @@ End Class
   
  在此情況下，因為 `AllowMultiple` 設為 `true`，所以可以重複套用 `MultiUseAttr`。 套用多個屬性所顯示的兩種格式都有效。  
   
- 如果 `Inherited` 設為 `false`，則衍生自已屬性化類別的類別不會繼承屬性。 例如:   
+ 如果 `Inherited` 設為 `false`，則衍生自已屬性化類別的類別不會繼承屬性。 例如:  
   
 ```vb  
 Imports System  
@@ -151,7 +151,7 @@ End Class
   
 ## <a name="sample-output"></a>範例輸出  
   
-```  
+```console  
 Attributes on Base Class:  
 A1  
 A2  

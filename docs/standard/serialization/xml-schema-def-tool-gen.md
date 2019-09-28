@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 77bb567d2b7b8fff2b1b8de43b2d5fa36fffb3b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b2cd67a1c4f30e6fe246124be5b8f7081c539a6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017978"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392858"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>HOW TO：使用 XML 結構描述定義工具產生類別和 XML 結構描述文件
 XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描述或產生由 XML 結構描述定義的類別。 下列程序將說明如何執行這些作業。  
@@ -23,11 +23,11 @@ XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描
   
 2. 將 XML 結構描述當成引數傳遞至 XML 結構描述定義工具，以建立一組類別精確地符合 XML 結構描述，例如：  
   
-    ```  
+    ```console  
     xsd mySchema.xsd  
     ```  
   
-     此工具只能處理參考 2001 年 3 月 16 日全球資訊網協會 XML 規格的結構描述。 換句話說，XML 結構描述命名空間必須是"http://www.w3.org/2001/XMLSchema」 在下列範例所示。  
+     此工具只能處理參考 2001 年 3 月 16 日全球資訊網協會 XML 規格的結構描述。 換句話說，XML 架構命名空間必須是 "http://www.w3.org/2001/XMLSchema"，如下列範例所示。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -46,7 +46,7 @@ XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描
   
 3. 將 DLL 當成引數傳遞給 Xsd.exe，例如：  
   
-    ```  
+    ```console  
     xsd MyFile.dll  
     ```  
   
@@ -59,5 +59,5 @@ XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描
 - [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [XML 結構描述定義工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [如何：序列化物件 @ no__t-0
+- [如何：還原序列化物件 @ no__t-0

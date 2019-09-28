@@ -1,15 +1,15 @@
 ---
-title: 複製與附加 (Visual Basic)
+title: 複製與附加（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: 59ffedfdbb2820683f1e6cc232154688f5c29fc8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2849c648d8d280200d742663cbc7188b344d8306
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789099"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352960"
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a>複製與附加 (Visual Basic)
+# <a name="cloning-vs-attaching-visual-basic"></a>複製與附加（Visual Basic）
 將 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件加入到新的樹狀結構時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀結構。 如果新內容已經成為父代，而且屬於其他 XML 樹狀結構的一部分，則會複製新內容。 然後，新複製的內容會附加到新的 XML 樹狀結構。  
   
 ## <a name="example"></a>範例  
@@ -45,11 +45,11 @@ Console.WriteLine("Child2 was {0}", _
   
  這個範例會產生下列輸出：  
   
-```  
+```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
 ## <a name="see-also"></a>另請參閱
 
-- [建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [建立 XML 樹狀結構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

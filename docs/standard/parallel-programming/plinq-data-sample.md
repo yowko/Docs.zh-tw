@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946459"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353162"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 資料範例
 此範例包含 .csv 格式的範例資料，以及將它轉換成記憶體中客戶、產品、訂單及訂單詳細資料集合的方法。 若要使用 PLINQ 進一步實驗，您可以將其他主題中的程式碼範例貼到本主題的程式碼中，並從 `Main` 方法叫用它。 您也可以搭配您自己的 PLINQ 查詢使用這項資料。  
@@ -31,11 +31,11 @@ ms.locfileid: "69946459"
   
 2. 使用這些步驟之後的程式碼取代 Module1.vb 或 Program.cs 的內容。  
   
-3. 在 [專案]  功能表中，按一下 [加入新項目]  。 選取 [文字檔]  ，然後按一下 [確定]  。 複製本主題中的資料，然後將它貼到新的文字檔中。 在 [檔案]  功能表上，按一下 [儲存]  ，將檔案命名為 Plinqdata.csv，然後將它儲存在包含原始程式碼檔案的資料夾。  
+3. 在 [專案] 功能表中，按一下 [加入新項目]。 選取 [文字檔]，然後按一下 [確定]。 複製本主題中的資料，然後將它貼到新的文字檔中。 在 [檔案] 功能表上，按一下 [儲存]，將檔案命名為 Plinqdata.csv，然後將它儲存在包含原始程式碼檔案的資料夾。  
   
 4. 按 F5 鍵，確認專案正確地建置和執行。 主控台視窗中應該會顯示以下輸出。  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -46,9 +46,9 @@ ms.locfileid: "69946459"
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>資料  
+## <a name="data"></a>Data  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  

@@ -4,12 +4,12 @@ description: 了解如何定義和使用 ref 傳回值和 ref 區域變數值
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081827"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353880"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -27,12 +27,12 @@ ms.locfileid: "59081827"
 
 - 傳回值不能是常值 `null`。 傳回 `null` 會產生編譯器錯誤 CS8156「無法在此內容中使用運算式，因為其可能不會以傳址方式傳回」。
 
-   使用 ref 傳回值的方法，可以將別名傳回給目前值為 Null (未具現化) 的變數，或是[可為 Null 的型別](../nullable-types/index.md)的實值型別。
- 
+   具有 ref 傳回的方法可以將別名傳回給目前值為 null （未具現化）值或[可](../nullable-types/index.md)為 null 實數值型別的變數。
+
 - 傳回值不能是常數、列舉成員、屬性的以傳值方式傳回值，或是 `class` 或 `struct` 的方法。 違反此規則會產生編譯器錯誤 CS8156「無法在此內容中使用運算式，因為其可能不會以傳址方式傳回」。
 
 此外，非同步方法上不允許參考傳回值。 在非同步方法完成執行之前，可能會傳回非同步方法，但其傳回值仍然為未知。
- 
+
 ## <a name="defining-a-ref-return-value"></a>定義 ref 傳回值
 
 傳回*參考傳回值*的方法必須滿足下列兩個條件：

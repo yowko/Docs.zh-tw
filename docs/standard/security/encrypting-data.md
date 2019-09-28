@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d37f7980c3024fa545e5395a4614dcd41a111794
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968698"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353195"
 ---
 # <a name="encrypting-data"></a>加密資料
 對稱式加密和非對稱式加密是使用不同的程序執行。 對稱式加密在資料流上執行，因此適用於加密大量資料。 非對稱式加密在少數的位元組上執行，因此只適用於小量的資料。  
@@ -160,13 +160,13 @@ public class main
   
  前一個範例若要執行成功，必須有處理序在 <xref:System.Net.Sockets.TcpClient> 類別指定的 IP 位址和通訊埠號碼上接聽。 如果接聽的處理序存在，程式碼便會連接到接聽的處理序、使用 Rijndael 對稱演算法加密資料流，並將 "Hello World!" 寫入此資料流。 如果程式碼成功，它會顯示下列文字至主控台：  
   
-```  
+```console  
 The message was sent.  
 ```  
   
  不過，如果找不到接聽的處理序或引發了例外狀況，程式碼會顯示下列文字至主控台：  
   
-```  
+```console  
 The connection failed.  
 ```  
   

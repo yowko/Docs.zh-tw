@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: b2c3553f527e9fec8856297c7424a081b5b31db0
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
-ms.translationtype: HT
+ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609930"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353359"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布林值邏輯運算子 (C# 參考)
 
@@ -118,16 +118,16 @@ ms.locfileid: "67609930"
 |x|y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|true|False|false|true|  
+|true|false|false|true|  
 |true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
+|false|true|false|true|  
+|false|false|false|false|  
+|false|null|false|null|  
 |null|true|null|true|  
-|null|False|False|null|  
+|null|false|false|null|  
 |null|null|null|null|  
 
-那些運算子的行為和具有可為 Null 實值類型之一般運算子的行為並不相同。 一般而言，已針對某個實值類型之運算元定義的運算子，也可以搭配相對應可為 Null 實值類型的運算元使用。 這種運算子會在其任何一個運算元為 `null` 的情況下產生 `null`。 不過，就算其中一個運算元是 `null`，`&` 和 `|` 運算子仍可以產生非 Null。 如需具備可為 Null 實值類型之運算子行為的詳細資訊，請參閱[使用可為 Null 的類型](../../programming-guide/nullable-types/using-nullable-types.md)一文中的[運算子](../../programming-guide/nullable-types/using-nullable-types.md#operators)一節。
+那些運算子的行為和具有可為 Null 實值類型之一般運算子的行為並不相同。 一般而言，已針對某個實值類型之運算元定義的運算子，也可以搭配相對應可為 Null 實值類型的運算元使用。 這種運算子會在其任何一個運算元為 `null` 的情況下產生 `null`。 不過，就算其中一個運算元是 `null`，`&` 和 `|` 運算子仍可以產生非 Null。 如需可為 null 的實數值型別之運算子行為的詳細資訊，請參閱[使用可為 null 的實數值型別](../../programming-guide/nullable-types/using-nullable-types.md)一文中的[運算子](../../programming-guide/nullable-types/using-nullable-types.md#operators)一節。
 
 您也可以使用 `!` 和 `^` 運算子搭配 `bool?` 運算元，如下列範例所示︰
 

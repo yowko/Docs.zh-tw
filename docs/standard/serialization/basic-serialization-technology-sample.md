@@ -2,12 +2,12 @@
 title: 基本序列化技術範例
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 73bc600c7b4339c1f53ca6e366ae6030015ecfaf
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663774"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353147"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技術範例
 
@@ -25,11 +25,11 @@ ms.locfileid: "67663774"
 
 ### <a name="to-build-the-sample-using-visual-studio"></a>若要使用 Visual Studio 建置範例
 
-1. 開啟檔案總管並瀏覽至其中一個範例的語言特定子目錄。
+1. 開啟 [檔案瀏覽器]，然後流覽至範例的其中一個語言特定子目錄。
 
 2. 根據您選擇的程式設計語言，按兩下 SerializationCS.sln、SerializationJSL.sln 或 SerializationVB.sln 檔案的圖示，在 Visual Studio 中開啟這個檔案。
 
-3. 在 [建置]  功能表中，選取 [建置方案]  。
+3. 在 [建置] 功能表中，選取 [建置方案]。
 
  這個範例應用程式將建置於預設的 \bin 或 \bin\Debug 子目錄中。
 
@@ -48,7 +48,7 @@ ms.locfileid: "67663774"
 
 例如：
 
-```
+```console
 Serialize.exe -sx Test.xml 10
 ```
 
@@ -56,7 +56,7 @@ Serialize.exe -sx Test.xml 10
 
 例如：
 
-```
+```console
 Serialize.exe -dx Test.xml
 ```
 
@@ -64,7 +64,7 @@ Serialize.exe -dx Test.xml
 
 例如：
 
-```
+```console
 Serialize.exe -sb Test.bin 10000 >somefile.txt
 ```
 
@@ -72,11 +72,11 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
 - 執行階段序列化
 
-  - <xref:System.Runtime.Serialization.IFormatter> 用來參考<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>或<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>物件。
+  - <xref:System.Runtime.Serialization.IFormatter> 用來參考 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 或 @no__t 2 物件。
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用來序列化中一種二進位格式的資料流的連結的清單。 二進位格式子使用的格式只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型別才了解。 不過，資料相當簡明。
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用來將連結清單序列化為二進位格式的資料流程。 二進位格式子使用的格式只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型別才了解。 不過，資料相當簡明。
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 用來序列化至 SOAP 格式的資料流的連結的清單。 SOAP 是一種標準格式。
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 用來將連結清單序列化為 SOAP 格式的資料流程。 SOAP 是一種標準格式。
 
 - 資料流 I/O
 

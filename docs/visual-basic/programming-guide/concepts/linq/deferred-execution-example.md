@@ -1,15 +1,15 @@
 ---
-title: 延後的執行範例 (Visual Basic)
+title: 延後執行範例（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: 29f118b3e6d49840b94277f17858f1339f2fb08c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d1f66cbe246b609f634989625688965dd4e5c93
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977622"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351810"
 ---
-# <a name="deferred-execution-example-visual-basic"></a>延後的執行範例 (Visual Basic)
+# <a name="deferred-execution-example-visual-basic"></a>延後執行範例（Visual Basic）
 本主題顯示延後執行與延遲評估如何影響您 LINQ to XML 查詢的執行。  
   
 ## <a name="example"></a>範例  
@@ -46,7 +46,7 @@ End Module
   
  這個範例會產生下列輸出：  
   
-```  
+```console  
 ToUpper: source abc  
 Main: str ABC  
 ToUpper: source def  
@@ -61,4 +61,4 @@ Main: str GHI
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：延後的執行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [教學課程：延後執行（Visual Basic） ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

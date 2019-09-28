@@ -1,15 +1,15 @@
 ---
-title: HOW TO：控制投影 (Visual Basic) 的類型
+title: HOW TO：控制投射的類型（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-ms.openlocfilehash: dd09914a75a8d4b20ddf9ff452f046bf7671152f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ec53d1f8e0ae4957857d4b71fddd05205dee6b5
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051782"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351739"
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>HOW TO：控制投影 (Visual Basic) 的類型
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>HOW TO：控制投射的類型（Visual Basic）
 投影使採用一組資料、進行篩選、變更其組織結構，甚至變更其型別的程序。 大部分的查詢運算式都會執行投影。 本節中所顯示的大部分查詢運算式會評估為 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，但是您可以控制投影的型別以建立其他型別的集合。 本主題顯示如何執行此動作。  
   
 ## <a name="example"></a>範例  
@@ -79,7 +79,7 @@ End Sub
   
  此程式碼會產生下列輸出：  
   
-```  
+```console  
 GREAL:Great Lakes Food Market:Howard Snyder  
 HUNGC:Hungry Coyote Import Store:Yoshi Latimer  
 LAZYK:Lazy K Kountry Store:John Steel  
@@ -89,4 +89,4 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [投影和轉換（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

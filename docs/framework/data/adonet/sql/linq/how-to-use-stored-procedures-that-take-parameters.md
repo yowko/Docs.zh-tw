@@ -1,21 +1,21 @@
 ---
-title: 作法：使用有參數的預存程序
+title: HOW TO：使用有參數的預存程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c2b657f704d072b987578be5520a58d007ecac37
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793070"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353014"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a>作法：使用有參數的預存程序
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a>HOW TO：使用有參數的預存程序
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將輸出參數對應至參考參數，而且會針對實值型別 (Value Type)，將參數宣告為可為 Null。  
   
- 如需如何在傳回資料列集的查詢中使用輸入參數的範例，請參閱[如何：傳回資料](how-to-return-rowsets.md)列集。  
+ 如需如何在傳回資料列集的查詢中使用輸入參數的範例，請參閱 [How to：傳回資料列集 @ no__t-0。  
   
 ## <a name="example"></a>範例  
  下列範例取用單一輸入參數 (客戶 ID)，並傳回輸出參數 (該客戶的總銷售量)。  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [預存程序](stored-procedures.md)
 - [下載範例資料庫](downloading-sample-databases.md)
-- [使用可為 Null 的型別](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [使用可為 Null 的實數值型別](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [可為 Null 的值類型](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

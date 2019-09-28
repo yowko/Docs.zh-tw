@@ -1,17 +1,17 @@
 ---
-title: 作法：實作探索 Proxy
+title: HOW TO：實作探索 Proxy
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 350baa6047d11a2d262e4a6c1d54cc874939ed9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dafd5e25f998f2dda3f736caeea51cd534ce8e5e
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045919"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351572"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a>作法：實作探索 Proxy
+# <a name="how-to-implement-a-discovery-proxy"></a>HOW TO：實作探索 Proxy
 
-本主題說明如何實作探索 Proxy。 如需 Windows Communication Foundation (WCF) 中探索功能的詳細資訊, 請參閱[WCF 探索總覽](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。 許多其他支援類別都已在此範例中定義和使用。 `OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。 這些類別會實作 <xref:System.IAsyncResult> 介面。 如需有關<xref:System.IAsyncResult>的詳細資訊, 請參閱[system.web 介面](xref:System.IAsyncResult)。
+本主題說明如何實作探索 Proxy。 如需 Windows Communication Foundation （WCF）中探索功能的詳細資訊，請參閱[WCF 探索總覽](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。 許多其他支援類別都已在此範例中定義和使用。 `OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。 這些類別會實作 <xref:System.IAsyncResult> 介面。 如需 <xref:System.IAsyncResult> 的詳細資訊，請參閱[system.web 介面](xref:System.IAsyncResult)。
 
  本主題將實作探索 Proxy 分為三個主要部分：
 
@@ -374,10 +374,7 @@ OnBegin. / OnEnd. 方法提供後續探索作業的邏輯。 例如，<xref:Syst
                 }
                 lock (ThisLock)
                 {
-                    if (manualResetEvent == null)
-                    {
-                        manualResetEvent = new ManualResetEvent(isCompleted);
-                    }
+                    manualResetEvent ??= new ManualResetEvent(isCompleted);
                 }
                 return manualResetEvent;
             }
@@ -549,7 +546,7 @@ OnBegin. / OnEnd. 方法提供後續探索作業的邏輯。 例如，<xref:Syst
     }
     ```
 
-您已經完成實作探索 Proxy。 繼續進行[操作說明:執行向探索 Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)註冊的可探索服務。
+您已經完成實作探索 Proxy。 繼續進行 [How 至：執行以探索 Proxy @ no__t-0 註冊的可探索服務。
 
 ## <a name="example"></a>範例
 
@@ -803,10 +800,7 @@ namespace Microsoft.Samples.Discovery
                 }
                 lock (ThisLock)
                 {
-                    if (manualResetEvent == null)
-                    {
-                        manualResetEvent = new ManualResetEvent(isCompleted);
-                    }
+                    manualResetEvent ??= new ManualResetEvent(isCompleted);
                 }
                 return manualResetEvent;
             }
@@ -982,6 +976,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>另請參閱
 
 - [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [如何：執行向探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [如何：執行使用探索 Proxy 來尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [如何：測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [如何：執行以探索 Proxy @ no__t-0 註冊的可探索服務
+- [如何：執行使用探索 Proxy 來尋找服務 @ no__t-0 的用戶端應用程式
+- [如何：測試探索 Proxy @ no__t-0

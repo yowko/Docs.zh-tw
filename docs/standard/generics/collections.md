@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0de14fd5d576774ed1605784f5f0c6b0fae2c8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948917"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353951"
 ---
 # <a name="generic-collections-in-net"></a>.NET 中的泛型集合
 
@@ -40,7 +40,7 @@ ms.locfileid: "69948917"
  <xref:System.Nullable%601> 泛型結構可讓您使用可指派 `null` 的實值類型。 這在使用資料庫查詢時會很有用，因為包含實值類型的欄位可能遺漏。 泛型類型參數可以是任何實值類型。  
   
 > [!NOTE]
-> 在 C# 和 Visual Basic 中，不需要明確使用 <xref:System.Nullable%601>，因為語言已具有可為 Null 型別的語法。 請參閱[可為 Null 的型別 (C# 程式設計指南)](../../csharp/programming-guide/nullable-types/index.md) 或[可為 Null 的實值型別 (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。 
+> 在 C# 和 Visual Basic 中，不需要明確使用 <xref:System.Nullable%601>，因為語言已具有可為 Null 型別的語法。 請參閱[可為 nullC#的實數值型別（程式設計指南）](../../csharp/programming-guide/nullable-types/index.md)和[可為 null 的實數值型別（Visual Basic）](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
   
  <xref:System.ArraySegment%601> 泛型結構提供一個方法，將項目範圍限定在任何類型之以零為起始的一維陣列中。 泛型型別參數是陣列的項目類型。  
   

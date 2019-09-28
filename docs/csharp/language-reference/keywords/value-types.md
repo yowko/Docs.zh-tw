@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608387"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353759"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -32,13 +32,13 @@ ms.locfileid: "69608387"
 
 與參考型別不同，您無法從實值型別衍生新的類型。 不過，就像參考型別，結構可以實作介面。
 
-實值型別預設不可為 `null`。 不過，相對應的[可為 Null 的型別](../../programming-guide/nullable-types/index.md)則可為 `null`。
+實值型別預設不可為 `null`。 不過，對應的[可為 null 實數值型別](../../programming-guide/nullable-types/index.md)的變數可以 `null`。
 
 每種實值型別都具有初始化該型別預設值的隱含無參數建構函式。 如需有關實值型別預設值的資訊，請參閱[預設值表](default-values-table.md)。
 
 ## <a name="simple-types"></a>簡單型別
 
-「簡單型別」  是 C# 所提供的一組預先定義結構型別，其中包含下列型別：
+「簡單型別」是 C# 所提供的一組預先定義結構型別，其中包含下列型別：
 
 - [整數型別](../builtin-types/integral-numeric-types.md)：整數數字型別和 [char](char.md) 型別
 - [浮點類型](../builtin-types/floating-point-numeric-types.md)
@@ -109,4 +109,4 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 - [C# 關鍵字](index.md)
 - [型別](types.md)
 - [參考型別](reference-types.md)
-- [可為 Null 的型別](../../programming-guide/nullable-types/index.md)
+- [可為 Null 的實值型別](../../programming-guide/nullable-types/index.md)

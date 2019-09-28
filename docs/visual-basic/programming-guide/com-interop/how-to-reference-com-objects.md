@@ -1,5 +1,5 @@
 ---
-title: 作法：從 Visual Basic 參考 COM 物件
+title: HOW TO：從 Visual Basic 參考 COM 物件
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,49 +8,49 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: df234ecaf25243dbdf2d6552942ca86001d4a6fe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8e502dc9a279d9271a61fd2cf7a6afb564f09125
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592183"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351993"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>作法：從 Visual Basic 參考 COM 物件
-在 Visual Basic 中將參考加入至具有型別程式庫的 COM 物件需要建立 interop 組件的 COM 程式庫。 參考 COM 物件的成員會路由傳送至的 interop 組件，且接著轉送到實際的 COM 物件。 從 COM 物件的回應會路由傳送至的 interop 組件，並轉送至.NET Framework 應用程式。  
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>HOW TO：從 Visual Basic 參考 COM 物件
+在 Visual Basic 中，加入具有類型程式庫之 COM 物件的參考時，需要建立 COM 程式庫的 interop 元件。 COM 物件成員的參考會路由傳送至 interop 元件，然後轉送至實際的 COM 物件。 COM 物件的回應會路由傳送至 interop 元件，並轉送至您的 .NET Framework 應用程式。  
   
- 您可以參考 COM 物件，而不需使用 interop 組件中的.NET 組件內嵌 COM 物件的型別資訊。 若要內嵌類型資訊，請設定`Embed Interop Types`屬性設`True`的 COM 物件的參考。 如果您正在使用命令列編譯器來編譯，請使用`/link`參考的 COM 程式庫的選項。 如需詳細資訊，請參閱 < [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)。  
+ 您可以在 .NET 元件中內嵌 COM 物件的類型資訊，而不使用 interop 元件來參考 COM 物件。 若要內嵌類型資訊，請將 `Embed Interop Types` 屬性設定為 `True`，以取得 COM 物件的參考。 如果您使用命令列編譯器進行編譯，請使用 `/link` 選項來參考 COM 程式庫。 如需詳細資訊，請參閱[/link （Visual Basic）](../../../visual-basic/reference/command-line-compiler/link.md)。  
   
- Visual Basic 會自動建立 interop 組件，當您將整合式的開發環境 (IDE) 中的型別程式庫的參考。 從命令列時，您可以使用 Tlbimp 公用程式來手動建立 interop 組件。  
+ 當您從整合式開發環境（IDE）加入類型程式庫的參考時，Visual Basic 會自動建立 interop 元件。 從命令列工作時，您可以使用 Tlbimp.exe 公用程式來手動建立 interop 元件。  
   
-### <a name="to-add-references-to-com-objects"></a>將參考加入至 COM 物件  
+### <a name="to-add-references-to-com-objects"></a>加入 COM 物件的參考  
   
-1. 在上**專案**功能表上，選擇**加入參考**，然後按一下  **COM**在對話方塊中的索引標籤。  
+1. 在 [**專案**] 功能表上，選擇 [**加入參考**]，然後按一下對話方塊中的 [ **COM** ] 索引標籤。  
   
-2. 選取您想要從清單中的 COM 物件使用的元件。  
+2. 從 COM 物件清單中選取您想要使用的元件。  
   
-3. 若要簡化的 interop 組件的存取，將新增`Imports`頂端的類別或模組中，您會使用 COM 物件的陳述式。 例如，下列程式碼範例匯入命名空間`INKEDLib`中所參考的物件`Microsoft InkEdit Control 1.0`程式庫。  
+3. 若要簡化 interop 元件的存取，請在您將使用 COM 物件的類別或模組頂端新增 `Imports` 語句。 例如，下列程式碼範例會針對 `Microsoft InkEdit Control 1.0` 程式庫中所參考的物件，匯入 `INKEDLib` 的命名空間。  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
-### <a name="to-create-an-interop-assembly-using-tlbimp"></a>若要建立使用 Tlbimp 的 interop 組件  
+### <a name="to-create-an-interop-assembly-using-tlbimp"></a>若要使用 Tlbimp 建立 interop 元件  
   
-1. 如果尚不搜尋路徑的一部分，而且您目前不在其所在的目錄，則您可以加入搜尋路徑中，Tlbimp 的位置。  
+1. 將 Tlbimp 的位置新增至搜尋路徑（如果它還不是搜尋路徑的一部分，而且您目前不在其所在的目錄中）。  
   
-2. 呼叫 Tlbimp 從命令提示字元，提供下列資訊：  
+2. 從命令提示字元呼叫 Tlbimp，並提供下列資訊：  
   
-    - 包含型別程式庫的 DLL 的名稱和位置  
+    - 包含類型程式庫的 DLL 名稱和位置  
   
-    - 名稱和命名空間的位置資訊應放置的位置  
+    - 應放置資訊的命名空間名稱和位置  
   
-    - 目標的 interop 組件的名稱和位置  
+    - 目標 interop 元件的名稱和位置  
   
      下列程式碼提供一個範例：  
   
-    ```  
+    ```console  
     Tlbimp test3.dll /out:NameSpace1 /out:Interop1.dll  
     ```  
   
-     您可以使用 Tlbimp 建立 interop 組件的類型程式庫，即使未註冊的 COM 物件。 不過，您必須正確它們要使用的電腦上註冊 interop 組件所參考的 COM 物件。 您可以使用 Regsvr32 公用程式隨附於 Windows 作業系統中註冊的 COM 物件。  
+     您可以使用 Tlbimp 來建立類型程式庫的 interop 元件，即使是未註冊的 COM 物件也是如此。 不過，interop 元件所參考的 COM 物件必須在要使用它們的電腦上正確註冊。 您可以使用 Windows 作業系統隨附的 Regsvr32 公用程式來註冊 COM 物件。  
   
 ## <a name="see-also"></a>另請參閱
 

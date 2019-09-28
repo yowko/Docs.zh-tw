@@ -1,15 +1,15 @@
 ---
-title: 不可部分完成的 XName 和 XNamespace 物件 (LINQ to XML) (Visual Basic)
+title: 不可部分完成的 XName 和 XNamespace 物件（LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: fe0c4429c89e0028b3b012c87684bd14048de27a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae6d21c21aac4455e7932015c131fb4295673056
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951927"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351836"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>不可部分完成的 XName 和 XNamespace 物件 (LINQ to XML) (Visual Basic)
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>不可部分完成的 XName 和 XNamespace 物件（LINQ to XML）（Visual Basic）
 
 <xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 物件是「不可部分完成」的物件。也就是說，如果它們包含相同的限定名稱，它們就會參考相同的物件。 這會針對查詢產生效能優勢：當您比較兩個不可部分完成的名稱是否相等時，基礎中繼語言只需要判斷這兩個參考是否指向相同的物件即可。 基礎程式碼不需要進行耗時的字串比較。
 
@@ -46,7 +46,7 @@ End If
 
 這個範例會產生下列輸出：
 
-```
+```console
 r1 and r2 have names that refer to the same instance.
 The name of r1 and the name in 'n' refer to the same instance.
 ```
@@ -74,4 +74,4 @@ Next
 
 ## <a name="see-also"></a>另請參閱
 
-- [效能 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [效能（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

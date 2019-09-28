@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 763b048fcb517987931b0bdb4f5b9c5a613a05e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 26b7e3a287c00f103129632ae8b0db882d468ef3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794117"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352984"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 當資料行中的值未知或遺失時，便會使用關聯式資料庫中的 Null 值。 Null 既不是空字串 (針對字元或 datetime 資料型別)，也不是零值 (針對數值資料型別)。 根據 ANSI SQL-92 規格的內容，對所有的資料型別而言，Null 必須都是相同的，以便可一致處理所有的 Null。 藉由實作 <xref:System.Data.SqlTypes> 介面，<xref:System.Data.SqlTypes.INullable> 命名空間可以提供 Null 語意。 <xref:System.Data.SqlTypes> 中的每個資料型別都具有自己的 `IsNull` 屬性及 `Null` 值，而該值可以指派給該資料型別的執行個體 (Instance)。  
   
 > [!NOTE]
-> .NET Framework 2.0 版開始支援可為 Null 型別，這讓程式設計人員得以擴充實值型別，以表示基礎型別所有的值。 這些 CLR 可為 Null 的型別代表 <xref:System.Nullable> 結構的執行個體。 當實質型別為 boxed 和 unboxed 時，這項功能特別有用，可強化與物件型別的相容性。 CLR 可為 Null 的型別不適用於儲存資料庫 Null，因為 ANSI SQL Null 的行為方式與 `null` 參考不同 (在 Visual Basic 中為 `Nothing`)。 若要使用資料庫 ANSI SQL Null 值，請利用 <xref:System.Data.SqlTypes> Null 而非 <xref:System.Nullable>。 如需在 Visual Basic 中使用 CLR 可為 null 型別的詳細資訊，請參閱[可為 null](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)的實值型別，以及C# [使用可為 null](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)型別的  
+> .NET Framework 2.0 版開始支援可為 Null 型別，這讓程式設計人員得以擴充實值型別，以表示基礎型別所有的值。 這些 CLR 可為 Null 的型別代表 <xref:System.Nullable> 結構的執行個體。 當實質型別為 boxed 和 unboxed 時，這項功能特別有用，可強化與物件型別的相容性。 CLR 可為 Null 的型別不適用於儲存資料庫 Null，因為 ANSI SQL Null 的行為方式與 `null` 參考不同 (在 Visual Basic 中為 `Nothing`)。 若要使用資料庫 ANSI SQL Null 值，請利用 <xref:System.Data.SqlTypes> Null 而非 <xref:System.Nullable>。 如需在 Visual Basic 中使用 CLR 可為 null 型別的詳細資訊，請參閱[可為 null](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)的實值型別，並C#參閱[使用可為 null](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)的實值  
   
 ## <a name="nulls-and-three-valued-logic"></a>Null 及三種值的邏輯  
  在資料行定義中允許 Null 值會將三種值的邏輯引進應用程式。 比較可評估為下列三個條件之一：  
@@ -35,7 +35,7 @@ ms.locfileid: "70794117"
  ![事實資料表](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>瞭解 ANSI_NULLS 選項  
- <xref:System.Data.SqlTypes> 提供的語意與在 SQL Server 中設定 ANSI_NULLS 選項時的語意相同。 如果任何運算元或引數為 null \*（屬性`IsNull`除外），則所有算術運算子（+、 \|-、、/、%）、位運算子（~、&、）和大部分函數都會傳回 null。  
+ <xref:System.Data.SqlTypes> 提供的語意與在 SQL Server 中設定 ANSI_NULLS 選項時的語意相同。 所有算術運算子（+、-、\*、/、%）、位運算子（~、&、\|）和大部分函式會在任何運算元或引數為 null 時傳回 null，但屬性 `IsNull` 除外。  
   
  ANSI SQL-92 標準不支援 WHERE 子句中的*columnName* = Null。 在 SQL Server 中，ANSI_NULLS 選項可控制資料庫中的預設 Null 屬性及針對 Null 值的比較評估。 如果啟用 ANSI_NULLS (預設值)，則當測試 Null 值時，必須在運算式中使用 IS NULL 運算子。 例如，當啟用 ANSI_NULLS 時，下列比較永遠會產生 Unknown：  
   
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  此外，下列規則可套用至 `DataRow.["columnName"]` Null 指派的執行個體：  
   
-1. 除了強型別 null `DbNull.Value`資料行（其為適當的強型別 null 值）以外，預設的預設值為。  
+1. 除了強型別 null 資料行（其為適當的強型別 null 值）以外，所有的預設*預設*值都是 `DbNull.Value`。  
   
 2. 在序列化為 XML 檔案期間永遠不會寫出 Null 值 (如同在 xsi:nil 中)。  
   

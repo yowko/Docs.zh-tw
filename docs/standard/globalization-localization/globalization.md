@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8820fb898e0944704b7c81363962d523770a541c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: HT
+ms.openlocfilehash: ce2f127858305a96b358c1661b98a359ae565f57
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442473"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393128"
 ---
 # <a name="globalization"></a>全球化
 
@@ -85,8 +85,7 @@ ms.locfileid: "56442473"
 
 相等比較有時會涉及搜尋或子字串比較，而不是呼叫 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法。 在某些情況下，您可以使用子字串搜尋來判斷該子字串是否等於另一個字串。 如果這項比較的目的非關語言，仍應為序數而非區分文化特性的搜尋。
 
-下列範例說明非語言資料的區分文化特性搜尋所帶來的危險。 
-  `AccessesFileSystem` 方法設計用來禁止開頭為"FILE" 之子字串的 URI 存取檔案系統。 若要這樣做，它會使用字串 "FILE" 對 URI 開頭執行區分文化特性而不區分大小寫的比較。 因為存取檔案系統的 URI 可以使用 "FILE:" 或 "file:" 作為開頭，因此隱含假設該 "i" (U+0069) 一律為 "I" (U+0049) 的小寫對應項。 不過，在土耳其文和亞塞拜然文中，大寫版本的 "i" 為 "İ" (U+0130)。 有鑑於此差異，區分文化特性的比較可在應該禁止存取檔案系統時，允許予以使用。
+下列範例說明非語言資料的區分文化特性搜尋所帶來的危險。 `AccessesFileSystem` 方法設計用來禁止開頭為"FILE" 之子字串的 URI 存取檔案系統。 若要這樣做，它會使用字串 "FILE" 對 URI 開頭執行區分文化特性而不區分大小寫的比較。 因為存取檔案系統的 URI 可以使用 "FILE:" 或 "file:" 作為開頭，因此隱含假設該 "i" (U+0069) 一律為 "I" (U+0049) 的小寫對應項。 不過，在土耳其文和亞塞拜然文中，大寫版本的 "i" 為 "İ" (U+0130)。 有鑑於此差異，區分文化特性的比較可在應該禁止存取檔案系統時，允許予以使用。
 
 [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
 [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]
@@ -140,13 +139,11 @@ ms.locfileid: "56442473"
 
 - 無參數的 <xref:System.DateTime.ToString?displayProperty=nameWithType> 方法
 
-- 
-  <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，其中包含格式字串
+- <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，其中包含格式字串
 
 - 無參數的 <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> 方法
 
-- 
-  <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>，其中包含格式字串
+- <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>，其中包含格式字串
 
 - [複合格式化](../../../docs/standard/base-types/composite-formatting.md)功能，搭配日期使用時
 
@@ -186,7 +183,7 @@ ms.locfileid: "56442473"
 
 當資料還原所在的系統與序列化所在的系統時區相同時，已還原序列化的日期和時間值會正確地反映原始值，如輸出所示︰
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/30/2013 6:00:00 PM Local
@@ -196,7 +193,7 @@ ms.locfileid: "56442473"
 
 不過，如果資料還原所在的系統時區不同，則只有使用 "o" (來回) 標準格式字串格式化的日期和時間值才會保存時區資訊，並因此代表相同的即時時間。 以下輸出為在羅馬標準時區系統上還原日期和時間資料︰
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
@@ -221,7 +218,7 @@ ms.locfileid: "56442473"
 
 當資料序列化所在的系統為太平洋標準時間時區，且還原序列化所在的系統為羅馬標準時區，此範例會顯示下列輸出︰
 
-```
+```console
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
 'Sun, 31 Mar 2013 01:00:00 GMT' --> 3/31/2013 3:00:00 AM Local
 '2013-03-31 01:00:00Z' --> 3/31/2013 3:00:00 AM Local
@@ -233,8 +230,7 @@ ms.locfileid: "56442473"
 
 ### <a name="perform-date-and-time-arithmetic"></a>執行日期和時間運算
 
-
-  <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型皆支援算術運算。 您可以計算兩個日期值之間的差異，或是可以加入或減去日期值的特定時間間隔。 不過，日期和時間值的算術運算並不會將時區和時區調整規則列入考量。 基於此原因，以分鐘表示時間的值日期和時間運算，可能會傳回不正確的結果。
+<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型皆支援算術運算。 您可以計算兩個日期值之間的差異，或是可以加入或減去日期值的特定時間間隔。 不過，日期和時間值的算術運算並不會將時區和時區調整規則列入考量。 基於此原因，以分鐘表示時間的值日期和時間運算，可能會傳回不正確的結果。
 
 比方說，從太平洋標準時間轉換為太平洋日光節約時間發生在 3 月的第二個星期日，也就是 2013 年 3 月 10 日。 如下列範例所示，如果您計算的日期和時間是系統上太平洋標準時區 2013 年 3 月 9 日上午 10:30 後的 48 小時， 則結果 2013 年 3 月 11 日上午 10:30 不會將中介時間調整列入考量。
 
@@ -326,17 +322,13 @@ ms.locfileid: "56442473"
 
 在 .NET 中，<xref:System.Globalization.CultureInfo> 類別代表特定文化特性 (Culture) 或地區。 其部分屬性會傳回物件，提供文化特性某些方面的特定資訊︰
 
-- 
-  <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Globalization.CompareInfo> 物件，其包含文化特性如何比較和排序字串的相關資訊。
+- <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Globalization.CompareInfo> 物件，其包含文化特性如何比較和排序字串的相關資訊。
 
-- 
-  <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Globalization.DateTimeFormatInfo> 物件，其提供將日期和時間資料格式化所使用的特定文化特性資訊。
+- <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Globalization.DateTimeFormatInfo> 物件，其提供將日期和時間資料格式化所使用的特定文化特性資訊。
 
-- 
-  <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Globalization.NumberFormatInfo> 物件，其提供將數值資料格式化所使用的特定文化特性資訊。
+- <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Globalization.NumberFormatInfo> 物件，其提供將數值資料格式化所使用的特定文化特性資訊。
 
-- 
-  <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Globalization.TextInfo> 物件，其提供文化特性寫入系統的相關資訊。
+- <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Globalization.TextInfo> 物件，其提供文化特性寫入系統的相關資訊。
 
 一般情況下，請勿假設特定 <xref:System.Globalization.CultureInfo> 屬性和其相關物件的值。 相反地，您應將特定文化特性資料視為隨時有可能變更，理由如下︰
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 063d7e3b68fbe6c01ff0df4ae935fec5af6f6891
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
-ms.translationtype: HT
+ms.openlocfilehash: df2a235651a2242ffe18df377dce9995af31e99f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743844"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392459"
 ---
 # <a name="structs-c-programming-guide"></a>結構 (C# 程式設計手冊)
 
@@ -29,14 +29,14 @@ Struct 大部分與 class 共用相同語法。 結構的名稱必須是有效�
 - 結構可以宣告具有參數的建構函式。
 - 結構無法繼承自另一個結構或類別，而且不能作為類別的基底。 所有結構都直接繼承自 <xref:System.ValueType>，該項則繼承自 <xref:System.Object>。  
 - 結構可以實作介面。
-- 結構不能是 `null`，而且除非將結構變數宣告為可為 Null 的型別，否則無法將 `null` 指派給該型別。
+- 結構不能 `null`，而且除非將變數宣告為可為 null 的實值型別，否則無法將結構變數指派 `null`。
   
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](index.md)
 - [類別](classes.md)
-- [可為 Null 的型別](../nullable-types/index.md)
+- [可為 Null 的實值型別](../nullable-types/index.md)
 - [識別碼名稱](../inside-a-program/identifier-names.md)
 - [使用結構](using-structs.md)
 - [如何：了解將結構和類別參考傳遞給方法之間的差異](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)

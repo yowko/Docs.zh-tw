@@ -1,18 +1,18 @@
 ---
 title: 使用索引和範圍探索資料範圍
 description: 此進階教學課程將教導您使用索引和範圍探索資料，以檢查連續資料集的配量。
-ms.date: 04/19/2019
+ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117835"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391963"
 ---
 # <a name="indices-and-ranges"></a>索引和範圍
 
-範圍和索引提供簡潔的<xref:System.Array>語法，用於存取、 <xref:System.String>、 <xref:System.Span%601>或<xref:System.ReadOnlySpan%601>中的單一專案或範圍。 這些功能提供更簡潔且清楚的語法來存取序列中單一項目或項目範圍。
+範圍和索引提供簡潔的語法，可用於存取序列中的單一專案或範圍。
 
 在本教學課程中，您將了解如何：
 
@@ -74,6 +74,14 @@ string[] words = new string[]
 下列範例顯示這些選擇的許多原因。 修改 `x`、`y` 和 `z` 以嘗試不同的組合。 在您實驗時，請使用 `x` 小於 `y`，且 `y` 小於 `z` 的有效組合值。 在新方法中新增下列程式碼。 嘗試不同的組合：
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+
+## <a name="type-support-for-indices-and-ranges"></a>索引和範圍的類型支援
+
+如果型別提供具有 <xref:System.Index> 或 <xref:System.Range> 參數的[索引子](../programming-guide/indexers/index.md)，則會分別明確支援索引或範圍。
+
+如果類型具有名為 `Length` 的屬性，或具有可存取 getter 的 `Count`，且傳回型別為 `int`，則型別為**計算**。 未明確支援索引或範圍的計算類型可能會為其提供隱含支援。 如需詳細資訊，請參閱[功能提案注意事項](~/_csharplang/proposals/csharp-8.0/ranges.md)的[隱含索引支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)和[隱含範圍支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)章節。
+
+例如，下列 .NET 類型支援索引和範圍： <xref:System.Array>、<xref:System.String>、<xref:System.Span%601> 和 <xref:System.ReadOnlySpan%601>。 @No__t-0 支援索引，但不支援範圍。
 
 ## <a name="scenarios-for-indices-and-ranges"></a>索引和範圍的案例
 

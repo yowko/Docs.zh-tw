@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566282"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353732"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>如何：使用模式比對、is 和 as 運算子，安全地進行轉換
 
@@ -23,11 +23,11 @@ ms.locfileid: "69566282"
 
 上述範例示範模式比對語法的一些功能。 `if (a is Mammal m)` 和 `if (o is Mammal m)` 陳述式使用初始化指派來合併測試。 只有在測試成功時，才會進行指派。 變數 `m` 僅會在已指派的內嵌 `if` 陳述式範圍內。 您隨後無法使用相同的方法存取 `m`。 請於互動式視窗嘗試。
 
-如果[可為 Null 的型別](../programming-guide/nullable-types/index.md)具有值，您也可以使用相同的語法進行測試，如下列範例程式碼所示：
+如果可[為 null 的實數值型別](../programming-guide/nullable-types/index.md)具有值，您也可以使用相同的語法來進行測試，如下列範例程式碼所示：
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
-上述範例示範模式比對轉換的其他功能，以便與轉換一起使用。 您可以特別檢查 `null` 值，藉此測試 Null 模式的變數。 當執行階段變數的值是 `null`，則 `is` 陳述式的類型檢查一律會傳回 `false`。 模式比對 `is` 陳述式不允許可為 Null 的值型別 (例如 `int?` 或 `Nullable<int>`)，但您可以測試其他值的型別。
+上述範例示範模式比對轉換的其他功能，以便與轉換一起使用。 您可以特別檢查 `null` 值，藉此測試 Null 模式的變數。 當執行階段變數的值是 `null`，則 `is` 陳述式的類型檢查一律會傳回 `false`。 模式比對 `is` 陳述式不允許可為 Null 的值型別 (例如 `int?` 或 `Nullable<int>`)，但您可以測試其他值的型別。 上述範例中的 `is` 模式不限於可為 null 的實數值型別。 您也可以使用這些模式來測試參考型別的變數是否有值，或其 `null`。
 
 上述範例中也說明如何在 `switch` 陳述式中使用模式比對 `is` 運算式，其中變數可能是多種類型之一。
 

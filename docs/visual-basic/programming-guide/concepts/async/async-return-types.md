@@ -2,12 +2,12 @@
 title: 非同步傳回類型（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: f331546026ac6b0799947611b54e9a147a6fe7f1
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 387b75db3078afb92e6fc3ad7607b293abb0c851
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988831"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351942"
 ---
 # <a name="async-return-types-visual-basic"></a>非同步傳回類型（Visual Basic）
 非同步方法有三種可能的傳回類型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 和 void。 在 Visual Basic 中，void 傳回型別會撰寫為 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 程序。 如需非同步方法的詳細資訊，請參閱[使用 async 和 Await 進行非同步程式設計（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
@@ -274,9 +274,9 @@ End Sub
   
 9. 選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。  
   
-     應該出現下列輸出。  
+     應該會出現下列輸出：  
   
-    ```  
+    ```console  
     Application can continue working while the Task<T> runs. . . .   
   
     Value of result1 variable:   5  
@@ -295,7 +295,7 @@ End Sub
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [逐步解說：使用 Async 和 Await 存取 Web （Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [逐步解說：使用 Async 和 Await 存取 Web （Visual Basic） ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [非同步程式中的控制流程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Await 運算子](../../../../visual-basic/language-reference/operators/await-operator.md)

@@ -1,15 +1,15 @@
 ---
-title: 建立來源 Office Open XML 檔 (Visual Basic)
+title: 建立來源 Office Open XML 檔（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: d01755442a9b64e0577ace4eb05c6818dac9a824
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75030f3d1c2940cc84f81b85dca921497137439f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965245"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352955"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>建立來源 Office Open XML 檔 (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>建立來源 Office Open XML 檔（Visual Basic）
 這個主題顯示如何建立此教學課程中其他範例所使用的 Office Open XML WordprocessingML 文件。 如果您按照這些指示進行，您的輸出將會符合每個範例中提供的輸出。  
   
  不過，本教學課程中的範例將會使用任何有效的 WordprocessingML 文件。  
@@ -24,7 +24,7 @@ ms.locfileid: "69965245"
   
 2. 將下列文字貼到新的文件中：  
   
-    ```  
+    ```text  
     Parsing WordprocessingML with LINQ to XML  
   
     The following example prints to the console.  
@@ -55,4 +55,4 @@ ms.locfileid: "69965245"
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：操作 WordprocessingML 檔中的內容 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic） ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

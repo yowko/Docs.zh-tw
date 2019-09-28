@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 255e69d3715a22e7933b4036e968e610657748cf
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605957"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353761"
 ---
 # <a name="char-c-reference"></a>char (C# 參考)
 
@@ -21,7 +21,7 @@ ms.locfileid: "69605957"
 
  Unicode 字元是用來代表世界各地的大部分書寫語言。
 
-|類型|Range|大小|.NET 型別|
+|Type|Range|Size|.NET 型別|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 到 U+FFFF|Unicode 16 位元字元|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -51,5 +51,4 @@ ms.locfileid: "69605957"
 - [內建型別表](./built-in-types-table.md)
 - [隱含數值轉換表](./implicit-numeric-conversions-table.md)
 - [明確數值轉換表](./explicit-numeric-conversions-table.md)
-- [可為 Null 的型別](../../programming-guide/nullable-types/index.md)
 - [字串](../../programming-guide/strings/index.md)

@@ -2,12 +2,12 @@
 title: C# 8.0 的新功能- C#指南
 description: 大致了解 C# 8.0 中可用的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: 95331c8dd8e8b5e0d5af242752565d8e93120937
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ee0f6c9d7cfbe829508e3e0900e249c204266ca3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216488"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396033"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -375,18 +375,18 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="indices-and-ranges"></a>索引和範圍
 
-範圍和索引會提供簡潔的語法，以指定陣列、[字串](../language-reference/builtin-types/reference-types.md#the-string-type)、 <xref:System.Span%601>或<xref:System.ReadOnlySpan%601>中的子範圍。
+索引和範圍提供簡潔的語法，用於存取序列中的單一元素或範圍。
 
 此語言支援依賴兩個新的類型和兩個新的運算子：
 
 - <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
-- `^` 運算子，它會指定索引相對於序列結尾。
+- End 運算子的索引 `^`，指定索引相對於序列結尾。
 - <xref:System.Range?displayProperty=nameWithType> 代表序列的子範圍。
-- Range 運算子 (`..`)，它會指定範圍的開頭與結尾作為其運算子。
+- 範圍運算子`..`，指定範圍的開始和結束作為其運算元。
 
 讓我們從索引的規則開始。 假設有一個陣列 `sequence`。 `0` 索引與 `sequence[0]` 相同。 `^0` 索引與 `sequence[sequence.Length]` 相同。 請注意，`sequence[^0]` 會擲回例外狀況，就樣 `sequence[sequence.Length]` 會這樣做一樣。 針對任何數字 `n`，索引 `^n` 與 `sequence.Length - n` 相同。
 
-指定範圍「開頭」與「結尾」的範圍。 範圍的開頭會包含在內，但範圍的結尾是獨佔的，這表示開始包含在範圍內，但結束不包含在範圍內。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。 
+指定範圍「開頭」與「結尾」的範圍。 範圍的開頭會包含在內，但範圍的結尾是獨佔的，這表示開始包含在範圍內，但結束不包含在範圍內。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。
 
 讓我們來看以下幾個範例。 試想下列使用其索引從開頭或從結尾標註的陣列：
 
@@ -444,6 +444,8 @@ Range phrase = 1..4;
 ```csharp
 var text = words[phrase];
 ```
+
+不只有陣列支援索引和範圍。 您也可以使用[字串](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 的索引和範圍。 如需詳細資訊，請參閱[索引和範圍的類型支援](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
 
 您可以在[索引及範圍](../tutorials/ranges-indexes.md)上的教學課程中探索更多關於索引及範圍的資訊。
 

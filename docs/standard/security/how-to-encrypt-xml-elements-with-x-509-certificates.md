@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6d7e6f41a7cfc32dfcf242086968f32743028e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d569d3c020e7329d987e957f181b34c8cfbf941a
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645288"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353856"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>HOW TO：使用 X.509 憑證加密 XML 元素
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格 XML 加密位於 <https://www.w3.org/TR/xmldsig-core/>。  
@@ -30,15 +30,15 @@ ms.locfileid: "64645288"
   
  此範例會使用兩個金鑰來加密 XML 元素。 它會使用[憑證建立工具 (Makecert.exe)](/windows/desktop/SecCrypto/makecert) 產生測試 X.509 憑證，並將憑證儲存到憑證存放區。 範例接著會以程式設計方式擷取憑證，並使用它使用 <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> 方法加密 XML 項目。 就內部而言，<xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> 方法會建立個別的工作階段金鑰，並使用它來加密 XML 文件。 這個方法會加密工作階段金鑰，並將它與加密的 XML 一併儲存在新的 <`EncryptedData`> 元素中。  
   
- 若要解密 XML 項目，只要呼叫 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法，它會自動從存放區擷取 X.509 憑證，並執行必要的解密。  如需如何使用此程序加密 XML 項目解密的詳細資訊，請參閱[How to:使用 X.509 憑證解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)。  
+ 若要解密 XML 項目，只要呼叫 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法，它會自動從存放區擷取 X.509 憑證，並執行必要的解密。  如需如何解密使用此程式加密之 XML 元素的詳細資訊，請參閱 [How to：使用 x.509 憑證 @ no__t-0 解密 XML 元素。  
   
  這個範例適合多個應用程式需要共用加密資料或應用程式需要在它執行時間之間儲存加密資料的情況。  
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>使用 X.509 憑證加密 XML元素目  
   
-1. 請使用[憑證建立工具 (Makecert.exe)](/windows/desktop/SecCrypto/makecert) 產生測試 X.509 憑證，並將它放在本機使用者存放區中。  您必須產生交換金鑰，且必須使金鑰可以匯出。 執行下列命令：  
+1. 請使用[憑證建立工具 (Makecert.exe)](/windows/desktop/SecCrypto/makecert) 產生測試 X.509 憑證，並將它放在本機使用者存放區中。 您必須產生交換金鑰，且必須使金鑰可以匯出。 執行下列命令：  
   
-    ```  
+    ```console  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  
     ```  
   
@@ -119,4 +119,4 @@ ms.locfileid: "64645288"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Cryptography.Xml>
-- [如何：使用 X.509 憑證解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)
+- [如何：以 x.509 憑證 @ no__t-0 解密 XML 元素

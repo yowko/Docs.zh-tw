@@ -2,12 +2,12 @@
 title: 使用 DataContractSerializer 及 DataContractResolver 提供 NetDataContractSerializer 的功能
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e52b6da80100cbffb7dc8725d16c31a67bc19445
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039868"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351660"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>使用 DataContractSerializer 及 DataContractResolver 提供 NetDataContractSerializer 的功能
 此範例示範如何搭配適當的 <xref:System.Runtime.Serialization.DataContractSerializer> 使用 <xref:System.Runtime.Serialization.DataContractResolver> 以提供與 <xref:System.Runtime.Serialization.NetDataContractSerializer> 相同的功能。 此範例示範如何建立適當的 <xref:System.Runtime.Serialization.DataContractResolver>，以及如何將其加入至 <xref:System.Runtime.Serialization.DataContractSerializer>。
@@ -33,10 +33,7 @@ class MyDataContractResolver : DataContractResolver
     public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)
     {
         Type type = knownTypeResolver.ResolveName(typeName, typeNamespace, null);
-        if (type == null)
-        {
-            type = Type.GetType(typeName + ", " + typeNamespace);
-        }
+        type ??= Type.GetType(typeName + ", " + typeNamespace);
         return type;
     }
 
@@ -57,15 +54,15 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1. 使用 Visual Studio 2012, 開啟 [DCRSample] 方案檔。
+1. 使用 Visual Studio 2012，開啟 [DCRSample] 方案檔。
 
-2. 以滑鼠右鍵按一下方案檔, 然後選擇 [**屬性**]。
+2. 以滑鼠右鍵按一下方案檔，然後選擇 [**屬性**]。
 
-3. 在 [**方案屬性頁**] 對話方塊的 [**通用屬性**]、[**啟始專案**] 底下, 選取 [**多個啟始專案:** ]。
+3. 在 [**方案屬性頁**] 對話方塊的 [**通用屬性**]、[**啟始專案**] 底下，選取 [**多個啟始專案：** ]。
 
-4. 在**dcswithdcr 旁邊**專案旁, 從 [**動作**] 下拉式清單中選取 [**啟動**]。
+4. 在**dcswithdcr 旁邊**專案旁，從 [**動作**] 下拉式清單中選取 [**啟動**]。
 
-5. 在**netdcs 旁邊**專案旁, 從 [**動作**] 下拉式清單中選取 [**啟動**]。
+5. 在**netdcs 旁邊**專案旁，從 [**動作**] 下拉式清單中選取 [**啟動**]。
 
 6. 按一下 **[確定**] 以關閉對話方塊。
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 601f9a216bc2e11ccb34f1f3b3df267002efb01f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ebfc8f79303f89b092dd0fb38237dffffe0a93ba
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631462"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353913"
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 
@@ -49,7 +49,7 @@ CCW 會以與 COM 強制進行介面型互動一致的方式，向 COM 用戶端
 
 除了公開受控環境中類別明確實作的介面，.NET 執行階段也會代表物件提供下表所列 COM 介面的實作。 .NET 類別可以藉由提供自己的這些介面實作來覆寫預設行為。 不過，執行階段一律會提供 **IUnknown** 和 **IDispatch** 介面的實作。
 
-|介面|說明|
+|介面|描述|
 |---------------|-----------------|
 |**IDispatch**|提供晚期類型繫結的機制。|
 |**IErrorInfo**|提供錯誤的文字描述、其來源、說明檔、說明內容，以及定義錯誤之介面的 GUID (.NET 類別一律為 **GUID_NULL**)。|
@@ -60,7 +60,7 @@ CCW 會以與 COM 強制進行介面型互動一致的方式，向 COM 用戶端
 
  Managed 類別也可以提供下表所述的 COM 介面。
 
-|介面|說明|
+|介面|描述|
 |---------------|-----------------|
 |(\_*classname*) 類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|
 |**IConnectionPoint** 和 **IConnectionPointContainer**|來源為以委派為基礎之事件的物件介面 (註冊事件訂閱者用的介面)。|
@@ -100,7 +100,7 @@ public class Mammal
 
 COM 用戶端可以取得 `_Mammal` 類別介面的指標。 在 .NET Framework 上，您可以使用[型別程式庫匯出工具 (Tlbexp.exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) 工具來產生包含 `_Mammal` 介面定義的型別程式庫。 .NET Core 不支援型別程式庫匯出工具。 如果 `Mammal` 類別實作一個或多個介面，介面會出現在 coclass 底下。
 
-```
+```console
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
 interface _Mammal : IDispatch
 {
