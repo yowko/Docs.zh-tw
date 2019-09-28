@@ -2,12 +2,12 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: 92f7e94d8003823c0b166cc617563e63aba78027
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: HT
+ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038012"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591600"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -66,7 +66,7 @@ ms.locfileid: "69038012"
 - [使用模式比對，以 `as` 和 `is` 運算子安全地轉換至其他類型](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
 - [定義自訂型別轉換](../language-reference/operators/user-defined-conversion-operators.md).
 - [決定類型是不是可為 Null 的實值型別](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md)。
-- [在可為 Null 與不可為 Null 的實值型別間轉換](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type)。
+- [在可為 Null 與不可為 Null 的實值型別間轉換](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type)。
 
 ## <a name="equality-and-ordering-comparisons"></a>相等和排序比較
 

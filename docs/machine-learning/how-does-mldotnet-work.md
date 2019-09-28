@@ -1,21 +1,23 @@
 ---
 title: 什麼是 ML.NET，它如何運作？
 description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路來使用 ML.NET。 本文說明 ML.NET 的機器學習基本概念。
-ms.date: 08/26/2019
+ms.date: 09/27/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929404"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592054"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
-不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路。 本文說明 ML.NET 的機器學習基本概念。 
+不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路。 本文說明 ML.NET 的機器學習基本概念。
+
+ML.NET 會使用 .NET Core，或使用 .NET Framework 在 windows、Linux 和 macOS 上執行。 所有平臺都支援64位。 Windows 上支援32位，但 TensorFlow、LightGBM 和 ONNX 相關的功能除外。
 
 您可使用 ML.NET 建立的預測類型範例包括：
 
@@ -26,7 +28,7 @@ ms.locfileid: "70929404"
 |異常偵測|偵測詐騙的銀行交易 |
 |建議|根據線上購物者之前的購買記錄，建議他們可能想要購買的產品|
 
-## <a name="hello-mlnet-world"></a>ML.NET 的概要
+## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
 下列程式碼片段中程式碼會示範最簡單的 ML.NET 應用程式。 此範例會建構線性迴歸模型，使用房子大小及價格資料來預測房價。 在實際的應用程式中，您的資料和模型會更複雜。
 
@@ -174,7 +176,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 ||群集|<xref:Microsoft.ML.ClusteringCatalog>||
 ||針對|<xref:Microsoft.ML.ForecastingCatalog>||
 ||排名|<xref:Microsoft.ML.RankingCatalog>||
-||迴歸|<xref:Microsoft.ML.RegressionCatalog>||
+||回復|<xref:Microsoft.ML.RegressionCatalog>||
 ||建議|<xref:Microsoft.ML.RecommendationCatalog>|新增 `Microsoft.ML.Recommender` NuGet 套件|
 ||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|新增 `Microsoft.ML.TimeSeries` NuGet 套件|
 |模型使用方式 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
@@ -278,4 +280,4 @@ DataView 物件的重要屬性是它們都**延遲**評估。 資料檢視只會
 
 或者您可以在[操作指南](./how-to-guides/index.md)中深入了解特定的主題。
 
-如果您非常希望了解，您可以直接參閱 [API 參考文件](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)！
+如果您很急切，您可以直接深入 [API 參考文件](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)！

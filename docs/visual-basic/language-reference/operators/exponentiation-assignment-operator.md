@@ -9,19 +9,19 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: fe5d7b3dcb55192167512e0934e09cff7dfddb6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 382e0b27c2dbf27e5acccf29f1b8d2b002cb6664
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778517"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592228"
 ---
 # <a name="-operator-visual-basic"></a>^= 運算子 (Visual Basic)
-引發的變數或運算式的乘冪的屬性值，並將結果指派給變數或屬性。  
+將變數或屬性的值引發至運算式的乘冪，並將結果指派回變數或屬性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 variableorproperty ^= expression  
 ```  
   
@@ -33,19 +33,19 @@ variableorproperty ^= expression
  必要項。 任何數值運算式。  
   
 ## <a name="remarks"></a>備註  
- 在左邊的項目`^=`運算子可以是簡單的純量變數、 屬性或陣列項目。 變數或屬性不可[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
+ @No__t-0 運算子左邊的元素可以是簡單的純量變數、屬性或陣列的元素。 變數或屬性不可為[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
   
- `^=`值 （在運算子右手邊） 運算式的乘冪運算子第一次引發的變數或屬性 （在運算子的左側） 的值。 然後，運算子會將該作業的結果指派給變數或屬性。  
+ @No__t-0 運算子會先將變數或屬性的值（位於運算子的左邊），提升為運算式值的乘冪（位於運算子的右邊）。 然後，運算子會將該作業的結果指派回變數或屬性。  
   
- Visual Basic 一律會執行中的乘冪[Double 資料型別](../../../visual-basic/language-reference/data-types/double-data-type.md)。 任何不同類型的運算元會轉換成`Double`，而且結果一律`Double`。  
+ Visual Basic 一律會執行[Double 資料類型](../../../visual-basic/language-reference/data-types/double-data-type.md)的乘冪。 任何不同類型的運算元都會轉換成 `Double`，而結果一律 `Double`。  
   
- 值`expression`可以是小數、 負數，或兩者。  
+ @No__t-0 的值可以是小數、負數或兩者。  
   
 ## <a name="overloading"></a>多載化  
- [^ 運算子](../../../visual-basic/language-reference/operators/exponentiation-operator.md)可以是*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 多載`^`運算子會影響的行為`^=`運算子。 如果您的程式碼會使用`^=`上類別或結構，多載`^`，務必了解其重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ [^ 運算子](../../../visual-basic/language-reference/operators/exponentiation-operator.md)可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 多載 `^` 運算子會影響 `^=` 運算子的行為。 如果您的程式碼在多載 `^` 的類別或結構上使用 `^=`，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`^=`引發的其中一個值的運算子`Integer`變數的第二個變數並指派給第一個變數的結果。  
+ 下列範例會使用 `^=` 運算子，將一個 @no__t 1 變數的值提升為第二個變數的乘冪，並將結果指派給第一個變數。  
   
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   

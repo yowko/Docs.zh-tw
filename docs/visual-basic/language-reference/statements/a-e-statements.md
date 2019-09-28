@@ -1,27 +1,27 @@
 ---
-title: A-E 陳述式 (Visual Basic)
+title: A-E 語句（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
-ms.openlocfilehash: 4135f7154a73823400d8b1698421e138650d4854
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cfe28b28f197759bb2620d12d550a057d47f4d74
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054337"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591992"
 ---
 # <a name="a-e-statements"></a>A-E 陳述式
-下表包含 Visual Basic 語言陳述式的清單。  
+下表包含 Visual Basic language 語句的清單。  
   
 |||||  
 |---|---|---|---|  
-|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[Call](../../../visual-basic/language-reference/statements/call-statement.md)|[類別](../../../visual-basic/language-reference/statements/class-statement.md)|[Const](../../../visual-basic/language-reference/statements/const-statement.md)|  
-|[Continue](../../../visual-basic/language-reference/statements/continue-statement.md)|[Declare](../../../visual-basic/language-reference/statements/declare-statement.md)|[Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|  
-|[Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[End](../../../visual-basic/language-reference/statements/end-statement.md)|[End \<關鍵字>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
-|[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)|[錯誤](../../../visual-basic/language-reference/statements/error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|  
-|[結束](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
+|[AddHandler](addhandler-statement.md)|[Call](call-statement.md)|[類別](class-statement.md)|[Const](const-statement.md)|  
+|[Continue](continue-statement.md)|[Declare](declare-statement.md)|[Delegate](delegate-statement.md)|[Dim](dim-statement.md)|  
+|[Do...Loop](do-loop-statement.md)|[Else](else-statement.md)|[End](end-statement.md)|[End \<關鍵字>](end-keyword-statement.md)|  
+|[Enum](enum-statement.md)|[Erase](erase-statement.md)|[錯誤](error-statement.md)|[Event](event-statement.md)|  
+|[結束](exit-statement.md)||||  
   
 ## <a name="see-also"></a>另請參閱
 
-- [F-P 陳述式](../../../visual-basic/language-reference/statements/f-p-statements.md)
-- [Q-Z 陳述式](../../../visual-basic/language-reference/statements/q-z-statements.md)
-- [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)
+- [F-P 陳述式](f-p-statements.md)
+- [Q-Z 陳述式](q-z-statements.md)
+- [Visual Basic 語言參考](../index.md)

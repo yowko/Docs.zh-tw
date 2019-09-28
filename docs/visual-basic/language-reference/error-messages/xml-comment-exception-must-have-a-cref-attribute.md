@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: 91bde92e2184c90b14838a09a89a6d261447f139
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e57dc63cb7ad8b2e061296a082d6fa79b464f08
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662616"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592032"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>XML 註解例外狀況必須有 'cref' 屬性
-\<例外狀況 > 標籤可用來記載方法可能擲回的例外狀況。 必要`cref`屬性可將指定的成員，會檢查文件產生器的名稱。 如果成員存在，則會將它轉譯成在文件檔案中的標準項目名稱。  
+@No__t 0exception > 標記會提供一種方式，記載方法所擲回的例外狀況。 必要的 `cref` 屬性會指定檔產生器所檢查的成員名稱。 如果成員存在，則會轉譯為檔檔中的標準專案名稱。  
   
- **錯誤 ID:** BC42319  
+ **錯誤識別碼：** BC42319  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 新增`cref`屬性之例外狀況，如下所示：  
+- 將 `cref` 屬性新增至例外狀況，如下所示：  
   
-    ```  
-    '''<exception cref="member">description</exception>  
+    Xml  
+    ' ' '<exception cref="member">描述</exception>  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## See also
 
 - [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)
-- [如何：建立 XML 文件](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)
+- [How to: Create XML Documentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md)

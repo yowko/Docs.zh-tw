@@ -5,12 +5,12 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: c46a1f12ca20c0e21ee205e409a2a5a89e3389b3
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214558"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591676"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
@@ -29,13 +29,10 @@ ms.locfileid: "71214558"
 * [.NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
 * [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 如需下載連結和詳細資訊，請參閱 [NET 下載](https://dotnet.microsoft.com/download)以下載最新版本或 [.NET 下載封存](https://dotnet.microsoft.com/download/archives#dotnet-core) (針對舊版本)。
 
 ## <a name="net-core-dependencies"></a>.NET Core 的相依性
-
-在 Windows 10 和 Windows Server 2016 之前的 Windows 版本上執行時，.NET Core 1.1 和舊版本需要 Visual C++ 可轉散發套件。 .NET Core 安裝程式會自動安裝此相依性。
 
 必須手動安裝 [Microsoft Visual C++ 2015 可轉散發套件 Update 3](https://www.microsoft.com/download/details.aspx?id=52685) 的時機：
 
@@ -108,6 +105,7 @@ Visual Studio 2019 16.3 在安裝任何這些工作負載之後，預設會使�
 
 若要在 Visual Studio 2017 中開發使用 .NET Core 2.2 SDK 的 .NET Core 應用程式：
 
+* 使用已選取的 **.Net Core 跨平臺開發**工作負載（在 [**其他工具**組] 區段），[下載並安裝 Visual Studio 2019 16.3 版或更新版本](/visualstudio/install/install-visual-studio)。
 * [下載並安裝 Visual Studio 2017 15.9.0 版本或更新版本](/visualstudio/install/install-visual-studio)，選取 [.NET Core 跨平台開發] 工作負載 (在 [其他工具組] 區段)。
 
 ![已選取 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 安裝螢幕擷取畫面](./media/windows-prerequisites/vs-2017-workloads.jpg)
@@ -131,19 +129,5 @@ Visual Studio 2019 16.3 在安裝任何這些工作負載之後，預設會使�
 * 開啟、建置及執行現有的 .NET Core 1.x 和 2.x 專案。
 * 將 .NET Core 1.x 和 2.x 專案目標重新設定為 .NET Core 2.2、建置和執行。
 * 建立新的 .NET Core 2.2 專案。
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-若要使用 Visual Studio 開發 .NET Core 1.x 應用程式，請[下載並安裝 Visual Studio 2017](/visualstudio/install/install-visual-studio)，選取 [.NET Core 跨平台開發] 工作負載 (在 [其他工具組] 區段)。
-
-![已選取 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 安裝螢幕擷取畫面](./media/windows-prerequisites/vs-workloads.jpg)
-
-> [!IMPORTANT]
-> 有可能使用 Visual Studio 2015 開發 .NET Core 1.x，但不建議為下列原因而如此做：
->
-> * .NET Core 工具是預覽版本，不受支援。
-> * 專案是以 project.json 為基礎，已被取代。
->
-> 如需專案格式變更的詳細資訊，請參閱[變更的高階概觀](./tools/cli-msbuild-architecture.md)。
 
 ---

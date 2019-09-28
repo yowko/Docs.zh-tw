@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 36fe543dd4546c6fe930f259a55cea856917370f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4312abef83728f432e2f6a492e5acad3450719b1
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662658"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592055"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>變數 '\<變數名稱 >' 隱藏了封閉區塊中的變數
-區塊括住的變數具有相同名稱做為另一個本機變數。  
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>變數 ' @no__t 0variablename > ' 隱藏封閉區塊中的變數
+區塊中包含的變數與另一個區域變數具有相同的名稱。  
   
- **錯誤 ID:** BC30616  
+ **錯誤識別碼：** BC30616  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 重新命名在封閉區塊中的變數，使它不是其他任何區域變數一樣。 例如:   
+- 將封閉區塊中的變數重新命名，使其與其他任何區域變數不同。 例如:  
   
-    ```  
+    ```vb  
     Dim a, b, x As Integer  
     If a = b Then  
        Dim y As Integer = 20 ' Uniquely named block variable.  
     End If  
     ```  
   
-- 造成此錯誤的常見原因是使用`Catch e As Exception`事件處理常式內。 如果發生這種情況，命名`Catch`區塊變數`ex`而非`e`。  
+- 此錯誤的常見原因是在事件處理常式內使用 `Catch e As Exception`。 如果是這種情況，請將 `Catch` 區塊變數命名為 `ex`，而不是 `e`。  
   
-- 此錯誤的另一個常見來源是您嘗試存取區域變數在宣告`Try`封鎖在個別`Catch`區塊。 若要修正此問題，外部變數宣告中`Try...Catch...Finally`結構。  
+- 此錯誤的另一個常見來源，是嘗試存取在個別 `Catch` 區塊的 @no__t 0 區塊內所宣告的區域變數。 若要修正此錯誤，請在 `Try...Catch...Finally` 結構之外宣告變數。  
   
 ## <a name="see-also"></a>另請參閱
 

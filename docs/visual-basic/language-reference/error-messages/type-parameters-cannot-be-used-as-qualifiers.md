@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88b5f365c47b98964d9f5a0d22a941d85dcfb95f
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923717"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592141"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>類型參數不能當做限定詞使用
-限定性條件字串，包含型別參數被限定的程式設計項目。  
+程式設計專案是以包含型別參數的限定性字串來限定。  
   
- 型別參數表示要建構的泛型型別時提供的類型的需求。 它不代表特定的定義的類型。 限定性條件字串必須包含在編譯時期所定義的項目。  
+ 型別參數代表在結構化泛型型別時要提供的型別需求。 它不代表特定的已定義型別。 限定性字串必須僅包含在編譯時期定義的元素。  
   
  下列陳述式可能會產生此錯誤。  
   
-```  
+```vb  
 Public Function checkText(Of c As System.Windows.Forms.Control)(  
     ByVal badText As String) As Boolean  
   
@@ -30,13 +30,13 @@ Public Function checkText(Of c As System.Windows.Forms.Control)(
 End Function  
 ```  
   
- **錯誤 ID:** BC32098  
+ **錯誤識別碼：** BC32098  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 移除限定性條件字串的型別參數，或取代已定義的類型。  
+1. 請從限定性字串中移除類型參數，或將它取代為已定義的類型。  
   
-2. 如果您需要找出所限定的程式設計項目時，用以建構的類型，您必須使用其他程式邏輯。  
+2. 如果您需要使用已結構化的類型來尋找限定的程式設計項目，則必須使用其他程式邏輯。  
   
 ## <a name="see-also"></a>另請參閱
 
