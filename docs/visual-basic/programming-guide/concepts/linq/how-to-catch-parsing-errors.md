@@ -1,23 +1,23 @@
 ---
-title: HOW TO：攔截剖析錯誤 (Visual Basic)
+title: HOW TO：攔截剖析錯誤（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: 1a5d01d4853a9fd0cc7f0a0e5071b394ab3f218b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0c0749e8bc6d3fb1a71595778bfc5effaaf8533
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855631"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352936"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a><span data-ttu-id="24260-102">HOW TO：攔截剖析錯誤 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24260-102">How to: Catch Parsing Errors (Visual Basic)</span></span>
-<span data-ttu-id="24260-103">這個主題顯示如何偵測格式錯誤或無效的 XML。</span><span class="sxs-lookup"><span data-stu-id="24260-103">This topic shows how to detect badly formed or invalid XML.</span></span>  
+# <a name="how-to-catch-parsing-errors-visual-basic"></a><span data-ttu-id="8cfc3-102">HOW TO：攔截剖析錯誤（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="8cfc3-102">How to: Catch Parsing Errors (Visual Basic)</span></span>
+<span data-ttu-id="8cfc3-103">這個主題顯示如何偵測格式錯誤或無效的 XML。</span><span class="sxs-lookup"><span data-stu-id="8cfc3-103">This topic shows how to detect badly formed or invalid XML.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="24260-104">是使用 <xref:System.Xml.XmlReader> 實作的。</span><span class="sxs-lookup"><span data-stu-id="24260-104">is implemented using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="24260-105">如果將格式錯誤或無效的 XML 傳遞到 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，基礎 <xref:System.Xml.XmlReader> 類別將會擲出例外狀況。</span><span class="sxs-lookup"><span data-stu-id="24260-105">If badly formed or invalid XML is passed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], the underlying <xref:System.Xml.XmlReader> class will throw an exception.</span></span> <span data-ttu-id="24260-106">剖析 XML 的各種方法 (例如，<xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>) 不會攔截例外狀況。然後，您的應用程式就可以攔截例外狀況。</span><span class="sxs-lookup"><span data-stu-id="24260-106">The various methods that parse XML, such as <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, do not catch the exception; the exception can then be caught by your application.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="8cfc3-104">是使用 <xref:System.Xml.XmlReader> 實作的。</span><span class="sxs-lookup"><span data-stu-id="8cfc3-104">is implemented using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="8cfc3-105">如果將格式錯誤或無效的 XML 傳遞到 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，基礎 <xref:System.Xml.XmlReader> 類別將會擲出例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8cfc3-105">If badly formed or invalid XML is passed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], the underlying <xref:System.Xml.XmlReader> class will throw an exception.</span></span> <span data-ttu-id="8cfc3-106">剖析 XML 的各種方法 (例如，<xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>) 不會攔截例外狀況。然後，您的應用程式就可以攔截例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8cfc3-106">The various methods that parse XML, such as <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, do not catch the exception; the exception can then be caught by your application.</span></span>  
   
- <span data-ttu-id="24260-107">請注意，如果您使用 XML 常值，就無法取得剖析錯誤。</span><span class="sxs-lookup"><span data-stu-id="24260-107">Note that you cannot get parse errors if you use XML literals.</span></span> <span data-ttu-id="24260-108">Visual Basic 編譯器將會攔截格式錯誤或無效 XML 的錯誤。</span><span class="sxs-lookup"><span data-stu-id="24260-108">The Visual Basic compiler will catch errors of badly formed or invalid XML.</span></span>  
+ <span data-ttu-id="8cfc3-107">請注意，如果您使用 XML 常值，就無法取得剖析錯誤。</span><span class="sxs-lookup"><span data-stu-id="8cfc3-107">Note that you cannot get parse errors if you use XML literals.</span></span> <span data-ttu-id="8cfc3-108">Visual Basic 編譯器將會攔截格式錯誤或無效 XML 的錯誤。</span><span class="sxs-lookup"><span data-stu-id="8cfc3-108">The Visual Basic compiler will catch errors of badly formed or invalid XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="24260-109">範例</span><span class="sxs-lookup"><span data-stu-id="24260-109">Example</span></span>  
- <span data-ttu-id="24260-110">下列程式碼嘗試剖析無效的 XML：</span><span class="sxs-lookup"><span data-stu-id="24260-110">The following code tries to parse invalid XML:</span></span>  
+## <a name="example"></a><span data-ttu-id="8cfc3-109">範例</span><span class="sxs-lookup"><span data-stu-id="8cfc3-109">Example</span></span>  
+ <span data-ttu-id="8cfc3-110">下列程式碼嘗試剖析無效的 XML：</span><span class="sxs-lookup"><span data-stu-id="8cfc3-110">The following code tries to parse invalid XML:</span></span>  
   
 ```vb  
 Try  
@@ -33,14 +33,14 @@ Catch e As System.Xml.XmlException
 End Try  
 ```  
   
- <span data-ttu-id="24260-111">執行此程式碼時，它會擲回例外狀況：</span><span class="sxs-lookup"><span data-stu-id="24260-111">When you run this code, it throws the following exception:</span></span>  
+ <span data-ttu-id="8cfc3-111">執行此程式碼時，它會擲回例外狀況：</span><span class="sxs-lookup"><span data-stu-id="8cfc3-111">When you run this code, it throws the following exception:</span></span>  
   
-```  
+```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- <span data-ttu-id="24260-112">如需可以預期 <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 及 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 方法擲回之例外狀況的詳細資訊，請參閱 <xref:System.Xml.XmlReader> 文件。</span><span class="sxs-lookup"><span data-stu-id="24260-112">For information about the exceptions that you can expect the <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, and <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> methods to throw, see the <xref:System.Xml.XmlReader> documentation.</span></span>  
+ <span data-ttu-id="8cfc3-112">如需可以預期 <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 及 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 方法擲回之例外狀況的詳細資訊，請參閱 <xref:System.Xml.XmlReader> 文件。</span><span class="sxs-lookup"><span data-stu-id="8cfc3-112">For information about the exceptions that you can expect the <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, and <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> methods to throw, see the <xref:System.Xml.XmlReader> documentation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24260-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="24260-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8cfc3-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8cfc3-113">See also</span></span>
 
-- [<span data-ttu-id="24260-114">剖析 XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24260-114">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="8cfc3-114">剖析 XML （Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="8cfc3-114">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

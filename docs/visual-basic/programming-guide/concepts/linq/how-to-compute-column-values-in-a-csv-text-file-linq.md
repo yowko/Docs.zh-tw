@@ -1,22 +1,22 @@
 ---
-title: HOW TO：計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值
+title: HOW TO：計算 CSV 文字檔中的資料行值（LINQ）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c7874615d62b09f3317a3ef39c28a0e74fd349d1
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592996"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351752"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="05806-102">HOW TO：計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值</span><span class="sxs-lookup"><span data-stu-id="05806-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="05806-103">本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。</span><span class="sxs-lookup"><span data-stu-id="05806-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="05806-104">此處顯示的範例準則可以套用至其他類型的結構化文字。</span><span class="sxs-lookup"><span data-stu-id="05806-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="8496f-102">HOW TO：計算 CSV 文字檔中的資料行值（LINQ）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="8496f-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="8496f-103">本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。</span><span class="sxs-lookup"><span data-stu-id="8496f-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="8496f-104">此處顯示的範例準則可以套用至其他類型的結構化文字。</span><span class="sxs-lookup"><span data-stu-id="8496f-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-### <a name="to-create-the-source-file"></a><span data-ttu-id="05806-105">建立來源檔案</span><span class="sxs-lookup"><span data-stu-id="05806-105">To create the source file</span></span>  
+### <a name="to-create-the-source-file"></a><span data-ttu-id="8496f-105">建立來源檔案</span><span class="sxs-lookup"><span data-stu-id="8496f-105">To create the source file</span></span>  
   
-1. <span data-ttu-id="05806-106">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="05806-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="05806-107">假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。</span><span class="sxs-lookup"><span data-stu-id="05806-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
+1. <span data-ttu-id="8496f-106">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="8496f-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="8496f-107">假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。</span><span class="sxs-lookup"><span data-stu-id="8496f-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -31,7 +31,7 @@ ms.locfileid: "65592996"
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a><span data-ttu-id="05806-108">範例</span><span class="sxs-lookup"><span data-stu-id="05806-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8496f-108">範例</span><span class="sxs-lookup"><span data-stu-id="8496f-108">Example</span></span>  
   
 ```vb  
 Class SumColumns  
@@ -140,12 +140,12 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- <span data-ttu-id="05806-109">查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。</span><span class="sxs-lookup"><span data-stu-id="05806-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="05806-110">每個陣列項目表示一個資料行。</span><span class="sxs-lookup"><span data-stu-id="05806-110">Each array element represents a column.</span></span> <span data-ttu-id="05806-111">最後，每個資料行中的文字都會轉換成其數值表示法。</span><span class="sxs-lookup"><span data-stu-id="05806-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="05806-112">如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。</span><span class="sxs-lookup"><span data-stu-id="05806-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
+ <span data-ttu-id="8496f-109">查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。</span><span class="sxs-lookup"><span data-stu-id="8496f-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="8496f-110">每個陣列項目表示一個資料行。</span><span class="sxs-lookup"><span data-stu-id="8496f-110">Each array element represents a column.</span></span> <span data-ttu-id="8496f-111">最後，每個資料行中的文字都會轉換成其數值表示法。</span><span class="sxs-lookup"><span data-stu-id="8496f-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="8496f-112">如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。</span><span class="sxs-lookup"><span data-stu-id="8496f-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="05806-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="05806-113">Compiling the Code</span></span>  
-<span data-ttu-id="05806-114">建立 VB.NET 的主控台應用程式專案，使用`Imports`System.Linq 命名空間陳述式。</span><span class="sxs-lookup"><span data-stu-id="05806-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="8496f-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="8496f-113">Compiling the Code</span></span>  
+<span data-ttu-id="8496f-114">建立 VB.NET 主控台應用程式專案，並在 System. Linq 命名空間中使用 `Imports` 的語句。</span><span class="sxs-lookup"><span data-stu-id="8496f-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="05806-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="05806-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8496f-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8496f-115">See also</span></span>
 
-- [<span data-ttu-id="05806-116">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="05806-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="05806-117">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="05806-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="8496f-116">LINQ 和字串（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="8496f-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="8496f-117">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8496f-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
