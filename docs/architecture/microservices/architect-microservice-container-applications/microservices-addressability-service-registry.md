@@ -4,7 +4,7 @@ description: 了解容器映像登錄在微服務架構中的角色。
 ms.date: 09/20/2018
 ms.openlocfilehash: d72ba399f3da730f0e57c44c5ec01c1cc9f5fc05
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674045"
@@ -22,10 +22,10 @@ ms.locfileid: "68674045"
 - **Chris Richardson：模式：Service registry** \
   <https://microservices.io/patterns/service-registry.html>
 
-- **Auth0：The Service Registry** \ (服務登錄)
+- **Auth0：服務登錄** \
   <https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/>
 
-- **Gabriel Schenker：Service discovery** \ (服務探索)
+- **Gabriel Schenker：服務探索** \
   <https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/>
 
 >[!div class="step-by-step"]
