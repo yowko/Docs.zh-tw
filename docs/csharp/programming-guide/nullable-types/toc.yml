@@ -1,7 +1,7 @@
-- name: 可為 Null 的型別
+- name: 可為 Null 的實值型別
   href: index.md
   items:
-    - name: 使用可為 Null 的型別
+    - name: 使用可為 Null 的實值型別
       href: using-nullable-types.md
-    - name: HOW TO：識別可為 Null 的型別
+    - name: 如何：識別可為 Null 的實值型別
       href: how-to-identify-a-nullable-type.md

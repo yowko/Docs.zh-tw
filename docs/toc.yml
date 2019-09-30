@@ -317,13 +317,18 @@
       items:
         - name: 總覽
           href: core/tools/index.md
-        - name: 通用工具
+        - name: 工具
           expanded: true
           items:
-            - name: 總覽
-              href: core/tools/global-tools.md
-            - name: 建立全域工具
-              href: core/tools/global-tools-how-to-create.md
+            - name: 通用工具
+              expanded: true
+              items:
+                - name: 總覽
+                  href: core/tools/global-tools.md
+                - name: 建立全域工具
+                  href: core/tools/global-tools-how-to-create.md
+            - name: 針對工具使用問題進行疑難排解
+              href: core/tools/troubleshoot-usage-issues.md
         - name: 較高的存取權
           href: core/tools/elevated-access.md
         - name: 擴充性模型
@@ -1033,7 +1038,7 @@
             - name: 存取應用程式 Web 服務
               href: visual-basic/developing-apps/programming/accessing-application-web-services.md
               items:
-                - name: 作法：非同步呼叫 Web 服務
+                - name: HOW TO：非同步呼叫 Web 服務
                   href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
             - name: Accessing Application Settings
               href: visual-basic/developing-apps/programming/app-settings/index.md
@@ -1111,7 +1116,7 @@
           href: visual-basic/programming-guide/program-structure/coding-conventions.md
         - name: 條件式編譯
           href: visual-basic/programming-guide/program-structure/conditional-compilation.md
-        - name: 作法：程式碼中的 Break 及 Combine 陳述式
+        - name: HOW TO：程式碼中的 Break 及 Combine 陳述式
           href: visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
         - name: HOW TO：摺疊及隱藏程式碼區段
           href: visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
@@ -1155,7 +1160,7 @@
             - name: 複合資料類型
               href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
               items:
-                - name: HOW TO：在變數中存放多個值
+                - name: 作法：在變數中存放多個值
                   href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
             - name: 泛型型別
               href: visual-basic/programming-guide/language-features/data-types/generic-types.md
@@ -1179,7 +1184,7 @@
                   href: visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
                 - name: 字串與其他類型之間的轉換
                   href: visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
-                - name: 作法：將物件轉換成其他類型
+                - name: HOW TO：將物件轉換成其他類型
                   href: visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
                 - name: 陣列轉換
                   href: visual-basic/programming-guide/language-features/data-types/array-conversions.md
@@ -2299,7 +2304,7 @@
             - name: 從命令列建置
               href: visual-basic/reference/command-line-compiler/building-from-the-command-line.md
               items:
-                - name: HOW TO：叫用命令列編譯器
+                - name: 作法：叫用命令列編譯器
                   href: visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md
                 - name: 編譯命令列的範例
                   href: visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md
