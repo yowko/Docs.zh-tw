@@ -111,7 +111,7 @@ ms.locfileid: "70015690"
 
 2. 在 [ **DebugControlLibrary** ] 屬性工作表中, 選取 [ **Debug** ] 索引標籤。
 
-     在 [**起始動作**] 區段中, 選取 [**啟動外部程式**]。 您將會 Visual Studio 的個別實例進行偵錯工具, 因此請按一下省略號![([Visual Studio](./media/visual-studio-ellipsis-button.png)屬性視窗中的省略號按鈕 (...)] 按鈕, 以流覽 Visual Studio 的 IDE。 可執行檔的名稱為**devenv**, 如果您安裝到預設位置, 其路徑為 *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\ \<edition > \Common7\IDE*。
+     在 [**起始動作**] 區段中, 選取 [**啟動外部程式**]。 您將會 Visual Studio 的個別實例進行偵錯工具, 因此請按一下省略號![Visual Studio](./media/visual-studio-ellipsis-button.png)屬性視窗中的省略號按鈕 (...) 按鈕, 以流覽 Visual Studio 的 IDE。 可執行檔的名稱為**devenv**, 如果您安裝到預設位置, 其路徑為 *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\ \<edition > \Common7\IDE*。
 
 3. 選取 [確定] 關閉對話方塊。
 

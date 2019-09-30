@@ -97,7 +97,7 @@ ms.locfileid: "69913038"
 
    可讓您自動將必要的系結重新導向加入至來源**web.config**檔案的對話方塊隨即出現。
 
-   [系結重新![導向許可權] 對話方塊](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![系結重新 導向許可權 對話方塊](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>另請參閱
 

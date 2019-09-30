@@ -28,7 +28,7 @@ ms.locfileid: "69666212"
 
 1. 選取 <xref:System.Windows.Forms.ToolBar> 控制項。
 
-2. 在 [**屬性**] 視窗中, <xref:System.Windows.Forms.ToolBar.Buttons%2A>按一下屬性來選取它, 然後按一下省略號![([屬性視窗中 Visual Studio](./media/visual-studio-ellipsis-button.png)] 按鈕的省略號按鈕 (...), 以開啟**ToolBarButton集合編輯器**。
+2. 在 [**屬性**] 視窗中, <xref:System.Windows.Forms.ToolBar.Buttons%2A>按一下屬性來選取它, 然後按一下省略號![屬性視窗中 Visual Studio](./media/visual-studio-ellipsis-button.png) 按鈕的省略號按鈕 (...), 以開啟**ToolBarButton集合編輯器**。
 
 3. 使用 [**新增**] 和 [**移除**] 按鈕, 即可在<xref:System.Windows.Forms.ToolBar>控制項中加入和移除按鈕。
 
