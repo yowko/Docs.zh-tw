@@ -45,6 +45,10 @@
           href: tutorials/mlnet-cli.md
         - name: 使用 Model Builder 及 Razor Pages 分析情感
           href: tutorials/sentiment-analysis-model-builder.md
+    - name: Infer.NET
+      items:
+        - name: 使用 Infer.NET 進行機率性程式設計
+          href: how-to-guides/matchup-app-infer-net.md
 - name: 概念
   items:
     - name: ML.NET 工作 (模型類型)
@@ -95,10 +99,6 @@
           href: how-to-guides/install-ml-net-cli.md
         - name: 使用自動化的 ML API
           href: how-to-guides/how-to-use-the-automl-api.md
-    - name: Infer.NET
-      items:
-        - name: 使用 Infer.NET 進行機率性程式設計
-          href: how-to-guides/matchup-app-infer-net.md
 - name: 參考資料
   items:
     - name: API
