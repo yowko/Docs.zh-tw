@@ -1,17 +1,19 @@
 ---
-title: 適用于 ASP.NET Web Forms 開發人員的 Blazor
+title: 適用於 ASP.NET Web Forms 的 Blazor 開發人員
 description: 瞭解如何以簡單且熟悉的方式，使用 Blazor 和 .NET Core 以 .NET 建立完整堆疊的 web 應用程式。
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: a80483f6a1f1cb9e5a3e2ffff18cbd59c5b67af3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 936f85d4fda9c5396a6586810735877488226157
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183795"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696937"
 ---
-# <a name="blazor-for-aspnet-web-forms-developers"></a>適用于 ASP.NET Web Forms 開發人員的 Blazor
+# <a name="blazor-for-aspnet-web-forms-developers"></a>適用於 ASP.NET Web Forms 的 Blazor 開發人員
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![顯示無伺服器應用程式電子書封面的螢幕擷取畫面。](./media/index/blazor-for-web-forms-developers-cover.png)
 
@@ -80,4 +82,4 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 這本書與相關範例不斷演進，所以您的意見反應歡迎！ 如果您有關于如何改進這本書的意見，請使用[GitHub 問題](https://github.com/dotnet/docs/issues)上任何網頁底部的 [意見反應] 區段。
 
 >[!div class="step-by-step"]
->[下一步](introduction.md)
+>[下一個](introduction.md)

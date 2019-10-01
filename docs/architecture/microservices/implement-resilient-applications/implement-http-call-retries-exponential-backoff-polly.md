@@ -2,12 +2,12 @@
 title: 使用 Polly 以指數輪詢實作 HTTP 呼叫重試
 description: 了解如何使用 Polly 和 HttpClientFactory 處理 HTTP 失敗。
 ms.date: 01/07/2019
-ms.openlocfilehash: de1dad44b1ddc7b04438fb380f240d3be33bbb83
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: d5e0b6c830422990aaf1a5e3b6ae257eb3dae99c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331983"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696908"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>使用 HttpClientFactory 和 Polly 原則以指數輪詢實作 HTTP 呼叫重試
 
@@ -15,7 +15,7 @@ ms.locfileid: "71331983"
 
 Polly 是 .NET 程式庫，提供恢復功能和暫時性錯誤處理功能。 您可以藉由套用重試、斷路器、艙壁隔離 (Bulkhead Isolation)、逾時和後援等 Polly 原則，來實作這些功能。 Polly 以 .NET 4.x 和 .NET Standard Library 1.0 (其支援 .NET Core) 為目標。
 
-不過，使用 Polly 的程式庫搭配您自己的自訂程式碼和 HttpClient 可能相當複雜。 在 eShopOnContainers 的原始版本中，已有採用 Polly 的 [ResilientHttpClient 建置組塊](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。 但自從發行 [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md) 後，具復原性的 HTTP 通訊已變得更容易實作，因此 eShopOnContainers 中的建置組塊已遭淘汰。 
+不過，撰寫您自己的自訂程式碼以搭配 HttpClient 使用 Polly 的程式庫可能會很複雜。 在 eShopOnContainers 的原始版本中，已有採用 Polly 的 [ResilientHttpClient 建置組塊](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。 但隨著[HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md)的發行，使用 Polly 執行彈性的 HTTP 通訊變得更簡單，因此建立區塊已從 eShopOnContainers 中淘汰。 
 
 下列步驟示範如何透過整合到 HttpClientFactory 中的 Polly 使用 Http 重試，如上一節所述。
 

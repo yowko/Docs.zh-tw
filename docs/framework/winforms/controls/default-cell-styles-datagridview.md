@@ -43,7 +43,7 @@ ms.locfileid: "69658505"
 
 2. 從 [選取的資料**行**] 清單中選取資料行。
 
-3. 在 資料**行屬性**] 方格中, 按一下![ <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>屬性旁邊的省略號按鈕 ([Visual Studio 的](./media/visual-studio-ellipsis-button.png)屬性視窗中的省略號按鈕 (...))。 [ **CellStyle**產生器] 對話方塊隨即出現。
+3. 在 [資料**行屬性**] 方格中, 按一下![ <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>屬性旁邊的省略號按鈕 (Visual Studio 的](./media/visual-studio-ellipsis-button.png)屬性視窗中的省略號按鈕 (...))。 [ **CellStyle**產生器] 對話方塊隨即出現。
 
 4. 藉由設定屬性來定義樣式, 使用**預覽**窗格來確認您的選擇。
 

@@ -3,14 +3,16 @@ title: WCF 開發人員的 ASP.NET Core gRPC-WCF 開發人員的 gRPC
 description: 要寫入的
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7d02d7914aed39613b4a41da55515df80abddfe8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: dc39fc96e7154fb50acd0b65a58586b3fa12ab50
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184446"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696912"
 ---
-# <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF 開發人員的 ASP.NET Core gRPC
+# <a name="aspnet-core-grpc-for-wcf-developers"></a>適用於 WCF 開發人員的 ASP.NET Core gRPC
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![封面影像](./media/cover.png)
 
@@ -70,7 +72,7 @@ TODO
 
 請隨意將本指南轉寄給您的小組，協助確保對這些考量和機會有共同的了解。 讓所有人都使用一組共用術語和基礎原則，有助確保套用一致的架構模式和做法。
 
-## <a name="references"></a>reference
+## <a name="references"></a>參考
 
 - **gRPC 網站**  
   <https://grpc.io>
