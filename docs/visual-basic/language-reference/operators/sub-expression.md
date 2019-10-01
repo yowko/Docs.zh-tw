@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: 6cdb75f150831ae3857a510d87b58773bdcf13c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2330b410f54b54d8f6cb7d8ad6f9b39a3f4d31bc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609603"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701341"
 ---
-# <a name="sub-expression-visual-basic"></a><span data-ttu-id="56631-102">Sub 運算式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56631-102">Sub Expression (Visual Basic)</span></span>
-<span data-ttu-id="56631-103">宣告的參數和副程式 lambda 運算式定義的程式碼。</span><span class="sxs-lookup"><span data-stu-id="56631-103">Declares the parameters and code that define a subroutine lambda expression.</span></span>  
+# <a name="sub-expression-visual-basic"></a><span data-ttu-id="5c699-102">Sub 運算式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5c699-102">Sub Expression (Visual Basic)</span></span>
+<span data-ttu-id="5c699-103">宣告定義副程式 lambda 運算式的參數和程式碼。</span><span class="sxs-lookup"><span data-stu-id="5c699-103">Declares the parameters and code that define a subroutine lambda expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56631-104">語法</span><span class="sxs-lookup"><span data-stu-id="56631-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c699-104">語法</span><span class="sxs-lookup"><span data-stu-id="5c699-104">Syntax</span></span>  
   
-```  
+```vb  
 Sub ( [ parameterlist ] ) statement  
 - or -  
 Sub ( [ parameterlist ] )  
@@ -26,41 +26,41 @@ Sub ( [ parameterlist ] )
 End Sub  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="56631-105">組件</span><span class="sxs-lookup"><span data-stu-id="56631-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="5c699-105">組件</span><span class="sxs-lookup"><span data-stu-id="5c699-105">Parts</span></span>  
   
-|<span data-ttu-id="56631-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="56631-106">Term</span></span>|<span data-ttu-id="56631-107">定義</span><span class="sxs-lookup"><span data-stu-id="56631-107">Definition</span></span>|  
+|<span data-ttu-id="5c699-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="5c699-106">Term</span></span>|<span data-ttu-id="5c699-107">定義</span><span class="sxs-lookup"><span data-stu-id="5c699-107">Definition</span></span>|  
 |---|---|  
-|`parameterlist`|<span data-ttu-id="56631-108">選擇性。</span><span class="sxs-lookup"><span data-stu-id="56631-108">Optional.</span></span> <span data-ttu-id="56631-109">代表程序參數的本機變數名稱的清單。</span><span class="sxs-lookup"><span data-stu-id="56631-109">A list of local variable names that represent the parameters of the procedure.</span></span> <span data-ttu-id="56631-110">括號必須要有即使清單是空的。</span><span class="sxs-lookup"><span data-stu-id="56631-110">The parentheses must be present even when the list is empty.</span></span> <span data-ttu-id="56631-111">如需詳細資訊，請參閱 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)。</span><span class="sxs-lookup"><span data-stu-id="56631-111">For more information, see [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).</span></span>|  
-|`statement`|<span data-ttu-id="56631-112">必要項。</span><span class="sxs-lookup"><span data-stu-id="56631-112">Required.</span></span> <span data-ttu-id="56631-113">單一陳述式。</span><span class="sxs-lookup"><span data-stu-id="56631-113">A single statement.</span></span>|  
-|`statements`|<span data-ttu-id="56631-114">必要項。</span><span class="sxs-lookup"><span data-stu-id="56631-114">Required.</span></span> <span data-ttu-id="56631-115">陳述式的清單。</span><span class="sxs-lookup"><span data-stu-id="56631-115">A list of statements.</span></span>|  
+|`parameterlist`|<span data-ttu-id="5c699-108">選擇性。</span><span class="sxs-lookup"><span data-stu-id="5c699-108">Optional.</span></span> <span data-ttu-id="5c699-109">本機變數名稱的清單，代表程式的參數。</span><span class="sxs-lookup"><span data-stu-id="5c699-109">A list of local variable names that represent the parameters of the procedure.</span></span> <span data-ttu-id="5c699-110">即使清單是空的，括弧也必須存在。</span><span class="sxs-lookup"><span data-stu-id="5c699-110">The parentheses must be present even when the list is empty.</span></span> <span data-ttu-id="5c699-111">如需詳細資訊，請參閱 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)。</span><span class="sxs-lookup"><span data-stu-id="5c699-111">For more information, see [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).</span></span>|  
+|`statement`|<span data-ttu-id="5c699-112">必要項。</span><span class="sxs-lookup"><span data-stu-id="5c699-112">Required.</span></span> <span data-ttu-id="5c699-113">單一語句。</span><span class="sxs-lookup"><span data-stu-id="5c699-113">A single statement.</span></span>|  
+|`statements`|<span data-ttu-id="5c699-114">必要項。</span><span class="sxs-lookup"><span data-stu-id="5c699-114">Required.</span></span> <span data-ttu-id="5c699-115">語句的清單。</span><span class="sxs-lookup"><span data-stu-id="5c699-115">A list of statements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="56631-116">備註</span><span class="sxs-lookup"><span data-stu-id="56631-116">Remarks</span></span>  
- <span data-ttu-id="56631-117">A *lambda 運算式*是沒有名稱的副程式，並執行一或多個陳述式。</span><span class="sxs-lookup"><span data-stu-id="56631-117">A *lambda expression* is a subroutine that does not have a name and that executes one or more statements.</span></span> <span data-ttu-id="56631-118">您可以任意處使用 lambda 運算式，您可以使用委派類型，除非做為引數`RemoveHandler`。</span><span class="sxs-lookup"><span data-stu-id="56631-118">You can use a lambda expression anywhere that you can use a delegate type, except as an argument to `RemoveHandler`.</span></span> <span data-ttu-id="56631-119">如需委派和 lambda 運算式與委派使用的詳細資訊，請參閱[委派陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)並[寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。</span><span class="sxs-lookup"><span data-stu-id="56631-119">For more information about delegates, and the use of lambda expressions with delegates, see [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) and [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5c699-116">備註</span><span class="sxs-lookup"><span data-stu-id="5c699-116">Remarks</span></span>  
+ <span data-ttu-id="5c699-117">*Lambda 運算式*是沒有名稱，且會執行一或多個語句的副程式。</span><span class="sxs-lookup"><span data-stu-id="5c699-117">A *lambda expression* is a subroutine that does not have a name and that executes one or more statements.</span></span> <span data-ttu-id="5c699-118">您可以在任何可使用委派類型的位置使用 lambda 運算式，但 `RemoveHandler` 的引數除外。</span><span class="sxs-lookup"><span data-stu-id="5c699-118">You can use a lambda expression anywhere that you can use a delegate type, except as an argument to `RemoveHandler`.</span></span> <span data-ttu-id="5c699-119">如需委派的詳細資訊，以及搭配使用 lambda 運算式和委派的用法，請參閱[委派語句](../../../visual-basic/language-reference/statements/delegate-statement.md)和[寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。</span><span class="sxs-lookup"><span data-stu-id="5c699-119">For more information about delegates, and the use of lambda expressions with delegates, see [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) and [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).</span></span>  
   
-## <a name="lambda-expression-syntax"></a><span data-ttu-id="56631-120">Lambda 運算式語法</span><span class="sxs-lookup"><span data-stu-id="56631-120">Lambda Expression Syntax</span></span>  
- <span data-ttu-id="56631-121">Lambda 運算式的語法類似於標準的副程式。</span><span class="sxs-lookup"><span data-stu-id="56631-121">The syntax of a lambda expression resembles that of a standard subroutine.</span></span> <span data-ttu-id="56631-122">差異如下所示：</span><span class="sxs-lookup"><span data-stu-id="56631-122">The differences are as follows:</span></span>  
+## <a name="lambda-expression-syntax"></a><span data-ttu-id="5c699-120">Lambda 運算式語法</span><span class="sxs-lookup"><span data-stu-id="5c699-120">Lambda Expression Syntax</span></span>  
+ <span data-ttu-id="5c699-121">Lambda 運算式的語法與標準副程式類似。</span><span class="sxs-lookup"><span data-stu-id="5c699-121">The syntax of a lambda expression resembles that of a standard subroutine.</span></span> <span data-ttu-id="5c699-122">差異如下：</span><span class="sxs-lookup"><span data-stu-id="5c699-122">The differences are as follows:</span></span>  
   
-- <span data-ttu-id="56631-123">Lambda 運算式沒有名稱。</span><span class="sxs-lookup"><span data-stu-id="56631-123">A lambda expression does not have a name.</span></span>  
+- <span data-ttu-id="5c699-123">Lambda 運算式沒有名稱。</span><span class="sxs-lookup"><span data-stu-id="5c699-123">A lambda expression does not have a name.</span></span>  
   
-- <span data-ttu-id="56631-124">Lambda 運算式不能有修飾詞，例如`Overloads`或`Overrides`。</span><span class="sxs-lookup"><span data-stu-id="56631-124">A lambda expression cannot have a modifier, such as `Overloads` or `Overrides`.</span></span>  
+- <span data-ttu-id="5c699-124">Lambda 運算式不能有修飾詞，例如 `Overloads` 或 `Overrides`。</span><span class="sxs-lookup"><span data-stu-id="5c699-124">A lambda expression cannot have a modifier, such as `Overloads` or `Overrides`.</span></span>  
   
-- <span data-ttu-id="56631-125">單行 lambda 運算式的主體必須是陳述式，而不是運算式。</span><span class="sxs-lookup"><span data-stu-id="56631-125">The body of a single-line lambda expression must be a statement, not an expression.</span></span> <span data-ttu-id="56631-126">主體可以包含子程序的呼叫，但不是呼叫的函式程序。</span><span class="sxs-lookup"><span data-stu-id="56631-126">The body can consist of a call to a sub procedure, but not a call to a function procedure.</span></span>  
+- <span data-ttu-id="5c699-125">單行 lambda 運算式的主體必須是語句，而不是運算式。</span><span class="sxs-lookup"><span data-stu-id="5c699-125">The body of a single-line lambda expression must be a statement, not an expression.</span></span> <span data-ttu-id="5c699-126">主體可以包含 sub 程式的呼叫，而不是函式呼叫的呼叫。</span><span class="sxs-lookup"><span data-stu-id="5c699-126">The body can consist of a call to a sub procedure, but not a call to a function procedure.</span></span>  
   
-- <span data-ttu-id="56631-127">在 lambda 運算式中，可能是所有的參數必須指定必須推斷資料類型或所有參數。</span><span class="sxs-lookup"><span data-stu-id="56631-127">In a lambda expression, either all parameters must have specified data types or all parameters must be inferred.</span></span>  
+- <span data-ttu-id="5c699-127">在 lambda 運算式中，所有參數都必須具有指定的資料類型，否則必須推斷所有的參數。</span><span class="sxs-lookup"><span data-stu-id="5c699-127">In a lambda expression, either all parameters must have specified data types or all parameters must be inferred.</span></span>  
   
-- <span data-ttu-id="56631-128">選擇性和`ParamArray`lambda 運算式中不允許使用參數。</span><span class="sxs-lookup"><span data-stu-id="56631-128">Optional and `ParamArray` parameters are not permitted in lambda expressions.</span></span>  
+- <span data-ttu-id="5c699-128">Lambda 運算式中不允許選擇性和 `ParamArray` 參數。</span><span class="sxs-lookup"><span data-stu-id="5c699-128">Optional and `ParamArray` parameters are not permitted in lambda expressions.</span></span>  
   
-- <span data-ttu-id="56631-129">Lambda 運算式中不允許泛型參數。</span><span class="sxs-lookup"><span data-stu-id="56631-129">Generic parameters are not permitted in lambda expressions.</span></span>  
+- <span data-ttu-id="5c699-129">Lambda 運算式中不允許使用泛型參數。</span><span class="sxs-lookup"><span data-stu-id="5c699-129">Generic parameters are not permitted in lambda expressions.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="56631-130">範例</span><span class="sxs-lookup"><span data-stu-id="56631-130">Example</span></span>  
- <span data-ttu-id="56631-131">以下是將值寫入主控台的 lambda 運算式的範例。</span><span class="sxs-lookup"><span data-stu-id="56631-131">Following is an example of a lambda expression that writes a value to the console.</span></span> <span data-ttu-id="56631-132">此範例顯示一個副程式的這兩個單行和多行 lambda 運算式的語法。</span><span class="sxs-lookup"><span data-stu-id="56631-132">The example shows both the single-line and multiline lambda expression syntax for a subroutine.</span></span> <span data-ttu-id="56631-133">如需其他範例，請參閱 < [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="56631-133">For more examples, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="5c699-130">範例</span><span class="sxs-lookup"><span data-stu-id="5c699-130">Example</span></span>  
+ <span data-ttu-id="5c699-131">以下是將值寫入主控台的 lambda 運算式範例。</span><span class="sxs-lookup"><span data-stu-id="5c699-131">Following is an example of a lambda expression that writes a value to the console.</span></span> <span data-ttu-id="5c699-132">此範例會顯示副程式的單行和多行 lambda 運算式語法。</span><span class="sxs-lookup"><span data-stu-id="5c699-132">The example shows both the single-line and multiline lambda expression syntax for a subroutine.</span></span> <span data-ttu-id="5c699-133">如需更多範例，請參閱[Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="5c699-133">For more examples, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span></span>  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a><span data-ttu-id="56631-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="56631-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5c699-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5c699-134">See also</span></span>
 
-- [<span data-ttu-id="56631-135">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="56631-135">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="56631-136">Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="56631-136">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [<span data-ttu-id="56631-137">運算子和運算式</span><span class="sxs-lookup"><span data-stu-id="56631-137">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [<span data-ttu-id="56631-138">陳述式</span><span class="sxs-lookup"><span data-stu-id="56631-138">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
-- [<span data-ttu-id="56631-139">寬鬆委派轉換</span><span class="sxs-lookup"><span data-stu-id="56631-139">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [<span data-ttu-id="5c699-135">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="5c699-135">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="5c699-136">Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="5c699-136">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [<span data-ttu-id="5c699-137">運算子和運算式</span><span class="sxs-lookup"><span data-stu-id="5c699-137">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [<span data-ttu-id="5c699-138">陳述式</span><span class="sxs-lookup"><span data-stu-id="5c699-138">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+- [<span data-ttu-id="5c699-139">寬鬆委派轉換</span><span class="sxs-lookup"><span data-stu-id="5c699-139">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

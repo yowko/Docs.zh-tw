@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 0f501b518d5b3f2d48ced33885da2afd353c609e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b32c150f0faf4a9dcec3cec7620c3a9c050f6f20
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665681"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696876"
 ---
-# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="aabba-102">選擇性參數必須指定預設值</span><span class="sxs-lookup"><span data-stu-id="aabba-102">Optional parameters must specify a default value</span></span>
-<span data-ttu-id="aabba-103">選擇性參數必須提供預設值，如果未提供參數呼叫程序可以使用。</span><span class="sxs-lookup"><span data-stu-id="aabba-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  
+# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="4ee36-102">選擇性參數必須指定預設值</span><span class="sxs-lookup"><span data-stu-id="4ee36-102">Optional parameters must specify a default value</span></span>
+<span data-ttu-id="4ee36-103">選擇性參數必須提供呼叫程式未提供參數時，可以使用的預設值。</span><span class="sxs-lookup"><span data-stu-id="4ee36-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  
   
- <span data-ttu-id="aabba-104">**錯誤 ID:** BC30812</span><span class="sxs-lookup"><span data-stu-id="aabba-104">**Error ID:** BC30812</span></span>  
+ <span data-ttu-id="4ee36-104">**錯誤識別碼：** BC30812</span><span class="sxs-lookup"><span data-stu-id="4ee36-104">**Error ID:** BC30812</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="aabba-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="aabba-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4ee36-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="4ee36-105">To correct this error</span></span>  
   
-- <span data-ttu-id="aabba-106">指定選擇性參數，預設的值例如：</span><span class="sxs-lookup"><span data-stu-id="aabba-106">Specify default values for optional parameters; for example:</span></span>  
+- <span data-ttu-id="4ee36-106">指定選擇性參數的預設值;例如：</span><span class="sxs-lookup"><span data-stu-id="4ee36-106">Specify default values for optional parameters; for example:</span></span>  
   
-    ```  
+    ```vb  
     Sub Proc1(ByVal X As Integer,   
           Optional ByVal Y As String = "Default Value")  
        MsgBox("Default argument is: " & Y)  
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="aabba-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aabba-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ee36-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4ee36-107">See also</span></span>
 
-- [<span data-ttu-id="aabba-108">Optional</span><span class="sxs-lookup"><span data-stu-id="aabba-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)
+- [<span data-ttu-id="4ee36-108">Optional</span><span class="sxs-lookup"><span data-stu-id="4ee36-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)
