@@ -10,35 +10,27 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: a7964d01905be4e3dd6e8149e5533e9a2cfd9a71
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 474c3274bfba6803ebb17289f138251d755250e4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927623"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699808"
 ---
 # <a name="cryptography-settings-schema"></a>密碼編譯設定結構描述
 密碼編譯設定結構描述包含指定如何將易記的演算法名稱對應至實作密碼編譯演算法之類別的項目。  
   
- [ **\<configuration>** ](../configuration-element.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0cryptoClasses >** ](cryptoclasses-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2cryptoClass >** ](cryptoclass-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0nameEntry >** ](nameentry-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6[ **\<oidEntry >** ](oidentry-element.md)  
   
- [ **\<mscorlib>** ](mscorlib-element-for-cryptography-settings.md)  
-  
- [ **\<cryptographySettings>** ](cryptographysettings-element.md)  
-  
- [ **\<cryptoNameMapping>** ](cryptonamemapping-element.md)  
-  
- [ **\<cryptoClasses>** ](cryptoclasses-element.md)  
-  
- [ **\<cryptoClass>** ](cryptoclass-element.md)  
-  
- [ **\<nameEntry>** ](nameentry-element.md)  
-  
- [ **\<oidMap>** ](oidmap-element.md)  
-  
- [ **\<oidEntry>** ](oidentry-element.md)  
-  
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[ **\<cryptoClasses**>](cryptoclasses-element.md)|包含密碼編譯類別清單，其具有 **\<nameEntry>** 項目中易記名稱的對應。|  
 |[ **\<cryptoClass**>](cryptoclass-element.md)|包含密碼編譯類別，其具有 **\<nameEntry>** 項目中易記名稱的對應。|  

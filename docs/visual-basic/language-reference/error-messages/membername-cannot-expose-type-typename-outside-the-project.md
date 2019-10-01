@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: cb5191442ed8d3ee47c5116b10740e277ffa5bac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca67e74d7790352bd1842cb8a59fe1525af6e18c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661920"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700893"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<成員名稱 >' 無法公開類型'\<類型名稱 >' 透過在專案外\<containertype > '\<containertypename >'
-變數、 程序參數或函式傳回外部公開其容器，但它卻宣告為不會公開對容器外部的型別。  
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>' @no__t 0membername > ' 無法透過 \<containertype > ' \<containertypename > '，在專案外公開類型 ' \<typename > '
+變數、程式參數或函式傳回會在其容器外公開，但它會宣告為不能在容器外公開的類型。  
   
- 下列的基本架構程式碼顯示會產生此錯誤的情況。  
+ 下列基本架構程式碼會顯示產生此錯誤的情況。  
   
-```  
+```vb  
 Private Class privateClass  
 End Class  
 Public Class mainClass  
@@ -27,14 +27,14 @@ Public Class mainClass
 End Class  
 ```  
   
- 宣告的型別`Protected`， `Friend`， `Protected Friend`，或`Private`旨在有限存取，其宣告的內容之外。 使用做為資料類型的限制較少存取的變數會破壞此目的。 在上述的基本架構程式碼中，`exposedVar`是`Public`，並會公開`privateClass`不應該存取它的程式碼。  
+ @No__t-0、`Friend`、`Protected Friend` 或 `Private` 宣告的類型，主要是在其宣告內容外具有有限的存取權。 以較不受限制的存取來使用它做為變數的資料類型，將會破壞此目的。 在上述的基本架構程式碼中，`exposedVar` 會 `Public`，並將 `privateClass` 公開給不應該有存取權的程式碼。  
   
- **錯誤 ID:** BC30909  
+ **錯誤識別碼：** BC30909  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 變更存取層級的變數、 程序參數或函式會傳回至少為其資料類型的存取層級限制。  
+- 將變數、程式參數或函數傳回的存取層級變更為至少與其資料類型的存取層級相同。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

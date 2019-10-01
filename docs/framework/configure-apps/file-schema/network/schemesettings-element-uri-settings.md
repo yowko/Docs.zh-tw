@@ -2,19 +2,19 @@
 title: <schemeSettings> 項目 (URI 設定)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 46012b15d41422fb3357e57438e320136809ef41
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 498aef77a1dfd8cffcac73b704b8d1bb6df5d165
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664001"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697762"
 ---
-# <a name="schemesettings-element-uri-settings"></a>\<Schemesettings 專案 > 元素 (Uri 設定)
+# <a name="schemesettings-element-uri-settings"></a>@no__t 0schemeSettings > 元素（Uri 設定）
 指定如何針對特定配置剖析 <xref:System.Uri>。  
   
- \<configuration>  
-\<uri >  
-\<schemeSettings>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<schemeSettings >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -27,7 +27,7 @@ ms.locfileid: "69664001"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- 無  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -41,28 +41,28 @@ ms.locfileid: "69664001"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[uri](uri-element-uri-settings.md)|包含指定 .NET Framework 如何處理使用統一資源識別項 (Uri) 所表示之 web 位址的設定。|  
+|[uri](uri-element-uri-settings.md)|包含指定 .NET Framework 如何處理使用統一資源識別項（Uri）所表示之 web 位址的設定。|  
   
 ## <a name="remarks"></a>備註  
- 根據預設, <xref:System.Uri?displayProperty=nameWithType>類別會在執行路徑壓縮之前取消轉義百分比編碼的路徑分隔符號。 這會實作為安全性機制來對抗下列攻擊:  
+ 根據預設，在執行路徑壓縮之前，@no__t 0 類別會取消轉義百分比編碼的路徑分隔符號。 這會實作為安全性機制來對抗下列攻擊：  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- 如果將此 URI 向下傳遞至未正確處理百分比編碼字元的模組, 可能會導致伺服器執行下列命令:  
+ 如果將此 URI 向下傳遞至未正確處理百分比編碼字元的模組，可能會導致伺服器執行下列命令：  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- 因此, <xref:System.Uri?displayProperty=nameWithType>類別會先取消轉義路徑分隔符號, 然後套用路徑壓縮。 將上述惡意 URL 傳遞給<xref:System.Uri?displayProperty=nameWithType>類別的函式的結果會產生下列 URI:  
+ 因此，<xref:System.Uri?displayProperty=nameWithType> 類別會先取消轉義路徑分隔符號，然後套用路徑壓縮。 將上述惡意 URL 傳遞給 @no__t 0 類別的函式，會產生下列 URI：  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- 您可以使用特定配置的 Schemesettings 專案設定選項, 修改這個預設行為, 而不要解除轉義百分比編碼的路徑分隔符號。  
+ 您可以使用特定配置的 Schemesettings 專案設定選項，修改這個預設行為，而不要解除轉義百分比編碼的路徑分隔符號。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示類別所<xref:System.Uri>使用的設定, 以支援不要將 HTTP 配置的百分比編碼路徑分隔符號進行轉義。  
+ 下列範例顯示 <xref:System.Uri> 類別所使用的設定，以支援不要將 HTTP 配置的百分比編碼路徑分隔符號進行轉義。  
   
 ```xml  
 <configuration>  

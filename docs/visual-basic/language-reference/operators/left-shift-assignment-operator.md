@@ -1,5 +1,5 @@
 ---
-title: << = 運算子 (Visual Basic)
+title: < < = 運算子（Visual Basic）
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<=
@@ -11,41 +11,41 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-ms.openlocfilehash: da2b5ca0b7538d77c3c8d8bc7d45712d656ce63a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aae71069bdcb88efa5842526dd7eb47806f248d0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768312"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701099"
 ---
-# <a name="-operator-visual-basic"></a>\<\<= 運算子 (Visual Basic)
-執行算術左的移位的變數或屬性的值，並將結果指派給變數或屬性。  
+# <a name="-operator-visual-basic"></a>\< @ no__t-1 = 運算子（Visual Basic）
+在變數或屬性的值上執行算術左移位，並將結果指派回變數或屬性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 variableorproperty <<= amount  
 ```  
   
 ## <a name="parts"></a>組件  
  `variableorproperty`  
- 必要項。 變數或屬性的整數類資料類型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，或`ULong`)。  
+ 必要項。 整數類資料類型的變數或屬性（`SByte`、`Byte`、@no__t 2、`UShort`、`Integer`、`UInteger`、`Long` 或 `ULong`）。  
   
  `amount`  
- 必要項。 數值運算式的資料類型可擴展成`Integer`。  
+ 必要項。 擴展為 `Integer` 之資料類型的數值運算式。  
   
 ## <a name="remarks"></a>備註  
- 在左邊的項目`<<=`運算子可以是簡單的純量變數、 屬性或陣列項目。 變數或屬性不可[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
+ @No__t-0 運算子左邊的元素可以是簡單的純量變數、屬性或陣列的元素。 變數或屬性不可為[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
   
- `<<=`運算子會先執行算術左的移位的變數或屬性的值。 然後，運算子會將該作業的結果指派給該變數或屬性。  
+ @No__t-0 運算子會先在變數或屬性的值上執行算術左移位。 然後，運算子會將該作業的結果指派回該變數或屬性。  
   
- 算術的排班不是循環，這表示移出結果的某一端的位元不會重新引入另一端。 在算術左移位，移位超出結果資料類型之範圍的位元會捨棄，而且在右邊空出的位元位置會設定為零。  
+ 算術移位不是迴圈的，這表示不會在另一端重新進入從結果的一端移位的位。 在算術左移位中，會捨棄超出結果資料類型範圍的位，而且右邊空出的位位置會設定為零。  
   
 ## <a name="overloading"></a>多載化  
- [<< 運算子](../../../visual-basic/language-reference/operators/left-shift-operator.md)可以是*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。 多載`<<`運算子會影響的行為`<<=`運算子。 如果您的程式碼會使用`<<=`上類別或結構，多載`<<`，務必了解其重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ [< < 運算子](../../../visual-basic/language-reference/operators/left-shift-operator.md)*可以多載，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 多載 `<<` 運算子會影響 `<<=` 運算子的行為。 如果您的程式碼在多載 `<<` 的類別或結構上使用 `<<=`，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`<<=`要移位的位元模式的運算子`Integer`變數保留指定的數量並將結果指派給變數。  
+ 下列範例會使用 `<<=` 運算子，將 `Integer` 變數的位模式向左移位指定的數量，並將結果指派給該變數。  
   
  [!code-vb[VbVbalrOperators#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#13)]  
   

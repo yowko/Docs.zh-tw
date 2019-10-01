@@ -1,5 +1,5 @@
 ---
-title: <remove><listeners> For 的元素<trace>
+title: 適用于 <trace> <listeners> 的 <remove> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56d1e56514aed98d5f3b9f7363e461af6ac68a8c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920480"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697223"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<移除\<追蹤 > 之\<接聽程式 > 的 > 元素
-從接聽項集合中移除接聽程式。  
+# <a name="remove-element-for-listeners-for-trace"></a>\<trace 的 \<listeners > 的 @no__t 0remove > 元素 >
+從接聽**項集合中**移除接聽程式。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<trace>  
-\<接聽程式 >  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ ms.locfileid: "69920480"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**name**|必要屬性。<br /><br /> 要從接聽項集合中移除的接聽程式名稱。|  
+|**name**|必要屬性。<br /><br /> 要從接聽**項集合中**移除的接聽程式名稱。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -53,10 +53,10 @@ ms.locfileid: "69920480"
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
-> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>從集合中移除, 會改變、、和<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>方法的行為。 `Listeners` <xref:System.Diagnostics.DefaultTraceListener> <xref:System.Diagnostics.DefaultTraceListener> `Listeners`呼叫或方法`Fail`通常會導致訊息方塊顯示, 但如果不在集合中, 則不會顯示訊息方塊。 `Assert`  
+> 從 @no__t 1 集合中移除 <xref:System.Diagnostics.DefaultTraceListener>，會改變 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> 和 @no__t 5 方法的行為。 呼叫 `Assert` 或 @no__t 1 方法通常會導致訊息方塊顯示，但如果 <xref:System.Diagnostics.DefaultTraceListener> 不在 `Listeners` 集合中，則不會顯示訊息方塊。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何從追蹤接聽項集合中移除預設的追蹤接聽程式。  
+ 下列範例顯示如何從追蹤接聽項集合中移除預設**的追蹤接聽**程式。  
   
 ```xml  
 <configuration>  

@@ -2,12 +2,12 @@
 title: 數學函式
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 5e5658e28c7d806f7fd38f941bfa7254e7806e11
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 664d1a4f67ecced6713f83bf3dd11931c9b4dc18
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182491"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700006"
 ---
 # <a name="mathematical-functions"></a>數學函式
 
@@ -19,7 +19,7 @@ ms.locfileid: "71182491"
 
 **引數**
 
-`expression`：`Int32`、 、`Int64`或`Decimal`。 `Double`
+`expression`:`Int32`、 、`Int64`或`Decimal`。 `Double`
 
 **傳回值**
 
@@ -35,7 +35,7 @@ ms.locfileid: "71182491"
 
 **引數**
 
-`expression`：`Double`。
+`expression`:`Double`。
 
 **傳回值**
 
@@ -51,7 +51,7 @@ ms.locfileid: "71182491"
 
 **引數**
 
-`expression`：`Double`。
+`expression`:`Double`。
 
 **傳回值**
 
@@ -67,7 +67,7 @@ ms.locfileid: "71182491"
 
 **引數**
 
-`expression`：`Double`。
+`expression`:`Double`。
 
 **傳回值**
 
@@ -83,7 +83,7 @@ ms.locfileid: "71182491"
 
 **引數**
 
-`expression`：`Double`。
+`expression`:`Double`。
 
 **傳回值**
 
@@ -99,7 +99,7 @@ ms.locfileid: "71182491"
 
 **引數**
 
-`expression`：`Int32`、 、`Int64`或`Decimal`。 `Double`
+`expression`:`Int32`、 、`Int64`或`Decimal`。 `Double`
 
 **傳回值**
 
@@ -107,7 +107,6 @@ ms.locfileid: "71182491"
 
 **範例** 
 
-[!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
 
 ## <a name="cosexpression"></a>COS （運算式）
@@ -116,7 +115,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Double`。 
+`expression`:`Double`。 
 
 **傳回值** 
 
@@ -132,7 +131,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Double`。 
+`expression`:`Double`。 
 
 **傳回值** 
 
@@ -148,7 +147,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Int32`、 、`Int64`或`Decimal`。 `Double` 
+`expression`:`Int32`、 、`Int64`或`Decimal`。 `Double` 
 
 **傳回值** 
 
@@ -164,7 +163,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Double`。 
+`expression`:`Double`。 
 
 **傳回值** 
 
@@ -178,7 +177,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Double`。 
+`expression`:`Double`。 
 
 **傳回值** 
 
@@ -186,7 +185,6 @@ ms.locfileid: "71182491"
 
 **範例** 
 
-[!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
 
 ## <a name="logexpression"></a>記錄（運算式）
@@ -195,7 +193,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Double`。 
+`expression`:`Double`。 
 
 **傳回值** 
 
@@ -211,7 +209,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Double`。 
+`expression`:`Double`。 
 
 **傳回值** 
 
@@ -258,7 +256,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Int32`、 、`Int64`或`Decimal`。 `Double` 
+`expression`:`Int32`、 、`Int64`或`Decimal`。 `Double` 
 
 **傳回值** 
 
@@ -326,7 +324,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Double`。 
+`expression`:`Double`。 
 
 **傳回值** 
 
@@ -340,7 +338,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Double`。 
+`expression`:`Double`。 
 
 **傳回值** 
 
@@ -354,7 +352,7 @@ ms.locfileid: "71182491"
 
 **引數** 
 
-`expression`：`Double`。 
+`expression`:`Double`。 
 
 **傳回值** 
 
@@ -382,10 +380,5 @@ ms.locfileid: "71182491"
   
 ## <a name="see-also"></a>另請參閱
 
-如需 SqlClient 支援之數學函式的詳細資訊，請參閱 SqlClient 提供者資訊清單中所指定之 SQL Server 版本的說明文件：
-
-- **SQL Server 2005：** [數學函數 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))
-- **SQL Server 2008：** [數學函數 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))
-- **SQL Server 2012 和更新版本：** [數學函數 (transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql)
-
+- [數學函數 (transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql)
 - [適用於 Entity Framework 的 SqlClient 函式](sqlclient-for-ef-functions.md)

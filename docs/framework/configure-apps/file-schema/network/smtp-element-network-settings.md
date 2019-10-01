@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: ac9405fdc6123a5a1352de06f94fefb6d7d4014b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2105a6dd25a7f6e5e4c1ce286be7f60beae1dca0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659113"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697614"
 ---
-# <a name="smtp-element-network-settings"></a>\<smtp > 元素 (網路設定)
+# <a name="smtp-element-network-settings"></a>@no__t 0smtp > 元素（網路設定）
 設定傳送電子郵件的傳遞格式、傳遞方法和寄件者位址。  
   
- \<configuration>  
-\<system.net>  
-\<mailSettings>  
-\<smtp>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<mailSettings >** ](mailsettings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<smtp >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,9 +48,9 @@ ms.locfileid: "69659113"
   
 ### <a name="child-elements"></a>子元素  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|設定簡單郵件傳輸通訊協定 (SMTP) 伺服器的本機目錄。|  
+|`specifiedPickupDirectory`|設定簡單郵件傳輸通訊協定（SMTP）伺服器的本機目錄。|  
 |`network`|設定外部 SMTP 伺服器的網路選項。|  
   
 ### <a name="parent-elements"></a>父項目  
@@ -60,7 +60,7 @@ ms.locfileid: "69659113"
 |[\<mailSettings> 項目 (網路設定)](mailsettings-element-network-settings.md)|設定郵件傳送選項。|  
   
 ## <a name="example"></a>範例  
- 下列範例會指定適當的 SMTP 參數, 以使用預設網路認證來傳送電子郵件。  
+ 下列範例會指定適當的 SMTP 參數，以使用預設網路認證來傳送電子郵件。  
   
 ```xml  
 <configuration>  

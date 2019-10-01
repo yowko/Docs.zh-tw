@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07f8be1a1831bc00eea3cfb659b46b67b6a78711
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1ec7d615b99ac301948d7ea25318115713ce06ea
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747730"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700848"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint 方法
-建立指定之位移此程式碼區段中的中斷點。  
+在此程式碼區段中，于指定的位移處建立中斷點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,15 +38,15 @@ HRESULT CreateBreakpoint (
   
 ## <a name="parameters"></a>參數  
  `offset`  
- [in]要建立的中斷點處的位移。  
+ 在要在其上建立中斷點的位移。  
   
  `ppBreakpoint`  
- [out]「 ICorDebugFunctionBreakpoint 」 物件，表示中斷點的位址指標。  
+ 脫銷代表中斷點之 "ICorDebugFunctionBreakpoint" 物件位址的指標。  
   
 ## <a name="remarks"></a>備註  
- 中斷點為作用中之前，必須先新增至處理程序物件。  
+ 在中斷點開始之前，必須先將它新增至處理常式物件。  
   
- 如果此程式碼是 Microsoft intermediate language (MSIL) 程式碼，而且沒有在 just-in-time (JIT)-JIT 編譯程式碼中也將套用原生編譯版本的程式碼中斷點。 （這也為 true，如果程式碼為 JIT 編譯更新版本。）  
+ 如果這段程式碼是 Microsoft 中繼語言（MSIL）程式碼，而且有即時（JIT）編譯的機器碼，則中斷點也會套用在 JIT 編譯的程式碼中。 （如果稍後再以 JIT 編譯程式碼，也是如此）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -55,6 +55,4 @@ HRESULT CreateBreakpoint (
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>另請參閱
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

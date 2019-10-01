@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: cbdf6150010ca2dace3f0610d9caa90c2bf52746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eed2a4d06906d2928be62aed20a75484c3eea946
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921049"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699761"
 ---
-# <a name="oidentry-element"></a>\<y > 元素
+# <a name="oidentry-element"></a>@no__t 0oidEntry > 元素
 將 ASN.1 物件識別碼 (OID) 對應至易記名稱。  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
-\<oidMap>  
-\<oidEntry>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 **\<oidEntry >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,25 +38,25 @@ ms.locfileid: "69921049"
 |屬性|描述|  
 |---------------|-----------------|  
 |**OID**|必要屬性。<br /><br /> 指定對應至您的類別所實演算法的 asn.1 OID。|  
-|**name**|必要屬性。<br /><br /> [指定\<y >](nameentry-element.md)標記中**name**屬性的值。|  
+|**name**|必要屬性。<br /><br /> 指定[@no__t 2nameEntry >](nameentry-element.md)標記中**name**屬性的值。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`cryptographySettings`|包含密碼編譯設定。|  
 |`mscorlib`|`cryptographySettings`包含元素。|  
-|`oidMap`|包含對類別的 asn.1 物件識別元 (OID) 對應。|  
+|`oidMap`|包含對類別的 asn.1 物件識別元（OID）對應。|  
   
 ## <a name="remarks"></a>備註  
  Asn.1 物件識別碼會識別一些密碼編譯格式的演算法。 將物件識別碼對應至您想要識別之演算法的易記名稱。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<y >** 元素, 將 RIPEMD-160 雜湊演算法的物件識別碼對應至該雜湊演算法的執行。  
+ 下列範例示範如何使用 **@no__t 1oidEntry >** 元素，將 RIPEMD-160 雜湊演算法的物件識別碼對應至該雜湊演算法的執行。  
   
 ```xml  
 <configuration>  

@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: e12a83d3932d11baa086310ab0be23fb431459fc
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107199"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696758"
 ---
 # <a name="best-practices-for-exceptions"></a>例外狀況的最佳做法
 
@@ -30,15 +30,15 @@ ms.locfileid: "70107199"
 
 針對可能發生但可能會觸發例外狀況的狀況，請考慮以避免例外狀況的方式來處理這些狀況。 例如，如果您嘗試關閉已關閉的連線，您會得到 `InvalidOperationException`。 您可以在嘗試關閉之前，使用 `if` 陳述式來檢查連線狀態，以避免此例外狀況。
 
-[!code-cpp[Conceptual.Exception.Handling#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
-[!code-csharp[Conceptual.Exception.Handling#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
-[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
+[!code-cpp[Conceptual.Exception.Handling#2](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
+[!code-csharp[Conceptual.Exception.Handling#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
+[!code-vb[Conceptual.Exception.Handling#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
 
 如果您沒有檢查連線狀態就關閉，您可能會攔截到 `InvalidOperationException` 例外狀況。
 
-[!code-cpp[Conceptual.Exception.Handling#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
-[!code-csharp[Conceptual.Exception.Handling#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
-[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
+[!code-cpp[Conceptual.Exception.Handling#3](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
+[!code-csharp[Conceptual.Exception.Handling#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
+[!code-vb[Conceptual.Exception.Handling#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
 
 選擇的方法取決於您預期事件會發生的頻率。
 
@@ -50,9 +50,9 @@ ms.locfileid: "70107199"
 
 類別可提供方法或屬性，讓您避免進行會觸發例外狀況的呼叫。 例如，<xref:System.IO.FileStream> 類別會提供方法，協助判斷是否已經抵達檔案結尾。 這些方法或屬性可用來避免萬一您讀取超過檔案結尾時，所擲回的例外狀況。 下列範例示範如何讀取至檔案結尾，而不會觸發例外狀況。
 
-[!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
-[!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
-[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
+[!code-cpp[Conceptual.Exception.Handling#5](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
+[!code-csharp[Conceptual.Exception.Handling#5](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
+[!code-vb[Conceptual.Exception.Handling#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
 另一個避免例外狀況的方法是針對很常見的錯誤案例傳回 Null (或預設值)，而不擲回例外狀況。 相當普遍的錯誤案例可視為一般控制流程。 針對這些案例傳回 Null (或預設值)，就能盡量降低對應用程式效能的影響。
 
@@ -64,7 +64,7 @@ ms.locfileid: "70107199"
 
 ## <a name="use-the-predefined-net-exception-types"></a>使用預先定義的 .NET 例外狀況類型
 
-只有在預先定義的類型不適用時，才引進新的例外狀況類別。 例如：
+只有在預先定義的類型不適用時，才引進新的例外狀況類別。 例如:
 
 - 如果屬性集或方法呼叫對於物件的目前狀態而言並不適當，就會擲回 <xref:System.InvalidOperationException> 例外狀況。
 
@@ -72,11 +72,11 @@ ms.locfileid: "70107199"
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>使用字組 `Exception` 作為例外狀況類別名稱的結尾
 
-如需自訂例外狀況，請適當地加以命名，並從 <xref:System.Exception>加以衍生。 例如：
+如需自訂例外狀況，請適當地加以命名，並從 <xref:System.Exception>加以衍生。 例如:
 
-[!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
-[!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
-[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
+[!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
+[!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
+[!code-vb[Conceptual.Exception.Handling#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>在自訂例外狀況類別中包含三個建構函式
 
@@ -110,7 +110,11 @@ ms.locfileid: "70107199"
 
 使用者所看到的錯誤訊息，衍生自擲回的例外狀況之 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性，而並非來自例外狀況類別的名稱。 一般來說，您要將值指派到 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性，方法是將訊息字串傳遞到[例外狀況建構函式](xref:System.Exception.%23ctor%2A)的 `message` 引數。
 
-若是當地語系化的應用程式，則應對每個應用程式可能會擲回的例外狀況，該提供當地語系化的訊息字串。 您可使用資源檔，提供當地語系化的錯誤訊息。 如需當地語系化應用程式與擷取當地語系化字串的詳細資訊，請參閱[傳統型應用程式中的資源](../../framework/resources/index.md)與 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>。
+若是當地語系化的應用程式，則應對每個應用程式可能會擲回的例外狀況，該提供當地語系化的訊息字串。 您可使用資源檔，提供當地語系化的錯誤訊息。 如需當地語系化應用程式及取得當地語系化字串的詳細資訊，請參閱下列文章：
+
+- [如何：使用當地語系化的例外狀況訊息建立使用者定義的例外狀況](how-to-create-localized-exception-messages.md)
+- [桌面應用程式中的資源](../../framework/resources/index.md) 
+- <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>在自訂例外狀況中，視需要提供額外的屬性
 
@@ -122,11 +126,11 @@ ms.locfileid: "70107199"
 
 ## <a name="use-exception-builder-methods"></a>使用例外狀況產生器方法
 
-類別在它的實作中從不同的地方擲回相同的例外狀況是很常見的。 若要避免過多的程式碼，請使用 Helper 方法，以建立例外狀況並將它傳回。 例如：
+類別在它的實作中從不同的地方擲回相同的例外狀況是很常見的。 若要避免過多的程式碼，請使用 Helper 方法，以建立例外狀況並將它傳回。 例如:
 
-[!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
-[!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
-[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
+[!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
+[!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
+[!code-vb[Conceptual.Exception.Handling#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
 
 在某些情況下，使用例外狀況的建構函式來建置例外狀況會更適當。 範例為全域例外狀況類別 <xref:System.ArgumentException>。
 

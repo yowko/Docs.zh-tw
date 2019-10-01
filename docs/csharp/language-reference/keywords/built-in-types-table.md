@@ -7,17 +7,17 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605982"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698787"
 ---
 # <a name="built-in-types-table-c-reference"></a>內建類型資料表 (C# 參考)
 
-下表顯示內建 C# 型別的關鍵字，這些是 <xref:System> 命名空間中預先定義型別的別名。  
-  
+下表顯示內C#建類型的關鍵字，這些是 @no__t 1 命名空間中預先定義類型的別名：
+
 |C# 類型|.NET 型別|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -38,9 +38,9 @@ ms.locfileid: "69605982"
   
 ## <a name="remarks"></a>備註
 
-表中除了 `object` 和 `string` 以外的所有型別，都視為簡單型別。  
-  
-.NET 型別與其 C# 型別關鍵字別名是可互換的。 例如，您可以使用下列任一個宣告來宣告整數變數：  
+表中除了 `object` 和 `string` 以外的所有型別，都視為簡單型別。
+
+.NET 型別與其 C# 型別關鍵字別名是可互換的。 例如，您可以使用下列任一個宣告來宣告整數變數：
 
 ```csharp
 int x = 123;
@@ -66,7 +66,7 @@ Console.WriteLine(doubleType.FullName);
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [實值型別](value-types.md)
+- [值類型](value-types.md)
 - [參考型別](reference-types.md)
 - [預設值表](default-values-table.md)
 - [dynamic](dynamic.md)

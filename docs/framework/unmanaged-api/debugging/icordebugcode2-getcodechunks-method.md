@@ -17,47 +17,50 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bbc7ac7d87c6a5d36dc3432c603bb7d16d62c00
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1bdaf6391ca5c19f073708d6258ad5775bec9824
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747435"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700734"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks 方法
-取得這個程式碼物件組成的程式碼區塊。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-HRESULT GetCodeChunks (  
-    [in]  ULONG32     cbufSize,  
-    [out] ULONG32     *pcnumChunks,  
-    [out, size_is(cbufSize), length_is(*pcnumChunks)]   
-        CodeChunkInfo chunks[]  
-);  
-```  
-  
-## <a name="parameters"></a>參數  
+
+取得此程式碼物件所組成的程式碼區塊。
+
+## <a name="syntax"></a>語法
+
+```cpp
+HRESULT GetCodeChunks (
+    [in]  ULONG32     cbufSize,
+    [out] ULONG32     *pcnumChunks,
+    [out, size_is(cbufSize), length_is(*pcnumChunks)]
+        CodeChunkInfo chunks[]
+);
+```
+
+## <a name="parameters"></a>參數
+
  `cbufSize`  
- [in]大小`chunks`陣列。  
-  
+ 在@No__t-0 陣列的大小。
+
  `pcnumChunks`  
- [out]傳入的區塊數目`chunks`陣列。  
-  
+ 脫銷@No__t-0 陣列中傳回的區塊數目。
+
  `chunks`  
- [out]結構的陣列 」 CodeChunkInfo 」，每一個都代表單一的程式碼區塊。 如果值`cbufSize`為 0，這個參數可以是 null。  
-  
-## <a name="remarks"></a>備註  
- 程式碼區塊 （chunk） 將會永遠不會重疊，以及它們會依的序執行所在串連這些區塊會有已由[icordebugcode:: Getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)。 在.NET Framework 2.0 版的 Microsoft intermediate language (MSIL) 程式碼物件會構成單一的程式碼區塊。  
-  
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** CorDebug.idl、CorDebug.h  
-  
- **LIBRARY:** CorGuids.lib  
-  
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>另請參閱
+ 脫銷"CodeChunkInfo" 結構的陣列，其中每一個都代表一個程式碼區塊。 如果 `cbufSize` 的值為0，則這個參數可以是 null。
+
+## <a name="remarks"></a>備註
+
+ 程式碼區塊永遠不會重迭，而且它們會遵循[ICorDebugCode：： GetCode](icordebugcode-getcode-method.md)串連的順序。 .NET Framework 版本2.0 中的 Microsoft 中繼語言（MSIL）程式碼物件將會包含單一程式碼區塊。
+
+## <a name="requirements"></a>需求
+
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
+
+ **標頭：** CorDebug.idl、CorDebug.h
+
+ **LIBRARY:** CorGuids.lib
+
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ 

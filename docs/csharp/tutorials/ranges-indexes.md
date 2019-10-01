@@ -3,12 +3,12 @@ title: 使用索引和範圍探索資料範圍
 description: 此進階教學課程將教導您使用索引和範圍探索資料，以檢查連續資料集的配量。
 ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391963"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699929"
 ---
 # <a name="indices-and-ranges"></a>索引和範圍
 
@@ -33,7 +33,7 @@ ms.locfileid: "71391963"
 
 讓我們從索引的規則開始。 假設有一個陣列 `sequence`。 `0` 索引與 `sequence[0]` 相同。 `^0` 索引與 `sequence[sequence.Length]` 相同。 請注意，`sequence[^0]` 會擲回例外狀況，就樣 `sequence[sequence.Length]` 會這樣做一樣。 針對任何數字 `n`，索引 `^n` 與 `sequence[sequence.Length - n]` 相同。
 
-```csharp-interactive
+```csharp
 string[] words = new string[]
 {
                 // index from start    index from end

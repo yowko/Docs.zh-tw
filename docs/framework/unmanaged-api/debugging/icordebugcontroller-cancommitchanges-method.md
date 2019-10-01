@@ -17,14 +17,13 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91a9bea6a89d7684d1f3524e4105da81f11e00a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a0b35b4782ca173133523aa9e9d0fe48ea728d0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749640"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700772"
 ---
 # <a name="icordebugcontrollercancommitchanges-method"></a>ICorDebugController::CanCommitChanges 方法
-`CanCommitChanges` 已經過時。 請勿呼叫這個方法。  
-  
-## <a name="see-also"></a>另請參閱
+
+`CanCommitChanges` 已經過時。 請勿呼叫此方法。

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664242"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698424"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<新增 Authenticationmodules 專案的 > 元素 (網路設定)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>適用于 Authenticationmodules 專案的 @no__t 0add > 元素（網路設定）
 將驗證模組新增至應用程式。  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69664242"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|`type`|完整型別名稱 (以<xref:System.Type.FullName%2A>屬性工作表示) 和元件名稱 (以<xref:System.Reflection.Assembly.FullName%2A>屬性工作表示), 並以逗號分隔。|  
+|`type`|完整型別名稱（以 <xref:System.Type.FullName%2A> 屬性工作表示）和元件名稱（以 <xref:System.Reflection.Assembly.FullName%2A> 屬性工作表示），並以逗號分隔。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -54,7 +54,7 @@ ms.locfileid: "69664242"
 ## <a name="remarks"></a>備註  
  `add` 項目會將驗證模組加入至已註冊驗證模組清單的尾端。 驗證模組會依其加入清單的順序來進行呼叫。  
   
- `type`屬性的值應該是有效的型別名稱和對應的元件名稱, 並以逗號分隔。  
+ @No__t-0 屬性的值應該是有效的型別名稱和對應的元件名稱，並以逗號分隔。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  

@@ -1,7 +1,7 @@
 ---
 title: 布林值邏輯運算子 - C# 參考
 description: 了解能搭配布林值運算元執行邏輯否定、結合 (AND) 及內含和互斥分離 (OR) 作業的 C# 運算子。
-ms.date: 04/08/2019
+ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353359"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698673"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布林值邏輯運算子 (C# 參考)
 
@@ -54,6 +54,8 @@ ms.locfileid: "71353359"
 `!` 運算子會計算其運算元的邏輯否定。 也就是說，它會在運算元評估為 `false` 時產生 `true`，並在運算元評估為 `true` 時產生 `false`：
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+
+從C# 8.0 開始，一元後置 `!` 運算子是 null 容許運算子。 在啟用的可為 null 注釋內容中，您可以使用它來宣告可為 null 之參考型別的運算式 `x` 不是 null： `x!`。 如需詳細資訊，請參閱[可為 null 的參考型別](../../nullable-references.md)。
 
 ## <a name="logical-and-operator-"></a> 邏輯 AND 運算子 &amp;
 

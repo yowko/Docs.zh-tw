@@ -2,12 +2,12 @@
 title: 可為 Null 的參考型別
 description: 本文提供可為 Null 參考型別的概觀，這種型別是在 C# 8 中新增的功能。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。
 ms.date: 02/19/2019
-ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 213f0e3d9ad84628dab02a1dc483513783b2ad6e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332366"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699951"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
@@ -65,7 +65,7 @@ name!.Length;
 - `warnings`:可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**啟用**。
   - 參考型別變數為遺忘式。 啟用所有可 NULL 性警告。
 - `annotations`:可為 Null 註釋內容為**啟用**。 可為 Null 警告內容為**停用**。
-  - 參考型別變數為遺忘式。 啟用所有可 NULL 性警告。
+  - 參考型別變數為遺忘式。 停用所有可 NULL 性警告。
 - `disable`:可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**停用**。
   - 參考型別變數為遺忘式，與先前版本的 C# 相似。 停用所有可 NULL 性警告。
 

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: faaba1b9de302ed916ad1a81c7e80b3fb5a67170
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d377a77a4a1b4c57e9edd4fbfa364387f1bae479
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664161"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699422"
 ---
-# <a name="connectionmanagement-element-network-settings"></a>\<Connectionmanagement 專案 > 元素 (網路設定)
+# <a name="connectionmanagement-element-network-settings"></a>@no__t 0connectionManagement > 元素（網路設定）
 指定連接至網路主機的連線數目上限。  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<connectionManagement >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,13 +50,13 @@ ms.locfileid: "69664161"
 |[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
 ## <a name="remarks"></a>備註  
- `connectionManagement`元素會定義伺服器或伺服器群組的最大連接數目。  
+ @No__t-0 元素會定義伺服器或伺服器群組的最大連接數目。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會將應用程式設定為使用伺服器`www.contoso.com`的四個連接, 以及兩個連接到其他所有伺服器。  
+ 下列範例會將應用程式設定為使用與伺服器的四個連接 `www.contoso.com`，以及兩個與其他伺服器的連線。  
   
 ```xml  
 <configuration>  

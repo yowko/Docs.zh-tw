@@ -4,16 +4,16 @@ description: 了解 CharSet 的不同值如何變更 .NET 將您的資料封送�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cac71c5d09514dfe1244d16224944e05826edfa9
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
-ms.translationtype: HT
+ms.openlocfilehash: 301fa3d8bd379e76a0e751c3a20d0d8be37d9ac0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817848"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700928"
 ---
 # <a name="charsets-and-marshaling"></a>字元集與封送處理
 
-`char` 值、`string` 物件與 `System.Text.StringBuilder` 物件封送處理方式取決於 P/Invoke 或結構上 `CharSet` 欄位的值。 您可以透過在宣告您的 P/Invoke 時設定 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位，以設定 P/Invoke 的 `CharSet`。 若要為結構設定 `CharSet`，請在您的結構宣告上設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> 欄位。 當這些屬性欄位未設定時，語言編譯器可決定要使用的 `CharSet`。 C# 和 VB 預設會使用 <xref:System.Runtime.InteropServices.CharSet.Ansi> 字元集。
+`char` 值、`string` 物件與 `System.Text.StringBuilder` 物件封送處理方式取決於 P/Invoke 或結構上 `CharSet` 欄位的值。 您可以透過在宣告您的 P/Invoke 時設定 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位，以設定 P/Invoke 的 `CharSet`。 若要為類型設定 `CharSet`，請在您的類別或結構宣告上設定 @no__t 1 欄位。 當這些屬性欄位未設定時，語言編譯器可決定要使用的 `CharSet`。 C# 和 VB 預設會使用 <xref:System.Runtime.InteropServices.CharSet.Ansi> 字元集。
 
 下表顯示每個字元集與使用該字元集進行封送處理時，如何表示字元或字串：
 

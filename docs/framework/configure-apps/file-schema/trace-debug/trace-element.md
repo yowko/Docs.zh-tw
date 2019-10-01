@@ -10,19 +10,19 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 02fd794eb7b7b7f46f7f7bc4e43036cb4a4758ed
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920403"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699175"
 ---
-# <a name="trace-element"></a>\<追蹤 > 元素
+# <a name="trace-element"></a>@no__t 0trace > 元素
 包含用於收集、儲存及路由傳送追蹤訊息的接聽項。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<trace>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<trace >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,12 +54,12 @@ ms.locfileid: "69920403"
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|如果接聽程式是安全線程, 則不會使用全域鎖定;否則, 會使用全域鎖定。|  
-|`true`|不論接聽程式是否為安全線程, 都會使用全域鎖定。 這是預設值。|  
+|`false`|如果接聽程式是安全線程，則不會使用全域鎖定;否則，會使用全域鎖定。|  
+|`true`|不論接聽程式是否為安全線程，都會使用全域鎖定。 這是預設值。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-trace.md)|指定收集、儲存及路由傳送訊息的接聽程式。|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69920403"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何使用`<trace>`專案, 將接聽程式加入`MyListener`至`Listeners`集合。 `MyListener`建立名`MyListener.log`為的檔案, 並將輸出寫入檔案。 屬性會設定為`false`, 如果追蹤接聽程式是安全線程, 則不會使用全域鎖定。 `useGlobalLock` 屬性會設定為`true`, 這會使追蹤接聽程式寫入檔案, 而不論是否<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>呼叫方法。 `autoflush` 屬性會設定為 0 (零), 這會導致接聽程式在呼叫<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>方法時縮排零空間。 `indentsize`  
+ 下列範例示範如何使用 `<trace>` 元素，將接聽程式 `MyListener` 新增至 @no__t 2 集合。 `MyListener` 會建立名為 `MyListener.log` 的檔案，並將輸出寫入檔案。 @No__t-0 屬性會設定為 `false`，如果追蹤接聽程式是安全線程，則不會使用全域鎖定。 @No__t-0 屬性會設定為 `true`，這會使追蹤接聽程式寫入檔案，不論是否呼叫 @no__t 2 方法。 @No__t-0 屬性設為0（零），這會在呼叫 <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> 方法時，讓接聽程式縮排零空間。  
   
 ```xml  
 <configuration>  

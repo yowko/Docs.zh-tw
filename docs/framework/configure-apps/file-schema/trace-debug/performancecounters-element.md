@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounters element
 - <performanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-ms.openlocfilehash: 6144bcbda69b2ba799e87c3e7fa2118fbe4d9bf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f52fdb2d5b0b7911de63f96663e70735d2f2496c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673729"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697159"
 ---
-# <a name="performancecounters-element"></a>\<performanceCounters > 項目
+# <a name="performancecounters-element"></a>@no__t 0performanceCounters > 元素
 
 指定效能計數器共用之全域記憶體的大小。
 
- \<configuration>\
-\<system.diagnostics>\
-\<performanceCounters>
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<performanceCounters >**  
 
 ## <a name="syntax"></a>語法
 
@@ -37,7 +37,7 @@ ms.locfileid: "61673729"
 
 |屬性|描述|
 |---------------|-----------------|
-|filemappingsize|必要屬性。<br /><br /> 指定的大小，以位元組為單位，效能計數器所共用之全域記憶體。 預設值為 524288。|
+|filemappingsize|必要屬性。<br /><br /> 指定效能計數器共用的全域記憶體大小（以位元組為單位）。 預設值為 524288。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -52,11 +52,11 @@ ms.locfileid: "61673729"
 
 ## <a name="remarks"></a>備註
 
-效能計數器會使用記憶體對應檔案或共用的記憶體，來發行效能資料。  共用記憶體的大小會決定可以一次使用多少個執行個體。  有兩種類型的共用記憶體： 全域共用記憶體和不同的共用的記憶體。  1.0 或 1.1 版的.NET Framework 版本與安裝的所有效能計數器分類會都使用全域共用的記憶體。  安裝.NET framework 2.0 版的效能計數器類別會使用不同的共用的記憶體，與每個效能計數器分類都有它自己的記憶體。
+效能計數器會使用記憶體對應檔案或共用記憶體來發行效能資料。  共用記憶體的大小會決定一次可以使用多少個實例。  共用記憶體有兩種類型：全域共用記憶體和個別的共用記憶體。  與 .NET Framework 版本1.0 或1.1 一起安裝的所有效能計數器類別都會使用全域共用記憶體。  隨 .NET Framework 版本2.0 安裝的效能計數器類別會使用不同的共用記憶體，每個效能計數器類別都有自己的記憶體。
 
-僅使用組態檔，可以設定全域共用記憶體的大小。  預設大小為 524288 個位元組，大小上限是 33,554,432 位元組為單位，最小大小為 32768 個位元組。  因為所有的處理程序與類別共用通用的共用的記憶體，第一次的建立者指定的大小。  如果您在應用程式組態檔中定義的大小，是只會使用該大小，您的應用程式是否會導致要執行的效能計數器的第一個應用程式。  因此正確的位置來指定`filemappingsize`值是在 Machine.config 檔案。  無法釋放中全域共用記憶體的記憶體，由個別的效能計數器，因此最後還是全域共用的記憶體用完，如果會建立大量的效能計數器執行個體，以不同的名稱。
+全域共用記憶體的大小只能使用設定檔來設定。  預設大小為 524288 byes，大小上限為33554432個位元組，而最小大小為32768個位元組。  由於全域共用記憶體是由所有進程和類別共用，因此第一個建立者會指定大小。  如果您在應用程式佈建檔中定義大小，只有在您的應用程式是導致效能計數器執行的第一個應用程式時，才會使用該大小。  因此，指定 `filemappingsize` 值的正確位置是 Machine.config 檔案。  個別效能計數器無法釋放全域共用記憶體中的記憶體，因此，如果建立了大量具有不同名稱的效能計數器實例，最後就會耗盡全域共用記憶體。
 
-針對不同的共用記憶體的大小，在登錄中的 DWORD FileMappingSize 值索引鍵 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<類別名稱 >* \Performance 參考首先，後面接著全域共用記憶體的組態檔中指定的值。 如果 FileMappingSize 值不存在，則不同的共用的記憶體大小設定為其中一個第四個 (1/4) 組態檔中的全域設定。
+針對個別共用記憶體的大小，會先參考登錄機碼 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services @ no__t-0 *\<category name >* \Performance 中的 DWORD FileMappingSize 值，後面接著值針對設定檔中的全域共用記憶體指定。 如果 FileMappingSize 值不存在，則個別的共用記憶體大小會設定為設定檔中的全域設定的第四個（1/4）。
 
 ## <a name="see-also"></a>另請參閱
 

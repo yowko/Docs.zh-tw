@@ -1,17 +1,17 @@
 ---
-title: 如何：使用當地語系化的例外狀況訊息建立使用者定義的例外狀況
+title: 如何：使用當地語系化例外狀況訊息來建立使用者定義的例外狀況
 description: 瞭解如何使用當地語系化的例外狀況訊息來建立使用者定義的例外狀況
 author: Youssef1313
 ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: 1e5ef5658e4cb71d0689a1786494eaec57d4e7fb
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332988"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696708"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>如何：使用當地語系化的例外狀況訊息建立使用者定義的例外狀況
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>如何：使用當地語系化例外狀況訊息來建立使用者定義的例外狀況
 
 在本文中，您將瞭解如何使用附屬元件，建立繼承自基底 @no__t 0 類別的使用者自訂例外狀況和當地語系化的例外狀況訊息。
 
@@ -77,16 +77,22 @@ ms.locfileid: "71332988"
 throw new StudentNotFoundException("The student cannot be found.", "John");
 ```
 
-前一行的問題是「找不到學生」。 只是常數位串。 在當地語系化的應用程式中，您想要根據使用者文化特性來擁有不同的訊息。
+前一行的問題在於，`"The student cannot be found."` 只是一個常數位串。 在當地語系化的應用程式中，您想要根據使用者文化特性來擁有不同的訊息。
 [附屬元件](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)是執行這項操作的好方法。 附屬元件是包含特定語言之資源的 .dll。 當您在執行時間要求特定資源時，CLR 會根據使用者文化特性來尋找該資源。 如果找不到該文化特性的附屬元件，則會使用預設文化特性的資源。
 
 若要建立當地語系化的例外狀況訊息：
 
 1. 建立名為*Resources*的新資料夾來存放資源檔。
-1. 在其中加入新的資源檔。 若要在 Visual Studio 中這樣做，請在**方案總管**的資料夾上按一下滑鼠右鍵，**然後選取 [新增 @no__t**-2**新專案**]  ->  個 [**資源檔**]。 將檔案命名為*ExceptionMessages .resx*。 這是預設的資源檔。
-1. 新增例外狀況訊息的名稱/值組，如下圖所示：@no__t 0Add 資源至預設文化特性 @ no__t-1
+1. 在其中加入新的資源檔。 若要在 Visual Studio 中這樣做，請在**方案總管**的資料夾上按一下滑鼠右鍵，**然後選取 [新增 @no__t**-2**新專案**]  >  個 [**資源檔**]。 將檔案命名為*ExceptionMessages .resx*。 這是預設的資源檔。
+1. 新增例外狀況訊息的名稱/值組，如下圖所示：
+
+   ![將資源新增至預設文化特性](media/add-resources-to-default-culture.jpg)
+
 1. 新增法文的新資源檔。 將它命名*為 ExceptionMessages.fr-fr .resx*。
-1. 再次新增例外狀況訊息的名稱/值組，但使用法文值：將資源 @no__t 0Add 到 fr-fr 文化特性 @ no__t-1
+1. 再次新增例外狀況訊息的名稱/值組，但使用法文值：
+
+   ![將資源新增至 fr-fr 文化特性](media/add-resources-to-fr-culture.jpg)
+
 1. 在您建立專案之後，組建輸出檔案夾應該包含*fr-fr*資料夾，其為 *.dll*檔案，也就是附屬元件。
 1. 您會擲回例外狀況，其程式碼如下所示：
 

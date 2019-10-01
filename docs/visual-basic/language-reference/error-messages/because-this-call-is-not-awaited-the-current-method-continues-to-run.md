@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: c4704fb09e9519c14f29365b2cf7f536bbbc5dca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ceebc3af01c13474affa6e728c49d6d246eb331
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619554"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701191"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前方法
 因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前的方法。 請考慮將 'Await' 運算子套用至呼叫的結果。  
@@ -25,7 +25,7 @@ ms.locfileid: "64619554"
   
  根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID:** BC42358  
+ **錯誤識別碼：** BC42358  
   
 ### <a name="to-address-this-warning"></a>解決這個警告  
   
@@ -83,7 +83,7 @@ ms.locfileid: "64619554"
   
      在此範例中，如果您選擇呼叫 #1 或呼叫 #2，則未等候的非同步方法 (`CalledMethodAsync`) 會在其呼叫端 (`CallingMethodAsync`) 和呼叫端的呼叫端 (`StartButton_Click`) 都完成之後才完成。 下列輸出的最後一行將顯示被呼叫的方法完成的時間。 輸入中會標記在完整範例中進入和結束呼叫 `CallingMethodAsync` 的事件處理常式。  
   
-    ```  
+    ```console  
     Entering the Click event handler.  
       Entering calling method.  
         Entering called method, starting and awaiting Task.Delay.  

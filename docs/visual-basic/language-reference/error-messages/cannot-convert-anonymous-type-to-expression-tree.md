@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-ms.openlocfilehash: 045061f403b301d460bc85d161c1d6dee9c7d9f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba14c0cd8781b8771ac8b746e3efec29a457294a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602395"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701182"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>無法將匿名類型轉換為運算式樹狀架構，因為該類型含有的欄位是用來初始化其他欄位
-匿名類型的一個屬性用來初始化匿名類型的另一個屬性時，編譯器不接受匿名轉換為運算式樹狀架構。 例如，在下列程式碼中，`Prop1`宣告的初始化清單中，然後再做為初始值`Prop2`。  
+當匿名型別的一個屬性用來初始化匿名型別的另一個屬性時，編譯器不接受匿名轉換成運算式樹狀架構。 例如，在下列程式碼中，`Prop1` 會在初始化清單中宣告，然後用來做為 `Prop2` 的初始值。  
   
 ```vb  
 Module M2  
@@ -31,13 +31,13 @@ Module M2
 End Module  
 ```  
   
- **錯誤 ID:** BC36548  
+ **錯誤識別碼：** BC36548  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 將指定的初始值`Prop1`給區域變數。 將該變數指派給兩者`Prop1`和`Prop2`，如下列程式碼所示。  
+- 將 `Prop1` 的初始值指派給本機變數。 將該變數指派給 `Prop1` 和 `Prop2`，如下列程式碼所示。  
   
-    ```  
+    ```vb  
     Sub Main()  
   
         Dim temp = 2  
@@ -48,6 +48,6 @@ End Module
   
 ## <a name="see-also"></a>另請參閱
 
-- [匿名類型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [匿名型別（Visual Basic）](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [運算式樹狀結構 (Visual Basic)](../../programming-guide/concepts/expression-trees/index.md)
-- [如何：使用運算式樹狀架構建置動態查詢 (Visual Basic)](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)
+- [如何：使用運算式樹狀架構建立動態查詢（Visual Basic） ](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)

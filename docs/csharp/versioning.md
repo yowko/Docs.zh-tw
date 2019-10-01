@@ -3,12 +3,12 @@ title: C# 版本控制 - C# 手冊
 description: 了解 C# 和 .NET 的版本控制運作方式
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4c0d5b5c2ac40cb27c90b4908623dc75b26a80cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926587"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699927"
 ---
 # <a name="versioning-in-c"></a>C\# 中的版本控制
 
@@ -25,9 +25,9 @@ ms.locfileid: "70926587"
 
 SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
-* 當您進行不相容的 API 變更時會遞增 `MAJOR`
-* 當您以回溯相容方式新增功能時會遞增 `MINOR`
-* 當您進行回溯相容的 Bug 修正時會遞增 `PATCH`
+- 當您進行不相容的 API 變更時會遞增 `MAJOR`
+- 當您以回溯相容方式新增功能時會遞增 `MINOR`
+- 當您進行回溯相容的 Bug 修正時會遞增 `PATCH`
 
 將版本資訊套用至您的 .NET 文件庫時，還有其他方式可以指定其他狀況，例如發行前版本等等。
 
@@ -38,31 +38,31 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 以下是嘗試維持與舊版文件庫的相容性時要考慮的一些事項︰
 
-* 虛擬方法：當您在新版本中將虛擬方法變成非虛擬，表示必須更新覆寫該方法的專案。 這是一項極重大的變更，強烈建議您不要這麼做。
-* 方法簽章：更新方法行為時也會要求您變更其簽章，您應該改建立多載，讓呼叫該方法的程式碼仍然可以運作。
+- 虛擬方法：當您在新版本中將虛擬方法變成非虛擬，表示必須更新覆寫該方法的專案。 這是一項極重大的變更，強烈建議您不要這麼做。
+- 方法簽章：更新方法行為時，如果您也需要變更其簽章，您應該改為建立多載，讓呼叫該方法的程式碼仍然可以運作。
 您可以一直使用舊的方法簽章呼叫新方法簽章，讓實作保持一致。
-* [Obsolete 屬性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)：您可以在程式碼中使用這個屬性，指定未來版本中要淘汰及可能移除的類別或類別成員。 這可確保使用您文件庫的開發人員在面對重大變更時有更完善的準備。
-* 選擇性方法引數：當您將先前的選擇性方法引數變為強制，或是變更其預設值後，所有不提供這些引數的程式碼都需要更新。
+- [Obsolete 屬性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)：您可以在程式碼中使用這個屬性，指定未來版本中要淘汰及可能移除的類別或類別成員。 這可確保使用您文件庫的開發人員在面對重大變更時有更完善的準備。
+- 選擇性方法引數：當您將先前的選擇性方法引數變為強制，或是變更其預設值後，所有不提供這些引數的程式碼都需要更新。
 
 > [!NOTE]
-> 將強制引數變成選擇性應該沒什麼效果，特別是如果它不變更方法行為時。
+> 將強制引數設為選擇性的效果，特別是當它不會變更方法的行為時。
 
 使用者升級至新版文件庫的過程愈簡單，他們就愈可能快速升級。
 
 ### <a name="application-configuration-file"></a>應用程式組態檔
 
 身為 .NET 開發人員，您在大多數的專案類型中，有很大的機會遇到[`app.config` 檔案](../framework/configure-apps/file-schema/index.md)。
-這個簡單的組態檔要很長時間才能改善推出新的更新。 文件庫的設計通常應該是將可能定期變更的資訊儲存在 `app.config` 檔案中，因此當這類資訊更新時，只要將舊版的組態檔替換成新版即可，不需要重新編譯文件庫。
+這個簡單的組態檔要很長時間才能改善推出新的更新。 一般來說，您應該以這種方式設計程式庫，讓可能定期變更的資訊儲存在 @no__t 0 檔案中，如此一來，當更新這類資訊時，較舊版本的設定檔就必須以新的檔案取代，而不需要需要重新編譯程式庫。
 
 ## <a name="consuming-libraries"></a>使用文件庫
 
 身為使用其他開發人員所組建的 .NET 文件庫的開發人員，您很清楚新版文件庫可能無法與您的專案完全相容，而您可能必須經常更新自己的程式碼，才能使用這些變更。
 
-幸而 C# 和 .NET 生態系統隨附的功能和技巧讓我們能輕鬆更新應用程式，使用可能會推出重大變更的新版文件庫。
+幸運的是， C# .net 生態系統提供了一些功能和技術，可讓我們輕鬆更新應用程式，以使用可能會造成重大變更的新程式庫版本。
 
 ### <a name="assembly-binding-redirection"></a>組件繫結重新導向
 
-您可以使用 `app.config` 檔案更新應用程式使用的文件庫版本。 新增所謂的[繫結重新導向](../framework/configure-apps/redirect-assembly-versions.md)，您可以使用新的文件庫版本，而不必重新編譯應用程式。 下例示範如何更新應用程式的 `app.config` 檔案，使用 `ReferencedLibrary` 的 `1.0.1` 修補版本，不使用原先編譯的 `1.0.0` 版。
+您可以*使用 app.config 檔案*來更新應用程式使用的程式庫版本。 藉由新增所謂的系結重新[*導向*](../framework/configure-apps/redirect-assembly-versions.md)，您可以使用新的程式庫版本，而不需要重新編譯應用程式。 下列範例會示範如何更新應用*程式的 app.config*檔案，以使用 `ReferencedLibrary` 的 @no__t 1 修補程式版本，而不是原本用來編譯的 `1.0.0` 版。
 
 ```xml
 <dependentAssembly>
@@ -81,11 +81,11 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 請使用以下範例：
 
-[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
 
 **輸出**
 
-```
+```console
 A base method
 A derived method
 ```
@@ -103,7 +103,7 @@ A derived method
 
 **輸出**
 
-```
+```console
 Base Method One: Method One
 Derived Method One: Derived Method One
 ```

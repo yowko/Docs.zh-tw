@@ -4,12 +4,12 @@ description: 協助想要同時針對 .NET Framework 及 .NET Core 編譯解決�
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
-ms.translationtype: HT
+ms.openlocfilehash: 1e120e1aee60e88ea33a8290f3bf36eb93bfc91c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186061"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698940"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>組織專案以同時支援 .NET Framework 及 .NET Core
 
@@ -69,4 +69,4 @@ ms.locfileid: "58186061"
 
 ## <a name="see-also"></a>另請參閱
 
-如需移轉至 .NET Core 的詳細指導，請參閱 [.NET Core 移植文件](index.md)。
+- [.NET Core 移植檔](index.md)

@@ -1,5 +1,5 @@
 ---
-title: <clear><listeners> For 的元素<source>
+title: 適用于 <source> <listeners> 的 <clear> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05c20040ef59f4dee6b15bbe0b0369281b532754
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920538"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697197"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<針對來源 > 的\<接聽程式\<> 清除 > 元素
+# <a name="clear-element-for-listeners-for-source"></a>\<source 的 \<listeners > 的 @no__t 0clear > 元素 >
 清除追蹤來源的 `Listeners` 集合。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<來源 >  
-\<來源 >  
-\<接聽程式 >  
-\<清除 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,13 +50,13 @@ ms.locfileid: "69920538"
 |`listeners`|指定收集、儲存及路由傳送訊息的接聽程式。|  
   
 ## <a name="remarks"></a>備註  
- 元素會從集合中移除<xref:System.Diagnostics.DefaultTraceListener>追蹤來源的所有接聽程式, 包括。 `Listeners` `<clear>` `<clear>` 在`<add>`使用專案之前, 您可以使用專案, 以確保集合中沒有其他作用中的接聽程式。  
+ @No__t-0 元素會從追蹤來源的 `Listeners` 集合中移除所有接聽程式，包括 <xref:System.Diagnostics.DefaultTraceListener>。 您可以使用 `<clear>` 元素，然後再使用 `<add>` 元素，以確定集合中沒有其他作用中的接聽程式。  
   
 ## <a name="configuration-file"></a>組態檔  
- 此元素可用於電腦設定檔 (Machine.config) 和應用程式佈建檔。  
+ 此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示`<clear>`如何使用專案, 然後`<add>`使用專案將接聽程式`console`和`textListener`加入至追蹤來源`TraceSourceApp`的`Listeners`集合。  
+ 下列範例示範如何使用 `<clear>` 專案，然後再使用 `<add>` 元素，將接聽程式 `console` 和 `textListener` 新增至追蹤來源 `TraceSourceApp` 的 `Listeners` 集合。  
   
 ```xml  
 <configuration>  

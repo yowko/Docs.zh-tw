@@ -1,5 +1,5 @@
 ---
-title: <add><listeners> For 的元素<trace>
+title: 適用于 <trace> <listeners> 的 <add> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: d4ff919991ab1505b2845a225706d32cc1e57d0a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d89a77107e7aff65b007a69c23af34771146570c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920575"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697341"
 ---
-# <a name="add-element-for-listeners-for-trace"></a>\<為追蹤 > 的\< \<接聽程式 > 加入 > 元素
-將接聽程式加入至接聽程式集合。  
+# <a name="add-element-for-listeners-for-trace"></a>\<trace 的 \<listeners > 的 @no__t 0add > 元素 >
+將接聽程式加入至接聽**程式集合。**  
   
- \<configuration>  
-\<system.diagnostics>  
-\<trace>  
-\<接聽程式 >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,9 +45,9 @@ ms.locfileid: "69920575"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<filter>](filter-element-for-add-for-listeners-for-trace.md)|將篩選加入至追蹤之`Listeners`集合中的接聽程式。|  
+|[\<filter>](filter-element-for-add-for-listeners-for-trace.md)|將篩選加入至追蹤之 `Listeners` 集合中的接聽程式。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -59,31 +59,31 @@ ms.locfileid: "69920575"
 |`trace`|包含用於收集、儲存及路由傳送追蹤訊息的接聽項。|  
   
 ## <a name="remarks"></a>備註  
- 和類別會共用相同的接聽程式集合。 <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> 如果您將接聽程式物件加入其中一個類別中的集合, 另一個類別會使用相同的接聽程式。 接聽程式類別衍生自<xref:System.Diagnostics.TraceListener>。  
+ @No__t-0 和 @no__t 1 類別**共用相同的**接聽程式集合。 如果您將接聽程式物件加入其中一個類別中的集合，另一個類別會使用相同的接聽程式。 接聽程式類別衍生自 <xref:System.Diagnostics.TraceListener>。  
   
- 如果您沒有指定`name`追蹤接聽項的屬性<xref:System.Diagnostics.TraceListener.Name%2A> , 追蹤接聽程式的會預設為空字串 ("")。 如果您的應用程式只有一個接聽程式, 您可以在不指定名稱的情況下新增它, 並藉由指定名稱的空字串將它移除。 不過, 如果您的應用程式有多個接聽程式, 您應該為每個追蹤接聽項指定唯一的名稱, 讓您識別及管理和<xref:System.Diagnostics.Debug.Listeners%2A> <xref:System.Diagnostics.Trace.Listeners%2A>集合內的個別追蹤接聽程式。  
+ 如果您未指定追蹤接聽項的 `name` 屬性，追蹤接聽項的 <xref:System.Diagnostics.TraceListener.Name%2A> 會預設為空字串（""）。 如果您的應用程式只有一個接聽程式，您可以在不指定名稱的情況下新增它，並藉由指定名稱的空字串將它移除。 不過，如果您的應用程式有多個接聽程式，您應該為每個追蹤接聽項指定唯一的名稱，讓您識別和管理 <xref:System.Diagnostics.Debug.Listeners%2A> 和 @no__t 1 集合中的個別追蹤接聽程式。  
   
 > [!NOTE]
-> 加入多個相同類型且具有相同名稱的追蹤接聽程式, 只會導致該類型和名稱的一個追蹤接聽項加入至`Listeners`集合。 不過, 您可以透過程式設計的方式, 將`Listeners`多個相同的接聽程式加入至集合。  
+> 加入多個相同類型且具有相同名稱的追蹤接聽程式，只會使該類型和名稱的一個追蹤接聽程式新增至 `Listeners` 集合。 不過，您可以透過程式設計的方式，將多個相同的接聽項新增至 `Listeners` 集合。  
   
  **InitializeData**屬性的值取決於您所建立的接聽程式類型。 並非所有的追蹤接聽程式都需要您指定**initializeData**。  
   
 > [!NOTE]
-> 當您使用`initializeData`屬性時, 您可能會收到編譯器警告: 「' initializeData ' 屬性未宣告」。 之所以會發生這個警告, 是因為系統會針對抽象基類驗證<xref:System.Diagnostics.TraceListener>設定值, 而該類別`initializeData`無法辨識屬性。 一般來說, 您可以忽略具有接受參數之函式的追蹤接聽程式執行的這個警告。  
+> 當您使用 `initializeData` 屬性時，您可能會收到編譯器警告：「' initializeData ' 屬性未宣告」。 之所以會發生這個警告，是因為根據抽象基類驗證設定值 <xref:System.Diagnostics.TraceListener>，這不會辨識 `initializeData` 屬性。 一般來說，您可以忽略具有接受參數之函式的追蹤接聽程式執行的這個警告。  
   
- 下表顯示 .NET Framework 隨附的追蹤接聽項, 並描述其**initializeData**屬性的值。  
+ 下表顯示 .NET Framework 隨附的追蹤接聽項，並描述其**initializeData**屬性的值。  
   
 |追蹤接聽程式類別|initializeData 屬性值|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|`useErrorStream` 此<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>函式的值。  將屬性設定為 "`true`", 以將追蹤和調試輸出寫入至<xref:System.Console.Error%2A?displayProperty=nameWithType>; `initializeData``false`要<xref:System.Console.Out%2A?displayProperty=nameWithType>寫入的 ""。|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|寫入的<xref:System.Diagnostics.DelimitedListTraceListener>檔案名。|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|@No__t-1 的函式的 `useErrorStream` 值。  將 `initializeData` 屬性設定為 "`true`"，以將追蹤和 debug 輸出寫入至 <xref:System.Console.Error%2A?displayProperty=nameWithType>;"`false`" 以寫入 <xref:System.Console.Out%2A?displayProperty=nameWithType>。|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|@No__t 0 寫入的檔案名。|  
 |<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|現有事件記錄檔來源的名稱。|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|寫入的<xref:System.Diagnostics.EventSchemaTraceListener>檔案名。|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|寫入的<xref:System.Diagnostics.TextWriterTraceListener>檔案名。|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|寫入的<xref:System.Diagnostics.XmlWriterTraceListener>檔案名。|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|@No__t-0 寫入的檔案名。|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|@No__t-0 寫入的檔案名。|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|@No__t-0 寫入的檔案名。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<新增>** 加入接聽程式的項目`MyListener`並`MyEventListener`來**接聽程式**集合。 `MyListener`建立名`MyListener.log`為的檔案, 並將輸出寫入檔案。 `MyEventListener`在事件記錄檔中建立專案。  
+ 下列範例示範如何使用 **\<新增>** 加入接聽程式的項目`MyListener`並`MyEventListener`來**接聽程式**集合。 `MyListener` 會建立名為 `MyListener.log` 的檔案，並將輸出寫入檔案。 `MyEventListener` 會在事件記錄檔中建立專案。  
   
 ```xml  
 <configuration>  

@@ -17,22 +17,26 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: eb34b34986613f36b624c43c04f98390ffba4fe0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5f6b6b67e2999d380cfca078a43162b3e1db2206
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965857"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701294"
 ---
 # <a name="--operator-visual-basic"></a>- 運算子 (Visual Basic)
 傳回兩個數值運算式之間的差異，或數值運算式的負數值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-      expression1 – expression2  
-- or -  
-– expression1  
+```vb  
+expression1 – expression2
+```
+  
+或
+
+```vb  
+–expression1  
 ```  
   
 ## <a name="parts"></a>組件  
@@ -51,21 +55,21 @@ ms.locfileid: "69965857"
  所有數值類型。 這包括不帶正負號的和浮點類型`Decimal`，以及。  
   
 ## <a name="remarks"></a>備註  
- 在先前所示的語法中，第一次使用`–`時，運算子是*二元*算術減法運算子，用於兩個數值運算式之間的差異。  
+ 在先前所示的語法中，第一次使用時，`–` 運算子是*二元*算術減法運算子，用於兩個數值運算式之間的差異。  
   
- 在先前顯示的語法中，第二個使用方式`–`中，運算子是運算式之負值的*一元*負運算子。 就這一點而言，否定是由反轉的正負號`expression1`所組成，因此如果`expression1`為負數，則結果為正數。  
+ 在先前所示語法中所顯示的第二個使用方式中，`–` 運算子是運算式負數值的*一元*否定運算子。 就這一點而言，否定是由反轉的正負號`expression1`所組成，因此如果`expression1`為負數，則結果為正數。  
   
  如果任一運算式評估為[不是任何值](../../../visual-basic/language-reference/nothing.md)，則 `–`運算子會將它視為零。  
   
 > [!NOTE]
-> 運算子可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 `–` 如果您的程式碼在這類類別或結構上使用這個運算子，請確定您瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> @No__t-0 運算子可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 如果您的程式碼在這類類別或結構上使用這個運算子，請確定您瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會使用`–`運算子來計算並傳回兩個數字之間的差異，然後再將數位否定。  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- 執行這些語句之後， `binaryResult`會包含124.45 和`unaryResult` contains –334.90。  
+ 執行這些語句之後，`binaryResult` 包含124.45，而 `unaryResult` 包含–334.90。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: bd746f07b4c4eb08bf34b01d555b5799d9af0cf3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1dda43be8c0e0c94bdf7b57b67aa4d403b547f97
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927469"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699548"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist > 元素 (網路設定)
-提供一組正則運算式, 描述不使用 proxy 的位址。  
+# <a name="bypasslist-element-network-settings"></a>@no__t 0bypasslist > 元素（網路設定）
+提供一組正則運算式，描述不使用 proxy 的位址。  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<bypasslist >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,11 +51,11 @@ ms.locfileid: "69927469"
 |[defaultProxy](defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
   
 ## <a name="remarks"></a>備註  
- 「略過清單」包含正則運算式, <xref:System.Net.WebRequest>可描述實例直接存取而不是透過 proxy 伺服器存取的 uri。  
+ 「略過清單」包含正則運算式，其描述的 Uri 是 @no__t 0 實例直接存取，而不是透過 proxy 伺服器。  
   
- 為此元素指定正則運算式時, 請務必小心。 正則運算式 "[a-z] +\\. contoso\\.com" 符合 contoso.com 網域中的任何主機, 但也符合 contoso.com.cpandl.com 網域中的任何主機。 若只要比對 contoso.com 網域中的主機, 請使用錨點 ("$"): "[a-z] +\\. contoso\\.com $"。  
+ 為此元素指定正則運算式時，請務必小心。 正則運算式 "[a-z] + \\.contoso\\.com" 會符合 contoso.com 網域中的任何主機，但它也會符合 contoso.com.cpandl.com 網域中的任何主機。 若只要比對 contoso.com 網域中的主機，請使用錨點（"$"）： "[a-z] + \\.contoso\\.com $"。  
   
- 如需正則運算式的詳細資訊, 請參閱。[.NET Framework 正則運算式](../../../../standard/base-types/regular-expressions.md)。  
+ 如需正則運算式的詳細資訊，請參閱。[.NET Framework 正則運算式](../../../../standard/base-types/regular-expressions.md)。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: a6a40d97bf16a3125452311e7762617e657ca384
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 95ad1880cbb832a17311e7e63e9203f53257f65f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659150"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697707"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 元素 (網路設定)
+# <a name="servicepointmanager-element-network-settings"></a>@no__t 0servicePointManager > 元素（網路設定）
 設定網路資源的連接。  
   
- \<configuration>  
-\<system.net>  
-\<設定 >  
-\<servicePointManager>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<servicePointManager >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ ms.locfileid: "69659150"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|指定系統是否應該先確認憑證上的名稱符合伺服器主機名稱, 然後再使用憑證。 預設值為 `true`。|  
-|`checkCertificateRevocationList`|指定系統是否應該先檢查憑證是否已被撤銷, 再使用憑證。 預設值為 `false`。|  
-|`dnsRefreshTimeout`|指定功能變數名稱服務 (DNS) 解析與 DNS 迴圈配置資源選項的快取時間長度 (以毫秒為單位)。 預設值為 120,000 毫秒 (兩分鐘)。|  
-|`enableDnsRoundRobin`|指定具有多個網際網路通訊協定 (IP) 位址之主機名稱的 DNS 解析是否會傳回所有位址, 或只傳回第一個位址。 預設值為 `false`。|  
-|`encryptionPolicy`|指定套用至<xref:System.Net.ServicePointManager>實例上 SSL/TLS 會話的加密原則。 可能的值相當於<xref:System.Net.Security.EncryptionPolicy>列舉的值。 當加密原則<xref:System.Security.Authentication.CipherAlgorithmType.Null>設定為`NoEncryption`時, 需要使用。 預設值為 `RequireEncryption`。|  
-|`expect100Continue`|指定 POST 方法是否預期會收到`100-continue`伺服器的回應。 預設值為 `true`。|  
+|`checkCertificateName`|指定系統是否應該先確認憑證上的名稱符合伺服器主機名稱，然後再使用憑證。 預設值為 `true`。|  
+|`checkCertificateRevocationList`|指定系統是否應該先檢查憑證是否已被撤銷，再使用憑證。 預設值為 `false`。|  
+|`dnsRefreshTimeout`|指定功能變數名稱服務（DNS）解析與 DNS 迴圈配置資源選項的快取時間長度（以毫秒為單位）。 預設值為 120,000 毫秒 (兩分鐘)。|  
+|`enableDnsRoundRobin`|指定具有多個網際網路通訊協定（IP）位址之主機名稱的 DNS 解析是否會傳回所有位址，或只傳回第一個位址。 預設值為 `false`。|  
+|`encryptionPolicy`|指定套用至 @no__t 0 實例上 SSL/TLS 會話的加密原則。 可能的值相當於 <xref:System.Net.Security.EncryptionPolicy> 列舉的值。 當加密原則設定為 `NoEncryption` 時，需要使用 <xref:System.Security.Authentication.CipherAlgorithmType.Null>。 預設值為 `RequireEncryption`。|  
+|`expect100Continue`|指定 POST 方法是否預期會收到來自伺服器的 @no__t 0 回應。 預設值為 `true`。|  
 |`useNagleAlgorithm`|指定服務點管理員所控制的連接是否使用 Nagle 演算法。 預設值為 `true`。|  
   
 ### <a name="child-elements"></a>子元素  

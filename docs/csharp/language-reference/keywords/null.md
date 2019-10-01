@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 34157b19e342d4e10ac652aaf46c7186c4a19358
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 74d13de78369b13fbf970dce9a3ef5ae7cbaac7f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353432"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698874"
 ---
 # <a name="null-c-reference"></a>null (C# 參考)
 
@@ -29,7 +29,7 @@ ms.locfileid: "71353432"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../language-reference/index.md)
+- [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
 - [預設值表](default-values-table.md)
 - [無（Visual Basic）](../../../visual-basic/language-reference/nothing.md)

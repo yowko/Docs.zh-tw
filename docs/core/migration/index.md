@@ -3,53 +3,50 @@ title: 從 project.json 進行的 .NET Core 移轉
 description: 了解如何使用 project.json 來移轉舊版 .NET Core 專案
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 6334f06a998054cfaf766654dda59d87f5d23ed8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 167f0707bbaf34ce12a1c56ee2320e7cc4f48bd3
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105299"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698923"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>從 project.json 移轉 .NET Core 專案
 
-本文將討論 .NET Core 專案的移轉案例，並將介紹下列三種移轉案例：
+本檔涵蓋下列三種 .NET Core 專案的遷移案例：
 
 1. [從 *project.json* 的有效最新結構描述移轉至 *csproj*](#migration-from-projectjson-to-csproj)
 2. [從 DNX 移轉至 csproj](#migration-from-dnx-to-csproj)
 3. [從 RC3 和舊版 .NET Core csproj 專案移轉至最終格式](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
 
-此文件只適用於仍使用 project.json 的舊版 .NET Core 專案。 它不適用於從 .NET Framework 移轉到 .NET Core。
+本檔僅適用于使用 project. json 的舊版 .NET Core 專案。 不適用從 .NET Framework 遷移至 .NET Core。
 
 ## <a name="migration-from-projectjson-to-csproj"></a>從 project.json 移轉至 csproj
 
 您可以使用下列其中一種方法從 *project.json* 移轉至 *.csproj*：
 
-- [Visual Studio 2017](#visual-studio-2017)
+- [Visual Studio](#visual-studio)
 - [dotnet migrate 命令列工具](#dotnet-migrate)
 
-這兩種方法使用相同的基礎引擎來移轉專案，因此結果會相同。 在大部分情況下，您只需要使用這兩種方式之一即可將 *project.json* 移轉至 *csproj*，而不需要進一步手動編輯專案檔。 所產生的 *.csproj* 檔案將會以包含目錄的相同名稱命名。
+這兩種方法使用相同的基礎引擎來移轉專案，因此結果會相同。 在大部分情況下，使用這兩種方式之一來遷移*專案。 json*到 *.csproj*是唯一需要的專案，不需要進一步手動編輯專案檔。 所產生的 *.csproj* 檔案將會以包含目錄的相同名稱命名。
 
-### <a name="visual-studio-2017"></a>Visual Studio 2017
+### <a name="visual-studio"></a>Visual Studio
 
-當您開啟 *.xproj* 檔或參考 *.xproj* 檔的方案檔時，[單向升級]  對話方塊會隨即出現。 此對話方塊會顯示要移轉的專案。
-如果您開啟方案檔，則會列出方案檔中指定的所有專案。 檢閱要移轉的專案清單，然後選取 [確定]  。
+當您開啟*xproj*檔案或參考*xproj*檔案的方案檔（在 Visual Studio 2017 或 Visual Studio 2019 16.2 和更早版本中）時，會出現 [**單向升級**] 對話方塊。 此對話方塊會顯示要移轉的專案。 如果您開啟方案檔，則會列出方案檔中指定的所有專案。 檢閱要移轉的專案清單，然後選取 [確定]。
 
 ![[單向升級] 對話方塊顯示要移轉的專案清單](media/one-way-upgrade.jpg)
 
-Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您未選擇所有專案，則會出現相同的對話方塊，請您升級該方案中的其餘專案。 移轉專案之後，您可以用滑鼠右鍵按一下方案總管  視窗中的專案，然後選取 [編輯\<專案名稱>.csproj]  來查看及修改其內容。
+Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您未選擇 [所有專案]，則會出現相同的對話方塊，要求您從該方案升級其餘專案。 移轉專案之後，您可以用滑鼠右鍵按一下方案總管視窗中的專案，然後選取 [編輯\<專案名稱>.csproj] 來查看及修改其內容。
 
-已移轉的檔案 (*project.json*、*global.json*、 *.xproj* 和方案檔) 將會移至「備份」  資料夾。 移轉的方案檔將會升級為 Visual Studio 2017，您將無法在舊版 Visual Studio 中開啟該方案檔。
-此外，也會儲存並自動開啟名為 *UpgradeLog.htm* 的檔案，其中包含移轉報告。
+已遷移的檔案（*專案. json*、 *global.asax*、 *xproj*和方案檔）會移至*備份*資料夾。 遷移的方案檔會升級為 Visual Studio 2017 或 Visual Studio 2019，而且您將無法在 Visual Studio 2015 或更早版本中開啟該方案檔。 系統也會自動儲存並開啟名為*UpgradeLog*的檔案，其中包含遷移報表。
 
 > [!IMPORTANT]
-> Visual Studio 2015 中未提供此新工具，因此您無法使用該版 Visual Studio 來移轉專案。
+> 您無法使用 Visual Studio 2015 來遷移專案。
 
 ### <a name="dotnet-migrate"></a>dotnet migrate
 
-在命令列案例中，您可以使用 [`dotnet migrate`](../tools/dotnet-migrate.md) 命令。 它將會根據找到的先後順序，依序移轉專案、方案或一組資料夾。
-當您移轉專案時，會移轉專案及其所有相依性。
+在命令列案例中，您可以使用 [`dotnet migrate`](../tools/dotnet-migrate.md) 命令。 它會根據找到的順序，遷移專案、方案或一組資料夾。 當您移轉專案時，會移轉專案及其所有相依性。
 
-已移轉的檔案 (*project.json*、*global.json* 和 *.xproj*) 將會移至「備份」  資料夾。
+已遷移的檔案（xproj）會移至*備份*資料夾中（*專案. json*、 *global.asax*和 *.* ）。
 
 > [!NOTE]
 > 如果您使用 Visual Studio Code，`dotnet migrate` 命令不會修改 Visual Studio Code 特定的檔案，例如 `tasks.json`。 這些檔案必須以手動方式變更。

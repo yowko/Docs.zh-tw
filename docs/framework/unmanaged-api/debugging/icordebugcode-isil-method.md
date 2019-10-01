@@ -17,35 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1257c870371895cec89996be0e94906597b09ed8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0a81f4a53954c559ab12e27bcf039b7b1a1804cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747461"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700787"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL 方法
-取得值，指出是否此 「 ICorDebugCode"代表已編譯的 Microsoft intermediate language (MSIL) 程式碼。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-HRESULT IsIL (  
-    [out] BOOL       *pbIL  
-);  
-```  
-  
-## <a name="parameters"></a>參數  
+
+取得值，指出這個 "ICorDebugCode" 是否代表以 Microsoft 中繼語言（MSIL）編譯的程式碼。
+
+## <a name="syntax"></a>語法
+
+```cpp
+HRESULT IsIL (
+    [out] BOOL       *pbIL
+);
+```
+
+## <a name="parameters"></a>參數
  `pbIL`  
- [out]`true`如果這個`ICorDebugCode`表示 MSIL 中編譯; 否則程式碼`false`。  
-  
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
+ [out] `true`，如果這個 `ICorDebugCode` 代表以 MSIL 編譯的程式碼，則為，否則，`false`。
+
+## <a name="requirements"></a>需求
+
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+
  **標頭：** CorDebug.idl、CorDebug.h  
-  
+
  **LIBRARY:** CorGuids.lib  
-  
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>另請參閱
+
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

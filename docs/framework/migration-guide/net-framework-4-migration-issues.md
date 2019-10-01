@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9cd2b0d426e8f31f6312a4951f94ed1c52929d9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cae4ce2e1d5cdef097f4095a7748f09b80d1acdb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789665"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699084"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 移轉問題
 
@@ -55,7 +55,7 @@ ms.locfileid: "70789665"
 | **ASP.NET 2.0 應用程式中的 HttpException 錯誤** | 在 IIS 6 上啟用 ASP.NET 4 之後，IIS 6 上執行的 ASP.NET 2.0 應用程式 (在 Windows Server 2003 或 Windows Server 2003 R2 中) 可能會產生下列這類錯誤：`System.Web.HttpException: Path '/[yourApplicationRoot]/eurl.axd/[Value]' was not found.` | * 如果不需要 ASP.NET 4 即可執行網站，請重新對應網站以改成使用 ASP.NET 2.0。<br><br>-或-<br><br>* 如果需要 ASP.NET 4 才能執行網站，請將任何子 ASP.NET 2.0 虛擬目錄移至對應至 ASP.NET 2.0 的不同網站。<br><br>-或-<br><br>* 停用無副檔名 URL。 如需詳細資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜ASP.NET 2.0 Applications Might Generate HttpException Errors That Reference eurl.axd＞(ASP.NET 2.0 應用程式可以產生可參考 eurl.axd 的 HttpException 錯誤)。 |
 | **成員資格類型** | ASP.NET 成員資格中使用的某些類型 (例如，<xref:System.Web.Security.MembershipProvider>) 已從 System.Web.dll 移至 System.Web.ApplicationServices.dll 組件。 已移動類型，以解析用戶端和擴充 .NET Framework SKU 中類型之間的架構層相依性。 | 在 ASP.NET 4 專案中使用時，可能無法編譯已從舊版 ASP.NET 升級並使用已移動之成員資格類型的類別庫。 如果是這樣，請將類別庫專案中的參考新增至 System.Web.ApplicationServices.dll。 |
 | **功能表控制項變更** | <xref:System.Web.UI.WebControls.Menu> 控制項變更會導致下列行為：<br><br>* 如果 <xref:System.Web.UI.WebControls.MenuRenderingMode> 設定為 `List`，或者 <xref:System.Web.UI.WebControls.MenuRenderingMode> 設定為 `Default` 以及 <xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion> 設定為 `4.0` 或更新版本，則 <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl> 屬性沒有作用。<br>* 如果 <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> 和 <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl> 屬性中所設定的路徑包含反斜線 (\\)，則不會轉譯映像 (在舊版 ASP.NET 中，路徑可以包含反斜線)。 | * 設定父代 <xref:System.Web.UI.WebControls.Menu> 控制項的 <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> 或 <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl>，而不是設定個別功能表項目的 <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl> 屬性。<br><br>-或-<br><br>將 <xref:System.Web.UI.WebControls.MenuRenderingMode> 設定為 `Table`，或將 <xref:System.Web.UI.WebControls.MenuRenderingMode> 設定為 `Default` 並將 <xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion> 設定為 `3.5`。 這些設定可讓 <xref:System.Web.UI.WebControls.Menu> 控制項使用舊版 ASP.NET 中所使用的 HTML 表格型配置。<br>* 如果 <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> 或 <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl> 屬性中的路徑包含反斜線 (\\)，請替代斜線字元 (/)。 |
-| **Web.config 檔案中的行動組件** | 在舊版 ASP.NET 中，System.Web.Mobile.dll 組件參考包含在 `system.web`/`compilation` 之 `assemblies` 區段的根 Web.config 檔案中。 為了改善效能，已移除此組件的參考。<br><br>注意:System.Web.Mobile.dll 組件和 ASP.NET 行動控制項包含在 ASP.NET 4 中，但已淘汰。 | 如果您想要使用此組件中的類型，請在根 Web.config 檔案或應用程式 Web.config 檔案中新增組件參考。 |
+| **Web.config 檔案中的行動組件** | 在舊版 ASP.NET 中，System.Web.Mobile.dll 組件參考包含在 `system.web`/`compilation` 之 `assemblies` 區段的根 Web.config 檔案中。 為了改善效能，已移除此組件的參考。<br><br>注意：System.Web.Mobile.dll 組件和 ASP.NET 行動控制項包含在 ASP.NET 4 中，但已淘汰。 | 如果您想要使用此組件中的類型，請在根 Web.config 檔案或應用程式 Web.config 檔案中新增組件參考。 |
 | **輸出快取** | 在 ASP.NET 1.0 中，Bug 會讓將 `Location="ServerAndClient"` 指定為輸出快取設定的已快取頁面在回應中發出 `Vary:*` HTTP 標頭。 這會影響如何告知用戶端瀏覽器永遠不要在本機快取頁面。 在 ASP.NET 1.1 中，已新增 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 方法，其呼叫目的是要隱藏 `Vary:*` 標頭。 不過，Bug 報告會指出開發人員不知道現有 `SetOmitVaryStar` 行為。<br><br>在 ASP.NET 4 中，不再從指定下列指示詞的回應中發出 `Vary:*` HTTP 標頭：<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>因此，不再需要 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 方法，即可隱藏 `Vary:*` 標頭。 在針對 `Location` 屬性指定 "ServerAndClient" 的應用程式中，將會在瀏覽器中快取頁面，而不需要您呼叫 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A>。 | 如果應用程式中的頁面必須發出 `Vary:*`，則請呼叫 <xref:System.Web.HttpResponse.AppendHeader%2A> 方法，如下列範例所示：<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>或者，您可以將輸出快取 `Location` 屬性的值變更為 "Server"。 |
 | **頁面剖析** | 在 ASP.NET 4 中，ASP.NET 網頁 (.aspx 檔案) 和使用者控制項 (.ascx 檔案) 的頁面剖析器會比舊版 ASP.NET 更為嚴格，而且標示為無效的標記數目會多於舊版本。 | 檢查頁面執行時所產生的錯誤訊息，並修正從無效標記導致的錯誤。 |
 | **Passport 類型** | 基於 Passport 中的變更，ASP.NET 2.0 內建的 Passport 支援過時且不再支援 (現在為 Live ID SDK)。 因此，現在會使用 `ObsoleteAttribute` 屬性標示 <xref:System.Web.Security> 中與 Passport 有關的類型。 | 變更在 <xref:System.Web.Security> 命名空間中使用 Passport 類型的任何程式碼 (例如，<xref:System.Web.Security.PassportIdentity>) 使用 [SDK](https://go.microsoft.com/fwlink/?LinkId=106346)。 |
@@ -65,7 +65,7 @@ ms.locfileid: "70789665"
 | **SharePoint 網站** | 如果您嘗試執行的 ASP.NET 4 網站部署為 SharePoint 網站的子系，而其包含名為 `WSS_Minimal` 的自訂部分信任層級，則會看到下列錯誤：<br><br>`Could not find permission set named 'ASP.Net'.` | 目前，沒有 SharePoint 版本與 ASP.NET 相容。 因此，您不應該嘗試將 ASP.NET 4 網站執行為 SharePoint 網站子系。 |
 | **XHTML 1.1 標準** | 若要啟用新網站的 XHTML 1.1 合規性，.NET Framework 4 中的 ASP.NET 控制項會產生符合 XHTML 1.1 標準的 HTML。 在 `<system.Web>` 項目的 Web.config 檔案中使用下列選項，以啟用這項轉譯：<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>此選項預設為 4.0。 基於相容性，從 Visual Studio 2008 升級的 Web 專案會啟用 3.5 設定。 | 無。 |
 
-## <a name="core"></a>核心
+## <a name="core"></a>Core
 
 ### <a name="general-features"></a>一般功能
 
@@ -133,7 +133,7 @@ ms.locfileid: "70789665"
 | **平台叫用** | 為了改善與 Unmanaged 程式碼之互通性的效能，平台叫用中的不正確呼叫慣例現在會讓應用程式失敗。 在舊版本中，封送處理層會解析堆疊中的這些錯誤。 | 對 Microsoft Visual Studio 中的應用程式進行偵錯將會警告您發生這些錯誤，因此您可以更正它們。<br><br>如果您有無法更新的二進位檔，則可以將 [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 項目包含在您應用程式的組態檔中，以解決舊版堆疊中的呼叫錯誤。 不過，這可能會影響應用程式的效能。 |
 | **已移除介面** (Unmanaged API) | 為了避免開發人員混淆，已移除下列介面，因為它們未提供任何有用的執行階段案例，而且 CLR 未提供或接受任何實作：<br><br>* **INativeImageINativeImageDependency**<br>* **INativeImageInstallInfo**<br>* **INativeImageEvaluate**<br>* **INativeImageConverter**<br>* **ICorModule**<br>* **IMetaDataConverter** | 無。 |
 
-## <a name="data"></a>資料
+## <a name="data"></a>Data
 
 本節描述使用資料集和 SQL 用戶端、Entity Framework、LINQ to SQL 和 WCF Data Servers (先前稱為 ADO.NET Data Services) 的移轉問題。
 
@@ -316,17 +316,9 @@ ms.locfileid: "70789665"
 
 ## <a name="see-also"></a>另請參閱
 
-### <a name="reference"></a>參考資料
-
 - [.NET Framework 4 中的新型別和成員](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
-
-### <a name="concepts"></a>概念
-
 - [.NET Framework 4 移轉手冊](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
 - [.NET Framework 4 的新功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
 - [.NET Framework 的版本相容性](version-compatibility.md)
 - [將 Office 方案移轉至 .NET Framework 4](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
-
-### <a name="other-resources"></a>其他資源
-
 - [.NET Framework 類別庫中的過時功能](../whats-new/whats-obsolete.md)

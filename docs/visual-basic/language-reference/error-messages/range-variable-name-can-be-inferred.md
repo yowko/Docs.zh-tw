@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f448f34dc5909b9128fc700abab5b4f00e911edf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934273"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701020"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>只能從不含引數的簡單或限定名稱來推斷範圍變數名稱
-LINQ 查詢中包含採用一或多個引數的程式設計項目。 編譯器無法推斷範圍變數，從該程式設計項目。  
+採用一或多個引數的程式設計項目會包含在 LINQ 查詢中。 編譯器無法從該程式設計項目推斷範圍變數。  
   
- **錯誤 ID:** BC36599  
+ **錯誤識別碼：** BC36599  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 提供明確的程式設計項目中，變數名稱，如下列程式碼所示：  
+1. 為程式設計項目提供明確的變數名稱，如下列程式碼所示：  
   
-```  
+```vb  
 Dim query = From var1 In collection1   
             Select VariableAlias= SampleFunction(var1), var1  
 ```  

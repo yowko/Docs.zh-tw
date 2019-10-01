@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
-ms.openlocfilehash: 5d58b531b670715716e849cd37227bc899195df6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de9d77aa9ea853b6f044e91878044115588ca77c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935365"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701243"
 ---
 # <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a>宣告為結構成員的陣列無法以初始大小宣告
-陣列在結構中的宣告的初始大小。 您無法初始化任何結構項目，並宣告陣列大小是一種形式的初始化。  
+結構中的陣列是以初始大小來宣告。 您無法初始化任何結構專案，而且宣告陣列大小是一種初始化形式。  
   
- **錯誤 ID:** BC31043  
+ **錯誤識別碼：** BC31043  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 定義在結構中的陣列，為動態 （沒有初始大小）。  
+1. 在您的結構中將陣列定義為動態（沒有初始大小）。  
   
-2. 如果您需要特定大小的陣列，您可以重訂維度的動態陣列[ReDim 陳述式](../../../visual-basic/language-reference/statements/redim-statement.md)執行您的程式碼時。 下列範例將說明這點。  
+2. 如果您需要特定大小的陣列，當您的程式碼執行時，可以使用[ReDim 語句](../../../visual-basic/language-reference/statements/redim-statement.md)來為動態陣列進行維數。 下列範例將說明這點。  
   
-    ```  
+    ```vb  
     Structure demoStruct  
         Public demoArray() As Integer  
     End Structure  

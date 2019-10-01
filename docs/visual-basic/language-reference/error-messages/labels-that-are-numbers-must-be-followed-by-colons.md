@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-ms.openlocfilehash: 3634ea4b97f25e41e27629c51119f2ea4df5f887
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa474aaff4b1ceaf9b80be5dbc869276a54a6e65
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589780"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700989"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>內容為數字的標籤之後必須跟隨冒號
-行號會遵循相同的規則和其他種類的標籤，也必須包含一個冒號。  
+行號會遵循與其他類型的標籤相同的規則，而且必須包含冒號。  
   
- **錯誤 ID:** BC30801  
+ **錯誤識別碼：** BC30801  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 將數字，後面接著冒號開頭的程式碼;例如：  
+- 將數位放在程式程式碼開頭，後面加上冒號;例如：  
   
-    ```  
+    ```vb  
     400:    X += 1  
     ```  
   

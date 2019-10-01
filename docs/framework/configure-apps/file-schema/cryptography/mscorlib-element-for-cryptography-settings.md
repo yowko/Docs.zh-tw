@@ -8,18 +8,18 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: c780087246ea91846896037a245b82493251e538
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921058"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699737"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<用於密碼編譯設定的 mscorlib > 元素
-包含 cryptographySettings [ >元素。\< ](cryptographysettings-element.md)  
+# <a name="mscorlib-element-for-cryptography-settings"></a>密碼編譯設定的 @no__t 0mscorlib > 元素
+包含[@no__t 1cryptographySettings 的 > 元素](cryptographysettings-element.md)。  
   
- \<configuration>  
-\<mscorlib>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<mscorlib >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ ms.locfileid: "69921058"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`cryptographySettings`|包含密碼編譯設定。|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69921058"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何使用 **\<mscorlib >** 專案來參考密碼編譯類別, 以及設定執行時間。 接著, 您可以將字串 "RSA" 傳遞給<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法, 並<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>使用方法來`MyCryptoRSAClass`傳回物件。  
+ 下列範例示範如何使用 **@no__t 1mscorlib 的 >** 專案來參考密碼編譯類別，並設定執行時間。 接著，您可以將字串 "RSA" 傳遞給 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 方法，然後使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法傳回 @no__t 2 物件。  
   
 ```xml  
 <configuration>  

@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 93d02618ff19f431b3602e74478337f6918df289
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665175"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698573"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>運算式遞迴呼叫包含的屬性 '\<屬性名稱 >'
-中的陳述式`Set`屬性定義的程序會將值儲存至屬性的名稱。  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>運算式會遞迴地呼叫包含屬性 ' @no__t 0propertyname > '
+屬性定義的 `Set` 程式中的語句會將值儲存在屬性名稱中。  
   
- 保留的屬性值的建議的方法是定義`Private`屬性的容器中的變數，並用它在這兩`Get`和`Set`程序。 `Set`程序應該再儲存輸入的值，在這個`Private`變數。  
+ 保存屬性值的建議方法是在屬性的容器中定義 @no__t 0 變數，並同時在 `Get` 和 @no__t 2 程式中使用它。 @No__t 0 程式應該會將傳入的值儲存在此 @no__t 1 變數中。  
   
- `Get`程序的行為類似`Function`程序，以便它可以將值指派給屬性名稱，並將控制權傳回所遇到`End Get`陳述式。 建議的方法，不過，是加入`Private`變數中的值設定為[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。  
+ @No__t-0 程式的行為就像是 @no__t 1 程式，因此它可以藉由遇到 @no__t 2 語句，將值指派給屬性名稱，並傳回控制權。 不過，建議的方法是在[Return 語句](../../../visual-basic/language-reference/statements/return-statement.md)中包含 `Private` 變數做為值。  
   
- `Set`程序的行為類似`Sub`程序中，不會傳回值。 因此，程序或屬性名稱具有內沒有特殊意義`Set`程序中，而且您無法將值儲存到其中。  
+ @No__t-0 程式的行為就像是不會傳回值的 @no__t 1 程式。 因此，程式或屬性名稱在 `Set` 程式中沒有特殊意義，而且您無法在其中儲存值。  
   
- 下列範例說明可能會造成這個錯誤，後面接著建議的方法的方法。  
+ 下列範例說明可能造成此錯誤的方法，後面接著建議的方法。  
   
-```  
+```vb  
 Public Class illustrateProperties  
 ' The code in the following property causes this error.  
     Public Property badProp() As Char  
@@ -57,11 +57,11 @@ End Class
   
  根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID:** BC42026  
+ **錯誤識別碼：** BC42026  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 請重寫的屬性定義，以使用建議的方法，在上述範例所示。  
+- 重寫屬性定義，以使用上述範例中所述的建議方法。  
   
 ## <a name="see-also"></a>另請參閱
 

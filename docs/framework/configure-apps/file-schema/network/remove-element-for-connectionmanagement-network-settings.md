@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 8ab7a43fbb3e8df5bb0c99b5947f2fafb362399a
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cbafd29be6855cbb95d17388791ba152230295cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664035"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697847"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<移除 Connectionmanagement 專案的 > 元素 (網路設定)
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>適用于 Connectionmanagement 專案的 @no__t 0remove > 元素（網路設定）
 從連接管理清單中移除 IP 位址或 DNS 名稱。  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,15 +52,15 @@ ms.locfileid: "69664035"
 |[connectionManagement](connectionmanagement-element-network-settings.md)|指定連接至網路主機的連線數目上限。|  
   
 ## <a name="remarks"></a>備註  
- `remove`元素會移除指定之伺服器的連接管理清單專案。  
+ @No__t-0 元素會移除指定之伺服器的連接管理清單專案。  
   
- `address`屬性的值應為有效的 IP 位址或主機名稱。  
+ @No__t-0 屬性的值應為有效的 IP 位址或主機名稱。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會移除伺服器`www.adventure-works.com`的任何連接管理清單專案, 然後將應用程式設定為使用四個伺服器`www.contoso.com`連線, 以及兩個連接到其他所有伺服器。  
+ 下列範例會移除伺服器 `www.adventure-works.com` 的任何連接管理清單專案，然後將應用程式設定為使用伺服器的四個連接 `www.contoso.com`，以及兩個與其他伺服器的連接。  
   
 ```xml  
 <configuration>  

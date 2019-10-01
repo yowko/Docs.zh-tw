@@ -9,18 +9,20 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: f5a9f99133c153401694372abaeea10a02e492e5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634185"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697492"
 ---
-# <a name="requiredruntime-element"></a>\<Requiredruntime> > 項目
+# <a name="requiredruntime-element"></a>@no__t 0requiredRuntime > 元素
 
-指定應用程式只支援 Common Language Runtime 1.0 版。 這個項目已被取代，無法再使用。 [ `supportedRuntime` ](supportedruntime-element.md)應該改為使用項目。
+指定應用程式只支援 Common Language Runtime 1.0 版。 此元素已被取代，不應該再使用。 應該改為使用[@no__t 1](supportedruntime-element.md)元素。
 
-\<configuration> \<startup> \<requiredRuntime>
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requiredRuntime >**  
 
 ## <a name="syntax"></a>語法
 
@@ -38,15 +40,15 @@ safemode="true|false"/>
 
 |屬性|描述|
 |---------------|-----------------|
-|`version`|選擇性屬性。<br /><br /> 字串值，指定這個應用程式支援的.NET framework 版本。 字串值必須符合.NET Framework 安裝根下找到的目錄名稱。 未剖析的字串值的內容。|
-|`safemode`|選擇性屬性。<br /><br /> 指定是否要在執行階段啟始程式碼搜尋登錄，以判斷執行階段版本。|
+|`version`|選擇性屬性。<br /><br /> 字串值，指定此應用程式支援的 .NET Framework 版本。 字串值必須符合在 .NET Framework 安裝根目錄下找到的目錄名稱。 不會剖析字串值的內容。|
+|`safemode`|選擇性屬性。<br /><br /> 指定執行時間啟動程式碼是否會搜尋登錄，以判斷執行階段版本。|
 
 ## <a name="safemode-attribute"></a>安全模式屬性
 
 |值|描述|
 |-----------|-----------------|
-|`false`|執行階段啟始程式碼會尋找在登錄中。 這是預設值。|
-|`true`|執行階段啟始程式碼不會在登錄中尋找。|
+|`false`|執行時間啟動程式碼會在登錄中尋找。 這是預設值。|
+|`true`|執行時間啟動程式碼不會在登錄中尋找。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -57,22 +59,22 @@ safemode="true|false"/>
 |元素|描述|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
-|`startup`|包含`<requiredRuntime>`項目。|
+|`startup`|`<requiredRuntime>`包含元素。|
 
 ## <a name="remarks"></a>備註
- 若要只支援 1.0 版的執行階段所建置的應用程式必須使用`<requiredRuntime>`項目。 使用 1.1 版或更新版本的執行階段所建置的應用程式必須使用`<supportedRuntime>`項目。
+ 為了僅支援1.0 版執行時間所建立的應用程式，必須使用 `<requiredRuntime>` 元素。 使用1.1 版或更新版本的執行時間所建立的應用程式必須使用 `<supportedRuntime>` 元素。
 
 > [!NOTE]
-> 如果您使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函數來指定組態檔，您必須使用`<requiredRuntime>`的執行階段的所有版本的項目。 `<supportedRuntime>`當您使用時，便會忽略元素[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。
+> 如果您使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函數來指定設定檔，您必須針對所有版本的執行時間使用 `<requiredRuntime>` 元素。 當您使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)時，會忽略 `<supportedRuntime>` 元素。
 
- `version`屬性字串必須符合指定之版本的.NET framework 的安裝資料夾名稱。 此字串無法加以解譯。 如果執行階段啟始程式碼找不到相符的資料夾，則執行階段不會載入;啟動程式碼會顯示錯誤訊息，並結束。
+ @No__t-0 屬性字串必須符合指定之 .NET Framework 版本的安裝資料夾名稱。 不會解讀此字串。 如果執行時間啟動程式碼找不到相符的資料夾，則不會載入執行時間;啟動程式碼會顯示錯誤訊息並結束。
 
 > [!NOTE]
-> 在 Microsoft Internet Explorer 中裝載的應用程式的啟始程式碼會忽略`<requiredRuntime>`項目。
+> Microsoft Internet Explorer 中裝載之應用程式的啟動代碼會忽略 @no__t 0 元素。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何在組態檔中指定的執行階段版本。
+下列範例顯示如何指定設定檔中的執行階段版本。
 
 ```xml
 <configuration>

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: c30a7a0bcce62c99d7c1ec0ff17389b8c2cd2f17
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e119d9ce1f8bb6f07f8050612550db459a2f065c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663937"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697467"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<Webrequestmodules 專案 > 元素 (網路設定)
+# <a name="webrequestmodules-element-network-settings"></a>@no__t 0webRequestModules > 元素（網路設定）
 指定要用來要求網路主機資訊的模組。  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4webRequestModules >  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,9 +50,9 @@ ms.locfileid: "69663937"
 |[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
 ## <a name="remarks"></a>備註  
- `webRequestModules` 項目會註冊 <xref:System.Net.WebRequest> 類別的子系，以處理對網路主機的資訊要求。 Web 要求模組必須執行<xref:System.Net.IWebRequestCreate>介面。  
+ `webRequestModules` 項目會註冊 <xref:System.Net.WebRequest> 類別的子系，以處理對網路主機的資訊要求。 Web 要求模組必須執行 <xref:System.Net.IWebRequestCreate> 介面。  
   
- .NET Framework 包含以`http://`、 `https://`和`file://`開頭之 uri 的 Web 要求模組。 您只能藉由在設定檔中註冊自訂模組來覆寫預設模組。  
+ .NET Framework 包含以 `http://` 開頭的 Uri Web 要求模組，`https://` 和 `file://`。 您只能藉由在設定檔中註冊自訂模組來覆寫預設模組。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  

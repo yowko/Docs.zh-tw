@@ -17,38 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 155a8d5465e0fb19c55c9d11b67c6031c2b2c4a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4b6fd6e8043f1c62da8994b43a9b9af45fb2e3c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747515"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700814"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a>ICorDebugCode::GetVersionNumber 方法
-取得識別此 「 ICorDebugCode"表示的程式碼的版本以一為基的號碼。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-HRESULT GetVersionNumber (  
-    [out] ULONG32    *nVersion  
-);  
-```  
-  
-## <a name="parameters"></a>參數  
+
+取得以1為基礎的數位，識別這個 "ICorDebugCode" 所代表的程式碼版本。
+
+## <a name="syntax"></a>語法
+
+```cpp
+HRESULT GetVersionNumber (
+    [out] ULONG32    *nVersion
+);
+```
+
+## <a name="parameters"></a>參數
+
  `nVersion`  
- [out]版本號碼，程式碼的指標。  
-  
-## <a name="remarks"></a>備註  
- 版本號碼會遞增每個執行程式碼編輯後繼續 (EnC) 作業的時間。  
-  
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ 脫銷程式碼版本號碼的指標。
+
+## <a name="remarks"></a>備註
+
+ 每次對程式碼執行「編輯後繼續」（EnC）作業時，版本號碼都會遞增。
+
+## <a name="requirements"></a>需求
+
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>另請參閱
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

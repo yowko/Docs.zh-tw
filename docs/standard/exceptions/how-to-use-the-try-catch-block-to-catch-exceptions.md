@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 Try-Catch 區塊攔截例外狀況
+title: HOW TO：使用 Try-Catch 區塊攔截例外狀況
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: HT
+ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092744"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696725"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>如何使用 try/catch 區塊攔截例外狀況
 
@@ -27,7 +27,7 @@ ms.locfileid: "56092744"
 在下列範例中，<xref:System.IO.StreamReader> 開啟名為 *data.txt* 的檔案，並從該檔案擷取了一行。 因為程式碼可能會擲回三個例外狀況的任何一個，所以將其放置於 `try` 區塊。 三個 `catch` 區塊可以藉由將結果顯示給主控台，來攔截例外狀況並加以處理。
 
 [!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
-[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]
 
 通用語言執行平台 (CLR) 會攔截 `catch` 區塊未處理的例外狀況。 如果 CLR 攔截了例外狀況，可能會發生下列其中一種結果，視您的 CLR 組態而有所不同：
 
@@ -40,5 +40,5 @@ ms.locfileid: "56092744"
 
 ## <a name="see-also"></a>另請參閱
 
-[例外狀況](index.md)  
-[在 .NET 中處理 I/O 錯誤](../io/handling-io-errors.md)
+- [例外狀況](index.md)
+- [在 .NET 中處理 I/O 錯誤](../io/handling-io-errors.md)

@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中以多種格式從文字檔讀取
+title: HOW TO：在 Visual Basic 中以多種格式從文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: 9fa484f0a74d900bd6f0365f2ce71fd32e1422db
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: eae60b2fc72ee8b8653d3a0517eeaaf8012e0372
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623185"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696756"
 ---
-# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>作法：在 Visual Basic 中以多種格式從文字檔讀取
+# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>HOW TO：在 Visual Basic 中以多種格式從文字檔讀取
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件可讓您輕鬆有效率地剖析結構化文字檔，例如記錄檔。 您可以使用 `PeekChars` 方法來處理具有多種格式的檔案，以在剖析整個檔案時判斷每行格式。  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>剖析具有多種格式的文字檔  
   
 1. 將名為 testfile.txt 的文字檔新增至專案。 將下列內容新增至文字檔。  
   
-    ```  
+    ```text  
     Err  1001 Cannot access resource.  
     Err  2014 Resource not found.  
     Acc  10/03/2009User1      Administrator.  

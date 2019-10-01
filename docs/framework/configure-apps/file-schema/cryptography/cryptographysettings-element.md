@@ -8,19 +8,19 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 462db50a42e55c0c5a9570317ceeeb0ae69215a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927657"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699815"
 ---
-# <a name="cryptographysettings-element"></a>\<cryptographySettings > 元素
+# <a name="cryptographysettings-element"></a>@no__t 0cryptographySettings > 元素
 包含密碼編譯設定。  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<cryptographySettings >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +37,20 @@ ms.locfileid: "69927657"
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<cryptoNameMapping>](cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
-|[\<oidMap>](oidmap-element.md)|包含對類別的 asn.1 物件識別元 (OID) 對應。|  
+|[\<oidMap>](oidmap-element.md)|包含對類別的 asn.1 物件識別元（OID）對應。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`mscorlib`|`cryptographySettings`包含元素。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<cryptographySettings >** 元素來包含密碼編譯名稱對應和 OID 對應。 這個範例會設定執行時間, <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>以便傳回`MyHashClass`物件, 而`MyCryptoClass`類別會對應至物件識別碼1.3.36.2.1。  
+ 下列範例示範如何使用 **@no__t 1cryptographySettings >** 元素來包含密碼編譯名稱對應和 OID 對應。 這個範例會設定執行時間，讓 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 會傳回 `MyHashClass` 物件，而 @no__t 2 類別則會對應至物件識別碼1.3.36.2.1。  
   
 ```xml  
 <configuration>  

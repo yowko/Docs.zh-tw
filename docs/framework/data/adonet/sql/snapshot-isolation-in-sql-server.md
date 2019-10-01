@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d85cc041850300d1d079b227dcb8ed9201a0502
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791737"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699066"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔離
 快照隔離可強化 OLTP 應用程式的並行功能。  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>瞭解快照集隔離及資料列版本控制  
- 一旦啟用快照集隔離，就會在**tempdb**中維護每個交易的更新資料列版本。 唯一交易序號識別每筆交易，並會針對每個資料列版本記錄這些唯一的號碼。 交易使用其序號在該交易序號之前的最新資料列版本。 該異動會忽略在異動開始之後建立的較新資料列版本。  
+ 一旦啟用快照集隔離，就必須維護每個交易的更新資料列版本。  在 SQL Server 2019 之前，這些版本會儲存在**tempdb**中。 SQL Server 2019 引進了一項新功能：加速資料庫復原（ADR），它需要自己的一組資料列版本。  因此，從 SQL Server 2019，如果未啟用 ADR，則資料列版本會一律保留在**tempdb**中。  如果已啟用 ADR，則與 snapshot 隔離和 ADR 相關的所有資料列版本都會保留在 ADR 的持續版本存放區（PV）中，該資料庫位於使用者指定的檔案群組中。 唯一交易序號識別每筆交易，並會針對每個資料列版本記錄這些唯一的號碼。 交易使用其序號在該交易序號之前的最新資料列版本。 該異動會忽略在異動開始之後建立的較新資料列版本。  
   
  「快照集」這個詞彙反映了根據異動開始時資料庫的狀態，異動中所有查詢都看到資料庫的同一版本 (或快照集) 這一事實。 在快照集交易中的基礎資料列或資料頁面上沒有鎖定，這允許其他交易執行，而不會被之前未完成的交易封鎖。 修改資料的異動不會封鎖讀取資料的異動，而讀取資料的異動也不會封鎖寫入資料的異動，因為它們通常處於 SQL Server 中預設的 READ COMMITTED 隔離等級中。 這種無封鎖的行為也會大幅降低複雜異動發生死結的可能性。  
   
@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  快照集異動通常使用開放式同步存取控制，抑制任何可防止其他異動更新資料列的鎖定。 如果快照集異動嘗試認可對異動開始後發生變更之資料列的更新，則該異動會復原並將發生錯誤。  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>在 ADO.NET 中使用快照集隔離  
- ADO.NET 中的 <xref:System.Data.SqlClient.SqlTransaction> 類別支援快照集隔離。 如果資料庫已啟用快照集隔離，但未設定為在上進行 READ_COMMITTED_SNAPSHOT，您必須在呼叫<xref:System.Data.SqlClient.SqlTransaction> <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>方法時，使用**IsolationLevel**來起始。 此程式碼片段假設連接是開啟的 <xref:System.Data.SqlClient.SqlConnection> 物件。  
+ ADO.NET 中的 <xref:System.Data.SqlClient.SqlTransaction> 類別支援快照集隔離。 如果資料庫已啟用快照集隔離，但未設定為在上進行 READ_COMMITTED_SNAPSHOT，您必須在呼叫 <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> 方法時，使用**IsolationLevel**來起始 <xref:System.Data.SqlClient.SqlTransaction>。 此程式碼片段假設連接是開啟的 <xref:System.Data.SqlClient.SqlConnection> 物件。  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  
