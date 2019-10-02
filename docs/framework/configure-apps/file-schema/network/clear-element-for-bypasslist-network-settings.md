@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4d078dac14103560423bfccdd4a1717031e7a60f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664191"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699504"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<清除 bypasslist 的 > 元素 (網路設定)
+# <a name="clear-element-for-bypasslist-network-settings"></a>適用于 bypasslist 的 @no__t 0clear > 元素（網路設定）
 清除 proxy 略過清單。  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
-\<清除 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<clear >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,16 +45,16 @@ ms.locfileid: "69664191"
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
-|[bypasslist](bypasslist-element-network-settings.md)|提供一組正則運算式, 描述不使用 proxy 的位址。|  
+|[bypasslist](bypasslist-element-network-settings.md)|提供一組正則運算式，描述不使用 proxy 的位址。|  
   
 ## <a name="remarks"></a>備註  
- `clear`元素會清除略過清單中的所有專案。  
+ @No__t-0 元素會清除略過清單中的所有專案。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會清除略過清單, 然後將兩個位址新增至略過清單。 第一個會略過 contoso.com 網域中所有伺服器的 proxy;第二個會略過其 IP 位址開頭為192.168 的所有伺服器的 proxy。  
+ 下列範例會清除略過清單，然後將兩個位址新增至略過清單。 第一個會略過 contoso.com 網域中所有伺服器的 proxy;第二個會略過其 IP 位址開頭為192.168 的所有伺服器的 proxy。  
   
 ```xml  
 <configuration>  
