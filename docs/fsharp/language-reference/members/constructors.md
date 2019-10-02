@@ -2,16 +2,16 @@
 title: 建構函式
 description: 瞭解如何在中F#定義和使用函數, 以建立和初始化類別和結構物件。
 ms.date: 05/16/2016
-ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6769ec7fc6768090d8ae68e21946a58829b6eea0
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627603"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736841"
 ---
 # <a name="constructors"></a>建構函式
 
-本主題描述如何定義和使用函式, 以建立和初始化類別和結構物件。
+本文說明如何定義和使用函式來建立和初始化類別和結構物件。
 
 ## <a name="construction-of-class-objects"></a>類別物件的結構
 
@@ -21,11 +21,11 @@ ms.locfileid: "68627603"
 
 不論您想要呼叫的是主要的函式或其他的函數, 您都可以使用`new`運算式來建立物件, 並搭配或不搭配選擇性`new`關鍵字。 您可以使用函式引數來初始化您的物件, 方法是依序列出引數, 並以逗號分隔並括在括弧中, 或使用括弧中的具名引數和值。 您也可以在物件的結構中, 使用屬性名稱和指派值來設定物件的屬性, 就如同使用命名的函式引數一樣。
 
-下列程式碼說明具有函式的類別, 以及建立物件的各種方式。
+下列程式碼說明具有函式和各種建立物件方法的類別：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
-輸出如下。
+其輸出如下：
 
 ```console
 Initialized object that has coordinates (1, 2, 3)
@@ -36,7 +36,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 ## <a name="construction-of-structures"></a>結構結構
 
-結構會遵循類別的所有規則。 因此, 您可以擁有主要的函式, 也可以使用`new`來提供其他的函式。 不過, 結構和類別之間有一個重要的差異: 結構可以有無參數的函式 (也就是沒有引數的函式), 即使未定義主要的函式。 無參數的函式會將所有欄位初始化為該類型的預設值, 通常為零或其相等。 您為結構定義的任何函式都必須至少有一個引數, 才不會與預設的處理常式衝突。
+結構會遵循類別的所有規則。 因此, 您可以擁有主要的函式, 也可以使用`new`來提供其他的函式。 不過, 結構和類別之間有一個重要的差異: 結構可以有無參數的函式 (也就是沒有引數的函式), 即使未定義主要的函式。 無參數的函式會將所有欄位初始化為該類型的預設值, 通常為零或其相等。 您為結構定義的任何函式都必須至少有一個引數，才不會與無參數的處理常式衝突。
 
 此外, 結構通常會有使用`val`關鍵字建立的欄位; 類別也可以有這些欄位。 具有使用`val`關鍵字定義之欄位的結構和類別, 也可以使用記錄運算式在其他的函式中進行初始化, 如下列程式碼所示。
 
@@ -50,7 +50,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
-主要的函式的副作用仍會執行。 因此, 輸出如下所示。
+主要的函式的副作用仍會執行。 因此，輸出如下所示：
 
 ```console
 Created a person object.
@@ -64,7 +64,7 @@ Created an invalid person object.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
-在其他的函式中, 您也可以將`as`子句放在函式參數後面, 以定義自我識別碼。 下列範例說明此語法。
+在其他的函式中, 您也可以將`as`子句放在函式參數後面, 以定義自我識別碼。 下列範例說明這個語法：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
@@ -74,11 +74,11 @@ Created an invalid person object.
 
 ## <a name="assigning-values-to-properties-at-initialization"></a>在初始化時將值指派給屬性
 
-您可以將表單`property = value`指派清單附加至函式的引數清單, 以將值指派給初始化程式碼中的類別物件屬性。 這會顯示在以下程式碼範例中。
+您可以將表單`property = value`指派清單附加至函式的引數清單, 以將值指派給初始化程式碼中的類別物件屬性。 如下列程式碼範例所示：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-下列版本的舊版程式碼說明了一般引數、選擇性引數和屬性設定在一個函式呼叫中的組合。
+下列版本的舊版程式碼說明了一般引數、選擇性引數和屬性設定在一個函式呼叫中的組合：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 

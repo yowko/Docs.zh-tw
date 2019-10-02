@@ -2,12 +2,12 @@
 title: 屬性
 description: 瞭解屬性F#如何讓中繼資料套用至程式設計結構。
 ms.date: 05/16/2016
-ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 17822891109b8e8eaa10044f82f0b872ce9d30b5
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082934"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736805"
 ---
 # <a name="attributes"></a>屬性
 
@@ -25,13 +25,13 @@ ms.locfileid: "71082934"
 
 *屬性名稱*是指有效屬性類型的名稱（可能是以命名空間限定），包含或不含在屬性類型`Attribute`名稱中通常使用的尾碼。 例如，類型`ObsoleteAttribute`可以`Obsolete`在此內容中縮短為。
 
-*引數*是屬性類型之函式的引數。 如果屬性具有預設的函式，則可以省略引數清單和括弧。 屬性同時支援位置引數和具名引數。 *位置引數*是以它們出現的順序來使用的引數。 如果屬性具有公用屬性，則可以使用具名引數。 您可以使用引數清單中的下列語法來設定這些參數。
+*引數*是屬性類型之函式的引數。 如果屬性具有無參數的函式，則可以省略引數清單和括弧。 屬性同時支援位置引數和具名引數。 *位置引數*是以它們出現的順序來使用的引數。 如果屬性具有公用屬性，則可以使用具名引數。 您可以使用引數清單中的下列語法來設定這些參數。
 
 ```fsharp
 property-name = property-value
 ```
 
-這類屬性初始化可以依任何順序排列，但必須遵循任何位置引數。 以下是使用位置引數和屬性初始化之屬性的範例。
+這類屬性初始化可以依任何順序排列，但必須遵循任何位置引數。 以下是使用位置引數和屬性初始化的屬性範例：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
@@ -41,13 +41,13 @@ property-name = property-value
 
 中F#的屬性可以套用至下列程式設計結構：函式、方法、元件、模組、類型（類別、記錄、結構、介面、委派、列舉、等位等等）、函式、屬性、欄位、參數、型別參數和傳回值。 類別、運算式或工作`let`流程運算式內的系結上不允許屬性。
 
-一般而言，屬性宣告會直接出現在屬性目標的宣告前面。 可以同時使用多個屬性宣告，如下所示。
+一般而言，屬性宣告會直接出現在屬性目標的宣告前面。 可以同時使用多個屬性宣告，如下所示：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
 您可以在執行時間使用 .NET 反映來查詢屬性。
 
-如先前的程式碼範例所示，您可以個別宣告多個屬性，或者，如果您使用分號來分隔個別屬性和構造函式，則可以在一組方括弧中宣告它們，如下所示。
+如先前的程式碼範例所示，您可以個別宣告多個屬性，或者，如果您使用分號來分隔個別屬性和構造函式，則可以在一組方括弧中宣告它們，如下所示：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
@@ -55,13 +55,13 @@ property-name = property-value
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-針對屬性目標`assembly`和`module`，您可以將屬性套用`do`至元件中的最上層系結。 您可以在屬性宣告`assembly`中`module`包含單字或，如下所示。
+針對屬性目標`assembly`和`module`，您可以將屬性套用`do`至元件中的最上層系結。 您可以在屬性宣告中包含 `assembly` 或 `module` 這一字，如下所示：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
 如果您省略套用至`do`系結之屬性的屬性目標， F#編譯器會嘗試判斷對該屬性有意義的屬性目標。 許多屬性類別都具有類型`System.AttributeUsageAttribute`的屬性，其中包含該屬性所支援之可能目標的相關資訊。 `System.AttributeUsageAttribute`如果指出屬性支援以函式作為目標，則會採用屬性以套用至程式的主要進入點。 `System.AttributeUsageAttribute`如果指出屬性支援將元件當做目標，則編譯器會採用屬性來套用至元件。 大部分的屬性都不會同時套用至函式和元件，但在這些情況下，會採用屬性以套用至程式的 main 函式。 如果明確指定屬性目標，則會將屬性套用至指定的目標。
 
-雖然您通常不需要明確指定屬性目標，但在屬性中，*目標*的有效值也會顯示在下表中，以及使用方式的範例。
+雖然您通常不需要明確指定屬性目標，但在屬性中， *target*的有效值和使用方式範例如下表所示：
 
 <table>
   <tr>

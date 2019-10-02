@@ -2,12 +2,12 @@
 title: 明確欄位：Val 關鍵字
 description: 瞭解F# ' val ' 關鍵字，這是用來宣告位置以儲存類別或結構型別中的值，而不需要初始化型別。
 ms.date: 05/16/2016
-ms.openlocfilehash: fe339e33dae27ae226022a68dd8247d1ab1994b3
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 2703d9a2734cfda1614a401ec24c6630ec31b2f1
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216474"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736827"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>明確欄位：Val 關鍵字
 
@@ -28,19 +28,16 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 具有主要的函式之類別類型中的明確欄位需要[DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58)屬性。 這個屬性指定欄位初始化為零。 欄位的類型必須支援零初始化。 下列類型支援零初始化：
 
 - 具有零值的基本類型。
-
 - 支援 null 值的類型，可能為正常值、異常值或值的一種表示法。 這包括類別、Tuple、記錄、函式、介面、.NET 參考類型、`unit` 類型，以及差別聯集類型。
-
 - .NET 實值類型。
-
 - 所有欄位都支援預設零值的一種結構。
 
 例如，稱為 `someField` 的不可變動欄位在 .NET 編譯表示法中有一個名稱為 `someField@` 的支援欄位，您可以使用名為 `someField` 的屬性來存取儲存的值。
 
 對於可變動欄位，.NET 編譯表示法是 .NET 欄位。
 
->[!WARNING]
->.NET Framework 命名空間`System.ComponentModel`包含具有相同名稱的屬性。 如需此屬性的詳細資訊，請參閱 `System.ComponentModel.DefaultValueAttribute`。
+> [!WARNING]
+> .NET Framework 命名空間`System.ComponentModel`包含具有相同名稱的屬性。 如需此屬性的詳細資訊，請參閱 <xref:System.ComponentModel.DefaultValueAttribute>。
 
 下列程式碼示範在具有主要建構函式的類別中使用明確欄位，也示範 `let` 繫結，方便對照。 請注意，`let` 繫結的欄位 `myInt1` 是 private。 從成員方法參考 `let` 繫結欄位 `myInt1` 時，不需要自我識別項 `this`。 但是，當您參考明確欄位 `myInt2` 和 `myString` 時，需要自我識別項。
 
@@ -59,7 +56,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 輸出為 `35 22`。
 
-下列程式碼示範在結構中使用明確欄位。 因為結構是實值類型，所以自動有預設建構函式將其欄位的值設定為零。 因此，不需要 `DefaultValue` 屬性。
+下列程式碼示範在結構中使用明確欄位。 因為結構是實值型別，所以它會自動具有無參數的函式，將其欄位的值設定為零。 因此，不需要 `DefaultValue` 屬性。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 

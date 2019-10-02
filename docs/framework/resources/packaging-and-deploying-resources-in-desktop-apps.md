@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: aae38c8c2446ead128925e0e1d910ae12c8f220f
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045572"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736749"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>在 .NET 應用程式中封裝和部署資源
 
@@ -42,20 +42,20 @@ ms.locfileid: "71045572"
 這個模型有數個優點：
 
 - 在您部署應用程式之後，可以透過累加方式新增新文化特性的資源。 因為文化特性特定資源的後續開發可能需要很長一段時間，所以這可讓您先發行主要應用程式，並於日後提供文化特性特定資源。
-
 - 您可以更新並變更應用程式的附屬組件，而不需要重新編譯應用程式。
-
 - 應用程式只需要載入包含特定文化特性所需之資源的附屬組件。 這可以大幅降低系統資源的使用。
 
  不過，這個模型也有缺點：
 
 - 您必須管理多組資源。
-
 - 因為您必須測試數個組態，所以測試應用程式的初始成本會增加。 請注意，長期而言，測試一個具有數個附屬的核心應用程式，與測試並維護數個平行國際版本相較之下，較為簡單且費用較少。
 
 ## <a name="resource-naming-conventions"></a>資源命名慣例
 
 當您封裝應用程式的資源時，必須使用 Common Language Runtime 所預期的資源命名慣例來命名它們。 執行階段會依文化特性名稱識別資源。 每個文化特性都會獲指定唯一名稱，此名稱通常是下列項目的組合：與語言建立關聯的兩個字母小寫文化特性名稱以及與國家或地區建立關聯的兩個字母大寫子文化特性名稱 (必要時)。 子文化特性名稱遵循文化特性名稱，以破折號 (-) 分隔。 範例包括 ja-JP (代表在日本日文)、en-US (美式英文)、de-DE (德國德文)，或 de-AT (奧地利德文)。 請參閱 [Windows 支援的語言/地區名稱清單](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的 [語言標記] 資料行。 文化名稱遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定義的標準。
+
+> [!NOTE]
+> 這兩個字母的文化特性名稱有一些例外，例如中文（簡體） @no__t 0。
 
 > [!NOTE]
 > 如需建立資源檔的資訊，請參閱[建立資源檔](creating-resource-files-for-desktop-apps.md)和[建立附屬組件](creating-satellite-assemblies-for-desktop-apps.md)。
@@ -204,8 +204,8 @@ Greeting=Добрый день
 
 應用程式原始程式碼位在名為 Example1.cs 或 Example1.vb 的檔案中。 它會包括 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性，指出預設應用程式資源是在 fr 子目錄中。 它會執行個體化 Resource Manager、擷取 `Greeting` 資源的值，並將它顯示到主控台。
 
-[!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
-[!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
+[!code-csharp[Conceptual.Resources.Packaging#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
+[!code-vb[Conceptual.Resources.Packaging#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
 
 您接著可以從命令列編譯 C# 原始程式碼，如下所示：
 
