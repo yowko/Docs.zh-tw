@@ -60,7 +60,7 @@ throw [e];
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
-- 運算式主體 [ambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 或方法。 下列範例說明因不支援轉換為 <xref:System.DateTime> 值而擲回 <xref:System.InvalidCastException> 的運算式主體方法。
+- 運算式主體 [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 或方法。 下列範例說明因不支援轉換為 <xref:System.DateTime> 值而擲回 <xref:System.InvalidCastException> 的運算式主體方法。
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 
