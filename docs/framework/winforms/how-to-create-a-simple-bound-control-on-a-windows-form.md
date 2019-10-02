@@ -26,7 +26,7 @@ ms.locfileid: "70015637"
 
      最常系結的屬性會顯示在 [(系結 **)** ] 屬性底下。 例如, 在大部分的控制項中, **Text**屬性最常系結。
 
-4. 如果您要系結的屬性不是其中一個常用的屬性, 請按一下 [ **(Advanced)** ] 方塊中的](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)**省略號**按鈕 (![[屬性視窗中 Visual Studio 的省略號按鈕 (...)], 以顯示 **[格式化] 和 [Advanced Binding** ] 對話方塊, 其中包含該控制項的完整屬性清單。
+4. 如果您要系結的屬性不是其中一個常用的屬性, 請按一下 [ **(Advanced)** ] 方塊中的](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)**省略號**按鈕 (![屬性視窗中 Visual Studio 的省略號按鈕 (...), 以顯示 **[格式化] 和 [Advanced Binding** ] 對話方塊, 其中包含該控制項的完整屬性清單。
 
 5. 選取您想要系結的屬性, 然後按一下 [系結]底下的下拉箭號。
 
