@@ -5,13 +5,13 @@ hide_bc: true
 title: .NET 文件
 description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
-ms.date: 09/23/2019
-ms.openlocfilehash: f58e1c03f529629556f79881aebd69afc9ed9bde
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.date: 09/30/2019
+ms.openlocfilehash: a30744ca8831375f9a54f054b226274e273a67a5
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351651"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736764"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -818,6 +818,155 @@ ms.locfileid: "71351651"
                                                 <div class="cardText">
                                                     <h3>.NET for Apache Spark</h3>
                                                     <p>在您撰寫 .NET 程式碼的任何位置上處理資料批次、即時串流、機器學習和特定查詢。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#architecture">架構</a>
+                        <ul id="architecture" class="cardsC">
+                            <li>
+                                <a href="/dotnet/architecture/microservices">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/microservices.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>.NET 微服務：容器化 .NET 應用程式的架構</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/containerized-lifecycle">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/devops.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Microsoft 平台和工具的容器化 Docker 應用程式生命週期</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/modernize-with-azure-containers">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/azure-containers.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>使用 Azure 雲端及 Windows 容器將現有 .NET 應用程式現代化</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/modern-web-apps-azure">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/tools.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/serverless">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/serverless.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>無伺服器應用程式：架構、模式和 Azure 實作</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/cloud-native">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/cloud-native.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3><strong>預覽</strong> 建構適用於 Azure 的雲端原生 .NET 應用程式</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/blazor-for-web-forms-developers">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/blazor.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3><strong>預覽</strong> 適用於 ASP.NET Web Forms 開發人員的 Blazor</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/grpc-for-wcf-developers">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/grpc.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3><strong>預覽</strong> 適用於 WCF 開發人員的 ASP.NET Core gRPC</h3>
                                                 </div>
                                             </div>
                                         </div>
