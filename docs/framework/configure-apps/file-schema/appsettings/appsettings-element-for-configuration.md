@@ -53,8 +53,7 @@ ms.locfileid: "69921332"
 
 ## <a name="remarks"></a>備註
 
-**
-          \<AppSettings>** 項目會儲存自訂的應用程式組態資訊，例如資料庫連接字串、 檔案路徑、 XML Web 服務 Url 或任何其他自訂組態資訊應用程式。 中指定的索引鍵/值組 **\<appSettings>** 項目中的程式碼使用存取<xref:System.Configuration.ConfigurationSettings>類別。
+**\<AppSettings>** 項目會儲存自訂的應用程式組態資訊，例如資料庫連接字串、 檔案路徑、 XML Web 服務 Url 或任何其他自訂組態資訊應用程式。 中指定的索引鍵/值組 **\<appSettings>** 項目中的程式碼使用存取<xref:System.Configuration.ConfigurationSettings>類別。
 
 您可以使用 **檔案** 屬性中 **\<appSettings>** 項目*Web.config*和應用程式組態檔。 這個屬性會指定組態檔中提供額外的設定或覆寫中指定的設定 **\<appSettings>** 項目。 **檔**屬性可用於原始檔控制小組開發案例, 例如當使用者想要覆寫應用程式佈建檔中指定的專案設定時。
 

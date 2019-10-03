@@ -52,8 +52,7 @@ ms.locfileid: "69921266"
 LinkedConfiguration > 元素藉由允許應用程式佈建檔在已知位置中包含元件設定檔, 而不是複製元件, 來簡化元件元件的管理。 [ **\<** ](linkedconfiguration-element.md)設定。
 
 > [!NOTE]
-> **
-          \<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。
+> **\<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。
 
 ## <a name="example"></a>範例
 
