@@ -1,6 +1,6 @@
 ---
 title: 例外狀況：Try...try...finally 運算式
-description: F#瞭解「try .。。最後，即使程式碼區塊擲回例外狀況，也可以讓您執行清除程式碼。
+description: F#瞭解「try ...最後，即使程式碼區塊擲回例外狀況，也可以讓您執行清除程式碼。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0ddb64ac13b307404864ec5b54f26fd8a7a3d7d8
 ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
@@ -45,7 +45,7 @@ Exception handled.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-在計算運算式（包括順序運算式和非同步工作流程）的內容中，**嘗試 .。。最後**，運算式可以有自訂的實作為。 如需詳細資訊，請參閱[計算運算式](../computation-expressions.md)。
+在計算運算式（包括順序運算式和非同步工作流程）的內容中，**嘗試 ...最後**，運算式可以有自訂的實作為。 如需詳細資訊，請參閱[計算運算式](../computation-expressions.md)。
 
 ## <a name="see-also"></a>另請參閱
 

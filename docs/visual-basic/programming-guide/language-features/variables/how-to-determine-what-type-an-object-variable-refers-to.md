@@ -46,7 +46,7 @@ ms.locfileid: "68626577"
     End If
     ```
 
-    `TypeOf`.。。`Is` 如果物件的執行時間類型與指定的類型相容,`True`則運算式會傳回。
+    `TypeOf`...`Is` 如果物件的執行時間類型與指定的類型相容,`True`則運算式會傳回。
 
     相容性的準則取決於指定的類型是否為類別、結構或介面。 一般而言, 如果物件的類型與相同、繼承自或實作為指定的類型, 則類型是相容的。 如需詳細資訊, 請參閱[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)。
 

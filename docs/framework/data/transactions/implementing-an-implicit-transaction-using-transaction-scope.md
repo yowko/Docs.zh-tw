@@ -23,7 +23,7 @@ ms.locfileid: "70205930"
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- 當您建立新<xref:System.Transactions.TransactionScope>的物件之後, 就會啟動交易範圍。  如程式碼範例所示, 建議您使用**using**語句來建立範圍。 **Using**語句適用于C#和中的 Visual Basic, 而且運作方式與**try .。。最後**, 封鎖以確保正確處置範圍。  
+ 當您建立新<xref:System.Transactions.TransactionScope>的物件之後, 就會啟動交易範圍。  如程式碼範例所示, 建議您使用**using**語句來建立範圍。 **Using**語句適用于C#和中的 Visual Basic, 而且運作方式與**try ...最後**, 封鎖以確保正確處置範圍。  
   
  當具現化 <xref:System.Transactions.TransactionScope> 時，交易管理員會決定要參與哪個交易。 一旦決定後，範圍永遠會參與該異動。 決策是根據兩個因素而定: 環境交易是否存在, 以及在此函式中的**TransactionScopeOption**參數值。 環境交易就是要在其中執行程式碼的交易。 您可以呼叫 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> 類別的靜態 <xref:System.Transactions.Transaction> 屬性，取得環境交易的參考。 如需如何使用此參數的詳細資訊, 請參閱本主題的[使用 TransactionScopeOption 管理交易流程](#ManageTxFlow)一節。  
   

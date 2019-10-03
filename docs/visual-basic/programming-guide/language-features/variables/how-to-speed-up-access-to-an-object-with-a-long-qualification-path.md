@@ -19,7 +19,7 @@ ms.locfileid: "68631093"
 
 如果您經常存取需要數個方法和屬性之限定性路徑的物件, 您可以藉由不重複限定性路徑來加速程式碼。
 
-有兩種方式可以避免重複限定性路徑。 您可以將物件指派給變數, 也可以將它`With`用於 .。。`End With`封鎖。
+有兩種方式可以避免重複限定性路徑。 您可以將物件指派給變數, 也可以將它`With`用於 ...`End With`封鎖。
 
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>藉由將非常限定的物件指派給變數來加速其存取
 

@@ -114,7 +114,7 @@ end
 
 ## <a name="serialization-errors"></a>序列化錯誤
 
-問： 當我嘗試序列化時，收到下列錯誤："ChangeTracker + 別 standardchangetracker" 的 "Type..。未標示為可序列化。」
+問： 當我嘗試序列化時，收到下列錯誤："ChangeTracker + 別 standardchangetracker" 的 "Type...未標示為可序列化。」
 
 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的程式碼產生支援 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化。 但不支援 <xref:System.Xml.Serialization.XmlSerializer> 或 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 如需詳細資訊，請參閱[序列化](serialization.md)。
 

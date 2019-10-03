@@ -39,10 +39,10 @@ GoTo line
 > [!NOTE]
 > `GoTo`語句可能會使程式碼更容易讀取和維護。 請盡可能改用控制結構。 如需詳細資訊, 請參閱[控制流程](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
   
- 您不能使用`GoTo`語句從`For`外部進行分支 .。。`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`、或`Using`.。。`End Using`結構到內的標籤。  
+ 您不能使用`GoTo`語句從`For`外部進行分支 ...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`、或`Using`...`End Using`結構到內的標籤。  
   
 ## <a name="branching-and-try-constructions"></a>分支和 Try 結構  
- `Try`在 .。。`Catch`...結構中, 下列規則適用于`GoTo`使用語句的分支。 `Finally`  
+ `Try`在 ...`Catch`...結構中, 下列規則適用于`GoTo`使用語句的分支。 `Finally`  
   
 |封鎖或區域|從外部分支|從內部分支|  
 |---------------------|-------------------------------|-------------------------------|  
@@ -50,7 +50,7 @@ GoTo line
 |`Catch`總匯|不允許|僅限於整個結構外, 或`Try`相同結構<sup>1</sup>的區塊|  
 |`Finally`總匯|不允許|不允許|  
   
- <sup>1</sup> (如果`Try`有的話)`Catch`...結構會在另一個內嵌套`Catch` , `Try`區塊可以在自己的嵌套層級分支到區塊中, 但不能`Try`放入任何其他區塊中。 `Finally` Nested `Try`.。。`Catch`...結構必須完全包含`Try`在其所用`Catch`的結構的或區塊中。 `Finally`  
+ <sup>1</sup> (如果`Try`有的話)`Catch`...結構會在另一個內嵌套`Catch` , `Try`區塊可以在自己的嵌套層級分支到區塊中, 但不能`Try`放入任何其他區塊中。 `Finally` Nested `Try`...`Catch`...結構必須完全包含`Try`在其所用`Catch`的結構的或區塊中。 `Finally`  
   
  下圖顯示在另`Try`一個中嵌套的一個結構。 兩個結構的區塊之間的各種分支會指出為有效或無效。  
   
