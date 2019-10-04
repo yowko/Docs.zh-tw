@@ -5,24 +5,24 @@ ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a84234ee797dac7487492dc92af2de4fa7ef503
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: fbcd9b93f63d48229c174b0f6518fd0150e98e18
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962541"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957023"
 ---
-# <a name="node-sets-in-transformations"></a><span data-ttu-id="1f237-102">轉換中的節點集</span><span class="sxs-lookup"><span data-stu-id="1f237-102">Node Sets in Transformations</span></span>
-<span data-ttu-id="1f237-103">節點集是 XML 路徑語言 (XPath) 運算式傳回的四種基本資料型別之一。</span><span class="sxs-lookup"><span data-stu-id="1f237-103">Node sets are one of four basic data types that are returned from XML Path Language (XPath) expressions.</span></span> <span data-ttu-id="1f237-104">節點集是一個沒有順序、不重複的節點集合，它依據文件的順序建立，可以指定給樣式表中的變數。</span><span class="sxs-lookup"><span data-stu-id="1f237-104">A node set, which is an unordered collection of nodes without duplicates, created in document order, can be assigned to a variable in a style sheet.</span></span>  
+# <a name="node-sets-in-transformations"></a><span data-ttu-id="dc86c-102">轉換中的節點集</span><span class="sxs-lookup"><span data-stu-id="dc86c-102">Node Sets in Transformations</span></span>
+<span data-ttu-id="dc86c-103">節點集是 XML 路徑語言 (XPath) 運算式傳回的四種基本資料型別之一。</span><span class="sxs-lookup"><span data-stu-id="dc86c-103">Node sets are one of four basic data types that are returned from XML Path Language (XPath) expressions.</span></span> <span data-ttu-id="dc86c-104">節點集是一個沒有順序、不重複的節點集合，它依據文件的順序建立，可以指定給樣式表中的變數。</span><span class="sxs-lookup"><span data-stu-id="dc86c-104">A node set, which is an unordered collection of nodes without duplicates, created in document order, can be assigned to a variable in a style sheet.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="1f237-105">在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。</span><span class="sxs-lookup"><span data-stu-id="1f237-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="1f237-106">您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。</span><span class="sxs-lookup"><span data-stu-id="1f237-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="1f237-107">如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。</span><span class="sxs-lookup"><span data-stu-id="1f237-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+> <span data-ttu-id="dc86c-105">在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。</span><span class="sxs-lookup"><span data-stu-id="dc86c-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="dc86c-106">您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。</span><span class="sxs-lookup"><span data-stu-id="dc86c-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="dc86c-107">如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。</span><span class="sxs-lookup"><span data-stu-id="dc86c-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="1f237-108">節點集是 XPath 運算式傳回的四種基本資料型別之一。</span><span class="sxs-lookup"><span data-stu-id="1f237-108">Node sets are one of four basic data types that are returned from XPath expressions.</span></span> <span data-ttu-id="1f237-109">節點集是一個沒有順序、不重複的節點集合，它依據文件的順序建立，可以指定給樣式表中的變數。</span><span class="sxs-lookup"><span data-stu-id="1f237-109">A node set, which is an unordered collection of nodes without duplicates, created in document order, can be assigned to a variable in a style sheet.</span></span> <span data-ttu-id="1f237-110">這個節點集是轉換中 `select` 屬性所使用之 XPath 運算式的結果，具有與 XML 文件物件模型 (DOM) 的節點集相同的行為。</span><span class="sxs-lookup"><span data-stu-id="1f237-110">This node set, which is a result of an XPath expression used in a `select` attribute in a transformation, has the same behavior as a node set from the XML Document Object Model (DOM).</span></span> <span data-ttu-id="1f237-111">您可以使用[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)中所顯示的一組方法來巡覽節點集，而不需像 result tree fragment 一樣使用 <xref:System.Xml.XPath.XPathNodeIterator> 進行巡覽。</span><span class="sxs-lookup"><span data-stu-id="1f237-111">You can navigate a node set using a set of methods shown in [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), unlike a result tree fragment or result tree fragment, which uses the <xref:System.Xml.XPath.XPathNodeIterator> for navigation.</span></span>  
+ <span data-ttu-id="dc86c-108">節點集是 XPath 運算式傳回的四種基本資料型別之一。</span><span class="sxs-lookup"><span data-stu-id="dc86c-108">Node sets are one of four basic data types that are returned from XPath expressions.</span></span> <span data-ttu-id="dc86c-109">節點集是一個沒有順序、不重複的節點集合，它依據文件的順序建立，可以指定給樣式表中的變數。</span><span class="sxs-lookup"><span data-stu-id="dc86c-109">A node set, which is an unordered collection of nodes without duplicates, created in document order, can be assigned to a variable in a style sheet.</span></span> <span data-ttu-id="dc86c-110">這個節點集是轉換中 `select` 屬性所使用之 XPath 運算式的結果，具有與 XML 文件物件模型 (DOM) 的節點集相同的行為。</span><span class="sxs-lookup"><span data-stu-id="dc86c-110">This node set, which is a result of an XPath expression used in a `select` attribute in a transformation, has the same behavior as a node set from the XML Document Object Model (DOM).</span></span> <span data-ttu-id="dc86c-111">您可以使用[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)中所顯示的一組方法來巡覽節點集，而不需像 result tree fragment 一樣使用 <xref:System.Xml.XPath.XPathNodeIterator> 進行巡覽。</span><span class="sxs-lookup"><span data-stu-id="dc86c-111">You can navigate a node set using a set of methods shown in [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), unlike a result tree fragment or result tree fragment, which uses the <xref:System.Xml.XPath.XPathNodeIterator> for navigation.</span></span>  
   
- <span data-ttu-id="1f237-112">下列程式碼範例說明，當樣式表中的 `variable` 或 `parameter` 項目評估為節點集時，應該如何反覆查看節點集。</span><span class="sxs-lookup"><span data-stu-id="1f237-112">The following code sample shows how to iterate over a node set when a `variable` or `parameter` element in a style sheet evaluates to a node set.</span></span>  
+ <span data-ttu-id="dc86c-112">下列程式碼範例說明，當樣式表中的 `variable` 或 `parameter` 項目評估為節點集時，應該如何反覆查看節點集。</span><span class="sxs-lookup"><span data-stu-id="dc86c-112">The following code sample shows how to iterate over a node set when a `variable` or `parameter` element in a style sheet evaluates to a node set.</span></span>  
   
-## <a name="style-sheet"></a><span data-ttu-id="1f237-113">樣式表</span><span class="sxs-lookup"><span data-stu-id="1f237-113">Style Sheet</span></span>  
+## <a name="style-sheet"></a><span data-ttu-id="dc86c-113">樣式表</span><span class="sxs-lookup"><span data-stu-id="dc86c-113">Style Sheet</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -40,7 +40,7 @@ ms.locfileid: "69962541"
 </xsl:stylesheet>  
 ```  
   
-## <a name="input"></a><span data-ttu-id="1f237-114">輸入</span><span class="sxs-lookup"><span data-stu-id="1f237-114">Input</span></span>  
+## <a name="input"></a><span data-ttu-id="dc86c-114">Input</span><span class="sxs-lookup"><span data-stu-id="dc86c-114">Input</span></span>  
   
 ```xml  
 <bookstore>  
@@ -58,9 +58,9 @@ ms.locfileid: "69962541"
 </bookstore>  
 ```  
   
-## <a name="output"></a><span data-ttu-id="1f237-115">Output</span><span class="sxs-lookup"><span data-stu-id="1f237-115">Output</span></span>  
+## <a name="output"></a><span data-ttu-id="dc86c-115">Output</span><span class="sxs-lookup"><span data-stu-id="dc86c-115">Output</span></span>  
   
-```  
+```output  
 ******  
 Seven Years in Trenton  
 ******  
@@ -74,8 +74,8 @@ History of Trenton Vol 3
 ******  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1f237-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1f237-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc86c-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dc86c-116">See also</span></span>
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
-- [<span data-ttu-id="1f237-117">使用 XslTransform 類別進行 XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="1f237-117">XSLT Transformations with the XslTransform Class</span></span>](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [<span data-ttu-id="1f237-118">XslTransform 類別實作 XSLT 處理器</span><span class="sxs-lookup"><span data-stu-id="1f237-118">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="dc86c-117">使用 XslTransform 類別進行 XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="dc86c-117">XSLT Transformations with the XslTransform Class</span></span>](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
+- [<span data-ttu-id="dc86c-118">XslTransform 類別實作 XSLT 處理器</span><span class="sxs-lookup"><span data-stu-id="dc86c-118">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
