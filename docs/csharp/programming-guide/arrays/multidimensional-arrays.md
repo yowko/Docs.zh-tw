@@ -15,7 +15,7 @@ ms.locfileid: "69597416"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>多維陣列 (C# 程式設計手冊)
 
-陣列可以有多個維度。 例如，下列宣告會建立具有四個資料列和兩個資料行的二維陣列。  
+陣列可以有多個維度。 例如，下列宣告會建立具有四個資料行和兩個資料列的二維陣列。  
   
  [!code-csharp[csProgGuideArrays#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#11)]  
   
