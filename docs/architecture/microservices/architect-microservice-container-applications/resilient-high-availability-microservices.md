@@ -2,12 +2,12 @@
 title: 微服務中的復原和高可用性
 description: 微服務必須設計為能夠承受暫時性的網路和相依性失敗，他們必須能夠復原才能達到高可用性。
 ms.date: 09/20/2018
-ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675055"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834344"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服務中的復原和高可用性
 
@@ -46,7 +46,7 @@ ms.locfileid: "68675055"
 
 當您建立微服務型應用程式時，您需要處理複雜性。 當然，單一的微服務很好處理，但是數十或數百種和成千上萬的微服務執行個體就是很複雜的問題。 這不僅是建置您的微服務架構而已，如果您想要擁有穩定且一致的系統，您還需要高可用性、可定址性、復原力、健康狀態及診斷。
 
-![協調器可提供用來執行您微服務的支援平台。](./media/image22.png)
+![提供微服務支援平臺的叢集圖表。](./media/resilient-high-availability-microservices/microservice-platform.png)
 
 **圖 4-22**。 微服務平台是應用程式健康狀態管理的基礎
 

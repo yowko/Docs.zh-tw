@@ -2,12 +2,12 @@
 title: 在組態檔中設定探索
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: c282767e686ac8a6382268aee8b45eb2d1297f5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ad44d0ad1f0d67d84cc42f6b9938d096c245417
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857515"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834754"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>在組態檔中設定探索
 探索中使用四個主要的組態設定群組。 本主題將簡要說明各群組，並且顯示如何設定這些群組的範例。 各節後面會有一個連結，可提供與各領域更為深入的文件。  
@@ -28,7 +28,7 @@ ms.locfileid: "61857515"
       </serviceBehaviors>  
 ```  
   
- 一旦您指定的行為，參考從 <`service`> 項目，如下列範例所示。  
+ 指定行為之後，請從 < `service` > 專案參考它，如下列範例所示。  
   
 ```xml  
 <system.serviceModel>  
@@ -46,7 +46,7 @@ ms.locfileid: "61857515"
   
  為了讓服務能夠探索，您還必須加入探索端點，上述範例即加入了 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 標準端點。  
   
- 當您加入公告端點時您也必須將公告接聽程式服務才能 <`services`> 項目，如下列範例所示。  
+ 當您加入公告端點時，也必須將公告接聽程式服務新增至 < `services` > 元素，如下列範例所示。  
   
 ```xml  
 <services>  
@@ -137,7 +137,7 @@ ms.locfileid: "61857515"
 </behavior>  
 ```  
   
- 如需詳細資訊<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>並<xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>請參閱[WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。  
+ 如需 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 和 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 的詳細資訊，請參閱[WCF 探索總覽](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。  
   
 ## <a name="binding-element-configuration"></a>繫結項目組態  
  繫結項目組態是用戶端上最有趣的一部分。 您可以使用組態指定尋找準則，用來從 WCF 用戶端應用程式探索服務。  下列範例會建立使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 通道的自訂繫結，並指定包含型別和範圍的尋找準則。 此外，還會指定 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 和 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 屬性的值。  
@@ -177,10 +177,10 @@ ms.locfileid: "61857515"
     </client>  
 ```  
   
- 如需尋找準則的詳細資訊請參閱 <<c0> [ 探索尋找與尋找準則](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。 如需有關探索和繫結項目，請參閱 < [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ 如需尋找準則的詳細資訊[，請參閱探索尋找和尋找準則](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。 如需探索和繫結項目的詳細資訊，請參閱[WCF 探索總覽](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>標準端點組態  
- 標準端點是預先定義的端點，其中包含一個或多個屬性 (位址、繫結或合約) 的預設值，或是不可變更的一個或多個屬性值。 .NET 4 隨附 3 個探索相關的標準端點：<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>、<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 和 <xref:System.ServiceModel.Discovery.DynamicEndpoint>。  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 是為透過 UDP 多點傳送繫結的探索作業而預先設定的標準端點。 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 是為透過 UDP 繫結傳送公告訊息而預先設定的標準端點。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是在執行階段使用探索動態尋找已探索服務之端點位址的標準端點。  標準繫結所指定的 <`endpoint`> 元素，其中包含指定的標準端點加入至類型的某種屬性。 下列範例示範如何加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 和 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>。  
+ 標準端點是預先定義的端點，其中包含一個或多個屬性 (位址、繫結或合約) 的預設值，或是不可變更的一個或多個屬性值。 .NET 4 隨附 3 個探索相關的標準端點：<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>、<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 和 <xref:System.ServiceModel.Discovery.DynamicEndpoint>。  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 是為透過 UDP 多點傳送繫結的探索作業而預先設定的標準端點。 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 是為透過 UDP 繫結傳送公告訊息而預先設定的標準端點。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是在執行階段使用探索動態尋找已探索服務之端點位址的標準端點。  標準系結是使用 < `endpoint` > 元素所指定，其中包含指定要加入之標準端點類型的 kind 屬性。 下列範例示範如何加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 和 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>。  
   
 ```xml  
 <services>  
@@ -194,7 +194,7 @@ ms.locfileid: "61857515"
 </services>  
 ```  
   
- 中所設定的標準端點 <`standardEndpoints`> 項目。 下列範例示範如何設定 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 和 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>。  
+ 標準端點會在 < `standardEndpoints` > 元素中設定。 下列範例示範如何設定 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 和 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>。  
   
 ```xml  
 <standardEndpoints>  
@@ -226,7 +226,7 @@ ms.locfileid: "61857515"
       </udpDiscoveryEndpoint>  
 ```  
   
- 一旦您已新增標準端點組態，參考中的組態 <`endpoint`> 針對每個端點，如下列範例所示的項目。  
+ 新增標準端點設定後，請參考每個端點之 < `endpoint` > 元素中的設定，如下列範例所示。  
   
 ```xml  
 <services>  
@@ -269,4 +269,4 @@ ms.locfileid: "61857515"
 </system.ServiceModel>  
 ```  
   
- 如需標準端點的詳細資訊，請參閱[標準端點](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ 如需標準端點的詳細資訊，請參閱[標準端點](standard-endpoints.md)。

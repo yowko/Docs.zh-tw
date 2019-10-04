@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 40c1b98f82fe53819edc437bbac575c1df206496
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046248"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834533"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳作法
 
@@ -101,11 +101,11 @@ CLR 不需要額外的程式碼就可以清除執行階段可呼叫包裝函式 
 
 使用 <xref:System.Runtime.InteropServices.SafeHandle> 來封裝作業系統資源。 請不要使用 <xref:System.Runtime.InteropServices.HandleRef> 或是類型 <xref:System.IntPtr> 的欄位。
 
-### <a name="ensure-finalizers-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>確定不需要執行完成項即可避免作業系統資源流失
+### <a name="ensure-finalizers-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>確保完成項不需要執行，以防止作業系統資源流失
 
 請小心地檢閱完成項，確保即使它們未執行，重要作業系統資源也不會流失。  與應用程式以穩定狀態執行或 SQL Server 這類伺服器關閉時的一般 <xref:System.AppDomain> 卸載不同，在突然 <xref:System.AppDomain> 卸載期間不會完成物件。  因為無法保證應用程式正確性，所以請確定資源未在突然卸載時流失，但必須透過未流失資源來維護伺服器完整性。  使用 <xref:System.Runtime.InteropServices.SafeHandle> 來釋放任何作業系統資源。
 
-### <a name="ensure-that-finally-clauses-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>確定不需要執行 finally 子句即可避免作業系統資源流失
+### <a name="ensure-that-finally-clauses-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>請確定 finally 子句不需要執行，以防止作業系統資源流失
 
 `finally` 子句不一定會在 CER 外部執行，需要程式庫開發人員不依賴 `finally` 區塊內的程式碼來釋放 Unmanaged 資源。  使用 <xref:System.Runtime.InteropServices.SafeHandle> 是建議的解決方案。
 
@@ -113,7 +113,7 @@ CLR 不需要額外的程式碼就可以清除執行階段可呼叫包裝函式 
 
 請使用 <xref:System.Runtime.InteropServices.SafeHandle> 來清除作業系統資源，而非 `Finalize`。 請不要使用 <xref:System.IntPtr>；請使用 <xref:System.Runtime.InteropServices.SafeHandle> 來封裝資源。 如果必須執行 finally 子句，請將它放在 CER 中。
 
-### <a name="all-locks-should-go-through-existing-managed-locking-code"></a>所有鎖定都應該透過現有 Managed 鎖定程式碼
+### <a name="all-locks-should-go-through-existing-managed-locking-code"></a>所有鎖定都應該通過現有的受控鎖定程式碼
 
 CLR 必須知道程式碼何時處於鎖定，才能知道要卸除 <xref:System.AppDomain>，而不只是中止執行緒。  中止執行緒可能十分危險，因為執行緒所操作的資料可能處於不一致的狀態。 因此，必須回收整個 <xref:System.AppDomain>。  無法識別鎖定的結果可以是發生死結或結果不正確。 使用 <xref:System.Threading.Thread.BeginCriticalRegion%2A> 和 <xref:System.Threading.Thread.EndCriticalRegion%2A> 方法來識別鎖定區域。  它們是 <xref:System.Threading.Thread> 類別上只套用至目前執行緒的靜態方法，有助於防止某個執行緒編輯另一個執行緒的鎖定計數。
 
@@ -125,23 +125,23 @@ CLR 必須知道程式碼何時處於鎖定，才能知道要卸除 <xref:System
 
 使用 <xref:System.Threading.Thread.BeginCriticalRegion%2A> 和 <xref:System.Threading.Thread.EndCriticalRegion%2A> 來標示並識別所有鎖定。 請不要在迴圈中使用 <xref:System.Threading.Interlocked.CompareExchange%2A>、<xref:System.Threading.Interlocked.Increment%2A> 和 <xref:System.Threading.Interlocked.Decrement%2A>。  請不要對這些方法的 Win32 變體執行平台叫用。  請不要在迴圈中使用 <xref:System.Threading.Thread.Sleep%2A>。  請不要使用 Volatile 欄位。
 
-### <a name="cleanup-code-must-be-in-a-finally-or-a-catch-block-not-following-a-catch"></a>清除程式碼必須位在 finally 或 catch 區塊中，不能跟在 catch 後面
+### <a name="cleanup-code-must-be-in-a-finally-or-a-catch-block-not-following-a-catch"></a>清除程式碼必須位於 finally 或 catch 區塊中，而不是在 catch 之後
 
-清除程式碼的後面絕對不應該是 `catch` 區塊；它應該位在 `finally` 或 `catch` 區塊本身中。  這應該是一般不錯的做法。  一般偏好使用 `finally` 區塊，因為它在擲回例外狀況以及正常發現 `try` 區塊結尾時執行相同的程式碼。  如果擲回未預期的例外狀況 (例如 <xref:System.Threading.ThreadAbortException>)，則不會執行清除程式碼。  在理想狀況下，任何將在 `finally` 中清除的 Unmanaged 資源都應該包裝在 <xref:System.Runtime.InteropServices.SafeHandle> 中，以防止外洩。  請注意，可以有效地使用 C# `using` 關鍵字來處置物件，包含控制代碼。
+清除程式碼的後面絕對不應該是 `catch` 區塊；它應該位在 `finally` 或 `catch` 區塊本身中。 這應該是一般不錯的做法。 一般偏好使用 `finally` 區塊，因為它在擲回例外狀況以及正常發現 `try` 區塊結尾時執行相同的程式碼。  如果擲回未預期的例外狀況 (例如 <xref:System.Threading.ThreadAbortException>)，則不會執行清除程式碼。  在理想狀況下，任何將在 `finally` 中清除的 Unmanaged 資源都應該包裝在 <xref:System.Runtime.InteropServices.SafeHandle> 中，以防止外洩。  請注意，可以有效地使用 C# `using` 關鍵字來處置物件，包含控制代碼。
 
-雖然 <xref:System.AppDomain> 回收可以清除完成項執行緒上的資源，但還是需要將清除程式碼放在正確的位置。  請注意，如果執行緒收到非同步例外狀況，但未持有鎖定，則 CLR 會嘗試結束執行緒本身，而不需要回收 <xref:System.AppDomain>。  確保更快清除資源而不是更慢清除資源會有所幫助，原因是提供更多資源，而且更恰當地管理存留期。  如果您未在某個錯誤碼路徑中明確地關閉檔案的控制代碼，則請等待 <xref:System.Runtime.InteropServices.SafeHandle> 完成項將它清除。程式碼下次執行時可能會失敗。如果尚未執行完成項，請嘗試存取完全相同的檔案。  基於這個原因，確保清除程式碼已存在並且正確運作，協助更乾淨且更快速地復原失敗，即使不是絕對必要也是一樣。
+雖然 <xref:System.AppDomain> 回收可以清除完成項執行緒上的資源，但還是需要將清除程式碼放在正確的位置。 請注意，如果執行緒收到非同步例外狀況，但未持有鎖定，則 CLR 會嘗試結束執行緒本身，而不需要回收 <xref:System.AppDomain>。  確保更快清除資源而不是更慢清除資源會有所幫助，原因是提供更多資源，而且更恰當地管理存留期。 如果您未在某個錯誤碼路徑中明確地關閉檔案的控制代碼，則請等待 <xref:System.Runtime.InteropServices.SafeHandle> 完成項將它清除。程式碼下次執行時可能會失敗。如果尚未執行完成項，請嘗試存取完全相同的檔案。  基於這個原因，確保清除程式碼已存在並且正確運作，協助更乾淨且更快速地復原失敗，即使不是絕對必要也是一樣。
 
 #### <a name="code-analysis-rule"></a>程式碼分析規則
 
-`catch` 後面的清除程式碼需要位在 `finally` 區塊中。 將處置呼叫放在 finally 區塊中。  `catch` 區塊應該結束於 throw 或 rethrow 中。  雖然會有一些例外狀況，例如偵測是否可在可能收到任何大量例外狀況的位置建立網路連線的程式碼，但是在正常情況下需要攔截數個例外狀況的任何程式碼都應該指出應測試程式碼確認它是否成功。
+`catch` 後面的清除程式碼需要位在 `finally` 區塊中。 將處置呼叫放在 finally 區塊中。 `catch` 區塊應該結束於 throw 或 rethrow 中。 雖然會有一些例外狀況，例如偵測是否可在可能收到任何大量例外狀況的位置建立網路連線的程式碼，但是在正常情況下需要攔截數個例外狀況的任何程式碼都應該指出應測試程式碼確認它是否成功。
 
-### <a name="process-wide-mutable-shared-state-between-application-domains-should-be-eliminated-or-use-a-constrained-execution-region"></a>應用程式定義域之間的整個處理序可變動共用狀態應該予以排除，或使用限制的執行區域
+### <a name="process-wide-mutable-shared-state-between-application-domains-should-be-eliminated-or-use-a-constrained-execution-region"></a>應用程式域之間的整個進程可變動共用狀態應會被排除，或使用限制的執列區域
 
 如簡介中所述，可能很難撰寫 Managed 程式碼，以可靠方式監視跨應用程式定義域的整個處理序共用狀態。  整個處理序共用狀態是在 Win32 程式碼中、CLR 內或使用遠端處理的 Managed 程式碼中應用程式定義域之間共用的任何一種資料結構。  很難使用 Managed 程式碼正確撰寫任何可變動共用狀態，而且撰寫任何靜態共用狀態都必須特別小心。  如果您有整個處理序或整部電腦共用狀態，請找到某種方法，以使用限制的執行區域 (CER) 排除它或保護共用狀態。  請注意，具有未識別和更正之共用狀態的任何程式庫都可能會讓需要全新 <xref:System.AppDomain> 卸載的主機 (例如 SQL Server) 當機。
 
 如果程式碼使用 COM 物件，請避免在應用程式定義域之間共用該 COM 物件。
 
-### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>鎖定在整個處理序或是應用程式定義域之間未運作。
+### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>鎖定無法整個進程或在應用程式域之間工作。
 
 過去，使用 <xref:System.Threading.Monitor.Enter%2A> 和 [lock 陳述式](../../csharp/language-reference/keywords/lock-statement.md)來建立全域處理序鎖定。  例如，鎖定 <xref:System.AppDomain> 敏捷式類別時會發生這種情況，例如非共用組件中的 <xref:System.Type> 執行個體、<xref:System.Threading.Thread> 物件、實習字串，以及使用遠端處理跨應用程式定義域共用的一些字串。  這些鎖定不再是針對整個處理序。  若要識別整個處理序應用程式間網域鎖定的目前狀態，請判斷鎖定內的程式碼是否使用任何外部持續性資源，例如磁碟上或可能是資料庫上的檔案。
 
@@ -195,7 +195,7 @@ public static MyClass SingletonProperty
 }
 ```
 
-#### <a name="a-note-about-lockthis"></a>Lock(this) 的注意事項
+#### <a name="a-note-about-lockthis"></a>關於鎖定的注意事項（this）
 
 通常可以接受鎖定可公開存取的個別物件。  不過，如果物件是可能造成整個子系統發生死結的單一物件，也請考慮使用上述設計模式。  例如，一個 <xref:System.Security.SecurityManager> 物件上的鎖定可能會造成 <xref:System.AppDomain> 內發生死結，導致整個 <xref:System.AppDomain> 無法使用。 最好不要鎖定這類型的可公開存取物件。  不過，鎖定個別集合或陣列通常應該不會產生問題。
 
@@ -203,7 +203,7 @@ public static MyClass SingletonProperty
 
 請不要鎖定跨應用程式定義域使用的類型，或不要有強烈的身分識別感。 請不要在 <xref:System.Type>、<xref:System.Reflection.MethodInfo>、<xref:System.Reflection.PropertyInfo>、<xref:System.String>、<xref:System.ValueType>、<xref:System.Threading.Thread> 或任何衍生自 <xref:System.MarshalByRefObject> 的物件上呼叫 <xref:System.Threading.Monitor.Enter%2A>。
 
-### <a name="remove-gckeepalive-calls"></a>移除 GC.KeepAlive 呼叫
+### <a name="remove-gckeepalive-calls"></a>移除 GC。KeepAlive 呼叫
 
 大量的現有程式碼不會在應該使用時使用 <xref:System.GC.KeepAlive%2A>，或在不適當時使用它。  轉換至 <xref:System.Runtime.InteropServices.SafeHandle> 之後，類別不需要呼叫 <xref:System.GC.KeepAlive%2A>，並假設它們沒有完成項但依賴 <xref:System.Runtime.InteropServices.SafeHandle> 來完成作業系統控制代碼。  雖然重新訓練 <xref:System.GC.KeepAlive%2A> 呼叫的效能成本可能微不足道，但感知 <xref:System.GC.KeepAlive%2A> 呼叫是必要的或足以解決可能不再存在的存留期問題，都會讓程式碼更難維護。  不過，使用 COM Interop CLR 可呼叫包裝函式 (RCW) 時，程式碼仍然需要 <xref:System.GC.KeepAlive%2A>。
 
@@ -211,7 +211,7 @@ public static MyClass SingletonProperty
 
 移除 <xref:System.GC.KeepAlive%2A>。
 
-### <a name="use-the-host-protection-attribute"></a>使用主機保護屬性
+### <a name="use-the-hostprotection-attribute"></a>使用 HostProtection 屬性
 
 <xref:System.Security.Permissions.HostProtectionAttribute> (HPA) 使用宣告式安全性動作來決定主機保護需求，甚至讓主機防止完全信任的程式碼呼叫不適用於指定主機的特定方法，例如 SQL Server 是 <xref:System.Environment.Exit%2A> 或 <xref:System.Windows.Forms.MessageBox.Show%2A>。
 
@@ -239,7 +239,7 @@ HPA 只會影響裝載 Common Language Runtime 以及實作主機保護的 Unman
 
 針對 SQL Server，用來介紹同步處理或執行緒處理的所有方法都必須使用 HPA 進行識別。 這包含共用狀態、已同步處理或管理外部處理序的方法。 可影響 SQL Server 的 <xref:System.Security.Permissions.HostProtectionResource> 值是 <xref:System.Security.Permissions.HostProtectionResource.SharedState>、<xref:System.Security.Permissions.HostProtectionResource.Synchronization> 和 <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt>。 不過，HPA 應該識別任何 <xref:System.Security.Permissions.HostProtectionResource> 所公開的任何方法，而不只是使用會影響 SQL 之資源的方法。
 
-### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>不要透過 Unmanaged 程式碼無限期封鎖
+### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>不要無限期地封鎖未受管理的程式碼
 
 因為 CLR 無法中止執行緒，所以使用 Unmanaged 程式碼進行封鎖可能會導致拒絕服務攻擊，而不是使用 Managed 程式碼進行封鎖。  已封鎖的執行緒會防止 CLR 卸載 <xref:System.AppDomain>，至少不執行一些非常不安全的作業。  使用 Windows 同步處理原始物件進行封鎖，是我們無法允許的一個明確範例。  如果可能的話，應該`ReadFile`避免在對通訊端的呼叫中封鎖，在理想的情況下，Windows API 應該提供一種機制，讓這類作業的運作時間。
 
@@ -251,11 +251,11 @@ HPA 只會影響裝載 Common Language Runtime 以及實作主機保護的 Unman
 
 沒有使用 Unmanaged 程式碼之逾時的封鎖是拒絕服務攻擊。 請不要對 `WaitForSingleObject`、`WaitForSingleObjectEx`、`WaitForMultipleObjects`、`MsgWaitForMultipleObjects` 和 `MsgWaitForMultipleObjectsEx` 執行平台叫用呼叫。  請不要使用 NMPWAIT_WAIT_FOREVER。
 
-### <a name="identify-any-sta-dependent-features"></a>識別任何 STA 相依功能。
+### <a name="identify-any-sta-dependent-features"></a>識別任何與 STA 相關的功能
 
 識別任何使用 COM 單一執行緒 Apartment (STA) 的程式碼。  在 SQL Server 處理序中，已停用 STA。  在 SQL Server 內，必須停用與 `CoInitialize` 相依的功能 (例如效能計數器或剪貼簿)。
 
-### <a name="ensure-finalizers-are-free-of-synchronization-problems"></a>確定完成項沒有同步處理問題
+### <a name="ensure-finalizers-are-free-of-synchronization-problems"></a>確保完成項不受同步處理問題的歡迎
 
 多個完成項執行緒可能存在於 .NET Framework 的未來版本中，這表示會同時執行相同類型之不同執行個體的完成項。  它們不需要完全具備執行緒安全；記憶體回收行程保證只有一個執行緒將執行所指定物件執行個體的完成項。  不過，完成項同時在多個不同的物件執行個體上執行時必須進行編碼，才能避免競爭情況和死結。  在完成項中使用任何外部狀態時 (例如寫入記錄檔)，必須處理執行緒問題。  請不要依賴可提供安全執行緒的最終處理。 請不要使用執行緒區域儲存區 (Managed 或原生)，將狀態儲存在完成項執行緒上。
 
@@ -263,15 +263,15 @@ HPA 只會影響裝載 Common Language Runtime 以及實作主機保護的 Unman
 
 完成項必須沒有同步處理問題。 請不要在完成項中使用靜態可變動狀態。
 
-### <a name="avoid-unmanaged-memory-if-possible"></a>盡可能避免 Unmanaged 記憶體
+### <a name="avoid-unmanaged-memory-if-possible"></a>盡可能避免非受控記憶體
 
 Unmanaged 記憶體可能會流失，就像作業系統控制代碼一樣。 可能的話，請嘗試使用 [stackalloc](../../csharp/language-reference/operators/stackalloc.md) 或釘選 Managed 物件 (例如 [fixed 陳述式](../../csharp/language-reference/keywords/fixed-statement.md)或使用 byte[] 的 <xref:System.Runtime.InteropServices.GCHandle>) 來使用堆疊上的記憶體。 <xref:System.GC> 最後會清除這些項目。 不過，如果您必須配置 Unmanaged 記憶體，請考慮使用衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 的類別來包裝記憶體配置。
 
-請注意，在至少一種情況下，<xref:System.Runtime.InteropServices.SafeHandle> 不足。  針對配置或釋放記憶體的 COM 方法呼叫，其中一個 DLL 通常會透過 `CoTaskMemAlloc` 來配置記憶體，另一個 DLL 則使用 `CoTaskMemFree` 來釋放該記憶體。  不適合在這些位置使用 <xref:System.Runtime.InteropServices.SafeHandle>，因為它會嘗試將 Unmanaged 記憶體的存留期繫結至 <xref:System.Runtime.InteropServices.SafeHandle> 的存留期，而不是允許另一個 DLL 控制記憶體的存留期。
+請注意，在至少一種情況下，<xref:System.Runtime.InteropServices.SafeHandle> 不足。 針對配置或釋放記憶體的 COM 方法呼叫，其中一個 DLL 通常會透過 `CoTaskMemAlloc` 來配置記憶體，另一個 DLL 則使用 `CoTaskMemFree` 來釋放該記憶體。  不適合在這些位置使用 <xref:System.Runtime.InteropServices.SafeHandle>，因為它會嘗試將 Unmanaged 記憶體的存留期繫結至 <xref:System.Runtime.InteropServices.SafeHandle> 的存留期，而不是允許另一個 DLL 控制記憶體的存留期。
 
-### <a name="review-all-uses-of-catchexception"></a>檢閱所有使用的 catch(Exception)
+### <a name="review-all-uses-of-catchexception"></a>檢查 catch 的所有用法（例外狀況）
 
-擷取所有例外狀況 (而非一個特定例外狀況) 的 catch 區塊現在也會擷取非同步例外狀況。  檢查每個 catch(Exception) 區塊，以尋找沒有可能跳過的重要資源釋放或退出程式碼，以及處理 <xref:System.Threading.ThreadAbortException>、<xref:System.StackOverflowException> 或 <xref:System.OutOfMemoryException> 的 catch 區塊本身內可能不正確的行為。  請注意，此程式碼可能會記錄或進行一些假設，這些假設是只能看到某些例外狀況，或者僅針對一種特殊原因，只要發生例外狀況就失敗。  這些假設可能需要進行更新，以包含 <xref:System.Threading.ThreadAbortException>。
+擷取所有例外狀況 (而非一個特定例外狀況) 的 catch 區塊現在也會擷取非同步例外狀況。 檢查每個 catch(Exception) 區塊，以尋找沒有可能跳過的重要資源釋放或退出程式碼，以及處理 <xref:System.Threading.ThreadAbortException>、<xref:System.StackOverflowException> 或 <xref:System.OutOfMemoryException> 的 catch 區塊本身內可能不正確的行為。  請注意，此程式碼可能會記錄或進行一些假設，這些假設是只能看到某些例外狀況，或者僅針對一種特殊原因，只要發生例外狀況就失敗。  這些假設可能需要進行更新，以包含 <xref:System.Threading.ThreadAbortException>。
 
 請考慮變更可擷取所有例外狀況的所有位置，而這些例外狀況是在擷取您預期要擲回之特定類型的例外狀況時發生，例如字串格式化方法的 <xref:System.FormatException>。  這會防止對非預期的例外狀況執行 catch 區塊，並且有助於確保程式碼因擷取到非預期的例外狀況而未隱藏 Bug。  因為一般規則絕不會處理程式庫程式碼中的例外狀況 (需要您擷取例外狀況的程式碼，可能指出所呼叫程式碼中的設計缺陷)。  在某些情況下，您可能想要擷取例外狀況，並擲回不同的例外狀況類型來提供更多資料。  在此情況下，請使用巢狀例外狀況，並將真正失敗原因儲存至新例外狀況的 <xref:System.Exception.InnerException%2A> 屬性中。
 
@@ -279,11 +279,11 @@ Unmanaged 記憶體可能會流失，就像作業系統控制代碼一樣。 可
 
 檢閱所有使用 Managed 程式碼並擷取所有物件或擷取所有例外狀況的 catch 區塊。  在C#中，這表示會`catch`同時`catch(Exception)` {}標記和{}。  請考慮將例外狀況類型設為極為特別，或檢閱程式碼，確保它在擷取到非預期的例外狀況類型時不會以錯誤的方式操作。
 
-### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假設 Managed 執行緒是 Win32 執行緒 - 它是 Fiber
+### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假設受控執行緒是 Win32 執行緒–它是一個光纖
 
-使用 Managed 執行緒區域儲存區確實會運作，但您可能不會使用 Unmanaged 執行緒區域儲存區，或假設程式碼將再次於目前作業系統執行緒上執行。  請不要變更執行緒地區設定這類設定。  請不要透過平台叫用呼叫 `InitializeCriticalSection` 或 `CreateMutex`，因為它們需要進入鎖定的作業系統執行緒一併結束鎖定。  因為這不是使用 Fiber 的情況，所以 Win32 關鍵區段和 Mutex 不能直接用於 SQL 中。  請注意，Managed <xref:System.Threading.Mutex> 類別未處理這些執行緒親和性考量。
+使用 Managed 執行緒區域儲存區確實會運作，但您可能不會使用 Unmanaged 執行緒區域儲存區，或假設程式碼將再次於目前作業系統執行緒上執行。 請不要變更執行緒地區設定這類設定。 請不要透過平台叫用呼叫 `InitializeCriticalSection` 或 `CreateMutex`，因為它們需要進入鎖定的作業系統執行緒一併結束鎖定。 因為這不是使用 Fiber 的情況，所以 Win32 關鍵區段和 Mutex 不能直接用於 SQL 中。  請注意，Managed <xref:System.Threading.Mutex> 類別未處理這些執行緒親和性考量。
 
-您可以在 Managed <xref:System.Threading.Thread> 物件上安全地使用大部分狀態，包含 Managed 執行緒區域儲存區和執行緒的目前 UI 文化特性 (Culture)。  您也可以使用 <xref:System.ThreadStaticAttribute>，只讓目前 Managed 執行緒存取現有靜態變數的值 (這是在 CLR 中執行 Fiber 本機儲存體的另一種方式)。  基於程式設計模型考量，在 SQL 中執行時，您不可以變更執行緒的目前文化特性。
+您可以在 Managed <xref:System.Threading.Thread> 物件上安全地使用大部分狀態，包含 Managed 執行緒區域儲存區和執行緒的目前 UI 文化特性 (Culture)。 您也可以使用 <xref:System.ThreadStaticAttribute>，只讓目前 Managed 執行緒存取現有靜態變數的值 (這是在 CLR 中執行 Fiber 本機儲存體的另一種方式)。 基於程式設計模型考量，在 SQL 中執行時，您不可以變更執行緒的目前文化特性。
 
 #### <a name="code-analysis-rule"></a>程式碼分析規則
 
@@ -297,7 +297,7 @@ SQL Server 會以 Fiber 模式執行；請不要使用執行緒區域儲存區�
 
 讓 SQL Server 處理模擬。 請不要使用 `RevertToSelf`、`ImpersonateAnonymousToken`、`DdeImpersonateClient`、`ImpersonateDdeClientWindow`、`ImpersonateLoggedOnUser`、`ImpersonateNamedPipeClient`、`ImpersonateSelf`、`RpcImpersonateClient`、`RpcRevertToSelf``RpcRevertToSelfEx` 或 `SetThreadToken`。
 
-### <a name="do-not-call-threadsuspend"></a>不要呼叫 Thread::Suspend
+### <a name="do-not-call-threadsuspend"></a>不要呼叫 Thread：：暫止
 
 暫止執行緒的能力可能顯示為簡單作業，但可能會造成死結。  如果持有鎖定的執行緒是由第二個執行緒所暫止，然後第二個執行緒嘗試採用相同的鎖定，即會發生死結。  <xref:System.Threading.Thread.Suspend%2A> 目前可能會干擾安全性、類別載入、遠端處理和反映。
 
@@ -305,7 +305,7 @@ SQL Server 會以 Fiber 模式執行；請不要使用執行緒區域儲存區�
 
 請不要呼叫 <xref:System.Threading.Thread.Suspend%2A>。 請考慮改成使用實際同步處理原始物件，例如 <xref:System.Threading.Semaphore> 或 <xref:System.Threading.ManualResetEvent>。
 
-### <a name="protect-critical-operations-with-constrained-execution-regions-and-reliability-contracts"></a>使用限制的執行區域和可靠性合約保護重要作業
+### <a name="protect-critical-operations-with-constrained-execution-regions-and-reliability-contracts"></a>使用受限制的執列區域和可靠性合約來保護重要作業
 
 執行可更新共用狀態或需要確定完全成功或完全失敗的複雜作業時，請確定它受到限制的執行區域 (CER) 的保護。 這保證程式碼可以在所有情況下執行，即使突然執行緒中止或突然 <xref:System.AppDomain> 卸載也是一樣。
 

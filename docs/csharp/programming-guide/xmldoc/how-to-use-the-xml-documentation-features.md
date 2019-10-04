@@ -1,19 +1,19 @@
 ---
-title: 作法：使用 XML 文件功能 - C# 程式設計指南
+title: HOW TO：使用 XML 文件功能 - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 259f0d5e7e1a67a273bccc7847c38a4d694c69ba
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588100"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834168"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>作法：使用 XML 文件功能
+# <a name="how-to-use-the-xml-documentation-features"></a>HOW TO：使用 XML 文件功能
 
 下列範例提供已記載之類型的基本概觀。
 
@@ -137,3 +137,5 @@ XML 文件是以 /// 開頭。 當您建立新的專案時，精靈會為您在�
 - [C# 程式設計指南](../index.md)
 - [/doc (C# 編譯器選項)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [XML 文件註解](./index.md)
+- [DocFX 檔處理器](https://dotnet.github.io/docfx/)
+- [Sandcastle 這類檔處理器](https://github.com/EWSoftware/SHFB)

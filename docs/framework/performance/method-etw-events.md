@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046379"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834557"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 
@@ -36,7 +36,7 @@ CLR 方法事件會進一步細分為下列：
 
 ## <a name="clr-method-events"></a>方法事件
 
-下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。
+下表說明關鍵字和層級。 如需詳細資訊，請參閱[CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)。
 
 |引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
@@ -45,16 +45,16 @@ CLR 方法事件會進一步細分為下列：
 |`JitRundownKeyword` (0x10) 取消提供者|告知性 (4)|
 |`NGENRundownKeyword` (0x20) 取消提供者|告知性 (4)|
 
-下表說明事件資訊。
+下表說明事件資訊：
 
-|Event - 事件|事件 ID|說明|
+|Event - 事件|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|在 Just-In-Time 載入 (JIT 載入) 方法或 NGEN 映像載入時引發。 動態和泛型的方法並不會使用這個版本的方法載入。 JIT Helper 永遠不會使用這個版本。|
 |`MethodUnLoad_V1`|137|在模組已卸載或應用程式定義域損毀時引發。 動態方法永遠不會使用這個版本的方法卸載。|
 |`MethodDCStart_V1`|137|於啟動取消期間列舉方法。|
 |`MethodDCEnd_V1`|138|於結束取消期間列舉方法。|
 
-下表說明事件資料。
+下表說明事件資料：
 
 |欄位名稱|資料類型|描述|
 |----------------|---------------|-----------------|
@@ -74,7 +74,7 @@ CLR 方法事件會進一步細分為下列：
 
 只有在取消提供者下會引發這些事件。 它們表示在啟動或結束取消期間的方法列舉結尾。 (也就是說，啟用 `NGENRundownKeyword`、 `JitRundownKeyword`、 `LoaderRundownKeyword`、或 `AppDomainResourceManagementRundownKeyword` 關鍵字時會將其引發。)
 
-下表說明關鍵字和層級。
+下表說明關鍵字和層級：
 
 |引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
@@ -82,7 +82,7 @@ CLR 方法事件會進一步細分為下列：
 |`JitRundownKeyword` (0x10) 取消提供者|告知性 (4)|
 |`NGENRundownKeyword` (0x20) 取消提供者|告知性 (4)|
 
-下表說明事件資訊。
+下表說明事件資訊：
 
 |Event - 事件|事件 ID|描述|
 |-----------|--------------|----------------|
@@ -91,7 +91,7 @@ CLR 方法事件會進一步細分為下列：
 |`DCEndInit_V1`|148|在結束取消期間、開始列舉之前傳送。|
 |`DCEndComplete_V1`|146|在結束取消期間、列舉結尾時傳送。|
 
-下表說明事件資料。
+下表說明事件資料：
 
 |欄位名稱|資料類型|描述|
 |----------------|---------------|-----------------|
@@ -103,7 +103,7 @@ CLR 方法事件會進一步細分為下列：
 
 ## <a name="clr-method-verbose-events"></a>CLR 方法詳細資料事件
 
-下表說明關鍵字和層級。
+下表說明關鍵字和層級：
 
 |引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
@@ -112,7 +112,7 @@ CLR 方法事件會進一步細分為下列：
 |`JitRundownKeyword` (0x10) 取消提供者|詳細資訊 (5)|
 |`NGENRundownKeyword` (0x20) 取消提供者|詳細資訊 (5)|
 
-下表說明事件資訊。
+下表說明事件資訊：
 
 |Event - 事件|事件 ID|描述|
 |-----------|--------------|-----------------|
@@ -121,7 +121,7 @@ CLR 方法事件會進一步細分為下列：
 |`MethodDCStartVerbose_V1`|141|於啟動取消期間列舉方法。|
 |`MethodDCEndVerbose_V1`|142|於結束取消期間列舉方法。|
 
-下表說明事件資料。
+下表說明事件資料：
 
 |欄位名稱|資料類型|描述|
 |----------------|---------------|-----------------|
@@ -142,7 +142,7 @@ CLR 方法事件會進一步細分為下列：
 
 ## <a name="methodjittingstarted-event"></a>MethodJittingStarted 事件
 
-下表說明關鍵字和層級。
+下表說明關鍵字和層級：
 
 |引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
@@ -151,13 +151,13 @@ CLR 方法事件會進一步細分為下列：
 |`JitRundownKeyword` (0x10) 取消提供者|詳細資訊 (5)|
 |`NGENRundownKeyword` (0x20) 取消提供者|詳細資訊 (5)|
 
-下表說明事件資訊。
+下表說明事件資訊：
 
-|Event - 事件|事件 ID|說明|
+|Event - 事件|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|當某個方法正在進行 JIT 編譯時引發。|
 
-下表說明事件資料。
+下表說明事件資料：
 
 |欄位名稱|資料類型|描述|
 |----------------|---------------|-----------------|

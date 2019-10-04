@@ -2,20 +2,20 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 993e71e6fee2e18806da789bdb10a488337d030f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2334a30009d6bef9544d2ca1e0ab923a7441d6f2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250944"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833823"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 指定[SELECT](select-entity-sql.md)語句中使用的集合。
 
 ## <a name="syntax"></a>語法
 
-```
-FROM expression [ ,...n ] as C
+```sql
+FROM expression [ ,...n ] AS C
 ```
 
 ## <a name="arguments"></a>引數
@@ -51,7 +51,7 @@ LOB.Customers
 
 ### <a name="join-from-clause-item"></a>JOIN FROM 子句項目
 
-`JOIN FROM` 子句項目代表介於兩個 `FROM` 子句項目之間的聯結。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援交叉聯結、內部聯結、左右外部連結，以及完整外部連結。 這些聯結的支援方式類似 Transact-sql 中支援的聯結。 如同在 transact-sql 中，包含`FROM` `JOIN`在中的兩個子句專案必須是獨立的。 也就是不能相互關聯。 `CROSS APPLY` 或 `OUTER APPLY` 適用於這些案例。
+`JOIN FROM` 子句項目代表介於兩個 `FROM` 子句項目之間的聯結。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援交叉聯結、內部聯結、左右外部連結，以及完整外部連結。 這些聯結的支援方式類似 Transact-sql 中支援的聯結。 如同在 Transact-sql 中，包含在 `JOIN` 中的兩個 @no__t 0 子句專案必須是獨立的。 也就是不能相互關聯。 `CROSS APPLY` 或 `OUTER APPLY` 適用於這些案例。
 
 #### <a name="cross-joins"></a>交叉聯結
 
@@ -103,10 +103,10 @@ LOB.Customers
 `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`
 
 > [!NOTE]
-> 與 Transact-sql 不同的是，在中[!INCLUDE[esql](../../../../../../includes/esql-md.md)]不需要明確的 unnest 步驟。
+> 不同于 Transact-sql，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中不需要明確的 unnest 步驟。
 
 > [!NOTE]
-> `CROSS`和`OUTER APPLY`運算子是在 SQL Server 2005 中引進。 在某些案例中，查詢管線可能產生含有 `CROSS APPLY` 和 (或) `OUTER APPLY` 運算子的 Transact-SQL。 因為有些後端提供者（包括早于 SQL Server 2005 的 SQL Server 版本）不支援這些運算子，所以無法在這些後端提供者上執行這類查詢。
+> `CROSS` 和 @no__t 1 運算子是在 SQL Server 2005 中引進。 在某些案例中，查詢管線可能產生含有 `CROSS APPLY` 和 (或) `OUTER APPLY` 運算子的 Transact-SQL。 因為有些後端提供者（包括早于 SQL Server 2005 的 SQL Server 版本）不支援這些運算子，所以無法在這些後端提供者上執行這類查詢。
 >
 > 下列一些典型的案例可能導致 `CROSS APPLY` 和 (或) `OUTER APPLY` 運算子出現在輸出查詢中：AnyElement 是在相互關聯的子查詢之上或是在導覽產生的集合之上；在 LINQ 查詢中使用的群組方法接受元素選擇器；在查詢中明確指定 `CROSS APPLY` 或 `OUTER APPLY`；在查詢中的 `DEREF` 建構是在 `REF` 建構之上。
 
@@ -114,7 +114,7 @@ LOB.Customers
 
 `FROM` 子句可以包含一個以上的集合並用逗號分隔。 這些案例中假設集合聯結在一起。 請將這些集合視為 n 向 CROSS JOIN。
 
-在下列範例中， `C`和`D`是獨立的集合`C`， `c.Names`但是相依于。
+在下列範例中，`C` 和 `D` 是獨立的集合，但 `c.Names` 相依于 `C`。
 
 ```sql
 FROM C AS c, D AS d, c.Names AS e

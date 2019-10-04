@@ -3,12 +3,12 @@ title: C# 程式結構 - C# 語言教學課程
 description: 了解 C# 程式的基本建置區塊
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: e6b3e0d3b91d3dee8cbc8ac530323e23e0ce8b2a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634567"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834160"
 ---
 # <a name="program-structure"></a>程式結構
 
@@ -20,7 +20,7 @@ C# 語言的重要組織概念如下：程式、命名空間、型別、成員�
 
 此類別的完整名稱是 `Acme.Collections.Stack`。 該類別包含數個成員︰一個名為 `top` 的欄位、兩個名為 `Push` 和 `Pop` 的方法以及名為 `Entry` 的巢狀類別。 `Entry` 類別更包含三個成員︰一個名為 `next` 的欄位、一個名為 `data` 的欄位以及建構函式。 假設此範例的原始程式碼儲存在檔案 `acme.cs`，命令列
 
-```
+```console
 csc /t:library acme.cs
 ```
 
@@ -37,13 +37,13 @@ csc /t:library acme.cs
 
 如果程式儲存在檔案 `example.cs` 中，編譯 `example.cs` 時，可以使用編譯器的 /r 選項來參考 acme.dll 組件︰
 
-```
+```console
 csc /r:acme.dll example.cs
 ```
 
 這樣會建立名為 `example.exe` 可執行檔組件，執行時會產生以下輸出︰
 
-```
+```console
 100
 10
 1

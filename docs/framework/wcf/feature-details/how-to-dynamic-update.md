@@ -2,12 +2,12 @@
 title: 如何：動態更新
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972082"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834726"
 ---
 # <a name="how-to-dynamic-update"></a>如何：動態更新
 本主題概要說明建立和動態更新路由組態所需的基本步驟。 在此範例中，初始路由組態是從組態檔取得，並且會將所有訊息路由傳送至 regularCalc 計算機服務。不過，該組態接著會以程式設計的方式更新，以變更 roundingCalc 服務的目的端點。  
@@ -163,7 +163,8 @@ ms.locfileid: "70972082"
     > 由於提供新 RoutingConfiguration 的方法包含在 RoutingExtension 服務延伸模組內，因此可以在擁有或能夠取得 ServiceHost 或 ServiceExtensions 參考 (例如在另一個 ServiceExtension 中) 的 WCF 擴充性模型中任何位置提供新的 RoutingConfiguration 物件。
   
 ## <a name="example"></a>範例  
- 以下是此範例中所使用主控台應用程式的完整清單。  
+
+以下是此範例中所使用主控台應用程式的完整清單：
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -241,7 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>範例  
- 以下是此範例中所使用組態檔的完整清單。  
+ 
+以下是此範例中所使用之設定檔的完整清單：
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,4 +300,4 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="see-also"></a>另請參閱
 
-- [路由服務](../../../../docs/framework/wcf/samples/routing-services.md)
+- [路由服務](../samples/routing-services.md)

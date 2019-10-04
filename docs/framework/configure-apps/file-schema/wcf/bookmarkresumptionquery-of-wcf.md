@@ -2,18 +2,18 @@
 title: <bookmarkResumptionQuery>WCF 的
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 36d169b78e78692c7b45c75d5d375bddbba1c66f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8cb254599a9742305ec958fd77174f4c4b8a57c2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850112"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834010"
 ---
 # <a name="bookmarkresumptionquery-of-wcf"></a>\<WCF 的 bookmarkResumptionQuery >
 
 代表用來追蹤工作流程執行個體中之書籤繼續的查詢。 追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。  
   
-如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)
+如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)。
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
@@ -46,7 +46,7 @@ ms.locfileid: "70850112"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`name`|字串，可指定要訂閱的書籤記錄的名稱。|  
   
@@ -56,7 +56,7 @@ ms.locfileid: "70850112"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<bookmarkResumptionQueries>](bookmarkresumptionqueries-of-wcf.md)|代表查詢的集合，這個集合可用來追蹤工作流程執行個體中的書籤繼續。|  
   

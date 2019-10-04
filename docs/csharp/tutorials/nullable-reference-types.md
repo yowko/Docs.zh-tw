@@ -3,12 +3,12 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 8b7c512a2f6bd67b07d8e344ad126026048be172
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 5327a9babdf080a535e292cdcefba6da9d0a725b
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736737"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834063"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
@@ -196,7 +196,7 @@ namespace NullableIntroduction
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-由於 `surveyResponses` 是不可為 Null 的參考型別，所以在為它取值之前不需要進行任何檢查。 `Answer` 方法會傳回不可為 Null 的字串，因此，請選擇 `GetValueOrDefault` 的多載，以採用第二個引數作為預設值。
+因為 `surveyResponses` 是可為 null 的參考型別，所以必須先進行 null 檢查，再將其解除參考。 @No__t-0 方法會傳回不可為 null 的字串，因此我們必須使用 null 聯合運算子來涵蓋遺漏答案的情況。
 
 接著，將這三個運算式主體成員新增到 `SurveyRun` 類別：
 

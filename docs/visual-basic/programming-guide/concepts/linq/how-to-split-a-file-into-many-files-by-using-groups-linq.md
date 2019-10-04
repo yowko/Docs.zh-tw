@@ -1,22 +1,22 @@
 ---
-title: HOW TO：使用群組 (LINQ) (Visual Basic)，將檔案分割成許多檔案
+title: HOW TO：使用群組將檔案分割成許多檔案（LINQ）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 3c3d0d4d8c45ba2d7016636f0272ace0fdc6ffa3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e12de7380ca34478506fde98aecae2501d2529ee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592475"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835116"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>作法：使用群組 (LINQ) (Visual Basic)，將檔案分割成許多檔案
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>HOW TO：使用群組將檔案分割成許多檔案（LINQ）（Visual Basic）
 此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  
   
 1. 將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ ms.locfileid: "65592475"
   
 2. 將下列名稱複製到名為 names2.txt 的文字檔，並將它儲存至專案資料夾：請注意兩個檔案有部分名稱相同。  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  
@@ -116,9 +116,9 @@ End Class
  此程式會在與資料檔相同的資料夾中，寫入每個群組的個別檔案。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
-建立 VB.NET 的主控台應用程式專案，使用`Imports`System.Linq 命名空間陳述式。
+建立 VB.NET 主控台應用程式專案，並在 System. Linq 命名空間中使用 `Imports` 的語句。
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

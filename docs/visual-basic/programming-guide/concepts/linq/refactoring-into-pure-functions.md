@@ -1,15 +1,15 @@
 ---
-title: 重構為純虛擬函式 (Visual Basic)
+title: 重構為純虛擬函式（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 0a37b30278c850256355612cec09a4c017c7adc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e951b3e9108f26a9c861eb49c44bb0a510131819
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787162"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834921"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>重構為純虛擬函式 (Visual Basic)
+# <a name="refactoring-into-pure-functions-visual-basic"></a>重構為純虛擬函式（Visual Basic）
 
 純功能性轉換的重要觀點為學習如何使用純虛擬函式重構程式碼。
 
@@ -21,7 +21,7 @@ ms.locfileid: "61787162"
 
  轉換為功能性程式設計的其中一種方式為重構現有的程式碼以排除不必要的副作用與外部相依性。 以此種方式，您可以建立現有程式碼的純虛擬函式版本。
 
-這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)教學課程示範如何管理 WordprocessingML 文件，並包含兩個範例使用純虛擬函式重構。
+這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 檔中的內容（Visual Basic） ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) 教學課程顯示如何操作 WordprocessingML 檔，並包含兩個如何使用純虛擬函式進行重構的範例。
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>排除副作用與外部相依性
 
@@ -48,11 +48,11 @@ End Module
 
 此程式碼會產生下列輸出：
 
-```
+```console
 StringOne-StringTwo
 ```
 
-請注意，它是不相關要修改的資料是否有`public`或是`private`存取權，或者是`shared`成員或執行個體成員。 純虛擬函式不會變更函式以外的任何資料。
+請注意，要修改的資料是否 `public` 或 @no__t 1 存取，或為 @no__t 2 成員或實例成員，是不相關的。 純虛擬函式不會變更函式以外的任何資料。
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>變更引數的非純虛擬函式
 
@@ -103,9 +103,9 @@ End Module
 
 標準查詢運算子的重要特性為它們會被當做純虛擬函式實作。
 
-如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。
+如需詳細資訊，請參閱[標準查詢運算子總覽（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [純函數式轉換 (Visual Basic) 簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [函數式程式設計與命令式程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [純功能性轉換簡介（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [函數式程式設計與命令式程式設計（Visual Basic） ](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

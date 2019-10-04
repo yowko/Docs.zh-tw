@@ -1,15 +1,15 @@
 ---
-title: 已鏈結之查詢 (LINQ to XML) 的效能 (Visual Basic)
+title: 連鎖查詢的效能（LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
-ms.openlocfilehash: 8634ca224f5892918721996114649c392a5080a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69ed09addb50ac45e7b46cd0322d4df076b5875b
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665867"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834957"
 ---
-# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>已鏈結之查詢 (LINQ to XML) 的效能 (Visual Basic)
+# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>連鎖查詢的效能（LINQ to XML）（Visual Basic）
 
 LINQ (和 LINQ to XML) 其中一個最重要的優點在於，鏈結查詢的執行效能就如同單一較大且更複雜的查詢。
 
@@ -29,7 +29,7 @@ Next
 
 這個範例會產生下列輸出：
 
-```
+```console
 4
 ```
 
@@ -47,4 +47,4 @@ Next
 
 ## <a name="see-also"></a>另請參閱
 
-- [效能 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [效能（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

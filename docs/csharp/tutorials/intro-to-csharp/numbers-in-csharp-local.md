@@ -3,24 +3,24 @@ title: C# 中的數字 - C# 教學課程簡介
 description: 透過探索數值類型及其屬性和方法來了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b0dbb654253b7c6a1ead8f0454be86227a4afb68
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736711"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834092"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>在 C\# 中操作整數和浮點數數字
 
 此教學課程會以互動方式教導您有關 C# 中的數字型別。 您將會撰寫少量程式碼，然後編譯並執行該程式碼。 教學課程包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。
 
-此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 MAC、PC 或 Linux 上設定本機開發環境的指示。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
+此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 Windows、Linux 或 macOS 上設定本機開發環境的指示。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
 
 ## <a name="explore-integer-math"></a>探索整數運算
 
-建立名為 **numbers-quickstart** 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console -n NumbersInCSharp -o .`。
+建立名為 *numbers-quickstart* 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console -n NumbersInCSharp -o .`。
 
-在您最愛的編輯器中開啟 **Program.cs**，並以下列程式碼取代 `Console.WriteLine("Hello World!");` 程式碼行：
+在您最愛的編輯器中開啟 *Program.cs*，並以下列程式碼取代 `Console.WriteLine("Hello World!");` 程式碼行：
 
 ```csharp
 int a = 18;
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 在命令視窗中輸入 `dotnet run` 來執行此程式碼。
 
-您看到的只是一種基本的整數數學運算。 `int` 型別代表**整數**，也就是正整數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：
+您看到的只是一種基本的整數數學運算。 @No__t-0 類型代表**整數**、零、正數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：
 
 - `-` 用於減法
 - `*` 用於乘法
@@ -277,7 +277,7 @@ Console.WriteLine(third);
 
 ***挑戰***
 
-嘗試使用 `double` 型別搭配大型數字、小型數字、乘法和除法的其他計算。  嘗試更複雜的計算。
+嘗試使用 `double` 型別搭配大型數字、小型數字、乘法和除法的其他計算。 嘗試更複雜的計算。
 
 在嘗試完成挑戰之後，請將您所撰寫的程式碼置於新的方法中。 將新方法命名為 `WorkWithDoubles`。
 

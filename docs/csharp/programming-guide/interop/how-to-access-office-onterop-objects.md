@@ -10,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972093"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834200"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>作法：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>HOW TO：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
 
 Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。
 
@@ -41,23 +41,23 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
 6. 在 [名稱] 欄位中鍵入專案的名稱。
 
-7. 按一下 [確定 **Deploying Office Solutions**]。
+7. 按一下 [確定]。
 
-     新的專案隨即出現在方案總管中。
+     新的專案隨即會出現在方案總管中。
 
 ## <a name="to-add-references"></a>加入參考
 
 1. 在方案總管中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]。 [加入參考] 對話方塊隨即出現。
 
-2. 在 [組件] 頁面的 [元件名稱] 清單中，選取 [Microsoft.Office.Interop.Word]，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]。  如果看不到組件，則可能需要確定組件已安裝及顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))
+2. 在 [組件] 頁面的 [元件名稱] 清單中，選取 [Microsoft.Office.Interop.Word]，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]。  如果您看不到元件，則可能需要確定它們已安裝並顯示。 請參閱[如何：安裝 Office 主要 Interop 元件 @ no__t-0。
 
 3. 按一下 [確定]。
 
 ## <a name="to-add-necessary-using-directives"></a>加入必要的 using 指示詞
 
-1. 在方案總管中，以滑鼠右鍵按一下 **Program.cs** 檔案，然後按一下 [檢視程式碼]。
+1. 在方案總管中，以滑鼠右鍵按一下 *Program.cs* 檔案，然後按一下 [檢視程式碼]。
 
-2. 將下列 `using` 指示詞加入程式碼檔案頂端。
+2. 將下列 `using` 指示詞新增至程式碼檔案的頂端：
 
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]
 

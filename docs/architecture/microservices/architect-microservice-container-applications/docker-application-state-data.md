@@ -2,12 +2,12 @@
 title: Docker 應用程式中的狀態和資料
 description: Docker 應用程式中的狀態和資料管理。 微服務執行個體可消耗，但資料無法消耗；如何使用微服務處理它。
 ms.date: 09/20/2018
-ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 193ac143ca0cc42c248f449b1e1a1339af6f69d1
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039585"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834433"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 應用程式中的狀態和資料
 
@@ -47,11 +47,11 @@ ms.locfileid: "71039585"
 
 如圖 4-5 所示，一般 Docker 磁碟區可儲存在容器本身之外，但必須在主機伺服器或 VM 的實體界限內。 不過，Docker 容器無法從一部主機伺服器或 VM 存取另一部主機伺服器或 VM 的磁碟區。 換句話說，使用這些磁碟區，將無法管理在不同 Docker 主機上執行容器間所共用的資料，雖然仍可透過支援遠端主機的磁碟區驅動程式來達到此目的。
 
-![磁碟區可以在容器間共用，但僅限位於相同的主機，除非您使用支援遠端主機的遠端驅動程式。](./media/image5.png)
+![此圖顯示容器型應用程式的磁片區和外部資料源。](./media/docker-application-state-data/volumes-external-data-sources.png)
 
 **圖 4-5**： 容器式應用程式的磁碟區和外部資料來源
 
-此外，當 Docker 容器是由協調器所管理時，容器可能會根據叢集所執行的最佳化，在主機之間「移動」。 因此，不建議您使用資料磁碟區來儲存商務資料。 但針對追蹤檔案、時態性檔案或不影響商務資料一致性的類似檔案而言，這會是不錯的機制。
+磁碟區可以在容器間共用，但僅限位於相同的主機，除非您使用支援遠端主機的遠端驅動程式。 此外，當 Docker 容器是由協調器所管理時，容器可能會根據叢集所執行的最佳化，在主機之間「移動」。 因此，不建議您使用資料磁碟區來儲存商務資料。 但針對追蹤檔案、時態性檔案或不影響商務資料一致性的類似檔案而言，這會是不錯的機制。
 
 **遠端資料來源和快取**工具 (例如 Azure SQL Database、Azure Cosmos DB) 或遠端快取 (例如 Redis) 可用於容器化應用程式，就像是在沒有容器時用於開發一樣。 此方法經過實證，可儲存商務應用程式資料。
 

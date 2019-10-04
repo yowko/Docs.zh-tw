@@ -3,24 +3,24 @@ title: 使用集合 - C# 教學課程簡介
 description: 在此教學課程中探索 List 集合來了解 C#。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 8db9f0acc69efdb89c276f9bee5e095c7920ffc6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b80225cf1614a7c25ac9011acd39e74032465ca3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850875"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834141"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>了解如何使用一般清單類型管理資料收集
 
 此入門教學課程提供 C# 語言的簡介，以及 <xref:System.Collections.Generic.List%601> 類別的基礎知識。
 
-此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 MAC、PC 或 Linux 上設定本機開發環境的指示。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
+此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 Windows、Linux 或 macOS 上設定本機開發環境的指示。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
 
 ## <a name="a-basic-list-example"></a>基本的清單範例
 
-建立名為 **list-tutorial** 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console`。
+建立名為 *list-tutorial* 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console`。
 
-在您最愛的編輯器中開啟 **Program.cs**，並以下列內容取代現有的程式碼：
+在您最愛的編輯器中開啟 *Program.cs*，並以下列內容取代現有的程式碼：
 
 ```csharp
 using System;
@@ -42,7 +42,7 @@ namespace list_tutorial
 }
 ```
 
-以您的名稱取代 `<name>`。 儲存 **Program.cs**。 在主控台視窗中輸入 `dotnet run` 來嘗試它。
+以您的名稱取代 `<name>`。 儲存 *Program.cs*。 在主控台視窗中輸入 `dotnet run` 來嘗試它。
 
 您剛才已建立字串清單，在該清單中新增三個名稱，並以全部大寫的形式列印出那些名稱。 您會使用從先前教學課程中學習到的概念，在清單中執行迴圈。
 

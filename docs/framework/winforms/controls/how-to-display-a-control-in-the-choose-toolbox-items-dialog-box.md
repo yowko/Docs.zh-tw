@@ -1,5 +1,5 @@
 ---
-title: 作法：在 [選擇工具箱項目] 對話方塊中顯示控制項
+title: HOW TO：在 [選擇工具箱項目] 對話方塊中顯示控制項
 ms.date: 08/23/2019
 helpviewer_keywords:
 - global assembly cache [Windows Forms], Choose Toolbox Items dialog box
@@ -11,20 +11,20 @@ ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: f52c1d127df8f0e831db0749e3453bb1c54d5886
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 86ec8f9ae76f010ebbc3be393d8d257ba5cfc6b6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972061"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834618"
 ---
-# <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>作法：在 [選擇工具箱項目] 對話方塊中顯示控制項
+# <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>HOW TO：在 [選擇工具箱項目] 對話方塊中顯示控制項
 
 當您開發和散發控制項時，您可能會想要讓這些控制項出現在 Visual Studio 的 [**選擇工具箱專案**] 對話方塊中，當您以滑鼠右鍵按一下 [**工具箱**] 並選取 **[選擇專案**] 時，就會顯示此對話方塊。 您可以使用 AssemblyFoldersEx 註冊程式，讓控制項出現在此對話方塊中。
 
 若要在 [選擇工具箱專案] 對話方塊中顯示控制項：
 
-- 將您的控制群組件安裝到全域組件快取。 如需詳細資訊，請參閱[如何：在全域組件快取中安裝單一組件](../../app-domains/install-assembly-into-gac.md)
+- 將您的控制群組件安裝到全域組件快取。 如需詳細資訊，請參閱[如何：在全域組件快取中安裝單一組件](../../app-domains/install-assembly-into-gac.md)。
 
   -或-
 

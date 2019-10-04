@@ -1,5 +1,5 @@
 ---
-title: 元件名稱
+title: 組件名稱
 ms.date: 08/19/2019
 helpviewer_keywords:
 - names [.NET Framework], assemblies
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207460bc66c7d19558a69828797408df4ad92d64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973149"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835312"
 ---
-# <a name="assembly-names"></a>元件名稱
+# <a name="assembly-names"></a>組件名稱
 組件的名稱儲存在中繼資料內，而且對組件範圍具有重大影響，並供應用程式使用。 強式名稱組件的完整名稱包括組件的名稱、文化特性、公開金鑰和版本號碼。 這通常稱為顯示名稱，以及可以使用 <xref:System.Reflection.Assembly.FullName%2A> 屬性取得載入的組件。  
   
  執行階段會使用這項資訊來尋找組件，並區別它與其他同名的組件。 例如，稱為 `myTypes` 的強式名稱組件的完整名稱可能如下：  
@@ -24,13 +24,13 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
-> 處理器架構會新增至 .NET Framework 2.0 版中的組件身分識別，以允許組件的處理器特定版本。 您可以建立組件的版本，其身分識別只有處理器架構不同，例如 32 位元和 64 位元處理器特定版本。 強式名稱不需要處理器架構。 如需詳細資訊，請參閱 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>。  
+> 處理器架構會新增至 .NET Framework 2.0 版中的組件身分識別，以允許組件的處理器特定版本。 您可以建立組件的版本，其身分識別只有處理器架構不同，例如 32 位元和 64 位元處理器特定版本。 強式名稱不需要處理器架構。 如需詳細資訊，請參閱<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>。  
   
  在此範例中，完整名稱指出 `myTypes` 組件具有含公開金鑰權杖的強式名稱、具有文化特性值「美式英文」，以及具有版本號碼 1.0.1234.0。 它的處理器架構為 "msil"，表示它將是根據作業系統和處理器編譯成 32 位元程式碼或 64 位元程式碼的 Just-In-Time (JIT)。  
   
  要求組件中類型的程式碼必須使用完整組件名稱。 這稱為完整繫結。 在 .NET Framework 中參考組件時，不允許只指定組件名稱的部分繫結。  
   
- 構成 .NET Framework 之組件的所有組件參考也必須包含組件的完整名稱。 例如，參考 1.0 版的 System.Data .NET Framework 組件會包括：  
+ 組成 .NET Framework 之元件的所有元件參考，也必須包含元件的完整名稱。 例如，1.0 版的 Data .NET Framework 元件的參考會包含：  
   
 ```  
 System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089  

@@ -1,20 +1,20 @@
 ---
-title: 在 Visual Basic2 XML 常值簡介
+title: Visual Basic2 中的 XML 常值簡介
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61834271"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834998"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic 中的 XML 常值簡介
 本節提供在 Visual Basic 中建立 XML 樹狀結構的相關資訊。  
   
- 如需使用 LINQ 查詢的結果做為內容，XML 樹狀結構的資訊，請參閱[函數式建構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
+ 如需將 LINQ 查詢的結果當做 XML 樹狀結構之內容使用的詳細資訊，請參閱[功能性結構（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
   
- 如需有關在 Visual Basic 中的 XML 常值的詳細資訊，請參閱 <<c0> [ 概觀的 LINQ to XML，在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
+ 如需 Visual Basic 中 XML 常值的詳細資訊，請參閱[Visual Basic 中 LINQ to XML 的總覽](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
   
 ## <a name="creating-xml-trees"></a>建立 XML 樹狀結構  
  下列範例顯示如何在此案例 <xref:System.Xml.Linq.XElement> 中建立 `contacts`：  
@@ -157,7 +157,7 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>複製與附加之比較  
+### <a name="cloning-vs-attaching"></a>複製與正在附加  
  如先前所述，如果您使用內嵌的運算式，將現有的節點 (包括項目) 和屬性加入到新的 XML 樹狀，而且如果現有的節點已經成為父代，這些節點就會遭到複製，而新複製的節點會附加到新的 XML 樹狀中。 如果現有的節點沒有成為父代，這些節點只會附加到新的 XML 樹狀結構。  
   
 ```vb  
@@ -190,11 +190,11 @@ Console.WriteLine("Child2 was {0}", _
   
  這個範例會產生下列輸出：  
   
-```  
+```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
 ## <a name="see-also"></a>另請參閱
 
-- [建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [建立 XML 樹狀結構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

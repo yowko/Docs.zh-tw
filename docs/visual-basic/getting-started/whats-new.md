@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895267"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835255"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -22,19 +22,19 @@ ms.locfileid: "70895267"
 ## <a name="current-version"></a>目前版本
 
 Visual Basic 16.0/Visual Studio 2019 版本16。0  
-如需新功能，請參閱[Visual Basic 16.0](#visual-basic-160)
+如需新功能，請參閱[Visual Basic 16.0](#visual-basic-160)。
 
 ## <a name="previous-versions"></a>舊版本
 
-Visual Basic 15.8 / Visual Studio 2017 版本 15.8 有關新功能，請參閱 [Visual Basic 15.8](#visual-basic-158)
+Visual Basic 15.8/Visual Studio 2017 15.8 版以取得新功能，請參閱[Visual Basic 15.8](#visual-basic-158)。
 
-Visual Basic 15.5 / Visual Studio 2017 版本 15.5 有關新功能，請參閱 [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.5/Visual Studio 2017 15.5 版以取得新功能，請參閱[Visual Basic 15.5](#visual-basic-155)。
 
-Visual Basic 15.3 / Visual Studio 2017 版本 15.3 有關新功能，請參閱 [Visual Basic 15.3](#visual-basic-153)
+Visual Basic 15.3/Visual Studio 2017 15.3 版以取得新功能，請參閱[Visual Basic 15.3](#visual-basic-153)。
 
-Visual Basic 2017 / Visual Studio 2017 有關新功能，請參閱 [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 2017/Visual Studio 2017 以取得新功能，請參閱[Visual Basic 2017](#visual-basic-2017)。
 
-Visual Basic / Visual Studio 2015 有關新功能，請參閱 [Visual Basic 14](#visual-basic-14)
+Visual Basic/Visual Studio 2015 以瞭解新功能，請參閱[Visual Basic 14](#visual-basic-14)。
 
 Visual Basic / Visual Studio 2013 .NET 編譯器平台 ("Roslyn") 的技術預覽
 

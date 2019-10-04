@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88f9a5c848a8a46b72fb39865ffa861424107438
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1ab1087a840fe41b9fac7779c73797c470899408
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973247"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834886"
 ---
 # <a name="enhanced-strong-naming"></a>增強的強式命名
 強式名稱簽章是 .NET Framework 中的身分識別機制，用來識別組件。 它是公開金鑰數位簽章，通常用來驗證從建立者 (簽署者) 傳遞給收件者 (驗證者) 的資料完整性。 此簽章用來當作組件的唯一身分識別，並可確保對組件的參考不會模稜兩可。 組件在建置程序的一部分簽署，然後在載入時加以驗證。  
@@ -43,25 +43,25 @@ ms.locfileid: "70973247"
   
 1. (如有必要) 產生新的身分識別金鑰。  
   
-    ```  
+    ```console  
     sn -k IdentityKey.snk  
     ```  
   
 2. 取得身分識別公開金鑰，並指定使用此金鑰簽署時，應該使用 SHA-2 演算法。  
   
-    ```  
+    ```console  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
 3. 使用身分識別公用金鑰檔案延遲簽署組件。  
   
-    ```  
+    ```console  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
 4. 使用完整身分識別金鑰組重新簽署組件。  
   
-    ```  
+    ```console  
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
@@ -70,32 +70,32 @@ ms.locfileid: "70973247"
   
 1. (如有必要) 產生身分識別與簽章金鑰組。  
   
-    ```  
+    ```console  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
 2. 取得簽章公開金鑰，並指定使用此金鑰簽署時，應該使用 SHA-2 演算法。  
   
-    ```  
+    ```console  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
 3. 取得身分識別公開金鑰，它決定產生副署的雜湊演算法。  
   
-    ```  
+    ```console  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
 4. 產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性的參數，然後將屬性附加至組件。  
   
-    ```  
+    ```console  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
     ```  
 
     這會產生類似下列內容的輸出。
 
-    ```
+    ```output
     Information for key migration attribute.
     (System.Reflection.AssemblySignatureKeyAttribute):
     publicKey=
@@ -123,13 +123,13 @@ ms.locfileid: "70973247"
   
 5. 使用身分識別公用金鑰延遲簽署組件。  
   
-    ```  
+    ```console  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
 6. 使用簽章金鑰組完整簽署組件。  
   
-    ```  
+    ```console  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   

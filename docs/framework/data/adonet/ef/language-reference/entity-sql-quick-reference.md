@@ -2,12 +2,12 @@
 title: Entity SQL 快速參考
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 7780359d981b130118cb73d4892f3dcb4b6e2e7d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ccfc461d394af8804c960ebf460e7fbfb025b64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251033"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833880"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL 快速參考
 本主題提供 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢的快速參考。 本主題中的查詢是以 AdventureWorks Sales model 為基礎。  
@@ -15,11 +15,11 @@ ms.locfileid: "70251033"
 ## <a name="literals"></a>常值  
   
 ### <a name="string"></a>String  
- 字串常值包括 Unicode 和非 Unicode 字元兩種。 Unicode 字串前面會加上 N。例如， `N'hello'`。  
+ 字串常值包括 Unicode 和非 Unicode 字元兩種。 Unicode 字串前面會加上 N。例如，`N'hello'`。  
   
  以下是非 Unicode 字串常值的範例：  
   
-```  
+```sql  
 'hello'  
 --same as  
 "hello"  
@@ -36,7 +36,7 @@ ms.locfileid: "70251033"
   
  範例：  
   
-```  
+```sql  
 DATETIME '2006-12-25 01:01:00.000'   
 --same as  
 DATETIME '2006-12-25 01:01'  
@@ -48,12 +48,12 @@ DATETIME '2006-12-25 01:01'
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
-### <a name="integer"></a>整數  
+### <a name="integer"></a>Integer  
  整數常值可以屬於型別 Int32 (123)、UInt32 (123U)、Int64 (123L) 和 UInt64 (123UL)。  
   
  範例：  
   
-```  
+```sql  
 --a collection of integers  
 {1, 2, 3}  
 ```  
@@ -72,18 +72,18 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>型別建構函式  
   
 ### <a name="row"></a>ROW  
- 資料[列](row-entity-sql.md)會將匿名的結構化型別（記錄）值結構化為：`ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ 資料[列](row-entity-sql.md)結構化匿名的結構型別（記錄）值，如下所示： `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  範例：  
   
-```  
-SELECT VALUE row (product.ProductID as ProductID, product.Name   
-    as ProductName) FROM AdventureWorksEntities.Product AS product  
+```sql  
+SELECT VALUE row (product.ProductID AS ProductID, product.Name
+    AS ProductName) FROM AdventureWorksEntities.Product AS product
 ```  
   
  輸出：  
   
-|ProductID|名稱|  
+|ProductID|Name|  
 |---------------|----------|  
 |1|Adjustable Race|  
 |879|All-Purpose Bike Stand|  
@@ -97,22 +97,22 @@ SELECT VALUE row (product.ProductID as ProductID, product.Name
   
  範例：  
   
-```  
+```sql  
 SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE product.ListPrice IN MultiSet (125, 300)  
 ```  
   
  輸出：  
   
-|ProductID|名稱|ProductNumber|…|  
+|ProductID|Name|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
 ### <a name="object"></a>Object  
- [命名類型](named-type-constructor-entity-sql.md)的函式結構（名為）使用者定義物件， `person("abc", 12)`例如。  
+ [命名類型](named-type-constructor-entity-sql.md)的函式結構（名為）使用者定義物件，例如 `person("abc", 12)`。  
   
  範例：  
   
-```  
+```sql  
 SELECT VALUE AdventureWorksModel.SalesOrderDetail (o.SalesOrderDetailID, o.CarrierTrackingNumber, o.OrderQty,   
 o.ProductID, o.SpecialOfferID, o.UnitPrice, o.UnitPriceDiscount,   
 o.rowguid, o.ModifiedDate) FROM AdventureWorksEntities.SalesOrderDetail   
@@ -132,7 +132,7 @@ AS o
 ### <a name="ref"></a>REF  
  [REF](ref-entity-sql.md)會建立實體類型實例的參考。 例如，以下查詢會傳回 Orders 實體集中每一個 Order 實體的參考：  
   
-```  
+```sql  
 SELECT REF(o) AS OrderID FROM Orders AS o  
 ```  
   
@@ -149,9 +149,9 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  範例：  
   
-```  
+```sql  
 SELECT VALUE REF(p).Name FROM   
-    AdventureWorksEntities.Product as p  
+    AdventureWorksEntities.Product AS p
 ```  
   
  輸出：  
@@ -168,9 +168,9 @@ SELECT VALUE REF(p).Name FROM
   
  範例：  
   
-```  
+```sql  
 SELECT VALUE DEREF(REF(p)).Name FROM   
-    AdventureWorksEntities.Product as p  
+    AdventureWorksEntities.Product AS p
 ```  
   
  輸出：  
@@ -187,9 +187,9 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  範例：  
   
-```  
+```sql  
 SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))   
-    FROM AdventureWorksEntities.Product as p  
+    FROM AdventureWorksEntities.Product AS p
 ```  
   
  輸出：  
@@ -204,12 +204,12 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ## <a name="functions"></a>Functions  
   
 ### <a name="canonical"></a>Canonical  
- [標準](canonical-functions.md)函式的命名空間是 Edm，如`Edm.Length("string")`中所示。 除非匯入了另一個命名空間其中包含與標準函式同名的函式，否則不需要指定命名空間。 如果兩個命名空間有相同的函式，使用者就應當指定完整名稱。  
+ [標準](canonical-functions.md)函式的命名空間是 Edm，如 `Edm.Length("string")` 中所示。 除非匯入了另一個命名空間其中包含與標準函式同名的函式，否則不需要指定命名空間。 如果兩個命名空間有相同的函式，使用者就應當指定完整名稱。  
   
  範例：  
   
-```  
-SELECT Length(c. FirstName) As NameLen FROM   
+```sql  
+SELECT Length(c. FirstName) AS NameLen FROM
     AdventureWorksEntities.Contact AS c   
     WHERE c.ContactID BETWEEN 10 AND 12  
 ```  
@@ -223,12 +223,12 @@ SELECT Length(c. FirstName) As NameLen FROM
 |5|  
   
 ### <a name="microsoft-provider-specific"></a>Microsoft 提供者專用  
- [Microsoft 提供者特有](../sqlclient-for-ef-functions.md)的`SqlServer`函式是在命名空間中。  
+ [Microsoft 提供者特有](../sqlclient-for-ef-functions.md)的函式位於 `SqlServer` 命名空間中。  
   
  範例：  
   
-```  
-SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM   
+```sql  
+SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
     AdventureWorksEntities.Contact AS c WHERE   
     c.ContactID BETWEEN 10 AND 12  
 ```  
@@ -246,7 +246,7 @@ SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM
   
  範例：  
   
-```  
+```sql  
 using SqlServer; LOWER('AA');  
 ```  
   
@@ -261,14 +261,14 @@ using SqlServer; LOWER('AA');
   
  範例：  
   
-```  
-SELECT c.ContactID as ID, c.LastName as Name FROM   
+```sql  
+SELECT c.ContactID as ID, c.LastName AS Name FROM
     AdventureWorks.Contact AS c ORDER BY c.ContactID SKIP 9 LIMIT 3;  
 ```  
   
  輸出：  
   
-|id|名稱|  
+|id|Name|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -279,14 +279,14 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
   
  範例：  
   
-```  
-SELECT VALUE name FROM AdventureWorksEntities.Product as P   
+```sql  
+SELECT VALUE name FROM AdventureWorksEntities.Product AS P
     GROUP BY P.Name HAVING MAX(P.ListPrice) > 5  
 ```  
   
  輸出：  
   
-|NAME|  
+|name|  
 |----------|  
 |LL Mountain Seat Assembly|  
 |ML Mountain Seat Assembly|  
@@ -294,11 +294,11 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
 |...|  
   
 ## <a name="navigation"></a>巡覽  
- 關聯性巡覽運算子可以讓您在關聯性上從一個實體 (開始端) 巡覽到另一個實體 (結束端)。 [導覽](navigate-entity-sql.md)會採用限定為\<命名空間 > 的關聯性類型。\<關聯性類型名稱 >。 如果要結束\<的基數為1，則導覽會傳回 Ref T >。 如果要結束的基數為 n，則會傳回 < Ref\<T > > 的集合。  
+ 關聯性巡覽運算子可以讓您在關聯性上從一個實體 (開始端) 巡覽到另一個實體 (結束端)。 [導覽](navigate-entity-sql.md)會採用限定為 @no__t 1namespace > 的關聯性類型。 \<relationship 類型名稱 >。 如果要結束的基數為1，則導覽會傳回 Ref @ no__t-0T >。 如果要結束的基數為 n，則會傳回集合 < Ref @ no__t-0T > >。  
   
  範例：  
   
-```  
+```sql  
 SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM   
     NAVIGATE(a, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS v)   
     FROM AdventureWorksEntities.Address AS a  
@@ -320,13 +320,13 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
   
  範例：  
   
-```  
-SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p  
+```sql  
+SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 ```  
   
  輸出：  
   
-|名稱|  
+|Name|  
 |----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -340,7 +340,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
   
  SELECT p.Name, p.ProductID FROM AdventureWorksEntities.Product as p Output:  
   
-|名稱|ProductID|  
+|Name|ProductID|  
 |----------|---------------|  
 |Adjustable Race|1|  
 |All-Purpose Bike Stand|879|  
@@ -352,7 +352,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
   
  範例：  
   
-```  
+```sql  
 CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END  
 ```  
   
