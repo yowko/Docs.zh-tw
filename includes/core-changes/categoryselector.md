@@ -1,19 +1,20 @@
 ---
-ms.openlocfilehash: cb0a2f0d95ba166c2d05d7d499b797cfd2dc8fad
+ms.openlocfilehash: 8921dba1395b5720534ee8592a52d4a5b5681f31
 ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956027"
+ms.locfileid: "71956052"
 ---
-> [!div class="op_multi_selector" title1="從目標版本" title2="到遷移的版本"]
+> [!div class="op_single_selector"]
 >
-> - [（.NET Framework |。NET Core）](~/docs/core/compatibility/framework-core.md)
-> - [（2.2 | 3.0）](~/docs/core/compatibility/2.2-3.0.md)
-> - [（3.0 preview 6 | 3.0 Preview 7）](~/docs/core/compatibility/3.0.6-3.0.7.md)
-> - [（3.0 preview 7 | 3.0 Preview 8）](~/docs/core/compatibility/3.0.7-3.0.8.md)
-> - [（3.0 Preview 8 |3.0 Preview 9）](~/docs/core/compatibility/3.0.8-3.0.9.md)
-> - [（3.0 Preview 9 | 3.0）](~/docs/core/compatibility/3.0.9-3.0.md)
+> - [CoreFx](~/docs/core/compatibility/corefx.md)
+> - [加密](~/docs/core/compatibility/cryptography.md)
+> - [全球化](~/docs/core/compatibility/globalization.md)
+> - [Visual Basic](~/docs/core/compatibility/visualbasic.md)
+> - [Windows Forms](~/docs/core/compatibility/winforms.md)
+> - [ASP.NET Core （在 GitHub 上）](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)
+> - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
 
 <!--
 

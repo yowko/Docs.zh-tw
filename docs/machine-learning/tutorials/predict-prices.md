@@ -4,12 +4,12 @@ description: 本教學課程會示範如何使用 ML.NET 建置迴歸模型，�
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 8db6b0c9ae1fd98724eda285423960546be8bac6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 51617d14e84fa46464d7b44dbdb20afaf196924f
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700951"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957374"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教學課程：搭配 ML.NET 使用迴歸預測價格
 
@@ -188,7 +188,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 [!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
 
-接下來，透過將下列程式碼新增到 `EvaluateModel()` 來轉換 `Test` 資料：
+接下來，透過將下列程式碼新增到 `Evaluate()` 來轉換 `Test` 資料：
 
 [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 

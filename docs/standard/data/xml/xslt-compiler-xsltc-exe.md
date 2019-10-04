@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923289"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956986"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 編譯器 (xsltc.exe)
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後編譯的樣式表可以直接傳遞到新的 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 您無法使用 xsltc.exe 產生簽署的組件。  
@@ -19,19 +19,19 @@ XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後編�
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]  
 ```  
   
 ## <a name="argument"></a>引數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |`sourceFile`|指定樣式表的名稱。 樣式表必須是本機檔案或位於內部網路上。|  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|為下列樣式表的類別指定名稱。 類別名稱可以是完整名稱。<br /><br /> 類別名稱預設為樣式表的名稱。 例如，如果編譯了樣式表 customers.xsl，預設類別名稱就是 customers。|  
 |`/debug[`+&#124;-`]`|指定是否要產生偵錯資訊。<br /><br /> 指定 `+` 或 `/debug` 會讓編譯器產生偵錯資訊，並將其放在程式資料庫 (PDB) 檔案中。 產生的 PDB 檔案名稱是 `assemblyName`.pdb。<br /><br /> 指定 `-` (當您未指定 `/debug` 時，它就會生效) 不會建立任何偵錯資訊。 產生正式版本組件。 **注意：** 在偵錯模式下編譯會對 XSLT 效能造成顯著的影響。|  
@@ -54,31 +54,31 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 ## <a name="examples"></a>範例  
  下列命令會編譯樣式表，並建立名為 booksort.dll 的組件。  
   
-```  
+```console  
 xsltc booksort.xsl  
 ```  
   
  下列命令會編譯樣式表，並建立名稱分別為 booksort.dll 和 booksort.pdb 的組件和 PDB 檔案。  
   
-```  
+```console  
 xsltc booksort.xsl /debug  
 ```  
   
  下列命令會編譯包含 msxsl:script 項目的樣式表，並建立兩個名為 calc.dll 和 calc_Script1.dll 的組件。  
   
-```  
+```console  
 xsltc /settings:script+ calc.xsl  
 ```  
   
  下列命令會啟用 DTD 處理和指令碼支援，並建立兩個名為 myTest.dll 和 myTest_Script1.dll 的組件。  
   
-```  
+```console  
 xsltc /settings:DTD+,script+ /out:myTest calc.xsl  
 ```  
   
  下列命令會編譯兩個樣式表模組，並建立名為 booksort.dll 的單一組件。  
   
-```  
+```console  
 xsltc booksort.xsl output.xsl  
 ```  
   
