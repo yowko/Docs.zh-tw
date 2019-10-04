@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用字典使用 LINQ to XML (Visual Basic)
+title: HOW TO：使用 LINQ to XML （Visual Basic）處理字典
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9773b926d16b51ea912792b0f348a26a9a3c7a29
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614141"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835089"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a><span data-ttu-id="cb052-102">HOW TO：使用字典使用 LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb052-102">How to: Work with Dictionaries Using LINQ to XML (Visual Basic)</span></span>
-<span data-ttu-id="cb052-103">將各種資料結構轉換為 XML，以及將 XML 轉回其他資料結構通常很方便。</span><span class="sxs-lookup"><span data-stu-id="cb052-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="cb052-104">這個主題藉由來回轉換 <xref:System.Collections.Generic.Dictionary%602> 和 XML 來顯示這個一般方法的特定實作。</span><span class="sxs-lookup"><span data-stu-id="cb052-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a><span data-ttu-id="0b9c2-102">HOW TO：使用 LINQ to XML （Visual Basic）處理字典</span><span class="sxs-lookup"><span data-stu-id="0b9c2-102">How to: Work with Dictionaries Using LINQ to XML (Visual Basic)</span></span>
+<span data-ttu-id="0b9c2-103">將各種資料結構轉換為 XML，以及將 XML 轉回其他資料結構通常很方便。</span><span class="sxs-lookup"><span data-stu-id="0b9c2-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="0b9c2-104">這個主題藉由來回轉換 <xref:System.Collections.Generic.Dictionary%602> 和 XML 來顯示這個一般方法的特定實作。</span><span class="sxs-lookup"><span data-stu-id="0b9c2-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cb052-105">範例</span><span class="sxs-lookup"><span data-stu-id="cb052-105">Example</span></span>  
- <span data-ttu-id="cb052-106">此範例會使用 XML 常值和查詢中內嵌的運算式。</span><span class="sxs-lookup"><span data-stu-id="cb052-106">This example uses XML literals and a query in an embedded expression.</span></span> <span data-ttu-id="cb052-107">此查詢會評估新<xref:System.Xml.Linq.XElement>物件，然後變成的新內容`Root`<xref:System.Xml.Linq.XElement>物件。</span><span class="sxs-lookup"><span data-stu-id="cb052-107">The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="0b9c2-105">範例</span><span class="sxs-lookup"><span data-stu-id="0b9c2-105">Example</span></span>  
+ <span data-ttu-id="0b9c2-106">這個範例會在內嵌運算式中使用 XML 常值和查詢。</span><span class="sxs-lookup"><span data-stu-id="0b9c2-106">This example uses XML literals and a query in an embedded expression.</span></span> <span data-ttu-id="0b9c2-107">查詢會投射新的 <xref:System.Xml.Linq.XElement> 物件，然後成為 `Root` @no__t 2 物件的新內容。</span><span class="sxs-lookup"><span data-stu-id="0b9c2-107">The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.</span></span>  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -29,7 +29,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="cb052-108">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="cb052-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="0b9c2-108">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0b9c2-108">This code produces the following output:</span></span>  
   
 ```xml  
           <Root>  
@@ -40,8 +40,8 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="cb052-109">範例</span><span class="sxs-lookup"><span data-stu-id="cb052-109">Example</span></span>  
- <span data-ttu-id="cb052-110">下列程式碼會從 XML 建立字典。</span><span class="sxs-lookup"><span data-stu-id="cb052-110">The following code creates a dictionary from XML.</span></span>  
+## <a name="example"></a><span data-ttu-id="0b9c2-109">範例</span><span class="sxs-lookup"><span data-stu-id="0b9c2-109">Example</span></span>  
+ <span data-ttu-id="0b9c2-110">下列程式碼會從 XML 建立字典。</span><span class="sxs-lookup"><span data-stu-id="0b9c2-110">The following code creates a dictionary from XML.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -61,15 +61,15 @@ For Each str As String In dict.Keys
 Next  
 ```  
   
- <span data-ttu-id="cb052-111">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="cb052-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="0b9c2-111">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0b9c2-111">This code produces the following output:</span></span>  
   
-```  
+```console  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cb052-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cb052-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b9c2-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b9c2-112">See also</span></span>
 
-- [<span data-ttu-id="cb052-113">投影和轉換 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb052-113">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="0b9c2-113">投影和轉換（LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="0b9c2-113">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

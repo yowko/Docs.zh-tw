@@ -2,27 +2,27 @@
 title: 如何：動態更新
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972082"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834726"
 ---
-# <a name="how-to-dynamic-update"></a><span data-ttu-id="94cea-102">如何：動態更新</span><span class="sxs-lookup"><span data-stu-id="94cea-102">How To: Dynamic Update</span></span>
-<span data-ttu-id="94cea-103">本主題概要說明建立和動態更新路由組態所需的基本步驟。</span><span class="sxs-lookup"><span data-stu-id="94cea-103">This topic outlines the basic steps required to create and dynamically update the routing configuration.</span></span> <span data-ttu-id="94cea-104">在此範例中，初始路由組態是從組態檔取得，並且會將所有訊息路由傳送至 regularCalc 計算機服務。不過，該組態接著會以程式設計的方式更新，以變更 roundingCalc 服務的目的端點。</span><span class="sxs-lookup"><span data-stu-id="94cea-104">In this example, the initial routing configuration is obtained from the configuration file and routes all messages to the regularCalc calculator service; however, it is subsequently updated programmatically in order to change the destination endpoint the roundingCalc service.</span></span>  
+# <a name="how-to-dynamic-update"></a><span data-ttu-id="712f0-102">如何：動態更新</span><span class="sxs-lookup"><span data-stu-id="712f0-102">How To: Dynamic Update</span></span>
+<span data-ttu-id="712f0-103">本主題概要說明建立和動態更新路由組態所需的基本步驟。</span><span class="sxs-lookup"><span data-stu-id="712f0-103">This topic outlines the basic steps required to create and dynamically update the routing configuration.</span></span> <span data-ttu-id="712f0-104">在此範例中，初始路由組態是從組態檔取得，並且會將所有訊息路由傳送至 regularCalc 計算機服務。不過，該組態接著會以程式設計的方式更新，以變更 roundingCalc 服務的目的端點。</span><span class="sxs-lookup"><span data-stu-id="712f0-104">In this example, the initial routing configuration is obtained from the configuration file and routes all messages to the regularCalc calculator service; however, it is subsequently updated programmatically in order to change the destination endpoint the roundingCalc service.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="94cea-105">在許多實作中，組態將完全為動態，而且不會倚賴預設組態。不過，在某些情況下，例如本主題中的情況，會希望服務啟動時為預設的組態狀態。</span><span class="sxs-lookup"><span data-stu-id="94cea-105">In many implementations, configuration will be fully dynamic and will not rely on a default configuration; however, there are some scenarios, such as the one in this topic, where it is desirable to have a default configuration state when the service starts.</span></span>  
+> <span data-ttu-id="712f0-105">在許多實作中，組態將完全為動態，而且不會倚賴預設組態。不過，在某些情況下，例如本主題中的情況，會希望服務啟動時為預設的組態狀態。</span><span class="sxs-lookup"><span data-stu-id="712f0-105">In many implementations, configuration will be fully dynamic and will not rely on a default configuration; however, there are some scenarios, such as the one in this topic, where it is desirable to have a default configuration state when the service starts.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="94cea-106">動態更新只會在記憶體中發生，而不會導致修改組態檔。</span><span class="sxs-lookup"><span data-stu-id="94cea-106">Dynamic updates occur only in memory, and do not result in the modification of configuration files.</span></span>  
+> <span data-ttu-id="712f0-106">動態更新只會在記憶體中發生，而不會導致修改組態檔。</span><span class="sxs-lookup"><span data-stu-id="712f0-106">Dynamic updates occur only in memory, and do not result in the modification of configuration files.</span></span>  
   
- <span data-ttu-id="94cea-107">regularCalc 和 roundingCalc 兩者都支援相同的加、減、乘、除作業。不過，roundingCalc 會先將所有計算四捨五入至最接近的整數值再傳回。</span><span class="sxs-lookup"><span data-stu-id="94cea-107">Both regularCalc and roundingCalc support the same operations of add, subtract, multiply and divide; however, roundingCalc rounds all calculations to the nearest integer value before returning.</span></span> <span data-ttu-id="94cea-108">組態檔可用來設定讓服務將所有訊息路由傳送至 regularCalc 服務。</span><span class="sxs-lookup"><span data-stu-id="94cea-108">A configuration file is used to configure the service to route all messages to the regularCalc service.</span></span> <span data-ttu-id="94cea-109">路由服務啟動後，<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 可用來重新設定服務，使其將訊息路由傳送至 roundingCalc 服務。</span><span class="sxs-lookup"><span data-stu-id="94cea-109">After the Routing Service has been started, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> is used to reconfigure the service to route messages to the roundingCalc service.</span></span>  
+ <span data-ttu-id="712f0-107">regularCalc 和 roundingCalc 兩者都支援相同的加、減、乘、除作業。不過，roundingCalc 會先將所有計算四捨五入至最接近的整數值再傳回。</span><span class="sxs-lookup"><span data-stu-id="712f0-107">Both regularCalc and roundingCalc support the same operations of add, subtract, multiply and divide; however, roundingCalc rounds all calculations to the nearest integer value before returning.</span></span> <span data-ttu-id="712f0-108">組態檔可用來設定讓服務將所有訊息路由傳送至 regularCalc 服務。</span><span class="sxs-lookup"><span data-stu-id="712f0-108">A configuration file is used to configure the service to route all messages to the regularCalc service.</span></span> <span data-ttu-id="712f0-109">路由服務啟動後，<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 可用來重新設定服務，使其將訊息路由傳送至 roundingCalc 服務。</span><span class="sxs-lookup"><span data-stu-id="712f0-109">After the Routing Service has been started, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> is used to reconfigure the service to route messages to the roundingCalc service.</span></span>  
   
-### <a name="implement-initial-configuration"></a><span data-ttu-id="94cea-110">實作初始組態</span><span class="sxs-lookup"><span data-stu-id="94cea-110">Implement Initial Configuration</span></span>  
+### <a name="implement-initial-configuration"></a><span data-ttu-id="712f0-110">實作初始組態</span><span class="sxs-lookup"><span data-stu-id="712f0-110">Implement Initial Configuration</span></span>  
   
-1. <span data-ttu-id="94cea-111">藉由指定服務所公開的服務端點，建立基本路由服務組態。</span><span class="sxs-lookup"><span data-stu-id="94cea-111">Create the basic Routing Service Configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="94cea-112">下列範例定義將用於接收訊息的單一服務端點。</span><span class="sxs-lookup"><span data-stu-id="94cea-112">The following example defines a single service endpoint, which will be used to receive messages.</span></span> <span data-ttu-id="94cea-113">此外，還會定義用來將訊息傳送至 regularCalc 的用戶端端點。</span><span class="sxs-lookup"><span data-stu-id="94cea-113">It also defines a client endpoint that will be used to send messages to the regularCalc.</span></span>  
+1. <span data-ttu-id="712f0-111">藉由指定服務所公開的服務端點，建立基本路由服務組態。</span><span class="sxs-lookup"><span data-stu-id="712f0-111">Create the basic Routing Service Configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="712f0-112">下列範例定義將用於接收訊息的單一服務端點。</span><span class="sxs-lookup"><span data-stu-id="712f0-112">The following example defines a single service endpoint, which will be used to receive messages.</span></span> <span data-ttu-id="712f0-113">此外，還會定義用來將訊息傳送至 regularCalc 的用戶端端點。</span><span class="sxs-lookup"><span data-stu-id="712f0-113">It also defines a client endpoint that will be used to send messages to the regularCalc.</span></span>  
   
     ```xml  
     <services>  
@@ -49,7 +49,7 @@ ms.locfileid: "70972082"
     </client>  
     ```  
   
-2. <span data-ttu-id="94cea-114">定義用於傳送訊息至目的地端點的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="94cea-114">Define the filter used to route messages to the destination endpoints.</span></span> <span data-ttu-id="94cea-115">在此範例中，MatchAll 篩選條件會用來將所有訊息路由傳送至之前定義的 regularCalcEndpoint。</span><span class="sxs-lookup"><span data-stu-id="94cea-115">For this example, the MatchAll filter is used to route all messages to the regularCalcEndpoint defined previously.</span></span> <span data-ttu-id="94cea-116">下列範例會定義篩選條件和篩選資料表。</span><span class="sxs-lookup"><span data-stu-id="94cea-116">The following example defines the filter and filter table.</span></span>  
+2. <span data-ttu-id="712f0-114">定義用於傳送訊息至目的地端點的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="712f0-114">Define the filter used to route messages to the destination endpoints.</span></span> <span data-ttu-id="712f0-115">在此範例中，MatchAll 篩選條件會用來將所有訊息路由傳送至之前定義的 regularCalcEndpoint。</span><span class="sxs-lookup"><span data-stu-id="712f0-115">For this example, the MatchAll filter is used to route all messages to the regularCalcEndpoint defined previously.</span></span> <span data-ttu-id="712f0-116">下列範例會定義篩選條件和篩選資料表。</span><span class="sxs-lookup"><span data-stu-id="712f0-116">The following example defines the filter and filter table.</span></span>  
   
     ```xml  
     <filters>  
@@ -64,7 +64,7 @@ ms.locfileid: "70972082"
     </filterTables>  
     ```  
   
-3. <span data-ttu-id="94cea-117">若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。</span><span class="sxs-lookup"><span data-stu-id="94cea-117">To evaluate incoming messages against the filters contained in the filter table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="94cea-118">下列範例示範如何將 "filterTable1" 與服務端點產生關聯。</span><span class="sxs-lookup"><span data-stu-id="94cea-118">The following example demonstrates associating "filterTable1" with the service endpoint.</span></span>  
+3. <span data-ttu-id="712f0-117">若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。</span><span class="sxs-lookup"><span data-stu-id="712f0-117">To evaluate incoming messages against the filters contained in the filter table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="712f0-118">下列範例示範如何將 "filterTable1" 與服務端點產生關聯。</span><span class="sxs-lookup"><span data-stu-id="712f0-118">The following example demonstrates associating "filterTable1" with the service endpoint.</span></span>  
   
     ```xml  
     <behaviors>  
@@ -77,10 +77,10 @@ ms.locfileid: "70972082"
     </behaviors>  
     ```  
   
-## <a name="implement-dynamic-configuration"></a><span data-ttu-id="94cea-119">實作動態組態</span><span class="sxs-lookup"><span data-stu-id="94cea-119">Implement Dynamic Configuration</span></span>  
- <span data-ttu-id="94cea-120">路由服務的動態組態只能透過建立新的 <xref:System.ServiceModel.Routing.RoutingConfiguration>，並使用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 取代目前組態的方式，在程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="94cea-120">Dynamic configuration of the Routing Service can only be performed in code by creating a new <xref:System.ServiceModel.Routing.RoutingConfiguration> and using <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> to replace the current configuration.</span></span>  <span data-ttu-id="94cea-121">在此範例中，路由服務會在主控台應用程式內自我裝載。</span><span class="sxs-lookup"><span data-stu-id="94cea-121">For this example, the Routing Service is self-hosted within a console application.</span></span> <span data-ttu-id="94cea-122">應用程式啟動後，您可以在主控台視窗中輸入 ‘regular’ 或 ‘rounding’ 來設定路由傳送訊息的目的端點，藉此修改路由組態。若輸入 ‘regular’ 則為 regularCalc，若輸入 ‘rounding’ 則為 roundingCalc。</span><span class="sxs-lookup"><span data-stu-id="94cea-122">After the application has started, you can modify the routing configuration by entering ‘regular’ or ‘rounding’ at the console window to configure the destination endpoint that messages are routed to; regularCalc when ‘regular’ is entered, otherwise roundingCalc when ‘rounding’ is entered.</span></span>  
+## <a name="implement-dynamic-configuration"></a><span data-ttu-id="712f0-119">實作動態組態</span><span class="sxs-lookup"><span data-stu-id="712f0-119">Implement Dynamic Configuration</span></span>  
+ <span data-ttu-id="712f0-120">路由服務的動態組態只能透過建立新的 <xref:System.ServiceModel.Routing.RoutingConfiguration>，並使用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 取代目前組態的方式，在程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="712f0-120">Dynamic configuration of the Routing Service can only be performed in code by creating a new <xref:System.ServiceModel.Routing.RoutingConfiguration> and using <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> to replace the current configuration.</span></span>  <span data-ttu-id="712f0-121">在此範例中，路由服務會在主控台應用程式內自我裝載。</span><span class="sxs-lookup"><span data-stu-id="712f0-121">For this example, the Routing Service is self-hosted within a console application.</span></span> <span data-ttu-id="712f0-122">應用程式啟動後，您可以在主控台視窗中輸入 ‘regular’ 或 ‘rounding’ 來設定路由傳送訊息的目的端點，藉此修改路由組態。若輸入 ‘regular’ 則為 regularCalc，若輸入 ‘rounding’ 則為 roundingCalc。</span><span class="sxs-lookup"><span data-stu-id="712f0-122">After the application has started, you can modify the routing configuration by entering ‘regular’ or ‘rounding’ at the console window to configure the destination endpoint that messages are routed to; regularCalc when ‘regular’ is entered, otherwise roundingCalc when ‘rounding’ is entered.</span></span>  
   
-1. <span data-ttu-id="94cea-123">必須加入以下 using 陳述式才能支援路由服務。</span><span class="sxs-lookup"><span data-stu-id="94cea-123">The following using statements must be added in order to support the Routing Service.</span></span>  
+1. <span data-ttu-id="712f0-123">必須加入以下 using 陳述式才能支援路由服務。</span><span class="sxs-lookup"><span data-stu-id="712f0-123">The following using statements must be added in order to support the Routing Service.</span></span>  
   
     ```csharp  
     using System;  
@@ -92,7 +92,7 @@ ms.locfileid: "70972082"
     using System.ServiceModel.Routing;  
     ```  
   
-2. <span data-ttu-id="94cea-124">下列程式碼可用來自我裝載路由服務做為主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="94cea-124">The following code is used to self-host the Routing Service as a console application.</span></span> <span data-ttu-id="94cea-125">這樣做會使用前一個步驟中描述的組態初始化路由服務，該組態包含在應用程式組態檔內。</span><span class="sxs-lookup"><span data-stu-id="94cea-125">This initializes the Routing Service using the configuration described in the previous step, which is contained within the application configuration file.</span></span> <span data-ttu-id="94cea-126">while 迴圈包含的程式碼即可用來變更路由組態。</span><span class="sxs-lookup"><span data-stu-id="94cea-126">The while loop contains the code used to change the routing configuration.</span></span>  
+2. <span data-ttu-id="712f0-124">下列程式碼可用來自我裝載路由服務做為主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="712f0-124">The following code is used to self-host the Routing Service as a console application.</span></span> <span data-ttu-id="712f0-125">這樣做會使用前一個步驟中描述的組態初始化路由服務，該組態包含在應用程式組態檔內。</span><span class="sxs-lookup"><span data-stu-id="712f0-125">This initializes the Routing Service using the configuration described in the previous step, which is contained within the application configuration file.</span></span> <span data-ttu-id="712f0-126">while 迴圈包含的程式碼即可用來變更路由組態。</span><span class="sxs-lookup"><span data-stu-id="712f0-126">The while loop contains the code used to change the routing configuration.</span></span>  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -117,9 +117,9 @@ ms.locfileid: "70972082"
     }  
     ```  
   
-3. <span data-ttu-id="94cea-127">若要動態更新路由組態，則必須建立新的路由組態。</span><span class="sxs-lookup"><span data-stu-id="94cea-127">To dynamically update the routing configuration, a new routing configuration must be created.</span></span> <span data-ttu-id="94cea-128">其中必須包含新路由組態需要的所有端點、篩選條件和篩選資料表，因為該組態會完全取代現有的路由組態。</span><span class="sxs-lookup"><span data-stu-id="94cea-128">This must contain all endpoints, filters and filter tables that are required for the new routing configuration, as it will completely replace the existing routing configuration.</span></span> <span data-ttu-id="94cea-129">為了使用新的路由組態，您必須叫用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 並且傳遞新的組態。</span><span class="sxs-lookup"><span data-stu-id="94cea-129">In order to use the new routing configuration, you must invoke <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> and pass the new configuration.</span></span>  
+3. <span data-ttu-id="712f0-127">若要動態更新路由組態，則必須建立新的路由組態。</span><span class="sxs-lookup"><span data-stu-id="712f0-127">To dynamically update the routing configuration, a new routing configuration must be created.</span></span> <span data-ttu-id="712f0-128">其中必須包含新路由組態需要的所有端點、篩選條件和篩選資料表，因為該組態會完全取代現有的路由組態。</span><span class="sxs-lookup"><span data-stu-id="712f0-128">This must contain all endpoints, filters and filter tables that are required for the new routing configuration, as it will completely replace the existing routing configuration.</span></span> <span data-ttu-id="712f0-129">為了使用新的路由組態，您必須叫用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 並且傳遞新的組態。</span><span class="sxs-lookup"><span data-stu-id="712f0-129">In order to use the new routing configuration, you must invoke <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> and pass the new configuration.</span></span>  
   
-     <span data-ttu-id="94cea-130">將下列程式碼加入至之前定義的 while 迴圈，即可根據使用者輸入重新設定服務。</span><span class="sxs-lookup"><span data-stu-id="94cea-130">Add the following code to the while loop defined previously to allow the service to be reconfigured based on user input.</span></span>  
+     <span data-ttu-id="712f0-130">將下列程式碼加入至之前定義的 while 迴圈，即可根據使用者輸入重新設定服務。</span><span class="sxs-lookup"><span data-stu-id="712f0-130">Add the following code to the while loop defined previously to allow the service to be reconfigured based on user input.</span></span>  
   
     ```csharp  
     Console.WriteLine("Enter 'regular' or 'rounding' to set the destination endpoint:");  
@@ -160,10 +160,11 @@ ms.locfileid: "70972082"
     ```  
   
     > [!NOTE]
-    > <span data-ttu-id="94cea-131">由於提供新 RoutingConfiguration 的方法包含在 RoutingExtension 服務延伸模組內，因此可以在擁有或能夠取得 ServiceHost 或 ServiceExtensions 參考 (例如在另一個 ServiceExtension 中) 的 WCF 擴充性模型中任何位置提供新的 RoutingConfiguration 物件。</span><span class="sxs-lookup"><span data-stu-id="94cea-131">Since the method for providing a new RoutingConfiguration is contained in the RoutingExtension service extension, new RoutingConfiguration objects can be provided anywhere in the WCF extensibility model that has or can obtain a reference to the ServiceHost or ServiceExtensions (such as in another ServiceExtension).</span></span>
+    > <span data-ttu-id="712f0-131">由於提供新 RoutingConfiguration 的方法包含在 RoutingExtension 服務延伸模組內，因此可以在擁有或能夠取得 ServiceHost 或 ServiceExtensions 參考 (例如在另一個 ServiceExtension 中) 的 WCF 擴充性模型中任何位置提供新的 RoutingConfiguration 物件。</span><span class="sxs-lookup"><span data-stu-id="712f0-131">Since the method for providing a new RoutingConfiguration is contained in the RoutingExtension service extension, new RoutingConfiguration objects can be provided anywhere in the WCF extensibility model that has or can obtain a reference to the ServiceHost or ServiceExtensions (such as in another ServiceExtension).</span></span>
   
-## <a name="example"></a><span data-ttu-id="94cea-132">範例</span><span class="sxs-lookup"><span data-stu-id="94cea-132">Example</span></span>  
- <span data-ttu-id="94cea-133">以下是此範例中所使用主控台應用程式的完整清單。</span><span class="sxs-lookup"><span data-stu-id="94cea-133">Following is a complete listing of the console application used in this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="712f0-132">範例</span><span class="sxs-lookup"><span data-stu-id="712f0-132">Example</span></span>  
+
+<span data-ttu-id="712f0-133">以下是此範例中所使用主控台應用程式的完整清單：</span><span class="sxs-lookup"><span data-stu-id="712f0-133">The following is a complete listing of the console application used in this example:</span></span>
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -240,8 +241,9 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="94cea-134">範例</span><span class="sxs-lookup"><span data-stu-id="94cea-134">Example</span></span>  
- <span data-ttu-id="94cea-135">以下是此範例中所使用組態檔的完整清單。</span><span class="sxs-lookup"><span data-stu-id="94cea-135">Following is a complete listing of the configuration file used in this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="712f0-134">範例</span><span class="sxs-lookup"><span data-stu-id="712f0-134">Example</span></span>  
+ 
+<span data-ttu-id="712f0-135">以下是此範例中所使用之設定檔的完整清單：</span><span class="sxs-lookup"><span data-stu-id="712f0-135">The following is a complete listing of the configuration file used in this example:</span></span>
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -296,6 +298,6 @@ namespace Microsoft.Samples.AdvancedFilters
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="94cea-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="94cea-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="712f0-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="712f0-136">See also</span></span>
 
-- [<span data-ttu-id="94cea-137">路由服務</span><span class="sxs-lookup"><span data-stu-id="94cea-137">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)
+- [<span data-ttu-id="712f0-137">路由服務</span><span class="sxs-lookup"><span data-stu-id="712f0-137">Routing Services</span></span>](../samples/routing-services.md)

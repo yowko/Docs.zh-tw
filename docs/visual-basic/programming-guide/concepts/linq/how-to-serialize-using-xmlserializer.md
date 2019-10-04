@@ -1,19 +1,19 @@
 ---
-title: HOW TO：序列化使用 XmlSerializer (Visual Basic)
+title: HOW TO：使用 XmlSerializer 進行序列化（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afde54ed7d0e8049f52468e17f4500fb090f3124
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614247"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835117"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="9b03f-102">HOW TO：序列化使用 XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b03f-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
-<span data-ttu-id="9b03f-103">本主題顯示的範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化與還原序列化。</span><span class="sxs-lookup"><span data-stu-id="9b03f-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="69468-102">HOW TO：使用 XmlSerializer 進行序列化（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="69468-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
+<span data-ttu-id="69468-103">本主題顯示的範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化與還原序列化。</span><span class="sxs-lookup"><span data-stu-id="69468-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9b03f-104">範例</span><span class="sxs-lookup"><span data-stu-id="9b03f-104">Example</span></span>  
- <span data-ttu-id="9b03f-105">下列範例會建立多個包含 <xref:System.Xml.Linq.XElement> 物件的物件。</span><span class="sxs-lookup"><span data-stu-id="9b03f-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="9b03f-106">接著，它會將這些物件序列化為記憶體資料流，然後從記憶體資料流還原序列化。</span><span class="sxs-lookup"><span data-stu-id="9b03f-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
+## <a name="example"></a><span data-ttu-id="69468-104">範例</span><span class="sxs-lookup"><span data-stu-id="69468-104">Example</span></span>  
+ <span data-ttu-id="69468-105">下列範例會建立多個包含 <xref:System.Xml.Linq.XElement> 物件的物件。</span><span class="sxs-lookup"><span data-stu-id="69468-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="69468-106">接著，它會將這些物件序列化為記憶體資料流，然後從記憶體資料流還原序列化。</span><span class="sxs-lookup"><span data-stu-id="69468-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```vb  
 Imports System  
@@ -69,9 +69,9 @@ Public Class XLinqTest
 End Class  
 ```  
   
- <span data-ttu-id="9b03f-107">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="9b03f-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="69468-107">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="69468-107">This example produces the following output:</span></span>  
   
-```  
+```console  
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 Testing for type: System.Xml.Linq.XElement  
@@ -80,6 +80,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9b03f-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9b03f-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="69468-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="69468-108">See also</span></span>
 
-- [<span data-ttu-id="9b03f-109">序列化包含 XElement 物件 (Visual Basic) 的物件圖形</span><span class="sxs-lookup"><span data-stu-id="9b03f-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [<span data-ttu-id="69468-109">序列化包含 System.xml.linq.xelement> 物件的物件圖形（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="69468-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

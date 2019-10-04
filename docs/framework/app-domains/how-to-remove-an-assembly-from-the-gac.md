@@ -1,5 +1,5 @@
 ---
-title: 作法：從全域組件快取移除組件
+title: HOW TO：從全域組件快取移除組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,47 +13,47 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa88cbc73415695a1545704a2ad8cab535f011e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7a085ff6955f706bcd90f895c42e6405a28d408a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053136"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834045"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a><span data-ttu-id="850f6-102">作法：從全域組件快取移除組件</span><span class="sxs-lookup"><span data-stu-id="850f6-102">How to: Remove an Assembly from the Global Assembly Cache</span></span>
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a><span data-ttu-id="527cc-102">HOW TO：從全域組件快取移除組件</span><span class="sxs-lookup"><span data-stu-id="527cc-102">How to: Remove an Assembly from the Global Assembly Cache</span></span>
 
-<span data-ttu-id="850f6-103">從全域組件快取 (GAC) 移除組件的方式有兩種：</span><span class="sxs-lookup"><span data-stu-id="850f6-103">There are two ways to remove an assembly from the global assembly cache (GAC):</span></span>
+<span data-ttu-id="527cc-103">從全域組件快取 (GAC) 移除組件的方式有兩種：</span><span class="sxs-lookup"><span data-stu-id="527cc-103">There are two ways to remove an assembly from the global assembly cache (GAC):</span></span>
 
-- <span data-ttu-id="850f6-104">使用[全域組件快取工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="850f6-104">By using the [Global Assembly Cache tool (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md).</span></span> <span data-ttu-id="850f6-105">若要解除安裝開發和測試期間放在 GAC 中的組件，可使用這個選項。</span><span class="sxs-lookup"><span data-stu-id="850f6-105">You can use this option to uninstall assemblies that you've placed in the GAC during development and testing.</span></span>
+- <span data-ttu-id="527cc-104">使用[全域組件快取工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="527cc-104">By using the [Global Assembly Cache tool (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md).</span></span> <span data-ttu-id="527cc-105">若要解除安裝開發和測試期間放在 GAC 中的組件，可使用這個選項。</span><span class="sxs-lookup"><span data-stu-id="527cc-105">You can use this option to uninstall assemblies that you've placed in the GAC during development and testing.</span></span>
 
-- <span data-ttu-id="850f6-106">使用 [Windows Installer](/windows/desktop/Msi/windows-installer-portal)。</span><span class="sxs-lookup"><span data-stu-id="850f6-106">By using [Windows Installer](/windows/desktop/Msi/windows-installer-portal).</span></span> <span data-ttu-id="850f6-107">若要解除安裝測試安裝套件時及針對生產系統所使用的組件，則應該使用這個選項。</span><span class="sxs-lookup"><span data-stu-id="850f6-107">You should use this option to uninstall assemblies when testing installation packages and for production systems.</span></span>
+- <span data-ttu-id="527cc-106">使用 [Windows Installer](/windows/desktop/Msi/windows-installer-portal)。</span><span class="sxs-lookup"><span data-stu-id="527cc-106">By using [Windows Installer](/windows/desktop/Msi/windows-installer-portal).</span></span> <span data-ttu-id="527cc-107">若要解除安裝測試安裝套件時及針對生產系統所使用的組件，則應該使用這個選項。</span><span class="sxs-lookup"><span data-stu-id="527cc-107">You should use this option to uninstall assemblies when testing installation packages and for production systems.</span></span>
 
-### <a name="removing-an-assembly-with-gacutilexe"></a><span data-ttu-id="850f6-108">使用 Gacutil.exe 移除組件</span><span class="sxs-lookup"><span data-stu-id="850f6-108">Removing an assembly with Gacutil.exe</span></span>
+## <a name="removing-an-assembly-with-gacutilexe"></a><span data-ttu-id="527cc-108">使用 Gacutil.exe 移除組件</span><span class="sxs-lookup"><span data-stu-id="527cc-108">Removing an assembly with Gacutil.exe</span></span>
 
-1. <span data-ttu-id="850f6-109">在命令提示字元中輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="850f6-109">At the command prompt, type the following command:</span></span>
+<span data-ttu-id="527cc-109">在命令提示字元中輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="527cc-109">At the command prompt, type the following command:</span></span>
 
-    <span data-ttu-id="850f6-110">**gacutil –u** \<*組件名稱*></span><span class="sxs-lookup"><span data-stu-id="850f6-110">**gacutil –u** \<*assembly name*></span></span>
+<span data-ttu-id="527cc-110">**gacutil –u** \<*組件名稱*></span><span class="sxs-lookup"><span data-stu-id="527cc-110">**gacutil –u** \<*assembly name*></span></span>
 
-    <span data-ttu-id="850f6-111">在這個命令中，「組件名稱」是要從全域組件快取移除的組件名稱。</span><span class="sxs-lookup"><span data-stu-id="850f6-111">In this command, *assembly name* is the name of the assembly to remove from the global assembly cache.</span></span>
+<span data-ttu-id="527cc-111">在這個命令中，「組件名稱」是要從全域組件快取移除的組件名稱。</span><span class="sxs-lookup"><span data-stu-id="527cc-111">In this command, *assembly name* is the name of the assembly to remove from the global assembly cache.</span></span>
 
-    > [!WARNING]
-    > <span data-ttu-id="850f6-112">您不應該使用 Gacutil.exe 移除生產系統上的組件，因為某個應用程式可能仍需要這個組件。</span><span class="sxs-lookup"><span data-stu-id="850f6-112">You should not use Gacutil.exe to remove assemblies on production systems because of the possibility that the assembly may still be required by some application.</span></span> <span data-ttu-id="850f6-113">您應該改用 Windows Installer，以維護安裝在 GAC 中之每個組件的參考計數。</span><span class="sxs-lookup"><span data-stu-id="850f6-113">Instead, you should use the Windows Installer, which maintains a reference count for each assembly it installs in the GAC.</span></span>
+> [!WARNING]
+> <span data-ttu-id="527cc-112">您不應該使用 Gacutil.exe 移除生產系統上的組件，因為某個應用程式可能仍需要這個組件。</span><span class="sxs-lookup"><span data-stu-id="527cc-112">You should not use Gacutil.exe to remove assemblies on production systems because of the possibility that the assembly may still be required by some application.</span></span> <span data-ttu-id="527cc-113">您應該改用 Windows Installer，以維護安裝在 GAC 中之每個組件的參考計數。</span><span class="sxs-lookup"><span data-stu-id="527cc-113">Instead, you should use the Windows Installer, which maintains a reference count for each assembly it installs in the GAC.</span></span>
 
- <span data-ttu-id="850f6-114">下列範例會從全域組件快取移除名為 `hello.dll` 的組件。</span><span class="sxs-lookup"><span data-stu-id="850f6-114">The following example removes an assembly named `hello.dll` from the global assembly cache.</span></span>
+<span data-ttu-id="527cc-114">下列範例會從全域組件快取中移除名為 `hello.dll` 的元件：</span><span class="sxs-lookup"><span data-stu-id="527cc-114">The following example removes an assembly named `hello.dll` from the global assembly cache:</span></span>
 
-```
+```console
 gacutil -u hello
 ```
 
-### <a name="removing-an-assembly-with-windows-installer"></a><span data-ttu-id="850f6-115">使用 Windows Installer 移除組件</span><span class="sxs-lookup"><span data-stu-id="850f6-115">Removing an assembly with Windows Installer</span></span>
+## <a name="removing-an-assembly-with-windows-installer"></a><span data-ttu-id="527cc-115">使用 Windows Installer 移除組件</span><span class="sxs-lookup"><span data-stu-id="527cc-115">Removing an assembly with Windows Installer</span></span>
 
-1. <span data-ttu-id="850f6-116">從 [控制台] 中的 [程式和功能] 應用程式，選取您要解除安裝的應用程式。</span><span class="sxs-lookup"><span data-stu-id="850f6-116">From the **Programs and Features** app in **Control Panel**, select the app that you want to uninstall.</span></span> <span data-ttu-id="850f6-117">如果安裝套件將組件放在 GAC 中，Windows Installer 會在其他應用程式未使用這些組件時，將組件移除。</span><span class="sxs-lookup"><span data-stu-id="850f6-117">If the installation package placed assemblies in the GAC, Windows Installer will remove them if they are not used by another application.</span></span>
+<span data-ttu-id="527cc-116">從 [控制台] 中的 [程式和功能] 應用程式，選取您要解除安裝的應用程式。</span><span class="sxs-lookup"><span data-stu-id="527cc-116">From the **Programs and Features** app in **Control Panel**, select the app that you want to uninstall.</span></span> <span data-ttu-id="527cc-117">如果安裝套件將組件放在 GAC 中，Windows Installer 會在其他應用程式未使用這些組件時，將組件移除。</span><span class="sxs-lookup"><span data-stu-id="527cc-117">If the installation package placed assemblies in the GAC, Windows Installer will remove them if they are not used by another application.</span></span>
 
-    > [!NOTE]
-    > <span data-ttu-id="850f6-118">Windows Installer 會維護安裝在 GAC 中之組件的參考計數。</span><span class="sxs-lookup"><span data-stu-id="850f6-118">Windows Installer maintains a reference count for assemblies installed in the GAC.</span></span> <span data-ttu-id="850f6-119">只有在組件的參考計數到達零時 (表示 Windows Installer 套件所安裝的任何應用程式都未使用這個組件)，才能從 GAC 中移除組件。</span><span class="sxs-lookup"><span data-stu-id="850f6-119">An assembly is removed from the GAC only when its reference count reaches zero, which indicates that it is not used by any application installed by a Windows Installer package.</span></span>
+> [!NOTE]
+> <span data-ttu-id="527cc-118">Windows Installer 會維護安裝在 GAC 中之組件的參考計數。</span><span class="sxs-lookup"><span data-stu-id="527cc-118">Windows Installer maintains a reference count for assemblies installed in the GAC.</span></span> <span data-ttu-id="527cc-119">只有在組件的參考計數到達零時 (表示 Windows Installer 套件所安裝的任何應用程式都未使用這個組件)，才能從 GAC 中移除組件。</span><span class="sxs-lookup"><span data-stu-id="527cc-119">An assembly is removed from the GAC only when its reference count reaches zero, which indicates that it is not used by any application installed by a Windows Installer package.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="850f6-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="850f6-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="527cc-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="527cc-120">See also</span></span>
 
-- [<span data-ttu-id="850f6-121">使用組件和全域組件快取</span><span class="sxs-lookup"><span data-stu-id="850f6-121">Working with Assemblies and the Global Assembly Cache</span></span>](working-with-assemblies-and-the-gac.md)
-- [<span data-ttu-id="850f6-122">如何：在全域組件快取中安裝單一組件</span><span class="sxs-lookup"><span data-stu-id="850f6-122">How to: Install an Assembly into the Global Assembly Cache</span></span>](install-assembly-into-gac.md)
-- [<span data-ttu-id="850f6-123">Gacutil.exe (全域組件快取工具)</span><span class="sxs-lookup"><span data-stu-id="850f6-123">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../tools/gacutil-exe-gac-tool.md)
+- [<span data-ttu-id="527cc-121">使用組件和全域組件快取</span><span class="sxs-lookup"><span data-stu-id="527cc-121">Working with Assemblies and the Global Assembly Cache</span></span>](working-with-assemblies-and-the-gac.md)
+- [<span data-ttu-id="527cc-122">如何：在全域組件快取中安裝單一組件</span><span class="sxs-lookup"><span data-stu-id="527cc-122">How to: Install an Assembly into the Global Assembly Cache</span></span>](install-assembly-into-gac.md)
+- [<span data-ttu-id="527cc-123">Gacutil.exe (全域組件快取工具)</span><span class="sxs-lookup"><span data-stu-id="527cc-123">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../tools/gacutil-exe-gac-tool.md)
