@@ -2,19 +2,19 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 641231825ca00c6accd19039ba1ec403208a077e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 711fbdc2d51177037cf349150c3431de14b11974
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250900"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833785"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 指定要放置查詢 ([SELECT](select-entity-sql.md)) 運算式所傳回物件的群組。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sql  
 [ GROUP BY aliasedExpression [ ,...n ] ]  
 ```  
   
@@ -23,7 +23,7 @@ ms.locfileid: "70250900"
  在其中執行群組作業的任何有效查詢運算式。 `expression` 可以是屬性，或參考 FROM 子句所傳回之屬性的非彙總運算式。 GROUP BY 子句中的每一個運算式都必評估為可以比較是否相等的型別 這些型別通常是純量基本型別，例如數值、字串和日期。 您不可依集合來群組。  
   
 ## <a name="remarks"></a>備註  
- 如果 select 子句\<中包含彙總函式 >, [群組依據] 就會計算每個群組的摘要值。 當指定 GROUP BY 時，GROUP BY 清單應該包括選取清單中之任何非彙總運算式中的每一個屬性名稱，否則，GROUP BY 運算式必須完全符合選取清單運算式。  
+ 如果 SELECT 子句中包含彙總函式 \<select list >，GROUP BY 就會計算每個群組的摘要值。 當指定 GROUP BY 時，GROUP BY 清單應該包括選取清單中之任何非彙總運算式中的每一個屬性名稱，否則，GROUP BY 運算式必須完全符合選取清單運算式。  
   
 > [!NOTE]
 > 如果未指定 ORDER BY 子句，由 GROUP BY 子句傳回的群組將不會依照任何特定順序。 若要指定特定資料排序，建議您一律使用 ORDER BY 子句。  
@@ -50,7 +50,7 @@ ms.locfileid: "70250900"
   
  每個 GROUP By 索引鍵運算式至少要有一個輸入範圍的參考：  
   
-```  
+```sql  
 SELECT FROM Persons as P  
 GROUP BY Q + P   -- GOOD  
 GROUP BY Q   -- BAD  
@@ -62,11 +62,11 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 GROUP BY 運算子指定查詢傳回的物件所在的群組。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. [遵循 how to:執行可傳回 PrimitiveType 結果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
+1. 依照 [How 中的程式進行：執行可傳回 PrimitiveType 結果 @ no__t-0 的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
+ [!code-sql[DP EntityServices Concepts#GROUPBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#groupby)]  
   
 ## <a name="see-also"></a>另請參閱
 
