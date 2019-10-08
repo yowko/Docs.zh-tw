@@ -2,12 +2,12 @@
 title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 探索協調微服務和多容器應用程式之高延展性和可用性的各種選項，以及開發 Kubernetes 應用程式生命週期時使用 Azure Dev Spaces 的可能性。
 ms.date: 09/20/2018
-ms.openlocfilehash: aef9dc2206c24d685610616a2a4d7850837b832d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0efad0134ec95028ecd49ad8d294ae4813940e9
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040119"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834329"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -15,11 +15,11 @@ ms.locfileid: "71040119"
 
 圖 4-23 說明由多個微服務 (容器) 所組成之應用程式叢集中的部署。
 
-![叢集中組合的 Docker 應用程式：您可以為每個服務執行個體各使用一個容器。 Docker 容器是「部署單位」，而容器是 Docker 的實例。 主機會處理許多容器](./media/image23.png)
+![圖表顯示在叢集中組成 Docker 應用程式。](./media/scalable-available-multi-container-microservice-applications/composed-docker-applications-cluster.png)
 
 **圖 4-23**： 容器叢集
 
-看起來像邏輯方法。 不過，您該如何處理這些組成應用程式的負載平衡、路由及協調作業？
+您可以為每個服務執行個體各使用一個容器。 Docker 容器是「部署單位」，而容器是 Docker 的實例。 主機會處理許多容器。 看起來像邏輯方法。 不過，您該如何處理這些組成應用程式的負載平衡、路由及協調作業？
 
 如果是一部主機上單一映像執行個體的管理需求，可靠單一 Docker 主機中的單純 Docker 引擎來滿足，但若是更複雜的分散式應用程式，它就無法滿足部署於多個主機上多個容器的管理需求。 在大部分情況下，您需要的管理平台應能自動啟動容器、向外延展容器 (其中每個映像含多個執行個體)、視需要暫停或關閉它們，最好也能控制資源 (例如網路和資料儲存體) 的存取方式。
 
@@ -37,8 +37,8 @@ ms.locfileid: "71040119"
 
 |     |   |
 |-----|---|
-| **Kubernetes** <br> ![Kubernetes 標誌](./media/image24.png) | [*Kubernetes*](https://kubernetes.io/) 是開放原始碼產品，可提供叢集基礎結構、容器排程到容器協調等功能。 它可讓您跨主機叢集自動化部署、規模調整及應用程式容器的作業。 <br><br> *Kubernetes* 提供以容器為中心的基礎結構，讓您將應用程式容器分組為邏輯單元，以便於管理及探索。 <br><br> 比起 Windows，*Kubernetes* 在 Linux 中相對成熟穩定。 |
-| **Azure Kubernetes Service (AKS)** <br> ![Azure Kubernetes Service 標誌](./media/image41.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/)是 Azure 中的受控 Kubernetes 容器協調流程服務，可簡化 Kubernetes 叢集的管理、部署和作業。 |
+| **Kubernetes** <br> @no__t 0An Kubernetes 標誌的影像。 ](./media/scalable-available-multi-container-microservice-applications/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) 是開放原始碼產品，可提供叢集基礎結構、容器排程到容器協調等功能。 它可讓您跨主機叢集自動化部署、規模調整及應用程式容器的作業。 <br><br> *Kubernetes* 提供以容器為中心的基礎結構，讓您將應用程式容器分組為邏輯單元，以便於管理及探索。 <br><br> 比起 Windows，*Kubernetes* 在 Linux 中相對成熟穩定。 |
+| **Azure Kubernetes Service (AKS)** <br> Azure Kubernetes Service 標誌的 @no__t 0An 影像。 ](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/)是 Azure 中的受控 Kubernetes 容器協調流程服務，可簡化 Kubernetes 叢集的管理、部署和作業。 |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>在 Microsoft Azure 中使用容器協調器
 
@@ -52,7 +52,7 @@ AKS 可讓您以簡化的方式，在 Azure 中建立、組態及管理預先設
 
 Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放原始碼工具和技術的最佳化組態。 這樣的開放解決方案，可賦予您容器和應用程式組態的可攜性。 您只要選取主機大小和數目，其餘工作全都由協調器工具和 AKS 處理。
 
-![Kubernetes 叢集結構：有一個處理 DNS、排程器、Proxy 等的主要節點，以及裝載容器的數個背景工作節點。](media/image36.png)
+![顯示 Kubernetes 叢集結構的圖表。](./media/scalable-available-multi-container-microservice-applications/kubernetes-cluster-simplified-structure.png)
 
 **圖 4-24**： Kubernetes 叢集的簡化結構和拓撲
 
@@ -62,7 +62,7 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 在開發環境中，[Docker 於 2018 年 7 月宣佈](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) Kubernetes 也可以在單一開發電腦 (Windows 10 或 macOS) 上執行，只要安裝 [Docker Desktop](https://docs.docker.com/install/) 即可。 您稍後可以部署到雲端 (AKS) 來進一步執行整合測試，如圖 4-25 所示。
 
-![Docker 於 2018 年 7 月宣佈透過 Docker Desktop 提供 Kubernetes 叢集的開發電腦支援。](media/image37.png) 
+![此圖顯示開發電腦上的 Kubernetes，然後部署至 AKS](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png) 
 
 **圖 4-25**： 在開發電腦和雲端中執行 Kubernetes
 
@@ -96,7 +96,7 @@ Azure Dev Spaces 可協助開發小組在 Kubernetes 上更具生產力，因為
 
 如圖 4-26 所示，Azure Dev Spaces 中最與眾不同的功能，就是能夠建立與叢集中全域部署其餘部分整合的執行「空間」。
 
-![Azure Dev Spaces 可以無障礙地混搭生產環境的微服務與開發容器執行個體，以便測試新版本。](media/image38.png)
+![此圖顯示如何在 Azure Dev Spaces 中使用多個空格。](./media/scalable-available-multi-container-microservice-applications/use-multiple-spaces-azure-dev.png)
 
 **圖 4-26**。 在 Azure Dev Spaces 中使用多個空間
 

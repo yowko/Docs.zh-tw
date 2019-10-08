@@ -2,12 +2,12 @@
 title: 建立以微服務為基礎的複合 UI
 description: 微服務架構不只可用於後端。 預覽以了解如何用於前端。
 ms.date: 09/20/2018
-ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
-ms.translationtype: HT
+ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817838"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834381"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>建立以微服務為基礎的複合 UI
 
@@ -15,7 +15,7 @@ ms.locfileid: "68817838"
 
 圖 4-20 顯示更簡單的方法，該方法只會從整合型用戶端應用程式取用微服務。 當然，您在產生 HTML 與 JavaScript 之間可能會有 ASP.NET MVC 服務。 下圖已經過簡化，顯示您有取用微服務的單一 (整合型) 用戶端 UI，只著重於邏輯和資料，而不是 UI 形狀 (HTML 和 JavaScript)。
 
-![連線到個別微服務的整合型 UI 應用程式。](./media/image20.png)
+![連接到微服務的整合型 UI 應用程式圖表。](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
 
 **圖 4-20**： 取用後端微服務的整合型 UI 應用程式
 
@@ -25,11 +25,11 @@ ms.locfileid: "68817838"
 
 圖 4-21 顯示此複合 UI 方法的版本。 這已經過簡化，因為您可能會有根據不同技術彙總更細緻部分的其他微服務。 這取決於您建置的是傳統 Web 方法 (ASP.NET MVC) 或 SPA (單頁應用程式)。
 
-![在複合 UI 應用程式中，每個 UI 區段是由功能類似迷你閘道的 UI 組合微服務所產生。](./media/image21.png)
+![由許多視圖模型組成的複合 UI 圖表。](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 
 **圖 4-21**： 由後端微服務成形的複合 UI 應用程式範例
 
-每個 UI 組合微服務會類似於小型 API 閘道。 但在本案例中，每個微服務會負責一個很小的 UI 區域。
+每個 UI 組合微服務會類似於小型 API 閘道。 但在此情況下，每個都是由一個小型 UI 區域負責。
 
 根據您所使用的 UI 技術，微服務導向的複合 UI 方法可能挑戰性很高，也可能很低。 例如，您不會使用與用來建置 SPA 或原生行動應用程式相同的技術來建置傳統 Web 應用程式 (例如開發 Xamarin 應用程式時，此方法的挑戰性可能更高)。
 

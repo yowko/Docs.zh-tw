@@ -2,21 +2,21 @@
 title: = (等號) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: ec87ec682e1773c001c225567a35b3cedc9c5aba
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5cdfd35450514a9699a39cf78f64c0fa6b7d5f39
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250996"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833844"
 ---
 # <a name="-equals-entity-sql"></a>= (等號) (Entity SQL)
 比較兩個運算式是否相等。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sql  
 expression = expression  
-or   
+-- or   
 expression == expression  
 ```  
   
@@ -33,11 +33,11 @@ expression == expression
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 = 比較運算子來比較兩個運算式是否相等。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. [遵循 how to:執行可傳回 StructuralType 結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
+1. 依照 [How 中的程式進行：執行可傳回 StructuralType 結果 @ no__t-0 的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#equals)]  
+ [!code-sql[DP EntityServices Concepts#EQUALS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#equals)]  
   
 ## <a name="see-also"></a>另請參閱
 

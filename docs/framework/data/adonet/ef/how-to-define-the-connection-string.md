@@ -1,20 +1,20 @@
 ---
-title: 作法：定義連接字串
+title: HOW TO：定義連接字串
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: a78158c7553c0b479b935e3b94931313df912c2f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 9ce0b427cac17fc338877c5f85d3648d15d5ee14
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854653"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833957"
 ---
-# <a name="how-to-define-the-connection-string"></a>作法：定義連接字串
+# <a name="how-to-define-the-connection-string"></a>HOW TO：定義連接字串
 
 本主題將示範如何定義連接至概念模型時所使用的連接字串 (Connection String)。 本主題是以[AdventureWorks Sales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100))概念模型為基礎。 AdventureWorks Sales Model 是在 Entity Framework 檔的整個工作相關主題中使用。 本主題假設您已經設定 Entity Framework 並定義 AdventureWorks Sales Model。 如需詳細資訊，請參閱[如何：手動定義模型和對應](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))檔。 本主題中的程式也包含在[如何：手動設定 Entity Framework 專案](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。
 
 > [!NOTE]
-> 如果您在 Visual Studio 專案中使用實體資料模型 Wizard，它會自動產生 .edmx 檔，並將專案設定為使用 Entity Framework。 如需詳細資訊，請參閱[如何：使用實體資料模型 Wizard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))
+> 如果您在 Visual Studio 專案中使用實體資料模型 Wizard，它會自動產生 .edmx 檔，並將專案設定為使用 Entity Framework。 如需詳細資訊，請參閱[如何：使用實體資料模型 Wizard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。
 
 ## <a name="to-define-the-entity-framework-connection-string"></a>定義 Entity Framework 連接字串
 

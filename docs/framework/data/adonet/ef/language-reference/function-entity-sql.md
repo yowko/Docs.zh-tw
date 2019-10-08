@@ -2,19 +2,19 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bacc773351812a5db60f493f3025c8e4b07dbaa2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250943"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833793"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 定義 Entity SQL 查詢命令範圍內的函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sql  
 FUNCTION function-name  
 ( [ { parameter_name <type_definition>   
         [ ,...n ]  
@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  支援的型別名稱。  
   
- 集合（< type_definition`>` ）  
+ COLLECTION （< type_definition @ no__t-0）  
  傳回支援的型別、資料列或參考等集合的運算式。  
   
  REF **(** `data_type` **)**  
@@ -61,19 +61,19 @@ FUNCTION function-name
   
  `A()`  
   
- 如需詳細資訊，請參閱[如何：呼叫使用者定義函數](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))。  
+ 如需詳細資訊，請參閱[如何：呼叫使用者定義函數 @ no__t-0。  
   
  函式也可以在模型本身進行宣告。 在模型中宣告的函式，會與在命令中宣告為內嵌的函式一樣，以相同的方式執行。 如需詳細資訊，請參閱[使用者定義函數](user-defined-functions-entity-sql.md)。  
   
 ## <a name="example"></a>範例  
  以下 Entity SQL 命令定義函式 `Products` ，使用整數值篩選傳回的產品。  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function1)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
 ## <a name="example"></a>範例  
  以下 Entity SQL 命令定義函式 `StringReturnsCollection` ，使用字串集合篩選傳回的連絡人。  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function2)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
 ## <a name="see-also"></a>另請參閱
 

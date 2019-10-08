@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 00064b774145e7267fe26b31ef3bba4d5271a5c3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: c8b4c60eb4ea09c8b10bd0b2fffc803d0a5fb6e0
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181516"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834286"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>使用 CLI 發佈 .NET Core 應用程式
 
@@ -137,7 +137,7 @@ End Module
 如果您使用[範例應用程式](#sample-app)，請執行 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`。 此命令會建立下列可執行檔： `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> 您可以啟用**全域無差異模式**來減少您部署的大小總計。 此模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的排序次序。 如需**全域無差異模式**和如何啟用的詳細資訊，請參閱 [.NET Core 全域無差異模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
+> 您可以啟用**全域無差異模式**來減少您部署的大小總計。 此模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的排序次序。 如需**全球化不變模式**和如何啟用的詳細資訊，請參閱[.Net Core 全球化不變模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)。
 
 ## <a name="self-contained-deployment"></a>自封式部署
 
@@ -152,7 +152,7 @@ End Module
 - `--self-contained true` 此參數會指示 .NET Core SDK 將可執行檔建立為 SCD。
 
 > [!NOTE]
-> 您可以啟用**全域無差異模式**來減少您部署的大小總計。 此模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的排序次序。 如需**全域無差異模式**和如何啟用的詳細資訊，請參閱 [.NET Core 全域無差異模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
+> 您可以啟用**全域無差異模式**來減少您部署的大小總計。 此模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的排序次序。 如需**全球化不變模式**和如何啟用的詳細資訊，請參閱[.Net Core 全球化不變模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)。
 
 ## <a name="see-also"></a>另請參閱
 

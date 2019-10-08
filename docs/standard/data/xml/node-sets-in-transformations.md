@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a84234ee797dac7487492dc92af2de4fa7ef503
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: fbcd9b93f63d48229c174b0f6518fd0150e98e18
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962541"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957023"
 ---
 # <a name="node-sets-in-transformations"></a>轉換中的節點集
 節點集是 XML 路徑語言 (XPath) 運算式傳回的四種基本資料型別之一。 節點集是一個沒有順序、不重複的節點集合，它依據文件的順序建立，可以指定給樣式表中的變數。  
@@ -40,7 +40,7 @@ ms.locfileid: "69962541"
 </xsl:stylesheet>  
 ```  
   
-## <a name="input"></a>輸入  
+## <a name="input"></a>Input  
   
 ```xml  
 <bookstore>  
@@ -60,7 +60,7 @@ ms.locfileid: "69962541"
   
 ## <a name="output"></a>Output  
   
-```  
+```output  
 ******  
 Seven Years in Trenton  
 ******  

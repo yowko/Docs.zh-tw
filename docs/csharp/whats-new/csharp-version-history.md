@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e8bf39716482eb94e5686c1a150667be9f8ef620
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8c3939e9bd5d79e91ce44146a8c36b28d4470406
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391946"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956645"
 ---
 # <a name="the-history-of-c"></a>C\# 的歷史
 
@@ -28,7 +28,7 @@ C# 建置工具將最新的主要語言版本視為預設語言版本。 主要�
 
 ## <a name="c-version-10"></a>C# 1.0 版
 
-當您回頭看一下， C# Visual Studio.net 2002 發行的版本1.0 看起來很像 JAVA。 在[其聲明的 ECMA 設計目標當中](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)，它試圖成為「簡單、現代化、一般用途的物件導向語言」。  同時，看似 Java 表示它達成了那些早期的設計目標。
+當您回頭看一下， C# Visual Studio .net 2002 發行的版本1.0，看起來很像 JAVA。 在[其聲明的 ECMA 設計目標當中](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)，它試圖成為「簡單、現代化、一般用途的物件導向語言」。  同時，看似 Java 表示它達成了那些早期的設計目標。
 
 但如果您現在回顧 C# 1.0，會覺得有點暈眩。 它缺乏內建的非同步功能和部分圍繞著您視為理所當然的泛型熟練功能。 事實上，它完全缺乏了泛型。  那麼 [LINQ](../linq/index.md) 呢？ 尚無法使用。 那些新增項目需要好幾年才會出現。
 
@@ -48,7 +48,7 @@ C# 1.0 的主要功能包含：
 
 ## <a name="c-version-12"></a>C# 1.2 版
 
-Visual Studio 2003 隨附的 C# 1.2 版。 本版內含對語言的小幅功能改善。 最值得注意的是，自本版開始，當 <xref:System.Collections.IEnumerator> 實作 <xref:System.IDisposable> 時，在 `foreach` 迴圈產生的程式碼會在 <xref:System.Collections.IEnumerator> 呼叫 <xref:System.IDisposable.Dispose%2A>。
+C#1.2 版隨附 Visual Studio .NET 2003。 本版內含對語言的小幅功能改善。 最值得注意的是，自本版開始，當 <xref:System.Collections.IEnumerator> 實作 <xref:System.IDisposable> 時，在 `foreach` 迴圈產生的程式碼會在 <xref:System.Collections.IEnumerator> 呼叫 <xref:System.IDisposable.Dispose%2A>。
 
 ## <a name="c-version-20"></a>C# 2.0 版
 

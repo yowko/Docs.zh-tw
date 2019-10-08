@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2229dca07a3a723babe5bf202ce5ddc0c77a7374
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dbb196b5beb2fc04ff85f2924356699fd83f3ea6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052196"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833666"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
@@ -57,7 +57,7 @@ ms.locfileid: "71052196"
 
 - 從 .NET Framework 4.5 開始，您的使用者可以在安裝過程中檢視執行中的 .NET Framework 應用程式清單，並輕鬆地將它們關閉。 這有助於避免系統因安裝 .NET Framework 而重新啟動。 請參閱 [減少系統重新啟動](reducing-system-restarts.md)。
 
-- 解除安裝 .NET Framework 4.5 或其小數點版本的其中一個，也會移除已存在的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 (請參閱 [安裝 .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)))。
+- 解除安裝 .NET Framework 4.5 或其小數點版本的其中一個，也會移除已存在的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 請參閱[安裝 .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。
 
 - .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為 2012 年 8 月 16 日的 .NET Framework 4.5 可轉散發套件，我們建議您使用 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)最新的可轉散發套件進行更新。 如需這個問題的詳細資訊，請參閱 [Microsoft 安全性摘要報告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
 
@@ -206,7 +206,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
-您可以使用其他命令列選項自訂安裝。 例如：
+您可以使用其他命令列選項自訂安裝。 例如:
 
 - 若要提供一種方法讓使用者關閉執行中的 .NET Framework 應用程式，以減少系統重新啟動的次數，可設定被動模式並使用 `/showrmui` 選項，如下所示：
 
@@ -291,8 +291,8 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 | | |
 |-|-|
 | Key | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| 名稱 | 版本 |
-| 類型 | DWORD |
+| Name | 版本 |
+| Type | DWORD |
 
 若要判斷是否已針對 .NET Framework 從 4.5 到 4.7.2 的特定版本安裝語言套件的最終發行版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 中所述。
 
@@ -381,7 +381,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 下表列出您將 .NET Framework 4.5 可轉散發套件鏈結至您的應用程式安裝程式時，可以包含的選項。
 
-|選項|說明|
+|選項|描述|
 |------------|-----------------|
 |**/CEIPConsent**|覆寫預設的行為並傳送匿名意見給 Microsoft 以協助改善未來的部署經驗。 只有當安裝程式提示同意，同時使用者授與權限傳送匿名意見給 Microsoft 時，才能使用此選項。|
 |**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"** 。 如需鏈結套件的範例，請參閱 MSDN Library 中的 [從安裝套件取得進度資訊](https://go.microsoft.com/fwlink/?LinkId=181926) 。|

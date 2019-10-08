@@ -1,15 +1,15 @@
 ---
-title: HOW TO：使用註釋轉換 LINQ to XML 樹狀結構的 XSLT 樣式 (Visual Basic)
+title: HOW TO：使用注釋轉換 XSLT 樣式中的 LINQ to XML 樹狀結構（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: 9ebff2276fc9f574989530fdb07a0d0875ff74a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa0561ecc26139d191107521a8bb5fc2889332cd
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648805"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835065"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>HOW TO：使用註釋轉換 LINQ to XML 樹狀結構的 XSLT 樣式 (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>HOW TO：使用注釋轉換 XSLT 樣式中的 LINQ to XML 樹狀結構（Visual Basic）
 附註可用於簡化 XML 樹狀的轉換。  
   
  有些 XML 文件為「中央具有混合內容的文件」。 使用這類文件時，您不一定要知道項目子節點的組織結構。 例如，包含文字的節點類似如下：  
@@ -18,7 +18,7 @@ ms.locfileid: "64648805"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- 針對任何指定的文字節點，可能會有任何數目的 `<b>` 和 `<i>` 子項目。 這個方法會延伸到數個其他情況： 例如，可以包含各種不同的子元素，例如一般段落、 分項段落與點陣圖的頁面。 資料表中的儲存格可能包含文字、下拉式清單或點陣圖。 文件中心 XML 的其中一個主要特性為，您不知道任何特定項目將會有哪個子項目。  
+ 針對任何指定的文字節點，可能會有任何數目的 `<b>` 和 `<i>` 子項目。 這個方法會延伸到數個其他情況：例如，可以包含各種子專案的頁面，例如一般段落、點符段落和點陣圖。 資料表中的儲存格可能包含文字、下拉式清單或點陣圖。 文件中心 XML 的其中一個主要特性為，您不知道任何特定項目將會有哪個子項目。  
   
  如果您要在樹狀結構中，轉換您不一定了解太多您要轉換之項目子系的項目，則使用附註的這個方法是一個有效的方法。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64648805"
   
 - 加入為附註的新項目可以包含新的子節點；它可以形成具有任何所需組織結構的子樹狀結構。  
   
-- 有一個特殊規則：如果新項目的子節點位於不同的命名空間中，也就是針對此目的所形成的命名空間 (在此範例中，命名空間為 `http://www.microsoft.com/LinqToXmlTransform/2007`)，則不會將該子項目複製到新的樹狀結構中。 但是，如果命名空間為上述的特殊命名空間，而且該項目的區域名稱為 `ApplyTransforms`，則會反覆運算來源樹狀結構中項目的子節點，並複製到新的樹狀結構 (除非附註的子項目會根據這些規則自我轉換) 中。  
+- 有一項特殊規則：如果新項目的子節點位於不同命名空間 (針對此目的所組成的命名空間，在此範例中為 `http://www.microsoft.com/LinqToXmlTransform/2007`)，則該子項目不會複製到新的樹狀結構。 但是，如果命名空間為上述的特殊命名空間，而且該項目的區域名稱為 `ApplyTransforms`，則會反覆運算來源樹狀結構中項目的子節點，並複製到新的樹狀結構 (除非附註的子項目會根據這些規則自我轉換) 中。  
   
 - 這有點類似於 XSL 中的轉換規格。 選取一組節點的查詢類似於範本的 XPath 運算式。 建立另存為附註之新 <xref:System.Xml.Linq.XElement> 的程式碼類似於 XSL 中的序列建構函式，而 `ApplyTransforms` 項目在功能上則類似於 XSL 中的 `xsl:apply-templates` 項目。  
   
@@ -135,7 +135,7 @@ End Module
   
  這個範例會產生下列輸出：  
   
-```  
+```console
 Before Transform  
 ----------------  
 <Root>  
@@ -158,33 +158,23 @@ After Transform
 ## <a name="effecting-the-transform"></a>實行轉換  
  `XForm` 這個小函式會從原始的附註樹狀結構建立轉換的新樹狀結構。  
   
-- 函式的虛擬程式碼相當簡單：  
+函式的虛擬程式碼相當簡單：  
   
-```  
-The function takes an XElement as an argument and returns an XElement.   
-If an element has an XElement annotation, then  
-    Return a new XElement  
-        The name of the new XElement is the annotation element's name.  
-        All attributes are copied from the annotation to the new node.  
-        All child nodes are copied from the annotation, with the  
-            exception that the special node xf:ApplyTransforms is  
-            recognized, and the source element's child nodes are  
-            iterated. If the source child node is not an XElement, it  
-            is copied to the new tree. If the source child is an  
-            XElement, then it is transformed by calling this function  
-            recursively.  
-If an element is not annotated  
-    Return a new XElement  
-        The name of the new XElement is the source element's name  
-        All attributes are copied from the source element to the  
-            destination's element.  
-        All child nodes are copied from the source element.  
-        If the source child node is not an XElement, it is copied to  
-            the new tree. If the source child is an XElement, then it  
-            is transformed by calling this function recursively.  
-```  
-  
- 以下是此函式的實作：  
+> 函式會採用 System.xml.linq.xelement> 做為引數，並傳回 System.xml.linq.xelement>。
+>   
+> 如果元素具有 System.xml.linq.xelement> 注釋，則會傳回新的 System.xml.linq.xelement>：  
+>    - 新 System.xml.linq.xelement> 的名稱是 annotation 元素的名稱。  
+>    - 所有屬性都會從注釋複製到新的節點。  
+>    - 所有子節點都會從注釋複製，但特殊節點 xf： ApplyTransforms 會被辨識，而來源專案的子節點會逐一查看。 如果來源子節點不是 System.xml.linq.xelement>，則會將它複製到新的樹狀結構。 如果來源子系是 System.xml.linq.xelement>，則會以遞迴方式呼叫此函式來轉換它。
+>  
+> 如果元素沒有標注：  
+>    - 傳回新的 System.xml.linq.xelement>  
+>        - 新 System.xml.linq.xelement> 的名稱是來源元素的名稱。  
+>        - 所有屬性都會從來源元素複製到目的地的元素。  
+>        - 所有子節點都會從來源元素複製。  
+>        - 如果來源子節點不是 System.xml.linq.xelement>，則會將它複製到新的樹狀結構。 如果來源子系是 System.xml.linq.xelement>，則會以遞迴方式呼叫此函式來轉換它。  
+
+以下是此函式的實作用：  
   
 ```vb  
 ' Build a transformed XML tree per the annotations.  
@@ -346,7 +336,7 @@ End Module
   
  這個範例會產生下列輸出：  
   
-```  
+```console
 Before Transform  
 ----------------  
 <Root Att1="123">  
@@ -380,4 +370,4 @@ After Transform
   
 ## <a name="see-also"></a>另請參閱
 
-- [進階的 LINQ to XML 程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML 程式設計（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

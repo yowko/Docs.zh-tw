@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 4c3a39c1d1252951b0847638809c9e1e6be2a21e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2a599322ef955b9f702f8960f294f5d093ede74a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856185"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834740"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的雙向功能概觀
 
@@ -178,7 +178,7 @@ XAML 元素可以包含[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-x
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 會持續使用相同的傳統，並新增此替代的進一步支援，讓使用者更深入控制該何時和如何使用這項功能。 雖然這項功能設計用於任何語言，但特別適用於雙向內容，其中特定語言的成形數字通常會是應用程式開發人員的挑戰，因為應用程式可能會在各種文化特性中執行。
 
-控制數字替代運作[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]方式的核心屬性<xref:System.Windows.Media.NumberSubstitution.Substitution%2A>是相依性屬性。 <xref:System.Windows.Media.NumberSubstitution>類別會指定文字中的數字顯示方式。 它有三個定義其行為的公用屬性。 以下是每個屬性的摘要。
+控制數字替代運作[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]方式的核心屬性<xref:System.Windows.Media.NumberSubstitution.Substitution%2A>是相依性屬性。 <xref:System.Windows.Media.NumberSubstitution>類別會指定文字中的數字顯示方式。 它有三個定義其行為的公用屬性。 以下是每個屬性的摘要：
 
 **CultureSource**：
 
@@ -198,15 +198,15 @@ XAML 元素可以包含[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-x
 
 這個屬性指定要執行的數字替代類型。 它會採用下列<xref:System.Windows.Media.NumberSubstitutionMethod>其中一個列舉值：
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>：替代方法是根據數位文化特性的<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>屬性來決定。 這是預設值。
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>:替代方法是根據數位文化特性的<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>屬性來決定。 這是預設值。
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>：如果數位文化特性是阿拉伯文或波斯文化特性，則會指定數位取決於內容。
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>:如果數位文化特性是阿拉伯文或波斯文化特性，則會指定數位取決於內容。
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.European>：數位一律會轉譯為歐洲數位。
+- <xref:System.Windows.Media.NumberSubstitutionMethod.European>:數位一律會轉譯為歐洲數位。
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>：數位會使用數位文化特性的國家（地區）來呈現，如文化特性的<xref:System.Globalization.CultureInfo.NumberFormat%2A>所指定。
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>:數位會使用數位文化特性的國家（地區）來呈現，如文化特性的<xref:System.Globalization.CultureInfo.NumberFormat%2A>所指定。
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>：數位會使用數位文化特性的傳統數位來呈現。 對於大部分的文化特性而言，這與<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>相同。 不過， <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>某些阿拉伯文文化特性會產生拉丁數位，而此值會產生所有阿拉伯文文化特性的阿拉伯數位。
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>:數位會使用數位文化特性的傳統數位來呈現。 對於大部分的文化特性而言，這與<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>相同。 不過， <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>某些阿拉伯文文化特性會產生拉丁數位，而此值會產生所有阿拉伯文文化特性的阿拉伯數位。
 
 這些值對雙向內容開發人員的意義為何？ 在大部分的情況下，開發人員可能只需要<xref:System.Windows.FlowDirection>定義和每個文字[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]專案的語言<xref:System.Windows.Media.NumberSubstitution> ， `Language="ar-SA"`例如，而邏輯會根據正確[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的來顯示數位。 下列範例示範在阿拉伯文版本的 Windows 中執行的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式中，使用阿拉伯文和英文數位。
 
@@ -226,7 +226,7 @@ XAML 元素可以包含[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-x
 
 首先，設定應用程式元件的`NumberSubstitution.CultureSource="Text"`。 使用此設定可確保設定不會來自[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]具有 "User" 做為預設值（ <xref:System.Windows.Controls.TextBlock>例如）的 for text 元素。
 
-例如：
+例如:
 
 ```xaml
 <TextBlock

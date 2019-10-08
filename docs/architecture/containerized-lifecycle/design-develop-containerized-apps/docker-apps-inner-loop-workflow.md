@@ -2,18 +2,18 @@
 title: Docker 應用程式的內部迴圈開發工作流程
 description: 了解用於開發 Docker 應用程式的「內部迴圈」工作流程。
 ms.date: 02/15/2019
-ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: c97cd9ba8d740f13c22caa45e344c4961e3b0600
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214363"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834487"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
 在觸發跨越整個 DevOps 循環的外部迴圈工作流程之前，所有項目都從每個開發人員的機器開始，使用其慣用語言或平台對應用程式本身編碼，並在本機進行測試 (圖 4-21)。 但不論何種情況，不論您選擇何種語言、架構或平台，您都會有一個重要的共同點。 在此特定的工作流程中，您將一律開發並測試 Docker 容器，但僅在本機。
 
-![步驟 1 - 編碼/執行/偵錯](./media/image18.png)
+![此圖顯示內部迴圈開發環境的概念。](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
 
 **圖 4-21**： 內部迴圈開發內容
 
@@ -35,11 +35,11 @@ Docker 映像的容器或執行個體將包含這些元件：
 
 圖 4-22 顯示建置 Docker 應用程式時通常需要執行的基本步驟，後接每個步驟的詳細說明。
 
-![工作流程概觀：步驟 1 - 編碼，步驟 2 - 撰寫 Dockerfiles，步驟 3 - 建立使用 Dockerfiles 定義的映像，步驟 4 - 使用 docker-compose 檔案定義服務，步驟 5 - 執行容器或組成應用程式，步驟 6 - 測試應用程式，步驟 7 - 推送以開始外部迴圈 (CI/CD 管線) 或繼續開發。](./media/image19.png)
+![此圖顯示建立容器化應用程式所需的七個步驟。](./media/docker-apps-inner-loop-workflow/life-cycle-containerized-apps-docker-cli.png)
 
 **圖 4-22**。 使用 Docker CLI 之 Docker 容器化應用程式的生命週期工作流程概要
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>步驟 1：開始在 Visual Studio Code 中編碼，並建立您的初始應用程式/服務基準
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>步驟 1:開始在 Visual Studio Code 中編碼，並建立您的初始應用程式/服務基準
 
 開發 Docker 應用程式的方式，與不使用 Docker 開發應用程式的方式類似。 差別在於，在開發時，您要部署並測試放置於本機環境之 Docker 容器 (例如 Linux VM 或 Windows) 中正在執行的應用程式或服務。
 
@@ -81,11 +81,11 @@ Microsoft 提供 Visual Studio Code，也就是 Mac、Windows 和 Linux 支援�
 
 若要安裝 Docker 延伸模組，請按 Ctrl+Shift+P、鍵入 `ext install`，然後執行安裝延伸模組的命令來顯示 Marketplace 延伸模組清單。 接下來，輸入 **docker** 以篩選結果，然後選取 Docker 支援延伸模組，如圖 4-23 所示。
 
-![適用於 VS Code 的 Docker 延伸模組檢視。](./media/image20.png)
+![適用於 VS Code 的 Docker 延伸模組檢視。](./media/docker-apps-inner-loop-workflow/install-docker-extension-vs-code.png)
 
 **圖 4-23**： 在 Visual Studio Code 中安裝 Docker 延伸模組
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>步驟 2：建立與現有映像 (純文字 OS 或開發環境，例如 .NET Core、Node.js 和 Ruby) 相關的 DockerFile
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>步驟 2:建立與現有映像 (純文字 OS 或開發環境，例如 .NET Core、Node.js 和 Ruby) 相關的 DockerFile
 
 針對每個要建置的自訂映像，以及每個要部署的容器，您都需要一個 `DockerFile`。 如果您的應用程式由單一自訂服務所組成，您將需要單一 `DockerFile`。 但如果您的應用程式由多個服務所組成 (如同在微服務架構中)，針對每項服務您將需要一個 `Dockerfile`。
 
@@ -96,7 +96,7 @@ Microsoft 提供 Visual Studio Code，也就是 Mac、Windows 和 Linux 支援�
 
 在圖 4-24 中，您可以看到如何使用適用於 VS Code 的 Docker 延伸模組來新增 docker-compose 檔案。
 
-![適用於 VS Code 的 Docker 延伸模組主控台檢視。](./media/image24.png)
+![適用於 VS Code 的 Docker 延伸模組主控台檢視。](./media/docker-apps-inner-loop-workflow/add-docker-files-to-workspace-command.png)
 
 **圖 4-24**： 使用**將 Docker 檔案新增至工作區命令**新增的 Docker 檔案
 
@@ -158,7 +158,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 若要在您的本機環境中使用 DockerFile 建立映像，您可以使用 docker build 命令，如圖 4-25 所示 (針對由多個容器/服務所組成的應用程式，您也可以執行 `docker-compose up --build`)。
 
-![docker-compose 組建的主控台輸出，顯示映像下載進度。](./media/image25.png)
+![螢幕擷取畫面，顯示 docker build 命令的主控台輸出。](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 
 **圖 4-25**： 執行 docker build
 
@@ -168,7 +168,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 您可以使用 docker images 命令在本機存放庫 (您的部署機器) 中尋找現有的映像，如圖 4-26 所示。
 
-![docker images 命令的主控台輸出，顯示現有的映像。](./media/image26.png)
+![docker images 命令的主控台輸出，顯示現有的映像。](./media/docker-apps-inner-loop-workflow/view-existing-images-with-docker-images.png)
 
 **圖 4-26**。 使用 docker images 檢視現有的映像
 
@@ -223,13 +223,13 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 在大部分的企業案例中，Docker 應用程式由多個服務組成。 在這些案例中，您可以執行 `docker-compose up` 命令 (圖 4-27)，會使用您先前可能已建立的 docker compose.yml 檔案。 執行此命令會部署組成應用程式及其所有相關容器。
 
-![docker compose up 命令的主控台輸出。](./media/image27.png)
+![docker compose up 命令的主控台輸出。](./media/docker-apps-inner-loop-workflow/results-docker-compose-up.png)
 
 **圖 4-27**。 執行 "docker-compose up" 命令的結果
 
 執行 `docker-compose up` 之後，您會將應用程式及其相關容器部署至您的 Docker 主機，如圖 4-28 以 VM 表示。
 
-![執行多容器應用程式的 VM。](./media/image28.png)
+![執行多容器應用程式的 VM。](./media/docker-apps-inner-loop-workflow/vm-with-docker-containers-deployed.png)
 
 **圖 4-28**。 部署了 Docker 容器的 VM
 
@@ -247,7 +247,7 @@ docker-machine {IP} {YOUR-CONTAINER-NAME}
 
 在 Docker 主機上，開啟瀏覽器並巡覽至該網站；您應該會看到您的應用程式/服務正在執行，如圖 4-29 所示。
 
-![從 localhost/API/values 回應的瀏覽器檢視。](./media/image29.png)
+![從 localhost/API/values 回應的瀏覽器檢視。](./media/docker-apps-inner-loop-workflow/test-docker-app-locally-localhost.png)
 
 **圖 4-29**。 使用 localhost 在本機測試 Docker 應用程式
 
@@ -255,7 +255,7 @@ docker-machine {IP} {YOUR-CONTAINER-NAME}
 
 您可以從終端機使用 CURL 來測試。 在 Windows 上的 Docker 安裝中，預設 IP 是 10.0.75.1，如圖 4-30 所示。
 
-![使用 curl 取得 http://10.0.75.1/API/values 的主控台輸出](./media/image30.png)
+![使用 curl 取得 http://10.0.75.1/API/values 的主控台輸出](./media/docker-apps-inner-loop-workflow/test-docker-app-locally-curl.png)
 
 **圖 4-30**。 使用 CURL 在本機測試 Docker 應用程式
 

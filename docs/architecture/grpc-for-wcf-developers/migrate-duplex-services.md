@@ -3,14 +3,14 @@ title: 將 WCF 雙工服務遷移至 WCF 開發人員的 gRPC-gRPC
 description: 瞭解如何將各種形式的 WCF 雙工服務遷移至 gRPC 串流服務。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 06ac784a31df43fd270f7ef0475bcdc282efad8f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 525dc3006c45f773242ab08b112dba72087a2e3f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184334"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834512"
 ---
-# <a name="migrate-wcf-duplex-services-to-grpc"></a>將 WCF 雙工服務遷移至 gRPC
+# <a name="migrate-wcf-duplex-services-to-grpc"></a>將 WCF 雙面服務移轉至 gRPC
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -244,7 +244,7 @@ static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, Can
 > [!TIP]
 > 本章節結尾的[用戶端程式庫](client-libraries.md#iobservable)一節將探討如何新增擴充方法和類別，以包裝`IAsyncStreamReader<T>`在中，讓開發人員使用回應式的程式`IObservable<T>`設計模式。
 
-同樣地，請小心在此處攔截例外狀況<xref:System.OperationCanceledException> ，因為可能發生網路失敗，以及可避免擲回的，因為程式碼<xref:System.Threading.CancellationToken>使用來中斷迴圈。 型別有許多關於 gRPC 執行時間錯誤的實用資訊， `StatusCode`包括。 `RpcException` 如需詳細資訊，請參閱[第4章中的*錯誤處理*](error-handling.md)
+同樣地，請小心在此處攔截例外狀況<xref:System.OperationCanceledException> ，因為可能發生網路失敗，以及可避免擲回的，因為程式碼<xref:System.Threading.CancellationToken>使用來中斷迴圈。 型別有許多關於 gRPC 執行時間錯誤的實用資訊， `StatusCode`包括。 `RpcException` 如需詳細資訊，請參閱[第4章中的*錯誤處理*](error-handling.md)。
 
 ## <a name="bidirectional-streaming"></a>雙向串流
 

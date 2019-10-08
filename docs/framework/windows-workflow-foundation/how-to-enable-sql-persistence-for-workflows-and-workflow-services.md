@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3ba21234af9555a4e40a0b587ac21473cff8761
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779206"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834831"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>HOW TO：啟用工作流程與工作流程服務的 SQL 持續性
 
 本主題描述如何設定 SQL 工作流程執行個體存放區功能，以程式設計方式或使用組態檔來啟用工作流程與工作流程服務的持續性。
 
-Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資訊，請參閱[App Fabric 持續性組態](https://go.microsoft.com/fwlink/?LinkId=201204)
+Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資訊，請參閱[App Fabric 持續](https://go.microsoft.com/fwlink/?LinkId=201204)性設定。
 
 使用 SQL 工作流程執行個體存放區功能之前，請建立一個讓此功能用於保存工作流程執行個體的資料庫。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安裝程式會將與 SQL 工作流程執行個體存放區功能相關聯的 SQL 指令碼檔複製至 %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN 資料夾。 針對 SQL Server 2005 或 SQL Server 2008 資料庫執行這些指令碼檔，且這個資料庫可供 SQL 工作流程執行個體存放區用來保存工作流程執行個體。 先執行 SqlWorkflowInstanceStoreSchema.sql 檔，然後再執行 SqlWorkflowInstanceStoreLogic.sql 檔。
 
@@ -29,9 +29,9 @@ Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資�
 > [!IMPORTANT]
 > 如果您並未建立持續性資料庫，則當主機嘗試保存工作流程時，SQL 工作流程執行個體存放區功能就會擲回與下列其中一個相似的例外狀況。
 >
-> System.Data.SqlClient.SqlException:找不到預存程序 'System.Activities.DurableInstancing.CreateLockOwner'
+> SqlClient. SqlException：找不到預存程式 ' DurableInstancing. CreateLockOwner '
 
-下列各節描述如何使用 SQL 工作流程執行個體存放區啟用工作流程與工作流程服務的持續性。 如需 SQL 工作流程執行個體存放區屬性的詳細資訊，請參閱[屬性的 SQL 工作流程執行個體存放區](properties-of-sql-workflow-instance-store.md)。
+下列各節描述如何使用 SQL 工作流程執行個體存放區啟用工作流程與工作流程服務的持續性。 如需 SQL 工作流程實例存放區屬性的詳細資訊，請參閱[Sql 工作流程實例存放區的屬性](properties-of-sql-workflow-instance-store.md)。
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>啟用使用 WorkflowApplication 之自我裝載工作流程的持續性
 
@@ -39,7 +39,7 @@ Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資�
 
 #### <a name="to-enable-persistence-for-self-hosted-workflows"></a>若要啟用自我裝載工作流程的持續性
 
-1. 加入 System.Activities.DurableInstancing.dll 的參考。
+1. 將參考新增至 DurableInstancing。
 
 2. 在原始程式檔最上方現有的 "using" 陳述式後方，加入下列陳述式。
 
@@ -72,7 +72,7 @@ Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資�
    ```
 
 > [!NOTE]
-> 請參閱[How to:建立並執行 a Long Running Workflow](how-to-create-and-run-a-long-running-workflow.md)的步驟[入門教學課程](getting-started-tutorial.md)的逐步指示。
+> 請參閱 @no__t 0How：建立並執行[消費者入門教學](getting-started-tutorial.md)課程的長時間執行工作流程 @ no__t-0 步驟，以取得逐步指示。
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>啟用使用 WorkflowServiceHost 之自我裝載工作流程服務的持續性
 
@@ -129,7 +129,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 您可以使用組態檔，啟用自我裝載或 Windows Process Activation Service (WAS) 裝載之工作流程服務的持續性。 WAS 裝載的工作流程服務會使用 WorkflowServiceHost，如同自我裝載的工作流程服務一樣。
 
-`SqlWorkflowInstanceStoreBehavior`，可讓您輕鬆地變更服務行為[SQL 工作流程執行個體存放區](sql-workflow-instance-store.md)透過 XML 組態屬性。 如果是 WAS 裝載的工作流程服務，請使用 Web.config 檔。 下列組態範例示範如何使用組態檔中的 `sqlWorkflowInstanceStore` 行為項目來設定 SQL 工作流程執行個體存放區。
+@No__t-0，這是一種服務行為，可讓您透過 XML 設定方便地變更[SQL 工作流程實例存放區](sql-workflow-instance-store.md)屬性。 如果是 WAS 裝載的工作流程服務，請使用 Web.config 檔。 下列組態範例示範如何使用組態檔中的 `sqlWorkflowInstanceStore` 行為項目來設定 SQL 工作流程執行個體存放區。
 
 ```xml
 <serviceBehaviors>
@@ -156,13 +156,13 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> 建議您不要將敏感資訊 (例如，使用者名稱和密碼) 儲存在 Web.config 檔案中。 如果要將敏感資訊儲存在 Web.config 檔案中，則應使用檔案系統存取控制清單 (ACL) 來保護存取 Web.config 檔的安全性。 此外，您也可以保護的組態檔內組態值中所述[組態加密組態資訊使用受保護的](https://go.microsoft.com/fwlink/?LinkId=178419)。
+> 建議您不要將敏感資訊 (例如，使用者名稱和密碼) 儲存在 Web.config 檔案中。 如果要將敏感資訊儲存在 Web.config 檔案中，則應使用檔案系統存取控制清單 (ACL) 來保護存取 Web.config 檔的安全性。 此外，您也可以在設定檔中保護設定值，如[使用受保護](https://go.microsoft.com/fwlink/?LinkId=178419)的設定來加密設定資訊中所述。
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>與 SQL 工作流程執行個體存放區功能相關的 Machine.config 項目
 
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安裝會將下列與 SQL 工作流程執行個體存放區功能相關的項目加入至 Machine.config 檔：
 
-- 將以下行為延伸項目加入至 Machine.config 檔案，讓您可以使用\<sqlWorkflowInstanceStore > 若要設定服務的持續性組態檔中的服務行為項目。
+- 將下列行為延伸專案加入至 Machine.config 檔案，讓您可以使用設定檔中的 @no__t 0sqlWorkflowInstanceStore > 服務行為專案來設定服務的持續性。
 
     ```xml
     <configuration>

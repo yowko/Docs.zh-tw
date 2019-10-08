@@ -3,12 +3,12 @@ title: C# 版本控制 - C# 手冊
 description: 了解 C# 和 .NET 的版本控制運作方式
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4c0d5b5c2ac40cb27c90b4908623dc75b26a80cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699927"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834050"
 ---
 # <a name="versioning-in-c"></a>C\# 中的版本控制
 
@@ -110,5 +110,4 @@ Derived Method One: Derived Method One
 
 `override` 修飾詞會在編譯期間評估，如果編譯器找不到要覆寫的虛擬成員，它會擲回錯誤。
 
-您對前述技巧的掌握以及使用時機的了解，需要一段時間才能讓您輕鬆轉換版本。
- 
+您對所討論之技術的瞭解，以及您對其使用方式的瞭解，將會很長的方式可簡化程式庫版本之間的轉換。

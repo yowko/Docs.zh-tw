@@ -2,12 +2,12 @@
 title: 分散式資料管理的挑戰和解決方案
 description: 了解微服務產業中分散式資料管理的挑戰和解決方案。
 ms.date: 09/20/2018
-ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673135"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834450"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散式資料管理的挑戰和解決方案
 
@@ -47,7 +47,7 @@ ms.locfileid: "68673135"
 
 不過，在微服務型的應用程式中，Product 和 Basket 資料表分別為其微服務所擁有。 沒有任何一項微服務會在本身交易中包含其他微服務所擁有的資料表/儲存體，直接查詢也不會，如圖 4-9 所示。
 
-![微服務無法直接存取另一項微服務的資料表，必須使用最終一致性同步資料。](./media/image9.png)
+![此圖顯示無法共用微服務資料庫資料。](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **圖 4-9**。 微服務無法直接存取其他微服務的資料表
 

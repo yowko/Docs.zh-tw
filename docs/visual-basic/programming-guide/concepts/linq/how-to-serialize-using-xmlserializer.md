@@ -1,15 +1,15 @@
 ---
-title: HOW TO：序列化使用 XmlSerializer (Visual Basic)
+title: HOW TO：使用 XmlSerializer 進行序列化（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afde54ed7d0e8049f52468e17f4500fb090f3124
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614247"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835117"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>HOW TO：序列化使用 XmlSerializer (Visual Basic)
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>HOW TO：使用 XmlSerializer 進行序列化（Visual Basic）
 本主題顯示的範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化與還原序列化。  
   
 ## <a name="example"></a>範例  
@@ -71,7 +71,7 @@ End Class
   
  這個範例會產生下列輸出：  
   
-```  
+```console  
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 Testing for type: System.Xml.Linq.XElement  
@@ -82,4 +82,4 @@ Testing for type: XElementContainer
   
 ## <a name="see-also"></a>另請參閱
 
-- [序列化包含 XElement 物件 (Visual Basic) 的物件圖形](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [序列化包含 System.xml.linq.xelement> 物件的物件圖形（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

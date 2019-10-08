@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cbc45d2c6587f5ff94c5cfbe0251d4b0ebca4231
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: HT
+ms.openlocfilehash: f6facc047d87c503313015eff4e869861cd6b301
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835495"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957005"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 命名空間巡覽
 若要使用 XPath 查詢搭配 XML 文件，您必須正確定址 XML 命名空間以及命名空間所包含的項目。 命名空間會避免在多個內容中使用名稱時可能發生的模稜兩可。例如，`ID` 名稱可能會參考多個與不同 XML 文件項目相關聯的識別碼。 命名空間語法會指定 URI、名稱和前置詞，以便區別 XML 文件的項目。  
@@ -38,35 +38,28 @@ ms.locfileid: "56835495"
 ```  
   
 ## <a name="navigation-by-namespace-prefix"></a>依照命名空間前置詞巡覽  
- 本節中的程式碼會使用 <xref:System.Xml.XPath.XPathNavigator> 和 <xref:System.Xml.XmlNamespaceManager> 物件，從上一節的 XML 文件中選取 `Search` 項目。 
-  `xpath` 查詢會在路徑中包含每個項目的命名空間前置詞。 指定包含每個項目之命名空間的精確識別可確保 `Search` 方法正確巡覽至 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 項目。  
+ 本節中的程式碼會使用 <xref:System.Xml.XPath.XPathNavigator> 和 <xref:System.Xml.XmlNamespaceManager> 物件，從上一節的 XML 文件中選取 `Search` 項目。 `xpath` 查詢會在路徑中包含每個項目的命名空間前置詞。 指定包含每個項目之命名空間的精確識別可確保 `Search` 方法正確巡覽至 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 項目。  
   
-```  
+```csharp  
 using (XmlReader reader = XmlReader.Create("response.xml"))  
-            {  
-                XPathDocument doc = new XPathDocument(reader);  
-                XPathNavigator nav = doc.CreateNavigator();  
-                XmlNamespaceManager nsmgr =  
-                         new XmlNamespaceManager(nav.NameTable);  
-                nsmgr.AddNamespace("e",   
-                         @"http://schemas.xmlsoap.org/soap/envelope/");  
-                nsmgr.AddNamespace("s",   
-                            @"http://schemas.microsoft.com/v1/Search");  
-                nsmgr.AddNamespace("r",   
-                   @"http://schemas.microsoft.com/v1/Search/metadata");  
-                nsmgr.AddNamespace("i",   
-                         @"http://www.w3.org/2001/XMLSchema-instance");  
+{  
+    XPathDocument doc = new XPathDocument(reader);  
+    XPathNavigator nav = doc.CreateNavigator();
   
-                string xpath = "/e:Envelope/e:Body/s:Search";  
+    XmlNamespaceManager nsmgr = new XmlNamespaceManager(nav.NameTable);  
+    nsmgr.AddNamespace("e", @"http://schemas.xmlsoap.org/soap/envelope/");  
+    nsmgr.AddNamespace("s", @"http://schemas.microsoft.com/v1/Search");  
+    nsmgr.AddNamespace("r", @"http://schemas.microsoft.com/v1/Search/metadata");  
+    nsmgr.AddNamespace("i", @"http://www.w3.org/2001/XMLSchema-instance");  
   
-                XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
+    string xpath = "/e:Envelope/e:Body/s:Search";  
   
-                Console.WriteLine("Element Prefix:" + element.Prefix +   
-                           " Local name:" + element.LocalName);  
-                Console.WriteLine("Namespace URI: " +   
-                            element.NamespaceURI);  
+    XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
   
-            }  
+    Console.WriteLine("Element Prefix:" + element.Prefix +   
+    " Local name:" + element.LocalName);  
+    Console.WriteLine("Namespace URI: " + element.NamespaceURI);  
+}  
 ```  
   
  完整限定命名空間和名稱的精確度不僅是為了方便而已。 如果針對上述範例中的文件定義和程式碼進行一項小實驗，就可確認沒有完整限定項目名稱的巡覽將擲回例外狀況。 例如，如果項目定義：`<Search xmlns="http://schemas.microsoft.com/v1/Search">` 和查詢字串：`xpath = "/s:Envelope/s:Body/Search";` 沒有 `Search` 項目的命名空間前置詞，就會傳回 `null` 而非 `Search` 項目。  

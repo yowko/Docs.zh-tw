@@ -2,12 +2,12 @@
 title: Entity SQL 與 Transact-SQL 的相異之處
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e0af0a415d812337d6abf449e9ee170526c3df0c
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854468"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833715"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 與 Transact-SQL 的相異之處
 本主題描述和 transact-sql 之間[!INCLUDE[esql](../../../../../../includes/esql-md.md)]的差異。  
@@ -18,7 +18,7 @@ ms.locfileid: "70854468"
  當使用繼承時，從超型別執行個體的集合中選取子型別執行個體的作法通常會很實用。 中的[oftype](oftype-entity-sql.md)運算子[!INCLUDE[esql](../../../../../../includes/esql-md.md)] （類似`oftype`于C#序列中）提供這項功能。  
   
 ## <a name="support-for-collections"></a>集合的支援  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]將集合視為第一類實體。 例如：  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]將集合視為第一類實體。 例如:  
   
 - 集合運算式在 `from` 子句中是有效的。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70854468"
   
  下列全都是有效的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢：  
   
-```  
+```sql  
 1+2 *3  
 "abc"  
 row(1 as a, 2 as b)  
@@ -72,33 +72,33 @@ set(e1)
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也會針對與 `group by` 子句有關的查詢做出其他限制。 這類查詢`select`的子句`having`和子句中的運算式只能透過其別名`group by`來參考索引鍵。 下列結構在 Transact-sql 中有效，但不在中[!INCLUDE[esql](../../../../../../includes/esql-md.md)]：  
   
-```  
-select t.x + t.y from T as t group by t.x + t.y  
+```sql  
+SELECT t.x + t.y FROM T AS t group BY t.x + t.y
 ```  
   
  若要在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中進行這項處理：  
   
-```  
-select k from T as t group by (t.x + t.y) as k  
+```sql  
+SELET k FROM T AS t GROUP BY (t.x + t.y) AS k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>參考資料表 (集合) 的資料行 (屬性)  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的所有資料行參考都必須以資料表別名來限定。 下列結構（假設`a`是資料表`T`的有效資料行）在 transact-sql 中有效，而不是在中[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。  
   
-```  
-select a from T  
+```sql  
+SELECT a FROM T
 ```  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 格式如下：  
   
-```  
-select t.a as A from T as t  
+```sql  
+SELECT t.a AS A FROM T AS t
 ```  
   
  資料表別名在 `from` 子句中為選擇性。 資料表名稱會當做隱含別名使用。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也會顯示下列格式：  
   
-```  
-select Tab.a from Tab  
+```sql  
+SELET Tab.a FROM Tab
 ```  
   
 ## <a name="navigation-through-objects"></a>導覽物件  
@@ -106,7 +106,7 @@ select Tab.a from Tab
   
  例如，如果 `p` 是 Person 型別的運算式，下列是用來參考這個人之地址所在城市的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 語法。  
   
-```  
+```sql  
 p.Address.City   
 ```  
   
@@ -120,46 +120,46 @@ p.Address.City
 ## <a name="changes-to-group-by"></a>變更成 Group By  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援 `group by` 索引鍵的別名。 `select`子句和`having`子句中的運算式必須透過這些別名參考索引鍵。`group by` 例如，這個 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 語法：  
   
-```  
-select k1, count(t.a), sum(t.a)  
-from T as t  
-group by t.b + t.c as k1  
+```sql  
+SELECT k1, count(t.a), sum(t.a)
+FROM T AS t
+GROUP BY t.b + t.c AS k1
 ```  
   
  ...相當於下列 Transact-sql：  
   
-```  
-select b + c, count(*), sum(a)   
-from T  
-group by b + c  
+```sql  
+SELECT b + c, count(*), sum(a)
+FROM T
+GROUP BY b + c
 ```  
   
 ## <a name="collection-based-aggregates"></a>以集合為基礎的彙總  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援兩種彙總。  
   
- 以集合為基礎的彙總會針對集合運作，並產生彙總的結果。 這些可以出現在查詢中的任何地方，而且不需要 `group by` 子句。 例如：  
+ 以集合為基礎的彙總會針對集合運作，並產生彙總的結果。 這些可以出現在查詢中的任何地方，而且不需要 `group by` 子句。 例如:  
   
-```  
-select t.a as a, count({1,2,3}) as b from T as t     
+```sql  
+SELECT t.a AS a, count({1,2,3}) AS b FROM T AS t
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也支援 SQL 樣式彙總。 例如：  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也支援 SQL 樣式彙總。 例如:  
   
-```  
-select a, sum(t.b) from T as t group by t.a as a  
+```sql  
+SELECT a, sum(t.b) FROM T AS t GROUP BY t.a AS a
 ```  
   
 ## <a name="order-by-clause-usage"></a>ORDER BY 子句使用方式  
- Transact-sql 只允許在最上層的 SELECT 中指定 ORDER BY 子句。 子句 。 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，您可以使用巢狀 ORDER BY 運算式，並將它放在查詢內的任何地方，但是巢狀查詢中的排序並不會保留下來。  
+Transact-sql 只允許在最上層的 `SELECT .. FROM .. WHERE` 區塊中指定 `ORDER BY` 子句。 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，您可以使用嵌套的 @no__t 1 運算式，而且它可以放在查詢中的任何位置，但不會保留在巢狀查詢中的順序。  
   
-```  
+```sql  
 -- The following query will order the results by the last name  
 SELECT C1.FirstName, C1.LastName  
-        FROM AdventureWorks.Contact as C1  
+        FROM AdventureWorks.Contact AS C1
         ORDER BY C1.LastName  
 ```  
   
-```  
+```sql  
 -- In the following query ordering of the nested query is ignored.  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
@@ -197,16 +197,16 @@ SELECT C2.FirstName, C2.LastName
  批次處理查詢結果  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支援批次處理查詢結果。 例如，下列是有效的 Transact-sql （以批次傳送）：  
   
-```  
-select * from products;  
-select * from catagories;  
+```sql  
+SELECT * FROM products;
+SELECT * FROM catagories;
 ```  
   
  但是，同等的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 未受到支援：  
   
-```  
-Select value p from Products as p;  
-Select value c from Categories as c;  
+```sql  
+SELECT value p FROM Products AS p;
+SELECT value c FROM Categories AS c;
 ```  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 在每個命令中只支援一個產生結果的查詢陳述式。  

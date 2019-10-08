@@ -26,7 +26,7 @@ ms.locfileid: "71046289"
  當您串連大量字串變數時 (例如在緊密迴圈中)，請使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType>，而非 C# [+ 運算子](../../csharp/language-reference/operators/addition-operator.md)或 Visual Basic [串連運算子](../../visual-basic/language-reference/operators/concatenation-operators.md)。 如需詳細資訊，請參閱[如何：串連](../../csharp/how-to/concatenate-multiple-strings.md) [Visual Basic 中的](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)多個字串和串連運算子。  
   
 ## <a name="destructors"></a>解構函式  
- 不應該使用空的解構函式。 類別包含解構函式時，會在 Finalize 佇列中建立一個項目。 呼叫解構函式時，會叫用記憶體回收行程來處理佇列。 如果解構函式是空的，則這只會導致效能降低。 如需詳細資訊，請參閱[[析構函數](../../csharp/programming-guide/classes-and-structs/destructors.md)和物件存留期：如何建立和](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)終結物件。  
+ 不應該使用空的解構函式。 類別包含解構函式時，會在 Finalize 佇列中建立一個項目。 呼叫解構函式時，會叫用記憶體回收行程來處理佇列。 如果解構函式是空的，則這只會導致效能降低。 如需詳細資訊，請參閱[析構函數](../../csharp/programming-guide/classes-and-structs/destructors.md) 和 [物件存留期：如何建立和](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)終結物件。  
   
 ## <a name="other-resources"></a>其他資源  
   

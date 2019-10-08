@@ -2,12 +2,12 @@
 title: 微服務架構
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 微服務架構的 30.000 英呎視圖。
 ms.date: 09/20/2018
-ms.openlocfilehash: 3cf2a94140042d3cf76b5b63fe4e98638c56dbfe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d1c58d218be9e5f8c0ae8ae732f9bdd06674a2c2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672985"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834390"
 ---
 # <a name="microservices-architecture"></a>微服務架構
 
@@ -19,11 +19,11 @@ ms.locfileid: "68672985"
 
 另一個優點是微服務可以獨立擴充。 您不需要具有必須以單位擴充的單一整合型應用程式，您可以改為擴充特定微服務。 這樣一來，您就可以只調整需要更多處理能力或網路頻寬的功能區域來支援需求，而不是擴充不需要調整的其他應用程式區域。 由於需要較少的硬體，因此會為您節省成本。
 
-![在傳統整合型方法中，應用程式是透過在數個伺服器/VM 中複製整個應用程式來進行調整。 在微服務方法中，會以較小的服務隔離功能，因此每個服務都可以獨立調整。](./media/image6.png)
+![這兩種部署方法之間差異的圖表。](./media/microservices-architecture/monolith-deployment-vs-microservice-approach.png)
 
 **圖 4-6**： 整合型部署與微服務方法
 
-如圖 4-6 所示，微服務方法可彈性變更及快速反覆執行每個微服務，因為您可以變更複雜、大型且可擴充之應用程式的特定一小部分。
+如圖4-6 所示，在傳統的整合型方法中，應用程式會在多個伺服器/VM 中複製整個應用程式來進行調整。 在微服務方法中，會以較小的服務隔離功能，因此每個服務都可以獨立調整。 微服務方法可讓您針對每個微服務進行 agile 變更和快速反復專案，因為您可以變更複雜、大型且可擴充的應用程式的特定小型區域。
 
 架構更細緻的微服務架構應用程式可進行持續整合與持續傳遞實務。 它也會加速將新功能傳遞到應用程式中。 應用程式的更細緻組合也可讓您隔離執行及測試微服務，以及自主發展微服務，同時確保這些服務之間有清楚的合約。 只要您未變更介面或合約，您就可以變更任何微服務的內部實作或新增功能，而不會中斷其他微服務。
 

@@ -1,5 +1,5 @@
 ---
-title: 作法：以程式設計方式列印 XPS 檔
+title: HOW TO：以程式設計方式列印 XPS 檔
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 28197b22b379b84c34e7fdf8991472e082c8cb42
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d44f372fe5ef9633e91d8e46cca9e9a0967b9615
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855750"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834580"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>HOW TO：以程式設計方式列印 XPS 檔
 
@@ -27,7 +27,7 @@ ms.locfileid: "70855750"
 
 使用三個參數<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法的主要步驟如下所示。 下列範例會提供詳細資料。
 
-1. 判斷印表機是否為 XPSDrv 印表機。 (如需 XPSDrv 的詳細資訊，請參閱[列印概觀](printing-overview.md)。)
+1. 判斷印表機是否為 XPSDrv 印表機。 如需 XPSDrv 的詳細資訊，請參閱[列印總覽](printing-overview.md)。
 
 2. 如果印表機不是 XPSDrv 印表機，將執行緒的 Apartment 設定為單一執行緒。
 

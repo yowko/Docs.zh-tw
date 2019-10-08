@@ -2,12 +2,12 @@
 title: 邏輯架構與實體架構
 description: 了解邏輯架構與實體架構之間的差異。
 ms.date: 09/20/2018
-ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673055"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834407"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>邏輯架構與實體架構
 
@@ -25,7 +25,7 @@ ms.locfileid: "68673055"
 
 如圖 4-8 所示，目錄商務微服務可能是由數個服務或處理序所組成。 這些服務可以是多個 ASP.NET Web API 服務，或是使用 HTTP 或任何其他通訊協定的任何其他服務類型。 更重要的是，只要這些服務與相同的業務領域相關，就可以共用相同的資料。
 
-![目錄商務微服務圖表，其中包含 API 服務、搜尋服務和 SQL Server 資料庫。](./media/image8.png)
+![目錄 business 微服務與實體伺服器的圖表。](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **圖 4-8**： 具有數項實體服務的商務微服務
 

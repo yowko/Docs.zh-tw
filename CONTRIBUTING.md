@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104637"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71955963"
 ---
 # <a name="contributing"></a>貢獻
 
 感謝您對參與 .NET 文件感興趣！
 
-> 我們正在將指導方針轉換成全網站參與指南。 
+> 我們正在將指導方針轉換成全網站參與指南。
 > 若要查看新的指引，請瀏覽 [Microsoft Docs 參與者指南的概觀](https://docs.microsoft.com/contribute/)。
 
 本文件涵蓋參與 [.NET 文件網站](https://docs.microsoft.com/dotnet)所裝載文章和程式碼範例的程序。 貢獻可以簡單到像錯字更正，或是複雜到像是新的文章。
@@ -22,18 +22,19 @@ ms.locfileid: "70104637"
 
 此存放庫包含 .NET 的概念文件。 .NET 文件網站除了此存放庫之外，還使用多個存放庫作為建置基礎：
 
-- [程式碼範例及程式碼片段](https://github.com/dotnet/samples)
-- [API 參考](https://github.com/dotnet/dotnet-api-docs)
-- [.NET Compiler Platform SDK 參考](https://github.com/dotnet/roslyn-api-docs)
-
-所有這些存放庫的問題和工作都會在這裡進行追蹤。
+- [程式碼範例及程式碼片段](https://github.com/dotnet/samples)  
+    此存放庫的問題和工作會在[dotnet/檔/問題](https://github.com/dotnet/docs/issues)中進行追蹤。
+- [.NET API 參考](https://github.com/dotnet/dotnet-api-docs)  
+    此存放庫的問題和工作會在[dotnet/dotnet-api-檔/問題](https://github.com/dotnet/dotnet-api-docs/issues)中進行追蹤。
+- [.NET Compiler Platform SDK 參考](https://github.com/dotnet/roslyn-api-docs)  
+    此存放庫的問題和變成會在[dotnet/檔/問題](https://github.com/dotnet/docs/issues)中進行追蹤。
 
 ## <a name="process-for-contributing"></a>投稿程序
 
 您需要對 [Git 和 GitHub.com](https://guides.github.com/activities/hello-world/) 有基本了解。
 
 **步驟 1：** 針對小型變更 (例如，如果您正在修正拼寫錯誤或立即開啟提取要求，以解決您在文件中找到的問題) 略過此步驟。 如果您有興趣撰寫新內容或徹底修訂現有的內容，請開立一個描述您所要執行動作的[問題](https://github.com/dotnet/docs/issues)。
-[docs]  資料夾中的內容會組織成目錄 (TOC) 中所反映的各個小節。 請定義主題在 TOC 中的位置。 取得您提案的意見反應。
+[docs] 資料夾中的內容會組織成目錄 (TOC) 中所反映的各個小節。 請定義主題在 TOC 中的位置。 取得您提案的意見反應。
 
 -或-
 
@@ -43,13 +44,13 @@ ms.locfileid: "70104637"
 
 - **內容更新**。 如果文件集相當龐大，內容很容易就會過期而需要修訂。 此外，基於各種原因，有些內容已複製兩遍或甚至三遍。 更新內容牽涉到確認個別主題是否為最新，或修訂某個功能區域中的內容以去除重複項，並確保所有唯一內容都保存在較小的文件集內。
 
-- **新內容撰寫**。 如果您有興趣撰寫自己的主題，這些問題列出了我們所知想要新增到文件集的主題。 不過，在您開始進行某個主題之前，請先讓我們知道。 如果您有興趣撰寫這裡未列出的主題，請開立問題。 
+- **新內容撰寫**。 如果您有興趣撰寫自己的主題，這些問題列出了我們所知想要新增到文件集的主題。 不過，在您開始進行某個主題之前，請先讓我們知道。 如果您有興趣撰寫這裡未列出的主題，請開立問題。
 
 您也可以查看我們的[待處理問題](https://github.com/dotnet/docs/issues) \(英文\) 清單，然後自願處理您有興趣的問題。 我們使用 [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) \(開放取用\) 標籤來標記開放參與的問題。 
 
 **步驟 2：** 視需要將 `dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存放庫分叉，然後為您的變更建立分支。
 
-若是進行少量變更，您可以使用 GitHub 的 Web 介面。 只需在您想要變更的檔案上按一下 [Edit the file in your fork of this project] \(編輯此專案分叉中的檔案\)  即可。 GitHub 會在您提交變更時，為您建立新的分支。
+若是進行少量變更，您可以使用 GitHub 的 Web 介面。 只需在您想要變更的檔案上按一下 [Edit the file in your fork of this project] \(編輯此專案分叉中的檔案\) 即可。 GitHub 會在您提交變更時，為您建立新的分支。
 
 **步驟 3：** 對這個新的分支進行變更。
 
@@ -58,8 +59,8 @@ ms.locfileid: "70104637"
 請瀏覽至對應到步驟 1 中為您文章所決定的目錄位置資料夾。
 該資料夾包含該章節中所有文章的 Markdown 檔案。
 請視需要建立新的資料夾，以存放您內容的檔案。 該小節的主要文章稱為 *index.md*。
-針對影像及其他靜態資源，請在包含您文章的資料夾內建立一個名為 **media** 的子資料夾 (如果此子資料夾尚未存在)。 在 [media]  資料夾內，使用文章名稱 (索引檔案除外) 建立一個子資料夾。
-將較大型的範例納入存放庫根目錄底下的 [samples]  資料夾中。
+針對影像及其他靜態資源，請在包含您文章的資料夾內建立一個名為 *media* 的子資料夾 (如果此子資料夾尚未存在)。 在 [media] 資料夾內，使用文章名稱 (索引檔案除外) 建立一個子資料夾。
+將較大型的範例納入存放庫根目錄底下的 [samples] 資料夾中。
 
 請務必遵循正確的 Markdown 語法。 如需詳細資訊，請參閱[樣式指南](./styleguide/template.md)。
 
@@ -76,9 +77,9 @@ docs
             portability_report.png
 ```
 
-**步驟 4：** 將提取要求 (PR) 從您的分支提交至 `dotnet/docs/master`。
+**步驟 4：** 從您的分支提交提取要求（PR）至 `dotnet/docs/master`、`dotnet/dotnet-api-docs/master` 或 `dotnet/samples/master`。
 
-您的 PR 應「一律」  以主分支為目標。 您「永遠不得」  開啟以即時分支為目標的 PR。
+您的 PR 應「一律」以主分支為目標。 您「永遠不得」開啟以即時分支為目標的 PR。
 
 每個 PR 通常應該一次處理一個問題。 PR 可以修改一或多個檔案。 如果您要處理不同檔案上的多個修正，建議您使用個別的 PR。
 
@@ -102,11 +103,11 @@ docs
 
 程式碼都存在於 [dotnet/samples](https://github.com/dotnet/samples) 存放庫中。 我們正朝著建立一個讓範例資料夾結構符合文件資料夾結構的模型方向前進。 我們所依循的標準為：
 
-- 最上層的 [snippets]  資料夾包含小型、重點範例的程式碼片段。
+- 最上層的 [snippets] 資料夾包含小型、重點範例的程式碼片段。
 - API 參考範例一直以來都位於一個依循下列模式的資料夾中：*程式碼片段/\<語言>/api/\<命名空間>/\<API 名稱>* 。
 - 其他最上層資料夾則與 *docs* 存放庫中的最上層資料夾相符。 例如，docs 存放庫包含一個 *machine-learning/tutorials* 資料夾，而機器學習教學課程的範例則位於 *samples/machine-learning/tutorials* 資料夾中。
 
-此外，[core]  和 [standard]  資料夾底下的所有範例都應該在 .NET Core 支援的所有平台上建置並執行。 我們的 CI 建置系統將會強制執行該做法。 最上層 [framework]  資料夾則包含只會在 Windows 上建置並驗證的範例。
+此外，[core] 和 [standard] 資料夾底下的所有範例都應該在 .NET Core 支援的所有平台上建置並執行。 我們的 CI 建置系統將會強制執行該做法。 最上層 [framework] 資料夾則包含只會在 Windows 上建置並驗證的範例。
 
 隨著 docs 存放庫新增新的內容，我們可能會擴充這些目錄。 舉例來說，我們將會新增 Xamarin 目錄，例如 `xamarin-ios` 和 `xamarin-android` 目錄。
 

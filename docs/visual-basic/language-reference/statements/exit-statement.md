@@ -12,82 +12,88 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 1f386694bd7425ee530b9305ab684b730f9b73c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c25653809c51662ea5b606ab97be6a9b50d5986
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638112"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956940"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit 陳述式 (Visual Basic)
-結束程序或區塊，並立即將控制權轉移到接在程序呼叫或區塊定義。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-Exit { Do | For | Function | Property | Select | Sub | Try | While }  
-```  
-  
-## <a name="statements"></a>陳述式  
+
+結束程式或區塊，並立即將控制權轉移至程序呼叫或區塊定義之後的語句。
+
+## <a name="syntax"></a>語法
+
+```vb
+Exit { Do | For | Function | Property | Select | Sub | Try | While }
+```
+
+## <a name="statements"></a>陳述式
+
  `Exit Do`  
- 立即結束`Do`迴圈中會出現。 之後的陳述式會繼續執行`Loop`陳述式。 `Exit Do` 可以使用只在`Do`迴圈。 當用在巢狀`Do`迴圈，`Exit Do`結束最內層的迴圈，並將控制權傳輸至下一個較高的層級，巢狀。  
-  
+ 立即結束出現的 `Do` 迴圈。 執行作業會繼續使用 `Loop` 語句後面的語句。 `Exit Do` 只能用在 @no__t 1 迴圈內。 在 nested `Do` 迴圈中使用時，`Exit Do` 會結束最內層的迴圈，並將控制權轉移至下一個較高層級的嵌套。
+
  `Exit For`  
- 立即結束`For`迴圈中會出現。 之後的陳述式會繼續執行`Next`陳述式。 `Exit For` 可以使用只在`For`...`Next`或`For Each`...`Next`迴圈。 當用在巢狀`For`迴圈，`Exit For`結束最內層的迴圈，並將控制權傳輸至下一個較高的層級，巢狀。  
-  
+ 立即結束出現的 `For` 迴圈。 執行作業會繼續使用 `Next` 語句後面的語句。 `Exit For` 只能用在 `For` ... `Next` 或 `For Each` ... `Next` 迴圈內。 在 nested `For` 迴圈中使用時，`Exit For` 會結束最內層的迴圈，並將控制權轉移至下一個較高層級的嵌套。
+
  `Exit Function`  
- 立即結束`Function`出現的程序。 執行會繼續進行下列呼叫的陳述式的陳述式`Function`程序。 `Exit Function` 可以使用只在`Function`程序。  
-  
- 若要指定傳回的值，可以將值指派給前一行中的函式`Exit Function`陳述式。 若要指派傳回值，並結束一個陳述式中的函式，您可以改為使用[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。  
-  
+ 立即結束出現的 `Function` 程式。 執行會繼續進行呼叫 `Function` 程式之語句後面的語句。 `Exit Function` 只能用在 `Function` 程式內。
+
+ 若要指定傳回值，您可以在 `Exit Function` 語句之前的一行上，將值指派給函數名稱。 若要指派傳回值並在一個語句中結束函式，您可以改為使用[Return 語句](return-statement.md)。
+
  `Exit Property`  
- 立即結束`Property`出現的程序。 執行會繼續進行呼叫的陳述式`Property`程序，也就是利用陳述式要求或設定屬性的值。 `Exit Property` 可以使用僅在屬性的內部`Get`或`Set`程序。  
-  
- 若要指定傳回值`Get`程序中，您可以將值指派給前一行中的函式`Exit Property`陳述式。 若要將指派傳回值和結束`Get`一個陳述式中的程序，您可以改為使用`Return`陳述式。  
-  
- 在 `Set`程序中，`Exit Property`陳述式相當於`Return`陳述式。  
-  
+ 立即結束出現的 `Property` 程式。 執行作業會繼續使用呼叫 `Property` 程式的語句，也就是要求或設定屬性值的語句。 `Exit Property` 只能用在屬性的 `Get` 或 @no__t 2 程式內。
+
+ 若要在 `Get` 程式中指定傳回值，您可以在 @no__t 1 語句之前，將值指派給函數名稱。 若要指派傳回值，並結束一個語句中的 `Get` 程式，您可以改用 `Return` 語句。
+
+ 在 `Set` 程式中，@no__t 1 語句相當於 @no__t 2 語句。
+
  `Exit Select`  
- 立即結束`Select Case`中出現的區塊。 之後的陳述式會繼續執行`End Select`陳述式。 `Exit Select` 可以使用只在`Select Case`陳述式。  
-  
+ 立即結束出現的 `Select Case` 區塊。 執行作業會繼續使用 `End Select` 語句後面的語句。 `Exit Select` 只能用在 `Select Case` 語句內。
+
  `Exit Sub`  
- 立即結束`Sub`出現的程序。 執行會繼續進行下列呼叫的陳述式的陳述式`Sub`程序。 `Exit Sub` 可以使用只在`Sub`程序。  
-  
- 在 `Sub`程序中，`Exit Sub`陳述式相當於`Return`陳述式。  
-  
+ 立即結束出現的 `Sub` 程式。 執行會繼續進行呼叫 `Sub` 程式之語句後面的語句。 `Exit Sub` 只能用在 `Sub` 程式內。
+
+ 在 `Sub` 程式中，@no__t 1 語句相當於 @no__t 2 語句。
+
  `Exit Try`  
- 立即結束`Try`或`Catch`中出現的區塊。 執行會繼續進行`Finally`封鎖如果有的話，或之後的陳述式與`End Try`否則陳述式。 `Exit Try` 可用於只`Try`或`Catch`區塊中，並不深入探討`Finally`區塊。  
-  
+ 立即結束出現的 `Try` 或 `Catch` 區塊。 如果有 @no__t，則會繼續執行，如果有的話，則會使用 `End Try` 語句之後的語句。 `Exit Try` 只能用在 `Try` 或 @no__t 2 區塊內，而不能用在 `Finally` 區塊內。
+
  `Exit While`  
- 立即結束`While`迴圈中會出現。 之後的陳述式會繼續執行`End While`陳述式。 `Exit While` 可以使用只在`While`迴圈。 使用時內巢狀`While`迴圈`Exit While`控制權轉移到迴圈上一層的巢狀迴圈其中`Exit While`，就會發生。  
-  
-## <a name="remarks"></a>備註  
- 請勿混淆`Exit`陳述式與`End`陳述式。 `Exit` 未定義陳述式結尾。  
-  
-## <a name="example"></a>範例  
- 下列範例中，在迴圈條件會停止迴圈時`index`變數是否大於 100。 `If`陳述式在迴圈中，不過，會導致`Exit Do`索引變數大於 10 時停止迴圈的陳述式。  
-  
- [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
-  
-## <a name="example"></a>範例  
- 下列範例會將傳回的值指派給函式名稱`myFunction`，然後使用`Exit Function`從函式傳回。  
-  
- [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
-  
-## <a name="example"></a>範例  
- 下列範例會使用[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)指派傳回值，並結束函式。  
-  
- [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
-  
+ 立即結束出現的 `While` 迴圈。 執行作業會繼續使用 `End While` 語句後面的語句。 `Exit While` 只能用在 @no__t 1 迴圈內。 在 nested `While` 迴圈中使用時，`Exit While` 會將控制權傳輸至迴圈，這是在發生 `Exit While` 的迴圈上方的一個嵌套層級。
+
+## <a name="remarks"></a>備註
+
+請勿混淆 `Exit` 語句與 @no__t 1 的語句。 `Exit` 不會定義語句的結尾。
+
+## <a name="example"></a>範例
+
+在下列範例中，當 `index` 變數大於100時，迴圈條件會停止迴圈。 不過，在迴圈中的 `If` 語句會導致 @no__t 1 語句在索引變數大於10時停止迴圈。
+
+[!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
+
+## <a name="example"></a>範例
+
+下列範例會將傳回值指派給函數名稱 `myFunction`，然後使用 `Exit Function` 從函式傳回：
+
+[!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
+
+## <a name="example"></a>範例
+
+下列範例會使用[Return 語句](return-statement.md)來指派傳回值並結束函式：
+
+[!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
+
 ## <a name="see-also"></a>另請參閱
 
-- [Continue 陳述式](../../../visual-basic/language-reference/statements/continue-statement.md)
-- [Do...Loop 陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [End 陳述式](../../../visual-basic/language-reference/statements/end-statement.md)
-- [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)
-- [Stop 陳述式](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Continue 陳述式](continue-statement.md)
+- [Do...Loop 陳述式](do-loop-statement.md)
+- [End 陳述式](end-statement.md)
+- [For Each...Next 陳述式](for-each-next-statement.md)
+- [For...Next 陳述式](for-next-statement.md)
+- [Function 陳述式](function-statement.md)
+- [Return 陳述式](return-statement.md)
+- [Stop 陳述式](stop-statement.md)
+- [Sub 陳述式](sub-statement.md)
+- [Try...Catch...Finally 陳述式](try-catch-finally-statement.md)

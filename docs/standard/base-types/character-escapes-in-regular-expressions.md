@@ -19,10 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 248d434f7aad56d84d952fa27cf49f3d370f4a1c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 10/04/2019
 ms.locfileid: "69934836"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>在規則運算式中執行字元逸出
@@ -38,9 +38,9 @@ ms.locfileid: "69934836"
 ## <a name="character-escapes-in-net"></a>.NET 中的逸出字元  
  下表列出 .NET 中的規則運算式所支援的逸出字元。  
   
-|字元或序列|說明|  
+|字元或序列|描述|  
 |---------------------------|-----------------|  
-|下列字元以外的所有字元：<br /><br /> 執行個體時提供 SQL Server 登入。 $ ^ { [ ( &#124; ) * + ? \ |不同於列在 [字元或序列]  資料行中的其他字元在規則運算式中沒有任何特殊的意義；它們符合其本身。<br /><br /> [字元或序列]  資料行中所包含的字元是規則運算式的特殊語言項目。 若要在規則運算式中進行比對，它們必須逸出或包含在[正字元群組](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，規則運算式 `\$\d+` 或 `[$]\d+` 符合「$1200」。|  
+|下列字元以外的所有字元：<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |不同於列在 [字元或序列] 資料行中的其他字元在規則運算式中沒有任何特殊的意義；它們符合其本身。<br /><br /> [字元或序列] 資料行中所包含的字元是規則運算式的特殊語言項目。 若要在規則運算式中進行比對，它們必須逸出或包含在[正字元群組](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，規則運算式 `\$\d+` 或 `[$]\d+` 符合「$1200」。|  
 |`\a`|符合警鈴 (警示) 字元 `\u0007`。|  
 |`\b`|在 `[`*character_group*`]` 字元類別，比對退格鍵 `\u0008`。  (請參閱[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。)在字元類別之外， `\b` 符合文字邊界錨點。 (請參閱[錨點](../../../docs/standard/base-types/anchors-in-regular-expressions.md)。)|  
 |`\t`|符合索引標籤， `\u0009`。|  
@@ -53,7 +53,7 @@ ms.locfileid: "69934836"
 |`\x` *nn*|符合 ASCII 字元，其中 *nn* 是兩位數的十六進位字元碼。|  
 |`\c` *X*|符合 ASCII 控制字元，其中 X 是控制字元的字母。 例如，`\cC` 是 CTRL + C。|  
 |`\u` *nnnn*|符合 UTF-16 字碼單位，其值為十六進位的 *nnnn*。 **注意：** .NET 不支援用來指定 Unicode 的 Perl 5 逸出字元。 Perl 5 字元逸出的形式是 `\x{` *####* `…}`，其中 *####* `…` 是一系列的十六進位數字。 請改用 `\u`*nnnn*。|  
-|`\`|當後面跟隨一個不被認為是逸出的字元時，符合該字元。 例如，`\*` 符合使用星號 (*)，而且與 `\x2A` 相同。|  
+|`\`|當後面加上一個不被認為是逸出的字元時，符合該字元。 例如，`\*` 符合使用星號 (*)，而且與 `\x2A` 相同。|  
   
 ## <a name="an-example"></a>範例  
  下列範例說明如何在規則運算式中使用逸出字元。 它會剖析字串，包含在 2009 年世界上最大城市的名稱以及人口。 每個城市名稱及其人口數目被 Tab (`\t`) 或分隔號 (&#124; 或 `\u007c`) 分開。 個別的城市及其人口是被歸位字元和換行字元分隔開的。  
@@ -63,7 +63,7 @@ ms.locfileid: "69934836"
   
  規則運算式 `\G(.+)[\t|\u007c](.+)\r?\n` 的解譯方式如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\G`|從最後比對結束之處開始比對。|  
 |`(.+)`|一或多次比對任何字元。 這是第一個擷取群組。|  

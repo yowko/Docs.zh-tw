@@ -42,8 +42,7 @@ ms.locfileid: "69921022"
 
 ## <a name="remarks"></a>備註
 
-**
-          \<SectionName>** 項目是所定義的自訂項目 **\<區段>** 標記中 **\<configSections>** 項目。
+**\<SectionName>** 項目是所定義的自訂項目 **\<區段>** 標記中 **\<configSections>** 項目。
 
 下表顯示每個設定區段處理常式的 ConfigurationSettings GetConfig 方法所傳回的物件類型:
 

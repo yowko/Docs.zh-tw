@@ -5,16 +5,16 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
-ms.translationtype: HT
+ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70014950"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835273"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
-.NET 應用程式是針對一或多個「.NET 實作」  所開發並在其中執行。  .NET 實作包括 .NET Framework、.NET Core 和 Mono。 所有 .NET 實作有一個通用的 API 規格，稱為 .NET Standard。 本文提供上述每個概念的簡介。
+.NET 應用程式是針對一或多個「.NET 實作」所開發並在其中執行。  .NET 實作包括 .NET Framework、.NET Core 和 Mono。 所有 .NET 實作有一個通用的 API 規格，稱為 .NET Standard。 本文提供上述每個概念的簡介。
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -83,6 +83,26 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 - [MSBuild](/visualstudio/msbuild/msbuild)，用來建置專案的建置引擎
 - [NuGet](/nuget/)，適用於 .NET 的 Microsoft 套件管理員
 - 開放原始碼建置協調流程工具，例如 [CAKE](https://cakebuild.net/) 和 [FAKE](https://fake.build/)
+
+## <a name="applicable-standards"></a>適用標準
+
+C#語言和通用語言基礎結構（CLI）規格會透過[ECMA International®](https://www.ecma-international.org/)標準化。 這些標準的前幾個版本是由 Ecma 在2001年12月發行。
+
+標準的後續修訂已由程式設計語言技術委員會（[TC49](https://www.ecma-international.org/memento/tc49.htm)）C#內的 TC49-TG2 （）和 TC49-TG3 （CLI）工作組所開發，並由 ECMA 一般元件和 ISO/IEC JTC 1 所採用透過 ISO 快速追蹤程式。
+
+### <a name="latest-standards"></a>最新標準
+
+下列正式的 Ecma 檔適用于[C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm)和[CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) （[TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)）：
+
+- **語言標準（版本5.0）： C#** [ECMA-334 .pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **通用語言基礎結構**：這適用于[pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf)格式和[zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip)格式。
+- **衍生自資料分割 IV XML 檔案的資訊**：這適用于[pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf)和[zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip)格式。
+ 
+正式的 ISO/IEC 檔可從 ISO/IEC[公開使用標準](https://standards.iso.org/ittf/PubliclyAvailableStandards/)頁面取得。 這些連結直接來自該頁面：
+
+- **資訊技術-程式設計語言C#-** ：[ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
+- **資訊技術-通用語言基礎結構（CLI）磁碟分割 I 到 VI**：[ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **資訊技術-通用語言基礎結構（CLI）-衍生自資料分割 IV XML 檔案之資訊的技術報告**：[ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>另請參閱
 

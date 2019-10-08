@@ -4,22 +4,22 @@ description: 此教學課程示範如何使用 C# 字串插補功能，在較大
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e142c48cd944fd6119c697a299308dc9ce1203ca
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117848"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834140"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字串插補來建構格式化的字串
 
 此教學課程將教您如何使用 C# [字串插補](../../language-reference/tokens/interpolated.md)，在單一結果字串中插入值。 您將會撰寫 C# 程式碼，並查看程式碼編譯和執行的結果。 此教學課程包含一系列的課程，示範如何將值插入至字串，並以不同的方式設定那些值的格式。
 
-此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 MAC、PC 或 Linux 上設定本機開發環境的指示。 您也可以在瀏覽器中完成此教學課程的[互動式版本](interpolated-strings.yml)。
+此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 Windows、Linux 或 macOS 上設定本機開發環境的指示。 您也可以在瀏覽器中完成此教學課程的[互動式版本](interpolated-strings.yml)。
 
 ## <a name="create-an-interpolated-string"></a>建立插入字串
 
-建立名為 **interpolated** 的目錄。 讓它成為目前目錄，並從主控台視窗中執行下列命令：
+建立名為 *interpolated* 的目錄。 讓它成為目前目錄，並從主控台視窗中執行下列命令：
 
 ```dotnetcli
 dotnet new console
@@ -27,7 +27,7 @@ dotnet new console
 
 此命令會在目前的目錄中建立新的 .NET Core 主控台應用程式。
 
-在您最愛的編輯器中開啟 **Program.cs**，並將 `Console.WriteLine("Hello World!");` 行取代為下列程式碼；其中，您可以將 `<name>` 取代為您的名稱：
+在您最愛的編輯器中開啟 *Program.cs*，並將 `Console.WriteLine("Hello World!");` 行取代為下列程式碼；其中，您可以將 `<name>` 取代為您的名稱：
 
 ```csharp
 var name = "<name>";

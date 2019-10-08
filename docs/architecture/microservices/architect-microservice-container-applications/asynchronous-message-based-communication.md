@@ -2,12 +2,12 @@
 title: 非同步訊息通訊
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 非同步訊息型通訊是微服務架構的基本概念，因為它是最終保持微服務彼此之間相互獨立，同時又能同步的最佳方式。
 ms.date: 09/20/2018
-ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673315"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834477"
 ---
 # <a name="asynchronous-message-based-communication"></a>非同步訊息通訊
 
@@ -31,7 +31,7 @@ ms.locfileid: "68673315"
 
 一旦您開始傳送訊息型通訊 (不論是透過命令或事件)，您應該避免混用訊息式通訊與同步 HTTP 通訊。
 
-![接收非同步訊息的單一微服務](./media/image18.png)
+![接收非同步訊息的單一微服務](./media/asynchronous-message-based-communication/single-receiver-message-based-communication.png)
 
 **圖 4-18**. 接收非同步訊息的單一微服務
 
@@ -53,11 +53,11 @@ ms.locfileid: "68673315"
 
 很重要的一點是，您可能想要傳達給訂閱相同事件訂閱的多個微服務。 若要這樣做，您可以根據事件驅動通訊，使用發行/訂閱傳訊，如圖 4-19 所示。 這個發佈/訂閱機制非微服務架構所獨有。 它類似 DDD 中的[繫結內容](https://martinfowler.com/bliki/BoundedContext.html)通訊方式，或是 [Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) (命令和查詢責任隔離 (CQRS)) 架構模式中，將更新從寫入資料庫傳播到讀取資料庫的方式。 目標是在分散式系統的多個資料來源之間有最終一致性。
 
-![在非同步事件驅動通訊中，一個微服務會將事件發佈至事件匯流排，而許多微服務可以訂閱它，以收到通知並對此採取行動。](./media/image19.png)
+![顯示非同步事件驅動通訊的圖表。](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **圖 4-19**. 非同步事件驅動訊息通訊
 
-您的實作會決定要用於事件驅動、訊息式通訊的通訊協定。 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) 可以協助達成可靠的佇列通訊。
+在非同步事件驅動通訊中，一個微服務會將事件發佈至事件匯流排，而許多微服務可以訂閱它，以收到通知並對此採取行動。 您的實作會決定要用於事件驅動、訊息式通訊的通訊協定。 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) 可以協助達成可靠的佇列通訊。
 
 當您使用事件匯流排時，可能會想要使用抽象層級 (例如事件匯流排介面)，其根據類別中的相關實作，且程式碼使用來自像是 [RabbitMQ](https://www.rabbitmq.com/) 之訊息代理程式的 API，或使用像是 [Azure 服務匯流排與主題](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)的服務匯流排。 或者，您也可以使用較高層級的服務匯流排，像是 NServiceBus、MassTransit 或 Brighter 來相互連貫事件匯流排和發佈/訂閱系統。
 

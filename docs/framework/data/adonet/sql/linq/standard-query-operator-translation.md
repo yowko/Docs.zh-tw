@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: af22b6a895fef8037eb5c069ffb7cb23d1333531
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781024"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833673"
 ---
 # <a name="standard-query-operator-translation"></a>標準查詢運算子轉譯
 
@@ -38,12 +38,12 @@ SQL 交易主要是以未*排序的值集合來*進行。 排序通常是一項�
 
 ### <a name="take-skip"></a>Take、Skip
 
-<xref:System.Linq.Enumerable.Take%2A>和<xref:System.Linq.Enumerable.Skip%2A>方法已針對已排序的*集合*妥善定義。 未定義適用於未排序集合或多重集的語意 (Semantics)。
+<xref:System.Linq.Enumerable.Take%2A> 和 @no__t 1 方法已針對已*排序的集合*妥善定義。 未定義適用於未排序集合或多重集的語意 (Semantics)。
 
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱[疑難排解](troubleshooting.md)中的「略過並採取 SQL Server 2000 中的例外狀況」專案。
 
-由於 SQL 中的排序限制， [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]會嘗試將這些方法的引數排序移至方法的結果。 例如，請考量下列 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢：
+由於 SQL 中的排序限制，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試將這些方法的引數排序移至方法的結果。 例如，請考量下列 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢：
 
 [!code-csharp[DLinqSQOTranslation#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#1)]
 [!code-vb[DLinqSQOTranslation#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#1)]
@@ -94,7 +94,7 @@ ORDER BY [t0].[CustomerID]
 
 ### <a name="aggregates"></a>彙總
 
-標準查詢運算子彙總方法 <xref:System.Linq.Enumerable.Sum%2A> 會將空序列或只包含 null 的序列評估為零。 在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]中，SQL 的語義會保留不變<xref:System.Linq.Enumerable.Sum%2A> ，而會`null`評估為空的序列，或只包含 null 的序列，而不是零。
+標準查詢運算子彙總方法 <xref:System.Linq.Enumerable.Sum%2A> 會將空序列或只包含 null 的序列評估為零。 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，SQL 的語義會保留不變，而 <xref:System.Linq.Enumerable.Sum%2A> 會評估為 `null`，而不是零表示空的序列，或只包含 null 的序列。
 
 SQL 對中繼結果的限制會套用至 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的彙總。 32 位元整數量值的 <xref:System.Linq.Enumerable.Sum%2A> 不會用 64 位元的結果來計算。 即使標準查詢運算子實作並未造成對應的記憶體中序列發生溢位，進行 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 <xref:System.Linq.Enumerable.Sum%2A> 轉譯仍可能會發生溢位。
 
@@ -102,7 +102,7 @@ SQL 對中繼結果的限制會套用至 [!INCLUDE[vbtecdlinq](../../../../../..
 
 ### <a name="entity-arguments"></a>實體引數
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可讓實體類型用於<xref:System.Linq.Enumerable.GroupBy%2A>和<xref:System.Linq.Enumerable.OrderBy%2A>方法中。 在轉譯這些運算子時，使用型別引數會視為指定該型別的所有成員。 例如，下列程式碼為對等用法：
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可讓實體類型用於 <xref:System.Linq.Enumerable.GroupBy%2A> 和 @no__t 2 方法中。 在轉譯這些運算子時，使用型別引數會視為指定該型別的所有成員。 例如，下列程式碼為對等用法：
 
 [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
 [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]
@@ -121,17 +121,17 @@ SQL 對中繼結果的限制會套用至 [!INCLUDE[vbtecdlinq](../../../../../..
 
 - <xref:System.Linq.Enumerable.Except%2A>
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援一般引數的相等和比較，但*不適用於或*包含序列的引數。 扁平引數是一種可以對應至 SQL 資料列的型別。 如果一個或多個實體型別的投影可以透過靜態方式判斷為不含序列，則這個投影即為扁平引數。
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援一般引數的相等和比較，但*不適用於或*包含序列的引數。 扁平引數是一種可以對應至 SQL 資料列的型別。 如果一個或多個實體型別的投影可以透過靜態方式判斷為不含序列，則這個投影即為扁平引數。
 
-下列是扁平引數的範例：
+以下是一般引數的範例：
 
-[!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
-[!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
+[!code-csharp[DLinqSQOTranslation#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
+[!code-vb[DLinqSQOTranslation#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
 
-下列是非扁平 (階層式) 引數的範例：
+以下是非一般（階層式）引數的範例：
 
-[!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
-[!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
+[!code-csharp[DLinqSQOTranslation#4](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
+[!code-vb[DLinqSQOTranslation#4](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
 
 ### <a name="visual-basic-function-translation"></a>Visual Basic 函式轉譯
 
@@ -158,7 +158,7 @@ Visual Basic 編譯器 (Compiler) 所用的下列 Helper 函式會轉譯為對�
 
 ### <a name="inheritance-mapping-restrictions"></a>繼承對應限制
 
-如需詳細資訊，請參閱[如何：對應繼承](how-to-map-inheritance-hierarchies.md)階層。
+如需詳細資訊，請參閱[如何：對應繼承階層架構 @ no__t-0。
 
 ### <a name="inheritance-in-queries"></a>查詢中的繼承
 
@@ -198,7 +198,7 @@ Visual Basic 編譯器 (Compiler) 所用的下列 Helper 函式會轉譯為對�
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 支援
 
-下列 SQL Server 2000 限制（相較于 Microsoft SQL Server 2005）會[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]影響支援。
+下列 SQL Server 2000 限制（相較于 Microsoft SQL Server 2005）會影響 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的支援。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 和 Outer Apply 運算子
 
@@ -208,13 +208,13 @@ SQL Server 2000 無法使用這些運算子。 [!INCLUDE[vbtecdlinq](../../../..
 
 ### <a name="text--ntext"></a>text / ntext
 
-在某些`text`查詢作業`varchar(max)` `ntext`中，資料 /  類型 / 無法用於 Microsoft SQL Server 2005 所支援的。 `nvarchar(max)`
+@No__t-0 @ no__t-1 @ no__t-2 的資料類型不能用於 Microsoft SQL Server 2005 支援的 `varchar(max)` @ no__t-4 @ no__t-5 的某些查詢作業。
 
 這項限制沒有解決方案。 具體來說，如果結果中含有對應至 `Distinct()` 或 `text` 資料行的成員，就不能對該結果使用 `ntext`。
 
 ### <a name="behavior-triggered-by-nested-queries"></a>巢狀查詢觸發的行為
 
-SQL Server 2000 （至 SP4）系結器具有一些由巢狀查詢觸發的特性。 觸發這些特性的 SQL 查詢集合並未妥善定義。 基於這個理由，您無法定義可能導致 SQL Server [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]例外狀況的一組查詢。
+SQL Server 2000 （至 SP4）系結器具有一些由巢狀查詢觸發的特性。 觸發這些特性的 SQL 查詢集合並未妥善定義。 基於這個理由，您不能定義一組可能造成 SQL Server 例外狀況的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢。
 
 ### <a name="skip-and-take-operators"></a>Skip 和 Take 運算子
 
@@ -232,7 +232,7 @@ Materialization 作業會針對一個或多個 SQL 查詢傳回的資料列建�
 
   - 投影中的型別轉換
 
-- 遵循<xref:System.Linq.Enumerable.AsEnumerable%2A>方法的方法會在*本機執行*。 這個方法不會造成立即執行。
+- 遵循 <xref:System.Linq.Enumerable.AsEnumerable%2A> 方法的方法會在*本機執行*。 這個方法不會造成立即執行。
 
 - 您可以使用 `struct` 做為查詢結果的傳回型別或是結果型別的成員。 實體必須為類別。 匿名型別會具體化成為類別執行個體，但具名 struct (非實體) 則可以用於投影中。
 

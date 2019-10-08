@@ -9,12 +9,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: b8f0c7c4584505d382e78aca68e2e99c9fa7748f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306332"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834634"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立 Windows 架構的協助工具應用程式
 
@@ -46,7 +46,7 @@ ms.locfileid: "71306332"
 
 #### <a name="to-begin-making-the-application"></a>開始建立應用程式
 
-- 在 Visual Basic 或視覺效果C#中建立新的 Windows 應用程式。 將專案命名為 **PizzaOrder** (如需詳細資訊，請參閱[建立新的方案和專案](/visualstudio/ide/creating-solutions-and-projects))。
+- 在 Visual Basic 或視覺效果C#中建立新的 Windows 應用程式。 將專案命名為 **PizzaOrder** 如需詳細資訊，請參閱[建立新的方案和專案](/visualstudio/ide/creating-solutions-and-projects)。
 
 ## <a name="adding-the-controls-to-the-form"></a>將控制項加入表單
 

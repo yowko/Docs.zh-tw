@@ -3,12 +3,12 @@ title: 將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: 3ba99a061d060ebe7740fe61846c3684b5c3085d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 645fd09de91d8190384faea9df2ef18511162c2f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045490"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834527"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針
 
@@ -110,7 +110,7 @@ WIF 3.5 SDK 已提供獨立同盟公用程式 FedUtil.exe (FedUtil)，可用來�
 
 - WIF 4.5 不再提供獨立同盟公用程式 (FedUtil)。 您可以使用身分識別和存取工具來修改組態檔，以將身分識別管理外包到 STS。
 
-如需身分識別和存取工具的詳細資訊，請參閱 [Visual Studio 2012 的身分識別和存取工具](identity-and-access-tool-for-vs.md)。
+如需有關身分識別和存取工具的詳細資訊，請參閱[Visual Studio 2012 的身分識別與存取工具](identity-and-access-tool-for-vs.md)。
 
 <a name="BKMK_ToolingChanges"></a>
 

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a61f4eedde611cfb7598d55465103924516e06c6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949917"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834601"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Form 中的滑鼠事件
 
-當您處理滑鼠輸入時，您通常會要知道滑鼠指標的位置，以及滑鼠按鈕的狀態。 本主題提供如何從滑鼠事件取得此資訊的詳細說明，並說明在 Windows Form 控制項中引發滑鼠點按事件的順序。 如需所有滑鼠事件的清單和描述, 請參閱[Windows Forms 中的滑鼠輸入運作方式](how-mouse-input-works-in-windows-forms.md)。  另請參閱[事件處理常式總覽 (Windows Forms)](event-handlers-overview-windows-forms.md)和[事件總覽 (Windows Forms)](events-overview-windows-forms.md)。
+當您處理滑鼠輸入時，您通常會要知道滑鼠指標的位置，以及滑鼠按鈕的狀態。 本主題提供如何從滑鼠事件取得此資訊的詳細說明，並說明在 Windows Form 控制項中引發滑鼠點按事件的順序。 如需所有滑鼠事件的清單和描述，請參閱[Windows Forms 中的滑鼠輸入運作方式](how-mouse-input-works-in-windows-forms.md)。  另請參閱[事件處理常式總覽（Windows Forms）](event-handlers-overview-windows-forms.md)和[事件總覽（Windows Forms）](events-overview-windows-forms.md)。
 
 ## <a name="mouse-information"></a>滑鼠資訊
 
@@ -48,7 +48,7 @@ ms.locfileid: "69949917"
 
 4. <xref:System.Windows.Forms.Control.MouseUp> 事件。
 
-以下是針對按兩下滑鼠按鈕時，所引發的事件順序：
+以下是按兩下滑鼠按鍵時所引發的事件順序：
 
 1. <xref:System.Windows.Forms.Control.MouseDown> 事件。
 
@@ -66,24 +66,27 @@ ms.locfileid: "69949917"
 
 8. <xref:System.Windows.Forms.Control.MouseUp> 事件。
 
-如需示範滑鼠點擊事件順序的程式碼範例, 請參閱[如何:處理 Windows Forms 控制項](how-to-handle-user-input-events-in-windows-forms-controls.md)中的使用者輸入事件。
+如需示範滑鼠點擊事件順序的程式碼範例，請參閱 [How to：處理 Windows Forms 控制項 @ no__t-0 中的使用者輸入事件。
 
 ### <a name="individual-controls"></a>個別控制項
 
 下列控制項不符合標準滑鼠點按事件行為：
 
-- <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.CheckBox>、<xref:System.Windows.Forms.ComboBox> 和 <xref:System.Windows.Forms.RadioButton> 控制項
+- <xref:System.Windows.Forms.Button>
+- <xref:System.Windows.Forms.CheckBox>
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.RadioButton>
 
   > [!NOTE]
   > 針對 <xref:System.Windows.Forms.ComboBox> 控制項，如果使用者按一下編輯欄位、按鈕或是清單中的項目，就會發生下述事件行為。
 
   - 按一下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 按一下滑鼠右鍵:未引發 click 事件
+  - 按一下滑鼠右鍵：未引發 click 事件
 
   - 按兩下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>；<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 以滑鼠右鍵按一下:未引發 click 事件
+  - 以滑鼠右鍵按一下：未引發 click 事件
 
 - <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox> 和 <xref:System.Windows.Forms.CheckedListBox> 控制項
 
@@ -92,11 +95,11 @@ ms.locfileid: "69949917"
 
   - 按一下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 按一下滑鼠右鍵:未引發 click 事件
+  - 按一下滑鼠右鍵：未引發 click 事件
 
   - 按兩下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - 以滑鼠右鍵按一下:未引發 click 事件
+  - 以滑鼠右鍵按一下：未引發 click 事件
 
 - <xref:System.Windows.Forms.ListView> 控制項
 

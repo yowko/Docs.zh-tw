@@ -4,12 +4,12 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117935"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957256"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks
 
@@ -63,7 +63,7 @@ ms.locfileid: "71117935"
 
 4. 將下列項目上傳到您叢集可存取的分散式檔案系統 (例如 DBFS)：
 
-   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 已作為 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 套件的一部分包含在其中，且已共置於您應用程式的建置輸出目錄。
+   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`:此 jar 已作為 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 套件的一部分包含在其中，且已共置於您應用程式的建置輸出目錄。
    - `<your app>.zip`
    - 要放在每個執行程式中工作目錄的檔案 (例如相依性檔案或每個背景工作都可存取的通用資料) 或組件 (例如包含您使用者定義函式或您應用程式相依程式庫的 DLL)。
 
@@ -119,11 +119,11 @@ Databricks 可讓您將適用於 Apache Spark 的 .NET 應用程式部署到現�
 
 3. 適當地設定參數。
 
-   ```
-   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
-   Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
-   ```
- 
+   | 參數   | 值                                                |
+   |-------------|------------------------------------------------------|
+   | Main 類別  | dotnet. DotnetRunner 的部署          |
+   | 引數   | /dbfs/apps/< 您的應用程式名稱 > .zip < 應用程式的主要類別 > |
+
 4. 設定 [Cluster] \(叢集\) 以指向您在前一節中為其建立**初始指令碼**的現有叢集。
 
 #### <a name="publish-and-run-your-app"></a>發佈和執行您的應用程式

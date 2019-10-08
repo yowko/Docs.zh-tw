@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用字典使用 LINQ to XML (Visual Basic)
+title: HOW TO：使用 LINQ to XML （Visual Basic）處理字典
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9773b926d16b51ea912792b0f348a26a9a3c7a29
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614141"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835089"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>HOW TO：使用字典使用 LINQ to XML (Visual Basic)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>HOW TO：使用 LINQ to XML （Visual Basic）處理字典
 將各種資料結構轉換為 XML，以及將 XML 轉回其他資料結構通常很方便。 這個主題藉由來回轉換 <xref:System.Collections.Generic.Dictionary%602> 和 XML 來顯示這個一般方法的特定實作。  
   
 ## <a name="example"></a>範例  
- 此範例會使用 XML 常值和查詢中內嵌的運算式。 此查詢會評估新<xref:System.Xml.Linq.XElement>物件，然後變成的新內容`Root`<xref:System.Xml.Linq.XElement>物件。  
+ 這個範例會在內嵌運算式中使用 XML 常值和查詢。 查詢會投射新的 <xref:System.Xml.Linq.XElement> 物件，然後成為 `Root` @no__t 2 物件的新內容。  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -63,7 +63,7 @@ Next
   
  此程式碼會產生下列輸出：  
   
-```  
+```console  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  
@@ -72,4 +72,4 @@ Child4:Value4
   
 ## <a name="see-also"></a>另請參閱
 
-- [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [投影和轉換（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

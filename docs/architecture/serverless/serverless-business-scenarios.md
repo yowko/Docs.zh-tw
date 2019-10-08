@@ -4,12 +4,12 @@ description: 存取從影像處理到行動後端和 ETL 管線範圍的範例�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926474"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834292"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>無伺服器商務情節和使用案例
 
@@ -33,7 +33,7 @@ ms.locfileid: "70926474"
 
 請參閱如何在 Azure 入口網站中或 Visual Studio 中執行簡單的無伺服器 Azure 函式。 使用在 Android、iOS 和 Windows 上執行的 Xamarin 來建立用戶端。 然後，應用程式會經過精簡，以使用 JavaScript 物件標記法（JSON）做為伺服器和行動用戶端之間的通訊媒介（具有無伺服器後端）。
 
-如需詳細資訊，請參閱[使用 Xamarin. Forms 用戶端執行簡單的 Azure 函數](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+如需詳細資訊，請參閱[使用 Xamarin. Forms client 來執行簡單的 Azure 函數](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)。
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>使用無伺服器影像辨識產生相片馬賽克
 

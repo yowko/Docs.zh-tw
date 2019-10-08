@@ -2,14 +2,14 @@
 title: 在 Visual Studio 中建立啟用 AJAX 的 WCF 服務和 ASP.NET 用戶端
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 1f5c9eb1750b0df28836f147d5b4be1b223bb52e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6d6e87de6200a5cb9bba566d595066673cdf9cf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053685"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834781"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>作法：建立已啟用 AJAX 的 WCF 服務，以及存取服務的 ASP.NET 用戶端
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>HOW TO：建立已啟用 AJAX 的 WCF 服務，以及存取服務的 ASP.NET 用戶端
 
 本主題說明如何使用 Visual Studio 來建立啟用 AJAX 的 Windows Communication Foundation （WCF）服務，以及存取服務的 ASP.NET 用戶端。
 
@@ -104,11 +104,11 @@ ms.locfileid: "71053685"
 
 ## <a name="run-the-program"></a>執行程式
 
-請確定*webform1.aspx*具有焦點，然後按 [**啟動**] 按鈕以啟動 web 用戶端。 按鈕有綠色三角形，並顯示類似**IIS Express （Microsoft Edge）** 。 或者，您可以按**F5**。 按一下 [ **3 三明治**] 按鈕的價格，以產生 "3.75" 的預期輸出。
+請確定*webform1.aspx*具有焦點，然後按 [**啟動**] 按鈕以啟動 web 用戶端。 按鈕有綠色三角形，並顯示類似**IIS Express （Microsoft Edge）** 。 或者，您可以按<kbd>F5</kbd>。 按一下 [ **3 三明治**] 按鈕的價格，以產生 "3.75" 的預期輸出。
 
-## <a name="example-code"></a>範例程式碼
+## <a name="example"></a>範例
 
-以下是*CostService.svc.cs*檔案中的完整程式碼：
+下列是*CostService.svc.cs*檔案中的完整程式碼：
 
 ```csharp
 using System.ServiceModel;

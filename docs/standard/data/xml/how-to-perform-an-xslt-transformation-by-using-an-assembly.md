@@ -1,5 +1,5 @@
 ---
-title: 作法：使用組件執行 XSLT 轉換
+title: HOW TO：使用組件執行 XSLT 轉換
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bf0669b94f925052ad5f139cce049018ce7da4f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 7e998526f3e5fcefdf6b776fb493cf9625e6c696
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666523"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957152"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>作法：使用組件執行 XSLT 轉換
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>HOW TO：使用組件執行 XSLT 轉換
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後此組件可以直接傳遞到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>將 XML 和 XSLT 檔案複製到本機電腦  
@@ -134,15 +134,15 @@ XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後此�
   
 1. 從命令列執行下列命令會建立兩個名為 `Transform.dll` 和 `Transform_Script1.dll` 的組件 (這是預設行為。 除非另外指定，否則類別和組件的名稱會預設為主要樣式表的名稱)：  
   
-    ```  
+    ```console  
     xsltc /settings:script+ Transform.xsl  
+    ```
+  
+    下列命令會明確將類別名稱設定為 Transform：  
+  
+    ```console  
+    xsltc /settings:script+ /class:Transform Transform.xsl  
     ```  
-  
- 下列命令會明確將類別名稱設定為 Transform：  
-  
-```  
-xsltc /settings:script+ /class:Transform Transform.xsl  
-```  
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>當您在編譯程式碼時，將編譯的組件當做參考併入  
   
@@ -150,36 +150,36 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 2. 如果是使用 C# 的命令列，請使用以下程式碼：  
   
-    ```  
+    ```console  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 3. 如果是使用 Visual Basic 的命令列，請使用以下程式碼：  
   
-    ```  
+    ```console  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>在程式碼中使用編譯的組件  
   
-1. 下列範例將示範如何使用編譯的樣式表執行 XSLT 轉換。  
+下列範例將示範如何使用編譯的樣式表執行 XSLT 轉換。  
   
- [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
- [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
+[!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
+[!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- 若要動態連結至已編譯的組件，請將  
+若要動態連結至已編譯的組件，請將
   
-```  
-xslt.Load(typeof(Transform))  
-```  
-  
- 取代為  
-  
-```  
-xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
+```csharp  
+xslt.Load(typeof(Transform));  
 ```  
   
- 。 如需 Assembly.Load 方法的詳細資訊，請參閱 <xref:System.Reflection.Assembly.Load%2A>  
+取代為  
+  
+```csharp 
+xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
+``` 
+  
+。 如需有關元件. Load 方法的詳細資訊，請參閱 <xref:System.Reflection.Assembly.Load%2A>。  
   
 ## <a name="see-also"></a>另請參閱
 

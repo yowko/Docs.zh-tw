@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ace8c644fd5aa13e29961b7eb44e923556571c75
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116220"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834252"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -25,7 +25,7 @@ ms.locfileid: "71116220"
 - [JIT 編譯改進功能](#jit-compiler-improvements)
 - [API 變更](#api-changes)
 
-## <a name="tooling"></a>Tooling
+## <a name="tooling"></a>工具
 
 隨附於 .NET Core 2.1 的工具 .NET Core 2.1 SDK (2.1.300 版) 包含下列變更與增強功能：
 
@@ -55,7 +55,7 @@ ms.locfileid: "71116220"
 
    請注意到位於 `--verbose` 選項之前的 `--` 選項。 它能將直接傳遞給 `dotnet watch` 命令的選項，與傳遞給子 `dotnet` 處理序的引數分隔開來。 如果沒有它的話，`--verbose` 選項將會套用至 `dotnet watch` 命令，而非 `dotnet build` 命令。
   
-   如需詳細資訊，請參閱[使用 dotnet watch 開發 ASP.NET Core 應用程式](/aspnet/core/tutorials/dotnet-watch)
+   如需詳細資訊，請參閱[使用 dotnet Watch 開發 ASP.NET Core 應用程式](/aspnet/core/tutorials/dotnet-watch)。
 
 - `dotnet dev-certs` 能產生和管理在開發 ASP.NET Core 應用程式期間使用的憑證。
 
@@ -69,7 +69,7 @@ ms.locfileid: "71116220"
 
 .NET Core 2.1 支援*通用工具*，亦即從命令列以通用方式提供的自訂工具。 舊版 .NET Core 的擴充性模型，只能透過使用 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) 來使自訂工具可供每個專案使用。
 
-若要安裝通用工具，您需使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如：
+若要安裝通用工具，您需使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay

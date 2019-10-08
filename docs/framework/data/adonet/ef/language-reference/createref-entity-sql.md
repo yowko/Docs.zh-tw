@@ -2,19 +2,19 @@
 title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-ms.openlocfilehash: cbaea82108dd3debcca972ca15dea248227330ac
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3659f2c0690b00e728630c6e77308ba9d424bb1b
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251108"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833928"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 建立實體集中實體的參考。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sql  
 CreateRef(entityset_identifier, row_typed_expression)  
 ```  
   
@@ -30,19 +30,19 @@ CreateRef(entityset_identifier, row_typed_expression)
   
  在下面的範例中，Orders 和 BadOrders 兩者都是 Order 型別的實體集，而 Id 則相當於 Order 的單一索引鍵屬性。 此範例說明如何產生 BadOrders 中實體的產考。 請留意，此參考可能會懸空。  換言之，此參考可能無法實際識別特定的實體。 在這種情況下，對該參考的 `DEREF` 作業將會傳回 null。  
   
-```  
-select CreateRef(LOB.BadOrders, row(o.Id))   
-from LOB.Orders as o   
+```sql  
+SELECT CreateRef(LOB.BadOrders, row(o.Id))
+FROM LOB.Orders AS o
 ```  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢使用 CREATEREF 運算子來建立實體集中實體的參考。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. [遵循 how to：執行可傳回 StructuralType 結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
+1. 依照 [How 中的程式進行：執行可傳回 StructuralType 結果 @ no__t-0 的查詢。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#CREATEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#createref)]  
+ [!code-sql[DP EntityServices Concepts#CREATEREF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#createref)]  
   
 ## <a name="see-also"></a>另請參閱
 

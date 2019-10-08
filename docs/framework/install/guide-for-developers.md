@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051948"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833647"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -155,7 +155,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 - .NET Framework 4.5 及其點發行版本、.NET Framework 4.6 及其點發行版本、.NET Framework 4.7 及其點發行版本以及 .NET Framework 4.8 會取代 .NET Framework 4。 如果您在已安裝 .NET Framework 4 的系統上安裝這些版本，組件就會被取代。
 
-- 解除安裝 .NET Framework 4.5 及其點發行版本、.NET Framework 4.6 及其點發行版本、.NET Framework 4.7 及其點發行版本或 .NET Framework 4.8 會同時移除既有的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 (請參閱 [安裝 .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665))。
+- 解除安裝 .NET Framework 4.5 及其點發行版本、.NET Framework 4.6 及其點發行版本、.NET Framework 4.7 及其點發行版本或 .NET Framework 4.8 會同時移除既有的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 請參閱[安裝 .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665)。
 
 - 您必須具有系統管理認證，才能安裝 .NET Framework 4.5 及其點發行版本、.NET Framework 4.6 及其點發行版本、.NET Framework 4.7 及其點發行版本以及 .NET Framework 4.8。
 
