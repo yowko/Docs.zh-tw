@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發工作流程
 description: 了解開發 Docker 應用程式的工作流程詳細資料。 一開始會逐步了解一些用以最佳化 Dockerfile 的詳細資料，最後將取得使用 Visual Studio 時可用的簡化工作流程。
 ms.date: 01/07/2019
-ms.openlocfilehash: 36caff247d031b8808ab953ec884b7ce292858eb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040267"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031878"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -151,7 +151,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 Dockerfile 類似於批次指令碼。 類似於必須從命令列設定電腦時所要執行的作業。
 
-它會從設定初始內容的基底映像開始，就像是啟動檔案系統，都是位於主機 OS 之上。 雖然它不是 OS，但您可以將它想成容器內的 OS。
+它會從設定初始內容的基底映像開始，就像是啟動檔案系統，都是位於主機 OS 之上。 這不是作業系統，但您可以將它視為容器內的「作業系統」。
 
 執行每個命令列都會在檔案系統上建立新的圖層，其中包含對上一個圖層所做的變更，這些圖層合併之後即會產生檔案系統。
 

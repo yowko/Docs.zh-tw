@@ -2,12 +2,12 @@
 title: 使用 Web API 實作微服務應用程式層
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解相依性插入和中繼程序模式，以及它們在 Web API 應用程式層的實作詳細資料。
 ms.date: 10/08/2018
-ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: d462f692366575fd01842f41252fc96658fdcac5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834358"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002342"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -502,7 +502,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>實作等冪命令
 
-在 **eShopOnContainers** 中，比上述更進階的範例是從訂購微服務提交 CreateOrderCommand 物件。 但因為訂購商務程序比較複雜 (在我們的案例中，實際上是在 Basket 微服務中啟動它)，所以會從名為 >UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) 的整合事件處理常式中執行這個提交 CreateOrderCommand 物件的動作，而不是像上述較簡單的範例，從用戶端應用程式呼叫簡單的 WebAPI 控制器。
+在 **eShopOnContainers** 中，比上述更進階的範例是從訂購微服務提交 CreateOrderCommand 物件。 但是因為訂購商務程式比較複雜，而且在我們的案例中，它實際上是從購物籃微服務開始，所以提交 CreateOrderCommand 物件的這項動作是從名為[的整合事件處理常式執行。到 usercheckoutacceptedintegrationevent](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) ，而不是從用戶端應用程式呼叫的簡單 WebAPI 控制器，如先前較簡單的範例所示。
 
 不過，將命令提交給 MediatR 的動作相當類似，如下列程式碼所示。
 
