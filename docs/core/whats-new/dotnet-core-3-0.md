@@ -38,7 +38,7 @@ C#8.0 也是此版本的一部分，其中包括可為 null 的參考型別功�
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-雖然 .net Core 3.0 支援 **.NET Standard 2.1**，但預設`dotnet new classlib`範本會產生仍以 **.NET Standard 2.0**為目標的專案。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
+雖然 .NET Core 3.0 支援 **.NET Standard 2.1**，但預設`dotnet new classlib`範本會產生仍以 **.NET Standard 2.0**為目標的專案。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
