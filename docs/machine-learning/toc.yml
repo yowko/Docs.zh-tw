@@ -115,6 +115,8 @@
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
 - name: 資源
   items:
+    - name: 總覽
+      href: resources/index.md
     - name: 字彙表
       href: resources/glossary.md
     - name: CLI 遙測
