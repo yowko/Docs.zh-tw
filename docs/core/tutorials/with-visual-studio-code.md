@@ -4,12 +4,12 @@ description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您�
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849461"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002328"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
@@ -34,9 +34,10 @@ ms.locfileid: "70849461"
       ![Visual Studio Code 開啟資料夾](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. 初始化 C# 專案：
+
     - 從主要功能表中選取 [檢視] > [整合式終端機]，以從 Visual Studio Code 開啟 [整合式終端機]。
     - 在終端機視窗中，輸入 `dotnet new console`。
-    - 此命令會在您的資料夾中建立已撰寫簡單 "Hello World" 程式的 `Program.cs` 檔案，以及名為 `HelloWorld.csproj` 的 C# 專案檔。
+    - 此命令會在您的資料夾中建立*Program.cs*檔案，其中已撰寫簡單的 "Hello World" 程式， C#以及名為*HelloWorld*的專案檔。
 
       ![DotNet 新增命令](media/with-visual-studio-code/dotnet-new-command.png)
 
@@ -70,7 +71,7 @@ ms.locfileid: "70849461"
 
     ![在 Visual Studio Code 中開啟 [偵錯] 索引標籤](media/with-visual-studio-code/open-debug-tab.png)
 
-4. 尋找窗格頂端的綠色箭頭。 請確定它旁邊的下拉式清單已選取 `.NET Core Launch (console)`。
+4. 尋找窗格頂端的綠色箭頭。 請確定其旁邊的下拉式選已選取 [ **.Net Core 啟動] （主控台）** 。
 
     ![在 Visual Studio Code 中選取 .NET Core](media/with-visual-studio-code/select-net-core.png)
 
@@ -78,7 +79,7 @@ ms.locfileid: "70849461"
 
     ![設定中斷點](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. 若要開始偵錯，請選取 <kbd>F5</kbd> 或綠色箭頭。 當偵錯程式到達您在上一個步驟中設定的中斷點時，它會停止您程式的執行。
+6. 若要開始進行調試，請按<kbd>F5</kbd>或選取綠色箭號。 當偵錯程式到達您在上一個步驟中設定的中斷點時，它會停止您程式的執行。
     - 進行偵錯時，您可以在左上角窗格中檢視您的本機變數或使用偵錯主控台。
 
 7. 選取頂端的藍色箭頭以繼續偵錯，或選取頂端的紅色正方形以停止偵錯。
@@ -90,9 +91,9 @@ ms.locfileid: "70849461"
 
 ## <a name="add-a-class"></a>新增類別
 
-1. 若要新增類別，請在「VSCode 總管」中按一下滑鼠右鍵，然後選取 [新增檔案]。 這會在您於 VSCode 中開啟的資料夾內新增檔案。
-2. 將檔案命名為 `MyClass.cs`。 您必須在結尾加上 `.cs` 副檔名來儲存它，系統才能將它辨識為 csharp 檔案。
-3. 新增下方程式碼來建立您的第一個類別。 請務必包含正確的命名空間，如此您才能夠從 `Program.cs` 檔案參考它。
+1. 若要加入新的類別，請以滑鼠右鍵按一下 [VSCode Explorer]，然後選取 [**新增**檔案]。 這會在您於 VSCode 中開啟的資料夾內新增檔案。
+2. 將檔案命名為*MyClass.cs*。 您必須在結尾加上 `.cs` 副檔名來儲存它，系統才能將它辨識為 csharp 檔案。
+3. 新增下方程式碼來建立您的第一個類別。 請務必包含正確的命名空間，讓您可以從*Program.cs*檔案中參考它：
 
     ``` csharp
     using System;
@@ -109,7 +110,7 @@ ms.locfileid: "70849461"
     }
     ```
 
-4. 新增下方程式碼以從 `Program.cs` 中的主要方法呼叫您的新類別。
+4. 藉由新增下列程式碼，從*Program.cs*中的 main 方法呼叫新的類別：
 
     ```csharp
     using System;
@@ -120,7 +121,7 @@ ms.locfileid: "70849461"
         {
             static void Main(string[] args)
             {
-                MyClass c1 = new MyClass();
+                var c1 = new MyClass();
                 Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
             }
         }
@@ -138,7 +139,7 @@ ms.locfileid: "70849461"
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>我缺少在 Visual Studio Code 中建置及偵錯 C# 所需的資產。 我的偵錯工具顯示「沒有組態」。
 
-Visual Studio Code C# 延伸模組可為您產生用於建置和偵錯的資產。 Visual Studio Code 會在您第一次開啟 C# 專案時，提示您產生這些資產。 如果您當時未產生資產，仍可以透過開啟 [命令選擇區] ([檢視] > [命令選擇區])，然後鍵入 ">.NET:Generate Assets for Build and Debug" 來執行此命令。 選取此選項會產生您所需的 .vscode、launch.json 和 tasks.json 組態檔。
+Visual Studio Code C# 延伸模組可為您產生用於建置和偵錯的資產。 Visual Studio Code 會在您第一次開啟 C# 專案時，提示您產生這些資產。 如果您當時未產生資產，仍可以透過開啟 [命令選擇區] ([檢視] > [命令選擇區])，然後鍵入 ">.NET:Generate Assets for Build and Debug" 來執行此命令。 選取此程式會產生*vscode*、*啟動 json*和您需要的*json*設定檔案。
 
 ## <a name="see-also"></a>另請參閱
 

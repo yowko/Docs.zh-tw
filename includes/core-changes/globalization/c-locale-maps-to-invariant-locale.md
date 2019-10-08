@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9e9e443be9ea51d214e95c676fc28f0d8790af8b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: d2f24ab746c425199b5a3e0c79835da372fe8e14
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117266"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002878"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>"C" 地區設定對應到不變的地區設定
 
@@ -18,13 +18,13 @@ ms.locfileid: "71117266"
 
 #### <a name="version-introduced"></a>引進的版本
 
-.NET Core 3.0
+3.0
 
 ### <a name="recommended-action"></a>建議的動作
 
 除了這項變更的認知以外，沒有任何特定的內容。 這種變更只會影響使用 "C" 地區設定對應的應用程式。
 
-### <a name="category"></a>分類
+### <a name="category"></a>Category
 
 全球化 
 

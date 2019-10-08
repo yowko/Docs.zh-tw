@@ -1,5 +1,5 @@
 ---
-title: -help、-? (Visual Basic)
+title: -help、-? （Visual Basic）
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /? compiler option [Visual Basic]
@@ -9,34 +9,38 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 287a2ed3f54f85435a986d3a6ecd77f7009fb195
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33b1837415001253122388f7b4992abf6f96903f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938218"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005613"
 ---
-# <a name="-help---visual-basic"></a>-help、-? (Visual Basic)
+# <a name="-help---visual-basic"></a>-help、-? （Visual Basic）
 顯示編譯器選項。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 -help  
-' -or-  
+```
+
+或  
+
+```console
 -?  
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果您在編譯中包含此選項, 則不會建立任何輸出檔案, 也不會進行任何編譯。  
+ 如果您在編譯中包含此選項，則不會建立任何輸出檔案，也不會進行任何編譯。  
   
 > [!NOTE]
-> 此`-help`選項無法從 Visual Studio 開發環境中使用; 只有在從命令列進行編譯時, 才能使用此選項。  
+> @No__t-0 選項無法從 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
  下列程式碼會顯示命令列的說明。  
   
-```  
+```console  
 vbc -help  
 ```  
   

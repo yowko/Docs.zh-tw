@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: bbefaba4491fca1b21b6a214048d9db1394c4bc7
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 38f9a9c79bfda9abb46181f433d28268b8a37762
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545327"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004577"
 ---
 # <a name="typography"></a>印刷樣式
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]包含豐富的文字內容呈現支援。 中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的文字會使用 Microsoft ClearType 來轉譯, 這可增強文字的清晰度和可讀性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]也支援 OpenType 字型, 其提供的其他功能超出格式所[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]定義的功能。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包含豐富的文字內容呈現支援。 @No__t-0 中的文字會使用 Microsoft ClearType 轉譯，這可增強文字的清晰度和可讀性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也支援 OpenType 字型，其提供的其他功能超出 TrueType®格式所定義的功能。  
   
 ## <a name="in-this-section"></a>本節內容  
  [WPF 中的印刷樣式](typography-in-wpf.md)  

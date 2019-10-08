@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: c2b657f704d072b987578be5520a58d007ecac37
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e9d77cd1dc82e1b103c5f0d9f3f447ed105acaec
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353014"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003253"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>HOW TO：使用有參數的預存程序
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將輸出參數對應至參考參數，而且會針對實值型別 (Value Type)，將參數宣告為可為 Null。  
@@ -20,7 +20,7 @@ ms.locfileid: "71353014"
 ## <a name="example"></a>範例  
  下列範例取用單一輸入參數 (客戶 ID)，並傳回輸出參數 (該客戶的總銷售量)。  
   
-```  
+```sql
 CREATE PROCEDURE [dbo].[CustOrderTotal]   
 @CustomerID nchar(5),  
 @TotalSales money OUTPUT  

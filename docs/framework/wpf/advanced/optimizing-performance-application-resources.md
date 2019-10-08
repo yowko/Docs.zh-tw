@@ -1,5 +1,5 @@
 ---
-title: 最佳化效能：應用程式資源
+title: 優化效能：應用程式資源
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF], performance
@@ -9,34 +9,34 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 759d02afe1934d2ace4ed226d5d911db2d676d98
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017939"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005036"
 ---
-# <a name="optimizing-performance-application-resources"></a>最佳化效能：應用程式資源
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您共用應用程式資源，以便您可以透過類似類型的項目支援一致的外觀或行為。 本主題提供可協助您這方面的一些建議改善您的應用程式的效能。  
+# <a name="optimizing-performance-application-resources"></a>優化效能：應用程式資源
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您共用應用程式資源，如此一來，您就可以在相似類型的元素之間支援一致的外觀或行為。 本主題提供此區域中的幾項建議，可協助您改善應用程式的效能。  
   
  如需詳細資訊，請參閱 [XAML 資源](xaml-resources.md)。  
   
 ## <a name="sharing-resources"></a>共用資源  
- 如果您的應用程式會使用自訂控制項，並定義中的資源<xref:System.Windows.ResourceDictionary>（或 XAML 資源節點），建議您其中一個定義的資源<xref:System.Windows.Application>或<xref:System.Windows.Window>物件層級，或定義中的預設佈景主題自訂控制項。 在 自訂控制項中定義資源<xref:System.Windows.ResourceDictionary>會影響效能，該控制項的每個執行個體。 比方說，如果您有需要大量效能的筆刷作業定義為屬於自訂控制項的資源定義和自訂控制項的許多執行個體，則應用程式的工作集將會大幅增加。  
+ 如果您的應用程式使用自訂控制項，並在 <xref:System.Windows.ResourceDictionary> （或 XAML 資源）節點中定義資源，建議您在 <xref:System.Windows.Application> 或 @no__t 2 物件層級定義資源，或在自訂控制項的預設主題中加以定義。 在自訂控制項的 <xref:System.Windows.ResourceDictionary> 中定義資源，會對該控制項的每個實例造成效能上的影響。 例如，如果您有一項需要大量效能的筆刷作業定義為自訂控制項的資源定義以及自訂控制項的許多實例，應用程式的工作集就會大幅增加。  
   
- 為了說明這點，請考慮下列項目。 假設您正在開發卡遊戲使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 大部分的撲克牌遊戲，您必須使用 52 不同臉部的 52 張紙牌。 您決定實作卡片自訂控制項，您定義 （每個都代表卡 face） 的 52 筆刷卡自訂控制項的資源中。 主要的應用程式中您一開始會建立此卡的自訂控制項 52 執行個體。 卡片的自訂控制項的每個執行個體產生 52 個執行個體<xref:System.Windows.Media.Brush>物件，可讓您總共 52 * 52<xref:System.Windows.Media.Brush>應用程式中的物件。 藉由移動到卡片的自訂控制項資源不足的筆刷<xref:System.Windows.Application>或<xref:System.Windows.Window>物件層級，或定義它們預設佈景主題自訂控制項，因為您現在共用 52 筆刷，減少應用程式的工作集52 的卡片控制項的執行個體。  
+ 為了說明這一點，請考慮下列事項。 假設您正在使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 來開發撲克牌遊戲。 對於大部分的撲克牌遊戲，您需要52張具有52不同臉部的卡片。 您決定要執行卡片自訂控制項，並在卡片自訂控制項的資源中定義52筆刷（每個都代表卡片臉部）。 在您的主要應用程式中，您一開始會建立此卡片自訂控制項的52實例。 卡片自訂控制項的每個實例都會產生 <xref:System.Windows.Media.Brush> 個物件的52實例，在您的應用程式中，總共提供 52 * 52 <xref:System.Windows.Media.Brush> 個物件。 將筆刷從卡片自訂控制項資源移到 <xref:System.Windows.Application> 或 @no__t 1 物件層級，或在自訂控制項的預設主題中加以定義，就會減少應用程式的工作集，因為您現在會在52之間共用52筆刷卡片控制項的實例。  
   
-## <a name="sharing-a-brush-without-copying"></a>未複製的情況下共用筆刷  
- 如果您有多個使用相同的項目<xref:System.Windows.Media.Brush>物件，定義為資源的筆刷並參考它，而不是定義在內嵌的筆刷[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]。 這個方法會建立一個執行個體，並重複使用，而定義中的筆刷內嵌[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]建立新的執行個體，每個項目。  
+## <a name="sharing-a-brush-without-copying"></a>共用筆刷而不復制  
+ 如果您有多個使用相同 <xref:System.Windows.Media.Brush> 物件的元素，請將筆刷定義為資源並加以參考，而不是在 XAML 中定義筆刷內嵌。 這個方法會建立一個實例並重複使用它，而在 XAML 中定義以內嵌的筆刷會針對每個專案建立新的實例。  
   
  下列標記範例說明這一點：  
   
  [!code-xaml[Performance#PerformanceSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
-## <a name="use-static-resources-when-possible"></a>使用靜態資源，可能的話  
- 靜態資源會提供任何 XAML 內容屬性的值，藉由查閱已定義之資源的參考。 該資源查閱行為相當於編譯時期查閱。  
+## <a name="use-static-resources-when-possible"></a>盡可能使用靜態資源  
+ 靜態資源會藉由查閱已定義資源的參考，提供任何 XAML 屬性屬性的值。 該資源的查閱行為類似于編譯時間查閱。  
   
- 相反地，動態資源，可能會將裝置建立初始的編譯期間的暫時運算式，並因此延後資源的查閱，直到實際需要以建構物件，而要求的資源值。 該資源查閱行為相當於執行階段對應，它會影響效能。 使用靜態資源，請盡可能使用動態資源，只在必要時在您的應用程式中。  
+ 另一方面，動態資源會在初始編譯期間建立暫存運算式，因此會延遲資源的查閱，直到實際需要要求的資源值才能建立物件為止。 該資源的查閱行為類似于執行時間查詢，這會影響效能。 請盡可能在您的應用程式中使用靜態資源，只有在必要時才使用動態資源。  
   
  下列標記範例示範如何使用這兩種類型的資源：  
   

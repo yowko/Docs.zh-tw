@@ -1,5 +1,5 @@
 ---
-title: HOW TO：參考目前的執行個體的物件 (Visual Basic)
+title: HOW TO：參考物件的目前實例（Visual Basic）
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], object
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 70955cd55dfb91d4111e59ae58bfe409a4470433
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c216dbc59bcad7a9f24bb01f856c3d29c288dbb
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663535"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005663"
 ---
-# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>HOW TO：參考目前的執行個體的物件 (Visual Basic)
-*目前的執行個體*物件是目前執行所在的程式碼的執行個體。  
+# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>HOW TO：參考物件的目前實例（Visual Basic）
+目前物件的*實例*是程式碼執行所在的實例。  
   
- 您使用`Me`關鍵字來參考目前的執行個體。  
+ 您可以使用 `Me` 關鍵字來參考目前的實例。  
   
-### <a name="to-refer-to-the-current-instance"></a>若要參考之目前執行個體  
+### <a name="to-refer-to-the-current-instance"></a>若要參考目前的實例  
   
-- 使用`Me`關鍵字，您通常會使用物件變數的名稱。  
+- 使用 `Me` 關鍵字，通常會使用物件變數的名稱。  
   
-    ```  
+    ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     雖然`Me`行為就像物件變數時，您不能宣告它或將任何項目指派給它。 `Me` 一律是指目前的執行個體。  
+     雖然 `Me` 的行為就像物件變數一樣，但您不能宣告它或將任何專案指派給它。 `Me` 一律是指目前的實例。  
   
 ## <a name="see-also"></a>另請參閱
 

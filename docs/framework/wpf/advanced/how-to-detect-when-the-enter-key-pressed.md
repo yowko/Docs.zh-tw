@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Enter key [WPF], detecting
 - keys [WPF], Enter
 ms.assetid: a66f39d2-ef4a-43a5-b454-a4ea0fe88655
-ms.openlocfilehash: a99da5804bbc31897198b9b6d9e21da9f17dfe26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2337826077c836696937f91541d6d261f1270aa
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051412"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004818"
 ---
 # <a name="how-to-detect-when-the-enter-key-pressed"></a>HOW TO：偵測何時按下 Enter 鍵
-此範例示範如何偵測何時<xref:System.Windows.Input.Key.Enter>鍵盤上按下按鍵。  
+這個範例示範如何偵測何時按下鍵盤上的 <xref:System.Windows.Input.Key.Enter> 鍵。  
   
- 此範例中組成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案和程式碼後置檔案。  
+ 這個範例是由 @no__t 0 檔案和程式碼後置檔案所組成。  
   
 ## <a name="example"></a>範例  
- 當使用者按下<xref:System.Windows.Input.Key.Enter>中的索引鍵<xref:System.Windows.Controls.TextBox>，在文字方塊中輸入會出現在另一個區域[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  
+ 當使用者按下 <xref:System.Windows.Controls.TextBox> 中的 <xref:System.Windows.Input.Key.Enter> 鍵時，文字方塊中的輸入會出現在 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的另一個區域中。  
   
- 下列[!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)]建立使用者介面，其中包含<xref:System.Windows.Controls.StackPanel>，則<xref:System.Windows.Controls.TextBlock>，和<xref:System.Windows.Controls.TextBox>。  
+ 下列 XAML 會建立使用者介面，其中包含 <xref:System.Windows.Controls.StackPanel>、<xref:System.Windows.Controls.TextBlock> 和 <xref:System.Windows.Controls.TextBox>。  
   
  [!code-xaml[keydown#KeyDownUI](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml#keydownui)]  
   
- 下列程式碼後置建立<xref:System.Windows.UIElement.KeyDown>事件處理常式。  如果已按下的按鍵<xref:System.Windows.Input.Key.Enter>鍵，訊息會顯示在<xref:System.Windows.Controls.TextBlock>。  
+ 下列程式碼後置會建立 <xref:System.Windows.UIElement.KeyDown> 事件處理常式。  如果按下的索引鍵是 <xref:System.Windows.Input.Key.Enter> 鍵，則會在 <xref:System.Windows.Controls.TextBlock> 中顯示訊息。  
   
  [!code-csharp[keydown#KeyDownSample](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml.cs#keydownsample)]
  [!code-vb[keydown#KeyDownSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  

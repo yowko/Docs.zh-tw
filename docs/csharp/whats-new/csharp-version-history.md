@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8c3939e9bd5d79e91ce44146a8c36b28d4470406
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956645"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002701"
 ---
 # <a name="the-history-of-c"></a>C\# 的歷史
 
@@ -22,7 +22,7 @@ C# 建置工具將最新的主要語言版本視為預設語言版本。 主要�
 - [C# 7.3](csharp-7-3.md)：
   - 從 [Visual Studio 2017 版本 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) 開始，可以使用 C# 7.3。
 - [C# 7.2](csharp-7-2.md):
-  - 從 [Visual Studio 2017 version 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 開始，可以使用 C# 7.2。
+  - C#從[Visual Studio 2017 15.5 版](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)和[.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)開始提供7.2。
 - [C# 7.1](csharp-7-1.md)：
   - 從 [Visual Studio 2017 version 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 開始，可以使用 C# 7.1。
 

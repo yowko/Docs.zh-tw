@@ -1,28 +1,28 @@
 ---
-title: 作法：使用與多個結果型式對應的預存程序
+title: HOW TO：使用與多個結果型式對應的預存程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: d32faf026789923ca4343271c9fd1b6bbdb068df
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 065e866ec5937c4af31c0b1563a7582cb4112eba
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793101"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003278"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>HOW TO：使用與多個結果型式對應的預存程序
-如果預存程序 (Stored Procedure) 可以傳回多個結果圖案，則傳回型別不可以強型別 (Strongly Typed) 為單一投影圖案。 雖然[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可以產生所有可能的投射類型，但它無法得知傳回的順序。  
+如果預存程序 (Stored Procedure) 可以傳回多個結果圖案，則傳回型別不可以強型別 (Strongly Typed) 為單一投影圖案。 雖然 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以產生所有可能的投射類型，但它無法知道其傳回的順序。  
   
- 請將這個案例與循序產生多個結果圖案的預存程序案例比較。 如需詳細資訊，請參閱[如何：針對順序結果圖形](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)使用對應的預存程式。  
+ 請將這個案例與循序產生多個結果圖案的預存程序案例比較。 如需詳細資訊，請參閱[如何：使用對應于連續結果圖形 @ no__t-0 的預存程式。  
   
  <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 屬性 (Attribute) 會套用至傳回多個結果型別的預存程序，以指定程序可以傳回的型別集。  
   
 ## <a name="example"></a>範例  
  在下列 SQL 程式碼範例中，結果圖案會根據輸入 (`shape =1` 或 `shape = 2`) 而不同。 您無法得知會先傳回哪個投影。  
   
-```  
+``` sql
 CREATE PROCEDURE VariableResultShapes(@shape int)  
 AS  
 if(@shape = 1)  

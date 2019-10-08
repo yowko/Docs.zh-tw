@@ -11,21 +11,25 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 7d68e55972336e304286e967d445f3589219b9a2
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e131b39e05badf0bb90fbbb14761571003156f85
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972311"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005520"
 ---
 # <a name="-link-visual-basic"></a>-link （Visual Basic）
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 -link:fileList  
-' -or-  
+```
+
+或  
+
+```console
 -l:fileList  
 ```  
   
@@ -55,7 +59,7 @@ ms.locfileid: "70972311"
   
  請使用[-libpath](libpath.md)來指定您的一或多個元件參考所在的目錄。  
   
- 如同[/reference](reference.md)編譯器選項， `-link`編譯器選項會使用會參考常用 .NET Framework 元件的 Vbc 回應檔。 如果您不想要編譯器使用 Vbc .rsp 檔案，請使用[-noconfig](noconfig.md)編譯器選項。  
+ 如同[/reference](reference.md)編譯器選項，`-link` 編譯器選項會使用 Vbc 回應檔，該檔案會參考常用 .NET Framework 元件。 如果您不想要編譯器使用 Vbc .rsp 檔案，請使用[-noconfig](noconfig.md)編譯器選項。  
   
  `-link` 的簡短形式為 `-l`。  
   
@@ -79,7 +83,7 @@ ms.locfileid: "70972311"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>範例  
- `OfficeApp.vb`下列命令列會從`COMData1.dll`編譯原始程式檔和參考元件， `COMData2.dll`並產生`OfficeApp.exe`。  
+ 下列命令列會從 `COMData1.dll` 和 `COMData2.dll` 編譯原始程式檔 @no__t 0 和參考元件，以產生 `OfficeApp.exe`。  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

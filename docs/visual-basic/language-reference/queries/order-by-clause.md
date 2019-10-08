@@ -10,43 +10,43 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: 1c84a4cdb4a149154d459ca4d9c290ed360d1772
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8ee46b12e84f99629c3a92057fc3a7bb8a3c2e8
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61712561"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004948"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 子句 (Visual Basic)
 指定查詢結果的排序次序。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]  
 ```  
   
 ## <a name="parts"></a>組件  
  `orderExp1`  
- 必要項。 一或多個欄位從目前的查詢結果，找出如何排序傳回的值。 欄位名稱必須以逗號 （，） 分隔。 您可以識別每個欄位，因為依照遞增或遞減順序，使用`Ascending`或`Descending`關鍵字。 如果沒有`Ascending`或`Descending`關鍵字指定，則預設排序順序為遞增。 排序次序欄位可以從左到右的優先順序。  
+ 必要項。 目前查詢結果中的一或多個欄位，可識別如何排序傳回的值。 功能變數名稱必須以逗號（，）分隔。 您可以使用 `Ascending` 或 `Descending` 關鍵字，以遞增或遞減順序將每個欄位識別為排序。 如果未指定 `Ascending` 或 `Descending` 關鍵字，則預設排序次序為遞增。 排序次序欄位的優先順序是由左至右。  
   
 ## <a name="remarks"></a>備註  
- 您可以使用`Order By`子句來排序查詢的結果。 `Order By`子句只能排序結果，根據目前的範圍的範圍變數。 比方說，`Select`子句會導入該範圍與新的反覆項目變數的查詢運算式中的新範圍。 範圍之前定義的變數`Select`查詢中的子句之後沒有`Select`子句。 因此，如果您想要排序的欄位，不適用於您結果`Select`子句中，您必須在放置`Order By`子句之前`Select`子句。 一個您想要排序您的查詢不會傳回為結果一部分的欄位時，當您必須執行這項操作的範例。  
+ 您可以使用 `Order By` 子句來排序查詢的結果。 @No__t-0 子句只能根據目前範圍的範圍變數來排序結果。 例如，`Select` 子句會在查詢運算式中引進新的範圍，其中包含該範圍的新反復專案變數。 在查詢中的 `Select` 子句之前定義的範圍變數，在 `Select` 子句之後無法使用。 因此，如果您想要依據 `Select` 子句中無法使用的欄位來排序結果，則必須將 `Order By` 子句放在 `Select` 子句之前。 當您需要執行這項操作的其中一個範例，就是當您想要依欄位排序查詢，而不會在結果中傳回。  
   
- 遞增和遞減順序，欄位是由決定藉由實作<xref:System.IComparable>欄位的資料類型的介面。 如果資料類型未實作<xref:System.IComparable>介面，排序次序會被忽略。  
+ 欄位的遞增和遞減順序是由欄位之資料類型的 @no__t 0 介面的執行所決定。 如果資料類型不會執行 <xref:System.IComparable> 介面，則會忽略排序次序。  
   
 ## <a name="example"></a>範例  
- 下列查詢的運算式用法`From`子句來宣告範圍變數`book`如`books`集合。 `Order By`子句排序查詢結果，以遞增順序 （預設值） 的定價。 活頁簿相同的價格會依標題，依遞增順序排序。 `Select`子句選取`Title`和`Price`查詢所傳回的值的屬性。  
+ 下列查詢運算式會使用 `From` 子句，針對 @no__t 2 集合宣告範圍變數 `book`。 @No__t-0 子句會依價格以遞增順序排序查詢結果（預設值）。 具有相同價格的書籍會依標題以遞增順序排序。 @No__t-0 子句會選取 `Title` 和 @no__t 2 屬性做為查詢所傳回的值。  
   
  [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>範例  
- 下列查詢運算式使用`Order By`子句來排序查詢結果以遞減順序的價格。 活頁簿相同的價格會依標題，依遞增順序排序。  
+ 下列查詢運算式會使用 `Order By` 子句，依價格遞減的順序來排序查詢結果。 具有相同價格的書籍會依標題以遞增順序排序。  
   
  [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>範例  
- 下列查詢運算式使用`Select`選取的書籍標題、 價格、 發行日期，以及撰寫的子句。 它接著會填入`Title`， `Price`， `PublishDate`，和`Author`新範圍的範圍變數的欄位。 `Order By`子句排序新的範圍變數的作者名稱、 書名和價格。 每個資料行排序 （遞增） 的預設順序。  
+ 下列查詢運算式會使用 `Select` 子句來選取書籍標題、價格、發行日期和作者。 然後，它會在新範圍的範圍變數中，填入 `Title`、`Price`、@no__t 2 和 @no__t 3 欄位。 @No__t-0 子句會依作者名稱、書名和價格來排序新的範圍變數。 每個資料行都會以預設順序排序（遞增）。  
   
  [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   

@@ -8,69 +8,64 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: f34b5d512a8054b0ab0d3fba54525801eb560143
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: af441c0fd040897ebcd7af2edd6122a47e70468a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040465"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002127"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# 編譯器選項)
 
-讓編譯器只接受所選擇 C# 語言規格中所含的語法。  
-  
-## <a name="syntax"></a>語法  
+讓編譯器只接受所選擇 C# 語言規格中所含的語法。
+
+## <a name="syntax"></a>語法
 
 ```console
--langversion:option  
+-langversion:option
 ```
 
 ## <a name="arguments"></a>引數
 
  `option`  
- 下列是有效值：  
-  
-|選項|意義|  
-|------------|-------------|  
+ 下列是有效值：
+
+|選項|意義|
+|------------|-------------|
 |preview|編譯器會接受它可支援之最新預覽版本的所有有效語言語法。|
 |latest|編譯器會接受它可支援之最新版本 (包括次要版本) 的所有有效語言語法。|
 |latestMajor|編譯器會接受它可支援之最新主要版本的所有有效語言語法。|
-|8.0|編譯器只會接受 C# 8.0 或更低版本中所含的語法。 <sup id="TCS80">[CS80](#FCS80)</sup>|
-|7.3|編譯器只會接受 C# 7.3 或較低 <sup id="TCS73">[CS73](#FCS73)</sup> 中所含的語法|
-|7.2|編譯器只會接受 C# 7.2 或較低 <sup id="TCS72">[CS72](#FCS72)</sup> 中所含的語法|
-|7.1|編譯器只會接受 C# 7.1 或較低 <sup id="TCS71">[CS71](#FCS71)</sup> 中所含的語法|
-|7|編譯器只會接受 C# 7.0 或較低 <sup id="TCS7">[CS7](#FCS7)</sup> 中所含的語法。|
-|6|編譯器只會接受 C# 6.0 或較低 <sup id="TCS6">[CS6](#FCS6)</sup> 中所含的語法。|
-|5|編譯器只會接受 C# 5.0 或較低 <sup id="TCS5">[CS5](#FCS5)</sup> 中所含的語法。|
-|4|編譯器只會接受 C# 4.0 或較低 <sup id="TCS4">[CS4](#FCS4)</sup> 中所含的語法。|
-|3|編譯器只會接受 C# 3.0 或較低 <sup id="TCS3">[CS3](#FCS3)</sup> 中所含的語法。|
-|ISO-2|編譯器只會接受 ISO/IEC 23270:2006 C# (2.0) <sup id="TISO2">[ISO2](#FISO2)</sup> 中所含的語法。|
-|ISO-1|編譯器只會接受 ISO/IEC 23270:2003 C# (1.0/1.2) <sup id="TISO1">[ISO1](#FISO1)</sup> 中所含的語法|  
+|8.0|編譯器只會接受 C# 8.0 或更低版本中所含的語法。|
+|7.3|編譯器只會接受 C# 7.3 或更低版本中所含的語法。|
+|7.2|編譯器只會接受 C# 7.2 或更低版本中所含的語法。|
+|7.1|編譯器只會接受 C# 7.1 或更低版本中所含的語法。|
+|7|編譯器只會接受 C# 7.0 或更低版本中所含的語法。|
+|6|編譯器只會接受 C# 6.0 或更低版本中所含的語法。|
+|5|編譯器只會接受 C# 5.0 或更低版本中所含的語法。|
+|4|編譯器只會接受 C# 4.0 或更低版本中所含的語法。|
+|3|編譯器只會接受 C# 3.0 或更低版本中所含的語法。|
+|ISO-2|編譯器只會接受 ISO/IEC 23270:2006 C# （2.0）中所包含的語法。|
+|ISO-1|編譯器只會接受 ISO/IEC 23270:2003 C# （1.0/1.2）中所包含的語法。|
 
-預設語言版本取決於您應用程式的目標 Framework，以及安裝的 SDK 或 Visual Studio 版本。 [設定語言版本](../configure-language-version.md#defaults)一文中會定義這些規則
+預設語言版本取決於您應用程式的目標 Framework，以及安裝的 SDK 或 Visual Studio 版本。 這些規則定義于設定[語言版本](../configure-language-version.md#defaults)一文。
 
 ## <a name="remarks"></a>備註
 
- C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選項。  
+C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選項。
   
- 因為每個版本的 C# 編譯器都包含語言規格的延伸模組，所以 **-langversion** 不會提供舊版編譯器的相等功能。  
+因為每個版本的 C# 編譯器都包含語言規格的延伸模組，所以 **-langversion** 不會提供舊版編譯器的相等功能。
 
- 此外，雖然 C# 版本更新通常會與主要 .NET Framework 版本一致，但是新語法和功能不需要繫結至該特定架構版本。 雖然新功能一定需要也要與 C# 修訂一起發行的新編譯器更新，但是每個特定功能都有自己的最低 .NET API 或通用語言執行平台需求，可讓它包含 NuGet 套件或其他程式庫以在舊版架構上執行。
-  
- 不論使用的 **-langversion** 設定為何，您都會使用目前版本的通用語言執行平台來建立 .exe 或 .dll。 其中一個例外狀況是 Friend 組件和 [-moduleassemblyname (C# 編譯器選項)](./moduleassemblyname-compiler-option.md)，這些都是在 **-langversion:ISO-1** 下運作。  
+此外，雖然 C# 版本更新通常會與主要 .NET Framework 版本一致，但是新語法和功能不需要繫結至該特定架構版本。 雖然新功能一定需要也要與 C# 修訂一起發行的新編譯器更新，但是每個特定功能都有自己的最低 .NET API 或通用語言執行平台需求，可讓它包含 NuGet 套件或其他程式庫以在舊版架構上執行。
 
- 如需其他方式來指定 C# 語言版本，請參閱[選取 C# 語言版本](../configure-language-version.md)主題。
-  
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>。  
+不論使用的 **-langversion** 設定為何，您都會使用目前版本的通用語言執行平台來建立 .exe 或 .dll。 其中一個例外狀況是 Friend 組件和 [-moduleassemblyname (C# 編譯器選項)](./moduleassemblyname-compiler-option.md)，這些都是在 **-langversion:ISO-1** 下運作。  
 
-## <a name="see-also"></a>另請參閱
+如需指定C#語言版本的其他方式，請參閱[ C#選取語言版本](../configure-language-version.md)一文。
 
-- [C# 編譯器選項](index.md)
-- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>。
 
 ### <a name="c-language-specification"></a>C# 語言規格
 
-|版本|連結|說明|
+|Version|連結|描述|
 |-------|----|-----------|
 |C# 7.0 與更新版本||目前無法使用|
 |C# 6.0|[連結](../language-specification/index.md)|C# 語言規格版本 6 - 非官方草稿：.NET Foundation|
@@ -82,14 +77,19 @@ ms.locfileid: "70040465"
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>支援所有語言功能所需的最低編譯器版本
 
-[↩](#TCS80)<a name="FCS80">CS80</a>：Microsoft Visual Studio/Build Tools 2019 16 版，或 .NET Core 3.0 SDK  
-[↩](#TCS73)<a name="FCS73">CS73</a>：Microsoft Visual Studio/Build Tools 2017 15.7 版  
-[↩](#TCS72)<a name="FCS72">CS72</a>：Microsoft Visual Studio/Build Tools 2017 15.5 版  
-[↩](#TCS71)<a name="FCS71">CS71</a>：Microsoft Visual Studio/Build Tools 2017 15.3 版  
-[↩](#TCS7)<a name="FCS7">CS7</a>：Microsoft Visual Studio/Build Tools 2017  
-[↩](#TCS6)<a name="FCS6">CS6</a>：Microsoft Visual Studio/Build Tools 2015  
-[↩](#TCS5)<a name="FCS5">CS5</a>：Microsoft Visual Studio/Build Tools 2012 或配套的 .NET Framework 4.5 編譯器  
-[↩](#TCS4)<a name="FCS4">CS4</a>：Microsoft Visual Studio/Build Tools 2010 或配套的 .NET Framework 4.0 編譯器  
-[↩](#TCS3)<a name="FCS3">CS3</a>：Microsoft Visual Studio/Build Tools 2008 或配套的 .NET Framework 3.5 編譯器  
-[↩](#TISO2)<a name="FISO2">ISO2</a>：Microsoft Visual Studio/Build Tools 2005 或配套的 .NET Framework 2.0 編譯器  
-[↩](#TISO1)<a name="FISO1">ISO1</a>：Microsoft Visual Studio/Build Tools .NET 2002 或配套的 .NET Framework 1.0 編譯器  
+CS80:Microsoft Visual Studio/Build Tools 2019 16 版，或 .NET Core 3.0 SDK  
+CS73Microsoft Visual Studio/Build Tools 2017 15.7 版  
+CS72Microsoft Visual Studio/Build Tools 2017 15.5 版  
+CS71Microsoft Visual Studio/Build Tools 2017 15.3 版  
+CS7Microsoft Visual Studio/Build Tools 2017  
+CS6Microsoft Visual Studio/Build Tools 2015  
+CS5Microsoft Visual Studio/Build Tools 2012 或配套的 .NET Framework 4.5 編譯器  
+CS4Microsoft Visual Studio/Build Tools 2010 或配套的 .NET Framework 4.0 編譯器  
+CS3Microsoft Visual Studio/Build Tools 2008 或配套的 .NET Framework 3.5 編譯器  
+ISO2Microsoft Visual Studio/Build Tools 2005 或配套的 .NET Framework 2.0 編譯器  
+ISO1Microsoft Visual Studio/Build Tools .NET 2002 或配套的 .NET Framework 1.0 編譯器  
+
+## <a name="see-also"></a>另請參閱
+
+- [C# 編譯器選項](index.md)
+- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 080a106fc1deeb54165511ed03d7c7c5d2060f21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe6ee470698504bc0434930cc9aa6de712e04254
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945193"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004682"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 子句 (Visual Basic)
 只要指定的條件為 `true`，即包含集合中的項目，並略過其餘項目。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Take While expression  
 ```  
   
@@ -28,15 +28,15 @@ Take While expression
   
 |詞彙|定義|  
 |---|---|  
-|`expression`|必要項。 表示要測試的元素的條件運算式。 此運算式必須傳回`Boolean`值或功能對等項目，例如`Integer`評估為`Boolean`。|  
+|`expression`|必要項。 運算式，表示要測試元素的條件。 運算式必須傳回 `Boolean` 值或函式對等用法，例如要評估為 `Boolean` 的 `Integer`。|  
   
 ## <a name="remarks"></a>備註  
- `Take While`子句會包含從查詢結果的開始項目，直到提供`expression`傳回`false`。 在後`expression`傳回`false`，查詢將會略過所有剩餘項目。 `expression`會忽略其餘的結果。  
+ @No__t-0 子句包含查詢結果開頭的元素，直到提供的 `expression` 傳回 `false` 為止。 在 `expression` 傳回 `false` 之後，查詢將會略過所有剩餘的元素。 針對其餘的結果，會忽略 `expression`。  
   
- `Take While`子句不同`Where`中的子句`Where`子句可以用來包含查詢中所有符合特定條件的項目。 `Take While`子句之前未滿足條件的第一次只包含項目。 `Take While`子句在當您正在使用的已排序的查詢結果時十分實用。  
+ @No__t-0 子句與 `Where` 子句不同之處在于，@no__t 2 子句可以用來包含符合特定條件之查詢中的所有元素。 只有在第一次未滿足條件時，@no__t 0 子句才會包含元素。 當您使用已排序的查詢結果時，`Take While` 子句最有用。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例使用`Take While`子句來擷取結果，直到找到第一個客戶，沒有任何訂單。  
+ 下列程式碼範例會使用 `Take While` 子句來抓取結果，直到找不到任何訂單的第一個客戶為止。  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   

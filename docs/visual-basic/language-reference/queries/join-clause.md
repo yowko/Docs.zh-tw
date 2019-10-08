@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8eab7db00515f55b086b5e1beddd149f966cb27a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945284"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72001932"
 ---
 # <a name="join-clause-visual-basic"></a>Join 子句 (Visual Basic)
-將兩個集合合併成單一集合。 根據相符的索引鍵的聯結作業，並使用`Equals`運算子。  
+將兩個集合合併成單一集合。 聯結作業是以相符的索引鍵為基礎，並使用 `Equals` 運算子。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Join element In collection _  
   [ joinClause _ ]   
   [ groupJoinClause ... _ ]   
@@ -31,42 +31,42 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>組件  
  `element`  
- 必要項。 要聯結之集合的控制變數。  
+ 必要項。 要聯結之集合的控制項變數。  
   
  `collection`  
- 必要項。 要結合的左邊識別集合的集合`Join`運算子。 A`Join`子句可以巢狀方式置於另一個`Join`子句，或在`Group Join`子句。  
+ 必要項。 要與 `Join` 運算子左邊所識別之集合結合的集合。 @No__t 0 子句可以嵌套在另一個 `Join` 子句或 @no__t 2 子句中。  
   
  `joinClause`  
- 選擇性。 一個以上的額外`Join`子句，以進一步精簡查詢。  
+ 選擇性。 一或多個額外的 `Join` 子句，可進一步精簡查詢。  
   
  `groupJoinClause`  
- 選擇性。 一個以上的額外`Group Join`子句，以進一步精簡查詢。  
+ 選擇性。 一或多個額外的 `Group Join` 子句，可進一步精簡查詢。  
   
  `key1` `Equals` `key2`  
- 必要項。 識別要聯結之集合的索引鍵。 您必須使用`Equals`運算子來比較所聯結之集合中的索引鍵。 您可以使用合併聯結條件`And`運算子來識別多個索引鍵。 `key1` 必須從左側集合`Join`運算子。 `key2` 從集合中的右側必須是`Join`運算子。  
+ 必要項。 識別要聯結之集合的索引鍵。 您必須使用 `Equals` 運算子來比較所聯結之集合中的索引鍵。 您可以使用 `And` 運算子來結合聯結條件，以識別多個索引鍵。 `key1` 必須來自 `Join` 運算子左邊的集合。 `key2` 必須來自 `Join` 運算子右邊的集合。  
   
- 聯結條件中使用索引鍵可以包含一個以上的項目從集合的運算式。 不過，每個索引鍵的運算式可以包含從其個別集合的項目。  
+ 聯結條件中使用的索引鍵可以是包含集合中一個以上專案的運算式。 不過，每個索引鍵運算式只能包含其各自集合中的專案。  
   
 ## <a name="remarks"></a>備註  
- `Join`子句結合兩個集合根據比對所聯結之集合中的索引鍵值。 產生的集合可以包含任何的組合值集合所識別的左邊`Join`運算子，並識別集合中`Join`子句。 查詢會傳回所指定的條件的結果`Equals`運算子成立。 這相當於`INNER JOIN`SQL 中。  
+ @No__t-0 子句會根據聯結的集合中相符的索引鍵值，結合兩個集合。 產生的集合可以包含從 `Join` 運算子左側識別之集合中的任何值組合，以及在 `Join` 子句中識別的集合。 查詢只會傳回符合 `Equals` 運算子所指定之條件的結果。 這相當於 SQL 中的 @no__t 0。  
   
- 您可以使用多個`Join`查詢中，以聯結成單一集合的兩個或多個集合的子句。  
+ 您可以在查詢中使用多個 `Join` 子句，將兩個或更多個集合聯結至單一集合。  
   
- 您可以執行隱含聯結來結合沒有集合`Join`子句。 若要這樣做，包括多個`In`子句，在您`From`子句，並指定`Where`子句，用來識別您想要用於聯結的索引鍵。  
+ 您可以執行隱含聯結來結合集合，而不使用 `Join` 子句。 若要這麼做，請在您的 `From` 子句中包含多個 `In` 子句，並指定一個 `Where` 子句來識別您要用於聯結的索引鍵。  
   
- 您可以使用`Group Join`子句結合成單一階層式集合的集合。 這就像是`LEFT OUTER JOIN`SQL 中。  
+ 您可以使用 `Group Join` 子句，將集合合併成單一階層式集合。 這就像是 SQL 中的 @no__t 0。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會執行隱含聯結結合其訂單的客戶清單。  
+ 下列程式碼範例會執行隱含聯結，以結合客戶清單與訂單。  
   
  [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例以使用聯結兩個集合`Join`子句。  
+ 下列程式碼範例使用 `Join` 子句來聯結兩個集合。  
   
  [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]  
   
- 此範例會產生類似下列的輸出：  
+ 這個範例會產生類似下列的輸出：  
   
  `winlogon (968), Windows Logon`  
   
@@ -75,11 +75,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  `cmd (5136), Command Window`  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例以使用聯結兩個集合`Join`子句搭配兩個索引鍵資料行。  
+ 下列程式碼範例會使用具有兩個索引鍵資料行的 @no__t 0 子句來聯結兩個集合。  
   
  [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]  
   
- 此範例會產生如下所示的輸出：  
+ 此範例會產生類似下列的輸出：  
   
  `winlogon (968), Windows Logon, Priority = 13`  
   

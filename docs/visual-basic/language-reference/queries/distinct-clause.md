@@ -8,27 +8,27 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: fbca9fa8aa227d8d5b6488bef179f4bda08bb38c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8d3e38261a04c4d29faab351d24d6710413b09a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945349"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004799"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 子句 (Visual Basic)
-限制目前的範圍變數，以消除重複的值，在後續的查詢子句中的值。  
+限制目前範圍變數的值，以排除後續查詢子句中的重複值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Distinct  
 ```  
   
 ## <a name="remarks"></a>備註  
- 您可以使用`Distinct`子句傳回唯一項目清單。 `Distinct`子句會使要忽略重複的查詢結果的查詢。 `Distinct`子句會套用到重複的值，所有傳回所指定的欄位`Select`子句。 如果沒有`Select`指定子句，則`Distinct`子句會套用到查詢中所識別的範圍變數`From`子句。 如果範圍變數不是不可變的類型，查詢將只略過查詢結果型別的所有成員符合現有的查詢結果。  
+ 您可以使用 `Distinct` 子句來傳回唯一專案的清單。 @No__t 0 子句會導致查詢忽略重複的查詢結果。 @No__t-0 子句適用于 `Select` 子句所指定之所有傳回欄位的重複值。 如果未指定任何 `Select` 子句，則 `Distinct` 子句會套用至在 `From` 子句中識別之查詢的範圍變數。 如果範圍變數不是不可變的類型，則只有當類型的所有成員符合現有的查詢結果時，查詢才會忽略查詢結果。  
   
 ## <a name="example"></a>範例  
- 下列查詢運算式會聯結一份客戶和客戶訂單的清單。 `Distinct`子句是包含要傳回的唯一客戶名稱清單，並在訂單日期。  
+ 下列查詢運算式會聯結客戶清單和客戶訂單清單。 包含的 `Distinct` 子句會傳回唯一客戶名稱和訂單日期的清單。  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   

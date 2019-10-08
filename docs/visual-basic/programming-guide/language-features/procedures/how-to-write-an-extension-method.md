@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332764"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004610"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>HOW TO：撰寫擴充方法（Visual Basic）
 
@@ -27,11 +27,13 @@ ms.locfileid: "71332764"
     Imports System.Runtime.CompilerServices
     ```
 
-3. 在新的或現有應用程式的模組內，使用擴充屬性來開始方法定義：
+3. 在新的或現有應用程式的模組內，使用[`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute)屬性來開始方法定義：
 
     ```vb
     <Extension()>
     ```
+ 
+   請注意，`Extension` 屬性只能套用至 Visual Basic[模組](../../../language-reference/statements/module-statement.md)中的方法（@no__t 1 或 @no__t 2 程式）。 如果您將它套用至 `Class` 或 `Structure` 的方法，Visual Basic 編譯器會產生錯誤[BC36551](../../../misc/bc36551.md)「擴充方法只能在模組中定義」。
 
 4. 以一般方式宣告方法，不同之處在于第一個參數的類型必須是您想要擴充的資料類型。
 

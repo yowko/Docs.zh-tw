@@ -5,25 +5,25 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4f9c2700d8163988b7ea1e75bec1427778cf571c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330990"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004901"
 ---
 # <a name="localization-attributes-and-comments"></a>當地語系化屬性和註解
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼內的屬性，並由開發人員提供以提供當地語系化的規則和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊︰可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化批註是 XAML 原始程式碼內的屬性，由開發人員提供，以提供當地語系化的規則和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊︰可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>當地語系化註解  
- 如果標記應用程式作者具有 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 中特定項目的需求 (例如，文字長度、字型家族或字型大小的條件約束)，則可以透過 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 程式碼中的註解將這項資訊傳達給當地語系化人員。 將註解新增至原始程式碼的程序如下︰  
+ 如果標記應用程式作者有 XAML 中特定元素的需求，例如文字長度、字型系列或字型大小的條件約束，則可以將此資訊傳達給當地語系化人員，並在 XAML 程式碼中加上批註。 將註解新增至原始程式碼的程序如下︰  
   
-1. 應用程式開發人員會將當地語系化註解新增至 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼。  
+1. 應用程式開發人員會將當地語系化批註新增至 XAML 原始程式碼。  
   
 2. 在建置過程，您可以於 .proj 檔案中指定是否要保留組件中的自由格式當地語系化註解、去除註解的一部分，或去除所有註解。 去除的註解會放在不同的檔案中。 您可以使用 `LocalizationDirectivesToLocFile` 標記來指定選項，例如︰  
   
-     `<LocalizationDirectivesToLocFile>` <值>  `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` <值> `</LocalizationDirectivesToLocFile>`  
   
 3. 可以指派的值如下︰  
   
@@ -33,11 +33,11 @@ ms.locfileid: "68330990"
   
     - **All** - 去除組件中的註解和屬性，並將它們放在個別 LocFile 中。  
   
-4. 從 BAML 解壓縮可當地語系化的資源時, BAML 當地語系化 API 會遵守可當地語系化的屬性。  
+4. 從 BAML 解壓縮可當地語系化的資源時，BAML 當地語系化 API 會遵守可當地語系化的屬性。  
   
 5. 稍後，只包含自由格式註解的當地語系化註解檔案會併入當地語系化程序。  
   
- 下列範例示範如何將當地語系化註解新增至 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 檔案。  
+ 下列範例顯示如何將當地語系化批註加入至 XAML 檔案。  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -82,11 +82,11 @@ ms.locfileid: "68330990"
   
  這些屬性可以依任何順序指定，並以空格分隔。 如果指定重複屬性，則最後一個屬性會覆寫先前的屬性。 例如，Localization.Attributes = "Unmodifiable Modifiable" 會將「可修改性」設定為「可修改」，因為它是最後一個值。  
   
- 可修改性和可讀性一看就懂。 分類屬性提供預先定義的分類，以在翻譯文字時協助當地語系化人員。 文字、標籤和標題這類分類會將如何翻譯文字的資訊提供給當地語系化人員。 另外還有特殊類別:[無]、[繼承]、[忽略] 和 [NeverLocalize]。  
+ 可修改性和可讀性一看就懂。 分類屬性提供預先定義的分類，以在翻譯文字時協助當地語系化人員。 文字、標籤和標題這類分類會將如何翻譯文字的資訊提供給當地語系化人員。 另外還有特殊類別：[無]、[繼承]、[忽略] 和 [NeverLocalize]。  
   
  下表顯示特殊分類的意義。  
   
-|分類|意義|  
+|Category|意義|  
 |--------------|-------------|  
 |None|目標值沒有已定義的分類。|  
 |繼承|目標值會從其父代繼承其分類。|  

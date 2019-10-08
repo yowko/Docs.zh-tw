@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: be0aea66f0923b8b353f42cecc9360731efc7bb9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1675e4c6a610373e1c981b383ae0229739d96dd0
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792853"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003325"
 ---
 # <a name="querying-across-relationships"></a>跨關聯性查詢
 對類別定義中其他物件或其他物件集合的參考，會直接對應到資料庫中的外部索引鍵關聯性。 您可以在使用點標記法進行查詢時使用這些關聯性，進而存取關聯性屬性以及從某個物件巡覽到另一個物件。 這些存取作業會轉譯成對等 SQL 中更複雜的聯結或相關聯的子查詢 (Subquery)。  
@@ -31,23 +31,23 @@ ms.locfileid: "70792853"
   
  您目前具有關聯性，因此可藉由參考類別中定義的關聯性屬性，進而撰寫查詢。 這些關聯性參考會對應至資料庫中的外部索引鍵關聯性。 使用這些關聯性的作業會轉譯成對等 SQL 中更複雜的聯結。 只要您已定義關聯性 (使用 <xref:System.Data.Linq.Mapping.AssociationAttribute> 屬性 (Attribute))，就不必在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中編寫明確聯結。  
   
- 為了協助維護這種假像[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ，請執行一個稱為*延後載入*的技術。 如需詳細資訊，請參閱[延後與立即載入](deferred-versus-immediate-loading.md)。  
+ 為協助維護這種假像，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會執行一個稱為*延後載入*的技術。 如需詳細資訊，請參閱[延後與立即載入](deferred-versus-immediate-loading.md)。  
   
- 請考慮下列 SQL 查詢來投影成對的`CustomerID` - `OrderID`清單：  
+ 請考慮下列 SQL 查詢，以投影 `CustomerID` @ no__t-1 @ no__t-2 配對的清單：  
   
-```  
+```sql
 SELECT t0.CustomerID, t1.OrderID  
 FROM   Customers AS t0 INNER JOIN  
           Orders AS t1 ON t0.CustomerID = t1.CustomerID  
 WHERE  (t0.City = @p0)  
 ```  
   
- 若要使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 取得相同的結果，您可使用已存在於 `Orders` 類別中的 `Customer` 屬性參考。 參考會提供執行查詢和`CustomerID` - `OrderID`投影配對所需的資訊，如下列程式碼所示： `Orders`  
+ 若要使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 取得相同的結果，您可使用已存在於 `Orders` 類別中的 `Customer` 屬性參考。 @No__t-0 參考提供執行查詢和投影 `CustomerID` @ no__t-2 @ no__t-3 配對的必要資訊，如下列程式碼所示：  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- 您也可以進行反轉。 也就是說，您可以查詢 `Orders`，並使用其 `Customer` 關聯性參考來存取關聯之 `Customer` 物件的相關資訊。 下列程式碼會投射與`CustomerID`之前相同- `OrderID`的配對`Customers`，但這次是`Orders`透過查詢而不是。  
+ 您也可以進行反轉。 也就是說，您可以查詢 `Orders`，並使用其 `Customer` 關聯性參考來存取關聯之 `Customer` 物件的相關資訊。 下列程式碼會像之前一樣投射相同的 `CustomerID` @ no__t-1 @ no__t-2 組，但這次是藉由查詢 `Orders` 而不是 `Customers` 來進行。  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  

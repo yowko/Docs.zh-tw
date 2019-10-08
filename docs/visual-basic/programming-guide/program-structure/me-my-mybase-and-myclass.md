@@ -21,42 +21,42 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7df146e09a1d7cd730f4cf539d6823f7ced44bd1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586261"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002540"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic 中的 Me、My、MyBase 和 MyClass
-`Me``My`， `MyBase`，和`MyClass`Visual Basic 中有類似的名稱，但不同的用途。 本主題會描述每個實體以區別。  
+在 Visual Basic 中，`Me`、`My`、`MyBase` 和 `MyClass` 具有類似的名稱，但有不同的用途。 本主題將說明每個實體，以便加以區別。  
   
 ## <a name="me"></a>Me  
- `Me`關鍵字可用來參考類別或結構的程式碼目前執行所在的特定執行個體。 `Me` 物件變數或目前的執行個體參考結構變數等的行為。 使用`Me`特別適用於將目前執行的執行個體的類別或結構的相關資訊傳遞至另一個類別、 結構或模組中的程序。  
+ @No__t-0 關鍵字可讓您參考目前正在執行程式碼之類別或結構的特定實例。 `Me` 的行為就像是參考目前實例的物件變數或結構變數。 使用 `Me` 特別適合用來將目前執行的類別或結構實例的相關資訊傳遞至另一個類別、結構或模組中的程式。  
   
- 例如，假設您有在模組中的下列程序。  
+ 例如，假設您在模組中有下列程式。  
   
-```  
+```vb  
 Sub ChangeFormColor(FormName As Form)  
    Randomize()  
    FormName.BackColor = Color.FromArgb(Rnd() * 256, Rnd() * 256, Rnd() * 256)  
 End Sub  
 ```  
   
- 您可以呼叫此程序，並傳遞目前的執行個體<xref:System.Windows.Forms.Form>做為引數使用下列陳述式的類別。  
+ 您可以呼叫此程式，並使用下列語句，將 @no__t 0 類別的目前實例當做引數傳遞。  
   
-```  
+```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- `My`項功能可輕鬆且直覺式存取數個.NET Framework 類別，讓 Visual Basic 使用者與電腦、 應用程式、 設定、 資源等等互動。  
+ @No__t 0 功能可讓您輕鬆且直覺地存取許多 .NET Framework 類別，讓 Visual Basic 的使用者能夠與電腦、應用程式、設定、資源等進行互動。  
   
 ## <a name="mybase"></a>MyBase  
- `MyBase`關鍵字的行為就像參考類別的目前執行個體的基底類別的物件變數。 `MyBase` 通常用來存取所覆寫或遮蔽衍生類別中的基底類別成員。 `MyBase.New` 用來明確地從衍生的類別建構函式呼叫的基底類別建構函式。  
+ @No__t-0 關鍵字的行為就像是參考類別目前實例之基類的物件變數。 `MyBase` 通常用來存取衍生類別中覆寫或陰影的基類成員。 `MyBase.New` 是用來從衍生類別的函式明確呼叫基類的「函數」（base class）。  
   
 ## <a name="myclass"></a>MyClass  
- `MyClass`關鍵字的行為就像參考目前的執行個體的類別，以原始實作的物件變數。 `MyClass` 類似於`Me`，但在其上的所有方法呼叫會都視為方法`NotOverridable`。  
+ @No__t-0 關鍵字的行為就像是物件變數，其參考原本實作為之類別的目前實例。 `MyClass` 類似于 `Me`，但其上的所有方法呼叫都會視為方法已 `NotOverridable`。  
   
 ## <a name="see-also"></a>另請參閱
 

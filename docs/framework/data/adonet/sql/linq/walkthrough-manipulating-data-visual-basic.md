@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: a74216c53c45790b974938c7155e0b5e1043ac13
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7acce3f8483fab3c2978de7cbd1b9d875900f1d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792295"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003391"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>逐步解說：操作資料 (Visual Basic)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -38,7 +38,7 @@ ms.locfileid: "70792295"
 ## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
   
-- 在 Visual Studio 中建立解決方案。[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
+- 在 Visual Studio 中建立 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 解決方案。  
   
 - 將資料庫程式碼檔案加入至專案。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "70792295"
 - 將這些變更送出至 Northwind 資料庫。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
- 在第一項工作中，您會建立 Visual Studio 方案，其中包含組建和執行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案所需的參考。  
+ 在第一項工作中，您會建立 Visual Studio 方案，其中包含組建和執行 @no__t 0 專案所需的參考。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
@@ -63,10 +63,10 @@ ms.locfileid: "70792295"
   
 4. 在 [**名稱**] 方塊中，輸入**LinqDataManipulationApp**。  
   
-5. 按一下 [確定 **Deploying Office Solutions**]。  
+5. 按一下 [確定]。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
- 本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果`System.Data.Linq`未列為專案中的參考（按一下**方案總管**中的 [**顯示所有**檔案]，然後展開 [**參考**] 節點），請將它加入，如下列步驟所述。  
+ 本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果 `System.Data.Linq` 未列為專案中的參考（按一下**方案總管**中的 [**顯示所有**檔案]，然後展開 [**參考**] 節點），請將它加入，如下列步驟所述。  
   
 #### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq  
   
@@ -168,7 +168,7 @@ ms.locfileid: "70792295"
   
      主控台視窗隨即出現如下內容：  
   
-    ```  
+    ```console
     Customers matching CA before update:  
     Customer ID: CACTU  
     Customer ID: RICAR  

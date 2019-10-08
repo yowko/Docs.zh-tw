@@ -1,38 +1,38 @@
 ---
-title: -nostdlib (Visual Basic)
+title: -nostdlib （Visual Basic）
 ms.date: 03/13/2018
 helpviewer_keywords:
 - nostdlib compiler option [Visual Basic]
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 19a70e500f6b75fd003bdb798f242cddb3926935
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 819505df2e7d5f93302f9ed601de856e36ed7124
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964354"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005410"
 ---
-# <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
+# <a name="-nostdlib-visual-basic"></a>-nostdlib （Visual Basic）
 導致編譯器不自動參考標準程式庫。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 -nostdlib  
 ```  
   
 ## <a name="remarks"></a>備註  
- `-nostdlib`選項會移除對 system.object 元件的自動參考, 並防止編譯器讀取 Vbc .rsp 檔案。 與 vbc 檔案位於相同目錄中的 Vbc .rsp 檔案, 會參考常用的 .NET Framework 元件, 並匯入`System`和`Microsoft.VisualBasic`命名空間。  
+ @No__t-0 選項會移除對 System.object 元件的自動參考，並防止編譯器讀取 Vbc .rsp 檔案。 與 Vbc 檔案位於相同目錄中的 Vbc .rsp 檔案，會參考常用的 .NET Framework 元件，並匯入 `System` 和 @no__t 1 命名空間。  
   
 > [!NOTE]
 > 我們一律會參考 Mscorlib.dll 和 Microsoft。  
   
 > [!NOTE]
-> 此`-nostdlib`選項無法從 Visual Studio 開發環境中使用; 只有在從命令列進行編譯時, 才能使用此選項。  
+> @No__t-0 選項無法從 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會`T2.vb`進行編譯, 而不會參考標準程式庫。 您必須將`_MYTYPE`條件式編譯常數設定為字串 "Empty", 才能移除該`My`物件。  
+ 下列程式碼會編譯 `T2.vb`，而不參考標準程式庫。 您必須將 `_MYTYPE` 的條件式編譯常數設定為字串 "Empty"，才能移除 `My` 物件。  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939193"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005319"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 可讓您在變數宣告中使用區域類型推斷。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 -optioninfer[+ | -]  
 ```  
   
@@ -34,13 +34,13 @@ ms.locfileid: "69939193"
 > 您可以使用 `-noconfig` 選項來保留編譯器的內部預設值而不是 vbc.rsp 中所指定的預設值。 這個選項的編譯器預設值是 `-optioninfer-`。  
   
 ## <a name="remarks"></a>備註  
- 如果原始程式碼檔案包含[選項推斷語句](../../../visual-basic/language-reference/statements/option-infer-statement.md), 則語句會覆寫`-optioninfer`命令列編譯器設定。  
+ 如果原始程式碼檔包含[選項推斷語句](../../../visual-basic/language-reference/statements/option-infer-statement.md)，則語句會覆寫 `-optioninfer` 命令列編譯器設定。  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中設定-optioninfer  
   
 1. 在**方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
-2. 在 [**編譯**] 索引標籤上, 修改 [**選項推斷**] 方塊中的值。  
+2. 在 [**編譯**] 索引標籤上，修改 [**選項推斷**] 方塊中的值。  
   
 ## <a name="example"></a>範例  
  下列程式碼會在已啟用區域類型推斷下編譯 `test.vb`。  

@@ -1,16 +1,16 @@
 ---
-title: 作法：傳回資料列集
+title: HOW TO：傳回資料列集
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b853a6f2175009cbcbc01c14a6732b98e37e1a7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781604"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003056"
 ---
 # <a name="how-to-return-rowsets"></a>HOW TO：傳回資料列集
 這個範例會從資料庫傳回資料列集 (Rowset)，並且包含用以篩選結果的輸入參數。  
@@ -20,7 +20,7 @@ ms.locfileid: "70781604"
 ## <a name="example"></a>範例  
  下列範例表示一個預存程序，該程序會傳回客戶資料列並使用輸入參數，以便只傳回將 "London" 列為客戶所在城市的那些資料列。 此範例假設了一個可列舉的 `CustomersByCityResult` 類別。  
   
-```  
+```sql  
 CREATE PROCEDURE [dbo].[Customers By City]  
     (@param1 NVARCHAR(20))  
 AS  

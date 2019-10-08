@@ -2,12 +2,12 @@
 title: SQL Server CLR 整合簡介
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: fb812a8e524148c507d26ea32e0b4263a4998153
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76c6fb4cb37807f286f1f1f2aeedbdea6c74fe38
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782272"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002140"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 整合簡介
 做為 Microsoft .NET Framework 核心的 Common Language Runtime (CLR)，提供了所有 .NET Framework 程式碼的執行環境。 CLR 中執行的程式碼稱為 Managed 程式碼。 CLR 提供程式執行所需的各種功能及服務，包括 just-in-time (JIT) 編譯、配置及管理記憶體、強制使用型別安全性、例外處理、執行緒管理及安全性。  
@@ -25,7 +25,7 @@ ms.locfileid: "70782272"
 ## <a name="enabling-clr-integration"></a>啟用 CLR 整合  
  預設會在 Microsoft SQL Server 中停用 Common Language Runtime (CLR) 整合功能，且為了使用 CLR 整合所實作的物件，必須啟用這個功能。 若要啟用使用 Transact-SQL 進行 CLR 整合，請使用 `clr enabled` 預存程序的 `sp_configure` 選項，如下所示：  
   
-```  
+```sql  
 sp_configure 'clr enabled', 1  
 GO  
 RECONFIGURE  

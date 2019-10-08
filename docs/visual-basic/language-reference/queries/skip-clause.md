@@ -8,37 +8,37 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: db2d79596895505ddaa7778e831082a94c7ad44e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e52de186e1475bfabd02821a0cd2384d8350eed3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945245"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004774"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip 子句 (Visual Basic)
 略過集合中指定數目的項目，然後傳回其餘項目。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Skip count  
 ```  
   
 ## <a name="parts"></a>組件  
  `count`  
- 必要項。 值或評估運算式，以略過序列的項目數目。  
+ 必要項。 值或運算式，評估為要略過的序列元素數目。  
   
 ## <a name="remarks"></a>備註  
- `Skip`子句會使查詢，以略過的結果清單開頭的項目，並傳回其餘項目。 略過的項目數由`count`參數。  
+ @No__t 0 子句會使查詢略過結果清單開頭的專案，並傳回剩餘的元素。 要略過的元素數目是由 `count` 參數所識別。  
   
- 您可以使用`Skip`子句搭配`Take`子句傳回的資料範圍查詢的任何區段。 若要這樣做，請將傳遞到的範圍內的第一個元素的索引`Skip`子句和範圍的大小`Take`子句。  
+ 您可以使用 `Skip` 子句搭配 `Take` 子句，從查詢的任何區段傳回資料範圍。 若要這麼做，請將範圍的第一個元素的索引傳遞至 `Skip` 子句，並將範圍的大小傳遞給 `Take` 子句。  
   
- 當您使用`Skip`查詢中的子句，您可能也需要確定結果傳回的順序，將會啟用`Skip`子句來略過所要的結果。 如需有關如何排序查詢結果的詳細資訊，請參閱 < [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。  
+ 當您在查詢中使用 `Skip` 子句時，您可能也需要確保會以可讓 @no__t 1 子句略過預期結果的順序傳回結果。 如需排序查詢結果的詳細資訊，請參閱[Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。  
   
- 您可以使用`SkipWhile`子句來指定特定項目會忽略，根據提供的條件。  
+ 視提供的條件而定，您可以使用 `SkipWhile` 子句來指定只忽略特定元素。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會使用`Skip`子句搭配`Take`子句，以從查詢頁面中傳回資料。 `GetCustomers`函式會使用`Skip`子句來略過清單中的客戶，直到提供開始索引值，並使用`Take`子句傳回的客戶，從該索引值開始的頁面。  
+ 下列程式碼範例會使用 `Skip` 子句搭配 `Take` 子句，以從頁面中的查詢傳回資料。 @No__t-0 函式會使用 `Skip` 子句來略過清單中的客戶，直到提供的起始索引值，並使用 `Take` 子句來傳回從該索引值開始的客戶頁面。  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

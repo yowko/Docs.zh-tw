@@ -8,40 +8,40 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-ms.openlocfilehash: 5632e69039baebb3d1f1fd90c04586d9e50fe40f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 404dd848058f7e5c9bc8a74b6d89df18c6c55fad
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945206"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005007"
 ---
 # <a name="where-clause-visual-basic"></a>Where 子句 (Visual Basic)
-指定查詢的篩選條件。  
+指定查詢的篩選準則。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Where condition  
 ```  
   
 ## <a name="parts"></a>組件  
  `condition`  
- 必要項。 運算式，決定是否要將目前的項目集合中的值包含在輸出集合中。 運算式必須評估為`Boolean`值或相當的`Boolean`值。 如果條件評估為`True`項目包含查詢結果中; 否則從查詢結果中排除項目。  
+ 必要項。 運算式，判斷集合中目前專案的值是否包含在輸出集合中。 運算式必須評估為 `Boolean` 值或等於 `Boolean` 值。 如果條件評估為 `True`，則元素會包含在查詢結果中;否則，會從查詢結果中排除元素。  
   
 ## <a name="remarks"></a>備註  
- `Where`子句可讓您選取只符合特定準則的項目，以篩選查詢資料。 項目，其值會導致`Where`子句，以評估為`True`包括在查詢結果中，會排除其他項目。 使用中的運算式`Where`子句必須評估為`Boolean`或相當的`Boolean`，例如評估為整數`False`當其值為零。 您可以將多個運算式中的結合`Where`子句使用邏輯運算子，例如`And`， `Or`， `AndAlso`， `OrElse`， `Is`，和`IsNot`。  
+ @No__t-0 子句可讓您只選取符合特定準則的元素來篩選查詢資料。 其值導致 `Where` 子句評估為 `True` 的元素會包含在查詢結果中;排除其他元素。 @No__t-0 子句中使用的運算式必須評估為 `Boolean` 或對等的 `Boolean`，例如當其值為零時，評估為 `False` 的整數。 您可以使用邏輯運算子（例如 `And`、`Or`、`AndAlso`、`OrElse`、`Is` 和 `IsNot`）來結合 @no__t 0 子句中的多個運算式。  
   
- 根據預設，查詢運算式，才會評估存取 — 比方說，當它們是資料繫結或透過在反覆執行`For`迴圈。 如此一來，`Where`之前存取查詢時，不會評估子句。 如果您有外部查詢中所使用的值`Where`子句，確保適當的值用於`Where`子句在執行查詢的時間。 如需有關查詢執行的詳細資訊，請參閱[撰寫您的第一個 LINQ 查詢](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
+ 根據預設，查詢運算式在存取之前不會進行評估，例如，當資料系結或在 `For` 迴圈中反復執行時。 因此，在存取查詢之前，不會評估 `Where` 子句。 如果您在 `Where` 子句中使用查詢外部的值，請確定在執行查詢時，`Where` 子句中使用適當的值。 如需查詢執行的詳細資訊，請參閱[撰寫您的第一個 LINQ 查詢](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
   
- 您可以呼叫內的函式`Where`子句來執行計算或值的作業，從集合中目前的項目。 呼叫函式`Where`子句可能會導致當它定義而不是存取時，請立即執行查詢。 如需有關查詢執行的詳細資訊，請參閱[撰寫您的第一個 LINQ 查詢](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
+ 您可以呼叫 `Where` 子句內的函式，從集合中目前元素的值執行計算或運算。 呼叫 `Where` 子句中的函式可能會在定義時立即執行查詢，而不是在存取時。 如需查詢執行的詳細資訊，請參閱[撰寫您的第一個 LINQ 查詢](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
   
 ## <a name="example"></a>範例  
- 下列查詢的運算式用法`From`子句來宣告範圍變數`cust`每個`Customer`物件中`customers`集合。 `Where`子句來限制輸出給客戶，從指定的區域中使用的範圍變數。 `For Each`迴圈會顯示查詢結果中的每個客戶的公司名稱。  
+ 下列查詢運算式會使用 `From` 子句，針對 `customers` 集合中的每個 @no__t 2 物件，宣告範圍變數 `cust`。 @No__t-0 子句會使用範圍變數，將輸出限制為來自指定區域的客戶。 [@No__t-0] 迴圈會在查詢結果中顯示每個客戶的公司名稱。  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`And`並`Or`中的邏輯運算子`Where`子句。  
+ 下列範例會在 `Where` 子句中使用 `And` 和 @no__t 1 邏輯運算子。  
   
  [!code-vb[VbSimpleQuerySamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#31)]  
   
