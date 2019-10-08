@@ -2,43 +2,43 @@
 title: 外部對應
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 39cdd7b23bd90ff8938dda9eee630149ce6ddbea
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ba5af75ae34b233354fec6e9074f3cc96d924c7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793996"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003052"
 ---
-# <a name="external-mapping"></a><span data-ttu-id="ee16d-102">外部對應</span><span class="sxs-lookup"><span data-stu-id="ee16d-102">External Mapping</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="ee16d-103">支援*外部對應*，這是一種程式，您可以使用個別的 XML 檔案來指定資料庫的資料模型與物件模型之間的對應。</span><span class="sxs-lookup"><span data-stu-id="ee16d-103">supports *external mapping*, a process by which you use a separate XML file to specify mapping between the data model of the database and your object model.</span></span> <span data-ttu-id="ee16d-104">使用外部對應檔案的好處如下：</span><span class="sxs-lookup"><span data-stu-id="ee16d-104">Advantages of using an external mapping file include the following:</span></span>  
+# <a name="external-mapping"></a><span data-ttu-id="e21d0-102">外部對應</span><span class="sxs-lookup"><span data-stu-id="e21d0-102">External Mapping</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="e21d0-103">支援*外部對應*，這是一種程式，您可以使用個別的 XML 檔案來指定資料庫的資料模型與物件模型之間的對應。</span><span class="sxs-lookup"><span data-stu-id="e21d0-103">supports *external mapping*, a process by which you use a separate XML file to specify mapping between the data model of the database and your object model.</span></span> <span data-ttu-id="e21d0-104">使用外部對應檔案的好處如下：</span><span class="sxs-lookup"><span data-stu-id="e21d0-104">Advantages of using an external mapping file include the following:</span></span>  
   
-- <span data-ttu-id="ee16d-105">您可以將對應程式碼與應用程式的程式碼分開來。</span><span class="sxs-lookup"><span data-stu-id="ee16d-105">You can keep your mapping code out of your application code.</span></span> <span data-ttu-id="ee16d-106">如此一來，就可以避免應用程式的程式碼變得雜亂。</span><span class="sxs-lookup"><span data-stu-id="ee16d-106">This approach reduces clutter in your application code.</span></span>  
+- <span data-ttu-id="e21d0-105">您可以將對應程式碼與應用程式的程式碼分開來。</span><span class="sxs-lookup"><span data-stu-id="e21d0-105">You can keep your mapping code out of your application code.</span></span> <span data-ttu-id="e21d0-106">如此一來，就可以避免應用程式的程式碼變得雜亂。</span><span class="sxs-lookup"><span data-stu-id="e21d0-106">This approach reduces clutter in your application code.</span></span>  
   
-- <span data-ttu-id="ee16d-107">您可以將外部對應檔案視為組態檔。</span><span class="sxs-lookup"><span data-stu-id="ee16d-107">You can treat an external mapping file something like a configuration file.</span></span> <span data-ttu-id="ee16d-108">例如，在交付二進位碼檔案之後，只要換掉外部對應檔案，就可以更新應用程式的行為。</span><span class="sxs-lookup"><span data-stu-id="ee16d-108">For example, you can update how your application behaves after shipping the binaries by just swapping out the external mapping file.</span></span>  
+- <span data-ttu-id="e21d0-107">您可以將外部對應檔案視為組態檔。</span><span class="sxs-lookup"><span data-stu-id="e21d0-107">You can treat an external mapping file something like a configuration file.</span></span> <span data-ttu-id="e21d0-108">例如，在交付二進位碼檔案之後，只要換掉外部對應檔案，就可以更新應用程式的行為。</span><span class="sxs-lookup"><span data-stu-id="e21d0-108">For example, you can update how your application behaves after shipping the binaries by just swapping out the external mapping file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ee16d-109">需求</span><span class="sxs-lookup"><span data-stu-id="ee16d-109">Requirements</span></span>  
- <span data-ttu-id="ee16d-110">對應檔必須是 XML 檔案，而且檔案必須根據[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]架構定義（.xsd）檔進行驗證。</span><span class="sxs-lookup"><span data-stu-id="ee16d-110">The mapping file must be an XML file, and the file must validate against a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] schema definition (.xsd) file.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e21d0-109">需求</span><span class="sxs-lookup"><span data-stu-id="e21d0-109">Requirements</span></span>  
+ <span data-ttu-id="e21d0-110">對應檔必須是 XML 檔，而且檔案必須根據 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 架構定義（.xsd）檔進行驗證。</span><span class="sxs-lookup"><span data-stu-id="e21d0-110">The mapping file must be an XML file, and the file must validate against a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] schema definition (.xsd) file.</span></span>  
   
- <span data-ttu-id="ee16d-111">可套用下列規則：</span><span class="sxs-lookup"><span data-stu-id="ee16d-111">The following rules apply:</span></span>  
+ <span data-ttu-id="e21d0-111">可套用下列規則：</span><span class="sxs-lookup"><span data-stu-id="e21d0-111">The following rules apply:</span></span>  
   
-- <span data-ttu-id="ee16d-112">對應檔案必須是 XML 檔。</span><span class="sxs-lookup"><span data-stu-id="ee16d-112">The mapping file must be an XML file.</span></span>  
+- <span data-ttu-id="e21d0-112">對應檔案必須是 XML 檔。</span><span class="sxs-lookup"><span data-stu-id="e21d0-112">The mapping file must be an XML file.</span></span>  
   
-- <span data-ttu-id="ee16d-113">XML 對應檔案必須根據 XML 結構描述定義檔進行驗證。</span><span class="sxs-lookup"><span data-stu-id="ee16d-113">The XML mapping file must be valid against the XML schema definition file.</span></span> <span data-ttu-id="ee16d-114">如需詳細資訊，請參閱[如何：驗證 DBML 和外部對應](how-to-validate-dbml-and-external-mapping-files.md)檔案。</span><span class="sxs-lookup"><span data-stu-id="ee16d-114">For more information, see [How to: Validate DBML and External Mapping Files](how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
+- <span data-ttu-id="e21d0-113">XML 對應檔案必須根據 XML 結構描述定義檔進行驗證。</span><span class="sxs-lookup"><span data-stu-id="e21d0-113">The XML mapping file must be valid against the XML schema definition file.</span></span> <span data-ttu-id="e21d0-114">如需詳細資訊，請參閱[如何：驗證 DBML 和外部對應檔案 @ no__t-0。</span><span class="sxs-lookup"><span data-stu-id="e21d0-114">For more information, see [How to: Validate DBML and External Mapping Files](how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
-- <span data-ttu-id="ee16d-115">外部對應會覆寫以屬性 (Attribute) 為基礎的對應。</span><span class="sxs-lookup"><span data-stu-id="ee16d-115">External mapping overrides attribute-based mapping.</span></span> <span data-ttu-id="ee16d-116">也就是說，當您使用外部對應來源建立 <xref:System.Data.Linq.DataContext> 時，<xref:System.Data.Linq.DataContext> 會忽略已在類別上建立的所有對應屬性。</span><span class="sxs-lookup"><span data-stu-id="ee16d-116">In other words, when you use an external mapping source to create a <xref:System.Data.Linq.DataContext>, the <xref:System.Data.Linq.DataContext> ignores all mapping attributes you have created on classes.</span></span> <span data-ttu-id="ee16d-117">不論類別是否包含在外部對應檔案中，結果都是一樣。</span><span class="sxs-lookup"><span data-stu-id="ee16d-117">This behavior is true whether the class is included in the external mapping file.</span></span>  
+- <span data-ttu-id="e21d0-115">外部對應會覆寫以屬性 (Attribute) 為基礎的對應。</span><span class="sxs-lookup"><span data-stu-id="e21d0-115">External mapping overrides attribute-based mapping.</span></span> <span data-ttu-id="e21d0-116">也就是說，當您使用外部對應來源建立 <xref:System.Data.Linq.DataContext> 時，<xref:System.Data.Linq.DataContext> 會忽略已在類別上建立的所有對應屬性。</span><span class="sxs-lookup"><span data-stu-id="e21d0-116">In other words, when you use an external mapping source to create a <xref:System.Data.Linq.DataContext>, the <xref:System.Data.Linq.DataContext> ignores all mapping attributes you have created on classes.</span></span> <span data-ttu-id="e21d0-117">不論類別是否包含在外部對應檔案中，結果都是一樣。</span><span class="sxs-lookup"><span data-stu-id="e21d0-117">This behavior is true whether the class is included in the external mapping file.</span></span>  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="ee16d-118">不支援混合使用兩種對應方式 (以屬性為基礎和外部)。</span><span class="sxs-lookup"><span data-stu-id="ee16d-118">does not support the hybrid use of the two mapping approaches (attribute-based and external).</span></span>  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="e21d0-118">不支援混合使用兩種對應方式 (以屬性為基礎和外部)。</span><span class="sxs-lookup"><span data-stu-id="e21d0-118">does not support the hybrid use of the two mapping approaches (attribute-based and external).</span></span>  
   
-## <a name="xml-schema-definition-file"></a><span data-ttu-id="ee16d-119">XML 結構描述定義檔</span><span class="sxs-lookup"><span data-stu-id="ee16d-119">XML Schema Definition File</span></span>  
- <span data-ttu-id="ee16d-120">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的外部對應必須根據下列 XML 結構描述定義進行驗證。</span><span class="sxs-lookup"><span data-stu-id="ee16d-120">External mapping in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] must be valid against the following XML schema definition.</span></span>  
+## <a name="xml-schema-definition-file"></a><span data-ttu-id="e21d0-119">XML 結構描述定義檔</span><span class="sxs-lookup"><span data-stu-id="e21d0-119">XML Schema Definition File</span></span>  
+ <span data-ttu-id="e21d0-120">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的外部對應必須根據下列 XML 結構描述定義進行驗證。</span><span class="sxs-lookup"><span data-stu-id="e21d0-120">External mapping in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] must be valid against the following XML schema definition.</span></span>  
   
- <span data-ttu-id="ee16d-121">這個結構描述定義檔與用來驗證 DBML 檔案的結構描述定義檔不同。</span><span class="sxs-lookup"><span data-stu-id="ee16d-121">Distinguish this schema definition file from the schema definition file that is used to validate a DBML file.</span></span> <span data-ttu-id="ee16d-122">如需詳細資訊，請參閱[LINQ to SQL 中的程式碼產生](code-generation-in-linq-to-sql.md)）。</span><span class="sxs-lookup"><span data-stu-id="ee16d-122">For more information, see [Code Generation in LINQ to SQL](code-generation-in-linq-to-sql.md)).</span></span>  
+ <span data-ttu-id="e21d0-121">這個結構描述定義檔與用來驗證 DBML 檔案的結構描述定義檔不同。</span><span class="sxs-lookup"><span data-stu-id="e21d0-121">Distinguish this schema definition file from the schema definition file that is used to validate a DBML file.</span></span> <span data-ttu-id="e21d0-122">如需詳細資訊，請參閱[LINQ to SQL 中的程式碼產生](code-generation-in-linq-to-sql.md)）。</span><span class="sxs-lookup"><span data-stu-id="e21d0-122">For more information, see [Code Generation in LINQ to SQL](code-generation-in-linq-to-sql.md)).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="ee16d-123">Visual Studio 使用者也會在 [XML 架構] 對話方塊中，將這個 XSD 檔案尋找為 "Linqtosqlmapping.xsd"。</span><span class="sxs-lookup"><span data-stu-id="ee16d-123">Visual Studio users will also find this XSD file in the XML Schemas dialog box as "LinqToSqlMapping.xsd".</span></span> <span data-ttu-id="ee16d-124">若要正確使用此檔案來驗證外部對應檔案，請[參閱如何：驗證 DBML 和外部對應](how-to-validate-dbml-and-external-mapping-files.md)檔案。</span><span class="sxs-lookup"><span data-stu-id="ee16d-124">To use this file correctly for validating an external mapping file, see [How to: Validate DBML and External Mapping Files](how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
+> <span data-ttu-id="e21d0-123">Visual Studio 使用者也會在 [XML 架構] 對話方塊中，將這個 XSD 檔案尋找為 "Linqtosqlmapping.xsd"。</span><span class="sxs-lookup"><span data-stu-id="e21d0-123">Visual Studio users will also find this XSD file in the XML Schemas dialog box as "LinqToSqlMapping.xsd".</span></span> <span data-ttu-id="e21d0-124">若要正確地使用此檔案來驗證外部對應檔，請參閱 [How 至：驗證 DBML 和外部對應檔案 @ no__t-0。</span><span class="sxs-lookup"><span data-stu-id="e21d0-124">To use this file correctly for validating an external mapping file, see [How to: Validate DBML and External Mapping Files](how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
-```  
-?<?xml version="1.0" encoding="utf-16"?>  
+```xml  
+<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/mapping/2007" xmlns="http://schemas.microsoft.com/linqtosql/mapping/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -141,8 +141,8 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ee16d-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ee16d-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e21d0-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e21d0-125">See also</span></span>
 
-- [<span data-ttu-id="ee16d-126">LINQ to SQL 中的程式碼產生</span><span class="sxs-lookup"><span data-stu-id="ee16d-126">Code Generation in LINQ to SQL</span></span>](code-generation-in-linq-to-sql.md)
-- [<span data-ttu-id="ee16d-127">參考資料</span><span class="sxs-lookup"><span data-stu-id="ee16d-127">Reference</span></span>](reference.md)
-- [<span data-ttu-id="ee16d-128">如何：產生物件模型做為外部檔案</span><span class="sxs-lookup"><span data-stu-id="ee16d-128">How to: Generate the Object Model as an External File</span></span>](how-to-generate-the-object-model-as-an-external-file.md)
+- [<span data-ttu-id="e21d0-126">LINQ to SQL 中的程式碼產生</span><span class="sxs-lookup"><span data-stu-id="e21d0-126">Code Generation in LINQ to SQL</span></span>](code-generation-in-linq-to-sql.md)
+- [<span data-ttu-id="e21d0-127">參考資料</span><span class="sxs-lookup"><span data-stu-id="e21d0-127">Reference</span></span>](reference.md)
+- <span data-ttu-id="e21d0-128">[如何：將物件模型產生為外部檔案 @ no__t-0</span><span class="sxs-lookup"><span data-stu-id="e21d0-128">[How to: Generate the Object Model as an External File](how-to-generate-the-object-model-as-an-external-file.md)</span></span>

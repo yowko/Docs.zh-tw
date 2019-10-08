@@ -1,29 +1,29 @@
 ---
-title: 作法：產生物件模型作為外部檔案
+title: HOW TO：產生物件模型作為外部檔案
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 3fd84d878ab07411bba41a13ff3eef91b2425e8a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 915c02de55211efa24a4aa9f21ddc2c7e60fa41a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793595"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002735"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="165fa-102">HOW TO：產生物件模型作為外部檔案</span><span class="sxs-lookup"><span data-stu-id="165fa-102">How to: Generate the Object Model as an External File</span></span>
-<span data-ttu-id="165fa-103">除了使用以屬性 (Attribute) 為基礎的對應，您還可以使用 SQLMetal 命令列工具，產生自己的物件模型做為外部 XML 檔。</span><span class="sxs-lookup"><span data-stu-id="165fa-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="165fa-104">如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../tools/sqlmetal-exe-code-generation-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="165fa-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="165fa-105">藉由使用外部 XML 對應檔案，您可以避免程式碼雜亂。</span><span class="sxs-lookup"><span data-stu-id="165fa-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="165fa-106">此外，若要變更行為，也只需要修改外部檔案，而無須重新編譯應用程式的二進位碼檔案。</span><span class="sxs-lookup"><span data-stu-id="165fa-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="165fa-107">如需詳細資訊，請參閱[外部對應](external-mapping.md)。</span><span class="sxs-lookup"><span data-stu-id="165fa-107">For more information, see [External Mapping](external-mapping.md).</span></span>  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="df7c2-102">HOW TO：產生物件模型作為外部檔案</span><span class="sxs-lookup"><span data-stu-id="df7c2-102">How to: Generate the Object Model as an External File</span></span>
+<span data-ttu-id="df7c2-103">除了使用以屬性 (Attribute) 為基礎的對應，您還可以使用 SQLMetal 命令列工具，產生自己的物件模型做為外部 XML 檔。</span><span class="sxs-lookup"><span data-stu-id="df7c2-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="df7c2-104">如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../tools/sqlmetal-exe-code-generation-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="df7c2-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="df7c2-105">藉由使用外部 XML 對應檔案，您可以避免程式碼雜亂。</span><span class="sxs-lookup"><span data-stu-id="df7c2-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="df7c2-106">此外，若要變更行為，也只需要修改外部檔案，而無須重新編譯應用程式的二進位碼檔案。</span><span class="sxs-lookup"><span data-stu-id="df7c2-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="df7c2-107">如需詳細資訊，請參閱[外部對應](external-mapping.md)。</span><span class="sxs-lookup"><span data-stu-id="df7c2-107">For more information, see [External Mapping](external-mapping.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="165fa-108">物件關聯式設計工具不支援產生外部對應檔案。</span><span class="sxs-lookup"><span data-stu-id="165fa-108">The Object Relational Designer does not support generation of an external mapping file.</span></span>  
+> <span data-ttu-id="df7c2-108">物件關聯式設計工具不支援產生外部對應檔案。</span><span class="sxs-lookup"><span data-stu-id="df7c2-108">The Object Relational Designer does not support generation of an external mapping file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="165fa-109">範例</span><span class="sxs-lookup"><span data-stu-id="165fa-109">Example</span></span>  
- <span data-ttu-id="165fa-110">下列命令會從 Northwind 範例資料庫產生外部對應檔案。</span><span class="sxs-lookup"><span data-stu-id="165fa-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
+## <a name="example"></a><span data-ttu-id="df7c2-109">範例</span><span class="sxs-lookup"><span data-stu-id="df7c2-109">Example</span></span>  
+ <span data-ttu-id="df7c2-110">下列命令會從 Northwind 範例資料庫產生外部對應檔案。</span><span class="sxs-lookup"><span data-stu-id="df7c2-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
   
-```  
+```console  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
-## <a name="example"></a><span data-ttu-id="165fa-111">範例</span><span class="sxs-lookup"><span data-stu-id="165fa-111">Example</span></span>  
- <span data-ttu-id="165fa-112">下列外部對應檔案摘錄顯示 Northwind 範例資料庫中之 Customers 資料表的對應。</span><span class="sxs-lookup"><span data-stu-id="165fa-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="165fa-113">此摘錄是藉由使用 **/map**選項執行 SQLMetal 所產生。</span><span class="sxs-lookup"><span data-stu-id="165fa-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
+## <a name="example"></a><span data-ttu-id="df7c2-111">範例</span><span class="sxs-lookup"><span data-stu-id="df7c2-111">Example</span></span>  
+ <span data-ttu-id="df7c2-112">下列外部對應檔案摘錄顯示 Northwind 範例資料庫中之 Customers 資料表的對應。</span><span class="sxs-lookup"><span data-stu-id="df7c2-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="df7c2-113">此摘錄是藉由使用 **/map**選項執行 SQLMetal 所產生。</span><span class="sxs-lookup"><span data-stu-id="df7c2-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -48,8 +48,8 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="165fa-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="165fa-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df7c2-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="df7c2-114">See also</span></span>
 
-- [<span data-ttu-id="165fa-115">建立物件模型</span><span class="sxs-lookup"><span data-stu-id="165fa-115">Creating the Object Model</span></span>](creating-the-object-model.md)
-- [<span data-ttu-id="165fa-116">外部對應</span><span class="sxs-lookup"><span data-stu-id="165fa-116">External Mapping</span></span>](external-mapping.md)
-- [<span data-ttu-id="165fa-117">如何：以 Visual Basic 或 C# 產生物件模型</span><span class="sxs-lookup"><span data-stu-id="165fa-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [<span data-ttu-id="df7c2-115">建立物件模型</span><span class="sxs-lookup"><span data-stu-id="df7c2-115">Creating the Object Model</span></span>](creating-the-object-model.md)
+- [<span data-ttu-id="df7c2-116">外部對應</span><span class="sxs-lookup"><span data-stu-id="df7c2-116">External Mapping</span></span>](external-mapping.md)
+- [<span data-ttu-id="df7c2-117">如何：以 Visual Basic 或 C# 產生物件模型</span><span class="sxs-lookup"><span data-stu-id="df7c2-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
