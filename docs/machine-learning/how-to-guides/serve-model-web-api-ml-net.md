@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 1173315bbc88797ce0c6d0fcc9597896f14889ac
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332695"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179386"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
@@ -138,7 +138,16 @@ ms.locfileid: "71332695"
 
 此模型是由 `modelName` 參數所識別，因此，每個應用程式可以在變更時重載一個以上的模型。 
 
-或者，當您使用遠端儲存的模型時，可以使用 `FromUri` 方法。 @No__t-0 會輪詢遠端位置以進行變更，而不是監看檔案已變更的事件。 輪詢間隔預設為5分鐘。 您可以根據應用程式的需求來增加或減少輪詢間隔。
+> [!TIP]
+> 或者，當您使用遠端儲存的模型時，可以使用 `FromUri` 方法。 @No__t-0 會輪詢遠端位置以進行變更，而不是監看檔案已變更的事件。 輪詢間隔預設為5分鐘。 您可以根據應用程式的需求來增加或減少輪詢間隔。 在下面的程式碼範例中，`PredictionEnginePool` 會每分鐘輪詢儲存在指定 URI 的模型。
+>    
+>```csharp
+>builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+>   .FromUri(
+>       modelName: "SentimentAnalysisModel", 
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       period: TimeSpan.FromMinutes(1));
+>```
 
 ## <a name="create-predict-controller"></a>建立預測控制器
 

@@ -2,12 +2,12 @@
 title: 將 eShopOnContainers 對應至 Azure 服務
 description: 將 eShopOnContainers 對應至 Azure 服務，例如 Azure Kubernetes Service、API 閘道和 Azure 服務匯流排。
 ms.date: 06/30/2019
-ms.openlocfilehash: feb6d8f5ca05ab55ce4695d1200766a18b8f744a
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182815"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275813"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>將 eShopOnContainers 對應至 Azure 服務
 
@@ -17,8 +17,7 @@ ms.locfileid: "71182815"
 
 應用程式的架構如圖2-5 所示。 左側是用戶端應用程式，分成行動、傳統 Web 和 Web 單頁應用程式（SPA）等。 右側是組成系統的伺服器端元件，每一個都可以裝載于 Docker 容器和 Kubernetes 叢集。 傳統的 web 應用程式由以黃色顯示的 ASP.NET Core MVC 應用程式提供技術支援。 此應用程式和行動和 web SPA 應用程式會透過一或多個 API 閘道與個別微服務通訊。 API 閘道會遵循「前端的後端」（BFF）模式，這表示每個閘道都是設計來支援指定的前端用戶端。 個別的微服務會列在 API 閘道的右邊，同時包含商務邏輯和某種類型的持續性存放區。 不同的服務會利用 SQL Server 資料庫、Redis 快取實例和 MongoDB/CosmosDB 存放區。 最右側的是系統的事件匯流排，用於微服務之間的通訊。
 
-![eShopOnContainers 架構](./media/eshoponcontainers-architecture.png)
-**圖 2-5**。 EShopOnContainers 架構。
+@no__t 0eShopOnContainers 架構 @ no__t-1**圖 2-5**。 EShopOnContainers 架構。
 
 此架構的伺服器端元件可輕鬆地對應至 Azure 服務。
 
@@ -26,7 +25,7 @@ ms.locfileid: "71182815"
 
 應用程式的容器裝載服務（從 ASP.NET Core MVC 應用程式到個別目錄和排序微服務）可以在 Azure Kubernetes Service （AKS）中進行裝載和管理。 應用程式可以在 Docker 和 Kubernetes 本機上執行，然後將相同的容器部署至裝載于 AKS 中的預備和生產環境。 此程式可以自動化，如我們在下一節中所見。
 
-AKS 為個別的容器叢集提供管理服務。 應用程式會為上述架構圖中顯示的每個微服務部署個別的 AKS 叢集。 這種方法可讓每個個別服務根據其資源需求各自獨立。 每個微服務也可以獨立部署，而且在理想的情況下，這類部署應該會產生零的系統停機時間。
+AKS 為個別的容器叢集提供管理服務。 應用程式會為上述架構圖中顯示的每個微服務部署個別的 AKS 叢集。 這種方法可讓每個個別服務根據其資源需求獨立進行調整。 每個微服務也可以獨立部署，而且在理想的情況下，這類部署應該會產生零的系統停機時間。
 
 ## <a name="api-gateway"></a>API 閘道
 
@@ -44,7 +43,7 @@ Azure 入口網站，您可以在其中定義 API 架構，並將不同的 Api �
 
 如果您的應用程式使用 AKS，另一個選項是將 Azure 閘道輸入控制器部署為 AKS 叢集中的 pod。 這可讓您的叢集與 Azure 應用程式閘道整合，讓閘道能夠對 AKS pod 的流量進行負載平衡。 [深入瞭解適用于 AKS 的 Azure 閘道輸入控制器](https://github.com/Azure/application-gateway-kubernetes-ingress)。
 
-## <a name="data"></a>資料
+## <a name="data"></a>Data
 
 EShopOnContainers 所使用的各種後端服務會有不同的儲存需求。 有數個微服務使用 SQL Server 資料庫。 購物籃微服務會利用 Redis 快取來保存其持續性。 位置微服務需要 MongoDB API 來取得其資料。 Azure 支援每種資料格式。
 
@@ -64,7 +63,7 @@ EShopOnContainers 應用程式會將使用者目前的購物籃儲存在要求�
 
 一旦部署到生產環境後，eShopOnContainers 應用程式就能夠利用數個可用的 Azure 服務來改善其復原能力。 應用程式會發佈健康情況檢查，其可與 Application Insights 整合，以根據應用程式的可用性提供報告和警示。 Azure 資源也會提供診斷記錄，以用來識別及更正錯誤和效能問題。 資源記錄會提供應用程式使用不同 Azure 資源的時機和方式的詳細資訊。 您將在[第6章](resiliency.md)深入瞭解雲端原生復原功能。
 
-## <a name="references"></a>reference
+## <a name="references"></a>參考
 
 - [EShopOnContainers 架構](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
 - [協調微服務和多容器應用程式的高延展性和可用性](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)

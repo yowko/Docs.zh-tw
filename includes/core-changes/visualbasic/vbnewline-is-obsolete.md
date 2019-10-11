@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f7c13688236f3d66f3225ecf5d93b4c3284e2e71
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: e476039ff9c8d33f54a2f7e4371dc09a3be557c7
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002863"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237307"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>VbNewLine 已過時。
 
@@ -14,7 +14,7 @@ ms.locfileid: "72002863"
 
 3.0 Preview 8
 
-#### <a name="details"></a>詳細資料
+#### <a name="change-description"></a>變更描述
 
 從 .NET Core 3.0 Preview 8 開始，已將[過時](xref:System.ObsoleteAttribute)屬性套用至 <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 常數。 使用常數會產生編譯器警告。 在舊版的 .NET Core 和 .NET Framework 中，它未標示為已淘汰。
 
@@ -40,5 +40,4 @@ Visual Basic
 
 - `F:Microsoft.VisualBasic.Constants.vbNewLine`
 
--- >
-
+-->

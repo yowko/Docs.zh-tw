@@ -1,17 +1,17 @@
 ---
 title: 教學課程：分析情感-二進位分類
 description: 本教學課程會示範如何建立 Razor Pages 應用程式，以將情感從網站批註中分類，並採取適當的動作。 二元情感分類器會在 Visual Studio 中使用模型產生器。
-ms.date: 09/30/2019
+ms.date: 10/08/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700904"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180276"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教學課程：在 web 應用程式中使用 ML.NET 模型產生器來分析網站批註的情感
 
@@ -70,12 +70,12 @@ ms.locfileid: "71700904"
 
 若要定型您的模型，您需要從模型產生器所提供的可用機器學習服務案例清單中選取。
 
-1. 在**方案總管**中，以滑鼠右鍵按一下*SentimentRazor*專案，然後選取 [**新增** >  **Machine Learning**]。
+1. 在**方案總管**中，以滑鼠右鍵按一下*SentimentRazor*專案，然後選取 [**新增** > **Machine Learning**]。
 1. 在此範例中，案例是情感分析。 在模型產生器工具的*情節*步驟中，選取 [**情感分析**] 案例。
 
 ## <a name="load-the-data"></a>載入資料
 
-模型產生器會接受來自兩個來源、SQL Server 資料庫或本機`csv`檔案或`tsv`格式的資料。
+模型產生器會接受來自兩個來源的資料、SQL Server 資料庫或 `csv` 或 @no__t 1 格式的本機檔案。
 
 1. 在模型產生器工具的資料步驟中，從資料來源下拉式清單中選取 [檔案]。
 1. 選取 [**選取**檔案] 文字方塊旁的按鈕，然後使用 [檔案瀏覽器] 流覽並選取 [*維琪百科-detox-250-line-data.tsv* ] 檔案。
@@ -85,7 +85,7 @@ ms.locfileid: "71700904"
 
 ## <a name="train-the-model"></a>將模型定型
 
-在本教學課程中用來定型價格預測模型的機器學習工作是二元分類。 在模型定型程式期間，模型產生器會使用不同的二進位分類演算法和設定來訓練不同的模型，以尋找資料集最佳的執行模型。
+在本教學課程中用來定型情感分析模型的機器學習工作是二元分類。 在模型定型程式期間，模型產生器會使用不同的二進位分類演算法和設定來訓練不同的模型，以尋找資料集最佳的執行模型。
 
 定型模型所需要的時間會與資料量成比例。 「模型產生器」會根據您的資料來源大小，自動選取要定型的預設值 **（秒）** 。
 
@@ -150,7 +150,7 @@ ms.locfileid: "71700904"
     private readonly string _modelPath;
     ```
 
-1. 模型檔案會連同應用程式的元件檔案一起儲存在組建目錄中。 若要讓它更容易存取，請建立一個在`GetAbsolutePath` `Configure`方法之後呼叫的 helper 方法
+1. 模型檔案會連同應用程式的元件檔案一起儲存在組建目錄中。 若要讓它更容易存取，請在 `Configure` 方法之後，建立一個名為 @no__t 的 helper 方法
 
     ```csharp
     public static string GetAbsolutePath(string relativePath)
@@ -163,13 +163,13 @@ ms.locfileid: "71700904"
     }    
     ```
 
-1. 在類別的函式中使用`GetAbsolutePath`方法，以`_modelPath`設定 `Startup` 。
+1. 使用 `Startup` 類別的函式中的 `GetAbsolutePath` 方法來設定 `_modelPath`。
 
     ```csharp
     _modelPath = GetAbsolutePath("MLModel.zip");
     ```
 
-1. 在方法中，為您的應用程式設定： `PredictionEnginePool` `ConfigureServices`
+1. 在 `ConfigureServices` 方法中，為您的應用程式設定 `PredictionEnginePool`：
 
     ```csharp
     services.AddPredictionEnginePool<ModelInput, ModelOutput>()
@@ -178,7 +178,7 @@ ms.locfileid: "71700904"
 
 ### <a name="create-sentiment-analysis-handler"></a>建立情感分析處理常式
 
-預測將會在應用程式的主頁面中進行。 因此，接受使用者輸入並使用`PredictionEnginePool`傳回預測的方法必須加入。
+預測將會在應用程式的主頁面中進行。 因此，接受使用者輸入並使用 `PredictionEnginePool` 來傳回預測的方法則需要加入。
 
 1. 開啟位於*Pages*目錄中的*Index.cshtml.cs*檔案，並新增下列 using 語句：
 
@@ -187,15 +187,15 @@ ms.locfileid: "71700904"
     using SentimentRazorML.Model;
     ```
 
-    若要使用在`PredictionEnginePool` `Startup`類別中設定的，您必須將它插入您想要使用它的模型的函式中。
+    若要使用在 `Startup` 類別中設定的 `PredictionEnginePool`，您必須將它插入您想要使用它的模型的函式中。
 
-1. 新增變數以參考`PredictionEnginePool` `IndexModel`類別內的。
+1. 新增變數來參考 `IndexModel` 類別內的 `PredictionEnginePool`。
 
     ```csharp
     private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
     ```
 
-1. 在`IndexModel`類別中建立一個函式，並`PredictionEnginePool`將服務插入其中。
+1. 在 `IndexModel` 類別中建立一個函式，並將 @no__t 1 服務插入其中。
 
     ```csharp
     public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
@@ -204,9 +204,9 @@ ms.locfileid: "71700904"
     }    
     ```
 
-1. 建立方法處理常式， `PredictionEnginePool`以使用從網頁接收的使用者輸入進行預測。
+1. 建立方法處理常式，使用 `PredictionEnginePool`，從網頁收到的使用者輸入進行預測。
 
-    1. 在`OnGet`方法下方，建立名為的新方法`OnGetAnalyzeSentiment`
+    1. 在 `OnGet` 方法底下，建立名為 `OnGetAnalyzeSentiment` 的新方法
 
         ```csharp
         public IActionResult OnGetAnalyzeSentiment([FromQuery] string text)
@@ -215,25 +215,25 @@ ms.locfileid: "71700904"
         }
         ```
 
-    1. 在方法內，如果使用者輸入空白或為 null，則傳回中性情感。 `OnGetAnalyzeSentiment`
+    1. 在 `OnGetAnalyzeSentiment` 方法中，如果使用者輸入空白或為 null，則傳回*中性*情感。
 
         ```csharp
         if (String.IsNullOrEmpty(text)) return Content("Neutral");
         ```
 
-    1. 指定有效的輸入，建立的新實例`ModelInput`。
+    1. 指定有效的輸入，請建立 `ModelInput` 的新實例。
 
         ```csharp
         var input = new ModelInput { SentimentText = text };
         ```
 
-    1. `PredictionEnginePool`使用來預測情感。
+    1. 使用 `PredictionEnginePool` 來預測情感。
 
         ```csharp
         var prediction = _predictionEnginePool.Predict(input);
         ```
 
-    1. 使用下列程式`bool`代碼，將預測值轉換成有毒或 not 有毒。
+    1. 使用下列程式碼，將預測的 `bool` 值轉換為有毒或 not 有毒。
 
         ```csharp
         var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
@@ -247,7 +247,7 @@ ms.locfileid: "71700904"
 
 ### <a name="configure-the-web-page"></a>設定網頁
 
-所傳回`OnGetAnalyzeSentiment`的結果會動態顯示`Index`在網頁上。
+@No__t-0 所傳回的結果將會動態顯示在 `Index` 網頁上。
 
 1. 開啟*Pages*目錄中的*Index. cshtml*檔案，並以下列程式碼取代其內容：
 
@@ -257,21 +257,21 @@ ms.locfileid: "71700904"
 
     [!code-css [CssStyling](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/css/site.css#L61-L105)]
 
-1. 之後，請新增`OnGetAnalyzeSentiment`程式碼，以將網頁的輸入傳送至處理常式。
+1. 之後，請加入程式碼，將 web 網頁的輸入傳送至 `OnGetAnalyzeSentiment` 處理常式。
 
-    1. 在位於*wwwroot\js*目錄中的`getSentiment` *網站 .js*檔案中，建立名為的函式，以向`OnGetAnalyzeSentiment`處理常式的使用者輸入提出 GET HTTP 要求。
+    1. 在位於*wwwroot\js*目錄中的*網站 .js*檔案中，建立名為 `getSentiment` 的函式，以向 @no__t 3 處理常式的使用者輸入提出 GET HTTP 要求。
 
         [!code-javascript [GetSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L5-L10)]
 
-    1. 如下所示，新增另一個`updateMarker`名為的函式，以動態方式在情感預測時更新網頁上標記的位置。
+    1. 如下所示，新增另一個名為 `updateMarker` 的函式，以在預測情感時動態更新網頁上標記的位置。
 
         [!code-javascript [UpdateMarkerMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L12-L15)]
 
-    1. 建立名`updateSentiment`為的事件處理常式函式，以取得使用者的輸入、使用`getSentiment`函`OnGetAnalyzeSentiment`式將它傳送至函式，並使用`updateMarker`函數更新標記。
+    1. 建立名為 `updateSentiment` 的事件處理常式函式，以取得使用者的輸入、使用 @no__t 2 函式將它傳送至 @no__t 1 函式，並使用 `updateMarker` 函式更新標記。
 
         [!code-javascript [UpdateSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L17-L34)]
 
-    1. 最後，註冊事件處理常式，並`textarea` `id=Message`使用屬性將它系結至元素。
+    1. 最後，請註冊事件處理常式，並將它系結至具有 `id=Message` 屬性的 @no__t 0 元素。
 
         [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
 
@@ -283,7 +283,7 @@ ms.locfileid: "71700904"
 
 ![使用預測的情感視窗執行視窗](./media/sentiment-analysis-model-builder/web-app.png)
 
-如果您稍後需要參考模型產生器的專案，您可以在`C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`目錄中找到它們。
+如果您稍後需要參考模型產生器的專案，您可以在 [`C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`] 目錄內找到它們。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -4,12 +4,12 @@ description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的�
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929259"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180179"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
@@ -45,7 +45,7 @@ ms.locfileid: "70929259"
 
 在[迴歸](#regression)中，指出資料與模型相符程度的評估計量。 範圍為 0 到 1。 值為 0 時，表示資料為隨機資料，或與模型不相符。 值為 1 時，表示模型與資料完全相符。 這通常稱為r<sup>2</sup>R<sup>2</sup> 或 R 平方。
 
-## <a name="data"></a>資料
+## <a name="data"></a>Data
 
 資料是所有機器學習應用程式的中心。 在 ML.NET 中，資料是由 <xref:Microsoft.ML.IDataView> 物件表示。 資料檢視物件：
 
@@ -136,9 +136,9 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
  正規化不利於太過複雜的線性模型。 正規化有兩種：
 
 - $L_1$ 正規化零加權不顯著的特性。 在這種正規化後，已儲存的模型大小可能會變得較小。
-- $L_2$ 正規化會最小化不顯著特性的加權範圍，這是更一般的程序，且對極端值較不敏感。
+- $L _2 $ 正規化可將不重要功能的權數範圍降至最低。 這是較一般的程式，對極端值而言較不敏感。
 
-## <a name="regression"></a>回復
+## <a name="regression"></a>迴歸
 
 輸出為實際值 (例如雙精度浮點數) 的[機器學習](#supervised-machine-learning)工作。 範例包括預測股價。 如需詳細資訊，請參閱[機器學習工作](tasks.md)主題的[迴歸](tasks.md#regression)一節。
 

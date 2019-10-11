@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 78d2ec6fb505573ad36d55a9ca0a20452b7fa244
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: b50a108d2efbfd3da0d690cb02537a12f766b26b
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002886"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237309"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage 的預設值。版本已變更為1。1 
 
@@ -14,7 +14,7 @@ ms.locfileid: "72002886"
 
 .NET Core 3.0
 
-#### <a name="details"></a>詳細資料
+#### <a name="change-description"></a>變更描述
 
 在 .NET Core 1.0 到2.0 中，<xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性的預設值是1.1。 從 .NET Core 2.1 開始，它已變更為2.1。 
 

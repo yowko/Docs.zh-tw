@@ -2,12 +2,12 @@
 title: Docker 術語
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 術語
 ms.date: 01/07/2019
-ms.openlocfilehash: 700cd9a00c30b0a5fc87f9ffcd63821bb578b0cc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: a5f78ea0e848ef14f6b37e2d97d7546df20096c2
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674825"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179412"
 ---
 # <a name="docker-terminology"></a>Docker 術語
 

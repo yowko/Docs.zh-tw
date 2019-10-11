@@ -4,12 +4,12 @@ description: 了解如何建立支援外掛程式的 .NET Core 應用程式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216252"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250166"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>建立具有外掛程式的 .NET Core 應用程式
 
@@ -34,7 +34,7 @@ ms.locfileid: "71216252"
     dotnet new console -o AppWithPlugin
     ```
 
-2. 若要更輕鬆地建立專案，請使用建立 Visual Studio 的方案檔。 在相同的資料夾中執行下列命令：
+2. 若要更輕鬆地建立專案，請在相同的資料夾中建立 Visual Studio 的方案檔。 執行下列命令：
 
     ```dotnetcli
     dotnet new sln
@@ -217,13 +217,13 @@ static Assembly LoadPlugin(string relativePath)
 
 回到根資料夾，執行下列動作：
 
-1. 執行下列命令，以建立名為`HelloPlugin`的新類別庫專案：
+1. 執行下列命令，以建立名為 `HelloPlugin` 的新類別庫專案：
     
     ```dotnetcli
     dotnet new classlib -o HelloPlugin
     ```
 
-2. 執行下列命令，將專案新增至`AppWithPlugin`方案：
+2. 執行下列命令，將專案新增至 `AppWithPlugin` 解決方案：
 
     ```dotnetcli
     dotnet sln add HelloPlugin/HelloPlugin.csproj

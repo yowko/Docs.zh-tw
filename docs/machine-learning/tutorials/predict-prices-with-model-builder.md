@@ -3,19 +3,19 @@ title: 教學課程：搭配模型產生器使用迴歸來預測價格
 description: 本教學課程會特別示範如何使用 ML.NET 模型產生器來建置迴歸模型以預測紐約市的計程車費用。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/26/2019
+ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c7075e64738279cd712f5db837074a44e96db954
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332587"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180289"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教學課程：搭配模型產生器使用迴歸來預測價格
 
-了解如何使用 ML.NET 模型建立器建置迴歸模型來預測價格。  在本教學課程中您所開發 .NET 主控台應用程式會根據紐約的歷史計程車費用資料來預測計程車費用。
+瞭解如何使用 ML.NET 模型產生器來建立回歸模型，以預測價格。  在本教學課程中您所開發 .NET 主控台應用程式會根據紐約的歷史計程車費用資料來預測計程車費用。
 
 模型建置器價格預測範例可用於任何需要數字預測值的案例。 範例案例包括：房價預測、需求預測及銷售預測。
 

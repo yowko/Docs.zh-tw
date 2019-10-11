@@ -3,12 +3,12 @@ title: 適用于雲端原生的候選應用程式
 description: 瞭解哪些類型的應用程式可從雲端原生方法獲益
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: a06ecdd9bfb3bd50757c484115eb123862a1bb9e
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6da531397e6103e5c59accf321bc5ae82153dded
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214012"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275823"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>適用于雲端原生的候選應用程式
 
@@ -36,8 +36,7 @@ ms.locfileid: "71214012"
 
 免費的 Microsoft 電子書[現代化現有的 .net 應用程式與 Azure 雲端和 Windows 容器](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)，提供將內部部署工作負載遷移至雲端的指引。 圖1-8 顯示現代化繼承應用程式不會有單一大小適用的策略。
 
-![遷移舊版工作負載](./media/strategies-for-migrating-legacy-workloads.png)
-的策略**圖 1-8**。 遷移舊版工作負載的策略
+![Strategies，用於遷移舊版工作負載 @ no__t-1**圖 1-8**。 遷移舊版工作負載的策略
 
 非關鍵的整合型應用程式，主要受益于快速隨即轉移（[雲端基礎結構就緒](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)）的遷移。 在這裡，內部部署工作負載會重新裝載至雲端式 VM，而不會變更。 此方法使用[IaaS （基礎結構即服務）模型](https://azure.microsoft.com/overview/what-is-iaas/)。 Azure 包含數個工具，例如（[Azure Migrate](https://aka.ms/azuremigrate)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)和[Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)），讓這類移動變得更容易。 雖然此策略可以節省一些成本，但這類應用程式通常無法解除鎖定並運用雲端運算的優點。 
 
@@ -65,15 +64,15 @@ ms.locfileid: "71214012"
 
 ## <a name="summary"></a>總結
 
-在本章中，我們引進了雲端原生運算。 我們提供了一種定義，以及驅動雲端原生應用程式的主要功能。 我們探討了可能會證明這項投資和投入的應用程式類型。
+在本章中，我們引進了雲端原生運算。 我們提供了一種定義，以及驅動雲端原生應用程式的主要功能。 我們探討了可能會證明這項投資和投入時間的應用程式類型。
 
 隨著背後的介紹，我們現在深入探討雲端原生的詳細探討。
 
-### <a name="references"></a>reference
+### <a name="references"></a>參考
 
 - [雲端原生運算基礎](https://www.cncf.io/)
 
-- [.NET 微服務：容器化 .NET 應用程式的架構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+- [.NET 微服務：容器化 .NET 應用程式的架構 @ no__t-0
 
 - [使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
@@ -83,7 +82,7 @@ ms.locfileid: "71214012"
 
 - [什麼是基礎結構即程式碼](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
 
-- [Uber 工程的微部署：放心地每天部署](https://eng.uber.com/micro-deploy/)
+- @no__t 0Uber 工程的微部署：每日自信地部署 @ no__t-0
 
 - [Netflix 如何部署程式碼](https://www.infoq.com/news/2013/06/netflix/)
 

@@ -2,12 +2,12 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
-ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 5cb8322fc50dc5759f8e546ae6b698c036c91fa4
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216198"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180003"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -130,8 +130,8 @@ ms.locfileid: "71216198"
 1. 識別碼為 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. 識別碼為 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
 3. 識別碼為 `Microsoft.NET.Sdk.Razor` 的 .NET Core Razor 類別庫 SDK
-4. 識別碼為的`Microsoft.NET.Sdk.Worker` .net core 背景工作角色服務（自 .net core 3.0 起）
-5. 具有識別碼的`Microsoft.NET.Sdk.WindowsDesktop` .net Core WinForms 和 WPF （自 .net core 3.0 起）
+4. 識別碼為 `Microsoft.NET.Sdk.Worker` 的 .NET Core 背景工作角色服務（自 .NET Core 3.0 起）
+5. 具有 `Microsoft.NET.Sdk.WindowsDesktop` 識別碼的 .NET Core WinForms 和 WPF （自 .NET Core 3.0 起）
 
 您必須在 `<Project>` 項目中將 `Sdk` 屬性設定為上述其中一個識別碼，才能使用 .NET Core 工具並建置您的程式碼。
 
@@ -143,7 +143,7 @@ ms.locfileid: "71216198"
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>Version
 
 必要的 `Version` 屬性會指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
@@ -179,7 +179,7 @@ ms.locfileid: "71216198"
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>Version
 
 `Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
@@ -347,6 +347,12 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 ### <a name="repositorytype"></a>RepositoryType
 
 指定存放庫的類型。 預設值為 "git"。
+
+### <a name="repositorybranch"></a>RepositoryBranch
+指定存放庫中來源分支的名稱。 當專案封裝在 NuGet 套件中時，會將它新增至套件中繼資料。
+
+### <a name="repositorycommit"></a>RepositoryCommit
+選擇性存放庫認可或變更集，用來指出要建立封裝的來源。 您也必須指定 `RepositoryUrl`，才能包含這個屬性。 當專案封裝在 NuGet 套件中時，此認可或變更集會新增至套件中繼資料。
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 

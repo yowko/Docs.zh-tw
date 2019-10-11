@@ -2,12 +2,12 @@
 title: 在 CQRS 微服務中實作讀取/查詢
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 查詢端使用 Dapper 在 eShopOnContainers 訂購微服務上的實作。
 ms.date: 10/08/2018
-ms.openlocfilehash: f791546e2fc00e276ab55302802a5534465ace58
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674335"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275795"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服務中實作讀取/查詢
 
@@ -55,7 +55,7 @@ Dapper 是開放原始碼專案 (原創者為 Sam Saffron)，屬於 [Stack Overf
 
 ### <a name="viewmodel-as-dynamic-type"></a>ViewModel 作為動態類型
 
-如下列程式碼所示，透過傳回在內部以查詢所傳回屬性為基礎的「動態」  類型，查詢可以直接傳回 `ViewModel`。 這表示要傳回的屬性子集是以查詢本身為基礎。 因此，如果您在查詢或聯結中新增新的資料行，該資料會以動態方式新增至傳回的 `ViewModel`。
+如下列程式碼所示，透過傳回在內部以查詢所傳回屬性為基礎的「動態」類型，查詢可以直接傳回 `ViewModel`。 這表示要傳回的屬性子集是以查詢本身為基礎。 因此，如果您在查詢或聯結中新增新的資料行，該資料會以動態方式新增至傳回的 `ViewModel`。
 
 ```csharp
 using Dapper;
@@ -99,7 +99,7 @@ public class OrderQueries : IOrderQueries
 
 **缺點：** 如前所述，更新程式碼時，它會採用更多步驟來更新 DTO 類別。
 
-經驗提示  ：在 eShopOnContainers 訂購微服務實作的查詢中，我們就開始使用動態 ViewModel 進行開發，因為它在早期開發階段非常簡單靈活。 但是，一旦開發趨於穩定，我們會選擇重構 API 並使用靜態或預先定義的 DTO 取代 ViewModel，因為這樣可讓微服務取用者更清楚知道用作「合約」的明確 DTO 類型。
+經驗提示：在 eShopOnContainers 訂購微服務實作的查詢中，我們就開始使用動態 ViewModel 進行開發，因為它在早期開發階段非常簡單靈活。 但是，一旦開發趨於穩定，我們會選擇重構 API 並使用靜態或預先定義的 DTO 取代 ViewModel，因為這樣可讓微服務取用者更清楚知道用作「合約」的明確 DTO 類型。
 
 在下例中，您會看到查詢如何使用明確的 ViewModel DTO 類別：OrderSummary 類別，傳回資料。
 
@@ -118,7 +118,7 @@ public class OrderQueries : IOrderQueries
         using (var connection = new SqlConnection(_connectionString))
         {
             connection.Open();
-            var result = await connection.QueryAsync<OrderSummary>(
+            return await connection.QueryAsync<OrderSummary>(
                   @"SELECT o.[Id] as ordernumber, 
                   o.[OrderDate] as [date],os.[Name] as [status], 
                   SUM(oi.units*oi.unitprice) as total
@@ -185,13 +185,13 @@ public class OrderSummary
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Dapper** \
+- **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **Julie Lerman。資料點 - Dapper、Entity Framework 與 Hybrid Apps (MSDN Mag. 文章)**  \
-  <https://msdn.microsoft.com/magazine/mt703432.aspx>
+- **Julie Lerman。資料點-Dapper、Entity Framework 和混合式應用程式（MSDN 雜誌文章）**  
+  <https://msdn.microsoft.com/magazine/mt703432>
 
-- **使用 Swagger 的 ASP.NET Core Web API 說明頁面** \
+- **使用 Swagger 的 ASP.NET Core Web API 說明頁面**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]

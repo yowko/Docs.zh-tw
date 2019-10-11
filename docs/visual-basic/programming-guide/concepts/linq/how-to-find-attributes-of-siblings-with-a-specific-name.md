@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找具有特定名稱 (XPATH-LINQ to XML) 的同層級的屬性 (Visual Basic)
+title: 作法：尋找具有特定名稱之同級的屬性（XPath-LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-ms.openlocfilehash: 07fb5647950c450d08ab3235ac8cb396eff15305
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 709c21cee37c42f7633b2b108b8846ddd8e3b4e7
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780571"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249892"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找具有特定名稱 (XPATH-LINQ to XML) 的同層級的屬性 (Visual Basic)
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>作法：尋找具有特定名稱之同級的屬性（XPath-LINQ to XML）（Visual Basic）
 本主題顯示如何尋找內容節點之同層級的所有屬性。 在集合中，只會傳回具有特定名稱的屬性。  
   
  XPath 運算式為：  
@@ -48,7 +48,7 @@ Next
   
  這個範例會產生下列輸出：  
   
-```  
+```console  
 Results are identical  
 id="bk101"  
 id="bk102"  
@@ -56,4 +56,4 @@ id="bk102"
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

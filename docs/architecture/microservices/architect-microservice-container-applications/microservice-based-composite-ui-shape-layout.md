@@ -2,16 +2,16 @@
 title: 建立以微服務為基礎的複合 UI
 description: 微服務架構不只可用於後端。 預覽以了解如何用於前端。
 ms.date: 09/20/2018
-ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834381"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275736"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>建立以微服務為基礎的複合 UI
 
-微服務架構一開始通常是處理資料和邏輯的伺服器端。 不過，更進階的方法是同時根據微服務來設計應用程式 UI。 這表示具有微服務所產生的複合 UI，而不是在伺服器上擁有多個微服務，並只由一個整合型用戶端應用程式來取用這些微服務。 透過此方法，您建置的微服務就會同時具備邏輯和視覺表示。
+微服務架構通常會從伺服器端處理資料和邏輯開始，但在許多情況下，UI 仍會以單體的方式處理。 不過，更先進的方法（稱為[微前端](https://martinfowler.com/articles/micro-frontends.html)）也是根據微服務來設計應用程式 UI。 這表示具有微服務所產生的複合 UI，而不是在伺服器上擁有多個微服務，並只由一個整合型用戶端應用程式來取用這些微服務。 透過此方法，您建置的微服務就會同時具備邏輯和視覺表示。
 
 圖 4-20 顯示更簡單的方法，該方法只會從整合型用戶端應用程式取用微服務。 當然，您在產生 HTML 與 JavaScript 之間可能會有 ASP.NET MVC 服務。 下圖已經過簡化，顯示您有取用微服務的單一 (整合型) 用戶端 UI，只著重於邏輯和資料，而不是 UI 形狀 (HTML 和 JavaScript)。
 
@@ -39,19 +39,25 @@ ms.locfileid: "71834381"
 
 ## <a name="additional-resources"></a>其他資源
 
-- **使用 ASP.NET 的複合 UI (特定研討)**  \
+- **微前端（聖馬丁 Fowler 的 blog）**  
+  <https://martinfowler.com/articles/micro-frontends.html>
+  
+- **微前端（Michael Geers 網站）**  
+  <https://micro-frontends.org/>
+  
+- **使用 ASP.NET 的複合 UI （特定的研討會）**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga：The Monolithic Frontend in the Microservices Architecture (微服務架構中的整合型前端)**  \
+- **Ruben Oostinga：微服務架構中的整合型前端 @ no__t-0  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti：The secret of better UI composition (更佳 UI 組合的祕密)**  \
+- **Mauro Servienti：較佳的 UI 組合的秘密 @ no__t-0  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic：Including Front-End Web Components Into Microservices (將前端 Web 元件併入微服務)**  \
+- **Viktor Farcic：將前端 Web 元件包含在微服務 @ no__t-0 中  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Managing Frontend in the Microservices Architecture (管理微服務架構中的前端)**  \
+- **管理微服務架構中的前端**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]

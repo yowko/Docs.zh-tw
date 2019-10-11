@@ -1,5 +1,5 @@
 ---
-title: <proceduresignature1> 不符合 CLS 標準，因為它多載<proceduresignature2>的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範
+title: 因為 <proceduresignature1> 多載了<proceduresignature2>，不同於只在於陣列參數類型的陣列，或是陣列參數類型的順位，所以不符合 CLS 標準
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035
@@ -7,25 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 9006e12838581a98c7e7945278c7d767a3074259
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6143ebfbe7f131b0e196e531ed4282c8333be4ea
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661793"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250174"
 ---
-# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > 不符合 CLS 標準，因為它多載\<proceduresignature2 > 的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範
-程序或屬性會標示為`<CLSCompliant(True)>`時它會覆寫另一個程序或屬性和其參數清單之間唯一的差別是巢狀層級的不規則陣列陣序。  
+# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>@no__t 0proceduresignature1 > 不符合 CLS 規範，因為它會多載 @no__t 1proceduresignature2 的 >，而這與只有陣列參數類型的陣列或陣列參數類型的順位不同
+
+程式或屬性會在覆寫另一個程式或屬性時標示為 `<CLSCompliant(True)>`，而且其參數清單之間的唯一差異是不規則陣列的嵌套層級或陣列的次序。
   
- 在下列宣告中，第二個和第三個宣告會產生這個錯誤。  
+ 在下列宣告中，第二個和第三個宣告會產生此錯誤：
   
- `Overloads Sub processArray(ByVal arrayParam() As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam() As Integer)`  
   
- `Overloads Sub processArray(ByVal arrayParam()() As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam()() As Integer)`  
   
- `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam(,) As Integer)`  
   
- 第二個宣告會變更原始的一維參數`arrayParam`至陣列的陣列。 第三個宣告的變更`arrayParam`二維陣列 （也就是陣序 2）。 Visual Basic 可讓不同僅由其中一個這些變更的多載，這類多載與不相容[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準。  
+ 第二個宣告會將原始的一維參數 `arrayParam` 變更為陣列陣列。 第三個宣告會將 `arrayParam` 變更為二維陣列（順位2）。 雖然 Visual Basic 只允許多載不同于這些變更的其中一個，但這類超載並不符合[語言獨立性和與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)（CLS）。  
   
  將 <xref:System.CLSCompliantAttribute> 套用至程式設計項目時，請將屬性的 `isCompliant` 參數設定為 `True` 或 `False` ，表示符合標準或不符合標準。 這個參數沒有預設值，您必須提供值。  
   
@@ -33,15 +34,14 @@ ms.locfileid: "64661793"
   
  根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID:** BC40035  
+ **錯誤識別碼：** BC40035  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 如果您需要 cls 符合性，定義您的多載方面與彼此不同，在更多的方法，只將這個說明網頁所述的變更。  
-  
-- 如果您需要多載的差別只能由引用此說明的變更頁面上，移除<xref:System.CLSCompliantAttribute>從其定義或將它們標記為`<CLSCompliant(False)>`。  
+- 如果您需要 CLS 合規性，請將您的多載定義成不同于此說明頁面上所述之變更的方式。
+- 如果您要求多載只因此說明頁面上所述的變更而不同，請從其定義中移除 <xref:System.CLSCompliantAttribute>，或將它們標示為 `<CLSCompliant(False)>`。
   
 ## <a name="see-also"></a>另請參閱
 
-- [程序多載化](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [多載](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [程序多載化](../../programming-guide/language-features/procedures/procedure-overloading.md)
+- [多載](../modifiers/overloads.md)

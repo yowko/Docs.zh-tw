@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找具有特定屬性 (XPATH-LINQ to XML) 項目 (Visual Basic)
+title: 作法：尋找具有特定屬性的元素（XPath-LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 17c5e9abf607df7311ff2552b7e9c54cbf30fd59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39d635eb3d80a4a72647397313c77dac09777206
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780480"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250105"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找具有特定屬性 (XPATH-LINQ to XML) 項目 (Visual Basic)
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>作法：尋找具有特定屬性的元素（XPath-LINQ to XML）（Visual Basic）
 有時候您會想要尋找具有特定屬性的所有項目。 您並不關心屬性的內容。 但是，您想要根據屬性的存在與否來選擇。  
   
  XPath 運算式為：  
@@ -53,7 +53,7 @@ Next
   
  這個範例會產生下列輸出：  
   
-```  
+```console
 Results are identical  
 <Child2 Select="true">2</Child2>  
 <Child4 Select="true">4</Child4>  
@@ -61,4 +61,4 @@ Results are identical
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

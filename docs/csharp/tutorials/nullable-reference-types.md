@@ -3,12 +3,12 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 914a1eeee2d3d1843bf597f94761e39d16331b5c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: beecab2be57367dc0a200ff4f6067549cf1e7c51
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956654"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179784"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
@@ -25,7 +25,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="prerequisites"></a>必要條件
 
-您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 C# 8 編譯器適用于[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
+您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 C# 8.0 編譯器適用于[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
 
 本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
@@ -37,7 +37,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>建立應用程式並啟用可為 Null 的參考類型
 
-在 Visual Studio 中或從命令列中使用 `dotnet new console` 來建立新的主控台應用程式。 為應用程式 `NullableIntroduction` 命名。 建立應用程式之後，您必須指定整個專案在 @no__t 0**可為 null 的注釋內容**中編譯。 開啟 `csproj` 檔案，並將 `Nullable` 項目新增到 `PropertyGroup` 項目。 將其值設定為 `enabled`。 您必須選擇參與**可為 Null 的參考類型**功能，甚至是在 C# 8 專案中。 這是因為一旦開啟此功能之後，現有的參考變數宣告就會變成**不可為 Null 的參考類型**。 雖然該決策將有助於找出現有程式碼可能不會有適當 null 檢查的問題，但它可能無法正確反映原始的設計意圖：
+在 Visual Studio 中或從命令列中使用 `dotnet new console` 來建立新的主控台應用程式。 為應用程式 `NullableIntroduction` 命名。 建立應用程式之後，您必須指定整個專案在啟用的**可為 null 注釋內容**中進行編譯。 開啟 *.csproj*檔案，並將 @no__t 1 元素加入至 `PropertyGroup` 元素。 將其值設定為 `enable`。 您必須加入宣告**可為 null 的參考型別**功能， C#即使是在8.0 專案中也一樣。 這是因為一旦開啟此功能之後，現有的參考變數宣告就會變成**不可為 Null 的參考類型**。 雖然該決策將有助於找出現有程式碼可能不會有適當 null 檢查的問題，但它可能無法正確反映原始的設計意圖：
 
 ```xml
 <Nullable>enable</Nullable>
@@ -84,7 +84,7 @@ namespace NullableIntroduction
 }
 ```
 
-針對啟用可為 Null 內容中的程式碼，編譯器會將每個參考型別變數宣告解譯為**不可為 Null** 參考型別。 您可以藉由新增問題文字的屬性和問題的類型來查看第一個警告，如下列程式碼所示：
+編譯器會針對已啟用的可為 null 注釋內容中的程式碼，將每個參考型別變數宣告視為**不可為 null**的參考型別。 您可以藉由新增問題文字的屬性和問題的類型來查看第一個警告，如下列程式碼所示：
 
 ```csharp
 namespace NullableIntroduction
@@ -134,7 +134,7 @@ namespace NullableIntroduction
 
 [!code-csharp[AddQuestions](~/samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-因為整個專案都處於啟用可為 Null 的內容中，您會在將 `null` 傳遞給任何預期接受不可為 Null 參考型別的方法時收到警告。 將下列這一行新增到 `Main` 來試用它：
+因為整個專案都是在啟用的可為 null 注釋內容中，所以當您將 `null` 傳遞給任何需要不可為 null 的參考型別的方法時，將會收到警告。 將下列這一行新增到 `Main` 來試用它：
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);

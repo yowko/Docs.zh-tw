@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: d2f24ab746c425199b5a3e0c79835da372fe8e14
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: f9ae32c44e5648eb74d7eab9fa5aa6cc2f17b9a1
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002878"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237317"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>"C" 地區設定對應到不變的地區設定
 
 .NET Core 2.2 和更早版本取決於預設的 ICU 行為，這會將 "C" 地區設定對應至 en_US_POSIX 地區設定。 En_US_POSIX 地區設定有不想要的定序行為，因為它不支援不區分大小寫的字串比較。 由於某些 Linux 散發套件會將 "C" 地區設定設為預設地區設定，因此使用者會遇到非預期的行為。 
 
-#### <a name="details"></a>詳細資料
+#### <a name="change-description"></a>變更描述
 
 從 .NET Core 3.0 開始，"C" 地區設定對應已變更為使用不變的地區設定，而不是 en_US_POSIX。 非變異對應的 "C" 地區設定也會套用至 Windows 以保持一致性。
 

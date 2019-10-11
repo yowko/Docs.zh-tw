@@ -1,5 +1,5 @@
 ---
-title: .NET 中的 JSON 序列化
+title: 使用C# -.net 序列化和還原序列化 JSON
 author: tdykstra
 ms.author: tdykstra
 ms.date: 09/16/2019
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 6cb45fded220b6123dbf4461f5f1cf1c3556ff69
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083088"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180148"
 ---
-# <a name="json-serialization-in-net"></a>.NET 中的 JSON 序列化
+# <a name="json-serialization-in-net---overview"></a>.NET 中的 JSON 序列化-總覽
 
-命名`System.Text.Json`空間提供在 JavaScript 物件標記法（JSON）中進行序列化的功能。
+@No__t 0 命名空間提供從 JavaScript 物件標記法（JSON）序列化及還原序列化的功能。
 
 程式庫設計強調廣泛功能集的高效能和低記憶體配置。 內建的 UTF-8 支援將讀取和寫入 JSON 文字編碼為 UTF-8 的程式優化，這對網路上的資料和磁片上的檔案而言是最普遍的編碼方式。
 
@@ -29,8 +29,8 @@ ms.locfileid: "71083088"
 * 此程式庫內建為[.Net Core 3.0](https://aka.ms/netcore3download)共用架構的一部分。
 * 若是其他目標 framework，請安裝[System.web](https://www.nuget.org/packages/System.Text.Json) NuGet 封裝。 封裝支援：
   * .NET Standard 2.0 和更新版本
-  * .NET Framework 4.61 和更新版本
-  * .NET Core 2.0 和更新版本
+  * .NET Framework 4.6.1 和更新版本
+  * .NET Core 2.0、2.1 和2。2
 
 ## <a name="additional-resources"></a>其他資源
 

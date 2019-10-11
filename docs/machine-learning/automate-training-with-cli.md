@@ -4,12 +4,12 @@ description: 探索如何使用 ML.NET CLI 工具，從命令列自動定型最�
 author: CESARDELATORRE
 ms.date: 04/17/2019
 ms.custom: how-to
-ms.openlocfilehash: e5f75dc70ea5a76951d8698ea9c0d07cb2d4ddec
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: c147464ff59563d336363eed73fc6337bdb12e85
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663930"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275845"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>使用 ML.NET CLI 自動化模型定型
 
@@ -42,10 +42,10 @@ ML.NET CLI 目前支援的 ML 工作如下：
 使用範例：
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
-![影像](media/automate-training-with-cli/cli-model-generation.gif)
+![image](media/automate-training-with-cli/cli-model-generation.gif)
 
 您可以用在 *Windows PowerShell*、*macOS/Linux bash 或 *Windows CMD* 執行的方式執行它。 不過，表格式自動完成 (參數建議) 不適用於 *Windows CMD*。
 
@@ -73,7 +73,7 @@ CLI `auto-train` 命令會在輸出資料夾中產生下列資產：
 
 下列顯示 CLI 找到之前五個模型的二元分類 ML 工作計量清單：
 
-![影像](media/automate-training-with-cli/cli-binary-classification-metrics.png)
+![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
 精確度是分類問題的最熱門計量，但如以下參考所述，精確度不一定一律是選取最佳模型的最佳計量。 在某些情況下，您需要評估模型品質和其他計量。
 
@@ -83,7 +83,7 @@ CLI `auto-train` 命令會在輸出資料夾中產生下列資產：
 
 下列顯示 CLI 找到之前五個模型的多元分類 ML 工作計量清單：
 
-![影像](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
+![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
 若要探索及了解 CLI 輸出的計量，請參閱[多元分類計量](resources/metrics.md#metrics-for-multi-class-classification)。
 
@@ -93,7 +93,7 @@ CLI `auto-train` 命令會在輸出資料夾中產生下列資產：
 
 您會看到類似最佳 CLI 找到之前五個品質最佳模型的計量清單。 在這個特例中與迴歸 ML 工作相關：
 
-![影像](media/automate-training-with-cli/cli-regression-metrics.png)
+![image](media/automate-training-with-cli/cli-regression-metrics.png)
 
 若要探索及了解 CLI 輸出的計量，請參閱[廻歸計量](resources/metrics.md#metrics-for-regression)。
 

@@ -4,12 +4,12 @@ description: 探索如何在 Windows 上使用 .NET Core 執行適用於 Apache 
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928492"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250317"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>教學課程：開始使用適用於 Apache Spark 的 .NET
 
@@ -45,7 +45,7 @@ ms.locfileid: "70928492"
 
 4. 安裝 [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)。
     * 下載 [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip)。
-    * 解壓縮到本機目錄。 例如： `c:\bin\apache-maven-3.6.0\` 。
+    * 解壓縮到本機目錄。 例如，`c:\bin\apache-maven-3.6.0\`。
     * 將 Apache Maven 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 若解壓縮到 `c:\bin\apache-maven-3.6.0\`，就應將 `c:\bin\apache-maven-3.6.0\bin` 新增到您的 PATH 之中。
     * 使用 PowerShell 命令 `mvn -version` 驗證安裝。
 
@@ -57,8 +57,8 @@ ms.locfileid: "70928492"
 
 6. 設定 [WinUtils](https://github.com/steveloughran/winutils)。
     * 從 [WinUtils 存放庫](https://github.com/steveloughran/winutils)下載 **winutils.exe** 二進位檔。 選取用以編譯 Spark 的 Hadoop 版本。 例如，您可以為 **Spark 2.3.2**使用 **hadoop-2.7.1**。 Hadoop 版本會標註在您 Spark 安裝資料夾名稱的結尾。
-    * 將 **winutils.exe** 二進位檔儲存到您選擇的目錄。 例如： `c:\hadoop\bin` 。
-    * 設定 `HADOOP_HOME` 以反映 **winutils.exe** 的目錄 (不含 `bin`)。 例如： `c:\hadoop` 。
+    * 將 **winutils.exe** 二進位檔儲存到您選擇的目錄。 例如，`c:\hadoop\bin`。
+    * 設定 `HADOOP_HOME` 以反映 **winutils.exe** 的目錄 (不含 `bin`)。 例如，`c:\hadoop`。
     * 設定 PATH 環境變數，將 `%HADOOP_HOME%\bin` 加入其中。
 
 再次確認您可以從命令列執行 `dotnet`、`java`、`mvn` 和 `spark-shell`，然後前往下一節。
@@ -67,7 +67,7 @@ ms.locfileid: "70928492"
 
 1. 從適用於 Apache Spark 的 .NET GitHub 版本頁面，將發行的 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) 下載到您的本機電腦。 例如，您可以將其下載到 `c:\bin\Microsoft.Spark.Worker\` 路徑。
 
-2. 建立名為 `DotnetWorkerPath` 的[新環境變數](https://www.java.com/en/download/help/path.xml)，並將其設為 **Microsoft.Spark.Worker** 的下載目錄，然後加以解壓縮。 例如： `c:\bin\Microsoft.Spark.Worker` 。
+2. 建立名為 `DOTNET_WORKER_DIR` 的[新環境變數](https://www.java.com/en/download/help/path.xml)，並將其設為 **Microsoft.Spark.Worker** 的下載目錄，然後加以解壓縮。 例如，`c:\bin\Microsoft.Spark.Worker`。
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>複製適用於 Apache Spark 的 .NET GitHub 存放庫
 

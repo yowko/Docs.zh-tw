@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找所有節點中的命名空間 (Visual Basic)
+title: 作法：尋找命名空間中的所有節點（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ccc996aa986c97fdffb3deeea36346da726a588
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855669"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249938"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>HOW TO：尋找所有節點中的命名空間 (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>作法：尋找命名空間中的所有節點（Visual Basic）
 您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。  
   
 ## <a name="example"></a>範例  
@@ -45,7 +45,7 @@ End Module
   
  此程式碼會產生下列輸出：  
   
-```  
+```console  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  
@@ -111,4 +111,4 @@ End Module
   
 ## <a name="see-also"></a>另請參閱
 
-- [基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查詢（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

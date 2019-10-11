@@ -2,19 +2,19 @@
 title: C# 8.0 的新功能- C#指南
 description: 大致了解 C# 8.0 中可用的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: d948db0523684c998425bc22ab6fd245d65a8045
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736706"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275778"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
 C#8.0 新增下列功能和增強的C#語言：
 
 - [唯讀成員](#readonly-members)
-- [預設介面成員](#default-interface-members)
+- [預設介面方法](#default-interface-methods)
 - [模式比對增強功能](#more-patterns-in-more-places)：
   - [Switch 運算式](#switch-expressions)
   - [屬性模式](#property-patterns)
@@ -85,11 +85,11 @@ public readonly void Translate(int xOffset, int yOffset)
 
 此功能可讓您指定您的設計意圖，以便編譯器可以強制套用，並根據該意圖進行最佳化。
 
-## <a name="default-interface-members"></a>預設介面成員
+## <a name="default-interface-methods"></a>預設介面方法
 
-您現在可以新增成員到介面並提供那些成員的實作。 此語言功能可讓 API 作者在較新的版本中新增方法到介面中，而不會因為該介面的現有實作造成原始程式碼或二進位檔案相容性受影響。 現有實作會「繼承」預設實作。 此功能也會讓 C# 與以 Android 或 Swift 為目標的 API 相互操作，這些 API 支援類似的功能。 預設介面成員也會啟用類似「特徵」語言功能的案例。
+您現在可以新增成員到介面並提供那些成員的實作。 此語言功能可讓 API 作者在較新的版本中新增方法到介面中，而不會因為該介面的現有實作造成原始程式碼或二進位檔案相容性受影響。 現有實作會「繼承」預設實作。 此功能也會讓 C# 與以 Android 或 Swift 為目標的 API 相互操作，這些 API 支援類似的功能。 預設介面方法也會啟用類似于「特性」語言功能的案例。
 
-預設介面成員會影響許多案例與語言元素。 我們的第一個教學課程涵蓋[使用預設實作更新介面](../tutorials/default-interface-members-versions.md)。 其他教學課程與參考更新即將在正式發行時推出。
+預設介面方法會影響許多案例和語言元素。 我們的第一個教學課程涵蓋[使用預設實作更新介面](../tutorials/default-interface-methods-versions.md)。 其他教學課程與參考更新即將在正式發行時推出。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置使用更多的模式
 
@@ -382,7 +382,7 @@ await foreach (var number in GenerateSequence())
 - <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
 - End 運算子的索引 `^`，指定索引相對於序列結尾。
 - <xref:System.Range?displayProperty=nameWithType> 代表序列的子範圍。
-- 範圍運算子`..`，指定範圍的開始和結束作為其運算元。
+- 範圍運算子 `..`，指定範圍的開始和結束，做為其運算元。
 
 讓我們從索引的規則開始。 假設有一個陣列 `sequence`。 `0` 索引與 `sequence[0]` 相同。 `^0` 索引與 `sequence[sequence.Length]` 相同。 請注意，`sequence[^0]` 會擲回例外狀況，就樣 `sequence[sequence.Length]` 會這樣做一樣。 針對任何數字 `n`，索引 `^n` 與 `sequence.Length - n` 相同。
 
@@ -451,7 +451,7 @@ var text = words[phrase];
 
 ## <a name="null-coalescing-assignment"></a>Null 聯合指派
 
-C#8.0 引進了 null 聯合指派運算子`??=`。 只有當左運算元`??=`評估為`null`時，您才可以使用運算子，將其右運算元的值指派給其左邊的運算元。
+C#8.0 引進 null 聯合指派運算子 `??=`。 只有當左運算元評估為 `null` 時，才可以使用 `??=` 運算子，將其右運算元的值指派給其左邊的運算元。
 
 ```csharp
 List<int> numbers = null;
@@ -471,7 +471,7 @@ Console.WriteLine(i);  // output: 17
 
 在C# 7.3 和更早版本中，結構化型別（包含至少一個型別引數的型別）不能是[非受控型](../language-reference/builtin-types/unmanaged-types.md)別。 從C# 8.0 開始，如果結構化的實數值型別只包含非受控類型的欄位，則不會受管理。
 
-例如，假設有下列泛型`Coords<T>`類型的定義：
+例如，假設下列泛型 `Coords<T>` 類型的定義：
 
 ```csharp
 public struct Coords<T>
@@ -481,7 +481,7 @@ public struct Coords<T>
 }
 ```
 
-類型是8.0 和更新版本中C#的非受控類型。 `Coords<int>` 就像任何非受控類型一樣，您可以建立此類型變數的指標，或針對此類型的實例[配置堆疊上的記憶體區塊](../language-reference/operators/stackalloc.md)：
+`Coords<int>` 類型是8.0 和更新版本中C#的非受控類型。 就像任何非受控類型一樣，您可以建立此類型變數的指標，或針對此類型的實例[配置堆疊上的記憶體區塊](../language-reference/operators/stackalloc.md)：
 
 ```csharp
 Span<Coords<int>> coordinates = stackalloc[]
@@ -496,7 +496,7 @@ Span<Coords<int>> coordinates = stackalloc[]
 
 ## <a name="stackalloc-in-nested-expressions"></a>在嵌套運算式中 stackalloc
 
-從C# 8.0 開始，如果[stackalloc](../language-reference/operators/stackalloc.md)運算式的<xref:System.Span%601?displayProperty=nameWithType>結果是或<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>型別，您可以在其他運算式中使用`stackalloc`運算式：
+從C# 8.0 開始，如果[stackalloc](../language-reference/operators/stackalloc.md)運算式的結果為 <xref:System.Span%601?displayProperty=nameWithType> 或 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 類型，您可以在其他運算式中使用 `stackalloc` 運算式：
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
@@ -506,4 +506,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>增強內插逐字字串
 
-內`$` `@` [插](../language-reference/tokens/interpolated.md)逐字字串`@$"..."`中的和 token 順序可以是 any：和都是有效的內插逐字字串。`$@"..."` 在較C#舊的版本`$`中，權杖`@`必須出現在標記之前。
+內[插](../language-reference/tokens/interpolated.md)逐字字串中的 `$` 和 @no__t 1 token 的順序可以是 any： `$@"..."` 和 `@$"..."` 都是有效的內插逐字字串。 在舊版C#中，@no__t 1 token 必須出現在 `@` token 之前。

@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 0d138e31f8cd5b447c75bffda5164d92ce8eb5a2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117595"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275745"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -91,7 +91,7 @@ dotnet restore [-h|--help]
 
 要還原之專案檔的選用路徑。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -137,7 +137,7 @@ dotnet restore [-h|--help]
 
 `--verbosity <LEVEL>`
 
-設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。
 
 `--interactive`
 
@@ -179,11 +179,11 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在還原作業期間使用的 NuGet 套件來源。 這會覆寫*nuget.exe*檔案中指定的所有來源， `<packageSource>`並有效地讀取*nuget .config*檔案，就像專案不存在一樣。 多次指定這個選項，即可提供多個來源。
+指定要在還原作業期間使用的 NuGet 套件來源。 這會覆寫*nuget.exe*檔案中指定的所有來源，並有效地讀取*nuget.exe*檔案，就好像 @no__t 2 元素不存在一樣。 多次指定這個選項，即可提供多個來源。
 
 `--verbosity <LEVEL>`
 
-設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設為 `minimal`。
 
 ---
 
@@ -205,6 +205,6 @@ dotnet restore [-h|--help]
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-還原目前目錄中專案的相依性和工具，並且只顯示最小輸出：
+還原目前目錄中專案的相依性和工具，顯示詳細輸出：
 
-`dotnet restore --verbosity minimal`
+`dotnet restore --verbosity detailed`

@@ -4,12 +4,12 @@ description: 了解套件、中繼套件和架構的術語。
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7b019686df195a8cebdce126f7a0b2d22548dc0e
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090494"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275758"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>套件、中繼套件和架構
 
@@ -17,7 +17,7 @@ ms.locfileid: "59090494"
 
 每個 .NET Core 套件可支援在多個 .NET 實作 (以架構來代表) 上執行。 這些架構有些是傳統的架構，例如 `net46` 即表示 .NET Framework。 其他還有可以視為「套件型架構」的全新架構，該架構可以建立新的模型來定義架構。 這些套件型架構完全是以套件形式構成與定義，並在套件和架構之間形成強式關聯。
 
-## <a name="packages"></a>封裝
+## <a name="packages"></a>Packages
 
 .NET Core 分割成各個套件組，以提供基本、較高層級的資料類型、應用程式組合類型與一般公用程式。 其中的每個套件皆代表具有相同名稱的單一組件。 例如，[System.Runtime](https://www.nuget.org/packages/System.Runtime) 包含 System.Runtime.dll。 
 
@@ -72,7 +72,7 @@ ms.locfileid: "59090494"
 主要的 .NET Core 中繼套件包括：
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - 描述屬於 .NET Core 散發套件的程式庫。 建立 [`.NETCoreApp` 架構](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj)。 仰賴較小的 `NETStandard.Library`。
-- [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App) \(英文\) - 包含所有來自 ASP.NET Core 和 Entity Framework Core 之支援的套件，除了那些包含協力廠商相依性的套件。 如需詳細資訊，請參閱 [ASP.NET Core 的 Microsoft.AspNetCore.App 中繼套件](/aspnet/core/fundamentals/metapackage)。
+- [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App) \(英文\) - 包含所有來自 ASP.NET Core 和 Entity Framework Core 之支援的套件，除了那些包含協力廠商相依性的套件。 如需詳細資訊，請參閱 [ASP.NET Core 的 Microsoft.AspNetCore.App 中繼套件](/aspnet/core/fundamentals/metapackage-app)。
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) - 包含 ASP.NET Core 所有支援的套件、Entity Framework Core，以及 ASP.NET Core 和 Entity Framework Core 所使用的內部和協力廠商相依性。 如需詳細資訊，請參閱 [ASP.NET Core 2.x 的 Microsoft.AspNetCore.All 中繼套件](/aspnet/core/fundamentals/metapackage)。
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - 一組相容性 facade，其可啟用以 mscorlib 為基礎的可攜式類別庫 (PCL)，以在 .NET Core 上執行。
 

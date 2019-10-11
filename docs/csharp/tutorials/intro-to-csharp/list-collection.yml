@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850737"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179001"
 items:
 - durationInMinutes: 1
   content: >
@@ -36,6 +36,9 @@ items:
     }
 
     ```
+
+
+    如果您在環境中執行此程式，則應該改為遵循[本機版本](arrays-and-collections.md)的指示。
 
 
     您已建立字串清單，在該清單中新增三個名稱，並以全部大寫的形式列印出那些名稱。 您會使用從先前教學課程中學習到的概念，在清單中執行迴圈。

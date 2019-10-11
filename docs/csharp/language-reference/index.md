@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: fd5c39bfcb05296a36d94ea64946f8c29ed7e4d6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925346"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275809"
 ---
 # <a name="c-reference"></a>C# 參考
 本節提供有關 C# 關鍵字、運算子、特殊字元、前置處理器指示詞、編譯器選項以及編譯器錯誤和警告的參考資料。  
@@ -55,7 +55,7 @@ ms.locfileid: "70925346"
  C# 7.3 是另一個包含數項次要更新的小數點版本。 您可以在泛型型別參數使用新的限制式。 另有幾項變更可讓您更輕鬆地使用 `fixed` 欄位，包括使用 [`stackalloc`](./operators/stackalloc.md) 配置。 使用 `ref` 關鍵字宣告的區域變數可以重新指派，以參考新的儲存體。 您可以將屬性放在自動實作的屬性，該屬性以編譯器產生的支援欄位為目標。 運算式變數可用於初始設定式。 Tuple 可用於比較是否相等 (或不相等)。 多載解析也有幾項功能改進。
   
  [C#8.0 規格提案](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C#8.0 適用 .NET Core 3.0。 這些功能包括可為 null 的參考型別、遞迴模式比對、預設介面成員、非同步資料流程、範圍和索引、使用和 using 宣告的模式、null 聯合指派，以及 readonly 實例成員。
+ C#8.0 適用 .NET Core 3.0。 這些功能包括可為 null 的參考型別、遞迴模式比對、預設介面方法、非同步資料流程、範圍和索引、使用和 using 宣告的模式、null 聯合指派，以及 readonly 實例成員。
   
 ## <a name="related-sections"></a>相關章節  
 

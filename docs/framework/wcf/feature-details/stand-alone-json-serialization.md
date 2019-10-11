@@ -1,23 +1,26 @@
 ---
-title: 獨立 JSON 序列化
+title: 使用 DataContractJsonSerializer 的獨立 JSON 序列化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 63f40333b53bce33e4c3aafb784e038f52bc8630
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 65cae13d0185ea1f18bdd54cd26f703fde984f69
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663765"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180239"
 ---
-# <a name="stand-alone-json-serialization"></a>獨立 JSON 序列化
+# <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>使用 DataContractJsonSerializer 的獨立 JSON 序列化
 
-JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 JavaScript 程式碼而設計的資料格式。 它是建立 Windows Communication Foundation (WCF) 中的 ASP.NET AJAX 服務所使用的預設資料格式。
+> [!NOTE]
+> 本文是關於 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 對於涉及序列化和還原序列化 JSON 的大部分案例，我們建議您在 system.string[命名空間](../../../standard/serialization/system-text-json-overview.md)中的工具。 
+
+JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 JavaScript 程式碼而設計的資料格式。 這是在 Windows Communication Foundation （WCF）中建立的 ASP.NET AJAX 服務所使用的預設資料格式。
 
 此外，在未與 ASP.NET 整合的情況下建立 AJAX 服務時，也可以使用這個格式，在這種情況中，XML 是預設值，不過您也可以選擇 JSON。
 
-最後，如果您需要 JSON 支援但不想建立 AJAX 服務，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可讓您直接將 .NET 物件序列化為 JSON 資料，以及將這類資料還原序列化為 .NET 型別的執行個體。 如需如何執行此動作的說明，請參閱[How to:序列化和還原序列化 JSON 資料](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。
+最後，如果您需要 JSON 支援但不想建立 AJAX 服務，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可讓您直接將 .NET 物件序列化為 JSON 資料，以及將這類資料還原序列化為 .NET 型別的執行個體。 如需如何執行這項操作的說明，請參閱 [How to：序列化和還原序列化 JSON 資料 @ no__t-0。
 
-使用 JSON 時，相同的 .NET 型別會受到支援，不過有少數的例外情形，如同 <xref:System.Runtime.Serialization.DataContractSerializer> 所支援的一樣。 如需支援之類型的清單，請參閱 < [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 其中包括大部分的基本型別、大部分的陣列和集合型別，以及使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 的複雜型別。
+使用 JSON 時，相同的 .NET 型別會受到支援，不過有少數的例外情形，如同 <xref:System.Runtime.Serialization.DataContractSerializer> 所支援的一樣。 如需支援的類型清單，請參閱[資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 其中包括大部分的基本型別、大部分的陣列和集合型別，以及使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 的複雜型別。
 
 ## <a name="mapping-net-types-to-json-types"></a>將 .NET 型別對應至 JSON 型別
 
@@ -25,25 +28,25 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 
 |.NET 型別|JSON/JavaScript|注意|
 |----------------|----------------------|-----------|
-|所有數字型別，例如 <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>|number|`Double.NaN`、`Double.PositiveInfinity` 和 `Double.NegativeInfinity` 等特殊值不受支援，並且會造成無效的 JSON。|
-|<xref:System.Enum>|number|請參閱本主題稍後的＜列舉與 JSON＞。|
+|所有數字型別，例如 <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>|Number|`Double.NaN`、`Double.PositiveInfinity` 和 `Double.NegativeInfinity` 等特殊值不受支援，並且會造成無效的 JSON。|
+|<xref:System.Enum>|Number|請參閱本主題稍後的＜列舉與 JSON＞。|
 |<xref:System.Boolean>|Boolean|--|
 |<xref:System.String>、 <xref:System.Char>|String|--|
-|<xref:System.TimeSpan>、<xref:System.Guid>、<xref:System.Uri>|String|在 JSON 中這些類型的格式是 XML 中相同 (本質上，以 ISO 8601 持續時間格式的時間範圍，「 12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和中的自然字串形式的 URI，例如"http://www.example.com 」)。 如需精確的資訊，請參閱[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|這些類型在 JSON 中的格式與 XML 相同（基本上是以 ISO 8601 持續時間格式的 TimeSpan、"12345678-ABCD-abcd-ABCD-1234567890AB" 格式的 GUID 和其自然字串形式的 URI，例如 "http://www.example.com"）。 如需精確的資訊，請參閱[資料合約架構參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|
 |<xref:System.Xml.XmlQualifiedName>|String|格式為 "name:namespace" (第一個冒號前面的就是名稱)。 名稱或命名空間可能會遺失。 如果沒有命名空間，冒號也可以省略。|
 |型別 <xref:System.Array> 的 <xref:System.Byte>|數字陣列|每個數字代表一個位元組值。|
 |<xref:System.DateTime>|DateTime 或字串|請參閱本主題稍後的＜日期/時間與 JSON＞。|
 |<xref:System.DateTimeOffset>|複雜類型|請參閱本主題稍後的＜日期/時間與 JSON＞。|
-|XML 和 ADO.NET 型別 (<xref:System.Xml.XmlElement>、<br /><br /> <xref:System.Xml.Linq.XElement>. <xref:System.Xml.XmlNode> 的陣列、<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>)。|String|請參閱本主題的＜XML 型別與 JSON＞一節。|
+|XML 和 ADO.NET 型別 (<xref:System.Xml.XmlElement>、<br /><br /> <xref:System.Xml.Linq.XElement>. <xref:System.Xml.XmlNode> 的陣列、<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|請參閱本主題的＜XML 型別與 JSON＞一節。|
 |<xref:System.DBNull>|空的複雜型別|--|
-|集合、字典與陣列|陣列|請參閱本主題的＜集合、字典與陣列＞一節。|
+|集合、字典與陣列|Array|請參閱本主題的＜集合、字典與陣列＞一節。|
 |複雜型別 (已套用 <xref:System.Runtime.Serialization.DataContractAttribute> 或 <xref:System.SerializableAttribute>)|複雜類型|資料成員成為 JavaScript 複雜類型的成員。|
 |實作 <xref:System.Runtime.Serialization.ISerializable> 介面的複雜型別)|複雜類型|與其他複雜型別相同，但不支援某些 <xref:System.Runtime.Serialization.ISerializable> 型別，請參閱本主題的「進階資訊」一節中有關 ISerializable 支援的部分。|
 |任何型別的 `Null` 值|Null|可為 Null 的型別也受支援，並且會以和不可為 Null 的型別相同的方式對應至 JSON。|
 
 ### <a name="enumerations-and-json"></a>列舉與 JSON
 
-在 JSON 中，列舉成員值會被視為數字，它處理這些值的方式與資料合約不同。在資料合約中，這些值會包含為成員名稱。 如需有關資料合約處理方式的詳細資訊，請參閱[列舉型別 Types in Data Contracts](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。
+在 JSON 中，列舉成員值會被視為數字，它處理這些值的方式與資料合約不同。在資料合約中，這些值會包含為成員名稱。 如需資料合約處理的詳細資訊，請參閱[資料合約中的列舉類型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。
 
 - 例如，如果您具有 `public enum Color {red, green, blue, yellow, pink}`，則序列化 `yellow` 會產生數字 3，而不是字串 "yellow"。
 
@@ -68,7 +71,7 @@ JSON 格式並未直接支援日期和時間。 然而，它們相當常用，�
 
 XML 型別成為 JSON 字串。
 
-- 例如，如果資料成員"q"的型別 XElement 包含\<abc / > 的 JSON 會是 {"q":"\<abc / >"}。
+- 例如，如果 System.xml.linq.xelement> 類型的資料成員 "q" 包含 \<abc/>，JSON 就是 {"q"： "\<abc/>"}。
 
 - 還有一些指定如何包裝 XML 的特殊規則。如需詳細資訊，請參閱本主題稍後的「進階資訊」一節。
 
@@ -80,17 +83,17 @@ XML 型別成為 JSON 字串。
 
 - JSON 表示法會忽略任何使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 的自訂。
 
-- 您不可以直接使用字典來搭配 JSON。 字典\<字串、 物件 > 可能不支援在相同的方式，在 WCF 中如預期般從其他 JSON 技術使用。 例如，如果字典中 "abc" 是對應至 "xyz" 而 "def" 是對應至 42，則 JSON 表示法不是 {"abc":"xyz","def":42}，而是 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]。
+- 您不可以直接使用字典來搭配 JSON。 字典 @ no__t-0string、物件 > 在與其他 JSON 技術搭配使用時，可能無法以相同的方式在 WCF 中受到支援。 例如，如果字典中 "abc" 是對應至 "xyz" 而 "def" 是對應至 42，則 JSON 表示法不是 {"abc":"xyz","def":42}，而是 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]。
 
 - 如果您希望直接使用 JSON (動態存取索引鍵和值，而不需預先定義嚴謹的合約)，可以選擇數個選項：
 
-  - 請考慮使用[弱型別 JSON 序列化 (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)範例。
+  - 請考慮使用[弱類型 JSON 序列化（AJAX）](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)範例。
 
   - 請考慮使用 <xref:System.Runtime.Serialization.ISerializable> 介面和還原序列化建構函式，這兩種機制可讓您分別在序列化和還原序列化時存取 JSON 索引鍵/值組，但不適用於部分信任案例中。
 
-  - 請考慮使用[Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)而不是使用序列化程式。
+  - 請考慮使用[JSON 和 XML 之間的對應](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)，而不是使用序列化程式。
 
-  - *多型*序列化的內容中是指能夠序列化衍生的型別，其基底型別所預期的位置。 以多型方式使用集合時，例如，將集合指派至 <xref:System.Object> 時，有幾個 JSON 特定的特殊規則。 在本主題稍後的「進階資訊」一節中，將會更詳細地討論這個議題。
+  - 序列化內容中的*多*型是指將衍生型別序列化為預期的基底型別的能力。 以多型方式使用集合時，例如，將集合指派至 <xref:System.Object> 時，有幾個 JSON 特定的特殊規則。 在本主題稍後的「進階資訊」一節中，將會更詳細地討論這個議題。
 
 ## <a name="additional-details"></a>其他詳細資料
 
@@ -104,13 +107,13 @@ XML 型別成為 JSON 字串。
 
 ### <a name="polymorphism"></a>多型
 
-多型序列化是由可序列化必須是基底型別之衍生型別的能力所組成。 這是使用支援 XML 序列化的方式相比的 WCF 支援 JSON 序列化。 比方說，您可以將序列化`MyDerivedType`何處`MyBaseType`預期，或序列化`Int`其中`Object`預期。
+多型序列化是由可序列化必須是基底型別之衍生型別的能力所組成。 這是由 WCF 支援的 JSON 序列化，相當於支援 XML 序列化的方式。 例如，您可以序列化 `MyDerivedType`，其中應為 `MyBaseType`，或序列化 `Int`，其中應為 `Object`。
 
 如果必須是基底型別，則在還原序列化衍生型別時可能會遺失型別資訊，除非您還原序列化複雜型別。 例如，如果序列化必須是 <xref:System.Uri> 的 <xref:System.Object>，則會產生 JSON 字串。 如果這個字串接著再還原序列化為 <xref:System.Object>，則會傳回 .NET <xref:System.String>。 還原序列化程式並不知道字串初始的型別為 <xref:System.Uri>。 一般而言，當必須是 <xref:System.Object> 時，所有的 JSON 字串都會還原序列化為 .NET 字串，並且所有用於序列化 .NET 集合、字典和陣列的 JSON 陣列都會還原序列化為 <xref:System.Array> 型別的 .NET <xref:System.Object>，不論實際的原始型別為何。 JSON 布林值會對應至 .NET <xref:System.Boolean>。 然而，當必須是 <xref:System.Object> 時，JSON 數字會還原序列化為 .NET <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>，其中會自動選取最適合的型別。
 
 在還原序列化為介面型別時，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 會將宣告型別視為物件來還原序列化。
 
-在使用您自己的基底型別和衍生型別時，通常需要使用 <xref:System.Runtime.Serialization.KnownTypeAttribute>、<xref:System.ServiceModel.ServiceKnownTypeAttribute> 或相等的機制。 比方說，如果您有包含的運算`Animal`傳回值和其實際的執行個體傳回`Cat`(衍生自`Animal`)，您應該將套用<xref:System.Runtime.Serialization.KnownTypeAttribute>至`Animal`型別或<xref:System.ServiceModel.ServiceKnownTypeAttribute>至此作業，並指定`Cat`中這些屬性的型別。 如需詳細資訊，請參閱 < [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。
+在使用您自己的基底型別和衍生型別時，通常需要使用 <xref:System.Runtime.Serialization.KnownTypeAttribute>、<xref:System.ServiceModel.ServiceKnownTypeAttribute> 或相等的機制。 例如，如果您的作業具有 `Animal` 的傳回值，而且實際傳回 `Cat` 的實例（衍生自 `Animal`），您應該將 <xref:System.Runtime.Serialization.KnownTypeAttribute> 套用到 `Animal` 類型，或 <xref:System.ServiceModel.ServiceKnownTypeAttribute> 套用至作業，並在中指定 `Cat` 類型這些屬性。 如需詳細資訊，請參閱[資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。
 
 如需多型序列化運作方式的詳細資訊，以及使用時必須遵守的一些限制說明，請參閱本主題稍後的「進階資訊」一節。
 
@@ -120,7 +123,7 @@ XML 型別成為 JSON 字串。
 
 ## <a name="json-in-urls"></a>URL 中的 JSON
 
-當以 HTTP GET 動詞命令來使用 ASP.NET AJAX 端點時 (使用 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性)，傳入參數會出現在要求 URL 中而非訊息本文。 JSON 支援即使在要求 URL 中，因此如果您的作業採用`Int`名為"number"和`Person`複雜類型，稱為"p"，URL 可能類似下列的 URL。
+當以 HTTP GET 動詞命令來使用 ASP.NET AJAX 端點時 (使用 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性)，傳入參數會出現在要求 URL 中而非訊息本文。 即使在要求 URL 中也支援 JSON，因此如果您的作業會使用名為 "number" 的 @no__t，以及名為 "p" 的 `Person` 複雜型別，則 URL 可能會類似下列 URL。
 
 ```
 http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
@@ -152,13 +155,13 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 
 ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 JavaScript `DateTime` 執行個體。 如果在 .NET 中有其他字串有不是 <xref:System.DateTime> 型別的類似格式，它們也會被轉換。
 
-轉換才會進行逸出"/"字元 (也就是 JSON 看起來像"\\/Date(700000+0500)\\/")，以及此原因 WCF 的 JSON 編碼器 (啟用<xref:System.ServiceModel.WebHttpBinding>) 永遠會逸出"/"字元。
+轉換只會在 "/" 字元被轉義（也就是，JSON 看起來像是 "\\/Date （700000 + 0500） \\/"）時才會發生，因此 WCF 的 JSON 編碼器（由 <xref:System.ServiceModel.WebHttpBinding> 啟用）一律會將 "/" 字元轉義。
 
 ### <a name="xml-in-json-strings"></a>JSON 字串中的 XML
 
 #### <a name="xmlelement"></a>XmlElement
 
-<xref:System.Xml.XmlElement> 是依現狀序列化，沒有包裝。 例如，"x"型別的資料成員<xref:System.Xml.XmlElement>，其中包含\<abc / > 會如下所示。
+<xref:System.Xml.XmlElement> 是依現狀序列化，沒有包裝。 例如，包含 @no__t 1abc/> 之類型 <xref:System.Xml.XmlElement> 的資料成員 "x"，如下所示。
 
 ```json
 {"x":"<abc/>"}
@@ -188,7 +191,7 @@ ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 Jav
 
 如前所述，在 JSON 中支援多型有一些限制。 JavaScript 是弱型別語言，而型別身分識別通常不是問題。 然而，當使用 JSON 在強型別系統 (.NET) 和弱型別系統 (JavaScript) 之間進行通訊時，保留型別身分識別是很有用的。 例如，資料合約名稱為 "Square" 和 "Circle" 的型別衍生自資料合約名稱為 "Shape" 的型別。 如果 "Circle" 是從 .NET 傳送至 JavaScript，稍後再傳回至應該有 "Shape" 的 .NET 方法，讓 .NET 端知道所討論的物件原本是 "Circle" 會很有用，否則衍生型別的特定資訊 (例如，"Circle" 上的 "radius" 資料成員) 可能會遺失。
 
-若要保留型別身分識別，在將複雜型別序列化至 JSON 時可以新增「型別提示」，還原序列化程式便可辨識提示並執行適當的動作。 「 型別提示 」 是 JSON 索引鍵/值配對的索引鍵名稱"\_\_類型 」 （兩條底線後接"type"這個字）。 值是格式 "DataContractName:DataContractNamespace" (第一個冒號之前是名稱) 的 JSON 字串。 使用之前的範例，"Circle" 可以進行序列化，如下所示。
+若要保留型別身分識別，在將複雜型別序列化至 JSON 時可以新增「型別提示」，還原序列化程式便可辨識提示並執行適當的動作。 「類型提示」是 JSON 索引鍵/值組，索引鍵名稱為 "\_ @ no__t-1type" （兩個底線後面接著 "type" 一字）。 值是格式 "DataContractName:DataContractNamespace" (第一個冒號之前是名稱) 的 JSON 字串。 使用之前的範例，"Circle" 可以進行序列化，如下所示。
 
 ```json
 {"__type":"Circle:http://example.com/myNamespace","x":50,"y":70,"radius":10}
@@ -196,17 +199,17 @@ ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 Jav
 
 型別提示與 XML 結構描述執行個體標準所定義的 `xsi:type` 屬性十分類似，並且是在序列化/還原序列化 XML 時使用。
 
-資料成員稱為 「\_\_類型 」 禁止由於與型別提示的潛在衝突。
+因為可能與類型提示發生衝突，所以禁止使用名為 "\_ @ no__t-1type" 的資料成員。
 
 #### <a name="reducing-the-size-of-type-hints"></a>縮小型別提示的大小
 
-若要縮小 JSON 訊息，預設資料合約命名空間前置詞 (`http://schemas.datacontract.org/2004/07/`) 就會以"#"字元取代。 (使用逸出規則用來進行這項復原，： 如果命名空間開頭為"#"或"\\」 字元，它們會加上額外的"\\"字元)。 因此，如果"Circle"是.NET 命名空間"MyApp.Shapes"中的型別，其預設資料合約命名空間是`http://schemas.datacontract.org/2004/07/MyApp`。 Shapes 和 JSON 表示如下所示。
+為了減少 JSON 訊息的大小，會以 "#" 字元取代預設的資料合約命名空間前置詞（`http://schemas.datacontract.org/2004/07/`）。 （若要讓此取代可以復原，則會使用轉義規則：如果命名空間是以 "#" 或 "\\" 字元開頭，則會附加額外的 "\\" 字元）。 因此，如果 "Circle" 是 .NET 命名空間 "MyApp" 中的類型，其預設資料合約命名空間會 `http://schemas.datacontract.org/2004/07/MyApp`。 Shapes 和 JSON 表示如下所示。
 
 ```json
 {"__type":"Circle:#MyApp.Shapes","x":50,"y":70,"radius":10}
 ```
 
-截斷 (#MyApp.Shapes) 和完整 (http://schemas.datacontract.org/2004/07/MyApp.Shapes) 名稱均可解讀還原序列化。
+截斷的（#MyApp 圖形）和完整（ http://schemas.datacontract.org/2004/07/MyApp.Shapes) 名稱在還原序列化時都是可理解的。
 
 #### <a name="type-hint-position-in-json-objects"></a>JSON 物件中的型別提示位置
 
@@ -216,7 +219,7 @@ ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 Jav
 {"x":50,"y":70,"radius":10,"__type":"Circle:#MyApp.Shapes"}
 ```
 
-這兩個<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>使用 WCF 和 ASP.NET AJAX 用戶端頁面永遠發出型別提示第一次。
+WCF 和 ASP.NET AJAX 用戶端頁面所使用的 @no__t 0，一律會先發出型別提示。
 
 #### <a name="type-hints-apply-only-to-complex-types"></a>型別提示只套用至複雜型別
 
@@ -234,7 +237,7 @@ ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 Jav
 
 #### <a name="duplicate-data-member-names"></a>重複資料成員名稱
 
-衍生型別資訊會和基底型別資訊一起存在相同的 JSON 物件中，且可能會以各種順序出現。 比方說，`Shape`可能表示如下。
+衍生型別資訊會和基底型別資訊一起存在相同的 JSON 物件中，且可能會以各種順序出現。 例如，`Shape` 可能會以下列方式表示。
 
 ```json
 {"__type":"Shape:#MyApp.Shapes","x":50,"y":70}
@@ -246,7 +249,7 @@ ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 Jav
 {"__type":"Circle:#MyApp.Shapes","x":50, "radius":10,"y":70}
 ```
 
-如果基底`Shape`型別也包含一個名為的資料成員"`radius`」，這樣會導致衝突這兩個序列化 （因為 JSON 物件不能有重複索引鍵名稱） 和還原序列化 （因為不清楚"radius"是否指`Shape.radius`或`Circle.radius`)。 因此，通常並不建議在資料合約類別中使用「屬性隱藏」的概念 (基底和衍生類別上相同名稱的資料成員)，而實際上在 JSON 的案例中是禁止的。
+如果基底 `Shape` 型別也包含名為 "`radius`" 的資料成員，這會導致兩個序列化的衝突（因為 JSON 物件不能有重複的索引鍵名稱）和還原序列化（因為「radius」是指的是 `Shape.radius` 或 `Circle.radius`）。 因此，通常並不建議在資料合約類別中使用「屬性隱藏」的概念 (基底和衍生類別上相同名稱的資料成員)，而實際上在 JSON 的案例中是禁止的。
 
 #### <a name="polymorphism-and-ixmlserializable-types"></a>多型和 IXmlSerializable 型別
 
@@ -254,15 +257,15 @@ ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 Jav
 
 #### <a name="polymorphism-and-certain-interface-types"></a>多型和特定介面型別
 
-禁止序列化集合型別或實作 <xref:System.Xml.Serialization.IXmlSerializable> 的型別，其中應該有不是 <xref:System.Xml.Serialization.IXmlSerializable> (除了 <xref:System.Object>) 的非集合型別。 比方說，一種自訂介面呼叫`IMyInterface`和型別`MyType`實作同時<xref:System.Collections.Generic.IEnumerable%601>型別的`int`和`IMyInterface`。 禁止返回`MyType`從作業傳回型別是`IMyInterface`。 這是因為`MyType`必須序列化為 JSON 陣列並需要型別提示，如前所述不能包含型別提示使用陣列時，只能使用複雜類型。
+禁止序列化集合型別或實作 <xref:System.Xml.Serialization.IXmlSerializable> 的型別，其中應該有不是 <xref:System.Xml.Serialization.IXmlSerializable> (除了 <xref:System.Object>) 的非集合型別。 例如，名為 `IMyInterface` 的自訂介面，以及同時執行類型 `int` 和 `IMyInterface` 之 <xref:System.Collections.Generic.IEnumerable%601> 的類型 `MyType`。 禁止從傳回型別為 `IMyInterface` 的作業傳回 `MyType`。 這是因為 `MyType` 必須序列化為 JSON 陣列，而且需要型別提示，而且在不能包含具有陣列的型別提示之前，請務必使用複雜型別。
 
 #### <a name="known-types-and-configuration"></a>已知型別和組態
 
-<xref:System.Runtime.Serialization.DataContractSerializer> 也以相同的方法支援 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 所使用的所有已知型別機制。 這兩種序列化程式都會讀取相同的組態項目， [ \<dataContractSerializer >](../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)中[ \<system.runtime.serialization >](../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)，以發現新增的已知型別透過組態檔。
+<xref:System.Runtime.Serialization.DataContractSerializer> 也以相同的方法支援 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 所使用的所有已知型別機制。 這兩個序列化程式都會讀取相同的 configuration 專案，而[@no__t 在 > 3system](../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)中[@no__t 1dataContractSerializer >](../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) ，以探索透過設定檔新增的已知類型。
 
 #### <a name="collections-assigned-to-object"></a>指派給物件的集合
 
-指派給物件的集合的序列化方式就如同實作 <xref:System.Collections.Generic.IEnumerable%601>的集合一般：如果是複雜型別，則為每一個項目都有型別提示的 JSON 陣列。 例如，<xref:System.Collections.Generic.List%601>型別的`Shape`指派給<xref:System.Object>看起來如下所示。
+指派給物件的集合的序列化方式就如同實作 <xref:System.Collections.Generic.IEnumerable%601>的集合一般：如果是複雜型別，則為每一個項目都有型別提示的 JSON 陣列。 例如，指派給 <xref:System.Object> `Shape` 類型的 <xref:System.Collections.Generic.List%601> 看起來如下所示。
 
 ```json
 [{"__type":"Shape:#MyApp.Shapes","x":50,"y":70},
@@ -272,9 +275,9 @@ ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 Jav
 
 當再還原序列化成 <xref:System.Object> 時：
 
-- `Shape` 必須是已知型別清單。 擁有<xref:System.Collections.Generic.List%601>型別的`Shape`已知型別中沒有任何作用。 請注意，您就不必在新增`Shape`要序列化的已知型別在此情況下-這會自動完成。
+- `Shape` 必須在已知類型清單中。 在已知型別中，具有 `Shape` 類型的 <xref:System.Collections.Generic.List%601> 不會有任何作用。 請注意，在此情況下，您不需要將 `Shape` 新增至已知類型-這會自動完成。
 
-- 集合會還原序列化為<xref:System.Array>型別的<xref:System.Object>包含`Shape`執行個體。
+- 集合會還原序列化為 <xref:System.Object> 類型的 <xref:System.Array>，其中包含 @no__t 2 實例。
 
 #### <a name="derived-collections-assigned-to-base-collections"></a>指派給基底集合的衍生集合
 
@@ -288,7 +291,7 @@ ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 Jav
 
 ### <a name="valid-json-key-names"></a>有效的 JSON 索引鍵名稱
 
-序列化程式 XML 會編碼不是有效的 XML 名稱的索引鍵名稱。 例如，資料成員"123"的名稱會有編碼的名稱這類 「\_x0031\_\_x0032\_\_x0033\_"因為"123"是無效的 XML 項目名稱 (開頭為數字）。 有些在 XML 名稱中無效的國際字元集可能會引起類似的情況。 如需 XML 的此效果，在 JSON 處理上的說明，請參閱 < [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。
+序列化程式 XML 會編碼不是有效的 XML 名稱的索引鍵名稱。 例如，名稱為 "123" 的資料成員會有編碼的名稱，例如 "@no__t 0x0031 @ no__t-1 @ no__t-2x0032 @ no__t-3 @ no__t-4x0033 @ no__t-5"，因為 "123" 是不正確 XML 元素名稱（以數位開頭）。 有些在 XML 名稱中無效的國際字元集可能會引起類似的情況。 如需 JSON 處理之 XML 效果的說明，請參閱[json 與 XML 之間的對應](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。
 
 ## <a name="see-also"></a>另請參閱
 

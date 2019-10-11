@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找子項目根據位置 (XPATH-LINQ to XML) (Visual Basic)
+title: 作法：根據位置尋找子項目（XPath-LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-ms.openlocfilehash: 57b9f3d7986bd85a65716c833165e7b073414ef0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11a9fdd7ed8565c38b0527d266af75b8fb611a20
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780610"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249697"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找子項目根據位置 (XPATH-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>作法：根據位置尋找子項目（XPath-LINQ to XML）（Visual Basic）
 有時候您會想要根據項目的位置尋找這些項目。 您可能想要尋找第二個項目，或者想要尋找第三到第五個項目。  
   
  XPath 運算式為：  
@@ -56,7 +56,7 @@ Next
   
  這個範例會產生下列輸出：  
   
-```  
+```console  
 Results are identical  
 <Test TestId="0002" TestType="CMD">  
   <Name>Find succeeding characters</Name>  
@@ -80,4 +80,4 @@ Results are identical
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

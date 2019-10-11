@@ -2,18 +2,18 @@
 title: 泛型介面中的差異 (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 12a8b58983256be0ca2b56ea6ed09e724e0814c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 71225814a11074f52e4937dec88ca5e27114d6c7
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595156"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179053"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型介面中的差異 (C#)
 
 .NET Framework 4 針對數個現有泛型介面推出了差異支援。 差異支援可讓實作這些介面的類別以隱含方式轉換。 
 
-開始使用 .NET Framework 4，下列介面是變數：
+從 .NET Framework 4 開始，下列介面是 variant：
 
 - <xref:System.Collections.Generic.IEnumerable%601> (T 是 Covariant)
 

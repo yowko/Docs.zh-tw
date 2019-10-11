@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# 中的分支與迴圈
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 5ea939172b35e4380ed3f32d7d06b5749d2005a0
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850681"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179868"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,6 +38,9 @@ items:
     Console.WriteLine(c);
 
     ```
+
+
+    如果您在環境中執行此程式，則應該改為遵循[本機版本](numbers-in-csharp-local.md)的指示。
 
 
     您看到的只是一種基本的整數數學運算。 `int` 型別代表**整數**，也就是正整數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：
