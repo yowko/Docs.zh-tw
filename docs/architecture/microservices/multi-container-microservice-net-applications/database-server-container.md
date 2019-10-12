@@ -2,12 +2,12 @@
 title: 使用作為容器執行的資料庫伺服器
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用作為容器執行的資料庫伺服器？只適用於開發！ 了解原因。
 ms.date: 10/02/2018
-ms.openlocfilehash: 3e655e26be2d6132577b0494db39d9c2e8b9aacd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a508ba734525b24e2f3f00408e2c59c8c00f1898
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039846"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291302"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>使用作為容器執行的資料庫伺服器
 
@@ -32,7 +32,7 @@ eShopOnContainers 中有個容器名為 sql.data，在 [docker-compose.yml](http
 以類似的方式，而不是使用 `docker-compose`，下列 `docker run` 命令可以執行該容器：
 
 ```console
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 不過，如果您要部署多容器應用程式，例如 eShopOnContainers，使用 `docker-compose up` 命令會更方便，其會部署應用程式需要的所有容器。
@@ -167,7 +167,7 @@ Redis 提供使用 Redis 的 Docker 映像。 該映像可從位於此 URL 的 D
 您可以在命令提示字元中執行下列 Docker CLI 命令，直接執行 Docker Redis 容器：
 
 ```console
-  docker run --name some-redis -d redis
+docker run --name some-redis -d redis
 ```
 
 Redis 映像包括 expose:6379 (Redis 使用的連接埠)，因此標準容器連結會自動將它提供給已連結的容器。

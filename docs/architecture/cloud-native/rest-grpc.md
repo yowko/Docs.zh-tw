@@ -3,12 +3,12 @@ title: REST 和 gRPC
 description: 瞭解 gRPC、其在雲端原生應用程式中的角色，以及它與 HTTP REST 的差異
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: d888069168aee1fcfb13354f4b6f9ae2c8d1f233
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: fed8e7d86a8ddc268f1264728d9631a561c1b310
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214542"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291327"
 ---
 # <a name="rest-and-grpc"></a>REST 和 gRPC
 
@@ -28,7 +28,7 @@ gRPC 是現代化的 RPC 架構，它既輕量又高效能。 它會使用 HTTP/
 - 串流內建于 HTTP/2，這表示要求和回應都可以非同步地串流處理大型資料集。
 - 結合 gRPC 和 HTTP/2，效能會大幅增加。 在[Windows Communication Foundation （WCF）](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf)用語中中，gPRC 效能符合並超過[NetTCP](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)系結的速度和效率。 不過，不同于 NetTCP，gRPC 不受限於 Microsoft 語言， C#例如或 VB.NET。
 
-跨最受歡迎的平臺（包括 JAVA、 C#、Golang 和 NodeJS）都支援 gRPC。 
+所有熱門平臺（包括 JAVA、 C#、Golang 和 NodeJS）都支援 gRPC。 
 
 ## <a name="protocol-buffers"></a>通訊協定緩衝區
 
@@ -38,7 +38,7 @@ gRPC 採用另一種稱為[通訊協定緩衝區](https://developers.google.com/
 
 ## <a name="grpc-support-in-net"></a>.NET 中的 gRPC 支援
 
-Microsoft .NET Core framework 3.0 包含 gRPC 的工具和原生支援。 圖4-20 顯示的 Visual Studio 2019 範本會 scaffold gRPC 服務的 gRPC 基本架構專案。 請注意 .NET Core 如何支援 Windows、Linux、macOS 平臺。
+Microsoft .NET Core framework 3.0 包含 gRPC 的工具和原生支援。 圖4-20 顯示的 Visual Studio 2019 範本會 scaffold gRPC 服務的 gRPC 基本架構專案。 請注意 .NET Core 如何支援 Windows、Linux 和 macOS 平臺。
 
 ![Visual Studio 2019 中的 gRPC 支援](./media/visual-studio-2019-grpc-template.png)
 
@@ -61,7 +61,7 @@ gRPC 適用于下列案例：
 - 多語言環境– gRPC 工具支援最熱門的開發語言，使其成為多語言環境的理想選擇。
 - 網路限制環境– gRPC 訊息會使用 Protobuf （輕量訊息格式）進行序列化。 GRPC 訊息一律會小於對等的 JSON 訊息。
 
-在撰寫本書時，大部分的瀏覽器對於 gRPC 的支援有限。 gRPC 大量使用 HTTP/2 功能，而且沒有瀏覽器提供 web 要求所需的控制層級來支援 gRPC 用戶端。 gRPC 通常用於內部微服務以微服務通訊。 圖4-22 顯示簡單但常見的使用模式。
+在本書撰寫本文時，大部分的瀏覽器對於 gRPC 的支援有限。 gRPC 大量使用 HTTP/2 功能，而且沒有瀏覽器提供 web 要求所需的控制層級來支援 gRPC 用戶端。 gRPC 通常用於內部微服務以微服務通訊。 圖4-22 顯示簡單但常見的使用模式。
 
 ![gRPC 使用模式](./media/grpc-usage.png)
 

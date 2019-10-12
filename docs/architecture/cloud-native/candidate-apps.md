@@ -3,12 +3,12 @@ title: 適用于雲端原生的候選應用程式
 description: 瞭解哪些類型的應用程式可從雲端原生方法獲益
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 6da531397e6103e5c59accf321bc5ae82153dded
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: e8d520e0a1ad5ab8854d0628daa56a390de523cd
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275823"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291227"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>適用于雲端原生的候選應用程式
 
@@ -34,9 +34,11 @@ ms.locfileid: "72275823"
 
 ### <a name="modernizing-legacy-apps"></a>現代化繼承應用程式
 
-免費的 Microsoft 電子書[現代化現有的 .net 應用程式與 Azure 雲端和 Windows 容器](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)，提供將內部部署工作負載遷移至雲端的指引。 圖1-8 顯示現代化繼承應用程式不會有單一大小適用的策略。
+免費的 Microsoft 電子書[現代化現有的 .net 應用程式與 Azure 雲端和 Windows 容器](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)，提供將內部部署工作負載遷移至雲端的指引。 圖1-10 顯示現代化繼承應用程式不會有單一大小適用的策略。
 
-![Strategies，用於遷移舊版工作負載 @ no__t-1**圖 1-8**。 遷移舊版工作負載的策略
+![遷移舊版工作負載的策略](./media/strategies-for-migrating-legacy-workloads.png)
+
+**圖 1-10**。 遷移舊版工作負載的策略
 
 非關鍵的整合型應用程式，主要受益于快速隨即轉移（[雲端基礎結構就緒](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)）的遷移。 在這裡，內部部署工作負載會重新裝載至雲端式 VM，而不會變更。 此方法使用[IaaS （基礎結構即服務）模型](https://azure.microsoft.com/overview/what-is-iaas/)。 Azure 包含數個工具，例如（[Azure Migrate](https://aka.ms/azuremigrate)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)和[Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)），讓這類移動變得更容易。 雖然此策略可以節省一些成本，但這類應用程式通常無法解除鎖定並運用雲端運算的優點。 
 
