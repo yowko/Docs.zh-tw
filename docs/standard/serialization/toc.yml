@@ -26,10 +26,10 @@
           href: serialization-guidelines.md
         - name: 作法：區塊序列化資料
           href: how-to-chunk-serialized-data.md
-        - name: HOW TO：判斷是否可序列化 .NET Standard 物件
+        - name: 作法：判斷是否可序列化 .NET Standard 物件
           href: how-to-determine-if-netstandard-object-is-serializable.md
         - name: 範例
-          href: serialization-samples-binary.md
+          href: samples-binary.md
     - name: XML 和 SOAP 序列化
       href: xml-and-soap-serialization.md
       items:
@@ -39,7 +39,7 @@
           href: how-to-control-serialization-of-derived-classes.md
         - name: XML 序列化簡介
           href: introducing-xml-serialization.md
-        - name: HOW TO：將物件還原序列化
+        - name: 作法：將物件還原序列化
           href: how-to-deserialize-an-object.md
         - name: XML 序列化的範例
           href: examples-of-xml-serialization.md
@@ -51,15 +51,15 @@
           href: controlling-xml-serialization-using-attributes.md
         - name: 控制 XML 序列化的屬性
           href: attributes-that-control-xml-serialization.md
-        - name: HOW TO：指定 XML 資料流的替代項目名稱
+        - name: 作法：指定 XML 資料流的替代項目名稱
           href: how-to-specify-an-alternate-element-name-for-an-xml-stream.md
         - name: 作法：序列化物件
           href: how-to-serialize-an-object.md
-        - name: HOW TO：限定 XML 元素和 XML 屬性名稱
+        - name: 作法：限定 XML 元素和 XML 屬性名稱
           href: how-to-qualify-xml-element-and-xml-attribute-names.md
         - name: 以 XML Web 服務進行 XML 序列化
           href: xml-serialization-with-xml-web-services.md
-        - name: HOW TO：將物件序列化為 SOAP 編碼的 XML 資料流
+        - name: 作法：將物件序列化為 SOAP 編碼的 XML 資料流
           href: how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
         - name: 作法：覆寫已編碼的 SOAP XML 序列化
           href: how-to-override-encoded-soap-xml-serialization.md
@@ -83,4 +83,4 @@
             - name: XML Schema Definition Tool (Xsd.exe)
               href: xml-schema-definition-tool-xsd-exe.md
         - name: 範例
-          href: serialization-samples-xml.md
+          href: samples-xml.md
