@@ -6,29 +6,29 @@
     - name: 一般 I/O 工作
       href: common-i-o-tasks.md
       items:
-        - name: HOW TO：複製目錄
+        - name: 作法：複製目錄
           href: how-to-copy-directories.md
-        - name: HOW TO：列舉目錄和檔案
+        - name: 作法：列舉目錄和檔案
           href: how-to-enumerate-directories-and-files.md
         - name: HOW TO：讀取和寫入新建立的資料檔案
           href: how-to-read-and-write-to-a-newly-created-data-file.md
         - name: HOW TO：開啟並附加至記錄檔
           href: how-to-open-and-append-to-a-log-file.md
-        - name: HOW TO：將文字寫入檔案
+        - name: 作法：將文字寫入檔案
           href: how-to-write-text-to-a-file.md
         - name: HOW TO：讀取檔案中的文字
           href: how-to-read-text-from-a-file.md
-        - name: HOW TO：讀取字串中的字元
+        - name: 作法：讀取字串中的字元
           href: how-to-read-characters-from-a-string.md
-        - name: HOW TO：將字元寫入字串
+        - name: 作法：將字元寫入字串
           href: how-to-write-characters-to-a-string.md
-        - name: HOW TO：新增或移除存取控制清單項目
+        - name: 作法：新增或移除存取控制清單項目
           href: how-to-add-or-remove-access-control-list-entries.md
         - name: HOW TO：壓縮與解壓縮檔案
           href: how-to-compress-and-extract-files.md
         - name: 撰寫資料流
           href: composing-streams.md
-        - name: HOW TO：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
+        - name: 作法：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
           href: how-to-convert-between-dotnet-streams-and-winrt-streams.md
     - name: 非同步檔案 I/O
       href: asynchronous-file-i-o.md
@@ -39,28 +39,30 @@
       items:
         - name: 隔離的類型
           href: types-of-isolation.md
-        - name: HOW TO：取得隔離儲存區的存放區
+        - name: 作法：取得隔離儲存區的存放區
           href: how-to-obtain-stores-for-isolated-storage.md
-        - name: HOW TO：列舉隔離儲存區的存放區
+        - name: 作法：列舉隔離儲存區的存放區
           href: how-to-enumerate-stores-for-isolated-storage.md
-        - name: HOW TO：刪除隔離儲存區中的存放區
+        - name: 作法：刪除隔離儲存區中的存放區
           href: how-to-delete-stores-in-isolated-storage.md
-        - name: HOW TO：預期隔離儲存區發生空間不足的情況
+        - name: 作法：預期隔離儲存區發生空間不足的情況
           href: how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
         - name: HOW TO：在隔離儲存區中建立檔案和目錄
           href: how-to-create-files-and-directories-in-isolated-storage.md
-        - name: HOW TO：尋找隔離儲存區中的現有檔案和目錄
+        - name: 作法：尋找隔離儲存區中的現有檔案和目錄
           href: how-to-find-existing-files-and-directories-in-isolated-storage.md
-        - name: HOW TO：讀取和寫入隔離儲存區中的檔案
+        - name: 作法：讀取和寫入隔離儲存區中的檔案
           href: how-to-read-and-write-to-files-in-isolated-storage.md
-        - name: HOW TO：刪除隔離儲存區中的檔案和目錄
+        - name: 作法：刪除隔離儲存區中的檔案和目錄
           href: how-to-delete-files-and-directories-in-isolated-storage.md
     - name: 管道
       href: pipe-operations.md
       items:
-        - name: HOW TO：使用匿名管道進行本機處理序間通訊
+        - name: 作法：使用匿名管道進行本機處理序間通訊
           href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
-        - name: HOW TO：使用具名管道進行網路處理序間通訊
+        - name: 作法：使用具名管道進行網路處理序間通訊
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: 管線
+      href: pipelines.md
     - name: 記憶體對應檔案
       href: memory-mapped-files.md
