@@ -1,13 +1,13 @@
 ---
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
-ms.date: 08/08/2019
-ms.openlocfilehash: 6194d70a8a14e63adbcad39c7dabbbd220ca329d
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
-ms.translationtype: HT
+ms.date: 10/07/2019
+ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179972"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250184"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -66,9 +66,9 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>選項。
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration {CONFIGURATION}`**
 
-  定義組建組態。 預設值為 `Debug`。
+  定義組建組態。 大部分專案的預設值為 `Debug`，但是您可以覆寫專案中的組建設定。
 
 * **`-f|--framework <FRAMEWORK>`**
 
