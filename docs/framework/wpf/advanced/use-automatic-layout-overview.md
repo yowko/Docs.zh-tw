@@ -5,16 +5,16 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834674"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291265"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自動配置概觀
 
-本主題將為開發人員介紹如何使用可當地語系化的 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 撰寫 @no__t 0 應用程式的指導方針。 在過去，UI 的當地語系化是耗時的程式。 UI 針對所需調整的每一種語言，都需要圖元的圖元。 現在有了正確的設計和正確的編碼標準，[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 可以加以建造，讓當地語系化人員的調整大小和重新置放工作不會改變。 撰寫可以更輕鬆調整大小和重新置放之應用程式的方法稱為「自動設定」，而且可以使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式設計來達成。
+本主題將為開發人員介紹如何使用可當地語系化的使用者介面（Ui）撰寫 @no__t 0 應用程式的指導方針。 在過去，UI 的當地語系化是耗時的程式。 UI 針對所需調整的每一種語言，都需要圖元的圖元。 現在有了正確的設計和正確的編碼標準，可以將 Ui 結構化，讓當地語系化人員的調整大小和重新置放工作更少。 撰寫可以更輕鬆調整大小和重新置放之應用程式的方法稱為「自動設定」，而且可以使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式設計來達成。
 
 <a name="advantages_of_autolayout"></a>
 

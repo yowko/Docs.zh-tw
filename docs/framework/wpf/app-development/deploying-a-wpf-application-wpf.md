@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: cfb617fde514c93596d52b0ca70da39c6e5be301
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: daa69997f70c22a97482fd7e63d42506e7051732
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958653"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291292"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 應用程式 (WPF)
-建立 Windows Presentation Foundation (WPF) 應用程式之後, 就必須部署它們。 Windows 和 .NET Framework 包含數種部署技術。 用來部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的部署技術會視應用程式類型而定。 本主題提供每項部署技術的簡短概觀，並說明這些技術如何配合每種 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式類型的部署需求來使用。  
+建立 Windows Presentation Foundation （WPF）應用程式之後，就必須部署它們。 Windows 和 .NET Framework 包含數種部署技術。 用來部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的部署技術會視應用程式類型而定。 本主題提供每項部署技術的簡短概觀，並說明這些技術如何配合每種 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式類型的部署需求來使用。  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>部署技術  
- Windows 和 .NET Framework 包含數種部署技術, 包括:  
+ Windows 和 .NET Framework 包含數種部署技術，包括：  
   
 - XCopy 部署。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "69958653"
   
 - 應用程式是獨立的。 不需要更新用戶端即可執行。  
   
-- 應用程式檔案必須從一個位置移至另一個位置，例如從組建位置 (本機磁碟、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] 檔案共用等) 移至發行位置 (網站、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] 檔案共用等)。  
+- 應用程式檔必須從一個位置移到另一個位置，例如從組建位置（本機磁片、UNC 檔案共用等）到發行位置（網站、UNC 檔案共用等等）。  
   
 - 應用程式不需要介面整合 ([開始] 功能表捷徑、桌面圖示等)。  
   
@@ -39,15 +39,15 @@ ms.locfileid: "69958653"
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 可讓應用程式封裝成獨立的可執行檔，以便輕鬆地散發到用戶端並執行。 此外, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]會與 Windows 一起安裝, 並啟用與桌面、[開始] 功能表和 [程式] 控制台的整合。  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 可讓應用程式封裝成獨立的可執行檔，以便輕鬆地散發到用戶端並執行。 此外，[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 會與 Windows 一起安裝，並啟用與桌面、[開始] 功能表和 [程式] 控制台的整合。  
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 可簡化應用程式的安裝和解除安裝作業，但未提供相關功能，無法透過版本設定來確保安裝的應用程式是最新的。  
   
- 如需 Windows Installer 的詳細資訊, 請參閱[Windows Installer 部署](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)。
+ 如需 Windows Installer 的詳細資訊，請參閱[Windows Installer 部署](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)。
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 部署  
- ClickOnce 為非 Web 應用程式啟用 Web 樣式應用程式部署。 應用程式會先發行至網頁伺服器或檔案伺服器，再從中部署。 雖然 ClickOnce 不支援已安裝應用程式的完整用戶端[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]功能範圍, 但它支援包含下列的子集:  
+ ClickOnce 為非 Web 應用程式啟用 Web 樣式應用程式部署。 應用程式會先發行至網頁伺服器或檔案伺服器，再從中部署。 雖然 ClickOnce 不支援 @no__t 4.9.0-安裝之應用程式的完整用戶端功能，但它支援包含下列的子集：  
   
 - 與 [開始] 功能表和 [程式集] 控制台整合。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "69958653"
   
 - 註冊副檔名。  
   
- 如需 ClickOnce 的詳細資訊, 請參閱[Clickonce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。  
+ 如需 ClickOnce 的詳細資訊，請參閱[Clickonce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。  
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>部署 WPF 應用程式  
@@ -73,11 +73,11 @@ ms.locfileid: "69958653"
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>部署獨立應用程式  
- 使用 ClickOnce 或[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]部署獨立應用程式。 無論使用哪種方式，獨立應用程式都需要完全信任才能執行。 對於使用 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 部署的獨立應用程式，會自動授與完全信任。 使用 ClickOnce 部署的獨立應用程式不會自動授與完全信任。 相反地, ClickOnce 會在安裝獨立應用程式之前, 顯示使用者必須接受的安全性警告對話方塊。 如果接受，則會安裝獨立應用程式並授與完全信任。 如果不接受，則不會安裝獨立應用程式。  
+ 使用 ClickOnce 或 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 來部署獨立應用程式。 無論使用哪種方式，獨立應用程式都需要完全信任才能執行。 對於使用 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 部署的獨立應用程式，會自動授與完全信任。 使用 ClickOnce 部署的獨立應用程式不會自動授與完全信任。 相反地，ClickOnce 會在安裝獨立應用程式之前，顯示使用者必須接受的安全性警告對話方塊。 如果接受，則會安裝獨立應用程式並授與完全信任。 如果不接受，則不會安裝獨立應用程式。  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>部署全標記 XAML 應用程式  
- 僅限[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記的頁面通常會發行至網頁伺服器 (例如 HTML 網頁), 並可使用 Internet Explorer 來觀看。 全標記 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面會在部分信任的安全性沙箱內執行，其限制是由網際網路區域權限集合所定義。 這會提供對等的安全性沙箱給 HTML Web 應用程式。  
+ 僅限標記的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁通常會發行至網頁伺服器（例如 HTML 網頁），並可使用 Internet Explorer 來查看。 全標記 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面會在部分信任的安全性沙箱內執行，其限制是由網際網路區域權限集合所定義。 這會提供對等的安全性沙箱給 HTML Web 應用程式。  
   
  如需 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式之安全性的詳細資訊，請參閱[安全性](../security-wpf.md)。  
   
@@ -89,18 +89,18 @@ ms.locfileid: "69958653"
 ### <a name="deploying-xaml-browser-applications"></a>部署 XAML 瀏覽器應用程式  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 是必須部署下列三個檔案的已編譯應用程式：  
   
-- *ApplicationName*:可執行檔元件應用程式檔。  
+- *ApplicationName*：可執行檔元件應用程式檔。  
   
-- *ApplicationName*xbap:部署資訊清單。  
+- *ApplicationName*xbap：部署資訊清單。  
   
-- *ApplicationName*. 資訊清單:應用程式資訊清單。  
+- *ApplicationName*. 資訊清單：應用程式資訊清單。  
   
 > [!NOTE]
 > 如需部署和應用程式資訊清單的詳細資訊，請參閱[建置 WPF 應用程式](building-a-wpf-application-wpf.md)。  
   
- 這些檔案會在建置 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 時產生。 如需詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))程式專案。 如同僅限[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記的頁面[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] , 通常會發行至 Web 服務器, 並使用 Internet Explorer 來查看。  
+ 這些檔案會在建置 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 時產生。 如需詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案 @ no__t-0。 如同僅限標記的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 通常會發行至 Web 服務器，並使用 Internet Explorer 來查看。  
   
- 您可以使用任何部署技術將 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 部署到用戶端。 不過, 建議使用 ClickOnce, 因為它提供下列功能:  
+ 您可以使用任何部署技術將 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 部署到用戶端。 不過，建議使用 ClickOnce，因為它提供下列功能：  
   
 1. 在發行新版本時自動更新。  
   
@@ -112,15 +112,15 @@ ms.locfileid: "69958653"
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>安裝.NET Framework  
- 若要執行[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式, 必須在用戶端上安裝 Microsoft .NET Framework。 當瀏覽器裝載的應用程式被查看時[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , Internet Explorer 會自動偵測用戶端是否以 .NET Framework 安裝。 如果未安裝 .NET Framework, Internet Explorer 會提示使用者安裝它。  
+ 若要執行 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，必須在用戶端上安裝 Microsoft .NET Framework。 當 @no__t 瀏覽器裝載的應用程式被查看時，Internet Explorer 會自動偵測是否已使用 .NET Framework 安裝用戶端。 如果未安裝 .NET Framework，Internet Explorer 會提示使用者安裝它。  
   
- 為了偵測是否已安裝 .NET Framework, Internet Explorer 包含一個啟動載入器應用程式, 它會註冊為具有下列副檔名之內容檔案的回溯多用途網際網路郵件延伸 (MIME) 處理常式: .xaml、.xps、xbap、和. 應用程式。 如果您流覽至這些檔案類型, 而且用戶端上未安裝 .NET Framework, 啟動載入器應用程式會要求安裝它的許可權。 如果未提供許可權, 就不會安裝 .NET Framework 或應用程式。  
+ 為了偵測是否已安裝 .NET Framework，Internet Explorer 包含一個啟動載入器應用程式，它會註冊為具有下列副檔名之內容檔案的回溯多用途網際網路郵件延伸（MIME）處理常式： .xaml、.xps、xbap、和. 應用程式。 如果您流覽至這些檔案類型，而且用戶端上未安裝 .NET Framework，啟動載入器應用程式會要求安裝它的許可權。 如果未提供許可權，就不會安裝 .NET Framework 或應用程式。  
   
- 如果授與許可權, Internet Explorer 會使用 Microsoft 背景智慧型傳送服務 (BITS) 下載並安裝 .NET Framework。 成功安裝 .NET Framework 之後, 原先要求的檔案會在新的瀏覽器視窗中開啟。  
+ 如果授與許可權，Internet Explorer 會使用 Microsoft 背景智慧型傳送服務（BITS）下載並安裝 .NET Framework。 成功安裝 .NET Framework 之後，原先要求的檔案會在新的瀏覽器視窗中開啟。  
   
  如需詳細資訊，請參閱[部署 .NET Framework 和應用程式](../../deployment/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [建置 WPF 應用程式](building-a-wpf-application-wpf.md)
-- [Security](../security-wpf.md)
+- [安全性](../security-wpf.md)
