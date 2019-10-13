@@ -2,22 +2,22 @@
 title: 作法：尋找子專案的子代（XPath-LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: 865615d014a33f8f29186627000913ac865a6050
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: e5f92e645a06a93cee95d439fc858d82ebb6b240
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250365"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291666"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="6ea63-102">作法：尋找子專案的子代（XPath-LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="6ea63-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="6ea63-103">本主題顯示如何利用特定名稱取得子項目的子代項目。</span><span class="sxs-lookup"><span data-stu-id="6ea63-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="7e746-102">作法：尋找子專案的子代（XPath-LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="7e746-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="7e746-103">本主題顯示如何利用特定名稱取得子項目的子代項目。</span><span class="sxs-lookup"><span data-stu-id="7e746-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
   
- <span data-ttu-id="6ea63-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="6ea63-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="7e746-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="7e746-104">The XPath expression is:</span></span>  
   
  `./Paragraph//Text/text()`  
   
-## <a name="example"></a><span data-ttu-id="6ea63-105">範例</span><span class="sxs-lookup"><span data-stu-id="6ea63-105">Example</span></span>  
- <span data-ttu-id="6ea63-106">此範例模擬從字組處理文件的 XML 表示擷取文字的問題。</span><span class="sxs-lookup"><span data-stu-id="6ea63-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="6ea63-107">它會先選取所有 `Paragraph` 項目，然後它會選取每個 `Text` 項目的所有 `Paragraph` 子代項目。</span><span class="sxs-lookup"><span data-stu-id="6ea63-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="6ea63-108">這不會選取 `Text` 項目的子代 `Comment` 項目。</span><span class="sxs-lookup"><span data-stu-id="6ea63-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="7e746-105">範例</span><span class="sxs-lookup"><span data-stu-id="7e746-105">Example</span></span>  
+ <span data-ttu-id="7e746-106">此範例模擬從字組處理文件的 XML 表示擷取文字的問題。</span><span class="sxs-lookup"><span data-stu-id="7e746-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="7e746-107">它會先選取所有 `Paragraph` 項目，然後它會選取每個 `Text` 項目的所有 `Paragraph` 子代項目。</span><span class="sxs-lookup"><span data-stu-id="7e746-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="7e746-108">這不會選取 `Text` 項目的子代 `Comment` 項目。</span><span class="sxs-lookup"><span data-stu-id="7e746-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -34,7 +34,7 @@ Dim root As XElement = _
             </Annotation>  
         </Paragraph>  
         <Paragraph>  
-            <Text>  This is a second sentence.</Text>  
+            <Text>This is a second sentence.</Text>  
         </Paragraph>  
     </Root>  
   
@@ -62,13 +62,13 @@ End If
 Console.WriteLine(str2)  
 ```  
   
- <span data-ttu-id="6ea63-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="6ea63-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="7e746-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="7e746-109">This example produces the following output:</span></span>  
   
 ```console  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6ea63-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6ea63-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e746-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7e746-110">See also</span></span>
 
-- [<span data-ttu-id="6ea63-111">XPath 使用者的 LINQ to XML （Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="6ea63-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="7e746-111">XPath 使用者的 LINQ to XML （Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="7e746-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
