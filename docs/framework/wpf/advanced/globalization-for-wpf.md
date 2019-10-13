@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1ab372f69792a00160edb2542762298114d3f8b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003448"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291470"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹在為全球市場撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式時，您應該注意的問題。 全球化程式設計項目會在 .NET 的 <xref:System.Globalization> 命名空間中定義。
@@ -143,7 +143,7 @@ ms.locfileid: "72003448"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>多語系使用者介面
- 多語系使用者介面（MUI）是一種 Microsoft 支援，可將 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 從一種語言切換到另一種語言。 @No__t-0 應用程式會使用元件模型來支援 MUI。 一個應用程式包含語言中性的組件以及語言相關的附屬資源組件。 進入點是主要組件中的 Managed .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資源載入器會利用 @no__t 1 的資源管理員來支援資源查閱和回溯。 多語言附屬組件使用相同的主要組件。 載入的資源元件取決於目前線程的 @no__t 0。
+ 多語系使用者介面（MUI）是一種 Microsoft 支援，可將 Ui 從某種語言切換成另一種語言。 @No__t-0 應用程式會使用元件模型來支援 MUI。 一個應用程式包含語言中性的組件以及語言相關的附屬資源組件。 進入點是主要組件中的 Managed .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資源載入器會利用 @no__t 1 的資源管理員來支援資源查閱和回溯。 多語言附屬組件使用相同的主要組件。 載入的資源元件取決於目前線程的 @no__t 0。
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>可當地語系化的使用者介面

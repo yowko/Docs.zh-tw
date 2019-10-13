@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7142ef36d4ed1bbcb715748202eefdd5504f697e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8368930e60210b0cb470700e9c9470c57d536c13
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956647"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291407"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 分析工具和 Windows 市集應用程式
 
@@ -27,7 +27,7 @@ ms.locfileid: "69956647"
 
 ## <a name="introduction"></a>簡介
 
-如果您已將它放在簡介段落之後，您就會熟悉 CLR 分析 API。 您已經撰寫一種診斷工具，適用于受管理的桌面應用程式。 現在您想知道該怎麼做，讓您的工具可與受控的 Windows Store 應用程式搭配使用。 也許您已經試過這項工作，併發現它不是一項簡單的任務。 事實上，所有工具開發人員可能都不會對您有許多考慮。 例如：
+如果您已將它放在簡介段落之後，您就會熟悉 CLR 分析 API。 您已經撰寫一種診斷工具，適用于受管理的桌面應用程式。 現在您想知道該怎麼做，讓您的工具可與受控的 Windows Store 應用程式搭配使用。 也許您已經試過這項工作，併發現它不是一項簡單的任務。 事實上，所有工具開發人員可能都不會對您有許多考慮。 例如:
 
 - Windows Store 應用程式會在具有嚴重降低許可權的內容中執行。
 
@@ -106,7 +106,7 @@ Windows RT 裝置已完全鎖定。 協力廠商分析工具只是無法在這�
 
 Windows Store 應用程式必須具有從檔案系統上的位置載入和執行 Profiler DLL 的許可權，而此檔案是 residesBy 預設的，Windows Store 應用程式在大部分目錄上沒有這類許可權，而且嘗試載入 Profiler DLL 失敗會在 Windows 應用程式事件記錄檔中產生專案，如下所示：
 
-```Output
+```output
 NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateInstance.  Profiler CLSID: '{xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}'.  HRESULT: 0x80070005.  Process ID (decimal): 4688.  Message ID: [0x2504].
 ```
 
@@ -114,7 +114,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 ### <a name="startup-load"></a>啟動載入
 
-一般來說，在傳統型應用程式中，分析工具 UI 會藉由初始化包含必要 CLR 分析 API 環境變數（ `COR_PROFILER` `COR_ENABLE_PROFILING`也就是、、和`COR_PROFILER_PATH`）的環境區塊，來提示您分析工具 DLL 的啟動負載，以及然後使用該環境區塊建立新的處理常式。 Windows Store 應用程式也是如此，但機制不同。
+一般來說，在傳統型應用程式中，分析工具 UI 會藉由初始化包含必要 CLR 分析 API 環境變數（也就是 `COR_PROFILER`、`COR_ENABLE_PROFILING` 和 `COR_PROFILER_PATH`）的環境區塊，來提示您分析工具 DLL 的啟動負載，然後建立新的使用該環境區塊的處理常式。 Windows Store 應用程式也是如此，但機制不同。
 
 **不要以提高許可權執行**
 
@@ -124,9 +124,9 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 首先，您會想要要求 profiler 使用者要啟動哪個 Windows Store 應用程式。 針對桌面應用程式，您可能會顯示 [檔案] [流覽] 對話方塊，而使用者會尋找並選取 .exe 檔案。 但是，Windows Store 應用程式不同，而且使用 [流覽] 對話方塊沒有意義。 相反地，最好是向使用者顯示已安裝的 Windows Store 應用程式清單，以供該使用者選取。
 
-您可以使用<xref:Windows.Management.Deployment.PackageManager>類別來產生這份清單。 `PackageManager`是可供桌面應用程式使用的 Windows 執行階段類別，事實上，它*僅*適用于桌面應用程式。
+您可以使用 <xref:Windows.Management.Deployment.PackageManager> 類別來產生這份清單。 `PackageManager` 是適用于桌面應用程式的 Windows 執行階段類別，事實上，它*僅*適用于桌面應用程式。
 
-下列以中C#撰寫為傳統型應用程式的假設分析工具 UI 的程式碼範例`PackageManager`會使用來產生 Windows 應用程式的清單：
+下列來自以中C#的桌面應用程式撰寫的假設分析工具 UI 的程式碼範例會使用 `PackageManager` 來產生 Windows 應用程式的清單：
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **指定自訂環境區塊**
 
-新的 COM 介面[IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)可讓您自訂 Windows Store 應用程式的執行行為，讓某些形式的診斷變得更容易。 它的其中一個方法[EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)，可讓您在啟動時將環境區塊傳遞至 Windows Store 應用程式，以及其他實用的效果，例如停用自動進程暫止。 環境區塊很重要，因為您必須在此指定 CLR 用來載入分析工具`COR_PROFILER`DLL `COR_ENABLE_PROFILING`的環境`COR_PROFILER_PATH)`變數（、和）。
+新的 COM 介面[IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)可讓您自訂 Windows Store 應用程式的執行行為，讓某些形式的診斷變得更容易。 它的其中一個方法[EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)，可讓您在啟動時將環境區塊傳遞至 Windows Store 應用程式，以及其他實用的效果，例如停用自動進程暫止。 環境區塊很重要，因為您必須在此指定 CLR 用來載入分析工具 DLL 的環境變數（`COR_PROFILER`、`COR_ENABLE_PROFILING` 和 `COR_PROFILER_PATH)`）。
 
 請考慮下列程式碼片段：
 
@@ -149,15 +149,15 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 您必須先取得幾個專案：
 
-- `packageFullName`在逐一查看封裝並抓取`package.Id.FullName`時，可以判斷。
+- 在逐一查看封裝並抓取 `package.Id.FullName` 時，可以判斷 `packageFullName`。
 
-- `debuggerCommandLine`有點有趣。 若要將自訂環境區塊傳遞至 Windows Store 應用程式，您需要撰寫您自己、簡單的虛擬偵錯工具。 Windows 會產生已暫停的 Windows Store 應用程式，然後使用命令列啟動偵錯工具（如下列範例所示）來附加偵錯工具：
+- `debuggerCommandLine` 更有趣。 若要將自訂環境區塊傳遞至 Windows Store 應用程式，您需要撰寫您自己、簡單的虛擬偵錯工具。 Windows 會產生已暫停的 Windows Store 應用程式，然後使用命令列啟動偵錯工具（如下列範例所示）來附加偵錯工具：
 
-    ```Output
+    ```console
     MyDummyDebugger.exe -p 1336 -tid 1424
     ```
 
-     其中`-p 1336` ，表示 Windows Store 應用程式的處理序識別碼為 1336 `-tid 1424` ，而表示執行緒識別碼1424是已暫停的執行緒。 您的虛擬偵錯工具會從命令列剖析 ThreadID，繼續該執行緒，然後結束。
+     其中 `-p 1336` 表示 Windows Store 應用程式具有處理序識別碼1336，而 `-tid 1424` 表示執行緒識別碼1424是已暫停的執行緒。 您的虛擬偵錯工具會從命令列剖析 ThreadID，繼續該執行緒，然後結束。
 
      以下是一些執行C++此動作的範例程式碼（請務必新增錯誤檢查！）：
 
@@ -176,7 +176,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
     }
     ```
 
-     您必須將此虛擬偵錯工具部署為診斷工具安裝的一部分，然後在`debuggerCommandLine`參數中指定此偵錯工具的路徑。
+     您必須將此虛擬偵錯工具部署為診斷工具安裝的一部分，然後在 `debuggerCommandLine` 參數中指定此偵錯工具的路徑。
 
 **啟動 Windows Store 應用程式**
 
@@ -253,7 +253,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */
 
 當您流覽 Windows API 時，您會注意到每個 API 都記載為適用于桌面應用程式、Windows Store 應用程式或兩者。 例如， [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)函式檔的 [**需求**] 區段指出函式僅適用于桌面應用程式。 相反地，桌面應用程式和 Windows Store 應用程式都有提供[InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)函式。
 
-開發分析工具 DLL 時，請將它視為 Windows Store 應用程式，並只使用已記載為可供 Windows Store 應用程式使用的 Api。 分析您的相依性（例如，您可以`link /dump /imports`對分析工具 DLL 執行以進行審核），然後搜尋檔以查看哪些相依性是正常的，哪些不是。 在大部分的情況下，您只要以較新的 API 形式（也就是將[InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)取代為[InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)）取代，就可以修正您的違規。
+開發分析工具 DLL 時，請將它視為 Windows Store 應用程式，並只使用已記載為可供 Windows Store 應用程式使用的 Api。 分析您的相依性（例如，您可以針對分析工具 DLL 執行 `link /dump /imports` 來進行審核），然後搜尋檔以查看哪些相依性是正常的，哪些不是。 在大部分的情況下，您只要以較新的 API 形式（也就是將[InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount)取代為[InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)）取代，就可以修正您的違規。
 
 您可能會注意到您的分析工具 DLL 會呼叫一些僅適用于桌面應用程式的 Api，但即使您的分析工具 DLL 載入 Windows Store 應用程式中，它們還是看起來很有作用。 請注意，當您載入 Windows Store 應用程式進程時，流量分析工具 DLL 中的 Windows Store 應用程式未記載的任何 API，會有風險：
 
@@ -287,7 +287,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */
 
 大部分的資料可能會透過檔案在分析工具 DLL 和 Profiler UI 之間通過。 關鍵在於選擇檔案位置，讓您的分析工具 DLL （在 Windows Store 應用程式的內容中）和 Profiler UI 具有的讀取和寫入權限。 例如，暫存資料夾路徑是分析工具 DLL 和分析工具 UI 可以存取的位置，但是沒有其他 Windows 儲存區應用程式套件可以存取（因而防護您從其他 Windows Store 應用程式套件記錄的任何資訊）。
 
-您的 Profiler UI 和 Profiler DLL 都可以獨立判斷此路徑。 分析工具 UI，當它逐一查看所有為目前使用者安裝的封裝（請參閱稍早的範例程式碼）時， `PackageId`會取得類別的存取權，其中暫存資料夾路徑可以使用類似于此程式碼片段的程式碼來衍生。 （一如往常，為了簡潔起見，會省略錯誤檢查）。
+您的 Profiler UI 和 Profiler DLL 都可以獨立判斷此路徑。 分析工具 UI，當它逐一查看所有為目前使用者安裝的封裝（請參閱稍早的範例程式碼）時，會取得 `PackageId` 類別的存取權，其中暫存資料夾路徑可以使用類似于此程式碼片段的程式碼來衍生。 （一如往常，為了簡潔起見，會省略錯誤檢查）。
 
 ```csharp
 // C# code for the Profiler UI.
@@ -298,13 +298,13 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-同時，您的分析工具 DLL 基本上可以執行相同的動作，不過使用[ApplicationData](xref:Windows.Storage.ApplicationData.Current%2A)屬性可以更<xref:Windows.Storage.ApplicationData>輕鬆地取得類別。
+同時，您的分析工具 DLL 基本上可以執行相同的動作，不過使用[ApplicationData](xref:Windows.Storage.ApplicationData.Current%2A)屬性可以更輕鬆地取得 @no__t 0 類別。
 
 **透過事件通訊**
 
 如果您想要讓分析工具 UI 與 Profiler DLL 之間有簡單的信號，您可以在 Windows Store 應用程式和桌面應用程式中使用事件。
 
-從您的分析工具 DLL，您可以直接呼叫[CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)函式，以您喜歡的任何名稱來建立名為的事件。 例如：
+從您的分析工具 DLL，您可以直接呼叫[CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)函式，以您喜歡的任何名稱來建立名為的事件。 例如:
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -319,7 +319,7 @@ CreateEventEx(
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>`是 Windows Store 應用程式的 AppContainer SID。 本主題稍早的章節示範如何逐一查看針對目前使用者所安裝的套件。 從該範例程式碼中，您可以取得 packageId。 而從 packageId，您可以`<acSid>`使用類似下列的程式碼取得：
+`<acSid>` 是 Windows Store 應用程式的 AppContainer SID。 本主題稍早的章節示範如何逐一查看針對目前使用者所安裝的套件。 從該範例程式碼中，您可以取得 packageId。 而從 packageId，您可以使用與下列類似的程式碼取得 `<acSid>`：
 
 ```csharp
 IntPtr acPSID;
@@ -334,7 +334,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 ### <a name="no-shutdown-notifications"></a>沒有關機通知
 
-在 windows store 應用程式中執行時，您的分析工具 dll 不應依賴[ICorProfilerCallback：： Shutdown](icorprofilercallback-shutdown-method.md) ，[或甚至](/windows/desktop/Dlls/dllmain) `DLL_PROCESS_DETACH`是呼叫來通知分析工具 dll，Windows store 應用程式即將結束。 事實上，您應該預期它們永遠不會被呼叫。 在過去，許多 Profiler Dll 已使用這些通知做為方便的位置，可將快取快取到磁片、關閉檔案、將通知傳送回分析工具 UI 等等。但現在您的 Profiler DLL 必須以不同的方式組織。
+在 Windows Store 應用程式中執行時，您的分析工具 DLL 不應依賴[ICorProfilerCallback：： Shutdown](icorprofilercallback-shutdown-method.md) ，[或甚至是](/windows/desktop/Dlls/dllmain)使用 `DLL_PROCESS_DETACH`）來通知分析工具 dll，Windows Store 應用程式即將結束。 事實上，您應該預期它們永遠不會被呼叫。 在過去，許多 Profiler Dll 已使用這些通知做為方便的位置，可將快取快取到磁片、關閉檔案、將通知傳送回分析工具 UI 等等。但現在您的 Profiler DLL 必須以不同的方式組織。
 
 分析工具 DLL 應記錄資訊。 基於效能的考慮，您可能會想要在記憶體中批次處理資訊，並在批次大小超過某個臨界值時將資料排清到磁片。 但假設尚未排清到磁片的任何資訊都可能遺失。 這表示您會想要明智地挑選您的臨界值，而且您的分析工具 UI 必須強化，才能處理 Profiler DLL 所寫入的不完整資訊。
 
@@ -354,7 +354,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 就 CLR 的顧慮而言，所有 WinMD 檔案都是模組。 因此，CLR 分析 API 會在 WinMD 檔案載入及其 ModuleIDs 時，告訴您的 Profiler DLL，其方式與其他受控模組相同。
 
-您的分析工具 DLL 可以藉由呼叫[ICorProfilerInfo3：： GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md)方法，並檢查[COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md)旗標的`pdwModuleFlags`輸出參數，來區分 WinMD 檔案與其他模組。 （只有在 ModuleID 代表 WinMD 時才會設定）。
+您的分析工具 DLL 可以藉由呼叫[ICorProfilerInfo3：： GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md)方法，並檢查[COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md)旗標的 `pdwModuleFlags` 輸出參數，來區分 WinMD 檔案與其他模組。 （只有在 ModuleID 代表 WinMD 時才會設定）。
 
 ### <a name="reading-metadata-from-winmds"></a>從 Winmd 讀取中繼資料
 
@@ -362,11 +362,11 @@ WinMD 檔案（例如一般模組）包含可以透過[中繼資料 api](../../.
 
 當 profiler 使用中繼資料 Api 時，您的分析工具會取得哪一個視圖：原始 Windows 執行階段視圖或對應的 .NET Framework 視圖？  答：這是由您自行來。
 
-當您在 WinMD 上呼叫[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)方法來取得中繼資料介面（例如[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)）時，您可以選擇在`dwOpenFlags`參數中設定[ofNoTransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) ，以關閉這個對應。 否則，根據預設，將會啟用對應。 一般來說，分析工具會讓對應保持啟用狀態，讓分析工具 DLL 從 WinMD 中繼資料（例如，類型的名稱）取得的字串看起來會對分析工具使用者感到熟悉且自然。
+當您在 WinMD 上呼叫[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)方法來取得中繼資料介面（例如[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)）時，您可以選擇在 `dwOpenFlags` 參數中設定[ofNoTransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) ，以關閉這個對應。 否則，根據預設，將會啟用對應。 一般來說，分析工具會讓對應保持啟用狀態，讓分析工具 DLL 從 WinMD 中繼資料（例如，類型的名稱）取得的字串看起來會對分析工具使用者感到熟悉且自然。
 
 ### <a name="modifying-metadata-from-winmds"></a>修改 Winmd 的中繼資料
 
-不支援在 Winmd 中修改中繼資料。 如果您針對 WinMD 檔案呼叫[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)方法，並在`dwOpenFlags`參數中指定[ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) ，或要求可寫入的中繼資料介面（例如[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)）， [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)將會無法. 這對於 IL 重寫分析工具而言特別重要，這需要修改中繼資料以支援其檢測（例如，新增 AssemblyRefs 或新方法）。 因此，您應該先檢查[COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) （如上一節所述），並避免在這類別模組上要求可寫入的中繼資料介面。
+不支援在 Winmd 中修改中繼資料。 如果您針對 WinMD 檔案呼叫[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)方法，並在 `dwOpenFlags` 參數中指定[ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) ，或要求可寫入的中繼資料介面（例如[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)）， [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)將會失敗。 這對於 IL 重寫分析工具而言特別重要，這需要修改中繼資料以支援其檢測（例如，新增 AssemblyRefs 或新方法）。 因此，您應該先檢查[COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) （如上一節所述），並避免在這類別模組上要求可寫入的中繼資料介面。
 
 ### <a name="resolving-assembly-references-with-winmds"></a>使用 Winmd 解析元件參考
 
@@ -384,13 +384,13 @@ WinMD 檔案（例如一般模組）包含可以透過[中繼資料 api](../../.
 
 相關的重點是，您的分析工具所建立之執行緒上的呼叫一律會視為同步，即使這些呼叫是從您的其中一個 Profiler DLL 的[ICorProfilerCallback](icorprofilercallback-interface.md)方法以外的地方進行。 至少，這是用來做為案例的情況。 既然 CLR 已將分析工具的執行緒轉換成 managed 執行緒，因為您呼叫[ForceGC 方法](icorprofilerinfo-forcegc-method.md)，該執行緒就不再被視為分析工具的執行緒。 因此，CLR 會針對該執行緒強制執行更嚴格的定義，亦即呼叫必須源自其中一個分析工具 DLL 的[ICorProfilerCallback](icorprofilercallback-interface.md)方法，才能限定為同步。
 
-這在實務上的意義為何？ 大部分的[ICorProfilerInfo](icorprofilerinfo-interface.md)方法都只能以同步方式呼叫，否則會立即失敗。 因此，如果您的分析工具 DLL 重複使用[ForceGC 方法](icorprofilerinfo-forcegc-method.md)執行緒，以進行通常在分析工具建立的執行緒上進行的其他呼叫（例如， [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)或[RequestRevert](icorprofilerinfo4-requestrevert-method.md)），您就會遇到問題. 即使是非同步安全的函式（例如[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) ），從 managed 執行緒呼叫時也有特殊的規則。 （請參閱 blog 文章[分析工具堆疊演練：基本概念和](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)其他資訊。）
+這在實務上的意義為何？ 大部分的[ICorProfilerInfo](icorprofilerinfo-interface.md)方法都只能以同步方式呼叫，否則會立即失敗。 因此，如果您的分析工具 DLL 重複使用[ForceGC 方法](icorprofilerinfo-forcegc-method.md)執行緒，以進行通常在分析工具建立的執行緒上進行的其他呼叫（例如， [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)或[RequestRevert](icorprofilerinfo4-requestrevert-method.md)），您就會遇到問題. 即使是非同步安全的函式（例如[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) ），從 managed 執行緒呼叫時也有特殊的規則。 （請參閱 @no__t 0Profiler 堆疊演練的 blog 文章：除了 @ no__t-0 以外的基本知識，以取得詳細資訊）。
 
 因此，我們建議您 Profiler DLL 所建立的任何執行緒呼叫[ForceGC 方法](icorprofilerinfo-forcegc-method.md)，都應該*僅*用於觸發 GC，然後回應 gc 回呼的目的。 它不應該呼叫分析 API 來執行其他工作，例如堆疊取樣或卸離。
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-從 .NET Framework 4.5 開始，有新的 GC 回呼[ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)，可讓分析工具更完整地取得*相依控制碼*的相關資訊。 這些控制碼可有效地將來源物件的參考新增至目標物件，以進行 GC 存留期管理。 相依控制碼不是新的，而且以 managed 程式碼撰寫程式的開發人員也可以使用<xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType>類別來建立自己的相依控制碼，即使在 Windows 8 和 .NET Framework 4.5 之前也一樣。
+從 .NET Framework 4.5 開始，有新的 GC 回呼[ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)，可讓分析工具更完整地取得*相依控制碼*的相關資訊。 這些控制碼可有效地將來源物件的參考新增至目標物件，以進行 GC 存留期管理。 相依控制碼並不是新的，而且以 managed 程式碼撰寫程式的開發人員也能夠在 Windows 8 和 .NET Framework 4.5 之前，使用 <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> 類別來建立自己的相依控制碼。
 
 不過，受控 XAML Windows Store 應用程式現在會大量使用相依的控制碼。 特別是，CLR 會使用它們來協助管理 managed 物件與非受控 Windows 執行階段物件之間的參考迴圈。 這表示，比以往更重要的是，要知道這些相依控制碼的記憶體分析工具，讓它們可以與堆積圖形中的其餘邊緣進行視覺化。 您的分析工具 DLL 應該一起使用[RootReferences2](icorprofilercallback2-rootreferences2-method.md)、 [ObjectReferences](icorprofilercallback-objectreferences-method.md)和[ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)來形成堆積圖表的完整視圖。
 

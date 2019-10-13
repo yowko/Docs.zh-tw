@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698673"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72290938"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布林值邏輯運算子 (C# 參考)
 
@@ -51,11 +51,11 @@ ms.locfileid: "71698673"
 
 ## <a name="logical-negation-operator-"></a>邏輯否定運算子 !
 
-`!` 運算子會計算其運算元的邏輯否定。 也就是說，它會在運算元評估為 `false` 時產生 `true`，並在運算元評估為 `true` 時產生 `false`：
+一元前置字元 `!` 運算子會計算其運算元的邏輯否定。 也就是說，它會在運算元評估為 `false` 時產生 `true`，並在運算元評估為 `true` 時產生 `false`：
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-從C# 8.0 開始，一元後置 `!` 運算子是 null 容許運算子。 在啟用的可為 null 注釋內容中，您可以使用它來宣告可為 null 之參考型別的運算式 `x` 不是 null： `x!`。 如需詳細資訊，請參閱[可為 null 的參考型別](../../nullable-references.md)。
+從C# 8.0 開始，一元後置 `!` 運算子是[null 容許運算子](null-forgiving.md)。
 
 ## <a name="logical-and-operator-"></a> 邏輯 AND 運算子 &amp;
 

@@ -2,12 +2,12 @@
 title: 使用 async 和 await 進行非同步工作程式設計模型 (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 3ced168bada4167418bf27861c5b8666b02aa70e
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167906"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291336"
 ---
 # <a name="task-asynchronous-programming-model"></a>非同步工作程式設計模型
 
@@ -42,22 +42,31 @@ C# 中的 [async](../../../language-reference/keywords/async.md) 和 [await](../
 
 下列範例將示範非同步方法。 程式碼中的一切對您而言應該幾乎完全熟悉。
 
-您可以在本主題結尾找到完整的 Windows Presentation Foundation (WPF) 範例檔案，並且可從[非同步範例：＜使用 Async 和 Await 進行非同步程式設計＞中的範例](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) \(英文\) 下載範例。
+您可以在本主題結尾找到完整的 Windows Presentation Foundation (WPF) 範例檔案，並且可從[非同步範例：＜使用 Async 和 Await 進行非同步程式設計＞中的範例](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/) \(英文\) 下載範例。
 
 ```csharp
 async Task<int> AccessTheWebAsync()
-{
+{ 
     // You need to add a reference to System.Net.Http to declare client.
-    using (HttpClient client = new HttpClient())
-    {
-        Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
+    var client = new HttpClient();
 
-        DoIndependentWork();
+    // GetStringAsync returns a Task<string>. That means that when you await the
+    // task you'll get a string (urlContents).
+    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com/dotnet");
 
-        string urlContents = await getStringTask;
+    // You can do work here that doesn't rely on the string from GetStringAsync.
+    DoIndependentWork();
 
-        return urlContents.Length;
-    }
+    // The await operator suspends AccessTheWebAsync.
+    //  - AccessTheWebAsync can't continue until getStringTask is complete.
+    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
+    //  - Control resumes here when getStringTask is complete. 
+    //  - The await operator then retrieves the string result from getStringTask.
+    string urlContents = await getStringTask;
+
+    // The return statement specifies an integer result.
+    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.
+    return urlContents.Length;
 }
 ```
 
@@ -75,23 +84,18 @@ return 陳述式會指定整數結果。 正在等待 `AccessTheWebAsync` 的任
 如果 `AccessTheWebAsync` 在呼叫 `GetStringAsync` 與等候其完成之間沒有任何可以執行的工作，您可以在下列單一陳述式中呼叫和等候，以簡化程式碼。
 
 ```csharp
-string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
+string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dotnet");
 ```
 
-下列特性摘要說明上述範例為非同步方法的原因。
+下列特性摘要說明上述範例的非同步方法：
 
 - 方法簽章包含 `async` 修飾詞。
-
 - 按照慣例，非同步方法的名稱是以 "Async" 後置字元為結尾。
-
 - 傳回類型是下列其中一種類型：
 
   - 如果方法的 return 陳述式中運算元的類型為 `TResult`，則為 <xref:System.Threading.Tasks.Task%601>。
-
   - 如果方法沒有 return 陳述式或是 return 陳述式沒有運算元，則為 <xref:System.Threading.Tasks.Task>。
-
   - 如果您撰寫的是非同步事件處理常式，則為 `void`。
-
   - 任何具有 `GetAwaiter` 方法的其他類型 (從 C# 7.0 開始)。
 
   如需詳細資訊，請參閱[傳回型別和參數](#BKMK_ReturnTypesandParameters)一節。
@@ -104,13 +108,13 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 非同步方法中執行了哪些工作
 
-在非同步程式設計中要了解的最重要事情，就是控制流程如何在方法之間移動。 下圖將引導您了解整個程序。
+在非同步程式設計中要了解的最重要事情，就是控制流程如何在方法之間移動。 下圖將引導您了解整個程序：
 
 ![追蹤非同步程式](./media/task-asynchronous-programming-model/navigation-trace-async-program.png "NavigationTrace")
 
 圖表中的數字會對應到下列步驟中，並在使用者按一下 [開始] 按鈕時起始。
 
-1. 事件處理常式會呼叫並等候 `AccessTheWebAsync` 非同步方法。
+1. 事件處理常式會呼叫並等候 @no__t 0 的非同步方法。
 
 2. `AccessTheWebAsync` 會建立 <xref:System.Net.Http.HttpClient> 執行個體並呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2A> 非同步方法，將網站的內容當做字串下載。
 
@@ -136,17 +140,17 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 8. 當 `AccessTheWebAsync` 擁有字串結果時，方法就可以計算字串的長度。 然後 `AccessTheWebAsync` 的工作也已完成，而且等候事件處理常式可以繼續執行。 在本主題最後的完整範例中，您可以確認事件處理常式會擷取並列印長度結果的值。
 如果您不熟悉非同步程式設計，請花一分鐘思考同步和非同步行為之間的差異。 同步方法會在其工作完成時傳回 (步驟 5)，而非同步方法則會在其工作暫停時傳回工作值 (步驟 3 和步驟 6)。 當非同步方法最後完成其工作時，工作會標示為已完成，而結果 (如果有的話) 會儲存在工作中。
 
-如需控制流程的詳細資訊，請參閱[非同步程式中的控制流程 (C#)](./control-flow-in-async-programs.md)。
+如需控制流程的詳細資訊，請參閱[非同步程式中的控制流程 (C#)](control-flow-in-async-programs.md)。
 
 ## <a name="BKMK_APIAsyncMethods"></a> API 非同步方法
 
-您可能會想知道哪裡可以找到支援非同步程式設計的方法，例如 `GetStringAsync`。 .NET Framework 4.5 或更新版本以及 .NET Core 包含許多使用 `async` 和 `await` 的成員。 您也可以透過附加至成員名稱的 "Async" 後置字元以及傳回型別 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 來進行辨識。 例如，相對於同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>，`System.IO.Stream` 類別也包含一些方法，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>。
+您可能會想知道哪裡可以找到支援非同步程式設計的方法，例如 `GetStringAsync`。 .NET Framework 4.5 或更新版本以及 .NET Core 包含許多使用 `async` 和 `await` 的成員。 您可以透過附加至成員名稱的 "Async" 尾碼，以及其傳回類型 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 來辨識它們。 例如，相對於同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>，`System.IO.Stream` 類別也包含一些方法，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>。
 
 Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `async` 和 `await` 搭配使用的方法。 如需詳細資訊，請參閱 UWP 開發的[執行緒與非同步程式設計](/windows/uwp/threading-async/)，以及[非同步程式設計 (Windows Store apps)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) 和[快速入門：在 C# 或 Visual Basic 中呼叫非同步 API](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10)) (若您使用舊版 Windows 執行階段)。
 
 ## <a name="BKMK_Threads"></a> 執行緒
 
-非同步方法主要做為非封鎖作業使用。 當等候的工作正在執行時，非同步方法的 `await` 運算式不會封鎖目前的執行緒。 運算式會改為註冊方法的其餘部分做為接續，並將控制權交還給非同步方法的呼叫端。
+非同步方法主要做為非封鎖作業使用。 當等候的工作正在執行時，非同步方法中的 @no__t 0 運算式不會封鎖目前的執行緒。 運算式會改為註冊方法的其餘部分做為接續，並將控制權交還給非同步方法的呼叫端。
 
 `async` 和 `await` 關鍵字不會導致建立其他執行緒。 由於非同步方法不會在本身的執行緒上執行，因此非同步方法不需要多執行緒。 方法會在目前的同步處理內容執行，而且只有在方法為作用中時才會在執行緒上花費時間。 您可以使用 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 將受限於 CPU 的工作移到背景執行緒，但是背景執行緒無法協助處理正在等待結果產生的處理序。
 
@@ -158,16 +162,15 @@ Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `asyn
 
 - 標記的非同步方法可以使用 [await](../../../language-reference/operators/await.md) 來指定暫停點。 `await` 運算子會告知編譯器，非同步方法只有在等候的非同步處理序完成後，才能繼續通過該點。 同時，控制權會返回非同步方法的呼叫端。
 
-     非同步方法在 `await` 運算式上暫停時，並不構成從方法退出，而 `finally` 區塊也不會執行。
+     非同步方法在 @no__t 0 的運算式暫止不會構成從方法結束，而且不會執行 @no__t 1 區塊。
 
 - 標記的非同步方法本身可以做為其呼叫方法的等候目標。
 
-非同步方法中通常會出現一或多次 `await` 運算子，但是沒有 `await` 運算式也不會造成編譯器錯誤。 如果非同步方法未使用 `await` 運算子來標記暫停點，方法會無視於 `async` 修飾詞，像同步方法一樣執行。 編譯器將對這類方法發出警告。
+非同步方法通常包含一或多個 `await` 運算子的出現，但缺少 @no__t 1 運算式不會造成編譯器錯誤。 如果非同步方法未使用 `await` 運算子來標記暫停點，則即使 `async` 修飾詞，方法還是會當做同步方法來執行。 編譯器將對這類方法發出警告。
 
 `async` 和 `await` 都是內容關鍵字。 如需詳細資訊和範例，請參閱下列主題：
 
 - [async](../../../language-reference/keywords/async.md)
-
 - [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> 傳回型別和參數
@@ -180,7 +183,7 @@ async 方法通常會傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.
 
 從 C# 7.0 開始，您也可以指定任何其他傳回型別，前提是該類型包括 `GetAwaiter` 方法。 這類類型的範例是 <xref:System.Threading.Tasks.ValueTask%601>。 它提供於 [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 套件中。
 
-下列範例將示範如何宣告和呼叫會傳回 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task> 的方法。
+下列範例顯示如何宣告和呼叫傳回 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task> 的方法：
 
 ```csharp
 // Signature specifies Task<TResult>
@@ -216,7 +219,7 @@ await GetTaskAsync();
 
 非同步方法的傳回型別也可以是 `void`。 這個傳回類型主要用於定義需要 `void` 傳回類型的事件處理常式。 非同步事件處理常式通常做為非同步程式的起點。
 
-無法等候傳回型別為 `void` 的非同步方法，而且傳回 void 的方法呼叫端無法攔截該方法擲回的任何例外狀況。
+具有 @no__t 0 傳回類型的非同步方法無法等候，而且 void 傳回方法的呼叫端無法攔截方法擲回的任何例外狀況。
 
 非同步方法無法宣告 [in](../../../language-reference/keywords/in-parameter-modifier.md)、[ref](../../../language-reference/keywords/ref.md) 或 [out](../../../language-reference/keywords/out-parameter-modifier.md) 參數，但是此方法可以呼叫具有這類參數的方法。 同樣地，async 方法無法以傳址方式傳回值，但可以使用 ref 傳回值呼叫方法。
 
@@ -225,18 +228,15 @@ await GetTaskAsync();
 Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳回型別 (類似於工作)：
 
 - <xref:Windows.Foundation.IAsyncOperation%601>，對應至 <xref:System.Threading.Tasks.Task%601>
-
 - <xref:Windows.Foundation.IAsyncAction>，對應至 <xref:System.Threading.Tasks.Task>
-
 - <xref:Windows.Foundation.IAsyncActionWithProgress%601>
-
 - <xref:Windows.Foundation.IAsyncOperationWithProgress%602>
 
 ## <a name="BKMK_NamingConvention"></a> 命名慣例
 
 依照慣例，會傳回通常可等候類型 (例如 `Task`、`Task<T>`、`ValueTask`、`ValueTask<T>`) 的方法應該具有結尾為 "Async" 的名稱。 會開始執行非同步作業但不會傳回可等候類型的方法不應該具有結尾為 "Async" 的名稱，但其名稱開頭可以是 "Begin"、"Start" 或一些其他動詞，以建議此方法不會傳回或擲回作業結果。
 
-當事件、基底類別或介面合約採用不同的名稱時，您可以忽略慣例。 例如，您不應該重新命名通用事件處理常式，像是 `Button1_Click`。
+當事件、基底類別或介面合約採用不同的名稱時，您可以忽略慣例。 例如，您不應該重新命名一般事件處理常式，例如 `Button1_Click`。
 
 ## <a name="BKMK_RelatedTopics"></a> 相關主題和範例 (Visual Studio)
 
@@ -248,7 +248,7 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 |[非同步方法的傳回型別 (C#)](./async-return-types.md)|說明非同步方法可以傳回的類型，並解釋每種類型的適用時機。||
 |[非同步程式中的控制流程 (C#)](./control-flow-in-async-programs.md)|在非同步程式中詳細追蹤一連串 await 運算式的控制流程。|[非同步範例：非同步程式中的控制流程](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
 |[微調非同步應用程式 (C#)](./fine-tuning-your-async-application.md)|顯示如何將下列功能加入至您的非同步方案：<br /><br /> - [取消一項非同步工作或工作清單 (C#)](./cancel-an-async-task-or-a-list-of-tasks.md)<br />- [在一段時間後取消非同步工作 (C#)](./cancel-async-tasks-after-a-period-of-time.md)<br />- [當其中一項非同步工作完成時，取消剩餘的非同步工作 (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [啟動多項非同步工作並在它們完成時進行處理 (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md)|[非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
-|[處理非同步應用程式中的重新進入 (C#)](./handling-reentrancy-in-async-apps.md)|顯示如何處理現用非同步作業在執行當中重新啟動的情況。||
+|[處理非同步應用程式中的重新進入 (C#)](./handling-reentrancy-in-async-apps.md)|示範如何處理使用中的非同步作業在執行時重新開機的情況。||
 |[WhenAny：銜接 .NET Framework 和 Windows 執行階段](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|顯示如何在 Windows 執行階段中進行 .NET Framework 與 IAsyncOperations 之工作型別之間的橋接，讓您可以搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 與 Windows 執行階段方法。|[非同步範例：銜接 .NET 和 Windows 執行階段 (AsTask 和 WhenAny)](https://code.msdn.microsoft.com/Async-Sample-Bridging-d6a2f739) \(英文\)|
 |非同步取消：銜接 .NET Framework 和 Windows 執行階段|顯示如何在 Windows 執行階段中進行 .NET Framework 與 IAsyncOperations 之工作型別之間的橋接，讓您可以搭配使用 <xref:System.Threading.CancellationTokenSource> 與 Windows 執行階段方法。|[非同步範例：銜接 .NET 和 Windows 執行階段 (AsTask & Cancellation) (英文)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|
 |[使用非同步功能存取檔案 (C#)](./using-async-for-file-access.md)|列出並示範使用 async 和 await 存取檔案的優點。||
@@ -257,88 +257,9 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 
 ## <a name="BKMK_CompleteExample"></a> 完整範例
 
-下列程式碼是本主題討論之 Windows Presentation Foundation (WPF) 應用程式中的 MainWindow.xaml.cs 檔案。 您可以從[非同步範例：＜使用 Async 和 Await 進行非同步程式設計＞中的範例](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) \(英文\) 下載範例。
+下列程式碼是這篇文章所討論之 WPF 應用程式中的*MainWindow.xaml.cs*檔案。 您可以從[非同步範例：＜使用 Async 和 Await 進行非同步程式設計＞中的範例](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/) \(英文\) 下載範例。
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-// Add a using directive and a reference for System.Net.Http;
-using System.Net.Http;
-
-namespace AsyncFirstExample
-{
-    public partial class MainWindow : Window
-    {
-        // Mark the event handler with async so you can use await in it.
-        private async void StartButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Call and await separately.
-            //Task<int> getLengthTask = AccessTheWebAsync();
-            //// You can do independent work here.
-            //int contentLength = await getLengthTask;
-
-            int contentLength = await AccessTheWebAsync();
-
-            resultsTextBox.Text +=
-                $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-        }
-
-        // Three things to note in the signature:
-        //  - The method has an async modifier.
-        //  - The return type is Task or Task<T>. (See "Return Types" section.)
-        //    Here, it is Task<int> because the return statement returns an integer.
-        //  - The method name ends in "Async."
-        async Task<int> AccessTheWebAsync()
-        {
-            // You need to add a reference to System.Net.Http to declare client.
-            using (HttpClient client = new HttpClient())
-            {
-                    // GetStringAsync returns a Task<string>. That means that when you await the
-                    // task you'll get a string (urlContents).
-                    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
-
-                    // You can do work here that doesn't rely on the string from GetStringAsync.
-                    DoIndependentWork();
-
-                    // The await operator suspends AccessTheWebAsync.
-                    //  - AccessTheWebAsync can't continue until getStringTask is complete.
-                    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
-                    //  - Control resumes here when getStringTask is complete.
-                    //  - The await operator then retrieves the string result from getStringTask.
-                    string urlContents = await getStringTask;
-
-                    // The return statement specifies an integer result.
-                    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.
-                    return urlContents.Length;
-            }
-        }
-
-        void DoIndependentWork()
-        {
-            resultsTextBox.Text += "Working . . . . . . .\r\n";
-        }
-    }
-}
-
-// Sample Output:
-
-// Working . . . . . . .
-
-// Length of the downloaded string: 25035.
-```
+[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)] 
 
 ## <a name="see-also"></a>另請參閱
 

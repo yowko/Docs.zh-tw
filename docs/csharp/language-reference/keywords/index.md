@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: f325d8ba09e3c3d1c1b3436f758e8fc1696c7f49
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 2bdaa2f4cdb19d01948effd599177f68859cb82c
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167845"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291067"
 ---
 # <a name="c-keywords"></a>C# 關鍵字
 
@@ -59,8 +59,9 @@ ms.locfileid: "70167845"
 |[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[partial (型別)](partial-type.md)|[partial (方法)](partial-method.md)|
 |[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[value](value.md)|[var](var.md)|[when (篩選條件)](when.md)|
-|[where (泛型型別條件約束)](where-generic-type-constraint.md)|[where (查詢子句)](where-clause.md)|[yield](yield.md)|
+|[非受控（泛型型別條件約束）](where-generic-type-constraint.md)|[值](value.md)|[var](var.md)|
+|[when (篩選條件)](when.md)|[where (泛型型別條件約束)](where-generic-type-constraint.md)|[where (查詢子句)](where-clause.md)|
+|[yield](yield.md)| | |
   
 ## <a name="see-also"></a>另請參閱
 

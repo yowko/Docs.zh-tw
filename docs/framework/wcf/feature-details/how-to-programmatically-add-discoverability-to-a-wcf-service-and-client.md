@@ -2,21 +2,21 @@
 title: 作法：以程式設計方式將探索能力新增至 WCF 服務與用戶端
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a139eb4a15486be329bc6853ee6b3a3be06b0619
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586619"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291566"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>作法：以程式設計方式將探索能力新增至 WCF 服務與用戶端
-本主題說明如何讓 Windows Communication Foundation (WCF) 服務可以探索。 它根據[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例。  
+本主題說明如何讓 Windows Communication Foundation （WCF）服務可供探索。 它是以[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例為基礎。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>若要為探索設定現有的自我裝載服務範例  
   
-1. 開啟 Visual Studio 2012 中的自我裝載的解決方案。 範例位於 TechnologySamples\Basic\Service\Hosting\SelfHost 目錄中。  
+1. 在 Visual Studio 2012 中開啟自我裝載解決方案。 範例位於 TechnologySamples\Basic\Service\Hosting\SelfHost 目錄中。  
   
-2. 將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到下列錯誤訊息: 「 系統。 ServiceModel.Discovery.dll 或其中一個相依性需要較新版的.NET Framework 所指定的專案中...」如果您看到此訊息，以滑鼠右鍵按一下 方案總管 中的專案，然後選擇 **屬性**。 在 [**專案屬性**] 視窗中，請確定**目標 Framework**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
+2. 將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到指出「系統」的錯誤訊息。 System.servicemodel 或它的其中一個相依性需要較新版本的 .NET Framework，而不是專案中所指定的版本 ...」如果您看到此訊息，請以滑鼠右鍵按一下 方案總管中的專案，然後選擇 **屬性**。 在 [**專案屬性**] 視窗中，確定**目標 Framework**為 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   
 3. 開啟 Service.cs 檔案，然後加入下列 `using` 陳述式。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65586619"
   
 2. 將參考加入至 `System.ServiceModel.dll` 和 `System.ServiceModel.Discovery.dll`  
   
-3. 從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這樣做，請以滑鼠右鍵按一下中的檔案**方案總管**，選取**複製**，然後選取**DiscoveryClientApp**專案、 以滑鼠右鍵按一下，然後選取**貼上**。  
+3. 從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這麼做，請以滑鼠右鍵按一下**方案總管**中的檔案，選取 [**複製**]，然後選取**discoveryclientapp.exe**專案，按一下滑鼠右鍵並選取 [**貼**上]。  
   
 4. 開啟 Program.cs。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "65586619"
     }  
     ```  
   
-     這會告訴 WCF，<xref:System.ServiceModel.Discovery.DiscoveryClient>類別應該用來傳送及接收探索訊息的標準 UDP 探索端點。  
+     這會告訴 WCF @no__t 0 類別應該使用標準 UDP 探索端點來傳送和接收探索訊息。  
   
 8. 在下一行，呼叫 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法並指定包含要搜尋之服務合約的 <xref:System.ServiceModel.Discovery.FindCriteria> 執行個體。 在此情況下，指定 `ICalculator`。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "65586619"
   
      此方法使用自 `FindCalculatorServiceAddress` 傳回的端點位址來呼叫計算機服務。  
   
-11. 在 `InvokeCalculatorService` 方法中，建立 `CalculatorServiceClient` 類別的執行個體。 這個類別由定義[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例。 它是使用 Svcutil.exe 來產生的。  
+11. 在 `InvokeCalculatorService` 方法中，建立 `CalculatorServiceClient` 類別的執行個體。 此類別是由[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例所定義。 它是使用 Svcutil.exe 來產生的。  
   
     ```csharp  
     // Create a client  
@@ -196,7 +196,7 @@ ms.locfileid: "65586619"
   
 3. service.exe 的輸出應該看起來如下所示。  
   
-    ```Output  
+    ```output  
     Received Add(100,15.99)  
     Return: 115.99  
     Received Subtract(100,15.99)  
@@ -209,7 +209,7 @@ ms.locfileid: "65586619"
   
 4. Discoveryclientapp.exe 的輸出應該看起來如下所示。  
   
-    ```Output  
+    ```output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
     Add(100,15.99) = 115.99  
     Subtract(100,15.99) = 84.01  
@@ -220,7 +220,7 @@ ms.locfileid: "65586619"
     ```  
   
 ## <a name="example"></a>範例  
- 以下是本範例的程式碼清單。 因為此程式碼根據[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例中，會列出已變更的檔案。 如需自我裝載範例的詳細資訊，請參閱[安裝指示](https://go.microsoft.com/fwlink/?LinkId=145522)。  
+ 以下是本範例的程式碼清單。 因為此程式碼是以[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例為基礎，所以只會列出已變更的檔案。 如需有關自我裝載範例的詳細資訊，請參閱[設定指示](https://go.microsoft.com/fwlink/?LinkId=145522)。  
   
 ```csharp  
 // Service.cs  

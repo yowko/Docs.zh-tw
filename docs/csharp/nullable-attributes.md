@@ -2,14 +2,14 @@
 title: 升級具有屬性的 Api 以定義 null 預期
 description: 本文說明加入描述性屬性的動機和技術，以描述引數的 null 狀態和 Api 的傳回值
 ms.date: 07/31/2019
-ms.openlocfilehash: b6c6be213cb920459e5f1adbe3ee822ff6ddbf33
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fedd701fb7a3bcdff96fc1abc5451cc59c01f34f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834199"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291317"
 ---
-# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>更新程式庫以使用可為 null 的參考型別，並將可為 null 的規則與呼叫端
+# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>更新程式庫以使用可為 null 的參考型別，並將可為 null 的規則與呼叫
 
 加入[可為 null 的參考型別](nullable-references.md)表示您可以宣告每個變數是否允許或預期 @no__t 1 的值。 這會在您撰寫程式碼時提供絕佳的體驗。 如果不可為 null 的變數可能設定為 `null`，則會收到警告。 如果可為 null 的變數不是 null，則您會收到警告，然後再對其進行取值。 更新您的程式庫可能需要一些時間，但回報值得一提。 您提供給編譯器的詳細資訊，是允許或禁止 @no__t 1 值*時*，您的 API 使用者會得到更好的警告。 讓我們從熟悉的範例開始。 假設您的程式庫具有下列 API 來抓取資源字串：
 
