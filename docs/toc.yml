@@ -580,8 +580,8 @@
           href: csharp/tutorials/exploration/interpolated-strings-local.md
         - name: 字串插補的進階案例
           href: csharp/tutorials/string-interpolation.md
-        - name: 使用預設介面成員安全地更新介面
-          href: csharp/tutorials/default-interface-members-versions.md
+        - name: 使用預設介面方法安全地更新介面
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: 探索索引及範圍
           href: csharp/tutorials/ranges-indexes.md
         - name: 使用可以為 null 的參考類型
@@ -1120,7 +1120,7 @@
           href: visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
         - name: HOW TO：摺疊及隱藏程式碼區段
           href: visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
-        - name: 作法：Label 陳述式
+        - name: HOW TO：Label 陳述式
           href: visual-basic/programming-guide/program-structure/how-to-label-statements.md
         - name: 程式碼中的特殊字元
           href: visual-basic/programming-guide/program-structure/special-characters-in-code.md
@@ -1160,12 +1160,12 @@
             - name: 複合資料類型
               href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
               items:
-                - name: 作法：在變數中存放多個值
+                - name: HOW TO：在變數中存放多個值
                   href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
             - name: 泛型型別
               href: visual-basic/programming-guide/language-features/data-types/generic-types.md
               items:
-                - name: HOW TO：定義可以為不同資料類型提供相同功能的類別
+                - name: 作法：定義可以為不同資料類型提供相同功能的類別
                   href: visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
                 - name: 作法：使用泛型類別
                   href: visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md
@@ -1184,7 +1184,7 @@
                   href: visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
                 - name: 字串與其他類型之間的轉換
                   href: visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
-                - name: HOW TO：將物件轉換成其他類型
+                - name: 作法：將物件轉換成其他類型
                   href: visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
                 - name: 陣列轉換
                   href: visual-basic/programming-guide/language-features/data-types/array-conversions.md
@@ -1247,9 +1247,9 @@
           href: visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md
         - name: 逐步解說：呼叫 Windows API
           href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
-        - name: HOW TO：呼叫 Windows API
+        - name: 作法：呼叫 Windows API
           href: visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md
-        - name: 作法：呼叫不帶正負號的類型的 Windows 函式
+        - name: HOW TO：呼叫不帶正負號的類型的 Windows 函式
           href: visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
         - name: 逐步解說：建立 COM 物件
           href: visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md
