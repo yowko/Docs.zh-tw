@@ -200,7 +200,7 @@
       items:
         - name: new 條件約束
           href: keywords/new-constraint.md
-        - name: where
+        - name: 其中
           href: keywords/where-generic-type-constraint.md
     - name: 存取關鍵字
       items:
@@ -315,6 +315,9 @@
     - name: '?: 運算子'
       href: operators/conditional-operator.md
       displayName: 'conditional, ternary, ref'
+    - name: '! (Null 容許) 運算子'
+      href: operators/null-forgiving.md
+      displayName: 'nullable reference, null-forgiveness'
     - name: '?? 與 ??= 運算子'
       href: operators/null-coalescing-operator.md
       displayName: 'null-coalescing, assignment'
@@ -621,7 +624,7 @@
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
     - name: 遞迴模式比對
       href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: 預設介面成員
+    - name: 預設介面方法
       href: ../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
     - name: 非同步資料流
       href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
