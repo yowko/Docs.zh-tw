@@ -84,7 +84,7 @@ ms.locfileid: "71053270"
   
 ## <a name="featured-book-chapter"></a>精選書籍章節
 
-[了解 C# 3.0：掌握 C# 3.0 的基本概念中的介面
+[了解 C# 3.0：掌握 C# 3.0 的基本概念](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的[介面](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
 
 ## <a name="see-also"></a>另請參閱
 
