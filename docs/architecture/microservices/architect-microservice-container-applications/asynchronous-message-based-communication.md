@@ -2,12 +2,12 @@
 title: 非同步訊息通訊
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 非同步訊息型通訊是微服務架構的基本概念，因為它是最終保持微服務彼此之間相互獨立，同時又能同步的最佳方式。
 ms.date: 09/20/2018
-ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 58fe387c6bc9e1dcca519a200d3f8988f327a39c
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834477"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394568"
 ---
 # <a name="asynchronous-message-based-communication"></a>非同步訊息通訊
 
@@ -84,12 +84,12 @@ ms.locfileid: "71834477"
 ## <a name="additional-resources"></a>其他資源
 
 - **事件驅動傳訊** \
-  <http://soapatterns.org/design_patterns/event_driven_messaging>
+  <https://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **發佈/訂閱頻道** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Udi Dahan.已釐清的 CQRS** \
+- **Udi Dahan。澄清 CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **命令與查詢責任隔離 (CQRS)**  \
@@ -101,7 +101,7 @@ ms.locfileid: "71834477"
 - **最終一致性** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard：重構以提高彈性：評估結合程度** \
+- **Jimmy Bogard。重構以提高彈性：評估**結合  \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]

@@ -2,12 +2,12 @@
 title: 使用監視和遙測將應用程式現代化
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |使用監視和遙測將應用程式現代化
 ms.date: 04/30/2018
-ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373958"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393858"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>使用監視和遙測將應用程式現代化
 
@@ -19,7 +19,7 @@ Application Insights 是可延伸的應用程式效能管理（APM）服務，�
 
 圖4-10 顯示 Application Insights 如何監視您的應用程式，以及它如何將這些深入解析加入儀表板的範例。
 
-![Application Insights 監視儀表板](./media/image10.png)
+![Application Insights 監視儀表板的螢幕擷取畫面。](./media/modernize-your-apps-with-monitoring-and-telemetry/application-insights-monitoring-dashboard.png)
 
 **圖4-10。** Application Insights 監視儀表板
 
@@ -43,7 +43,7 @@ Log Analytics 中的[容器監視解決方案](https://docs.microsoft.com/azure/
 
 圖4-11 顯示各種容器主機和代理程式與 OMS 之間的關聯性。
 
-![Log Analytics 容器監視解決方案](./media/image11.png)
+![Log Analytics 容器監視解決方案的螢幕擷取畫面。](./media/modernize-your-apps-with-monitoring-and-telemetry/log-analytics-container-monitoring-solution.png)
 
 **圖4-11。** Log Analytics 容器監視解決方案
 
@@ -89,4 +89,4 @@ Log Analytics 中的[容器監視解決方案](https://docs.microsoft.com/azure/
 
 >[!div class="step-by-step"]
 >[上一頁](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
->[下一頁](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[下一頁](life-cycle-ci-cd-pipelines-devops-tools.md)

@@ -2,12 +2,12 @@
 title: 雲端原生 DevOps
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |雲端原生 DevOps
 ms.date: 06/30/2019
-ms.openlocfilehash: a056da833d7c6da11ab956337b77deab5e9bd159
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 84d37d14af8a68a51088568ded05ceef2e5e11fb
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183186"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393722"
 ---
 # <a name="cloud-native-devops"></a>雲端原生 DevOps
 
@@ -35,7 +35,7 @@ DevOps 時沒有黃金 hammer。 沒有人可以銷售一套完整且全面的�
 
 ## <a name="azure-devops"></a>Azure DevOps
 
-Azure DevOps 具有長歷史。 當 Team Foundation Server 第一次在線上移動，以及透過各種名稱變更時，它可以將其根重新追蹤至：Visual Studio Online 和 Visual Studio Team Services。 不過，過去幾年來，它就會變得遠超過其前身。
+Azure DevOps 具有長歷史。 當 Team Foundation Server 第一次在線上移動，以及透過各種名稱變更時，它可以將其根重新追蹤至： Visual Studio Online 和 Visual Studio Team Services。 不過，過去幾年來，它就會變得遠超過其前身。
 
 Azure DevOps 分成五個主要元件：
 
@@ -78,9 +78,9 @@ Azure DevOps 中的最上層組織單位稱為「專案」（Project）。 在�
 
 微服務背後的其中一個重要概念是，服務應該區分開來，並彼此區隔。 使用網域導向設計來決定服務的界限時，服務會作為交易界限。 資料庫更新不應跨越多個服務。 這項相關資料的集合稱為「系結內容」。  這項想法的反映是將微服務資料隔離到資料庫，並獨立于其餘的服務。 這讓您有很大的想法，可以將這種作法帶到原始程式碼。
 
-不過，這種方法並不會有問題。 我們時間的其中一個比較 gnarly 的開發問題是管理相依性。 請考慮組成平均`node_modules`目錄的檔案數目。 全新安裝（例如`create-react-app` ）可能會攜帶數以千計的套件。 如何管理這些相依性的問題，是一項很棘手的問題。 
+不過，這種方法並不會有問題。 我們時間的其中一個比較 gnarly 的開發問題是管理相依性。 請考慮組成平均 `node_modules` 目錄的檔案數目。 如 `create-react-app` 的全新安裝可能會攜帶數以千計的套件。 如何管理這些相依性的問題，是一項很棘手的問題。 
 
-如果相依性已更新，下游套件也必須更新此相依性。 可惜的是，這會讓開發工作順利進行`node_modules` ，因此，目錄最後會有單一封裝的多個版本，每個套件的相依性會稍有不同。 部署應用程式時，應該使用哪個版本的相依性？ 目前在生產環境中的版本？ 目前在搶鮮版（Beta）中，但在取用者進入生產階段時可能會在生產環境中的版本？ 只使用微服務不會解決的困難問題。
+如果相依性已更新，下游套件也必須更新此相依性。 可惜的是，這會進行開發工作，因此，`node_modules` 目錄最後會有單一封裝的多個版本，而每個套件的相依性會略有不同的步調版本。 部署應用程式時，應該使用哪個版本的相依性？ 目前在生產環境中的版本？ 目前在搶鮮版（Beta）中，但在取用者進入生產階段時可能會在生產環境中的版本？ 只使用微服務不會解決的困難問題。
 
 有各種不同的專案相依的程式庫。 藉由將微服務除以每個存放庫中的其中一個，可使用內部存放庫（Azure Artifacts）來最佳解析內部相依性。 程式庫的組建會將其最新版本推送至 Azure Artifacts 以供內部使用。 下游專案仍然必須手動更新，才能依賴新更新的套件。
 
@@ -118,7 +118,7 @@ Azure DevOps 中的最上層組織單位稱為「專案」（Project）。 在�
 
 ![圖11-3 電子郵件和登入服務的標準目錄結構](./media/dir-struct.png)
 
-每當建立新的專案時，就應該使用放置正確結構的範本。 此範本也可以將這類有用的專案包含為基本架構自述`azure-pipelines.yml`檔和。 在任何微服務架構中，專案之間的高度變異數會使服務的大量作業變得更棘手。
+每當建立新的專案時，就應該使用放置正確結構的範本。 此範本也可以將這類有用的專案包含為基本架構讀我檔案和 @no__t 0。 在任何微服務架構中，專案之間的高度變異數會使服務的大量作業變得更棘手。
 
 有許多工具可針對整個目錄提供範本化，其中包含數個原始程式碼目錄。 [Yeoman](https://yeoman.io/)在 JavaScript 世界中很熱門，GitHub 有最近發行的存放[庫範本](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/)，可提供許多相同的功能。
 
@@ -128,7 +128,7 @@ Azure DevOps 中的最上層組織單位稱為「專案」（Project）。 在�
 
 雲端原生應用程式通常會比傳統軟體產品小，或至少會分成較小的服務。 追蹤與這些服務相關的問題或工作，與任何其他軟體專案一樣重要。 任何人都不想要追蹤某個工作專案，或向客戶說明未正確記錄其問題。 面板會在專案層級進行設定，但在每個專案中，可以定義區域。 這些可讓您細分數個元件的問題。 將整個應用程式的所有工作都放在同一個位置的優點是，您可以輕鬆地將工作專案從一個小組移到另一個團隊，因為他們已獲得更好的瞭解。
 
-Azure DevOps 隨附一些預先設定的熱門範本。 在最基本的設定中，您只需要知道待處理專案中的內容、人員的工作，以及完成的動作。 請務必讓您瞭解建立軟體的程式，以便將工作設定為優先處理，並向客戶回報已完成的作業。 當然，非常少的軟體專案會以`to do`、 `doing`和`done`等方式，來處理簡單的程式。 人們不需要花很長的時間，就能`QA`開始`Detailed Specification`將或之類的步驟新增至程式。
+Azure DevOps 隨附一些預先設定的熱門範本。 在最基本的設定中，您只需要知道待處理專案中的內容、人員的工作，以及完成的動作。 請務必讓您瞭解建立軟體的程式，以便將工作設定為優先處理，並向客戶回報已完成的作業。 當然，非常少的軟體專案會以 `to do`、`doing` 和 @no__t 2 等簡單的程式來處理。 人們不需要花很長的時間，就能開始將 `QA` 或 `Detailed Specification` 之類的步驟加入至進程。
 
 Agile 方法的其中一個比較重要的部分，是固定間隔的自我自我檢查。 這些評論的目的是要讓您深入瞭解小組面臨的問題，以及如何改善。 這通常表示透過開發程式來變更問題和功能的流程。 因此，以額外的階段擴展面板的版面配置，會是完美的狀況。
 
@@ -166,7 +166,7 @@ Azure Boards 中的問題有不同類型的觀點。 尚未排程的專案會出
 
 Azure DevOps 提供一組工具，讓持續整合和部署比以往更容易。 這些工具位於 Azure Pipelines 之下。 第一個是 Azure 組建，這是一種可大規模執行以 YAML 為基礎之組建定義的工具。 使用者可以攜帶自己的組建電腦（適用于組建需要精心的環境），或使用來自 Azure 託管虛擬機器之經常重新整理集區的機器。 這些裝載的組建代理程式已預先安裝了各種不同的開發工具，不僅適用于 .NET 開發，還可用於從 JAVA 到 Python 到 iPhone 開發的所有專案。
 
-DevOps 包含各種現成的組建定義，可以針對任何組建進行自訂。 組建定義是在名`azure-pipelines.yml`為的檔案中定義，並簽入到存放庫，因此可以與原始程式碼一起建立版本。 這可讓您更輕鬆地對分支中的組建管線進行變更，因為可以將變更簽入到該分支中。 如圖`azure-pipelines.yml` 11-8 所示，在完整架構上建立 ASP.NET web 應用程式的範例。
+DevOps 包含各種現成的組建定義，可以針對任何組建進行自訂。 組建定義定義于名為 `azure-pipelines.yml` 的檔案中，並簽入存放庫中，以便與原始程式碼一起進行版本設定。 這可讓您更輕鬆地對分支中的組建管線進行變更，因為可以將變更簽入到該分支中。 如圖11-8 所示，在完整架構上建立 ASP.NET web 應用程式的範例 `azure-pipelines.yml`。
 
 ```yml
 name: $(rev:r)
@@ -200,7 +200,7 @@ steps:
   displayName: 'Build solution'
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
+    msbuildArgs: '-p:DeployOnBuild=true -p:WebPublishMethod=Package -p:PackageAsSingleFile=true -p:SkipInvalidConfigurations=true -p:PackageLocation="$(build.artifactstagingdirectory)\\"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
@@ -250,7 +250,7 @@ steps:
 
 ### <a name="versioning-releases"></a>版本控制版本
 
-使用發行功能的一個缺點是，它無法在已簽入`azure-pipelines.yml`的檔案中定義。 有許多原因您可能想要從每個分支版本定義中，將發行基本架構包含在專案範本中。 幸好，工作正在將一些階段支援轉移到組建元件中。 這就是所謂的多階段組建，而[第一個版本現在已可供使用](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)！
+使用發行功能的一個缺點是，它無法在已簽入的 `azure-pipelines.yml` 檔案中定義。 有許多原因您可能想要從每個分支版本定義中，將發行基本架構包含在專案範本中。 幸好，工作正在將一些階段支援轉移到組建元件中。 這就是所謂的多階段組建，而[第一個版本現在已可供使用](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)！
 
 >[!div class="step-by-step"]
 >[上一頁](azure-security.md)

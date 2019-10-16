@@ -2,12 +2,12 @@
 title: 整合型應用程式
 description: 了解如何將整合型應用程式容器化的核心概念。
 ms.date: 02/15/2019
-ms.openlocfilehash: a67015452fb1245ef4b24a8dc50a4b33d3f9f32e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 1d4b54017e431bd9775bf2aee8c88f56e0489367
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673595"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394687"
 ---
 # <a name="monolithic-applications"></a>整合型應用程式
 
@@ -17,11 +17,11 @@ ms.locfileid: "68673595"
 
 當您遵循「容器僅執行一項動作並在一個處理序中執行該動作」的原則時，整合型模式可能會產生衝突。 您可以在每個容器中包含多個元件/程式庫或內部層級，如圖 4-1 所示。
 
-![整合型應用程式的單一處理序或容器內即具有其全部或大部分功能，且在內部層或程式庫中經元件化處理。](./media/image1.png)
+![此圖顯示透過複製應用程式相應放大的整合型應用程式。](./media/monolithic-applications/monolithic-application-architecture-example.png)
 
 **圖 4-1.** 整合型應用程式的架構範例
 
-如果應用程式因成長而需要擴充，則此方法的缺點便會浮現。 若整個應用程式都擴充，則不成問題。 不過，在大多數情況下，應用程式只需要擴充幾個造成阻礙的部分，其他元件則較少使用。
+整合型應用程式的單一處理序或容器內即具有其全部或大部分功能，且在內部層或程式庫中經元件化處理。 如果應用程式因成長而需要擴充，則此方法的缺點便會浮現。 若整個應用程式都擴充，則不成問題。 不過，在大多數情況下，應用程式只需要擴充幾個造成阻礙的部分，其他元件則較少使用。
 
 若是一般的電子商務範例，您可能需要調整的是產品資訊元件。 瀏覽產品的客戶比購買的人多。 比起使用付款管道，會有更多客戶使用其購物籃。 新增留言或檢視其購買歷程記錄的客戶較少。 而且在單一區域中，您可能只有少數幾個員工來管理內容和行銷活動。 藉由擴充整合型設計，即可多次部署所有程式碼。
 
@@ -31,11 +31,11 @@ ms.locfileid: "68673595"
 
 從基礎結構的觀點來看，每部伺服器都可以在相同主機內執行許多應用程式，並具備可接受的資源使用效率比，如圖 4-2 所示。
 
-![單一主機可以在個別的容器中執行多個應用程式。](./media/image2.png)
+![圖表，顯示在不同的容器中有多個應用程式的主控制項。](./media/monolithic-applications/host-with-multiple-apps-containers.png)
 
 **圖 4-2.** 執行多個應用程式/容器的主機
 
-最後，從可用性的觀點來看，整合型應用程式必須以整體方式部署；這表示萬一您必須「停止和啟動」  時，會影響部署期間的所有功能和所有使用者。 在某些情況下，使用 Azure 和容器可以盡量避免這些情況，並降低應用程式停機的可能性，如圖 4-3 所示。
+最後，從可用性的觀點來看，整合型應用程式必須以整體方式部署；這表示萬一您必須「停止和啟動」時，會影響部署期間的所有功能和所有使用者。 在某些情況下，使用 Azure 和容器可以盡量避免這些情況，並降低應用程式停機的可能性，如圖 4-3 所示。
 
 您可以針對每個執行個體使用專用 VM，在 Azure 中部署整合型應用程式。 您可以使用 [Azure VM 擴展集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)來調整 VM。
 
@@ -43,9 +43,9 @@ ms.locfileid: "68673595"
 
 您可以將多個 VM 部署為 Docker 主機，並在每個 VM 執行任意數目的容器。 然後，您可以使用 Azure Load Balancer 來管理調整，如圖 4-3 所示。
 
-![整合型應用程式可以擴充至不同的主機，其中的每個主機會在容器中執行應用程式。](./media/image3.png)
+![圖表，顯示相應放大至不同主機的整合型應用程式。](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
 
-**圖 4-3**： 擴充單一 Docker 應用程式/容器的多部主機
+**圖 4-3**： 多部主機相應放大單一 Docker 應用程式
 
 您可以透過傳統部署技術來管理主機本身的部署。
 
@@ -71,7 +71,7 @@ Azure App Service 提供與 Git 的絕佳整合，讓您可以輕鬆地取得程
 
 現在，當您使用 Visual Studio 2017 時，Azure App Service 的容器支援可讓您在應用程式環境中包含所想要任何項目，如圖 4-4 所示。 如果您已將相依性新增至應用程式，並在容器中加以執行，即可在 Dockerfile 或 Docker 映像中包括這些相依性。
 
-![Visual Studio 精靈的檢視，其可將項目發佈至 Azure App Service，並醒目提示容器登錄的選取器。](./media/image4.png)
+![顯示容器登錄的 [建立 App Service] 對話方塊的螢幕擷取畫面。](./media/monolithic-applications/publish-azure-app-service-container.png)
 
 **圖 4-4**： 將容器從 Visual Studio 應用程式/容器發佈至 Azure App Service
 

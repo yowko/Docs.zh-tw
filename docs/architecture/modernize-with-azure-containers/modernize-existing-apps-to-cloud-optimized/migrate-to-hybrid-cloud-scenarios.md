@@ -2,12 +2,12 @@
 title: 移轉至混合式雲端案例
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |遷移至混合式雲端案例
 ms.date: 04/30/2018
-ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373938"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394538"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>移轉至混合式雲端案例
 
@@ -25,7 +25,7 @@ Azure Stack 是混合式雲端平臺，可讓您從組織的資料中心提供 A
 
 圖4-13 顯示 Microsoft 提供的真正混合式雲端平臺的總覽。
 
-![使用 Azure Stack 和 Azure 的 Microsoft 混合式雲端平臺](./media/image13.jpg)
+![具有 Azure Stack 和 Azure 的 Microsoft 混合式雲端平臺圖表。](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
 **圖4-13。** 使用 Azure Stack 和 Azure 的 Microsoft 混合式雲端平臺
 
@@ -66,5 +66,5 @@ Microsoft Azure Stack 開發工具組是 Azure Stack 的單一節點部署，您
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
->[上一頁](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[上一頁](life-cycle-ci-cd-pipelines-devops-tools.md)
 >[下一頁](../walkthroughs-technical-get-started-overview.md)

@@ -2,22 +2,22 @@
 title: 作為 DevOps 共同作業基礎的容器
 description: 了解容器用以簡化 DevOps 的重要角色。
 ms.date: 02/15/2019
-ms.openlocfilehash: 37faf00f270414df363f36894317f31f81a2937e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672765"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394789"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>作為 DevOps 共同作業基礎的容器
 
 依據容器和 Docker 技術的本質，開發人員可以輕鬆地與 IT 營運及生產環境共用其軟體和相依性時，同時消除一般「它在我的電腦上運行」的藉口。 容器可解決不同環境之間的應用程式衝突。 容器和 Docker 間接地將人員和 IT 營運更緊密地結合在一起，使其能夠輕鬆且有效率地共同作業。 採用容器工作流程可為許多客戶提供他們所尋求，但之前必須透過更複雜發行和建置管線組態實作的 DevOps 持續性。 容器會簡化 DevOps 中的建置/測試/部署管線。
 
-![Docker 可協助在開發/設計工作負載的開發人員和架構設計人員與執行/監視/管理工作負載的 IT 營運之間建立橋接](./media/image1.png)
+![此圖顯示 Docker 應用程式生命週期的擁有權。](./media/containers-foundation-for-devops-collaboration/persona-workloads-docker-container-lifecycle.png)
 
 **圖 2-1。** 容器化 Docker 應用程式生命週期中每個「角色」的主要工作負載
 
-透過 Docker 容器，開發人員擁有容器的內容 (應用程式和服務，以及對架構和元件的相依性)，以及容器和服務作為服務集合所組成應用程式一起運作的方式。 多個容器的交互相依性定義在 `docker-compose.yml` 檔案 (也可以稱為「部署資訊清單」  ) 中。 同時，IT 營運小組 (IT 專業人員和管理人員) 可以專注在生產環境的管理；基礎結構、延展性、監視；以及最終確保應用程式正確傳遞給終端使用者，而不需要知道各種容器的內容。 因此，「容器」這個名稱可聯想到真實世界運送容器的比喻。 所以，容器內容擁有者不需要考慮運送容器的方式，運輸公司會將容器從其源點運輸至其目的地，而不需要知道或在意內容。 透過類似方式，開發人員可以建立並擁有 Docker 容器的內容，而不需要顧慮「傳輸」機制。
+透過 Docker 容器，開發人員擁有容器的內容 (應用程式和服務，以及對架構和元件的相依性)，以及容器和服務作為服務集合所組成應用程式一起運作的方式。 多個容器的交互相依性定義在 `docker-compose.yml` 檔案 (也可以稱為「部署資訊清單」) 中。 同時，IT 營運小組 (IT 專業人員和管理人員) 可以專注在生產環境的管理；基礎結構、延展性、監視；以及最終確保應用程式正確傳遞給終端使用者，而不需要知道各種容器的內容。 因此，「容器」這個名稱可聯想到真實世界運送容器的比喻。 所以，容器內容擁有者不需要考慮運送容器的方式，運輸公司會將容器從其源點運輸至其目的地，而不需要知道或在意內容。 透過類似方式，開發人員可以建立並擁有 Docker 容器的內容，而不需要顧慮「傳輸」機制。
 
 在圖 2-1 的左側支柱部分，開發人員使用適用於 Windows 或 Mac 的 Docker，在本機的 Docker 容器中撰寫及執行程式碼。 他們透過使用 Dockerfile 來定義程式碼的作業環境，該 Dockerfile 會指定要執行的基底作業系統，以及將其程式碼建置成 Docker 映像的建置步驟。 開發人員定義一或多個映像如何使用上述的 `docker-compose.yml` 檔案部署資訊清單來交互操作。 當他們完成其本機開發時，就會將其應用程式程式碼加上 Docker 組態檔推送至他們選擇的程式碼存放庫 (也就是 Git 存放庫)。
 
@@ -57,7 +57,7 @@ DevOps 支柱部分使用程式碼存放庫中提供的 Dockerfile 定義組建 
 
 圖 2-2 呈現更詳細的 Docker 應用程式生命週期工作流程，這個執行個體將聚焦於特定的 DevOps 活動和資產。
 
-![此圖顯示 DevOps 的「外部迴圈」。 將程式碼推送到存放庫之後會啟動 CI 管線，然後開始 CD 管線以將應用程式部署在其中。 從已部署應用程式收集的計量會回饋給開發工作負載，其中會出現「內部迴圈」，讓開發小組有實際資料可回應使用者和商務需求。](./media/image2.png)
+![此圖顯示 Docker 應用程式的一般端對端生命週期。](./media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
 
 **圖 2-2.** Docker 容器化應用程式生命週期的高階工作流程
 
