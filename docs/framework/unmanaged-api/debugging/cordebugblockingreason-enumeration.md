@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ea71439c9a6c494c218a7cfc18508f4f8173b03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99fcf160b3e3b2b238520e3db5ba2e74b270380a
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740381"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274135"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason 列舉
 指定給定物件上封鎖執行緒的原因。  
@@ -39,17 +39,17 @@ Typedef enum CorDebugBlockingReason
   
 ## <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`BLOCKING_NONE`|僅供內部使用。|  
-|`BLOCKING_MONITOR_CRITICAL_SECTION`|執行緒嘗試取得監視器鎖定物件相關聯之重要區段。 通常，這發生於當您呼叫其中一個<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>或<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>方法。|  
-|`BLOCKING_MONITOR_EVENT`|執行緒正在等候的監視器鎖定的物件相關聯的事件。 通常，這發生於當您呼叫其中一個<xref:System.Threading.Monitor?displayProperty=nameWithType>`Wait`方法。|  
+|`BLOCKING_MONITOR_CRITICAL_SECTION`|執行緒正在嘗試取得與物件上的監視器鎖定相關聯的重要區段。 一般而言，當您呼叫其中一個<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>或<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>方法時，就會發生這種情況。|  
+|`BLOCKING_MONITOR_EVENT`|執行緒正在等候與物件的監視器鎖定相關聯的事件。 一般而言，當您呼叫其中一個<xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait`方法時，就會發生這種情況。|  
   
 ## <a name="remarks"></a>備註  
- 當`BLOCKING_MONITOR_CRITICAL_SECTION`或`BLOCKING_MONITOR_EVENT`成員會在[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構`pBlockingObject`"ICorDebugValue 」 介面，表示正在輸入的物件指向的結構的成員. 它也保證實作[ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md)介面。  
+ `pBlockingObject`當或成員`BLOCKING_MONITOR_EVENT`用於 [CorDebugBlockingObject](cordebugblockingobject-structure.md) 結構時，結構的成員會指向代表所輸入之物件的 "ICorDebugValue" 介面。`BLOCKING_MONITOR_CRITICAL_SECTION` 它也保證會執行[ICorDebugHeapValue3](icordebugheapvalue3-interface.md)介面。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
@@ -59,5 +59,5 @@ Typedef enum CorDebugBlockingReason
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯列舉](debugging-enumerations.md)
+- [偵錯](index.md)
