@@ -1,17 +1,17 @@
 ---
-title: <TypeInstantiation> 項目 (.NET Native)
+title: <TypeInstantiation>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ea167ae15e4d0035785d228f08779406e05e873
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 375c95a30f4f60bb711e176cb6c2d0c5fd763e2f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052372"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049118"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > 項目 (.NET Native)
+# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > 元素（.NET Native）
 將執行階段反映原則套用至建構的泛型類型。  
   
 ## <a name="syntax"></a>語法  
@@ -53,9 +53,9 @@ ms.locfileid: "66052372"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|*type_name*|類型名稱。 如果這個 `<TypeInstantiation>` 元素是 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素、[\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素或另一個 `<TypeInstantiation>` 元素的子元素，*type_name* 就可以指定類型的名稱，而不包含其命名空間。 否則，*type_name* 必須包含完整的類型名稱。 不裝飾類型名稱。 例如，針對 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 物件，`<TypeInstantiation>` 元素可能會像下面這樣：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|類型名稱。 如果這個 `<TypeInstantiation>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素、[\<Type>](type-element-net-native.md) 元素或另一個 `<TypeInstantiation>` 元素的子元素，*type_name* 就可以指定類型的名稱，而不包含其命名空間。 否則，*type_name* 必須包含完整的類型名稱。 不裝飾類型名稱。 例如，針對 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 物件，`<TypeInstantiation>` 元素可能會像下面這樣：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>引數屬性  
   
@@ -67,43 +67,43 @@ ms.locfileid: "66052372"
   
 |值|描述|  
 |-----------|-----------------|  
-|*policy_setting*|要為建構的泛型類型套用至此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|*policy_setting*|要為建構的泛型類型套用至此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|將反映原則套用至屬於此類型的事件。|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|將反映原則套用至屬於此類型的欄位。|  
-|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|如果原則已套用至包含 `<TypeInstantiation>` 元素所表示的類型，則會將該原則套用至類型。|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將反映原則套用至屬於此類型的方法。|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|將反映原則套用至屬於此類型的建構泛型方法。|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|將反映原則套用至屬於此類型的屬性。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至巢狀類型。|  
+|[\<Event>](event-element-net-native.md)|將反映原則套用至屬於此類型的事件。|  
+|[\<Field>](field-element-net-native.md)|將反映原則套用至屬於此類型的欄位。|  
+|[\<ImpliesType>](impliestype-element-net-native.md)|如果原則已套用至包含 `<TypeInstantiation>` 元素所表示的類型，則會將該原則套用至類型。|  
+|[\<Method>](method-element-net-native.md)|將反映原則套用至屬於此類型的方法。|  
+|[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|將反映原則套用至屬於此類型的建構泛型方法。|  
+|[\<Property>](property-element-net-native.md)|將反映原則套用至屬於此類型的屬性。|  
+|[\<Type>](type-element-net-native.md)|將反映原則套用至巢狀類型。|  
 |`<TypeInstantiation>`|將反映原則套用至巢狀建構的泛型類型。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|將反映原則套用至指定組件中的所有類型。|  
-|[\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|將反映原則套用至命名空間中的所有類型。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<Application>](application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。|  
+|[\<Assembly>](assembly-element-net-native.md)|將反映原則套用至指定組件中的所有類型。|  
+|[\<程式庫>](library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。|  
+|[\<Namespace>](namespace-element-net-native.md)|將反映原則套用至命名空間中的所有類型。|  
+|[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
 |`<TypeInstantiation>`|將反映原則套用至建構泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  反映、序列化和 interop 屬性都是選用性。 不過，必須至少有一個屬性存在。  
   
- 如果 `<TypeInstantiation>` 元素是 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)、[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 或 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素的子元素，則會覆寫父元素所定義的原則設定。 如果 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素定義相對應的泛型型別定義，則 `<TypeInstantiation>` 元素只會針對指定建構泛型型別的具現化，覆寫執行階段反映原則。  
+ 如果 `<TypeInstantiation>` 元素是 [\<Assembly>](assembly-element-net-native.md)、[\<Namespace>](namespace-element-net-native.md) 或 [\<Type>](type-element-net-native.md) 元素的子元素，則會覆寫父元素所定義的原則設定。 如果 [\<Type>](type-element-net-native.md) 元素定義相對應的泛型型別定義，則 `<TypeInstantiation>` 元素只會針對指定建構泛型型別的具現化，覆寫執行階段反映原則。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用反映，從建構的 <xref:System.Collections.Generic.Dictionary%602> 物件擷取泛型類型定義。 它也會使用反映來顯示代表建構泛型類型和泛型類型定義的 <xref:System.Type> 物件。 變數`b`在此範例中是<xref:Windows.UI.Xaml.Controls.TextBlock>控制項。  
+ 下列範例會使用反映，從建構的 <xref:System.Collections.Generic.Dictionary%602> 物件擷取泛型類型定義。 它也會使用反映來顯示代表建構泛型類型和泛型類型定義的 <xref:System.Type> 物件。 範例中`b`的變數<xref:Windows.UI.Xaml.Controls.TextBlock>是控制項。  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- 使用.NET Native 工具鏈編譯此範例會擲回[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)例外狀況呼叫的那一行上<xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>方法。 若要消除此例外狀況，並提供必要的中繼資料，您可以將下列 `<TypeInstantiation>` 元素加入至執行階段指示詞檔案：  
+ 使用 .NET Native 工具鏈編譯之後，此範例會在呼叫<xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>方法的程式列上擲回 [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外狀況。 若要消除此例外狀況，並提供必要的中繼資料，您可以將下列 `<TypeInstantiation>` 元素加入至執行階段指示詞檔案：  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -118,6 +118,6 @@ ms.locfileid: "66052372"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
+- [執行階段指示詞項目](runtime-directive-elements.md)
+- [執行階段指示詞原則設定](runtime-directive-policy-settings.md)

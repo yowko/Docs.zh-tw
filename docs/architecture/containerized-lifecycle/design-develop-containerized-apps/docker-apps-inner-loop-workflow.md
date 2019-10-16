@@ -2,12 +2,12 @@
 title: Docker 應用程式的內部迴圈開發工作流程
 description: 了解用於開發 Docker 應用程式的「內部迴圈」工作流程。
 ms.date: 02/15/2019
-ms.openlocfilehash: c97cd9ba8d740f13c22caa45e344c4961e3b0600
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 565852511f3a837066d5da5cf0e3ab0a902dd7da
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834487"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956504"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
@@ -54,10 +54,10 @@ Docker 映像的容器或執行個體將包含這些元件：
 
 此外，您也需要程式碼編輯器，讓您可在使用 Docker CLI 時實際開發應用程式。
 
-Microsoft 提供 Visual Studio Code，也就是 Mac、Windows 和 Linux 支援的輕量型程式碼編輯器，可為 IntelliSense 提供[多種語言的支援](https://code.visualstudio.com/docs/languages/overview) (JavaScript、.NET、Go、Java、Ruby、Python 和大部分現代程式語言)、[偵錯](https://code.visualstudio.com/Docs/editor/debugging)、[與 Git 整合](https://code.visualstudio.com/Docs/editor/versioncontrol)及[延伸模組支援](https://code.visualstudio.com/docs/extensions/overview)。 此編輯器是 Mac 和 Linux 開發人員的絕佳選擇。 在 Windows 中，您也可以使用完整的 Visual Studio 應用程式。
+Microsoft 提供 Visual Studio Code，這是 Windows、Linux 和 macOS 上支援的輕量程式碼編輯器，並為 IntelliSense 提供[許多語言的支援](https://code.visualstudio.com/docs/languages/overview)（JavaScript、.Net、Go、JAVA、Ruby、Python 和最新式的語言）。[偵錯](https://code.visualstudio.com/Docs/editor/debugging)與 [使用 Git 的整合功能](https://code.visualstudio.com/Docs/editor/versioncontrol)及[延伸支援](https://code.visualstudio.com/docs/extensions/overview)。 此編輯器非常適合 macOS 和 Linux 開發人員。 在 Windows 中，您也可以使用 Visual Studio。
 
 > [!TIP]
-> 如需安裝適用於 Windows、Mac 或 Linux 之 Visual Studio Code 的指示，請瀏覽 <https://code.visualstudio.com/docs/setup/setup-overview/>。
+> 如需安裝 Windows、Linux 或 macOS Visual Studio Code 的指示，請移至 <https://code.visualstudio.com/docs/setup/setup-overview/>。
 >
 > 如需設定適用於 Mac 之 Docker 的指示，請瀏覽 <https://docs.docker.com/docker-for-mac/>。
 
@@ -209,7 +209,7 @@ Redis 服務會使用從 Docker Hub 登錄提取的[最新公用 redis 映像](h
 
 如果您的應用程式只有單一容器，您只需要將其部署至您的 Docker 主機 (VM 或實體伺服器) 來執行。 不過，如果您的應用程式由多個服務組成，您也需要「撰寫」該應用程式。 讓我們看看不同的選項。
 
-***選項 A：執行單一容器或服務***
+@no__t 0Option：執行單一容器或服務***
 
 您可以使用 docker run 命令執行 Docker 映像，如下所示：
 
@@ -219,7 +219,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 針對此特定的部署，我們將會將傳送至連接埠 80 的要求重新導向至內部連接埠 5000。 現在應用程式正在主機層級的外部連接埠 80 上接聽。
 
-***選項 B：撰寫並執行多容器應用程式***
+***Option B：撰寫並執行多容器應用程式***
 
 在大部分的企業案例中，Docker 應用程式由多個服務組成。 在這些案例中，您可以執行 `docker-compose up` 命令 (圖 4-27)，會使用您先前可能已建立的 docker compose.yml 檔案。 執行此命令會部署組成應用程式及其所有相關容器。
 
@@ -265,9 +265,8 @@ Visual Studio Code 支援對 Docker 的偵錯，如果您使用 Node.js 和像�
 
 在使用適用於 Windows 或 Mac 的 Visual Studio 時，您也可以對 Docker 中的 .NET Core 或 .NET Framework 容器進行偵錯，如下一節中所述。
 
-> [!INFORMATION]
->
-> 若要深入了解對 Node.js Docker 容器進行偵錯，請瀏覽 <https://blog.docker.com/2016/07/live-debugging-docker/> 和 <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>。
+> [!TIP]
+>@no__t 0To 深入瞭解如何對 node.js Docker 容器進行調試，請參閱 <https://blog.docker.com/2016/07/live-debugging-docker/> 和 <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>。
 
 >[!div class="step-by-step"]
 >[上一頁](docker-apps-development-environment.md)
