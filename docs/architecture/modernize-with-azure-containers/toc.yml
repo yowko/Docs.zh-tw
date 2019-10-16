@@ -33,7 +33,7 @@
         - name: 使用監視和遙測將應用程式現代化
           href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md
         - name: 在雲端中使用 CI/CD 管線和 DevOps 工具將應用程式生命週期現代化
-          href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md
+          href: ./modernize-existing-apps-to-cloud-optimized/life-cycle-ci-cd-pipelines-devops-tools.md
         - name: 移轉至混合式雲端案例
           href: ./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md
     - name: 逐步解說和技術入門概觀

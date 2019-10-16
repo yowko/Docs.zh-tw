@@ -1,0 +1,66 @@
+- name: .NET Framework 指南
+  href: index.md
+- name: 新功能
+  href: whats-new/
+- name: 開始使用
+  href: get-started/
+- name: 安裝指南
+  href: install/
+- name: 移轉手冊
+  href: migration-guide/
+- name: 開發指南
+  href: development-guide.md
+  items:
+    - name: 應用程式定義域和組件
+      href: app-domains/
+    - name: 桌面應用程式中的資源
+      href: resources/
+    - name: 協助工具選項
+      href: ui-automation/
+    - name: 資料與模型化
+      href: data/
+    - name: 用戶端應用程式
+      href: develop-client-apps.md
+      items:
+        - name: Windows Presentation Foundation
+          href: wpf/
+        - name: Windows Forms
+          href: winforms/
+    - name: 使用 WCF 以服務為導向的應用程式
+      href: wcf/
+    - name: Windows Workflow Foundation
+      href: windows-workflow-foundation/
+    - name: Windows 服務應用程式
+      href: windows-services/
+    - name: 64 位元應用程式
+      href: 64-bit-apps.md
+    - name: 使用 ASP.NET 的 Web 應用程式
+      href: develop-web-apps-with-aspnet.md
+    - name: 以 .NET Framework 進行網路程式設計
+      href: network-programming/
+    - name: 設定應用程式
+      href: configure-apps/
+    - name: 使用 .NET Native 編譯應用程式
+      href: net-native/
+    - name: Windows Identity Foundation
+      href: security/
+    - name: 偵錯、追蹤和程式碼剖析
+      href: debug-trace-profile/
+    - name: 部署
+      href: deployment/
+    - name: 效能
+      href: performance/
+    - name: 動態程式設計
+      href: reflection-and-codedom/
+    - name: Managed Extensibility Framework (MEF)
+      href: mef/
+    - name: 與 Unmanaged 程式碼互通
+      href: interop/
+    - name: Unmanaged API 參考
+      href: unmanaged-api/
+    - name: XAML 服務
+      href: xaml-services/
+- name: 工具
+  href: tools/
+- name: 其他類別庫和 API
+  href: additional-apis/

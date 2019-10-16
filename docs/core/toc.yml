@@ -1,0 +1,331 @@
+- name: .NET Core 指南
+  href: index.md
+- name: 關於 .NET Core
+  href: about.md
+- name: 開始使用
+  href: get-started.md
+  items:
+    - name: 'C# 與 Visual Studio Code 使用者入門'
+      href: tutorials/with-visual-studio-code.md
+    - name: '使用 Visual Studio 2017 中的 .NET Core 建置 C# Hello World 應用程式'
+      href: tutorials/with-visual-studio.md
+    - name: 使用 Visual Studio 2017 的.NET Core 建置 Visual Basic Hello World 應用程式
+      href: tutorials/vb-with-visual-studio.md
+    - name: '使用 Visual Studio 2017 針對您的 C# 或 Visual Basic .NET Core Hello World 應用程式進行偵錯'
+      href: tutorials/debugging-with-visual-studio.md
+    - name: 使用 Visual Studio 2017 發行您的 Hello World 應用程式
+      href: tutorials/publishing-with-visual-studio.md
+    - name: '使用 Visual Studio 2017 中的 C# 與 .NET Core 建置 .NET 標準程式庫'
+      href: tutorials/library-with-visual-studio.md
+    - name: 使用 Visual Studio 2017 的 Visual Basic 與 .NET Core 建置 .NET 標準程式庫
+      href: tutorials/vb-library-with-visual-studio.md
+    - name: 在 Visual Studio 2017 中使用 .NET Core 測試 .NET Standard 程式庫
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: 在 Visual Studio 2017 中取用 .NET Standard 程式庫
+      href: tutorials/consuming-library-with-visual-studio.md
+- name: Windows 必要條件
+  href: windows-prerequisites.md
+- name: macOS 必要條件
+  href: macos-prerequisites.md
+- name: Linux 必要條件
+  href: linux-prerequisites.md
+- name: .NET Core 的新功能
+  items:
+    - name: .NET Core 3.0 的新功能
+      href: whats-new/dotnet-core-3-0.md
+    - name: .NET Core 2.2 的新功能
+      href: whats-new/dotnet-core-2-2.md
+    - name: .NET Core 2.1 的新功能
+      href: whats-new/dotnet-core-2-1.md
+    - name: .NET Core 2.0 的新功能
+      href: whats-new/dotnet-core-2-0.md
+- name: 應用程式相容性
+  href: compatibility/
+- name: 教學課程
+  href: tutorials/index.md
+  items:
+    - name: CLI 的範本
+      items:
+        - name: 1 - 建立項目範本
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2 - 建立專案範本
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3 - 建立範本套件
+          href: tutorials/cli-templates-create-template-pack.md
+    - name: 開始在 macOS 上使用 .NET Core
+      href: tutorials/using-on-macos.md
+    - name: 使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
+      href: tutorials/using-on-mac-vs.md
+    - name: 使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案
+      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: 使用 CLI 工具開始使用 .NET Core
+      href: tutorials/using-with-xplat-cli.md
+    - name: 使用 .NET Core 命令列組織和測試專案
+      href: tutorials/testing-with-cli.md
+    - name: 使用跨平台工具開發程式庫
+      href: tutorials/libraries.md
+    - name: 建立具有外掛程式的 .NET Core 應用程式
+      href: tutorials/creating-app-with-plugin-support.md
+    - name: 開發 ASP.NET Core 應用程式
+      href: tutorials/aspnet-core.md
+    - name: 從機器碼裝載 .NET Core
+      href: tutorials/netcore-hosting.md
+- name: 原生互通性
+  items:
+    - name: 將 .NET 核心元件公開給 COM
+      href: native-interop/expose-components-to-com.md
+- name: 套件、中繼套件和架構
+  href: packages.md
+- name: CLI 的變更概觀
+  href: tools/cli-msbuild-architecture.md
+  items:
+    - name: 相依性管理
+      href: tools/dependencies.md
+    - name: csproj 格式的新增項目
+      href: tools/csproj.md
+- name: 移轉
+  items:
+    - name: .NET Core 2.0 至 2.1
+      href: migration/20-21.md
+    - name: 從 project.json 移轉
+      href: migration/index.md
+    - name: project.json 與 csproj 的對應
+      href: tools/project-json-to-csproj.md
+    - name: 從 DNX 移轉
+      href: migration/from-dnx.md
+- name: 應用程式部署
+  href: deploying/index.md
+  items:
+    - name: 使用 CLI 工具部署應用程式
+      href: deploying/deploy-with-cli.md
+    - name: 使用 Visual Studio 部署應用程式
+      href: deploying/deploy-with-vs.md
+    - name: 使用跨平台工具建立 NuGet 封裝
+      href: deploying/creating-nuget-packages.md
+    - name: 獨立式部署執行階段向前復原
+      href: deploying/runtime-patch-selection.md
+    - name: 執行階段套件存放區
+      href: deploying/runtime-store.md
+- name: Docker
+  items:
+    - name: .NET 和 Docker 簡介
+      href: docker/introduction.md
+    - name: 將 .NET Core 應用程式容器化
+      href: docker/build-container.md
+    - name: Visual Studio 中的容器工具
+      href: /visualstudio/containers/overview
+- name: 診斷工具
+  items:
+    - name: 總覽
+      href: diagnostics/index.md
+    - name: 受控偵錯工具
+      href: diagnostics/managed-debuggers.md
+    - name: 記錄和追蹤
+      href: diagnostics/logging-tracing.md
+    - name: .NET Core CLI 全域工具
+      items:
+        - name: dotnet-counters
+          href: diagnostics/dotnet-counters.md
+        - name: dotnet-dump
+          href: diagnostics/dotnet-dump.md
+        - name: dotnet-trace
+          href: diagnostics/dotnet-trace.md
+- name: 單元測試
+  href: testing/index.md
+  items:
+    - name: 單元測試最佳做法
+      href: testing/unit-testing-best-practices.md
+    - name: '使用 xUnit 測試 C# 單元'
+      href: testing/unit-testing-with-dotnet-test.md
+    - name: '使用 NUnit 測試 C# 單元'
+      href: testing/unit-testing-with-nunit.md
+    - name: '使用 MSTest 測試 C# 單元'
+      href: testing/unit-testing-with-mstest.md
+    - name: '使用 xUnit 測試 F# 單元'
+      href: testing/unit-testing-fsharp-with-dotnet-test.md
+    - name: '使用 NUnit 測試 F# 單元'
+      href: testing/unit-testing-fsharp-with-nunit.md
+    - name: '使用 MSTest 測試 F# 單元'
+      href: testing/unit-testing-fsharp-with-mstest.md
+    - name: 使用 xUnit 測試 VB 單元
+      href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: 使用 NUnit 測試 VB 單元
+      href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: 使用 MSTest 測試 VB 單元
+      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: 執行多樣化選擇的單元測試
+      href: testing/selective-unit-tests.md
+    - name: 單元測試發佈的輸出
+      href: testing/unit-testing-published-output.md
+    - name: Visual Studio 的即時單元測試 .NET Core 專案
+      href: /visualstudio/test/live-unit-testing-start
+- name: 連續整合
+  href: tools/using-ci-with-cli.md
+- name: 版本控制
+  href: versions/index.md
+  items:
+    - name: .NET Core 版本選取
+      href: versions/selection.md
+    - name: 移除過時的執行階段及 SDK
+      href: versions/remove-runtime-sdk-versions.md
+- name: 執行階段識別碼 (RID) 目錄
+  href: rid-catalog.md
+- name: .NET Core SDK 概觀
+  href: sdk.md
+- name: .NET Core CLI
+  items:
+    - name: 總覽
+      href: tools/index.md
+    - name: 工具
+      expanded: true
+      items:
+        - name: 通用工具
+          expanded: true
+          items:
+            - name: 總覽
+              href: tools/global-tools.md
+            - name: 建立全域工具
+              href: tools/global-tools-how-to-create.md
+        - name: 針對工具使用問題進行疑難排解
+          href: tools/troubleshoot-usage-issues.md
+    - name: 較高的存取權
+      href: tools/elevated-access.md
+    - name: 擴充性模型
+      href: tools/extensibility.md
+    - name: 自訂範本
+      href: tools/custom-templates.md
+    - name: 啟用 TAB 鍵自動完成
+      href: tools/enable-tab-autocomplete.md
+    - name: 遙測
+      href: tools/telemetry.md
+    - name: global.json 概觀
+      href: tools/global-json.md
+    - name: 參考資料
+      items:
+        - name: dotnet
+          href: tools/dotnet.md
+        - name: dotnet build
+          href: tools/dotnet-build.md
+        - name: dotnet build-server
+          href: tools/dotnet-build-server.md
+        - name: dotnet clean
+          href: tools/dotnet-clean.md
+        - name: dotnet help
+          href: tools/dotnet-help.md
+        - name: dotnet migrate
+          href: tools/dotnet-migrate.md
+        - name: dotnet msbuild
+          href: tools/dotnet-msbuild.md
+        - name: dotnet new
+          href: tools/dotnet-new.md
+        - name: dotnet nuget
+          items:
+            - name: dotnet nuget delete
+              href: tools/dotnet-nuget-delete.md
+            - name: dotnet nuget locals
+              href: tools/dotnet-nuget-locals.md
+            - name: dotnet nuget push
+              href: tools/dotnet-nuget-push.md
+        - name: dotnet pack
+          href: tools/dotnet-pack.md
+        - name: dotnet publish
+          href: tools/dotnet-publish.md
+        - name: dotnet restore
+          href: tools/dotnet-restore.md
+        - name: dotnet run
+          href: tools/dotnet-run.md
+        - name: dotnet sln
+          href: tools/dotnet-sln.md
+        - name: dotnet store
+          href: tools/dotnet-store.md
+        - name: dotnet test
+          href: tools/dotnet-test.md
+        - name: dotnet tool
+          items:
+            - name: dotnet tool install
+              href: tools/dotnet-tool-install.md
+            - name: dotnet tool list
+              href: tools/dotnet-tool-list.md
+            - name: dotnet tool uninstall
+              href: tools/dotnet-tool-uninstall.md
+            - name: dotnet tool update
+              href: tools/dotnet-tool-update.md
+        - name: dotnet vstest
+          href: tools/dotnet-vstest.md
+        - name: dotnet-install 指令碼
+          href: tools/dotnet-install-script.md
+        - name: 專案參考命令
+          items:
+            - name: dotnet add reference
+              href: tools/dotnet-add-reference.md
+            - name: dotnet list reference
+              href: tools/dotnet-list-reference.md
+            - name: dotnet remove reference
+              href: tools/dotnet-remove-reference.md
+        - name: 專案套件命令
+          items:
+            - name: dotnet add package
+              href: tools/dotnet-add-package.md
+            - name: dotnet list package
+              href: tools/dotnet-list-package.md
+            - name: dotnet remove package
+              href: tools/dotnet-remove-package.md
+- name: .NET Core 其他工具
+  href: additional-tools/index.md
+  items:
+    - name: WCF Web Service Reference Provider
+      href: additional-tools/wcf-web-service-reference-guide.md
+    - name: dotnet-svcutil
+      href: additional-tools/dotnet-svcutil-guide.md
+    - name: dotnet-svcutil.xmlserializer
+      href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
+    - name: XML 序列化程式產生器
+      href: additional-tools/xml-serializer-generator.md
+- name: 從 .NET Framework 移植
+  href: porting/index.md
+  items:
+    - name: .NET Core 不適用於 .NET Framework 技術
+      href: porting/net-framework-tech-unavailable.md
+    - name: 分析第三方的相依性
+      href: porting/third-party-deps.md
+    - name: 移植程式庫
+      href: porting/libraries.md
+    - name: 為 .NET Core 組織專案
+      href: porting/project-structure.md
+    - name: 協助移植到 .NET Core 的工具
+      href: porting/tools.md
+    - name: 使用 Windows 相容性套件
+      href: porting/windows-compat-pack.md
+    - name: 移植 Windows Form 專案
+      href: porting/winforms.md
+    - name: 移植 WPF 專案
+      href: porting/wpf.md
+- name: 相依性載入
+  items:
+    - name: 總覽
+      href: dependency-loading/overview.md
+    - name: 了解 AssemblyLoadContext
+      href: dependency-loading/understanding-assemblyloadcontext.md
+    - name: 載入詳細資料
+      items:
+        - name: 預設相依性探查
+          href: dependency-loading/default-probing.md
+        - name: 載入受控組件
+          href: dependency-loading/loading-managed.md
+        - name: 載入附屬組件
+          href: dependency-loading/loading-resources.md
+        - name: 載入非受控組件
+          href: dependency-loading/loading-unmanaged.md
+    - name: 教學課程
+      items:
+        - name: 建立具有外掛程式的 .NET Core 應用程式
+          href: tutorials/creating-app-with-plugin-support.md
+        - name: 如何使用 .NET Core 中的組件卸載功能及對其進行偵錯
+          href: ../standard/assembly/unloadability-howto.md
+- name: 從原始檔建置 .NET Core
+  href: build/index.md
+  items:
+    - name: .NET Core 發佈封裝
+      href: build/distribution-packaging.md
+- name: VS 2015/project.json 文件
+  href: ../project-json.md

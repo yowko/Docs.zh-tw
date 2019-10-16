@@ -3,6 +3,8 @@
 - name: 總覽
   expanded: true
   items:
+    - name: 什麼是 Apache Spark？
+      href: what-is-spark.md
     - name: 什麼是 .NET for Apache Spark？
       href: what-is-apache-spark-dotnet.md
 - name: 教學課程
