@@ -1,0 +1,198 @@
+- name: 'C# 指南'
+  href: index.md
+- name: 開始使用
+  href: getting-started/
+- name: 教學課程
+  items:
+    - name: 總覽
+      href: tutorials/index.md
+    - name: '使用 C# 設計程式的簡介'
+      items:
+        - name: 選擇您的第一課
+          href: tutorials/intro-to-csharp/index.md
+        - name: Hello World
+          href: tutorials/intro-to-csharp/hello-world.yml
+        - name: 'C# 中的數字'
+          href: tutorials/intro-to-csharp/numbers-in-csharp.yml
+        - name: 分支和迴圈
+          href: tutorials/intro-to-csharp/branches-and-loops.yml
+        - name: 清單集合
+          href: tutorials/intro-to-csharp/list-collection.yml
+        - name: 在您的本機環境中運作
+          items:
+            - name: 設定環境
+              href: tutorials/intro-to-csharp/local-environment.md
+            - name: 'C# 中的數字'
+              href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
+            - name: 分支和迴圈
+              href: tutorials/intro-to-csharp/branches-and-loops-local.md
+            - name: 清單集合
+              href: tutorials/intro-to-csharp/arrays-and-collections.md
+            - name: 類別簡介
+              href: tutorials/intro-to-csharp/introduction-to-classes.md
+    - name: '探索 C# 6'
+      href: tutorials/exploration/csharp-6.yml
+    - name: 探索字串插補 - 互動式
+      href: tutorials/exploration/interpolated-strings.yml
+    - name: 探索您環境中的字串插補
+      href: tutorials/exploration/interpolated-strings-local.md
+    - name: 字串插補的進階案例
+      href: tutorials/string-interpolation.md
+    - name: 使用預設介面方法安全地更新介面
+      href: tutorials/default-interface-methods-versions.md
+    - name: 使用預設介面的方法，建立 mixin 功能
+      href: tutorials/mixins-with-default-interface-methods.md
+    - name: 探索索引及範圍
+      href: tutorials/ranges-indexes.md
+    - name: 使用可以為 null 的參考類型
+      href: tutorials/nullable-reference-types.md
+    - name: 將應用程式升級成可以為 null 的參考類型
+      href: tutorials/upgrade-to-nullable-references.md
+    - name: 產生及使用非同步串流
+      href: tutorials/generate-consume-asynchronous-stream.md
+    - name: 使用模式比對擴充資料功能
+      href: tutorials/pattern-matching.md
+    - name: 主控台應用程式
+      href: tutorials/console-teleprompter.md
+    - name: REST 用戶端
+      href: tutorials/console-webapiclient.md
+    - name: 'C# 和 .NET 中的繼承'
+      href: tutorials/inheritance.md
+    - name: 處理 LINQ
+      href: tutorials/working-with-linq.md
+    - name: 使用屬性
+      href: tutorials/attributes.md
+- name: 'C# 導覽'
+  href: tour-of-csharp/
+- name: 'C# 的新功能'
+  items:
+    - name: 'C# 8.0'
+      href: whats-new/csharp-8.md
+    - name: 'C# 7.3'
+      href: whats-new/csharp-7-3.md
+    - name: 'C# 7.2'
+      href: whats-new/csharp-7-2.md
+    - name: 'C# 7.1'
+      href: whats-new/csharp-7-1.md
+    - name: 'C# 7.0'
+      href: whats-new/csharp-7.md
+    - name: 'C# 6'
+      href: whats-new/csharp-6.md
+    - name: 'C# 的版本歷程記錄'
+      href: whats-new/csharp-version-history.md
+    - name: 語言與架構的關聯性
+      href: whats-new/relationships-between-language-and-library.md
+    - name: 版本與更新考量
+      href: whats-new/version-update-considerations.md
+- name: 'C# 概念'
+  items:
+    - name: 'C# 型別系統'
+      href: programming-guide/types/index.md
+    - name: 可為 Null 的參考型別
+      href: nullable-references.md
+    - name: 使用屬性與限制式說明可為 Null 的 API
+      href: nullable-attributes.md
+    - name: 命名空間
+      href: programming-guide/namespaces/index.md
+    - name: 基本類型
+      href: basic-types.md
+    - name: 類別
+      href: programming-guide/classes-and-structs/classes.md
+    - name: 結構
+      href: structs.md
+    - name: Tuple
+      href: tuples.md
+    - name: 解構元組和其他類型
+      href: deconstruct.md
+    - name: 介面
+      href: programming-guide/interfaces/index.md
+    - name: 方法
+      href: methods.md
+    - name: Lambda 運算式
+      href: programming-guide/statements-expressions-operators/lambda-expressions.md
+    - name: 屬性
+      href: properties.md
+    - name: 索引子
+      href: indexers.md
+    - name: 捨棄
+      href: discards.md
+    - name: 泛型
+      href: programming-guide/generics/index.md
+    - name: 迭代器
+      href: iterators.md
+    - name: 委派和事件
+      items:
+        - name: 委派簡介
+          href: delegates-overview.md
+        - name: System.Delegate 與 delegate 關鍵字
+          href: delegate-class.md
+        - name: 強類型委派
+          href: delegates-strongly-typed.md
+        - name: 委派的一般模式
+          href: delegates-patterns.md
+        - name: 事件簡介
+          href: events-overview.md
+        - name: 標準的 .NET 事件模式
+          href: event-pattern.md
+        - name: 更新的 .NET 事件模式
+          href: modern-events.md
+        - name: 區別委派和事件
+          href: distinguish-delegates-events.md
+    - name: Language Integrated Query (LINQ)
+      href: linq/
+    - name: 非同步程式設計
+      href: async.md
+    - name: 模式比對
+      href: pattern-matching.md
+    - name: 撰寫安全有效率的程式碼
+      href: write-safe-efficient-code.md
+    - name: 運算式樹狀架構
+      items:
+        - name: 運算式樹狀架構簡介
+          href: expression-trees.md
+        - name: 說明運算式樹狀架構
+          href: expression-trees-explained.md
+        - name: 支援運算式樹狀架構的架構類型
+          href: expression-classes.md
+        - name: 執行運算式
+          href: expression-trees-execution.md
+        - name: 解譯運算式
+          href: expression-trees-interpreting.md
+        - name: 建置運算式
+          href: expression-trees-building.md
+        - name: 轉譯運算式
+          href: expression-trees-translating.md
+        - name: 總結
+          href: expression-trees-summary.md
+    - name: 原生互通性
+      href: programming-guide/interop/index.md
+    - name: 加入程式碼註解
+      href: codedoc.md
+    - name: 版本控制
+      href: versioning.md
+- name: '如何使用 C# 主題'
+  items:
+    - name: 主題索引
+      href: how-to/index.md
+    - name: 使用 `String.Split` 剖析字串
+      href: how-to/parse-strings-using-split.md
+    - name: 串連字串
+      href: how-to/concatenate-multiple-strings.md
+    - name: 將字串轉換成 DateTime
+      href: ../standard/base-types/parsing-datetime.md
+    - name: 搜尋字串
+      href: how-to/search-strings.md
+    - name: 修改字串內容
+      href: how-to/modify-string-contents.md
+    - name: 比較字串
+      href: how-to/compare-strings.md
+    - name: 使用模式比對 is 與 as 運算子安全地轉換
+      href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
+- name: .NET Compiler Platform SDK (Roslyn API)
+  href: roslyn-sdk/
+- name: 'C# 程式設計手冊'
+  href: programming-guide/
+- name: 語言參考
+  href: language-reference/
+- name: 逐步解說
+  href: walkthroughs.md
