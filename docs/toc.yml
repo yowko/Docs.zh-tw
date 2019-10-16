@@ -271,6 +271,14 @@
           href: core/diagnostics/managed-debuggers.md
         - name: 記錄和追蹤
           href: core/diagnostics/logging-tracing.md
+        - name: .NET Core CLI 全域工具
+          items:
+            - name: dotnet-counters
+              href: core/diagnostics/dotnet-counters.md
+            - name: dotnet-dump
+              href: core/diagnostics/dotnet-dump.md
+            - name: dotnet-trace
+              href: core/diagnostics/dotnet-trace.md
     - name: 單元測試
       href: core/testing/index.md
       items:
@@ -582,6 +590,8 @@
           href: csharp/tutorials/string-interpolation.md
         - name: 使用預設介面方法安全地更新介面
           href: csharp/tutorials/default-interface-methods-versions.md
+        - name: 使用預設介面的方法，建立 mixin 功能
+          href: csharp/tutorials/mixins-with-default-interface-methods.md
         - name: 探索索引及範圍
           href: csharp/tutorials/ranges-indexes.md
         - name: 使用可以為 null 的參考類型
@@ -1038,7 +1048,7 @@
             - name: 存取應用程式 Web 服務
               href: visual-basic/developing-apps/programming/accessing-application-web-services.md
               items:
-                - name: HOW TO：非同步呼叫 Web 服務
+                - name: 作法：非同步呼叫 Web 服務
                   href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
             - name: Accessing Application Settings
               href: visual-basic/developing-apps/programming/app-settings/index.md
@@ -1116,7 +1126,7 @@
           href: visual-basic/programming-guide/program-structure/coding-conventions.md
         - name: 條件式編譯
           href: visual-basic/programming-guide/program-structure/conditional-compilation.md
-        - name: HOW TO：程式碼中的 Break 及 Combine 陳述式
+        - name: 作法：程式碼中的 Break 及 Combine 陳述式
           href: visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
         - name: HOW TO：摺疊及隱藏程式碼區段
           href: visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
@@ -1160,14 +1170,14 @@
             - name: 複合資料類型
               href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
               items:
-                - name: HOW TO：在變數中存放多個值
+                - name: 作法：在變數中存放多個值
                   href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
             - name: 泛型型別
               href: visual-basic/programming-guide/language-features/data-types/generic-types.md
               items:
                 - name: 作法：定義可以為不同資料類型提供相同功能的類別
                   href: visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
-                - name: 作法：使用泛型類別
+                - name: HOW TO：使用泛型類別
                   href: visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md
             - name: 泛型程序
               href: visual-basic/programming-guide/language-features/data-types/generic-procedures.md
@@ -1243,7 +1253,7 @@
           href: visual-basic/programming-guide/com-interop/introduction-to-com-interop.md
         - name: 作法：參考 COM 物件
           href: visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md
-        - name: 作法：使用 ActiveX 控制項
+        - name: HOW TO：使用 ActiveX 控制項
           href: visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md
         - name: 逐步解說：呼叫 Windows API
           href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
