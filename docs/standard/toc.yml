@@ -1,0 +1,145 @@
+- name: .NET Standard 指南
+  href: index.md
+- name: 開始使用 .NET
+  href: get-started.md
+- name: .NET 教學課程
+  href: tour.md
+- name: .NET 架構元件
+  href: components.md
+- name: .NET Standard
+  href: net-standard.md
+  items:
+    - name: .NET Standard 的新功能
+      href: whats-new/whats-new-in-dotnet-standard.md
+- name: 目標 Framework
+  href: frameworks.md
+- name: .NET 字彙表
+  href: glossary.md
+- name: 開放原始碼程式庫指導
+  href: library-guidance/
+- name: 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
+  href: choosing-core-framework-server.md
+- name: 什麼是 Managed 程式碼？
+  href: managed-code.md
+  items:
+    - name: Automatic Memory Management
+      href: automatic-memory-management.md
+- name: Common Language Runtime (CLR)
+  href: clr.md
+- name: 語言無關
+  href: language-independence.md
+  items:
+    - name: 語言獨立性以及與語言無關的元件
+      href: language-independence-and-language-independent-components.md
+- name: Framework 程式庫
+  href: framework-libraries.md
+  items:
+    - name: 類別庫概觀
+      href: class-library-overview.md
+    - name: 基底類型
+      href: base-types/
+- name: .NET 類別庫
+  href: class-libraries.md
+- name: 分析器
+  href: analyzers/index.md
+  items:
+    - name: API 分析器
+      href: analyzers/api-analyzer.md
+    - name: 可攜性分析器
+      href: analyzers/portability-analyzer.md
+    - name: 架構分析器
+      href: analyzers/framework-analyzer.md
+- name: 處理和擲回例外狀況
+  href: exceptions/
+- name: .NET 中的組件
+  href: assembly/
+- name: 記憶體回收
+  href: garbage-collection/
+- name: 泛型類型
+  href: generics.md
+- name: 委派和 Lambda
+  href: delegates-lambdas.md
+- name: LINQ
+  href: using-linq.md
+- name: 一般類型系統和 Common Language Specification
+  href: common-type-system.md
+- name: 平行處理、並行及非同步
+  href: parallel-processing-and-concurrency.md
+  items:
+    - name: 非同步程式設計
+      href: async.md
+      items:
+        - name: 深入了解非同步程式設計
+          href: async-in-depth.md
+        - name: 非同步程式設計模式
+          href: asynchronous-programming-patterns/
+    - name: 平行程式設計
+      href: parallel-programming/
+    - name: 執行緒
+      href: threading/
+- name: 記憶體與延伸相關類型
+  href: memory-and-spans/index.md
+  items:
+    - name: Memory<T> 與 Span<T> 使用指導方針
+      href: memory-and-spans/memory-t-usage-guidelines.md
+- name: 原生互通性
+  href: native-interop/index.md
+  items:
+    - name: P/Invoke
+      href: native-interop/pinvoke.md
+    - name: 類型封送處理
+      href: native-interop/type-marshaling.md
+    - name: 自訂結構封送處理
+      href: native-interop/customize-struct-marshaling.md
+    - name: 自訂參數封送處理
+      href: native-interop/customize-parameter-marshaling.md
+    - name: Interop 指導
+      href: native-interop/best-practices.md
+    - name: 字元集與封送處理
+      href: native-interop/charset.md
+    - name: COM Interop
+      href: native-interop/cominterop.md
+      items:
+        - name: COM 包裝函式
+          href: native-interop/com-wrappers.md
+          items:
+            - name: 執行階段可呼叫包裝函式
+              href: native-interop/runtime-callable-wrapper.md
+            - name: COM 可呼叫包裝函式
+              href: native-interop/com-callable-wrapper.md
+        - name: 限定 COM 互通的 .NET 類型
+          href: native-interop/qualify-net-types-for-interoperation.md
+    - name: 套用 Interop 屬性
+      href: native-interop/apply-interop-attributes.md
+- name: 集合和資料結構
+  href: collections/
+- name: .NET 中的數值
+  href: numerics.md
+- name: 日期、時間和時區
+  href: datetime/
+- name: 事件
+  href: events/
+- name: Managed 執行程序
+  href: managed-execution-process.md
+- name: 中繼資料和自我描述元件
+  href: metadata-and-self-describing-components.md
+- name: 建置主控台應用程式
+  href: building-console-apps.md
+- name: 應用程式基本概念
+  href: application-essentials.md
+- name: 檔案和資料流 I/O
+  href: io/index.md
+- name: 全球化和當地語系化
+  href: globalization-localization/
+- name: 屬性
+  href: attributes/
+- name: Framework 設計方針
+  href: design-guidelines/
+- name: XML 文件和資料
+  href: data/xml/
+- name: 安全性
+  href: security/
+- name: 序列化
+  href: serialization/
+- name: 進行多平台開發
+  href: cross-platform/

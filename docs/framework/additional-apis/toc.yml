@@ -1,4 +1,4 @@
-- name: 其他類別庫和 API
+- name: 其他 API
   href: index.md
   items:
     - name: Microsoft.SqlServer.Server
@@ -7,6 +7,12 @@
           items:
             - name: SmiOrderProperty.Item
               href: microsoft.sqlserver.server.smiorderproperty.item.md
+    - name: 系統
+      items:
+        - name: Exception 類別
+          items:
+            - name: Exception.PrepForRemoting 方法
+              href: system.exception.prepforremoting.md
     - name: System.Data.SqlTypes
       items:
         - name: SqlChars 類別
