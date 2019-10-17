@@ -31,7 +31,7 @@ ms.locfileid: "71039655"
 
    API 可攜性分析器工具會分析您已編譯的元件，並產生報表，其中顯示高層級的可攜性摘要，以及您所使用且在目標 .NET Core 平臺公用介面上未提供的每個 API 的細目。 您可以使用此報告與程式碼基底分析，開發移轉程式碼的計劃。
 
-4. 將專案檔轉換成目標 .net Core 版本之後，您可以使用 Roslyn 型的[.net API 分析器](../../standard/analyzers/api-analyzer.md)來識別<xref:System.PlatformNotSupportedException>在某些平臺上擲回的 api，以及一些其他潛在的相容性問題。
+4. 將專案檔轉換成目標 .NET Core 版本之後，您可以使用 Roslyn 型的[.NET API 分析器](../../standard/analyzers/api-analyzer.md)來識別<xref:System.PlatformNotSupportedException>在某些平臺上擲回的 API，以及一些其他潛在的相容性問題。
 
 5. 移轉測試程式碼。
 
