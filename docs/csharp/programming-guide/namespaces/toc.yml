@@ -1,7 +1,0 @@
-- name: 命名空間
-  href: index.md
-  items:
-    - name: 使用命名空間
-      href: using-namespaces.md
-    - name: 如何：使用 My 命名空間
-      href: how-to-use-the-my-namespace.md
