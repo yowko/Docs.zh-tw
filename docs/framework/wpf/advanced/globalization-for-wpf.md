@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291470"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395847"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹在為全球市場撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式時，您應該注意的問題。 全球化程式設計項目會在 .NET 的 <xref:System.Globalization> 命名空間中定義。
@@ -23,7 +23,7 @@ ms.locfileid: "72291470"
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>字元參考
-字元參考會以十進位或十六進位提供它所代表之特定 @no__t 0 字元的 UTF16 程式碼單位。 下列範例會顯示「哥英數位元」或「Ϩ」的十進位字元參考：
+字元參考會提供它所代表之特定 Unicode 字元的 UTF16 程式碼單位（以十進位或十六進位表示）。 下列範例會顯示「哥英數位元」或「Ϩ」的十進位字元參考：
 
 ```
 &#1000;
@@ -37,7 +37,7 @@ ms.locfileid: "72291470"
 
 <a name="encoding"></a>
 ### <a name="encoding"></a>編碼
- @No__t-0 支援的編碼是 ASCII、[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 和 UTF-8。 編碼語句位於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔的開頭。 如果沒有任何編碼屬性，而且沒有位元組順序，則剖析器預設為 UTF-8。 UTF-8 和 UTF-16 是慣用的編碼。 不支援 UTF-7。 下列範例示範如何在 @no__t 0 檔案中指定 UTF-8 編碼。
+ @No__t-0 支援的編碼是 ASCII、Unicode UTF-16 和 UTF-8。 編碼語句位於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔的開頭。 如果沒有任何編碼屬性，而且沒有位元組順序，則剖析器預設為 UTF-8。 UTF-8 和 UTF-16 是慣用的編碼。 不支援 UTF-7。 下列範例示範如何在 @no__t 0 檔案中指定 UTF-8 編碼。
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -47,7 +47,7 @@ ms.locfileid: "72291470"
 ### <a name="language-attribute"></a>語言屬性
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 會使用[xml： lang](../../xaml-services/xml-lang-handling-in-xaml.md)來代表專案的 language 屬性。  若要利用 @no__t 0 類別，語言屬性值必須是預先定義的其中一個文化特性名稱 <xref:System.Globalization.CultureInfo>。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) 在項目樹狀結構中為可繼承 (依 XML 規則，不一定是因為相依性屬性繼承)，如未明確指派，其預設值為空字串。
 
- 語言屬性在指定方言方面非常有用。 例如，法國、魁北克、比利時和瑞士的法文拼字、字彙和發音不同。 此外，中文、日文和韓文共用 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 的程式碼點，但表意形狀不同，而且使用完全不同的字型。
+ 語言屬性在指定方言方面非常有用。 例如，法國、魁北克、比利時和瑞士的法文拼字、字彙和發音不同。 中文、日文和韓文也會以 Unicode 共用程式碼點，但表意形狀不同，而且會使用完全不同的字型。
 
  下列 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 範例會使用 `fr-CA` language 屬性來指定加拿大法文。
 
@@ -57,7 +57,7 @@ ms.locfileid: "72291470"
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 支援所有的 @no__t 1 功能，包括代理。 只要字元集可以對應到 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]，就會受到支援。 例如，GB18030 推出可對應至中文、日文和韓文 (CFK) 延伸模組 A 和 B 及 surrogate 字組的某些字元，因此受到完整支援。 @No__t-0 應用程式可以使用 <xref:System.Globalization.StringInfo> 來操作字串，而不需要瞭解它們是否有代理項配對或結合字元。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 支援所有 Unicode 功能，包括代理。 只要字元集可以對應到 Unicode，就會受到支援。 例如，GB18030 推出可對應至中文、日文和韓文 (CFK) 延伸模組 A 和 B 及 surrogate 字組的某些字元，因此受到完整支援。 @No__t-0 應用程式可以使用 <xref:System.Globalization.StringInfo> 來操作字串，而不需要瞭解它們是否有代理項配對或結合字元。
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>使用 XAML 設計國際化的使用者介面
@@ -125,7 +125,7 @@ ms.locfileid: "72291470"
 
  所有的書寫系統引擎都支援 OpenType 字型。 OpenType 字型可以包含 OpenType 版面配置資料表，讓字型建立者能夠設計更好的國際和高階印刷樣式。 OpenType 字型版面配置表包含圖像替換、圖像定位、對齊和基準定位的相關資訊，可讓文字處理應用程式改善文字版面配置。
 
- OpenType 字型可讓您使用 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] 編碼來處理大型圖像集。 這類編碼促進廣泛的國際支援以及各種印刷樣式字符。
+ OpenType 字型允許使用 Unicode 編碼來處理大型圖像集。 這類編碼促進廣泛的國際支援以及各種印刷樣式字符。
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文字轉譯是由支援解析度獨立性的 Microsoft ClearType 子圖元技術提供技術支援。 這會大幅改善可讀性，並可讓您支援所有指令碼的高品質雜誌樣式文件。
 
@@ -178,6 +178,6 @@ ms.locfileid: "72291470"
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WPF 全球化和當地語系化概觀](wpf-globalization-and-localization-overview.md)

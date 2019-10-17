@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a81f4a53954c559ab12e27bcf039b7b1a1804cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1b7cbadbd1494d5e4d1488dd12296f4f90890127
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700787"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395489"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL 方法
 
@@ -37,16 +37,16 @@ HRESULT IsIL (
 ```
 
 ## <a name="parameters"></a>參數
- `pbIL`  
- [out] `true`，如果這個 `ICorDebugCode` 代表以 MSIL 編譯的程式碼，則為，否則，`false`。
+
+`pbIL`  
+[out] `true`，如果這個 `ICorDebugCode` 代表以 MSIL 編譯的程式碼，則為，否則，`false`。
 
 ## <a name="requirements"></a>需求
 
- **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
- **標頭：** CorDebug.idl、CorDebug.h  
+**標頭：** CorDebug.idl、CorDebug.h
 
- **LIBRARY:** CorGuids.lib  
+**程式庫：** CorGuids.lib
 
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

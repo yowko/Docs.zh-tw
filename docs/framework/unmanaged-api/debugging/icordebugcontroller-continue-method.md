@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf59ee3c7bf41a2bb0ff68db5e70dd5a519a0e9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 62e2be44165472e2fbf368f61b865d39a5e9fc28
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700786"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395458"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 方法
 
@@ -38,8 +38,8 @@ HRESULT Continue (
 
 ## <a name="parameters"></a>參數
 
- `fIsOutOfBand`  
- 在如果從頻外事件繼續，請將設定為 `true`;否則，設定為 `false`。
+`fIsOutOfBand`  
+在如果從頻外事件繼續，請將設定為 `true`;否則，設定為 `false`。
 
 ## <a name="remarks"></a>備註
 
@@ -48,16 +48,15 @@ HRESULT Continue (
 執行混合模式的偵錯工具時，除非您從頻外事件繼續，否則請勿在 Win32 事件執行緒上呼叫 `Continue`。
 
 *內建事件*是 managed 事件或一般非受控事件，在此期間，偵錯工具支援與進程的受管理狀態互動。 在此情況下，偵錯工具會接收[ICorDebugUnmanagedCallback：:D ebugevent](icordebugunmanagedcallback-debugevent-method.md)回呼，並將其 `fOutOfBand` 參數設定為 `false`。
-  
+
 *頻外事件*是一個不受管理的事件，在此情況下，當進程因事件而停止時，無法與處理常式的受管理狀態互動。 在此情況下，偵錯工具會接收 @no__t 0 回呼，並將其 `fOutOfBand` 參數設定為 `true`。
 
 ## <a name="requirements"></a>需求
 
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
- **標頭：** CorDebug.idl、CorDebug.h
+**標頭：** CorDebug.idl、CorDebug.h
 
- **LIBRARY:** CorGuids.lib
+**程式庫：** CorGuids.lib
 
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

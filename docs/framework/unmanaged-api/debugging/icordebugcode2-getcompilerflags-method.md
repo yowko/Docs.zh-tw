@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1605ee92c8743606ff0e958f112a2d90af43e03a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 3ebed8ea1d4943007f8f18b0baa1c676a78207c2
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700721"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395499"
 ---
 # <a name="icordebugcode2getcompilerflags-method"></a>ICorDebugCode2::GetCompilerFlags 方法
 
@@ -38,16 +38,15 @@ HRESULT GetCompilerFlags (
 
 ## <a name="parameters"></a>參數
 
- `pdwFlags`  
- 脫銷[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列舉值的指標，指定 JIT 編譯程式或原生映射產生器的行為。
+`pdwFlags`  
+脫銷[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列舉值的指標，指定 JIT 編譯程式或原生映射產生器的行為。
 
 ## <a name="requirements"></a>需求
 
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
- **標頭：** CorDebug.idl、CorDebug.h
+**標頭：** CorDebug.idl、CorDebug.h
 
- **LIBRARY:** CorGuids.lib
+**程式庫：** CorGuids.lib
 
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
- 
+**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -2,12 +2,12 @@
 title: 適用於 Entity Framework 的 SqlClient 已知問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 18e3ad59af4014086bd475815011b6008bcb5052
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0938c57f48a062082fe973a670eb6a9b9fc4ed3c
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854558"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395510"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>適用於 Entity Framework 的 SqlClient 已知問題
 本節說明與 .NET Framework Data Provider for SQL Server (SqlClient) 相關的已知問題。  
@@ -36,19 +36,19 @@ ms.locfileid: "70854558"
 - 具有 DEREF 建構對 REF 建構的查詢。  
   
 ## <a name="skip-operator"></a>SKIP 運算子  
- 如果您使用 SQL Server 2000，則在非索引鍵資料行上使用 SKIP 搭配 ORDER BY 可能會傳回不正確的結果。 如果非索引鍵資料行中有重複的資料，可能會略過超過所指定數目的資料行。 這是因為 SQL Server 2000 的略過轉譯方式所致。 例如，在下列查詢中，如果有重複的值，則`E.NonKeyColumn`可能會略過超過五個數據列：  
+ 如果您使用 SQL Server 2000，則在非索引鍵資料行上使用 SKIP 搭配 ORDER BY 可能會傳回不正確的結果。 如果非索引鍵資料行中有重複的資料，可能會略過超過所指定數目的資料行。 這是因為 SQL Server 2000 的略過轉譯方式所致。 例如，在下列查詢中，如果 `E.NonKeyColumn` 有重複的值，則可能會略過超過五個數據列：  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>以正確的 SQL Server 版本為目標  
- Entity Framework 會根據儲存模型（ssdl）檔案中 Schema 元素的`ProviderManifestToken`屬性所指定的 SQL Server 版本，以 transact-SQL 查詢為目標。 這個版本可能會因您所連接的 SQL Server 實際版本而有所不同。 例如，如果您使用 SQL Server 2005，但您`ProviderManifestToken`的屬性設定為2008，則產生的 transact-SQL 查詢可能無法在伺服器上執行。 例如，使用在 SQL Server 2008 中引進之新日期時間類型的查詢，將不會在舊版的 SQL Server 上執行。 如果您使用 SQL Server 2005，但您`ProviderManifestToken`的屬性設定為2000，則產生的 transact-SQL 查詢可能較不優化，或者您可能會收到例外狀況，指出不支援該查詢。 如需詳細資訊，請參閱本主題前面的「CROSS 和 OUTER APPLY 運算子」一節。  
+ Entity Framework 會根據儲存模型（ssdl）檔案中 Schema 元素的 `ProviderManifestToken` 屬性中指定的 SQL Server 版本，以 Transact-SQL 查詢為目標。 這個版本可能會因您所連接的 SQL Server 實際版本而有所不同。 例如，如果您使用 SQL Server 2005，但您的 `ProviderManifestToken` 屬性設定為2008，則產生的 Transact-SQL 查詢可能無法在伺服器上執行。 例如，使用在 SQL Server 2008 中引進之新日期時間類型的查詢，將不會在舊版的 SQL Server 上執行。 如果您使用 SQL Server 2005，但您的 `ProviderManifestToken` 屬性設定為2000，則產生的 Transact-SQL 查詢可能較不優化，或者您可能會收到例外狀況，指出不支援該查詢。 如需詳細資訊，請參閱本主題前面的「CROSS 和 OUTER APPLY 運算子」一節。  
   
- 某些資料庫行為取決於資料庫上設定的相容性層級。 如果您`ProviderManifestToken`的屬性設定為2005，而您的 SQL Server 版本是2005，但資料庫的相容性層級設定為 "80" （SQL Server 2000），則產生的 transact-sql 將以 SQL Server 的2005為目標，但可能不會如預期般執行，因為相容性層級設定。 例如，當 ORDER BY 清單中資料行名稱與選擇器中資料行名稱相符合時，則可能會遺失排序資訊。  
+ 某些資料庫行為取決於資料庫上設定的相容性層級。 如果您的 `ProviderManifestToken` 屬性設定為2005，而您的 SQL Server 版本是2005，但資料庫的相容性層級設定為 "80" （SQL Server 2000），則產生的 Transact-sql 將以 SQL Server 的2005為目標，但可能不會如預期般執行，因為相容性層級設定。 例如，當 ORDER BY 清單中資料行名稱與選擇器中資料行名稱相符合時，則可能會遺失排序資訊。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的巢狀查詢  
- 投影子句中的巢狀查詢可能會在伺服器上轉譯成笛卡兒乘積 (Cartesian Product) 查詢。 在某些後端伺服器（包括 SLQ 伺服器）上，這可能會導致 TempDB 資料表變得相當大。 這樣會降低伺服器的效能。  
+ 投影子句中的巢狀查詢可能會在伺服器上轉譯成笛卡兒乘積 (Cartesian Product) 查詢。 在某些後端伺服器（包括 SQL Server）上，這可能會導致 TempDB 資料表變得相當大。 這樣會降低伺服器的效能。  
   
  下列是投影子句中巢狀查詢的範例：  
   
@@ -59,7 +59,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ## <a name="server-generated-guid-identity-values"></a>伺服器產生的 GUID 識別值  
  Entity Framework 支援伺服器產生的 GUID 類型識別值，但是提供者必須支援在插入資料列之後，傳回伺服器產生的識別值。 從 SQL Server 2005 開始，您可以透過[OUTPUT 子句](https://go.microsoft.com/fwlink/?LinkId=169400)，在 SQL Server 資料庫中傳回伺服器產生的 GUID 型別。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [適用於 Entity Framework 的 SqlClient](sqlclient-for-the-entity-framework.md)
 - [LINQ to Entities 中的已知問題和考量](./language-reference/known-issues-and-considerations-in-linq-to-entities.md)

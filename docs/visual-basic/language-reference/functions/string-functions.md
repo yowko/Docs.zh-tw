@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 917797700c3e403971ce6f48174a282b1102f127
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 32a31a881573cc9dc481fc07fc4067569a96a963
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799316"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395831"
 ---
 # <a name="string-functions-visual-basic"></a>字串函式 (Visual Basic)
 
-下表列出 Visual Basic 在<xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType>類別中提供用來搜尋和操作字串的函式。 它們可以視為 Visual Basic 內建函式;也就是說，您不需要將它們當做類別的明確成員呼叫，如範例所示。 <xref:System.String?displayProperty=nameWithType>類別中也提供其他方法，在某些情況下互補方法。 
+下表列出 Visual Basic 在 @no__t 0 類別中提供用來搜尋和操作字串的函數。 它們可以視為 Visual Basic 內建函式;也就是說，您不需要將它們當做類別的明確成員呼叫，如範例所示。 其他方法，在某些情況下是互補方法，可在 <xref:System.String?displayProperty=nameWithType> 類別中取得。 
   
-|.NET Framework 方法|說明|  
+|.NET Framework 方法|描述|  
 |---------------------------|-----------------|  
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>、 <xref:Microsoft.VisualBasic.Strings.AscW%2A>|`Integer`傳回值，表示對應至字元的字元碼。|  
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>、 <xref:Microsoft.VisualBasic.Strings.AscW%2A>|傳回表示對應于字元之字元碼的 @no__t 0 值。|  
 |<xref:Microsoft.VisualBasic.Strings.Chr%2A>、 <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|傳回與指定的字元碼相關聯的字元。|  
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|根據指定的`String`篩選準則，傳回以零為基底的陣列，其中包含陣列的子集。|  
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|傳回根據格式`String`運算式中包含的指示格式化的字串。|  
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|根據指定的篩選準則，傳回以零為基底的陣列，其中包含 @no__t 0 陣列的子集。|  
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|根據包含在格式 `String` 運算式中的指示，傳回已格式化的字串。|  
 |<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|使用系統控制台中定義的貨幣符號，傳回格式化為貨幣值的運算式。|  
 |<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|傳回表示日期/時間值的字串運算式。|  
 |<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|傳回格式化為數位的運算式。|  
@@ -47,49 +47,49 @@ ms.locfileid: "70799316"
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|傳回字串，其中包含指定字串的複本，其中沒有開頭或尾端空格。|  
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|傳回字串或字元，其中包含轉換成大寫的指定字串。|  
   
- 您可以使用[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)語句來設定是否要使用由系統的地區設定（`Text`）所決定的區分大小寫文字排序次序，或字元（`Binary`）的內部二進位標記法來比較字串。 預設的文字比較方法是`Binary`。  
+ 您可以使用[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)語句來設定是否要使用由系統地區設定（`Text`）所決定的區分大小寫文字排序次序來比較字串，或以字元的內部二進位標記法（`Binary`）。 預設的文字比較方法為 `Binary`。  
   
-## <a name="example-ucase"></a>範例：UCase
+## <a name="example-ucase"></a>範例： UCase
 
-這個範例會使用`UCase`函數來傳回字串的大寫版本。  
+這個範例會使用 `UCase` 函式來傳回字串的大寫版本。  
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
-## <a name="example-ltrim"></a>範例：LTrim
+## <a name="example-ltrim"></a>範例： LTrim
 
-這個範例會使用`LTrim`函式來去除開頭空格`RTrim`和函式，以去除字串變數的尾端空格。 它會使用`Trim`函式來去除這兩種類型的空間。  
+這個範例會使用 `LTrim` 函式來去除開頭的空格，並使用 `RTrim` 函式來去除字串變數的尾端空格。 它會使用 `Trim` 函式來去除這兩種類型的空間。  
   
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
-## <a name="example-mid"></a>範例：大中型
+## <a name="example-mid"></a>範例：中間
 
-這個範例會使用`Mid`函數，從字串中傳回指定的字元數。  
+這個範例使用 `Mid` 函數，從字串傳回指定的字元數。  
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
 
-## <a name="example-len"></a>範例：長度
+## <a name="example-len"></a>範例： Len
 
-這個範例會`Len`使用來傳回字串中的字元數。  
+這個範例會使用 `Len` 來傳回字串中的字元數。  
   
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
-## <a name="example-instr"></a>範例：InStr
+## <a name="example-instr"></a>範例： InStr
 
-這個範例會使用`InStr`函數來傳回另一個字串在另一個字串中第一次出現的位置。  
+這個範例會使用 `InStr` 函式來傳回另一個字串在另一個字串中第一次出現的位置。  
   
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example-format"></a>範例：格式
 
-這個範例示範`String`使用格式和使用者`Format`定義格式來格式化值的各種函數。 針對`/`日期分隔符號（）、時間分隔符號（`:`）和 AM/PM 指標（`t`和`tt`），您系統所顯示的實際格式化輸出取決於程式碼所使用的地區設定。 在開發環境中顯示時間和日期時，會使用程式碼地區設定的簡短時間格式和簡短日期格式。  
+這個範例會示範使用 `String` 格式和使用者定義格式來格式化值的 @no__t 0 函數的各種用法。 針對日期分隔符號（`/`）、時間分隔符號（`:`）和 AM/PM 指標（`t` 和 `tt`），您系統所顯示的實際格式化輸出取決於程式碼所使用的地區設定。 在開發環境中顯示時間和日期時，會使用程式碼地區設定的簡短時間格式和簡短日期格式。  
   
 > [!NOTE]
-> 針對使用24小時制的地區設定，AM/PM 指標（`t`和`tt`）不會顯示任何內容。  
+> 針對使用24小時制的地區設定，AM/PM 指標（`t` 和 `tt`）不會顯示任何內容。  
   
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)
 - [字串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [System.string 類別方法]<xref:System.String#methods?displayProperty=nameWithType>
+- [System.string 類別方法](xref:System.String#methods)

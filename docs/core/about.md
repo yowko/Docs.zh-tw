@@ -2,23 +2,23 @@
 title: 關於 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: 1baad9d6611a4c4340012b9a467d3499ad9ab834
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181912"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395174"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
 .NET Core 有以下特性：
 
-- **跨平台：** 可在 Windows、macOS 及 Linux[作業系統](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)上執行。
-- **在各架構間皆保持一致：** 在多個架構上 (包括 x64、x86 及 ARM) 可使用相同的行為來執行程式碼。
+- **跨平臺：** 可在 Windows、macOS 及 Linux[作業系統](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)上執行。
+- **在各架構間皆保持一致：** 在多個架構上 (包括 x64、x86 及 ARM) 可使用相同的行為執行程式碼。
 - **命令列工具：** 包含易用的命令列工具，可用於本機開發及持續整合案例。
-- **彈性部署：** 可以包含在應用程式內或並行安裝 (針對所有使用者或所有系統進行安裝)。 可搭配 [Docker 容器](docker/index.md)使用。
+- **彈性的部署：** 可以包含在您的應用程式中，或並存安裝（全使用者或全系統安裝）。 可搭配 [Docker 容器](docker/index.md)使用。
 - **相容：** .net Core 可透過[.NET Standard](../standard/net-standard.md)與 .NET Framework、Xamarin 和 Mono 相容。
-- **開放原始碼：** .NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
+- **開放原始碼︰** NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援：** .NET Core 根據 [.NET Core 支援](https://dotnet.microsoft.com/platform/support/policy)受 Microsoft 支援。
 
 ## <a name="languages"></a>語言
@@ -28,7 +28,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 - [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - Sublime 文字
-- vim
+- Vim
  
 這是由[OmniSharp](https://www.omnisharp.net/)和[Ionide](http://ionide.io)專案的參與者所提供的整合。
 
@@ -40,7 +40,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 - 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
 - 公用程式類型，例如 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 及 <xref:System.IO.FileStream?displayProperty=nameWithType>。
 - 資料類型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 與 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) \(英文\)。
-- 高效能類型，例如<xref:System.Numerics.Vector?displayProperty=nameWithType>和[管線](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)。
+- 高效能類型，例如 <xref:System.Numerics.Vector?displayProperty=nameWithType> 和[管線](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)。
 
 藉由實作 [.NET Standard](../standard/net-standard.md) 規格，.NET Core 可提供與 NET Framework 及 Mono API 的相容性。
 
@@ -81,7 +81,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 如以下圖表所示，[CoreFX](https://github.com/dotnet/corefx) \(英文\) 絕大部分是跨所有平台共用的非平台相關程式碼。 非平台相關程式碼可以實作為單一的可攜式組件，用在所有平台上。
 
-![CoreFX：每個平台各有程式碼行](../images/corefx-platforms-loc.png)
+![CoreFX︰每個平台各有程式碼行](../images/corefx-platforms-loc.png)
 
 Windows 與 Unix 實作大小相近。 Windows 有更大的執行，因為 CoreFX 會執行一些僅限 Windows 的功能，例如[Microsoft Win32](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry) ，但尚未實行許多僅限 Unix 的概念。 您也會看到大部分的 Linux 和 macOS 的執行都是跨 Unix 的方式共用，而 Linux 和 macOS 特定的則是大小大致相似的。
 
@@ -113,7 +113,7 @@ Windows 與 Unix 實作大小相近。 Windows 有更大的執行，因為 CoreF
 
 ### <a name="comparison-with-mono"></a>與 Mono 的比較
 
-[Mono](https://www.mono-project.com/)是 .net 的原始跨平臺。 它會以[開放原始]([open-source](https://github.com/mono/mono))碼替代方式開始使用 .NET Framework 並轉換成以行動裝置為目標，因為 IOS 和 Android 裝置變得很熱門。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 發佈的開放[.net 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）來提供相容的執行。
+[Mono](https://www.mono-project.com/)是 .net 的原始跨平臺。 它是以[開放原始](https://github.com/mono/mono)碼的方式開始使用 .NET Framework 並轉換成以行動裝置為目標，因為 IOS 和 Android 裝置變得很熱門。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 發佈的開放[.net 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）來提供相容的執行。
 
 .NET Core 和 Mono 的主要差異︰
 

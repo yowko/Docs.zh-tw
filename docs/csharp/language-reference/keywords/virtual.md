@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 586e50818fc8ceaad5ca1925c0636b31015d81d4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d5e087647adced0b41cc6e42fcf534b274c70592
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925364"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395155"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# 參考)
 
@@ -38,7 +38,7 @@ public virtual double Area()
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-除了宣告和引動過程語法的差異之外，虛擬屬性的行為類似抽象方法。
+除了宣告和調用語法的差異之外，虛擬屬性的行為與虛擬方法類似。
 
 - 在靜態屬性上使用 `virtual` 修飾詞是錯誤的。
 
@@ -62,7 +62,7 @@ public Cylinder(double r, double h): base(r, h) {}
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [多型](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)

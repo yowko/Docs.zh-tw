@@ -1,219 +1,389 @@
 ---
-title: 非同步程式設計
-description: 了解如何F#非同步程式設計透過語言層級的程式設計模型，而且容易使用自然語言來完成。
-ms.date: 06/20/2016
-ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+title: 中的非同步程式設計F#
+description: 瞭解如何F#根據衍生自核心函式程式設計概念的語言層級程式設計模型，提供非同步全新支援。
+ms.date: 12/17/2018
+ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753587"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395795"
 ---
-# <a name="async-programming-in-f"></a>在 F 中的非同步程式設計\#
+# <a name="async-programming-in-f"></a>F @ no__t 中的非同步程式設計-0
 
-> [!NOTE]
-> 已在這篇文章探索一些不準確。  它是正在重寫。  請參閱[問題 #666](https://github.com/dotnet/docs/issues/666)若要了解所做的變更。
+非同步程式設計是基於各種原因而對現代化應用程式而言不可或缺的一種機制。 大部分的開發人員都會遇到兩個主要的使用案例：
 
-非同步程式設計中F#即可完成設計為易於使用且自然語言的語言層級程式設計模型。
+- 呈現可提供大量並行連入要求的伺服器進程，同時將所佔用的系統資源降至最低，同時要求處理會等候該進程外部系統或服務的輸入
+- 在同時進行的背景工作時，維護回應式 UI 或主執行緒
 
-非同步程式設計中的核心F#是`Async<'T>`，可觸發在背景中執行的工作的表示法所在`'T`會傳回透過特殊的型別`return`關鍵字或`unit`如果非同步工作流程具有可傳回的結果。
+雖然背景工作通常會牽涉到多個執行緒的使用率，但請務必考慮非同步和多執行緒的概念。 事實上，它們是不同的考慮，而其中一個則不代表另一個。 這篇文章中的後續步驟將會更詳細地說明這一點。
 
-若要了解的重要概念是非同步運算式的型別`Async<'T>`，也就是只_規格_要在非同步處理內容中完成的工作。 它不會執行直到明確地與其中一個開始的函式開始 (例如`Async.RunSynchronously`)。 雖然這是不同的方式來思考執行工作時，它最後是實際上相當簡單。
+## <a name="asynchrony-defined"></a>非同步已定義
 
-例如，假設您想要從 dotnetfoundation.org 下載 HTML，而不會封鎖主執行緒。 您可以完成此作業就像這樣：
+先前的重點是，非同步與多個執行緒的使用率無關，值得進一步說明。 有時候會有三個相關的概念，但完全獨立于另一個：
 
-```fsharp
-open System
-open System.Net
+- 能力當多個計算在重迭的時間週期內執行時。
+- 平行處理原則當單一計算的多個計算或數個部分在完全相同的時間執行時。
+- 非同步當一或多個計算可與主要程式流程分開執行時。
 
-let fetchHtmlAsync url =
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
+這三種概念都是相互關聯的概念，但很容易混為一談，特別是當它們一起使用時。 例如，您可能需要以平行方式執行多個非同步計算。 這並不表示平行處理原則或非同步彼此隱含。
 
-        // Execution of fetchHtmlAsync won't continue until the result
-        // of AsyncDownloadString is bound.
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
-    }
+如果您考慮「非同步」一詞的 etymology，就會牽涉到兩個部分：
 
-let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
-printfn "%s" html
-```
+- "a"，表示 "not"。
+- 「同步」，表示「同時」。
 
-就是這麼容易！ 除了使用`async`， `let!`，並`return`，這是正常的只是F#程式碼。
+當您將這兩個詞彙放在一起時，您會看到「非同步」表示「不是同一時間」。 就這麼容易！ 在此定義中，不會隱含並行或平行處理。 這在實務上也是如此。
 
-有幾個語法建構是值得一提：
+實際上，中F#的非同步計算會排定為獨立執行主要程式流程。 這並不代表並行或平行處理，也不表示一定會在背景中進行計算。 事實上，非同步計算甚至可以同步執行，視計算的本質和計算執行所在的環境而定。
 
-* `let!` 繫結非同步運算式 （它是在另一個內容） 的結果。
-* `use!` 運作方式就像`let!`，但它超出範圍時，處置其繫結的資源。
-* `do!` 將等候的非同步工作流程不會傳回任何項目。
-* `return` 從非同步運算式，只會傳回結果。
-* `return!` 執行另一個非同步工作流程，並因此會傳回其傳回的值。
+主要的重點是，非同步計算與主要程式流程無關。 雖然非同步計算的執行時間或方式有一些保證，但還是有一些方法可以協調和排程它們。 本文的其餘部分將探討F#非同步核心概念，以及如何使用內建的類型、函式和運算式F#。
 
-此外，正常`let`， `use`，和`do`可以與非同步版本一起使用的關鍵字，就如同一般函式中。
+## <a name="core-concepts"></a>核心概念
 
-## <a name="how-to-start-async-code-in-f"></a>如何開始在 F 中的非同步程式碼\#
+在F#中，非同步程式設計是以三個核心概念為中心：
 
-如先前所述，非同步程式碼會是工作的要在需要明確地啟動另一個內容中完成規格。 以下是為了達成此目的的兩種主要方式：
+- @No__t-0 類型，代表可組合的非同步計算。
+- @No__t 0 模組函式，可讓您排程非同步工作、撰寫非同步計算，以及轉換非同步結果。
+- @No__t 0[計算運算式](../../language-reference/computation-expressions.md)，提供建立和控制非同步計算的便利語法。
 
-1. `Async.RunSynchronously` 將另一個執行緒上啟動非同步工作流程，並等待其結果。
-
-    ```fsharp
-    open System
-    open System.Net
-
-    let fetchHtmlAsync url =
-        async {
-            let uri = Uri(url)
-            use webClient = new WebClient()
-            let! html = webClient.AsyncDownloadString(uri)
-            return html
-        }
-
-    // Execution will pause until fetchHtmlAsync finishes
-    let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
-
-    // you actually have the result from fetchHtmlAsync now!
-    printfn "%s" html
-    ```
-
-2. `Async.Start` 將會啟動非同步工作流程，另一個執行緒，並將**不**等待其結果。
-
-    ```fsharp
-    open System
-    open System.Net
-
-    let uploadDataAsync url data =
-        async {
-            let uri = Uri(url)
-            use webClient = new WebClient()
-            webClient.UploadStringAsync(uri, data)
-        }
-
-    let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
-
-    // Execution will continue after calling this!
-    Async.Start(workflow)
-
-    printfn "%s" "uploadDataAsync is running in the background..."
-    ```
-
-有其他方式來啟動非同步工作流程適用於較特定案例。 這些方式詳述[非同步參考中](https://msdn.microsoft.com/library/ee370232.aspx)。
-
-### <a name="a-note-on-threads"></a>在執行緒上附註
-
-片語 「 在另一個執行緒 」 前面所述，但務必要知道**這不表示非同步工作流程是一個外觀進行多執行緒處理**。 工作流程實際上 」 就會跳 「 之間採用它們的少量的時間才能執行有用工作的執行緒。 非同步工作流程會有效地 「 等待 」 （例如，等候網路呼叫傳回的項目），它採用在任何執行緒是會釋出到移執行其他有用的工作。 這可讓非同步工作流程，利用它們盡可能的情況下，有效地執行的系統，並使其可針對大量 I/O 的情況下特別強大。
-
-## <a name="how-to-add-parallelism-to-async-code"></a>如何將非同步程式碼中的平行處理原則
-
-有時您可能需要執行多個非同步作業以平行方式，收集其結果，並以某種方式解譯這些。 `Async.Parallel` 可讓您執行這項操作，而不需要使用工作平行程式庫，其中會包含您需要強制轉型`Task<'T>`和`Async<'T>`型別。
-
-下列範例會使用`Async.Parallel`到從四種熱門的網站，以平行方式下載 HTML，等候這些工作完成，並再列印已下載的 HTML。
+您可以在下列範例中看到這三個概念：
 
 ```fsharp
 open System
-open System.Net
+open System.IO
 
-let urlList =
-    [ "https://www.microsoft.com"
-      "https://www.google.com"
-      "https://www.amazon.com"
-      "https://www.facebook.com" ]
-
-let fetchHtmlAsync url =
+let printTotalFileBytes path =
     async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
     }
 
-let getHtmlList urls =
-    urls
-    |> Seq.map fetchHtmlAsync   // Build an Async<'T> for each site
-    |> Async.Parallel           // Returns an Async<'T []>
-    |> Async.RunSynchronously   // Wait for the result of the parallel work
+[<EntryPoint>]
+let main argv =
+    printTotalFileBytes "path-to-file.txt"
+    |> Async.RunSynchronously
 
-let htmlList = getHtmlList urlList
-
-// We now have the downloaded HTML for each site!
-for html in htmlList do
-    printfn "%s" html
+    Console.Read() |> ignore
+    0
 ```
 
-## <a name="important-info-and-advice"></a>重要資訊和建議
+在此範例中，`printTotalFileBytes` 函數的類型為 `string -> Async<unit>`。 呼叫函數並不會實際執行非同步計算。 相反地，它會傳回 `Async<unit>`，作為要以非同步方式執行之工作的 * 規格。 它會在其主體中呼叫 `Async.AwaitTask`，這會在呼叫時將 <xref:System.IO.File.WriteAllBytesAsync%2A> 的結果轉換成適當的類型。
 
-* 將"Async"附加至您將使用的任何函式的結尾
+另一個重要的程式程式碼是 `Async.RunSynchronously` 的呼叫。 這是非同步模組的其中一個啟動函式，如果您想要實際執行非同步計算，就必須F#呼叫這個函式。
 
- 雖然這只是命名慣例，它會簡化 API 搜尋功能等項目。 特別是如果有相同的例行工作的同步和非同步版本，最好明確陳述這是非同步，透過名稱。
+這是 `async` 程式設計C#的/VB 樣式的基本差異。 在F#中，可以將非同步計算視為**冷**工作。 必須明確啟動才能實際執行。 這有一些優點，因為它可讓您更輕鬆地結合和排序非同步工作，而C#不是/VB。
 
-* 聆聽編譯器 ！
+## <a name="combining-asynchronous-computations"></a>結合非同步計算
 
-F#編譯器是非常嚴格，因此幾乎不可能進行像是麻煩以同步方式執行"async"程式碼。 如果您遇到警告時，這是登，程式碼不會認為它將如何執行。 如果您可以讓編譯器滿意，您的程式碼將很有可能會執行，如預期般運作。
-
-## <a name="for-the-cvb-programmer-looking-into-f"></a>針對C#/VB 程式設計人員想成 F\#
-
-本節假設您已熟悉使用中的非同步模型C#/VB. 如果您不是[中的非同步程式設計C#](../../../csharp/async.md)是起始點。
-
-沒有基本差別在於C#/VB 非同步模型和F#非同步模型。
-
-當您呼叫的函式會傳回`Task`或`Task<'T>`，該作業已開始執行。 傳回的控制代碼表示已在執行非同步作業。 相反地，當您呼叫的非同步函式F#，則`Async<'a>`傳回代表工作將會**產生**在某個時間點。 了解此模型是功能強大，因為它可讓您在非同步作業F#鏈結在一起更方便地有條件地執行，並開始時具有更細微的資料粒度的控制。
-
-有幾個其他的相似性與差異值得一提。
-
-### <a name="similarities"></a>相似之處
-
-* `let!``use!`，並`do!`類似`await`內呼叫的非同步作業時`async{ }`區塊。
-
-  三個關鍵字只可用於`async { }`區塊中，類似`await`才會叫用內部`async`方法。 簡單地說，`let!`是的當您想要擷取並使用結果，`use!`相同，但是為項目使用之後，應該取得清除其資源和`do!`是當您想要等候的非同步工作流程，且沒有傳回值，以完成再繼續。
-
-* F#類似的方式支援資料平行處理原則。
-
-  其運作方式非常不同的是，雖然`Async.Parallel`對應至`Task.WhenAll`想的一組非同步作業的結果，在全部完成時的案例。
-
-### <a name="differences"></a>差異
-
-* 巢狀`let!`不允許，不同於巢狀結構 `await`
-
-  不同於`await`，這可以巢狀無限期`let!`無法和其結果，然後再將它在另一個繫結必須`let!`， `do!`，或`use!`。
-
-* 取消支援會在F#比C#/VB.
-
-  支援在執行工作中途取消C#/VB 需要檢查`IsCancellationRequested`屬性或呼叫`ThrowIfCancellationRequested()`上`CancellationToken`傳遞至非同步方法的物件。
-
-相反地，F#非同步工作流程是較自然地取消。 取消是簡單的三步驟程序。
-
-1. 建立新的 `CancellationTokenSource`。
-2. 請將它傳遞到起始函式。
-3. 呼叫`Cancel`語彙基元。
-
-範例：
+以下是藉由結合計算，以先前的版本為基礎的範例：
 
 ```fsharp
-open System.Threading
+open System
+open System.IO
 
-// Create a workflow which will loop forever.
-let workflow =
+let printTotalFileBytes path =
     async {
-        while true do
-            printfn "Working..."
-            do! Async.Sleep 1000
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
     }
 
-let tokenSource = new CancellationTokenSource()
+[<EntryPoint>]
+let main argv =
+    argv
+    |> Array.map printTotalFileBytes
+    |> Async.Parallel
+    |> Async.Ignore
+    |> Async.RunSynchronously
 
-// Start the workflow in the background
-Async.Start (workflow, tokenSource.Token)
-
-// Executing the next line will stop the workflow
-tokenSource.Cancel()
+    0
 ```
 
-就是這麼容易！
+如您所見，`main` 函式有更多的呼叫。 在概念上，它會執行下列動作：
 
-## <a name="further-resources"></a>其他資源︰
+1. 使用 `Array.map`，將命令列引數轉換成 `Async<unit>` 計算。
+2. 建立 `Async<'T[]>`，以在執行時以平行方式排程和執行 @no__t 1 計算。
+3. 建立將會執行平行計算並忽略其結果的 `Async<unit>`。
+4. 明確地執行最後一個計算 `Async.RunSynchronously` 並封鎖，直到完成為止。
 
-* [MSDN 上的非同步工作流程](https://msdn.microsoft.com/library/dd233250.aspx)
-* [非同步順序F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-* [F#HTTP 資料公用程式](https://fsharp.github.io/FSharp.Data/library/Http.html)
+當此程式執行時，`printTotalFileBytes` 會針對每個命令列引數以平行方式執行。 因為非同步計算獨立執行程式流程，所以不會列印其資訊並完成執行。 計算會以平行方式排程，但不保證其執行順序。
+
+## <a name="sequencing-asynchronous-computations"></a>排序非同步計算
+
+因為 `Async<'T>` 是工作的規格，而不是已執行的工作，所以您可以輕鬆地執行更複雜的轉換。 以下範例會排序一組非同步計算，讓它們逐一執行。
+
+```fsharp
+let printTotalFileBytes path =
+    async {
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
+    }
+
+[<EntryPoint>]
+let main argv =
+    argv
+    |> Array.map printTotalFileBytes
+    |> Async.Sequential
+    |> Async.RunSynchronously
+    |> ignore
+```
+
+這會依照 `argv` 的元素順序來排程 `printTotalFileBytes`，而不是以平行方式進行排程。 因為下一個專案在最後一個計算完成執行後才會排程，所以計算會進行排序，使其執行不會有任何重迭。
+
+## <a name="important-async-module-functions"></a>重要的非同步模組函式
+
+當您在中F#撰寫非同步程式碼時，通常會與處理計算排程的架構互動。 不過，這不一定會發生，因此最好學習各種啟動函數來排程非同步工作。
+
+因為F#非同步計算是工作的_規格_，而不是已在執行中的工作表示法，所以必須以起始函式明確啟動。 有許多[非同步啟動函數](https://msdn.microsoft.com/library/ee370232.aspx)在不同的內容中很有説明。 下一節將說明一些較常見的啟動函數。
+
+### <a name="asyncstartchild"></a>Async.startchild
+
+在非同步計算中啟動子計算。 這可讓多個非同步計算同時執行。 子計算會與父計算共用解除標記。 如果父計算已取消，子計算也會一併取消。
+
+簽章
+
+```fsharp
+computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
+```
+
+使用時機：
+
+- 當您想要同時執行多個非同步計算，而不是一次，但未以平行方式排程它們時。
+- 當您想要將子計算的存留期系結至父計算的存留期間。
+
+要注意的事項：
+
+- 使用 `Async.StartChild` 啟動多個計算，與以平行方式進行排程並不相同。 如果您想要平行排程計算，請使用 `Async.Parallel`。
+- 取消父計算會觸發其啟動之所有子計算的取消作業。
+
+### <a name="asyncstartimmediate"></a>StartImmediate
+
+執行非同步計算，並在目前的作業系統執行緒上立即啟動。 如果您需要在計算期間更新呼叫執行緒上的某個專案，這會很有説明。 例如，如果非同步計算必須更新 UI （例如更新進度列），則應該使用 `Async.StartImmediate`。
+
+簽章
+
+```fsharp
+computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+```
+
+使用時機：
+
+- 當您需要在非同步計算過程中更新呼叫執行緒上的某些專案時。
+
+要注意的事項：
+
+- 非同步計算中的程式碼會在任何一個要排程的執行緒上執行。 如果該執行緒以某種方式區分，例如 UI 執行緒，這可能會造成問題。 在這種情況下，`Async.StartImmediate` 可能不適合使用。
+
+### <a name="asyncstartastask"></a>Async.startastask
+
+執行執行緒集區中的計算。 傳回 <xref:System.Threading.Tasks.Task%601>，這會在計算終止（產生結果、擲回例外狀況或取消）時，于對應的狀態下完成。 如果未提供解除標記，則會使用預設的解除標記。
+
+簽章
+
+```fsharp
+computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
+```
+
+使用時機：
+
+- 當您需要呼叫 .NET API，而該應用程式需要 <xref:System.Threading.Tasks.Task%601> 來表示非同步計算的結果時。
+
+要注意的事項：
+
+- 此呼叫會配置額外的 `Task` 物件，如果經常使用，則可能會增加額外負荷。
+
+### <a name="asyncparallel"></a>Async。 Parallel
+
+排定要平行執行的一系列非同步計算。 藉由指定 `maxDegreesOfParallelism` 參數，可以選擇性地調整/節流處理平行處理原則的程度。
+
+簽章
+
+```fsharp
+computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
+```
+
+使用時機：
+
+- 如果您需要同時執行一組計算，而且不依賴其執行順序。
+- 如果您不需要以平行方式排程的結果，直到全部完成為止。
+
+要注意的事項：
+
+- 一旦所有計算完成之後，您就只能存取產生的值陣列。
+- 計算將會執行，但最終會進行排程。 這表示您無法依賴其執行順序。
+
+### <a name="asyncsequential"></a>非同步。連續
+
+排程要依行程順序執行的一系列非同步計算。 第一次計算將會執行，接下來是下一個，依此類推。 不會平行執行計算。
+
+簽章
+
+```fsharp
+computations: seq<Async<'T>> -> Async<'T[]>
+```
+
+使用時機：
+
+- 如果您需要依序執行多個計算。
+
+要注意的事項：
+
+- 一旦所有計算完成之後，您就只能存取產生的值陣列。
+- 計算會依照傳遞至此函式的循序執行，這可能表示傳回結果之前會經過較多的時間。
+
+### <a name="asyncawaittask"></a>Async.awaittask
+
+傳回非同步計算，以等候指定的 <xref:System.Threading.Tasks.Task%601> 完成，並將其結果傳回為 `Async<'T>`
+
+簽章
+
+```fsharp
+task: Task<'T>  -> Async<'T>
+```
+
+使用時機：
+
+- 當您使用會在F#非同步計算中傳回 <xref:System.Threading.Tasks.Task%601> 的 .net API 時。
+
+要注意的事項：
+
+- 例外狀況會依照工作平行程式庫的慣例包裝在 <xref:System.AggregateException>，這與非同步如何呈現例外F#狀況的方式不同。
+
+### <a name="asynccatch"></a>Async Catch
+
+建立異步計算，以執行指定的 `Async<'T>`，傳回 `Async<Choice<'T, exn>>`。 如果指定的 `Async<'T>` 成功完成，則會傳回包含結果值的 `Choice1Of2`。 如果在完成之前擲回例外狀況，則會傳回 `Choice2of2`，並產生例外狀況。 如果它用於本身由許多計算組成的非同步計算，而其中一個計算擲回例外狀況，則會完全停止內含的計算。
+
+簽章
+
+```fsharp
+computation: Async<'T> -> Async<Choice<'T, exn>>
+```
+
+使用時機：
+
+- 當您執行可能因例外狀況而失敗的非同步工作，而且您想要在呼叫端處理該例外狀況。
+
+要注意的事項：
+
+- 當使用結合或排序的非同步計算時，如果其中一個「內部」計算擲回例外狀況，則包含的計算將會完全停止。
+
+### <a name="asyncignore"></a>Async。忽略
+
+建立異步計算來執行指定的計算，並忽略其結果。
+
+簽章
+
+```fsharp
+computation: Async<'T> -> Async<unit>
+```
+
+使用時機：
+
+- 當您有不需要其結果的非同步計算時。 這類似于非非同步程式碼的 `ignore` 程式碼。
+
+要注意的事項：
+
+- 如果您必須使用此功能，因為您想要使用 `Async.Start` 或需要 `Async<unit>` 的另一個函式，請考慮捨棄結果是否可以執行。 通常不應該只是為了符合類型簽章而捨棄結果。
+
+### <a name="asyncrunsynchronously"></a>Async.runsynchronously
+
+執行非同步計算，並在呼叫執行緒上等候其結果。 此呼叫正在封鎖。
+
+簽章
+
+```fsharp
+computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
+```
+
+使用時機：
+
+- 如果您需要，請在應用程式中使用它（在可執行檔的進入點上）。
+- 當您不在意效能，而且想要一次執行一組其他非同步作業時。
+
+要注意的事項：
+
+- 呼叫 `Async.RunSynchronously` 會封鎖呼叫執行緒，直到執行完成為止。
+
+### <a name="asyncstart"></a>Async. Start
+
+線上程集區中啟動會傳回 `unit` 的非同步計算。 不等候其結果。 以 `Async.Start` 開頭的嵌套計算會與呼叫它們的父系計算完全獨立地啟動。 其存留期不會系結至任何父系計算。 如果父代計算已取消，則不會取消任何子計算。
+
+簽章
+
+```fsharp
+computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+```
+
+只在下列情況使用：
+
+- 您的非同步計算不會產生結果，也不需要處理一次。
+- 您不需要知道非同步計算何時完成。
+- 您不在意非同步計算執行所在的執行緒。
+- 您不需要留意或報告工作所產生的例外狀況。
+
+要注意的事項：
+
+- 以 `Async.Start` 開頭的計算所引發的例外狀況不會傳播至呼叫端。 將完全展開呼叫堆疊。
+- @No__t-1 開始的任何 effectful 工作（例如呼叫 `printfn`）不會導致程式執行的主要執行緒發生此效果。
+
+## <a name="interoperating-with-net"></a>與 .NET 交互操作
+
+您可能使用的 .NET 程式庫或C#程式碼基底，會使用非同步[/await](../../../standard/async.md)樣式的非同步程式設計。 由於C#和大部分的 .net 程式庫使用 <xref:System.Threading.Tasks.Task%601> 和 <xref:System.Threading.Tasks.Task> 類型做為其核心抽象概念，而不是 `Async<'T>`，因此您必須在這兩個方法之間的界限之間進行非同步。
+
+### <a name="how-to-work-with-net-async-and-taskt"></a>如何使用 .NET async 和 `Task<T>`
+
+使用 <xref:System.Threading.Tasks.Task%601> 的 .NET async 程式庫和程式碼基底（也就是具有傳回值的非同步計算）很簡單，而且具有內建F#的支援。
+
+您可以使用 `Async.AwaitTask` 函數來等待 .NET 非同步計算：
+
+```fsharp
+let getValueFromLibrary param =
+    async {
+        let! value = DotNetLibrary.GetValueAsync param |> Async.AwaitTask
+        return value
+    }
+```
+
+您可以使用 `Async.StartAsTask` 函式，將非同步計算行程給 .NET 呼叫者：
+
+```fsharp
+let computationForCaller param =
+    async {
+        let! result = getAsyncResult param
+        return result
+    } |> Async.StartAsTask
+```
+
+### <a name="how-to-work-with-net-async-and-task"></a>如何使用 .NET async 和 `Task`
+
+若要使用 <xref:System.Threading.Tasks.Task> 的 Api （也就是不會傳回值的 .NET 非同步計算），您可能需要加入另一個函式，將 `Async<'T>` 轉換成 <xref:System.Threading.Tasks.Task>：
+
+```fsharp
+module Async =
+    // Async<unit> -> Task
+    let startTaskFromAsyncUnit (comp: Async<unit>) =
+        Async.StartAsTask comp :> Task
+```
+
+已經有 `Async.AwaitTask`，接受 <xref:System.Threading.Tasks.Task> 做為輸入。 使用此和先前定義的 `startTaskFromAsyncUnit` 函式，您可以從F#非同步計算啟動和等候 <xref:System.Threading.Tasks.Task> 類型。
+
+## <a name="relationship-to-multithreading"></a>多執行緒的關聯性
+
+雖然這篇文章中提到了執行緒，但有兩個重要的事項要記住：
+
+1. 除非在目前線程上明確啟動，否則非同步計算和執行緒之間沒有相似性。
+1. 中F#的非同步程式設計不是多執行緒的抽象概念。
+
+例如，計算實際上可能會在其呼叫端的執行緒上執行，視工作的本質而定。 計算也可以線上程之間「跳躍」，以一小段時間來進行，以在「等候」期間執行有用的工作（例如當網路呼叫正在傳輸時）。
+
+雖然F#提供在目前線程上啟動非同步計算的一些功能（或明確地不在目前線程上），但非同步通常不會與特定的執行緒策略相關聯。
+
+## <a name="see-also"></a>請參閱
+
+- [F#非同步程式設計模型](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
+- [Jet .com 的F#非同步指南](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
+- [F#針對有趣和利潤的非同步程式設計指南](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
+- [和F#中C#的非同步：中的非同步陷阱C#](http://tomasp.net/blog/csharp-async-gotchas.aspx/)

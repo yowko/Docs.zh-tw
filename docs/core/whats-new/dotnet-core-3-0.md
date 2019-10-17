@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/22/2019
-ms.openlocfilehash: ddb758b942099657708e79b590c7817c309396d7
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: c10023cf8cee358db41a3b90a9a0a1020c5462eb
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216271"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395440"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -38,7 +38,7 @@ C#8.0 也是此版本的一部分，其中包括可為 null 的參考型別功�
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-雖然 .NET Core 3.0 支援 **.NET Standard 2.1**，但預設`dotnet new classlib`範本會產生仍以 **.NET Standard 2.0**為目標的專案。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
+雖然 .NET Core 3.0 支援 **.NET Standard 2.1**，但預設的 @no__t 1 範本會產生仍以 **.NET Standard 2.0**為目標的專案。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -54,7 +54,7 @@ C#8.0 也是此版本的一部分，其中包括可為 null 的參考型別功�
 
 ## <a name="improved-net-core-version-apis"></a>改善的 .NET Core 版本 API
 
-從 .NET Core 3.0 開始，.NET Core 所提供版本 API 現在會傳回您預期的資訊。 例如：
+從 .NET Core 3.0 開始，.NET Core 所提供版本 API 現在會傳回您預期的資訊。 例如:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -112,7 +112,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 -或-
 
 ```dotnetcli
-dotnet publish -r win10-x64 /p:PublishSingleFile=true
+dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
 如需單一檔案發佈的詳細資訊，請參閱[單一檔案搭配程式設計文件](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md)。
@@ -336,7 +336,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ## <a name="ieee-floating-point-improvements"></a>IEEE 浮點增強功能
 
-正在更新浮點 API，以遵守 [IEEE 754-2008 修訂](https://en.wikipedia.org/wiki/IEEE_754-2008_revision)。 這些變更的目標是公開所有的**必要**作業，並確定它們在行為上符合 IEEE 規格。如需浮點增強功能的詳細資訊，請參閱 [Floating-Point Parsing and Formatting improvements in .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) (.NET Core 3.0 中的浮點剖析和格式化增強功能) 部落格文章。
+正在更新浮點 API，以遵守 [IEEE 754-2008 修訂](https://en.wikipedia.org/wiki/IEEE_754-2008_revision)。 這些變更的目標是要公開所有**必要**的作業，並確保其行為上與 IEEE 規格相容。如需浮點改良功能的詳細資訊，請參閱[.Net Core 3.0 中的浮點剖析和格式改進](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)文章。
 
 剖析與格式化修正包括：
 
@@ -415,7 +415,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 .NET Core 3.0 改善原生 API Interop。
 
-### <a name="type-nativelibrary"></a>類型：NativeLibrary
+### <a name="type-nativelibrary"></a>類型： NativeLibrary
 
 <xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> 提供封裝來載入原生程式庫 (使用與 .NET Core P/Invoke 相同的負載邏輯)，並提供相關的 Helper 函式 (例如 `getSymbol`)。 如需程式碼範例，請參閱 [DLLMap Demo](https://github.com/dotnet/samples/tree/master/core/extensions/DllMapDemo) (DLLMap 示範)。
 

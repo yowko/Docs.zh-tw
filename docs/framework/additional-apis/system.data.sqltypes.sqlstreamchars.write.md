@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Write (Char []，Int32，Int32) 方法 (System.Data.SqlTypes)
+title: SqlStreamChars. Write （Char []，Int32，Int32）方法（SqlTypes）
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 4084c7161eaa91d78eab32f1c14624e0032cdfcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d952041122ceb3824712bd81cab7ce4789c9db8
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705905"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395580"
 ---
-# <a name="sqlstreamcharswritechar-int32-int32-method"></a>SqlStreamChars.Write (Char []，Int32，Int32) 方法
+# <a name="sqlstreamcharswritechar-int32-int32-method"></a>SqlStreamChars. Write （Char []，Int32，Int32）方法
 
-當在衍生類別中覆寫時，寫入目前資料流的字元序列，這個資料流中的目前位置前移寫入的字元數。 包含這個方法的組件有 SQLAccess.dll friend 關聯性。 它適用於 SQL server。 其他資料庫，請使用該資料庫所提供的主控機制。
+在衍生類別中覆寫時，將一連串的字元寫入目前的資料流程，並將此資料流程中目前的位置前移寫入的字元數。 包含這個方法的元件與 SQLAccess 具有 friend 關聯性。 其目的是要供 SQL Server 使用。 若為其他資料庫，請使用該資料庫所提供的裝載機制。
 
 ```csharp
 public abstract void Write (char[] buffer, int offset, int count);
@@ -36,19 +36,19 @@ public abstract void Write (char[] buffer, int offset, int count);
 相對於原點的位移。
 
 `count`  
-要寫入目前資料流的字元數。
+要寫入目前資料流程的字元數。
 
 ## <a name="remarks"></a>備註
 
 > [!WARNING]
-> `SqlStreamChars.Write`方法是私用，而且不適合直接在您的程式碼中使用。
+> @No__t-0 方法是私用的，不適合直接在程式碼中使用。
 >
-> Microsoft 不支援在生產環境應用程式中任何情況下使用此欄位。
+> 在任何情況下，Microsoft 不支援使用此方法在生產應用程式中寫入。
 
 ## <a name="requirements"></a>需求
 
 **命名空間︰** <xref:System.Data.SqlTypes>
 
-**組件：** System.Data （在 System.Data.dll 中)
+**元件：** System.web （在 System.web 中）
 
-**.NET framework 版本：** 自 2.0 起可用。
+**.NET Framework 版本：** 自2.0 開始提供。

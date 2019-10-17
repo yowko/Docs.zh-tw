@@ -7,17 +7,17 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701047"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396004"
 ---
 # <a name="extension-methods-visual-basic"></a>擴充方法 (Visual Basic)
 
 擴充方法可讓開發人員將自訂功能加入至已定義的資料類型，而不需要建立新的衍生類型。 擴充方法可讓您撰寫方法，如同現有類型的實例方法一樣，可以呼叫它。
-  
+
 ## <a name="remarks"></a>備註
 
 擴充方法只能是 @no__t 0 程式或 @no__t 1 程式。 您不能定義擴充屬性、欄位或事件。 所有擴充方法都必須以 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中的擴充屬性 `<Extension>` 標記，而且必須在[模組](../../../language-reference/statements/module-statement.md)中定義。 如果在模組外部定義擴充方法，Visual Basic 編譯器會產生錯誤[BC36551](../../../misc/bc36551.md)「擴充方法只能在模組中定義」。
@@ -29,7 +29,7 @@ ms.locfileid: "71701047"
 ## <a name="example"></a>範例
 
 下列範例會定義 <xref:System.String> 資料類型的 `Print` 延伸模組。 方法會使用 `Console.WriteLine` 來顯示字串。 @No__t-0 方法的參數（`aString`）會建立方法擴充 @no__t 2 類別。
-  
+
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
 請注意，擴充方法定義已標記 `<Extension()>` 的延伸模組屬性。 標記方法定義所在的模組是選擇性的，但每個擴充方法都必須標記為。 必須匯入 <xref:System.Runtime.CompilerServices>，才能存取擴充屬性。
@@ -45,7 +45,6 @@ ms.locfileid: "71701047"
 方法的呼叫方式是傳送 `punc` 的字串引數： `example.PrintAndPunctuate(".")`
 
 下列範例會顯示已定義和呼叫 `Print` 和 @no__t 1。 <xref:System.Runtime.CompilerServices> 會匯入定義模組中，以便啟用擴充屬性的存取。
-
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -106,7 +105,7 @@ End Module
 
 [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳作法
 
 擴充方法提供了一個方便且功能強大的方式來擴充現有的類型。 不過，若要成功使用它們，有一些重點需要考慮。 這些考慮主要適用于類別庫的作者，但它們可能會影響任何使用擴充方法的應用程式。
 
@@ -171,7 +170,7 @@ Instance method
 
 如果優先順序無法解決不明確的問題，您可以使用完整名稱來指定您要呼叫的方法。 如果先前範例中的 `Print` 方法是在名為 `StringExtensions` 的模組中定義，則完整名稱會是 `StringExtensions.Print(example)`，而不是 `example.Print()`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>

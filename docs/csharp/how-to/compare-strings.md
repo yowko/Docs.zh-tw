@@ -1,20 +1,20 @@
 ---
-title: HOW TO：比較字串 - C# 指南
+title: 如何：比較字串 - C# 手冊
 description: 了解如何比較和排序字串值，不論大小寫、不論文化特性特定的順序
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58759868"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395448"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：在 C\# 比較字串
 
-您可以比較字串來回答兩個問題的其中一個：「這兩個字串相等嗎？」 或「這些字串在排序時應該以何種順序放置？」
+比較字串來回答兩個問題的其中一個：「這兩個字串相等嗎？」 或「這些字串在排序時應該以何種順序放置？」
 
 這兩個問題會因為影響字串比較的因素而變複雜：
 
@@ -29,19 +29,19 @@ ms.locfileid: "58759868"
 
 ## <a name="default-ordinal-comparisons"></a>預設的序數比較
 
-最常見的作業：
+根據預設，最常見的作業如下：
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 和 <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>，也就是分別[`==` 和 `!=` 的等號比較運算子](../language-reference/operators/equality-operators.md#string-equality)
 
-使用序數比較、區分大小寫的比較，並使用目前文化特性。 下列範例將顯示結果：
+執行區分大小寫的序數比較，並視需要使用目前的文化特性。 下列範例示範：
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-比較字串時，預設序數比較不會考慮語言規則。 其會在兩個字串中比較各 <xref:System.Char> 物件的二進位值。 如此一來，預設序數比較也會區分大小寫。 
+比較字串時，預設序數比較並不會考慮語言規則。 其會在兩個字串中比較各 <xref:System.Char> 物件的二進位值。 如此一來，預設序數比較也會區分大小寫。
 
-請注意，使用 <xref:System.String.Equals%2A?displayProperty=nameWithType> 及 <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 測試是否相等與使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 及 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 方法的字串比較不同。 當相等測試執行區分大小寫的序數比較時，比較方法會使用目前的文化特性 (Culture) 執行區分大小寫、區分文化的比較。 因為預設比較方法時常執行不同類型的比較，所以建議您皆透過呼叫明確指定要執行比較之類型的多載，以讓程式碼的意圖更加明確。
+請注意，與 <xref:System.String.Equals%2A?displayProperty=nameWithType> 和 `==` 和 @no__t 2 運算子相等的測試，與使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 和 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 方法的字串比較不同。 雖然相等的測試會執行區分大小寫的序數比較，但比較方法會使用目前的文化特性執行區分大小寫、區分文化特性的比較。 因為預設比較方法時常執行不同類型的比較，所以建議您皆透過呼叫明確指定要執行比較之類型的多載，以讓程式碼的意圖更加明確。
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>不區分大小寫的序數比較
 
@@ -131,7 +131,7 @@ ms.locfileid: "58759868"
 
 您可以透過呼叫 <xref:System.String.Intern%2A?displayProperty=nameWithType> 方法實習字串或擷取參考到現有的已實習字串。 若要判斷字串是否已實習，請呼叫 <xref:System.String.IsInterned%2A?displayProperty=nameWithType> 方法。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>
 - <xref:System.StringComparer?displayProperty=nameWithType>

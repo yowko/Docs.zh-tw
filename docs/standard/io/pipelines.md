@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291736"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395916"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 中的 system.object
 
@@ -23,6 +23,7 @@ ms.locfileid: "72291736"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>由 system.servicemodel 解決的問題
+
 <!-- corner case doesn't MT (machine translate)   -->
 剖析串流資料的應用程式是由具有許多特製化和異常程式碼流程的重複採用程式碼所組成。 「未定案」和「特殊案例」程式碼很複雜且難以維護。
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -55,7 +56,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 * 緩衝傳入的資料，直到找到新的一行為止。
 * 剖析緩衝區中傳回的所有行。
-* 這行程式碼可能大於 1 KB （1024個位元組）。 程式碼必須調整輸入緩衝區的大小，才能找到整行。
+* 這行程式碼可能大於 1 KB （1024個位元組）。 程式碼必須調整輸入緩衝區的大小，直到找到分隔符號之後，才能符合緩衝區內的完整行。
 
   * 如果調整緩衝區大小，則會在輸入中出現較長的行時，產生更多的緩衝區複本。
   * 若要減少浪費的空間，請壓縮用來讀取行的緩衝區。
@@ -97,7 +98,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 * 傳回 <xref:System.IO.Pipelines.ReadResult>，其中包含兩個重要的資訊片段：
 
   * 以 `ReadOnlySequence<byte>` 格式讀取的資料。
-  * 布林值 `IsCompleted`，指出是否已達到資料結尾（EOF）。 
+  * 布林值 `IsCompleted`，指出是否已達到資料結尾（EOF）。
 
 尋找行尾（結束）分隔符號並剖析程式程式碼之後：
 
@@ -122,8 +123,8 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 若要解決上述問題，`Pipe` 有兩個設定可控制資料的流程：
 
-* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>:決定在呼叫 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> 暫停之前，應該緩衝多少資料。
-* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>:判斷讀取器在 `PipeWriter.FlushAsync` 繼續的呼叫之前必須觀察多少資料。
+* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>：決定在呼叫 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> 暫停之前，應該緩衝多少資料。
+* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>：在呼叫 @no__t 1 繼續之前，決定讀取器必須觀察多少資料。
 
 ![具有 ResumeWriterThreshold 和 PauseWriterThreshold 的圖表](./media/pipelines/resume-pause.png)
 
@@ -304,7 +305,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ## <a name="pipewriter"></a>PipeWriter
 
-@No__t-0 會管理要代表呼叫端寫入的緩衝區。 `PipeWriter` 會執行[`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter`1)。 `IBufferWriter<byte>` 可讓您取得緩衝區的存取權，以執行寫入，而不需要額外的緩衝區複本。
+@No__t-0 會管理要代表呼叫端寫入的緩衝區。 `PipeWriter` 會執行[`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601)。 `IBufferWriter<byte>` 可讓您取得緩衝區的存取權，以執行寫入，而不需要額外的緩衝區複本。
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

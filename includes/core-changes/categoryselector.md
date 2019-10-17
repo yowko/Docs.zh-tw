@@ -1,21 +1,21 @@
 ---
-ms.openlocfilehash: 83ddbd365b76a5bcf6bb922a4a214dccaf70df07
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 122d76b04e2ca7468cf13ead1d2de29d9b4588c5
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72023108"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393644"
 ---
 > [!div class="op_single_selector"]
 >
+> - [ASP.NET Core](~/docs/core/compatibility/aspnetcore.md)
 > - [CoreFx](~/docs/core/compatibility/corefx.md)
-> - [加密](~/docs/core/compatibility/cryptography.md)
+> - [密碼編譯](~/docs/core/compatibility/cryptography.md)
+> - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
 > - [全球化](~/docs/core/compatibility/globalization.md)
-> - [網路功能](~/docs/core/compatibility/networking.md)
+> - [網路](~/docs/core/compatibility/networking.md)
 > - [Visual Basic](~/docs/core/compatibility/visualbasic.md)
 > - [Windows Forms](~/docs/core/compatibility/winforms.md)
-> - [ASP.NET Core （在 GitHub 上）](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)
-> - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
 
 <!--
 
