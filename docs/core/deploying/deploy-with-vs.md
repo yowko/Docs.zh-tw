@@ -194,7 +194,7 @@ ms.locfileid: "71216247"
   
 1. 選取 Visual Studio 發行您應用程式的位置。
 
-   如果您僅要發行到單一平台，您可以在 [選擇資料夾] 文字方塊中接受預設值，這會將您應用程式的 Framework 相依部署發行至 *\<project-directory>\bin\Release\netcoreapp2.1\publish\* 目錄。
+   如果您僅要發行到單一平台，您可以在 [選擇資料夾] 文字方塊中接受預設值，這會將您應用程式的 Framework 相依部署發行至 *\<project-directory>\bin\Release\netcoreapp2.1\publish* 目錄。
 
    如果您要發行到多個平台，請附加識別目標平台的字串。 例如，如果您將字串 "linux" 附加至檔案路徑，Visual Studio 會將您應用程式的 Framework 相依部署發行至 *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux* 目錄。
 
