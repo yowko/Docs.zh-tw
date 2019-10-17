@@ -118,7 +118,7 @@ End Module
 
 ## <a name="framework-dependent-executable"></a>Framework 相依可執行檔
 
-針對 .NET Core SDK 3.x CLI，與 framework 相依的可執行檔（FDE）是基本`dotnet publish`命令的預設模式。 只要您想要以目前的作業系統為目標，就不需要指定任何其他參數。
+針對 .NET Core SDK 3.x CLI，與 Framework 相依的可執行檔（FDE）是基本 `dotnet publish` 命令的預設模式。 只要您想要以目前的作業系統為目標，就不需要指定任何其他參數。
 
 在此模式中，將會建立平台特定可執行檔主機來裝載您的跨平台應用程式。 此模式類似於 FDD，因為 FDD 需要 `dotnet` 命令形式的主機。 主機可執行檔的檔名因平台而異，且其名稱類似於 `<PROJECT-FILE>.exe`。 您可以直接執行這個可執行檔，而不是呼叫 `dotnet <PROJECT-FILE>.dll` (這仍然是可接受的應用程式執行方式)。
 
