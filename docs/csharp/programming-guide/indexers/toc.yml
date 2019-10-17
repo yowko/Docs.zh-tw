@@ -1,9 +1,0 @@
-- name: 索引子
-  href: index.md
-  items:
-    - name: 使用索引子
-      href: using-indexers.md
-    - name: 介面中的索引子
-      href: indexers-in-interfaces.md
-    - name: 屬性與索引子之間的比較
-      href: comparison-between-properties-and-indexers.md

@@ -1,5 +1,0 @@
-- name: 字串
-  href: index.md
-  items:
-    - name: HOW TO：判斷字串是否代表數值
-      href: how-to-determine-whether-a-string-represents-a-numeric-value.md
