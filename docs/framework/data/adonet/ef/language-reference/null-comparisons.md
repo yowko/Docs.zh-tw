@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8eca2ee1afec5662e40d4f43347c469bd538c066
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854329"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319490"
 ---
 # <a name="null-comparisons"></a>Null 比較
-資料來源中的 `null` 值表示該值未知。 在 LINQ to Entities 查詢中，您可以檢查是否有 null 值，以便只在具有有效或非 null 資料的資料列上執行某些計算或比較。 不過，CLR null 語意 (Semantics) 可能與資料來源的 null 語意不同。 大部分的資料庫都使用三值邏輯來處理 null 比較， 也就是說，針對 null 值的比較不會評估為`true`或`false`，它會評估為`unknown`。 通常，這是 ANSI NULLS 的實作，可是實際情況不一定如此。  
+資料來源中的 `null` 值表示該值未知。 在 LINQ to Entities 查詢中，您可以檢查是否有 null 值，以便只在具有有效或非 null 資料的資料列上執行某些計算或比較。 不過，CLR null 語意 (Semantics) 可能與資料來源的 null 語意不同。 大部分的資料庫都使用三值邏輯來處理 null 比較， 也就是說，針對 null 值的比較並不會評估為 `true` 或 `false`，它會評估為 `unknown`。 通常，這是 ANSI NULLS 的實作，可是實際情況不一定如此。  
   
- 根據預設，SQL Server 中 null 等於 null 的比較會傳回 null 值。 在下列範例中， `ShipDate`是 null 的資料列會從結果集排除，而 transact-sql 語句會傳回0個數據列。  
+ 根據預設，SQL Server 中 null 等於 null 的比較會傳回 null 值。 在下列範例中，會從結果集排除 `ShipDate` 為 null 的資料列，而 Transact-sql 語句會傳回0個數據列。  
   
-```  
+```sql  
 -- Find order details and orders with no ship date.  
 SELECT h.SalesOrderID  
 FROM Sales.SalesOrderHeader h  
@@ -44,8 +44,8 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>將 Null 集合傳遞至彙總函式  
- 在 LINQ to Entities 中，當您將支援`IQueryable`的集合傳遞至彙總函式時，會在資料庫中執行匯總作業。 在記憶體中執行的查詢結果和在資料庫上執行的查詢，可能會有差異。 使用記憶體內部查詢時，如果沒有相符專案，則查詢會傳回零。 同樣的查詢在資料庫中則會傳回 `null`。 如果將`null`值傳遞給 LINQ 彙總函式，則會擲回例外狀況。 若要接受`null`可能的值，請將接收查詢結果之類型的類型和屬性轉換成可為 null 的類型。  
+ 在 LINQ to Entities 中，當您將支援 `IQueryable` 的集合傳遞至彙總函式時，會在資料庫中執行匯總作業。 在記憶體中執行的查詢結果和在資料庫上執行的查詢，可能會有差異。 使用記憶體內部查詢時，如果沒有相符專案，則查詢會傳回零。 同樣的查詢在資料庫中則會傳回 `null`。 如果 `null` 值傳遞至 LINQ 彙總函式，則會擲回例外狀況。 若要接受可能的 `null` 值，請將接收查詢結果之類型的類型和屬性轉換成可為 null 的類型。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to Entities 查詢中的運算式](expressions-in-linq-to-entities-queries.md)

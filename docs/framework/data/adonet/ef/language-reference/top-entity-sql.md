@@ -2,12 +2,12 @@
 title: TOP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: 8b55519b7f95deb6463af4c0a6a2a53975e5b5a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 16be25336bac386c993eae7527c9377be1073d1e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248978"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319280"
 ---
 # <a name="top-entity-sql"></a>TOP (Entity SQL)
 
@@ -15,13 +15,13 @@ SELECT 子句在選擇性 ALL/DISTINCT 修飾詞之後可以有選擇性 TOP 子
 
 ## <a name="syntax"></a>語法
 
-```
+```sql
 [ TOP (n) ]
 ```
 
 ## <a name="arguments"></a>引數
 
-`n`數值運算式，指定要傳回的資料列數目。 `n` 可以是單一數字常值或單一參數。
+`n` 指定要傳回之資料列數目的數值運算式。 `n` 可以是單一數字常值或單一參數。
 
 ## <a name="remarks"></a>備註
 
@@ -45,13 +45,13 @@ select distinct top(@topParam) c.a1, c.a2 from T as a
 
 下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢使用 TOP，指定從查詢結果傳回的頂端第一行資料列。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：
 
-1. [遵循 how to：執行可傳回 StructuralType 結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。
+1. 遵循 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。
 
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：
 
-    [!code-csharp[DP EntityServices Concepts 2#TOP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#top)]
+    [!code-sql[DP EntityServices Concepts#TOP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#top)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [SELECT](select-entity-sql.md)
 - [SKIP](skip-entity-sql.md)

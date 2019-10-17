@@ -3,13 +3,13 @@ title: Linux 上 .NET Core 的必要條件
 description: 支援的 Linux 版本和 .NET Core 的相依性，以在 Linux 電腦上開發、部署和執行 .NET Core 應用程式。
 author: leecow
 ms.author: leecow
-ms.date: 09/25/2019
-ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
-ms.translationtype: MT
+ms.date: 10/11/2019
+ms.openlocfilehash: bb9049059de9d8208fc92234b28acdfb3d7f0cb3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591692"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318336"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
 
@@ -34,9 +34,9 @@ ms.locfileid: "71591692"
 下列 Linux 發行版本/版本支援 .NET Core 3.0：
 
 > [!NOTE]
-> @No__t-0 符號代表最小版本。
+> @No__t_0 符號代表最小版本。
 
-| OS                             | Version               | 架構    |
+| OS                             | 版本               | 架構    |
 | ------------------------------ | --------------------- | ---------------- |
 | Red Hat Enterprise Linux       | 6 +、7                 | X64 |
 | Oracle Linux                   | 7                     | X64 |
@@ -62,9 +62,9 @@ ms.locfileid: "71591692"
 下列 Linux 發行版本/版本支援 .NET Core 2.2：
 
 > [!NOTE]
-> @No__t-0 符號代表最小版本。
+> @No__t_0 符號代表最小版本。
 
-| OS                             |  Version                |  架構   |
+| OS                             |  版本                |  架構   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6、7                   | X64 |
 | Oracle Linux                   |  7                      | X64 |
@@ -87,7 +87,7 @@ ms.locfileid: "71591692"
 
 下列 Linux 發行版本/版本支援 .NET Core 2.1：
 
-| OS                             |  Version                |  架構   |
+| OS                             |  版本                |  架構   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6、7、8                | X64 |
 | Oracle Linux                   |  7                      | X64 |
@@ -128,6 +128,13 @@ Ubuntu 發行版本需要安裝下列程式庫：
 * libunwind8
 * libuuid1
 
+針對使用*system.web*元件的 .net Core 應用程式，您也需要下列相依性：
+
+* libgdiplus （6.0.1 版或更新版本）
+
+> [!NOTE]
+> 最新版的 Ubuntu 包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
+
 ### <a name="centos-and-fedora"></a>CentOS 與 Fedora
 
 CentOS 發行版本需要安裝下列程式庫：
@@ -147,6 +154,13 @@ Fedora 使用者：如果您的 openssl 版本 >= 1.1，則必須安裝 compat-o
 * libuuid
 
 如需有關相依性的詳細資訊，請參閱[獨立式 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) \(英文\)。
+
+針對使用*system.web*元件的 .net Core 應用程式，您也需要下列相依性：
+
+* libgdiplus （6.0.1 版或更新版本）
+
+> [!NOTE]
+> 大部分的 CentOS 和 Fedora 版本都包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
 
 ## <a name="installing-net-core-dependencies-with-the-native-installers"></a>使用原生安裝程式來安裝 .NET Core 相依性
 

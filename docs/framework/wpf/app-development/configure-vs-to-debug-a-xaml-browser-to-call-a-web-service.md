@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務
+title: 如何：設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging XBAPs that call a Web service [WPF]
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 8ec278f2bc66d9b40786123af684f6468b6a9d83
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 7730ab452e227b11e5a9dd69cdabec51f333ce4f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005667"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321204"
 ---
-# <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>HOW TO：設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 會在部分信任的安全性沙箱中執行，並限制為網際網路區域的許可權集。 這個許可權集合會將 Web 服務通話限制為位於 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 應用程式的來源網站上的 Web 服務。 不過，從 Visual Studio 2005 進行 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的調試時，不會將相同的來源網站視為它所參考的 Web 服務。 這會導致在 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 嘗試呼叫 Web 服務時，引發安全性例外狀況。 不過，Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] 專案可以設定為模擬與在進行調試時所呼叫的 Web 服務相同的來源網站。 這可讓 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 安全地呼叫 Web 服務，而不會導致安全性例外狀況。
+# <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>如何：設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 在僅限網際網路區域許可權集的部分信任安全性沙箱中執行。 這個許可權集合會將 Web 服務通話限制為位於 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 應用程式的來源網站上的 Web 服務。 不過，從 Visual Studio 2005 中調試 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 時，不會將其所參考之 Web 服務的來源網站視為相同。 這會導致 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 嘗試呼叫 Web 服務時，引發安全性例外狀況。 不過，Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] 專案可以設定為模擬與在進行調試時所呼叫的 Web 服務相同的來源網站。 這可讓 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 安全地呼叫 Web 服務，而不會導致安全性例外狀況。
 
 ## <a name="configuring-visual-studio"></a>設定 Visual Studio
- 若要將 Visual Studio 2005 設定為偵測呼叫 Web 服務的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]：
+ 若要將 Visual Studio 2005 設定為可偵測呼叫 Web 服務的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]：
 
 1. 在方案總管中選取專案之後，按一下 [專案] 功能表中 [屬性]。
 
@@ -48,9 +48,9 @@ ms.locfileid: "72005667"
 
      `-debugSecurityZoneURL`  *URL*
 
-     **-DebugSecurityZoneURL**參數的*URL*值是您想要模擬為應用程式來源網站之位置的 [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)]。
+     **-DebugSecurityZoneURL**參數的*url*值是您想要模擬為應用程式來源網站之位置的 url。
 
- 例如，假設有一個 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，它會使用具有下列 URL 的 Web 服務：
+ 例如，假設有一個使用具有下列 URL 之 Web 服務的 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]：
 
  `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 
@@ -62,6 +62,6 @@ ms.locfileid: "72005667"
 
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WPF 主應用程式 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)

@@ -2,12 +2,12 @@
 title: 類型定義 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35f660a66fd706b37187056830af5e06ac586caa
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248955"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319254"
 ---
 # <a name="type-definitions-entity-sql"></a>類型定義 (Entity SQL)
 型別定義用於 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 內嵌函式中的宣告陳述式。  
@@ -23,7 +23,7 @@ ms.locfileid: "70248955"
   
 - 關鍵字 `COLLECTION` 後面接以括號括住的其他型別定義 (例如 "Collection(AdventureWorks.Order)")。  
   
-- 關鍵字 ROW 後面接以括號括住的屬性定義清單 (例如 "Row(x AdventureWorks.Order)")。 屬性定義的格式如 "`identifier type_definition`， `identifier type_definition`，..."。  
+- 關鍵字 ROW 後面接以括號括住的屬性定義清單 (例如 "Row(x AdventureWorks.Order)")。 屬性定義的格式如 "`identifier type_definition`，`identifier type_definition`，..."。  
   
 - 關鍵字 REF 後面接以括號括住的識別項型別 (例如 "Ref(AdventureWorks.Order)")。 REF 型別定義運算子需要實體類型做為引數。 您不能指定基本型別做為引數。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "70248955"
   
  型別定義的選項是：  
   
-- `IdentifierName supported_type`、或  
+- `IdentifierName supported_type` 或  
   
 - `IdentifierName` COLLECTION(`type_definition`)，或  
   
@@ -48,7 +48,7 @@ ms.locfileid: "70248955"
 ## <a name="examples"></a>範例  
  下面是一個簡單的型別定義範例：  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 EDM.Decimal) AS (  
    Round(p1)  
@@ -58,7 +58,7 @@ MyRound(CAST(1.7 as EDM.Decimal))
   
  下面是一個 COLLECTION 型別定義的範例：  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Collection(EDM.Decimal)) AS (  
    Select Round(p1) from p1  
@@ -68,7 +68,7 @@ MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})
   
  下面是一個 ROW 型別定義的範例：  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Row(x EDM.Decimal)) AS (  
    Round(p1.x)  
@@ -78,7 +78,7 @@ select MyRound(row(a as x)) from {CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Deci
   
  下面是一個 REF 型別定義的範例。  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function UnReference(p1 Ref(AdventureWorks.Order)) AS (  
    Deref(p1)  
@@ -86,7 +86,7 @@ Function UnReference(p1 Ref(AdventureWorks.Order)) AS (
 select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Entity SQL 概觀](entity-sql-overview.md)
 - [Entity SQL 參考](entity-sql-reference.md)

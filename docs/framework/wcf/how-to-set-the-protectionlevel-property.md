@@ -1,5 +1,5 @@
 ---
-title: 作法：設定 ProtectionLevel 屬性
+title: HOW TO：設定 ProtectionLevel 屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 222fda180923cdc7b0d7b7ab413c151c69add259
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ff835f767852da586a3a35b7f4ce2edf99db283
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950971"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320918"
 ---
-# <a name="how-to-set-the-protectionlevel-property"></a>作法：設定 ProtectionLevel 屬性
-您可以套用適當的屬性 (Attribute) 並設定屬性 (Property)，藉此設定保護層級。 您可以設定服務層級的保護，以影響每一個訊息的所有部分，或是從方法到訊息部分，設定越發細微的保護層級。 如需有關屬性的`ProtectionLevel`詳細資訊, 請參閱[瞭解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。  
+# <a name="how-to-set-the-protectionlevel-property"></a>HOW TO：設定 ProtectionLevel 屬性
+您可以套用適當的屬性 (Attribute) 並設定屬性 (Property)，藉此設定保護層級。 您可以設定服務層級的保護，以影響每一個訊息的所有部分，或是從方法到訊息部分，設定越發細微的保護層級。 如需 `ProtectionLevel` 屬性的詳細資訊，請參閱[瞭解保護層級](understanding-protection-level.md)。  
   
 > [!NOTE]
 > 您只能在程式碼中設定保護層級，而不能在組態中設定。  
@@ -42,7 +42,7 @@ ms.locfileid: "69950971"
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>保護錯誤訊息  
- 在服務上擲回的例外狀況可以當成 SOAP 錯誤傳送至用戶端。 如需建立強型別錯誤的詳細資訊, 請參閱[指定和處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)和[如何:宣告服務合約](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)中的錯誤。  
+ 在服務上擲回的例外狀況可以當成 SOAP 錯誤傳送至用戶端。 如需建立強型別錯誤的詳細資訊，請參閱[指定和處理合約和服務中的錯誤](specifying-and-handling-faults-in-contracts-and-services.md)和[如何：在服務合約中宣告錯誤](how-to-declare-faults-in-service-contracts.md)。  
   
 #### <a name="to-protect-a-fault-message"></a>保護錯誤訊息  
   
@@ -61,7 +61,7 @@ ms.locfileid: "69950971"
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>保護訊息部分  
- 使用訊息合約保護訊息的部分。 如需訊息合約的詳細資訊, 請參閱[使用訊息合約](../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
+ 使用訊息合約保護訊息的部分。 如需訊息合約的詳細資訊，請參閱[使用訊息合約](./feature-details/using-message-contracts.md)。  
   
 #### <a name="to-protect-a-message-body"></a>保護訊息本文  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69950971"
   
 3. 將 <xref:System.ServiceModel.MessageHeaderAttribute> 屬性 (Attribute) 套用以訊息標頭表示的欄位，並且將 `ProtectionLevel` 屬性 (Property) 設為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>。  
   
-4. 將套用`ProtectionLevel` <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>至任何將表示為訊息主體一部分的欄位, 並將屬性設定為, 如下列範例所示。 <xref:System.ServiceModel.MessageBodyMemberAttribute>  
+4. 將 <xref:System.ServiceModel.MessageBodyMemberAttribute> 套用至將以訊息本文的一部分表示的任何欄位，並將 `ProtectionLevel` 屬性設定為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>，如下列範例所示。  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  
@@ -88,11 +88,11 @@ ms.locfileid: "69950971"
  [!code-csharp[C_ProtectionLevel#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#0)]
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.MessageContractAttribute>
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
-- [了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)
+- [了解保護層級](understanding-protection-level.md)

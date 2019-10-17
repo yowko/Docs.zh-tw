@@ -1,27 +1,27 @@
 ---
-title: 作法：在組態中指定服務繫結
+title: HOW TO：指定組態中的服務繫結
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: d3224b1d732fb82ffe68e8ce0bd410850004cb95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9790d3fb5fc20b3d2c6ce776070274ef0403732
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967159"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319877"
 ---
-# <a name="how-to-specify-a-service-binding-in-configuration"></a>作法：在組態中指定服務繫結
-在此範例中會定義基本計算機服務的 `ICalculator` 合約，該服務會在 `CalculatorService` 類別中實作，然後會在 Web.config 檔案中設定其端點，其中會指定服務使用 <xref:System.ServiceModel.BasicHttpBinding>。 如需如何使用程式碼而不是設定來設定此服務的說明, [請參閱如何:在程式碼](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)中指定服務系結。  
+# <a name="how-to-specify-a-service-binding-in-configuration"></a>HOW TO：指定組態中的服務繫結
+在此範例中會定義基本計算機服務的 `ICalculator` 合約，該服務會在 `CalculatorService` 類別中實作，然後會在 Web.config 檔案中設定其端點，其中會指定服務使用 <xref:System.ServiceModel.BasicHttpBinding>。 如需如何使用程式碼（而不是設定）來設定此服務的說明，請參閱[如何：在程式碼中指定服務](how-to-specify-a-service-binding-in-code.md)系結。  
   
  通常最佳作法是在組態中以宣告方式指定繫結和位址資訊，而不是在程式碼中強制指定。 在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。 比較一般性的作法是將繫結和位址資訊留在程式碼外面，如此一來，不需要重新編譯或重新部署應用程式，就可以變更繫結和位址資訊。  
   
- 您可以使用設定[編輯器工具 (svcconfigeditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)來執行下列所有的設定步驟。  
+ 您可以使用設定[編輯器工具（svcconfigeditor.exe）](configuration-editor-tool-svcconfigeditor-exe.md)來執行下列所有的設定步驟。  
   
- 如需此範例的來源複本, 請參閱[BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md)。  
+ 如需此範例的來源複本，請參閱[BasicBinding](./samples/basicbinding.md)。  
   
-### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>指定用來設定服務的 BasicHttpBinding  
+## <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>指定用來設定服務的 BasicHttpBinding  
   
 1. 定義服務類型的服務合約。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "69967159"
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-### <a name="to-modify-the-default-values-of-the-binding-properties"></a>若要修改繫結屬性的預設值  
+## <a name="to-modify-the-default-values-of-the-binding-properties"></a>若要修改繫結屬性的預設值  
   
-1. 若要修改的其中一個預設屬性值<xref:System.ServiceModel.WSHttpBinding>, 請在[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素中建立新的系結設定`<binding name="Binding1">`名稱, 並在此系結中設定系結之屬性的新值元素. 例如，若要將預設的開啟和關閉逾時值從 1 分鐘變更為 2 分鐘，請將下列文字加入至組態檔。  
+1. 若要修改 <xref:System.ServiceModel.WSHttpBinding> 的其中一個預設屬性值，請在[\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md)專案中建立新的系結設定名稱 `<binding name="Binding1">`，並在此繫結項目中設定系結之屬性的新值。 例如，若要將預設的開啟和關閉逾時值從 1 分鐘變更為 2 分鐘，請將下列文字加入至組態檔。  
   
     ```xml  
     <wsHttpBinding>  
@@ -92,7 +92,7 @@ ms.locfileid: "69967159"
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [使用繫結設定服務與用戶端](using-bindings-to-configure-services-and-clients.md)
+- [指定端點位址](specifying-an-endpoint-address.md)

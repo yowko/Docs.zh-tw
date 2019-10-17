@@ -2,15 +2,15 @@
 title: 將服務參考加入至可攜式子集專案
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782417"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320844"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>將服務參考加入至可攜式子集專案
-可攜式子集專案可讓.NET 組件的程式設計人員維護單一來源樹狀結構，並建置系統，同時仍可支援多個.NET 實作 （桌上型電腦、 Silverlight、 Windows Phone 和 XBOX）。 可攜式子集專案僅參考也就是可以使用任何.NET 實作的.NET framework 組件的.NET 可攜式程式庫。  
+可移植子集專案可讓 .NET 元件程式設計人員維護單一來源樹狀結構和組建系統，同時仍然支援多個 .NET 執行（桌面、Silverlight、Windows Phone 和 XBOX）。 可移植的子集專案僅參考 .NET 的可移植程式庫，這是可在任何 .NET 執行上使用的 .NET framework 元件。  
   
 ## <a name="add-service-reference-details"></a>加入服務參考詳細資料  
  將服務參考加入至可攜式子集專案時會強制執行下列限制：  
@@ -43,7 +43,7 @@ ms.locfileid: "61782417"
   
 14. 在可攜式子集專案中不支援 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [使用 WCF 用戶端存取服務](accessing-services-using-a-wcf-client.md)
 - [可攜式類別庫](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

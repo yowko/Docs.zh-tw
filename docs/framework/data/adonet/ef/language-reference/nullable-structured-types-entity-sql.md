@@ -2,12 +2,12 @@
 title: 可為 Null 的結構類型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6b078ae458aba73e82957f84408b1000b216aef9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b155c672d8c0bef8b01fb26fb49908f094add25a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249806"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319479"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>可為 Null 的結構類型 (Entity SQL)
 結構化型別的 `null` 執行個體是不存在的執行個體。 這與現有的執行個體 (所有的屬性都有 `null` 值) 不同。  
@@ -28,46 +28,46 @@ ms.locfileid: "70249806"
   
 - 將 `null` 定形為結構化型別：  
   
-    ```  
+    ```sql  
     TREAT (NULL AS StructuredType)  
     ```  
   
 - 將基底型別向上轉型成衍生型別：  
   
-    ```  
+    ```sql  
     TREAT (BaseType AS DerivedType)  
     ```  
   
 - false 條件上的外部聯結 (Outer Join)：  
   
-    ```  
+    ```sql  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      --或  
   
-    ```  
+    ```sql  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      --或  
   
-    ```  
+    ```sql  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
 - 為 `null` 參考取值：  
   
-    ```  
+    ```sql  
     DEREF(NullRef)  
     ```  
   
 - 從空的集合中取得 ANYELEMENT：  
   
-    ```  
+    ```sql  
     ANYELEMENT(EmptyCollection)  
     ```  
   
@@ -88,6 +88,6 @@ ms.locfileid: "70249806"
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Entity SQL 概觀](entity-sql-overview.md)

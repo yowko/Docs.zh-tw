@@ -2,19 +2,19 @@
 title: THEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-ms.openlocfilehash: c64e440e8cd8f86706db69d923ba7085d0cb3b3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ba01a978c53b58f7e6c1ac9bc42a97277ac64bbc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248984"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319289"
 ---
 # <a name="then-entity-sql"></a>THEN (Entity SQL)
 當 WHEN 子句評估為 `true`時，該子句的結果。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sql  
 WHEN when_expression THEN then_expression  
 ```  
   
@@ -33,13 +33,13 @@ WHEN when_expression THEN then_expression
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 CASE 運算式來評估一組 `Boolean` 運算式。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. [遵循 how to：執行可傳回 PrimitiveType 結果](../how-to-execute-a-query-that-returns-primitivetype-results.md)的查詢。  
+1. 依照[如何：執行傳回 PrimitiveType 結果的查詢](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的程式進行。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
+ [!code-sql[DP EntityServices Concepts#CASE_WHEN_THEN_ELSE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#case_when_then_else)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CASE](case-entity-sql.md)
 - [Entity SQL 參考](entity-sql-reference.md)

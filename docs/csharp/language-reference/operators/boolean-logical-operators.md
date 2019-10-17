@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: e355a89e27ea5bd6e4335b39c4e669610c4b0553
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72290938"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319099"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布林值邏輯運算子 (C# 參考)
 
@@ -51,7 +51,7 @@ ms.locfileid: "72290938"
 
 ## <a name="logical-negation-operator-"></a>邏輯否定運算子 !
 
-一元前置字元 `!` 運算子會計算其運算元的邏輯否定。 也就是說，它會在運算元評估為 `false` 時產生 `true`，並在運算元評估為 `true` 時產生 `false`：
+一元前置詞 `!` 運算子會計算其運算元的邏輯否定。 也就是說，它會在運算元評估為 `false` 時產生 `true`，並在運算元評估為 `true` 時產生 `false`：
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
@@ -117,16 +117,16 @@ ms.locfileid: "72290938"
 
 針對 `bool?` 運算元，`&` 和 `|` 運算子支援三值邏輯。 這些運算子的語意是由下列表格定義的：  
   
-|x|y|x&y|x&#124;y|  
+|x|Y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|true|false|false|true|  
+|true|False|False|true|  
 |true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|null|  
+|False|true|False|true|  
+|False|False|False|False|  
+|False|null|False|null|  
 |null|true|null|true|  
-|null|false|false|null|  
+|null|False|False|null|  
 |null|null|null|null|  
 
 那些運算子的行為和具有可為 Null 實值類型之一般運算子的行為並不相同。 一般而言，已針對某個實值類型之運算元定義的運算子，也可以搭配相對應可為 Null 實值類型的運算元使用。 這種運算子會在其任何一個運算元為 `null` 的情況下產生 `null`。 不過，就算其中一個運算元是 `null`，`&` 和 `|` 運算子仍可以產生非 Null。 如需可為 null 的實數值型別之運算子行為的詳細資訊，請參閱[使用可為 null 的實數值型別](../../programming-guide/nullable-types/using-nullable-types.md)一文中的[運算子](../../programming-guide/nullable-types/using-nullable-types.md#operators)一節。
@@ -191,7 +191,7 @@ x = x op y
 - [條件邏輯運算子](~/_csharplang/spec/expressions.md#conditional-logical-operators)
 - [複合指派](~/_csharplang/spec/expressions.md#compound-assignment)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)

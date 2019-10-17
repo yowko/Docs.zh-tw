@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71955963"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315878"
 ---
 # <a name="contributing"></a>貢獻
 
@@ -33,7 +33,7 @@ ms.locfileid: "71955963"
 
 您需要對 [Git 和 GitHub.com](https://guides.github.com/activities/hello-world/) 有基本了解。
 
-**步驟 1：** 針對小型變更 (例如，如果您正在修正拼寫錯誤或立即開啟提取要求，以解決您在文件中找到的問題) 略過此步驟。 如果您有興趣撰寫新內容或徹底修訂現有的內容，請開立一個描述您所要執行動作的[問題](https://github.com/dotnet/docs/issues)。
+**步驟1：** 針對小型變更略過此步驟（例如，如果您要更正錯誤或立即開啟提取要求，以解決您在檔中找到的問題）。 如果您有興趣撰寫新內容或徹底修訂現有的內容，請開立一個描述您所要執行動作的[問題](https://github.com/dotnet/docs/issues)。
 [docs] 資料夾中的內容會組織成目錄 (TOC) 中所反映的各個小節。 請定義主題在 TOC 中的位置。 取得您提案的意見反應。
 
 -或-
@@ -42,7 +42,7 @@ ms.locfileid: "71955963"
 
 - **維護**。 此類別包括非常簡單的參與，例如修正中斷或不正確的連結、新增遺漏的程式碼範例，或處理有限的內容問題。 在某些情況下，這些問題可能會與大量的檔案有關。 在該情況下，您應該先讓我們知道您想要處理的項目，再開始進行。
 
-- **內容更新**。 如果文件集相當龐大，內容很容易就會過期而需要修訂。 此外，基於各種原因，有些內容已複製兩遍或甚至三遍。 更新內容牽涉到確認個別主題是否為最新，或修訂某個功能區域中的內容以去除重複項，並確保所有唯一內容都保存在較小的文件集內。
+- **內容更新**。 如果文件集相當龐大，內容很容易就會過期而需要修訂。 此外，基於各種原因，某些內容已重複或甚至是 triplicated。 更新內容牽涉到確認個別主題是否為最新，或修訂某個功能區域中的內容以去除重複項，並確保所有唯一內容都保存在較小的文件集內。
 
 - **新內容撰寫**。 如果您有興趣撰寫自己的主題，這些問題列出了我們所知想要新增到文件集的主題。 不過，在您開始進行某個主題之前，請先讓我們知道。 如果您有興趣撰寫這裡未列出的主題，請開立問題。
 
@@ -77,7 +77,7 @@ docs
             portability_report.png
 ```
 
-**步驟 4：** 從您的分支提交提取要求（PR）至 `dotnet/docs/master`、`dotnet/dotnet-api-docs/master` 或 `dotnet/samples/master`。
+**步驟4：** 從您的分支提交提取要求（PR）至 `dotnet/docs/master`、`dotnet/dotnet-api-docs/master` 或 `dotnet/samples/master`。
 
 您的 PR 應「一律」以主分支為目標。 您「永遠不得」開啟以即時分支為目標的 PR。
 
@@ -120,7 +120,7 @@ docs
 
 ## <a name="the-c-interactive-experience"></a>C# 互動式體驗
 
-以 C# 撰寫的簡短程式碼範例可以使用 `csharp-interactive` 語言標記來指定在瀏覽器中執行的 C# 範例。 (內嵌程式碼範例使用 `csharp-interactive` 標記，針對從來源包含的程式碼片段，則使用 `code-csharp-interactive` 標記)。這些程式碼範例會在文章中顯示一個程式碼視窗和一個輸出視窗。 在使用者執行範例之後，輸出視窗會顯示來自執行互動式程式碼的所有輸出。 
+以 C# 撰寫的簡短程式碼範例可以使用 `csharp-interactive` 語言標記來指定在瀏覽器中執行的 C# 範例。 （內嵌程式碼範例會使用 `csharp-interactive` 標記，針對來源所包含的程式碼片段，請使用 `code-csharp-interactive` 標記）。這些程式碼範例會在文章中顯示程式碼視窗和 [輸出] 視窗。 在使用者執行範例之後，輸出視窗會顯示來自執行互動式程式碼的所有輸出。 
 
 C# 互動式體驗改變了我們使用範例的方式。 訪客可以執行範例來查看結果。 有一些因素可協助判斷範例或相對應的文字是否應該包含輸出的相關資訊。
 

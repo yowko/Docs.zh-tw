@@ -4,12 +4,12 @@ description: 如果您看到 [無法啟動此應用程式] 對話方塊，請瞭
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2019
-ms.openlocfilehash: 2534979e8dea886c2d7298c57e12b66d7a962c69
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8fa8381f1b05445f259b4e4af5cc17fa487b2ce0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71401701"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319173"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>疑難排解「此應用程式無法啟動」錯誤訊息
 
@@ -37,7 +37,7 @@ ms.locfileid: "71401701"
 
 1. 如果您的應用程式順利執行，請選取 [**完成]** 按鈕。 否則，請選取 [**下一步]** 按鈕。
 
-1. 如果您選取 [**下一步]** 按鈕，[.NET Framework Repair] 工具會顯示如下的對話方塊。 選取 [**完成]** 按鈕，將診斷資訊傳送給 Microsoft。
+1. 如果您選取 [**下一步]** 按鈕，[.NET Framework Repair] 工具就會顯示如下所示的對話方塊。 選取 [**完成]** 按鈕，將診斷資訊傳送給 Microsoft。
 
    ![無法解決問題](media/application-not-started/repair-tool-no-resolution.png)
 
@@ -50,10 +50,10 @@ ms.locfileid: "71401701"
    |Windows 8.1|[.NET Framework 4.8 執行時間](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
    |Windows 8|[.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981)|
    |Windows 7 SP1|[.NET Framework 4.8 執行時間](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows Vista SP2|[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130)|
+   |Windows Vista SP2|[.NET Framework 4。6](https://www.microsoft.com/download/details.aspx?id=48130)|
 
    > [!NOTE]
-   >  .NET Framework 4.8 已預先安裝在 Windows 10 5 月2019更新。
+   > .NET Framework 4.8 已預先安裝在 Windows 10 5 月2019更新。
 
 1. 嘗試啟動應用程式。
 
@@ -61,7 +61,7 @@ ms.locfileid: "71401701"
 
    ![無法解決問題](media/application-not-started/install-3-5.png)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 系統需求](../get-started/system-requirements.md)
 - [.NET Framework 安裝指南](index.md)

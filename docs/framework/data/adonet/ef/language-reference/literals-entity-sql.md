@@ -2,12 +2,12 @@
 title: 常值 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e07dd3217e133fff98beb11ecad47e1474e4974a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250341"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319670"
 ---
 # <a name="literals-entity-sql"></a>常值 (Entity SQL)
 本主題將描述常值 (Literal) 的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援。  
@@ -34,7 +34,7 @@ ms.locfileid: "70250341"
 ## <a name="string"></a>String  
  字串是以引號括住的一連串字元。 引號可以是兩個單引號 (`'`) 或兩個雙引號 (")。 字元字串常值可以是 Unicode 或非 Unicode。 如果要將字元字串常值宣告為 Unicode，請在此常值將會加上一個大寫的 "N"。 預設值為非 Unicode 字元字串常值。 在 N 和此字串常值裝載之間可以不空格，但 N 必須是大寫。  
   
-```  
+```sql  
 'hello' -- non-Unicode character string literal  
 N'hello' -- Unicode character string literal  
 "x"  
@@ -45,13 +45,13 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  日期時間常值與地區設定 (Locale) 無關，而且它是由日期部分和時間部分所組成。 日期和時間部分都是強制的，而且沒有任何預設值。  
   
- 日期`YYYY`部分必須具有下列格式： - - `MM` `DD` `MM` ，其中是`YYYY`介於0001到9999之間的四位數年份值，而是介於1到12之間的月份，而是`DD`對給定月份`MM`有效的日期值。  
+ 日期部分的格式必須是： `YYYY` - `MM` - `DD`，其中 `YYYY` 是介於0001到9999之間的四位數年份值，`MM` 是介於1到12之間的月份，而 `DD` 是日期值，對指定的月份 `MM` 有效。  
   
  時間部分的格式必須是 `HH`:`MM`[:`SS`[.fffffff]]，其中 `HH`是小時值，介於 0 到 23 之間、`MM`是分鐘值，介於 0 到 59 之間、`SS`是秒鐘值，介於 0 到 59 之間，而 fffffff 則是秒鐘的小數部分，值介於 0 到 9999999 之間。 以上所有值的範圍都包含在內。 秒鐘的小數部分則為選擇性。 除非已指定秒鐘的小數部分，否則秒鐘亦為選擇性；但指定秒鐘的小數部分時，則必須有秒鐘。 如果未指定秒鐘或秒鐘的小數部分，則會使用預設值 0。  
   
  DATETIME 符號與常值裝載之間可以有任何數目的空格，但是不能有新行。  
   
-```  
+```sql  
 DATETIME'2006-10-1 23:11'  
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
@@ -61,7 +61,7 @@ DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'
   
  TIME 符號與常值裝載之間可以有任何數目的空格，但是不能有新行。  
   
-```  
+```sql  
 TIME‘23:11’  
 TIME‘01:01:00.1234567’  
 ```  
@@ -71,7 +71,7 @@ TIME‘01:01:00.1234567’
   
  DATETIMEOFFSET 符號與常值裝載之間可以有任何數目的空格，但是不能有新行。  
   
-```  
+```sql  
 DATETIMEOFFSET‘2006-10-1 23:11 +02:00’  
 DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’  
 ```  
@@ -84,23 +84,23 @@ DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’
   
  十六進位字元也不區分大小寫。 如果此常值所包含的十六進位數是奇數，系統就會在常值前面加上一個十六進位零位數，讓此常值與下一個偶數的十六進位數對齊。 二進位字串的大小沒有正式的限制。  
   
-```  
+```sql  
 Binary'00ffaabb'  
 X'ABCabc'  
 BINARY    '0f0f0f0F0F0F0F0F0F0F'  
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>Guid  
- `GUID` 常值代表全域唯一的識別碼。 這是由關鍵字`GUID`所組成的序列，後面接著十六進位數位，格式為：8-4-4-4-12 以單引號括住。 十六進位數不區分大小寫。  
+## <a name="guid"></a>GUID  
+ `GUID` 常值代表全域唯一的識別碼。 這是關鍵字所形成的順序，`GUID` 後面接著十六進位數位 *，格式為*：8-4-4-4-12，以單引號括住。 十六進位數不區分大小寫。  
   
  GUID 符號與常值裝載之間可以有任何數目的空格，但是不能有新行。  
   
-```  
+```sql  
 Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'  
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Entity SQL 概觀](entity-sql-overview.md)

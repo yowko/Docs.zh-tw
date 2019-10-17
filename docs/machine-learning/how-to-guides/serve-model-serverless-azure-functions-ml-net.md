@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2abd8588aa314b630c995e0c78b5869ec00a89df
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 31169116abdda7308ed216902b335a6b77fbcfc4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179367"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321271"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>將模型部署到 Azure Functions
 
@@ -19,7 +19,7 @@ ms.locfileid: "72179367"
 > [!NOTE]
 > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 已安裝「.NET Core 跨平台開發」工作負載和「Azure 開發」的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 - Microsoft.NET.Sdk.Functions NuGet 套件版本 1.0.28+。
@@ -75,7 +75,7 @@ ms.locfileid: "72179367"
     ```csharp
     public class AnalyzeSentiment
     {
-    
+
     }
     ```
 
@@ -83,9 +83,9 @@ ms.locfileid: "72179367"
 
 您必須為輸入資料和預測建立一些類別。 將新類別新增至專案：
 
-1. 在您的專案中建立名為 *DataModels* 的目錄以儲存資料模型：在 [方案總管] 中，以滑鼠右鍵按一下您的專案，然後選取 [新增] > [新增資料夾]。 輸入 "DataModels"，然後按 Enter。
+1. 在您的專案中建立名為*DataModels*的目錄，以儲存您的資料模型：在方案總管中，以滑鼠右鍵按一下專案，然後選取 [**加入 > 新增資料夾**]。 輸入 "DataModels"，然後按 Enter。
 2. 在 [方案總管] 中，以滑鼠右鍵按一下 *DataModels* 目錄，然後選取 [新增] > [新增項目]。
-3. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *SentimentData.cs*。 接著，選取 [新增] 按鈕。 
+3. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *SentimentData.cs*。 接著，選取 [新增] 按鈕。
 
     *SentimentData.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 using 陳述式新增至 *SentimentData.cs* 頂端：
 
@@ -108,12 +108,12 @@ ms.locfileid: "72179367"
 
 ## <a name="register-predictionenginepool-service"></a>登錄 PredictionEnginePool 服務
 
-若要進行單一預測，您必須建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 此外，您必須在應用程式內需要的任何地方建立它的實例。 當您的應用程式成長時，此進程可能會變得難以管理。 為了改善效能和執行緒安全性，請使用相依性插入和 `PredictionEnginePool` 服務的組合，這會建立[@no__t 4](xref:Microsoft.ML.PredictionEngine%602)物件的[@no__t 2](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。
+若要進行單一預測，您必須建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 此外，您必須在應用程式內需要的任何地方建立它的實例。 當您的應用程式成長時，此進程可能會變得難以管理。 為了改善效能和執行緒安全性，請使用相依性插入和 `PredictionEnginePool` 服務的組合，這會建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件的[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。
 
 如果您想要深入瞭解相依性[插入](https://en.wikipedia.org/wiki/Dependency_injection)，下列連結提供詳細資訊。
 
 1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
-1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *Startup.cs*。 接著，選取 [新增] 按鈕。 
+1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *Startup.cs*。 接著，選取 [新增] 按鈕。
 
     *Startup.cs* 檔案隨即在程式碼編輯器中開啟。 將下列的 using 陳述式新增到 *Startup.cs* 的頂端：
 
@@ -141,16 +141,16 @@ ms.locfileid: "72179367"
     }
     ```
 
-概括而言，此程式碼會自動初始化物件和服務，以供稍後在應用程式要求時使用，而不需要手動執行。 
+概括而言，此程式碼會自動初始化物件和服務，以供稍後在應用程式要求時使用，而不需要手動執行。
 
-機器學習模型不是靜態的。 當有新的定型資料可供使用時，就會重新訓練並重新部署模型。 將模型的最新版本取得至應用程式的方法之一，就是重新部署整個應用程式。 不過，這會引進應用程式停機時間。 @No__t-0 服務提供一種機制，可重載已更新的模型，而不需要讓應用程式關閉。 
+機器學習模型不是靜態的。 當有新的定型資料可供使用時，就會重新訓練並重新部署模型。 將模型的最新版本取得至應用程式的方法之一，就是重新部署整個應用程式。 不過，這會引進應用程式停機時間。 @No__t_0 服務提供一種機制，可重載已更新的模型，而不需要讓應用程式關閉。
 
-將 `watchForChanges` 參數設定為 `true`，而 `PredictionEnginePool` 啟動一個[`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) ，接聽檔案系統變更通知，並在檔案變更時引發事件。 這會提示 `PredictionEnginePool` 會自動重載模型。
+將 [`watchForChanges`] 參數設定為 [`true`]，`PredictionEnginePool` 會啟動一個接聽檔案系統變更通知的[`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) ，並在檔案變更時引發事件。 這會提示 `PredictionEnginePool` 自動重載模型。
 
-此模型是由 `modelName` 參數所識別，因此，每個應用程式可以在變更時重載一個以上的模型。 
+模型是由 `modelName` 參數所識別，因此，每個應用程式可以在變更時重載一個以上的模型。
 
 > [!TIP]
-> 或者，當您使用遠端儲存的模型時，可以使用 `FromUri` 方法。 @No__t-0 會輪詢遠端位置以進行變更，而不是監看檔案已變更的事件。 輪詢間隔預設為5分鐘。 您可以根據應用程式的需求來增加或減少輪詢間隔。 在下面的程式碼範例中，`PredictionEnginePool` 會每分鐘輪詢儲存在指定 URI 的模型。
+> 或者，當您使用遠端儲存的模型時，可以使用 `FromUri` 方法。 @No__t_0 輪詢遠端位置以進行變更，而不是監看檔案變更的事件。 輪詢間隔預設為5分鐘。 您可以根據應用程式的需求來增加或減少輪詢間隔。 在下面的程式碼範例中，`PredictionEnginePool` 會每分鐘輪詢儲存在指定 URI 的模型。
 >    
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
@@ -195,7 +195,7 @@ ILogger log)
 }
 ```
 
-`Run` 方法執行時，來自 HTTP 請求的傳入資料會還原序列化，並用來作為 `PredictionEnginePool` 的輸入。 然後會呼叫 `Predict` 方法，以使用在 `Startup` 類別中註冊的 `SentimentAnalysisModel` 進行預測，並在成功時將結果傳回給使用者。
+`Run` 方法執行時，來自 HTTP 請求的傳入資料會還原序列化，並用來作為 `PredictionEnginePool` 的輸入。 接著會呼叫 `Predict` 方法，使用在 `Startup` 類別中註冊的 `SentimentAnalysisModel` 進行預測，並在成功時將結果傳回給使用者。
 
 ## <a name="test-locally"></a>在本機進行測試
 
@@ -209,7 +209,7 @@ ILogger log)
     ```
 
     如果成功，輸出看起來應該類似下列文字：
-    
+
     ```powershell
     Negative
     ```

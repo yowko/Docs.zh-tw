@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926140"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318273"
 ---
 # <a name="tutorial-create-a-project-template"></a>教學課程：建立專案範本
 
@@ -26,7 +26,7 @@ ms.locfileid: "70926140"
 > * 測試項目範本
 > * 將項目範本解除安裝
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 * 完成此教學課程系列的[第 1 部分](cli-templates-create-item-template.md)。
 * 開啟終端機並瀏覽至 _working\templates\\_ 資料夾。
@@ -159,7 +159,7 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>測試專案範本
 
-您已經安裝項目範本，現在請測試它。 瀏覽至 _test_ 資料夾並使用 `dotnet new console` 建立新的主控台應用程式。 這會產生工作專案，其可讓您使用 `dotnet run` 命令輕鬆地進行測試。
+您已經安裝項目範本，現在請測試它。 瀏覽至 _test_ 資料夾並使用 `dotnet new consoleasync` 建立新的主控台應用程式。 這會產生工作專案，其可讓您使用 `dotnet run` 命令輕鬆地進行測試。
 
 ```console
 C:\test> dotnet new consoleasync

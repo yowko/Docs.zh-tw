@@ -2,19 +2,19 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: d54c350196ad1ef7cfafa6d931d9d1ad8f267177
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9066f9fb68ce2c50e9523881cfa0dd930cd0b52e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250562"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319723"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 判斷查詢運算式是否為 null。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sql  
 expression IS [ NOT ] NULL  
 ```  
   
@@ -31,7 +31,7 @@ expression IS [ NOT ] NULL
 ## <a name="remarks"></a>備註  
  使用 `IS NULL` 判斷外部連結的項目是否為 null：  
   
-```  
+```sql  
 select c   
       from LOB.Customers as c left outer join LOB.Orders as o   
                               on c.ID = o.CustomerID    
@@ -40,7 +40,7 @@ select c
   
  使用 `IS NULL` 判斷成員是否有實際值：  
   
-```  
+```sql  
 select c from LOB.Customer as c where c.DOB is not null  
 ```  
   
@@ -57,14 +57,14 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|擲回錯誤。|  
   
 ## <a name="example"></a>範例  
- 下列[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢會使用 IS NOT Null 運算子來判斷查詢運算式是否不是 null。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
+ 下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢會使用 IS NOT Null 運算子來判斷查詢運算式是否不是 null。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. [遵循 how to：執行可傳回 StructuralType 結果](../how-to-execute-a-query-that-returns-structuraltype-results.md)的查詢。  
+1. 遵循 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
- [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
+ [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Entity SQL 參考](entity-sql-reference.md)

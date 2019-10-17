@@ -3,12 +3,12 @@ title: Tuple 型別 - C# 手冊
 description: 了解 C# 中的未具名和具名 Tuple 類型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 00330af38044b07128551b7dc74c7d831c7a5626
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105903"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319749"
 ---
 # <a name="c-tuple-types"></a>C# Tuple 型別
 
@@ -31,20 +31,20 @@ C# Tuple 是您使用輕量型語法所定義的型別。 優點包括更簡單�
 若要避免這些缺點，您可以建立 `class` 或 `struct` 來帶出多個元素。 不幸的是，您需要執行更多工作，並且會模糊您的設計目的。 設定 `struct` 或 `class` 表示您定義的類型同時具有資料和行為。 許多次，您都只想要將多個值儲存在單一物件中。
 
 語言功能和 `ValueTuple` 泛型結構會強制執行您無法將任何行為 (方法) 新增至這些 Tuple 類型的規則。
-所有 `ValueTuple` 類型都是「可變動結構」  。 每個成員欄位都是公用欄位。 這可將它們設為非常輕量型。 不過，這表示，如果不變性十分重要，則不應該使用 Tuple。
+所有 `ValueTuple` 類型都是「可變動結構」。 每個成員欄位都是公用欄位。 這可將它們設為非常輕量型。 不過，這表示，如果不變性十分重要，則不應該使用 Tuple。
 
 Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容器。 讓我們來探索這些差異。
 
 ## <a name="named-and-unnamed-tuples"></a>具名和未具名 Tuple
 
 `ValueTuple` 結構具有名為 `Item1`、`Item2`、`Item3` 等等的欄位，而這些欄位與現有 `Tuple` 型別中所定義的屬性類似。
-這些名稱只是您可用於「未具名 Tuple」  的名稱。 當您未將任何替代欄位名稱提供給 Tuple 時，即已建立未具名 Tuple：
+這些名稱只是您可用於「未具名 Tuple」的名稱。 當您未將任何替代欄位名稱提供給 Tuple 時，即已建立未具名 Tuple：
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
-上述範例中使用了常值常數將 Tuple 初始化，且不會有在 C# 7.1 中使用「Tuple 欄位名稱投射轉換」  建立的元素名稱。
+上述範例中使用了常值常數將 Tuple 初始化，且不會有在 C# 7.1 中使用「Tuple 欄位名稱投射轉換」建立的元素名稱。
 
-不過，當您初始化 Tuple 時，可以使用新的語言功能，讓每個欄位具有更適合的名稱。 這麼做會建立「具名 Tuple」  。
+不過，當您初始化 Tuple 時，可以使用新的語言功能，讓每個欄位具有更適合的名稱。 這麼做會建立「具名 Tuple」。
 具名元組仍會有名為 `Item1`、`Item2`、`Item3` 等等的元素。
 但對於您已命名的任一元素，也會有同義字。
 您可以指定每個元素的名稱來建立具名元組。 其中一個方式是在 Tuple 初始化期間指定名稱：
@@ -148,7 +148,7 @@ named = differentShape;
 > 這些範例會計算未修正的樣本標準差。
 > 更正的範例標準差公式會將與平均值的平方差總和除以 (N-1)，而非 N，就像 `Average` 擴充方法一樣。 如需標準差的這些公式之差異的詳細資料，請參閱統計文字。
 
-上述程式碼會遵循標準差的文字方塊公式。 它會產生正確答案，但這是沒有效率的實作。 此方法會列舉序列兩次：一次是產生平均值，一次是產生平均值差之平方的平均值。
+上述程式碼會遵循標準差的文字方塊公式。 它會產生正確答案，但這是沒有效率的實作。 這個方法會列舉序列兩次︰一次是產生平均值，一次是產生平均值差之平方的平均值。
 (請記住，LINQ 查詢會變慢，因此，計算與平均值的差異以及這些差異的平均值只會建立一個列舉)。
 
 有替代公式可以只使用該序列的一個列舉來計算標準差。  此計算會產生兩個值，因為它會列舉序列︰序列中所有項目的總和，以及每個值平方的總和︰
@@ -216,7 +216,7 @@ Tuple 很有用的另一個習慣用法是當您撰寫 LINQ 查詢時。 最終�
 
 ## <a name="deconstruction"></a>解構
 
-您可以「解構」  方法所傳回的 Tuple，來解除封裝 Tuple 中的所有項目。 有三種不同的方法可以解構 Tuple。  首先，您可以在括弧內明確宣告每個欄位的類型，以建立元組中每個元素的離散變數：
+您可以「解構」方法所傳回的 Tuple，來解除封裝 Tuple 中的所有項目。 有三種不同的方法可以解構 Tuple。  首先，您可以在括弧內明確宣告每個欄位的類型，以建立元組中每個元素的離散變數：
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
@@ -282,6 +282,20 @@ if (("Althea", "Goodwin") == p)
 ```
 
 `Deconstruct` 方法可以將 `Person` 物件 `p` 轉換為包含兩個字串的 Tuple，但它並不適用於相等測試的內容中。
+
+## <a name="tuples-as-out-parameters"></a>元組當做 out 參數
+
+元組可以用來當做 out 參數*本身*。 請勿與先前在[解構](#deconstruction)一節中提及的任何多義性混淆。 在方法呼叫中，您只需要描述元組的圖形：
+
+[!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
+
+或者，您可以使用[_未命名_](#named-and-unnamed-tuples)的元組，並將其欄位參考為 `Item1` 和 `Item2`：
+
+```csharp
+dict.TryGetValue(2, out (int, string) pair);
+// ...
+Console.WriteLine($"{pair.Item1}: {pair.Item2}");
+```
 
 ## <a name="conclusion"></a>結論 
 
