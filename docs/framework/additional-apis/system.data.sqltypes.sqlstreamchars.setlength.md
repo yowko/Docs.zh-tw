@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.SetLength(Int64) 方法 (System.Data.SqlTypes)
+title: SqlStreamChars. SetLength （Int64）方法（SqlTypes）
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6bdf7bf5b998135652bc63d8d3e6c71a61475d20
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 291d6e9395581f2370dafc728521a314d54a686d
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634299"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395730"
 ---
-# <a name="sqlstreamcharssetlengthint64-method"></a>SqlStreamChars.SetLength(Int64) 方法
+# <a name="sqlstreamcharssetlengthint64-method"></a>SqlStreamChars. SetLength （Int64）方法
 
-當在衍生類別中覆寫時，會釋放資料流所使用的資源。 包含這個方法的組件有 SQLAccess.dll friend 關聯性。 它適用於 SQL server。 其他資料庫，請使用該資料庫所提供的主控機制。
+在衍生類別中覆寫時，釋放資料流程所使用的資源。 包含這個方法的元件與 SQLAccess 具有 friend 關聯性。 其目的是要供 SQL Server 使用。 若為其他資料庫，請使用該資料庫所提供的裝載機制。
 
 ```csharp
 public abstract void SetLength (long value);
@@ -35,14 +35,14 @@ public abstract void SetLength (long value);
 ## <a name="remarks"></a>備註
 
 > [!WARNING]
-> `SqlStreamChars.SetLength`方法是私用，而且不適合直接在您的程式碼中使用。
+> @No__t-0 方法是私用的，不適合直接在程式碼中使用。
 >
-> Microsoft 不支援在生產環境應用程式中任何情況下使用此欄位。
+> 在任何情況下，Microsoft 不支援在生產應用程式中使用此方法。
 
 ## <a name="requirements"></a>需求
 
 **命名空間︰** <xref:System.Data.SqlTypes>
 
-**組件：** System.Data （在 System.Data.dll 中)
+**元件：** System.web （在 System.web 中）
 
-**.NET framework 版本：** 自 2.0 起可用。
+**.NET Framework 版本：** 自2.0 開始提供。
