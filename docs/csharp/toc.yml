@@ -1,7 +1,11 @@
 - name: 'C# 指南'
   href: index.md
 - name: 開始使用
-  href: getting-started/
+  items:
+    - name: 如何使用本指南
+      href: getting-started/index.md
+    - name: 'C# 語言和 .NET Framework 簡介'
+      href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: 教學課程
   items:
     - name: 總覽
@@ -63,7 +67,31 @@
     - name: 使用屬性
       href: tutorials/attributes.md
 - name: 'C# 導覽'
-  href: tour-of-csharp/
+  items:
+    - name: 簡介
+      href: tour-of-csharp/index.md
+    - name: 程式結構
+      href: tour-of-csharp/program-structure.md
+    - name: 類型與變數
+      href: tour-of-csharp/types-and-variables.md
+    - name: 運算式
+      href: tour-of-csharp/expressions.md
+    - name: 陳述式
+      href: tour-of-csharp/statements.md
+    - name: 類別與物件
+      href: tour-of-csharp/classes-and-objects.md
+    - name: 結構
+      href: tour-of-csharp/structs.md
+    - name: 陣列
+      href: tour-of-csharp/arrays.md
+    - name: 介面
+      href: tour-of-csharp/interfaces.md
+    - name: 列舉
+      href: tour-of-csharp/enums.md
+    - name: 委派
+      href: tour-of-csharp/delegates.md
+    - name: 屬性
+      href: tour-of-csharp/attributes.md
 - name: 'C# 的新功能'
   items:
     - name: 'C# 8.0'
@@ -139,7 +167,47 @@
         - name: 區別委派和事件
           href: distinguish-delegates-events.md
     - name: Language Integrated Query (LINQ)
-      href: linq/
+      items:
+        - name: LINQ 概觀
+          href: linq/index.md
+        - name: 查詢運算式基本概念
+          href: linq/query-expression-basics.md
+        - name: 'C# 中的 LINQ'
+          href: linq/linq-in-csharp.md
+        - name: '在 C# 中撰寫 LINQ 查詢'
+          href: linq/write-linq-queries.md
+        - name: 查詢物件的集合
+          href: linq/query-a-collection-of-objects.md
+        - name: 從方法傳回查詢
+          href: linq/return-a-query-from-a-method.md
+        - name: 將查詢的結果儲存在記憶體中
+          href: linq/store-the-results-of-a-query-in-memory.md
+        - name: 將查詢結果分組
+          href: linq/group-query-results.md
+        - name: 建立巢狀群組
+          href: linq/create-a-nested-group.md
+        - name: 在分組作業上執行子查詢
+          href: linq/perform-a-subquery-on-a-grouping-operation.md
+        - name: 以相鄰索引鍵將結果分組
+          href: linq/group-results-by-contiguous-keys.md
+        - name: 在執行階段動態指定述詞篩選
+          href: linq/dynamically-specify-predicate-filters-at-runtime.md
+        - name: 執行內部聯結
+          href: linq/perform-inner-joins.md
+        - name: 執行群組聯結
+          href: linq/perform-grouped-joins.md
+        - name: 執行左方外部聯結
+          href: linq/perform-left-outer-joins.md
+        - name: 排序 join 子句的結果
+          href: linq/order-the-results-of-a-join-clause.md
+        - name: 使用複合索引鍵執行聯結
+          href: linq/join-by-using-composite-keys.md
+        - name: 執行自訂的聯結作業
+          href: linq/perform-custom-join-operations.md
+        - name: 處理查詢運算式中的 Null 值
+          href: linq/handle-null-values-in-query-expressions.md
+        - name: 處理查詢運算式中的例外狀況
+          href: linq/handle-exceptions-in-query-expressions.md
     - name: 非同步程式設計
       href: async.md
     - name: 模式比對
@@ -189,10 +257,1556 @@
     - name: 使用模式比對 is 與 as 運算子安全地轉換
       href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
 - name: .NET Compiler Platform SDK (Roslyn API)
-  href: roslyn-sdk/
+  items:
+    - name: .NET Compiler Platform SDK (Roslyn API) 概觀
+      href: roslyn-sdk/index.md
+    - name: 了解編譯器 API 模型
+      href: roslyn-sdk/compiler-api-model.md
+    - name: 使用語法
+      href: roslyn-sdk/work-with-syntax.md
+    - name: 使用語意
+      href: roslyn-sdk/work-with-semantics.md
+    - name: 使用工作區
+      href: roslyn-sdk/work-with-workspace.md
+    - name: 利用語法視覺化檢視探索程式碼
+      href: roslyn-sdk/syntax-visualizer.md
+    - name: 快速入門
+      items:
+        - name: 語法分析
+          href: roslyn-sdk/get-started/syntax-analysis.md
+        - name: 語意分析
+          href: roslyn-sdk/get-started/semantic-analysis.md
+        - name: 語法轉換
+          href: roslyn-sdk/get-started/syntax-transformation.md
+    - name: 教學課程
+      items:
+        - name: 建置您的第一個分析器和程式碼修正
+          href: roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix.md
 - name: 'C# 程式設計手冊'
-  href: programming-guide/
+  items:
+    - name: 總覽
+      href: programming-guide/index.md
+    - name: 'C# 程式內部'
+      items:
+        - name: 'C# 程式深入解析'
+          href: programming-guide/inside-a-program/index.md
+        - name: Hello World -- 您的第一個程式
+          href: programming-guide/inside-a-program/hello-world-your-first-program.md
+        - name: 'C# 程式的一般結構'
+          href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
+        - name: 識別碼名稱
+          href: programming-guide/inside-a-program/identifier-names.md
+        - name: 'C# 編碼慣例'
+          href: programming-guide/inside-a-program/coding-conventions.md
+    - name: Main() 和命令列引數
+      items:
+        - name: 總覽
+          href: programming-guide/main-and-command-args/index.md
+        - name: 命令列引數
+          href: programming-guide/main-and-command-args/command-line-arguments.md
+        - name: 作法：顯示命令列引數
+          href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
+        - name: Main() 傳回值
+          href: programming-guide/main-and-command-args/main-return-values.md
+    - name: 程式設計概念
+      items:
+        - name: 總覽
+          href: programming-guide/concepts/index.md
+        - name: 使用 async 和 await 進行非同步程式設計
+          items:
+            - name: 總覽
+              href: programming-guide/concepts/async/index.md
+            - name: 非同步工作程式設計模型
+              href: programming-guide/concepts/async/task-asynchronous-programming-model.md
+            - name: 逐步解說：使用 async 和 await 存取 Web
+              href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
+            - name: 作法：使用 Task.WhenAll 擴充非同步逐步解說的內容
+              href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
+            - name: HOW TO：使用 async 和 await 同時發出多個 Web 要求
+              href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
+            - name: Async 傳回型別
+              href: programming-guide/concepts/async/async-return-types.md
+            - name: 非同步程式中的控制流程
+              href: programming-guide/concepts/async/control-flow-in-async-programs.md
+            - name: 取消工作及已處理完成的工作
+              items:
+                - name: 總覽
+                  href: programming-guide/concepts/async/fine-tuning-your-async-application.md
+                - name: 取消一項非同步工作或工作清單
+                  href: programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md
+                - name: 在一段時間後取消非同步工作
+                  href: programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md
+                - name: 當其中一項非同步工作完成時，取消剩餘的非同步工作
+                  href: programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md
+                - name: 啟動多項非同步工作並在它們完成時進行處理
+                  href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
+            - name: 處理非同步應用程式中的重新進入
+              href: programming-guide/concepts/async/handling-reentrancy-in-async-apps.md
+            - name: 使用 Async 存取檔案
+              href: programming-guide/concepts/async/using-async-for-file-access.md
+        - name: 屬性
+          items:
+            - name: 總覽
+              href: programming-guide/concepts/attributes/index.md
+            - name: 建立自訂屬性
+              href: programming-guide/concepts/attributes/creating-custom-attributes.md
+            - name: AttributeUsage
+              href: programming-guide/concepts/attributes/attributeusage.md
+            - name: 使用反映存取屬性
+              href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
+            - name: HOW TO：使用屬性建立 C-C++ 等位
+              href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
+            - name: 常見屬性
+              href: programming-guide/concepts/attributes/common-attributes.md
+        - name: 呼叫端資訊
+          href: programming-guide/concepts/caller-information.md
+        - name: 集合
+          href: programming-guide/concepts/collections.md
+        - name: 共變數和反變數
+          items:
+            - name: 總覽
+              href: programming-guide/concepts/covariance-contravariance/index.md
+            - name: 泛型介面中的變異數
+              href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
+              items:
+                - name: 建立 Variant 泛型介面
+                  href: programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md
+                - name: 針對泛型集合使用介面中的變異數
+                  href: programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md
+            - name: 委派中的變異數
+              href: programming-guide/concepts/covariance-contravariance/variance-in-delegates.md
+              items:
+                - name: 在委派中使用變異數
+                  href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
+                - name: 針對 Func 與 Action 泛型委派使用變異數
+                  href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
+        - name: 運算式樹狀架構
+          items:
+            - name: 總覽
+              href: programming-guide/concepts/expression-trees/index.md
+            - name: 作法：執行運算式樹狀架構
+              href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
+            - name: 作法：修改運算式樹狀架構
+              href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
+            - name: HOW TO：使用運算式樹狀架構建置動態查詢
+              href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
+            - name: 在 Visual Studio 中對運算式樹狀架構進行偵錯
+              href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
+            - name: DebugView 語法
+              href: programming-guide/concepts/expression-trees/debugview-syntax.md
+        - name: 迭代器
+          href: programming-guide/concepts/iterators.md
+        - name: Language-Integrated Query (LINQ)
+          items:
+            - name: 總覽
+              href: programming-guide/concepts/linq/index.md
+            - name: '開始使用 C# 中的 LINQ'
+              items:
+                - name: LINQ 查詢簡介
+                  href: programming-guide/concepts/linq/introduction-to-linq-queries.md
+                - name: LINQ 和泛型型別
+                  href: programming-guide/concepts/linq/linq-and-generic-types.md
+                - name: 基本 LINQ 查詢作業
+                  href: programming-guide/concepts/linq/basic-linq-query-operations.md
+                - name: 使用 LINQ 轉換資料
+                  href: programming-guide/concepts/linq/data-transformations-with-linq.md
+                - name: LINQ 查詢作業中的型別關聯性
+                  href: programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md
+                - name: LINQ 中的查詢語法及方法語法
+                  href: programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md
+                - name: '支援 LINQ 的 C# 功能'
+                  href: programming-guide/concepts/linq/features-that-support-linq.md
+                - name: '逐步解說：在 C# 中撰寫查詢 (LINQ)'
+                  href: programming-guide/concepts/linq/walkthrough-writing-queries-linq.md
+            - name: 標準查詢運算子概觀
+              items:
+                - name: 總覽
+                  href: programming-guide/concepts/linq/standard-query-operators-overview.md
+                - name: 標準查詢運算子的查詢運算式語法
+                  href: programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md
+                - name: 根據執行方式分類標準查詢運算子
+                  href: programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md
+                - name: 排序資料
+                  href: programming-guide/concepts/linq/sorting-data.md
+                - name: 設定作業
+                  href: programming-guide/concepts/linq/set-operations.md
+                - name: 篩選資料
+                  href: programming-guide/concepts/linq/filtering-data.md
+                - name: 數量詞作業
+                  href: programming-guide/concepts/linq/quantifier-operations.md
+                - name: 投影作業
+                  href: programming-guide/concepts/linq/projection-operations.md
+                - name: 分割資料
+                  href: programming-guide/concepts/linq/partitioning-data.md
+                - name: 聯結作業
+                  href: programming-guide/concepts/linq/join-operations.md
+                - name: 分組資料
+                  href: programming-guide/concepts/linq/grouping-data.md
+                - name: 產生作業
+                  href: programming-guide/concepts/linq/generation-operations.md
+                - name: 相等比較作業
+                  href: programming-guide/concepts/linq/equality-operations.md
+                - name: 項目作業
+                  href: programming-guide/concepts/linq/element-operations.md
+                - name: 轉換資料類型
+                  href: programming-guide/concepts/linq/converting-data-types.md
+                - name: 串連作業
+                  href: programming-guide/concepts/linq/concatenation-operations.md
+                - name: 彙總作業
+                  href: programming-guide/concepts/linq/aggregation-operations.md
+            - name: LINQ to Objects
+              items:
+                - name: 總覽
+                  href: programming-guide/concepts/linq/linq-to-objects.md
+                - name: LINQ 和字串
+                  href: programming-guide/concepts/linq/linq-and-strings.md
+                - name: 操作說明文章
+                  items:
+                    - name: 作法：統計某個字在字串中出現的次數 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
+                    - name: 作法：查詢包含指定詞組的句子 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
+                    - name: 作法：查詢字串中的字元 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
+                    - name: HOW TO：合併 LINQ 查詢與規則運算式
+                      href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
+                    - name: HOW TO：尋找兩份清單之間的集合差異 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
+                    - name: HOW TO：依任何字詞或欄位排序或篩選文字資料 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
+                    - name: 作法：重新排列分隔檔的欄位 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
+                    - name: HOW TO：合併和比較字串集合 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
+                    - name: HOW TO：從多個來源填入物件集合 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
+                    - name: 作法：使用群組將一個檔案分割成多個檔案 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
+                    - name: 作法：聯結不同檔案中的內容 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
+                    - name: 作法：計算 CSV 文字檔中的欄值 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
+                - name: LINQ 和反映
+                  href: programming-guide/concepts/linq/linq-and-reflection.md
+                - name: 作法：使用反映查詢組件的中繼資料 (LINQ)
+                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+                - name: LINQ 和檔案目錄
+                  items:
+                    - name: 總覽
+                      href: programming-guide/concepts/linq/linq-and-file-directories.md
+                    - name: 作法：查詢具有指定屬性或名稱的檔案
+                      href: programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md
+                    - name: HOW TO：依副檔名分組檔案 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
+                    - name: HOW TO：查詢一組資料夾中的位元組總數 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
+                    - name: 作法：比較兩個資料夾的內容 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
+                    - name: 作法：查詢樹狀目錄中的最大檔案 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
+                    - name: 作法：查詢樹狀目錄中的重複檔案 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
+                    - name: 作法：查詢資料夾中的檔案內容 (LINQ)
+                      href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
+                - name: 作法：使用 LINQ 查詢 ArrayList
+                  href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
+                - name: 作法：新增 LINQ 查詢的自訂方法
+                  href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
+            - name: LINQ to XML
+              items:
+                - name: 使用者入門 (LINQ to XML)
+                  items:
+                    - name: LINQ to XML 概觀
+                      href: programming-guide/concepts/linq/linq-to-xml-overview.md
+                    - name: LINQ to XML 比較DOM
+                      href: programming-guide/concepts/linq/linq-to-xml-vs-dom.md
+                    - name: LINQ to XML 比較其他 XML 技術之比較
+                      href: programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md
+                - name: 程式設計手冊 (LINQ to XML)
+                  items:
+                    - name: LINQ to XML 程式設計概觀
+                      items:
+                        - name: 功能性程序性程式設計 (LINQ to XML)
+                          href: programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md
+                        - name: LINQ to XML 類別概觀
+                          href: programming-guide/concepts/linq/linq-to-xml-classes-overview.md
+                        - name: XElement 類別概觀
+                          href: programming-guide/concepts/linq/xelement-class-overview.md
+                        - name: XAttribute 類別概觀
+                          href: programming-guide/concepts/linq/xattribute-class-overview.md
+                        - name: XDocument 類別概觀
+                          href: programming-guide/concepts/linq/xdocument-class-overview.md
+                        - name: 作法：建置 LINQ to XML 範例
+                          href: programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md
+                    - name: XML 樹狀結構
+                      items:
+                        - name: 函式建構 (LINQ to XML)
+                          href: programming-guide/concepts/linq/functional-construction-linq-to-xml.md
+                        - name: '在 C# 中建立 XML 樹狀 (LINQ to XML)'
+                          href: programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md
+                        - name: 剖析 XML
+                          items:
+                            - name: 作法：剖析字串
+                              href: programming-guide/concepts/linq/how-to-parse-a-string.md
+                            - name: 作法：從檔案載入 XML
+                              href: programming-guide/concepts/linq/how-to-load-xml-from-a-file.md
+                            - name: 載入或剖析 XML 時保留空白字元
+                              href: programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md
+                            - name: HOW TO：攔截剖析錯誤
+                              href: programming-guide/concepts/linq/how-to-catch-parsing-errors.md
+                            - name: 作法：從 XmlReader 建立樹狀結構
+                              href: programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md
+                            - name: HOW TO：從 XmlReader 串流 XML 片段
+                              href: programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md
+                        - name: 作法：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
+                        - name: HOW TO：使用 XSD 驗證 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md
+                        - name: XElement 和 XDocument 物件的有效內容
+                          href: programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md
+                    - name: 使用 XML 命名空間
+                      items:
+                        - name: 命名空間概觀 (LINQ to XML)
+                          href: programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md
+                        - name: HOW TO：建立包含命名空間的文件 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md
+                        - name: HOW TO：控制命名空間前置詞 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
+                        - name: 'C# 中的預設命名空間範圍'
+                          href: programming-guide/concepts/linq/scope-of-default-namespaces.md
+                        - name: HOW TO：在命名空間中撰寫 XML 的查詢
+                          href: programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md
+                    - name: 序列化 XML 樹狀結構
+                      items:
+                        - name: 序列化時保留空白字元
+                          href: programming-guide/concepts/linq/preserving-white-space-while-serializing.md
+                        - name: 使用 XML 宣告進行序列化
+                          href: programming-guide/concepts/linq/serializing-with-an-xml-declaration.md
+                        - name: 序列化至 File、TextWriter 和 XmlWriter
+                          href: programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md
+                        - name: 序列化至 XmlReader (叫用 XSLT)
+                          href: programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md
+                    - name: LINQ to XML 軸
+                      items:
+                        - name: LINQ to XML 軸概觀
+                          href: programming-guide/concepts/linq/linq-to-xml-axes-overview.md
+                        - name: HOW TO：擷取項目的集合 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md
+                        - name: HOW TO：擷取項目的值 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md
+                        - name: 作法：篩選項目名稱 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md
+                        - name: 作法：鏈結座標軸方法呼叫 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md
+                        - name: 作法：擷取單一子項目 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md
+                        - name: HOW TO：擷取屬性的集合 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
+                        - name: 作法：擷取單一屬性 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md
+                        - name: 作法：擷取屬性的值 (LINQ to XML)
+                          href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
+                        - name: 作法：擷取項目的表層值
+                          href: programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md
+                    - name: 查詢 XML 樹狀
+                      items:
+                        - name: 基本查詢 (LINQ to XML)
+                          items:
+                            - name: HOW TO：尋找具有特定屬性的項目
+                              href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md
+                            - name: HOW TO：尋找具有特定子項目的項目
+                              href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md
+                            - name: 查詢 XDocument 與查詢 XElement
+                              href: programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md
+                            - name: HOW TO：尋找具有特定項目名稱的子系
+                              href: programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md
+                            - name: 作法：使用 Descendants 方法尋找單一子系
+                              href: programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md
+                            - name: 作法：撰寫具有複雜篩選的查詢
+                              href: programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md
+                            - name: 作法：篩選選擇性項目
+                              href: programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md
+                            - name: HOW TO：在命名空間中尋找所有節點
+                              href: programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md
+                            - name: 作法：排序項目
+                              href: programming-guide/concepts/linq/how-to-sort-elements.md
+                            - name: 作法：排序多個索引鍵的項目
+                              href: programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md
+                            - name: HOW TO：計算中繼值
+                              href: programming-guide/concepts/linq/how-to-calculate-intermediate-values.md
+                            - name: 作法：撰寫依內容尋找項目的查詢
+                              href: programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md
+                            - name: HOW TO：偵錯空的查詢結果集
+                              href: programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md
+                        - name: 投影和轉換 (LINQ to XML)
+                          items:
+                            - name: HOW TO：利用 LINQ to XML 使用字典
+                              href: programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md
+                            - name: HOW TO：轉換 XML 樹狀結構的組織結構
+                              href: programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md
+                            - name: 作法：控制投影的類型
+                              href: programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md
+                            - name: 作法：投影新類型 (LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md
+                            - name: 作法：投影物件圖形
+                              href: programming-guide/concepts/linq/how-to-project-an-object-graph.md
+                            - name: HOW TO：投影匿名類型
+                              href: programming-guide/concepts/linq/how-to-project-an-anonymous-type.md
+                            - name: 作法：從 XML 產生文字檔
+                              href: programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md
+                            - name: HOW TO：從 CSV 檔案產生 XML
+                              href: programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md
+                        - name: 進階查詢技術 (LINQ to XML)
+                          items:
+                            - name: HOW TO：聯結兩個集合 (LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md
+                            - name: 作法：使用群組建立階層
+                              href: programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md
+                            - name: 作法：使用 XPath 查詢 LINQ to XML
+                              href: programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md
+                            - name: 作法：撰寫 LINQ to XML 座標軸方法
+                              href: programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md
+                            - name: 作法：執行文字到 XML 的串流轉換
+                              href: programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md
+                            - name: HOW TO：列出樹狀結構中的所有節點
+                              href: programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md
+                            - name: 作法：擷取 Office Open XML 文件的段落
+                              href: programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md
+                            - name: 作法：修改 Office Open XML 文件
+                              href: programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md
+                            - name: 作法：從檔案系統填入 XML 樹狀結構
+                              href: programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md
+                        - name: XPath 使用者適用的 LINQ to XML
+                          items:
+                            - name: XPath 和 LINQ to XML 的比較
+                              href: programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md
+                            - name: 作法：尋找子項目 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md
+                            - name: 作法：尋找子項目清單 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
+                            - name: 作法：尋找根項目 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md
+                            - name: 作法：尋找子系項目 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md
+                            - name: 作法：篩選屬性 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md
+                            - name: 作法：尋找相關項目 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md
+                            - name: HOW TO：在命名空間中尋找項目 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md
+                            - name: 作法：尋找前面的同層級 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md
+                            - name: HOW TO：尋找子項目的子系 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
+                            - name: 作法：尋找兩個位置路徑的等位 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md
+                            - name: 作法：尋找同層級節點 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md
+                            - name: 作法：尋找父系的屬性 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
+                            - name: HOW TO：尋找具有特定名稱的同層級屬性 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md
+                            - name: 作法：尋找具有特定屬性的項目 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md
+                            - name: 作法：根據位置尋找子項目 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md
+                            - name: 作法：尋找緊接在前的同層級 (XPath-LINQ to XML)
+                              href: programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
+                        - name: XML 的純函式轉換
+                          items:
+                            - name: 純函式轉換簡介
+                              href: programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md
+                            - name: 概念和術語 (函式轉換)
+                              href: programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md
+                            - name: 功能性程式設計與命令式程式設計
+                              href: programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md
+                            - name: 重構為純虛擬函式
+                              href: programming-guide/concepts/linq/refactoring-into-pure-functions.md
+                            - name: 函式轉換的適用性
+                              href: programming-guide/concepts/linq/applicability-of-functional-transformation.md
+                            - name: XML 的函式轉換
+                              href: programming-guide/concepts/linq/functional-transformation-of-xml.md
+                            - name: 教學課程：將查詢鏈結在一起
+                              items:
+                                - name: LINQ to XML 中的延後執行和延遲評估
+                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
+                                - name: 延後執行範例
+                                  href: programming-guide/concepts/linq/deferred-execution-example.md
+                                - name: 鏈結查詢範例
+                                  href: programming-guide/concepts/linq/chaining-queries-example.md
+                                - name: 中繼具體化
+                                  href: programming-guide/concepts/linq/intermediate-materialization.md
+                                - name: 將標準查詢運算子鏈結在一起
+                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
+                            - name: 教學課程：將查詢鏈結在一起
+                              items:
+                                - name: LINQ to XML 中的延後執行和延遲評估
+                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
+                                - name: 延後執行範例
+                                  href: programming-guide/concepts/linq/deferred-execution-example.md
+                                - name: 鏈結查詢範例
+                                  href: programming-guide/concepts/linq/chaining-queries-example.md
+                                - name: 中繼具體化
+                                  href: programming-guide/concepts/linq/intermediate-materialization.md
+                                - name: 將標準查詢運算子鏈結在一起
+                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
+                            - name: 教學課程：管理 WordprocessingML 文件中的內容
+                              items:
+                                - name: WordprocessingML 文件的組織結構
+                                  href: programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md
+                                - name: 建立來源 Office Open XML 文件
+                                  href: programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md
+                                - name: 尋找預設的段落樣式
+                                  href: programming-guide/concepts/linq/finding-the-default-paragraph-style.md
+                                - name: 擷取段落及其樣式
+                                  href: programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md
+                                - name: 擷取段落的文字
+                                  href: programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md
+                                - name: 使用擴充方法進行重構
+                                  href: programming-guide/concepts/linq/refactoring-using-an-extension-method.md
+                                - name: 使用純虛擬函式進行重構
+                                  href: programming-guide/concepts/linq/refactoring-using-a-pure-function.md
+                                - name: 以不同的組織結構投影 XML
+                                  href: programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md
+                                - name: 尋找 Word 文件中的文字
+                                  href: programming-guide/concepts/linq/finding-text-in-word-documents.md
+                                - name: Office Open XML WordprocessingML 文件的詳細資料
+                                  items:
+                                    - name: WordprocessingML 文件以及樣式
+                                      href: programming-guide/concepts/linq/wordprocessingml-document-with-styles.md
+                                    - name: WordprocessingML 文件的樣式部分
+                                      href: programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md
+                                    - name: 輸出 Office Open XML 文件部分內容的範例
+                                      href: programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md
+                    - name: 修改 XML 樹狀結構 (LINQ to XML)
+                      items:
+                        - name: 記憶體中 XML 樹狀修改與函式建構 (LINQ to XML)
+                          href: programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md
+                        - name: 將項目、屬性和節點新增至 XML 樹狀結構
+                          href: programming-guide/concepts/linq/adding-elements-attributes-and-nodes-to-an-xml-tree.md
+                        - name: 修改 XML 樹狀中的項目、屬性和節點
+                          href: programming-guide/concepts/linq/modifying-elements-attributes-and-nodes-in-an-xml-tree.md
+                        - name: 從 XML 樹狀結構中移除項目、屬性和節點
+                          href: programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md
+                        - name: 維護成對的名稱和數值
+                          href: programming-guide/concepts/linq/maintaining-name-value-pairs.md
+                        - name: HOW TO：變更整個 XML 樹狀結構的命名空間
+                          href: programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md
+                    - name: 效能 (LINQ to XML)
+                      items:
+                        - name: 已鏈結查詢的效能 (LINQ to XML)
+                          href: programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md
+                        - name: 同質化 XName 和 XNamespace 物件 (LINQ to XML)
+                          href: programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md
+                        - name: 預先同質化 XName 物件 (LINQ to XML)
+                          href: programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md
+                        - name: 靜態編譯的查詢 (LINQ to XML)
+                          href: programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md
+                    - name: 進階 LINQ to XML 程式設計
+                      items:
+                        - name: LINQ to XML 註釋
+                          href: programming-guide/concepts/linq/linq-to-xml-annotations.md
+                        - name: LINQ to XML 事件
+                          href: programming-guide/concepts/linq/linq-to-xml-events.md
+                        - name: 搭配節點進行程式設計
+                          href: programming-guide/concepts/linq/programming-with-nodes.md
+                        - name: 混合的宣告式程式碼/命令式程式碼 Bug (LINQ to XML)
+                          href: programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md
+                        - name: HOW TO：串流可存取標頭資訊的 XML 片段
+                          href: programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md
+                        - name: HOW TO：執行大型 XML 文件的串流轉換
+                          href: programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md
+                        - name: HOW TO：讀取和寫入編碼的文件
+                          href: programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md
+                        - name: 使用 XSLT 轉換 XML 樹狀結構
+                          href: programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md
+                        - name: HOW TO：使用註釋轉換 XSLT 樣式的 LINQ to XML 樹狀結構
+                          href: programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md
+                        - name: 序列化包含 XElement 物件的物件圖形
+                          items:
+                            - name: 作法：使用 XmlSerializer 序列化
+                              href: programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md
+                            - name: 作法：使用 DataContractSerializer 序列化
+                              href: programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md
+                    - name: LINQ to XML 安全性
+                      href: programming-guide/concepts/linq/linq-to-xml-security.md
+                    - name: 範例 XML 文件 (LINQ to XML)
+                      items:
+                        - name: 範例 XML 檔：典型的採購訂單 (LINQ to XML)
+                          href: programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md
+                        - name: 範例 XML 檔：命名空間中的典型採購訂單
+                          href: programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md
+                        - name: 範例 XML 檔：多份採購訂單 (LINQ to XML)
+                          href: programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md
+                        - name: 範例 XML 檔：命名空間中的多份採購訂單
+                          href: programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md
+                        - name: 範例 XML 檔：測試組態 (LINQ to XML)
+                          href: programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md
+                        - name: 範例 XML 檔：測試命名空間中的組態
+                          href: programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md
+                        - name: 範例 XML 檔：客戶和訂單 (LINQ to XML)
+                          href: programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md
+                        - name: XSD 範例檔：客戶和訂單
+                          href: programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md
+                        - name: 範例 XML 檔：命名空間中的客戶和訂單
+                          href: programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md
+                        - name: 範例 XML 檔：數值資料 (LINQ to XML)
+                          href: programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md
+                        - name: 範例 XML 檔：命名空間中的數值資料
+                          href: programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md
+                        - name: 範例 XML 檔：書籍 (LINQ to XML)
+                          href: programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md
+                        - name: 範例 XML 檔：合併的採購訂單
+                          href: programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md
+                - name: 參考 (LINQ to XML)
+                  href: programming-guide/concepts/linq/reference-linq-to-xml.md
+            - name: LINQ to ADO.NET (入口網站頁面)
+              href: programming-guide/concepts/linq/linq-to-adonet-portal-page.md
+            - name: 啟用資料來源以進行 LINQ 查詢
+              href: programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1.md
+            - name: LINQ 的 Visual Studio IDE 和工具支援
+              href: programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md
+        - name: 物件導向程式設計
+          href: programming-guide/concepts/object-oriented-programming.md
+        - name: 反射
+          href: programming-guide/concepts/reflection.md
+        - name: '序列化 (C#)'
+          items:
+            - name: 總覽
+              href: programming-guide/concepts/serialization/index.md
+            - name: 作法：將物件資料寫入 XML 檔案
+              href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
+            - name: 作法：從 XML 檔案讀取物件資料
+              href: programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md
+            - name: 逐步解說：在 Visual Studio 中保存物件
+              href: programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md
+    - name: 陳述式、運算式和運算子
+      items:
+        - name: 總覽
+          href: programming-guide/statements-expressions-operators/index.md
+        - name: 陳述式
+          href: programming-guide/statements-expressions-operators/statements.md
+        - name: 運算式
+          href: programming-guide/statements-expressions-operators/expressions.md
+        - name: 運算式主體成員
+          href: programming-guide/statements-expressions-operators/expression-bodied-members.md
+        - name: 匿名函式
+          items:
+            - name: 總覽
+              href: programming-guide/statements-expressions-operators/anonymous-functions.md
+            - name: Lambda 運算式
+              href: programming-guide/statements-expressions-operators/lambda-expressions.md
+            - name: 如何：在查詢中使用 Lambda 運算式
+              href: programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md
+        - name: 相等及相等比較
+          items:
+            - name: 相等比較
+              href: programming-guide/statements-expressions-operators/equality-comparisons.md
+            - name: 如何：定義類型的實值相等性
+              href: programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md
+            - name: 如何：參考相等性 (恆等性) 的測試
+              href: programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md
+    - name: 型別
+      items:
+        - name: 使用及定義型別
+          href: programming-guide/types/index.md
+        - name: 轉換和類型轉換
+          href: programming-guide/types/casting-and-type-conversions.md
+        - name: Boxing 和 Unboxing
+          href: programming-guide/types/boxing-and-unboxing.md
+        - name: HOW TO：將位元組陣列轉換為 int
+          href: programming-guide/types/how-to-convert-a-byte-array-to-an-int.md
+        - name: 作法：將字串轉換為數字
+          href: programming-guide/types/how-to-convert-a-string-to-a-number.md
+        - name: 作法：在十六進位字串和數字類型間轉換
+          href: programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md
+        - name: 使用動態類型
+          href: programming-guide/types/using-type-dynamic.md
+        - name: '逐步解說：建立和使用動態物件 (C# 和 Visual Basic)'
+          href: programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md
+    - name: 類別和結構
+      items:
+        - name: 總覽
+          href: programming-guide/classes-and-structs/index.md
+        - name: 類別
+          href: programming-guide/classes-and-structs/classes.md
+        - name: 物件
+          href: programming-guide/classes-and-structs/objects.md
+        - name: 結構
+          items:
+            - name: 總覽
+              href: programming-guide/classes-and-structs/structs.md
+            - name: 使用結構
+              href: programming-guide/classes-and-structs/using-structs.md
+        - name: 繼承
+          href: programming-guide/classes-and-structs/inheritance.md
+        - name: 多型
+          items:
+            - name: 總覽
+              href: programming-guide/classes-and-structs/polymorphism.md
+            - name: 使用 Override 和 New 關鍵字進行版本設定
+              href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
+            - name: 了解使用 Override 和 New 關鍵字的時機
+              href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
+            - name: 作法：覆寫 ToString 方法
+              href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
+        - name: 成員
+          items:
+            - name: 成員概觀
+              href: programming-guide/classes-and-structs/members.md
+            - name: 抽象和密封類別以及類別成員
+              href: programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md
+            - name: 靜態類別和靜態類別成員
+              href: programming-guide/classes-and-structs/static-classes-and-static-class-members.md
+            - name: 存取修飾詞
+              href: programming-guide/classes-and-structs/access-modifiers.md
+            - name: 欄位
+              href: programming-guide/classes-and-structs/fields.md
+            - name: 常數
+              href: programming-guide/classes-and-structs/constants.md
+            - name: 作法：定義抽象屬性
+              href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
+            - name: 'HOW TO：在 C# 中定義常數'
+              href: programming-guide/classes-and-structs/how-to-define-constants.md
+        - name: 屬性
+          items:
+            - name: 屬性概觀
+              href: programming-guide/classes-and-structs/properties.md
+            - name: 使用屬性
+              href: programming-guide/classes-and-structs/using-properties.md
+            - name: 介面屬性
+              href: programming-guide/classes-and-structs/interface-properties.md
+            - name: 限制存取子協助工具
+              href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
+            - name: 作法：宣告及使用讀寫屬性
+              href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
+            - name: 自動實作的屬性
+              href: programming-guide/classes-and-structs/auto-implemented-properties.md
+            - name: HOW TO：使用自動實作的屬性來實作輕量型類別
+              href: programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
+        - name: 方法
+          items:
+            - name: 方法概觀
+              href: programming-guide/classes-and-structs/methods.md
+            - name: 區域函式
+              href: programming-guide/classes-and-structs/local-functions.md
+            - name: ref 傳回值和 ref 區域變數
+              href: programming-guide/classes-and-structs/ref-returns.md
+            - name: 參數
+              items:
+                - name: 傳遞參數
+                  href: programming-guide/classes-and-structs/passing-parameters.md
+                - name: 傳遞實值型別參數
+                  href: programming-guide/classes-and-structs/passing-value-type-parameters.md
+                - name: 傳遞參考型別參數
+                  href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
+                - name: 作法：了解將結構和類別參考傳遞給方法之間的差異
+                  href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
+            - name: 隱含類型區域變數
+              href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
+            - name: 作法：在查詢運算式中使用隱含型別區域變數和陣列
+              href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+            - name: 擴充方法
+              href: programming-guide/classes-and-structs/extension-methods.md
+            - name: 作法：實作和呼叫自訂延伸模組
+              href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
+            - name: 作法：為列舉建立新方法
+              href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
+            - name: 具名和選擇性引數
+              href: programming-guide/classes-and-structs/named-and-optional-arguments.md
+            - name: HOW TO：在 Office 程式設計中使用具名和選擇性引數
+              href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
+        - name: 建構函式
+          items:
+            - name: 建構函式概觀
+              href: programming-guide/classes-and-structs/constructors.md
+            - name: 使用建構函式
+              href: programming-guide/classes-and-structs/using-constructors.md
+            - name: 執行個體建構函式
+              href: programming-guide/classes-and-structs/instance-constructors.md
+            - name: 私用建構函式
+              href: programming-guide/classes-and-structs/private-constructors.md
+            - name: 靜態建構函式
+              href: programming-guide/classes-and-structs/static-constructors.md
+            - name: 作法：撰寫複製建構函式
+              href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
+        - name: 完成項
+          href: programming-guide/classes-and-structs/destructors.md
+        - name: 物件和集合初始設定式
+          href: programming-guide/classes-and-structs/object-and-collection-initializers.md
+        - name: HOW TO：使用物件初始設定式將物件初始化
+          href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
+        - name: HOW TO：使用集合初始設定式將字典初始化
+          href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
+        - name: 巢狀類型
+          href: programming-guide/classes-and-structs/nested-types.md
+        - name: 部分類別和方法
+          href: programming-guide/classes-and-structs/partial-classes-and-methods.md
+        - name: 匿名類型
+          href: programming-guide/classes-and-structs/anonymous-types.md
+        - name: HOW TO：在查詢中傳回項目屬性的子集
+          href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
+    - name: 介面
+      items:
+        - name: 總覽
+          href: programming-guide/interfaces/index.md
+        - name: 明確介面實作
+          href: programming-guide/interfaces/explicit-interface-implementation.md
+        - name: 作法：明確實作介面成員
+          href: programming-guide/interfaces/how-to-explicitly-implement-interface-members.md
+        - name: 作法：明確實作兩個介面的成員
+          href: programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md
+    - name: 列舉類型
+      href: programming-guide/enumeration-types.md
+    - name: 委派
+      items:
+        - name: 總覽
+          href: programming-guide/delegates/index.md
+        - name: 使用委派
+          href: programming-guide/delegates/using-delegates.md
+        - name: 具名方法委派與匿名方法
+          href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
+        - name: '作法：組合委派 (多點傳送委派) (C# 程式設計指南)'
+          href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
+        - name: 作法：宣告、具現化和使用委派
+          href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
+    - name: 陣列
+      items:
+        - name: 總覽
+          href: programming-guide/arrays/index.md
+        - name: 陣列作為物件
+          href: programming-guide/arrays/arrays-as-objects.md
+        - name: 一維陣列
+          href: programming-guide/arrays/single-dimensional-arrays.md
+        - name: 多維陣列
+          href: programming-guide/arrays/multidimensional-arrays.md
+        - name: 不規則陣列
+          href: programming-guide/arrays/jagged-arrays.md
+        - name: 搭配陣列使用 foreach
+          href: programming-guide/arrays/using-foreach-with-arrays.md
+        - name: 傳遞陣列作為引數
+          href: programming-guide/arrays/passing-arrays-as-arguments.md
+        - name: 隱含型別陣列
+          href: programming-guide/arrays/implicitly-typed-arrays.md
+    - name: 字串
+      items:
+        - name: 使用字串進行程式設計
+          href: programming-guide/strings/index.md
+        - name: HOW TO：判斷字串是否代表數值
+          href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
+    - name: 索引子
+      items:
+        - name: 總覽
+          href: programming-guide/indexers/index.md
+        - name: 使用索引子
+          href: programming-guide/indexers/using-indexers.md
+        - name: 介面中的索引子
+          href: programming-guide/indexers/indexers-in-interfaces.md
+        - name: 屬性與索引子之間的比較
+          href: programming-guide/indexers/comparison-between-properties-and-indexers.md
+    - name: 事件
+      items:
+        - name: 總覽
+          href: programming-guide/events/index.md
+        - name: HOW TO：訂閱及取消訂閱事件
+          href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
+        - name: 作法：發佈符合 .NET Framework 方針的事件
+          href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
+        - name: HOW TO：在衍生類別中引發基底類別事件
+          href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md
+        - name: 作法：實作介面事件
+          href: programming-guide/events/how-to-implement-interface-events.md
+        - name: 作法：實作自訂事件存取子
+          href: programming-guide/events/how-to-implement-custom-event-accessors.md
+    - name: 泛型
+      items:
+        - name: 總覽
+          href: programming-guide/generics/index.md
+        - name: 泛型類型參數
+          href: programming-guide/generics/generic-type-parameters.md
+        - name: 型別參數的條件約束
+          href: programming-guide/generics/constraints-on-type-parameters.md
+        - name: 泛型類別
+          href: programming-guide/generics/generic-classes.md
+        - name: 泛型介面
+          href: programming-guide/generics/generic-interfaces.md
+        - name: 泛型方法
+          href: programming-guide/generics/generic-methods.md
+        - name: 泛型和陣列
+          href: programming-guide/generics/generics-and-arrays.md
+        - name: 泛型委派
+          href: programming-guide/generics/generic-delegates.md
+        - name: 'C++ 範本和 C# 泛型之間的差異'
+          href: programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md
+        - name: 執行階段中的泛型
+          href: programming-guide/generics/generics-in-the-run-time.md
+        - name: 泛型和反映
+          href: programming-guide/generics/generics-and-reflection.md
+        - name: 泛型和屬性
+          href: programming-guide/generics/generics-and-attributes.md
+    - name: 命名空間
+      items:
+        - name: 總覽
+          href: programming-guide/namespaces/index.md
+        - name: 使用命名空間
+          href: programming-guide/namespaces/using-namespaces.md
+        - name: 如何：使用 My 命名空間
+          href: programming-guide/namespaces/how-to-use-the-my-namespace.md
+    - name: 可為 Null 的實值型別
+      items:
+        - name: 總覽
+          href: programming-guide/nullable-types/index.md
+        - name: 使用可為 Null 的實值型別
+          href: programming-guide/nullable-types/using-nullable-types.md
+        - name: 如何：識別可為 Null 的實值型別
+          href: programming-guide/nullable-types/how-to-identify-a-nullable-type.md
+    - name: 不安全的程式碼和指標
+      items:
+        - name: 概觀及限制
+          href: programming-guide/unsafe-code-pointers/index.md
+        - name: 固定大小的緩衝區
+          href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
+        - name: 指標類型
+          items:
+            - name: 總覽
+              href: programming-guide/unsafe-code-pointers/pointer-types.md
+            - name: 指標轉換
+              href: programming-guide/unsafe-code-pointers/pointer-conversions.md
+            - name: 如何：使用指標複製位元組陣列
+              href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
+    - name: XML 文件註解
+      items:
+        - name: 總覽
+          href: programming-guide/xmldoc/index.md
+        - name: 建議使用的文件註解標籤
+          href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
+        - name: 處理 XML 檔案
+          href: programming-guide/xmldoc/processing-the-xml-file.md
+        - name: 文件標籤的分隔符號
+          href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
+        - name: 作法：使用 XML 文件功能
+          href: programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md
+        - name: 文件標籤參考
+          items:
+            - name: <c>
+              href: programming-guide/xmldoc/code-inline.md
+            - name: <code>
+              href: programming-guide/xmldoc/code.md
+            - name: cref 屬性
+              href: programming-guide/xmldoc/cref-attribute.md
+            - name: <example>
+              href: programming-guide/xmldoc/example.md
+            - name: <exception>
+              href: programming-guide/xmldoc/exception.md
+            - name: <include>
+              href: programming-guide/xmldoc/include.md
+            - name: <list>
+              href: programming-guide/xmldoc/list.md
+            - name: <para>
+              href: programming-guide/xmldoc/para.md
+            - name: <param>
+              href: programming-guide/xmldoc/param.md
+            - name: <paramref>
+              href: programming-guide/xmldoc/paramref.md
+            - name: <permission>
+              href: programming-guide/xmldoc/permission.md
+            - name: <remarks>
+              href: programming-guide/xmldoc/remarks.md
+            - name: <returns>
+              href: programming-guide/xmldoc/returns.md
+            - name: <see>
+              href: programming-guide/xmldoc/see.md
+            - name: <seealso>
+              href: programming-guide/xmldoc/seealso.md
+            - name: <summary>
+              href: programming-guide/xmldoc/summary.md
+            - name: <typeparam>
+              href: programming-guide/xmldoc/typeparam.md
+            - name: <typeparamref>
+              href: programming-guide/xmldoc/typeparamref.md
+            - name: <value>
+              href: programming-guide/xmldoc/value.md
+    - name: 例外狀況和例外狀況處理
+      items:
+        - name: 總覽
+          href: programming-guide/exceptions/index.md
+        - name: 使用例外狀況
+          href: programming-guide/exceptions/using-exceptions.md
+        - name: 例外狀況處理
+          href: programming-guide/exceptions/exception-handling.md
+        - name: 建立和擲回例外狀況
+          href: programming-guide/exceptions/creating-and-throwing-exceptions.md
+        - name: 編譯器所產生的例外狀況
+          href: programming-guide/exceptions/compiler-generated-exceptions.md
+        - name: 作法：使用 try-catch 處理例外狀況
+          href: programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md
+        - name: 作法：使用 finally 執行清除程式碼
+          href: programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md
+        - name: 作法：攔截非 CLS 例外狀況
+          href: programming-guide/exceptions/how-to-catch-a-non-cls-exception.md
+    - name: 檔案系統和登錄
+      items:
+        - name: 總覽
+          href: programming-guide/file-system/index.md
+        - name: HOW TO：逐一查看樹狀目錄
+          href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
+        - name: 作法：取得有關檔案、資料夾和磁碟機的資訊
+          href: programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md
+        - name: 作法：建立檔案或資料夾
+          href: programming-guide/file-system/how-to-create-a-file-or-folder.md
+        - name: HOW TO：複製、刪除和移動檔案和資料夾
+          href: programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md
+        - name: 作法：提供檔案作業的進度對話方塊
+          href: programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md
+        - name: 作法：寫入文字檔
+          href: programming-guide/file-system/how-to-write-to-a-text-file.md
+        - name: 作法：從文字檔讀取
+          href: programming-guide/file-system/how-to-read-from-a-text-file.md
+        - name: '作法：一次一行讀取文字檔 (Visual C#)'
+          href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
+        - name: 'HOW TO：在登錄中建立機碼 (Visual C#)'
+          href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
+    - name: 互通性
+      items:
+        - name: .NET 互通性
+          href: programming-guide/interop/index.md
+        - name: 互通性概觀
+          href: programming-guide/interop/interoperability-overview.md
+        - name: '作法：使用 Visual C# 功能存取 Office Interop 物件'
+          href: programming-guide/interop/how-to-access-office-onterop-objects.md
+        - name: 作法：在 COM Interop 程式設計中使用已編製索引的屬性
+          href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
+        - name: HOW TO：使用平台叫用播放 WAV 檔
+          href: programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md
+        - name: '逐步解說：Office 程式設計 (C# 與 Visual Basic)'
+          href: programming-guide/interop/walkthrough-office-programming.md
+        - name: 範例 COM 類別
+          href: programming-guide/interop/example-com-class.md
 - name: 語言參考
-  href: language-reference/
+  items:
+    - name: 總覽
+      href: language-reference/index.md
+    - name: 設定語言版本
+      href: language-reference/configure-language-version.md
+    - name: 'C# 關鍵字'
+      items:
+        - name: 總覽
+          href: language-reference/keywords/index.md
+        - name: 內建類型
+          items:
+            - name: 實值類型
+              items:
+                - name: 實質型別的功能
+                  href: language-reference/keywords/value-types.md
+                - name: bool
+                  href: language-reference/keywords/bool.md
+                - name: 整數數值類型
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  href: language-reference/builtin-types/integral-numeric-types.md
+                - name: 浮點數值類型
+                  displayName: 'float, decimal, double, rational, real'
+                  href: language-reference/builtin-types/floating-point-numeric-types.md
+                - name: char
+                  href: language-reference/keywords/char.md
+                - name: enum
+                  href: language-reference/keywords/enum.md
+                - name: struct
+                  href: language-reference/keywords/struct.md
+            - name: 參考類型
+              items:
+                - name: 參考類型的功能
+                  href: language-reference/keywords/reference-types.md
+                - name: Class - 類別
+                  href: language-reference/keywords/class.md
+                - name: 內建參考類型
+                  displayName: 'object, delegate, dynamic, string'
+                  href: language-reference/builtin-types/reference-types.md
+                - name: interface
+                  href: language-reference/keywords/interface.md
+            - name: void
+              href: language-reference/keywords/void.md
+            - name: var
+              href: language-reference/keywords/var.md
+            - name: 非受控類型
+              href: language-reference/builtin-types/unmanaged-types.md
+            - name: 類型的參考表
+              items:
+                - name: 內建類型表
+                  href: language-reference/keywords/built-in-types-table.md
+                - name: 實值型別表
+                  href: language-reference/keywords/value-types-table.md
+                - name: 預設值表
+                  href: language-reference/keywords/default-values-table.md
+                - name: 隱含數值轉換表
+                  href: language-reference/keywords/implicit-numeric-conversions-table.md
+                - name: 明確數值轉換表
+                  href: language-reference/keywords/explicit-numeric-conversions-table.md
+                - name: 格式化數值結果表
+                  href: language-reference/keywords/formatting-numeric-results-table.md
+        - name: 修飾詞
+          items:
+            - name: 存取修飾詞
+              items:
+                - name: 快速參考
+                  href: language-reference/keywords/access-modifiers.md
+                - name: 協助工具層級
+                  href: language-reference/keywords/accessibility-levels.md
+                - name: 協助工具定義域
+                  href: language-reference/keywords/accessibility-domain.md
+                - name: 使用協助工具層級的限制
+                  href: language-reference/keywords/restrictions-on-using-accessibility-levels.md
+                - name: internal
+                  href: language-reference/keywords/internal.md
+                - name: private
+                  href: language-reference/keywords/private.md
+                - name: protected
+                  href: language-reference/keywords/protected.md
+                - name: public
+                  href: language-reference/keywords/public.md
+                - name: protected internal
+                  href: language-reference/keywords/protected-internal.md
+                - name: private protected
+                  href: language-reference/keywords/private-protected.md
+            - name: abstract
+              href: language-reference/keywords/abstract.md
+            - name: async
+              href: language-reference/keywords/async.md
+              displayName: await
+            - name: const
+              href: language-reference/keywords/const.md
+            - name: event
+              href: language-reference/keywords/event.md
+            - name: extern
+              href: language-reference/keywords/extern.md
+            - name: in (泛型修飾詞)
+              href: language-reference/keywords/in-generic-modifier.md
+            - name: new (成員修飾詞)
+              href: language-reference/keywords/new-modifier.md
+            - name: out (泛型修飾詞)
+              href: language-reference/keywords/out-generic-modifier.md
+            - name: override
+              href: language-reference/keywords/override.md
+            - name: readonly
+              href: language-reference/keywords/readonly.md
+            - name: sealed
+              href: language-reference/keywords/sealed.md
+            - name: 靜態
+              href: language-reference/keywords/static.md
+            - name: unsafe
+              href: language-reference/keywords/unsafe.md
+            - name: 虛擬
+              href: language-reference/keywords/virtual.md
+            - name: volatile
+              href: language-reference/keywords/volatile.md
+        - name: 陳述式關鍵字
+          items:
+            - name: 陳述式類別
+              href: language-reference/keywords/statement-keywords.md
+            - name: 選取範圍陳述式
+              items:
+                - name: if-else
+                  href: language-reference/keywords/if-else.md
+                - name: switch
+                  href: language-reference/keywords/switch.md
+            - name: 反覆運算陳述式
+              items:
+                - name: do
+                  href: language-reference/keywords/do.md
+                - name: for
+                  href: language-reference/keywords/for.md
+                - name: foreach、in
+                  href: language-reference/keywords/foreach-in.md
+                - name: while
+                  href: language-reference/keywords/while.md
+            - name: 跳躍陳述式
+              items:
+                - name: break
+                  href: language-reference/keywords/break.md
+                - name: continue
+                  href: language-reference/keywords/continue.md
+                - name: goto
+                  href: language-reference/keywords/goto.md
+                - name: return
+                  href: language-reference/keywords/return.md
+            - name: 例外狀況處理陳述式
+              items:
+                - name: throw
+                  href: language-reference/keywords/throw.md
+                - name: try-catch
+                  href: language-reference/keywords/try-catch.md
+                - name: try-finally
+                  href: language-reference/keywords/try-finally.md
+                - name: try-catch-finally
+                  href: language-reference/keywords/try-catch-finally.md
+            - name: Checked 與 Unchecked
+              items:
+                - name: 總覽
+                  href: language-reference/keywords/checked-and-unchecked.md
+                - name: checked
+                  href: language-reference/keywords/checked.md
+                - name: unchecked
+                  href: language-reference/keywords/unchecked.md
+            - name: fixed 陳述式
+              href: language-reference/keywords/fixed-statement.md
+            - name: lock 陳述式
+              href: language-reference/keywords/lock-statement.md
+        - name: 方法參數
+          items:
+            - name: 傳遞參數
+              href: language-reference/keywords/method-parameters.md
+            - name: params
+              href: language-reference/keywords/params.md
+            - name: in (參數修飾詞)
+              href: language-reference/keywords/in-parameter-modifier.md
+            - name: ref
+              href: language-reference/keywords/ref.md
+            - name: out (參數修飾詞)
+              href: language-reference/keywords/out-parameter-modifier.md
+        - name: 命名空間關鍵字
+          items:
+            - name: namespace
+              href: language-reference/keywords/namespace.md
+            - name: using
+              items:
+                - name: 使用內容
+                  href: language-reference/keywords/using.md
+                - name: using 指示詞
+                  href: language-reference/keywords/using-directive.md
+                - name: using static 指示詞
+                  href: language-reference/keywords/using-static.md
+                - name: using 陳述式
+                  href: language-reference/keywords/using-statement.md
+            - name: extern alias
+              href: language-reference/keywords/extern-alias.md
+        - name: 類型測試關鍵字
+          items:
+            - name: 是
+              href: language-reference/keywords/is.md
+        - name: 泛型型別條件約束關鍵字
+          items:
+            - name: new 條件約束
+              href: language-reference/keywords/new-constraint.md
+            - name: 其中
+              href: language-reference/keywords/where-generic-type-constraint.md
+        - name: 存取關鍵字
+          items:
+            - name: base
+              href: language-reference/keywords/base.md
+            - name: this
+              href: language-reference/keywords/this.md
+        - name: 常值關鍵字
+          items:
+            - name: 'null'
+              href: language-reference/keywords/null.md
+            - name: 'true'
+              href: language-reference/keywords/true-literal.md
+            - name: 'False'
+              href: language-reference/keywords/false-literal.md
+            - name: 預設
+              href: language-reference/keywords/default.md
+        - name: 內容關鍵字
+          items:
+            - name: 快速參考
+              href: language-reference/keywords/contextual-keywords.md
+            - name: add
+              href: language-reference/keywords/add.md
+            - name: get
+              href: language-reference/keywords/get.md
+            - name: partial (類型)
+              href: language-reference/keywords/partial-type.md
+            - name: partial (方法)
+              href: language-reference/keywords/partial-method.md
+            - name: remove
+              href: language-reference/keywords/remove.md
+            - name: 設定
+              href: language-reference/keywords/set.md
+            - name: when (篩選條件)
+              href: language-reference/keywords/when.md
+            - name: value
+              href: language-reference/keywords/value.md
+            - name: yield
+              href: language-reference/keywords/yield.md
+        - name: 查詢關鍵字
+          items:
+            - name: 快速參考
+              href: language-reference/keywords/query-keywords.md
+            - name: from 子句
+              href: language-reference/keywords/from-clause.md
+            - name: where 子句
+              href: language-reference/keywords/where-clause.md
+            - name: select 子句
+              href: language-reference/keywords/select-clause.md
+            - name: group 子句
+              href: language-reference/keywords/group-clause.md
+            - name: into
+              href: language-reference/keywords/into.md
+            - name: orderby 子句
+              href: language-reference/keywords/orderby-clause.md
+            - name: join 子句
+              href: language-reference/keywords/join-clause.md
+            - name: let 子句
+              href: language-reference/keywords/let-clause.md
+            - name: ascending
+              href: language-reference/keywords/ascending.md
+            - name: descending
+              href: language-reference/keywords/descending.md
+            - name: 於
+              href: language-reference/keywords/on.md
+            - name: equals
+              href: language-reference/keywords/equals.md
+            - name: by
+              href: language-reference/keywords/by.md
+            - name: 中的
+              href: language-reference/keywords/in.md
+    - name: 'C# 運算子'
+      items:
+        - name: 總覽
+          href: language-reference/operators/index.md
+        - name: 算術運算子
+          href: language-reference/operators/arithmetic-operators.md
+          displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
+        - name: 布林值邏輯運算子
+          href: language-reference/operators/boolean-logical-operators.md
+          displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+        - name: 位元與移位運算子
+          href: language-reference/operators/bitwise-and-shift-operators.md
+          displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>='
+        - name: 等號比較運算子
+          href: language-reference/operators/equality-operators.md
+          displayName: '==, !='
+        - name: 比較運算子
+          href: language-reference/operators/comparison-operators.md
+          displayName: '>, <, >=, <=, greater, less'
+        - name: 成員存取運算子
+          href: language-reference/operators/member-access-operators.md
+          displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
+        - name: 型別測試和轉換運算子
+          href: language-reference/operators/type-testing-and-cast.md
+          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
+        - name: 使用者定義轉換運算子
+          href: language-reference/operators/user-defined-conversion-operators.md
+          displayName: 'implicit, explicit'
+        - name: 指標相關運算子
+          href: language-reference/operators/pointer-related-operators.md
+          displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
+        - name: = 運算子
+          href: language-reference/operators/assignment-operator.md
+          displayName: 'assignment, ref'
+        - name: + 及 += 運算子
+          href: language-reference/operators/addition-operator.md
+          displayName: 'string concatenation, delegate combination, event subscription'
+        - name: '- 及 -= 運算子'
+          href: language-reference/operators/subtraction-operator.md
+          displayName: 'delegate removal, event unsubscription'
+        - name: '?: 運算子'
+          href: language-reference/operators/conditional-operator.md
+          displayName: 'conditional, ternary, ref'
+        - name: '! (Null 容許) 運算子'
+          href: language-reference/operators/null-forgiving.md
+          displayName: 'nullable reference, null-forgiveness'
+        - name: '?? 與 ??= 運算子'
+          href: language-reference/operators/null-coalescing-operator.md
+          displayName: 'null-coalescing, assignment'
+        - name: => 運算子
+          href: language-reference/operators/lambda-operator.md
+          displayName: lambda
+        - name: ':: 運算子'
+          href: language-reference/operators/namespace-alias-qualifier.md
+          displayName: 'namespace alias qualifier, global namespace'
+        - name: await 運算子
+          href: language-reference/operators/await.md
+          displayName: async
+        - name: 預設運算子
+          href: language-reference/operators/default.md
+          displayName: 'default value, default literal, type default'
+        - name: 委派運算子
+          href: language-reference/operators/delegate-operator.md
+          displayName: anonymous
+        - name: nameof 運算子
+          href: language-reference/operators/nameof.md
+        - name: new 運算子
+          href: language-reference/operators/new-operator.md
+        - name: sizeof 運算子
+          href: language-reference/operators/sizeof.md
+        - name: stackalloc 運算子
+          href: language-reference/operators/stackalloc.md
+        - name: true 和 false 運算子
+          href: language-reference/operators/true-false-operators.md
+        - name: 運算子多載
+          href: language-reference/operators/operator-overloading.md
+    - name: 'C# 特殊字元'
+      items:
+        - name: 總覽
+          href: language-reference/tokens/index.md
+        - name: $ -- 字串插補
+          href: language-reference/tokens/interpolated.md
+        - name: '@ -- 逐字識別項'
+          href: language-reference/tokens/verbatim.md
+    - name: 'C# 前置處理器指示詞'
+      items:
+        - name: 總覽
+          href: language-reference/preprocessor-directives/index.md
+        - name: '#if'
+          href: language-reference/preprocessor-directives/preprocessor-if.md
+        - name: '#else'
+          href: language-reference/preprocessor-directives/preprocessor-else.md
+        - name: '#elif'
+          href: language-reference/preprocessor-directives/preprocessor-elif.md
+        - name: '#endif'
+          href: language-reference/preprocessor-directives/preprocessor-endif.md
+        - name: '#define'
+          href: language-reference/preprocessor-directives/preprocessor-define.md
+        - name: '#undef'
+          href: language-reference/preprocessor-directives/preprocessor-undef.md
+        - name: '#warning'
+          href: language-reference/preprocessor-directives/preprocessor-warning.md
+        - name: '#error'
+          href: language-reference/preprocessor-directives/preprocessor-error.md
+        - name: '#line'
+          href: language-reference/preprocessor-directives/preprocessor-line.md
+        - name: '#region'
+          href: language-reference/preprocessor-directives/preprocessor-region.md
+        - name: '#endregion'
+          href: language-reference/preprocessor-directives/preprocessor-endregion.md
+        - name: '#pragma'
+          href: language-reference/preprocessor-directives/preprocessor-pragma.md
+        - name: '#pragma warning'
+          href: language-reference/preprocessor-directives/preprocessor-pragma-warning.md
+        - name: '#pragma checksum'
+          href: language-reference/preprocessor-directives/preprocessor-pragma-checksum.md
+    - name: 'C# 編譯器選項'
+      items:
+        - name: 總覽
+          href: language-reference/compiler-options/index.md
+        - name: 使用 csc.exe 建置命令列
+          href: language-reference/compiler-options/command-line-building-with-csc-exe.md
+        - name: 作法：為 Visual Studio 命令列設定環境變數
+          href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
+        - name: '依分類列出的 C# 編譯器選項'
+          href: language-reference/compiler-options/listed-by-category.md
+        - name: '依字母順序列出 C# 編譯器選項'
+          href: language-reference/compiler-options/listed-alphabetically.md
+          items:
+            - name: '@'
+              href: language-reference/compiler-options/response-file-compiler-option.md
+            - name: '-addmodule'
+              href: language-reference/compiler-options/addmodule-compiler-option.md
+            - name: '-appconfig'
+              href: language-reference/compiler-options/appconfig-compiler-option.md
+            - name: '-baseaddress'
+              href: language-reference/compiler-options/baseaddress-compiler-option.md
+            - name: '-bugreport'
+              href: language-reference/compiler-options/bugreport-compiler-option.md
+            - name: '-checked'
+              href: language-reference/compiler-options/checked-compiler-option.md
+            - name: '-codepage'
+              href: language-reference/compiler-options/codepage-compiler-option.md
+            - name: '-debug'
+              href: language-reference/compiler-options/debug-compiler-option.md
+            - name: '-define'
+              href: language-reference/compiler-options/define-compiler-option.md
+            - name: '-delaysign'
+              href: language-reference/compiler-options/delaysign-compiler-option.md
+            - name: '-deterministic'
+              href: language-reference/compiler-options/deterministic-compiler-option.md
+            - name: '-doc'
+              href: language-reference/compiler-options/doc-compiler-option.md
+            - name: '-errorreport'
+              href: language-reference/compiler-options/errorreport-compiler-option.md
+            - name: '-filealign'
+              href: language-reference/compiler-options/filealign-compiler-option.md
+            - name: '-fullpaths'
+              href: language-reference/compiler-options/fullpaths-compiler-option.md
+            - name: '-help、-?'
+              href: language-reference/compiler-options/help-compiler-option.md
+            - name: '-highentropyva'
+              href: language-reference/compiler-options/highentropyva-compiler-option.md
+            - name: '-keycontainer'
+              href: language-reference/compiler-options/keycontainer-compiler-option.md
+            - name: '-keyfile'
+              href: language-reference/compiler-options/keyfile-compiler-option.md
+            - name: '-langversion'
+              href: language-reference/compiler-options/langversion-compiler-option.md
+            - name: '-lib'
+              href: language-reference/compiler-options/lib-compiler-option.md
+            - name: '-link'
+              href: language-reference/compiler-options/link-compiler-option.md
+            - name: '-linkresource'
+              href: language-reference/compiler-options/linkresource-compiler-option.md
+            - name: '-main'
+              href: language-reference/compiler-options/main-compiler-option.md
+            - name: '-moduleassemblyname'
+              href: language-reference/compiler-options/moduleassemblyname-compiler-option.md
+            - name: '-noconfig'
+              href: language-reference/compiler-options/noconfig-compiler-option.md
+            - name: '-nologo'
+              href: language-reference/compiler-options/nologo-compiler-option.md
+            - name: '-nostdlib'
+              href: language-reference/compiler-options/nostdlib-compiler-option.md
+            - name: '-nowarn'
+              href: language-reference/compiler-options/nowarn-compiler-option.md
+            - name: '-nowin32manifest'
+              href: language-reference/compiler-options/nowin32manifest-compiler-option.md
+            - name: '-optimize'
+              href: language-reference/compiler-options/optimize-compiler-option.md
+            - name: '-out'
+              href: language-reference/compiler-options/out-compiler-option.md
+            - name: '-pathmap'
+              href: language-reference/compiler-options/pathmap-compiler-option.md
+            - name: '-pdb'
+              href: language-reference/compiler-options/pdb-compiler-option.md
+            - name: '-platform'
+              href: language-reference/compiler-options/platform-compiler-option.md
+            - name: '-preferreduilang'
+              href: language-reference/compiler-options/preferreduilang-compiler-option.md
+            - name: '-publicsign'
+              href: language-reference/compiler-options/publicsign-compiler-option.md
+            - name: '-recurse'
+              href: language-reference/compiler-options/recurse-compiler-option.md
+            - name: '-reference'
+              href: language-reference/compiler-options/reference-compiler-option.md
+            - name: '-refout'
+              href: language-reference/compiler-options/refout-compiler-option.md
+            - name: '-refonly'
+              href: language-reference/compiler-options/refonly-compiler-option.md
+            - name: '-resource'
+              href: language-reference/compiler-options/resource-compiler-option.md
+            - name: '-subsystemversion'
+              href: language-reference/compiler-options/subsystemversion-compiler-option.md
+            - name: '-target'
+              href: language-reference/compiler-options/target-compiler-option.md
+              items:
+                - name: '-target:appcontainerexe'
+                  href: language-reference/compiler-options/target-appcontainerexe-compiler-option.md
+                - name: '-target:exe'
+                  href: language-reference/compiler-options/target-exe-compiler-option.md
+                - name: '-target:library'
+                  href: language-reference/compiler-options/target-library-compiler-option.md
+                - name: '-target:module'
+                  href: language-reference/compiler-options/target-module-compiler-option.md
+                - name: '-target:winexe'
+                  href: language-reference/compiler-options/target-winexe-compiler-option.md
+                - name: '-target:winmdobj'
+                  href: language-reference/compiler-options/target-winmdobj-compiler-option.md
+            - name: '-unsafe'
+              href: language-reference/compiler-options/unsafe-compiler-option.md
+            - name: '-utf8output'
+              href: language-reference/compiler-options/utf8output-compiler-option.md
+            - name: '-warn'
+              href: language-reference/compiler-options/warn-compiler-option.md
+            - name: '-warnaserror'
+              href: language-reference/compiler-options/warnaserror-compiler-option.md
+            - name: '-win32icon'
+              href: language-reference/compiler-options/win32icon-compiler-option.md
+            - name: '-win32manifest'
+              href: language-reference/compiler-options/win32manifest-compiler-option.md
+            - name: '-win32res'
+              href: language-reference/compiler-options/win32res-compiler-option.md
+    - name: 'C# 編譯器錯誤'
+      href: language-reference/compiler-messages/index.md
+    - name: 'C# 6.0 草稿規格'
+      href: language-reference/specification/
+    - name: 'C# 7.0 - 8.0 提案'
+      href: language-reference/proposals/
 - name: 逐步解說
   href: walkthroughs.md

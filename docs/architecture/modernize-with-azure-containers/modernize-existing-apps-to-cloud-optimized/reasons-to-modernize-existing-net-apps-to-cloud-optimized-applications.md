@@ -2,12 +2,12 @@
 title: 將現有 .NET 應用程式現代化為雲端優化應用程式的原因
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |將現有 .NET 應用程式現代化為雲端優化應用程式的原因
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373924"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522930"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>將現有 .NET 應用程式現代化為雲端優化應用程式的原因
 
@@ -21,7 +21,7 @@ ms.locfileid: "70373924"
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>雲端優化應用程式原則和原則 
 
-雲端的改良主要著重于滿足兩個目標：藉由改善靈活性，降低成本並提升業務成長。 這些目標是藉由簡化程式來達成，並在您發行和發行應用程式時減少摩擦。
+雲端的改良主要著重于滿足兩個目標：藉由改善彈性，降低成本並提升業務成長。 這些目標是藉由簡化程式來達成，並在您發行和發行應用程式時減少摩擦。
 
 如果您可以靈活地從其他內部部署應用程式自行開發應用程式，然後針對雲端中的應用程式進行發行、部署、自動調整、監視和疑難排解，您的應用程式就會以雲端方式優化。
 
@@ -41,7 +41,7 @@ ms.locfileid: "70373924"
 
 圖4-2 顯示雲端優化應用程式的主要選擇性支柱。 您所執行的要素越多，readier 您的應用程式就能成功滿足客戶的期望。
 
-![雲端優化應用程式的主要要素](./media/image2.png)
+![圖表：命名雲端優化應用程式的主要支柱。](./media/main-pillars-cloud-optimized-application.png)
 
 **圖 4-2.** 雲端優化應用程式的主要要素
 

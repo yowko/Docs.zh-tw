@@ -4,12 +4,12 @@ description: 存取從影像處理到行動後端和 ETL 管線範圍的範例�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834292"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522396"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>無伺服器商務情節和使用案例
 
@@ -27,7 +27,7 @@ ms.locfileid: "71834292"
 
 ![自動映射庫](./media/automated-image-gallery.png)
 
-您可以在這裡找到完整的存放庫和建立邏輯應用程式的指示：[事件格線粘附](https://github.com/JeremyLikness/Event-Grid-Glue)。
+您可以在這裡找到完整的存放庫和建立邏輯應用程式的指示：[事件方格粘附](https://github.com/JeremyLikness/Event-Grid-Glue)。
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>使用 Xamarin 的跨平臺行動用戶端。表單和函式
 
@@ -55,7 +55,7 @@ ms.locfileid: "71834292"
 
 Proxy 提供單一 API 端點，其會在將個別要求移至無伺服器函式時進行更新，以重新路由傳送它們。
 
-您可以觀看影片來逐步完成整個遷移：[使用無伺服器 Azure](https://channel9.msdn.com/Events/Connect/2017/E102)函式的隨即轉移。 存取範例程式碼：[攜帶您自己的應用程式](https://github.com/JeremyLikness/bring-own-app-connect-17)。
+您可以觀看影片，逐步解說整個遷移：隨即[轉移與無伺服器 Azure](https://channel9.msdn.com/Events/Connect/2017/E102)函式。 存取範例程式碼：[攜帶您自己的應用程式](https://github.com/JeremyLikness/bring-own-app-connect-17)。
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>剖析 CSV 檔案並插入資料庫
 
@@ -77,7 +77,7 @@ Azure Functions 可用來提供單一頁面應用程式（SPA），讓您可以�
 
 ![Power BI 範例](./media/power-bi-example.png)
 
-您可以在這裡取得完整連結 shortener 存放庫與指示：[無伺服器 URL shortener](https://github.com/jeremylikness/serverless-url-shortener)。 您可以在這裡閱讀簡化版本的相關資訊：[幾分鐘內就能 Azure 儲存體無伺服器 .net 應用程式](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)。
+如需完整連結 shortener 存放庫與指示，請參閱：[無伺服器 URL shortener](https://github.com/jeremylikness/serverless-url-shortener)。 您可以在這裡閱讀簡化版本的相關資訊：[在短短幾分鐘內，無伺服器 .net 應用程式的 Azure 儲存體](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)。
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>使用 ping 來驗證裝置連線能力
 
@@ -87,15 +87,15 @@ Azure Functions 可用來提供單一頁面應用程式（SPA），讓您可以�
 
 ## <a name="recommended-resources"></a>建議的資源
 
-* [Azure Functions 相片馬賽克產生器](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-* [Azure IoT 中樞 ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [幾分鐘內無伺服器 .NET 應用程式的 Azure 儲存體](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-* [攜帶您自己的應用程式](https://github.com/JeremyLikness/bring-own-app-connect-17)
-* [CSV 匯入實驗室](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-* [事件方格粘附](https://github.com/JeremyLikness/Event-Grid-Glue)
-* [使用 Xamarin. Forms 用戶端來執行簡單的 Azure 函數](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-* [無伺服器 Azure 函式的隨即轉移](https://channel9.msdn.com/Events/Connect/2017/E102)
-* [無伺服器 URL shortener](https://github.com/jeremylikness/serverless-url-shortener)
+- [Azure Functions 相片馬賽克產生器](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
+- [Azure IoT 中樞 ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [幾分鐘內無伺服器 .NET 應用程式的 Azure 儲存體](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
+- [攜帶您自己的應用程式](https://github.com/JeremyLikness/bring-own-app-connect-17)
+- [CSV 匯入實驗室](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [事件方格粘附](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [使用 Xamarin. Forms 用戶端來執行簡單的 Azure 函數](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [無伺服器 Azure 函式的隨即轉移](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [無伺服器 URL shortener](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
 >[上一頁](orchestration-patterns.md)

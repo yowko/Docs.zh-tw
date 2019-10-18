@@ -2,12 +2,12 @@
 title: Azure 平臺復原
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |使用 Azure 的雲端基礎結構復原
 ms.date: 06/30/2019
-ms.openlocfilehash: 7f148588be97fa6bf8a055f5f5bed8e23908277f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214204"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520768"
 ---
 # <a name="azure-platform-resiliency"></a>Azure 平臺復原
 
@@ -56,7 +56,7 @@ ms.locfileid: "71214204"
 
 - *分割工作負載*。 將網域分解到獨立的獨立式微服務，可讓每個服務獨立擴充。 服務通常會有不同的擴充性需求和需求。 資料分割可讓您只調整需要調整的內容，而不需調整整個應用程式的不必要成本。
 
-- *偏好相應放大。* 雲端式應用程式偏好向外延展資源，而非相應增加規模。 相應放大（也稱為水準調整）包含將更多服務資源新增至現有系統，以符合並共用所需的效能層級。 相應增加（也稱為垂直調整）包含以更強大的硬體（更多磁片、記憶體和處理核心）取代現有的資源。 向外延展可以使用一些 Azure 雲端資源中提供的自動調整功能來自動叫用。 跨多個資源相應放大也會增加整體系統的冗余。 最後，相應增加單一資源的成本通常比在許多較小的資源中相應放大更昂貴。 圖6-8 顯示兩種方法：
+- 偏好*相應放大。* 雲端式應用程式偏好向外延展資源，而非相應增加規模。 相應放大（也稱為水準調整）包含將更多服務資源新增至現有系統，以符合並共用所需的效能層級。 相應增加（也稱為垂直調整）包含以更強大的硬體（更多磁片、記憶體和處理核心）取代現有的資源。 向外延展可以使用一些 Azure 雲端資源中提供的自動調整功能來自動叫用。 跨多個資源相應放大也會增加整體系統的冗余。 最後，相應增加單一資源的成本通常比在許多較小的資源中相應放大更昂貴。 圖6-8 顯示兩種方法：
 
 ![向上擴充與相應放大](./media/scale-up-scale-out.png)
 
@@ -68,17 +68,17 @@ ms.locfileid: "71214204"
 
 - *利用平臺自動調整功能。* 盡可能使用內建的自動調整功能，而不是自訂或協力廠商機制。 可能的話，請使用排程的調整規則，以確保資源在沒有啟動延遲的情況下可供使用，但會視需要將回應自動調整新增至規則，以因應非預期的變更。 如需詳細資訊，請參閱自動調整[指引](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)。
 
-- *積極擴充。* 最後一種作法是積極地相應增加，讓您可以快速地滿足流量的立即尖峰，而不會失去業務。 然後，謹慎地相應減少（也就是移除不必要的資源），以避免系統穩定。 執行此作業的簡單方法是設定「冷卻」期間，也就是在調整作業之間等待的時間，這是新增資源的五分鐘，最長可達15分鐘的移除實例。
+- *積極地相應放大。* 最後一種作法是積極地相應放大，讓您可以快速地滿足流量的立即尖峰，而不會失去業務。 然後，謹慎地相應縮小（也就是移除不必要的實例），以保持系統穩定。 執行此作業的簡單方法是設定「冷卻」期間，也就是在調整作業之間等待的時間，這是新增資源的五分鐘，最長可達15分鐘的移除實例。
 
 ## <a name="built-in-retry-in-services"></a>服務中的內建重試
 
 我們建議您在稍早的章節中執行程式設計重試作業的最佳作法。 請記住，許多 Azure 服務及其對應的用戶端 Sdk 也包含重試機制。 下列清單摘要說明本書中所討論的許多 Azure 服務的重試功能：
 
-- *Azure Cosmos DB。* 來自<xref:Microsoft.Azure.Documents.Client.DocumentClient>用戶端 API 的類別會自動淘汰失敗的嘗試。 重試次數和等候時間上限是可設定的。 用戶端 API 擲回的例外狀況可能是超過重試原則或非暫時性錯誤的要求。
+- *Azure Cosmos DB。* 來自用戶端 API 的 <xref:Microsoft.Azure.Documents.Client.DocumentClient> 類別會自動淘汰失敗的嘗試。 重試次數和等候時間上限是可設定的。 用戶端 API 擲回的例外狀況可能是超過重試原則或非暫時性錯誤的要求。
 
 - *Azure Redis 快取。* Redis Stackexchange.redis 用戶端會使用連線管理員類別，其中包含嘗試失敗時的重試。 重試次數、特定的重試原則和等候時間都可設定。
 
-- *Azure 服務匯流排。* 服務匯流排用戶端會公開一個[RetryPolicy 類別](xref:Microsoft.ServiceBus.RetryPolicy)，可使用 [輪詢間隔]、[重試計數] 和<xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>指定作業可以採取的時間上限來設定。 預設原則是在每次嘗試之間有30秒的輪詢週期，這是九次重試次數上限。
+- *Azure 服務匯流排。* 服務匯流排用戶端會公開一個[RetryPolicy 類別](xref:Microsoft.ServiceBus.RetryPolicy)，可使用 [輪詢間隔]、[重試計數] 和 [<xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>] 來設定，以指定作業可以採取的最長時間。 預設原則是在每次嘗試之間有30秒的輪詢週期，這是九次重試次數上限。
 
 - *Azure SQL Database。* 使用[Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)程式庫時，會提供重試支援。
 

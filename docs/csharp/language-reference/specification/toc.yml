@@ -1,0 +1,40 @@
+- name: 'C# 6.0 草稿規格'
+  items:
+    - name: 簡介
+      href: ../../../../_csharplang/spec/introduction.md
+    - name: 語彙結構
+      href: ../../../../_csharplang/spec/lexical-structure.md
+    - name: 基本概念
+      href: ../../../../_csharplang/spec/basic-concepts.md
+    - name: 型別
+      href: ../../../../_csharplang/spec/types.md
+    - name: 變數
+      href: ../../../../_csharplang/spec/variables.md
+    - name: 轉換
+      href: ../../../../_csharplang/spec/conversions.md
+    - name: 運算式
+      href: ../../../../_csharplang/spec/expressions.md
+    - name: 陳述式
+      href: ../../../../_csharplang/spec/statements.md
+    - name: 命名空間
+      href: ../../../../_csharplang/spec/namespaces.md
+    - name: 類別
+      href: ../../../../_csharplang/spec/classes.md
+    - name: 結構
+      href: ../../../../_csharplang/spec/structs.md
+    - name: 陣列
+      href: ../../../../_csharplang/spec/arrays.md
+    - name: 介面
+      href: ../../../../_csharplang/spec/interfaces.md
+    - name: 列舉
+      href: ../../../../_csharplang/spec/enums.md
+    - name: 委派
+      href: ../../../../_csharplang/spec/delegates.md
+    - name: 例外狀況
+      href: ../../../../_csharplang/spec/exceptions.md
+    - name: 屬性
+      href: ../../../../_csharplang/spec/attributes.md
+    - name: Unsafe 程式碼
+      href: ../../../../_csharplang/spec/unsafe-code.md
+    - name: 文件註解
+      href: ../../../../_csharplang/spec/documentation-comments.md

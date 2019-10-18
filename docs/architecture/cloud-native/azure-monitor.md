@@ -2,12 +2,12 @@
 title: Azure 監視器
 description: 使用 Azure 監視器來取得系統的可見度。
 ms.date: 09/23/2019
-ms.openlocfilehash: 20048792e95ef1f6e75551cdd0d3571f972f6c14
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 4d7d556f030500ea6e0f608e3bdfd16d22d9eb1d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214100"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521032"
 ---
 # <a name="azure-monitor"></a>Azure 監視器 
 
@@ -15,8 +15,8 @@ ms.locfileid: "71214100"
 
 沒有其他雲端提供者的雲端應用程式監視解決方案成熟，如同在 Azure 中找到的一樣。 Azure 監視器是一組工具集合的資訊，其設計目的是要提供系統狀態的可見度，並深入瞭解您的應用程式的任何問題與優化。 
 
-![Azure 監視器，這是工具的集合，可讓您深入瞭解雲端原生應用程式的運作方式。**圖 7-9**。 ](./media/azure-monitor.png)
- Azure 監視器，這是工具的集合，可讓您深入瞭解雲端原生應用程式的運作方式。
+![Azure 監視器，這是工具的集合，可讓您深入瞭解雲端原生應用程式的運作方式。](./media/azure-monitor.png)
+**圖 7-9**。 Azure 監視器，這是工具的集合，可讓您深入瞭解雲端原生應用程式的運作方式。
 
 ## <a name="gathering-logs-and-metrics"></a>收集記錄和計量
 
@@ -42,8 +42,8 @@ StormEvents
 | render piechart 
 ```
 
-![Application Insights 查詢](./media/azure-monitor.png)
-的結果**圖 7-10**。 Application Insights 查詢的結果。
+Application Insights 查詢的 ![The 結果 ](./media/azure-monitor.png)
+**圖 7-10**。 Application Insights 查詢的結果。
 
 有一個[遊樂場可用於實驗 Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples)查詢，這是一個很棒的地方來花上一小時或兩個。 閱讀[範例查詢](https://docs.microsoft.com/azure/kusto/query/samples)也會有意義。
 
@@ -51,23 +51,23 @@ StormEvents
 
 有數種不同的儀表板技術可用來呈現 Azure 監視器的資訊。 最簡單的方式，就是只在 Application Insights 中執行查詢，並將[資料繪製到圖表](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)中。 
 
-![內嵌在主要 Azure 儀表板](./media/azure-monitor.png)
-**圖 7-11**中 Application Insights 圖表的範例。 內嵌在主要 Azure 儀表板中 Application Insights 圖表的範例。
+Application Insights 內嵌在主要 Azure 儀表板中的圖表 ![An 範例 ](./media/azure-monitor.png)
+**圖 7-11**。 內嵌在主要 Azure 儀表板中 Application Insights 圖表的範例。
 
 然後您可以使用儀表板功能，將這些圖表內嵌在 Azure 入口網站中。 對於具有更嚴格需求的使用者，例如能夠向下切入到數個資料層 Azure 監視器資料可供[Power BI](https://powerbi.microsoft.com/)。 Power BI 是業界領先的企業級商業智慧工具，可以從許多不同的資料來源匯總資料。
 
-![Power BI 儀表板](./media/azure-monitor.png)
-**圖 7-12**的範例。 Power BI 儀表板範例。
+![An Power BI 儀表板範例 ](./media/azure-monitor.png)
+**圖 7-12**。 Power BI 儀表板範例。
 
 ## <a name="alerts"></a>警示
 
 有時候，擁有資料儀表板的空間不足。 如果沒有人進行喚醒來監看儀表板，則在問題解決或甚至偵測到之前，仍然可能需要數小時的時間。 為此，Azure 監視器也會提供最高的槽口[警示解決方案](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)。 警示可由各種不同的條件觸發，包括：
 
-* 度量值
-* 記錄搜尋查詢
-* 活動記錄事件
-* 基礎 Azure 平臺的健全狀況
-* 網站可用性的測試
+- 度量值
+- 記錄搜尋查詢
+- 活動記錄事件
+- 基礎 Azure 平臺的健全狀況
+- 網站可用性的測試
 
 觸發時，警示可以執行各種不同的工作。 在簡單的情況下，警示可能只會傳送電子郵件通知給郵寄清單或文字訊息給個人。 更多相關警示可能會在 PagerDuty 之類的工具中觸發工作流程，這知道誰正在呼叫特定應用程式。 警示可以在[Microsoft Flow](https://flow.microsoft.com/)解除鎖定工作流程幾乎無限制的可能性中觸發動作。
 

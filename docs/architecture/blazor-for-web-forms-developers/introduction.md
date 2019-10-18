@@ -4,12 +4,12 @@ description: 使用 .NET Blazor 和撰寫完整堆疊 web 應用程式的簡介
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 922e72514f0283b66de971d679fab0af436f1c75
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 66b6d57b718c19b0f271c6b3a62a9d4a22d77ae0
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183844"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520307"
 ---
 # <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Blazor for ASP.NET Web Forms 開發人員簡介
 
@@ -62,25 +62,25 @@ ASP.NET Web form 是否受益于移至開放原始碼和跨平臺支援？ 但�
 
 Blazor 在 Visual Studio 和 Visual Studio Code 中具有絕佳的工具支援。 此架構也包含完整的 UI 元件模型，並具有下列各項的內建功能：
 
-* 表單和驗證
-* 相依性插入
-* 用戶端路由
-* 版面配置
-* 瀏覽器內的調試
-* JavaScript Interop
+- 表單和驗證
+- 相依性插入
+- 用戶端路由
+- 版面配置
+- 瀏覽器內的調試
+- JavaScript Interop
 
 Blazor 在 ASP.NET Web Forms 中有很多共同的功能。 這兩種架構都提供以元件為基礎、事件驅動、具狀態的 UI 程式設計模型。 主要的架構差異在於，ASP.NET Web Forms 只會在伺服器上執行。 Blazor 可以在瀏覽器中的用戶端上執行。 但是，如果您是從 ASP.NET Web form 背景，那麼很容易就會覺得 Blazor。 Blazor 是一種自然的解決方案，可讓您 ASP.NET Web form 開發人員，尋找如何利用用戶端開發以及 .NET 的開放原始碼、跨平臺的未來。
 
 本書提供 Blazor 的簡介，建立專門用來 ASP.NET Web form 開發人員。 每個 Blazor 概念都會出現在類似的 ASP.NET Web form 功能和實務的內容中。 本書結束之後，您將瞭解：
 
-* 如何建立 Blazor 應用程式。
-* Blazor 的運作方式。
-* Blazor 與 .NET Core 的關聯。
-* 在適當的情況下，將現有的 ASP.NET Web Forms 應用程式遷移至 Blazor 的合理策略。
+- 如何建立 Blazor 應用程式。
+- Blazor 的運作方式。
+- Blazor 與 .NET Core 的關聯。
+- 在適當的情況下，將現有的 ASP.NET Web Forms 應用程式遷移至 Blazor 的合理策略。
 
 ## <a name="get-started-with-blazor"></a>開始使用 Blazor
 
-開始使用 Blazor 很容易。 移至<https://blazor.net>並遵循連結，以安裝適當的 .NET Core SDK 和 Blazor 專案範本。 您也可以在 Visual Studio 或 Visual Studio Code 中找到設定 Blazor 工具的指示。
+開始使用 Blazor 很容易。 移至 <https://blazor.net>，並遵循連結以安裝適當的 .NET Core SDK 和 Blazor 專案範本。 您也可以在 Visual Studio 或 Visual Studio Code 中找到設定 Blazor 工具的指示。
 
 >[!div class="step-by-step"]
 >[上一頁](index.md)

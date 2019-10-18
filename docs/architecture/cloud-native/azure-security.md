@@ -2,12 +2,12 @@
 title: 適用于雲端原生應用程式的 Azure 安全性
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |適用于雲端原生應用程式的 Azure 安全性
 ms.date: 06/30/2019
-ms.openlocfilehash: 1eb371e5c8497d769265791ae28fd2b3fcfd7387
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 59b99dfea4926c4b89d7704b3ec3640990747212
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214130"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520824"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>適用于雲端原生應用程式的 Azure 安全性
 
@@ -21,10 +21,10 @@ ms.locfileid: "71214130"
 
 無論優點是否超過雲端原生應用程式的缺點，都必須遵循相同的整體安全性思維。 安全性和安全思考必須屬於開發和營運案例的每個步驟。 在規劃應用程式時，請詢問下列問題：
 
-* 這項資料遺失的影響為何？
-* 如何限制插入此服務的錯誤資料損毀？
-* 誰應該擁有此資料的存取權？
-* 有關于開發和發行程式的稽核原則嗎？
+- 這項資料遺失的影響為何？
+- 如何限制插入此服務的錯誤資料損毀？
+- 誰應該擁有此資料的存取權？
+- 有關于開發和發行程式的稽核原則嗎？
 
 這些問題都是一個稱為[威脅模型](https://docs.microsoft.com/azure/security/azure-security-threat-modeling-tool)化程式的一部分。 此程式會嘗試回答問題，其中包括系統的威脅、威脅的可能性，以及可能的損害。 
 
@@ -32,7 +32,7 @@ ms.locfileid: "71214130"
 
 更改過的處理器在沒有 microscope 的情況下，很容易偵測到該處理器的晶片設計上有其深入知識。 這種情況不太可能發生，降低成本，因此可能沒有威脅模型會建議為它建立惡意探索保護。 
 
-較可能的威脅（例如，中斷的訪問`Id`控制允許增量攻擊`Id=2` （ `Id=3`以 URL 取代為）或 SQL 插入式，對於建立保護更為吸引人。 這些威脅的緩和措施相當合理，可以建立並防止斑點公司信譽的尷尬安全性漏洞。 
+更有可能的威脅，例如中斷的存取控制，允許 `Id` 的累加式攻擊（以 URL 中的 `Id=3` 取代 `Id=2`）或 SQL 插入，對於建立保護更具吸引力。 這些威脅的緩和措施相當合理，可以建立並防止斑點公司信譽的尷尬安全性漏洞。 
 
 ## <a name="principle-of-least-privilege"></a>最低許可權原則
 
@@ -86,8 +86,8 @@ Azure 的設計是為了平衡大部分使用者的可用性和安全性。 不�
 
 幸好，大部分的 Azure 資源都可以放入 Azure 虛擬網路，以允許更精細的存取控制。 與內部部署網路建立從較大世界保護之私人網路的方式類似，虛擬網路是位於 Azure 網路內的私人 IP 位址孤島。
 
-![圖 10-1 Azure](./media/virtual-network.png)
-**圖 10-1**中的虛擬網路。 Azure 中的虛擬網路。
+![Figure 10-1 Azure 中的虛擬網路 ](./media/virtual-network.png)
+**圖 10-1**。 Azure 中的虛擬網路。
 
 與內部部署網路有防火牆管理網路存取的相同方式，您可以在虛擬網路的界限建立類似的防火牆。 根據預設，虛擬網路上的所有資源仍可與網際網路通訊。 這只是需要某種形式的明確防火牆例外的連入連線。
 
@@ -109,16 +109,13 @@ RBAC 是一種系統，可為在 Azure 中執行的應用程式提供身分識�
 
 RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用者、群組、服務主體或受控識別。 
 
-![圖10-2 不同類型的安全性主體](./media/rbac-security-principal.png)
+![Figure 10-2 不同類型的安全性主體 ](./media/rbac-security-principal.png)
 **圖 10-2**。 不同類型的安全性主體。
 
-* 使用者-在 Azure Active Directory 中具有帳戶的任何使用者都是使用者。
-
-* 群組-Azure Active Directory 的使用者集合。 身為群組的成員，使用者除了其本身之外，還會接受該群組的角色。
-
-* 服務主體-用來執行服務或應用程式的安全性身分識別。
-
-* 受控識別-由 Azure 管理的 Azure Active Directory 身分識別。 受控識別通常會在開發雲端應用程式時使用，以管理用來向 Azure 服務進行驗證的認證。
+- 使用者-在 Azure Active Directory 中具有帳戶的任何使用者都是使用者。
+- 群組-Azure Active Directory 的使用者集合。 身為群組的成員，使用者除了其本身之外，還會接受該群組的角色。
+- 服務主體-用來執行服務或應用程式的安全性身分識別。
+- 受控識別-由 Azure 管理的 Azure Active Directory 身分識別。 受控識別通常會在開發雲端應用程式時使用，以管理用來向 Azure 服務進行驗證的認證。
 
 安全性主體可以套用至大部分的資源。 這表示您可以將安全性主體指派給在 Azure Kubernetes 內執行的容器，讓它能夠存取儲存在 Key Vault 中的秘密。 Azure 函式可以採取許可權，讓它與 Active Directory 實例交談，以驗證呼叫使用者的 JWT。 一旦使用服務主體啟用服務，就可以使用角色和範圍，以細微的方式管理其許可權。  
 
@@ -126,7 +123,7 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 安全性主體可能會採用許多角色，或使用更 sartorial 的比喻，而磨損許多職。 每個角色都會定義一系列的許可權，例如「從 Azure 服務匯流排端點讀取訊息」。 安全性主體的有效許可權集合是指派給安全性主體所擁有之所有角色的擁有權限組合。 Azure 有大量的內建角色，使用者可以定義自己的角色。
 
-![圖 10-3 RBAC 角色定義](./media/rbac-role-definition.png)
+![Figure 10-3 RBAC 角色定義 ](./media/rbac-role-definition.png)
 **圖 10-3**。 RBAC 角色定義。
 
 內建在 Azure 中，也有許多高階角色，例如擁有者、參與者、讀者和使用者帳戶管理員。 使用擁有者角色時，安全性主體可以存取所有資源，並將許可權指派給其他人。 參與者具有與所有資源相同的存取層級，但無法指派許可權。 讀者只能查看現有的 Azure 資源，而使用者帳戶系統管理員可以管理對 Azure 資源的存取。
@@ -135,7 +132,7 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 ## <a name="scopes"></a>範圍
 
-角色可以套用至 Azure 內受限制的一組資源。 例如，將範圍套用至先前從服務匯流排佇列讀取的範例，您可以將許可權縮小為單一佇列：「讀取來自 Azure 服務匯流排端點`blah.servicebus.windows.net/queue1`的訊息」
+角色可以套用至 Azure 內受限制的一組資源。 例如，將範圍套用至先前從服務匯流排佇列讀取的範例，您可以將許可權縮小為單一佇列：「從 Azure 服務匯流排端點讀取訊息 `blah.servicebus.windows.net/queue1`」
 
 範圍可以縮小為單一資源，也可以套用至整個資源群組、訂用帳戶，甚至是管理群組。
 
@@ -151,8 +148,8 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 您可以想像，擁有大量的角色和範圍，可以讓您瞭解服務主體的有效許可權非常困難。 堆積拒絕規則的基礎，只是為了增加複雜性。 幸運的是，有一個許可權計算機可以顯示任何服務主體的有效許可權。 通常會在入口網站的 [IAM] 索引標籤下找到，如圖10-3 所示。
 
-![圖 10-4 app service](./media/check-rbac.png)
-的許可權計算機**圖 10-4**。 App service 的許可權計算機。
+應用程式服務的 ![Figure 10-4 許可權計算機 ](./media/check-rbac.png)
+**圖 10-4**。 App service 的許可權計算機。
 
 ## <a name="securing-secrets"></a>保護秘密
 
@@ -170,7 +167,7 @@ Azure Key Vault 提供集中的位置來儲存資料庫、API 金鑰和憑證等
 
 ## <a name="kubernetes"></a>Kubernetes
 
-在 Kubernetes 中，有一項類似的服務可維護少量的秘密資訊。 Kubernetes 秘密可以透過一般`kubectl`可執行檔來設定。
+在 Kubernetes 中，有一項類似的服務可維護少量的秘密資訊。 Kubernetes 秘密可以透過一般的 `kubectl` 可執行檔來設定。
 
 建立秘密就像尋找要儲存之值的 base64 版本一樣簡單：
 
@@ -181,7 +178,7 @@ echo -n '1f2d1e2e67df' | base64
 MWYyZDFlMmU2N2Rm
 ```
 
-然後將它新增至名`secret.yml`為的秘密檔案，例如，如下列範例所示：
+然後將它新增至名為 `secret.yml` 的秘密檔案中，如下列範例所示：
 
 ```yml
 apiVersion: v1
@@ -218,8 +215,8 @@ TLS 是一個複雜的通訊協定，而且只知道連線使用 TLS 並不足�
 
 即使是 Azure SQL 資料庫等服務，也會使用 TLS 加密來防止資料隱藏。 使用 TLS 對傳輸中的資料進行加密的有趣部分是，即使是 Microsoft，也無法在執行 TLS 的電腦之間接聽連接。 這對於擔心其資料可能會有比標準攻擊者更多資源的 Microsoft 適當或甚至是狀態動作專案的公司而言，是非常舒適的。 
 
-![圖 10-5 SSL 實驗室報表顯示服務匯流排端點的分數。**圖 10-5**。 ](./media/ssl-report.png)
- SSL 實驗室報表，顯示服務匯流排端點的分數。
+![Figure 10-5 SSL 實驗室報表，顯示服務匯流排端點的分數。](./media/ssl-report.png)
+**圖 10-5**。 SSL 實驗室報表，顯示服務匯流排端點的分數。
 
 雖然此層級的加密不會對所有時間都足夠，但它應該會激發 Azure TLS 連線相當安全的信心。 Azure 會在加密改善時繼續發展其安全性標準。 瞭解安全性標準和更新 Azure 的情況，是很好的方式。
 
@@ -241,16 +238,16 @@ TLS 是一個複雜的通訊協定，而且只知道連線使用 TLS 並不足�
 
 裝載在 Azure SQL 上的資料庫使用稱為[透明資料加密（TDE）](/sql/relational-databases/security/encryption/transparent-data-encryption)的技術，以確保資料保持加密。 預設會在所有新建立的 SQL 資料庫上啟用此功能，但必須針對舊版資料庫手動啟用。 TDE 不僅會執行資料庫的即時加密和解密，還會執行備份和交易記錄。
 
-加密參數會儲存在`master`資料庫中，而且在啟動時，會將其餘作業讀入記憶體中。 這表示`master`資料庫必須保持未加密狀態。 實際的金鑰是由 Microsoft 管理。 不過，具有嚴格安全性需求的使用者可能會在 Key Vault 中提供自己的金鑰，與 Azure 儲存體的方式大致相同。 Key Vault 提供這類服務的金鑰輪替和撤銷。
+加密參數儲存在 `master` 資料庫中，而且在啟動時，會將其餘作業讀入記憶體中。 這表示 `master` 資料庫必須保持未加密狀態。 實際的金鑰是由 Microsoft 管理。 不過，具有嚴格安全性需求的使用者可能會在 Key Vault 中提供自己的金鑰，與 Azure 儲存體的方式大致相同。 Key Vault 提供這類服務的金鑰輪替和撤銷。
 
 TDS 的「透明」部分來自于不需要用戶端變更即可使用加密資料庫的事實。 雖然這種方法可提供良好的安全性，但洩漏資料庫密碼就足以讓使用者能夠解密資料。 還有另一種方法可加密資料庫中的個別資料行或資料表。 [Always Encrypted](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)可確保在沒有時間點，加密的資料會以純文字顯示在資料庫內。
 
 設定此加密層需要在 SQL Server Management Studio 中透過 wizard 執行，以選取加密的類型，以及在 Key Vault 儲存相關聯金鑰的位置。 
 
-![圖10-6 使用 Always Encrypted](./media/always-encrypted.png)
-**圖 10-6**選取要加密之資料表中的資料行。 選取要使用 Always Encrypted 加密之資料表中的資料行。
+![Figure 10-6 選取資料表中的資料行，以使用 Always Encrypted ](./media/always-encrypted.png)
+**圖 10-6**進行加密。 選取要使用 Always Encrypted 加密之資料表中的資料行。
 
-從這些加密資料行讀取資訊的用戶端應用程式必須進行特殊的額度，才能讀取加密的資料。 連接字串需要使用`Column Encryption Setting=Enabled`進行更新，而且必須從 Key Vault 抓取用戶端認證。 接著，必須使用資料行加密金鑰來可能遭受 SQL Server 用戶端。 完成後，其餘的動作會使用 SQL 用戶端的標準介面。 也就是說，以 SQL 用戶端為基礎的 Dapper 和 Entity Framework 之類的工具，在沒有變更的情況下仍可繼續工作。 每一種語言都可能尚未提供每個 SQL Server 驅動程式的 Always Encrypted。
+從這些加密資料行讀取資訊的用戶端應用程式必須進行特殊的額度，才能讀取加密的資料。 連接字串必須使用 `Column Encryption Setting=Enabled` 進行更新，且用戶端認證必須從 Key Vault 抓取。 接著，必須使用資料行加密金鑰來可能遭受 SQL Server 用戶端。 完成後，其餘的動作會使用 SQL 用戶端的標準介面。 也就是說，以 SQL 用戶端為基礎的 Dapper 和 Entity Framework 之類的工具，在沒有變更的情況下仍可繼續工作。 每一種語言都可能尚未提供每個 SQL Server 驅動程式的 Always Encrypted。
 
 TDE 和 Always Encrypted 的組合，這兩者都可以與用戶端特定的金鑰搭配使用，以確保甚至支援最嚴格的加密需求。
 
@@ -258,14 +255,14 @@ TDE 和 Always Encrypted 的組合，這兩者都可以與用戶端特定的金�
 
 Cosmos DB 是 Microsoft 在 Azure 中提供的最新資料庫。 它是從頭開始建立的，並記住安全性和密碼編譯。 AES-256 位加密對於所有 Cosmos DB 資料庫而言都是標準的，而且無法停用。 結合 TLS 1.2 的通訊需求時，整個儲存體解決方案都會加密。
 
-![圖 10-7 Cosmos DB](./media/cosmos-encryption.png)
-**圖 10-7**內的資料加密流程。 Cosmos DB 內的資料加密流程。
+![Figure 10-7 Cosmos DB 內的資料加密流程 ](./media/cosmos-encryption.png)
+**圖 10-7**。 Cosmos DB 內的資料加密流程。
 
 雖然 Cosmos DB 並不提供提供客戶加密金鑰的能力，但小組也已經完成許多工作，以確保它維持符合 PCI DSS 的規範。 Cosmos DB 也不支援任何類似 Azure SQL Always Encrypted 的單一資料行加密。
 
 ## <a name="keeping-secure"></a>保持安全
 
-Azure 擁有發行高度安全產品所需的所有工具。 不過，連鎖的鏈只會與最弱的連結一樣強。 如果部署在 Azure 之上的應用程式不是以適當的安全性思維和良好的安全性審核來開發，則它們會變成鏈中的弱式連結。 有許多絕佳的靜態分析工具、加密程式庫和安全性作法，可以用來確保安裝在 Azure 上的軟體與 Azure 本身一樣安全。 [靜態分析工具](https://www.whitesourcesoftware.com/)、[加密程式庫](https://www.libressl.org/)和[安全性實務](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/)、 [LibreSSL](https://www.libressl.org/)和[Red 與Blue-Microsoft Azure](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/)的內部安全性滲透測試，分別是其中的範例。 
+Azure 擁有發行高度安全產品所需的所有工具。 不過，連鎖的鏈只會與最弱的連結一樣強。 如果部署在 Azure 之上的應用程式不是以適當的安全性思維和良好的安全性審核來開發，則它們會變成鏈中的弱式連結。 有許多絕佳的靜態分析工具、加密程式庫和安全性作法，可以用來確保安裝在 Azure 上的軟體與 Azure 本身一樣安全。 [靜態分析工具](https://www.whitesourcesoftware.com/)、[加密程式庫](https://www.libressl.org/)和[安全性實務](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/)、 [LibreSSL](https://www.libressl.org/)和[Red 與 Blue-Microsoft Azure 的內部安全性滲透測試](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/)，分別是其中的範例。 
 
 >[!div class="step-by-step"]
 >[上一頁](security.md)
